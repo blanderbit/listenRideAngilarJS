@@ -2,12 +2,12 @@
   "header": {
     "sign-up": "Registrieren",
     "login": "Anmelden",
-    "learn-more": "Learn More",
-    "how-it-works": "So Funktioniert",
-    "list-a-bike": "List a Bike",
-    "renting-a-bike": "Renting a Bike",
-    "listing-a-bike": "Listing a Bike",
-    "trust-and-saftey": "Trust and Saftey"
+    "learn-more": "Mehr Erfahren",
+    "how-it-works": "Wie's funktioniert",
+    "list-a-bike": "Rad vermieten",
+    "renting-a-bike": "Rad ausleihen",
+    "listing-a-bike": "Rad verleihen",
+    "trust-and-safety": "Vertrauen und Sicherheit"
   },
   "footer": {
     "language": "Sprache"
