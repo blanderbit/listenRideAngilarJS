@@ -1,0 +1,26 @@
+<md-dialog flex="40">
+  <form ng-cloak>
+    <md-dialog-content>
+      <div class="md-dialog-content" layout="column">
+        <md-button class="md-primary md-raised">Login with Facebook</md-button>
+        <br><br>
+        <md-divider></md-divider>
+        <br><br>
+        <md-input-container class="md-input-container-compact">
+          <label>Email Address</label>
+          <input ng-model="user.email" type="email">
+        </md-input-container>
+        <md-input-container class="md-input-container-compact">
+          <label>Password</label>
+          <input ng-model="user.password" type="password">
+        </md-input-container>
+        <md-button class="md-primary md-raised" ng-click="login.hide()">Login</md-button>
+      </div>
+    </md-dialog-content>
+    <!-- <md-dialog-actions layout="row">
+      <md-button class="md-warn" ng-click="login.hide()">Cancel</md-button>
+      <span flex></span>
+      <md-button class="md-primary md-raised" ng-click="login.hide()">Login</md-button>
+    </md-dialog-actions> -->
+  </form>
+</md-dialog>

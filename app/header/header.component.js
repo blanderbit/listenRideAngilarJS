@@ -9,8 +9,9 @@ angular.module('header').component('header', {
   
       header.showLogin = function(evt) {
         $mdDialog.show({
-          controller: LoginDialogController,
-          templateUrl: 'header/loginDialog.template.html',
+          controller: LoginController,
+          controllerAs: 'login',
+          templateUrl: 'header/login.template.html',
           parent: angular.element(document.body),
           targetEvent: evt,
           openFrom: angular.element(document.body),
@@ -24,20 +25,12 @@ angular.module('header').component('header', {
           //
         });
       };
-  
-      var LoginDialogController = function($mdDialog) {
-        var loginDialog = this;
-        loginDialog.hide = function() {
+
+      function LoginController($mdDialog) {
+        var login = this;
+        login.hide = function() {
           $mdDialog.hide();
-        };
-    
-        loginDialog.cancel = function() {
-          $mdDialog.cancel();
-        };
-    
-        loginDialog.answer = function(answer) {
-          $mdDialog.hide(answer);
-        };
+        }
       }
     }
   ]
