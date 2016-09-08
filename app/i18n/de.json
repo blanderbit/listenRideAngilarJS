@@ -1,5 +1,5 @@
 {
-  "header": {
+  "shared": {
     "sign-up": "Registrieren",
     "login": "Anmelden",
     "learn-more": "Mehr Erfahren",
@@ -8,6 +8,8 @@
     "renting-a-bike": "Rad ausleihen",
     "listing-a-bike": "Rad verleihen",
     "trust-and-safety": "Vertrauen und Sicherheit"
+  },
+  "header": {
   },
   "footer": {
     "language": "Sprache"
