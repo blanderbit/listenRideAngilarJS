@@ -23,7 +23,7 @@ angular.module('header').component('header', {
         });
       };
   
-      function DialogController($scope, $mdDialog) {
+      function DialogController($mdDialog) {
         header.hide = function() {
           $mdDialog.hide();
         };
