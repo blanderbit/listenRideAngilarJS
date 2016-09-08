@@ -1,3 +1,6 @@
-// 'use strict';
+'use strict';
 
-// angular.module('listnride', []);
+angular.module('listnride', [
+	'header',
+  'ngMaterial'
+]);
