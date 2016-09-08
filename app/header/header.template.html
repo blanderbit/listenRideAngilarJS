@@ -1,25 +1,29 @@
-<md-toolbar layout="row">
-  <md-button>LISTNRIDE</md-button>
+<md-toolbar layout="row" layout-align="left center">
+  <md-toolbar-tools>
+    <md-button md-no-ink>LISTNRIDE</md-button>
+  </md-toolbar-tools>
   <span flex></span>
-  <md-button class="md-raised">{{ 'header.list-a-bike' | translate }}</md-button>
-  <md-menu md-position-mode="target bottom">
-      <md-button ng-click="$mdOpenMenu($event)">{{ 'header.learn-more' | translate }}</md-button>
-      <md-menu-content width="2">
-        <md-menu-item>
-          <md-button ng-click="">{{ 'header.how-it-works' | translate }}</md-button>
-        </md-menu-item>
-        <md-menu-item>
-          <md-button ng-click="">{{ 'header.renting-a-bike' | translate }}</md-button>
-        </md-menu-item>
-        <md-menu-item>
-          <md-button ng-click="">{{ 'header.listing-a-bike' | translate }}</md-button>
-        </md-menu-item>
-        <md-menu-divider></md-menu-divider>
-        <md-menu-item>
-          <md-button disabled="disabled" ng-click="header.checkVoicemail()">{{ 'header.trust-and-saftey' | translate }}</md-button>
-        </md-menu-item>
-      </md-menu-content>
-    </md-menu>
-  <md-button>{{ 'header.sign-up' | translate }}</md-button>
-  <md-button>login</md-button>
+  <md-toolbar-tools>
+    <md-button class="md-raised">{{ 'header.list-a-bike' | translate }}</md-button>
+    <md-menu md-position-mode="target bottom">
+        <md-button md-no-ink ng-click="$mdOpenMenu($event)">{{ 'header.learn-more' | translate }} </md-button>
+        <md-menu-content width="2">
+          <md-menu-item>
+            <md-button md-no-ink ng-click="">{{ 'header.how-it-works' | translate }}</md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button md-no-ink ng-click="">{{ 'header.renting-a-bike' | translate }}</md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button md-no-ink ng-click="">{{ 'header.listing-a-bike' | translate }}</md-button>
+          </md-menu-item>
+          <md-menu-divider></md-menu-divider>
+          <md-menu-item>
+            <md-button disabled="disabled" ng-click="header.checkVoicemail()">{{  'header.trust-and-safety' | translate }}</md-button>
+          </md-menu-item>
+        </md-menu-content>
+      </md-menu>
+    <md-button md-no-ink>{{ 'header.sign-up' | translate }}</md-button>
+    <md-button md-no-ink>login</md-button>
+  </md-toolbar-tools>
 </md-toolbar>
