@@ -1,19 +1,25 @@
 <md-toolbar class="md-scroll-shrink">
-  <div layout="row" layout-align="space-between strech" flex>
+  <div layout="row" layout-xs="column" layout-align="space-between strech" flex>
 
-    <div layout="column" layout-align="start center">
-      <h5 class="md-subhead">Listnride</h5>
-    </div>
-
-    <div layout="column" layout-align="start center">
+    <div layout="column" layout-align="start start" layout-padding>
       <h5 class="md-subhead">Learn More</h5>
+      <md-list>
+        <md-list-item class="md-subhead">How it Works</md-list-item>
+        <md-list-item class="md-subhead">Renting a Bike</md-list-item>
+        <md-list-item class="md-subhead">Listing a Bike</md-list-item>
+        <md-list-item class="md-subhead">Trust and Safety</md-list-item>
+      </md-list>
     </div>
 
-    <div layout="column" layout-align="start center">
+    <div layout="column" layout-align="start start" layout-padding>
+      <h5 class="md-subhead">Company</h5>
+    </div>
+
+    <div layout="column" layout-align="start start" layout-padding>
       <h5 class="md-subhead">Legal</h5>
     </div>
 
-    <div layout="column" layout-align="start center">
+    <div layout="column" layout-align="start start" layout-padding>
       <h5 class="md-subhead">{{'footer.language' | translate}}</h5>
       <md-select class="md-subhead" ng-model="footer.language" ng-change="footer.switchLanguage()"" aria-label="Select Language">
         <md-option value="en">English</md-option>
