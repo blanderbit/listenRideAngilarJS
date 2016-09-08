@@ -3,5 +3,6 @@
 angular.module('listnride', [
 	'header',
   'footer',
-  'ngMaterial'
+  'ngMaterial',
+  'pascalprecht.translate'
 ]);

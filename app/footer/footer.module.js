@@ -3,4 +3,6 @@
 *
 * Description
 */
-angular.module('footer', []);
+angular.module('footer', [
+  'pascalprecht.translate'
+]);

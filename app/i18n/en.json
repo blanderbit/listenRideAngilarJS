@@ -1,0 +1,15 @@
+{
+  "header": {
+    "sign-up": "Sign Up",
+    "login": "Login",
+    "learn-more": "Learn More",
+    "how-it-works": "How it works",
+    "list-a-bike": "List a Bike",
+    "renting-a-bike": "Renting a Bike",
+    "listing-a-bike": "Listing a Bike",
+    "trust-and-saftey": "Trust and Saftey"
+  },
+  "footer": {
+    "language": "Language"
+  }
+}
