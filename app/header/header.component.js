@@ -9,30 +9,33 @@ angular.module('header').component('header', {
   
       header.showLogin = function(evt) {
         $mdDialog.show({
-          controller: DialogController,
+          controller: LoginDialogController,
           templateUrl: 'header/loginDialog.template.html',
           parent: angular.element(document.body),
           targetEvent: evt,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
           clickOutsideToClose: true,
           fullscreen: header.customFullscreen // Only for -xs, -sm breakpoints.
         })
         .then(function(answer) {
-          header.status = 'You said the information was "' + answer + '".';
+          //
         }, function() {
-          header.status = 'You cancelled the dialog.';
+          //
         });
       };
   
-      function DialogController($mdDialog) {
-        header.hide = function() {
+      var LoginDialogController = function($mdDialog) {
+        var loginDialog = this;
+        loginDialog.hide = function() {
           $mdDialog.hide();
         };
     
-        header.cancel = function() {
+        loginDialog.cancel = function() {
           $mdDialog.cancel();
         };
     
-        header.answer = function(answer) {
+        loginDialog.answer = function(answer) {
           $mdDialog.hide(answer);
         };
       }
