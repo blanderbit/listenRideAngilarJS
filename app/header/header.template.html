@@ -1,3 +1,24 @@
 <md-toolbar layout="row" >
   <md-button>listnride</md-button>
+  <span flex></span>
+  <md-menu>
+      <md-button ng-click="$mdOpenMenu($event)">Learn More</md-button>
+      <md-menu-content width="3">
+        <md-menu-item>
+          <md-button ng-click="header.doSth()">How it works</md-button>
+        </md-menu-item>
+        <md-menu-item>
+          <md-button ng-click="header.doSth()">Rent a Bike</md-button>
+        </md-menu-item>
+        <md-menu-item>
+          <md-button ng-click="header.doSth()">List a Bike</md-button>
+        </md-menu-item>
+        <md-menu-divider></md-menu-divider>
+        <md-menu-item>
+          <md-button disabled="disabled" ng-click="header.checkVoicemail()">Trust and Safety</md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
+  <md-button>sign-up</md-button>
+  <md-button>login</md-button>
 </md-toolbar>
