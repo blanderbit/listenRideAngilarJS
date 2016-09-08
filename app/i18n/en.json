@@ -1,5 +1,5 @@
 {
-  "header": {
+  "shared": {
     "sign-up": "Sign Up",
     "login": "Login",
     "learn-more": "Learn More",
@@ -8,6 +8,9 @@
     "renting-a-bike": "Renting a Bike",
     "listing-a-bike": "Listing a Bike",
     "trust-and-safety": "Trust and Safety"
+  },
+  "header": {
+
   },
   "footer": {
     "language": "Language"
