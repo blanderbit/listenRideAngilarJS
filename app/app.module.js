@@ -2,5 +2,6 @@
 
 angular.module('listnride', [
 	'header',
+  'footer',
   'ngMaterial'
 ]);
