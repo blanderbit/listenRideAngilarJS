@@ -3,9 +3,15 @@
 angular.module('header').component('header', {
   templateUrl: 'header/header.template.html',
   controllerAs: 'header',
-  controller: [ '$mdDialog',
-    function HeaderController($mdDialog) {
+  controller: [
+    '$mdDialog',
+    '$mdSidenav',
+    function HeaderController($mdDialog, $mdSidenav) {
       var header = this;
+
+      header.toggleSidebar = function() {
+        $mdSidenav('right').toggle();
+      }
   
       header.showLoginDialog = function(event) {
         $mdDialog.show({
@@ -17,7 +23,7 @@ angular.module('header').component('header', {
           openFrom: angular.element(document.body),
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,
-          fullscreen: true // Only for -xs, -sm breakpoints.
+          fullscreen: true // Changed in CSS to only be for XS sizes
         })
         .then(function(answer) {
           //

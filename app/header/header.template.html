@@ -1,12 +1,14 @@
-<md-toolbar layout="row" layout-align="left center">
+<md-toolbar md-scroll-shrink layout="row" class="lnr-header" layout-align="left center">
 
   <md-toolbar-tools>
     <md-button md-no-ink>LISTNRIDE</md-button>
   </md-toolbar-tools>
 
   <span flex></span>
-
-  <md-toolbar-tools>
+  <md-toolbar-tools hide show-xs>
+    <md-button ng-click="header.toggleSidebar()">E</md-button>
+  </md-toolbar-tools>
+  <md-toolbar-tools hide-xs>
     <md-button class="md-raised">{{ 'shared.list-a-bike' | translate }}</md-button>
     <md-menu md-position-mode="target bottom">
 
