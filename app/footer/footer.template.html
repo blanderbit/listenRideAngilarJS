@@ -1,12 +1,12 @@
 <md-toolbar id="footer" class="md-scroll-shrink">
   <div layout="column">
-    <div layout="row" layout-align="space-between strech" layout-align-gt-md="space-around strech" layout-xs="column" flex>
+    <div layout-gt-sm="row" layout="column" layout-align="space-between strech" layout-align-gt-md="space-around strech">
 
-      <div layout="column" layout-align="center center" layout-align-xs="start center" layout-padding>
-        <div flex>LnR logo</div>
+      <div layout="column" layout-align="center center" layout-padding>
+        <div>LnR logo</div>
       </div>
 
-      <div layout="column" layout-align="start start" layout-align-xs="start center" layout-padding>
+      <div layout="column" layout-align-gt-sm="start start" layout-align="start center" layout-padding>
         <md-list>
           <md-subheader class="md-no-sticky">{{ 'shared.learn-more' | translate }}</md-subheader>
           <md-list-item class="md-body-1">{{ 'shared.how-it-works' | translate }}</md-list-item>
@@ -16,7 +16,7 @@
         </md-list>
       </div>
 
-      <div layout="column" layout-align="start start" layout-align-xs="start center" layout-padding>
+      <div layout="column" layout-align-gt-sm="start start" layout-align="start center" layout-padding>
         <md-list>
           <md-subheader class="md-no-sticky">Listnride</md-subheader>
           <md-list-item class="md-body-1">{{ 'footer.about' | translate }}</md-list-item>
@@ -26,7 +26,7 @@
         </md-list>
       </div>
 
-      <div layout="column" layout-align="start start" layout-align-xs="start center" layout-padding>
+      <div layout="column" layout-align-gt-sm="start start" layout-align="start center" layout-padding>
         <md-list>
           <md-subheader class="md-no-sticky">{{ 'footer.legal' | translate }}</md-subheader>
           <md-list-item class="md-body-1">{{ 'footer.terms-and-conditions' | translate }}</md-list-item>
@@ -35,7 +35,7 @@
         </md-list>
       </div>
 
-      <div layout="column" layout-align="start start" layout-align-xs="start center" layout-padding>
+      <div layout="column" layout-align-gt-sm="start start" layout-align="start center" layout-padding>
         <md-list>
           <md-subheader class="md-no-sticky">{{ 'footer.language' | translate }}</md-subheader>
           <md-list-item class="md-body-1">
@@ -47,17 +47,17 @@
         </md-list>
       </div>
       
-      <div layout="column" layout-align="start center" layout-align-xs="start center" layout-padding>
-        <div id="iOSApp" flex>Get the iOS app!</div>
-        <div layout="row" layout-align="space-around start" flex>
-          <div flex>Fb</div>
-          <div flex>Inst</div>
+      <div layout="column" layout-align="center center" layout-align-xs="start center" layout-padding>
+        <div id="iOSApp">Get the iOS app!</div>
+        <div layout="row" layout-align="space-between stretch" layout-padding>
+          <div>Fb</div>
+          <div>Inst</div>
         </div>
       </div>
     </div>
 
     <md-divider></md-divider>
 
-    <div layout="row" layout-align="center center" flex layout-padding>© 2016 listnride</div>
+    <div layout="row" layout-align="center center" layout-padding>© 2016 listnride</div>
   </div>
 </md-toolbar>
