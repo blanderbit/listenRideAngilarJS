@@ -3,9 +3,12 @@
     <md-dialog-content>
       <div class="md-dialog-content" layout="column">
         <md-button class="md-primary md-raised">Login with Facebook</md-button>
-        <br><br>
-        <md-divider></md-divider>
-        <br><br>
+        <div layout="row" layout-align="center center">
+          <br><br><br><br>
+          <!-- <md-divider></md-divider> -->
+          <p>or</p>
+          <br><br><br><br>
+        </div>
         <md-input-container class="md-input-container-compact">
           <label>Email Address</label>
           <input ng-model="user.email" type="email">
@@ -14,7 +17,7 @@
           <label>Password</label>
           <input ng-model="user.password" type="password">
         </md-input-container>
-        <md-button class="md-primary md-raised" ng-click="login.hide()">Login</md-button>
+        <md-button class="md-primary md-raised" ng-click="loginDialog.hide()">Login</md-button>
       </div>
     </md-dialog-content>
     <!-- <md-dialog-actions layout="row">
