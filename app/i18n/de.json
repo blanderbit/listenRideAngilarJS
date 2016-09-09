@@ -10,8 +10,18 @@
     "trust-and-safety": "Vertrauen und Sicherheit"
   },
   "header": {
+
   },
   "footer": {
-    "language": "Sprache"
+    "language": "Sprache",
+    "company": "Company",
+    "legal": "Rechtliches",
+    "terms-and-conditions": "AGB",
+    "privacy-statement": "Datenschutzbestimmungen",
+    "imprint": "Impressum",
+    "about": "Über uns",
+    "press": "Presse",
+    "jobs": "Jobs",
+    "contact": "Kontakt"
   }
 }
