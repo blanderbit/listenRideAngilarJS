@@ -5,5 +5,5 @@ angular.module('listnride', [
   'footer',
   'ngMaterial',
   'pascalprecht.translate',
-  'ui-router'
+  'ui.router'
 ]);
