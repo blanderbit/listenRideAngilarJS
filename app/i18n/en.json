@@ -13,6 +13,15 @@
 
   },
   "footer": {
-    "language": "Language"
+    "language": "Language",
+    "company": "Company",
+    "legal": "Legal",
+    "terms-and-conditions": "Terms and Conditions",
+    "privacy-statement": "Privacy Statement",
+    "imprint": "Imprint",
+    "about": "About",
+    "press": "Press",
+    "jobs": "Jobs",
+    "contact": "Contact"
   }
 }
