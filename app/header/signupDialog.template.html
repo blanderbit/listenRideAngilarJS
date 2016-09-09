@@ -6,19 +6,29 @@
           <md-icon></md-icon>
         </md-button>
         <span flex></span>
-        <br><h2>Log in</h2><br>
+        <h2>Sign Up</h2>
         <span flex></span>
-        <md-button class="md-icon-button" ng-click="loginDialog.hide()">
+        <md-button class="md-icon-button" ng-click="signupDialog.hide()">
           <md-icon md-svg-src="assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
         </md-button>
       </div>
     </md-toolbar>
     <md-dialog-content>
       <div class="md-dialog-content" layout="column">
-        <md-button class="md-primary md-raised">Login with Facebook</md-button>
+        <md-button class="md-primary md-raised">Sign Up with Facebook</md-button>
         <div layout="column" layout-align="center center">
           <!-- <md-divider></md-divider> -->
-          <p>or</p>
+          <br><p>or</p><br>
+        </div>
+        <div layout="row">
+          <md-input-container flex class="md-input-container-compact">
+            <label>First Name</label>
+            <input ng-model="user.first_name">
+          </md-input-container>
+          <md-input-container flex class="md-input-container-compact">
+            <label>Last Name</label>
+            <input ng-model="user.last_name">
+          </md-input-container>
         </div>
         <md-input-container class="md-input-container-compact">
           <label>Email Address</label>
@@ -28,13 +38,8 @@
           <label>Password</label>
           <input ng-model="user.password" type="password">
         </md-input-container>
-        <md-button class="md-primary md-raised" ng-click="loginDialog.hide()">Login</md-button>
+        <md-button class="md-primary md-raised" ng-click="signupDialog.hide()">Sign Up</md-button>
       </div>
     </md-dialog-content>
-    <!-- <md-dialog-actions layout="row">
-      <md-button class="md-warn" ng-click="login.hide()">Cancel</md-button>
-      <span flex></span>
-      <md-button class="md-primary md-raised" ng-click="login.hide()">Login</md-button>
-    </md-dialog-actions> -->
   </form>
 </md-dialog>
