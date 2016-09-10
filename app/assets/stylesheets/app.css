@@ -20,5 +20,5 @@
 @media (min-width: 600px) {
   md-dialog.md-dialog-fullscreen {
     min-width: 400px !important;
-    min-height: auto !important;
+    min-height: 0 !important;
     border-radius: 3px; } }
