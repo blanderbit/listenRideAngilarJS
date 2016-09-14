@@ -30,6 +30,12 @@ angular.
     });
     */
 
+    $stateProvider.state({
+      name: 'home',
+      url: '/',
+      component: 'home'
+    });
+
     $translateProvider.useStaticFilesLoader({
         prefix: 'i18n/',
         suffix: '.json'
