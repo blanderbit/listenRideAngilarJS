@@ -11,6 +11,12 @@
   flex: 1 0 auto !important;
 }
 
+body {
+  /*overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;*/
+}
+
 @media (max-width: 599px) {
   md-dialog.md-dialog-fullscreen {
     min-height: 100%;
