@@ -15,19 +15,23 @@
     </md-toolbar>
     <md-dialog-content>
       <div class="md-dialog-content" layout="column">
-        <md-button class="md-primary md-raised">Login with Facebook</md-button>
+        <!-- <md-button class="md-primary md-raised">Login with Facebook</md-button>
         <div layout="column" layout-align="center center">
           <p>or</p>
-        </div>
+        </div> -->
+        <p></p>
         <md-input-container class="md-input-container-compact">
           <label>Email Address</label>
-          <input ng-model="user.email" type="email">
+          <input ng-model="loginDialog.email" type="email">
         </md-input-container>
         <md-input-container class="md-input-container-compact">
           <label>Password</label>
-          <input ng-model="user.password" type="password">
+          <input ng-model="loginDialog.password" type="password">
         </md-input-container>
-        <md-button class="md-primary md-raised" ng-click="loginDialog.hide()">Login</md-button>
+        <div layout="row">
+          <md-button ng-click="loginDialog.resetPassword()">Forgot Password?</md-button>
+          <span flex></span>
+          <md-button class="md-primary md-raised" ng-click="loginDialog.login()">Login</md-button>
       </div>
     </md-dialog-content>
     <!-- <md-dialog-actions layout="row">
