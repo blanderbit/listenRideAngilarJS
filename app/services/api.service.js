@@ -15,7 +15,7 @@ angular.
             }
           });
         },
-        post: function(url, data, success, error) {
+        post: function(url, data) {
           return $http({
             method: 'POST',
             url: apiUrl + url,
