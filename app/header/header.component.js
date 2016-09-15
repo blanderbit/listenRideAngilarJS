@@ -56,6 +56,7 @@ angular.module('header').component('header', {
             }
           }).then(function successCallback(response) {
             console.log(response);
+            $mdDialog.hide();
           }, function errorCallback(response) {
             console.log(response);
           });

@@ -6,7 +6,7 @@
           <md-icon></md-icon>
         </md-button>
         <span flex></span>
-        <br><h2>Log in</h2><br>
+        <br><h2>{{ 'shared.log-in' | translate }}</h2><br>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="loginDialog.hide()">
           <md-icon md-svg-src="assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
@@ -21,17 +21,17 @@
         </div> -->
         <p></p>
         <md-input-container class="md-input-container-compact">
-          <label>Email Address</label>
+          <label>{{ 'shared.email-address' | translate }}</label>
           <input ng-model="loginDialog.email" type="email">
         </md-input-container>
         <md-input-container class="md-input-container-compact">
-          <label>Password</label>
+          <label>{{ 'shared.password' | translate }}</label>
           <input ng-model="loginDialog.password" type="password">
         </md-input-container>
         <div layout="row">
-          <md-button ng-click="loginDialog.resetPassword()">Forgot Password?</md-button>
+          <md-button ng-click="loginDialog.resetPassword()">{{ 'shared.forgot-password' | translate }}</md-button>
           <span flex></span>
-          <md-button class="md-primary md-raised" ng-click="loginDialog.login()">Login</md-button>
+          <md-button class="md-primary md-raised" ng-click="loginDialog.login()">{{ 'shared.log-in' | translate }}</md-button>
       </div>
     </md-dialog-content>
     <!-- <md-dialog-actions layout="row">

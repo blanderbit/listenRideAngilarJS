@@ -1,13 +1,20 @@
 {
   "shared": {
     "sign-up": "Registrieren",
-    "login": "Anmelden",
+    "log-in": "Anmelden",
     "learn-more": "Mehr Erfahren",
     "how-it-works": "Wie's funktioniert",
     "list-a-bike": "Rad vermieten",
     "renting-a-bike": "Rad ausleihen",
     "listing-a-bike": "Rad verleihen",
-    "trust-and-safety": "Vertrauen und Sicherheit"
+    "trust-and-safety": "Vertrauen und Sicherheit",
+    "email-address": "Emailadresse",
+    "password": "Passwort",
+    "or": "oder",
+    "first-name": "Vorname",
+    "last-name": "Nachname",
+    "sign-up-with-facebook": "Mit Facebook registrieren",
+    "forgot-password": "Passwort vergessen?"
   },
   "header": {
 
@@ -17,7 +24,7 @@
     "company": "Company",
     "legal": "Rechtliches",
     "terms-and-conditions": "AGB",
-    "privacy-statement": "Datenschutzbestimmungen",
+    "privacy-statement": "Datenschutz",
     "imprint": "Impressum",
     "about": "Über uns",
     "press": "Presse",

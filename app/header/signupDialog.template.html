@@ -6,7 +6,7 @@
           <md-icon></md-icon>
         </md-button>
         <span flex></span>
-        <h2>Sign Up</h2>
+        <h2>{{ 'shared.sign-up' | translate }}</h2>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="signupDialog.hide()">
           <md-icon md-svg-src="assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
@@ -15,30 +15,30 @@
     </md-toolbar>
     <md-dialog-content>
       <div class="md-dialog-content" layout="column">
-        <md-button class="md-primary md-raised">Sign Up with Facebook</md-button>
+        <md-button class="md-primary md-raised">{{ 'shared.sign-up-with-facebook' | translate }}</md-button>
         <div layout="column" layout-align="center center">
           <!-- <md-divider></md-divider> -->
-          <br><p>or</p><br>
+          <br><p>{{ 'shared.or' | translate }}</p><br>
         </div>
         <div layout="row">
           <md-input-container flex class="md-input-container-compact">
-            <label>First Name</label>
+            <label>{{ 'shared.first-name' | translate }}</label>
             <input ng-model="user.first_name">
           </md-input-container>
           <md-input-container flex class="md-input-container-compact">
-            <label>Last Name</label>
+            <label>{{ 'shared.last-name' | translate }}</label>
             <input ng-model="user.last_name">
           </md-input-container>
         </div>
         <md-input-container class="md-input-container-compact">
-          <label>Email Address</label>
+          <label>{{ 'shared.email-address' | translate }}</label>
           <input ng-model="user.email" type="email">
         </md-input-container>
         <md-input-container class="md-input-container-compact">
-          <label>Password</label>
+          <label>{{ 'shared.password' | translate }}</label>
           <input ng-model="user.password" type="password">
         </md-input-container>
-        <md-button class="md-primary md-raised" ng-click="signupDialog.hide()">Sign Up</md-button>
+        <md-button class="md-primary md-raised" ng-click="signupDialog.hide()">{{ 'shared.sign-up' | translate }}</md-button>
       </div>
     </md-dialog-content>
   </form>
