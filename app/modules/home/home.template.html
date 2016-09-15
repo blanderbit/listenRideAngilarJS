@@ -1,15 +1,22 @@
 <div id="landing_section"></div>
-<div layout-padding>
-  <h1>HOME</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim lorem non nunc finibus, ut   fermentum arcu egestas. Nullam imperdiet sem sit amet tempus scelerisque. Quisque in nibh magna. Donec urna   mauris, egestas scelerisque blandit posuere, accumsan vel tellus. Cras congue arcu lectus, sed molestie   turpis euismod id. Vestibulum vulputate purus non odio volutpat vulputate vel vel arcu. In hac habitasse  platea dictumst. Fusce quis lacus aliquam, pretium ipsum at, suscipit odio. Pellentesque habitant morbi  tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ornare dignissim convallis. Cras eu  sem et ex interdum iaculis eu non ipsum.</p>
-  
-  <p>Quisque efficitur dolor eget tincidunt congue. Integer tincidunt enim a nunc aliquam congue. In finibus  velit vel tellus scelerisque, quis semper arcu aliquet. Maecenas nec purus sagittis, congue velit ac,  tristique magna. Nullam finibus justo neque, ut bibendum mauris dictum id. Praesent risus tellus, tincidunt  id sem vitae, tempus volutpat dui. Nunc porta pulvinar pharetra. Integer cursus, arcu at varius finibus,   neque neque ultricies nunc, et egestas metus est quis ligula. Nunc vel vulputate odio, a egestas justo.   Vivamus gravida tortor accumsan iaculis faucibus. Nulla elementum erat odio, eu rhoncus arcu eleifend quis.   Sed bibendum ipsum efficitur sapien interdum, vel tincidunt lacus auctor. Donec quis libero eget risus  convallis egestas sit amet nec dui. Sed accumsan luctus leo.</p>
-  
-  <p>In ut diam lacus. Aenean elementum dui leo. Praesent et dignissim purus, vel venenatis purus. Donec in   elementum ex, semper pellentesque sem. Phasellus a eros a metus aliquam gravida ac a lectus. Sed faucibus sem   vel laoreet laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</  p>
-  
-  <p>Vivamus pulvinar, neque cursus lobortis venenatis, tortor nulla condimentum diam, in mattis massa sapien   at urna. Maecenas condimentum porttitor tortor ut aliquet. Curabitur sit amet auctor lacus. Duis porttitor  tincidunt est, nec aliquam mi efficitur vitae. Donec fermentum nulla sed enim finibus, lobortis vestibulum   lorem pretium. Cras dignissim tristique auctor. Proin eu mi in neque fermentum tempor. Curabitur et euismod   lorem. Aliquam ac rhoncus ligula, ac interdum quam. Fusce malesuada cursus quam, ultrices euismod velit   luctus ac.</p>
-  
-  <p>Sed id tincidunt nunc, at volutpat purus. Sed sed dui mauris. Vestibulum malesuada ultrices lorem, quis  pharetra est tempor vitae. Integer vitae mollis justo. Sed facilisis odio nulla, sit amet lobortis purus   rutrum eget. Proin dictum in lorem eu dictum. Etiam et tellus ac velit molestie molestie vitae ut sem.  Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent pharetra magna erat, eget pulvinar  ipsum dictum ut. Nunc in sagittis arcu.</p>
-  
-  <p>Ut commodo in massa vel iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere  cubilia Curae; Morbi arcu ante, fringilla tristique nulla vel, convallis facilisis orci. Cum sociis natoque  penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur ex nibh, faucibus ut velit id,  dignissim hendrerit libero. Integer mattis molestie luctus. Aenean consequat lacus vel tellus bibendum   vestibulum. Nullam eu tristique risus. Duis sit amet arcu venenatis, tempor dolor id, bibendum ex.</p>
-</div>
+
+<md-content layout-xs="column" layout="row">
+  <div id="featuredBikes" layout="row" layout-wrap>
+    <div ng-repeat="bike in home.featuredBikes" flex="100" flex-gt-xs="33" flex-gt-sm="25">
+
+      <md-card>
+        <img ng-src="{{bike.image_file_1.image_file_1.small.url}}" alt="Bike Image">
+
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{bike.brand}}</span>
+            <span class="md-subhead">{{bike.name}}</span>
+          </md-card-title-text>
+        </md-card-title>
+
+        <div layout-padding>{{bike.price_daily}} €</div>
+      </md-card>
+
+    </div>
+  </div>
+</md-content>
