@@ -6,7 +6,10 @@ angular.module('header').component('header', {
   controller: [
     '$mdDialog',
     '$mdSidenav',
-    function HeaderController($mdDialog, $mdSidenav) {
+    '$http',
+    'authentication',
+    'sha256',
+    function HeaderController($mdDialog, $mdSidenav, $http, authentication, sha256) {
       var header = this;
 
       header.toggleSidebar = function() {
@@ -33,9 +36,49 @@ angular.module('header').component('header', {
       };
 
       function LoginDialogController($mdDialog) {
-        var login = this;
-        login.hide = function() {
+        var loginDialog = this;
+        loginDialog.hide = function() {
           $mdDialog.hide();
+        }
+
+        loginDialog.login = function() {
+          $http({
+            method: 'POST',
+            url: 'https://listnride-staging.herokuapp.com/v2/users/login',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            data: {
+              'user': {
+                "email": loginDialog.email,
+                "password_hashed": sha256.encrypt(loginDialog.password)
+              }
+            }
+          }).then(function successCallback(response) {
+            console.log(response);
+            $mdDialog.hide();
+          }, function errorCallback(response) {
+            console.log(response);
+          });
+        }
+
+        loginDialog.resetPassword = function() {
+          $http({
+            method: 'POST',
+            url: 'https://listnride-staging.herokuapp.com/v2/users/reset_password',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            data: {
+              'user': {
+                "email": loginDialog.email
+              }
+            }
+          }).then(function successCallback(response) {
+            console.log(response);
+          }, function errorCallback(response) {
+            console.log(response);
+          });
         }
       }
 

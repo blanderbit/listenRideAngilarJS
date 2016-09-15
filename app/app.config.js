@@ -36,6 +36,12 @@ angular.
       component: 'home'
     });
 
+    $stateProvider.state({
+      name: 'search',
+      url: '/search',
+      component: 'search'
+    });
+
     $translateProvider.useStaticFilesLoader({
         prefix: 'i18n/',
         suffix: '.json'
