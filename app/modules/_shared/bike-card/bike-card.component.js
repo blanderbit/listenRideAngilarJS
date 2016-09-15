@@ -5,13 +5,14 @@ angular.module('bikeCard').component('bikeCard', {
   controllerAs: 'bikeCard',
   bindings: {
     name: '<',
+    brand: '<',
     price: '<',
-    imgUrl: '<'
+    url: '<'
   },
   controller: [
-    function FooterController() {
+    function BikeCardController() {
       var bikeCard = this;
-  
+      bikeCard.price
     }
   ]
 });

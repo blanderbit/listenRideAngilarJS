@@ -1,8 +1,6 @@
 'use strict';
 
-angular.
-module('footer').
-component('footer', {
+angular.module('footer').component('footer', {
   templateUrl: 'modules/footer/footer.template.html',
   controllerAs: 'footer',
   controller: [

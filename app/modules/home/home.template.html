@@ -2,21 +2,10 @@
 
 <md-content layout-xs="column" layout="row">
   <div id="featuredBikes" layout="row" layout-wrap>
+
     <div ng-repeat="bike in home.featuredBikes" flex="100" flex-gt-xs="33" flex-gt-sm="25">
-
-      <md-card>
-        <img ng-src="{{bike.image_file_1.image_file_1.small.url}}" alt="Bike Image">
-
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">{{bike.brand}}</span>
-            <span class="md-subhead">{{bike.name}}</span>
-          </md-card-title-text>
-        </md-card-title>
-
-        <div layout-padding>{{bike.price_daily}} €</div>
-      </md-card>
-
+      <bike-card name="bike.name" brand="bike.brand" price="bike.price_daily" url="bike.image_file_1.image_file_1.small.url"></bike-card>
     </div>
+
   </div>
 </md-content>

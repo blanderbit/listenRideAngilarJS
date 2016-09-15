@@ -5,6 +5,8 @@ angular.module('listnride', [
   'footer',
   'home',
   'search',
+  'bikeCard',
+
   'ngMaterial',
   'pascalprecht.translate',
   'ui.router',
