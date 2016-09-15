@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('header').component('header', {
-  templateUrl: 'header/header.template.html',
+  templateUrl: 'modules/header/header.template.html',
   controllerAs: 'header',
   controller: [
     '$mdDialog',
@@ -17,7 +17,7 @@ angular.module('header').component('header', {
         $mdDialog.show({
           controller: LoginDialogController,
           controllerAs: 'loginDialog',
-          templateUrl: 'header/loginDialog.template.html',
+          templateUrl: 'modules/header/loginDialog.template.html',
           parent: angular.element(document.body),
           targetEvent: event,
           openFrom: angular.element(document.body),
@@ -43,7 +43,7 @@ angular.module('header').component('header', {
         $mdDialog.show({
           controller: SignupDialogController,
           controllerAs: 'signupDialog',
-          templateUrl: 'header/signupDialog.template.html',
+          templateUrl: 'modules/header/signupDialog.template.html',
           parent: angular.element(document.body),
           targetEvent: event,
           openFrom: angular.element(document.body),
