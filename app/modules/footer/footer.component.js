@@ -3,7 +3,7 @@
 angular.
 module('footer').
 component('footer', {
-  templateUrl: 'footer/footer.template.html',
+  templateUrl: 'modules/footer/footer.template.html',
   controllerAs: 'footer',
   controller: [
     '$translate',
