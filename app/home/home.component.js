@@ -8,7 +8,6 @@ component('home', {
   controller: [
     function HomeController() {
       var home = this;
-
     }
   ]
 });
