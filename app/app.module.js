@@ -6,6 +6,7 @@ angular.module('listnride', [
   'home',
   'search',
   'ngMaterial',
+  'ngMessages',
   'pascalprecht.translate',
   'ui.router',
   'ngStorage'

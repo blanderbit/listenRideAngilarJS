@@ -22,7 +22,8 @@
         <p></p>
         <md-input-container class="md-input-container-compact">
           <label>{{ 'shared.email-address' | translate }}</label>
-          <input ng-model="loginDialog.email" type="email">
+          <input ng-model="loginDialog.email" required type="email">
+          <div ng-message="required">This is required.</div>
         </md-input-container>
         <md-input-container class="md-input-container-compact">
           <label>{{ 'shared.password' | translate }}</label>
