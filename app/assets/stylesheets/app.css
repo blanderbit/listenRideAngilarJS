@@ -30,3 +30,13 @@ home #landing_section {
     border-radius: 3px;
   }
 }
+
+home #landing_section {
+  background-image: url("../ui_images/landing.jpg");
+  background-position: 15% 100%;
+  height: 70vh;
+}
+
+footer md-toolbar:not(.md-menu-toolbar) {
+  background-color: rgb(75,75,75);
+}

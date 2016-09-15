@@ -8,6 +8,9 @@ component('home', {
   controller: [ 'api',
     function HomeController(api) {
       var home = this;
+      api.get("/featured").then(function(response) {
+        home.featuredBikes = response.data;
+      })
     }
   ]
 });
