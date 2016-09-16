@@ -9,7 +9,7 @@
     <md-button ng-click="header.toggleSidebar()">E</md-button>
   </md-toolbar-tools>
   <md-toolbar-tools hide-xs>
-    <md-button class="md-raised">{{ 'shared.list-a-bike' | translate }}</md-button>
+    <md-button class="md-raised" ui-sref="search">{{ 'shared.list-a-bike' | translate }}</md-button>
     <md-menu md-position-mode="target bottom">
 
       <md-button md-no-ink ng-click="$mdOpenMenu($event)">{{ 'shared.learn-more' | translate }} </md-button>

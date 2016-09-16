@@ -33,7 +33,7 @@ angular.
     uiGmapGoogleMapApiProvider.configure({
       key: 'AIzaSyAwLiE4WWvLne4sR4WuFlEYWtu-chKOTRs',
       v: '3.20',
-      libraries: 'weather,geometry,visualization'
+      libraries: ''
     });
 
     $stateProvider.state({
