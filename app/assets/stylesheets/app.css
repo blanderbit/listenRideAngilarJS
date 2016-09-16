@@ -40,3 +40,7 @@ home #landing_section {
 footer md-toolbar:not(.md-menu-toolbar) {
   background-color: rgb(75,75,75);
 }
+
+.angular-google-map-container {
+  height: 90vh;
+}
