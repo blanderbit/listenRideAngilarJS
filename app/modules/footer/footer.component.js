@@ -7,10 +7,17 @@ angular.module('footer').component('footer', {
     '$translate',
     function FooterController($translate) {
       var footer = this;
-      footer.language = 'en';
+      footer.locale = 'en';
+      footer.language = "English";
   
-      footer.switchLanguage = function switchLanguage() {
-        $translate.use(footer.language);
+      // footer.switchLanguage = function switchLanguage() {
+      //   $translate.use(footer.locale);
+      // }
+
+      // This function may be written in a better way (considering event passing and ng-models)
+      footer.switchLanguage = function(locale, language) {
+        $translate.use(locale);
+        footer.language = language;
       }
     }
   ]

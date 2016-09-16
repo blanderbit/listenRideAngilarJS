@@ -38,12 +38,17 @@
       <div layout="column" layout-align-gt-sm="start start" layout-align="start center" layout-padding>
         <md-list>
           <md-subheader class="md-no-sticky">{{ 'footer.language' | translate }}</md-subheader>
-          <md-list-item class="md-body-1">
-            <md-select class="md-body-1" ng-model="footer.language" ng-change="footer.switchLanguage()"" aria-label="Select Language">
-              <md-option value="en">English</md-option>
-              <md-option value="de">Deutsch</md-option>
-            </md-select>
-          </md-list-item>
+            <md-menu md-position-mode="target bottom">
+              <md-button md-no-ink ng-click="$mdOpenMenu($event)">{{ footer.language }}</md-button>
+              <md-menu-content width="2">
+                <md-menu-item>
+                  <md-button md-no-ink ng-click="footer.switchLanguage('en', 'English')">English</md-button>
+                </md-menu-item>
+                <md-menu-item>
+                  <md-button md-no-ink ng-click="footer.switchLanguage('de', 'Deutsch')">Deutsch</md-button>
+                </md-menu-item>
+              </md-menu-content>
+            </md-menu>
         </md-list>
       </div>
       
