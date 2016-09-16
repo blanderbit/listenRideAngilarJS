@@ -3,12 +3,7 @@
 angular.module('header').component('header', {
   templateUrl: 'modules/header/header.template.html',
   controllerAs: 'header',
-  controller: [
-    '$mdDialog',
-    '$mdSidenav',
-    '$http',
-    'authentication',
-    'sha256',
+  controller: ['$mdDialog', '$mdSidenav', '$http', 'authentication', 'sha256',
     function HeaderController($mdDialog, $mdSidenav, $http, authentication, sha256) {
       var header = this;
 

@@ -1,5 +1,7 @@
 <md-dialog flex="40">
-  <form ng-cloak>
+
+  <form ng-cloak name="loginForm">
+
     <md-toolbar hide show-xs>
       <div class="md-toolbar-tools" layout-align="center center">
         <md-button class="md-icon-button">
@@ -13,6 +15,7 @@
         </md-button>
       </div>
     </md-toolbar>
+
     <md-dialog-content>
       <div class="md-dialog-content" layout="column">
         <!-- <md-button class="md-primary md-raised">Login with Facebook</md-button>
@@ -20,20 +23,34 @@
           <p>or</p>
         </div> -->
         <p></p>
-        <md-input-container class="md-input-container-compact">
-          <label>{{ 'shared.email-address' | translate }}</label>
-          <input ng-model="loginDialog.email" type="email">
-        </md-input-container>
-        <md-input-container class="md-input-container-compact">
-          <label>{{ 'shared.password' | translate }}</label>
-          <input ng-model="loginDialog.password" type="password">
-        </md-input-container>
-        <div layout="row">
-          <md-button ng-click="loginDialog.resetPassword()">{{ 'shared.forgot-password' | translate }}</md-button>
-          <span flex></span>
-          <md-button class="md-primary md-raised" ng-click="loginDialog.login()">{{ 'shared.log-in' | translate }}</md-button>
+  
+          <md-input-container class="md-input-container-compact">
+            <label>{{ 'shared.email-address' | translate }}</label>
+            <input ng-model="loginDialog.email" name="email" required type="email" />
+            <div ng-messages="loginForm.email.$error" role="alert">
+              <div ng-message="required">Please enter your email address.</div>
+              <div ng-message="email">This field must be a valid email address.</div>
+            </div>
+          </md-input-container>
+  
+          <md-input-container class="md-input-container-compact">
+            <label>{{ 'shared.password' | translate }}</label>
+            <input type="password" ng-model="loginDialog.password" name="password" required ng-minlength="6" ng-maxlength="30"  />
+            <div ng-messages="loginForm.password.$error" role="alert">
+              <div ng-message="required">Please enter a password.</div>
+              <div ng-message="maxlength">Password shouldn't be longer than 30 characters.</div>
+              <div ng-message="minlength">Password shouldn't be shorter than 6 characters.</div>
+            </div>
+          </md-input-container>
+  
+          <div layout="row">
+            <md-button ng-click="loginDialog.resetPassword()">{{ 'shared.forgot-password' | translate }}</md-button>
+            <span flex></span>
+            <md-button class="md-primary md-raised" ng-click="loginDialog.login()">{{ 'shared.log-in' |     translate }}</md-button>
+          </div>
       </div>
     </md-dialog-content>
+  
     <!-- <md-dialog-actions layout="row">
       <md-button class="md-warn" ng-click="login.hide()">Cancel</md-button>
       <span flex></span>

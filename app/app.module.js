@@ -8,6 +8,7 @@ angular.module('listnride', [
   'bikeCard',
 
   'ngMaterial',
+  'ngMessages',
   'pascalprecht.translate',
   'ui.router',
   'ngStorage'
