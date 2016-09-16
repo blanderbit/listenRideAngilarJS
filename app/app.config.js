@@ -48,6 +48,12 @@ angular.
       component: 'search'
     });
 
+    $stateProvider.state({
+      name: 'profile',
+      url: '/profile',
+      component: 'profile'
+    });
+
     $translateProvider.useStaticFilesLoader({
         prefix: 'i18n/',
         suffix: '.json'
