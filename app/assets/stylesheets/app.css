@@ -12,6 +12,12 @@ home #landing_section {
   height: 70vh;
 }
 
+bike #hero-shot {
+  background-image: url("../ui_images/landing.jpg");
+  background-position: 15% 100%;
+  height: 60vh;
+}
+
 @media (max-width: 599px) {
   md-dialog.md-dialog-fullscreen {
     min-height: 100%;
@@ -29,12 +35,6 @@ home #landing_section {
     min-height: 0 !important;
     border-radius: 3px;
   }
-}
-
-home #landing_section {
-  background-image: url("../ui_images/landing.jpg");
-  background-position: 15% 100%;
-  height: 70vh;
 }
 
 footer md-toolbar:not(.md-menu-toolbar) {
