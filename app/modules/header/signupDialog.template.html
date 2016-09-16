@@ -1,5 +1,6 @@
 <md-dialog flex="40">
-  <form ng-cloak>
+  <form ng-cloak name="signupForm">
+
     <md-toolbar hide show-xs>
       <div class="md-toolbar-tools" layout-align="center center">
         <md-button class="md-icon-button">
@@ -13,6 +14,7 @@
         </md-button>
       </div>
     </md-toolbar>
+
     <md-dialog-content>
       <div class="md-dialog-content" layout="column">
         <md-button class="md-primary md-raised">{{ 'shared.sign-up-with-facebook' | translate }}</md-button>
@@ -23,22 +25,42 @@
         <div layout="row">
           <md-input-container flex class="md-input-container-compact">
             <label>{{ 'shared.first-name' | translate }}</label>
-            <input ng-model="user.first_name">
+            <input name="first_name" ng-model="user.first_name" required ng-maxlength="20">
+            <div ng-messages="signupForm.first_name.$error" role="alert">
+              <div ng-message="required">Please enter your first name.</div>
+              <div ng-message="maxlength">First name shouldn't be longer than 20 characters</div>
+            </div>
           </md-input-container>
+
           <md-input-container flex class="md-input-container-compact">
             <label>{{ 'shared.last-name' | translate }}</label>
-            <input ng-model="user.last_name">
+            <input name="last_name" ng-model="user.last_name" required ng-maxlength="30">
+            <div ng-messages="signupForm.last_name.$error" role="alert">
+              <div ng-message="required">Please enter your last name.</div>
+              <div ng-message="maxlength">Last name shouldn't exceed 30 characters</div>
+            </div>
           </md-input-container>
         </div>
+
         <md-input-container class="md-input-container-compact">
           <label>{{ 'shared.email-address' | translate }}</label>
-          <input ng-model="user.email" type="email">
+          <input name="email" ng-model="user.email" type="email" required>
+          <div ng-messages="signupForm.email.$error" role="alert">
+              <div ng-message="required">Please enter your email address.</div>
+              <div ng-message="email">Please enter a valid email address</div>
+          </div>
         </md-input-container>
+
         <md-input-container class="md-input-container-compact">
           <label>{{ 'shared.password' | translate }}</label>
-          <input ng-model="user.password" type="password">
+          <input name="password" ng-model="user.password" type="password" required ng-minlength="6">
+          <div ng-messages="signupForm.password.$error" role="alert">
+            <div ng-message="required">Please provide a password</div>
+            <div ng-message="minlength">Password should be at least 6 characters</div>
+          </div>
         </md-input-container>
         <md-button class="md-primary md-raised" ng-click="signupDialog.hide()">{{ 'shared.sign-up' | translate }}</md-button>
+      
       </div>
     </md-dialog-content>
   </form>
