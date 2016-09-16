@@ -2,7 +2,7 @@
 
 angular.
   module('listnride').
-  config(function($translateProvider, $stateProvider) {
+  config(function($translateProvider, $stateProvider, uiGmapGoogleMapApiProvider) {
     /*    
     Sample route:
       Route:
@@ -29,6 +29,12 @@ angular.
       }
     });
     */
+
+    uiGmapGoogleMapApiProvider.configure({
+      key: 'AIzaSyAwLiE4WWvLne4sR4WuFlEYWtu-chKOTRs',
+      v: '3.20',
+      libraries: 'weather,geometry,visualization'
+    });
 
     $stateProvider.state({
       name: 'home',

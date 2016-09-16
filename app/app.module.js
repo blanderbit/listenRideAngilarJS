@@ -10,5 +10,6 @@ angular.module('listnride', [
   'ngMaterial',
   'pascalprecht.translate',
   'ui.router',
-  'ngStorage'
+  'ngStorage',
+  'uiGmapgoogle-maps'
 ]);
