@@ -11,5 +11,6 @@ angular.module('listnride', [
   'ngMessages',
   'pascalprecht.translate',
   'ui.router',
-  'ngStorage'
+  'ngStorage',
+  'uiGmapgoogle-maps'
 ]);

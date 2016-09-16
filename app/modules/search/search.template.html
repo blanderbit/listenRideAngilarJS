@@ -1,5 +1,5 @@
 <div layout="row" layout-fill>
-  <div flex="70" layout="column">
+  <div flex="60" layout="column">
     <div style="background-color: #dddddd">
       Here comes the filter (variable height)
       <br />
@@ -30,5 +30,7 @@
       <p>Here comes the rest</p>
     </md-content>
   </div>
-  <div flex="30" style="background-color: #eeeeee;">MAP</div>
+  <div flex style="background-color: #eeeeee;">
+    <ui-gmap-google-map center="search.map.center" zoom="search.map.zoom" options="search.map.options"></ui-gmap-google-map>
+  </div>
 </div>
