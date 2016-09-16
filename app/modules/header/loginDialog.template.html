@@ -8,7 +8,7 @@
           <md-icon></md-icon>
         </md-button>
         <span flex></span>
-        <br><h2>{{ 'shared.log-in' | translate }}</h2><br>
+        <br><h2>{{ 'forms.log-in' | translate }}</h2><br>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="loginDialog.hide()">
           <md-icon md-svg-src="assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
@@ -25,7 +25,7 @@
         <p></p>
   
           <md-input-container class="md-input-container-compact">
-            <label>{{ 'shared.email-address' | translate }}</label>
+            <label>{{ 'forms.email-address' | translate }}</label>
             <input ng-model="loginDialog.email" name="email" required type="email" />
             <div ng-messages="loginForm.email.$error" role="alert">
               <div ng-message="required">Please enter your email address.</div>
@@ -34,7 +34,7 @@
           </md-input-container>
   
           <md-input-container class="md-input-container-compact">
-            <label>{{ 'shared.password' | translate }}</label>
+            <label>{{ 'forms.password' | translate }}</label>
             <input type="password" ng-model="loginDialog.password" name="password" required ng-minlength="6" ng-maxlength="30"  />
             <div ng-messages="loginForm.password.$error" role="alert">
               <div ng-message="required">Please enter a password.</div>
@@ -44,9 +44,9 @@
           </md-input-container>
   
           <div layout="row">
-            <md-button ng-click="loginDialog.resetPassword()">{{ 'shared.forgot-password' | translate }}</md-button>
+            <md-button ng-click="loginDialog.resetPassword()">{{ 'forms.forgot-password' | translate }}</md-button>
             <span flex></span>
-            <md-button class="md-primary md-raised" ng-click="loginDialog.login()">{{ 'shared.log-in' |     translate }}</md-button>
+            <md-button class="md-primary md-raised" ng-click="loginDialog.login()">{{ 'forms.log-in' |     translate }}</md-button>
           </div>
       </div>
     </md-dialog-content>

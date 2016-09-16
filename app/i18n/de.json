@@ -1,20 +1,11 @@
 {
   "shared": {
-    "sign-up": "Registrieren",
-    "log-in": "Anmelden",
     "learn-more": "Mehr Erfahren",
     "how-it-works": "Wie's funktioniert",
     "list-a-bike": "Rad vermieten",
     "renting-a-bike": "Rad ausleihen",
     "listing-a-bike": "Rad verleihen",
-    "trust-and-safety": "Vertrauen und Sicherheit",
-    "email-address": "Emailadresse",
-    "password": "Passwort",
-    "or": "oder",
-    "first-name": "Vorname",
-    "last-name": "Nachname",
-    "sign-up-with-facebook": "Mit Facebook registrieren",
-    "forgot-password": "Passwort vergessen?"
+    "trust-and-safety": "Vertrauen und Sicherheit"
   },
   "header": {
 
@@ -30,5 +21,16 @@
     "press": "Presse",
     "jobs": "Jobs",
     "contact": "Kontakt"
+  },
+  "forms": {
+    "first-name": "Vorname",
+    "last-name": "Nachname",
+    "email-address": "Email-Adresse",
+    "password": "Passwort",
+    "forgot-password": "Passwort vergessen?",
+    "or": "oder",
+    "log-in": "Log In",
+    "sign-up": "Registrieren",
+    "sign-up-with-facebook": "Mit Facebook registrieren"
   }
 }

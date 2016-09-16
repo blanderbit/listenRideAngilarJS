@@ -1,20 +1,11 @@
 {
   "shared": {
-    "sign-up": "Sign Up",
-    "log-in": "Login",
     "learn-more": "Learn More",
     "how-it-works": "How it works",
     "list-a-bike": "List a Bike",
     "renting-a-bike": "Renting a Bike",
     "listing-a-bike": "Listing a Bike",
-    "trust-and-safety": "Trust and Safety",
-    "email-address": "Email Address",
-    "password": "Password",
-    "or": "or",
-    "first-name": "First Name",
-    "last-name": "Last Name",
-    "sign-up-with-facebook": "Sign Up with Facebook",
-    "forgot-password": "Forgot Password?"
+    "trust-and-safety": "Trust and Safety"
   },
   "header": {
 
@@ -30,5 +21,16 @@
     "press": "Press",
     "jobs": "Jobs",
     "contact": "Contact"
+  },
+  "forms": {
+    "first-name": "First Name",
+    "last-name": "Last Name",
+    "email-address": "Email Address",
+    "password": "Password",
+    "forgot-password": "Forgot Password?",
+    "or": "or",
+    "log-in": "Log In",
+    "sign-up": "Sign Up",
+    "sign-up-with-facebook": "Sign Up with Facebook"
   }
 }

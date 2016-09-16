@@ -1,10 +1,11 @@
+
 <div id="landing_section"></div>
 
 <div layout-xs="column" layout="row">
   <div id="featuredBikes" layout="row" layout-wrap>
 
     <div ng-repeat="bike in home.featuredBikes" flex="100" flex-gt-xs="33" flex-gt-sm="25">
-      <bike-card name="bike.name" brand="bike.brand" price="bike.price_daily" url="bike.image_file_1.image_file_1.small.url"></bike-card>
+      <bike-card name="bike.name" brand="bike.brand" price="bike.price_daily" url="bike.image_file_1.image_file_1.small.url"><bike-card>
     </div>
 
   </div>
