@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('profile').component('profile', {
-  templateUrl: 'modules/profile/profile.template.html',
-  controllerAs: 'profile',
+angular.module('bike').component('bike', {
+  templateUrl: 'modules/bike/bike.template.html',
+  controllerAs: 'bike',
   controller: ['api',
-    function ProfileController(api) {
-      var profile = this;
+    function BikeController(api) {
+      var bike = this;
 
       api.get('/users/1001').then(function success() {
         console.log("Successfully retrieved User");

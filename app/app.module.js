@@ -7,6 +7,7 @@ angular.module('listnride', [
   'search',
   'bikeCard',
   'profile',
+  'bike',
   'ngMaterial',
   'ngMessages',
   'pascalprecht.translate',

@@ -43,6 +43,12 @@ angular.
     });
 
     $stateProvider.state({
+      name: 'bike',
+      url: '/bikes',
+      component: 'bike'
+    });
+
+    $stateProvider.state({
       name: 'search',
       url: '/search',
       component: 'search'
