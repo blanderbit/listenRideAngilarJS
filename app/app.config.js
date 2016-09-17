@@ -43,8 +43,13 @@ angular.
 
     $stateProvider.state({
       name: 'search',
-      url: '/search',
-      component: 'search'
+      url: '/search/{location}',
+      component: 'search',
+      resolve: {
+        location: function($transition$) {
+          return $transition$.params().location; //'fake city_name';// $transition$.params().city_name;
+        }
+      }
     });
 
     $translateProvider.useStaticFilesLoader({
