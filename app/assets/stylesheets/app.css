@@ -49,3 +49,7 @@ search .angular-google-map,
 search .angular-google-map-container {
   height: 100%;
 }
+
+search #searchBox {
+  width: 200px;
+}
