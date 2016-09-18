@@ -32,7 +32,7 @@ angular.
 
     uiGmapGoogleMapApiProvider.configure({
       key: 'AIzaSyAwLiE4WWvLne4sR4WuFlEYWtu-chKOTRs',
-      libraries: ''
+      libraries: 'places'
     });
 
     $stateProvider.state({
