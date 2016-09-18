@@ -37,6 +37,10 @@ home #landing_section {
   height: 70vh;
 }
 
+home #searchBox {
+  width: 300px;
+}
+
 footer md-toolbar:not(.md-menu-toolbar) {
   background-color: rgb(75,75,75);
 }
