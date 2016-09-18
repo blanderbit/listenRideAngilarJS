@@ -1,8 +1,5 @@
 <div id="landing_section" flex layout="row" layout-align="center center">
-  <form ng-submit="home.onSearch()">
-    <input id="searchBox" type="text" placeholder="{{ 'home.search-placeholder' | translate }}">
-    <input type="submit" id="submit" value="{{ 'home.search' | translate }}" />
-  </form>
+  <autocomplete></autocomplete>
 </div>
 
 <div layout-xs="column" layout="row">

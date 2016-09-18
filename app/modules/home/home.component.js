@@ -3,21 +3,15 @@
 angular.module('home').component('home', {
   templateUrl: 'modules/home/home.template.html',
   controllerAs: 'home',
-  controller: [ 'api', '$state', 'uiGmapGoogleMapApi',
-    function HomeController(api, $state, uiGmapGoogleMapApi) {
+  controller: [ 'api',
+    function HomeController(api) {
       var home = this;
 
-      uiGmapGoogleMapApi.then(function(maps) {
-        var autocomplete = new google.maps.places.Autocomplete(document.getElementById('searchBox'));
-      });
+      home.test = "Berlin";
 
       api.get("/featured").then(function(response) {
         home.featuredBikes = response.data;
       });
-
-      home.onSearch = function() {
-        $state.go('search', {location: document.getElementById('searchBox').value});
-      };
     }
   ]
 });

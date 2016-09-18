@@ -31,7 +31,7 @@
     "jobs": "Jobs",
     "contact": "Contact"
   },
-  "home": {
+  "autocomplete": {
     "search": "Search",
     "search-placeholder": "Where would you like to rent a bike"
   }

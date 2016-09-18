@@ -31,7 +31,7 @@
     "jobs": "Jobs",
     "contact": "Kontakt"
   },
-  "home": {
+  "autocomplete": {
     "search": "Suche",
     "search-placeholder": "Wo willst du ein Rad ausleihen?"
   }
