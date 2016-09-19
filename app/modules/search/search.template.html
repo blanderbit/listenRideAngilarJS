@@ -7,7 +7,7 @@
     <md-content>
       <div id="featuredBikes" layout="row" layout-wrap>
         <div ng-repeat="bike in search.bikes" flex="100" flex-gt-sm="50" flex-gt-md="33" flex-gt-lg="25">
-          <bike-card name="bike.name" brand="bike.brand" price="bike.price_daily" url="bike.image_file_1.image_file_1.small.url"></bike-card>
+          <bike-card name="bike.name" brand="bike.brand" ui-sref="bike({bikeId: bike.id})" price="bike.price_daily" url="bike.image_file_1.image_file_1.small.url"></bike-card>
         </div>
       </div>
     </md-content>
