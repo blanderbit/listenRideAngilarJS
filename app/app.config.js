@@ -43,7 +43,7 @@ angular.
 
     $stateProvider.state({
       name: 'bike',
-      url: '/bikes/',
+      url: '/bikes/{bikeId}',
       component: 'bike'
     });
 

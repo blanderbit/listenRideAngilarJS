@@ -50,13 +50,13 @@
     <script src="./services/authentication.service.js"></script>
     <script src="./services/sha256.service.js"></script>
     <script src="./services/api.service.js"></script>
+
+    <script src="./filters/category.filter.js"></script>
   </head>
 
   <body layout="column">
     <header></header>
     <sidebar layout="row"></sidebar>
-    <md-content flex>
-      <ui-view></ui-view>
-    </md-content>
+    <md-content ui-view flex></md-content>
   </body>
 </html>
