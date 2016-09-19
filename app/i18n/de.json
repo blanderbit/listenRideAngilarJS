@@ -7,9 +7,11 @@
     "listing-a-bike": "Rad verleihen",
     "trust-and-safety": "Vertrauen und Sicherheit"
   },
+
   "header": {
 
   },
+
   "footer": {
     "language": "Sprache",
     "company": "Company",
@@ -22,6 +24,7 @@
     "jobs": "Jobs",
     "contact": "Kontakt"
   },
+
   "forms": {
     "first-name": "Vorname",
     "last-name": "Nachname",
@@ -32,5 +35,10 @@
     "log-in": "Log In",
     "sign-up": "Registrieren",
     "sign-up-with-facebook": "Mit Facebook registrieren"
+  },
+  
+  "autocomplete": {
+    "search": "Suche",
+    "search-placeholder": "Wo willst du ein Rad ausleihen?"
   }
 }

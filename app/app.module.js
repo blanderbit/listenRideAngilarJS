@@ -6,6 +6,7 @@ angular.module('listnride', [
   'home',
   'search',
   'bikeCard',
+  'autocomplete',
 
   'ngMaterial',
   'ngMessages',
