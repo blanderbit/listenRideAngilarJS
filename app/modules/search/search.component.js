@@ -12,7 +12,7 @@ angular.module('search').component('search', {
 
       search.map = {
         center: { latitude: 45, longitude: -73 },
-        zoom: 8,
+        zoom: 11,
         options: {
           scrollwheel: false
         },
