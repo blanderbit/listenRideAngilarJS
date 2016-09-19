@@ -7,7 +7,7 @@ angular.module('bike').component('bike', {
     function BikeController(api) {
       var bike = this;
 
-      api.get('/users/1001').then(function success() {
+      api.get('/rides/1').then(function success() {
         console.log("Successfully retrieved User");
       }, function error() {
         console.log("Error retrieving User");

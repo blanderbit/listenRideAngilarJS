@@ -7,9 +7,11 @@
     "listing-a-bike": "Listing a Bike",
     "trust-and-safety": "Trust and Safety"
   },
+
   "header": {
 
   },
+
   "footer": {
     "language": "Language",
     "company": "Company",
@@ -22,6 +24,7 @@
     "jobs": "Jobs",
     "contact": "Contact"
   },
+
   "forms": {
     "first-name": "First Name",
     "last-name": "Last Name",
@@ -32,5 +35,10 @@
     "log-in": "Log In",
     "sign-up": "Sign Up",
     "sign-up-with-facebook": "Sign Up with Facebook"
+  },
+
+  "autocomplete": {
+    "search": "Search",
+    "search-placeholder": "Where would you like to rent a bike"
   }
 }

@@ -32,8 +32,7 @@ angular.
 
     uiGmapGoogleMapApiProvider.configure({
       key: 'AIzaSyAwLiE4WWvLne4sR4WuFlEYWtu-chKOTRs',
-      v: '3.20',
-      libraries: ''
+      libraries: 'places'
     });
 
     $stateProvider.state({
@@ -44,14 +43,19 @@ angular.
 
     $stateProvider.state({
       name: 'bike',
-      url: '/bikes',
+      url: '/bikes/',
       component: 'bike'
     });
 
     $stateProvider.state({
       name: 'search',
-      url: '/search',
-      component: 'search'
+      url: '/search/{location}',
+      component: 'search',
+      resolve: {
+        location: function($transition$) {
+          return $transition$.params().location; //'fake city_name';// $transition$.params().city_name;
+        }
+      }
     });
 
     $stateProvider.state({
