@@ -2,7 +2,12 @@
 
 angular.
   module('listnride').
-  config(function($translateProvider, $stateProvider, uiGmapGoogleMapApiProvider) {
+  config(function(
+    $translateProvider,
+    $stateProvider,
+    uiGmapGoogleMapApiProvider,
+    ezfbProvider,
+    $mdAriaProvider) {
     /*    
     Sample route:
       Route:
@@ -29,6 +34,18 @@ angular.
       }
     });
     */
+
+    $mdAriaProvider.disableWarnings();
+
+    ezfbProvider.setInitParams({
+      // This is my FB app id for plunker demo app
+      appId: '895499350535682',
+  
+      // Module default is `v2.6`.
+      // If you want to use Facebook platform `v2.3`, you'll have to add the following parameter.
+      // https://developers.facebook.com/docs/javascript/reference/FB.init
+      version: 'v2.3'
+    });
 
     uiGmapGoogleMapApiProvider.configure({
       key: 'AIzaSyAwLiE4WWvLne4sR4WuFlEYWtu-chKOTRs',
