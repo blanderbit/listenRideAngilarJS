@@ -14,5 +14,6 @@ angular.module('listnride', [
   'pascalprecht.translate',
   'ui.router',
   'ngStorage',
-  'uiGmapgoogle-maps'
+  'uiGmapgoogle-maps',
+  'ezfb'
 ]);

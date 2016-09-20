@@ -3,8 +3,8 @@
 angular.module('header').component('header', {
   templateUrl: 'modules/header/header.template.html',
   controllerAs: 'header',
-  controller: ['$mdDialog', '$mdToast', '$mdSidenav', '$http', 'authentication', 'sha256',
-    function HeaderController($mdDialog, $mdToast, $mdSidenav, $http, authentication, sha256) {
+  controller: ['$mdDialog', '$mdToast', '$mdSidenav', '$http', 'authentication', 'sha256', 'api', 'ezfb',
+    function HeaderController($mdDialog, $mdToast, $mdSidenav, $http, authentication, sha256, api, ezfb) {
       var header = this;
       header.authentication = authentication;
       console.log("Logged in? " + header.authentication.loggedIn());
@@ -14,14 +14,7 @@ angular.module('header').component('header', {
       }
 
       header.logout = function() {
-        header.authentication.clearCredentials();
-
-        $mdToast.show(
-          $mdToast.simple()
-          .textContent('You are logged out.')
-          .hideDelay(3000)
-          .position('bottom right')
-        );
+        header.authentication.logout();
       }
   
       header.showLoginDialog = function(event) {
@@ -50,30 +43,11 @@ angular.module('header').component('header', {
         }
 
         loginDialog.login = function() {
-          $http({
-            method: 'POST',
-            url: 'https://listnride-staging.herokuapp.com/v2/users/login',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            data: {
-              'user': {
-                "email": loginDialog.email,
-                "password_hashed": sha256.encrypt(loginDialog.password)
-              }
-            }
-          }).then(function successCallback(response) {
-            authentication.setCredentials(loginDialog.email, sha256.encrypt(loginDialog.password));
-            $mdDialog.hide();
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent('Successfully logged in.')
-              .hideDelay(3000)
-              .position('bottom right')
-            );
-          }, function errorCallback(response) {
-            
-          });
+          authentication.login(loginDialog.email, sha256.encrypt(loginDialog.password));
+        }
+
+        loginDialog.connectFb = function() {
+          authentication.connectFb();
         }
 
         loginDialog.resetPassword = function() {
