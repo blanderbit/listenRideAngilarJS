@@ -11,7 +11,6 @@ angular.module('home').component('home', {
 
       api.get("/featured").then(function(response) {
         home.featuredBikes = response.data;
-        console.log(home.featuredBikes);
       });
     }
   ]
