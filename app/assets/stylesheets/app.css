@@ -1,14 +1,30 @@
-/*.md-input-container-compact {
-  margin: 0;
-}*/
+/* Temporary code for a sticky header */
+/*.header {
+  position: fixed !important;
+  top: 0px !important;
+  width: 100%;
+  z-index: 3;
+}
 
-/*#header {
-  flex: 1 0 auto !important;
+body {
+  height: auto !important;
+}
+
+.lnr-header {
+  height: 60px !important;
+}
+
+.container {
+  margin: 60px 0 0 0;
 }*/
 
 .content {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.md-input-container-compact {
+  margin: 0.5em 0;
 }
 
 p {
@@ -17,7 +33,7 @@ p {
 
 bike #hero-shot {
   height: 60vh;
-  background-size: cover;
+  /*background-size: cover;*/
   background-position: 50% 50%;
 }
 
