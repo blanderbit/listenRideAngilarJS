@@ -18,6 +18,7 @@ angular.module('footer').component('footer', {
       footer.switchLanguage = function(locale, language) {
         $translate.use(locale);
         footer.language = language;
+        document.querySelector("md-content#main").scrollTop = 0;
       }
     }
   ]
