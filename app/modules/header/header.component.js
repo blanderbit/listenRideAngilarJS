@@ -3,14 +3,25 @@
 angular.module('header').component('header', {
   templateUrl: 'modules/header/header.template.html',
   controllerAs: 'header',
-  controller: ['$mdDialog', '$mdSidenav', '$http', 'authentication', 'sha256',
-    function HeaderController($mdDialog, $mdSidenav, $http, authentication, sha256) {
+  controller: ['$mdDialog', '$mdToast', '$mdSidenav', '$http', 'authentication', 'sha256',
+    function HeaderController($mdDialog, $mdToast, $mdSidenav, $http, authentication, sha256) {
       var header = this;
-      header.loggedIn = authentication.loggedIn();
-      console.log("Logged in? " + header.loggedIn);
+      header.authentication = authentication;
+      console.log("Logged in? " + header.authentication.loggedIn());
 
       header.toggleSidebar = function() {
         $mdSidenav('right').toggle();
+      }
+
+      header.logout = function() {
+        header.authentication.clearCredentials();
+
+        $mdToast.show(
+          $mdToast.simple()
+          .textContent('You are logged out.')
+          .hideDelay(3000)
+          .position('bottom right')
+        );
       }
   
       header.showLoginDialog = function(event) {
@@ -52,10 +63,16 @@ angular.module('header').component('header', {
               }
             }
           }).then(function successCallback(response) {
-            console.log(response);
+            authentication.setCredentials(loginDialog.email, sha256.encrypt(loginDialog.password));
             $mdDialog.hide();
+            $mdToast.show(
+              $mdToast.simple()
+              .textContent('Successfully logged in.')
+              .hideDelay(3000)
+              .position('bottom right')
+            );
           }, function errorCallback(response) {
-            console.log(response);
+            
           });
         }
 

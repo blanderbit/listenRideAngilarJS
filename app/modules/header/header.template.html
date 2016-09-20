@@ -32,8 +32,9 @@
       </md-menu-content>
 
     </md-menu>
-    <md-button md-no-ink ng-click="header.showSignupDialog($event)">{{ 'forms.sign-up' | translate }}</md-button>
-    <md-button md-no-ink ng-click="header.showLoginDialog($event)">{{ 'forms.log-in' | translate }}</md-button>
+    <md-button ng-if="!header.authentication.loggedIn()" md-no-ink ng-click="header.showSignupDialog($event)">{{ 'forms.sign-up' | translate }}</md-button>
+    <md-button ng-if="!header.authentication.loggedIn()" md-no-ink ng-click="header.showLoginDialog($event)">{{ 'forms.log-in' | translate }}</md-button>
+    <md-button ng-if="header.authentication.loggedIn()" md-no-ink ng-click="header.logout($event)">{{ 'forms.log-out' | translate }}</md-button>
   </md-toolbar-tools>
 
 </md-toolbar>
