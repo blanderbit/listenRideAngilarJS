@@ -57,6 +57,8 @@
   <body layout="column">
     <header></header>
     <sidebar layout="row"></sidebar>
-    <md-content ui-view flex></md-content>
+    <md-content id="main" flex>
+        <ui-view></ui-view>
+    </md-content>
   </body>
 </html>

@@ -129,3 +129,7 @@ search .angular-google-map-container {
 search #searchBox {
   width: 200px;
 }
+
+bike-card md-card {
+  cursor: pointer;
+}

@@ -41,5 +41,9 @@
   "autocomplete": {
     "search": "Search",
     "search-placeholder": "Where would you like to rent a bike"
+  },
+
+  "search" : {
+    "no-bikes": "There are no bikes in this location"
   }
 }

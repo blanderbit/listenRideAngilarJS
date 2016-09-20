@@ -41,5 +41,9 @@
   "autocomplete": {
     "search": "Suche",
     "search-placeholder": "Wo willst du ein Rad ausleihen?"
+  },
+
+  "search" : {
+    "no-bikes": "Es gibt keine Räder an diesem Ort"
   }
 }
