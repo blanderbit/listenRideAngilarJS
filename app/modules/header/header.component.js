@@ -6,6 +6,8 @@ angular.module('header').component('header', {
   controller: ['$mdDialog', '$mdSidenav', '$http', 'authentication', 'sha256',
     function HeaderController($mdDialog, $mdSidenav, $http, authentication, sha256) {
       var header = this;
+      header.loggedIn = authentication.loggedIn();
+      console.log("Logged in? " + header.loggedIn);
 
       header.toggleSidebar = function() {
         $mdSidenav('right').toggle();

@@ -7,6 +7,13 @@ angular.
     // $http.defaults.headers.common['Authorization'] = 'Basic ' + $cookieStore.get('authdata');
 
     return {
+      loggedIn: function() {
+        if ($localStorage.auth != null) {
+          return true;
+        } else {
+          return false;
+        }
+      },
       setCredentials: function (username, password) {
         var encoded = Base64.encode(username + ':' + password);
         $http.defaults.headers.common.Authorization = 'Basic ' + encoded;
