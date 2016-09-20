@@ -89,7 +89,12 @@ angular.module('header').component('header', {
               }
             }
           }).then(function successCallback(response) {
-            console.log(response);
+            $mdToast.show(
+              $mdToast.simple()
+              .textContent('Please check your emails, we\'ve just sent you a new password.')
+              .hideDelay(5000)
+              .position('bottom right')
+            );
           }, function errorCallback(response) {
             console.log(response);
           });
