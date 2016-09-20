@@ -21,6 +21,12 @@ bike #hero-shot {
   background-position: 50% 50%;
 }
 
+@media (max-width: 599px) {
+  bike #hero-shot {
+    height: 45vh;
+  }
+}
+
 bike #calendar {
   width: 100%;
   height: 100px;
