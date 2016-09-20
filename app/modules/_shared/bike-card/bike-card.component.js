@@ -4,14 +4,16 @@ angular.module('bikeCard').component('bikeCard', {
   templateUrl: 'modules/_shared/bike-card/bike-card.template.html',
   controllerAs: 'bikeCard',
   bindings: {
+    bikeId: '<',
     name: '<',
     brand: '<',
     price: '<',
-    url: '<'
+    imageUrl: '<'
   },
   controller: [
     function BikeCardController() {
       var bikeCard = this;
+      console.log(bikeCard);
       bikeCard.price
     }
   ]
