@@ -5,7 +5,7 @@
     </div>
 
     <md-content>
-      <div ng-if="search.noResults" layout-padding layout="row" layout-align="center center">
+      <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout-padding layout="row" layout-align="center center">
         <span>{{ 'search.no-bikes' | translate }}</span>
       </div>
       <div id="featuredBikes" layout="row" layout-wrap>

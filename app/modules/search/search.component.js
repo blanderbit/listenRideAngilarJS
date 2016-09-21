@@ -9,7 +9,6 @@ angular.module('search').component('search', {
   controller: ['$http', 'uiGmapGoogleMapApi', 'api',
     function SearchController($http, uiGmapGoogleMapApi, api) {
       var search = this;
-      search.noResults = false;
 
       search.map = {
         center: { latitude: 45, longitude: -73 },
@@ -51,8 +50,6 @@ angular.module('search').component('search', {
             latitude: search.bikes[0].lat_rnd,
             longitude: search.bikes[0].lng_rnd
           }
-        } else {
-          search.noResults = true;
         }
       })
 
