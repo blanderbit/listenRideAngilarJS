@@ -132,7 +132,7 @@ angular.module('header').component('header', {
         var signupDialog = this;
         signupDialog.hide = function() {
           $mdDialog.hide();
-        }
+        };
         signupDialog.signup = function() {
           authentication.signup(signupDialog.email, sha256.encrypt(signupDialog.password), signupDialog.firstName, signupDialog.lastName)
           .then(function(success) {
@@ -140,7 +140,15 @@ angular.module('header').component('header', {
           }, function(error) {
             alert('could not sign up');
           })
-        }
+        };
+        signupDialog.signupFb = function() {
+          authentication.signupFb()
+          .then(function(success) {
+            alert('fb successfully signed up');
+          }, function(error) {
+            alert('fb could not sign up');
+          });
+        };
       }
     }
   ]

@@ -13,24 +13,40 @@ angular.
         $localStorage.auth = encoded;
       }
 
-      // Retrieves the user's facebook details and uses them to log him in
-      var queryFb = function(success, error) {
-          ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-            var user = {
-              'user': {
-                'email': response.email,
-                'facebook_id': response.id
-              }
-            };
-            api.post('/users/login', user).then(function(response) {
-              setCredentials(response.data.email, response.data.password_hashed);
-              success();
-            }, function(response) {
-              error();
-            });
-          });
-      }
-  
+      var loginFb = function(email, facebookId, success, error) {
+        var user = {
+          'user': {
+            'email': email,
+            'facebook_id': facebookId
+          }
+        };
+        api.post('/users/login', user).then(function(response) {
+          setCredentials(response.data.email, response.data.password_hashed);
+          success();
+        }, function(response) {
+          error();
+        });
+      };
+
+      var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName, success, error) {
+        var user = {
+          "user": {
+            "email": email,
+            "facebook_id": fbId,
+            "facebook_access_token": fbAccessToken,
+            "profile_picture_url": profilePicture,
+            "first_name": firstName,
+            "last_name": lastName
+          }
+        };
+        api.post("/users", user)
+        .then(function(response) {
+          success();
+        }, function(response) {
+          error();
+        });
+      };
+
       // Further all functions to be exposed in the service
 
       return {
@@ -62,6 +78,37 @@ angular.
           });
         },
 
+        signupFb: function() {
+          return $q(function(resolve, reject) {
+            ezfb.getLoginStatus(function(response) {
+              if (response.status === 'connected') {
+                var accessToken = response.authResponse.accessToken;
+                ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
+                  signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name,
+                    function(success) {
+                      resolve();
+                    }, function(error) {
+                      reject();
+                    }
+                  );
+                });
+              } else {
+                ezfb.login(function(response) {
+                  ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
+                  signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name,
+                      function(success) {
+                        resolve();
+                      }, function(error) {
+                        reject();
+                      }
+                    );
+                  });
+                });
+              }
+            });
+          });
+        },
+
         login: function(email, password) {
           return $q(function(resolve, reject) {
             var user = {
@@ -87,17 +134,21 @@ angular.
           return $q(function(resolve, reject) {
             ezfb.getLoginStatus(function(response) {
               if (response.status === 'connected') {
-                return queryFb(function(success) {
-                  resolve();
-                }, function(error) {
-                  reject();
+                ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
+                  loginFb(response.email, response.id, function() {
+                    resolve();
+                  }, function() {
+                    reject();
+                  });
                 });
               } else {
                 ezfb.login(function(response) {
-                  return queryFb(function(success) {
-                    resolve();
-                  }, function(reject) {
-                    reject();
+                  ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
+                    loginFb(response.email, response.id, function() {
+                      resolve();
+                    }, function() {
+                      reject();
+                    });
                   });
                 }, {scope: 'email'});
               }
