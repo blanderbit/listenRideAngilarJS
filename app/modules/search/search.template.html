@@ -17,10 +17,6 @@
   </div>
 
   <div flex flex-order-xs="1" layout="column">
-    <ui-gmap-google-map flex="100" center="search.map.center" zoom="search.map.zoom" options="search.map.options">
-      <ui-gmap-marker ng-repeat="bike in search.bikes" idKey='bike.id' coords='bike.coords'>
-
-      </ui-gmap-marker>
-    </ui-gmap-google-map>
+    <ng-map flex="100" center="41,-87" zoom="3"></ng-map>
   </div>
 </div>

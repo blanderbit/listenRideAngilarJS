@@ -15,5 +15,6 @@ angular.module('listnride', [
   'ui.router',
   'ngStorage',
   'uiGmapgoogle-maps',
-  'ezfb'
+  'ezfb',
+  'ngMap'
 ]);
