@@ -3,10 +3,14 @@
 angular.module('header').component('header', {
   templateUrl: 'modules/header/header.template.html',
   controllerAs: 'header',
-  controller: ['$mdDialog', '$mdToast', '$mdSidenav', '$http', 'authentication', 'sha256', 'api', 'ezfb',
-    function HeaderController($mdDialog, $mdToast, $mdSidenav, $http, authentication, sha256, api, ezfb) {
+  controller: ['$mdDialog', '$mdToast', '$mdSidenav', '$http', '$timeout', 'authentication', 'sha256', 'api', 'verification',
+    function HeaderController($mdDialog, $mdToast, $mdSidenav, $http, $timeout, authentication, sha256, api, verification, timeout) {
       var header = this;
       header.authentication = authentication;
+
+      header.openVerificationDialog = function() {
+        verification.openDialog();
+      };
 
       header.toggleSidebar = function() {
         $mdSidenav('right').toggle();
@@ -18,7 +22,7 @@ angular.module('header').component('header', {
             $mdToast.simple()
             .textContent('You are logged out.')
             .hideDelay(3000)
-            .position('top right')
+            .position('top center')
         );
       }
   
@@ -50,7 +54,7 @@ angular.module('header').component('header', {
             $mdToast.simple()
             .textContent('Successfully logged in.')
             .hideDelay(3000)
-            .position('top right')
+            .position('top center')
           );
         }
         var showError = function() {
@@ -59,7 +63,7 @@ angular.module('header').component('header', {
             $mdToast.simple()
             .textContent('Error: Could not log in')
             .hideDelay(3000)
-            .position('top right')
+            .position('top center')
           );
         }
 
@@ -101,7 +105,7 @@ angular.module('header').component('header', {
               $mdToast.simple()
               .textContent('Please check your emails, we\'ve just sent you a new password.')
               .hideDelay(5000)
-              .position('bottom right')
+              .position('top center')
             );
           }, function errorCallback(response) {
             console.log(response);
@@ -136,17 +140,23 @@ angular.module('header').component('header', {
         signupDialog.signup = function() {
           authentication.signup(signupDialog.email, sha256.encrypt(signupDialog.password), signupDialog.firstName, signupDialog.lastName)
           .then(function(success) {
-            alert('successfully signed up');
+            $mdDialog.hide();
+            $timeout(function() {
+              verification.openDialog();
+            }, 500);
           }, function(error) {
-            alert('could not sign up');
+            console.log('could not sign up');
           })
         };
         signupDialog.signupFb = function() {
           authentication.signupFb()
           .then(function(success) {
-            alert('fb successfully signed up');
+            $mdDialog.hide();
+            $timeout(function() {
+              verification.openDialog();
+            }, 500);
           }, function(error) {
-            alert('fb could not sign up');
+            console.log('fb could not sign up');
           });
         };
       }

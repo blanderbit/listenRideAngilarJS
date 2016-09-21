@@ -23,12 +23,22 @@ body {
   margin: 0 auto;
 }
 
+/* Add possibility to have centered toasts */
+md-toast.md-center {
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
 .md-input-container-compact {
   margin: 0.5em 0;
 }
 
 p {
   margin: 1em 0;
+}
+
+p.center-text {
+  text-align: center;
 }
 
 bike #hero-shot {
