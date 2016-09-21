@@ -5,7 +5,6 @@ angular.
   config(function(
     $translateProvider,
     $stateProvider,
-    uiGmapGoogleMapApiProvider,
     ezfbProvider,
     $mdAriaProvider) {
     /*    
@@ -45,11 +44,6 @@ angular.
       // If you want to use Facebook platform `v2.3`, you'll have to add the following parameter.
       // https://developers.facebook.com/docs/javascript/reference/FB.init
       version: 'v2.3'
-    });
-
-    uiGmapGoogleMapApiProvider.configure({
-      key: 'AIzaSyAwLiE4WWvLne4sR4WuFlEYWtu-chKOTRs',
-      libraries: 'places'
     });
 
     $stateProvider.state({
