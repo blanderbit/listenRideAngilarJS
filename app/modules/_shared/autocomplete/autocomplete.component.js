@@ -10,7 +10,7 @@ angular.module('autocomplete').component('autocomplete', {
     function AutocompleteController($state) {
       var autocomplete = this;
 
-      var autocomplete = new google.maps.places.Autocomplete(document.getElementById('searchBox'));
+      autocomplete.autocomplete = new google.maps.places.Autocomplete(document.getElementById('searchBox'));
 
       autocomplete.onSearch = function() {
         $state.go('search', {location: document.getElementById('searchBox').value});
