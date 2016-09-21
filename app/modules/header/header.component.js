@@ -7,7 +7,6 @@ angular.module('header').component('header', {
     function HeaderController($mdDialog, $mdToast, $mdSidenav, $http, authentication, sha256, api, ezfb) {
       var header = this;
       header.authentication = authentication;
-      console.log("Logged in? " + header.authentication.loggedIn());
 
       header.toggleSidebar = function() {
         $mdSidenav('right').toggle();
@@ -15,6 +14,12 @@ angular.module('header').component('header', {
 
       header.logout = function() {
         header.authentication.logout();
+        $mdToast.show(
+            $mdToast.simple()
+            .textContent('You are logged out.')
+            .hideDelay(3000)
+            .position('top right')
+        );
       }
   
       header.showLoginDialog = function(event) {
@@ -36,18 +41,47 @@ angular.module('header').component('header', {
         });
       };
 
-      function LoginDialogController($mdDialog) {
+      function LoginDialogController() {
         var loginDialog = this;
+
+        var showSuccess = function() {
+          $mdDialog.hide();
+          $mdToast.show(
+            $mdToast.simple()
+            .textContent('Successfully logged in.')
+            .hideDelay(3000)
+            .position('top right')
+          );
+        }
+        var showError = function() {
+          $mdDialog.hide();
+          $mdToast.show(
+            $mdToast.simple()
+            .textContent('Error: Could not log in')
+            .hideDelay(3000)
+            .position('top right')
+          );
+        }
+
         loginDialog.hide = function() {
           $mdDialog.hide();
         }
 
         loginDialog.login = function() {
-          authentication.login(loginDialog.email, sha256.encrypt(loginDialog.password));
+          authentication.login(loginDialog.email, sha256.encrypt(loginDialog.password))
+          .then(function success() {
+            showLogInSuccess();
+          }, function error() {
+            showLogInError();
+          });
         }
 
-        loginDialog.connectFb = function() {
-          authentication.connectFb();
+        loginDialog.loginFb = function() {
+          authentication.loginFb().then(function(success) {
+            showSuccess();
+          }, function(error) {
+            showError();
+          });
         }
 
         loginDialog.resetPassword = function() {
@@ -95,9 +129,17 @@ angular.module('header').component('header', {
       }
 
       function SignupDialogController($mdDialog) {
-        var signup = this;
-        signup.hide = function() {
+        var signupDialog = this;
+        signupDialog.hide = function() {
           $mdDialog.hide();
+        }
+        signupDialog.signup = function() {
+          authentication.signup(signupDialog.email, sha256.encrypt(signupDialog.password), signupDialog.firstName, signupDialog.lastName)
+          .then(function(success) {
+            alert('successfully signed up');
+          }, function(error) {
+            alert('could not sign up');
+          })
         }
       }
     }
