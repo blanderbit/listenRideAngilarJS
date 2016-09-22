@@ -87,7 +87,15 @@
  
 </div>
 
-<ui-gmap-google-map center="bike.map.center" zoom="bike.map.zoom" options="bike.map.options">
-  <ui-gmap-marker coords="bike.map.center" idKey="0"></ui-gmap-marker>  
-</ui-gmap-google-map>
+  <ng-map center="{{bike.mapOptions.lat}},{{bike.mapOptions.lng}}" zoom="{{bike.mapOptions.zoom}}"" scrollwheel="false">
+    <shape ng-if="bike.data !== undefined" name="circle" no-watcher="true"
+      stroke-color="#FF0000"
+      stroke-opacity="0.8"
+      stroke-weight="2"
+      fill-color="#FF0000"
+      fill-opacity="0.35"
+      center="[{{bike.data.lat_rnd}},{{bike.data.lng_rnd}}]"
+      radius="500">
+    </shape>
+  </ng-map>
 <footer></footer>
