@@ -137,8 +137,7 @@ footer md-toolbar:not(.md-menu-toolbar) {
   background-color: rgb(75,75,75);
 }
 
-search .angular-google-map,
-search .angular-google-map-container {
+search ng-map {
   height: 100%;
 }
 

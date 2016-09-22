@@ -12,7 +12,7 @@ angular.module('search').component('search', {
       search.mapOptions = {
         lat: 40,
         lng: -74,
-        zoom: 10
+        zoom: 1
       };
 
       NgMap.getMap().then(function(map) {
@@ -31,6 +31,7 @@ angular.module('search').component('search', {
         if (search.bikes.length > 0) {
           search.mapOptions.lat = search.bikes[0].lat_rnd;
           search.mapOptions.lng = search.bikes[0].lng_rnd;
+          search.mapOptions.zoom = 10;
         }
       });
 
