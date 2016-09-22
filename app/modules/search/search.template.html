@@ -17,8 +17,8 @@
   </div>
 
   <div flex flex-order-xs="1" layout="column">
-    <ng-map default-style="true" center="{{search.mapOptions.lat}},{{search.mapOptions.lng}}" zoom="{{search.mapOptions.zoom}}">
-      <marker ng-repeat="bike in search.bikes" id="{{bike.id}}" position="{{bike.lat_rnd}},{{bike.lng_rnd}}" on-click="search.showBikeWindow(event, bike.id)">
+    <ng-map default-style="true" center="[{{search.mapOptions.lat}},{{search.mapOptions.lng}}]" zoom="{{search.mapOptions.zoom}}">
+      <marker ng-repeat="bike in search.bikes" id="bike.id" position="{{bike.lat_rnd}},{{bike.lng_rnd}}" on-click="search.showBikeWindow(event, bike.id)">
       </marker>
       <info-window id="mapWindow">
         <div ng-non-bindable="">
