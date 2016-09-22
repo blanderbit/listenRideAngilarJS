@@ -20,12 +20,9 @@ angular.module('search').component('search', {
       });
 
       search.showBikeWindow = function(evt, bikeId) {
-        for (let i = 0; i < search.bikes.length; ++i) {
-          if (search.bikes[i].id == bikeId) {
-            search.selectedBike = search.bikes[i];
-            break;
-          }
-        }
+        search.selectedBike = search.bikes.find(function(bike) {
+          return bike.id == bikeId;
+        })
         search.map.showInfoWindow('mapWindow', this);
       };
 
