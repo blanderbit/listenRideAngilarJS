@@ -1,4 +1,29 @@
-<div layout-fill layout-xs="column" layout-gt-xs="row">
+<div flex layout="row" layout-fill>
+
+  <div flex-xs="65" flex-gt-xs="60" flex-order-xs="2" layout="column">
+    <div style="background-color: #efefef">
+      <autocomplete layout-padding value="search.location"></autocomplete>
+    </div>
+    <md-content flex>
+      <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout-padding layout="row" layout-align="center center">
+        <span>{{ 'search.no-bikes' | translate }}</span>
+      </div>
+      <div id="featuredBikes" layout="row" layout-wrap>
+        <div ng-repeat="bike in search.bikes" flex="100" flex-gt-sm="50" flex-gt-md="33" flex-gt-lg="25">
+          <bike-card bike-id="bike.id" name="bike.name" brand="bike.brand" price="bike.price_daily" image-url="bike.image_file_1.image_file_1.small.url"></bike-card>
+        </div>
+      </div>
+    </md-content>
+  </div>
+
+  <div flex flex-order-xs="1" layout="column" style="background-color: #444444">
+    
+  </div>
+
+</div>
+
+
+<!-- <div layout-fill layout-xs="column" layout-gt-xs="row">
   <div flex-xs="65" flex-gt-xs="60" flex-order-xs="2" layout="column">
     <div style="background-color: #efefef">
       <autocomplete layout-padding value="search.location"></autocomplete>
@@ -23,4 +48,4 @@
       </ui-gmap-marker>
     </ui-gmap-google-map>
   </div>
-</div>
+</div> -->
