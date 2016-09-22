@@ -3,26 +3,8 @@
 angular.
   module('listnride').
   factory('authentication', [
-    'Base64', '$http', '$localStorage', '$mdDialog', '$mdToast', 'ezfb', 'api',
-    function(Base64, $http, $localStorage, $mdDialog, $mdToast, ezfb, api){
-      
-      // First all inner functions
-
-      // Signals the user that login was successful, e.g. hiding dialog and showing a toast
-      var showSuccess = function() {
-        $mdDialog.hide();
-        $mdToast.show(
-          $mdToast.simple()
-          .textContent('Successfully logged in.')
-          .hideDelay(3000)
-          .position('bottom right')
-        );
-      }
-
-      // Signals user that login was unsuccessful, e.g. showing the error
-      var showError = function() {
-        //
-      }
+    'Base64', '$http', '$localStorage', '$q', 'ezfb', 'api',
+    function(Base64, $http, $localStorage, $q, ezfb, api){
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (email, password) {
@@ -31,24 +13,40 @@ angular.
         $localStorage.auth = encoded;
       }
 
-      // Retrieves the user's facebook details and uses them to log him in
-      var loginFb = function() {
-        ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-          var user = {
-            'user': {
-              'email': response.email,
-              'facebook_id': response.id
-            }
-          };
-          api.post('/users/login', user).then(function success(response) {
-            setCredentials(response.data.email, response.data.password_hashed);
-            showSuccess();
-          }, function error(response) {
-            showError();
-          })
+      var loginFb = function(email, facebookId, success, error) {
+        var user = {
+          'user': {
+            'email': email,
+            'facebook_id': facebookId
+          }
+        };
+        api.post('/users/login', user).then(function(response) {
+          setCredentials(response.data.email, response.data.password_hashed);
+          success();
+        }, function(response) {
+          error();
         });
-      }
-  
+      };
+
+      var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName, success, error) {
+        var user = {
+          "user": {
+            "email": email,
+            "facebook_id": fbId,
+            "facebook_access_token": fbAccessToken,
+            "profile_picture_url": profilePicture,
+            "first_name": firstName,
+            "last_name": lastName
+          }
+        };
+        api.post("/users", user)
+        .then(function(response) {
+          success();
+        }, function(response) {
+          error();
+        });
+      };
+
       // Further all functions to be exposed in the service
 
       return {
@@ -60,32 +58,101 @@ angular.
           }
         },
 
+        signup: function(email, password, firstName, lastName) {
+          return $q(function(resolve, reject) {
+            var user = {
+              'user': {
+                'email': email,
+                'password_hashed': password,
+                'first_name': firstName,
+                'last_name': lastName
+              }
+            };
+            api.post('/users', user).then(function(success) {
+              setCredentials(success.data.email, success.data.password_hashed);
+              resolve();
+            }, function(error) {
+              reject();
+            });
+
+          });
+        },
+
+        signupFb: function() {
+          return $q(function(resolve, reject) {
+            ezfb.getLoginStatus(function(response) {
+              if (response.status === 'connected') {
+                var accessToken = response.authResponse.accessToken;
+                ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
+                  signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name,
+                    function(success) {
+                      resolve();
+                    }, function(error) {
+                      reject();
+                    }
+                  );
+                });
+              } else {
+                ezfb.login(function(response) {
+                  ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
+                  signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name,
+                      function(success) {
+                        resolve();
+                      }, function(error) {
+                        reject();
+                      }
+                    );
+                  });
+                });
+              }
+            });
+          });
+        },
+
         login: function(email, password) {
-          var user = {
-            'user': {
-              'email': email,
-              'password_hashed': password
-            }
-          };
-          api.post('/users/login', user).then(function success(response) {
-            setCredentials(response.data.email, response.data.password_hashed);
-            showSuccess();
-          }, function error(response) {
-            showError();
-          })
+          return $q(function(resolve, reject) {
+            var user = {
+              'user': {
+                'email': email,
+                'password_hashed': password
+              }
+            };
+            api.post('/users/login', user).then(function(success) {
+              console.log(success);
+              setCredentials(success.data.email, success.data.password_hashed);
+              resolve();
+            }, function(error) {
+              console.log(error);
+              reject();
+            });
+          });
         },
 
         // Checks if user is logged in via fb already, otherwise prompts him to do so
         // then actually logs in the user through our backend
-        connectFb: function() {
-          ezfb.getLoginStatus(function(response) {
-            if (response.status === 'connected') {
-              loginFb();
-            } else {
-              ezfb.login(function(response) {
-                loginFb();
-              }, {scope: 'email'});
-            }
+        loginFb: function() {
+          return $q(function(resolve, reject) {
+            ezfb.getLoginStatus(function(response) {
+              if (response.status === 'connected') {
+                ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
+                  loginFb(response.email, response.id, function() {
+                    resolve();
+                  }, function() {
+                    reject();
+                  });
+                });
+              } else {
+                ezfb.login(function(response) {
+                  ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
+                    loginFb(response.email, response.id, function() {
+                      resolve();
+                    }, function() {
+                      reject();
+                    });
+                  });
+                }, {scope: 'email'});
+              }
+            });
           });
         },
 
@@ -94,13 +161,6 @@ angular.
           document.execCommand("ClearAuthenticationCache");
           delete $localStorage.auth;
           $http.defaults.headers.common.Authorization = 'Basic ';
-
-          $mdToast.show(
-            $mdToast.simple()
-            .textContent('You are logged out.')
-            .hideDelay(3000)
-            .position('bottom right')
-          );
         }
 
       };

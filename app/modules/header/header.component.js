@@ -3,11 +3,14 @@
 angular.module('header').component('header', {
   templateUrl: 'modules/header/header.template.html',
   controllerAs: 'header',
-  controller: ['$mdDialog', '$mdToast', '$mdSidenav', '$http', 'authentication', 'sha256', 'api', 'ezfb',
-    function HeaderController($mdDialog, $mdToast, $mdSidenav, $http, authentication, sha256, api, ezfb) {
+  controller: ['$mdDialog', '$mdToast', '$mdSidenav', '$http', '$timeout', 'authentication', 'sha256', 'api', 'verification',
+    function HeaderController($mdDialog, $mdToast, $mdSidenav, $http, $timeout, authentication, sha256, api, verification, timeout) {
       var header = this;
       header.authentication = authentication;
-      console.log("Logged in? " + header.authentication.loggedIn());
+
+      header.openVerificationDialog = function() {
+        verification.openDialog();
+      };
 
       header.toggleSidebar = function() {
         $mdSidenav('right').toggle();
@@ -15,6 +18,12 @@ angular.module('header').component('header', {
 
       header.logout = function() {
         header.authentication.logout();
+        $mdToast.show(
+            $mdToast.simple()
+            .textContent('You are logged out.')
+            .hideDelay(3000)
+            .position('top center')
+        );
       }
   
       header.showLoginDialog = function(event) {
@@ -36,18 +45,47 @@ angular.module('header').component('header', {
         });
       };
 
-      function LoginDialogController($mdDialog) {
+      function LoginDialogController() {
         var loginDialog = this;
+
+        var showLoginSuccess = function() {
+          $mdDialog.hide();
+          $mdToast.show(
+            $mdToast.simple()
+            .textContent('Successfully logged in.')
+            .hideDelay(3000)
+            .position('top center')
+          );
+        }
+        var showLoginError = function() {
+          $mdDialog.hide();
+          $mdToast.show(
+            $mdToast.simple()
+            .textContent('Error: Could not log in')
+            .hideDelay(3000)
+            .position('top center')
+          );
+        }
+
         loginDialog.hide = function() {
           $mdDialog.hide();
         }
 
         loginDialog.login = function() {
-          authentication.login(loginDialog.email, sha256.encrypt(loginDialog.password));
+          authentication.login(loginDialog.email, sha256.encrypt(loginDialog.password))
+          .then(function success() {
+            showLoginSuccess();
+          }, function error() {
+            showLoginError();
+          });
         }
 
-        loginDialog.connectFb = function() {
-          authentication.connectFb();
+        loginDialog.loginFb = function() {
+          authentication.loginFb().then(function(success) {
+            showLoginSuccess();
+          }, function(error) {
+            showLoginError();
+          });
         }
 
         loginDialog.resetPassword = function() {
@@ -67,7 +105,7 @@ angular.module('header').component('header', {
               $mdToast.simple()
               .textContent('Please check your emails, we\'ve just sent you a new password.')
               .hideDelay(5000)
-              .position('bottom right')
+              .position('top center')
             );
           }, function errorCallback(response) {
             console.log(response);
@@ -95,10 +133,32 @@ angular.module('header').component('header', {
       }
 
       function SignupDialogController($mdDialog) {
-        var signup = this;
-        signup.hide = function() {
+        var signupDialog = this;
+        signupDialog.hide = function() {
           $mdDialog.hide();
-        }
+        };
+        signupDialog.signup = function() {
+          authentication.signup(signupDialog.email, sha256.encrypt(signupDialog.password), signupDialog.firstName, signupDialog.lastName)
+          .then(function(success) {
+            $mdDialog.hide();
+            $timeout(function() {
+              verification.openDialog();
+            }, 500);
+          }, function(error) {
+            console.log('could not sign up');
+          })
+        };
+        signupDialog.signupFb = function() {
+          authentication.signupFb()
+          .then(function(success) {
+            $mdDialog.hide();
+            $timeout(function() {
+              verification.openDialog();
+            }, 500);
+          }, function(error) {
+            console.log('fb could not sign up');
+          });
+        };
       }
     }
   ]
