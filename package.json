@@ -35,6 +35,7 @@
     "angular-material": "^1.1.1",
     "angular-messages": "^1.5.8",
     "angular-ui-router": "^1.0.0-beta.2",
+    "ngmap": "^1.17.6",
     "ngstorage": "^0.3.11"
   },
   "scripts": {
