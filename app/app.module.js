@@ -9,6 +9,7 @@ angular.module('listnride', [
   'profile',
   'bike',
   'verification',
+  'requests',
   'autocomplete',
   'ngMaterial',
   'ngMessages',

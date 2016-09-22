@@ -1,15 +1,16 @@
-
-<div id="landing_section" layout="row" layout-align="center center">
-  <autocomplete></autocomplete>
-</div>
-
-<div layout-xs="column" layout="row">
-  <div id="featuredBikes" layout="row" layout-wrap>
-
-    <div ng-repeat="bike in home.featuredBikes" flex="100" flex-gt-xs="33" flex-gt-sm="25">
-      <bike-card bike-id="bike.id" name="bike.name" brand="bike.brand" price="bike.price_daily" image-url="bike.image_file_1.image_file_1.small.url"><bike-card>
-    </div>
-
+<md-content layout-fill>
+  <div id="landing_section" layout="row" layout-align="center center">
+    <autocomplete></autocomplete>
   </div>
-</div>
-<footer></footer>
+
+  <div layout-xs="column" layout="row">
+    <div id="featuredBikes" layout="row" layout-wrap>
+
+      <div ng-repeat="bike in home.featuredBikes" flex="100" flex-gt-xs="33" flex-gt-sm="25">
+        <bike-card bike-id="bike.id" name="bike.name" brand="bike.brand" price="bike.price_daily" image-url="bike.image_file_1.image_file_1.small.url"><bike-card>
+      </div>
+
+    </div>
+  </div>
+  <footer></footer>
+<md-content>

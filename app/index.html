@@ -39,6 +39,8 @@
     <script src="./modules/profile/profile.component.js"></script>
     <script src="./modules/bike/bike.module.js"></script>
     <script src="./modules/bike/bike.component.js"></script>
+    <script src="./modules/requests/requests.module.js"></script>
+    <script src="./modules/requests/requests.component.js"></script>
     <script src="./modules/_shared/bike-card/bike-card.module.js"></script>
     <script src="./modules/_shared/bike-card/bike-card.component.js"></script>
     <script src="./modules/_shared/autocomplete/autocomplete.module.js"></script>
@@ -61,8 +63,13 @@
   <body layout="column">
     <header></header>
     <sidebar layout="row"></sidebar>
-    <md-content id="main" flex>
-        <ui-view></ui-view>
-    </md-content>
+    <!-- <md-content id="main" layout="row" flex>
+        <ui-view flex layout-fill></ui-view>
+    </md-content> -->
+
+    <ui-view flex layout-fill style="overflow: hidden"></ui-view>
+
+    <!-- <ui-view layout="row" flex></ui-view> -->
+
   </body>
 </html>

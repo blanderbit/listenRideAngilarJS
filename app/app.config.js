@@ -75,6 +75,12 @@ angular.
       component: 'profile'
     });
 
+    $stateProvider.state({
+      name: 'requests',
+      url: '/requests',
+      component: 'requests'
+    });
+
     $translateProvider.useStaticFilesLoader({
         prefix: 'i18n/',
         suffix: '.json'

@@ -1,101 +1,103 @@
-<div id="hero-shot" ng-click="bike.showGalleryDialog($event)" style="{{'background-image: url(' + bike.data.image_file_1.image_file_1.large.url + ')'}}"></div>
+ <md-content layout-fill>
+  <div id="hero-shot" ng-click="bike.showGalleryDialog($event)" style="{{'background-image: url(' + bike.data.image_file_1.image_file_1.large.url + ')'}}"></div>
 
-<div class="content" layout="column" layout-margin>
-  
-  <div flex layout="row" layout-align="left center">
-    <div flex>
-      <p class="md-headline">{{ bike.data.name }}</p>
-      <p class="md-subhead">{{ bike.data.category | category }} by {{ bike.data.brand }}</p>
+  <div class="content" layout="column" layout-margin>
+    
+    <div flex layout="row" layout-align="left center">
+      <div flex>
+        <p class="md-headline">{{ bike.data.name }}</p>
+        <p class="md-subhead">{{ bike.data.category | category }} by {{ bike.data.brand }}</p>
+      </div>
+      <div flex="30" layout="row" hide-sm hide-xs>
+          <p flex="33" layout="column" layout-align="center center">
+            <span class="md-headline">{{ bike.data.price_half_daily | number : 0 }} €</span>
+            <span class="md-caption">halfday</span>
+          </p>
+          <p flex="33" layout="column" layout-align="center center">
+            <span class="md-headline">{{ bike.data.price_daily | number : 0 }} €</span>
+            <span class="md-caption">day</span>
+          </p>
+          <p flex="33" layout="column" layout-align="center center">
+            <span class="md-headline">{{ bike.data.price_weekly | number : 0 }} €</span>
+            <span class="md-caption">week</span>
+          </p>
+      </div>
     </div>
-    <div flex="30" layout="row" hide-sm hide-xs>
-        <p flex="33" layout="column" layout-align="center center">
-          <span class="md-headline">{{ bike.data.price_half_daily | number : 0 }} €</span>
-          <span class="md-caption">halfday</span>
-        </p>
-        <p flex="33" layout="column" layout-align="center center">
-          <span class="md-headline">{{ bike.data.price_daily | number : 0 }} €</span>
-          <span class="md-caption">day</span>
-        </p>
-        <p flex="33" layout="column" layout-align="center center">
-          <span class="md-headline">{{ bike.data.price_weekly | number : 0 }} €</span>
-          <span class="md-caption">week</span>
-        </p>
+
+    <md-divider></md-divider>
+
+    <div flex layout="row">
+      <div flex layout="column">
+
+        <div layout="row">
+          <div flex="20">
+            <p class="md-body-2">Description</p>
+          </div>
+          <div flex>
+            <p class="md-body-1">{{ bike.data.description }}</p>
+          </div>
+        </div>
+
+        <div layout="row">
+          <div flex="20">
+            <p class="md-body-2">Accessories</p>
+          </div>
+          <div flex layout="row">
+            <div ng-if="bike.data.has_lock" class="accessory-icon lock"></div>
+            <div ng-if="bike.data.has_helmet" class="accessory-icon helmet"></div>
+            <div ng-if="bike.data.has_lights" class="accessory-icon light"></div>
+            <div ng-if="bike.data.has_basket" class="accessory-icon basket"></div>
+            <div ng-if="bike.data.has_trailer" class="accessory-icon trailer"></div>
+            <div ng-if="bike.data.has_childseat" class="accessory-icon childseat"></div>
+          </div>
+        </div>
+
+        <md-divider></md-divider>
+
+        <div layout="row">
+          <div flex="20">
+            <p class="md-body-2">Lister</p>
+          </div>
+          <div flex layout="row" layout-align="start center">
+            <img class="lister-image" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
+            <p class="md-body-1" flex-offset="2">{{bike.data.user.first_name}} {{bike.data.user.last_name}}</p>
+          </div>
+        </div>
+
+        <md-divider></md-divider>
+
+        <div layout="row">
+          <div flex="20">
+            <p class="md-body-2">Reviews</p>
+          </div>
+          <div flex>
+            <p class="md-body-1">Here will be text reviews</p>
+            <p class="md-body-1">Here will be text reviews</p>
+            <p class="md-body-1">Here will be text reviews</p>
+            <p class="md-body-1">Here will be text reviews</p>
+          </div>
+        </div>
+
+      </div>
+      <div flex="30" flex-offset="5" hide-sm hide-xs>
+        <!-- <md-calendar id="calendar" ng-model="birthday" md-is-open="true"></md-calendar> -->
+      </div>
     </div>
+
+    <md-divider></md-divider>
+   
   </div>
 
-  <md-divider></md-divider>
-
-  <div flex layout="row">
-    <div flex layout="column">
-
-      <div layout="row">
-        <div flex="20">
-          <p class="md-body-2">Description</p>
-        </div>
-        <div flex>
-          <p class="md-body-1">{{ bike.data.description }}</p>
-        </div>
-      </div>
-
-      <div layout="row">
-        <div flex="20">
-          <p class="md-body-2">Accessories</p>
-        </div>
-        <div flex layout="row">
-          <div ng-if="bike.data.has_lock" class="accessory-icon lock"></div>
-          <div ng-if="bike.data.has_helmet" class="accessory-icon helmet"></div>
-          <div ng-if="bike.data.has_lights" class="accessory-icon light"></div>
-          <div ng-if="bike.data.has_basket" class="accessory-icon basket"></div>
-          <div ng-if="bike.data.has_trailer" class="accessory-icon trailer"></div>
-          <div ng-if="bike.data.has_childseat" class="accessory-icon childseat"></div>
-        </div>
-      </div>
-
-      <md-divider></md-divider>
-
-      <div layout="row">
-        <div flex="20">
-          <p class="md-body-2">Lister</p>
-        </div>
-        <div flex layout="row" layout-align="start center">
-          <img class="lister-image" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
-          <p class="md-body-1" flex-offset="2">{{bike.data.user.first_name}} {{bike.data.user.last_name}}</p>
-        </div>
-      </div>
-
-      <md-divider></md-divider>
-
-      <div layout="row">
-        <div flex="20">
-          <p class="md-body-2">Reviews</p>
-        </div>
-        <div flex>
-          <p class="md-body-1">Here will be text reviews</p>
-          <p class="md-body-1">Here will be text reviews</p>
-          <p class="md-body-1">Here will be text reviews</p>
-          <p class="md-body-1">Here will be text reviews</p>
-        </div>
-      </div>
-
-    </div>
-    <div flex="30" flex-offset="5" hide-sm hide-xs>
-      <!-- <md-calendar id="calendar" ng-model="birthday" md-is-open="true"></md-calendar> -->
-    </div>
-  </div>
-
-  <md-divider></md-divider>
- 
-</div>
-
-<ng-map center="{{bike.mapOptions.lat}},{{bike.mapOptions.lng}}" zoom="{{bike.mapOptions.zoom}}"" scrollwheel="false">
-  <shape ng-if="bike.data !== undefined" name="circle" no-watcher="true"
-    stroke-color="#FF0000"
-    stroke-opacity="0.8"
-    stroke-weight="2"
-    fill-color="#FF0000"
-    fill-opacity="0.35"
-    center="[{{bike.data.lat_rnd}},{{bike.data.lng_rnd}}]"
-    radius="500">
-  </shape>
-</ng-map>
-<footer></footer>
+  <ng-map center="{{bike.mapOptions.lat}},{{bike.mapOptions.lng}}" zoom="{{bike.mapOptions.zoom}}"" scrollwheel="false">
+    <shape ng-if="bike.data !== undefined" name="circle" no-watcher="true"
+      stroke-color="#FF0000"
+      stroke-opacity="0.8"
+      stroke-weight="2"
+      fill-color="#FF0000"
+      fill-opacity="0.35"
+      center="[{{bike.data.lat_rnd}},{{bike.data.lng_rnd}}]"
+      radius="500">
+    </shape>
+  </ng-map>
+  <footer></footer>
+</md-content>
