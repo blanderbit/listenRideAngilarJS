@@ -43,7 +43,7 @@ p.center-text {
 
 bike #hero-shot {
   height: 60vh;
-  /*background-size: cover;*/
+  background-size: cover;
   background-position: 50% 50%;
 }
 

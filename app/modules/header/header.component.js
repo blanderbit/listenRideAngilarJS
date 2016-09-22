@@ -48,7 +48,7 @@ angular.module('header').component('header', {
       function LoginDialogController() {
         var loginDialog = this;
 
-        var showSuccess = function() {
+        var showLoginSuccess = function() {
           $mdDialog.hide();
           $mdToast.show(
             $mdToast.simple()
@@ -57,7 +57,7 @@ angular.module('header').component('header', {
             .position('top center')
           );
         }
-        var showError = function() {
+        var showLoginError = function() {
           $mdDialog.hide();
           $mdToast.show(
             $mdToast.simple()
@@ -74,17 +74,17 @@ angular.module('header').component('header', {
         loginDialog.login = function() {
           authentication.login(loginDialog.email, sha256.encrypt(loginDialog.password))
           .then(function success() {
-            showLogInSuccess();
+            showLoginSuccess();
           }, function error() {
-            showLogInError();
+            showLoginError();
           });
         }
 
         loginDialog.loginFb = function() {
           authentication.loginFb().then(function(success) {
-            showSuccess();
+            showLoginSuccess();
           }, function(error) {
-            showError();
+            showLoginError();
           });
         }
 
