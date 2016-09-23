@@ -5,11 +5,22 @@
       <autocomplete value="search.location"></autocomplete>
 
       <div layout="row">
-        <md-select ng-model="search.filterOptions.size">
+        <md-select ng-model="search.sizeFilter.size">
           <md-option ng-repeat="option in search.sizeOptions" value="{{option.value}}">
             {{option.label}}
           </md-option>
         </md-select>
+        <input type="checkbox" ng-model="search.categoryFilter.allterrain" />allterrain
+        <br />
+        <input type="checkbox" ng-model="search.categoryFilter.city" />city
+        <br />
+        <input type="checkbox" ng-model="search.categoryFilter.race" />race
+        <br />
+        <input type="checkbox" ng-model="search.categoryFilter.special" />special
+        <br />
+        <input type="checkbox" ng-model="search.categoryFilter.ebikes" />ebikes
+        <br />
+        <input type="checkbox" ng-model="search.categoryFilter.kids" />kids
       </div>
     </div>
 
@@ -21,7 +32,7 @@
       </div>
 
       <div id="featuredBikes" layout="row" layout-wrap>
-        <div ng-repeat="bike in search.bikes | filter:search.filterOptions" flex="100" flex-gt-sm="50" flex-gt-md="33" flex-gt-lg="25">
+        <div ng-repeat="bike in search.bikes | filter:search.sizeFilter | map_category:search.categoryFilter" flex="100" flex-gt-sm="50" flex-gt-md="33" flex-gt-lg="25">
           <bike-card bike-id="bike.id" name="bike.name" brand="bike.brand" price="bike.price_daily" image-url="bike.image_file_1.image_file_1.small.url"></bike-card>
         </div>
       </div>
@@ -30,7 +41,7 @@
 
   <div flex flex-order-xs="1" layout="column" style="background-color: #444444">
     <ng-map default-style="false" style="width:100%; height:100%; position: block;" center="[{{search.mapOptions.lat}},{{search.mapOptions.lng}}]" zoom="{{search.mapOptions.zoom}}">
-      <marker ng-repeat="bike in search.bikes" id="bike.id" position="{{bike.lat_rnd}},{{bike.lng_rnd}}" on-click="search.showBikeWindow(event, bike.id)">
+      <marker ng-repeat="bike in search.bikes | filter:search.sizeFilter | map_category:search.categoryFilter" id="bike.id" position="{{bike.lat_rnd}},{{bike.lng_rnd}}" on-click="search.showBikeWindow(event, bike.id)">
       </marker>
       <info-window id="mapWindow">
         <div ng-non-bindable="">

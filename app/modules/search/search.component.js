@@ -10,18 +10,21 @@ angular.module('search').component('search', {
     function SearchController($http, NgMap, api) {
       var search = this;
 
-      search.filterOptions = {
-        size: "",
-        allterrain: true,
-        city: true,
-        electric: true,
-        kids: true,
-        race: true,
-        special: true
-      }
+      search.sizeFilter = {
+        size: ""
+      };
+
+      search.categoryFilter = {
+        allterrain: false,
+        city: false,
+        electric: false,
+        kids: false,
+        race: false,
+        special: false
+      };
 
       search.sizeOptions = [
-        {value: "", label: "all"},
+        {value: "", label: "-"},
         {value: 155, label: "155 - 165"},
         {value: 165, label: "165 - 175"},
         {value: 175, label: "175 - 185"},
@@ -48,7 +51,7 @@ angular.module('search').component('search', {
 
       api.get("/rides?location=" + search.location).then(function(response) {
         search.bikes = response.data;
-        search.bikes.map( function(bike) {console.log(bike.size)} );
+        // console.log(search.bikes);
 
         if (search.bikes.length > 0) {
           search.mapOptions.lat = search.bikes[0].lat_rnd;
