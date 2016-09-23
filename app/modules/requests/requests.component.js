@@ -7,11 +7,14 @@ angular.module('requests').component('requests', {
     function RequestsController(api) {
       var requests = this;
 
-      api.get('/users/1001').then(function success() {
-        console.log("Successfully retrieved User");
-      }, function error() {
-        console.log("Error retrieving User");
-      })
+      requests.requests = [];
+
+      api.get('/users/1001/requests').then(function(success) {
+        requests.requests = success.data;
+        console.log(requests.requests);
+      }, function(error) {
+        console.log("Error");
+      });
     }
   ]
 });

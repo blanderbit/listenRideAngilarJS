@@ -8,8 +8,7 @@ angular.
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (email, password) {
-        var encoded = Base64.encode(email + ':' + password);
-        $http.defaults.headers.common.Authorization = 'Basic ' + encoded;
+        var encoded = Base64.encode(email + ":" + password);
         $localStorage.auth = encoded;
       }
 
@@ -120,6 +119,7 @@ angular.
             api.post('/users/login', user).then(function(success) {
               console.log(success);
               setCredentials(success.data.email, success.data.password_hashed);
+              console.log(success.data.email + ", " + success.data.password_hashed);
               resolve();
             }, function(error) {
               console.log(error);
@@ -160,7 +160,7 @@ angular.
         logout: function() {
           document.execCommand("ClearAuthenticationCache");
           delete $localStorage.auth;
-          $http.defaults.headers.common.Authorization = 'Basic ';
+          $http.defaults.headers.common.Authorization = '';
         }
 
       };

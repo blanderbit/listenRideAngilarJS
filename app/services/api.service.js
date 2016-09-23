@@ -2,8 +2,8 @@
 
 angular.
   module('listnride').
-  factory('api', ['$http',
-    function($http) {
+  factory('api', ['$http', '$localStorage',
+    function($http, $localStorage) {
       var apiUrl = "https://listnride-staging.herokuapp.com/v2";
       return {
         get: function(url) {
@@ -11,7 +11,8 @@ angular.
             method: 'GET',
             url: apiUrl + url,
             headers: {
-              'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
+              'Authorization': 'Basic ' + $localStorage.auth
             }
           });
         },
@@ -21,7 +22,8 @@ angular.
             url: apiUrl + url,
             data: data,
             headers: {
-              'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
+              'Authorization': 'Basic ' + $localStorage.auth
             }
           });
         }

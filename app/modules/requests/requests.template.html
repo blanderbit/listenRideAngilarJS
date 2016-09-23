@@ -1,64 +1,32 @@
-<div flex layout="row" layout-fill>
-        <md-content flex="35" id="content">
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bli</p>
-            <p>blu</p>
-            <p>blo</p>
-        </md-content>
+<div flex layout="row" layout-fill style="background-color: #ffffff">
 
-        <md-content flex id="content">
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
-            <p>bla</p>
+        <div flex flex-order="2" layout="column">
+            <md-content flex="85">
+                  
+            </md-content>
+            <div layout="row" class="subheader" layout-padding>
+                  <md-input-container class="ap-chat" flex md-no-float>
+                        <input ng-model="$ctrl.message" ap-enter="$ctrl.sendMessage()" placeholder="Write a message"></input>
+                  </md-input-container>
+                  <md-button ng-click="$ctrl.sendMessage()">Send</md-button>
+            </div>
+        </div>
+
+        <md-content flex="35" flex-order="1" md-whiteframe="1">
+            <md-list class="requests-list">
+                  <md-subheader class="md-sticky">Unread</md-subheader>
+                  <div ng-repeat="request in requests.requests" layout-padding>
+                    <md-list-item class="md-3-line" ng-click="null">
+                      <img ng-src="{{request.user.profile_picture.url}}" class="md-avatar" alt="{{item.who}}" />
+                      <div class="md-list-item-text" layout="column">
+                        <h3>{{request.ride.name}}</h3>
+                        <h4>{{request.timespan}}</h4>
+                        <p>{{request.ride.description}}</p>
+                      </div>
+                    </md-list-item>
+                    <md-divider ></md-divider>
+                  </div>
+            </md-list>
         </md-content>
 
     </div>
