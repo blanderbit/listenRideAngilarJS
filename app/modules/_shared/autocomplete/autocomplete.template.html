@@ -1,5 +1,5 @@
-<form ng-submit="autocomplete.onSearch()">
-  <input id="searchBox" ng-model="autocomplete.value" type="text"
+<form layout="row" ng-submit="autocomplete.onSearch()">
+  <input flex="80" id="searchBox" ng-model="autocomplete.value" type="text"
     placeholder="{{ 'autocomplete.search-placeholder' | translate }}">
-  <input type="submit" id="submit" value="{{ 'autocomplete.search' | translate }}" />
+  <input flex="20" type="submit" id="submit" value="{{ 'autocomplete.search' | translate }}" />
 </form>
