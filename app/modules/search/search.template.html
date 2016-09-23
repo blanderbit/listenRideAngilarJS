@@ -4,23 +4,20 @@
     <div layout="column" layout-padding>
       <autocomplete value="search.location"></autocomplete>
 
-      <div layout="row">
-        <md-select ng-model="search.sizeFilter.size">
+      <div class="filters" layout="row">
+        <div flex="75">
+          <input type="checkbox" ng-model="search.categoryFilter.allterrain" />allterrain
+          <input type="checkbox" ng-model="search.categoryFilter.city" />city
+          <input type="checkbox" ng-model="search.categoryFilter.race" />race
+          <input type="checkbox" ng-model="search.categoryFilter.special" />special
+          <input type="checkbox" ng-model="search.categoryFilter.ebikes" />ebikes
+          <input type="checkbox" ng-model="search.categoryFilter.kids" />kids
+        </div>
+        <md-select flex="25" ng-model="search.sizeFilter.size">
           <md-option ng-repeat="option in search.sizeOptions" value="{{option.value}}">
             {{option.label}}
           </md-option>
         </md-select>
-        <input type="checkbox" ng-model="search.categoryFilter.allterrain" />allterrain
-        <br />
-        <input type="checkbox" ng-model="search.categoryFilter.city" />city
-        <br />
-        <input type="checkbox" ng-model="search.categoryFilter.race" />race
-        <br />
-        <input type="checkbox" ng-model="search.categoryFilter.special" />special
-        <br />
-        <input type="checkbox" ng-model="search.categoryFilter.ebikes" />ebikes
-        <br />
-        <input type="checkbox" ng-model="search.categoryFilter.kids" />kids
       </div>
     </div>
 
