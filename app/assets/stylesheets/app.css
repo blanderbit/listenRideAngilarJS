@@ -18,6 +18,15 @@ body {
   margin: 60px 0 0 0;
 }*/
 
+requests.ng-scope.ng-isolate-scope {
+  /*flex: auto;*/
+  /*height: inherit;*/
+  /*min-height: 702px !important;*/
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 .content {
   max-width: 1000px;
   margin: 0 auto;
