@@ -35,7 +35,7 @@ angular.module('search').component('search', {
       search.mapOptions = {
         lat: 40,
         lng: -74,
-        zoom: 1
+        zoom: 5
       };
 
       NgMap.getMap().then(function(map) {
@@ -51,7 +51,6 @@ angular.module('search').component('search', {
 
       api.get("/rides?location=" + search.location).then(function(response) {
         search.bikes = response.data;
-        // console.log(search.bikes);
 
         if (search.bikes.length > 0) {
           search.mapOptions.lat = search.bikes[0].lat_rnd;
