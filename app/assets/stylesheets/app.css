@@ -181,10 +181,6 @@ search #searchBox {
   width: 200px;
 }
 
-search .filters md-select {
-  
-}
-
 bike-card md-card {
   cursor: pointer;
 }
