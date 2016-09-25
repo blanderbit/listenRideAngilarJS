@@ -88,7 +88,7 @@
    
   </div>
 
-  <ng-map ng-if="bike.data !== undefined" center="{{bike.mapOptions.lat}},{{bike.mapOptions.lng}}" zoom="{{bike.mapOptions.zoom}}"" scrollwheel="false">
+  <ng-map ng-if="bike.data !== undefined" default-style="false" center="[{{bike.mapOptions.lat}},{{bike.mapOptions.lng}}]" zoom="{{bike.mapOptions.zoom}}" scrollwheel="false">
     <shape name="circle" no-watcher="true"
       stroke-color="#FF0000"
       stroke-opacity="0.8"

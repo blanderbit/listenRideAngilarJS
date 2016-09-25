@@ -40,6 +40,7 @@ angular.module('search').component('search', {
 
       NgMap.getMap().then(function(map) {
         search.map = map;
+        console.log(search.map);
       });
 
       search.showBikeWindow = function(evt, bikeId) {
