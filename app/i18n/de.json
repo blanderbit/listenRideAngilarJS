@@ -27,6 +27,15 @@
     "contact": "Kontakt"
   },
 
+  "home": {
+    "landing-section-header": "Rent your next adventure in German",
+    "landing-section-subheader": "A bike for your styles and needs in German",
+    "featured-bikes-header": "Die bliebtesten Fahrräder zum ausleihen",
+    "featured-bikes-subheader": "Miete dir ein Schindelhauer, Specialized und viele andere Marken",
+    "featured-cities-header": "Explore a new city in style in German",
+    "featured-cities-subheader": "Rent a bike in Berlin, Munich, Amsterdam and other beautiful cities in German"
+  },
+
   "forms": {
     "first-name": "Vorname",
     "last-name": "Nachname",

@@ -13,7 +13,6 @@ angular.module('bikeCard').component('bikeCard', {
   controller: [
     function BikeCardController() {
       var bikeCard = this;
-      bikeCard.price
     }
   ]
 });

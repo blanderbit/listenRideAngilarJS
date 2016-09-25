@@ -1,16 +1,56 @@
 <md-content class="single-column">
-  <div id="landing_section" layout="row" layout-align="center center">
+  <div id="landing_section" layout="column" layout-align="center center">
+    <h1>{{ 'home.landing-section-header' | translate }}</h1>
+    <h2>{{ 'home.landing-section-header' | translate }}</h2>
     <autocomplete></autocomplete>
   </div>
 
-  <div layout-xs="column" layout="row">
-    <div id="featuredBikes" layout="row" layout-wrap>
+  <div id="featuredBikes" class="content section" layout="column" layout-align="center center">
+    <h1>{{ 'home.featured-bikes-header' | translate }}</h1>
+    <h2>{{ 'home.featured-bikes-subheader' | translate }}</h2>
+    <div layout-xs="column" layout="row">
+      <div layout="row" layout-wrap>
+        <bike-card ng-repeat="bike in home.featuredBikes" flex="100" flex-gt-xs="33"
+          bike-id="bike.id" name="bike.name" brand="bike.brand" price="bike.price_daily"
+          image-url=" bike.image_file_1.image_file_1.small.url">
+        </bike-card>
+      </div>
+    </div>
+  </div>
 
-      <div ng-repeat="bike in home.featuredBikes" flex="100" flex-gt-xs="33" flex-gt-sm="25">
-        <bike-card bike-id="bike.id" name="bike.name" brand="bike.brand" price="bike.price_daily" image-url=" bike.image_file_1.image_file_1.small.url"><bike-card>
+  <div id="featuredCities" class="content section" layout="column" layout-align="center center">
+    <h1>{{ 'home.featured-cities-header' | translate }}</h1>
+    <h2>{{ 'home.featured-cities-subheader' | translate }}</h2>
+    <div layout-fill layout="row">
+
+      <div flex="66" layout="column">
+        <div flex="50" style="background-color: red;">
+          col1
+        </div>
+
+        <div flex="50" layout="row">
+          <div flex="50" style="background-color: yellow;">
+            col2
+          </div>
+          <div flex="50" style="background-color: green;">
+            col3
+          </div>
+        </div>
+
+      </div>
+
+      <div flex="33" style="background-color: blue;">
+        col4
       </div>
 
     </div>
   </div>
+
+  <div id="listBike" class="section" layout="column" layout-align="center center">
+    <h1>{{ 'home.featured-bikes-header' | translate }}</h1>
+    <h2>{{ 'home.featured-bikes-subheader' | translate }}</h2>
+    <md-button class="md-raised">{{ 'shared.list-a-bike' | translate }}</md-button>
+  </div>
+
   <footer></footer>
 <md-content>
