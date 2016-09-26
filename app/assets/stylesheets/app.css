@@ -162,6 +162,7 @@ requests .subheader {
 home #landing_section {
   background-image: url("../ui_images/landing.jpg");
   background-position: 15% 100%;
+  background-size: cover;
   height: 70vh;
 }
 
@@ -175,7 +176,9 @@ home .section {
 
 home #listBike {
   height: 300px;
-  background-color: purple;
+  background-size: cover;
+  background-position: 15% 100%;
+  background-image: url("../ui_images/landing.jpg");
 }
 
 footer md-toolbar:not(.md-menu-toolbar) {
