@@ -8,6 +8,7 @@
 
 html {
   background-color: #FFFFFF;
+  min-width: 320px;
 }
 
 .lnr-header {
@@ -159,6 +160,10 @@ requests .subheader {
   }
 }
 
+home h1, home h2 {
+  text-align: center;
+}
+
 home #landing_section {
   background-image: url("../ui_images/landing.jpg");
   background-position: 15% 100%;
@@ -179,23 +184,6 @@ home #listBike {
   background-size: cover;
   background-position: 15% 100%;
   background-image: url("../ui_images/landing.jpg");
-}
-
-footer,
-footer .md-subheader.md-default-theme, .md-subheader {
-  background-color: rgb(225, 225, 225);
-}
-
-search ng-map {
-  height: 100%;
-}
-
-search #searchBox {
-  width: 200px;
-}
-
-bike-card md-card {
-  cursor: pointer;
 }
 
 home md-grid-list {
@@ -223,3 +211,21 @@ home md-grid-list md-grid-tile.tile3 {
 home md-grid-list md-grid-tile.tile4 {
   background-image: url("../ui_images/vienna.jpg");
 }
+
+footer,
+footer .md-subheader.md-default-theme, .md-subheader {
+  background-color: rgb(225, 225, 225);
+}
+
+search ng-map {
+  height: 100%;
+}
+
+search #searchBox {
+  width: 200px;
+}
+
+bike-card md-card {
+  cursor: pointer;
+}
+

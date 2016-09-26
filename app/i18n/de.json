@@ -7,7 +7,12 @@
     "listing-a-bike": "Rad verleihen",
     "trust-and-safety": "Vertrauen und Sicherheit",
     "later": "Später",
-    "next": "Weiter"
+    "next": "Weiter",
+    "top-cities": "Beliebte Städte",
+    "berlin": "Berlin",
+    "munich": "München",
+    "amsterdam": "Amsterdam",
+    "vienna": "Wien"
   },
 
   "header": {
