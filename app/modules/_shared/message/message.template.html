@@ -1,0 +1,17 @@
+<div ng-if="message.status == null && message.userId == message.receiver" layout-align="end">
+  <div class="sent-message" flex="33" md-whiteframe="1">
+    <p>Hello Sent Message: {{message.content}}</p>
+  </div>
+</div>
+
+<div ng-if="message.status == null && message.userId == message.sender" layout-align="start">
+  <div class="received-message" flex="33" md-whiteframe="1">
+    <p>Hello Received Message {{message.content}}</p>
+  </div>
+</div>
+
+<div ng-if="message.status != null">
+  <div class="status-message" flex="33" md-whiteframe="1" layout-align="center">
+    <p>Hello Status Message {{message.content}}</p>
+  </div>
+</div>
