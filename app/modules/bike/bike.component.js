@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bike').component('bike', {
-  templateUrl: 'modules/bike/bike.template.html',
+  templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
   controller: ['api', '$stateParams', '$mdDialog', 'NgMap',
     function BikeController(api, $stateParams, $mdDialog, NgMap) {
@@ -28,7 +28,7 @@ angular.module('bike').component('bike', {
         $mdDialog.show({
           controller: GalleryDialogController,
           controllerAs: 'galleryDialog',
-          templateUrl: 'modules/bike/galleryDialog.template.html',
+          templateUrl: 'app/modules/bike/galleryDialog.template.html',
           locals: {
             bikeData: bike.data
           },

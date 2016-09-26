@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('autocomplete').component('autocomplete', {
-  templateUrl: 'modules/_shared/autocomplete/autocomplete.template.html',
+  templateUrl: 'app/modules/_shared/autocomplete/autocomplete.template.html',
   controllerAs: 'autocomplete',
   bindings: {
     value: '<'

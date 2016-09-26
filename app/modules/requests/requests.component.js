@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('requests').component('requests', {
-  templateUrl: 'modules/requests/requests.template.html',
+  templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
   controller: ['api',
     function RequestsController(api) {
