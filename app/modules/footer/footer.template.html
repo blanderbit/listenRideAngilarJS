@@ -1,43 +1,54 @@
-<md-toolbar id="footer" class="md-scroll-shrink">
-  <div layout="column">
-    <div layout-gt-sm="row" layout="column" layout-align="space-between strech" layout-align-gt-md="space-around strech">
+<div id="footer" class="md-scroll-shrink">
+  <div class="content" layout="column">
+    <div layout="column" layout-gt-sm="row" layout-align="space-between strech">
 
-      <div layout="column" layout-align="center center" layout-padding>
+      <div layout="column" layout-align="center center" layout-align-gt-sm="center start" flex="100" flex-gt-sm="20" layout-padding>
         <div>LnR logo</div>
       </div>
 
-      <div layout="column" layout-align-gt-sm="start start" layout-align="start center" layout-padding>
-        <md-list>
-          <md-subheader class="md-no-sticky">{{ 'shared.learn-more' | translate }}</md-subheader>
-          <md-list-item class="md-body-1">{{ 'shared.how-it-works' | translate }}</md-list-item>
-          <md-list-item class="md-body-1">{{ 'shared.renting-a-bike' | translate }}</md-list-item>
-          <md-list-item class="md-body-1">{{ 'shared.listing-a-bike' | translate }}</md-list-item>
-          <md-list-item class="md-body-1">{{ 'shared.trust-and-safety' | translate }}</md-list-item>
-        </md-list>
-      </div>
+      <div layout="row" flex="100" flex-gt-sm="80" layout-align="space-between strech" layout-wrap>
+        <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start">
+          <md-list>
+            <md-subheader class="md-no-sticky">{{ 'shared.learn-more' | translate }}</md-subheader>
+            <md-list-item class="md-body-1">{{ 'shared.how-it-works' | translate }}</md-list-item>
+            <md-list-item class="md-body-1">{{ 'shared.renting-a-bike' | translate }}</md-list-item>
+            <md-list-item class="md-body-1">{{ 'shared.listing-a-bike' | translate }}</md-list-item>
+            <md-list-item class="md-body-1">{{ 'shared.trust-and-safety' | translate }}</md-list-item>
+          </md-list>
+        </div>
 
-      <div layout="column" layout-align-gt-sm="start start" layout-align="start center" layout-padding>
-        <md-list>
-          <md-subheader class="md-no-sticky">Listnride</md-subheader>
-          <md-list-item class="md-body-1">{{ 'footer.about' | translate }}</md-list-item>
-          <md-list-item class="md-body-1">{{ 'footer.press' | translate }}</md-list-item>
-          <md-list-item class="md-body-1">{{ 'footer.jobs' | translate }}</md-list-item>
-          <md-list-item class="md-body-1">{{ 'footer.contact' | translate }}</md-list-item>
-        </md-list>
-      </div>
+        <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start">
+          <md-list>
+            <md-subheader class="md-no-sticky">{{ 'shared.learn-more' | translate }}</md-subheader>
+            <md-list-item class="md-body-1">{{ 'shared.how-it-works' | translate }}</md-list-item>
+            <md-list-item class="md-body-1">{{ 'shared.renting-a-bike' | translate }}</md-list-item>
+            <md-list-item class="md-body-1">{{ 'shared.listing-a-bike' | translate }}</md-list-item>
+            <md-list-item class="md-body-1">{{ 'shared.trust-and-safety' | translate }}</md-list-item>
+          </md-list>
+        </div>
 
-      <div layout="column" layout-align-gt-sm="start start" layout-align="start center" layout-padding>
-        <md-list>
-          <md-subheader class="md-no-sticky">{{ 'footer.legal' | translate }}</md-subheader>
-          <md-list-item class="md-body-1">{{ 'footer.terms-and-conditions' | translate }}</md-list-item>
-          <md-list-item class="md-body-1">{{ 'footer.privacy-statement' | translate }}</md-list-item>
-          <md-list-item class="md-body-1">{{ 'footer.imprint' | translate }}</md-list-item>
-        </md-list>
-      </div>
+        <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start">
+          <md-list>
+            <md-subheader class="md-no-sticky">Listnride</md-subheader>
+            <md-list-item class="md-body-1">{{ 'footer.about' | translate }}</md-list-item>
+            <md-list-item class="md-body-1">{{ 'footer.press' | translate }}</md-list-item>
+            <md-list-item class="md-body-1">{{ 'footer.jobs' | translate }}</md-list-item>
+            <md-list-item class="md-body-1">{{ 'footer.contact' | translate }}</md-list-item>
+          </md-list>
+        </div>
 
-      <div layout="column" layout-align-gt-sm="start start" layout-align="start center" layout-padding>
-        <md-list>
-          <md-subheader class="md-no-sticky">{{ 'footer.language' | translate }}</md-subheader>
+        <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start">
+          <md-list>
+            <md-subheader class="md-no-sticky">{{ 'footer.legal' | translate }}</md-subheader>
+            <md-list-item class="md-body-1">{{ 'footer.terms-and-conditions' | translate }}</md-list-item>
+            <md-list-item class="md-body-1">{{ 'footer.privacy-statement' | translate }}</md-list-item>
+            <md-list-item class="md-body-1">{{ 'footer.imprint' | translate }}</md-list-item>
+          </md-list>
+        </div>
+
+        <div layout="column" flex-xs="100" flex="20" layout-align-xs="start center" layout-align="start start">
+          <md-list>
+            <md-subheader class="md-no-sticky">{{ 'footer.language' | translate }}</md-subheader>
             <md-menu md-position-mode="target bottom">
               <md-button md-no-ink ng-click="$mdOpenMenu($event)">{{ footer.language }}</md-button>
               <md-menu-content width="2">
@@ -49,20 +60,19 @@
                 </md-menu-item>
               </md-menu-content>
             </md-menu>
-        </md-list>
-      </div>
-      
-      <div layout="column" layout-align="center center" layout-align-xs="start center" layout-padding>
-        <div id="iOSApp">Get the iOS app!</div>
-        <div layout="row" layout-align="space-between stretch" layout-padding>
-          <div>Fb</div>
-          <div>Inst</div>
+            <div id="iOSApp" layout-padding>Get the app</div>
+            <div layout="row" layout-align="space-between stretch" layout-padding>
+              <div>Fb</div>
+              <div>Inst</div>
+            </div>
+          </md-list>
         </div>
       </div>
+
     </div>
 
     <md-divider></md-divider>
 
     <div layout="row" layout-align="center center" layout-padding>© 2016 listnride</div>
   </div>
-</md-toolbar>
+</div>

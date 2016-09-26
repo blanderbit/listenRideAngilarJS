@@ -181,8 +181,9 @@ home #listBike {
   background-image: url("../ui_images/landing.jpg");
 }
 
-footer md-toolbar:not(.md-menu-toolbar) {
-  background-color: rgb(75,75,75);
+footer,
+footer .md-subheader.md-default-theme, .md-subheader {
+  background-color: rgb(225, 225, 225);
 }
 
 search ng-map {
@@ -221,8 +222,4 @@ home md-grid-list md-grid-tile.tile3 {
 
 home md-grid-list md-grid-tile.tile4 {
   background-image: url("../ui_images/vienna.jpg");
-}
-
-md-grid-tile {
-  transition: all 400ms ease-out 50ms;
 }
