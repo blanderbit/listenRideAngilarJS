@@ -140,6 +140,11 @@ requests .subheader {
   height: 100px;
 }
 
+requests .chat {
+  overflow: auto;
+  background-color: #efefef;
+}
+
 message .sent-message {
   background-color: #ffffff;
 }

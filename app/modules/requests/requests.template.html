@@ -1,7 +1,7 @@
 <div flex layout="row" layout-fill style="background-color: #ffffff">
 
         <div flex flex-order="2" layout="column">
-            <div scroll-glue flex="85" style="overflow: auto; height: 100%" layout-align="bottom">
+            <div scroll-glue class="chat" flex="85">
                     <message ng-repeat="message in requests.request.messages" content="message.content" receiver="message.receiver" sender="message.sender" status="message.status" request="requests.request"></message>
             </div>
             <div layout="row" class="subheader" layout-padding>
@@ -13,15 +13,15 @@
         </div>
 
         <md-content flex="35" flex-order="1" md-whiteframe="1">
-            <md-list class="requests-list">
+            <md-list class="requests-list" md-no-ink>
                   <md-subheader class="md-no-sticky">Unread</md-subheader>
-                  <div ng-repeat="request in requests.requests" layout-padding>
+                  <div ng-repeat="request in requests.requests">
                     <md-list-item class="md-3-line" ng-click="requests.loadRequest(request.id)">
                       <img ng-src="{{request.user.profile_picture.url}}" class="md-avatar" alt="{{item.who}}" />
                       <div class="md-list-item-text" layout="column">
                         <h3>{{request.ride.name}}</h3>
                         <h4>{{request.timespan}}</h4>
-                        <p>{{request.ride.description}}</p>
+<!--                         <p>{{request.ride.description}}</p> -->
                       </div>
                     </md-list-item>
                     <md-divider ></md-divider>
