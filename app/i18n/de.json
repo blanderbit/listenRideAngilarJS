@@ -19,6 +19,27 @@
 
   },
 
+  "listChat": {
+    "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} würde gerne dein {{ride.name}} von {{timespan}} für {{duration}} Tage mieten. Vereinbare alle weiteren Details über den Chat.",
+    "2": "Du hast die Anfrage akzeptiert. Der Mieter hat nun die Möglichkeit, die Buchung zu bestätigen.",
+    "3": "{{user.first_name}} hat die Buchung bestätigt. Du verleihst nun Dein Rad vom {{timespan}} für {{duration}}. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via Email zugesendet.\n \nName: {{user.first_name}} {{user.last_name}} \nNummer: {{user.phone_number}} \nAdresse: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
+    "4": "Du hast die Rückgabe Deines Rads bestätigt. Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",
+    "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
+    "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
+    "9": "Leider hat {{user.first_name}} die Anfrage nicht bestätigt."
+  },
+
+  "rideChat": {
+    "1": "Du würdest gerne das %1$s von %2$s von %3$s für %4$s Tage mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, kannst du das Rad buchen.",
+    "2": "%1$s hat Deine Anfrage angenommen. Bestätige die Buchung, die Zahlung erfolgt erst im nächsten Schritt.",
+    "3": "Glückwunsch, Du hast das Rad erfolgreich gebucht und kannst dich zum vereinbarten Zeitpunkt mit dem Verleiher treffen um es abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via Email zugesendet.\n \nName: %1$s \nEmail address: %2$s",
+    "4": "%1$s hat die Rückgabe des Rades bestätigt.",
+    "5": "Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",
+    "6": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
+    "8": "Leider hat der Verleiher die Anfrage abgelehnt. Frage einfach ein paar andere schöne Räder an.",
+    "9": "Du hast die Anfrage abgebrochen. Bitte schreib dem Verleiher, warum du die Buchung nicht bestätigen konntest."
+  },
+
   "footer": {
     "language": "Sprache",
     "company": "Company",
