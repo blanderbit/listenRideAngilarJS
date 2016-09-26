@@ -1,0 +1,17 @@
+<div ng-if="message.sentMessage()" layout-align="end end">
+  <div class="sent-message" flex="40" md-whiteframe="1">
+    <p>Hello Sent Message: {{message.content}}</p>
+  </div>
+</div>
+
+<div ng-if="message.receivedMessage()" layout-align="end start">
+  <div class="received-message" flex="40" md-whiteframe="1">
+    <p>Hello Received Message {{message.content}}</p>
+  </div>
+</div>
+
+<div ng-if="message.statusMessage()" layout-align="end center"> 
+  <div class="status-message" flex="40" md-whiteframe="1" layout-align="center">
+    <p>Hello Status Message {{message.statusContent(message.status)}}</p>
+  </div>
+</div>

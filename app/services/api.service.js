@@ -5,6 +5,8 @@ angular.
   factory('api', ['$http', '$localStorage',
     function($http, $localStorage) {
       var apiUrl = "https://listnride-staging.herokuapp.com/v2";
+      var authHeader = "";
+      $localStorage.auth != null ? authHeader = 'Basic ' + $localStorage.auth : authHeader = "";
       return {
         get: function(url) {
           return $http({
@@ -12,7 +14,7 @@ angular.
             url: apiUrl + url,
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': 'Basic ' + $localStorage.auth
+              'Authorization': authHeader
             }
           });
         },
@@ -23,7 +25,7 @@ angular.
             data: data,
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': 'Basic ' + $localStorage.auth
+              'Authorization': authHeader
             }
           });
         }

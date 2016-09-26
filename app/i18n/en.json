@@ -14,6 +14,12 @@
 
   },
 
+  "listChat": {
+    "would_like_rent_your": "{{riderName}} from {{riderCity}} would like to rent your bike {{bikeName}} from {{timespan}} for {{duration}} days. Agree on further details using the chat.",
+    "you_accepted_request": "You accepted the request. The rider now has the possibility to book the bike.",
+    "rider_confirmed_booking": "{{riderName}} confirmed the booking. You rent out your ride from {{timespan}} for {{duration}} days. Contact Details are as follows, we've also sent the to you via email.\n \nName: {{riderName}} \nNumber: {{riderPhone}} \nAddress: {{riderStreet}} + {{riderZip}} + {{riderCity}} + {{riderCountry}}" 
+  },
+
   "footer": {
     "language": "Language",
     "company": "Company",

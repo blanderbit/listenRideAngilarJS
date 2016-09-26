@@ -14,6 +14,12 @@
 
   },
 
+  "list": {
+    "would_like_rent_your": "{{riderName}} aus {{riderCity}} würde gerne dein {{bikeName}} von {{timespan}} für {{duration}} Tage mieten. Vereinbare alle weiteren Details über den Chat.",
+    "you_accepted_request": "Du hast die Anfrage akzeptiert. Der Mieter hat nun die Möglichkeit, die Buchung zu bestätigen.",
+    "booking_was_confirmed": "{{riderName}} hat die Buchung bestätigt. Du verleihst nun Dein Rad vom {{timespan}} für {{duration}}. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via Email zugesendet.\n \nName: {{riderName}} \nNummer: {{riderPhone}} \nAdresse: {{riderStreet}} + {{riderZip}} + {{riderCity}} + {{riderCountry}}"
+  },
+
   "footer": {
     "language": "Sprache",
     "company": "Company",

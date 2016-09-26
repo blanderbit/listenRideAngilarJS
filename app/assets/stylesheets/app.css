@@ -140,6 +140,18 @@ requests .subheader {
   height: 100px;
 }
 
+message .sent-message {
+  background-color: #ffffff;
+}
+
+message .received-message {
+  background-color: #ffffff;  
+}
+
+message .status-message {
+  background-color: #ffffff;
+}
+
 @media (max-width: 599px) {
   md-dialog.md-dialog-fullscreen {
     min-height: 100%;
