@@ -202,10 +202,12 @@ home md-grid-list md-grid-tile.tile1 {
 
 home md-grid-list md-grid-tile.tile2 {
   background-image: url("../ui_images/berlin.jpg");
+  background-position: 45%;
 }
 
 home md-grid-list md-grid-tile.tile3 {
   background-image: url("../ui_images/amsterdam.jpg");
+  background-position: 47%;
 }
 
 home md-grid-list md-grid-tile.tile4 {
