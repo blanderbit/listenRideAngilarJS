@@ -196,3 +196,33 @@ search #searchBox {
 bike-card md-card {
   cursor: pointer;
 }
+
+home md-grid-list {
+  margin: 8px;
+}
+
+home md-grid-list md-grid-tile {
+  cursor: pointer;
+  background-size: cover;
+  color: white;
+}
+
+home md-grid-list md-grid-tile.tile1 {
+  background-image: url("../ui_images/munich.jpg");
+}
+
+home md-grid-list md-grid-tile.tile2 {
+  background-image: url("../ui_images/berlin.jpg");
+}
+
+home md-grid-list md-grid-tile.tile3 {
+  background-image: url("../ui_images/amsterdam.jpg");
+}
+
+home md-grid-list md-grid-tile.tile4 {
+  background-image: url("../ui_images/vienna.jpg");
+}
+
+md-grid-tile {
+  transition: all 400ms ease-out 50ms;
+}

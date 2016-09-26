@@ -21,29 +21,25 @@
   <div id="featuredCities" class="content section" layout="column" layout-align="center center">
     <h1>{{ 'home.featured-cities-header' | translate }}</h1>
     <h2>{{ 'home.featured-cities-subheader' | translate }}</h2>
-    <div layout-fill layout="row">
+  </div>
+  <div class="content" layout-align="center center">
+    <md-grid-list md-cols="1" md-cols-gt-xs="3" md-gutter="16px" md-row-height="1:1">
+      <md-grid-tile class="tile1" md-colspan-gt-xs="2">
+        <h3>Munich</h3>
+      </md-grid-tile>
 
-      <div flex="66" layout="column">
-        <div flex="50" style="background-color: red;">
-          col1
-        </div>
+      <md-grid-tile class="tile2" md-rowspan-gt-xs="2">
+        <h3>Berlin</h3>
+      </md-grid-tile>
 
-        <div flex="50" layout="row">
-          <div flex="50" style="background-color: yellow;">
-            col2
-          </div>
-          <div flex="50" style="background-color: green;">
-            col3
-          </div>
-        </div>
+      <md-grid-tile class="tile3">
+        <h3>Amsterdam</h3>
+      </md-grid-tile>
 
-      </div>
-
-      <div flex="33" style="background-color: blue;">
-        col4
-      </div>
-
-    </div>
+      <md-grid-tile class="tile4">
+        <h3>Vienna</h3>
+      </md-grid-tile>
+    </md-grid-list>
   </div>
 
   <div id="listBike" class="section" layout="column" layout-align="center center">
@@ -51,6 +47,22 @@
     <h2>{{ 'home.featured-bikes-subheader' | translate }}</h2>
     <md-button class="md-raised">{{ 'shared.list-a-bike' | translate }}</md-button>
   </div>
+
+<!--   <div id="testimonials" class="content section" layout-align="center center" style="background-color: pink">
+    <h1>What are people saying?</h1>
+  </div>
+
+  <md-content class="content section">
+    <md-tabs md-selected="selectedIndex" md-border-bottom md-autoselect>
+      <md-tab ng-repeat="tab in home.testimonials" label="{{tab.name}}">
+        <div class="demo-tab tab{{$index%4}}" style="padding: 25px; text-align: center;">
+          <div ng-bind="tab.content"></div>
+          <br/>
+          
+        </div>
+      </md-tab>
+    </md-tabs>
+  </md-content> -->
 
   <footer></footer>
 <md-content>
