@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bikeCard').component('bikeCard', {
-  templateUrl: 'app/modules/_shared/bike-card/bike-card.template.html',
+  templateUrl: 'app/modules/shared/bike-card/bike-card.template.html',
   controllerAs: 'bikeCard',
   bindings: {
     bikeId: '<',
