@@ -13,7 +13,7 @@ angular.module('requests').component('requests', {
       requests.request = [];
       requests.message = "";
 
-      api.get('/users/1001/requests').then(function(success) {
+      api.get('/users/' + $localStorage.userId + '/requests').then(function(success) {
         requests.requests = success.data;
       }, function(error) {
         console.log("Error fetching request list");
@@ -21,7 +21,9 @@ angular.module('requests').component('requests', {
 
       var reloadRequest = function(requestId) {
         api.get('/requests/' + requestId).then(function(success) {
-          requests.request = success.data;
+          if (requests.request.messages == null || (requests.request.messages.length != success.data.messages.length)) {
+            requests.request = success.data;
+          }
         }, function(error) {
           console.log("Error fetching request");
         });
@@ -33,8 +35,12 @@ angular.module('requests').component('requests', {
         poller = $interval(function() {
             console.log("polling");
             reloadRequest(requestId);
-        }, 5000);
+        }, 10000);
       }
+
+      requests.$onDestroy = function() {
+        $interval.cancel(poller);
+      };
 
       requests.sendMessage = function() {
         var data = {
@@ -46,13 +52,13 @@ angular.module('requests').component('requests', {
         var message = {
           "message": data
         };
-        // requests.request.messages.push(data);
-        // console.log(requests.request);
+        requests.request.messages.push(data);
         api.post('/messages', message).then(function(success) {
           requests.loadRequest(requests.request.id);
         }, function(error) {
           console.log("Error occured sending message");
         });
+
         requests.message = "";
       }
 

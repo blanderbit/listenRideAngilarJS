@@ -2,7 +2,7 @@
 
         <div flex flex-order="2" layout="column">
             <div scroll-glue class="chat" flex="85">
-                    <message ng-repeat="message in requests.request.messages" content="message.content" receiver="message.receiver" sender="message.sender" status="message.status" request="requests.request"></message>
+                    <message ng-repeat="message in requests.request.messages" content="message.content" sender="message.sender" status="message.status" request="requests.request"></message>
             </div>
               <form ng-submit="requests.sendMessage()" layout="row" layout-padding>
                 <md-input-container class="ap-chat" flex md-no-float>
