@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('footer').component('footer', {
-  templateUrl: 'modules/footer/footer.template.html',
+  templateUrl: 'app/modules/footer/footer.template.html',
   controllerAs: 'footer',
   controller: [
     '$translate',

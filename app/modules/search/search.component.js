@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('search').component('search', {
-  templateUrl: 'modules/search/search.template.html',
+  templateUrl: 'app/modules/search/search.template.html',
   controllerAs: 'search',
   bindings: {
     location: '<'

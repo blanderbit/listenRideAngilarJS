@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('header').component('sidebar', {
-  templateUrl: 'modules/sidebar/sidebar.template.html',
+  templateUrl: 'app/modules/sidebar/sidebar.template.html',
   controllerAs: 'sidebar',
   controller: ['authentication',
     function SidebarController(authentication) {

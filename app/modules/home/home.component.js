@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('home').component('home', {
-  templateUrl: 'modules/home/home.template.html',
+  templateUrl: 'app/modules/home/home.template.html',
   controllerAs: 'home',
   controller: [ 'api',
     function HomeController(api) {
