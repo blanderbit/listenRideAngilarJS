@@ -1,12 +1,12 @@
 <div ng-if="message.sentMessage()" flex layout="row" layout-align="end end">
   <div class="sent-message" flex="40" flex-xs="80" md-whiteframe="1" layout-margin>
-    <p>Hello Sent Message: {{message.content}}</p>
+    <p>{{message.content}}</p>
   </div>
 </div>
 
 <div ng-if="message.receivedMessage()" layout="row" layout-align="start end">
   <div class="received-message" flex="40" md-whiteframe="1" layout-margin>
-    <p>Hello Received Message {{message.content}}</p>
+    <p>{{message.content}}</p>
   </div>
 </div>
 

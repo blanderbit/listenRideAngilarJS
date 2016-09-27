@@ -58,10 +58,10 @@
     <script src="app/app.module.js"></script>
     <script src="app/app.config.js"></script>
 
-    <script src="app/services/base64.service.js"></script>
-    <script src="app/services/authentication.service.js"></script>
-    <script src="app/services/sha256.service.js"></script>
-    <script src="app/services/api.service.js"></script>
+    <script src="app/services/base64/base64.service.js"></script>
+    <script src="app/services/authentication/authentication.service.js"></script>
+    <script src="app/services/sha256/sha256.service.js"></script>
+    <script src="app/services/api/api.service.js"></script>
 
     <script src="app/filters/category.filter.js"></script>
     <script src="app/filters/map_category.filter.js"></script>
@@ -70,7 +70,7 @@
 
   <body layout="column">
     <header></header>
-    <sidebar layout="row"></sidebar>
+    <sidebar layout="row" header="header"></sidebar>
     <ui-view flex layout-fill></ui-view>
   </body>
 </html>

@@ -6,21 +6,23 @@ angular.module('search').component('search', {
   bindings: {
     location: '<'
   },
-  controller: ['$http', 'NgMap', 'api',
-    function SearchController($http, NgMap, api) {
+  controller: ['$http', '$stateParams', '$state', 'NgMap', 'api',
+    function SearchController($http, $stateParams, $state, NgMap, api) {
       var search = this;
 
+      search.location = $stateParams.location;
+
       search.sizeFilter = {
-        size: ""
+        size: $stateParams.size
       };
 
       search.categoryFilter = {
-        allterrain: false,
-        city: false,
-        electric: false,
-        kids: false,
-        race: false,
-        special: false
+        allterrain: $stateParams.allterrain == "true",
+        city: $stateParams.city == "true",
+        ebikes: $stateParams.ebikes == "true",
+        kids: $stateParams.kids == "true",
+        race: $stateParams.race == "true",
+        special: $stateParams.special == "true"
       };
 
       search.sizeOptions = [
@@ -38,9 +40,10 @@ angular.module('search').component('search', {
         zoom: 5
       };
 
+      populateBikes();
+
       NgMap.getMap().then(function(map) {
         search.map = map;
-        console.log(search.map);
       });
 
       search.showBikeWindow = function(evt, bikeId) {
@@ -50,15 +53,40 @@ angular.module('search').component('search', {
         search.map.showInfoWindow('mapWindow', this);
       };
 
-      api.get("/rides?location=" + search.location).then(function(response) {
-        search.bikes = response.data;
+      search.onLocationChange = function() {
+        // TODO: This is coding excrement.
+        // use the angular way to do things.
+        // fix the google autocomplete and all will work.
+        var myLocation = document.querySelector("#autocompleteSearch").value;
+        search.location = myLocation;
+        $state.go('.', {location: myLocation}, {notify: false});
+        search.bikes = undefined;
+        populateBikes();
+      };
 
-        if (search.bikes.length > 0) {
-          search.mapOptions.lat = search.bikes[0].lat_rnd;
-          search.mapOptions.lng = search.bikes[0].lng_rnd;
-          search.mapOptions.zoom = 10;
-        }
-      });
+      search.onSizeChange = function() {
+        $state.go('.', {size: search.sizeFilter.size}, {notify: false});
+      };
+
+      search.onCategoryChange = function(category) {
+        var categoryMap = {};
+        categoryMap[category] = search.categoryFilter[category];
+        $state.go('.', categoryMap, {notify: false});
+      };
+
+      function populateBikes() {
+        api.get("/rides?location=" + search.location).then(function(response) {
+          search.bikes = response.data;
+
+          if (search.bikes.length > 0) {
+            search.mapOptions.lat = search.bikes[0].lat_rnd;
+            search.mapOptions.lng = search.bikes[0].lng_rnd;
+            search.mapOptions.zoom = 10;
+          }
+        }, function(error) {
+          console.log("Error retrieving bikes");
+        });
+      }
 
     }
   ]

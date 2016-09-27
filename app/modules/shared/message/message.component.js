@@ -25,7 +25,7 @@ angular.module('message').component('message', {
       };
 
       message.sentMessage = function() {
-        return message.status == null && message.request.user.id == message.receiver;
+        return message.status == null && message.request.user.id != message.sender;
       }
 
       message.receivedMessage = function() {

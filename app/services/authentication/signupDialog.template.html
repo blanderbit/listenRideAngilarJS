@@ -1,5 +1,5 @@
 <md-dialog flex="40">
-  <form ng-cloak name="signupForm">
+  <form ng-cloak name="signupForm" ng-submit="signupDialog.signup()">
 
     <md-toolbar hide show-xs>
       <div class="md-toolbar-tools" layout-align="center center">
@@ -10,14 +10,14 @@
         <h2>{{ 'forms.sign-up' | translate }}</h2>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="signupDialog.hide()">
-          <md-icon md-svg-src="assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
+          <md-icon md-svg-src="app/assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
         </md-button>
       </div>
     </md-toolbar>
 
     <md-dialog-content>
       <div class="md-dialog-content" layout="column">
-        <md-button ng-click="signupDialog.signupFb()" class="md-primary md-raised">{{ 'forms.sign-up-with-facebook' | translate }}</md-button>
+        <md-button ng-click="signupDialog.connectFb()" class="md-primary md-raised">{{ 'forms.sign-up-with-facebook' | translate }}</md-button>
         <div layout="column" layout-align="center center">
           <!-- <md-divider></md-divider> -->
           <br><p>{{ 'forms.or' | translate }}</p><br>
@@ -59,7 +59,7 @@
             <div ng-message="minlength">Password should be at least 6 characters</div>
           </div>
         </md-input-container>
-        <md-button class="md-primary md-raised" ng-click="signupDialog.signup()">{{ 'forms.sign-up' | translate }}</md-button>
+        <md-button type="submit" class="md-primary md-raised"">{{ 'forms.sign-up' | translate }}</md-button>
       
       </div>
     </md-dialog-content>

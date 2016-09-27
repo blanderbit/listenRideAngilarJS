@@ -8,6 +8,7 @@
     "trust-and-safety": "Trust and Safety",
     "later": "Later",
     "next": "Next",
+    "requests": "Requests",
     "top-cities": "Top Cities",
     "berlin": "Berlin",
     "munich": "Munich",
@@ -20,9 +21,9 @@
   },
 
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your {{ride.name}} from {{timespan}} for {{duration}} days. Agree on further details using the chat.",
+    "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your {{ride.name}} from {{timespan}}. Agree on further details using the chat.",
     "2": "You accepted the request. The rider now has the possibility to book the bike.",
-    "3": "{{user.first_name}} {{user.last_name}} confirmed the booking. You rent out your ride from {{timespan}} for {{duration}} days. Contact Details are as follows, we've also sent them to you via email.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Number: {{user.phone_number}} <br>Address: {{user.street}}, {{user.zip}} {{user.city}}, {{user.country}}",
+    "3": "{{user.first_name}} {{user.last_name}} confirmed the booking. You rent out your ride from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Number: {{user.phone_number}} <br>Address: {{user.street}}, {{user.zip}} {{user.city}}, {{user.country}}",
     "4": "You've confirmed retrieval of your bike. Lastly, please rate the rider. This helps our community a lot and closes your rental.",
     "5": "Thanks for rating. The rental was successful and the money will get transferred to the bank account you provided during the next 7 working days.<br><br>In case of any further questions or feedback, we’d love to receive them under <a mailto:\"hello@listnride.com\">hello@listnride.com</a>",
     "8": "You rejected the request. Please tell the rider why you can't rent him the bike.",
