@@ -15,7 +15,7 @@
         <md-content flex="35" flex-order="1" md-whiteframe="1">
             <md-list class="requests-list" md-no-ink>
                   <md-subheader class="md-no-sticky">Unread</md-subheader>
-                  <div ng-repeat="request in requests.requests">
+                  <div ng-repeat="request in requests.requests | orderBy: 'updated_at'">
                     <md-list-item class="md-3-line" ng-click="requests.loadRequest(request.id)">
                       <img ng-src="{{request.user.profile_picture.url}}" class="md-avatar" alt="{{item.who}}" />
                       <div class="md-list-item-text" layout="column">
