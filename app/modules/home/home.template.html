@@ -2,7 +2,11 @@
   <div id="landing_section" layout="column" layout-align="center center">
     <h1>{{ 'home.landing-section-header' | translate }}</h1>
     <h2>{{ 'home.landing-section-header' | translate }}</h2>
-    <autocomplete location=""></autocomplete>
+
+    <form layout="row" ng-submit="home.onSearch()">
+      <autocomplete flex="80" layout="row" location="search.location"></autocomplete>
+      <input flex="20" type="submit" id="submit" value="{{ 'autocomplete.search' | translate }}" />
+    </form>
   </div>
 
   <div id="featuredBikes" class="content section" layout="column" layout-align="center center">
