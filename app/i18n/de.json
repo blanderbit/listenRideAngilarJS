@@ -7,7 +7,12 @@
     "listing-a-bike": "Rad verleihen",
     "trust-and-safety": "Vertrauen und Sicherheit",
     "later": "Später",
-    "next": "Weiter"
+    "next": "Weiter",
+    "top-cities": "Beliebte Städte",
+    "berlin": "Berlin",
+    "munich": "München",
+    "amsterdam": "Amsterdam",
+    "vienna": "Wien"
   },
 
   "header": {
@@ -49,12 +54,12 @@
   },
 
   "home": {
-    "landing-section-header": "Rent your next adventure in German",
-    "landing-section-subheader": "A bike for your styles and needs in German",
+    "landing-section-header": "Rent your next adventure",
+    "landing-section-subheader": "A bike for your styles and needs",
     "featured-bikes-header": "Die bliebtesten Fahrräder zum ausleihen",
     "featured-bikes-subheader": "Miete dir ein Schindelhauer, Specialized und viele andere Marken",
-    "featured-cities-header": "Explore a new city in style in German",
-    "featured-cities-subheader": "Rent a bike in Berlin, Munich, Amsterdam and other beautiful cities in German"
+    "featured-cities-header": "Entdecke stilvoll neue Städte",
+    "featured-cities-subheader": "Miete ein Rad in Berlin, München, Amsterdam und anderen wunderschönen Städten"
   },
 
   "forms": {
