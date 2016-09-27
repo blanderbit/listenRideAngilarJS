@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('profile').component('profile', {
-  templateUrl: 'modules/profile/profile.template.html',
+  templateUrl: 'app/modules/profile/profile.template.html',
   controllerAs: 'profile',
   controller: ['api',
     function ProfileController(api) {

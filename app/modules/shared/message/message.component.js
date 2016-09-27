@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('message').component('message', {
-  templateUrl: 'modules/_shared/message/message.template.html',
+  templateUrl: 'app/modules/shared/message/message.template.html',
   controllerAs: 'message',
   bindings: {
     content: '<',

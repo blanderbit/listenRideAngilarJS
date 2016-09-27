@@ -16,7 +16,7 @@ angular.
         $mdDialog.show({
           controller: VerificationDialogController,
           controllerAs: 'verificationDialog',
-          templateUrl: 'modules/_shared/verification/verification.template.html',
+          templateUrl: 'app/modules/shared/verification/verification.template.html',
           parent: angular.element(document.body),
           targetEvent: event,
           openFrom: angular.element(document.body),
