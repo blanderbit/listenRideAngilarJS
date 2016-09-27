@@ -49,7 +49,7 @@
     </md-content>
   </div>
 
-  <div flex flex-order-xs="1" layout="column">
+  <div flex-xs="35" flex-gt-xs="40" flex-order-xs="1" layout="column" class="map-column">
     <ng-map ng-if="search.bikes !== undefined" default-style="false" center="[{{search.mapOptions.lat}},{{search.mapOptions.lng}}]" zoom="{{search.mapOptions.zoom}}">
       <marker ng-repeat="bike in search.bikes | filter:search.sizeFilter | map_category:search.categoryFilter" id="bike.id" position="{{bike.lat_rnd}},{{bike.lng_rnd}}" on-click="search.showBikeWindow(event, bike.id)">
       </marker>
