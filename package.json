@@ -34,7 +34,7 @@
     "angular-google-maps": "^2.3.4",
     "angular-material": "^1.1.1",
     "angular-messages": "^1.5.8",
-    "angular-ui-router": "^1.0.0-beta.2",
+    "angular-ui-router": "^0.3.1",
     "angularjs-scroll-glue": "^2.0.7",
     "ngmap": "^1.17.6",
     "ngstorage": "^0.3.11"
