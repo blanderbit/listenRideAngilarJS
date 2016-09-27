@@ -188,6 +188,12 @@ home #landing_section {
   height: 70vh;
 }
 
+home form {
+  min-width: 315px;
+  max-width: 400px !important;
+  width: 70%;
+}
+
 home #searchBox {
   width: 300px;
 }
@@ -258,3 +264,6 @@ bike-card md-card {
   cursor: pointer;
 }
 
+autocomplete #autocompleteSearch {
+  width: 100%;
+}

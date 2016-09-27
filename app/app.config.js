@@ -7,32 +7,6 @@ angular.
     $stateProvider,
     ezfbProvider,
     $mdAriaProvider) {
-    /*    
-    Sample route:
-      Route:
-      localhost/app/#/footer/5
-
-      Params:
-      In the controller add the following attribute:
-      bindings: {id: '<'}
-
-      Params description:
-      The resolved params (in this case: id) will be available in 
-      the controller of the specified component as this.id (or since
-      we rename 'this' to component name, the variable will be 
-      found under footer.id)
-
-    $stateProvider.state({
-      name: 'footer',
-      url: '/footer/{id}',
-      component: 'footer',
-      resolve: {
-        id: function($transition$) {
-          return $transition$.params().id;
-        }
-      }
-    });
-    */
 
     $mdAriaProvider.disableWarnings();
 
@@ -49,41 +23,45 @@ angular.
     $stateProvider.state({
       name: 'home',
       url: '/',
-      component: 'home'
+      template: '<home></home>'
     });
 
     $stateProvider.state({
       name: 'bike',
       url: '/bikes/{bikeId}',
-      component: 'bike'
+      template: '<bike></bike>'
     });
 
     $stateProvider.state({
       name: 'search',
-      url: '/search/{location}',
-      component: 'search',
-      resolve: {
-        location: function($transition$) {
-          return $transition$.params().location; //'fake city_name';// $transition$.params().city_name;
-        }
+      url: '/search/{location}?size&allterrain&race&city&kids&ebikes&special',
+      template: '<search></search>',
+      params: {
+        size: { value: "", squash: true },
+        allterrain: { value: "false", squash: true },
+        race: { value: "false", squash: true },
+        city: { value: "false", squash: true },
+        kids: { value: "false", squash: true },
+        ebikes: { value: "false", squash: true },
+        special: { value: "false", squash: true },
       }
     });
 
     $stateProvider.state({
       name: 'profile',
       url: '/profile',
-      component: 'profile'
+      template: '<profile></profile>'
     });
 
     $stateProvider.state({
       name: 'requests',
       url: '/requests',
-      component: 'requests'
+      template: '<requests></requests>'
     });
 
     $translateProvider.useStaticFilesLoader({
-        prefix: 'app/i18n/',
-        suffix: '.json'
+      prefix: 'app/i18n/',
+      suffix: '.json'
     });
 
     $translateProvider.preferredLanguage('en');
