@@ -1,5 +1,5 @@
 <md-dialog flex="40">
-  <form ng-cloak name="signupForm">
+  <form ng-cloak name="signupForm" ng-submit="signupDialog.signup()">
 
     <md-toolbar hide show-xs>
       <div class="md-toolbar-tools" layout-align="center center">
@@ -59,7 +59,7 @@
             <div ng-message="minlength">Password should be at least 6 characters</div>
           </div>
         </md-input-container>
-        <md-button class="md-primary md-raised" ng-click="signupDialog.signup()">{{ 'forms.sign-up' | translate }}</md-button>
+        <md-button type="submit" class="md-primary md-raised"">{{ 'forms.sign-up' | translate }}</md-button>
       
       </div>
     </md-dialog-content>
