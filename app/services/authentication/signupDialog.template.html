@@ -10,14 +10,14 @@
         <h2>{{ 'forms.sign-up' | translate }}</h2>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="signupDialog.hide()">
-          <md-icon md-svg-src="assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
+          <md-icon md-svg-src="app/assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
         </md-button>
       </div>
     </md-toolbar>
 
     <md-dialog-content>
       <div class="md-dialog-content" layout="column">
-        <md-button ng-click="signupDialog.signupFb()" class="md-primary md-raised">{{ 'forms.sign-up-with-facebook' | translate }}</md-button>
+        <md-button ng-click="signupDialog.connectFb()" class="md-primary md-raised">{{ 'forms.sign-up-with-facebook' | translate }}</md-button>
         <div layout="column" layout-align="center center">
           <!-- <md-divider></md-divider> -->
           <br><p>{{ 'forms.or' | translate }}</p><br>
