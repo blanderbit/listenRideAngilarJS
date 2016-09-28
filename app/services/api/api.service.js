@@ -26,6 +26,17 @@ angular.
               'Authorization': $localStorage.auth
             }
           });
+        },
+        put: function(url, data) {
+          return $http({
+            method: 'PUT',
+            url: apiUrl + url,
+            data: data,
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': $localStorage.auth
+            }
+          });
         }
       }
     }
