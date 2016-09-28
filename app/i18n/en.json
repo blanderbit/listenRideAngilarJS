@@ -83,5 +83,10 @@
 
   "search" : {
     "no-bikes": "There are no bikes in this location"
+  },
+
+  "calendar": {
+    "from": "from`",
+    "to": "to"
   }
 }

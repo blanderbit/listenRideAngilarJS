@@ -1,1 +1,25 @@
 <div id="bikeCalendar"></div>
+
+<div id="timeRange" layout-padding layout="row" layout-align="space-between center">
+  <md-input-container>
+    <label>{{ 'calendar.from' | translate }}</label>
+    <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')"
+      ng-model="calendar.startTime" placeholder="{{ 'calendar.from' | translate }}">
+      <md-option ng-repeat="i in calendar.getNumber(17) track by $index" value="{{$index + 6}}">
+        {{ ($index + 6) + ":00" }}
+      </md-option>
+    </md-select>
+  </md-input-container>
+
+  <md-input-container>
+    <label>{{ 'calendar.to' | translate }}</label>
+    <md-select ng-disabled="calendar.endDate === undefined" ng-change="calendar.onTimeChange('end')"
+      ng-model="calendar.endTime" placeholder="{{ 'calendar.to' | translate }}">
+      <md-option ng-repeat="i in calendar.getNumber(17) track by $index" value="{{$index + 6}}">
+        {{ ($index + 6) + ":00" }}
+      </md-option>
+    </md-select>
+  </md-input-container>
+</div>
+
+<md-button type="submit" ng-click="calendar.onBikeRequest()" ng-disabled="calendar.bikeId === undefined || calendar.startDate === undefined || (calendar.startDate === undefined  && {{calendar.startDate.getTime() >= calendar.endDate.getTime()}})">Request Bike</md-button>

@@ -6,23 +6,25 @@ angular.module('bike').component('bike', {
   controller: ['api', '$stateParams', '$mdDialog', 'NgMap',
     function BikeController(api, $stateParams, $mdDialog, NgMap) {
       var bike = this;
+      bike.data = {};
 
       bike.mapOptions = {
-          lat: 0,
-          lng: 0,
-          zoom: 14,
-          radius: 500
+        lat: 0,
+        lng: 0,
+        zoom: 14,
+        radius: 500
       };
 
-      api.get('/rides/' + $stateParams.bikeId)
-      .then(function success(response) {
-        bike.data = response.data;
-
-        bike.mapOptions.lat = bike.data.lat_rnd;
-        bike.mapOptions.lng = bike.data.lng_rnd;
-      }, function error() {
-        console.log("Error retrieving User");
-      });
+      api.get('/rides/' + $stateParams.bikeId).then(
+        function(response) {
+          bike.data = response.data;
+          bike.mapOptions.lat = bike.data.lat_rnd;
+          bike.mapOptions.lng = bike.data.lng_rnd;
+        },
+        function(error) {
+          console.log("Error retrieving User", error);
+        }
+      );
 
       bike.showGalleryDialog = function(event) {
         $mdDialog.show({

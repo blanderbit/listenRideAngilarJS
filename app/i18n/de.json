@@ -81,7 +81,12 @@
     "search-placeholder": "Wo willst du ein Rad ausleihen?"
   },
 
-  "search" : {
+  "search": {
     "no-bikes": "Es gibt keine Räder an diesem Ort"
+  },
+
+  "calendar": {
+    "from": "von",
+    "to": "bis"
   }
 }
