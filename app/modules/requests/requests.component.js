@@ -13,6 +13,8 @@ angular.module('requests').component('requests', {
       requests.request = [];
       requests.message = "";
 
+      console.log($localStorage.auth);
+
       api.get('/users/' + $localStorage.userId + '/requests').then(function(success) {
         requests.requests = success.data;
       }, function(error) {

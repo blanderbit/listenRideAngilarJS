@@ -9,7 +9,8 @@ angular.
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (email, password, id) {
         var encoded = Base64.encode(email + ":" + password);
-        $localStorage.auth = encoded;
+        // Sets the Basic Auth String for the Authorization Header
+        $localStorage.auth = 'Basic ' + encoded;
         $localStorage.userId = id;
       };
 
@@ -228,7 +229,6 @@ angular.
         document.execCommand("ClearAuthenticationCache");
         delete $localStorage.auth;
         delete $localStorage.userId;
-        $http.defaults.headers.common.Authorization = '';
         $mdToast.show(
           $mdToast.simple()
           .textContent('You are logged out.')

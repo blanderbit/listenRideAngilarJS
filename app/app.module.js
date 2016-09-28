@@ -8,7 +8,6 @@ angular.module('listnride', [
   'bikeCard',
   'profile',
   'bike',
-  'verification',
   'requests',
   'message',
   'autocomplete',

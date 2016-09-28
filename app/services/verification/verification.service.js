@@ -1,7 +1,7 @@
 'use strict';
 
 angular.
-  module('verification').
+  module('listnride').
   factory('verification', ['$mdDialog', '$mdToast',
     function($mdDialog, $mdToast) {
 
@@ -16,7 +16,7 @@ angular.
         $mdDialog.show({
           controller: VerificationDialogController,
           controllerAs: 'verificationDialog',
-          templateUrl: 'app/modules/shared/verification/verification.template.html',
+          templateUrl: 'app/services/verification/verification.template.html',
           parent: angular.element(document.body),
           targetEvent: event,
           openFrom: angular.element(document.body),
