@@ -1,31 +1,37 @@
+<!-- All views except XS -->
 <div flex layout="row" layout-fill style="background-color: #ffffff">
 
-        <div flex flex-order="2" layout="column" hide-xs>
-            <div scroll-glue class="chat" flex="85">
-                    <message ng-repeat="message in requests.request.messages" content="message.content" sender="message.sender" status="message.status" request="requests.request"></message>
-            </div>
-              <form ng-submit="requests.sendMessage()" layout="row" layout-padding>
-                <md-input-container class="ap-chat" flex md-no-float>
-                      <input ng-model="requests.message" placeholder="Write a message"></input>
-                </md-input-container>
-                <md-button type="submit">Send</md-button>
-              </form>
-        </div>
+  <!-- Right Column displaying actual Chat -->
+  <div flex-gt-sm="65" flex-sm="65" flex-order="2" layout="column" ng-hide="requests.$mdMedia('xs') && !requests.showChat">
+      <div scroll-glue class="chat" flex="85">
+        <md-button class="md-fab" ng-click="requests.showChat = false" ng-hide="!requests.$mdMedia('xs')">
+          <md-icon md-svg-src="app/assets/ui_images/icn_close_24.svg"></md-icon>
+        </md-button>
+        <message ng-repeat="message in requests.request.messages" content="message.content" sender="message.sender" status="message.status" request="requests.request"></message>
+      </div>
+        <form ng-submit="requests.sendMessage()" layout="row" layout-padding>
+          <md-input-container class="ap-chat" flex md-no-float>
+                <input ng-model="requests.message" placeholder="Write a message"></input>
+          </md-input-container>
+          <md-button type="submit"></md-button>
+        </form>
+  </div>
 
-        <md-content class="requests-list" flex="35" flex-xs="100" flex-order="1" md-whiteframe="1">
-          <md-progress-linear ng-if="requests.requests.length == 0" md-mode="query"></md-progress-linear>
-          <md-list md-no-ink ng-if="requests.requests != []">
-                <div ng-repeat="request in requests.requests | orderBy: '-updated_at'">
-                  <md-list-item class="md-3-line" ng-click="requests.loadRequest(request.id)">
-                    <img ng-src="{{request.user.profile_picture.url}}" class="md-avatar" alt="{{item.who}}" />
-                    <div class="md-list-item-text" layout="column">
-                      <h3>{{request.ride.name}}</h3>
-                      <h4>{{request.timespan}}</h4>
-                    </div>
-                  </md-list-item>
-                  <md-divider ></md-divider>
-                </div>
-          </md-list>
-        </md-content>
+  <!-- Left Column displaying list of all Requests -->
+  <md-content flex class="requests-list" flex-order="1" md-whiteframe="1" ng-hide="requests.$mdMedia('xs') && requests.showChat">
+    <md-progress-linear ng-if="requests.requests.length == 0" md-mode="query"></md-progress-linear>
+    <md-list md-no-ink ng-if="requests.requests != []">
+          <div ng-repeat="request in requests.requests | orderBy: '-updated_at'">
+            <md-list-item class="md-3-line" ng-click="requests.loadRequest(request.id)">
+              <img ng-src="{{request.user.profile_picture.url}}" class="md-avatar" alt="{{item.who}}" />
+              <div class="md-list-item-text" layout="column">
+                <h3>{{request.ride.name}}</h3>
+                <h4>{{request.timespan}}</h4>
+              </div>
+            </md-list-item>
+            <md-divider ></md-divider>
+          </div>
+    </md-list>
+  </md-content>
 
-    </div>
+</div>

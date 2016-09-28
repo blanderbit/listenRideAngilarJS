@@ -3,8 +3,8 @@
 angular.module('requests').component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
-  controller: ['$localStorage', '$interval', 'api',
-    function RequestsController($localStorage, $interval, api) {
+  controller: ['$localStorage', '$interval', '$mdMedia', 'api',
+    function RequestsController($localStorage, $interval, $mdMedia, api) {
       var requests = this;
 
       var poller;
@@ -12,6 +12,8 @@ angular.module('requests').component('requests', {
       requests.requests = [];
       requests.request = {};
       requests.message = "";
+      requests.showChat = false;
+      requests.$mdMedia = $mdMedia;
 
       api.get('/users/' + $localStorage.userId + '/requests').then(function(success) {
         requests.requests = success.data;
@@ -32,6 +34,7 @@ angular.module('requests').component('requests', {
       };
 
       requests.loadRequest = function(requestId) {
+        requests.showChat = true;
         $interval.cancel(poller);
         reloadRequest(requestId);
         poller = $interval(function() {
