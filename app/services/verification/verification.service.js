@@ -27,9 +27,7 @@ angular.
       }
 
       return {
-        openDialog: function() {
-          openDialog();
-        }
+        openDialog: openDialog
       }
     }
   ]);
