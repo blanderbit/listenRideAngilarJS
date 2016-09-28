@@ -142,7 +142,8 @@ requests .subheader {
 }
 
 requests .chat {
-  overflow: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   background-color: #efefef;
 }
 
