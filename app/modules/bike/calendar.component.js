@@ -7,8 +7,8 @@ angular.module('bike').component('calendar', {
     bikeId: '<',
     requests: '<'
   },
-  controller: ['$scope', '$localStorage', 'api',
-    function CalendarController($scope, $localStorage, api) {
+  controller: ['$scope', '$localStorage', '$state', 'api',
+    function CalendarController($scope, $localStorage, $state, api) {
       var calendar = this;
 
       calendar.startTime = 10;
@@ -58,6 +58,7 @@ angular.module('bike').component('calendar', {
 
         api.post('/requests', data).then(
           function(response) {
+            $state.go('requests');
             console.log("Success", response);
           },
           function(error) {
