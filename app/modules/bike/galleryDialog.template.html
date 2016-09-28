@@ -8,36 +8,28 @@
         <br><h2>Bike Photos</h2><br>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="galleryDialog.hide()">
-          <md-icon md-svg-src="assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
+          <md-icon md-svg-src="app/assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
         </md-button>
       </div>
     </md-toolbar>
 
     <md-dialog-content>
-      <div class="md-dialog-content" layout="column">
-        <md-tabs md-dynamic-height md-align-tabs="bottom" md-center-tabs>
+      <div class="md-dialog-content" layout="column" style="height: 100%" layout="column">
+        <md-tabs md-align-tabs="bottom" md-center-tabs md-dynamic-height md-swipe-content="true">
           <md-tab label="1" ng-if="galleryDialog.image_1 != null">
-              <img flex ng-src="{{galleryDialog.image_1}}" layout-fill></img>
+            <img style="max-width: 100%" ng-src="{{galleryDialog.image_1}}"></img>
           </md-tab>
           <md-tab label="2" ng-if="galleryDialog.image_2 != null">
-            <md-content>          
-              <img flex ng-src="{{galleryDialog.image_2}}" layout-fill></img>
-            </md-content>
+            <img style="max-width: 100%" ng-src="{{galleryDialog.image_2}}"></img>
           </md-tab>
           <md-tab label="3" ng-if="galleryDialog.image_3 != null">
-            <md-content>
-              <img flex ng-src="{{galleryDialog.image_3}}" layout-fill></img>
-            </md-content>
+            <img style="max-width: 100%" ng-src="{{galleryDialog.image_3}}"></img>
           </md-tab>
           <md-tab label="4" ng-if="galleryDialog.image_4 != null">
-            <md-content>
-              <img flex ng-src="{{galleryDialog.image_4}}" layout-fill></img>
-            </md-content>
+            <img style="max-width: 100%" ng-src="{{galleryDialog.image_4}}"></img>
           </md-tab>
           <md-tab label="5" ng-if="galleryDialog.image_5 != null">
-            <md-content>
-              <img flex ng-src="{{galleryDialog.image_5}}" layout-fill></img>
-            </md-content>
+            <img style="max-width: 100%" ng-src="{{galleryDialog.image_5}}"></img>
           </md-tab>
         </md-tabs>
       </div>

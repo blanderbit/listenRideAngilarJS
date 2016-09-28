@@ -11,12 +11,12 @@ angular.module('message').component('message', {
     timestamp: '<',
     request: '<'
   },
-  controller: [ '$translate', '$localStorage',
-    function MessageController($translate, $localStorage) {
+  controller: [ '$translate', '$localStorage', 'api',
+    function MessageController($translate, $localStorage, api) {
       var message = this;
 
       message.chatFlow = function() {
-        if ($localStorage.userId == message.request.user.id) {
+        if (message.request.rideChat) {
           return "rideChat";
         }
         else {
@@ -24,17 +24,48 @@ angular.module('message').component('message', {
         }
       };
 
+      console.log(message.chatFlow());
+
       message.sentMessage = function() {
-        return message.status == null && message.request.user.id != message.sender;
+        return message.status == null && $localStorage.userId == message.sender;
       }
 
       message.receivedMessage = function() {
-        return message.status == null && message.request.user.id == message.sender;
+        return message.status == null && $localStorage.userId != message.sender;
       }
 
       message.statusMessage = function() {
         return message.status != null && message.status != 6 && message.status != 7;
       }
+
+      message.updateStatus = function(statusId) {
+        var data = {
+          "request_id": message.request.id,
+          "sender": $localStorage.userId,
+          "status": statusId,
+          "content": ""
+        };
+
+        message.request.messages.push(data);
+        var data = {
+          "request": {
+            "status": statusId
+          }
+        };
+
+        message.request.status = statusId;
+
+        api.put("/requests/" + message.request.id, data).then(
+          function(success) {
+            console.log("successfully updated request");
+            // message.request.status = statusId;
+          },
+          function(error) {
+            console.log("error updating request");
+          }
+        );
+      };
+
     }
   ]
 });
