@@ -1,6 +1,6 @@
 <div flex layout="row" layout-fill style="background-color: #ffffff">
 
-        <div flex flex-order="2" layout="column">
+        <div flex flex-order="2" layout="column" hide-xs>
             <div scroll-glue class="chat" flex="85">
                     <message ng-repeat="message in requests.request.messages" content="message.content" sender="message.sender" status="message.status" request="requests.request"></message>
             </div>
@@ -12,7 +12,7 @@
               </form>
         </div>
 
-        <md-content class="requests-list" flex="35" flex-order="1" md-whiteframe="1">
+        <md-content class="requests-list" flex="35" flex-xs="100" flex-order="1" md-whiteframe="1">
           <md-progress-linear ng-if="requests.requests.length == 0" md-mode="query"></md-progress-linear>
           <md-list md-no-ink ng-if="requests.requests != []">
                 <div ng-repeat="request in requests.requests | orderBy: '-updated_at'">
