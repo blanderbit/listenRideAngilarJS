@@ -10,7 +10,7 @@ angular.module('requests').component('requests', {
       var poller;
 
       requests.requests = [];
-      requests.request = [];
+      requests.request = {};
       requests.message = "";
 
       api.get('/users/' + $localStorage.userId + '/requests').then(function(success) {
@@ -23,6 +23,8 @@ angular.module('requests').component('requests', {
         api.get('/requests/' + requestId).then(function(success) {
           if (requests.request.messages == null || (requests.request.messages.length != success.data.messages.length)) {
             requests.request = success.data;
+            requests.request.rideChat = $localStorage.userId == requests.request.user.id;
+            console.log(requests.request);
           }
         }, function(error) {
           console.log("Error fetching request");
