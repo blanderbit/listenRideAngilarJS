@@ -54,7 +54,7 @@ angular.module('requests').component('requests', {
             requests.request.rideChat = $localStorage.userId == requests.request.user.id;
           }
         }, function(error) {
-          console.log("Error fetching request");
+          console.log("Error fetching request!");
         });
       };
 
