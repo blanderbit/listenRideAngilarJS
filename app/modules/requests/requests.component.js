@@ -23,8 +23,12 @@ angular.module('requests').component('requests', {
 
       var reloadRequest = function(requestId) {
         api.get('/requests/' + requestId).then(function(success) {
-          if (requests.request.messages == null || (requests.request.messages.length != success.data.messages.length)) {
+          // If message count changed, apply new data
+          if (requests.request.messages == null || requests.request.messages.length != success.data.messages.length) {
             requests.request = success.data;
+          }
+          // If request loads initially, decide whether it's a rideChat or listChat
+          if (requests.request.messages == null) {
             requests.request.rideChat = $localStorage.userId == requests.request.user.id;
           }
         }, function(error) {
@@ -51,13 +55,38 @@ angular.module('requests').component('requests', {
         });
       }
 
+      var showBookingDialog = function() {
+        $mdDialog.show({
+          controller: BookingDialogController,
+          controllerAs: 'bookingDialog',
+          templateUrl: 'app/modules/requests/bookingDialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: false,
+          fullscreen: true // Only for -xs, -sm breakpoints.
+        })
+        .then(function(answer) {
+          //
+        }, function() {
+          //
+        });
+      }
+
+      // Handles initial request loading
       requests.loadRequest = function(requestId) {
+        // Cancel the poller
         $interval.cancel(poller);
+        // Clear former request
+        requests.request = {};
+        // Load the new request and activate the poller
         reloadRequest(requestId);
         poller = $interval(function() {
             reloadRequest(requestId);
         }, 10000);
 
+        // For small screens, disable the embedded chat and show chat in a fullscreen dialog instead
         if ($mdMedia('xs')) {
           requests.showChat = false;
           showChatDialog();
@@ -66,10 +95,12 @@ angular.module('requests').component('requests', {
         }
       }
 
+      // Fires if scope gets destroyed and cancels poller
       requests.$onDestroy = function() {
         $interval.cancel(poller);
       };
 
+      // Sends a new message by directly appending it locally and posting it to the API
       requests.sendMessage = function() {
         if( requests.message ) {
           var data = {
@@ -97,6 +128,16 @@ angular.module('requests').component('requests', {
 
         chatDialog.hide = function() {
           $mdDialog.hide();
+          // showBookingDialog();
+        };
+      };
+
+      var BookingDialogController = function() {
+        var bookingDialog = this;
+
+        bookingDialog.hide = function() {
+          showChatDialog();
+          // $mdDialog.hide();
         };
       }
 
