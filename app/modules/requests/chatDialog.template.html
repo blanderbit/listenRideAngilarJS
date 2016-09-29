@@ -1,0 +1,29 @@
+<md-dialog>
+
+    <md-toolbar>
+      <div class="md-toolbar-tools" layout-align="center center">
+        <md-button class="md-icon-button">
+          <md-icon></md-icon>
+        </md-button>
+        <span flex></span>
+        <br><h2>Chat</h2><br>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="chatDialog.hide()">
+          <md-icon md-svg-src="app/assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content style="height: 100vh" layout="column">
+      <div flex="80" scroll-glue class="chat">
+        <message ng-repeat="message in chatDialog.requests.request.messages" content="message.content" sender="message.sender" status="message.status " request="chatDialog.requests.request"></message>
+      </div>
+      <div flex="20" layout="row" layout-padding>
+        <md-input-container flex md-no-float>
+          <input ng-model="chatDialog.requests.message" placeholder="Write a message"></input>
+        </md-input-container>
+        <md-button ng-click="chatDialog.requests.sendMessage()">SEND</md-button>
+      </div>
+    </md-dialog-content>
+
+</md-dialog>
