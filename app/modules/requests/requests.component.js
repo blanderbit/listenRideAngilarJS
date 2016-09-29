@@ -3,8 +3,8 @@
 angular.module('requests').component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
-  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', 'api',
-    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, api) {
+  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', 'api', '$timeout', '$location', '$anchorScroll',
+    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, api, $timeout, $location, $anchorScroll) {
       var requests = this;
 
       var poller;
@@ -14,6 +14,7 @@ angular.module('requests').component('requests', {
       requests.message = "";
       requests.showChat = false;
       requests.$mdMedia = $mdMedia;
+      requests.request.glued = false;
 
       api.get('/users/' + $localStorage.userId + '/requests').then(function(success) {
         requests.requests = success.data;
@@ -26,6 +27,7 @@ angular.module('requests').component('requests', {
           // If message count changed, apply new data
           if (requests.request.messages == null || requests.request.messages.length != success.data.messages.length) {
             requests.request = success.data;
+            requests.request.glued = true;
           }
           // If request loads initially, decide whether it's a rideChat or listChat
           if (requests.request.messages == null) {
@@ -102,6 +104,7 @@ angular.module('requests').component('requests', {
 
       // Sends a new message by directly appending it locally and posting it to the API
       requests.sendMessage = function() {
+        requests.request.glued = true
         if( requests.message ) {
           var data = {
             "request_id": requests.request.id,
@@ -127,6 +130,11 @@ angular.module('requests').component('requests', {
       var ChatDialogController = function() {
         var chatDialog = this;
         chatDialog.requests = requests;
+
+        $timeout(function() {
+          $location.hash('end');
+          $anchorScroll();
+        }, 2000);
 
         chatDialog.hide = function() {
           $mdDialog.hide();
