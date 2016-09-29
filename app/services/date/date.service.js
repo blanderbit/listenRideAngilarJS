@@ -5,7 +5,6 @@ angular.module('listnride').factory('date', ['$translate',
 
     return {
       duration: function(startDate, endDate) {
-        console.log("digest date.duration");
         if (startDate === undefined || endDate === undefined) {
           return "0 " + $translate.instant("shared.days") + " , 0 " + $translate.instant("shared.hours");
         } else {
@@ -40,7 +39,6 @@ angular.module('listnride').factory('date', ['$translate',
       },
     
       subtotal: function(startDate, endDate, priceHalfDay, priceDay, priceWeek) {
-        console.log("digest subtotal.duration");
         if (startDate === undefined || endDate === undefined) {
           return 0;
         } else {
