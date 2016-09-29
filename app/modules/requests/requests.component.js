@@ -71,22 +71,23 @@ angular.module('requests').component('requests', {
       };
 
       requests.sendMessage = function() {
-        var data = {
-          "request_id": requests.request.id,
-          "sender": $localStorage.userId,
-          "content": requests.message,
-          "is_read": false
-        };
-        var message = {
-          "message": data
-        };
-        requests.request.messages.push(data);
-        api.post('/messages', message).then(function(success) {
-          //
-        }, function(error) {
-          console.log("Error occured sending message");
-        });
-
+        if( requests.message ) {
+          var data = {
+            "request_id": requests.request.id,
+            "sender": $localStorage.userId,
+            "content": requests.message,
+            "is_read": false
+          };
+          var message = {
+            "message": data
+          };
+          requests.request.messages.push(data);
+          api.post('/messages', message).then(function(success) {
+            //
+          }, function(error) {
+            console.log("Error occured sending message");
+          });
+        }
         requests.message = "";
       }
 
