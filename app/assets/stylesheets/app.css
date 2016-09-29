@@ -247,6 +247,10 @@ footer .md-subheader.md-default-theme, .md-subheader {
   background-color: rgb(225, 225, 225);
 }
 
+footer md-list-item, footer md-list-item::before {
+  min-height: 25px;
+}
+
 search ng-map {
   height: 100% !important;
 }

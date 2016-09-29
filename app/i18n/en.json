@@ -13,7 +13,19 @@
     "berlin": "Berlin",
     "munich": "Munich",
     "amsterdam": "Amsterdam",
-    "vienna": "Vienna"
+    "vienna": "Vienna",
+    "hour": "hour",
+    "hours": "hours",
+    "day": "day",
+    "days": "days",
+    "week": "week",
+    "weeks": "weeks",
+    "duration": "duration",
+    "subtotal": "subtotal",
+    "lnr-fee": "listnride fee (incl. tax)",
+    "total": "total",
+    "from": "from`",
+    "to": "to"
   },
 
   "header": {
@@ -92,5 +104,10 @@
 
   "search" : {
     "no-bikes": "There are no bikes in this location"
+  },
+
+  "calendar": {
+    "invalid-date": "Dates are invalid",
+    "request-bike": "Request Bike"
   }
 }
