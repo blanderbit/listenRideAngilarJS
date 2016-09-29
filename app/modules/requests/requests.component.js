@@ -118,6 +118,8 @@ angular.module('requests').component('requests', {
           }, function(error) {
             console.log("Error occured sending message");
           });
+        } else {
+          showBookingDialog();
         }
         requests.message = "";
       }
@@ -137,7 +139,6 @@ angular.module('requests').component('requests', {
 
         bookingDialog.hide = function() {
           showChatDialog();
-          // $mdDialog.hide();
         };
       }
 
