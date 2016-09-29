@@ -6,7 +6,6 @@ angular.module('requests').component('requests', {
   controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', 'api', '$timeout', '$location', '$anchorScroll',
     function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, api, $timeout, $location, $anchorScroll) {
       var requests = this;
-
       var poller;
 
       requests.requests = [];
@@ -21,6 +20,27 @@ angular.module('requests').component('requests', {
       }, function(error) {
         console.log("Error fetching request list");
       });
+
+      // Handles initial request loading
+      requests.loadRequest = function(requestId) {
+        // Cancel the poller
+        $interval.cancel(poller);
+        // Clear former request
+        requests.request = {};
+        // Load the new request and activate the poller
+        reloadRequest(requestId);
+        poller = $interval(function() {
+            reloadRequest(requestId);
+        }, 10000);
+
+        // For small screens, disable the embedded chat and show chat in a fullscreen dialog instead
+        if ($mdMedia('xs')) {
+          requests.showChat = false;
+          showChatDialog();
+        } else {
+          requests.showChat = true;
+        }
+      };
 
       var reloadRequest = function(requestId) {
         api.get('/requests/' + requestId).then(function(success) {
@@ -37,6 +57,23 @@ angular.module('requests').component('requests', {
           console.log("Error fetching request");
         });
       };
+
+      // This function handles booking and all necessary validations
+      var confirmBooking = function() {
+        console.log("test");
+        api.get('/users/' + $localStorage.userId).then(
+          function (success) {
+            if (success.data.current_payment_method) {
+              console.log("User has pm");
+            } else {
+              console.log("user has no pm");
+            }
+          },
+          function (error) {
+            console.log("Error retrieving User Details");
+          }
+        );
+      }
 
       var showChatDialog = function() {
         $mdDialog.show({
@@ -74,28 +111,7 @@ angular.module('requests').component('requests', {
         }, function() {
           //
         });
-      }
-
-      // Handles initial request loading
-      requests.loadRequest = function(requestId) {
-        // Cancel the poller
-        $interval.cancel(poller);
-        // Clear former request
-        requests.request = {};
-        // Load the new request and activate the poller
-        reloadRequest(requestId);
-        poller = $interval(function() {
-            reloadRequest(requestId);
-        }, 10000);
-
-        // For small screens, disable the embedded chat and show chat in a fullscreen dialog instead
-        if ($mdMedia('xs')) {
-          requests.showChat = false;
-          showChatDialog();
-        } else {
-          requests.showChat = true;
-        }
-      }
+      };
 
       // Fires if scope gets destroyed and cancels poller
       requests.$onDestroy = function() {
@@ -117,15 +133,15 @@ angular.module('requests').component('requests', {
           };
           requests.request.messages.push(data);
           api.post('/messages', message).then(function(success) {
-            //
+            reloadRequest();
           }, function(error) {
             console.log("Error occured sending message");
           });
         } else {
-          showBookingDialog();
+          confirmBooking();
         }
         requests.message = "";
-      }
+      };
 
       var ChatDialogController = function() {
         var chatDialog = this;
@@ -146,9 +162,14 @@ angular.module('requests').component('requests', {
         var bookingDialog = this;
 
         bookingDialog.hide = function() {
-          showChatDialog();
+          // For small screens, show Chat Dialog again
+          if ($mdMedia('xs')) {
+            showChatDialog();
+          } else {
+            $mdDialog.hide();
+          }
         };
-      }
+      };
 
     }
   ]

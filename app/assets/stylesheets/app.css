@@ -41,6 +41,10 @@ requests, search {
   margin: 0 auto;
 }
 
+.dialog-content {
+  margin: 10px;
+}
+
 /* Add possibility to have centered toasts */
 md-toast.md-center {
   left: 50%;
@@ -52,7 +56,7 @@ md-toast.md-center {
 }
 
 p {
-  margin: 1em 0;
+  margin: 0.5em 0;
 }
 
 p.center-text {
