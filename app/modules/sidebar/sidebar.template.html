@@ -1,12 +1,12 @@
 <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-disable-scroll-target="body" md-component-id="right" layout="column">
   <div flex></div>
-  <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="requests">{{ 'shared.requests' | translate }}</md-button>
-  <md-button ng-if="!sidebar.authentication.loggedIn()" ng-click="sidebar.authentication.showSignupDialog()">{{ 'forms.sign-up' | translate }}</md-button>
-  <md-button ng-if="!sidebar.authentication.loggedIn()" ng-click="sidebar.authentication.showLoginDialog()">{{ 'forms.log-in' | translate }}</md-button>
+  <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="requests" ng-click="sidebar.toggle()">{{ 'shared.requests' | translate }}</md-button>
+  <md-button ng-if="!sidebar.authentication.loggedIn()" ng-click="sidebar.toggle(); sidebar.authentication.showSignupDialog()">{{ 'forms.sign-up' | translate }}</md-button>
+  <md-button ng-if="!sidebar.authentication.loggedIn()" ng-click="sidebar.toggle(); sidebar.authentication.showLoginDialog()">{{ 'forms.log-in' | translate }}</md-button>
   <md-button ng-click="">{{ 'shared.list-a-bike' | translate }}</md-button>
   <md-button ng-click="">{{ 'shared.how-it-works' | translate }}</md-button>
   <md-button ng-click="">{{ 'shared.trust-and-safety' | translate }}</md-button>
   <md-divider></md-divider>
-  <md-button ng-if="sidebar.authentication.loggedIn()" ng-click="sidebar.authentication.logout()">{{ 'forms.log-out' | translate }}</md-button>
+  <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="home" ng-click="sidebar.toggle(); sidebar.authentication.logout()">{{ 'forms.log-out' | translate }}</md-button>
   <div flex></div>
 </md-sidenav>

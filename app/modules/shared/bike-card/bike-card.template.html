@@ -3,10 +3,10 @@
 
   <md-card-title>
     <md-card-title-text>
-      <span class="md-headline">{{ bikeCard.brand }}</span>
-      <span class="md-subhead">{{ bikeCard.name }}</span>
+      <span class="md-headline">{{ ::bikeCard.brand }}</span>
+      <span class="md-subhead">{{ ::bikeCard.name }}</span>
     </md-card-title-text>
   </md-card-title>
 
-  <div layout-padding>{{ bikeCard.price | number }} €</div>
+  <div layout-padding>{{ ::bikeCard.price | number }} €</div>
 </md-card>

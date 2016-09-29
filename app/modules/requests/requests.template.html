@@ -3,20 +3,20 @@
 
   <!-- Right Column displaying actual Chat -->
   <div flex-gt-sm="65" flex-sm="65" flex-order="2" layout="column" hide-xs>
-      <div scroll-glue class="chat" flex="85">
-        <message ng-repeat="message in requests.request.messages" content="message.content" sender="message.sender" status="message.status" request="requests.request"></message>
-      </div>
-      <form ng-submit="requests.sendMessage()" layout="row" layout-padding>
-        <md-input-container class="ap-chat" flex md-no-float>
-              <input ng-model="requests.message" placeholder="Write a message"></input>
-        </md-input-container>
-        <md-button type="submit">SEND</md-button>
-      </form>
+    <div scroll-glue="requests.request.glued" class="chat" flex="85">
+      <message ng-repeat="message in requests.request.messages" content="message.content" sender="message.sender" status="message.status" request="requests.request"></message>
+    </div>
+    <form ng-submit="requests.sendMessage()" layout="row" layout-padding>
+      <md-input-container class="ap-chat" flex md-no-float>
+            <input ng-model="requests.message" placeholder="Write a message"></input>
+      </md-input-container>
+      <md-button type="submit">SEND</md-button>
+    </form>
   </div>
 
   <!-- Left Column displaying list of all Requests -->
   <md-content flex class="requests-list" flex-order="1" md-whiteframe="1">
-    <md-progress-linear ng-if="requests.requests.length == 0" md-mode="query"></md-progress-linear>
+    <md-progress-linear ng-if="requests.requests == null" md-mode="query"></md-progress-linear>
     <md-list md-no-ink ng-if="requests.requests != []">
           <div ng-repeat="request in requests.requests | orderBy: '-updated_at'">
             <md-list-item class="md-3-line" ng-click="requests.loadRequest(request.id)">

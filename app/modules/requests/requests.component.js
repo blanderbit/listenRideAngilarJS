@@ -3,10 +3,9 @@
 angular.module('requests').component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
-  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', 'api',
-    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, api) {
+  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$window', 'api', '$timeout', '$location', '$anchorScroll',
+    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $window, api, $timeout, $location, $anchorScroll) {
       var requests = this;
-
       var poller;
 
       requests.requests = [];
@@ -14,6 +13,7 @@ angular.module('requests').component('requests', {
       requests.message = "";
       requests.showChat = false;
       requests.$mdMedia = $mdMedia;
+      requests.request.glued = false;
 
       api.get('/users/' + $localStorage.userId + '/requests').then(function(success) {
         requests.requests = success.data;
@@ -21,11 +21,33 @@ angular.module('requests').component('requests', {
         console.log("Error fetching request list");
       });
 
+      // Handles initial request loading
+      requests.loadRequest = function(requestId) {
+        // Cancel the poller
+        $interval.cancel(poller);
+        // Clear former request
+        requests.request = {};
+        // Load the new request and activate the poller
+        reloadRequest(requestId);
+        poller = $interval(function() {
+            reloadRequest(requestId);
+        }, 10000);
+
+        // For small screens, disable the embedded chat and show chat in a fullscreen dialog instead
+        if ($mdMedia('xs')) {
+          requests.showChat = false;
+          showChatDialog();
+        } else {
+          requests.showChat = true;
+        }
+      };
+
       var reloadRequest = function(requestId) {
         api.get('/requests/' + requestId).then(function(success) {
           // If message count changed, apply new data
           if (requests.request.messages == null || requests.request.messages.length != success.data.messages.length) {
             requests.request = success.data;
+            requests.request.glued = true;
           }
           // If request loads initially, decide whether it's a rideChat or listChat
           if (requests.request.messages == null) {
@@ -35,6 +57,42 @@ angular.module('requests').component('requests', {
           console.log("Error fetching request");
         });
       };
+
+      // This function handles booking and all necessary validations
+      var confirmBooking = function() {
+        console.log("test");
+        api.get('/users/' + $localStorage.userId).then(
+          function (success) {
+            if (success.data.current_payment_method) {
+              showBookingDialog();
+            } else {
+              // User did not enter any payment method yet
+              $mdDialog.show(
+                $mdDialog.alert()
+                .parent(angular.element(document.body))
+                .clickOutsideToClose(false)
+                .title('Complete your Profile')
+                .textContent('In order to rent the bike, please provide your payment details. You can enter them in the next window.')
+                .ok('Enter Payment Details')
+              ).then(
+                function(success) {
+                  var w = 550;
+                  var h = 700;
+                  var left = (screen.width / 2) - (w / 2);
+                  var top = (screen.height / 2) - (h / 2);
+
+                  $window.open("https://listnride-staging.herokuapp.com/v2/users/" + $localStorage.userId + "/payment_methods/new", "popup", "width="+w+",height="+h+",left="+left+",top="+top);
+                },
+                function (error) {
+                  console.log('did not do it');
+                });
+            }
+          },
+          function (error) {
+            console.log("Error retrieving User Details");
+          }
+        );
+      }
 
       var showChatDialog = function() {
         $mdDialog.show({
@@ -72,28 +130,7 @@ angular.module('requests').component('requests', {
         }, function() {
           //
         });
-      }
-
-      // Handles initial request loading
-      requests.loadRequest = function(requestId) {
-        // Cancel the poller
-        $interval.cancel(poller);
-        // Clear former request
-        requests.request = {};
-        // Load the new request and activate the poller
-        reloadRequest(requestId);
-        poller = $interval(function() {
-            reloadRequest(requestId);
-        }, 10000);
-
-        // For small screens, disable the embedded chat and show chat in a fullscreen dialog instead
-        if ($mdMedia('xs')) {
-          requests.showChat = false;
-          showChatDialog();
-        } else {
-          requests.showChat = true;
-        }
-      }
+      };
 
       // Fires if scope gets destroyed and cancels poller
       requests.$onDestroy = function() {
@@ -102,6 +139,7 @@ angular.module('requests').component('requests', {
 
       // Sends a new message by directly appending it locally and posting it to the API
       requests.sendMessage = function() {
+        requests.request.glued = true
         if( requests.message ) {
           var data = {
             "request_id": requests.request.id,
@@ -114,17 +152,24 @@ angular.module('requests').component('requests', {
           };
           requests.request.messages.push(data);
           api.post('/messages', message).then(function(success) {
-            //
+            reloadRequest();
           }, function(error) {
             console.log("Error occured sending message");
           });
+        } else {
+          confirmBooking();
         }
         requests.message = "";
-      }
+      };
 
       var ChatDialogController = function() {
         var chatDialog = this;
         chatDialog.requests = requests;
+
+        $timeout(function() {
+          $location.hash('end');
+          $anchorScroll();
+        }, 2000);
 
         chatDialog.hide = function() {
           $mdDialog.hide();
@@ -136,10 +181,14 @@ angular.module('requests').component('requests', {
         var bookingDialog = this;
 
         bookingDialog.hide = function() {
-          showChatDialog();
-          // $mdDialog.hide();
+          // For small screens, show Chat Dialog again
+          if ($mdMedia('xs')) {
+            showChatDialog();
+          } else {
+            $mdDialog.hide();
+          }
         };
-      }
+      };
 
     }
   ]

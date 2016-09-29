@@ -2,20 +2,49 @@
 
     <md-toolbar>
       <div class="md-toolbar-tools" layout-align="center center">
-        <md-button class="md-icon-button">
-          <md-icon></md-icon>
-        </md-button>
-        <span flex></span>
-        <br><h2>Chat</h2><br>
-        <span flex></span>
-        <md-button class="md-icon-button" ng-click="bookingDialog.hide()">
-          <md-icon md-svg-src="app/assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
-        </md-button>
+        <h2>{{ 'requests.booking-overview' | translate }}</h2>
       </div>
     </md-toolbar>
 
-    <md-dialog-content layout="column">
-      w00t
+    <md-dialog-content layout="column" class="dialog-content">
+      <div layout="column">
+        <p class="md-title">Booking</p>
+        <div layout="row">
+          <span flex="50" class="md-body-2">{{ 'shared.from' | translate }}</span>
+          <span flex="50" class="md-body-1">01.01.2001</span>
+        </div>
+        <div layout="row">
+          <span flex="50" class="md-body-2">{{ 'shared.to' | translate }}</span>
+          <span flex="50" class="md-body-1">13.01.2001</span>
+        </div>
+        <div layout="row">
+          <span flex="50" class="md-body-2">{{ 'shared.duration' | translate }}</span>
+          <span flex="50" class="md-body-1">12 days, 2 hours</span>
+        </div>
+        <p><md-divider></md-divider></p>
+        <p class="md-title">Price</p>
+        <div layout="row">
+          <span flex="50" class="md-body-2">{{ 'shared.subtotal' | translate }}</span>
+          <span flex="50" class="md-body-1">01.01.2001</span>
+        </div>
+        <div layout="row">
+          <span flex="50" class="md-body-2">{{ 'shared.lnr-fee' | translate }}</span>
+          <span flex="50" class="md-body-1">13.01.2001</span>
+        </div>
+        <div layout="row">
+          <span flex="50" class="md-body-2">{{ 'shared.total' | translate }}</span>
+          <span flex="50" class="md-body-1">12 days, 2 hours</span>
+        </div>
+        <p><md-divider></md-divider></p>
+        <br>
+        <p class="md-caption center-text">By booking I accept the Terms and Conditions</p >
+        <br>
+        <div layout="row">
+          <md-button class="md-raised md-warn" ng-click="bookingDialog.hide()">{{ 'shared.cancel' | translate }}</md-button>
+          <span flex></span>
+          <md-button class="md-raised md-primary">{{ 'requests.book' | translate }}</ md-button>
+        </div>
+      </div>
     </md-dialog-content>
 
 </md-dialog>

@@ -3,8 +3,8 @@
 angular.
   module('listnride').
   factory('authentication', [
-    'Base64', '$http', '$localStorage', '$mdDialog', '$mdToast', '$q', 'ezfb', 'api', 'verification',
-    function(Base64, $http, $localStorage, $mdDialog, $mdToast, $q, ezfb, api, verification){
+    'Base64', '$http', '$localStorage', '$mdDialog', '$mdToast', '$q', 'ezfb', 'api', 'verification', 'sha256',
+    function(Base64, $http, $localStorage, $mdDialog, $mdToast, $q, ezfb, api, verification, sha256){
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (email, password, id) {
@@ -31,10 +31,7 @@ angular.
           };
           api.post("/users", user).then(function(success) {
             setCredentials(success.data.email, success.data.password_hashed, success.data.id);
-            $mdDialog.hide();
-            $timeout(function() {
-              verification.openDialog();
-            }, 500);
+            verification.openDialog();
           }, function(error) {
             console.log("Could not Sign Up with Facebook");
           });
@@ -55,10 +52,7 @@ angular.
           };
           api.post('/users', user).then(function(success) {
             setCredentials(success.data.email, success.data.password_hashed, success.data.id);
-            $mdDialog.hide();
-            $timeout(function() {
-              verification.openDialog();
-            }, 500);
+            verification.openDialog();
           }, function(error) {
             console.log("Could not Sign Up");
           });
