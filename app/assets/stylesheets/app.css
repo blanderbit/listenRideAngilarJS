@@ -141,8 +141,9 @@ requests .subheader {
   height: 100px;
 }
 
-requests .chat {
-  overflow: auto;
+.chat {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   background-color: #efefef;
 }
 

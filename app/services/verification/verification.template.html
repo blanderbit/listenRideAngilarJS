@@ -1,0 +1,33 @@
+<md-dialog flex="40">
+  <md-toolbar hide show-xs>
+    <div class="md-toolbar-tools" layout-align="center center">
+      <md-button class="md-icon-button">
+        <md-icon></md-icon>
+      </md-button>
+      <span flex></span>
+      <br><h2>{{ 'verification.verification' | translate }}</h2><br>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="loginDialog.hide()">
+        <md-icon md-svg-src="assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-dialog-content>
+    <div class="md-dialog-content" layout="column">
+      <div layout="column" layout-align="center center">
+        <p class="md-headline">Welcome to listnride</p>
+        <p class="md-body-1 center-text">Welcome to our community of hundres of bikes and cyclists around the world.</p>
+        <p class="md-body-1 center-text">The safety of our users is our paramount concern. Therefore, we kindly ask you to provide a few more   details about yourself.</p>
+      </div>
+      
+      <div layout="row">
+        <md-button ng-click="verificationDialog.hide()">{{ 'shared.later' | translate }}</md-button>
+        <span flex></span>
+        <md-button class="md-primary md-raised" ng-disabled="true" ng-click="verificationDialog.next()">{{ 'shared.next' | translate }}</md-button>
+      </div>
+      
+    </div>
+  </md-dialog-content>
+
+</md-dialog>

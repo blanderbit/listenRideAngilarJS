@@ -1,17 +1,54 @@
 <div ng-if="message.sentMessage()" flex layout="row" layout-align="end end">
-  <div class="sent-message" flex="40" flex-xs="80" md-whiteframe="1" layout-margin>
+  <div class="sent-message" flex="60" flex-xs="80" md-whiteframe="1" layout-margin>
     <p>{{message.content}}</p>
   </div>
 </div>
 
 <div ng-if="message.receivedMessage()" layout="row" layout-align="start end">
-  <div class="received-message" flex="40" md-whiteframe="1" layout-margin>
+  <div class="received-message" flex="60" flex-xs="80" md-whiteframe="1" layout-margin>
     <p>{{message.content}}</p>
   </div>
 </div>
 
 <div ng-if="message.statusMessage()" layout="row" layout-align="center end"> 
-  <div class="status-message" flex="40" md-whiteframe="1" layout-align="center" layout-margin>
-    <p translate="{{message.chatFlow()}}.{{message.status}}" translate-values="message.request"></p>
+  <div class="status-message" flex="60" flex-xs="80" md-whiteframe="1" layout="column" layout-margin>
+    <p class="center-text" translate="{{message.chatFlow()}}.{{message.status}}" translate-values="message.request"></p>
+
+    <div ng-if="!message.request.rideChat && message.request.status == 1 && message.status == 1">
+      <md-divider></md-divider>
+      <div layout="row" layout-align="center center">
+        <md-button ng-disabled="message.request.status != 1" ng-click="message.updateStatus(8)">{{ 'message.reject' | translate }}</md-button>
+        <md-button ng-disabled="message.request.status != 1" ng-click="message.updateStatus(2)">{{ 'message.accept' | translate }}</md-button>
+      </div>
+    </div>
+
+    <div ng-if="!message.request.rideChat && message.status == 3">
+      <md-divider></md-divider>
+      <div layout="row" layout-align="center center">
+        <md-button ng-disabled="message.request.status != 3" ng-click="message.updateStatus(4)">{{ 'message.confirm_return' | translate }}</md-button>
+      </div>
+    </div>
+
+    <div ng-if="!message.request.rideChat && message.status == 4">
+      <md-divider></md-divider>
+      <div layout="row" layout-align="center center">
+        <md-button ng-disabled="message.request.status != 4" ng-click="message.updateStatus(5)">{{ 'message.rate' | translate }}</md-button>
+      </div>
+    </div>
+
+    <div ng-if="message.request.rideChat && message.request.status == 2 && message.status == 2">
+      <md-divider></md-divider>
+      <div layout="row" layout-align="center center">
+        <md-button ng-disabled="message.request.status != 2" ng-click="message.updateStatus(9)">{{ 'message.cancel' | translate }}</md-button>
+        <md-button ng-disabled="message.request.status != 2" ng-click="message.updateStatus(3)">{{ 'message.confirm' | translate }}</md-button>
+      </div>
+    </div>
+
+    <div ng-if="message.request.rideChat && message.request.status == 5 && message.status == 5">
+      <md-divider></md-divider>
+      <div layout="row" layout-align="center center">
+        <md-button ng-disabled="message.request.status != 5" ng-click="message.updateStatus(7)">{{ 'message.rate' | translate }}</md-button>
+      </div>
+    </div>
   </div>
 </div>

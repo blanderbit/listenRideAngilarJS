@@ -32,6 +32,15 @@
 
   },
 
+  "message": {
+    "accept": "Accept",
+    "reject": "Reject",
+    "rate": "Rate",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "confirm_return": "Confirm Return"
+  },
+
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your {{ride.name}} from {{timespan}}. Agree on further details using the chat.",
     "2": "You accepted the request. The rider now has the possibility to book the bike.",
