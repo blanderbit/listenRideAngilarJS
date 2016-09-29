@@ -87,6 +87,8 @@
 
   "calendar": {
     "from": "von",
-    "to": "bis"
+    "to": "bis",
+    "invalid-date": "Datums angabe nicht Korrekt",
+    "request-bike": "Rad anfragen"
   }
 }

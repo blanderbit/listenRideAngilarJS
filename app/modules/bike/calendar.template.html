@@ -22,4 +22,9 @@
   </md-input-container>
 </div>
 
-<md-button type="submit" ng-click="calendar.onBikeRequest()" ng-disabled="calendar.bikeId === undefined || calendar.startDate === undefined || (calendar.startDate === undefined  && {{calendar.startDate.getTime() >= calendar.endDate.getTime()}})">Request Bike</md-button>
+<div id="formSubmit" layout="column" layout-align="center center">
+  <md-button type="submit" class="md-raised" ng-click="calendar.onBikeRequest()" ng-disabled="calendar.isFormInvalid()">
+    {{ 'calendar.request-bike' | translate }}
+  </md-button>
+  <div ng-if="calendar.isDateInvalid()">{{ 'calendar.invalid-date' | translate }}</div>
+</div>

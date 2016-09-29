@@ -87,6 +87,8 @@
 
   "calendar": {
     "from": "from`",
-    "to": "to"
+    "to": "to",
+    "invalid-date": "Dates are invalid",
+    "request-bike": "Request Bike"
   }
 }

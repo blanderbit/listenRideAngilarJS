@@ -65,7 +65,17 @@ angular.module('bike').component('calendar', {
             console.log("Error posting request", error);
           }
         );
-      };  
+      };
+
+      calendar.isFormInvalid = function() {
+        return calendar.bikeId === undefined || calendar.startDate === undefined ||
+          (calendar.startDate !== undefined  && calendar.startDate.getTime() >= calendar.endDate.getTime());
+      };
+
+      calendar.isDateInvalid = function() {
+        return calendar.startDate !== undefined  &&
+          calendar.startDate.getTime() >= calendar.endDate.getTime();
+      };
 
       calendar.getNumber = function(number) {
         return new Array(number);
