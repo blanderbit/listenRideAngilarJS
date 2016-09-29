@@ -5,14 +5,16 @@ angular.module('bike').component('calendar', {
   controllerAs: 'calendar',
   bindings: {
     bikeId: '<',
+    priceHalfDay: '<',
+    priceDay: '<',
+    priceWeek: '<',
     requests: '<'
   },
-  controller: ['$scope', '$localStorage', '$state', 'api',
-    function CalendarController($scope, $localStorage, $state, api) {
+  controller: ['$scope', '$localStorage', '$state', 'date', 'api',
+    function CalendarController($scope, $localStorage, $state, date, api) {
       var calendar = this;
 
-      calendar.startTime = 10;
-      calendar.endTime = 18;
+      initOverview();
 
       $scope.$watch('calendar.requests', function() {
         if (calendar.requests !== undefined) {
@@ -35,6 +37,8 @@ angular.module('bike').component('calendar', {
             $scope.$apply(function() {
               calendar.startDate = start;
               calendar.endDate = end;
+              // equivalent to ng-change
+              dateChange(calendar.startDate, calendar.endDate);
             })
           });
         }
@@ -46,6 +50,7 @@ angular.module('bike').component('calendar', {
         var date = new Date(calendar[slotDate]);
         date.setHours(calendar[slotTime], 0, 0, 0);
         calendar[slotDate] = date;
+        dateChange(calendar.startDate, calendar.endDate);
       };
 
       calendar.onBikeRequest = function() {
@@ -77,10 +82,6 @@ angular.module('bike').component('calendar', {
           calendar.startDate.getTime() >= calendar.endDate.getTime();
       };
 
-      calendar.getNumber = function(number) {
-        return new Array(number);
-      }
-
       function classifyDate(date) {
         date.setHours(0, 0, 0, 0);
         var now = new Date();
@@ -107,6 +108,36 @@ angular.module('bike').component('calendar', {
           }
         }
         return false;
+      }
+
+      function initOverview() {
+        calendar.startTime = 10;
+        calendar.endTime = 18;
+
+        calendar.duration = date.duration();
+        calendar.subtotal = 0;
+        calendar.lnrFee = 0;
+        calendar.total = 0;
+
+        calendar.formValid = false;
+        calendar.datesValid = false;
+      }
+
+      function dateChange(startDate, endDate) {
+        if (calendar.isDateInvalid()) {
+          calendar.duration = date.duration();
+          calendar.subtotal = 0;
+          calendar.lnrFee = 0;
+          calendar.total = 0;
+        } else {
+          calendar.duration = date.duration(startDate, endDate);
+          var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek);
+          var fee = subtotal * 0.125;
+          var tax = fee * 0.19;
+          calendar.subtotal = subtotal;
+          calendar.lnrFee = fee + tax;
+          calendar.total = subtotal + fee + tax;
+        }
       }
 
     }

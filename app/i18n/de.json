@@ -13,7 +13,19 @@
     "berlin": "Berlin",
     "munich": "München",
     "amsterdam": "Amsterdam",
-    "vienna": "Wien"
+    "vienna": "Wien",
+    "hour": "Stunde",
+    "hours": "Stunden",
+    "day": "Tag",
+    "days": "Tage",
+    "week": "Woche",
+    "weeks": "Wochen",
+    "duration": "Dauer",
+    "subtotal": "Zwischensumme",
+    "lnr-fee": "listnride Gebühren (inkl. MwSt)",
+    "total": "Ingesamt",
+    "from": "von",
+    "to": "bis"
   },
 
   "header": {
@@ -86,8 +98,6 @@
   },
 
   "calendar": {
-    "from": "von",
-    "to": "bis",
     "invalid-date": "Datums angabe nicht Korrekt",
     "request-bike": "Rad anfragen"
   }

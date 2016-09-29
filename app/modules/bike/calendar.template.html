@@ -2,29 +2,54 @@
 
 <div id="timeRange" layout-padding layout="row" layout-align="space-between center">
   <md-input-container>
-    <label>{{ 'calendar.from' | translate }}</label>
+    <label>{{ 'shared.from' | translate }}</label>
     <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')"
-      ng-model="calendar.startTime" placeholder="{{ 'calendar.from' | translate }}">
-      <md-option ng-repeat="i in calendar.getNumber(17) track by $index" value="{{$index + 6}}">
+      ng-model="calendar.startTime" placeholder="{{ 'shared.from' | translate }}">
+      <md-option ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
         {{ ($index + 6) + ":00" }}
       </md-option>
     </md-select>
   </md-input-container>
 
   <md-input-container>
-    <label>{{ 'calendar.to' | translate }}</label>
+    <label>{{ 'shared.to' | translate }}</label>
     <md-select ng-disabled="calendar.endDate === undefined" ng-change="calendar.onTimeChange('end')"
-      ng-model="calendar.endTime" placeholder="{{ 'calendar.to' | translate }}">
-      <md-option ng-repeat="i in calendar.getNumber(17) track by $index" value="{{$index + 6}}">
+      ng-model="calendar.endTime" placeholder="{{ 'shared.to' | translate }}">
+      <md-option ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
         {{ ($index + 6) + ":00" }}
       </md-option>
     </md-select>
   </md-input-container>
 </div>
 
-<div id="formSubmit" layout="column" layout-align="center center">
+<div id="formSubmit" class="md-whiteframe-1dp" layout="column" layout-align="center stretch">
+  <div id="requestOverview" layout="column" layout-align="center stretch" layout-padding>
+    <div layout="row" layout-align="space-between center">
+      <div>{{ 'shared.duration' | translate }}</div>
+      <div>{{ calendar.duration }}</div>
+    </div>
+
+    <md-divider></md-divider>
+
+    <div layout="row" layout-align="space-between center">
+      <div>{{ 'shared.subtotal' | translate }}</div>
+      <div>{{ calendar.subtotal | currency:"€":2 }}</div>
+    </div>
+
+    <div layout="row" layout-align="space-between center">
+      <div>{{ 'shared.lnr-fee' | translate }}</div>
+      <div>{{ calendar.lnrFee | currency:"€":2 }}</div>
+    </div>
+
+    <div layout="row" layout-align="space-between center">
+      <div>{{ 'shared.total' | translate }}</div>
+      <div>{{ calendar.total | currency:"€":2 }}</div>
+    </div>
+  </div>
+
   <md-button type="submit" class="md-raised" ng-click="calendar.onBikeRequest()" ng-disabled="calendar.isFormInvalid()">
     {{ 'calendar.request-bike' | translate }}
   </md-button>
+
   <div ng-if="calendar.isDateInvalid()">{{ 'calendar.invalid-date' | translate }}</div>
 </div>
