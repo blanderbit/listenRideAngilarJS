@@ -3,8 +3,8 @@
 angular.module('requests').component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
-  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', 'api', '$timeout', '$location', '$anchorScroll',
-    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, api, $timeout, $location, $anchorScroll) {
+  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$window', 'api', '$timeout', '$location', '$anchorScroll',
+    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $window, api, $timeout, $location, $anchorScroll) {
       var requests = this;
       var poller;
 
@@ -64,9 +64,28 @@ angular.module('requests').component('requests', {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             if (success.data.current_payment_method) {
-              console.log("User has pm");
+              showBookingDialog();
             } else {
-              console.log("user has no pm");
+              // User did not enter any payment method yet
+              $mdDialog.show(
+                $mdDialog.alert()
+                .parent(angular.element(document.body))
+                .clickOutsideToClose(false)
+                .title('Complete your Profile')
+                .textContent('In order to rent the bike, please provide your payment details. You can enter them in the next window.')
+                .ok('Enter Payment Details')
+              ).then(
+                function(success) {
+                  var w = 550;
+                  var h = 700;
+                  var left = (screen.width / 2) - (w / 2);
+                  var top = (screen.height / 2) - (h / 2);
+
+                  $window.open("https://listnride-staging.herokuapp.com/v2/users/" + $localStorage.userId + "/payment_methods/new", "popup", "width="+w+",height="+h+",left="+left+",top="+top);
+                },
+                function (error) {
+                  console.log('did not do it');
+                });
             }
           },
           function (error) {
