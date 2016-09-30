@@ -37,7 +37,6 @@ angular.module('bike').component('calendar', {
             $scope.$apply(function() {
               calendar.startDate = start;
               calendar.endDate = end;
-              // equivalent to ng-change
               dateChange(calendar.startDate, calendar.endDate);
             })
           });
@@ -114,7 +113,7 @@ angular.module('bike').component('calendar', {
         calendar.startTime = 10;
         calendar.endTime = 18;
 
-        calendar.duration = date.duration();
+        calendar.duration = date.duration(undefined, undefined);
         calendar.subtotal = 0;
         calendar.lnrFee = 0;
         calendar.total = 0;
@@ -125,7 +124,7 @@ angular.module('bike').component('calendar', {
 
       function dateChange(startDate, endDate) {
         if (calendar.isDateInvalid()) {
-          calendar.duration = date.duration();
+          calendar.duration = date.duration(undefined, undefined);
           calendar.subtotal = 0;
           calendar.lnrFee = 0;
           calendar.total = 0;

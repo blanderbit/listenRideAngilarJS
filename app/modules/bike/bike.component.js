@@ -6,7 +6,6 @@ angular.module('bike').component('bike', {
   controller: ['api', '$stateParams', '$mdDialog', 'NgMap',
     function BikeController(api, $stateParams, $mdDialog, NgMap) {
       var bike = this;
-      bike.data = {};
 
       bike.mapOptions = {
         lat: 0,

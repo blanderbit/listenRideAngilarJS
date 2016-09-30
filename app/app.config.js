@@ -48,9 +48,9 @@ angular.
     });
 
     $stateProvider.state({
-      name: 'profile',
-      url: '/profile',
-      template: '<profile></profile>'
+      name: 'user',
+      url: '/user',
+      template: '<user></user>'
     });
 
     $stateProvider.state({
