@@ -32,22 +32,22 @@
     <div ng-if="!message.request.rideChat && message.status == 4">
       <md-divider></md-divider>
       <div layout="row" layout-align="center center">
-        <md-button ng-disabled="message.request.status != 4" ng-click="message.updateStatus(5)">{{ 'message.rate' | translate }}</md-button>
+        <md-button ng-disabled="message.request.status != 4" ng-click="message.showRatingDialog()">{{ 'message.rate' | translate }}</md-button>
       </div>
     </div>
 
-    <div ng-if="message.request.rideChat && message.request.status == 2 && message.status == 2">
+    <div ng-if="message.request.rideChat && message.status == 2">
       <md-divider></md-divider>
       <div layout="row" layout-align="center center">
-        <md-button ng-disabled="message.request.status != 2" ng-click="message.updateStatus(9)">{{ 'message.cancel' | translate }}</md-button>
-        <md-button ng-disabled="message.request.status != 2" ng-click="message.updateStatus(3)">{{ 'message.confirm' | translate }}</md-button>
+        <md-button ng-disabled="message.request.status != 2" ng-click="message.updateStatus(9)">{{ 'shared.cancel' | translate }}</md-button>
+        <md-button ng-disabled="message.request.status != 2" ng-click="message.confirmBooking()">{{ 'message.confirm' | translate }}</md-button>
       </div>
     </div>
 
-    <div ng-if="message.request.rideChat && message.request.status == 5 && message.status == 5">
+    <div ng-if="message.request.rideChat && message.status == 5">
       <md-divider></md-divider>
       <div layout="row" layout-align="center center">
-        <md-button ng-disabled="message.request.status != 5" ng-click="message.updateStatus(7)">{{ 'message.rate' | translate }}</md-button>
+        <md-button ng-disabled="message.request.status != 5" ng-click="message.showRatingDialog()">{{ 'message.rate' | translate }}</md-button>
       </div>
     </div>
   </div>

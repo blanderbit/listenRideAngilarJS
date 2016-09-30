@@ -18,5 +18,5 @@ angular.module('listnride', [
   'ngStorage',
   'ezfb',
   'ngMap',
-  'luegg.directives'
+  'luegg.directives',
 ]);

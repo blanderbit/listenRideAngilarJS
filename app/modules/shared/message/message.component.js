@@ -9,12 +9,14 @@ angular.module('message').component('message', {
     sender: '<',
     receiver: '<',
     timestamp: '<',
+    confirmBooking: '&',
+    showRatingDialog: '&',
     request: '<'
   },
   controller: [ '$translate', '$localStorage', 'api',
     function MessageController($translate, $localStorage, api) {
       var message = this;
-
+ 
       message.chatFlow = function() {
         if (message.request.rideChat) {
           return "rideChat";
@@ -35,9 +37,10 @@ angular.module('message').component('message', {
       }
 
       message.statusMessage = function() {
-        return message.status != null && message.status != 6 && message.status != 7;
+        return message.status != null && message.status != 7;
       }
 
+      // Unfortunately doublecoded in message.component and requests.component#bookingDialog
       message.updateStatus = function(statusId) {
         var data = {
           "request_id": message.request.id,

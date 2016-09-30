@@ -24,12 +24,30 @@
     "subtotal": "subtotal",
     "lnr-fee": "listnride fee (incl. tax)",
     "total": "total",
-    "from": "from`",
-    "to": "to"
+    "from": "from",
+    "to": "to",
+    "cancel": "Cancel",
+    "send": "Send"
   },
 
   "header": {
 
+  },
+
+  "requests": {
+    "booking-overview": "Booking Overview",
+    "book": "Book",
+    "rating": "Rating",
+    "ratings": {
+      "description": "Trust and Safety are our paramount concern. By writing a short review, you'll help the whole community.",
+      "1": "Unacceptable",
+      "2": "Bad",
+      "3": "Acceptable",
+      "4": "Good",
+      "5": "Excellent",
+      "rating_text_rider": "Please summarize your rental experience in a few sentences. The lister will do the same",
+      "rating_text_lister": "Please summarize your rental experience in a few sentences. The rider will do the same"
+    }
   },
 
   "message": {
@@ -37,7 +55,6 @@
     "reject": "Reject",
     "rate": "Rate",
     "confirm": "Confirm",
-    "cancel": "Cancel",
     "confirm_return": "Confirm Return"
   },
 
@@ -57,7 +74,7 @@
     "3": "Congratulation, You successfully booked the ride. Meet the lister as agreed and pick up the ride. Contact Details are as follows, we've also sent them to you via email.\n \nName: %1$s \nEmail address: %2$s.",
     "4": "%1$s has confirmed the return of the ride.",
     "5": "Finally, please rate the lister and the ride. This helps our community a lot and completes the rental.",
-    "6": "Thanks for rating. The rental was successful.",
+    "6": "Thanks for rating, the rental was successfully completed.",
     "8": "Unfortunately, the lister could't accept your request. Simply request some other great bikes.",
     "9": "You cancelled the request, please tell the lister why you couldn’t confirm the booking."
   },

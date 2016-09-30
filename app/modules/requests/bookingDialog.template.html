@@ -11,29 +11,29 @@
         <p class="md-title">Booking</p>
         <div layout="row">
           <span flex="50" class="md-body-2">{{ 'shared.from' | translate }}</span>
-          <span flex="50" class="md-body-1">01.01.2001</span>
+          <span flex="50" class="md-body-1">{{ bookingDialog.requests.request.start_date | date: "dd.MM.yyyy, HH:mm" }}</span>
         </div>
         <div layout="row">
           <span flex="50" class="md-body-2">{{ 'shared.to' | translate }}</span>
-          <span flex="50" class="md-body-1">13.01.2001</span>
+          <span flex="50" class="md-body-1">{{ bookingDialog.requests.request.end_date | date: "dd.MM.yyyy, HH:mm" }}</span>
         </div>
         <div layout="row">
           <span flex="50" class="md-body-2">{{ 'shared.duration' | translate }}</span>
-          <span flex="50" class="md-body-1">12 days, 2 hours</span>
+          <span flex="50" class="md-body-1">{{ bookingDialog.duration }}</span>
         </div>
         <p><md-divider></md-divider></p>
         <p class="md-title">Price</p>
         <div layout="row">
           <span flex="50" class="md-body-2">{{ 'shared.subtotal' | translate }}</span>
-          <span flex="50" class="md-body-1">01.01.2001</span>
+          <span flex="50" class="md-body-1">{{ bookingDialog.requests.request.subtotal | currency: '€' }}</span>
         </div>
         <div layout="row">
           <span flex="50" class="md-body-2">{{ 'shared.lnr-fee' | translate }}</span>
-          <span flex="50" class="md-body-1">13.01.2001</span>
+          <span flex="50" class="md-body-1">{{ bookingDialog.requests.request.total - bookingDialog.request.subtotal | currency: '€' }}</span>
         </div>
         <div layout="row">
           <span flex="50" class="md-body-2">{{ 'shared.total' | translate }}</span>
-          <span flex="50" class="md-body-1">12 days, 2 hours</span>
+          <span flex="50" class="md-body-2">{{ bookingDialog.requests.request.total | currency: '€'  }}</span>
         </div>
         <p><md-divider></md-divider></p>
         <br>
@@ -42,7 +42,7 @@
         <div layout="row">
           <md-button class="md-raised md-warn" ng-click="bookingDialog.hide()">{{ 'shared.cancel' | translate }}</md-button>
           <span flex></span>
-          <md-button class="md-raised md-primary">{{ 'requests.book' | translate }}</ md-button>
+          <md-button class="md-raised md-primary" ng-click="bookingDialog.book()">{{ 'requests.book' | translate }}</md-button>
         </div>
       </div>
     </md-dialog-content>

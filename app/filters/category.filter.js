@@ -36,7 +36,7 @@ angular.
         case 64: return "Recumbent"; break;
         case 65: return "Mono"; break;
 
-        default: return "Wrong Category Id"; break;
+        default: return ""; break;
       }
     }
 

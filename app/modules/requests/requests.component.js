@@ -3,8 +3,8 @@
 angular.module('requests').component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
-  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$window', 'api', '$timeout', '$location', '$anchorScroll',
-    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $window, api, $timeout, $location, $anchorScroll) {
+  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$window', 'api', '$timeout', '$location', '$anchorScroll', 'date',
+    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $window, api, $timeout, $location, $anchorScroll, date) {
       var requests = this;
       var poller;
 
@@ -14,21 +14,33 @@ angular.module('requests').component('requests', {
       requests.showChat = false;
       requests.$mdMedia = $mdMedia;
       requests.request.glued = false;
-      requests.preloading = true;
+      requests.loadingList = true;
+      requests.loadingChat = false;
+      requests.request.rideChat;
 
       api.get('/users/' + $localStorage.userId + '/requests').then(
         function(success) {
           requests.requests = success.data;
-          requests.preloading = false;
+          requests.loadingList = false;
         },
         function(error) {
           console.log("Error fetching request list");
-          requests.preloading = false;
+          requests.loadingList = false;
         }
       );
 
+      var hideDialog = function() {
+        // For small screens, show Chat Dialog again
+        if ($mdMedia('xs')) {
+          showChatDialog();
+        } else {
+          $mdDialog.hide();
+        }
+      }
+
       // Handles initial request loading
       requests.loadRequest = function(requestId) {
+        requests.loadingChat = true;
         // Cancel the poller
         $interval.cancel(poller);
         // Clear former request
@@ -49,23 +61,25 @@ angular.module('requests').component('requests', {
       };
 
       var reloadRequest = function(requestId) {
-        api.get('/requests/' + requestId).then(function(success) {
-          // If message count changed, apply new data
-          if (requests.request.messages == null || requests.request.messages.length != success.data.messages.length) {
-            requests.request = success.data;
-            requests.request.glued = true;
-          }
-          // If request loads initially, decide whether it's a rideChat or listChat
-          if (requests.request.messages == null) {
-            requests.request.rideChat = $localStorage.userId == requests.request.user.id;
-          }
-        }, function(error) {
+        api.get('/requests/' + requestId).then(
+          function(success) {
+            // On initial load
+            if (requests.request.messages == null || requests.request.messages.length != success.data.messages.length) {
+              requests.request = success.data;
+              requests.request.glued = true;
+              requests.request = success.data;
+              requests.request.rideChat = $localStorage.userId == requests.request.user.id;
+              requests.loadingChat = false;
+            }
+          },
+          function(error) {
           console.log("Error fetching request!");
-        });
+          }
+        );
       };
 
       // This function handles booking and all necessary validations
-      var confirmBooking = function() {
+      requests.confirmBooking = function() {
         console.log("test");
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
@@ -124,6 +138,20 @@ angular.module('requests').component('requests', {
         });
       };
 
+      requests.showRatingDialog = function() {
+        $mdDialog.show({
+          controller: RatingDialogController,
+          controllerAs: 'ratingDialog',
+          templateUrl: 'app/modules/requests/ratingDialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: false,
+          fullscreen: true // Only for -xs, -sm breakpoints.
+        });
+      };
+
       // Fires if scope gets destroyed and cancels poller
       requests.$onDestroy = function() {
         $interval.cancel(poller);
@@ -144,7 +172,7 @@ angular.module('requests').component('requests', {
           };
           requests.request.messages.push(data);
           api.post('/messages', message).then(function(success) {
-            reloadRequest();
+            reloadRequest(requests.request.id);
           }, function(error) {
             console.log("Error occured sending message");
           });
@@ -170,14 +198,28 @@ angular.module('requests').component('requests', {
 
       var BookingDialogController = function() {
         var bookingDialog = this;
+        bookingDialog.requests = requests;
+        bookingDialog.duration = date.duration(requests.request.start_date, requests.request.end_date);
 
-        bookingDialog.hide = function() {
-          // For small screens, show Chat Dialog again
-          if ($mdMedia('xs')) {
-            showChatDialog();
-          } else {
-            $mdDialog.hide();
-          }
+        bookingDialog.hide = hideDialog;
+
+        bookingDialog.book = function() {
+          var data = {
+            "request": {
+              "status": 3
+            }
+          };
+          bookingDialog.hide();
+          requests.loadingChat = true;
+          api.put("/requests/" + requests.request.id, data).then(
+            function(success) {
+              reloadRequest(requests.request.id);
+            },
+            function(error) {
+              reloadRequest(requests.request.id);
+              console.log("error updating request");
+            }
+          );
         };
       };
 
@@ -191,7 +233,61 @@ angular.module('requests').component('requests', {
           var top = (screen.height / 2) - (h / 2);
 
           $window.open("https://listnride-staging.herokuapp.com/v2/users/" + $localStorage.userId + "/payment_methods/new", "popup", "width="+w+",height="+h+",left="+left+",top="+top);
+          // For small screens, show Chat Dialog again
+          hideDialog();
         }
+      };
+
+      var RatingDialogController = function() {
+        var ratingDialog = this;
+
+        ratingDialog.rating = 5;
+
+        ratingDialog.rate = function() {
+          var data = {
+            "rating": {
+              "score": ratingDialog.rating,
+              "message": ratingDialog.message,
+              "author": $localStorage.userId,
+            }
+          };
+          var newStatus;
+
+          if (requests.request.rideChat) {
+            data.rating.ride_id = requests.request.ride.id;
+            newStatus = 6;
+          }
+          else {
+            data.rating.user_id = requests.request.user.id;
+            newStatus = 5
+          }
+
+          requests.loadingChat = true;
+          ratingDialog.hide();
+          api.post('/ratings', data).then(
+            function(success) {
+              var data = {
+                "request": {
+                  "status": newStatus
+                }
+              };
+              api.put("/requests/" + requests.request.id, data).then(
+                function(success) {
+                  reloadRequest(requests.request.id);
+                },
+                function(error) {
+                  reloadRequest(requests.request.id);
+                  console.log("error updating request");
+                }
+              );
+              },
+            function(error) {
+              console.log("Error occured while rating");
+            }
+          );
+        };
+
+        ratingDialog.hide = hideDialog;
       }
 
     }

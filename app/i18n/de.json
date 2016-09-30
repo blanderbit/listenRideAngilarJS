@@ -25,11 +25,29 @@
     "lnr-fee": "listnride Gebühren (inkl. MwSt)",
     "total": "Ingesamt",
     "from": "von",
-    "to": "bis"
+    "to": "bis",
+    "cancel": "Abbrechen",
+    "send": "Senden"
   },
 
   "header": {
 
+  },
+
+  "requests": {
+    "booking-overview": "Buchungsübersicht",
+    "book": "Buchen",
+    "rating": "Bewertung",
+    "ratings": {
+      "description": "Vertrauen und Sicherheit sind für uns das Wichtigste. Mit einer kurzen Bewertung hilfst du der gesamten Community.",
+      "1": "Inakzeptabel",
+      "2": "Schlecht",
+      "3": "Akzeptabel",
+      "4": "Gut",
+      "5": "Exzellent",
+      "rating_text_rider": "Bitte schreib ein paar Sätze über deine Ausleih-Erfahrung. Der Verleiher wird dies auch tun.",
+      "rating_text_lister": "Bitte schreib ein paar Sätze über deine Ausleih-Erfahrung. Der Mieter wird dies auch tun."
+    }
   },
 
   "message": {
@@ -37,7 +55,6 @@
     "reject": "Ablehnen",
     "rate": "Bewerten",
     "confirm": "Bestätigen",
-    "cancel": "Abbrechen",
     "confirm_return": "Rückgabe Bestätigen"
   },
 

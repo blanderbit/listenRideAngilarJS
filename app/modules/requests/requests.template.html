@@ -3,8 +3,9 @@
 
   <!-- Right Column displaying actual Chat -->
   <div flex-gt-sm="65" flex-sm="65" flex-order="2" layout="column" hide-xs>
+    <md-progress-linear ng-if="requests.loadingChat" md-mode="query"></md-progress-linear>
     <div scroll-glue="requests.request.glued" class="chat" flex="85">
-      <message ng-repeat="message in requests.request.messages" content="message.content" sender="message.sender" status="message.status" request="requests.request"></message>
+      <message ng-repeat="message in requests.request.messages" content="message.content" sender="message.sender" status="message.status" request="requests.request" confirm-booking="requests.confirmBooking()" show-rating-dialog="requests.showRatingDialog()"></message>
     </div>
     <form ng-submit="requests.sendMessage()" layout="row" layout-padding>
       <md-input-container class="ap-chat" flex md-no-float>
@@ -16,7 +17,7 @@
 
   <!-- Left Column displaying list of all Requests -->
   <md-content flex class="requests-list" flex-order="1" md-whiteframe="1">
-    <md-progress-linear ng-if="requests.preloading" md-mode="query"></md-progress-linear>
+    <md-progress-linear ng-if="requests.loadingList" md-mode="query"></md-progress-linear>
     <md-list md-no-ink ng-if="requests.requests != []">
           <div ng-repeat="request in requests.requests | orderBy: '-updated_at'">
             <md-list-item class="md-3-line" ng-click="requests.loadRequest(request.id)">
