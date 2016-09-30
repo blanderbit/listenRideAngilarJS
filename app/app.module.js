@@ -6,7 +6,7 @@ angular.module('listnride', [
   'home',
   'search',
   'bikeCard',
-  'profile',
+  'user',
   'bike',
   'requests',
   'message',
