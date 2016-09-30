@@ -126,5 +126,9 @@
   "calendar": {
     "invalid-date": "Datums angabe nicht Korrekt",
     "request-bike": "Rad anfragen"
+  },
+
+  "list": {
+    "list-your-bike": "Rad einstellen"
   }
 }

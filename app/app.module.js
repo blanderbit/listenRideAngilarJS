@@ -10,6 +10,7 @@ angular.module('listnride', [
   'bike',
   'requests',
   'message',
+  'list',
   'autocomplete',
   'ngMaterial',
   'ngMessages',
