@@ -33,7 +33,7 @@ angular.module('list').component('list', {
         return list.form.name !== undefined &&
           list.form.brand !== undefined &&
           list.form.description !== undefined &&
-          list.form.description.length > 80;
+          list.form.description.length >= 100;
       }
 
     }
