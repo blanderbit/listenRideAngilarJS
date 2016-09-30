@@ -14,12 +14,18 @@ angular.module('requests').component('requests', {
       requests.showChat = false;
       requests.$mdMedia = $mdMedia;
       requests.request.glued = false;
+      requests.preloading = true;
 
-      api.get('/users/' + $localStorage.userId + '/requests').then(function(success) {
-        requests.requests = success.data;
-      }, function(error) {
-        console.log("Error fetching request list");
-      });
+      api.get('/users/' + $localStorage.userId + '/requests').then(
+        function(success) {
+          requests.requests = success.data;
+          requests.preloading = false;
+        },
+        function(error) {
+          console.log("Error fetching request list");
+          requests.preloading = false;
+        }
+      );
 
       // Handles initial request loading
       requests.loadRequest = function(requestId) {
@@ -67,31 +73,27 @@ angular.module('requests').component('requests', {
               showBookingDialog();
             } else {
               // User did not enter any payment method yet
-              $mdDialog.show(
-                $mdDialog.alert()
-                .parent(angular.element(document.body))
-                .clickOutsideToClose(false)
-                .title('Complete your Profile')
-                .textContent('In order to rent the bike, please provide your payment details. You can enter them in the next window.')
-                .ok('Enter Payment Details')
-              ).then(
-                function(success) {
-                  var w = 550;
-                  var h = 700;
-                  var left = (screen.width / 2) - (w / 2);
-                  var top = (screen.height / 2) - (h / 2);
-
-                  $window.open("https://listnride-staging.herokuapp.com/v2/users/" + $localStorage.userId + "/payment_methods/new", "popup", "width="+w+",height="+h+",left="+left+",top="+top);
-                },
-                function (error) {
-                  console.log('did not do it');
-                });
+              showPaymentDialog();
             }
           },
           function (error) {
             console.log("Error retrieving User Details");
           }
         );
+      }
+
+      var showPaymentDialog = function() {
+        $mdDialog.show({
+          controller: PaymentDialogController,
+          controllerAs: 'paymentDialog',
+          templateUrl: 'app/modules/requests/paymentDialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: true,
+          fullscreen: false // Only for -xs, -sm breakpoints.
+        });
       }
 
       var showChatDialog = function() {
@@ -105,11 +107,6 @@ angular.module('requests').component('requests', {
           closeTo: angular.element(document.body),
           clickOutsideToClose: false,
           fullscreen: true // Only for -xs, -sm breakpoints.
-        })
-        .then(function(answer) {
-          //
-        }, function() {
-          //
         });
       }
 
@@ -124,11 +121,6 @@ angular.module('requests').component('requests', {
           closeTo: angular.element(document.body),
           clickOutsideToClose: false,
           fullscreen: true // Only for -xs, -sm breakpoints.
-        })
-        .then(function(answer) {
-          //
-        }, function() {
-          //
         });
       };
 
@@ -173,7 +165,6 @@ angular.module('requests').component('requests', {
 
         chatDialog.hide = function() {
           $mdDialog.hide();
-          // showBookingDialog();
         };
       };
 
@@ -189,6 +180,19 @@ angular.module('requests').component('requests', {
           }
         };
       };
+
+      var PaymentDialogController = function() {
+        var paymentDialog = this;
+
+        paymentDialog.openPaymentForm = function() {
+          var w = 550;
+          var h = 700;
+          var left = (screen.width / 2) - (w / 2);
+          var top = (screen.height / 2) - (h / 2);
+
+          $window.open("https://listnride-staging.herokuapp.com/v2/users/" + $localStorage.userId + "/payment_methods/new", "popup", "width="+w+",height="+h+",left="+left+",top="+top);
+        }
+      }
 
     }
   ]

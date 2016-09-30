@@ -16,7 +16,7 @@
 
   <!-- Left Column displaying list of all Requests -->
   <md-content flex class="requests-list" flex-order="1" md-whiteframe="1">
-    <md-progress-linear ng-if="requests.requests == null" md-mode="query"></md-progress-linear>
+    <md-progress-linear ng-if="requests.preloading" md-mode="query"></md-progress-linear>
     <md-list md-no-ink ng-if="requests.requests != []">
           <div ng-repeat="request in requests.requests | orderBy: '-updated_at'">
             <md-list-item class="md-3-line" ng-click="requests.loadRequest(request.id)">
