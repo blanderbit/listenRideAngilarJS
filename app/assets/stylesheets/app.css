@@ -276,3 +276,12 @@ bike-card md-card {
 autocomplete #autocompleteSearch {
   width: 100%;
 }
+
+list md-tabs {
+  padding: 0 !important;
+  width: 100%;
+}
+
+list md-tabs md-input-container {
+  margin: 8px 0;
+}

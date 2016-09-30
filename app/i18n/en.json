@@ -109,5 +109,9 @@
   "calendar": {
     "invalid-date": "Dates are invalid",
     "request-bike": "Request Bike"
+  },
+
+  "list": {
+    "list-your-bike": "List your bike"
   }
 }

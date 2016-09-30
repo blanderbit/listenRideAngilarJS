@@ -16,6 +16,7 @@ angular.module('bike').component('bike', {
 
       api.get('/rides/' + $stateParams.bikeId).then(
         function(response) {
+          console.log(response.data);
           bike.data = response.data;
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
