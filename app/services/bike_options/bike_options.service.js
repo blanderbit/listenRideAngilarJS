@@ -4,6 +4,17 @@ angular.module('listnride').factory('bike_options', [
   function() {
 
     return {
+      accessoryOptions: function() {
+        return [
+          {model: "has_lock", label: "lock"},
+          {model: "has_helmet", label: "helmet"},
+          {model: "has_lights", label: "lights"},
+          {model: "has_basket", label: "basket"},
+          {model: "has_trailer", label: "trailer"},
+          {model: "has_childseat", label: "childseat"}
+        ]
+      },
+
       sizeOptions: function() {
         return [
           {value: 155, label: "155 cm - 165 cm"},
