@@ -298,8 +298,9 @@ listings #myBikes {
 listings #myBikes img {
   flex: 0 0 auto;
   cursor: pointer;
-  width: calc(100% - 16px);
+  width: 100%;
   height: auto;
+  margin: 0;
 }
 
 listings #myBikes md-divider {

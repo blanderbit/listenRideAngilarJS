@@ -132,5 +132,21 @@
 
   "list": {
     "list-your-bike": "List your bike"
+  },
+
+  "listings": {
+    "my-bikes": "My Bikes",
+    "no-bikes": "You haven't listed any of your rides yet."
+  },
+
+  "listingCard": {
+    "activate-bike": "Activate Bike",
+    "deactivate-bike": "Deactivate Bike",
+    "edit-bike": "Edit Bike",
+    "delete-bike": "Delete Bike",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "dialog-title": "Are you sure you want to delete your bike?",
+    "dialog-subtitle": "The bike will get permanently removed from the platform. Current requests are not affected by this."
   }
 }

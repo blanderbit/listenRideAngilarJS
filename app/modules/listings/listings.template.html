@@ -1,9 +1,13 @@
 <md-content class="single-column">
   <div class="content" layout="column" layout-align="center center">
-    <h1>My Bikes</h1>
+    <h1>{{ 'listings.my-bikes' | translate }}</h1>
 
-    <div id="myBikes" layout-xs="column" layout="row" layout-wrap>
-      <listing-card ng-repeat="bike in listings.bikes" flex-xs="100" flex="33"
+    <div ng-if="listings.bikes !== undefined && listings.bikes.length == 0">
+      {{ 'listings.no-bikes' | translate }}
+    </div>
+
+    <div id="myBikes" layout-xs="column" layout="row" layout-wrap layout-align="start center">
+      <listing-card ng-repeat="bike in listings.bikes" flex-gt-xs="33"
         bike-id="bike.id" name="bike.name" brand="bike.brand" price="bike.price_daily"
         image-url=" bike.image_file_1.image_file_1.small.url" available="bike.available"
         remove-bike="listings.removeBike(bikeId)">
