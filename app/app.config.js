@@ -65,6 +65,12 @@ angular.
       template: '<list></list>'
     });
 
+    $stateProvider.state({
+      name: 'listings',
+      url: '/listings',
+      template: '<listings></listings>'
+    });
+
     $translateProvider.useStaticFilesLoader({
       prefix: 'app/i18n/',
       suffix: '.json'

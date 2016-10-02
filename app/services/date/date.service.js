@@ -5,12 +5,11 @@ angular.module('listnride').factory('date', ['$translate',
 
     return {
       duration: function(startDate, endDate) {
-        console.log(startDate, endDate);
-        var startDate = new Date(startDate);
-        var endDate = new Date(endDate);
         if (startDate === undefined || endDate === undefined) {
           return "0 " + $translate.instant("shared.days") + " , 0 " + $translate.instant("shared.hours");
         } else {
+          var startDate = new Date(startDate);
+          var endDate = new Date(endDate);
           var diff = Math.abs(startDate - endDate);
 
           var seconds = (diff / 1000) | 0;

@@ -13,6 +13,8 @@ angular.module('bikeCard').component('bikeCard', {
   controller: [
     function BikeCardController() {
       var bikeCard = this;
+
+      // TODO: bike-card and listing-card
     }
   ]
 });
