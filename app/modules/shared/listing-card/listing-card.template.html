@@ -1,0 +1,28 @@
+<div class="bike-profile md-whiteframe-1dp" ng-class="{unavailable: !listingCard.available}" layout="column" layout-margin>
+  <img flex="100" ui-sref="bike({bikeId: listingCard.bikeId})" ng-src="{{listingCard.imageUrl}}" alt="{{listingCard.brand}} - {{listingCard.name}}">
+
+  <div layout="column">
+    <div class="md-title">{{listingCard.name}}</div>
+    <div class="md-subhead">{{listingCard.brand}}</div>
+  </div>
+
+  <md-divider></md-divider>
+
+  <div class="bike-actions" layout-xs="column" layout="column" layout-align="space-between center">
+    <md-button md-no-ink>
+      Edit Bike
+    </md-button>
+
+    <md-button md-no-ink ng-disabled="listingCard.disableDeactivate" ng-click="listingCard.onDeactivateClick()" ng-if="listingCard.available">
+      Deactivate Bike
+    </md-button>
+
+    <md-button md-no-ink ng-disabled="listingCard.disableActivate" ng-click="listingCard.onActivateClick()" ng-if="!listingCard.available">
+      Activate Bike
+    </md-button>
+
+    <md-button md-no-ink ng-disabled="listingCard.disableDelete" ng-click="listingCard.onDeleteClick()">
+      Delete Bike
+    </md-button>
+  </div>
+</div>
