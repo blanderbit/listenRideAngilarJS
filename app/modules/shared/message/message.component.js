@@ -37,7 +37,7 @@ angular.module('message').component('message', {
       }
 
       message.statusMessage = function() {
-        return message.status != null && message.status != 7;
+        return message.status != null && message.status != 7 && (!message.request.rideChat && message.status != 6);
       }
 
       // Unfortunately doublecoded in message.component and requests.component#bookingDialog
