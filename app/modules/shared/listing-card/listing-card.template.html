@@ -1,9 +1,9 @@
 <div class="bike-profile md-whiteframe-1dp" ng-class="{unavailable: !listingCard.available}" layout="column" layout-margin>
-  <img flex="100" ui-sref="bike({bikeId: listingCard.bikeId})" ng-src="{{listingCard.imageUrl}}" alt="{{listingCard.brand}} - {{listingCard.name}}">
+  <img flex="100" ui-sref="bike({bikeId: listingCard.bikeId})" ng-src="{{ ::listingCard.imageUrl }}" alt="{{listingCard.brand}} - {{listingCard.name}}">
 
   <div layout="column">
-    <div class="md-title">{{listingCard.name}}</div>
-    <div class="md-subhead">{{listingCard.brand}}</div>
+    <div class="md-title">{{ ::listingCard.name }}</div>
+    <div class="md-subhead">{{ ::listingCard.brand }}</div>
   </div>
 
   <md-divider></md-divider>
