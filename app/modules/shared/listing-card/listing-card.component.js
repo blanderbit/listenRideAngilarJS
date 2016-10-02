@@ -50,8 +50,7 @@ angular.module('listingCard').component('listingCard', {
         listingCard.disableDelete = true;
         api.put("/rides/" + listingCard.bikeId, {"ride": {"active": "false"}}).then(
           function(response) {
-            // TODO: uncomment
-            // listingCard.removeBike(bikeId);
+            listingCard.removeBike({'bikeId': listingCard.bikeId});
           },
           function(error) {
             console.log("Error deleting bike", error);

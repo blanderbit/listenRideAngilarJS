@@ -291,7 +291,8 @@ list md-tabs .col1 {
 }
 
 listings #myBikes {
-  min-height: 350px
+  min-height: 350px;
+  width: 100%;
 }
 
 listings #myBikes img {
