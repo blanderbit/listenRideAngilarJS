@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('listnride', [
+  /* internal modules */
 	'header',
   'footer',
   'home',
@@ -12,6 +13,8 @@ angular.module('listnride', [
   'message',
   'list',
   'autocomplete',
+  'listings',
+  /* external modules */
   'ngMaterial',
   'ngMessages',
   'pascalprecht.translate',
