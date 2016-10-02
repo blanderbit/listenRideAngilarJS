@@ -22,7 +22,7 @@
             </div>
 
             <div class="col2" flex="45">
-              Some nice things to say about the categories
+              Information about the categories
             </div>
           </div>
           
@@ -69,7 +69,7 @@
             </div>
 
             <div class="col2" flex="45">
-              Some nice things to say about the bike details
+              Information about the bike details
             </div>
           </div>
           
@@ -90,7 +90,7 @@
             </div>
 
             <div class="col2" flex="45">
-              Some nice things to say about the bike accessories
+              Information about the bike accessories
             </div>
           </div>
           
@@ -105,12 +105,22 @@
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
             <div class="col1" flex="45" layout="column">
-              <input type="file" ngf-select ng-model="list.form.image_file_1" name="file"    
-               accept="image/*" required ngf-model-invalid="errorFile">
+              <md-button ng-disabled="list.form.images.length > 4" ngf-multiple="true"
+                ngf-select="list.addImage($files)" accept=".jpg,.jpeg">
+                Select image
+              </md-button>
+
+              <div class="preview-container" layout="row" layout-wrap>
+                <div ng-repeat="img in list.form.images" flex="50">
+                  <div class="img-preview" ngf-background="img" ngf-as-background="true" layout-margin>
+                  </div>
+                </div>
+              </div>
+              
             </div>
 
             <div class="col2" flex="45">
-              Some nice things to say about the bike pictures
+              Information about the bike pictures
             </div>
           </div>
           
@@ -147,7 +157,7 @@
             </div>
 
             <div class="col2" flex="45">
-              Some nice things to say about the bike location
+              Information about the bike location
             </div>
           </div>
           
@@ -179,7 +189,7 @@
             </div>
 
             <div class="col2" flex="45">
-              Some nice things to say about the bike pricing
+              Information about the bike pricing
             </div>
           </div>
           

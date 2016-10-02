@@ -7,9 +7,11 @@ angular.module('list').component('list', {
     function ListController($localStorage, $state, Upload, bike_options, api) {
       var list = this;
 
-      list.form = {};
+      list.form = {
+        images: []
+      };
 
-      list.selectedIndex = 0;
+      list.selectedIndex = 3;
       list.sizeOptions = bike_options.sizeOptions();
       list.kidsSizeOptions = bike_options.kidsSizeOptions();
       list.categoryOptions = bike_options.categoryOptions();
@@ -37,11 +39,11 @@ angular.module('list').component('list', {
           "ride[price_half_daily]": list.form.price_half_daily,
           "ride[price_daily]": list.form.price_daily,
           "ride[price_weekly]": list.form.price_weekly,
-          "ride[image_file_1]": list.form.image_file_1,
-          "ride[image_file_2]": list.form.image_file_2,
-          "ride[image_file_3]": list.form.image_file_3,
-          "ride[image_file_4]": list.form.image_file_4,
-          "ride[image_file_5]": list.form.image_file_5
+          "ride[image_file_1]": list.form.images[1],
+          "ride[image_file_2]": list.form.images[2],
+          "ride[image_file_3]": list.form.images[3],
+          "ride[image_file_4]": list.form.images[4],
+          "ride[image_file_5]": list.form.images[5]
         };
 
         Upload.upload({
@@ -71,6 +73,18 @@ angular.module('list').component('list', {
         console.log(list.form);
       }
 
+      list.addImage = function(files) {
+        if (files && files.length) {
+          var count = 0
+          for (var i = 0; i < files.length && count < 5; ++i) {
+            if (files[i] != null) {
+              list.form.images.push(files[i]);
+              count++;
+            }
+          }
+        }
+      };
+
       list.isCategoryValid = function() {
         return list.form.mainCategory !== undefined &&
           list.form.subCategory !== undefined;
@@ -84,7 +98,7 @@ angular.module('list').component('list', {
       };
 
       list.isPictureValid = function() {
-        return list.form.image_file_1 !== undefined;
+        return list.form.images.length > 0;
       };
 
       list.isLocationValid = function() {
