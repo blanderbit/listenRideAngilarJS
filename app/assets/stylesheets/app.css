@@ -289,3 +289,31 @@ list md-tabs md-input-container {
 list md-tabs .col1 {
   min-height: 370px;
 }
+
+listings #myBikes {
+  min-height: 350px
+}
+
+listings #myBikes img {
+  flex: 0 0 auto;
+  cursor: pointer;
+  width: calc(100% - 16px);
+  height: auto;
+}
+
+listings #myBikes md-divider {
+  margin: 0px 8px !important;
+}
+
+listings #myBikes .bike-actions .md-button {
+  min-height: 25px;
+  line-height: 25px;
+}
+
+listings #myBikes .bike-profile {
+  background-color: white;
+}
+
+listings #myBikes .bike-profile.unavailable {
+  background-color: rgb(245,245,245);
+}

@@ -1,1 +1,30 @@
-hi
+<md-content class="single-column">
+  <div class="content" layout="column" layout-align="center center">
+    <h1>My Bikes</h1>
+
+    <!-- TODO: Make the bike elemnt a component of its own -->
+    <div id="myBikes" layout-xs="column" layout="row" layout-align="space-between center" layout-wrap>
+      <div ng-repeat="bike in listings.bikes" flex-xs="100" flex="33">
+        <div class="bike-profile md-whiteframe-1dp" ng-class="{unavailable: !bike.available}" layout="column" layout-margin>
+          <img flex="100" ng-src="{{bike.image_file_1.image_file_1.small.url}}" alt="{{bike.brand}} - {{bike.name}}">
+
+          <div layout="column">
+            <div class="md-title">{{bike.name}}</div>
+            <div class="md-subhead">{{bike.brand}}</div>
+          </div>
+
+          <md-divider></md-divider>
+
+          <div class="bike-actions" layout-xs="column" layout="column" layout-align="space-between center">
+            <md-button md-no-ink>Edit Bike</md-button>
+            <md-button md-no-ink ng-disabled="bike.disableDeactivate" ng-click="listings.onDeactivateClick(bike)" ng-if="bike.available">Deactivate Bike</md-button>
+            <md-button md-no-ink ng-disabled="bike.disableActivate" ng-click="listings.onActivateClick(bike)" ng-if="!bike.available">Activate Bike</md-button>
+            <md-button md-no-ink ng-disabled="bike.disableDelete" ng-click="listings.onDeleteClick(bike)">Delete Bike</md-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer></footer>
+<md-content>
