@@ -12,15 +12,11 @@ angular.
         }, 5000);
 
         verificationDialog.selectedIndex;
-        verificationDialog.activeTab;
+        verificationDialog.activeTab = 1;
         $state.current.name == "home" ? verificationDialog.firstTime = true : verificationDialog.firstTime = false;
         // Fires if scope gets destroyed and cancels poller
         verificationDialog.$onDestroy = function() {
           $interval.cancel(poller);
-        };
-
-        verificationDialog.next = function() {
-          verificationDialog.selectedIndex += 1;
         };
 
         var reloadUser = function() {
@@ -28,10 +24,10 @@ angular.
             function (success) {
               if (verificationDialog.newUser == null) {
                 verificationDialog.newUser = success.data;
+                console.log(success.data);
               }
               verificationDialog.user = success.data;
-              console.log(verificationDialog.user);
-              console.log(verificationDialog.oldUser);
+              console.log(verificationDialog.newUser.description);
             },
             function (error) {
               console.log("Error fetching User Details");
@@ -41,7 +37,7 @@ angular.
 
         reloadUser();
 
-        verificationDialog.uploadDescription = function() {
+        var uploadDescription = function() {
           var data = {
             "user": {
               "description": verificationDialog.newUser.description
@@ -56,6 +52,30 @@ angular.
             }
           );
         };
+
+        var uploadAddress = function() {
+          var data = {
+            "user": {
+              "street": verificationDialog.newUser.street, 
+              "zip": verificationDialog.newUser.zip,
+              "city": verificationDialog.newUser.city,
+              "country": verificationDialog.newUser.country
+            }
+          };
+          api.put('/users/' + $localStorage.userId, data).then(
+            function (success) {
+              $mdToast.show(
+                $mdToast.simple()
+                .textContent('Address was successfully entered')
+                .hideDelay(4000)
+                .position('top center')
+              );
+            },
+            function (error) {
+
+            }
+          );
+        }
 
         verificationDialog.resendEmail = function() {
           api.post('/users/' + $localStorage.userId + '/resend_confirmation_mail').then(
@@ -110,6 +130,45 @@ angular.
               console.log("Could not verify phone number");
             }
           );
+        };
+
+        verificationDialog.uploadAddress = function() {
+          var data = {
+            "user": {
+              "street": verificationDialog.newUser.street,
+              "zip": verificationDialog.newUser.zip,
+              "city": verificationDialog.newUser.city,
+              "country": verificationDialog.newUser.country
+            }
+          };
+          api.put('/users/' + $localStorage.userId, data).then(
+            function (success) {
+              $mdToast.show(
+                $mdToast.simple()
+                .textContent('You\'ve successfully verified your profile, thank you!')
+                .hideDelay(5000)
+                .position('top center')
+              );
+            },
+            function (error) {
+              console.log("error updating address");
+            }
+          );
+        };
+
+        verificationDialog.next = function() {
+          switch (verificationDialog.activeTab) {
+            case 1: verificationDialog.selectedIndex += 1; break;
+            case 2: uploadDescription(); verificationDialog.selectedIndex += 1; break;
+            case 5: uploadAddress(); $mdDialog.hide();
+          }
+        };
+
+        verificationDialog.nextDisabled = function() {
+          switch (verificationDialog.activeTab) {
+            case 1: return false;
+            case 2: return !verificationDialog.descriptionForm.$valid;
+          }
         };
 
         verificationDialog.hide = function() {

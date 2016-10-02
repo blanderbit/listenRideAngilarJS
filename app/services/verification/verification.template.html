@@ -15,7 +15,7 @@
 
   <md-dialog-content>
     <div class="md-dialog-content" layout="column">
-      <p class="md-headline center-text">Verify your Profile {{verificationDialog.activeTab}}</p>
+      <p class="md-headline center-text">Verify your Profile</p>
       <md-tabs class="content" md-dynamic-height md-no-ink md-no-ink-bar md-stretch-tabs="always" md-selected="verificationDialog.selectedIndex">
 
         <md-tab label="Info" layout="row">
@@ -27,14 +27,14 @@
           </div> 
         </md-tab>
 
-        <md-tab label="Description" layout="row" md-on-select="verificationDialog.activeTab = 2">
+        <md-tab label="Description" layout="row" ng-if="verificationDialog.newUser.description.length < 100" md-on-select="verificationDialog.activeTab = 2">
             <div class="tab-content" layout="column" layout-padding>
               <p class="md-body-1 center-text">Please write a few words about yourself and your relation to biking.</p>
               <md-input-container flex>
-                <form name="descriptionForm">
+                <form name="verificationDialog.descriptionForm">
                   <label>Description</label>
-                  <textarea required md-no-resize minlength="100" name="description" placeholder="Hey, my name is..." ng-model="verification.newUser.description" rows="3"></textarea>
-                  <div ng-messages="descriptionForm.description.$error" role="alert">
+                  <textarea required md-no-resize name="description" minlength="100" ng-model="verificationDialog.newUser.description" rows="3"></textarea>
+                  <div ng-messages="verificationDialog.descriptionForm.description.$error" role="alert">
                     <div ng-message="minlength">Description should be at least 100 characters</div>
                   </div>
                 </form>
@@ -42,7 +42,7 @@
             </div>
         </md-tab>
   
-        <md-tab label="Email" layout="row" ng-disabled="!verificationDialog.newUser.status == 0" md-on-select="verificationDialog.activeTab = 3">
+        <md-tab label="Email" layout="row" ng-if="verificationDialog.newUser.status == 0" md-on-select="verificationDialog.activeTab = 3">
           <p class="md-body-1 center-text">Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder.</p>
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
             <md-input-container flex>
@@ -56,7 +56,7 @@
           <p class="md-body-1 center-text" ng-if="verificationDialog.user.status > 0">You've successfully validated your email!</p>
         </md-tab>
 
-        <md-tab label="Phone" layout="row" ng-disabled="verificationDialog.newUser.confirmed_phone" md-on-select="verificationDialog.activeTab = 4">
+        <md-tab label="Phone" layout="row" ng-if="!verificationDialog.newUser.confirmed_phone" md-on-select="verificationDialog.activeTab = 4">
           <p class="md-body-1 center-text">Verify your phone number, this allows SMS notifications for your requests. Simply enter your number and click "Send Confirmation". You'll receive a code via SMS that you can then enter below</p>
           <div class="tab-content" layout="column" layout-align="space-between start" layout-padding>
             <div flex layout="row" layout-fill layout-align="space-between start">
@@ -86,6 +86,40 @@
 
         <md-tab label="Address" layout="row" md-on-select="verificationDialog.activeTab = 5">
           <p class="md-body-1 center-text">Ultimately, enter your home address.</p>
+          <div class="tab-content" layout="column" layout-padding>
+            <form name="verificationDialog.addressForm">
+              <md-input-container flex>
+                <label>Street</label>
+                <input required name="street" ng-model="verificationDialog.newUser.street"></input>
+                <div ng-messages="verificationDialog.addressForm.street.$error" role="alert">
+                  <div ng-message="required">This is required.</div>
+                </div>
+              </md-input-container>
+              <div layout="row">
+                <md-input-container flex>
+                  <label>Zip</label>
+                  <input required name="zip" ng-model="verificationDialog.newUser.zip"></input>
+                  <div ng-messages="verificationDialog.addressForm.zip.$error" role="alert">
+                    <div ng-message="required">This is required.</div>
+                  </div>
+                </md-input-container>
+                <md-input-container flex>
+                  <label>City</label>
+                  <input required name="city" ng-model="verificationDialog.newUser.city"></input>
+                  <div ng-messages="verificationDialog.addressForm.city.$error" role="alert">
+                    <div ng-message="required">This is required.</div>
+                  </div>
+                </md-input-container>
+              </div>
+              <md-input-container flex>
+                    <label>Country</label>
+                    <input required name="country" ng-model="verificationDialog.newUser.country"></input>
+                    <div ng-messages="verificationDialog.addressForm.country.$error" role="alert">
+                      <div ng-message="required">This is required.</div>
+                    </div>
+              </md-input-container>
+            </form>
+          </div>
         </md-tab>
 
       </md-tabs>

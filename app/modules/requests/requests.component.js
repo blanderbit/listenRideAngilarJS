@@ -18,6 +18,7 @@ angular.module('requests').component('requests', {
       requests.loadingChat = false;
       requests.request.rideChat;
       requests.request.chatFlow;
+      requests.userId = $localStorage.userId;
 
       api.get('/users/' + $localStorage.userId + '/requests').then(
         function(success) {
@@ -58,6 +59,14 @@ angular.module('requests').component('requests', {
           showChatDialog();
         } else {
           requests.showChat = true;
+        }
+      };
+
+      requests.profilePicture = function(request) {
+        if ($localStorage.userId == request.user.id) {
+          return request.ride.image_file_1.thumb.url;
+        } else {
+          return request.user.profile_picture.url;
         }
       };
 
@@ -187,10 +196,10 @@ angular.module('requests').component('requests', {
         var chatDialog = this;
         chatDialog.requests = requests;
 
-        $timeout(function() {
-          $location.hash('end');
-          $anchorScroll();
-        }, 2000);
+        // $timeout(function() {
+        //   $location.hash('end');
+        //   $anchorScroll();
+        // }, 2000);
 
         chatDialog.hide = function() {
           $mdDialog.hide();

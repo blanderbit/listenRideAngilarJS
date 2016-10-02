@@ -14,7 +14,6 @@ angular.module('bike').component('calendar', {
     function CalendarController($scope, $localStorage, $state, date, api, verification) {
       var calendar = this;
 
-      verification.openDialog();
       initOverview();
 
       $scope.$watch('calendar.requests', function() {
@@ -54,28 +53,33 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.onBikeRequest = function() {
-        // api.get('/users/' + $localStorage.userId).then(
-        //   function (success) {
-        //     verification.openDialog();
-        //   },
-        //   function (error) {
+        api.get('/users/' + $localStorage.userId).then(
+          function (success) {
+            var user = success.data;
+            if (user.has_address && user.confirmed_phone && user.status >= 1) {
+              var data = {
+                user_id: $localStorage.userId,
+                ride_id: calendar.bikeId,
+                start_date: calendar.startDate.toISOString(),
+                end_date: calendar.endDate.toISOString()
+              };
 
-        //   }
-        // );
-        var data = {
-          user_id: $localStorage.userId,
-          ride_id: calendar.bikeId,
-          start_date: calendar.startDate.toISOString(),
-          end_date: calendar.endDate.toISOString()
-        };
-
-        api.post('/requests', data).then(
-          function(response) {
-            $state.go('requests');
-            console.log("Success", response);
+              api.post('/requests', data).then(
+                function(response) {
+                  $state.go('requests');
+                  console.log("Success", response);
+                },
+                function(error) {
+                  console.log("Error posting request", error);
+                }
+              );
+            }
+            else {
+              verification.openDialog();
+            }
           },
-          function(error) {
-            console.log("Error posting request", error);
+          function (error) {
+
           }
         );
       };
