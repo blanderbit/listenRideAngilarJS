@@ -12,9 +12,24 @@ angular.module('listingCard').component('listingCard', {
     available: '<',
     removeBike: '&'
   },
-  controller: [ '$state', 'api',
-    function ListingCardController($state, api) {
+  controller: [ '$state', '$mdDialog', '$translate', 'api',
+    function ListingCardController($state, $mdDialog, $translate, api) {
       var listingCard = this;
+
+      listingCard.onDeleteClick = function(ev) {
+        var confirm = $mdDialog.confirm()
+              .title($translate.instant("listingCard.dialog-title"))
+              .textContent($translate.instant("listingCard.dialog-subtitle"))
+              .targetEvent(ev)
+              .ok($translate.instant("listingCard.delete"))
+              .cancel($translate.instant("listingCard.cancel"));
+
+        $mdDialog.show(confirm).then(function() {
+          deleteBike();
+        }, function() {
+          
+        });
+      };
 
       listingCard.onActivateClick = function() {
         listingCard.disableActivate = true;
@@ -44,7 +59,7 @@ angular.module('listingCard').component('listingCard', {
         );
       };
 
-      listingCard.onDeleteClick = function() {
+      function deleteBike() {
         listingCard.disableDelete = true;
         api.put("/rides/" + listingCard.bikeId, {"ride": {"active": "false"}}).then(
           function(response) {

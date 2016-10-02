@@ -140,6 +140,10 @@
     "activate-bike": "Rad aktivieren",
     "deactivate-bike": "Rad deactivieren",
     "edit-bike": "Rad bearbeiten",
-    "delete-bike": "Rad löschen"
+    "delete-bike": "Rad löschen",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "dialog-title": "Möchtest du wirklich dein Fahrrad löschen?",
+    "dialog-subtitle": "Es wird unwiderruflich von der Plattform entfernt, aktive Anfragen sind davon nicht betroffen."
   }
 }
