@@ -3,32 +3,52 @@
 angular.module('list').component('list', {
   templateUrl: 'app/modules/list/list.template.html',
   controllerAs: 'list',
-  controller: ['$localStorage', 'Upload', 'bike_options', 'api',
-    function ListController($localStorage, Upload, bike_options, api) {
+  controller: ['$localStorage', '$state', 'Upload', 'bike_options', 'api',
+    function ListController($localStorage, $state, Upload, bike_options, api) {
       var list = this;
 
       list.form = {};
 
       list.selectedIndex = 0;
       list.sizeOptions = bike_options.sizeOptions();
+      list.kidsSizeOptions = bike_options.kidsSizeOptions();
       list.categoryOptions = bike_options.categoryOptions();
       list.subcategoryOptions = bike_options.subcategoryOptions();
       list.accessoryOptions = bike_options.accessoryOptions();
 
       list.onFormSubmit = function() {
-        var form = { ride: {} };
-        form.ride = list.form;
-        form.ride.category = list.form.mainCategory.concat(list.form.subCategory);
-        delete form.ride.mainCategory;
-        delete form.ride.subCategory;
-        console.log(form);
+        var ride = {
+          "ride[name]": list.form.name,
+          "ride[brand]": list.form.brand,
+          "ride[description]": list.form.description,
+          "ride[size]": list.form.size,
+          "ride[category]": list.form.mainCategory.concat(list.form.subCategory),
+          "ride[has_lock]": list.form.has_lock || false,
+          "ride[has_helmet]": list.form.has_helmet || false,
+          "ride[has_lights]": list.form.has_lights || false,
+          "ride[has_basket]": list.form.has_basket || false,
+          "ride[has_trailer]": list.form.has_trailer || false,
+          "ride[has_childseat]": list.form.has_childseat || false,
+          "ride[user_id]": $localStorage.userId,
+          "ride[street]": list.form.street,
+          "ride[city]": list.form.city,
+          "ride[zip]": list.form.zip,
+          "ride[country]": list.form.country,
+          "ride[price_half_daily]": list.form.price_half_daily,
+          "ride[price_daily]": list.form.price_daily,
+          "ride[price_weekly]": list.form.price_weekly,
+          "ride[image_file_1]": list.form.image_file_1,
+          "ride[image_file_2]": list.form.image_file_2,
+          "ride[image_file_3]": list.form.image_file_3,
+          "ride[image_file_4]": list.form.image_file_4,
+          "ride[image_file_5]": list.form.image_file_5
+        };
 
         Upload.upload({
           method: 'POST',
           url: api.getApiUrl() + '/rides',
-          data: form,
+          data: ride,
           headers: {
-            'Content-Type': 'application/json',
             'Authorization': $localStorage.auth
           }
         }).then(
