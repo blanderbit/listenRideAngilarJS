@@ -15,7 +15,6 @@ angular.module('listingCard').component('listingCard', {
   controller: [ '$state', 'api',
     function ListingCardController($state, api) {
       var listingCard = this;
-      // TODO: bike-card and listing-card
 
       listingCard.onActivateClick = function() {
         listingCard.disableActivate = true;
@@ -46,7 +45,6 @@ angular.module('listingCard').component('listingCard', {
       };
 
       listingCard.onDeleteClick = function() {
-        // TODO: display modal before deleting bike
         listingCard.disableDelete = true;
         api.put("/rides/" + listingCard.bikeId, {"ride": {"active": "false"}}).then(
           function(response) {
