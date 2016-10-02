@@ -71,5 +71,5 @@ angular.
     });
 
     $translateProvider.preferredLanguage('en');
-
+    $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
   });
