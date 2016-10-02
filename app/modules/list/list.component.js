@@ -28,7 +28,6 @@ angular.module('list').component('list', {
           url: api.getApiUrl() + '/rides',
           data: form,
           headers: {
-            'Content-Type': 'application/json',
             'Authorization': $localStorage.auth
           }
         }).then(

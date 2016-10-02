@@ -2,11 +2,116 @@
 
 angular.
   module('listnride').
-  factory('verification', ['$mdDialog', '$mdToast',
-    function($mdDialog, $mdToast) {
+  factory('verification', ['$mdDialog', '$mdToast', '$interval', '$localStorage', '$state', 'api',
+    function($mdDialog, $mdToast, $interval, $localStorage, $state, api) {
 
       var VerificationDialogController = function() {
         var verificationDialog = this;
+        var poller = $interval(function() {
+          reloadUser();
+        }, 5000);
+
+        verificationDialog.selectedIndex;
+        verificationDialog.activeTab;
+        $state.current.name == "home" ? verificationDialog.firstTime = true : verificationDialog.firstTime = false;
+        // Fires if scope gets destroyed and cancels poller
+        verificationDialog.$onDestroy = function() {
+          $interval.cancel(poller);
+        };
+
+        verificationDialog.next = function() {
+          verificationDialog.selectedIndex += 1;
+        };
+
+        var reloadUser = function() {
+          api.get('/users/' + $localStorage.userId).then(
+            function (success) {
+              if (verificationDialog.newUser == null) {
+                verificationDialog.newUser = success.data;
+              }
+              verificationDialog.user = success.data;
+              console.log(verificationDialog.user);
+              console.log(verificationDialog.oldUser);
+            },
+            function (error) {
+              console.log("Error fetching User Details");
+            }
+          );
+        };
+
+        reloadUser();
+
+        verificationDialog.uploadDescription = function() {
+          var data = {
+            "user": {
+              "description": verificationDialog.newUser.description
+            }
+          };
+          api.put('/users/' + $localStorage.userId, data).then(
+            function (success) {
+              console.log("Successfully updated description");
+            },
+            function (error) {
+              console.log("Error updating description");
+            }
+          );
+        };
+
+        verificationDialog.resendEmail = function() {
+          api.post('/users/' + $localStorage.userId + '/resend_confirmation_mail').then(
+            function (success) {
+              $mdToast.show(
+                $mdToast.simple()
+                .textContent('Verification email was sent to your email address')
+                .hideDelay(4000)
+                .position('top center')
+              );
+            },
+            function (error) {
+              
+            }
+          );
+        };
+
+        verificationDialog.sendSms = function() {
+          var data = {
+            "phone_number": verificationDialog.newUser.phone_number
+          };
+          api.post('/users/' + $localStorage.userId + '/update_phone', data).then(
+            function (success) {
+              console.log("Successfully updated phone number");
+              $mdToast.show(
+                $mdToast.simple()
+                .textContent('An SMS with a confirmation code was sent to you right now.')
+                .hideDelay(4000)
+                .position('top center')
+              );
+            },
+            function (error) {
+              console.log("error updating phone number");
+            }
+          );
+        };
+
+        verificationDialog.confirmPhone = function() {
+          var data = {
+            "confirmation_code": verificationDialog.newUser.confirmation_code
+          };
+          api.post('/users/' + $localStorage.userId + '/confirm_phone', data).then(
+            function (success) {
+              $mdToast.show(
+                $mdToast.simple()
+                .textContent('Successfully verified phone number.')
+                .hideDelay(4000)
+                .position('top center')
+              );
+            },
+            function (error) {
+              console.log("Could not verify phone number");
+            }
+          );
+        };
+
         verificationDialog.hide = function() {
           $mdDialog.hide();
         };
