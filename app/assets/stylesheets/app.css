@@ -285,3 +285,7 @@ list md-tabs {
 list md-tabs md-input-container {
   margin: 8px 0;
 }
+
+list md-tabs .col1 {
+  min-height: 370px;
+}

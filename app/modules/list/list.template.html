@@ -2,6 +2,7 @@
   <form name="listBike" layout="column" layout-align="start center" layout-padding>
     <h1>{{ 'list.list-your-bike' | translate }}</h1>
 
+    <!-- TODO: set ng-disabled="true" on all tabs -->
     <md-tabs class="content" md-dynamic-height md-no-ink md-no-ink-bar md-selected="list.selectedIndex" md-stretch-tabs="always">
       <md-tab class="categories" label="Category" layout="row">
         <md-content class="md-padding" layout="column">
@@ -56,7 +57,7 @@
 
               <md-input-container>
                 <label>Description</label>
-                <textarea required md-no-resize minlength="100" name="description" ng-model="list.form.description" rows="5"></textarea>
+                <textarea required md-no-resize minlength="100" name="description" ng-model="list.form.description" rows="4"></textarea>
                 <div ng-messages="listBike.description.$error" role="alert">
                   <div ng-message="minlength">Length should be atleast 100 characters</div>
                 </div>
@@ -75,11 +76,33 @@
         </md-content>
       </md-tab>
 
+      <md-tab class="accessories" label="Accessories" layout="row">
+        <md-content class="md-padding" layout="column">
+          <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
+            <div class="col1" flex="45" layout="column">
+              <md-checkbox ng-repeat="acc in list.accessoryOptions" ng-model="list.form[acc.model]">
+                {{ acc.label }}
+              </md-checkbox>
+            </div>
+
+            <div class="col2" flex="45">
+              Some nice things to say about the bike accessories
+            </div>
+          </div>
+          
+          <div class="navigation" layout="row" layout-align="space-between center">
+            <md-button class="md-raised" ng-click="list.previousTab()">Back</md-button>
+            <md-button class="md-raised" ng-click="list.nextTab()">Next</md-button>
+          </div>
+        </md-content>
+      </md-tab>
+
       <md-tab class="pictures" label="Pictures" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
             <div class="col1" flex="45" layout="column">
-              FILE UPLOAD
+              <input type="file" ngf-select ng-model="list.form.image_file_1" name="file"    
+               accept="image/*" required ngf-model-invalid="errorFile">
             </div>
 
             <div class="col2" flex="45">
@@ -89,22 +112,77 @@
           
           <div class="navigation" layout="row" layout-align="space-between center">
             <md-button class="md-raised" ng-click="list.previousTab()">Back</md-button>
-            <md-button class="md-raised" ng-disabled="!list.isDetailsValid()" ng-click="list.nextTab()">Next</md-button>
+            <md-button class="md-raised" ng-disabled="!list.isPictureValid()" ng-click="list.nextTab()">Next</md-button>
           </div>
         </md-content>
       </md-tab>
 
-      <md-tab label="Location">
-        <md-content class="md-padding">
-          <h1 class="md-display-2">Location</h1>
-          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+      <md-tab class="location" label="Location" layout="row">
+        <md-content class="md-padding" layout="column">
+          <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
+            <div class="col1" flex="45" layout="column">
+              <md-input-container>
+                <label>Street and Number</label>
+                <input required ng-model="list.form.street">
+              </md-input-container>
+
+              <md-input-container>
+                <label>Zip</label>
+                <input required ng-model="list.form.zip">
+              </md-input-container>
+
+              <md-input-container>
+                <label>City</label>
+                <input required ng-model="list.form.city">
+              </md-input-container>
+
+              <md-input-container>
+                <label>Country</label>
+                <input required ng-model="list.form.country">
+              </md-input-container>
+            </div>
+
+            <div class="col2" flex="45">
+              Some nice things to say about the bike location
+            </div>
+          </div>
+          
+          <div class="navigation" layout="row" layout-align="space-between center">
+            <md-button class="md-raised" ng-click="list.previousTab()">Back</md-button>
+            <md-button class="md-raised" ng-disabled="!list.isLocationValid()" ng-click="list.nextTab()">Next</md-button>
+          </div>
         </md-content>
       </md-tab>
 
-      <md-tab label="Pricing">
-        <md-content class="md-padding">
-          <h1 class="md-display-2">Pricing</h1>
-          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+      <md-tab class="pricing" label="Pricing" layout="row">
+        <md-content class="md-padding" layout="column">
+          <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
+            <div class="col1" flex="45" layout="column">
+              <md-input-container>
+                <label>Half-daily Price (€)</label>
+                <input type="number" required ng-model="list.form.price_half_daily">
+              </md-input-container>
+
+              <md-input-container>
+                <label>Daily Price (€)</label>
+                <input type="number" required ng-model="list.form.price_daily">
+              </md-input-container>
+
+              <md-input-container>
+                <label>Weekly Price (€)</label>
+                <input type="number" required ng-model="list.form.price_weekly">
+              </md-input-container>
+            </div>
+
+            <div class="col2" flex="45">
+              Some nice things to say about the bike pricing
+            </div>
+          </div>
+          
+          <div class="navigation" layout="row" layout-align="space-between center">
+            <md-button class="md-raised" ng-click="list.previousTab()">Back</md-button>
+            <md-button class="md-raised" ng-disabled="!list.isPricingValid()" ng-click="list.onFormSubmit()">Submit</md-button>
+          </div>
         </md-content>
       </md-tab>
     </md-tabs>

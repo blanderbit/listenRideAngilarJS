@@ -20,4 +20,6 @@ angular.module('listnride', [
   'ezfb',
   'ngMap',
   'luegg.directives',
+  'ngFileUpload',
+  'ngSanitize'
 ]);

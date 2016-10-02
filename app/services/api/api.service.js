@@ -37,6 +37,9 @@ angular.
               'Authorization': $localStorage.auth
             }
           });
+        },
+        getApiUrl: function() {
+          return apiUrl;
         }
       }
     }
