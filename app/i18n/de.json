@@ -130,5 +130,16 @@
 
   "list": {
     "list-your-bike": "Rad einstellen"
+  },
+
+  "listings": {
+    "my-bikes": "Meine Räder"
+  },
+
+  "listingCard": {
+    "activate-bike": "Rad aktivieren",
+    "deactivate-bike": "Rad deactivieren",
+    "edit-bike": "Rad bearbeiten",
+    "delete-bike": "Rad löschen"
   }
 }

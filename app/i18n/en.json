@@ -130,5 +130,16 @@
 
   "list": {
     "list-your-bike": "List your bike"
+  },
+
+  "listings": {
+    "my-bikes": "My Bikes"
+  },
+
+  "listingCard": {
+    "activate-bike": "Activate Bike",
+    "deactivate-bike": "Deactivate Bike",
+    "edit-bike": "Edit Bike",
+    "delete-bike": "Delete Bike"
   }
 }
