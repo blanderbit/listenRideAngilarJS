@@ -16,17 +16,6 @@ angular.module('message').component('message', {
   controller: [ '$translate', '$localStorage', 'api',
     function MessageController($translate, $localStorage, api) {
       var message = this;
- 
-      message.chatFlow = function() {
-        if (message.request.rideChat) {
-          return "rideChat";
-        }
-        else {
-          return "listChat";
-        }
-      };
-
-      console.log(message.chatFlow());
 
       message.sentMessage = function() {
         return message.status == null && $localStorage.userId == message.sender;
@@ -37,7 +26,12 @@ angular.module('message').component('message', {
       }
 
       message.statusMessage = function() {
-        return message.status != null && message.status != 7 && (!message.request.rideChat && message.status != 6);
+        if (message.request.rideChat) {
+          return message.status != null && message.status != 7
+        } else {
+          return message.status != null && message.status != 7 && message.status != 6;
+        }
+        // return message.status != null && message.status != 7 && (!message.request.rideChat && message.status != 6);
       }
 
       // Unfortunately doublecoded in message.component and requests.component#bookingDialog

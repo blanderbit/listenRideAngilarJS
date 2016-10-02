@@ -17,6 +17,7 @@ angular.module('requests').component('requests', {
       requests.loadingList = true;
       requests.loadingChat = false;
       requests.request.rideChat;
+      requests.request.chatFlow;
 
       api.get('/users/' + $localStorage.userId + '/requests').then(
         function(success) {
@@ -69,6 +70,7 @@ angular.module('requests').component('requests', {
               requests.request.glued = true;
               requests.request = success.data;
               requests.request.rideChat = $localStorage.userId == requests.request.user.id;
+              requests.request.rideChat? requests.request.chatFlow = "rideChat" : requests.request.chatFlow = "listChat";
               requests.loadingChat = false;
             }
           },
@@ -80,7 +82,6 @@ angular.module('requests').component('requests', {
 
       // This function handles booking and all necessary validations
       requests.confirmBooking = function() {
-        console.log("test");
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             if (success.data.current_payment_method) {

@@ -53,22 +53,30 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.onBikeRequest = function() {
-        var data = {
-          user_id: $localStorage.userId,
-          ride_id: calendar.bikeId,
-          start_date: calendar.startDate.toISOString(),
-          end_date: calendar.endDate.toISOString()
-        };
-
-        api.post('/requests', data).then(
-          function(response) {
-            $state.go('requests');
-            console.log("Success", response);
+        api.get('/users/' + $localStorage.userId).then(
+          function (success) {
+            console.log(success.data);
           },
-          function(error) {
-            console.log("Error posting request", error);
+          function (error) {
+
           }
         );
+        // var data = {
+        //   user_id: $localStorage.userId,
+        //   ride_id: calendar.bikeId,
+        //   start_date: calendar.startDate.toISOString(),
+        //   end_date: calendar.endDate.toISOString()
+        // };
+
+        // api.post('/requests', data).then(
+        //   function(response) {
+        //     $state.go('requests');
+        //     console.log("Success", response);
+        //   },
+        //   function(error) {
+        //     console.log("Error posting request", error);
+        //   }
+        // );
       };
 
       calendar.isFormInvalid = function() {

@@ -38,6 +38,8 @@
     "booking-overview": "Buchungsübersicht",
     "book": "Buchen",
     "rating": "Bewertung",
+    "listChat": "Anfrage von",
+    "rideChat": "Anfrage an",
     "ratings": {
       "description": "Vertrauen und Sicherheit sind für uns das Wichtigste. Mit einer kurzen Bewertung hilfst du der gesamten Community.",
       "1": "Inakzeptabel",
@@ -69,10 +71,10 @@
   },
 
   "rideChat": {
-    "1": "Du würdest gerne das %1$s von %2$s von %3$s für %4$s Tage mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, kannst du das Rad buchen.",
-    "2": "%1$s hat Deine Anfrage angenommen. Bestätige die Buchung, die Zahlung erfolgt erst im nächsten Schritt.",
-    "3": "Glückwunsch, Du hast das Rad erfolgreich gebucht und kannst dich zum vereinbarten Zeitpunkt mit dem Verleiher treffen um es abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via Email zugesendet.\n \nName: %1$s \nEmail address: %2$s",
-    "4": "%1$s hat die Rückgabe des Rades bestätigt.",
+    "1": "Du würdest gerne das {{lister.first_name}} {{lister.last_name}}'s {{ride.name}} von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, kannst du das Rad buchen.",
+    "2": "{{lister.first_name}} hat Deine Anfrage angenommen. Bestätige die Buchung, die Zahlung erfolgt erst im nächsten Schritt.",
+    "3": "Glückwunsch, Du hast das Rad erfolgreich gebucht und kannst dich zum vereinbarten Zeitpunkt mit dem Verleiher treffen um es abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via Email zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Email address: {{lister.email}}<br>Adresse: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
+    "4": "{{lister.first_name}} hat die Rückgabe des Rades bestätigt.",
     "5": "Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",
     "6": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
     "8": "Leider hat der Verleiher die Anfrage abgelehnt. Frage einfach ein paar andere schöne Räder an.",

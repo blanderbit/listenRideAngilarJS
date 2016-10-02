@@ -38,6 +38,8 @@
     "booking-overview": "Booking Overview",
     "book": "Book",
     "rating": "Rating",
+    "listChat": "Request by {{user.first_name}} {{user.last_name}}",
+    "rideChat": "Request at {{lister.first_name}} {{lister.last_name}}",
     "ratings": {
       "description": "Trust and Safety are our paramount concern. By writing a short review, you'll help the whole community.",
       "1": "Unacceptable",
@@ -69,10 +71,10 @@
   },
 
   "rideChat": {
-    "1": "You would like to rent the %1$s by %2$s from %3$s for %4$s days. Agree with the lister on further details. As soon as he accepts your request, you can book the ride.",
-    "2": "%1$s has accepted your request. Confirm the reservation, the payment will follow as the next step.",
-    "3": "Congratulation, You successfully booked the ride. Meet the lister as agreed and pick up the ride. Contact Details are as follows, we've also sent them to you via email.\n \nName: %1$s \nEmail address: %2$s.",
-    "4": "%1$s has confirmed the return of the ride.",
+    "1": "You would like to rent the {{ride.name}} by {{lister.first_name}} {{lister.last_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, you can book the ride.",
+    "2": "{{lister.first_name}} has accepted your request. Confirm the reservation, the payment will follow as the next step.",
+    "3": "Congratulation, You successfully booked the ride. Meet the lister as agreed and pick up the ride. Contact Details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Email address: {{lister.email}},<br>Address: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
+    "4": "{{lister.first_name}} has confirmed the return of the ride.",
     "5": "Finally, please rate the lister and the ride. This helps our community a lot and completes the rental.",
     "6": "Thanks for rating, the rental was successfully completed.",
     "8": "Unfortunately, the lister could't accept your request. Simply request some other great bikes.",
