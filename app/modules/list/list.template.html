@@ -3,11 +3,11 @@
     <h1>{{ 'list.list-your-bike' | translate }}</h1>
 
     <!-- TODO: set ng-disabled="true" on all tabs -->
-    <md-tabs class="content" md-dynamic-height md-no-ink md-no-ink-bar md-selected="list.selectedIndex" md-stretch-tabs="always">
-      <md-tab class="categories" label="Category" layout="row">
+    <md-tabs class="content" md-no-pagination md-dynamic-height md-no-ink md-no-ink-bar md-selected="list.selectedIndex" md-stretch-tabs="always">
+      <md-tab ng-disabled="true" class="categories" label="Category" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
-            <div class="col1" flex="45" layout="row" layout-align="space-between start">
+            <div class="col1" flex-xs="100" flex-gt-xs="45" layout="row" layout-align="space-between start">
               <md-radio-group ng-model="list.form.mainCategory" layout="column">
                 <md-radio-button ng-repeat="cat in list.categoryOptions" value="{{cat.value}}">
                   {{cat.label}}
@@ -21,7 +21,7 @@
               </md-radio-group>
             </div>
 
-            <div class="col2" flex="45">
+            <div class="col2" flex="45" hide-xs>
               Information about the categories
             </div>
           </div>
@@ -32,10 +32,10 @@
         </md-content>
       </md-tab>
 
-      <md-tab class="details" label="Details" layout="row">
+      <md-tab ng-disabled="true" class="details" label="Details" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
-            <div class="col1" flex="45" layout="column">
+            <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-input-container>
                 <label>Brand</label>
                 <input required ng-model="list.form.brand">
@@ -68,7 +68,7 @@
               </md-input-container>
             </div>
 
-            <div class="col2" flex="45">
+            <div class="col2" flex="45" hide-xs>
               Information about the bike details
             </div>
           </div>
@@ -80,16 +80,16 @@
         </md-content>
       </md-tab>
 
-      <md-tab class="accessories" label="Accessories" layout="row">
+      <md-tab ng-disabled="true" class="accessories" label="Accessories" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
-            <div class="col1" flex="45" layout="column">
+            <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-checkbox ng-repeat="acc in list.accessoryOptions" ng-model="list.form[acc.model]">
                 {{ acc.label }}
               </md-checkbox>
             </div>
 
-            <div class="col2" flex="45">
+            <div class="col2" flex="45" hide-xs>
               Information about the bike accessories
             </div>
           </div>
@@ -101,25 +101,26 @@
         </md-content>
       </md-tab>
 
-      <md-tab class="pictures" label="Pictures" layout="row">
+      <md-tab ng-disabled="true" class="pictures" label="Pictures" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
-            <div class="col1" flex="45" layout="column">
+            <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-button ng-disabled="list.form.images.length > 4" ngf-multiple="true"
                 ngf-select="list.addImage($files)" accept=".jpg,.jpeg">
                 Select image
               </md-button>
 
-              <div class="preview-container" layout="row" layout-wrap>
-                <div ng-repeat="img in list.form.images" flex="50">
-                  <div class="img-preview" ngf-background="img" ngf-as-background="true" layout-margin>
-                  </div>
+              <div class="preview-container" layout="column" layout-wrap layout-margin>
+                <div ng-repeat="img in list.form.images track by $index" layout="row" layout-align="space-between center">
+                  <div class="img-preview" ngf-background="img" ngf-as-background="true"></div>
+
+                  <md-button ng-click="list.removeImage($index)">Remove</md-button>
                 </div>
               </div>
               
             </div>
 
-            <div class="col2" flex="45">
+            <div class="col2" flex="45" hide-xs>
               Information about the bike pictures
             </div>
           </div>
@@ -131,10 +132,10 @@
         </md-content>
       </md-tab>
 
-      <md-tab class="location" label="Location" layout="row">
+      <md-tab ng-disabled="true" class="location" label="Location" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
-            <div class="col1" flex="45" layout="column">
+            <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-input-container>
                 <label>Street and Number</label>
                 <input required ng-model="list.form.street">
@@ -156,7 +157,7 @@
               </md-input-container>
             </div>
 
-            <div class="col2" flex="45">
+            <div class="col2" flex="45" hide-xs>
               Information about the bike location
             </div>
           </div>
@@ -168,10 +169,10 @@
         </md-content>
       </md-tab>
 
-      <md-tab class="pricing" label="Pricing" layout="row">
+      <md-tab ng-disabled="true" class="pricing" label="Pricing" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
-            <div class="col1" flex="45" layout="column">
+            <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-input-container>
                 <label>Half-daily Price (€)</label>
                 <input type="number" required ng-model="list.form.price_half_daily">
@@ -188,14 +189,14 @@
               </md-input-container>
             </div>
 
-            <div class="col2" flex="45">
+            <div class="col2" flex="45" hide-xs>
               Information about the bike pricing
             </div>
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
             <md-button class="md-raised" ng-click="list.previousTab()">Back</md-button>
-            <md-button class="md-raised" ng-disabled="!list.isPricingValid()" ng-click="list.onFormSubmit()">Submit</md-button>
+            <md-button class="md-raised" ng-disabled="!list.isPricingValid() || list.submitDisabled" ng-click="list.onFormSubmit()">Submit</md-button>
           </div>
         </md-content>
       </md-tab>

@@ -11,7 +11,7 @@ angular.module('list').component('list', {
         images: []
       };
 
-      list.selectedIndex = 3;
+      list.selectedIndex = 0;
       list.sizeOptions = bike_options.sizeOptions();
       list.kidsSizeOptions = bike_options.kidsSizeOptions();
       list.categoryOptions = bike_options.categoryOptions();
@@ -19,6 +19,8 @@ angular.module('list').component('list', {
       list.accessoryOptions = bike_options.accessoryOptions();
 
       list.onFormSubmit = function() {
+        list.submitDisabled = true;
+
         var ride = {
           "ride[name]": list.form.name,
           "ride[brand]": list.form.brand,
@@ -39,13 +41,13 @@ angular.module('list').component('list', {
           "ride[price_half_daily]": list.form.price_half_daily,
           "ride[price_daily]": list.form.price_daily,
           "ride[price_weekly]": list.form.price_weekly,
-          "ride[image_file_1]": list.form.images[1],
-          "ride[image_file_2]": list.form.images[2],
-          "ride[image_file_3]": list.form.images[3],
-          "ride[image_file_4]": list.form.images[4],
-          "ride[image_file_5]": list.form.images[5]
+          "ride[image_file_1]": list.form.images[0],
+          "ride[image_file_2]": list.form.images[1],
+          "ride[image_file_3]": list.form.images[2],
+          "ride[image_file_4]": list.form.images[3],
+          "ride[image_file_5]": list.form.images[4]
         };
-
+        
         Upload.upload({
           method: 'POST',
           url: api.getApiUrl() + '/rides',
@@ -55,35 +57,33 @@ angular.module('list').component('list', {
           }
         }).then(
           function(response) {
-            console.log("Success", response);
+            $state.go("bike", {bikeId: response.data.id});
           },
           function(error) {
-            console.log("Error", error);
+            list.submitDisabled = false;
+            console.log("Error while listing bike", error);
           }
         );
       };
 
       list.nextTab = function() {
         list.selectedIndex = list.selectedIndex + 1;
-        console.log(list.form);
       }
 
       list.previousTab = function() {
         list.selectedIndex = list.selectedIndex - 1;
-        console.log(list.form);
       }
 
       list.addImage = function(files) {
-        if (files && files.length) {
-          var count = 0
-          for (var i = 0; i < files.length && count < 5; ++i) {
-            if (files[i] != null) {
+        if (files && files.length)
+          for (var i = 0; i < files.length && list.form.images.length < 5; ++i)
+            if (files[i] != null)
               list.form.images.push(files[i]);
-              count++;
-            }
-          }
-        }
       };
+
+      list.removeImage = function(index) {
+        list.form.images.splice(index, 1);
+      }
 
       list.isCategoryValid = function() {
         return list.form.mainCategory !== undefined &&

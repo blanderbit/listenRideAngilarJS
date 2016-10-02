@@ -291,7 +291,8 @@ list md-tabs .col1 {
 }
 
 list md-tabs .img-preview {
-  padding-bottom: 66.7%;
+  height: 100px;
+  width: 150px;
   background-position: center;
   background-size: cover;
 }
