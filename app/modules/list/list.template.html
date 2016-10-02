@@ -49,7 +49,11 @@
               <md-input-container>
                 <label>Size</label>
                 <md-select required ng-model="list.form.size">
-                  <md-option ng-repeat="size in list.sizeOptions" value="{{ size.value }}">
+                  <md-option ng-if="list.form.mainCategory == 4" ng-repeat="size in list.kidsSizeOptions" value="{{ size.value }}">
+                    {{ size.label }}
+                  </md-option>
+
+                  <md-option ng-if="list.form.mainCategory != 4" ng-repeat="size in list.sizeOptions" value="{{ size.value }}">
                     {{ size.label }}
                   </md-option>
                 </md-select>
