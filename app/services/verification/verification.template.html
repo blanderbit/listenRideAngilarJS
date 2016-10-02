@@ -1,4 +1,4 @@
-<md-dialog flex="70">
+<md-dialog flex="60" flex-sm="80">
   <md-toolbar hide show-xs>
     <div class="md-toolbar-tools" layout-align="center center">
       <md-button class="md-icon-button">
@@ -27,7 +27,7 @@
           </div> 
         </md-tab>
 
-        <md-tab label="Description" layout="row" ng-if="verificationDialog.newUser.description.length < 100" md-on-select="verificationDialog.activeTab = 2">
+        <md-tab label="Description" layout="row" ng-if="!verificationDialog.newUser.has_description" md-on-select="verificationDialog.activeTab = 2">
             <div class="tab-content" layout="column" layout-padding>
               <p class="md-body-1 center-text">Please write a few words about yourself and your relation to biking.</p>
               <md-input-container flex>
@@ -63,7 +63,7 @@
               <md-input-container flex>
                   <form name="phoneForm">
                     <label>Phone Number</label>
-                    <input required name="phone_number" ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/" placeholder="+49 175 5691381" ng-model="verificationDialog.newUser.phone_number"></input>
+                    <input required name="phone_number" ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/" placeholder="+49 175 12345678" ng-model="verificationDialog.newUser.phone_number"></input>
                     <div ng-messages="phoneForm.phone_number.$error" role="alert">
                       <div ng-message="pattern">Please enter a valid phone number</div>
                     </div>

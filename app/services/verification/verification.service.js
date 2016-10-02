@@ -160,7 +160,9 @@ angular.
           switch (verificationDialog.activeTab) {
             case 1: verificationDialog.selectedIndex += 1; break;
             case 2: uploadDescription(); verificationDialog.selectedIndex += 1; break;
-            case 5: uploadAddress(); $mdDialog.hide();
+            case 3: verificationDialog.selectedIndex += 1; break;
+            case 4: verificationDialog.selectedIndex += 1; break;
+            case 5: uploadAddress(); $mdDialog.hide(); break;
           }
         };
 
@@ -168,6 +170,9 @@ angular.
           switch (verificationDialog.activeTab) {
             case 1: return false;
             case 2: return !verificationDialog.descriptionForm.$valid;
+            case 3: return verificationDialog.user.status == 0
+            case 4: return !verificationDialog.user.confirmed_phone;
+            case 5: return !verificationDialog.addressForm.$valid;
           }
         };
 
