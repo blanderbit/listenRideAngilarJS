@@ -133,7 +133,8 @@
   },
 
   "listings": {
-    "my-bikes": "Meine Räder"
+    "my-bikes": "Meine Räder",
+    "no-bikes": "Du hast noch keine eigenen Fahrräder online gestellt."
   },
 
   "listingCard": {

@@ -133,7 +133,8 @@
   },
 
   "listings": {
-    "my-bikes": "My Bikes"
+    "my-bikes": "My Bikes",
+    "no-bikes": "You haven't listed any of your rides yet."
   },
 
   "listingCard": {
