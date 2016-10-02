@@ -19,28 +19,28 @@ angular.module('listingCard').component('listingCard', {
 
       listingCard.onActivateClick = function() {
         listingCard.disableActivate = true;
-        api.put("/rides/" + bikeId, {"ride": {"available": "true"}}).then(
+        api.put("/rides/" + listingCard.bikeId, {"ride": {"available": "true"}}).then(
           function(response) {
             listingCard.disableActivate = false;
             listingCard.available = true;
           },
           function(error) {
             listingCard.disableActivate = false;
-            console.log("Error", error);
+            console.log("Error activating bike", error);
           }
         );
       };
 
       listingCard.onDeactivateClick = function() {
         listingCard.disableDeactivate = true;
-        api.put("/rides/" + bikeId, {"ride": {"available": "false"}}).then(
+        api.put("/rides/" + listingCard.bikeId, {"ride": {"available": "false"}}).then(
           function(response) {
             listingCard.disableDeactivate = false;
             listingCard.available = false;
           },
           function(error) {
             listingCard.disableDeactivate = false;
-            console.log("Error", error);
+            console.log("Error deactivating bike", error);
           }
         );
       };
@@ -48,13 +48,13 @@ angular.module('listingCard').component('listingCard', {
       listingCard.onDeleteClick = function() {
         // TODO: display modal before deleting bike
         listingCard.disableDelete = true;
-        api.put("/rides/" + bikeId, {"ride": {"active": "false"}}).then(
+        api.put("/rides/" + listingCard.bikeId, {"ride": {"active": "false"}}).then(
           function(response) {
             // TODO: uncomment
             // listingCard.removeBike(bikeId);
           },
           function(error) {
-            console.log("Error", error);
+            console.log("Error deleting bike", error);
           }
         );
       };
