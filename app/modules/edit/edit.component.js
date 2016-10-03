@@ -3,13 +3,41 @@
 angular.module('edit').component('edit', {
   templateUrl: 'app/modules/edit/edit.template.html',
   controllerAs: 'edit',
-  controller: ['$localStorage', '$state', 'Upload', 'bike_options', 'api',
-    function EditController($localStorage, $state, Upload, bike_options, api) {
+  controller: ['$localStorage', '$state', '$stateParams', 'Upload', 'bike_options', 'api',
+    function EditController($localStorage, $state, $stateParams, Upload, bike_options, api) {
       var edit = this;
 
       edit.form = {
         images: []
       };
+
+      api.get('/rides/' + $stateParams.bikeId).then(
+        function(response) {
+          var data = response.data;
+          console.log(data);
+
+          if (data.user.id == $localStorage.userId) {
+            var images = [];
+            for (var i = 1; i <= 5; ++i) {
+              if (data["image_file_" + i] !== undefined) {
+                images.push(data["image_file_" + i]);
+              }
+            }
+
+            data.images = images;
+            data.price_half_daily = parseInt(data.price_half_daily);
+            data.price_daily = parseInt(data.price_daily);
+            data.price_weekly = parseInt(data.price_weekly);
+            data.size = parseInt(data.size);
+            data.mainCategory = (data.category + "").charAt(0);
+            data.subCategory = (data.category + "").charAt(1);
+            edit.form = data;
+          }
+        },
+        function(error) {
+          console.log("Error editing bike", error);
+        }
+      );
 
       edit.selectedIndex = 0;
       edit.sizeOptions = bike_options.sizeOptions();
@@ -47,17 +75,20 @@ angular.module('edit').component('edit', {
           "ride[image_file_4]": edit.form.images[3],
           "ride[image_file_5]": edit.form.images[4]
         };
+
+        console.log("ride", ride);
         
         Upload.upload({
-          method: 'POST',
-          url: api.getApiUrl() + '/rides',
+          method: 'PUT',
+          url: api.getApiUrl() + '/rides/' + $stateParams.bikeId,
           data: ride,
           headers: {
             'Authorization': $localStorage.auth
           }
         }).then(
           function(response) {
-            $state.go("bike", {bikeId: response.data.id});
+            // $state.go("bike", {bikeId: response.data.id});
+            console.log("Success", response);
           },
           function(error) {
             edit.submitDisabled = false;
@@ -68,10 +99,12 @@ angular.module('edit').component('edit', {
 
       edit.nextTab = function() {
         edit.selectedIndex = edit.selectedIndex + 1;
+        console.log(edit.form);
       }
 
       edit.previousTab = function() {
         edit.selectedIndex = edit.selectedIndex - 1;
+        console.log(edit.form);
       }
 
       edit.addImage = function(files) {

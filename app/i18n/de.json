@@ -184,6 +184,10 @@
     }
   },
 
+  "edit": {
+    "edit-bike": "Rad bearbeiten"
+  },
+
   "listings": {
     "my-bikes": "Meine Räder",
     "no-bikes": "Du hast noch keine eigenen Fahrräder online gestellt."

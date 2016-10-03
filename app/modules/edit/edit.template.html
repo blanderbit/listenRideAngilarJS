@@ -1,15 +1,15 @@
 <md-content class="single-column">
   <form name="listBike" layout="column" layout-align="start center" layout-padding>
-    <h1>{{ 'edit.list-your-bike' | translate }}</h1>
+    <h1>{{ 'edit.edit-bike' | translate }}</h1>
 
     <md-tabs class="content" md-no-pagination md-dynamic-height md-no-ink md-no-ink-bar md-selected="edit.selectedIndex" md-stretch-tabs="always">
-      <md-tab ng-disabled="true" class="categories" label="{{ 'edit.category.category' | translate }}" layout="row">
+      <md-tab ng-disabled="true" class="categories" label="{{ 'list.category.category' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="row" layout-align="space-between start">
               <md-radio-group ng-model="edit.form.mainCategory" layout="column">
                 <md-radio-button ng-repeat="cat in edit.categoryOptions" value="{{cat.value}}">
-                  {{ 'edit.category.' + cat.label.replace(' ', '-') | translate }}
+                  {{ 'list.category.' + cat.label.replace(' ', '-') | translate }}
                 </md-radio-button>
               </md-radio-group>
 
@@ -26,27 +26,27 @@
           </div>
           
           <div class="navigation" layout="row" layout-align="end center">
-            <md-button class="md-raised" ng-disabled="!edit.isCategoryValid()" ng-click="edit.nextTab()">{{ 'edit.next' | translate }}</md-button>
+            <md-button class="md-raised" ng-disabled="!edit.isCategoryValid()" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
 
-      <md-tab ng-disabled="true" class="details" label="{{ 'edit.details.details' | translate }}" layout="row">
+      <md-tab ng-disabled="true" class="details" label="{{ 'list.details.details' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-input-container>
-                <label>{{ 'edit.details.brand' | translate }}</label>
+                <label>{{ 'list.details.brand' | translate }}</label>
                 <input required ng-model="edit.form.brand">
               </md-input-container>
 
               <md-input-container>
-                <label>{{ 'edit.details.name' | translate }}</label>
+                <label>{{ 'list.details.name' | translate }}</label>
                 <input required ng-model="edit.form.name">
               </md-input-container>
 
               <md-input-container>
-                <label>{{ 'edit.details.height' | translate }}</label>
+                <label>{{ 'list.details.height' | translate }}</label>
                 <md-select required ng-model="edit.form.size">
                   <md-option ng-if="edit.form.mainCategory == 4" ng-repeat="size in edit.kidsSizeOptions" value="{{ size.value }}">
                     {{ size.label }}
@@ -59,10 +59,10 @@
               </md-input-container>
 
               <md-input-container>
-                <label>{{ 'edit.details.description' | translate }}</label>
+                <label>{{ 'list.details.description' | translate }}</label>
                 <textarea required md-no-resize minlength="100" name="description" ng-model="edit.form.description" rows="4"></textarea>
                 <div ng-messages="listBike.description.$error" role="alert">
-                  <div ng-message="minlength">{{ 'edit.details.min-length-warning' | translate }}</div>
+                  <div ng-message="minlength">{{ 'list.details.min-length-warning' | translate }}</div>
                 </div>
               </md-input-container>
             </div>
@@ -73,18 +73,18 @@
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
-            <md-button class="md-raised" ng-click="edit.previousTab()">{{ 'edit.back' | translate }}</md-button>
-            <md-button class="md-raised" ng-disabled="!edit.isDetailsValid()" ng-click="edit.nextTab()">{{ 'edit.next' | translate }}</md-button>
+            <md-button class="md-raised" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
+            <md-button class="md-raised" ng-disabled="!edit.isDetailsValid()" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
 
-      <md-tab ng-disabled="true" class="accessories" label="{{ 'edit.accessories.accessories' | translate }}" layout="row">
+      <md-tab ng-disabled="true" class="accessories" label="{{ 'list.accessories.accessories' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-checkbox ng-repeat="acc in edit.accessoryOptions" ng-model="edit.form[acc.model]">
-                {{ 'edit.accessories.' + acc.label | translate }}
+                {{ 'list.accessories.' + acc.label | translate }}
               </md-checkbox>
             </div>
 
@@ -94,26 +94,26 @@
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
-            <md-button class="md-raised" ng-click="edit.previousTab()">{{ 'edit.back' | translate }}</md-button>
-            <md-button class="md-raised" ng-click="edit.nextTab()">{{ 'edit.next' | translate }}</md-button>
+            <md-button class="md-raised" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
+            <md-button class="md-raised" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
 
-      <md-tab ng-disabled="true" class="pictures" label="{{ 'edit.pictures.pictures' | translate }}" layout="row">
+      <md-tab ng-disabled="true" class="pictures" label="{{ 'list.pictures.pictures' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-button ng-disabled="edit.form.images.length > 4" ngf-multiple="true"
                 ngf-select="edit.addImage($files)" accept=".jpg,.jpeg">
-                {{ 'edit.pictures.select-images' | translate }}
+                {{ 'list.pictures.select-images' | translate }}
               </md-button>
 
               <div class="preview-container" layout="column" layout-wrap layout-margin>
                 <div ng-repeat="img in edit.form.images track by $index" layout="row" layout-align="space-between center">
                   <div class="img-preview" ngf-background="img" ngf-as-background="true"></div>
 
-                  <md-button ng-click="edit.removeImage($index)">{{ 'edit.pictures.remove' | translate}}</md-button>
+                  <md-button ng-click="edit.removeImage($index)">{{ 'list.pictures.remove' | translate}}</md-button>
                 </div>
               </div>
               
@@ -125,33 +125,33 @@
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
-            <md-button class="md-raised" ng-click="edit.previousTab()">{{ 'edit.back' | translate }}</md-button>
-            <md-button class="md-raised" ng-disabled="!edit.isPictureValid()" ng-click="edit.nextTab()">{{ 'edit.next' | translate }}</md-button>
+            <md-button class="md-raised" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
+            <md-button class="md-raised" ng-disabled="!edit.isPictureValid()" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
 
-      <md-tab ng-disabled="true" class="location" label="{{ 'edit.location.location' | translate }}" layout="row">
+      <md-tab ng-disabled="true" class="location" label="{{ 'list.location.location' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-input-container>
-                <label>{{ 'edit.location.street-number' | translate }}</label>
+                <label>{{ 'list.location.street-number' | translate }}</label>
                 <input required ng-model="edit.form.street">
               </md-input-container>
 
               <md-input-container>
-                <label>{{ 'edit.location.zip' | translate }}</label>
+                <label>{{ 'list.location.zip' | translate }}</label>
                 <input required ng-model="edit.form.zip">
               </md-input-container>
 
               <md-input-container>
-                <label>{{ 'edit.location.city' | translate }}</label>
+                <label>{{ 'list.location.city' | translate }}</label>
                 <input required ng-model="edit.form.city">
               </md-input-container>
 
               <md-input-container>
-                <label>{{ 'edit.location.country' | translate }}</label>
+                <label>{{ 'list.location.country' | translate }}</label>
                 <input required ng-model="edit.form.country">
               </md-input-container>
             </div>
@@ -162,28 +162,28 @@
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
-            <md-button class="md-raised" ng-click="edit.previousTab()">{{ 'edit.back' | translate }}</md-button>
-            <md-button class="md-raised" ng-disabled="!edit.isLocationValid()" ng-click="edit.nextTab()">{{ 'edit.next' | translate }}</md-button>
+            <md-button class="md-raised" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
+            <md-button class="md-raised" ng-disabled="!edit.isLocationValid()" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
 
-      <md-tab ng-disabled="true" class="pricing" label="{{ 'edit.pricing.pricing' | translate }}" layout="row">
+      <md-tab ng-disabled="true" class="pricing" label="{{ 'list.pricing.pricing' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-input-container>
-                <label>{{ 'edit.pricing.half-daily-price' | translate }} (€)</label>
+                <label>{{ 'list.pricing.half-daily-price' | translate }} (€)</label>
                 <input type="number" required ng-model="edit.form.price_half_daily">
               </md-input-container>
 
               <md-input-container>
-                <label>{{ 'edit.pricing.daily-price' | translate }} (€)</label>
+                <label>{{ 'list.pricing.daily-price' | translate }} (€)</label>
                 <input type="number" required ng-model="edit.form.price_daily">
               </md-input-container>
 
               <md-input-container>
-                <label>{{ 'edit.pricing.weekly-price' | translate }} (€)</label>
+                <label>{{ 'list.pricing.weekly-price' | translate }} (€)</label>
                 <input type="number" required ng-model="edit.form.price_weekly">
               </md-input-container>
             </div>
@@ -194,8 +194,8 @@
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
-            <md-button class="md-raised" ng-click="edit.previousTab()">{{ 'edit.back' | translate }}</md-button>
-            <md-button class="md-raised" ng-disabled="!edit.isPricingValid() || edit.submitDisabled" ng-click="edit.onFormSubmit()">{{ 'edit.list-bike' | translate }}</md-button>
+            <md-button class="md-raised" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
+            <md-button class="md-raised" ng-disabled="!edit.isPricingValid() || edit.submitDisabled" ng-click="edit.onFormSubmit()">{{ 'list.list-bike' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
