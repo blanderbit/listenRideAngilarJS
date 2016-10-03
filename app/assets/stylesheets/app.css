@@ -308,6 +308,13 @@ list md-tabs .col1 {
   min-height: 370px;
 }
 
+list md-tabs .img-preview {
+  height: 100px;
+  width: 150px;
+  background-position: center;
+  background-size: cover;
+}
+
 listings #myBikes {
   min-height: 350px;
   width: 100%;
