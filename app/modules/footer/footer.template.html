@@ -1,13 +1,19 @@
 <div id="footer" class="md-scroll-shrink">
   <div class="content" layout="column">
-    <div layout="column" layout-gt-sm="row" layout-align-gt-sm="space-between strech">
+    <!-- <div layout="column" layout-gt-sm="row" layout-align-gt-sm="space-between strech"> -->
+    <div layout="row" layout-xs="column" layout-padding>
 
-      <div layout="column" layout-align="center center" layout-align-gt-sm="center start" flex-gt-sm="20" layout-padding>
-        <img ng-src="app/assets/ui_images/lnr-logo.png" alt="Bike Image">
+      <!-- <div layout="column" layout-align="center center" layout-align-gt-sm="center start" flex-gt-sm="20" layout-padding> -->
+      <div layout="column" layout-align="center start" flex="30" flex-sm="20" hide-sm hide-xs>
+        <div>
+          <md-icon class="icn_xlrg" md-svg-src="app/assets/ui_icons/lnr_logo_full.svg">
+        </div>
       </div>
 
-      <div layout="row" flex-gt-sm="80" layout-align="space-between strech" layout-wrap>
-        <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start">
+      <!-- <div layout="row" flex-gt-sm="80" layout-align="space-between strech" layout-wrap> -->
+      <div layout="row" layout-xs="column" layout-align="space-between start" flex>
+        <!-- <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start"> -->
+        <div layout="column">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'shared.top-cities' | translate }}</md-subheader>
             <md-list-item class="md-body-1">{{ 'shared.berlin' | translate }}</md-list-item>
@@ -17,7 +23,8 @@
           </md-list>
         </div>
 
-        <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start">
+        <!-- <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start"> -->
+        <div layout="column">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'shared.learn-more' | translate }}</md-subheader>
             <md-list-item class="md-body-1">{{ 'shared.how-it-works' | translate }}</md-list-item>
@@ -27,7 +34,8 @@
           </md-list>
         </div>
 
-        <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start">
+        <!-- <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start"> -->
+        <div layout="column">
           <md-list>
             <md-subheader class="md-no-sticky">Listnride</md-subheader>
             <md-list-item class="md-body-1">{{ 'footer.about' | translate }}</md-list-item>
@@ -37,7 +45,8 @@
           </md-list>
         </div>
 
-        <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start">
+        <!-- <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start"> -->
+        <div layout="column">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'footer.legal' | translate }}</md-subheader>
             <md-list-item class="md-body-1">{{ 'footer.terms-and-conditions' | translate }}</md-list-item>
@@ -46,7 +55,8 @@
           </md-list>
         </div>
 
-        <div layout="column" flex-xs="100" flex="20" layout-align-xs="start center" layout-align="start start">
+        <!-- <div layout="column" flex-xs="100" flex="20" layout-align-xs="start center" layout-align="start start"> -->
+        <div layout="column">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'footer.language' | translate }}</md-subheader>
             <md-menu md-position-mode="target bottom">
@@ -60,19 +70,25 @@
                 </md-menu-item>
               </md-menu-content>
             </md-menu>
-            <div id="iOSApp" layout-padding>Get the app</div>
-            <div layout="row" layout-align="space-between stretch" layout-padding>
-              <div>Fb</div>
-              <div>Inst</div>
+            
+            <div class="ios_app">
+              <a href="#" md-no-ink><img src="app/assets/ui_images/app_store.png"></a>
             </div>
+
           </md-list>
         </div>
       </div>
-
     </div>
 
     <md-divider></md-divider>
 
-    <div layout="row" layout-align="center center" layout-padding>© 2016 listnride</div>
+    <div layout="row" layout-align="space-between center" layout-padding>
+      All rights reserverd © list-n-ride Copyrights 2016
+      <div layout="row" layout-align="space-between stretch" layout-padding>
+        <a href="#"><md-icon class="icn_md" md-svg-src="app/assets/ui_icons/icn_facebook.svg"></md-icon></a>
+        <a href="#"><md-icon class="icn_md" md-svg-src="app/assets/ui_icons/icn_instagram.svg"></md-icon></a>
+      </div>
+    </div>
+
   </div>
 </div>
