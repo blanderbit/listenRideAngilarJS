@@ -1,3 +1,5 @@
+// #5FC693: primary color
+
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL
 /*-----------------------------------------------------------------------------------*/
@@ -5,7 +7,6 @@
 html {
   background-color: #FFFFFF;
   min-width: 320px;
-  // font-size: 14px;
 }
 
 .content {
@@ -13,23 +14,26 @@ html {
   margin: 0 auto;
 }
 
-// .container {
-//   margin: 60px 0 0 0;
-// }
-
-// p {
-//   margin: 0.5em 0;
-// }
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.34rem 0;
+}
 
 p.center-text {
   text-align: center;
+}
+
+.md-display-1 {
+  text-transform: uppercase;
+}
+
+.md-button.md-lrg {
+  min-width: 200px;
 }
 
 /*-----------------------------------------------------------------------------------*/
 /* NAVBAR
 /*-----------------------------------------------------------------------------------*/
 
-/* Temporary code for a sticky header */
 .header {
   position: fixed !important;
   top: 0px !important;
@@ -37,7 +41,7 @@ p.center-text {
   z-index: 3;
 }
 
-.header-logo md-icon {
+.lnr-header-logo md-icon {
   width: 90px;
 }
 
@@ -46,17 +50,12 @@ p.center-text {
 /* FOOTER
 /*-----------------------------------------------------------------------------------*/
 
-// footer,
-// footer .md-subheader.md-default-theme, .md-subheader {
-//   background-color: rgb(225, 225, 225);
-// }
-
 footer md-list-item,
 footer md-list-item::before {
   min-height: 25px;
 }
 
-.ios_app img {
+.lnr-btn-ios img {
   height: 38px;
   width: auto;
 }
@@ -66,39 +65,141 @@ footer md-list-item::before {
 /* SVG
 /*-----------------------------------------------------------------------------------*/
 
-.icn_sm {
+.lnr-icn-sm {
   width: 24px;
   height: 24px;
 }
 
-.icn_md {
+.lnr-icn-md {
   width: 32px;
   height: 32px;
 }
 
-.icn_lrg {
+.lnr-icn-lrg {
   width: 48px;
   height: 48px;
 }
 
-.icn_xlrg {
+.lnr-icn-xlrg {
   width: 120px;
   height: 120px;
 }
 
 
-.single-column {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+/*-----------------------------------------------------------------------------------*/
+/* HOME
+/*-----------------------------------------------------------------------------------*/
+
+home #landing-section {
+  background: url(../ui_images/landing.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 78vh;
 }
+
+.lnr-search-bar {
+  width: 52%;
+  margin-bottom: -30px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.lnr-search-bar autocomplete,
+.lnr-search-bar input  {
+  height: 60px;
+  border: none;
+  outline: none;
+}
+
+.lnr-search-bar input {
+  padding: 0 15px;
+}
+
+.lnr-search-bar input[type=submit] {
+  color: #fff;
+  background: #5FC693;
+}
+
+.lnr-section-title {
+  margin-bottom: 24px;
+}
+
+home .section {
+  margin-top: 90px;
+}
+
+home #listBike {
+  height: 300px;
+  padding: 24px 0;
+  background-size: cover;
+  background-position: 15% 100%;
+  background-image: url("../ui_images/landing.jpg");
+}
+
+home md-grid-list {
+  margin: 8px;
+}
+
+home md-grid-list md-grid-tile {
+  border-radius: 4px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+home md-grid-list md-grid-tile.tile1 {
+  background-image: url("../ui_images/munich.jpg");
+}
+
+home md-grid-list md-grid-tile.tile2 {
+  background-image: url("../ui_images/berlin.jpg");
+  background-position: 45%;
+}
+
+home md-grid-list md-grid-tile.tile3 {
+  background-image: url("../ui_images/amsterdam.jpg");
+  background-position: 47%;
+}
+
+home md-grid-list md-grid-tile.tile4 {
+  background-image: url("../ui_images/vienna.jpg");
+}
+
+@media (max-width: 599px) {
+  md-dialog.md-dialog-fullscreen {
+    min-height: 100%;
+    min-width: 100%;
+    border-radius: 0;
+  }
+  home #landing-section {
+    height: 60vh;
+  }
+  .lnr-search-bar {
+    width: 90%
+  }
+}
+
+@media (min-width: 600px) {
+  md-dialog.md-dialog-fullscreen {
+    min-width: 400px !important;
+    min-height: 0 !important;
+    border-radius: 3px;
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* 
+/*-----------------------------------------------------------------------------------*/
 
 ui-view {
   position: relative;
 }
 
 /* This has to be set for all full-height layouts */
-requests, search {
+.single-column, requests, search {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -218,84 +319,7 @@ message .status-message {
   background-color: #ffffff;
 }
 
-@media (max-width: 599px) {
-  md-dialog.md-dialog-fullscreen {
-    min-height: 100%;
-    min-width: 100%;
-    border-radius: 0;
-  }
-  home #landing_section {
-    height: 60vh;
-  }
-}
 
-@media (min-width: 600px) {
-  md-dialog.md-dialog-fullscreen {
-    min-width: 400px !important;
-    min-height: 0 !important;
-    border-radius: 3px;
-  }
-}
-
-home h1, home h2 {
-  text-align: center;
-}
-
-home #landing_section {
-  background-image: url("../ui_images/landing.jpg");
-  background-position: 15% 100%;
-  background-size: cover;
-  height: 70vh;
-}
-
-home form {
-  min-width: 315px;
-  max-width: 400px !important;
-  width: 70%;
-}
-
-home #searchBox {
-  width: 300px;
-}
-
-home .section {
-  margin-top: 64px;
-}
-
-home #listBike {
-  height: 300px;
-  background-size: cover;
-  background-position: 15% 100%;
-  background-image: url("../ui_images/landing.jpg");
-}
-
-home md-grid-list {
-  margin: 8px;
-}
-
-home md-grid-list md-grid-tile {
-  cursor: pointer;
-  background-size: cover;
-  color: white;
-}
-
-home md-grid-list md-grid-tile.tile1 {
-  background-image: url("../ui_images/munich.jpg");
-}
-
-home md-grid-list md-grid-tile.tile2 {
-  background-image: url("../ui_images/berlin.jpg");
-  background-position: 45%;
-}
-
-home md-grid-list md-grid-tile.tile3 {
-  background-image: url("../ui_images/amsterdam.jpg");
-  background-position: 47%;
-}
-
-home md-grid-list md-grid-tile.tile4 {
-  background-image: url("../ui_images/vienna.jpg");
-}
 
 search ng-map {
   height: 100% !important;
