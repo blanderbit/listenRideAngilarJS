@@ -3,15 +3,17 @@
 angular.
   module('listnride').
   factory('authentication', [
-    'Base64', '$http', '$localStorage', '$mdDialog', '$mdToast', '$q', 'ezfb', 'api', 'verification', 'sha256',
-    function(Base64, $http, $localStorage, $mdDialog, $mdToast, $q, ezfb, api, verification, sha256){
+    'Base64', '$http', '$localStorage', '$mdDialog', '$mdToast', '$window', '$q', 'ezfb', 'api', 'verification', 'sha256',
+    function(Base64, $http, $localStorage, $mdDialog, $mdToast, $window, $q, ezfb, api, verification, sha256){
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
-      var setCredentials = function (email, password, id) {
+      var setCredentials = function (email, password, id, profilePicture, firstName, lastName) {
         var encoded = Base64.encode(email + ":" + password);
         // Sets the Basic Auth String for the Authorization Header
         $localStorage.auth = 'Basic ' + encoded;
         $localStorage.userId = id;
+        $localStorage.name = firstName + " " + lastName;
+        $localStorage.profilePicture = profilePicture;
       };
 
       // The Signup Dialog Controller
@@ -30,7 +32,8 @@ angular.
             }
           };
           api.post("/users", user).then(function(success) {
-            setCredentials(success.data.email, success.data.password_hashed, success.data.id);
+            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name);
+            $window.location.reload();
             verification.openDialog();
           }, function(error) {
             console.log("Could not Sign Up with Facebook");
@@ -51,7 +54,8 @@ angular.
             }
           };
           api.post('/users', user).then(function(success) {
-            setCredentials(success.data.email, success.data.password_hashed, success.data.id);
+            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name);
+            $window.location.reload();
             verification.openDialog();
           }, function(error) {
             console.log("Could not Sign Up");
@@ -109,7 +113,7 @@ angular.
             }
           };
           api.post('/users/login', user).then(function(response) {
-            setCredentials(response.data.email, response.data.password_hashed, response.data.id);
+            setCredentials(response.data.email, response.data.password_hashed, response.data.id, response.data.profile_picture.profile_picture.url, response.data.first_name, response.data.last_name);
             showLoginSuccess();
           }, function(response) {
             showLoginError();
@@ -128,7 +132,8 @@ angular.
             }
           };
           api.post('/users/login', user).then(function(success) {
-            setCredentials(success.data.email, success.data.password_hashed, success.data.id);
+            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name);
+            $window.location.reload();
             showLoginSuccess();
           }, function(error) {
             console.log(error);
@@ -222,8 +227,9 @@ angular.
       var logout = function() {
         document.execCommand("ClearAuthenticationCache");
         delete $localStorage.auth;
-        console.log($localStorage.auth);
         delete $localStorage.userId;
+        delete $localStorage.profilePicture;
+        delete $localStorage.name;
         $mdToast.show(
           $mdToast.simple()
           .textContent('You are logged out.')
