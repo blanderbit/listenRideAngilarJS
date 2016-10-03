@@ -43,7 +43,7 @@ angular.module('listnride').factory('bike_options', [
           {value: 2, label: "race"},
           {value: 3, label: "all terrain"},
           {value: 4, label: "kids"},
-          {value: 5, label: "ebikes"},
+          {value: 5, label: "electro"},
           {value: 6, label: "special"}
         ];
       },

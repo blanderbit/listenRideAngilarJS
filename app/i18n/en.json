@@ -129,7 +129,57 @@
   },
 
   "list": {
-    "list-your-bike": "List your bike"
+    "list-your-bike": "List your bike",
+    "back": "Back",
+    "next": "Next",
+    "list-bike": "List My Bike",
+    "accessories": {
+      "accessories": "Accessories",
+      "lock": "Lock",
+      "helmet": "Helmet",
+      "lights": "Lights",
+      "basket": "Basket",
+      "trailer": "Trailer",
+      "childseat": "Childseat"
+    },
+    "category": {
+      "category": "Category",
+      "city": "City",
+      "race": "Race",
+      "all-terrain": "All terrain",
+      "kids": "Kids",
+      "electro": "Electro",
+      "special": "Special"
+    },
+    "subcategories": {
+
+    },
+    "details": {
+      "details": "Details",
+      "brand": "Brand",
+      "name": "Name",
+      "description": "Description",
+      "min-length-warning": "Length should be at least 100 characters",
+      "height": "Rider Height"
+    },
+    "pictures": {
+      "pictures": "Pictures",
+      "select-images": "Select images",
+      "remove": "Remove"
+    },
+    "location": {
+      "location": "Location",
+      "street-number": "Street and Number",
+      "zip": "Zip Code",
+      "city": "City",
+      "country": "Country"
+    },
+    "pricing": {
+      "pricing": "Pricing",
+      "half-daily-price": "Half-daily Price",
+      "daily-price": "Daily Price",
+      "weekly-price": "Weekly Price"
+    }
   },
 
   "listings": {

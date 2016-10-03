@@ -129,7 +129,57 @@
   },
 
   "list": {
-    "list-your-bike": "Rad einstellen"
+    "list-your-bike": "Rad einstellen",
+    "back": "Zürück",
+    "next": "Weiter",
+    "list-bike": "Rad einstellen",
+    "accessories": {
+      "accessories": "Zubehör",
+      "lock": "Schloss",
+      "helmet": "Helm",
+      "lights": "Licht",
+      "basket": "Korb",
+      "trailer": "Anhänger",
+      "childseat": "Kindersitz"
+    },
+    "category": {
+      "category": "Kategorie",
+      "city": "City",
+      "race": "Straße",
+      "all-terrain": "All terrain",
+      "kids": "Kinder",
+      "electro": "Elektro",
+      "special": "Spezial"
+    },
+    "subcategories": {
+
+    },
+    "details": {
+      "details": "Details",
+      "brand": "Marke",
+      "name": "Name",
+      "description": "Beschreibung",
+      "min-length-warning": "100 Buchstabe",
+      "height": "Fahrergröße"
+    },
+    "pictures": {
+      "pictures": "Fotos",
+      "select-images": "Fotos Wählen",
+      "remove": "Löschen"
+    },
+    "location": {
+      "location": "Standort des Rads",
+      "street-number": "Staße und Hausnr.",
+      "zip": "PLZ",
+      "city": "Stadt",
+      "country": "Land"
+    },
+    "pricing": {
+      "pricing": "Preis",
+      "half-daily-price": "Halber Tag",
+      "daily-price": "Ganzer Tag",
+      "weekly-price": "Eine Woche"
+    }
   },
 
   "listings": {
