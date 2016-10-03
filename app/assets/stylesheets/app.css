@@ -22,14 +22,6 @@ p.center-text {
   text-align: center;
 }
 
-.md-display-1 {
-  text-transform: uppercase;
-}
-
-.md-button.md-lrg {
-  min-width: 200px;
-}
-
 /*-----------------------------------------------------------------------------------*/
 /* NAVBAR
 /*-----------------------------------------------------------------------------------*/
@@ -108,6 +100,7 @@ home #landing-section {
 
 .lnr-search-bar autocomplete,
 .lnr-search-bar input  {
+  width: 100%;
   height: 60px;
   border: none;
   outline: none;

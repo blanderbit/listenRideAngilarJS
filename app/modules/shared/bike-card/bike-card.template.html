@@ -1,12 +1,16 @@
 <md-card ui-sref="bike({bikeId: bikeCard.bikeId})">
-  <img ng-src="{{bikeCard.imageUrl}}" alt="Bike Image">
+  <img class="md-card-image" ng-src="{{bikeCard.imageUrl}}" alt="Bike Image">
 
-  <md-card-title>
-    <md-card-title-text>
-      <span class="md-headline">{{ ::bikeCard.brand }}</span>
-      <span class="md-subhead">{{ ::bikeCard.name }}</span>
+  <md-card-title layout="row">
+    <md-card-title-text layout="column"  layout-align="space-around start">
+      <span class="md-subhead">{{ ::bikeCard.brand }}</span>
+      <span>{{ ::bikeCard.name }}</span>
     </md-card-title-text>
-  </md-card-title>
 
-  <div layout-padding>{{ ::bikeCard.price | number }} €</div>
+    <div layout="column" layout-align="space-around center">
+    	<span class="md-headline">{{ ::bikeCard.price | number }}€</span>
+    	<span>per day</span>
+    </div>
+  </md-card-title>
+  
 </md-card>
