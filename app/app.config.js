@@ -71,11 +71,17 @@ angular.
       template: '<listings></listings>'
     });
 
+    $stateProvider.state({
+      name: 'edit',
+      url: '/edit/{bikeId}',
+      template: '<edit></edit>'
+    });
+
     $translateProvider.useStaticFilesLoader({
       prefix: 'app/i18n/',
       suffix: '.json'
     });
 
-    $translateProvider.preferredLanguage('en');
+    $translateProvider.preferredLanguage('de');
     $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
   });
