@@ -211,7 +211,7 @@ angular.
       };
 
       var loggedIn = function() {
-        if ($localStorage.auth != null) {
+        if ($localStorage.auth) {
           return true;
         } else {
           return false;
@@ -222,6 +222,7 @@ angular.
       var logout = function() {
         document.execCommand("ClearAuthenticationCache");
         delete $localStorage.auth;
+        console.log($localStorage.auth);
         delete $localStorage.userId;
         $mdToast.show(
           $mdToast.simple()

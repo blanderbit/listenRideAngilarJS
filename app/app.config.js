@@ -49,7 +49,7 @@ angular.
 
     $stateProvider.state({
       name: 'user',
-      url: '/user',
+      url: '/users/{userId}',
       template: '<user></user>'
     });
 

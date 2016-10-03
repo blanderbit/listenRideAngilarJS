@@ -3,15 +3,19 @@
 angular.module('user').component('user', {
   templateUrl: 'app/modules/user/user.template.html',
   controllerAs: 'user',
-  controller: ['api',
-    function ProfileController(api) {
+  controller: ['$localStorage', '$stateParams', 'api',
+    function ProfileController($localStorage, $stateParams, api) {
       var user = this;
 
-      api.get('/users/1001').then(function success() {
-        console.log("Successfully retrieved User");
-      }, function error() {
-        console.log("Error retrieving User");
-      })
+      api.get('/users/' + $stateParams.userId).then(
+        function(response) {
+          console.log(response.data);
+          user.user = response.data;
+        },
+        function(error) {
+          console.log("Error retrieving User", error);
+        }
+      );
     }
   ]
 });
