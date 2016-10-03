@@ -109,9 +109,11 @@
     "landing-section-header": "Rent your next adventure",
     "landing-section-subheader": "A bike for your styles and needs",
     "featured-bikes-header": "Featured bikes to rent",
-    "featured-bikes-subheader": "Rent a Schindelhauer, Specialized und many other brands",
+    "featured-bikes-subheader": "Rent a Schindelhauer, Specialized and many other brands",
     "featured-cities-header": "Explore a new city in style",
-    "featured-cities-subheader": "Rent a bike in Berlin, Munich, Amsterdam and other beautiful cities"
+    "featured-cities-subheader": "Rent a bike in Berlin, Munich, Amsterdam and other beautiful cities",
+    "list-a-bike-header": "Have your own bike?",
+    "list-a-bike-subheader": "List it and make money"
   },
 
   "autocomplete": {

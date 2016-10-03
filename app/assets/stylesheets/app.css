@@ -1,4 +1,5 @@
 // #5FC693: primary color
+// 4px    : border radius
 
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL
@@ -26,7 +27,7 @@ p.center-text {
 /* NAVBAR
 /*-----------------------------------------------------------------------------------*/
 
-.header {
+.lnr-header {
   position: fixed !important;
   top: 0px !important;
   width: 100%;
@@ -37,6 +38,21 @@ p.center-text {
   width: 90px;
 }
 
+.lnr-header .md-lined {
+  border-color: #ffffff;
+}
+
+.md-dropdown:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: #ffffff transparent transparent transparent;
+  position: absolute;
+  right: 0;
+  top: 13px;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* FOOTER
@@ -83,12 +99,13 @@ footer md-list-item::before {
 /*-----------------------------------------------------------------------------------*/
 
 home #landing-section {
-  background: url(../ui_images/landing.jpg) no-repeat center center; 
+  background: url(../ui_images/lnr_hero.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 78vh;
+  height: 86vh;
+  overflow: visible;
 }
 
 .lnr-search-bar {
@@ -111,6 +128,7 @@ home #landing-section {
 }
 
 .lnr-search-bar input[type=submit] {
+  font-weight: 500;
   color: #fff;
   background: #5FC693;
 }
@@ -124,15 +142,16 @@ home .section {
 }
 
 home #listBike {
-  height: 300px;
+  height: 320px;
   padding: 24px 0;
   background-size: cover;
-  background-position: 15% 100%;
-  background-image: url("../ui_images/landing.jpg");
+  background-position: 15% 40%;
+  background-image: url(../ui_images/lnr_listabike.jpg);
 }
 
 home md-grid-list {
-  margin: 8px;
+  // margin: 19px;
+  color: #fff;
 }
 
 home md-grid-list md-grid-tile {
@@ -141,24 +160,23 @@ home md-grid-list md-grid-tile {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: 50%;
 }
 
 home md-grid-list md-grid-tile.tile1 {
-  background-image: url("../ui_images/munich.jpg");
+  background-image: url(../ui_images/lnr_munich.jpg);
 }
 
 home md-grid-list md-grid-tile.tile2 {
-  background-image: url("../ui_images/berlin.jpg");
-  background-position: 45%;
+  background-image: url(../ui_images/lnr_london.jpg);
 }
 
 home md-grid-list md-grid-tile.tile3 {
-  background-image: url("../ui_images/amsterdam.jpg");
-  background-position: 47%;
+  background-image: url(../ui_images/lnr_berlin.jpg);
 }
 
 home md-grid-list md-grid-tile.tile4 {
-  background-image: url("../ui_images/vienna.jpg");
+  background-image: url(../ui_images/lnr_dublin.jpg);
 }
 
 @media (max-width: 599px) {
