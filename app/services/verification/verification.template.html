@@ -1,15 +1,7 @@
 <md-dialog flex="60" flex-sm="80">
   <md-toolbar hide show-xs>
     <div class="md-toolbar-tools" layout-align="center center">
-      <md-button class="md-icon-button">
-        <md-icon></md-icon>
-      </md-button>
-      <span flex></span>
       <br><h2>{{ 'verification.verification' | translate }}</h2><br>
-      <span flex></span>
-      <md-button class="md-icon-button" ng-click="loginDialog.hide()">
-        <md-icon md-svg-src="assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
-      </md-button>
     </div>
   </md-toolbar>
 
@@ -125,7 +117,8 @@
       </md-tabs>
       <div layout="row">
         <md-button ng-click="verificationDialog.hide()" ng-if="verificationDialog.firstTime">{{ 'shared.later' | translate }}</md-button>
-        <md-button class="md-warn" ng-click="verificationDialog.hide()" ng-if="!verificationDialog.firstTime">{{ 'shared.cancel' | translate }}</md-button>
+        <md-button ng-if="!verificationDialog.lister" class="md-warn" ng-click="verificationDialog.hide()" ng-if="!verificationDialog.firstTime">{{ 'shared.cancel' | translate }}</md-button>
+        <md-button ng-if="verificationDialog.lister" class="md-warn" ng-click="verificationDialog.hide()" ui-sref="home">{{ 'shared.cancel' | translate }}</md-button>
         <span flex></span>
         <md-button class="md-primary md-raised" ng-disabled="verificationDialog.nextDisabled()" ng-click="verificationDialog.next()">{{ 'shared.next' | translate }}</md-button>
       </div>

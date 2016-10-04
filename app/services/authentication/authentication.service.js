@@ -40,6 +40,15 @@ angular.
           });
         };
 
+        var showSignupError = function() {
+          $mdToast.show(
+            $mdToast.simple()
+            .textContent('Could not sign up. It seems the email address provided is already in use.')
+            .hideDelay(4000)
+            .position('top center')
+          );
+        }
+
         signupDialog.hide = function() {
           $mdDialog.hide();
         };
@@ -96,11 +105,10 @@ angular.
         }
 
         var showLoginError = function() {
-          $mdDialog.hide();
           $mdToast.show(
             $mdToast.simple()
-            .textContent('Error: Could not log in')
-            .hideDelay(3000)
+            .textContent('Could not log in. Please make sure you\'ve entered valid credentials and signed up already.')
+            .hideDelay(4000)
             .position('top center')
           );
         }
@@ -114,6 +122,7 @@ angular.
           };
           api.post('/users/login', user).then(function(response) {
             setCredentials(response.data.email, response.data.password_hashed, response.data.id, response.data.profile_picture.profile_picture.url, response.data.first_name, response.data.last_name);
+            $window.location.reload();
             showLoginSuccess();
           }, function(response) {
             showLoginError();
