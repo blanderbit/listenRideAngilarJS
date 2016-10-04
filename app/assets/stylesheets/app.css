@@ -11,6 +11,10 @@ html {
   min-width: 320px;
 }
 
+* {
+  outline: 0;
+}
+
 .preload {
   background-color: #EEEEEE;
 }
@@ -289,6 +293,10 @@ footer .md-subheader.md-default-theme, .md-subheader {
 
 footer md-list-item, footer md-list-item::before {
   min-height: 25px;
+}
+
+footer .link {
+  cursor: pointer;
 }
 
 search ng-map {

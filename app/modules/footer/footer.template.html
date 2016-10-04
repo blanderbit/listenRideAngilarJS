@@ -60,10 +60,10 @@
                 </md-menu-item>
               </md-menu-content>
             </md-menu>
-            <div id="iOSApp" layout-padding>Get the app</div>
+            <div id="iOSApp" class="link" ng-click="footer.onAppClick()" target="_blank" layout-padding>Get the app</div>
             <div layout="row" layout-align="space-between stretch" layout-padding>
-              <div>Fb</div>
-              <div>Inst</div>
+              <div class="link" ng-click="footer.onFacebookClick()" target="_blank">Fb</div>
+              <div class="link" ng-click="footer.onInstagramClick()" target="_blank">Inst</div>
             </div>
           </md-list>
         </div>
