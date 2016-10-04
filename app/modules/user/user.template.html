@@ -1,4 +1,5 @@
-<md-content class="single-column">
+<md-progress-linear ng-if="!user.loaded" md-mode="query"></md-progress-linear>
+<md-content class="single-column" ng-if="user.loaded">
   <div class="content" layout="row" layout-margin>
     <div flex="70" layout="row">
       <img class="profile-picture-big" ng-src="{{user.user.profile_picture.profile_picture.url}}">
@@ -40,4 +41,5 @@
       <p class="md-body-1">{{user.user.description}}</p>
     </div>
   </div>
+  <footer></footer>
 </md-content>
