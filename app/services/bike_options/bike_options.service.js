@@ -51,27 +51,27 @@ angular.module('listnride').factory('bike_options', [
       subcategoryOptions: function() {
         return {
           "1": [
-            {value: 0, label: "holland"},
-            {value: 1, label: "touring"},
+            {value: 0, label: "dutch-bike"},
+            {value: 1, label: "touring-bike"},
             {value: 2, label: "fixie"},
-            {value: 3, label: "single speed"}
+            {value: 3, label: "single-speed"}
           ],
           "2": [
-            {value: 0, label: "rennrad"},
+            {value: 0, label: "road-bike"},
             {value: 1, label: "triathlon"},
             {value: 2, label: "indoor"}
           ],
           "3": [
-            {value: 0, label: "trecking"},
+            {value: 0, label: "tracking"},
             {value: 1, label: "enduro"},
             {value: 2, label: "freeride"},
-            {value: 3, label: "cross country"},
+            {value: 3, label: "cross-country"},
             {value: 4, label: "downhill"},
             {value: 5, label: "cyclocross"}
           ],
           "4": [
             {value: 0, label: "city"},
-            {value: 1, label: "all terrain"},
+            {value: 1, label: "all-terrain"},
             {value: 2, label: "road"},
           ],
           "5": [
@@ -79,12 +79,12 @@ angular.module('listnride').factory('bike_options', [
             {value: 1, label: "e-bike"},
           ],
           "6": [
-            {value: 0, label: "klapprad"},
+            {value: 0, label: "folding-bike"},
             {value: 1, label: "tandem"},
             {value: 2, label: "cruiser"},
-            {value: 3, label: "cargo"},
-            {value: 4, label: "liegerad"},
-            {value: 5, label: "einrad"}
+            {value: 3, label: "cargo-bike"},
+            {value: 4, label: "recumbent"},
+            {value: 5, label: "mono-bike"}
           ],
         };
       }
