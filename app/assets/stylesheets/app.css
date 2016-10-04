@@ -98,10 +98,15 @@ p.center-text {
   text-align: center;
 }
 
-bike #hero-shot {
+#hero-shot {
   height: 60vh;
   background-size: cover;
   background-position: 50% 50%;
+}
+
+#hero-shot-overlay {
+  max-width: 970px;
+  margin: 0 auto;
 }
 
 @media (max-width: 599px) {

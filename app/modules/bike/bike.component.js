@@ -77,6 +77,10 @@ angular.module('bike').component('bike', {
       var CalendarDialogController = function() {
         var calendarDialog = this;
         calendarDialog.bike = bike;
+
+        calendarDialog.hide = function() {
+          $mdDialog.hide();
+        }
       }
     }
   ]

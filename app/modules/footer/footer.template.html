@@ -10,39 +10,39 @@
         <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'shared.top-cities' | translate }}</md-subheader>
-            <md-list-item class="md-body-1">{{ 'shared.berlin' | translate }}</md-list-item>
-            <md-list-item class="md-body-1">{{ 'shared.munich' | translate }}</md-list-item>
-            <md-list-item class="md-body-1">{{ 'shared.amsterdam' | translate }}</md-list-item>
-            <md-list-item class="md-body-1">{{ 'shared.vienna' | translate }}</md-list-item>
+            <md-list-item ui-sref="search({ location: 'Berlin' })" class="md-body-1">{{ 'shared.berlin' | translate }}</md-list-item>
+            <md-list-item ui-sref="search({ location: 'Munich' })" class="md-body-1">{{ 'shared.munich' | translate }}</md-list-item>
+            <md-list-item ui-sref="search({ location: 'Amsterdam' })" class="md-body-1">{{ 'shared.amsterdam' | translate }}</md-list-item>
+            <md-list-item ui-sref="search({ location: 'Vienna' })" class="md-body-1">{{ 'shared.vienna' | translate }}</md-list-item>
           </md-list>
         </div>
 
         <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'shared.learn-more' | translate }}</md-subheader>
-            <md-list-item class="md-body-1">{{ 'shared.how-it-works' | translate }}</md-list-item>
-            <md-list-item class="md-body-1">{{ 'shared.renting-a-bike' | translate }}</md-list-item>
-            <md-list-item class="md-body-1">{{ 'shared.listing-a-bike' | translate }}</md-list-item>
-            <md-list-item class="md-body-1">{{ 'shared.trust-and-safety' | translate }}</md-list-item>
+            <md-list-item ui-sref="howItWorks" class="md-body-1">{{ 'shared.how-it-works' | translate }}</md-list-item>
+            <md-list-item ui-sref="rentingABike" class="md-body-1">{{ 'shared.renting-a-bike' | translate }}</md-list-item>
+            <md-list-item ui-sref="listingABike" class="md-body-1">{{ 'shared.listing-a-bike' | translate }}</md-list-item>
+            <md-list-item ui-sref="trustAndSafety" class="md-body-1">{{ 'shared.trust-and-safety' | translate }}</md-list-item>
           </md-list>
         </div>
 
         <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start">
           <md-list>
             <md-subheader class="md-no-sticky">Listnride</md-subheader>
-            <md-list-item class="md-body-1">{{ 'footer.about' | translate }}</md-list-item>
-            <md-list-item class="md-body-1">{{ 'footer.press' | translate }}</md-list-item>
-            <md-list-item class="md-body-1">{{ 'footer.jobs' | translate }}</md-list-item>
-            <md-list-item class="md-body-1">{{ 'footer.contact' | translate }}</md-list-item>
+            <md-list-item ui-sref="about" class="md-body-1">{{ 'footer.about' | translate }}</md-list-item>
+            <md-list-item ui-sref="press" class="md-body-1">{{ 'footer.press' | translate }}</md-list-item>
+            <md-list-item ui-sref="jobs" class="md-body-1">{{ 'footer.jobs' | translate }}</md-list-item>
+            <md-list-item ui-sref="help" class="md-body-1">{{ 'footer.contact' | translate }}</md-list-item>
           </md-list>
         </div>
 
         <div layout="column" flex-xs="50" flex="20" layout-align-xs="start start" layout-align="start start">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'footer.legal' | translate }}</md-subheader>
-            <md-list-item class="md-body-1">{{ 'footer.terms-and-conditions' | translate }}</md-list-item>
-            <md-list-item class="md-body-1">{{ 'footer.privacy-statement' | translate }}</md-list-item>
-            <md-list-item class="md-body-1">{{ 'footer.imprint' | translate }}</md-list-item>
+            <md-list-item ui-sref="terms" class="md-body-1">{{ 'footer.terms-and-conditions' | translate }}</md-list-item>
+            <md-list-item ui-sref="privacy" class="md-body-1">{{ 'footer.privacy-statement' | translate }}</md-list-item>
+            <md-list-item ui-sref="imprint" class="md-body-1">{{ 'footer.imprint' | translate }}</md-list-item>
           </md-list>
         </div>
 
