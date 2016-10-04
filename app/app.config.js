@@ -125,10 +125,19 @@ angular.
       'A400': '#343940'
     }));
 
+    var LIGHT_FOREGROUND = {
+      name: 'light',
+      '1': 'rgba(85,84,85,1.0)',
+      '2': 'rgba(255,255,255,0.7)',
+      '3': 'rgba(255,255,255,0.3)',
+      '4': 'rgba(255,255,255,0.12)'
+    };
+
     $mdThemingProvider.theme('default')
         .primaryPalette('lnr-green')
         .accentPalette('lnr-blue')
-        .backgroundPalette('lnr-background');
+        .backgroundPalette('lnr-background')
+        .foregroundPalette['1'] = 'rgba(68,68,68,1.0)';
 
     $mdThemingProvider.theme('lnr-dark')
         .backgroundPalette('lnr-background')

@@ -19,7 +19,16 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0.34rem 0;
 }
 
-p.center-text {
+
+.lnr-center {
+  text-align: center;
+}
+
+.lnr-white {
+  color: #fff;
+}
+
+.center-text {
   text-align: center;
 }
 
@@ -147,11 +156,6 @@ home #listBike {
   background-size: cover;
   background-position: 15% 40%;
   background-image: url(../ui_images/lnr_listabike.jpg);
-}
-
-home md-grid-list {
-  // margin: 19px;
-  color: #fff;
 }
 
 home md-grid-list md-grid-tile {
