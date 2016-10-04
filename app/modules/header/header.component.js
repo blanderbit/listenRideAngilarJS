@@ -12,7 +12,6 @@ angular.module('header').component('header', {
       if (authentication.loggedIn) {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
-            console.log(success.data.profile_picture.profile_picture.url);
             header.profilePictureUrl = success.data.profile_picture.profile_picture.url;
           },
           function (error) {
