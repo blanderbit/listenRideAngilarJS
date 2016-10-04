@@ -42,15 +42,19 @@ angular.module('search').component('search', {
 
       populateBikes();
 
-      NgMap.getMap().then(function(map) {
+      NgMap.getMap({id: "searchMap"}).then(function(map) {
+        console.log(map, map.infoWindows.infoWindow);
         search.map = map;
       });
 
       search.showBikeWindow = function(evt, bikeId) {
-        search.selectedBike = search.bikes.find(function(bike) {
-          return bike.id == bikeId;
-        })
-        search.map.showInfoWindow('mapWindow', this);
+        if (search.map) {
+          search.selectedBike = search.bikes.find(function(bike) {
+            return bike.id == bikeId;
+          });
+
+          search.map.showInfoWindow('searchMapWindow', this);
+        }
       };
 
       search.onLocationChange = function() {
@@ -74,6 +78,13 @@ angular.module('search').component('search', {
         $state.go('.', categoryMap, {notify: false});
       };
 
+      search.onMapClick = function(event) {
+        if (search.map) {
+          search.map.hideInfoWindow('searchMapWindow');
+          search.selectedBike = undefined;
+        }
+      };
+
       function populateBikes() {
         api.get("/rides?location=" + search.location).then(function(response) {
           search.bikes = response.data;
@@ -82,6 +93,10 @@ angular.module('search').component('search', {
             search.mapOptions.lat = search.bikes[0].lat_rnd;
             search.mapOptions.lng = search.bikes[0].lng_rnd;
             search.mapOptions.zoom = 10;
+          } else {
+            search.mapOptions.lat = 51.1657;
+            search.mapOptions.lng = 10.4515;
+            search.mapOptions.zoom = 4;
           }
         }, function(error) {
           console.log("Error retrieving bikes");

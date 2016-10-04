@@ -33,19 +33,19 @@
     </div>
     
     <md-grid-list class="lnr-white" md-cols="1" md-cols-gt-xs="3" md-gutter="16px" md-row-height="1:1">
-      <md-grid-tile class="tile1" md-colspan-gt-xs="2">
+      <md-grid-tile class="tile1" md-colspan-gt-xs="2" ui-sref="search({ location: 'Munich' })">
         <h3 class="md-title">Munich</h3>
       </md-grid-tile>
 
-      <md-grid-tile class="tile2" md-rowspan-gt-xs="2">
+      <md-grid-tile class="tile2" md-rowspan-gt-xs="2" ui-sref="search({ location: 'Berlin' })">
         <h3 class="md-title">Berlin</h3>
       </md-grid-tile>
 
-      <md-grid-tile class="tile3">
+      <md-grid-tile class="tile3" ui-sref="search({ location: 'Amsterdam' })">
         <h3 class="md-title">Amsterdam</h3>
       </md-grid-tile>
 
-      <md-grid-tile class="tile4">
+      <md-grid-tile class="tile4" ui-sref="search({ location: 'Vienna' })">
         <h3 class="md-title">Vienna</h3>
       </md-grid-tile>
     </md-grid-list>

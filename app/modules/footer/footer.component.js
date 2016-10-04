@@ -4,18 +4,39 @@ angular.module('footer').component('footer', {
   templateUrl: 'app/modules/footer/footer.template.html',
   controllerAs: 'footer',
   controller: [
-    '$translate',
-    function FooterController($translate) {
+    '$window', '$translate',
+    function FooterController($window, $translate) {
       var footer = this;
-      footer.locale = 'en';
-      footer.language = "English";
 
-      // This function may be written in a better way (considering event passing and ng-models)
-      footer.switchLanguage = function(locale, language) {
+      footer.language = getLanguage($translate.use());
+
+      footer.switchLanguage = function(locale) {
         $translate.use(locale).then(function(data) {
-          footer.language = language;
+          footer.language = getLanguage(locale);
           document.querySelector("md-content").scrollTop = 0;
         });
+      }
+      footer.onFacebookClick = function() {
+        $window.open('https://www.facebook.com/Listnride', '_blank');
+      }    
+
+      footer.onInstagramClick = function() {
+        $window.open('https://instagram.com/listnride/', '_blank');
+      }
+      
+      footer.onAppClick = function() {
+        $window.open('https://itunes.apple.com/de/app/list-n-ride/id992114091?l=' + $translate.use(), '_blank');
+      }
+
+
+      function getLanguage(locale) {
+        if (locale === 'en') {
+          return footer.language = 'English';
+        } else if (locale === 'de') {
+          return footer.language = 'Deutsch';
+        } else {
+          return footer.language = 'Deutsch';
+        }
       }
     }
   ]

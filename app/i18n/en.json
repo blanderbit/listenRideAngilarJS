@@ -34,10 +34,16 @@
 
   },
 
+  "bike": {
+    "rent-bike": "Rent Bike"
+  },
+
   "requests": {
     "booking-overview": "Booking Overview",
     "book": "Book",
     "rating": "Rating",
+    "listChat": "Request by {{user.first_name}} {{user.last_name}}",
+    "rideChat": "Request at {{lister.first_name}} {{lister.last_name}}",
     "ratings": {
       "description": "Trust and Safety are our paramount concern. By writing a short review, you'll help the whole community.",
       "1": "Unacceptable",
@@ -69,10 +75,10 @@
   },
 
   "rideChat": {
-    "1": "You would like to rent the %1$s by %2$s from %3$s for %4$s days. Agree with the lister on further details. As soon as he accepts your request, you can book the ride.",
-    "2": "%1$s has accepted your request. Confirm the reservation, the payment will follow as the next step.",
-    "3": "Congratulation, You successfully booked the ride. Meet the lister as agreed and pick up the ride. Contact Details are as follows, we've also sent them to you via email.\n \nName: %1$s \nEmail address: %2$s.",
-    "4": "%1$s has confirmed the return of the ride.",
+    "1": "You would like to rent the {{ride.name}} by {{lister.first_name}} {{lister.last_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, you can book the ride.",
+    "2": "{{lister.first_name}} has accepted your request. Confirm the reservation, the payment will follow as the next step.",
+    "3": "Congratulation, You successfully booked the ride. Meet the lister as agreed and pick up the ride. Contact Details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Email address: {{lister.email}},<br>Address: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
+    "4": "{{lister.first_name}} has confirmed the return of the ride.",
     "5": "Finally, please rate the lister and the ride. This helps our community a lot and completes the rental.",
     "6": "Thanks for rating, the rental was successfully completed.",
     "8": "Unfortunately, the lister could't accept your request. Simply request some other great bikes.",
@@ -89,7 +95,8 @@
     "about": "About",
     "press": "Press",
     "jobs": "Jobs",
-    "contact": "Contact"
+    "contact": "Contact",
+    "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
 
   "forms": {
@@ -131,7 +138,68 @@
   },
 
   "list": {
-    "list-your-bike": "List your bike"
+    "list-your-bike": "List your bike",
+    "back": "Back",
+    "next": "Next",
+    "list-bike": "List My Bike",
+    "loading": "Bike is being uploaded. This may take a few moments.",
+    "accessories": {
+      "hint": "Edit accessories. Select the accessories, which you can provide with your bike.",
+      "accessories": "Accessories",
+      "lock": "Lock",
+      "helmet": "Helmet",
+      "lights": "Lights",
+      "basket": "Basket",
+      "trailer": "Trailer",
+      "childseat": "Childseat"
+    },
+    "category": {
+      "hint": "First, select the category of your bike. Then select the right subcategory.",
+      "category": "Category",
+      "city": "City",
+      "race": "Race",
+      "all-terrain": "All terrain",
+      "kids": "Kids",
+      "electro": "Electro",
+      "special": "Special"
+    },
+    "subcategories": {
+
+    },
+    "details": {
+      "hint": "Enter the bike brand, name and a description of your bike. The name should include the model and describe the bike to the point. e.g. Gazelle, Tour Populair, 2013. Then select a range for the appropriate riders height.",
+      "details": "Details",
+      "brand": "Brand",
+      "name": "Name",
+      "description": "Description",
+      "min-length-warning": "Length should be at least 100 characters",
+      "size": "Rider Height"
+    },
+    "pictures": {
+      "hint": "Now select some nice pictures of your bike. Here are some important photo tips for making your listing look ever better.",
+      "pictures": "Pictures",
+      "select-images": "Select images",
+      "remove": "Remove"
+    },
+    "location": {
+      "hint": "Where is your bike located? Don’t worry, the exact location of your bike will ONLY be forwarded when you have confirmed a rental request.",
+      "location": "Location",
+      "street-number": "Street and Number",
+      "zip": "Zip Code",
+      "city": "City",
+      "country": "Country"
+    },
+    "pricing": {
+      "hint": "Last, set an appropriate rental price. The price should be affordable and based on you ride and equipment. You may take similar listings as a reference.",
+      "pricing": "Pricing",
+      "half-daily-price": "Half-daily Price",
+      "daily-price": "Daily Price",
+      "weekly-price": "Weekly Price"
+    }
+  },
+
+  "edit": {
+    "edit-bike": "Edit Bike"
   },
 
   "listings": {

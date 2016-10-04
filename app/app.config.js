@@ -50,7 +50,7 @@ angular.
 
     $stateProvider.state({
       name: 'user',
-      url: '/user',
+      url: '/users/{userId}',
       template: '<user></user>'
     });
 
@@ -72,12 +72,84 @@ angular.
       template: '<listings></listings>'
     });
 
+    $stateProvider.state({
+      name: 'edit',
+      url: '/edit/{bikeId}',
+      template: '<edit></edit>'
+    });
+
+    $stateProvider.state({
+      name: 'about',
+      url: '/about',
+      templateUrl: 'app/modules/static/about.template.html'
+    });
+
+    $stateProvider.state({
+      name: 'rentingABike',
+      url: '/renting-a-bike',
+      templateUrl: 'app/modules/static/renting-a-bike.template.html'
+    });
+
+    $stateProvider.state({
+      name: 'listingABike',
+      url: '/listing-a-bike',
+      templateUrl: 'app/modules/static/listing-a-bike.template.html'
+    });
+
+    $stateProvider.state({
+      name: 'trustAndSafety',
+      url: '/trust-and-safety',
+      templateUrl: 'app/modules/static/trust-and-safety.template.html'
+    });
+
+    $stateProvider.state({
+      name: 'terms',
+      url: '/terms',
+      templateUrl: 'app/modules/static/terms.template.html'
+    });
+
+    $stateProvider.state({
+      name: 'help',
+      url: '/help',
+      templateUrl: 'app/modules/static/help.template.html'
+    });
+
+    $stateProvider.state({
+      name: 'jobs',
+      url: '/jobs',
+      templateUrl: 'app/modules/static/jobs.template.html'
+    });
+
+    $stateProvider.state({
+      name: 'press',
+      url: '/press',
+      templateUrl: 'app/modules/static/press.template.html'
+    });
+
+    $stateProvider.state({
+      name: 'imprint',
+      url: '/imprint',
+      templateUrl: 'app/modules/static/imprint.template.html'
+    });
+
+    $stateProvider.state({
+      name: 'privacy',
+      url: '/privacy',
+      templateUrl: 'app/modules/static/privacy.template.html'
+    });
+
+    $stateProvider.state({
+      name: 'howItWorks',
+      url: '/how-it-works',
+      templateUrl: 'app/modules/static/how-it-works.template.html'
+    });
+
     $translateProvider.useStaticFilesLoader({
       prefix: 'app/i18n/',
       suffix: '.json'
     });
 
-    $translateProvider.preferredLanguage('en');
+    $translateProvider.preferredLanguage('de');
     $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
 
 

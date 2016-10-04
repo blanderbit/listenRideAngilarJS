@@ -17,6 +17,8 @@ angular.module('requests').component('requests', {
       requests.loadingList = true;
       requests.loadingChat = false;
       requests.request.rideChat;
+      requests.request.chatFlow;
+      requests.userId = $localStorage.userId;
 
       api.get('/users/' + $localStorage.userId + '/requests').then(
         function(success) {
@@ -60,6 +62,14 @@ angular.module('requests').component('requests', {
         }
       };
 
+      requests.profilePicture = function(request) {
+        if ($localStorage.userId == request.user.id) {
+          return request.ride.image_file_1.thumb.url;
+        } else {
+          return request.user.profile_picture.url;
+        }
+      };
+
       var reloadRequest = function(requestId) {
         api.get('/requests/' + requestId).then(
           function(success) {
@@ -69,6 +79,7 @@ angular.module('requests').component('requests', {
               requests.request.glued = true;
               requests.request = success.data;
               requests.request.rideChat = $localStorage.userId == requests.request.user.id;
+              requests.request.rideChat? requests.request.chatFlow = "rideChat" : requests.request.chatFlow = "listChat";
               requests.loadingChat = false;
             }
           },
@@ -80,7 +91,6 @@ angular.module('requests').component('requests', {
 
       // This function handles booking and all necessary validations
       requests.confirmBooking = function() {
-        console.log("test");
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             if (success.data.current_payment_method) {
@@ -186,10 +196,10 @@ angular.module('requests').component('requests', {
         var chatDialog = this;
         chatDialog.requests = requests;
 
-        $timeout(function() {
-          $location.hash('end');
-          $anchorScroll();
-        }, 2000);
+        // $timeout(function() {
+        //   $location.hash('end');
+        //   $anchorScroll();
+        // }, 2000);
 
         chatDialog.hide = function() {
           $mdDialog.hide();

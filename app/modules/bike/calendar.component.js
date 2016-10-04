@@ -10,8 +10,8 @@ angular.module('bike').component('calendar', {
     priceWeek: '<',
     requests: '<'
   },
-  controller: ['$scope', '$localStorage', '$state', 'date', 'api',
-    function CalendarController($scope, $localStorage, $state, date, api) {
+  controller: ['$scope', '$localStorage', '$state', '$mdDialog', 'date', 'api', 'verification',
+    function CalendarController($scope, $localStorage, $state, $mdDialog, date, api, verification) {
       var calendar = this;
 
       initOverview();
@@ -53,20 +53,34 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.onBikeRequest = function() {
-        var data = {
-          user_id: $localStorage.userId,
-          ride_id: calendar.bikeId,
-          start_date: calendar.startDate.toISOString(),
-          end_date: calendar.endDate.toISOString()
-        };
+        $mdDialog.hide();
+        api.get('/users/' + $localStorage.userId).then(
+          function (success) {
+            var user = success.data;
+            if (user.has_address && user.confirmed_phone && user.status >= 1) {
+              var data = {
+                user_id: $localStorage.userId,
+                ride_id: calendar.bikeId,
+                start_date: calendar.startDate.toISOString(),
+                end_date: calendar.endDate.toISOString()
+              };
 
-        api.post('/requests', data).then(
-          function(response) {
-            $state.go('requests');
-            console.log("Success", response);
+              api.post('/requests', data).then(
+                function(response) {
+                  $state.go('requests');
+                  console.log("Success", response);
+                },
+                function(error) {
+                  console.log("Error posting request", error);
+                }
+              );
+            }
+            else {
+              verification.openDialog();
+            }
           },
-          function(error) {
-            console.log("Error posting request", error);
+          function (error) {
+
           }
         );
       };

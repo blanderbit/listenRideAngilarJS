@@ -1,32 +1,32 @@
 <md-content class="single-column">
   <form name="listBike" layout="column" layout-align="start center" layout-padding>
-    <h1>{{ 'list.list-your-bike' | translate }}</h1>
+    <h1>{{ 'edit.edit-bike' | translate }}</h1>
 
-    <md-tabs class="content" md-no-pagination md-dynamic-height md-no-ink md-no-ink-bar md-selected="list.selectedIndex" md-stretch-tabs="always">
+    <md-tabs class="content" md-no-pagination md-dynamic-height md-no-ink md-no-ink-bar md-selected="edit.selectedIndex" md-stretch-tabs="always">
       <md-tab ng-disabled="true" class="categories" label="{{ 'list.category.category' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="row" layout-align="space-between start">
-              <md-radio-group ng-model="list.form.mainCategory" layout="column" ng-change="list.categoryChange({{list.form.mainCategory}})">
-                <md-radio-button ng-repeat="cat in list.categoryOptions" value="{{cat.value}}">
+              <md-radio-group ng-model="edit.form.mainCategory" layout="column">
+                <md-radio-button ng-repeat="cat in edit.categoryOptions" value="{{cat.value}}">
                   {{ 'list.category.' + cat.label.replace(' ', '-') | translate }}
                 </md-radio-button>
               </md-radio-group>
 
-              <md-radio-group ng-model="list.form.subCategory" layout="column">
-                <md-radio-button ng-repeat="subcat in list.subcategoryOptions[list.form.mainCategory]" value="{{subcat.value}}">
+              <md-radio-group ng-model="edit.form.subCategory" layout="column">
+                <md-radio-button ng-repeat="subcat in edit.subcategoryOptions[edit.form.mainCategory]" value="{{subcat.value}}">
                   {{subcat.label}}
                 </md-radio-button>
               </md-radio-group>
             </div>
 
-            <div class="col2 md-whiteframe-1dp" flex="45" hide-xs>
-              {{ 'list.category.hint' | translate }}
+            <div class="col2" flex="45" hide-xs>
+              Information about the categories
             </div>
           </div>
           
           <div class="navigation" layout="row" layout-align="end center">
-            <md-button class="md-raised" ng-disabled="!list.isCategoryValid()" ng-click="list.nextTab()">{{ 'list.next' | translate }}</md-button>
+            <md-button class="md-raised" ng-disabled="!edit.isCategoryValid()" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
@@ -37,22 +37,22 @@
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-input-container>
                 <label>{{ 'list.details.brand' | translate }}</label>
-                <input required ng-model="list.form.brand">
+                <input required ng-model="edit.form.brand">
               </md-input-container>
 
               <md-input-container>
                 <label>{{ 'list.details.name' | translate }}</label>
-                <input required ng-model="list.form.name">
+                <input required ng-model="edit.form.name">
               </md-input-container>
 
               <md-input-container>
-                <label>{{ 'list.details.size' | translate }}</label>
-                <md-select required ng-model="list.form.size">
-                  <md-option ng-if="list.form.mainCategory == 4" ng-repeat="size in list.kidsSizeOptions" value="{{ size.value }}">
+                <label>{{ 'list.details.height' | translate }}</label>
+                <md-select required ng-model="edit.form.size">
+                  <md-option ng-if="edit.form.mainCategory == 4" ng-repeat="size in edit.kidsSizeOptions" value="{{ size.value }}">
                     {{ size.label }}
                   </md-option>
 
-                  <md-option ng-if="list.form.mainCategory != 4" ng-repeat="size in list.sizeOptions" value="{{ size.value }}">
+                  <md-option ng-if="edit.form.mainCategory != 4" ng-repeat="size in edit.sizeOptions" value="{{ size.value }}">
                     {{ size.label }}
                   </md-option>
                 </md-select>
@@ -60,21 +60,21 @@
 
               <md-input-container>
                 <label>{{ 'list.details.description' | translate }}</label>
-                <textarea required md-no-resize minlength="100" name="description" ng-model="list.form.description" rows="4"></textarea>
+                <textarea required md-no-resize minlength="100" name="description" ng-model="edit.form.description" rows="4"></textarea>
                 <div ng-messages="listBike.description.$error" role="alert">
                   <div ng-message="minlength">{{ 'list.details.min-length-warning' | translate }}</div>
                 </div>
               </md-input-container>
             </div>
 
-            <div class="col2 md-whiteframe-1dp" flex="45" hide-xs>
-              {{ 'list.details.hint' | translate }}
+            <div class="col2" flex="45" hide-xs>
+              Information about the bike details
             </div>
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
-            <md-button class="md-raised" ng-click="list.previousTab()">{{ 'list.back' | translate }}</md-button>
-            <md-button class="md-raised" ng-disabled="!list.isDetailsValid()" ng-click="list.nextTab()">{{ 'list.next' | translate }}</md-button>
+            <md-button class="md-raised" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
+            <md-button class="md-raised" ng-disabled="!edit.isDetailsValid()" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
@@ -83,19 +83,19 @@
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
-              <md-checkbox ng-repeat="acc in list.accessoryOptions" ng-model="list.form[acc.model]">
+              <md-checkbox ng-repeat="acc in edit.accessoryOptions" ng-model="edit.form[acc.model]">
                 {{ 'list.accessories.' + acc.label | translate }}
               </md-checkbox>
             </div>
 
-            <div class="col2 md-whiteframe-1dp" flex="45" hide-xs>
-              {{ 'list.accessories.hint' | translate }}
+            <div class="col2" flex="45" hide-xs>
+              Information about the bike accessories
             </div>
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
-            <md-button class="md-raised" ng-click="list.previousTab()">{{ 'list.back' | translate }}</md-button>
-            <md-button class="md-raised" ng-click="list.nextTab()">{{ 'list.next' | translate }}</md-button>
+            <md-button class="md-raised" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
+            <md-button class="md-raised" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
@@ -104,29 +104,29 @@
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
-              <md-button ng-disabled="list.form.images.length > 4" ngf-multiple="true"
-                ngf-select="list.addImage($files)" accept=".jpg,.jpeg">
+              <md-button ng-disabled="edit.form.images.length > 4" ngf-multiple="true"
+                ngf-select="edit.addImage($files)" accept=".jpg,.jpeg">
                 {{ 'list.pictures.select-images' | translate }}
               </md-button>
 
               <div class="preview-container" layout="column" layout-wrap layout-margin>
-                <div ng-repeat="img in list.form.images track by $index" layout="row" layout-align="space-between center">
+                <div ng-repeat="img in edit.form.images track by $index" layout="row" layout-align="space-between center">
                   <div class="img-preview" ngf-background="img" ngf-as-background="true"></div>
 
-                  <md-button ng-click="list.removeImage($index)">{{ 'list.pictures.remove' | translate}}</md-button>
+                  <md-button ng-click="edit.removeImage($index)">{{ 'list.pictures.remove' | translate}}</md-button>
                 </div>
               </div>
               
             </div>
 
-            <div class="col2 md-whiteframe-1dp" flex="45" hide-xs>
-              {{ 'list.pictures.hint' | translate }}
+            <div class="col2" flex="45" hide-xs>
+              Information about the bike pictures
             </div>
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
-            <md-button class="md-raised" ng-click="list.previousTab()">{{ 'list.back' | translate }}</md-button>
-            <md-button class="md-raised" ng-disabled="!list.isPictureValid()" ng-click="list.nextTab()">{{ 'list.next' | translate }}</md-button>
+            <md-button class="md-raised" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
+            <md-button class="md-raised" ng-disabled="!edit.isPictureValid()" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
@@ -137,33 +137,33 @@
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-input-container>
                 <label>{{ 'list.location.street-number' | translate }}</label>
-                <input required ng-model="list.form.street">
+                <input required ng-model="edit.form.street">
               </md-input-container>
 
               <md-input-container>
                 <label>{{ 'list.location.zip' | translate }}</label>
-                <input required ng-model="list.form.zip">
+                <input required ng-model="edit.form.zip">
               </md-input-container>
 
               <md-input-container>
                 <label>{{ 'list.location.city' | translate }}</label>
-                <input required ng-model="list.form.city">
+                <input required ng-model="edit.form.city">
               </md-input-container>
 
               <md-input-container>
                 <label>{{ 'list.location.country' | translate }}</label>
-                <input required ng-model="list.form.country">
+                <input required ng-model="edit.form.country">
               </md-input-container>
             </div>
 
-            <div class="col2 md-whiteframe-1dp" flex="45" hide-xs>
-              {{ 'list.location.hint' | translate }}
+            <div class="col2" flex="45" hide-xs>
+              Information about the bike location
             </div>
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
-            <md-button class="md-raised" ng-click="list.previousTab()">{{ 'list.back' | translate }}</md-button>
-            <md-button class="md-raised" ng-disabled="!list.isLocationValid()" ng-click="list.nextTab()">{{ 'list.next' | translate }}</md-button>
+            <md-button class="md-raised" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
+            <md-button class="md-raised" ng-disabled="!edit.isLocationValid()" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
@@ -174,28 +174,28 @@
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-input-container>
                 <label>{{ 'list.pricing.half-daily-price' | translate }} (€)</label>
-                <input type="number" required ng-model="list.form.price_half_daily">
+                <input type="number" required ng-model="edit.form.price_half_daily">
               </md-input-container>
 
               <md-input-container>
                 <label>{{ 'list.pricing.daily-price' | translate }} (€)</label>
-                <input type="number" required ng-model="list.form.price_daily">
+                <input type="number" required ng-model="edit.form.price_daily">
               </md-input-container>
 
               <md-input-container>
                 <label>{{ 'list.pricing.weekly-price' | translate }} (€)</label>
-                <input type="number" required ng-model="list.form.price_weekly">
+                <input type="number" required ng-model="edit.form.price_weekly">
               </md-input-container>
             </div>
 
-            <div class="col2 md-whiteframe-1dp" flex="45" hide-xs>
-              {{ 'list.pricing.hint' | translate }}
+            <div class="col2" flex="45" hide-xs>
+              Information about the bike pricing
             </div>
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
-            <md-button class="md-raised" ng-click="list.previousTab()">{{ 'list.back' | translate }}</md-button>
-            <md-button class="md-raised" ng-disabled="!list.isPricingValid() || list.submitDisabled" ng-click="list.onFormSubmit()">{{ 'list.list-bike' | translate }}</md-button>
+            <md-button class="md-raised" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
+            <md-button class="md-raised" ng-disabled="!edit.isPricingValid() || edit.submitDisabled" ng-click="edit.onFormSubmit()">{{ 'list.list-bike' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
