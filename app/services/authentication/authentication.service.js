@@ -114,6 +114,7 @@ angular.
           };
           api.post('/users/login', user).then(function(response) {
             setCredentials(response.data.email, response.data.password_hashed, response.data.id, response.data.profile_picture.profile_picture.url, response.data.first_name, response.data.last_name);
+            $window.location.reload();
             showLoginSuccess();
           }, function(response) {
             showLoginError();
