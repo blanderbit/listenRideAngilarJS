@@ -15,7 +15,7 @@
 
               <md-radio-group ng-model="list.form.subCategory" layout="column">
                 <md-radio-button ng-repeat="subcat in list.subcategoryOptions[list.form.mainCategory]" value="{{subcat.value}}">
-                  {{subcat.label}}
+                  {{ 'list.subcategory.' + list.form.mainCategory + '.' + subcat.label | translate }}
                 </md-radio-button>
               </md-radio-group>
             </div>
