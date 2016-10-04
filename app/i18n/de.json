@@ -34,6 +34,10 @@
 
   },
 
+  "bike": {
+    "rent-bike": "Fahrrad Mieten"
+  },
+
   "requests": {
     "booking-overview": "Buchungsübersicht",
     "book": "Buchen",

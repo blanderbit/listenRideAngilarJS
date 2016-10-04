@@ -47,6 +47,21 @@ angular.module('bike').component('bike', {
         });
       };
 
+      bike.showCalendarDialog = function() {
+        $mdDialog.show({
+          controller: CalendarDialogController,
+          controllerAs: 'calendarDialog',
+          templateUrl: 'app/modules/bike/calendarDialog.template.html',
+          // contentElement: '#calendar-dialog',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: true,
+          fullscreen: true // Only for -xs, -sm breakpoints.
+        });
+      }
+
       function GalleryDialogController($mdDialog, bikeData) {
         var galleryDialog = this;
         galleryDialog.image_1 = bikeData.image_file_1.image_file_1.url;
@@ -57,6 +72,11 @@ angular.module('bike').component('bike', {
         galleryDialog.hide = function() {
           $mdDialog.hide();
         }
+      }
+
+      var CalendarDialogController = function() {
+        var calendarDialog = this;
+        calendarDialog.bike = bike;
       }
     }
   ]
