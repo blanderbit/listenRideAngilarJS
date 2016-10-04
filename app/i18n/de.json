@@ -141,6 +141,7 @@
     "list-bike": "Rad einstellen",
     "loading": "Rad wird hochgeladen. Moment bitte.",
     "accessories": {
+      "hint": "Wähle das Zubehör, dass Du zur Verfügung stellen kannst.",
       "accessories": "Zubehör",
       "lock": "Schloss",
       "helmet": "Helm",
@@ -150,6 +151,7 @@
       "childseat": "Kindersitz"
     },
     "category": {
+      "hint": "Wähle zuerst die Kategorie Deines Rads. Wähle anschließend die passende Unterkategorie.",
       "category": "Kategorie",
       "city": "City",
       "race": "Straße",
@@ -162,6 +164,7 @@
 
     },
     "details": {
+      "hint": "Gebe Marke, Name und Beschreibung Deines Rads ein. Der Name sollte das Rad kurz beschreiben und das Model beinhalten. Z.B. Gazelle, Tour Populair, 2013. Wähle dann die passende Fahrergröße.",
       "details": "Details",
       "brand": "Marke",
       "name": "Name",
@@ -170,11 +173,13 @@
       "size": "Fahrergröße"
     },
     "pictures": {
+      "hint": "Wähle nun ein paar schöne Fotos Deines Rads. Hier sind einige Tipps, wie du deine eigenen Fotos aufnehmen solltest.",
       "pictures": "Fotos",
       "select-images": "Fotos Wählen",
       "remove": "Löschen"
     },
     "location": {
+      "hint": "Wo steht Dein Fahrrad? Keine Sorge, der genaue Standort wird erst übermittelt wenn Du eine Buchungsanfrage bestätigt hast.",
       "location": "Standort des Rads",
       "street-number": "Staße und Hausnr.",
       "zip": "PLZ",
@@ -182,6 +187,7 @@
       "country": "Land"
     },
     "pricing": {
+      "hint": "Nun setze noch einen angemessenen Mietpreis. Der Mietpreis sollte bezahlbar sein und sich nach Rad und Ausstattung richten. Schau Dir gern ähnliche Listings als Referenz an. ",
       "pricing": "Preis",
       "half-daily-price": "Halber Tag",
       "daily-price": "Ganzer Tag",

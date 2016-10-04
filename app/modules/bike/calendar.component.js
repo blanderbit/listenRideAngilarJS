@@ -10,8 +10,8 @@ angular.module('bike').component('calendar', {
     priceWeek: '<',
     requests: '<'
   },
-  controller: ['$scope', '$localStorage', '$state', 'date', 'api', 'verification',
-    function CalendarController($scope, $localStorage, $state, date, api, verification) {
+  controller: ['$scope', '$localStorage', '$state', '$mdDialog', 'date', 'api', 'verification',
+    function CalendarController($scope, $localStorage, $state, $mdDialog, date, api, verification) {
       var calendar = this;
 
       initOverview();
@@ -53,6 +53,7 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.onBikeRequest = function() {
+        $mdDialog.hide();
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             var user = success.data;
