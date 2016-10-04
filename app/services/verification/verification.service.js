@@ -184,11 +184,11 @@ angular.
         };
       };
 
-      var openDialog = function(lister) {
+      var openDialog = function(event, lister) {
         $mdDialog.show({
           controller: VerificationDialogController,
           locals: {
-            lister: "blabla"
+            lister: lister
           },
           controllerAs: 'verificationDialog',
           templateUrl: 'app/services/verification/verification.template.html',
