@@ -11,6 +11,10 @@ html {
   min-width: 320px;
 }
 
+.preload {
+  background-color: #EEEEEE;
+}
+
 .lnr-header {
   height: 60px !important;
 }

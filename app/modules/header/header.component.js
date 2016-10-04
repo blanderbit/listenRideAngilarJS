@@ -10,6 +10,7 @@ angular.module('header').component('header', {
       header.verification = verification;
       header.profilePicture = $localStorage.profilePicture;
       header.name = $localStorage.name;
+      header.userId = $localStorage.userId;
 
       // if (authentication.loggedIn()) {
       //   console.log("reloading header");
