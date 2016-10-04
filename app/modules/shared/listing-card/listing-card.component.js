@@ -18,11 +18,11 @@ angular.module('listingCard').component('listingCard', {
 
       listingCard.onDeleteClick = function(ev) {
         var confirm = $mdDialog.confirm()
-              .title($translate.instant("listingCard.dialog-title"))
-              .textContent($translate.instant("listingCard.dialog-subtitle"))
-              .targetEvent(ev)
-              .ok($translate.instant("listingCard.delete"))
-              .cancel($translate.instant("listingCard.cancel"));
+          .title($translate.instant("listingCard.dialog-title"))
+          .textContent($translate.instant("listingCard.dialog-subtitle"))
+          .targetEvent(ev)
+          .ok($translate.instant("listingCard.delete"))
+          .cancel($translate.instant("listingCard.cancel"));
 
         $mdDialog.show(confirm).then(function() {
           deleteBike();

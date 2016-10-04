@@ -15,6 +15,7 @@ angular.module('listnride', [
   'autocomplete',
   'listings',
   'listingCard',
+  'edit',
   /* external modules */
   'ngMaterial',
   'ngMessages',

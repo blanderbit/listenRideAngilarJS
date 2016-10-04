@@ -3,8 +3,8 @@
 angular.module('list').component('list', {
   templateUrl: 'app/modules/list/list.template.html',
   controllerAs: 'list',
-  controller: ['$localStorage', '$state', 'Upload', 'bike_options', 'api',
-    function ListController($localStorage, $state, Upload, bike_options, api) {
+  controller: ['$mdDialog', '$localStorage', '$state', 'Upload', 'bike_options', 'api', '$timeout',
+    function ListController($mdDialog, $localStorage, $state, Upload, bike_options, api, $timeout) {
       var list = this;
 
       list.form = {
@@ -20,6 +20,7 @@ angular.module('list').component('list', {
 
       list.onFormSubmit = function() {
         list.submitDisabled = true;
+        showLoadingDialog();
 
         var ride = {
           "ride[name]": list.form.name,
@@ -57,10 +58,12 @@ angular.module('list').component('list', {
           }
         }).then(
           function(response) {
-            $state.go("bike", {bikeId: response.data.id});
+            hideLoadingDialog();
+            $state.go("listings");
           },
           function(error) {
             list.submitDisabled = false;
+            hideLoadingDialog();
             console.log("Error while listing bike", error);
           }
         );
@@ -93,6 +96,7 @@ angular.module('list').component('list', {
       list.isDetailsValid = function() {
         return list.form.name !== undefined &&
           list.form.brand !== undefined &&
+          list.form.size !== undefined &&
           list.form.description !== undefined &&
           list.form.description.length >= 100;
       };
@@ -112,6 +116,26 @@ angular.module('list').component('list', {
         return list.form.price_half_daily !== undefined &&
           list.form.price_daily !== undefined &&
           list.form.price_weekly !== undefined;
+      };
+
+      list.categoryChange = function(oldCategory) {
+        if (list.form.mainCategory == 4 || oldCategory == 4) {
+          list.form.size = undefined;
+        }
+      };
+
+      var loadingDialog;
+
+      function showLoadingDialog() {
+        var loadingDialog = $mdDialog.show({
+          parent: angular.element(document.body),
+          templateUrl: 'app/modules/list/loadingDialog.template.html',
+          fullscreen: true
+        });
+      };
+
+      function hideLoadingDialog() {
+        $mdDialog.hide(loadingDialog);
       };
 
     }

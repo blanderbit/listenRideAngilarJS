@@ -273,7 +273,7 @@ home md-grid-list md-grid-tile.tile3 {
   background-position: 47%;
 }
 
-home md-grid-list md-grid-tile.tile4 {
+home md-list md-tabs .img-previewgrid-list md-grid-tile.tile4 {
   background-image: url("../ui_images/vienna.jpg");
 }
 
@@ -312,20 +312,24 @@ autocomplete #autocompleteSearch {
   width: 100%;
 }
 
-list md-tabs {
+list md-tabs,
+edit md-tabs {
   padding: 0 !important;
   width: 100%;
 }
 
-list md-tabs md-input-container {
+list md-tabs md-input-container,
+edit md-tabs md-input-container {
   margin: 8px 0;
 }
 
-list md-tabs .col1 {
+list md-tabs .col1,
+edit md-tabs .col1 {
   min-height: 370px;
 }
 
-list md-tabs .img-preview {
+list md-tabs .img-preview,
+edit md-tabs .img-preview {
   height: 100px;
   width: 150px;
   background-position: center;
