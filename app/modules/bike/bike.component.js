@@ -3,8 +3,8 @@
 angular.module('bike').component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$mdDialog', 'NgMap',
-    function BikeController(api, $stateParams, $mdDialog, NgMap) {
+  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', 'NgMap',
+    function BikeController(api, $stateParams, $mdDialog, $mdMedia, NgMap) {
       var bike = this;
 
       bike.mapOptions = {
@@ -12,6 +12,15 @@ angular.module('bike').component('bike', {
         lng: 0,
         zoom: 14,
         radius: 500
+      };
+
+      bike.mobileCalendar = function() {
+        if ($mdMedia('xs') || $mdMedia('sm')) {
+          return true;
+        }
+        else {
+          return false;
+        }
       };
 
       api.get('/rides/' + $stateParams.bikeId).then(
