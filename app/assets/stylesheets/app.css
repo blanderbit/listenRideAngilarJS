@@ -11,6 +11,10 @@ html {
   min-width: 320px;
 }
 
+.preload {
+  background-color: #EEEEEE;
+}
+
 .lnr-header {
   height: 60px !important;
 }
@@ -298,6 +302,14 @@ search .map-column {
 
 search #searchBox {
   width: 200px;
+}
+
+search ng-map md-card {
+  max-width: 200px;
+  margin: 0;
+}
+search ng-map .gm-style-iw {
+  width: 200px !important;
 }
 
 bike-card md-card {

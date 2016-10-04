@@ -42,15 +42,19 @@ angular.module('search').component('search', {
 
       populateBikes();
 
-      NgMap.getMap().then(function(map) {
+      NgMap.getMap({id: "searchMap"}).then(function(map) {
+        console.log(map, map.infoWindows.infoWindow);
         search.map = map;
       });
 
       search.showBikeWindow = function(evt, bikeId) {
-        search.selectedBike = search.bikes.find(function(bike) {
-          return bike.id == bikeId;
-        })
-        search.map.showInfoWindow('mapWindow', this);
+        if (search.map) {
+          search.selectedBike = search.bikes.find(function(bike) {
+            return bike.id == bikeId;
+          });
+
+          search.map.showInfoWindow('searchMapWindow', this);
+        }
       };
 
       search.onLocationChange = function() {
@@ -72,6 +76,13 @@ angular.module('search').component('search', {
         var categoryMap = {};
         categoryMap[category] = search.categoryFilter[category];
         $state.go('.', categoryMap, {notify: false});
+      };
+
+      search.onMapClick = function(event) {
+        if (search.map) {
+          search.map.hideInfoWindow('searchMapWindow');
+          search.selectedBike = undefined;
+        }
       };
 
       function populateBikes() {
