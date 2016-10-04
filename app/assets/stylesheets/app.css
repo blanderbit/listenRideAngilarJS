@@ -46,12 +46,25 @@ requests, search {
   background-size: cover;
 }
 
+.profile-picture-big {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
+  /*background-position: 50% 50%;*/
+  background-size: cover;
+}
+
 .profile-picture-button {
   height: 40px;
   width: 40px;
-  border-radius: 20;
-  -webkit-border-radius: 20;
-  -moz-border-radius: 20;
+  border-radius: 20px;
+  min-width: 40px !important;
+  max-width: 40px !important;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  padding: 0px !important!;
 }
 
 .content {

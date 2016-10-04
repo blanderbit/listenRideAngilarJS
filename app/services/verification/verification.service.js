@@ -66,7 +66,7 @@ angular.
             function (success) {
               $mdToast.show(
                 $mdToast.simple()
-                .textContent('Address was successfully entered')
+                .textContent('Congratulations, your profile was successfully verified!')
                 .hideDelay(4000)
                 .position('top center')
               );
