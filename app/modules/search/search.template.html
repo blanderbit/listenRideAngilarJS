@@ -1,6 +1,6 @@
 <div flex layout="row" layout-xs="column" layout-fill>
 
-  <div flex-xs="65" flex-gt-xs="60" flex-order-xs="2" layout="column">
+  <div flex-xs="100" flex-gt-xs="60" flex-order-xs="2" layout="column">
     <div layout="column" layout-padding>
 
       <form layout="row" ng-submit="search.onLocationChange()">
@@ -53,7 +53,7 @@
     </md-content>
   </div>
 
-  <div flex-xs="35" flex-gt-xs="40" flex-order-xs="1" layout="column" class="map-column">
+  <div flex-xs="35" flex-gt-xs="40" flex-order-xs="1" layout="column" class="map-column" hide-xs>
     <ng-map ng-if="search.bikes !== undefined" default-style="false" center="[{{search.mapOptions.lat}},{{search.mapOptions.lng}}]" zoom="{{search.mapOptions.zoom}}">
       <marker ng-repeat="bike in search.bikes | filter:search.sizeFilter | map_category:search.categoryFilter" id="bike.id" position="{{bike.lat_rnd}},{{bike.lng_rnd}}" on-click="search.showBikeWindow(event, bike.id)">
       </marker>
