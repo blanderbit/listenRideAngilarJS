@@ -319,6 +319,10 @@ edit md-tabs .img-preview {
   background-size: cover;
 }
 
+list md-tabs .md-whiteframe-1dp {
+  background-color: white;
+}
+
 listings #myBikes {
   min-height: 350px;
   width: 100%;
