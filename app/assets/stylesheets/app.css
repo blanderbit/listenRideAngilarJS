@@ -1,5 +1,7 @@
 // #5FC693: primary color
 // 4px    : border radius
+// Added to material
+// md-lined, md-right-arrow
 
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL
@@ -12,6 +14,10 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0.34rem 0;
+}
+
+* {
+  outline: 0;
 }
 
 .content {
@@ -27,12 +33,20 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-.center-text {
-  text-align: center;
+.lnr-link {
+  cursor: pointer;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
 }
 
-* {
-  outline: 0;
+.lnr-link:hover,
+.lnr-link:active {
+  opacity: 0.6;
+}
+
+.center-text {
+  text-align: center;
 }
 
 .preload {
@@ -59,30 +73,26 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #ffffff;
 }
 
-.md-dropdown:after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 4px 4px 0 4px;
-  border-color: #ffffff transparent transparent transparent;
-  position: absolute;
-  right: 0;
-  top: 13px;
-}
 
 /*-----------------------------------------------------------------------------------*/
 /* FOOTER
 /*-----------------------------------------------------------------------------------*/
 
 footer md-list-item,
-footer md-list-item::before {
-  min-height: 25px;
+footer md-list-item:before {
+  min-height: 30px;
 }
 
 .lnr-btn-ios img {
-  height: 38px;
-  width: auto;
+  height: auto;
+  width: 154px;
+  padding: 0;
+}
+
+.lnr-btn-lang {
+  width: 154px;
+  text-align: left;
+  padding-left: 14px;
 }
 
 
@@ -127,6 +137,7 @@ home #landing-section {
 
 .lnr-search-bar {
   width: 52%;
+  max-width: 720px;
   margin-bottom: -30px;
   border-radius: 4px;
   overflow: hidden;
@@ -173,6 +184,7 @@ home md-grid-list md-grid-tile {
   -o-background-size: cover;
   background-size: cover;
   background-position: 50%;
+  cursor: pointer;
 }
 
 home md-grid-list md-grid-tile.tile1 {
@@ -202,6 +214,9 @@ home md-grid-list md-grid-tile.tile4 {
   }
   .lnr-search-bar {
     width: 90%
+  }
+  home md-grid-list md-grid-tile {
+    border-radius: 0;
   }
 }
 

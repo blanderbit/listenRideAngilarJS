@@ -10,7 +10,7 @@
   <md-button ui-sref="list" ng-click="sidebar.toggle()">{{ 'shared.list-a-bike' | translate }}</md-button>
   <md-button ui-sref="howItWorks" ng-click="sidebar.toggle()">{{ 'shared.how-it-works' | translate }}</md-button>
   <md-button ui-sref="trustAndSafety" ng-click="sidebar.toggle()">{{ 'shared.trust-and-safety' | translate }}</md-button>
-  <md-divider></md-divider>
+  <md-divider ng-if="sidebar.authentication.loggedIn()"></md-divider>
   <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="home" ng-click="sidebar.toggle(); sidebar.authentication.logout()">{{ 'forms.log-out' | translate }}</md-button>
   <div flex></div>
 </md-sidenav>
