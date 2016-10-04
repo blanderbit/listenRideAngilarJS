@@ -1,0 +1,45 @@
+<md-progress-linear ng-if="!user.loaded" md-mode="query"></md-progress-linear>
+<md-content class="single-column" ng-if="user.loaded">
+  <div class="content" layout="row" layout-margin>
+    <div flex="70" layout="row">
+      <img class="profile-picture-big" ng-src="{{user.user.profile_picture.profile_picture.url}}">
+      <div flex="5"></div>
+      <div layout="column" layout-align="center start">
+        <p class="md-headline">{{user.user.first_name}} {{user.user.last_name}}</p>
+        <p class="md-caption">No Rating yet</p>
+        <p class="md-body-1">{{user.user.city}}, {{user.user.country}}
+      </div>
+    </div>
+    <div flex="30" layout="column" layout-align="center start">
+      <p class="md-body-1" ng-if="user.user.confirmed_phone">● Verified Phone Number</p>
+      <p class="md-body-1" ng-if="user.user.status > 0">● Verified Email Address</p>
+      <p class="md-body-1" ng-if="user.user.current_payment_method">● Verified Payment Data</p>
+    </div>
+  </div>
+  <md-divider></md-divider>
+  <div class="content" layout="row" layout-margin>
+    <div flex="20">
+      <p class="md-body-2">Description</p>
+    </div>
+    <div flex="80">
+      <p class="md-body-1">{{user.user.description}}</p>
+    </div>
+  </div>
+  <div class="content" layout="row" layout-margin>
+    <div flex="20">
+      <p class="md-body-2">Listings</p>
+    </div>
+    <div flex="80">
+      <p class="md-body-1">{{user.user.description}}</p>
+    </div>
+  </div>
+  <div class="content" layout="row" layout-margin>
+    <div flex="20">
+      <p class="md-body-2">Reviews</p>
+    </div>
+    <div flex="80">
+      <p class="md-body-1">{{user.user.description}}</p>
+    </div>
+  </div>
+  <footer></footer>
+</md-content>

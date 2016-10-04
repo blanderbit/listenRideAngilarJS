@@ -11,6 +11,10 @@ html {
   min-width: 320px;
 }
 
+.preload {
+  background-color: #EEEEEE;
+}
+
 .lnr-header {
   height: 60px !important;
 }
@@ -46,12 +50,25 @@ requests, search {
   background-size: cover;
 }
 
+.profile-picture-big {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
+  /*background-position: 50% 50%;*/
+  background-size: cover;
+}
+
 .profile-picture-button {
   height: 40px;
   width: 40px;
-  border-radius: 20;
-  -webkit-border-radius: 20;
-  -moz-border-radius: 20;
+  border-radius: 20px;
+  min-width: 40px !important;
+  max-width: 40px !important;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  padding: 0px !important!;
 }
 
 .content {
@@ -81,10 +98,15 @@ p.center-text {
   text-align: center;
 }
 
-bike #hero-shot {
+#hero-shot {
   height: 60vh;
   background-size: cover;
   background-position: 50% 50%;
+}
+
+#hero-shot-overlay {
+  max-width: 970px;
+  margin: 0 auto;
 }
 
 @media (max-width: 599px) {
@@ -287,6 +309,14 @@ search #searchBox {
   width: 200px;
 }
 
+search ng-map md-card {
+  max-width: 200px;
+  margin: 0;
+}
+search ng-map .gm-style-iw {
+  width: 200px !important;
+}
+
 bike-card md-card {
   cursor: pointer;
 }
@@ -295,20 +325,24 @@ autocomplete #autocompleteSearch {
   width: 100%;
 }
 
-list md-tabs {
+list md-tabs,
+edit md-tabs {
   padding: 0 !important;
   width: 100%;
 }
 
-list md-tabs md-input-container {
+list md-tabs md-input-container,
+edit md-tabs md-input-container {
   margin: 8px 0;
 }
 
-list md-tabs .col1 {
+list md-tabs .col1,
+edit md-tabs .col1 {
   min-height: 370px;
 }
 
-list md-tabs .img-preview {
+list md-tabs .img-preview,
+edit md-tabs .img-preview {
   height: 100px;
   width: 150px;
   background-position: center;

@@ -26,7 +26,7 @@
         </md-menu-item>
         <md-menu-divider></md-menu-divider>
         <md-menu-item>
-          <md-button disabled="disabled" ng-click="header.checkVoicemail()">{{  'shared.trust-and-safety' | translate }}</md-button>
+          <md-button ui-sref="trust-and-safety">{{  'shared.trust-and-safety' | translate }}</md-button>
         </md-menu-item>
 
       </md-menu-content>
@@ -38,21 +38,21 @@
 
     <md-menu md-position-mode="target bottom" ng-if="header.authentication.loggedIn()">
       <md-button ng-click="$mdOpenMenu($event)" class="profile-picture-button">
-        <img ng-src="{{header.profilePictureUrl}}" class="profile-picture"></img>
+        <img ng-src="{{header.profilePicture}}" class="profile-picture"></img>
       </md-button>
       <md-menu-content>
         <md-menu-item>
-          <md-button ng-click="">
+          <md-button ui-sref="user({userId: header.userId})">
             Profile
           </md-button>
         </md-menu-item>
         <md-menu-item>
-          <md-button ng-click="">
+          <md-button ui-sref="listings">
             Listings
           </md-button>
         </md-menu-item>
         <md-menu-item>
-          <md-button ng-click="">
+          <md-button ui-sref="requests">
             Requests
           </md-button>
         </md-menu-item>
