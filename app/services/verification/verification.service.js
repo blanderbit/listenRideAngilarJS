@@ -5,11 +5,13 @@ angular.
   factory('verification', ['$mdDialog', '$mdToast', '$interval', '$localStorage', '$state', 'api',
     function($mdDialog, $mdToast, $interval, $localStorage, $state, api) {
 
-      var VerificationDialogController = function() {
+      var VerificationDialogController = function(lister) {
         var verificationDialog = this;
         var poller = $interval(function() {
           reloadUser();
         }, 5000);
+
+        verificationDialog.lister = lister;
 
         verificationDialog.selectedIndex;
         verificationDialog.activeTab = 1;
@@ -64,6 +66,7 @@ angular.
           };
           api.put('/users/' + $localStorage.userId, data).then(
             function (success) {
+              $state.go('list');
               $mdToast.show(
                 $mdToast.simple()
                 .textContent('Congratulations, your profile was successfully verified!')
@@ -181,9 +184,12 @@ angular.
         };
       };
 
-      var openDialog = function() {
+      var openDialog = function(lister) {
         $mdDialog.show({
           controller: VerificationDialogController,
+          locals: {
+            lister: "blabla"
+          },
           controllerAs: 'verificationDialog',
           templateUrl: 'app/services/verification/verification.template.html',
           parent: angular.element(document.body),
@@ -191,6 +197,7 @@ angular.
           openFrom: angular.element(document.body),
           closeTo: angular.element(document.body),
           clickOutsideToClose: false,
+          escapeToClose: false,
           fullscreen: true
         });
       }

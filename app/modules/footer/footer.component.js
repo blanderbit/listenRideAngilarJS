@@ -4,8 +4,8 @@ angular.module('footer').component('footer', {
   templateUrl: 'app/modules/footer/footer.template.html',
   controllerAs: 'footer',
   controller: [
-    '$translate',
-    function FooterController($translate) {
+    '$window', '$translate',
+    function FooterController($window, $translate) {
       var footer = this;
 
       footer.language = getLanguage($translate.use());
@@ -16,6 +16,18 @@ angular.module('footer').component('footer', {
           document.querySelector("md-content").scrollTop = 0;
         });
       }
+      footer.onFacebookClick = function() {
+        $window.open('https://www.facebook.com/Listnride', '_blank');
+      }    
+
+      footer.onInstagramClick = function() {
+        $window.open('https://instagram.com/listnride/', '_blank');
+      }
+      
+      footer.onAppClick = function() {
+        $window.open('https://itunes.apple.com/de/app/list-n-ride/id992114091?l=' + $translate.use(), '_blank');
+      }
+
 
       function getLanguage(locale) {
         if (locale === 'en') {

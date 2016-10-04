@@ -93,6 +93,10 @@ angular.module('search').component('search', {
             search.mapOptions.lat = search.bikes[0].lat_rnd;
             search.mapOptions.lng = search.bikes[0].lng_rnd;
             search.mapOptions.zoom = 10;
+          } else {
+            search.mapOptions.lat = 51.1657;
+            search.mapOptions.lng = 10.4515;
+            search.mapOptions.zoom = 4;
           }
         }, function(error) {
           console.log("Error retrieving bikes");
