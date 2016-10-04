@@ -269,7 +269,7 @@ home md-grid-list md-grid-tile.tile3 {
   background-position: 47%;
 }
 
-home md-list md-tabs .img-previewgrid-list md-grid-tile.tile4 {
+home md-grid-list md-grid-tile.tile4 {
   background-image: url("../ui_images/vienna.jpg");
 }
 
