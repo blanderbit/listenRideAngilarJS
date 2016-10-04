@@ -135,6 +135,7 @@
     "back": "Back",
     "next": "Next",
     "list-bike": "List My Bike",
+    "loading": "Bike is being uploaded. This may take a few moments.",
     "accessories": {
       "accessories": "Accessories",
       "lock": "Lock",
@@ -162,7 +163,7 @@
       "name": "Name",
       "description": "Description",
       "min-length-warning": "Length should be at least 100 characters",
-      "height": "Rider Height"
+      "size": "Rider Height"
     },
     "pictures": {
       "pictures": "Pictures",

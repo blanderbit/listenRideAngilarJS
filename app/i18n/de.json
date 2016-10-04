@@ -135,6 +135,7 @@
     "back": "Zürück",
     "next": "Weiter",
     "list-bike": "Rad einstellen",
+    "loading": "Rad wird hochgeladen. Moment bitte.",
     "accessories": {
       "accessories": "Zubehör",
       "lock": "Schloss",
@@ -162,7 +163,7 @@
       "name": "Name",
       "description": "Beschreibung",
       "min-length-warning": "100 Buchstabe",
-      "height": "Fahrergröße"
+      "size": "Fahrergröße"
     },
     "pictures": {
       "pictures": "Fotos",

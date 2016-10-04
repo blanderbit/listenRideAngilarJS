@@ -7,7 +7,7 @@
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="row" layout-align="space-between start">
-              <md-radio-group ng-model="list.form.mainCategory" layout="column">
+              <md-radio-group ng-model="list.form.mainCategory" layout="column" ng-change="list.categoryChange({{list.form.mainCategory}})">
                 <md-radio-button ng-repeat="cat in list.categoryOptions" value="{{cat.value}}">
                   {{ 'list.category.' + cat.label.replace(' ', '-') | translate }}
                 </md-radio-button>
@@ -46,7 +46,7 @@
               </md-input-container>
 
               <md-input-container>
-                <label>{{ 'list.details.height' | translate }}</label>
+                <label>{{ 'list.details.size' | translate }}</label>
                 <md-select required ng-model="list.form.size">
                   <md-option ng-if="list.form.mainCategory == 4" ng-repeat="size in list.kidsSizeOptions" value="{{ size.value }}">
                     {{ size.label }}
