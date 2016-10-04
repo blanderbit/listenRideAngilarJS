@@ -18,8 +18,8 @@
   <!-- Left Column displaying list of all Requests -->
   <md-content flex class="requests-list" flex-order="1" md-whiteframe="1">
     <md-progress-linear ng-if="requests.loadingList" md-mode="query"></md-progress-linear>
-    <div layout="column" layout-align="center center" layout-fill>
-      <p class="center-text" ng-if="requests.requests.length == 0">As soon as you've made or got requests, they'll show up here</p>
+    <div layout="column" layout-align="center center" layout-fill ng-if="!requests.loadingList && requests.requests.length == 0">
+      <p class="center-text">As soon as you've made or got requests, they'll show up here</p>
     </div>
     <md-list md-no-ink ng-if="requests.requests != []">
           <div ng-repeat="request in requests.requests | orderBy: '-updated_at'">

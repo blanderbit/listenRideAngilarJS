@@ -154,7 +154,7 @@ angular.
           ezfb.getLoginStatus(function(response) {
             if (response.status === 'connected') {
               ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                console.log(resopnse);
+                console.log(response);
                 loginFb(response.email, response.id);
               });
             } else {
