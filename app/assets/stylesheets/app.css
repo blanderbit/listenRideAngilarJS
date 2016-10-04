@@ -98,13 +98,13 @@ p.center-text {
   text-align: center;
 }
 
-bike #hero-shot {
+#hero-shot {
   height: 60vh;
   background-size: cover;
   background-position: 50% 50%;
 }
 
-bike #hero-shot-overlay {
+#hero-shot-overlay {
   max-width: 970px;
   margin: 0 auto;
 }
@@ -278,7 +278,7 @@ home md-grid-list md-grid-tile.tile3 {
   background-position: 47%;
 }
 
-home md-list md-tabs .img-previewgrid-list md-grid-tile.tile4 {
+home md-grid-list md-grid-tile.tile4 {
   background-image: url("../ui_images/vienna.jpg");
 }
 
