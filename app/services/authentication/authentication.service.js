@@ -40,6 +40,16 @@ angular.
           });
         };
 
+        var showSignupError = function() {
+          $mdDialog.hide();
+          $mdToast.show(
+            $mdToast.simple()
+            .textContent('Could not sign up. It seems the email address provided is already in use.')
+            .hideDelay(4000)
+            .position('top center')
+          );
+        }
+
         signupDialog.hide = function() {
           $mdDialog.hide();
         };
@@ -99,8 +109,8 @@ angular.
           $mdDialog.hide();
           $mdToast.show(
             $mdToast.simple()
-            .textContent('Error: Could not log in')
-            .hideDelay(3000)
+            .textContent('Could not log in. Please make sure you\'ve entered valid credentials and signed up already.')
+            .hideDelay(4000)
             .position('top center')
           );
         }
