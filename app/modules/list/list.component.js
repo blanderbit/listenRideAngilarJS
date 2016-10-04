@@ -3,13 +3,25 @@
 angular.module('list').component('list', {
   templateUrl: 'app/modules/list/list.template.html',
   controllerAs: 'list',
-  controller: ['$mdDialog', '$localStorage', '$state', 'Upload', 'bike_options', 'api', '$timeout',
-    function ListController($mdDialog, $localStorage, $state, Upload, bike_options, api, $timeout) {
+  controller: ['$mdDialog', '$localStorage', '$state', 'Upload', 'bike_options', 'api', '$timeout', 'verification',
+    function ListController($mdDialog, $localStorage, $state, Upload, bike_options, api, $timeout, verification) {
       var list = this;
 
       list.form = {
         images: []
       };
+
+      api.get('/users/' + $localStorage.userId).then(
+        function (success) {
+          var user = success.data;
+          if (!user.has_address || !user.confirmed_phone || user.status == 0) {
+            verification.openDialog(true);
+          }
+        },
+        function (error) {
+          console.log("Error fetching User");
+        }
+      );
 
       list.selectedIndex = 0;
       list.sizeOptions = bike_options.sizeOptions();
