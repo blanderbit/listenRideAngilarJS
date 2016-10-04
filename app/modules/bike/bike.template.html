@@ -86,7 +86,7 @@
 
       </div>
       <div flex="30" flex-offset="5" hide-sm hide-xs>
-        <calendar bike-id="bike.data.id" price-half-day="bike.data.price_half_daily" price-day="bike.data.price_daily" price-week="bike.data.price_weekly" requests="bike.data.requests"></calendar>
+        <calendar ng-if="!bike.mobileCalendar()" bike-id="bike.data.id" price-half-day="bike.data.price_half_daily" price-day="bike.data.price_daily" price-week="bike.data.price_weekly" requests="bike.data.requests"></calendar>
       </div>
     </div>
 
@@ -107,27 +107,3 @@
   </ng-map>
   <footer></footer>
 </md-content>
-
-<div style="visibility: hidden">
-  <div class="md-dialog-container" id="calendar-dialog">
-    <md-dialog>
-      <md-toolbar hide show-xs>
-        <div class="md-toolbar-tools" layout-align="center center">
-          <md-button class="md-icon-button">
-            <md-icon></md-icon>
-          </md-button>
-          <span flex></span>
-          <br><h2>{{ 'bike.rent-bike' | translate }}</h2><br>
-          <span flex></span>
-          <md-button class="md-icon-button" ng-click="calendarDialog.hide()">
-            <md-icon md-svg-src="app/assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
-          </md-button>
-        </div>
-      </md-toolbar>
-    
-      <md-dialog-content>
-        <calendar bike-id="calendarDialog.bike.data.id" price-half-day="calendarDialog.bike.data.price_half_daily" price-day="    calendarDialog.bike.data.price_daily" price-week="calendarDialog.bike.data.price_weekly" requests="calendarDialog.bike.data.requests"></calendar    >
-      </md-dialog-content>
-    </md-dialog>
-  </div>
-</div>
