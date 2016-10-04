@@ -104,6 +104,11 @@ bike #hero-shot {
   background-position: 50% 50%;
 }
 
+bike #hero-shot-overlay {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
 @media (max-width: 599px) {
   bike #hero-shot {
     height: 45vh;

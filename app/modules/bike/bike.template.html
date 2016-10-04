@@ -1,5 +1,7 @@
  <md-content class="single-column"> 
-  <div id="hero-shot" class="preload" ng-click="bike.showGalleryDialog($event)" style="{{'background-image: url(' + bike.data.image_file_1.image_file_1.large.url + ')'}};"></div>
+  <div id="hero-shot" class="preload" style="{{'background-image: url(' + bike.data.image_file_1.image_file_1.large.url + ')'}};" layout="row" layout-align="start end">
+    <md-button class="md-raised" ng-click="bike.showGalleryDialog($event)" md-no-ink>View Pictures</md-button>
+  </div>
 
   <div class="content" layout="column" layout-margin>
 
@@ -33,20 +35,20 @@
     <div flex layout="row">
       <div flex layout="column">
 
-        <div layout="row">
-          <div flex="20">
+        <div layout="row" layout-xs="column">
+          <div flex-gt-xs="20">
             <p class="md-body-2">Description</p>
           </div>
-          <div flex>
+          <div flex-gt-xs>
             <p class="md-body-1">{{ bike.data.description }}</p>
           </div>
         </div>
 
-        <div layout="row">
-          <div flex="20">
+        <div layout="row" layout-xs="column">
+          <div flex-gt-xs="20">
             <p class="md-body-2">Accessories</p>
           </div>
-          <div flex layout="row">
+          <div flex-gt-xs layout="row">
             <div ng-if="bike.data.has_lock" class="accessory-icon lock"></div>
             <div ng-if="bike.data.has_helmet" class="accessory-icon helmet"></div>
             <div ng-if="bike.data.has_lights" class="accessory-icon light"></div>
@@ -58,11 +60,11 @@
 
         <md-divider></md-divider>
 
-        <div layout="row">
-          <div flex="20">
+        <div layout="row" layout-xs="column">
+          <div flex-gt-xs="20">
             <p class="md-body-2">Lister</p>
           </div>
-          <div flex layout="row" layout-align="start center">
+          <div flex-gt-xs layout="row" layout-align="start center">
             <img class="lister-image" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
             <p class="md-body-1" flex-offset="2">{{bike.data.user.first_name}} {{bike.data.user.last_name}}</p>
           </div>
@@ -70,11 +72,11 @@
 
         <md-divider></md-divider>
 
-        <div layout="row">
-          <div flex="20">
+        <div layout="row" layout-xs="column">
+          <div flex-gt-xs="20">
             <p class="md-body-2">Reviews</p>
           </div>
-          <div flex>
+          <div flex-gt-xs>
             <p class="md-body-1">Here will be text reviews</p>
             <p class="md-body-1">Here will be text reviews</p>
             <p class="md-body-1">Here will be text reviews</p>
@@ -115,9 +117,9 @@
             <md-icon></md-icon>
           </md-button>
           <span flex></span>
-          <br><h2>{{ 'forms.log-in' | translate }}</h2><br>
+          <br><h2>{{ 'bike.rent-bike' | translate }}</h2><br>
           <span flex></span>
-          <md-button class="md-icon-button" ng-click="loginDialog.hide()">
+          <md-button class="md-icon-button" ng-click="calendarDialog.hide()">
             <md-icon md-svg-src="app/assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
           </md-button>
         </div>
