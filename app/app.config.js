@@ -197,19 +197,19 @@ angular.
       'A400': '#343940'
     }));
 
-    var LIGHT_FOREGROUND = {
-      name: 'light',
-      '1': 'rgba(85,84,85,1.0)',
-      '2': 'rgba(255,255,255,0.7)',
-      '3': 'rgba(255,255,255,0.3)',
-      '4': 'rgba(255,255,255,0.12)'
+    var DARK_FOREGROUND = {
+      name: 'dark',
+      '1': 'rgba(85,85,85,1.0)',
+      '2': 'rgba(68,68,68,1.0)',
+      '3': 'rgba(229,234,234,1.0)',
+      '4': 'rgba(206,212,216,1.0)'
     };
 
     $mdThemingProvider.theme('default')
         .primaryPalette('lnr-green')
         .accentPalette('lnr-blue')
         .backgroundPalette('lnr-background')
-        .foregroundPalette['1'] = 'rgba(68,68,68,1.0)';
+        .foregroundPalette = DARK_FOREGROUND;
 
     $mdThemingProvider.theme('lnr-dark')
         .backgroundPalette('lnr-background')
