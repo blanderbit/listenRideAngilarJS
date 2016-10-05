@@ -1,47 +1,352 @@
-/* Temporary code for a sticky header */
-.header {
-  position: fixed !important;
-  top: 0px !important;
-  width: 100%;
-  z-index: 3;
-}
+// #5FC693: primary color
+// 4px    : border radius
+// Added to material
+// md-lined, md-right-arrow
+
+/*-----------------------------------------------------------------------------------*/
+/* GENERAL
+/*-----------------------------------------------------------------------------------*/
 
 html {
   background-color: #FFFFFF;
   min-width: 320px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.34rem 0;
+}
+
 * {
   outline: 0;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.content {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.lnr-capitalize {
+  text-transform: capitalize;
+}
+
+.lnr-center {
+  text-align: center;
+}
+
+.lnr-white {
+  color: #fff;
+}
+
+.lnr-margin-right {
+  margin-right: 10px;
+}
+
+.lnr-link {
+  cursor: pointer;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+}
+
+.lnr-link:hover,
+.lnr-link:active {
+  opacity: 0.6;
+}
+
+/* This has to be set for all full-height layouts */
+ui-view {
+  position: relative;
+}
+
+.single-column, requests, search {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.center-text {
+  text-align: center;
 }
 
 .preload {
   background-color: #EEEEEE;
 }
 
+/*-----------------------------------------------------------------------------------*/
+/* NAVBAR
+/*-----------------------------------------------------------------------------------*/
+
 .lnr-header {
-  height: 60px !important;
-}
-
-.container {
-  margin: 60px 0 0 0;
-}
-
-.single-column {
-  position: absolute;
   width: 100%;
-  height: 100%;
+  height: 60px;
+  z-index: 3;
 }
 
-ui-view {
-  position: relative;
+.lnr-header-logo md-icon {
+  width: 90px;
 }
 
-/* This has to be set for all full-height layouts */
-requests, search {
-  position: absolute;
-  height: 100%;
+.lnr-header .md-lined {
+  border-color: #ffffff;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* FOOTER
+/*-----------------------------------------------------------------------------------*/
+
+footer md-list-item,
+footer md-list-item:before {
+  min-height: 30px;
+}
+
+.lnr-btn-ios img {
+  height: auto;
+  width: 154px;
+  padding: 0;
+}
+
+.lnr-btn-lang {
+  width: 154px;
+  text-align: left;
+  padding-left: 14px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* SVG
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-icn-sm {
+  width: 24px;
+  height: 24px;
+}
+
+.lnr-icn-md {
+  width: 34px;
+  height: 34px;
+}
+
+.lnr-icn-lrg {
+  width: 48px;
+  height: 48px;
+}
+
+.lnr-icn-mlrg {
+  width: 58px;
+  height: 58px;
+}
+
+.lnr-icn-xlrg {
+  width: 120px;
+  height: 120px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* HOME
+/*-----------------------------------------------------------------------------------*/
+
+home #landing-section {
+  background: url(../ui_images/lnr_hero.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 78vh;
+  overflow: visible;
+}
+
+.lnr-search-bar {
+  width: 52%;
+  max-width: 720px;
+  margin-bottom: -30px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.lnr-search-bar autocomplete,
+.lnr-search-bar input  {
   width: 100%;
+  height: 60px;
+  border: none;
+  outline: none;
+}
+
+.lnr-search-bar input {
+  padding: 0 15px;
+}
+
+.lnr-search-bar input[type=submit] {
+  font-weight: 500;
+  color: #fff;
+  background: #5FC693;
+}
+
+.lnr-section-title {
+  margin-bottom: 24px;
+}
+
+home .section {
+  margin-top: 90px;
+}
+
+home #listBike {
+  height: 320px;
+  padding: 24px 0;
+  background-size: cover;
+  background-position: 15% 40%;
+  background-image: url(../ui_images/lnr_listabike.jpg);
+}
+
+home md-grid-list md-grid-tile {
+  border-radius: 4px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50%;
+  cursor: pointer;
+}
+
+home md-grid-list md-grid-tile.tile1 {
+  background-image: url(../ui_images/lnr_munich.jpg);
+}
+
+home md-grid-list md-grid-tile.tile2 {
+  background-image: url(../ui_images/lnr_london.jpg);
+}
+
+home md-grid-list md-grid-tile.tile3 {
+  background-image: url(../ui_images/lnr_berlin.jpg);
+}
+
+home md-grid-list md-grid-tile.tile4 {
+  background-image: url(../ui_images/lnr_dublin.jpg);
+}
+
+@media (max-width: 599px) {
+  md-dialog.md-dialog-fullscreen {
+    min-height: 100%;
+    min-width: 100%;
+    border-radius: 0;
+  }
+
+  home #landing-section {
+    height: 60vh;
+  }
+
+  .lnr-search-bar {
+    width: 90%
+  }
+
+  home md-grid-list md-grid-tile {
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 600px) {
+  md-dialog.md-dialog-fullscreen {
+    min-width: 400px !important;
+    min-height: 0 !important;
+    border-radius: 3px;
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  BIKE CARD
+/*-----------------------------------------------------------------------------------*/
+
+bike-card md-card {
+  cursor: pointer;
+}
+
+search bike-card md-card {
+    margin: 0;
+}
+
+bike-card md-card-title-text {
+  padding: 0 8px;
+}
+
+bike-card md-card-title-text span {
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  BIKE DETAILS
+/*-----------------------------------------------------------------------------------*/
+
+#hero-shot {
+  height: 55vh;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#hero-shot-overlay {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+@media (max-width: 599px) {
+  bike #hero-shot {
+    height: 45vh;
+  }
+}
+
+.lnr-accessories md-icon {
+  margin-right: 10px;
+}
+
+bike #calendar {
+  width: 100%;
+  height: 100px;
+  display: block;
+}
+
+bike .lister-image {
+  height: 70px;
+  width: 70px;
+  background-size: cover;
+  margin: 1em 1em 1em 0;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+}
+
+bike .accessory-icon {
+  margin: 1em 1em 1em 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+
+bike .date-picker-wrapper {
+  background: transparent;
+  border: none;
+}
+
+bike .date-picker-wrapper .month-wrapper table {
+  width: 100%;
+}
+
+bike .date-picker-wrapper .month-wrapper table .day.real-today {
+  border-radius: 2px;
+  background-color: #eee;
+}
+
+bike .date-picker-wrapper .month-wrapper table .day {
+  padding: 8px 0;
 }
 
 .profile-picture {
@@ -94,92 +399,6 @@ md-toast.md-center {
   margin: 0.5em 0;
 }
 
-p {
-  margin: 0.5em 0;
-}
-
-p.center-text {
-  text-align: center;
-}
-
-#hero-shot {
-  height: 60vh;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-#hero-shot-overlay {
-  max-width: 970px;
-  margin: 0 auto;
-}
-
-@media (max-width: 599px) {
-  bike #hero-shot {
-    height: 45vh;
-  }
-}
-
-bike #calendar {
-  width: 100%;
-  height: 100px;
-  display: block;
-}
-
-bike .lister-image {
-  height: 80px;
-  width: 80px;
-  background-size: cover;
-  margin: 1em 1em 1em 0;
-  border-radius: 40px;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-}
-
-bike .angular-google-map,
-bike .angular-google-map-container {
-  height: 300px;
-  margin: 1em 0 0 0;
-}
-
-bike .accessory-icon {
-  margin: 1em 1em 1em 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-}
-
-bike .lock {
-  background: url("../ui_images/icn_itm_lock.png") no-repeat;
-  background-size: 40px 40px;
-}
-
-bike .helmet {
-  background: url("../ui_images/icn_itm_helmet.png") no-repeat;
-  background-size: 40px 40px;
-}
-
-bike .light {
-  background: url("../ui_images/icn_itm_light.png") no-repeat;
-  background-size: 40px 40px;
-}
-
-bike .basket {
-  background: url("../ui_images/icn_itm_basket.png") no-repeat;
-  background-size: 40px 40px;
-}
-
-bike .trailer {
-  background: url("../ui_images/icn_itm_trailer.png") no-repeat;
-  background-size: 40px 40px;
-}
-
-bike .childseat {
-  background: url("../ui_images/icn_itm_childseat.png") no-repeat;
-  background-size: 40px 40px;
-}
-
 requests .requests-list {
   background-color: #ffffff;
 }
@@ -207,93 +426,7 @@ message .status-message {
   background-color: #ffffff;
 }
 
-@media (max-width: 599px) {
-  md-dialog.md-dialog-fullscreen {
-    min-height: 100%;
-    min-width: 100%;
-    border-radius: 0;
-  }
-  home #landing_section {
-    height: 60vh;
-  }
-}
 
-@media (min-width: 600px) {
-  md-dialog.md-dialog-fullscreen {
-    min-width: 400px !important;
-    min-height: 0 !important;
-    border-radius: 3px;
-  }
-}
-
-home h1, home h2 {
-  text-align: center;
-}
-
-home #landing_section {
-  background-image: url("../ui_images/landing.jpg");
-  background-position: 15% 100%;
-  background-size: cover;
-  height: 70vh;
-}
-
-home form {
-  min-width: 315px;
-  max-width: 400px !important;
-  width: 70%;
-}
-
-home #searchBox {
-  width: 300px;
-}
-
-home .section {
-  margin-top: 64px;
-}
-
-home #listBike {
-  height: 300px;
-  background-size: cover;
-  background-position: 15% 100%;
-  background-image: url("../ui_images/landing.jpg");
-}
-
-home md-grid-list {
-  margin: 8px;
-}
-
-home md-grid-list md-grid-tile {
-  cursor: pointer;
-  background-size: cover;
-  color: white;
-}
-
-home md-grid-list md-grid-tile.tile1 {
-  background-image: url("../ui_images/munich.jpg");
-}
-
-home md-grid-list md-grid-tile.tile2 {
-  background-image: url("../ui_images/berlin.jpg");
-  background-position: 45%;
-}
-
-home md-grid-list md-grid-tile.tile3 {
-  background-image: url("../ui_images/amsterdam.jpg");
-  background-position: 47%;
-}
-
-home md-grid-list md-grid-tile.tile4 {
-  background-image: url("../ui_images/vienna.jpg");
-}
-
-footer,
-footer .md-subheader.md-default-theme, .md-subheader {
-  background-color: rgb(225, 225, 225);
-}
-
-footer md-list-item, footer md-list-item::before {
-  min-height: 25px;
-}
 
 footer .link {
   cursor: pointer;
@@ -321,12 +454,9 @@ search ng-map md-card {
   max-width: 200px;
   margin: 0;
 }
+
 search ng-map .gm-style-iw {
   width: 200px !important;
-}
-
-bike-card md-card {
-  cursor: pointer;
 }
 
 autocomplete #autocompleteSearch {

@@ -1,17 +1,21 @@
 <md-content class="single-column">
-  <div id="landing_section" layout="column" layout-align="center center">
-    <h1>{{ 'home.landing-section-header' | translate }}</h1>
-    <h2>{{ 'home.landing-section-header' | translate }}</h2>
+  <div id="landing-section" md-theme="lnr-dark" layout="column" layout-align="center center">
+    <div class="lnr-center lnr-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'home.landing-section-header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'home.landing-section-subheader' | translate }}</h2>    
+    </div>
 
-    <form layout="row" ng-submit="home.onSearch()">
-      <autocomplete flex="80" layout="row" location="search.location"></autocomplete>
-      <input flex="20" type="submit" id="submit" value="{{ 'autocomplete.search' | translate }}" />
+    <form class="lnr-search-bar md-whiteframe-3dp" layout="row" layout-align="center end" ng-submit="home.onSearch()">
+        <autocomplete flex="75" layout="row" location="search.location"></autocomplete>
+        <input flex="25" type="submit" id="submit" value="{{ 'autocomplete.search' | translate }}" />
     </form>
   </div>
 
-  <div id="featuredBikes" class="content section" layout="column" layout-align="center center">
-    <h1>{{ 'home.featured-bikes-header' | translate }}</h1>
-    <h2>{{ 'home.featured-bikes-subheader' | translate }}</h2>
+  <div id="featuredBikes" class="content section" layout="column" layout-align="start center">
+    <div class="lnr-section-title lnr-center" layout="column" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'home.featured-bikes-header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'home.featured-bikes-subheader' | translate }}</h2>
+    </div>
     <div layout-xs="column" layout="row">
       <div layout="row" layout-wrap>
         <bike-card ng-repeat="bike in home.featuredBikes" flex="100" flex-gt-xs="33"
@@ -22,38 +26,43 @@
     </div>
   </div>
   
-  <div id="featuredCities" class="content section" layout-align="center center">
-    <div  layout="column" layout="column" layout-align="center center">
-      <h1>{{ 'home.featured-cities-header' | translate }}</h1>
-      <h2>{{ 'home.featured-cities-subheader' | translate }}</h2>
+  <div id="featuredCities" class="content section" layout-align="start center">
+    <div class="lnr-section-title lnr-center" layout="column" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'home.featured-cities-header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'home.featured-cities-subheader' | translate }}</h2>
     </div>
     
-    <md-grid-list md-cols="1" md-cols-gt-xs="3" md-gutter="16px" md-row-height="1:1">
+    <md-grid-list class="lnr-white" md-cols="1" md-cols-gt-xs="3" md-gutter="16px" md-row-height="1:1">
       <md-grid-tile class="tile1" md-colspan-gt-xs="2" ui-sref="search({ location: 'Munich' })">
-        <h3>Munich</h3>
+        <h3 class="md-title">Munich</h3>
       </md-grid-tile>
 
       <md-grid-tile class="tile2" md-rowspan-gt-xs="2" ui-sref="search({ location: 'Berlin' })">
-        <h3>Berlin</h3>
+        <h3 class="md-title">Berlin</h3>
       </md-grid-tile>
 
       <md-grid-tile class="tile3" ui-sref="search({ location: 'Amsterdam' })">
-        <h3>Amsterdam</h3>
+        <h3 class="md-title">Amsterdam</h3>
       </md-grid-tile>
 
       <md-grid-tile class="tile4" ui-sref="search({ location: 'Vienna' })">
-        <h3>Vienna</h3>
+        <h3 class="md-title">Vienna</h3>
       </md-grid-tile>
     </md-grid-list>
   </div>
 
-  <div id="listBike" class="section" layout="column" layout-align="center center">
-    <h1>{{ 'home.featured-bikes-header' | translate }}</h1>
-    <h2>{{ 'home.featured-bikes-subheader' | translate }}</h2>
-    <md-button ui-sref="list" class="md-raised">{{ 'shared.list-a-bike' | translate }}</md-button>
+  <div id="listBike" class="section"  md-theme="lnr-dark" layout="column" layout-align="space-between center">
+    <div class="lnr-center lnr-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'home.list-a-bike-header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'home.list-a-bike-subheader' | translate }}</h2>
+    </div>
+
+    <div flex layout="column" layout-align="center center">
+        <md-button ui-sref="list" class="md-raised md-primary md-lrg">{{ 'shared.list-a-bike' | translate }}</md-button>
+    </div>
   </div>
 
-<!--   <div id="testimonials" class="content section" layout-align="center center" style="background-color: pink">
+<!--   <div id="testimonials" class="content section" layout-align="start center" style="background-color: pink">
     <h1>What are people saying?</h1>
   </div>
 
