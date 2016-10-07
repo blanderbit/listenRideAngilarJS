@@ -13,7 +13,7 @@ angular.module('bike').component('calendar', {
   controller: ['$scope', '$localStorage', '$state', '$mdDialog', 'date', 'api', 'authentication', 'verification',
     function CalendarController($scope, $localStorage, $state, $mdDialog, date, api, authentication, verification) {
       var calendar = this;
-      calendar.loggedIn = verification.loggedIn;
+      calendar.loggedIn = authentication.loggedIn();
 
       initOverview();
 

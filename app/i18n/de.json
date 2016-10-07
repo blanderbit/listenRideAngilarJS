@@ -134,7 +134,8 @@
 
   "calendar": {
     "invalid-date": "Datums angabe nicht Korrekt",
-    "request-bike": "Rad anfragen"
+    "request-bike": "Rad anfragen",
+    "to-request-bike-please": "um ein Rad anzufragen bitte"
   },
 
   "list": {

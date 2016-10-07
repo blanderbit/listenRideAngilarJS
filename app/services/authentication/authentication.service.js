@@ -3,8 +3,8 @@
 angular.
   module('listnride').
   factory('authentication', [
-    'Base64', '$http', '$localStorage', '$mdDialog', '$mdToast', '$window', '$q', 'ezfb', 'api', 'verification', 'sha256',
-    function(Base64, $http, $localStorage, $mdDialog, $mdToast, $window, $q, ezfb, api, verification, sha256){
+    'Base64', '$http', '$localStorage', '$mdDialog', '$mdToast', '$window', '$state', '$q', 'ezfb', 'api', 'verification', 'sha256',
+    function(Base64, $http, $localStorage, $mdDialog, $mdToast, $window, $state, $q, ezfb, api, verification, sha256){
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (email, password, id, profilePicture, firstName, lastName) {
@@ -241,6 +241,7 @@ angular.
         delete $localStorage.userId;
         delete $localStorage.profilePicture;
         delete $localStorage.name;
+        $state.go('home');
         $mdToast.show(
           $mdToast.simple()
           .textContent('You are logged out.')
