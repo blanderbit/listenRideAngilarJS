@@ -329,8 +329,17 @@ bike-card md-card {
   cursor: pointer;
 }
 
+autocomplete {
+  position: relative;
+}
+
 autocomplete #autocompleteSearch {
   width: 100%;
+}
+
+autocomplete .pac-container {
+  left: 0 !important;
+  top: 100% !important;
 }
 
 list md-tabs,
