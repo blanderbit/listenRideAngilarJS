@@ -359,6 +359,18 @@ bike .date-picker-wrapper .month-wrapper table .day {
   background-size: cover;
 }
 
+.profile-picture-medium {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  /*background-position: 50% 50%;*/
+  background-size: cover;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
 .profile-picture-big {
   width: 150px;
   height: 150px;
