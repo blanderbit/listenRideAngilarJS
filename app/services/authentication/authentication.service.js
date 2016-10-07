@@ -9,7 +9,7 @@ angular.
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (email, password, id, profilePicture, firstName, lastName) {
         var encoded = Base64.encode(email + ":" + password);
-        // Sets the Basic Auth String for the Authorization Header
+        // Sets the Basic Auth String for the Authorization Header 
         $localStorage.auth = 'Basic ' + encoded;
         $localStorage.userId = id;
         $localStorage.name = firstName + " " + lastName;
