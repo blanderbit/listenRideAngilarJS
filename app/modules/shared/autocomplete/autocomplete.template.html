@@ -1,1 +1,4 @@
-<input id="autocompleteSearch" ng-model="autocomplete.location" type="text" placeholder="{{ 'autocomplete.search-placeholder' | translate }}">
+<md-input-container>
+  <label>{{ 'autocomplete.' + autocomplete.labelId | translate }}</label>
+  <input id="autocompleteSearch" ng-model="autocomplete.location" type="text" placeholder="" />
+</md-input-container>

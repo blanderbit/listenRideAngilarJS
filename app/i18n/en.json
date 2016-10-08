@@ -27,7 +27,8 @@
     "from": "from",
     "to": "to",
     "cancel": "Cancel",
-    "send": "Send"
+    "send": "Send",
+    "search": "Search"
   },
 
   "header": {
@@ -122,8 +123,7 @@
   },
 
   "autocomplete": {
-    "search": "Search",
-    "search-placeholder": "Where would you like to rent a bike"
+    "default-placeholder": "Where would you like to rent a bike"
   },
 
   "search" : {

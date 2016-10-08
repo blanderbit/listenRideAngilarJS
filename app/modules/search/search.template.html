@@ -4,8 +4,8 @@
     <div layout="column" layout-padding>
 
       <form layout="row" ng-submit="search.onLocationChange()">
-        <autocomplete flex="80" layout="row" location="search.location"></autocomplete>
-        <input flex="20" type="submit" id="submit" value="{{ 'autocomplete.search' | translate }}" />
+        <autocomplete flex="80" layout="column" location="search.location" label-id="default-placeholder"></autocomplete>
+        <md-button id="submit" type="submit" flex="20">{{ 'shared.search' | translate }}</md-button>
       </form>
 
       <div class="filters" layout="column" layout-gt-sm="row">

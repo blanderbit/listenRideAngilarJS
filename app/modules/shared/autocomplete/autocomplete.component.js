@@ -4,7 +4,8 @@ angular.module('autocomplete').component('autocomplete', {
   templateUrl: 'app/modules/shared/autocomplete/autocomplete.template.html',
   controllerAs: 'autocomplete',
   bindings: {
-    location: '='
+    location: '=',
+    labelId: '@'
   },
   controller: ['$interval',
     function AutocompleteController($interval) {

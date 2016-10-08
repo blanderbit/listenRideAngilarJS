@@ -27,7 +27,8 @@
     "from": "von",
     "to": "bis",
     "cancel": "Abbrechen",
-    "send": "Senden"
+    "send": "Senden",
+    "search": "Suche"
   },
 
   "header": {
@@ -122,8 +123,7 @@
   },
   
   "autocomplete": {
-    "search": "Suche",
-    "search-placeholder": "Wo willst du ein Rad ausleihen?"
+    "default-placeholder": "Wo willst du ein Rad ausleihen?"
   },
 
   "search": {
