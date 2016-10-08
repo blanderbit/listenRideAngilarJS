@@ -1,53 +1,52 @@
-<md-dialog flex="30">
+<md-dialog class="lnr-user-modal">
 
   <form ng-cloak name="loginForm" ng-submit="loginDialog.login()">
 
-    <md-toolbar show-xs>
+    <div show-xs>
       <div class="md-toolbar-tools" layout-align="center center">
         <md-button class="md-icon-button">
           <md-icon></md-icon>
         </md-button>
         <span flex></span>
-        <h2>{{ 'forms.log-in' | translate }}</h2>
+        <h2 class="md-headline">{{ 'forms.log-in' | translate }}</h2>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="loginDialog.hide()">
           <md-icon md-svg-src="app/assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
         </md-button>
       </div>
-    </md-toolbar>
+    </div>
 
     <md-dialog-content>
       <div class="md-dialog-content" layout="column">
-        <md-button class="md-primary md-raised" ng-click="loginDialog.connectFb()">Login with Facebook</md-button>
-        <div layout="column" layout-align="center center">
-          <p>or</p>
+        <md-button class="md-primary md-lined lnr-btn-fb" ng-click="loginDialog.connectFb()">Login with facebook</md-button>
+        <div class="lnr-middle-divider">
+          {{ 'forms.or' | translate }}
         </div>
-        <p></p>
-  
-          <md-input-container class="md-input-container-compact">
-            <label>{{ 'forms.email-address' | translate }}</label>
-            <input ng-model="loginDialog.email" name="email" required type="email" />
-            <div ng-messages="loginForm.email.$error" role="alert">
-              <div ng-message="required">Please enter your email address.</div>
-              <div ng-message="email">This field must be a valid email address.</div>
-            </div>
-          </md-input-container>
-  
-          <md-input-container class="md-input-container-compact">
-            <label>{{ 'forms.password' | translate }}</label>
-            <input type="password" ng-model="loginDialog.password" name="password" required ng-minlength="6" ng-maxlength="30"  />
-            <div ng-messages="loginForm.password.$error" role="alert">
-              <div ng-message="required">Please enter a password.</div>
-              <div ng-message="maxlength">Password shouldn't be longer than 30 characters.</div>
-              <div ng-message="minlength">Password shouldn't be shorter than 6 characters.</div>
-            </div>
-          </md-input-container>
-  
-          <div layout="row">
-            <md-button ng-click="loginDialog.resetPassword()">{{ 'forms.forgot-password' | translate }}</md-button>
-            <span flex></span>
-            <md-button type="submit" class="md-primary md-raised"">{{ 'forms.log-in' |     translate }}</md-button>
+
+        <md-input-container class="md-input-container-compact">
+          <label>{{ 'forms.email-address' | translate }}</label>
+          <input ng-model="loginDialog.email" name="email" required type="email" />
+          <div ng-messages="loginForm.email.$error" role="alert">
+            <div ng-message="required">Please enter your email address.</div>
+            <div ng-message="email">This field must be a valid email address.</div>
           </div>
+        </md-input-container>
+
+        <md-input-container class="md-input-container-compact">
+          <label>{{ 'forms.password' | translate }}</label>
+          <input type="password" ng-model="loginDialog.password" name="password" required ng-minlength="6" ng-maxlength="30"  />
+          <div ng-messages="loginForm.password.$error" role="alert">
+            <div ng-message="required">Please enter a password.</div>
+            <div ng-message="maxlength">Password shouldn't be longer than 30 characters.</div>
+            <div ng-message="minlength">Password shouldn't be shorter than 6 characters.</div>
+          </div>
+        </md-input-container>
+
+        <div layout="row" layout-align="center center">
+          <span class="lnr-link" ng-click="loginDialog.resetPassword()">{{ 'forms.forgot-password' | translate }}</span>
+          <span flex></span>
+          <md-button type="submit" class="md-primary md-raised"">{{ 'forms.log-in' |     translate }}</md-button>
+        </div>
       </div>
     </md-dialog-content>
   

@@ -1,7 +1,7 @@
 // #5FC693: primary color
 // 4px    : border radius
 // Added to material
-// md-lined, md-right-arrow, placeholder color
+// md-lined, md-right-arrow, md-input-container-compact
 
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL
@@ -57,6 +57,34 @@ strong {
   opacity: 0.6;
 }
 
+.lnr-middle-divider {
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.lnr-middle-divider:before,
+.lnr-middle-divider:after {
+  background-color: rgba(206,212,216,1.0);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.lnr-middle-divider:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.lnr-middle-divider:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
 /* This has to be set for all full-height layouts */
 ui-view {
   position: relative;
@@ -99,7 +127,7 @@ ui-view {
 }
 
 .lnr-header .lnr-nav-menu .md-button {
-  margin: 0 10px;
+  margin: 0 12px;
 }
 
 .lnr-header .lnr-nav-menu .md-button:not(.md-lined):not(.md-img) {
@@ -124,6 +152,55 @@ ui-view {
 
 
 /*-----------------------------------------------------------------------------------*/
+/* FRAMEWORK
+/*-----------------------------------------------------------------------------------*/
+
+
+.lnr-btn-fb {
+  // border-color: #7ab2f8!important;
+  border-color: #3b5998!important;
+  background:  #3b5998!important;
+  color: #fff!important;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* USER MODALS
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-user-modal {
+  width: 450px;
+}
+
+.lnr-user-modal .md-button {
+  margin: 0;
+}
+
+.lnr-user-modal .md-dialog-content {
+  padding: 25px 30px;
+  padding-top: 10px;
+}
+
+.md-input-container-compact {
+  margin: -5px 0;
+}
+
+.lnr-input-containers .md-input-container,
+.lnr-input-containers .md-input-container-compact {
+  margin: 0 5px;
+}
+
+.lnr-input-containers .md-input-container:first-child,
+.lnr-input-containers .md-input-container-compact:first-child {
+  margin-left: 0;
+}
+
+.lnr-input-containers .md-input-container:last-child,
+.lnr-input-containers .md-input-container-compact:last-child {
+  margin-right: 0;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
 /* FOOTER
 /*-----------------------------------------------------------------------------------*/
 
@@ -143,7 +220,6 @@ footer md-list-item:before {
   text-align: left;
   padding-left: 14px;
 }
-
 
 /*-----------------------------------------------------------------------------------*/
 /* SVG
@@ -390,10 +466,6 @@ bike .date-picker-wrapper .month-wrapper table .day {
 md-toast.md-center {
   left: 50%;
   transform: translate3d(-50%, 0, 0);
-}
-
-.md-input-container-compact {
-  margin: 0.5em 0;
 }
 
 requests .requests-list {

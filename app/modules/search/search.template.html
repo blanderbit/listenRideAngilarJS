@@ -52,7 +52,7 @@
 
     <md-content flex>
       <div ng-show="search.bikes === undefined" layout="row" layout-align="center center" layout-fill>
-        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+        <md-progress-circular class="md-accent" md-mode="indeterminate"></md-progress-circular>
       </div>
 
       <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout="row" layout-align="center center" layout-padding>
