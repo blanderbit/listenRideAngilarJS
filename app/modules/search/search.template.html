@@ -51,15 +51,15 @@
     <md-divider></md-divider>
 
     <md-content flex>
-      <div ng-show="search.bikes === undefined" layout="row" layout-align="center center" layout-margin>
+      <div ng-show="search.bikes === undefined" layout="row" layout-align="center center" layout-fill>
         <md-progress-circular md-mode="indeterminate"></md-progress-circular>
       </div>
 
-      <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout-padding layout="row" layout-align="center center">
+      <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout="row" layout-align="center center" layout-padding>
         <span>{{ 'search.no-bikes' | translate }}</span>
       </div>
 
-      <div id="featuredBikes" layout="row" layout-wrap layout-padding>
+      <div id="featuredBikes" layout="row" layout-wrap>
         <div ng-repeat="bike in search.bikes | filter:search.sizeFilter | map_category:search.categoryFilter" flex="100" flex-gt-sm="50" flex-gt-md="50" flex-gt-lg="33">
           <bike-card bike-id="bike.id" name="bike.name" brand="bike.brand" price="bike.price_daily" image-url="bike.image_file_1.image_file_1.small.url"></bike-card>
         </div>

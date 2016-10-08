@@ -205,6 +205,14 @@ angular.
       '4': 'rgba(206,212,216,1.0)'
     };
 
+    // var LIGHT_FOREGROUND = {
+    //   name: 'light',
+    //   '1': 'rgba(255,255,255,1.0)',
+    //   '2': 'rgba(255,255,255,0.7)',
+    //   '3': 'rgba(255,255,255,0.5)',
+    //   '4': 'rgba(255,255,255,0.12)'
+    // };
+
     $mdThemingProvider.theme('default')
         .primaryPalette('lnr-green')
         .accentPalette('lnr-blue')
@@ -213,9 +221,10 @@ angular.
 
     $mdThemingProvider.theme('lnr-dark')
         .backgroundPalette('lnr-background')
-        .dark();
+        .dark().foregroundPalette['3'] ='rgba(255,255,255,0.12)';
 
-    $mdThemingProvider
-        .enableBrowserColor();
+    $mdThemingProvider.enableBrowserColor({
+        palette: 'accent'
+    });
 
   });

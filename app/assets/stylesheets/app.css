@@ -1,7 +1,7 @@
 // #5FC693: primary color
 // 4px    : border radius
 // Added to material
-// md-lined, md-right-arrow
+// md-lined, md-right-arrow, placeholder color
 
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL
@@ -86,12 +86,40 @@ ui-view {
   z-index: 3;
 }
 
-.lnr-header-logo md-icon {
+.lnr-header .md-toolbar-tools .lnr-header-logo {
+  padding: 0;
+}
+
+.lnr-header .lnr-header-logo md-icon {
   width: 90px;
 }
 
 .lnr-header .md-lined {
   border-color: #ffffff;
+}
+
+.lnr-header .lnr-nav-menu .md-button {
+  margin: 0 10px;
+}
+
+.lnr-header .lnr-nav-menu .md-button:not(.md-lined):not(.md-img) {
+  padding: 12px 0;
+}
+
+.lnr-header .lnr-nav-menu .md-button.md-right-arrow {
+  padding-right: 20px;
+}
+
+.lnr-header .lnr-nav-menu .md-button.md-img {
+  padding: 0;
+}
+
+.lnr-header .lnr-nav-menu .md-img img {
+  width: 37px;
+  height: 37px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
 }
 
 
@@ -101,7 +129,7 @@ ui-view {
 
 footer md-list-item,
 footer md-list-item:before {
-  min-height: 30px;
+  min-height: 24px;
 }
 
 .lnr-btn-ios img {
@@ -178,7 +206,7 @@ home #landing-section {
 }
 
 .lnr-search-bar input {
-  padding: 0 15px;
+  padding: 0 16px;
 }
 
 .lnr-search-bar input[type=submit] {
@@ -266,7 +294,7 @@ bike-card md-card {
 }
 
 search bike-card md-card {
-    margin: 0;
+  // margin: 0;
 }
 
 bike-card md-card-title-text {
@@ -349,41 +377,10 @@ bike .date-picker-wrapper .month-wrapper table .day {
   padding: 8px 0;
 }
 
-.profile-picture {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  background-position: 50% 50%;
-  background-size: cover;
-}
-
-.profile-picture-big {
-  width: 150px;
-  height: 150px;
-  border-radius: 75px;
-  -webkit-border-radius: 75px;
-  -moz-border-radius: 75px;
-  /*background-position: 50% 50%;*/
-  background-size: cover;
-}
-
-.profile-picture-button {
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
-  min-width: 40px !important;
-  max-width: 40px !important;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  padding: 0px !important!;
-}
-
-.content {
-  max-width: 970px;
-  margin: 0 auto;
-}
+// .content {
+//   max-width: 970px;
+//   margin: 0 auto;
+// }
 
 .dialog-content {
   margin: 10px;
