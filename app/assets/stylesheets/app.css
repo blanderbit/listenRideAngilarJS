@@ -401,6 +401,11 @@ bike .date-picker-wrapper .month-wrapper table .day {
   margin: 10px;
 }
 
+/* Increase Size of Rating Stars */
+.angular-input-stars > li {
+  font-size: 24px !important;
+}
+
 /* Add possibility to have centered toasts */
 md-toast.md-center {
   left: 50%;
