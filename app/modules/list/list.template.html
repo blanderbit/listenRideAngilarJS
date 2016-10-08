@@ -135,10 +135,8 @@
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
-              <md-input-container>
-                <label>{{ 'list.location.street-number' | translate }}</label>
-                <input required ng-model="list.form.street">
-              </md-input-container>
+              <autocomplete layout="column" location="list.form.street" label-id="list-placeholder" required="true" fill-address="list.fillAddress(place)">
+              </autocomplete>
 
               <md-input-container>
                 <label>{{ 'list.location.zip' | translate }}</label>

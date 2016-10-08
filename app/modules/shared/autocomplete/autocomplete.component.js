@@ -5,19 +5,29 @@ angular.module('autocomplete').component('autocomplete', {
   controllerAs: 'autocomplete',
   bindings: {
     location: '=',
-    labelId: '@'
+    labelId: '@',
+    required: '@',
+    fillAddress: '&'
   },
-  controller: ['$interval',
-    function AutocompleteController($interval) {
+  controller: ['$interval', '$scope',
+    function AutocompleteController($interval, $scope) {
       var autocomplete = this;
 
       initAutocomplete();
 
       function initAutocomplete() {
-        var autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocompleteSearch'));
-        autocomplete.addListener('place_changed', function() {
-          
+        var autocompleteObject = new google.maps.places.Autocomplete(document.getElementById('autocompleteSearch'), {types: ['address']});
+        autocompleteObject.addListener('place_changed', function() {
+          $scope.$apply(function() {
+            if (autocomplete.fillAddress !== undefined) {
+              autocomplete.fillAddress({place: autocompleteObject.getPlace()});
+            }
+          });
         });
+
+        if (autocomplete.required == "true") {
+          document.getElementById("autocompleteSearch").required = true;
+        }
 
         var timer = $interval(function() {
           if ($(".pac-container").length > 0) {
