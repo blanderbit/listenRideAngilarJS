@@ -27,7 +27,8 @@
     "from": "from",
     "to": "to",
     "cancel": "Cancel",
-    "send": "Send"
+    "send": "Send",
+    "search": "Search"
   },
 
   "header": {
@@ -124,8 +125,7 @@
   },
 
   "autocomplete": {
-    "search": "Search",
-    "search-placeholder": "Where would you like to rent a bike"
+    "default-placeholder": "Where would you like to rent a bike"
   },
 
   "search" : {
@@ -163,8 +163,43 @@
       "electro": "Electro",
       "special": "Special"
     },
-    "subcategories": {
-
+    "subcategory": {
+      "1": {
+        "dutch-bike": "Dutch Bike",
+        "touring-bike": "Touring Bike",
+        "fixie": "Fixie",
+        "single-speed": "Single Speed"
+      },
+      "2": {
+        "road-bike": "Road Bike",
+        "triathlon": "Triathlon",
+        "indoor": "Indoor"
+      },
+      "3": {
+        "tracking": "Tracking",
+        "enduro": "Enduro",
+        "freeride": "Freeride",
+        "cross-country": "Cross Country",
+        "downhill": "Downhill",
+        "cyclocross": "Cyclocross"
+      },
+      "4": {
+        "city": "City",
+        "all-terrain": "All Terrain",
+        "road": "Road"
+      },
+      "5": {
+        "pedelec": "Pedelec",
+        "e-bike": "E-Bike"
+      },
+      "6": {
+        "folding-bike": "Folding Bike",
+        "tandem": "Tandem",
+        "cruiser": "Cruiser",
+        "cargo-bike": "Cargo Bike",
+        "recumbent": "Recumbent",
+        "mono-bike": "Mono Bike"
+      }
     },
     "details": {
       "hint": "Enter the bike brand, name and a description of your bike. The name should include the model and describe the bike to the point. e.g. Gazelle, Tour Populair, 2013. Then select a range for the appropriate riders height.",

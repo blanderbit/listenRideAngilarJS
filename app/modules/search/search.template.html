@@ -3,13 +3,10 @@
   <div flex-xs="100" flex-gt-xs="60" flex-order-xs="2" layout="column">
     <div layout="column" layout-padding>
 
-      <div>
-        <label>Size</label>
-        <form layout="row" ng-submit="search.onLocationChange()">
-          <autocomplete flex="80" layout="row" location="search.location"></autocomplete>
-          <input flex="20" type="submit" id="submit" value="{{ 'autocomplete.search' | translate }}" />
-        </form>
-      </div>
+      <form layout="row" ng-submit="search.onLocationChange()">
+        <autocomplete flex="80" layout="column" location="search.location" label-id="default-placeholder"></autocomplete>
+        <md-button id="submit" type="submit" flex="20">{{ 'shared.search' | translate }}</md-button>
+      </form>
 
       <div class="filters" layout="column" layout-gt-sm="row">  
         <!-- <div flex="100" flex-gt-sm="75" layout="row" layout-align="space-between center"> -->

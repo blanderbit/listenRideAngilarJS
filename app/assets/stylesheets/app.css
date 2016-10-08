@@ -273,10 +273,15 @@ home #landing-section {
   overflow: hidden;
 }
 
+.lnr-search-bar label {
+  display: none;
+}
+
 .lnr-search-bar autocomplete,
 .lnr-search-bar input  {
   width: 100%;
   height: 60px;
+  background: #fff;
   border: none;
   outline: none;
 }
@@ -285,10 +290,9 @@ home #landing-section {
   padding: 0 16px;
 }
 
-.lnr-search-bar input[type=submit] {
-  font-weight: 500;
-  color: #fff;
-  background: #5FC693;
+.lnr-search-bar .md-button {
+  margin: 0;
+  border-radius: 0 4px 4px 0;
 }
 
 .lnr-section-title {
@@ -453,15 +457,6 @@ bike .date-picker-wrapper .month-wrapper table .day {
   padding: 8px 0;
 }
 
-// .content {
-//   max-width: 970px;
-//   margin: 0 auto;
-// }
-
-.dialog-content {
-  margin: 10px;
-}
-
 /* Add possibility to have centered toasts */
 md-toast.md-center {
   left: 50%;
@@ -495,12 +490,6 @@ message .status-message {
   background-color: #ffffff;
 }
 
-
-
-footer .link {
-  cursor: pointer;
-}
-
 search ng-map {
   height: 100% !important;
 }
@@ -526,10 +515,6 @@ search ng-map md-card {
 
 search ng-map .gm-style-iw {
   width: 200px !important;
-}
-
-autocomplete #autocompleteSearch {
-  width: 100%;
 }
 
 list md-tabs,

@@ -155,41 +155,41 @@ angular.
 
     // Themes & Colors
     $mdThemingProvider.definePalette('lnr-blue', {
-      '50': '#f3f8fe',
-      '100': '#dbeafd',
-      '200': '#c3dcfc',
-      '300': '#aacefb',
-      '400': '#92c0f9',
+      '50': '#ffffff',
+      '100': '#ffffff',
+      '200': '#f8fbff',
+      '300': '#b4d4fb',
+      '400': '#97c3fa',
       '500': '#7ab2f8',
-      '600': '#62a4f7',
-      '700': '#4a96f5',
-      '800': '#3188f4',
-      '900': '#197af3',
+      '600': '#5da1f6',
+      '700': '#4090f5',
+      '800': '#237ff3',
+      '900': '#0c6feb',
       'A100': '#ffffff',
-      'A200': '#ffffff',
-      'A400': '#ffffff',
-      'A700': '#0c6de6',
+      'A200': '#7ab2f8',
+      'A400': '#97c3fa',
+      'A700': '#4090f5',
       'contrastDefaultColor': 'light',
       'contrastDarkColors': '50 100 200 300 A100 A400 A700'
     });
 
     $mdThemingProvider.definePalette('lnr-green', {
-      '50': '#256746',
-      '100': '#2b7a53',
-      '200': '#328d60',
-      '300': '#39a06d',
-      '400': '#40b27a',
-      '500': '#4cbf86',
-      '600': '#72cda0',
-      '700': '#85d3ac',
-      '800': '#97dab9',
-      '900': '#aae1c6',
-      'A100': '#72cda0',
-      'A200': '#5FC693',
-      'A400': '#4cbf86',
-      'A700': '#bde7d2',
+      '50': '#ffffff',
+      '100': '#eaf8f1',
+      '200': '#c1e9d5',
+      '300': '#8cd6b1',
+      '400': '#76cea2',
+      '500': '#5fc693',
+      '600': '#48be84',
+      '700': '#3dab74',
+      '800': '#359465',
+      '900': '#2d7e56',
+      'A100': '#ffffff',
+      'A200': '#eaf8f1',
+      'A400': '#76cea2',
+      'A700': '#3dab74',
       'contrastDefaultColor': 'light',
-      'contrastDarkColors': '50 100 200 300 A100 A400 A700'
+      'contrastDarkColors': '50 100 200 300 A100 A200 A400 A700'
     });
 
     $mdThemingProvider.definePalette('lnr-background', $mdThemingProvider.extendPalette('grey', {
@@ -205,6 +205,12 @@ angular.
       '4': 'rgba(206,212,216,1.0)'
     };
 
+    $mdThemingProvider.theme('default')
+        .primaryPalette('lnr-blue')
+        .accentPalette('lnr-green')
+        .backgroundPalette('lnr-background')
+        .foregroundPalette = DARK_FOREGROUND;
+
     // var LIGHT_FOREGROUND = {
     //   name: 'light',
     //   '1': 'rgba(255,255,255,1.0)',
@@ -212,12 +218,6 @@ angular.
     //   '3': 'rgba(255,255,255,0.5)',
     //   '4': 'rgba(255,255,255,0.12)'
     // };
-
-    $mdThemingProvider.theme('default')
-        .primaryPalette('lnr-blue')
-        .accentPalette('lnr-green')
-        .backgroundPalette('lnr-background')
-        .foregroundPalette = DARK_FOREGROUND;
 
     $mdThemingProvider.theme('lnr-dark')
         .backgroundPalette('lnr-background')

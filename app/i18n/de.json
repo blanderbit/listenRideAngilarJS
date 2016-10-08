@@ -27,7 +27,8 @@
     "from": "von",
     "to": "bis",
     "cancel": "Abbrechen",
-    "send": "Senden"
+    "send": "Senden",
+    "search": "Suche"
   },
 
   "header": {
@@ -124,8 +125,7 @@
   },
   
   "autocomplete": {
-    "search": "Suche",
-    "search-placeholder": "Wo willst du ein Rad ausleihen?"
+    "default-placeholder": "Wo willst du ein Rad ausleihen?"
   },
 
   "search": {
@@ -163,8 +163,43 @@
       "electro": "Elektro",
       "special": "Spezial"
     },
-    "subcategories": {
-
+    "subcategory": {
+      "1": {
+        "dutch-bike": "Hollandrad",
+        "touring-bike": "Touringrad",
+        "fixie": "Fixie",
+        "single-speed": "Single Speed"
+      },
+      "2": {
+        "road-bike": "Rennrad",
+        "triathlon": "Triathlonrad",
+        "indoor": "Bahnrad"
+      },
+      "3": {
+        "tracking": "Trecking",
+        "enduro": "Enduro",
+        "freeride": "Freeride",
+        "cross-country": "Cross Country",
+        "downhill": "Downhill",
+        "cyclocross": "Cyclocross"
+      },
+      "4": {
+        "city": "Stadt",
+        "all-terrain": "Gelände",
+        "road": "Strasse"
+      },
+      "5": {
+        "pedelec": "Pedelec",
+        "e-bike": "E-Bike"
+      },
+      "6": {
+        "folding-bike": "Faltrad",
+        "tandem": "Tandem",
+        "cruiser": "Cruiser",
+        "cargo-bike": "Lastenrad",
+        "recumbent": "Liegerad",
+        "mono-bike": "Einrad"
+      }
     },
     "details": {
       "hint": "Gebe Marke, Name und Beschreibung Deines Rads ein. Der Name sollte das Rad kurz beschreiben und das Model beinhalten. Z.B. Gazelle, Tour Populair, 2013. Wähle dann die passende Fahrergröße.",

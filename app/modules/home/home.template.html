@@ -5,9 +5,9 @@
       <h2 class="md-subhead">{{ 'home.landing-section-subheader' | translate }}</h2>    
     </div>
 
-    <form class="lnr-search-bar md-whiteframe-3dp" layout="row" layout-align="center end" ng-submit="home.onSearch()">
-        <autocomplete flex="75" layout="row" location="search.location"></autocomplete>
-        <input flex="25" type="submit" id="submit" value="{{ 'autocomplete.search' | translate }}" />
+    <form class="lnr-search-bar md-whiteframe-3dp" layout="row" ng-submit="home.onSearch()" md-theme="default">
+      <autocomplete flex="75" layout="column" location="home.location" placeholder-id="default-placeholder" ></autocomplete>
+      <md-button class="md-raised md-accent" id="submit" type="submit" flex="25" md-theme="lnr-dark">{{ 'shared.search' | translate }}</md-button>
     </form>
   </div>
 
