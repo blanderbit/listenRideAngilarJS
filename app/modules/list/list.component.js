@@ -17,6 +17,10 @@ angular.module('list').component('list', {
           if (!user.has_address || !user.confirmed_phone || user.status == 0) {
             verification.openDialog(true);
           }
+          list.form.street = user.street;
+          list.form.zip = user.zip;
+          list.form.city = user.city;
+          list.form.country = user.country;
         },
         function (error) {
           console.log("Error fetching User");
@@ -109,8 +113,7 @@ angular.module('list').component('list', {
         return list.form.name !== undefined &&
           list.form.brand !== undefined &&
           list.form.size !== undefined &&
-          list.form.description !== undefined &&
-          list.form.description.length >= 100;
+          list.form.description !== undefined;
       };
 
       list.isPictureValid = function() {

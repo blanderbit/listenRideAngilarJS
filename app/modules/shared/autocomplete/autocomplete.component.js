@@ -16,7 +16,7 @@ angular.module('autocomplete').component('autocomplete', {
       initAutocomplete();
 
       function initAutocomplete() {
-        var autocompleteObject = new google.maps.places.Autocomplete(document.getElementById('autocompleteSearch'), {types: ['address']});
+        var autocompleteObject = new google.maps.places.Autocomplete(document.getElementById('autocompleteSearch'), {types: ['geocode']});
         autocompleteObject.addListener('place_changed', function() {
           $scope.$apply(function() {
             if (autocomplete.fillAddress !== undefined) {

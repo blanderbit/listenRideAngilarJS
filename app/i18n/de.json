@@ -206,7 +206,7 @@
       "brand": "Marke",
       "name": "Name",
       "description": "Beschreibung",
-      "min-length-warning": "100 Buchstabe",
+      "min-length-warning": "Minimum 100 Buchstabe",
       "size": "Fahrergröße"
     },
     "pictures": {
