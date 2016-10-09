@@ -206,18 +206,10 @@ angular.
     };
 
     $mdThemingProvider.theme('default')
-        .primaryPalette('lnr-blue')
-        .accentPalette('lnr-green')
+        .primaryPalette('lnr-green')
+        .accentPalette('lnr-blue')
         .backgroundPalette('lnr-background')
         .foregroundPalette = DARK_FOREGROUND;
-
-    // var LIGHT_FOREGROUND = {
-    //   name: 'light',
-    //   '1': 'rgba(255,255,255,1.0)',
-    //   '2': 'rgba(255,255,255,0.7)',
-    //   '3': 'rgba(255,255,255,0.5)',
-    //   '4': 'rgba(255,255,255,0.12)'
-    // };
 
     $mdThemingProvider.theme('lnr-dark')
         .backgroundPalette('lnr-background')

@@ -1,7 +1,9 @@
-// #5FC693: primary color
-// 4px    : border radius
+// #5FC693:primary color
+// 4px:border radius
 // Added to material
-// md-lined, md-right-arrow, md-input-container-compact
+// md-lined,
+md-right-arrow,
+md-input-container-compact
 
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL
@@ -12,7 +14,12 @@ html {
   min-width: 320px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0.34rem 0;
 }
 
@@ -42,7 +49,11 @@ strong {
 }
 
 .lnr-margin-right {
-  margin-right: 10px;
+  margin-right: 8px;
+}
+
+.lnr-margin-left {
+  margin-left: 8px;
 }
 
 .lnr-link {
@@ -66,7 +77,7 @@ strong {
 
 .lnr-middle-divider:before,
 .lnr-middle-divider:after {
-  background-color: rgba(206,212,216,1.0);
+  background-color: rgba(206, 212, 216, 1.0);
   content: "";
   display: inline-block;
   height: 1px;
@@ -90,7 +101,9 @@ ui-view {
   position: relative;
 }
 
-.single-column, requests, search {
+.single-column,
+requests,
+search {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -150,17 +163,35 @@ ui-view {
   -moz-border-radius: 20px;
 }
 
-
 /*-----------------------------------------------------------------------------------*/
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
 
 
 .lnr-btn-fb {
-  // border-color: #7ab2f8!important;
-  border-color: #3b5998!important;
-  background:  #3b5998!important;
-  color: #fff!important;
+  // border-color: #7ab2f8 !important;
+  border-color: #3b5998 !important;
+  background: #3b5998 !important;
+  color: #fff !important;
+}
+
+md-icon svg path,
+md-icon svg rect,
+md-icon svg circle {
+  fill: #555555;
+}
+
+autocomplete {
+  position: relative;
+}
+
+autocomplete #autocompleteSearch {
+  width: 100%;
+}
+
+autocomplete .pac-container {
+  left: 0 !important;
+  top: 100% !important;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -186,7 +217,7 @@ ui-view {
 
 .lnr-input-containers .md-input-container,
 .lnr-input-containers .md-input-container-compact {
-  margin: 0 5px;
+  margin: 0 4px;
 }
 
 .lnr-input-containers .md-input-container:first-child,
@@ -199,8 +230,8 @@ ui-view {
   margin-right: 0;
 }
 
-
 /*-----------------------------------------------------------------------------------*/
+
 /* FOOTER
 /*-----------------------------------------------------------------------------------*/
 
@@ -250,13 +281,12 @@ footer md-list-item:before {
   height: 120px;
 }
 
-
 /*-----------------------------------------------------------------------------------*/
 /* HOME
 /*-----------------------------------------------------------------------------------*/
 
 home #landing-section {
-  background: url(../ui_images/lnr_hero.jpg) no-repeat center center; 
+  background: url(../ui_images/lnr_hero.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -269,25 +299,26 @@ home #landing-section {
   width: 52%;
   max-width: 720px;
   margin-bottom: -30px;
-  border-radius: 4px;
-  overflow: hidden;
 }
 
-.lnr-search-bar label {
+.lnr-search-bar label,
+.lnr-search-bar .md-errors-spacer {
   display: none;
 }
 
-.lnr-search-bar autocomplete,
-.lnr-search-bar input  {
-  width: 100%;
-  height: 60px;
-  background: #fff;
-  border: none;
-  outline: none;
+.lnr-search-bar,
+.lnr-search-bar md-input-container,
+.lnr-search-bar autocomplete {
+  border-radius: 4px 0 0 4px;
 }
 
 .lnr-search-bar input {
-  padding: 0 16px;
+  width: 100%;
+  height: 60px;
+  border-radius: 4px 0 0 4px;
+  background: #fff;
+  border: none;
+  outline: none;
 }
 
 .lnr-search-bar .md-button {
@@ -337,7 +368,7 @@ home md-grid-list md-grid-tile.tile4 {
   background-image: url(../ui_images/lnr_dublin.jpg);
 }
 
-@media (max-width: 599px) {
+@media (max-width:599px) {
   md-dialog.md-dialog-fullscreen {
     min-height: 100%;
     min-width: 100%;
@@ -355,14 +386,16 @@ home md-grid-list md-grid-tile.tile4 {
   home md-grid-list md-grid-tile {
     border-radius: 0;
   }
+
 }
 
-@media (min-width: 600px) {
+@media (min-width:600px) {
   md-dialog.md-dialog-fullscreen {
     min-width: 400px !important;
     min-height: 0 !important;
     border-radius: 3px;
   }
+
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -371,10 +404,6 @@ home md-grid-list md-grid-tile.tile4 {
 
 bike-card md-card {
   cursor: pointer;
-}
-
-search bike-card md-card {
-  // margin: 0;
 }
 
 bike-card md-card-title-text {
@@ -387,7 +416,6 @@ bike-card md-card-title-text span {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 
 /*-----------------------------------------------------------------------------------*/
 /*  BIKE DETAILS
@@ -404,10 +432,11 @@ bike-card md-card-title-text span {
   margin: 0 auto;
 }
 
-@media (max-width: 599px) {
+@media (max-width:599px) {
   bike #hero-shot {
     height: 45vh;
   }
+
 }
 
 .lnr-accessories md-icon {
@@ -457,6 +486,72 @@ bike .date-picker-wrapper .month-wrapper table .day {
   padding: 8px 0;
 }
 
+/*-----------------------------------------------------------------------------------*/
+/*  SEARCH
+/*-----------------------------------------------------------------------------------*/
+
+search form .md-button {
+  margin-right: 0;
+}
+
+search ng-map {
+  height: 100% !important;
+}
+
+search .map-column {
+  height: 35%;
+}
+
+search #searchBox {
+  width: 200px;
+}
+
+search ng-map md-card {
+  max-width: 200px;
+  margin: 0;
+}
+
+search bike-card md-card {
+  // margin: 0;
+}
+
+search ng-map .gm-style-iw {
+  width: 200px !important;
+}
+
+.lnr-filters md-input-container label {
+  position: absolute !important;
+}
+
+.lnr-filters md-checkbox,
+.lnr-filters md-checkbox .md-label {
+  margin: 0;
+  text-align: center;
+}
+
+.lnr-filters md-checkbox .md-container {
+  display: none;
+}
+
+.lnr-filters md-checkbox.md-checked,
+.lnr-filters md-checkbox.md-checked md-icon svg path,
+.lnr-filters md-checkbox.md-checked md-icon svg rect,
+.lnr-filters md-checkbox.md-checked md-icon svg circle {
+  fill: #4cbf86;
+  color: #4cbf86;
+}
+
+@media (min-width:599px) {
+  search .map-column {
+    height: 100%;
+  }
+
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  NOT STYLED
+/*-----------------------------------------------------------------------------------*/
+
 /* Add possibility to have centered toasts */
 md-toast.md-center {
   left: 50%;
@@ -483,38 +578,11 @@ message .sent-message {
 }
 
 message .received-message {
-  background-color: #ffffff;  
+  background-color: #ffffff;
 }
 
 message .status-message {
   background-color: #ffffff;
-}
-
-search ng-map {
-  height: 100% !important;
-}
-
-search .map-column {
-  height: 35%;
-}
-
-@media (min-width: 599px) {
-  search .map-column {
-    height: 100%;
-  }
-}
-
-search #searchBox {
-  width: 200px;
-}
-
-search ng-map md-card {
-  max-width: 200px;
-  margin: 0;
-}
-
-search ng-map .gm-style-iw {
-  width: 200px !important;
 }
 
 list md-tabs,
@@ -572,5 +640,5 @@ listings #myBikes .bike-profile {
 }
 
 listings #myBikes .bike-profile.unavailable {
-  background-color: rgb(245,245,245);
+  background-color: rgb(245, 245, 245);
 }
