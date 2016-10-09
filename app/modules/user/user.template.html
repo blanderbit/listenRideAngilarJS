@@ -2,10 +2,10 @@
 <md-content class="single-column" ng-if="user.loaded">
   <div class="content">
 
-    <div layout="row" layout-padding>
+    <div class="lnr-margin-lrg"layout="row" layout-padding>
       <div flex="70" layout="row" >
         <img class="lnr-profile-lrg" ng-src="{{user.user.profile_picture.profile_picture.url}}">
-        <div class="lnr-margins-left" layout="column" layout-align="center start" layout-padding>
+        <div layout="column" layout-align="center start" layout-padding>
           <span class="md-headline">{{user.user.first_name}} {{user.user.last_name}}</span>
           <span class="md-body-1">No Rating yet</span>
           <span class="md-body-1">{{user.user.city}}, {{user.user.country}}</span>
