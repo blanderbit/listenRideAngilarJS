@@ -448,6 +448,18 @@ bike-card md-card-title-text span {
   text-overflow: ellipsis;
 }
 
+@media (max-width:639px) {
+  bike-card md-card-title-text span {
+    max-width: 120px!important;
+  }
+}
+
+@media (max-width: 1110px) and (min-width: 640px) {
+  bike-card md-card-title-text span {
+    max-width: 140px;
+  }
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  COMMENT
