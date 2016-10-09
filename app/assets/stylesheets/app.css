@@ -537,11 +537,6 @@ search bike-card md-card {
 /* Map bike card hackaround (to be cleaned) */
 search ng-map md-card {
   width: 240px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 6px!important;
-}
-
-search ng-map ng-scope {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 6px!important;
 }
 
 search ng-map md-card md-icon {
@@ -558,25 +553,15 @@ search .ng-map-info-window > div:first-child div {
 
 search .ng-map-info-window > div:first-child  div:nth-last-child(2),
 search .ng-map-info-window > div:first-child  div:nth-last-child(2) div {
-  display: block;!important;
-  margin-top: -3px;
+  display: block!important;
+  margin-top: -4px!important;
   z-index: 2;
-}
-
-search .ng-map-info-window .gm-style-iw ,
-search .ng-map-info-window .gm-style-iw > div:first-child {
-  overflow: visible!important;
-}
-
-search .ng-map-info-window > div:last-child {
-  border-radius: 50%;
 }
 
 @media (min-width:599px) {
   search .map-column {
     height: 100%;
   }
-
 }
 
 /*-----------------------------------------------------------------------------------*/
