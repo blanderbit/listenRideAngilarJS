@@ -26,5 +26,6 @@ angular.module('listnride', [
   'ngMap',
   'luegg.directives',
   'ngFileUpload',
-  'ngSanitize'
+  'ngSanitize',
+  'angular-input-stars'
 ]);

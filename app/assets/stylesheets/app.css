@@ -601,6 +601,11 @@ search .ng-map-info-window > div:last-child:hover {
 /*  NOT STYLED
 /*-----------------------------------------------------------------------------------*/
 
+/* Increase Size of Rating Stars */
+.angular-input-stars > li {
+  font-size: 24px !important;
+}
+
 /* Add possibility to have centered toasts */
 md-toast.md-center {
   left: 50%;

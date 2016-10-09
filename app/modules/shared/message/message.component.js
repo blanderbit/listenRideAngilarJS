@@ -13,9 +13,13 @@ angular.module('message').component('message', {
     showRatingDialog: '&',
     request: '<'
   },
-  controller: [ '$translate', '$localStorage', 'api',
-    function MessageController($translate, $localStorage, api) {
+  controller: [ '$translate', '$localStorage', '$mdDialog', 'api',
+    function MessageController($translate, $localStorage, $mdDialog, api) {
       var message = this;
+      
+      message.closeDialog = function() {
+        $mdDialog.hide();
+      }
 
       message.sentMessage = function() {
         return message.status == null && $localStorage.userId == message.sender;

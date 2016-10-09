@@ -5,14 +5,17 @@ angular.module('bike').component('calendar', {
   controllerAs: 'calendar',
   bindings: {
     bikeId: '<',
+    userId: '<',
     priceHalfDay: '<',
     priceDay: '<',
     priceWeek: '<',
     requests: '<'
   },
-  controller: ['$scope', '$localStorage', '$state', '$mdDialog', 'date', 'api', 'verification',
-    function CalendarController($scope, $localStorage, $state, $mdDialog, date, api, verification) {
+  controller: ['$scope', '$localStorage', '$state', '$mdDialog', 'date', 'api', 'authentication', 'verification',
+    function CalendarController($scope, $localStorage, $state, $mdDialog, date, api, authentication, verification) {
       var calendar = this;
+      calendar.loggedIn = authentication.loggedIn();
+      calendar.owner = calendar.userId == $localStorage.userId;
 
       initOverview();
 
