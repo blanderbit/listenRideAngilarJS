@@ -1,42 +1,42 @@
  <md-content class="single-column"> 
-  <div id="hero-shot" class="preload" style="{{'background-image: url(' + bike.data.image_file_1.image_file_1.large.url + ')'}};" layout="row" layout-align="start end">
+  <div id="hero-shot" class="lnr-preload-bg" style="{{'background-image: url(' + bike.data.image_file_1.image_file_1.large.url + ')'}};" layout="row" layout-align="start end">
     <md-button class="md-raised" ng-click="bike.showGalleryDialog($event)" md-no-ink>View Pictures</md-button>
   </div>
 
-  <div class="content" layout="column" layout-margin>
-
-    <br>
+  <div class="content" layout="column">
     <md-button class="md-raised md-primary" hide show-xs show-sm ng-click="bike.showCalendarDialog()">{{ 'bike.rent-bike' | translate }}</md-button>
-    <br>
 
-    <div flex layout="row" layout-align="left center">
-      <div flex>
-        <p class="md-headline">{{ bike.data.name }}</p>
-        <p class="md-subhead">{{ bike.data.category | category }} by {{ bike.data.brand }}</p>
+    <div flex layout="row" layout-xs="column" layout-align="space-between none" layout-gt-sm-align="start none" layout-padding>
+      <div flex-sm="55" layout="row" layout-align="start center">
+        <md-icon class="lnr-margin-right lnr-icn-mlrg lnr-no-padding" md-svg-src="app/assets/ui_icons/biketype_allterrain.svg"></md-icon>
+        <div flex layout="column">
+          <span class="md-title">{{ bike.data.name }}</span>
+          <span class="md-subhead">{{ bike.data.category | category }} by {{ bike.data.brand }}</span>
+        </div>
       </div>
-      <div flex="30" layout="row" hide-sm hide-xs>
-          <p flex="33" layout="column" layout-align="center center">
+
+      <div flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center">
+          <div flex="33" layout="column" layout-align="center center">
             <span class="md-headline">{{ bike.data.price_half_daily | number : 0 }} €</span>
             <span class="md-caption">halfday</span>
-          </p>
-          <p flex="33" layout="column" layout-align="center center">
+          </div>
+          <div flex="33" layout="column" layout-align="center center">
             <span class="md-headline">{{ bike.data.price_daily | number : 0 }} €</span>
             <span class="md-caption">day</span>
-          </p>
-          <p flex="33" layout="column" layout-align="center center">
+          </div>
+          <div flex="33" layout="column" layout-align="center center">
             <span class="md-headline">{{ bike.data.price_weekly | number : 0 }} €</span>
             <span class="md-caption">week</span>
-          </p>
+          </div>
       </div>
     </div>
 
     <md-divider></md-divider>
 
     <div flex layout="row">
-      <div flex layout="column">
-
+      <div flex layout="column" layout-padding>
         <div layout="row" layout-xs="column">
-          <div flex-gt-xs="20">
+          <div flex-gt-xs="25">
             <p class="md-body-2">Description</p>
           </div>
           <div flex-gt-xs>
@@ -45,61 +45,118 @@
         </div>
 
         <div layout="row" layout-xs="column">
-          <div flex-gt-xs="20">
-            <p class="md-body-2">Accessories</p>
+          <div flex-gt-xs="25">
+            <p class="md-body-2">City</p>
           </div>
-          <div flex-gt-xs layout="row">
-            <div ng-if="bike.data.has_lock" class="accessory-icon lock"></div>
-            <div ng-if="bike.data.has_helmet" class="accessory-icon helmet"></div>
-            <div ng-if="bike.data.has_lights" class="accessory-icon light"></div>
-            <div ng-if="bike.data.has_basket" class="accessory-icon basket"></div>
-            <div ng-if="bike.data.has_trailer" class="accessory-icon trailer"></div>
-            <div ng-if="bike.data.has_childseat" class="accessory-icon childseat"></div>
+          <div flex-gt-xs>
+            <p class="md-body-1 lnr-capitalize">{{ bike.data.city }}, {{ bike.data.country }}</p>
           </div>
         </div>
 
-        <md-divider></md-divider>
+        <div layout="row" layout-xs="column">
+          <div flex-gt-xs="25">
+            <p class="md-body-2">Size</p>
+          </div>
+          <div flex-gt-xs>
+            <p class="md-body-1">for <strong>{{ bike.data.size }}</strong> - <strong>{{ bike.data.size + 10 }}</strong> cm</p>
+          </div>
+        </div>
+
+        <div layout="row" layout-xs="column" layout-align-gt-xs="center center">
+          <div flex-gt-xs="25">
+            <p class="md-body-2">Accessories</p>
+          </div>
+          <div flex-gt-xs>
+            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_lock" md-svg-src="app/assets/ui_icons/accessoire_lock.svg">
+              <md-tooltip md-direction="top">lock</md-tooltip>
+            </md-icon>
+            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_helmet" md-svg-src="app/assets/ui_icons/accessoire_helmet.svg">
+              <md-tooltip md-direction="top">helmet</md-tooltip>
+            </md-icon>
+            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_lights" md-svg-src="app/assets/ui_icons/accessoire_lights.svg">
+              <md-tooltip md-direction="top">lights</md-tooltip>
+            </md-icon>
+            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_basket" md-svg-src="app/assets/ui_icons/accessoire_basket.svg">
+              <md-tooltip md-direction="top">basket</md-tooltip>
+            </md-icon>
+            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_trailer" md-svg-src="app/assets/ui_icons/accessoire_trailer.svg">
+              <md-tooltip md-direction="top">trailer</md-tooltip>
+            </md-icon>
+            <md-icon class="lnr-icn-md" ng-if="bike.data.has_childseat" md-svg-src="app/assets/ui_icons/accessoire_childseat.svg">
+              <md-tooltip md-direction="top">child seat</md-tooltip>
+            </md-icon>
+          </div>
+        </div>
 
         <div layout="row" layout-xs="column">
-          <div flex-gt-xs="20">
+          <div flex-gt-xs="25">
+            <p class="md-body-2">Details</p>
+          </div>
+          <div class="lnr-compact-details" layout="column" flex-gt-xs>
+            <div layout="row" layout-align="start center">
+              <p flex="20" class="md-body-2">Brand</p>
+              <p class="md-body-1">{{ bike.data.brand }}</p>
+            </div>
+            <div layout="row" layout-align="start center">
+              <p flex="20" class="md-body-2">Category</p>
+              <p class="md-body-1">{{ bike.data.category | category }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div layout="row" layout-xs="column">
+          <div flex-gt-xs="25">
             <p class="md-body-2">Lister</p>
           </div>
           <div flex-gt-xs layout="row" layout-align="start center">
-            <img class="lister-image" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
-            <p class="md-body-1" flex-offset="2">{{bike.data.user.first_name}} {{bike.data.user.last_name}}</p>
+            <img class="lnr-profile-md lnr-margin-right" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
+            <p class="md-subhead lnr-margin-left" flex-offset="2">{{bike.data.user.first_name}} {{bike.data.user.last_name}}</p>
           </div>
         </div>
 
-        <md-divider></md-divider>
-
+        <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
+        
         <div layout="row" layout-xs="column">
-          <div flex-gt-xs="20">
+          <div flex-gt-xs="25">
             <p class="md-body-2">Reviews</p>
           </div>
+
           <div flex-gt-xs>
-            <p class="md-body-1">Here will be text reviews</p>
-            <p class="md-body-1">Here will be text reviews</p>
-            <p class="md-body-1">Here will be text reviews</p>
-            <p class="md-body-1">Here will be text reviews</p>
+            <div class="lnr-comment" layout="row">
+              <img class="lnr-profile-md lnr-margin-right" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
+              <div flex class="lnr-margin-left">
+                <p class="lnr-comment-name md-body-2">Thomas Ed</p>
+                <p class="lnr-comment-content md-body-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>                
+              </div>
+            </div>
+
+            <div class="lnr-comment" layout="row">
+              <img class="lnr-profile-md lnr-margin-right" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
+              <div flex class="lnr-margin-left">
+                <p class="lnr-comment-name md-body-2">Thomas Ed</p>
+                <p class="lnr-comment-content md-body-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>                
+              </div>
+            </div>
+
           </div>
         </div>
-
       </div>
-      <div flex="30" flex-offset="5" hide-sm hide-xs>
+
+      <md-divider class="lnr-margin-left lnr-margin-right"></md-divider>
+
+      <div flex="30" hide-sm hide-xs>
         <calendar ng-if="!bike.mobileCalendar()" bike-id="bike.data.id" price-half-day="bike.data.price_half_daily" price-day="bike.data.price_daily" price-week="bike.data.price_weekly" requests="bike.data.requests"></calendar>
       </div>
     </div>
-
-    <md-divider></md-divider>
    
   </div>
 
-  <ng-map ng-if="bike.data !== undefined" default-style="false" center="[{{bike.mapOptions.lat}},{{bike.mapOptions.lng}}]" zoom="{{bike.mapOptions.zoom}}" scrollwheel="false">
+  <ng-map ng-if="bike.data !== undefined" default-style="false" style="height: 350px" center="[{{bike.mapOptions.lat}},{{bike.mapOptions.lng}}]" zoom="{{bike.mapOptions.zoom}}" scrollwheel="false">
     <shape name="circle" no-watcher="true"
-      stroke-color="#FF0000"
-      stroke-opacity="0.8"
+      stroke-color="#7AB2F8"
+      stroke-opacity="1"
       stroke-weight="1"
-      fill-color="#FF0000"
+      fill-color="#7CB3FF"
       fill-opacity="0.35"
       center="[{{bike.data.lat_rnd}},{{bike.data.lng_rnd}}]"
       radius="500">

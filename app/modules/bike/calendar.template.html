@@ -1,7 +1,7 @@
 <div id="bikeCalendar"></div>
 
-<div id="timeRange" layout-padding layout="row" layout-align="space-between center">
-  <md-input-container>
+<div id="timeRange" layout="row" layout-align="start center" layout-padding>
+  <md-input-container flex>
     <label>{{ 'shared.from' | translate }}</label>
     <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')"
       ng-model="calendar.startTime" placeholder="{{ 'shared.from' | translate }}">
@@ -11,7 +11,7 @@
     </md-select>
   </md-input-container>
 
-  <md-input-container>
+  <md-input-container flex>
     <label>{{ 'shared.to' | translate }}</label>
     <md-select ng-disabled="calendar.endDate === undefined" ng-change="calendar.onTimeChange('end')"
       ng-model="calendar.endTime" placeholder="{{ 'shared.to' | translate }}">
@@ -22,14 +22,14 @@
   </md-input-container>
 </div>
 
-<div id="formSubmit" class="md-whiteframe-1dp" layout="column" layout-align="center stretch">
+<div id="formSubmit" layout="column" layout-align="center stretch">
   <div id="requestOverview" layout="column" layout-align="center stretch" layout-padding>
     <div layout="row" layout-align="space-between center">
       <div>{{ 'shared.duration' | translate }}</div>
       <div>{{ calendar.duration }}</div>
     </div>
 
-    <md-divider></md-divider>
+    <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
 
     <div layout="row" layout-align="space-between center">
       <div>{{ 'shared.subtotal' | translate }}</div>
@@ -47,7 +47,7 @@
     </div>
   </div>
 
-  <md-button type="submit" class="md-raised" ng-click="calendar.onBikeRequest()" ng-disabled="calendar.isFormInvalid()">
+  <md-button type="submit" class="md-raised md-primary" ng-click="calendar.onBikeRequest()" ng-disabled="calendar.isFormInvalid()">
     {{ 'calendar.request-bike' | translate }}
   </md-button>
 

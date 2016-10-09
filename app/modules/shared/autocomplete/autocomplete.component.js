@@ -6,6 +6,7 @@ angular.module('autocomplete').component('autocomplete', {
   bindings: {
     location: '=',
     labelId: '@',
+    placeholderId: '@',
     required: '@',
     fillAddress: '&'
   },

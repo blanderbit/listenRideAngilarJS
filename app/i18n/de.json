@@ -106,7 +106,9 @@
     "featured-bikes-header": "Die bliebtesten Fahrräder zum ausleihen",
     "featured-bikes-subheader": "Miete dir ein Schindelhauer, Specialized und viele andere Marken",
     "featured-cities-header": "Entdecke stilvoll neue Städte",
-    "featured-cities-subheader": "Miete ein Rad in Berlin, München, Amsterdam und anderen wunderschönen Städten"
+    "featured-cities-subheader": "Miete ein Rad in Berlin, München, Amsterdam und anderen wunderschönen Städten",
+    "list-a-bike-header": "Have your own bike?",
+    "list-a-bike-subheader": "List it and make money"
   },
 
   "forms": {
@@ -119,7 +121,7 @@
     "log-in": "Log In",
     "log-out": "Log Out",
     "sign-up": "Registrieren",
-    "sign-up-with-facebook": "Mit Facebook registrieren"
+    "sign-up-with-facebook": "Mit facebook registrieren"
   },
   
   "autocomplete": {

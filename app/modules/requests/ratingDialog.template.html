@@ -7,13 +7,13 @@
     </md-toolbar>
 
     <md-dialog-content layout="column" class="dialog-content" layout-margin>
-      <p class="md-body-1 center-text">How did you like the overall experience?</p>
-      <p class="md-body-1 center-text">{{ 'requests.ratings.description' | translate }}</p>
+      <p class="md-body-1 lnr-center">How did you like the overall experience?</p>
+      <p class="md-body-1 lnr-center">{{ 'requests.ratings.description' | translate }}</p>
       <br><br>
       <p>
         <md-slider flex md-discrete ng-model="ratingDialog.rating" step="1" min="1" max="5" aria-label="rating"></md-slider>
       </p>
-      <p class="md-body-2 center-text" translate="requests.ratings.{{ratingDialog.rating}}"></p>
+      <p class="md-body-2 lnr-center" translate="requests.ratings.{{ratingDialog.rating}}"></p>
       <br>
       <md-input-container class="md-input-container-compact">
         <textarea placeholder="{{ 'requests.ratings.rating_text_lister' | translate }}" ng-model="ratingDialog.message" md-maxlength="150" rows="3" md-select-on-focus></textarea>
