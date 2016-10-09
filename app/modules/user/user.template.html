@@ -1,53 +1,96 @@
 <md-progress-linear ng-if="!user.loaded" md-mode="query"></md-progress-linear>
 <md-content class="single-column" ng-if="user.loaded">
-  <div class="content" layout="row" layout-padding>
-    <div flex="70" layout="row">
-      <img class="lnr-profile-lrg lnr-margin-right" ng-src="{{user.user.profile_picture.profile_picture.url}}">
-      <div class="lnr-margin-left" layout="column" layout-align="center start">
-        <span class="md-headline">{{user.user.first_name}} {{user.user.last_name}}</span>
-        <span class="md-caption">No Rating yet</span>
-        <span class="md-body-1">{{user.user.city}}, {{user.user.country}}</span>
+  <div class="content">
+
+    <div layout="row" layout-padding>
+      <div flex="70" layout="row" >
+        <img class="lnr-profile-lrg" ng-src="{{user.user.profile_picture.profile_picture.url}}">
+        <div class="lnr-margins-left" layout="column" layout-align="center start" layout-padding>
+          <span class="md-headline">{{user.user.first_name}} {{user.user.last_name}}</span>
+          <span class="md-body-1">No Rating yet</span>
+          <span class="md-body-1">{{user.user.city}}, {{user.user.country}}</span>
+        </div>
+      </div>
+
+      <md-divider></md-divider>
+
+      <div flex="30" flex-offset="5" layout="column" layout-align="center start" layout-padding>
+        <span class="md-body-1">
+          <md-icon class="lnr-icn-sm lnr-margin-right" 
+          md-svg-src="app/assets/ui_icons/icn_verified.svg"
+          ng-class="user.user.confirmed_phone ? 'lnr-accent' : 'lnr-disabled'"></md-icon> 
+          <md-tooltip ng-if="user.user.confirmed_phone" md-direction="left">verified</md-tooltip>
+          Phone Number
+        </span>
+        <span class="md-body-1">
+          <md-icon class="lnr-icn-sm lnr-margin-right"
+          md-svg-src="app/assets/ui_icons/icn_verified.svg"
+          ng-class="user.user.status > 0 ? 'lnr-accent' : 'lnr-disabled'"></md-icon>
+          <md-tooltip ng-if="user.user.status > 0" md-direction="left">verified</md-tooltip>
+          Email Address
+        </span>
+        <span class="md-body-1">
+          <md-icon class="lnr-icn-sm lnr-margin-right"
+          md-svg-src="app/assets/ui_icons/icn_verified.svg"
+          ng-class="user.user.current_payment_method > 0 ? 'lnr-accent' : 'lnr-disabled'"></md-icon>
+          <md-tooltip ng-if="user.user.current_payment_method" md-direction="left">verified</md-tooltip>
+          Payment Data
+        </span>
       </div>
     </div>
+
     <md-divider></md-divider>
-    <div flex="30" flex-offset="5" layout="column" layout-align="center start">
-      <p class="md-body-1">● Verified Phone Number</p>
-      <p class="md-body-1">● Verified Email Address</p>
-      <p class="md-body-1">● Verified Payment Data</p>
-<!--       <p class="md-body-1" ng-if="user.user.confirmed_phone">● Verified Phone Number</p>
-      <p class="md-body-1" ng-if="user.user.status > 0">● Verified Email Address</p>
-      <p class="md-body-1" ng-if="user.user.current_payment_method">● Verified Payment Data</p> -->
-    </div>
-  </div>
 
-  <md-divider></md-divider>
+    <div layout="column" flex="70" layout-padding>
+      <!-- description -->
+      <div layout="row" layout-xs="column">
+        <div flex-gt-xs="25">
+          <p class="md-body-2">Description</p>
+        </div>
+        <div flex-gt-xs>
+          <p class="md-body-1">{{user.user.description}}</p>
+        </div>
+      </div>
+      <!-- end description -->
 
-  <div class="content" layout="column" flex-gt-xs="80" layout-padding>
-    <div layout="row" layout-xs="column">
-      <div flex-gt-xs="25">
-        <p class="md-body-2">Description</p>
+      <!-- listings -->
+      <div layout="row" layout-xs="column">
+        <div flex-gt-xs="25">
+          <p class="md-body-2">Listings</p>
+        </div>
+        <div flex-gt-xs>
+          <p class="md-body-1">{{user.user.description}}</p>
+        </div>
       </div>
-      <div flex-gt-xs>
-        <p class="md-body-1">{{user.user.description}}</p>
-      </div>
-    </div>
+      <!-- end listings -->
 
-    <div layout="row" layout-xs="column">
-      <div flex-gt-xs="25">
-        <p class="md-body-2">Description</p>
-      </div>
-      <div flex-gt-xs>
-        <p class="md-body-1">{{user.user.description}}</p>
-      </div>
-    </div>
+      <!-- reviews -->
+      <div layout="row" layout-xs="column">
+        <div flex-gt-xs="25">
+          <p class="md-body-2">Reviews</p>
+        </div>
 
-    <div layout="row" layout-xs="column">
-      <div flex-gt-xs="25">
-        <p class="md-body-2">Listings</p>
+        <div flex-gt-xs>
+          <div class="lnr-comment" layout="row">
+            <img class="lnr-profile-md lnr-margin-right" ng-src="{{user.user.profile_picture.profile_picture.url}}"></img>
+            <div flex class="lnr-margin-left">
+              <p class="lnr-comment-name md-body-2">Thomas Ed</p>
+              <p class="lnr-comment-content md-body-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>                
+            </div>
+          </div>
+
+          <div class="lnr-comment" layout="row">
+            <img class="lnr-profile-md lnr-margin-right" ng-src="{{user.user.profile_picture.profile_picture.url}}"></img>
+            <div flex class="lnr-margin-left">
+              <p class="lnr-comment-name md-body-2">Thomas Ed</p>
+              <p class="lnr-comment-content md-body-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>                
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div flex-gt-xs>
-        <p class="md-body-1">{{user.user.description}}</p>
-      </div>
+      <!-- end reviews -->
+
     </div>
 
   </div>

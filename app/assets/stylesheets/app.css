@@ -40,10 +40,6 @@ strong {
   text-align: center;
 }
 
-.lnr-white {
-  color: #fff;
-}
-
 .lnr-margin {
   margin: 8px;
 }
@@ -129,6 +125,54 @@ search {
   background-color: #EEEEEE;
 }
 
+/*-----------------------------------------------------------------------------------*/
+/* COLORS
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-white {
+  color: #fff;  
+}
+
+.lnr-accent {
+  color: #5fc693;
+}
+
+.lnr-foreground {
+  color: rgba(85,85,85,1.0);
+}
+
+.lnr-disabled {
+  color: rgba(206,212,216,1.0);
+}
+
+.lnr-white svg path,
+.lnr-white svg rect,
+.lnr-white svg circle,
+.lnr-white svg polygon {
+  fill: #fff;
+}
+
+.lnr-accent svg path,
+.lnr-accent svg rect,
+.lnr-accent svg circle,
+.lnr-accent svg polygon {
+  fill: #5fc693;
+}
+
+.lnr-foreground svg path,
+.lnr-foreground svg rect,
+.lnr-foreground svg circle,
+.lnr-foreground svg polygon {
+  fill: rgba(85,85,85,1.0);
+}
+
+.lnr-disabled svg path,
+.lnr-disabled svg rect,
+.lnr-disabled svg circle,
+.lnr-disabled svg polygon {
+  fill: rgba(206,212,216,1.0);
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 /* NAVBAR
@@ -185,7 +229,6 @@ search {
 }
 
 .lnr-btn-fb {
-  // border-color: #7ab2f8 !important;
   border-color: #3b5998 !important;
   background: #3b5998 !important;
   color: #fff !important;
