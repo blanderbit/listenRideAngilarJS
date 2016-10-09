@@ -3,17 +3,22 @@
     <md-button class="md-raised" ng-click="bike.showGalleryDialog($event)" md-no-ink>View Pictures</md-button>
   </div>
 
-  <div class="content" layout="column" layout-padding>
+  <div class="content" layout="column">
 
     <md-button class="md-raised md-primary" hide show-xs show-sm ng-click="bike.showCalendarDialog()">{{ 'bike.rent-bike' | translate }}</md-button>
 
+
+
+    <div flex layout="row">
+
+      <div flex layout="column" layout-padding>
     <div flex layout="row" layout-align="start center">
       <md-icon class="lnr-margin-right lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/biketype_allterrain.svg"></md-icon>
       <div flex layout="column">
         <span class="md-title">{{ bike.data.name }}</span>
         <span class="md-subhead">{{ bike.data.category | category }} by {{ bike.data.brand }}</span>
       </div>
-      <div flex="30" layout="row" hide-sm hide-xs>
+      <!-- <div flex="35" layout="row" hide-sm hide-xs>
           <div flex="33" layout="column" layout-align="center center">
             <span class="md-headline">{{ bike.data.price_half_daily | number : 0 }} €</span>
             <span class="md-caption">halfday</span>
@@ -26,14 +31,12 @@
             <span class="md-headline">{{ bike.data.price_weekly | number : 0 }} €</span>
             <span class="md-caption">week</span>
           </div>
-      </div>
+      </div> -->
     </div>
-
     <md-divider></md-divider>
 
-    <div flex layout="row">
 
-      <div flex layout="column"  layout-padding>
+
         <div layout="row" layout-xs="column">
           <div flex-gt-xs="25">
             <p class="md-body-2">Description</p>
@@ -61,7 +64,7 @@
           </div>
         </div>
 
-        <div layout="row" layout-xs="column">
+        <div layout="row" layout-xs="column" layout-align="center center">
           <div flex-gt-xs="25">
             <p class="md-body-2">Accessories</p>
           </div>
@@ -143,6 +146,21 @@
 
       <md-divider></md-divider>
       <div flex="30" hide-sm hide-xs  layout-padding>
+      <md-content flex="100" layout="row" hide-sm hide-xs md-theme="lnr-dark">
+          <div flex="33" layout="column" layout-align="center center">
+            <span class="md-headline">{{ bike.data.price_half_daily | number : 0 }} €</span>
+            <span class="md-caption">halfday</span>
+          </div>
+          <div flex="33" layout="column" layout-align="center center">
+            <span class="md-headline">{{ bike.data.price_daily | number : 0 }} €</span>
+            <span class="md-caption">day</span>
+          </div>
+          <div flex="33" layout="column" layout-align="center center">
+            <span class="md-headline">{{ bike.data.price_weekly | number : 0 }} €</span>
+            <span class="md-caption">week</span>
+          </div>
+      </md-content>
+
         <calendar ng-if="!bike.mobileCalendar()" bike-id="bike.data.id" price-half-day="bike.data.price_half_daily" price-day="bike.data.price_daily" price-week="bike.data.price_weekly" requests="bike.data.requests"></calendar>
       </div>
     </div>

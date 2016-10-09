@@ -398,7 +398,7 @@ home md-grid-list md-grid-tile.tile4 {
   }
 
   home md-grid-list md-grid-tile {
-    border-radius: 0;
+    // border-radius: 0;
   }
 
 }
