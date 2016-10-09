@@ -6,13 +6,16 @@
   <div class="content" layout="column">
     <md-button class="md-raised md-primary" hide show-xs show-sm ng-click="bike.showCalendarDialog()">{{ 'bike.rent-bike' | translate }}</md-button>
 
-    <div flex layout="row" layout-align="start center" layout-padding>
-      <md-icon class="lnr-margin-right lnr-icn-mlrg lnr-no-padding" md-svg-src="app/assets/ui_icons/biketype_allterrain.svg"></md-icon>
-      <div flex layout="column">
-        <span class="md-title">{{ bike.data.name }}</span>
-        <span class="md-subhead">{{ bike.data.category | category }} by {{ bike.data.brand }}</span>
+    <div flex="100" layout="row" layout-xs="column" layout-align="space-between none" layout-gt-sm-align="start none" layout-padding>
+      <div flex-sm="55" layout="row" layout-align="start center">
+        <md-icon class="lnr-margin-right lnr-icn-mlrg lnr-no-padding" md-svg-src="app/assets/ui_icons/biketype_allterrain.svg"></md-icon>
+        <div flex layout="column">
+          <span class="md-title">{{ bike.data.name }}</span>
+          <span class="md-subhead">{{ bike.data.category | category }} by {{ bike.data.brand }}</span>
+        </div>
       </div>
-      <div flex="30" layout="row" hide-sm hide-xs>
+
+      <div flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center" layout-align-gt-sm="none none">
           <div flex="33" layout="column" layout-align="center center">
             <span class="md-headline">{{ bike.data.price_half_daily | number : 0 }} €</span>
             <span class="md-caption">halfday</span>
