@@ -1,9 +1,10 @@
-// #5FC693:primary color
-// 4px:border radius
+// #5FC693: Primary Color
+// #4cbf86: Accent Color
+// 4px: border radius
 // Added to material
 // md-lined,
-md-right-arrow,
-md-input-container-compact
+// md-right-arrow,
+// md-input-container-compact
 
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL
@@ -46,6 +47,10 @@ strong {
 
 .lnr-white {
   color: #fff;
+}
+
+.lnr-margin {
+  margin: 8px;
 }
 
 .lnr-margin-right {
@@ -167,6 +172,11 @@ search {
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
 
+.lnr-btn-inline {
+  margin-top: 25px;
+  margin-right: 0;
+  margin-bottom: 0;
+}
 
 .lnr-btn-fb {
   // border-color: #7ab2f8 !important;
@@ -175,11 +185,11 @@ search {
   color: #fff !important;
 }
 
-md-icon svg path,
-md-icon svg rect,
-md-icon svg circle {
-  fill: #555555;
-}
+// md-icon svg path,
+// md-icon svg rect,
+// md-icon svg circle {
+//   fill: #555555;
+// }
 
 autocomplete {
   position: relative;
@@ -192,6 +202,10 @@ autocomplete #autocompleteSearch {
 autocomplete .pac-container {
   left: 0 !important;
   top: 100% !important;
+}
+
+autocomplete .md-errors-spacer {
+  display: none;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -436,7 +450,6 @@ bike-card md-card-title-text span {
   bike #hero-shot {
     height: 45vh;
   }
-
 }
 
 .lnr-accessories md-icon {
@@ -490,10 +503,6 @@ bike .date-picker-wrapper .month-wrapper table .day {
 /*  SEARCH
 /*-----------------------------------------------------------------------------------*/
 
-search form .md-button {
-  margin-right: 0;
-}
-
 search ng-map {
   height: 100% !important;
 }
@@ -502,25 +511,8 @@ search .map-column {
   height: 35%;
 }
 
-search #searchBox {
-  width: 200px;
-}
-
-search ng-map md-card {
-  max-width: 200px;
-  margin: 0;
-}
-
 search bike-card md-card {
   margin: 0;
-}
-
-search ng-map .gm-style-iw {
-  width: 200px !important;
-}
-
-.lnr-filters md-input-container label {
-  position: absolute !important;
 }
 
 .lnr-filters md-checkbox,
@@ -539,6 +531,45 @@ search ng-map .gm-style-iw {
 .lnr-filters md-checkbox.md-checked md-icon svg circle {
   fill: #4cbf86;
   color: #4cbf86;
+}
+
+
+/* Map bike card hackaround (to be cleaned) */
+search ng-map md-card {
+  width: 240px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 6px!important;
+}
+
+search ng-map ng-scope {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 6px!important;
+}
+
+search ng-map md-card md-icon {
+  display: none;
+}
+
+search ng-map md-card md-card-title-text span {
+  max-width: 130px;
+}
+
+search .ng-map-info-window > div:first-child div {
+  display: none;
+}
+
+search .ng-map-info-window > div:first-child  div:nth-last-child(2),
+search .ng-map-info-window > div:first-child  div:nth-last-child(2) div {
+  display: block;!important;
+  margin-top: -3px;
+  z-index: 2;
+}
+
+search .ng-map-info-window .gm-style-iw ,
+search .ng-map-info-window .gm-style-iw > div:first-child {
+  overflow: visible!important;
+}
+
+search .ng-map-info-window > div:last-child {
+  border-radius: 50%;
 }
 
 @media (min-width:599px) {
