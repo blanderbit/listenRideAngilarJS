@@ -18,9 +18,7 @@
     </div>
     <div layout-xs="column" layout="row">
       <div layout="row" layout-wrap>
-        <bike-card ng-repeat="bike in home.featuredBikes" flex="100" flex-gt-xs="50" flex-gt-sm="33"
-          bike-id="bike.id" name="bike.name" brand="bike.brand" price="bike.price_daily"
-          image-url=" bike.image_file_1.image_file_1.small.url">
+        <bike-card ng-repeat="bike in home.featuredBikes" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33">
         </bike-card>
       </div>
     </div>

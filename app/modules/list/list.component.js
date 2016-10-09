@@ -3,8 +3,8 @@
 angular.module('list').component('list', {
   templateUrl: 'app/modules/list/list.template.html',
   controllerAs: 'list',
-  controller: ['$mdDialog', '$localStorage', '$state', 'Upload', 'bike_options', 'api', '$timeout', 'verification',
-    function ListController($mdDialog, $localStorage, $state, Upload, bike_options, api, $timeout, verification) {
+  controller: ['$mdDialog', '$localStorage', '$state', '$scope', 'Upload', 'bike_options', 'api', '$timeout', 'verification',
+    function ListController($mdDialog, $localStorage, $state, $scope, Upload, bike_options, api, $timeout, verification) {
       var list = this;
 
       list.form = {
@@ -17,6 +17,10 @@ angular.module('list').component('list', {
           if (!user.has_address || !user.confirmed_phone || user.status == 0) {
             verification.openDialog(true);
           }
+          list.form.street = user.street;
+          list.form.zip = user.zip;
+          list.form.city = user.city;
+          list.form.country = user.country;
         },
         function (error) {
           console.log("Error fetching User");
@@ -109,8 +113,7 @@ angular.module('list').component('list', {
         return list.form.name !== undefined &&
           list.form.brand !== undefined &&
           list.form.size !== undefined &&
-          list.form.description !== undefined &&
-          list.form.description.length >= 100;
+          list.form.description !== undefined;
       };
 
       list.isPictureValid = function() {
@@ -133,6 +136,31 @@ angular.module('list').component('list', {
       list.categoryChange = function(oldCategory) {
         if (list.form.mainCategory == 4 || oldCategory == 4) {
           list.form.size = undefined;
+        }
+      };
+
+      list.fillAddress = function(place) {
+        var components = place.address_components;
+        if (components) {
+          var desiredComponents = {
+            "street_number": "",
+            "route": "",
+            "locality": "",
+            "country": "",
+            "postal_code": ""
+          };
+
+          for (var i = 0; i < components.length; i++) {
+            var type = components[i].types[0];
+            if (type in desiredComponents) {
+              desiredComponents[type] = components[i].long_name;
+            }
+          }
+
+          list.form.street = desiredComponents.route + " " + desiredComponents.street_number;
+          list.form.zip = desiredComponents.postal_code;
+          list.form.city = desiredComponents.locality;
+          list.form.country = desiredComponents.country;
         }
       };
 

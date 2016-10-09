@@ -125,7 +125,8 @@
   },
   
   "autocomplete": {
-    "default-placeholder": "Wo willst du ein Rad ausleihen?"
+    "default-placeholder": "Wo willst du ein Rad ausleihen?",
+    "list-placeholder": "Staße und Hausnr."
   },
 
   "search": {
@@ -207,7 +208,7 @@
       "brand": "Marke",
       "name": "Name",
       "description": "Beschreibung",
-      "min-length-warning": "100 Buchstabe",
+      "min-length-warning": "Minimum 100 Buchstabe",
       "size": "Fahrergröße"
     },
     "pictures": {
@@ -234,7 +235,8 @@
   },
 
   "edit": {
-    "edit-bike": "Rad bearbeiten"
+    "edit-bike": "Rad bearbeiten",
+    "save-changes": "Änderungen Speichern"
   },
 
   "listings": {

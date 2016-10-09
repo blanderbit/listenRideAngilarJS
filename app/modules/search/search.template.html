@@ -75,7 +75,7 @@
 
       <div id="featuredBikes" layout="row" layout-wrap layout-padding>
         <div ng-repeat="bike in search.bikes | filter:search.sizeFilter | map_category:search.categoryFilter" flex="100" flex-gt-sm="50" flex-gt-lg="33">
-          <bike-card bike-id="bike.id" name="bike.name" brand="bike.brand" price="bike.price_daily" image-url="bike.image_file_1.image_file_1.small.url"></bike-card>
+          <bike-card bike="bike"></bike-card>
         </div>
       </div>
     </md-content>
@@ -94,43 +94,10 @@
 
       <info-window id="searchMapWindow" close-box-margin="0">
         <div ng-non-bindable="">
-          <bike-card bike-id="search.selectedBike.id" name="search.selectedBike.name" brand="search.selectedBike.brand" price="search.selectedBike.price_daily" image-url="search.selectedBike.image_file_1.image_file_1.small.url"></bike-card>
-          <!-- <div ui-sref="bike({bikeId: search.selectedBike.id})">{{search.selectedBike.name}}</div> -->
+          <bike-card bike="search.selectedBike"></bike-card>
         </div>
       </info-window>
     </ng-map>
   </div>
 
 </div>
-
-
-<!-- <div layout-fill layout-xs="column" layout-gt-xs="row">
-  <div flex-xs="65" flex-gt-xs="60" flex-order-xs="2" layout="column">
-    <div style="background-color: #efefef">
-      <autocomplete layout-padding value="search.location"></autocomplete>
-    </div>
-
-    <md-content>
-      <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout-padding layout="row" layout-align="center center">
-        <span>{{ 'search.no-bikes' | translate }}</span>
-      </div>
-      <div id="featuredBikes" layout="row" layout-wrap>
-        <div ng-repeat="bike in search.bikes" flex="100" flex-gt-sm="50" flex-gt-md="33" flex-gt-lg="25">
-          <bike-card bike-id="bike.id" name="bike.name" brand="bike.brand" price="bike.price_daily" image-url="bike.image_file_1.image_file_1.small.url"></bike-card>
-        </div>
-      </div>
-    </md-content>
-  </div>
-
-  <div flex flex-order-xs="1" layout="column">
-    <ng-map default-style="false" center="[{{search.mapOptions.lat}},{{search.mapOptions.lng}}]" zoom="{{search.mapOptions.zoom}}">
-      <marker ng-repeat="bike in search.bikes" id="bike.id" position="{{bike.lat_rnd}},{{bike.lng_rnd}}" on-click="search.showBikeWindow(event, bike.id)">
-      </marker>
-      <info-window id="mapWindow">
-        <div ng-non-bindable="">
-          <div ui-sref="bike({bikeId: search.selectedBike.id})">{{search.selectedBike.name}}</div>
-        </div>
-      </info-window>
-    </ng-map>
-  </div>
-</div> -->
