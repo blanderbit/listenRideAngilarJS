@@ -1,42 +1,46 @@
 <div flex layout="row" layout-xs="column" layout-fill>
 
   <div flex-xs="100" flex-gt-xs="60" flex-order-xs="2" layout="column">
-    <div layout="column" layout-padding>
+    <div class="lnr-margin" layout="column">
 
-      <div>
-        <label>Size</label>
-        <form layout="row" ng-submit="search.onLocationChange()">
-          <autocomplete flex="80" layout="row" location="search.location"></autocomplete>
-          <input flex="20" type="submit" id="submit" value="{{ 'autocomplete.search' | translate }}" />
-        </form>
-      </div>
+      <form class="lnr-margin" layout="row" ng-submit="search.onLocationChange()">
+        <autocomplete flex="70" layout="column" location="search.location" label-id="default-placeholder"></autocomplete>
+        <md-button class="md-raised md-primary lnr-btn-inline" flex="30" id="submit" type="submit">{{ 'shared.search' | translate }}</md-button>
+      </form>
 
-      <div class="filters" layout="column" layout-gt-sm="row">  
-        <!-- <div flex="100" flex-gt-sm="75" layout="row" layout-align="space-between center"> -->
-        <md-input-container flex="100" layout="row" layout-align="space-between center">
-          <label>Type</label>
-          <md-checkbox ng-model="search.categoryFilter.allterrain" ng-change="search.onCategoryChange('allterrain')">
-            allterrain
-          </md-checkbox>
-          <md-checkbox ng-model="search.categoryFilter.city" ng-change="search.onCategoryChange('city')">
-            city
-          </md-checkbox>
-          <md-checkbox ng-model="search.categoryFilter.race" ng-change="search.onCategoryChange('race')">
-            race
-          </md-checkbox>
-          <md-checkbox ng-model="search.categoryFilter.special" ng-change="search.onCategoryChange('special')">
-            special
-          </md-checkbox>
-          <md-checkbox ng-model="search.categoryFilter.ebikes" ng-change="search.onCategoryChange('ebikes')">
-            ebikes
-          </md-checkbox>
-          <md-checkbox ng-model="search.categoryFilter.kids" ng-change="search.onCategoryChange('kids')">
-            kids
-          </md-checkbox>
+      <div layout="column" layout-align="space-between none" layout-gt-sm="row">  
+        <md-input-container class="lnr-filters lnr-margin" flex flex-gt-sm="70" flex-order-sm="2" flex-order-xs="2" layout="column">
+          <div><label>Type</label></div>
+          <div flex layout="row" layout-align="space-between center">
+            <md-checkbox ng-model="search.categoryFilter.allterrain" ng-change="search.onCategoryChange('allterrain')">
+              <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_allterrain.svg"></md-icon>
+              Terrain
+            </md-checkbox>
+            <md-checkbox ng-model="search.categoryFilter.city" ng-change="search.onCategoryChange('city')">
+              <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_city.svg"></md-icon>
+              City
+            </md-checkbox>
+            <md-checkbox ng-model="search.categoryFilter.race" ng-change="search.onCategoryChange('race')">
+              <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_race.svg"></md-icon>
+              Race
+            </md-checkbox>
+            <md-checkbox ng-model="search.categoryFilter.special" ng-change="search.onCategoryChange('special')">
+              <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_special.svg"></md-icon>
+              Special
+            </md-checkbox>
+            <md-checkbox ng-model="search.categoryFilter.ebikes" ng-change="search.onCategoryChange('ebikes')">
+              <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_ebike.svg"></md-icon>
+              Ebike
+            </md-checkbox>
+            <md-checkbox ng-model="search.categoryFilter.kids" ng-change="search.onCategoryChange('kids')">
+              <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_kids.svg"></md-icon>
+              Kids
+            </md-checkbox>
+          </div>
         </md-input-container>
-        <!-- </div> -->
 
-        <md-input-container>
+
+        <md-input-container class="lnr-margin" flex-gt-sm="30">
           <label>Size</label>
             <md-select flex="100" ng-model="search.sizeFilter.size" ng-change="search.onSizeChange()">
               <md-option ng-repeat="option in search.sizeOptions" value="{{option.value}}">
@@ -51,16 +55,17 @@
     <md-divider></md-divider>
 
     <md-content flex>
-      <div ng-show="search.bikes === undefined" layout="row" layout-align="center center" layout-margin>
+      <div ng-show="search.bikes === undefined" layout="row" layout-align="center center" layout-fill>
         <md-progress-circular md-mode="indeterminate"></md-progress-circular>
       </div>
 
-      <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout-padding layout="row" layout-align="center center">
+      <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout="row" layout-align="center center" layout-padding>
         <span>{{ 'search.no-bikes' | translate }}</span>
       </div>
 
+
       <div id="featuredBikes" layout="row" layout-wrap layout-padding>
-        <div ng-repeat="bike in search.bikes | filter:search.sizeFilter | map_category:search.categoryFilter" flex="100" flex-gt-sm="50" flex-gt-md="50" flex-gt-lg="33">
+        <div ng-repeat="bike in search.bikes | filter:search.sizeFilter | map_category:search.categoryFilter" flex="100" flex-gt-sm="50" flex-gt-lg="33">
           <bike-card bike-id="bike.id" name="bike.name" brand="bike.brand" price="bike.price_daily" image-url="bike.image_file_1.image_file_1.small.url"></bike-card>
         </div>
       </div>

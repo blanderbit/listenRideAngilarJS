@@ -27,7 +27,8 @@
     "from": "von",
     "to": "bis",
     "cancel": "Abbrechen",
-    "send": "Senden"
+    "send": "Senden",
+    "search": "Suche"
   },
 
   "header": {
@@ -120,12 +121,11 @@
     "log-in": "Log In",
     "log-out": "Log Out",
     "sign-up": "Registrieren",
-    "sign-up-with-facebook": "Mit Facebook registrieren"
+    "sign-up-with-facebook": "Mit facebook registrieren"
   },
   
   "autocomplete": {
-    "search": "Suche",
-    "search-placeholder": "Wo willst du ein Rad ausleihen?"
+    "default-placeholder": "Wo willst du ein Rad ausleihen?"
   },
 
   "search": {

@@ -1,7 +1,10 @@
-// #5FC693: primary color
-// 4px    : border radius
+// #5FC693: Primary Color
+// #4cbf86: Accent Color
+// 4px: border radius
 // Added to material
-// md-lined, md-right-arrow
+// md-lined,
+// md-right-arrow,
+// md-input-container-compact
 
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL
@@ -12,7 +15,12 @@ html {
   min-width: 320px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0.34rem 0;
 }
 
@@ -41,8 +49,16 @@ strong {
   color: #fff;
 }
 
+.lnr-margin {
+  margin: 8px;
+}
+
 .lnr-margin-right {
-  margin-right: 10px;
+  margin-right: 8px;
+}
+
+.lnr-margin-left {
+  margin-left: 8px;
 }
 
 .lnr-link {
@@ -57,12 +73,42 @@ strong {
   opacity: 0.6;
 }
 
+.lnr-middle-divider {
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.lnr-middle-divider:before,
+.lnr-middle-divider:after {
+  background-color: rgba(206, 212, 216, 1.0);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.lnr-middle-divider:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.lnr-middle-divider:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
 /* This has to be set for all full-height layouts */
 ui-view {
   position: relative;
 }
 
-.single-column, requests, search {
+.single-column,
+requests,
+search {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -86,7 +132,11 @@ ui-view {
   z-index: 3;
 }
 
-.lnr-header-logo md-icon {
+.lnr-header .md-toolbar-tools .lnr-header-logo {
+  padding: 0;
+}
+
+.lnr-header .lnr-header-logo md-icon {
   width: 90px;
 }
 
@@ -94,14 +144,114 @@ ui-view {
   border-color: #ffffff;
 }
 
+.lnr-header .lnr-nav-menu .md-button {
+  margin: 0 12px;
+}
+
+.lnr-header .lnr-nav-menu .md-button:not(.md-lined):not(.md-img) {
+  padding: 12px 0;
+}
+
+.lnr-header .lnr-nav-menu .md-button.md-right-arrow {
+  padding-right: 20px;
+}
+
+.lnr-header .lnr-nav-menu .md-button.md-img {
+  padding: 0;
+}
+
+.lnr-header .lnr-nav-menu .md-img img {
+  width: 37px;
+  height: 37px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
 
 /*-----------------------------------------------------------------------------------*/
+/* FRAMEWORK
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-btn-inline {
+  margin-top: 25px;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.lnr-btn-fb {
+  // border-color: #7ab2f8 !important;
+  border-color: #3b5998 !important;
+  background: #3b5998 !important;
+  color: #fff !important;
+}
+
+// md-icon svg path,
+// md-icon svg rect,
+// md-icon svg circle {
+//   fill: #555555;
+// }
+
+autocomplete {
+  position: relative;
+}
+
+autocomplete #autocompleteSearch {
+  width: 100%;
+}
+
+autocomplete .pac-container {
+  left: 0 !important;
+  top: 100% !important;
+}
+
+autocomplete .md-errors-spacer {
+  display: none;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* USER MODALS
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-user-modal {
+  width: 450px;
+}
+
+.lnr-user-modal .md-button {
+  margin: 0;
+}
+
+.lnr-user-modal .md-dialog-content {
+  padding: 25px 30px;
+  padding-top: 10px;
+}
+
+.md-input-container-compact {
+  margin: -5px 0;
+}
+
+.lnr-input-containers .md-input-container,
+.lnr-input-containers .md-input-container-compact {
+  margin: 0 4px;
+}
+
+.lnr-input-containers .md-input-container:first-child,
+.lnr-input-containers .md-input-container-compact:first-child {
+  margin-left: 0;
+}
+
+.lnr-input-containers .md-input-container:last-child,
+.lnr-input-containers .md-input-container-compact:last-child {
+  margin-right: 0;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
 /* FOOTER
 /*-----------------------------------------------------------------------------------*/
 
 footer md-list-item,
 footer md-list-item:before {
-  min-height: 30px;
+  min-height: 24px;
 }
 
 .lnr-btn-ios img {
@@ -115,7 +265,6 @@ footer md-list-item:before {
   text-align: left;
   padding-left: 14px;
 }
-
 
 /*-----------------------------------------------------------------------------------*/
 /* SVG
@@ -146,13 +295,12 @@ footer md-list-item:before {
   height: 120px;
 }
 
-
 /*-----------------------------------------------------------------------------------*/
 /* HOME
 /*-----------------------------------------------------------------------------------*/
 
 home #landing-section {
-  background: url(../ui_images/lnr_hero.jpg) no-repeat center center; 
+  background: url(../ui_images/lnr_hero.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -165,26 +313,31 @@ home #landing-section {
   width: 52%;
   max-width: 720px;
   margin-bottom: -30px;
-  border-radius: 4px;
-  overflow: hidden;
 }
 
-.lnr-search-bar autocomplete,
-.lnr-search-bar input  {
+.lnr-search-bar label,
+.lnr-search-bar .md-errors-spacer {
+  display: none;
+}
+
+.lnr-search-bar,
+.lnr-search-bar md-input-container,
+.lnr-search-bar autocomplete {
+  border-radius: 4px 0 0 4px;
+}
+
+.lnr-search-bar input {
   width: 100%;
   height: 60px;
+  border-radius: 4px 0 0 4px;
+  background: #fff;
   border: none;
   outline: none;
 }
 
-.lnr-search-bar input {
-  padding: 0 15px;
-}
-
-.lnr-search-bar input[type=submit] {
-  font-weight: 500;
-  color: #fff;
-  background: #5FC693;
+.lnr-search-bar .md-button {
+  margin: 0;
+  border-radius: 0 4px 4px 0;
 }
 
 .lnr-section-title {
@@ -229,7 +382,7 @@ home md-grid-list md-grid-tile.tile4 {
   background-image: url(../ui_images/lnr_dublin.jpg);
 }
 
-@media (max-width: 599px) {
+@media (max-width:599px) {
   md-dialog.md-dialog-fullscreen {
     min-height: 100%;
     min-width: 100%;
@@ -247,14 +400,16 @@ home md-grid-list md-grid-tile.tile4 {
   home md-grid-list md-grid-tile {
     border-radius: 0;
   }
+
 }
 
-@media (min-width: 600px) {
+@media (min-width:600px) {
   md-dialog.md-dialog-fullscreen {
     min-width: 400px !important;
     min-height: 0 !important;
     border-radius: 3px;
   }
+
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -265,21 +420,16 @@ bike-card md-card {
   cursor: pointer;
 }
 
-search bike-card md-card {
-    margin: 0;
-}
-
 bike-card md-card-title-text {
   padding: 0 8px;
 }
 
 bike-card md-card-title-text span {
-  max-width: 180px;
+  max-width: 160px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 
 /*-----------------------------------------------------------------------------------*/
 /*  BIKE DETAILS
@@ -296,14 +446,10 @@ bike-card md-card-title-text span {
   margin: 0 auto;
 }
 
-@media (max-width: 599px) {
+@media (max-width:599px) {
   bike #hero-shot {
     height: 45vh;
   }
-}
-
-.lnr-accessories md-icon {
-  margin-right: 10px;
 }
 
 bike #calendar {
@@ -331,74 +477,95 @@ bike .accessory-icon {
   -moz-border-radius: 20px;
 }
 
-bike .date-picker-wrapper {
-  background: transparent;
-  border: none;
+bike .lnr-accessories md-icon {
+  margin-right: 10px;
 }
 
-bike .date-picker-wrapper .month-wrapper table {
-  width: 100%;
+/*-----------------------------------------------------------------------------------*/
+/*  SEARCH
+/*-----------------------------------------------------------------------------------*/
+
+search ng-map {
+  height: 100% !important;
 }
 
-bike .date-picker-wrapper .month-wrapper table .day.real-today {
-  border-radius: 2px;
-  background-color: #eee;
+search .map-column {
+  height: 35%;
 }
 
-bike .date-picker-wrapper .month-wrapper table .day {
-  padding: 8px 0;
+search bike-card md-card {
+  margin: 0;
 }
 
-.profile-picture {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  background-position: 50% 50%;
-  background-size: cover;
+.lnr-filters md-checkbox,
+.lnr-filters md-checkbox .md-label {
+  margin: 0;
+  text-align: center;
 }
 
-.profile-picture-medium {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  /*background-position: 50% 50%;*/
-  background-size: cover;
-  margin: 10px 0;
-  cursor: pointer;
+.lnr-filters md-checkbox .md-container {
+  display: none;
 }
+
+.lnr-filters md-checkbox.md-checked,
+.lnr-filters md-checkbox.md-checked md-icon svg path,
+.lnr-filters md-checkbox.md-checked md-icon svg rect,
+.lnr-filters md-checkbox.md-checked md-icon svg circle {
+  fill: #4cbf86;
+  color: #4cbf86;
+}
+
+
+/* Map bike card hackaround (to be cleaned) */
+search ng-map md-card {
+  width: 240px;
+}
+
+search ng-map md-card md-icon {
+  display: none;
+}
+
+search ng-map md-card md-card-title-text span {
+  max-width: 130px;
+}
+
+search .ng-map-info-window > div:first-child div {
+  display: none;
+}
+
+search .ng-map-info-window > div:first-child  div:nth-last-child(2),
+search .ng-map-info-window > div:first-child  div:nth-last-child(2) div {
+  display: block!important;
+  margin-top: -4px!important;
+  z-index: 2;
+}
+
+search .ng-map-info-window > div:last-child {
+  right: 46px!important;
+  top: 18px!important;
+  opacity: 0.3!important;
+  border-radius: 10px;
+}
+
+search .ng-map-info-window > div:last-child:hover {
+  opacity: 0.6!important;
+}
+
+@media (min-width:599px) {
+  search .map-column {
+    height: 100%;
+  }
+
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  NOT STYLED
+/*-----------------------------------------------------------------------------------*/
 
 .profile-picture-big {
-  width: 150px;
-  height: 150px;
-  border-radius: 75px;
-  -webkit-border-radius: 75px;
-  -moz-border-radius: 75px;
-  /*background-position: 50% 50%;*/
-  background-size: cover;
-}
-
-.profile-picture-button {
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
-  min-width: 40px !important;
-  max-width: 40px !important;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  padding: 0px !important!;
-}
-
-.content {
-  max-width: 970px;
-  margin: 0 auto;
-}
-
-.dialog-content {
-  margin: 10px;
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
 }
 
 /* Increase Size of Rating Stars */
@@ -410,10 +577,6 @@ bike .date-picker-wrapper .month-wrapper table .day {
 md-toast.md-center {
   left: 50%;
   transform: translate3d(-50%, 0, 0);
-}
-
-.md-input-container-compact {
-  margin: 0.5em 0;
 }
 
 requests .requests-list {
@@ -436,48 +599,11 @@ message .sent-message {
 }
 
 message .received-message {
-  background-color: #ffffff;  
+  background-color: #ffffff;
 }
 
 message .status-message {
   background-color: #ffffff;
-}
-
-
-
-footer .link {
-  cursor: pointer;
-}
-
-search ng-map {
-  height: 100% !important;
-}
-
-search .map-column {
-  height: 35%;
-}
-
-@media (min-width: 599px) {
-  search .map-column {
-    height: 100%;
-  }
-}
-
-search #searchBox {
-  width: 200px;
-}
-
-search ng-map md-card {
-  max-width: 200px;
-  margin: 0;
-}
-
-search ng-map .gm-style-iw {
-  width: 200px !important;
-}
-
-autocomplete #autocompleteSearch {
-  width: 100%;
 }
 
 list md-tabs,
@@ -535,5 +661,5 @@ listings #myBikes .bike-profile {
 }
 
 listings #myBikes .bike-profile.unavailable {
-  background-color: rgb(245,245,245);
+  background-color: rgb(245, 245, 245);
 }

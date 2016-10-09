@@ -213,9 +213,10 @@ angular.
 
     $mdThemingProvider.theme('lnr-dark')
         .backgroundPalette('lnr-background')
-        .dark();
+        .dark().foregroundPalette['3'] ='rgba(255,255,255,0.12)';
 
-    $mdThemingProvider
-        .enableBrowserColor();
+    $mdThemingProvider.enableBrowserColor({
+        palette: 'accent'
+    });
 
   });

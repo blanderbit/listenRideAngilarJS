@@ -1,7 +1,8 @@
-<md-dialog flex="40">
+<md-dialog class="lnr-user-modal">
+
   <form ng-cloak name="signupForm" ng-submit="signupDialog.signup()">
 
-    <md-toolbar hide show-xs>
+    <div show-xs>
       <div class="md-toolbar-tools" layout-align="center center">
         <md-button class="md-icon-button">
           <md-icon></md-icon>
@@ -13,19 +14,19 @@
           <md-icon md-svg-src="app/assets/ui_images/icn_close_24.svg" aria-label="Close dialog"></md-icon>
         </md-button>
       </div>
-    </md-toolbar>
+    </div>
 
     <md-dialog-content>
       <div class="md-dialog-content" layout="column">
-        <md-button ng-click="signupDialog.connectFb()" class="md-primary md-raised">{{ 'forms.sign-up-with-facebook' | translate }}</md-button>
-        <div layout="column" layout-align="center center">
-          <!-- <md-divider></md-divider> -->
-          <br><p>{{ 'forms.or' | translate }}</p><br>
+        <md-button ng-click="signupDialog.connectFb()" class="md-primary md-lined lnr-btn-fb">{{ 'forms.sign-up-with-facebook' | translate }}</md-button>
+        <div class="lnr-middle-divider">
+          {{ 'forms.or' | translate }}
         </div>
-        <div layout="row">
+
+        <div class="lnr-input-containers" layout="row">
           <md-input-container flex class="md-input-container-compact">
             <label>{{ 'forms.first-name' | translate }}</label>
-            <input name="first_name" ng-model="signupDialog.firstName" required ng-maxlength="20">
+            <input class="lnr-margin-right" name="first_name" ng-model="signupDialog.firstName" required ng-maxlength="20">
             <div ng-messages="signupForm.first_name.$error" role="alert">
               <div ng-message="required">Please enter your first name.</div>
               <div ng-message="maxlength">First name shouldn't be longer than 20 characters</div>
@@ -59,8 +60,9 @@
             <div ng-message="minlength">Password should be at least 6 characters</div>
           </div>
         </md-input-container>
-        <md-button type="submit" class="md-primary md-raised"">{{ 'forms.sign-up' | translate }}</md-button>
-      
+        
+        <md-button type="submit" class="md-accent md-raised"">{{ 'forms.sign-up' | translate }}</md-button>
+
       </div>
     </md-dialog-content>
   </form>

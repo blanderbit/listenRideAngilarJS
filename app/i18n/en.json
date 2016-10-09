@@ -27,7 +27,8 @@
     "from": "from",
     "to": "to",
     "cancel": "Cancel",
-    "send": "Send"
+    "send": "Send",
+    "search": "Search"
   },
 
   "header": {
@@ -109,7 +110,7 @@
     "log-in": "Log In",
     "log-out": "Log Out",
     "sign-up": "Sign Up",
-    "sign-up-with-facebook": "Sign Up with Facebook"
+    "sign-up-with-facebook": "Sign Up with facebook"
   },
 
   "home": {
@@ -124,8 +125,7 @@
   },
 
   "autocomplete": {
-    "search": "Search",
-    "search-placeholder": "Where would you like to rent a bike"
+    "default-placeholder": "Where would you like to rent a bike"
   },
 
   "search" : {
