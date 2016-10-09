@@ -233,7 +233,8 @@
   },
 
   "edit": {
-    "edit-bike": "Edit Bike"
+    "edit-bike": "Edit Bike",
+    "save-changes": "Save Changes"
   },
 
   "listings": {

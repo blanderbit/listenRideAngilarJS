@@ -10,7 +10,7 @@
   <md-divider></md-divider>
 
   <div class="bike-actions" layout="column" layout-align="space-between center">
-    <md-button md-no-ink>
+    <md-button md-no-ink ui-sref="edit({bikeId: {{ ::listingCard.bikeId }} })">
       {{ 'listingCard.edit-bike' | translate }}
     </md-button>
 

@@ -3,8 +3,8 @@
 angular.module('edit').component('edit', {
   templateUrl: 'app/modules/edit/edit.template.html',
   controllerAs: 'edit',
-  controller: ['$localStorage', '$state', '$stateParams', 'Upload', 'bike_options', 'api',
-    function EditController($localStorage, $state, $stateParams, Upload, bike_options, api) {
+  controller: ['$mdDialog', '$localStorage', '$state', '$stateParams', 'Upload', 'bike_options', 'api',
+    function EditController($mdDialog, $localStorage, $state, $stateParams, Upload, bike_options, api) {
       var edit = this;
 
       edit.form = {
@@ -48,6 +48,7 @@ angular.module('edit').component('edit', {
 
       edit.onFormSubmit = function() {
         edit.submitDisabled = true;
+        showLoadingDialog();
 
         var ride = {
           "ride[name]": edit.form.name,
@@ -87,11 +88,13 @@ angular.module('edit').component('edit', {
           }
         }).then(
           function(response) {
-            // $state.go("bike", {bikeId: response.data.id});
+            hideLoadingDialog();
+            $state.go("bike", {bikeId: response.data.id});
             console.log("Success", response);
           },
           function(error) {
             edit.submitDisabled = false;
+            hideLoadingDialog();
             console.log("Error while listing bike", error);
           }
         );
@@ -116,35 +119,82 @@ angular.module('edit').component('edit', {
 
       edit.removeImage = function(index) {
         edit.form.images.splice(index, 1);
-      }
+      };
 
-      edit.isCategoryValid = function() {
+      edit.isFormValid = function() {
+        return isCategoryValid() &&
+          isDetailsValid() &&
+          isPictureValid() &&
+          isLocationValid() &&
+          isPricingValid();
+      };
+
+      edit.fillAddress = function(place) {
+        var components = place.address_components;
+        if (components) {
+          var desiredComponents = {
+            "street_number": "",
+            "route": "",
+            "locality": "",
+            "country": "",
+            "postal_code": ""
+          };
+
+          for (var i = 0; i < components.length; i++) {
+            var type = components[i].types[0];
+            if (type in desiredComponents) {
+              desiredComponents[type] = components[i].long_name;
+            }
+          }
+
+          edit.form.street = desiredComponents.route + " " + desiredComponents.street_number;
+          edit.form.zip = desiredComponents.postal_code;
+          edit.form.city = desiredComponents.locality;
+          edit.form.country = desiredComponents.country;
+        }
+      };
+
+      function isCategoryValid() {
         return edit.form.mainCategory !== undefined &&
           edit.form.subCategory !== undefined;
       };
 
-      edit.isDetailsValid = function() {
+      function isDetailsValid() {
         return edit.form.name !== undefined &&
           edit.form.brand !== undefined &&
           edit.form.description !== undefined &&
           edit.form.description.length >= 100;
       };
 
-      edit.isPictureValid = function() {
+      function isPictureValid() {
         return edit.form.images.length > 0;
       };
 
-      edit.isLocationValid = function() {
+      function isLocationValid() {
         return edit.form.street !== undefined &&
           edit.form.zip !== undefined &&
           edit.form.city !== undefined &&
           edit.form.country !== undefined;
       };
 
-      edit.isPricingValid = function() {
+      function isPricingValid() {
         return edit.form.price_half_daily !== undefined &&
           edit.form.price_daily !== undefined &&
           edit.form.price_weekly !== undefined;
+      };
+
+      var loadingDialog;
+
+      function showLoadingDialog() {
+        var loadingDialog = $mdDialog.show({
+          parent: angular.element(document.body),
+          templateUrl: 'app/modules/list/loadingDialog.template.html',
+          fullscreen: true
+        });
+      };
+
+      function hideLoadingDialog() {
+        $mdDialog.hide(loadingDialog);
       };
 
     }

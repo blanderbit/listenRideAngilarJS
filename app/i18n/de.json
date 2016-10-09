@@ -233,7 +233,8 @@
   },
 
   "edit": {
-    "edit-bike": "Rad bearbeiten"
+    "edit-bike": "Rad bearbeiten",
+    "save-changes": "Änderungen Speichern"
   },
 
   "listings": {
