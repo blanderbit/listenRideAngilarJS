@@ -493,21 +493,27 @@ bike .lnr-compact-details > div:last-child {
   margin-bottom: 10px;
 }
 
-bike #bikeCalendar {
+bike .date-picker-wrapper {
   margin-left: -8px;
 }
 
-bike #bikeCalendar tr > td:first-child {
+bike .date-picker-wrapper tr > td:first-child {
   padding-left: 16px;
 }
 
-bike #bikeCalendar tr > td:last-child {
+bike .date-picker-wrapper tr > td:last-child {
   padding-right: 16px;
 }
 
 @media (max-width:599px) {
   bike #hero-shot {
     height: 45vh;
+  }
+
+  .date-picker-wrapper,
+  .date-picker-wrapper.inline-wrapper,
+  .month-wrapper {
+    width: 100%;
   }
 }
 

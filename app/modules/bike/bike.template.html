@@ -6,7 +6,7 @@
   <div class="content" layout="column">
     <md-button class="md-raised md-primary" hide show-xs show-sm ng-click="bike.showCalendarDialog()">{{ 'bike.rent-bike' | translate }}</md-button>
 
-    <div flex="100" layout="row" layout-xs="column" layout-align="space-between none" layout-gt-sm-align="start none" layout-padding>
+    <div flex layout="row" layout-xs="column" layout-align="space-between none" layout-gt-sm-align="start none" layout-padding>
       <div flex-sm="55" layout="row" layout-align="start center">
         <md-icon class="lnr-margin-right lnr-icn-mlrg lnr-no-padding" md-svg-src="app/assets/ui_icons/biketype_allterrain.svg"></md-icon>
         <div flex layout="column">
@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <div flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center" layout-align-gt-sm="none none">
+      <div flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center">
           <div flex="33" layout="column" layout-align="center center">
             <span class="md-headline">{{ bike.data.price_half_daily | number : 0 }} €</span>
             <span class="md-caption">halfday</span>
@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <div layout="row" layout-xs="column" layout-align="center center">
+        <div layout="row" layout-xs="column" layout-align-gt-xs="center center">
           <div flex-gt-xs="25">
             <p class="md-body-2">Accessories</p>
           </div>
