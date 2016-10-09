@@ -144,6 +144,11 @@ search {
   padding: 0;
 }
 
+/* Safari vertical alignment fix */
+.lnr-header .md-toolbar-tools {
+  min-height: 30px;
+}
+
 .lnr-header .lnr-header-logo md-icon {
   width: 90px;
 }
@@ -167,6 +172,7 @@ search {
 .lnr-header .lnr-nav-menu .md-button.md-img {
   padding: 0;
 }
+
 
 /*-----------------------------------------------------------------------------------*/
 /* FRAMEWORK

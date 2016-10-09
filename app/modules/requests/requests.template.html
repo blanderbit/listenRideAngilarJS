@@ -2,7 +2,7 @@
 <div flex layout="row" layout-fill style="background-color: #ffffff">
 
   <!-- Right Column displaying actual Chat -->
-  <div flex-gt-sm="65" flex-sm="65" flex-order="2" layout="column" hide-xs>
+  <div flex-gt-sm="70" flex-sm="70" flex-order="2" layout="column" hide-xs>
     <md-progress-linear ng-if="requests.loadingChat" md-mode="query"></md-progress-linear>
     <div scroll-glue="requests.request.glued" class="chat" flex="85">
       <message ng-repeat="message in requests.request.messages" content="message.content" sender="message.sender" status="message.status" request="requests.request" confirm-booking="requests.confirmBooking()" show-rating-dialog="requests.showRatingDialog()"></message>
