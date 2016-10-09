@@ -1,6 +1,6 @@
-<div id="bikeCalendar"></div>
+<div class="lnr-margin" id="bikeCalendar"></div>
 
-<div id="timeRange" layout-padding layout="row" layout-align="start center">
+<div id="timeRange" layout="row" layout-align="start center" layout-padding>
   <md-input-container flex>
     <label>{{ 'shared.from' | translate }}</label>
     <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')"

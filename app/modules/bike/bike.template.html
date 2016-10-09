@@ -91,9 +91,15 @@
           <div flex-gt-xs="25">
             <p class="md-body-2">Details</p>
           </div>
-          <div flex-gt-xs>
-            <p class="md-body-2">Brand</p><p class="md-body-1">{{ bike.data.brand }}</p>
-            <p class="md-body-2">Category</p><p class="md-body-1">{{ bike.data.category | category }}</p>
+          <div layout="column" flex-gt-xs>
+            <div layout="row" layout-align="start center">
+              <p flex="20" class="md-body-2">Brand</p>
+              <p class="md-body-1">{{ bike.data.brand }}</p>
+            </div>
+            <div layout="row" layout-align="start center">
+              <p flex="20" class="md-body-2">Category</p>
+              <p class="md-body-1">{{ bike.data.category | category }}</p>
+            </div>
           </div>
         </div>
 
