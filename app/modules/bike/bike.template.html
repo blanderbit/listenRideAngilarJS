@@ -1,19 +1,21 @@
  <md-content class="single-column"> 
-  <div id="hero-shot" class="preload" style="{{'background-image: url(' + bike.data.image_file_1.image_file_1.large.url + ')'}};" layout="row" layout-align="start end">
+  <div id="hero-shot" class="lnr-preload-bg" style="{{'background-image: url(' + bike.data.image_file_1.image_file_1.large.url + ')'}};" layout="row" layout-align="start end">
     <md-button class="md-raised" ng-click="bike.showGalleryDialog($event)" md-no-ink>View Pictures</md-button>
   </div>
 
-  <div class="content" layout="column" layout-padding>
-
+  <div class="content" layout="column">
     <md-button class="md-raised md-primary" hide show-xs show-sm ng-click="bike.showCalendarDialog()">{{ 'bike.rent-bike' | translate }}</md-button>
 
-    <div flex layout="row" layout-align="start center">
-      <md-icon class="lnr-margin-right lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/biketype_allterrain.svg"></md-icon>
-      <div flex layout="column">
-        <span class="md-title">{{ bike.data.name }}</span>
-        <span class="md-subhead">{{ bike.data.category | category }} by {{ bike.data.brand }}</span>
+    <div flex="100" layout="row" layout-xs="column" layout-align="space-between none" layout-gt-sm-align="start none" layout-padding>
+      <div flex-sm="55" layout="row" layout-align="start center">
+        <md-icon class="lnr-margin-right lnr-icn-mlrg lnr-no-padding" md-svg-src="app/assets/ui_icons/biketype_allterrain.svg"></md-icon>
+        <div flex layout="column">
+          <span class="md-title">{{ bike.data.name }}</span>
+          <span class="md-subhead">{{ bike.data.category | category }} by {{ bike.data.brand }}</span>
+        </div>
       </div>
-      <div flex="30" layout="row" hide-sm hide-xs>
+
+      <div flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center" layout-align-gt-sm="none none">
           <div flex="33" layout="column" layout-align="center center">
             <span class="md-headline">{{ bike.data.price_half_daily | number : 0 }} €</span>
             <span class="md-caption">halfday</span>
@@ -32,8 +34,7 @@
     <md-divider></md-divider>
 
     <div flex layout="row">
-
-      <div flex layout="column"  layout-padding>
+      <div flex layout="column" layout-padding>
         <div layout="row" layout-xs="column">
           <div flex-gt-xs="25">
             <p class="md-body-2">Description</p>
@@ -61,24 +62,24 @@
           </div>
         </div>
 
-        <div layout="row" layout-xs="column">
+        <div layout="row" layout-xs="column" layout-align="center center">
           <div flex-gt-xs="25">
             <p class="md-body-2">Accessories</p>
           </div>
-          <div class="lnr-accessories" flex-gt-xs>
-            <md-icon class="lnr-icn-md" ng-if="bike.data.has_lock" md-svg-src="app/assets/ui_icons/accessoire_lock.svg">
+          <div flex-gt-xs>
+            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_lock" md-svg-src="app/assets/ui_icons/accessoire_lock.svg">
               <md-tooltip md-direction="top">lock</md-tooltip>
             </md-icon>
-            <md-icon class="lnr-icn-md" ng-if="bike.data.has_helmet" md-svg-src="app/assets/ui_icons/accessoire_helmet.svg">
+            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_helmet" md-svg-src="app/assets/ui_icons/accessoire_helmet.svg">
               <md-tooltip md-direction="top">helmet</md-tooltip>
             </md-icon>
-            <md-icon class="lnr-icn-md" ng-if="bike.data.has_lights" md-svg-src="app/assets/ui_icons/accessoire_lights.svg">
+            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_lights" md-svg-src="app/assets/ui_icons/accessoire_lights.svg">
               <md-tooltip md-direction="top">lights</md-tooltip>
             </md-icon>
-            <md-icon class="lnr-icn-md" ng-if="bike.data.has_basket" md-svg-src="app/assets/ui_icons/accessoire_basket.svg">
+            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_basket" md-svg-src="app/assets/ui_icons/accessoire_basket.svg">
               <md-tooltip md-direction="top">basket</md-tooltip>
             </md-icon>
-            <md-icon class="lnr-icn-md" ng-if="bike.data.has_trailer" md-svg-src="app/assets/ui_icons/accessoire_trailer.svg">
+            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_trailer" md-svg-src="app/assets/ui_icons/accessoire_trailer.svg">
               <md-tooltip md-direction="top">trailer</md-tooltip>
             </md-icon>
             <md-icon class="lnr-icn-md" ng-if="bike.data.has_childseat" md-svg-src="app/assets/ui_icons/accessoire_childseat.svg">
@@ -91,7 +92,7 @@
           <div flex-gt-xs="25">
             <p class="md-body-2">Details</p>
           </div>
-          <div layout="column" flex-gt-xs>
+          <div class="lnr-compact-details" layout="column" flex-gt-xs>
             <div layout="row" layout-align="start center">
               <p flex="20" class="md-body-2">Brand</p>
               <p class="md-body-1">{{ bike.data.brand }}</p>
@@ -103,37 +104,37 @@
           </div>
         </div>
 
-
         <div layout="row" layout-xs="column">
           <div flex-gt-xs="25">
             <p class="md-body-2">Lister</p>
           </div>
           <div flex-gt-xs layout="row" layout-align="start center">
-            <img class="lister-image" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
-            <p class="md-subhead" flex-offset="2">{{bike.data.user.first_name}} {{bike.data.user.last_name}}</p>
+            <img class="lnr-profile-md lnr-margin-right" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
+            <p class="md-subhead lnr-margin-left" flex-offset="2">{{bike.data.user.first_name}} {{bike.data.user.last_name}}</p>
           </div>
         </div>
 
-        <md-divider></md-divider>
+        <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
+        
         <div layout="row" layout-xs="column">
           <div flex-gt-xs="25">
             <p class="md-body-2">Reviews</p>
           </div>
-          <div flex-gt-xs>
 
-            <div layout="row">
-              <img class="lister-image" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
-              <div flex>
-                <p class="md-body-2">Thomas Ed</p>
-                <p class="md-body-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>                
+          <div flex-gt-xs>
+            <div class="lnr-comment" layout="row">
+              <img class="lnr-profile-md lnr-margin-right" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
+              <div flex class="lnr-margin-left">
+                <p class="lnr-comment-name md-body-2">Thomas Ed</p>
+                <p class="lnr-comment-content md-body-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>                
               </div>
             </div>
 
-            <div layout="row">
-              <img class="lister-image" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
-              <div flex>
-                <p class="md-body-2">Thomas Ed</p>
-                <p class="md-body-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>                
+            <div class="lnr-comment" layout="row">
+              <img class="lnr-profile-md lnr-margin-right" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
+              <div flex class="lnr-margin-left">
+                <p class="lnr-comment-name md-body-2">Thomas Ed</p>
+                <p class="lnr-comment-content md-body-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>                
               </div>
             </div>
 
@@ -141,9 +142,10 @@
         </div>
       </div>
 
-      <md-divider></md-divider>
-      <div flex="30" hide-sm hide-xs  layout-padding>
-        <calendar ng-if="!bike.mobileCalendar()" bike-id="bike.data.id" user-id="bike.data.user.id" price-half-day="bike.data.price_half_daily" price-day="bike.data.price_daily" price-week="bike.data.price_weekly" requests="bike.data.requests"></calendar>
+      <md-divider class="lnr-margin-left lnr-margin-right"></md-divider>
+
+      <div flex="30" hide-sm hide-xs>
+        <calendar ng-if="!bike.mobileCalendar()" bike-id="bike.data.id" price-half-day="bike.data.price_half_daily" price-day="bike.data.price_daily" price-week="bike.data.price_weekly" requests="bike.data.requests"></calendar>
       </div>
     </div>
    

@@ -10,9 +10,8 @@
 /* GENERAL
 /*-----------------------------------------------------------------------------------*/
 
-html {
-  background-color: #FFFFFF;
-  min-width: 320px;
+* {
+  outline: 0;
 }
 
 h1,
@@ -22,10 +21,6 @@ h4,
 h5,
 h6 {
   margin: 0.34rem 0;
-}
-
-* {
-  outline: 0;
 }
 
 strong {
@@ -53,12 +48,28 @@ strong {
   margin: 8px;
 }
 
+.lnr-margin-lrg {
+  margin: 16px 8px;
+}
+
 .lnr-margin-right {
   margin-right: 8px;
 }
 
 .lnr-margin-left {
   margin-left: 8px;
+}
+
+.lnr-margin-top {
+  margin-top: 8px;
+}
+
+.lnr-margin-bottom {
+  margin-bottom: 8px;
+}
+
+.lnr-no-padding {
+  padding: 0;
 }
 
 .lnr-link {
@@ -114,13 +125,10 @@ search {
   width: 100%;
 }
 
-.center-text {
-  text-align: center;
-}
-
-.preload {
+.lnr-preload-bg {
   background-color: #EEEEEE;
 }
+
 
 /*-----------------------------------------------------------------------------------*/
 /* NAVBAR
@@ -158,14 +166,6 @@ search {
 
 .lnr-header .lnr-nav-menu .md-button.md-img {
   padding: 0;
-}
-
-.lnr-header .lnr-nav-menu .md-img img {
-  width: 37px;
-  height: 37px;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -245,7 +245,6 @@ autocomplete .md-errors-spacer {
 }
 
 /*-----------------------------------------------------------------------------------*/
-
 /* FOOTER
 /*-----------------------------------------------------------------------------------*/
 
@@ -293,6 +292,34 @@ footer md-list-item:before {
 .lnr-icn-xlrg {
   width: 120px;
   height: 120px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* PROFILE PICTURE
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-profile-sm {
+  height: 37px;
+  width: 37px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.lnr-profile-md {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.lnr-profile-lrg {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -396,11 +423,6 @@ home md-grid-list md-grid-tile.tile4 {
   .lnr-search-bar {
     width: 90%
   }
-
-  home md-grid-list md-grid-tile {
-    border-radius: 0;
-  }
-
 }
 
 @media (min-width:600px) {
@@ -409,7 +431,6 @@ home md-grid-list md-grid-tile.tile4 {
     min-height: 0 !important;
     border-radius: 3px;
   }
-
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -420,15 +441,29 @@ bike-card md-card {
   cursor: pointer;
 }
 
-bike-card md-card-title-text {
-  padding: 0 8px;
-}
-
 bike-card md-card-title-text span {
   max-width: 160px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  COMMENT
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-comment {
+  margin-bottom: 24px;
+}
+
+.lnr-comment .lnr-comment-name {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.lnr-comment .lnr-comment-content {
+  margin-top: 8px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -446,39 +481,34 @@ bike-card md-card-title-text span {
   margin: 0 auto;
 }
 
+bike .lnr-compact-details p {
+  margin: 4px 0;
+}
+
+bike .lnr-compact-details > div:first-child {
+  margin-top: 10px;
+}
+
+bike .lnr-compact-details > div:last-child {
+  margin-bottom: 10px;
+}
+
+bike #bikeCalendar {
+  margin-left: -8px;
+}
+
+bike #bikeCalendar tr > td:first-child {
+  padding-left: 16px;
+}
+
+bike #bikeCalendar tr > td:last-child {
+  padding-right: 16px;
+}
+
 @media (max-width:599px) {
   bike #hero-shot {
     height: 45vh;
   }
-}
-
-bike #calendar {
-  width: 100%;
-  height: 100px;
-  display: block;
-}
-
-bike .lister-image {
-  height: 70px;
-  width: 70px;
-  background-size: cover;
-  margin: 1em 1em 1em 0;
-  border-radius: 40px;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-}
-
-bike .accessory-icon {
-  margin: 1em 1em 1em 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-}
-
-bike .lnr-accessories md-icon {
-  margin-right: 10px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -501,6 +531,11 @@ search bike-card md-card {
 .lnr-filters md-checkbox .md-label {
   margin: 0;
   text-align: center;
+  /* disable text selection on double click */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
 }
 
 .lnr-filters md-checkbox .md-container {
@@ -514,7 +549,6 @@ search bike-card md-card {
   fill: #4cbf86;
   color: #4cbf86;
 }
-
 
 /* Map bike card hackaround (to be cleaned) */
 search ng-map md-card {
@@ -555,18 +589,11 @@ search .ng-map-info-window > div:last-child:hover {
   search .map-column {
     height: 100%;
   }
-
 }
 
 /*-----------------------------------------------------------------------------------*/
 /*  NOT STYLED
 /*-----------------------------------------------------------------------------------*/
-
-.profile-picture-big {
-  width: 135px;
-  height: 135px;
-  border-radius: 50%;
-}
 
 /* Increase Size of Rating Stars */
 .angular-input-stars > li {

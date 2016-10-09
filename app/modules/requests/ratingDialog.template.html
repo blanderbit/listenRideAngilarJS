@@ -7,11 +7,11 @@
     </md-toolbar>
 
     <md-dialog-content layout="column" class="dialog-content" layout-margin layout-align="center">
-      <p class="md-body-1 center-text">How did you like the overall experience?</p>
-      <p class="md-body-1 center-text">{{ 'requests.ratings.description' | translate }}</p>
+      <p class="md-body-1 lnr-center">How did you like the overall experience?</p>
+      <p class="md-body-1 lnr-center">{{ 'requests.ratings.description' | translate }}</p>
       <div layout="column" layout-align="center center">
         <input-stars max="5" ng-model="ratingDialog.rating"></input-stars>
-        <p class="md-body-2 center-text" translate="requests.ratings.{{ratingDialog.rating}}"></p>
+        <p class="md-body-2 lnr-center" translate="requests.ratings.{{ratingDialog.rating}}"></p>
       </div>
       <br>
       <form name="ratingDialog.ratingForm">
