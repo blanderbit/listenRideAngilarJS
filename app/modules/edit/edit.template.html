@@ -111,8 +111,17 @@
 
               <div class="preview-container" layout="column" layout-wrap layout-margin>
                 <div ng-repeat="img in edit.form.images track by $index" layout="row" layout-align="space-between center">
-                  <div class="img-preview" ngf-background="img" ngf-as-background="true"></div>
+
+                  <div ng-if="img.local == 'true'" class="img-preview"
+                    ngf-background="img.src" ngf-as-background="true">
+                  </div>
+
+                  <div ng-if="img.local == 'false'" class="img-preview"
+                    ng-style="{'background-image': 'url(' + img.url + ')'}">
+                  </div>
+
                   <md-button ng-click="edit.removeImage($index)">{{ 'list.pictures.remove' | translate}}</md-button>
+
                 </div>
               </div>
               
