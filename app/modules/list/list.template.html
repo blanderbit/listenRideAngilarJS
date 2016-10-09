@@ -1,6 +1,6 @@
 <md-content class="single-column">
   <form name="listBike" layout="column" layout-align="start center" layout-padding>
-    <h1>{{ 'list.list-your-bike' | translate }}</h1>
+    <h1 class="md-headline">{{ 'list.list-your-bike' | translate }}</h1>
 
     <md-tabs class="content" md-no-pagination md-dynamic-height md-no-ink md-no-ink-bar md-selected="list.selectedIndex" md-stretch-tabs="always">
       <md-tab ng-disabled="true" class="categories" label="{{ 'list.category.category' | translate }}" layout="row">
@@ -26,7 +26,7 @@
           </div>
           
           <div class="navigation" layout="row" layout-align="end center">
-            <md-button class="md-raised" ng-disabled="!list.isCategoryValid()" ng-click="list.nextTab()">{{ 'list.next' | translate }}</md-button>
+            <md-button class="md-raised md-primary" ng-disabled="!list.isCategoryValid()" ng-click="list.nextTab()">{{ 'list.next' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
@@ -73,8 +73,8 @@
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
-            <md-button class="md-raised" ng-click="list.previousTab()">{{ 'list.back' | translate }}</md-button>
-            <md-button class="md-raised" ng-disabled="!list.isDetailsValid()" ng-click="list.nextTab()">{{ 'list.next' | translate }}</md-button>
+            <md-button class="md-raised md-lined" ng-click="list.previousTab()">{{ 'list.back' | translate }}</md-button>
+            <md-button class="md-raised md-primary" ng-disabled="!list.isDetailsValid()" ng-click="list.nextTab()">{{ 'list.next' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
@@ -94,8 +94,8 @@
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
-            <md-button class="md-raised" ng-click="list.previousTab()">{{ 'list.back' | translate }}</md-button>
-            <md-button class="md-raised" ng-click="list.nextTab()">{{ 'list.next' | translate }}</md-button>
+            <md-button class="md-lined" ng-click="list.previousTab()">{{ 'list.back' | translate }}</md-button>
+            <md-button class="md-raised md-primary" ng-click="list.nextTab()">{{ 'list.next' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
@@ -125,8 +125,8 @@
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
-            <md-button class="md-raised" ng-click="list.previousTab()">{{ 'list.back' | translate }}</md-button>
-            <md-button class="md-raised" ng-disabled="!list.isPictureValid()" ng-click="list.nextTab()">{{ 'list.next' | translate }}</md-button>
+            <md-button class="md-lined" ng-click="list.previousTab()">{{ 'list.back' | translate }}</md-button>
+            <md-button class="md-raised md-primary" ng-disabled="!list.isPictureValid()" ng-click="list.nextTab()">{{ 'list.next' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
@@ -162,8 +162,8 @@
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
-            <md-button class="md-raised" ng-click="list.previousTab()">{{ 'list.back' | translate }}</md-button>
-            <md-button class="md-raised" ng-disabled="!list.isLocationValid()" ng-click="list.nextTab()">{{ 'list.next' | translate }}</md-button>
+            <md-button class="md-lined" ng-click="list.previousTab()">{{ 'list.back' | translate }}</md-button>
+            <md-button class="md-raised md-primary" ng-disabled="!list.isLocationValid()" ng-click="list.nextTab()">{{ 'list.next' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>
@@ -194,8 +194,8 @@
           </div>
           
           <div class="navigation" layout="row" layout-align="space-between center">
-            <md-button class="md-raised" ng-click="list.previousTab()">{{ 'list.back' | translate }}</md-button>
-            <md-button class="md-raised" ng-disabled="!list.isPricingValid() || list.submitDisabled" ng-click="list.onFormSubmit()">{{ 'list.list-bike' | translate }}</md-button>
+            <md-button class="md-lined" ng-click="list.previousTab()">{{ 'list.back' | translate }}</md-button>
+            <md-button class="md-raised md-primary" ng-disabled="!list.isPricingValid() || list.submitDisabled" ng-click="list.onFormSubmit()">{{ 'list.list-bike' | translate }}</md-button>
           </div>
         </md-content>
       </md-tab>

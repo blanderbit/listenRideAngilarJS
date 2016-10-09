@@ -481,24 +481,6 @@ bike .lnr-accessories md-icon {
   margin-right: 10px;
 }
 
-// bike .date-picker-wrapper {
-//   background: transparent;
-//   border: none;
-// }
-
-// bike .date-picker-wrapper .month-wrapper table {
-//   width: 100%;
-// }
-
-// bike .date-picker-wrapper .month-wrapper table .day.real-today {
-//   border-radius: 2px;
-//   background-color: #eee;
-// }
-
-// bike .date-picker-wrapper .month-wrapper table .day {
-//   padding: 8px 0;
-// }
-
 /*-----------------------------------------------------------------------------------*/
 /*  SEARCH
 /*-----------------------------------------------------------------------------------*/
@@ -579,6 +561,12 @@ search .ng-map-info-window > div:last-child:hover {
 /*-----------------------------------------------------------------------------------*/
 /*  NOT STYLED
 /*-----------------------------------------------------------------------------------*/
+
+.profile-picture-big {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+}
 
 /* Add possibility to have centered toasts */
 md-toast.md-center {
