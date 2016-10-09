@@ -64,8 +64,8 @@
 
     <md-divider></md-divider>
 
-    <md-content flex layout="column" layout-align="center center">
-      <div ng-show="search.bikes === undefined">
+    <md-content flex layout="column">
+      <div ng-show="search.bikes === undefined" flex layout="column" layout-align="center center">
         <md-progress-circular md-mode="indeterminate"></md-progress-circular>
       </div>
 
@@ -81,7 +81,7 @@
     </md-content>
   </div>
 
-  <div flex-xs="35" flex-gt-xs="40" flex-order-xs="1" layout="column" class="map-column preload" hide-xs>
+  <div flex-xs="35" flex-gt-xs="40" flex-order-xs="1" layout="column" class="map-column lnr-preload-bg" hide-xs>
     <ng-map ng-if="search.bikes !== undefined"
       id="searchMap"
       default-style="false"
