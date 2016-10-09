@@ -129,6 +129,12 @@ angular.module('edit').component('edit', {
           isPricingValid();
       };
 
+      edit.categoryChange = function(oldCategory) {
+        if (edit.form.mainCategory == 4 || oldCategory == 4) {
+          edit.form.size = undefined;
+        }
+      };
+
       edit.fillAddress = function(place) {
         var components = place.address_components;
         if (components) {
@@ -162,8 +168,8 @@ angular.module('edit').component('edit', {
       function isDetailsValid() {
         return edit.form.name !== undefined &&
           edit.form.brand !== undefined &&
-          edit.form.description !== undefined &&
-          edit.form.description.length >= 100;
+          edit.form.size !== undefined &&
+          edit.form.description !== undefined;
       };
 
       function isPictureValid() {
