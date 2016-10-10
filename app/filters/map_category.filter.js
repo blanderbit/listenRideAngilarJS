@@ -21,17 +21,18 @@ filter('map_category', function() {
       return bikes;
     }
 
-    var categoryMap = [
+    var categoryArray = [
       "city",
       "race",
-      "allterain",
+      "allterrain",
       "kids",
       "ebikes",
       "special"
     ];
 
     return bikes.filter(function(bike) {
-      return (categories[categoryMap[(bike.category / 10) - 1]] === true);
+      var categoryIndex = Math.floor(bike.category / 10) - 1;
+      return (categories[categoryArray[categoryIndex]] === true);
     });
   }
 
