@@ -125,8 +125,7 @@
   },
 
   "autocomplete": {
-    "default-placeholder": "Where would you like to rent a bike",
-    "list-placeholder": "Street und Number"
+    "default-placeholder": "Where would you like to rent a bike"
   },
 
   "search" : {

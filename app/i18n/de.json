@@ -125,8 +125,7 @@
   },
   
   "autocomplete": {
-    "default-placeholder": "Wo willst du ein Rad ausleihen?",
-    "list-placeholder": "Staße und Hausnr."
+    "default-placeholder": "Wo willst du ein Rad ausleihen?"
   },
 
   "search": {

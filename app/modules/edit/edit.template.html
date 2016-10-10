@@ -6,7 +6,7 @@
       <md-tab class="categories" label="{{ 'list.category.category' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
-            <div class="col1" flex-xs="100" flex-gt-xs="45" layout="row" layout-align="space-between start">
+            <div class="lnr-list-form" flex-xs="100" flex-gt-xs="45" layout="row" layout-align="space-between start">
               <md-radio-group ng-model="edit.form.mainCategory" layout="column" ng-change="edit.categoryChange({{edit.form.mainCategory}})">
                 <md-radio-button ng-repeat="cat in edit.categoryOptions" value="{{cat.value}}">
                   {{ 'list.category.' + cat.label.replace(' ', '-') | translate }}
@@ -34,7 +34,7 @@
       <md-tab class="details" label="{{ 'list.details.details' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
-            <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
+            <div class="lnr-list-form" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-input-container>
                 <label>{{ 'list.details.brand' | translate }}</label>
                 <input name="brand" required ng-model="edit.form.brand" maxlength="25">
@@ -82,7 +82,7 @@
       <md-tab class="accessories" label="{{ 'list.accessories.accessories' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
-            <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
+            <div class="lnr-list-form" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-checkbox ng-repeat="acc in edit.accessoryOptions" ng-model="edit.form[acc.model]">
                 {{ 'list.accessories.' + acc.label | translate }}
               </md-checkbox>
@@ -103,7 +103,7 @@
       <md-tab class="pictures" label="{{ 'list.pictures.pictures' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
-            <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
+            <div class="lnr-list-form" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-button ng-disabled="edit.form.images.length > 4" ngf-multiple="true"
                 ngf-select="edit.addImage($files)" accept=".jpg,.jpeg">
                 {{ 'list.pictures.select-images' | translate }}
@@ -133,7 +133,7 @@
       <md-tab class="location" label="{{ 'list.location.location' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
-            <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
+            <div class="lnr-list-form" flex-xs="100" flex-gt-xs="45" layout="column">
               <autocomplete layout="column" location="edit.form.street" label-id="list-placeholder" required="true" fill-address="edit.fillAddress(place)">
               </autocomplete>
 
@@ -168,7 +168,7 @@
       <md-tab class="pricing" label="{{ 'list.pricing.pricing' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
           <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
-            <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
+            <div class="lnr-list-form" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-input-container>
                 <label>{{ 'list.pricing.half-daily-price' | translate }} (€)</label>
                 <input type="text" ng-pattern="/^\d+$/" maxlength="3" required ng-model="edit.form.price_half_daily">
