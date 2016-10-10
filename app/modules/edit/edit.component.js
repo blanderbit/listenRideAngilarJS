@@ -22,7 +22,8 @@ angular.module('edit').component('edit', {
           if (data.user.id == $localStorage.userId) {
             var images = [];
             for (var i = 1; i <= 5; ++i) {
-              if (data["image_file_" + i] !== undefined) {
+              if (data["image_file_" + i] !== undefined &&
+                data["image_file_" + i]["image_file_" + i].small.url !== null) {
                 images.push({
                   src: data["image_file_" + i],
                   url: data["image_file_" + i]["image_file_" + i].small.url,
