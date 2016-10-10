@@ -109,7 +109,7 @@
             <p class="md-body-2">Lister</p>
           </div>
           <div flex-gt-xs layout="row" layout-align="start center">
-            <img class="lnr-profile-md lnr-margin-right" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
+            <img class="lnr-profile-md lnr-margin-right clickable" ui-sref="user({userId: bike.data.user.id})" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
             <p class="md-subhead lnr-margin-left" flex-offset="2">{{bike.data.user.first_name}} {{bike.data.user.last_name}}</p>
           </div>
         </div>

@@ -40,6 +40,10 @@ strong {
   text-align: center;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 .lnr-white {
   color: #fff;
 }

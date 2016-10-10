@@ -1,7 +1,7 @@
 <md-progress-linear ng-if="!user.loaded" md-mode="query"></md-progress-linear>
 <md-content class="single-column" ng-if="user.loaded">
-  <div class="content" layout="row" layout-padding>
-    <div flex="70" layout="row">
+  <div class="content" layout-xs="column" layout="row" layout-padding>
+    <div flex-gt-xs="70" layout="row">
       <img class="lnr-profile-lrg lnr-margin-right" ng-src="{{user.user.profile_picture.profile_picture.url}}">
       <div class="lnr-margin-left" layout="column" layout-align="center start">
         <span class="md-headline">{{user.user.first_name}} {{user.user.last_name}}</span>
@@ -9,28 +9,20 @@
         <span class="md-body-1">{{user.user.city}}, {{user.user.country}}</span>
       </div>
     </div>
-    <md-divider></md-divider>
-    <div flex="30" flex-offset="5" layout="column" layout-align="center start">
-      <p class="md-body-1">● Verified Phone Number</p>
+    <md-divider hide-xs></md-divider>
+    <div flex-gt-xs="30" flex-offset="5" layout="column" layout-align="center start">
+      <!-- <p class="md-body-1">● Verified Phone Number</p>
       <p class="md-body-1">● Verified Email Address</p>
-      <p class="md-body-1">● Verified Payment Data</p>
-<!--       <p class="md-body-1" ng-if="user.user.confirmed_phone">● Verified Phone Number</p>
+      <p class="md-body-1">● Verified Payment Data</p> -->
+      <p class="md-body-1" ng-if="user.user.confirmed_phone">● Verified Phone Number</p>
       <p class="md-body-1" ng-if="user.user.status > 0">● Verified Email Address</p>
-      <p class="md-body-1" ng-if="user.user.current_payment_method">● Verified Payment Data</p> -->
+      <p class="md-body-1" ng-if="user.user.current_payment_method">● Verified Payment Data</p>
     </div>
   </div>
 
   <md-divider></md-divider>
 
-  <div class="content" layout="column" flex-gt-xs="80" layout-padding>
-    <div layout="row" layout-xs="column">
-      <div flex-gt-xs="25">
-        <p class="md-body-2">Description</p>
-      </div>
-      <div flex-gt-xs>
-        <p class="md-body-1">{{user.user.description}}</p>
-      </div>
-    </div>
+  <div class="content" layout="column" layout-padding>
 
     <div layout="row" layout-xs="column">
       <div flex-gt-xs="25">
@@ -40,13 +32,24 @@
         <p class="md-body-1">{{user.user.description}}</p>
       </div>
     </div>
-
-    <div layout="row" layout-xs="column">
+    <br>
+    <div layout="row" layout-xs="column" ng-if="user.user.rides.length > 0">
       <div flex-gt-xs="25">
         <p class="md-body-2">Listings</p>
       </div>
+      <div flex-gt-xs layout="row" layout-wrap>
+        <bike-card ng-repeat="bike in user.user.rides" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+      </div>
+    </div>
+    <br>
+    <div layout="row" layout-xs="column" ng-if="user.user.ratings.length > 0">
+      <div flex-gt-xs="25">
+        <p class="md-body-2">Ratings</p>
+      </div>
       <div flex-gt-xs>
-        <p class="md-body-1">{{user.user.description}}</p>
+        <div layout="column">
+          <rating ng-repeat="rating in user.user.ratings" data="rating"></rating>
+        </div>
       </div>
     </div>
 
