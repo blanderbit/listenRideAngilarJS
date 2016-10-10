@@ -116,27 +116,21 @@
 
         <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
         
-        <div layout="row" layout-xs="column">
+        <div layout="row" layout-xs="column" ng-if="bike.data.ratings.length > 0">
           <div flex-gt-xs="25">
             <p class="md-body-2">Reviews</p>
           </div>
 
           <div flex-gt-xs>
-            <div class="lnr-comment" layout="row">
+            <!-- <div class="lnr-comment" layout="row">
               <img class="lnr-profile-md lnr-margin-right" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
               <div flex class="lnr-margin-left">
                 <p class="lnr-comment-name md-body-2">Thomas Ed</p>
                 <p class="lnr-comment-content md-body-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>                
               </div>
-            </div>
+            </div> -->
 
-            <div class="lnr-comment" layout="row">
-              <img class="lnr-profile-md lnr-margin-right" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
-              <div flex class="lnr-margin-left">
-                <p class="lnr-comment-name md-body-2">Thomas Ed</p>
-                <p class="lnr-comment-content md-body-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>                
-              </div>
-            </div>
+            <rating ng-repeat="rating in bike.data.ratings" data="rating"></rating>
 
           </div>
         </div>
