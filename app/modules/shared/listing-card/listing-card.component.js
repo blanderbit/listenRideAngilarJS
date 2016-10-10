@@ -7,6 +7,7 @@ angular.module('listingCard').component('listingCard', {
     bikeId: '<',
     name: '<',
     brand: '<',
+    category: '<',
     price: '<',
     imageUrl: '<',
     available: '<',

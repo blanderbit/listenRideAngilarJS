@@ -244,10 +244,10 @@
   },
 
   "listingCard": {
-    "activate-bike": "Rad aktivieren",
-    "deactivate-bike": "Rad deactivieren",
-    "edit-bike": "Rad bearbeiten",
-    "delete-bike": "Rad löschen",
+    "activate-bike": "Aktivieren",
+    "deactivate-bike": "Deactivieren",
+    "edit-bike": "Bearbeiten",
+    "delete-bike": "Löschen",
     "cancel": "Abbrechen",
     "delete": "Löschen",
     "dialog-title": "Möchtest du wirklich dein Fahrrad löschen?",

@@ -244,10 +244,10 @@
   },
 
   "listingCard": {
-    "activate-bike": "Activate Bike",
-    "deactivate-bike": "Deactivate Bike",
-    "edit-bike": "Edit Bike",
-    "delete-bike": "Delete Bike",
+    "activate-bike": "Activate",
+    "deactivate-bike": "Deactivate",
+    "edit-bike": "Edit",
+    "delete-bike": "Delete",
     "cancel": "Cancel",
     "delete": "Delete",
     "dialog-title": "Are you sure you want to delete your bike?",

@@ -1,29 +1,37 @@
-<div class="bike-profile md-whiteframe-1dp" ng-class="{unavailable: !listingCard.available}" layout="column" layout-margin>
-  <img flex="100" ui-sref="bike({ bikeId: {{ ::listingCard.bikeId }} })" ng-src="{{ ::listingCard.imageUrl }}"
-    alt="{{ ::listingCard.brand }} - {{ ::listingCard.name }}">
+<md-card class="lnr-bike-card" ng-class="{'lnr-unavailable': !listingCard.available}">
+  <img class="md-card-image" ui-sref="bike({ bikeId: {{ ::listingCard.bikeId }} })" ng-src="{{ ::listingCard.imageUrl }}" alt="{{ ::listingCard.brand }} - {{ ::listingCard.name }}">
 
-  <div layout="column">
-    <div class="md-title">{{ ::listingCard.name }}</div>
-    <div class="md-subhead">{{ ::listingCard.brand }}</div>
-  </div>
+  <md-card-title layout="row">
+    <md-icon class="lnr-icn-lrg lnr-foreground" md-svg-src="app/assets/ui_icons/biketype_{{ ::listingCard.category | limitTo: 1 }}.svg"></md-icon>
+
+    <md-card-title-text ui-sref="bike({ bikeId: {{ ::listingCard.bikeId }} })" class="lnr-margin-right lnr-margin-left" layout="column" layout-align="space-around start">
+      <span class="md-subhead">{{ ::listingCard.brand }}</span>
+      <span>{{ ::listingCard.name }}</span>
+    </md-card-title-text>
+
+    <div layout="column" layout-align="space-around center">
+      <span class="md-headline">{{ ::listingCard.price | number }} €</span>
+      <span>per day</span>
+    </div>
+  </md-card-title>
 
   <md-divider></md-divider>
 
-  <div class="bike-actions" layout="column" layout-align="space-between center">
-    <md-button md-no-ink ui-sref="edit({bikeId: {{ ::listingCard.bikeId }} })">
+  <div class="bike-actions" layout="row" layout-align="space-between center">
+    <md-button md-no-ink flex ui-sref="edit({bikeId: {{ ::listingCard.bikeId }} })">
       {{ 'listingCard.edit-bike' | translate }}
     </md-button>
 
-    <md-button md-no-ink ng-disabled="listingCard.disableDeactivate" ng-click="listingCard.onDeactivateClick()" ng-if="listingCard.available">
+    <md-button md-no-ink flex ng-disabled="listingCard.disableDeactivate" ng-click="listingCard.onDeactivateClick()" ng-if="listingCard.available">
       {{ 'listingCard.deactivate-bike' | translate }}
     </md-button>
 
-    <md-button md-no-ink ng-disabled="listingCard.disableActivate" ng-click="listingCard.onActivateClick()" ng-if="!listingCard.available">
+    <md-button md-no-ink flex class="md-primary" ng-disabled="listingCard.disableActivate" ng-click="listingCard.onActivateClick()" ng-if="!listingCard.available">
       {{ 'listingCard.activate-bike' | translate }}
     </md-button>
 
-    <md-button md-no-ink ng-disabled="listingCard.disableDelete" ng-click="listingCard.onDeleteClick()">
+    <md-button md-no-ink flex class="md-warn" ng-disabled="listingCard.disableDelete" ng-click="listingCard.onDeleteClick()">
       {{ 'listingCard.delete-bike' | translate }}
     </md-button>
   </div>
-</div>
+</md-card>

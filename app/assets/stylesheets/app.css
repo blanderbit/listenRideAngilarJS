@@ -141,7 +141,8 @@ search {
 /*-----------------------------------------------------------------------------------*/
 
 .lnr-page-margin {
-  margin-top: 24px;
+  margin-top: 48px;
+  margin-bottom: 16px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -507,11 +508,11 @@ home md-grid-list md-grid-tile.tile4 {
 /*  BIKE CARD
 /*-----------------------------------------------------------------------------------*/
 
-bike-card md-card {
+md-card.lnr-bike-card {
   cursor: pointer;
 }
 
-bike-card md-card-title-text span {
+.lnr-bike-card md-card-title-text span {
   max-width: 160px;
   white-space: nowrap;
   overflow: hidden;
@@ -519,13 +520,13 @@ bike-card md-card-title-text span {
 }
 
 @media (max-width:639px) {
-  bike-card md-card-title-text span {
+  .lnr-bike-card md-card-title-text span {
     max-width: 120px!important;
   }
 }
 
 @media (max-width: 1110px) and (min-width: 640px) {
-  bike-card md-card-title-text span {
+  .lnr-bike-card md-card-title-text span {
     max-width: 140px;
   }
 }
@@ -704,7 +705,7 @@ list .md-tab.md-disabled {
 
 list md-tabs .lnr-list-form,
 edit md-tabs .lnr-list-form {
-  min-height: 320px;
+  min-height: 300px;
 }
 
 list md-tabs .img-preview,
@@ -721,39 +722,26 @@ list md-tabs .md-whiteframe-1dp {
 
 
 /*-----------------------------------------------------------------------------------*/
-/*  NOT STYLED
+/*  LISTINGS
 /*-----------------------------------------------------------------------------------*/
 
-listings #myBikes {
+listings .lnr-bike-listings {
   min-height: 350px;
   width: 100%;
 }
 
-listings #myBikes img {
-  flex: 0 0 auto;
-  cursor: pointer;
-  width: 100%;
-  height: auto;
-  margin: 0;
+listings .lnr-bike-card.lnr-unavailable {
+  background-color: rgb(250, 250, 250);
+  opacity: 0.8;
 }
 
-listings #myBikes md-divider {
-  margin: 0px 8px !important;
+listings .lnr-bike-card.lnr-unavailable img {
+  opacity: 0.6;
 }
 
-listings #myBikes .bike-actions .md-button {
-  min-height: 25px;
-  line-height: 25px;
-}
-
-listings #myBikes .bike-profile {
-  background-color: white;
-}
-
-listings #myBikes .bike-profile.unavailable {
-  background-color: rgb(245, 245, 245);
-}
-
+/*-----------------------------------------------------------------------------------*/
+/*  NOT STYLED
+/*-----------------------------------------------------------------------------------*/
 
 /* Add possibility to have centered toasts */
 md-toast.md-center {
