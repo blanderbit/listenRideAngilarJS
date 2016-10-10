@@ -21,7 +21,7 @@
 
         <md-tab label="⬤" layout="row" ng-if="!verificationDialog.newUser.has_description" md-on-select="verificationDialog.activeTab = 2">
             <div class="tab-content" layout="column" layout-padding>
-              <p class="md-body-1 lnr-center">Please write a few words about yourself and your relation to biking.</p>
+              <p class="md-body-1 lnr-center">Please write a couple sentences about yourself and your relation to biking. It'll give your profile personality. (min. 100 words)</p>
               <md-input-container flex>
                 <form name="verificationDialog.descriptionForm">
                   <label>Description</label>
@@ -61,7 +61,7 @@
                     </div>
                   </form>
               </md-input-container>
-              <md-button ng-click="verificationDialog.sendSms()">Send Confirmation SMS</md-button>
+              <md-button ng-click="verificationDialog.sendSms()">1. Send Confirmation SMS</md-button>
             </div>
             <div flex layout="row" layout-fill layout-align="space-between start">
               <md-input-container flex>
@@ -70,7 +70,7 @@
                     <input required name="confirmation_code" min-length="4" max-length="4" ng-model="verificationDialog.newUser.confirmation_code"></input>
                   </form>
               </md-input-container>
-              <md-button ng-click="verificationDialog.confirmPhone()">Confirm Code</md-button>
+              <md-button ng-click="verificationDialog.confirmPhone()">2. Confirm Code</md-button>
             </div>
             <p class="md-body-1 lnr-center" ng-if="verificationDialog.user.confirmed_phone">Your phone number was successfully verified!</p>
           </div>

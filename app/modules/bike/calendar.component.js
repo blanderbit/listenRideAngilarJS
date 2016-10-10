@@ -79,7 +79,7 @@ angular.module('bike').component('calendar', {
               );
             }
             else {
-              verification.openDialog();
+              verification.openDialog(false);
             }
           },
           function (error) {

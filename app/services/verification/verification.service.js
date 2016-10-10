@@ -12,6 +12,7 @@ angular.
         }, 5000);
 
         verificationDialog.lister = lister;
+        console.log(verificationDialog.lister);
 
         verificationDialog.selectedIndex;
         verificationDialog.activeTab = 1;
@@ -26,10 +27,8 @@ angular.
             function (success) {
               if (verificationDialog.newUser == null) {
                 verificationDialog.newUser = success.data;
-                console.log(success.data);
               }
               verificationDialog.user = success.data;
-              console.log(verificationDialog.newUser.description);
             },
             function (error) {
               console.log("Error fetching User Details");
@@ -66,7 +65,6 @@ angular.
           };
           api.put('/users/' + $localStorage.userId, data).then(
             function (success) {
-              $state.go('list');
               $mdToast.show(
                 $mdToast.simple()
                 .textContent('Congratulations, your profile was successfully verified!')
@@ -184,7 +182,7 @@ angular.
         };
       };
 
-      var openDialog = function(event, lister) {
+      var openDialog = function(lister, event) {
         $mdDialog.show({
           controller: VerificationDialogController,
           locals: {
