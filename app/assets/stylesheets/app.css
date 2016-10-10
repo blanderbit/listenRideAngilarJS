@@ -739,8 +739,9 @@ listings .lnr-bike-card.lnr-unavailable img {
   opacity: 0.6;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
-/*  NOT STYLED
+/*  REQUESTS
 /*-----------------------------------------------------------------------------------*/
 
 /* Add possibility to have centered toasts */
@@ -749,29 +750,82 @@ md-toast.md-center {
   transform: translate3d(-50%, 0, 0);
 }
 
-requests .requests-list {
-  background-color: #ffffff;
-}
-
-requests .subheader {
-  background-color: #ffffff;
-  height: 100px;
-}
-
 .chat {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  background-color: #efefef;
+  padding: 48px 16px 8px 16px;
+}
+
+requests md-input-container  {
+  margin: 0;
+}
+
+.requests-list {
+  border-right: 1px solid #efefef;
+}
+
+.requests-list md-list-item .md-avatar {
+  width: 50px;
+  height: 50px;
+  padding: 10px 0;
+}
+
+.requests-list md-list-item.md-2-line .md-list-item-text p {
+  color: rgb(132, 140, 146);
+}
+
+.lnr-message-form {
+  background: rgba(229,234,234,0.7);
+}
+
+.lnr-message-form input {
+  background: #fff;
+}
+
+.lnr-message {
+  padding: 4px;
+  border-radius: 4px;
 }
 
 message .sent-message {
-  background-color: #ffffff;
+  position: relative;
+  color: #fff;
+  background-color: #7ab2f8;
 }
 
 message .received-message {
-  background-color: #ffffff;
+  position: relative;
+  background-color: rgba(229,234,234,0.7);
 }
 
 message .status-message {
-  background-color: #ffffff;
+  background-color: rgba(229,234,234,0.7);
+}
+
+.sent-message:after {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-left-color: #7ab2f8;
+  border-width: 6px;
+  margin-top: -6px;
+}
+
+.received-message:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-right-color: rgba(229,234,234,0.7);
+  border-width: 6px;
+  margin-top: -6px;
 }
