@@ -15,10 +15,10 @@
       </p>
       <p class="md-body-2 lnr-center" translate="requests.ratings.{{ratingDialog.rating}}"></p>
       <br>
-      <md-input-container class="md-input-container-compact">
+      <md-input-container>
         <textarea placeholder="{{ 'requests.ratings.rating_text_lister' | translate }}" ng-model="ratingDialog.message" md-maxlength="150" rows="3" md-select-on-focus></textarea>
       </md-input-container>
-      <div layout="row" layout-align="end">
+      <div class="lnr-margin-lrg-top" layout="row" layout-align="end">
         <md-button ng-click="ratingDialog.rate()" class="md-raised md-primary">{{ 'shared.send' | translate }}</md-button>
       </div>
     </md-dialog-content>

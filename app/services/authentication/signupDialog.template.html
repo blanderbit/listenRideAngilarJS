@@ -24,16 +24,16 @@
         </div>
 
         <div class="lnr-input-containers" layout="row">
-          <md-input-container flex class="md-input-container-compact">
+          <md-input-container flex>
             <label>{{ 'forms.first-name' | translate }}</label>
-            <input class="lnr-margin-right" name="first_name" ng-model="signupDialog.firstName" required ng-maxlength="20">
+            <input name="first_name" ng-model="signupDialog.firstName" required ng-maxlength="20">
             <div ng-messages="signupForm.first_name.$error" role="alert">
               <div ng-message="required">Please enter your first name.</div>
               <div ng-message="maxlength">First name shouldn't be longer than 20 characters</div>
             </div>
           </md-input-container>
 
-          <md-input-container flex class="md-input-container-compact">
+          <md-input-container flex>
             <label>{{ 'forms.last-name' | translate }}</label>
             <input name="last_name" ng-model="signupDialog.lastName" required ng-maxlength="30">
             <div ng-messages="signupForm.last_name.$error" role="alert">
@@ -43,7 +43,7 @@
           </md-input-container>
         </div>
 
-        <md-input-container class="md-input-container-compact">
+        <md-input-container>
           <label>{{ 'forms.email-address' | translate }}</label>
           <input name="email" ng-model="signupDialog.email" type="email" required>
           <div ng-messages="signupForm.email.$error" role="alert">
@@ -52,7 +52,7 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-input-container-compact">
+        <md-input-container>
           <label>{{ 'forms.password' | translate }}</label>
           <input name="password" ng-model="signupDialog.password" type="password" required ng-minlength="6">
           <div ng-messages="signupForm.password.$error" role="alert">
@@ -61,7 +61,9 @@
           </div>
         </md-input-container>
         
-        <md-button type="submit" class="md-accent md-raised"">{{ 'forms.sign-up' | translate }}</md-button>
+        <div layout="column" class="lnr-margin-lrg-top">
+          <md-button type="submit" class="md-accent md-raised">{{ 'forms.sign-up' | translate }}</md-button>
+        </div>
 
       </div>
     </md-dialog-content>

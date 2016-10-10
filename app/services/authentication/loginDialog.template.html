@@ -23,7 +23,7 @@
           {{ 'forms.or' | translate }}
         </div>
 
-        <md-input-container class="md-input-container-compact">
+        <md-input-container>
           <label>{{ 'forms.email-address' | translate }}</label>
           <input ng-model="loginDialog.email" name="email" required type="email" />
           <div ng-messages="loginForm.email.$error" role="alert">
@@ -32,7 +32,7 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-input-container-compact">
+        <md-input-container>
           <label>{{ 'forms.password' | translate }}</label>
           <input type="password" ng-model="loginDialog.password" name="password" required ng-minlength="6" ng-maxlength="30"  />
           <div ng-messages="loginForm.password.$error" role="alert">
@@ -42,7 +42,7 @@
           </div>
         </md-input-container>
 
-        <div layout="row" layout-align="center center">
+        <div class="lnr-margin-lrg-top" layout="row" layout-align="center center">
           <span class="lnr-link" ng-click="loginDialog.resetPassword()">{{ 'forms.forgot-password' | translate }}</span>
           <span flex></span>
           <md-button type="submit" class="md-accent md-raised"">{{ 'forms.log-in' |     translate }}</md-button>

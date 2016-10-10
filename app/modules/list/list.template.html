@@ -1,26 +1,29 @@
 <md-content class="single-column">
-  <form name="listBike" layout="column" layout-align="start center" layout-padding>
+  <form class="content" name="listBike" layout="column" layout-align="start center" layout-padding>
     <h1 class="md-headline">{{ 'list.list-your-bike' | translate }}</h1>
 
-    <md-tabs class="content" md-no-pagination md-dynamic-height md-no-ink md-no-ink-bar md-selected="list.selectedIndex" md-stretch-tabs="always">
-      <md-tab ng-disabled="true" class="categories" label="{{ 'list.category.category' | translate }}" layout="row">
+    <md-tabs md-no-pagination md-dynamic-height md-no-ink md-no-ink-bars md-selected="list.selectedIndex" md-stretch-tabs="always">
+      <!-- categories -->
+      <md-tab ng-disableds="true" class="categories" label="{{ 'list.category.category' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
-          <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
+          <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="row" layout-align="space-between start">
-              <md-radio-group ng-model="list.form.mainCategory" layout="column" ng-change="list.categoryChange({{list.form.mainCategory}})">
-                <md-radio-button ng-repeat="cat in list.categoryOptions" value="{{cat.value}}">
+              <md-radio-group ng-model="list.form.mainCategory" flex="45" layout="column" ng-change="list.categoryChange({{list.form.mainCategory}})">
+                <md-radio-button ng-repeat="cat in list.categoryOptions"  value="{{cat.value}}">
                   {{ 'list.category.' + cat.label.replace(' ', '-') | translate }}
                 </md-radio-button>
               </md-radio-group>
 
-              <md-radio-group ng-model="list.form.subCategory" layout="column">
+              <md-radio-group ng-model="list.form.subCategory" flex layout="column">
                 <md-radio-button ng-repeat="subcat in list.subcategoryOptions[list.form.mainCategory]" value="{{subcat.value}}">
                   {{ 'list.subcategory.' + list.form.mainCategory + '.' + subcat.label | translate }}
                 </md-radio-button>
               </md-radio-group>
             </div>
 
-            <div class="col2 md-whiteframe-1dp" flex="45" hide-xs>
+            <md-divider class="lnr-margin-left lnr-margin-right"></md-divider>
+            
+            <div class="md-body-1" flex="45" hide-xs>
               {{ 'list.category.hint' | translate }}
             </div>
           </div>
@@ -30,10 +33,12 @@
           </div>
         </md-content>
       </md-tab>
+      <!-- end categories -->
 
-      <md-tab ng-disabled="true" class="details" label="{{ 'list.details.details' | translate }}" layout="row">
+      <!-- details -->
+      <md-tab ng-disableds="true" class="details" label="{{ 'list.details.details' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
-          <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
+          <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-input-container>
                 <label>{{ 'list.details.brand' | translate }}</label>
@@ -60,14 +65,15 @@
 
               <md-input-container>
                 <label>{{ 'list.details.description' | translate }}</label>
-                <textarea required md-no-resize minlength="100" name="description" ng-model="list.form.description" rows="4"></textarea>
+                <textarea required md-no-resize minlength="100" md-maxlength="800"  name="description" ng-model="list.form.description" rows="2"></textarea>
                 <div ng-messages="listBike.description.$error" role="alert">
                   <div ng-message="minlength">{{ 'list.details.min-length-warning' | translate }}</div>
                 </div>
               </md-input-container>
             </div>
 
-            <div class="col2 md-whiteframe-1dp" flex="45" hide-xs>
+            <md-divider class="lnr-margin-left lnr-margin-right"></md-divider>
+            <div class="md-body-1" flex="45" hide-xs>
               {{ 'list.details.hint' | translate }}
             </div>
           </div>
@@ -78,17 +84,20 @@
           </div>
         </md-content>
       </md-tab>
+      <!-- end details -->
 
-      <md-tab ng-disabled="true" class="accessories" label="{{ 'list.accessories.accessories' | translate }}" layout="row">
+      <!-- accessories -->
+      <md-tab ng-disableds="true" class="accessories" label="{{ 'list.accessories.accessories' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
-          <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
+          <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-checkbox ng-repeat="acc in list.accessoryOptions" ng-model="list.form[acc.model]">
                 {{ 'list.accessories.' + acc.label | translate }}
               </md-checkbox>
             </div>
 
-            <div class="col2 md-whiteframe-1dp" flex="45" hide-xs>
+            <md-divider class="lnr-margin-left lnr-margin-right"></md-divider>
+            <div class="md-body-1" flex="45" hide-xs>
               {{ 'list.accessories.hint' | translate }}
             </div>
           </div>
@@ -99,12 +108,14 @@
           </div>
         </md-content>
       </md-tab>
+      <!-- end accessories -->
 
-      <md-tab ng-disabled="true" class="pictures" label="{{ 'list.pictures.pictures' | translate }}" layout="row">
+      <!-- pictures -->
+      <md-tab ng-disableds="true" class="pictures" label="{{ 'list.pictures.pictures' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
-          <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
+          <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
-              <md-button ng-disabled="list.form.images.length > 4" ngf-multiple="true"
+              <md-button class="md-raised md-primary" ng-disabled="list.form.images.length > 4" ngf-multiple="true"
                 ngf-select="list.addImage($files)" accept=".jpg,.jpeg">
                 {{ 'list.pictures.select-images' | translate }}
               </md-button>
@@ -113,13 +124,13 @@
                 <div ng-repeat="img in list.form.images track by $index" layout="row" layout-align="space-between center">
                   <div class="img-preview" ngf-background="img" ngf-as-background="true"></div>
 
-                  <md-button ng-click="list.removeImage($index)">{{ 'list.pictures.remove' | translate}}</md-button>
+                  <md-button class="md-raised md-warn" ng-click="list.removeImage($index)">{{ 'list.pictures.remove' | translate}}</md-button>
                 </div>
               </div>
-              
             </div>
 
-            <div class="col2 md-whiteframe-1dp" flex="45" hide-xs>
+            <md-divider class="lnr-margin-left lnr-margin-right"></md-divider>
+            <div class="md-body-1" flex="45" hide-xs>
               {{ 'list.pictures.hint' | translate }}
             </div>
           </div>
@@ -130,10 +141,12 @@
           </div>
         </md-content>
       </md-tab>
+      <!-- end pictures -->
 
-      <md-tab ng-disabled="true" class="location" label="{{ 'list.location.location' | translate }}" layout="row">
+      <!-- location -->
+      <md-tab ng-disableds="true" class="location" label="{{ 'list.location.location' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
-          <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
+          <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <autocomplete layout="column" location="list.form.street" label-id="list-placeholder" required="true" fill-address="edit.fillAddress(place)">
               </autocomplete>
@@ -154,7 +167,8 @@
               </md-input-container>
             </div>
 
-            <div class="col2 md-whiteframe-1dp" flex="45" hide-xs>
+            <md-divider class="lnr-margin-left lnr-margin-right"></md-divider>
+            <div class="md-body-1" flex="45" hide-xs>
               {{ 'list.location.hint' | translate }}
             </div>
           </div>
@@ -165,10 +179,12 @@
           </div>
         </md-content>
       </md-tab>
+      <!-- end location -->
 
-      <md-tab ng-disabled="true" class="pricing" label="{{ 'list.pricing.pricing' | translate }}" layout="row">
+      <!-- pricing -->
+      <md-tab ng-disableds="true" class="pricing" label="{{ 'list.pricing.pricing' | translate }}" layout="row">
         <md-content class="md-padding" layout="column">
-          <div class="tab-content" layout="row" layout-align="space-between start" layout-padding>
+          <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
             <div class="col1" flex-xs="100" flex-gt-xs="45" layout="column">
               <md-input-container>
                 <label>{{ 'list.pricing.half-daily-price' | translate }} (€)</label>
@@ -186,7 +202,8 @@
               </md-input-container>
             </div>
 
-            <div class="col2 md-whiteframe-1dp" flex="45" hide-xs>
+            <md-divider class="lnr-margin-left lnr-margin-right"></md-divider>
+            <div class="md-body-1" flex="45" hide-xs>
               {{ 'list.pricing.hint' | translate }}
             </div>
           </div>
@@ -197,6 +214,8 @@
           </div>
         </md-content>
       </md-tab>
+      <!-- end pricing -->
+
     </md-tabs>
   </form>
 
