@@ -292,7 +292,8 @@ autocomplete .md-errors-spacer {
   margin: 0;
 }
 
-.lnr-user-modal .md-dialog-content {
+.lnr-user-modal .md-dialog-content,
+.lnr-verification-modal .md-dialog-content {
   padding: 25px 30px;
   padding-top: 10px;
 }
@@ -308,6 +309,32 @@ autocomplete .md-errors-spacer {
 
 .lnr-input-containers md-input-container:last-child {
   margin-right: 0;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* VERIFICATION MODALS
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-verification-modal {
+  width: 550px;
+}
+
+.lnr-verification-modal md-tabs {
+  width: 100%;
+  min-height: 300px;
+}
+
+.lnr-verification-modal md-tab-item {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.lnr-verification-modal md-input-container {
+  margin-bottom: 8px;
+}
+
+.lnr-verification-modal p {
+  // margin: 16px 0;
 }
 
 /*-----------------------------------------------------------------------------------*/
