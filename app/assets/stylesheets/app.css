@@ -393,6 +393,10 @@ home #landing-section {
   display: none;
 }
 
+.lnr-search-bar md-input-container {
+  margin: 0;
+}
+
 .lnr-search-bar,
 .lnr-search-bar md-input-container,
 .lnr-search-bar autocomplete {
@@ -585,6 +589,10 @@ search ng-map {
 
 search .map-column {
   height: 35%;
+}
+
+search md-input-container {
+  margin-bottom: 0;
 }
 
 search bike-card md-card {
