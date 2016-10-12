@@ -846,6 +846,7 @@ md-toast.md-center {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   padding: 48px 16px 8px 16px;
+  background: #fff;
 }
 
 requests md-input-container  {

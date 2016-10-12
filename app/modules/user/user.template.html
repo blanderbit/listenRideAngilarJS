@@ -41,7 +41,7 @@
 
     <md-divider></md-divider>
 
-    <div layout="column" flex="70" layout-padding>
+    <div layout="column" flex="90" layout-padding>
       <!-- description -->
       <div layout="row" layout-xs="column">
         <div flex-gt-xs="25">
@@ -59,7 +59,7 @@
           <p class="md-body-2">Listings</p>
         </div>
         <div flex-gt-xs layout="row" layout-wrap>
-          <bike-card ng-repeat="bike in user.user.rides" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+          <bike-card ng-repeat="bike in user.user.rides" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="50"></bike-card>
         </div>
       </div>
       <!-- end listings -->
@@ -70,13 +70,13 @@
           <p class="md-body-2">Ratings</p>
         </div>
 
-      <div flex-gt-xs>
-        <div layout="column">
-          <rating ng-repeat="rating in user.user.ratings" data="rating"></rating>
+        <div flex-gt-xs>
+          <div layout="column">
+            <rating ng-repeat="rating in user.user.ratings" data="rating"></rating>
+          </div>
         </div>
       </div>
       <!-- end reviews -->
-
     </div>
 
   </div>

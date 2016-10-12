@@ -11,18 +11,18 @@
 </div>
 
 <div ng-if="message.statusMessage() && message.status == 1 && message.request.rideChat" layout="row" layout-align="center center">
-  <div flex="60" layout="row" layout-align="space-between none">
-    <img class="profile-picture-medium" ng-click="message.closeDialog()" ui-sref="user({userId: message.request.lister.id})" ng-src="{{message.request.lister.profile_picture.profile_picture.url}}"></img>
+  <div flex="30" layout="row" layout-align="space-between none">
+    <img class="lnr-profile-md" ng-click="message.closeDialog()" ui-sref="user({userId: message.request.lister.id})" ng-src="{{message.request.lister.profile_picture.profile_picture.url}}"></img>
     <div layout layout-align="center center"><span class="md-headline">→</span></div>
-    <img class="profile-picture-medium" ng-click="message.closeDialog()" ui-sref="bike({bikeId: message.request.ride.id})" ng-src="{{message.request.ride.image_file_1.image_file_1.thumb.url}}"></img>
+    <img class="lnr-profile-md" ng-click="message.closeDialog()" ui-sref="bike({bikeId: message.request.ride.id})" ng-src="{{message.request.ride.image_file_1.image_file_1.thumb.url}}"></img>
   </div>
 </div>
 
 <div ng-if="message.statusMessage() && message.status == 1 && !message.request.rideChat" layout="row" layout-align="center center">
-  <div flex="60" layout="row" layout-align="space-between none">
-    <img class="profile-picture-medium" ng-click="message.closeDialog()" ui-sref="bike({bikeId: message.request.ride.id})" ng-src="{{message.request.ride.image_file_1.image_file_1.thumb.url}}"></img>
+  <div flex="30" layout="row" layout-align="space-between none">
+    <img class="lnr-profile-md" ng-click="message.closeDialog()" ui-sref="bike({bikeId: message.request.ride.id})" ng-src="{{message.request.ride.image_file_1.image_file_1.thumb.url}}"></img>
     <div layout layout-align="center center"><span class="md-headline">→</span></div>
-    <img class="profile-picture-medium" ng-click="message.closeDialog()" ui-sref="user({userId: message.request.user.id})" ng-src="{{message.request.user.profile_picture.profile_picture.url}}"></img>
+    <img class="lnr-profile-md" ng-click="message.closeDialog()" ui-sref="user({userId: message.request.user.id})" ng-src="{{message.request.user.profile_picture.profile_picture.url}}"></img>
   </div>
 </div>
 
