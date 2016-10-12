@@ -16,6 +16,7 @@ angular.module('listnride', [
   'listings',
   'listingCard',
   'edit',
+  'rating',
   /* external modules */
   'ngMaterial',
   'ngMessages',
@@ -26,5 +27,6 @@ angular.module('listnride', [
   'ngMap',
   'luegg.directives',
   'ngFileUpload',
-  'ngSanitize'
+  'ngSanitize',
+  'angular-input-stars'
 ]);

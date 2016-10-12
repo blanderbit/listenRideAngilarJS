@@ -28,7 +28,8 @@
     "to": "bis",
     "cancel": "Abbrechen",
     "send": "Senden",
-    "search": "Suche"
+    "search": "Suche",
+    "contact": "Kontakt & Hilfe"
   },
 
   "header": {
@@ -76,7 +77,7 @@
   },
 
   "rideChat": {
-    "1": "Du würdest gerne das {{lister.first_name}} {{lister.last_name}}'s {{ride.name}} von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, kannst du das Rad buchen.",
+    "1": "Du würdest gerne {{lister.first_name}} {{lister.last_name}}'s {{ride.name}} von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, kannst du das Rad buchen.",
     "2": "{{lister.first_name}} hat Deine Anfrage angenommen. Bestätige die Buchung, die Zahlung erfolgt erst im nächsten Schritt.",
     "3": "Glückwunsch, Du hast das Rad erfolgreich gebucht und kannst dich zum vereinbarten Zeitpunkt mit dem Verleiher treffen um es abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via Email zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Email address: {{lister.email}}<br>Adresse: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "4": "{{lister.first_name}} hat die Rückgabe des Rades bestätigt.",
@@ -96,7 +97,6 @@
     "about": "Über uns",
     "press": "Presse",
     "jobs": "Jobs",
-    "contact": "Kontakt",
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=de"
   },
 
@@ -134,7 +134,9 @@
 
   "calendar": {
     "invalid-date": "Datums angabe nicht Korrekt",
-    "request-bike": "Rad anfragen"
+    "request-bike": "Rad anfragen",
+    "to-request-bike-please": "um ein Rad anzufragen bitte",
+    "own-bike": "Du kannst nicht dein Rad anfragen"
   },
 
   "list": {

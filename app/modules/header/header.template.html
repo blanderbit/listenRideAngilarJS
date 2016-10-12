@@ -13,7 +13,7 @@
     </div>
 
     <div class="lnr-nav-menu" hide-xs>
-      <md-button class="md-lined" ui-sref="list" md-no-ink>{{ 'shared.list-a-bike' | translate }}</md-button>
+      <md-button class="md-lined" ui-sref="listingABike" md-no-ink>{{ 'shared.list-a-bike' | translate }}</md-button>
 
       <md-menu md-position-mode="target bottom">
         <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">{{ 'shared.learn-more' | translate }} </md-button>
@@ -24,12 +24,12 @@
           <md-menu-item>
             <md-button md-no-ink ui-sref="rentingABike">{{ 'shared.renting-a-bike' | translate }}</md-button>
           </md-menu-item>
-          <md-menu-item>
-            <md-button md-no-ink ui-sref="listingABike">{{ 'shared.listing-a-bike' | translate }}</md-button>
-          </md-menu-item>
           <md-menu-divider></md-menu-divider>
           <md-menu-item>
             <md-button ui-sref="trustAndSafety">{{  'shared.trust-and-safety' | translate }}</md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button md-no-ink ui-sref="help">{{ 'shared.contact' | translate }}</md-button>
           </md-menu-item>
         </md-menu-content>
       </md-menu>

@@ -10,6 +10,22 @@
   </div>
 </div>
 
+<div ng-if="message.statusMessage() && message.status == 1 && message.request.rideChat" layout="row" layout-align="center center">
+  <div flex="60" layout="row" layout-align="space-between none">
+    <img class="profile-picture-medium" ng-click="message.closeDialog()" ui-sref="user({userId: message.request.lister.id})" ng-src="{{message.request.lister.profile_picture.profile_picture.url}}"></img>
+    <div layout layout-align="center center"><span class="md-headline">→</span></div>
+    <img class="profile-picture-medium" ng-click="message.closeDialog()" ui-sref="bike({bikeId: message.request.ride.id})" ng-src="{{message.request.ride.image_file_1.image_file_1.thumb.url}}"></img>
+  </div>
+</div>
+
+<div ng-if="message.statusMessage() && message.status == 1 && !message.request.rideChat" layout="row" layout-align="center center">
+  <div flex="60" layout="row" layout-align="space-between none">
+    <img class="profile-picture-medium" ng-click="message.closeDialog()" ui-sref="bike({bikeId: message.request.ride.id})" ng-src="{{message.request.ride.image_file_1.image_file_1.thumb.url}}"></img>
+    <div layout layout-align="center center"><span class="md-headline">→</span></div>
+    <img class="profile-picture-medium" ng-click="message.closeDialog()" ui-sref="user({userId: message.request.user.id})" ng-src="{{message.request.user.profile_picture.profile_picture.url}}"></img>
+  </div>
+</div>
+
 <div ng-if="message.statusMessage()" layout="row" layout-align="center end"> 
   <div class="lnr-message status-message" flex="35" flex-xs="60" layout="column" layout-margin>
     <p class="lnr-center" translate="{{message.request.chatFlow}}.{{message.status}}" translate-values="message.request"></p>
@@ -17,7 +33,7 @@
     <div ng-if="!message.request.rideChat && message.status == 1">
       <md-divider></md-divider>
       <div layout="row" layout-align="center center">
-        <md-button ng-disabled="message.request.status != 1" ng-click="message.updateStatus(8)">{{ 'message.reject' | translate }}</md-button>
+        <md-button class="md-warn" ng-disabled="message.request.status != 1" ng-click="message.updateStatus(8)">{{ 'message.reject' | translate }}</md-button>
         <md-button ng-disabled="message.request.status != 1" ng-click="message.updateStatus(2)">{{ 'message.accept' | translate }}</md-button>
       </div>
     </div>
@@ -36,10 +52,17 @@
       </div>
     </div>
 
+    <div ng-if="message.request.rideChat && message.status == 1">
+      <md-divider></md-divider>
+      <div layout="row" layout-align="center center">
+        <md-button class="md-warn" ng-disabled="message.request.status != 1" ng-click="message.updateStatus(9)">{{ 'shared.cancel' | translate }}</md-button>
+      </div>
+    </div>
+
     <div ng-if="message.request.rideChat && message.status == 2">
       <md-divider></md-divider>
       <div layout="row" layout-align="center center">
-        <md-button ng-disabled="message.request.status != 2" ng-click="message.updateStatus(9)">{{ 'shared.cancel' | translate }}</md-button>
+        <md-button class="md-warn" ng-disabled="message.request.status != 2" ng-click="message.updateStatus(9)">{{ 'shared.cancel' | translate }}</md-button>
         <md-button ng-disabled="message.request.status != 2" ng-click="message.confirmBooking()">{{ 'message.confirm' | translate }}</md-button>
       </div>
     </div>

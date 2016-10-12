@@ -106,7 +106,7 @@ angular.module('requests').component('requests', {
         );
       }
 
-      var showPaymentDialog = function() {
+      var showPaymentDialog = function(event) {
         $mdDialog.show({
           controller: PaymentDialogController,
           controllerAs: 'paymentDialog',
@@ -120,7 +120,7 @@ angular.module('requests').component('requests', {
         });
       }
 
-      var showChatDialog = function() {
+      var showChatDialog = function(event) {
         $mdDialog.show({
           controller: ChatDialogController,
           controllerAs: 'chatDialog',
@@ -134,7 +134,7 @@ angular.module('requests').component('requests', {
         });
       }
 
-      var showBookingDialog = function() {
+      var showBookingDialog = function(event) {
         $mdDialog.show({
           controller: BookingDialogController,
           controllerAs: 'bookingDialog',
@@ -148,7 +148,7 @@ angular.module('requests').component('requests', {
         });
       };
 
-      requests.showRatingDialog = function() {
+      requests.showRatingDialog = function(event) {
         $mdDialog.show({
           controller: RatingDialogController,
           controllerAs: 'ratingDialog',

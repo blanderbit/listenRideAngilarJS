@@ -7,20 +7,28 @@ angular.module('edit').component('edit', {
     function EditController($mdDialog, $localStorage, $state, $stateParams, Upload, bike_options, api) {
       var edit = this;
 
-      edit.form = {
-        images: []
-      };
+      edit.form = { images: [] };
+      edit.selectedIndex = 0;
+      edit.sizeOptions = bike_options.sizeOptions();
+      edit.kidsSizeOptions = bike_options.kidsSizeOptions();
+      edit.categoryOptions = bike_options.categoryOptions();
+      edit.subcategoryOptions = bike_options.subcategoryOptions();
+      edit.accessoryOptions = bike_options.accessoryOptions();
 
       api.get('/rides/' + $stateParams.bikeId).then(
         function(response) {
           var data = response.data;
-          console.log(data);
 
           if (data.user.id == $localStorage.userId) {
             var images = [];
             for (var i = 1; i <= 5; ++i) {
-              if (data["image_file_" + i] !== undefined) {
-                images.push(data["image_file_" + i]);
+              if (data["image_file_" + i] !== undefined &&
+                data["image_file_" + i]["image_file_" + i].small.url !== null) {
+                images.push({
+                  src: data["image_file_" + i],
+                  url: data["image_file_" + i]["image_file_" + i].small.url,
+                  local: "false"
+                });
               }
             }
 
@@ -38,13 +46,6 @@ angular.module('edit').component('edit', {
           console.log("Error editing bike", error);
         }
       );
-
-      edit.selectedIndex = 0;
-      edit.sizeOptions = bike_options.sizeOptions();
-      edit.kidsSizeOptions = bike_options.kidsSizeOptions();
-      edit.categoryOptions = bike_options.categoryOptions();
-      edit.subcategoryOptions = bike_options.subcategoryOptions();
-      edit.accessoryOptions = bike_options.accessoryOptions();
 
       edit.onFormSubmit = function() {
         edit.submitDisabled = true;
@@ -70,14 +71,12 @@ angular.module('edit').component('edit', {
           "ride[price_half_daily]": edit.form.price_half_daily,
           "ride[price_daily]": edit.form.price_daily,
           "ride[price_weekly]": edit.form.price_weekly,
-          "ride[image_file_1]": edit.form.images[0],
-          "ride[image_file_2]": edit.form.images[1],
-          "ride[image_file_3]": edit.form.images[2],
-          "ride[image_file_4]": edit.form.images[3],
-          "ride[image_file_5]": edit.form.images[4]
+          "ride[image_file_1]": (edit.form.images[0]) ? edit.form.images[0].src : undefined,
+          "ride[image_file_2]": (edit.form.images[1]) ? edit.form.images[1].src : undefined,
+          "ride[image_file_3]": (edit.form.images[2]) ? edit.form.images[2].src : undefined,
+          "ride[image_file_4]": (edit.form.images[3]) ? edit.form.images[3].src : undefined,
+          "ride[image_file_5]": (edit.form.images[4]) ? edit.form.images[4].src : undefined
         };
-
-        console.log("ride", ride);
         
         Upload.upload({
           method: 'PUT',
@@ -114,11 +113,12 @@ angular.module('edit').component('edit', {
         if (files && files.length)
           for (var i = 0; i < files.length && edit.form.images.length < 5; ++i)
             if (files[i] != null)
-              edit.form.images.push(files[i]);
+              edit.form.images.push({src: files[i], local: "true"});
       };
 
       edit.removeImage = function(index) {
         edit.form.images.splice(index, 1);
+        console.log(edit.form.images);
       };
 
       edit.isFormValid = function() {
@@ -127,6 +127,12 @@ angular.module('edit').component('edit', {
           isPictureValid() &&
           isLocationValid() &&
           isPricingValid();
+      };
+
+      edit.categoryChange = function(oldCategory) {
+        if (edit.form.mainCategory == 4 || oldCategory == 4) {
+          edit.form.size = undefined;
+        }
       };
 
       edit.fillAddress = function(place) {
@@ -162,8 +168,8 @@ angular.module('edit').component('edit', {
       function isDetailsValid() {
         return edit.form.name !== undefined &&
           edit.form.brand !== undefined &&
-          edit.form.description !== undefined &&
-          edit.form.description.length >= 100;
+          edit.form.size !== undefined &&
+          edit.form.description !== undefined;
       };
 
       function isPictureValid() {

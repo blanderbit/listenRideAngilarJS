@@ -28,7 +28,8 @@
     "to": "to",
     "cancel": "Cancel",
     "send": "Send",
-    "search": "Search"
+    "search": "Search",
+    "contact": "Contact & Support"
   },
 
   "header": {
@@ -96,7 +97,6 @@
     "about": "About",
     "press": "Press",
     "jobs": "Jobs",
-    "contact": "Contact",
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
 
@@ -134,7 +134,9 @@
 
   "calendar": {
     "invalid-date": "Dates are invalid",
-    "request-bike": "Request Bike"
+    "request-bike": "Request Bike",
+    "to-request-bike-please": "to request a bike please",
+    "own-bike": "Du kannst nicht dein Rad anfragen"
   },
 
   "list": {

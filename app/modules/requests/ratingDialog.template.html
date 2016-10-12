@@ -6,21 +6,28 @@
       </div>
     </md-toolbar>
 
-    <md-dialog-content layout="column" class="dialog-content" layout-margin>
+    <md-dialog-content layout="column" class="dialog-content" layout-margin layout-align="center">
       <p class="md-body-1 lnr-center">How did you like the overall experience?</p>
       <p class="md-body-1 lnr-center">{{ 'requests.ratings.description' | translate }}</p>
-      <br><br>
-      <p>
-        <md-slider flex md-discrete ng-model="ratingDialog.rating" step="1" min="1" max="5" aria-label="rating"></md-slider>
-      </p>
-      <p class="md-body-2 lnr-center" translate="requests.ratings.{{ratingDialog.rating}}"></p>
-      <br>
-      <md-input-container>
-        <textarea placeholder="{{ 'requests.ratings.rating_text_lister' | translate }}" ng-model="ratingDialog.message" md-maxlength="150" rows="3" md-select-on-focus></textarea>
-      </md-input-container>
-      <div class="lnr-margin-lrg-top" layout="row" layout-align="end">
-        <md-button ng-click="ratingDialog.rate()" class="md-raised md-primary">{{ 'shared.send' | translate }}</md-button>
+      <div layout="column" layout-align="center center">
+        <input-stars max="5" ng-model="ratingDialog.rating"></input-stars>
+        <p class="md-body-2 lnr-center" translate="requests.ratings.{{ratingDialog.rating}}"></p>
       </div>
+      <br>
+      <form name="ratingDialog.ratingForm">
+        <div layout="column">
+          <md-input-container class="md-input-container-compact">
+            <textarea name="message" placeholder="{{ 'requests.ratings.rating_text_lister' | translate }}" ng-model=" ratingDialog.message" minlength="100" required rows="3" md-select-on-focus></textarea>
+            <div ng-messages="ratingDialog.ratingForm.message.$error" role="alert">
+              <div ng-message="required">This is required.</div>
+              <div ng-message="minlength">Please write a few more words</div>
+            </div>
+          </md-input-container>
+        </div>
+        <div layout="row" layout-align="end">
+          <md-button ng-disabled="!ratingDialog.ratingForm.$valid;" ng-click="ratingDialog.rate()" class="md-raised md-primary">{{ 'shared.send' | translate }}</md-button>
+        </div>
+      </form>
     </md-dialog-content>
 
 </md-dialog>
