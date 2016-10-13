@@ -259,6 +259,17 @@ search {
   color: #fff !important;
 }
 
+#hero-shot {
+  height: 42vh;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#hero-shot-overlay {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
 /* fix for md-container margin */
 autocomplete {
   margin-bottom: 16px;
@@ -585,15 +596,8 @@ md-card.lnr-bike-card {
 /*  BIKE DETAILS
 /*-----------------------------------------------------------------------------------*/
 
-#hero-shot {
+bike #hero-shot {
   height: 55vh;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-#hero-shot-overlay {
-  max-width: 970px;
-  margin: 0 auto;
 }
 
 bike .lnr-compact-details p {
