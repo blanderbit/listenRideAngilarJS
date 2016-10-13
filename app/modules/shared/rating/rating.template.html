@@ -1,5 +1,5 @@
 <div class="lnr-comment" layout="row">
-  <img class="lnr-profile-md lnr-margin-right clickable" ui-sref="user({userId: rating.data.author.id})" ng-src="{{rating.data.author.profile_picture.url}}"></img>
+  <img class="lnr-profile-md lnr-margin-right lnr-clickable" ui-sref="user({userId: rating.data.author.id})" ng-src="{{rating.data.author.profile_picture.url}}"></img>
   <div flex class="lnr-margin-left">
     <p class="lnr-comment-name md-body-2"><span>{{rating.data.author.first_name}} {{rating.data.author.last_name}}</p>
     <input-stars class="rating" max="5" ng-model="rating.data.score" readonly></input-stars>

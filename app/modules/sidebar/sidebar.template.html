@@ -4,6 +4,7 @@
         <img ng-if="sidebar.authentication.loggedIn()" class="lnr-profile-lrg" ng-src="{{sidebar.profilePicture}}">
       </div>
 
+      <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="user({userId: header.userId})" ng-click="sidebar.toggle()">Profile</md-button>
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="requests" ng-click="sidebar.toggle()">{{ 'shared.requests' | translate }}</md-button>
       <md-button ng-if="!sidebar.authentication.loggedIn()" ng-click="sidebar.toggle(); sidebar.authentication.showSignupDialog()">{{ 'forms.sign-up' | translate }}</md-button>
       <md-button ng-if="!sidebar.authentication.loggedIn()" ng-click="sidebar.toggle(); sidebar.authentication.showLoginDialog()">{{ 'forms.log-in' | translate }}</md-button>
