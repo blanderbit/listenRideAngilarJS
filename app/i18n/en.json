@@ -32,8 +32,16 @@
     "contact": "Contact & Support"
   },
 
-  "header": {
-
+  "settings": {
+    "settings": "Settings",
+    "profile": "Profile",
+    "account": "Account",
+    "payment-method": "Payment Method",
+    "payout-method": "Payout Method",
+    "payment-method-description": "Your payment method is used to pay for your rentals. It can be a credit card or paypal account.",
+    "payout-method-description": "Your payout method is where we send you money when you rent out your own bikes.",
+    "add-payment-method": "Add a new payment method (opens in a new window)",
+    "vouchers": "Vouchers"
   },
 
   "bike": {
@@ -110,7 +118,16 @@
     "log-in": "Log In",
     "log-out": "Log Out",
     "sign-up": "Sign Up",
-    "sign-up-with-facebook": "Sign Up with facebook"
+    "sign-up-with-facebook": "Sign Up with facebook",
+    "description" : "Description",
+    "description_min_100": "Description should be min. 100 characters",
+    "address": "Address",
+    "profile-picture": "Profile Picture",
+    "general": "General",
+    "street": "Street and Number",
+    "zip": "Zip Code",
+    "city": "City",
+    "country": "Country"
   },
 
   "home": {

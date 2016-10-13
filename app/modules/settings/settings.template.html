@@ -1,0 +1,162 @@
+<md-content class="single-column">
+  <div class="content lnr-page-margin" layout="column">
+    <div class="lnr-section-title lnr-center" layout="column" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'settings.settings' | translate }}</h1>
+    </div>
+
+    <md-tabs flex md-dynamic-height md-no-ink md-no-ink-bars md-selected="list.selectedIndex" md-center-tabs="on">
+      <!-- profile -->
+      <md-tab class="profile" label="{{ 'settings.profile' | translate }}">
+        <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
+          <form name="settingsForm">
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'forms.profile-picture' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout="column" layout-margin>
+                <img class="lnr-profile-lrg" ng-src="{{settings.user.profile_picture.profile_picture.url}}"></img>
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'forms.general' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout-margin>
+                <div layout="row" layout-xs="column" layout-fill>
+                  <md-input-container flex-gt-xs="45">
+                    <label>{{ 'forms.first-name' | translate }}</label>
+                    <input required name="firstName" ng-model="settings.user.first_name"></input>
+                  </md-input-container>
+                  <span hide-xs flex></span>
+                  <md-input-container flex-gt-xs="45">
+                    <label>{{ 'forms.last-name' | translate }}</label>
+                    <input required name="lastName" ng-model="settings.user.last_name"></input>
+                  </md-input-container>
+                </div>
+                <md-input-container layout-fill>
+                  <label>{{ 'forms.email-address' | translate }}</label>
+                    <input required name="email" ng-model="settings.user.email"></input>
+                </md-input-container>
+                
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'forms.address' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout-margin>
+                <div layout="row" layout-xs="column" layout-fill>
+                  <md-input-container flex-gt-xs="45">
+                    <label>{{ 'forms.street' | translate }}</label>
+                    <input required name="street" ng-model="settings.user.street"></input>
+                  </md-input-container>
+                  <span hide-xs flex></span>
+                  <md-input-container flex-gt-xs="45">
+                  <label>{{ 'forms.zip' | translate }}</label>
+                    <input required name="zip" ng-model="settings.user.zip"></input>
+                  </md-input-container>
+                </div>
+                <div layout="row" layout-xs="column" layout-fill>
+                  <md-input-container flex-gt-xs="45">
+                  <label>{{ 'forms.city' | translate }}</label>
+                    <input required name="city" ng-model="settings.user.city"></input>
+                  </md-input-container>
+                  <span hide-xs flex></span>
+                  <md-input-container flex-gt-xs="45">
+                    <label>{{ 'forms.country' | translate }}</label>
+                    <input required name="country" ng-model="settings.user.country"></input>
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+  
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'forms.description' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout-margin>
+                <md-input-container layout-fill>
+                  <label>{{ 'forms.description' | translate }}</label>
+                  <textarea required md-no-resize name="description" minlength="100" maxlength="400" ng-model="settings.user.description" rows="3"></textarea>
+                  <div ng-messages="settings.settingsForm.description.$error" role="alert">
+                    <div ng-message="minlength">{{ 'forms.description_min_100' | translate }}</div>
+                  </div>
+                </md-input-container>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+        <div class="navigation" layout="row" layout-align="end center" layout-margin>
+          <md-button class="md-raised md-primary">{{ 'edit.save-changes' | translate }}</md-button>
+        </div>
+      </md-tab>
+      <!-- end profile -->
+
+      <!-- account -->
+      <md-tab class="account" label="{{ 'settings.account' | translate }}" layout="column">
+        <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
+          <form name="settingsForm">
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'settings.payment-method' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout="column" layout-margin>
+                <span>{{ 'settings.payment-method-description' | translate }}</span>
+                <md-button class="md-raised md-primary" ng-click="settings.openPaymentWindow()">{{ 'settings.add-payment-method' | translate }}</md-button>
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'settings.payout-method' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout-margin>
+                <span>{{ 'settings.payout-method-description' | translate }}</span>
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'settings.vouchers' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout-margin>
+                
+              </div>
+            </div>
+
+          </form>
+        </div>
+        
+        <div class="navigation" layout="row" layout-align="end center" layout-margin>
+          <md-button class="md-raised md-primary">{{ 'edit.save-changes' | translate }}</md-button>
+        </div>
+      </md-tab>
+      <!-- end account -->    
+    </md-tabs>
+  </div>
+
+  <footer></footer>
+</md-content>

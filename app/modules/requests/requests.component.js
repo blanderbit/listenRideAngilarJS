@@ -41,7 +41,7 @@ angular.module('requests').component('requests', {
       }
 
       // Handles initial request loading
-      requests.loadRequest = function(requestId) {
+      requests.loadRequest = function(requestId, index) {
         requests.loadingChat = true;
         // Cancel the poller
         $interval.cancel(poller);
@@ -82,6 +82,13 @@ angular.module('requests').component('requests', {
               requests.request.rideChat? requests.request.chatFlow = "rideChat" : requests.request.chatFlow = "listChat";
               requests.loadingChat = false;
             }
+            api.post('/requests/' + requestId + '/messages/mark_as_read', {"user_id": $localStorage.userId}).then(
+              function (success) {
+              },
+              function (error) {
+                //
+              }
+            );
           },
           function(error) {
           console.log("Error fetching request!");

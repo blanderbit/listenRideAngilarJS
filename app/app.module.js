@@ -17,6 +17,7 @@ angular.module('listnride', [
   'listingCard',
   'edit',
   'rating',
+  'settings',
   /* external modules */
   'ngMaterial',
   'ngMessages',

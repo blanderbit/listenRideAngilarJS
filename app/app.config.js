@@ -79,6 +79,12 @@ angular.
     });
 
     $stateProvider.state({
+      name: 'settings',
+      url: '/settings',
+      template: '<settings></settings>'
+    });
+
+    $stateProvider.state({
       name: 'about',
       url: '/about',
       templateUrl: 'app/modules/static/about.template.html'
