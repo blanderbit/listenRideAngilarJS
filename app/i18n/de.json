@@ -254,5 +254,38 @@
     "delete": "Löschen",
     "dialog-title": "Möchtest du wirklich dein Fahrrad löschen?",
     "dialog-subtitle": "Es wird unwiderruflich von der Plattform entfernt, aktive Anfragen sind davon nicht betroffen."
+  },
+
+  "rent-a-bike" : {
+    "title" : "Fahrrad mieten. Nicht irgendeins. Sondern eins als wär’s genau Deins"
+  },
+
+  "trust-and-safety" : {
+    "title" : "Vertrauen & Sicherheit",
+    "header" : "Sorgenlos in die Pedale treten",
+    "subheader" : "Fahrrad ausleihen wird mit listnride genauso sicher wie unkompliziert",
+        "guarantee" : {
+      "title" : "Die Vermieter-Garantie von listnride",
+      "content": "listnride ist eine Community von Fahrradliebhabern. Aber hey, manchmal geht auch bei den Sorgsamsten was daneben. Deshalb haben wir die Vermieter-Garantie in petto: Wird Dein Fahrrad während der Mietzeit beschädigt oder gestohlen und kann Dein Mieter den Schaden nicht ersetzen, bietet sie Schutz bis zu einer Höhe von 5.000 EUR. Die Zahlungen unterliegen bestimmten Bedingungen, Einschränkungen und Ausnahmen. Bitte lese für weitere Details unsere Nutzungs und Mietbedingungen."
+    },
+    "responsibility" : {
+      "title" : "Verantwortungsvoller Umgang mit Deinen Daten",
+      "content": "Deine exakte Adresse bzw. der Standort Deines Fahrrads sind nicht Teil Deines öffentlichen Profils. Erst, wenn eine Buchung bestätigt ist, werden die Daten dem Sharing-Partner übermittelt."
+    },
+    "verification" : {
+      "title": "Verifizierung schafft Vertrauen",
+      "content" : "Theoretisch kennt wohl jeder jeden über 3,5 bis 6,6 Ecken. Aber würdest Du Dich beim Fahrradausleihen darauf verlassen wollen? Verknüpfe Dein Profil mit persönlichen Informationen und schaffe somit Vertrauen beim Vermieter bzw. Mieter. listnride bietet Dir folgende Möglichkeiten der Verifizierung:",
+      "list-1" : "- ID-Verifizierung: Verbinde Dein Profil mit Facebook und hinterlege Deine Kreditkarte. Stelle sicher, dass Du Email-Nachrichten erhalten kannst.",
+      "list-2" : "- Telefonnummer: Wir teilen Deine verifizierte Telefonnummer mit Deinem Vermieter bzw. Mieter sobald eine Buchung angenommen wurde.",
+      "list-3" : "- Bewertungen: Bewertungen von Deinen Mietern und Vermietern ordnen wir Deinem Profil zu. So kannst Du Dir einen guten Ruf aufbauen."
+    }
+  },
+
+  "contact-and-help" : {
+    "title" : "Kontakt & Hilfe",
+    "header" : "Wir sind für Dich da!",
+    "subheader" : "Kontaktiere uns zu speziellen Fragen oder falls Unstimmigkeiten beim Bike-Sharing über listnride auftauchen"
   }
 }
+
+
