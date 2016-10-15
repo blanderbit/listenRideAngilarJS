@@ -32,6 +32,10 @@ strong {
   margin: 0 auto;
 }
 
+.bold-text {
+  font-weight: 500 !important;
+}
+
 .lnr-capitalize {
   text-transform: capitalize;
 }
@@ -445,6 +449,11 @@ footer md-list-item:before {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
+}
+
+settings .lnr-profile-lrg {
+  margin: 0;
+  padding: 0;
 }
 
 /*-----------------------------------------------------------------------------------*/

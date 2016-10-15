@@ -32,8 +32,16 @@
     "contact": "Kontakt & Hilfe"
   },
 
-  "header": {
-
+  "settings": {
+    "settings": "Einstellungen",
+    "profile": "Profil",
+    "account": "Account",
+    "payment-method": "Zahlungsart",
+    "payout-method": "Auszahlungsmethode",
+    "payment-method-description": "Deine Zahlungsart wird benutzt um Räder, die du auf list-n-ride ausleihst, zu bezahlen.",
+    "payout-method-description": "Auf deine Auszahlungsmethode überweisen wir dir dein Geld, sobald du selbst ein Rad vermietet hast.",
+    "add-payment-method": "Neue Zahlungsart hinzufügen (öffnet sich in neuem Fenster)",
+    "vouchers": "Gutscheine"
   },
 
   "bike": {
@@ -121,7 +129,16 @@
     "log-in": "Log In",
     "log-out": "Log Out",
     "sign-up": "Registrieren",
-    "sign-up-with-facebook": "Mit facebook registrieren"
+    "sign-up-with-facebook": "Mit facebook registrieren",
+    "description" : "Beschreibung",
+    "description_min_100": "Beschreibung sollte min. 100 Buchstaben lang sein",
+    "address": "Adresse",
+    "profile-picture": "Profilbild",
+    "general": "Allgemein",
+    "street": "Staße und Hausnr.",
+    "zip": "PLZ",
+    "city": "Stadt",
+    "country": "Land"
   },
   
   "autocomplete": {

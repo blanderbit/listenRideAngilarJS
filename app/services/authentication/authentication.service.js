@@ -7,13 +7,14 @@ angular.
     function(Base64, $http, $localStorage, $mdDialog, $mdToast, $window, $state, $q, ezfb, api, verification, sha256){
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
-      var setCredentials = function (email, password, id, profilePicture, firstName, lastName) {
+      var setCredentials = function (email, password, id, profilePicture, firstName, lastName, unreadMessages) {
         var encoded = Base64.encode(email + ":" + password);
         // Sets the Basic Auth String for the Authorization Header 
         $localStorage.auth = 'Basic ' + encoded;
         $localStorage.userId = id;
         $localStorage.name = firstName + " " + lastName;
         $localStorage.profilePicture = profilePicture;
+        $localStorage.unreadMessages = unreadMessages;
       };
 
       // The Signup Dialog Controller
@@ -32,7 +33,7 @@ angular.
             }
           };
           api.post("/users", user).then(function(success) {
-            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name);
+            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
             $window.location.reload();
             verification.openDialog();
           }, function(error) {
@@ -63,7 +64,7 @@ angular.
             }
           };
           api.post('/users', user).then(function(success) {
-            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name);
+            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
             $window.location.reload();
             verification.openDialog();
           }, function(error) {
@@ -121,7 +122,7 @@ angular.
             }
           };
           api.post('/users/login', user).then(function(response) {
-            setCredentials(response.data.email, response.data.password_hashed, response.data.id, response.data.profile_picture.profile_picture.url, response.data.first_name, response.data.last_name);
+            setCredentials(response.data.email, response.data.password_hashed, response.data.id, response.data.profile_picture.profile_picture.url, response.data.first_name, response.data.last_name, response.data.unread_messages);
             $window.location.reload();
             showLoginSuccess();
           }, function(response) {
@@ -141,8 +142,9 @@ angular.
             }
           };
           api.post('/users/login', user).then(function(success) {
-            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name);
-            $window.location.reload();
+            console.log(success.data);
+            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
+            // $window.location.reload();
             showLoginSuccess();
           }, function(error) {
             console.log(error);
