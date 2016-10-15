@@ -40,6 +40,10 @@ strong {
   text-align: center;
 }
 
+.lnr-right {
+  text-align: right;
+}
+
 .lnr-margin {
   margin: 8px;
 }
@@ -152,13 +156,14 @@ search {
 
 .lnr-page-title {
   text-align: center;
-  max-width: 960px;
+  max-width: 800px;
 }
 
 .lnr-section-title {
   text-align: center;
-  max-width: 960px;
-  margin: 16px auto;
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 0 8px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -795,7 +800,6 @@ message .status-message {
   background-color: #ffffff;
 }
 
->>>>>>> dev
 list md-tabs,
 edit md-tabs {
   padding: 0 !important;
@@ -844,6 +848,41 @@ listings .lnr-bike-card.lnr-unavailable {
 
 listings .lnr-bike-card.lnr-unavailable img {
   opacity: 0.6;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  CALCULATOR
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-calculator {
+  /* disable text selection on double click */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+.lnr-calculator md-slider-container {
+  position: relative;
+}
+
+.lnr-calculator md-slider-container .lnr-slider-info {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: -8px;
+  max-width: 150px;
+}
+
+.lnr-calculator .lnr-money {
+  font-size: 9vw;
+}
+
+@media (max-width:599px) {
+  .lnr-calculator .lnr-money {
+    font-size: 25vw;
+  }
 }
 
 
