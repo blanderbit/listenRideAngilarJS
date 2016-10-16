@@ -1,115 +1,121 @@
  <md-content class="single-column"> 
   <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_trust_and_safety.jpg')" layout="row" layout-align="center center">
-    <h1 class="md-display-1 lnr-white lnr-page-title">How it works</h1>
+    <h1 class="md-display-1 lnr-white lnr-page-title">{{ 'how-it-works.title' | translate }}</h1>
   </div>
 
   <div class="content" layout-padding>
+    <!-- Lister steps -->
     <div class="lnr-section-title" layout="column" layout="column" layout-align="center center">
-      <h1 class="md-headline">listnride helps you get into gear</h1>
-      <h2 class="md-subhead">Renting (out) a bicycle on our bike sharing platform is as easy as meeting up for coffee</h2>
+      <h1 class="md-headline">{{ 'how-it-works.header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'how-it-works.subheader' | translate }}</h2>
+    </div>
+
+    <div class="lnr-section-title" layout="column" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'how-it-works.lister-section.header' | translate }}</h1>
     </div>
 
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
       <div flex-gt-xs="20" layout="column"  layout-align="none center" layout-margin>
         <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_list_bike.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">1. List a bike</h3>
-        <p class="lnr-center">Add specs, location, photo &amp; price</p>
+        <h3  class="md-subhead lnr-center">1. {{ 'how-it-works.lister-section.step-1-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.lister-section.step-1-content' | translate }}</p>
       </div>
 
       <div flex-gt-xs="20" layout="column" layout-align="none center" layout-margin>
         <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_list_request.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">2. Get Requests</h3>
-        <p class="lnr-center">For a specific time and date</p>
+        <h3  class="md-subhead lnr-center">2. {{ 'how-it-works.lister-section.step-2-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.lister-section.step-2-content' | translate }}</p>
       </div>
 
       <div flex-gt-xs="20" layout="column" layout-wrap layout-align="none center" layout-margin>
         <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_list_accept.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">3. Accept Rental</h3>
-        <p class="lnr-center">Or suggest a better time &amp; date</p>
+        <h3  class="md-subhead lnr-center">3. {{ 'how-it-works.lister-section.step-3-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.lister-section.step-3-content' | translate }}</p>
       </div>
 
       <div flex-gt-xs="20" layout="column" layout-align="none center" layout-margin>
         <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_list_handover.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">4. Meet Rider</h3>
-        <p class="lnr-center">Hand-over bike, chat, give local tips</p>
+        <h3  class="md-subhead lnr-center">4. {{ 'how-it-works.lister-section.step-4-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.lister-section.step-4-content' | translate }}</p>
       </div>
 
       <div flex-gt-xs="20" layout="column" layout-align="none center" layout-margin>
         <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_list_compensation.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">5. Get Paid</h3>
-        <p class="lnr-center">Payment is credited to your account</p>
+        <h3  class="md-subhead lnr-center">5. {{ 'how-it-works.lister-section.step-5-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.lister-section.step-5-content' | translate }}</p>
       </div>
     </div>
+    <!-- end Lister steps -->
 
 
+    <!-- Riders steps -->
     <div class="lnr-section-title" layout="column" layout="column" layout-align="center center">
-      <h1 class="md-headline">listnride helps you get into gear</h1>
-      <h2 class="md-subhead">Renting (out) a bicycle on our bike sharing platform is as easy as meeting up for coffee</h2>
+      <h1 class="md-headline">{{ 'how-it-works.rider-section.header' | translate }}</h1>
     </div>
 
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
       <div flex-gt-xs="20" layout="column"  layout-align="none center" layout-margin>
         <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_rent_find.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">1. List a bike</h3>
-        <p class="lnr-center">Add specs, location, photo &amp; price</p>
+        <h3  class="md-subhead lnr-center">1. {{ 'how-it-works.rider-section.step-1-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.rider-section.step-1-content' | translate }}</p>
       </div>
 
       <div flex-gt-xs="20" layout="column" layout-align="none center" layout-margin>
         <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_rent_request.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">2. Get Requests</h3>
-        <p class="lnr-center">For a specific time and date</p>
+        <h3  class="md-subhead lnr-center">2. {{ 'how-it-works.rider-section.step-2-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.rider-section.step-2-content' | translate }}</p>
       </div>
 
       <div flex-gt-xs="20" layout="column" layout-wrap layout-align="none center" layout-margin>
         <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_rent_pickup.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">3. Accept Rental</h3>
-        <p class="lnr-center">Or suggest a better time &amp; date</p>
+        <h3  class="md-subhead lnr-center">3. {{ 'how-it-works.rider-section.step-3-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.rider-section.step-3-content' | translate }}</p>
       </div>
 
       <div flex-gt-xs="20" layout="column" layout-align="none center" layout-margin>
         <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_rent_time.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">4. Meet Rider</h3>
-        <p class="lnr-center">Hand-over bike, chat, give local tips</p>
+        <h3  class="md-subhead lnr-center">4. {{ 'how-it-works.rider-section.step-4-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.rider-section.step-4-content' | translate }}</p>
       </div>
 
       <div flex-gt-xs="20" layout="column" layout-align="none center" layout-margin>
         <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_rent_return.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">5. Get Paid</h3>
-        <p class="lnr-center">Payment is credited to your account</p>
+        <h3  class="md-subhead lnr-center">5. {{ 'how-it-works.rider-section.step-5-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.rider-section.step-5-content' | translate }}</p>
       </div>
     </div>
+    <!-- end Riders steps -->
   </div>
 
 
+  <!-- handover -->
   <div class="content" layout-padding>
     <div class="lnr-section-title" layout="column" layout="column" layout-align="center center">
-      <h1 class="md-headline">Direct or flexible bike handover: the choice is yours</h1>
+      <h1 class="md-headline">{{ 'how-it-works.handover-section.header' | translate }}</h1>
     </div>
 
     <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
       <div flex-gt-sm="65" layout="column" layout-margin>
-        <p>We’re going to go out on a limb here and say that it’s especially the nice people who ride bikes. And they even lend them to others. That’s why we believe it’s definitely worth picking up the bike directly from the owner. The added benefit: meeting great new people and getting useful tips about the local area. But if there simply isn’t enough time, listnride offers its users three ways to hand over rental bikes:</p>
-        <span>{{ 'trust-and-safety.verification.list-1' | translate }}</span>
-        <span>{{ 'trust-and-safety.verification.list-2' | translate }}</span>
-        <span>{{ 'trust-and-safety.verification.list-3' | translate }}</span>
+        <p>{{ 'how-it-works.handover-section.content' | translate }}</p>
+        <span>{{ 'how-it-works.handover-section.list-1' | translate }}</span>
+        <span>{{ 'how-it-works.handover-section.list-2' | translate }}</span>
+        <span>{{ 'how-it-works.handover-section.list-3' | translate }}</span>
       </div>
 
       <div flex-gt-sm="30" layout="column" layout-margin>
         <div flex="100" layout="column" layout-align="none center" layout-margin>
           <md-icon class="lnr-icn-mlrg lnr-accent" md-svg-src="app/assets/ui_icons/icn_uebergabe_delivery.svg"></md-icon>
-          <p  class="lnr-center">Owners dilver to custom locations around town, within set of radius</p>
+          <p  class="lnr-center">{{ 'how-it-works.handover-section.custom-location' | translate }}</p>
         </div>
 
         <div flex="100" layout="column" layout-align="none center" layout-margin>
           <md-icon class="lnr-icn-mlrg lnr-accent" md-svg-src="app/assets/ui_icons/icn_uebergabe_pickup.svg"></md-icon>
-          <p class="lnr-center">Travelers pick up the bike at the owners location</p>
+          <p class="lnr-center">{{ 'how-it-works.handover-section.lister-location' | translate }}</p>
         </div>
       </div>
     </div>
-
-
   </div>
-
+  <!-- end handover -->
 
   <footer></footer>
 </md-content>

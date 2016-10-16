@@ -1,22 +1,19 @@
  <md-content class="single-column"> 
-  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_trust_and_safety2.jpg')" layout="row" layout-align="center center">
-    <h1 class="md-display-1 lnr-white lnr-page-title">Jobs</h1>
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_trust_and_safety.jpg')" layout="row" layout-align="center center">
+    <h1 class="md-display-1 lnr-white lnr-page-title">{{ 'jobs.title' | translate }}</h1>
   </div>
 
   <div class="content" layout-padding>
     <div class="lnr-section-title" layout="column" layout="column" layout-align="center center">
-      <h1 class="md-headline">Jobs section</h1>
-      <h2 class="md-subhead">Join our team and help our bike sharing community grow</h2>
+      <h1 class="md-headline">{{ 'jobs.header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'jobs.subheader' | translate }}</h2>
     </div>
 
     <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
-      <div flex-gt-sm="45" flex-gt-sm-offset="5" layout="column" layout-margin>
-        <h3 class="md-subhead">Contact us</h3>
-        <p>Do you always know more about bikes than others? Do you love jumping on the saddle and going for a ride, come rain or shine? Then you are in all likelihood a true bike aficionado – and would make a great addition to our team. Have a look to see if we currently have a vacancy that is right for you, and feel free to send us your application:</p>
-        <span>List and Ride UG (haftungsbeschränkt)
-        </br>Steinstraße 17, 10119 Berlin</span>
-        <span>Handelsregister-Nummer HRB 161394 B</br>Amtsgericht Berlin-Charlottenburg</span>
-        <span>E-Mail: contact@listnride.com</span>
+      <div flex-gt-sm="50" flex-gt-sm-offset="5" layout="column" layout-margin>
+        <!-- <h3 class="md-subhead">{{ 'jobs.contact.title' | translate }}</h3> -->
+        <p>{{ 'jobs.contact.content' | translate }}</p>
+        <span>E-Mail: <a href="mailto:contact@listnride?Subject=Press%20Contact" target="_top">contact@listnride.com</a></span>
       </div>
     </div>
 

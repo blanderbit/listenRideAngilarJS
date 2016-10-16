@@ -1,5 +1,4 @@
 /* #5FC693: Primary Color
-// #4cbf86: Accent Color
 // 4px: border radius
 // Added to material
 // md-lined,
@@ -94,14 +93,14 @@ strong {
 
 .lnr-link {
   cursor: pointer;
-  transition: opacity 0.25s ease-in-out;
-  -moz-transition: opacity 0.25s ease-in-out;
-  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
 }
 
 .lnr-link:hover,
 .lnr-link:active {
-  opacity: 0.6;
+  opacity: 0.65;
 }
 
 .lnr-middle-divider {
@@ -168,6 +167,12 @@ search {
   max-width: 800px;
   margin: 24px auto;
   padding: 0 8px;
+}
+
+#hero-shot {
+  height: 42vh;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -267,6 +272,11 @@ search {
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
 
+a {
+  text-decoration: none;
+  color: #5FC693;
+}
+
 .lnr-btn-inline {
   margin-top: 25px;
   margin-right: 0;
@@ -277,17 +287,6 @@ search {
   border-color: #3b5998 !important;
   background: #3b5998 !important;
   color: #fff !important;
-}
-
-#hero-shot {
-  height: 42vh;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-#hero-shot-overlay {
-  max-width: 970px;
-  margin: 0 auto;
 }
 
 /* fix for md-container margin */
@@ -697,8 +696,8 @@ search bike-card md-card {
 .lnr-filters md-checkbox.md-checked md-icon svg path,
 .lnr-filters md-checkbox.md-checked md-icon svg rect,
 .lnr-filters md-checkbox.md-checked md-icon svg circle {
-  fill: #4cbf86;
-  color: #4cbf86;
+  fill: #5FC693;
+  color: #5FC693;
 }
 
 /* Map bike card hackaround (to be cleaned) */
@@ -706,11 +705,11 @@ search ng-map md-card {
   width: 240px;
 }
 
-search ng-map md-card md-icon {
+search ng-map md-card.lnr-bike-card md-icon {
   display: none;
 }
 
-search ng-map md-card md-card-title-text span {
+search ng-map md-card.lnr-bike-card md-card-title-text span {
   max-width: 130px;
 }
 

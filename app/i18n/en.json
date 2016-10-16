@@ -273,6 +273,47 @@
     "dialog-subtitle": "The bike will get permanently removed from the platform. Current requests are not affected by this."
   },
 
+  "how-it-works" : {
+    "title" : "Bike sharing without the hassle",
+    "header" : "listnride helps you get into gear",
+    "subheader": "Renting (out) a bicycle on our bike sharing platform is as easy as meeting up for coffee:",
+    "lister-section" : {
+      "header" : "How to list a bike",
+      "step-1-title" : "List a bike",
+      "step-1-content" : "Add specs, location, photo & price",
+      "step-2-title" : "Get Requests",
+      "step-2-content" : "For a specific time and date",
+      "step-3-title" : "Accept Rental",
+      "step-3-content" : "Or suggest a better time & date",
+      "step-4-title" : "Meet Rider",
+      "step-4-content" : "Hand-over bike, chat, give local tips",
+      "step-5-title" : "Get Paid",
+      "step-5-content" : "Payment is credited to your account"
+    },
+    "rider-section" : {
+      "header" : "How to rent a bike",
+      "step-1-title" : "Find a bike",
+      "step-1-content" : "Search by type and location",
+      "step-2-title" : "Request & Reserve",
+      "step-2-content" : "For a specific time and date",
+      "step-3-title" : "Pick up the bike",
+      "step-3-content" : "Have a chat & get insider tips",
+      "step-4-title" : "Off you go",
+      "step-4-content" : "Enjoy your ride!",
+      "step-5-title" : "Return",
+      "step-5-content" : "To owner at agreed time & place"
+    },
+    "handover-section" : {
+      "header": "Direct or flexible bike handover: the choice is yours",
+      "content" : "We’re going to go out on a limb here and say that it’s especially the nice people who ride bikes. And they even lend them to others. That’s why we believe it’s definitely worth picking up the bike directly from the owner. The added benefit: meeting great new people and getting useful tips about the local area. But if there simply isn’t enough time, listnride offers its users three ways to hand over rental bikes:",
+      "list-1" : "- Home, sweet home: The renter (rider) picks up the bike from the owner’s (lister’s) home.",
+      "list-2" : "- X marks the spot: The lister hands over the bike to the rider at an agreed location.",
+      "list-3" : "- The freedom is yours: The lister locks up the bike at a public place and sends the rider the code to the combination lock.",
+      "custom-location" : "Owners dilver to custom locations around town, within set of radius",
+      "lister-location" : "Travelers pick up the bike at the owners location"
+    }
+  },
+
   "rent-a-bike" : {
     "title" : "Don’t just rent any old bike. Rent one that feels like your own",
     "info-section" : {
@@ -348,11 +389,138 @@
     }
   },
 
+  "about-us" : {
+    "title" : "About us",
+    "header" : "About listnride",
+    "subheader" : "How conventional bike rental services inspired us to create a diverse bike sharing community",
+    "community" : {
+      "title" : "listnride: the idea that sparked a community",
+      "content": "Here at listnride, we all love bikes. Each of us has their personal favorite that they cherish, and we enjoy the wonderful diversity of two-wheelers: from urban bikes to mountain bikes, from speedy road bikes to super-fast S-pedelecs, from eccentric ponies to reliable pack mules. That’s why we began asking ourselves: Why isn’t it possible to choose and have a specific bike that you need for a particular purpose at any time, regardless of whether you’re traveling or in your home town? Will we always be stuck with the low-entry bikes from the local rental shop? And thus the idea of setting up the listnride bike sharing community was born."
+    },
+    "future" : {
+      "title" : "listnride: full speed ahead",
+      "content": "Today, listnride is available in big cities like Amsterdam, Berlin, Munich and Vienna. And that number keeps growing. Private owners as well as specialized dealers offer their bikes for rent on our platform. This enables tourists and locals, families and businesspeople to find the ideal bike that complements their personal style and meets their needs – and perhaps even get one or two useful tips about the local area from the lister. Our idea has become a reality. Be a part of it and share your bike – or simply ride any bike you want! We look forward to welcoming you to our community."
+    }
+  },
+
+  "press" : {
+    "title" : "Press",
+    "header" : "Press section",
+    "subheader" : "Information is ready to be downloaded. listnride is ready to talk",
+    "kit" : {
+      "title" : "Press kit",
+      "content": "Others call themselves bike rental systems. We are a bike sharing community. Find out more in our press kit, which can be ",
+      "download" : "downloaded here"
+    },
+    "contact" : {
+      "title" : "Press contact",
+      "content": "Do you have further questions about listnride or need more information about bike sharing systems, rental bikes and mobility concepts? Then you can contact us directly:"
+    }
+  },
+
+  "jobs" : {
+    "title" : "Jobs",
+    "header" : "Vacancies",
+    "subheader" : "Join our team and help our bike sharing community grow",
+    "contact" : {
+      "title" : "Contact us",
+      "content": "Do you always know more about bikes than others? Do you love jumping on the saddle and going for a ride, come rain or shine? Then you are in all likelihood a true bike aficionado – and would make a great addition to our team. Have a look to see if we currently have a vacancy that is right for you, and feel free to send us your application."
+    }
+  },
+
   "contact-and-help" : {
-    "title" : "Contact & Help",
+    "title" : "Contact & Support",
     "header" : "We’re here for you!",
-    "subheader" : "Contact us if you have any special questions or any discrepancies or disagreements arise during the bike sharing process on listnride"
+    "subheader" : "Contact us if you have any special questions or any discrepancies or disagreements arise during the bike sharing process on listnride",
+    "contact" : {
+      "title" : "Can’t find the answer you need in our FAQ section? Then choose one of the following:",
+      "list-1" : "I would like to report a suspicious request",
+      "list-2" : "I would like to report a suspicious listing",
+      "list-3" : "I would like to report a problem about my rider/lister",
+      "list-4" : "I have a question regarding payments",
+      "list-5" : "I have a general question"
+    },
+    "lister-faq" : {
+      "title" : "FAQ Lister",
+      "question-1" : "What do I need to do to rent out my bike with peace of mind?",
+      "answer-1" : "Once you receive a rental request, you can communicate with the requester via the convenient chat feature. You’ll already have a good idea of who the person is and why they wish to rent your bike. The listnride platform provides user verification to minimize the risk of fraud. If you would like even more peace of mind, you could ask the renter to bring an ID for further verification and/or give you a safety deposit when picking up the bike. Keep in mind that everybody wants to have a great time and enjoy the ride, and will therefore be careful with the bike you rented out to them.",
+      "question-2" : "How can I be sure that the rider will return my bike?",
+      "answer-2" : "We do our best to create a marketplace based on trust and respect. This is why we require our users to verify their identity before they rent someone’s bike or offer their own bike for rent. Verification is done via mobile phone number, facebook or e-mail and payment details. If you still feel unsure, you can ask the rider to give you a copy of their ID card and/or leave a certain safety deposit. In that case, please make sure to let the rider know in advance before he/she confirms and pays for the rental. Nevertheless, the rider might be running late, as they aren’t familiar with the area and might therefore not be able to find the way back that easily. Try contacting the rider by phone, text message or the in-app chat to find out the reason for the delay. If this doesn’t work out, please report the situation via our website by clicking on “Contact & Support.” We will contact the rider and resolve the issue to make sure your bike is returned to you.",
+      "question-3" : "What happens if my bike gets stolen or damaged?",
+      "answer-3" : "Bike theft does happen. However, the bike is less likely to get stolen if it is properly locked and/or stored indoors. Help prevent theft by providing a secure lock with your bike. In case something does go wrong, the rider will be held responsible for all costs arising from any damage and/or theft. If your bike was stolen and/or damaged during the rental period, you and the rider need to contact us through our website by clicking on “Contact us.” Once we’ve clarified the situation, we will contact you to resolve the issue. If it was stolen and the rider can’t pay the damages, the listnride guarantee will make sure everything is covered! If the bike was stolen while it wasn’t rented out through listnride, however, we cannot help solve the problem. In this case you need to resolve the issue directly with the rider.",
+      "question-4" : "What happens if the rider or someone else gets injured and/or property gets damaged during the rental period?",
+      "answer-4" : "Make sure that your bike is in good condition when you hand it over. This is beneficial to both parties: The rider will have a great time, and you’ll receive a positive rating after the bike has been returned. When booking a bike through listnride, the renter agrees to the applicable terms and conditions. These terms and conditions offer you protection against liability for any injury to the renter and/or damage to their or someone else’s property. As the lister, you are never responsible if the renter gets injured during a ride.",
+      "question-5" : "What happens if the rider doesn’t show up as agreed to pick up my bike?",
+      "answer-5" : "Sometimes the rider might have difficulty getting to the agreed location. A bit of flexibility on your part is essential. However, if things are taking too long and you’ve tried contacting the rider – either through the listnride in-app chat or directly by telephone – but he/she is not responding, please cancel the rental by sending the rider a message in the chat thread and describing the reason for the cancellation.",
+      "question-6" : "How do I offer my bike for rent?",
+      "answer-6" : "You need to sign up first before you can offer your bike for rent. Simply click on “Sign up” and fill in the required details. Once you’ve signed up, simply log in using your e-mail address and password. Click on your account in the top right corner and select “List a ride.” Provide all the necessary details, including some nice clear pictures of your bike, and after setting the rental price, click on “List my ride.” It’ll take a few seconds for the information to be uploaded. Afterwards, you can find, edit and delete your bike in the account menu under “Listed rides.”",
+      "question-7" : "How do I set the rental price for my bike?",
+      "answer-7" : "You are free to decide any price for half-day/full-day/weekly rental. The minimum is €1. An attractive price will result in more rentals, as people are looking for good value for money. To determine the right price, look at similar bikes on listnride and/or compare the price with local bike shops in your area.",
+      "question-8" : "What do I pay for offering my bike to rent?",
+      "answer-8" : "Offering your bike for rent on listnride is free. Only when a booking takes place do we deduct a commission from the total rental price. We charge 7.5% of the total rental price. Example: If you rent out your bike for 5 days at €20 per day, the total rental price will be €100 euros, of which we will pay you €92.50. This includes all costs incurred for credit card fees.",
+      "question-9" : "How do I receive the money for renting out my bike?",
+      "answer-9" : "The total rental price minus the 7.5% listnride commission will be paid into your bank account within 5 business days after the rental period is over. The money will be transferred via PayPal or bank wire. You can enter and/or alter your payment details in your listnride account by clicking on “Edit profile.”",
+      "question-10" : "Can I also offer my bike for rent in other locations than currently listed on the website?",
+      "answer-10" : "Yes. listnride is a global platform and therefore open to any bike anywhere.",
+      "question-11" : "How do I temporarily suspend my listing or deactivate my bike?",
+      "answer-11" : "If you aren’t able to offer your bike for a certain period of time, you don’t need to delete your listing. Instead, you can deactivate the bike by selecting “Listed rides” in the account menu, where you can see your bike(s). Now simply click on “Deactivate bike” for the bike you would like to deactivate.",
+      "question-12" : "How do I change the pictures or details of my bike?",
+      "answer-12" : "You can alter the pictures and/or details of your bike by clicking on “Listed rides” in the account menu. Then select “Edit ride” and make the desired changes. Confirm the changes by clicking on “Update ride.”",
+      "question-13" : "How do I delete my bike listing?",
+      "answer-13" : "In case you no longer can or want to offer a certain bike for rent, you can delete it by going to “Listed rides” in the account menu. If you’re using our iPhone app, swipe the bike you would like to delete to the left and click “delete”. If you’re using our website, select “Delete ride.” After a few seconds, you’ll see a confirmation message that says “Bike successfully deleted.”",
+      "question-14" : "How do I rent out my bike through listnride?",
+      "answer-14" : "Once you receive a request for your bike, open the app or go to our website and log into your account. Click on your account page in the top right corner and click on “Request to me” in the account menu. Here you will see the request that has been sent to you. Click on the request and reply to the requester by either accepting or rejecting the request. You can also chat with the requester at the same time to clarify any details. Once you accept the request, the other person needs to confirm his/her request and pay in advance. As soon as the confirmation and payment are complete, you will receive a notification via e-mail as well as a status update in your account.",
+      "question-15" : "What do I do if the rental period initially requested is not the same as the actual period?",
+      "answer-15" : "If the final rental period has changed while you are communicating with the requester, it’s wise to ask them for a new request with the correct date and time, so that the rental is covered by the listnride guarantee.",
+      "question-16" : "What do I do if the requested rental period is inconvenient?",
+      "answer-16" : "If the requested rental period doesn’t fit into your schedule, you could check if someone else can hand over the bike and keys on your behalf. If that’s not possible, simply reject the request. Adding a short message stating why you rejected the request would be appreciated.",
+      "question-17" : "How do I contact the rider once the bike rental is confirmed?",
+      "answer-17" : "You can contact the renter via the same in-app chat that you were using for the rental request. Simply go to the “Requests to me” tab in your account menu and click on the bike you rented out. You’ll also find all of the renter’s details, including their mobile phone number, in the rental confirmation e-mail.",
+      "question-18" : "How do I get ratings for my listing?",
+      "answer-18" : "After the rental is over, the rider will be asked to rate you as a lister as well as your bike. Once the rating is submitted, your bike will show a rating value. To get good ratings, we recommend describing your bike and its condition truthfully."     
+    },
+    "rider-faq" : {
+      "title" : "FAQ Rider",
+      "question-1" : "How do I rent a bike?",
+      "answer-1" : "You need to sign up first before you can rent a bike. Simply click on “Sign up” and fill in the required details. Once you’ve signed up, simply log in using your e-mail address and password. After selecting the bike that suits your needs, select your desired start date, pick-up time, end date and drop-off time and then click on “Request ride.” Once your request is accepted by the lister, you need to confirm your rental request by clicking on “Confirm request” and completing the payment process. As soon as the payment is successfully complete, you’ll receive a booking confirmation message as well as an e-mail with the all relevant rental details.",
+      "question-2" : "How do I cancel a request?",
+      "answer-2" : "In the request status, you can cancel the request at any time before the payment process is completed by clicking on “Cancel request” in the request window.",
+      "question-3" : "Can I send more than one request at the same time?",
+      "answer-3" : "Yes, you can request multiple bikes at the same time. This makes sense in order to get a faster response from one of the bike owners. Once one of the bike owners has accepted your request, you can confirm your request. As long as you don’t confirm, there will be no booking and therefore no payment transaction. When you do book a ride, please remember to cancel all other requests for the same rental period so the other owners are duly informed.",
+      "question-4" : "What do I do if the lister doesn't respond?",
+      "answer-4" : "Unfortunately, not every lister is able to reply right away, for example if they don’t have Internet access at the moment. We do everything we can to improve response times. If you are requesting a rental on short notice, we recommend requesting multiple rides at the same time to increase the chances of you finding a ride that suits your style and needs.",
+      "question-5" : "How do I pay for the bike rental?",
+      "answer-5" : "You can confirm and pay for the request in the app or on our website. Payment is possible by credit card or PayPal. We are working on making new payment methods available– stay tuned.",
+      "question-6" : "What do I do in case of a flat tire?",
+      "answer-6" : "A flat tire can happen while riding the bike. It’s your responsibility to return the bicycle in the condition in which it was handed over to you. Either find a bike shop and have the tire repaired, or contact the lister and agree on a fair compensation. We believe a fair compensation should be around €15.",
+      "question-7" : "How should I lock my bike safely to prevent theft?",
+      "answer-7" : "To prevent the bike from getting stolen, we recommend checking with the lister with regard to local customs. In general, we would advise pulling the lock through the front tire as well as the frame, and attaching the bike to a fixed object (lamp post, tree, etc.) so it can’t be moved easily. If you’re keeping the bike overnight, we recommend storing the bike in a closed area or indoors.",
+      "question-8" : "What if the bike gets stolen during the rental period?",
+      "answer-8" : "It’s very unfortunate if the bike gets stolen. Please notify our helpdesk right away if this happens. We’ll let you know what needs to be done. Remember: The bike is your full responsibility for the duration of the rental period, and you might have to replace the bike.",
+      "question-9" : "Do I have insurance coverage when I rent with listnride?",
+      "answer-9" : "Listnride doesn’t provide any insurance; we only facilitate the rental transaction. All bike rentals are at the renter’s risk, meaning you will be held responsible for any theft or damage to the ride during the rental period. We recommend that renters check their travel insurance and/or liability insurance for possible coverage. ",
+      "question-10" : "What if the bike doesn’t resemble the one I thought I booked?",
+      "answer-10" : "Please send us some pictures of the bike and explain how it is different from the one you originally booked, so that we can cancel the rental if your claim appears justified. Alternatively, you can rate the bike accordingly when asked to submit a rating after the rental period is over.",
+      "question-11" : "Do I need to bring my own lock and helmet, and can I bring my own pedals/saddle?",
+      "answer-11" : "If the lister doesn’t provide a bicycle lock, we recommend bringing your own. Remember: You are responsible for bringing the bike back and making sure it doesn’t get stolen. Listers can provide helmets if they wish, but if you prefer wearing your own or none is provided, you should bring your own helmet. In case you would like to change the pedals or saddle, please get prior approval from the lister. Remember: This is someone else’s bike, not yours."
+    }
+  },
+
+  "terms-and-conditions" : {
+    "title" : "Terms and conditions",
+    "header" : "General Terms and Conditions of Business for the listnride Online Platform"
+  },
+
+  "privacy" : {
+    "title" : "Privacy"
+  },
+
+  "imprint" : {
+    "title" : "Imprint",
+    "header" : "imprint",
+    "contact" : {
+      "title" : "Our Contact information:"
+    }
   }
 }
-
 

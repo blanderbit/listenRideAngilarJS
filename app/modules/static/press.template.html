@@ -1,27 +1,28 @@
  <md-content class="single-column"> 
   <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_trust_and_safety.jpg')" layout="row" layout-align="center center">
-    <h1 class="md-display-1 lnr-white lnr-page-title">Press</h1>
+    <h1 class="md-display-1 lnr-white lnr-page-title">{{ 'press.title' | translate }}</h1>
   </div>
 
   <div class="content" layout-padding>
     <div class="lnr-section-title" layout="column" layout="column" layout-align="center center">
-      <h1 class="md-headline">Press section</h1>
-      <h2 class="md-subhead">Information is ready to be downloaded. listnride is ready to talk</h2>
+      <h1 class="md-headline">{{ 'press.header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'press.subheader' | translate }}</h2>
     </div>
 
     <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
       <div flex-gt-sm="45" flex-gt-sm-offset="5" layout="column" layout-margin>
-        <h3 class="md-subhead">Press contact</h3>
-        <p>Do you have further questions about listnride or need more information about bike sharing systems, rental bikes and mobility concepts? Then you can contact us directly:</p>
+        <h3 class="md-subhead">{{ 'press.contact.title' | translate }}</h3>
+        <p>{{ 'press.contact.content' | translate }}</p>
+        <br>
         <span>List and Ride UG (haftungsbeschränkt)
-        </br>Steinstraße 17, 10119 Berlin</span>
+        <br>Steinstraße 17, 10119 Berlin</span>
         <span>Handelsregister-Nummer HRB 161394 B</br>Amtsgericht Berlin-Charlottenburg</span>
-        <span>E-Mail: contact@listnride.com</span>
+        <span>E-Mail: <a href="mailto:contact@listnride?Subject=Press%20Contact" target="_top">contact@listnride.com</a></span>
       </div>
 
       <div flex-gt-sm="45" layout="column" layout-margin>
-        <h3  class="md-subhead">Press kit</h3>
-        <p>Others call themselves bike rental systems. We are a bike sharing community. Find out more in our press kit, which can be downloaded here.</p>
+        <h3  class="md-subhead">{{ 'press.kit.title' | translate }}</h3>
+        <p>{{ 'press.kit.content' | translate }} <a class="lnr-link" href="app/assets/downloads/listnride_press.zip" download>{{ 'press.kit.download' | translate }}</a>.</p>
       </div>
     </div>
 
