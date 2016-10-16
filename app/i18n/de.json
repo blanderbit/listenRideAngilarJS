@@ -1,11 +1,11 @@
 {
   "shared": {
     "learn-more": "Mehr Erfahren",
-    "how-it-works": "Wie's funktioniert",
+    "how-it-works": "Wie funktioniert's",
     "list-a-bike": "Rad vermieten",
     "renting-a-bike": "Rad ausleihen",
     "listing-a-bike": "Rad verleihen",
-    "trust-and-safety": "Vertrauen und Sicherheit",
+    "trust-and-safety": "Vertrauen & Sicherheit",
     "later": "Später",
     "next": "Weiter",
     "requests": "Anfragen",
@@ -109,14 +109,14 @@
   },
 
   "home": {
-    "landing-section-header": "Rent your next adventure",
-    "landing-section-subheader": "A bike for your styles and needs",
-    "featured-bikes-header": "Die bliebtesten Fahrräder zum ausleihen",
-    "featured-bikes-subheader": "Miete dir ein Schindelhauer, Specialized und viele andere Marken",
-    "featured-cities-header": "Entdecke stilvoll neue Städte",
-    "featured-cities-subheader": "Miete ein Rad in Berlin, München, Amsterdam und anderen wunderschönen Städten",
-    "list-a-bike-header": "Have your own bike?",
-    "list-a-bike-subheader": "List it and make money"
+    "landing-section-header": "Dein Fahrradverleih hat nicht das Richtige für Dich? ",
+    "landing-section-subheader": "Miete Dir auf listnride ein Fahrrad, wie Du es magst und gerade brauchst.",
+    "featured-bikes-header": "Fahrradverleih: Die Lieblinge der Rider",
+    "featured-bikes-subheader": "Schau, welche Fahrräder andere mieten und  entdecke Goldstückchen von Schindelhauer, Specialized und vielen mehr.",
+    "featured-cities-header": "Im Sattel durch den Großstadtdschungel",
+    "featured-cities-subheader": "In immer mehr Metropolen gibt es den Fahrradverleih über listnride. Erste Insider-Tipps hier:",
+    "list-a-bike-header": "Dein Bike ist zu schön, um rumzustehen?",
+    "list-a-bike-subheader": "Liste Dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und kurble nebenbei Dein Konto an."
   },
 
   "forms": {
@@ -126,8 +126,8 @@
     "password": "Passwort",
     "forgot-password": "Passwort vergessen?",
     "or": "oder",
-    "log-in": "Log In",
-    "log-out": "Log Out",
+    "log-in": "Log-In",
+    "log-out": "Log-Out",
     "sign-up": "Registrieren",
     "sign-up-with-facebook": "Mit facebook registrieren",
     "description": "Beschreibung",

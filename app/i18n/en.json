@@ -131,14 +131,14 @@
   },
 
   "home": {
-    "landing-section-header": "Rent your next adventure",
-    "landing-section-subheader": "A bike for your styles and needs",
-    "featured-bikes-header": "Featured bikes to rent",
-    "featured-bikes-subheader": "Rent a Schindelhauer, Specialized and many other brands",
-    "featured-cities-header": "Explore a new city in style",
-    "featured-cities-subheader": "Rent a bike in Berlin, Munich, Amsterdam and other beautiful cities",
-    "list-a-bike-header": "Have your own bike?",
-    "list-a-bike-subheader": "List it and make money"
+    "landing-section-header": "Can’t find a suitable bicycle at your local bike rental service?",
+    "landing-section-subheader": "Join listnride and find the bike that is right for you.",
+    "featured-bikes-header": "Bike rental: Our riders’ favorites",
+    "featured-bikes-subheader": "Have a look at the bikes other riders are renting and discover special gems by Schindelhauer, Specialized and many more.",
+    "featured-cities-header": "Pedaling through the urban jungle",
+    "featured-cities-subheader": "listnride’s bike rental service is becoming available in more and more cities around the world. Check out some insiders’ tips here:",
+    "list-a-bike-header": "Got a nice bike and want people to see it?",
+    "list-a-bike-subheader": "List your bike for rent, meet fun new people and earn some extra cash."
   },
 
   "autocomplete": {
