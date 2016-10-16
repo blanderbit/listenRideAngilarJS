@@ -1,39 +1,43 @@
  <md-content class="single-column"> 
-  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_trust_and_safety2.jpg')" layout="row" layout-align="center center">
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_rent_a_bike.jpg')" layout="row" layout-align="center center">
     <h1 class="md-display-1 lnr-white lnr-page-title">{{ 'rent-a-bike.title' | translate }}</h1>
   </div>
 
+  <!-- info -->
   <div class="content" layout-padding>
     <div class="lnr-section-title" layout="column" layout="column" layout-align="center center">
-      <h1 class="md-headline">Miete dein perfektes Rad</h1>
-      <h2 class="md-subhead">Für Deinen Stil, für Deinen Zweck. Von Leuten wie Du und ich</h2>
+      <h1 class="md-headline">{{ 'rent-a-bike.info-section.header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'rent-a-bike.info-section.subheader' | translate }}</h2>
     </div>
 
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
       <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
         <md-icon class="lnr-icn-mlrg lnr-accent" md-svg-src="app/assets/ui_icons/icn_choice.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">Super Auswahl</h3>
-        <p class="lnr-center">Die Fahrräder auf listnride sind so vielfältig wie unsere User. Vom Edel-Rennrad über schicke Urban Bikes bis hin zu Lastenrädern und Kinderanhängern ist alles vertreten. Miete das passende Fahrrad für Deinen Stil und Zweck</p>
+        <h3  class="md-subhead lnr-center">{{ 'rent-a-bike.info-section.choice-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'rent-a-bike.info-section.choice-content' | translate }}</p>
       </div>
 
       <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
         <md-icon class="lnr-icn-mlrg lnr-accent" md-svg-src="app/assets/ui_icons/icn_value.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">Super Preis</h3>
-        <p class="lnr-center">Bei uns vermieten Privatpersonen genauso wie der professionelle Händler und Fahrradverleih. Dein Vorteil: Das perfekte Fahrrad zu einem fairen Preis-Leistungs-Verhältnis</p>
+        <h3  class="md-subhead lnr-center">{{ 'rent-a-bike.info-section.price-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'rent-a-bike.info-section.price-content' | translate }}</p>
       </div>
 
       <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
         <md-icon class="lnr-icn-mlrg lnr-accent" md-svg-src="app/assets/ui_icons/icn_earlyaccess.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">Super einfach</h3>
-        <p class="lnr-center">Finde und buche Dein Leihfahrrad bevor Du auf Reisen gehst – oder einfach von unterwegs: Im Netz oder mit unserer iPhone-App</p>
+        <h3  class="md-subhead lnr-center">{{ 'rent-a-bike.info-section.easy-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'rent-a-bike.info-section.easy-content' | translate }}</p>
       </div>
     </div>
   </div>
+  <!-- end info -->
 
+
+  <!-- search for a bike -->
   <div id="listBike" class="section"  md-theme="lnr-dark" layout="column" layout-align="space-between none">
     <div class="lnr-center lnr-white" flex layout="column" layout-align="center center">
-      <h1 class="md-display-1">Wo soll’s hingehen?</h1>
-      <h2 class="md-subhead">Bike-Sharing per listnride erreicht immer mehr Orte</h2>
+      <h1 class="md-display-1">{{ 'rent-a-bike.search-section.header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'rent-a-bike.search-section.subheader' | translate }}</h2>
     </div>
 
     <div flex layout="column" layout-align="center center">
@@ -43,46 +47,51 @@
       </form>
     </div>
   </div>
+  <!-- end search for a bike -->
 
 
+  <!-- testmonials -->
   <div class="content" layout-padding>
     <div class="lnr-section-title" layout="column" layout="column" layout-align="center center">
-      <h1 class="md-headline">Was sagen die Rider über uns?</h1>
-      <h2 class="md-subhead">Immer mehr Menschen haben Bike-Sharing per listnride für sich entdeckt. Lies hier einige Kommentare:</h2>
+      <h1 class="md-headline">{{ 'rent-a-bike.testmonials-section.header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'rent-a-bike.testmonials-section.subheader' | translate }}</h2>
     </div>
 
-    <div layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
-      <div flex-gt-sm="50" layout="column" layout-align="none center" layout-margin>
-        <div class="lnr-comment" layout="row">
-          <img class="lnr-profile-md lnr-margin-right" ng-src="app/assets/ui_images/rider-user-1.jpg"></img>
-          <div flex class="lnr-margin-left">
-            <p class="lnr-comment-name md-body-2">David aus Melbourne</p>
-            <p class="lnr-comment-content md-body-1">Visited Germany and wanted to actively discover the city and country side. We found 2 great rental bikes on listnride, we had an awesome time, a great discovery!</p>
-          </div>
-        </div>
-
-        <div class="lnr-comment" layout="row">
-          <img class="lnr-profile-md lnr-margin-right" ng-src="app/assets/ui_images/rider-user-1.jpg"></img>
-          <div flex class="lnr-margin-left">
-            <p class="lnr-comment-name md-body-2">Sarah aus Stuttgart</p>
-            <p class="lnr-comment-content md-body-1">Ich war zu Besuch bei einer Freundin in Berlin und wollte nicht mein eigenes Rad mitschleppen. Stattdessen hab ich ein schönes Fahrrad gemietet - ganz in ihrer Nähe. Klappte einwandfrei und auch noch zu einem guten Preis</p>
-          </div>
+    <div layout="column" layout-wrap layout-gt-sm="row" layout-padding>
+      <div flex-gt-sm="50" class="lnr-comment" layout="row">
+        <img class="lnr-profile-md lnr-margin-right" ng-src="app/assets/ui_images/testmonial_rider_1.jpg"></img>
+        <div flex class="lnr-margin-left">
+          <p class="lnr-comment-name md-body-2">David aus Melbourne</p>
+          <p class="lnr-comment-content md-body-1">Visited Germany and wanted to actively discover the city and country side. We found 2 great rental bikes on listnride, we had an awesome time, a great discovery!</p>
         </div>
       </div>
 
-      <div flex-gt-sm="50" layout="column" layout-align="none center" layout-margin>
-        <div class="lnr-comment" layout="row">
-          <img class="lnr-profile-md lnr-margin-right" ng-src="app/assets/ui_images/rider-user-1.jpg"></img>
-          <div flex class="lnr-margin-left">
-            <p class="lnr-comment-name md-body-2">Andrea aus Rom</p>
-            <p class="lnr-comment-content md-body-1">In Munich we came across listnride and found some really nice and cheap bikes. The owner was a friendly guy inviting us on a coffee. He gave some cool tips, really nice!</p>
-          </div>
+      <div flex-gt-sm="50" class="lnr-comment" layout="row">
+        <img class="lnr-profile-md lnr-margin-right" ng-src="app/assets/ui_images/testmonial_rider_2.jpg"></img>
+        <div flex class="lnr-margin-left">
+          <p class="lnr-comment-name md-body-2">Sarah aus Stuttgart</p>
+          <p class="lnr-comment-content md-body-1">Ich war zu Besuch bei einer Freundin in Berlin und wollte nicht mein eigenes Rad mitschleppen. Stattdessen hab ich ein schönes Fahrrad gemietet - ganz in ihrer Nähe. Klappte einwandfrei und auch noch zu einem guten Preis</p>
         </div>
       </div>
 
+      <div flex-gt-sm="50" class="lnr-comment" layout="row">
+        <img class="lnr-profile-md lnr-margin-right" ng-src="app/assets/ui_images/testmonial_rider_3.jpg"></img>
+        <div flex class="lnr-margin-left">
+          <p class="lnr-comment-name md-body-2">Andrea aus Rom</p>
+          <p class="lnr-comment-content md-body-1">In Munich we came across listnride and found some really nice and cheap bikes. The owner was a friendly guy inviting us on a coffee. He gave some cool tips, really nice!</p>
+        </div>
+      </div>
+
+      <div flex-gt-sm="50" class="lnr-comment" layout="row">
+        <img class="lnr-profile-md lnr-margin-right" ng-src="app/assets/ui_images/testmonial_rider_4.jpg"></img>
+        <div flex class="lnr-margin-left">
+          <p class="lnr-comment-name md-body-2">Andrea aus Rom</p>
+          <p class="lnr-comment-content md-body-1">Ich bin regelmäßig für mein Job in Berlin. Seitdem ich listnride entdeckt habe miete ich öfter ein schönes Radl, der Auswahl ist super. Einfach und Sicher!</p>
+        </div>
+      </div>
     </div>
   </div>
-
+  <!-- end testmonials -->
 
   <footer></footer>
 </md-content>

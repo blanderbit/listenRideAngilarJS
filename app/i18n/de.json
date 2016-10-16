@@ -274,7 +274,57 @@
   },
 
   "rent-a-bike" : {
-    "title" : "Fahrrad mieten. Nicht irgendeins. Sondern eins als wär’s genau Deins"
+    "title" : "Fahrrad mieten. Nicht irgendeins. Sondern eins als wär’s genau Deins",
+    "info-section" : {
+      "header" : "Miete dein perfektes Rad",
+      "subheader": "Für Deinen Stil, für Deinen Zweck. Von Leuten wie Du und ich",
+      "choice-title" : "Super Auswahl",
+      "choice-content" : "Die Fahrräder auf listnride sind so vielfältig wie unsere User. Vom Edel-Rennrad über schicke Urban Bikes bis hin zu Lastenrädern und Kinderanhängern ist alles vertreten. Miete das passende Fahrrad für Deinen Stil und Zweck",
+      "price-title" : "Super preis",
+      "price-content" : "Bei uns vermieten Privatpersonen genauso wie der professionelle Händler und Fahrradverleih. Dein Vorteil: Das perfekte Fahrrad zu einem fairen Preis-Leistungs-Verhältnis",
+      "easy-title" : "Super einfach",
+      "easy-content" : "Finde und buche Dein Leihfahrrad bevor Du auf Reisen gehst – oder einfach von unterwegs: Im Netz oder mit unserer iPhone-App"
+    },
+    "search-section" : {
+      "header" : "Wo soll’s hingehen?",
+      "subheader" : "Bike-Sharing per listnride erreicht immer mehr Orte"
+    },
+    "testmonials-section" : {
+      "header" : "Was sagen die Rider über uns?",
+      "subheader": "Immer mehr Menschen haben Bike-Sharing per listnride für sich entdeckt. Lies hier einige Kommentare:"
+    }
+  },
+
+  "list-a-bike" : {
+    "title" : "Fahrrad vermieten, Konto ankurbeln",
+    "calculator-section" : {
+      "header" : "Lass‘ Dein Fahrrad für Dich arbeiten",
+      "subheader": "Ein paar Klicks und unser Rechenschieber zeigt Dir, wieviel Du mit Fahrradvermietungen über listnride verdienen kannst",
+      "market-price" : "Marktwert deines Fahrrads",
+      "days-per-week" : "Tage, die es pro Woche vermietet ist",
+      "could-earn" : "Du verdienst",
+      "per-year" : "pro Jahr"
+    },
+    "info-section" : {
+      "header" : "Safety first!",
+      "subheader" : "listnride gibt Dir Rückendeckung",
+      "precautions-title" : "Wir sorgen vor",
+      "precautions-content" : "Du willst Dein geliebtes Fahrrad verleihen – aber nicht irgendjemandem. Deshalb verifizieren wir alle User für Dich. Und über die User-Ratings erfährst Du mehr über ihr Fairplay im Bike Sharing",
+      "control-title" : "Du behältst die Kontrolle",
+      "control-content" : "Du bestimmst die individuelle Tages- oder Wochenrate. Dir steht es komplett frei, Anfragen anzunehmen oder auch ganz einfach abzulehnen, wenn Du Dein Fahrrad nicht verleihen willst",
+      "covered-title" : "Du bist abgesichert",
+      "covered-content" : "Im Schadensfall oder bei Diebstahl stehen wir Dir zur Seite. Und wenn nötig, bist Du mit der listnride-Vermieter-Garantie in Höhe von 5.000 EUR abgesichert",
+      "help-title" : "Wir lassen Dich nicht alleine",
+      "help-content" : "Solltest Du mit einem Rider (Mieter) ein Problem nicht direkt lösen können, sind wir für Dich da – um Dich zu unterstützen oder die Angelegenheit komplett zu übernehmen"
+    },
+    "list-section" : {
+      "header" : "Bereit, Ihr Fahrrad zu vermieten?",
+      "subheader" : "Lerne tolle neue Leute kennen und verdiene nebenbei Geld"
+    },
+    "testmonials-section" : {
+      "header" : "Fahrradvermietung: Was sagen die Lister über uns?",
+      "subheader": "Viele Menschen sind schon ein teilender Teil unserer Bike-Sharing-Community. Lies hier, welche Erfahrungen sie gemacht haben"
+    }
   },
 
   "trust-and-safety" : {

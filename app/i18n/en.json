@@ -274,7 +274,57 @@
   },
 
   "rent-a-bike" : {
-    "title" : "Don’t just rent any old bike. Rent one that feels like your own"
+    "title" : "Don’t just rent any old bike. Rent one that feels like your own",
+    "info-section" : {
+      "header" : "Rent a bike that is perfect for you",
+      "subheader": "One that complements your style and meets your needs. From people like you and me",
+      "choice-title" : "Super selection",
+      "choice-content" : "The range of bikes offered on listnride is as diverse as our users. Here you will find everything from high-end road bikes and trendy urban bikes to cargo bicycles and bike trailers for kids. Rent a bike that suits your style and meets your needs",
+      "price-title" : "Super price",
+      "price-content" : "The bikes listed on our platform are rented out by private owners as well as specialist dealers and rental services. What’s in it for you: the perfect bike at good value for money",
+      "easy-title" : "Super easy",
+      "easy-content" : "Find and book your rental bike before going on a trip or simply on the go – online or using our iPhone app"
+    },
+    "search-section" : {
+      "header" : "Where would you like to go?",
+      "subheader" : "listnride’s bike sharing service is becoming available in more and more locations"
+    },
+    "testmonials-section" : {
+      "header" : "What do our riders say about us?",
+      "subheader": "More and more people are discovering the benefits of bike sharing via listnride. Check out some of their testimonials:"
+    }
+  },
+
+  "list-a-bike" : {
+    "title" : "Rent out a bike, earn some extra cash",
+    "calculator-section" : {
+      "header" : "Let your bike work for you",
+      "subheader": "Just a few clicks and our slide rule will show you how much you can earn by renting out a bike via listnride",
+      "market-price" : "Market value of your bike",
+      "days-per-week" : "Days per week your bike is rented",
+      "could-earn" : "You could earn",
+      "per-year" : "per year"
+    },
+    "info-section" : {
+      "header" : "Safety first!",
+      "subheader" : "listnride has your back",
+      "precautions-title" : "We take the necessary precautions",
+      "precautions-content" : "You want to rent out your bike – but not to just anybody. That’s why we verify the identity of all our users for you. And our user ratings help you find out whether they play fair in the bike sharing scene",
+      "control-title" : "You stay in control",
+      "control-content" : "You decide the daily or weekly rate for your bike(s). It’s completely up to you whether you want to accept a rental request or simply reject it because you can’t or don’t want to lend someone your bike at the moment",
+      "covered-title" : "We’ve got you covered",
+      "covered-content" : "In case of damage or theft, we’re right there by your side. And, if necessary, the listnride lister guarantee worth EUR 5,000 has got you covered",
+      "help-title" : "We’re there to help",
+      "help-content" : "If you and a renter (rider) encounter a problem and can’t find a solution, we’re there for you – to support you or even resolve the entire issue"
+    },
+    "list-section" : {
+      "header" : "Ready to list your bike?",
+      "subheader" : "Meet great new people and earn some money on the side"
+    },
+    "testmonials-section" : {
+      "header" : "Renting out bikes: What do our listers say about us?",
+      "subheader": "Many people have already become a sharing part of our listnride community. Read about their personal experiences"
+    }
   },
 
   "trust-and-safety" : {
