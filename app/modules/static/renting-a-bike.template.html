@@ -1,17 +1,99 @@
  <md-content class="single-column"> 
-  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/landing.jpg')" layout="row" layout-align="center center">
-    <h1>Rad ausleihen</h1>
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_rent_a_bike.jpg')" layout="row" layout-align="center center">
+    <div class="lnr-page-title lnr-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'rent-a-bike.title' | translate }}</h1>
+    </div>
   </div>
-  <div class="content" layout="column" layout-margin>
-    <br>
-    <h2 class="md-headline">XOXO meh Food Truck</h2>
-    <p>XOXO meh food truck, try-hard yr twee glossier selfies tattooed shoreditch retro. Williamsburg pour-over portland farm-to-table swag, woke kogi master   cleanse man braid whatever. Man bun messenger bag glossier, gluten-free vegan ugh selvage try-hard. Deep v air plant celiac iPhone pork belly, stumptown wolf   franzen. Pok pok taxidermy cornhole everyday carry gastropub ramps church-key flannel messenger bag green juice. Post-ironic banh mi slow-carb, +1 pabst  waistcoat cray woke la croix cardigan schlitz lo-fi polaroid sartorial cornhole. Yuccie cred drinking vinegar, lyft live-edge jianbing pitchfork keffiyeh vice   godard.</p>
-  
-    <h2 class="md-headline">Godard normcore hoodie</h2>
-    <p>Godard normcore hoodie, vape disrupt hell of semiotics kickstarter microdosing post-ironic plaid chambray craft beer. Swag cray pitchfork semiotics banh   mi   gastropub. Selfies man bun fam kombucha sriracha, portland pickled salvia raw denim iceland. Lumbersexual iPhone migas chambray, quinoa narwhal fap vice   XOXO   street art drinking vinegar scenester banjo pabst. Locavore tumeric swag semiotics helvetica, tofu activated charcoal meggings schlitz. Swag keffiyeh  pug, venmo  cardigan literally knausgaard skateboard irony selfies you probably haven't heard of them chicharrones. Hella typewriter banjo, aesthetic quinoa   sustainable vape  meggings 90's.</p>
-    
-    <h2 class="md-headline">Ethical pabst kickstarter</h2>
-    <p>Ethical pabst kickstarter keffiyeh retro. Brunch umami aesthetic cred skateboard, yuccie fap sustainable fashion axe bitters synth salvia enamel pin   disrupt.   Salvia intelligentsia knausgaard bespoke, chillwave plaid pug trust fund photo booth hella pour-over bicycle rights hashtag. Swag mlkshk blue  bottle, seitan  shoreditch tilde waistcoat slow-carb master cleanse chartreuse ethical gentrify cred lumbersexual. Kombucha la croix YOLO, franzen banh mi   trust fund before they  sold out. Selfies meh deep v seitan, squid chartreuse austin pour-over jianbing marfa sriracha cold-pressed plaid. Franzen quinoa scenester, tumeric gluten-free   art party distillery meh slow-carb.</p>
+
+  <!-- info -->
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'rent-a-bike.info-section.header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'rent-a-bike.info-section.subheader' | translate }}</h2>
+    </div>
+
+    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg lnr-accent" md-svg-src="app/assets/ui_icons/icn_choice.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">{{ 'rent-a-bike.info-section.choice-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'rent-a-bike.info-section.choice-content' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg lnr-accent" md-svg-src="app/assets/ui_icons/icn_value.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">{{ 'rent-a-bike.info-section.price-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'rent-a-bike.info-section.price-content' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg lnr-accent" md-svg-src="app/assets/ui_icons/icn_earlyaccess.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">{{ 'rent-a-bike.info-section.easy-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'rent-a-bike.info-section.easy-content' | translate }}</p>
+      </div>
+    </div>
   </div>
+  <!-- end info -->
+
+
+  <!-- search for a bike -->
+  <div id="listBike" class="section"  md-theme="lnr-dark" layout="column" layout-align="space-between none">
+    <div class="lnr-center lnr-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'rent-a-bike.search-section.header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'rent-a-bike.search-section.subheader' | translate }}</h2>
+    </div>
+
+    <div flex layout="column" layout-align="center center">
+      <form class="lnr-search-bar md-whiteframe-3dp" layout="row" ng-submit="home.onSearch()" md-theme="default">
+        <autocomplete flex="75" layout="column" location="home.location" placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}" ></autocomplete>
+        <md-button class="md-raised md-primary" id="submit" type="submit" flex="25">{{ 'shared.search' | translate }}</md-button>
+      </form>
+    </div>
+  </div>
+  <!-- end search for a bike -->
+
+
+  <!-- testmonials -->
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'rent-a-bike.testmonials-section.header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'rent-a-bike.testmonials-section.subheader' | translate }}</h2>
+    </div>
+
+    <div layout="column" layout-wrap layout-gt-sm="row" layout-padding>
+      <div flex-gt-sm="50" class="lnr-comment" layout="row">
+        <img class="lnr-profile-md lnr-margin-right" ng-src="app/assets/ui_images/testmonial_rider_1.jpg"></img>
+        <div flex class="lnr-margin-left">
+          <p class="lnr-comment-name md-body-2">David {{ 'shared.from-place' | translate }} Melbourne</p>
+          <p class="lnr-comment-content md-body-1">Visited Berlin and wanted to actively discover the city and country side. We found 2 great rental bikes on listnride, we had an awesome time, a great discovery!</p>
+        </div>
+      </div>
+
+      <div flex-gt-sm="50" class="lnr-comment" layout="row">
+        <img class="lnr-profile-md lnr-margin-right" ng-src="app/assets/ui_images/testmonial_rider_2.jpg"></img>
+        <div flex class="lnr-margin-left">
+          <p class="lnr-comment-name md-body-2">Sarah {{ 'shared.from-place' | translate }} Stuttgart</p>
+          <p class="lnr-comment-content md-body-1">Ich war zu Besuch bei einer Freundin in Berlin und wollte nicht mein eigenes Rad mitschleppen. Stattdessen hab ich ein schönes Fahrrad gemietet - ganz in ihrer Nähe. Klappte einwandfrei und auch noch zu einem guten Preis.</p>
+        </div>
+      </div>
+
+      <div flex-gt-sm="50" class="lnr-comment" layout="row">
+        <img class="lnr-profile-md lnr-margin-right" ng-src="app/assets/ui_images/testmonial_rider_3.jpg"></img>
+        <div flex class="lnr-margin-left">
+          <p class="lnr-comment-name md-body-2">Andrea {{ 'shared.from-place' | translate }} Rom</p>
+          <p class="lnr-comment-content md-body-1">In Munich we came across listnride and found two elegant ciytbikes for an appropriate price. The owner was a friendly guy inviting us on a coffee. He gave some cool tips, really nice!</p>
+        </div>
+      </div>
+
+      <div flex-gt-sm="50" class="lnr-comment" layout="row">
+        <img class="lnr-profile-md lnr-margin-right" ng-src="app/assets/ui_images/testmonial_rider_4.jpg"></img>
+        <div flex class="lnr-margin-left">
+          <p class="lnr-comment-name md-body-2">Erik {{ 'shared.from-place' | translate }} Wien</p>
+          <p class="lnr-comment-content md-body-1">Ich bin regelmäßig in Berlin tätig. Seitdem ich listnride entdeckt habe, leihe ich mir öfter ein schönes Rad. Die Auswahl ist super und es ist einfach und sicher.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end testmonials -->
+
   <footer></footer>
 </md-content>

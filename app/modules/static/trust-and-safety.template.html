@@ -1,37 +1,34 @@
  <md-content class="single-column"> 
-  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/landing.jpg')" layout="row" layout-align="center center">
-    <h1>Vertrauen und Sicherheit</h1>
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_trust_and_safety.jpg')" layout="row" layout-align="center center">
+<!--     <div class="lnr-page-title lnr-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'trust-and-safety.title' | translate }}</h1>
+    </div> -->
   </div>
 
-  <div class="content" layout="column" layout-margin>
-    <br>
-    
-    <h2 class="md-headline">Die Vermieter Garantie</h2>
-    <p>- Wir möchten, dass Du dein Fahhrad sorgenfrei vermietest, deshalb bieten wir die Vermieter Garantie</p>
-    <p>- Wenn Dein Fahrrad beschädigt oder während der Mietzeit gestohlen wird und der Mieter ist nicht in der Lage den Marktwert Ihrer Fahrt zu   erstatten</p>
-    <p>- Vermieter sind bis zu 5.000€ durch listnrides Vermieter-Garantie versichert.</p>
-  
-    <h3 class="md-headline">Was ist versichert?</h3>
-    <p>
-      Die Vermieter-Garantie bietet weltweit Schutz vor Schäden und Diebstahl bis zu einer Höhe von 5.000€. Zahlungen unterliegen bestimmten  Bedingungen, Einschränkungen und Ausnahmen. Lies die Nutzungsbedingugen und Mietbedingungen für weitere Details.
-    </p>
-    
-    <h3 class="md-headline">Wie wir Vertrauen aufbauen</h3>
-    <p>
-      Profil-Verifizierungen sind eine Möglichkeit, dein listnride-Profil mit persönlichen Informationen über dich zu verknüpfen um somit Vertrauen     beim  Vermieter bzw. Mieter zu schaffen. Um das Vertrauen zwischen unseren Nutzern zu erhöhen, können Nutzer ihre Identität auf verschieden   Weise   verifizieren. Das hilft bei der Beurteilung, an wen man sein Fahhrad vermieten und von wem man eins mieten möchte.
-    </p>
-    
-    <h3 class="md-headline">Adresse und Standort auf der Karte</h3>
-    <p>
-      Der Standort von deinem Fahhrad wird nicht im  öffentlichen Profil angezeigt. Mieter können die exakte Adresse nur sehen, wenn sie eine     bestätigte  Buchung haben. Im öffentlichen Profil des Rad wird ein
-    </p>
-    
-    
-    <h3 class="md-headline">Verfügbare Verifizierungen</h3>
-    <p>- ID-Verifizierung: Stelle sicher, dass du E-Mail-Benachrichtigungen und Nachrichten erhalten kannst, Verbinde dein listnride-Profil mit  Facebook und hinterlege Deine Kreditkarte</p>
-    <p>- Telefonnummer: Wir teilen deine verifizierte Telefonnummer mit deinem Vermieter oder Mieter sobald eine Buchung angenommen wurde</p>
-    <p>- Bewertungen: Bau dir im Bereich Bewertungen einen guten Ruf. Bewertungen werden vom Vermieter und Mieter für jeden Fahrradverleih erstellt und  den  jeweiligen Profilen zugeordnet.</p>
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'trust-and-safety.header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'trust-and-safety.subheader' | translate }}</h2>
+    </div>
 
+    <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
+      <div flex-gt-sm="45" layout="column" layout-margin>
+        <h3  class="md-subhead">{{ 'trust-and-safety.guarantee.title' | translate }}</h3>
+        <p>{{ 'trust-and-safety.guarantee.content' | translate }}</p>
+
+        <h3 class="md-subhead lnr-margin-lrg-top">{{ 'trust-and-safety.responsibility.title' | translate }}</h3>
+        <p>{{ 'trust-and-safety.responsibility.content' | translate }}</p>
+      </div>
+
+      <div flex-gt-sm="45" flex-gt-sm-offset="5" layout="column" layout-margin>
+        <h3 class="md-subhead">{{ 'trust-and-safety.verification.title' | translate }}</h3>
+        <p>{{ 'trust-and-safety.verification.content' | translate }}</p>
+        <span>{{ 'trust-and-safety.verification.list-1' | translate }}</span>
+        <span>{{ 'trust-and-safety.verification.list-2' | translate }}</span>
+        <span>{{ 'trust-and-safety.verification.list-3' | translate }}</span>
+      </div>
+    </div>
   </div>
+
   <footer></footer>
 </md-content>

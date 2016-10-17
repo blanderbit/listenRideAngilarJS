@@ -1,17 +1,126 @@
  <md-content class="single-column"> 
-  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/landing.jpg')" layout="row" layout-align="center center">
-    <h1>Kontakt und Hilfe</h1>
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_trust_and_safety.jpg')" layout="row" layout-align="center center">
+<!--     <div class="lnr-page-title lnr-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'contact-and-help.title' | translate }}</h1>
+    </div> -->
   </div>
-  <div class="content" layout="column" layout-margin>
-    <br>
-    <h2 class="md-headline">XOXO meh Food Truck</h2>
-    <p>XOXO meh food truck, try-hard yr twee glossier selfies tattooed shoreditch retro. Williamsburg pour-over portland farm-to-table swag, woke kogi master   cleanse man braid whatever. Man bun messenger bag glossier, gluten-free vegan ugh selvage try-hard. Deep v air plant celiac iPhone pork belly, stumptown wolf   franzen. Pok pok taxidermy cornhole everyday carry gastropub ramps church-key flannel messenger bag green juice. Post-ironic banh mi slow-carb, +1 pabst  waistcoat cray woke la croix cardigan schlitz lo-fi polaroid sartorial cornhole. Yuccie cred drinking vinegar, lyft live-edge jianbing pitchfork keffiyeh vice   godard.</p>
-  
-    <h2 class="md-headline">Godard normcore hoodie</h2>
-    <p>Godard normcore hoodie, vape disrupt hell of semiotics kickstarter microdosing post-ironic plaid chambray craft beer. Swag cray pitchfork semiotics banh   mi   gastropub. Selfies man bun fam kombucha sriracha, portland pickled salvia raw denim iceland. Lumbersexual iPhone migas chambray, quinoa narwhal fap vice   XOXO   street art drinking vinegar scenester banjo pabst. Locavore tumeric swag semiotics helvetica, tofu activated charcoal meggings schlitz. Swag keffiyeh  pug, venmo  cardigan literally knausgaard skateboard irony selfies you probably haven't heard of them chicharrones. Hella typewriter banjo, aesthetic quinoa   sustainable vape  meggings 90's.</p>
-    
-    <h2 class="md-headline">Ethical pabst kickstarter</h2>
-    <p>Ethical pabst kickstarter keffiyeh retro. Brunch umami aesthetic cred skateboard, yuccie fap sustainable fashion axe bitters synth salvia enamel pin   disrupt.   Salvia intelligentsia knausgaard bespoke, chillwave plaid pug trust fund photo booth hella pour-over bicycle rights hashtag. Swag mlkshk blue  bottle, seitan  shoreditch tilde waistcoat slow-carb master cleanse chartreuse ethical gentrify cred lumbersexual. Kombucha la croix YOLO, franzen banh mi   trust fund before they  sold out. Selfies meh deep v seitan, squid chartreuse austin pour-over jianbing marfa sriracha cold-pressed plaid. Franzen quinoa scenester, tumeric gluten-free   art party distillery meh slow-carb.</p>
+
+
+  <!-- FAQs -->
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'contact-and-help.header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'contact-and-help.subheader' | translate }}</h2>
+    </div>
+
+    <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
+      <div flex-gt-sm="45" layout="column" layout-margin>
+        <h3 class="md-subhead">{{ 'contact-and-help.lister-faq.title' | translate }}</h3>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister1=!lister1">{{ 'contact-and-help.lister-faq.question-1' | translate }}</h3>
+        <div ng-show="lister1"><p >{{ 'contact-and-help.lister-faq.answer-1' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister2=!lister2">{{ 'contact-and-help.lister-faq.question-2' | translate }}</h3>
+        <div ng-show="lister2"><p >{{ 'contact-and-help.lister-faq.answer-2' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister3=!lister3">{{ 'contact-and-help.lister-faq.question-3' | translate }}</h3>
+        <div ng-show="lister3"><p >{{ 'contact-and-help.lister-faq.answer-3' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister4=!lister4">{{ 'contact-and-help.lister-faq.question-4' | translate }}</h3>
+        <div ng-show="lister4"><p >{{ 'contact-and-help.lister-faq.answer-4' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister5=!lister5">{{ 'contact-and-help.lister-faq.question-5' | translate }}</h3>
+        <div ng-show="lister5"><p >{{ 'contact-and-help.lister-faq.answer-5' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister6=!lister6">{{ 'contact-and-help.lister-faq.question-6' | translate }}</h3>
+        <div ng-show="lister6"><p >{{ 'contact-and-help.lister-faq.answer-6' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister7=!lister7">{{ 'contact-and-help.lister-faq.question-7' | translate }}</h3>
+        <div ng-show="lister7"><p >{{ 'contact-and-help.lister-faq.answer-7' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister8=!lister8">{{ 'contact-and-help.lister-faq.question-8' | translate }}</h3>
+        <div ng-show="lister8"><p >{{ 'contact-and-help.lister-faq.answer-8' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister9=!lister9">{{ 'contact-and-help.lister-faq.question-9' | translate }}</h3>
+        <div ng-show="lister9"><p >{{ 'contact-and-help.lister-faq.answer-9' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister10=!lister10">{{ 'contact-and-help.lister-faq.question-10' | translate }}</h3>
+        <div ng-show="lister10"><p >{{ 'contact-and-help.lister-faq.answer-10' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister11=!lister11">{{ 'contact-and-help.lister-faq.question-11' | translate }}</h3>
+        <div ng-show="lister11"><p >{{ 'contact-and-help.lister-faq.answer-11' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister12=!lister12">{{ 'contact-and-help.lister-faq.question-12' | translate }}</h3>
+        <div ng-show="lister12"><p >{{ 'contact-and-help.lister-faq.answer-12' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister13=!lister13">{{ 'contact-and-help.lister-faq.question-13' | translate }}</h3>
+        <div ng-show="lister13"><p >{{ 'contact-and-help.lister-faq.answer-13' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister14=!lister14">{{ 'contact-and-help.lister-faq.question-14' | translate }}</h3>
+        <div ng-show="lister14"><p >{{ 'contact-and-help.lister-faq.answer-14' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister15=!lister15">{{ 'contact-and-help.lister-faq.question-15' | translate }}</h3>
+        <div ng-show="lister15"><p >{{ 'contact-and-help.lister-faq.answer-15' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister16=!lister16">{{ 'contact-and-help.lister-faq.question-16' | translate }}</h3>
+        <div ng-show="lister16"><p >{{ 'contact-and-help.lister-faq.answer-16' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister17=!lister17">{{ 'contact-and-help.lister-faq.question-17' | translate }}</h3>
+        <div ng-show="lister17"><p >{{ 'contact-and-help.lister-faq.answer-17' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister18=!lister18">{{ 'contact-and-help.lister-faq.question-18' | translate }}</h3>
+        <div ng-show="lister18"><p >{{ 'contact-and-help.lister-faq.answer-18' | translate }}</p></div>
+      </div>
+
+      <div flex-gt-sm="45" flex-gt-sm-offset="5" layout="column" layout-margin>
+        <h3 class="md-subhead">{{ 'contact-and-help.rider-faq.title' | translate }}</h3>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="rider1=!rider1">{{ 'contact-and-help.rider-faq.question-1' | translate }}</h3>
+        <div ng-show="rider1"><p >{{ 'contact-and-help.rider-faq.answer-1' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="rider2=!rider2">{{ 'contact-and-help.rider-faq.question-2' | translate }}</h3>
+        <div ng-show="rider2"><p >{{ 'contact-and-help.rider-faq.answer-2' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="rider3=!rider3">{{ 'contact-and-help.rider-faq.question-3' | translate }}</h3>
+        <div ng-show="rider3"><p >{{ 'contact-and-help.rider-faq.answer-3' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="rider4=!rider4">{{ 'contact-and-help.rider-faq.question-4' | translate }}</h3>
+        <div ng-show="rider4"><p >{{ 'contact-and-help.rider-faq.answer-4' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="rider5=!rider5">{{ 'contact-and-help.rider-faq.question-5' | translate }}</h3>
+        <div ng-show="rider5"><p >{{ 'contact-and-help.rider-faq.answer-5' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="rider6=!rider6">{{ 'contact-and-help.rider-faq.question-6' | translate }}</h3>
+        <div ng-show="rider6"><p >{{ 'contact-and-help.rider-faq.answer-6' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="rider7=!rider7">{{ 'contact-and-help.rider-faq.question-7' | translate }}</h3>
+        <div ng-show="rider7"><p >{{ 'contact-and-help.rider-faq.answer-7' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="rider8=!rider8">{{ 'contact-and-help.rider-faq.question-8' | translate }}</h3>
+        <div ng-show="rider8"><p >{{ 'contact-and-help.rider-faq.answer-8' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="rider9=!rider9">{{ 'contact-and-help.rider-faq.question-9' | translate }}</h3>
+        <div ng-show="rider9"><p >{{ 'contact-and-help.rider-faq.answer-9' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="rider10=!rider10">{{ 'contact-and-help.rider-faq.question-10' | translate }}</h3>
+        <div ng-show="rider10"><p >{{ 'contact-and-help.rider-faq.answer-10' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="rider11=!rider11">{{ 'contact-and-help.rider-faq.question-11' | translate }}</h3>
+        <div ng-show="rider11"><p >{{ 'contact-and-help.rider-faq.answer-11' | translate }}</p></div>
+
+        <h3 class="md-body-2">{{ 'contact-and-help.contact.title' | translate }}</h3>
+        <div layout="column" layout-margin>
+          <a href="mailto:contact@listnride?Subject=Suspicious%20Request" target="_top">{{ 'contact-and-help.contact.list-1' | translate }}</a>
+          <a href="mailto:contact@listnride?Subject=Suspicious%20Lister" target="_top">{{ 'contact-and-help.contact.list-2' | translate }}</a>
+          <a href="mailto:contact@listnride?Subject=Rider/Lister%20Problem" target="_top">{{ 'contact-and-help.contact.list-3' | translate }}</a>
+          <a href="mailto:contact@listnride?Subject=Payment%20Request" target="_top">{{ 'contact-and-help.contact.list-4' | translate }}</a>
+          <a href="mailto:contact@listnride?Subject=General%20Request" target="_top">{{ 'contact-and-help.contact.list-5' | translate }}</a>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- end FAQs -->
+
+
   <footer></footer>
 </md-content>

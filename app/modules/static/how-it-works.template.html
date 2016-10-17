@@ -1,17 +1,126 @@
  <md-content class="single-column"> 
-  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/landing.jpg')" layout="row" layout-align="center center">
-    <h1>Wie's Funktioniert</h1>
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_trust_and_safety.jpg')" layout="row" layout-align="center center">
+    <div class="lnr-page-title lnr-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'how-it-works.title' | translate }}</h1>
+    </div>
   </div>
-  <div class="content" layout="column" layout-margin>
-    <br>
-    <h2 class="md-headline">XOXO meh Food Truck</h2>
-    <p>XOXO meh food truck, try-hard yr twee glossier selfies tattooed shoreditch retro. Williamsburg pour-over portland farm-to-table swag, woke kogi master   cleanse man braid whatever. Man bun messenger bag glossier, gluten-free vegan ugh selvage try-hard. Deep v air plant celiac iPhone pork belly, stumptown wolf   franzen. Pok pok taxidermy cornhole everyday carry gastropub ramps church-key flannel messenger bag green juice. Post-ironic banh mi slow-carb, +1 pabst  waistcoat cray woke la croix cardigan schlitz lo-fi polaroid sartorial cornhole. Yuccie cred drinking vinegar, lyft live-edge jianbing pitchfork keffiyeh vice   godard.</p>
-  
-    <h2 class="md-headline">Godard normcore hoodie</h2>
-    <p>Godard normcore hoodie, vape disrupt hell of semiotics kickstarter microdosing post-ironic plaid chambray craft beer. Swag cray pitchfork semiotics banh   mi   gastropub. Selfies man bun fam kombucha sriracha, portland pickled salvia raw denim iceland. Lumbersexual iPhone migas chambray, quinoa narwhal fap vice   XOXO   street art drinking vinegar scenester banjo pabst. Locavore tumeric swag semiotics helvetica, tofu activated charcoal meggings schlitz. Swag keffiyeh  pug, venmo  cardigan literally knausgaard skateboard irony selfies you probably haven't heard of them chicharrones. Hella typewriter banjo, aesthetic quinoa   sustainable vape  meggings 90's.</p>
-    
-    <h2 class="md-headline">Ethical pabst kickstarter</h2>
-    <p>Ethical pabst kickstarter keffiyeh retro. Brunch umami aesthetic cred skateboard, yuccie fap sustainable fashion axe bitters synth salvia enamel pin   disrupt.   Salvia intelligentsia knausgaard bespoke, chillwave plaid pug trust fund photo booth hella pour-over bicycle rights hashtag. Swag mlkshk blue  bottle, seitan  shoreditch tilde waistcoat slow-carb master cleanse chartreuse ethical gentrify cred lumbersexual. Kombucha la croix YOLO, franzen banh mi   trust fund before they  sold out. Selfies meh deep v seitan, squid chartreuse austin pour-over jianbing marfa sriracha cold-pressed plaid. Franzen quinoa scenester, tumeric gluten-free   art party distillery meh slow-carb.</p>
+
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'how-it-works.header' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'how-it-works.subheader' | translate }}</h2>
+    </div>
+
+    <!-- Riders steps -->
+    <div class="lnr-center lnr-margin-top" layout="column" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'how-it-works.rider-section.header' | translate }}</h1>
+    </div>
+
+    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
+      <div flex-gt-xs="20" layout="column"  layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_rent_find.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">1. {{ 'how-it-works.rider-section.step-1-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.rider-section.step-1-content' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="20" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_rent_request.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">2. {{ 'how-it-works.rider-section.step-2-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.rider-section.step-2-content' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="20" layout="column" layout-wrap layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_rent_pickup.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">3. {{ 'how-it-works.rider-section.step-3-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.rider-section.step-3-content' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="20" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_rent_time.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">4. {{ 'how-it-works.rider-section.step-4-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.rider-section.step-4-content' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="20" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_rent_return.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">5. {{ 'how-it-works.rider-section.step-5-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.rider-section.step-5-content' | translate }}</p>
+      </div>
+    </div>
+    <!-- end Riders steps -->
+
+    <!-- Lister steps -->
+    <div class="lnr-center lnr-margin-top" layout="column" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'how-it-works.lister-section.header' | translate }}</h1>
+    </div>
+
+    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
+      <div flex-gt-xs="20" layout="column"  layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_list_bike.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">1. {{ 'how-it-works.lister-section.step-1-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.lister-section.step-1-content' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="20" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_list_request.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">2. {{ 'how-it-works.lister-section.step-2-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.lister-section.step-2-content' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="20" layout="column" layout-wrap layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_list_accept.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">3. {{ 'how-it-works.lister-section.step-3-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.lister-section.step-3-content' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="20" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_list_handover.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">4. {{ 'how-it-works.lister-section.step-4-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.lister-section.step-4-content' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="20" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/icn_list_compensation.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">5. {{ 'how-it-works.lister-section.step-5-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.lister-section.step-5-content' | translate }}</p>
+      </div>
+    </div>
+    <!-- end Lister steps -->
   </div>
+
+
+  <!-- handover -->
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'how-it-works.handover-section.header' | translate }}</h1>
+    </div>
+
+    <div flex-gt-sm="70" flex-offset="15" class="md-body-1 lnr-center" layout="column" layout-align="center center">
+        {{ 'how-it-works.handover-section.content' | translate }}  
+    </div>
+
+    <div class="md-body-1" ayout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
+      <div flex-gt-sm="65" layout="column" layout-margin>
+        <span><strong>1</strong>{{ 'how-it-works.handover-section.list-1' | translate }}</span>
+        <span><strong>1</strong>{{ 'how-it-works.handover-section.list-2' | translate }}</span>
+        <span><strong>2</strong>{{ 'how-it-works.handover-section.list-3' | translate }}</span>
+      </div>
+
+      <div flex-gt-sm="30" layout="row" layout-margin>
+        <div flex="100" layout="column" layout-align="none center" layout-margin>
+          <md-icon class="lnr-icn-mlrg lnr-accent" md-svg-src="app/assets/ui_icons/icn_uebergabe_delivery.svg"></md-icon>
+          <p  class="lnr-center">{{ 'how-it-works.handover-section.custom-location' | translate }}</p>
+        </div>
+
+        <div flex="100" layout="column" layout-align="none center" layout-margin>
+          <md-icon class="lnr-icn-mlrg lnr-accent" md-svg-src="app/assets/ui_icons/icn_uebergabe_pickup.svg"></md-icon>
+          <p class="lnr-center">{{ 'how-it-works.handover-section.lister-location' | translate }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- end handover -->
+
   <footer></footer>
 </md-content>

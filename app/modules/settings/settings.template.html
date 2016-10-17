@@ -26,8 +26,8 @@
               <div flex-gt-xs layout-margin>
                 <span class="md-body-2">{{ 'forms.general' | translate }}</span>
               </div>
-              <div flex-gt-xs="70" layout-margin>
-                <div layout="row" layout-xs="column" layout-fill>
+              <div flex-gt-xs="70" layout="column" layout-margin>
+                <div layout="row" layout-xs="column">
                   <md-input-container flex-gt-xs="45">
                     <label>{{ 'forms.first-name' | translate }}</label>
                     <input required name="firstName" ng-model="settings.user.first_name"></input>
@@ -38,11 +38,12 @@
                     <input required name="lastName" ng-model="settings.user.last_name"></input>
                   </md-input-container>
                 </div>
-                <md-input-container layout-fill>
-                  <label>{{ 'forms.email-address' | translate }}</label>
+                <div layout="row" layout-xs="column">
+                  <md-input-container flex>
+                    <label>{{ 'forms.email-address' | translate }}</label>
                     <input required name="email" ng-model="settings.user.email"></input>
-                </md-input-container>
-                
+                  </md-input-container>
+                </div>
               </div>
             </div>
 
@@ -55,7 +56,7 @@
                 <span class="md-body-2">{{ 'forms.address' | translate }}</span>
               </div>
               <div flex-gt-xs="70" layout-margin>
-                <div layout="row" layout-xs="column" layout-fill>
+                <div layout="row" layout-xs="column">
                   <md-input-container flex-gt-xs="45">
                     <label>{{ 'forms.street' | translate }}</label>
                     <input required name="street" ng-model="settings.user.street"></input>
@@ -66,7 +67,7 @@
                     <input required name="zip" ng-model="settings.user.zip"></input>
                   </md-input-container>
                 </div>
-                <div layout="row" layout-xs="column" layout-fill>
+                <div layout="row" layout-xs="column">
                   <md-input-container flex-gt-xs="45">
                   <label>{{ 'forms.city' | translate }}</label>
                     <input required name="city" ng-model="settings.user.city"></input>
@@ -88,8 +89,8 @@
               <div flex-gt-xs layout-margin>
                 <span class="md-body-2">{{ 'forms.description' | translate }}</span>
               </div>
-              <div flex-gt-xs="70" layout-margin>
-                <md-input-container layout-fill>
+              <div flex-gt-xs="70" layout="column" layout-margin>
+                <md-input-container flex>
                   <label>{{ 'forms.description' | translate }}</label>
                   <textarea required md-no-resize name="description" minlength="100" maxlength="400" ng-model="settings.user.description" rows="3"></textarea>
                   <div ng-messages="settings.settingsForm.description.$error" role="alert">
