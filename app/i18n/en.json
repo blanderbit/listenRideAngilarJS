@@ -132,7 +132,7 @@
   },
 
   "home": {
-    "landing-section-header": "Can’t find a suitable bicycle at your local bike rental service?",
+    "landing-section-header": "The perfect bike for you",
     "landing-section-subheader": "Join listnride and find the bike that is right for you.",
     "featured-bikes-header": "Bike rental: Our riders’ favorites",
     "featured-bikes-subheader": "Have a look at the bikes other riders are renting and discover special gems by Schindelhauer, Specialized and many more.",
@@ -519,7 +519,7 @@
 
   "imprint" : {
     "title" : "Imprint",
-    "header" : "imprint",
+    "header" : "Imprint",
     "contact" : {
       "title" : "Our Contact information:"
     }
