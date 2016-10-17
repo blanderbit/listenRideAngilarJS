@@ -47,7 +47,7 @@
     </div>
   </div>
 
-  <md-button type="submit" class="md-raised md-primary" ng-click="calendar.onBikeRequest()" ng-disabled="calendar.owner || !calendar.loggedIn || calendar.isFormInvalid()">
+  <md-button type="submit" class="md-raised md-primary lnr-margin-lrg" ng-click="calendar.onBikeRequest()" ng-disabled="calendar.owner || !calendar.loggedIn || calendar.isFormInvalid()">
     {{ 'calendar.request-bike' | translate }}
   </md-button>
   <p ng-if="!calendar.loggedIn" class="md-body-1 center-text">{{ 'calendar.to-request-bike-please' | translate }}<br>{{ 'forms.sign-up' | translate }} {{ 'forms.or' | translate }} {{ 'forms.log-in' | translate }}</p>

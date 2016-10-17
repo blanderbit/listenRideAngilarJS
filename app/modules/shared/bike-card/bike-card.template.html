@@ -5,7 +5,7 @@
     <md-icon class="lnr-icn-lrg lnr-foreground" md-svg-src="app/assets/ui_icons/biketype_{{ ::bikeCard.bike.category | limitTo: 1 }}.svg"></md-icon>
 
     <md-card-title-text class="lnr-margin-right lnr-margin-left" layout="column" layout-align="space-around start">
-      <span class="md-subhead">{{ ::bikeCard.bike.brand }}</span>
+      <span class="md-subhead">{{ ::bikeCard.bike.brand }}, {{ ::bikeCard.bike.category | category }}</span>
       <span>{{ ::bikeCard.bike.name }}</span>
     </md-card-title-text>
 

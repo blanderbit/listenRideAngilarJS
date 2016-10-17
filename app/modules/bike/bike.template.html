@@ -109,12 +109,12 @@
             <p class="md-body-2">Lister</p>
           </div>
           <div flex-gt-xs layout="row" layout-align="start center">
-            <img class="lnr-profile-md lnr-margin-right clickable" ui-sref="user({userId: bike.data.user.id})" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
-            <p class="md-subhead lnr-margin-left" flex-offset="2">{{bike.data.user.first_name}} {{bike.data.user.last_name}}</p>
+            <img class="lnr-profile-md lnr-margin-right lnr-clickable" ui-sref="user({userId: bike.data.user.id})" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
+            <p class="md-subhead lnr-margin-left lnr-clickable" flex-offset="2" ui-sref="user({userId: bike.data.user.id})">{{bike.data.user.first_name}} {{bike.data.user.last_name}}</p>
           </div>
         </div>
 
-        <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
+        <md-divider class="lnr-no-padding lnr-margin-lrg" ng-if="bike.data.ratings.length > 0"></md-divider>
         
         <!-- reviews -->
         <div layout="row" layout-xs="column" ng-if="bike.data.ratings.length > 0">
