@@ -29,6 +29,7 @@
     "cancel": "Cancel",
     "send": "Send",
     "search": "Search",
+    "from-place" : "from",
     "contact": "Contact & Support"
   },
 
@@ -309,8 +310,8 @@
       "list-1" : "- Home, sweet home: The renter (rider) picks up the bike from the owner’s (lister’s) home.",
       "list-2" : "- X marks the spot: The lister hands over the bike to the rider at an agreed location.",
       "list-3" : "- The freedom is yours: The lister locks up the bike at a public place and sends the rider the code to the combination lock.",
-      "custom-location" : "Owners dilver to custom locations around town, within set of radius",
-      "lister-location" : "Travelers pick up the bike at the owners location"
+      "custom-location" : "option 1",
+      "lister-location" : "option 2"
     }
   },
 
@@ -338,6 +339,7 @@
 
   "list-a-bike" : {
     "title" : "Rent out a bike, earn some extra cash",
+    "subtitle" : "Meet great new people and earn some money on the side, for example for the next bike of your dreams.",
     "calculator-section" : {
       "header" : "Let your bike work for you",
       "subheader": "Just a few clicks and our slide rule will show you how much you can earn by renting out a bike via listnride",
@@ -348,30 +350,30 @@
     },
     "info-section" : {
       "header" : "Safety first!",
-      "subheader" : "listnride has your back",
-      "precautions-title" : "We take the necessary precautions",
-      "precautions-content" : "You want to rent out your bike – but not to just anybody. That’s why we verify the identity of all our users for you. And our user ratings help you find out whether they play fair in the bike sharing scene",
-      "control-title" : "You stay in control",
-      "control-content" : "You decide the daily or weekly rate for your bike(s). It’s completely up to you whether you want to accept a rental request or simply reject it because you can’t or don’t want to lend someone your bike at the moment",
-      "covered-title" : "We’ve got you covered",
-      "covered-content" : "In case of damage or theft, we’re right there by your side. And, if necessary, the listnride lister guarantee worth EUR 5,000 has got you covered",
-      "help-title" : "We’re there to help",
-      "help-content" : "If you and a renter (rider) encounter a problem and can’t find a solution, we’re there for you – to support you or even resolve the entire issue"
+      "subheader" : "listnride has your back.",
+      "precautions-title" : "We take the necessary precautions.",
+      "precautions-content" : "You want to rent out your bike – but not to just anybody. That’s why we verify the identity of all our users for you. And our user ratings help you find out whether they play fair in the bike sharing scene.",
+      "control-title" : "You stay in control.",
+      "control-content" : "You decide the daily or weekly rate for your bike(s). It’s completely up to you whether you want to accept a rental request or simply reject it because you can’t or don’t want to lend someone your bike at the moment.",
+      "covered-title" : "We’ve got you covered.",
+      "covered-content" : "In case of damage or theft, we’re right there by your side. And, if necessary, the listnride lister guarantee worth EUR 5,000 has got you covered.",
+      "help-title" : "We’re there to help.",
+      "help-content" : "If you and a renter (rider) encounter a problem and can’t find a solution, we’re there for you – to support you or even resolve the entire issue."
     },
     "list-section" : {
       "header" : "Ready to list your bike?",
-      "subheader" : "Meet great new people and earn some money on the side"
+      "subheader" : "Meet great new people and earn some money on the side."
     },
     "testmonials-section" : {
       "header" : "Renting out bikes: What do our listers say about us?",
-      "subheader": "Many people have already become a sharing part of our listnride community. Read about their personal experiences"
+      "subheader": "Many people have already become a sharing part of our listnride community. Read about their personal experiences."
     }
   },
 
   "trust-and-safety" : {
     "title" : "Trust & Safety",
     "header" : "Carefree biking",
-    "subheader" : "Thanks to listnride, renting a bike is as safe as it is easy",
+    "subheader" : "Thanks to listnride, renting a bike is as safe as it is easy.",
     "guarantee" : {
       "title" : "listnride’s lister guarantee",
       "content": "Listnride is a community of bike enthusiasts. But hey, sometimes things go wrong no matter how careful you are. That’s why we have our lister guarantee at the ready: If your bike gets damaged or stolen during the bike hire and the rider cannot pay compensation, the guarantee ensures coverage of up to EUR 5,000. The payments are subject to certain conditions, limitations and exceptions. For more information, please refer to our Rental Terms and Conditions."
@@ -392,7 +394,7 @@
   "about-us" : {
     "title" : "About us",
     "header" : "About listnride",
-    "subheader" : "How conventional bike rental services inspired us to create a diverse bike sharing community",
+    "subheader" : "How conventional bike rental services inspired us to create a diverse bike sharing community.",
     "community" : {
       "title" : "listnride: the idea that sparked a community",
       "content": "Here at listnride, we all love bikes. Each of us has their personal favorite that they cherish, and we enjoy the wonderful diversity of two-wheelers: from urban bikes to mountain bikes, from speedy road bikes to super-fast S-pedelecs, from eccentric ponies to reliable pack mules. That’s why we began asking ourselves: Why isn’t it possible to choose and have a specific bike that you need for a particular purpose at any time, regardless of whether you’re traveling or in your home town? Will we always be stuck with the low-entry bikes from the local rental shop? And thus the idea of setting up the listnride bike sharing community was born."
@@ -406,7 +408,7 @@
   "press" : {
     "title" : "Press",
     "header" : "Press section",
-    "subheader" : "Information is ready to be downloaded. listnride is ready to talk",
+    "subheader" : "Information is ready to be downloaded. listnride is ready to talk.",
     "kit" : {
       "title" : "Press kit",
       "content": "Others call themselves bike rental systems. We are a bike sharing community. Find out more in our press kit, which can be ",
@@ -421,7 +423,7 @@
   "jobs" : {
     "title" : "Jobs",
     "header" : "Vacancies",
-    "subheader" : "Join our team and help our bike sharing community grow",
+    "subheader" : "Join our team and help our bike sharing community grow.",
     "contact" : {
       "title" : "Contact us",
       "content": "Do you always know more about bikes than others? Do you love jumping on the saddle and going for a ride, come rain or shine? Then you are in all likelihood a true bike aficionado – and would make a great addition to our team. Have a look to see if we currently have a vacancy that is right for you, and feel free to send us your application."
@@ -431,7 +433,7 @@
   "contact-and-help" : {
     "title" : "Contact & Support",
     "header" : "We’re here for you!",
-    "subheader" : "Contact us if you have any special questions or any discrepancies or disagreements arise during the bike sharing process on listnride",
+    "subheader" : "Contact us if you have any special questions or any discrepancies or disagreements arise during the bike sharing process on listnride.",
     "contact" : {
       "title" : "Can’t find the answer you need in our FAQ section? Then choose one of the following:",
       "list-1" : "I would like to report a suspicious request",

@@ -29,6 +29,7 @@
     "cancel": "Abbrechen",
     "send": "Senden",
     "search": "Suche",
+    "from-place" : "aus",
     "contact": "Kontakt & Hilfe"
   },
 
@@ -309,8 +310,8 @@
       "list-1" : "- Home, Sweet Home: Der Mieter (Rider) holt das Rad beim Vermieter (Lister) ab.",
       "list-2" : "- Wunschkonzert: Der Lister übergibt das Rad an einem vereinbarten Ort an den Rider.",
       "list-3" : "- Die große Freiheit: Der Lister sperrt das Rad an einem öffentlichen Ort ab und sendet dem Rider die Zahlenschloss-Kombination.",
-      "custom-location" : "Besitzer liefern, um benutzerdefinierte Orte in der Stadt, innerhalb von Radius",
-      "lister-location" : "Reisende holen das Fahrrad beim Eigentümer ab"
+      "custom-location" : "option 1",
+      "lister-location" : "option 2"
     }
   },
 
@@ -338,9 +339,10 @@
 
   "list-a-bike": {
     "title": "Fahrrad vermieten, Konto ankurbeln",
+    "subtitle" : "Lerne tolle neue Leute kennen und verdiene nebenbei Geld, z.B. für Dein nächstes Traum-Rad.",
     "calculator-section": {
       "header": "Lass‘ Dein Fahrrad für Dich arbeiten",
-      "subheader": "Ein paar Klicks und unser Rechenschieber zeigt Dir, wieviel Du mit Fahrradvermietungen über listnride verdienen kannst",
+      "subheader": "Ein paar Klicks und unser Rechenschieber zeigt Dir, wieviel Du mit Fahrradvermietungen über listnride verdienen kannst.",
       "market-price": "Marktwert deines Fahrrads",
       "days-per-week": "Tage, die es pro Woche vermietet ist",
       "could-earn": "Du verdienst",
@@ -348,30 +350,30 @@
     },
     "info-section": {
       "header": "Safety first!",
-      "subheader": "listnride gibt Dir Rückendeckung",
-      "precautions-title": "Wir sorgen vor",
-      "precautions-content": "Du willst Dein geliebtes Fahrrad verleihen – aber nicht irgendjemandem. Deshalb verifizieren wir alle User für Dich. Und über die User-Ratings erfährst Du mehr über ihr Fairplay im Bike Sharing",
-      "control-title": "Du behältst die Kontrolle",
-      "control-content": "Du bestimmst die individuelle Tages- oder Wochenrate. Dir steht es komplett frei, Anfragen anzunehmen oder auch ganz einfach abzulehnen, wenn Du Dein Fahrrad nicht verleihen willst",
-      "covered-title": "Du bist abgesichert",
-      "covered-content": "Im Schadensfall oder bei Diebstahl stehen wir Dir zur Seite. Und wenn nötig, bist Du mit der listnride-Vermieter-Garantie in Höhe von 5.000 EUR abgesichert",
-      "help-title": "Wir lassen Dich nicht alleine",
-      "help-content": "Solltest Du mit einem Rider (Mieter) ein Problem nicht direkt lösen können, sind wir für Dich da – um Dich zu unterstützen oder die Angelegenheit komplett zu übernehmen"
+      "subheader": "listnride gibt Dir Rückendeckung.",
+      "precautions-title": "Wir sorgen vor.",
+      "precautions-content": "Du willst Dein geliebtes Fahrrad verleihen – aber nicht irgendjemandem. Deshalb verifizieren wir alle User für Dich. Und über die User-Ratings erfährst Du mehr über ihr Fairplay im Bike Sharing.",
+      "control-title": "Du behältst die Kontrolle.",
+      "control-content": "Du bestimmst die individuelle Tages- oder Wochenrate. Dir steht es komplett frei, Anfragen anzunehmen oder auch ganz einfach abzulehnen, wenn Du Dein Fahrrad nicht verleihen willst.",
+      "covered-title": "Du bist abgesichert.",
+      "covered-content": "Im Schadensfall oder bei Diebstahl stehen wir Dir zur Seite. Und wenn nötig, bist Du mit der listnride-Vermieter-Garantie in Höhe von 5.000 EUR abgesichert.",
+      "help-title": "Wir lassen Dich nicht alleine.",
+      "help-content": "Solltest Du mit einem Rider (Mieter) ein Problem nicht direkt lösen können, sind wir für Dich da – um Dich zu unterstützen oder die Angelegenheit komplett zu übernehmen."
     },
     "list-section": {
       "header": "Bereit, Ihr Fahrrad zu vermieten?",
-      "subheader": "Lerne tolle neue Leute kennen und verdiene nebenbei Geld"
+      "subheader": "Lerne tolle neue Leute kennen und verdiene nebenbei Geld."
     },
     "testmonials-section": {
       "header": "Fahrradvermietung: Was sagen die Lister über uns?",
-      "subheader": "Viele Menschen sind schon ein teilender Teil unserer Bike-Sharing-Community. Lies hier, welche Erfahrungen sie gemacht haben"
+      "subheader": "Viele Menschen sind schon ein teilender Teil unserer Bike-Sharing-Community. Lies hier, welche Erfahrungen sie gemacht haben."
     }
   },
 
   "trust-and-safety": {
     "title": "Vertrauen & Sicherheit",
     "header": "Sorgenlos in die Pedale treten",
-    "subheader": "Fahrrad ausleihen wird mit listnride genauso sicher wie unkompliziert",
+    "subheader": "Fahrrad ausleihen wird mit listnride genauso sicher wie unkompliziert.",
     "guarantee": {
       "title": "Die Vermieter-Garantie von listnride",
       "content": "listnride ist eine Community von Fahrradliebhabern. Aber hey, manchmal geht auch bei den Sorgsamsten was daneben. Deshalb haben wir die Vermieter-Garantie in petto: Wird Dein Fahrrad während der Mietzeit beschädigt oder gestohlen und kann Dein Mieter den Schaden nicht ersetzen, bietet sie Schutz bis zu einer Höhe von 5.000 EUR. Die Zahlungen unterliegen bestimmten Bedingungen, Einschränkungen und Ausnahmen. Bitte lese für weitere Details unsere Nutzungs und Mietbedingungen."
@@ -392,7 +394,7 @@
   "about-us": {
     "title": "Über uns",
     "header": "Über listnride",
-    "subheader": "Warum uns der uniforme Fahrradverleih zur bunten Bike-Sharing-Community inspirierte",
+    "subheader": "Warum uns der uniforme Fahrradverleih zur bunten Bike-Sharing-Community inspirierte.",
     "community": {
       "title": "listnride im Kopf",
       "content": "Wir von listnride sind Fahrrad-Fans. Jeder von uns liebt sein persönliches Schätzchen und die schöne Vielfalt – vom urbanen Commuter Bike bis zum Mountain Bike, vom schnellen Rennrad bis zum superschnellen S-Pedelec, vom exzentrischen Pony bis zum Lastenesel. Deshalb hatten wir uns einst gefragt: Warum kann man nicht immer die Wahl und jederzeit genau das Fahrrad haben, das man gerade braucht – in der eigenen Stadt und auf Reisen? Muss es immer der Tiefeinsteiger aus dem Fahrradverleih sein? Die Idee zur Bike-Sharing-Community listnride war geboren."
@@ -406,7 +408,7 @@
   "press": {
     "title": "Press",
     "header": "Pressebereich",
-    "subheader": "Infos bereit zum Download. listnride bereit zum Gespräch",
+    "subheader": "Infos bereit zum Download. listnride bereit zum Gespräch.",
     "kit": {
       "title": "Pressemappe",
       "content": "Andere nennen sich Fahrradverleihsystem. Wir sind eine Bike-Sharing-Community. Erfahren Sie mehr in unserer Pressemappe, die wir Ihnen bereitgestellt haben",
@@ -421,17 +423,17 @@
   "jobs": {
     "title": "Jobs",
     "header": "Stellenangebote",
-    "subheader": "Werde Teil unseres Teams und vergrößere unsere Bike-Sharing-Community",
+    "subheader": "Werde Teil unseres Teams und vergrößere unsere Bike-Sharing-Community.",
     "contact": {
       "title": "Contact us",
-      "content": "Über Fahrräder weißt Du immer mehr als andere? Du liebst es, auch bei Wind und Wetter in die Pedale zu treten? Dann bist Du wahrscheinlich ein Fahrrad-Fanatiker – und passt schon mal gut zu unserem Team. Schau, ob wir aktuell einen passenden Job für Dich haben und schicke uns gerne Deine Bewerbung"
+      "content": "Über Fahrräder weißt Du immer mehr als andere? Du liebst es, auch bei Wind und Wetter in die Pedale zu treten? Dann bist Du wahrscheinlich ein Fahrrad-Fanatiker – und passt schon mal gut zu unserem Team. Schau, ob wir aktuell einen passenden Job für Dich haben und schicke uns gerne Deine Bewerbung."
     }
   },
 
   "contact-and-help": {
     "title": "Kontakt & Hilfe",
     "header": "Wir sind für Dich da!",
-    "subheader": "Kontaktiere uns zu speziellen Fragen oder falls Unstimmigkeiten beim Bike-Sharing über listnride auftauchen",
+    "subheader": "Kontaktiere uns zu speziellen Fragen oder falls Unstimmigkeiten beim Bike-Sharing über listnride auftauchen.",
     "contact" : {
       "title" : "Unsere FAQs haben nicht die richtige Antwort für Dich parat? Dann wähle:",
       "list-1" : "Ich möchte eine verdächtige Anfrage melden",
@@ -516,8 +518,8 @@
   },
 
   "imprint" : {
-    "title" : "Imprint",
-    "header" : "imprint",
+    "title" : "Impressum",
+    "header" : "Impressum",
     "contact" : {
       "title" : "Unsere Kontaktinformationen sind:"
     }

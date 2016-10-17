@@ -1,6 +1,8 @@
  <md-content class="single-column"> 
   <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_trust_and_safety.jpg')" layout="row" layout-align="center center">
-    <h1 class="md-display-1 lnr-white lnr-page-title">{{ 'contact-and-help.title' | translate }}</h1>
+    <div class="lnr-page-title lnr-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'contact-and-help.title' | translate }}</h1>
+    </div>
   </div>
 
 
@@ -14,15 +16,6 @@
     <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
       <div flex-gt-sm="45" layout="column" layout-margin>
         <h3 class="md-subhead">{{ 'contact-and-help.lister-faq.title' | translate }}</h3>
-
-        <h3 class="md-body-2">{{ 'contact-and-help.contact.title' | translate }}</h3>
-        <div layout="column" layout-margin>
-          <a href="mailto:contact@listnride?Subject=Suspicious%20Request" target="_top">{{ 'contact-and-help.contact.list-1' | translate }}</a>
-          <a href="mailto:contact@listnride?Subject=Suspicious%20Lister" target="_top">{{ 'contact-and-help.contact.list-2' | translate }}</a>
-          <a href="mailto:contact@listnride?Subject=Rider/Lister%20Problem" target="_top">{{ 'contact-and-help.contact.list-3' | translate }}</a>
-          <a href="mailto:contact@listnride?Subject=Payment%20Request" target="_top">{{ 'contact-and-help.contact.list-4' | translate }}</a>
-          <a href="mailto:contact@listnride?Subject=General%20Request" target="_top">{{ 'contact-and-help.contact.list-5' | translate }}</a>
-        </div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="lister1=!lister1">{{ 'contact-and-help.lister-faq.question-1' | translate }}</h3>
         <div ng-show="lister1"><p >{{ 'contact-and-help.lister-faq.answer-1' | translate }}</p></div>
@@ -114,6 +107,15 @@
 
         <h3 class="md-body-2 lnr-clickable" ng-click="rider11=!rider11">{{ 'contact-and-help.rider-faq.question-11' | translate }}</h3>
         <div ng-show="rider11"><p >{{ 'contact-and-help.rider-faq.answer-11' | translate }}</p></div>
+
+        <h3 class="md-body-2">{{ 'contact-and-help.contact.title' | translate }}</h3>
+        <div layout="column" layout-margin>
+          <a href="mailto:contact@listnride?Subject=Suspicious%20Request" target="_top">{{ 'contact-and-help.contact.list-1' | translate }}</a>
+          <a href="mailto:contact@listnride?Subject=Suspicious%20Lister" target="_top">{{ 'contact-and-help.contact.list-2' | translate }}</a>
+          <a href="mailto:contact@listnride?Subject=Rider/Lister%20Problem" target="_top">{{ 'contact-and-help.contact.list-3' | translate }}</a>
+          <a href="mailto:contact@listnride?Subject=Payment%20Request" target="_top">{{ 'contact-and-help.contact.list-4' | translate }}</a>
+          <a href="mailto:contact@listnride?Subject=General%20Request" target="_top">{{ 'contact-and-help.contact.list-5' | translate }}</a>
+        </div>
       </div>
     </div>
   </div>

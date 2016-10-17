@@ -1,6 +1,8 @@
  <md-content class="single-column"> 
   <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_rent_a_bike.jpg')" layout="row" layout-align="center center">
-    <h1 class="md-display-1 lnr-white lnr-page-title">{{ 'rent-a-bike.title' | translate }}</h1>
+    <div class="lnr-page-title lnr-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'rent-a-bike.title' | translate }}</h1>
+    </div>
   </div>
 
   <!-- info -->
@@ -61,7 +63,7 @@
       <div flex-gt-sm="50" class="lnr-comment" layout="row">
         <img class="lnr-profile-md lnr-margin-right" ng-src="app/assets/ui_images/testmonial_rider_1.jpg"></img>
         <div flex class="lnr-margin-left">
-          <p class="lnr-comment-name md-body-2">David aus Melbourne</p>
+          <p class="lnr-comment-name md-body-2">David {{ 'shared.from-place' | translate }} Melbourne</p>
           <p class="lnr-comment-content md-body-1">Visited Berlin and wanted to actively discover the city and country side. We found 2 great rental bikes on listnride, we had an awesome time, a great discovery!</p>
         </div>
       </div>
@@ -69,7 +71,7 @@
       <div flex-gt-sm="50" class="lnr-comment" layout="row">
         <img class="lnr-profile-md lnr-margin-right" ng-src="app/assets/ui_images/testmonial_rider_2.jpg"></img>
         <div flex class="lnr-margin-left">
-          <p class="lnr-comment-name md-body-2">Sarah aus Stuttgart</p>
+          <p class="lnr-comment-name md-body-2">Sarah {{ 'shared.from-place' | translate }} Stuttgart</p>
           <p class="lnr-comment-content md-body-1">Ich war zu Besuch bei einer Freundin in Berlin und wollte nicht mein eigenes Rad mitschleppen. Stattdessen hab ich ein schönes Fahrrad gemietet - ganz in ihrer Nähe. Klappte einwandfrei und auch noch zu einem guten Preis.</p>
         </div>
       </div>
@@ -77,7 +79,7 @@
       <div flex-gt-sm="50" class="lnr-comment" layout="row">
         <img class="lnr-profile-md lnr-margin-right" ng-src="app/assets/ui_images/testmonial_rider_3.jpg"></img>
         <div flex class="lnr-margin-left">
-          <p class="lnr-comment-name md-body-2">Andrea aus Rom</p>
+          <p class="lnr-comment-name md-body-2">Andrea {{ 'shared.from-place' | translate }} Rom</p>
           <p class="lnr-comment-content md-body-1">In Munich we came across listnride and found two elegant ciytbikes for an appropriate price. The owner was a friendly guy inviting us on a coffee. He gave some cool tips, really nice!</p>
         </div>
       </div>
@@ -85,7 +87,7 @@
       <div flex-gt-sm="50" class="lnr-comment" layout="row">
         <img class="lnr-profile-md lnr-margin-right" ng-src="app/assets/ui_images/testmonial_rider_4.jpg"></img>
         <div flex class="lnr-margin-left">
-          <p class="lnr-comment-name md-body-2">Erik aus Wien</p>
+          <p class="lnr-comment-name md-body-2">Erik {{ 'shared.from-place' | translate }} Wien</p>
           <p class="lnr-comment-content md-body-1">Ich bin regelmäßig in Berlin tätig. Seitdem ich listnride entdeckt habe, leihe ich mir öfter ein schönes Rad. Die Auswahl ist super und es ist einfach und sicher.</p>
         </div>
       </div>
