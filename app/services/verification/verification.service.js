@@ -2,8 +2,8 @@
 
 angular.
   module('listnride').
-  factory('verification', ['$mdDialog', '$mdToast', '$interval', '$localStorage', '$state', 'api',
-    function($mdDialog, $mdToast, $interval, $localStorage, $state, api) {
+  factory('verification', ['$mdDialog', '$mdToast', '$interval', '$localStorage', '$state', 'api', 'Upload',
+    function($mdDialog, $mdToast, $interval, $localStorage, $state, api, Upload) {
 
       var VerificationDialogController = function(lister) {
         var verificationDialog = this;
@@ -16,6 +16,9 @@ angular.
 
         verificationDialog.selectedIndex;
         verificationDialog.activeTab = 1;
+        verificationDialog.firstName = $localStorage.firstName;
+        verificationDialog.profilePicture = false;
+
         $state.current.name == "home" ? verificationDialog.firstTime = true : verificationDialog.firstTime = false;
         // Fires if scope gets destroyed and cancels poller
         verificationDialog.$onDestroy = function() {
@@ -52,6 +55,10 @@ angular.
               console.log("Error updating description");
             }
           );
+        };
+
+        var uploadPicture = function() {
+
         };
 
         var uploadAddress = function() {
@@ -160,20 +167,22 @@ angular.
         verificationDialog.next = function() {
           switch (verificationDialog.activeTab) {
             case 1: verificationDialog.selectedIndex += 1; break;
-            case 2: uploadDescription(); verificationDialog.selectedIndex += 1; break;
-            case 3: verificationDialog.selectedIndex += 1; break;
+            case 2: uploadPicture(); verificationDialog.selectedIndex += 1; break;
+            case 3: uploadDescription(); verificationDialog.selectedIndex += 1; break;
             case 4: verificationDialog.selectedIndex += 1; break;
-            case 5: uploadAddress(); $mdDialog.hide(); break;
+            case 5: verificationDialog.selectedIndex += 1; break;
+            case 6: uploadAddress(); $mdDialog.hide(); break;
           }
         };
 
         verificationDialog.nextDisabled = function() {
           switch (verificationDialog.activeTab) {
             case 1: return false;
-            case 2: return !verificationDialog.descriptionForm.$valid;
-            case 3: return verificationDialog.user.status == 0
-            case 4: return !verificationDialog.user.confirmed_phone;
-            case 5: return !verificationDialog.addressForm.$valid;
+            case 2: return !verificationDialog.profilePicture;
+            case 3: return !verificationDialog.descriptionForm.$valid;
+            case 4: return verificationDialog.user.status == 0
+            case 5: return !verificationDialog.user.confirmed_phone;
+            case 6: return !verificationDialog.addressForm.$valid;
           }
         };
 

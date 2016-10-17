@@ -13,6 +13,7 @@ angular.
         $localStorage.auth = 'Basic ' + encoded;
         $localStorage.userId = id;
         $localStorage.name = firstName + " " + lastName;
+        $localStorage.firstName = firstName;
         $localStorage.profilePicture = profilePicture;
         $localStorage.unreadMessages = unreadMessages;
       };
@@ -34,6 +35,7 @@ angular.
           };
           api.post("/users", user).then(function(success) {
             setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
+            $localStorage.newUser = true;
             $window.location.reload();
             verification.openDialog();
           }, function(error) {
@@ -65,6 +67,7 @@ angular.
           };
           api.post('/users', user).then(function(success) {
             setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
+            $localStorage.newUser = true;
             $window.location.reload();
             verification.openDialog();
           }, function(error) {

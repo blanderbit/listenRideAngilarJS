@@ -12,6 +12,11 @@ angular.module('header').component('header', {
       header.name = $localStorage.name;
       header.userId = $localStorage.userId;
 
+      if ($localStorage.newUser) {
+        verification.openDialog();
+        delete $localStorage.newUser;
+      }
+
       // if (authentication.loggedIn()) {
       //   console.log("reloading header");
       //   api.get('/users/' + $localStorage.userId).then(

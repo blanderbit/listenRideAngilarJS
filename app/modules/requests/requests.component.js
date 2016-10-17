@@ -265,7 +265,7 @@ angular.module('requests').component('requests', {
             "rating": {
               "score": ratingDialog.rating,
               "message": ratingDialog.message,
-              "author": $localStorage.userId,
+              "author_id": $localStorage.userId,
             }
           };
           var newStatus;
