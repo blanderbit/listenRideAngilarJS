@@ -659,6 +659,11 @@ md-dialog md-dialog-content .month-wrapper {
   width: 100%;
 }
 
+md-dialog md-dialog-content .date-picker-wrapper .month-wrapper thead {
+  background: #fff;
+  color: rgba(85,85,85,0.75);
+}
+
 @media (max-width:599px) {
   bike #hero-shot {
     height: 45vh;
