@@ -7,6 +7,7 @@
     <md-tabs flex md-dynamic-height md-no-ink md-no-ink-bars md-selected="list.selectedIndex" md-center-tabs="on">
       <!-- profile -->
       <md-tab class="profile" label="{{ 'settings.profile' | translate }}">
+        <br>
         <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
           <form name="settingsForm">
             <div layout="row" layout-xs="column">
@@ -111,6 +112,7 @@
 
       <!-- account -->
       <md-tab class="account" label="{{ 'settings.account' | translate }}" layout="column">
+        <br>
         <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
           <form name="settingsForm">
             <div layout="row" layout-xs="column">
@@ -202,7 +204,7 @@
                 </p>
                 <md-input-container>
                   <label>{{ 'settings.voucher-code' | translate }}</label>
-                  <input required ng-model="settings.voucherCode"></input>
+                  <input ng-model="settings.voucherCode"></input>
                 </md-input-container>
                 <div layout="row" layout-align="end">
                   <md-button ng-disabled="!settings.voucherCode" class="md-raised md-primary" ng-click="settings.addVoucher()">{{ 'settings.add-voucher' | translate }}</md-button>
