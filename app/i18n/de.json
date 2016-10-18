@@ -248,7 +248,7 @@
       "details": "Details",
       "brand": "Marke",
       "name": "Name",
-      "description": "Beschreibung",
+      "description": "Beschreibung (min. 100 Zeichen)",
       "min-length-warning": "Minimum 100 Buchstabe",
       "size": "Fahrergröße"
     },

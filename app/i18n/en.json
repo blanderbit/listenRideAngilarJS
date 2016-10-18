@@ -248,7 +248,7 @@
       "details": "Details",
       "brand": "Brand",
       "name": "Name",
-      "description": "Description",
+      "description": "Description (min. 100 characters)",
       "min-length-warning": "Length should be at least 100 characters",
       "size": "Rider Height"
     },
