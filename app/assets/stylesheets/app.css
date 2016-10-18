@@ -482,6 +482,7 @@ home #landing-section {
   width: 52%;
   max-width: 720px;
   margin-bottom: -30px;
+  z-index: 3;
 }
 
 .lnr-search-bar label,
@@ -541,15 +542,15 @@ home md-grid-list md-grid-tile.tile1 {
 }
 
 home md-grid-list md-grid-tile.tile2 {
-  background-image: url(../ui_images/lnr_london.jpg);
-}
-
-home md-grid-list md-grid-tile.tile3 {
   background-image: url(../ui_images/lnr_berlin.jpg);
 }
 
+home md-grid-list md-grid-tile.tile3 {
+  background-image: url(../ui_images/lnr_amsterdam.jpg);
+}
+
 home md-grid-list md-grid-tile.tile4 {
-  background-image: url(../ui_images/lnr_dublin.jpg);
+  background-image: url(../ui_images/lnr_vienna.jpg);
 }
 
 @media (max-width:599px) {
