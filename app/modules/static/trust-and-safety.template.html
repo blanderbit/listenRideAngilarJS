@@ -6,8 +6,10 @@
   </div>
 
   <div class="content" layout-padding>
-    <div class="lnr-section-title" layout="column" layout="column" layout-align="center center">
-      <h1 class="md-headline">{{ 'trust-and-safety.header' | translate }}</h1>
+    <div class="lnr-section-title lnr-garantee" layout="column" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'trust-and-safety.header' | translate }}
+        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/{{ 'trust-and-safety.guarantee-icon' | translate }}.svg"></md-icon>
+      </h1>
       <h2 class="md-subhead">{{ 'trust-and-safety.subheader' | translate }}</h2>
     </div>
 
@@ -23,19 +25,19 @@
       <div flex-gt-sm="45" flex-gt-sm-offset="5" layout="column" layout-margin>
         <h3 class="md-subhead">{{ 'trust-and-safety.verification.title' | translate }}</h3>
         <p>{{ 'trust-and-safety.verification.content' | translate }}</p>
-        <div layout="row" layout-align="space-between none">
-          <md-icon flex-gt-sm="30" class="lnr-icn-lrg lnr-accent lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_notalone.svg"></md-icon>
-          <div>{{ 'trust-and-safety.verification.list-1' | translate }}</div>
+        <div layout="row">
+          <md-icon flex-gt-sm="15" class="lnr-icn-lrg lnr-accent lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_verified.svg"></md-icon>
+          <div flex-gt-sm="85">{{ 'trust-and-safety.verification.list-1' | translate }}</div>
         </div>
 
-        <div layout="row" layout-align="space-between none">
-          <md-icon flex-gt-sm="30" class="lnr-icn-lrg lnr-accent lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_notalone.svg"></md-icon>
-          <div>{{ 'trust-and-safety.verification.list-2' | translate }}</div>
+        <div layout="row">
+          <md-icon flex-gt-sm="15" class="lnr-icn-lrg lnr-accent lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_phone.svg"></md-icon>
+          <div flex-gt-sm="85">{{ 'trust-and-safety.verification.list-2' | translate }}</div>
         </div>
 
-        <div layout="row" layout-align="space-between none">
-          <md-icon flex-gt-sm="30" class="lnr-icn-lrg lnr-accent lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_notalone.svg"></md-icon>
-          <div>{{ 'trust-and-safety.verification.list-3' | translate }}</div>
+        <div layout="row">
+          <md-icon flex-gt-sm="15" class="lnr-icn-lrg lnr-accent lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_rating.svg"></md-icon>
+          <div flex-gt-sm="85">{{ 'trust-and-safety.verification.list-3' | translate }}</div>
         </div>
       </div>
     </div>

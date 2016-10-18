@@ -134,7 +134,7 @@
   },
 
   "home": {
-    "landing-section-header": "Das perfekte Rad. Einfach mieten",
+    "landing-section-header": "Das perfekte Rad. Einfach mieten.",
     "landing-section-subheader": "Miete Dir auf listnride ein Fahrrad, wie Du es magst und gerade brauchst.",
     "featured-bikes-header": "Fahrradverleih: Die Lieblinge der Rider",
     "featured-bikes-subheader": "Schau, welche Fahrräder andere mieten und  entdecke Goldstückchen von Schindelhauer, Specialized und vielen mehr.",
@@ -167,7 +167,7 @@
   },
 
   "autocomplete": {
-    "default-placeholder": "Wo willst du ein Rad ausleihen?"
+    "default-placeholder": "Wo willst Du ein Rad ausleihen?"
   },
 
   "search": {
@@ -342,11 +342,11 @@
   "rent-a-bike": {
     "title": "Fahrrad mieten. Nicht irgendeins. Sondern eins als wär’s genau Deins.",
     "info-section": {
-      "header": "Miete dein perfektes Rad",
+      "header": "Miete Dein perfektes Rad",
       "subheader": "Für Deinen Stil, für Deinen Zweck. Von Leuten wie Du und ich.",
       "choice-title": "Super Auswahl.",
       "choice-content": "Die Fahrräder auf listnride sind so vielfältig wie unsere User. Vom Edel-Rennrad über schicke Urban Bikes bis hin zu Lastenrädern und Kinderanhängern ist alles vertreten. Miete das passende Fahrrad für Deinen Stil und Zweck.",
-      "price-title": "Super preis.",
+      "price-title": "Super Preis.",
       "price-content": "Bei uns vermieten Privatpersonen genauso wie der professionelle Händler und Fahrradverleih. Dein Vorteil: Das perfekte Fahrrad zu einem fairen Preis-Leistungs-Verhältnis.",
       "easy-title": "Super einfach.",
       "easy-content": "Finde und buche Dein Leihfahrrad bevor Du auf Reisen gehst – oder einfach von unterwegs: Im Netz oder mit unserer "
@@ -368,7 +368,7 @@
       "header": "Lass‘ Dein Fahrrad für Dich arbeiten",
       "subheader": "Ein paar Klicks und unser Rechenschieber zeigt Dir, wieviel Du mit Fahrradvermietungen über listnride verdienen kannst.",
       "market-price": "Marktwert deines Fahrrads",
-      "days-per-month": "Tage, die es pro monat vermietet ist",
+      "days-per-month": "Tage, die es pro Monat vermietet ist",
       "could-earn": "Du verdienst",
       "per-year": "pro Jahr"
     },
@@ -385,18 +385,19 @@
       "help-content": "Solltest Du mit einem Rider (Mieter) ein Problem nicht direkt lösen können, sind wir für Dich da – um Dich zu unterstützen oder die Angelegenheit komplett zu übernehmen."
     },
     "list-section": {
-      "header": "Bereit, Ihr Fahrrad zu vermieten?",
+      "header": "Bereit, Dein Fahrrad zu vermieten?",
       "subheader": "Lerne tolle neue Leute kennen und verdiene nebenbei Geld."
     },
     "testmonials-section": {
       "header": "Fahrradvermietung: Was sagen die Lister über uns?",
-      "subheader": "Viele Menschen sind schon ein teilender Teil unserer Bike-Sharing-Community. Lies hier, welche Erfahrungen sie gemacht haben."
+      "subheader": "Viele Menschen sind schon ein teilender Teil unserer Bike-Sharing-Community. Lies hier, welche Erfahrungen sie gemacht haben:"
     }
   },
 
   "trust-and-safety": {
     "title": "Vertrauen & Sicherheit",
     "header": "Sorgenlos in die Pedale treten",
+    "guarantee-icon" : "garantie_de",
     "subheader": "Fahrrad ausleihen wird mit listnride genauso sicher wie unkompliziert.",
     "guarantee": {
       "title": "Die Vermieter-Garantie von listnride",
@@ -457,8 +458,8 @@
   "contact-and-help": {
     "title": "Kontakt & Hilfe",
     "faq-section" : {
-      "header": "Du bist bereit Dich bei listnride anzumelden und loszulegen",
-      "subheader": "hast aber noch bestimmte Frage? Schaue dir die unterstehende häufig gestellt Frage an.",
+      "header": "Wir sind für Dich da!",
+      "subheader": "Die häufigsten Fragen unserer Lister und Rider.",
       "lister-faq": {
         "title" : "FAQ Vermieter",
         "question-1": "Welche Sicherheiten gibt es für mich, wenn ich mein Fahrrad verleihen möchte?",
@@ -525,8 +526,8 @@
       }
     },
     "contact-section" : {
-      "header": "Kontaktiere uns",
-      "subheader": "zu speziellen Fragen oder falls Unstimmigkeiten beim Bike-Sharing über listnride auftauchen.",
+      "header": "Keine Antwort für Dich dabei?",
+      "subheader": "Kontaktiere uns zu speziellen Fragen oder falls Unstimmigkeiten beim Bike-Sharing über listnride auftauchen:",
       "list-1" : "Ich möchte eine verdächtige Anfrage melden",
       "title" : "Unsere FAQs haben nicht die richtige Antwort für Dich parat? Dann wähle:",
       "list-2" : "Ich möchte eine verdächtige Listung melden",

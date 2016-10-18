@@ -5,7 +5,7 @@
     "list-a-bike": "List a Bike",
     "renting-a-bike": "Renting a Bike",
     "listing-a-bike": "Listing a Bike",
-    "trust-and-safety": "Trust and Safety",
+    "trust-and-safety": "Trust & Safety",
     "later": "Later",
     "next": "Next",
     "requests": "Requests",
@@ -156,7 +156,7 @@
   },
 
   "home": {
-    "landing-section-header": "The perfect bike for you",
+    "landing-section-header": "The perfect bike. Simply rent it.",
     "landing-section-subheader": "Join listnride and find the bike that is right for you.",
     "featured-bikes-header": "Bike rental: Our riders’ favorites",
     "featured-bikes-subheader": "Have a look at the bikes other riders are renting and discover special gems by Schindelhauer, Specialized and many more.",
@@ -390,7 +390,7 @@
     },
     "testmonials-section" : {
       "header" : "Renting out bikes: What do our listers say about us?",
-      "subheader": "Many people have already become a sharing part of our listnride community. Read about their personal experiences."
+      "subheader": "Many people have already become a sharing part of our listnride community. Read about their personal experiences:"
     }
   },
 
@@ -398,6 +398,7 @@
     "title" : "Trust & Safety",
     "header" : "Carefree biking",
     "subheader" : "Thanks to listnride, renting a bike is as safe as it is easy.",
+    "guarantee-icon" : "garantie_en",
     "guarantee" : {
       "title" : "listnride’s lister guarantee",
       "content": "Listnride is a community of bike enthusiasts. But hey, sometimes things go wrong no matter how careful you are. That’s why we have our lister guarantee at the ready: If your bike gets damaged or stolen during the bike hire and the rider cannot pay compensation, the guarantee ensures coverage of up to EUR 5,000. The payments are subject to certain conditions, limitations and exceptions. For more information, please refer to our Rental Terms and Conditions."
