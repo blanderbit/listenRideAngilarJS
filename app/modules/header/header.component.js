@@ -8,7 +8,7 @@ angular.module('header').component('header', {
       var header = this;
       header.authentication = authentication;
       header.verification = verification;
-      header.profilePicture = $localStorage.profilePicture;
+      // header.profilePicture = $localStorage.profilePicture;
       header.name = $localStorage.name;
       header.userId = $localStorage.userId;
 

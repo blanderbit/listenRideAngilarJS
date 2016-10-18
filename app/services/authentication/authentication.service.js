@@ -260,7 +260,10 @@ angular.
         showSignupDialog: showSignupDialog,
         showLoginDialog: showLoginDialog,
         loggedIn: loggedIn,
-        logout: logout
+        logout: logout,
+        profilePicture: function() {
+          return $localStorage.profilePicture
+        }
       };
     }
   ]);

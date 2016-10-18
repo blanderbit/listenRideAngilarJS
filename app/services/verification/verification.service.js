@@ -58,7 +58,28 @@ angular.
         };
 
         var uploadPicture = function() {
+          var profilePicture = {
+            "user": {
+              "profile_picture": verificationDialog.profilePicture
+            }
+          };
 
+          Upload.upload({
+            method: 'PUT',
+            url: api.getApiUrl() + '/users/' + $localStorage.userId,
+            data: profilePicture,
+            headers: {
+              'Authorization': $localStorage.auth
+          }
+        }).then(
+          function(response) {
+            console.log(response.data);
+            $localStorage.profilePicture = response.data.profile_picture.profile_picture.url;
+          },
+          function(error) {
+            console.log("Error while uploading profile picture", error);
+          }
+        );
         };
 
         var uploadAddress = function() {
