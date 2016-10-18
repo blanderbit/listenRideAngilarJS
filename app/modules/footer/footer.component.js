@@ -13,7 +13,7 @@ angular.module('footer').component('footer', {
       footer.switchLanguage = function(locale) {
         $translate.use(locale).then(function(data) {
           footer.language = getLanguage(locale);
-          document.querySelector("md-content").scrollTop = 0;
+          document.querySelector("md-content.single-column").scrollTop = 0;
         });
       }
       footer.onFacebookClick = function() {
