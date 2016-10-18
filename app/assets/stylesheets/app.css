@@ -13,6 +13,10 @@
   outline: 0;
 }
 
+html {
+  min-width: 320px;
+}
+
 h1,
 h2,
 h3,
@@ -37,6 +41,10 @@ strong {
 
 .lnr-capitalize {
   text-transform: capitalize;
+}
+
+.lnr-underline {
+  text-decoration: underline;
 }
 
 .lnr-center {
@@ -883,16 +891,18 @@ listings .lnr-bike-card.lnr-unavailable img {
   max-width: 150px;
 }
 
-.lnr-calculator .lnr-money {
-  font-size: 9vw;
-}
-
 @media (max-width:599px) {
   .lnr-calculator .lnr-money {
     font-size: 22vw;
   }
 }
 
+
+@media (max-width:1280px) {
+  .lnr-calculator .lnr-money {
+    font-size: 8.8vw;
+  }
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*  REQUESTS
@@ -983,4 +993,13 @@ message .status-message {
   border-right-color: rgba(229,234,234,0.7);
   border-width: 6px;
   margin-top: -6px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  FAQS
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-faqs div > p:first-child {
+  margin-top: 0;
 }
