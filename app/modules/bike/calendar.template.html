@@ -1,5 +1,55 @@
 <div id="bikeCalendar"></div>
 
+<div layout="row">
+  <md-input-container class="md-block" flex="30">
+    <label>Day</label>
+    <md-select ng-model="calendar.day">
+      <!-- <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+        {{state.abbrev}}
+      </md-option> -->
+      <md-option value="1">
+        Friday, 21st of Oct
+      </md-option>
+      <md-option value="2">
+        Saturday, 22nd of Oct
+      </md-option>
+      <md-option value="3">
+        Sunday, 23rd of Oct
+      </md-option>
+    </md-select>
+  </md-input-container>
+  
+  <md-input-container class="md-block" flex="30">
+    <label>Timeslot</label>
+    <md-select ng-model="calendar.slot">
+      <!-- <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+        {{state.abbrev}}
+      </md-option> -->
+      <md-option>
+        10:00 - 12:00
+      </md-option>
+      <md-option>
+        12:00 - 14:00
+      </md-option>
+      <md-option>
+        14:00 - 16:00
+      </md-option>
+      <md-option>
+        16:00 - 18:00
+      </md-option>
+      <md-option>
+        18:00 - 20:00
+      </md-option>
+      <md-option>
+        20:00 - 22:00
+      </md-option>
+      <md-option>
+        Overnight
+      </md-option>
+    </md-select>
+  </md-input-container>
+</div>
+
 <div id="timeRange" layout="row" layout-align="start center" layout-padding>
   <md-input-container flex>
     <label>{{ 'shared.from' | translate }}</label>
