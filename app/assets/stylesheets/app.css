@@ -652,6 +652,12 @@ bike .date-picker-wrapper tr > td:last-child {
   padding-right: 16px;
 }
 
+md-dialog md-dialog-content .date-picker-wrapper,
+md-dialog md-dialog-content .date-picker-wrapper.inline-wrapper,
+md-dialog md-dialog-content .month-wrapper {
+  width: 100%;
+}
+
 @media (max-width:599px) {
   bike #hero-shot {
     height: 45vh;
