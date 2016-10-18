@@ -309,9 +309,9 @@
     "handover-section" : {
       "header": "Persönliche oder flexible Bike-Übergabe",
       "content" : "Wir behaupten mal: Gerade nette Leute fahren Fahrrad. Und verleihen es sogar. Deshalb finden wir:  eine persönliche Übergabe lohnt sich – schon wegen toller neuer Kontakte und nützlicher Tipps zur Stadt. Da aber die Zeit dafür nicht immer mitspielt, habt Ihr bei listnride drei Möglichkeiten zur Fahrradübergabe:",
-      "list-1" : "- Home, Sweet Home: Der Mieter (Rider) holt das Rad beim Vermieter (Lister) ab.",
-      "list-2" : "- Wunschkonzert: Der Lister übergibt das Rad an einem vereinbarten Ort an den Rider.",
-      "list-3" : "- Die große Freiheit: Der Lister sperrt das Rad an einem öffentlichen Ort ab und sendet dem Rider die Zahlenschloss-Kombination.",
+      "list-1" : "Home, Sweet Home: Der Mieter (Rider) holt das Rad beim Vermieter (Lister) ab.",
+      "list-2" : "Wunschkonzert: Der Lister übergibt das Rad an einem vereinbarten Ort an den Rider.",
+      "list-3" : "Die große Freiheit: Der Lister sperrt das Rad an einem öffentlichen Ort ab und sendet dem Rider die Zahlenschloss-Kombination.",
       "custom-location" : "option 1",
       "lister-location" : "option 2"
     }

@@ -99,26 +99,19 @@
         {{ 'how-it-works.handover-section.content' | translate }}  
     </div>
 
-    <div class="md-body-1" ayout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
-      <div flex-gt-sm="65" layout="column" layout-margin>
-        <span><strong>1</strong>{{ 'how-it-works.handover-section.list-1' | translate }}</span>
-        <span><strong>1</strong>{{ 'how-it-works.handover-section.list-2' | translate }}</span>
-        <span><strong>2</strong>{{ 'how-it-works.handover-section.list-3' | translate }}</span>
+    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg lnr-accent" md-svg-src="app/assets/ui_icons/icn_uebergabe_delivery.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">{{ 'how-it-works.handover-section.custom-location' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.handover-section.list-1' | translate }}<br>{{ 'how-it-works.handover-section.list-2' | translate }}</p>
       </div>
 
-      <div flex-gt-sm="30" layout="row" layout-margin>
-        <div flex="100" layout="column" layout-align="none center" layout-margin>
-          <md-icon class="lnr-icn-mlrg lnr-accent" md-svg-src="app/assets/ui_icons/icn_uebergabe_delivery.svg"></md-icon>
-          <p  class="lnr-center">{{ 'how-it-works.handover-section.custom-location' | translate }}</p>
-        </div>
-
-        <div flex="100" layout="column" layout-align="none center" layout-margin>
-          <md-icon class="lnr-icn-mlrg lnr-accent" md-svg-src="app/assets/ui_icons/icn_uebergabe_pickup.svg"></md-icon>
-          <p class="lnr-center">{{ 'how-it-works.handover-section.lister-location' | translate }}</p>
-        </div>
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg lnr-accent" md-svg-src="app/assets/ui_icons/icn_uebergabe_pickup.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">{{ 'how-it-works.handover-section.lister-location' | translate }}</h3>
+        <p class="lnr-center">{{ 'how-it-works.handover-section.list-2' | translate }}</p>
       </div>
     </div>
-
   </div>
   <!-- end handover -->
 
