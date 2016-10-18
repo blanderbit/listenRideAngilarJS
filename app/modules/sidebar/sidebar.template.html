@@ -1,10 +1,10 @@
 <md-sidenav class="md-sidenav-right" md-disable-scroll-target="body" md-component-id="right" layout="column"       layout-align="center none" md-theme="lnr-dark">
   <md-content layout="column">
       <div layout="row" layout-align="center center" layout-margin layout-padding>
-        <img ng-if="sidebar.authentication.loggedIn()" class="lnr-profile-lrg" ng-src="{{sidebar.profilePicture}}">
+        <img ng-if="sidebar.authentication.loggedIn()" class="lnr-profile-lrg" ng-src="{{sidebar.authentication.profilePicture()}}">
       </div>
 
-      <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="user({userId: header.userId})" ng-click="sidebar.toggle()">Profile</md-button>
+      <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="user({userId: sidebar.userId})" ng-click="sidebar.toggle()">{{ 'settings.profile' | translate }}</md-button>
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="requests" ng-click="sidebar.toggle()">{{ 'shared.requests' | translate }}</md-button>
       <md-button ng-if="!sidebar.authentication.loggedIn()" ng-click="sidebar.toggle(); sidebar.authentication.showSignupDialog()">{{ 'forms.sign-up' | translate }}</md-button>
       <md-button ng-if="!sidebar.authentication.loggedIn()" ng-click="sidebar.toggle(); sidebar.authentication.showLoginDialog()">{{ 'forms.log-in' | translate }}</md-button>

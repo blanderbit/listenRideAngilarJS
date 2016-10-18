@@ -440,6 +440,7 @@ footer md-list-item:before {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
+  background-color: #AAAAAA;
 }
 
 .lnr-profile-lrg {
