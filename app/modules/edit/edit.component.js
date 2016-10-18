@@ -3,8 +3,12 @@
 angular.module('edit').component('edit', {
   templateUrl: 'app/modules/edit/edit.template.html',
   controllerAs: 'edit',
-  controller: ['$mdDialog', '$localStorage', '$state', '$stateParams', 'Upload', 'bike_options', 'api',
-    function EditController($mdDialog, $localStorage, $state, $stateParams, Upload, bike_options, api) {
+  controller: ['$mdDialog', '$localStorage', '$state', '$stateParams', 'Upload', 'bike_options', 'api', 'access_control',
+    function EditController($mdDialog, $localStorage, $state, $stateParams, Upload, bike_options, api, access_control) {
+      if (access_control.requireLogin()) {
+        return;
+      }
+      
       var edit = this;
 
       edit.form = { images: [] };

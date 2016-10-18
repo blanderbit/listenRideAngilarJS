@@ -1,6 +1,8 @@
 'use strict';
 
-angular.module('listnride').factory('bike_options', [
+angular
+.module('listnride')
+.factory('bike_options', [
   function() {
 
     return {

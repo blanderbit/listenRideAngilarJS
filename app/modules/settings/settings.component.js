@@ -3,8 +3,12 @@
 angular.module('settings').component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',
-  controller: ['$localStorage', '$window', '$mdToast', '$translate', 'Upload', 'api',
-    function SettingsController($localStorage, $window, $mdToast, $translate, Upload, api) {
+  controller: ['$localStorage', '$window', 'api', 'access_control',
+    function SettingsController($localStorage, $window, api, access_control) {
+      if (access_control.requireLogin()) {
+        return;
+      }
+
       var settings = this;
       settings.user = {};
       settings.loaded = false;
