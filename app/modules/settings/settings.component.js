@@ -3,11 +3,12 @@
 angular.module('settings').component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',
-  controller: ['$localStorage', '$window', 'api',
-    function SettingsController($localStorage, $window, api) {
+  controller: ['$localStorage', '$window', '$mdToast', '$translate', 'Upload', 'api',
+    function SettingsController($localStorage, $window, $mdToast, $translate, Upload, api) {
       var settings = this;
       settings.user = {};
       settings.loaded = false;
+      settings.payoutMethod = {};
 
       api.get('/users/' + $localStorage.userId).then(
         function(response) {
@@ -19,6 +20,112 @@ angular.module('settings').component('settings', {
           console.log("Error retrieving User", error);
         }
       );
+
+      settings.addPayoutMethod = function() {
+        var data = {
+          "payment_method": settings.payoutMethod
+        };
+
+        data.payment_method.user_id = $localStorage.userId;
+
+        if (settings.payoutMethod.family == 1) {
+          data.payment_method.email = "";
+        }
+        else {
+          data.payment_method.iban = "";
+          data.payment_method.bic = "";
+        }
+
+        api.post('/users/' + $localStorage.userId + '/payment_methods', data).then(
+          function (success) {
+            $mdToast.show(
+              $mdToast.simple()
+              .textContent($translate.instant('toasts.add-payout-success'))
+              .hideDelay(4000)
+              .position('top center')
+            );
+          },
+          function (error) {
+            $mdToast.show(
+              $mdToast.simple()
+              .textContent($translate.instant('toasts.error'))
+              .hideDelay(4000)
+              .position('top center')
+            );
+          }
+        );
+      };
+
+      settings.addVoucher = function() {
+        var data = {
+          "voucher": {
+            "code": settings.voucherCode
+          }
+        };
+
+        api.post('/vouchers', data).then(
+          function (success) {
+            settings.user.balance = parseInt(settings.user.balance) + parseInt(success.data.value);
+            settings.voucherCode = "";
+            $mdToast.show(
+              $mdToast.simple()
+              .textContent($translate.instant('toasts.add-voucher-success'))
+              .hideDelay(4000)
+              .position('top center')
+            );
+          },
+          function (error) {
+            settings.voucherCode = "";
+            $mdToast.show(
+              $mdToast.simple()
+              .textContent($translate.instant('toasts.add-voucher-error'))
+              .hideDelay(4000)
+              .position('top center')
+            );
+          }
+        );
+      };
+
+      settings.updateUser = function() {
+        var data = {
+          "user": {
+            "description": settings.user.description,
+            "profile_picture": settings.profilePicture,
+            "street": settings.user.street,
+            "zip": settings.user.zip,
+            "city": settings.user.city,
+            "country": settings.user.country
+          }
+        };
+
+        Upload.upload({
+          method: 'PUT',
+          url: api.getApiUrl() + '/users/' + $localStorage.userId,
+          data: data,
+          headers: {
+            'Authorization': $localStorage.auth
+          }
+        }).then(
+          function (success) {
+            $mdToast.show(
+              $mdToast.simple()
+              .textContent($translate.instant('toasts.update-profile-success'))
+              .hideDelay(4000)
+              .position('top center')
+            );
+            settings.user = success.data;
+            $localStorage.profilePicture = success.data.profile_picture.profile_picture.url;
+          },
+          function (error) {
+            $mdToast.show(
+              $mdToast.simple()
+              .textContent($translate.instant('toasts.error'))
+              .hideDelay(4000)
+              .position('top center')
+            );
+          }
+        );
+      }
 
       settings.openPaymentWindow = function() {
         var w = 550;

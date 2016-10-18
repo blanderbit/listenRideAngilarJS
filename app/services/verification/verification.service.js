@@ -70,8 +70,8 @@ angular.
             data: profilePicture,
             headers: {
               'Authorization': $localStorage.auth
-          }
-        }).then(
+            }
+          }).then(
           function(response) {
             console.log(response.data);
             $localStorage.profilePicture = response.data.profile_picture.profile_picture.url;

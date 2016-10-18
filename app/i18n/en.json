@@ -33,6 +33,14 @@
     "contact": "Contact & Support"
   },
 
+  "toasts": {
+    "update-profile-success": "Your profile has been successfully updated",
+    "error": "An error occured. Please make sure your internet connection works and try again.",
+    "add-payout-success": "Your payout method was successfully added.",
+    "add-voucher-success": "Congratulations, the voucher was added to your account.",
+    "add-voucher-error": "Unfortunately, the supplied voucher is not valid."
+  },
+
   "settings": {
     "settings": "Settings",
     "profile": "Profile",
@@ -41,8 +49,22 @@
     "payout-method": "Payout Method",
     "payment-method-description": "Your payment method is used to pay for your rentals. It can be a credit card or paypal account.",
     "payout-method-description": "Your payout method is where we send you money when you rent out your own bikes.",
-    "add-payment-method": "Add a new payment method (opens in a new window)",
-    "vouchers": "Vouchers"
+    "add-payment-method": "Add Payment Method",
+    "vouchers": "Vouchers",
+    "payment-credit-card": "Your current payment method is a credit card ending with",
+    "payment-paypal": "Your current payment method is a paypal account with email address",
+    "no-payment-method": "You didn't enter any payment method so far.",
+    "no-payout-method": "You didn't enter any payout method so far.",
+    "paypal": "Paypal",
+    "bank-account": "Bank Account",
+    "enter-paypal-info": "Please enter the email address of our paypal account",
+    "enter-bank-info": "Please enter the accountholder's first and last name as well as IBAN and BIC",
+    "save-payout-method": "Save Payout Method",
+    "payout-paypal": "Your payout method is a paypal account with email address",
+    "payout-bank": "Your payout method is a bank account ending with",
+    "voucher-code": "Voucher Code",
+    "current-vouchers": "Your current balance is",
+    "add-voucher": "Add Voucher"
   },
 
   "bike": {
