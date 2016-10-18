@@ -7,7 +7,8 @@ angular.module('header').component('sidebar', {
     function SidebarController($mdSidenav, $localStorage, authentication) {
       var sidebar = this;
       sidebar.authentication = authentication;
-      sidebar.profilePicture = $localStorage.profilePicture;
+      sidebar.userId = $localStorage.userId;
+      
       sidebar.toggle = function() {
         $mdSidenav('right').toggle();
       };

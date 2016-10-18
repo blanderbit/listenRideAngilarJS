@@ -3,8 +3,11 @@
 angular.module('listings').component('listings', {
   templateUrl: 'app/modules/listings/listings.template.html',
   controllerAs: 'listings',
-  controller: ['$localStorage', 'api',
-    function ListingsController($localStorage, api) {
+  controller: ['$localStorage', 'api', 'access_control',
+    function ListingsController($localStorage, api, access_control) {
+      if (access_control.requireLogin()) {
+        return
+      }
       var listings = this;
 
       api.get('/users/' + $localStorage.userId + "/rides").then(

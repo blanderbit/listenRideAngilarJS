@@ -3,8 +3,12 @@
 angular.module('list').component('list', {
   templateUrl: 'app/modules/list/list.template.html',
   controllerAs: 'list',
-  controller: ['$mdDialog', '$localStorage', '$state', '$scope', 'Upload', 'bike_options', 'api', '$timeout', 'verification',
-    function ListController($mdDialog, $localStorage, $state, $scope, Upload, bike_options, api, $timeout, verification) {
+  controller: ['$mdDialog', '$localStorage', '$state', '$scope', 'Upload', 'bike_options', 'api', '$timeout', 'verification', 'access_control',
+    function ListController($mdDialog, $localStorage, $state, $scope, Upload, bike_options, api, $timeout, verification, access_control) {
+      if (access_control.requireLogin()) {
+        return;
+      }
+
       var list = this;
 
       list.form = {

@@ -43,13 +43,13 @@
 
       <md-menu md-position-mode="target bottom" ng-if="header.authentication.loggedIn()">
         <md-button ng-click="$mdOpenMenu($event)" class="md-img">
-          <img class="lnr-profile-sm" ng-src="{{header.profilePicture}}"></img>
+          <img class="lnr-profile-sm" ng-src="{{header.authentication.profilePicture()}}"></img>
         </md-button>
 
         <md-menu-content>
           <md-menu-item>
             <md-button ui-sref="user({userId: header.userId})">
-              Profile
+              {{ 'settings.profile' | translate }}
             </md-button>
           </md-menu-item>
           <md-menu-item>

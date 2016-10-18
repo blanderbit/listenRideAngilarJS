@@ -35,6 +35,14 @@
     "show-less" : "zeige weniger"
   },
 
+  "toasts": {
+    "update-profile-success": "Dein Profil wurde erfolgreich aktualisiert.",
+    "error": "Es ist ein Fehler aufgetreten. Bitte stell sicher dass deine Internetverbindung funktioniert und versuche es nochmal.",
+    "add-payout-success": "Deine Auszahlungsmethode wurde erfolgreich hinzugefügt.",
+    "add-voucher-success": "Glückwunsch, der Gutschein wurde deinem Konto hinzugefügt.",
+    "add-voucher-error": "Der angegebene Gutschein ist leider nicht gültig."
+  },
+
   "settings": {
     "settings": "Einstellungen",
     "profile": "Profil",
@@ -43,8 +51,22 @@
     "payout-method": "Auszahlungsmethode",
     "payment-method-description": "Deine Zahlungsart wird benutzt um Räder, die du auf listnride ausleihst, zu bezahlen.",
     "payout-method-description": "Auf deine Auszahlungsmethode überweisen wir dir dein Geld, sobald du selbst ein Rad vermietet hast.",
-    "add-payment-method": "Neue Zahlungsart hinzufügen (öffnet sich in neuem Fenster)",
-    "vouchers": "Gutscheine"
+    "add-payment-method": "Zahlungsmittel hinzufügen",
+    "vouchers": "Gutscheine",
+    "payment-credit-card": "Dein aktuelles Zahlungsmittel ist eine Kreditkarte und endet auf",
+    "payment-paypal": "Dein aktuelles Zahlungsmittel ist ein Paypal-Konto mit der Email-Adresse",
+    "no-payment-method": "Du hast bisher kein Zahlungsmittel angegeben.",
+    "no-payout-method": "Du hast bisher keine Auszahlungsmethode angegeben.",
+    "paypal": "Paypal",
+    "bank-account": "Bankkonto",
+    "enter-paypal-info": "Bitte gebe die Email-Adresse deines Paypalkontos ein",
+    "enter-bank-info": "Bitte gebe Vor- und Nachname des Kontoinhabers, sowie IBAN und BIC an",
+    "save-payout-method": "Auszahlungsmethode speichern",
+    "payout-paypal": "Deine Auszahlungsmethode ist ein Paypal-Konto mit der Email-Adresse",
+    "payout-bank": "Deine Auszahlungsmethode ist ein Bank-Konto und endet auf",
+    "voucher-code": "Gutschein-Code",
+    "current-vouchers": "Dein aktuelles Guthaben beträgt",
+    "add-voucher": "Gutschein hinzufügen"
   },
 
   "bike": {
