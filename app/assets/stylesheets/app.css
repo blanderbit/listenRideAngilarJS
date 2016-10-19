@@ -594,7 +594,7 @@ md-card.lnr-bike-card {
 }
 
 .lnr-bike-card md-card-title-text span {
-  max-width: 160px;
+  max-width: 155px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
