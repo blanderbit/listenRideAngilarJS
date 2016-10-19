@@ -108,7 +108,7 @@
   },
 
   "rideChat": {
-    "1": "You would like to rent the {{ride.name}} by {{lister.first_name}} {{lister.last_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, you can book the ride.",
+    "1": "You would like to rent the <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> by {{lister.first_name}} {{lister.last_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, you can book the ride.",
     "2": "{{lister.first_name}} has accepted your request. Confirm the reservation, the payment will follow as the next step.",
     "3": "Congratulation, You successfully booked the ride. Meet the lister as agreed and pick up the ride. Contact Details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Email address: {{lister.email}},<br>Address: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "4": "{{lister.first_name}} has confirmed the return of the ride.",

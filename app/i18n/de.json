@@ -108,7 +108,7 @@
   },
 
   "rideChat": {
-    "1": "Du würdest gerne {{lister.first_name}} {{lister.last_name}}'s {{ride.name}} von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, kannst du das Rad buchen.",
+    "1": "Du würdest gerne {{lister.first_name}} {{lister.last_name}}'s <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, kannst du das Rad buchen.",
     "2": "{{lister.first_name}} hat Deine Anfrage angenommen. Bestätige die Buchung, die Zahlung erfolgt erst im nächsten Schritt.",
     "3": "Glückwunsch, Du hast das Rad erfolgreich gebucht und kannst dich zum vereinbarten Zeitpunkt mit dem Verleiher treffen um es abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via Email zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Email address: {{lister.email}}<br>Adresse: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "4": "{{lister.first_name}} hat die Rückgabe des Rades bestätigt.",
