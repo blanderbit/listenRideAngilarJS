@@ -16,6 +16,7 @@ angular.
         $localStorage.firstName = firstName;
         $localStorage.profilePicture = profilePicture;
         $localStorage.unreadMessages = unreadMessages;
+        $localStorage.email = email;
       };
 
       // The Signup Dialog Controller

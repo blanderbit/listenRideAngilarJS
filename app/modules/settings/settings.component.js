@@ -3,8 +3,8 @@
 angular.module('settings').component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',
-  controller: ['$localStorage', '$window', 'api', 'access_control',
-    function SettingsController($localStorage, $window, api, access_control) {
+  controller: ['$localStorage', '$window', '$mdToast', '$translate', 'api', 'access_control', 'sha256', 'Base64', 'Upload',
+    function SettingsController($localStorage, $window, $mdToast, $translate, api, access_control, sha256, Base64, Upload) {
       if (access_control.requireLogin()) {
         return;
       }
@@ -13,6 +13,7 @@ angular.module('settings').component('settings', {
       settings.user = {};
       settings.loaded = false;
       settings.payoutMethod = {};
+      settings.password = "";
 
       api.get('/users/' + $localStorage.userId).then(
         function(response) {
@@ -102,6 +103,11 @@ angular.module('settings').component('settings', {
           }
         };
 
+        if (settings.password && settings.password.length >= 6) {
+          console.log("Updating Password");
+          data.user.password_hashed = sha256.encrypt(settings.password);
+        }
+
         Upload.upload({
           method: 'PUT',
           url: api.getApiUrl() + '/users/' + $localStorage.userId,
@@ -119,6 +125,8 @@ angular.module('settings').component('settings', {
             );
             settings.user = success.data;
             $localStorage.profilePicture = success.data.profile_picture.profile_picture.url;
+            var encoded = Base64.encode(success.data.email + ":" + success.data.password_hashed);
+            $localStorage.auth = 'Basic ' + encoded;
           },
           function (error) {
             $mdToast.show(

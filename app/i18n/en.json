@@ -71,6 +71,10 @@
     "rent-bike": "Rent Bike"
   },
 
+  "user": {
+    "verified-through": "Verified through"
+  },
+
   "requests": {
     "booking-overview": "Booking Overview",
     "book": "Book",
@@ -98,7 +102,7 @@
   },
 
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your {{ride.name}} from {{timespan}}. Agree on further details using the chat.",
+    "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{timespan}}. Agree on further details using the chat.",
     "2": "You accepted the request. The rider now has the possibility to book the bike.",
     "3": "{{user.first_name}} {{user.last_name}} confirmed the booking. You rent out your ride from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Number: {{user.phone_number}} <br>Address: {{user.street}}, {{user.zip}} {{user.city}}, {{user.country}}",
     "4": "You've confirmed retrieval of your bike. Lastly, please rate the rider. This helps our community a lot and closes your rental.",

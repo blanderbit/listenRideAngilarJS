@@ -9,7 +9,7 @@
       <md-tab class="profile" label="{{ 'settings.profile' | translate }}">
         <br>
         <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
-          <form name="settingsForm">
+          <form name="settings.form">
             <div layout="row" layout-xs="column">
               <div flex-gt-xs layout-margin>
                 <span class="md-body-2">{{ 'forms.profile-picture' | translate }}</span>
@@ -45,6 +45,25 @@
                     <label>{{ 'forms.email-address' | translate }}</label>
                     <input disabled name="email" ng-model="settings.user.email"></input>
                   </md-input-container>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'forms.password' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout="column" layout-margin>
+                <md-input-container flex>
+                  <label>{{ 'forms.password' | translate }}</label>
+                  <input minlength="6" name="password" ng-model="settings.password"></input>
+                </md-input-container>
+                <div ng-messages="settings.form.password.$error" role="alert">
+                  <div ng-message="minlength">Password shouldn't be shorter than 6 characters.</div>
                 </div>
               </div>
             </div>
@@ -95,7 +114,7 @@
                 <md-input-container flex>
                   <label>{{ 'forms.description' | translate }}</label>
                   <textarea required md-no-resize name="description" minlength="100" md-maxlength="800" ng-model="settings.user.description" rows="3"></textarea>
-                  <div ng-messages="settings.settingsForm.description.$error" role="alert">
+                  <div ng-messages="settings.form.description.$error" role="alert">
                     <div ng-message="minlength">{{ 'forms.description_min_100' | translate }}</div>
                   </div>
                 </md-input-container>
