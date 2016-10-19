@@ -19,7 +19,7 @@
       <p hide-xs class="md-headline lnr-center">Verify your Profile</p>
       <md-tabs class="content" md-dynamic-height md-no-ink md-no-ink-bar md-center-tabs="on" md-selected="verificationDialog.selectedIndex">
 
-        <md-tab label="⬤" layout="row">
+        <md-tab label="⬤" layout="row" ng-disabled="true">
           <div class="tab-content" layout="column" layout-align="space-between start" layout-padding md-on-select="verificationDialog.activeTab = 1">
             <div layout="column" layout-align="center center">
               <p ng-if="verificationDialog.firstTime" class="md-subhead">Hi, {{verificationDialog.firstName}}!</p>
@@ -30,17 +30,17 @@
           </div> 
         </md-tab>
 
-        <md-tab label="⬤" layout="row" md-on-select="verificationDialog.activeTab = 2">
+        <md-tab label="⬤" layout="row" md-on-select="verificationDialog.activeTab = 2" ng-disabled="true">
             <div class="tab-content" layout="column" layout-padding>
               <p class="md-body-1 lnr-center">Upload a profile picture of yourself! Seeing the face behind a profile is what's most important for the users.</p>
               <form name="verificationDialog.descriptionForm" layout="column" layout-align="center center">
-                <img class="lnr-profile-lrg lnr-clickable" ngf-select ng-model="verificationDialog.profilePicture" name="profilePicture" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB"   ngf-min-height="100" ngf-thumbnail="verificationDialog.profilePicture || 'app/assets/ui_images/add-image.png'"></img>
+                <img class="lnr-profile-lrg lnr-clickable" ngf-select ng-model="verificationDialog.profilePicture" name="profilePicture" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB"   ngf-min-height="100" ngf-background="verificationDialog.profilePicture || 'app/assets/ui_images/add-image.png'" ngf-as-background="true"></img>
               </form>
               <br>
             </div>
         </md-tab>
 
-        <md-tab label="⬤" layout="row" ng-if="!verificationDialog.newUser.has_description" md-on-select="verificationDialog.activeTab = 3">
+        <md-tab label="⬤" layout="row" ng-if="!verificationDialog.newUser.has_description" md-on-select="verificationDialog.activeTab = 3" ng-disabled="true">
             <div class="tab-content" layout="column" layout-padding>
               <p class="md-body-1 lnr-center">Write a couple sentences (min. 100 words) about yourself and your relation to biking. It gives your profile personality!</p>
               <md-input-container flex>
@@ -56,7 +56,7 @@
             </div>
         </md-tab>
 
-        <md-tab label="⬤" layout="row" ng-if="verificationDialog.newUser.status == 0" md-on-select="verificationDialog.activeTab = 4">
+        <md-tab label="⬤" layout="row" ng-if="verificationDialog.newUser.status == 0" md-on-select="verificationDialog.activeTab = 4" ng-disabled="true">
             <div class="tab-content" layout="column" layout-padding>
               <p class="md-body-1 lnr-center">Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder.</p>
               <div layout="row" layout-align="center center">
@@ -76,7 +76,7 @@
         </md-tab>
 
 
-        <md-tab label="⬤" layout="row" ng-if="!verificationDialog.newUser.confirmed_phone" md-on-select="verificationDialog.activeTab = 5">
+        <md-tab label="⬤" layout="row" ng-if="!verificationDialog.newUser.confirmed_phone" md-on-select="verificationDialog.activeTab = 5" ng-disabled="true">
             <div class="tab-content" layout="column" layout-padding>
               <p class="md-body-1 lnr-center">Verify your phone number, this allows SMS notifications for your requests. Simply enter your number and click "Send Confirmation". You'll receive a code via SMS that you can then enter below.</p>
               <div layout="row" layout-align="center center">
@@ -111,7 +111,7 @@
         </md-tab>
 
 
-        <md-tab label="⬤" layout="row" md-on-select="verificationDialog.activeTab = 6">
+        <md-tab label="⬤" layout="row" md-on-select="verificationDialog.activeTab = 6" ng-disabled="true">
             <div class="tab-content" layout="column" layout-padding>
               <p class="md-body-1 lnr-center">Ultimately, enter your home address.</p>
               <form name="verificationDialog.addressForm" layout="column">

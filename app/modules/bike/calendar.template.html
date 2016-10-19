@@ -1,6 +1,48 @@
-<div id="bikeCalendar"></div>
+<div id="bikeCalendar" ng-hide="calendar.bikeFamily == 2"></div>
 
-<div id="timeRange" layout="row" layout-align="start center" layout-padding>
+
+<!--        EVENT CALENDAR          -->
+
+<div layout="column" layout-margin ng-if="calendar.bikeFamily == 2">
+  <p class="md-headline lnr-center">WFS Calendar</p>
+  <p class="md-body-1 lnr-center">During the Wiener Fahrradschau, you can test ride a great variety of high end bikes. Just select which day and what timeslot you want to rent it.</p>
+  <md-input-container class="md-block">
+    <label>1. Select the Rental Day</label>
+    <md-select ng-model="calendar.day">
+      <!-- <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+        {{state.abbrev}}
+      </md-option> -->
+      <md-option value="21">
+        Friday, 21st of Oct
+      </md-option>
+      <md-option value="22">
+        Saturday, 22nd of Oct
+      </md-option>
+      <md-option value="23">
+        Sunday, 23rd of Oct
+      </md-option>
+    </md-select>
+  </md-input-container>
+  
+  <md-input-container class="md-block">
+    <label>2. Select your 2 hour timeslot</label>
+    <md-select ng-model="calendar.event.slotId" ng-change="calendar.event.changeSlot()">
+
+      <md-option ng-if="!calendar.day">
+        Please select a day first
+      </md-option>
+
+      <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.reserved" ng-if="calendar.day == slot.day" value="{{$index}}">
+        {{slot.text}}
+      </md-option>
+    
+    </md-select>
+  </md-input-container>
+</div>
+
+<!--      END EVENT CALENDAR        -->
+
+<div id="timeRange" layout="row" layout-align="start center" layout-padding ng-if="calendar.bikeFamily != 2">
   <md-input-container flex>
     <label>{{ 'shared.from' | translate }} {{ calendar.startDate | date }}</label>
     <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')"
@@ -24,7 +66,7 @@
 
 <div id="formSubmit" layout="column" layout-align="center stretch">
   <div id="requestOverview" layout="column" layout-align="center stretch" layout-padding>
-    <div layout="row" layout-align="space-between center">
+    <div layout="row" layout-align="space-between center" ng-if="calendar.bikeFamily != 2">
       <div>{{ 'shared.duration' | translate }}</div>
       <div>{{ calendar.duration }}</div>
     </div>

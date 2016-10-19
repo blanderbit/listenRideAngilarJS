@@ -5,6 +5,7 @@ angular.module('bike').component('calendar', {
   controllerAs: 'calendar',
   bindings: {
     bikeId: '<',
+    bikeFamily: '<',
     userId: '<',
     priceHalfDay: '<',
     priceDay: '<',
@@ -15,14 +16,16 @@ angular.module('bike').component('calendar', {
     function CalendarController($scope, $localStorage, $state, $mdDialog, date, api, authentication, verification) {
       var calendar = this;
       calendar.loggedIn = authentication.loggedIn();
-      calendar.owner = calendar.userId == $localStorage.userId;
 
       initOverview();
 
       var deregisterRequestsWatcher = $scope.$watch('calendar.requests', function() {
         if (calendar.requests !== undefined) {
           deregisterRequestsWatcher();
-
+          calendar.owner = calendar.userId == $localStorage.userId;
+          if (calendar.bikeFamily == 2) {
+            calendar.event.reserved();
+          }
           angular.element('#bikeCalendar').dateRangePicker({
             alwaysOpen: true,
             container: '#bikeCalendar',
@@ -72,7 +75,7 @@ angular.module('bike').component('calendar', {
 
               api.post('/requests', data).then(
                 function(response) {
-                  $state.go('requests');
+                  $state.go('requests', {requestId: response.data.id});
                   console.log("Success", response);
                 },
                 function(error) {
@@ -91,7 +94,7 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.isFormInvalid = function() {
-        return calendar.bikeId === undefined || calendar.startDate === undefined ||
+        return calendar.bikeId === undefined || calendar.startDate === undefined || 
           (calendar.startDate !== undefined  && calendar.startDate.getTime() >= calendar.endDate.getTime());
       };
 
@@ -99,6 +102,71 @@ angular.module('bike').component('calendar', {
         return calendar.startDate !== undefined  &&
           calendar.startDate.getTime() >= calendar.endDate.getTime();
       };
+
+      /* ---------- CODE FOR THE EVENT CALENDAR ---------- */
+
+      calendar.event = {};
+      calendar.event.slotId;
+
+      var slotDuration = 2;
+      var eventYear = 2016;
+      var eventMonth = 10;
+
+      calendar.event.slots = [
+        {overnight: false, reserved: false, day: 21, month: eventMonth, year: eventYear, text: "18:00 - 20:00", startTime: 18},
+        {overnight: false, reserved: false, day: 21, month: eventMonth, year: eventYear, text: "20:00 - 22:00", startTime: 20},
+        {overnight: true, reserved: false, day: 21, month: eventMonth, year: eventYear, text: "Overnight (22:00 - 10:00)", startTime: 22},
+        {overnight: false, reserved: false, day: 22, month: eventMonth, year: eventYear, text: "10:00 - 12:00", startTime: 10},
+        {overnight: false, reserved: false, day: 22, month: eventMonth, year: eventYear, text: "12:00 - 14:00", startTime: 12},
+        {overnight: false, reserved: false, day: 22, month: eventMonth, year: eventYear, text: "14:00 - 16:00", startTime: 14},
+        {overnight: false, reserved: false, day: 22, month: eventMonth, year: eventYear, text: "16:00 - 18:00", startTime: 16},
+        {overnight: false, reserved: false, day: 22, month: eventMonth, year: eventYear, text: "18:00 - 20:00", startTime: 18},
+        {overnight: false, reserved: false, day: 22, month: eventMonth, year: eventYear, text: "20:00 - 22:00", startTime: 20},
+        {overnight: true, reserved: false, day: 22, month: eventMonth, year: eventYear, text: "Overnight (22:00 - 10:00)", startTime: 22},
+        {overnight: false, reserved: false, day: 23, month: eventMonth, year: eventYear, text: "10:00 - 12:00", startTime: 10},
+        {overnight: false, reserved: false, day: 23, month: eventMonth, year: eventYear, text: "12:00 - 14:00", startTime: 12},
+        {overnight: false, reserved: false, day: 23, month: eventMonth, year: eventYear, text: "14:00 - 16:00", startTime: 14},
+        {overnight: false, reserved: false, day: 23, month: eventMonth, year: eventYear, text: "16:00 - 18:00", startTime: 16}
+      ];
+
+      calendar.event.changeSlot = function() {
+        var slot = calendar.event.slots[calendar.event.slotId];
+        calendar.startDate = new Date(eventYear, eventMonth - 1, slot.day, slot.startTime, 0, 0, 0);
+
+        if (slot.overnight) {
+          calendar.endDate = new Date(eventYear, eventMonth - 1, slot.day + 1, 10, 0, 0, 0);
+        }
+        else {
+          calendar.endDate = new Date(eventYear, eventMonth - 1, slot.day, slot.startTime + slotDuration, 0, 0, 0);
+        }
+
+        dateChange(calendar.startDate, calendar.endDate);
+      };
+
+      calendar.event.reserved = function() {
+        for (var i = 0; i < calendar.requests.length; i ++) {
+          console.log(i);
+          var startDate = new Date(calendar.requests[i].start_date);
+          var endDate = new Date(calendar.requests[i].end_date);
+
+          var startDay = startDate.getDate();
+          var endDay
+          var startTime = startDate.getHours();
+          var endTime = endDate.getHours();
+          var startYear = startDate.getFullYear();
+          var startMonth = startDate.getMonth();
+
+          console.log(startDay, startTime, endTime);
+
+          for (var j = 0; j < calendar.event.slots.length; j ++) {
+            if (startYear == eventYear && startMonth == eventMonth - 1 && calendar.event.slots[j].day == startDay && calendar.event.slots[j].startTime >= startTime && (calendar.event.slots[j].overnight || calendar.event.slots[j].startTime + slotDuration <= endTime)) {
+              calendar.event.slots[j].reserved = true;
+            }
+          }
+        }
+      };
+
+      /* ------------------------------------------------- */
 
       function classifyDate(date) {
         date.setHours(0, 0, 0, 0);
