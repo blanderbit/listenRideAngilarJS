@@ -25,15 +25,15 @@
     </div>
     <md-list class="lnr-no-padding" md-no-ink ng-if="requests.requests != []">
       <div ng-repeat="request in requests.requests | orderBy: '-updated_at'">
-        <md-list-item class="md-2-line" ng-click="requests.loadRequest(request.id, $index)">
+        <md-list-item class="md-2-line" ng-click="requests.loadRequest(request.id)">
           <img ng-src="{{requests.profilePicture(request)}}" class="md-avatar" alt="{{item.who}}" />
-          <div class="md-list-item-text" layout="column">
-            <h4 ng-if="request.last_message.is_read">{{request.ride.name}}</h4>
-            <p ng-if="request.last_message.is_read">{{request.timespan}}</p>
-            <h4 ng-if="!request.last_message.is_read" class="bold-text">{{request.ride.name}}</h4>
-            <p ng-if="!request.last_message.is_read" class="bold-text">{{request.timespan}}</p>
-          </div>
-        </md-list-item>
+            <div class="md-list-item-text" layout="column">
+              <h4 ng-if="request.last_message.is_read">{{request.ride.name}}</h4>
+              <p ng-if="request.last_message.is_read">{{request.timespan}}</p>
+              <h4 ng-if="!request.last_message.is_read" class="bold-text">{{request.ride.name}}</h4>
+              <p ng-if="!request.last_message.is_read" class="bold-text">{{request.timespan}}</p>
+            </div>
+          </md-list-item>
         <md-divider md-insets ng-if="!$lasts"></md-divider>
       </div>
     </md-list>

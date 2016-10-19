@@ -453,6 +453,8 @@ footer md-list-item:before {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   background-color: #AAAAAA;
+  background-position: center;
+  background-size: cover;
 }
 
 .lnr-profile-lrg {
@@ -461,6 +463,8 @@ footer md-list-item:before {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
+  background-position: center;
+  background-size: cover;
 }
 
 settings .lnr-profile-lrg {

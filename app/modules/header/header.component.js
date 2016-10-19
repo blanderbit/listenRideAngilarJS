@@ -8,21 +8,10 @@ angular.module('header').component('header', {
       var header = this;
       header.authentication = authentication;
       header.verification = verification;
-      // header.profilePicture = $localStorage.profilePicture;
       header.name = $localStorage.name;
       header.userId = $localStorage.userId;
-
-      // if (authentication.loggedIn()) {
-      //   console.log("reloading header");
-      //   api.get('/users/' + $localStorage.userId).then(
-      //     function (success) {
-      //       header.user = success.data;
-      //     },
-      //     function (error) {
-
-      //     }
-      //   );
-      // }
+      // Contains the amount of unread messages to be displayed in the header
+      header.unreadMessages = $localStorage.unreadMessages;
 
       header.toggleSidebar = function() {
         $mdSidenav('right').toggle();
