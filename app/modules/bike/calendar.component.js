@@ -19,8 +19,10 @@ angular.module('bike').component('calendar', {
 
       initOverview();
 
-      $scope.$watch('calendar.requests', function() {
+      var deregisterRequestsWatcher = $scope.$watch('calendar.requests', function() {
         if (calendar.requests !== undefined) {
+          deregisterRequestsWatcher();
+
           angular.element('#bikeCalendar').dateRangePicker({
             alwaysOpen: true,
             container: '#bikeCalendar',
