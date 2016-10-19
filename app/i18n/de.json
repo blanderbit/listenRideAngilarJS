@@ -160,7 +160,7 @@
     "address": "Adresse",
     "profile-picture": "Profilbild",
     "general": "Allgemein",
-    "street": "Staße und Hausnr.",
+    "street": "Straße und Hausnr.",
     "zip": "PLZ",
     "city": "Stadt",
     "country": "Land"
@@ -250,7 +250,7 @@
       "details": "Details",
       "brand": "Marke",
       "name": "Name",
-      "description": "Beschreibung",
+      "description": "Beschreibung (min. 100 Zeichen)",
       "min-length-warning": "Minimum 100 Buchstabe",
       "size": "Fahrergröße"
     },
@@ -269,7 +269,7 @@
       "country": "Land"
     },
     "pricing": {
-      "hint": "Nun setze noch einen angemessenen Mietpreis. Der Mietpreis sollte bezahlbar sein und sich nach Rad und Ausstattung richten. Schau Dir gern ähnliche Listings als Referenz an. ",
+      "hint": "Nun setze noch einen angemessenen Mietpreis. Der Mietpreis sollte bezahlbar sein und sich nach Rad und Ausstattung richten. Schau Dir gern ähnliche Listings als Referenz an. Eine Mietdauer unter 6 Stunde ist eine Halbtagsmiete, 6-24 Stunde steht für eine Tagesmiete.",
       "pricing": "Preis",
       "half-daily-price": "Halber Tag",
       "daily-price": "Ganzer Tag",

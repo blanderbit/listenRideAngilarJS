@@ -210,6 +210,31 @@ angular.
         verificationDialog.hide = function() {
           $mdDialog.hide();
         };
+
+        verificationDialog.fillAddress = function(place) {
+          var components = place.address_components;
+          if (components) {
+            var desiredComponents = {
+              "street_number": "",
+              "route": "",
+              "locality": "",
+              "country": "",
+              "postal_code": ""
+            };
+
+            for (var i = 0; i < components.length; i++) {
+              var type = components[i].types[0];
+              if (type in desiredComponents) {
+                desiredComponents[type] = components[i].long_name;
+              }
+            }
+
+            verificationDialog.newUser.street = desiredComponents.route + " " + desiredComponents.street_number;
+            verificationDialog.newUser.zip = desiredComponents.postal_code;
+            verificationDialog.newUser.city = desiredComponents.locality;
+            verificationDialog.newUser.country = desiredComponents.country;
+          }
+        }
       };
 
       var openDialog = function(lister, event) {
