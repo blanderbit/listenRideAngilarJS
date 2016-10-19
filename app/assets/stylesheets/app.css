@@ -472,14 +472,121 @@ settings .lnr-profile-lrg {
 /* HOME
 /*-----------------------------------------------------------------------------------*/
 
-home #landing-section {
-  background: url(../ui_images/lnr_hero4.jpg) no-repeat center center;
+home #landingSection {
+  height: 78vh;
+  overflow: visible;
+  position: relative;
+}
+
+home #landingSection #homeHeroShot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 78vh;
-  overflow: visible;
+  background-position: center center; 
+}
+
+home #landingSection #homeHeroShot {
+  background-image: url(../ui_images/lnr_hero4.jpg);
+}
+
+home #landingSection .lnr-page-title {
+  z-index: 3;
+}
+
+.cb-slideshow,
+.cb-slideshow:after { 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.cb-slideshow li span { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  opacity: 0;
+  z-index: 0;
+  -webkit-animation: imageAnimation 60s linear infinite 0s;
+  -moz-animation: imageAnimation 60s linear infinite 0s;
+  -o-animation: imageAnimation 60s linear infinite 0s;
+  animation: imageAnimation 60s linear infinite 0s; 
+}
+
+.cb-slideshow li:nth-child(1) span { 
+  background-image: url(../ui_images/lnr_hero1.jpg) 
+}
+
+.cb-slideshow li:nth-child(2) span { 
+  background-image: url(../ui_images/lnr_hero2.jpg);
+  -webkit-animation-delay: 15s;
+  -moz-animation-delay: 15s;
+  -o-animation-delay: 15s; 
+  animation-delay: 15s;
+}
+
+.cb-slideshow li:nth-child(3) span { 
+  background-image: url(../ui_images/lnr_hero3.jpg);
+  -webkit-animation-delay: 30s;
+  -moz-animation-delay: 30s;
+  -o-animation-delay: 30s; 
+  animation-delay: 30s;
+}
+
+.cb-slideshow li:nth-child(4) span { 
+  background-image: url(../ui_images/lnr_hero4.jpg);
+  -webkit-animation-delay: 45s;
+  -moz-animation-delay: 45s;
+  -o-animation-delay: 45s; 
+  animation-delay: 45s;
+}
+
+@-webkit-keyframes imageAnimation { 
+  0% { opacity: 0; animation-timing-function: ease-in; }
+  2% { opacity: 1; animation-timing-function: ease-out; }
+  25% { opacity: 1 }
+  27% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+@-moz-keyframes imageAnimation { 
+  0% { opacity: 0; animation-timing-function: ease-in; }
+  2% { opacity: 1; animation-timing-function: ease-out; }
+  25% { opacity: 1 }
+  27% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+@-o-keyframes imageAnimation { 
+  0% { opacity: 0; animation-timing-function: ease-in; }
+  2% { opacity: 1; animation-timing-function: ease-out; }
+  25% { opacity: 1 }
+  27% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+@keyframes imageAnimation { 
+  0% { opacity: 0; animation-timing-function: ease-in; }
+  2% { opacity: 1; animation-timing-function: ease-out; }
+  25% { opacity: 1 }
+  27% { opacity: 0 }
+  100% { opacity: 0 }
 }
 
 .lnr-search-bar {
@@ -564,7 +671,7 @@ home md-grid-list md-grid-tile.tile4 {
     border-radius: 0;
   }
 
-  home #landing-section {
+  home #landingSection {
     height: 60vh;
   }
 
