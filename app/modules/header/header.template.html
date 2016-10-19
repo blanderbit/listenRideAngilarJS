@@ -54,24 +54,24 @@
           </md-menu-item>
           <md-menu-item>
             <md-button ui-sref="listings">
-              Listings
+              {{ 'listings.my-bikes' | translate }}
             </md-button>
           </md-menu-item>
           <md-menu-item>
             <md-button ui-sref="requests">
-              Requests
+              {{ 'shared.requests' | translate }}
             </md-button>
           </md-menu-item>
           <md-divider></md-divider>
           <md-menu-item>
             <md-button ui-sref="settings">
-              Settings
+              {{ 'settings.settings' | translate }}
             </md-button>
           </md-menu-item>
           <md-divider></md-divider>
           <md-menu-item>
             <md-button ng-click="header.authentication.logout()">
-              Logout
+              {{ 'forms.log-out' | translate }}
             </md-button>
           </md-menu-item>
         </md-menu-content>
