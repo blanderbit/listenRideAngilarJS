@@ -1,8 +1,10 @@
 <div id="bikeCalendar"></div>
 
-<div layout="row">
-  <md-input-container class="md-block" flex="30">
-    <label>Day</label>
+<div layout="column" layout-margin>
+  <p class="md-headline lnr-center">WFS Calendar</p>
+  <p class="md-body-1 lnr-center">During the Wiener Fahrradschau, you can test ride a great variety of high end bikes. Just select which day and what timeslot you want to rent it.</p>
+  <md-input-container class="md-block">
+    <label>1. Select the Rental Day</label>
     <md-select ng-model="calendar.day">
       <!-- <md-option ng-repeat="state in states" value="{{state.abbrev}}">
         {{state.abbrev}}
@@ -19,32 +21,54 @@
     </md-select>
   </md-input-container>
   
-  <md-input-container class="md-block" flex="30">
-    <label>Timeslot</label>
+  <md-input-container class="md-block">
+    <label>2. Select your 2 hour timeslot</label>
     <md-select ng-model="calendar.slot">
-      <!-- <md-option ng-repeat="state in states" value="{{state.abbrev}}">
-        {{state.abbrev}}
-      </md-option> -->
-      <md-option>
-        10:00 - 12:00
+      <md-option ng-if="!calendar.day">
+        Please select a day first
       </md-option>
-      <md-option>
-        12:00 - 14:00
-      </md-option>
-      <md-option>
-        14:00 - 16:00
-      </md-option>
-      <md-option>
-        16:00 - 18:00
-      </md-option>
-      <md-option>
+      <md-option value="1" ng-if="calendar.day == 1" ng-disabled="::calendar.booked(1, 18)">
         18:00 - 20:00
       </md-option>
-      <md-option>
+      <md-option value="2" ng-if="calendar.day == 1" ng-disabled="::calendar.booked(1, 20)">
         20:00 - 22:00
       </md-option>
-      <md-option>
-        Overnight
+      <md-option value="3" ng-if="calendar.day == 1" ng-disabled="::calendar.booked(1, 22)">
+        Overnight (22:00 - 10:00 next day)
+      </md-option>
+      <md-option value="11" ng-if="calendar.day == 2" ng-disabled="::calendar.booked(2, 10)">
+        10:00 - 12:00
+      </md-option>
+      <md-option value="12" ng-if="calendar.day == 2" ng-disabled="::calendar.booked(2, 12)">
+        12:00 - 14:00
+      </md-option>
+      <md-option value="13" ng-if="calendar.day == 2" ng-disabled="::calendar.booked(2, 14)">
+        14:00 - 16:00
+      </md-option>
+      <md-option value="14" ng-if="calendar.day == 2" ng-disabled="::calendar.booked(2, 16)">
+        16:00 - 18:00
+      </md-option>
+      <md-option value="15" ng-if="calendar.day == 2" ng-disabled="::calendar.booked(2, 18)">
+        18:00 - 20:00
+      </md-option>
+      <md-option value="16" ng-if="calendar.day == 2" ng-disabled="::calendar.booked(2, 20)">
+        20:00 - 22:00
+      </md-option>
+      <md-option value="17" ng-if="calendar.day == 2" ng-disabled="::calendar.booked(2, 22)">
+        Overnight (22:00 - 10:00 next day)
+      </md-option>
+
+      <md-option value="21" ng-if="calendar.day == 3" ng-disabled="::calendar.booked(3, 10)">
+        10:00 - 12:00
+      </md-option>
+      <md-option value="22" ng-if="calendar.day == 3" ng-disabled="::calendar.booked(3, 12)">
+        12:00 - 14:00
+      </md-option>
+      <md-option value="23" ng-if="calendar.day == 3" ng-disabled="::calendar.booked(3, 14)">
+        14:00 - 16:00
+      </md-option>
+      <md-option value="24" ng-if="calendar.day == 3" ng-disabled="::calendar.booked(3, 16)">
+        16:00 - 18:00
       </md-option>
     </md-select>
   </md-input-container>

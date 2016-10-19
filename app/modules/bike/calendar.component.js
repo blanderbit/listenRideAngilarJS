@@ -98,6 +98,43 @@ angular.module('bike').component('calendar', {
           calendar.startDate.getTime() >= calendar.endDate.getTime();
       };
 
+      /* ---------- CODE FOR THE EVENT CALENDAR ---------- */
+
+      calendar.booked = function(day, slot) {
+        for (var i = 0; i < calendar.requests.length; i ++) {
+          var startDate = new Date(calendar.requests[i].start_date);
+          var endDate = new Date(calendar.requests[i].end_date);
+
+          var reqDay = startDate.getDate();
+          var reqStartTime = startDate.getHours();
+          var reqEndTime = startDate.getHours();
+
+          console.log(day, slot);
+          console.log(reqDay, reqStartTime, reqEndTime);
+
+          if (reqDay == day && reqStartTime == slot) {
+            return true;
+          }
+          else {
+            return false;
+          }
+
+
+        }
+        console.log(calendar.requests);
+        console.log(calendar.requests[0]);
+        console.log(calendar.requests[0].start_date);
+        console.log(calendar.requests[0].end_date);
+        var newD = new Date(calendar.requests[0].start_date)
+        console.log(newD);
+        console.log(newD.getHours());
+
+        return false;
+
+      };
+
+      /* ------------------------------------------------- */
+
       function classifyDate(date) {
         date.setHours(0, 0, 0, 0);
         var now = new Date();
