@@ -252,7 +252,7 @@ search {
 }
 
 .lnr-header .lnr-header-logo md-icon {
-  width: 90px;
+  width: 95px;
 }
 
 .lnr-header .md-lined {
@@ -524,7 +524,7 @@ home #landing-section {
 }
 
 home .section {
-  margin-top: 90px;
+  margin-top: 80px;
 }
 
 #listBike {
@@ -570,6 +570,10 @@ home md-grid-list md-grid-tile.tile4 {
 
   home #landing-section {
     height: 60vh;
+  }
+
+  home .section {
+    margin-top: 40px;
   }
 
   .lnr-search-bar {
@@ -962,7 +966,6 @@ message .received-message {
 }
 
 message .status-message {
-  padding: 8px 8px 0 8px;
   background-color: rgba(229,234,234,0.4);
 }
 

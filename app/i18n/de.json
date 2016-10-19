@@ -367,7 +367,7 @@
     "calculator-section": {
       "header": "Lass‘ Dein Fahrrad für Dich arbeiten",
       "subheader": "Ein paar Klicks und unser Rechenschieber zeigt Dir, wieviel Du mit Fahrradvermietungen über listnride verdienen kannst.",
-      "market-price": "Marktwert deines Fahrrads",
+      "market-price": "Marktwert deines Fahrrads,",
       "days-per-month": "Tage, die es pro Monat vermietet ist",
       "could-earn": "Du verdienst",
       "per-year": "pro Jahr"
@@ -401,7 +401,7 @@
     "subheader": "Fahrrad ausleihen wird mit listnride genauso sicher wie unkompliziert.",
     "guarantee": {
       "title": "Die Vermieter-Garantie von listnride",
-      "content": "listnride ist eine Community von Fahrradliebhabern. Aber hey, manchmal geht auch bei den Sorgsamsten was daneben. Deshalb haben wir die Vermieter-Garantie in petto: Wird Dein Fahrrad während der Mietzeit beschädigt oder gestohlen und kann Dein Mieter den Schaden nicht ersetzen, bietet sie Schutz bis zu einer Höhe von 5.000 EUR. Die Zahlungen unterliegen bestimmten Bedingungen, Einschränkungen und Ausnahmen. Bitte lese für weitere Details unsere Nutzungs und Mietbedingungen."
+      "content": "listnride ist eine Community von Fahrradliebhabern. Aber hey, manchmal geht auch bei den Sorgsamsten was daneben. Deshalb haben wir die Vermieter-Garantie in petto: Wird Dein Fahrrad während der Mietzeit beschädigt oder gestohlen und kann Dein Mieter den Schaden nicht ersetzen, bietet sie Schutz bis zu einer Höhe von 5.000 EUR. Die Zahlungen unterliegen bestimmten Bedingungen, Einschränkungen und Ausnahmen. Bitte lese für weitere Details unsere Nutzungs- und Mietbedingungen."
     },
     "responsibility": {
       "title": "Verantwortungsvoller Umgang mit Deinen Daten",

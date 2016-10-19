@@ -458,8 +458,8 @@
   "contact-and-help" : {
     "title" : "Contact & Support",
     "faq-section" : {
-      "header" : "You are ready to join listnride",
-      "subheader" : "however still have some unanswered questions? Check the frequently asked questions below.",
+      "header" : "We are there for you!",
+      "subheader" : "The most frequently questions of our Lister and Rider.",
       "lister-faq" : {
         "title" : "FAQ Lister",
         "question-1" : "What do I need to do to rent out my bike with peace of mind?",
@@ -526,8 +526,8 @@
       }
     },
     "contact-section" : {
-      "header" : "Contact us",
-      "subheader" : "if you have any special questions or any issues arise during the bike sharing process on listnride.",
+      "header" : "No answer for your matter?",
+      "subheader" : "Contact us if you have any special questions or if any issues arise during the bike sharing process on listnride.",
       "title" : "Can’t find the answer you need in our FAQ section? Then choose one of the following:",
       "list-1" : "I would like to report a suspicious request",
       "list-2" : "I would like to report a suspicious listing",
