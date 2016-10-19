@@ -335,6 +335,10 @@ autocomplete .md-errors-spacer {
   margin: 0;
 }
 
+md-dialog-content .md-button {
+  margin: 0;
+}
+
 .lnr-user-modal .md-dialog-content,
 .lnr-verification-modal .md-dialog-content {
   padding: 25px 30px;
@@ -796,39 +800,6 @@ rating .angular-input-stars > li {
   padding-left: 0;
 }
 
-/* Add possibility to have centered toasts */
-md-toast.md-center {
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
-}
-
-requests .requests-list {
-  background-color: #ffffff;
-}
-
-requests .subheader {
-  background-color: #ffffff;
-  height: 100px;
-}
-
-.chat {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  background-color: #efefef;
-}
-
-message .sent-message {
-  background-color: #ffffff;
-}
-
-message .received-message {
-  background-color: #ffffff;
-}
-
-message .status-message {
-  background-color: #ffffff;
-}
-
 list md-tabs,
 edit md-tabs {
   padding: 0 !important;
@@ -930,7 +901,13 @@ md-toast.md-center {
 .chat {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  padding: 48px 16px 8px 16px;
+  background-color: #efefef;
+}
+
+.chat {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 48px 16px 24px 16px;
   background: #fff;
 }
 
@@ -960,6 +937,10 @@ requests md-input-container  {
   background: #fff;
 }
 
+.lnr-message-form .md-errors-spacer {
+  display: none;
+}
+
 .lnr-message {
   padding: 4px;
   border-radius: 4px;
@@ -973,11 +954,12 @@ message .sent-message {
 
 message .received-message {
   position: relative;
-  background-color: rgba(229,234,234,0.7);
+  background-color: rgba(229,234,234,0.4);
 }
 
 message .status-message {
-  background-color: rgba(229,234,234,0.7);
+  padding: 8px 8px 0 8px;
+  background-color: rgba(229,234,234,0.4);
 }
 
 .sent-message:after {
@@ -1003,7 +985,7 @@ message .status-message {
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-right-color: rgba(229,234,234,0.7);
+  border-right-color: rgba(229,234,234,0.4);
   border-width: 6px;
   margin-top: -6px;
 }

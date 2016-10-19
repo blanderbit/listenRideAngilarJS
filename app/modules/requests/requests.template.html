@@ -3,13 +3,13 @@
 
   <!-- Right Column displaying actual Chat -->
   <div flex-gt-sm="75" flex-sm="70" flex-order="2" layout="column" hide-xs>
-    <md-progress-linear ng-if="requests.loadingChat" md-mode="query"></md-progress-linear>
+    <md-progress-linear class="md-accent" ng-if="requests.loadingChat" md-mode="query"></md-progress-linear>
     <div scroll-glue="requests.request.glued" class="chat" flex="90">
       <message ng-repeat="message in requests.request.messages" content="message.content" sender="message.sender" status="message.status" request="requests.request" confirm-booking="requests.confirmBooking()" show-rating-dialog="requests.showRatingDialog()"></message>
     </div>
     <form class="lnr-message-form" ng-submit="requests.sendMessage()" layout="row" layout-padding ng-if="requests.request.messages">
       <md-input-container class="ap-chat" flex md-no-float>
-            <input ng-model="requests.message" placeholder="Write a message"></input>
+        <input ng-model="requests.message" placeholder="Write a message"></input>
       </md-input-container>
       <md-input-container layout="row" hide-xs flex-gt-sm="20" flex="30">
         <md-button flex class="md-raised md-primary lnr-no-margin" type="submit">Send</md-button>
@@ -19,23 +19,23 @@
 
   <!-- Left Column displaying list of all Requests -->
   <md-content flex class="requests-list" flex-order="1">
-    <md-progress-linear ng-if="requests.loadingList" md-mode="query"></md-progress-linear>
+    <md-progress-linear class="md-accent" ng-if="requests.loadingList" md-mode="query"></md-progress-linear>
     <div layout="column" layout-align="center center" layout-fill ng-if="!requests.loadingList && requests.requests.length == 0">
       <p class="lnr-center">As soon as you've made or got requests, they'll show up here</p>
     </div>
     <md-list class="lnr-no-padding" md-no-ink ng-if="requests.requests != []">
-          <div ng-repeat="request in requests.requests | orderBy: '-updated_at'">
-            <md-list-item class="md-2-line" ng-click="requests.loadRequest(request.id, $index)">
-              <img ng-src="{{requests.profilePicture(request)}}" class="md-avatar" alt="{{item.who}}" />
-              <div class="md-list-item-text" layout="column">
-                <h3 ng-if="request.last_message.is_read">{{request.ride.name}}</h3>
-                <p ng-if="request.last_message.is_read">{{request.timespan}}</p>
-                <h3 ng-if="!request.last_message.is_read" class="bold-text">{{request.ride.name}}</h3>
-                <p ng-if="!request.last_message.is_read" class="bold-text">{{request.timespan}}</p>
-              </div>
-            </md-list-item>
-            <md-divider md-insets ng-if="!$lasts"></md-divider>
+      <div ng-repeat="request in requests.requests | orderBy: '-updated_at'">
+        <md-list-item class="md-2-line" ng-click="requests.loadRequest(request.id, $index)">
+          <img ng-src="{{requests.profilePicture(request)}}" class="md-avatar" alt="{{item.who}}" />
+          <div class="md-list-item-text" layout="column">
+            <h4 ng-if="request.last_message.is_read">{{request.ride.name}}</h4>
+            <p ng-if="request.last_message.is_read">{{request.timespan}}</p>
+            <h4 ng-if="!request.last_message.is_read" class="bold-text">{{request.ride.name}}</h4>
+            <p ng-if="!request.last_message.is_read" class="bold-text">{{request.timespan}}</p>
           </div>
+        </md-list-item>
+        <md-divider md-insets ng-if="!$lasts"></md-divider>
+      </div>
     </md-list>
   </md-content>
 
