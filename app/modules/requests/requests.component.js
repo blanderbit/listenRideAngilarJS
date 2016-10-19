@@ -3,8 +3,8 @@
 angular.module('requests').component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
-  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$window', 'api', '$timeout', '$location', '$anchorScroll', 'date', 'access_control',
-    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $window, api, $timeout, $location, $anchorScroll, date, access_control) {
+  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$window', 'api', '$timeout', '$location', '$anchorScroll', '$state', '$stateParams', 'date', 'access_control',
+    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $window, api, $timeout, $location, $anchorScroll, $state, $stateParams, date, access_control) {
       if (access_control.requireLogin()) {
         return;
       }
@@ -28,6 +28,9 @@ angular.module('requests').component('requests', {
         function(success) {
           requests.requests = success.data;
           requests.loadingList = false;
+          if ($stateParams.requestId) {
+            requests.loadRequest($stateParams.requestId);
+          }
         },
         function(error) {
           console.log("Error fetching request list");
@@ -45,7 +48,8 @@ angular.module('requests').component('requests', {
       }
 
       // Handles initial request loading
-      requests.loadRequest = function(requestId, index) {
+      requests.loadRequest = function(requestId) {
+        $state.go(".", { requestId: requestId }, {notify: false});
         requests.loadingChat = true;
         // Cancel the poller
         $interval.cancel(poller);
@@ -95,7 +99,8 @@ angular.module('requests').component('requests', {
             );
           },
           function(error) {
-          console.log("Error fetching request!");
+            requests.loadingChat = false;
+            console.log("Error fetching request!");
           }
         );
       };
