@@ -169,7 +169,8 @@ search {
 }
 
 .md-toolbar-tools a.md-lined.md-button {
-  line-height: 30px !important;
+  min-height: 30px !important;
+  line-height: 20px !important;
 }
 
 /*-----------------------------------------------------------------------------------*/
