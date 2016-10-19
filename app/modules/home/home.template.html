@@ -6,7 +6,7 @@
     </div>
 
     <form class="lnr-search-bar md-whiteframe-3dp" layout="row" ng-submit="home.onSearch()" md-theme="default">
-      <autocomplete flex="75" layout="column" location="home.location" placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}" ></autocomplete>
+      <autocomplete autocomplete-id="home" flex="75" layout="column" location="home.location" placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}" ></autocomplete>
       <md-button class="md-raised md-primary" id="submit" type="submit" flex="25">{{ 'shared.search' | translate }}</md-button>
     </form>
   </div>

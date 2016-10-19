@@ -61,7 +61,7 @@ angular.module('search').component('search', {
         // TODO: This is coding excrement.
         // use the angular way to do things.
         // fix the google autocomplete and all will work.
-        var myLocation = document.querySelector("#autocompleteSearch").value;
+        var myLocation = document.querySelector("#search.autocompleteSearch").value;
         search.location = myLocation;
         $state.go('.', {location: myLocation}, {notify: false});
         search.bikes = undefined;

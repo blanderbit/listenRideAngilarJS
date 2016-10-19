@@ -15,11 +15,6 @@ angular.module('autocomplete').component('autocomplete', {
     function AutocompleteController($interval, $scope, $timeout) {
       var autocomplete = this;
 
-      // set default ID
-      if (autocomplete.autocompleteId === undefined) {
-        autocomplete.autocompleteId = "autocompleteSearch";
-      }
-
       var deregisterWatcher = $scope.$watch(function () {
         return document.getElementById(autocomplete.autocompleteId);
       }, function(newValue) {
