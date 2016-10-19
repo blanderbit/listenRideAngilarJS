@@ -157,6 +157,22 @@ search {
 }
 
 /*-----------------------------------------------------------------------------------*/
+/* SAFARI CSS FIXES
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-header .md-toolbar-tools .lnr-header-logo {
+  min-height: 28px;
+}
+
+.md-toolbar-tools .md-button:not(.md-fab) {
+  min-width: 0px;
+}
+
+.md-toolbar-tools a.md-lined.md-button {
+  line-height: 30px !important;
+}
+
+/*-----------------------------------------------------------------------------------*/
 /* PAGES
 /*-----------------------------------------------------------------------------------*/
 
@@ -786,11 +802,8 @@ search .ng-map-info-window > div:last-child:hover {
 }
 
 .angular-input-stars > li {
-  font-size: 24px;
+  font-size: 18px;
   display: inline-block;
-  padding-right: 5px;
-  padding-left: 5px;
-  cursor: pointer;  
 }
 
 .angular-input-stars > li .active {
@@ -806,6 +819,12 @@ rating .angular-input-stars > li {
   font-size: 14px !important;
   padding-right: 3px;
   padding-left: 0;
+  cursor: pointer;
+}
+
+user .angular-input-stars > li {
+  padding-right: 3px;
+  padding-left: 7px;
 }
 
 list md-tabs,
