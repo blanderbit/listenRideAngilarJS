@@ -352,10 +352,6 @@ autocomplete .md-errors-spacer {
   margin: 0;
 }
 
-md-dialog-content .md-button {
-  margin: 0;
-}
-
 .lnr-user-modal .md-dialog-content,
 .lnr-verification-modal .md-dialog-content {
   padding: 25px 30px;
@@ -385,7 +381,7 @@ md-dialog-content .md-button {
 
 .lnr-verification-modal md-tabs {
   width: 100%;
-  min-height: 300px;
+  min-height: 280px;
 }
 
 .lnr-verification-modal md-tab-item {
@@ -397,8 +393,8 @@ md-dialog-content .md-button {
   margin-bottom: 8px;
 }
 
-.lnr-verification-modal p {
-  // margin: 16px 0;
+.lnr-verification-modal md-tabs-canvas {
+  height: 22px;
 }
 
 /*-----------------------------------------------------------------------------------*/
