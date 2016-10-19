@@ -112,10 +112,17 @@
 	color:#999;
 	cursor:default;
 }
+
 .date-picker-wrapper .month-wrapper table .day.checked
 {
 	background-color: #c1e9d5;
 }
+
+.date-picker-wrapper .month-wrapper table .day.date-reserved
+{
+	color: #ff6a2d;
+}
+
 .date-picker-wrapper .month-wrapper table .week-name
 {
 	height:20px;
