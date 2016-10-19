@@ -26,6 +26,10 @@ h6 {
   margin: 0.34rem 0;
 }
 
+ul, ol {
+  margin: 0;
+}
+
 strong {
   font-weight: 500;
 }
@@ -352,6 +356,10 @@ autocomplete .md-errors-spacer {
   margin: 0;
 }
 
+md-dialog-content .md-button {
+  margin: 0;
+}
+
 .lnr-user-modal .md-dialog-content,
 .lnr-verification-modal .md-dialog-content {
   padding: 25px 30px;
@@ -381,7 +389,7 @@ autocomplete .md-errors-spacer {
 
 .lnr-verification-modal md-tabs {
   width: 100%;
-  min-height: 280px;
+  min-height: 300px;
 }
 
 .lnr-verification-modal md-tab-item {
@@ -393,8 +401,8 @@ autocomplete .md-errors-spacer {
   margin-bottom: 8px;
 }
 
-.lnr-verification-modal md-tabs-canvas {
-  height: 22px;
+.lnr-verification-modal p {
+  // margin: 16px 0;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -788,28 +796,31 @@ search .ng-map-info-window > div:last-child:hover {
 }
 
 /*-----------------------------------------------------------------------------------*/
+/*  USER
+/*-----------------------------------------------------------------------------------*/
+
+user .lnr-user-rating  {
+  padding-left: 4px;
+}
+
+/*-----------------------------------------------------------------------------------*/
 /*  LIST BIKE
 /*-----------------------------------------------------------------------------------*/
 
 .angular-input-stars {  
   display: inline-block;
   padding: 0;
-  padding-left: -5px;
   list-style: none;
 }
 
 .angular-input-stars > li {
-  font-size: 18px;
+  color: rgba(210,218,218,1.0);
+  font-size: 20px;
   display: inline-block;
 }
 
 .angular-input-stars > li .active {
-    color: #FDE35E;
-    /*text-shadow: black 0 0 1px, 0 0 1px ; */
-}
-
-.angular-input-stars > li .active.angular-input-stars-hover {
-  text-shadow: black 0 0 3px;
+    color: #FEB35B;
 }
 
 rating .angular-input-stars > li {
@@ -821,7 +832,6 @@ rating .angular-input-stars > li {
 
 user .angular-input-stars > li {
   padding-right: 3px;
-  padding-left: 7px;
 }
 
 list md-tabs,
@@ -1013,6 +1023,17 @@ message .status-message {
   margin-top: -6px;
 }
 
+/*-----------------------------------------------------------------------------------*/
+/*  RATINGS DIALOG
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-rating-dialog {
+  width: 600px;
+}
+
+.lnr-rating-dialog .md-input-messages-animation  {
+  height: 100%;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*  FAQS

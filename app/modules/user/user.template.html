@@ -7,7 +7,7 @@
         <img class="lnr-profile-lrg" ng-src="{{user.user.profile_picture.profile_picture.url}}">
         <div layout="column" layout-align="center start" layout-padding>
           <span class="md-headline">{{user.user.first_name}} {{user.user.last_name}}</span>
-          <input-stars class="rating" max="5" ng-model="user.rating" readonly></input-stars>
+          <input-stars class="lnr-user-rating rating" max="5" ng-model="user.rating" readonly></input-stars>
           <span class="md-body-1">{{user.user.city}}, {{user.user.country}}</span>
         </div>
       </div>
@@ -15,7 +15,7 @@
       <md-divider hide-xs></md-divider>
 
       <div flex-gt-xs="30" flex-offset="5" layout="column" layout-align="center start" layout-padding>
-        <span class="md-subhead">{{ 'user.verified-through' | translate }}</span>
+        <span class="md-caption">{{ 'user.verified-through' | translate }}</span>
         <span class="md-body-1">
           <md-icon class="lnr-icn-sm lnr-margin-right" 
           md-svg-src="app/assets/ui_icons/icn_verified.svg"

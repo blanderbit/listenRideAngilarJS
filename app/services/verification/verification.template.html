@@ -23,7 +23,7 @@
           <div class="tab-content" layout="column" layout-align="space-between start" layout-padding md-on-select="verificationDialog.activeTab = 1">
             <div layout="column" layout-align="center center">
               <p ng-if="verificationDialog.firstTime" class="md-subhead">Hi, {{verificationDialog.firstName}}!</p>
-              <p ng-if="verificationDialog.firstTime" class="md-body-1 lnr-center">Welcome to our passionate bike sharing community, featuring lots of bikes and bike enthusiasts all over the world.</p>
+              <p ng-if="verificationDialog.firstTime" class="md-body-1">Welcome to our passionate bike sharing community, featuring lots of bikes and bike enthusiasts all over the world.</p>
               <p class="md-body-1 lnr-center">We're a sharing community, so the trust and safety of you and the other users have highest priority.</p>
               <p class="md-body-1 lnr-center">We therefore kindly ask you to verify your profile through a few simple steps. It'll only take you a few minutes. The better the information you enter, the higher are chances that your requests will be accepted and bikes will be requested.</p>
             </div>
@@ -67,7 +67,7 @@
                   </form>
                 </md-input-container>
               
-                <md-input-container layout="row" flex="45">
+                <md-input-container layout="row" flex="40">
                   <md-button flex class="md-raised md-primary lnr-btn-inline" ng-disabled="verificationDialog.user.status > 0" ng-click="verificationDialog.resendEmail()">Resend Email</md-button>
                 </md-input-container>
               </div>
@@ -89,7 +89,7 @@
                     </div>
                   </form>
                 </md-input-container>
-                <md-input-container layout="row" flex="45">
+                <md-input-container layout="row" flex="40">
                   <md-button flex class="md-raised md-primary lnr-btn-inline" ng-click="verificationDialog.sendSms()">1. Send Confirmation SMS</md-button>
                 </md-input-container>
               </div>
@@ -101,7 +101,7 @@
                     <input required name="confirmation_code" min-length="4" max-length="4" ng-model="verificationDialog.newUser.confirmation_code"></input>
                   </form>
                 </md-input-container>
-                <md-input-container layout="row" flex="45">
+                <md-input-container layout="row" flex="40">
                   <md-button flex class="md-raised md-primary lnr-btn-inline" ng-click="verificationDialog.confirmPhone()">2. Confirm Code</md-button>
                 </md-input-container>
               </div>
