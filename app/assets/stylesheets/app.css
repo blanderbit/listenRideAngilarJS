@@ -161,7 +161,7 @@ search {
 /*-----------------------------------------------------------------------------------*/
 
 .lnr-header .md-toolbar-tools .lnr-header-logo {
-  min-height: 28px;
+  min-height: 25px;
 }
 
 .md-toolbar-tools .md-button:not(.md-fab) {
@@ -169,8 +169,8 @@ search {
 }
 
 .md-toolbar-tools a.md-lined.md-button {
-  min-height: 30px !important;
-  line-height: 20px !important;
+  min-height: 28px !important;
+  line-height: 18px !important;
 }
 
 /*-----------------------------------------------------------------------------------*/
