@@ -117,13 +117,8 @@
               <form name="verificationDialog.addressForm" layout="column">
 
                 <!-- <div class="lnr-input-containers" layout="row"> -->
-                  <md-input-container flex>
-                    <label>Street</label>
-                    <input required name="street" ng-model="verificationDialog.newUser.street"></input>
-                    <div ng-messages="verificationDialog.addressForm.street.$error" role="alert">
-                      <div ng-message="required">This is required.</div>
-                    </div>
-                  </md-input-container>
+                  <autocomplete autocomplete-id="verificationDialog" layout="column" location="verificationDialog.newUser.street" label-id="{{ 'list.location.street-number' | translate }}" required="true" fill-address="verificationDialog.fillAddress(place)">
+                  </autocomplete>
 
                   <md-input-container flex>
                     <label>Zip</label>

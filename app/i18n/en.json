@@ -267,7 +267,7 @@
       "country": "Country"
     },
     "pricing": {
-      "hint": "Last, set an appropriate rental price. The price should be affordable and based on you ride and equipment. You may take similar listings as a reference.",
+      "hint": "Last, set an appropriate rental price. The price should be affordable and based on you ride and equipment. You may take similar listings as a reference. A rental period for less than 6 hours equals a half-day rental, 6 to 24 hours a day’s rental.",
       "pricing": "Pricing",
       "half-daily-price": "Half-daily Price",
       "daily-price": "Daily Price",

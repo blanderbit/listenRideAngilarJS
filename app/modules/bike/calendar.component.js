@@ -19,8 +19,9 @@ angular.module('bike').component('calendar', {
 
       initOverview();
 
-      $scope.$watch('calendar.requests', function() {
+      var deregisterRequestsWatcher = $scope.$watch('calendar.requests', function() {
         if (calendar.requests !== undefined) {
+          deregisterRequestsWatcher();
           calendar.owner = calendar.userId == $localStorage.userId;
           if (calendar.bikeFamily == 2) {
             calendar.event.reserved();

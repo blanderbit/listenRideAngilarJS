@@ -44,7 +44,7 @@
 
 <div id="timeRange" layout="row" layout-align="start center" layout-padding ng-if="calendar.bikeFamily != 2">
   <md-input-container flex>
-    <label>{{ 'shared.from' | translate }}</label>
+    <label>{{ 'shared.from' | translate }} {{ calendar.startDate | date }}</label>
     <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')"
       ng-model="calendar.startTime" placeholder="{{ 'shared.from' | translate }}">
       <md-option ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
@@ -54,7 +54,7 @@
   </md-input-container>
 
   <md-input-container flex>
-    <label>{{ 'shared.to' | translate }}</label>
+    <label>{{ 'shared.to' | translate }}  {{ calendar.endDate | date }}</label>
     <md-select ng-disabled="calendar.endDate === undefined" ng-change="calendar.onTimeChange('end')"
       ng-model="calendar.endTime" placeholder="{{ 'shared.to' | translate }}">
       <md-option ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">

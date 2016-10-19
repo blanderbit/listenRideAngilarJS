@@ -191,7 +191,7 @@
                   <h3 class="md-subhead">Where can the bike be picked up?</h3>
                 </div>
 
-                <autocomplete layout="column" location="list.form.street" label-id="{{ 'list.location.street-number' | translate }}" required="true" fill-address="edit.fillAddress(place)">
+                <autocomplete autocomplete-id="list" layout="column" location="list.form.street" label-id="{{ 'list.location.street-number' | translate }}" required="true" fill-address="list.fillAddress(place)">
                 </autocomplete>
 
                 <md-input-container>
