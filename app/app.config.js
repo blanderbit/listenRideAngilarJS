@@ -198,25 +198,6 @@ angular.
       'contrastDarkColors': '50 100 200 300 A100 A200 A400 A700'
     });
 
-    $mdThemingProvider.definePalette('lnr-red', {
-      '50': '#ffd7c6',
-      '100': '#ffc5ad',
-      '200': '#ffb293',
-      '300': '#ffa07a',
-      '400': '#ff8e60',
-      '500': '#FF7C47',
-      '600': '#ff6a2d',
-      '700': '#ff5814',
-      '800': '#f94800',
-      '900': '#e04100',
-      'A100': '#ffe9e0',
-      'A200': '#fffbf9',
-      'A400': '#ffffff',
-      'A700': '#c63900',
-      'contrastDefaultColor': 'light',
-      'contrastDarkColors': '50 100 200 300 A100 A200 A400 A700'
-    });
-
     $mdThemingProvider.definePalette('lnr-background', $mdThemingProvider.extendPalette('grey', {
       '50': '#ffffff',
       'A400': '#343940'
@@ -233,7 +214,6 @@ angular.
     $mdThemingProvider.theme('default')
         .primaryPalette('lnr-green')
         .accentPalette('lnr-blue')
-        // .warnPalette('lnr-red')
         .backgroundPalette('lnr-background')
         .foregroundPalette = DARK_FOREGROUND;
 
