@@ -212,7 +212,7 @@ search {
   color: #fff;  
 }
 
-.lnr-accent {
+.lnr-primary {
   color: #5fc693;
 }
 
@@ -231,10 +231,10 @@ search {
   fill: #fff;
 }
 
-.lnr-accent svg path,
-.lnr-accent svg rect,
-.lnr-accent svg circle,
-.lnr-accent svg polygon {
+.lnr-primary svg path,
+.lnr-primary svg rect,
+.lnr-primary svg circle,
+.lnr-primary svg polygon {
   fill: #5fc693;
 }
 
@@ -553,7 +553,7 @@ home .section {
   padding: 24px 0;
   background-size: cover;
   background-position: 15% 40%;
-  background-image: url(../ui_images/lnr_listabike.jpg);
+  background-image: url(../ui_images/static/lnr_listabike.jpg);
 }
 
 home md-grid-list md-grid-tile {
@@ -567,19 +567,19 @@ home md-grid-list md-grid-tile {
 }
 
 home md-grid-list md-grid-tile.tile1 {
-  background-image: url(../ui_images/lnr_munich.jpg);
+  background-image: url(../ui_images/cities/lnr_munich.jpg);
 }
 
 home md-grid-list md-grid-tile.tile2 {
-  background-image: url(../ui_images/lnr_berlin.jpg);
+  background-image: url(../ui_images/cities/lnr_berlin.jpg);
 }
 
 home md-grid-list md-grid-tile.tile3 {
-  background-image: url(../ui_images/lnr_amsterdam.jpg);
+  background-image: url(../ui_images/cities/lnr_amsterdam.jpg);
 }
 
 home md-grid-list md-grid-tile.tile4 {
-  background-image: url(../ui_images/lnr_vienna.jpg);
+  background-image: url(../ui_images/cities/lnr_vienna.jpg);
 }
 
 @media (max-width:599px) {
