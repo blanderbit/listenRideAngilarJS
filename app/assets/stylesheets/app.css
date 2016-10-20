@@ -764,7 +764,7 @@ search ng-map md-card.lnr-bike-card md-icon {
 }
 
 search ng-map md-card.lnr-bike-card md-card-title-text span {
-  max-width: 130px;
+  max-width: 120px;
 }
 
 search .ng-map-info-window > div:first-child div {
@@ -950,6 +950,8 @@ requests md-input-container  {
 }
 
 .requests-list {
+  min-width: 300px;
+  max-width: 450px;
   border-right: 1px solid #efefef;
 }
 
