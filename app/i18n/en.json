@@ -543,7 +543,8 @@
 
   "terms-and-conditions" : {
     "title" : "Terms and conditions",
-    "header" : "General Terms and Conditions of Business for the listnride Online Platform"
+    "header" : "General Terms and Conditions of Business for the listnride Online Platform",
+    "download" : "Download here"
   },
 
   "privacy" : {
