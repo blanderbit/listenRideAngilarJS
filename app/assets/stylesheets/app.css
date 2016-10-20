@@ -660,7 +660,7 @@ home .section {
   padding: 24px 0;
   background-size: cover;
   background-position: 15% 40%;
-  background-image: url(../ui_images/static/lnr_listabike2.jpg);
+  background-image: url(../ui_images/static/lnr_listabike.jpg);
 }
 
 home md-grid-list md-grid-tile {
@@ -1145,9 +1145,25 @@ message .status-message {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*  FAQS
+/*  STATIC PAGES
 /*-----------------------------------------------------------------------------------*/
 
 .lnr-faqs div > p:first-child {
   margin-top: 0;
+}
+
+.lnr-garantee  {
+  position: relative;
+}
+
+.lnr-garantee md-icon {
+  position: absolute;
+  padding-left: 16px;
+  right: 0;
+}
+
+@media (max-width:760px) {
+  .lnr-garantee md-icon {
+    position: relative;
+  }
 }
