@@ -555,7 +555,7 @@ home #landingSection .lnr-page-title {
 }
 
 .cb-slideshow li:nth-child(1) span { 
-  background-image: url(../ui_images/lnr_hero.jpg) 
+  background-image: url(../ui_images/lnr_hero4.jpg) 
 }
 
 .cb-slideshow li:nth-child(2) span { 
@@ -575,7 +575,7 @@ home #landingSection .lnr-page-title {
 }
 
 .cb-slideshow li:nth-child(4) span { 
-  background-image: url(../ui_images/lnr_hero4.jpg);
+  background-image: url(../ui_images/lnr_hero.jpg);
   -webkit-animation-delay: 45s;
   -moz-animation-delay: 45s;
   -o-animation-delay: 45s; 
