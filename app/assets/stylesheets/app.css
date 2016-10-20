@@ -344,6 +344,35 @@ autocomplete .md-errors-spacer {
   display: none;
 }
 
+
+/* mobile typorgraphy */
+@media (max-width:599px) {
+  .md-display-1 {
+    font-size: 26px;
+  }
+
+  .md-headline {
+    font-size: 22px;
+  }
+
+  .md-subhead {
+    font-size: 16px;
+  }
+
+  .lnr-page-title {
+    max-width: 95%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0.18rem 0;
+  }
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* USER MODALS
 /*-----------------------------------------------------------------------------------*/
