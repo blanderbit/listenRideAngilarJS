@@ -73,6 +73,10 @@
     "rent-bike": "Rent Bike"
   },
 
+  "user": {
+    "verified-through": "Verified through"
+  },
+
   "requests": {
     "booking-overview": "Booking Overview",
     "book": "Book",
@@ -100,7 +104,7 @@
   },
 
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your {{ride.name}} from {{timespan}}. Agree on further details using the chat.",
+    "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{timespan}}. Agree on further details using the chat.",
     "2": "You accepted the request. The rider now has the possibility to book the bike.",
     "3": "{{user.first_name}} {{user.last_name}} confirmed the booking. You rent out your ride from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Number: {{user.phone_number}} <br>Address: {{user.street}}, {{user.zip}} {{user.city}}, {{user.country}}",
     "4": "You've confirmed retrieval of your bike. Lastly, please rate the rider. This helps our community a lot and closes your rental.",
@@ -110,7 +114,7 @@
   },
 
   "rideChat": {
-    "1": "You would like to rent the {{ride.name}} by {{lister.first_name}} {{lister.last_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, you can book the ride.",
+    "1": "You would like to rent the <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> by {{lister.first_name}} {{lister.last_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, you can book the ride.",
     "2": "{{lister.first_name}} has accepted your request. Confirm the reservation, the payment will follow as the next step.",
     "3": "Congratulation, You successfully booked the ride. Meet the lister as agreed and pick up the ride. Contact Details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Email address: {{lister.email}},<br>Address: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "4": "{{lister.first_name}} has confirmed the return of the ride.",

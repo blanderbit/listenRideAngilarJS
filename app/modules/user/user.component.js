@@ -13,6 +13,11 @@ angular.module('user').component('user', {
           console.log(response.data);
           user.user = response.data;
           user.loaded = true;
+          user.rating = (user.user.lister_rating + user.user.rider_rating);
+          if (user.user.lister_rating != 0 && user.user.rider_rating != 0) {
+            user.rating = user.rating / 2;
+          }
+          user.rating = Math.round(user.rating);
         },
         function(error) {
           console.log("Error retrieving User", error);
