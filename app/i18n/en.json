@@ -390,7 +390,8 @@
     },
     "list-section" : {
       "header" : "Ready to list your bike?",
-      "subheader" : "Meet great new people and earn some money on the side."
+      "subheader" : "Meet great new people and earn some money on the side.",
+      "sign-up": "Sign up to list your bike!"
     },
     "testmonials-section" : {
       "header" : "Renting out bikes: What do our listers say about us?",
@@ -462,8 +463,8 @@
   "contact-and-help" : {
     "title" : "Contact & Support",
     "faq-section" : {
-      "header" : "You are ready to join listnride",
-      "subheader" : "however still have some unanswered questions? Check the frequently asked questions below.",
+      "header" : "We are there for you!",
+      "subheader" : "The most frequently questions of our Lister and Rider.",
       "lister-faq" : {
         "title" : "FAQ Lister",
         "question-1" : "What do I need to do to rent out my bike with peace of mind?",
@@ -530,8 +531,8 @@
       }
     },
     "contact-section" : {
-      "header" : "Contact us",
-      "subheader" : "if you have any special questions or any issues arise during the bike sharing process on listnride.",
+      "header" : "No answer for your matter?",
+      "subheader" : "Contact us if you have any special questions or if any issues arise during the bike sharing process on listnride.",
       "title" : "Can’t find the answer you need in our FAQ section? Then choose one of the following:",
       "list-1" : "I would like to report a suspicious request",
       "list-2" : "I would like to report a suspicious listing",
@@ -543,7 +544,8 @@
 
   "terms-and-conditions" : {
     "title" : "Terms and conditions",
-    "header" : "General Terms and Conditions of Business for the listnride Online Platform"
+    "header" : "General Terms and Conditions of Business for the listnride Online Platform",
+    "download" : "Download here"
   },
 
   "privacy" : {
@@ -556,6 +558,11 @@
     "contact" : {
       "title" : "Our Contact information:"
     }
+  },
+
+  "events": {
+    "rapha-super-cross": {
+      "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
+    }
   }
 }
-

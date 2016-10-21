@@ -1,5 +1,5 @@
  <md-content class="single-column"> 
-  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_trust_and_safety.jpg')" layout="row" layout-align="center center">
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/static/lnr_contact.jpg')" layout="row" layout-align="center center">
 <!--     <div class="lnr-page-title lnr-white" flex layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ 'contact-and-help.title' | translate }}</h1>
     </div> -->
@@ -41,13 +41,14 @@
         <h3 class="md-body-2 lnr-clickable" ng-click="lister8=!lister8">{{ 'contact-and-help.faq-section.lister-faq.question-8' | translate }}</h3>
         <div ng-show="lister8"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-8' | translate }}</p></div>
 
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister9=!lister9">{{ 'contact-and-help.faq-section.lister-faq.question-9' | translate }}</h3>
+        <div ng-show="lister9"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-9' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="lister10=!lister10">{{ 'contact-and-help.faq-section.lister-faq.question-10' | translate }}</h3>
+        <div ng-show="lister10"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-10' | translate }}</p></div>
+
         <a class="lnr-link" ng-show="!showmore" ng-click="showmore=!showmore">{{ 'shared.show-more' | translate }}</a>
-
-        <h3 ng-show="showmore" class="md-body-2 lnr-clickable" ng-click="lister9=!lister9">{{ 'contact-and-help.faq-section.lister-faq.question-9' | translate }}</h3>
-        <div ng-show="lister9&&showmore"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-9' | translate }}</p></div>
-
-        <h3 ng-show="showmore" class="md-body-2 lnr-clickable" ng-click="lister10=!lister10">{{ 'contact-and-help.faq-section.lister-faq.question-10' | translate }}</h3>
-        <div ng-show="lister10&&showmore"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-10' | translate }}</p></div>
 
         <h3 ng-show="showmore" class="md-body-2 lnr-clickable" ng-click="lister11=!lister11">{{ 'contact-and-help.faq-section.lister-faq.question-11' | translate }}</h3>
         <div ng-show="lister11&&showmore"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-11' | translate }}</p></div>
@@ -76,7 +77,7 @@
         <a class="lnr-link" ng-show="showmore" ng-click="showmore=!showmore">{{ 'shared.show-less' | translate }}</a>
       </div>
 
-      <div flex-gt-sm="45" flex-gt-sm-offset="5" layout="column">
+      <div flex-gt-sm="45" flex-gt-sm-offset="5" layout="column" layout-margin>
         <h3 class="md-subhead">{{ 'contact-and-help.faq-section.rider-faq.title' | translate }}</h3>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="rider1=!rider1">{{ 'contact-and-help.faq-section.rider-faq.question-1' | translate }}</h3>

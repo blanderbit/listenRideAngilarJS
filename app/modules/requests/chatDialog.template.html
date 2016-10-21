@@ -1,6 +1,6 @@
 <md-dialog>
 
-    <md-toolbar>
+    <md-toolbar class="md-accent">
       <div class="md-toolbar-tools" layout-align="center center">
         <md-button class="md-icon-button">
           <md-icon></md-icon>
@@ -16,7 +16,7 @@
 
 
     <md-dialog-content style="height: 100vh" layout="column">
-      <md-progress-linear ng-if="chatDialog.requests.loadingChat" md-mode="query"></md-progress-linear>
+      <md-progress-linear class="md-accent" ng-if="chatDialog.requests.loadingChat" md-mode="query"></md-progress-linear>
       <div flex="80" scroll-glue="chatDialog.requests.request.glued" class="chat">
         <message ng-repeat="message in chatDialog.requests.request.messages" content="message.content" sender="message.sender" status="message.status" request="chatDialog.requests.request" confirm-booking="chatDialog.requests.confirmBooking()" show-rating-dialog="chatDialog.requests.showRatingDialog()"></message>
       </div>

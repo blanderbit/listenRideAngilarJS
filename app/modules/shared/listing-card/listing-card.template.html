@@ -2,9 +2,9 @@
   <img class="md-card-image" ui-sref="bike({ bikeId: {{ ::listingCard.bikeId }} })" ng-src="{{ ::listingCard.imageUrl }}" alt="{{ ::listingCard.brand }} - {{ ::listingCard.name }}">
 
   <md-card-title layout="row">
-    <md-icon class="lnr-icn-lrg lnr-foreground" md-svg-src="app/assets/ui_icons/biketype_{{ ::listingCard.category | limitTo: 1 }}.svg"></md-icon>
+    <md-icon ng-if="::listingCard.category" class="lnr-icn-lrg lnr-foreground" md-svg-src="app/assets/ui_icons/biketype_{{ ::listingCard.category | limitTo: 1 }}.svg"></md-icon>
 
-    <md-card-title-text ui-sref="bike({ bikeId: {{ ::listingCard.bikeId }} })" class="lnr-margin-right lnr-margin-left" layout="column" layout-align="space-around start">
+    <md-card-title-text ui-sref="bike({ bikeId: {{ ::listingCard.bikeId }} })" class="lnr-margin-left" layout="column" layout-align="space-around start">
       <span class="md-subhead">{{ ::listingCard.brand }}, {{ ::listingCard.category | category }}</span>
       <span>{{ ::listingCard.name }}</span>
     </md-card-title-text>

@@ -7,7 +7,8 @@ angular.
     $stateProvider,
     ezfbProvider,
     $mdAriaProvider,
-    $mdThemingProvider) {
+    $mdThemingProvider,
+    $locationProvider) {
 
     $mdAriaProvider.disableWarnings();
 
@@ -20,6 +21,8 @@ angular.
       // https://developers.facebook.com/docs/javascript/reference/FB.init
       version: 'v2.3'
     });
+
+    // $locationProvider.html5Mode(true);
 
     $stateProvider.state({
       name: 'home',
@@ -85,6 +88,18 @@ angular.
     });
 
     $stateProvider.state({
+      name: 'raphaSuperCross',
+      url: '/rapha-super-cross',
+      template: '<rapha-super-cross></rapha-super-cross>'
+    });
+
+    $stateProvider.state({
+      name: 'listingABike',
+      url: '/listing-a-bike',
+      template: '<listing-a-bike></listing-a-bike>'
+    });
+
+    $stateProvider.state({
       name: 'about',
       url: '/about',
       templateUrl: 'app/modules/static/about.template.html'
@@ -94,12 +109,6 @@ angular.
       name: 'rentingABike',
       url: '/renting-a-bike',
       templateUrl: 'app/modules/static/renting-a-bike.template.html'
-    });
-
-    $stateProvider.state({
-      name: 'listingABike',
-      url: '/listing-a-bike',
-      templateUrl: 'app/modules/static/listing-a-bike.template.html'
     });
 
     $stateProvider.state({
@@ -198,25 +207,6 @@ angular.
       'contrastDarkColors': '50 100 200 300 A100 A200 A400 A700'
     });
 
-    $mdThemingProvider.definePalette('lnr-red', {
-      '50': '#ffd7c6',
-      '100': '#ffc5ad',
-      '200': '#ffb293',
-      '300': '#ffa07a',
-      '400': '#ff8e60',
-      '500': '#FF7C47',
-      '600': '#ff6a2d',
-      '700': '#ff5814',
-      '800': '#f94800',
-      '900': '#e04100',
-      'A100': '#ffe9e0',
-      'A200': '#fffbf9',
-      'A400': '#ffffff',
-      'A700': '#c63900',
-      'contrastDefaultColor': 'light',
-      'contrastDarkColors': '50 100 200 300 A100 A200 A400 A700'
-    });
-
     $mdThemingProvider.definePalette('lnr-background', $mdThemingProvider.extendPalette('grey', {
       '50': '#ffffff',
       'A400': '#343940'
@@ -233,7 +223,6 @@ angular.
     $mdThemingProvider.theme('default')
         .primaryPalette('lnr-green')
         .accentPalette('lnr-blue')
-        // .warnPalette('lnr-red')
         .backgroundPalette('lnr-background')
         .foregroundPalette = DARK_FOREGROUND;
 

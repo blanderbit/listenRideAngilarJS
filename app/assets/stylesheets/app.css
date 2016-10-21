@@ -26,6 +26,10 @@ h6 {
   margin: 0.34rem 0;
 }
 
+ul, ol {
+  margin: 0;
+}
+
 strong {
   font-weight: 500;
 }
@@ -161,7 +165,7 @@ search {
 /*-----------------------------------------------------------------------------------*/
 
 .lnr-header .md-toolbar-tools .lnr-header-logo {
-  min-height: 28px;
+  min-height: 25px;
 }
 
 .md-toolbar-tools .md-button:not(.md-fab) {
@@ -169,8 +173,8 @@ search {
 }
 
 .md-toolbar-tools a.md-lined.md-button {
-  min-height: 30px !important;
-  line-height: 20px !important;
+  min-height: 28px !important;
+  line-height: 18px !important;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -208,7 +212,7 @@ search {
   color: #fff;  
 }
 
-.lnr-accent {
+.lnr-primary {
   color: #5fc693;
 }
 
@@ -227,10 +231,10 @@ search {
   fill: #fff;
 }
 
-.lnr-accent svg path,
-.lnr-accent svg rect,
-.lnr-accent svg circle,
-.lnr-accent svg polygon {
+.lnr-primary svg path,
+.lnr-primary svg rect,
+.lnr-primary svg circle,
+.lnr-primary svg polygon {
   fill: #5fc693;
 }
 
@@ -269,7 +273,7 @@ search {
 }
 
 .lnr-header .lnr-header-logo md-icon {
-  width: 90px;
+  width: 95px;
 }
 
 .lnr-header .md-lined {
@@ -340,6 +344,35 @@ autocomplete .md-errors-spacer {
   display: none;
 }
 
+
+/* mobile typorgraphy */
+@media (max-width:599px) {
+  .md-display-1 {
+    font-size: 26px;
+  }
+
+  .md-headline {
+    font-size: 22px;
+  }
+
+  .md-subhead {
+    font-size: 16px;
+  }
+
+  .lnr-page-title {
+    max-width: 95%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0.18rem 0;
+  }
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* USER MODALS
 /*-----------------------------------------------------------------------------------*/
@@ -349,6 +382,10 @@ autocomplete .md-errors-spacer {
 }
 
 .lnr-user-modal .md-button {
+  margin: 0;
+}
+
+md-dialog-content .md-button {
   margin: 0;
 }
 
@@ -547,7 +584,7 @@ home #landingSection .lnr-page-title {
 }
 
 .cb-slideshow li:nth-child(1) span { 
-  background-image: url(../ui_images/lnr_hero1.jpg) 
+  background-image: url(../ui_images/lnr_hero4.jpg) 
 }
 
 .cb-slideshow li:nth-child(2) span { 
@@ -567,7 +604,7 @@ home #landingSection .lnr-page-title {
 }
 
 .cb-slideshow li:nth-child(4) span { 
-  background-image: url(../ui_images/lnr_hero4.jpg);
+  background-image: url(../ui_images/lnr_hero.jpg);
   -webkit-animation-delay: 45s;
   -moz-animation-delay: 45s;
   -o-animation-delay: 45s; 
@@ -644,7 +681,7 @@ home #landingSection .lnr-page-title {
 }
 
 home .section {
-  margin-top: 90px;
+  margin-top: 80px;
 }
 
 #listBike {
@@ -652,7 +689,7 @@ home .section {
   padding: 24px 0;
   background-size: cover;
   background-position: 15% 40%;
-  background-image: url(../ui_images/lnr_listabike.jpg);
+  background-image: url(../ui_images/static/lnr_listabike.jpg);
 }
 
 home md-grid-list md-grid-tile {
@@ -666,19 +703,19 @@ home md-grid-list md-grid-tile {
 }
 
 home md-grid-list md-grid-tile.tile1 {
-  background-image: url(../ui_images/lnr_munich.jpg);
+  background-image: url(../ui_images/cities/lnr_munich.jpg);
 }
 
 home md-grid-list md-grid-tile.tile2 {
-  background-image: url(../ui_images/lnr_berlin.jpg);
+  background-image: url(../ui_images/cities/lnr_berlin.jpg);
 }
 
 home md-grid-list md-grid-tile.tile3 {
-  background-image: url(../ui_images/lnr_amsterdam.jpg);
+  background-image: url(../ui_images/cities/lnr_amsterdam.jpg);
 }
 
 home md-grid-list md-grid-tile.tile4 {
-  background-image: url(../ui_images/lnr_vienna.jpg);
+  background-image: url(../ui_images/cities/lnr_vienna.jpg);
 }
 
 @media (max-width:599px) {
@@ -690,6 +727,10 @@ home md-grid-list md-grid-tile.tile4 {
 
   home #landingSection {
     height: 60vh;
+  }
+
+  home .section {
+    margin-top: 40px;
   }
 
   .lnr-search-bar {
@@ -714,7 +755,7 @@ md-card.lnr-bike-card {
 }
 
 .lnr-bike-card md-card-title-text span {
-  max-width: 160px;
+  max-width: 155px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -850,37 +891,37 @@ search bike-card md-card {
 }
 
 /* Map bike card hackaround (to be cleaned) */
-search ng-map md-card {
+ng-map md-card {
   width: 240px;
 }
 
-search ng-map md-card.lnr-bike-card md-icon {
+ng-map md-card.lnr-bike-card md-icon {
   display: none;
 }
 
-search ng-map md-card.lnr-bike-card md-card-title-text span {
-  max-width: 130px;
+ng-map md-card.lnr-bike-card md-card-title-text span {
+  max-width: 120px;
 }
 
-search .ng-map-info-window > div:first-child div {
+.ng-map-info-window > div:first-child div {
   display: none;
 }
 
-search .ng-map-info-window > div:first-child  div:nth-last-child(2),
-search .ng-map-info-window > div:first-child  div:nth-last-child(2) div {
+.ng-map-info-window > div:first-child  div:nth-last-child(2),
+.ng-map-info-window > div:first-child  div:nth-last-child(2) div {
   display: block!important;
   margin-top: -4px!important;
   z-index: 2;
 }
 
-search .ng-map-info-window > div:last-child {
+.ng-map-info-window > div:last-child {
   right: 46px!important;
   top: 18px!important;
   opacity: 0.3!important;
   border-radius: 10px;
 }
 
-search .ng-map-info-window > div:last-child:hover {
+.ng-map-info-window > div:last-child:hover {
   opacity: 0.6!important;
 }
 
@@ -891,28 +932,31 @@ search .ng-map-info-window > div:last-child:hover {
 }
 
 /*-----------------------------------------------------------------------------------*/
+/*  USER
+/*-----------------------------------------------------------------------------------*/
+
+user .lnr-user-rating  {
+  padding-left: 4px;
+}
+
+/*-----------------------------------------------------------------------------------*/
 /*  LIST BIKE
 /*-----------------------------------------------------------------------------------*/
 
 .angular-input-stars {  
   display: inline-block;
   padding: 0;
-  padding-left: -5px;
   list-style: none;
 }
 
 .angular-input-stars > li {
-  font-size: 18px;
+  color: rgba(210,218,218,1.0);
+  font-size: 20px;
   display: inline-block;
 }
 
 .angular-input-stars > li .active {
-    color: #FDE35E;
-    /*text-shadow: black 0 0 1px, 0 0 1px ; */
-}
-
-.angular-input-stars > li .active.angular-input-stars-hover {
-  text-shadow: black 0 0 3px;
+    color: #FEB35B;
 }
 
 rating .angular-input-stars > li {
@@ -924,40 +968,6 @@ rating .angular-input-stars > li {
 
 user .angular-input-stars > li {
   padding-right: 3px;
-  padding-left: 7px;
-}
-
-/* Add possibility to have centered toasts */
-md-toast.md-center {
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
-}
-
-requests .requests-list {
-  background-color: #ffffff;
-}
-
-requests .subheader {
-  background-color: #ffffff;
-  height: 100px;
-}
-
-.chat {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  background-color: #efefef;
-}
-
-message .sent-message {
-  background-color: #ffffff;
-}
-
-message .received-message {
-  background-color: #ffffff;
-}
-
-message .status-message {
-  background-color: #ffffff;
 }
 
 list md-tabs,
@@ -1061,7 +1071,13 @@ md-toast.md-center {
 .chat {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  padding: 48px 16px 8px 16px;
+  background-color: #efefef;
+}
+
+.chat {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 48px 16px 24px 16px;
   background: #fff;
 }
 
@@ -1070,6 +1086,8 @@ requests md-input-container  {
 }
 
 .requests-list {
+  min-width: 300px;
+  max-width: 450px;
   border-right: 1px solid #efefef;
 }
 
@@ -1091,6 +1109,10 @@ requests md-input-container  {
   background: #fff;
 }
 
+.lnr-message-form .md-errors-spacer {
+  display: none;
+}
+
 .lnr-message {
   padding: 4px;
   border-radius: 4px;
@@ -1104,11 +1126,11 @@ message .sent-message {
 
 message .received-message {
   position: relative;
-  background-color: rgba(229,234,234,0.7);
+  background-color: rgba(229,234,234,0.4);
 }
 
 message .status-message {
-  background-color: rgba(229,234,234,0.7);
+  background-color: rgba(229,234,234,0.4);
 }
 
 .sent-message:after {
@@ -1134,16 +1156,51 @@ message .status-message {
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-right-color: rgba(229,234,234,0.7);
+  border-right-color: rgba(229,234,234,0.4);
   border-width: 6px;
   margin-top: -6px;
 }
 
+/*-----------------------------------------------------------------------------------*/
+/*  RATINGS DIALOG
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-rating-dialog {
+  width: 600px;
+}
+
+.lnr-rating-dialog .md-input-messages-animation  {
+  height: 100%;
+}
 
 /*-----------------------------------------------------------------------------------*/
-/*  FAQS
+/*  STATIC PAGES
 /*-----------------------------------------------------------------------------------*/
 
 .lnr-faqs div > p:first-child {
   margin-top: 0;
+}
+
+.lnr-garantee  {
+  position: relative;
+}
+
+.lnr-garantee md-icon {
+  position: absolute;
+  padding-left: 16px;
+  right: 0;
+}
+
+@media (max-width:760px) {
+  .lnr-garantee md-icon {
+    position: relative;
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  EVENT PAGES
+/*-----------------------------------------------------------------------------------*/
+
+rapha-super-cross img.event-logo {
+  width: 250px;
 }
