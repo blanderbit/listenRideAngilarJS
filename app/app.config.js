@@ -84,6 +84,11 @@ angular.
       template: '<settings></settings>'
     });
 
+    $stateProvider.state({
+      name: 'raphaSuperCross',
+      url: '/rapha-super-cross',
+      template: '<rapha-super-cross></rapha-super-cross>'
+    });
 
     $stateProvider.state({
       name: 'listingABike',

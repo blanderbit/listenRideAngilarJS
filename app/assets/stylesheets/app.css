@@ -850,20 +850,21 @@ md-dialog md-dialog-content .date-picker-wrapper .month-wrapper thead {
 /*  SEARCH
 /*-----------------------------------------------------------------------------------*/
 
-search ng-map {
+search ng-map,
+rapha-super-cross ng-map {
   height: 100% !important;
 }
 
-search .map-column {
+.map-column, {
   height: 35%;
 }
 
-search md-input-container,
+md-input-container,
 search autocomplete {
   margin-bottom: 0;
 }
 
-search bike-card md-card {
+bike-card md-card {
   margin: 0;
 }
 
@@ -891,42 +892,42 @@ search bike-card md-card {
 }
 
 /* Map bike card hackaround (to be cleaned) */
-search ng-map md-card {
+ng-map md-card {
   width: 240px;
 }
 
-search ng-map md-card.lnr-bike-card md-icon {
+ng-map md-card.lnr-bike-card md-icon {
   display: none;
 }
 
-search ng-map md-card.lnr-bike-card md-card-title-text span {
+ng-map md-card.lnr-bike-card md-card-title-text span {
   max-width: 120px;
 }
 
-search .ng-map-info-window > div:first-child div {
+.ng-map-info-window > div:first-child div {
   display: none;
 }
 
-search .ng-map-info-window > div:first-child  div:nth-last-child(2),
-search .ng-map-info-window > div:first-child  div:nth-last-child(2) div {
+.ng-map-info-window > div:first-child  div:nth-last-child(2),
+.ng-map-info-window > div:first-child  div:nth-last-child(2) div {
   display: block!important;
   margin-top: -4px!important;
   z-index: 2;
 }
 
-search .ng-map-info-window > div:last-child {
+.ng-map-info-window > div:last-child {
   right: 46px!important;
   top: 18px!important;
   opacity: 0.3!important;
   border-radius: 10px;
 }
 
-search .ng-map-info-window > div:last-child:hover {
+.ng-map-info-window > div:last-child:hover {
   opacity: 0.6!important;
 }
 
 @media (min-width:599px) {
-  search .map-column {
+  .map-column {
     height: 100%;
   }
 }
