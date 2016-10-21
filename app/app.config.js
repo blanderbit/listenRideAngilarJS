@@ -57,6 +57,8 @@ angular.
       template: '<user></user>'
     });
 
+    console.log()
+
     $stateProvider.state({
       name: 'requests',
       url: '/requests/{requestId}',

@@ -42,10 +42,10 @@
 
         <md-tab label="⬤" layout="row" ng-if="!verificationDialog.newUser.has_description" md-on-select="verificationDialog.activeTab = 3" ng-disabled="true">
             <div class="tab-content" layout="column" layout-padding>
-              <p class="md-body-1 lnr-center">Write a couple sentences (min. 100 words) about yourself and your relation to biking. It gives your profile personality!</p>
+              <p class="md-body-1 lnr-center">Write a couple sentences about yourself and your relation to biking. It gives your profile personality!</p>
               <md-input-container flex>
                 <form name="verificationDialog.descriptionForm">
-                  <label>Description</label>
+                  <label>Description (min. 100 characters)</label>
                   <textarea required md-no-resize name="description" minlength="100" md-maxlength="800" ng-model="verificationDialog.newUser.description"   rows= "3"></textarea>
                   <div ng-messages="verificationDialog.descriptionForm.description.$error" role="alert">
                     <div ng-message="minlength">Description should be at least 100 characters</div>

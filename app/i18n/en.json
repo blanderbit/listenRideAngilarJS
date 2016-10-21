@@ -93,7 +93,10 @@
       "5": "Excellent",
       "rating_text_rider": "Please summarize your rental experience in a few sentences. The lister will do the same",
       "rating_text_lister": "Please summarize your rental experience in a few sentences. The rider will do the same"
-    }
+    },
+    "write-message": "Write a message...",
+    "complete-profile": "Complete your Profile",
+    "complete-profile-description": "To book the bike, please enter your payment information. All informations are transmitted over a secure connection."
   },
 
   "message": {
@@ -546,11 +549,15 @@
   "terms-and-conditions" : {
     "title" : "Terms and conditions",
     "header" : "General Terms and Conditions of Business for the listnride Online Platform",
-    "download" : "Download here"
+    "download" : "Download here",
+    "description": "<a href=\"http://cdn.listnride.com/en/tacs.pdf\" target=\"_blank\">You can view and download the TaCs here.",
+    "subtitle": "List and Ride GmbH (hereinafter “listnride”) arranges rental agreements for bicycles and other sport and leisure equipment via the website www.listnride.com (hereinafter “Website”). The following General Terms and Conditions of Use (hereinafter “Terms of Use”) in Section I shall form part of the agreement concluded between the user and listnride in respect of the arrangement service. Any agreement for rental of the used item (hereinafter “Rental Agreement”) concluded via the Website shall comply with the General Terms and Conditions of Rental (hereinafter “Rental Terms”) specified in Section II."
   },
 
   "privacy" : {
-    "title" : "Privacy"
+    "title" : "Privacy",
+    "subtitle": "Data Protection Regulations",
+    "description": "List and Ride GmbH (hereinafter “listnride”) informs you in the Data Protection Regulations about how your personal data are handled. <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">You can view and download the data protection regulations here.</a>"
   },
 
   "imprint" : {
