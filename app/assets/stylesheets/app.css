@@ -855,16 +855,19 @@ rapha-super-cross ng-map {
   height: 100% !important;
 }
 
-.map-column, {
+search .map-column,
+rapha-super-cross .map-column {
   height: 35%;
 }
 
-md-input-container,
+search md-input-container,
+rapha-super-cross md-input-container,
 search autocomplete {
   margin-bottom: 0;
 }
 
-bike-card md-card {
+search bike-card md-card,
+rapha-super-cross bike-card md-card {
   margin: 0;
 }
 
@@ -927,7 +930,8 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
 }
 
 @media (min-width:599px) {
-  .map-column {
+  search .map-column,
+  rapha-super-cross .map-column {
     height: 100%;
   }
 }
