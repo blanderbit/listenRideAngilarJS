@@ -1047,12 +1047,12 @@ listings .lnr-bike-card.lnr-unavailable img {
 
 @media (max-width:599px) {
   .lnr-calculator .lnr-money {
-    font-size: 22vw;
+    font-size: 21vw;
   }
 }
 
 
-@media (max-width:1280px) {
+@media (max-width:1280px) and (min-width:600px) {
   .lnr-calculator .lnr-money {
     font-size: 8.8vw;
   }
