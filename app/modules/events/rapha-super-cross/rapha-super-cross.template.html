@@ -3,7 +3,10 @@
   <div flex-xs="100" flex-gt-xs="60" flex-order-xs="2" layout="column">
     <div layout="column" layout-padding>
       <div layout="row" layout-align="center center" class="md-title">Rapha Super Cross</div>
-      <div>{{ 'events.rapha-super-cross.text' | translate }}</div>
+      <div layout="row" layout-align="center center">
+        <div flex="80">{{ 'events.rapha-super-cross.text' | translate }}</div>
+        <img flex="20" ng-src="app/assets/ui_images/raphasupercross.png">
+      </div>
     </div>
 
     <md-divider></md-divider>
