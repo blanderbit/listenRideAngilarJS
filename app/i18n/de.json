@@ -32,7 +32,8 @@
     "from-place" : "aus",
     "contact": "Kontakt & Hilfe",
     "show-more" : "zeig mehr",
-    "show-less" : "zeige weniger"
+    "show-less" : "zeige weniger",
+    "phone-number": "Telefonnummer"
   },
 
   "toasts": {
