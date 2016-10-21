@@ -84,6 +84,13 @@ angular.
       template: '<settings></settings>'
     });
 
+
+    $stateProvider.state({
+      name: 'listingABike',
+      url: '/listing-a-bike',
+      template: '<listing-a-bike></listing-a-bike>'
+    });
+
     $stateProvider.state({
       name: 'about',
       url: '/about',
@@ -94,12 +101,6 @@ angular.
       name: 'rentingABike',
       url: '/renting-a-bike',
       templateUrl: 'app/modules/static/renting-a-bike.template.html'
-    });
-
-    $stateProvider.state({
-      name: 'listingABike',
-      url: '/listing-a-bike',
-      templateUrl: 'app/modules/static/listing-a-bike.template.html'
     });
 
     $stateProvider.state({

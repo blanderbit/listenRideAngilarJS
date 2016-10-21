@@ -390,7 +390,8 @@
     },
     "list-section": {
       "header": "Bereit, Dein Fahrrad zu vermieten?",
-      "subheader": "Lerne tolle neue Leute kennen und verdiene nebenbei Geld."
+      "subheader": "Lerne tolle neue Leute kennen und verdiene nebenbei Geld.",
+      "sign-up": "Melde sich an, um Ihr Rad einstellen!"
     },
     "testmonials-section": {
       "header": "Fahrradvermietung: Was sagen die Lister über uns?",

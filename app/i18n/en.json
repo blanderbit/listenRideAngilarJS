@@ -390,7 +390,8 @@
     },
     "list-section" : {
       "header" : "Ready to list your bike?",
-      "subheader" : "Meet great new people and earn some money on the side."
+      "subheader" : "Meet great new people and earn some money on the side.",
+      "sign-up": "Sign up to list your bike!"
     },
     "testmonials-section" : {
       "header" : "Renting out bikes: What do our listers say about us?",
