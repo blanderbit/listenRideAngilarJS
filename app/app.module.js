@@ -18,6 +18,8 @@ angular.module('listnride', [
   'edit',
   'rating',
   'settings',
+  'listingABike',
+  'raphaSuperCross',
   /* external modules */
   'ngMaterial',
   'ngMessages',

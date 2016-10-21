@@ -85,6 +85,18 @@ angular.
     });
 
     $stateProvider.state({
+      name: 'raphaSuperCross',
+      url: '/rapha-super-cross',
+      template: '<rapha-super-cross></rapha-super-cross>'
+    });
+
+    $stateProvider.state({
+      name: 'listingABike',
+      url: '/listing-a-bike',
+      template: '<listing-a-bike></listing-a-bike>'
+    });
+
+    $stateProvider.state({
       name: 'about',
       url: '/about',
       templateUrl: 'app/modules/static/about.template.html'
@@ -94,12 +106,6 @@ angular.
       name: 'rentingABike',
       url: '/renting-a-bike',
       templateUrl: 'app/modules/static/renting-a-bike.template.html'
-    });
-
-    $stateProvider.state({
-      name: 'listingABike',
-      url: '/listing-a-bike',
-      templateUrl: 'app/modules/static/listing-a-bike.template.html'
     });
 
     $stateProvider.state({

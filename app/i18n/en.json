@@ -390,7 +390,8 @@
     },
     "list-section" : {
       "header" : "Ready to list your bike?",
-      "subheader" : "Meet great new people and earn some money on the side."
+      "subheader" : "Meet great new people and earn some money on the side.",
+      "sign-up": "Sign up to list your bike!"
     },
     "testmonials-section" : {
       "header" : "Renting out bikes: What do our listers say about us?",
@@ -557,6 +558,11 @@
     "contact" : {
       "title" : "Our Contact information:"
     }
+  },
+
+  "events": {
+    "rapha-super-cross": {
+      "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
+    }
   }
 }
-

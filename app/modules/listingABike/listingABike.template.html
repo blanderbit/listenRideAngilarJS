@@ -88,7 +88,8 @@
     </div>
 
     <div flex layout="column" layout-align="center center">
-        <md-button ui-sref="list" class="md-raised md-primary md-lrg">{{ 'list.list-your-bike' | translate }}</md-button>
+        <md-button ng-if="listingABike.isLoggedIn" ui-sref="list" class="md-raised md-primary md-lrg">{{ 'list.list-your-bike' | translate }}</md-button>
+        <md-button ng-if="!listingABike.isLoggedIn" ng-click="listingABike.showSignupDialog()" class="md-raised md-primary md-lrg">{{ 'list-a-bike.list-section.sign-up' | translate }}</md-button>
     </div>
   </div>
   <!-- end list a bike -->
