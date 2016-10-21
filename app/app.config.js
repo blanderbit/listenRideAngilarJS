@@ -22,7 +22,7 @@ angular.
       version: 'v2.3'
     });
 
-    $locationProvider.html5Mode(true);
+    // $locationProvider.html5Mode(true);
 
     $stateProvider.state({
       name: 'home',
