@@ -850,24 +850,20 @@ md-dialog md-dialog-content .date-picker-wrapper .month-wrapper thead {
 /*  SEARCH
 /*-----------------------------------------------------------------------------------*/
 
-search ng-map,
-rapha-super-cross ng-map {
+search ng-map {
   height: 100% !important;
 }
 
-search .map-column,
-rapha-super-cross .map-column {
+search .map-column {
   height: 35%;
 }
 
 search md-input-container,
-rapha-super-cross md-input-container,
 search autocomplete {
   margin-bottom: 0;
 }
 
-search bike-card md-card,
-rapha-super-cross bike-card md-card {
+search bike-card md-card {
   margin: 0;
 }
 
@@ -930,8 +926,7 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
 }
 
 @media (min-width:599px) {
-  search .map-column,
-  rapha-super-cross .map-column {
+  search .map-column {
     height: 100%;
   }
 }
@@ -1200,4 +1195,12 @@ message .status-message {
   .lnr-garantee md-icon {
     position: relative;
   }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  EVENT PAGES
+/*-----------------------------------------------------------------------------------*/
+
+rapha-super-cross img.event-logo {
+  width: 250px;
 }
