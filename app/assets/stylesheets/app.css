@@ -1,6 +1,6 @@
 /* 
 // #5FC693: Primary Color
-// #94a3aa: Preload Color
+// #f3f3f3: Preload Color
 // 4px: border radius
 // Added to material
 // md-lined,
@@ -224,7 +224,7 @@ autocomplete .md-errors-spacer {
 }
 
 .lnr-preload-bg {
-  background-color: #94a3aa;
+  background-color: #f3f3f3;
 }
 
 .lnr-btn-inline {
@@ -288,7 +288,7 @@ autocomplete .md-errors-spacer {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  background-color: #94a3aa;
+  background-color: #f3f3f3;
   background-position: center;
   background-size: cover;
 }
