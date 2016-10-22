@@ -22,7 +22,7 @@ angular.
       version: 'v2.3'
     });
 
-    // $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
 
     $stateProvider.state({
       name: 'home',
@@ -57,7 +57,11 @@ angular.
       template: '<user></user>'
     });
 
-    console.log()
+    $stateProvider.state({
+      name: 'wfs',
+      url: '/wfs',
+      template: '<user></user>' 
+    });
 
     $stateProvider.state({
       name: 'requests',

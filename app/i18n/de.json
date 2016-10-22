@@ -70,6 +70,32 @@
     "add-voucher": "Gutschein hinzufügen"
   },
 
+    "verification": {
+    "verify-profile": "Verifiziere dein Profil",
+    "resend-email": "Email erneut senden",
+    "1": {
+      "text1": "Willkommen zu unserer passionierten, weltweiten Community aus Fahrradliebhabern!",
+      "text2": "Wir sind eine Sharing-Plattform, Vertrauen und Sicherheit für uns höchste Priorität.",
+      "text3": "Deshalb bitten wir dich, dein Profil in ein paar einfach Schritten zu verifizieren. Umso besser die eingegebenen Informationen sind, umso höher die Chance auf erfolgreiche Vermietungen."
+    },
+    "2": {
+      "description": "Lade ein Bild von dir hoch! Ein Gesicht ist das Wichtigste für die Nutzer."
+    },
+    "3": {
+      "description": "Schreibe ein paar Sätze über dich. Das gibt deinem Profil Persönlichkeit!",
+      "label": "Beschreibung (min. 100 Buchstaben)"
+    },
+    "4": {
+      "description": "Verifiziere deine Email-Adresse indem du auf den Link klickst, den wir dir nach Anmeldung gemailt haben. Falls du keine Email von uns findest warte ein paar Minuten und schau in deinen Spam-Ordner."
+    },
+    "5": {
+      "description": "Verifiziere deine Telefonnummer. Gebe einfach deine Nummer ein und klicke auf 'Bestätigung Senden'. Du bekommst per SMS einen Code zugeschickt den du unten eingeben kannst."
+    },
+    "6": {
+      "description": "Zuletzt, gib deine Adresse an."
+    }
+  },
+
   "bike": {
     "rent-bike": "Fahrrad Mieten"
   },

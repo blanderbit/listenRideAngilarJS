@@ -8,7 +8,10 @@ angular.module('user').component('user', {
       var user = this;
       user.loaded = false;
 
-      api.get('/users/' + $stateParams.userId).then(
+      var userId;
+      $stateParams.userId? userId = $stateParams.userId : userId = 1282;
+
+      api.get('/users/' + userId).then(
         function(response) {
           console.log(response.data);
           user.user = response.data;
