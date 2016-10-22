@@ -7,7 +7,8 @@ angular.
     $stateProvider,
     ezfbProvider,
     $mdAriaProvider,
-    $mdThemingProvider) {
+    $mdThemingProvider,
+    $locationProvider) {
 
     $mdAriaProvider.disableWarnings();
 
@@ -20,6 +21,8 @@ angular.
       // https://developers.facebook.com/docs/javascript/reference/FB.init
       version: 'v2.3'
     });
+
+    // $locationProvider.html5Mode(true);
 
     $stateProvider.state({
       name: 'home',

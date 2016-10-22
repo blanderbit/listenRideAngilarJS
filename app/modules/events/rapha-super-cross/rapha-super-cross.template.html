@@ -1,50 +1,21 @@
-<div flex layout="row" layout-xs="column" layout-fill>
-
-  <div flex-xs="100" flex-gt-xs="60" flex-order-xs="2" layout="column">
-    <div layout="column" layout-padding>
-      <div layout="row" layout-align="center center" class="md-title">Rapha Super Cross</div>
-      <div layout="row" layout-align="center center">
-        <div flex="80">{{ 'events.rapha-super-cross.text' | translate }}</div>
-        <img flex="20" ng-src="app/assets/ui_images/raphasupercross.png">
-      </div>
+<md-content class="single-column">
+  <div class="content lnr-page-margin" layout="column" layout-align="center center" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h1 class="md-headline">Rapha Super Cross</h1>
+      <img class="event-logo" ng-src="app/assets/ui_images/raphasupercross.png">
+      <div>{{ 'events.rapha-super-cross.text' | translate }}</div>
     </div>
 
-    <md-divider></md-divider>
+    <div ng-if="raphaSuperCross.bikes !== undefined && raphaSuperCross.bikes.length == 0" layout="column" layout-align="center center">
+      {{ 'raphaSuperCross.no-bikes' | translate }}<br><br>
+      <md-button ui-sref="listingABike" class="md-raised md-primary md-lrg">{{ 'shared.list-a-bike' | translate }}</md-button>
+    </div>
 
-    <md-content flex layout="column">
-      <div ng-show="raphaSuperCross.bikes === undefined" flex layout="column" layout-align="center center">
-        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
-      </div>
-
-      <div ng-if="raphaSuperCross.bikes !== undefined && raphaSuperCross.bikes.length == 0" layout="row" layout-align="center center" layout-padding>
-        <span>{{ 'raphaSuperCross.no-bikes' | translate }}</span>
-      </div>
-
-      <div id="featuredBikes" layout="row" layout-wrap layout-padding>
-        <div ng-repeat="bike in raphaSuperCross.bikes" flex="100" flex-gt-sm="50" flex-gt-lg="33">
-          <bike-card bike="bike"></bike-card>
-        </div>
-      </div>
-    </md-content>
+    <div class="lnr-bike-listings" name="listBike" layout="row" layout-wrap layout-align="start start">
+      <bike-card ng-repeat="bike in raphaSuperCross.bikes" bike="bike" flex-sm="50" flex-gt-sm="33">
+      </bike-card>
+    </div>
   </div>
 
-  <div flex-xs="35" flex-gt-xs="40" flex-order-xs="1" layout="column" class="map-column lnr-preload-bg" hide-xs>
-    <ng-map ng-if="raphaSuperCross.bikes !== undefined"
-      id="raphaSuperCrossMap"
-      default-style="false"
-      center="[{{raphaSuperCross.mapOptions.lat}},{{raphaSuperCross.mapOptions.lng}}]"
-      zoom="{{raphaSuperCross.mapOptions.zoom}}"
-      on-click="raphaSuperCross.onMapClick(event)">
-
-      <marker ng-repeat="bike in raphaSuperCross.bikes" id="bike.id" position="{{bike.lat_rnd}},{{bike.lng_rnd}}" on-click="raphaSuperCross.showBikeWindow(event, bike.id)">
-      </marker>
-
-      <info-window id="raphaSuperCrossMapWindow" close-box-margin="0">
-        <div ng-non-bindable="">
-          <bike-card bike="raphaSuperCross.selectedBike"></bike-card>
-        </div>
-      </info-window>
-    </ng-map>
-  </div>
-
-</div>
+  <footer></footer>
+<md-content>
