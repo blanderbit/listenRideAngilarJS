@@ -1,8 +1,11 @@
-/* #5FC693: Primary Color
+/* 
+// #5FC693: Primary Color
+// #94a3aa: Preload Color
 // 4px: border radius
 // Added to material
 // md-lined,
 // md-right-arrow,
+// md-color-*
 */
 
 /*-----------------------------------------------------------------------------------*/
@@ -39,7 +42,7 @@ strong {
   margin: 0 auto;
 }
 
-.bold-text {
+.lnr-bold {
   font-weight: 500 !important;
 }
 
@@ -157,7 +160,7 @@ search {
 }
 
 .lnr-preload-bg {
-  background-color: #EEEEEE;
+  background-color: #94a3aa;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -203,55 +206,6 @@ search {
   background-size: cover;
   background-position: 50% 50%;
 }
-
-/*-----------------------------------------------------------------------------------*/
-/* COLORS
-/*-----------------------------------------------------------------------------------*/
-
-.lnr-white {
-  color: #fff;  
-}
-
-.lnr-primary {
-  color: #5fc693;
-}
-
-.lnr-foreground {
-  color: rgba(85,85,85,1.0);
-}
-
-.lnr-disabled {
-  color: rgba(206,212,216,1.0);
-}
-
-.lnr-white svg path,
-.lnr-white svg rect,
-.lnr-white svg circle,
-.lnr-white svg polygon {
-  fill: #fff;
-}
-
-.lnr-primary svg path,
-.lnr-primary svg rect,
-.lnr-primary svg circle,
-.lnr-primary svg polygon {
-  fill: #5fc693;
-}
-
-.lnr-foreground svg path,
-.lnr-foreground svg rect,
-.lnr-foreground svg circle,
-.lnr-foreground svg polygon {
-  fill: rgba(85,85,85,1.0);
-}
-
-.lnr-disabled svg path,
-.lnr-disabled svg rect,
-.lnr-disabled svg circle,
-.lnr-disabled svg polygon {
-  fill: rgba(206,212,216,1.0);
-}
-
 
 /*-----------------------------------------------------------------------------------*/
 /* NAVBAR
@@ -301,11 +255,6 @@ search {
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
 
-a {
-  text-decoration: none;
-  color: #5FC693;
-}
-
 .lnr-btn-inline {
   margin-top: 25px;
   margin-right: 0;
@@ -343,12 +292,6 @@ autocomplete .pac-container {
 autocomplete .md-errors-spacer {
   display: none;
 }
-
-/* menu divider */
-.md-open-menu-container md-menu-divider {
-  margin-bottom: 2px;
-}
-
 
 /* mobile typorgraphy */
 @media (max-width:599px) {
@@ -493,7 +436,7 @@ footer md-list-item:before {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  background-color: #AAAAAA;
+  background-color: #94a3aa;
   background-position: center;
   background-size: cover;
 }

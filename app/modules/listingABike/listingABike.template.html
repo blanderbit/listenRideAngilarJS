@@ -1,6 +1,6 @@
  <md-content class="single-column"> 
   <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/static/lnr_list_a_bike.jpg')" layout="row" layout-align="center center">
-    <div class="lnr-page-title lnr-white" flex layout="column" layout-align="center center">
+    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ 'list-a-bike.title' | translate }}</h1>
     </div>
   </div>
@@ -31,7 +31,7 @@
 
       <div flex-gt-xs="45" flex-order-xs="-1" layout="column" layout-margin>
         <span class="md-subhead">{{ 'list-a-bike.calculator-section.could-earn' | translate }}</span>
-        <span class="md-display-4 lnr-primary lnr-money">
+        <span class="md-display-4 md-color-primary lnr-money">
           {{ ( calculator.price * 0.01 + 5 ) * calculator.days * 12 | number:0 }} €
         </span>
         <span class="md-subhead lnr-right">{{ 'list-a-bike.calculator-section.per-year' | translate }}</span>
@@ -50,27 +50,27 @@
 
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
       <div flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg lnr-primary" md-svg-src="app/assets/ui_icons/icn_safe.svg"></md-icon>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_safe.svg"></md-icon>
         <h3  class="md-subhead lnr-center">{{ 'list-a-bike.info-section.precautions-title' | translate }}</h3>
         <p class="lnr-center">{{ 'list-a-bike.info-section.precautions-content' | translate }}</p>
       </div>
 
       <div flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg lnr-primary" md-svg-src="app/assets/ui_icons/icn_control.svg"></md-icon>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_control.svg"></md-icon>
         <h3  class="md-subhead lnr-center">{{ 'list-a-bike.info-section.control-title' | translate }}</h3>
         <p class="lnr-center">{{ 'list-a-bike.info-section.control-content' | translate }}
         </p>
       </div>
 
       <div flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg lnr-primary" md-svg-src="app/assets/ui_icons/icn_covered.svg"></md-icon>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_covered.svg"></md-icon>
          <h3  class="md-subhead lnr-center">{{ 'list-a-bike.info-section.covered-title' | translate }}</h3>
          <p class="lnr-center">{{ 'list-a-bike.info-section.covered-content' | translate }}
          <a class="lnr-link" ui-sref="terms">{{ 'shared.learn-more' | translate }}</a></p>
      </div>
 
       <div flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg lnr-primary" md-svg-src="app/assets/ui_icons/icn_notalone.svg"></md-icon>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_notalone.svg"></md-icon>
         <h3  class="md-subhead lnr-center">{{ 'list-a-bike.info-section.help-title' | translate }}</h3>
         <p class="lnr-center">{{ 'list-a-bike.info-section.help-content' | translate }}
         <a class="lnr-link" ui-sref="help">{{ 'shared.learn-more' | translate }}</a></p>
@@ -82,7 +82,7 @@
 
   <!-- list a bike -->
   <div id="listBike" class="section"  md-theme="lnr-dark" layout="column" layout-align="space-between none">
-    <div class="lnr-center lnr-white" flex layout="column" layout-align="center center">
+    <div class="lnr-center md-color-white" flex layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ 'list-a-bike.list-section.header' | translate }}</h1>
       <h2 class="md-subhead">{{ 'list-a-bike.list-section.subheader' | translate }}</h2>
     </div>
