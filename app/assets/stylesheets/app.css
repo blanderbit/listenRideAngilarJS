@@ -42,6 +42,83 @@ strong {
   margin: 0 auto;
 }
 
+/* This has to be set for all full-height layouts */
+ui-view {
+  position: relative;
+}
+
+.single-column,
+requests,
+search {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* FRAMEWORK
+/*-----------------------------------------------------------------------------------*/
+
+/* fix for md-container margin */
+autocomplete {
+  margin-bottom: 16px;
+}
+
+autocomplete md-input-container {
+  margin-bottom: 0;
+}
+
+autocomplete {
+  position: relative;
+}
+
+autocomplete #autocompleteSearch {
+  width: 100%;
+}
+
+autocomplete .pac-container {
+  left: 0 !important;
+  top: 100% !important;
+}
+
+autocomplete .md-errors-spacer {
+  display: none;
+}
+
+/* mobile typorgraphy */
+@media (max-width:599px) {
+  .md-display-1 {
+    font-size: 26px;
+  }
+
+  .md-headline {
+    font-size: 22px;
+  }
+
+  .md-subhead {
+    font-size: 16px;
+  }
+
+  .lnr-page-title {
+    max-width: 95%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0.18rem 0;
+  }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* LNR CLASSES
+/*-----------------------------------------------------------------------------------*/
+
 .lnr-bold {
   font-weight: 500 !important;
 }
@@ -146,66 +223,91 @@ strong {
   margin-right: -50%;
 }
 
-/* This has to be set for all full-height layouts */
-ui-view {
-  position: relative;
-}
-
-.single-column,
-requests,
-search {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
 .lnr-preload-bg {
   background-color: #94a3aa;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* SAFARI CSS FIXES
-/*-----------------------------------------------------------------------------------*/
-
-.lnr-header .md-toolbar-tools .lnr-header-logo {
-  min-height: 25px;
+.lnr-btn-inline {
+  margin-top: 25px;
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
-.md-toolbar-tools .md-button:not(.md-fab) {
-  min-width: 0px;
+.lnr-btn-fb {
+  border-color: #3b5998 !important;
+  background: #3b5998 !important;
+  color: #fff !important;
 }
 
-.md-toolbar-tools a.md-lined.md-button {
-  min-height: 28px !important;
-  line-height: 18px !important;
-}
 
 /*-----------------------------------------------------------------------------------*/
-/* PAGES
+/* SVG
 /*-----------------------------------------------------------------------------------*/
 
-.lnr-page-margin {
-  margin-top: 48px;
-  margin-bottom: 16px;
+.lnr-icn-sm {
+  width: 24px;
+  height: 24px;
 }
 
-.lnr-page-title {
-  text-align: center;
-  max-width: 830px;
+.lnr-icn-md {
+  width: 34px;
+  height: 34px;
 }
 
-.lnr-section-title {
-  text-align: center;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 8px;
+.lnr-icn-lrg {
+  width: 48px;
+  height: 48px;
 }
 
-#hero-shot {
-  height: 42vh;
+.lnr-icn-mlrg {
+  width: 58px;
+  height: 58px;
+}
+
+.lnr-icn-xlrg {
+  width: 120px;
+  height: 120px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* PROFILE PICTURE
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-profile-sm {
+  height: 37px;
+  width: 37px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.lnr-profile-md {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background-color: #94a3aa;
+  background-position: center;
   background-size: cover;
-  background-position: 50% 50%;
 }
+
+.lnr-profile-lrg {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+settings .lnr-profile-lrg {
+  margin: 0;
+  padding: 0;
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 /* NAVBAR
@@ -219,11 +321,6 @@ search {
 
 .lnr-header .md-toolbar-tools .lnr-header-logo {
   padding: 0;
-}
-
-/* Safari vertical alignment fix */
-.lnr-header .md-toolbar-tools {
-  min-height: 30px;
 }
 
 .lnr-header .lnr-header-logo md-icon {
@@ -250,76 +347,42 @@ search {
   padding: 0;
 }
 
+/* Safari vertical alignment fix */
+.lnr-header .md-toolbar-tools .lnr-header-logo {
+  min-height: 25px;
+}
+
+.md-toolbar-tools .md-button:not(.md-fab) {
+  min-width: 0px;
+}
+
+.md-toolbar-tools a.md-lined.md-button {
+  min-height: 28px !important;
+  line-height: 18px !important;
+}
+
 
 /*-----------------------------------------------------------------------------------*/
-/* FRAMEWORK
+/* FOOTER
 /*-----------------------------------------------------------------------------------*/
 
-.lnr-btn-inline {
-  margin-top: 25px;
-  margin-right: 0;
-  margin-bottom: 0;
+footer md-list-item,
+footer md-list-item:before {
+  min-height: 24px;
 }
 
-.lnr-btn-fb {
-  border-color: #3b5998 !important;
-  background: #3b5998 !important;
-  color: #fff !important;
+.lnr-btn-ios img {
+  height: auto;
+  width: 154px;
+  padding: 0;
 }
 
-/* fix for md-container margin */
-autocomplete {
-  margin-bottom: 16px;
+.lnr-btn-lang {
+  width: 154px;
+  text-align: left;
+  padding-left: 14px;
 }
 
-autocomplete md-input-container {
-  margin-bottom: 0;
-}
-
-autocomplete {
-  position: relative;
-}
-
-autocomplete #autocompleteSearch {
-  width: 100%;
-}
-
-autocomplete .pac-container {
-  left: 0 !important;
-  top: 100% !important;
-}
-
-autocomplete .md-errors-spacer {
-  display: none;
-}
-
-/* mobile typorgraphy */
-@media (max-width:599px) {
-  .md-display-1 {
-    font-size: 26px;
-  }
-
-  .md-headline {
-    font-size: 22px;
-  }
-
-  .md-subhead {
-    font-size: 16px;
-  }
-
-  .lnr-page-title {
-    max-width: 95%;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0.18rem 0;
-  }
-}
 
 /*-----------------------------------------------------------------------------------*/
 /* DIALOG MODALS
@@ -368,93 +431,34 @@ autocomplete .md-errors-spacer {
   height: 100%;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* FOOTER
-/*-----------------------------------------------------------------------------------*/
-
-footer md-list-item,
-footer md-list-item:before {
-  min-height: 24px;
-}
-
-.lnr-btn-ios img {
-  height: auto;
-  width: 154px;
-  padding: 0;
-}
-
-.lnr-btn-lang {
-  width: 154px;
-  text-align: left;
-  padding-left: 14px;
-}
 
 /*-----------------------------------------------------------------------------------*/
-/* SVG
+/* PAGES
 /*-----------------------------------------------------------------------------------*/
 
-.lnr-icn-sm {
-  width: 24px;
-  height: 24px;
+.lnr-page-margin {
+  margin-top: 48px;
+  margin-bottom: 16px;
 }
 
-.lnr-icn-md {
-  width: 34px;
-  height: 34px;
+.lnr-page-title {
+  text-align: center;
+  max-width: 830px;
 }
 
-.lnr-icn-lrg {
-  width: 48px;
-  height: 48px;
+.lnr-section-title {
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 8px;
 }
 
-.lnr-icn-mlrg {
-  width: 58px;
-  height: 58px;
-}
-
-.lnr-icn-xlrg {
-  width: 120px;
-  height: 120px;
-}
-
-/*-----------------------------------------------------------------------------------*/
-/* PROFILE PICTURE
-/*-----------------------------------------------------------------------------------*/
-
-.lnr-profile-sm {
-  height: 37px;
-  width: 37px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-}
-
-.lnr-profile-md {
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  background-color: #94a3aa;
-  background-position: center;
+#hero-shot {
+  height: 42vh;
   background-size: cover;
+  background-position: 50% 50%;
 }
 
-.lnr-profile-lrg {
-  width: 135px;
-  height: 135px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  background-position: center;
-  background-size: cover;
-}
-
-settings .lnr-profile-lrg {
-  margin: 0;
-  padding: 0;
-}
 
 /*-----------------------------------------------------------------------------------*/
 /* HOME
@@ -680,6 +684,7 @@ home md-grid-list md-grid-tile.tile4 {
   }
 }
 
+
 /*-----------------------------------------------------------------------------------*/
 /*  BIKE CARD
 /*-----------------------------------------------------------------------------------*/
@@ -724,6 +729,7 @@ md-card.lnr-bike-card {
 .lnr-comment .lnr-comment-content {
   margin-top: 8px;
 }
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  BIKE DETAILS
@@ -779,6 +785,7 @@ md-dialog md-dialog-content .date-picker-wrapper .month-wrapper thead {
     width: 100%;
   }
 }
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  SEARCH
@@ -865,6 +872,7 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
   }
 }
 
+
 /*-----------------------------------------------------------------------------------*/
 /*  USER
 /*-----------------------------------------------------------------------------------*/
@@ -872,6 +880,7 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
 user .lnr-user-rating  {
   padding-left: 4px;
 }
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  LIST BIKE
@@ -992,6 +1001,7 @@ listings .lnr-bike-card.lnr-unavailable img {
   }
 }
 
+
 /*-----------------------------------------------------------------------------------*/
 /*  REQUESTS
 /*-----------------------------------------------------------------------------------*/
@@ -1095,6 +1105,7 @@ message .status-message {
   margin-top: -6px;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
 /*  STATIC PAGES
 /*-----------------------------------------------------------------------------------*/
@@ -1118,6 +1129,7 @@ message .status-message {
     position: relative;
   }
 }
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  EVENT PAGES
