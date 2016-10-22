@@ -154,9 +154,9 @@
                   {{ 'list.pictures.select-images' | translate }}
                 </md-button>
 
-                <div class="preview-container" layout="column" layout-wrap>
+                <div class="preview-container lnr-margin-top" layout="column" layout-wrap>
                   <div ng-repeat="img in list.form.images track by $index" layout="row" layout-align="space-between center">
-                    <div class="img-preview lnr-margin" ngf-background="img" ngf-as-background="true"></div>
+                    <div class="img-preview lnr-margin-top" ngf-background="img" ngf-as-background="true"></div>
 
                     <md-button class="md-lined md-warn" ng-click="list.removeImage($index)">{{ 'list.pictures.remove' | translate}}</md-button>
                   </div>

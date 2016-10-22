@@ -154,13 +154,13 @@
                   {{ 'list.pictures.select-images' | translate }}
                 </md-button>
 
-                <div class="preview-container" layout="column" layout-wrap>
+                <div class="preview-container lnr-margin-top" layout="column" layout-wrap>
                   <div ng-repeat="img in edit.form.images track by $index" layout="row" layout-align="space-between center">
-                    <div ng-if="img.local == 'true'" class="img-preview lnr-margin"
+                    <div ng-if="img.local == 'true'" class="img-preview lnr-margin-top"
                       ngf-background="img.src" ngf-as-background="true">
                     </div>
 
-                    <div ng-if="img.local == 'false'" class="img-preview lnr-margin"
+                    <div ng-if="img.local == 'false'" class="img-preview lnr-margin-top"
                       ng-style="{'background-image': 'url(' + img.url + ')'}">
                     </div>
                     <md-button class="md-lined md-warn" ng-click="edit.removeImage($index)">{{ 'list.pictures.remove' | translate}}</md-button>

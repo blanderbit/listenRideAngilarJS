@@ -344,6 +344,11 @@ autocomplete .md-errors-spacer {
   display: none;
 }
 
+/* menu divider */
+.md-open-menu-container md-menu-divider {
+  margin-bottom: 2px;
+}
+
 
 /* mobile typorgraphy */
 @media (max-width:599px) {
