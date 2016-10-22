@@ -374,25 +374,11 @@ autocomplete .md-errors-spacer {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/* USER MODALS
+/* DIALOG MODALS
 /*-----------------------------------------------------------------------------------*/
 
-.lnr-user-modal {
+.md-dialog-content {
   width: 450px;
-}
-
-.lnr-user-modal .md-button {
-  margin: 0;
-}
-
-md-dialog-content .md-button {
-  margin: 0;
-}
-
-.lnr-user-modal .md-dialog-content,
-.lnr-verification-modal .md-dialog-content {
-  padding: 25px 30px;
-  padding-top: 10px;
 }
 
 .lnr-input-containers md-input-container {
@@ -408,12 +394,16 @@ md-dialog-content .md-button {
   margin-right: 0;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* VERIFICATION MODALS
-/*-----------------------------------------------------------------------------------*/
+.md-dialog-buttons .md-button {
+  margin-top: 16px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
 
-.lnr-verification-modal {
-  width: 550px;
+.md-dialog-content md-input-container label:not(.md-no-float):not(.md-container-ignore),
+.md-dialog-content md-input-container .md-placeholder {
+  white-space: normal;
 }
 
 .lnr-verification-modal md-tabs {
@@ -426,12 +416,8 @@ md-dialog-content .md-button {
   padding-bottom: 0px;
 }
 
-.lnr-verification-modal md-input-container {
-  margin-bottom: 8px;
-}
-
-.lnr-verification-modal p {
-  // margin: 16px 0;
+.lnr-rating-dialog .md-input-messages-animation  {
+  height: 100%;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -1159,18 +1145,6 @@ message .status-message {
   border-right-color: rgba(229,234,234,0.4);
   border-width: 6px;
   margin-top: -6px;
-}
-
-/*-----------------------------------------------------------------------------------*/
-/*  RATINGS DIALOG
-/*-----------------------------------------------------------------------------------*/
-
-.lnr-rating-dialog {
-  width: 600px;
-}
-
-.lnr-rating-dialog .md-input-messages-animation  {
-  height: 100%;
 }
 
 /*-----------------------------------------------------------------------------------*/
