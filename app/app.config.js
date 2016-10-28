@@ -164,9 +164,16 @@ angular.
       suffix: '.json'
     });
 
-    $translateProvider.preferredLanguage('de');
-    $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
+    var browserLanguage = $translateProvider.resolveClientLocale();
 
+    if (browserLanguage != undefined && browserLanguage.length >= 2) {
+      browserLanguage = browserLanguage.substring(0,2);
+    } else {
+      browserLanguage = "en";
+    }
+
+    $translateProvider.preferredLanguage(browserLanguage);
+    $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
 
     // Themes & Colors
     $mdThemingProvider.definePalette('lnr-blue', {
