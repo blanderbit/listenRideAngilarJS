@@ -8,7 +8,8 @@ angular.
     ezfbProvider,
     $mdAriaProvider,
     $mdThemingProvider,
-    $locationProvider) {
+    $locationProvider,
+    $urlRouterProvider) {
 
     $mdAriaProvider.disableWarnings();
 
@@ -32,7 +33,7 @@ angular.
 
     $stateProvider.state({
       name: 'bike',
-      url: '/bikes/{bikeId}',
+      url: '/bikes/{bikeId:int}',
       template: '<bike></bike>'
     });
 
@@ -53,13 +54,13 @@ angular.
 
     $stateProvider.state({
       name: 'user',
-      url: '/users/{userId}',
+      url: '/users/{userId:int}',
       template: '<user></user>'
     });
 
     $stateProvider.state({
       name: 'requests',
-      url: '/requests/{requestId}',
+      url: '/requests/{requestId:int}',
       template: '<requests></requests>'
     });
 
@@ -77,7 +78,7 @@ angular.
 
     $stateProvider.state({
       name: 'edit',
-      url: '/edit/{bikeId}',
+      url: '/edit/{bikeId:int}',
       template: '<edit></edit>'
     });
 
@@ -157,6 +158,15 @@ angular.
       name: 'howItWorks',
       url: '/how-it-works',
       templateUrl: 'app/modules/static/how-it-works.template.html'
+    });
+
+    $stateProvider.state('404', {
+      templateUrl: 'app/modules/static/error-404.template.html',
+    });
+
+    $urlRouterProvider.otherwise(function($injector, $location) {
+      var state = $injector.get('$state');
+      state.go('404');
     });
 
     $translateProvider.useStaticFilesLoader({
