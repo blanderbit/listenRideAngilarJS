@@ -1,14 +1,13 @@
 'use strict';
 
 angular.module('listingABike').component('listingABike', {
-  templateUrl: 'app/modules/listingABike/listingABike.template.html',
+  templateUrl: 'app/modules/listing-a-bike/listing-a-bike.template.html',
   controllerAs: 'listingABike',
   controller: [ 'authentication',
     function HomeController(authentication) {
       var listingABike = this;
 
-      listingABike.isLoggedIn = authentication.loggedIn();
-      listingABike.showSignupDialog = authentication.showSignupDialog;
+      listingABike.authentication = authentication;
     }
   ]
 });

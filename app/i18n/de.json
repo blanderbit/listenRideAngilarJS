@@ -436,7 +436,7 @@
     "subheader": "Fahrrad ausleihen wird mit listnride genauso sicher wie unkompliziert.",
     "guarantee": {
       "title": "Die Vermieter-Garantie von listnride",
-      "content": "listnride ist eine Community von Fahrradliebhabern. Aber hey, manchmal geht auch bei den Sorgsamsten was daneben. Deshalb haben wir die Vermieter-Garantie in petto: Wird Dein Fahrrad während der Mietzeit beschädigt oder gestohlen und kann Dein Mieter den Schaden nicht ersetzen, bietet sie Schutz bis zu einer Höhe von 5.000 EUR. Die Zahlungen unterliegen bestimmten Bedingungen, Einschränkungen und Ausnahmen. Bitte lese für weitere Details unsere Nutzungs- und Mietbedingungen."
+      "content": "listnride ist eine Community von Fahrradliebhabern. Aber hey, manchmal geht auch bei den Sorgsamsten was daneben. Deshalb haben wir die Vermieter-Garantie in petto: Wird Dein Fahrrad während der Mietzeit beschädigt oder gestohlen und kann Dein Mieter den Schaden nicht ersetzen, bietet sie Schutz bis zu einer Höhe von 5.000 EUR. Die Zahlungen unterliegen bestimmten Bedingungen, Einschränkungen und Ausnahmen. Bitte lese für weitere Details unsere <a class='lnr-link' ui-sref='terms'>Nutzungs- und Mietbedingungen</a>."
     },
     "responsibility": {
       "title": "Verantwortungsvoller Umgang mit Deinen Daten",
@@ -598,5 +598,11 @@
     "rapha-super-cross": {
       "text": "Der Rapha Super Cross ist wieder zurück in München, zum dritten Mal. Wenn du gerne dabei sein möchtest aber kein geeignetes Rad hast, kannst du über listnride ein Rad mieten. Die listnride bike sharing community bietet verschiedene Crossräder zum Verleih an. Die Räder können vor der Veranstaltung bei den einzelnen Anbietern angefragt und gebucht werden. Die Übergabe wird direkt mit dem Vermieter vereinbart. Zusätzlich verfügbare Räder können auch noch zur Vermietung angeboten werden, um damit etwas zu verdienen und interessante Leute zu treffen, welche an der Veranstaltung teilnehmen. Werde Teil der wachsenden Community!"
     }
+  },
+
+  "error-404": {
+    "title": "404 Seite nicht gefunden",
+    "details": "Die gesuchte Seite existiert nicht!",
+    "home-link": "Zurück nach Homepage"
   }
 }

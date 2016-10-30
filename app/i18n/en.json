@@ -436,7 +436,7 @@
     "guarantee-icon" : "garantie_en",
     "guarantee" : {
       "title" : "listnride’s lister guarantee",
-      "content": "Listnride is a community of bike enthusiasts. But hey, sometimes things go wrong no matter how careful you are. That’s why we have our lister guarantee at the ready: If your bike gets damaged or stolen during the bike hire and the rider cannot pay compensation, the guarantee ensures coverage of up to EUR 5,000. The payments are subject to certain conditions, limitations and exceptions. For more information, please refer to our Rental Terms and Conditions."
+      "content": "Listnride is a community of bike enthusiasts. But hey, sometimes things go wrong no matter how careful you are. That’s why we have our lister guarantee at the ready: If your bike gets damaged or stolen during the bike hire and the rider cannot pay compensation, the guarantee ensures coverage of up to EUR 5,000. The payments are subject to certain conditions, limitations and exceptions. For more information, please refer to our <a class='lnr-link' ui-sref='terms'>Rental Terms and Conditions</a>."
     },
     "responsibility" : {
       "title" : "We treat your data responsibly",
@@ -598,5 +598,11 @@
     "rapha-super-cross": {
       "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
     }
+  },
+
+  "error-404": {
+    "title": "404 Page not found",
+    "details": "The page you are looking for does not exist!",
+    "home-link": "Back to the homepage"
   }
 }

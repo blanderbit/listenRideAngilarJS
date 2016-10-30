@@ -584,7 +584,8 @@ home #landingSection .lnr-page-title {
 }
 
 .cb-slideshow li:nth-child(1) span { 
-  background-image: url(../ui_images/lnr_hero1.jpg) 
+  background-image: url(../ui_images/lnr_hero1.jpg); 
+  background-position: 75% 50%;
 }
 
 .cb-slideshow li:nth-child(2) span { 
@@ -1195,6 +1196,11 @@ message .status-message {
   .lnr-garantee md-icon {
     position: relative;
   }
+}
+
+#error404 {
+  text-align: center;
+  min-height: calc(100vh - 413px);
 }
 
 /*-----------------------------------------------------------------------------------*/

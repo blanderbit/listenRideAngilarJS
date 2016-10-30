@@ -28,14 +28,13 @@ angular.module('footer').component('footer', {
         $window.open('https://itunes.apple.com/de/app/list-n-ride/id992114091?l=' + $translate.use(), '_blank');
       }
 
-
       function getLanguage(locale) {
         if (locale === 'en') {
-          return footer.language = 'English';
+          return 'English';
         } else if (locale === 'de') {
-          return footer.language = 'Deutsch';
+          return 'Deutsch';
         } else {
-          return footer.language = 'Deutsch';
+          return 'English';
         }
       }
     }
