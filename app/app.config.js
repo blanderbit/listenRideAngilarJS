@@ -61,6 +61,9 @@ angular.
     $stateProvider.state({
       name: 'requests',
       url: '/requests/{requestId:int}',
+      params: {
+        requestId: { squash: true, value: null }
+      },
       template: '<requests></requests>'
     });
 
