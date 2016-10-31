@@ -258,6 +258,9 @@ angular.
         logout: logout,
         profilePicture: function() {
           return $localStorage.profilePicture
+        },
+        userId: function() {
+          return $localStorage.userId
         }
       };
     }

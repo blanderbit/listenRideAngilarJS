@@ -156,7 +156,12 @@ angular.
               );
             },
             function (error) {
-              console.log("Could not verify phone number");
+              $mdToast.show(
+                $mdToast.simple()
+                .textContent('Error: The Verification Code seems to be invalid.')
+                .hideDelay(4000)
+                .position('top center')
+              );
             }
           );
         };

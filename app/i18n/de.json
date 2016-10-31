@@ -32,7 +32,8 @@
     "from-place" : "aus",
     "contact": "Kontakt & Hilfe",
     "show-more" : "zeig mehr",
-    "show-less" : "zeige weniger"
+    "show-less" : "zeige weniger",
+    "phone-number": "Telefonnummer"
   },
 
   "toasts": {
@@ -69,6 +70,32 @@
     "add-voucher": "Gutschein hinzufügen"
   },
 
+    "verification": {
+    "verify-profile": "Verifiziere dein Profil",
+    "resend-email": "Email erneut senden",
+    "1": {
+      "text1": "Willkommen zu unserer passionierten, weltweiten Community aus Fahrradliebhabern!",
+      "text2": "Wir sind eine Sharing-Plattform, Vertrauen und Sicherheit haben für uns höchste Priorität.",
+      "text3": "Deshalb bitten wir dich, dein Profil in ein paar einfach Schritten zu verifizieren. Umso besser die eingegebenen Informationen sind, umso höher die Chance auf erfolgreiche Vermietungen."
+    },
+    "2": {
+      "description": "Lade ein Bild von dir hoch! Ein Gesicht ist das Wichtigste für die Nutzer."
+    },
+    "3": {
+      "description": "Schreibe ein paar Sätze über dich. Das gibt deinem Profil Persönlichkeit!",
+      "label": "Beschreibung (min. 100 Buchstaben)"
+    },
+    "4": {
+      "description": "Verifiziere deine Email-Adresse indem du auf den Link klickst, den wir dir nach Anmeldung gemailt haben. Falls du keine Email von uns findest warte ein paar Minuten und schau in deinen Spam-Ordner."
+    },
+    "5": {
+      "description": "Verifiziere deine Telefonnummer. Gebe einfach deine Nummer ein und klicke auf 'Bestätigung Senden'. Du bekommst per SMS einen Code zugeschickt den du unten eingeben kannst."
+    },
+    "6": {
+      "description": "Zuletzt, gib deine Adresse an."
+    }
+  },
+
   "bike": {
     "rent-bike": "Fahrrad Mieten"
   },
@@ -92,7 +119,10 @@
       "5": "Exzellent",
       "rating_text_rider": "Bitte schreib ein paar Sätze über deine Ausleih-Erfahrung. Der Verleiher wird dies auch tun.",
       "rating_text_lister": "Bitte schreib ein paar Sätze über deine Ausleih-Erfahrung. Der Mieter wird dies auch tun."
-    }
+    },
+    "write-message": "Schreibe eine Nachricht...",
+    "complete-profile": "Vervollständige dein Profil",
+    "complete-profile-description": "Um das Rad zu buchen, gebe dein Zahlungsmittel an. Alle Daten werden über eine gesicherte Verbindung übertragen."
   },
 
   "message": {
@@ -545,11 +575,15 @@
   "terms-and-conditions" : {
     "title" : "Terms and conditions",
     "header" : "Allgemeine Geschäftsbedingungen für die Online-Plattform listnride",
-    "download" : "Hier zum download"
+    "download" : "Hier zum download",
+    "description": "<a href=\"http://cdn.listnride.com/de/tacs.pdf\" target=\"_blank\">Sie können die AGBs hier anschauen und herunterladen.",
+    "subtitle": "Die List and Ride GmbH (im Folgenden „listnride“) vermittelt über die Webseite www.listnride.com (im Folgenden „Webseite“) Mietverträge über Fahrräder und andere Sport- und Freizeitausrüstung. Die nachfolgenden Allgemeinen Nutzungsbedingungen (im Folgenden „Nutzungsbedingungen“) im Abschnitt I. werden Bestandteil des Vertrages der zwischen dem Nutzer und listnride über die Vermittlungsleistung zustande kommt. Wird über die Webseite ein Vertrag über die Anmietung des Gebrauchsgegenstandes (im Folgenden „Mietvertrag“) geschlossen, kommt dieser zu den im Abschnitt II. genannten Allgemeinen Mietbedingungen (im Folgenden „Mietbedingungen“) zustande."
   },
 
   "privacy" : {
-    "title" : "Datenschutz"
+    "title" : "Datenschutz",
+    "subtitle": "Datenschutzrichtlinien",
+    "description": "Mit den Datenschutzbestimmungen informiert die List and Ride GmbH (im Folgenden „listnride“) Sie über den Umgang mit Ihren personenbezogenen Daten. <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Sie können die Datenschutzbestimmungen hier abrufen und ausdrucken.</a>"
   },
 
   "imprint" : {

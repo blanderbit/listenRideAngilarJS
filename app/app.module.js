@@ -20,6 +20,7 @@ angular.module('listnride', [
   'settings',
   'listingABike',
   'raphaSuperCross',
+  'static',
   /* external modules */
   'ngMaterial',
   'ngMessages',

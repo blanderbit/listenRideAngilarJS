@@ -59,6 +59,12 @@ angular.
     });
 
     $stateProvider.state({
+      name: 'wfs',
+      url: '/wfs',
+      template: '<user></user>' 
+    });
+
+    $stateProvider.state({
       name: 'requests',
       url: '/requests/{requestId:int}',
       params: {
