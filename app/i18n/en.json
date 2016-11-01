@@ -205,7 +205,8 @@
   },
 
   "search" : {
-    "no-bikes": "There are no bikes in this location"
+    "no-bikes": "There are no bikes in this location",
+    "all-sizes": "All Sizes"
   },
 
   "calendar": {

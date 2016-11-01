@@ -205,7 +205,8 @@
   },
 
   "search": {
-    "no-bikes": "Es gibt keine Räder an diesem Ort"
+    "no-bikes": "Es gibt keine Räder an diesem Ort",
+    "all-sizes": "Alle Große"
   },
 
   "calendar": {

@@ -6,8 +6,8 @@ angular.module('search').component('search', {
   bindings: {
     location: '<'
   },
-  controller: ['$http', '$stateParams', '$state', 'NgMap', 'api',
-    function SearchController($http, $stateParams, $state, NgMap, api) {
+  controller: ['$translate', '$http', '$stateParams', '$state', 'NgMap', 'api',
+    function SearchController($translate, $http, $stateParams, $state, NgMap, api) {
       var search = this;
 
       search.location = $stateParams.location;
@@ -33,6 +33,10 @@ angular.module('search').component('search', {
         {value: 185, label: "185 - 195"},
         {value: 195, label: "195 - 205"}
       ];
+
+      $translate('search.all-sizes').then(function (translation) {
+        search.sizeOptions[0].label = translation;
+      });
 
       search.mapOptions = {
         lat: 40,
