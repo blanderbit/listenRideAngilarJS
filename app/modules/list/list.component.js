@@ -3,8 +3,8 @@
 angular.module('list').component('list', {
   templateUrl: 'app/modules/list/list.template.html',
   controllerAs: 'list',
-  controller: ['$mdDialog', '$localStorage', '$state', '$scope', 'Upload', 'bike_options', 'api', '$timeout', 'verification', 'access_control',
-    function ListController($mdDialog, $localStorage, $state, $scope, Upload, bike_options, api, $timeout, verification, access_control) {
+  controller: ['$mdDialog', '$localStorage', '$state', '$scope', 'Upload', 'bike_options', 'api', '$timeout', 'verification', 'access_control', 'loadingDialog',
+    function ListController($mdDialog, $localStorage, $state, $scope, Upload, bike_options, api, $timeout, verification, access_control, loadingDialog) {
       if (access_control.requireLogin()) {
         return;
       }
@@ -40,7 +40,7 @@ angular.module('list').component('list', {
 
       list.onFormSubmit = function() {
         list.submitDisabled = true;
-        showLoadingDialog();
+        loadingDialog.open();
 
         var ride = {
           "ride[name]": list.form.name,
@@ -78,12 +78,12 @@ angular.module('list').component('list', {
           }
         }).then(
           function(response) {
-            hideLoadingDialog();
+            loadingDialog.close();
             $state.go("listings");
           },
           function(error) {
             list.submitDisabled = false;
-            hideLoadingDialog();
+            loadingDialog.close();
             console.log("Error while listing bike", error);
           }
         );
@@ -166,20 +166,6 @@ angular.module('list').component('list', {
           list.form.city = desiredComponents.locality;
           list.form.country = desiredComponents.country;
         }
-      };
-
-      var loadingDialog;
-
-      function showLoadingDialog() {
-        var loadingDialog = $mdDialog.show({
-          parent: angular.element(document.body),
-          templateUrl: 'app/modules/list/loadingDialog.template.html',
-          fullscreen: true
-        });
-      };
-
-      function hideLoadingDialog() {
-        $mdDialog.hide(loadingDialog);
       };
 
     }
