@@ -89,10 +89,10 @@
     </div>
   </div>
 
-  <md-button type="submit" class="md-raised md-primary lnr-margin-lrg" ng-click="calendar.onBikeRequest()" ng-disabled="calendar.owner || !calendar.loggedIn || calendar.isFormInvalid()">
+  <md-button type="submit" class="md-raised md-primary lnr-margin-lrg" ng-click="calendar.onBikeRequest()" ng-disabled="calendar.owner || !calendar.authentication.loggedIn() || calendar.isFormInvalid()">
     {{ 'calendar.request-bike' | translate }}
   </md-button>
-  <p ng-if="!calendar.loggedIn" class="md-caption center-text lnr-margin-lrg">{{ 'calendar.to-request-bike-please' | translate }} {{ 'forms.sign-up' | translate }} {{ 'forms.or' | translate }} {{ 'forms.log-in' | translate }}</p>
+  <p ng-if="!calendar.authentication.loggedIn()" class="md-caption center-text lnr-margin-lrg">{{ 'calendar.to-request-bike-please' | translate }} {{ 'forms.sign-up' | translate }} {{ 'forms.or' | translate }} {{ 'forms.log-in' | translate }}</p>
   <p ng-if="calendar.owner" class="md-caption center-text lnr-margin-lrg">{{ 'calendar.own-bike' | translate }}</p>
 
   <div ng-if="calendar.isDateInvalid()" layout-padding>{{ 'calendar.invalid-date' | translate }}</div>
