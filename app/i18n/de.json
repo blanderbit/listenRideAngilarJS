@@ -33,7 +33,8 @@
     "contact": "Kontakt & Hilfe",
     "show-more" : "zeig mehr",
     "show-less" : "zeige weniger",
-    "phone-number": "Telefonnummer"
+    "phone-number": "Telefonnummer",
+    "wait": "Lädt hoch, dies kann einen Moment dauern.."
   },
 
   "toasts": {
@@ -220,7 +221,6 @@
     "back": "Zürück",
     "next": "Weiter",
     "list-bike": "Rad einstellen",
-    "loading": "Rad wird hochgeladen. Moment bitte.",
     "accessories": {
       "hint": "Wähle das Zubehör, dass Du zur Verfügung stellen kannst.",
       "accessories": "Zubehör",
