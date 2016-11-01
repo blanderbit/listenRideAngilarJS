@@ -74,25 +74,25 @@
     "verify-profile": "Verifiziere dein Profil",
     "resend-email": "Email erneut senden",
     "1": {
-      "text1": "Willkommen zu unserer passionierten, weltweiten Community aus Fahrradliebhabern!",
-      "text2": "Wir sind eine Sharing-Plattform, Vertrauen und Sicherheit haben für uns höchste Priorität.",
+      "text1": "Willkommen bei listnride!",
+      "text2": "Herzlich willkommen in unserer Bike-Sharing-Community mit vielen tollen Bikes und begeisterten Fahrradliebhabern aus aller Welt. In unserer Community dreht sich alles darum, sein geliebtes Zweirad mit anderen zu teilen – gegenseitiges Vertrauen und Sicherheit für Dich und die anderen User stehen daher für uns an erster Stelle.",
       "text3": "Deshalb bitten wir dich, dein Profil in ein paar einfach Schritten zu verifizieren. Umso besser die eingegebenen Informationen sind, umso höher die Chance auf erfolgreiche Vermietungen."
     },
     "2": {
-      "description": "Lade ein Bild von dir hoch! Ein Gesicht ist das Wichtigste für die Nutzer."
+      "description": "Lade ein Profilbild von Dir hoch! Für andere Nutzer ist es äußerst wichtig zu sehen, wer sich hinter einem Profil verbirgt."
     },
     "3": {
-      "description": "Schreibe ein paar Sätze über dich. Das gibt deinem Profil Persönlichkeit!",
+      "description": "Schreib ein paar Zeilen über Dich und das Fahrradfahren und bring so mehr Leben in Dein Profil!",
       "label": "Beschreibung (min. 100 Buchstaben)"
     },
     "4": {
-      "description": "Verifiziere deine Email-Adresse indem du auf den Link klickst, den wir dir nach Anmeldung gemailt haben. Falls du keine Email von uns findest warte ein paar Minuten und schau in deinen Spam-Ordner."
+      "description": "Bestätige Deine E-Mail-Adresse, indem Du auf den Link in der Bestätigungsmail klickst, die wir Dir nach der Registrierung schicken. Falls Du sie nicht mehr findest, kannst Du die Mail erneut anfordern. Erscheint sie nicht sofort in Deinem Postfach, warte bitte noch ein paar Minuten oder überprüfe deinen Spam-Ordner."
     },
     "5": {
-      "description": "Verifiziere deine Telefonnummer. Gebe einfach deine Nummer ein und klicke auf 'Bestätigung Senden'. Du bekommst per SMS einen Code zugeschickt den du unten eingeben kannst."
+      "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst."
     },
     "6": {
-      "description": "Zuletzt, gib deine Adresse an."
+      "description": "Gib zu guter Letzt noch Deine Wohnanschrift ein."
     }
   },
 
