@@ -15,21 +15,21 @@ angular.module('list').component('list', {
         images: []
       };
 
-      api.get('/users/' + $localStorage.userId).then(
-        function (success) {
-          var user = success.data;
-          if (!user.has_address || !user.confirmed_phone || user.status == 0) {
-            verification.openDialog(true);
-          }
-          list.form.street = user.street;
-          list.form.zip = user.zip;
-          list.form.city = user.city;
-          list.form.country = user.country;
-        },
-        function (error) {
-          console.log("Error fetching User");
-        }
-      );
+      // api.get('/users/' + $localStorage.userId).then(
+      //   function (success) {
+      //     var user = success.data;
+      //     if (!user.has_address || !user.confirmed_phone || user.status == 0) {
+      //       verification.openDialog(true);
+      //     }
+      //     list.form.street = user.street;
+      //     list.form.zip = user.zip;
+      //     list.form.city = user.city;
+      //     list.form.country = user.country;
+      //   },
+      //   function (error) {
+      //     console.log("Error fetching User");
+      //   }
+      // );
 
       list.selectedIndex = 0;
       list.sizeOptions = bike_options.sizeOptions();
@@ -39,6 +39,8 @@ angular.module('list').component('list', {
       list.accessoryOptions = bike_options.accessoryOptions();
 
       list.onFormSubmit = function() {
+
+
         list.submitDisabled = true;
         loadingDialog.open();
 
@@ -68,25 +70,39 @@ angular.module('list').component('list', {
           "ride[image_file_4]": list.form.images[3],
           "ride[image_file_5]": list.form.images[4]
         };
-        
-        Upload.upload({
-          method: 'POST',
-          url: api.getApiUrl() + '/rides',
-          data: ride,
-          headers: {
-            'Authorization': $localStorage.auth
-          }
-        }).then(
-          function(response) {
-            loadingDialog.close();
-            $state.go("listings");
+
+        api.get('/users/' + $localStorage.userId).then(
+          function (success) {
+            var user = success.data;
+            if (!user.has_address || !user.confirmed_phone || user.status == 0) {
+              verification.openDialog(false);
+              list.submitDisabled = false;
+            } else {
+              Upload.upload({
+                method: 'POST',
+                url: api.getApiUrl() + '/rides',
+                data: ride,
+                headers: {
+                  'Authorization': $localStorage.auth
+                }
+              }).then(
+                function(response) {
+                  loadingDialog.close();
+                  $state.go("listings");
+                },
+                function(error) {
+                  list.submitDisabled = false;
+                  loadingDialog.close();
+                  console.log("Error while listing bike", error);
+                }
+              );
+            }
           },
-          function(error) {
-            list.submitDisabled = false;
-            loadingDialog.close();
-            console.log("Error while listing bike", error);
+          function (error) {
+            console.log("Error fetching User");
           }
         );
+
       };
 
       list.nextTab = function() {
