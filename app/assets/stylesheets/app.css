@@ -89,19 +89,19 @@ autocomplete .md-errors-spacer {
 /* mobile typorgraphy */
 @media (max-width:599px) {
   .md-display-1 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .md-headline {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .md-subhead {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .lnr-page-title {
-    max-width: 95%;
+    max-width: 90%;
   }
 
   h1,
@@ -110,7 +110,7 @@ autocomplete .md-errors-spacer {
   h4,
   h5,
   h6 {
-    margin: 0.18rem 0;
+    margin: 0.08rem 0;
   }
 }
 
