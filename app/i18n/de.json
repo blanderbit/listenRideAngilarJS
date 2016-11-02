@@ -14,8 +14,10 @@
     "munich": "München",
     "amsterdam": "Amsterdam",
     "vienna": "Wien",
+    "per": "pro",
     "hour": "Stunde",
     "hours": "Stunden",
+    "half-day": "Halbtag (max 6h)",
     "day": "Tag",
     "days": "Tage",
     "week": "Woche",
@@ -34,7 +36,10 @@
     "show-more" : "zeig mehr",
     "show-less" : "zeige weniger",
     "phone-number": "Telefonnummer",
-    "wait": "Lädt hoch, dies kann einen Moment dauern.."
+    "wait": "Lädt hoch, dies kann einen Moment dauern..",
+    "lister": "Vermieter",
+    "reviews": "Bewertungen",
+    "for": "für"
   },
 
   "toasts": {
@@ -42,7 +47,8 @@
     "error": "Es ist ein Fehler aufgetreten. Bitte stell sicher dass deine Internetverbindung funktioniert und versuche es nochmal.",
     "add-payout-success": "Deine Auszahlungsmethode wurde erfolgreich hinzugefügt.",
     "add-voucher-success": "Glückwunsch, der Gutschein wurde deinem Konto hinzugefügt.",
-    "add-voucher-error": "Der angegebene Gutschein ist leider nicht gültig."
+    "add-voucher-error": "Der angegebene Gutschein ist leider nicht gültig.",
+    "verification-email-sent": "Eine Email mit Bestätigungslink wurde an deine Email-Adresse gesendet. Dies kann ein paar Minuten dauern, falls du nichts findest schau bitte auch in deinem Spam-Ordner nach."
   },
 
   "settings": {
@@ -98,7 +104,8 @@
   },
 
   "bike": {
-    "rent-bike": "Fahrrad Mieten"
+    "rent-bike": "Fahrrad Mieten",
+    "view-pictures": "Bilder ansehen"
   },
 
   "user": {
