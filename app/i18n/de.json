@@ -14,8 +14,10 @@
     "munich": "München",
     "amsterdam": "Amsterdam",
     "vienna": "Wien",
+    "per": "pro",
     "hour": "Stunde",
     "hours": "Stunden",
+    "half-day": "Halbtag (max 6h)",
     "day": "Tag",
     "days": "Tage",
     "week": "Woche",
@@ -32,7 +34,12 @@
     "from-place" : "aus",
     "contact": "Kontakt & Hilfe",
     "show-more" : "zeig mehr",
-    "show-less" : "zeige weniger"
+    "show-less" : "zeige weniger",
+    "phone-number": "Telefonnummer",
+    "wait": "Lädt hoch, dies kann einen Moment dauern..",
+    "lister": "Vermieter",
+    "reviews": "Bewertungen",
+    "for": "für"
   },
 
   "toasts": {
@@ -40,7 +47,8 @@
     "error": "Es ist ein Fehler aufgetreten. Bitte stell sicher dass deine Internetverbindung funktioniert und versuche es nochmal.",
     "add-payout-success": "Deine Auszahlungsmethode wurde erfolgreich hinzugefügt.",
     "add-voucher-success": "Glückwunsch, der Gutschein wurde deinem Konto hinzugefügt.",
-    "add-voucher-error": "Der angegebene Gutschein ist leider nicht gültig."
+    "add-voucher-error": "Der angegebene Gutschein ist leider nicht gültig.",
+    "verification-email-sent": "Eine Email mit Bestätigungslink wurde an deine Email-Adresse gesendet. Dies kann ein paar Minuten dauern, falls du nichts findest schau bitte auch in deinem Spam-Ordner nach."
   },
 
   "settings": {
@@ -69,8 +77,35 @@
     "add-voucher": "Gutschein hinzufügen"
   },
 
+    "verification": {
+    "verify-profile": "Verifiziere dein Profil",
+    "resend-email": "Email erneut senden",
+    "1": {
+      "text1": "Willkommen bei listnride!",
+      "text2": "Herzlich willkommen in unserer Bike-Sharing-Community mit vielen tollen Bikes und begeisterten Fahrradliebhabern aus aller Welt. In unserer Community dreht sich alles darum, sein geliebtes Zweirad mit anderen zu teilen – gegenseitiges Vertrauen und Sicherheit für Dich und die anderen User stehen daher für uns an erster Stelle.",
+      "text3": "Deshalb bitten wir dich, dein Profil in ein paar einfach Schritten zu verifizieren. Umso besser die eingegebenen Informationen sind, umso höher die Chance auf erfolgreiche Vermietungen."
+    },
+    "2": {
+      "description": "Lade ein Profilbild von Dir hoch! Für andere Nutzer ist es äußerst wichtig zu sehen, wer sich hinter einem Profil verbirgt."
+    },
+    "3": {
+      "description": "Schreib ein paar Zeilen über Dich und das Fahrradfahren und bring so mehr Leben in Dein Profil!",
+      "label": "Beschreibung (min. 100 Buchstaben)"
+    },
+    "4": {
+      "description": "Bestätige Deine E-Mail-Adresse, indem Du auf den Link in der Bestätigungsmail klickst, die wir Dir nach der Registrierung schicken. Falls Du sie nicht mehr findest, kannst Du die Mail erneut anfordern. Erscheint sie nicht sofort in Deinem Postfach, warte bitte noch ein paar Minuten oder überprüfe deinen Spam-Ordner."
+    },
+    "5": {
+      "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst."
+    },
+    "6": {
+      "description": "Gib zu guter Letzt noch Deine Wohnanschrift ein."
+    }
+  },
+
   "bike": {
-    "rent-bike": "Fahrrad Mieten"
+    "rent-bike": "Fahrrad Mieten",
+    "view-pictures": "Bilder ansehen"
   },
 
   "user": {
@@ -92,7 +127,10 @@
       "5": "Exzellent",
       "rating_text_rider": "Bitte schreib ein paar Sätze über deine Ausleih-Erfahrung. Der Verleiher wird dies auch tun.",
       "rating_text_lister": "Bitte schreib ein paar Sätze über deine Ausleih-Erfahrung. Der Mieter wird dies auch tun."
-    }
+    },
+    "write-message": "Schreibe eine Nachricht...",
+    "complete-profile": "Vervollständige dein Profil",
+    "complete-profile-description": "Um das Rad zu buchen, gebe dein Zahlungsmittel an. Alle Daten werden über eine gesicherte Verbindung übertragen."
   },
 
   "message": {
@@ -187,10 +225,9 @@
 
   "list": {
     "list-your-bike": "Rad einstellen",
-    "back": "Zürück",
+    "back": "Zurück",
     "next": "Weiter",
     "list-bike": "Rad einstellen",
-    "loading": "Rad wird hochgeladen. Moment bitte.",
     "accessories": {
       "hint": "Wähle das Zubehör, dass Du zur Verfügung stellen kannst.",
       "accessories": "Zubehör",
@@ -293,7 +330,7 @@
 
   "listingCard": {
     "activate-bike": "Aktivieren",
-    "deactivate-bike": "Deactivieren",
+    "deactivate-bike": "Deaktivieren",
     "edit-bike": "Bearbeiten",
     "delete-bike": "Löschen",
     "cancel": "Abbrechen",
@@ -406,7 +443,7 @@
     "subheader": "Fahrrad ausleihen wird mit listnride genauso sicher wie unkompliziert.",
     "guarantee": {
       "title": "Die Vermieter-Garantie von listnride",
-      "content": "listnride ist eine Community von Fahrradliebhabern. Aber hey, manchmal geht auch bei den Sorgsamsten was daneben. Deshalb haben wir die Vermieter-Garantie in petto: Wird Dein Fahrrad während der Mietzeit beschädigt oder gestohlen und kann Dein Mieter den Schaden nicht ersetzen, bietet sie Schutz bis zu einer Höhe von 5.000 EUR. Die Zahlungen unterliegen bestimmten Bedingungen, Einschränkungen und Ausnahmen. Bitte lese für weitere Details unsere Nutzungs- und Mietbedingungen."
+      "content": "listnride ist eine Community von Fahrradliebhabern. Aber hey, manchmal geht auch bei den Sorgsamsten was daneben. Deshalb haben wir die Vermieter-Garantie in petto: Wird Dein Fahrrad während der Mietzeit beschädigt oder gestohlen und kann Dein Mieter den Schaden nicht ersetzen, bietet sie Schutz bis zu einer Höhe von 5.000 EUR. Die Zahlungen unterliegen bestimmten Bedingungen, Einschränkungen und Ausnahmen. Bitte lese für weitere Details unsere <a class='lnr-link' ui-sref='terms'>Nutzungs- und Mietbedingungen</a>."
     },
     "responsibility": {
       "title": "Verantwortungsvoller Umgang mit Deinen Daten",
@@ -545,11 +582,15 @@
   "terms-and-conditions" : {
     "title" : "Terms and conditions",
     "header" : "Allgemeine Geschäftsbedingungen für die Online-Plattform listnride",
-    "download" : "Hier zum download"
+    "download" : "Hier zum download",
+    "description": "<a href=\"http://cdn.listnride.com/de/tacs.pdf\" target=\"_blank\">Sie können die AGBs hier anschauen und herunterladen.",
+    "subtitle": "Die List and Ride GmbH (im Folgenden „listnride“) vermittelt über die Webseite www.listnride.com (im Folgenden „Webseite“) Mietverträge über Fahrräder und andere Sport- und Freizeitausrüstung. Die nachfolgenden Allgemeinen Nutzungsbedingungen (im Folgenden „Nutzungsbedingungen“) im Abschnitt I. werden Bestandteil des Vertrages der zwischen dem Nutzer und listnride über die Vermittlungsleistung zustande kommt. Wird über die Webseite ein Vertrag über die Anmietung des Gebrauchsgegenstandes (im Folgenden „Mietvertrag“) geschlossen, kommt dieser zu den im Abschnitt II. genannten Allgemeinen Mietbedingungen (im Folgenden „Mietbedingungen“) zustande."
   },
 
   "privacy" : {
-    "title" : "Datenschutz"
+    "title" : "Datenschutz",
+    "subtitle": "Datenschutzrichtlinien",
+    "description": "Mit den Datenschutzbestimmungen informiert die List and Ride GmbH (im Folgenden „listnride“) Sie über den Umgang mit Ihren personenbezogenen Daten. <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Sie können die Datenschutzbestimmungen hier abrufen und ausdrucken.</a>"
   },
 
   "imprint" : {
@@ -564,5 +605,11 @@
     "rapha-super-cross": {
       "text": "Der Rapha Super Cross ist wieder zurück in München, zum dritten Mal. Wenn du gerne dabei sein möchtest aber kein geeignetes Rad hast, kannst du über listnride ein Rad mieten. Die listnride bike sharing community bietet verschiedene Crossräder zum Verleih an. Die Räder können vor der Veranstaltung bei den einzelnen Anbietern angefragt und gebucht werden. Die Übergabe wird direkt mit dem Vermieter vereinbart. Zusätzlich verfügbare Räder können auch noch zur Vermietung angeboten werden, um damit etwas zu verdienen und interessante Leute zu treffen, welche an der Veranstaltung teilnehmen. Werde Teil der wachsenden Community!"
     }
+  },
+
+  "error-404": {
+    "title": "404 Seite nicht gefunden",
+    "details": "Die gesuchte Seite existiert nicht!",
+    "home-link": "Zurück nach Homepage"
   }
 }

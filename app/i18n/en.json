@@ -14,8 +14,10 @@
     "munich": "Munich",
     "amsterdam": "Amsterdam",
     "vienna": "Vienna",
+    "per": "per",
     "hour": "hour",
     "hours": "hours",
+    "half-day": "half day (max 6h)",
     "day": "day",
     "days": "days",
     "week": "week",
@@ -32,7 +34,12 @@
     "from-place" : "from",
     "contact": "Contact & Support",
     "show-more" : "show more",
-    "show-less" : "show less"
+    "show-less" : "show less",
+    "phone-number": "Phone Number",
+    "wait": "Uploading, this may take a moment..",
+    "lister": "Lister",
+    "reviews": "Reviews",
+    "for": "for"
   },
 
   "toasts": {
@@ -40,7 +47,8 @@
     "error": "An error occured. Please make sure your internet connection works and try again.",
     "add-payout-success": "Your payout method was successfully added.",
     "add-voucher-success": "Congratulations, the voucher was added to your account.",
-    "add-voucher-error": "Unfortunately, the supplied voucher is not valid."
+    "add-voucher-error": "Unfortunately, the supplied voucher is not valid.",
+    "verification-email-sent": "An email with a confirmation link was sent to your email address. This may take a few minutes, if you didn't receive anything also have a look in your spam folder."
   },
 
   "settings": {
@@ -69,8 +77,36 @@
     "add-voucher": "Add Voucher"
   },
 
+  "verification": {
+    "verify-profile": "Verify your Profile",
+    "resend-email": "Resend Email",
+    "1": {
+      "text1": "Welcome to our passionate bike sharing community, featuring lots of bikes and bike enthusiasts all over the world.",
+      "text2": "We're a sharing community, so the trust and safety of you and the other users have highest priority.",
+      "text3": "We therefore kindly ask you to verify your profile through a few simple steps. It'll only take you a few minutes. The better the information you enter, the higher are chances that your requests will be accepted and bikes will be requested."
+    },
+    "2": {
+      "description": "Upload a profile picture of yourself! Seeing the face behind a profile is what's most important for the users."
+    },
+    "3": {
+      "description": "Write a couple sentences about yourself and your relation to biking. It gives your profile personality!",
+      "label": "Description (min. 100 Characters)"
+    },
+    "4": {
+      "description": "Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder."
+    },
+    "5": {
+      "description": "Verify your phone number, this allows SMS notifications for your requests. Simply enter your number and click 'Send Confirmation'. You'll receive a code via SMS that you can then enter below."
+    },
+    "6": {
+      "description": "Ultimately, enter your home address."
+    }
+  },
+
   "bike": {
-    "rent-bike": "Rent Bike"
+    "rent-bike": "Rent Bike",
+    "view-pictures": "View Pictures",
+    "for": "for"
   },
 
   "user": {
@@ -92,7 +128,10 @@
       "5": "Excellent",
       "rating_text_rider": "Please summarize your rental experience in a few sentences. The lister will do the same",
       "rating_text_lister": "Please summarize your rental experience in a few sentences. The rider will do the same"
-    }
+    },
+    "write-message": "Write a message...",
+    "complete-profile": "Complete your Profile",
+    "complete-profile-description": "To book the bike, please enter your payment information. All informations are transmitted over a secure connection."
   },
 
   "message": {
@@ -190,7 +229,6 @@
     "back": "Back",
     "next": "Next",
     "list-bike": "List My Bike",
-    "loading": "Bike is being uploaded. This may take a few moments.",
     "accessories": {
       "hint": "Edit accessories. Select the accessories, which you can provide with your bike.",
       "accessories": "Accessories",
@@ -406,7 +444,7 @@
     "guarantee-icon" : "garantie_en",
     "guarantee" : {
       "title" : "listnride’s lister guarantee",
-      "content": "Listnride is a community of bike enthusiasts. But hey, sometimes things go wrong no matter how careful you are. That’s why we have our lister guarantee at the ready: If your bike gets damaged or stolen during the bike hire and the rider cannot pay compensation, the guarantee ensures coverage of up to EUR 5,000. The payments are subject to certain conditions, limitations and exceptions. For more information, please refer to our Rental Terms and Conditions."
+      "content": "Listnride is a community of bike enthusiasts. But hey, sometimes things go wrong no matter how careful you are. That’s why we have our lister guarantee at the ready: If your bike gets damaged or stolen during the bike hire and the rider cannot pay compensation, the guarantee ensures coverage of up to EUR 5,000. The payments are subject to certain conditions, limitations and exceptions. For more information, please refer to our <a class='lnr-link' ui-sref='terms'>Rental Terms and Conditions</a>."
     },
     "responsibility" : {
       "title" : "We treat your data responsibly",
@@ -545,11 +583,15 @@
   "terms-and-conditions" : {
     "title" : "Terms and conditions",
     "header" : "General Terms and Conditions of Business for the listnride Online Platform",
-    "download" : "Download here"
+    "download" : "Download here",
+    "description": "<a href=\"http://cdn.listnride.com/en/tacs.pdf\" target=\"_blank\">You can view and download the TaCs here.",
+    "subtitle": "List and Ride GmbH (hereinafter “listnride”) arranges rental agreements for bicycles and other sport and leisure equipment via the website www.listnride.com (hereinafter “Website”). The following General Terms and Conditions of Use (hereinafter “Terms of Use”) in Section I shall form part of the agreement concluded between the user and listnride in respect of the arrangement service. Any agreement for rental of the used item (hereinafter “Rental Agreement”) concluded via the Website shall comply with the General Terms and Conditions of Rental (hereinafter “Rental Terms”) specified in Section II."
   },
 
   "privacy" : {
-    "title" : "Privacy"
+    "title" : "Privacy",
+    "subtitle": "Data Protection Regulations",
+    "description": "List and Ride GmbH (hereinafter “listnride”) informs you in the Data Protection Regulations about how your personal data are handled. <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">You can view and download the data protection regulations here.</a>"
   },
 
   "imprint" : {
@@ -564,5 +606,11 @@
     "rapha-super-cross": {
       "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
     }
+  },
+
+  "error-404": {
+    "title": "404 Page not found",
+    "details": "The page you are looking for does not exist!",
+    "home-link": "Back to the homepage"
   }
 }

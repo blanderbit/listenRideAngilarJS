@@ -1,6 +1,6 @@
  <md-content class="single-column"> 
   <div id="hero-shot" class="lnr-preload-bg" style="{{'background-image: url(' + bike.data.image_file_1.image_file_1.large.url + ')'}};" layout="row" layout-align="start end">
-    <md-button class="md-raised" ng-click="bike.showGalleryDialog($event)" md-no-ink>View Pictures</md-button>
+    <md-button class="md-raised" ng-click="bike.showGalleryDialog($event)" md-no-ink>{{ 'bike.view-pictures' | translate }}</md-button>
   </div>
 
   <div class="content" layout="column">
@@ -10,23 +10,23 @@
       <div flex-sm="55" layout="row" layout-align="start center">
         <md-icon ng-if="bike.data.category" class="lnr-margin-right lnr-icn-mlrg md-color-foreground lnr-no-padding" md-svg-src="app/assets/ui_icons/biketype_{{ bike.data.category | limitTo: 1 }}.svg"></md-icon>
         <div flex layout="column">
-          <span class="md-title">{{ bike.data.name }}</span>
-          <span class="md-subhead">{{ bike.data.category | category }} by {{ bike.data.brand }}</span>
+          <span class="md-title">{{ bike.data.brand }}, {{ bike.data.category | category }}</span>
+          <span class="md-subhead">{{ bike.data.name }}</span>
         </div>
       </div>
 
       <div flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center">
           <div flex="33" layout="column" layout-align="center center">
             <span class="md-headline">{{ bike.data.price_half_daily | number : 0 }} €</span>
-            <span class="md-caption">halfday</span>
+            <span class="md-caption">{{ 'shared.half-day' | translate }}</span>
           </div>
           <div flex="33" layout="column" layout-align="center center">
             <span class="md-headline">{{ bike.data.price_daily | number : 0 }} €</span>
-            <span class="md-caption">day</span>
+            <span class="md-caption">{{ 'shared.day' | translate }}</span>
           </div>
           <div flex="33" layout="column" layout-align="center center">
             <span class="md-headline">{{ bike.data.price_weekly | number : 0 }} €</span>
-            <span class="md-caption">week</span>
+            <span class="md-caption">{{ 'shared.week' | translate }}</span>
           </div>
       </div>
     </div>
@@ -37,7 +37,7 @@
       <div flex layout="column" layout-padding>
         <div layout="row" layout-xs="column">
           <div flex-gt-xs="25">
-            <p class="md-body-2">Description</p>
+            <p class="md-body-2">{{ 'forms.description' | translate }}</p>
           </div>
           <div flex-gt-xs>
             <p class="md-body-1">{{ bike.data.description }}</p>
@@ -46,7 +46,7 @@
 
         <div layout="row" layout-xs="column">
           <div flex-gt-xs="25">
-            <p class="md-body-2">City</p>
+            <p class="md-body-2">{{ 'forms.city' | translate }}</p>
           </div>
           <div flex-gt-xs>
             <p class="md-body-1 lnr-capitalize">{{ bike.data.city }}, {{ bike.data.country }}</p>
@@ -55,50 +55,50 @@
 
         <div layout="row" layout-xs="column">
           <div flex-gt-xs="25">
-            <p class="md-body-2">Size</p>
+            <p class="md-body-2">{{ 'list.details.size' | translate }}</p>
           </div>
           <div flex-gt-xs>
-            <p class="md-body-1">for <strong>{{ bike.data.size }}</strong> - <strong>{{ bike.data.size + 10 }}</strong> cm</p>
+            <p class="md-body-1">{{ 'shared.for' | translate }} <strong>{{ bike.data.size }}</strong> - <strong>{{ bike.data.size + 10 }}</strong> cm</p>
           </div>
         </div>
 
         <div layout="row" layout-xs="column" layout-align-gt-xs="center center">
           <div flex-gt-xs="25">
-            <p class="md-body-2">Accessories</p>
+            <p class="md-body-2">{{ 'list.accessories.accessories' | translate }}</p>
           </div>
           <div flex-gt-xs>
             <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_lock" md-svg-src="app/assets/ui_icons/accessoire_lock.svg">
-              <md-tooltip md-direction="top">lock</md-tooltip>
+              <md-tooltip md-direction="top">{{ 'list.accessories.lock' | translate }}</md-tooltip>
             </md-icon>
             <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_helmet" md-svg-src="app/assets/ui_icons/accessoire_helmet.svg">
-              <md-tooltip md-direction="top">helmet</md-tooltip>
+              <md-tooltip md-direction="top">{{ 'list.accessories.helmet' | translate }}</md-tooltip>
             </md-icon>
             <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_lights" md-svg-src="app/assets/ui_icons/accessoire_lights.svg">
-              <md-tooltip md-direction="top">lights</md-tooltip>
+              <md-tooltip md-direction="top">{{ 'list.accessories.lights' | translate }}</md-tooltip>
             </md-icon>
             <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_basket" md-svg-src="app/assets/ui_icons/accessoire_basket.svg">
-              <md-tooltip md-direction="top">basket</md-tooltip>
+              <md-tooltip md-direction="top">{{ 'list.accessories.basket' | translate }}</md-tooltip>
             </md-icon>
             <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_trailer" md-svg-src="app/assets/ui_icons/accessoire_trailer.svg">
-              <md-tooltip md-direction="top">trailer</md-tooltip>
+              <md-tooltip md-direction="top">{{ 'list.accessories.trailer' | translate }}</md-tooltip>
             </md-icon>
             <md-icon class="lnr-icn-md" ng-if="bike.data.has_childseat" md-svg-src="app/assets/ui_icons/accessoire_childseat.svg">
-              <md-tooltip md-direction="top">child seat</md-tooltip>
+              <md-tooltip md-direction="top">{{ 'list.accessories.childseat' | translate }}</md-tooltip>
             </md-icon>
           </div>
         </div>
 
         <div layout="row" layout-xs="column">
           <div flex-gt-xs="25">
-            <p class="md-body-2">Details</p>
+            <p class="md-body-2">{{ 'list.details.details' | translate }}</p>
           </div>
           <div class="lnr-compact-details" layout="column" flex-gt-xs>
             <div layout="row" layout-align="start center">
-              <p flex="20" class="md-body-2">Brand</p>
+              <p flex="20" class="md-body-2">{{ 'list.details.brand' | translate }}</p>
               <p class="md-body-1">{{ bike.data.brand }}</p>
             </div>
             <div layout="row" layout-align="start center">
-              <p flex="20" class="md-body-2">Category</p>
+              <p flex="20" class="md-body-2">{{ 'list.category.category' | translate }}</p>
               <p class="md-body-1">{{ bike.data.category | category }}</p>
             </div>
           </div>
@@ -106,7 +106,7 @@
 
         <div layout="row" layout-xs="column">
           <div flex-gt-xs="25">
-            <p class="md-body-2">Lister</p>
+            <p class="md-body-2">{{ 'shared.lister' | translate }}</p>
           </div>
           <div flex-gt-xs layout="row" layout-align="start center">
             <img class="lnr-profile-md lnr-margin-right lnr-clickable" ui-sref="user({userId: bike.data.user.id})" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
@@ -119,7 +119,7 @@
         <!-- reviews -->
         <div layout="row" layout-xs="column" ng-if="bike.data.ratings.length > 0">
           <div flex-gt-xs="25">
-            <p class="md-body-2">Reviews</p>
+            <p class="md-body-2">{{ 'shared.reviews' | translate }}</p>
           </div>
 
           <div flex-gt-xs>

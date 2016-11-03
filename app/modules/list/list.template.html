@@ -150,7 +150,7 @@
                 </div>
 
                 <md-button class="md-raised md-primary lnr-no-margin" ng-disabled="list.form.images.length > 4" ngf-multiple="true"
-                  ngf-select="list.addImage($files)" accept=".jpg,.jpeg">
+                  ngf-select="list.addImage($files)" ngf-fix-orientation="true" accept=".jpg,.jpeg">
                   {{ 'list.pictures.select-images' | translate }}
                 </md-button>
 

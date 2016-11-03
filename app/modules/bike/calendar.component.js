@@ -15,7 +15,7 @@ angular.module('bike').component('calendar', {
   controller: ['$scope', '$localStorage', '$state', '$mdDialog', 'date', 'api', 'authentication', 'verification',
     function CalendarController($scope, $localStorage, $state, $mdDialog, date, api, authentication, verification) {
       var calendar = this;
-      calendar.loggedIn = authentication.loggedIn();
+      calendar.authentication = authentication;
 
       initOverview();
 
@@ -65,7 +65,7 @@ angular.module('bike').component('calendar', {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             var user = success.data;
-            if (user.has_address && user.confirmed_phone && user.status >= 1) {
+            if (calendar.bikeFamily == 2 || (user.has_address && user.confirmed_phone && user.status >= 1)) {
               var data = {
                 user_id: $localStorage.userId,
                 ride_id: calendar.bikeId,

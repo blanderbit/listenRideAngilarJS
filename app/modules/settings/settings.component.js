@@ -3,8 +3,8 @@
 angular.module('settings').component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',
-  controller: ['$localStorage', '$window', '$mdToast', '$translate', 'api', 'access_control', 'sha256', 'Base64', 'Upload',
-    function SettingsController($localStorage, $window, $mdToast, $translate, api, access_control, sha256, Base64, Upload) {
+  controller: ['$localStorage', '$window', '$mdToast', '$translate', 'api', 'access_control', 'sha256', 'Base64', 'Upload', 'loadingDialog',
+    function SettingsController($localStorage, $window, $mdToast, $translate, api, access_control, sha256, Base64, Upload, loadingDialog) {
       if (access_control.requireLogin()) {
         return;
       }
@@ -108,6 +108,8 @@ angular.module('settings').component('settings', {
           data.user.password_hashed = sha256.encrypt(settings.password);
         }
 
+        loadingDialog.open();
+
         Upload.upload({
           method: 'PUT',
           url: api.getApiUrl() + '/users/' + $localStorage.userId,
@@ -117,6 +119,7 @@ angular.module('settings').component('settings', {
           }
         }).then(
           function (success) {
+            loadingDialog.close();
             $mdToast.show(
               $mdToast.simple()
               .textContent($translate.instant('toasts.update-profile-success'))
@@ -129,6 +132,7 @@ angular.module('settings').component('settings', {
             $localStorage.auth = 'Basic ' + encoded;
           },
           function (error) {
+            loadingDialog.close();
             $mdToast.show(
               $mdToast.simple()
               .textContent($translate.instant('toasts.error'))
@@ -145,7 +149,7 @@ angular.module('settings').component('settings', {
           var left = (screen.width / 2) - (w / 2);
           var top = (screen.height / 2) - (h / 2);
 
-          $window.open("https://listnride-staging.herokuapp.com/v2/users/" + $localStorage.userId + "/payment_methods/new", "popup", "width="+w+",height="+h+",left="+left+",top="+top);
+          $window.open("https://api.listnride.com/v2/users/" + $localStorage.userId + "/payment_methods/new", "popup", "width="+w+",height="+h+",left="+left+",top="+top);
       };
     }
   ]

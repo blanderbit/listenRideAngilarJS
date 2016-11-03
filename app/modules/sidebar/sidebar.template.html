@@ -1,4 +1,4 @@
-<md-sidenav class="md-sidenav-right" md-disable-scroll-target="body" md-component-id="right" layout="column"       layout-align="center none" md-theme="lnr-dark">
+<md-sidenav class="md-sidenav-right" md-disable-scroll-target="body" md-component-id="right" layout="column" layout-align="center none" md-theme="lnr-dark">
   <md-content layout="column">
       <div layout="row" layout-align="center center" layout-margin layout-padding>
         <img ng-if="sidebar.authentication.loggedIn()" class="lnr-profile-lrg" ng-src="{{sidebar.authentication.profilePicture()}}">
@@ -6,12 +6,13 @@
 
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="user({userId: sidebar.userId})" ng-click="sidebar.toggle()">{{ 'settings.profile' | translate }}</md-button>
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="requests" ng-click="sidebar.toggle()">{{ 'shared.requests' | translate }}</md-button>
+      <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="listings" ng-click="sidebar.toggle()">{{ 'listings.my-bikes' | translate }}</md-button>
       <md-button ng-if="!sidebar.authentication.loggedIn()" ng-click="sidebar.toggle(); sidebar.authentication.showSignupDialog()">{{ 'forms.sign-up' | translate }}</md-button>
       <md-button ng-if="!sidebar.authentication.loggedIn()" ng-click="sidebar.toggle(); sidebar.authentication.showLoginDialog()">{{ 'forms.log-in' | translate }}</md-button>
-      <md-button ui-sref="list" ng-click="sidebar.toggle()">{{ 'shared.list-a-bike' | translate }}</md-button>
-      <md-divider></md-divider>
-      <md-button ui-sref="howItWorks" ng-click="sidebar.toggle()">{{ 'shared.how-it-works' | translate }}</md-button>
-      <md-button ui-sref="trustAndSafety" ng-click="sidebar.toggle()">{{ 'shared.trust-and-safety' | translate }}</md-button>
+      <md-button ui-sref="listingABike" ng-click="sidebar.toggle()">{{ 'shared.list-a-bike' | translate }}</md-button>
+      <md-divider ng-if="!sidebar.authentication.loggedIn()"></md-divider>
+      <md-button ng-if="!sidebar.authentication.loggedIn()" ui-sref="howItWorks" ng-click="sidebar.toggle()">{{ 'shared.how-it-works' | translate }}</md-button>
+      <md-button ng-if="!sidebar.authentication.loggedIn()" ui-sref="trustAndSafety" ng-click="sidebar.toggle()">{{ 'shared.trust-and-safety' | translate }}</md-button>
       <md-divider ng-if="sidebar.authentication.loggedIn()"></md-divider>
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="settings" ng-click="sidebar.toggle();">{{ 'settings.settings' | translate }}</md-button>
       <md-divider ng-if="sidebar.authentication.loggedIn()"></md-divider>

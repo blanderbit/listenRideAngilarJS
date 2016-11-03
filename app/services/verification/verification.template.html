@@ -16,25 +16,25 @@
 
   <md-dialog-content>
     <div class="md-dialog-content" layout="column">
-      <p hide-xs class="md-headline lnr-center">Verify your Profile</p>
+      <p hide-xs class="md-headline lnr-center">{{ 'verification.verify-profile' | translate }}</p>
       <md-tabs class="content" md-dynamic-height md-no-ink md-no-ink-bar md-center-tabs="on" md-selected="verificationDialog.selectedIndex">
 
         <md-tab label="⬤" layout="row" ng-disabled="true">
           <div class="tab-content" layout="column" layout-align="space-between start" md-on-select="verificationDialog.activeTab = 1">
             <div layout="column" layout-align="center center">
               <p ng-if="verificationDialog.firstTime" class="md-subhead">Hi, {{verificationDialog.firstName}}!</p>
-              <p ng-if="verificationDialog.firstTime" class="md-body-1">Welcome to our passionate bike sharing community, featuring lots of bikes and bike enthusiasts all over the world.</p>
-              <p class="md-body-1 lnr-center">We're a sharing community, so the trust and safety of you and the other users have highest priority.</p>
-              <p class="md-body-1 lnr-center">We therefore kindly ask you to verify your profile through a few simple steps. It'll only take you a few minutes. The better the information you enter, the higher are chances that your requests will be accepted and bikes will be requested.</p>
+              <p ng-if="verificationDialog.firstTime" class="md-body-1">{{ 'verification.1.text1' | translate }}</p>
+              <p class="md-body-1 lnr-center">{{ 'verification.1.text2' | translate }}</p>
+              <p class="md-body-1 lnr-center">{{ 'verification.1.text3' | translate }}</p>
             </div>
           </div> 
         </md-tab>
 
         <md-tab label="⬤" layout="row" md-on-select="verificationDialog.activeTab = 2" ng-disabled="true">
             <div class="tab-content" layout="column">
-              <p class="md-body-1 lnr-center">Upload a profile picture of yourself! Seeing the face behind a profile is what's most important for the users.</p>
+              <p class="md-body-1 lnr-center">{{ 'verification.3.description' | translate }}</p>
               <form name="verificationDialog.descriptionForm" layout="column" layout-align="center center">
-                <img class="lnr-profile-lrg lnr-link" ngf-select ng-model="verificationDialog.profilePicture" name="profilePicture" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB"   ngf-min-height="100" ngf-background="verificationDialog.profilePicture || 'app/assets/ui_images/add-image.jpg'" ngf-as-background="true"></img>
+                <img class="lnr-profile-lrg lnr-clickable" ngf-select ng-model="verificationDialog.profilePicture" name="profilePicture" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-fix-orientation="true" ngf-min-height="100" ngf-background="verificationDialog.profilePicture || 'app/assets/ui_images/add-image.png'" ngf-as-background="true"></img>
               </form>
               <br>
             </div>
@@ -42,10 +42,10 @@
 
         <md-tab label="⬤" layout="row" ng-if="!verificationDialog.newUser.has_description" md-on-select="verificationDialog.activeTab = 3" ng-disabled="true">
             <div class="tab-content" layout="column">
-              <p class="md-body-1 lnr-center">Write a couple sentences (min. 100 words) about yourself and your relation to biking. It gives your profile personality!</p>
+              <p class="md-body-1 lnr-center">{{ 'verification.3.description' | translate }}</p>
               <md-input-container flex>
                 <form name="verificationDialog.descriptionForm">
-                  <label>Description</label>
+                  <label>{{ 'verification.3.label' | translate }}</label>
                   <textarea required md-no-resize name="description" minlength="100" md-maxlength="800" ng-model="verificationDialog.newUser.description"   rows= "3"></textarea>
                   <div ng-messages="verificationDialog.descriptionForm.description.$error" role="alert">
                     <div ng-message="minlength">Description should be at least 100 characters</div>
@@ -58,17 +58,17 @@
 
         <md-tab label="⬤" layout="row" ng-if="verificationDialog.newUser.status == 0" md-on-select="verificationDialog.activeTab = 4" ng-disabled="true">
             <div class="tab-content" layout="column">
-              <p class="md-body-1 lnr-center">Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder.</p>
+              <p class="md-body-1 lnr-center">{{ 'verification.4.description' | translate }}</p>
               <div layout="row" layout-align="center center">
                 <md-input-container flex>
                   <form name="emailForm">
-                    <label>Email Address</label>
+                    <label>{{ 'forms.email-address' | translate }}</label>
                     <input disabled required name="email" ng-model="verificationDialog.newUser.email"></input>
                   </form>
                 </md-input-container>
-              
+
                 <md-input-container layout="row" flex="45">
-                  <md-button flex class="md-raised md-primary lnr-btn-inline" ng-disabled="verificationDialog.user.status > 0" ng-click="verificationDialog.resendEmail()">Resend Email</md-button>
+                  <md-button flex class="md-raised md-primary lnr-btn-inline" ng-disabled="verificationDialog.user.status > 0" ng-click="verificationDialog.resendEmail()">{{ 'verification.resend-email' | translate }}</md-button>
                 </md-input-container>
               </div>
               <p class="md-body-2 lnr-center" ng-if="verificationDialog.user.status > 0">You've successfully validated your email!</p>
@@ -78,7 +78,7 @@
 
         <md-tab label="⬤" layout="row" ng-if="!verificationDialog.newUser.confirmed_phone" md-on-select="verificationDialog.activeTab = 5" ng-disabled="true">
             <div class="tab-content" layout="column">
-              <p class="md-body-1 lnr-center">Verify your phone number, this allows SMS notifications for your requests. Simply enter your number and click "Send Confirmation". You'll receive a code via SMS that you can then enter below.</p>
+              <p class="md-body-1 lnr-center">{{ 'verification.5.description' | translate }}</p>
               <div layout="row" layout-align="center center">
                 <md-input-container flex>
                   <form name="phoneForm">
@@ -113,7 +113,7 @@
 
         <md-tab label="⬤" layout="row" md-on-select="verificationDialog.activeTab = 6" ng-disabled="true">
             <div class="tab-content" layout="column">
-              <p class="md-body-1 lnr-center">Ultimately, enter your home address.</p>
+              <p class="md-body-1 lnr-center">{{ 'verification.6.description' | translate }}</p>
               <form name="verificationDialog.addressForm" layout="column">
 
                 <!-- <div class="lnr-input-containers" layout="row"> -->

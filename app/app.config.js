@@ -8,7 +8,8 @@ angular.
     ezfbProvider,
     $mdAriaProvider,
     $mdThemingProvider,
-    $locationProvider) {
+    $locationProvider,
+    $urlRouterProvider) {
 
     $mdAriaProvider.disableWarnings();
 
@@ -32,7 +33,7 @@ angular.
 
     $stateProvider.state({
       name: 'bike',
-      url: '/bikes/{bikeId}',
+      url: '/bikes/{bikeId:int}',
       template: '<bike></bike>'
     });
 
@@ -53,13 +54,22 @@ angular.
 
     $stateProvider.state({
       name: 'user',
-      url: '/users/{userId}',
+      url: '/users/{userId:int}',
       template: '<user></user>'
     });
 
     $stateProvider.state({
+      name: 'wfs',
+      url: '/wfs',
+      template: '<user></user>' 
+    });
+
+    $stateProvider.state({
       name: 'requests',
-      url: '/requests/{requestId}',
+      url: '/requests/{requestId:int}',
+      params: {
+        requestId: { squash: true, value: null }
+      },
       template: '<requests></requests>'
     });
 
@@ -77,7 +87,7 @@ angular.
 
     $stateProvider.state({
       name: 'edit',
-      url: '/edit/{bikeId}',
+      url: '/edit/{bikeId:int}',
       template: '<edit></edit>'
     });
 
@@ -159,14 +169,36 @@ angular.
       templateUrl: 'app/modules/static/how-it-works.template.html'
     });
 
+    $stateProvider.state('404', {
+      templateUrl: 'app/modules/static/error-404.template.html',
+    });
+
+    $urlRouterProvider.otherwise(function($injector, $location) {
+      var state = $injector.get('$state');
+      state.go('404');
+    });
+
     $translateProvider.useStaticFilesLoader({
       prefix: 'app/i18n/',
       suffix: '.json'
     });
 
-    $translateProvider.preferredLanguage('de');
-    $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
 
+    // Setting initial language, either based on browserlanguage or defaulting to english
+    var browserLanguage = $translateProvider.resolveClientLocale();
+    var availableLanguages = ["de", "en"];
+    var defaultLanguage = "en";
+
+    if (browserLanguage != undefined && browserLanguage.length >= 2) {
+      browserLanguage = browserLanguage.substring(0,2);
+    }
+
+    if (availableLanguages.indexOf(browserLanguage) == -1) {
+      browserLanguage = defaultLanguage;
+    }
+
+    $translateProvider.preferredLanguage(browserLanguage);
+    $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
 
     // Themes & Colors
     $mdThemingProvider.definePalette('lnr-blue', {

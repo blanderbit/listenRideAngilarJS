@@ -48,7 +48,9 @@
 
         <md-menu-content>
           <md-menu-item>
-            <md-button md-no-ink ui-sref="user({userId: header.userId})">{{ 'settings.profile' | translate }}</md-button>
+            <md-button ui-sref="user({userId: header.authentication.userId()})">
+              {{ 'settings.profile' | translate }}
+            </md-button>
           </md-menu-item>
           <md-menu-item>
             <md-button md-no-ink ui-sref="listings">{{ 'listings.my-bikes' | translate }}</md-button>

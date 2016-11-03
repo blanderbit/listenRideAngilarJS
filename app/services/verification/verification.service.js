@@ -2,8 +2,8 @@
 
 angular.
   module('listnride').
-  factory('verification', ['$mdDialog', '$mdToast', '$interval', '$localStorage', '$state', 'api', 'Upload',
-    function($mdDialog, $mdToast, $interval, $localStorage, $state, api, Upload) {
+  factory('verification', ['$mdDialog', '$mdToast', '$interval', '$localStorage', '$state', '$translate', 'api', 'Upload',
+    function($mdDialog, $mdToast, $interval, $localStorage, $state, $translate, api, Upload) {
 
       var VerificationDialogController = function(lister) {
         var verificationDialog = this;
@@ -111,8 +111,8 @@ angular.
             function (success) {
               $mdToast.show(
                 $mdToast.simple()
-                .textContent('Verification email was sent to your email address')
-                .hideDelay(4000)
+                .textContent($translate.instant('toasts.verification-email-sent'))
+                .hideDelay(6000)
                 .position('top center')
               );
             },
@@ -156,7 +156,12 @@ angular.
               );
             },
             function (error) {
-              console.log("Could not verify phone number");
+              $mdToast.show(
+                $mdToast.simple()
+                .textContent('Error: The Verification Code seems to be invalid.')
+                .hideDelay(4000)
+                .position('top center')
+              );
             }
           );
         };
