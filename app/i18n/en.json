@@ -14,8 +14,10 @@
     "munich": "Munich",
     "amsterdam": "Amsterdam",
     "vienna": "Vienna",
+    "per": "per",
     "hour": "hour",
     "hours": "hours",
+    "half-day": "half day (max 6h)",
     "day": "day",
     "days": "days",
     "week": "week",
@@ -33,7 +35,11 @@
     "contact": "Contact & Support",
     "show-more" : "show more",
     "show-less" : "show less",
-    "phone-number": "Phone Number"
+    "phone-number": "Phone Number",
+    "wait": "Uploading, this may take a moment..",
+    "lister": "Lister",
+    "reviews": "Reviews",
+    "for": "for"
   },
 
   "toasts": {
@@ -41,7 +47,8 @@
     "error": "An error occured. Please make sure your internet connection works and try again.",
     "add-payout-success": "Your payout method was successfully added.",
     "add-voucher-success": "Congratulations, the voucher was added to your account.",
-    "add-voucher-error": "Unfortunately, the supplied voucher is not valid."
+    "add-voucher-error": "Unfortunately, the supplied voucher is not valid.",
+    "verification-email-sent": "An email with a confirmation link was sent to your email address. This may take a few minutes, if you didn't receive anything also have a look in your spam folder."
   },
 
   "settings": {
@@ -97,7 +104,9 @@
   },
 
   "bike": {
-    "rent-bike": "Rent Bike"
+    "rent-bike": "Rent Bike",
+    "view-pictures": "View Pictures",
+    "for": "for"
   },
 
   "user": {
@@ -221,7 +230,6 @@
     "back": "Back",
     "next": "Next",
     "list-bike": "List My Bike",
-    "loading": "Bike is being uploaded. This may take a few moments.",
     "accessories": {
       "hint": "Edit accessories. Select the accessories, which you can provide with your bike.",
       "accessories": "Accessories",

@@ -183,12 +183,18 @@ angular.
       suffix: '.json'
     });
 
+
+    // Setting initial language, either based on browserlanguage or defaulting to english
     var browserLanguage = $translateProvider.resolveClientLocale();
+    var availableLanguages = ["de", "en"];
+    var defaultLanguage = "en";
 
     if (browserLanguage != undefined && browserLanguage.length >= 2) {
       browserLanguage = browserLanguage.substring(0,2);
-    } else {
-      browserLanguage = "en";
+    }
+
+    if (availableLanguages.indexOf(browserLanguage) == -1) {
+      browserLanguage = defaultLanguage;
     }
 
     $translateProvider.preferredLanguage(browserLanguage);

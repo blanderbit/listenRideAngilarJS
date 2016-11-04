@@ -3,8 +3,8 @@
 angular.module('list').component('list', {
   templateUrl: 'app/modules/list/list.template.html',
   controllerAs: 'list',
-  controller: ['$mdDialog', '$localStorage', '$state', '$scope', 'Upload', 'bike_options', 'api', '$timeout', 'verification', 'access_control',
-    function ListController($mdDialog, $localStorage, $state, $scope, Upload, bike_options, api, $timeout, verification, access_control) {
+  controller: ['$mdDialog', '$localStorage', '$state', '$scope', 'Upload', 'bike_options', 'api', '$timeout', 'verification', 'access_control', 'loadingDialog',
+    function ListController($mdDialog, $localStorage, $state, $scope, Upload, bike_options, api, $timeout, verification, access_control, loadingDialog) {
       if (access_control.requireLogin()) {
         return;
       }
@@ -15,21 +15,21 @@ angular.module('list').component('list', {
         images: []
       };
 
-      api.get('/users/' + $localStorage.userId).then(
-        function (success) {
-          var user = success.data;
-          if (!user.has_address || !user.confirmed_phone || user.status == 0) {
-            verification.openDialog(true);
-          }
-          list.form.street = user.street;
-          list.form.zip = user.zip;
-          list.form.city = user.city;
-          list.form.country = user.country;
-        },
-        function (error) {
-          console.log("Error fetching User");
-        }
-      );
+      // api.get('/users/' + $localStorage.userId).then(
+      //   function (success) {
+      //     var user = success.data;
+      //     if (!user.has_address || !user.confirmed_phone || user.status == 0) {
+      //       verification.openDialog(true);
+      //     }
+      //     list.form.street = user.street;
+      //     list.form.zip = user.zip;
+      //     list.form.city = user.city;
+      //     list.form.country = user.country;
+      //   },
+      //   function (error) {
+      //     console.log("Error fetching User");
+      //   }
+      // );
 
       list.selectedIndex = 0;
       list.sizeOptions = bike_options.sizeOptions();
@@ -39,8 +39,10 @@ angular.module('list').component('list', {
       list.accessoryOptions = bike_options.accessoryOptions();
 
       list.onFormSubmit = function() {
+
+
         list.submitDisabled = true;
-        showLoadingDialog();
+        loadingDialog.open();
 
         var ride = {
           "ride[name]": list.form.name,
@@ -68,25 +70,39 @@ angular.module('list').component('list', {
           "ride[image_file_4]": list.form.images[3],
           "ride[image_file_5]": list.form.images[4]
         };
-        
-        Upload.upload({
-          method: 'POST',
-          url: api.getApiUrl() + '/rides',
-          data: ride,
-          headers: {
-            'Authorization': $localStorage.auth
-          }
-        }).then(
-          function(response) {
-            hideLoadingDialog();
-            $state.go("listings");
+
+        api.get('/users/' + $localStorage.userId).then(
+          function (success) {
+            var user = success.data;
+            if (!user.has_address || !user.confirmed_phone || user.status == 0) {
+              verification.openDialog(false);
+              list.submitDisabled = false;
+            } else {
+              Upload.upload({
+                method: 'POST',
+                url: api.getApiUrl() + '/rides',
+                data: ride,
+                headers: {
+                  'Authorization': $localStorage.auth
+                }
+              }).then(
+                function(response) {
+                  loadingDialog.close();
+                  $state.go("listings");
+                },
+                function(error) {
+                  list.submitDisabled = false;
+                  loadingDialog.close();
+                  console.log("Error while listing bike", error);
+                }
+              );
+            }
           },
-          function(error) {
-            list.submitDisabled = false;
-            hideLoadingDialog();
-            console.log("Error while listing bike", error);
+          function (error) {
+            console.log("Error fetching User");
           }
         );
+
       };
 
       list.nextTab = function() {
@@ -166,20 +182,6 @@ angular.module('list').component('list', {
           list.form.city = desiredComponents.locality;
           list.form.country = desiredComponents.country;
         }
-      };
-
-      var loadingDialog;
-
-      function showLoadingDialog() {
-        var loadingDialog = $mdDialog.show({
-          parent: angular.element(document.body),
-          templateUrl: 'app/modules/list/loadingDialog.template.html',
-          fullscreen: true
-        });
-      };
-
-      function hideLoadingDialog() {
-        $mdDialog.hide(loadingDialog);
       };
 
     }
