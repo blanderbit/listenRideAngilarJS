@@ -7,7 +7,7 @@ angular.
 
       var open = function(event) {
         $mdDialog.show({
-          templateUrl: 'app/services/loading_dialog/loading_dialog.template.html',
+          templateUrl: 'app/services/loading-dialog/loading-dialog.template.html',
           parent: angular.element(document.body),
           targetEvent: event,
           openFrom: angular.element(document.body),

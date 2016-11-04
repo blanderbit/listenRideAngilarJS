@@ -3,9 +3,9 @@
 angular.module('listings').component('listings', {
   templateUrl: 'app/modules/listings/listings.template.html',
   controllerAs: 'listings',
-  controller: ['$localStorage', 'api', 'access_control',
-    function ListingsController($localStorage, api, access_control) {
-      if (access_control.requireLogin()) {
+  controller: ['$localStorage', 'api', 'accessControl',
+    function ListingsController($localStorage, api, accessControl) {
+      if (accessControl.requireLogin()) {
         return
       }
       var listings = this;

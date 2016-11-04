@@ -301,7 +301,8 @@
       "hint": "Now select some nice pictures of your bike. Here are some important photo tips for making your listing look ever better.",
       "pictures": "Pictures",
       "select-images": "Select images",
-      "remove": "Remove"
+      "remove": "Remove",
+      "upload-bike-header": "Upload some pictures of your bike"
     },
     "location": {
       "hint": "Where is your bike located? Don’t worry, the exact location of your bike will ONLY be forwarded when you have confirmed a rental request.",

@@ -3,9 +3,9 @@
 angular.module('edit').component('edit', {
   templateUrl: 'app/modules/edit/edit.template.html',
   controllerAs: 'edit',
-  controller: ['$mdDialog', '$localStorage', '$state', '$stateParams', 'Upload', 'bike_options', 'api', 'access_control',
-    function EditController($mdDialog, $localStorage, $state, $stateParams, Upload, bike_options, api, access_control) {
-      if (access_control.requireLogin()) {
+  controller: ['$mdDialog', '$localStorage', '$state', '$stateParams', 'Upload', 'bikeOptions', 'api', 'accessControl', 'loadingDialog',
+    function EditController($mdDialog, $localStorage, $state, $stateParams, Upload, bikeOptions, api, accessControl, loadingDialog) {
+      if (accessControl.requireLogin()) {
         return;
       }
       
@@ -13,11 +13,11 @@ angular.module('edit').component('edit', {
 
       edit.form = { images: [] };
       edit.selectedIndex = 0;
-      edit.sizeOptions = bike_options.sizeOptions();
-      edit.kidsSizeOptions = bike_options.kidsSizeOptions();
-      edit.categoryOptions = bike_options.categoryOptions();
-      edit.subcategoryOptions = bike_options.subcategoryOptions();
-      edit.accessoryOptions = bike_options.accessoryOptions();
+      edit.sizeOptions = bikeOptions.sizeOptions();
+      edit.kidsSizeOptions = bikeOptions.kidsSizeOptions();
+      edit.categoryOptions = bikeOptions.categoryOptions();
+      edit.subcategoryOptions = bikeOptions.subcategoryOptions();
+      edit.accessoryOptions = bikeOptions.accessoryOptions();
 
       api.get('/rides/' + $stateParams.bikeId).then(
         function(response) {
@@ -53,7 +53,7 @@ angular.module('edit').component('edit', {
 
       edit.onFormSubmit = function() {
         edit.submitDisabled = true;
-        showLoadingDialog();
+        loadingDialog.open();
 
         var ride = {
           "ride[name]": edit.form.name,
@@ -91,13 +91,13 @@ angular.module('edit').component('edit', {
           }
         }).then(
           function(response) {
-            hideLoadingDialog();
+            loadingDialog.close();
             $state.go("bike", {bikeId: response.data.id});
             console.log("Success", response);
           },
           function(error) {
             edit.submitDisabled = false;
-            hideLoadingDialog();
+            hloadingDialog.close();
             console.log("Error while listing bike", error);
           }
         );
@@ -191,20 +191,6 @@ angular.module('edit').component('edit', {
         return edit.form.price_half_daily !== undefined &&
           edit.form.price_daily !== undefined &&
           edit.form.price_weekly !== undefined;
-      };
-
-      var loadingDialog;
-
-      function showLoadingDialog() {
-        var loadingDialog = $mdDialog.show({
-          parent: angular.element(document.body),
-          templateUrl: 'app/modules/list/loadingDialog.template.html',
-          fullscreen: true
-        });
-      };
-
-      function hideLoadingDialog() {
-        $mdDialog.hide(loadingDialog);
       };
 
     }

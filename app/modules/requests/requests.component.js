@@ -3,9 +3,9 @@
 angular.module('requests').component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
-  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$window', 'api', '$timeout', '$location', '$anchorScroll', '$state', '$stateParams', '$translate', 'date', 'access_control',
-    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $window, api, $timeout, $location, $anchorScroll, $state, $stateParams, $translate, date, access_control) {
-      if (access_control.requireLogin()) {
+  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$window', 'api', '$timeout', '$location', '$anchorScroll', '$state', '$stateParams', '$translate', 'date', 'accessControl',
+    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $window, api, $timeout, $location, $anchorScroll, $state, $stateParams, $translate, date, accessControl) {
+      if (accessControl.requireLogin()) {
         return;
       }
 
