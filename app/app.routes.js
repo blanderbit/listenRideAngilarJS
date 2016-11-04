@@ -1,9 +1,9 @@
 'use strict';
 
 angular.
-  module('listnride').
-  config(function($stateProvider, $urlRouterProvider) {
-
+module('listnride').
+config(['$stateProvider', '$urlRouterProvider',
+  function($stateProvider, $urlRouterProvider) {
     $stateProvider.state({
       name: 'home',
       url: '/',
@@ -156,5 +156,5 @@ angular.
       var state = $injector.get('$state');
       state.go('404');
     });
-
-  });
+  }
+]);

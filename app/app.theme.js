@@ -1,9 +1,9 @@
 'use strict';
 
 angular.
-  module('listnride').
-  config(function($mdThemingProvider) {
-
+module('listnride').
+config(['$mdThemingProvider',
+  function($mdThemingProvider) {
     $mdThemingProvider.definePalette('lnr-blue', {
       '50': '#ffffff',
       '100': '#ffffff',
@@ -56,14 +56,13 @@ angular.
     };
 
     $mdThemingProvider.theme('default')
-        .primaryPalette('lnr-green')
-        .accentPalette('lnr-blue')
-        .backgroundPalette('lnr-background')
-        .foregroundPalette = DARK_FOREGROUND;
+      .primaryPalette('lnr-green')
+      .accentPalette('lnr-blue')
+      .backgroundPalette('lnr-background')
+      .foregroundPalette = DARK_FOREGROUND;
 
     $mdThemingProvider.theme('lnr-dark')
-        .backgroundPalette('lnr-background')
-        .dark().foregroundPalette['3'] ='rgba(255,255,255,0.12)';
-
-  });
-  
+      .backgroundPalette('lnr-background')
+      .dark().foregroundPalette['3'] ='rgba(255,255,255,0.12)';
+  }
+]);
