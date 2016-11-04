@@ -3,9 +3,9 @@
 angular.module('settings').component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',
-  controller: ['$localStorage', '$window', '$mdToast', '$translate', 'api', 'access_control', 'sha256', 'Base64', 'Upload', 'loadingDialog',
-    function SettingsController($localStorage, $window, $mdToast, $translate, api, access_control, sha256, Base64, Upload, loadingDialog) {
-      if (access_control.requireLogin()) {
+  controller: ['$localStorage', '$window', '$mdToast', '$translate', 'api', 'accessControl', 'sha256', 'Base64', 'Upload', 'loadingDialog',
+    function SettingsController($localStorage, $window, $mdToast, $translate, api, accessControl, sha256, Base64, Upload, loadingDialog) {
+      if (accessControl.requireLogin()) {
         return;
       }
 

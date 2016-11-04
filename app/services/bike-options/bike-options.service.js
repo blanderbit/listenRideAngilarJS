@@ -2,7 +2,7 @@
 
 angular
 .module('listnride')
-.factory('bike_options', [
+.factory('bikeOptions', [
   function() {
 
     return {

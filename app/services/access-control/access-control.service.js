@@ -2,7 +2,7 @@
 
 angular
 .module('listnride')
-.factory('access_control', ['$localStorage', '$state',
+.factory('accessControl', ['$localStorage', '$state',
   function($localStorage, $state) {
 
     return {

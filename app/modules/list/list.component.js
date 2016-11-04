@@ -3,9 +3,9 @@
 angular.module('list').component('list', {
   templateUrl: 'app/modules/list/list.template.html',
   controllerAs: 'list',
-  controller: ['$mdDialog', '$localStorage', '$state', '$scope', 'Upload', 'bike_options', 'api', '$timeout', 'verification', 'access_control', 'loadingDialog',
-    function ListController($mdDialog, $localStorage, $state, $scope, Upload, bike_options, api, $timeout, verification, access_control, loadingDialog) {
-      if (access_control.requireLogin()) {
+  controller: ['$mdDialog', '$localStorage', '$state', '$scope', 'Upload', 'bikeOptions', 'api', '$timeout', 'verification', 'accessControl', 'loadingDialog',
+    function ListController($mdDialog, $localStorage, $state, $scope, Upload, bikeOptions, api, $timeout, verification, accessControl, loadingDialog) {
+      if (accessControl.requireLogin()) {
         return;
       }
 
@@ -32,11 +32,11 @@ angular.module('list').component('list', {
       // );
 
       list.selectedIndex = 0;
-      list.sizeOptions = bike_options.sizeOptions();
-      list.kidsSizeOptions = bike_options.kidsSizeOptions();
-      list.categoryOptions = bike_options.categoryOptions();
-      list.subcategoryOptions = bike_options.subcategoryOptions();
-      list.accessoryOptions = bike_options.accessoryOptions();
+      list.sizeOptions = bikeOptions.sizeOptions();
+      list.kidsSizeOptions = bikeOptions.kidsSizeOptions();
+      list.categoryOptions = bikeOptions.categoryOptions();
+      list.subcategoryOptions = bikeOptions.subcategoryOptions();
+      list.accessoryOptions = bikeOptions.accessoryOptions();
 
       list.onFormSubmit = function() {
 

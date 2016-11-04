@@ -2,7 +2,7 @@
 
 angular.
 module('listnride').
-filter('map_category', function() {
+filter('mapCategory', function() {
 
   return function (bikes, categories) {
     if (bikes == undefined) {
