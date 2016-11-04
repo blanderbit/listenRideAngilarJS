@@ -300,7 +300,8 @@
       "hint": "Wähle nun ein paar schöne Fotos Deines Rads. Hier sind einige Tipps, wie du deine eigenen Fotos aufnehmen solltest.",
       "pictures": "Fotos",
       "select-images": "Fotos Wählen",
-      "remove": "Löschen"
+      "remove": "Löschen",
+      "upload-bike-header": "Lade ein paar Fotos hoch"
     },
     "location": {
       "hint": "Wo steht Dein Fahrrad? Keine Sorge, der genaue Standort wird erst übermittelt wenn Du eine Buchungsanfrage bestätigt hast.",
