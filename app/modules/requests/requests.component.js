@@ -91,13 +91,13 @@ angular.module('requests').component('requests', {
 
               if (requests.request.rideChat) {
                 requests.request.rating = requests.request.lister.rating_lister + requests.request.lister.rating_rider;
-                if (requests.request.lister.rating_lister != 0 || requests.request.lister.rating_rider != 0) {
+                if (requests.request.lister.rating_lister != 0 && requests.request.lister.rating_rider != 0) {
                   requests.request.rating = requests.request.rating / 2
                 }
               }
               else {
                 requests.request.rating = requests.request.user.rating_lister + requests.request.user.rating_rider;
-                if (requests.request.user.rating_lister != 0 || requests.request.user.rating_rider != 0) {
+                if (requests.request.user.rating_lister != 0 && requests.request.user.rating_rider != 0) {
                   requests.request.rating = requests.request.rating / 2
                 }
               }
