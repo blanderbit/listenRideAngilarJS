@@ -389,7 +389,7 @@ footer md-list-item:before {
 /*-----------------------------------------------------------------------------------*/
 
 .md-dialog-content {
-  width: 450px;
+  /*width: 450px;*/
 }
 
 .lnr-input-containers md-input-container {
