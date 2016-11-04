@@ -17,10 +17,10 @@
 
     <md-dialog-content style="height: 100vh" layout="column">
       <md-progress-linear class="md-accent" ng-if="chatDialog.requests.loadingChat" md-mode="query"></md-progress-linear>
-      <div flex="80" scroll-glue="chatDialog.requests.request.glued" class="chat">
+      <div flex="85" scroll-glue="chatDialog.requests.request.glued" class="chat">
         <message ng-repeat="message in chatDialog.requests.request.messages" content="message.content" sender="message.sender" status="message.status" request="chatDialog.requests.request" confirm-booking="chatDialog.requests.confirmBooking()" show-rating-dialog="chatDialog.requests.showRatingDialog()"></message>
       </div>
-      <div class="lnr-message-form" flex="20" layout="row" layout-padding>
+      <div class="lnr-message-form" flex="15" layout="row" layout-padding>
         <md-input-container class="ap-chat" flex md-no-float>
               <input ng-model="chatDialog.requests.message" placeholder="Write a message"></input>
         </md-input-container>

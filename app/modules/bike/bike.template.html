@@ -8,7 +8,7 @@
 
     <div flex layout="row" layout-xs="column" layout-align="space-between none" layout-gt-sm-align="start none" layout-padding>
       <div flex-sm="55" layout="row" layout-align="start center">
-        <md-icon ng-if="bike.data.category" class="lnr-margin-right lnr-icn-mlrg lnr-foreground lnr-no-padding" md-svg-src="app/assets/ui_icons/biketype_{{ bike.data.category | limitTo: 1 }}.svg"></md-icon>
+        <md-icon ng-if="bike.data.category" class="lnr-margin-right lnr-icn-mlrg md-color-foreground lnr-no-padding" md-svg-src="app/assets/ui_icons/biketype_{{ bike.data.category | limitTo: 1 }}.svg"></md-icon>
         <div flex layout="column">
           <span class="md-title">{{ bike.data.brand }}, {{ bike.data.category | category }}</span>
           <span class="md-subhead">{{ bike.data.name }}</span>

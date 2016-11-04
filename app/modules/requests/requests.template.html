@@ -30,8 +30,8 @@
             <div class="md-list-item-text" layout="column">
               <h4 ng-if="request.last_message.is_read">{{request.ride.name}}</h4>
               <p ng-if="request.last_message.is_read">{{request.timespan}}</p>
-              <h4 ng-if="!request.last_message.is_read" class="bold-text">{{request.ride.name}}</h4>
-              <p ng-if="!request.last_message.is_read" class="bold-text">{{request.timespan}}</p>
+              <h4 ng-if="!request.last_message.is_read" class="lnr-bold">{{request.ride.name}}</h4>
+              <p ng-if="!request.last_message.is_read" class="lnr-bold">{{request.timespan}}</p>
             </div>
           </md-list-item>
         <md-divider md-insets ng-if="!$lasts"></md-divider>

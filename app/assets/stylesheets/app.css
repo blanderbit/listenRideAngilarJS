@@ -1,8 +1,11 @@
-/* #5FC693: Primary Color
+/* 
+// #5FC693: Primary Color
+// #f3f3f3: Preload Color
 // 4px: border radius
 // Added to material
 // md-lined,
 // md-right-arrow,
+// md-color-*
 */
 
 /*-----------------------------------------------------------------------------------*/
@@ -39,7 +42,84 @@ strong {
   margin: 0 auto;
 }
 
-.bold-text {
+/* This has to be set for all full-height layouts */
+ui-view {
+  position: relative;
+}
+
+.single-column,
+requests,
+search {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* FRAMEWORK
+/*-----------------------------------------------------------------------------------*/
+
+/* fix for md-container margin */
+autocomplete {
+  margin-bottom: 16px;
+}
+
+autocomplete md-input-container {
+  margin-bottom: 0;
+}
+
+autocomplete {
+  position: relative;
+}
+
+autocomplete #autocompleteSearch {
+  width: 100%;
+}
+
+autocomplete .pac-container {
+  left: 0 !important;
+  top: 100% !important;
+}
+
+autocomplete .md-errors-spacer {
+  display: none;
+}
+
+/* mobile typorgraphy */
+@media (max-width:599px) {
+  .md-display-1 {
+    font-size: 24px;
+  }
+
+  .md-headline {
+    font-size: 20px;
+  }
+
+  .md-subhead {
+    font-size: 14px;
+  }
+
+  .lnr-page-title {
+    max-width: 90%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0.08rem 0;
+  }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* LNR CLASSES
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-bold {
   font-weight: 500 !important;
 }
 
@@ -143,167 +223,8 @@ strong {
   margin-right: -50%;
 }
 
-/* This has to be set for all full-height layouts */
-ui-view {
-  position: relative;
-}
-
-.single-column,
-requests,
-search {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
 .lnr-preload-bg {
-  background-color: #EEEEEE;
-}
-
-/*-----------------------------------------------------------------------------------*/
-/* SAFARI CSS FIXES
-/*-----------------------------------------------------------------------------------*/
-
-.lnr-header .md-toolbar-tools .lnr-header-logo {
-  min-height: 25px;
-}
-
-.md-toolbar-tools .md-button:not(.md-fab) {
-  min-width: 0px;
-}
-
-.md-toolbar-tools a.md-lined.md-button {
-  min-height: 28px !important;
-  line-height: 18px !important;
-}
-
-/*-----------------------------------------------------------------------------------*/
-/* PAGES
-/*-----------------------------------------------------------------------------------*/
-
-.lnr-page-margin {
-  margin-top: 48px;
-  margin-bottom: 16px;
-}
-
-.lnr-page-title {
-  text-align: center;
-  max-width: 830px;
-}
-
-.lnr-section-title {
-  text-align: center;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 8px;
-}
-
-#hero-shot {
-  height: 42vh;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-/*-----------------------------------------------------------------------------------*/
-/* COLORS
-/*-----------------------------------------------------------------------------------*/
-
-.lnr-white {
-  color: #fff;  
-}
-
-.lnr-primary {
-  color: #5fc693;
-}
-
-.lnr-foreground {
-  color: rgba(85,85,85,1.0);
-}
-
-.lnr-disabled {
-  color: rgba(206,212,216,1.0);
-}
-
-.lnr-white svg path,
-.lnr-white svg rect,
-.lnr-white svg circle,
-.lnr-white svg polygon {
-  fill: #fff;
-}
-
-.lnr-primary svg path,
-.lnr-primary svg rect,
-.lnr-primary svg circle,
-.lnr-primary svg polygon {
-  fill: #5fc693;
-}
-
-.lnr-foreground svg path,
-.lnr-foreground svg rect,
-.lnr-foreground svg circle,
-.lnr-foreground svg polygon {
-  fill: rgba(85,85,85,1.0);
-}
-
-.lnr-disabled svg path,
-.lnr-disabled svg rect,
-.lnr-disabled svg circle,
-.lnr-disabled svg polygon {
-  fill: rgba(206,212,216,1.0);
-}
-
-
-/*-----------------------------------------------------------------------------------*/
-/* NAVBAR
-/*-----------------------------------------------------------------------------------*/
-
-.lnr-header {
-  width: 100%;
-  height: 60px;
-  z-index: 3;
-}
-
-.lnr-header .md-toolbar-tools .lnr-header-logo {
-  padding: 0;
-}
-
-/* Safari vertical alignment fix */
-.lnr-header .md-toolbar-tools {
-  min-height: 30px;
-}
-
-.lnr-header .lnr-header-logo md-icon {
-  width: 95px;
-}
-
-.lnr-header .md-lined {
-  border-color: #ffffff;
-}
-
-.lnr-header .lnr-nav-menu .md-button {
-  margin: 0 12px;
-}
-
-.lnr-header .lnr-nav-menu .md-button:not(.md-lined):not(.md-img) {
-  padding: 12px 0;
-}
-
-.lnr-header .lnr-nav-menu .md-button.md-right-arrow {
-  padding-right: 20px;
-}
-
-.lnr-header .lnr-nav-menu .md-button.md-img {
-  padding: 0;
-}
-
-
-/*-----------------------------------------------------------------------------------*/
-/* FRAMEWORK
-/*-----------------------------------------------------------------------------------*/
-
-a {
-  text-decoration: none;
-  color: #5FC693;
+  background-color: #f3f3f3;
 }
 
 .lnr-btn-inline {
@@ -318,142 +239,6 @@ a {
   color: #fff !important;
 }
 
-/* fix for md-container margin */
-autocomplete {
-  margin-bottom: 16px;
-}
-
-autocomplete md-input-container {
-  margin-bottom: 0;
-}
-
-autocomplete {
-  position: relative;
-}
-
-autocomplete #autocompleteSearch {
-  width: 100%;
-}
-
-autocomplete .pac-container {
-  left: 0 !important;
-  top: 100% !important;
-}
-
-autocomplete .md-errors-spacer {
-  display: none;
-}
-
-
-/* mobile typorgraphy */
-@media (max-width:599px) {
-  .md-display-1 {
-    font-size: 26px;
-  }
-
-  .md-headline {
-    font-size: 22px;
-  }
-
-  .md-subhead {
-    font-size: 16px;
-  }
-
-  .lnr-page-title {
-    max-width: 95%;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0.18rem 0;
-  }
-}
-
-/*-----------------------------------------------------------------------------------*/
-/* USER MODALS
-/*-----------------------------------------------------------------------------------*/
-
-.lnr-user-modal {
-  width: 450px;
-}
-
-.lnr-user-modal .md-button {
-  margin: 0;
-}
-
-md-dialog-content .md-button {
-  margin: 0;
-}
-
-.lnr-user-modal .md-dialog-content,
-.lnr-verification-modal .md-dialog-content {
-  padding: 25px 30px;
-  padding-top: 10px;
-}
-
-.lnr-input-containers md-input-container {
-  margin-right: 4px;
-  margin-left: 4px;
-}
-
-.lnr-input-containers md-input-container:first-child {
-  margin-left: 0;
-}
-
-.lnr-input-containers md-input-container:last-child {
-  margin-right: 0;
-}
-
-/*-----------------------------------------------------------------------------------*/
-/* VERIFICATION MODALS
-/*-----------------------------------------------------------------------------------*/
-
-.lnr-verification-modal {
-  width: 550px;
-}
-
-.lnr-verification-modal md-tabs {
-  width: 100%;
-  min-height: 300px;
-}
-
-.lnr-verification-modal md-tab-item {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.lnr-verification-modal md-input-container {
-  margin-bottom: 8px;
-}
-
-.lnr-verification-modal p {
-  // margin: 16px 0;
-}
-
-/*-----------------------------------------------------------------------------------*/
-/* FOOTER
-/*-----------------------------------------------------------------------------------*/
-
-footer md-list-item,
-footer md-list-item:before {
-  min-height: 24px;
-}
-
-.lnr-btn-ios img {
-  height: auto;
-  width: 154px;
-  padding: 0;
-}
-
-.lnr-btn-lang {
-  width: 154px;
-  text-align: left;
-  padding-left: 14px;
-}
 
 /*-----------------------------------------------------------------------------------*/
 /* SVG
@@ -484,6 +269,7 @@ footer md-list-item:before {
   height: 120px;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
 /* PROFILE PICTURE
 /*-----------------------------------------------------------------------------------*/
@@ -502,7 +288,7 @@ footer md-list-item:before {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  background-color: #AAAAAA;
+  background-color: #f3f3f3;
   background-position: center;
   background-size: cover;
 }
@@ -521,6 +307,158 @@ settings .lnr-profile-lrg {
   margin: 0;
   padding: 0;
 }
+
+
+/*-----------------------------------------------------------------------------------*/
+/* NAVBAR
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-header {
+  width: 100%;
+  height: 60px;
+  z-index: 3;
+}
+
+.lnr-header .md-toolbar-tools .lnr-header-logo {
+  padding: 0;
+}
+
+.lnr-header .lnr-header-logo md-icon {
+  width: 95px;
+}
+
+.lnr-header .md-lined {
+  border-color: #ffffff;
+}
+
+.lnr-header .lnr-nav-menu .md-button {
+  margin: 0 12px;
+}
+
+.lnr-header .lnr-nav-menu .md-button:not(.md-lined):not(.md-img) {
+  padding: 12px 0;
+}
+
+.lnr-header .lnr-nav-menu .md-button.md-right-arrow {
+  padding-right: 20px;
+}
+
+.lnr-header .lnr-nav-menu .md-button.md-img {
+  padding: 0;
+}
+
+/* Safari vertical alignment fix */
+.lnr-header .md-toolbar-tools .lnr-header-logo {
+  min-height: 25px;
+}
+
+.md-toolbar-tools .md-button:not(.md-fab) {
+  min-width: 0px;
+}
+
+.md-toolbar-tools a.md-lined.md-button {
+  min-height: 28px !important;
+  line-height: 18px !important;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* FOOTER
+/*-----------------------------------------------------------------------------------*/
+
+footer md-list-item,
+footer md-list-item:before {
+  min-height: 24px;
+}
+
+.lnr-btn-ios img {
+  height: auto;
+  width: 154px;
+  padding: 0;
+}
+
+.lnr-btn-lang {
+  width: 154px;
+  text-align: left;
+  padding-left: 14px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* DIALOG MODALS
+/*-----------------------------------------------------------------------------------*/
+
+.md-dialog-content {
+  width: 450px;
+}
+
+.lnr-input-containers md-input-container {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.lnr-input-containers md-input-container:first-child {
+  margin-left: 0;
+}
+
+.lnr-input-containers md-input-container:last-child {
+  margin-right: 0;
+}
+
+.md-dialog-buttons .md-button {
+  margin-top: 16px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.md-dialog-content md-input-container label:not(.md-no-float):not(.md-container-ignore),
+.md-dialog-content md-input-container .md-placeholder {
+  white-space: normal;
+}
+
+.lnr-verification-modal md-tabs {
+  width: 100%;
+  min-height: 300px;
+}
+
+.lnr-verification-modal md-tab-item {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.lnr-rating-dialog .md-input-messages-animation  {
+  height: 100%;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* PAGES
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-page-margin {
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.lnr-page-title {
+  text-align: center;
+  max-width: 830px;
+}
+
+.lnr-section-title {
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 8px;
+}
+
+#hero-shot {
+  height: 42vh;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 /* HOME
@@ -747,6 +685,7 @@ home md-grid-list md-grid-tile.tile4 {
   }
 }
 
+
 /*-----------------------------------------------------------------------------------*/
 /*  BIKE CARD
 /*-----------------------------------------------------------------------------------*/
@@ -791,6 +730,7 @@ md-card.lnr-bike-card {
 .lnr-comment .lnr-comment-content {
   margin-top: 8px;
 }
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  BIKE DETAILS
@@ -846,6 +786,7 @@ md-dialog md-dialog-content .date-picker-wrapper .month-wrapper thead {
     width: 100%;
   }
 }
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  SEARCH
@@ -932,6 +873,7 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
   }
 }
 
+
 /*-----------------------------------------------------------------------------------*/
 /*  USER
 /*-----------------------------------------------------------------------------------*/
@@ -939,6 +881,7 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
 user .lnr-user-rating  {
   padding-left: 4px;
 }
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  LIST BIKE
@@ -1048,16 +991,17 @@ listings .lnr-bike-card.lnr-unavailable img {
 
 @media (max-width:599px) {
   .lnr-calculator .lnr-money {
-    font-size: 22vw;
+    font-size: 21vw;
   }
 }
 
 
-@media (max-width:1280px) {
+@media (max-width:1280px) and (min-width:600px) {
   .lnr-calculator .lnr-money {
     font-size: 8.8vw;
   }
 }
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  REQUESTS
@@ -1162,17 +1106,6 @@ message .status-message {
   margin-top: -6px;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/*  RATINGS DIALOG
-/*-----------------------------------------------------------------------------------*/
-
-.lnr-rating-dialog {
-  width: 600px;
-}
-
-.lnr-rating-dialog .md-input-messages-animation  {
-  height: 100%;
-}
 
 /*-----------------------------------------------------------------------------------*/
 /*  STATIC PAGES
