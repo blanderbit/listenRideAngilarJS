@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('message').component('message', {
+angular.module('message',[]).component('message', {
   templateUrl: 'app/modules/shared/message/message.template.html',
   controllerAs: 'message',
   bindings: {
@@ -70,3 +70,4 @@ angular.module('message').component('message', {
     }
   ]
 });
+})();

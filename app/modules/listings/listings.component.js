@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('listings').component('listings', {
+angular.module('listings',[]).component('listings', {
   templateUrl: 'app/modules/listings/listings.template.html',
   controllerAs: 'listings',
   controller: ['$localStorage', 'api', 'accessControl',
@@ -28,3 +28,4 @@ angular.module('listings').component('listings', {
     }
   ]
 });
+})();

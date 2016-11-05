@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('requests').component('requests', {
+angular.module('requests',[]).component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
   controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$window', 'api', '$timeout', '$location', '$anchorScroll', '$state', '$stateParams', '$translate', 'date', 'accessControl',
@@ -337,3 +337,4 @@ angular.module('requests').component('requests', {
     }
   ]
 });
+})();

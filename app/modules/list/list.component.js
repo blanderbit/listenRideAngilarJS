@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('list').component('list', {
+angular.module('list',[]).component('list', {
   templateUrl: 'app/modules/list/list.template.html',
   controllerAs: 'list',
   controller: ['$mdDialog', '$localStorage', '$state', '$scope', 'Upload', 'bikeOptions', 'api', '$timeout', 'verification', 'accessControl', 'loadingDialog',
@@ -187,3 +187,4 @@ angular.module('list').component('list', {
     }
   ]
 });
+})();

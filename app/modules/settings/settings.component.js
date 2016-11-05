@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('settings').component('settings', {
+angular.module('settings',[]).component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',
   controller: ['$localStorage', '$window', '$mdToast', '$translate', 'api', 'accessControl', 'sha256', 'Base64', 'Upload', 'loadingDialog',
@@ -154,3 +154,4 @@ angular.module('settings').component('settings', {
     }
   ]
 });
+})();

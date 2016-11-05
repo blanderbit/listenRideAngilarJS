@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('user').component('user', {
+angular.module('user',[]).component('user', {
   templateUrl: 'app/modules/user/user.template.html',
   controllerAs: 'user',
   controller: ['$localStorage', '$stateParams', 'api',
@@ -29,3 +29,4 @@ angular.module('user').component('user', {
     }
   ]
 });
+})();

@@ -1,5 +1,5 @@
+(function(){
 'use strict';
-
 angular.
 module('listnride').
 config(['$stateProvider', '$urlRouterProvider',
@@ -158,3 +158,4 @@ config(['$stateProvider', '$urlRouterProvider',
     });
   }
 ]);
+})();

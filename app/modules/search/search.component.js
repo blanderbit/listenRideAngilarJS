@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('search').component('search', {
+angular.module('search',[]).component('search', {
   templateUrl: 'app/modules/search/search.template.html',
   controllerAs: 'search',
   bindings: {
@@ -110,3 +110,4 @@ angular.module('search').component('search', {
     }
   ]
 });
+})();

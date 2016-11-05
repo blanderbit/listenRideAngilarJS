@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('header').component('header', {
+angular.module('header',[]).component('header', {
   templateUrl: 'app/modules/header/header.template.html',
   controllerAs: 'header',
   controller: ['$mdSidenav', '$localStorage', 'api', 'authentication', 'verification',
@@ -20,3 +20,4 @@ angular.module('header').component('header', {
     }
   ]
 });
+})();

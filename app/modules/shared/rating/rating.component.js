@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('rating').component('rating', {
+angular.module('rating',[]).component('rating', {
   templateUrl: 'app/modules/shared/rating/rating.template.html',
   controllerAs: 'rating',
   bindings: {
@@ -13,3 +13,4 @@ angular.module('rating').component('rating', {
     }
   ]
 });
+})();

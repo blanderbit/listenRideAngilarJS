@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('bike').component('bike', {
+angular.module('bike', []).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
   controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', 'NgMap',
@@ -94,3 +94,4 @@ angular.module('bike').component('bike', {
     }
   ]
 });
+})();

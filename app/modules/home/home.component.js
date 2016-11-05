@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('home').component('home', {
+angular.module('home',[]).component('home', {
   templateUrl: 'app/modules/home/home.template.html',
   controllerAs: 'home',
   controller: [ '$state', 'api',
@@ -21,3 +21,4 @@ angular.module('home').component('home', {
     }
   ]
 });
+})();

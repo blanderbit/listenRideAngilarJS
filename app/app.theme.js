@@ -1,5 +1,5 @@
+(function(){
 'use strict';
-
 angular.
 module('listnride').
 config(['$mdThemingProvider',
@@ -66,3 +66,4 @@ config(['$mdThemingProvider',
       .dark().foregroundPalette['3'] ='rgba(255,255,255,0.12)';
   }
 ]);
+})();

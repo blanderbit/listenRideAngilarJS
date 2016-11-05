@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('static').component('static', {
+angular.module('static',[]).component('static', {
   controllerAs: 'static',
   controller: ['$translate',
     function SettingsController($translate) {
@@ -11,3 +11,4 @@ angular.module('static').component('static', {
     }
   ]
 });
+})();

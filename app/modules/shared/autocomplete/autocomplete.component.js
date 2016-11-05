@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('autocomplete').component('autocomplete', {
+angular.module('autocomplete',[]).component('autocomplete', {
   templateUrl: 'app/modules/shared/autocomplete/autocomplete.template.html',
   controllerAs: 'autocomplete',
   bindings: {
@@ -44,3 +44,4 @@ angular.module('autocomplete').component('autocomplete', {
     }
   ]
 });
+})();

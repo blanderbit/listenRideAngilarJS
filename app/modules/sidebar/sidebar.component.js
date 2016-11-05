@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('header').component('sidebar', {
+angular.module('header',[]).component('sidebar', {
   templateUrl: 'app/modules/sidebar/sidebar.template.html',
   controllerAs: 'sidebar',
   controller: ['$mdSidenav', '$localStorage', 'authentication',
@@ -15,3 +15,4 @@ angular.module('header').component('sidebar', {
     }
   ]
 });
+})();

@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('listingABike').component('listingABike', {
+angular.module('listingABike',[]).component('listingABike', {
   templateUrl: 'app/modules/listing-a-bike/listing-a-bike.template.html',
   controllerAs: 'listingABike',
   controller: [ 'authentication',
@@ -11,3 +11,4 @@ angular.module('listingABike').component('listingABike', {
     }
   ]
 });
+})();

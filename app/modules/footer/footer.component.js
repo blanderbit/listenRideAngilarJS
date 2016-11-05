@@ -1,6 +1,6 @@
+(function(){
 'use strict';
-
-angular.module('footer').component('footer', {
+angular.module('footer', ['pascalprecht.translate']).component('footer', {
   templateUrl: 'app/modules/footer/footer.template.html',
   controllerAs: 'footer',
   controller: [
@@ -40,3 +40,4 @@ angular.module('footer').component('footer', {
     }
   ]
 });
+})();
