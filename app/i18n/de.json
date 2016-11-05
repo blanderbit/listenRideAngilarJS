@@ -492,7 +492,7 @@
   "jobs": {
     "title": "Jobs",
     "header": "Stellenangebote",
-    "subheader": "vergrößere unsere Bike-Sharing-Community.",
+    "subheader": "Vergrößere unsere Bike-Sharing-Community.",
     "contact": {
       "title": "Werde Teil unseres Teams",
       "content": "Über Fahrräder weißt Du immer mehr als andere? Du liebst es, auch bei Wind und Wetter in die Pedale zu treten? Dann bist Du wahrscheinlich ein Fahrrad-Fanatiker – und passt schon mal gut zu unserem Team. Schau, ob wir aktuell einen passenden Job für Dich haben und schicke uns gerne Deine Bewerbung."
@@ -598,9 +598,12 @@
   "imprint" : {
     "title" : "Impressum",
     "header" : "Impressum",
-    "contact" : {
-      "title" : "Unsere Kontaktinformationen sind:"
-    }
+    "managing-director": "Geschäftsführer",
+    "telephone": "Telefon",
+    "germany": "Deutschland",
+    "commercial-register-number": "Handelsregisternummer",
+    "berlin-court-of-registry": "Amtsgericht Berlin (Charlottenburg)",
+    "vat-id": "USt-ID-Nr."
   },
 
   "events": {
