@@ -14,7 +14,7 @@ config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvi
       version: 'v2.3'
     });
 
-    // $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
 
     $translateProvider.useStaticFilesLoader({
       prefix: 'app/i18n/',
