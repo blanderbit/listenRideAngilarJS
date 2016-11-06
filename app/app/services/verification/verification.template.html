@@ -1,0 +1,165 @@
+<md-dialog class="lnr-verification-modal">
+
+  <md-toolbar class="md-accent" hide show-xs>
+    <div class="md-toolbar-tools" layout-align="center center">
+      <md-button class="md-icon-button">
+        <md-icon></md-icon>
+      </md-button>
+      <span flex></span>
+      <h2 class="md-headline">Verify your Profile</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="verificationDialog.hide()">
+        <md-icon md-svg-src="dist/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-dialog-content>
+    <div class="md-dialog-content" layout="column">
+      <p hide-xs class="md-headline lnr-center">{{ 'verification.verify-profile' | translate }}</p>
+      <md-tabs class="content" md-dynamic-height md-no-ink md-no-ink-bar md-center-tabs="on" md-selected="verificationDialog.selectedIndex">
+
+        <md-tab label="⬤" layout="row" ng-disabled="true">
+          <div class="tab-content" layout="column" layout-align="space-between start" md-on-select="verificationDialog.activeTab = 1">
+            <div layout="column" layout-align="center center">
+              <p ng-if="verificationDialog.firstTime" class="md-subhead">Hi, {{verificationDialog.firstName}}!</p>
+              <p ng-if="verificationDialog.firstTime" class="md-body-1">{{ 'verification.1.text1' | translate }}</p>
+              <p class="md-body-1 lnr-center">{{ 'verification.1.text2' | translate }}</p>
+              <p class="md-body-1 lnr-center">{{ 'verification.1.text3' | translate }}</p>
+            </div>
+          </div> 
+        </md-tab>
+
+        <md-tab label="⬤" layout="row" md-on-select="verificationDialog.activeTab = 2" ng-disabled="true">
+            <div class="tab-content" layout="column">
+              <p class="md-body-1 lnr-center">{{ 'verification.3.description' | translate }}</p>
+              <form name="verificationDialog.descriptionForm" layout="column" layout-align="center center">
+                <img class="lnr-profile-lrg lnr-clickable" ngf-select ng-model="verificationDialog.profilePicture" name="profilePicture" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-fix-orientation="true" ngf-min-height="100" ngf-background="verificationDialog.profilePicture || 'dist/assets/ui_images/add-image.png'" ngf-as-background="true"></img>
+              </form>
+              <br>
+            </div>
+        </md-tab>
+
+        <md-tab label="⬤" layout="row" ng-if="!verificationDialog.newUser.has_description" md-on-select="verificationDialog.activeTab = 3" ng-disabled="true">
+            <div class="tab-content" layout="column">
+              <p class="md-body-1 lnr-center">{{ 'verification.3.description' | translate }}</p>
+              <md-input-container flex>
+                <form name="verificationDialog.descriptionForm">
+                  <label>{{ 'verification.3.label' | translate }}</label>
+                  <textarea required md-no-resize name="description" minlength="100" md-maxlength="800" ng-model="verificationDialog.newUser.description"   rows= "3"></textarea>
+                  <div ng-messages="verificationDialog.descriptionForm.description.$error" role="alert">
+                    <div ng-message="minlength">Description should be at least 100 characters</div>
+                  </div>
+                </form>
+              </md-input-container>
+              <br>
+            </div>
+        </md-tab>
+
+        <md-tab label="⬤" layout="row" ng-if="verificationDialog.newUser.status == 0" md-on-select="verificationDialog.activeTab = 4" ng-disabled="true">
+            <div class="tab-content" layout="column">
+              <p class="md-body-1 lnr-center">{{ 'verification.4.description' | translate }}</p>
+              <div layout="row" layout-align="center center">
+                <md-input-container flex>
+                  <form name="emailForm">
+                    <label>{{ 'forms.email-address' | translate }}</label>
+                    <input disabled required name="email" ng-model="verificationDialog.newUser.email"></input>
+                  </form>
+                </md-input-container>
+
+                <md-input-container layout="row" flex="45">
+                  <md-button flex class="md-raised md-primary lnr-btn-inline" ng-disabled="verificationDialog.user.status > 0" ng-click="verificationDialog.resendEmail()">{{ 'verification.resend-email' | translate }}</md-button>
+                </md-input-container>
+              </div>
+              <p class="md-body-2 lnr-center" ng-if="verificationDialog.user.status > 0">You've successfully validated your email!</p>
+            </div>
+        </md-tab>
+
+
+        <md-tab label="⬤" layout="row" ng-if="!verificationDialog.newUser.confirmed_phone" md-on-select="verificationDialog.activeTab = 5" ng-disabled="true">
+            <div class="tab-content" layout="column">
+              <p class="md-body-1 lnr-center">{{ 'verification.5.description' | translate }}</p>
+              <div layout="row" layout-align="center center">
+                <md-input-container flex>
+                  <form name="phoneForm">
+                    <label>Phone Number</label>
+                    <input required name="phone_number" ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/" placeholder="+49 175 12345678" ng-model="verificationDialog.newUser.phone_number"></input>
+                    <div ng-messages="phoneForm.phone_number.$error" role="alert">
+                      <div ng-message="pattern">Please enter a valid phone number</div>
+                    </div>
+                  </form>
+                </md-input-container>
+                <md-input-container layout="row" flex="45">
+                  <md-button flex class="md-raised md-primary lnr-btn-inline" ng-click="verificationDialog.sendSms()">Send Confirmation SMS</md-button>
+                </md-input-container>
+              </div>
+
+              <div layout="row" layout-align="center center">
+                <md-input-container flex>
+                  <form name="emailForm">
+                    <label>SMS Confirmation Code</label>
+                    <input required name="confirmation_code" min-length="4" max-length="4" ng-model="verificationDialog.newUser.confirmation_code"></input>
+                  </form>
+                </md-input-container>
+                <md-input-container layout="row" flex="45">
+                  <md-button flex class="md-raised md-primary lnr-btn-inline" ng-click="verificationDialog.confirmPhone()">Confirm Code</md-button>
+                </md-input-container>
+              </div>
+
+              <p class="md-body-1 lnr-center" ng-if="verificationDialog.user.confirmed_phone">Your phone number was successfully verified!</p>
+            </div>
+        </md-tab>
+
+
+        <md-tab label="⬤" layout="row" md-on-select="verificationDialog.activeTab = 6" ng-disabled="true">
+            <div class="tab-content" layout="column">
+              <p class="md-body-1 lnr-center">{{ 'verification.6.description' | translate }}</p>
+              <form name="verificationDialog.addressForm" layout="column">
+
+                <!-- <div class="lnr-input-containers" layout="row"> -->
+                  <autocomplete autocomplete-id="verificationDialog" layout="column" location="verificationDialog.newUser.street" label-id="{{ 'list.location.street-number' | translate }}" required="true" fill-address="verificationDialog.fillAddress(place)">
+                  </autocomplete>
+
+                  <md-input-container flex>
+                    <label>Zip</label>
+                    <input required name="zip" ng-model="verificationDialog.newUser.zip"></input>
+                    <div ng-messages="verificationDialog.addressForm.zip.$error" role="alert">
+                      <div ng-message="required">This is required.</div>
+                    </div>
+                  </md-input-container>
+                <!-- </div> -->
+
+                <div class="lnr-input-containers" layout="row">
+                  <md-input-container flex>
+                    <label>City</label>
+                    <input required name="city" ng-model="verificationDialog.newUser.city"></input>
+                    <div ng-messages="verificationDialog.addressForm.city.$error" role="alert">
+                      <div ng-message="required">This is required.</div>
+                    </div>
+                  </md-input-container>
+
+                  <md-input-container flex>
+                    <label>Country</label>
+                    <input required name="country" ng-model="verificationDialog.newUser.country"></input>
+                    <div ng-messages="verificationDialog.addressForm.country.$error" role="alert">
+                      <div ng-message="required">This is required.</div>
+                    </div>
+                  </md-input-container>
+                </div>
+
+                </form>
+            </div>
+        </md-tab>
+
+      </md-tabs>
+      <div class="md-dialog-buttons" layout="row">
+        <md-button class="md-lined" ng-click="verificationDialog.hide()" ng-if="verificationDialog.firstTime">{{ 'shared.later' | translate }}</md-button>
+        <md-button class="md-lined md-warn" ng-if="!verificationDialog.lister && !verificationDialog.firstTime" ng-click="verificationDialog.hide()" ng-if="!verificationDialog.firstTime">{{ 'shared.cancel' | translate }}</md-button>
+        <md-button class="md-lined md-warn" ng-if="verificationDialog.lister" ng-click="verificationDialog.hide()" ui-sref="home">{{ 'shared.cancel' | translate }}</md-button>
+        <span flex></span>
+        <md-button class="md-accent md-raised" ng-disabled="verificationDialog.nextDisabled()" ng-click="verificationDialog.next()">{{ 'shared.next' | translate }}</md-button>
+      </div>
+    </div>
+  </md-dialog-content>
+
+</md-dialog>

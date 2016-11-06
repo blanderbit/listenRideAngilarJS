@@ -1,0 +1,59 @@
+<md-dialog>
+
+  <md-toolbar class="md-accent">
+    <div class="md-toolbar-tools" layout-align="center center">
+      <md-button class="md-icon-button">
+        <md-icon></md-icon>
+      </md-button>
+      <span flex></span>
+      <h2 class="md-headline">{{ 'requests.booking-overview' | translate }}</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="bookingDialog.hide()">
+        <md-icon md-svg-src="dist/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-dialog-content layout="column">
+    <div class="md-dialog-content" layout="column">
+      <h3 class="md-title">Booking</h3>
+      <div layout="row" layout-align="space-between center">
+        <span class="md-body-2">{{ 'shared.from' | translate }}</span>
+        <span class="md-body-1">{{ bookingDialog.requests.request.start_date | date: "dd.MM.yyyy, HH:mm" }}</span>
+      </div>
+      <div layout="row" layout-align="space-between center">
+        <span class="md-body-2">{{ 'shared.to' | translate }}</span>
+        <span class="md-body-1">{{ bookingDialog.requests.request.end_date | date: "dd.MM.yyyy, HH:mm" }}</span>
+      </div>
+      <div layout="row" layout-align="space-between center">
+        <span class="md-body-2">{{ 'shared.duration' | translate }}</span>
+        <span class="md-body-1">{{ bookingDialog.duration }}</span>
+      </div>
+
+      <md-divider class="lnr-no-padding lnr-margin-lrg-top lnr-margin-lrg-bottom"></md-divider>
+
+      <h3 class="md-title">Price</h3>
+      <div layout="row" layout-align="space-between center">
+        <span class="md-body-2">{{ 'shared.subtotal' | translate }}</span>
+        <span class="md-body-1">{{ bookingDialog.requests.request.subtotal | currency: '€' }}</span>
+      </div>
+      <div layout="row" layout-align="space-between center">
+        <span class="md-body-2">{{ 'shared.lnr-fee' | translate }}</span>
+        <span class="md-body-1">{{ bookingDialog.requests.request.total - bookingDialog.request.subtotal | currency: '€' }}</span>
+      </div>
+      <div layout="row" layout-align="space-between center">
+        <span class="md-body-2">{{ 'shared.total' | translate }}</span>
+        <span class="md-body-2">{{ bookingDialog.requests.request.total | currency: '€'  }}</span>
+      </div>
+
+      <p class="md-caption lnr-center">By booking I accept the Terms and Conditions</p >
+
+      <div class="md-dialog-buttons" layout="row" layout-align="space-between center">
+        <md-button class="md-lined md-warn" ng-click="bookingDialog.hide()">{{ 'shared.cancel' | translate }}</md-button>
+        <span flex></span>
+        <md-button class="md-raised md-primary" ng-click="bookingDialog.book()">{{ 'requests.book' | translate }}</md-button>
+      </div>
+    </div>
+  </md-dialog-content>
+
+</md-dialog>
