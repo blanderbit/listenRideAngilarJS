@@ -104,6 +104,10 @@ autocomplete .md-errors-spacer {
     max-width: 90%;
   }
 
+  input {
+    font-size: 12px;
+  }
+
   h1,
   h2,
   h3,
@@ -707,7 +711,13 @@ md-card.lnr-bike-card {
   text-overflow: ellipsis;
 }
 
-@media (max-width:639px) {
+@media (max-width:599px) {
+  .lnr-bike-card md-card-title-text span {
+    max-width: 180px!important;
+  }
+}
+
+@media (max-width:639px) and (min-width: 600px) {
   .lnr-bike-card md-card-title-text span {
     max-width: 120px!important;
   }
