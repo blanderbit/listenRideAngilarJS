@@ -9,6 +9,7 @@ angular.module('rating',[]).component('rating', {
   controller: [ 'api',
     function RatingController(api) {
       var rating = this;
+
     }
   ]
 });

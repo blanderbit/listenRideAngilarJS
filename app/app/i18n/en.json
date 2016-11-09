@@ -599,12 +599,9 @@
   "imprint" : {
     "title" : "Imprint",
     "header" : "Imprint",
-    "managing-director": "Managing Director",
-    "telephone": "Telephone",
-    "germany": "Germany",
-    "commercial-register-number": "Commercial Register Number",
-    "berlin-court-of-registry": "Berlin Court of Registry (Charlottenburg)",
-    "vat-id": "VAT ID"
+    "contact" : {
+      "title" : "Our Contact information:"
+    }
   },
 
   "events": {

@@ -9,7 +9,7 @@
       <h2 class="md-headline">Verify your Profile</h2>
       <span flex></span>
       <md-button class="md-icon-button" ng-click="verificationDialog.hide()">
-        <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
+        <md-icon md-svg-src="dist/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
       </md-button>
     </div>
   </md-toolbar>
@@ -30,11 +30,11 @@
           </div> 
         </md-tab>
 
-        <md-tab label="⬤" layout="row" ng-if="!verificationDialog.hasPicture" md-on-select="verificationDialog.activeTab = 2" ng-disabled="true">
+        <md-tab label="⬤" layout="row" md-on-select="verificationDialog.activeTab = 2" ng-disabled="true">
             <div class="tab-content" layout="column">
               <p class="md-body-1 lnr-center">{{ 'verification.3.description' | translate }}</p>
               <form name="verificationDialog.descriptionForm" layout="column" layout-align="center center">
-                <img class="lnr-profile-lrg lnr-clickable" ngf-select ng-model="verificationDialog.profilePicture" name="profilePicture" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-fix-orientation="true" ngf-min-height="100" ngf-background="verificationDialog.profilePicture || 'app/assets/ui_images/add-image.jpg'" ngf-as-background="true"></img>
+                <img class="lnr-profile-lrg lnr-clickable" ngf-select ng-model="verificationDialog.profilePicture" name="profilePicture" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-fix-orientation="true" ngf-min-height="100" ngf-background="verificationDialog.profilePicture || 'dist/assets/ui_images/add-image.png'" ngf-as-background="true"></img>
               </form>
               <br>
             </div>
@@ -81,16 +81,16 @@
               <p class="md-body-1 lnr-center">{{ 'verification.5.description' | translate }}</p>
               <div layout="row" layout-align="center center">
                 <md-input-container flex>
-                  <form name="verificationDialog.phoneForm">
+                  <form name="phoneForm">
                     <label>Phone Number</label>
                     <input required name="phone_number" ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/" placeholder="+49 175 12345678" ng-model="verificationDialog.newUser.phone_number"></input>
-                    <div ng-messages="verificationDialog.phoneForm.phone_number.$error" role="alert">
+                    <div ng-messages="phoneForm.phone_number.$error" role="alert">
                       <div ng-message="pattern">Please enter a valid phone number</div>
                     </div>
                   </form>
                 </md-input-container>
                 <md-input-container layout="row" flex="45">
-                  <md-button ng-disabled="!verificationDialog.phoneForm.$valid" flex class="md-raised md-primary lnr-btn-inline" ng-click="verificationDialog.sendSms()">Send Confirmation SMS</md-button>
+                  <md-button flex class="md-raised md-primary lnr-btn-inline" ng-click="verificationDialog.sendSms()">Send Confirmation SMS</md-button>
                 </md-input-container>
               </div>
 
