@@ -10,7 +10,32 @@
       "url": "https://github.com/angular/material/blob/master/LICENSE"
     }
   ],
-  "devDependencies": {
+  "peerDependencies": {
+    "angular": "@>=1.3 <1.6",
+    "angular-animate": "^@>=1.3 <1.6",
+    "angular-aria": "@>=1.3 <1.6",
+    "angular-messages": "@>=1.3 <1.6"
+  },
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-aria": "^1.5.5",
+    "angular-easyfb": "^1.5.1",
+    "angular-google-maps": "^2.3.4",
+    "angular-input-stars": "^1.5.5",
+    "angular-material": "^1.1.1",
+    "angular-messages": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "angular-translate": "^2.12.0",
+    "angular-ui-router": "^0.3.1",
+    "angularjs-scroll-glue": "^2.0.7",
+    "jquery": "^3.1.1",
+    "moment": "^2.15.1",
+    "ng-file-upload": "^12.2.12",
+    "ngmap": "^1.17.6",
+    "ngstorage": "^0.3.11"
+  },
+    "devDependencies": {
     "angular-mocks": "^1.4.9",
     "gulp-concat": "^2.6.0",
     "gulp-header": "^1.8.8",
@@ -35,32 +60,7 @@
     "gulp-imagemin": "^3.1.1",
     "gulp-inject": "^4.1.0",
     "gulp-uglify": "^2.0.0",
-    "gulp-useref": "^3.1.2"
-  },
-  "peerDependencies": {
-    "angular": "@>=1.3 <1.6",
-    "angular-animate": "^@>=1.3 <1.6",
-    "angular-aria": "@>=1.3 <1.6",
-    "angular-messages": "@>=1.3 <1.6"
-  },
-  "dependencies": {
-    "angular": "^1.5.5",
-    "angular-animate": "^1.5.5",
-    "angular-aria": "^1.5.5",
-    "angular-easyfb": "^1.5.1",
-    "angular-google-maps": "^2.3.4",
-    "angular-input-stars": "^1.5.5",
-    "angular-material": "^1.1.1",
-    "angular-messages": "^1.5.8",
-    "angular-sanitize": "^1.5.8",
-    "angular-translate": "^2.12.0",
-    "angular-ui-router": "^0.3.1",
-    "angularjs-scroll-glue": "^2.0.7",
-    "jquery": "^3.1.1",
-    "moment": "^2.15.1",
-    "ng-file-upload": "^12.2.12",
-    "ngmap": "^1.17.6",
-    "ngstorage": "^0.3.11",
+    "gulp-useref": "^3.1.2",
     "run-sequence": "^1.2.2"
   },
   "scripts": {
