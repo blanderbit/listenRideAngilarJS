@@ -52,6 +52,7 @@ config(['$stateProvider', '$urlRouterProvider',
       template: '<requests></requests>'
     });
 
+    
     $stateProvider.state({
       name: 'list',
       url: '/list',

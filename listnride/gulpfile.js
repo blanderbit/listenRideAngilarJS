@@ -12,6 +12,8 @@ var header = require("gulp-header");
 var ngAnnotate = require('gulp-ng-annotate');
 var stylish = require('jshint-stylish');
 var imagemin = require('gulp-imagemin');
+var minifyCss = require('gulp-clean-css');
+var runSequence = require('run-sequence');
 
 var paths = {
     app: './',
@@ -27,22 +29,34 @@ gulp.task("lint", function () {
         .pipe(jshint.reporter(stylish));
 });
 
+gulp.task('copy-index', function() {
+    return gulp.src('index.html')
+        .pipe(gulp.dest('.tmp'));
+});
+
+gulp.task("htmls", function(){
+    return gulp.src('./app/modules/**/*.html')
+    .pipe(concat('combined.html'))
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task("vendors", function () {
     return gulp.src('index.html')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
-        .pipe(gulp.dest(''))
+        .pipe(gulpif('*.css', minifyCss()))
+        .pipe(gulp.dest(''));
 });
 
 gulp.task("scripts", function () {
     var headerValue = "//Evaluated by gulp.\n";
     return gulp.src(paths.js)
-        .pipe(concat("combined.js"))
+        .pipe(concat("app.js"))
         .pipe(header(headerValue))
         .pipe(ngAnnotate())
         .pipe(gulp.dest("dist"))
-        .pipe(rename("combined.min.js"))
-        .pipe(uglify("combined.min.js", {
+        .pipe(rename("app.min.js"))
+        .pipe(uglify("app.min.js", {
             outSourceMap: true
         }))
         .on('error', function (err) {
@@ -52,33 +66,53 @@ gulp.task("scripts", function () {
         .pipe(gulp.dest("dist"));
 });
 
+// copy images to dist
+gulp.task ('copy-images', function(){
+    return gulp.src(['./app/assets/ui_images/**/*'])
+        .pipe(gulp.dest('./dist/assets/ui_images'));
+});
+
+// copy icons to dist
+gulp.task ('copy-icons', function(){
+    return gulp.src(['./app/assets/ui_icons/**/*'])
+        .pipe(gulp.dest('./dist/assets/ui_icons'));
+});
+
 gulp.task('images-png', function () {
-    gulp.src('./app/assets/ui_images/**/*')
+    return gulp.src('./app/assets/ui_images/**/*')
         .pipe(imagemin({
             progressive: true,
+            interlaced: true,
             plugins: [imagemin.gifsicle()]
         }))
         .pipe(gulp.dest('dist/assets/ui_images'))
 });
 
 gulp.task('images-svg', function () {
-    gulp.src('./app/assets/ui_icons/**/*')
+    return gulp.src('./app/assets/ui_icons/**/*')
         .pipe(imagemin({
             progressive: true,
+            interlaced: true,
             plugins: [imagemin.svgo()]
         }))
         .pipe(gulp.dest('dist/assets/ui_icons'))
 });
 
 gulp.task('clean', function (cb) {
-    var cleanFiles = ['dist/*'];
-    del(cleanFiles, cb);
+    var cleanFiles = ['dist']; // 'dist/*.js', 'dist/*.min.js'
+    return del(cleanFiles, cb);
 });
 
 gulp.task('watch', function () {
-    gulp.watch(paths.all, ["lint", "scripts"]);
+    gulp.watch(paths.alljs, ["lint", "scripts"]);
 });
 
-gulp.task("images", ['images-png', 'images-svg']);
-gulp.task("deploy", ["clean", "scripts", "vendors", "images"]);
-gulp.task("default", ["lint", "clean", "scripts", "images", "watch"]);
+gulp.task("images", ['images-svg', 'images-png']); // 'images-png', 'images-svg'
+
+gulp.task("deploy", function(cb){
+    runSequence ("clean", "copy-index", ['images', 'scripts', 'vendors'], cb);
+});
+
+gulp.task("default", function(cb){ 
+    runSequence ("lint", "clean", ["scripts", "images", "watch"], cb)
+});
