@@ -13,10 +13,9 @@ angular.module('header',[]).component('header', {
       // Contains the amount of unread messages to be displayed in the header
       header.unreadMessages = $localStorage.unreadMessages;
 
-      header.toggleSidebar = function() {
+      header.toggleSidebar = function () {
         $mdSidenav('right').toggle();
-      }
-      
+      };
     }
   ]
 });
