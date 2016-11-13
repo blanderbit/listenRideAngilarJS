@@ -148,7 +148,7 @@ gulp.task('clean', function(cb) {
 
 // clean extra folders 
 gulp.task('clean-extras', function(cb) {
-    var cleanFiles = ['dist/assets', 'dist/app/index.html', 'dist/app/vendors.min.js']; // 'app', 'node_modules', 'js_modules', '.tmp'
+    var cleanFiles = ['dist/assets', 'dist/app/index.html', 'dist/app/vendors.min.js', 'app', 'node_modules', 'js_modules', '.tmp']; // 'app', 'node_modules', 'js_modules', '.tmp'
     return del(cleanFiles, cb);
 });
 
