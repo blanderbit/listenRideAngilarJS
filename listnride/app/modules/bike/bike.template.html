@@ -8,7 +8,7 @@
 
     <div flex layout="row" layout-xs="column" layout-align="space-between none" layout-gt-sm-align="start none" layout-padding>
       <div flex-sm="55" layout="row" layout-align="start center">
-        <md-icon ng-if="bike.data.category" class="lnr-margin-right lnr-icn-mlrg md-color-foreground lnr-no-padding" md-svg-src="assets/ui_icons/biketype_{{ bike.data.category | limitTo: 1 }}.svg"></md-icon>
+        <md-icon ng-if="bike.data.category" class="lnr-margin-right lnr-icn-mlrg md-color-foreground lnr-no-padding" md-svg-src="app/assets/ui_icons//biketype_{{ bike.data.category | limitTo: 1 }}.svg"></md-icon>
         <div flex layout="column">
           <span class="md-title">{{ bike.data.brand }}, {{ bike.data.category | category }}</span>
           <span class="md-subhead">{{ bike.data.name }}</span>
@@ -67,22 +67,22 @@
             <p class="md-body-2">{{ 'list.accessories.accessories' | translate }}</p>
           </div>
           <div flex-gt-xs>
-            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_lock" md-svg-src="assets/ui_icons/accessoire_lock.svg">
+            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_lock" md-svg-src="app/assets/ui_icons//accessoire_lock.svg">
               <md-tooltip md-direction="top">{{ 'list.accessories.lock' | translate }}</md-tooltip>
             </md-icon>
-            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_helmet" md-svg-src="assets/ui_icons/accessoire_helmet.svg">
+            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_helmet" md-svg-src="app/assets/ui_icons//accessoire_helmet.svg">
               <md-tooltip md-direction="top">{{ 'list.accessories.helmet' | translate }}</md-tooltip>
             </md-icon>
-            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_lights" md-svg-src="assets/ui_icons/accessoire_lights.svg">
+            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_lights" md-svg-src="app/assets/ui_icons//accessoire_lights.svg">
               <md-tooltip md-direction="top">{{ 'list.accessories.lights' | translate }}</md-tooltip>
             </md-icon>
-            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_basket" md-svg-src="assets/ui_icons/accessoire_basket.svg">
+            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_basket" md-svg-src="app/assets/ui_icons//accessoire_basket.svg">
               <md-tooltip md-direction="top">{{ 'list.accessories.basket' | translate }}</md-tooltip>
             </md-icon>
-            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_trailer" md-svg-src="assets/ui_icons/accessoire_trailer.svg">
+            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_trailer" md-svg-src="app/assets/ui_icons//accessoire_trailer.svg">
               <md-tooltip md-direction="top">{{ 'list.accessories.trailer' | translate }}</md-tooltip>
             </md-icon>
-            <md-icon class="lnr-icn-md" ng-if="bike.data.has_childseat" md-svg-src="assets/ui_icons/accessoire_childseat.svg">
+            <md-icon class="lnr-icn-md" ng-if="bike.data.has_childseat" md-svg-src="app/assets/ui_icons//accessoire_childseat.svg">
               <md-tooltip md-direction="top">{{ 'list.accessories.childseat' | translate }}</md-tooltip>
             </md-icon>
           </div>

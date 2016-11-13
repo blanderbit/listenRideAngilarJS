@@ -8,7 +8,7 @@ module.exports = function () {
         all: ['./app/**/*.html', './*.html', './libs/css/*.css','./app/*.js', './app/**/*.js','./app/**/!*test.js'],
         html: client + '**/*.html',
         htmltemplates: client + '**/*.html',
-        images: client + 'assets/ui_images/**/*.*',
+        images: client + 'app/assets/ui_images/**/*.*',
         index: client + 'index.html',
         jsOrder: [
             '**/app.module.js',

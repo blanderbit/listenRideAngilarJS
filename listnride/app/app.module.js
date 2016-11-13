@@ -38,7 +38,7 @@ angular.module('listnride', [
 ])
 
 .config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider',
-  function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider) {
+  function($translateProvider, ezfbProvider, $mdAriaProvider) {
     $mdAriaProvider.disableWarnings();
 
     ezfbProvider.setInitParams({
@@ -49,10 +49,8 @@ angular.module('listnride', [
       version: 'v2.3'
     });
 
-    // $locationProvider.html5Mode(true);
-
     $translateProvider.useStaticFilesLoader({
-      prefix: 'i18n/',
+      prefix: 'app/i18n/',
       suffix: '.json'
     });
 
