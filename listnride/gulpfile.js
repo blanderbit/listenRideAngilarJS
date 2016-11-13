@@ -127,7 +127,13 @@ gulp.task('images-svg', function () {
 
 // clean dist folder
 gulp.task('clean', function (cb) {
-    var cleanFiles = ['dist']; // 'dist/*.js', 'dist/*.min.js'
+    var cleanFiles = ['dist'];
+    return del(cleanFiles, cb);
+});
+
+// clean app and node_modules folders for deployment
+gulp.task('clean-app-folder', function (cb) {
+    var cleanFiles = ['app', 'node_modules', 'js_modules', '.tmp']; 
     return del(cleanFiles, cb);
 });
 
@@ -156,6 +162,7 @@ gulp.task('deploy', function (cb) {
         'inject-templates-modules',
         'copy-index-app',
         'copy-i18n',
+        'clean-app-folder',
         cb);
 });
 
