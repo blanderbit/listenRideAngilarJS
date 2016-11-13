@@ -6,3 +6,4 @@ tmp
 .DS_Store
 listnride/node_modules
 listnride/dist
+listnride/.tmp

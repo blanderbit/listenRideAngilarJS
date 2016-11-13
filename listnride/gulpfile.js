@@ -153,7 +153,7 @@ gulp.task('deploy', function (cb) {
         'scripts',
         'vendors',
         'copy-index-dist',
-        'inject-template-modules',
+        'inject-templates-modules',
         'copy-index-app',
         'copy-i18n',
         cb);
