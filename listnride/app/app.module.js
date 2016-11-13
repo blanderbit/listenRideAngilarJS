@@ -52,7 +52,7 @@ angular.module('listnride', [
     // $locationProvider.html5Mode(true);
 
     $translateProvider.useStaticFilesLoader({
-      prefix: 'app/i18n/',
+      prefix: 'i18n/',
       suffix: '.json'
     });
 
