@@ -163,7 +163,8 @@ gulp.task('clean-extras', function (cb) {
 });
 
 gulp.task('clean-extras-local', function (cb) {
-    var cleanFiles = ['app',
+    var cleanFiles = [
+        'app',
         'node_modules',
         'js_modules',
         '.tmp'
@@ -228,6 +229,7 @@ gulp.task('deploy', function (cb) {
         'revisions',
         'replace-revisions-index',
         'clean-extras',
+        'clean-extras-local',
         cb);
 });
 
