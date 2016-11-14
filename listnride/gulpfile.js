@@ -1,21 +1,23 @@
 // <!-- build:js dist/vendors.min.js -->
+var del = require('del');
 var gulp = require('gulp');
+var rev = require('gulp-rev');
+var revReplace = require('gulp-rev-replace');
+var gulpif = require('gulp-if');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var useref = require('gulp-useref');
 var inject = require('gulp-inject');
 var replace = require('gulp-replace');
+var rename = require('gulp-rename');
 var header = require('gulp-header');
 var uglify = require('gulp-uglifyjs');
 var imagemin = require('gulp-imagemin');
+var stylish = require('jshint-stylish');
 var minifyCss = require('gulp-clean-css');
+var runSequence = require('run-sequence');
 var ngAnnotate = require('gulp-ng-annotate');
 var templateCache = require('gulp-angular-templatecache');
-var gulpif = require('gulp-if');
-var del = require('del');
-var stylish = require('jshint-stylish');
-var runSequence = require('run-sequence');
-
 // commonly used paths
 var paths = {
     app: './',
@@ -26,21 +28,21 @@ var paths = {
 };
 
 // eslint through all js files
-gulp.task('lint', function() {
+gulp.task('lint', function () {
     return gulp.src(paths.js)
         .pipe(jshint())
         .pipe(jshint.reporter(stylish));
 });
 
 // inject template cache files in index.html
-gulp.task('inject-templates-modules', function() {
+gulp.task('inject-templates-modules', function () {
     return gulp.src('dist/index.html')
         .pipe(inject(gulp.src('dist/**/*.tpl.min.js', { read: false }), { relative: true }))
         .pipe(gulp.dest('dist'));
 });
 
 // create templates.js file to serve all html files
-gulp.task('cache-templates-modules', function() {
+gulp.task('cache-templates-modules', function () {
     return gulp.src('./app/modules/**/*.html')
         .pipe(templateCache('modules.tpl.min.js', {
             root: 'app/modules/',
@@ -50,7 +52,7 @@ gulp.task('cache-templates-modules', function() {
 });
 
 // create templates.js file to serve all html files
-gulp.task('cache-templates-services', function() {
+gulp.task('cache-templates-services', function () {
     return gulp.src('./app/services/**/*.html')
         .pipe(templateCache('services.tpl.min.js', {
             root: 'app/services/',
@@ -60,25 +62,25 @@ gulp.task('cache-templates-services', function() {
 });
 
 // copy original index file to tmp folder
-gulp.task('copy-index-tmp', function() {
+gulp.task('copy-index-tmp', function () {
     return gulp.src('index.html')
         .pipe(gulp.dest('.tmp'));
 });
 
 // copy new referenced index file to dist
-gulp.task('copy-index-dist', function() {
+gulp.task('copy-index-dist', function () {
     return gulp.src('./app/ndex.html')
         .pipe(gulp.dest('./dist/'));
 });
 
 // copy original index file back to app
-gulp.task('copy-index-app', function() {
+gulp.task('copy-index-app', function () {
     return gulp.src('.tmp/index.html')
         .pipe(gulp.dest('./'));
 });
 
 // concat all vendors files, js and css
-gulp.task('vendors', function() {
+gulp.task('vendors', function () {
     return gulp.src('index.html')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
@@ -87,7 +89,7 @@ gulp.task('vendors', function() {
 });
 
 // concat all development js files
-gulp.task('scripts-deploy', function() {
+gulp.task('scripts-deploy', function () {
     var headerValue = '//Evaluated by gulp.\n';
     return gulp.src(paths.js)
         .pipe(concat('app.min.js'))
@@ -100,7 +102,7 @@ gulp.task('scripts-deploy', function() {
 });
 
 // concat all development js files
-gulp.task('scripts-local', function() {
+gulp.task('scripts-local', function () {
     var headerValue = '//Evaluated by gulp.\n';
     return gulp.src(paths.js)
         .pipe(concat('app.min.js'))
@@ -113,13 +115,13 @@ gulp.task('scripts-local', function() {
 });
 
 // copy i18n to dist folder
-gulp.task('copy-i18n', function() {
+gulp.task('copy-i18n', function () {
     return gulp.src(['./app/i18n/**/*'])
         .pipe(gulp.dest('./dist/app/i18n'));
 });
 
 // optimize png images
-gulp.task('images-png', function() {
+gulp.task('images-png', function () {
     return gulp.src('./app/assets/ui_images/**/*')
         .pipe(imagemin({
             progressive: true,
@@ -130,7 +132,7 @@ gulp.task('images-png', function() {
 });
 
 // optimize svg images
-gulp.task('images-svg', function() {
+gulp.task('images-svg', function () {
     return gulp.src('./app/assets/ui_icons/**/*')
         .pipe(imagemin({
             progressive: true,
@@ -141,14 +143,31 @@ gulp.task('images-svg', function() {
 });
 
 // clean dist folder
-gulp.task('clean', function(cb) {
+gulp.task('clean', function (cb) {
     var cleanFiles = ['dist'];
     return del(cleanFiles, cb);
 });
 
 // clean extra folders 
-gulp.task('clean-extras', function(cb) {
-    var cleanFiles = ['dist/assets', 'dist/app/index.html', 'dist/app/vendors.min.js', 'app', 'node_modules', 'js_modules', '.tmp']; // 'app', 'node_modules', 'js_modules', '.tmp'
+gulp.task('clean-extras', function (cb) {
+    var cleanFiles = [
+        'dist/assets',
+        'dist/app/index.html',
+        'dist/app/vendors.min.js',
+        'dist/app.min.js',
+        'dist/modules.tpl.min.js',
+        'dist/services.tpl.min.js',
+        'dist/vendors.min.js'
+    ];
+    return del(cleanFiles, cb);
+});
+
+gulp.task('clean-extras-local', function (cb) {
+    var cleanFiles = ['app',
+        'node_modules',
+        'js_modules',
+        '.tmp'
+    ];
     return del(cleanFiles, cb);
 });
 
@@ -156,14 +175,14 @@ gulp.task('clean-extras', function(cb) {
 // because app.min.js is at same level with index.html in deployment
 // while in local env, app.min.js and index are at d/f levels
 // TODO: app.min.js and index.html should be at same level in local env
-gulp.task('changes-in-index', function(){
-  gulp.src(['dist/index.html'])
-    .pipe(replace('app/app.min.js', 'app.min.js'))
-    .pipe(gulp.dest('dist/'));
+gulp.task('changes-in-index', function () {
+    gulp.src(['dist/index.html'])
+        .pipe(replace('app/app.min.js', 'app.min.js'))
+        .pipe(gulp.dest('dist/'));
 });
 
 // watch changes in js files, used for local development
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     gulp.watch(paths.alljs, ['lint', 'scripts']);
 });
 
@@ -173,8 +192,26 @@ gulp.task('images', [
     'images-png'
 ]);
 
+// generate revisions of js files
+gulp.task('revisions', function () {
+    return gulp.src(['dist/*.min.js', 'dist/**/.min.css'])
+        .pipe(gulp.dest('dist'))
+        .pipe(rev())
+        .pipe(gulp.dest('dist'))
+        .pipe(rev.manifest())
+        .pipe(gulp.dest('dist'))
+});
+
+// replace revision in index file
+gulp.task('replace-revisions-index', function () {
+    var manifest = gulp.src('dist/rev-manifest.json');
+    return gulp.src('dist/index.html')
+        .pipe(revReplace({ manifest: manifest }))
+        .pipe(gulp.dest('dist'));
+});
+
 // tasks for deployment
-gulp.task('deploy', function(cb) {
+gulp.task('deploy', function (cb) {
     runSequence(
         'clean',
         'copy-index-tmp',
@@ -187,13 +224,15 @@ gulp.task('deploy', function(cb) {
         'inject-templates-modules',
         'copy-index-app',
         'copy-i18n',
-        'clean-extras',
         'changes-in-index',
+        'revisions',
+        'replace-revisions-index',
+        'clean-extras',
         cb);
 });
 
 // tasks for local development
-gulp.task('default', function(cb) {
+gulp.task('default', function (cb) {
     runSequence(
         'lint',
         'clean',
