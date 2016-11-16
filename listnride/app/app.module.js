@@ -46,7 +46,11 @@ angular.module('listnride', [
       version: 'v2.3'
     });
 
-    $locationProvider.html5Mode(true);
+    // cause to fail the route reload
+    // when you are some route like /renting-a-bike or any
+    // other then refreshing page fails
+    // whoever worked on it fix it then enable it
+    //$locationProvider.html5Mode(true);
 
     $translateProvider.useStaticFilesLoader({
       prefix: 'app/i18n/',
