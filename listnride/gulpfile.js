@@ -157,7 +157,7 @@ gulp.task('images-svg', function () {
 // clean dist folder
 // before every deployment
 gulp.task('clean', function (cb) {
-    var cleanFiles = ['dist'];
+    var cleanFiles = ['dist', 'app/app.min.js'];
     return del(cleanFiles, cb);
 });
 
@@ -200,7 +200,7 @@ gulp.task('changes-in-index', function () {
 
 // watch changes in js files, used for local development
 gulp.task('watch', function () {
-    gulp.watch(paths.alljs, ['lint', 'scripts']);
+    gulp.watch(paths.alljs, ['lint','clean', 'scripts']);
 });
 
 // svg and png 
@@ -261,6 +261,7 @@ gulp.task('local', function (cb) {
         'clean',
         'scripts-local',
         'images',
+        'watch',
         cb)
 });
 
