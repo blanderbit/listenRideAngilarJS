@@ -1,5 +1,5 @@
-(function(){
 'use strict';
+
 angular.module('home',[]).component('home', {
   templateUrl: 'app/modules/home/home.template.html',
   controllerAs: 'home',
@@ -21,4 +21,3 @@ angular.module('home',[]).component('home', {
     }
   ]
 });
-})();

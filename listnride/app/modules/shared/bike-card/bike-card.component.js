@@ -1,5 +1,5 @@
-(function(){
 'use strict';
+
 angular.module('bikeCard',[]).component('bikeCard', {
   templateUrl: 'app/modules/shared/bike-card/bike-card.template.html',
   controllerAs: 'bikeCard',
@@ -12,4 +12,3 @@ angular.module('bikeCard',[]).component('bikeCard', {
     }
   ]
 });
-})();

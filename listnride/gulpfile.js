@@ -1,23 +1,22 @@
-// <!-- build:js dist/vendors.min.js -->
 var del = require('del');
 var gulp = require('gulp');
 var rev = require('gulp-rev');
-var revReplace = require('gulp-rev-replace');
 var gulpif = require('gulp-if');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var useref = require('gulp-useref');
 var inject = require('gulp-inject');
 var replace = require('gulp-replace');
-var rename = require('gulp-rename');
 var header = require('gulp-header');
 var uglify = require('gulp-uglifyjs');
 var imagemin = require('gulp-imagemin');
 var stylish = require('jshint-stylish');
 var minifyCss = require('gulp-clean-css');
 var runSequence = require('run-sequence');
+var revReplace = require('gulp-rev-replace');
 var ngAnnotate = require('gulp-ng-annotate');
 var templateCache = require('gulp-angular-templatecache');
+
 // commonly used paths
 var paths = {
     app: './',
@@ -28,6 +27,8 @@ var paths = {
 };
 
 // eslint through all js files
+// go, fix js warnings
+// no, first go and fix the warnings
 gulp.task('lint', function () {
     return gulp.src(paths.js)
         .pipe(jshint())
@@ -35,6 +36,7 @@ gulp.task('lint', function () {
 });
 
 // inject template cache files in index.html
+// modules.tpl.min.js and services.tpl.min.js reference in index
 gulp.task('inject-templates-modules', function () {
     return gulp.src('dist/index.html')
         .pipe(inject(gulp.src('dist/**/*.tpl.min.js', { read: false }), { relative: true }))
@@ -42,6 +44,7 @@ gulp.task('inject-templates-modules', function () {
 });
 
 // create templates.js file to serve all html files
+// js cache of html from module folder
 gulp.task('cache-templates-modules', function () {
     return gulp.src('./app/modules/**/*.html')
         .pipe(templateCache('modules.tpl.min.js', {
@@ -52,6 +55,7 @@ gulp.task('cache-templates-modules', function () {
 });
 
 // create templates.js file to serve all html files
+// js cache of html from services folder
 gulp.task('cache-templates-services', function () {
     return gulp.src('./app/services/**/*.html')
         .pipe(templateCache('services.tpl.min.js', {
@@ -62,24 +66,28 @@ gulp.task('cache-templates-services', function () {
 });
 
 // copy original index file to tmp folder
+// preserves the original file
 gulp.task('copy-index-tmp', function () {
     return gulp.src('index.html')
         .pipe(gulp.dest('.tmp'));
 });
 
 // copy new referenced index file to dist
+// index file with new references to dist folder
 gulp.task('copy-index-dist', function () {
     return gulp.src('./app/ndex.html')
         .pipe(gulp.dest('./dist/'));
 });
 
 // copy original index file back to app
+// restore original index from .tmp
 gulp.task('copy-index-app', function () {
     return gulp.src('.tmp/index.html')
         .pipe(gulp.dest('./'));
 });
 
 // concat all vendors files, js and css
+// minify and uglify vendors files
 gulp.task('vendors', function () {
     return gulp.src('index.html')
         .pipe(useref())
@@ -88,7 +96,8 @@ gulp.task('vendors', function () {
         .pipe(gulp.dest('./dist/'));
 });
 
-// concat all development js files
+// concat all development js files - local
+// minify and uglify development files
 gulp.task('scripts-deploy', function () {
     var headerValue = '//Evaluated by gulp.\n';
     return gulp.src(paths.js)
@@ -101,7 +110,8 @@ gulp.task('scripts-deploy', function () {
         .pipe(gulp.dest('./dist/'));
 });
 
-// concat all development js files
+// concat all development js files - deployment
+// minify and uglify development files
 gulp.task('scripts-local', function () {
     var headerValue = '//Evaluated by gulp.\n';
     return gulp.src(paths.js)
@@ -121,6 +131,7 @@ gulp.task('copy-i18n', function () {
 });
 
 // optimize png images
+// loseless compression
 gulp.task('images-png', function () {
     return gulp.src('./app/assets/ui_images/**/*')
         .pipe(imagemin({
@@ -132,6 +143,7 @@ gulp.task('images-png', function () {
 });
 
 // optimize svg images
+// loseless compression
 gulp.task('images-svg', function () {
     return gulp.src('./app/assets/ui_icons/**/*')
         .pipe(imagemin({
@@ -143,12 +155,14 @@ gulp.task('images-svg', function () {
 });
 
 // clean dist folder
+// before every deployment
 gulp.task('clean', function (cb) {
     var cleanFiles = ['dist'];
     return del(cleanFiles, cb);
 });
 
 // clean extra folders 
+// with every deployment - files with revisions are used instead
 gulp.task('clean-extras', function (cb) {
     var cleanFiles = [
         'dist/assets',
@@ -162,6 +176,8 @@ gulp.task('clean-extras', function (cb) {
     return del(cleanFiles, cb);
 });
 
+// after every deploy
+// DO NOT USE IN DEV ENVIRONMENT
 gulp.task('clean-extras-local', function (cb) {
     var cleanFiles = [
         'app',
@@ -194,6 +210,7 @@ gulp.task('images', [
 ]);
 
 // generate revisions of js files
+// to invalidate browser cache on deployment
 gulp.task('revisions', function () {
     return gulp.src(['dist/*.min.js', 'dist/**/.min.css'])
         .pipe(gulp.dest('dist'))
@@ -204,6 +221,7 @@ gulp.task('revisions', function () {
 });
 
 // replace revision in index file
+// replace js files references in index with revisions
 gulp.task('replace-revisions-index', function () {
     var manifest = gulp.src('dist/rev-manifest.json');
     return gulp.src('dist/index.html')
@@ -212,6 +230,9 @@ gulp.task('replace-revisions-index', function () {
 });
 
 // tasks for deployment
+// DO NOT CHANGE THE SEQUENCE - SYNCHRONOUS COMMANDS
+// CHANGING THE SEQUENCE WILL MAKE YOU SLEEPLESS
+// DO NOT RUN IN LOCAL ENVIRONMENT
 gulp.task('deploy', function (cb) {
     runSequence(
         'clean',
@@ -234,12 +255,14 @@ gulp.task('deploy', function (cb) {
 });
 
 // tasks for local development
-gulp.task('default', function (cb) {
+gulp.task('local', function (cb) {
     runSequence(
         'lint',
         'clean',
         'scripts-local',
         'images',
-        'watch',
         cb)
 });
+
+// by default - local environment
+gulp.task('default', ['local']);

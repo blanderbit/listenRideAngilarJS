@@ -1,5 +1,5 @@
-(function(){
 'use strict';
+
 angular.module('static',[]).component('static', {
   controllerAs: 'static',
   controller: ['$translate',
@@ -11,4 +11,3 @@ angular.module('static',[]).component('static', {
     }
   ]
 });
-})();

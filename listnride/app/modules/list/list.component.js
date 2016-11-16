@@ -1,5 +1,5 @@
-(function(){
 'use strict';
+
 angular.module('list',[]).component('list', {
   templateUrl: 'app/modules/list/list.template.html',
   controllerAs: 'list',
@@ -15,21 +15,21 @@ angular.module('list',[]).component('list', {
         images: []
       };
 
-      // api.get('/users/' + $localStorage.userId).then(
-      //   function (success) {
-      //     var user = success.data;
-      //     if (!user.has_address || !user.confirmed_phone || user.status == 0) {
-      //       verification.openDialog(true);
-      //     }
-      //     list.form.street = user.street;
-      //     list.form.zip = user.zip;
-      //     list.form.city = user.city;
-      //     list.form.country = user.country;
-      //   },
-      //   function (error) {
-      //     console.log("Error fetching User");
-      //   }
-      // );
+      api.get('/users/' + $localStorage.userId).then(
+        function (success) {
+          var user = success.data;
+          if (!user.has_address || !user.confirmed_phone || user.status == 0) {
+            verification.openDialog(true);
+          }
+          list.form.street = user.street;
+          list.form.zip = user.zip;
+          list.form.city = user.city;
+          list.form.country = user.country;
+        },
+        function (error) {
+          console.log("Error fetching User");
+        }
+      );
 
       list.selectedIndex = 0;
       list.sizeOptions = bikeOptions.sizeOptions();
@@ -187,4 +187,3 @@ angular.module('list',[]).component('list', {
     }
   ]
 });
-})();

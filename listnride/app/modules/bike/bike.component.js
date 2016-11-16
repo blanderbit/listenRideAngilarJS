@@ -1,10 +1,10 @@
-(function(){
 'use strict';
-angular.module('bike', []).component('bike', {
+
+angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia',
-    function BikeController(api, $stateParams, $mdDialog, $mdMedia) {
+  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', 'NgMap',
+    function BikeController(api, $stateParams, $mdDialog, $mdMedia, NgMap) {
       var bike = this;
 
       bike.mapOptions = {
@@ -49,14 +49,14 @@ angular.module('bike', []).component('bike', {
           clickOutsideToClose: true,
           fullscreen: true // Changed in CSS to only be for XS sizes
         })
-        .then(function() {
+        .then(function(answer) {
           //
         }, function() {
           //
         });
       };
 
-      bike.showCalendarDialog = function () {
+      bike.showCalendarDialog = function() {
         $mdDialog.show({
           controller: CalendarDialogController,
           controllerAs: 'calendarDialog',
@@ -69,7 +69,7 @@ angular.module('bike', []).component('bike', {
           clickOutsideToClose: true,
           fullscreen: true // Only for -xs, -sm breakpoints.
         });
-      };
+      }
 
       function GalleryDialogController($mdDialog, bikeData) {
         var galleryDialog = this;
@@ -81,17 +81,16 @@ angular.module('bike', []).component('bike', {
         galleryDialog.hide = function() {
           $mdDialog.hide();
         }
-      };
+      }
 
-      var CalendarDialogController = function () {
+      var CalendarDialogController = function() {
         var calendarDialog = this;
         calendarDialog.bike = bike;
 
-        calendarDialog.hide = function () {
+        calendarDialog.hide = function() {
           $mdDialog.hide();
         }
-      };
+      }
     }
   ]
 });
-})();

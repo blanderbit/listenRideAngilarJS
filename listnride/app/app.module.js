@@ -1,6 +1,4 @@
-(function(){
 'use strict';
-/*jshint -W097 */
 
 angular.module('listnride', [
   /* internal modules */
@@ -36,9 +34,8 @@ angular.module('listnride', [
   'ngSanitize',
   'angular-input-stars'
 ])
-
 .config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider',
-  function($translateProvider, ezfbProvider, $mdAriaProvider) {
+  function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider) {
     $mdAriaProvider.disableWarnings();
 
     ezfbProvider.setInitParams({
@@ -48,6 +45,8 @@ angular.module('listnride', [
       // https://developers.facebook.com/docs/javascript/reference/FB.init
       version: 'v2.3'
     });
+
+    $locationProvider.html5Mode(true);
 
     $translateProvider.useStaticFilesLoader({
       prefix: 'app/i18n/',
@@ -59,7 +58,7 @@ angular.module('listnride', [
     var availableLanguages = ["de", "en"];
     var preferredLanguage;
 
-    if (browserLanguage !== undefined && browserLanguage.length >= 2) {
+    if (browserLanguage != undefined && browserLanguage.length >= 2) {
       browserLanguage = browserLanguage.substring(0,2);
     }
 
@@ -73,4 +72,3 @@ angular.module('listnride', [
     $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
   }
 ]);
-})();

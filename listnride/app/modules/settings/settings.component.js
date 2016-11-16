@@ -1,5 +1,5 @@
-(function(){
 'use strict';
+
 angular.module('settings',[]).component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',
@@ -154,4 +154,3 @@ angular.module('settings',[]).component('settings', {
     }
   ]
 });
-})();

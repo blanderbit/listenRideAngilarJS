@@ -1,5 +1,5 @@
-(function(){
 'use strict';
+
 angular.module('listingCard',[]).component('listingCard', {
   templateUrl: 'app/modules/shared/listing-card/listing-card.template.html',
   controllerAs: 'listingCard',
@@ -74,4 +74,3 @@ angular.module('listingCard',[]).component('listingCard', {
     }
   ]
 });
-})();

@@ -1,6 +1,6 @@
-(function(){
 'use strict';
-angular.module('raphaSuperCross', []).component('raphaSuperCross', {
+
+angular.module('raphaSuperCross',[]).component('raphaSuperCross', {
   templateUrl: 'app/modules/events/rapha-super-cross/rapha-super-cross.template.html',
   controllerAs: 'raphaSuperCross',
   controller: ['NgMap', 'api',
@@ -19,4 +19,3 @@ angular.module('raphaSuperCross', []).component('raphaSuperCross', {
     }
   ]
 });
-})();

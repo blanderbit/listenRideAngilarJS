@@ -1,5 +1,5 @@
-(function(){
 'use strict';
+
 angular.module('header',[]).component('header', {
   templateUrl: 'app/modules/header/header.template.html',
   controllerAs: 'header',
@@ -13,10 +13,10 @@ angular.module('header',[]).component('header', {
       // Contains the amount of unread messages to be displayed in the header
       header.unreadMessages = $localStorage.unreadMessages;
 
-      header.toggleSidebar = function () {
+      header.toggleSidebar = function() {
         $mdSidenav('right').toggle();
-      };
+      }
+      
     }
   ]
 });
-})();
