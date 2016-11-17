@@ -67,7 +67,7 @@
     "run-sequence": "^1.2.2"
   },
   "scripts": {
-    "prestart": "npm update",
+    "prestart": "npm update && npm install",
     "start": "live-server --host=localhost --open=#/",
     "pretest": "npm update",
     "test": "karma start karma.conf.js",

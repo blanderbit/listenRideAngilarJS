@@ -3,7 +3,8 @@
 
 <head>
   <title>listnride</title>
-  <!--<base href="/">--> <!-- see the $locationProvider.html5Mode in app.module.js -->
+  <!--<base href="/">-->
+  <!-- see the $locationProvider.html5Mode in app.module.js -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
@@ -40,7 +41,44 @@
   <script src="node_modules/moment/min/moment.min.js"></script>
   <script src="js_modules/daterangepicker/jquery.daterangepicker.js"></script>
   <!-- endbuild -->
-  <script src="app/app.min.js"></script>
+  <!-- build:js app.min.js -->
+  <script src="app/modules/header/header.component.js"></script>
+  <script src="app/modules/sidebar/sidebar.component.js"></script>
+  <script src="app/modules/footer/footer.component.js"></script>
+  <script src="app/modules/home/home.component.js"></script>
+  <script src="app/modules/search/search.component.js"></script>
+  <script src="app/modules/user/user.component.js"></script>
+  <script src="app/modules/bike/bike.component.js"></script>
+  <script src="app/modules/bike/calendar.component.js"></script>
+  <script src="app/modules/requests/requests.component.js"></script>
+  <script src="app/modules/shared/bike-card/bike-card.component.js"></script>
+  <script src="app/modules/shared/autocomplete/autocomplete.component.js"></script>
+  <script src="app/modules/shared/message/message.component.js"></script>
+  <script src="app/modules/shared/rating/rating.component.js"></script>
+  <script src="app/modules/list/list.component.js"></script>
+  <script src="app/modules/listings/listings.component.js"></script>
+  <script src="app/modules/shared/listing-card/listing-card.component.js"></script>
+  <script src="app/modules/edit/edit.component.js"></script>
+  <script src="app/modules/settings/settings.component.js"></script>
+  <script src="app/modules/listing-a-bike/listing-a-bike.component.js"></script>
+  <script src="app/modules/events/rapha-super-cross/rapha-super-cross.component.js"></script>
+  <script src="app/modules/static/static.component.js"></script>
+
+  <script src="app/app.module.js"></script>
+  <script src="app/app.routes.js"></script>
+  <script src="app/app.theme.js"></script>
+  <script src="app/services/base64/base64.service.js"></script>
+  <script src="app/services/authentication/authentication.service.js"></script>
+  <script src="app/services/sha256/sha256.service.js"></script>
+  <script src="app/services/api/api.service.js"></script>
+  <script src="app/services/date/date.service.js"></script>
+  <script src="app/services/verification/verification.service.js"></script>
+  <script src="app/services/bike-options/bike-options.service.js"></script>
+  <script src="app/services/access-control/access-control.service.js"></script>
+  <script src="app/services/loading-dialog/loading-dialog.service.js"></script>
+  <script src="app/filters/category.filter.js"></script>
+  <script src="app/filters/map-category.filter.js"></script>
+  <!-- endbuild -->
   <!-- inject:js -->
   <!-- endinject -->
 </head>
@@ -57,6 +95,7 @@
      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
      ga('create', 'UA-61041935-1', 'auto');
      ga('send', 'pageview');
+
 </script>
 
 </html>

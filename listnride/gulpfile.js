@@ -91,7 +91,8 @@ gulp.task('copy-index-app', function () {
 gulp.task('vendors', function () {
     return gulp.src('index.html')
         .pipe(useref())
-        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('/app/**/*.js', uglify()))
+        .pipe(gulpif('/node_modules/**/*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
         .pipe(gulp.dest('./dist/'));
 });
@@ -100,7 +101,7 @@ gulp.task('vendors', function () {
 // minify and uglify development files
 gulp.task('scripts-deploy', function () {
     var headerValue = '//Evaluated by gulp.\n';
-    return gulp.src(paths.js)
+    return gulp.src('dist/app.min.js')
         .pipe(concat('app.min.js'))
         .pipe(header(headerValue))
         .pipe(ngAnnotate())
@@ -108,20 +109,6 @@ gulp.task('scripts-deploy', function () {
         .pipe(uglify('app.min.js'))
         .pipe(header(headerValue))
         .pipe(gulp.dest('./dist/'));
-});
-
-// concat all development js files - deployment
-// minify and uglify development files
-gulp.task('scripts-local', function () {
-    var headerValue = '//Evaluated by gulp.\n';
-    return gulp.src(paths.js)
-        .pipe(concat('app.min.js'))
-        .pipe(header(headerValue))
-        .pipe(ngAnnotate())
-        .pipe(gulp.dest('./app/'))
-        .pipe(uglify('app.min.js'))
-        .pipe(header(headerValue))
-        .pipe(gulp.dest('./app/'));
 });
 
 // copy i18n to dist folder
@@ -171,7 +158,8 @@ gulp.task('clean-extras', function (cb) {
         'dist/app.min.js',
         'dist/modules.tpl.min.js',
         'dist/services.tpl.min.js',
-        'dist/vendors.min.js'
+        'dist/vendors.min.js',
+        '.tmp'
     ];
     return del(cleanFiles, cb);
 });
@@ -182,8 +170,7 @@ gulp.task('clean-extras-local', function (cb) {
     var cleanFiles = [
         'app',
         'node_modules',
-        'js_modules',
-        '.tmp'
+        'js_modules'
     ];
     return del(cleanFiles, cb);
 });
@@ -240,9 +227,8 @@ gulp.task('deploy', function (cb) {
         'cache-templates-modules',
         'cache-templates-services',
         'images',
-        'scripts-deploy',
         'vendors',
-        'copy-index-dist',
+        'scripts-deploy',
         'inject-templates-modules',
         'copy-index-app',
         'copy-i18n',
