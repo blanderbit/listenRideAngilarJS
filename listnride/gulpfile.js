@@ -170,7 +170,8 @@ gulp.task('clean-extras-local', function (cb) {
     var cleanFiles = [
         'app',
         'node_modules',
-        'js_modules'
+        'js_modules',
+        'angular-material-minimal'
     ];
     return del(cleanFiles, cb);
 });
