@@ -158,7 +158,8 @@ gulp.task('clean-extras', function (cb) {
         'dist/app.min.js',
         'dist/modules.tpl.min.js',
         'dist/services.tpl.min.js',
-        'dist/vendors.min.js'
+        'dist/vendors.min.js',
+        '.tmp'
     ];
     return del(cleanFiles, cb);
 });
@@ -169,8 +170,7 @@ gulp.task('clean-extras-local', function (cb) {
     var cleanFiles = [
         'app',
         'node_modules',
-        'js_modules',
-        '.tmp'
+        'js_modules'
     ];
     return del(cleanFiles, cb);
 });
