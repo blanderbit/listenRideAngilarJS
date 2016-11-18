@@ -11,6 +11,8 @@ angular.module('home',[]).component('home', {
         home.featuredBikes = response.data.slice(0,6);
       });
 
+      alert('hi');
+
       home.onSearch = function() {
         // TODO: This is coding excrement.
         // use the angular way to do things.
