@@ -3,8 +3,8 @@ var app = express();
 
 app.set('port', (process.env.PORT || 9003));
 app.use(express.static(__dirname + '/listnride/dist'));
-app.get('/', function (req, res) {
-  res.render('index');
+app.get('/*', function (req, res) {
+  res.sendFile(__dirname + '/listnride/dist/index.html');
 });
 
 app.listen(app.get('port'), function () {

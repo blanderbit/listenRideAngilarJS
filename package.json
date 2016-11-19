@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "postinstall": "npm install --prefix listnride/ && gulp deploy --gulpfile listnride/gulpfile.js"
+    "postinstall": "npm install --production --prefix listnride/ && gulp deploy --gulpfile listnride/gulpfile.js"
   },
   "dependencies": {
     "del": "^2.2.2",
