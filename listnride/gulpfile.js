@@ -38,7 +38,7 @@ gulp.task('lint', function () {
 // modules.tpl.min.js and services.tpl.min.js reference in index
 gulp.task('inject-templates-modules', function () {
     return gulp.src('dist/index.html')
-        .pipe(inject(gulp.src('dist/**/*.tpl.min.js', { read: false }), { relative: true }))
+        .pipe(inject(gulp.src('dist/**/*.tpl.min.js', { read: false }), { relative: true, removeTags: true}))
         .pipe(gulp.dest('dist'));
 });
 
