@@ -234,6 +234,7 @@ gulp.task('deploy', function (cb) {
         'revisions',
         'replace-revisions-index',
         'clean-extras',
+        'clean-extras-local',
         cb);
 });
 
