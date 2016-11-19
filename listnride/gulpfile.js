@@ -7,7 +7,6 @@ var concat = require('gulp-concat');
 var useref = require('gulp-useref');
 var inject = require('gulp-inject');
 var replace = require('gulp-replace');
-var header = require('gulp-header');
 var uglify = require('gulp-uglifyjs');
 var imagemin = require('gulp-imagemin');
 var stylish = require('jshint-stylish');
@@ -75,7 +74,7 @@ gulp.task('copy-index-tmp', function () {
 // copy new referenced index file to dist
 // index file with new references to dist folder
 gulp.task('copy-index-dist', function () {
-    return gulp.src('./app/ndex.html')
+    return gulp.src('./app/index.html')
         .pipe(gulp.dest('./dist/'));
 });
 
@@ -100,14 +99,11 @@ gulp.task('vendors', function () {
 // concat all development js files - local
 // minify and uglify development files
 gulp.task('scripts-deploy', function () {
-    var headerValue = '//Evaluated by gulp.\n';
     return gulp.src('dist/app.min.js')
         .pipe(concat('app.min.js'))
-        .pipe(header(headerValue))
         .pipe(ngAnnotate())
         .pipe(gulp.dest('./dist/'))
         .pipe(uglify('app.min.js'))
-        .pipe(header(headerValue))
         .pipe(gulp.dest('./dist/'));
 });
 
@@ -159,6 +155,7 @@ gulp.task('clean-extras', function (cb) {
         'dist/modules.tpl.min.js',
         'dist/services.tpl.min.js',
         'dist/vendors.min.js',
+        'dist/rev-manifest.json',
         '.tmp'
     ];
     return del(cleanFiles, cb);
@@ -181,7 +178,7 @@ gulp.task('clean-extras-local', function (cb) {
 // while in local env, app.min.js and index are at d/f levels
 // TODO: app.min.js and index.html should be at same level in local env
 gulp.task('changes-in-index', function () {
-    gulp.src(['dist/index.html'])
+    return gulp.src(['dist/index.html'])
         .pipe(replace('app/app.min.js', 'app.min.js'))
         .pipe(gulp.dest('dist/'));
 });
@@ -237,7 +234,6 @@ gulp.task('deploy', function (cb) {
         'revisions',
         'replace-revisions-index',
         'clean-extras',
-        'clean-extras-local',
         cb);
 });
 
