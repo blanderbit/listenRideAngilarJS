@@ -115,12 +115,17 @@ gulp.task('copy-i18n', function () {
 
 // optimize png images
 // loseless compression
-gulp.task('images-png', function () {
+gulp.task('images-png', function() {
     return gulp.src('./app/assets/ui_images/**/*')
         .pipe(imagemin({
             progressive: true,
-            interlaced: true,
-            plugins: [imagemin.gifsicle()]
+            plugins: [
+                imagemin.optipng({
+                    optimizationLevel: 7,
+                    bitDepthReduction: true,
+                    colorTypeReduction: true
+                })
+            ]
         }))
         .pipe(gulp.dest('dist/app/assets/ui_images'))
 });
