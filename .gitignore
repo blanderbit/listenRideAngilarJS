@@ -6,3 +6,5 @@ tmp
 .DS_Store
 listnride/node_modules
 listnride/dist
+npm-debug.log
+/*.env
