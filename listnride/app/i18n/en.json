@@ -614,5 +614,40 @@
     "title": "404 Page not found",
     "details": "The page you are looking for does not exist!",
     "home-link": "Back to the homepage"
+  },
+
+  "brand-integration": {
+    "ampler": {
+      "title": "Ampler. The smart electric bicycle for the urban commuter",
+      "description": "Rent and test Ampler E-Bikes in Berlin and Munich",
+      "subdescription": "Choose between Hawk, the dynamic single-speed or Bilberry, the comfortable city-bike",
+      "item1-title": "Handmade in Estonia",
+      "item1-description": "Made to order<br>Custom solutions<br>Attention to detail<br>Timeless Design",
+      "item2-title": "Comfortable Commuting",
+      "item2-description": "Upright riding position<br>Comfortable seat and grips<br>Stable kickstand<br>Lightweight",
+      "item3-title": "Electric Assist",
+      "item3-description": "Smooth and quiet pedal assist<br>Comfortable user experience<br>Easy to charge<br>Long lasting",
+      "choose-location": "Choose your location",
+      "find-out-more": "Learn more about Ampler Bikes",
+      "order-online": "<a href=\"http://amplerbikes.com\" target=\"_BLANK\">Order one of their bikes online</a> and get your rental reimbursed.<br>See the most frequently asked questions below.",
+      "faq-question-1": "How often do I have to charge the battery?",
+      "faq-answer-1": "The average range of the electric assist is 70 km, and if you run out of juice, you simply pedal on like you would on a regular bike. Charging the battery from drained to full takes only 3 hours. You can connect your charger to any regular power outlet.",
+      "faq-question-2": "What happens when the battery dies?",
+      "faq-answer-2": "After running out of battery power or turning off the assist, you can still ride with Ampler as you would do with a regular bicycle.",
+      "faq-question-3": "Can the battery be removed?",
+      "faq-answer-3": "Yes. The frame and the battery are designed in such a way that every professional bike shop could remove the battery, and if needed, replace it with a new one in under one hour.",
+      "faq-question-4": "How do I take care of the bike?",
+      "faq-answer-4": "Maintenance is carried out as on a regular bicycle and every professional bike shop will be able to maintain our bikes.",
+      "faq-question-5": "How are the bikes delivered?",
+      "faq-answer-5": "Bikes are safely packed in a box and require minimal assembling.",
+      "faq-question-6": "How to assemble the bike when delivered to my door?",
+      "faq-answer-6": "Assembling the bike is super simple. We include the instructions with the bike. You can do it yourself or, if you prefer, take it to a local bike shop.",
+      "faq-question-7": "Do you offer warranty?",
+      "faq-answer-7": "Yes. All Ampler bikes are covered for 2 years. However, the normal wear of tires, brake pads, chainrings, chain and bearings is an inevitable part of cycling thus not covered.",
+      "faq-question-8": "Can I return the bike?",
+      "faq-answer-8": "Yes. You can return the bike in 14 days after receiving it. The bike must be in its original condition for full refund. Please note that have to pay the return postage yourself.",
+      "faq-question-9": "Are the bikes street legal?",
+      "faq-answer-9": "Yes. Our bikes are capable of a top speed of 35km/h but by default are limited according to EN15194 to the top speed of 25 km/h. This means that the motor will only help you up to 25km/h. You can change these settings from the smartphone app."
+    }
   }
 }
