@@ -5,7 +5,7 @@ angular.module('autocomplete',[]).component('autocomplete', {
   controllerAs: 'autocomplete',
   bindings: {
     autocompleteId: '@',
-    location: '<',
+    location: '=',
     labelId: '@',
     placeholderId: '@',
     required: '@',
@@ -29,7 +29,6 @@ angular.module('autocomplete',[]).component('autocomplete', {
             autocompleteObject.addListener('place_changed', function() {
               $scope.$apply(function() {
                 var response = autocompleteObject.getPlace();
-                autocomplete.location = response.formatted_address || response.name;
                 if (autocomplete.placeChanged !== undefined) {
                   autocomplete.placeChanged({place: response});
                 }
