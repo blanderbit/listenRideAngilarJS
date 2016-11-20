@@ -38,7 +38,7 @@ gulp.task('lint', function () {
 // modules.tpl.min.js and services.tpl.min.js reference in index
 gulp.task('inject-templates-modules', function () {
     return gulp.src('dist/index.html')
-        .pipe(inject(gulp.src('dist/**/*.tpl.min.js', { read: false }), { relative: true }))
+        .pipe(inject(gulp.src('dist/**/*.tpl.min.js', { read: false }), { relative: true, removeTags: true}))
         .pipe(gulp.dest('dist'));
 });
 
@@ -115,12 +115,17 @@ gulp.task('copy-i18n', function () {
 
 // optimize png images
 // loseless compression
-gulp.task('images-png', function () {
+gulp.task('images-png', function() {
     return gulp.src('./app/assets/ui_images/**/*')
         .pipe(imagemin({
             progressive: true,
-            interlaced: true,
-            plugins: [imagemin.gifsicle()]
+            plugins: [
+                imagemin.optipng({
+                    optimizationLevel: 7,
+                    bitDepthReduction: true,
+                    colorTypeReduction: true
+                })
+            ]
         }))
         .pipe(gulp.dest('dist/app/assets/ui_images'))
 });
