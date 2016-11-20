@@ -52,10 +52,10 @@ angular.module('listnride', [
     // when you are some route like /renting-a-bike or any
     // other then refreshing page fails
     // whoever worked on it fix it then enable it
-    // $locationProvider.html5Mode({
-    //   enabled: true,
-    //   requireBase: false
-    // });
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });
 
     $translateProvider.useStaticFilesLoader({
       prefix: 'app/i18n/',
