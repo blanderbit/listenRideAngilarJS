@@ -19,6 +19,7 @@ angular.module('listnride', [
   'rating',
   'settings',
   'listingABike',
+  'rentingABike',
   'raphaSuperCross',
   'static',
   'brand-integration',

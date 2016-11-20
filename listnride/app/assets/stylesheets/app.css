@@ -527,10 +527,10 @@ home #landingSection .lnr-page-title {
   background-repeat: none;
   opacity: 0;
   z-index: 0;
-  -webkit-animation: imageAnimation 60s linear infinite 0s;
-  -moz-animation: imageAnimation 60s linear infinite 0s;
-  -o-animation: imageAnimation 60s linear infinite 0s;
-  animation: imageAnimation 60s linear infinite 0s; 
+  -webkit-animation: imageAnimation 75s linear infinite 0s;
+  -moz-animation: imageAnimation 75s linear infinite 0s;
+  -o-animation: imageAnimation 75s linear infinite 0s;
+  animation: imageAnimation 75s linear infinite 0s; 
 }
 
 .cb-slideshow li:nth-child(1) span { 
@@ -560,6 +560,14 @@ home #landingSection .lnr-page-title {
   -moz-animation-delay: 45s;
   -o-animation-delay: 45s; 
   animation-delay: 45s;
+}
+
+.cb-slideshow li:nth-child(5) span { 
+  background-image: url(../ui_images/lnr_hero5.jpg);
+  -webkit-animation-delay: 60s;
+  -moz-animation-delay: 60s;
+  -o-animation-delay: 60s; 
+  animation-delay: 60s;
 }
 
 @-webkit-keyframes imageAnimation { 

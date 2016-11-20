@@ -89,15 +89,15 @@ config(['$stateProvider', '$urlRouterProvider',
     });
 
     $stateProvider.state({
-      name: 'about',
-      url: '/about',
-      templateUrl: 'app/modules/static/about.template.html'
+      name: 'rentingABike',
+      url: '/renting-a-bike',
+      template: '<renting-a-bike></renting-a-bike>'
     });
 
     $stateProvider.state({
-      name: 'rentingABike',
-      url: '/renting-a-bike',
-      templateUrl: 'app/modules/static/renting-a-bike.template.html'
+      name: 'about',
+      url: '/about',
+      templateUrl: 'app/modules/static/about.template.html'
     });
 
     $stateProvider.state({

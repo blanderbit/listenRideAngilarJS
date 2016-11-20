@@ -6,6 +6,7 @@
       <li><span></span></li>
       <li><span></span></li>
       <li><span></span></li>
+      <li><span></span></li>
     </ul>
 
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
@@ -13,9 +14,9 @@
       <h2 class="md-subhead">{{ 'home.landing-section-subheader' | translate }}</h2>    
     </div>
 
-    <form class="lnr-search-bar md-whiteframe-3dp" layout="row" ng-submit="home.onSearch()" md-theme="default">
-      <autocomplete autocomplete-id="home" flex="75" layout="column" location="home.location" placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}" ></autocomplete>
-      <md-button class="md-raised md-primary" id="submit" type="submit" flex="25">{{ 'shared.search' | translate }}</md-button>
+    <form class="lnr-search-bar md-whiteframe-3dp" layout="row" md-theme="default">
+      <autocomplete autocomplete-id="home" flex="75" layout="column" location="home.location" placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}" place-changed="home.placeChanged(place)"></autocomplete>
+      <md-button ng-click="home.onSearchClick()" class="md-raised md-primary" id="submit" flex="25">{{ 'shared.search' | translate }}</md-button>
     </form>
   </div>
 

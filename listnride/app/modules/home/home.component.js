@@ -11,12 +11,13 @@ angular.module('home',[]).component('home', {
         home.featuredBikes = response.data.slice(0,6);
       });
 
-      home.onSearch = function() {
-        // TODO: This is coding excrement.
-        // use the angular way to do things.
-        // fix the google autocomplete and all will work.
-        var myLocation = document.querySelector("#home.autocompleteSearch").value;
-        $state.go('search', {location: myLocation});
+      home.placeChanged = function(place) {
+        var location = place.formatted_address || place.name;
+        $state.go('search', {location: location});
+      };
+
+      home.onSearchClick = function() {
+        $state.go('search', {location: home.location});
       };
     }
   ]

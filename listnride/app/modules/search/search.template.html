@@ -3,11 +3,11 @@
   <div flex-xs="100" flex-gt-xs="60" flex-order-xs="2" layout="column">
     <div layout="column" layout-padding>
 
-      <form layout="row" ng-submit="search.onLocationChange()">
-        <autocomplete autocomplete-id="search" flex flex-gt-xs="70" layout="column" location="search.location" label-id="City" placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"></autocomplete>
+      <form layout="row">
+        <autocomplete autocomplete-id="search" flex flex-gt-xs="70" layout="column" location="search.location" label-id="City" placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}" place-changed="search.placeChanged(place)"></autocomplete>
 
         <md-input-container layout="row" hide-xs flex="30">
-          <md-button flex class="md-raised md-primary lnr-btn-inline" id="submit" type="submit">{{ 'shared.search' | translate }}</md-button>
+          <md-button flex class="md-raised md-primary lnr-btn-inline" id="submit" ng-click="search.onButtonClick()">{{ 'shared.search' | translate }}</md-button>
         </md-input-container>
 
         <!-- Duplicated size filter for mobile (needs a better solution) -->
