@@ -44,10 +44,10 @@ angular.module('search',[]).component('search', {
         zoom: 5
       };
 
-      populateBikes();
+      populateBikes(search.location);
 
       NgMap.getMap({id: "searchMap"}).then(function(map) {
-        console.log(map, map.infoWindows.infoWindow);
+        // console.log(map, map.infoWindows.infoWindow);
         search.map = map;
       });
 
@@ -61,15 +61,16 @@ angular.module('search',[]).component('search', {
         }
       };
 
-      search.onLocationChange = function() {
-        // TODO: This is coding excrement.
-        // use the angular way to do things.
-        // fix the google autocomplete and all will work.
-        var myLocation = document.querySelector("#search.autocompleteSearch").value;
-        search.location = myLocation;
-        $state.go('.', {location: myLocation}, {notify: false});
-        search.bikes = undefined;
-        populateBikes();
+      search.placeChanged = function(place) {
+        var location = place.formatted_address || place.name;
+        $state.go('.', {location: location}, {notify: false});
+        search.location = location;
+        populateBikes(location);
+      };
+
+      search.onButtonClick = function() {
+        $state.go('.', {location: search.location}, {notify: false});
+        populateBikes(search.location);
       };
 
       search.onSizeChange = function() {
@@ -89,8 +90,10 @@ angular.module('search',[]).component('search', {
         }
       };
 
-      function populateBikes() {
-        api.get("/rides?location=" + search.location).then(function(response) {
+      function populateBikes(location) {
+        search.bikes = undefined;
+
+        api.get("/rides?location=" + location).then(function(response) {
           search.bikes = response.data;
 
           if (search.bikes.length > 0) {
