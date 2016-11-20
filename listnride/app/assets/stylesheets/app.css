@@ -459,6 +459,18 @@ footer md-list-item:before {
   background-position: 50% 50%;
 }
 
+/*-----------------------------------------------------------------------------------*/
+/* BRAND INTEGRATION
+/*-----------------------------------------------------------------------------------*/
+
+ampler md-tab-item span {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+ampler md-pagination-wrapper {
+  width: 300px !important;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* HOME

@@ -148,6 +148,12 @@ config(['$stateProvider', '$urlRouterProvider',
       templateUrl: 'app/modules/static/how-it-works.template.html'
     });
 
+    $stateProvider.state({
+      name: 'ampler',
+      url: '/ampler',
+      template: '<ampler></ampler>'
+    });
+
     $stateProvider.state('404', {
       templateUrl: 'app/modules/static/error-404.template.html',
     });

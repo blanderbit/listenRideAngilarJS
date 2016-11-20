@@ -77,7 +77,7 @@
     "add-voucher": "Gutschein hinzufügen"
   },
 
-    "verification": {
+  "verification": {
     "verify-profile": "Verifiziere dein Profil",
     "resend-email": "Email erneut senden",
     "1": {
@@ -616,5 +616,40 @@
     "title": "404 Seite nicht gefunden",
     "details": "Die gesuchte Seite existiert nicht!",
     "home-link": "Zurück nach Homepage"
+  },
+
+  "brand-integration": {
+    "ampler": {
+      "title": "Ampler. Das smarte E-Bike für den urbanen Pendler.",
+      "description": "Miete und Teste Ampler E-Bikes in Berlin und München",
+      "subdescription": "Wähle zwischen Hawk, einem dynamischen Single-Speed, oder Bilberry, dem komfortablen City-Bike",
+      "item1-title": "Handgefertigt in Estland",
+      "item1-description": "Auf Bestellung<br>Kundenspezifische Lösungen<br>Aufmerksamkeit zum Detail<br>Zeitloses Design",
+      "item2-title": "Komfortables Pendeln",
+      "item2-description": "Aufrechte Fahrhaltung<br>Bequemer Sitz und Griffe<br>Stabiler Ständer<br>Leicht (11-15kg)",
+      "item3-title": "Elektrische Unterstützung",
+      "item3-description": "Geschmeidige und leise Pedalunterstützung<br>Benutzerfreundlichkeit<br>Einfaches Aufladen<br>Hohe Laufzeit",
+      "choose-location": "Wähle deine Stadt",
+      "find-out-more": "Entdecke mehr über Ampler Bikes",
+      "order-online": "<a href=\"http://amplerbikes.com\" target=\"_BLANK\">Bestelle eines der Räder online</a> und bekomme deine Miete erstattet.<br>Werf' auch einen Blick auf die häufigsten Fragen.",
+      "faq-question-1": "Wie oft muss ich den Akku laden?",
+      "faq-answer-1": "Die durchschnittliche Reichweite des Antriebs ist 70 km. Sollte der Akku trotzdem mal leer sein, kannst du wie auf einem normalen Fahrrad einfach weiterfahren. Die Aufladung des Akkus dauert nur 3 Stunden. Das Ladegerät kann an einer beliebigen Steckdose angeschlossen werden.",
+      "faq-question-2": "Was passiert, wenn der Akku aufgibt?",
+      "faq-answer-2": "Bei leerem Akku oder abgeschalteter Unterstützung kannst du wie mit einem normalen Fahrrad weiterfahren.",
+      "faq-question-3": "Kann die Batterie entfernt werden?",
+      "faq-answer-3": "Ja. Rahmen und der Akku sind so ausgelegt, dass jeder professionelle Fahrradladen den Akku herausnehmen und bei Bedarf innerhalb einer Stunde erneuern kann.",
+      "faq-question-4": "Wie kümmere ich mich um das Fahrrad?",
+      "faq-answer-4": "Die Wartung wird wie bei einem normalen Fahrrad durchgeführt und jeder professionelle Fahrrad-Shop ist in der Lage, die Fahrräder zu warten.",
+      "faq-question-5": "Wie werden die Fahrräder ausgeliefert?",
+      "faq-answer-5": "Fahrräder sind sicher in einer Box verpackt und erfordern minimale Montage.",
+      "faq-question-6": "Wie montiere ich das Fahrrad wenn es geliefert wird?",
+      "faq-answer-6": "Das Zusammenbauen des Fahrrads ist super einfach, eine Anleitung wird mitgeliefert. Du kannst es selbst machen oder auch zu einem lokalen Fahrradgeschäft mitnehmen.",
+      "faq-question-7": "Gibt es eine Garantie?",
+      "faq-answer-7": "Ja. Alle Ampler Fahrräder sind für 2 Jahre abgedeckt. Allerdings ist der normale Verschleiß von Reifen, Bremsbelägen, Kettenblättern, Ketten und Lagern ein unvermeidlicher Teil des Radfahrens, der somit nicht abgedeckt ist.",
+      "faq-question-8": "Kann ich das Fahrrad zurückgeben?",
+      "faq-answer-8": "Ja. Du kannst das Fahrrad innerhalb von 14 Tagen nach Erhalt zurückgeben. Das Fahrrad muss für eine volle Rückerstattung in seinem ursprünglichen Zustand sein. Bitte beachte, dass du die Rücksendung selbst bezahlen musst.",
+      "faq-question-9": "Sind die Fahrräder legal?",
+      "faq-answer-9": "Ja. Unsere Fahrräder sind in der Lage eine Höchstgeschwindigkeit von 35km/h zu erreichen, sind aber standardmäßig nach EN15194 auf die Höchstgeschwindigkeit von 25 km/h begrenzt. Das bedeutet, dass der Motor nur bis zu 25km/h unterstützt. Du kannst diese Einstellungen über unsere Smartphone-App ändern."
+    }
   }
 }
