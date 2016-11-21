@@ -151,7 +151,7 @@ config(['$stateProvider', '$urlRouterProvider',
 
     $stateProvider.state({
       name: 'ampler',
-      url: '/ampler',
+      url: '/rent-ampler-bikes',
       template: '<ampler></ampler>'
     });
 
