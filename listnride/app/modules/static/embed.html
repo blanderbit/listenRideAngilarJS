@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-blue.min.css">
+  <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+</head>
+<body>
+  <style>
+    .mdl-card__media {background-color: white;}
+    .lnr-card-wide.mdl-card {width: 100%;}
+    .lnr-card-wide>.mdl-card__menu {color: #fff;}
+  </style>
+  <script>
+    $(function () {
+      $.get("https://api.listnride.com/v2/featured", function (data) {
+        console.log("data: ", data);
+        var imgUrl = data[0].image_file_1.image_file_1.medium.url;
+        data.forEach(function (d, i) {
+          $('.mdl-grid').append(
+            '<div class="mdl-cell mdl-cell--4-col">'+
+            '<div class="lnr-card-wide mdl-card mdl-shadow--2dp">' +
+            '<div class="mdl-card__media">' +
+            '<img src="' + d.image_file_1.image_file_1.medium.url + '" width="100%" height="80%">' +
+            '</div>'+
+            '<div class="mdl-card__supporting-text"> Urban, Cargo' +
+            '</div></div></div>'
+          );
+        });
+      });
+    });
+  </script>
+  <div class="mdl-grid"></div>
+</html>
