@@ -383,11 +383,12 @@
     "handover-section" : {
       "header": "Direct or flexible bike handover: the choice is yours",
       "content" : "We’re going to go out on a limb here and say that it’s especially the nice people who ride bikes. And they even lend them to others. That’s why we believe it’s definitely worth picking up the bike directly from the owner. The added benefit: meeting great new people and getting useful tips about the local area. But if there simply isn’t enough time, listnride offers its users three ways to hand over rental bikes:",
-      "list-1" : "Home, sweet home: The renter (rider) picks up the bike from the owner’s (lister’s) home.",
-      "list-2" : "X marks the spot: The lister hands over the bike to the rider at an agreed location.",
-      "list-3" : "The freedom is yours: The lister locks up the bike at a public place and sends the rider the code to the combination lock.",
-      "custom-location" : "option 1",
-      "lister-location" : "option 2"
+      "list-1" : "The renter (rider) picks up the bike from the owner’s (lister’s) home.",
+      "list-2" : "The lister hands over the bike to the rider at an agreed location.",
+      "list-3" : "The lister locks up the bike at a public place and sends the rider the code to the combination lock.",
+      "lister-location" : "Home, sweet Home",
+      "rider-location" : "X marks the Spot",
+      "public-location" : "Freedom is yours"
     }
   },
 
