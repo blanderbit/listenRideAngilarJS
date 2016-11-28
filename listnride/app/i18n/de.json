@@ -39,7 +39,8 @@
     "wait": "Lädt hoch, dies kann einen Moment dauern..",
     "lister": "Vermieter",
     "reviews": "Bewertungen",
-    "for": "für"
+    "for": "für",
+    "per-day": "pro Tag"
   },
 
   "toasts": {
@@ -96,7 +97,12 @@
       "description": "Bestätige Deine E-Mail-Adresse, indem Du auf den Link in der Bestätigungsmail klickst, die wir Dir nach der Registrierung schicken. Falls Du sie nicht mehr findest, kannst Du die Mail erneut anfordern. Erscheint sie nicht sofort in Deinem Postfach, warte bitte noch ein paar Minuten oder überprüfe deinen Spam-Ordner."
     },
     "5": {
-      "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst."
+      "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst.",
+      "enter-valid-phone-nr": "Bitte gib eine valide Telefonnummer an",
+      "send-confirmation-sms": "Bestätigungs-SMS schicken",
+      "sms-verification-code": "SMS-Verifizierungs-Code",
+      "confirm-code": "Code Bestätigen",
+      "Your phone number was successfully verified!": "Deine Nummer wurde erfolgreich verifiziert!"
     },
     "6": {
       "description": "Gib zu guter Letzt noch Deine Wohnanschrift ein."
@@ -109,7 +115,10 @@
   },
 
   "user": {
-    "verified-through": "Verifiziert durch"
+    "verified-through": "Verifiziert durch",
+    "verified": "Verifiziert",
+    "own-bikes": "Eigene Räder",
+    "ratings": "Bewertungen"
   },
 
   "requests": {
@@ -374,11 +383,12 @@
     "handover-section" : {
       "header": "Persönliche oder flexible Bike-Übergabe",
       "content" : "Wir behaupten mal: Gerade nette Leute fahren Fahrrad. Und verleihen es sogar. Deshalb finden wir:  eine persönliche Übergabe lohnt sich – schon wegen toller neuer Kontakte und nützlicher Tipps zur Stadt. Da aber die Zeit dafür nicht immer mitspielt, habt Ihr bei listnride drei Möglichkeiten zur Fahrradübergabe:",
-      "list-1" : "Home, Sweet Home: Der Mieter (Rider) holt das Rad beim Vermieter (Lister) ab.",
-      "list-2" : "Wunschkonzert: Der Lister übergibt das Rad an einem vereinbarten Ort an den Rider.",
-      "list-3" : "Die große Freiheit: Der Lister sperrt das Rad an einem öffentlichen Ort ab und sendet dem Rider die Zahlenschloss-Kombination.",
-      "custom-location" : "option 1",
-      "lister-location" : "option 2"
+      "list-1" : "Der Mieter (Rider) holt das Rad beim Vermieter (Lister) ab.",
+      "list-2" : "Der Lister übergibt das Rad an einem vereinbarten Ort an den Rider.",
+      "list-3" : "Der Lister sperrt das Rad an einem öffentlichen Ort ab und sendet dem Rider die Zahlenschloss-Kombination.",
+      "lister-location" : "Home, sweet Home",
+      "rider-location" : "Wunschkonzert",
+      "public-location" : "Die große Freiheit"
     }
   },
 
