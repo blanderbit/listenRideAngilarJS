@@ -273,10 +273,9 @@ angular.module('requests',[]).component('requests', {
           var left = (screen.width / 2) - (w / 2);
           var top = (screen.height / 2) - (h / 2);
 
-          var locale = $translate.proposedLanguage();
-          console.log(locale);
-
-          $window.open("https://api.listnride.com/v2/users/" + $localStorage.userId + "/payment_methods/new", "popup", "width="+w+",height="+h+",left="+left+",top="+top);
+          var locale = $translate.use();
+          $window.open("https://listnride-staging.herokuapp.com/v2/users/" + $localStorage.userId + "/payment_methods/new?locale="+locale, "popup", "width="+w+",height="+h+",left="+left+",top="+top);
+          // $window.open("https://api.listnride.com/v2/users/" + $localStorage.userId + "/payment_methods/new?locale="+locale, "popup", "width="+w+",height="+h+",left="+left+",top="+top);
           // For small screens, show Chat Dialog again
           hideDialog();
         }
