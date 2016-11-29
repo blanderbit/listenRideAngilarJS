@@ -12,39 +12,39 @@
         <div layout="column">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'shared.top-cities' | translate }}</md-subheader>
-            <md-list-item class="md-body-1 lnr-link"><span ui-sref="search({ location: 'Berlin' })" >{{ 'shared.berlin' | translate }}</span></md-list-item>
-            <md-list-item class="md-body-1 lnr-link"><span ui-sref="search({ location: 'Munich' })">{{ 'shared.munich' | translate }}</span></md-list-item>
-            <md-list-item class="md-body-1 lnr-link"><span ui-sref="search({ location: 'Amsterdam' })">{{ 'shared.amsterdam' | translate }}</span></md-list-item>
-            <md-list-item class="md-body-1 lnr-link"><span ui-sref="search({ location: 'Vienna' })">{{ 'shared.vienna' | translate }}</span></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="search({ location: 'Berlin' })" >{{ 'shared.berlin' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="search({ location: 'Munich' })">{{ 'shared.munich' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="search({ location: 'Amsterdam' })">{{ 'shared.amsterdam' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="search({ location: 'Vienna' })">{{ 'shared.vienna' | translate }}</a></md-list-item>
           </md-list>
         </div>
 
         <div layout="column">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'shared.learn-more' | translate }}</md-subheader>
-            <md-list-item class="md-body-1 lnr-link"><span ui-sref="howItWorks">{{ 'shared.how-it-works' | translate }}</span></md-list-item>
-            <md-list-item class="md-body-1 lnr-link"><span ui-sref="rentingABike">{{ 'shared.renting-a-bike' | translate }}</span></md-list-item>
-            <md-list-item class="md-body-1 lnr-link"><span ui-sref="listingABike">{{ 'shared.listing-a-bike' | translate }}</span></md-list-item>
-            <md-list-item class="md-body-1 lnr-link"><span ui-sref="trustAndSafety">{{ 'shared.trust-and-safety' | translate }}</span></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="howItWorks">{{ 'shared.how-it-works' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="rentingABike">{{ 'shared.renting-a-bike' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="listingABike">{{ 'shared.listing-a-bike' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="trustAndSafety">{{ 'shared.trust-and-safety' | translate }}</a></md-list-item>
           </md-list>
         </div>
 
         <div layout="column">
           <md-list>
             <md-subheader class="md-no-sticky">listnride</md-subheader>
-            <md-list-item class="md-body-1 lnr-link"><span ui-sref="about">{{ 'footer.about' | translate }}</span></md-list-item>
-            <md-list-item class="md-body-1 lnr-link"><span ui-sref="press">{{ 'footer.press' | translate }}</span></md-list-item>
-            <md-list-item class="md-body-1 lnr-link"><span ui-sref="jobs">{{ 'footer.jobs' | translate }}</span></md-list-item>
-            <md-list-item class="md-body-1 lnr-link"><span ui-sref="help">{{ 'shared.contact' | translate }}</span></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="about">{{ 'footer.about' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="press">{{ 'footer.press' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="jobs">{{ 'footer.jobs' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="help">{{ 'shared.contact' | translate }}</a></md-list-item>
           </md-list>
         </div>
 
         <div layout="column">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'footer.legal' | translate }}</md-subheader>
-            <md-list-item class="md-body-1 lnr-link"><span ui-sref="terms">{{ 'footer.terms-and-conditions' | translate }}</span></md-list-item>
-            <md-list-item class="md-body-1 lnr-link"><span ui-sref="privacy">{{ 'footer.privacy-statement' | translate }}</span></md-list-item>
-            <md-list-item class="md-body-1 lnr-link"><span ui-sref="imprint">{{ 'footer.imprint' | translate }}</span></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="terms">{{ 'footer.terms-and-conditions' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="privacy">{{ 'footer.privacy-statement' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="imprint">{{ 'footer.imprint' | translate }}</a></md-list-item>
           </md-list>
         </div>
 
@@ -63,7 +63,11 @@
               </md-menu-content>
             </md-menu>
 
-            <div id="iOSApp" class="lnr-link lnr-btn-ios" ng-click="footer.onAppClick()" target="_blank" layout-padding><img src="app/assets/ui_images/app_store.png"></div>
+            <div id="iOSApp" class="lnr-link lnr-btn-ios">
+              <a href="https://itunes.apple.com/de/app/list-n-ride/id992114091?l" target="_blank">
+                <img src="app/assets/ui_images/app_store.png">
+              </a>
+            </div>
           </md-list>
         </div>
 
@@ -73,14 +77,14 @@
     <md-divider></md-divider>
 
     <div layout="row" layout-align="space-between center" layout-padding>
-      <div>© 2016 List and Ride GmbH. <span class="lnr-link lnr-underline" ui-sref="imprint">{{ 'footer.imprint' | translate }}</span></div>
+      <div>© 2016 List and Ride GmbH. <a class="lnr-link lnr-underline" ui-sref="imprint">{{ 'footer.imprint' | translate }}</a></div>
       <div layout="row" layout-align="space-between stretch" layout-padding>
-        <div class="lnr-link" ng-click="footer.onFacebookClick()" target="_blank">
+        <a class="lnr-link" href="https://www.facebook.com/listnride" target="_blank">
           <md-icon class="lnr-icn-md md-color-white" md-svg-src="app/assets/ui_icons/icn_facebook.svg"></md-icon>
-        </div>
-        <div class="lnr-link" ng-click="footer.onInstagramClick()" target="_blank">
+        </a>
+        <a class="lnr-link" href="https://instagram.com/listnride" target="_blank">
           <md-icon class="lnr-icn-md md-color-white" md-svg-src="app/assets/ui_icons/icn_instagram.svg"></md-icon>
-        </div>
+        </a>
       </div>
     </div>
 

@@ -16,13 +16,6 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
           document.querySelector("md-content.single-column").scrollTop = 0;
         });
       }
-      footer.onFacebookClick = function() {
-        $window.open('https://www.facebook.com/Listnride', '_blank');
-      }    
-
-      footer.onInstagramClick = function() {
-        $window.open('https://instagram.com/listnride/', '_blank');
-      }
       
       footer.onAppClick = function() {
         $window.open('https://itunes.apple.com/de/app/list-n-ride/id992114091?l=' + $translate.use(), '_blank');
