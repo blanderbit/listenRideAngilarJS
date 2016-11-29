@@ -59,7 +59,7 @@
         <div flex-gt-xs="25">
           <p class="md-body-2">{{ 'user.own-bikes' | translate }}</p>
         </div>
-        <div flex-gt-xs layout="row" layout-wrap>
+        <div flex-gt-xs layout="row" layout-wrap layout-padding>
           <bike-card ng-repeat="bike in user.user.rides" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="50"></bike-card>
         </div>
       </div>
