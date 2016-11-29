@@ -609,9 +609,12 @@
   "imprint" : {
     "title" : "Impressum",
     "header" : "Impressum",
-    "contact" : {
-      "title" : "Unsere Kontaktinformationen sind:"
-    }
+    "managing-director": "Geschäftsführer",
+    "telephone": "Telefon",
+    "germany": "Deutschland",
+    "commercial-register-number": "Handelsregisternummer",
+    "berlin-court-of-registry": "Amtsgericht Berlin (Charlottenburg)",
+    "vat-id": "USt-ID-Nr."
   },
 
   "events": {
