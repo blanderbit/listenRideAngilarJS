@@ -712,6 +712,7 @@ home md-grid-list md-grid-tile.tile4 {
 /*-----------------------------------------------------------------------------------*/
 
 md-card.lnr-bike-card {
+  margin: 0;
   cursor: pointer;
 }
 

@@ -42,14 +42,14 @@
     <md-tabs md-no-pagination md-dynamic-height md-no-ink md-no-ink-bars md-center-tabs="on">
       <md-tab style="font-size: 40px" label="{{ 'shared.berlin' | translate }}">
         <md-content class="md-padding">
-          <div flex-gt-xs layout="row" layout-wrap>
+          <div flex-gt-xs layout="row" layout-wrap layout-padding>
             <bike-card ng-repeat="bike in ampler.bikesBerlin" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="50"></bike-card>
           </div>
         </md-content>
       </md-tab>
       <md-tab label="{{ 'shared.munich' | translate }}">
         <md-content class="md-padding">
-          <div flex-gt-xs layout="row" layout-wrap>
+          <div flex-gt-xs layout="row" layout-wrap layout-padding>
             <bike-card ng-repeat="bike in ampler.bikesMunich" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="50"></bike-card>
           </div>
         </md-content>
