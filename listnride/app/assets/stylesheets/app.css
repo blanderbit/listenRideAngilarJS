@@ -564,6 +564,7 @@ home #landingSection .lnr-page-title {
 
 .cb-slideshow li:nth-child(5) span { 
   background-image: url(../ui_images/lnr_hero5.jpg);
+  background-position: 100% 50%;
   -webkit-animation-delay: 60s;
   -moz-animation-delay: 60s;
   -o-animation-delay: 60s; 
