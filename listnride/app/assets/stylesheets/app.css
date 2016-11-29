@@ -739,6 +739,12 @@ md-card.lnr-bike-card {
   }
 }
 
+home #featuredCities a {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  COMMENT
