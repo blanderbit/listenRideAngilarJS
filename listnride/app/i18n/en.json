@@ -239,9 +239,31 @@
     "back": "Back",
     "next": "Next",
     "list-bike": "List My Bike",
+    "category": {
+      "header": "What is your bike cateogry?",
+      "hint": "First, select the category of your bike. Then select the right subcategory.",
+      "label": "Category",
+      "city": "City",
+      "race": "Race",
+      "all-terrain": "All terrain",
+      "kids": "Kids",
+      "electro": "Electro",
+      "special": "Special"
+    },
+    "details": {
+      "header": "What is your bike name, size & brand?",
+      "hint": "Enter the bike brand, name and a description of your bike. The name should include the model and describe the bike to the point. e.g. Gazelle, Tour Populair, 2013. Then select a range for the appropriate riders height.",
+      "label": "Details",
+      "brand": "Brand",
+      "name": "Name",
+      "description": "Description (min. 100 characters)",
+      "min-length-warning": "Length should be at least 100 characters",
+      "size": "Rider Height"
+    },
     "accessories": {
+      "header": "What accessories does your bike have?",
       "hint": "Edit accessories. Select the accessories, which you can provide with your bike.",
-      "accessories": "Accessories",
+      "label": "Accessories",
       "lock": "Lock",
       "helmet": "Helmet",
       "lights": "Lights",
@@ -249,15 +271,30 @@
       "trailer": "Trailer",
       "childseat": "Childseat"
     },
-    "category": {
-      "hint": "First, select the category of your bike. Then select the right subcategory.",
-      "category": "Category",
+    "pictures": {
+      "header": "Upload some pictures of your bike",
+      "hint": "Now select some nice pictures of your bike. Here are some important photo tips for making your listing look ever better.",
+      "label": "Pictures",
+      "select-images": "Select images",
+      "remove": "Remove",
+      "upload-bike-header": "Upload some pictures of your bike"
+    },
+    "location": {
+      "header": "Where can the bike be picked up?",
+      "hint": "Where is your bike located? Don’t worry, the exact location of your bike will ONLY be forwarded when you have confirmed a rental request.",
+      "label": "Location",
+      "street-number": "Street and Number",
+      "zip": "Zip Code",
       "city": "City",
-      "race": "Race",
-      "all-terrain": "All terrain",
-      "kids": "Kids",
-      "electro": "Electro",
-      "special": "Special"
+      "country": "Country"
+    },
+    "pricing": {
+      "header": "Your bike pricing?",
+      "hint": "Last, set an appropriate rental price. The price should be affordable and based on you ride and equipment. You may take similar listings as a reference. A rental period for less than 6 hours equals a half-day rental, 6 to 24 hours a day’s rental.",
+      "label": "Pricing",
+      "half-daily-price": "Half-daily Price",
+      "daily-price": "Daily Price",
+      "weekly-price": "Weekly Price"
     },
     "subcategory": {
       "1": {
@@ -296,37 +333,6 @@
         "recumbent": "Recumbent",
         "mono-bike": "Mono Bike"
       }
-    },
-    "details": {
-      "hint": "Enter the bike brand, name and a description of your bike. The name should include the model and describe the bike to the point. e.g. Gazelle, Tour Populair, 2013. Then select a range for the appropriate riders height.",
-      "details": "Details",
-      "brand": "Brand",
-      "name": "Name",
-      "description": "Description (min. 100 characters)",
-      "min-length-warning": "Length should be at least 100 characters",
-      "size": "Rider Height"
-    },
-    "pictures": {
-      "hint": "Now select some nice pictures of your bike. Here are some important photo tips for making your listing look ever better.",
-      "pictures": "Pictures",
-      "select-images": "Select images",
-      "remove": "Remove",
-      "upload-bike-header": "Upload some pictures of your bike"
-    },
-    "location": {
-      "hint": "Where is your bike located? Don’t worry, the exact location of your bike will ONLY be forwarded when you have confirmed a rental request.",
-      "location": "Location",
-      "street-number": "Street and Number",
-      "zip": "Zip Code",
-      "city": "City",
-      "country": "Country"
-    },
-    "pricing": {
-      "hint": "Last, set an appropriate rental price. The price should be affordable and based on you ride and equipment. You may take similar listings as a reference. A rental period for less than 6 hours equals a half-day rental, 6 to 24 hours a day’s rental.",
-      "pricing": "Pricing",
-      "half-daily-price": "Half-daily Price",
-      "daily-price": "Daily Price",
-      "weekly-price": "Weekly Price"
     }
   },
 

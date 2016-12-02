@@ -239,9 +239,21 @@
     "back": "Zurück",
     "next": "Weiter",
     "list-bike": "Rad einstellen",
+    "category": {
+      "header": "What is your bike cateogry?_",
+      "hint": "Wähle zuerst die Kategorie Deines Rads. Wähle anschließend die passende Unterkategorie.",
+      "label": "Kategorie",
+      "city": "Stadt",
+      "race": "Straße",
+      "all-terrain": "Gelände",
+      "kids": "Kinder",
+      "electro": "Elektro",
+      "special": "Spezial"
+    },
     "accessories": {
+      "header": "What accessories does your bike have?_",
       "hint": "Wähle das Zubehör, dass Du zur Verfügung stellen kannst.",
-      "accessories": "Zubehör",
+      "label": "Zubehör",
       "lock": "Schloss",
       "helmet": "Helm",
       "lights": "Licht",
@@ -249,15 +261,40 @@
       "trailer": "Anhänger",
       "childseat": "Kindersitz"
     },
-    "category": {
-      "hint": "Wähle zuerst die Kategorie Deines Rads. Wähle anschließend die passende Unterkategorie.",
-      "category": "Kategorie",
+    "details": {
+      "header": "What is your bike name, size & brand?_",
+      "hint": "Gebe Marke, Name und Beschreibung Deines Rads ein. Der Name sollte das Rad kurz beschreiben und das Model beinhalten. Z.B. Gazelle, Tour Populair, 2013. Wähle dann die passende Fahrergröße.",
+      "label": "Details",
+      "brand": "Marke",
+      "name": "Name",
+      "description": "Beschreibung (min. 100 Zeichen)",
+      "min-length-warning": "Minimum 100 Buchstabe",
+      "size": "Fahrergröße"
+    },
+    "pictures": {
+      "header": "Lade ein paar Fotos hoch",
+      "hint": "Wähle nun ein paar schöne Fotos Deines Rads. Hier sind einige Tipps, wie du deine eigenen Fotos aufnehmen solltest.",
+      "label": "Fotos",
+      "select-images": "Fotos Wählen",
+      "remove": "Löschen",
+      "upload-bike-header": "Lade ein paar Fotos hoch"
+    },
+    "location": {
+      "header": "Where can the bike be picked up?_",
+      "hint": "Wo steht Dein Fahrrad? Keine Sorge, der genaue Standort wird erst übermittelt wenn Du eine Buchungsanfrage bestätigt hast.",
+      "label": "Standort des Rads",
+      "street-number": "Staße und Hausnr.",
+      "zip": "PLZ",
       "city": "Stadt",
-      "race": "Straße",
-      "all-terrain": "Gelände",
-      "kids": "Kinder",
-      "electro": "Elektro",
-      "special": "Spezial"
+      "country": "Land"
+    },
+    "pricing": {
+      "header": "Your bike pricing?_",
+      "hint": "Nun setze noch einen angemessenen Mietpreis. Der Mietpreis sollte bezahlbar sein und sich nach Rad und Ausstattung richten. Schau Dir gern ähnliche Listings als Referenz an. Eine Mietdauer unter 6 Stunde ist eine Halbtagsmiete, 6-24 Stunde steht für eine Tagesmiete.",
+      "label": "Preis",
+      "half-daily-price": "Halber Tag",
+      "daily-price": "Ganzer Tag",
+      "weekly-price": "Eine Woche"
     },
     "subcategory": {
       "1": {
@@ -296,37 +333,6 @@
         "recumbent": "Liegerad",
         "mono-bike": "Einrad"
       }
-    },
-    "details": {
-      "hint": "Gebe Marke, Name und Beschreibung Deines Rads ein. Der Name sollte das Rad kurz beschreiben und das Model beinhalten. Z.B. Gazelle, Tour Populair, 2013. Wähle dann die passende Fahrergröße.",
-      "details": "Details",
-      "brand": "Marke",
-      "name": "Name",
-      "description": "Beschreibung (min. 100 Zeichen)",
-      "min-length-warning": "Minimum 100 Buchstabe",
-      "size": "Fahrergröße"
-    },
-    "pictures": {
-      "hint": "Wähle nun ein paar schöne Fotos Deines Rads. Hier sind einige Tipps, wie du deine eigenen Fotos aufnehmen solltest.",
-      "pictures": "Fotos",
-      "select-images": "Fotos Wählen",
-      "remove": "Löschen",
-      "upload-bike-header": "Lade ein paar Fotos hoch"
-    },
-    "location": {
-      "hint": "Wo steht Dein Fahrrad? Keine Sorge, der genaue Standort wird erst übermittelt wenn Du eine Buchungsanfrage bestätigt hast.",
-      "location": "Standort des Rads",
-      "street-number": "Staße und Hausnr.",
-      "zip": "PLZ",
-      "city": "Stadt",
-      "country": "Land"
-    },
-    "pricing": {
-      "hint": "Nun setze noch einen angemessenen Mietpreis. Der Mietpreis sollte bezahlbar sein und sich nach Rad und Ausstattung richten. Schau Dir gern ähnliche Listings als Referenz an. Eine Mietdauer unter 6 Stunde ist eine Halbtagsmiete, 6-24 Stunde steht für eine Tagesmiete.",
-      "pricing": "Preis",
-      "half-daily-price": "Halber Tag",
-      "daily-price": "Ganzer Tag",
-      "weekly-price": "Eine Woche"
     }
   },
 
