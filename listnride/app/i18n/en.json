@@ -94,7 +94,8 @@
       "label": "Description (min. 100 Characters)"
     },
     "4": {
-      "description": "Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder."
+      "description": "Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder.",
+      "email-verified": "Email Address successfully verified"
     },
     "5": {
       "description": "Verify your phone number, this allows SMS notifications for your requests. Simply enter your number and click 'Send Confirmation'. You'll receive a code via SMS that you can then enter below.",
@@ -102,7 +103,7 @@
       "send-confirmation-sms": "Send Confirmation SMS",
       "sms-verification-code": "SMS Verification Code",
       "confirm-code": "Confirm Code",
-      "Your phone number was successfully verified!": "Your number was successfully verified!"
+      "phone-nr-verified": "Your number was successfully verified!"
     },
     "6": {
       "description": "Ultimately, enter your home address."

@@ -94,7 +94,8 @@
       "label": "Beschreibung (min. 100 Buchstaben)"
     },
     "4": {
-      "description": "Bestätige Deine E-Mail-Adresse, indem Du auf den Link in der Bestätigungsmail klickst, die wir Dir nach der Registrierung schicken. Falls Du sie nicht mehr findest, kannst Du die Mail erneut anfordern. Erscheint sie nicht sofort in Deinem Postfach, warte bitte noch ein paar Minuten oder überprüfe deinen Spam-Ordner."
+      "description": "Bestätige Deine E-Mail-Adresse, indem Du auf den Link in der Bestätigungsmail klickst, die wir Dir nach der Registrierung schicken. Falls Du sie nicht mehr findest, kannst Du die Mail erneut anfordern. Erscheint sie nicht sofort in Deinem Postfach, warte bitte noch ein paar Minuten oder überprüfe deinen Spam-Ordner.",
+      "email-verified": "Email-Adresse erfolgreich verifiziert"
     },
     "5": {
       "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst.",
@@ -102,7 +103,7 @@
       "send-confirmation-sms": "Bestätigungs-SMS schicken",
       "sms-verification-code": "SMS-Verifizierungs-Code",
       "confirm-code": "Code Bestätigen",
-      "Your phone number was successfully verified!": "Deine Nummer wurde erfolgreich verifiziert!"
+      "phone-nr-verified": "Deine Nummer wurde erfolgreich verifiziert!"
     },
     "6": {
       "description": "Gib zu guter Letzt noch Deine Wohnanschrift ein."
