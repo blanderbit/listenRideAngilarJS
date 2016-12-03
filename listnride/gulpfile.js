@@ -221,7 +221,12 @@ gulp.task('replace-revisions-index', function () {
 
 // our js file which is used to embed bikes in other sites.
 gulp.task('embed', function () {
-    return gulp.src('js_modules/lnr-embed.js')
+
+    gulp.src('js_modules/lnr-embed/lnr-embed.css')
+        .pipe(concat('lnr-embed.min.css'))
+        .pipe(gulp.dest('./dist/'));
+    
+    return gulp.src('js_modules/lnr-embed/lnr-embed.js')
         .pipe(concat('lnr-embed.min.js'))
         .pipe(ngAnnotate())
         .pipe(gulp.dest('./dist/'))
