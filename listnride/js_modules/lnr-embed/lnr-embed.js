@@ -5,7 +5,7 @@
   scr_lnr.type = 'text/javascript';
 
   var css_lnr = document.createElement("LINK");
-  css_lnr.href = "https://rawgit.com/aurangzaib/master-project/master/listnride.css";
+  css_lnr.href = "https://listnride-frontend.herokuapp.com/lnr-embed.min.css";
   css_lnr.rel = "stylesheet";
 
   var css_mdl = document.createElement("LINK");
