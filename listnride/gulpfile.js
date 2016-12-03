@@ -219,6 +219,16 @@ gulp.task('replace-revisions-index', function () {
         .pipe(gulp.dest('dist'));
 });
 
+// our js file which is used to embed bikes in other sites.
+gulp.task('embed', function () {
+    return gulp.src('js_modules/lnr-embed.js')
+        .pipe(concat('lnr-embed.min.js'))
+        .pipe(ngAnnotate())
+        .pipe(gulp.dest('./dist/'))
+        .pipe(uglify('lnr-embed.min.js'))
+        .pipe(gulp.dest('./dist/'));
+
+});
 // tasks for deployment
 // DO NOT CHANGE THE SEQUENCE - SYNCHRONOUS COMMANDS
 // CHANGING THE SEQUENCE WILL MAKE YOU SLEEPLESS
@@ -238,6 +248,7 @@ gulp.task('deploy', function (cb) {
         'changes-in-index',
         'revisions',
         'replace-revisions-index',
+        'embed',
         'clean-extras',
         'clean-extras-local',
         cb);
