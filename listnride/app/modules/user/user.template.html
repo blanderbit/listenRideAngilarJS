@@ -20,21 +20,21 @@
           <md-icon class="lnr-icn-sm lnr-margin-right" 
           md-svg-src="app/assets/ui_icons/icn_verified.svg"
           ng-class="user.user.confirmed_phone ? 'md-color-primary' : 'md-color-disabled'"></md-icon> 
-          <md-tooltip ng-if="user.user.confirmed_phone" md-direction="left">verified</md-tooltip>
+          <md-tooltip ng-if="user.user.confirmed_phone" md-direction="left">{{ 'user.verified' | translate }}</md-tooltip>
           {{ 'shared.phone-number' | translate }}
         </span>
         <span class="md-body-1">
           <md-icon class="lnr-icn-sm lnr-margin-right"
           md-svg-src="app/assets/ui_icons/icn_verified.svg"
           ng-class="user.user.status > 0 ? 'md-color-primary' : 'md-color-disabled'"></md-icon>
-          <md-tooltip ng-if="user.user.status > 0" md-direction="left">verified</md-tooltip>
+          <md-tooltip ng-if="user.user.status > 0" md-direction="left">{{ 'user.verified' | translate }}</md-tooltip>
           {{ 'forms.email-address' | translate }}
         </span>
         <span class="md-body-1">
           <md-icon class="lnr-icn-sm lnr-margin-right"
           md-svg-src="app/assets/ui_icons/icn_verified.svg"
           ng-class="user.user.current_payment_method? 'md-color-primary' : 'md-color-disabled'"></md-icon>
-          <md-tooltip ng-if="user.user.current_payment_method" md-direction="left">verified</md-tooltip>
+          <md-tooltip ng-if="user.user.current_payment_method" md-direction="left">{{ 'user.verified' | translate }}</md-tooltip>
           {{ 'settings.payment-method' | translate }}
         </span>
       </div>
@@ -46,7 +46,7 @@
       <!-- description -->
       <div layout="row" layout-xs="column">
         <div flex-gt-xs="25">
-          <p class="md-body-2">Description</p>
+          <p class="md-body-2">{{ 'forms.description' | translate }}</p>
         </div>
         <div flex-gt-xs>
           <p class="md-body-1 lnr-margin-left">{{user.user.description}}</p>
@@ -57,7 +57,7 @@
       <!-- listings -->
       <div layout="row" layout-xs="column">
         <div flex-gt-xs="25">
-          <p class="md-body-2">Listings</p>
+          <p class="md-body-2">{{ 'user.own-bikes' | translate }}</p>
         </div>
         <div flex-gt-xs layout="row" layout-wrap>
           <bike-card ng-repeat="bike in user.user.rides" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="50"></bike-card>
@@ -68,7 +68,7 @@
       <!-- reviews -->
       <div layout="row" layout-xs="column">
         <div flex-gt-xs="25">
-          <p class="md-body-2">Ratings</p>
+          <p class="md-body-2">{{ 'user.ratings' | translate }}</p>
         </div>
 
         <div flex-gt-xs>

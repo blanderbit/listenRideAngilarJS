@@ -39,7 +39,8 @@
     "wait": "Uploading, this may take a moment..",
     "lister": "Lister",
     "reviews": "Reviews",
-    "for": "for"
+    "for": "for",
+    "per-day": "per day"
   },
 
   "toasts": {
@@ -93,10 +94,16 @@
       "label": "Description (min. 100 Characters)"
     },
     "4": {
-      "description": "Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder."
+      "description": "Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder.",
+      "email-verified": "Email Address successfully verified"
     },
     "5": {
-      "description": "Verify your phone number, this allows SMS notifications for your requests. Simply enter your number and click 'Send Confirmation'. You'll receive a code via SMS that you can then enter below."
+      "description": "Verify your phone number, this allows SMS notifications for your requests. Simply enter your number and click 'Send Confirmation'. You'll receive a code via SMS that you can then enter below.",
+      "enter-valid-phone-nr": "Please enter a valid phone number",
+      "send-confirmation-sms": "Send Confirmation SMS",
+      "sms-verification-code": "SMS Verification Code",
+      "confirm-code": "Confirm Code",
+      "phone-nr-verified": "Your number was successfully verified!"
     },
     "6": {
       "description": "Ultimately, enter your home address."
@@ -110,7 +117,9 @@
   },
 
   "user": {
-    "verified-through": "Verified through"
+    "verified-through": "Verified through",
+    "own-bikes": "Own Bikes",
+    "ratings": "Ratings"
   },
 
   "requests": {
@@ -375,11 +384,12 @@
     "handover-section" : {
       "header": "Direct or flexible bike handover: the choice is yours",
       "content" : "We’re going to go out on a limb here and say that it’s especially the nice people who ride bikes. And they even lend them to others. That’s why we believe it’s definitely worth picking up the bike directly from the owner. The added benefit: meeting great new people and getting useful tips about the local area. But if there simply isn’t enough time, listnride offers its users three ways to hand over rental bikes:",
-      "list-1" : "Home, sweet home: The renter (rider) picks up the bike from the owner’s (lister’s) home.",
-      "list-2" : "X marks the spot: The lister hands over the bike to the rider at an agreed location.",
-      "list-3" : "The freedom is yours: The lister locks up the bike at a public place and sends the rider the code to the combination lock.",
-      "custom-location" : "option 1",
-      "lister-location" : "option 2"
+      "list-1" : "The renter (rider) picks up the bike from the owner’s (lister’s) home.",
+      "list-2" : "The lister hands over the bike to the rider at an agreed location.",
+      "list-3" : "The lister locks up the bike at a public place and sends the rider the code to the combination lock.",
+      "lister-location" : "Home, sweet Home",
+      "rider-location" : "X marks the Spot",
+      "public-location" : "Freedom is yours"
     }
   },
 
