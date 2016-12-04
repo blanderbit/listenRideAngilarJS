@@ -16,12 +16,18 @@ var revReplace = require('gulp-rev-replace');
 var ngAnnotate = require('gulp-ng-annotate');
 var templateCache = require('gulp-angular-templatecache');
 
+var stagingEndpoint = "https://listnride-staging.herokuapp.com/v2",
+    stagingEndpointUsers = "https://listnride-staging.herokuapp.com/v2/users/",
+    productionEndpoint = "https://api.listnride.com/v2",
+    productionEndpointUsers = "https://api.listnride.com/v2/users/";
+
 // commonly used paths
 var paths = {
     app: './',
     js: ['./app/*.js', './app/**/*.js', '!**/*test.js'],
     vendors: ['node_modules/angular/angular.min.js',
-        'node_modules/angular-animate/angular-animate.min.js'],
+        'node_modules/angular-animate/angular-animate.min.js'
+    ],
     all: ['./app/**/*.html', './*.html', './libs/css/*.css', './app/*.js', './app/**/*.js', './app/**/!*test.js']
 };
 
@@ -38,7 +44,12 @@ gulp.task('lint', function () {
 // modules.tpl.min.js and services.tpl.min.js reference in index
 gulp.task('inject-templates-modules', function () {
     return gulp.src('dist/index.html')
-        .pipe(inject(gulp.src('dist/**/*.tpl.min.js', { read: false }), { relative: true, removeTags: true}))
+        .pipe(inject(gulp.src('dist/**/*.tpl.min.js', {
+            read: false
+        }), {
+            relative: true,
+            removeTags: true
+        }))
         .pipe(gulp.dest('dist'));
 });
 
@@ -115,7 +126,7 @@ gulp.task('copy-i18n', function () {
 
 // optimize png images
 // loseless compression
-gulp.task('images-png', function() {
+gulp.task('images-png', function () {
     return gulp.src('./app/assets/ui_images/**/*')
         .pipe(imagemin({
             progressive: true,
@@ -188,9 +199,33 @@ gulp.task('changes-in-index', function () {
         .pipe(gulp.dest('dist/'));
 });
 
+// change endpoint to production
+gulp.task('change-endpoint-to-production', function () {
+    // request.component
+    gulp.src('app/modules/requests/requests.component.js')
+        .pipe(replace(stagingEndpointUsers, productionEndpointUsers))
+        .pipe(gulp.dest('app/modules/requests/'));
+    // app.service
+    return gulp.src('app/services/api/api.service.js')
+        .pipe(replace(stagingEndpoint, productionEndpoint))
+        .pipe(gulp.dest('app/services/api/'));
+});
+
+// change endpoint to staging
+gulp.task('change-endpoint-to-staging', function () {
+    // request.component
+    gulp.src('app/modules/requests/requests.component.js')
+        .pipe(replace(productionEndpointUsers, stagingEndpointUsers))
+        .pipe(gulp.dest('app/modules/requests/'));
+    // app.service
+    return gulp.src('app/services/api/api.service.js')
+        .pipe(replace(productionEndpoint, stagingEndpoint))
+        .pipe(gulp.dest('app/services/api/'));
+});
+
 // watch changes in js files, used for local development
 gulp.task('watch', function () {
-    gulp.watch(paths.alljs, ['lint','clean', 'scripts']);
+    gulp.watch(paths.alljs, ['lint', 'clean', 'scripts']);
 });
 
 // svg and png 
@@ -215,7 +250,9 @@ gulp.task('revisions', function () {
 gulp.task('replace-revisions-index', function () {
     var manifest = gulp.src('dist/rev-manifest.json');
     return gulp.src('dist/index.html')
-        .pipe(revReplace({ manifest: manifest }))
+        .pipe(revReplace({
+            manifest: manifest
+        }))
         .pipe(gulp.dest('dist'));
 });
 
@@ -225,7 +262,7 @@ gulp.task('embed', function () {
     gulp.src('js_modules/lnr-embed/lnr-embed.css')
         .pipe(concat('lnr-embed.min.css'))
         .pipe(gulp.dest('./dist/'));
-    
+
     return gulp.src('js_modules/lnr-embed/lnr-embed.js')
         .pipe(concat('lnr-embed.min.js'))
         .pipe(ngAnnotate())
@@ -242,6 +279,7 @@ gulp.task('deploy', function (cb) {
     runSequence(
         'clean',
         'copy-index-tmp',
+        'change-endpoint-to-production',
         'cache-templates-modules',
         'cache-templates-services',
         'images',
@@ -255,6 +293,7 @@ gulp.task('deploy', function (cb) {
         'replace-revisions-index',
         'embed',
         'clean-extras',
+        'change-endpoint-to-staging',
         'clean-extras-local',
         cb);
 });
