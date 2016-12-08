@@ -12,7 +12,6 @@ angular.module('listings',[]).component('listings', {
 
       api.get('/users/' + $localStorage.userId + "/rides").then(
         function(response) {
-          console.log(response.data);
           listings.bikes = response.data;
         },
         function(error) {

@@ -8,13 +8,13 @@
       <md-tabs md-no-pagination md-dynamic-height md-no-ink md-no-ink-bars md-selected="list.selectedIndex" md-center-tabs="on">
         
         <!-- categories -->
-        <md-tab ng-disabled="true" class="categories" label="{{ 'list.category.category' | translate }}" layout="row">
+        <md-tab ng-disabled="true" class="categories" label="{{ 'list.category.label' | translate }}" layout="row">
           <md-content class="md-padding" layout="column">
             <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
               
               <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead">What is your bike cateogry?</h3>
+                  <h3 class="md-subhead">{{ 'list.category.header' | translate }}</h3>
                 </div>
                 <div layout="row" layout-align="space-between start">
                   <md-radio-group ng-model="list.form.mainCategory" flex="50" layout="column" ng-change="list.categoryChange({{list.form.mainCategory}})">
@@ -49,12 +49,12 @@
         <!-- end categories -->
 
         <!-- details -->
-        <md-tab ng-disabled="true" class="details" label="{{ 'list.details.details' | translate }}" layout="row">
+        <md-tab ng-disabled="true" class="details" label="{{ 'list.details.label' | translate }}" layout="row">
           <md-content class="md-padding" layout="column">
             <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
               <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead">What is your bike name, size &#38; brand?</h3>
+                  <h3 class="md-subhead">{{ 'list.details.header' | translate }}</h3>
                 </div>
                 <md-input-container>
                   <label>{{ 'list.details.brand' | translate }}</label>
@@ -108,12 +108,12 @@
         <!-- end details -->
 
         <!-- accessories -->
-        <md-tab ng-disabled="true" class="accessories" label="{{ 'list.accessories.accessories' | translate }}" layout="row">
+        <md-tab ng-disabled="true" class="accessories" label="{{ 'list.accessories.label' | translate }}" layout="row">
           <md-content class="md-padding" layout="column">
             <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
               <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead">What accessories does your bike have?</h3>
+                  <h3 class="md-subhead">{{ 'list.accessories.header' | translate }}</h3>
                 </div>
 
                 <md-checkbox ng-repeat="acc in list.accessoryOptions" ng-model="list.form[acc.model]">
@@ -141,12 +141,12 @@
         <!-- end accessories -->
 
         <!-- pictures -->
-        <md-tab ng-disabled="true" class="pictures" label="{{ 'list.pictures.pictures' | translate }}" layout="row">
+        <md-tab ng-disabled="true" class="pictures" label="{{ 'list.pictures.label' | translate }}" layout="row">
           <md-content class="md-padding" layout="column">
             <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
               <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">              
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead">{{ 'list.pictures.upload-bike-header' | translate }}</h3>
+                  <h3 class="md-subhead">{{ 'list.pictures.header' | translate }}</h3>
                 </div>
 
                 <md-button class="md-raised md-primary lnr-no-margin" ng-disabled="list.form.images.length > 4" ngf-multiple="true"
@@ -183,12 +183,12 @@
         <!-- end pictures -->
 
         <!-- location -->
-        <md-tab ng-disabled="true" class="location" label="{{ 'list.location.location' | translate }}" layout="row">
+        <md-tab ng-disabled="true" class="location" label="{{ 'list.location.label' | translate }}" layout="row">
           <md-content class="md-padding" layout="column">
             <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
               <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead">Where can the bike be picked up?</h3>
+                  <h3 class="md-subhead">{{ 'list.location.header' | translate }}</h3>
                 </div>
 
                 <autocomplete autocomplete-id="list" layout="column" location="list.form.street" label-id="{{ 'list.location.street-number' | translate }}" required="true" place-changed="list.fillAddress(place)">
@@ -230,12 +230,12 @@
         <!-- end location -->
 
         <!-- pricing -->
-        <md-tab ng-disabled="true" class="pricing" label="{{ 'list.pricing.pricing' | translate }}" layout="row">
+        <md-tab ng-disabled="true" class="pricing" label="{{ 'list.pricing.label' | translate }}" layout="row">
           <md-content class="md-padding" layout="column">
             <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
               <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead">Your bike pricing?</h3>
+                  <h3 class="md-subhead">{{ 'list.pricing.header' | translate }}</h3>
                 </div>
 
                 <md-input-container>
