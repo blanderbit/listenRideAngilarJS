@@ -1,9 +1,10 @@
 var express = require('express');
 var app = express();
 
+app.use(require('prerender-node').set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
+
 app.set('port', (process.env.PORT || 9003));
 app.use(express.static(__dirname + '/listnride/dist'));
-app.use(require('prerender-node').set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
 app.get('/*', function (req, res) {
   res.sendFile(__dirname + '/listnride/dist/index.html');
 });
