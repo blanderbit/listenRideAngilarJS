@@ -64,7 +64,7 @@
 
         <div layout="row" layout-xs="column" layout-align-gt-xs="center center">
           <div flex-gt-xs="25">
-            <p class="md-body-2">{{ 'list.accessories.accessories' | translate }}</p>
+            <p class="md-body-2">{{ 'list.accessories.label' | translate }}</p>
           </div>
           <div flex-gt-xs>
             <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_lock" md-svg-src="app/assets/ui_icons/accessoire_lock.svg">
@@ -90,7 +90,7 @@
 
         <div layout="row" layout-xs="column">
           <div flex-gt-xs="25">
-            <p class="md-body-2">{{ 'list.details.details' | translate }}</p>
+            <p class="md-body-2">{{ 'list.details.label' | translate }}</p>
           </div>
           <div class="lnr-compact-details" layout="column" flex-gt-xs>
             <div layout="row" layout-align="start center">
@@ -98,7 +98,7 @@
               <p class="md-body-1">{{ bike.data.brand }}</p>
             </div>
             <div layout="row" layout-align="start center">
-              <p flex="20" class="md-body-2">{{ 'list.category.category' | translate }}</p>
+              <p flex="20" class="md-body-2">{{ 'list.category.label' | translate }}</p>
               <p class="md-body-1">{{ bike.data.category | category }}</p>
             </div>
           </div>
