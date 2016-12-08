@@ -147,7 +147,7 @@ angular.
           api.post('/users/login', user).then(function(success) {
             setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
             showLoginSuccess();
-            if (!response.data.has_address || !response.data.confirmed_phone || response.data.status == 0) {
+            if (!success.data.has_address || !success.data.confirmed_phone || success.data.status == 0) {
               verification.openDialog(false);
             }
           }, function(error) {
