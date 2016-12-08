@@ -2,9 +2,10 @@
   <a ui-sref="user({userId: rating.data.author.id})">
     <img class="lnr-profile-md lnr-margin-right lnr-clickable" ng-src="{{rating.data.author.profile_picture.url}}"></img>
   </a>
+
   <div flex class="lnr-margin-left">
-    <p class="lnr-comment-name md-body-2"><span>{{rating.data.author.first_name}} {{rating.data.author.last_name}}, {{rating.data.created_at | date : "dd.MM.yyyy" }}</p>
-    <input-stars class="rating" max="5" ng-model="rating.data.score" readonly></input-stars>
+    <p class="lnr-comment-name md-body-2"><span>{{rating.data.author_full_name}}, {{rating.data.created_at | date : "dd.MM.yyyy" }}</p>
+    <p class="lnr-comment-content md-body-1">{{rating.data.score}} / 5</p><!-- <input-stars class="rating" max="5" ng-model="rating.data.score" readonly></input-stars> -->
     <p ng-if="rating.data.message" class="lnr-comment-content md-body-1">{{rating.data.message}}</p>                
   </div>
 </div>
