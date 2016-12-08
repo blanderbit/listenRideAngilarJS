@@ -69,7 +69,7 @@ md-card {
   border-bottom-left-radius: 0px;
 }
 
-md-card > img, md-card > md-card-header img, md-card md-card-title-media img {
+md-card > a > img, md-card > md-card-header a img, md-card md-card-title-media a img {
   box-sizing: border-box;
   display: flex;
   -webkit-box-flex: 0;
