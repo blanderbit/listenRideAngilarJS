@@ -153,6 +153,12 @@ gulp.task('images-svg', function () {
         .pipe(gulp.dest('dist/app/assets/ui_icons'))
 });
 
+// copy fonts to dist folder
+gulp.task('copy-fonts', function () {
+    return gulp.src(['node_modules/font-awesome/fonts**/*'])
+        .pipe(gulp.dest('dist/app/assets'));
+});
+
 // clean dist folder
 // before every deployment
 gulp.task('clean', function (cb) {
@@ -283,6 +289,7 @@ gulp.task('deploy', function (cb) {
         'cache-templates-modules',
         'cache-templates-services',
         'images',
+        'copy-fonts',
         'vendors',
         'scripts-deploy',
         'inject-templates-modules',
