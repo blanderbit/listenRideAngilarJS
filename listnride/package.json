@@ -59,7 +59,6 @@
     "jshint-stylish": "^2.2.1",
     "run-sequence": "^1.2.2",
     "yargs": "^6.5.0",
-    // local testing only
     "angular-mocks": "^1.4.9",
     "live-server": "^0.9.1",
     "karma": "^0.13.22",

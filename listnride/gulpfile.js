@@ -112,13 +112,13 @@ gulp.task('scripts-deploy', function () {
 
 // copy i18n to dist folder
 gulp.task('copy-i18n', function () {
-    return gulp.src(['./app/i18n/**/*'])
-        .pipe(gulp.dest('./dist/app/i18n'));
+    return gulp.src(path.app.i18n)
+        .pipe(gulp.dest(path.dist.i18n));
 });
 
 // copy fonts to dist folder
 gulp.task('copy-fonts', function () {
-    return gulp.src(['node_modules/font-awesome/fonts/*'])
+    return gulp.src(path.app.fonts)
         .pipe(gulp.dest(path.dist.fonts));
 });
 

@@ -12,7 +12,9 @@ module.exports = function () {
             images: './app/assets/ui_images/**/*',
             icons: './app/assets/ui_icons/**/*',
             requests: 'app/modules/requests/',
-            api: './app/services/api/'
+            api: './app/services/api/',
+            i18n: './app/i18n/**/*',
+            fonts: 'node_modules/font-awesome/fonts/*'
         },
         js: ['./app/*.js', './app/**/*.js', '!**/*test.js'],
         vendors: ['node_modules/angular/angular.min.js',
@@ -29,7 +31,8 @@ module.exports = function () {
             manifest: './dist/rev-manifest.json',
             fonts: './dist/app/assets/fonts/',
             js: './dist/*.min.js',
-            css: './dist/**/.min.css'
+            css: './dist/**/.min.css',
+            i18n: './dist/app/i18n'
         },
         embed: {
             css: './js_modules/lnr-embed/lnr-embed.css',
