@@ -195,9 +195,7 @@ gulp.task('clean-extras', function (cb) {
 // after every deploy
 // DO NOT USE IN DEV ENVIRONMENT
 gulp.task('clean-extras-local', function (cb) {
-    var cleanFiles = ('local' !== argvEnv) ?
-        ['app', 'node_modules', 'js_modules', 'angular-material-minimal'] :
-        [];
+    var cleanFiles = 'local' === argvEnv ? [] : ['app', 'node_modules', 'js_modules', 'angular-material-minimal'];
     return del(cleanFiles, cb);
 });
 
@@ -213,7 +211,7 @@ gulp.task('changes-in-index', function () {
 
 // watch changes in js files, used for local development
 gulp.task('watch', function () {
-    gulp.watch(paths.alljs, ['lint', 'clean', 'scripts']);
+    gulp.watch(path.alljs, ['lint', 'clean', 'scripts']);
 });
 
 // svg and png 
