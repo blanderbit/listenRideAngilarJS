@@ -5,7 +5,7 @@
   scr_lnr.type = 'text/javascript';
 
   var css_lnr = document.createElement("LINK");
-  css_lnr.href = "/Users/aurangzaib/Documents/Projects/listnride/listnride-frontend/listnride/js_modules/lnr-embed/lnr-embed.css";
+  css_lnr.href = "https://listnride-frontend-staging.herokuapp.com/lnr-embed.min.css";
   css_lnr.rel = "stylesheet";
 
   var css_mdl = document.createElement("LINK");
