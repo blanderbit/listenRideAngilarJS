@@ -23,6 +23,7 @@ angular.module('listnride', [
   'raphaSuperCross',
   'static',
   'brand-integration',
+  'listnride.constant',
   /* external modules */
   'ngMaterial',
   'ngMessages',
