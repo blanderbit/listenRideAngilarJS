@@ -19,10 +19,11 @@ var revReplace = require('gulp-rev-replace');
 var ngAnnotate = require('gulp-ng-annotate');
 var ngConstant = require('gulp-ng-constant');
 var templateCache = require('gulp-angular-templatecache');
+var htmlreplace = require('gulp-html-replace');
 
 var path = config.path;
 var environments = config.environments;
-var argvEnv = ('local' === argv.env || 'staging' === argv.env || 'production' === argv.env) ? argv.env : 'staging'
+var argvEnv = ('local' === argv.env || 'staging' === argv.env || 'production' === argv.env) ? argv.env : 'local'
 var env = environments[argvEnv];
 
 // eslint through all js files
@@ -110,6 +111,13 @@ gulp.task('scripts-deploy', function () {
         .pipe(gulp.dest(path.dist.root));
 });
 
+// base tag for deployment
+gulp.task('base-tag', function () {
+    return gulp.src(path.dist.index)
+        .pipe(htmlreplace({'base': '<base href="/">'}))
+        .pipe(gulp.dest(path.dist.root));
+});
+
 // copy i18n to dist folder
 gulp.task('copy-i18n', function () {
     return gulp.src(path.app.i18n)
@@ -193,7 +201,6 @@ gulp.task('clean-extras', function (cb) {
 });
 
 // after every deploy
-// DO NOT USE IN DEV ENVIRONMENT
 gulp.task('clean-extras-local', function (cb) {
     var cleanFiles = 'local' === argvEnv ? [] : ['app', 'node_modules', 'js_modules', 'angular-material-minimal'];
     return del(cleanFiles, cb);
@@ -278,6 +285,7 @@ gulp.task('deploy', function (cb) {
         'changes-in-index',
         'revisions',
         'replace-revisions-index',
+        'base-tag',
         'embed',
         'clean-extras',
         'clean-extras-local',
