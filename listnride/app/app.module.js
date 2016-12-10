@@ -37,8 +37,8 @@ angular.module('listnride', [
   'ngSanitize',
   'angular-input-stars'
 ])
-.config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider',
-  function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider) {
+.config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ENV',
+  function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ENV) {
     $mdAriaProvider.disableWarnings();
 
     ezfbProvider.setInitParams({
@@ -54,10 +54,9 @@ angular.module('listnride', [
     // other then refreshing page fails
     // whoever worked on it fix it then enable it
     $locationProvider.html5Mode({
-      enabled: true,
+      enabled: ENV.html5Mode,
       requireBase: false
     });
-
     $translateProvider.useStaticFilesLoader({
       prefix: 'app/i18n/',
       suffix: '.json'

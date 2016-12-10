@@ -48,7 +48,7 @@ module.exports = function () {
             constants: {
                 ENV: {
                     name: 'listnride',
-                    html5Mode: true,
+                    html5Mode: false,
                     apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
                     userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/'
                 }
