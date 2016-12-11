@@ -119,7 +119,9 @@
   "user": {
     "verified-through": "Verified through",
     "own-bikes": "Own Bikes",
-    "ratings": "Ratings"
+    "ratings": "Ratings",
+    "meta-title": "{{name}}'s profile | listnride",
+    "meta-description": "Rent bikes on listnride from {{name}}."
   },
 
   "requests": {

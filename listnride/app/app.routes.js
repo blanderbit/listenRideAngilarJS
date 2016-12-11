@@ -10,7 +10,8 @@ config(['$stateProvider', '$urlRouterProvider',
       template: '<home></home>',
       resolve : {
         data: function($translate, ngMeta) {
-          $translate(["home.meta-title", "home.meta-description"]).then(function(translations) {
+          $translate(["home.meta-title", "home.meta-description"])
+          .then(function(translations) {
             ngMeta.setTitle(translations["home.meta-title"]);
             ngMeta.setTag("description", translations["home.meta-description"]);
           })
@@ -159,7 +160,8 @@ config(['$stateProvider', '$urlRouterProvider',
       templateUrl: 'app/modules/static/how-it-works.template.html',
       resolve : {
         data: function($translate, ngMeta) {
-          $translate(["how-it-works.meta-title", "how-it-works.meta-description"]).then(function(translations) {
+          $translate(["how-it-works.meta-title", "how-it-works.meta-description"])
+          .then(function(translations) {
             ngMeta.setTitle(translations["how-it-works.meta-title"]);
             ngMeta.setTag("description", translations["how-it-works.meta-description"]);
           })

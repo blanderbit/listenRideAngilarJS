@@ -119,7 +119,9 @@
     "verified-through": "Verifiziert durch",
     "verified": "Verifiziert",
     "own-bikes": "Eigene Räder",
-    "ratings": "Bewertungen"
+    "ratings": "Bewertungen",
+    "meta-title": "{{name}}'s Profil | listnride",
+    "meta-description": "Rad mieten von {{name}} auf listnride."
   },
 
   "requests": {
