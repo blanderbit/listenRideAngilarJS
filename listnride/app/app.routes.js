@@ -7,7 +7,19 @@ config(['$stateProvider', '$urlRouterProvider',
     $stateProvider.state({
       name: 'home',
       url: '/',
-      template: '<home></home>'
+      template: '<home></home>',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["home.meta-title", "home.meta-description"])
+          .then(function(translations) {
+            ngMeta.setTitle(translations["home.meta-title"]);
+            ngMeta.setTag("description", translations["home.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({
@@ -86,13 +98,37 @@ config(['$stateProvider', '$urlRouterProvider',
     $stateProvider.state({
       name: 'listingABike',
       url: '/listing-a-bike',
-      template: '<listing-a-bike></listing-a-bike>'
+      template: '<listing-a-bike></listing-a-bike>',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["list-a-bike.meta-title", "list-a-bike.meta-description"])
+          .then(function(translations) {
+            ngMeta.setTitle(translations["list-a-bike.meta-title"]);
+            ngMeta.setTag("description", translations["list-a-bike.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({
       name: 'rentingABike',
       url: '/renting-a-bike',
-      template: '<renting-a-bike></renting-a-bike>'
+      template: '<renting-a-bike></renting-a-bike>',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["rent-a-bike.meta-title", "rent-a-bike.meta-description"])
+          .then(function(translations) {
+            ngMeta.setTitle(translations["rent-a-bike.meta-title"]);
+            ngMeta.setTag("description", translations["rent-a-bike.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({
@@ -104,7 +140,19 @@ config(['$stateProvider', '$urlRouterProvider',
     $stateProvider.state({
       name: 'trustAndSafety',
       url: '/trust-and-safety',
-      templateUrl: 'app/modules/static/trust-and-safety.template.html'
+      templateUrl: 'app/modules/static/trust-and-safety.template.html',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["trust-and-safety.meta-title", "trust-and-safety.meta-description"])
+          .then(function(translations) {
+            ngMeta.setTitle(translations["trust-and-safety.meta-title"]);
+            ngMeta.setTag("description", translations["trust-and-safety.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({
@@ -146,7 +194,19 @@ config(['$stateProvider', '$urlRouterProvider',
     $stateProvider.state({
       name: 'howItWorks',
       url: '/how-it-works',
-      templateUrl: 'app/modules/static/how-it-works.template.html'
+      templateUrl: 'app/modules/static/how-it-works.template.html',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["how-it-works.meta-title", "how-it-works.meta-description"])
+          .then(function(translations) {
+            ngMeta.setTitle(translations["how-it-works.meta-title"]);
+            ngMeta.setTag("description", translations["how-it-works.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({

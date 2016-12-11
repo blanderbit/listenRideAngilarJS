@@ -119,7 +119,9 @@
     "verified-through": "Verifiziert durch",
     "verified": "Verifiziert",
     "own-bikes": "Eigene Räder",
-    "ratings": "Bewertungen"
+    "ratings": "Bewertungen",
+    "meta-title": "{{name}}'s Profil",
+    "meta-description": "Rad mieten von {{name}} auf listnride."
   },
 
   "requests": {
@@ -193,7 +195,9 @@
     "featured-cities-header": "Im Sattel durch den Großstadtdschungel",
     "featured-cities-subheader": "In immer mehr Metropolen gibt es den Fahrradverleih über listnride. Erste Insider-Tipps hier:",
     "list-a-bike-header": "Dein Bike ist zu schön, um rumzustehen?",
-    "list-a-bike-subheader": "Liste Dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und kurble nebenbei Dein Konto an."
+    "list-a-bike-subheader": "Liste Dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und kurble nebenbei Dein Konto an.",
+    "meta-title": "listnride | Die Bike-Sharing-Community",
+    "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie Du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
   },
 
   "forms": {
@@ -358,6 +362,8 @@
   },
 
   "how-it-works" : {
+    "meta-title": "Unkompliziertes Bike-Sharing",
+    "meta-description": "listnride ist so simpel wie eine Verabredung zum Kaffee. Probier’s aus!",
     "title" : "Bike-Sharing völlig unkompliziert",
     "header" : "Mit listnride kommst Du ganz leicht in die Gänge",
     "subheader": "Bei uns ist Fahrrad(ver-)leihen so einfach wie eine Verabredung zum Kaffee:",
@@ -400,6 +406,8 @@
   },
 
   "rent-a-bike": {
+    "meta-title": "Fahrrad mieten über listnride!",
+    "meta-description": "Grandiose Auswahl. Top Preis-Leistungsverhältnis. Einfach online.",
     "title": "Fahrrad mieten. Nicht irgendeins. Sondern eins als wär’s genau Deins.",
     "info-section": {
       "header": "Miete Dein perfektes Rad",
@@ -422,6 +430,8 @@
   },
 
   "list-a-bike": {
+    "meta-title": "Vermiete Dein Fahrrad!",
+    "meta-description": "Lerne tolle neue Leute kennen und kurble nebenbei Dein Konto an.",
     "title": "Fahrrad vermieten, Konto ankurbeln",
     "subtitle" : "Lerne tolle neue Leute kennen und verdiene nebenbei Geld, z.B. für Dein nächstes Traum-Rad.",
     "calculator-section": {
@@ -456,6 +466,8 @@
   },
 
   "trust-and-safety": {
+    "meta-title": "Sichere Fahrradvermietung – listnride gibt Dir Rückendeckung",
+    "meta-description": "Vertrauen ist in einer Sharing-Community das A und O. Wir unterstützten Fairness und Sicherheit durch Verifizierung und unsere Vermieter-Garantie.",
     "title": "Vertrauen & Sicherheit",
     "header": "Sorgenlos in die Pedale treten",
     "guarantee-icon" : "garantie_de",

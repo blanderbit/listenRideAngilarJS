@@ -119,7 +119,9 @@
   "user": {
     "verified-through": "Verified through",
     "own-bikes": "Own Bikes",
-    "ratings": "Ratings"
+    "ratings": "Ratings",
+    "meta-title": "{{name}}'s profile",
+    "meta-description": "Rent bikes on listnride from {{name}}."
   },
 
   "requests": {
@@ -215,7 +217,9 @@
     "featured-cities-header": "Pedaling through the urban jungle",
     "featured-cities-subheader": "listnride’s bike rental service is becoming available in more and more cities around the world. Check out some insiders’ tips here:",
     "list-a-bike-header": "Got a nice bike and want people to see it?",
-    "list-a-bike-subheader": "List your bike for rent, meet fun new people and earn some extra cash."
+    "list-a-bike-subheader": "List your bike for rent, meet fun new people and earn some extra cash.",
+    "meta-title": "listnride | The bike sharing community",
+    "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
   },
 
   "autocomplete": {
@@ -358,6 +362,8 @@
   },
 
   "how-it-works" : {
+    "meta-title": "Bike sharing made easy",
+    "meta-description": "Using listnride is as easy as meeting up for coffee. Try for yourself!",
     "title" : "Bike sharing without the hassle",
     "header" : "listnride helps you get into gear",
     "subheader": "Renting (out) a bicycle on our bike sharing platform is as easy as meeting up for coffee:",
@@ -400,6 +406,8 @@
   },
 
   "rent-a-bike" : {
+    "meta-title": "Rent a bike via listnride!",
+    "meta-description": "Fantastic selection. Great value for money. Easy online service.",
     "title" : "Don’t just rent any old bike. Rent one that feels like your own.",
     "info-section" : {
       "header" : "Rent a bike that is perfect for you",
@@ -422,6 +430,8 @@
   },
 
   "list-a-bike" : {
+    "meta-title": "Rent out your bike!",
+    "meta-description": "Meet fun new people and make some extra pocket money.",
     "title" : "Rent out a bike, earn some extra cash",
     "subtitle" : "Meet great new people and earn some money on the side, for example for the next bike of your dreams.",
     "calculator-section" : {
@@ -456,6 +466,8 @@
   },
 
   "trust-and-safety" : {
+    "meta-title": "Bike hire made safe – listnride has your back",
+    "meta-description": "Trust is the be-all and end-all in a sharing community. We promote fairness and safety by verifying our users’ identities and offering a lister guarantee.",
     "title" : "Trust & Safety",
     "header" : "Carefree biking",
     "subheader" : "Thanks to listnride, renting a bike is as safe as it is easy.",
