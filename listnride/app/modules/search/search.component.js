@@ -12,7 +12,7 @@ angular.module('search',[]).component('search', {
 
       search.location = $stateParams.location;
 
-      setMetaTags();
+      setMetaTags(search.location);
 
       search.sizeFilter = {
         size: $stateParams.size

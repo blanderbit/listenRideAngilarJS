@@ -133,7 +133,19 @@ config(['$stateProvider', '$urlRouterProvider',
     $stateProvider.state({
       name: 'about',
       url: '/about',
-      templateUrl: 'app/modules/static/about.template.html'
+      templateUrl: 'app/modules/static/about.template.html',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["about-us.meta-title", "about-us.meta-description"])
+          .then(function(translations) {
+            ngMeta.setTitle(translations["about-us.meta-title"]);
+            ngMeta.setTag("description", translations["about-us.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({
@@ -163,31 +175,91 @@ config(['$stateProvider', '$urlRouterProvider',
     $stateProvider.state({
       name: 'help',
       url: '/help',
-      templateUrl: 'app/modules/static/help.template.html'
+      templateUrl: 'app/modules/static/help.template.html',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["contact-and-help.meta-title", "contact-and-help.meta-description"])
+          .then(function(translations) {
+            ngMeta.setTitle(translations["contact-and-help.meta-title"]);
+            ngMeta.setTag("description", translations["contact-and-help.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({
       name: 'jobs',
       url: '/jobs',
-      templateUrl: 'app/modules/static/jobs.template.html'
+      templateUrl: 'app/modules/static/jobs.template.html',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["jobs.meta-title", "jobs.meta-description"])
+          .then(function(translations) {
+            ngMeta.setTitle(translations["jobs.meta-title"]);
+            ngMeta.setTag("description", translations["jobs.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({
       name: 'press',
       url: '/press',
-      templateUrl: 'app/modules/static/press.template.html'
+      templateUrl: 'app/modules/static/press.template.html',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["press.meta-title", "press.meta-description"])
+          .then(function(translations) {
+            ngMeta.setTitle(translations["press.meta-title"]);
+            ngMeta.setTag("description", translations["press.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({
       name: 'imprint',
       url: '/imprint',
-      templateUrl: 'app/modules/static/imprint.template.html'
+      templateUrl: 'app/modules/static/imprint.template.html',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["imprint.meta-title", "imprint.meta-description"])
+          .then(function(translations) {
+            ngMeta.setTitle(translations["imprint.meta-title"]);
+            ngMeta.setTag("description", translations["imprint.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({
       name: 'privacy',
       url: '/privacy',
-      templateUrl: 'app/modules/static/privacy.template.html'
+      templateUrl: 'app/modules/static/privacy.template.html',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["privacy.meta-title", "privacy.meta-description"])
+          .then(function(translations) {
+            ngMeta.setTitle(translations["privacy.meta-title"]);
+            ngMeta.setTag("description", translations["privacy.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({
