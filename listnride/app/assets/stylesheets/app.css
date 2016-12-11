@@ -55,6 +55,21 @@ search {
   width: 100%;
 }
 
+p.md-subhead {
+  margin: 4px 0;
+}
+
+h1.md-subhead {
+  margin: 4px 0;
+}
+
+h2.md-subhead {
+  margin: 4px 0;
+}
+
+h3.md-body-2 {
+  margin: 1em 0;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* FRAMEWORK
@@ -826,6 +841,10 @@ md-dialog md-dialog-content .date-picker-wrapper .month-wrapper thead {
 
 search ng-map {
   height: 100% !important;
+}
+
+search h3 {
+  margin: 0 !important;
 }
 
 search .map-column {

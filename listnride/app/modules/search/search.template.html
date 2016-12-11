@@ -68,8 +68,8 @@
     <md-divider></md-divider>
 
     <md-content flex layout="column">
-      <div ng-show="search.bikes === undefined" flex layout="column" layout-align="center center">
-        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+      <div id="search-header" layout-padding>
+        <h1 class="md-headline" layout-padding>{{ 'search.bikes-in' | translate }} {{search.location}}</h1>
       </div>
 
       <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout="row" layout-align="center center" layout-padding>
@@ -80,6 +80,10 @@
         <div ng-repeat="bike in search.bikes | filter:search.sizeFilter | mapCategory:search.categoryFilter" flex="100" flex-gt-sm="50" flex-gt-lg="33">
           <bike-card bike="bike"></bike-card>
         </div>
+      </div>
+
+      <div ng-show="search.bikes === undefined" flex layout="column" layout-align="center center">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
       </div>
     </md-content>
   </div>

@@ -3,8 +3,8 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', 'NgMap',
-    function BikeController(api, $stateParams, $mdDialog, $mdMedia, NgMap) {
+  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', 'ngMeta', 'NgMap',
+    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, ngMeta, NgMap) {
       var bike = this;
 
       bike.mapOptions = {
@@ -28,6 +28,17 @@ angular.module('bike',[]).component('bike', {
           bike.data = response.data;
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
+
+          var metaData = {
+            name: bike.data.name,
+            brand: bike.data.brand,
+            description: bike.data.description,
+            location: bike.data.city,
+            category: $filter('category')(bike.data.category)
+          };
+
+          ngMeta.setTitle($translate.instant("bike.meta-title", metaData));
+          ngMeta.setTag("description", $translate.instant("bike.meta-description", metaData));
         },
         function(error) {
           console.log("Error retrieving bike", error);
