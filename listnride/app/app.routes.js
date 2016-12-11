@@ -139,7 +139,19 @@ config(['$stateProvider', '$urlRouterProvider',
     $stateProvider.state({
       name: 'trustAndSafety',
       url: '/trust-and-safety',
-      templateUrl: 'app/modules/static/trust-and-safety.template.html'
+      templateUrl: 'app/modules/static/trust-and-safety.template.html',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["trust-and-safety.meta-title", "trust-and-safety.meta-description"])
+          .then(function(translations) {
+            ngMeta.setTitle(translations["trust-and-safety.meta-title"]);
+            ngMeta.setTag("description", translations["trust-and-safety.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({
