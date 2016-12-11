@@ -6,7 +6,7 @@
       <div flex-gt-xs="70" layout="row">
         <img class="lnr-profile-lrg" ng-src="{{user.user.profile_picture.profile_picture.url}}">
         <div layout="column" layout-align="center start" layout-padding>
-          <span class="md-headline">{{user.user.first_name}} {{user.user.last_name}}</span>
+          <h1 class="md-headline">{{user.user.first_name}} {{user.user.last_name}}</h1>
           <input-stars class="lnr-user-rating rating" max="5" ng-model="user.rating" readonly></input-stars>
           <span class="md-body-1">{{user.user.city}}, {{user.user.country}}</span>
         </div>
@@ -15,7 +15,7 @@
       <md-divider hide-xs></md-divider>
 
       <div flex-gt-xs="30" flex-offset="5" layout="column" layout-align="center start" layout-padding>
-        <span class="md-subhead">{{ 'user.verified-through' | translate }}</span>
+        <h3 class="md-subhead">{{ 'user.verified-through' | translate }}</h3>
         <span class="md-body-1">
           <md-icon class="lnr-icn-sm lnr-margin-right" 
           md-svg-src="app/assets/ui_icons/icn_verified.svg"
@@ -46,7 +46,7 @@
       <!-- description -->
       <div layout="row" layout-xs="column">
         <div flex-gt-xs="25">
-          <p class="md-body-2">{{ 'forms.description' | translate }}</p>
+          <h3 class="md-body-2">{{ 'forms.description' | translate }}</h3>
         </div>
         <div flex-gt-xs>
           <p class="md-body-1 lnr-margin-left">{{user.user.description}}</p>
@@ -57,7 +57,7 @@
       <!-- listings -->
       <div layout="row" layout-xs="column">
         <div flex-gt-xs="25">
-          <p class="md-body-2">{{ 'user.own-bikes' | translate }}</p>
+          <h3 class="md-body-2">{{ 'user.own-bikes' | translate }}</h3>
         </div>
         <div flex-gt-xs layout="row" layout-wrap layout-padding>
           <bike-card ng-repeat="bike in user.user.rides" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="50"></bike-card>
@@ -68,7 +68,7 @@
       <!-- reviews -->
       <div layout="row" layout-xs="column">
         <div flex-gt-xs="25">
-          <p class="md-body-2">{{ 'user.ratings' | translate }}</p>
+          <h3 class="md-body-2">{{ 'user.ratings' | translate }}</h3>
         </div>
 
         <div flex-gt-xs>
