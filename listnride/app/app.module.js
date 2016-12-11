@@ -37,8 +37,8 @@ angular.module('listnride', [
   'angular-input-stars',
   'ngMeta'
 ])
-.config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider',
-  function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider) {
+.config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider',
+  function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider) {
     $mdAriaProvider.disableWarnings();
 
     ezfbProvider.setInitParams({
@@ -80,6 +80,8 @@ angular.module('listnride', [
 
     $translateProvider.preferredLanguage(preferredLanguage);
     $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
+
+    ngMetaProvider.setDefaultTitle('listnride');
   }
 ])
 .run(['ngMeta', function(ngMeta) { 
