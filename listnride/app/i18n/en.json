@@ -122,7 +122,7 @@
     "verified-through": "Verified through",
     "own-bikes": "Own Bikes",
     "ratings": "Ratings",
-    "meta-title": "{{name}}'s profile | listnride",
+    "meta-title": "{{name}}'s profile",
     "meta-description": "Rent bikes on listnride from {{name}}."
   },
 
@@ -367,7 +367,7 @@
   },
 
   "how-it-works" : {
-    "meta-title": "Bike sharing made easy | listnride",
+    "meta-title": "Bike sharing made easy",
     "meta-description": "Using listnride is as easy as meeting up for coffee. Try for yourself!",
     "title" : "Bike sharing without the hassle",
     "header" : "listnride helps you get into gear",
