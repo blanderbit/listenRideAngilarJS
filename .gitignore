@@ -9,3 +9,4 @@ listnride/dist
 npm-debug.log
 /*.env
 listnride/.tmp
+app.constants.js

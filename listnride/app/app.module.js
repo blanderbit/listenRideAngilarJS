@@ -23,6 +23,7 @@ angular.module('listnride', [
   'raphaSuperCross',
   'static',
   'brand-integration',
+  'listnride.constant',
   /* external modules */
   'ngMaterial',
   'ngMessages',
@@ -37,8 +38,8 @@ angular.module('listnride', [
   'angular-input-stars',
   'ngMeta'
 ])
-.config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider',
-  function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider) {
+.config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider', 'ENV',
+  function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider, ENV) {
     $mdAriaProvider.disableWarnings();
 
     ezfbProvider.setInitParams({
@@ -53,10 +54,10 @@ angular.module('listnride', [
     // when you are some route like /renting-a-bike or any
     // other then refreshing page fails
     // whoever worked on it fix it then enable it
-    /*$locationProvider.html5Mode({
-      enabled: true,
+    $locationProvider.html5Mode({
+      enabled: ENV.html5Mode,
       requireBase: false
-    });*/
+    });
 
     $translateProvider.useStaticFilesLoader({
       prefix: 'app/i18n/',

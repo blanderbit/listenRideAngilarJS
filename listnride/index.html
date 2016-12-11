@@ -3,7 +3,8 @@
 
 <head>
   <title ng-bind="ngMeta.title"></title>
-  <base href="/">
+  <!-- build:base -->
+  <!-- endbuild -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="{{ngMeta.description}}">
@@ -43,6 +44,7 @@
   <script src="js_modules/daterangepicker/jquery.daterangepicker.js"></script>
   <!-- endbuild -->
   <!-- build:js app.min.js -->
+  <script src="app/app.constants.js"></script>
   <script src="app/modules/header/header.component.js"></script>
   <script src="app/modules/sidebar/sidebar.component.js"></script>
   <script src="app/modules/footer/footer.component.js"></script>
@@ -66,7 +68,7 @@
   <script src="app/modules/events/rapha-super-cross/rapha-super-cross.component.js"></script>
   <script src="app/modules/static/static.component.js"></script>
   <script src="app/modules/brand-integration/ampler.component.js"></script>
-
+  
   <script src="app/app.module.js"></script>
   <script src="app/app.routes.js"></script>
   <script src="app/app.theme.js"></script>
