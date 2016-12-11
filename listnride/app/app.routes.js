@@ -115,7 +115,19 @@ config(['$stateProvider', '$urlRouterProvider',
     $stateProvider.state({
       name: 'rentingABike',
       url: '/renting-a-bike',
-      template: '<renting-a-bike></renting-a-bike>'
+      template: '<renting-a-bike></renting-a-bike>',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["rent-a-bike.meta-title", "rent-a-bike.meta-description"])
+          .then(function(translations) {
+            ngMeta.setTitle(translations["rent-a-bike.meta-title"]);
+            ngMeta.setTag("description", translations["rent-a-bike.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({

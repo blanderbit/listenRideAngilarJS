@@ -406,6 +406,8 @@
   },
 
   "rent-a-bike": {
+    "meta-title": "Fahrrad mieten über listnride!",
+    "meta-description": "Grandiose Auswahl. Top Preis-Leistungsverhältnis. Einfach online.",
     "title": "Fahrrad mieten. Nicht irgendeins. Sondern eins als wär’s genau Deins.",
     "info-section": {
       "header": "Miete Dein perfektes Rad",

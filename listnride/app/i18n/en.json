@@ -406,6 +406,8 @@
   },
 
   "rent-a-bike" : {
+    "meta-title": "Rent a bike via listnride!",
+    "meta-description": "Fantastic selection. Great value for money. Easy online service.",
     "title" : "Don’t just rent any old bike. Rent one that feels like your own.",
     "info-section" : {
       "header" : "Rent a bike that is perfect for you",
