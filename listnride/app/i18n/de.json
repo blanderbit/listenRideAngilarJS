@@ -112,7 +112,9 @@
 
   "bike": {
     "rent-bike": "Fahrrad Mieten",
-    "view-pictures": "Bilder ansehen"
+    "view-pictures": "Bilder ansehen",
+    "meta-title": "{{name}} - {{category}} von {{brand}} in {{location}} mieten.",
+    "meta-description": "{{description}}"
   },
 
   "user": {
@@ -120,7 +122,7 @@
     "verified": "Verifiziert",
     "own-bikes": "Eigene Räder",
     "ratings": "Bewertungen",
-    "meta-title": "{{name}}'s Profil | listnride",
+    "meta-title": "{{name}}'s Profil - listnride",
     "meta-description": "Rad mieten von {{name}} auf listnride."
   },
 
@@ -228,7 +230,10 @@
 
   "search": {
     "no-bikes": "Es gibt keine Räder an diesem Ort",
-    "all-sizes": "Alle Größen"
+    "all-sizes": "Alle Größen",
+    "bikes-in": "Fahrräder in",
+    "meta-title": "Miete das perfekte Rad in {{location}}.",
+    "meta-description": "listnride bietet viele verschiedene Räder in {{location}} zur Miete an."
   },
 
   "calendar": {

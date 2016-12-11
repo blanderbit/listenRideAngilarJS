@@ -113,7 +113,9 @@
   "bike": {
     "rent-bike": "Rent Bike",
     "view-pictures": "View Pictures",
-    "for": "for"
+    "for": "for",
+    "meta-title": "Rent the {{name}} - {{category}} by {{brand}} in {{location}}.",
+    "meta-description": "{{description}}"
   },
 
   "user": {
@@ -228,7 +230,10 @@
 
   "search" : {
     "no-bikes": "There are no bikes in this location",
-    "all-sizes": "All Sizes"
+    "all-sizes": "All Sizes",
+    "bikes-in": "Bikes in",
+    "meta-title": "Rent the perfect bike in {{location}}.",
+    "meta-description": "listnride offers a wide variety of perfekt bikes for rent in {{location}}."
   },
 
   "calendar": {

@@ -6,11 +6,13 @@ angular.module('search',[]).component('search', {
   bindings: {
     location: '<'
   },
-  controller: ['$translate', '$http', '$stateParams', '$state', 'NgMap', 'api',
-    function SearchController($translate, $http, $stateParams, $state, NgMap, api) {
+  controller: ['$translate', '$http', '$stateParams', '$state', 'NgMap', 'ngMeta', 'api',
+    function SearchController($translate, $http, $stateParams, $state, NgMap, ngMeta, api) {
       var search = this;
 
       search.location = $stateParams.location;
+
+      setMetaTags();
 
       search.sizeFilter = {
         size: $stateParams.size
@@ -65,6 +67,7 @@ angular.module('search',[]).component('search', {
         var location = place.formatted_address || place.name;
         $state.go('.', {location: location}, {notify: false});
         search.location = location;
+        setMetaTags(location);
         populateBikes(location);
       };
 
@@ -108,6 +111,14 @@ angular.module('search',[]).component('search', {
         }, function(error) {
           console.log("Error retrieving bikes");
         });
+      }
+
+      function setMetaTags(location) {
+        var data = {
+          location: location
+        };
+        ngMeta.setTitle($translate.instant("search.meta-title", data));
+        ngMeta.setTag("description", $translate.instant("search.meta-description", data));
       }
 
     }
