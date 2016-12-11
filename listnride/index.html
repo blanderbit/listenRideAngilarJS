@@ -2,11 +2,11 @@
 <html lang="en" ng-app="listnride">
 
 <head>
-  <title>listnride</title>
+  <title ng-bind="ngMeta.title"></title>
   <base href="/">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="">
+  <meta name="description" content="{{ngMeta.description}}">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
   <meta name="fragment" content="!">
   <link rel="icon" type="image/png" href="app/assets/ui_images/favicon-16x16.png" sizes="16x16">
@@ -39,6 +39,7 @@
   <script src="node_modules/ngmap/build/scripts/ng-map.min.js"></script>
   <script src="node_modules/angularjs-scroll-glue/src/scrollglue.js"></script>
   <script src="node_modules/moment/min/moment.min.js"></script>
+  <script src="node_modules/ng-meta/dist/ngMeta.min.js"></script>
   <script src="js_modules/daterangepicker/jquery.daterangepicker.js"></script>
   <!-- endbuild -->
   <!-- build:js app.min.js -->
