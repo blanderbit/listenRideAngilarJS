@@ -428,6 +428,8 @@
   },
 
   "list-a-bike": {
+    "meta-title": "Vermiete Dein Fahrrad!",
+    "meta-description": "Lerne tolle neue Leute kennen und kurble nebenbei Dein Konto an.",
     "title": "Fahrrad vermieten, Konto ankurbeln",
     "subtitle" : "Lerne tolle neue Leute kennen und verdiene nebenbei Geld, z.B. für Dein nächstes Traum-Rad.",
     "calculator-section": {

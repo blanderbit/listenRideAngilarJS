@@ -97,7 +97,19 @@ config(['$stateProvider', '$urlRouterProvider',
     $stateProvider.state({
       name: 'listingABike',
       url: '/listing-a-bike',
-      template: '<listing-a-bike></listing-a-bike>'
+      template: '<listing-a-bike></listing-a-bike>',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["list-a-bike.meta-title", "list-a-bike.meta-description"])
+          .then(function(translations) {
+            ngMeta.setTitle(translations["list-a-bike.meta-title"]);
+            ngMeta.setTag("description", translations["list-a-bike.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({

@@ -428,6 +428,8 @@
   },
 
   "list-a-bike" : {
+    "meta-title": "Rent out your bike!",
+    "meta-description": "Meet fun new people and make some extra pocket money.",
     "title" : "Rent out a bike, earn some extra cash",
     "subtitle" : "Meet great new people and earn some money on the side, for example for the next bike of your dreams.",
     "calculator-section" : {
