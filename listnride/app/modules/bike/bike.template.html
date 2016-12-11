@@ -10,8 +10,8 @@
       <div flex-sm="55" layout="row" layout-align="start center">
         <md-icon ng-if="bike.data.category" class="lnr-margin-right lnr-icn-mlrg md-color-foreground lnr-no-padding" md-svg-src="app/assets/ui_icons//biketype_{{ bike.data.category | limitTo: 1 }}.svg"></md-icon>
         <div flex layout="column">
-          <span class="md-title">{{ bike.data.brand }}, {{ bike.data.category | category }}</span>
-          <span class="md-subhead">{{ bike.data.name }}</span>
+          <h1 class="md-title">{{ bike.data.brand }}, {{ bike.data.category | category }}</h1>
+          <h2 class="md-subhead">{{ bike.data.name }}</h2>
         </div>
       </div>
 
@@ -37,7 +37,7 @@
       <div flex layout="column" layout-padding>
         <div layout="row" layout-xs="column">
           <div flex-gt-xs="25">
-            <p class="md-body-2">{{ 'forms.description' | translate }}</p>
+            <h3 class="md-body-2">{{ 'forms.description' | translate }}</h3>
           </div>
           <div flex-gt-xs>
             <p class="md-body-1">{{ bike.data.description }}</p>
@@ -46,16 +46,16 @@
 
         <div layout="row" layout-xs="column">
           <div flex-gt-xs="25">
-            <p class="md-body-2">{{ 'forms.city' | translate }}</p>
+            <h3 class="md-body-2">{{ 'forms.city' | translate }}</h3>
           </div>
           <div flex-gt-xs>
-            <p class="md-body-1 lnr-capitalize">{{ bike.data.city }}, {{ bike.data.country }}</p>
+            <strong class="md-body-1 lnr-capitalize">{{ bike.data.city }}, {{ bike.data.country }}</strong>
           </div>
         </div>
 
         <div layout="row" layout-xs="column">
           <div flex-gt-xs="25">
-            <p class="md-body-2">{{ 'list.details.size' | translate }}</p>
+            <h3 class="md-body-2">{{ 'list.details.size' | translate }}</h3>
           </div>
           <div flex-gt-xs>
             <p class="md-body-1">{{ 'shared.for' | translate }} <strong>{{ bike.data.size }}</strong> - <strong>{{ bike.data.size + 10 }}</strong> cm</p>
@@ -64,7 +64,7 @@
 
         <div layout="row" layout-xs="column" layout-align-gt-xs="center center">
           <div flex-gt-xs="25">
-            <p class="md-body-2">{{ 'list.accessories.label' | translate }}</p>
+            <h3 class="md-body-2">{{ 'list.accessories.label' | translate }}</h3>
           </div>
           <div flex-gt-xs>
             <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.has_lock" md-svg-src="app/assets/ui_icons//accessoire_lock.svg">
@@ -90,7 +90,7 @@
 
         <div layout="row" layout-xs="column">
           <div flex-gt-xs="25">
-            <p class="md-body-2">{{ 'list.details.label' | translate }}</p>
+            <h3 class="md-body-2">{{ 'list.details.label' | translate }}</h3>
           </div>
           <div class="lnr-compact-details" layout="column" flex-gt-xs>
             <div layout="row" layout-align="start center">
@@ -106,7 +106,7 @@
 
         <div layout="row" layout-xs="column">
           <div flex-gt-xs="25">
-            <p class="md-body-2">{{ 'shared.lister' | translate }}</p>
+            <h3 class="md-body-2">{{ 'shared.lister' | translate }}</h3>
           </div>
           <div flex-gt-xs layout="row" layout-align="start center">
             <a ui-sref="user({userId: bike.data.user.id})">

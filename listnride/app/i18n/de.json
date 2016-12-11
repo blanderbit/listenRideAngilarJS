@@ -112,7 +112,9 @@
 
   "bike": {
     "rent-bike": "Fahrrad Mieten",
-    "view-pictures": "Bilder ansehen"
+    "view-pictures": "Bilder ansehen",
+    "meta-title": "{{name}} - {{category}} von {{brand}} in {{location}} mieten.",
+    "meta-description": "{{description}}"
   },
 
   "user": {
@@ -196,7 +198,7 @@
     "featured-cities-subheader": "In immer mehr Metropolen gibt es den Fahrradverleih über listnride. Erste Insider-Tipps hier:",
     "list-a-bike-header": "Dein Bike ist zu schön, um rumzustehen?",
     "list-a-bike-subheader": "Liste Dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und kurble nebenbei Dein Konto an.",
-    "meta-title": "listnride | Die Bike-Sharing-Community",
+    "meta-title": "listnride - Die Bike-Sharing-Community",
     "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie Du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
   },
 
@@ -228,7 +230,10 @@
 
   "search": {
     "no-bikes": "Es gibt keine Räder an diesem Ort",
-    "all-sizes": "Alle Größen"
+    "all-sizes": "Alle Größen",
+    "bikes-in": "Fahrräder in",
+    "meta-title": "Miete das perfekte Rad in {{location}}.",
+    "meta-description": "listnride bietet viele verschiedene Räder in {{location}} zur Miete an."
   },
 
   "calendar": {
@@ -347,7 +352,8 @@
 
   "listings": {
     "my-bikes": "Meine Räder",
-    "no-bikes": "Du hast noch keine eigenen Fahrräder online gestellt."
+    "no-bikes": "Du hast noch keine eigenen Fahrräder online gestellt.",
+    "list-a-bike": "Rad einstellen"
   },
 
   "listingCard": {
@@ -500,7 +506,9 @@
     "future": {
       "title": "listnride in voller Fahrt",
       "content": "Heute ist listnride in Metropolen wie Amsterdam, Berlin, München und Wien am Start. Und es werden immer mehr. Privatmenschen und professionelle Händler bieten bei uns ihre Fahrräder zum Verleih an. Touristen und Mitbürger, Familien und Geschäftsreisende mieten genau das richtige Rad für ihren Stil und Zweck – und nehmen gleich noch den ein oder anderen nützlichen Tipp von ihrem Vermieter mit. Unsere Idee ist Wirklichkeit geworden. Sei ein Teil davon und teile dein Fahrrad – oder bike doch einfach, was Du willst! Wir freuen uns, Dich in unserer Community begrüßen zu dürfen."
-    }
+    },
+    "meta-title": "listnride - das Unternehmen",
+    "meta-description": "Gegründet von Fahrrad-Begeisterten für ihre Brüder und Schwestern im Geiste."
   },
 
   "press": {
@@ -515,7 +523,9 @@
     "contact": {
       "title": "Pressekontakt",
       "content": "Sie haben weitere Fragen zu listnride oder brauchen einen Ansprechpartner für Themen rund um Fahrradverleihsystem, Mieträder und Mobilitätskonzepte? Dann kontaktieren Sie uns direkt:"
-    }
+    },
+    "meta-title": "listnride Pressebereich",
+    "meta-description": "Wir lieben Bike-Sharing. Und beantworten gerne Ihre Fragen."
   },
 
   "jobs": {
@@ -525,11 +535,15 @@
     "contact": {
       "title": "Werde Teil unseres Teams",
       "content": "Über Fahrräder weißt Du immer mehr als andere? Du liebst es, auch bei Wind und Wetter in die Pedale zu treten? Dann bist Du wahrscheinlich ein Fahrrad-Fanatiker – und passt schon mal gut zu unserem Team. Schau, ob wir aktuell einen passenden Job für Dich haben und schicke uns gerne Deine Bewerbung."
-    }
+    },
+    "meta-title": "Stellenangebote bei listnride",
+    "meta-description": "Werde Mitglied des Teams und treibe die zeitgemäße Art des Fahrradverleihs voran."
   },
 
   "contact-and-help": {
     "title": "Kontakt & Hilfe",
+    "meta-title": "listnride ist für dich da",
+    "meta-description": "Kontaktiere uns, wenn Du spezielle Fragen oder Probleme hast.",
     "faq-section" : {
       "header": "Wir sind für Dich da!",
       "subheader": "Die häufigsten Fragen unserer Lister und Rider.",
@@ -621,7 +635,9 @@
   "privacy" : {
     "title" : "Datenschutz",
     "subtitle": "Datenschutzrichtlinien",
-    "description": "Mit den Datenschutzbestimmungen informiert die List and Ride GmbH (im Folgenden „listnride“) Sie über den Umgang mit Ihren personenbezogenen Daten. <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Sie können die Datenschutzbestimmungen hier abrufen und ausdrucken.</a>"
+    "description": "Mit den Datenschutzbestimmungen informiert die List and Ride GmbH (im Folgenden „listnride“) Sie über den Umgang mit Ihren personenbezogenen Daten. <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Sie können die Datenschutzbestimmungen hier abrufen und ausdrucken.</a>",
+    "meta-title": "Datenschutzrichtlinien von listnride",
+    "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform."
   },
 
   "imprint" : {
@@ -632,7 +648,9 @@
     "germany": "Deutschland",
     "commercial-register-number": "Handelsregisternummer",
     "berlin-court-of-registry": "Amtsgericht Berlin (Charlottenburg)",
-    "vat-id": "USt-ID-Nr."
+    "vat-id": "USt-ID-Nr.",
+    "meta-title": "listnride Impressum",
+    "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie Du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
   },
 
   "events": {
