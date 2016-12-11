@@ -360,6 +360,8 @@
   },
 
   "how-it-works" : {
+    "meta-title": "Bike sharing made easy",
+    "meta-description": "Using listnride is as easy as meeting up for coffee. Try for yourself!",
     "title" : "Bike sharing without the hassle",
     "header" : "listnride helps you get into gear",
     "subheader": "Renting (out) a bicycle on our bike sharing platform is as easy as meeting up for coffee:",

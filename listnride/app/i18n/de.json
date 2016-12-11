@@ -360,6 +360,8 @@
   },
 
   "how-it-works" : {
+    "meta-title": "Unkompliziertes Bike-Sharing",
+    "meta-description": "listnride ist so simpel wie eine Verabredung zum Kaffee. Probier’s aus!",
     "title" : "Bike-Sharing völlig unkompliziert",
     "header" : "Mit listnride kommst Du ganz leicht in die Gänge",
     "subheader": "Bei uns ist Fahrrad(ver-)leihen so einfach wie eine Verabredung zum Kaffee:",

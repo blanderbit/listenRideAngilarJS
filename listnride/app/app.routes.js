@@ -156,7 +156,18 @@ config(['$stateProvider', '$urlRouterProvider',
     $stateProvider.state({
       name: 'howItWorks',
       url: '/how-it-works',
-      templateUrl: 'app/modules/static/how-it-works.template.html'
+      templateUrl: 'app/modules/static/how-it-works.template.html',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["how-it-works.meta-title", "how-it-works.meta-description"]).then(function(translations) {
+            ngMeta.setTitle(translations["how-it-works.meta-title"]);
+            ngMeta.setTag("description", translations["how-it-works.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({
