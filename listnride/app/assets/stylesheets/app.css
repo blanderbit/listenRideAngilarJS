@@ -1,0 +1,1193 @@
+/* 
+// #5FC693: Primary Color
+// #f3f3f3: Preload Color
+// 4px: border radius
+// Added to material
+// md-lined,
+// md-right-arrow,
+// md-color-*
+*/
+
+/*-----------------------------------------------------------------------------------*/
+/* GENERAL
+/*-----------------------------------------------------------------------------------*/
+
+* {
+  outline: 0;
+}
+
+html {
+  min-width: 320px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.34rem 0;
+}
+
+ul, ol {
+  margin: 0;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.content {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* This has to be set for all full-height layouts */
+ui-view {
+  position: relative;
+}
+
+.single-column,
+requests,
+search {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* FRAMEWORK
+/*-----------------------------------------------------------------------------------*/
+
+/* fix for md-container margin */
+autocomplete {
+  margin-bottom: 16px;
+}
+
+autocomplete md-input-container {
+  margin-bottom: 0;
+}
+
+autocomplete {
+  position: relative;
+}
+
+autocomplete #autocompleteSearch {
+  width: 100%;
+}
+
+autocomplete .pac-container {
+  left: 0 !important;
+  top: 100% !important;
+}
+
+autocomplete .md-errors-spacer {
+  display: none;
+}
+
+/* mobile typorgraphy */
+@media (max-width:599px) {
+  .md-display-1 {
+    font-size: 24px;
+  }
+
+  .md-headline {
+    font-size: 20px;
+  }
+
+  .md-subhead {
+    font-size: 16px;
+  }
+
+  .lnr-page-title {
+    max-width: 90%;
+  }
+
+  input {
+    font-size: 12px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0.08rem 0;
+  }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* LNR CLASSES
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-bold {
+  font-weight: 500 !important;
+}
+
+.lnr-capitalize {
+  text-transform: capitalize;
+}
+
+.lnr-underline {
+  text-decoration: underline;
+}
+
+.lnr-center {
+  text-align: center;
+}
+
+.lnr-right {
+  text-align: right;
+}
+
+.lnr-margin {
+  margin: 8px;
+}
+
+.lnr-margin-right {
+  margin-right: 8px;
+}
+
+.lnr-margin-left {
+  margin-left: 8px;
+}
+
+.lnr-margin-top {
+  margin-top: 8px;
+}
+
+.lnr-margin-bottom {
+  margin-bottom: 8px;
+}
+
+.lnr-margin-lrg {
+  margin: 16px 8px;
+}
+
+.lnr-margin-lrg-top {
+  margin-top: 16px;
+}
+
+.lnr-margin-lrg-bottom {
+  margin-bottom: 16px;
+}
+
+.lnr-no-padding {
+  padding: 0;
+}
+
+.lnr-no-margin {
+  margin: 0;
+}
+
+.lnr-clickable {
+  cursor: pointer;
+}
+
+.lnr-link {
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+}
+
+.lnr-link:hover,
+.lnr-link:active {
+  opacity: 0.65;
+}
+
+.lnr-middle-divider {
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.lnr-middle-divider:before,
+.lnr-middle-divider:after {
+  background-color: rgba(206, 212, 216, 1.0);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.lnr-middle-divider:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.lnr-middle-divider:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.lnr-preload-bg {
+  background-color: #f3f3f3;
+}
+
+.lnr-btn-inline {
+  margin-top: 25px;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.lnr-btn-fb {
+  border-color: #3b5998 !important;
+  background: #3b5998 !important;
+  color: #fff !important;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* SVG
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-icn-sm {
+  width: 24px;
+  height: 24px;
+}
+
+.lnr-icn-md {
+  width: 34px;
+  height: 34px;
+}
+
+.lnr-icn-lrg {
+  width: 48px;
+  height: 48px;
+}
+
+.lnr-icn-mlrg {
+  width: 58px;
+  height: 58px;
+}
+
+.lnr-icn-xlrg {
+  width: 120px;
+  height: 120px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* PROFILE PICTURE
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-profile-sm {
+  height: 37px;
+  width: 37px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.lnr-profile-md {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background-color: #f3f3f3;
+  background-position: center;
+  background-size: cover;
+}
+
+.lnr-profile-lrg {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+settings .lnr-profile-lrg {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* NAVBAR
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-header {
+  width: 100%;
+  height: 60px;
+  z-index: 3;
+}
+
+.lnr-header .md-toolbar-tools .lnr-header-logo {
+  padding: 0;
+}
+
+.lnr-header .lnr-header-logo md-icon {
+  width: 95px;
+}
+
+.lnr-header .md-lined {
+  border-color: #ffffff;
+}
+
+.lnr-header .lnr-nav-menu .md-button {
+  margin: 0 12px;
+}
+
+.lnr-header .lnr-nav-menu .md-button:not(.md-lined):not(.md-img) {
+  padding: 12px 0;
+}
+
+.lnr-header .lnr-nav-menu .md-button.md-right-arrow {
+  padding-right: 20px;
+}
+
+.lnr-header .lnr-nav-menu .md-button.md-img {
+  padding: 0;
+}
+
+/* Safari vertical alignment fix */
+.lnr-header .md-toolbar-tools .lnr-header-logo {
+  min-height: 25px;
+}
+
+.md-toolbar-tools .md-button:not(.md-fab) {
+  min-width: 0px;
+}
+
+.md-toolbar-tools a.md-lined.md-button {
+  min-height: 28px !important;
+  line-height: 18px !important;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* FOOTER
+/*-----------------------------------------------------------------------------------*/
+
+footer md-list-item,
+footer md-list-item:before {
+  min-height: 24px;
+}
+
+.lnr-btn-ios img {
+  height: auto;
+  width: 154px;
+  padding: 8px;
+}
+
+.lnr-btn-lang {
+  width: 154px;
+  text-align: left;
+  padding-left: 14px;
+}
+
+footer .lnr-link {
+  color: #fff;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* DIALOG MODALS
+/*-----------------------------------------------------------------------------------*/
+
+.md-dialog-content {
+  /*width: 450px;*/
+}
+
+.lnr-input-containers md-input-container {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.lnr-input-containers md-input-container:first-child {
+  margin-left: 0;
+}
+
+.lnr-input-containers md-input-container:last-child {
+  margin-right: 0;
+}
+
+.md-dialog-buttons .md-button {
+  margin-top: 16px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.md-dialog-content md-input-container label:not(.md-no-float):not(.md-container-ignore),
+.md-dialog-content md-input-container .md-placeholder {
+  white-space: normal;
+}
+
+.lnr-verification-modal md-tabs {
+  width: 100%;
+  min-height: 300px;
+}
+
+.lnr-verification-modal md-tab-item {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.lnr-rating-dialog .md-input-messages-animation  {
+  height: 100%;
+}
+
+
+@media (max-width:599px) {
+ .md-dialog-content {
+    width: 100%;
+  } 
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* PAGES
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-page-margin {
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.lnr-page-title {
+  text-align: center;
+  max-width: 830px;
+}
+
+.lnr-section-title {
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 8px;
+}
+
+#hero-shot {
+  height: 42vh;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* BRAND INTEGRATION
+/*-----------------------------------------------------------------------------------*/
+
+ampler md-tab-item span {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+ampler md-pagination-wrapper {
+  width: 300px !important;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* HOME
+/*-----------------------------------------------------------------------------------*/
+
+home #landingSection {
+  height: 78vh;
+  overflow: visible;
+  position: relative;
+}
+
+home #landingSection #homeHeroShot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center; 
+}
+
+home #landingSection #homeHeroShot {
+  background-image: url(../ui_images/lnr_hero4.jpg);
+}
+
+home #landingSection .lnr-page-title {
+  z-index: 3;
+}
+
+.cb-slideshow,
+.cb-slideshow:after { 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.cb-slideshow li span { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  opacity: 0;
+  z-index: 0;
+  -webkit-animation: imageAnimation 75s linear infinite 0s;
+  -moz-animation: imageAnimation 75s linear infinite 0s;
+  -o-animation: imageAnimation 75s linear infinite 0s;
+  animation: imageAnimation 75s linear infinite 0s; 
+}
+
+.cb-slideshow li:nth-child(1) span { 
+  background-image: url(../ui_images/lnr_hero1.jpg); 
+  background-position: 75% 50%;
+}
+
+.cb-slideshow li:nth-child(2) span { 
+  background-image: url(../ui_images/lnr_hero2.jpg);
+  -webkit-animation-delay: 15s;
+  -moz-animation-delay: 15s;
+  -o-animation-delay: 15s; 
+  animation-delay: 15s;
+}
+
+.cb-slideshow li:nth-child(3) span { 
+  background-image: url(../ui_images/lnr_hero3.jpg);
+  -webkit-animation-delay: 30s;
+  -moz-animation-delay: 30s;
+  -o-animation-delay: 30s; 
+  animation-delay: 30s;
+}
+
+.cb-slideshow li:nth-child(4) span { 
+  background-image: url(../ui_images/lnr_hero4.jpg);
+  -webkit-animation-delay: 45s;
+  -moz-animation-delay: 45s;
+  -o-animation-delay: 45s; 
+  animation-delay: 45s;
+}
+
+.cb-slideshow li:nth-child(5) span { 
+  background-image: url(../ui_images/lnr_hero5.jpg);
+  background-position: 100% 50%;
+  -webkit-animation-delay: 60s;
+  -moz-animation-delay: 60s;
+  -o-animation-delay: 60s; 
+  animation-delay: 60s;
+}
+
+@-webkit-keyframes imageAnimation { 
+  0% { opacity: 0; animation-timing-function: ease-in; }
+  2% { opacity: 1; animation-timing-function: ease-out; }
+  25% { opacity: 1 }
+  27% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+@-moz-keyframes imageAnimation { 
+  0% { opacity: 0; animation-timing-function: ease-in; }
+  2% { opacity: 1; animation-timing-function: ease-out; }
+  25% { opacity: 1 }
+  27% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+@-o-keyframes imageAnimation { 
+  0% { opacity: 0; animation-timing-function: ease-in; }
+  2% { opacity: 1; animation-timing-function: ease-out; }
+  25% { opacity: 1 }
+  27% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+@keyframes imageAnimation { 
+  0% { opacity: 0; animation-timing-function: ease-in; }
+  2% { opacity: 1; animation-timing-function: ease-out; }
+  25% { opacity: 1 }
+  27% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+.lnr-search-bar {
+  width: 52%;
+  max-width: 720px;
+  margin-bottom: -30px;
+  z-index: 3;
+}
+
+.lnr-search-bar label,
+.lnr-search-bar .md-errors-spacer {
+  display: none;
+}
+
+.lnr-search-bar md-input-container,
+.lnr-search-bar autocomplete {
+  margin: 0;
+}
+
+.lnr-search-bar,
+.lnr-search-bar md-input-container,
+.lnr-search-bar autocomplete {
+  border-radius: 4px 0 0 4px;
+}
+
+.lnr-search-bar input {
+  width: 100%;
+  height: 60px;
+  border-radius: 4px 0 0 4px;
+  background: #fff;
+  border: none;
+  outline: none;
+}
+
+.lnr-search-bar .md-button {
+  margin: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+home .section {
+  margin-top: 80px;
+}
+
+#listBike {
+  height: 320px;
+  padding: 24px 0;
+  background-size: cover;
+  background-position: 15% 40%;
+  background-image: url(../ui_images/static/lnr_listabike.jpg);
+}
+
+home md-grid-list md-grid-tile {
+  border-radius: 4px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50%;
+  cursor: pointer;
+}
+
+home md-grid-list md-grid-tile.tile1 {
+  background-image: url(../ui_images/cities/lnr_munich.jpg);
+}
+
+home md-grid-list md-grid-tile.tile2 {
+  background-image: url(../ui_images/cities/lnr_berlin.jpg);
+}
+
+home md-grid-list md-grid-tile.tile3 {
+  background-image: url(../ui_images/cities/lnr_amsterdam.jpg);
+}
+
+home md-grid-list md-grid-tile.tile4 {
+  background-image: url(../ui_images/cities/lnr_vienna.jpg);
+}
+
+@media (max-width:599px) {
+  md-dialog.md-dialog-fullscreen {
+    min-height: 100%;
+    min-width: 100%;
+    border-radius: 0;
+  }
+
+  home #landingSection {
+    height: 60vh;
+  }
+
+  home .section {
+    margin-top: 40px;
+  }
+
+  .lnr-search-bar {
+    width: 90%
+  }
+}
+
+@media (min-width:600px) {
+  md-dialog.md-dialog-fullscreen {
+    min-width: 400px !important;
+    min-height: 0 !important;
+    border-radius: 3px;
+  }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  BIKE CARD
+/*-----------------------------------------------------------------------------------*/
+
+md-card.lnr-bike-card {
+  margin: 0;
+  cursor: pointer;
+}
+
+.lnr-bike-card md-card-title-text span {
+  max-width: 155px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width:599px) {
+  .lnr-bike-card md-card-title-text span {
+    max-width: 180px!important;
+  }
+}
+
+@media (max-width:639px) and (min-width: 600px) {
+  .lnr-bike-card md-card-title-text span {
+    max-width: 120px!important;
+  }
+}
+
+@media (max-width: 1110px) and (min-width: 640px) {
+  .lnr-bike-card md-card-title-text span {
+    max-width: 140px;
+  }
+}
+
+home #featuredCities a {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  COMMENT
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-comment {
+  margin: 8px 0;
+}
+
+.lnr-comment .lnr-comment-name {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.lnr-comment .lnr-comment-content {
+  margin-top: 8px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  BIKE DETAILS
+/*-----------------------------------------------------------------------------------*/
+
+bike #hero-shot {
+  height: 55vh;
+}
+
+bike .lnr-compact-details p {
+  margin: 4px 0;
+}
+
+bike .lnr-compact-details > div:first-child {
+  margin-top: 10px;
+}
+
+bike .lnr-compact-details > div:last-child {
+  margin-bottom: 10px;
+}
+
+bike .date-picker-wrapper {
+  margin-left: -8px;
+}
+
+bike .date-picker-wrapper tr > td:first-child {
+  padding-left: 16px;
+}
+
+bike .date-picker-wrapper tr > td:last-child {
+  padding-right: 16px;
+}
+
+md-dialog md-dialog-content .date-picker-wrapper,
+md-dialog md-dialog-content .date-picker-wrapper.inline-wrapper,
+md-dialog md-dialog-content .month-wrapper {
+  width: 100%;
+}
+
+md-dialog md-dialog-content .date-picker-wrapper .month-wrapper thead {
+  background: #fff;
+  color: rgba(85,85,85,0.75);
+}
+
+@media (max-width:599px) {
+  bike #hero-shot {
+    height: 45vh;
+  }
+
+  .date-picker-wrapper,
+  .date-picker-wrapper.inline-wrapper,
+  .month-wrapper {
+    width: 100%;
+  }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  SEARCH
+/*-----------------------------------------------------------------------------------*/
+
+search ng-map {
+  height: 100% !important;
+}
+
+search .map-column {
+  height: 35%;
+}
+
+search md-input-container,
+search autocomplete {
+  margin-bottom: 0;
+}
+
+search bike-card md-card {
+  margin: 0;
+}
+
+.lnr-filters md-checkbox,
+.lnr-filters md-checkbox .md-label {
+  margin: 0;
+  text-align: center;
+  /* disable text selection on double click */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+.lnr-filters md-checkbox .md-container {
+  display: none;
+}
+
+.lnr-filters md-checkbox.md-checked,
+.lnr-filters md-checkbox.md-checked md-icon svg path,
+.lnr-filters md-checkbox.md-checked md-icon svg rect,
+.lnr-filters md-checkbox.md-checked md-icon svg circle {
+  fill: #5FC693;
+  color: #5FC693;
+}
+
+/* Map bike card hackaround (to be cleaned) */
+ng-map md-card {
+  width: 240px;
+}
+
+ng-map md-card.lnr-bike-card md-icon {
+  display: none;
+}
+
+ng-map md-card.lnr-bike-card md-card-title-text span {
+  max-width: 120px;
+}
+
+.ng-map-info-window > div:first-child div {
+  display: none;
+}
+
+.ng-map-info-window > div:first-child  div:nth-last-child(2),
+.ng-map-info-window > div:first-child  div:nth-last-child(2) div {
+  display: block!important;
+  margin-top: -4px!important;
+  z-index: 2;
+}
+
+.ng-map-info-window > div:last-child {
+  right: 46px!important;
+  top: 18px!important;
+  opacity: 0.3!important;
+  border-radius: 10px;
+}
+
+.ng-map-info-window > div:last-child:hover {
+  opacity: 0.6!important;
+}
+
+@media (min-width:599px) {
+  search .map-column {
+    height: 100%;
+  }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  USER
+/*-----------------------------------------------------------------------------------*/
+
+user .lnr-user-rating  {
+  padding-left: 4px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  LIST BIKE
+/*-----------------------------------------------------------------------------------*/
+
+.angular-input-stars {  
+  display: inline-block;
+  padding: 0;
+  list-style: none;
+}
+
+.angular-input-stars > li {
+  color: rgba(210,218,218,1.0);
+  font-size: 20px;
+  display: inline-block;
+}
+
+.angular-input-stars > li .active {
+    color: #FEB35B;
+}
+
+rating .angular-input-stars > li {
+  font-size: 14px !important;
+  padding-right: 3px;
+  padding-left: 0;
+  cursor: pointer;
+}
+
+user .angular-input-stars > li {
+  padding-right: 3px;
+}
+
+list md-tabs,
+edit md-tabs {
+  padding: 0 !important;
+  width: 100%;
+}
+
+list .md-tab.md-disabled {
+  opacity: 1;
+}
+
+.lnr-list-title {
+  margin: 8px 0 24px 0;
+}
+
+list md-tabs .lnr-list-form,
+edit md-tabs .lnr-list-form {
+  min-height: 300px;
+}
+
+list md-tabs .img-preview,
+edit md-tabs .img-preview {
+  height: 100px;
+  width: 150px;
+  background-position: center;
+  background-size: cover;
+}
+
+list md-tabs .md-whiteframe-1dp {
+  background-color: white;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  LISTINGS
+/*-----------------------------------------------------------------------------------*/
+
+listings .lnr-bike-listings {
+  min-height: 350px;
+  width: 100%;
+}
+
+listings .lnr-bike-card.lnr-unavailable {
+  background-color: rgb(250, 250, 250);
+  opacity: 0.8;
+}
+
+listings .lnr-bike-card.lnr-unavailable img {
+  opacity: 0.6;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  CALCULATOR
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-calculator {
+  /* disable text selection on double click */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+.lnr-calculator md-slider-container {
+  position: relative;
+}
+
+.lnr-calculator md-slider-container .lnr-slider-info {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: -8px;
+  max-width: 150px;
+}
+
+@media (max-width:599px) {
+  .lnr-calculator .lnr-money {
+    font-size: 21vw;
+  }
+}
+
+
+@media (max-width:1280px) and (min-width:600px) {
+  .lnr-calculator .lnr-money {
+    font-size: 8.8vw;
+  }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  REQUESTS
+/*-----------------------------------------------------------------------------------*/
+
+/* Add possibility to have centered toasts */
+md-toast.md-center {
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.chat {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background-color: #efefef;
+}
+
+.chat {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 48px 16px 24px 16px;
+  background: #fff;
+}
+
+requests md-input-container  {
+  margin: 0;
+}
+
+.requests-list {
+  min-width: 300px;
+  max-width: 450px;
+  border-right: 1px solid #efefef;
+}
+
+.requests-list md-list-item .md-avatar {
+  width: 50px;
+  height: 50px;
+  padding: 10px 0;
+}
+
+.requests-list md-list-item.md-2-line .md-list-item-text p {
+  color: rgb(132, 140, 146);
+}
+
+.lnr-message-form {
+  background: rgba(229,234,234,0.7);
+}
+
+.lnr-message-form input {
+  background: #fff;
+}
+
+.lnr-message-form .md-errors-spacer {
+  display: none;
+}
+
+.lnr-message {
+  padding: 4px;
+  border-radius: 4px;
+}
+
+message .sent-message {
+  position: relative;
+  color: #fff;
+  background-color: #7ab2f8;
+}
+
+message .received-message {
+  position: relative;
+  background-color: rgba(229,234,234,0.4);
+}
+
+message .status-message {
+  background-color: rgba(229,234,234,0.4);
+}
+
+.sent-message:after {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-left-color: #7ab2f8;
+  border-width: 6px;
+  margin-top: -6px;
+}
+
+.received-message:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-right-color: rgba(229,234,234,0.4);
+  border-width: 6px;
+  margin-top: -6px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  STATIC PAGES
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-faqs div > p:first-child {
+  margin-top: 0;
+}
+
+.lnr-garantee  {
+  position: relative;
+}
+
+.lnr-garantee md-icon {
+  position: absolute;
+  padding-left: 16px;
+  right: 0;
+}
+
+@media (max-width:760px) {
+  .lnr-garantee md-icon {
+    position: relative;
+  }
+}
+
+#error404 {
+  text-align: center;
+  min-height: calc(100vh - 413px);
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  EVENT PAGES
+/*-----------------------------------------------------------------------------------*/
+
+rapha-super-cross img.event-logo {
+  width: 250px;
+}

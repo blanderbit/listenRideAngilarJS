@@ -4,3 +4,9 @@ node_modules/*
 tmp
 .idea
 .DS_Store
+listnride/node_modules
+listnride/dist
+npm-debug.log
+/*.env
+listnride/.tmp
+app.constants.js

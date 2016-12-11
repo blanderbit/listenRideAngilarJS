@@ -1,0 +1,105 @@
+ <md-content class="single-column"> 
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/brand-integration/ampler_header.jpg')" layout="row" layout-align="center center">
+    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'brand-integration.ampler.title' | translate }}</h1>
+    </div>
+  </div>
+
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'brand-integration.ampler.description' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'brand-integration.ampler.subdescription' | translate }}</h2>
+    </div>
+
+    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_images/brand-integration/ampler_feature_1.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">{{ 'brand-integration.ampler.item1-title' | translate }}</h3>
+        <p class="lnr-center" translate="{{ 'brand-integration.ampler.item1-description' | translate }}"></p>
+      </div>
+
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_images/brand-integration/ampler_feature_2.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">{{ 'brand-integration.ampler.item2-title' | translate }}</h3>
+        <p class="lnr-center" translate="{{ 'brand-integration.ampler.item2-description' | translate }}"></p>
+      </div>
+
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_images/brand-integration/ampler_feature_3.svg"></md-icon>
+        <h3  class="md-subhead lnr-center">{{ 'brand-integration.ampler.item3-title' | translate }}</h3>
+        <p class="lnr-center" translate="{{ 'brand-integration.ampler.item3-description' | translate }}"></p>
+      </div>
+    </div>
+
+    <br>
+    <md-divider></md-divider>
+    <br>
+
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'brand-integration.ampler.choose-location' | translate }}</h1>
+    </div>
+
+    <md-tabs md-no-pagination md-dynamic-height md-no-ink md-no-ink-bars md-center-tabs="on">
+      <md-tab style="font-size: 40px" label="{{ 'shared.berlin' | translate }}">
+        <md-content class="md-padding">
+          <div flex-gt-xs layout="row" layout-wrap layout-padding>
+            <bike-card ng-repeat="bike in ampler.bikesBerlin" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="50"></bike-card>
+          </div>
+        </md-content>
+      </md-tab>
+      <md-tab label="{{ 'shared.munich' | translate }}">
+        <md-content class="md-padding">
+          <div flex-gt-xs layout="row" layout-wrap layout-padding>
+            <bike-card ng-repeat="bike in ampler.bikesMunich" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="50"></bike-card>
+          </div>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+
+    <br>
+    <md-divider></md-divider>
+    <br>
+
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'brand-integration.ampler.find-out-more' | translate }}</h1>
+      <h2 class="md-subhead" translate="{{ 'brand-integration.ampler.order-online' | translate }}"></h2>
+    </div>
+
+    <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
+      <div flex-gt-sm="45" layout="column" layout-margin>
+        <h3 class="md-body-2 lnr-clickable" ng-click="left1=!left1">{{ 'brand-integration.ampler.faq-question-1' | translate }}</h3>
+        <div ng-show="left1"><p >{{ 'brand-integration.ampler.faq-answer-1' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="left2=!left2">{{ 'brand-integration.ampler.faq-question-2' | translate }}</h3>
+        <div ng-show="left2"><p >{{ 'brand-integration.ampler.faq-answer-2' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="left3=!left3">{{ 'brand-integration.ampler.faq-question-3' | translate }}</h3>
+        <div ng-show="left3"><p >{{ 'brand-integration.ampler.faq-answer-3' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="left4=!left4">{{ 'brand-integration.ampler.faq-question-4' | translate }}</h3>
+        <div ng-show="left4"><p >{{ 'brand-integration.ampler.faq-answer-4' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="left5=!left5">{{ 'brand-integration.ampler.faq-question-5' | translate }}</h3>
+        <div ng-show="left5"><p >{{ 'brand-integration.ampler.faq-answer-5' | translate }}</p></div>
+      </div>
+
+      <div flex-gt-sm="45" flex-gt-sm-offset="5" layout="column" layout-margin>
+        <h3 class="md-body-2 lnr-clickable" ng-click="right1=!right1">{{ 'brand-integration.ampler.faq-question-6' | translate }}</h3>
+        <div ng-show="right1"><p >{{ 'brand-integration.ampler.faq-answer-6' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="right2=!right2">{{ 'brand-integration.ampler.faq-question-7' | translate }}</h3>
+        <div ng-show="right2"><p >{{ 'brand-integration.ampler.faq-answer-7' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="right3=!right3">{{ 'brand-integration.ampler.faq-question-8' | translate }}</h3>
+        <div ng-show="right3"><p >{{ 'brand-integration.ampler.faq-answer-8' | translate }}</p></div>
+
+        <h3 class="md-body-2 lnr-clickable" ng-click="right4=!right4">{{ 'brand-integration.ampler.faq-question-9' | translate }}</h3>
+        <div ng-show="right4"><p >{{ 'brand-integration.ampler.faq-answer-9' | translate }}</p></div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer></footer>
+</md-content>

@@ -1,0 +1,19 @@
+<a ui-sref="bike({bikeId: bikeCard.bike.id})">
+  <md-card class="lnr-bike-card" ui-sref="bike({bikeId: bikeCard.bike.id})">
+    <img class="md-card-image" ng-src="{{bikeCard.bike.image_file_1.image_file_1.medium.url}}" alt="{{ ::bikeCard.bike.brand }} - {{ ::bikeCard.bike.name }}">
+
+    <md-card-title layout="row">
+      <md-icon ng-if="::bikeCard.bike.category" class="lnr-icn-lrg md-color-foreground" md-svg-src="app/assets/ui_icons/biketype_{{ ::bikeCard.bike.category | limitTo: 1 }}.svg"></md-icon>
+
+      <md-card-title-text class="lnr-margin-left" layout="column" layout-align="space-around start">
+        <span class="md-subhead">{{ ::bikeCard.bike.brand }}, {{ ::bikeCard.bike.category | category }}</span>
+        <span>{{ ::bikeCard.bike.name }}</span>
+      </md-card-title-text>
+
+      <div layout="column" layout-align="space-around center">
+      	<span class="md-headline">{{ ::bikeCard.bike.price_daily | number }}€</span>
+      	<span>{{ 'shared.per-day' | translate }}</span>
+      </div>
+    </md-card-title>
+  </md-card>
+</a>
