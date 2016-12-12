@@ -343,7 +343,8 @@
 
   "listings": {
     "my-bikes": "My Bikes",
-    "no-bikes": "You haven't listed any of your rides yet."
+    "no-bikes": "You haven't listed any of your rides yet.",
+    "list-a-bike": "List a Bike"
   },
 
   "listingCard": {

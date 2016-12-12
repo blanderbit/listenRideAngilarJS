@@ -58,7 +58,7 @@ module.exports = function () {
             context: {
                 name: 'listnride'
             },
-            uglify: false,
+            uglify: true,
             constants: {
                 ENV: {
                     name: 'listnride',
