@@ -35,10 +35,11 @@ angular.module('listnride', [
   'luegg.directives',
   'ngFileUpload',
   'ngSanitize',
-  'angular-input-stars'
+  'angular-input-stars',
+  'ngMeta'
 ])
-.config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ENV',
-  function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ENV) {
+.config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider', 'ENV',
+  function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider, ENV) {
     $mdAriaProvider.disableWarnings();
 
     ezfbProvider.setInitParams({
@@ -57,6 +58,7 @@ angular.module('listnride', [
       enabled: ENV.html5Mode,
       requireBase: false
     });
+
     $translateProvider.useStaticFilesLoader({
       prefix: 'app/i18n/',
       suffix: '.json'
@@ -79,5 +81,10 @@ angular.module('listnride', [
 
     $translateProvider.preferredLanguage(preferredLanguage);
     $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
+
+    ngMetaProvider.setDefaultTitle('listnride');
   }
-]);
+])
+.run(['ngMeta', function(ngMeta) { 
+  ngMeta.init();
+}]);

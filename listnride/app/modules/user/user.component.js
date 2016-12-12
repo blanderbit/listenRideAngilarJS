@@ -3,8 +3,8 @@
 angular.module('user',[]).component('user', {
   templateUrl: 'app/modules/user/user.template.html',
   controllerAs: 'user',
-  controller: ['$localStorage', '$stateParams', 'api',
-    function ProfileController($localStorage, $stateParams, api) {
+  controller: ['$localStorage', '$stateParams', '$translate', 'ngMeta', 'api',
+    function ProfileController($localStorage, $stateParams, $translate, ngMeta, api) {
       var user = this;
       user.loaded = false;
 
@@ -13,7 +13,6 @@ angular.module('user',[]).component('user', {
 
       api.get('/users/' + userId).then(
         function(response) {
-          console.log(response.data);
           user.user = response.data;
           user.loaded = true;
           user.rating = (user.user.rating_lister + user.user.rating_rider);
@@ -21,6 +20,12 @@ angular.module('user',[]).component('user', {
             user.rating = user.rating / 2;
           }
           user.rating = Math.round(user.rating);
+
+          $translate(["user.meta-title", "user.meta-description"] , { name: user.user.first_name })
+          .then(function(translations) {
+            ngMeta.setTitle(translations["user.meta-title"]);
+            ngMeta.setTag("description", translations["user.meta-description"]);
+          });
         },
         function(error) {
           console.log("Error retrieving User", error);

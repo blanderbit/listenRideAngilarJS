@@ -9,8 +9,8 @@
   <!-- FAQs -->
   <div class="content lnr-faqs" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h1 class="md-headline">{{ 'contact-and-help.faq-section.header' | translate }}</h1>
-      <h2 class="md-subhead">{{ 'contact-and-help.faq-section.subheader' | translate }}</h2>
+      <h2 class="md-headline">{{ 'contact-and-help.faq-section.header' | translate }}</h2>
+      <h3 class="md-subhead">{{ 'contact-and-help.faq-section.subheader' | translate }}</h3>
     </div>
 
     <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
@@ -18,61 +18,61 @@
         <h3 class="md-subhead">{{ 'contact-and-help.faq-section.lister-faq.title' | translate }}</h3>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="lister1=!lister1">{{ 'contact-and-help.faq-section.lister-faq.question-1' | translate }}</h3>
-        <div ng-show="lister1"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-1' | translate }}</p></div>
+        <div ng-show="lister1"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-1' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="lister2=!lister2">{{ 'contact-and-help.faq-section.lister-faq.question-2' | translate }}</h3>
-        <div ng-show="lister2"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-2' | translate }}</p></div>
+        <div ng-show="lister2"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-2' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="lister3=!lister3">{{ 'contact-and-help.faq-section.lister-faq.question-3' | translate }}</h3>
-        <div ng-show="lister3"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-3' | translate }}</p></div>
+        <div ng-show="lister3"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-3' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="lister4=!lister4">{{ 'contact-and-help.faq-section.lister-faq.question-4' | translate }}</h3>
-        <div ng-show="lister4"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-4' | translate }}</p></div>
+        <div ng-show="lister4"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-4' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="lister5=!lister5">{{ 'contact-and-help.faq-section.lister-faq.question-5' | translate }}</h3>
-        <div ng-show="lister5"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-5' | translate }}</p></div>
+        <div ng-show="lister5"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-5' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="lister6=!lister6">{{ 'contact-and-help.faq-section.lister-faq.question-6' | translate }}</h3>
-        <div ng-show="lister6"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-6' | translate }}</p></div>
+        <div ng-show="lister6"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-6' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="lister7=!lister7">{{ 'contact-and-help.faq-section.lister-faq.question-7' | translate }}</h3>
-        <div ng-show="lister7"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-7' | translate }}</p></div>
+        <div ng-show="lister7"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-7' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="lister8=!lister8">{{ 'contact-and-help.faq-section.lister-faq.question-8' | translate }}</h3>
-        <div ng-show="lister8"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-8' | translate }}</p></div>
+        <div ng-show="lister8"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-8' | translate }}</h4></div>
 
 
         <h3 class="md-body-2 lnr-clickable" ng-click="lister9=!lister9">{{ 'contact-and-help.faq-section.lister-faq.question-9' | translate }}</h3>
-        <div ng-show="lister9"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-9' | translate }}</p></div>
+        <div ng-show="lister9"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-9' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="lister10=!lister10">{{ 'contact-and-help.faq-section.lister-faq.question-10' | translate }}</h3>
-        <div ng-show="lister10"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-10' | translate }}</p></div>
+        <div ng-show="lister10"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-10' | translate }}</h4></div>
 
         <a class="lnr-link" ng-show="!showmore" ng-click="showmore=!showmore">{{ 'shared.show-more' | translate }}</a>
 
         <h3 ng-show="showmore" class="md-body-2 lnr-clickable" ng-click="lister11=!lister11">{{ 'contact-and-help.faq-section.lister-faq.question-11' | translate }}</h3>
-        <div ng-show="lister11&&showmore"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-11' | translate }}</p></div>
+        <div ng-show="lister11&&showmore"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-11' | translate }}</h4></div>
 
         <h3 ng-show="showmore" class="md-body-2 lnr-clickable" ng-click="lister12=!lister12">{{ 'contact-and-help.faq-section.lister-faq.question-12' | translate }}</h3>
-        <div ng-show="lister12&&showmore"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-12' | translate }}</p></div>
+        <div ng-show="lister12&&showmore"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-12' | translate }}</h4></div>
 
         <h3 ng-show="showmore" class="md-body-2 lnr-clickable" ng-click="lister13=!lister13">{{ 'contact-and-help.faq-section.lister-faq.question-13' | translate }}</h3>
-        <div ng-show="lister13&&showmore"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-13' | translate }}</p></div>
+        <div ng-show="lister13&&showmore"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-13' | translate }}</h4></div>
 
         <h3 ng-show="showmore" class="md-body-2 lnr-clickable" ng-click="lister14=!lister14">{{ 'contact-and-help.faq-section.lister-faq.question-14' | translate }}</h3>
-        <div ng-show="lister14&&showmore"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-14' | translate }}</p></div>
+        <div ng-show="lister14&&showmore"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-14' | translate }}</h4></div>
 
         <h3 ng-show="showmore" class="md-body-2 lnr-clickable" ng-click="lister15=!lister15">{{ 'contact-and-help.faq-section.lister-faq.question-15' | translate }}</h3>
-        <div ng-show="lister15&&showmore"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-15' | translate }}</p></div>
+        <div ng-show="lister15&&showmore"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-15' | translate }}</h4></div>
 
         <h3 ng-show="showmore" class="md-body-2 lnr-clickable" ng-click="lister16=!lister16">{{ 'contact-and-help.faq-section.lister-faq.question-16' | translate }}</h3>
-        <div ng-show="lister16&&showmore"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-16' | translate }}</p></div>
+        <div ng-show="lister16&&showmore"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-16' | translate }}</h4></div>
 
         <h3 ng-show="showmore" class="md-body-2 lnr-clickable" ng-click="lister17=!lister17">{{ 'contact-and-help.faq-section.lister-faq.question-17' | translate }}</h3>
-        <div ng-show="lister17&&showmore"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-17' | translate }}</p></div>
+        <div ng-show="lister17&&showmore"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-17' | translate }}</h4></div>
 
         <h3 ng-show="showmore" class="md-body-2 lnr-clickable" ng-click="lister18=!lister18">{{ 'contact-and-help.faq-section.lister-faq.question-18' | translate }}</h3>
-        <div ng-show="lister18&&showmore"><p >{{ 'contact-and-help.faq-section.lister-faq.answer-18' | translate }}</p></div>
+        <div ng-show="lister18&&showmore"><h4>{{ 'contact-and-help.faq-section.lister-faq.answer-18' | translate }}</h4></div>
 
         <a class="lnr-link" ng-show="showmore" ng-click="showmore=!showmore">{{ 'shared.show-less' | translate }}</a>
       </div>
@@ -81,37 +81,37 @@
         <h3 class="md-subhead">{{ 'contact-and-help.faq-section.rider-faq.title' | translate }}</h3>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="rider1=!rider1">{{ 'contact-and-help.faq-section.rider-faq.question-1' | translate }}</h3>
-        <div ng-show="rider1"><p >{{ 'contact-and-help.faq-section.rider-faq.answer-1' | translate }}</p></div>
+        <div ng-show="rider1"><h4>{{ 'contact-and-help.faq-section.rider-faq.answer-1' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="rider2=!rider2">{{ 'contact-and-help.faq-section.rider-faq.question-2' | translate }}</h3>
-        <div ng-show="rider2"><p >{{ 'contact-and-help.faq-section.rider-faq.answer-2' | translate }}</p></div>
+        <div ng-show="rider2"><h4>{{ 'contact-and-help.faq-section.rider-faq.answer-2' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="rider3=!rider3">{{ 'contact-and-help.faq-section.rider-faq.question-3' | translate }}</h3>
-        <div ng-show="rider3"><p >{{ 'contact-and-help.faq-section.rider-faq.answer-3' | translate }}</p></div>
+        <div ng-show="rider3"><h4>{{ 'contact-and-help.faq-section.rider-faq.answer-3' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="rider4=!rider4">{{ 'contact-and-help.faq-section.rider-faq.question-4' | translate }}</h3>
-        <div ng-show="rider4"><p >{{ 'contact-and-help.faq-section.rider-faq.answer-4' | translate }}</p></div>
+        <div ng-show="rider4"><h4>{{ 'contact-and-help.faq-section.rider-faq.answer-4' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="rider5=!rider5">{{ 'contact-and-help.faq-section.rider-faq.question-5' | translate }}</h3>
-        <div ng-show="rider5"><p >{{ 'contact-and-help.faq-section.rider-faq.answer-5' | translate }}</p></div>
+        <div ng-show="rider5"><h4>{{ 'contact-and-help.faq-section.rider-faq.answer-5' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="rider6=!rider6">{{ 'contact-and-help.faq-section.rider-faq.question-6' | translate }}</h3>
-        <div ng-show="rider6"><p >{{ 'contact-and-help.faq-section.rider-faq.answer-6' | translate }}</p></div>
+        <div ng-show="rider6"><h4>{{ 'contact-and-help.faq-section.rider-faq.answer-6' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="rider7=!rider7">{{ 'contact-and-help.faq-section.rider-faq.question-7' | translate }}</h3>
-        <div ng-show="rider7"><p >{{ 'contact-and-help.faq-section.rider-faq.answer-7' | translate }}</p></div>
+        <div ng-show="rider7"><h4>{{ 'contact-and-help.faq-section.rider-faq.answer-7' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="rider8=!rider8">{{ 'contact-and-help.faq-section.rider-faq.question-8' | translate }}</h3>
-        <div ng-show="rider8"><p >{{ 'contact-and-help.faq-section.rider-faq.answer-8' | translate }}</p></div>
+        <div ng-show="rider8"><h4>{{ 'contact-and-help.faq-section.rider-faq.answer-8' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="rider9=!rider9">{{ 'contact-and-help.faq-section.rider-faq.question-9' | translate }}</h3>
-        <div ng-show="rider9"><p >{{ 'contact-and-help.faq-section.rider-faq.answer-9' | translate }}</p></div>
+        <div ng-show="rider9"><h4>{{ 'contact-and-help.faq-section.rider-faq.answer-9' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="rider10=!rider10">{{ 'contact-and-help.faq-section.rider-faq.question-10' | translate }}</h3>
-        <div ng-show="rider10"><p >{{ 'contact-and-help.faq-section.rider-faq.answer-10' | translate }}</p></div>
+        <div ng-show="rider10"><h4>{{ 'contact-and-help.faq-section.rider-faq.answer-10' | translate }}</h4></div>
 
         <h3 class="md-body-2 lnr-clickable" ng-click="rider11=!rider11">{{ 'contact-and-help.faq-section.rider-faq.question-11' | translate }}</h3>
-        <div ng-show="rider11"><p >{{ 'contact-and-help.faq-section.rider-faq.answer-11' | translate }}</p></div>
+        <div ng-show="rider11"><h4>{{ 'contact-and-help.faq-section.rider-faq.answer-11' | translate }}</h4></div>
       </div>
     </div>
   </div>
@@ -121,8 +121,8 @@
   <!-- contact -->
   <div class="content" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h1 class="md-headline">{{ 'contact-and-help.contact-section.header' | translate }}</h1>
-      <h2 class="md-subhead">{{ 'contact-and-help.contact-section.subheader' | translate }}</h2>
+      <h2 class="md-headline">{{ 'contact-and-help.contact-section.header' | translate }}</h2>
+      <h3 class="md-subhead">{{ 'contact-and-help.contact-section.subheader' | translate }}</h3>
     </div>
 
     <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
