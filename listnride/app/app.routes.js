@@ -86,7 +86,19 @@ config(['$stateProvider', '$urlRouterProvider',
     $stateProvider.state({
       name: 'settings',
       url: '/settings',
-      template: '<settings></settings>'
+      template: '<settings></settings>',
+      resolve : {
+        data: function($translate, ngMeta) {
+          $translate(["settings.meta-title", "settings.meta-description"])
+          .then(function(translations) {
+            ngMeta.setTitle(translations["settings.meta-title"]);
+            ngMeta.setTag("description", translations["settings.meta-description"]);
+          })
+        }
+      },
+      meta: {
+        disableUpdate: true
+      }
     });
 
     $stateProvider.state({

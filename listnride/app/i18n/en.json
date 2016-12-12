@@ -75,7 +75,9 @@
     "payout-bank": "Your payout method is a bank account ending with",
     "voucher-code": "Voucher Code",
     "current-vouchers": "Your current balance is",
-    "add-voucher": "Add Voucher"
+    "add-voucher": "Add Voucher",
+    "meta-title": "Profile Settings",
+    "meta-description": "Change your personal profile and payment data."
   },
 
   "verification": {
