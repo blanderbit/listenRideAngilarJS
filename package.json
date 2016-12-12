@@ -8,9 +8,6 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    // npm packages for production
-    // set environment to staging
-    // run deploy script 
     "postinstall": "npm install --production --prefix listnride/ && gulp deploy --env=staging --gulpfile listnride/gulpfile.js"
   },
   "dependencies": {
