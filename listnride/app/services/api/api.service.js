@@ -2,9 +2,9 @@
 
 angular.
   module('listnride').
-  factory('api', ['$http', '$localStorage',
-    function($http, $localStorage, authentication) {
-      var apiUrl = "https://listnride-staging.herokuapp.com/v2"
+  factory('api', ['$http', '$localStorage', 'ENV',
+    function($http, $localStorage, ENV, authentication) {
+      var apiUrl = ENV.apiEndpoint;
       return {
         get: function(url) {
           return $http({
