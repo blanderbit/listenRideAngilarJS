@@ -75,7 +75,9 @@
     "payout-bank": "Deine Auszahlungsmethode ist ein Bank-Konto und endet auf",
     "voucher-code": "Gutschein-Code",
     "current-vouchers": "Dein aktuelles Guthaben beträgt",
-    "add-voucher": "Gutschein hinzufügen"
+    "add-voucher": "Gutschein hinzufügen",
+    "meta-title": "Profileinstellungen",
+    "meta-description": "Ändere deine Profil- und Zahlungsdaten."
   },
 
   "verification": {
