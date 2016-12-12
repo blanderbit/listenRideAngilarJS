@@ -153,7 +153,20 @@ config(['$stateProvider', '$urlRouterProvider',
       url: '/rent-ampler-bikes',
       template: '<ampler></ampler>'
     });
-
+    // for testing embed-bikes feature
+    // change userID in route to fetch new bikes
+    // ONLY for staging environment
+    $stateProvider.state({
+      name: 'embed',
+      url: '/embed-bikes-test/{userId}',
+      templateProvider: function ($timeout, $stateParams) {
+        return $timeout(function () {
+          return '<md-content><script src="https://listnride-frontend-staging.herokuapp.com/lnr-embed.min.js"></script><div id="listnride" data-user="' 
+          + $stateParams.userId 
+          + '"></div></md-content>' 
+        }, 100);
+      }
+    });
     $stateProvider.state('404', {
       templateUrl: 'app/modules/static/error-404.template.html',
     });
