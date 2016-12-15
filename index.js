@@ -14,8 +14,8 @@ app.use('/', express.static(__dirname + '/listnride/dist'));
 
 // redirection
 app.use(prerender.set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
-app.use('/en', function (req, res)                  {redirectTo(re);});
-app.use('/de', function (req, res)                  {redirectTo(re);});
+app.use('/en', function (req, res)                  {redirectTo(res);});
+app.use('/de', function (req, res)                  {redirectTo(res);});
 app.use('/faq', function (req, res)                 {redirectTo(res,'/help');});
 app.use('/impress', function (req, res)             {redirectTo(res,'/imprint');});
 app.use('/RaphaSuperCross', function (req, res)     {redirectTo(res,'/rapha-super-cross');});
