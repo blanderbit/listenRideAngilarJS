@@ -3,8 +3,8 @@
 angular.module('settings',[]).component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',
-  controller: ['$localStorage', '$window', '$mdToast', '$translate', 'api', 'accessControl', 'sha256', 'Base64', 'Upload', 'loadingDialog',
-    function SettingsController($localStorage, $window, $mdToast, $translate, api, accessControl, sha256, Base64, Upload, loadingDialog) {
+  controller: ['$localStorage', '$window', '$mdToast', '$translate', 'api', 'accessControl', 'sha256', 'Base64', 'Upload', 'loadingDialog', 'ENV',
+    function SettingsController($localStorage, $window, $mdToast, $translate, api, accessControl, sha256, Base64, Upload, loadingDialog, ENV) {
       if (accessControl.requireLogin()) {
         return;
       }
@@ -149,7 +149,7 @@ angular.module('settings',[]).component('settings', {
           var left = (screen.width / 2) - (w / 2);
           var top = (screen.height / 2) - (h / 2);
 
-          $window.open("https://api.listnride.com/v2/users/" + $localStorage.userId + "/payment_methods/new", "popup", "width="+w+",height="+h+",left="+left+",top="+top);
+          $window.open(ENV.userEndpoint + $localStorage.userId + "/payment_methods/new", "popup", "width="+w+",height="+h+",left="+left+",top="+top);
       };
     }
   ]
