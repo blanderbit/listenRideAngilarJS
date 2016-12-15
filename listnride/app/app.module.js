@@ -66,7 +66,7 @@ angular.module('listnride', [
 
     var browserLanguage = $translateProvider.resolveClientLocale();
     var defaultLanguage = "en";
-    var availableLanguages = ["de", "en"];
+    var availableLanguages = ["de", "en", "nl"];
     var preferredLanguage;
 
     if (browserLanguage != undefined && browserLanguage.length >= 2) {

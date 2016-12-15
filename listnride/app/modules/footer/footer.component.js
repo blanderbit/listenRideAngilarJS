@@ -26,6 +26,8 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
           return 'English';
         } else if (locale === 'de') {
           return 'Deutsch';
+        } else if (locale === 'nl') {
+          return 'Nederlands';
         } else {
           return 'English';
         }
