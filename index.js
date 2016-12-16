@@ -13,8 +13,6 @@ app.set('port', (process.env.PORT || 9003));
 app.use(express.static(__dirname + '/listnride/dist'));
 
 // redirection
-app.use(prerender.set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
-
 app.use('/:lang(en|de)/rides/map/:location', function (req, res) {
   redirectTo(res, '/search/' + req.params.location);
 });
@@ -79,6 +77,7 @@ app.use('/:lang(en|de)', function(req, res) {
   redirectTo(res);
 });
 
+// file serving
 app.get('/*', function (req, res) {
     res.sendFile(__dirname + '/listnride/dist/index.html');
 });
