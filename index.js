@@ -10,7 +10,7 @@ app.use(require('prerender-node').set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'))
 // get port from env
 app.set('port', (process.env.PORT || 9003));
 // configure static 
-app.use('/', express.static(__dirname + '/listnride/dist'));
+app.use(express.static(__dirname + '/listnride/dist'));
 
 // redirection
 app.use(prerender.set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
@@ -30,7 +30,7 @@ app.use('/templintriathlon', function (req, res)    {redirectTo(res);});
 app.use('/8bar-crit', function (req, res)           {redirectTo(res);});
 app.use('/8bar-Crit', function (req, res)           {redirectTo(res);});
 
-app.get('*', function (req, res) {
+app.get('/*', function (req, res) {
     res.sendFile(__dirname + '/listnride/dist/index.html');
 });
 
