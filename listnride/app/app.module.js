@@ -85,6 +85,26 @@ angular.module('listnride', [
     ngMetaProvider.setDefaultTitle('listnride');
   }
 ])
-.run(['ngMeta', function(ngMeta) { 
+.run(['ngMeta', '$location', '$translate', function(ngMeta, $location, $translate) {
+
+  // Retrieves and sets locale from subdomain if valid, otherwise sets the default.
+  var setLocale = function() {
+    var defa = "en";
+    var availableLanguages = ["de", "en", "nl"];
+
+    var host = $location.host();
+    var locale = host.split('.')[0];
+
+    if (availableLanguages.indexOf(locale) >= 0) {
+      console.log("Language set to " + locale);
+      $translate.use(locale);
+    } else {
+      console.log("Language defaulting to " + defa);
+      $translate.use(defa);
+    }
+
+  };
+
+  setLocale();
   ngMeta.init();
 }]);
