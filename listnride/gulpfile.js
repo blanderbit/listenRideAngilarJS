@@ -28,7 +28,7 @@ var env = environments[argvEnv];
 
 // eslint through all js files
 gulp.task('lint', function () {
-    return gulp.src(paths.js)
+    return gulp.src(path.js)
         .pipe(jshint())
         .pipe(jshint.reporter(stylish));
 });

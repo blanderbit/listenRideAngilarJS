@@ -4,17 +4,18 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
   templateUrl: 'app/modules/footer/footer.template.html',
   controllerAs: 'footer',
   controller: [
-    '$window', '$translate', '$state',
-    function FooterController($window, $translate, $state) {
+    '$window', '$location', '$translate', '$state',
+    function FooterController($window, $location, $translate, $state) {
       var footer = this;
 
       footer.language = getLanguage($translate.use());
 
       footer.switchLanguage = function(locale) {
-        $translate.use(locale).then(function(data) {
-          footer.language = getLanguage(locale);
-          $state.reload();
-        });
+        // $translate.use(locale).then(function(data) {
+        //   footer.language = getLanguage(locale);
+        //   $state.reload();
+        // });
+        $window.location.href = 'http://' + locale + ".localhost:8080/#" + $location.url();
       }
       
       footer.onAppClick = function() {

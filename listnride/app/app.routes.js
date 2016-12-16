@@ -2,8 +2,9 @@
 'use strict';
 angular.
 module('listnride').
-config(['$stateProvider', '$urlRouterProvider',
-  function($stateProvider, $urlRouterProvider) {
+config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$locationProvider',
+  function($stateProvider, $urlRouterProvider, $translateProvider, $locationProvider) {
+
     $stateProvider.state({
       name: 'home',
       url: '/',
