@@ -14,21 +14,70 @@ app.use(express.static(__dirname + '/listnride/dist'));
 
 // redirection
 app.use(prerender.set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
-app.use('/en', function (req, res)                  {redirectTo(res);});
-app.use('/de', function (req, res)                  {redirectTo(res);});
-app.use('/faq', function (req, res)                 {redirectTo(res,'/help');});
-app.use('/impress', function (req, res)             {redirectTo(res,'/imprint');});
-app.use('/RaphaSuperCross', function (req, res)     {redirectTo(res,'/rapha-super-cross');});
-app.use('/rides', function (req, res)               {redirectTo(res, '/bikes');});
-app.use('/bikes/map', function (req, res)           {redirectTo(res, '/search');});
-app.use('/user/signup', function (req, res)         {redirectTo(res);});
-app.use('/velothon', function (req, res)            {redirectTo(res, '/search/berlin?race=true');});
-app.use('/inveloveritas', function (req, res)       {redirectTo(res);});
-app.use('/InVeloVeritas', function (req, res)       {redirectTo(res);});
-app.use('/TemplinTriathlon', function (req, res)    {redirectTo(res);});
-app.use('/templintriathlon', function (req, res)    {redirectTo(res);});
-app.use('/8bar-crit', function (req, res)           {redirectTo(res);});
-app.use('/8bar-Crit', function (req, res)           {redirectTo(res);});
+
+app.use('/:lang(en|de)/rides/map/:location', function (req, res) {
+  redirectTo(res, '/search/' + req.params.location);
+});
+
+app.use('/:lang(en|de)/rides/:id', function (req, res) {
+  redirectTo(res, '/bikes/' + req.params.id);
+});
+
+app.use('/:lang(en|de)/user/signup', function (req, res) {
+  redirectTo(res);
+});
+
+app.use('/:lang(en|de)/user/:id', function (req, res) {
+  redirectTo(res, '/user/' + req.params.location);
+});
+
+app.use('/:lang(en|de)/how-it-works', function (req, res) {
+  redirectTo(res, '/how-it-works');
+});
+
+app.use('/:lang(en|de)/about', function (req, res) {
+  redirectTo(res, '/about');
+});
+
+app.use('/:lang(en|de)/faq', function (req, res) {
+  redirectTo(res, '/faq');
+});
+
+app.use('/:lang(en|de)/jobs', function (req, res) {
+  redirectTo(res, '/jobs');
+});
+
+app.use('/:lang(en|de)/press', function (req, res) {
+  redirectTo(res, '/press');
+});
+
+app.use('/:lang(en|de)/impress', function (req, res) {
+  redirectTo(res, '/imprint');
+});
+
+app.use('/:lang(en|de)/velothon', function (req, res) {
+  redirectTo(res, '/search/berlin?race=true');
+});
+
+app.use('/:lang(en|de)/inveloveritas', function (req, res) {
+  redirectTo(res);
+});
+
+app.use('/:lang(en|de)/8-bar-crit', function (req, res) {
+  redirectTo(res);
+});
+
+app.use('/:lang(en|de)/TemplinTriathlon', function (req, res) {
+  redirectTo(res);
+});
+
+app.use('/:lang(en|de)/RaphaSuperCross', function (req, res) {
+  redirectTo(res, '/rapha-super-cross');
+});
+
+app.use('/:lang(en|de)', function(req, res) {
+  redirectTo(res);
+});
 
 app.get('/*', function (req, res) {
     res.sendFile(__dirname + '/listnride/dist/index.html');
