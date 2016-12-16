@@ -2,11 +2,30 @@
 'use strict';
 angular.
 module('listnride').
-config(['$stateProvider', '$urlRouterProvider',
-  function($stateProvider, $urlRouterProvider) {
+config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$locationProvider',
+  function($stateProvider, $urlRouterProvider, $translateProvider, $locationProvider) {
+    var languagePrefix = "/{lang:(?:de|en|nl)}";
+    var defaultLanguage = "en";
+    var availableLanguages = ["de", "en", "nl"];
+
+    var determineLanguage = function() {
+      var browserLanguage = $translateProvider.resolveClientLocale();
+      if (browserLanguage != undefined && browserLanguage.length >= 2) {
+        browserLanguage = browserLanguage.substring(0,2);
+      }
+      if (availableLanguages.indexOf(browserLanguage) >= 0) {
+        return browserLanguage;
+      } else {
+        return defaultLanguage;
+      }
+    };
+
     $stateProvider.state({
       name: 'home',
-      url: '/',
+      url: languagePrefix + '/',
+      params: {
+        lang: "en"
+      },
       template: '<home></home>',
       resolve : {
         data: function($translate, ngMeta) {
@@ -25,6 +44,9 @@ config(['$stateProvider', '$urlRouterProvider',
     $stateProvider.state({
       name: 'bike',
       url: '/bikes/{bikeId:int}',
+      params: {
+        lang: determineLanguage()
+      },
       template: '<bike></bike>'
     });
 
