@@ -8,7 +8,7 @@ module.exports = function () {
             index: 'index.html',
             templates: './app/modules/**/*.html',
             serviceTemplate: './app/services/**/*.html',
-            js: '/app/**/*.js',
+            js: ['./app/*.js', './app/**/*.js', '!**/*test.js'],
             images: './app/assets/ui_images/**/*',
             icons: './app/assets/ui_icons/**/*',
             requests: 'app/modules/requests/',
