@@ -16,16 +16,27 @@
 
   var renderBikes = function ($, categoryFilter) {
     var user_id = document.getElementById('listnride').dataset.user;
-    $.get("https://listnride-staging.herokuapp.com/v2/users/" + user_id, function (response) {
-      $("#listnride")
-        .append('<div class="mdl-grid" id="lnr-grid">' +
-        '<div style="padding:40px;font-size:15px;">We are currently offering the below listed rental bikes in ' + response.city +
-        '. You can easily book your bike rental upfront through our partner website listnride or just come by our shop.' +
-        '</div></div>');
+    var user_lang = document.getElementById('listnride').dataset.lang;
+    $.get("https://api.listnride.com/v2/users/" + user_id, function (response) {
+
+      var introText = {
+        en: 'We are currently offering the below listed rental bikes in ' + response.city +
+          '. You can easily book your bike rental upfront through our partner website listnride or just come by our shop.',
+        de: 'Wir bieten aktuell die unten aufgelisteten Mietr&auml;der in ' + response.city + 'zum Verlieh an. Sie k&ouml;nnen die R&auml;der direkt online buchen &uuml;ber unser Partnerportal listnride oder einfach bei uns vorbeischauen.'
+      };
       
+      var selectedLangText = 'en' === user_lang ? introText.en : introText.de;
+      var dayText = 'en' === user_lang ? 'per day' : 'pro Tag';
+
+      $("#listnride")
+      // intro text
+        .append('<div class="mdl-grid"</div><div mdl-cell mdl-cell--4-col mdl-cell--middle><div style="padding:40px;font-size:15px;">' + selectedLangText + '</div></div>')
+      // bikes rendering
+        .append('<div class="mdl-grid" id="lnr-grid"></div>');
+
       var rootUrl = 'http://www.listnride.com';
       var grid = $("#lnr-grid");
-      
+
       response.rides.forEach(function (ride) {
         var rideId = ride.id,
           brand = ride.brand,
@@ -48,8 +59,8 @@
           '<span>' + name + '</span>' +
           '</md-card-title-text>' +
           '<div layout="column" class="layout-align-space-around-center layout-column">' +
-          '<span class="md-headline">' + price + ' &euro;</span>' +
-          '<span>per day</span>' +
+          '<span class="md-headline">' + price + '&euro;</span>' +
+          '<span>' + dayText + '</span>' +
           ' </div>' +
           '</md-card-title>' +
           '</md-card>' +
@@ -73,54 +84,30 @@
     $(function () {
       var categoryFilter = function (categoryId) {
         switch (categoryId) {
-          case 10:
-            return "Holland";
-          case 11:
-            return "Touring";
-          case 13:
-            return "Single Speed";
-          case 20:
-            return "Roadbike";
-          case 21:
-            return "Triathlon";
-          case 22:
-            return "Indoor";
-          case 30:
-            return "Trecking";
-          case 31:
-            return "Enduro";
-          case 32:
-            return "Freeride";
-          case 33:
-            return "Cross Country";
-          case 34:
-            return "Downhill";
-          case 35:
-            return "Cyclocross";
-          case 40:
-            return "Children City";
-          case 41:
-            return "Children Allterrain";
-          case 42:
-            return "Children Road";
-          case 50:
-            return "Pedelec";
-          case 51:
-            return "E-Bike";
-          case 60:
-            return "Folding";
-          case 61:
-            return "Tandem";
-          case 62:
-            return "Cruiser";
-          case 63:
-            return "Cargo";
-          case 64:
-            return "Recumbent";
-          case 65:
-            return "Mono";
-          default:
-            return "";
+          case 10: return "Holland";
+          case 11: return "Touring";
+          case 13: return "Single Speed";
+          case 20: return "Roadbike";
+          case 21: return "Triathlon";
+          case 22: return "Indoor";
+          case 30: return "Trecking";
+          case 31: return "Enduro";
+          case 32: return "Freeride";
+          case 33: return "Cross Country";
+          case 34: return "Downhill";
+          case 35: return "Cyclocross";
+          case 40: return "Children City";
+          case 41: return "Children Allterrain";
+          case 42: return "Children Road";
+          case 50: return "Pedelec";
+          case 51: return "E-Bike";
+          case 60: return "Folding";
+          case 61: return "Tandem";
+          case 62: return "Cruiser";
+          case 63: return "Cargo";
+          case 64: return "Recumbent";
+          case 65: return "Mono";
+          default: return "";
         }
       };
       renderBikes($, categoryFilter);

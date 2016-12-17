@@ -4,6 +4,20 @@
   }
 }
 
+/*@media (min-width: 840px) {
+  .mdl-cell--4-col, .mdl-cell--4-col-desktop.mdl-cell--4-col-desktop {
+    width: calc(33.3333333333% - 1px);
+    margin: 0px;
+  }
+}
+
+@media (max-width: 839px) and (min-width: 480px) {
+  .mdl-cell--4-col, .mdl-cell--4-col-tablet.mdl-cell--4-col-tablet {
+    width: calc(50% - 1px);
+    margin: 0px;
+  }
+}*/
+
 .mdl-card__media {
   background-color: #fff !important
 }
@@ -28,13 +42,15 @@
 
 
 /* font */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 md-card {
   font-family: 'Roboto', sans-serif;
 }
 
+
 /* general */
+
 .md-color-foreground {
   color: rgb(85, 85, 85);
 }
@@ -61,7 +77,9 @@ md-card {
   line-height: 32px;
 }
 
+
 /* bike card */
+
 .md-card-image {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -69,7 +87,9 @@ md-card {
   border-bottom-left-radius: 0px;
 }
 
-md-card > a > img, md-card > md-card-header a img, md-card md-card-title-media a img {
+md-card>a>img,
+md-card>md-card-header a img,
+md-card md-card-title-media a img {
   box-sizing: border-box;
   display: flex;
   -webkit-box-flex: 0;
@@ -172,24 +192,40 @@ md-icon svg {
   fill: rgb(85, 85, 85);
 }
 
+
 /* layout */
-.layout, .layout-column, .layout-row {
+
+.layout,
+.layout-column,
+.layout-row {
   box-sizing: border-box;
   display: flex;
 }
+
 .layout-row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   flex-direction: row;
 }
-.layout-align-space-around, .layout-align-space-around-center, .layout-align-space-around-start, .layout-align-space-around-end, .layout-align-space-around-stretch {
+
+.layout-align-space-around,
+.layout-align-space-around-center,
+.layout-align-space-around-start,
+.layout-align-space-around-end,
+.layout-align-space-around-stretch {
   justify-content: space-around;
 }
-.layout-align-start-start, .layout-align-center-start, .layout-align-end-start, .layout-align-space-between-start, .layout-align-space-around-start {
+
+.layout-align-start-start,
+.layout-align-center-start,
+.layout-align-end-start,
+.layout-align-space-between-start,
+.layout-align-space-around-start {
   -webkit-box-align: start;
   align-items: flex-start;
   align-content: flex-start;
 }
+
 .layout-column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
