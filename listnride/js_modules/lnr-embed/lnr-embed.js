@@ -25,7 +25,7 @@
         de: 'Wir bieten Ihnen die unten aufgef&uuml;hrten Mietwagen in ' + response.city + ' an. Sie k&ouml;nnen ganz einfach buchen Sie Ihre Fahrradvermietung im Voraus durch unsere Partner-Website listnride oder kommen Sie einfach durch unser Gesch&auml;ft.'
       };
       var selectedLangText = 'en' === user_lang ? introText.en : introText.de;
-      var dayText = 'en' === introText[user_lang] ? 'per day' : 'pro Tag';
+      var dayText = 'en' === user_lang ? 'per day' : 'pro Tag';
 
       $("#listnride")
       // intro text
