@@ -20,18 +20,28 @@
     $.get("https://api.listnride.com/v2/users/" + user_id, function (response) {
 
       var introText = {
-        en: 'We are currently offering the below listed rental bikes in ' + response.city +
-          '. You can easily book your bike rental upfront through our partner website listnride or just come by our shop.',
-        de: 'Wir bieten aktuell die unten aufgelisteten Mietr&auml;der in ' + response.city + 'zum Verlieh an. Sie k&ouml;nnen die R&auml;der direkt online buchen &uuml;ber unser Partnerportal listnride oder einfach bei uns vorbeischauen.'
+        en: 'We are currently offering the rental bikes listed below in ' + response.city +
+          '. You can easily book your bike rental online on partner website <a target="_blank" href="http://www.listnride.com">www.listnride.com</a>, by clicking on the bike you would like to rent or just come by our shop.',
+        de: 'Wir bieten aktuell die unten aufgelisteten Mietr&auml;der in ' + response.city + ' zum Verlieh an. Du kannst die Mietr&auml;der direkt auf <a target="_blank" href="http://www.listnride.com">www.listnride.com</a> online buchen, durch auf das gew&uuml;nschte Fahrrad zu klicken oder du kommst einfach bei uns vorbei.',
+        nl: 'Wij bieden momenteel de onderstaande fietsen in ' + response.city + ' te huur aan. Je kan deze eenvoudig via <a target="_blank" href="http://www.listnride.com">www.listnride.com</a> online boeken door op een van de fietsen te klikken of je komt gewoon bij ons in de winkel even langs'
       };
       
-      var selectedLangText = 'en' === user_lang ? introText.en : introText.de;
-      var dayText = 'en' === user_lang ? 'per day' : 'pro Tag';
+      var selectedLangText, dayText;
+      if ('en' === user_lang) {
+        selectedLangText = introText.en;
+        dayText = 'per day';
+      } else if ('nl' === user_lang) {
+        selectedLangText = introText.nl;
+        dayText = 'pro dag';
+      } else {
+        selectedLangText = introText.de;
+        dayText = 'per Tag';
+      }
 
       $("#listnride")
-      // intro text
+        // intro text
         .append('<div class="mdl-grid"</div><div mdl-cell mdl-cell--4-col mdl-cell--middle><div style="padding:40px;font-size:15px;">' + selectedLangText + '</div></div>')
-      // bikes rendering
+        // bikes rendering
         .append('<div class="mdl-grid" id="lnr-grid"></div>');
 
       var rootUrl = 'http://www.listnride.com';
