@@ -4,7 +4,7 @@
   }
 }
 
-@media (min-width: 840px) {
+/*@media (min-width: 840px) {
   .mdl-cell--4-col, .mdl-cell--4-col-desktop.mdl-cell--4-col-desktop {
     width: calc(33.3333333333% - 1px);
     margin: 0px;
@@ -16,7 +16,7 @@
     width: calc(50% - 1px);
     margin: 0px;
   }
-}
+}*/
 
 .mdl-card__media {
   background-color: #fff !important

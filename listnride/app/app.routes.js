@@ -304,12 +304,11 @@ config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$location
     // ONLY for staging environment
     $stateProvider.state({
       name: 'embed',
-      url: '/embed-bikes-test/{userId}',
+      url: '/embed-bikes-test/{userId}/{userLang}',
       templateProvider: function ($timeout, $stateParams) {
         return $timeout(function () {
-          return '<md-content><script src="https://listnride-frontend-staging.herokuapp.com/lnr-embed.min.js"></script><div id="listnride" data-user="' 
-          + $stateParams.userId 
-          + '"></div></md-content>' 
+          return '<div><script src="https://listnride-frontend-staging.herokuapp.com/lnr-embed.min.js"></script><div id="listnride" data-user="'
+            + $stateParams.userId + '" data-lang="' + $stateParams.userLang + '"></div><div>'
         }, 100);
       }
     });
