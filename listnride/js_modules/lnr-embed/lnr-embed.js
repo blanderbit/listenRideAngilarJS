@@ -22,8 +22,9 @@
       var introText = {
         en: 'We are currently offering the below listed rental bikes in ' + response.city +
           '. You can easily book your bike rental upfront through our partner website listnride or just come by our shop.',
-        de: 'Wir bieten Ihnen die unten aufgef&uuml;hrten Mietwagen in ' + response.city + ' an. Sie k&ouml;nnen ganz einfach buchen Sie Ihre Fahrradvermietung im Voraus durch unsere Partner-Website listnride oder kommen Sie einfach durch unser Gesch&auml;ft.'
+        de: 'Wir bieten aktuell die unten aufgelisteten Mietr&auml;der in ' + response.city + 'zum Verlieh an. Sie k&ouml;nnen die R&auml;der direkt online buchen &uuml;ber unser Partnerportal listnride oder einfach bei uns vorbeischauen.'
       };
+      
       var selectedLangText = 'en' === user_lang ? introText.en : introText.de;
       var dayText = 'en' === user_lang ? 'per day' : 'pro Tag';
 
