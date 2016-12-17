@@ -75,7 +75,9 @@
     "payout-bank": "Je uitbetalingsmethode is per bankrekening die eindigt op",
     "voucher-code": "voucher-code",
     "current-vouchers": "Je aktuelle tegoed bedraagt",
-    "add-voucher": "Voucher inwisselen"
+    "add-voucher": "Voucher inwisselen",
+    "meta-title": "???",
+    "meta-description": "???"
   },
 
   "verification": {
@@ -112,14 +114,18 @@
 
   "bike": {
     "rent-bike": "Fiets huren",
-    "view-pictures": "Foto's bekijken"
+    "view-pictures": "Foto's bekijken",
+    "meta-title": "???",
+    "meta-description": "???"
   },
 
   "user": {
     "verified-through": "geverifieerd door",
     "verified": "geverifieerd",
     "own-bikes": "Eigen fietsen",
-    "ratings": "Recensies"
+    "ratings": "Recensies",
+    "meta-title": "???",
+    "meta-description": "???"
   },
 
   "requests": {
@@ -193,7 +199,9 @@
     "featured-cities-header": "in het zadel door de Urban jungle",
     "featured-cities-subheader": " In steeds meer grote Steden vind je huurfietsen via listnride. Onze eerste insider tips vind je hier:",
     "list-a-bike-header": "Je fiets is te mooi om stil te staan?",
-    "list-a-bike-subheader": "biedt je fiets te huur aan, ontmoet leuke nieuwe mensen en spek je banksaldo."
+    "list-a-bike-subheader": "biedt je fiets te huur aan, ontmoet leuke nieuwe mensen en spek je banksaldo.",
+    "meta-title": "???",
+    "meta-description": "???"
   },
 
   "forms": {
@@ -224,7 +232,10 @@
 
   "search": {
     "no-bikes": "Er zijn nog geen fietsen op deze locatie",
-    "all-sizes": "Alle Maten"
+    "all-sizes": "Alle Maten",
+    "bikes-in": "???",
+    "meta-title": "???",
+    "meta-description": "???"
   },
 
   "calendar": {
@@ -352,12 +363,14 @@
   },
 
   "how-it-works" : {
+    "meta-title": "???",
+    "meta-description": "???",
     "title" : "Bike-Sharing super eenvoudig",
     "header" : "Met listnride kom je eenvoudig in beweging",
     "subheader": "Bij ons is een Fiets(ver-)huren zo eenvoudig als afspreken voor een kopje koffie:",
     "lister-section" : {
       "header" : "Fiets verhuren",
-      "step-1-title" : "Fiets verhuren",
+      "step-1-title" : "Fiets te huur aanbieden",
       "step-1-content" : "Met vermelding van details, foto's, prijs en locatie van de fiets",
       "step-2-title" : "Aanvragen ontvangen",
       "step-2-content" : "Voor een bepaalde datum de tijd",
@@ -372,7 +385,7 @@
       "header" : "Fiets huren",
       "step-1-title" : "Fiets vinden",
       "step-1-content" : "Zoeken op locatie of type fiets",
-      "step-2-title" : "aanvragen & boeken",
+      "step-2-title" : "Aanvragen & boeken",
       "step-2-content" : "Contact opnemen en tijd & plaats voor overdracht afspreken",
       "step-3-title" : "Fiets ophalen",
       "step-3-content" : "Kletsen en insider tips delen",
@@ -384,9 +397,9 @@
     "handover-section" : {
       "header": "Persoonlijke of flexibele fietsoverdracht",
       "content" : "Onze stelling: Vooral aardige mensen fietsen. En verhuren zelfs hun fiets. Daarom vinden wij:  een persoonlijke overdracht is de moeite waard – al is het niet voor het persoonlijke contact en het delen van nuttige tips. Aangezien de tijd niet altijd meespeelt, Heb je bij listnride drie Moglijkheden die fietsoverdracht te doen:",
-      "list-1" : "De huurder (Rider) haalt de Fiets bij de verhuuder op (Lister).",
+      "list-1" : "De huurder haalt de Fiets bij de verhuuder op.",
       "list-2" : "De huurder overhandigt de fiets op een afgesproken locatie.",
-      "list-3" : "De verhuurder vergrendelt de fiets in een openbare locatie en stuur de huurder de combinatie van het cijferslot.",
+      "list-3" : "De verhuurder vergrendelt de fiets in een openbare locatie en stuurt de huurder de combinatie van het cijferslot.",
       "lister-location" : "Home, sweet Home",
       "rider-location" : "Keuzemenu",
       "public-location" : "De grote vrijheid"
@@ -394,16 +407,18 @@
   },
 
   "rent-a-bike": {
+    "meta-title": "???",
+    "meta-description": "???",
     "title": "Fiets huren. Niet zomaar één. Maar één, als ware het je eigen fiets.",
     "info-section": {
       "header": "Huur de perfecte fiets",
       "subheader": "Naar jouw smaak en gewenste gebruik. Van mensen zoals jij en ik.",
-      "choice-title": "Keuze is reuze.",
-      "choice-content": "De fietsen op listnride zijn zo divers als onze gebuikers. Van een edele racefiets tot een chique urban fiets tot bakfietsen en aanhangers is alles vertegenwoordigd. Huur de passende fiets naar jouw smaak en gebruik.",
+      "choice-title": "Super Keuze.",
+      "choice-content": "De fietsen op listnride zijn zo divers als onze gebuikers. Van een edele racer tot een chique urban roller, van een sterke bakfiets tot een stoere e-bike alles vindt je er. Huur een fiets naar je smaak en gebruik.",
       "price-title": "Super Prijs.",
       "price-content": "Op listnride verhuren particulieren als ook zakelijke aanbieders, zoals fietswinkels, hun fietsen. Jouw voordeel: De perfecte fiets voor een faire prijs.",
       "easy-title": "Super eenvoudig.",
-      "easy-content": "Zoek en boek een mooie huurfiets, voordat je op vakantie gaat – of simple onderweg: online of met onze"
+      "easy-content": "Zoek en boek een mooie huurfiets, vóórdat je op vakantie gaat, of simple onderweg: online of met onze"
     },
     "search-section": {
       "header": "Waar gaan we heen?",
@@ -416,11 +431,13 @@
   },
 
   "list-a-bike": {
+    "meta-title": "???",
+    "meta-description": "???",
     "title": "Fiets verhuren, rekening spekken",
     "subtitle" : "Leer leuke mensen kennen en verdien bijkomstig wat geld om bijvoorbeeld je nieuwe droomfiets te financeren.",
     "calculator-section": {
       "header": "Laat je fiets voor je werken",
-      "subheader": "een paar keer klikken en onze rekenhulp laat je zien hoeveel je met het verhuren van je fiets via Listnride kunt verdienen.",
+      "subheader": "een paar keer klikken en onze rekenhulp laat je zien hoeveel je met het verhuren van je fiets via listnride kunt verdienen.",
       "market-price": "Dagwaarde van je fiets,",
       "days-per-month": "Aantal dagen per maand, dat de fiets is verhuurd",
       "could-earn": "Je verdient",
@@ -430,13 +447,13 @@
       "header": "Safety first!",
       "subheader": "listnride ondersteunt je.",
       "precautions-title": "Wij zorgen voor.",
-      "precautions-content": "Je wilt je fiets verhuren – maar niet zomaar aan een wildvreemde? Daarom verifieren wij de identiteit van alle huurders voor jou.  En de recensies van onze gebruikers geven je een idee over de integriteit van iemand aan wie je je fiets verhuurd.",
+      "precautions-content": "Je wilt je fiets verhuren, maar niet zomaar aan een wildvreemde? Daarom verifieren wij de identiteit van alle huurders.  Plus de gebruikersrecensies geven je inzicht in de integriteit van degene aan wie je je fiets verhuurt.",
       "control-title": "Jij behoudt de controle.",
-      "control-content": "Jij bepaald de prijs waarvoor je je fiets wilt verhuren. Daarnaast beslis je zelf of je het verzoek accepteert of juist afwijst omdat je fiets op dat moment niet beschikbaar is voor verhuur.",
+      "control-content": "Jij bepaalt de huurprijs van je fiets verhuren. Daarnaast beslis je zelf of je de huuraanvragen accepteert of juist afwijst (bijv. omdat je fiets op dat moment niet beschikbaar is).",
       "covered-title": "Je bent verzekerd.",
       "covered-content": "in geval van schade of diefstal helpen wij je. En als het nodig mocht zijn, ben je met de verhuurdersgarantie van Listnride tot € 5000,-- verzekerd.",
       "help-title": "Wij laten je niet alleen.",
-      "help-content": "Kun je een bepaald probleem niet met een huurder direct oplossen, dan zijn wij er ook voor jou om je te ondersteunen of het probleem zelfs voor je op te lossen"
+      "help-content": "Indien je een bepaald probleem niet met een huurder direct kan oplossen, zijn wij er ook voor jou om je te ondersteunen of het probleem zelfs voor je op te lossen"
     },
     "list-section": {
       "header": "Ben je klaar om je fiets te verhuren?",
@@ -450,24 +467,26 @@
   },
 
   "trust-and-safety": {
+    "meta-title": "???",
+    "meta-description": "???",
     "title": "Vertrouwen & Zekerheid",
     "header": "Zorgenloos rondfietsen",
     "guarantee-icon" : "garantie_de",
-    "subheader": "Via Listnride een fiets huren is veilig en simpel.",
+    "subheader": "Via listnride een fiets huren is veilig en simpel.",
     "guarantee": {
-      "title": "De Listnride garantie voor verhuurders",
-      "content": "Listnride  is een community van enthousiaste fietsliefhebbers. Toch kan er soms iets misgaan, hoe voorzichtig je ook bent. Daarom biedt listnride een Verhuurdersgarantie. Als je fiets tijdens een huurperiode beschadigt of wordt gestolen en je huurder kan je schade niet helemaal vergoeden, dan vergoeden wij deze tot een hoogte van 5.000 EUR. Voor deze vergoeding zijn bepaalde voorwaarden, beperkingen en uitzonderingen van kracht. Lees hierover meer in onze <a class='lnr-link' ui-sref='terms'>Algemene Gebruikers Voorwaarden</a>."
+      "title": "De listnride garantie voor verhuurders",
+      "content": "Listnride is een community van enthousiaste fietsliefhebbers. Toch kan er soms iets misgaan, hoe voorzichtig je ook bent. Daarom biedt listnride een verhuurdersgarantie. Als je fiets tijdens de verhuur via listnride beschadigt of wordt gestolen en de huurder kan je de schade niet vergoeden, dan is deze tot een hoogte van 5.000 EUR afgedekt. Uiteraard zijn hier bepaalde voorwaarden, beperkingen en uitzonderingen van kracht. Lees hierover meer in onze <a class='lnr-link' ui-sref='terms'>Algemene Gebruikers Voorwaarden</a>."
     },
     "responsibility": {
       "title": "Wij behandelen je gegevens met zorg.",
-      "content": "In jouw openbare profiel wordt je adres of de standplaats van je fiets niet vertoond. Het adres wordt pas doorgegeven als een boeking is bevestigd."
+      "content": "In jouw openbare profiel wordt je adres of de standplaats van je fiets niet getoond. Je naw-gegevens worden pas doorgegeven als een boeking is bevestigd."
     },
     "verification": {
       "title": "Verificatie schept vertrouwen",
-      "content": "Theoretisch gezien ben je slechts via vier tot zes “vrienden van vrienden” verwijderd van iedereen op deze planeet . Maar wil je daar echt op vertrouwen als je je fiets verhuurd? Koppel je persoonlijke gegevens aan je profiel , dat schept vertrouwen bij beide partijen. Listnride geeft je de volgende verificatie mogelijkheden:",
-      "list-1": "ID-Verifizierung: ID-verificatie: koppel je facebookpagina aan je profiel, sla je betaalgegevens op bij transacties. Zorg ervoor dat je je mails kunt ontvangen.",
-      "list-2": "Telefoonnummer : we delen je telefoonnummer met de huurder/verhuurder zodra van beide kanten de boeking is bevestigd.",
-      "list-3": "Recensies: wij voegen de recensies van je huurder /verhuurder toe aan je profiel. Zo kun je een goede reputatie opbouwen."
+      "content": "Theoretisch gezien ben je slechts via 4 tot 6 “vrienden van vrienden” verwijderd van iedereen op deze planeet. Echter wil je daar werkelijk op vertrouwen als je je fiets verhuurd? Koppel je persoonlijke gegevens aan je profiel, dat schept vertrouwen voor beide partijen. Listnride geeft je de volgende verificatie mogelijkheden:",
+      "list-1": "ID-Verifizierung: ID-verificatie: koppel je facebookpagina aan je profiel en ofzorg ervoor dat je correct e-mailadres gebruikt.",
+      "list-2": "Telefoonnummer : we verifieren je telefoonnummer, delen deze echter alleen met de huurder/verhuurder zodra van beide kanten een boeking is bevestigd.",
+      "list-3": "Recensies: De recensies van je huurder / verhuurder zijn op je profielpagina zichtbaar. Zo kun je een goede reputatie opbouwen."
     }
   },
 
@@ -482,7 +501,9 @@
     "future": {
       "title": "listnride op volle Snelheid",
       "content": "Vandaag de dag is listnride actief in grote steden als Amsterdam, Berlin, München en Wenen. En er komen rap locaties bij. Particulieren en zakelijke verhuurders bieden bij ons hun fietsen te huur aan. Touriesten en locals, families en zakenlieden huren precies de juiste fiets naar hun smaak en gebruiksdoeleinde – en nemen tegerlijkertijd nog een paar interessante tips van de verhuurder mee. Ons idee is werkelijkheid geworden. Sluit je bij ons aan en biedt je fiets aan – of boek toch de fiets die je graag wilt rijden! Wij verheugen ons, jou in onze Community te verwelkomen"
-    }
+    },
+    "meta-title": "???",
+    "meta-description": "???"
   },
 
   "press": {
@@ -497,7 +518,9 @@
     "contact": {
       "title": "Perscontact",
       "content": "U heeft vragen omtrent listnride of u zoekt een contactpersoon voor gespreksonderwerpen als fietsverhuursystemen, huurfietsen en mobiliteitsconcepten? Dan kunt u ons gaarne direkt contacteren:"
-    }
+    },
+    "meta-title": "???",
+    "meta-description": "???"
   },
 
   "jobs": {
@@ -507,11 +530,15 @@
     "contact": {
       "title": " Join the team!",
       "content": "Je weet altijd meer over fietsen als anderen? Je houdt ervan bij weer en wind op de fiets te zitten? Dan ben je waarschijnlijk een fietsfanaat – en pas je waarschijnlijk ook goed in ons team. Check of wij momenteel een interessante baan voor je hebben of stuur ons met overgave je sollicitatie toe."
-    }
+    },
+    "meta-title": "???",
+    "meta-description": "???"
   },
 
   "contact-and-help": {
     "title": "Contact & Help",
+    "meta-title": "???",
+    "meta-description": "???",
     "faq-section" : {
       "header": "Wij zijn er voor jou!",
       "subheader": "Meest gestelde vragen van onze gebruikers.",
@@ -582,7 +609,7 @@
     },
     "contact-section" : {
       "header": "Staat jouw vraag hier niet bij?",
-      "subheader": "Neem contact met ons op als je specefieke vragen hebt of als er iets onvoorziens gebeurt tijdens je huurperiode via Listnride",
+      "subheader": "Neem contact met ons op als je specifieke vragen hebt of als er iets onvoorziens gebeurt tijdens het (ver)huren",
       "list-1" : "Ik wil een verdachte/rare aanvraag melden",
       "title" : "Je hebt in de FAQs niet het antwoord op je vraag gevonden? Kies dan:",
       "list-2" : "Ik wil een verdachte/rare advertentie melden",
@@ -597,13 +624,15 @@
     "header" : "Algemene voorwaarden van het Online-Platform listnride",
     "download" : "Hier te downloaden",
     "description": "<a href=\"http://cdn.listnride.com/de/tacs.pdf\" target=\"_blank\">Je kan hier algemene voorwaarden inzien en downloaden.",
-    "subtitle": "De List and Ride GmbH (in het vervolg „listnride“) bemmideld via de webseite www.listnride.com (in het vervolg „Website“) huurcontracten voor fietsen en andere sport en vrijetijdsuitrusting. De navolgende algemene gebruiksvoorwaarden (im Folgenden „gebruiksvoorwaarden“) in paragraaf I. zijn onderdeel van de overeenkomst die tussen de gebruiker en listnride middels de bemiddelingsverrichting tot stand komt. Indien er via de website een overeenkomst tot het huren van een gebruiksvoorwerp (in het vervolg „huurovereenkomst“) gesloten, komt deze volgens de in paragraaf II genoemde algemene huurvoorwaarden (in het vervolg „huurvoorwaarden“) tot stand."
+    "subtitle": "De List and Ride GmbH (in het vervolg „listnride“) bemmidelt via de website www.listnride.com (in het vervolg „Website“) huurcontracten voor fietsen en andere sport- en vrijetijdsuitrusting. De onderstaande algemene gebruiksvoorwaarden (in het vervolg „gebruiksvoorwaarden“) in paragraaf I zijn onderdeel van de overeenkomst die tussen de gebruiker en listnride middels de bemiddelingsverrichting tot stand komt. Indien er via de website een overeenkomst tot het huren van een gebruiksvoorwerp (in het vervolg „huurovereenkomst“) is gesloten, komt deze volgens de in paragraaf II genoemde algemene huurvoorwaarden (in het vervolg „huurvoorwaarden“) tot stand."
   },
 
   "privacy" : {
     "title" : "Privacy",
     "subtitle": "Privacy policy",
-    "description": "Met het privacy policy informeert de List and Ride GmbH (in het vervolg „listnride“) je over het beleid ten aanzien de omgang met uw persoonlijke gegevens. <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">U kunt hier het privacy policy inzien en uitprinten.</a>"
+    "description": "Met het privacy policy informeert de List and Ride GmbH (in het vervolg „listnride“) je over het beleid ten aanzien de omgang met uw persoonlijke gegevens. <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">U kunt hier het privacy policy inzien en uitprinten.</a>",
+    "meta-title": "???",
+    "meta-description": "???"
   },
 
   "imprint" : {
@@ -614,7 +643,9 @@
     "germany": "Duitsland",
     "commercial-register-number": "Handelsregisternummer",
     "berlin-court-of-registry": "Kantongerecht Berlijn (Charlottenburg)",
-    "vat-id": "BTW-Nr."
+    "vat-id": "BTW-Nr.",
+    "meta-title": "???",
+    "meta-description": "???"
   },
 
   "events": {

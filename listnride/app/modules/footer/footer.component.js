@@ -11,11 +11,11 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
       footer.language = getLanguage($translate.use());
 
       footer.switchLanguage = function(locale) {
-        // $translate.use(locale).then(function(data) {
-        //   footer.language = getLanguage(locale);
-        //   $state.reload();
-        // });
-        $window.location.href = 'http://' + locale + ".localhost:8080/#" + $location.url();
+        $translate.use(locale).then(function(data) {
+          footer.language = getLanguage(locale);
+          $state.reload();
+        });
+        // $window.location.href = 'http://' + locale + ".listnride-frontend-staging.herokuapp.com" + $location.url();
       }
       
       footer.onAppClick = function() {

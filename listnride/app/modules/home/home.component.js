@@ -3,9 +3,12 @@
 angular.module('home',[]).component('home', {
   templateUrl: 'app/modules/home/home.template.html',
   controllerAs: 'home',
-  controller: [ '$state', 'api',
-    function HomeController($state, api) {
+  controller: [ '$state', '$translate', 'api', 'ngMeta',
+    function HomeController($state, $translate, api, ngMeta) {
       var home = this;
+
+      ngMeta.setTitle($translate.instant("home.meta-title"));
+      ngMeta.setTag("description", $translate.instant("home.meta-description"));
 
       api.get("/featured").then(function(response) {
         home.featuredBikes = response.data.slice(0,6);
