@@ -21,9 +21,9 @@
 
       var introText = {
         en: 'We are currently offering the rental bikes listed below in ' + response.city +
-          '. You can easily book your bike rental online on partner website <a target="_blank" href="http://www.listnride.com">www.listnride.com</a>, by clicking on the bike you would like to rent or just come by our shop.',
-        de: 'Wir bieten aktuell die unten aufgelisteten Mietr&auml;der in ' + response.city + ' zum Verlieh an. Du kannst die Mietr&auml;der direkt auf <a target="_blank" href="http://www.listnride.com">www.listnride.com</a> online buchen, durch auf das gew&uuml;nschte Fahrrad zu klicken oder du kommst einfach bei uns vorbei.',
-        nl: 'Wij bieden momenteel de onderstaande fietsen in ' + response.city + ' te huur aan. Je kan deze eenvoudig via <a target="_blank" href="http://www.listnride.com">www.listnride.com</a> online boeken door op een van de fietsen te klikken of je komt gewoon bij ons in de winkel even langs'
+          '. You can easily book your bike rental online on partner website <a target="_blank" href="http://www.listnride.com">www.listnride.com</a>, by clicking on the bike you would like to rent, and pick-up the bike at the time you booked at our shop.',
+        de: 'Wir bieten aktuell die folgenden R&auml;der in ' + response.city + ' zum Verlieh an. Du kannst die Mietr&auml;der direkt auf <a target="_blank" href="http://www.listnride.com">www.listnride.com</a> online buchen, durch auf das gew&uuml;nschte Fahrrad zu klicken und dann zum gew&uuml;nschten Termin bei uns abholen.',
+        nl: 'Wij bieden momenteel de onderstaande fietsen in ' + response.city + ' te huur aan. Je kan deze eenvoudig via <a target="_blank" href="http://www.listnride.com">www.listnride.com</a> online boeken door op een van de fietsen te klikken. De fiets kan je dan op het geboekte tijdstip ophalen bij ons in de winkel.'
       };
       
       var selectedLangText, dayText;
