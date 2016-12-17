@@ -5,6 +5,8 @@ module('listnride').
 config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$locationProvider',
   function($stateProvider, $urlRouterProvider, $translateProvider, $locationProvider) {
 
+
+
     $stateProvider.state({
       name: 'home',
       url: '/',
