@@ -64,34 +64,32 @@ angular.module('listnride', [
       suffix: '.json'
     });
 
+    // Retrieves locale from subdomain if valid, otherwise sets the default.
+    var retrieveLocale = function() {
+      var defaultLanguage = "en";
+      var availableLanguages = ["de", "en", "nl"];
+  
+      var host = window.location.host;
+      var retrievedLanguage = host.split('.')[0];
+  
+      if (availableLanguages.indexOf(retrievedLanguage) >= 0) {
+        console.log("Language set to " + retrievedLanguage);
+        return retrievedLanguage;
+      } else {
+        console.log("Language defaulting to " + defaultLanguage);
+        return defaultLanguage;
+      }
+    
+    };
 
-    $translateProvider.preferredLanguage("en");
+    $translateProvider.preferredLanguage(retrieveLocale());
     $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
-
     ngMetaProvider.setDefaultTitle('listnride');
   }
 ])
-.run(['ngMeta', '$location', '$translate', function(ngMeta, $location, $translate) {
+.run(['ngMeta', '$rootScope', '$location', function(ngMeta, $rootScope, $location) {
 
-  // Retrieves and sets locale from subdomain if valid, otherwise sets the default.
-  var retrieveLocale = function() {
-    var defa = "en";
-    var availableLanguages = ["de", "en", "nl"];
-
-    var host = $location.host();
-    var locale = host.split('.')[0];
-
-    if (availableLanguages.indexOf(locale) >= 0) {
-      console.log("Language set to " + locale);
-      return locale;
-    } else {
-      console.log("Language defaulting to " + defa);
-      return defa;
-    }
-
-  };
-
-  $translate.use(retrieveLocale());
+  $rootScope.location = $location;
   ngMeta.init();
-  
+
 }]);
