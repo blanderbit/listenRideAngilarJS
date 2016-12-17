@@ -64,47 +64,32 @@ angular.module('listnride', [
       suffix: '.json'
     });
 
-    var browserLanguage = $translateProvider.resolveClientLocale();
-    var defaultLanguage = "en";
-    var availableLanguages = ["de", "en", "nl"];
-    var preferredLanguage;
+    // Retrieves locale from subdomain if valid, otherwise sets the default.
+    var retrieveLocale = function() {
+      var defaultLanguage = "en";
+      var availableLanguages = ["de", "en", "nl"];
+  
+      var host = window.location.host;
+      var retrievedLanguage = host.split('.')[0];
+  
+      if (availableLanguages.indexOf(retrievedLanguage) >= 0) {
+        console.log("Language set to " + retrievedLanguage);
+        return retrievedLanguage;
+      } else {
+        console.log("Language defaulting to " + defaultLanguage);
+        return defaultLanguage;
+      }
+    
+    };
 
-    if (browserLanguage != undefined && browserLanguage.length >= 2) {
-      browserLanguage = browserLanguage.substring(0,2);
-    }
-
-    if (availableLanguages.indexOf(browserLanguage) >= 0) {
-      preferredLanguage = browserLanguage;
-    } else {
-      preferredLanguage = defaultLanguage;
-    }
-
-    $translateProvider.preferredLanguage(preferredLanguage);
+    $translateProvider.preferredLanguage(retrieveLocale());
     $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
-
     ngMetaProvider.setDefaultTitle('listnride');
   }
 ])
-.run(['ngMeta', '$location', '$translate', function(ngMeta, $location, $translate) {
+.run(['ngMeta', '$rootScope', '$location', function(ngMeta, $rootScope, $location) {
 
-  // Retrieves and sets locale from subdomain if valid, otherwise sets the default.
-  var setLocale = function() {
-    var defa = "en";
-    var availableLanguages = ["de", "en", "nl"];
-
-    var host = $location.host();
-    var locale = host.split('.')[0];
-
-    if (availableLanguages.indexOf(locale) >= 0) {
-      console.log("Language set to " + locale);
-      $translate.use(locale);
-    } else {
-      console.log("Language defaulting to " + defa);
-      $translate.use(defa);
-    }
-
-  };
-
-  setLocale();
+  $rootScope.location = $location;
   ngMeta.init();
+
 }]);
