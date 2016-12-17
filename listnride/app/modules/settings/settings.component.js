@@ -3,11 +3,13 @@
 angular.module('settings',[]).component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',
-  controller: ['$localStorage', '$window', '$mdToast', '$translate', 'api', 'accessControl', 'sha256', 'Base64', 'Upload', 'loadingDialog', 'ENV',
-    function SettingsController($localStorage, $window, $mdToast, $translate, api, accessControl, sha256, Base64, Upload, loadingDialog, ENV) {
+  controller: ['$localStorage', '$window', '$mdToast', '$translate', 'api', 'accessControl', 'sha256', 'Base64', 'Upload', 'loadingDialog', 'ENV', 'ngMeta',
+    function SettingsController($localStorage, $window, $mdToast, $translate, api, accessControl, sha256, Base64, Upload, loadingDialog, ENV, ngMeta) {
       if (accessControl.requireLogin()) {
         return;
       }
+      ngMeta.setTitle($translate.instant("settings.meta-title"));
+      ngMeta.setTag("description", $translate.instant("settings.meta-description"));
 
       var settings = this;
       settings.user = {};
