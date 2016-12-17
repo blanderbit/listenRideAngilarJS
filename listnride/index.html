@@ -10,6 +10,11 @@
   <meta name="description" content="{{ngMeta.description}}">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
   <meta name="fragment" content="!">
+
+  <link rel="alternate" href="http://en.listnride.com{{location.path()}}" hreflang="en" />
+  <link rel="alternate" href="http://de.listnride.com{{location.path()}}" hreflang="de" />
+  <link rel="alternate" href="http://nl.listnride.com{{location.path()}}" hreflang="nl" />
+
   <link rel="icon" type="image/png" href="app/assets/ui_images/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="app/assets/ui_images/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="app/assets/ui_images/favicon-96x96.png" sizes="96x96">
@@ -89,6 +94,7 @@
 </head>
 
 <body layout="column">
+{{ testout }}
   <header></header>
   <sidebar layout="row" header="header"></sidebar>
   <ui-view flex layout-fill></ui-view>

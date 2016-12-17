@@ -87,8 +87,9 @@ angular.module('listnride', [
     ngMetaProvider.setDefaultTitle('listnride');
   }
 ])
-.run(['ngMeta', function(ngMeta) {
+.run(['ngMeta', '$rootScope', '$location', function(ngMeta, $rootScope, $location) {
 
+  $rootScope.location = $location;
   ngMeta.init();
 
 }]);
