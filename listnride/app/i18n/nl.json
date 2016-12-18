@@ -146,7 +146,8 @@
     },
     "write-message": "schrijf een bericht...",
     "complete-profile": "maak je profiel compleet",
-    "complete-profile-description": "Om de fiets te boeken, vul je betaalgegevens in. Alle gegevens worden via een versleutelde, zekere verbinding verstuurd."
+    "complete-profile-description": "Om de fiets te boeken, vul je betaalgegevens in. Alle gegevens worden via een versleutelde, zekere verbinding verstuurd.",
+    "no-requests-yet": "Op het moment, dat je een aanvraag doet of ontvangt, vind je de aanvragen hier."
   },
 
   "message": {

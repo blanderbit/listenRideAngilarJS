@@ -146,7 +146,8 @@
     },
     "write-message": "Schreibe eine Nachricht...",
     "complete-profile": "Vervollständige dein Profil",
-    "complete-profile-description": "Um das Rad zu buchen, gebe dein Zahlungsmittel an. Alle Daten werden über eine gesicherte Verbindung übertragen."
+    "complete-profile-description": "Um das Rad zu buchen, gebe dein Zahlungsmittel an. Alle Daten werden über eine gesicherte Verbindung übertragen.",
+    "no-requests-yet": "Sobald du Anfragen gestellt oder bekommen hast, werden sie hier angezeigt."
   },
 
   "message": {

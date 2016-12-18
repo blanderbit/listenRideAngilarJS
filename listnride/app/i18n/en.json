@@ -146,7 +146,8 @@
     },
     "write-message": "Write a message...",
     "complete-profile": "Complete your Profile",
-    "complete-profile-description": "To book the bike, please enter your payment information. All informations are transmitted over a secure connection."
+    "complete-profile-description": "To book the bike, please enter your payment information. All informations are transmitted over a secure connection.",
+    "no-requests-yet": "As soon as you made or got requests, they'll show up here."
   },
 
   "message": {
