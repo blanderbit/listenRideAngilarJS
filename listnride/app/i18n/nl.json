@@ -36,7 +36,7 @@
     "show-more" : "Toon meer",
     "show-less" : "Toon minder",
     "phone-number": "Telefoonnummer",
-    "wait": "is aan het uploaden, dit kan een moment duren..",
+    "wait": "Je fiets wordt nu online geplaatst, dit kan een moment duren..",
     "lister": "Aanbieder",
     "reviews": "Recensies",
     "for": "voor",
@@ -81,31 +81,31 @@
   },
 
   "verification": {
-    "verify-profile": "bevestig je profiel",
+    "verify-profile": "Voltooi je profiel",
     "resend-email": "Stuur e-mail opnieuw",
     "1": {
       "text1": "Welkom bij listnride!",
-      "text2": "Hartelijk welkom tot onze Bike-Sharing-Community met veel mooie fietsen en enthousiaste fietsliefhebbers vanuit de hele wereld. Onze community biedt een omgeving waar je jouw geliefde tweewieler zonder twijfel aan anderen kan uitlenen – wederseits vertrouwen en zekerheid voor jou en andere gebruikers staat daarom bij ons op de eerste plaats.",
+      "text2": "Hartelijk welkom tot onze Bike-Sharing-Community met veel mooie fietsen en enthousiaste fietsliefhebbers vanuit de hele wereld. Onze community biedt een omgeving waar je jouw geliefde tweewieler zorgenloos aan anderen kan uitlenen – wederzijds vertrouwen en zekerheid voor jou en andere gebruikers staat daarom bij ons op de eerste plaats.",
       "text3": "We vragen je daarom, je profiel in een paar stappen te voltooien. Hoe beter en volledig je profielbeschrijving, des te groter de kans op aanvragen en successvolle verhuur."
     },
     "2": {
       "description": "Voeg een pasfoto toe, het is zeer belangrijk een persoonlijk beeld bij een profiel te hebben."
     },
     "3": {
-      "description": "Schrijf ein paar regels tekst over jezelf en wat fietsen voor je betekent of andere interessante informatie voor je profiel!",
+      "description": "Schrijf ein paar regels tekst over jezelf en wat fietsen voor je betekent of iets anders interessants voor je profiel!",
       "label": "omschrijving (min. 100 tekens)"
     },
     "4": {
-      "description": "Bevestig je emailadres, door op de aktiveringslink te clicken in de toegestuurde bevestigingsmal. Deze heb je direkt na je aanmelding ontvangen. Indien je deze mail niet meer kan vinden, kan je de mail nogmaals aanvragen. verschijnt de mail niet direct in je postvak, wacht alsjeblieft nog een paar minuten of check de spamfolder.",
-      "email-verified": "emailadres succesvol geverifieerd"
+      "description": "Bevestig je emailadres, door op de aktiveringslink te klicken in de toegestuurde bevestigingsmail. Deze heb je direkt na je aanmelding ontvangen. Indien je deze mail niet meer kan vinden, kan je de mail nogmaals aanvragen. Verschijnt de mail niet direct in je postvak, wacht dan nog een paar minuten of check de spamfolder.",
+      "email-verified": "emailadres met succes geverifieerd"
     },
     "5": {
-      "description": "Bevestig je telefoonnummer, zodat we je per SMS kunnen informeren als er een nieuwe aanvraag voor je is. Voer uw telefoonnummer in en klik op \"Bevestiging versturen\". Je ontvangt een sms met een code die je hieronder kunt invoeren.",
+      "description": "Bevestig je telefoonnummer, zodat we je per SMS kunnen informeren als er een nieuwe aanvraag voor je is. Voer uw telefoonnummer in en klik op \"Bevestiging versturen\". Je ontvangt dan een sms met een code die je hieronder kunt invoeren.",
       "enter-valid-phone-nr": "Voer een geldig telefoonnummer in",
       "send-confirmation-sms": "Bevestigings-SMS versturen",
       "sms-verification-code": "SMS-Verificatie-Code",
       "confirm-code": "Code Bevestigen",
-      "phone-nr-verified": "Je telefoonnummer is succesvol geverifieerd!"
+      "phone-nr-verified": "Je telefoonnummer is met succes geverifieerd!"
     },
     "6": {
       "description": "Geef als laatste uw adres aan."
@@ -146,8 +146,7 @@
     },
     "write-message": "schrijf een bericht...",
     "complete-profile": "maak je profiel compleet",
-    "complete-profile-description": "Om de fiets te boeken, vul je betaalgegevens in. Alle gegevens worden via een versleutelde, zekere verbinding verstuurd.",
-    "no-requests-yet": "Op het moment, dat je een aanvraag doet of ontvangt, vind je de aanvragen hier."
+    "complete-profile-description": "Om de fiets te boeken, vul je betaalgegevens in. Alle gegevens worden via een versleutelde, zekere verbinding verstuurd."
   },
 
   "message": {
@@ -169,7 +168,7 @@
   },
 
   "rideChat": {
-    "1": "Je zou graag {{lister.first_name}} {{lister.last_name}}'s <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. Spreek de verdere details met de verhuurder af. Op het moment dat je aanvraag wordt geaccepteerd, dien je deze nog te bevesitigen om de boeking af te ronden.",
+    "1": "Je zou graag {{lister.first_name}} {{lister.last_name}}'s <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. Spreek de verdere details met de verhuurder af. Op het moment dat je aanvraag wordt geaccepteerd, dien je deze nog te bevestigen om de boeking af te ronden.",
     "2": "{{lister.first_name}} heeft je aanvraag geaccepteerd. Bevestig de boeking, de betaling volgt bij de volgende stap.",
     "3": "Gefeliciteerd, je hebt de fiets geboekt en je kan de fiets op de afgesproken tijd en plaats ophalen. De contactgegevens zijn de volgende, alle details worden je ook per email toegestuurd.<br><br>Naam: {{lister.first_name}} {{lister.last_name}}<br>E-mail adres: {{lister.email}}<br>Adres: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "4": "{{lister.first_name}} heeft de teruggave van de fiets bevestigd.",
@@ -223,7 +222,7 @@
     "general": "Algemeen",
     "street": "Straat en huisnr.",
     "zip": "Postcode",
-    "city": "Stad",
+    "city": "Plaats",
     "country": "Land"
   },
 
@@ -263,9 +262,9 @@
     },
     "category": {
       "header": "Wat is de fietscategorie?",
-      "hint": "Kies allereerst de categorie van je fiets. Kiese daarna de juiste subcategorie.",
+      "hint": "Kies allereerst de categorie van je fiets. Kies daarna de juiste subcategorie.",
       "label": "Categorie",
-      "city": "Stad",
+      "city": "Plaats",
       "race": "Race",
       "all-terrain": "All-Terrain",
       "kids": "Kinder",
@@ -273,7 +272,7 @@
       "special": "Speciaal"
     },
     "details": {
-      "hint": "Vul het merk, de naam en beschrijving van je fiets in. De naam is vrij te kiezen en kan bijvoorbeeld het model zijn. Bijv. Gazelle, Tour Populair, 2013. Kies de passende lichaamslengte voor het bereiden van de fiets.",
+      "hint": "Vul het merk, de naam en beschrijving van je fiets in. De naam is vrij te kiezen en kan bijvoorbeeld het model zijn. Bijv. Gazelle, Tour Populair, 2013. Kies de passende lichaamslengte voor het rijden van de fiets.",
       "label": "Details",
       "brand": "Merk",
       "name": "Naam",
@@ -305,7 +304,7 @@
       "daily-price": "hele dag",
       "weekly-price": "Een Week"
     },
-    "subcategory": {
+        "subcategory": {
       "1": {
         "dutch-bike": "Stadsfiets",
         "touring-bike": "Touringfiets",
@@ -455,7 +454,7 @@
       "control-title": "Jij behoudt de controle.",
       "control-content": "Jij bepaalt de huurprijs voor het verhuren van je fiets. Daarnaast beslis je zelf of je de huuraanvragen accepteert of juist afwijst (bijv. omdat je fiets op dat moment niet beschikbaar is).",
       "covered-title": "Je bent verzekerd.",
-      "covered-content": "in geval van schade of diefstal helpen wij je. En als het nodig mocht zijn, ben je met de verhuurdersgarantie van Listnride tot € 5000,-- verzekerd.",
+      "covered-content": "in geval van schade of diefstal helpen wij je. En als het nodig mocht zijn, ben je met de verhuurdersgarantie van listnride tot € 5000,-- verzekerd.",
       "help-title": "Wij laten je niet alleen.",
       "help-content": "Indien je een bepaald probleem niet met een huurder direct kan oplossen, zijn wij er ook voor jou om je te ondersteunen of het probleem zelfs voor je op te lossen"
     },
@@ -466,7 +465,7 @@
     },
     "testmonials-section": {
       "header": "fietsverhuur: wat zeggen onze verhuurders over ons?",
-      "subheader": "Veel mensen maken al deel uit van de Listnride community. Lees hier hun persoonlijke ervaringen."
+      "subheader": "Veel mensen maken al deel uit van de listnride community. Lees hier hun persoonlijke ervaringen."
     }
   },
 
@@ -479,7 +478,7 @@
     "subheader": "Via listnride een fiets huren is veilig en simpel.",
     "guarantee": {
       "title": "De listnride garantie voor verhuurders",
-      "content": "Listnride is een community van enthousiaste fietsliefhebbers. Toch kan er soms iets misgaan, hoe voorzichtig je ook bent. Daarom biedt listnride een verhuurdersgarantie. Als je fiets tijdens de verhuur via listnride beschadigt of wordt gestolen en de huurder kan je de schade niet vergoeden, dan is deze tot een hoogte van 5.000 EUR afgedekt. Uiteraard zijn hier bepaalde voorwaarden, beperkingen en uitzonderingen van kracht. Lees hierover meer in onze <a class='lnr-link' ui-sref='terms'>Algemene Gebruikers Voorwaarden</a>."
+      "content": "listnride is een community van enthousiaste fietsliefhebbers. Toch kan er soms iets misgaan, hoe voorzichtig je ook bent. Daarom biedt listnride een verhuurdersgarantie. Als je fiets tijdens de verhuur via listnride beschadigt of wordt gestolen en de huurder kan je de schade niet vergoeden, dan is deze tot een hoogte van 5.000 EUR afgedekt. Uiteraard zijn hier bepaalde voorwaarden, beperkingen en uitzonderingen van kracht. Lees hierover meer in onze <a class='lnr-link' ui-sref='terms'>Algemene Gebruikers Voorwaarden</a>."
     },
     "responsibility": {
       "title": "Wij behandelen je gegevens met zorg.",
@@ -487,7 +486,7 @@
     },
     "verification": {
       "title": "Verificatie schept vertrouwen",
-      "content": "Theoretisch gezien ben je slechts via 4 tot 6 “vrienden van vrienden” verwijderd van iedereen op deze planeet. Echter wil je daar werkelijk op vertrouwen als je je fiets verhuurd? Koppel je persoonlijke gegevens aan je profiel, dat schept vertrouwen voor beide partijen. Listnride geeft je de volgende verificatie mogelijkheden:",
+      "content": "Theoretisch gezien ben je slechts via 4 tot 6 “vrienden van vrienden” verwijderd van iedereen op deze planeet. Echter wil je daar werkelijk op vertrouwen als je je fiets verhuurd? Koppel je persoonlijke gegevens aan je profiel, dat schept vertrouwen voor beide partijen. listnride geeft je de volgende verificatie mogelijkheden:",
       "list-1": "ID-Verifizierung: ID-verificatie: koppel je facebookpagina aan je profiel en ofzorg ervoor dat je correct e-mailadres gebruikt.",
       "list-2": "Telefoonnummer : we verifiëren je telefoonnummer, delen deze echter alleen met de huurder / verhuurder zodra van beide kanten een boeking is bevestigd.",
       "list-3": "Recensies: De recensies van je huurder / verhuurder zijn op je profielpagina zichtbaar. Zo kun je een goede reputatie opbouwen."
@@ -549,13 +548,13 @@
       "lister-faq": {
         "title" : "FAQ verhuurder",
         "question-1": "Welke garanties of zekerheden heb ik, als ik mijn fiets verhuur?",
-        "answer-1": "Zodra er een aanvraag binnenkomt, kun je via de chatfunctie contact leggen met potentiele huurder. Zo kun je vooraf iemand al een beetje leren kennen en te weten komen waarom jouw fiets gehuurd wordt. Om fraude te voorkomen verifiëren wij alle gebruikers van Listnride. Als je nog meer zekerheid wilt hebben, vraag de huurder dan om een kopie paspoort of een borgsom te geven bij de overdracht van je fiets. Ga ervan uit dat je huurder wil genieten en een relaxte tijd op je fiets wil hebben en er daarom ook voorzichtig mee zal zijn.",
+        "answer-1": "Zodra er een aanvraag binnenkomt, kun je via de chatfunctie contact leggen met potentiele huurder. Zo kun je vooraf iemand al een beetje leren kennen en te weten komen waarom jouw fiets gehuurd wordt. Om fraude te voorkomen verifiëren wij alle gebruikers van listnride. Als je nog meer zekerheid wilt hebben, vraag de huurder dan om een kopie paspoort of een borgsom te geven bij de overdracht van je fiets. Ga ervan uit dat je huurder wil genieten en een relaxte tijd op je fiets wil hebben en er daarom ook voorzichtig mee zal zijn.",
         "question-2": "Hoe kan ik er zeker van zijn dat mijn fiets terug komt?",
-        "answer-2": "Wij doen ons uiterste best om het wederzijdse vertrouwen en respect in onze community op te bouwen. Daarom vragen wij iedereen zich te verifiëren voordat zij een fiets (ver) huren .  Verifiereren gebeurt door een telefoonnummer, facebook en of emailadres en creditcardgegevens of bankgegevens te koppelen aan een profiel. Wil je nog meer zekerheid, vraag dan om een kopie van het identiteitsbewijs of om een borg. Als je dat graag wilt, geef dit dan tijdig (voor de boeking) aan bij de huurder. Dat neemt niet weg dat een huurder ook te laat kan zijn met het terugbrengen, omdat zij onbekend zijn in de omgeving en moeite kunnen hebben je adres vinden. Probeer telefonisch contact te leggen of stuur een sms om te achterhalen waarom ze te laat zijn. Als dat niet lukt, neem dan contact met ons op via de website door op „Contact en Help“ te klikken. Wij nemen dan contact op met de huurder om te kijken wat er is gebeurd en zorgen dat je fiets terug komt.",
+        "answer-2": "Wij doen ons uiterste best om het wederzijdse vertrouwen en respect in onze community op te bouwen. Daarom vragen wij iedereen zich te verifiëren voordat zij een fiets (ver) huren .  Verifiëren gebeurt door telefoonnummerverificatie, facebook en of emailadresverificatie als ook betaalgegevensverificatie. Wil je nog meer zekerheid, vraag dan om een kopie van het identiteitsbewijs of om een borg. Als je dat graag wilt, geef dit dan tijdig (voor de boeking) aan bij de huurder. Dat neemt niet weg dat een huurder ook te laat kan zijn met het terugbrengen, omdat zij onbekend zijn in de omgeving en moeite kunnen hebben je adres vinden. Probeer telefonisch contact te leggen of stuur een sms om te achterhalen waarom ze te laat zijn. Als dat niet lukt, neem dan contact met ons op via de website door op „Contact en Help“ te klikken. Wij nemen dan contact op met de huurder om te kijken wat er is gebeurd en zorgen dat je fiets terug komt.",
         "question-3": "Wat gebeurt er als mijn fiets gestolen is of beschadigd terug komt?",
-        "answer-3": "Diefstal kan gebeuren. Maar een fiets wordt niet zo snel gestolen als er een goed slot op zit en of binnen wordt neer gezet. Voorkom diefstal door een goed veiligheidsslot bij je fiets te leveren. Als het toch fout gaat is de huurder aansprakelijk voor de mogelijk ontstane schade, diefstal en alle daarmee gepaard gaande kosten. Als je fiets tijdens de verhuurperiode wordt gestolen of beschadigd, raden wij jou en de huurder aan om via de website met ons contact op te nemen door op „Contact en Help“ te klikken. Nadat wij inzicht hebben gekregen in de situatie nemen we weer contact met je op en zorgen voor een oplosssing. Mocht je fiets gestolen zijn en de huurder kan je niet schadeloos stellen, dan wordt de schade gedekt door de Listnride garantie voor verhuurders! Wordt je fiets gestolen als hij niet via Listnride is verhuurd, dan kunnen we je helaas niet helpen. In dat geval moet je het zelf met de huurder regelen.",
+        "answer-3": "Diefstal kan gebeuren. Maar een fiets wordt niet zo snel gestolen als er een goed slot op zit en of binnen wordt neer gezet. Voorkom diefstal door een goed veiligheidsslot bij je fiets te leveren. Als het toch fout gaat is de huurder aansprakelijk voor de mogelijk ontstane schade, diefstal en alle daarmee gepaard gaande kosten. Als je fiets tijdens de verhuurperiode wordt gestolen of beschadigd, raden wij jou en de huurder aan om via de website met ons contact op te nemen door op „Contact en Help“ te klikken. Nadat wij inzicht hebben gekregen in de situatie nemen we weer contact met je op en zorgen voor een oplosssing. Mocht je fiets gestolen zijn en de huurder kan je niet schadeloos stellen, dan wordt de schade gedekt door de listnride garantie voor verhuurders! Wordt je fiets gestolen als hij niet via listnride is verhuurd, dan kunnen we je helaas niet helpen. In dat geval moet je het zelf met de huurder regelen.",
         "question-4": "Wat gebeurt er als de huurder of iemand anders gewond raakt en/of er materiele schade ontstaat?",
-        "answer-4": "Zorg er altijd voor dat de fiets die je verhuurd in goede staat is. Dat is prettig voor beide partijen. De huurder geniet van zijn rit en geeft je een goede recensie na afloop. Door een boeking te maken via Listnride gaat de huurder accoord met de algemene gebruiksvoorwaarden. Deze voorwaarden beschermen jou tegen aansprakelijkheid voor elk letsel van de huurder en/of materiele schade die veroorzaakt is door de huurder. Als verhuurder word je niet aansprakelijk gesteld als de huurder iets overkomt raakt.",
+        "answer-4": "Zorg er altijd voor dat de fiets die je verhuurt in goede staat is. Dat is prettig voor beide partijen. De huurder geniet van zijn rit en geeft je een goede recensie na afloop. Door een boeking te maken via listnride gaat de huurder accoord met de algemene gebruiksvoorwaarden. Deze voorwaarden beschermen jou tegen aansprakelijkheid voor elk letsel van de huurder en/of materiele schade die veroorzaakt is door de huurder. Als verhuurder word je niet aansprakelijk gesteld als de huurder iets overkomt raakt.",
         "question-5": "Wat gebeurt er als de huurder niet op de afgesproken tijd de fiets ophaalt?",
         "answer-5": "Soms kan iemand moeite hebben om de plek van de afspraak te vinden. Een klein beetje flexibiliteit van jouw kant is dan prettig. Maar als het veel te lang duurt en je hebt geprobeerd om contact op te nemen met de huurder - telefonisch, per sms of via de chat – en deze reageert niet, stuur hem/haar dan een bericht via de chat dat je de boeking annuleert en de rede waarom.",
         "question-6": "Hoe verhuur ik mijn fiets?",
@@ -563,21 +562,21 @@
         "question-7": "Hoe bepaal ik de verhuurprijs?",
         "answer-7": "Het staat je vrij om iedere prijs voor een halve dag/dag/week te vragen. Minimum bedrag is € 1. Een aantrekkelijke prijs levert meer verhuurdagen op, omdat bijna iedereen let op een goede kwaliteit/prijsverhouding. Om een goede prijsbepaling te maken kun je vergelijkbare fietsen bekijken op listnride of opzoeken wat een fietswinkel bij jou in de buurt vraagt.",
         "question-8": "Wat betaal ik aan listnride als ik mijn fiets te huur aanbiedt?",
-        "answer-8": "Je fiets te huur aanbieden via Listnride is gratis. Als je fiets daadwerkelijk verhuurd wordt berekenen we 7,5 % servicekosten over de totale huurprijs. Bijvoorbeeld als je fiets 5 dagen verhuurd wordt voor € 20 per dag is de totale huurprijs € 100. Je krijgt dan € 92,50 op je rekening gestort. De kosten voor het verwerken van de bank en of creditcard transactie zijn bij de servicekosten inbegrepen.",
+        "answer-8": "Je fiets te huur aanbieden via listnride is gratis. Als je fiets daadwerkelijk verhuurd wordt berekenen we 7,5 % servicekosten over de totale huurprijs. Bijvoorbeeld als je fiets 5 dagen verhuurd wordt voor € 20 per dag is de totale huurprijs € 100. Je krijgt dan € 92,50 op je rekening gestort. De kosten voor het verwerken van de bank en of creditcard transactie zijn bij de servicekosten inbegrepen.",
         "question-9": "Hoe ontvang ik mijn geld?",
         "answer-9": "Je ontvangt de betaling van de huur minus 7,5% servicekosten binnen 7 werkdagen nadat de huurperiode is afgelopen op je rekening. Betaling geschiedt via PayPal of per bank. Als je in mijn account klikt op “Instellingen” kun je je betalingsvoorkeuren invullen en/of wijzigen.",
         "question-10": "Kan ik mijn fiets ook aanbieden op locaties, die niet op de website genoemd worden?",
-        "answer-10": "Ja, Listnride is een internationaal platform, je kunt je fiets in elke plaats ter wereld aanbieden.",
+        "answer-10": "Ja, listnride is een internationaal platform, je kunt je fiets in elke plaats ter wereld aanbieden.",
         "question-11": "Kan ik (een van) mijn fiets(en) tijdelijk deactiveren?",
         "answer-11": "Als je een fiets voor langere tijd niet wilt verhuren kun je deze fiets deactiveren In “Mijn account” ga je naar “Mijn fietsen”. Klik op deactiveren van de desbetreffende fiets.",
         "question-12": "Hoe verander ik de tekst en foto’s van mijn fiets?",
         "answer-12": "Ga naar “Mijn account”, klik op “Mijn fietsen” Klik dan op “Fiets bewerken” en wijzig de tekst en/of foto’s. Bevestig de wijzigingen door op “wijzigingen opslaan” te klikken.",
         "question-13": "Hoe verwijder ik mijn fiets?",
         "answer-13": "Als je een fiets niet wilt of kan verhuren kun je deze verwijderen. Via de website ga je naar “Mijn account” en “Mijn fietsen”, Klik dan bij de betreffende fiets op “Fiets verwijderen” . Na een paar seconden krijg je de bevestiging “Fiets succesvol verwijderd”. Via de iPhone App ga je naar “verhuren” en “Mijn fietsen”. Klik dan op “Fiets verwijderen” Schuif naar links met je vinger over de fiets die je willt verwijderen en klik op “Verwijderen”.",
-        "question-14": "Hoe verhuur ik mijn fiets via Listnride?",
+        "question-14": "Hoe verhuur ik mijn fiets via listnride?",
         "answer-14": "Wanneer je een aanvraag binnen krijgt voor je fiets, open je de App of de website en log je in. Nadat je bent ingelogd, klik je rechtsboven in het menu op “Aanvragen”. Hier vind je de aanvraag dat binnen gekomen is. In de iPhone app vind je de aanvraag onder het icoontje \"verhuren\". Klik hierop, beantwoord de aanvraag door deze te accepteren of af te wijzen. Je kan tegelijkertijd chatten met de aanvrager om duidelijkheid te krijgen en belangrijke details af te stemmen. Wanneer je de aanvraag accepteert,  dient de aanvrager de aanvraag nog te bevestigen en via de website te betalen. Zodra dit gebeurd is ontvang je per SMS en e-mail een bericht hiervan. Dit is tevens zichtbaar in je account.",
         "question-15": "Wat moet ik doen als de huurperiode in de aanvraag afwijkt van de werkelijk overeengekomen huurperiode?",
-        "answer-15": "Wanneer de huurperiode tijdens het overleggen met de huurder wordt veranderd, vraag je hem/haar om een nieuwe aanvraag te sturen met de juiste datums en ophaal- en inlevertijd. Dit is belangrijk omdat de Listnride Garantie alleen de huurperiode dekt.",
+        "answer-15": "Wanneer de huurperiode tijdens het overleggen met de huurder wordt veranderd, vraag je hem/haar om een nieuwe aanvraag te sturen met de juiste datums en ophaal- en inlevertijd. Dit is belangrijk omdat de listnride Garantie alleen de huurperiode dekt.",
         "question-16": "Wat kan ik doen als de de aangevraagde huurperiode niet zo goed uitkomt voor mij?",
         "answer-16": "Als de aangevraagde datum / tijd niet in je agenda past, kan je wellicht iemand anders voor jou de fiets laten afgeven. Als dat niet kan, weiger de aanvraag dan. We waarderen het enorm als je een korte uitleg geeft waarom je de aanvraag afwijst.",
         "question-17": "Hoe neem ik contact op met de huurder nadat de aanvraag is geaccepteerd?",
@@ -603,8 +602,8 @@
         "answer-7": "Om diefstal te voorkomen raden wij je aan om met de verhuurder kort te overleggen wat de locale gewoontes zijn. We raden je altijd aan om de fiets ergens aan vast te maken (lantaarnpaal, boom, of iets dergelijks) en met het slot zowel de voorband als het frame hieraan vast te maken, zodat de fiets niet makkelijk verplaatst kan worden. ’s Nachts raden wij je aan om de fiets binnen of in ieder geval in een afgesloten ruimte te stallen.",
         "question-8": "Wat moet ik doen als de fiets tijdens de huurperiode wordt gestolen?",
         "answer-8": "Diefstal is nooit leuk. Neem direct contact op met de verhuurder EN onze Helpdesk om dit te melden. Wij vertellen je dan wat je moet doen. Wees je ervan bewust dat je tijdens de huurperiode verantwoordelijk bent voor de fiets en je deze zult moeten vervangen en of voor de ontstane kosten moet opdraaien.",
-        "question-9": "Ben ik verzekerd als ik via Listnride huur?",
-        "answer-9": "Listnride biedt (nog) geen verzekeringen aan. We bemiddelen alleen de (ver)huur via ons platform. Dat betekent dat je zelf verantwoordelijk bent voor de fiets in geval van diefstal of schade gedurende de huurperiode. We raden je aan om je reisverzekering of wettelijk-aansprakelijkheidsverzekering na te kijken m.b.t. schadevergoeding hiervoor.",
+        "question-9": "Ben ik verzekerd als ik via listnride huur?",
+        "answer-9": "listnride biedt (nog) geen verzekeringen aan. We bemiddelen alleen de (ver)huur via ons platform. Dat betekent dat je zelf verantwoordelijk bent voor de fiets in geval van diefstal of schade gedurende de huurperiode. We raden je aan om je reisverzekering of wettelijk-aansprakelijkheidsverzekering na te kijken m.b.t. schadevergoeding hiervoor.",
         "question-10": "Wat als de fiets niet lijkt op wat ik geboekt heb?",
         "answer-10": "We vragen je dan om foto’s naar ons te sturen met een uitleg waarom je vindt dat de fiets afwijkt van hetgeen je dacht te hebben geboekt. We kunnen dan de redelijkheid hiervan beoordelen en besluiten om eventueel je boeking te annuleren. Bovendien heb je de mogelijkheid om dit vermelden in je recensie.",
         "question-11": "Moet ik mijn eigen slot en helm meenemen? Kan ik mijn eigen pedalen en/of zadel meenemen en gebruiken?",
@@ -627,14 +626,14 @@
     "title" : "Terms and conditions",
     "header" : "Algemene voorwaarden van het Online-Platform listnride",
     "download" : "Hier te downloaden",
-    "description": "<a href=\"http://cdn.listnride.com/en/tacs.pdf\" target=\"_blank\">Je kan hier algemene voorwaarden inzien en downloaden.",
+    "description": "<a href=\"http://cdn.listnride.com/de/tacs.pdf\" target=\"_blank\">Je kan hier algemene voorwaarden inzien en downloaden.",
     "subtitle": "De List and Ride GmbH (in het vervolg „listnride“) bemmidelt via de website www.listnride.com (in het vervolg „Website“) huurcontracten voor fietsen en andere sport- en vrijetijdsuitrusting. De onderstaande algemene gebruiksvoorwaarden (in het vervolg „gebruiksvoorwaarden“) in paragraaf I zijn onderdeel van de overeenkomst die tussen de gebruiker en listnride middels de bemiddelingsverrichting tot stand komt. Indien er via de website een overeenkomst tot het huren van een gebruiksvoorwerp (in het vervolg „huurovereenkomst“) is gesloten, komt deze volgens de in paragraaf II genoemde algemene huurvoorwaarden (in het vervolg „huurvoorwaarden“) tot stand."
   },
 
   "privacy" : {
     "title" : "Privacy",
     "subtitle": "Privacy policy",
-    "description": "Met het privacy policy informeert de List and Ride GmbH (in het vervolg „listnride“) je over het beleid ten aanzien de omgang met uw persoonlijke gegevens.<br><br><a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">U kunt hier het privacy policy inzien en uitprinten.</a>",
+    "description": "Met het privacy policy informeert de List and Ride GmbH (in het vervolg „listnride“) je over het beleid ten aanzien de omgang met uw persoonlijke gegevens. <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">U kunt hier het privacy policy inzien en uitprinten.</a>",
     "meta-title": "Privacybeleid van listnride",
     "meta-description": "Het privacybeleid van de Bike-Sharing-Community listnride is van toepassing bij het gebruik van het platform."
   },
