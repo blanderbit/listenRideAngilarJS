@@ -637,7 +637,7 @@
   "privacy" : {
     "title" : "Datenschutz",
     "subtitle": "Datenschutzrichtlinien",
-    "description": "Mit den Datenschutzbestimmungen informiert die List and Ride GmbH (im Folgenden „listnride“) Sie über den Umgang mit Ihren personenbezogenen Daten. <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Sie können die Datenschutzbestimmungen hier abrufen und ausdrucken.</a>",
+    "description": "Mit den Datenschutzbestimmungen informiert die List and Ride GmbH (im Folgenden „listnride“) Sie über den Umgang mit Ihren personenbezogenen Daten.<br><br><a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Sie können die Datenschutzbestimmungen hier abrufen und ausdrucken.</a>",
     "meta-title": "Datenschutzrichtlinien von listnride",
     "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform."
   },

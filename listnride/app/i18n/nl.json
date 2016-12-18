@@ -630,7 +630,7 @@
   "privacy" : {
     "title" : "Privacy",
     "subtitle": "Privacy policy",
-    "description": "Met het privacy policy informeert de List and Ride GmbH (in het vervolg „listnride“) je over het beleid ten aanzien de omgang met uw persoonlijke gegevens. <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">U kunt hier het privacy policy inzien en uitprinten.</a>",
+    "description": "Met het privacy policy informeert de List and Ride GmbH (in het vervolg „listnride“) je over het beleid ten aanzien de omgang met uw persoonlijke gegevens.<br><br><a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">U kunt hier het privacy policy inzien en uitprinten.</a>",
     "meta-title": "Privacybeleid van listnride",
     "meta-description": "Het privacybeleid van de Bike-Sharing-Community listnride is van toepassing bij het gebruik van het platform."
   },
