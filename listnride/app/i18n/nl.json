@@ -253,23 +253,57 @@
     "list-bike": "Fiets plaatsen",
     "accessories": {
       "hint": "Kies de accessoires die je bij de fiets aanbiedt.",
-      "accessories": "Accessoires",
+      "label": "Accessoires",
       "lock": "Slot",
-      "Helm": "Helm",
+      "helmet": "Helm",
       "lights": "Licht",
       "basket": "Mandje",
       "trailer": "Aanhanger",
       "childseat": "Kinderzitje"
     },
     "category": {
+      "header": "Wat is de fietscategorie?",
       "hint": "Kies allereerst de categorie van je fiets. Kiese daarna de juiste subcategorie.",
-      "category": "Categorie",
+      "label": "Categorie",
       "city": "Stad",
       "race": "Race",
       "all-terrain": "All-Terrain",
       "kids": "Kinder",
       "electro": "Elektrisch",
       "special": "Speciaal"
+    },
+    "details": {
+      "hint": "Vul het merk, de naam en beschrijving van je fiets in. De naam is vrij te kiezen en kan bijvoorbeeld het model zijn. Bijv. Gazelle, Tour Populair, 2013. Kies de passende lichaamslengte voor het bereiden van de fiets.",
+      "label": "Details",
+      "brand": "Merk",
+      "name": "Naam",
+      "description": "Beschrijving (min. 100 tekens)",
+      "min-length-warning": "Minimaal 100 tekens",
+      "size": "Grootte"
+    },
+    "pictures": {
+      "hint": "Kies een paar mooie foto's uit. Hier zijn een paar fototips om je fiets optimaal te presenteren.",
+      "label": "Foto's",
+      "select-images": "Foto's kiezen",
+      "remove": "verwijderen",
+      "upload-bike-header": "Voeg een paar scherpe foto's toe"
+    },
+    "location": {
+      "header": "Waar kan de fiets worden opgehaald?",
+      "hint": "Op welk adres staat je fiets? Maak je geen zorgen, het exacte adres wordt pas na de boeking aan de huurder doorgegeven en is dus niet openbaar zichtbaar.",
+      "label": "locatie van de fiets",
+      "street-number": "Straat en huisnr.",
+      "zip": "Postcode",
+      "city": "Plaats",
+      "country": "Land"
+    },
+    "pricing": {
+      "header": "Kies een aantal mooie foto's van je fiets",
+      "hint": "Bepaal nu een aantrekkelijk huurprijs. De Huurprijs dient betaalbaar te zijn en afhankelijk van de staat van de fiets en vergelijkbare fietsen in de buurt geprijsd te zijn. Een duur tot een lengte van 6 uren is een halve dag, 6-24 uren staat voor een dag huur.",
+      "label": "Prijs",
+      "half-daily-price": "Halve dag",
+      "daily-price": "hele dag",
+      "weekly-price": "Een Week"
     },
     "subcategory": {
       "1": {
@@ -308,37 +342,6 @@
         "recumbent": "Ligfiets",
         "mono-bike": "Eenwieler"
       }
-    },
-    "details": {
-      "hint": "Vul het merk, de naam en beschrijving van je fiets in. De naam is vrij te kiezen en kan bijvoorbeeld het model zijn. Bijv. Gazelle, Tour Populair, 2013. Kies de passende lichaamslengte voor het bereiden van de fiets.",
-      "details": "Details",
-      "brand": "Merk",
-      "name": "Naam",
-      "description": "Beschrijving (min. 100 tekens)",
-      "min-length-warning": "Minimaal 100 tekens",
-      "size": "Grootte"
-    },
-    "pictures": {
-      "hint": "Kies een paar mooie foto's uit. Hier zijn een paar fototips om je fiets optimaal te presenteren.",
-      "pictures": "Foto's",
-      "select-images": "Foto's kiezen",
-      "remove": "verwijderen",
-      "upload-bike-header": "Voeg een paar scherpe foto's toe"
-    },
-    "location": {
-      "hint": "Op welk adres staat je fiets? Maak je geen zorgen, het exacte adres wordt pas na de boeking aan de huurder doorgegeven en is dus niet openbaar zichtbaar.",
-      "location": "locatie van de fiets",
-      "street-number": "Straat en huisnr.",
-      "zip": "Postcode",
-      "city": "Plaats",
-      "country": "Land"
-    },
-    "pricing": {
-      "hint": "Bepaal nu een aantrekkelijk huurprijs. De Huurprijs dient betaalbaar te zijn en afhankelijk van de staat van de fiets en vergelijkbare fietsen in de buurt geprijsd te zijn. Een duur tot een lengte van 6 uren is een halve dag, 6-24 uren staat voor een dag huur.",
-      "pricing": "Prijs",
-      "half-daily-price": "Halve dag",
-      "daily-price": "hele dag",
-      "weekly-price": "Een Week"
     }
   },
 

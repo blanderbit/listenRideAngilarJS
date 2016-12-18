@@ -252,7 +252,7 @@
     "next": "Next",
     "list-bike": "List My Bike",
     "category": {
-      "header": "What is your bike cateogry?",
+      "header": "What is your bike category?",
       "hint": "First, select the category of your bike. Then select the right subcategory.",
       "label": "Category",
       "city": "City",
