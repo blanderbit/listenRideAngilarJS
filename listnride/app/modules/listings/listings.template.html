@@ -6,11 +6,11 @@
 
     <div ng-if="listings.bikes !== undefined && listings.bikes.length == 0" layout="column" layout-align="center center">
       {{ 'listings.no-bikes' | translate }}<br><br>
-      <md-button ui-sref="listingABike" class="md-raised md-primary md-lrg">{{ 'listings.list-a-bike' | translate }}</md-button>
+      <md-button ui-sref="listingABike" class="md-raised md-primary md-lrg">{{ 'shared.list-a-bike' | translate }}</md-button>
     </div>
 
     <div ng-if="listings.bikes !== undefined && listings.bikes.length > 0" layout="column" layout-align="center center">
-      <md-button ui-sref="list" class="md-raised md-primary md-lrg">{{ 'listings.list-a-bike' | translate }}</md-button>
+      <md-button ui-sref="list" class="md-raised md-primary md-lrg">{{ 'shared.list-a-bike' | translate }}</md-button>
     </div>
 
     <div class="lnr-bike-listings" name="listBike" layout="row" layout-wrap layout-align="start start" layout-padding>
