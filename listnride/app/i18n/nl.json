@@ -46,7 +46,7 @@
   "toasts": {
     "update-profile-success": "Je profiel is geactualiseerd.",
     "error": "Er is een fout opgetreden. Check of je internetverbinding werkt en probeer het nogmaals.",
-    "add-payout-success": "Je uitbetalginsmethode is toegevoegd aan je profiel.",
+    "add-payout-success": "Je uitbetaalmethode is toegevoegd aan je profiel.",
     "add-voucher-success": "Gefeliciteerd, het tegoed is aan je account toegevoegd.",
     "add-voucher-error": "De ingevoerde code is niet geldig.",
     "verification-email-sent": "een email met activeringslink is aan je e-mailadres verstuurd. De ontvangst kan een paar minuten duren, indien je niks in je inbox ziet verschijnen, kijk dan even in je spamfolder."
@@ -56,10 +56,10 @@
     "settings": "Instellingen",
     "profile": "Profiel",
     "account": "Account",
-    "payment-method": "Betalingsmethode",
-    "payout-method": "uitbetalingsmethode",
+    "payment-method": "Betaalmethoden",
+    "payout-method": "uitbetaalmethoden",
     "payment-method-description": "Je betaalmethode wordt gebruikt om de kosten van de fietshuur af te boeken.",
-    "payout-method-description": "Op de aangegeven uitbetaalmethode wordt de huuropbrengst overgemaakt.",
+    "payout-method-description": "Op de aangegeven uitbetaalmethode wordt de huuropbrengst aan je overgemaakt.",
     "add-payment-method": "Betaalmiddel toevoegen",
     "vouchers": "Vouchers",
     "payment-credit-card": "Je aktuele betaalmiddel is creditkaart die eindigt op",
@@ -70,11 +70,11 @@
     "bank-account": "Bankrekening",
     "enter-paypal-info": "Voer het emailadres van je Paypalrekening in",
     "enter-bank-info": "Voer de voor- en achternaam van de rekeninghouder in, als ok het IBAN en BIC nummer",
-    "save-payout-method": "Uitbetalingsmethode opslaan",
-    "payout-paypal": "Je uitbetaalingsmethode is Paypal met volgend e-mailadres",
-    "payout-bank": "Je uitbetalingsmethode is per bankrekening die eindigt op",
+    "save-payout-method": "Uitbetaalmethode opslaan",
+    "payout-paypal": "Je uitbetaalmethode is Paypal met volgend e-mailadres",
+    "payout-bank": "Je uitbetaalmethode is per bankrekening die eindigt op",
     "voucher-code": "voucher-code",
-    "current-vouchers": "Je aktuelle tegoed bedraagt",
+    "current-vouchers": "Je aktuele tegoedsaldo bedraagt",
     "add-voucher": "Voucher inwisselen",
     "meta-title": "Profiel instellingen",
     "meta-description": "Pas je profiel- en of betaalgegevens aan"
@@ -146,7 +146,8 @@
     },
     "write-message": "schrijf een bericht...",
     "complete-profile": "maak je profiel compleet",
-    "complete-profile-description": "Om de fiets te boeken, vul je betaalgegevens in. Alle gegevens worden via een versleutelde, zekere verbinding verstuurd."
+    "complete-profile-description": "Om de fiets te boeken, vul je betaalgegevens in. Alle gegevens worden via een versleutelde, zekere verbinding verstuurd.",
+    "no-requests-yet": "Op het moment, dat je een aanvraag doet of ontvangt, vind je de aanvragen hier."
   },
 
   "message": {
@@ -346,7 +347,7 @@
   },
 
   "edit": {
-    "edit-bike": "fiets bewerken",
+    "edit-bike": "Fiets bewerken",
     "save-changes": "Aanpassingen opslaan"
   },
 
@@ -368,10 +369,10 @@
 
   "how-it-works" : {
     "meta-title": "Bike sharing super eenvoudig gemaakt",
-    "meta-description": "Bij listnride is een Fiets(ver-)huren zo eenvoudig als afspreken voor een kopje koffie. Probeer het zelf!",
+    "meta-description": "Bij listnride is je fiets(ver-)huren zo eenvoudig als afspreken voor een kopje koffie. Probeer het zelf!",
     "title" : "Bike-Sharing super eenvoudig",
     "header" : "Met listnride kom je eenvoudig in beweging",
-    "subheader": "Bij ons is een Fiets(ver-)huren zo eenvoudig als afspreken voor een kopje koffie",
+    "subheader": "Bij ons is je fiets(ver-)huren zo eenvoudig als afspreken voor een kopje koffie",
     "lister-section" : {
       "header" : "Fiets verhuren",
       "step-1-title" : "Fiets te huur aanbieden",
@@ -401,7 +402,7 @@
     "handover-section" : {
       "header": "Persoonlijke of flexibele fietsoverdracht",
       "content" : "Onze stelling: Vooral aardige mensen fietsen. En verhuren zelfs hun fiets. Daarom vinden wij:  een persoonlijke overdracht is de moeite waard – al is het niet voor het persoonlijke contact en het delen van nuttige tips. Aangezien de tijd niet altijd meespeelt, Heb je bij listnride drie mogelijkheden die fietsoverdracht te doen:",
-      "list-1" : "De huurder haalt de Fiets bij de verhuuder op.",
+      "list-1" : "De huurder haalt de fiets bij de verhuuder op.",
       "list-2" : "De huurder overhandigt de fiets op een afgesproken locatie.",
       "list-3" : "De verhuurder vergrendelt de fiets in een openbare locatie en stuurt de huurder de combinatie van het cijferslot.",
       "lister-location" : "Home, sweet Home",
@@ -455,7 +456,7 @@
       "control-title": "Jij behoudt de controle.",
       "control-content": "Jij bepaalt de huurprijs voor het verhuren van je fiets. Daarnaast beslis je zelf of je de huuraanvragen accepteert of juist afwijst (bijv. omdat je fiets op dat moment niet beschikbaar is).",
       "covered-title": "Je bent verzekerd.",
-      "covered-content": "in geval van schade of diefstal helpen wij je. En als het nodig mocht zijn, ben je met de verhuurdersgarantie van listnride tot € 5000,-- verzekerd.",
+      "covered-content": "In geval van schade of diefstal helpen wij je. En als het nodig mocht zijn, ben je met de verhuurdersgarantie van listnride tot € 5.000,- verzekerd.",
       "help-title": "Wij laten je niet alleen.",
       "help-content": "Indien je een bepaald probleem niet met een huurder direct kan oplossen, zijn wij er ook voor jou om je te ondersteunen of het probleem zelfs voor je op te lossen"
     },
@@ -483,12 +484,12 @@
     },
     "responsibility": {
       "title": "Wij behandelen je gegevens met zorg.",
-      "content": "In jouw openbare profiel wordt je adres of de standplaats van je fiets niet getoond. Je naw-gegevens worden pas doorgegeven als een boeking is bevestigd."
+      "content": "In jouw openbare profiel wordt jouw adres of de standplaats van jouw fiets niet getoond. Je naw-gegevens worden pas doorgegeven als een boeking is bevestigd."
     },
     "verification": {
       "title": "Verificatie schept vertrouwen",
       "content": "Theoretisch gezien ben je slechts via 4 tot 6 “vrienden van vrienden” verwijderd van iedereen op deze planeet. Echter wil je daar werkelijk op vertrouwen als je je fiets verhuurd? Koppel je persoonlijke gegevens aan je profiel, dat schept vertrouwen voor beide partijen. listnride geeft je de volgende verificatie mogelijkheden:",
-      "list-1": "ID-Verifizierung: ID-verificatie: koppel je facebookpagina aan je profiel en ofzorg ervoor dat je correct e-mailadres gebruikt.",
+      "list-1": "ID-Verifizierung: ID-verificatie: koppel je facebookpagina aan je profiel en of zorg ervoor dat je correct e-mailadres gebruikt.",
       "list-2": "Telefoonnummer : we verifiëren je telefoonnummer, delen deze echter alleen met de huurder / verhuurder zodra van beide kanten een boeking is bevestigd.",
       "list-3": "Recensies: De recensies van je huurder / verhuurder zijn op je profielpagina zichtbaar. Zo kun je een goede reputatie opbouwen."
     }
@@ -533,7 +534,7 @@
     "subheader": "Vergroot onze Bike-Sharing-Community.",
     "contact": {
       "title": " Join the team!",
-      "content": "Je weet altijd meer over fietsen als anderen? Je houdt ervan bij weer en wind op de fiets te zitten? Dan ben je waarschijnlijk een fietsfanaat – en pas je waarschijnlijk ook goed in ons team. Check of wij momenteel een interessante baan voor je hebben of stuur ons met overgave je sollicitatie toe."
+      "content": "Je weet altijd meer over fietsen dan anderen? Je houdt ervan bij weer en wind op de fiets te zitten? Dan ben je waarschijnlijk een fietsfanaat – en pas je waarschijnlijk ook goed in ons team. Check of wij momenteel een interessante baan voor je hebben of stuur ons je sollicitatie toe."
     },
     "meta-title": "Werken bij listnride",
     "meta-description": "Join ons team en help mee aan het bouwen van een nieuwe generatie fietsverhuur."
