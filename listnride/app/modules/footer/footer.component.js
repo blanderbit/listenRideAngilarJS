@@ -15,6 +15,9 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
       } else {
         for (var i = 1; i < host.length; i ++) {
           url += host[i];
+          if (i < host.length - 1) {
+            url += ".";
+          }
         }
       }
 
