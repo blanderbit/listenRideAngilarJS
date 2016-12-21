@@ -4,6 +4,12 @@
       <h1 class="md-headline">{{ 'edit.edit-bike' | translate }}</h1>
     </div>
 
+    <div layout="row" layout-align="end center">
+      <md-button class="md-raised md-primary" ng-disabled="!edit.isFormValid() || edit.submitDisabled" ng-click="edit.onFormSubmit()">
+        {{ 'edit.save-changes' | translate }}
+      </md-button>
+    </div>
+
     <form name="listBike" layout="column" layout-align="start center" layout-padding>
       <md-tabs md-no-pagination md-dynamic-height md-no-ink md-no-ink-bars md-selected="edit.selectedIndex" md-center-tabs="on">
         
@@ -42,7 +48,7 @@
             </div>
             
             <div class="navigation" layout="row" layout-align="end center" layout-margin>
-              <md-button class="md-raised md-primary" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
+              <md-button class="md-lined" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
             </div>
           </md-content>
         </md-tab>
@@ -101,7 +107,7 @@
             
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
               <md-button class="md-lined" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
-              <md-button class="md-raised md-primary" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
+              <md-button class="md-lined" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
             </div>
           </md-content>
         </md-tab>
@@ -134,7 +140,7 @@
             
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
               <md-button class="md-lined" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
-              <md-button class="md-raised md-primary" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
+              <md-button class="md-lined" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
             </div>
           </md-content>
         </md-tab>
@@ -181,7 +187,7 @@
             
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
               <md-button class="md-lined" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
-              <md-button class="md-raised md-primary" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
+              <md-button class="md-lined" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
             </div>
           </md-content>
         </md-tab>
@@ -228,7 +234,7 @@
             
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
               <md-button class="md-lined" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
-              <md-button class="md-raised md-primary" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
+              <md-button class="md-lined" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
             </div>
           </md-content>
         </md-tab>
@@ -272,7 +278,6 @@
             
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
               <md-button class="md-lined" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
-              <md-button class="md-raised md-primary" ng-disabled="!edit.isFormValid() || edit.submitDisabled" ng-click="edit.onFormSubmit()">{{ 'edit.save-changes' | translate }}</md-button>
             </div>
           </md-content>
         </md-tab>
