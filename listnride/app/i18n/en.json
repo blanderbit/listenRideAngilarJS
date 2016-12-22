@@ -146,7 +146,8 @@
     },
     "write-message": "Write a message...",
     "complete-profile": "Complete your Profile",
-    "complete-profile-description": "To book the bike, please enter your payment information. All informations are transmitted over a secure connection."
+    "complete-profile-description": "To book the bike, please enter your payment information. All informations are transmitted over a secure connection.",
+    "no-requests-yet": "As soon as you made or got requests, they'll show up here."
   },
 
   "message": {
@@ -251,7 +252,7 @@
     "next": "Next",
     "list-bike": "List My Bike",
     "category": {
-      "header": "What is your bike cateogry?",
+      "header": "What is your bike category?",
       "hint": "First, select the category of your bike. Then select the right subcategory.",
       "label": "Category",
       "city": "City",
@@ -637,7 +638,7 @@
   "privacy" : {
     "title" : "Privacy",
     "subtitle": "Data Protection Regulations",
-    "description": "List and Ride GmbH (hereinafter “listnride”) informs you in the Data Protection Regulations about how your personal data are handled. <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">You can view and download the data protection regulations here.</a>",
+    "description": "List and Ride GmbH (hereinafter “listnride”) informs you in the Data Protection Regulations about how your personal data are handled.<br><br><a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">You can view and download the data protection regulations here.</a>",
     "meta-title": "Privacy Policy of listnride",
     "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform."
   },

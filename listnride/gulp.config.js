@@ -14,7 +14,8 @@ module.exports = function () {
             requests: 'app/modules/requests/',
             api: './app/services/api/',
             i18n: './app/i18n/**/*',
-            fonts: 'node_modules/font-awesome/fonts/*'
+            fonts: 'node_modules/font-awesome/fonts/*',
+            sitemap: './app/assets/downloads/sitemap.xml'
         },
         js: ['./app/*.js', './app/**/*.js', '!**/*test.js'],
         vendors: ['node_modules/angular/angular.min.js',

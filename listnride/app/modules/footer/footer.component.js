@@ -8,14 +8,27 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
     function FooterController($window, $location, $translate, $state) {
       var footer = this;
 
+      var url = "";
+      var host = $location.host().split('.');
+      if (host[host.length - 1] === "localhost") {
+        url = "localhost:8080/#";
+      } else {
+        for (var i = 1; i < host.length; i ++) {
+          url += host[i];
+          if (i < host.length - 1) {
+            url += ".";
+          }
+        }
+      }
+
       footer.language = getLanguage($translate.use());
 
       footer.switchLanguage = function(locale) {
-        $translate.use(locale).then(function(data) {
-          footer.language = getLanguage(locale);
-          $state.reload();
-        });
-        // $window.location.href = 'http://' + locale + ".listnride-frontend-staging.herokuapp.com" + $location.url();
+        // $translate.use(locale).then(function(data) {
+        //   footer.language = getLanguage(locale);
+        //   $state.reload();
+        // });
+        $window.location.href = 'http://' + locale + "." + url + $location.path();
       }
       
       footer.onAppClick = function() {
