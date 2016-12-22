@@ -78,10 +78,18 @@
               </div>
               <div flex-gt-xs="70" layout-margin>
                 <div layout="row" layout-xs="column">
-                  <md-input-container flex-gt-xs="45">
+
+                  <autocomplete
+                    autocomplete-id="settings" layout="column" location="settings.user.street"
+                    label-id="{{ 'list.location.street-number' | translate }}"
+                    required="true" place-changed="settings.fillAddress(place)"
+                    flex-gt-xs="45">
+                  </autocomplete>
+
+                  <!--md-input-container flex-gt-xs="45">
                     <label>{{ 'forms.street' | translate }}</label>
                     <input required name="street" ng-model="settings.user.street"></input>
-                  </md-input-container>
+                  </md-input-container-->
                   <span hide-xs flex></span>
                   <md-input-container flex-gt-xs="45">
                   <label>{{ 'forms.zip' | translate }}</label>
