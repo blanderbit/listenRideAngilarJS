@@ -89,6 +89,11 @@ gulp.task('copy-index-app', function () {
         .pipe(gulp.dest('./'));
 });
 
+// copy the sitemap at root for deployment
+gulp.task('copy-sitemap', function () {
+    return gulp.src(path.app.sitemap).pipe(gulp.dest(path.dist.root));
+});
+
 // concat all vendors files, js and css
 // minify and uglify vendors files
 gulp.task('vendors', function () {
@@ -286,6 +291,7 @@ gulp.task('deploy', function (cb) {
         'revisions',
         'replace-revisions-index',
         'base-tag',
+        'copy-sitemap',
         'embed',
         'clean-extras',
         'clean-extras-local',
