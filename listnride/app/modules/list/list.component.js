@@ -31,7 +31,7 @@ angular.module('list',[]).component('list', {
         }
       );
 
-      list.selectedIndex = 5;
+      list.selectedIndex = 0;
       list.sizeOptions = bikeOptions.sizeOptions();
       list.kidsSizeOptions = bikeOptions.kidsSizeOptions();
       list.categoryOptions = bikeOptions.categoryOptions();
