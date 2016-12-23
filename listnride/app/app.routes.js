@@ -301,6 +301,13 @@ config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$location
       url: '/rent-ampler-bikes',
       template: '<ampler></ampler>'
     });
+
+    $stateProvider.state({
+      name: 'cities-berlin',
+      url: '/berlin',
+      templateUrl: 'app/modules/static/cities-berlin.template.html',
+    });
+    
     // for testing embed-bikes feature
     // change userID in route to fetch new bikes
     // ONLY for staging environment
