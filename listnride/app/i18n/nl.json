@@ -252,6 +252,7 @@
     "next": "verder",
     "list-bike": "Fiets plaatsen",
     "accessories": {
+      "header": "Welke accessoires bied je aan?",
       "hint": "Kies de accessoires die je bij de fiets aanbiedt.",
       "label": "Accessoires",
       "lock": "Slot",
@@ -283,6 +284,7 @@
       "size": "Grootte"
     },
     "pictures": {
+      "header": "Kies een aantal mooie foto's van je fiets",
       "hint": "Kies een paar mooie foto's uit. Hier zijn een paar fototips om je fiets optimaal te presenteren.",
       "label": "Foto's",
       "select-images": "Foto's kiezen",
