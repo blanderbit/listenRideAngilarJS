@@ -19,6 +19,7 @@ angular.
         verificationDialog.firstName = $localStorage.firstName;
         verificationDialog.profilePicture = false;
         verificationDialog.hasProfilePicture = false;
+        verificationDialog.sentConfirmationSms = false;
 
         $state.current.name == "home" ? verificationDialog.firstTime = true : verificationDialog.firstTime = false;
         // Fires if scope gets destroyed and cancels poller
@@ -132,6 +133,7 @@ angular.
           };
           api.post('/users/' + $localStorage.userId + '/update_phone', data).then(
             function (success) {
+              verificationDialog.sentConfirmationSms = true;
               console.log("Successfully updated phone number");
               $mdToast.show(
                 $mdToast.simple()

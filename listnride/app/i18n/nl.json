@@ -103,6 +103,7 @@
       "description": "Bevestig je telefoonnummer, zodat we je per SMS kunnen informeren als er een nieuwe aanvraag voor je is. Voer uw telefoonnummer in en klik op \"Bevestiging versturen\". Je ontvangt dan een sms met een code die je hieronder kunt invoeren.",
       "enter-valid-phone-nr": "Voer een geldig telefoonnummer in",
       "send-confirmation-sms": "Bevestigings-SMS versturen",
+      "resend-confirmation-sms": "Nogmaals sms-bevestiging versturen",
       "sms-verification-code": "SMS-Verificatie-Code",
       "confirm-code": "Code Bevestigen",
       "phone-nr-verified": "Je telefoonnummer is met succes geverifieerd!"
@@ -266,7 +267,7 @@
       "header": "Wat is de fietscategorie?",
       "hint": "Kies allereerst de categorie van je fiets. Kies daarna de juiste subcategorie.",
       "label": "Categorie",
-      "city": "Plaats",
+      "city": "Stad",
       "race": "Race",
       "all-terrain": "All-Terrain",
       "kids": "Kinder",

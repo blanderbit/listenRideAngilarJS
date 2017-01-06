@@ -90,7 +90,8 @@
                   </form>
                 </md-input-container>
                 <md-input-container layout="row" flex="45">
-                  <md-button ng-disabled="!verificationDialog.phoneForm.$valid" flex class="md-raised md-primary lnr-btn-inline" ng-click="verificationDialog.sendSms()">{{ 'verification.5.send-confirmation-sms' | translate }}</md-button>
+                  <md-button ng-if="!verificationDialog.sentConfirmationSms" ng-disabled="!verificationDialog.phoneForm.$valid || verificationDialog.user.confirmed_phone" flex class="md-raised md-primary lnr-btn-inline" ng-click="verificationDialog.sendSms()">{{ 'verification.5.send-confirmation-sms' | translate }}</md-button>
+                  <md-button ng-if="verificationDialog.sentConfirmationSms" ng-disabled="!verificationDialog.phoneForm.$valid || verificationDialog.user.confirmed_phone" flex class="md-raised md-primary lnr-btn-inline" ng-click="verificationDialog.sendSms()">{{ 'verification.5.resend-confirmation-sms' | translate }}</md-button>
                 </md-input-container>
               </div>
 
@@ -102,7 +103,7 @@
                   </form>
                 </md-input-container>
                 <md-input-container layout="row" flex="45">
-                  <md-button flex class="md-raised md-primary lnr-btn-inline" ng-click="verificationDialog.confirmPhone()">{{ 'verification.5.confirm-code' | translate }}</md-button>
+                  <md-button flex class="md-raised md-primary lnr-btn-inline" ng-disabled="verificationDialog.user.confirmed_phone" ng-click="verificationDialog.confirmPhone()">{{ 'verification.5.confirm-code' | translate }}</md-button>
                 </md-input-container>
               </div>
 

@@ -23,6 +23,8 @@ angular.
       var SignupDialogController = function($mdDialog) {
         var signupDialog = this;
 
+        signupDialog.signingUp = false;
+
         var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName) {
           var user = {
             "user": {
@@ -64,11 +66,13 @@ angular.
               'last_name': signupDialog.lastName
             }
           };
+          signupDialog.signingUp = true;
           api.post('/users', user).then(function(success) {
             setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
             verification.openDialog();
           }, function(error) {
             console.log("Could not Sign Up");
+            signupDialog.signingUp = false;
           });
         };
 
