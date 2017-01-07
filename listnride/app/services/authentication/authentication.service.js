@@ -55,21 +55,24 @@ angular.
           $mdDialog.hide();
         };
 
-        signupDialog.signup = function() {
-          var user = {
-            'user': {
-              'email': signupDialog.email,
-              'password_hashed': sha256.encrypt(signupDialog.password),
-              'first_name': signupDialog.firstName,
-              'last_name': signupDialog.lastName
-            }
-          };
-          api.post('/users', user).then(function(success) {
-            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
-            verification.openDialog();
-          }, function(error) {
-            console.log("Could not Sign Up");
-          });
+        signupDialog.signup = function (signupForm) {
+          if (signupForm.$valid) {
+            var user = {
+              'user': {
+                'email': signupDialog.email,
+                'password_hashed': sha256.encrypt(signupDialog.password),
+                'first_name': signupDialog.firstName,
+                'last_name': signupDialog.lastName
+              }
+            };
+            api.post('/users', user).then(function (success) {
+              setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
+              verification.openDialog();
+            }, function (error) {
+              // TODO: create banner to show the user whats the error.
+              console.log("Could not Sign Up. Error: ", error);
+            });
+          }
         };
 
         signupDialog.connectFb = function() {
