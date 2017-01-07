@@ -60,7 +60,8 @@
               <div flex-gt-xs="70" layout="column" layout-margin>
                 <md-input-container flex>
                   <label>{{ 'forms.password' | translate }}</label>
-                  <input minlength="6" placeholder="***********" name="password" ng-model="settings.password"></input>
+                  <input minlength="6" placeholder="***********" name="password" type="password" ng-model="settings.password"></input>
+                  <!-- TODO: implement show password functionality -->
                 </md-input-container>
                 <div ng-messages="settings.form.password.$error" role="alert">
                   <div ng-message="minlength">Password shouldn't be shorter than 6 characters.</div>

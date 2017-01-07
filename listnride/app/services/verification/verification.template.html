@@ -85,7 +85,7 @@
                     <label>{{ 'shared.phone-number' | translate }}</label>
                     <input required name="phone_number" ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/" placeholder="+49 175 12345678" ng-model="verificationDialog.newUser.phone_number"></input>
                     <div ng-messages="verificationDialog.phoneForm.phone_number.$error" role="alert">
-                      <div ng-message="pattern">{{ verification.5.enter-valid-phone-nr' | translate }}</div>
+                      <div ng-message="pattern">{{ 'verification.5.enter-valid-phone-nr' | translate }}</div>
                     </div>
                   </form>
                 </md-input-container>
