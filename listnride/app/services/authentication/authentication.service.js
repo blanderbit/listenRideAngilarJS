@@ -3,8 +3,8 @@
 angular.
   module('listnride').
   factory('authentication', [
-    'Base64', '$http', '$localStorage', '$mdDialog', '$mdToast', '$window', '$state', '$q', 'ezfb', 'api', 'verification', 'sha256',
-    function(Base64, $http, $localStorage, $mdDialog, $mdToast, $window, $state, $q, ezfb, api, verification, sha256){
+    'Base64', '$http', '$localStorage', '$mdDialog', '$mdToast', '$window', '$state', '$q', '$translate', 'ezfb', 'api', 'verification', 'sha256',
+    function(Base64, $http, $localStorage, $mdDialog, $mdToast, $window, $state, $q, $translate, ezfb, api, verification, sha256){
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (email, password, id, profilePicture, firstName, lastName, unreadMessages) {
@@ -40,14 +40,14 @@ angular.
             setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);            
             verification.openDialog();
           }, function(error) {
-            console.log("Could not Sign Up with Facebook");
+            showSignupError();
           });
         };
 
         var showSignupError = function() {
           $mdToast.show(
             $mdToast.simple()
-            .textContent('Could not sign up. It seems the email address provided is already in use.')
+            .textContent($translate.instant('toasts.could-not-sign-up'))
             .hideDelay(4000)
             .position('top center')
           );
@@ -71,7 +71,7 @@ angular.
             setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
             verification.openDialog();
           }, function(error) {
-            console.log("Could not Sign Up");
+            showSignupError();
             signupDialog.signingUp = false;
           });
         };
@@ -103,7 +103,7 @@ angular.
           $mdDialog.hide();
           $mdToast.show(
             $mdToast.simple()
-            .textContent('Successfully logged in.')
+            .textContent($translate.instant('toasts.successfully-logged-in'))
             .hideDelay(3000)
             .position('top center')
           );
@@ -112,7 +112,7 @@ angular.
         var showLoginError = function() {
           $mdToast.show(
             $mdToast.simple()
-            .textContent('Could not log in. Please make sure you\'ve entered valid credentials and signed up already.')
+            .textContent($translate.instant('toasts.could-not-log-in'))
             .hideDelay(4000)
             .position('top center')
           );
@@ -187,7 +187,7 @@ angular.
           api.post('/users/reset_password', user).then(function(success) {
             $mdToast.show(
               $mdToast.simple()
-              .textContent('Please check your emails, we\'ve just sent you a new password.')
+              .textContent($translate.instant('toasts.reset-password-success'))
               .hideDelay(5000)
               .position('top center')
             );
@@ -254,7 +254,7 @@ angular.
         $state.go('home');
         $mdToast.show(
           $mdToast.simple()
-          .textContent('You are logged out.')
+          .textContent($translate.instant('toasts.successfully-logged-out'))
           .hideDelay(3000)
           .position('top center')
         );

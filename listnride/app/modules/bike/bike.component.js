@@ -3,8 +3,8 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', 'ngMeta', 'NgMap', 'authentication',
-    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, ngMeta, NgMap, authentication) {
+  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', 'ngMeta', 'NgMap',
+    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, ngMeta, NgMap) {
       var bike = this;
 
       bike.mapOptions = {
@@ -64,23 +64,6 @@ angular.module('bike',[]).component('bike', {
           //
         }, function() {
           //
-        });
-      };
-
-      bike.promptAuthentication = function(event) {
-        // Appending dialog to document.body to cover sidenav in docs app
-        var confirm = $mdDialog.confirm()
-          .title('Would you like to delete your debt?')
-          .textContent('All of the banks have agreed to forgive you your debts.')
-          .ariaLabel('Lucky day')
-          .targetEvent(ev)
-          .ok($translate.instant('forms.log-in'))
-          .cancel($translate.instant('forms.sign-up'));
-
-        $mdDialog.show(confirm).then(function() {
-          authentication.showLoginDialog();
-        }, function() {
-          authentication.showSignupDialog();
         });
       };
 

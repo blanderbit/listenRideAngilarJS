@@ -49,7 +49,12 @@
     "add-payout-success": "Your payout method was successfully added.",
     "add-voucher-success": "Congratulations, the voucher was added to your account.",
     "add-voucher-error": "Unfortunately, the supplied voucher is not valid.",
-    "verification-email-sent": "An email with a confirmation link was sent to your email address. This may take a few minutes, if you didn't receive anything also have a look in your spam folder."
+    "verification-email-sent": "An email with a confirmation link was sent to your email address. This may take a few minutes, if you didn't receive anything also have a look in your spam folder.",
+    "could-not-sign-up": "Could not sign up. It seems the email address provided is already in use.",
+    "successfully-logged-in": "Successfully logged in. Welcome back!",
+    "successfully-logged-out": "You're logged out.",
+    "could-not-log-in": "Could not log in. Please make sure you're signed up already and your credentials are valid.",
+    "reset-password-success": "We've just sent you a new password to your email address! It should arrive in the next few minutes."
   },
 
   "settings": {
@@ -244,7 +249,11 @@
     "invalid-date": "Dates are invalid",
     "request-bike": "Request Bike",
     "to-request-bike-please": "to request a bike please",
-    "own-bike": "Du kannst nicht dein Rad anfragen"
+    "own-bike": "You can't request your own bike",
+    "log-in-to-request-title": "Log in or Sign up",
+    "log-in-to-request-description": "Log in to request the bike. If you don't have an account yet, feel free to sign up.",
+    "select-timespan": "Choose rental timespan first",
+    "select-timespan-description": "Before you can request, please set the timespan of your rental. Simply click on the days and select pickup and dropoff times in the above calendar."
   },
 
   "list": {

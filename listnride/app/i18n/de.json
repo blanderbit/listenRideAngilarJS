@@ -49,7 +49,12 @@
     "add-payout-success": "Deine Auszahlungsmethode wurde erfolgreich hinzugefügt.",
     "add-voucher-success": "Glückwunsch, der Gutschein wurde deinem Konto hinzugefügt.",
     "add-voucher-error": "Der angegebene Gutschein ist leider nicht gültig.",
-    "verification-email-sent": "Eine Email mit Bestätigungslink wurde an deine Email-Adresse gesendet. Dies kann ein paar Minuten dauern, falls du nichts findest schau bitte auch in deinem Spam-Ordner nach."
+    "verification-email-sent": "Eine Email mit Bestätigungslink wurde an deine Email-Adresse gesendet. Dies kann ein paar Minuten dauern, falls du nichts findest schau bitte auch in deinem Spam-Ordner nach.",
+    "could-not-sign-up": "Registrierung fehlgeschlagne. Die angegebene Email-Adresse ist bereits in Benutzung.",
+    "successfully-logged-in": "Erfolgreich eingeloggt. Willkommen zurück!",
+    "successfully-logged-out": "Du bist ausgeloggt.",
+    "could-not-log-in": "Login fehlgeschlagen. Bitte stell sicher dass du bereits registriert bist und deine Anmelde-Daten stimmen.",
+    "reset-password-success": "Wir haben dir soeben ein neues Passwort via Email geschickt. Es sollte in den nächsten Minuten eintreffen."
   },
 
   "settings": {
@@ -244,7 +249,11 @@
     "invalid-date": "Datums angabe nicht Korrekt",
     "request-bike": "Rad anfragen",
     "to-request-bike-please": "um ein Rad anzufragen bitte",
-    "own-bike": "Du kannst nicht dein Rad anfragen"
+    "own-bike": "Du kannst nicht dein Rad anfragen",
+    "log-in-to-request-title": "Einloggen oder Registrieren",
+    "log-in-to-request-description": "Logge dich ein um das Rad anzufragen. Falls du noch kein Account hast, registriere dich einfach.",
+    "select-timespan": "Wähle zuerst die Mietdauer",
+    "select-timespan-first": "Bevor du anfrägst, bestimme bitte die Zeitspanne. Klicke einfach auf die Tage and wähle Abhol- und Rückgabezeiten im obigen Kalender."
   },
 
   "list": {
