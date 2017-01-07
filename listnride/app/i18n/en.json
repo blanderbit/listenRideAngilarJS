@@ -111,7 +111,7 @@
       "resend-confirmation-sms": "Resend Confirmation SMS",
       "sms-verification-code": "SMS Verification Code",
       "confirm-code": "Confirm Code",
-      "phone-nr-verified": "Your number was successfully verified!"
+      "phone-nr-verified": "Your number is successfully verified!"
     },
     "6": {
       "description": "Ultimately, enter your home address."
