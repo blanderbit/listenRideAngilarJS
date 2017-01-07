@@ -49,7 +49,12 @@
     "add-payout-success": "Je uitbetaalmethode is toegevoegd aan je profiel.",
     "add-voucher-success": "Gefeliciteerd, het tegoed is aan je account toegevoegd.",
     "add-voucher-error": "De ingevoerde code is niet geldig.",
-    "verification-email-sent": "een email met activeringslink is aan je e-mailadres verstuurd. De ontvangst kan een paar minuten duren, indien je niks in je inbox ziet verschijnen, kijk dan even in je spamfolder."
+    "verification-email-sent": "een email met activeringslink is aan je e-mailadres verstuurd. De ontvangst kan een paar minuten duren, indien je niks in je inbox ziet verschijnen, kijk dan even in je spamfolder.",
+    "could-not-sign-up": "Aanmelden mislukt. Het lijkt erop dat het ingegeven emailadres al in gebruik is.",
+    "successfully-logged-in": "Met succes ingelogd. Welkom terug!",
+    "successfully-logged-out": "Je bent uitgelogd.",
+    "could-not-log-in": "Inloggen mislukt. Check of je je al hebt geregistreerd en je inloggegevens correct zijn.",
+    "reset-password-success": "We hebben zojuist een nieuw wachtwoord naar je toegemaild! Deze kan elk ogenblik aankomen."
   },
 
   "settings": {
@@ -103,6 +108,7 @@
       "description": "Bevestig je telefoonnummer, zodat we je per SMS kunnen informeren als er een nieuwe aanvraag voor je is. Voer uw telefoonnummer in en klik op \"Bevestiging versturen\". Je ontvangt dan een sms met een code die je hieronder kunt invoeren.",
       "enter-valid-phone-nr": "Voer een geldig telefoonnummer in",
       "send-confirmation-sms": "Bevestigings-SMS versturen",
+      "resend-confirmation-sms": "Nogmaals sms-bevestiging versturen",
       "sms-verification-code": "SMS-Verificatie-Code",
       "confirm-code": "Code Bevestigen",
       "phone-nr-verified": "Je telefoonnummer is met succes geverifieerd!"
@@ -243,7 +249,11 @@
     "invalid-date": "Ingevulde Datums zijn niet correct",
     "request-bike": "Fiets aanvragen",
     "to-request-bike-please": "om een fiets aan te vragen, eerst",
-    "own-bike": " Je kan niet je eigen fiets aanvragen"
+    "own-bike": " Je kan niet je eigen fiets aanvragen",
+    "log-in-to-request-title": "log-in of meld je aan",
+    "log-in-to-request-description": "log-in om de fiets aan te vragen. Indien je je nog niet hebt aangemeld, doe dit dan eerst.",
+    "select-timespan": "Kies eerst de huurperiode",
+    "select-timespan-first": "Before you can request, please set the timespan of your rental. Simply click on the days and select pickup and dropoff times in the above calendar."
   },
 
   "list": {
@@ -266,7 +276,7 @@
       "header": "Wat is de fietscategorie?",
       "hint": "Kies allereerst de categorie van je fiets. Kies daarna de juiste subcategorie.",
       "label": "Categorie",
-      "city": "Plaats",
+      "city": "Stad",
       "race": "Race",
       "all-terrain": "All-Terrain",
       "kids": "Kinder",
@@ -665,6 +675,26 @@
     "title": "404 pagina niet gevonden",
     "details": "De gezochte pagina bestaat niet!",
     "home-link": "Terug naar de Homepage"
+  },
+
+  "cities": {
+    "berlin": {
+      "title": "Berlin",
+      "subtitle": "Explore Berlin by Bike",
+      "description": "Find some places off the beaten track",
+      "search-title": "Search our selection of bikes in Berlin",
+      "search-subtitle": "Pick a bike fitting your style and need",
+      "about": "In the last decade, Berlin has seen a massive increase in bicycling bringing a new dimension to Berlin’s vivid bike culture. The fact that the city and the country side surrounding Berlin offer great biking routes and interesting places to visit by bike combined with a bike friendly geography could be an explanation why this is happening.",
+      "bike-routes": "Bike Routes",
+      "bike-shops": "Bike Shops",
+      "cafes-bars": "Cafés, Bars & Eatery",
+      "bike-routes-content": "The Tempelhofer Park offers the perfect outdoor playground and a setting. The former airport runways are great for biking some laps and enjoying the scenery of urban sports & activities taking place. At Treptower Park you find a crazy potpourri of experiences. There is the Soviet monument which looks quite impressive and is worth visiting. For the ones who prefer to be still pretty close to all the city commodities a little trip along the Landwehrkanal can be a great way of discovering Kreuzberg. If you like to longer rides check the Panke radweg (~30km) or a part of the Berlin to Usedom route, taking you through almost untouched nature.",
+      "bike-shops-content": "The urban bike brand Schindelhauer bikes makes stylish bikes for the sportive city biker. If you prefer a single-speed or fixed gear than you can eat your heart out at 8bar-bikes and Bike Punk and if you prefer a road bike than Standert can offer something special. Interesting concept stores such as Pretavelo offering a nice selection of urban bicycles, Wingwheels for electric bikes only, or boxbike everything for great folding bikes are worth to visit.",
+      "cafes-bars-content": "After all day out we recommend you to visit fiveelephant in Neu Kölln to go for a coffee and a selection of north American style pastry. For lunch or dinner head for kimchiprincess in Kreuzberg a buzzing Korean restaurant with sizzling BBQ grills. Visit Kaschk in Mitte serving a great selection of Nordic and local craft beer as well as freshy brewed coffee.",
+      "rent-city": "Rent City Bikes",
+      "rent-ebike": "Rent E-Bikes",
+      "rent-special": "Rent Special bikes"
+    }
   },
 
   "brand-integration": {

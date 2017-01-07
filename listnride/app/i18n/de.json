@@ -49,7 +49,12 @@
     "add-payout-success": "Deine Auszahlungsmethode wurde erfolgreich hinzugefügt.",
     "add-voucher-success": "Glückwunsch, der Gutschein wurde deinem Konto hinzugefügt.",
     "add-voucher-error": "Der angegebene Gutschein ist leider nicht gültig.",
-    "verification-email-sent": "Eine Email mit Bestätigungslink wurde an deine Email-Adresse gesendet. Dies kann ein paar Minuten dauern, falls du nichts findest schau bitte auch in deinem Spam-Ordner nach."
+    "verification-email-sent": "Eine Email mit Bestätigungslink wurde an deine Email-Adresse gesendet. Dies kann ein paar Minuten dauern, falls du nichts findest schau bitte auch in deinem Spam-Ordner nach.",
+    "could-not-sign-up": "Registrierung fehlgeschlagne. Die angegebene Email-Adresse ist bereits in Benutzung.",
+    "successfully-logged-in": "Erfolgreich eingeloggt. Willkommen zurück!",
+    "successfully-logged-out": "Du bist ausgeloggt.",
+    "could-not-log-in": "Login fehlgeschlagen. Bitte stell sicher dass du bereits registriert bist und deine Anmelde-Daten stimmen.",
+    "reset-password-success": "Wir haben dir soeben ein neues Passwort via Email geschickt. Es sollte in den nächsten Minuten eintreffen."
   },
 
   "settings": {
@@ -103,6 +108,7 @@
       "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst.",
       "enter-valid-phone-nr": "Bitte gib eine valide Telefonnummer an",
       "send-confirmation-sms": "Bestätigungs-SMS schicken",
+      "resend-confirmation-sms": "SMS erneut schicken",
       "sms-verification-code": "SMS-Verifizierungs-Code",
       "confirm-code": "Code Bestätigen",
       "phone-nr-verified": "Deine Nummer wurde erfolgreich verifiziert!"
@@ -243,7 +249,11 @@
     "invalid-date": "Datums angabe nicht Korrekt",
     "request-bike": "Rad anfragen",
     "to-request-bike-please": "um ein Rad anzufragen bitte",
-    "own-bike": "Du kannst nicht dein Rad anfragen"
+    "own-bike": "Du kannst nicht dein Rad anfragen",
+    "log-in-to-request-title": "Einloggen oder Registrieren",
+    "log-in-to-request-description": "Logge dich ein um das Rad anzufragen. Falls du noch kein Account hast, registriere dich einfach.",
+    "select-timespan": "Wähle zuerst die Mietdauer",
+    "select-timespan-first": "Bevor du anfrägst, bestimme bitte die Zeitspanne. Klicke einfach auf die Tage and wähle Abhol- und Rückgabezeiten im obigen Kalender."
   },
 
   "list": {
@@ -666,6 +676,26 @@
     "title": "404 Seite nicht gefunden",
     "details": "Die gesuchte Seite existiert nicht!",
     "home-link": "Zurück nach Homepage"
+  },
+
+  "cities": {
+    "berlin": {
+      "title": "Berlin",
+      "subtitle": "Explore Berlin by Bike",
+      "description": "Find some places off the beaten track",
+      "search-title": "Search our selection of bikes in Berlin",
+      "search-subtitle": "Pick a bike fitting your style and need",
+      "about": "In the last decade, Berlin has seen a massive increase in bicycling bringing a new dimension to Berlin’s vivid bike culture. The fact that the city and the country side surrounding Berlin offer great biking routes and interesting places to visit by bike combined with a bike friendly geography could be an explanation why this is happening.",
+      "bike-routes": "Bike Routes",
+      "bike-shops": "Bike Shops",
+      "cafes-bars": "Cafés, Bars & Eatery",
+      "bike-routes-content": "The Tempelhofer Park offers the perfect outdoor playground and a setting. The former airport runways are great for biking some laps and enjoying the scenery of urban sports & activities taking place. At Treptower Park you find a crazy potpourri of experiences. There is the Soviet monument which looks quite impressive and is worth visiting. For the ones who prefer to be still pretty close to all the city commodities a little trip along the Landwehrkanal can be a great way of discovering Kreuzberg. If you like to longer rides check the Panke radweg (~30km) or a part of the Berlin to Usedom route, taking you through almost untouched nature.",
+      "bike-shops-content": "The urban bike brand Schindelhauer bikes makes stylish bikes for the sportive city biker. If you prefer a single-speed or fixed gear than you can eat your heart out at 8bar-bikes and Bike Punk and if you prefer a road bike than Standert can offer something special. Interesting concept stores such as Pretavelo offering a nice selection of urban bicycles, Wingwheels for electric bikes only, or boxbike everything for great folding bikes are worth to visit.",
+      "cafes-bars-content": "After all day out we recommend you to visit fiveelephant in Neu Kölln to go for a coffee and a selection of north American style pastry. For lunch or dinner head for kimchiprincess in Kreuzberg a buzzing Korean restaurant with sizzling BBQ grills. Visit Kaschk in Mitte serving a great selection of Nordic and local craft beer as well as freshy brewed coffee.",
+      "rent-city": "Rent City Bikes",
+      "rent-ebike": "Rent E-Bikes",
+      "rent-special": "Rent Special bikes"
+    }
   },
 
   "brand-integration": {

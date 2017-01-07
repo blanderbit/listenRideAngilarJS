@@ -18,6 +18,8 @@ angular.
         verificationDialog.activeTab = 1;
         verificationDialog.firstName = $localStorage.firstName;
         verificationDialog.profilePicture = false;
+        verificationDialog.hasProfilePicture = false;
+        verificationDialog.sentConfirmationSms = false;
 
         $state.current.name == "home" ? verificationDialog.firstTime = true : verificationDialog.firstTime = false;
         // Fires if scope gets destroyed and cancels poller
@@ -30,6 +32,9 @@ angular.
             function (success) {
               if (verificationDialog.newUser == null) {
                 verificationDialog.newUser = success.data;
+                if (success.data.profile_picture.profile_picture.url != "https://s3.eu-central-1.amazonaws.com/listnride/assets/default_profile_picture.jpg") {
+                  verificationDialog.hasProfilePicture = true;
+                }
               }
               verificationDialog.user = success.data;
             },
@@ -128,6 +133,7 @@ angular.
           };
           api.post('/users/' + $localStorage.userId + '/update_phone', data).then(
             function (success) {
+              verificationDialog.sentConfirmationSms = true;
               console.log("Successfully updated phone number");
               $mdToast.show(
                 $mdToast.simple()
