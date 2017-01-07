@@ -71,6 +71,16 @@ h3.md-body-2 {
   margin: 1em 0;
 }
 
+md-grid-list md-grid-tile {
+  border-radius: 4px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50%;
+  cursor: pointer;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
@@ -681,16 +691,6 @@ home .section {
   background-image: url(../ui_images/static/lnr_listabike.jpg);
 }
 
-home md-grid-list md-grid-tile {
-  border-radius: 4px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: 50%;
-  cursor: pointer;
-}
-
 home md-grid-list md-grid-tile.tile1 {
   background-image: url(../ui_images/cities/lnr_munich.jpg);
 }
@@ -1209,4 +1209,26 @@ message .status-message {
 
 rapha-super-cross img.event-logo {
   width: 250px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  CITY PAGES
+/*-----------------------------------------------------------------------------------*/
+
+md-grid-list a {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+#city-pages md-grid-tile.tile1 {
+  background-image: url(../ui_images/citypages/berlin-rent-city.jpg);
+}
+
+#city-pages md-grid-tile.tile2 {
+  background-image: url(../ui_images/citypages/berlin-rent-ebike.jpg);
+}
+
+#city-pages md-grid-tile.tile3 {
+  background-image: url(../ui_images/citypages/berlin-rent-special.jpg);
 }

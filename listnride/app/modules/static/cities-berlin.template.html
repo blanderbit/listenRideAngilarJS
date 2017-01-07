@@ -4,10 +4,11 @@
       <h1 class="md-display-1">{{ 'cities.berlin.title' | translate }}</h1>
     </div>
   </div>
-
+  <br>
   <div class="content" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">      
-      <h2 class="md-headline">{{ 'cities.berlin.subtitle' | translate }}</h1>
+      <h2 class="md-headline">{{ 'cities.berlin.subtitle' | translate }}</h2>
+      <h3 class="md-subhead">{{ 'cities.berlin.description' | translate }}</h3>
     </div>
 
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center" layout-padding>
@@ -45,14 +46,35 @@
       <h2 class="md-headline">{{ 'cities.berlin.search-title' | translate }}</h1>
       <p class="md-subhead">{{ 'cities.berlin.search-subtitle' | translate }}</p>
     </div>
-    <div layout="column" layout-gt-xs="row">
-      <div layout-margin flex-gt-xs="33">
-        <md-card class="lnr-bike-card" style="background-image:url('app/assets/ui_images/citypages/berlin-rent-city.jpg')">
-        afdsadsfasdf adsdfsa<br><br>dfaskl
-          <!-- <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-rent-city.jpg" alt="">
-            <p>Rent City Bikes</p>
-          </img> -->
-        </md-card>
+
+    <md-grid-list id="city-pages" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="3" md-gutter="16px" md-row-height="1.5:1">
+      <md-grid-tile class="tile1">
+        <a ui-sref="search({ location: 'Berlin', city: true })" target="_blank" layout="row" layout-align="center center">
+          <h3 class="md-title">{{ 'cities.berlin.rent-city' | translate }}</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile2">
+        <a ui-sref="search({ location: 'Berlin', ebikes: true })" target="_blank" layout="row" layout-align="center center">
+          <h3 class="md-title">{{ 'cities.berlin.rent-ebike' | translate }}</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile3">
+        <a ui-sref="search({ location: 'Berlin', special: true })" target="_blank" layout="row" layout-align="center center">
+          <h3 class="md-title">{{ 'cities.berlin.rent-special' | translate }}</h3>
+        </a>
+      </md-grid-tile>
+    </md-grid-list>
+    <br>
+    <!-- <div layout="column" layout-gt-xs="row">
+      <div layout-margin flex-gt-xs="33" style="position: relative">
+        <div style="padding-top: 66.67%; background-size: cover; background-image: url('app/assets/ui_images/citypages/berlin-rent-city.jpg');">
+          <p style="position: absolute; height: 100px">hi</p>
+          <a ui-sref="search({ location: 'Amsterdam' })" layout="row" layout-align="center center" style="position: absolute;">
+            <h3 class="md-title">{{ 'shared.amsterdam' | translate }}</h3>
+          </a>
+        </div>
       </div>
       <div layout-margin flex-gt-xs="33">
         <md-card class="lnr-bike-card">
@@ -64,7 +86,7 @@
               <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-rent-special.jpg" alt="">
         </md-card>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <footer></footer>
