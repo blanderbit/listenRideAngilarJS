@@ -13,6 +13,7 @@ angular.module('user',[]).component('user', {
 
       api.get('/users/' + userId).then(
         function(response) {
+          user.showAll = false;
           user.user = response.data;
           user.loaded = true;
           user.rating = (user.user.rating_lister + user.user.rating_rider);
