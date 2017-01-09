@@ -83,7 +83,7 @@ angular.module('listnride', [
     };
 
     $translateProvider.preferredLanguage(retrieveLocale());
-    $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
+    $translateProvider.useSanitizeValueStrategy(['escapeParameters']);
     ngMetaProvider.setDefaultTitle('listnride');
   }
 ])
