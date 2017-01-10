@@ -88,7 +88,7 @@ angular.
                 ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
                   signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name);
                 });
-              });
+              }, {scope: 'email'});
             }
           });
         };
