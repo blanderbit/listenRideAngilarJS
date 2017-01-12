@@ -85,6 +85,7 @@ angular.module('listnride', [
     $translateProvider.preferredLanguage(retrieveLocale());
     $translateProvider.useSanitizeValueStrategy(['escapeParameters']);
     ngMetaProvider.setDefaultTitle('listnride');
+    ngMetaProvider.setDefaultTag('prerender-status-code', '200');
   }
 ])
 .run(['ngMeta', '$rootScope', '$location', function(ngMeta, $rootScope, $location) {

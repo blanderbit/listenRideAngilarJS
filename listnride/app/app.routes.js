@@ -329,6 +329,12 @@ config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$location
     });
     $stateProvider.state('404', {
       templateUrl: 'app/modules/static/error-404.template.html',
+      data: {
+        meta: {
+          'title': 'listnride - 404',
+          'prerender-status-code': '404'
+        }
+      }
     });
 
     $urlRouterProvider.otherwise(function($injector, $location) {
