@@ -307,12 +307,6 @@ config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$location
       url: '/berlin',
       templateUrl: 'app/modules/static/cities-berlin.template.html'
     });
-
-    $stateProvider.state({
-      name: 'cities-berlin-2',
-      url: '/berlin2',
-      templateUrl: 'app/modules/static/cities-berlin-2.template.html'
-    });
     
     // for testing embed-bikes feature
     // change userID in route to fetch new bikes
