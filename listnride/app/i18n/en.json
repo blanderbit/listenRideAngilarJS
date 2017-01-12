@@ -49,7 +49,12 @@
     "add-payout-success": "Your payout method was successfully added.",
     "add-voucher-success": "Congratulations, the voucher was added to your account.",
     "add-voucher-error": "Unfortunately, the supplied voucher is not valid.",
-    "verification-email-sent": "An email with a confirmation link was sent to your email address. This may take a few minutes, if you didn't receive anything also have a look in your spam folder."
+    "verification-email-sent": "An email with a confirmation link was sent to your email address. This may take a few minutes, if you didn't receive anything also have a look in your spam folder.",
+    "could-not-sign-up": "Could not sign up. It seems the email address provided is already in use.",
+    "successfully-logged-in": "Successfully logged in. Welcome back!",
+    "successfully-logged-out": "You're logged out.",
+    "could-not-log-in": "Could not log in. Please make sure you're signed up already and your credentials are valid.",
+    "reset-password-success": "We've just sent you a new password to your email address! It should arrive in the next few minutes."
   },
 
   "settings": {
@@ -103,9 +108,10 @@
       "description": "Verify your phone number, this allows SMS notifications for your requests. Simply enter your number and click 'Send Confirmation'. You'll receive a code via SMS that you can then enter below.",
       "enter-valid-phone-nr": "Please enter a valid phone number",
       "send-confirmation-sms": "Send Confirmation SMS",
+      "resend-confirmation-sms": "Resend Confirmation SMS",
       "sms-verification-code": "SMS Verification Code",
       "confirm-code": "Confirm Code",
-      "phone-nr-verified": "Your number was successfully verified!"
+      "phone-nr-verified": "Your number is successfully verified!"
     },
     "6": {
       "description": "Ultimately, enter your home address."
@@ -243,7 +249,11 @@
     "invalid-date": "Dates are invalid",
     "request-bike": "Request Bike",
     "to-request-bike-please": "to request a bike please",
-    "own-bike": "Du kannst nicht dein Rad anfragen"
+    "own-bike": "You can't request your own bike",
+    "log-in-to-request-title": "Log in or Sign up",
+    "log-in-to-request-description": "Log in to request the bike. If you don't have an account yet, feel free to sign up.",
+    "select-timespan": "Choose rental timespan first",
+    "select-timespan-description": "Before you can request, please set the timespan of your rental. Simply click on the days and select pickup and dropoff times in the above calendar."
   },
 
   "list": {
@@ -666,6 +676,27 @@
     "title": "404 Page not found",
     "details": "The page you are looking for does not exist!",
     "home-link": "Back to the homepage"
+  },
+
+  "cities": {
+    "berlin": {
+      "title": "Berlin",
+      "subtitle": "Explore Berlin by Bike",
+      "description": "Find some places off the beaten track",
+      "search-title": "Search our selection of bikes in Berlin",
+      "search-subtitle": "Pick a bike fitting your style and need",
+      "about": "About Berlin",
+      "about-content": "In the last decade, Berlin has seen a massive increase in bicycling bringing a new dimension to Berlin’s vivid bike culture. The fact that the city and the country side surrounding Berlin offer great biking routes and interesting places to visit by bike combined with a bike friendly geography could be an explanation why this is happening.",
+      "bike-routes": "Bike Routes",
+      "bike-shops": "Bike Shops",
+      "cafes-bars": "Cafés, Bars & Eatery",
+      "bike-routes-content": "The <a href=\"http://www.tempelhofer-park.de/\" target=\"_blank\">Tempelhofer Park</a> offers the perfect outdoor playground and a setting. The former airport runways are great for biking some laps and enjoying the scenery of urban sports & activities taking place. At <a href=\"http://www.lollapaloozade.com/treptower-park/\" target=\"_blank\">Treptower Park</a> you find a crazy potpourri of experiences. There is the Soviet monument which looks quite impressive and is worth visiting. For the ones who prefer to be still pretty close to all the city commodities a little trip along the <a href=\"https://en.wikipedia.org/wiki/Landwehr_Canal\" target=\"_blank\">Landwehrkanal</a> can be a great way of discovering Kreuzberg. If you like to longer rides check the <a href=\"http://panke.info/pages/portal-touren.php\" target=\"_blank\">Panke Radweg</a> (~30km) or a part of the <a href=\"http://www.berlin-usedom-radweginfo.de/\" target=\"_blank\">Berlin to Usedom route</a>, taking you through almost untouched nature.",
+      "bike-shops-content": "The urban bike brand <a href=\"http://www.schindelhauerbikes.com/\" target=\"_blank\">Schindelhauer</a> bikes makes stylish bikes for the sportive city biker. If you prefer a single-speed or fixed gear than you can eat your heart out at <a href=\"https://8bar-bikes.com/\" target=\"_blank\">8bar-bikes</a> and Bike Punk and if you prefer a road bike than <a href=\"http://www.standert.de/\" target=\"_blank\">Standert</a> can offer something special. Interesting concept stores such as <a href=\"http://www.pret-a-velo.de/\" target=\"_blank\">Pretavelo</a> offering a nice selection of urban bicycles, Wingwheels for electric bikes only, or <a href=\"http://boxbike.de/\" target=\"_blank\">boxbike</a> everything for great folding bikes are worth to visit.",
+      "cafes-bars-content": "After all day out we recommend you to visit <a href=\"http://www.fiveelephant.com/\" target=\"_blank\">fiveelephant</a> in Neu Kölln to go for a coffee and a selection of north American style pastry. For lunch or dinner head for <a href=\"http://www.kimchiprincess.com/\" target=\"_blank\">kimchiprincess</a> in Kreuzberg a buzzing Korean restaurant with sizzling BBQ grills. Visit <a href=\"http://kaschk.de/\" target=\"_blank\">Kaschk</a> in Mitte serving a great selection of Nordic and local craft beer as well as freshy brewed coffee.",
+      "rent-city": "Rent City Bikes",
+      "rent-ebike": "Rent E-Bikes",
+      "rent-special": "Rent Special bikes"
+    }
   },
 
   "brand-integration": {

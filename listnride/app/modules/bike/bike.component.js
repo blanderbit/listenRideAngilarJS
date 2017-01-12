@@ -3,8 +3,8 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', 'ngMeta', 'NgMap',
-    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, ngMeta, NgMap) {
+  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', 'ngMeta',
+    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, ngMeta) {
       var bike = this;
 
       bike.mapOptions = {
@@ -23,8 +23,13 @@ angular.module('bike',[]).component('bike', {
         }
       };
 
+      // TODO: move all api calls in service
+      // it is really difficult to test api calls from controller.
+      // controller should only be used for data binding and 
+      // not for logic and api calls
       api.get('/rides/' + $stateParams.bikeId).then(
         function(response) {
+          bike.showAll = false;
           bike.data = response.data;
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
