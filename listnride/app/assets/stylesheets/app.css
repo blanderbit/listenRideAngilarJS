@@ -566,10 +566,10 @@ home #landingSection .lnr-page-title {
   background-repeat: none;
   opacity: 0;
   z-index: 0;
-  -webkit-animation: imageAnimation 20s linear infinite 0s;
-  -moz-animation: imageAnimation 20s linear infinite 0s;
-  -o-animation: imageAnimation 20s linear infinite 0s;
-  animation: imageAnimation 20s linear infinite 0s; 
+  -webkit-animation: imageAnimation 25s linear infinite 0s;
+  -moz-animation: imageAnimation 25s linear infinite 0s;
+  -o-animation: imageAnimation 25s linear infinite 0s;
+  animation: imageAnimation 25s linear infinite 0s; 
 }
 
 .cb-slideshow li:nth-child(1) span { 
@@ -578,7 +578,7 @@ home #landingSection .lnr-page-title {
 }
 
 .cb-slideshow li:nth-child(2) span { 
-  background-image: url(../ui_images/lnr_hero6.jpg);
+  background-image: url(../ui_images/lnr_hero3.jpg);
   -webkit-animation-delay: 5s;
   -moz-animation-delay: 5s;
   -o-animation-delay: 5s; 
@@ -586,7 +586,7 @@ home #landingSection .lnr-page-title {
 }
 
 .cb-slideshow li:nth-child(3) span { 
-  background-image: url(../ui_images/lnr_hero1.jpg);
+  background-image: url(../ui_images/lnr_hero6.jpg);
   -webkit-animation-delay: 10s;
   -moz-animation-delay: 10s;
   -o-animation-delay: 10s; 
@@ -611,32 +611,32 @@ home #landingSection .lnr-page-title {
 }
 
 @-webkit-keyframes imageAnimation { 
-  0% { opacity: 0; animation-timing-function: ease-in; }
-  2% { opacity: 1; animation-timing-function: ease-out; }
+  0% { opacity: 0; animation-timing-function: linear; }
+  2% { opacity: 1; animation-timing-function: linear; }
   25% { opacity: 1 }
   27% { opacity: 0 }
   100% { opacity: 0 }
 }
 
 @-moz-keyframes imageAnimation { 
-  0% { opacity: 0; animation-timing-function: ease-in; }
-  2% { opacity: 1; animation-timing-function: ease-out; }
+  0% { opacity: 0; animation-timing-function: linear; }
+  2% { opacity: 1; animation-timing-function: linear; }
   25% { opacity: 1 }
   27% { opacity: 0 }
   100% { opacity: 0 }
 }
 
 @-o-keyframes imageAnimation { 
-  0% { opacity: 0; animation-timing-function: ease-in; }
-  2% { opacity: 1; animation-timing-function: ease-out; }
+  0% { opacity: 0; animation-timing-function: linear; }
+  2% { opacity: 1; animation-timing-function: linear; }
   25% { opacity: 1 }
   27% { opacity: 0 }
   100% { opacity: 0 }
 }
 
 @keyframes imageAnimation { 
-  0% { opacity: 0; animation-timing-function: ease-in; }
-  2% { opacity: 1; animation-timing-function: ease-out; }
+  0% { opacity: 0; animation-timing-function: linear; }
+  2% { opacity: 1; animation-timing-function: linear; }
   25% { opacity: 1 }
   27% { opacity: 0 }
   100% { opacity: 0 }
