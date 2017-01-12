@@ -740,9 +740,30 @@ home md-grid-list md-grid-tile.tile4 {
 /*  BIKE CARD
 /*-----------------------------------------------------------------------------------*/
 
-md-card.lnr-bike-card {
+bike-card .bg {
+  width: 100%;
+  position: relative;
+  border-radius: 4px;
+}
+
+bike-card .bg:before {
+    content: "";
+    display: block;
+    padding-top: 66.667%;
+    float: left;
+}
+
+bike-card md-card.lnr-bike-card {
   margin: 0;
   cursor: pointer;
+  position: relative;
+}
+
+bike-card md-card img.md-card-image {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .lnr-bike-card md-card-title-text span {
