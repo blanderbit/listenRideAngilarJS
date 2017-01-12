@@ -566,10 +566,10 @@ home #landingSection .lnr-page-title {
   background-repeat: none;
   opacity: 0;
   z-index: 0;
-  -webkit-animation: imageAnimation 75s linear infinite 0s;
-  -moz-animation: imageAnimation 75s linear infinite 0s;
-  -o-animation: imageAnimation 75s linear infinite 0s;
-  animation: imageAnimation 75s linear infinite 0s; 
+  -webkit-animation: imageAnimation 20s linear infinite 0s;
+  -moz-animation: imageAnimation 20s linear infinite 0s;
+  -o-animation: imageAnimation 20s linear infinite 0s;
+  animation: imageAnimation 20s linear infinite 0s; 
 }
 
 .cb-slideshow li:nth-child(1) span { 
