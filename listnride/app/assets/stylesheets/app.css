@@ -707,6 +707,38 @@ home md-grid-list md-grid-tile.tile4 {
   background-image: url(../ui_images/cities/lnr_vienna.jpg);
 }
 
+home .testimonials-container {
+  margin: auto;
+  width: calc(100% - 50px);
+}
+
+home #testimonials img.testimonials-img {
+  width: 75px;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 16px;
+}
+
+home .testimonials-text {
+  font-size: 20px;
+  font-style: italic;
+  width: 75%;
+}
+
+home .testimonials-name {
+  font-weight: 500;
+}
+
+home .testimonials-slick-slide {
+  display: flex !important;
+}
+
+home #testimonials .testimonials-prev-arrow {
+  height: 50px;
+  width: 30px;
+  opacity: 0.25;
+}
+
 @media (max-width:599px) {
   md-dialog.md-dialog-fullscreen {
     min-height: 100%;
@@ -724,6 +756,10 @@ home md-grid-list md-grid-tile.tile4 {
 
   .lnr-search-bar {
     width: 90%
+  }
+
+  home .testimonials-text {
+    width: 100%;
   }
 }
 

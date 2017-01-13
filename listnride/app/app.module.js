@@ -36,7 +36,8 @@ angular.module('listnride', [
   'ngFileUpload',
   'ngSanitize',
   'angular-input-stars',
-  'ngMeta'
+  'ngMeta',
+  'slickCarousel'
 ])
 .config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider', 'ENV',
   function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider, ENV) {
