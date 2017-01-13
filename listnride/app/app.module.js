@@ -36,7 +36,8 @@ angular.module('listnride', [
   'ngFileUpload',
   'ngSanitize',
   'angular-input-stars',
-  'ngMeta'
+  'ngMeta',
+  'slickCarousel'
 ])
 .config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider', 'ENV',
   function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider, ENV) {
@@ -47,7 +48,7 @@ angular.module('listnride', [
       // Module default is `v2.6`.
       // If you want to use Facebook platform `v2.3`, you'll have to add the following parameter.
       // https://developers.facebook.com/docs/javascript/reference/FB.init
-      version: 'v2.3'
+      version: 'v2.8'
     });
 
     // cause to fail the route reload
@@ -83,8 +84,9 @@ angular.module('listnride', [
     };
 
     $translateProvider.preferredLanguage(retrieveLocale());
-    $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
+    $translateProvider.useSanitizeValueStrategy(['escapeParameters']);
     ngMetaProvider.setDefaultTitle('listnride');
+    ngMetaProvider.setDefaultTag('prerender-status-code', '200');
   }
 ])
 .run(['ngMeta', '$rootScope', '$location', function(ngMeta, $rootScope, $location) {

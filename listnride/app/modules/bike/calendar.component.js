@@ -12,8 +12,8 @@ angular.module('bike').component('calendar', {
     priceWeek: '<',
     requests: '<'
   },
-  controller: ['$scope', '$localStorage', '$state', '$mdDialog', 'date', 'api', 'authentication', 'verification',
-    function CalendarController($scope, $localStorage, $state, $mdDialog, date, api, authentication, verification) {
+  controller: ['$scope', '$localStorage', '$state', '$mdDialog', '$translate', 'date', 'api', 'authentication', 'verification',
+    function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, date, api, authentication, verification) {
       var calendar = this;
       calendar.authentication = authentication;
 
@@ -91,6 +91,22 @@ angular.module('bike').component('calendar', {
 
           }
         );
+      };
+
+      calendar.promptAuthentication = function(event) {
+        // Appending dialog to document.body to cover sidenav in docs app
+        var confirm = $mdDialog.confirm()
+          .title($translate.instant('calendar.log-in-to-request-title'))
+          .textContent($translate.instant('calendar.log-in-to-request-description'))
+          .targetEvent(event)
+          .ok($translate.instant('forms.log-in'))
+          .cancel($translate.instant('forms.sign-up'));
+
+        $mdDialog.show(confirm).then(function() {
+          authentication.showLoginDialog();
+        }, function() {
+          authentication.showSignupDialog();
+        });
       };
 
       calendar.isFormInvalid = function() {
