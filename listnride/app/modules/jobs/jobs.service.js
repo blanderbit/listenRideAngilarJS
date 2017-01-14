@@ -69,7 +69,7 @@ angular.module('jobs').factory('JobsService', ['$q', function ($q) {
         // positionId should be used to fetch details from server
         var deferred = $q.defer();
         deferred.resolve({
-            data: jobDetails[positionId]
+            data: jobDetails[0]
         });
         return deferred.promise;
     };

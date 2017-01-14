@@ -16,7 +16,6 @@
                 To be more specific we are looking for:
             </h4>
             <h1 layout="column" layout-align="center center" class="md-headline">{{jobs.details.title}}</h1>
-            </h3>
             <p><strong>{{jobs.details.role.title}}:&nbsp</strong></p>
             <md-list class="md-dense">
                 <md-list-item ng-repeat="desc in jobs.details.role.desc">
@@ -35,6 +34,9 @@
                     <li> {{desc}} </li>
                 </md-list-item>
             </md-list>
+            <div flex-gt-sm="70" layout="row" layout-align="start start" layout-margin>
+                <a href="mailto:contact@listnride.com?Subject=Press%20Contact" target="_top" class="md-raised md-primary md-button md-lnr-dark-theme md-ink-ripple">{{ 'jobs.apply' | translate }}</a>
+            </div>
         </div>
     </div>
 </div>
