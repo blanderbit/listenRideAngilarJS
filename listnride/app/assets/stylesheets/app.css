@@ -721,7 +721,7 @@ home #testimonials img.testimonials-img {
 
 home .testimonials-text {
   font-size: 20px;
-  font-style: italic;
+  text-align: center;
   width: 75%;
 }
 

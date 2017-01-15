@@ -76,7 +76,7 @@
 
         <div ng-repeat="testimonial in home.testimonials"
           class="testimonials-slick-slide" layout="column" layout-align="center center">
-          <div class="testimonials-text">{{ testimonial.text }}</div>
+          <div class="testimonials-text md-subhead">&ldquo;{{ testimonial.text }}&rdquo;</div>
             <a ui-sref="user({userId: testimonial.userId})">
               <img class="testimonials-img" ng-src="{{ testimonial.userImagePath}}">
             </a>

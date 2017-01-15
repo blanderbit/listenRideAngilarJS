@@ -18,6 +18,7 @@ angular.module('listnride', [
   'edit',
   'rating',
   'settings',
+  'jobs',
   'listingABike',
   'rentingABike',
   'raphaSuperCross',
