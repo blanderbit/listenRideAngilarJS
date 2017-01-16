@@ -5,7 +5,7 @@
   scr_lnr.type = 'text/javascript';
 
   var css_lnr = document.createElement("LINK");
-  css_lnr.href = "https://listnride-frontend-staging.herokuapp.com/lnr-embed.min.css";
+  css_lnr.href = "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.css";
   css_lnr.rel = "stylesheet";
 
   var css_mdl = document.createElement("LINK");
@@ -21,13 +21,13 @@
 
       var introText = {
         en: 'The bikes below are currently available for you to rent. ' +
-          'Simply click on the bike you’d like to rent and you will be forwarded to ' +
+          'Simply click on the bike you&rsquo;d like to rent and you will be forwarded to ' +
           '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a>, ' +
           'where you can make the booking online.',
         de: 'Diese Fahrr&auml;der stehen aktuell f&uuml;r den Verleih an Sie zur Verf&uuml;gung. ' +
           'Durch klicken auf das gew&uuml;nschte Fahrrad, werden Sie auf ' +
           '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a> ' +
-          'weitergeleitet und können dort die Online-Buchung abschlie&szlig;en.',
+          'weitergeleitet und k&ouml;nnen dort die Online-Buchung abschlie&szlig;en.',
         nl: 'De onderstaande fietsen bieden wij uw momenteel te huur aan. ' +
           'Indien je de fiets naar wens aanklikt, kom je op de site ' +
           '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a> ' +
