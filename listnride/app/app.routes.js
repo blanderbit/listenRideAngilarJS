@@ -208,19 +208,32 @@ config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$location
 
     $stateProvider.state({
       name: 'jobs',
+      abstract: true,
+      url: '',
+      templateUrl: 'app/modules/jobs/jobs.template.html'
+    });
+
+    $stateProvider.state({
+      name: 'jobs-list',
+      parent: 'jobs',
       url: '/jobs',
-      templateUrl: 'app/modules/static/jobs.template.html',
-      resolve : {
-        data: function($translate, ngMeta) {
-          $translate(["jobs.meta-title", "jobs.meta-description"])
-          .then(function(translations) {
-            ngMeta.setTitle(translations["jobs.meta-title"]);
-            ngMeta.setTag("description", translations["jobs.meta-description"]);
-          })
+      views: {
+        'jobsView': {
+          templateUrl: 'app/modules/jobs/jobs.list.template.html',
+                controller: 'JobsListController as jobs'
         }
-      },
-      meta: {
-        disableUpdate: true
+      }
+    });
+
+    $stateProvider.state({
+      name: 'jobs-details',
+      parent: 'jobs',
+      url: '/jobs/position/{positionId}',
+      views: {
+        'jobsView': {
+          templateUrl: 'app/modules/jobs/jobs.details.template.html',
+          controller: 'JobsDetailsController as jobs'
+        }
       }
     });
 
@@ -316,13 +329,19 @@ config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$location
       url: '/embed-bikes-test/{userId}/{userLang}',
       templateProvider: function ($timeout, $stateParams) {
         return $timeout(function () {
-          return '<div><script src="https://listnride-frontend-staging.herokuapp.com/lnr-embed.min.js"></script><div id="listnride" data-user="'
+          return '<div><script src="https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.js"></script><div id="listnride" data-user="'
             + $stateParams.userId + '" data-lang="' + $stateParams.userLang + '"></div><div>'
         }, 100);
       }
     });
     $stateProvider.state('404', {
       templateUrl: 'app/modules/static/error-404.template.html',
+      data: {
+        meta: {
+          'title': 'listnride - 404',
+          'prerender-status-code': '404'
+        }
+      }
     });
 
     $urlRouterProvider.otherwise(function($injector, $location) {

@@ -1,4 +1,6 @@
 <md-card class="lnr-bike-card" ng-class="{'lnr-unavailable': !listingCard.available}">
+
+  <div class="bg lnr-preload-bg"></div>
   <img class="md-card-image" ui-sref="bike({ bikeId: {{ ::listingCard.bikeId }} })" ng-src="{{ ::listingCard.imageUrl }}" alt="{{ ::listingCard.brand }} - {{ ::listingCard.name }}">
 
   <md-card-title layout="row">

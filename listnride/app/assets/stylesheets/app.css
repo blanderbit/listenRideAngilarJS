@@ -63,9 +63,9 @@ h1.md-subhead {
   margin: 4px 0;
 }
 
-h2.md-subhead {
+/*h2.md-subhead {
   margin: 4px 0;
-}
+}*/
 
 h3.md-body-2 {
   margin: 1em 0;
@@ -707,6 +707,38 @@ home md-grid-list md-grid-tile.tile4 {
   background-image: url(../ui_images/cities/lnr_vienna.jpg);
 }
 
+home .testimonials-container {
+  margin: auto;
+  width: calc(100% - 50px);
+}
+
+home #testimonials img.testimonials-img {
+  width: 75px;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 16px;
+}
+
+home .testimonials-text {
+  font-size: 20px;
+  text-align: center;
+  width: 75%;
+}
+
+home .testimonials-name {
+  font-weight: 500;
+}
+
+home .testimonials-slick-slide {
+  display: flex !important;
+}
+
+home #testimonials .testimonials-prev-arrow {
+  height: 50px;
+  width: 30px;
+  opacity: 0.25;
+}
+
 @media (max-width:599px) {
   md-dialog.md-dialog-fullscreen {
     min-height: 100%;
@@ -725,6 +757,10 @@ home md-grid-list md-grid-tile.tile4 {
   .lnr-search-bar {
     width: 90%
   }
+
+  home .testimonials-text {
+    width: 100%;
+  }
 }
 
 @media (min-width:600px) {
@@ -740,9 +776,34 @@ home md-grid-list md-grid-tile.tile4 {
 /*  BIKE CARD
 /*-----------------------------------------------------------------------------------*/
 
-md-card.lnr-bike-card {
+bike-card .bg,
+listing-card .bg {
+  width: 100%;
+  position: relative;
+  border-radius: 4px;
+}
+
+bike-card .bg:before,
+listing-card .bg:before {
+    content: "";
+    display: block;
+    padding-top: 66.667%;
+    float: left;
+}
+
+bike-card md-card.lnr-bike-card,
+listing-card md-card.lnr-bike-card {
   margin: 0;
   cursor: pointer;
+  position: relative;
+}
+
+bike-card md-card img.md-card-image,
+listing-card md-card img.md-card-image {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .lnr-bike-card md-card-title-text span {
@@ -1231,4 +1292,12 @@ md-grid-list a {
 
 #city-pages md-grid-tile.tile3 {
   background-image: url(../ui_images/citypages/berlin-rent-special.jpg);
+}
+
+@media (min-width: 1024px) {
+  md-list-item,
+  md-list-item .md-list-item-inner {
+    min-height: 30px !important;
+    height: 32px !important;
+  }
 }

@@ -72,7 +72,7 @@ angular.module('bike',[]).component('bike', {
         });
       };
 
-      bike.showCalendarDialog = function() {
+      bike.showCalendarDialog = function(event) {
         $mdDialog.show({
           controller: CalendarDialogController,
           controllerAs: 'calendarDialog',

@@ -5,7 +5,7 @@
   scr_lnr.type = 'text/javascript';
 
   var css_lnr = document.createElement("LINK");
-  css_lnr.href = "https://listnride-frontend-staging.herokuapp.com/lnr-embed.min.css";
+  css_lnr.href = "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.css";
   css_lnr.rel = "stylesheet";
 
   var css_mdl = document.createElement("LINK");
@@ -20,12 +20,19 @@
     $.get("https://api.listnride.com/v2/users/" + user_id, function (response) {
 
       var introText = {
-        en: 'We are currently offering the rental bikes listed below in ' + response.city +
-          '. You can easily book your bike rental online on partner website <a target="_blank" href="http://www.listnride.com">www.listnride.com</a>, by clicking on the bike you would like to rent, and pick-up the bike at the time you booked at our shop.',
-        de: 'Wir bieten aktuell die folgenden R&auml;der in ' + response.city + ' zum Verlieh an. Du kannst die Mietr&auml;der direkt auf <a target="_blank" href="http://www.listnride.com">www.listnride.com</a> online buchen, durch auf das gew&uuml;nschte Fahrrad zu klicken und dann zum gew&uuml;nschten Termin bei uns abholen.',
-        nl: 'Wij bieden momenteel de onderstaande fietsen in ' + response.city + ' te huur aan. Je kan deze eenvoudig via <a target="_blank" href="http://www.listnride.com">www.listnride.com</a> online boeken door op een van de fietsen te klikken. De fiets kan je dan op het geboekte tijdstip ophalen bij ons in de winkel.'
+        en: 'The bikes below are currently available for you to rent. ' +
+          'Simply click on the bike you&rsquo;d like to rent and you will be forwarded to ' +
+          '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a>, ' +
+          'where you can make the booking online.',
+        de: 'Diese Fahrr&auml;der stehen aktuell f&uuml;r den Verleih an Sie zur Verf&uuml;gung. ' +
+          'Durch klicken auf das gew&uuml;nschte Fahrrad, werden Sie auf ' +
+          '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a> ' +
+          'weitergeleitet und k&ouml;nnen dort die Online-Buchung abschlie&szlig;en.',
+        nl: 'De onderstaande fietsen bieden wij uw momenteel te huur aan. ' +
+          'Indien je de fiets naar wens aanklikt, kom je op de site ' +
+          '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a> ' +
+          'terecht alwaar je de boeking online kan afronden. '
       };
-      
       var selectedLangText, dayText;
       if ('en' === user_lang) {
         selectedLangText = introText.en;

@@ -17,8 +17,8 @@
     "per": "per",
     "hour": "Uur",
     "hours": "Uren",
-    "half-day": "Halve dag (max 6u)",
-    "day": "Dag",
+    "half-day": "Halve dag",
+    "day": "Dag (> 6u)",
     "days": "Dagen",
     "week": "Week",
     "weeks": "Weken",
@@ -548,8 +548,12 @@
       "title": " Join the team!",
       "content": "Je weet altijd meer over fietsen dan anderen? Je houdt ervan bij weer en wind op de fiets te zitten? Dan ben je waarschijnlijk een fietsfanaat – en pas je waarschijnlijk ook goed in ons team. Check of wij momenteel een interessante baan voor je hebben of stuur ons je sollicitatie toe."
     },
+    "view": "Bekijk",
     "meta-title": "Werken bij listnride",
-    "meta-description": "Join ons team en help mee aan het bouwen van een nieuwe generatie fietsverhuur."
+    "meta-description": "Join ons team en help mee aan het bouwen van een nieuwe generatie fietsverhuur.",
+    "apply": "Nu toepassen",
+    "open": "Open Posities",
+    "description-info": "Alleen beschikbaar in het Engels"
   },
 
   "contact-and-help": {
@@ -680,7 +684,7 @@
   "cities": {
     "berlin": {
       "title": "Berlin",
-      "subtitle": "Explore Berlin by Bike",
+      "subtitle": "Explore Berlin by Bike with listnride",
       "description": "Find some places off the beaten track",
       "search-title": "Search our selection of bikes in Berlin",
       "search-subtitle": "Pick a bike fitting your style and need",
@@ -695,6 +699,60 @@
       "rent-city": "Rent City Bikes",
       "rent-ebike": "Rent E-Bikes",
       "rent-special": "Rent Special bikes"
+    },
+    "munich": {
+      "title": "",
+      "subtitle": "",
+      "description": "",
+      "search-title": "",
+      "search-subtitle": "",
+      "about": "",
+      "about-content": "",
+      "bike-routes": "",
+      "bike-shops": "",
+      "cafes-bars": "",
+      "bike-routes-content": "",
+      "bike-shops-content": "",
+      "cafes-bars-content": "",
+      "rent-city": "",
+      "rent-ebike": "",
+      "rent-special": ""
+    },
+    "amsterdam": {
+      "title": "",
+      "subtitle": "",
+      "description": "",
+      "search-title": "",
+      "search-subtitle": "",
+      "about": "",
+      "about-content": "",
+      "bike-routes": "",
+      "bike-shops": "",
+      "cafes-bars": "",
+      "bike-routes-content": "",
+      "bike-shops-content": "",
+      "cafes-bars-content": "",
+      "rent-city": "",
+      "rent-ebike": "",
+      "rent-special": ""
+    },
+    "vienna": {
+      "title": "",
+      "subtitle": "",
+      "description": "",
+      "search-title": "",
+      "search-subtitle": "",
+      "about": "",
+      "about-content": "",
+      "bike-routes": "",
+      "bike-shops": "",
+      "cafes-bars": "",
+      "bike-routes-content": "",
+      "bike-shops-content": "",
+      "cafes-bars-content": "",
+      "rent-city": "",
+      "rent-ebike": "",
+      "rent-special": ""
     }
   },
 

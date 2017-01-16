@@ -18,6 +18,7 @@ angular.module('listnride', [
   'edit',
   'rating',
   'settings',
+  'jobs',
   'listingABike',
   'rentingABike',
   'raphaSuperCross',
@@ -36,7 +37,10 @@ angular.module('listnride', [
   'ngFileUpload',
   'ngSanitize',
   'angular-input-stars',
-  'ngMeta'
+  'ngMeta',
+  'slickCarousel',
+  'angulartics',
+  'angulartics.google.analytics'
 ])
 .config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider', 'ENV',
   function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider, ENV) {
@@ -85,6 +89,7 @@ angular.module('listnride', [
     $translateProvider.preferredLanguage(retrieveLocale());
     $translateProvider.useSanitizeValueStrategy(['escapeParameters']);
     ngMetaProvider.setDefaultTitle('listnride');
+    ngMetaProvider.setDefaultTag('prerender-status-code', '200');
   }
 ])
 .run(['ngMeta', '$rootScope', '$location', function(ngMeta, $rootScope, $location) {
