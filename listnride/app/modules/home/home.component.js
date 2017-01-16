@@ -18,7 +18,7 @@ angular.module('home',[]).component('home', {
         enabled: true,
         autoplay: true,
         draggable: true,
-        autoplaySpeed: 15000,
+        autoplaySpeed: 12000,
         ease: 'ease-in-out',
         speed: '500',
         prevArrow: "<img class='testimonials-prev-arrow slick-prev' src='app/assets/ui_images/back.png'>",
