@@ -1293,3 +1293,11 @@ md-grid-list a {
 #city-pages md-grid-tile.tile3 {
   background-image: url(../ui_images/citypages/berlin-rent-special.jpg);
 }
+
+@media (min-width: 1024px) {
+  md-list-item,
+  md-list-item .md-list-item-inner {
+    min-height: 30px !important;
+    height: 32px !important;
+  }
+}
