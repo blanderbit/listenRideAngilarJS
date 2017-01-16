@@ -3,8 +3,8 @@
 angular.module('home',[]).component('home', {
   templateUrl: 'app/modules/home/home.template.html',
   controllerAs: 'home',
-  controller: [ '$state', '$translate', 'api', 'ngMeta',
-    function HomeController($state, $translate, api, ngMeta) {
+  controller: [ '$state', '$translate', '$analytics', 'api', 'ngMeta',
+    function HomeController($state, $translate, $analytics, api, ngMeta) {
       var home = this;
 
       ngMeta.setTitle($translate.instant("home.meta-title"));
@@ -50,6 +50,7 @@ angular.module('home',[]).component('home', {
 
       home.placeChanged = function(place) {
         var location = place.formatted_address || place.name;
+        $analytics.eventTrack('search', {  category: 'form', label: location, value: 8 });
         $state.go('search', {location: location});
       };
 

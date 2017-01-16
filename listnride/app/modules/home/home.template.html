@@ -16,7 +16,7 @@
 
     <form class="lnr-search-bar md-whiteframe-3dp" layout="row" md-theme="default">
       <autocomplete autocomplete-id="home" flex="75" layout="column" location="home.location" placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}" place-changed="home.placeChanged(place)"></autocomplete>
-      <md-button ng-click="home.onSearchClick()" class="md-raised md-primary" id="submit" flex="25">{{ 'shared.search' | translate }}</md-button>
+      <md-button ng-click="home.onSearchClick()" class="md-raised md-primary" id="submit" flex="25" analytics-on analytics-event="search" analytics-label="{{ home.location }}" analytics-category="form" analytics-value="8">{{ 'shared.search' | translate }}</md-button>
     </form>
   </div>
 

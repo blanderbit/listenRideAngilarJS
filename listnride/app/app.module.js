@@ -38,7 +38,9 @@ angular.module('listnride', [
   'ngSanitize',
   'angular-input-stars',
   'ngMeta',
-  'slickCarousel'
+  'slickCarousel',
+  'angulartics',
+  'angulartics.google.analytics'
 ])
 .config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider', 'ENV',
   function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider, ENV) {
