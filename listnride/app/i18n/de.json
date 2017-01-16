@@ -553,7 +553,9 @@
     "meta-title": "Stellenangebote bei listnride",
     "meta-description": "Werde Mitglied des Teams und treibe die zeitgemäße Art des Fahrradverleihs voran.",
     "apply": "Jetzt bewerben",
-        "see-all": "See Other Jobs"
+    "see-all": "See Other Jobs",
+    "open": "Offene Positionen",
+    "description-info": "Beschreibung nur auf Englisch verfügbar"
   },
 
   "contact-and-help": {

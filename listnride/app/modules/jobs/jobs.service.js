@@ -4,18 +4,6 @@ angular.module('jobs').factory('JobsService', ['$q', function ($q) {
         title: 'Junior Business Development Manager (M/F)',
         location: 'Berlin',
         trype: 'Full time'
-    }, {
-        title: 'Junior Business Development Manager (M/F)',
-        location: 'Berlin',
-        trype: 'Full time'
-    }, {
-        title: 'Junior Business Development Manager (M/F)',
-        location: 'Berlin',
-        trype: 'Full time'
-    }, {
-        title: 'Junior Business Development Manager (M/F)',
-        location: 'Berlin',
-        trype: 'Full time'
     }];
 
     var jobDetails = [{
@@ -41,7 +29,7 @@ angular.module('jobs').factory('JobsService', ['$q', function ($q) {
             ]
         },
         offer: {
-            title: 'What you have',
+            title: 'What we have',
             desc: [
                 'Launched a successful bike sharing platform late 2015, now growing fast',
                 'User presence in over 8 countries',
@@ -69,7 +57,7 @@ angular.module('jobs').factory('JobsService', ['$q', function ($q) {
         // positionId should be used to fetch details from server
         var deferred = $q.defer();
         deferred.resolve({
-            data: jobDetails[0]
+            data: jobDetails[positionId]
         });
         return deferred.promise;
     };
