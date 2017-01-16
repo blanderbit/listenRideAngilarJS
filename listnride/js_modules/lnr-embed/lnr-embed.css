@@ -1,17 +1,27 @@
-@media screen and (min-width:1200px) {
-  .mdl-grid {
+@media screen and (min-width:1280px) {
+  div.mdl-grid {
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
     margin: 0 100px !important
   }
 }
 
-/*@media (min-width: 840px) {
-  .mdl-cell--4-col, .mdl-cell--4-col-desktop.mdl-cell--4-col-desktop {
-    width: calc(33.3333333333% - 1px);
-    margin: 0px;
+@media screen and (max-width:1024px) {
+  div.mdl-grid {
+    padding: 0px;
   }
 }
 
-@media (max-width: 839px) and (min-width: 480px) {
+/*@media (max-width: 840px) {
+  .mdl-cell--4-col, .mdl-cell--4-col-desktop.mdl-cell--4-col-desktop {
+    width: calc(1% - 1px);
+    margin: 0px;
+  }
+}*/
+
+/*@media (max-width: 839px) and (min-width: 480px) {
   .mdl-cell--4-col, .mdl-cell--4-col-tablet.mdl-cell--4-col-tablet {
     width: calc(50% - 1px);
     margin: 0px;
@@ -23,7 +33,7 @@
 }
 
 .lnr-card-wide.mdl-card {
-  width: 100%
+  width: 100% !important
 }
 
 .lnr-card-wide>.mdl-card__menu {
@@ -37,7 +47,7 @@
 }
 
 .lnr-card-event>.mdl-card__actions>.material-icons {
-  padding-right: 10px
+  padding-right: 10px !important
 }
 
 
@@ -45,30 +55,40 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 md-card {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 
 /* general */
 
 .md-color-foreground {
-  color: rgb(85, 85, 85);
+  color: rgb(85, 85, 85) !important;
 }
 
-.lnr-icn-lrg {
+md-icon.lnr-icn-lrg {
   width: 48px;
   height: 48px;
 }
-
+md-icon > img {
+    border: none !important;
+}
 .lnr-margin-left {
   margin-left: 8px;
 }
-
+div.lnr-introtext {
+  padding: 40px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif !important;
+}
+a:link, a:visited, a:active, a:hover, a:focus {
+    color: rgb(95, 198, 147);
+}
 .md-subhead {
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 24px;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 .md-headline {
@@ -98,10 +118,11 @@ md-card md-card-title-media a img {
   flex-basis: auto;
   width: 100%;
   height: auto;
+  border: none !important;
 }
 
 md-card {
-  box-sizing: border-box;
+  box-sizing: border-box !important;;
   cursor: pointer;
   display: flex;
   -webkit-box-orient: vertical;
@@ -158,11 +179,11 @@ md-card md-card-title md-card-title-text {
 }
 
 md-card md-card-title md-card-title-text .md-subhead {
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
-.lnr-bike-card md-card-title-text span {
-  max-width: 155px;
+md-card.lnr-bike-card md-card-title-text span {
+  max-width: 92%;
   white-space: nowrap;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -174,8 +195,6 @@ md-icon {
   margin-right: auto;
   margin-bottom: auto;
   margin-left: auto;
-  background-repeat-x: no-repeat;
-  background-repeat-y: no-repeat;
   color: rgb(68, 68, 68);
   display: inline-block;
   vertical-align: middle;
@@ -183,7 +202,7 @@ md-icon {
   height: 24px;
   width: 24px;
   min-height: 24px;
-  min-width: 24px;
+  min-width: 44px;
 }
 
 md-icon svg {
@@ -230,4 +249,5 @@ md-icon svg {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column;
+  min-width: 0px;
 }
