@@ -27,7 +27,7 @@
         de: 'Diese Fahrr&auml;der stehen aktuell f&uuml;r den Verleih an Sie zur Verf&uuml;gung. ' +
           'Durch klicken auf das gew&uuml;nschte Fahrrad, werden Sie auf ' +
           '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a> ' +
-          'weitergeleitet und können dort die Online-Buchung abschlie&szlig;en.',
+          'weitergeleitet und k&ouml;nnen dort die Online-Buchung abschlie&szlig;en.',
         nl: 'De onderstaande fietsen bieden wij uw momenteel te huur aan. ' +
           'Indien je de fiets naar wens aanklikt, kom je op de site ' +
           '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a> ' +
