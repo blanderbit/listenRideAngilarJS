@@ -47,9 +47,9 @@
 
       $("#listnride")
         // intro text
-        .append('<div class="mdl-grid"</div><div mdl-cell mdl-cell--4-col mdl-cell--middle><div style="padding:40px;font-size:15px;">' + selectedLangText + '</div></div>')
+        .append('<div class="mdl-grid"</div><div mdl-cell mdl-cell--4-col><div class="lnr-introtext">' + selectedLangText + '</div></div>')
         // bikes rendering
-        .append('<div class="mdl-grid" id="lnr-grid"></div>');
+        .append('<div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid"></div>');
 
       var rootUrl = 'http://www.listnride.com';
       var grid = $("#lnr-grid");
@@ -66,11 +66,12 @@
 
         grid.append(
           '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">' +
-          '<bike-card class="flex-gt-xs-50 flex-gt-sm-33 flex-100">' +
+          '<bike-card>' +
           '<md-card class="lnr-bike-card _md">' +
           '<a target="_blank" href="http://www.listnride.com/bikes/' + rideId + '"><img src="' + imageUrl + '"></img></a>' +
           '<md-card-title layout="row" class="layout-row">' +
-          '<md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true"><img src="' + svgUrl + '" height="48" width="48"></img></md-icon>' +
+          '<md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true">'+
+          '<img src="' + svgUrl + '" height="48" width="48"></img></md-icon>' +
           '<md-card-title-text class="lnr-margin-left layout-align-space-around-start layout-column">' +
           '<span class="md-subhead">' + brand + ', ' + categoryDesc + '</span>' +
           '<span>' + name + '</span>' +
