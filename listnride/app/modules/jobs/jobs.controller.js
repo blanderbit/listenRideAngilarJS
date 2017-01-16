@@ -6,7 +6,6 @@ angular.module('jobs', [])
             var jobs = this;
             JobsService.getAvailableJobs().then(function (response) {
                 jobs.availableJobs = response.data;
-                console.log(response.data);
             }, function (error) {});
         }
     ])
@@ -22,11 +21,8 @@ angular.module('jobs', [])
             function getJobDetails() {
                 JobsService.getJobsDetails($stateParams.positionId-1).then(function (response) {
                     jobs.details = response.data;
-                    console.log('jobs details: ', jobs.details);
                 }, function (error) {});
             }
-
             jobs.getJobDetails();
-            console.log($stateParams);
         }
     ]);
