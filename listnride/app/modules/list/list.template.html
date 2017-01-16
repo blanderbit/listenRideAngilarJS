@@ -240,17 +240,17 @@
 
                 <md-input-container>
                   <label>{{ 'list.pricing.half-daily-price' | translate }} (€)</label>
-                  <input type="text" ng-pattern="/^\d+$/" maxlength="3" required ng-model="list.form.price_half_daily">
+                  <input name="halfDailyPrice" type="text" ng-pattern="/^[1-9]+[0-9]*$/" maxlength="3" required ng-model="list.form.price_half_daily" ng-change="list.halfPriceChanged()">
                 </md-input-container>
 
                 <md-input-container>
                   <label>{{ 'list.pricing.daily-price' | translate }} (€)</label>
-                  <input type="text" ng-pattern="/^\d+$/" maxlength="3" required ng-model="list.form.price_daily">
+                  <input name="dailyPrice" type="text" ng-pattern="/^\d+$/" maxlength="3" required ng-model="list.form.price_daily">
                 </md-input-container>
 
                 <md-input-container>
                   <label>{{ 'list.pricing.weekly-price' | translate }} (€)</label>
-                  <input type="text" ng-pattern="/^\d+$/" maxlength="3" required ng-model="list.form.price_weekly">
+                  <input name="weeklyPrice" type="text" ng-pattern="/^\d+$/" maxlength="3" required ng-model="list.form.price_weekly">
                 </md-input-container>
               </div>
 

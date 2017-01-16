@@ -28,6 +28,32 @@ angular.module('settings',[]).component('settings', {
         }
       );
 
+      settings.fillAddress = function(place) {
+        console.log(place);
+        var components = place.address_components;
+        if (components) {
+          var desiredComponents = {
+            "street_number": "",
+            "route": "",
+            "locality": "",
+            "country": "",
+            "postal_code": ""
+          };
+
+          for (var i = 0; i < components.length; i++) {
+            var type = components[i].types[0];
+            if (type in desiredComponents) {
+              desiredComponents[type] = components[i].long_name;
+            }
+          }
+
+          settings.user.street = desiredComponents.route + " " + desiredComponents.street_number;
+          settings.user.zip = desiredComponents.postal_code;
+          settings.user.city = desiredComponents.locality;
+          settings.user.country = desiredComponents.country;
+        }
+      };
+
       settings.addPayoutMethod = function() {
         var data = {
           "payment_method": settings.payoutMethod

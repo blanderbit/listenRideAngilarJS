@@ -549,8 +549,13 @@
       "title" : "Join our team",
       "content": "Do you always know more about bikes than others? Do you love jumping on the saddle and going for a ride, come rain or shine? Then you are in all likelihood a true bike aficionado – and would make a great addition to our team. Have a look to see if we currently have a vacancy that is right for you, and feel free to send us your application."
     },
+    "view": "View",
     "meta-title": "Jobs at listnride",
-    "meta-description": "Become a member of our team and promote the modern approach to renting bikes."
+    "meta-description": "Become a member of our team and promote the modern approach to renting bikes.",
+    "apply": "Apply Now",
+    "see-all": "See Other Jobs",
+    "open": "Open Positions",
+    "description-info": "Description only available in English"
   },
 
   "contact-and-help" : {

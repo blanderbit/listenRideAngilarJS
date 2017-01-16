@@ -8,6 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="{{ngMeta.description}}">
+  <meta name="prerender-status-code" content="{{ngMeta['prerender-status-code']}}" />
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
   <meta name="fragment" content="!">
 
@@ -25,6 +26,8 @@
   <link rel="stylesheet" href="js_modules/daterangepicker/daterangepicker.css" />
   <link rel="stylesheet" href="app/assets/stylesheets/app.css" />
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick-theme.css">
   <!-- endbuild -->
   <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAwLiE4WWvLne4sR4WuFlEYWtu-chKOTRs"></script>
   <!-- build:js vendors.min.js -->
@@ -46,8 +49,10 @@
   <script src="node_modules/ngmap/build/scripts/ng-map.min.js"></script>
   <script src="node_modules/angularjs-scroll-glue/src/scrollglue.js"></script>
   <script src="node_modules/moment/min/moment.min.js"></script>
-  <script src="node_modules/ng-meta/dist/ngMeta.min.js"></script>
+  <script src="js_modules/ng-meta/ngMeta.js"></script>
   <script src="js_modules/daterangepicker/jquery.daterangepicker.js"></script>
+  <script src="node_modules/slick-carousel/slick/slick.js"></script>
+  <script src="node_modules/angular-slick-carousel/dist/angular-slick.min.js"></script>
   <!-- endbuild -->
   <!-- build:js app.min.js -->
   <script src="app/app.constants.js"></script>
@@ -74,6 +79,9 @@
   <script src="app/modules/events/rapha-super-cross/rapha-super-cross.component.js"></script>
   <script src="app/modules/static/static.component.js"></script>
   <script src="app/modules/brand-integration/ampler.component.js"></script>
+
+  <script src="app/modules/jobs/jobs.controller.js"></script>  
+  <script src="app/modules/jobs/jobs.service.js"></script>  
   
   <script src="app/app.module.js"></script>
   <script src="app/app.routes.js"></script>

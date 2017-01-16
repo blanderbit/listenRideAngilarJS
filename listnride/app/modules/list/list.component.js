@@ -150,7 +150,10 @@ angular.module('list',[]).component('list', {
       list.isPricingValid = function() {
         return list.form.price_half_daily !== undefined &&
           list.form.price_daily !== undefined &&
-          list.form.price_weekly !== undefined;
+          list.form.price_weekly !== undefined &&
+          list.form.price_weekly < 1000 &&
+          list.form.price_half_daily < 1000 &&
+          list.form.price_daily < 1000;
       };
 
       list.categoryChange = function(oldCategory) {
@@ -181,6 +184,16 @@ angular.module('list',[]).component('list', {
           list.form.zip = desiredComponents.postal_code;
           list.form.city = desiredComponents.locality;
           list.form.country = desiredComponents.country;
+        }
+      };
+
+      list.halfPriceChanged = function() {
+        if ($scope.listBike.dailyPrice.$pristine) {
+          list.form.price_daily = Math.round(1.5 * list.form.price_half_daily);
+        }
+
+        if ($scope.listBike.weeklyPrice.$pristine) {
+          list.form.price_weekly = Math.round(5 * list.form.price_daily);
         }
       };
 

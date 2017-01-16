@@ -1,0 +1,37 @@
+<div class="content" layout-padding>
+    <div class="md-body-1"  flex-gt-sm="100" layout="column" layout-gt-sm="row" layout-align="space-around stretch" layout-padding>
+        <div layout="column" layout-align="space-around stretch" layout-margin>
+            <h5><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;{{'jobs.description-info' | translate}}</h5>
+            <h4 class="md-subhead">
+                listnride is a community bike-sharing platform, like the Airbnb for bicycles. With a large amount and variety of bikes, our
+                users can easily rent bicycles, matching their style and purpose. Be it for a sightseeing trip, for a fast
+                cycling tour or for a family holiday. Having direct contact with a local, the bike owner, recommendations
+                on the best cycling routes in the city and or a nice museum or coffee shop, are easily shared. Bikes are
+                provided by private listers, bike shop and bike brands aiming to connect with potential prospects. Founded
+                in Berlin listnride is growing fast into other cities e.g. Amsterdam, Hamburg, Munich and Vienna as well
+                as bike regions e.g. Mallorca. We have set our ambition high and want to be the leading p2p bike sharing
+                provider in Europe by the end of 2018.
+            </h4>
+            <h5 class="md-subhead">
+                To reach our goals we are looking for talented people with a digital dna, a passion for biking / outdoor and a can-do mentality!
+                To be more specific we are looking for:
+            </h5>
+            <h1 layout="column" layout-gt-sm="row" layout-align="space-around stretch" class="md-headline" layout-padding>{{jobs.details.title}}</h1>
+            <h3><strong>{{jobs.details.role.title}}:&nbsp</strong></h3>
+            <md-list>
+                <md-list-item ng-repeat="desc in jobs.details.role.desc">&bull;&nbsp{{desc}}</md-list-item>
+            </md-list>
+            <h3><strong>{{jobs.details.required.title}}:&nbsp</strong></h3>
+            <md-list class="md-dense">
+                <md-list-item ng-repeat="desc in jobs.details.required.desc">&bull;&nbsp{{desc}}</md-list-item>
+            </md-list>
+            <h3><strong>{{jobs.details.offer.title}}:&nbsp</strong></h3>
+            <md-list class="md-dense">
+                <md-list-item ng-repeat="desc in jobs.details.offer.desc">&bull;&nbsp{{desc}}</md-list-item>
+            </md-list>
+            <div layout="row" layout-align="start center" layout-margin>
+                <a href="mailto:contact@listnride.com?Subject=Application%20for%20{{jobs.details.title}}" target="_top" class="md-raised md-primary md-button md-lnr-dark-theme md-ink-ripple">{{ 'jobs.apply' | translate }}</a>
+            </div>
+        </div>
+    </div>
+</div>
