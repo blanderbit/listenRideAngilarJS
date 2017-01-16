@@ -21,7 +21,7 @@
 
       var introText = {
         en: 'The bikes below are currently available for you to rent. ' +
-          'Simply click on the bike you’d like to rent and you will be forwarded to ' +
+          'Simply click on the bike you&rsquo;d like to rent and you will be forwarded to ' +
           '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a>, ' +
           'where you can make the booking online.',
         de: 'Diese Fahrr&auml;der stehen aktuell f&uuml;r den Verleih an Sie zur Verf&uuml;gung. ' +
