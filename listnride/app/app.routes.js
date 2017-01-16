@@ -329,7 +329,7 @@ config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$location
       url: '/embed-bikes-test/{userId}/{userLang}',
       templateProvider: function ($timeout, $stateParams) {
         return $timeout(function () {
-          return '<div><script src="https://listnride-frontend-staging.herokuapp.com/lnr-embed.min.js"></script><div id="listnride" data-user="'
+          return '<div><script src="https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.js"></script><div id="listnride" data-user="'
             + $stateParams.userId + '" data-lang="' + $stateParams.userLang + '"></div><div>'
         }, 100);
       }
