@@ -1,6 +1,6 @@
 <div class="content" layout-padding>
     <div class="md-body-1"  flex-gt-sm="100" layout="column" layout-gt-sm="row" layout-align="space-around stretch" layout-padding>
-        <div layout="column" layout-align="space-around stretch" layout-margin>
+        <div id="jobs-details" layout="column" layout-align="space-around stretch" layout-margin>
             <h5><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;{{'jobs.description-info' | translate}}</h5>
             <h4 class="md-subhead">
                 listnride is a community bike-sharing platform, like the Airbnb for bicycles. With a large amount and variety of bikes, our
@@ -22,11 +22,11 @@
                 <md-list-item ng-repeat="desc in jobs.details.role.desc">&bull;&nbsp{{desc}}</md-list-item>
             </md-list>
             <h3><strong>{{jobs.details.required.title}}:&nbsp</strong></h3>
-            <md-list class="md-dense">
+            <md-list>
                 <md-list-item ng-repeat="desc in jobs.details.required.desc">&bull;&nbsp{{desc}}</md-list-item>
             </md-list>
             <h3><strong>{{jobs.details.offer.title}}:&nbsp</strong></h3>
-            <md-list class="md-dense">
+            <md-list>
                 <md-list-item ng-repeat="desc in jobs.details.offer.desc">&bull;&nbsp{{desc}}</md-list-item>
             </md-list>
             <div layout="row" layout-align="start center" layout-margin>
