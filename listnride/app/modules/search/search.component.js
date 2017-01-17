@@ -118,6 +118,12 @@ angular.module('search',[]).component('search', {
           location: location
         };
         console.log($translate.instant("search.meta-title", data));
+        $translate("search.meta-title", data).then(
+          function (translation) {
+            ngMeta.setTitle(translation);
+            console.log("translation is: " + translation);
+          }
+        );
         ngMeta.setTitle($translate.instant("search.meta-title", data));
         ngMeta.setTag("description", $translate.instant("search.meta-description", data));
       }
