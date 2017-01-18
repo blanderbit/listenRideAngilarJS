@@ -17,40 +17,45 @@ angular.module('bike').component('calendar', {
       var calendar = this;
       calendar.authentication = authentication;
 
-      initOverview();
-      fetchUser();
-
-      var deregisterRequestsWatcher = $scope.$watch('calendar.requests', function() {
-        if (calendar.requests !== undefined) {
-          deregisterRequestsWatcher();
-          calendar.owner = calendar.userId == $localStorage.userId;
-          if (calendar.bikeFamily == 2) {
-            calendar.event.reserved();
-          }
-          angular.element('#bikeCalendar').dateRangePicker({
-            alwaysOpen: true,
-            container: '#bikeCalendar',
-            beforeShowDay: classifyDate,
-            inline: true,
-            selectForward: true,
-            showShortcuts: false,
-            showTopbar: false,
-            singleMonth: true,
-            startOfWeek: 'monday'
-          }).bind('datepicker-change', function(event, obj) {
-            var start = obj.date1;
-            start.setHours(calendar.startTime, 0, 0, 0);
-            var end = obj.date2;
-            end.setHours(calendar.endTime, 0, 0, 0);
-
-            $scope.$apply(function() {
-              calendar.startDate = start;
-              calendar.endDate = end;
-              dateChange(calendar.startDate, calendar.endDate);
-            })
-          });
-        }
+      fetchUser().then(function(response){
+        calendar.user = response.data;
+        initOverview();
+        initCalendar();
       });
+
+      function initCalendar() {
+        var deregisterRequestsWatcher = $scope.$watch('calendar.requests', function () {
+          if (calendar.requests !== undefined) {
+            deregisterRequestsWatcher();
+            calendar.owner = calendar.userId == $localStorage.userId;
+            if (calendar.bikeFamily == 2) {
+              calendar.event.reserved();
+            }
+            angular.element('#bikeCalendar').dateRangePicker({
+              alwaysOpen: true,
+              container: '#bikeCalendar',
+              beforeShowDay: classifyDate,
+              inline: true,
+              selectForward: true,
+              showShortcuts: false,
+              showTopbar: false,
+              singleMonth: true,
+              startOfWeek: 'monday'
+            }).bind('datepicker-change', function (event, obj) {
+              var start = obj.date1;
+              start.setHours(calendar.startTime, 0, 0, 0);
+              var end = obj.date2;
+              end.setHours(calendar.endTime, 0, 0, 0);
+
+              $scope.$apply(function () {
+                calendar.startDate = start;
+                calendar.endDate = end;
+                dateChange(calendar.startDate, calendar.endDate);
+              })
+            });
+          }
+        });
+      }
 
       calendar.onTimeChange = function(slot) {
         var slotDate = slot + "Date";
@@ -155,17 +160,13 @@ angular.module('bike').component('calendar', {
       calendar.isOptionEnabled = function($index, date) {
         if (date == undefined) {
           return true
-        } else {
-          var weekDay = $scope.openHours[date.getDay()];
-          if (weekDay !== null) {
-            var workingHours = openHours(weekDay);
-            if (!workingHours.includes($index + 6)) {
-              return false
-            } else {
-              return true
-            }
-          }
         }
+        var weekDay = calendar.user.open_hours.hours[date.getDay()];
+        if (weekDay !== null) {
+          var workingHours = openHours(weekDay);
+          return workingHours.includes($index + 6);
+        }
+        return false
       };
 
       function openHours(weekDay) {
@@ -223,9 +224,15 @@ angular.module('bike').component('calendar', {
           return [false, "date-past", ""];
         } else if (isReserved(date)) {
           return [false, "date-reserved", ""];
+        } else if (dateClosed(date)) {
+          return [false, "date-closed", ""];
         } else {
           return [true, "date-available", ""];
         }
+      }
+
+      function dateClosed(date) {
+        return calendar.user.open_hours.hours[date.getDay()] == null;
       }
 
       function isReserved(date) {
@@ -258,16 +265,7 @@ angular.module('bike').component('calendar', {
 
       // Get user from api
       function fetchUser() {
-        api.get('/users/' + $localStorage.userId).then(
-          function (success) {
-            var user = success.data;
-            $scope.user = user;
-            $scope.openHours = user.open_hours.hours
-          },
-          function (error) {
-
-          }
-        );
+        return api.get('/users/' + $localStorage.userId);
       }
 
       function dateChange(startDate, endDate) {
