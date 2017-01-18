@@ -18,6 +18,7 @@ angular.module('bike').component('calendar', {
       calendar.authentication = authentication;
 
       initOverview();
+      fetchUser();
 
       var deregisterRequestsWatcher = $scope.$watch('calendar.requests', function() {
         if (calendar.requests !== undefined) {
@@ -145,6 +146,38 @@ angular.module('bike').component('calendar', {
         {overnight: false, reserved: false, day: 23, month: eventMonth, year: eventYear, text: "16:00 - 18:00", startTime: 16}
       ];
 
+      calendar.availabilityMessage = function($index, date) {
+        if (!calendar.isOptionEnabled($index, date)) {
+          return ' (closed)'
+        }
+      };
+
+      calendar.isOptionEnabled = function($index, date) {
+        if (date == undefined) {
+          return true
+        } else {
+          var weekDay = $scope.openHours[date.getDay()];
+          if (weekDay !== null) {
+            var workingHours = openHours(weekDay);
+            if (!workingHours.includes($index + 6)) {
+              return false
+            } else {
+              return true
+            }
+          }
+        }
+      };
+
+      function openHours(weekDay) {
+        var workingHours = [];
+        $.each( weekDay, function( key, value ) {
+          var from = value.start_at / 3600;
+          var until = (value.duration / 3600) + from + 1;
+          $.merge( workingHours, _.range(from,until) )
+        });
+        return workingHours
+      }
+
       calendar.event.changeSlot = function() {
         var slot = calendar.event.slots[calendar.event.slotId];
         calendar.startDate = new Date(eventYear, eventMonth - 1, slot.day, slot.startTime, 0, 0, 0);
@@ -164,9 +197,7 @@ angular.module('bike').component('calendar', {
           console.log(i);
           var startDate = new Date(calendar.requests[i].start_date);
           var endDate = new Date(calendar.requests[i].end_date);
-
           var startDay = startDate.getDate();
-          var endDay
           var startTime = startDate.getHours();
           var endTime = endDate.getHours();
           var startYear = startDate.getFullYear();
@@ -223,6 +254,20 @@ angular.module('bike').component('calendar', {
 
         calendar.formValid = false;
         calendar.datesValid = false;
+      }
+
+      // Get user from api
+      function fetchUser() {
+        api.get('/users/' + $localStorage.userId).then(
+          function (success) {
+            var user = success.data;
+            $scope.user = user;
+            $scope.openHours = user.open_hours.hours
+          },
+          function (error) {
+
+          }
+        );
       }
 
       function dateChange(startDate, endDate) {
