@@ -57,8 +57,8 @@
     <label>{{ 'shared.to' | translate }}  {{ calendar.endDate | date }}</label>
     <md-select ng-disabled="calendar.endDate === undefined" ng-change="calendar.onTimeChange('end')"
       ng-model="calendar.endTime" placeholder="{{ 'shared.to' | translate }}">
-      <md-option ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
-        {{ ($index + 6) + ":00" }}
+      <md-option ng-disabled="!calendar.isOptionEnabled($index, calendar.endDate)" ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
+        {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.endDate)}}
       </md-option>
     </md-select>
   </md-input-container>
