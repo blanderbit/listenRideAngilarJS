@@ -1294,10 +1294,24 @@ md-grid-list a {
   background-image: url(../ui_images/citypages/berlin-rent-special.jpg);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   #jobs-details md-list-item,
   md-list-item .md-list-item-inner {
     min-height: 30px;
     height: 32px;
   }
+}
+
+#jobs-details h1 {
+  margin: 34px 0px 20px 0px;
+}
+#jobs-details h3 {
+  margin-top: 24px;
+  margin-left: 0px;
+}
+#jobs-details md-list {
+   margin-left: -18px;
+}
+#jobs-details .list-align {
+   margin-left: -10px;
 }
