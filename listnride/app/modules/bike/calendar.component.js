@@ -12,18 +12,21 @@ angular.module('bike').component('calendar', {
     priceWeek: '<',
     requests: '<'
   },
-  controller: ['$scope', '$localStorage', '$state', '$mdDialog', '$translate', 'date', 'api', 'authentication', 'verification',
-    function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, date, api, authentication, verification) {
+  controller: ['$scope', '$localStorage', '$state', '$mdDialog', '$translate', 'date', 'api', 'authentication', 'verification', 'userApi',
+    function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, date, api, authentication, verification, userApi) {
       var calendar = this;
       calendar.authentication = authentication;
-
-      fetchUser().then(function(response){
-        calendar.user = response.data;
-        initOverview();
-        initCalendar();
-      });
+      calendar.$onInit = initCalendar;
 
       function initCalendar() {
+        userApi.getUserData().then(function(response){
+          calendar.user = response.data;
+          initOverview();
+          initCalendarPicker();
+        });
+      }
+
+      function initCalendarPicker() {
         var deregisterRequestsWatcher = $scope.$watch('calendar.requests', function () {
           if (calendar.requests !== undefined) {
             deregisterRequestsWatcher();
@@ -68,35 +71,28 @@ angular.module('bike').component('calendar', {
 
       calendar.onBikeRequest = function() {
         $mdDialog.hide();
-        api.get('/users/' + $localStorage.userId).then(
-          function (success) {
-            var user = success.data;
-            if (calendar.bikeFamily == 2 || (user.has_address && user.confirmed_phone && user.status >= 1)) {
-              var data = {
-                user_id: $localStorage.userId,
-                ride_id: calendar.bikeId,
-                start_date: calendar.startDate.toISOString(),
-                end_date: calendar.endDate.toISOString()
-              };
+        var user = calendar.user;
+        if (calendar.bikeFamily == 2 || (user.has_address && user.confirmed_phone && user.status >= 1)) {
+          var data = {
+            user_id: $localStorage.userId,
+            ride_id: calendar.bikeId,
+            start_date: calendar.startDate.toISOString(),
+            end_date: calendar.endDate.toISOString()
+          };
 
-              api.post('/requests', data).then(
-                function(response) {
-                  $state.go('requests', {requestId: response.data.id});
-                  console.log("Success", response);
-                },
-                function(error) {
-                  console.log("Error posting request", error);
-                }
-              );
+          api.post('/requests', data).then(
+            function(response) {
+              $state.go('requests', {requestId: response.data.id});
+              console.log("Success", response);
+            },
+            function(error) {
+              console.log("Error posting request", error);
             }
-            else {
-              verification.openDialog(false);
-            }
-          },
-          function (error) {
-
-          }
-        );
+          );
+        }
+        else {
+          verification.openDialog(false);
+        }
       };
 
       calendar.promptAuthentication = function(event) {
@@ -261,11 +257,6 @@ angular.module('bike').component('calendar', {
 
         calendar.formValid = false;
         calendar.datesValid = false;
-      }
-
-      // Get user from api
-      function fetchUser() {
-        return api.get('/users/' + $localStorage.userId);
       }
 
       function dateChange(startDate, endDate) {
