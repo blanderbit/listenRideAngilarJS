@@ -296,6 +296,7 @@
     "pictures": {
       "header": "Lade ein paar Fotos hoch",
       "hint": "Wähle nun ein paar schöne Fotos Deines Rads. Hier sind einige Tipps, wie du deine eigenen Fotos aufnehmen solltest.",
+      "how-to": "Fototipps, wie sich dein Angebot abhebt",
       "label": "Fotos",
       "select-images": "Fotos Wählen",
       "remove": "Löschen",
@@ -791,5 +792,16 @@
       "faq-question-9": "Sind die Fahrräder legal?",
       "faq-answer-9": "Ja. Unsere Fahrräder sind in der Lage eine Höchstgeschwindigkeit von 35km/h zu erreichen, sind aber standardmäßig nach EN15194 auf die Höchstgeschwindigkeit von 25 km/h begrenzt. Das bedeutet, dass der Motor nur bis zu 25km/h unterstützt. Du kannst diese Einstellungen über unsere Smartphone-App ändern."
     }
+  },
+
+  "how-to-shoot-bike-photo" : {
+    "title": "Fototipps, wie sich dein Angebot abhebt",
+    "subtitle": "Das erste, was sich potentielle Mieter ansehen, wenn sie ein Rad auf list-n-ride suchen, sind die Fotos im Überblick der Angebote. Die richtigen Fotos können einen großen Unterschied machen. Angebote mit guten Fotos bekommen mehr Interesse und werden öfter gebucht. Wir möchten Dir ein paar Tipps geben, wie Du dein Rad ins beste Licht rückst.",
+    "lighting-and-background-headline": "Beleuchtung und Hintergrund",
+    "lighting-and-background-body": "Nutze natürliches Licht und mach deine Fotos draußen im Tageslicht oder innen in der Nähe eines Fensters oder einer weißen Wand. Licht am Morgen oder später am Nachmittag sorgt für die besten Ergebnisse. Gestalte deinen Hintergrund so einfach wie möglich. Versuche einen Kontrast mit deinem Fahrrad zu erzeugen. Du kannst es zum Beispiel vor eine Betonmauer stellen.",
+    "how-to-shoot-headline": "Aufnahme",
+    "how-to-shoot-body": "Zeige verschiedene Perspektiven deines Fahrrads, mach das Foto lieber aus einem Winkel als direkt von vorne.",
+    "what-to-shoot-headline": "Motiv",
+    "what-to-shoot-body": "Hebe die Besonderheiten hervor. Nicht auf allen Bildern muss das Fahrrad komplett zu sehen sein. Es ist besser, einige Detailaufnahmen zu machen, wie vom Markennamen, der Farbe, den Lichtern, Schloss etc. Bilder sagen oft mehr als Worte."
   }
 }
