@@ -1315,3 +1315,16 @@ md-grid-list a {
 #jobs-details .list-align {
    margin-left: -10px;
 }
+
+/*-----------------------------------------------------------------------------------*/
+/*  HOW TO SHOOT BIKE PHOTO
+/*-----------------------------------------------------------------------------------*/
+
+.how-to-shoot-section{
+  text-align: center;
+}
+
+img.how-to-shoot {
+  width: 100%;
+  max-width: 500px;
+}

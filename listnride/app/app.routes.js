@@ -320,6 +320,12 @@ config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$location
       url: '/berlin',
       templateUrl: 'app/modules/static/cities-berlin.template.html'
     });
+
+    $stateProvider.state({
+      name: 'how-to-shoot-bike-photos',
+      url: '/how-to-shoot-the-best-bike-photos',
+      templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html'
+    });
     
     // for testing embed-bikes feature
     // change userID in route to fetch new bikes
