@@ -132,6 +132,12 @@
       });
 
       $stateProvider.state({
+        name: 'inVeloVeritas',
+        url: '/in-velo-veritas',
+        template: '<in-velo-veritas></in-velo-veritas>'
+      });
+
+      $stateProvider.state({
         name: 'listingABike',
         url: '/listing-a-bike',
         template: '<listing-a-bike></listing-a-bike>',

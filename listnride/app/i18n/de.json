@@ -675,6 +675,10 @@
   "events": {
     "rapha-super-cross": {
       "text": "Der Rapha Super Cross ist wieder zurück in München, zum dritten Mal. Wenn du gerne dabei sein möchtest aber kein geeignetes Rad hast, kannst du über listnride ein Rad mieten. Die listnride bike sharing community bietet verschiedene Crossräder zum Verleih an. Die Räder können vor der Veranstaltung bei den einzelnen Anbietern angefragt und gebucht werden. Die Übergabe wird direkt mit dem Vermieter vereinbart. Zusätzlich verfügbare Räder können auch noch zur Vermietung angeboten werden, um damit etwas zu verdienen und interessante Leute zu treffen, welche an der Veranstaltung teilnehmen. Werde Teil der wachsenden Community!"
+    },
+    "in-velo-veritas": {
+      "title": "In Velo Veritas - Die zeitlos Rad-Rundfahrt",
+      "text": "Die legendäre Vintage-Rennrad Tour findet nun zum 5. Mal statt. Am 10. und 11. Juni 2017 versammeln sich Fahrradliebhaber in Stockeraus (Österreich) um dort gemeinsam die Touren zu bestreiten. Für alle die gerne teilnehmen würden, allerdings kein zugelassenes Rennrad besitzen, haben wir passende Vintage-Räder von unserer Community zusammengestellt. Alle unten aufgeführten Räder entsprechen dem Reglement und Du kannst Sie einfach über listnride mieten. Falls du nicht teilnehmen kannst, vielleicht sogar mehrer Rennräder hast oder einfach einem gleichgesinnten Fahrrad Enthusiasten aushelfen möchtest: Mach mit und verleihe dein Fahrrad an Gleichgesinnte über listnride."
     }
   },
 
@@ -691,7 +695,7 @@
       "rent-special": "Miete dir ein Spezialrad",
       "rent-terrain": "Miete dir ein Mountainbike",
       "rent-road": "Miete dir ein Rennrad",
-      "rent-folding": "Miete dir ein Faltrad",
+      "rent-folding": "Miete dir ein Faltrad"
     },
 
     "berlin": {
