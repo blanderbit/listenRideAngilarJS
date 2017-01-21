@@ -22,8 +22,8 @@ angular.module('jobs').factory('JobsService', ['$q', function ($q) {
             role: {
                 title: 'Role & Responsibilities',
                 desc: [
-                    'Account management of existing professional listers to increase their presence and or keeping them informed on new platform developments',
-                    'Structural development of the number of professional lister accounts (bike shops / bike brands)',
+                    'Account management of existing professional listers to increase their presence',
+                    'Structural development of the number of professional lister accounts',
                     'Acquire new accounts through telesales activities and or shop visits ',
                     'Research, gather and structure prospect accounts in key locations ',
                     'Collect feedback from your accounts for improving product features',
