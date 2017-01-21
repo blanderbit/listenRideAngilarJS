@@ -122,9 +122,11 @@
                   <h3 class="md-subhead">{{ 'list.accessories.header' | translate }}</h3>
                 </div>
 
-                <md-checkbox ng-repeat="acc in edit.accessoryOptions" ng-model="edit.form[acc.model]">
-                  {{ 'list.accessories.' + acc.label | translate }}
-                </md-checkbox>
+                <div ng-repeat="acc in edit.accessoryOptions" class="accessory-checkbox" layout="row" layout-align="start center">
+                  <md-icon ng-class="edit.form[acc.model] ? 'checked' : 'unchecked'" class="lnr-icn-sm md-color-foreground accessory-icon"
+                    md-svg-src="app/assets/ui_icons/{{acc.iconFileName}}" ng-click="edit.onAccessoryClick(acc.model)"></md-icon>
+                  <div class="accessory-label no-select" ng-click="edit.onAccessoryClick(acc.model)">{{ 'list.accessories.' + acc.label | translate }}</div>
+                </div>
               </div>
 
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>

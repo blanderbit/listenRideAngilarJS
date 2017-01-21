@@ -81,6 +81,15 @@ md-grid-list md-grid-tile {
   cursor: pointer;
 }
 
+.no-select {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
@@ -1073,6 +1082,27 @@ list md-tabs .md-whiteframe-1dp {
   background-color: white;
 }
 
+list md-icon.accessory-icon,
+edit md-icon.accessory-icon {
+  margin: 0 8px 0 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+list md-icon.accessory-icon.checked,
+edit md-icon.accessory-icon.checked {
+  background-color: rgba(122, 178, 248, 0.5);
+}
+
+list .accessory-checkbox,
+edit .accessory-checkbox {
+  margin-bottom: 8px;
+}
+
+list .accessory-label,
+edit .accessory-label {
+  cursor: pointer;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*  LISTINGS
