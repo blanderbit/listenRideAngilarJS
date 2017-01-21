@@ -23,8 +23,13 @@
                   <h3 class="md-subhead">{{ 'list.category.header' | translate }}</h3>
                 </div>
                 <div layout="row" layout-align="space-between start">
-                  <md-radio-group ng-model="edit.form.mainCategory" flex="50" layout="column" ng-change="edit.categoryChange({{edit.form.mainCategory}})">
-                    <md-radio-button ng-repeat="cat in edit.categoryOptions"  value="{{cat.value}}">
+                  <md-radio-group ng-model="edit.form.mainCategory" flex="50" layout="column"
+                  ng-change="edit.categoryChange({{edit.form.mainCategory}})">
+                    <md-radio-button class="main-category" ng-repeat="cat in edit.categoryOptions"  value="{{cat.value}}">
+                      <md-icon class="lnr-icn-sm md-color-foreground accessory-icon"
+                      md-svg-src="app/assets/ui_icons/{{cat.iconFileName}}"
+                      ng-class="edit.form.mainCategory == cat.value ? 'checked' : 'unchecked'"></md-icon>
+                      
                       {{ 'list.category.' + cat.label.replace(' ', '-') | translate }}
                     </md-radio-button>
                   </md-radio-group>
