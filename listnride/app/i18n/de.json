@@ -687,10 +687,10 @@
     "shared": {
       "rent-city": "Miete dir ein Stadtrad",
       "rent-ebike": "Miete dir ein E-bike",
-      "rent-special": "Miete dir ein Spezialrad",
       "rent-terrain": "Miete dir ein Mountainbike",
       "rent-road": "Miete dir ein Rennrad",
       "rent-folding": "Miete dir ein Faltrad",
+      "rent-cargo": "Miete dir ein Lastenrad"
     },
 
     "berlin": {
