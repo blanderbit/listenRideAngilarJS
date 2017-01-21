@@ -1137,6 +1137,10 @@ listings .lnr-bike-card.lnr-unavailable img {
   opacity: 0.6;
 }
 
+#deleteBikeDialog .delete-bike-text {
+  padding: 24px;
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  CALCULATOR
