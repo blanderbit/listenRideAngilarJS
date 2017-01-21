@@ -66,7 +66,6 @@ config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$location
       },
       template: '<requests></requests>'
     });
-
     
     $stateProvider.state({
       name: 'list',
