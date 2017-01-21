@@ -320,6 +320,24 @@ config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$location
       url: '/berlin',
       templateUrl: 'app/modules/static/cities-berlin.template.html'
     });
+
+    $stateProvider.state({
+      name: 'cities-munich',
+      url: '/munich',
+      templateUrl: 'app/modules/static/cities-munich.template.html'
+    });
+
+    $stateProvider.state({
+      name: 'cities-amsterdam',
+      url: '/amsterdam',
+      templateUrl: 'app/modules/static/cities-amsterdam.template.html'
+    });
+
+    $stateProvider.state({
+      name: 'cities-vienna',
+      url: '/vienna',
+      templateUrl: 'app/modules/static/cities-vienna.template.html'
+    });
     
     // for testing embed-bikes feature
     // change userID in route to fetch new bikes

@@ -17,7 +17,7 @@
         <p translate="cities.berlin.about-content"></p>
         <br>
         <md-card class="lnr-bike-card">
-          <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-bikeroutes.jpg" alt="">
+          <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-routes.jpg" alt="">
         </md-card>
         <br>
         <h3 class="md-subhead">{{ 'cities.berlin.bike-routes' | translate }}</h3>
@@ -28,14 +28,14 @@
       </div>
       <div layout="column" flex-gt-xs="45">
         <md-card class="lnr-bike-card">
-          <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-bikestore.jpg" alt="">
+          <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-shops.jpg" alt="">
         </md-card>
         <br>
         <h3 class="md-subhead">{{ 'cities.berlin.bike-shops' | translate }}</h3>
         <p translate="cities.berlin.bike-shops-content"></p>
         <br>
         <md-card class="lnr-bike-card">
-          <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-coffee-eatery.jpg" alt="">
+          <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-cafes.jpg" alt="">
         </md-card>
         <br>
         <h3 class="md-subhead">{{ 'cities.berlin.cafes-bars' | translate }}</h3>
@@ -48,45 +48,25 @@
     </div>
 
     <md-grid-list id="city-pages" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="3" md-gutter="16px" md-row-height="1.5:1">
-      <md-grid-tile class="tile1">
+      <md-grid-tile class="berlin-1">
         <a ui-sref="search({ location: 'Berlin', city: true })" target="_blank" layout="row" layout-align="center center">
-          <h3 class="md-title">{{ 'cities.berlin.rent-city' | translate }}</h3>
+          <h3 class="md-title">{{ 'cities.shared.rent-city' | translate }}</h3>
         </a>
       </md-grid-tile>
 
-      <md-grid-tile class="tile2">
+      <md-grid-tile class="berlin-2">
         <a ui-sref="search({ location: 'Berlin', ebikes: true })" target="_blank" layout="row" layout-align="center center">
-          <h3 class="md-title">{{ 'cities.berlin.rent-ebike' | translate }}</h3>
+          <h3 class="md-title">{{ 'cities.shared.rent-ebike' | translate }}</h3>
         </a>
       </md-grid-tile>
 
-      <md-grid-tile class="tile3">
-        <a ui-sref="search({ location: 'Berlin', special: true })" target="_blank" layout="row" layout-align="center center">
-          <h3 class="md-title">{{ 'cities.berlin.rent-special' | translate }}</h3>
+      <md-grid-tile class="berlin-3">
+        <a ui-sref="search({ location: 'Berlin', race: true })" target="_blank" layout="row" layout-align="center center">
+          <h3 class="md-title">{{ 'cities.shared.rent-road' | translate }}</h3>
         </a>
       </md-grid-tile>
     </md-grid-list>
     <br>
-    <!-- <div layout="column" layout-gt-xs="row">
-      <div layout-margin flex-gt-xs="33" style="position: relative">
-        <div style="padding-top: 66.67%; background-size: cover; background-image: url('app/assets/ui_images/citypages/berlin-rent-city.jpg');">
-          <p style="position: absolute; height: 100px">hi</p>
-          <a ui-sref="search({ location: 'Amsterdam' })" layout="row" layout-align="center center" style="position: absolute;">
-            <h3 class="md-title">{{ 'shared.amsterdam' | translate }}</h3>
-          </a>
-        </div>
-      </div>
-      <div layout-margin flex-gt-xs="33">
-        <md-card class="lnr-bike-card">
-              <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-rent-ebike.jpg" alt="">
-        </md-card>
-      </div>
-      <div layout-margin flex-gt-xs="33">
-        <md-card class="lnr-bike-card">
-              <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-rent-special.jpg" alt="">
-        </md-card>
-      </div>
-    </div> -->
   </div>
 
   <footer></footer>
