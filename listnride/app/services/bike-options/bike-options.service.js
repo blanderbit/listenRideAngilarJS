@@ -41,12 +41,12 @@ angular
 
       categoryOptions: function() {
         return [
-          {value: 1, label: "city"},
-          {value: 2, label: "race"},
-          {value: 3, label: "all terrain"},
-          {value: 4, label: "kids"},
-          {value: 5, label: "electro"},
-          {value: 6, label: "special"}
+          {value: 1, label: "city", iconFileName: "biketype_1.svg"},
+          {value: 2, label: "race", iconFileName: "biketype_2.svg"},
+          {value: 3, label: "all terrain", iconFileName: "biketype_3.svg"},
+          {value: 4, label: "kids", iconFileName: "biketype_4.svg"},
+          {value: 5, label: "electro", iconFileName: "biketype_5.svg"},
+          {value: 6, label: "special", iconFileName: "biketype_6.svg"}
         ];
       },
 

@@ -1089,14 +1089,29 @@ edit md-icon.accessory-icon {
   border-radius: 50%;
 }
 
-list md-icon.accessory-icon.checked,
-edit md-icon.accessory-icon.checked {
-  background-color: rgba(122, 178, 248, 0.5);
+list md-icon.accessory-icon.checked svg path,
+list md-icon.accessory-icon.checked svg rect,
+list md-icon.accessory-icon.checked svg circle,
+edit md-icon.accessory-icon.checked svg path,
+edit md-icon.accessory-icon.checked svg rect,
+edit md-icon.accessory-icon.checked svg circle  {
+  fill: #7ab2f8;
+  color: #7ab2f8;
+}
+
+list md-radio-button.main-category .md-container,
+edit md-radio-button.main-category .md-container {
+  display: none;
+}
+
+list md-radio-button.main-category .md-label,
+edit md-radio-button.main-category .md-label {
+  margin-left: 0;
 }
 
 list .accessory-checkbox,
 edit .accessory-checkbox {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 list .accessory-label,
