@@ -796,14 +796,17 @@
     }
   },
 
-  "how-to-shoot-bike-photo": {
-    "title": "Photo tips for making your listing stand out",
-    "subtitle": "The first thing prospective riders look at when considering a bicycle on listnride are the photos in the listing overview. The right photo(s) can make all the difference. Listings with good photos will receive more interest and more bookings. We would like to give you a few tips on how to take the perfect shot of your bicycle.",
-    "lighting-and-background-headline": "Lighting and Background",
-    "lighting-and-background-body": "Use natural light, set up your shot outside during daylight or indoors near a window or a white wall. Early morning and late afternoon light will produce best results. Keep your background as simple as possible. Try to create a contrast to your bicycle. For example you can place your bicycle in front of a concrete wall.",
-    "how-to-shoot-headline": "How to Shoot",
-    "how-to-shoot-body": "Show some perspective of your bicycle, so rather shoot from an angle than a frontal perspective.",
-    "what-to-shoot-headline": "What to Shoot",
-    "what-to-shoot-body": "Highlight what’s amazing. It is not required that the whole bicycle is shown on all photos, rather shoot some details, like brand name, colouring, lights, lock etc. Let pictures get the message across."
+  "how-to-shoot-bike-photo" : {
+    "header": "Photo Tips",
+    "title": "A couple of photo tips for a stand out listing",
+    "subtitle": "The first thing prospective riders look at when considering a rental bicycle on listnride are the photos in the listing overview. Bike listings with good photos will receive more interest and more rentals.",
+    "headline-1": "Lighting",
+    "content-1": "Use natural light, set up your shot outside during daylight or indoors near a window or a white wall. Early morning and late afternoon light will produce best results.",
+    "headline-2": "Background",
+    "content-2": "Keep your background as simple as possible. Try to create a contrast to your bicycle. For example you can place your bicycle in front of a concrete wall.",
+    "headline-3": "What to shoot",
+    "content-3": "ZShow some perspective of your bicycle, so rather shoot from an angle than a frontal perspective. ",
+    "headline-4": "Setting",
+    "content-4": "Highlight what’s amazing. It is not required that the whole bicycle is shown on all photos, rather shoot some details, like brand name, colouring, lights, lock etc. Let pictures get the message across."
   }
 }

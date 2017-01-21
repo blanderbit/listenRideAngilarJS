@@ -368,7 +368,7 @@
 
       $stateProvider.state({
         name: 'how-to-shoot-bike-photos',
-        url: '/how-to-shoot-the-best-bike-photos',
+        url: '/how-to-shoot-bike-photos',
         templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html'
       });
 

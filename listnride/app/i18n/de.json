@@ -799,13 +799,16 @@
   },
 
   "how-to-shoot-bike-photo" : {
-    "title": "Fototipps, wie sich dein Angebot abhebt",
-    "subtitle": "Das erste, was sich potentielle Mieter ansehen, wenn sie ein Rad auf list-n-ride suchen, sind die Fotos im Überblick der Angebote. Die richtigen Fotos können einen großen Unterschied machen. Angebote mit guten Fotos bekommen mehr Interesse und werden öfter gebucht. Wir möchten Dir ein paar Tipps geben, wie Du dein Rad ins beste Licht rückst.",
-    "lighting-and-background-headline": "Beleuchtung und Hintergrund",
-    "lighting-and-background-body": "Nutze natürliches Licht und mach deine Fotos draußen im Tageslicht oder innen in der Nähe eines Fensters oder einer weißen Wand. Licht am Morgen oder später am Nachmittag sorgt für die besten Ergebnisse. Gestalte deinen Hintergrund so einfach wie möglich. Versuche einen Kontrast mit deinem Fahrrad zu erzeugen. Du kannst es zum Beispiel vor eine Betonmauer stellen.",
-    "how-to-shoot-headline": "Aufnahme",
-    "how-to-shoot-body": "Zeige verschiedene Perspektiven deines Fahrrads, mach das Foto lieber aus einem Winkel als direkt von vorne.",
-    "what-to-shoot-headline": "Motiv",
-    "what-to-shoot-body": "Hebe die Besonderheiten hervor. Nicht auf allen Bildern muss das Fahrrad komplett zu sehen sein. Es ist besser, einige Detailaufnahmen zu machen, wie vom Markennamen, der Farbe, den Lichtern, Schloss etc. Bilder sagen oft mehr als Worte."
+    "header": "Foto Tipps",
+    "title": "Ein paar Foto Tipps für ein attraktives Inserat",
+    "subtitle": "Das erste, was sich potentielle Mieter ansehen, wenn sie ein Mietrad auf listnride suchen, sind die Fotos im Überblick der Angebote. Leihräder mit guten Fotos bekommen mehr Interesse und werden öfter gebucht. ",
+    "headline-1": "Beleuchtung",
+    "content-1": "Nutze natürliches Licht und mach deine Fotos draußen im Tageslicht oder innen in der Nähe eines Fensters oder einer weißen Wand. Licht am Morgen oder später am Nachmittag sorgt für die besten  Ergebnisse.",
+    "headline-2": "Hintergrund",
+    "content-2": "Gestalte deinen Hintergrund so einfach wie möglich. Versuche einen Kontrast mit deinem Fahrrad zu erzeugen. Du kannst es zum Beispiel vor eine Betonmauer stellen.",
+    "headline-3": "Aufnahme",
+    "content-3": "Zeige verschiedene Perspektiven deines Fahrrads, mach das Foto z.B. aus einem Winkel als ausschließlich direkt von vorne.",
+    "headline-4": "Motiv",
+    "content-4": "Hebe die Besonderheiten hervor. Nicht auf allen Bildern muss das Fahrrad komplett zu sehen sein. Es ist besser, einige Detailaufnahmen zu machen, wie vom Markennamen, der Farbe, den Lichtern, Schloss etc. Bilder sagen oft mehr als Worte."
   }
 }
