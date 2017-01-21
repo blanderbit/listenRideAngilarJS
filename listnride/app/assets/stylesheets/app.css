@@ -1303,7 +1303,7 @@ md-grid-list a {
 }
 
 #city-pages md-grid-tile.berlin-3 {
-  background-image: url(../ui_images/citypages/berlin-rent-special.jpg);
+  background-image: url(../ui_images/citypages/berlin-rent-road.jpg);
 }
 
 #city-pages md-grid-tile.vienna-1 {
@@ -1319,15 +1319,15 @@ md-grid-list a {
 }
 
 #city-pages md-grid-tile.amsterdam-1 {
-  background-image: url(../ui_images/citypages/berlin-rent-city.jpg);
+  background-image: url(../ui_images/citypages/amsterdam-rent-city.jpg);
 }
 
 #city-pages md-grid-tile.amsterdam-2 {
-  background-image: url(../ui_images/citypages/berlin-rent-ebike.jpg);
+  background-image: url(../ui_images/citypages/amsterdam-rent-road.jpg);
 }
 
 #city-pages md-grid-tile.amsterdam-3 {
-  background-image: url(../ui_images/citypages/berlin-rent-special.jpg);
+  background-image: url(../ui_images/citypages/amsterdam-rent-cargo.jpg);
 }
 
 @media (min-width: 960px) {
