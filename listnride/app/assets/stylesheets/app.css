@@ -1388,14 +1388,15 @@ md-grid-list a {
 }
 
 #jobs-details h1 {
-  margin: 34px 0px 20px 0px;
+  margin: 34px 40px 30px 0px;
 }
 #jobs-details h3 {
   margin-top: 24px;
+  margin-bottom: 0px;
   margin-left: 0px;
 }
 #jobs-details md-list {
-   margin-left: -18px;
+   margin-left: -14px;
 }
 #jobs-details .list-align {
    margin-left: -10px;

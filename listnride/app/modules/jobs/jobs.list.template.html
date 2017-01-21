@@ -11,9 +11,7 @@
                 <md-subheader class="md-no-sticky">{{ 'jobs.open' | translate }}:</md-subheader>
                 <md-list-item ng-repeat="job in jobs.availableJobs">
                     <p> {{job.title}} </p>
-                    <a class="md-raised md-primary md-button md-lnr-dark-theme md-ink-ripple" ui-sref="jobs-details({positionId: $index+1})"> 
-                        {{ 'jobs.view' | translate }} 
-                    </a>
+                    <a href="#" ui-sref="jobs-details({positionId: $index+1})">{{ 'jobs.view' | translate }} </a>
                 </md-list-item>
             </md-list>
         </div>
