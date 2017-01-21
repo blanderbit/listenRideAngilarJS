@@ -17,20 +17,34 @@ angular.module('listingCard',[]).component('listingCard', {
     function ListingCardController($state, $mdDialog, $translate, api) {
       var listingCard = this;
 
-      listingCard.onDeleteClick = function(ev) {
-        var confirm = $mdDialog.confirm()
-          .title($translate.instant("listingCard.dialog-title"))
-          .textContent($translate.instant("listingCard.dialog-subtitle"))
-          .targetEvent(ev)
-          .ok($translate.instant("listingCard.delete"))
-          .cancel($translate.instant("listingCard.cancel"));
-
-        $mdDialog.show(confirm).then(function() {
-          deleteBike();
-        }, function() {
-          
+      listingCard.onDeleteClick = function(event) {
+        $mdDialog.show({
+          controller: DeleteBikeController,
+          controllerAs: 'deleteBikeDialog',
+          templateUrl: 'app/modules/shared/listing-card/delete-bike-dialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: true,
+          locals: {
+            deleteBike: deleteBike
+          }
         });
-      };
+      }
+
+      var DeleteBikeController = function(deleteBike) {
+        var deleteBikeDialog = this;
+
+        deleteBikeDialog.hide = function() {
+          $mdDialog.hide();
+        };
+
+        deleteBikeDialog.deleteBike = function() {
+          deleteBike();
+          $mdDialog.hide();
+        }
+      }
 
       listingCard.onActivateClick = function() {
         listingCard.disableActivate = true;

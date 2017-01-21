@@ -1137,6 +1137,10 @@ listings .lnr-bike-card.lnr-unavailable img {
   opacity: 0.6;
 }
 
+#deleteBikeDialog .delete-bike-text {
+  padding: 24px;
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  CALCULATOR
@@ -1327,16 +1331,52 @@ md-grid-list a {
   color: #fff;
 }
 
-#city-pages md-grid-tile.tile1 {
+#city-pages md-grid-tile.munich-1 {
+  background-image: url(../ui_images/citypages/munich-rent-city.jpg);
+}
+
+#city-pages md-grid-tile.munich-2 {
+  background-image: url(../ui_images/citypages/munich-rent-ebike.jpg);
+}
+
+#city-pages md-grid-tile.munich-3 {
+  background-image: url(../ui_images/citypages/munich-rent-terrain.jpg);
+}
+
+#city-pages md-grid-tile.berlin-1 {
   background-image: url(../ui_images/citypages/berlin-rent-city.jpg);
 }
 
-#city-pages md-grid-tile.tile2 {
+#city-pages md-grid-tile.berlin-2 {
   background-image: url(../ui_images/citypages/berlin-rent-ebike.jpg);
 }
 
-#city-pages md-grid-tile.tile3 {
-  background-image: url(../ui_images/citypages/berlin-rent-special.jpg);
+#city-pages md-grid-tile.berlin-3 {
+  background-image: url(../ui_images/citypages/berlin-rent-road.jpg);
+}
+
+#city-pages md-grid-tile.vienna-1 {
+  background-image: url(../ui_images/citypages/vienna-rent-city.jpg);
+}
+
+#city-pages md-grid-tile.vienna-2 {
+  background-image: url(../ui_images/citypages/vienna-rent-ebike.jpg);
+}
+
+#city-pages md-grid-tile.vienna-3 {
+  background-image: url(../ui_images/citypages/vienna-rent-road.jpg);
+}
+
+#city-pages md-grid-tile.amsterdam-1 {
+  background-image: url(../ui_images/citypages/amsterdam-rent-city.jpg);
+}
+
+#city-pages md-grid-tile.amsterdam-2 {
+  background-image: url(../ui_images/citypages/amsterdam-rent-road.jpg);
+}
+
+#city-pages md-grid-tile.amsterdam-3 {
+  background-image: url(../ui_images/citypages/amsterdam-rent-cargo.jpg);
 }
 
 @media (min-width: 960px) {
