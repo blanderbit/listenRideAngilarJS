@@ -197,6 +197,10 @@ angular.module('list',[]).component('list', {
         }
       };
 
+      list.onAccessoryClick = function(accessory) {
+        list.form[accessory] = !list.form[accessory];
+      };
+
     }
   ]
 });

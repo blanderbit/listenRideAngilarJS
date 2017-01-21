@@ -8,12 +8,12 @@ angular
     return {
       accessoryOptions: function() {
         return [
-          {model: "has_lock", label: "lock"},
-          {model: "has_helmet", label: "helmet"},
-          {model: "has_lights", label: "lights"},
-          {model: "has_basket", label: "basket"},
-          {model: "has_trailer", label: "trailer"},
-          {model: "has_childseat", label: "childseat"}
+          {model: "has_lock", label: "lock", iconFileName: "accessoire_lock.svg"},
+          {model: "has_helmet", label: "helmet", iconFileName: "accessoire_helmet.svg"},
+          {model: "has_lights", label: "lights", iconFileName: "accessoire_lights.svg"},
+          {model: "has_basket", label: "basket", iconFileName: "accessoire_basket.svg"},
+          {model: "has_trailer", label: "trailer", iconFileName: "accessoire_trailer.svg"},
+          {model: "has_childseat", label: "childseat", iconFileName: "accessoire_childseat.svg"}
         ]
       },
 
