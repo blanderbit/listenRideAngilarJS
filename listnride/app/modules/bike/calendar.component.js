@@ -71,28 +71,32 @@ angular.module('bike').component('calendar', {
 
       calendar.onBikeRequest = function() {
         $mdDialog.hide();
-        var user = calendar.user;
-        if (calendar.bikeFamily == 2 || (user.has_address && user.confirmed_phone && user.status >= 1)) {
-          var data = {
-            user_id: $localStorage.userId,
-            ride_id: calendar.bikeId,
-            start_date: calendar.startDate.toISOString(),
-            end_date: calendar.endDate.toISOString()
-          };
-
-          api.post('/requests', data).then(
-            function(response) {
-              $state.go('requests', {requestId: response.data.id});
-              console.log("Success", response);
-            },
-            function(error) {
-              console.log("Error posting request", error);
+        userApi.getUserData().then(
+          function(response) {
+            var user = response.data;
+            if (calendar.bikeFamily == 2 || (user.has_address && user.confirmed_phone && user.status >= 1)) {
+              var data = {
+                user_id: $localStorage.userId,
+                ride_id: calendar.bikeId,
+                start_date: calendar.startDate.toISOString(),
+                end_date: calendar.endDate.toISOString()
+              };
+    
+              api.post('/requests', data).then(
+                function(response) {
+                  $state.go('requests', {requestId: response.data.id});
+                  console.log("Success", response);
+                },
+                function(error) {
+                  console.log("Error posting request", error);
+                }
+              );
             }
-          );
-        }
-        else {
-          verification.openDialog(false);
-        }
+            else {
+              verification.openDialog(false);
+            }
+          }
+        );
       };
 
       calendar.promptAuthentication = function(event) {
@@ -154,15 +158,19 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.isOptionEnabled = function($index, date) {
-        if (date == undefined) {
-          return true
-        }
-        var weekDay = calendar.user.open_hours.hours[date.getDay()];
-        if (weekDay !== null) {
-          var workingHours = openHours(weekDay);
-          return workingHours.includes($index + 6);
-        }
-        return false
+        return true;
+
+        // Temporarily commented out block below and inserted line above to allow calendar to work with old API
+
+        // if (date == undefined) {
+        //   return true
+        // }
+        // var weekDay = calendar.user.open_hours.hours[date.getDay()];
+        // if (weekDay !== null) {
+        //   var workingHours = openHours(weekDay);
+        //   return workingHours.includes($index + 6);
+        // }
+        // return false
       };
 
       function openHours(weekDay) {
@@ -228,22 +236,29 @@ angular.module('bike').component('calendar', {
       }
 
       function dateClosed(date) {
-        return calendar.user.open_hours.hours[date.getDay()] == null;
+        return false;
+        // Temporarily commented out line below and inserted line above to allow calendar to work with old API
+
+        // return calendar.user.open_hours.hours[date.getDay()] == null;
       }
 
       function isReserved(date) {
-        for (var i = 0; i < calendar.requests.length; ++i) {
-          var start = new Date(calendar.requests[i].start_date);
-          start.setHours(0,0,0,0);
-          var end = new Date(calendar.requests[i].end_date);
-          end.setHours(0,0,0,0);
-
-          if (start.getTime() <= date.getTime()
-            && date.getTime() <= end.getTime()) {
-            return true;
-          }
-        }
         return false;
+
+        // Temporarily commented out block below and inserted line above to allow calendar to work with old API
+
+        // for (var i = 0; i < calendar.requests.length; ++i) {
+        //   var start = new Date(calendar.requests[i].start_date);
+        //   start.setHours(0,0,0,0);
+        //   var end = new Date(calendar.requests[i].end_date);
+        //   end.setHours(0,0,0,0);
+
+        //   if (start.getTime() <= date.getTime()
+        //     && date.getTime() <= end.getTime()) {
+        //     return true;
+        //   }
+        // }
+        // return false;
       }
 
       function initOverview() {
