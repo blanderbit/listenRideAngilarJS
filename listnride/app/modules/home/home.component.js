@@ -43,7 +43,7 @@ angular.module('home',[]).component('home', {
             userId: 1739,
             userName: "Cornelia " + translation + " Basel",
             userImagePath: "app/assets/ui_images/testmonials/testmonial_homepage_cornelia.jpg",
-            text: "Wir waren zu Besuch in Berlin und wollten diesmal ein schönes E-bike testfahren. AAuf listnride haben wir E-Bikes der Marke Ampler und uns zwei davon gemietet. Klappte einwandfrei und auch noch zu einem guten Preis!"
+            text: "Wir waren zu Besuch in Berlin und wollten diesmal ein schönes E-Bike testfahren. Auf listnride haben wir E-Bikes der Marke Ampler gefunden und zwei davon gemietet. Klappte einwandfrei und auch noch zu einem guten Preis!"
           }
         ];
       });
