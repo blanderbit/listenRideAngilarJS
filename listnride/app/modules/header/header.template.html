@@ -19,20 +19,20 @@
         <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)" analytics-on analytics-event="click" analytics-label="learn more" analytics-category="topnav link" analytics-value="5">{{ 'shared.learn-more' | translate }} </md-button>
         <md-menu-content width="2">        
           <md-menu-item>
-            <md-button md-no-ink ui-sref="howItWorks">{{ 'shared.how-it-works' | translate }}</md-button>
+            <md-button md-no-ink ui-sref="howItWorks" analytics-on analytics-category="topnav link" analytics-event="click" analytics-label="{{ 'shared.how-it-works' | translate }}">{{ 'shared.how-it-works' | translate }}</md-button>
           </md-menu-item>
           <md-menu-item>
-            <md-button md-no-ink ui-sref="listingABike">{{ 'shared.listing-a-bike' | translate }}</md-button>
+            <md-button md-no-ink ui-sref="listingABike" analytics-on analytics-category="topnav link" analytics-event="click" analytics-label="{{ 'shared.listing-a-bike' | translate }}">{{ 'shared.listing-a-bike' | translate }}</md-button>
           </md-menu-item>
           <md-menu-item>
-            <md-button md-no-ink ui-sref="rentingABike">{{ 'shared.renting-a-bike' | translate }}</md-button>
+            <md-button md-no-ink ui-sref="rentingABike" analytics-on analytics-category="topnav link" analytics-event="click" analytics-label="{{ 'shared.renting-a-bike' | translate }}">{{ 'shared.renting-a-bike' | translate }}</md-button>
           </md-menu-item>
           <md-menu-divider></md-menu-divider>
           <md-menu-item>
-            <md-button md-no-ink ui-sref="trustAndSafety">{{  'shared.trust-and-safety' | translate }}</md-button>
+            <md-button md-no-ink ui-sref="trustAndSafety" analytics-on analytics-category="topnav link" analytics-event="click" analytics-label="{{  'shared.trust-and-safety' | translate }}">{{  'shared.trust-and-safety' | translate }}</md-button>
           </md-menu-item>
           <md-menu-item>
-            <md-button md-no-ink ui-sref="help">{{ 'shared.contact' | translate }}</md-button>
+            <md-button md-no-ink ui-sref="help" analytics-on analytics-category="topnav link" analytics-event="click" analytics-label="{{ 'shared.contact' | translate }}">{{ 'shared.contact' | translate }}</md-button>
           </md-menu-item>
         </md-menu-content>
       </md-menu>
