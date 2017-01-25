@@ -1323,3 +1323,7 @@ md-grid-list a {
 .text-error {
   color: rgb(221,44,0);
 }
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
