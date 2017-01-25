@@ -99,10 +99,10 @@ angular.module('settings',[]).component('settings', {
           var startAt = _.get(value, 'start_at') * 3600;
           var duration = _.get(value, 'duration') * 3600;
 
-          _.set(formatedData, key, {
+          _.set(formatedData, key, [{
               start_at: startAt,
               duration: duration
-          });
+          }]);
         });
 
         return formatedData;
@@ -170,8 +170,9 @@ angular.module('settings',[]).component('settings', {
           var hours = settings.user.opening_hours.hours;
           _.each(settings.weekDays, function (value, key) {
             if (hours[key] !== null) {
-              var start_at = hours[key].start_at / 3600;
-              var duration = hours[key].duration / 3600;
+              //TODO: refactor, after new design to work with date arrays
+              var start_at = hours[key][0].start_at / 3600;
+              var duration = hours[key][0].duration / 3600;
               var end_at = duration + start_at;
 
               settings.startTime[value] = start_at;

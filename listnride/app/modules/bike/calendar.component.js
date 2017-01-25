@@ -54,7 +54,8 @@ angular.module('bike').component('calendar', {
                 calendar.startDate = start;
                 calendar.endDate = end;
                 dateChange(calendar.startDate, calendar.endDate);
-              })
+                setInitHours();
+              });
             });
           }
         });
@@ -157,9 +158,10 @@ angular.module('bike').component('calendar', {
         if (date == undefined) {
           return true
         }
-        var weekDay = calendar.user.open_hours.hours[date.getDay()];
+        var weekDay = calendar.user.opening_hours.hours[date.getDay()];
         if (weekDay !== null) {
           var workingHours = openHours(weekDay);
+          // setInitHours(workingHours);
           return workingHours.includes($index + 6);
         }
         return false
@@ -173,6 +175,15 @@ angular.module('bike').component('calendar', {
           $.merge( workingHours, _.range(from,until) )
         });
         return workingHours
+      }
+
+      function setInitHours() {
+        var firstDay = calendar.user.opening_hours.hours[calendar.startDate.getDay()];
+        var lastDay = calendar.user.opening_hours.hours[calendar.endDate.getDay()];
+        firstDay = openHours(firstDay);
+        lastDay = openHours(lastDay);
+        calendar.startTime = firstDay[0];
+        calendar.endTime = lastDay[lastDay.length - 1]
       }
 
       calendar.event.changeSlot = function() {
@@ -228,7 +239,7 @@ angular.module('bike').component('calendar', {
       }
 
       function dateClosed(date) {
-        return calendar.user.open_hours.hours[date.getDay()] == null;
+        return calendar.user.opening_hours.hours[date.getDay()] == null;
       }
 
       function isReserved(date) {
