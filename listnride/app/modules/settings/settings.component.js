@@ -4,9 +4,9 @@ angular.module('settings',[]).component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',
   controller: ['$localStorage', '$window', '$mdToast', '$translate', 'api', 'accessControl', 'sha256', 'Base64',
-                'Upload', 'loadingDialog', 'ENV', 'ngMeta', 'userApi',
+                'Upload', 'loadingDialog', 'ENV', 'ngMeta', 'userApi', '$timeout',
     function SettingsController($localStorage, $window, $mdToast, $translate, api, accessControl, sha256, Base64,
-                                Upload, loadingDialog, ENV, ngMeta, userApi) {
+                                Upload, loadingDialog, ENV, ngMeta, userApi, $timeout) {
       if (accessControl.requireLogin()) {
         return;
       }
@@ -27,16 +27,22 @@ angular.module('settings',[]).component('settings', {
         settings.startTime = {};
         settings.endTime = {};
         settings.errorTime = {};
+        settings.enabledTime = {};
         settings.getInputDate = getInputDate;
         settings.onSubmit = onSubmit;
         settings.clearInputDate = clearInputDate;
         settings.time = Date.now();
+        settings.hoursFormValid = hoursFormValid;
+        settings.error = false;
+        settings.openingHoursId = null;
 
         settings.weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
         userApi.getUserData().then(function (response) {
           settings.user = response.data;
           settings.loaded = true;
+          settings.openingHoursEnabled = settings.user.opening_hours ? settings.user.opening_hours.enabled : false;
+          $timeout(setInitFormState.bind(this), 0);
         });
       }
 
@@ -45,7 +51,8 @@ angular.module('settings',[]).component('settings', {
         var duration = null;
 
         if (isStart) {
-          return saveDate(weekDay, 'start_at', date);
+          saveDate(weekDay, 'start_at', date);
+          return hoursFormValid();
         }
 
         saveDate(weekDay, 'end_at', date);
@@ -53,17 +60,20 @@ angular.module('settings',[]).component('settings', {
         duration = getDuration(weekDay);
 
         if (!duration) {
-          return _.set(settings.errorTime, weekDay, true);
+          _.set(settings.errorTime, weekDay, true);
+          return hoursFormValid();
         }
 
         _.set(settings.errorTime, weekDay, false);
 
         saveDate(weekDay, 'duration', duration);
+
       }
 
       function clearInputDate(weekDay) {
         settings.startTime = _.omit(settings.startTime, weekDay);
         settings.endTime = _.omit(settings.endTime, weekDay);
+        delete formData[weekDay];
       }
 
       function getDuration(weekDayKey) {
@@ -99,10 +109,22 @@ angular.module('settings',[]).component('settings', {
       }
 
       function onSubmit() {
-        var reqData = {'hours':changeKeys(formData)};
+        var reqData = {
+          'hours':changeKeys(formData),
+          'enabled': settings.openingHoursEnabled
+        };
 
-        api.post('/opening_hours', reqData).then(
+        if (settings.openingHoursId) {
+          updateOpeningHours(reqData)
+        } else {
+          createOpeningHours(reqData)
+        }
+      }
+
+      function createOpeningHours(data) {
+        api.post('/opening_hours', data).then(
           function (success) {
+            settings.openingHoursId = success.data[0].id;
             $mdToast.show(
               $mdToast.simple()
                 .textContent($translate.instant('toasts.opening-hours-success'))
@@ -121,17 +143,56 @@ angular.module('settings',[]).component('settings', {
         );
       }
 
-      
+      function updateOpeningHours(data) {
+        api.put("/opening_hours/" + settings.openingHoursId, data).then(
+          function(success) {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.opening-hours-success'))
+                .hideDelay(4000)
+                .position('top center')
+            );
+          },
+          function(error) {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.opening-hours-error'))
+                .hideDelay(4000)
+                .position('top center')
+            );
+          }
+        );
+      }
+
+      function setInitFormState() {
+        if (settings.user.opening_hours !== undefined) {
+          settings.openingHoursId = settings.user.opening_hours.id;
+          var hours = settings.user.opening_hours.hours;
+          _.each(settings.weekDays, function (value, key) {
+            if (hours[key] !== null) {
+              var start_at = hours[key].start_at / 3600;
+              var duration = hours[key].duration / 3600;
+              var end_at = duration + start_at;
+
+              settings.startTime[value] = start_at;
+              settings.endTime[value] = end_at;
+              settings.enabledTime[value] = true;
+              formData = _.set(formData, value + '.' + 'start_at', start_at);
+              formData = _.set(formData, value + '.' + 'duration', duration);
+            }
+          });
+        }
+      }
+
       function saveDate(weekDay, key, value) {
         var weekDayKey = weekDay + '.' + key;
-
         formData = _.set(formData, weekDayKey , value);
       }
 
-      settings.hoursFormValid = function(){
+      function hoursFormValid(){
         var errors = Object.values(settings.errorTime);
-        errors.some(function(e) { return e === true; })
-      };
+        settings.error = errors.some(function(e) { return e === true; })
+      }
 
       settings.fillAddress = function(place) {
         var components = place.address_components;
