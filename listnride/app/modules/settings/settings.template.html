@@ -263,6 +263,7 @@
                 <md-switch
                   ng-click="settings.clearInputDate(day)"
                   ng-model="settings.enabledTime[day]"
+                  class="layout-margin flex-gt-xs"
                 >
                 </md-switch>
                 </md-button>
@@ -304,10 +305,6 @@
                   </div>
                 </div>
               </div>
-
-              <br>
-              <md-divider></md-divider>
-              <br>
             </div>
             <div class="navigation" layout="row" layout-align="end center" layout-margin>
               <md-button
@@ -315,7 +312,6 @@
                       class="md-raised md-primary"
                       ng-disabled="settings.error"
               >
-
                 {{ 'edit.save-changes' | translate }}
               </md-button>
             </div>
