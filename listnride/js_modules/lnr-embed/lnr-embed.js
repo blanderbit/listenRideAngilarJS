@@ -14,25 +14,18 @@
 
   document.getElementsByTagName("head")[0].appendChild(css_mdl).appendChild(css_lnr).appendChild(scr_lnr);
 
-  var renderBikes = function ($, categoryFilter) {
-    var user_id = document.getElementById('listnride').dataset.user;
-    var user_lang = document.getElementById('listnride').dataset.lang;
+  /**
+   * renders the bikes
+   * based on user_id and user_lang
+   * @param {any} $ jQuery
+   * @param {Number} user_id id of the user for which bikes are to be fetched
+   * @param {Number} user_lang language of the user. [english, german, dutch]
+   * @param {String} introText
+   * @param {any} categoryFilter function which returns the category desc based on category id.
+   */
+  function renderBikes ($, user_id, user_lang, introText, categoryFilter) {
     $.get("https://api.listnride.com/v2/users/" + user_id, function (response) {
 
-      var introText = {
-        en: 'The bikes below are currently available for you to rent. ' +
-          'Simply click on the bike you&rsquo;d like to rent and you will be forwarded to ' +
-          '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a>, ' +
-          'where you can make the booking online.',
-        de: 'Diese Fahrr&auml;der stehen aktuell f&uuml;r den Verleih an Sie zur Verf&uuml;gung. ' +
-          'Durch klicken auf das gew&uuml;nschte Fahrrad, werden Sie auf ' +
-          '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a> ' +
-          'weitergeleitet und k&ouml;nnen dort die Online-Buchung abschlie&szlig;en.',
-        nl: 'De onderstaande fietsen bieden wij uw momenteel te huur aan. ' +
-          'Indien je de fiets naar wens aanklikt, kom je op de site ' +
-          '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a> ' +
-          'terecht alwaar je de boeking online kan afronden. '
-      };
       var selectedLangText, dayText;
       if ('en' === user_lang) {
         selectedLangText = introText.en;
@@ -100,7 +93,23 @@
 
   fetchBikesData(function ($) {
     $(function () {
-      var categoryFilter = function (categoryId) {
+      var user_id = document.getElementById('listnride').dataset.user;
+      var user_lang = document.getElementById('listnride').dataset.lang;
+      var introText = {
+        en: 'The bikes below are currently available for you to rent. ' +
+        'Simply click on the bike you&rsquo;d like to rent and you will be forwarded to ' +
+        '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a>, ' +
+        'where you can make the booking online.',
+        de: 'Diese Fahrr&auml;der stehen aktuell f&uuml;r den Verleih an Sie zur Verf&uuml;gung. ' +
+        'Durch klicken auf das gew&uuml;nschte Fahrrad, werden Sie auf ' +
+        '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a> ' +
+        'weitergeleitet und k&ouml;nnen dort die Online-Buchung abschlie&szlig;en.',
+        nl: 'De onderstaande fietsen bieden wij uw momenteel te huur aan. ' +
+        'Indien je de fiets naar wens aanklikt, kom je op de site ' +
+        '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a> ' +
+        'terecht alwaar je de boeking online kan afronden. '
+      };
+      function categoryFilter(categoryId) {
         switch (categoryId) {
           case 10: return "Holland";
           case 11: return "Touring";
@@ -127,8 +136,8 @@
           case 65: return "Mono";
           default: return "";
         }
-      };
-      renderBikes($, categoryFilter);
+      }
+      renderBikes($, user_id, user_lang, introText, categoryFilter);
     });
   });
 })();

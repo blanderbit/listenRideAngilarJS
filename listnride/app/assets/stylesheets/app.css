@@ -81,6 +81,15 @@ md-grid-list md-grid-tile {
   cursor: pointer;
 }
 
+.no-select {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
@@ -1073,6 +1082,42 @@ list md-tabs .md-whiteframe-1dp {
   background-color: white;
 }
 
+list md-icon.accessory-icon,
+edit md-icon.accessory-icon {
+  margin: 0 8px 0 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+list md-icon.accessory-icon.checked svg path,
+list md-icon.accessory-icon.checked svg rect,
+list md-icon.accessory-icon.checked svg circle,
+edit md-icon.accessory-icon.checked svg path,
+edit md-icon.accessory-icon.checked svg rect,
+edit md-icon.accessory-icon.checked svg circle  {
+  fill: #7ab2f8;
+  color: #7ab2f8;
+}
+
+list md-radio-button.main-category .md-container,
+edit md-radio-button.main-category .md-container {
+  display: none;
+}
+
+list md-radio-button.main-category .md-label,
+edit md-radio-button.main-category .md-label {
+  margin-left: 0;
+}
+
+list .accessory-checkbox,
+edit .accessory-checkbox {
+  margin-bottom: 16px;
+}
+
+list .accessory-label,
+edit .accessory-label {
+  cursor: pointer;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*  LISTINGS
@@ -1090,6 +1135,10 @@ listings .lnr-bike-card.lnr-unavailable {
 
 listings .lnr-bike-card.lnr-unavailable img {
   opacity: 0.6;
+}
+
+#deleteBikeDialog .delete-bike-text {
+  padding: 24px;
 }
 
 
@@ -1282,16 +1331,52 @@ md-grid-list a {
   color: #fff;
 }
 
-#city-pages md-grid-tile.tile1 {
+#city-pages md-grid-tile.munich-1 {
+  background-image: url(../ui_images/citypages/munich-rent-city.jpg);
+}
+
+#city-pages md-grid-tile.munich-2 {
+  background-image: url(../ui_images/citypages/munich-rent-ebike.jpg);
+}
+
+#city-pages md-grid-tile.munich-3 {
+  background-image: url(../ui_images/citypages/munich-rent-terrain.jpg);
+}
+
+#city-pages md-grid-tile.berlin-1 {
   background-image: url(../ui_images/citypages/berlin-rent-city.jpg);
 }
 
-#city-pages md-grid-tile.tile2 {
+#city-pages md-grid-tile.berlin-2 {
   background-image: url(../ui_images/citypages/berlin-rent-ebike.jpg);
 }
 
-#city-pages md-grid-tile.tile3 {
-  background-image: url(../ui_images/citypages/berlin-rent-special.jpg);
+#city-pages md-grid-tile.berlin-3 {
+  background-image: url(../ui_images/citypages/berlin-rent-road.jpg);
+}
+
+#city-pages md-grid-tile.vienna-1 {
+  background-image: url(../ui_images/citypages/vienna-rent-city.jpg);
+}
+
+#city-pages md-grid-tile.vienna-2 {
+  background-image: url(../ui_images/citypages/vienna-rent-ebike.jpg);
+}
+
+#city-pages md-grid-tile.vienna-3 {
+  background-image: url(../ui_images/citypages/vienna-rent-road.jpg);
+}
+
+#city-pages md-grid-tile.amsterdam-1 {
+  background-image: url(../ui_images/citypages/amsterdam-rent-city.jpg);
+}
+
+#city-pages md-grid-tile.amsterdam-2 {
+  background-image: url(../ui_images/citypages/amsterdam-rent-road.jpg);
+}
+
+#city-pages md-grid-tile.amsterdam-3 {
+  background-image: url(../ui_images/citypages/amsterdam-rent-cargo.jpg);
 }
 
 @media (min-width: 960px) {
@@ -1303,14 +1388,15 @@ md-grid-list a {
 }
 
 #jobs-details h1 {
-  margin: 34px 0px 20px 0px;
+  margin: 34px 40px 30px 0px;
 }
 #jobs-details h3 {
   margin-top: 24px;
+  margin-bottom: 0px;
   margin-left: 0px;
 }
 #jobs-details md-list {
-   margin-left: -18px;
+   margin-left: -14px;
 }
 #jobs-details .list-align {
    margin-left: -10px;
@@ -1327,3 +1413,17 @@ md-grid-list a {
   pointer-events: none;
   opacity: 0.5;
 }
+
+/*-----------------------------------------------------------------------------------*/
+/*  HOW TO SHOOT BIKE PHOTO
+/*-----------------------------------------------------------------------------------*/
+
+.how-to-shoot-section{
+  text-align: center;
+}
+
+img.how-to-shoot {
+  width: 100%;
+  max-width: 500px;
+}
+

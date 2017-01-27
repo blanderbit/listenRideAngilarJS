@@ -6,6 +6,7 @@
     "renting-a-bike": "Rad ausleihen",
     "listing-a-bike": "Rad verleihen",
     "trust-and-safety": "Vertrauen & Sicherheit",
+    "journal": "Blog",
     "later": "Später",
     "next": "Weiter",
     "requests": "Anfragen",
@@ -18,7 +19,8 @@
     "hour": "Stunde",
     "hours": "Stunden",
     "half-day": "Halbtag",
-    "day": "Tag (> 6h)",
+    "day": "Tag",
+    "day-6h": "Tag (> 6h)",
     "days": "Tage",
     "week": "Woche",
     "weeks": "Wochen",
@@ -301,6 +303,7 @@
     "pictures": {
       "header": "Lade ein paar Fotos hoch",
       "hint": "Wähle nun ein paar schöne Fotos Deines Rads. Hier sind einige Tipps, wie du deine eigenen Fotos aufnehmen solltest.",
+      "how-to": "Fototipps, wie sich dein Angebot abhebt",
       "label": "Fotos",
       "select-images": "Fotos Wählen",
       "remove": "Löschen",
@@ -381,7 +384,7 @@
     "delete-bike": "Löschen",
     "cancel": "Abbrechen",
     "delete": "Löschen",
-    "dialog-title": "Möchtest du wirklich dein Fahrrad löschen?",
+    "dialog-title": "Möchtest du das Fahrrad wirklich löschen?",
     "dialog-subtitle": "Es wird unwiderruflich von der Plattform entfernt, aktive Anfragen sind davon nicht betroffen."
   },
 
@@ -560,7 +563,7 @@
     "apply": "Jetzt bewerben",
     "see-all": "See Other Jobs",
     "open": "Offene Positionen",
-    "description-info": "Beschreibung nur auf Englisch verfügbar"
+    "go-back" : "Zurück"
   },
 
   "contact-and-help": {
@@ -679,6 +682,10 @@
   "events": {
     "rapha-super-cross": {
       "text": "Der Rapha Super Cross ist wieder zurück in München, zum dritten Mal. Wenn du gerne dabei sein möchtest aber kein geeignetes Rad hast, kannst du über listnride ein Rad mieten. Die listnride bike sharing community bietet verschiedene Crossräder zum Verleih an. Die Räder können vor der Veranstaltung bei den einzelnen Anbietern angefragt und gebucht werden. Die Übergabe wird direkt mit dem Vermieter vereinbart. Zusätzlich verfügbare Räder können auch noch zur Vermietung angeboten werden, um damit etwas zu verdienen und interessante Leute zu treffen, welche an der Veranstaltung teilnehmen. Werde Teil der wachsenden Community!"
+    },
+    "in-velo-veritas": {
+      "title": "In Velo Veritas - Die zeitlos Rad-Rundfahrt",
+      "text": "Die legendäre Vintage-Rennrad Tour findet nun zum 5. Mal statt. Am 10. und 11. Juni 2017 versammeln sich Fahrradliebhaber in Stockeraus (Österreich) um dort gemeinsam die Touren zu bestreiten. Für alle die gerne teilnehmen würden, allerdings kein zugelassenes Rennrad besitzen, haben wir passende Vintage-Räder von unserer Community zusammengestellt. Alle unten aufgeführten Räder entsprechen dem Reglement und Du kannst Sie einfach über listnride mieten. Falls du nicht teilnehmen kannst, vielleicht sogar mehrer Rennräder hast oder einfach einem gleichgesinnten Fahrrad Enthusiasten aushelfen möchtest: Mach mit und verleihe dein Fahrrad an Gleichgesinnte über listnride."
     }
   },
 
@@ -689,77 +696,77 @@
   },
 
   "cities": {
+    "shared": {
+      "rent-city": "Miete dir ein Stadtrad",
+      "rent-ebike": "Miete dir ein E-bike",
+      "rent-terrain": "Miete dir ein Mountainbike",
+      "rent-road": "Miete dir ein Rennrad",
+      "rent-folding": "Miete dir ein Faltrad",
+      "rent-cargo": "Miete dir ein Lastenrad"
+    },
+
     "berlin": {
       "title": "Berlin",
-      "subtitle": "Explore Berlin by Bike with listnride",
-      "description": "Find some places off the beaten track",
-      "search-title": "Search our selection of bikes in Berlin",
-      "search-subtitle": "Pick a bike fitting your style and need",
-      "about": "About Berlin",
-      "about-content": "In the last decade, Berlin has seen a massive increase in bicycling bringing a new dimension to Berlin’s vivid bike culture. The fact that the city and the country side surrounding Berlin offer great biking routes and interesting places to visit by bike combined with a bike friendly geography could be an explanation why this is happening.",
-      "bike-routes": "Bike Routes",
-      "bike-shops": "Bike Shops",
-      "cafes-bars": "Cafés, Bars & Eatery",
-      "bike-routes-content": "The <a href=\"http://www.tempelhofer-park.de/\" target=\"_blank\">Tempelhofer Park</a> offers the perfect outdoor playground and a setting. The former airport runways are great for biking some laps and enjoying the scenery of urban sports & activities taking place. At <a href=\"http://www.lollapaloozade.com/treptower-park/\" target=\"_blank\">Treptower Park</a> you find a crazy potpourri of experiences. There is the Soviet monument which looks quite impressive and is worth visiting. For the ones who prefer to be still pretty close to all the city commodities a little trip along the <a href=\"https://en.wikipedia.org/wiki/Landwehr_Canal\" target=\"_blank\">Landwehrkanal</a> can be a great way of discovering Kreuzberg. If you like to longer rides check the <a href=\"http://panke.info/pages/portal-touren.php\" target=\"_blank\">Panke Radweg</a> (~30km) or a part of the <a href=\"http://www.berlin-usedom-radweginfo.de/\" target=\"_blank\">Berlin to Usedom route</a>, taking you through almost untouched nature.",
-      "bike-shops-content": "The urban bike brand <a href=\"http://www.schindelhauerbikes.com/\" target=\"_blank\">Schindelhauer</a> bikes makes stylish bikes for the sportive city biker. If you prefer a single-speed or fixed gear than you can eat your heart out at <a href=\"https://8bar-bikes.com/\" target=\"_blank\">8bar-bikes</a> and Bike Punk and if you prefer a road bike than <a href=\"http://www.standert.de/\" target=\"_blank\">Standert</a> can offer something special. Interesting concept stores such as <a href=\"http://www.pret-a-velo.de/\" target=\"_blank\">Pretavelo</a> offering a nice selection of urban bicycles, Wingwheels for electric bikes only, or <a href=\"http://boxbike.de/\" target=\"_blank\">boxbike</a> everything for great folding bikes are worth to visit.",
-      "cafes-bars-content": "After all day out we recommend you to visit <a href=\"http://www.fiveelephant.com/\" target=\"_blank\">fiveelephant</a> in Neu Kölln to go for a coffee and a selection of north American style pastry. For lunch or dinner head for <a href=\"http://www.kimchiprincess.com/\" target=\"_blank\">kimchiprincess</a> in Kreuzberg a buzzing Korean restaurant with sizzling BBQ grills. Visit <a href=\"http://kaschk.de/\" target=\"_blank\">Kaschk</a> in Mitte serving a great selection of Nordic and local craft beer as well as freshy brewed coffee.",
-      "rent-city": "Rent City Bikes",
-      "rent-ebike": "Rent E-Bikes",
-      "rent-special": "Rent Special bikes"
+      "subtitle": "Entdecke Berlin auf dem Fahrrad mit listnride",
+      "description": "Miete dir ein Rad und erkunde die Haupstadt auf eigene Faust",
+      "search-title": "Schaue Dir das Radangebot in Berlin an",
+      "search-subtitle": "Buch dir ein Leihrad für deinen Stil und Zweck",
+      "about": "Über Berlin",
+      "about-content": "Im letzten Jahrzehnt hat die Fahrradszene in Berlin ein massives Wachstum erfahren, welches ganz neue Dimensionen in Berlins lebendige Fahrradkultur einbrachte. Berlin und Umland bieten abwechslungsreiche Fahrradrouten mit vielen interessanten Orten, die einen Besuch lohnen. Hinzu kommt eine fahrradfreundliche Infrastruktur.",
+      "bike-routes": "Fahrradrouten",
+      "bike-shops": "Fahrradläden",
+      "cafes-bars": "Essen, trinken, Café",
+      "bike-routes-content": "Das <a href=\"http://www.thf-berlin.de/standortinfos/tempelhofer-feld\" target=\"_blank\">Tempelhofer Feld</a> bietet einen perfekten Outdoor Spielplatz und eine tolle Umgebung im Herzen der Stadt. Auf den Landebahnen des ehemaligen Flughafens lässt es sich gut ein paar Runden drehen, bei denen man auch noch in den Genuss urbaner Sportarten und anderer Aktivitäten kommen kann, die um einen herum stattfinden. Im <a href=\"https://www.lollapaloozade.com/en/treptower-park\" target=\"_blank\">Treptower Park</a> wiederum kann man allerhand Erfahrungen machen; ein altes Soviet Denkmal erinnert an die Zeiten, in denen Deutschland und auch Berlin geteilt waren und transportiert ein wenig von der Stimmung, die damals herrschte. Für diejenigen, die nah am Geschehen sein möchten, bietet der <a href=\"https://en.wikipedia.org/wiki/Landwehr_Canal\" target=\"_blank\">Landwehrkanal</a> eine großartige Route, die einen vom grünen Treptow bis ins urbane und hippe Kreuzberg führt. Bevorzugt man längere Routen, sollte man unbedingt den ca. 30 Km langen <a href=\"http://panke.info/pages/portal-touren.php\" target=\"_blank\">Panke Radweg</a> ausprobieren, der einen immer dem Panke Kanal folgend durch den ganzen Wedding geleitet, oder man nimmt sich doch eher einen Teil der <a href=\"http://www.germany.travel/en/leisure-and-recreation/cycling/berlin-usedom-island-cycle-route.html\" target=\"_blank\">Berlin-Usedom Route</a> vor, die mit unberührter Natur aufwartet.",
+      "bike-shops-content": "Die urbane Fahrradmarke <a href=\"http://www.schindelhauerbikes.com\" target=\"_blank\">Schindelhauer</a> Bikes macht zeitgemäße und stylische Räder für den sportlichen Städter. Schindelhauer zeichnet sich unter anderem durch innovative Riemenantriebe aus, die man anderswo lange Zeit vergeblich suchen musste und die es sich lohnt auszuprobieren. Bevorzugt man jedoch eher ein Single-Speed Rad oder Fixie, ist man bei <a href=\"https://8bar-bikes.com\" target=\"_blank\">8bar-Bikes</a> oder Bike Punk genau richtig! 8bar-Bikes ist einer der Katalysatoren der Berliner Fixieszene. Auf der Suche nach einem Rennrad, sollte man unbedingt <a href=\"http://www.standert.de\" target=\"_blank\">Standert Bicycles</a> einen Besuch abstatten, neben einzigartigen Fahrrädern gibt es bei Standert auch noch großartigen Kaffee! Ein interessantes Konzept haben auch <a href=\"http://www.pret-a-velo.de/en\" target=\"_blank\">Prèt-á-vélo</a>, die neben einer außergewöhnlichen Auswahl an klassisch urbanen Fahrrädern auch schöne Klamottten anbieten und <a href=\"http://www.wingwheels.de\" target=\"_blank\">Wingwheels</a>, die alles Mögliche für E-Bikes anbieten. <a href=\"http://boxbike.de\" target=\"_blank\">Boxbike</a> ist definitiv einen Besuch wert, wenn man eine Leidenschaft für Falträder und alles drum herum besitzt." ,
+      "cafes-bars-content": "Nach einem Tag auf dem Rad empfehlen wir das Café <a href=\"http://www.fiveelephant.com\" target=\"_blank\">Five Elephant</a> in Neukölln zu besuchen. Dort gibt es selbst gerösteten Kaffee und stadtbekannten Kuchen. Wem nach asiatisch ist, der fühlt sich bei <a href=\"http://www.kimchiprincess.com\" target=\"_blank\">Kimchi Princess</a> und ihren knisternden BBQ Grill in Kreuzberg wohl. Für den Bierdurst empfiehlt sich <a href=\"http://kaschk.de\" target=\"_blank\">Kaschk</a> in Mitte mit einer feinen Selektion aus nordisch und lokalen craft Bier."
     },
+
     "munich": {
-      "title": "",
-      "subtitle": "",
-      "description": "",
-      "search-title": "",
-      "search-subtitle": "",
-      "about": "",
-      "about-content": "",
-      "bike-routes": "",
-      "bike-shops": "",
-      "cafes-bars": "",
-      "bike-routes-content": "",
-      "bike-shops-content": "",
-      "cafes-bars-content": "",
-      "rent-city": "",
-      "rent-ebike": "",
-      "rent-special": ""
+      "title": "München",
+      "subtitle": "Entdecke München auf dem Fahrrad mit listnride",
+      "description": "Miete dir ein Rad und erkunde die RadlHaupstadt auf eigene Faust",
+      "search-title": "Schaue Dir das Radangebot in München an",
+      "search-subtitle": "Buch dir ein Leihrad für deinen Stil und Zweck",
+      "about": "Über München",
+      "about-content": "München auf dem Rad ist einzigartig. Die Fahrradfreundliche Infrastruktur und abwechslungsreiche Natur, sei es in der Stadt oder etwas außerhalb, laden förmlich zu Erkundungstouren auf dem Zweirad ein. Die süddeutsche Metropole bietet eine Vielzahl von Routen für verschiedene Bedürfnisse.",
+      "bike-routes": "Fahrradrouten",
+      "bike-shops": "Fahrradläden",
+      "cafes-bars": "Essen, Trinken, Café",
+      "bike-routes-content": "Der <a href=\"http://www.olympiapark.de\" target=\"_blank\">Olympiapark</a> entstand 1972 als die olympischen Sommerspiele in Deutschland stattfanden. Neben diversen Sportveranstaltungen, offenbart er außerdem ein schönes Terrain für gemütliches pedalieren. In direkter Nähe zum Stadtzentrum befindet sich der <a href=\"http://www.muenchen.de/int/en/sights/parks/english-garden.html\" target=\"_blank\">Englische Garten</a>. Die grüne Oase bietet viele kleine Wege die man hervorragend auf dem Rad erkunden kann. Radelt man in Richtung Norden, erreicht man am obersten Ende den <a href=\"http://www.aumeister.de\" target=\"_blank\">Biergarten Aumeister</a> und hat die Wahl zwischen einer typisch bayrischen Maß oder halben. Hat man Lust auf Gelände und Trails, lohnt es sich ein Blick auf die <a href=\"http://hikeandbike.de/2015/03/19/isartrails-muenchen\" target=\"_blank\">Ostseite der Isar</a> zu werfen, welche München durchfließt. Dort ist für jedes Level etwas dabei!",
+      "bike-shops-content": "Um tieferen Einblick die Münchener Fahrradszene zu erhalten, bietet es sich an einen Schritt in die lokalen Shops zu wagen. Der Laden <a href=\"http://bikedress.de\" target=\"_blank\">Bikedress</a> bietet das Radbekleidungserlebnis ohne Kompromisse und vertreibt u.a Assos und PedalEd. Das hauseigene Cafe mit italienischen Spezialitäten und authentischer Deko findet sich direkt nebenan. <a href=\"http://www.gutenbiken.com\" target=\"_blank\">Guten Bike</a> hat sich auf Reparaturen, Restaurierungen und Kundenaufbauten spezialisiert, deren Lager ist immer ein Blick wert, da dort immer mal wieder ein Schatz schlummert. Wer sich für Falträder, Reiserädern und E-Bikes interessiert, findet bei <a href=\"http://www.munixfinestbicycles.de\" target=\"_blank\">MunixFinest</a> eine schöne Auswahl.",
+      "cafes-bars-content": "Im Stadtteil Schwabing gibt es <a href=\"http://www.necado.de\" target=\"_blank\">necado</a>. Der kleine, sympathische Laden bietet in entspannter Atmosphäre leckeren Kaffee und kleine Knabbereien. Für den großen Hunger lohnt sich der Weg zu <a href=\"http://charl.ie\" target=\"_blank\">Charlie</a>. Das Erlebnis hier ist der Feuertopf (lau), das vietnamesiche Fondue. Typisch bayrisch geht dagegen bei <a href=\"http://www.fraunhofertheater.de/index.php?page_id=23\" target=\"_blank\">Fraunhofer</a> zu. Angesiedelt im Glockenbachviertel, bietet das Restaurant alles was man über Bayern vermutet: gutes Bier, deftiges Essen, große Portionen und lautstarke Stimmung!"
     },
+
     "amsterdam": {
-      "title": "",
-      "subtitle": "",
-      "description": "",
-      "search-title": "",
-      "search-subtitle": "",
-      "about": "",
-      "about-content": "",
-      "bike-routes": "",
-      "bike-shops": "",
-      "cafes-bars": "",
-      "bike-routes-content": "",
-      "bike-shops-content": "",
-      "cafes-bars-content": "",
-      "rent-city": "",
-      "rent-ebike": "",
-      "rent-special": ""
+      "title": "Amsterdam",
+      "subtitle": "Entdecke Amsterdam auf dem Fahrrad mit listnride",
+      "description": "Miete dir ein Rad und erkunde die Haupstadt der Niederlande auf eigene Faust",
+      "search-title": "Schaue Dir das Radangebot in Amsterdam an",
+      "search-subtitle": "Buch dir ein LeihRad zu deinem Stil und Zweck.",
+      "about": "Über Amsterdam",
+      "about-content": "Europas Hauptstadt der Fahrräder zieht jeden Radler in den Bann. Mit breiten Radwegen und fahrradfreundlichen Ampelphasen, gleitet man ohne Stress durch die Stadt. Die Locals benutzen für nahezu alles ihr Rad, von daher kann es auch mal vorkommen das man an einer Kreuzung auf wartende Mitradler trifft, egal bei welchem Wetter. Die Amsterdamer Fahrradkultur ist ein bunter Mix aus Hollandrädern, Lastenrädern und sportlichen Straßenrädern.",
+      "bike-routes": "Fahrradrouten",
+      "bike-shops": "Fahrradläden",
+      "cafes-bars": "Essen, Trinken, Café",
+      "bike-routes-content": "Mit dem Rad durch Amsterdam. Ein Vergnügen! Fährt man an einem der Kanäle Richtung Museumsplatz, ist der lebendige Wochenmarkt <a href=\"http://albertcuyp-markt.amsterdam\" target=\"_blank\">de Albert Cuyp</a> nur noch ein Katzensprung entfernt und eine Pause wert! Soll es etwas weiter gehen, bieten sich die Kanäle als Orientierung an. Um die Wasserwege und <a href=\"\" target=\"_blank\">het IJsselmeer</a> zu entdecken, fährt man Richtung <a href=\"https://www.bikingamsterdam.com/en/routes/durgerdam\" target=\"_blank\">Durgerdam</a> bis nach <a href=\"http://www.holland-cycling.com/where-to-go/day-trips/101-marken-cycle-route?highlight=WyJtYXJrZW4iXQ==\" target=\"_blank\">Marken</a>, ca. 50km entfernt. Fährt man andererseits Richtung Süden dauert es nicht lang bis man den ruhigen <a href=\"http://www.amsterdamsebos.nl\" target=\"_blank\">Amsterdamer Wald</a> erreicht.",
+      "bike-shops-content": "Der Mix aus holländischen Standards, jahrelang entwickelten know-how und modernen Ansätzen stellt sich stolz in der Amsterdamer Fahrradszene dar. <a href=\"http://www.vanmoof.com\" target=\"_blank\">VanMoof</a> präsentiert sich mit preisgekrönten und innovativen Design in ihrem Showroom im Stadtcenter. Fährt man Richtung Norden, führt kein Weg an <a href=\"http://www.meescustomcycles.nl\" target=\"_blank\">Mees</a> vorbei. High-End Custom Rennräder aus Carbon oder Titanium gehören hier zum Inventar.",
+      "cafes-bars-content": "Nach einem langen Tag auf dem Rad, ist nichts naheliegender als sich etwas Entspannung zu gönnen. Hier lohnt es sich auf einen Kaffee beim <a href=\"http://pages.rapha.cc/de/clubs-de/amsterdam\" target=\"_blank\">Rapha Clubhouse</a> vorbei zu radeln. Das Clubhouse besteht aus Boutique und Café und lädt zum Entspannen ein. Nebenbei gibt es Fahrräder von lokalen Rahmenbauern zu bestaunen. Hat man allerdings genug von Fahrrädern, bieten die historischen <a href=\"http://dehallen-amsterdam.nl/gebruikers\" target=\"_blank\">Hallen</a> neben Bars und Restaurants auch ein Kunstkino, ein TV Studio, sowie Handwerkskunst. Möchte man lieber einen wunderschönen \"infinity\" Blick über die Altstadt genießen, besucht man die <a href=\"http://adamtoren.nl\" target=\"_blank\">Adamtoren</a> gegenüber des Hauptbahnhofs."
     },
+
     "vienna": {
-      "title": "",
-      "subtitle": "",
-      "description": "",
-      "search-title": "",
-      "search-subtitle": "",
-      "about": "",
-      "about-content": "",
-      "bike-routes": "",
-      "bike-shops": "",
-      "cafes-bars": "",
-      "bike-routes-content": "",
-      "bike-shops-content": "",
-      "cafes-bars-content": "",
-      "rent-city": "",
-      "rent-ebike": "",
-      "rent-special": ""
+      "title": "Wien",
+      "subtitle": "Entdecke Wien auf dem Fahrrad mit listnride",
+      "description": "Miete dir ein Rad und erkunde die Haupstadt auf eigene Faust",
+      "search-title": "Schaue Dir das Radangebot in Wien an",
+      "search-subtitle": "Buch dir ein Leihrad zu deinem Stil und Zweck",
+      "about": "Über Wien",
+      "about-content": "Wien. Die Metropole an der Donau mit rasanten Wachstum. Neben den eigenen Festivals wie das <a href=\"http://www.bikefestival.at\" target=\"_blank\">Argus Bike Festival und Radkult</a>, zog es 2016 erstmalig auch die Macher der Berliner Fahrradschau mit der 1. <a href=\"http://www.wienerfahrradschau.at\" target=\"_blank\">Wiener Fahrradschau</a> in die bekannte Marx Halle und auch sonst ist die starke Fahrradszene in Wien unübersehbar. Die moderne Stadtentwicklung Wiens, mit starken Augenmerk auf das Fortbewegungsmittel Fahrrad, lädt mit einer guten Radweg Infrastruktur zu schönen Erkundungstouren auf dem Zweirad ein.",
+      "bike-routes": "Fahrradrouten",
+      "bike-shops": "Fahrradläden",
+      "cafes-bars": "Essen, Trinken, Café",
+      "bike-routes-content": "Die Donau die sich durch Wien schlängelt bietet ein breites Spektrum an Aktivitäten. Neben den <a href=\"http://www.stadt-wien.at/freizeit/sport/radfahren/radweg-donauroute-donauradweg.html\" target=\"_blank\">Radwegen entlang des Kanals</a> bieten sich unzählige schöne Wiesen und Parks die zum Verweilen einladen. Bekommt man Appetit, locken viele Cafés, Bars und Restaurants mit einem breiten Angebot. Sucht man das innerstädtische Flair, ist man am <a href=\"https://www.wien.info/en/shopping-wining-dining/markets/karmeliter-district\" target=\"_blank\">Karmeliterplatz</a> gut aufgehoben und von Kulturangeboten und guten Restaurants umgeben.",
+      "bike-shops-content": "Fahrrad, Design und Lebensstil Radkultur findet man bei <a href=\"http://www.veletage.com\" target=\"_blank\">Veletage</a>. Neben ausgewählter Velocouture, Fahrräder und Accessoires, bietet der Salon Kaffee und Magazine, daher lohnt es etwas Zeit einzuplanen. Wer nach einer Werkstatt sucht, die weiß was es heißt den Alltag mit dem Rad zu bewältigen ist bei <a href=\"http://www.citybiker.at\" target=\"_blank\">Citybiker</a> gut aufgehoben und wird sicher das ein oder andere interessante Gespräch führen. <a href=\"http://www.ciclopia.at\" target=\"_blank\">Ciclopia</a> glänzt mit breiter Auswahl von Fahrrädern und bieten neben diesen auch Workshops um sein Rad selber reparieren zu können.",
+      "cafes-bars-content": "Wer schon immer mal veganes Essen ausprobieren wollte oder Veganer ist, der sollte das <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest Bistrot</a> am Karmeliterplatz ausprobieren. Neben veganem Essen gibt es auch vegetarische Alternativen. Oder doch traditionell Österreichische Küche? Genieß einen Tafelspitz oder Wiener Schnitzel bei <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>, direkt gegenüber den Wiener Oper, besser geht nicht, oder? Möchte man den Abend mit einem Drink ausklingen lassen, eignet sich der Weg vom Karmeliterplatz Richtung Donau um in die ein oder andere Bar reinzuschnuppern. An der Donau kann man unter freiem Himmel den Abend ausklingen lassen."
     }
   },
 
@@ -796,5 +803,19 @@
       "faq-question-9": "Sind die Fahrräder legal?",
       "faq-answer-9": "Ja. Unsere Fahrräder sind in der Lage eine Höchstgeschwindigkeit von 35km/h zu erreichen, sind aber standardmäßig nach EN15194 auf die Höchstgeschwindigkeit von 25 km/h begrenzt. Das bedeutet, dass der Motor nur bis zu 25km/h unterstützt. Du kannst diese Einstellungen über unsere Smartphone-App ändern."
     }
+  },
+
+  "how-to-shoot-bike-photo" : {
+    "header": "Foto Tipps",
+    "title": "Ein paar Foto Tipps für ein attraktives Inserat",
+    "subtitle": "Das erste, was sich potentielle Mieter ansehen, wenn sie ein Mietrad auf listnride suchen, sind die Fotos im Überblick der Angebote. Leihräder mit guten Fotos bekommen mehr Interesse und werden öfter gebucht. ",
+    "headline-1": "Beleuchtung",
+    "content-1": "Nutze natürliches Licht und mach deine Fotos draußen im Tageslicht oder innen in der Nähe eines Fensters oder einer weißen Wand. Licht am Morgen oder später am Nachmittag sorgt für die besten  Ergebnisse.",
+    "headline-2": "Hintergrund",
+    "content-2": "Gestalte deinen Hintergrund so einfach wie möglich. Versuche einen Kontrast mit deinem Fahrrad zu erzeugen. Du kannst es zum Beispiel vor eine Betonmauer stellen.",
+    "headline-3": "Aufnahme",
+    "content-3": "Zeige verschiedene Perspektiven deines Fahrrads, mach das Foto z.B. aus einem Winkel als ausschließlich direkt von vorne.",
+    "headline-4": "Motiv",
+    "content-4": "Hebe die Besonderheiten hervor. Nicht auf allen Bildern muss das Fahrrad komplett zu sehen sein. Es ist besser, einige Detailaufnahmen zu machen, wie vom Markennamen, der Farbe, den Lichtern, Schloss etc. Bilder sagen oft mehr als Worte."
   }
 }

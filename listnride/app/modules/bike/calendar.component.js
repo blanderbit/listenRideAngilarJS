@@ -121,7 +121,7 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.isFormInvalid = function() {
-        return calendar.bikeId === undefined || calendar.startDate === undefined || 
+        return calendar.bikeId === undefined || calendar.startDate === undefined ||
           (calendar.startDate !== undefined  && calendar.startDate.getTime() >= calendar.endDate.getTime());
       };
 

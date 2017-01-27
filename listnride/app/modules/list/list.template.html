@@ -17,8 +17,13 @@
                   <h3 class="md-subhead">{{ 'list.category.header' | translate }}</h3>
                 </div>
                 <div layout="row" layout-align="space-between start">
-                  <md-radio-group ng-model="list.form.mainCategory" flex="50" layout="column" ng-change="list.categoryChange({{list.form.mainCategory}})">
-                    <md-radio-button ng-repeat="cat in list.categoryOptions"  value="{{cat.value}}">
+                  <md-radio-group ng-model="list.form.mainCategory" flex="50" layout="column"
+                  ng-change="list.categoryChange({{list.form.mainCategory}})">
+                    <md-radio-button class="main-category" ng-repeat="cat in list.categoryOptions" value="{{cat.value}}">
+                      <md-icon class="lnr-icn-sm md-color-foreground accessory-icon"
+                      md-svg-src="app/assets/ui_icons/{{cat.iconFileName}}"
+                      ng-class="list.form.mainCategory == cat.value ? 'checked' : 'unchecked'"></md-icon>
+
                       {{ 'list.category.' + cat.label.replace(' ', '-') | translate }}
                     </md-radio-button>
                   </md-radio-group>
@@ -116,9 +121,11 @@
                   <h3 class="md-subhead">{{ 'list.accessories.header' | translate }}</h3>
                 </div>
 
-                <md-checkbox ng-repeat="acc in list.accessoryOptions" ng-model="list.form[acc.model]">
-                  {{ 'list.accessories.' + acc.label | translate }}
-                </md-checkbox>
+                <div ng-repeat="acc in list.accessoryOptions" class="accessory-checkbox" layout="row" layout-align="start center">
+                  <md-icon ng-class="list.form[acc.model] ? 'checked' : 'unchecked'" class="lnr-icn-sm md-color-foreground accessory-icon"
+                    md-svg-src="app/assets/ui_icons/{{acc.iconFileName}}" ng-click="list.onAccessoryClick(acc.model)"></md-icon>
+                  <div class="accessory-label no-select" ng-click="list.onAccessoryClick(acc.model)">{{ 'list.accessories.' + acc.label | translate }}</div>
+                </div>
               </div>
 
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
@@ -170,6 +177,7 @@
                   <h3 class="md-subhead"><md-icon class="lnr-icn-sm md-color-disabled lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>Info</h3>
                 </div>
                 <p class="md-body-1">{{ 'list.pictures.hint' | translate }}</p>
+                <a ui-sref="how-to-shoot-bike-photos" target="_blank">{{ 'list.pictures.how-to' | translate }}</a>
               </div>
 
             </div>

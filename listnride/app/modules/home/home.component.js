@@ -30,20 +30,20 @@ angular.module('home',[]).component('home', {
           {
             userId: 1090,
             userName: "Jetske " + translation + " Amsterdam",
-            userImagePath: "app/assets/ui_images/testmonials/testmonial_lister_3.jpg",
+            userImagePath: "app/assets/ui_images/testmonials/jetske_amsterdam.jpg",
             text: "On listnride I rent out my bikes providing families a simple solution to discover my home town. Besides meeting nice people I make some extra pocket money ☺"
           },
           {
             userId: 1203,
             userName: "John " + translation + " Potsdam",
-            userImagePath: "app/assets/ui_images/testmonials/testmonial_lister_4.jpg",
-            text: "Ich habe einige Räder rumstehen und finde es toll diese zu vermieten und besucher meiner Stadt ein cooles Rad anzubieten. Immer sehr tolle mieter gehabt!"
+            userImagePath: "app/assets/ui_images/testmonials/john_potsdam.jpg",
+            text: "Ich habe einige Räder rumstehen und finde es toll diese zu vermieten und Besuchern meiner Stadt ein cooles Rad anzubieten. Immer sehr tolle Mieter gehabt!"
           },
           {
             userId: 1739,
             userName: "Cornelia " + translation + " Basel",
-            userImagePath: "app/assets/ui_images/testmonials/testmonial_homepage_cornelia.jpg",
-            text: "Wir waren zu Besuch in Berlin und wollte diesmal ein schönes E-bike testfahren. Auf listnride gab es einige schönen Ampler E-bikes, welche wir gemietet haben. Klappte einwandfrei und auch noch zu einem guten Preis!"
+            userImagePath: "app/assets/ui_images/testmonials/cornelia_basel.jpg",
+            text: "Wir waren zu Besuch in Berlin und wollten diesmal ein schönes E-Bike testfahren. Auf listnride haben wir E-Bikes der Marke Ampler gefunden und zwei davon gemietet. Klappte einwandfrei und auch noch zu einem guten Preis!"
           }
         ];
       });

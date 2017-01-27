@@ -164,6 +164,10 @@ angular.module('edit',[]).component('edit', {
         }
       };
 
+      edit.onAccessoryClick = function(accessory) {
+        edit.form[accessory] = !edit.form[accessory];
+      };
+
       function isCategoryValid() {
         return edit.form.mainCategory !== undefined &&
           edit.form.subCategory !== undefined;
