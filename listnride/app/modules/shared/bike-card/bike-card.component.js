@@ -6,9 +6,10 @@ angular.module('bikeCard',[]).component('bikeCard', {
   bindings: {
     bike: '<'
   },
-  controller: [
-    function BikeCardController() {
+  controller: ['$mdMedia',
+    function BikeCardController($mdMedia) {
       var bikeCard = this;
+      bikeCard.isPhoneScreen = $mdMedia('xs');
     }
   ]
 });
