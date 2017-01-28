@@ -40,7 +40,9 @@ angular.module('listnride').factory('date', ['$translate',
         }
       },
     
-      subtotal: function(startDate, endDate, priceHalfDay, priceDay, priceWeek) {
+      subtotal: function(startDate, endDate, priceHalfDay, priceDay, priceWeek, minHoursDay) {
+        minHoursDay = minHoursDay || 6;
+
         if (startDate === undefined || endDate === undefined) {
           return 0;
         } else {
@@ -61,11 +63,11 @@ angular.module('listnride').factory('date', ['$translate',
           value += priceDay * days;
 
           if (weeks == 0 && days == 0) {
-            value += (hours <= 6)? priceHalfDay * 1 : priceDay * 1;
+            value += (hours <= minHoursDay)? priceHalfDay * 1 : priceDay * 1;
           } else {
-            if (0 < hours && hours < 6) {
+            if (0 < hours && hours < minHoursDay) {
                 value += (priceHalfDay * 1);
-            } else if (hours >= 6) {
+            } else if (hours >= minHoursDay) {
                 value += (priceDay * 1);
             }
           }

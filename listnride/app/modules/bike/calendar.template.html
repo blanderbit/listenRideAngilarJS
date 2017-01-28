@@ -1,43 +1,59 @@
 <div id="bikeCalendar" ng-hide="calendar.bikeFamily == 2"></div>
 
 
-<!--        EVENT CALENDAR          -->
 
+<!--        EVENT CALENDAR          -->
 <div layout="column" layout-margin ng-if="calendar.bikeFamily == 2">
-  <p class="md-headline lnr-center">WFS Calendar</p>
-  <p class="md-body-1 lnr-center">During the Wiener Fahrradschau, you can test ride a great variety of high end bikes. Just select which day and what timeslot you want to rent it.</p>
+  <p class="md-headline lnr-center">BFS Calendar</p>
+  <p class="md-body-1 lnr-center">During the Berliner Fahrradschau, you can test ride a great variety of high end bikes. Just select which day and time you want to rent it. All rentals up to 4 hours are free!</p>
   <md-input-container class="md-block">
     <label>1. Select the Rental Day</label>
     <md-select ng-model="calendar.day">
-      <md-option value="21">
-        Friday, 21st of Oct
+      <md-option value="3">
+        Friday, 3rd of Mar
       </md-option>
-      <md-option value="22">
-        Saturday, 22nd of Oct
+      <md-option value="4">
+        Saturday, 4th of Mar
       </md-option>
-      <md-option value="23">
-        Sunday, 23rd of Oct
+      <md-option value="5">
+        Sunday, 5th of Mar
       </md-option>
     </md-select>
   </md-input-container>
   
   <md-input-container class="md-block">
-    <label>2. Select your 2 hour timeslot</label>
-    <md-select ng-model="calendar.event.slotId" ng-change="calendar.event.changeSlot()">
+    <label>2. Select pickup time</label>
+    <md-select ng-model="calendar.event.pickupSlotId" ng-change="calendar.event.changePickupSlot()">
 
       <md-option ng-if="!calendar.day">
         Please select a day first
       </md-option>
 
-      <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.reserved" ng-if="calendar.day == slot.day" value="{{$index}}">
+      <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.reserved" ng-if="calendar.day == slot.day && !slot.overnight" value="{{$index}}">
+        {{slot.text}}
+      </md-option>
+    
+    </md-select>
+  </md-input-container>
+
+  <md-input-container class="md-block">
+    <label>3. Select return time</label>
+    <md-select ng-model="calendar.event.returnSlotId" ng-change="calendar.event.changeReturnSlot()">
+
+      <md-option ng-if="!calendar.day">
+        Please select a pickup time first
+      </md-option>
+
+      <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.reserved || slot.returnDisabled" ng-if="calendar.day == slot.day" value="{{$index}}">
         {{slot.text}}
       </md-option>
     
     </md-select>
   </md-input-container>
 </div>
-
 <!--      END EVENT CALENDAR        -->
+
+
 
 <div id="timeRange" layout="row" layout-align="start center" layout-padding ng-if="calendar.bikeFamily != 2">
   <md-input-container flex>
@@ -98,5 +114,5 @@
   <!-- <p ng-if="!calendar.authentication.loggedIn()" class="md-caption center-text lnr-margin-lrg">{{ 'calendar.to-request-bike-please' | translate }} {{ 'forms.sign-up' | translate }} {{ 'forms.or' | translate }} {{ 'forms.log-in' | translate }}</p> -->
   <p ng-if="calendar.owner" class="md-caption center-text lnr-margin-lrg">{{ 'calendar.own-bike' | translate }}</p>
 
-  <div ng-if="calendar.isDateInvalid()" layout-padding>{{ 'calendar.invalid-date' | translate }}</div>
+  <div ng-if="calendar.bikeFamily != 2 && calendar.isDateInvalid()" layout-padding>{{ 'calendar.invalid-date' | translate }}</div>
 </div>
