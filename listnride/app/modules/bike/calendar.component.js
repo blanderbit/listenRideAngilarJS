@@ -17,39 +17,52 @@ angular.module('bike').component('calendar', {
       var calendar = this;
       calendar.authentication = authentication;
 
-      initOverview();
-
-      var deregisterRequestsWatcher = $scope.$watch('calendar.requests', function() {
-        if (calendar.requests !== undefined) {
-          deregisterRequestsWatcher();
-          calendar.owner = calendar.userId == $localStorage.userId;
-          if (calendar.bikeFamily == 2) {
-            calendar.event.reserved();
-          }
-          angular.element('#bikeCalendar').dateRangePicker({
-            alwaysOpen: true,
-            container: '#bikeCalendar',
-            beforeShowDay: classifyDate,
-            inline: true,
-            selectForward: true,
-            showShortcuts: false,
-            showTopbar: false,
-            singleMonth: true,
-            startOfWeek: 'monday'
-          }).bind('datepicker-change', function(event, obj) {
-            var start = obj.date1;
-            start.setHours(calendar.startTime, 0, 0, 0);
-            var end = obj.date2;
-            end.setHours(calendar.endTime, 0, 0, 0);
-
-            $scope.$apply(function() {
-              calendar.startDate = start;
-              calendar.endDate = end;
-              dateChange(calendar.startDate, calendar.endDate);
-            })
-          });
+      calendar.$onChanges = function (changes) {
+        if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
+          api.get('/users/' + changes.userId.currentValue).then(function (response) {
+            calendar.bikeOwner = response.data;
+            initOverview();
+            initCalendarPicker();
+          })
         }
-      });
+      };
+
+      function initCalendarPicker() {
+        var deregisterRequestsWatcher = $scope.$watch('calendar.requests', function () {
+          if (calendar.requests !== undefined) {
+            deregisterRequestsWatcher();
+            calendar.owner = calendar.userId == $localStorage.userId;
+            if (calendar.bikeFamily == 2) {
+              calendar.event.reserved();
+            }
+            angular.element('#bikeCalendar').dateRangePicker({
+              alwaysOpen: true,
+              container: '#bikeCalendar',
+              beforeShowDay: classifyDate,
+              inline: true,
+              selectForward: true,
+              showShortcuts: false,
+              showTopbar: false,
+              singleMonth: true,
+              startOfWeek: 'monday'
+            }).bind('datepicker-change', function (event, obj) {
+              var start = obj.date1;
+              start.setHours(calendar.startTime, 0, 0, 0);
+              var end = obj.date2;
+              end.setHours(calendar.endTime, 0, 0, 0);
+
+              $scope.$apply(function () {
+                calendar.startDate = start;
+                calendar.endDate = end;
+                dateChange(calendar.startDate, calendar.endDate);
+                if (openingHoursAvailable()) {
+                  setInitHours();
+                }
+              });
+            });
+          }
+        });
+      }
 
       calendar.onTimeChange = function(slot) {
         var slotDate = slot + "Date";
@@ -72,7 +85,6 @@ angular.module('bike').component('calendar', {
                 start_date: calendar.startDate.toISOString(),
                 end_date: calendar.endDate.toISOString()
               };
-
               api.post('/requests', data).then(
                 function(response) {
                   $state.go('requests', {requestId: response.data.id});
@@ -88,7 +100,6 @@ angular.module('bike').component('calendar', {
             }
           },
           function (error) {
-
           }
         );
       };
@@ -110,7 +121,7 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.isFormInvalid = function() {
-        return calendar.bikeId === undefined || calendar.startDate === undefined || 
+        return calendar.bikeId === undefined || calendar.startDate === undefined ||
           (calendar.startDate !== undefined  && calendar.startDate.getTime() >= calendar.endDate.getTime());
       };
 
@@ -145,6 +156,43 @@ angular.module('bike').component('calendar', {
         {overnight: false, reserved: false, day: 23, month: eventMonth, year: eventYear, text: "16:00 - 18:00", startTime: 16}
       ];
 
+      calendar.availabilityMessage = function($index, date) {
+        if (!calendar.isOptionEnabled($index, date)) {
+          return ' (closed)'
+        }
+      };
+
+      calendar.isOptionEnabled = function($index, date) {
+        if (date == undefined || !openingHoursAvailable()) {
+          return true
+        }
+        var weekDay = calendar.bikeOwner.opening_hours.hours[date.getDay()];
+        if (weekDay !== null) {
+          var workingHours = openHours(weekDay);
+          return workingHours.includes($index + 6);
+        }
+        return false
+      };
+
+      function openHours(weekDay) {
+        var workingHours = [];
+        $.each( weekDay, function( key, value ) {
+          var from = value.start_at / 3600;
+          var until = (value.duration / 3600) + from + 1;
+          $.merge( workingHours, _.range(from,until) )
+        });
+        return workingHours
+      }
+
+      function setInitHours() {
+        var firstDay = calendar.bikeOwner.opening_hours.hours[calendar.startDate.getDay()];
+        var lastDay = calendar.bikeOwner.opening_hours.hours[calendar.endDate.getDay()];
+        firstDay = openHours(firstDay);
+        lastDay = openHours(lastDay);
+        calendar.startTime = firstDay[0];
+        calendar.endTime = lastDay[lastDay.length - 1]
+      }
+
       calendar.event.changeSlot = function() {
         var slot = calendar.event.slots[calendar.event.slotId];
         calendar.startDate = new Date(eventYear, eventMonth - 1, slot.day, slot.startTime, 0, 0, 0);
@@ -164,9 +212,7 @@ angular.module('bike').component('calendar', {
           console.log(i);
           var startDate = new Date(calendar.requests[i].start_date);
           var endDate = new Date(calendar.requests[i].end_date);
-
           var startDay = startDate.getDate();
-          var endDay
           var startTime = startDate.getHours();
           var endTime = endDate.getHours();
           var startYear = startDate.getFullYear();
@@ -192,9 +238,22 @@ angular.module('bike').component('calendar', {
           return [false, "date-past", ""];
         } else if (isReserved(date)) {
           return [false, "date-reserved", ""];
+        } else if (dateClosed(date)) {
+          return [false, "date-closed", ""];
         } else {
           return [true, "date-available", ""];
         }
+      }
+
+      function dateClosed(date) {
+        if (openingHoursAvailable()) {
+          return calendar.bikeOwner.opening_hours.hours[date.getDay()] == null;
+        }
+        return false
+      }
+
+      function openingHoursAvailable() {
+        return calendar.bikeOwner && calendar.bikeOwner.opening_hours && calendar.bikeOwner.opening_hours.enabled
       }
 
       function isReserved(date) {
