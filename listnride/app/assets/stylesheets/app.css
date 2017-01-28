@@ -752,6 +752,15 @@ home #testimonials .testimonials-prev-arrow {
   opacity: 0.25;
 }
 
+home #featuredTiles .tile-container {
+  width: 100%;
+  text-align: center;
+}
+
+home #featuredTiles .tile-container .tile {
+  background-color: #343940;
+}
+
 @media (max-width:599px) {
   md-dialog.md-dialog-fullscreen {
     min-height: 100%;
