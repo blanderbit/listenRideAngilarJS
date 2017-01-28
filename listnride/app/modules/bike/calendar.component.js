@@ -135,9 +135,9 @@ angular.module('bike').component('calendar', {
       calendar.event = {};
       calendar.event.slotId;
 
-      var slotDuration = 2;
-      var eventYear = 2016;
-      var eventMonth = 10;
+      var slotDuration = 0.5;
+      var eventYear = 2017;
+      var eventMonth = 3;
 
       calendar.event.slots = [
         {overnight: false, reserved: false, day: 21, month: eventMonth, year: eventYear, text: "18:00 - 20:00", startTime: 18},
