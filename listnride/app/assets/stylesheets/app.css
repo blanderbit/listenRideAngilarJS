@@ -1406,6 +1406,18 @@ md-grid-list a {
    margin-left: -10px;
 }
 
+.form-error {
+  border: 1px solid rgb(221,44,0);
+  border-radius: 4px;
+}
+.text-error {
+  color: rgb(221,44,0);
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  HOW TO SHOOT BIKE PHOTO
 /*-----------------------------------------------------------------------------------*/
@@ -1418,3 +1430,4 @@ img.how-to-shoot {
   width: 100%;
   max-width: 500px;
 }
+

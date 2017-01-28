@@ -55,12 +55,17 @@
     "successfully-logged-in": "Successfully logged in. Welcome back!",
     "successfully-logged-out": "You're logged out.",
     "could-not-log-in": "Could not log in. Please make sure you're signed up already and your credentials are valid.",
-    "reset-password-success": "We've just sent you a new password to your email address! It should arrive in the next few minutes."
+    "reset-password-success": "We've just sent you a new password to your email address! It should arrive in the next few minutes.",
+    "opening-hours-success": "Opening hours successfully changed.",
+    "opening-hours-error": "Could not save opening hours."
   },
   "settings": {
     "settings": "Settings",
     "profile": "Profile",
     "account": "Account",
+    "hours": "Opening Hours",
+    "from": "From",
+    "to": "To",
     "payment-method": "Payment Method",
     "payout-method": "Payout Method",
     "payment-method-description": "Your payment method is used to pay for your rentals. It can be a credit card or paypal account.",

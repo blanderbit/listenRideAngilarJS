@@ -56,13 +56,18 @@
     "successfully-logged-in": "Met succes ingelogd. Welkom terug!",
     "successfully-logged-out": "Je bent uitgelogd.",
     "could-not-log-in": "Inloggen mislukt. Check of je je al hebt geregistreerd en je inloggegevens correct zijn.",
-    "reset-password-success": "We hebben zojuist een nieuw wachtwoord naar je toegemaild! Deze kan elk ogenblik aankomen."
+    "reset-password-success": "We hebben zojuist een nieuw wachtwoord naar je toegemaild! Deze kan elk ogenblik aankomen.",
+    "opening-hours-success": "Opening hours successfully changed.",
+    "opening-hours-error": "Could not save opening hours."
   },
 
   "settings": {
     "settings": "Instellingen",
     "profile": "Profiel",
     "account": "Account",
+    "hours": "Opening Hours",
+    "from": "From",
+    "to": "To",
     "payment-method": "Betaalmethoden",
     "payout-method": "uitbetaalmethoden",
     "payment-method-description": "Je betaalmethode wordt gebruikt om de kosten van de fietshuur af te boeken.",

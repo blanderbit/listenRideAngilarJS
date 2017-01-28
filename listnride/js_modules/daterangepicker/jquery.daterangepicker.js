@@ -1531,7 +1531,7 @@
 						if (timeTmp > opt.start) timeTmp -= 86400000;
 						if (timeTmp < opt.start) timeTmp += 86400000;
 					}
-					if (!valid) return false;
+					// if (!valid) return false; TODO: DY commented because of strange bug in calendar allowed days
 				}
 			}
 			return true;

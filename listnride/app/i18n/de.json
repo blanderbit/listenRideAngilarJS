@@ -56,13 +56,18 @@
     "successfully-logged-in": "Erfolgreich eingeloggt. Willkommen zurück!",
     "successfully-logged-out": "Du bist ausgeloggt.",
     "could-not-log-in": "Login fehlgeschlagen. Bitte stell sicher dass du bereits registriert bist und deine Anmelde-Daten stimmen.",
-    "reset-password-success": "Wir haben dir soeben ein neues Passwort via Email geschickt. Es sollte in den nächsten Minuten eintreffen."
+    "reset-password-success": "Wir haben dir soeben ein neues Passwort via Email geschickt. Es sollte in den nächsten Minuten eintreffen.",
+    "opening-hours-success": "Opening hours successfully changed.",
+    "opening-hours-error": "Could not save opening hours."
   },
 
   "settings": {
     "settings": "Einstellungen",
     "profile": "Profil",
     "account": "Account",
+    "hours": "Opening Hours",
+    "from": "From",
+    "to": "To",
     "payment-method": "Zahlungsart",
     "payout-method": "Auszahlungsmethode",
     "payment-method-description": "Deine Zahlungsart wird benutzt um Räder, die du auf listnride ausleihst, zu bezahlen.",
