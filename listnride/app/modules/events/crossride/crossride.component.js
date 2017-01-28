@@ -7,7 +7,7 @@ angular.module('crossride',[]).component('crossride', {
     function CrossrideController(api) {
       var crossride = this;
 
-      api.get('/rides?family=4').then(
+      api.get('/rides?family=9').then(
         function(response) {
           crossride.bikes = response.data;
         },
