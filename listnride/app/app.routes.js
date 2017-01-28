@@ -138,6 +138,12 @@
       });
 
       $stateProvider.state({
+        name: 'crossride',
+        url: '/crossride',
+        template: '<crossride></crossride>'
+      });
+
+      $stateProvider.state({
         name: 'listingABike',
         url: '/listing-a-bike',
         template: '<listing-a-bike></listing-a-bike>',
