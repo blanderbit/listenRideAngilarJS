@@ -16,7 +16,7 @@
 <body>
     <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
         <!-- tabs -->
-        <div class="mdl-tabs__tab-bar" style="border-bottom: 0px;">
+        <div class="mdl-tabs__tab-bar" style="border-bottom: 0px; padding-bottom: 20px">
             <a href="#duration-panel" class="mdl-tabs__tab is-active" id="tab-duration">Duration</a>
             <a href="#basic-info-panel" class="mdl-tabs__tab" id="tab-basic-info">User Info</a>
             <a href="#payment-details-panel" class="mdl-tabs__tab" id="tab-payment-details">Payment Details</a>
@@ -24,11 +24,51 @@
         </div>
         <!-- duration tab -->
         <div class="mdl-tabs__panel is-active" id="duration-panel">
-            <a href="#" onclick="myFunction({id: 'tab-basic-info'})" class="mdl-button mdl-js-button">Next</a>
+            <div class="mdl-grid mdl-grid--no-spacing">
+                <!-- duration calender -->
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
+                    <div class="md-dialog-content">
+                    </div>
+                </div>
+                <!-- rent info -->
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
+                    <div class="md-dialog-content">
+                        <p class="md-subhead-sm">Rent details</p>
+                        <ul class="demo-list-item mdl-list">
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>
+                                <span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">1 day, 8 hours</span>
+                            </li>
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>
+                                <span align="right" class="mdl-list__item-primary-content md-subhead-sm">50 Euro</span>
+                            </li>
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">listnride fee (incl. tax)</span>
+                                <span align="right" class="mdl-list__item-primary-content md-subhead-sm">50 Euro</span>
+                            </li>
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">total</span>
+                                <span align="right" class="mdl-list__item-primary-content md-subhead-sm">50 Euro</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- nav buttons -->
+            <div class="mdl-grid">
+                <!-- no back button -->
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button"></div>
+                <!-- next button -->
+                <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
+                    <button onclick="myFunction({id: 'tab-basic-info'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
+                </div>
+            </div>
         </div>
         <!-- user info tab -->
         <div class="mdl-tabs__panel" id="basic-info-panel">
             <div class="mdl-grid mdl-grid--no-spacing">
+                <!-- personal info form -->
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
                     <form>
                         <div class="md-dialog-content">
@@ -54,53 +94,128 @@
                         </div>
                     </form>
                 </div>
+                <!-- rent info -->
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                    <form>
-                        <div class="md-dialog-content">
-                            <p class="md-subhead-sm">Rent details</p>
-                            <ul class="demo-list-item mdl-list">
-                                <li class="mdl-list__item">
-                                    <span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>
-                                    <span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">1 day, 8 hours</span>
-                                </li>
-                                <li class="mdl-list__item">
-                                    <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>
-                                    <span align="right" class="mdl-list__item-primary-content md-subhead-sm">50 Euro</span>
-                                </li>
-                                <li class="mdl-list__item">
-                                    <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">listnride fee (incl. tax)</span>
-                                    <span align="right" class="mdl-list__item-primary-content md-subhead-sm">50 Euro</span>
-                                </li>
-                                <li class="mdl-list__item">
-                                    <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">total</span>
-                                    <span align="right" class="mdl-list__item-primary-content md-subhead-sm">50 Euro</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </form>
+                    <div class="md-dialog-content">
+                        <p class="md-subhead-sm">Rent details</p>
+                        <ul class="demo-list-item mdl-list">
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>
+                                <span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">1 day, 8 hours</span>
+                            </li>
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>
+                                <span align="right" class="mdl-list__item-primary-content md-subhead-sm">50 Euro</span>
+                            </li>
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">listnride fee (incl. tax)</span>
+                                <span align="right" class="mdl-list__item-primary-content md-subhead-sm">50 Euro</span>
+                            </li>
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">total</span>
+                                <span align="right" class="mdl-list__item-primary-content md-subhead-sm">50 Euro</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="mdl-grid mdl-grid--no-spacing">
-                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                    <button onclick="myFunction({id: 'tab-payment-details'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
+            <!-- nav buttons -->
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
+                    <button onclick="myFunction({id: 'tab-duration'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
                 </div>
-                <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                    <button onclick="myFunction({id: 'tab-payment-details'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
+                <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
+                    <button onclick="myFunction({id: 'tab-payment-details'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
                 </div>
             </div>
         </div>
         <!-- payment tab -->
-        <div class="mdl-tabs__panel " id="payment-details-panel ">
-            <p>Here we will show the payment details</p>
-            <a href="# " onclick="myFunction({id: 'tab-booking-overview'}) " class="mdl-button mdl-js-button ">Next</a>
-            <a href="# " onclick="myFunction({id: 'tab-basic-info'}) " class="mdl-button mdl-js-button ">Back</a>
+        <div class="mdl-tabs__panel" id="payment-details-panel">
+            <div class="mdl-grid mdl-grid--no-spacing">
+                <!-- payment info form -->
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
+                    <div class="md-dialog-content">
+                    </div>
+                </div>
+                <!-- rent info -->
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
+                    <div class="md-dialog-content">
+                        <p class="md-subhead-sm">Rent details</p>
+                        <ul class="demo-list-item mdl-list">
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>
+                                <span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">1 day, 8 hours</span>
+                            </li>
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>
+                                <span align="right" class="mdl-list__item-primary-content md-subhead-sm">50 Euro</span>
+                            </li>
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">listnride fee (incl. tax)</span>
+                                <span align="right" class="mdl-list__item-primary-content md-subhead-sm">50 Euro</span>
+                            </li>
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">total</span>
+                                <span align="right" class="mdl-list__item-primary-content md-subhead-sm">50 Euro</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- nav buttons -->
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
+                    <button onclick="myFunction({id: 'tab-basic-info'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
+                </div>
+                <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
+                    <button onclick="myFunction({id: 'tab-booking-overview'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
+                </div>
+            </div>
         </div>
         <!-- booking overview tab -->
-        <div class="mdl-tabs__panel " id="booking-overview-panel ">
-            <p>Here we will show the booking overview</p>
-            <a href="# " onclick="myFunction({id: 'tab-basic-info'}) " class="mdl-button mdl-js-button ">Next</a>
-            <a href="# " onclick="myFunction({id: 'tab-payment-details'}) " class="mdl-button mdl-js-button ">Back</a>
+        <div class="mdl-tabs__panel" id="booking-overview-panel">
+            <div class="mdl-grid mdl-grid--no-spacing">
+                <!-- payment info form -->
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
+                    <div class="md-dialog-content">
+                    </div>
+                </div>
+                <!-- rent info -->
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
+                    <div class="md-dialog-content">
+                        <p class="md-subhead-sm">Rent details</p>
+                        <ul class="demo-list-item mdl-list">
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>
+                                <span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">1 day, 8 hours</span>
+                            </li>
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>
+                                <span align="right" class="mdl-list__item-primary-content md-subhead-sm">50 Euro</span>
+                            </li>
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">listnride fee (incl. tax)</span>
+                                <span align="right" class="mdl-list__item-primary-content md-subhead-sm">50 Euro</span>
+                            </li>
+                            <li class="mdl-list__item">
+                                <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">total</span>
+                                <span align="right" class="mdl-list__item-primary-content md-subhead-sm">50 Euro</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- nav buttons -->
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
+                    <button onclick="myFunction({id: 'tab-payment-details'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
+                </div>
+                <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
+                    <button onclick="myFunction({id: 'tab-duration'})" class="md-accent md-raised md-button md-ink-ripple"><span>Proceed</span></button>
+                </div>
+            </div>
         </div>
+    </div>
     </div>
 </body>
 
