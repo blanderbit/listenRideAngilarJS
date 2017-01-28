@@ -752,13 +752,16 @@ home #testimonials .testimonials-prev-arrow {
   opacity: 0.25;
 }
 
-home #featuredTiles .tile-container {
-  width: 100%;
+home #featuredTilesGrid {
   text-align: center;
 }
 
-home #featuredTiles .tile-container .tile {
-  background-color: #343940;
+home #featuredTilesGrid .tile {
+  background-color: #7ab2f8;
+}
+
+home #featuredTilesGrid img {
+  height: 40%;
 }
 
 @media (max-width:599px) {

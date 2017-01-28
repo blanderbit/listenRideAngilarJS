@@ -38,31 +38,33 @@
       <h2 class="md-headline">{{ 'home.featured-tiles-header' | translate }}</h2>
       <p class="md-subhead">{{ 'home.featured-tiles-subheader' | translate }}</p>
     </div>
-
-    <div class="tile-container md-color-white" layout-xs="column" layout="row" flex="100" layout-margin>
-      <a ui-sref="ampler" flex="100" flex-gt-xs="50" flex-gt-sm="33">
-        <div class="tile" layout="column" layout-align="center center" layout-padding>
-          <img src="">
-          <p class="md-subhead">Ampler</p>
-        </div>
-      </a>
-
-      <a href="http://journal.listnride.com" target="_blank" flex="100" flex-gt-xs="50" flex-gt-sm="33">
-        <div class="tile" layout="column" layout-align="center center" layout-padding>
-          <img src="">
-          <p class="md-subhead">Journal</p>
-        </div>
-      </a>
-
-      <a ui-sref="crossride" flex="100" flex-gt-xs="50" flex-gt-sm="33">
-        <div class="tile" layout="column" layout-align="center center" layout-padding>
-          <img src="">
-          <p class="md-subhead">Crossride</p>
-        </div>
-      </a>
-    </div>
   </div>
-  
+
+  <div class="content">
+    <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="3" md-gutter="16px" md-row-height="1.5:1">
+      <md-grid-tile class="tile tile-1">
+        <a ui-sref="ampler" layout-padding layout="column" layout-align="center center">
+          <img ng-src="app/assets/ui_icons/Ampler_white.png">
+          <h3 class="md-title">E-Bike Test Ride Program</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile tile-2">
+        <a href="http://journal.listnride.com" target="_blank" layout-padding layout="column" layout-align="center center">
+          <img ng-src="app/assets/ui_icons/lnr_logo_face.png">
+          <h3 class="md-title">The listnride Journal</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile tile-3">
+        <a ui-sref="crossride" layout-padding layout="column" layout-align="center center">
+          <img ng-src="app/assets/ui_icons/biketype_allterrain.png">
+          <h3 class="md-title">The BFS Cross Ride</h3>
+        </a>
+      </md-grid-tile>
+    </md-grid-list>
+  </div>
+
   <div id="featuredCities" class="content section" layout-align="start center">
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <h2 class="md-headline">{{ 'home.featured-cities-header' | translate }}</h2>
