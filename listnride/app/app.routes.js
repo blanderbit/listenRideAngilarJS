@@ -132,6 +132,18 @@
       });
 
       $stateProvider.state({
+        name: 'inVeloVeritas',
+        url: '/in-velo-veritas',
+        template: '<in-velo-veritas></in-velo-veritas>'
+      });
+
+      $stateProvider.state({
+        name: 'crossride',
+        url: '/crossride',
+        template: '<crossride></crossride>'
+      });
+
+      $stateProvider.state({
         name: 'listingABike',
         url: '/listing-a-bike',
         template: '<listing-a-bike></listing-a-bike>',
@@ -362,7 +374,7 @@
 
       $stateProvider.state({
         name: 'how-to-shoot-bike-photos',
-        url: '/how-to-shoot-the-best-bike-photos',
+        url: '/how-to-shoot-bike-photos',
         templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html'
       });
 

@@ -6,6 +6,7 @@
     "renting-a-bike": "Fiets huren",
     "listing-a-bike": "Fiets verhuren",
     "trust-and-safety": "Vertrouwen & Zekerheid",
+    "journal": "Blog",
     "later": "Niet nu",
     "next": "volgende",
     "requests": "Aanvragen",
@@ -18,7 +19,8 @@
     "hour": "Uur",
     "hours": "Uren",
     "half-day": "Halve dag",
-    "day": "Dag (> 6u)",
+    "day": "Dag",
+    "day-6h": "Dag (> 6u)",
     "days": "Dagen",
     "week": "Week",
     "weeks": "Weken",
@@ -54,13 +56,18 @@
     "successfully-logged-in": "Met succes ingelogd. Welkom terug!",
     "successfully-logged-out": "Je bent uitgelogd.",
     "could-not-log-in": "Inloggen mislukt. Check of je je al hebt geregistreerd en je inloggegevens correct zijn.",
-    "reset-password-success": "We hebben zojuist een nieuw wachtwoord naar je toegemaild! Deze kan elk ogenblik aankomen."
+    "reset-password-success": "We hebben zojuist een nieuw wachtwoord naar je toegemaild! Deze kan elk ogenblik aankomen.",
+    "opening-hours-success": "Opening hours successfully changed.",
+    "opening-hours-error": "Could not save opening hours."
   },
 
   "settings": {
     "settings": "Instellingen",
     "profile": "Profiel",
     "account": "Account",
+    "hours": "Opening Hours",
+    "from": "From",
+    "to": "To",
     "payment-method": "Betaalmethoden",
     "payout-method": "uitbetaalmethoden",
     "payment-method-description": "Je betaalmethode wordt gebruikt om de kosten van de fietshuur af te boeken.",
@@ -296,7 +303,7 @@
     "pictures": {
       "header": "Kies een aantal mooie foto's van je fiets",
       "hint": "Kies een paar mooie foto's uit. Hier zijn een paar fototips om je fiets optimaal te presenteren.",
-      "how-to": "Photo tips for making your listing stand out",
+      "how-to": "Voor een optimale presentatie, lees hier onze fototips",
       "label": "Foto's",
       "select-images": "Foto's kiezen",
       "remove": "verwijderen",
@@ -673,6 +680,14 @@
   "events": {
     "rapha-super-cross": {
       "text": "De Rapha Super Cross is weer terug in München, voor het derde jaar op rij. Indien je er graag bij wil zijn, maar geen geschickte fiets hebt, kann je via listnride een passende fiets huren. De listnride bike sharing community biedt verschillende cyclocrossfietsen te huur aan. De fietsen kunnen voor het evenement bij de verschillende aanbieders worden aangevraagd en geboekt. De overdracht wordt direct met de verhuurder afgesproken. Indien je een fiets hebt die niet benut wordt, kan je deze gewoon aanbieden om daarmee wat geld te verdienen ein interessante mensen te leren kennen, die aan het evenement deelnemen. Sluit je aan bij de groeiende Community!"
+    },
+    "in-velo-veritas": {
+      "title": "In Velo Veritas - The vintage bicycle tour that's timeless",
+      "text": "The legendary “In Velo Veritas” happens this year the 5th time at the 10th/11th June 2017 in Stockerau. For those, who want to participate but need a guideline-matching bicycle, we collected some suiting bikes of our community-members to save your day. Just rent it! Bike enthusiasts like you are offering the different bikes below. If you can’t participate, have more vintage bicycles, or just want want to meet like-minded people, you can share your bike on our platform with others! Become a part of our growing community and make some extra money with your passion!"
+    },
+    "crossride": {
+      "title": "listnride Crossride",
+      "text": "We want to explore with you our local cross playground, the forest with uncountable awesome trails, the Grunewald and like to invite you to the <a target='_blank' href='https://ti.to/listnride/crossride'>listnride Cross Ride</a><br><br>50km / 3 hours, Sunday, March 5, 2016, starting in front of BFS, 10am, sign-up required, drinks and snacks  provided.<br><br>If you don’t have a suitable bike available or you would like to test some new cross bikes, you can rent one of the test bikes specially offered listnride. You have the opportunity to get yourself a discounted ticket for the show. After <a target='_blank' href='https://berlinerfahrradschau.de/en/tickets/'>registration</a>, you get a coupon-code for ticket purchase."
     }
   },
 
@@ -694,66 +709,66 @@
 
     "berlin": {
       "title": "Berlijn",
-      "subtitle": "Berlijn op de fiets ontdekkenen.",
+      "subtitle": "Berlijn op de fiets ontdekkenen",
       "description": "Huur een fiets en leer Berlijn kennen als ware je een insider.",
       "search-title": "Bekijk het aanbod van huurfietsen in Berlijn",
       "search-subtitle": "Huur een fiets naar jouw smaak en gebruik.",
       "about": "Over Berlijn",
-      "about-content": "In het laatste decennium is het fietsgebruik in Berlijn explosief toegenomen en heeft daarmee nieuwe impulsen gegeven aan de levendige fietscultuur in de stad. De stad en het omland hebben veel voor de fietser te bieden op zowel cultureel als sportief gebied. Ook is de infrastructuur erg ruimtelijk opgezet met veel fietspaden. Door het vlakke landschap en het feit dat de winters niet meer zo koud zijn zal Berlijn zich als fietstad verder doen ontwikkelen.",
+      "about-content": "In het laatste decennium is het fietsgebruik in Berlijn explosief toegenomen en heeft daarmee nieuwe impulsen gegeven aan de levendige urbane fietscultuur. De stad en het omland hebben veel voor de fietser te bieden op zowel cultureel als sportief gebied. Ook is de infrastructuur erg ruimtelijk opgezet met veel fietspaden. Door het vlakke landschap en het feit dat de winters niet meer zo koud zijn, zal Berlijn zich als fietstad verder ontwikkelen.",
       "bike-routes": "Fietsroutes",
-      "bike-shops": "Fietswinkel en Merken",
+      "bike-shops": "Fietswinkel en -Merken",
       "cafes-bars": "Cafés, Bars & Bistro's",
-      "bike-routes-content": "Het <a href=\"http://www.thf-berlin.de/standortinfos/tempelhofer-feld\" target=\"_blank\">Tempelhofer Feld</a> is de perfecte buiten speelplaats voor sportieve aktiviteiten. Het voormalige vliegveld en de nu braakliggende landingsbanen bieden je voeldoende ruimte om een paar mooie ronden te fietsen en iets van de andere aktiviteiten mee te krijgen.  In het <a href=\"https://www.lollapaloozade.com/en/treptower-park\" target=\"_blank\">Treptower Park</a> vind je een interessante potpourri van impressies. Het enorme Sovjet monument, dat je terug brengt in de tijd van de koude oorlog toen Duitsland nog uit 2 naties bestond is een must see. Voor degene die de actualiteit interessanter is, kan beter een ridje langs het <a href=\"https://en.wikipedia.org/wiki/Landwehr_Canal\" target=\"_blank\">Landwehrkanal</a> maken. Deze route brengt je van het groene Treptow naar Kreuzberg en Neukölln, waar je tal van “Berlin hipsters” vindt. Indien je een langere tocht wilt maken, welke je buiten Berlijn brengt, raden we je de <a href=\"http://panke.info/pages/portal-touren.php\" target=\"_blank\">Panke Radweg</a> (~30km) aan als ook een deel van, of de complete route, van de <a href=\"http://www.germany.travel/en/leisure-and-recreation/cycling/berlin-usedom-island-cycle-route.html\" target=\"_blank\">Berlin - Usedom fietsroute</a> met prachtige stukken ongerepte natuur.",
-      "bike-shops-content": "In de laatste jaren zijn er veel nieuwe fietsmerken opgekomen, die de locale fietscultuur inspirieren. Bijvoorbeeld het merk <a href=\"http://www.schindelhauerbikes.com\" target=\"_blank\">Schindelhauer</a>, bouwt zeer slank ontworpen urban fietsen. Vergelijkbaar met de Porsche onder de fietsenbouwers. Indien je interesse uitgaat naar een strakke Fixie of singlespeed kan je terecht bij topmerken als <a href=\"https://8bar-bikes.com\" target=\"_blank\">8bar</a> en Bike Punk. Als je toch meer van de racefiets houdt, bezoek dan zeker <a href=\"http://www.standert.de\" target=\"_blank\">Standert</a>. Berlijn heef ook een aantal mooie concept stores zoals <a href=\"http://www.pret-a-velo.de/en\" target=\"_blank\">Prèt-á-vélo</a>, voor mooie urban bikes, <a href=\"http://www.wingwheels.de/?lang=en\" target=\"_blank\">Wingwheels</a>, de specialist op het gebied van e-bikes. Als je hart uitgaat naar iets speciaals zoals een design vouwfiets dan heeft <a href=\"http://boxbike.de\" target=\"_blank\">boxbike</a> een zeer mooi assortiment.",
-      "cafes-bars-content": "Na een mooie ochtend onderweg te zijn geweest, kan je energie opdoen bij <a href=\"http://www.fiveelephant.com\" target=\"_blank\">fiveelephant</a> in Neukölln of Mitte door een lekkere Espresso of Cappuchino te drinken en één van de heerlijke American style pastries uit te proberen. Voor lunch of avondeten is <a href=\"http://www.kimchiprincess.com\" target=\"_blank\">kimchi princess</a> in Kreuzberg, een bruisend Koreaans restaurant met sizzling BBQ grills, echt een aanrader. Indien je zin hebt in een lekkere pot bier, bezoek dan <a href=\"http://kaschk.de\" target=\"_blank\">Kaschk</a> in Mitte. Zij bieden een grote keuze aan Nordic en locale craft beers als ook vers gemalen koffie."
+      "bike-routes-content": "Het <a href=\"http://www.thf-berlin.de/standortinfos/tempelhofer-feld\" target=\"_blank\">Tempelhofer veld</a> is de perfecte buiten speelplaats voor sport en spel. Het voormalige vliegveld met de nu braakliggende landingsbanen bieden je voeldoende ruimte om een paar mooie ronden te fietsen en iets van de andere aktiviteiten mee te krijgen.  In het <a href=\"https://www.lollapaloozade.com/en/treptower-park\" target=\"_blank\">Treptower Park</a> vind je een interessante potpourrie van verschillende invloeden. Het enorme Sovjet monument, dat je terug brengt in de tijd van de koude oorlog toen Duitsland nog uit 2 naties bestond, is een must see. Voor degene die het heden interessanter vindt, kan beter een ridje maken langs het <a href=\"https://en.wikipedia.org/wiki/Landwehr_Canal\" target=\"_blank\">Landwehrkanal</a>. Deze route brengt je van het groene Treptow naar Kreuzberg en Neukölln, waar je tal van “Berlin hipsters” tegenkomt. Indien je een langere tocht wilt maken, welke je buiten Berlijn brengt, raden we je de <a href=\"http://panke.info/pages/portal-touren.php\" target=\"_blank\">Panke Radweg</a> (~30km) aan als ook een deel van, of de complete route, van de <a href=\"http://www.germany.travel/en/leisure-and-recreation/cycling/berlin-usedom-island-cycle-route.html\" target=\"_blank\">Berlin - Usedom fietsroute</a> met prachtige stukken ongerepte natuur.",
+      "bike-shops-content": "In de laatste jaren zijn er veel nieuwe fietsmerken opgekomen in Berlijn, die bijdragen aan de locale fietscultuur. Bijvoorbeeld het merk <a href=\"http://www.schindelhauerbikes.com\" target=\"_blank\">Schindelhauer</a>, bouwt zeer slank ontworpen urban fietsen. De \"Porsche\" onder de fietsenbouwers. Indien je interesse uitgaat naar een strakke Fixie of singlespeed kan je terecht bij de topmerken <a href=\"https://8bar-bikes.com\" target=\"_blank\">8bar</a> en Bike Punk. Als je toch meer van de racefiets houdt, bezoek dan zeker <a href=\"http://www.standert.de\" target=\"_blank\">Standert</a>. Berlijn heef ook een aantal mooie concept stores zoals <a href=\"http://www.pret-a-velo.de/en\" target=\"_blank\">Prèt-á-vélo</a>, voor mooie urban bikes, <a href=\"http://www.wingwheels.de/?lang=en\" target=\"_blank\">Wingwheels</a>, de specialist op het gebied van e-bikes. Als je hart uitgaat naar iets speciaals zoals een design vouwfiets, dan heeft <a href=\"http://boxbike.de\" target=\"_blank\">boxbike</a> een zeer mooi assortiment.",
+      "cafes-bars-content": "Na een mooie ochtend onderweg te zijn geweest, kan je energie opdoen bij <a href=\"http://www.fiveelephant.com\" target=\"_blank\">fiveelephant</a> in Neukölln of Mitte door een lekkere Espresso of Cappuchino te drinken en één van de heerlijke American style pastries uit te proberen. Voor lunch of avondeten is <a href=\"http://www.kimchiprincess.com\" target=\"_blank\">kimchi princess</a> in Kreuzberg, een bruisend Koreaans restaurant met sizzling BBQ grills, echt een aanrader. Indien je zin hebt in een lekkere pot bier bezoek dan <a href=\"http://kaschk.de\" target=\"_blank\">Kaschk</a> in Mitte. Zij bieden een grote assortiment aan Scandinavische en lokale speciaal bieren als ook verse expresso."
     },
 
     "munich": {
       "title": "München",
-      "subtitle": "München op de fiets ontdekkenen.",
+      "subtitle": "München op de fiets ontdekken",
       "description": "Huur een fiets en leer München kennen als ware je een insider.",
-      "search-title": "Bekijk het huurfietsaanbod in München",
-      "search-subtitle": "Huur een fiets naar jouw smaak en gebruik.",
+      "search-title": "Bekijk het aanbod huurfietsen in München",
+      "search-subtitle": "Huur een fiets naar jouw wens.",
       "about": "Over München",
-      "about-content": "Fietsen in Münich is erg prettig en dé manier om de stad te ontdekken. De stad heeft een fietsvriendelijke infrastructuur en de mooie natuur van het platteland is op een steenworp afstand.",
+      "about-content": "Fietsen in Münich is echt cool en dé manier om de stad te ontdekken. München heeft een erg fietsvriendelijke infrastructuur en de mooie natuur van het platteland is op een steenworp afstand.",
       "bike-routes": "Fietsroutes",
       "bike-shops": "Fietswinkels",
       "cafes-bars": "Cafés, Bars & Bistro's",
-      "bike-routes-content": "In 1972 vonden de olympische zomerspelen plaats, onder andere in het <a href=\"http://www.olympiapark.de\" target=\"_blank\">Olympiapark</a> van München. Na de spelen is dit gebied verder ontwikkeld en biedt het nu veel vertier voor een mooie rid.In de binnenstad ligt het “central park” van München, de <a href=\"http://www.muenchen.de/int/en/sights/parks/english-garden.html\" target=\"_blank\">Englischer Garten</a>. Hier kan je in een rustige en edele ambiance de omgeving verkennen. Fiets naar de noordkant van het park, waar de <a href=\"http://www.aumeister.de\" target=\"_blank\">Aumeister Biergarten</a> ligt en geniet van een typische Beierse Mass. Indien je een parcours wilt rijden, kijk dan even aan de <a href=\"http://hikeandbike.de/2015/03/19/isartrails-muenchen\" target=\"_blank\">oostzijde van de Isar rivier</a>, die door München loopt. Hier zijn tig routes uitgezet en dus voor een ieder iets passends. ",
-      "bike-shops-content": "Indien je interesse hebt om iets meer te weten te komen over de fietsscene in München, raden we je aan de volgende winkels te bezoeken. <a href=\"http://bikedress.de\" target=\"_blank\">Bikedress</a> biedt een geraffineerd en mooi gepresenteerd assortiment aan van fietskleding en accessoires. Je vindt er merken zoals ASSOS en PADEL ED.  Inmiddels al trek in een kleine versnapering? Geen problem, direct naast Bikedress vindt je \"monaco velo club Café\" waar je authentieke italiaanse specialiteiten kan proberen in een ambiance van de klassieke wielersport. <a href=\"http://www.gutenbiken.com\" target=\"_blank\">Guten Bike</a> is een gespecialiseerde winkel voor fietsonderhoud, die vooral klassieke fietsen restoreert als ook custom builds aanbiedt. Als je liever iets moderners wilt, ga dan zeker even langs bij <a href=\"http://www.munixfinestbicycles.de\" target=\"_blank\">MunixFinest</a>.",
-      "cafes-bars-content": "Bij <a href=\"http://www.necado.de\" target=\"_blank\">Necado</a> in Schwabing kan je terecht voor je dagelijkse shot cafeïne. Iets eten, in een speciale omgeving? Boek dan een tafel bij <a href=\"http://charl.ie\" target=\"_blank\">Charlie</a>, het Vietnamese restaurant, en probeer de fameuze hot pot en geniet in de ontspannen setting. Toch liever de typisch Beierse ambiance? Ga dan naar <a href=\"http://www.fraunhofertheater.de/index.php?page_id=23\" target=\"_blank\">Fraunhofer</a>. Mooi gelegen in het Glockenbackviertel, biedt Frauenhofer precies wat je mag verwachten in Bayern: Lekker bier, traditionele kledendracht en lekker locale gerechten geserveerd in voldoen omvang."
+      "bike-routes-content": "In 1972 vonden de olympische zomerspelen plaats in het <a href=\"http://www.olympiapark.de\" target=\"_blank\">Olympiapark</a> van München. Na de spelen is dit gebied verder ontwikkeld en biedt het nu veel de wielersport. In de binnenstad ligt het “central park” van München, de <a href=\"http://www.muenchen.de/int/en/sights/parks/english-garden.html\" target=\"_blank\">Englischer Garten</a>. Hier kan je in een rustige en nobele ambiance de omgeving verkennen. Fiets naar de noordkant van het park, waar de <a href=\"http://www.aumeister.de\" target=\"_blank\">Aumeister Biergarten</a> ligt en geniet van een typische Beierse Mass. Indien je een \"trail\" wilt rijden, kijk dan even aan de <a href=\"http://hikeandbike.de/2015/03/19/isartrails-muenchen\" target=\"_blank\">oostzijde van de revier de Isar</a>. Hier zijn tal van routes uitgezet en dus voor een ieder iets passends. ",
+      "bike-shops-content": "Indien je interesse hebt om iets meer te weten te komen over de fietsscene in München, raden we je aan de volgende winkels te bezoeken. <a href=\"http://bikedress.de\" target=\"_blank\">Bikedress</a> biedt een geraffineerd en mooi gepresenteerd assortiment aan van fietskleding en accessoires. Je vindt er merken zoals ASSOS en PADEL ED.  Inmiddels al trek in een kleine versnapering? Geen problem, direct naast Bikedress vind je \"Monaco velo club Café\" waar je authentieke italiaanse specialiteiten kan proberen in een ambiance van de klassieke wielersport. <a href=\"http://www.gutenbiken.com\" target=\"_blank\">Guten Bike</a> is een gespecialiseerde winkel voor fietsonderhoud, die vooral klassieke fietsen restoreert als ook custom builds aanbiedt. Als je liever iets moderners wilt, ga dan zeker even langs bij <a href=\"http://www.munixfinestbicycles.de\" target=\"_blank\">MunixFinest</a>.",
+      "cafes-bars-content": "Bij <a href=\"http://www.necado.de\" target=\"_blank\">Necado</a> in Schwabing kan je terecht voor je dagelijkse shot cafeïne. Iets eten, in een speciale omgeving? Boek dan een tafel bij <a href=\"http://charl.ie\" target=\"_blank\">Charlie</a>, het Vietnamese restaurant, en probeer de fameuze hot pot en geniet in de ontspannen setting. Toch liever de typisch Beierse ambiance? Ga dan naar <a href=\"http://www.fraunhofertheater.de/index.php?page_id=23\" target=\"_blank\">Fraunhofer</a>. Mooi gelegen in het Glockenbackviertel, biedt Frauenhofer precies wat je mag verwachten in Bayern: Lekker bier, traditionele kledendracht en lekker lokale gerechten geserveerd in voldoen omvang."
     },
 
     "amsterdam": {
       "title": "Amsterdam",
-      "subtitle": "Amsterdam op de fiets ontdekkenen.",
+      "subtitle": "Amsterdam op de fiets ontdekken",
       "description": "Huur een fiets en leer Amsterdam kennen als ware je een insider.",
       "search-title": "Bekijk het aanbod van huurfietsen in Amsterdam",
-      "search-subtitle": "Huur een fiets naar jouw smaak en gebruik.",
+      "search-subtitle": "Huur een fiets naar jouw wens.",
       "about": "Over Amsterdam",
-      "about-content": "Het fiets mekka van Europa heef veel te bieden voor fietsfanaten. Met een op de fiets aamgepaste infrastructuur en de historische binnenstad is het werkelijk een genoegen om van A naar B per fiets te gaan. Je zult merken dat de Amsterdammers bijna alles op de fiets doen, wat zo af en toe zelfs to filevorming op het fietspad lijdt. Locals fietsen het hele jaar door weer en wind, de fiets is dus niet weg te denken uit het dagelijks leven. Het Amsterdamse fietspark is een levende mix van typische oma / opa fietsen, bakfietsen en natuurlijk vele racefietsen.",
+      "about-content": "Het fiets mekka van Europa heef veel te bieden voor fietsfanaten. Met een op de fiets aangepaste infrastructuur en de historische binnenstad voor je, is het werkelijk een genoegen om van A naar B per fiets te gaan. Je zult merken dat de Amsterdammers bijna alles op de fiets doen, wat zo af en toe zelfs to filevorming op het fietspad lijdt. Locals fietsen het hele jaar, door weer en wind en de fiets is dus niet weg te denken uit het dagelijks leven. Het Amsterdamse fietspark is een levende mix van typische oma / opa fietsen, bakfietsen en natuurlijk vele racefietsen.",
       "bike-routes": "Fiets routes",
       "bike-shops": "Fietswinkels en Merken",
       "cafes-bars": "Cafés, Bars & Bistro's",
-      "bike-routes-content": "Gewoon door de binnenstad fietsen, geeft je al een glimlach op het gezicht. Van de 9 straatjes, achter de Dam, lekker over de grachten fietsen richting de Pijp, waar een kort bezoekje aan de <a href=\"http://albertcuyp-markt.amsterdam\" target=\"_blank\">Albert Cuyp</a> een mooie tussenstop biedt voor een versnapering. Als je een langere tocht will maken is de route via <a href=\"https://www.bikingamsterdam.com/en/routes/durgerdam\" target=\"_blank\">Durgerdam</a> naar <a href=\"http://www.holland-cycling.com/where-to-go/day-trips/101-marken-cycle-route?highlight=WyJtYXJrZW4iXQ==\" target=\"_blank\">Marken</a> een mooi traject van circa 30 km. Onderweg kom je de historische waterkeringen tegen en kan je natuurlijk genieten van de pracht van de oevers van het ijselmeer. Een andere uitvalsbasis is het <a href=\"http://www.amsterdamsebos.nl\" target=\"_blank\">Amsterdamse bos</a>. Een groot park wat na de tweede wereld oorlog is gecreeërd en tegenwoordig een groen oase is voor de stadbewoners.",
-      "bike-shops-content": "Een nieuwe generatie fietsproducenten is opgestaan, welke voortbouwt op de kennis en kunden van de gevestigde orde. Design voor het dagelijkse gebruik lijkt daarbij voorop te staan. Een van de meest spraakmakende en internationaal bekende merken is <a href=\"http://www.vanmoof.com\" target=\"_blank\">VanMoof</a>. Een bezoekje aan de showroom in het centrum van Amsterdam is zeker de moeite waard. Een stukje fietsen aan de Noordzijde van het IJ, richting Durgerdam brengt je bij <a href=\"http://www.meescustomcycles.nl\" target=\"_blank\">Mees</a>, een specialist op het gebied van custom made kwaliteitsracefietsen gemaakt uit Titanium en carbon. Echt het crème de la crème!",
-      "cafes-bars-content": "Na een lange dag onderweg is het tijd voor een lekkere versnapering. Een must visit is de <a href=\"http://pages.rapha.cc/de/clubs-de/amsterdam\" target=\"_blank\">Rapha Cycling Club</a>, een boutique fietswinkel in de 9 straatjes waar je onder genot van een goede kop koffie de actuele kledinglijn kan bekijken. Als je gewoon wat lekkers wilt eten of drinken ga dan even langs bij de <a href=\"http://dehallen-amsterdam.nl/gebruikers/\" target=\"_blank\">Hallen</a> een mooi historisch gebouw (tramremise) wat nu dient als een authentieke uitgaansplek met vele restaurants, barretjes, een TV-studio en een hal met creatieve ateliers. Geniet je liever van een mooi uitzicht op eenzame hoogte, ga dan naar de <a href=\"http://adamtoren.nl\" target=\"_blank\">AdamToren</a> in het voormalige Shell gebouw aan het IJ."
+      "bike-routes-content": "Gewoon door de binnenstad fietsen, geeft je al een glimlach op het gezicht. Van de 9 straatjes, achter de Dam, lekker over de grachten fietsen richting de Pijp, waar een kort bezoekje aan de <a href=\"http://albertcuyp-markt.amsterdam\" target=\"_blank\">Albert Cuyp</a> een mooie tussenstop biedt voor een versnapering. Als je een langere tocht will maken is de route via <a href=\"https://www.bikingamsterdam.com/en/routes/durgerdam\" target=\"_blank\">Durgerdam</a> naar <a href=\"http://www.holland-cycling.com/where-to-go/day-trips/101-marken-cycle-route?highlight=WyJtYXJrZW4iXQ==\" target=\"_blank\">Marken</a> een mooi traject van circa 50 km. Onderweg kom je de historische waterkeringen tegen en kan je natuurlijk genieten van de pracht van de oevers van het ijselmeer. Een andere uitvalsbasis is het <a href=\"http://www.amsterdamsebos.nl\" target=\"_blank\">Amsterdamse bos</a>. Een groot park wat na de tweede wereld oorlog is gecreeërd en tegenwoordig een groen oase is voor de stadbewoners.",
+      "bike-shops-content": "Een nieuwe generatie fietsproducenten is opgestaan, welke voortborduurd op de kennis en kunde van de gevestigde orde. Design voor het dagelijkse gebruik lijkt daarbij voorop te staan. Een van de meest spraakmakende en internationaal bekende merken is <a href=\"http://www.vanmoof.com\" target=\"_blank\">VanMoof</a>. Een bezoekje aan de showroom in het centrum van Amsterdam is zeker de moeite waard. Een stukje fietsen aan de Noordzijde van het IJ, richting Durgerdam brengt je bij <a href=\"http://www.meescustomcycles.nl\" target=\"_blank\">Mees</a>, een specialist op het gebied van custom made kwaliteitsracefietsen gemaakt uit Titanium en carbon. Echt het crème de la crème!",
+      "cafes-bars-content": "Na een lange dag onderweg is het tijd voor een lekkere versnapering. Een must visit is de <a href=\"http://pages.rapha.cc/de/clubs-de/amsterdam\" target=\"_blank\">Rapha Cycling Club</a>, een boutique fietswinkel in de 9 straatjes waar je onder genot van een goede kop koffie de actuele kledinglijn kan bekijken. Als je gewoon wat lekkers wilt eten of drinken ga dan even langs bij de <a href=\"http://dehallen-amsterdam.nl/gebruikers/\" target=\"_blank\">Hallen</a> een mooi historisch gebouw (tramremise) wat nu dient als een authentieke uitgaansplek met vele restaurants, barretjes, een TV-studio en een hal met creatieve ateliers. Geniet je liever van een mooi uitzicht op eenzame hoogte, ga dan naar de <a href=\"http://adamtoren.nl\" target=\"_blank\">AdamToren</a> in het voormalige Shell gebouw aan het IJ, tegenover centraal station."
     },
 
     "vienna": {
       "title": "Wenen",
-      "subtitle": "Wenen op de fiets ontdekkenen.",
+      "subtitle": "Wenen op de fiets ontdekken",
       "description": "Huur een fiets en leer Wenen kennen als ware je een insider.",
       "search-title": "Bekijk het aanbod van huurfietsen in Wenen",
-      "search-subtitle": "Huur een fiets naar jouw smaak en gebruik.",
+      "search-subtitle": "Huur een fiets naar jouw wens.",
       "about": "Over Wenen",
-      "about-content": "Wenen, de Metropool aan de Danau. Een fietsstad in wording met grote evenementen zolas het <a href=\"http://www.bikefestival.at\" target=\"_blank\">Argus Bike Festival en Radkult</a> en voor het eerst vorig jaar in Wenen georganiseerde <a href=\"http://www.wienerfahrradschau.at\" target=\"_blank\">Wiener Fahrradshau</a>, een spin-off van de Berliner Fahrradschau.  Daarnaast is door de ligging aan de Donau een gevarieerde fietsscene actief die de laatste jaren een flinke groei doormaakt en de straten terug verovert.",
+      "about-content": "Wenen, de Metropool aan de Danau. Een fietsstad in wording met grote fietsevenementen zoals het <a href=\"http://www.bikefestival.at\" target=\"_blank\">Argus Bike Festival</a>, Radkult en het voor het eerst in 2016 georganiseerde <a href=\"http://www.wienerfahrradschau.at\" target=\"_blank\">Wiener Fahrradschau</a>, een spin-off van de Berliner Fahrradschau.  Daarnaast is door de ligging aan de Donau een gevarieerde fietsscene actief die de laatste jaren een flinke groei doormaakt en de zolang weer de straten terug verovert.",
       "bike-routes": "Fietsroutes",
       "bike-shops": "Fietswinkels",
       "cafes-bars": "Cafés, Bars & Bistro's",
-      "bike-routes-content": "De recente urbane ontwikkelingen hebben In Wenen meer plaats gemaakt voor de fietser. Vanuit de overheid wordt veel geinvesteerd om mensen op de mooiste manier Wenen te leren kennen, namelijk op de fiets. Het Donau, die dwars door Wenen loopt, biedt veel activiteiten die per fiets goed te bereiken zijn. Als je de <a href=\"http://www.stadt-wien.at/freizeit/sport/radfahren/radweg-donauroute-donauradweg.html\" target=\"_blank\">kades van de rivier</a> volgt kom je talloze groene en rustige hang-outs tegen waar je kan genieten van de mooie omgeving. Als je maag begint to knorren, kan je langs de donau terecht bij tal van stalletjes of gezellige cafétjes. Ook het oude centrum is een zeer attractieve omgeving met vele indrukwekkende gebouwen. Fiets naar het <a href=\"https://www.wien.info/en/shopping-wining-dining/markets/karmeliter-district\" target=\"_blank\">Karmeliterplein</a> voor het wenen met flair, omgeven door talloze culturele en culinaire highlights.",
-      "bike-shops-content": "Voor Fietsen, design en lifestyle en fiets cultuur kan je terecht bij de <a href=\"http://www.veletage.com\" target=\"_blank\">Veletage</a>. Een prachtige boetiek die naast velocouture, high-end fietsen en accesoires ook een goede kop koffie en lectuur aanbiedt. Echt de moeite waard! Een andere local hero is <a href=\"http://www.citybiker.at\" target=\"_blank\">CityBiker</a>. Zij bieden een mooi assoritment van urbane design fietsen voor dagelijks gebruik. De onstpannen sfeer en de klantvriendelijkheid spatten ervan af. Als je meer opzoek bent naar een mountain bike of een racefiets dan is <a href=\"http://www.ciclopia.at\" target=\"_blank\">Ciclopia</a> een aanrader. Ook voor reparaties kan je hier terecht.",
-      "cafes-bars-content": "Indien je eens wat anders wilt proberen en bijvoorbeeld een goede veganer / vegatarisch restaurant wilt proberen, reserveer an een tafeltje bij <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> aan het Karmeliterplein. Als je meer van de traditionele oostenrijkse keuken bent is <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a> een absolute aanrader. Een heerlijke Tafelspitz of Wiener Schnitzel met blik op de fameuze  Wiener Oper, beter kan niet, toch? Als laatste stop voor het nuttigen van een afzakker leent zich het gebied rond de Donau zich uitstekend."
+      "bike-routes-content": "De recente stedelijke ontwikkelingen heeft ervoor gezorgd, dat er meer plaats is gemaakt voor de fietser. Vanuit de overheid wordt er veel geinvesteerd om mensen op de mooiste manier Wenen te leren kennen, namelijk op de fiets. De Donau, die dwars door Wenen loopt, biedt veel activiteiten die per fiets goed te bereiken zijn. Als je de <a href=\"http://www.stadt-wien.at/freizeit/sport/radfahren/radweg-donauroute-donauradweg.html\" target=\"_blank\">kades van de rivier</a> volgt kom je talloze groene en rustige hang-outs tegen waar je kan genieten van de mooie omgeving. Als je maag begint to knorren, kan je langs de Donau terecht bij tal van kraampjes en gezellige cafeetjes. Ook het oude centrum is een zeer attractieve omgeving met vele historische imposante gebouwen. Fiets naar het <a href=\"https://www.wien.info/en/shopping-wining-dining/markets/karmeliter-district\" target=\"_blank\">Karmeliterplein</a> voor het Wenen met flair, omgeven door talloze culturele en culinaire highlights.",
+      "bike-shops-content": "Voor Fietsen, design en lifestyle en fiets cultuur kan je terecht bij de <a href=\"http://www.veletage.com\" target=\"_blank\">Veletage</a>. Een prachtige boetiek die naast velocouture, high-end fietsen en accesoires, ook een goede kop koffie en lectuur aanbiedt. Echt de moeite waard! Een andere local hero is <a href=\"http://www.citybiker.at\" target=\"_blank\">CityBiker</a>. Zij bieden een mooi assoritment van urbane designfietsen voor het dagelijks gebruik aan. De onstpannen sfeer en de klantvriendelijkheid is echt een \"eye-opener\". Als je meer opzoek bent naar een mountain bike of een racefiets dan is <a href=\"http://www.ciclopia.at\" target=\"_blank\">Ciclopia</a> een aanrader. Ook voor reparaties kan je hier terecht.",
+      "cafes-bars-content": "Indien je eens wat anders wilt proberen en bijvoorbeeld een goede veganer / vegatarisch restaurant wilt proberen, reserveer dan een tafeltje bij <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> aan het Karmeliterplein. Als je meer van de traditionele oostenrijkse keuken houdt, is <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a> een absolute aanrader. Een heerlijke Tafelspitz of Wiener Schnitzel met blik op de fameuze Wiener Oper. Beter kan het niet, toch? Als laatste stop voor het nuttigen van een afzakker leent zich het gebied rond de Donau zich uitstekend."
     }
   },
 
@@ -792,14 +807,17 @@
     }
   },
 
-  "how-to-shoot-bike-photo": {
-    "title": "Photo tips for making your listing stand out",
-    "subtitle": "The first thing prospective riders look at when considering a bicycle on listnride are the photos in the listing overview. The right photo(s) can make all the difference. Listings with good photos will receive more interest and more bookings. We would like to give you a few tips on how to take the perfect shot of your bicycle.",
-    "lighting-and-background-headline": "Lighting and Background",
-    "lighting-and-background-body": "Use natural light, set up your shot outside during daylight or indoors near a window or a white wall. Early morning and late afternoon light will produce best results. Keep your background as simple as possible. Try to create a contrast to your bicycle. For example you can place your bicycle in front of a concrete wall.",
-    "how-to-shoot-headline": "How to Shoot",
-    "how-to-shoot-body": "Show some perspective of your bicycle, so rather shoot from an angle than a frontal perspective.",
-    "what-to-shoot-headline": "What to Shoot",
-    "what-to-shoot-body": "Highlight what’s amazing. It is not required that the whole bicycle is shown on all photos, rather shoot some details, like brand name, colouring, lights, lock etc. Let pictures get the message across."
+  "how-to-shoot-bike-photo" : {
+    "header": "Photo Tips",
+    "title": "A couple of photo tips for a stand out listing",
+    "subtitle": "The first thing prospective riders look at when considering a rental bicycle on listnride are the photos in the listing overview. Bike listings with good photos will receive more interest and more rentals.",
+    "headline-1": "Lighting",
+    "content-1": "Use natural light, set up your shot outside during daylight or indoors near a window or a white wall. Early morning and late afternoon light will produce best results.",
+    "headline-2": "Background",
+    "content-2": "Keep your background as simple as possible. Try to create a contrast to your bicycle. For example you can place your bicycle in front of a concrete wall.",
+    "headline-3": "What to shoot",
+    "content-3": "ZShow some perspective of your bicycle, so rather shoot from an angle than a frontal perspective. ",
+    "headline-4": "Setting",
+    "content-4": "Highlight what’s amazing. It is not required that the whole bicycle is shown on all photos, rather shoot some details, like brand name, colouring, lights, lock etc. Let pictures get the message across."
   }
 }

@@ -118,7 +118,7 @@
               <form name="verificationDialog.addressForm" layout="column">
 
                 <!-- <div class="lnr-input-containers" layout="row"> -->
-                  <autocomplete autocomplete-id="verificationDialog" layout="column" location="verificationDialog.newUser.street" label-id="{{ 'list.location.street-number' | translate }}" required="true" place-changed="verificationDialog.fillAddress(place)">
+                  <autocomplete autocomplete-id="verificationDialog" layout="column" location="verificationDialog.newUser.street" label-id="{{ 'list.location.street-number' | translate }}" required required="true" place-changed="verificationDialog.fillAddress(place)">
                   </autocomplete>
 
                   <md-input-container flex>

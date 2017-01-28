@@ -22,6 +22,8 @@ angular.module('listnride', [
   'listingABike',
   'rentingABike',
   'raphaSuperCross',
+  'inVeloVeritas',
+  'crossride',
   'static',
   'brand-integration',
   'listnride.constant',

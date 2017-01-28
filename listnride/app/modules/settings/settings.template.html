@@ -113,7 +113,7 @@
             <br>
             <md-divider></md-divider>
             <br>
-  
+
             <div layout="row" layout-xs="column">
               <div flex-gt-xs layout-margin>
                 <span class="md-body-2">{{ 'forms.description' | translate }}</span>
@@ -130,12 +130,12 @@
             </div>
           </form>
         </div>
-        
+
         <div class="navigation" layout="row" layout-align="end center" layout-margin>
           <md-button ng-click="settings.updateUser()" class="md-raised md-primary">{{ 'edit.save-changes' | translate }}</md-button>
         </div>
       </md-tab>
-      <!-- end profile -->
+       <!--end profile -->
 
       <!-- account -->
       <md-tab class="account" label="{{ 'settings.account' | translate }}" layout="column">
@@ -242,7 +242,83 @@
           </form>
         </div>
       </md-tab>
-      <!-- end account -->    
+       <!--end account -->
+
+      <!-- hours -->
+      <md-tab class="hours" label="{{ 'settings.hours' | translate }}" layout="column">
+        <br>
+        <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
+          <h3>Enable Opening hours option</h3>
+          <md-switch ng-model="settings.openingHoursEnabled"></md-switch>
+          <form name="hoursForm" ng-style="{'display': settings.openingHoursEnabled ? '' : 'none'}">
+            <div ng-repeat="day in settings.weekDays">
+              <div
+                  layout="row"
+                  layout-xs="column"
+                  ng-class="{'form-error': settings.errorTime[day]}"
+              >
+                <div flex-gt-xs layout-margin>
+                  <span class="md-body-2" ng-class="{'text-error': settings.errorTime[day]}">{{ day | translate }}</span>
+                </div>
+                <md-switch
+                  ng-click="settings.clearInputDate(day)"
+                  ng-model="settings.enabledTime[day]"
+                  class="layout-margin flex-gt-xs"
+                >
+                </md-switch>
+                </md-button>
+                <div flex-gt-xs="70" layout-margin>
+                  <div layout="row" layout-xs="column" ng-class="{'disabled': !settings.enabledTime[day]}">
+                    <md-input-container flex-gt-xs="45">
+                      <label>{{ 'settings.from' | translate }}</label>
+                      <md-select
+                          ng-change="settings.getInputDate(day, true)"
+                          ng-model="settings.startTime[day]"
+                          placeholder="{{ 'shared.from' | translate }}"
+                      >
+                        <md-option
+                            ng-repeat="i in [].constructor(17) track by $index"
+                            value="{{$index + 6}}"
+                        >
+                           {{ ($index + 6) + ":00" }}
+                        </md-option>
+                      </md-select>
+                    </md-input-container>
+
+                    <span hide-xs flex></span>
+
+                    <md-input-container flex-gt-xs="45">
+                      <label>{{ 'settings.to' | translate }}</label>
+                      <md-select
+                          ng-change="settings.getInputDate(day, false)"
+                          ng-model="settings.endTime[day]"
+                          placeholder="{{ 'shared.from' | translate }}"
+                      >
+                        <md-option
+                            ng-repeat="i in [].constructor(17) track by $index"
+                            value="{{$index + 6}}"
+                        >
+                          {{ ($index + 6) + ":00" }}
+                        </md-option>
+                      </md-select>
+                    </md-input-container>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navigation" layout="row" layout-align="end center" layout-margin>
+              <md-button
+                      ng-click="settings.onSubmit()"
+                      class="md-raised md-primary"
+                      ng-disabled="settings.error"
+              >
+                {{ 'edit.save-changes' | translate }}
+              </md-button>
+            </div>
+          </form>
+        </div>
+      </md-tab>
+      <!-- end hours -->
     </md-tabs>
   </div>
 
