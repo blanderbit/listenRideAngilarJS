@@ -1,5 +1,5 @@
-<a ui-sref="bike({bikeId: bikeCard.bike.id})" analytics-on analytics-event="click" analytics-label="{{ bikeCard.bike.id }}" analytics-category="featured bikes" analytics-value="8">
-  <md-card class="lnr-bike-card" ui-sref="bike({bikeId: bikeCard.bike.id})">
+<a ui-sref="bike({bikeId: bikeCard.bike.id})" ng-attr-target="{{ bikeCard.isPhoneScreen ? '_self' : '_blank' }}" analytics-on analytics-event="click" analytics-label="{{ bikeCard.bike.id }}" analytics-category="featured bikes" analytics-value="8">
+  <md-card class="lnr-bike-card">
     <div class="bg lnr-preload-bg"></div>
     <img class="md-card-image" ng-src="{{bikeCard.bike.image_file_1.image_file_1.medium.url}}" alt="{{ ::bikeCard.bike.brand }} - {{ ::bikeCard.bike.name }}">
 
