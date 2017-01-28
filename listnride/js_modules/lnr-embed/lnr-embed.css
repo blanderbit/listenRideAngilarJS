@@ -14,12 +14,14 @@
   }
 }
 
+
 /*@media (max-width: 840px) {
   .mdl-cell--4-col, .mdl-cell--4-col-desktop.mdl-cell--4-col-desktop {
     width: calc(1% - 1px);
     margin: 0px;
   }
 }*/
+
 
 /*@media (max-width: 839px) and (min-width: 480px) {
   .mdl-cell--4-col, .mdl-cell--4-col-tablet.mdl-cell--4-col-tablet {
@@ -69,25 +71,43 @@ md-icon.lnr-icn-lrg {
   width: 48px;
   height: 48px;
 }
-md-icon > img {
-    border: none !important;
+
+md-icon>img {
+  border: none !important;
 }
+
 .lnr-margin-left {
   margin-left: 8px;
 }
+
 div.lnr-introtext {
   padding: 40px;
   font-size: 15px;
   font-family: 'Roboto', sans-serif !important;
 }
-a:link, a:visited, a:active, a:hover, a:focus {
-    color: rgb(95, 198, 147);
+
+a:link,
+a:visited,
+a:active,
+a:hover,
+a:focus {
+  color: rgb(95, 198, 147);
 }
+
 .md-subhead {
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 24px;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.md-subhead-sm {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 24px;
+  color: #584e4e;
   font-family: 'Roboto', sans-serif !important;
 }
 
@@ -122,7 +142,8 @@ md-card md-card-title-media a img {
 }
 
 md-card {
-  box-sizing: border-box !important;;
+  box-sizing: border-box !important;
+  ;
   cursor: pointer;
   display: flex;
   -webkit-box-orient: vertical;
@@ -250,4 +271,144 @@ md-icon svg {
   -webkit-box-direction: normal;
   flex-direction: column;
   min-width: 0px;
+}
+
+.lnr-input-containers {
+  box-sizing: border-box;
+  color: rgb(85, 85, 85);
+  display: flex;
+  flex-direction: row;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  height: 81px;
+  outline-color: rgb(85, 85, 85);
+  outline-style: none;
+  outline-width: 0px;
+}
+
+.lnr-input-containers md-input-container {
+  box-sizing: border-box;
+  color: rgb(85, 85, 85);
+  display: block;
+  flex-basis: 0%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  height: 65px;
+  margin-bottom: 16px;
+  margin-left: 0px;
+  margin-right: 4px;
+  min-width: 0px;
+  outline-color: rgb(85, 85, 85);
+  outline-style: none;
+  outline-width: 0px;
+  position: relative;
+  -webkit-box-direction: normal;
+  -webkit-box-flex: 1;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+.lnr-input-containers md-input-container .md-input {
+  border-color: rgba(206, 212, 216, 0.9);
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  order: 2;
+  display: block;
+  margin-top: 0;
+  background: none;
+  padding: 0 16px;
+  border-width: 1px;
+  border-radius: 4px;
+  border-style: solid;
+  line-height: 40px;
+  height: 40px;
+  -ms-flex-preferred-size: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  float: left;
+}
+
+container.md-input-invalid .md-input {
+  border-color: rgb(221, 44, 0);
+}
+
+.lnr-input-containers md-input-container:first-child {
+  margin-left: 0;
+}
+
+.lnr-input-containers md-input-container:last-child {
+  margin-right: 0;
+}
+
+.md-dialog-buttons .md-button {
+  margin-top: 16px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.md-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  min-height: 40px;
+  min-width: 114px;
+  line-height: 40px;
+  vertical-align: middle;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 4px;
+  border-color: #ffffff;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  border: 0;
+  padding: 0 6px;
+  margin: 6px 8px;
+  background: transparent;
+  color: currentColor;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: inherit;
+  font-variant: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.md-button.md-lrg {
+  min-width: 200px;
+}
+
+.md-button.md-accent.md-raised {
+  color: rgba(255, 255, 255, 0.95);
+  background-color: rgb(122, 178, 248);
+}
+
+.md-dialog-content {
+  padding: 24px;
+  min-height: 320px;
+  border-top-width: 0;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-color: #e0e0e0;
+}
+
+.mdl-list__item .mdl-list__item-primary-content {
+  min-height: 8px;
+  height: 8px;
+}
+
+.wizard-nav-button {
+  padding: 8px;
 }
