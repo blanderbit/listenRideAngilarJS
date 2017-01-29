@@ -139,7 +139,7 @@
 
       $stateProvider.state({
         name: 'crossride',
-        url: '/crossride',
+        url: '/berliner-fahrradschau',
         template: '<crossride></crossride>'
       });
 
