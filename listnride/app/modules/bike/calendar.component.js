@@ -201,7 +201,8 @@ angular.module('bike').component('calendar', {
         var slot = calendar.event.slots[calendar.event.returnSlotId];
 
         if (slot.overnight) {
-          calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);  
+          calendar.endDate = new Date(eventYear, eventMonth, slot.day + 1, slot.hour, 0, 0, 0);
+          console.log(calendar.endDate);
         } else {
           calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);  
         }
