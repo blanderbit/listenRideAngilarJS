@@ -165,11 +165,11 @@ angular.module('settings',[]).component('settings', {
       }
 
       function setInitFormState() {
-        if (settings.user.opening_hours !== undefined) {
+        if (!_.isEmpty(settings.user.opening_hours)) {
           settings.openingHoursId = settings.user.opening_hours.id;
           var hours = settings.user.opening_hours.hours;
           _.each(settings.weekDays, function (value, key) {
-            if (hours[key] !== null) {
+            if (!_.isEmpty(hours[key])) {
               //TODO: refactor, after new design to work with date arrays
               var start_at = hours[key][0].start_at / 3600;
               var duration = hours[key][0].duration / 3600;
