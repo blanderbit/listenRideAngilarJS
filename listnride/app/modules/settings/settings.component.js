@@ -110,7 +110,7 @@ angular.module('settings',[]).component('settings', {
 
       function onSubmit() {
         var reqData = {
-          'hours':changeKeys(formData),
+          'hours': _.isEmpty(formData) ? {0:null, 1:null, 2:null, 3:null, 4:null, 5:null, 6:null} : changeKeys(formData),
           'enabled': settings.openingHoursEnabled
         };
 

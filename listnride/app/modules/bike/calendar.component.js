@@ -299,7 +299,10 @@ angular.module('bike').component('calendar', {
       }
 
       function openingHoursAvailable() {
-        return calendar.bikeOwner && calendar.bikeOwner.opening_hours && calendar.bikeOwner.opening_hours.enabled
+        return calendar.bikeOwner &&
+          calendar.bikeOwner.opening_hours &&
+          calendar.bikeOwner.opening_hours.enabled &&
+          _.some(calendar.bikeOwner.opening_hours.hours, Array)
       }
 
       function isReserved(date) {
