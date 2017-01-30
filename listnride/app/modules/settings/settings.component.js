@@ -36,7 +36,7 @@ angular.module('settings',[]).component('settings', {
         settings.error = false;
         settings.openingHoursId = null;
 
-        settings.weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        settings.weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
         userApi.getUserData().then(function (response) {
           settings.user = response.data;

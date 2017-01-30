@@ -241,13 +241,21 @@ angular.module('bike').component('calendar', {
         if (date == undefined || !openingHoursAvailable()) {
           return true
         }
-        var weekDay = calendar.bikeOwner.opening_hours.hours[date.getDay()];
+        var weekDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(date)];
         if (weekDay !== null) {
           var workingHours = openHours(weekDay);
           return workingHours.includes($index + 6);
         }
         return false
       };
+
+      function getWeekDay(date) {
+        var dayOfWeek = date.getDay() - 1;
+        if (dayOfWeek == - 1) {
+          dayOfWeek = 6;
+        }
+        return dayOfWeek
+      }
 
       function openHours(weekDay) {
         var workingHours = [];
@@ -260,8 +268,8 @@ angular.module('bike').component('calendar', {
       }
 
       function setInitHours() {
-        var firstDay = calendar.bikeOwner.opening_hours.hours[calendar.startDate.getDay()];
-        var lastDay = calendar.bikeOwner.opening_hours.hours[calendar.endDate.getDay()];
+        var firstDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(calendar.startDate)];
+        var lastDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(calendar.endDate)];
         firstDay = openHours(firstDay);
         lastDay = openHours(lastDay);
         calendar.startTime = firstDay[0];
@@ -285,7 +293,7 @@ angular.module('bike').component('calendar', {
 
       function dateClosed(date) {
         if (openingHoursAvailable()) {
-          return calendar.bikeOwner.opening_hours.hours[date.getDay()] == null;
+          return calendar.bikeOwner.opening_hours.hours[getWeekDay(date)] == null;
         }
         return false
       }
