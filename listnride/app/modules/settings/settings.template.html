@@ -249,7 +249,10 @@
         <br>
         <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
           <h3>Enable Opening hours option</h3>
-          <md-switch ng-model="settings.openingHoursEnabled"></md-switch>
+          <md-switch
+                  ng-model="settings.openingHoursEnabled"
+                  ng-change="settings.performOpeningHours(settings.openingHoursEnabled)"
+          ></md-switch>
           <form name="hoursForm" ng-style="{'display': settings.openingHoursEnabled ? '' : 'none'}">
             <div ng-repeat="day in settings.weekDays">
               <div

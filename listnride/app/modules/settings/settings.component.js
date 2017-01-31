@@ -31,6 +31,7 @@ angular.module('settings',[]).component('settings', {
         settings.getInputDate = getInputDate;
         settings.onSubmit = onSubmit;
         settings.performInputDay = performInputDay;
+        settings.performOpeningHours = performOpeningHours;
         settings.time = Date.now();
         settings.hoursFormValid = hoursFormValid;
         settings.error = false;
@@ -44,6 +45,10 @@ angular.module('settings',[]).component('settings', {
           settings.openingHoursEnabled = settings.user.opening_hours ? settings.user.opening_hours.enabled : false;
           $timeout(setInitFormState.bind(this), 0);
         });
+      }
+
+      function performOpeningHours(model) {
+        if (!model) {onSubmit()}
       }
 
       function getInputDate(weekDay, isStart) {
