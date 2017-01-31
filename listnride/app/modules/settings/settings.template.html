@@ -261,8 +261,8 @@
                   <span class="md-body-2" ng-class="{'text-error': settings.errorTime[day]}">{{ day | translate }}</span>
                 </div>
                 <md-switch
-                  ng-click="settings.clearInputDate(day)"
                   ng-model="settings.enabledTime[day]"
+                  ng-change="settings.performInputDay(day, settings.enabledTime[day])"
                   class="layout-margin flex-gt-xs"
                 >
                 </md-switch>
