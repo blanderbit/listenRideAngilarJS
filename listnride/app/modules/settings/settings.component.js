@@ -70,9 +70,8 @@ angular.module('settings',[]).component('settings', {
           return hoursFormValid();
         }
         _.set(settings.errorTime, weekDay, false);
-
+        hoursFormValid();
         saveDate(weekDay, 'duration', duration, index);
-
       }
 
       function saveDate(weekDay, key, value, index) {
