@@ -131,26 +131,6 @@ angular.module('settings',[]).component('settings', {
         if (!_.isEmpty(prev_day)) {setDayTime(weekDay, prev_day.start_at, prev_day.duration)}
       }
 
-      function changeKeys(data) {
-        var formatedData = {};
-
-        _.each(data, function (value, key) {
-          var key = settings.weekDays.findIndex(function (element) {
-            return key === element;
-          });
-
-          var startAt = _.get(value, 'start_at') * 3600;
-          var duration = _.get(value, 'duration') * 3600;
-          //TODO: check this arr
-          _.set(formatedData, key, [{
-              start_at: startAt,
-              duration: duration
-          }]);
-        });
-
-        return formatedData;
-      }
-
       function onSubmit() {
         var reqData = {
           'hours': _.isEmpty(formData) ? {0:null, 1:null, 2:null, 3:null, 4:null, 5:null, 6:null} : changeKeys(formData),
@@ -162,6 +142,27 @@ angular.module('settings',[]).component('settings', {
         } else {
           createOpeningHours(reqData)
         }
+      }
+
+      function changeKeys(data) {
+        var formatedData = {};
+        _.each(data, function (value, key) {
+          var key = settings.weekDays.findIndex(function (element) {
+            return key === element;
+          });
+          _.set(formatedData, key, formatDayData(value));
+        });
+        return formatedData;
+      }
+
+      function formatDayData(data) {
+        var range = [];
+        _.each(data, function (value, key) {
+          var startAt = _.get(value, 'start_at') * 3600;
+          var duration = _.get(value, 'duration') * 3600;
+          if (startAt != 0 && startAt !=0) range.push({start_at: startAt, duration: duration});
+        });
+        return range
       }
 
       function createOpeningHours(data) {
