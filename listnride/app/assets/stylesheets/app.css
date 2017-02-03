@@ -1442,3 +1442,12 @@ img.how-to-shoot {
   width: 100%;
   max-width: 500px;
 }
+
+md-switch.md-default-theme .md-thumb, md-switch.md-checked .md-thumb {
+  background-color: white !important;
+}
+
+md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
+  background-color: #5FC693 !important
+}
+
