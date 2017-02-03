@@ -28,16 +28,17 @@ angular.module('settings',[]).component('settings', {
         settings.endTime = {};
         settings.errorTime = {};
         settings.enabledTime = {};
+        settings.time = Date.now();
+        settings.error = false;
+        settings.openingHoursId = null;
+        settings.weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+        settings.hoursFormValid = hoursFormValid;
         settings.getInputDate = getInputDate;
         settings.onSubmit = onSubmit;
         settings.performInputDay = performInputDay;
         settings.performOpeningHours = performOpeningHours;
-        settings.time = Date.now();
-        settings.hoursFormValid = hoursFormValid;
-        settings.error = false;
-        settings.openingHoursId = null;
-
-        settings.weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+        settings.addChild = addChild;
+        settings.removeInputDate = removeInputDate;
 
         userApi.getUserData().then(function (response) {
           settings.user = response.data;
@@ -51,28 +52,42 @@ angular.module('settings',[]).component('settings', {
         if (!model) {onSubmit()}
       }
 
-      function getInputDate(weekDay, isStart) {
-        var date = isStart ? settings.startTime[weekDay] : settings.endTime[weekDay];
+      function getInputDate(weekDay, isStart, index) {
+        var date = isStart ? settings.startTime[weekDay][index] : settings.endTime[weekDay][index];
         var duration = null;
 
         if (isStart) {
-          saveDate(weekDay, 'start_at', date);
+          saveDate(weekDay, 'start_at', date, index);
           return hoursFormValid();
         }
 
-        saveDate(weekDay, 'end_at', date);
+        saveDate(weekDay, 'end_at', date , index);
 
-        duration = getDuration(weekDay);
+        duration = getDuration(weekDay, index);
 
         if (!duration) {
           _.set(settings.errorTime, weekDay, true);
           return hoursFormValid();
         }
-
         _.set(settings.errorTime, weekDay, false);
 
-        saveDate(weekDay, 'duration', duration);
+        saveDate(weekDay, 'duration', duration, index);
 
+      }
+
+      function saveDate(weekDay, key, value, index) {
+        var weekDayKey = weekDay + '.' + index + '.' + key;
+        formData = _.set(formData, weekDayKey , value);
+      }
+
+      function getDuration(weekDayKey, index) {
+        var startTime = _.get(formData, weekDayKey + '.' + index + '.' + 'start_at');
+        var endTime = _.get(formData, weekDayKey + '.' + index + '.' + 'end_at');
+        var duration = null;
+
+        if (!startTime && !endTime) return null;
+        duration = (endTime - startTime);
+        return  duration <= 0 ? null : duration;
       }
 
       function performInputDay(weekDay, model) {
@@ -83,14 +98,20 @@ angular.module('settings',[]).component('settings', {
         }
       }
 
+      function removeInputDate(weekDay, index) {
+        settings.startTime[weekDay].splice(index, 1);
+        settings.endTime[weekDay].splice(index, 1);
+        delete formData[weekDay][index];
+      }
+
       function clearInputDate(weekDay) {
-        settings.startTime = _.omit(settings.startTime, weekDay);
-        settings.endTime = _.omit(settings.endTime, weekDay);
+        settings.startTime[weekDay] = [{}];
+        settings.endTime[weekDay] = [{}];
         delete formData[weekDay];
       }
 
       function fillInputDate(weekDay) {
-        if (weekDay == 'Monday') {return}
+        if (weekDay == 'Monday') return;
         var prev_day = {};
         var currentDay = _.findIndex(settings.weekDays, function(o) { return o == weekDay; });
         var hours = settings.user.opening_hours.hours;
@@ -111,18 +132,6 @@ angular.module('settings',[]).component('settings', {
         if (!_.isEmpty(prev_day)) {setDayTime(weekDay, prev_day.start_at, prev_day.duration)}
       }
 
-      function getDuration(weekDayKey) {
-        var startTime = _.get(formData, weekDayKey + '.' + 'start_at');
-        var endTime = _.get(formData, weekDayKey + '.' + 'end_at');
-        var duration = null;
-
-        if (!startTime && !endTime) return null;
-
-        duration = (endTime - startTime);
-
-        return  duration <= 0 ? null : duration;
-      }
-
       function changeKeys(data) {
         var formatedData = {};
 
@@ -133,7 +142,7 @@ angular.module('settings',[]).component('settings', {
 
           var startAt = _.get(value, 'start_at') * 3600;
           var duration = _.get(value, 'duration') * 3600;
-
+          //TODO: check this arr
           _.set(formatedData, key, [{
               start_at: startAt,
               duration: duration
@@ -205,26 +214,24 @@ angular.module('settings',[]).component('settings', {
           var hours = settings.user.opening_hours.hours;
           _.each(settings.weekDays, function (weekDay, key) {
             if (!_.isEmpty(hours[key])) {
-              //TODO: refactor, after new design to work with date arrays
-              var start_at = hours[key][0].start_at / 3600;
-              var duration = hours[key][0].duration / 3600;
-              setDayTime(weekDay, start_at, duration);
+              _.each(hours[key], function (range, index) {
+                var start_at = hours[key][index].start_at / 3600;
+                var duration = hours[key][index].duration / 3600;
+                settings.enabledTime[weekDay] = true;
+                setDayTime(weekDay, start_at, duration, index);
+              })
+            } else {
+              setDayTime(weekDay, null, null, 0);
             }
           });
         }
       }
 
-      function setDayTime(day, start_at, duration) {
-        settings.startTime[day] = start_at;
-        settings.endTime[day] = duration + start_at;
-        settings.enabledTime[day] = true;
-        formData = _.set(formData, day + '.' + 'start_at', start_at);
-        formData = _.set(formData, day + '.' + 'duration', duration);
-      }
-
-      function saveDate(weekDay, key, value) {
-        var weekDayKey = weekDay + '.' + key;
-        formData = _.set(formData, weekDayKey , value);
+      function setDayTime (day, start_at, duration, rangeIndex) {
+        settings.startTime = _.set(settings.startTime, day + '.' + rangeIndex, start_at);
+        settings.endTime = _.set(settings.endTime, day + '.' + rangeIndex, duration + start_at);
+        formData = _.set(formData, day+ '.' + rangeIndex + '.' + 'start_at', start_at);
+        formData = _.set(formData, day+ '.' + rangeIndex + '.' + 'duration', duration);
       }
 
       function hoursFormValid(){
@@ -381,6 +388,13 @@ angular.module('settings',[]).component('settings', {
 
           $window.open(ENV.userEndpoint + $localStorage.userId + "/payment_methods/new", "popup", "width="+w+",height="+h+",left="+left+",top="+top);
       };
+
+      function addChild(day) {
+        if (settings.startTime[day]) {
+          return settings.startTime[day].push({})
+        }
+        settings.startTime[day] = [{}]
+      }
     }
   ]
 });
