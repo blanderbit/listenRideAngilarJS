@@ -32,7 +32,7 @@ angular.module('bike').component('calendar', {
           if (calendar.requests !== undefined) {
             deregisterRequestsWatcher();
             calendar.owner = calendar.userId == $localStorage.userId;
-            if (calendar.bikeFamily == 2) {
+            if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9) {
               calendar.event.reserved();
             }
             angular.element('#bikeCalendar').dateRangePicker({
