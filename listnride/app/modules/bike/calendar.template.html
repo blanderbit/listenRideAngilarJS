@@ -55,7 +55,7 @@
 
 
 
-<div id="timeRange" layout="row" layout-align="start center" layout-padding ng-if="calendar.bikeFamily != 2">
+<div id="timeRange" layout="row" layout-align="start center" layout-padding ng-if="calendar.bikeFamily != 2 && calendar.bikeFamily != 9">
   <md-input-container flex>
     <label>{{ 'shared.from' | translate }} {{ calendar.startDate | date }}</label>
     <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')"
