@@ -8,7 +8,7 @@
       <span flex></span>
       <h2 class="md-headline">{{ 'requests.rating' | translate }}</h2>
       <span flex></span>
-      <md-button class="md-icon-button" ng-click="ratingDialog.hide()">
+      <md-button class="md-icon-button" ng-click="ratingDialog.hide()" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="close">
         <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
       </md-button>
     </div>
@@ -34,7 +34,7 @@
           </md-input-container>
         </div>
         <div class="md-dialog-buttons" layout="row" layout-align="end">
-          <md-button ng-disabled="!ratingDialog.ratingForm.$valid;" ng-click="ratingDialog.rate()" class="md-raised md-primary">{{ 'shared.send' | translate }}</md-button>
+          <md-button ng-disabled="!ratingDialog.ratingForm.$valid;" ng-click="ratingDialog.rate()" class="md-raised md-primary" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="send">{{ 'shared.send' | translate }}</md-button>
         </div>
       </form>
     </div>

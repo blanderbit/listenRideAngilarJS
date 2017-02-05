@@ -1,6 +1,6 @@
  <md-content class="single-column"> 
   <div id="hero-shot" class="lnr-preload-bg" style="{{'background-image: url(' + bike.data.image_file_1.image_file_1.large.url + ')'}};" layout="row" layout-align="start end">
-    <md-button class="md-raised" ng-click="bike.showGalleryDialog($event)" md-no-ink>{{ 'bike.view-pictures' | translate }}</md-button>
+    <md-button class="md-raised" ng-click="bike.showGalleryDialog($event)" md-no-ink analytics-on analytics-category="button" analytics-event="clicked" analytics-label="view photos">{{ 'bike.view-pictures' | translate }}</md-button>
   </div>
 
   <div class="content" layout="column">
