@@ -343,7 +343,7 @@ angular.module('bike').component('calendar', {
           calendar.total = 0;
         } else {
           calendar.duration = date.duration(startDate, endDate);
-          // Price calculation differs slightly between event rentals (bikeFamily 2) and standard rentals
+          // Price calculation differs slightly between event rentals (bikeFamily 2 or 9) and standard rentals
           if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9) {
             var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, 4);
           } else {
