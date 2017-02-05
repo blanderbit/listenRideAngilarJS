@@ -1,4 +1,4 @@
-<div id="bikeCalendar" ng-hide="calendar.bikeFamily == 2"></div>
+<div id="bikeCalendar" ng-hide="calendar.bikeFamily == 2 || calendar.bikeFamily == 9"></div>
 
 
 
@@ -29,7 +29,7 @@
         Please select a day first
       </md-option>
 
-      <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.reserved" ng-if="calendar.day == slot.day && !slot.overnight" value="{{$index}}">
+      <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.reserved" ng-if="calendar.day == slot.day && slot.pickupEnabled" value="{{$index}}">
         {{slot.text}}
       </md-option>
     
@@ -44,7 +44,7 @@
         Please select a pickup time first
       </md-option>
 
-      <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.reserved || slot.returnDisabled" ng-if="calendar.day == slot.day" value="{{$index}}">
+      <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.returnDisabled" ng-if="calendar.day == slot.day" value="{{$index}}">
         {{slot.text}}
       </md-option>
     
