@@ -145,7 +145,7 @@
 
       $stateProvider.state({
         name: 'mcbw',
-        url: '/munich-creative-business-week',
+        url: '/mcbw',
         template: '<mcbw></mcbw>'
       });
 
