@@ -111,24 +111,45 @@ angular.module('settings',[]).component('settings', {
 
       function fillInputDate(weekDay) {
         if (weekDay == 'Monday') return;
-        var prev_day = {};
+        var prev_day = [];
         var currentDay = _.findIndex(settings.weekDays, function(o) { return o == weekDay; });
         var hours = settings.user.opening_hours.hours;
-        _.each(settings.weekDays, function (weekDay, key) { // Check for previously completed days
-          if (key > currentDay) {return prev_day}           // Return if day after current day
+        _.each(settings.weekDays, function (weekDay, key) {       // Check for previously completed days
+          if (key > currentDay) {return prev_day}                 // Return if day after current day
           if (!_.isEmpty(hours[key])) {
-            prev_day = {
-              'start_at': hours[key][0].start_at / 3600,
-              'duration': hours[key][0].duration / 3600
-            }
-          } else if (!_.isEmpty(formData[weekDay])) {       // If previous day chosen, but not saved yet
-            prev_day = {
-              'start_at': Number(formData[weekDay].start_at),
-              'duration': formData[weekDay].duration
-            }
+            prev_day = getPreviousDay(hours[key], true);
+
+          } else if (changedInput(weekDay)) { // If previous day chosen, but not saved yet
+            prev_day = getPreviousDay(formData[weekDay], false);
           }
         });
-        if (!_.isEmpty(prev_day)) {setDayTime(weekDay, prev_day.start_at, prev_day.duration)}
+
+        
+        if (!_.isEmpty(prev_day)) {
+          _.each(prev_day, function (data, key) {
+            setDayTime(weekDay, data.start_at, data.duration, key)
+          });
+        }
+      }
+
+      function getPreviousDay(dayRanges, inSeconds) {
+        var day = [];
+        _.each(dayRanges, function (range, key) {
+          day.push({
+            'start_at': inSeconds ? range.start_at / 3600 : Number(range.start_at),
+            'duration': inSeconds ? range.duration / 3600 : range.duration
+          })
+        });
+
+        return day
+      }
+
+      function changedInput(weekDay) {
+        var changed = false;
+        _.each(formData[weekDay], function (range, key) {
+          if (!_.isEmpty(range.start_at) || !_.isEmpty(range.duration)) { changed = true}
+        });
+        return changed
       }
 
       function onSubmit() {
