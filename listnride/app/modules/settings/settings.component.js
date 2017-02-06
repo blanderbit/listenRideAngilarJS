@@ -121,10 +121,10 @@ angular.module('settings',[]).component('settings', {
       }
 
       function fillInputDate(weekDay) {
-        if (weekDay == 'Monday') return;
+        if (unableToPreFill(weekDay)) return;
         var prev_day = [];
         var currentDay = _.findIndex(settings.weekDays, function(o) { return o == weekDay; });
-        var hours = settings.user.opening_hours.hours;
+        var hours = _.isEmpty(settings.user.opening_hours) ? [] : settings.user.opening_hours.hours;
         _.each(settings.weekDays, function (weekDay, key) {  // Check for previously completed days
           if (key > currentDay) {return prev_day}   // Return if day after current day
           var anyData = formDataPresent(weekDay);
@@ -141,6 +141,15 @@ angular.module('settings',[]).component('settings', {
             setDayTime(weekDay, data.start_at, data.duration, key)
           });
         }
+      }
+
+      function unableToPreFill(weekDay) {
+        var formEmphty = true;
+        _.each(settings.weekDays, function (weekDay, key) {
+          if (formDataPresent(weekDay)) formEmphty = false
+        });
+
+        return (weekDay == 'Monday' || (_.isEmpty(settings.user.opening_hours) && formEmphty))
       }
 
       function getPreviousDay(dayRanges, inSeconds) {
