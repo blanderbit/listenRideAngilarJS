@@ -138,7 +138,8 @@
     "own-bikes": "Eigene Räder",
     "ratings": "Bewertungen",
     "meta-title": "{{name}}'s Profil",
-    "meta-description": "Rad mieten von {{name}} auf listnride."
+    "meta-description": "Rad mieten von {{name}} auf listnride.",
+    "availability": "Availability"
   },
 
   "requests": {

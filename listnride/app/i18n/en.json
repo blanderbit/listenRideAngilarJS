@@ -133,7 +133,8 @@
     "own-bikes": "Own Bikes",
     "ratings": "Ratings",
     "meta-title": "{{name}}'s profile",
-    "meta-description": "Rent bikes on listnride from {{name}}."
+    "meta-description": "Rent bikes on listnride from {{name}}.",
+    "availability": "Availability"
   },
   "requests": {
     "booking-overview": "Booking Overview",

@@ -138,7 +138,8 @@
     "own-bikes": "Mijn fietsen",
     "ratings": "Recensies",
     "meta-title": "{{name}}'s profiel",
-    "meta-description": "Fiets huren op listnride van {{name}}."
+    "meta-description": "Fiets huren op listnride van {{name}}.",
+    "availability": "Availability"
   },
 
   "requests": {
