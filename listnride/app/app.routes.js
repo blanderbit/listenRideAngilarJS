@@ -144,6 +144,12 @@
       });
 
       $stateProvider.state({
+        name: 'mcbw',
+        url: '/munich-creative-business-week',
+        template: '<mcbw></mcbw>'
+      });
+
+      $stateProvider.state({
         name: 'listingABike',
         url: '/listing-a-bike',
         template: '<listing-a-bike></listing-a-bike>',

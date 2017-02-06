@@ -26,6 +26,7 @@ angular.module('listnride', [
   'crossride',
   'static',
   'brand-integration',
+  'mcbw',
   'listnride.constant',
   /* external modules */
   'ngMaterial',
