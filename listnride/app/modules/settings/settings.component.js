@@ -49,7 +49,13 @@ angular.module('settings',[]).component('settings', {
       }
 
       function performOpeningHours(model) {
-        if (!model) {onSubmit()}
+        if (model) {
+          _.each(settings.weekDays, function (weekDay, key) {
+            setDayTime(weekDay, null, null, 0);
+          });
+        } else {
+          onSubmit()
+        }
       }
 
       function getInputDate(weekDay, isStart, index) {
@@ -194,7 +200,7 @@ angular.module('settings',[]).component('settings', {
       function createOpeningHours(data) {
         api.post('/opening_hours', data).then(
           function (success) {
-            settings.openingHoursId = success.data[0].id;
+            settings.openingHoursId = success.data.id;
             $mdToast.show(
               $mdToast.simple()
                 .textContent($translate.instant('toasts.opening-hours-success'))
