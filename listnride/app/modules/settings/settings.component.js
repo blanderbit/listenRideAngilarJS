@@ -54,24 +54,18 @@ angular.module('settings',[]).component('settings', {
 
       function getInputDate(weekDay, isStart, index) {
         var date = isStart ? settings.startTime[weekDay][index] : settings.endTime[weekDay][index];
-        var duration = null;
+        var field = isStart ? 'start_at' : 'end_at';
+        saveDate(weekDay, field, date, index);
+        var duration = getDuration(weekDay, index);
 
-        if (isStart) {
-          saveDate(weekDay, 'start_at', date, index);
-          return hoursFormValid();
-        }
-
-        saveDate(weekDay, 'end_at', date , index);
-
-        duration = getDuration(weekDay, index);
-
-        if (!duration) {
+        if (duration) {
+          _.set(settings.errorTime, weekDay, false);
+          saveDate(weekDay, 'duration', duration, index);
+        } else {
           _.set(settings.errorTime, weekDay, true);
-          return hoursFormValid();
         }
-        _.set(settings.errorTime, weekDay, false);
+
         hoursFormValid();
-        saveDate(weekDay, 'duration', duration, index);
       }
 
       function saveDate(weekDay, key, value, index) {
@@ -83,10 +77,18 @@ angular.module('settings',[]).component('settings', {
         var startTime = _.get(formData, weekDayKey + '.' + index + '.' + 'start_at');
         var endTime = _.get(formData, weekDayKey + '.' + index + '.' + 'end_at');
         var duration = null;
+        // Get values that came from server
+        if (!startTime) startTime = Number(settings.startTime[weekDayKey][index]);
+        if (!endTime) endTime = Number(settings.endTime[weekDayKey][index]);
 
         if (!startTime && !endTime) return null;
         duration = (endTime - startTime);
         return  duration <= 0 ? null : duration;
+      }
+
+      function hoursFormValid(){
+        var errors = Object.values(settings.errorTime);
+        settings.error = errors.some(function(e) { return e === true; })
       }
 
       function performInputDay(weekDay, model) {
@@ -101,7 +103,6 @@ angular.module('settings',[]).component('settings', {
         settings.startTime[weekDay].splice(index, 1);
         settings.endTime[weekDay].splice(index, 1);
         formData[weekDay].splice(index, 1);
-
       }
 
       function clearInputDate(weekDay) {
@@ -115,7 +116,7 @@ angular.module('settings',[]).component('settings', {
         var prev_day = [];
         var currentDay = _.findIndex(settings.weekDays, function(o) { return o == weekDay; });
         var hours = settings.user.opening_hours.hours;
-        _.each(settings.weekDays, function (weekDay, key) {       // Check for previously completed days
+        _.each(settings.weekDays, function (weekDay, key) {  // Check for previously completed days
           if (key > currentDay) {return prev_day}   // Return if day after current day
           var anyData = formDataPresent(weekDay);
           if (!_.isEmpty(hours[key]) && !anyData) {
@@ -254,11 +255,6 @@ angular.module('settings',[]).component('settings', {
         settings.endTime = _.set(settings.endTime, day + '.' + rangeIndex, duration + start_at);
         formData = _.set(formData, day+ '.' + rangeIndex + '.' + 'start_at', start_at);
         formData = _.set(formData, day+ '.' + rangeIndex + '.' + 'duration', duration);
-      }
-
-      function hoursFormValid(){
-        var errors = Object.values(settings.errorTime);
-        settings.error = errors.some(function(e) { return e === true; })
       }
 
       settings.fillAddress = function(place) {
