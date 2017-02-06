@@ -54,6 +54,38 @@
       </div>
       <!-- end description -->
 
+      <!-- availability -->
+      <div layout="row" layout-xs="column" ng-style="{'display': user.openingHoursEnabled ? '' : 'none'}">
+        <div flex-gt-xs="25">
+          <h3 class="md-body-2">{{ 'user.availability' | translate }}</h3>
+        </div>
+        <div flex-gt-xs>
+          <div ng-repeat="day in user.weekDays">
+            <p class="md-body-1 lnr-margin-left">
+              <div layout="row">
+                <div class="lnr-margin-left" layout="row" flex="20">{{day}}</div>
+
+                <div layout="column" flex="30">
+                  <div ng-repeat="range in user.hours[day]" >
+                    <div layout="row" layout-align="start center" ng-style="{'display': user.closedDay(range) ? 'none' : ''}">
+
+                      {{range.start_at}} - {{range.end_at}}
+
+                    </div>
+                    <div layout="row" layout-align="start center" ng-style="{'display': user.closedDay(range) ? '' : 'none'}">
+
+                      Not available
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- end availability -->
+
       <!-- listings -->
       <div layout="row" layout-xs="column">
         <div flex-gt-xs="25">
