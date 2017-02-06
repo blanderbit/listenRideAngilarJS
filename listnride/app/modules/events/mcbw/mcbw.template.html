@@ -1,0 +1,129 @@
+ <md-content class="single-column"> 
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/events/mcbw.jpg')" layout="row" layout-align="center center">
+    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'events.mcbw.title' | translate }}</h1>
+    </div>
+  </div>
+
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'events.mcbw.description' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'events.mcbw.text' | translate }}</h2>
+    </div>
+
+    <br>
+    <md-divider></md-divider>
+    <br>
+
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'brand-integration.ampler.choose-location' | translate }}</h1>
+      <p class="lnr-center">The four locations are<br><b>1 Munix Finest Bicycles</b>, Wörthstraße 11<br><b>2 Velofactum</b>, Frohschammerstr. 14<br><b>3 Velocompany</b>, Schleißheimerstr. 106<br><b>4 listnride</b>, Münchner Freiheit</p>
+
+    </div>
+
+    <!-- <md-tabs md-no-pagination md-dynamic-height md-no-ink md-no-ink-bars md-center-tabs="on">
+      <md-tab style="font-size: 40px" label="{{ 'shared.berlin' | translate }}">
+        <md-content>
+          <div flex-gt-xs layout="row" layout-wrap layout-padding>
+            <bike-card ng-repeat="bike in mcbw.bikes1" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+          </div>
+        </md-content>
+      </md-tab>
+      <md-tab label="2">
+        <md-content>
+          <div flex-gt-xs layout="row" layout-wrap layout-padding>
+            <bike-card ng-repeat="bike in mcbw.bikes2" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+          </div>
+        </md-content>
+      </md-tab>
+      <md-tab style="font-size: 40px" label="3">
+        <md-content>
+          <div flex-gt-xs layout="row" layout-wrap layout-padding>
+            <bike-card ng-repeat="bike in mcbw.bikes3" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+          </div>
+        </md-content>
+      </md-tab>
+      <md-tab label="4">
+        <md-content>
+          <div flex-gt-xs layout="row" layout-wrap layout-padding>
+            <bike-card ng-repeat="bike in mcbw.bikes4" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+          </div>
+        </md-content>
+      </md-tab>
+    </md-tabs> -->
+
+    <md-tabs md-no-pagination md-dynamic-height md-no-ink md-no-ink-bars md-center-tabs="on">
+      <md-tab style="font-size: 40px" label="{{ 'shared.berlin' | translate }}">
+        <md-content>
+          <div flex-gt-xs layout="row" layout-wrap layout-padding>
+            <bike-card ng-repeat="bike in mcbw.bikes1" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+          </div>
+        </md-content>
+      </md-tab>
+      <md-tab label="{{ 'shared.munich' | translate }}">
+        <md-content>
+          <div flex-gt-xs layout="row" layout-wrap layout-padding>
+            <bike-card ng-repeat="bike in mcbw.bikes2" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+          </div>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+
+    <br>
+    <md-divider></md-divider>
+    <br>
+
+  </div>
+
+  <ng-map ng-if="true" default-style="false" style="height: 350px" center="[{{mcbw.mapOptions.lat}},{{mcbw.mapOptions.lng}}]" zoom="{{mcbw.mapOptions.zoom}}" scrollwheel="false">
+    <marker
+      position="[48.1313605,11.5971843]"
+      on-click="map.showInfoWindow(event, 'window1')">
+    </marker>
+    <marker
+      position="[48.1789596,11.5666245]"
+      on-click="map.showInfoWindow(event, 'window2')">
+    </marker>
+    <marker
+      position="[48.1569636,11.5602813]"
+      on-click="map.showInfoWindow(event, 'window3')">
+    </marker>
+    <marker
+      position="[48.1631905,11.5850364]"
+      on-click="map.showInfoWindow(event, 'window4')">
+    </marker>
+    <info-window id="window1" close-box-margin="0">
+        <div ng-non-bindable="">
+          <div style="background-color: #ffffff; padding: 15px">
+            <h3>Munix Finest Bicycles</h3>
+            <p>Location 1,<br>Wörthstraße 4</p>
+          </div>
+        </div>
+    </info-window>
+    <info-window id="window2" close-box-margin="0">
+        <div ng-non-bindable="">
+          <div style="background-color: #ffffff; padding: 15px">
+            <h3>Velofactum</h3>
+            <p>Location 2,<br>Frohschammerstr. 14</p>
+          </div>
+        </div>
+    </info-window>
+    <info-window id="window3" close-box-margin="0">
+        <div ng-non-bindable="">
+          <div style="background-color: #ffffff; padding: 15px">
+            <h3>Velocompany</h3>
+            <p>Location 3,<br>Schleißheimerstr. 106</p>
+          </div>
+        </div>
+    </info-window>
+    <info-window id="window4" close-box-margin="0">
+        <div ng-non-bindable="">
+          <div style="background-color: #ffffff; padding: 15px">
+            <h3>listnride</h3>
+            <p>Location 4,<br>Münchner Freiheit</p>
+          </div>
+        </div>
+    </info-window>
+  </ng-map>
+  <footer></footer>
+</md-content>
