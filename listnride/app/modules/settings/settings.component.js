@@ -100,7 +100,8 @@ angular.module('settings',[]).component('settings', {
       function removeInputDate(weekDay, index) {
         settings.startTime[weekDay].splice(index, 1);
         settings.endTime[weekDay].splice(index, 1);
-        delete formData[weekDay][index];
+        formData[weekDay].splice(index, 1);
+
       }
 
       function clearInputDate(weekDay) {
@@ -115,16 +116,16 @@ angular.module('settings',[]).component('settings', {
         var currentDay = _.findIndex(settings.weekDays, function(o) { return o == weekDay; });
         var hours = settings.user.opening_hours.hours;
         _.each(settings.weekDays, function (weekDay, key) {       // Check for previously completed days
-          if (key > currentDay) {return prev_day}                 // Return if day after current day
-          if (!_.isEmpty(hours[key])) {
+          if (key > currentDay) {return prev_day}   // Return if day after current day
+          var anyData = formDataPresent(weekDay);
+          if (!_.isEmpty(hours[key]) && !anyData) {
             prev_day = getPreviousDay(hours[key], true);
 
-          } else if (changedInput(weekDay)) { // If previous day chosen, but not saved yet
+          } else if (anyData) { // If previous day chosen, but not saved yet
             prev_day = getPreviousDay(formData[weekDay], false);
           }
         });
 
-        
         if (!_.isEmpty(prev_day)) {
           _.each(prev_day, function (data, key) {
             setDayTime(weekDay, data.start_at, data.duration, key)
@@ -144,12 +145,12 @@ angular.module('settings',[]).component('settings', {
         return day
       }
 
-      function changedInput(weekDay) {
-        var changed = false;
+      function formDataPresent(weekDay) {
+        var present = false;
         _.each(formData[weekDay], function (range, key) {
-          if (!_.isEmpty(range.start_at) || !_.isEmpty(range.duration)) { changed = true}
+          if (range.start_at !== null || range.duration !== null) { present = true}
         });
-        return changed
+        return present
       }
 
       function onSubmit() {
