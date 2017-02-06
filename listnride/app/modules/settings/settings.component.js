@@ -57,10 +57,13 @@ angular.module('settings',[]).component('settings', {
         var field = isStart ? 'start_at' : 'end_at';
         saveDate(weekDay, field, date, index);
         var duration = getDuration(weekDay, index);
+        var endTime = _.get(formData, weekDay + '.' + index + '.' + 'end_at');
 
         if (duration) {
           _.set(settings.errorTime, weekDay, false);
           saveDate(weekDay, 'duration', duration, index);
+        } else if (endTime == null){ // If second input still blank
+          _.set(settings.errorTime, weekDay, false);
         } else {
           _.set(settings.errorTime, weekDay, true);
         }
