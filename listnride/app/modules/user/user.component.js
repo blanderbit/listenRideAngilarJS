@@ -19,8 +19,9 @@ angular.module('user',[]).component('user', {
           user.showAll = false;
           user.user = response.data;
           user.loaded = true;
-          user.openingHoursEnabled = response.data.opening_hours.enabled;
-          user.openingHours = response.data.opening_hours.hours;
+          user.anyHours = !_.isEmpty(response.data.opening_hours);
+          user.openingHoursEnabled = user.anyHours ? response.data.opening_hours.enabled : false;
+          user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
           user.rating = (user.user.rating_lister + user.user.rating_rider);
           if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
             user.rating = user.rating / 2;
@@ -40,6 +41,7 @@ angular.module('user',[]).component('user', {
       );
 
       function setOpeningHours() {
+        if (!user.anyHours) return;
         _.each(user.weekDays, function (day, key) {
           var weekDay = user.openingHours[key];
           var dayRange = [];
