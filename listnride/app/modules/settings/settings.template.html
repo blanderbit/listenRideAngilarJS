@@ -245,11 +245,11 @@
        <!--end account -->
 
       <!-- hours -->
-      <md-tab class="hours" label="{{ 'settings.hours' | translate }}" layout="column">
+      <md-tab class="hours" label="{{ 'settings.availability' | translate }}" layout="column">
         <br>
         <div class="tab-content" layout="column" layout-align="space-around none">
           <div layout="row" layout-align="none center" layout-margin>
-            <h3>Availability option</h3>
+            <h3>{{ 'settings.availability-option' | translate }}</h3>
             <md-switch
                     ng-model="settings.openingHoursEnabled"
                     ng-change="settings.performOpeningHours(settings.openingHoursEnabled)"
