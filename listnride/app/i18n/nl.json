@@ -139,7 +139,8 @@
     "ratings": "Recensies",
     "meta-title": "{{name}}'s profiel",
     "meta-description": "Fiets huren op listnride van {{name}}.",
-    "availability": "Availability"
+    "availability": "Availability",
+    "not-available": "Not available"
   },
 
   "requests": {

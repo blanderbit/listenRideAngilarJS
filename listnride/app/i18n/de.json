@@ -139,7 +139,8 @@
     "ratings": "Bewertungen",
     "meta-title": "{{name}}'s Profil",
     "meta-description": "Rad mieten von {{name}} auf listnride.",
-    "availability": "Availability"
+    "availability": "Availability",
+    "not-available": "Not available"
   },
 
   "requests": {
