@@ -63,7 +63,8 @@
     "settings": "Settings",
     "profile": "Profile",
     "account": "Account",
-    "hours": "Opening Hours",
+    "availability": "Availability",
+    "availability-option": "Availability option",
     "from": "From",
     "to": "To",
     "payment-method": "Payment Method",
@@ -133,7 +134,9 @@
     "own-bikes": "Own Bikes",
     "ratings": "Ratings",
     "meta-title": "{{name}}'s profile",
-    "meta-description": "Rent bikes on listnride from {{name}}."
+    "meta-description": "Rent bikes on listnride from {{name}}.",
+    "availability": "Availability",
+    "not-available": "Not available"
   },
   "requests": {
     "booking-overview": "Booking Overview",

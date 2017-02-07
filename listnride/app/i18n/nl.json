@@ -65,7 +65,8 @@
     "settings": "Instellingen",
     "profile": "Profiel",
     "account": "Account",
-    "hours": "Opening Hours",
+    "availability": "Availability",
+    "availability-option": "Availability option",
     "from": "From",
     "to": "To",
     "payment-method": "Betaalmethoden",
@@ -138,7 +139,9 @@
     "own-bikes": "Mijn fietsen",
     "ratings": "Recensies",
     "meta-title": "{{name}}'s profiel",
-    "meta-description": "Fiets huren op listnride van {{name}}."
+    "meta-description": "Fiets huren op listnride van {{name}}.",
+    "availability": "Availability",
+    "not-available": "Not available"
   },
 
   "requests": {

@@ -245,14 +245,17 @@
        <!--end account -->
 
       <!-- hours -->
-      <md-tab class="hours" label="{{ 'settings.hours' | translate }}" layout="column">
+      <md-tab class="hours" label="{{ 'settings.availability' | translate }}" layout="column">
         <br>
-        <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
-          <h3>Enable Opening hours option</h3>
-          <md-switch
-                  ng-model="settings.openingHoursEnabled"
-                  ng-change="settings.performOpeningHours(settings.openingHoursEnabled)"
-          ></md-switch>
+        <div class="tab-content" layout="column" layout-align="space-around none">
+          <div layout="row" layout-align="none center" layout-margin>
+            <h3>{{ 'settings.availability-option' | translate }}</h3>
+            <md-switch
+                    ng-model="settings.openingHoursEnabled"
+                    ng-change="settings.performOpeningHours(settings.openingHoursEnabled)"
+            ></md-switch>
+          </div>
+
           <form name="hoursForm" ng-style="{'display': settings.openingHoursEnabled ? '' : 'none'}">
             <div ng-repeat="day in settings.weekDays">
               <div
@@ -260,51 +263,76 @@
                   layout-xs="column"
                   ng-class="{'form-error': settings.errorTime[day]}"
               >
-                <div flex-gt-xs layout-margin>
-                  <span class="md-body-2" ng-class="{'text-error': settings.errorTime[day]}">{{ day | translate }}</span>
+                <div layout="row" layout-align="start center" flex="20" >
+                  <span class="md-body-2" ng-class="{'text-error': settings.errorTime[day]}">
+                    {{ day | translate }}
+                  </span>
                 </div>
-                <md-switch
-                  ng-model="settings.enabledTime[day]"
-                  ng-change="settings.performInputDay(day, settings.enabledTime[day])"
-                  class="layout-margin flex-gt-xs"
-                >
-                </md-switch>
-                </md-button>
-                <div flex-gt-xs="70" layout-margin>
-                  <div layout="row" layout-xs="column" ng-class="{'disabled': !settings.enabledTime[day]}">
-                    <md-input-container flex-gt-xs="45">
-                      <label>{{ 'settings.from' | translate }}</label>
-                      <md-select
-                          ng-change="settings.getInputDate(day, true)"
-                          ng-model="settings.startTime[day]"
-                          placeholder="{{ 'shared.from' | translate }}"
-                      >
-                        <md-option
-                            ng-repeat="i in [].constructor(17) track by $index"
-                            value="{{$index + 6}}"
-                        >
-                           {{ ($index + 6) + ":00" }}
-                        </md-option>
-                      </md-select>
-                    </md-input-container>
+                <div layout="row" layout-align="start center" flex="20">
+                  <md-switch
+                    flex-gt-xs layout-margin
+                    ng-model="settings.enabledTime[day]"
+                    ng-change="settings.performInputDay(day, settings.enabledTime[day])"
+                  >
+                  </md-switch>
+                </div>
 
-                    <span hide-xs flex></span>
+                <div layout="column" flex="30">
+                  <div ng-repeat="range in settings.startTime[day] track by $index" >
+                    <div layout="row" layout-align="space-around center" ng-class="{'disabled': !settings.enabledTime[day]}">
+                      <div>
+                        <md-input-container>
+                          <label>{{ 'settings.from' | translate }}</label>
+                          <md-select
+                                  ng-change="settings.getInputDate(day, true, $index)"
+                                  ng-model="settings.startTime[day][$index]"
+                                  placeholder="{{ 'shared.from' | translate }}"
+                          >
+                            <md-option
+                                    ng-repeat="i in [].constructor(17) track by $index"
+                                    value="{{$index + 6}}"
+                            >
+                              {{ ($index + 6) + ":00" }}
+                            </md-option>
+                          </md-select>
+                        </md-input-container>
+                      </div>
 
-                    <md-input-container flex-gt-xs="45">
-                      <label>{{ 'settings.to' | translate }}</label>
-                      <md-select
-                          ng-change="settings.getInputDate(day, false)"
-                          ng-model="settings.endTime[day]"
-                          placeholder="{{ 'shared.from' | translate }}"
-                      >
-                        <md-option
-                            ng-repeat="i in [].constructor(17) track by $index"
-                            value="{{$index + 6}}"
-                        >
-                          {{ ($index + 6) + ":00" }}
-                        </md-option>
-                      </md-select>
-                    </md-input-container>
+                      <span hide-xs flex></span>
+
+                      <div>
+                        <md-input-container>
+                          <label>{{ 'settings.to' | translate }}</label>
+                          <md-select
+                                  ng-change="settings.getInputDate(day, false, $index)"
+                                  ng-model="settings.endTime[day][$index]"
+                                  placeholder="{{ 'shared.from' | translate }}"
+                          >
+                            <md-option
+                                    ng-repeat="i in [].constructor(17) track by $index"
+                                    value="{{$index + 6}}"
+                            >
+                              {{ ($index + 6) + ":00" }}
+                            </md-option>
+                          </md-select>
+                        </md-input-container>
+                      </div>
+                      <div layout="row" layout-align="end center">
+                        <md-button
+                                ng-style="{'display': $index == 0 ? 'none' : ''}"
+                                class="md-fab md-mini md-warn"
+                                ng-click="settings.removeInputDate(day, $index)">
+                          <md-icon md-font-icon="fa-times"  class="fa"></md-icon>
+                        </md-button>
+
+                        <md-button
+                                ng-style="{'display': $index == 0 ? '' : 'none'}"
+                                class="md-fab md-mini md-primary"
+                                ng-click="settings.addChild(day)">
+                          <md-icon md-font-icon="fa-plus"  class="fa"></md-icon>
+                        </md-button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
