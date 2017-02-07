@@ -65,7 +65,8 @@
     "settings": "Einstellungen",
     "profile": "Profil",
     "account": "Account",
-    "hours": "Opening Hours",
+    "availability": "Availability",
+    "availability-option": "Availability option",
     "from": "From",
     "to": "To",
     "payment-method": "Zahlungsart",
@@ -138,7 +139,9 @@
     "own-bikes": "Eigene Räder",
     "ratings": "Bewertungen",
     "meta-title": "{{name}}'s Profil",
-    "meta-description": "Rad mieten von {{name}} auf listnride."
+    "meta-description": "Rad mieten von {{name}} auf listnride.",
+    "availability": "Availability",
+    "not-available": "Not available"
   },
 
   "requests": {
