@@ -65,16 +65,16 @@
               <div layout="row">
                 <div class="lnr-margin-left" layout="row" flex="20">{{day}}</div>
 
-                <div layout="column" flex="30">
-                  <div ng-repeat="range in user.hours[day]" >
-                    <div layout="row" layout-align="start center" ng-style="{'display': user.closedDay(range) ? 'none' : ''}">
+                <div layout="row" flex="30">
+                  <div ng-repeat="range in user.hours[day]" layout="row" layout-align="start center">
+                    <div ng-style="{'display': user.closedDay(range) ? 'none' : ''}">
 
-                      {{range.start_at}} - {{range.end_at}}
+                      {{ range.start_at }}:00 - {{ range.end_at }}:00 {{ $last ? '' : ',&nbsp;' }}
 
                     </div>
-                    <div layout="row" layout-align="start center" ng-style="{'display': user.closedDay(range) ? '' : 'none'}">
+                    <div ng-style="{'display': user.closedDay(range) ? '' : 'none'}">
 
-                      Not available
+                      {{ 'user.not-available' | translate }}
 
                     </div>
                   </div>
