@@ -760,8 +760,13 @@ home #featuredTilesGrid .tile {
   background-color: #7ab2f8;
 }
 
-home #featuredTilesGrid img {
+home #featuredTilesGrid .img-container {
   height: 40%;
+  width: 100%;
+}
+
+home #featuredTilesGrid img {
+  height: 100%;
 }
 
 @media (max-width:599px) {

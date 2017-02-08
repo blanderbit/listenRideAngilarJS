@@ -42,7 +42,14 @@
     "lister": "Lister",
     "reviews": "Reviews",
     "for": "for",
-    "per-day": "per day"
+    "per-day": "per day",
+    "Monday": "Monday",
+    "Tuesday": "Tuesday",
+    "Wednesday": "Wednesday",
+    "Thursday": "Thursday",
+    "Friday": "Friday",
+    "Saturday": "Saturday",
+    "Sunday": "Sunday"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",

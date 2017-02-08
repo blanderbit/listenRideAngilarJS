@@ -7,7 +7,7 @@ angular.module('user',[]).component('user', {
     function ProfileController($localStorage, $stateParams, $translate, ngMeta, api) {
       var user = this;
       user.hours = {};
-      user.weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+      user.weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
       user.loaded = false;
       user.closedDay = closedDay;
 
@@ -55,6 +55,30 @@ angular.module('user',[]).component('user', {
           });
           user.hours[day] = dayRange;
         });
+        compactHours()
+      }
+      
+      function compactHours() {
+        var currentDay = {};
+        var dayName = 'Mon';
+        var prevDay = user.hours['Mon'];
+        var shortenHours = {'Mon':prevDay};
+
+        _.each(user.weekDays, function (day) {
+          currentDay = user.hours[day];
+
+          if (_.isEqual(currentDay, prevDay)) {
+            if (!_.isEmpty(shortenHours[dayName])) delete shortenHours[dayName];
+            dayName = (dayName == 'Mon') ? 'Mon' : dayName + ', ' + day;
+            shortenHours[dayName] = currentDay;
+          } else {
+            dayName = day;
+            shortenHours[dayName] = currentDay;
+            prevDay = currentDay;
+          }
+        });
+        user.weekDays = _.keys(shortenHours);
+        user.hours = shortenHours;
       }
 
       function closedDay(range) {
