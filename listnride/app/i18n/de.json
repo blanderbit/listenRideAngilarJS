@@ -42,7 +42,14 @@
     "lister": "Vermieter",
     "reviews": "Bewertungen",
     "for": "für",
-    "per-day": "pro Tag"
+    "per-day": "pro Tag",
+    "Monday": "Montag",
+    "Tuesday": "Dienstag",
+    "Wednesday": "Mittwoch",
+    "Thursday": "Donnertag",
+    "Friday": "Freitag",
+    "Saturday": "Samstag",
+    "Sunday": "Sonntag"
   },
 
   "toasts": {
@@ -65,8 +72,8 @@
     "settings": "Einstellungen",
     "profile": "Profil",
     "account": "Account",
-    "availability": "Availability",
-    "availability-option": "Availability option",
+    "availability": "Verfügbarkeiten",
+    "availability-option": "Verfügbarkeiten option",
     "from": "From",
     "to": "To",
     "payment-method": "Zahlungsart",
@@ -140,8 +147,8 @@
     "ratings": "Bewertungen",
     "meta-title": "{{name}}'s Profil",
     "meta-description": "Rad mieten von {{name}} auf listnride.",
-    "availability": "Availability",
-    "not-available": "Not available"
+    "availability": "Verfügbarkeiten",
+    "not-available": "Nicht verfügbar"
   },
 
   "requests": {
