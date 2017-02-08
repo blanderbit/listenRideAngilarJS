@@ -59,17 +59,14 @@ angular.module('user',[]).component('user', {
       }
       
       function compactHours() {
-        var currentDay = {};
-        var dayName = 'Mon';
-        var prevDay = user.hours['Mon'];
-        var shortenHours = {'Mon':prevDay};
+        var dayName = '', currentDay = {}, prevDay = {}, shortenHours = {};
 
         _.each(user.weekDays, function (day) {
           currentDay = user.hours[day];
 
-          if (_.isEqual(currentDay, prevDay)) {
+          if (_.isEqual(currentDay, prevDay) && currentDay !== user.hours['Mon']) {
             if (!_.isEmpty(shortenHours[dayName])) delete shortenHours[dayName];
-            dayName = (dayName == 'Mon') ? 'Mon' : dayName + ', ' + day;
+            dayName = dayName + ', ' + day;
             shortenHours[dayName] = currentDay;
           } else {
             dayName = day;
