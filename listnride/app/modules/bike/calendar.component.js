@@ -294,7 +294,7 @@ angular.module('bike').component('calendar', {
 
       function dateClosed(date) {
         if (openingHoursAvailable()) {
-          return calendar.bikeOwner.opening_hours.hours[getWeekDay(date)] == null;
+          return _.isEmpty(calendar.bikeOwner.opening_hours.hours[getWeekDay(date)]);
         }
         return false
       }

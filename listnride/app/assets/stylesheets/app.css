@@ -1328,6 +1328,14 @@ rapha-super-cross img.event-logo {
   width: 250px;
 }
 
+mcbw md-tab-item {
+  font-size: 16px;
+}
+
+mcbw md-pagination-wrapper {
+  width: 300px !important;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  CITY PAGES
 /*-----------------------------------------------------------------------------------*/
