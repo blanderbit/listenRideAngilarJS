@@ -163,7 +163,7 @@
                 </div>
 
                 <md-button class="md-raised md-primary lnr-no-margin" ng-disabled="edit.form.images.length > 4" ngf-multiple="true"
-                  ngf-select="edit.addImage($files)" accept=".jpg,.jpeg">
+                  ngf-select="edit.addImage($files)" accept=".jpg,.jpeg" ngf-validate="edit.validateObj" ngf-model-invalid="edit.invalidFiles">
                   {{ 'list.pictures.select-images' | translate }}
                 </md-button>
 

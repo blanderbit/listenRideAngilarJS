@@ -18,6 +18,8 @@ angular.module('edit',[]).component('edit', {
       edit.categoryOptions = bikeOptions.categoryOptions();
       edit.subcategoryOptions = bikeOptions.subcategoryOptions();
       edit.accessoryOptions = bikeOptions.accessoryOptions();
+      edit.validateObj = {height: {min: 500}, width: {min: 500}, duration: {max: '5m'}};
+      edit.invalidFiles = {};
 
       api.get('/rides/' + $stateParams.bikeId).then(
         function(response) {
