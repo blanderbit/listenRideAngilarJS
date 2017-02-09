@@ -51,7 +51,7 @@ angular.module('settings',[]).component('settings', {
       function performOpeningHours(model) {
         if (model) {
           _.each(settings.weekDays, function (weekDay, key) {
-            setDayTime(weekDay, null, null, 0);
+            setDayTime(weekDay, null, null);
           });
         } else {
           onSubmit()
