@@ -49,7 +49,14 @@
     "Thursday": "Donnertag",
     "Friday": "Freitag",
     "Saturday": "Samstag",
-    "Sunday": "Sonntag"
+    "Sunday": "Sonntag",
+    "Mon": "Mo",
+    "Tue": "Di",
+    "Wed": "Mi",
+    "Thu": "Do",
+    "Fri": "Fr",
+    "Sat": "Sa",
+    "Sun": "So"
   },
 
   "toasts": {
@@ -72,8 +79,7 @@
     "settings": "Einstellungen",
     "profile": "Profil",
     "account": "Account",
-    "availability": "Verfügbarkeiten",
-    "availability-option": "Verfügbarkeiten option",
+    "availability": "Verfügbarkeit",
     "from": "From",
     "to": "To",
     "payment-method": "Zahlungsart",

@@ -49,7 +49,14 @@
     "Thursday": "Donderdag",
     "Friday": "Vrijdag",
     "Saturday": "Zaterdag",
-    "Sunday": "Zondag"
+    "Sunday": "Zondag",
+    "Mon": "Mon",
+    "Tue": "Tue",
+    "Wed": "Wed",
+    "Thu": "Thu",
+    "Fri": "Fri",
+    "Sat": "Sat",
+    "Sun": "Sun"
   },
 
   "toasts": {
@@ -73,7 +80,6 @@
     "profile": "Profiel",
     "account": "Account",
     "availability": "Openingstijden",
-    "availability-option": "Openingstijden option",
     "from": "From",
     "to": "To",
     "payment-method": "Betaalmethoden",

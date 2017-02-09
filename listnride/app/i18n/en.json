@@ -49,7 +49,14 @@
     "Thursday": "Thursday",
     "Friday": "Friday",
     "Saturday": "Saturday",
-    "Sunday": "Sunday"
+    "Sunday": "Sunday",
+    "Mon": "Mon",
+    "Tue": "Tue",
+    "Wed": "Wed",
+    "Thu": "Thu",
+    "Fri": "Fri",
+    "Sat": "Sat",
+    "Sun": "Sun"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
@@ -71,7 +78,6 @@
     "profile": "Profile",
     "account": "Account",
     "availability": "Availability",
-    "availability-option": "Availability option",
     "from": "From",
     "to": "To",
     "payment-method": "Payment Method",
