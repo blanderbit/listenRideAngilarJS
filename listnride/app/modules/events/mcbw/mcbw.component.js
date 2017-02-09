@@ -19,22 +19,22 @@ angular.module('mcbw',[]).component('mcbw', {
         radius: 500
       };
 
-      api.get('/rides?family=9').then(
+      api.get('/rides?family=10').then(
         function (success) {
-          console.log(success.data);
+          var bikes = success.data;
 
-          for (var i=0; i<success.data.length; i++) {
-            if (success.data[i].city == "Berlin") {
-              mcbw.bikes1.push(success.data[i]);
-              mcbw.bikes2.push(success.data[i]);
-              mcbw.bikes3.push(success.data[i]);
-              mcbw.bikes4.push(success.data[i]);
+          for (var i=0; i<bikes.length; i++) {
+            if (bikes[i].id >= 621 && bikes[i].id <= 627) {
+              mcbw.bikes1.push(bikes[i]);
             }
-            else {
-              mcbw.bikes1.push(success.data[i]);
-              mcbw.bikes2.push(success.data[i]);
-              mcbw.bikes3.push(success.data[i]);
-              mcbw.bikes4.push(success.data[i]);
+            else if (bikes[i].id >= 616 && bikes[i].id <= 620) {
+              mcbw.bikes2.push(bikes[i]);
+            }
+            else if (bikes[i].id >= 628 && bikes[i].id <= 632) {
+              mcbw.bikes3.push(bikes[i]);
+            }
+            else if (bikes[i].id >= 611 && bikes[i].id <= 615) {
+              mcbw.bikes4.push(bikes[i]);
             }
           }
         },
