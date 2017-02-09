@@ -43,8 +43,8 @@ angular.module('user',[]).component('user', {
       function setOpeningHours() {
         if (!user.anyHours) return;
         cookHours();
-        var compactedHours = compactHours();
-        compactDays(compactedHours);
+        compactHours();
+        compactDays();
       }
 
       function cookHours() {
@@ -64,31 +64,28 @@ angular.module('user',[]).component('user', {
       }
       
       function compactHours() {
-        var currentDay = {};
-        var dayName = 'Mon';
-        var prevDay = user.hours['Mon'];
-        var shortenHours = {'Mon':prevDay};
+        var dayName = '', currentDay = {}, prevDay = {}, shortenHours = {};
 
         _.each(user.weekDays, function (day) {
           currentDay = user.hours[day];
 
-          if (_.isEqual(currentDay, prevDay)) {
+          if (_.isEqual(currentDay, prevDay) && currentDay !== user.hours['Mon']) {
             if (!_.isEmpty(shortenHours[dayName])) delete shortenHours[dayName];
-            dayName = (dayName == 'Mon') ? 'Mon' : dayName + ', ' + day;
+            dayName = dayName + ', ' + $translate.instant('shared.' + day);
             shortenHours[dayName] = currentDay;
           } else {
-            dayName = day;
+            dayName = $translate.instant('shared.' + day);
             shortenHours[dayName] = currentDay;
             prevDay = currentDay;
           }
         });
-        return shortenHours;
+        user.hours = shortenHours;
       }
 
-      function compactDays(compactedHours) {
+      function compactDays() {
         var ranges = [];
         var hours = {};
-        _.each(_.keys(compactedHours), function (daysRange) {
+        _.each(_.keys(user.hours), function (daysRange) {
           var d = daysRange.split(', ');
           if (d.length > 1) {
             var rangeDays = d[0] + ' - ' +  d[d.length-1];
@@ -97,7 +94,7 @@ angular.module('user',[]).component('user', {
           } else {
             var rangeDay = d[0];
             ranges.push(rangeDay);
-            hours[rangeDay] = compactedHours[rangeDay];
+            hours[rangeDay] = user.hours[rangeDay];
           }
         });
         user.weekDays = ranges;
