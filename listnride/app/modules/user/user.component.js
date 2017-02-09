@@ -42,6 +42,12 @@ angular.module('user',[]).component('user', {
 
       function setOpeningHours() {
         if (!user.anyHours) return;
+        cookHours();
+        var compactedHours = compactHours();
+        compactDays(compactedHours);
+      }
+
+      function cookHours() {
         _.each(user.weekDays, function (day, key) {
           var weekDay = user.openingHours[key];
           var dayRange = [];
@@ -55,7 +61,6 @@ angular.module('user',[]).component('user', {
           });
           user.hours[day] = dayRange;
         });
-        compactHours()
       }
       
       function compactHours() {
@@ -77,8 +82,26 @@ angular.module('user',[]).component('user', {
             prevDay = currentDay;
           }
         });
-        user.weekDays = _.keys(shortenHours);
-        user.hours = shortenHours;
+        return shortenHours;
+      }
+
+      function compactDays(compactedHours) {
+        var ranges = [];
+        var hours = {};
+        _.each(_.keys(compactedHours), function (daysRange) {
+          var d = daysRange.split(', ');
+          if (d.length > 1) {
+            var rangeDays = d[0] + ' - ' +  d[d.length-1];
+            ranges.push(rangeDays);
+            hours[rangeDays] = user.hours[daysRange];
+          } else {
+            var rangeDay = d[0];
+            ranges.push(rangeDay);
+            hours[rangeDay] = compactedHours[rangeDay];
+          }
+        });
+        user.weekDays = ranges;
+        user.hours = hours;
       }
 
       function closedDay(range) {
