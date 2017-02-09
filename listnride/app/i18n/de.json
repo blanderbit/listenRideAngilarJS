@@ -82,6 +82,7 @@
     "availability": "Verfügbarkeit",
     "from": "From",
     "to": "To",
+    "mark-as-closed": "Marked all days as closed",
     "payment-method": "Zahlungsart",
     "payout-method": "Auszahlungsmethode",
     "payment-method-description": "Deine Zahlungsart wird benutzt um Räder, die du auf listnride ausleihst, zu bezahlen.",

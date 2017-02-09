@@ -80,6 +80,7 @@
     "availability": "Availability",
     "from": "From",
     "to": "To",
+    "mark-as-closed": "Marked all days as closed",
     "payment-method": "Payment Method",
     "payout-method": "Payout Method",
     "payment-method-description": "Your payment method is used to pay for your rentals. It can be a credit card or paypal account.",

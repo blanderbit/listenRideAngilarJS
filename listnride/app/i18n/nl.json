@@ -82,6 +82,7 @@
     "availability": "Openingstijden",
     "from": "From",
     "to": "To",
+    "mark-as-closed": "Marked all days as closed",
     "payment-method": "Betaalmethoden",
     "payout-method": "uitbetaalmethoden",
     "payment-method-description": "Je betaalmethode wordt gebruikt om de kosten van de fietshuur af te boeken.",
