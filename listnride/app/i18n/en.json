@@ -49,7 +49,14 @@
     "Thursday": "Thursday",
     "Friday": "Friday",
     "Saturday": "Saturday",
-    "Sunday": "Sunday"
+    "Sunday": "Sunday",
+    "Mon": "Mon",
+    "Tue": "Tue",
+    "Wed": "Wed",
+    "Thu": "Thu",
+    "Fri": "Fri",
+    "Sat": "Sat",
+    "Sun": "Sun"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
@@ -71,9 +78,9 @@
     "profile": "Profile",
     "account": "Account",
     "availability": "Availability",
-    "availability-option": "Availability option",
     "from": "From",
     "to": "To",
+    "mark-as-closed": "Marked all days as closed",
     "payment-method": "Payment Method",
     "payout-method": "Payout Method",
     "payment-method-description": "Your payment method is used to pay for your rentals. It can be a credit card or paypal account.",
@@ -809,8 +816,8 @@
     "headline-2": "Background",
     "content-2": "Keep your background as simple as possible. Try to create a contrast to your bicycle. For example you can place your bicycle in front of a concrete wall.",
     "headline-3": "What to shoot",
-    "content-3": "ZShow some perspective of your bicycle, so rather shoot from an angle than a frontal perspective. ",
+    "content-3": "Show some perspective of your bicycle, so rather shoot from an angle than a frontal perspective. Resolution matters: Take photos that are at least 1800 x 1200 pixel. When in doubt, a bigger photo is better.",
     "headline-4": "Setting",
-    "content-4": "Highlight what’s amazing. It is not required that the whole bicycle is shown on all photos, rather shoot some details, like brand name, colouring, lights, lock etc. Let pictures get the message across."
+    "content-4": "Highlight what’s amazing. It is not required that the whole bicycle is shown on all photos, rather shoot some details, like brand name, colouring, lights, lock etc. Let pictures get the message across. Take your photos in landscape format: Vertical photos won’t showcase your bicycle as well."
   }
 }

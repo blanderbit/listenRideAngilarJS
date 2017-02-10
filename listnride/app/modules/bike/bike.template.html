@@ -51,7 +51,7 @@
             <h3 class="md-body-2">{{ 'forms.city' | translate }}</h3>
           </div>
           <div flex-gt-xs>
-            <strong class="md-body-1 lnr-capitalize">{{ bike.data.city }}, {{ bike.data.country }}</strong>
+            <p class="md-body-1">{{ bike.data.city }}, {{ bike.data.country }}</p>
           </div>
         </div>
 
@@ -127,14 +127,6 @@
           </div>
 
           <div flex-gt-xs>
-            <!-- <div class="lnr-comment" layout="row">
-              <img class="lnr-profile-md lnr-margin-right" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
-              <div flex class="lnr-margin-left">
-                <p class="lnr-comment-name md-body-2">Thomas Ed</p>
-                <p class="lnr-comment-content md-body-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>                
-              </div>
-            </div> -->
-
             <rating ng-repeat="rating in bike.data.ratings" data="rating" index="$index" show-all="bike.showAll"></rating>
             <div layout="row" layout-align="end center">
             <md-button class="md-no-focus" ng-if="bike.data.ratings.length > 3 && false === bike.showAll" ng-click="bike.showAll = true">{{'shared.show-more' | translate}} {{'shared.reviews' | translate}}</md-button>

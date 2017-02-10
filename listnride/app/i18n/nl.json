@@ -49,7 +49,14 @@
     "Thursday": "Donderdag",
     "Friday": "Vrijdag",
     "Saturday": "Zaterdag",
-    "Sunday": "Zondag"
+    "Sunday": "Zondag",
+    "Mon": "Mon",
+    "Tue": "Tue",
+    "Wed": "Wed",
+    "Thu": "Thu",
+    "Fri": "Fri",
+    "Sat": "Sat",
+    "Sun": "Sun"
   },
 
   "toasts": {
@@ -73,9 +80,9 @@
     "profile": "Profiel",
     "account": "Account",
     "availability": "Openingstijden",
-    "availability-option": "Openingstijden option",
     "from": "From",
     "to": "To",
+    "mark-as-closed": "Marked all days as closed",
     "payment-method": "Betaalmethoden",
     "payout-method": "uitbetaalmethoden",
     "payment-method-description": "Je betaalmethode wordt gebruikt om de kosten van de fietshuur af te boeken.",
@@ -839,7 +846,7 @@
     "headline-2": "Background",
     "content-2": "Keep your background as simple as possible. Try to create a contrast to your bicycle. For example you can place your bicycle in front of a concrete wall.",
     "headline-3": "What to shoot",
-    "content-3": "ZShow some perspective of your bicycle, so rather shoot from an angle than a frontal perspective. ",
+    "content-3": "Show some perspective of your bicycle, so rather shoot from an angle than a frontal perspective. ",
     "headline-4": "Setting",
     "content-4": "Highlight what’s amazing. It is not required that the whole bicycle is shown on all photos, rather shoot some details, like brand name, colouring, lights, lock etc. Let pictures get the message across."
   }

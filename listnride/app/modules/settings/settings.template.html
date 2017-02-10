@@ -85,11 +85,6 @@
                     required="true" place-changed="settings.fillAddress(place)"
                     flex-gt-xs="45">
                   </autocomplete>
-
-                  <!--md-input-container flex-gt-xs="45">
-                    <label>{{ 'forms.street' | translate }}</label>
-                    <input required name="street" ng-model="settings.user.street"></input>
-                  </md-input-container-->
                   <span hide-xs flex></span>
                   <md-input-container flex-gt-xs="45">
                   <label>{{ 'forms.zip' | translate }}</label>
@@ -249,11 +244,14 @@
         <br>
         <div class="tab-content" layout="column" layout-align="space-around none">
           <div layout="row" layout-align="none center" layout-margin>
-            <h3>{{ 'settings.availability-option' | translate }}</h3>
+            <h3>{{ 'settings.availability' | translate }}</h3>
             <md-switch
                     ng-model="settings.openingHoursEnabled"
                     ng-change="settings.performOpeningHours(settings.openingHoursEnabled)"
             ></md-switch>
+            <div ng-style="{'display': settings.completeClosed ? '' : 'none'}">
+              ({{ 'settings.mark-as-closed' | translate }})
+            </div>
           </div>
 
           <form name="hoursForm" ng-style="{'display': settings.openingHoursEnabled ? '' : 'none'}">
