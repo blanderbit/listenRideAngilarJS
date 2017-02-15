@@ -312,7 +312,9 @@
       "label": "Foto's",
       "select-images": "Foto's kiezen",
       "remove": "verwijderen",
-      "upload-bike-header": "Voeg een paar scherpe foto's toe"
+      "upload-bike-header": "Voeg een paar scherpe foto's toe",
+      "under-min-size": "Some of your images size is less than allowable minimum 1600x1200:",
+      "invalid-images": "Invalid images"
     },
     "location": {
       "header": "Waar kan de fiets worden opgehaald?",

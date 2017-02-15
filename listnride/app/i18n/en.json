@@ -296,7 +296,9 @@
       "label": "Pictures",
       "select-images": "Select images",
       "remove": "Remove",
-      "upload-bike-header": "Upload some pictures of your bike"
+      "upload-bike-header": "Upload some pictures of your bike",
+      "under-min-size": "Some of your images size is less than allowable minimum 1600x1200:",
+      "invalid-images": "Invalid images"
     },
     "location": {
       "header": "Where can the bike be picked up?",
