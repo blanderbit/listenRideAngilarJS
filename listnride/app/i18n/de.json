@@ -313,7 +313,7 @@
       "select-images": "Fotos Wählen",
       "remove": "Löschen",
       "upload-bike-header": "Lade ein paar Fotos hoch",
-      "under-min-size": "Einige Bilder haben eine kleinere Abmessung kleiner als 1600x1200:",
+      "under-min-size": "Einige Bilder haben eine kleinere Abmessung kleiner als 1500x1000:",
       "invalid-images": "Bildgröße unzureichend"
     },
     "location": {
