@@ -1450,3 +1450,6 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
   background-color: #5FC693 !important
 }
 
+.white-space-pre-line {
+  white-space: pre-line;
+}
