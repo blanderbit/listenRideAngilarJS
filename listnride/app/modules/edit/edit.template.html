@@ -185,6 +185,14 @@
                     <md-button class="md-lined md-warn" ng-click="edit.removeImage($index)">{{ 'list.pictures.remove' | translate}}</md-button>
                   </div>
                 </div>
+                <div ng-if="edit.invalidFiles[0] !== undefined" class="text-error" layout="column" hide-gt-xs layout-padding>
+                  {{ 'list.pictures.under-min-size' | translate}}
+                  <ul>
+                    <div ng-repeat="invalideImage in edit.invalidFiles" class="text-error">
+                      <li>{{invalideImage.name}} - {{invalideImage.$ngfWidth}}x{{invalideImage.$ngfHeight}}</li>
+                    </div>
+                  </ul>
+                </div>
               </div>
 
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
@@ -210,7 +218,6 @@
                   </ul>
                 </div>
               </div>
-
             </div>
             
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
