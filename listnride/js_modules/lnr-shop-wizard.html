@@ -43,17 +43,58 @@
                                 <div class="md-dialog-content">
                                     <p class="md-subhead-sm">Please mark rent period:</p>
                                     <div id="bike-calendar"></div>
+                                    <div id="timeRange" layout="row" layout-align="start center" layout-padding>
+                                        <div class="dropdown">
+                                            <button onclick="openDropDown('lnr-date-from-dropdown', '\'start\'')" class="lnr-dropdown-button">From</button>
+                                            <div id="lnr-date-from-dropdown" class="dropdown-content">
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <button onclick="openDropDown('lnr-date-to-dropdown', '\'end\'')" class="lnr-dropdown-button">To</button>
+                                            <div id="lnr-date-to-dropdown" class="dropdown-content">
+                                            </div>
+                                        </div>
+                                        <!--<md-input-container flex>
+                                            <label> Date</label>
+                                            <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')" ng-model="calendar.startTime"
+                                                placeholder="{{ 'shared.from' | translate }}">
+                                                <md-option ng-disabled="!calendar.isOptionEnabled($index, calendar.startDate)" ng-repeat="i in [].constructor(17) track by $index"
+                                                    value="{{$index + 6}}">
+                                                    {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.startDate)}}
+                                                </md-option>
+                                            </md-select>
+                                        </md-input-container>
+                                        <md-input-container flex>
+                                            <label>{{ 'shared.to' | translate }}  {{ calendar.endDate | date }}</label>
+                                            <div class="dropdown">
+                                                <button onclick="openDropDown()" class="dropbtn">Dropdown</button>
+                                                <div id="myDropdown" class="dropdown-content">
+                                                    <a href="#home">Home</a>
+                                                    <a href="#about">About</a>
+                                                    <a href="#contact">Contact</a>
+                                                </div>
+                                            </div>
+                                            <!--<md-select ng-disabled="calendar.endDate === undefined" ng-change="calendar.onTimeChange('end')" ng-model="calendar.endTime"
+                                                placeholder="{{ 'shared.to' | translate }}">
+                                                <md-option ng-disabled="!calendar.isOptionEnabled($index, calendar.endDate)" ng-repeat="i in [].constructor(17) track by $index"
+                                                    value="{{$index + 6}}">
+                                                    {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.endDate)}}
+                                                </md-option>
+                                            </md-select>-->
+                                        </md-input-container>
+                                    </div>
                                 </div>
                             </div>
                             <!-- rent info -->
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                                <div class="md-dialog-content">
+                                <div class="md-dialog-content show-no-divider">
                                     <p class="md-subhead-sm">Rent details</p>
                                     <ul class="lnr-list-sm mdl-list">
                                         <li class="mdl-list__item">
                                             <span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>
                                             <span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 day, 0 hours</span>
                                         </li>
+                                        <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
                                         <li class="mdl-list__item">
                                             <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>
                                             <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>
@@ -76,7 +117,7 @@
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button"></div>
                             <!-- next button -->
                             <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button onclick="myFunction({id: 'tab-basic-info'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
+                                <button onclick="changeTab({id: 'tab-basic-info'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
                             </div>
                         </div>
                     </div>
@@ -111,13 +152,14 @@
                             </div>
                             <!-- rent info -->
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                                <div class="md-dialog-content">
+                                <div class="md-dialog-content show-no-divider">
                                     <p class="md-subhead-sm">Rent details</p>
                                     <ul class="lnr-list-sm mdl-list">
                                         <li class="mdl-list__item">
                                             <span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>
                                             <span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 day, 0 hours</span>
                                         </li>
+                                        <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
                                         <li class="mdl-list__item">
                                             <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>
                                             <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>
@@ -137,10 +179,10 @@
                         <!-- nav buttons -->
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button id="lnr-back-button" onclick="myFunction({id: 'tab-duration'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
+                                <button id="lnr-back-button" onclick="changeTab({id: 'tab-duration'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
                             </div>
                             <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button onclick="myFunction({id: 'tab-payment-details'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
+                                <button onclick="changeTab({id: 'tab-payment-details'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
                             </div>
                         </div>
                     </div>
@@ -161,13 +203,14 @@
                             </div>
                             <!-- rent info -->
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                                <div class="md-dialog-content">
+                                <div class="md-dialog-content show-no-divider">
                                     <p class="md-subhead-sm">Rent details</p>
                                     <ul class="lnr-list-sm mdl-list">
                                         <li class="mdl-list__item">
                                             <span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>
                                             <span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 day, 0 hours</span>
                                         </li>
+                                        <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
                                         <li class="mdl-list__item">
                                             <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>
                                             <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>
@@ -187,10 +230,10 @@
                         <!-- nav buttons -->
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button id="lnr-back-button" onclick="myFunction({id: 'tab-basic-info'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
+                                <button id="lnr-back-button" onclick="changeTab({id: 'tab-basic-info'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
                             </div>
                             <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button onclick="myFunction({id: 'tab-booking-overview'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
+                                <button onclick="changeTab({id: 'tab-booking-overview'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
                             </div>
                         </div>
                     </div>
@@ -204,13 +247,14 @@
                             </div>
                             <!-- rent info -->
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                                <div class="md-dialog-content">
+                                <div class="md-dialog-content show-no-divider">
                                     <p class="md-subhead-sm">Rent details</p>
                                     <ul class="lnr-list-sm mdl-list">
                                         <li class="mdl-list__item">
                                             <span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>
                                             <span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 day, 0 hours</span>
                                         </li>
+                                        <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
                                         <li class="mdl-list__item">
                                             <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>
                                             <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>
@@ -230,10 +274,10 @@
                         <!-- nav buttons -->
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button id="lnr-back-button" onclick="myFunction({id: 'tab-payment-details'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
+                                <button id="lnr-back-button" onclick="changeTab({id: 'tab-payment-details'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
                             </div>
                             <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button onclick="myFunction({id: 'tab-duration'})" class="md-accent md-raised md-button md-ink-ripple"><span>Proceed</span></button>
+                                <button onclick="changeTab({id: 'tab-duration'})" class="md-accent md-raised md-button md-ink-ripple"><span>Proceed</span></button>
                             </div>
                         </div>
                     </div>

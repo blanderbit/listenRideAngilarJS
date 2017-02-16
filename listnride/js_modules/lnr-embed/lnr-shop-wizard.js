@@ -3,6 +3,11 @@ var $;
 // now we need to fetch the details of the bikes and bind it to calendar object
 var calendar = {};
 $(document).ready(function () {
+
+    // close the drop down for the date time selector in calendar
+    window.onclick = function (event) {
+        closeDropDown(event);
+    }
     // LOGIC CODE - NEEDS TO BE IN SEPERATE FILE
     // RUNS BEFORE DOM MANIPULAITON
     // fetch user info
@@ -43,11 +48,10 @@ $(document).ready(function () {
                         calendar.endDate.getTime());
             };
 
+            // disable initially the time selector
+            $('.dropdown *').attr("disabled", "disabled").off('click');
             initOverview();
             initCalendarPicker();
-
-            console.log('calender: ', calendar);
-            console.log('options: ', calenderConfigObject);
         });
     });
 });
@@ -163,10 +167,6 @@ function initCalendarPicker() {
             calendar.event.reserved();
         }
         $('#bike-calendar').dateRangePicker(calenderConfigObject)
-            .bind('datepicker-first-date-selected', function (event, obj) {
-                // to verify date range picker is configured correctly
-                console.log(obj);
-            })
             .bind('datepicker-change', function (event, obj) {
                 var start = obj.date1;
                 start.setHours(calendar.startTime, 0, 0, 0);
@@ -179,6 +179,9 @@ function initCalendarPicker() {
                 if (openingHoursAvailable()) {
                     setInitHours();
                 }
+
+                // enable the time selector
+                $('.dropdown *').attr("disabled", false);
             });
     }
 }
@@ -194,9 +197,58 @@ var calenderConfigObject = {
     startOfWeek: 'monday'
 };
 
-function myFunction(element) {
+function changeTab(element) {
     document.getElementById(element.id).click(); // Click on the checkbox
 }
+
+function openDropDown(id, type) {
+    var element = $('#' + id);
+    element.html('');
+    for (var index = 0; index < 17; index += 1) {
+        element.append('<div class="lnr-date-selector" onclick="onValueSelect(' + parseInt(index + 6) + ', ' + type + ')" + id="lnr-date-from-select-"' + index + '>' +
+            (index + 6) + ":00" +
+            calendar.availabilityMessage(index, calendar.endDate) + '</div>');
+    }
+    element.toggleClass("show");
+}
+
+function onValueSelect(index, slot) {
+    var slotTime = slot + "Time";
+    calendar[slotTime] = index;
+    calendar.onTimeChange(slot);
+}
+
+function closeDropDown(event) {
+    if (!event.target.matches('.lnr-dropdown-button')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+calendar.availabilityMessage = function ($index, date) {
+    if (!calendar.isOptionEnabled($index, date)) {
+        return ' (closed)';
+    }
+    return '';
+};
+
+calendar.isOptionEnabled = function ($index, date) {
+    if (date == undefined || !openingHoursAvailable()) {
+        return true
+    }
+    var weekDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(date)];
+    if (weekDay !== null) {
+        var workingHours = openHours(weekDay);
+        return workingHours.includes($index + 6);
+    }
+    return false
+};
 
 function getWeekDay(date) {
     var dayOfWeek = date.getDay() - 1;
@@ -243,7 +295,6 @@ function classifyDate(date) {
 function dateClosed(date) {
     if (openingHoursAvailable()) {
         console.log('in dateclosed: ', openingHoursAvailable());
-        console.log('date: ', date);
         return calendar.bikeOwner.opening_hours.hours[getWeekDay(date)] == null;
     }
     return false
@@ -294,10 +345,7 @@ function dateChange(startDate, endDate) {
         calendar.lnrFee = 0;
         calendar.total = 0;
     } else {
-        console.log('start: ', startDate);
-        console.log('end: ', endDate);
         calendar.duration = date.duration(startDate, endDate);
-        console.log('calendar duration: ', calendar.duration);
         // Price calculation differs slightly between event rentals (bikeFamily 2 or 9) and standard rentals
         if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9) {
             var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar
