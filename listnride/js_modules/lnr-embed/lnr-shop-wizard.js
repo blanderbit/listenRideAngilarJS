@@ -3,7 +3,6 @@ var $;
 // now we need to fetch the details of the bikes and bind it to calendar object
 var calendar = {};
 $(document).ready(function () {
-
     // close the drop down for the date time selector in calendar
     window.onclick = function (event) {
         closeDropDown(event);
@@ -162,6 +161,7 @@ function DateService() {
 
 var date = new DateService();
 
+// render the calendar
 function initCalendarPicker() {
     if (calendar.requests !== undefined) {
         if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9) {
@@ -183,6 +183,10 @@ function initCalendarPicker() {
 
                 // enable the time selector
                 $('.dropdown *').attr("disabled", false);
+            })
+            .bind('datepicker-opened', function () {
+                /* This event will be triggered after date range picker open animation */
+                console.log('after open');
             });
     }
 }
@@ -203,17 +207,31 @@ function changeTab(element) {
 }
 
 function openDropDown(id, type) {
+
+    var startId = 'lnr-date-from-dropdown';
+    var endId = 'lnr-date-to-dropdown';
+
     var element = $('#' + id);
     element.html('');
     for (var index = 0; index < 17; index += 1) {
-        element.append('<div class="lnr-date-selector" onclick="onValueSelect(' + parseInt(index + 6) + ', ' + type + ')" + id="lnr-date-from-select-"' + index + '>' +
-            (index + 6) + ":00" +
-            calendar.availabilityMessage(index, calendar.endDate) + '</div>');
+        element.append(
+            '<div class="lnr-date-selector" onclick="onTimeValueSelect(' + parseInt(index + 6) +
+            ', ' + type + ')" + id="lnr-date-from-select-"' + index + '>' + (index + 6) + ":00" +
+            calendar.availabilityMessage(index, calendar.endDate) + '</div>'
+        );
     }
-    element.toggleClass("show");
+
+    // at a time only 1 dropdown should be shown
+    if (id === startId) {
+        $('#' + endId).removeClass("show");
+        element.toggleClass("show");
+    } else if (id === endId) {
+        $('#' + startId).removeClass("show");
+        element.toggleClass("show");
+    }
 }
 
-function onValueSelect(index, slot) {
+function onTimeValueSelect(index, slot) {
     var slotTime = slot + "Time";
     calendar[slotTime] = index;
     calendar.onTimeChange(slot);
