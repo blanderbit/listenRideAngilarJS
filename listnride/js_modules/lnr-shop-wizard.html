@@ -42,46 +42,34 @@
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
                                 <div class="md-dialog-content">
                                     <p class="md-subhead-sm">Please mark rent period:</p>
+                                    <!-- render the calendar here -->
                                     <div id="bike-calendar"></div>
+                                    <!-- time range selection -->
                                     <div id="timeRange" layout="row" layout-align="start center" layout-padding>
-                                        <div class="dropdown">
-                                            <button onclick="openDropDown('lnr-date-from-dropdown', '\'start\'')" class="lnr-dropdown-button">From</button>
-                                            <div id="lnr-date-from-dropdown" class="dropdown-content">
+                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown">
+                                            <span>from</span>
+                                            <button 
+                                                id="lnr-date-start-button" 
+                                                onclick="openDropDown('lnr-date-from-dropdown', '\'start\'')" 
+                                                class="lnr-dropdown-button">From
+                                            </button>
+                                            <div 
+                                                id="lnr-date-from-dropdown" 
+                                                class="dropdown-content">
                                             </div>
                                         </div>
-                                        <div class="dropdown">
-                                            <button onclick="openDropDown('lnr-date-to-dropdown', '\'end\'')" class="lnr-dropdown-button">To</button>
-                                            <div id="lnr-date-to-dropdown" class="dropdown-content">
+                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown">
+                                            <span>to</span>
+                                            <button 
+                                                id="lnr-date-end-button" 
+                                                onclick="openDropDown('lnr-date-to-dropdown', '\'end\'')" 
+                                                class="lnr-dropdown-button">To
+                                            </button>
+                                            <div 
+                                                id="lnr-date-to-dropdown" 
+                                                class="dropdown-content">
                                             </div>
                                         </div>
-                                        <!--<md-input-container flex>
-                                            <label> Date</label>
-                                            <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')" ng-model="calendar.startTime"
-                                                placeholder="{{ 'shared.from' | translate }}">
-                                                <md-option ng-disabled="!calendar.isOptionEnabled($index, calendar.startDate)" ng-repeat="i in [].constructor(17) track by $index"
-                                                    value="{{$index + 6}}">
-                                                    {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.startDate)}}
-                                                </md-option>
-                                            </md-select>
-                                        </md-input-container>
-                                        <md-input-container flex>
-                                            <label>{{ 'shared.to' | translate }}  {{ calendar.endDate | date }}</label>
-                                            <div class="dropdown">
-                                                <button onclick="openDropDown()" class="dropbtn">Dropdown</button>
-                                                <div id="myDropdown" class="dropdown-content">
-                                                    <a href="#home">Home</a>
-                                                    <a href="#about">About</a>
-                                                    <a href="#contact">Contact</a>
-                                                </div>
-                                            </div>
-                                            <!--<md-select ng-disabled="calendar.endDate === undefined" ng-change="calendar.onTimeChange('end')" ng-model="calendar.endTime"
-                                                placeholder="{{ 'shared.to' | translate }}">
-                                                <md-option ng-disabled="!calendar.isOptionEnabled($index, calendar.endDate)" ng-repeat="i in [].constructor(17) track by $index"
-                                                    value="{{$index + 6}}">
-                                                    {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.endDate)}}
-                                                </md-option>
-                                            </md-select>-->
-                                        </md-input-container>
                                     </div>
                                 </div>
                             </div>

@@ -47,11 +47,12 @@ $(document).ready(function () {
                     (calendar.startDate !== undefined && calendar.startDate.getTime() >=
                         calendar.endDate.getTime());
             };
-
-            // disable initially the time selector
-            $('.dropdown *').attr("disabled", "disabled").off('click');
             initOverview();
             initCalendarPicker();
+
+            updateTimeRangeText();
+            // disable initially the time selector
+            $('.dropdown *').attr("disabled", "disabled").off('click');
         });
     });
 });
@@ -216,6 +217,15 @@ function onValueSelect(index, slot) {
     var slotTime = slot + "Time";
     calendar[slotTime] = index;
     calendar.onTimeChange(slot);
+    updateTimeRangeText();
+}
+
+function updateTimeRangeText() {
+    // initialize the button texts for time range selection
+    var startButton = $('#lnr-date-start-button');
+    var endButton = $('#lnr-date-end-button');
+    startButton.html(calendar.startTime + ':00');
+    endButton.html(calendar.endTime + ':00');
 }
 
 function closeDropDown(event) {
