@@ -3,7 +3,9 @@
 <head>
     <title>Shop Integration Demo</title>
     <link href="https://code.getmdl.io/1.2.1/material.blue_grey-blue.min.css" rel="stylesheet"></link>
-    <link href="https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.css" rel="stylesheet"></link>
+    <!-- change this url with your local one -->
+    <!-- only for local dev, final css will be served from: https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.css -->
+    <link href="/Users/siddiqui/Documents/Projects/listnride-frontend/listnride/js_modules/lnr-embed/lnr-embed.css" rel="stylesheet"></link>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
 </head>
 
@@ -12,15 +14,14 @@
         <div class="mdl-grid" <="" div="">
             <div mdl-cell="" mdl-cell--4-col="">
                 <div class="lnr-introtext">Diese Fahrräder stehen aktuell für den Verleih an Sie zur Verfügung. Durch klicken auf das gewünschte Fahrrad,
-                    werden Sie auf <a target="_blank" href="http://www.listnride.com">www.listnride.com</a> weitergeleitet
-                    und können dort die Online-Buchung abschließen.</div>
+                    werden Sie auf <a target="_blank" class="lnr-links" href="http://www.listnride.com">www.listnride.com</a>                    weitergeleitet und können dort die Online-Buchung abschließen.</div>
             </div>
         </div>
         <div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid">
             <div class="mdl-cell mdl-cell--4-col mdl-cell--middle">
                 <bike-card>
                     <md-card class="lnr-bike-card _md">
-                        <a target="_blank" href="http://www.listnride.com/bikes/472"><img src="https://listnride.s3.eu-central-1.amazonaws.com/uploads/ride/image_file_1/472/small_1478246577-21478246566.jpeg"></a>
+                        <a target="_blank" href="http://www.listnride.com/bikes/472"><img src="https://listnride.s3.eu-central-1.amazonaws.com/uploads/ride/image_file_1/14/small_1436601657-152006_3146.JPG"></a>
                         <md-card-title layout="row" class="layout-row">
                             <md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true"><img src="http://www.listnride.com/app/assets/ui_icons/biketype_3.svg" height="48" width="48"></md-icon>
                             <md-card-title-text class="lnr-margin-left layout-align-space-around-start layout-column"><span class="md-subhead">Intech , Cyclocross</span><span>Crosser</span></md-card-title-text>
@@ -32,7 +33,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--middle">
                 <bike-card>
                     <md-card class="lnr-bike-card _md">
-                        <a target="_blank" href="http://www.listnride.com/bikes/14"><img src="https://listnride.s3.eu-central-1.amazonaws.com/uploads/ride/image_file_1/14/small_1436601657-152006_3146.JPG"></a>
+                        <a target="_blank" href="http://www.listnride.com/bikes/14"><img src="https://listnride.s3.eu-central-1.amazonaws.com/uploads/ride/image_file_1/472/small_1486483351-DSC03871.jpg"></a>
                         <md-card-title layout="row" class="layout-row">
                             <md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true"><img src="http://www.listnride.com/app/assets/ui_icons/biketype_4.svg" height="48" width="48"></md-icon>
                             <md-card-title-text class="lnr-margin-left layout-align-space-around-start layout-column"><span class="md-subhead">Noxon, Children City</span><span>16 Zoll</span></md-card-title-text>

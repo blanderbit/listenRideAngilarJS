@@ -397,6 +397,19 @@
           }, 100);
         }
       });
+
+      // temporary state, for testing
+      $stateProvider.state({
+        name: 'lnr-embed',
+        url: '/embed-wizard/',
+        controller: function () {
+          var userId = 1005;
+          var bikeId = 165;
+          var url = 'lnr-wizard-module/lnr-shop-wizard.html?userId=' + userId + '&bikeId=' + bikeId;
+          var params = 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=700,height=600,top=10,left=10';
+          window.open(url, '_blank', params);
+        }
+      });
       $stateProvider.state('404', {
         templateUrl: 'app/modules/static/error-404.template.html',
         data: {
