@@ -15,7 +15,9 @@ module.exports = function () {
             api: './app/services/api/',
             i18n: './app/i18n/**/*',
             fonts: 'node_modules/font-awesome/fonts/*',
-            sitemap: './app/assets/downloads/sitemap.xml'
+            momentjs: 'node_modules/moment/**/*',
+            sitemap: './app/assets/downloads/sitemap.xml',
+            js_modules: './js_modules/**/*'
         },
         js: ['./app/*.js', './app/**/*.js', '!**/*test.js'],
         vendors: ['node_modules/angular/angular.min.js',
@@ -33,11 +35,14 @@ module.exports = function () {
             fonts: './dist/app/assets/fonts/',
             js: './dist/*.min.js',
             css: './dist/**/.min.css',
-            i18n: './dist/app/i18n'
+            i18n: './dist/app/i18n',
+            js_modules: './dist/lnr-wizard-module/',
+            moment: './dist/lnr-wizard-module/moment',
         },
         embed: {
             css: './js_modules/lnr-embed/lnr-embed.css',
-            js: './js_modules/lnr-embed/lnr-embed.js'
+            js: './js_modules/lnr-embed/lnr-embed.js',
+            wizardjs: './js_modules/lnr-embed/lnr-shop-wizard.js',
         }
     };
     var environments = {
