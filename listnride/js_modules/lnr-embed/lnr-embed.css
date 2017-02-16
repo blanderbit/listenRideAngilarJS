@@ -444,3 +444,7 @@ div#lnr-tab-bar {
 .lnr-list-sm>li {
   min-height: 40px !important;
 }
+
+div .date-picker-wrapper {
+    margin-left: -8px;
+}
