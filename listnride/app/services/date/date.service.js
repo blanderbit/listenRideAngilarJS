@@ -4,7 +4,7 @@ angular.module('listnride').factory('date', ['$translate',
   function($translate) {
 
     return {
-      duration: function(startDate, endDate) {
+      duration: function(startDate, endDate, invalidDays) {
         if (startDate === undefined || endDate === undefined) {
           return "0 " + $translate.instant("shared.days") + " , 0 " + $translate.instant("shared.hours");
         } else {
@@ -20,6 +20,7 @@ angular.module('listnride').factory('date', ['$translate',
           minutes -= hours * 60;
           var days = (hours / 24) | 0;
           hours -= days * 24;
+          days = days - invalidDays;
           var weeks = (days / 7) | 0;
           days -= weeks * 7;
 
@@ -40,7 +41,7 @@ angular.module('listnride').factory('date', ['$translate',
         }
       },
     
-      subtotal: function(startDate, endDate, priceHalfDay, priceDay, priceWeek, minHoursDay) {
+      subtotal: function(startDate, endDate, priceHalfDay, priceDay, priceWeek, minHoursDay, invalidDays) {
         minHoursDay = minHoursDay || 6;
 
         if (startDate === undefined || endDate === undefined) {
@@ -56,6 +57,7 @@ angular.module('listnride').factory('date', ['$translate',
           minutes -= hours * 60;
           var days = (hours / 24) | 0;
           hours -= days * 24;
+          days = days - invalidDays;
           var weeks = (days / 7) | 0;
           days -= weeks * 7;
 
