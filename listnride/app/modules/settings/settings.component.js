@@ -52,7 +52,7 @@ angular.module('settings',[]).component('settings', {
       function performOpeningHours(model) {
         if (model) {
           _.each(settings.weekDays, function (weekDay, key) {
-            setDayTime(weekDay, null, null);
+            setDayTime(weekDay, null, null, 0);
           });
           completeClosed()
         } else {
@@ -440,7 +440,8 @@ angular.module('settings',[]).component('settings', {
       function completeClosed() {
         if (!settings.openingHoursEnabled) return settings.completeClosed = false;
         _.each(formData, function (weekDay, key) {
-          if (!_.isEmpty(weekDay[0].start_at) || !_.isEmpty(weekDay[0].end_at)) {
+          if (_.isEmpty(weekDay[0])) return settings.completeClosed = true;
+          if (weekDay[0].start_at != undefined || weekDay[0].end_at!= undefined) {
             return settings.completeClosed = false
           } else {
             settings.completeClosed =  true
