@@ -870,6 +870,8 @@
 		var self = this;
 		var selfDom = $(self).get(0);
 		var domChangeTimer;
+		var invalidDaysPerMonth = 0;
+		var countedDays = 0;
 
 		$(this).unbind('.datepicker').bind('click.datepicker',function(evt)
 		{
@@ -1048,11 +1050,23 @@
 
 			box.find('.next').click(function()
 			{
+				getPrevMonthInvalidDays();
 				if(!opt.stickyMonths)
 					gotoNextMonth(this);
 				else
 					gotoNextMonth_stickily(this);
 			});
+
+			function getPrevMonthInvalidDays()
+			{
+				var firstDay = $("div.day.checked");
+				if (firstDay.length == 0) return invalidDaysPerMonth = 0;
+				var days = $("div.day.toMonth");
+				var lastDay = [days[days.length - 1]];
+				var start = firstDay[0].attributes.time.value;
+				var end = lastDay[0].attributes.time.value;
+				invalidDaysPerMonth = countInvalidDays(end, start, lastDay, true);
+			}
 
 			function gotoNextMonth(self)
 			{
@@ -1468,6 +1482,7 @@
 			if (day.hasClass('invalid')) return;
 			var time = day.attr('time');
 			day.addClass('checked');
+			countedDays = 0;
 			if ( opt.singleDate )
 			{
 				opt.start = time;
@@ -1695,7 +1710,14 @@
 
 					if (opt.start && !opt.end)
 					{
-						if (hoverTime != opt.start) invalidDays = countInvalidDays(hoverTime, opt.start, day); // TODO: Added by DY
+						if (hoverTime != opt.start) // TODO: Added by DY
+						{
+							invalidDays = countInvalidDays(hoverTime, opt.start, day, false);
+						}
+						else
+						{
+							invalidDaysPerMonth = 0;
+						}
 						var days = countDays(hoverTime, opt.start, invalidDays);
 						if (opt.hoveringTooltip)
 						{
@@ -1738,18 +1760,20 @@
 			}
 		}
 
-		function countInvalidDays(end, start, day) {
+		function countInvalidDays(end, start, day, needsCountAllDays) {
 			if (end == start) return 0;
-			var totalDays = Math.abs( daysFrom1970(start) - daysFrom1970(end) );
+			var totalDays = Math.abs( daysFrom1970(start) - daysFrom1970(end) ) - countedDays;
 			var invalidDays = 0;
 			var i = 0;
 			while( i < totalDays )
 			{
 				i++;
-				if (day.hasClass('invalid')) invalidDays++;
-				day = day.parent().prev().find('.day');
+				if (needsCountAllDays) countedDays++;
+				if ($(day).hasClass('invalid')) invalidDays++;
+				var prevDay = day[0].attributes.time.value - 86400000;
+				day = $("div.day[time=" + prevDay + "]");
 			}
-			return invalidDays;
+			return invalidDays + invalidDaysPerMonth;
 		}
 
 		function clearHovering()
@@ -1997,6 +2021,7 @@
 					if (!$(this).hasClass('invalid')) //TODO: Added by DY
 					{
 						$(this).addClass('checked');
+						countedDays = 0;
 					}
 				}
 				else
