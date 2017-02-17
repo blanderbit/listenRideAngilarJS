@@ -212,7 +212,6 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.event.reserved = function() {
-        console.log(calendar.requests);
         for (var i = 0; i < calendar.requests.length; i ++) {
           var startDate = new Date(calendar.requests[i].start_date);
           var endDate = new Date(calendar.requests[i].end_date);
@@ -325,7 +324,7 @@ angular.module('bike').component('calendar', {
         calendar.startTime = 10;
         calendar.endTime = 18;
 
-        calendar.duration = date.duration(undefined, undefined);
+        calendar.duration = date.duration(undefined, undefined, 0);
         calendar.subtotal = 0;
         calendar.lnrFee = 0;
         calendar.total = 0;
@@ -336,18 +335,18 @@ angular.module('bike').component('calendar', {
 
       function dateChange(startDate, endDate) {
         if (calendar.isDateInvalid()) {
-          console.log('data is invalid');
-          calendar.duration = date.duration(undefined, undefined);
+          calendar.duration = date.duration(undefined, undefined, 0);
           calendar.subtotal = 0;
           calendar.lnrFee = 0;
           calendar.total = 0;
         } else {
-          calendar.duration = date.duration(startDate, endDate);
+          var invalidDays = countInvalidDays(startDate, endDate);
+          calendar.duration = date.duration(startDate, endDate, invalidDays);
           // Price calculation differs slightly between event rentals (bikeFamily 2 or 9) and standard rentals
           if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9) {
-            var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, 4);
+            var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, 4, invalidDays);
           } else {
-            var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek);
+            var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, null, invalidDays);
           }
           var fee = subtotal * 0.125;
           var tax = fee * 0.19;
@@ -357,6 +356,20 @@ angular.module('bike').component('calendar', {
         }
       }
 
+      function countInvalidDays(startDate, endDate){
+        var totalDays = Math.abs( startDate.getDate() - endDate.getDate() ) + 1;
+        var currentDay = new Date(endDate);
+        currentDay.setHours(0, 0, 0, 0);
+        var i = 0;
+        var invalidDays = 0;
+        while (i < totalDays) {
+          i++;
+          if (isReserved(currentDay)) invalidDays++;
+          currentDay.setDate(currentDay.getDate() - 1);
+          currentDay.setHours(0, 0, 0, 0);
+        }
+        return invalidDays;
+      }
     }
   ]
 });

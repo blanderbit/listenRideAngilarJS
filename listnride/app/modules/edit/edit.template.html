@@ -161,9 +161,15 @@
                 <div class="lnr-list-title">
                   <h3 class="md-subhead">{{ 'list.pictures.header' | translate }}</h3>
                 </div>
-
-                <md-button class="md-raised md-primary lnr-no-margin" ng-disabled="edit.form.images.length > 4" ngf-multiple="true"
-                  ngf-select="edit.addImage($files)" accept=".jpg,.jpeg">
+                <md-button
+                        class="md-raised md-primary lnr-no-margin"
+                        ng-disabled="edit.form.images.length > 4"
+                        ngf-multiple="true"
+                        ngf-select="edit.addImage($files)"
+                        accept=".jpg,.jpeg,.png"
+                        ngf-validate="edit.validateObj"
+                        ngf-model-invalid="edit.invalidFiles"
+                >
                   {{ 'list.pictures.select-images' | translate }}
                 </md-button>
 
@@ -179,6 +185,14 @@
                     <md-button class="md-lined md-warn" ng-click="edit.removeImage($index)">{{ 'list.pictures.remove' | translate}}</md-button>
                   </div>
                 </div>
+                <div ng-if="edit.invalidFiles[0] !== undefined" class="text-error" layout="column" hide-gt-xs layout-padding>
+                  {{ 'list.pictures.under-min-size' | translate}}
+                  <ul>
+                    <div ng-repeat="invalideImage in edit.invalidFiles" class="text-error">
+                      <li>{{invalideImage.name}} - {{invalideImage.$ngfWidth}}x{{invalideImage.$ngfHeight}}</li>
+                    </div>
+                  </ul>
+                </div>
               </div>
 
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
@@ -189,8 +203,21 @@
                 </div>
                 <p class="md-body-1">{{ 'list.pictures.hint' | translate }}</p>
                 <a ui-sref="how-to-shoot-bike-photos" target="_blank">{{ 'list.pictures.how-to' | translate }}</a>
-              </div>
 
+                <div ng-if="edit.invalidFiles[0] !== undefined" class="text-error">
+                  <div class="lnr-list-title">
+                    <h3 class="md-subhead">
+                      <md-icon md-font-icon="fa-exclamation-triangle"  class="lnr-icn-sm md-color-disabled lnr-margin-right fa"></md-icon>{{ 'list.pictures.invalid-images' | translate}}
+                    </h3>
+                  </div>
+                  {{ 'list.pictures.under-min-size' | translate}}
+                  <ul>
+                    <div ng-repeat="invalideImage in edit.invalidFiles" class="text-error">
+                      <li>{{invalideImage.name}} - {{invalideImage.$ngfWidth}}x{{invalideImage.$ngfHeight}}</li>
+                    </div>
+                  </ul>
+                </div>
+              </div>
             </div>
             
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
