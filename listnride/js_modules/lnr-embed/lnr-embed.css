@@ -15,6 +15,22 @@
 }
 
 
+/* lnr logo */
+
+#lnr-header-logo.mdl-layout__header-row {
+  height: 60px;
+  margin: 0;
+  padding: 0 40px 0 24px;
+}
+
+lnr-header-text {
+  position: absolute;
+  right: 0px;
+  padding: 24px;
+  font-size: 12px;
+}
+
+
 /*@media (max-width: 840px) {
   .mdl-cell--4-col, .mdl-cell--4-col-desktop.mdl-cell--4-col-desktop {
     width: calc(1% - 1px);
@@ -466,7 +482,7 @@ md-divider {
   border-top-width: 1px;
   border-top-style: solid;
   margin: 0;
-  border-top-color: white;
+  border-top-color: rgba(225,230,230,1.0);
 }
 
 .lnr-dropdown-button {

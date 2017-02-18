@@ -23,32 +23,9 @@ $(document).ready(function () {
             calendar.bikeFamily = bike.family;
             calendar.requests = bike.requests;
             calendar.userId = bike.user.id;
-            calendar.isDateInvalid = function () {
-                return calendar.startDate !== undefined &&
-                    calendar.startDate.getTime() >= calendar.endDate.getTime();
-            };
-            calendar.isFormInvalid = function () {
-                return calendar.bikeId === undefined || calendar.startDate ===
-                    undefined ||
-                    (calendar.startDate !== undefined && calendar.startDate.getTime() >= calendar.endDate.getTime());
-            };
-            calendar.onTimeChange = function (slot) {
-                var slotDate = slot + "Date";
-                var slotTime = slot + "Time";
-                var date = new Date(calendar[slotDate]);
-                date.setHours(calendar[slotTime], 0, 0, 0);
-                calendar[slotDate] = date;
-                dateChange(calendar.startDate, calendar.endDate);
-            };
-            calendar.isFormInvalid = function () {
-                return calendar.bikeId === undefined || calendar.startDate ===
-                    undefined ||
-                    (calendar.startDate !== undefined && calendar.startDate.getTime() >=
-                        calendar.endDate.getTime());
-            };
+
             initOverview();
             initCalendarPicker();
-
             updateTimeRangeText();
             // disable initially the time selector
             $('.dropdown *').attr("disabled", "disabled").off('click');
@@ -56,26 +33,14 @@ $(document).ready(function () {
     });
 });
 
-// get the parameters of the url
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
-    }
-};
-
-// date class
+/**
+ * date service
+ * returns date for lnr format
+ * date.service.js in angular app
+ */
 function DateService() {
     return {
-        duration: function (startDate, endDate) {
+        duration: function (startDate, endDate, invalidDays) {
             if (startDate === undefined || endDate === undefined) {
                 return "0 " + "days" + " , 0 " + "hours"
             } else {
@@ -91,12 +56,14 @@ function DateService() {
                 minutes -= hours * 60;
                 var days = (hours / 24) | 0;
                 hours -= days * 24;
+                days = days - invalidDays;
                 var weeks = (days / 7) | 0;
                 days -= weeks * 7;
 
                 var weeksLabel = (weeks == 1) ? "week" : "weeks";
                 var daysLabel = (days == 1) ? "day" : "days";
                 var hoursLabel = (hours == 1) ? "hour" : "hours";
+
                 var displayDuration = "";
 
                 if (weeks > 0)
@@ -112,12 +79,12 @@ function DateService() {
                     (", " + hours + " " + hoursLabel) :
                     (hours + " " + hoursLabel);
 
-                console.log('duration from service: ', displayDuration);
+
                 return displayDuration;
             }
         },
 
-        subtotal: function (startDate, endDate, priceHalfDay, priceDay, priceWeek, minHoursDay) {
+        subtotal: function (startDate, endDate, priceHalfDay, priceDay, priceWeek, minHoursDay, invalidDays) {
             minHoursDay = minHoursDay || 6;
 
             if (startDate === undefined || endDate === undefined) {
@@ -133,6 +100,7 @@ function DateService() {
                 minutes -= hours * 60;
                 var days = (hours / 24) | 0;
                 hours -= days * 24;
+                days = days - invalidDays;
                 var weeks = (days / 7) | 0;
                 days -= weeks * 7;
 
@@ -158,12 +126,98 @@ function DateService() {
         }
     }
 }
-
 var date = new DateService();
+
+/**
+ * returns the required paramater from the url
+ * @param {string} sParam
+ * @returns {string} param
+ */
+function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+}
+
+/**
+ * used to change the tabs in the wizard
+ * @param {Element} element
+ * @returns {void}
+ */
+function changeTab(element) {
+    document.getElementById(element.id).click(); // Click on the checkbox
+}
+
+/**
+ * used to open the date (from/to) dropdowns 
+ * @param {Number} id
+ * @param {string} type
+ * @returns {void}
+ */
+function openDropDown(id, type) {
+
+    var startId = 'lnr-date-from-dropdown';
+    var endId = 'lnr-date-to-dropdown';
+
+    var element = $('#' + id);
+    element.html('');
+    for (var index = 0; index < 17; index += 1) {
+        element.append(
+            '<div class="lnr-date-selector" onclick="onTimeValueSelect(' +
+            parseInt(index + 6) + ', ' + type + ')" + id="lnr-date-from-select-"' +
+            index + '>' + (index + 6) + ":00" +
+            calendar.availabilityMessage(index, calendar.endDate) + '</div>'
+        );
+    }
+
+    // at a time only 1 dropdown should be shown
+    if (id === startId) {
+        $('#' + endId).removeClass("show");
+        element.toggleClass("show");
+    } else if (id === endId) {
+        $('#' + startId).removeClass("show");
+        element.toggleClass("show");
+    }
+}
+
+/**
+ * called when user selects time from time range dropdown (from/to)
+ * @param {Number} index
+ * @param {string} slot
+ * @returns {void}
+ */
+function onTimeValueSelect(index, slot) {
+    var slotTime = slot + "Time";
+    calendar[slotTime] = index;
+    calendar.onTimeChange(slot);
+    updateTimeRangeText();
+}
+
+var calenderConfigObject = {
+    alwaysOpen: true,
+    container: '#bike-calendar',
+    beforeShowDay: classifyDate,
+    inline: true,
+    selectForward: true,
+    showShortcuts: false,
+    showTopbar: false,
+    singleMonth: true,
+    startOfWeek: 'monday'
+};
 
 // render the calendar
 function initCalendarPicker() {
     if (calendar.requests !== undefined) {
+        calendar.owner = calendar.userId;
         if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9) {
             calendar.event.reserved();
         }
@@ -183,59 +237,8 @@ function initCalendarPicker() {
 
                 // enable the time selector
                 $('.dropdown *').attr("disabled", false);
-            })
-            .bind('datepicker-opened', function () {
-                /* This event will be triggered after date range picker open animation */
-                console.log('after open');
             });
     }
-}
-var calenderConfigObject = {
-    alwaysOpen: true,
-    container: '#bike-calendar',
-    beforeShowDay: classifyDate,
-    inline: true,
-    selectForward: true,
-    showShortcuts: false,
-    showTopbar: false,
-    singleMonth: true,
-    startOfWeek: 'monday'
-};
-
-function changeTab(element) {
-    document.getElementById(element.id).click(); // Click on the checkbox
-}
-
-function openDropDown(id, type) {
-
-    var startId = 'lnr-date-from-dropdown';
-    var endId = 'lnr-date-to-dropdown';
-
-    var element = $('#' + id);
-    element.html('');
-    for (var index = 0; index < 17; index += 1) {
-        element.append(
-            '<div class="lnr-date-selector" onclick="onTimeValueSelect(' + parseInt(index + 6) +
-            ', ' + type + ')" + id="lnr-date-from-select-"' + index + '>' + (index + 6) + ":00" +
-            calendar.availabilityMessage(index, calendar.endDate) + '</div>'
-        );
-    }
-
-    // at a time only 1 dropdown should be shown
-    if (id === startId) {
-        $('#' + endId).removeClass("show");
-        element.toggleClass("show");
-    } else if (id === endId) {
-        $('#' + startId).removeClass("show");
-        element.toggleClass("show");
-    }
-}
-
-function onTimeValueSelect(index, slot) {
-    var slotTime = slot + "Time";
-    calendar[slotTime] = index;
-    calendar.onTimeChange(slot);
-    updateTimeRangeText();
 }
 
 function updateTimeRangeText() {
@@ -367,13 +370,13 @@ function initOverview() {
 
 function dateChange(startDate, endDate) {
     if (calendar.isDateInvalid()) {
-        console.log('data is invalid');
         calendar.duration = date.duration(undefined, undefined);
         calendar.subtotal = 0;
         calendar.lnrFee = 0;
         calendar.total = 0;
     } else {
-        calendar.duration = date.duration(startDate, endDate);
+        var invalidDays = countInvalidDays(startDate, endDate);
+        calendar.duration = date.duration(startDate, endDate, invalidDays);
         // Price calculation differs slightly between event rentals (bikeFamily 2 or 9) and standard rentals
         if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9) {
             var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar
@@ -409,3 +412,44 @@ function dateChange(startDate, endDate) {
         $(element).html(calendar.total + ' &euro;');
     });
 }
+
+function countInvalidDays(startDate, endDate) {
+    var totalDays = Math.abs(startDate.getDate() - endDate.getDate()) + 1;
+    var currentDay = new Date(endDate);
+    currentDay.setHours(0, 0, 0, 0);
+    var i = 0;
+    var invalidDays = 0;
+    while (i < totalDays) {
+        i++;
+        if (isReserved(currentDay)) invalidDays++;
+        currentDay.setDate(currentDay.getDate() - 1);
+        currentDay.setHours(0, 0, 0, 0);
+    }
+    return invalidDays;
+}
+calendar.isDateInvalid = function () {
+    return calendar.startDate !== undefined &&
+        calendar.startDate.getTime() >= calendar.endDate.getTime();
+};
+
+calendar.isFormInvalid = function () {
+    return calendar.bikeId === undefined || calendar.startDate ===
+        undefined ||
+        (calendar.startDate !== undefined && calendar.startDate.getTime() >= calendar.endDate.getTime());
+};
+
+calendar.onTimeChange = function (slot) {
+    var slotDate = slot + "Date";
+    var slotTime = slot + "Time";
+    var date = new Date(calendar[slotDate]);
+    date.setHours(calendar[slotTime], 0, 0, 0);
+    calendar[slotDate] = date;
+    dateChange(calendar.startDate, calendar.endDate);
+};
+
+calendar.isFormInvalid = function () {
+    return calendar.bikeId === undefined || calendar.startDate ===
+        undefined ||
+        (calendar.startDate !== undefined && calendar.startDate.getTime() >=
+            calendar.endDate.getTime());
+};
