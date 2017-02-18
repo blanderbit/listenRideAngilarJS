@@ -1697,7 +1697,7 @@
 							)
 						)
 						{
-							if (!$(this).hasClass('invalid')) // TODO: Added by DY
+							if (!$(this).hasClass('date-reserved')) // TODO: Added by DY
 							{
 								$(this).addClass('hovering');
 							}
@@ -1769,7 +1769,7 @@
 			{
 				i++;
 				if (needsCountAllDays) countedDays++;
-				if ($(day).hasClass('invalid')) invalidDays++;
+				if ($(day).hasClass('date-reserved')) invalidDays++;
 				var prevDay = day[0].attributes.time.value - 86400000;
 				day = $("div.day[time=" + prevDay + "]");
 			}
@@ -2018,7 +2018,7 @@
 					( opt.start && !opt.end && moment(start).format('YYYY-MM-DD') == moment(time).format('YYYY-MM-DD') )
 				)
 				{
-					if (!$(this).hasClass('invalid')) //TODO: Added by DY
+					if (!$(this).hasClass('date-reserved')) //TODO: Added by DY
 					{
 						$(this).addClass('checked');
 						countedDays = 0;
