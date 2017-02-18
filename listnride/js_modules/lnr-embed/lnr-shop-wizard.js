@@ -10,11 +10,11 @@ $(document).ready(function () {
     // LOGIC CODE - NEEDS TO BE IN SEPERATE FILE
     // RUNS BEFORE DOM MANIPULAITON
     // fetch user info
-    var userId = getUrlParameter('userId') || 1005;
+    var userId = helper.getUrlParameter('userId') || 1005;
     $.get("https://api.listnride.com/v2/users/" + userId, function (response) {
         calendar.bikeOwner = response;
         // fetch bike info
-        var bikeId = getUrlParameter('bikeId') || 165;
+        var bikeId = helper.getUrlParameter('bikeId') || 165;
         $.get("https://listnride-staging.herokuapp.com/v2/rides/" + bikeId, function (bike) {
             calendar.bikeId = bikeId;
             calendar.priceHalfDay = bike.price_half_daily;
@@ -128,90 +128,98 @@ function DateService() {
 }
 var date = new DateService();
 
-/**
- * returns the required paramater from the url
- * @param {string} sParam
- * @returns {string} param
+/** 
+ * These are the methods specific for the adoption of the 
+ * angular calendar code to plain javascript calendar code
  */
-function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
+var helper = {
 
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
+    // jquery date range picker config object
+    calenderConfigObject: {
+        alwaysOpen: true,
+        container: '#bike-calendar',
+        beforeShowDay: classifyDate,
+        inline: true,
+        selectForward: true,
+        showShortcuts: false,
+        showTopbar: false,
+        singleMonth: true,
+        startOfWeek: 'monday'
+    },
 
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
+    /**
+     * returns the required paramater from the url
+     * @param {string} sParam
+     * @returns {string} param
+     */
+    getUrlParameter: function (sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
         }
+    },
+
+    /**
+     * used to change the tabs in the wizard
+     * @param {Element} element
+     * @returns {void}
+     */
+    changeTab: function (element) {
+        document.getElementById(element.id).click(); // Click on the checkbox
+    },
+
+    /**
+     * used to open the date (from/to) dropdowns 
+     * @param {Number} id
+     * @param {string} type
+     * @returns {void}
+     */
+    openDropDown: function (id, type) {
+
+        var startId = 'lnr-date-from-dropdown';
+        var endId = 'lnr-date-to-dropdown';
+
+        var element = $('#' + id);
+        element.html('');
+        for (var index = 0; index < 17; index += 1) {
+            element.append(
+                '<div class="lnr-date-selector" onclick="helper.onTimeValueSelect(' +
+                parseInt(index + 6) + ', ' + type + ')" + id="lnr-date-from-select-"' +
+                index + '>' + (index + 6) + ":00" +
+                calendar.availabilityMessage(index, calendar.endDate) + '</div>'
+            );
+        }
+
+        // at a time only 1 dropdown should be shown
+        if (id === startId) {
+            $('#' + endId).removeClass("show");
+            element.toggleClass("show");
+        } else if (id === endId) {
+            $('#' + startId).removeClass("show");
+            element.toggleClass("show");
+        }
+    },
+
+    /**
+     * called when user selects time from time range dropdown (from/to)
+     * @param {Number} index
+     * @param {string} slot
+     * @returns {void}
+     */
+    onTimeValueSelect: function (index, slot) {
+        var slotTime = slot + "Time";
+        calendar[slotTime] = index;
+        calendar.onTimeChange(slot);
+        updateTimeRangeText();
     }
-}
-
-/**
- * used to change the tabs in the wizard
- * @param {Element} element
- * @returns {void}
- */
-function changeTab(element) {
-    document.getElementById(element.id).click(); // Click on the checkbox
-}
-
-/**
- * used to open the date (from/to) dropdowns 
- * @param {Number} id
- * @param {string} type
- * @returns {void}
- */
-function openDropDown(id, type) {
-
-    var startId = 'lnr-date-from-dropdown';
-    var endId = 'lnr-date-to-dropdown';
-
-    var element = $('#' + id);
-    element.html('');
-    for (var index = 0; index < 17; index += 1) {
-        element.append(
-            '<div class="lnr-date-selector" onclick="onTimeValueSelect(' +
-            parseInt(index + 6) + ', ' + type + ')" + id="lnr-date-from-select-"' +
-            index + '>' + (index + 6) + ":00" +
-            calendar.availabilityMessage(index, calendar.endDate) + '</div>'
-        );
-    }
-
-    // at a time only 1 dropdown should be shown
-    if (id === startId) {
-        $('#' + endId).removeClass("show");
-        element.toggleClass("show");
-    } else if (id === endId) {
-        $('#' + startId).removeClass("show");
-        element.toggleClass("show");
-    }
-}
-
-/**
- * called when user selects time from time range dropdown (from/to)
- * @param {Number} index
- * @param {string} slot
- * @returns {void}
- */
-function onTimeValueSelect(index, slot) {
-    var slotTime = slot + "Time";
-    calendar[slotTime] = index;
-    calendar.onTimeChange(slot);
-    updateTimeRangeText();
-}
-
-var calenderConfigObject = {
-    alwaysOpen: true,
-    container: '#bike-calendar',
-    beforeShowDay: classifyDate,
-    inline: true,
-    selectForward: true,
-    showShortcuts: false,
-    showTopbar: false,
-    singleMonth: true,
-    startOfWeek: 'monday'
 };
 
 // render the calendar
@@ -221,7 +229,7 @@ function initCalendarPicker() {
         if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9) {
             calendar.event.reserved();
         }
-        $('#bike-calendar').dateRangePicker(calenderConfigObject)
+        $('#bike-calendar').dateRangePicker(helper.calenderConfigObject)
             .bind('datepicker-change', function (event, obj) {
                 var start = obj.date1;
                 start.setHours(calendar.startTime, 0, 0, 0);
@@ -261,25 +269,6 @@ function closeDropDown(event) {
         }
     }
 }
-
-calendar.availabilityMessage = function ($index, date) {
-    if (!calendar.isOptionEnabled($index, date)) {
-        return ' (closed)';
-    }
-    return '';
-};
-
-calendar.isOptionEnabled = function ($index, date) {
-    if (date == undefined || !openingHoursAvailable()) {
-        return true
-    }
-    var weekDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(date)];
-    if (weekDay !== null) {
-        var workingHours = openHours(weekDay);
-        return workingHours.includes($index + 6);
-    }
-    return false
-};
 
 function getWeekDay(date) {
     var dayOfWeek = date.getDay() - 1;
@@ -370,7 +359,7 @@ function initOverview() {
 
 function dateChange(startDate, endDate) {
     if (calendar.isDateInvalid()) {
-        calendar.duration = date.duration(undefined, undefined);
+        calendar.duration = date.duration(undefined, undefined, 0);
         calendar.subtotal = 0;
         calendar.lnrFee = 0;
         calendar.total = 0;
@@ -379,11 +368,9 @@ function dateChange(startDate, endDate) {
         calendar.duration = date.duration(startDate, endDate, invalidDays);
         // Price calculation differs slightly between event rentals (bikeFamily 2 or 9) and standard rentals
         if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9) {
-            var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar
-                .priceWeek, 4);
+            var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, 4, invalidDays);
         } else {
-            var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar
-                .priceWeek);
+            var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, null, invalidDays);
         }
         var fee = subtotal * 0.125;
         var tax = fee * 0.19;
@@ -427,6 +414,26 @@ function countInvalidDays(startDate, endDate) {
     }
     return invalidDays;
 }
+
+calendar.availabilityMessage = function ($index, date) {
+    if (!calendar.isOptionEnabled($index, date)) {
+        return ' (closed)';
+    }
+    return '';
+};
+
+calendar.isOptionEnabled = function ($index, date) {
+    if (date == undefined || !openingHoursAvailable()) {
+        return true
+    }
+    var weekDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(date)];
+    if (weekDay !== null) {
+        var workingHours = openHours(weekDay);
+        return workingHours.includes($index + 6);
+    }
+    return false
+};
+
 calendar.isDateInvalid = function () {
     return calendar.startDate !== undefined &&
         calendar.startDate.getTime() >= calendar.endDate.getTime();

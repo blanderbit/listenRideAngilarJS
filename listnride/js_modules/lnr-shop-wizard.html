@@ -49,14 +49,14 @@
                                     <div id="timeRange" layout="row" layout-align="start center" layout-padding>
                                         <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown">
                                             <span>from</span>
-                                            <button id="lnr-date-start-button" onclick="openDropDown('lnr-date-from-dropdown', '\'start\'')" class="lnr-dropdown-button">From
+                                            <button id="lnr-date-start-button" onclick="helper.openDropDown('lnr-date-from-dropdown', '\'start\'')" class="lnr-dropdown-button">From
                                             </button>
                                             <div id="lnr-date-from-dropdown" class="dropdown-content">
                                             </div>
                                         </div>
                                         <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown">
                                             <span>to</span>
-                                            <button id="lnr-date-end-button" onclick="openDropDown('lnr-date-to-dropdown', '\'end\'')" class="lnr-dropdown-button">To
+                                            <button id="lnr-date-end-button" onclick="helper.openDropDown('lnr-date-to-dropdown', '\'end\'')" class="lnr-dropdown-button">To
                                             </button>
                                             <div id="lnr-date-to-dropdown" class="dropdown-content">
                                             </div>
@@ -96,7 +96,7 @@
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button"></div>
                             <!-- next button -->
                             <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button onclick="changeTab({id: 'tab-basic-info'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
+                                <button onclick="helper.changeTab({id: 'tab-basic-info'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
                             </div>
                         </div>
                     </div>
@@ -158,10 +158,10 @@
                         <!-- nav buttons -->
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button id="lnr-back-button" onclick="changeTab({id: 'tab-duration'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
+                                <button id="lnr-back-button" onclick="helper.changeTab({id: 'tab-duration'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
                             </div>
                             <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button onclick="changeTab({id: 'tab-payment-details'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
+                                <button onclick="helper.changeTab({id: 'tab-payment-details'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
                             </div>
                         </div>
                     </div>
@@ -209,10 +209,10 @@
                         <!-- nav buttons -->
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button id="lnr-back-button" onclick="changeTab({id: 'tab-basic-info'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
+                                <button id="lnr-back-button" onclick="helper.changeTab({id: 'tab-basic-info'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
                             </div>
                             <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button onclick="changeTab({id: 'tab-booking-overview'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
+                                <button onclick="helper.changeTab({id: 'tab-booking-overview'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
                             </div>
                         </div>
                     </div>
@@ -253,10 +253,10 @@
                         <!-- nav buttons -->
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button id="lnr-back-button" onclick="changeTab({id: 'tab-payment-details'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
+                                <button id="lnr-back-button" onclick="helper.changeTab({id: 'tab-payment-details'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
                             </div>
                             <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button onclick="changeTab({id: 'tab-duration'})" class="md-accent md-raised md-button md-ink-ripple"><span>Proceed</span></button>
+                                <button onclick="helper.changeTab({id: 'tab-duration'})" class="md-accent md-raised md-button md-ink-ripple"><span>Proceed</span></button>
                             </div>
                         </div>
                     </div>
