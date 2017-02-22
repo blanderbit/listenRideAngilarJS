@@ -3,10 +3,28 @@
 angular.module('settings',[]).component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',
-  controller: ['$localStorage', '$window', '$mdToast', '$translate', 'api', 'accessControl', 'sha256', 'Base64',
-                'Upload', 'loadingDialog', 'ENV', 'ngMeta', 'userApi', '$timeout',
-    function SettingsController($localStorage, $window, $mdToast, $translate, api, accessControl, sha256, Base64,
-                                Upload, loadingDialog, ENV, ngMeta, userApi, $timeout) {
+  controller: [
+    '$localStorage',
+    '$window',
+    '$mdToast',
+    '$translate',
+    'api',
+    'accessControl',
+    'sha256',
+    'Base64',
+    'Upload',
+    'loadingDialog',
+    'ENV',
+    'ngMeta',
+    'userApi',
+    '$timeout',
+    '$mdDialog',
+    function SettingsController(
+      $localStorage, $window, $mdToast,
+      $translate, api, accessControl, sha256, Base64,
+      Upload, loadingDialog, ENV, ngMeta,
+      userApi, $timeout, $mdDialog
+      ) {
       if (accessControl.requireLogin()) {
         return;
       }
@@ -17,8 +35,51 @@ angular.module('settings',[]).component('settings', {
 
       var formData = {};
 
-      settings.$onInit = initSettings;
+      /**
+       * controller for change contact info
+       * $mdDialog has a bug. it doesn't allow render template
+       * correctly for component. thats why 
+       * inline controller is used instead of controller
+       * @param {userApi} userApi 
+       * @param {$mdDialog} $mdDialog 
+       * @param {verification} verification
+       * @returns {void}
+       */
+      var ChangeContactController = function(userApi, $mdDialog, verification) {
+        var changeContact = this;
+        
+        changeContact.sentConfirmationSms = false;
+                
+        changeContact.confirmPhone = function () {
+          verification.confirmPhone(changeContact.user.confirmation_code).then(function () {
+            $mdDialog.hide({
+              number: changeContact.user.new_phone_number
+            });
+          });
+        };
 
+        changeContact.sendSms = function () {
+          verification.sendSms(changeContact.user.new_phone_number).then(function () {
+            changeContact.sentConfirmationSms = true;
+          }, function () {
+            changeContact.hangeContact.sentConfirmationSms = false;
+          });
+        };
+        
+        // cancel the modal
+        changeContact.closeDialog = $mdDialog.cancel;
+
+        changeContact.onInit = function () {
+          userApi.getUserData().then(function (response) {
+            changeContact.user = response.data;
+            changeContact.user.new_phone_number = angular.copy(changeContact.user.phone_number);
+          });
+        };
+
+        changeContact.onInit(); 
+      }
+  
+      settings.$onInit = initSettings;
       function initSettings() {
         settings.user = {};
         settings.loaded = false;
@@ -39,13 +100,26 @@ angular.module('settings',[]).component('settings', {
         settings.performOpeningHours = performOpeningHours;
         settings.addChild = addChild;
         settings.removeInputDate = removeInputDate;
-
         userApi.getUserData().then(function (response) {
           settings.user = response.data;
+          updatePrivatePhoneNumber(response.data.phone_number);
           settings.loaded = true;
           settings.openingHoursEnabled = settings.user.opening_hours ? settings.user.opening_hours.enabled : false;
           $timeout(setInitFormState.bind(this), 0);
         });
+      }
+
+      /**
+       * converts phone number to private number
+       * 1234567890 -> 123****890
+       * @param {string} phone_number 
+       * @returns {void}
+       */
+      function updatePrivatePhoneNumber(phone_number) {
+        var initials = phone_number.slice(0, 3);
+        var endings = phone_number.slice(-3);
+        var length = phone_number.length - initials.length - endings.length + 1;
+        settings.user.phone_number_privatized = initials.concat(Array(length).join('*')).concat(endings);
       }
 
       function performOpeningHours(model) {
@@ -68,7 +142,7 @@ angular.module('settings',[]).component('settings', {
         if (duration) {
           _.set(settings.errorTime, weekDay, false);
           saveDate(weekDay, 'duration', duration, index);
-        } else if (endTime == null){ // If second input still blank
+        } else if (endTime == null) { // If second input still blank
           _.set(settings.errorTime, weekDay, false);
         } else {
           _.set(settings.errorTime, weekDay, true);
@@ -79,7 +153,7 @@ angular.module('settings',[]).component('settings', {
 
       function saveDate(weekDay, key, value, index) {
         var weekDayKey = weekDay + '.' + index + '.' + key;
-        formData = _.set(formData, weekDayKey , value);
+        formData = _.set(formData, weekDayKey, value);
       }
 
       function getDuration(weekDayKey, index) {
@@ -92,12 +166,14 @@ angular.module('settings',[]).component('settings', {
 
         if (!startTime && !endTime) return null;
         duration = (endTime - startTime);
-        return  duration <= 0 ? null : duration;
+        return duration <= 0 ? null : duration;
       }
 
-      function hoursFormValid(){
+      function hoursFormValid() {
         var errors = Object.values(settings.errorTime);
-        settings.error = errors.some(function(e) { return e === true; })
+        settings.error = errors.some(function (e) {
+          return e === true;
+        })
       }
 
       function performInputDay(weekDay, model) {
@@ -123,10 +199,14 @@ angular.module('settings',[]).component('settings', {
       function fillInputDate(weekDay) {
         if (unableToPreFill(weekDay)) return;
         var prev_day = [];
-        var currentDay = _.findIndex(settings.weekDays, function(o) { return o == weekDay; });
+        var currentDay = _.findIndex(settings.weekDays, function (o) {
+          return o == weekDay;
+        });
         var hours = _.isEmpty(settings.user.opening_hours) ? [] : settings.user.opening_hours.hours;
-        _.each(settings.weekDays, function (weekDay, key) {  // Check for previously completed days
-          if (key > currentDay) {return prev_day}   // Return if day after current day
+        _.each(settings.weekDays, function (weekDay, key) { // Check for previously completed days
+          if (key > currentDay) {
+            return prev_day
+          } // Return if day after current day
           var anyData = formDataPresent(weekDay);
           if (!_.isEmpty(hours[key]) && !anyData) {
             prev_day = getPreviousDay(hours[key], true);
@@ -167,14 +247,24 @@ angular.module('settings',[]).component('settings', {
       function formDataPresent(weekDay) {
         var present = false;
         _.each(formData[weekDay], function (range, key) {
-          if (range.start_at !== null || range.duration !== null) { present = true}
+          if (range.start_at !== null || range.duration !== null) {
+            present = true
+          }
         });
         return present
       }
 
       function onSubmit() {
         var reqData = {
-          'hours': _.isEmpty(formData) ? {0:null, 1:null, 2:null, 3:null, 4:null, 5:null, 6:null} : changeKeys(formData),
+          'hours': _.isEmpty(formData) ? {
+            0: null,
+            1: null,
+            2: null,
+            3: null,
+            4: null,
+            5: null,
+            6: null
+          } : changeKeys(formData),
           'enabled': settings.openingHoursEnabled
         };
 
@@ -201,7 +291,10 @@ angular.module('settings',[]).component('settings', {
         _.each(data, function (value, key) {
           var startAt = _.get(value, 'start_at') * 3600;
           var duration = _.get(value, 'duration') * 3600;
-          if (startAt != 0 && startAt !=0) range.push({start_at: startAt, duration: duration});
+          if (startAt != 0 && startAt != 0) range.push({
+            start_at: startAt,
+            duration: duration
+          });
         });
         return range
       }
@@ -212,17 +305,17 @@ angular.module('settings',[]).component('settings', {
             settings.openingHoursId = success.data.id;
             $mdToast.show(
               $mdToast.simple()
-                .textContent($translate.instant('toasts.opening-hours-success'))
-                .hideDelay(4000)
-                .position('top center')
+              .textContent($translate.instant('toasts.opening-hours-success'))
+              .hideDelay(4000)
+              .position('top center')
             );
           },
           function (error) {
             $mdToast.show(
               $mdToast.simple()
-                .textContent($translate.instant('toasts.opening-hours-error'))
-                .hideDelay(4000)
-                .position('top center')
+              .textContent($translate.instant('toasts.opening-hours-error'))
+              .hideDelay(4000)
+              .position('top center')
             );
           }
         );
@@ -230,20 +323,20 @@ angular.module('settings',[]).component('settings', {
 
       function updateOpeningHours(data) {
         api.put("/opening_hours/" + settings.openingHoursId, data).then(
-          function(success) {
+          function (success) {
             $mdToast.show(
               $mdToast.simple()
-                .textContent($translate.instant('toasts.opening-hours-success'))
-                .hideDelay(4000)
-                .position('top center')
+              .textContent($translate.instant('toasts.opening-hours-success'))
+              .hideDelay(4000)
+              .position('top center')
             );
           },
-          function(error) {
+          function (error) {
             $mdToast.show(
               $mdToast.simple()
-                .textContent($translate.instant('toasts.opening-hours-error'))
-                .hideDelay(4000)
-                .position('top center')
+              .textContent($translate.instant('toasts.opening-hours-error'))
+              .hideDelay(4000)
+              .position('top center')
             );
           }
         );
@@ -268,14 +361,14 @@ angular.module('settings',[]).component('settings', {
         }
       }
 
-      function setDayTime (day, start_at, duration, rangeIndex) {
+      function setDayTime(day, start_at, duration, rangeIndex) {
         settings.startTime = _.set(settings.startTime, day + '.' + rangeIndex, start_at);
         settings.endTime = _.set(settings.endTime, day + '.' + rangeIndex, duration + start_at);
-        formData = _.set(formData, day+ '.' + rangeIndex + '.' + 'start_at', start_at);
-        formData = _.set(formData, day+ '.' + rangeIndex + '.' + 'duration', duration);
+        formData = _.set(formData, day + '.' + rangeIndex + '.' + 'start_at', start_at);
+        formData = _.set(formData, day + '.' + rangeIndex + '.' + 'duration', duration);
       }
 
-      settings.fillAddress = function(place) {
+      settings.fillAddress = function (place) {
         var components = place.address_components;
         if (components) {
           var desiredComponents = {
@@ -300,7 +393,7 @@ angular.module('settings',[]).component('settings', {
         }
       };
 
-      settings.addPayoutMethod = function() {
+      settings.addPayoutMethod = function () {
         var data = {
           "payment_method": settings.payoutMethod
         };
@@ -309,8 +402,7 @@ angular.module('settings',[]).component('settings', {
 
         if (settings.payoutMethod.family == 1) {
           data.payment_method.email = "";
-        }
-        else {
+        } else {
           data.payment_method.iban = "";
           data.payment_method.bic = "";
         }
@@ -335,7 +427,7 @@ angular.module('settings',[]).component('settings', {
         );
       };
 
-      settings.addVoucher = function() {
+      settings.addVoucher = function () {
         var data = {
           "voucher": {
             "code": settings.voucherCode
@@ -365,7 +457,7 @@ angular.module('settings',[]).component('settings', {
         );
       };
 
-      settings.updateUser = function() {
+      settings.updateUser = function () {
         var data = {
           "user": {
             "description": settings.user.description,
@@ -416,13 +508,32 @@ angular.module('settings',[]).component('settings', {
         );
       };
 
-      settings.openPaymentWindow = function() {
+      settings.openPaymentWindow = function () {
         var w = 550;
-          var h = 700;
-          var left = (screen.width / 2) - (w / 2);
-          var top = (screen.height / 2) - (h / 2);
+        var h = 700;
+        var left = (screen.width / 2) - (w / 2);
+        var top = (screen.height / 2) - (h / 2);
 
-          $window.open(ENV.userEndpoint + $localStorage.userId + "/payment_methods/new", "popup", "width="+w+",height="+h+",left="+left+",top="+top);
+        $window.open(ENV.userEndpoint + $localStorage.userId + "/payment_methods/new", "popup", "width=" + w + ",height=" + h + ",left=" + left + ",top=" + top);
+      };
+      
+      settings.changePhoneNumber = function (event) {
+        $mdDialog.show({
+          templateUrl: 'app/modules/settings/change-contact.template.html',
+          controller: ChangeContactController,
+          controllerAs: 'changeContact',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: true,
+          escapeToClose: true
+        }).then(function (success) {
+          // update model with new number
+          settings.user.phone_number = success.phone_number;
+          // update model with private number
+          updatePrivatePhoneNumber(success.phone_number);
+        });
       };
 
       function addChild(day) {

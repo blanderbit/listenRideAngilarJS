@@ -216,7 +216,8 @@
     "street": "Street and Number",
     "zip": "Zip Code",
     "city": "City",
-    "country": "Country"
+    "country": "Country",
+    "update-contact": "Update Contact"
   },
   "home": {
     "landing-section-header": "The perfect bike. Simply rent it.",
