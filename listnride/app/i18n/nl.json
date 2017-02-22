@@ -242,7 +242,8 @@
     "street": "Straat en huisnr.",
     "zip": "Postcode",
     "city": "Plaats",
-    "country": "Land"
+    "country": "Land",
+    "update-contact": "Contactgegevens wijzigen"
   },
 
   "autocomplete": {
