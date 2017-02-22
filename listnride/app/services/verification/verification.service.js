@@ -2,8 +2,8 @@
 
 angular.
   module('listnride').
-  factory('verification', ['$mdDialog', '$mdToast', '$interval', '$localStorage', '$state', '$translate', 'api', 'Upload',
-    function($mdDialog, $mdToast, $interval, $localStorage, $state, $translate, api, Upload) {
+  factory('verification', ['$mdDialog', '$mdToast','$q', '$interval', '$localStorage', '$state', '$translate', 'api', 'Upload',
+    function($mdDialog, $mdToast, $q, $interval, $localStorage, $state, $translate, api, Upload) {
 
       var VerificationDialogController = function(lister) {
         var verificationDialog = this;
@@ -12,8 +12,6 @@ angular.
         }, 5000);
 
         verificationDialog.lister = lister;
-        console.log(verificationDialog.lister);
-
         verificationDialog.selectedIndex;
         verificationDialog.activeTab = 1;
         verificationDialog.firstName = $localStorage.firstName;
@@ -127,49 +125,16 @@ angular.
           );
         };
 
-        verificationDialog.sendSms = function() {
-          var data = {
-            "phone_number": verificationDialog.newUser.phone_number
-          };
-          api.post('/users/' + $localStorage.userId + '/update_phone', data).then(
-            function (success) {
-              verificationDialog.sentConfirmationSms = true;
-              console.log("Successfully updated phone number");
-              $mdToast.show(
-                $mdToast.simple()
-                .textContent('An SMS with a confirmation code was sent to you right now.')
-                .hideDelay(4000)
-                .position('top center')
-              );
-            },
-            function (error) {
-              console.log("error updating phone number");
-            }
-          );
+        verificationDialog.sendSms = function () {
+          sendSms(verificationDialog.newUser.phone_number).then(function () {
+            verificationDialog.sentConfirmationSms = true;
+          }, function () {
+            verificationDialog.sentConfirmationSms = false;
+          });
         };
 
         verificationDialog.confirmPhone = function() {
-          var data = {
-            "confirmation_code": verificationDialog.newUser.confirmation_code
-          };
-          api.post('/users/' + $localStorage.userId + '/confirm_phone', data).then(
-            function (success) {
-              $mdToast.show(
-                $mdToast.simple()
-                .textContent('Successfully verified phone number.')
-                .hideDelay(4000)
-                .position('top center')
-              );
-            },
-            function (error) {
-              $mdToast.show(
-                $mdToast.simple()
-                .textContent('Error: The Verification Code seems to be invalid.')
-                .hideDelay(4000)
-                .position('top center')
-              );
-            }
-          );
+          confirmPhone(verificationDialog.newUser.confirmation_code);
         };
 
         verificationDialog.uploadAddress = function() {
@@ -264,10 +229,74 @@ angular.
           escapeToClose: false,
           fullscreen: true
         });
-      }
+      };
 
+      var sendSms = function (model) {
+        // payload
+        var data = {"phone_number": model};
+        // promise
+        var deferred = $q.defer();
+        // api call
+        api.post('/users/' + $localStorage.userId + '/update_phone', data).then(
+          // resolve api: success
+          function (success) {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent('An SMS with a confirmation code was sent to you just now.')
+                .hideDelay(4000)
+                .position('top center')
+            );
+            // resolve the promise
+            deferred.resolve(success);
+          },
+          // reject api: error
+          function (error) {
+            // reject the promise
+            deferred.reject(error);
+          }
+        );
+        // return promise to caller
+        return deferred.promise;
+      };
+
+      var confirmPhone = function (model) {
+        // payload
+        var data = { "confirmation_code": model };
+        // promise
+        var deferred = $q.defer();
+        // api call
+        api.post('/users/' + $localStorage.userId + '/confirm_phone', data).then(
+          // resolve api: success
+          function (success) {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent('Successfully verified phone number.')
+                .hideDelay(4000)
+                .position('top center')
+            );
+            // resolve the promise
+            deferred.resolve(success);
+          },
+          // reject api: error
+          function (error) {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent('Error: The Verification Code seems to be invalid.')
+                .hideDelay(4000)
+                .position('top center')
+            );
+            // reject the promise
+            deferred.reject(error);
+          }
+        );
+        // return promise to caller
+        return deferred.promise;
+      };
+      
       return {
-        openDialog: openDialog
+        openDialog: openDialog,
+        sendSms: sendSms,
+        confirmPhone: confirmPhone
       }
     }
   ]);

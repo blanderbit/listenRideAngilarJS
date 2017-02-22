@@ -256,7 +256,8 @@
     "street": "Straße und Hausnr.",
     "zip": "PLZ",
     "city": "Stadt",
-    "country": "Land"
+    "country": "Land",
+    "update-contact": "Kontakt aktualisieren"
   },
 
   "autocomplete": {
