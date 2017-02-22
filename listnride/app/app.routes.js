@@ -91,7 +91,7 @@
 
       $stateProvider.state({
         name: 'list',
-        url: '/list',
+        url: '/list-bike',
         template: '<list></list>'
       });
 
@@ -103,7 +103,7 @@
 
       $stateProvider.state({
         name: 'edit',
-        url: '/edit/{bikeId:int}',
+        url: '/edit-bike/{bikeId:int}',
         template: '<edit></edit>'
       });
 

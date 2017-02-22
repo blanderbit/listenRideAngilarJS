@@ -76,7 +76,7 @@ angular.module('bike',[]).component('bike', {
         $mdDialog.show({
           controller: CalendarDialogController,
           controllerAs: 'calendarDialog',
-          templateUrl: 'app/modules/bike/calendarDialog.template.html',
+          templateUrl: 'app/modules/bike/calendar/calendarDialog.template.html',
           // contentElement: '#calendar-dialog',
           parent: angular.element(document.body),
           targetEvent: event,

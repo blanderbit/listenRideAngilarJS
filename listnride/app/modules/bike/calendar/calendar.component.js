@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bike').component('calendar', {
-  templateUrl: 'app/modules/bike/calendar.template.html',
+  templateUrl: 'app/modules/bike/calendar/calendar.template.html',
   controllerAs: 'calendar',
   bindings: {
     bikeId: '<',
