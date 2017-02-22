@@ -2,7 +2,12 @@
 
 <head>
     <title>Listnride. Simply Rent.</title>
+
+    <!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link href="https://code.getmdl.io/1.2.1/material.blue_grey-blue.min.css" rel="stylesheet"></link>
+
     <!-- change this url with your local one -->
     <!-- only for local dev, final css will be served from: https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.css -->
     <link href="lnr-embed/lnr-embed.css" rel="stylesheet"></link>
@@ -43,12 +48,16 @@
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
                                 <div class="md-dialog-content">
                                     <p class="md-subhead-sm">Please mark rent period:</p>
+                                    <!-- busy loader until calendar loads --> 
+                                    <div id="bike-calendar-loader" style="padding: 45% 45%;">
+                                        <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+                                    </div>
                                     <!-- render the calendar here -->
                                     <div id="bike-calendar"></div>
                                     <!-- time range selection -->
-                                    <div id="timeRange" layout="row" layout-align="start center" layout-padding>
+                                    <div id="time-range" layout="row" layout-align="start center" layout-padding>
                                         <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown">
-                                            <span>from</span>
+                                            <span class="label">from</span>
                                             <button id="lnr-date-start-button" onclick="helper.openDropDown('lnr-date-from-dropdown', '\'start\'')" class="lnr-dropdown-button">From
                                             </button>
                                             <div id="lnr-date-from-dropdown" class="dropdown-content">
@@ -219,8 +228,8 @@
                     <!-- booking overview tab -->
                     <div class="mdl-tabs__panel" id="booking-overview-panel">
                         <div class="mdl-grid mdl-grid--no-spacing">
-                            <!-- payment info form -->
-                            <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
+                            <!-- overview info -->
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
                                 <div class="md-dialog-content">
                                 </div>
                             </div>

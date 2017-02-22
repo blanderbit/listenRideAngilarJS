@@ -25,6 +25,8 @@ $(document).ready(function () {
             calendar.userId = bike.user.id;
 
             initOverview();
+            // remove the calendar busy loader element
+            $('#bike-calendar-loader').remove();
             initCalendarPicker();
             updateTimeRangeText();
             // disable initially the time selector
@@ -314,7 +316,6 @@ function classifyDate(date) {
 
 function dateClosed(date) {
     if (openingHoursAvailable()) {
-        console.log('in dateclosed: ', openingHoursAvailable());
         return calendar.bikeOwner.opening_hours.hours[getWeekDay(date)] == null;
     }
     return false
@@ -329,7 +330,6 @@ function openingHoursAvailable() {
 }
 
 function isReserved(date) {
-    console.log('requests lenght: ', calendar.requests.length);
     for (var i = 0; i < calendar.requests.length; ++i) {
         var start = new Date(calendar.requests[i].start_date);
         start.setHours(0, 0, 0, 0);
