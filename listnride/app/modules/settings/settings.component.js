@@ -53,7 +53,7 @@ angular.module('settings',[]).component('settings', {
         changeContact.confirmPhone = function () {
           verification.confirmPhone(changeContact.user.confirmation_code).then(function () {
             $mdDialog.hide({
-              number: changeContact.user.new_phone_number
+              phone_number: changeContact.user.new_phone_number
             });
           });
         };
