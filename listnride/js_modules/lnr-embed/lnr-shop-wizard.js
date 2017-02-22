@@ -25,6 +25,8 @@ $(document).ready(function () {
             calendar.userId = bike.user.id;
 
             initOverview();
+            // remove the calendar busy loader element
+            $('#bike-calendar-loader').remove();
             initCalendarPicker();
             updateTimeRangeText();
             // disable initially the time selector
@@ -214,7 +216,7 @@ var helper = {
      * @param {string} slot
      * @returns {void}
      */
-    onTimeValueSelect: function (index, slot) { 
+    onTimeValueSelect: function (index, slot) {
         var slotTime = slot + "Time";
         calendar[slotTime] = index;
         calendar.onTimeChange(slot);
