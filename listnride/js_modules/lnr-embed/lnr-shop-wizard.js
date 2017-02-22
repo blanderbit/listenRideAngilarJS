@@ -214,7 +214,7 @@ var helper = {
      * @param {string} slot
      * @returns {void}
      */
-    onTimeValueSelect: function (index, slot) {
+    onTimeValueSelect: function (index, slot) { 
         var slotTime = slot + "Time";
         calendar[slotTime] = index;
         calendar.onTimeChange(slot);
@@ -314,7 +314,6 @@ function classifyDate(date) {
 
 function dateClosed(date) {
     if (openingHoursAvailable()) {
-        console.log('in dateclosed: ', openingHoursAvailable());
         return calendar.bikeOwner.opening_hours.hours[getWeekDay(date)] == null;
     }
     return false
@@ -329,7 +328,6 @@ function openingHoursAvailable() {
 }
 
 function isReserved(date) {
-    console.log('requests lenght: ', calendar.requests.length);
     for (var i = 0; i < calendar.requests.length; ++i) {
         var start = new Date(calendar.requests[i].start_date);
         start.setHours(0, 0, 0, 0);
