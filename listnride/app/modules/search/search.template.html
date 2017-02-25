@@ -25,27 +25,27 @@
         <md-input-container class="lnr-filters" flex flex-gt-xs="70" layout="column">
           <div><label>Type</label></div>
           <div flex layout="row" layout-align="space-between center">
-            <md-checkbox ng-model="search.categoryFilter.allterrain" ng-change="search.onCategoryChange('allterrain')">
+            <md-checkbox ng-model="search.categoryFilter.allterrain" ng-change="search.onCategoryChange('allterrain')" analytics-on analytics-category="search filter" analytics-event="clicked" analytics-label="terrain">
               <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_3.svg"></md-icon>
               Terrain
             </md-checkbox>
-            <md-checkbox ng-model="search.categoryFilter.city" ng-change="search.onCategoryChange('city')">
+            <md-checkbox ng-model="search.categoryFilter.city" ng-change="search.onCategoryChange('city')" analytics-on analytics-category="search filter" analytics-event="clicked" analytics-label="city">
               <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_1.svg"></md-icon>
               City
             </md-checkbox>
-            <md-checkbox ng-model="search.categoryFilter.race" ng-change="search.onCategoryChange('race')">
+            <md-checkbox ng-model="search.categoryFilter.race" ng-change="search.onCategoryChange('race')" analytics-on analytics-category="search filter" analytics-event="clicked" analytics-label="race">
               <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_2.svg"></md-icon>
               Race
             </md-checkbox>
-            <md-checkbox ng-model="search.categoryFilter.special" ng-change="search.onCategoryChange('special')">
+            <md-checkbox ng-model="search.categoryFilter.special" ng-change="search.onCategoryChange('special')" analytics-on analytics-category="search filter" analytics-event="clicked" analytics-label="special">
               <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_6.svg"></md-icon>
               Special
             </md-checkbox>
-            <md-checkbox ng-model="search.categoryFilter.ebikes" ng-change="search.onCategoryChange('ebikes')">
+            <md-checkbox ng-model="search.categoryFilter.ebikes" ng-change="search.onCategoryChange('ebikes')" analytics-on analytics-category="search filter" analytics-event="clicked" analytics-label="ebikes">
               <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_5.svg"></md-icon>
               Ebike
             </md-checkbox>
-            <md-checkbox ng-model="search.categoryFilter.kids" ng-change="search.onCategoryChange('kids')">
+            <md-checkbox ng-model="search.categoryFilter.kids" ng-change="search.onCategoryChange('kids')" analytics-on analytics-category="search filter" analytics-event="clicked" analytics-label="kids">
               <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_4.svg"></md-icon>
               Kids
             </md-checkbox>
@@ -55,7 +55,7 @@
 
         <md-input-container layout="column" hide-xs flex="30">
           <label class="lnr-margin-left">Size</label>
-            <md-select class="lnr-margin-left" ng-model="search.sizeFilter.size" ng-change="search.onSizeChange()">
+            <md-select class="lnr-margin-left" ng-model="search.sizeFilter.size" ng-change="search.onSizeChange()" analytics-on analytics-category="sizes" analytics-event="clicked" analytics-label="{{option.value}}">
               <md-option ng-repeat="option in search.sizeOptions" value="{{option.value}}">
                 {{option.label}}
               </md-option>
