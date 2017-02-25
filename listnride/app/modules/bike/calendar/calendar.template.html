@@ -59,9 +59,9 @@
   <md-input-container flex>
     <label>{{ 'shared.from' | translate }} {{ calendar.startDate | date }}</label>
     <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')"
-      ng-model="calendar.startTime" placeholder="{{ 'shared.from' | translate }}">
+      ng-model="calendar.startTime" placeholder="{{ 'shared.from' | translate }}" analytics-on analytics-category="calendar" analytics-event="clicked" analytics-label="time from">
       <md-option ng-disabled="!calendar.isOptionEnabled($index, calendar.startDate)" ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
-        {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.startDate)}}
+        {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.startDate) }}
       </md-option>
     </md-select>
   </md-input-container>
@@ -69,7 +69,7 @@
   <md-input-container flex>
     <label>{{ 'shared.to' | translate }}  {{ calendar.endDate | date }}</label>
     <md-select ng-disabled="calendar.endDate === undefined" ng-change="calendar.onTimeChange('end')"
-      ng-model="calendar.endTime" placeholder="{{ 'shared.to' | translate }}">
+      ng-model="calendar.endTime" placeholder="{{ 'shared.to' | translate }}" analytics-on analytics-category="calendar" analytics-event="clicked" analytics-label="time to">
       <md-option ng-disabled="!calendar.isOptionEnabled($index, calendar.endDate)" ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
         {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.endDate)}}
       </md-option>
@@ -102,7 +102,7 @@
     </div>
   </div>
 
-  <md-button type="submit" class="md-raised md-primary lnr-margin-lrg" ng-click="calendar.onBikeRequest()" ng-if="calendar.authentication.loggedIn() && !calendar.isFormInvalid()" ng-disabled="calendar.owner">
+  <md-button type="submit" class="md-raised md-primary lnr-margin-lrg" ng-click="calendar.onBikeRequest()" ng-if="calendar.authentication.loggedIn() && !calendar.isFormInvalid()" ng-disabled="calendar.owner" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="request">
     {{ 'calendar.request-bike' | translate }}
   </md-button>
   <md-button type="submit" class="md-raised md-primary lnr-margin-lrg" ng-click="calendar.onBikeRequest()" ng-if="calendar.authentication.loggedIn() && calendar.isFormInvalid()" ng-disabled="true">
