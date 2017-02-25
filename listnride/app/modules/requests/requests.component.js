@@ -3,8 +3,8 @@
 angular.module('requests',[]).component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
-  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$window', 'api', '$timeout', '$location', '$anchorScroll', '$state', '$stateParams', '$translate', 'date', 'accessControl', 'ENV',
-    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $window, api, $timeout, $location, $anchorScroll, $state, $stateParams, $translate, date, accessControl, ENV) {
+  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$window', 'moment', 'api', '$timeout', '$location', '$anchorScroll', '$state', '$stateParams', '$translate', 'date', 'accessControl', 'ENV',
+    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $window, moment, api, $timeout, $location, $anchorScroll, $state, $stateParams, $translate, date, accessControl, ENV) {
       if (accessControl.requireLogin()) {
         return;
       }
@@ -26,7 +26,9 @@ angular.module('requests',[]).component('requests', {
 
       api.get('/users/' + $localStorage.userId + '/requests').then(
         function(success) {
-          requests.requests = success.data;
+          requests.allRequests = success.data;
+          requests.filterBikesAsLister(requests.allRequests);
+          // requests.requests = success.data;
           requests.loadingList = false;
           if ($stateParams.requestId) {
             requests.loadRequest($stateParams.requestId);
@@ -332,6 +334,48 @@ angular.module('requests',[]).component('requests', {
         ratingDialog.hide = hideDialog;
       }
 
+      var compareStartDates = function (timespan) {
+        var start = timespan.slice(0, timespan.indexOf("-"));
+        var end = timespan.substr(timespan.indexOf("-") + 1);
+      };
+
+      var compareEndDates = function (timespan) {
+        var start = timespan.slice(0, timespan.indexOf("-"));
+        var end = timespan.substr(timespan.indexOf("-") + 1);
+        var array  =[];
+        for (var loop =0; loop < 3; loop +=1) array.push(start.split('.')[loop]);
+      };
+
+      requests.filterBikesAsLister = function () {
+        requests.requests = requests.allRequests.filter(function (response) {
+          return (response.user.id === $localStorage.userId);
+        });
+      };
+
+      requests.filterBikesAsRider = function () {
+        requests.requests = requests.allRequests.filter(function (response) {
+          return (response.user.id !== $localStorage.userId);
+        });
+      };
+
+      requests.filterCurrentRentals = function () {
+        requests.requests = requests.allRequests.filter(function (response) {
+          return (response.status === 3);
+        });
+      };
+
+      requests.filterPendingRequests = function () {
+        requests.requests = requests.allRequests.filter(function (response) {
+          return (response.status === 1 || response.status === 2);
+        });
+      };
+
+      requests.filterUpcomingRentals = function () {
+        var date = today.getFullYear()+'.'+(today.getMonth()+1)+'.'+today.getDate();
+        requests.requests = requests.allRequests.filter(function (response) {
+          return (response.status === 3 && response.status === 2);
+        });
+      };
     }
   ]
 });
