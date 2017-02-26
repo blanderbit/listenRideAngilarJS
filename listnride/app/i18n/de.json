@@ -361,7 +361,7 @@
         "indoor": "Bahnrad"
       },
       "3": {
-        "tracking": "Trecking",
+        "trecking": "Trecking",
         "enduro": "Enduro",
         "freeride": "Freeride",
         "cross-country": "Cross Country",
