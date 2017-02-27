@@ -265,11 +265,11 @@ angular.module('bike').component('calendar', {
           }
         });
 
-        var slot = calendar.event2.slots[calendar.event.pickupSlotId];
+        var slot = calendar.event2.slots[calendar.event2.pickupSlotId];
         calendar.startDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
 
         // Presets returnSlot to be (slotDuration) after pickupSlot 
-        calendar.event2.returnSlotId = parseInt(calendar.event.pickupSlotId) + slotDuration;
+        calendar.event2.returnSlotId = parseInt(calendar.event2.pickupSlotId) + slotDuration;
         calendar.event2.changeReturnSlot();
         dateChange(calendar.startDate, calendar.endDate);
       };
