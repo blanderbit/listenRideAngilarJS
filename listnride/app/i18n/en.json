@@ -154,6 +154,8 @@
   },
   "requests": {
     "booking-overview": "Booking Overview",
+    "booking": "Booking",
+    "price": "Price",
     "book": "Book",
     "rating": "Rating",
     "listChat": "Request by {{user.first_name}} {{user.last_name}}",

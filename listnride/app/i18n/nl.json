@@ -160,6 +160,8 @@
 
   "requests": {
     "booking-overview": "Bookingsoverzicht",
+    "booking": "Boeking",
+    "price": "Prijs",
     "book": "Boeken",
     "rating": "Recensie",
     "listChat": "Aanvragen van",

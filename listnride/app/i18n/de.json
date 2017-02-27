@@ -27,7 +27,7 @@
     "duration": "Dauer",
     "subtotal": "Zwischensumme",
     "lnr-fee": "listnride Gebühren (inkl. MwSt)",
-    "total": "Ingesamt",
+    "total": "Insgesamt",
     "from": "von",
     "to": "bis",
     "cancel": "Abbrechen",
@@ -160,6 +160,8 @@
 
   "requests": {
     "booking-overview": "Buchungsübersicht",
+    "booking": "Buchung",
+    "price": "Preis",
     "book": "Buchen",
     "rating": "Bewertung",
     "listChat": "Anfrage von",
