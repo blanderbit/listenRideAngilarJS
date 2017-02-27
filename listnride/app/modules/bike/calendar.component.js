@@ -130,7 +130,7 @@ angular.module('bike').component('calendar', {
           calendar.startDate.getTime() >= calendar.endDate.getTime();
       };
 
-      /* ---------- CODE FOR THE EVENT CALENDAR ---------- */
+      /* ---------- CODE FOR THE EVENT CALENDAR 1 ---------- */
 
       calendar.event = {};
       calendar.event.pickupSlotId;
@@ -224,6 +224,82 @@ angular.module('bike').component('calendar', {
           for (var j = 0; j < calendar.event.slots.length; j ++) {
             if (startYear == eventYear && startMonth == eventMonth && calendar.event.slots[j].day == startDay && calendar.event.slots[j].hour >= startTime && (calendar.event.slots[j].overnight || calendar.event.slots[j].hour + slotDuration <= endTime)) {
               calendar.event.slots[j].reserved = true;
+            }
+          }
+        }
+      };
+
+      /* ------------------------------------------------- */
+
+      /* ---------- CODE FOR THE EVENT CALENDAR 2 ---------- */
+
+      calendar.event2 = {};
+      calendar.event2.pickupSlotId;
+      calendar.event2.returnSlotId;
+
+      // Calendar Slots are currently set for Berliner Fahrradschau 2017
+      calendar.event2.slots = [
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "12:00", hour: 12},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "14:00", hour: 14},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "16:00", hour: 16},
+        {overnight: false, reserved: false, pickupEnabled: false, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "18:00", hour: 18}
+      ];
+
+      calendar.event2.changePickupSlot = function() {
+        // Define picked slot as pickupSlot
+        calendar.event2.slots[calendar.event2.pickupSlotId].pickup = true;
+        // Enable all following slots as returnSlots if no booking is inbetween
+        var bookingInBetween = false;
+        _.each(calendar.event2.slots, function(value, index) {
+          if (index > calendar.event2.pickupSlotId) {
+            if (value.reserved && calendar.event2.slots[index-1].reserved) {
+              bookingInBetween = true;
+            }
+            if (bookingInBetween) {
+              value.returnDisabled = true;
+            } else {
+              value.returnDisabled = false;
+            }
+          } else {
+            value.returnDisabled = true;
+          }
+        });
+
+        var slot = calendar.event2.slots[calendar.event.pickupSlotId];
+        calendar.startDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
+
+        // Presets returnSlot to be (slotDuration) after pickupSlot 
+        calendar.event2.returnSlotId = parseInt(calendar.event.pickupSlotId) + slotDuration;
+        calendar.event2.changeReturnSlot();
+        dateChange(calendar.startDate, calendar.endDate);
+      };
+
+      calendar.event2.changeReturnSlot = function() {
+        var slot = calendar.event2.slots[calendar.event2.returnSlotId];
+
+        if (slot.overnight) {
+          calendar.endDate = new Date(eventYear, eventMonth, slot.day + 1, slot.hour, 0, 0, 0);
+          console.log(calendar.endDate);
+        } else {
+          calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);  
+        }
+
+        dateChange(calendar.startDate, calendar.endDate);
+      };
+
+      calendar.event2.reserved = function() {
+        for (var i = 0; i < calendar.requests.length; i ++) {
+          var startDate = new Date(calendar.requests[i].start_date);
+          var endDate = new Date(calendar.requests[i].end_date);
+          var startDay = startDate.getDate();
+          var startTime = startDate.getHours();
+          var endTime = endDate.getHours();
+          var startYear = startDate.getFullYear();
+          var startMonth = startDate.getMonth();
+
+          for (var j = 0; j < calendar.event2.slots.length; j ++) {
+            if (startYear == eventYear && startMonth == eventMonth && calendar.event2.slots[j].day == startDay && calendar.event2.slots[j].hour >= startTime && (calendar.event2.slots[j].overnight || calendar.event2.slots[j].hour + slotDuration <= endTime)) {
+              calendar.event2.slots[j].reserved = true;
             }
           }
         }
@@ -343,7 +419,7 @@ angular.module('bike').component('calendar', {
           var invalidDays = countInvalidDays(startDate, endDate);
           calendar.duration = date.duration(startDate, endDate, invalidDays);
           // Price calculation differs slightly between event rentals (bikeFamily 2 or 9) and standard rentals
-          if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9) {
+          if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9 || calendar.bikeFamily == 11) {
             var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, 4, invalidDays);
           } else {
             var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, null, invalidDays);
