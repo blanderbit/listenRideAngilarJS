@@ -17,6 +17,8 @@ angular.module('bike').component('calendar', {
       var calendar = this;
       calendar.authentication = authentication;
 
+      console.log(calendar);
+
       calendar.$onChanges = function (changes) {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
           api.get('/users/' + changes.userId.currentValue).then(function (response) {
@@ -425,6 +427,7 @@ angular.module('bike').component('calendar', {
           calendar.duration = date.duration(startDate, endDate, invalidDays);
           // Price calculation differs slightly between event rentals (bikeFamily 2 or 9) and standard rentals
           if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9 || calendar.bikeFamily == 11) {
+            invalidDays = 0;
             var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, 4, invalidDays);
           } else {
             var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, null, invalidDays);
