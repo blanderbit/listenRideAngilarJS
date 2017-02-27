@@ -232,6 +232,8 @@ angular.module('bike').component('calendar', {
       /* ------------------------------------------------- */
 
       /* ---------- CODE FOR THE EVENT CALENDAR 2 ---------- */
+      // This whole code block including the corresponding code in calendar.template.html should be deleted immediately after the event
+      // We have to think of a long-term solution for setting up multiple different event calendars soon to prevent such ugly spaghetticodes
 
       calendar.event2 = {};
       calendar.event2.pickupSlotId;
@@ -240,8 +242,11 @@ angular.module('bike').component('calendar', {
       // Calendar Slots are currently set for Berliner Fahrradschau 2017
       calendar.event2.slots = [
         {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "12:00", hour: 12},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "13:00", hour: 13},
         {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "14:00", hour: 14},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "15:00", hour: 15},
         {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "16:00", hour: 16},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "17:00", hour: 17},
         {overnight: false, reserved: false, pickupEnabled: false, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "18:00", hour: 18}
       ];
 
