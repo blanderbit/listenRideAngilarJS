@@ -12,7 +12,7 @@ angular.module('user',[]).component('user', {
       user.closedDay = closedDay;
 
       var userId;
-      $stateParams.userId? userId = $stateParams.userId : userId = 1282;
+      $stateParams.userId? userId = $stateParams.userId : userId = 1930;
 
       api.get('/users/' + userId).then(
         function(response) {
