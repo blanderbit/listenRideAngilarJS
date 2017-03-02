@@ -2,11 +2,22 @@
 var $;
 // now we need to fetch the details of the bikes and bind it to calendar object
 var calendar = {};
+var userInfo = {};
+var payment = {
+    date: 1,
+    year: (new Date()).getFullYear()
+};
+
 $(document).ready(function () {
     // close the drop down for the date time selector in calendar
-    window.onclick = function (event) {
-        closeDropDown(event);
-    }
+    window.onclick = closeDropDown;
+
+    // disable initially the time selector
+    $('.dropdown-calendar *').attr("disabled", "disabled").off('click');
+
+    // hide the payment credit card form
+    $('#payment-credit-card-form').hide();
+
     // LOGIC CODE - NEEDS TO BE IN SEPERATE FILE
     // RUNS BEFORE DOM MANIPULAITON
     // fetch user info
@@ -29,8 +40,7 @@ $(document).ready(function () {
             $('#bike-calendar-loader').remove();
             initCalendarPicker();
             updateTimeRangeText();
-            // disable initially the time selector
-            $('.dropdown *').attr("disabled", "disabled").off('click');
+            updatePaymentExpirationText();
         });
     });
 });
@@ -184,7 +194,7 @@ var helper = {
      * @param {string} type
      * @returns {void}
      */
-    openDropDown: function (id, type) {
+    openCalendarDropDown: function (id, type) {
 
         var startId = 'lnr-date-from-dropdown';
         var endId = 'lnr-date-to-dropdown';
@@ -210,6 +220,38 @@ var helper = {
         }
     },
 
+    openPaymentDropDown: function (id, type) {
+        var dateId = 'lnr-payment-date-dropdown';
+        var yearId = 'lnr-payment-year-dropdown';
+        var element = $('#' + id);
+        element.html('');
+        if ('\'date\'' == type) {
+            for (var index = 1; index <= 12; index += 1) {
+                element.append(
+                    '<div class="lnr-date-selector" onclick="helper.onExpirationValueSelect(' + index + ',' + type + ')">' +
+                    parseInt(index) + '</div>'
+                );
+            }
+        } else if ('\'year\'' == type) {
+            var currentYear = (new Date()).getFullYear();
+            for (var index = currentYear; index <= (currentYear + 10); index += 1) {
+                element.append(
+                    '<div class="lnr-date-selector" onclick="helper.onExpirationValueSelect(' + index + ',' + type + ')">' +
+                    parseInt(index) + '</div>'
+                );
+            }
+        }
+
+        // at a time only 1 dropdown should be shown
+        if (id === dateId) {
+            $('#' + yearId).removeClass("show");
+            element.toggleClass("show");
+        } else if (id === yearId) {
+            $('#' + dateId).removeClass("show");
+            element.toggleClass("show");
+        }
+    },
+
     /**
      * called when user selects time from time range dropdown (from/to)
      * @param {Number} index
@@ -221,6 +263,16 @@ var helper = {
         calendar[slotTime] = index;
         calendar.onTimeChange(slot);
         updateTimeRangeText();
+    },
+
+    onExpirationValueSelect: function (value, slot) {
+        payment[slot] = parseInt(value);
+        updatePaymentExpirationText();
+    },
+
+    showCreditCardForm: function () {
+        // hide the payment credit card form
+        $('#payment-credit-card-form').show();
     }
 };
 
@@ -246,7 +298,8 @@ function initCalendarPicker() {
                 }
 
                 // enable the time selector
-                $('.dropdown *').attr("disabled", false);
+                $('.dropdown-calendar *').attr("disabled", false);
+                $('.dropdown-payment *').attr("disabled", false);
             });
     }
 }
@@ -259,12 +312,19 @@ function updateTimeRangeText() {
     endButton.html(calendar.endTime + ':00');
 }
 
+function updatePaymentExpirationText() {
+    // initialize the button texts for expiration 
+    var dateButton = $('#lnr-payment-date-button');
+    var yearButton = $('#lnr-payment-year-button');
+    dateButton.html(payment.date);
+    yearButton.html(payment.year);
+}
+
 function closeDropDown(event) {
     if (!event.target.matches('.lnr-dropdown-button')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
+        for (var loop = 0; loop < dropdowns.length; loop += 1) {
+            var openDropdown = dropdowns[loop];
             if (openDropdown.classList.contains('show')) {
                 openDropdown.classList.remove('show');
             }

@@ -10,7 +10,7 @@
 
     <!-- change this url with your local one -->
     <!-- only for local dev, final css will be served from: https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.css -->
-    <link href="lnr-embed/lnr-embed.css" rel="stylesheet"></link>
+    <link href="lnr-embed/lnr-shop-wizard.css" rel="stylesheet"></link>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
@@ -48,7 +48,7 @@
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
                                 <div class="md-dialog-content">
                                     <p class="md-subhead-sm">Please mark rent period:</p>
-                                    <!-- busy loader until calendar loads --> 
+                                    <!-- busy loader until calendar loads -->
                                     <div id="bike-calendar-loader" style="padding: 45% 45%;">
                                         <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
                                     </div>
@@ -56,16 +56,16 @@
                                     <div id="bike-calendar"></div>
                                     <!-- time range selection -->
                                     <div id="time-range" layout="row" layout-align="start center" layout-padding>
-                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown">
+                                        <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet dropdown-calendar">
                                             <span class="label" id="lnr-date-start">from</span>
-                                            <button id="lnr-date-start-button" onclick="helper.openDropDown('lnr-date-from-dropdown', '\'start\'')" class="lnr-dropdown-button">From
+                                            <button id="lnr-date-start-button" onclick="helper.openCalendarDropDown('lnr-date-from-dropdown', '\'start\'')" class="lnr-dropdown-button">From
                                             </button>
                                             <div id="lnr-date-from-dropdown" class="dropdown-content">
                                             </div>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown">
+                                        <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet dropdown-calendar">
                                             <span class="label" id="lnr-date-end">to</span>
-                                            <button id="lnr-date-end-button" onclick="helper.openDropDown('lnr-date-to-dropdown', '\'end\'')" class="lnr-dropdown-button">To
+                                            <button id="lnr-date-end-button" onclick="helper.openCalendarDropDown('lnr-date-to-dropdown', '\'end\'')" class="lnr-dropdown-button">To
                                             </button>
                                             <div id="lnr-date-to-dropdown" class="dropdown-content">
                                             </div>
@@ -181,11 +181,50 @@
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
                                 <div class="md-dialog-content">
                                     <p class="md-subhead-sm">Please choose your payment method:</p>
-                                    <div>
-                                        <button class="lnr-paypal md-accent md-raised md-button md-ink-ripple"><span>PayPal</span></button>
+                                    <div class="mdl-grid">
+                                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
+                                            <button class="lnr-paypal md-accent md-raised md-button md-ink-ripple"><span>PayPal</span></button>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
+                                            <button class="lnr-mastercard md-accent md-raised md-button md-ink-ripple" onclick="helper.showCreditCardForm()"><span>Credit Card</span></button>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <button class="lnr-mastercard md-accent md-raised md-button md-ink-ripple"><span>Master Card</span></button>
+                                    <div id="payment-credit-card-form">
+                                        <div class="lnr-input-containers" layout="row">
+                                            <md-input-container flex>
+                                                <label>Cardholder Name *</label>
+                                                <input name="first_name" class="md-input" ng-model="signupDialog.firstName" required ng-maxlength="20">
+                                            </md-input-container>
+                                        </div>
+                                        <div class="lnr-input-containers" layout="row">
+                                            <md-input-container flex>
+                                                <label>Card Number *</label>
+                                                <input name="last_name" class="md-input" ng-model="signupDialog.lastName" required ng-maxlength="30">
+                                            </md-input-container>
+                                        </div>
+                                        <div layout="row" layout-align="start center" layout-padding>
+                                            <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet dropdown-payment">
+                                                <span class="label" id="lnr-date-start">Expiration</span>
+                                                <button id="lnr-payment-date-button" onclick="helper.openPaymentDropDown('lnr-payment-date-dropdown', '\'date\'')" class="lnr-dropdown-button">From
+                                            </button>
+                                                <div id="lnr-payment-date-dropdown" class="dropdown-content">
+                                                </div>
+                                            </div>
+                                            <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet dropdown-payment">
+                                                <button id="lnr-payment-year-button" onclick="helper.openPaymentDropDown('lnr-payment-year-dropdown', '\'year\'')" class="lnr-dropdown-button">To
+                                            </button>
+                                                <div id="lnr-payment-year-dropdown" class="dropdown-content">
+                                                </div>
+                                            </div>
+                                            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet">
+                                                <div class="lnr-input-containers" layout="row">
+                                                    <md-input-container>
+                                                        <label>CVV Code</label>
+                                                        <input placeholder="123" name="cvv" class="md-input" ng-model="signupDialog.email" type="text">
+                                                    </md-input-container>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
