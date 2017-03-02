@@ -398,6 +398,20 @@ function dateChange(startDate, endDate) {
     $('*[id*=lnr-calendar-total]').each(function (index, element) {
         $(element).html(calendar.total + ' &euro;');
     });
+
+    // // calendar start date
+    $('[id=lnr-date-start]').each(function (index, element) {
+        $(element).text('from ' + startDate.getDate() +
+            '.' + startDate.getMonth() +
+            '.' + startDate.getFullYear());
+    });
+
+    // // calendar end date
+    $('[id=lnr-date-end]').each(function (index, element) {
+        $(element).text('to ' + endDate.getDate() +
+            '.' + endDate.getMonth() +
+            '.' + endDate.getFullYear());
+    });
 }
 
 function countInvalidDays(startDate, endDate) {
