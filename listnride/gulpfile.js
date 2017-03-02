@@ -22,7 +22,8 @@ var templateCache = require('gulp-angular-templatecache');
 var htmlreplace = require('gulp-html-replace');
 var path = config.path;
 var environments = config.environments;
-var argvEnv = ('local' === argv.env || 'staging' === argv.env || 'production' === argv.env) ? argv.env : 'local'
+var configENV = process.env.ENVIRONMENT;
+var argvEnv = ('local' === configENV || 'staging' === configENV || 'production' === configENV) ? configENV : 'local';
 var env = environments[argvEnv];
 
 gulp.task('lint', lint);
