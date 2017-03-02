@@ -8,7 +8,7 @@
       <span flex></span>
       <h2 class="md-headline">{{ 'requests.rating' | translate }}</h2>
       <span flex></span>
-      <md-button class="md-icon-button" ng-click="ratingDialog.hide()">
+      <md-button class="md-icon-button" ng-click="ratingDialog.hide()" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="close">
         <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
       </md-button>
     </div>
@@ -26,15 +26,15 @@
       <form name="ratingDialog.ratingForm">
         <div layout="column">
           <md-input-container class="md-input-container-compact">
-            <textarea name="message" placeholder="{{ 'requests.ratings.rating_text_lister' | translate }}" ng-model=" ratingDialog.message" md-maxlength="800" minlength="100" required rows="3" md-select-on-focus></textarea>
+            <textarea name="message" placeholder="{{ 'requests.ratings.rating_text_lister' | translate }}" ng-model=" ratingDialog.message" md-maxlength="800" minlength="60" required rows="3" md-select-on-focus></textarea>
             <div ng-messages="ratingDialog.ratingForm.message.$error" role="alert">
               <div ng-message="required">This is required.</div>
-              <div ng-message="minlength">Please write a few more words (min. 100 words)</div>
+              <div ng-message="minlength">Please write a few more words (min. 60 words)</div>
             </div>
           </md-input-container>
         </div>
         <div class="md-dialog-buttons" layout="row" layout-align="end">
-          <md-button ng-disabled="!ratingDialog.ratingForm.$valid;" ng-click="ratingDialog.rate()" class="md-raised md-primary">{{ 'shared.send' | translate }}</md-button>
+          <md-button ng-disabled="!ratingDialog.ratingForm.$valid;" ng-click="ratingDialog.rate()" class="md-raised md-primary" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="send">{{ 'shared.send' | translate }}</md-button>
         </div>
       </form>
     </div>
