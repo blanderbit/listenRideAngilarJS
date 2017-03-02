@@ -6,7 +6,6 @@ var gulpif = require('gulp-if');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var useref = require('gulp-useref');
-var argv = require('yargs').argv;
 var inject = require('gulp-inject');
 var replace = require('gulp-replace');
 var rename = require("gulp-rename");
@@ -20,9 +19,11 @@ var ngAnnotate = require('gulp-ng-annotate');
 var ngConstant = require('gulp-ng-constant');
 var templateCache = require('gulp-angular-templatecache');
 var htmlreplace = require('gulp-html-replace');
+
 var path = config.path;
 var environments = config.environments;
-var argvEnv = ('local' === argv.env || 'staging' === argv.env || 'production' === argv.env) ? argv.env : 'local'
+var processEnv = process.env.ENVIRONMENT;
+var argvEnv = ('local' === processEnv || 'staging' === processEnv || 'production' === processEnv) ? processEnv : 'local';
 var env = environments[argvEnv];
 
 gulp.task('lint', lint);
