@@ -124,7 +124,7 @@ angular.module('requests',[]).component('requests', {
       requests.confirmBooking = function() {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
-            if (requests.request.ride.family == 2 || success.data.current_payment_method) {
+            if (requests.request.subtotal == 0 || success.data.current_payment_method) {
               showBookingDialog();
             } else {
               // User did not enter any payment method yet
