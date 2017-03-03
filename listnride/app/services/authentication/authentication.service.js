@@ -25,12 +25,16 @@ angular.
 
         signupDialog.signingUp = false;
 
+        // This is a hotfix because of a backend bug
+        var pwTmp = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 6);
+
         var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName) {
           var user = {
             "user": {
               "email": email,
               "facebook_id": fbId,
               "facebook_access_token": fbAccessToken,
+              "password_hashed": sha256.encrypt(pwTmp),
               "profile_picture_url": profilePicture,
               "first_name": firstName,
               "last_name": lastName
