@@ -25,16 +25,12 @@ angular.
 
         signupDialog.signingUp = false;
 
-        // This is a hotfix because of a backend bug
-        var pwTmp = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 6);
-
         var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName) {
           var user = {
             "user": {
               "email": email,
               "facebook_id": fbId,
               "facebook_access_token": fbAccessToken,
-              "password_hashed": sha256.encrypt(pwTmp),
               "profile_picture_url": profilePicture,
               "first_name": firstName,
               "last_name": lastName
@@ -82,6 +78,8 @@ angular.
 
         signupDialog.connectFb = function() {
           ezfb.getLoginStatus(function(response) {
+            console.log("FB Get Login Status, Response:");
+            console.log(response);
             if (response.status === 'connected') {
               var accessToken = response.authResponse.accessToken;
               ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
@@ -89,6 +87,9 @@ angular.
               });
             } else {
               ezfb.login(function(response) {
+                console.log("FB Login, Response:");
+                console.log(response);
+                var accessToken = response.authResponse.accessToken;
                 ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
                   signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name);
                 });
