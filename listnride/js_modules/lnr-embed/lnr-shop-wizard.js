@@ -1,11 +1,11 @@
-// DOM MAIPULATION CODE
+// DOM MANIPULATION CODE
 var $;
 // now we need to fetch the details of the bikes and bind it to calendar object
 var calendar = {};
 var userInfo = {};
 var payment = {
-    date: 1,
-    year: (new Date()).getFullYear()
+    date: "Month",
+    year: "Year"
 };
 
 $(document).ready(function () {
@@ -220,7 +220,7 @@ var helper = {
         }
     },
 
-    openPaymentDropDown: function (id, type) {
+    openExpirationDropdown: function (id, type) {
         var dateId = 'lnr-payment-date-dropdown';
         var yearId = 'lnr-payment-year-dropdown';
         var element = $('#' + id);

@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Listnride. Simply Rent.</title>
+    <title>Listnride - The perfect bike, simply rent it</title>
 
     <!-- Material Design Lite -->
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -178,51 +178,48 @@
                     <div class="mdl-tabs__panel" id="payment-details-panel">
                         <div class="mdl-grid mdl-grid--no-spacing">
                             <!-- payment info form -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
+                            <div id="sp-payment" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
                                 <div class="md-dialog-content">
-                                    <p class="md-subhead-sm">Please choose your payment method:</p>
                                     <div class="mdl-grid">
-                                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                                            <button class="lnr-paypal md-accent md-raised md-button md-ink-ripple"><span>PayPal</span></button>
+                                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                                            <button class="lnr-paypal md-accent md-raised md-button"><span>PayPal</span></button>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                                            <button class="lnr-mastercard md-accent md-raised md-button md-ink-ripple" onclick="helper.showCreditCardForm()"><span>Credit Card</span></button>
+                                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                                            <button class="lnr-mastercard md-accent md-raised md-button" onclick="helper.showCreditCardForm()"><span>Credit Card</span></button>
                                         </div>
                                     </div>
-                                    <div id="payment-credit-card-form">
-                                        <div class="lnr-input-containers" layout="row">
+                                    <div id="payment-credit-card-form" class="mdl-grid">
+                                        <div class="mdl-cell mdl-cell--12-col lnr-input-containers">
                                             <md-input-container flex>
                                                 <label>Cardholder Name *</label>
-                                                <input name="first_name" class="md-input" ng-model="signupDialog.firstName" required ng-maxlength="20">
+                                                <input id="sp-payment-cardholder" class="md-input" required>
                                             </md-input-container>
                                         </div>
-                                        <div class="lnr-input-containers" layout="row">
+                                        <div class="mdl-cell mdl-cell--12-col lnr-input-containers">
                                             <md-input-container flex>
                                                 <label>Card Number *</label>
-                                                <input name="last_name" class="md-input" ng-model="signupDialog.lastName" required ng-maxlength="30">
+                                                <input id="sp-payment-cardnumber" class="md-input" required>
                                             </md-input-container>
                                         </div>
-                                        <div layout="row" layout-align="start center" layout-padding>
-                                            <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet dropdown-payment">
-                                                <span class="label" id="lnr-date-start">Expiration</span>
-                                                <button id="lnr-payment-date-button" onclick="helper.openPaymentDropDown('lnr-payment-date-dropdown', '\'date\'')" class="lnr-dropdown-button">From
-                                            </button>
-                                                <div id="lnr-payment-date-dropdown" class="dropdown-content">
-                                                </div>
+                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown-payment">
+                                            <label>Expiry Date</label>
+                                            <button id="lnr-payment-date-button" onclick="helper.openExpirationDropdown('lnr-payment-date-dropdown', '\'date\'')" class="lnr-dropdown-button"></button>
+                                            <div id="lnr-payment-date-dropdown" class="dropdown-content">
                                             </div>
-                                            <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet dropdown-payment">
-                                                <button id="lnr-payment-year-button" onclick="helper.openPaymentDropDown('lnr-payment-year-dropdown', '\'year\'')" class="lnr-dropdown-button">To
-                                            </button>
-                                                <div id="lnr-payment-year-dropdown" class="dropdown-content">
-                                                </div>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown-payment">
+                                            <label>&nbsp;</label>
+                                            <button id="lnr-payment-year-button" onclick="helper.openExpirationDropdown('lnr-payment-year-dropdown', '\'year\'')" class="lnr-dropdown-button">To
+                                        </button>
+                                            <div id="lnr-payment-year-dropdown" class="dropdown-content">
                                             </div>
-                                            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet">
-                                                <div class="lnr-input-containers" layout="row">
-                                                    <md-input-container>
-                                                        <label>CVV Code</label>
-                                                        <input placeholder="123" name="cvv" class="md-input" ng-model="signupDialog.email" type="text">
-                                                    </md-input-container>
-                                                </div>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                                            <div class="lnr-input-containers">
+                                                <md-input-container>
+                                                    <label>CVV</label>
+                                                    <input id="sp-payment-cvv" placeholder="123" class="md-input" ng-model="signupDialog.email" type="text">
+                                                </md-input-container>
                                             </div>
                                         </div>
                                     </div>
@@ -231,26 +228,8 @@
                             <!-- rent info -->
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
                                 <div class="md-dialog-content show-no-divider">
-                                    <p class="md-subhead-sm">Rent details</p>
-                                    <ul class="lnr-list-sm mdl-list">
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 day, 0 hours</span>
-                                        </li>
-                                        <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>
-                                        </li>
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">listnride fee (incl. tax)</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-fee">0 &euro;</span>
-                                        </li>
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">total</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-total">0 &euro;</span>
-                                        </li>
-                                    </ul>
+                                    <p class="md-subhead-sm">Enter your Payment Details</p>
+                                    <p>All your data gets transmitted securely via SSH. You can pay by Paypal or Credit Card.</p>
                                 </div>
                             </div>
                         </div>

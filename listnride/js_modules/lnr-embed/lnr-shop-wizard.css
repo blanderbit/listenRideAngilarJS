@@ -5,8 +5,9 @@ html>body {
 
 .mdl-grid.mdl-grid--no-spacing {
   padding: 0;
-  min-height: 520px;
+  min-height: 420px;
 }
+
 
 @media screen and (min-width:1280px) {
   div.mdl-grid {
@@ -23,6 +24,32 @@ html>body {
     padding: 0px;
   }
 }
+
+.date-picker-wrapper {
+  font-size: 12px !important;
+}
+
+/*------------ PAYMENT ------------*/
+
+
+#sp-payment.md-button {
+  min-width: 0;
+}
+
+.md-button.lnr-paypal {
+  margin: 7px 0px;
+  width: 100%;
+  background-color: hsl(205, 65%, 56%);
+}
+
+.md-button.lnr-mastercard {
+  margin: 7px 0px;
+  width: 100%;
+  background-color: #d0782c;
+}
+
+
+/*---------------------------------*/
 
 
 /* lnr logo */
@@ -306,6 +333,7 @@ md-icon svg {
   outline-color: rgb(85, 85, 85);
   outline-style: none;
   outline-width: 0px;
+  font-weight: 600;
 }
 
 .lnr-input-containers md-input-container {
@@ -413,18 +441,6 @@ container.md-input-invalid .md-input {
   transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.md-button.lnr-paypal {
-  width: 90%;
-  margin: 7px 0px;
-  background-color: hsl(205, 65%, 56%);
-}
-
-.md-button.lnr-mastercard {
-  width: 90%;
-  margin: 7px 0px;
-  background-color: #d0782c;
-}
-
 .md-button.md-lrg {
   min-width: 200px;
 }
@@ -441,8 +457,8 @@ container.md-input-invalid .md-input {
 }
 
 .md-dialog-content {
-  padding: 24px;
-  min-height: 420px;
+  padding: 12px;
+  min-height: 400px;
   border-top-width: 0;
   border-right-width: 1px;
   border-right-style: solid;
@@ -525,6 +541,7 @@ md-divider {
   position: relative;
   display: inline-block;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
