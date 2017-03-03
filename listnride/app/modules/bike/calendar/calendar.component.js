@@ -80,7 +80,7 @@ angular.module('bike').component('calendar', {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             var user = success.data;
-            if (calendar.bikeFamily == 2 || (user.has_address && user.confirmed_phone && user.status >= 1)) {
+            if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9 || calendar.bikeFamily == 11 || (user.has_address && user.confirmed_phone && user.status >= 1)) {
               var data = {
                 user_id: $localStorage.userId,
                 ride_id: calendar.bikeId,
