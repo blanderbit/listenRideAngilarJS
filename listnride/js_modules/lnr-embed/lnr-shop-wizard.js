@@ -1,14 +1,16 @@
-// DOM MAIPULATION CODE
+// DOM MANIPULATION CODE
 var $;
 // now we need to fetch the details of the bikes and bind it to calendar object
 var calendar = {};
+var userInfo = {};
+var payment = {
+    date: "Month",
+    year: "Year"
+};
+
 $(document).ready(function () {
-    // close the drop down for the date time selector in calendar
-    window.onclick = function (event) {
-        closeDropDown(event);
-    }
-    // LOGIC CODE - NEEDS TO BE IN SEPERATE FILE
-    // RUNS BEFORE DOM MANIPULAITON
+    // perform common tasks on initialization
+    helper.preInit();
     // fetch user info
     var userId = helper.getUrlParameter('userId') || 1005;
     $.get("https://api.listnride.com/v2/users/" + userId, function (response) {
@@ -16,6 +18,7 @@ $(document).ready(function () {
         // fetch bike info
         var bikeId = helper.getUrlParameter('bikeId') || 165;
         $.get("https://listnride-staging.herokuapp.com/v2/rides/" + bikeId, function (bike) {
+            // populate calendar object
             calendar.bikeId = bikeId;
             calendar.priceHalfDay = bike.price_half_daily;
             calendar.priceDay = bike.price_daily;
@@ -24,13 +27,7 @@ $(document).ready(function () {
             calendar.requests = bike.requests;
             calendar.userId = bike.user.id;
 
-            initOverview();
-            // remove the calendar busy loader element
-            $('#bike-calendar-loader').remove();
-            initCalendarPicker();
-            updateTimeRangeText();
-            // disable initially the time selector
-            $('.dropdown *').attr("disabled", "disabled").off('click');
+            helper.postInit();
         });
     });
 });
@@ -38,7 +35,6 @@ $(document).ready(function () {
 /**
  * date service
  * returns date for lnr format
- * date.service.js in angular app
  */
 function DateService() {
     return {
@@ -179,12 +175,12 @@ var helper = {
     },
 
     /**
-     * used to open the date (from/to) dropdowns 
+     * used to open the date (from/to) dropdowns for calendar 
      * @param {Number} id
      * @param {string} type
      * @returns {void}
      */
-    openDropDown: function (id, type) {
+    openCalendarDropDown: function (id, type) {
 
         var startId = 'lnr-date-from-dropdown';
         var endId = 'lnr-date-to-dropdown';
@@ -211,6 +207,44 @@ var helper = {
     },
 
     /**
+     * used to open the date (from/to) dropdowns for expiration in payment 
+     * @param {Number} id
+     * @param {string} type
+     * @returns {void}
+     */
+    openExpirationDropdown: function (id, type) {
+        var dateId = 'lnr-payment-date-dropdown';
+        var yearId = 'lnr-payment-year-dropdown';
+        var element = $('#' + id);
+        element.html('');
+        if ('\'date\'' == type) {
+            for (var index = 1; index <= 12; index += 1) {
+                element.append(
+                    '<div class="lnr-date-selector" onclick="helper.onExpirationValueSelect(' + index + ',' + type + ')">' +
+                    parseInt(index) + '</div>'
+                );
+            }
+        } else if ('\'year\'' == type) {
+            var currentYear = (new Date()).getFullYear();
+            for (var index = currentYear; index <= (currentYear + 10); index += 1) {
+                element.append(
+                    '<div class="lnr-date-selector" onclick="helper.onExpirationValueSelect(' + index + ',' + type + ')">' +
+                    parseInt(index) + '</div>'
+                );
+            }
+        }
+
+        // at a time only 1 dropdown should be shown
+        if (id === dateId) {
+            $('#' + yearId).removeClass("show");
+            element.toggleClass("show");
+        } else if (id === yearId) {
+            $('#' + dateId).removeClass("show");
+            element.toggleClass("show");
+        }
+    },
+
+    /**
      * called when user selects time from time range dropdown (from/to)
      * @param {Number} index
      * @param {string} slot
@@ -221,6 +255,125 @@ var helper = {
         calendar[slotTime] = index;
         calendar.onTimeChange(slot);
         updateTimeRangeText();
+    },
+
+    onExpirationValueSelect: function (value, slot) {
+        payment[slot] = parseInt(value);
+        updatePaymentExpirationText();
+    },
+
+    /**
+     * show credit card form
+     * @param {Number} id
+     * @param {string} type
+     * @returns {void}
+     */
+    showCreditCardForm: function () {
+        // hide the payment credit card form
+        $('#sp-payment-form').show();
+    },
+
+    renderRentalInfo: function () {
+        var rentalInfo = $('rental-info');
+
+        var rentalInfoHTML =
+            '<div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">' +
+            '<div class="lnr-tab-content">' +
+            '<p class="md-subhead-sm">Rent details</p>' +
+            '<ul class="lnr-list-sm mdl-list">' +
+            '<li class="mdl-list__item">' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 day, 0 hours</span>' +
+            '</li>' +
+            '<lnr-vertical-divider></lnr-vertical-divider>' +
+            '<li class="mdl-list__item">' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>' +
+            '</li>' +
+            '<li class="mdl-list__item">' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">listnride fee (incl. tax)</span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-fee">0 &euro;</span>' +
+            '</li>' +
+            '<li class="mdl-list__item">' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">total</span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-total">0 &euro;</span>' +
+            ' </li>' +
+            '  </ul>' +
+            '</div>' +
+            '</div>'
+
+        rentalInfo.replaceWith(rentalInfoHTML);
+    },
+
+    renderNavButtons: function () {
+        var navButtons = $('nav-buttons');
+
+        // iterate each button for different tabs
+        navButtons.each(function () {
+            var element = $(this);
+            var back = element.attr('back'),
+                next = element.attr('next'),
+                backText = element.attr('back-text'),
+                nextText = element.attr('next-text');
+
+            // open the grid
+            var navButtonHTML =
+                '<div class="mdl-grid">' +
+                '<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">';
+
+            // back button
+            if (back) {
+                navButtonHTML = navButtonHTML
+                    .concat('<button id="lnr-back-button" onclick="helper.changeTab({id: ' + back + '})"')
+                    .concat('class="md-accent md-raised md-button md-ink-ripple"><span>' + backText + '</span></button></div>');
+            } else {
+                navButtonHTML = navButtonHTML.concat('</div>');
+            }
+
+            navButtonHTML = navButtonHTML
+                .concat('<div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">');
+
+            // next button
+            if (next) {
+                navButtonHTML = navButtonHTML
+                    .concat('<button onclick="helper.changeTab({id: ' + next + '})" class="md-accent md-raised md-button md-ink-ripple"><span>')
+                    .concat(nextText + '</span></button></div>');
+            } else {
+                navButtonHTML = navButtonHTML.concat('</div>');
+            }
+
+            // close the grid
+            navButtonHTML = navButtonHTML.concat('</div>');
+
+            // render html for each navigation
+            element.replaceWith(navButtonHTML);
+        });
+    },
+
+    preInit: function () {
+        // close the drop down for the date time selector in calendar
+        window.onclick = closeDropDown;
+
+        // disable initially the time selector
+        $('.dropdown-calendar *').attr("disabled", "disabled").off('click');
+
+        // hide the payment credit card form
+        $('#sp-payment-form').hide();
+
+        this.renderRentalInfo();
+        this.renderNavButtons();
+    },
+
+    /**
+     * initialize calendar, payment, date range
+     * @returns {void}
+     */
+    postInit: function () {
+        initOverview();
+        $('#bike-calendar-loader').remove();
+        initCalendarPicker();
+        updateTimeRangeText();
+        updatePaymentExpirationText();
     }
 };
 
@@ -246,7 +399,8 @@ function initCalendarPicker() {
                 }
 
                 // enable the time selector
-                $('.dropdown *').attr("disabled", false);
+                $('.dropdown-calendar *').attr("disabled", false);
+                $('.dropdown-payment *').attr("disabled", false);
             });
     }
 }
@@ -259,12 +413,19 @@ function updateTimeRangeText() {
     endButton.html(calendar.endTime + ':00');
 }
 
+function updatePaymentExpirationText() {
+    // initialize the button texts for expiration 
+    var dateButton = $('#lnr-payment-date-button');
+    var yearButton = $('#lnr-payment-year-button');
+    dateButton.html(payment.date);
+    yearButton.html(payment.year);
+}
+
 function closeDropDown(event) {
     if (!event.target.matches('.lnr-dropdown-button')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
+        for (var loop = 0; loop < dropdowns.length; loop += 1) {
+            var openDropdown = dropdowns[loop];
             if (openDropdown.classList.contains('show')) {
                 openDropdown.classList.remove('show');
             }
@@ -397,6 +558,20 @@ function dateChange(startDate, endDate) {
     // calendar total
     $('*[id*=lnr-calendar-total]').each(function (index, element) {
         $(element).html(calendar.total + ' &euro;');
+    });
+
+    // // calendar start date
+    $('[id=lnr-date-start]').each(function (index, element) {
+        $(element).text('from ' + startDate.getDate() +
+            '.' + startDate.getMonth() +
+            '.' + startDate.getFullYear());
+    });
+
+    // // calendar end date
+    $('[id=lnr-date-end]').each(function (index, element) {
+        $(element).text('to ' + endDate.getDate() +
+            '.' + endDate.getMonth() +
+            '.' + endDate.getFullYear());
     });
 }
 
