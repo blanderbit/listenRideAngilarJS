@@ -9,18 +9,8 @@ var payment = {
 };
 
 $(document).ready(function () {
-    // close the drop down for the date time selector in calendar
-    window.onclick = closeDropDown;
-
-    // disable initially the time selector
-    $('.dropdown-calendar *').attr("disabled", "disabled").off('click');
-
-    // hide the payment credit card form
-    $('#payment-credit-card-form').hide();
-
-    helper.renderRentalInfo();
-    // LOGIC CODE - NEEDS TO BE IN SEPERATE FILE
-    // RUNS BEFORE DOM MANIPULAITON
+    // perform common tasks on initialization
+    helper.preInit();
     // fetch user info
     var userId = helper.getUrlParameter('userId') || 1005;
     $.get("https://api.listnride.com/v2/users/" + userId, function (response) {
@@ -28,6 +18,7 @@ $(document).ready(function () {
         // fetch bike info
         var bikeId = helper.getUrlParameter('bikeId') || 165;
         $.get("https://listnride-staging.herokuapp.com/v2/rides/" + bikeId, function (bike) {
+            // populate calendar object
             calendar.bikeId = bikeId;
             calendar.priceHalfDay = bike.price_half_daily;
             calendar.priceDay = bike.price_daily;
@@ -36,12 +27,7 @@ $(document).ready(function () {
             calendar.requests = bike.requests;
             calendar.userId = bike.user.id;
 
-            initOverview();
-            // remove the calendar busy loader element
-            $('#bike-calendar-loader').remove();
-            initCalendarPicker();
-            updateTimeRangeText();
-            updatePaymentExpirationText();
+            helper.postInit();
         });
     });
 });
@@ -49,7 +35,6 @@ $(document).ready(function () {
 /**
  * date service
  * returns date for lnr format
- * date.service.js in angular app
  */
 function DateService() {
     return {
@@ -190,7 +175,7 @@ var helper = {
     },
 
     /**
-     * used to open the date (from/to) dropdowns 
+     * used to open the date (from/to) dropdowns for calendar 
      * @param {Number} id
      * @param {string} type
      * @returns {void}
@@ -221,6 +206,12 @@ var helper = {
         }
     },
 
+    /**
+     * used to open the date (from/to) dropdowns for expiration in payment 
+     * @param {Number} id
+     * @param {string} type
+     * @returns {void}
+     */
     openExpirationDropdown: function (id, type) {
         var dateId = 'lnr-payment-date-dropdown';
         var yearId = 'lnr-payment-year-dropdown';
@@ -271,6 +262,12 @@ var helper = {
         updatePaymentExpirationText();
     },
 
+    /**
+     * show credit card form
+     * @param {Number} id
+     * @param {string} type
+     * @returns {void}
+     */
     showCreditCardForm: function () {
         // hide the payment credit card form
         $('#payment-credit-card-form').show();
@@ -306,6 +303,31 @@ var helper = {
             '</div>'
 
         rentalInfo.replaceWith(rentalInfoHTML);
+    },
+
+    preInit: function () {
+        // close the drop down for the date time selector in calendar
+        window.onclick = closeDropDown;
+
+        // disable initially the time selector
+        $('.dropdown-calendar *').attr("disabled", "disabled").off('click');
+
+        // hide the payment credit card form
+        $('#payment-credit-card-form').hide();
+
+        this.renderRentalInfo();
+    },
+
+    /**
+     * initialize calendar, payment, date range
+     * @returns {void}
+     */
+    postInit: function () {
+        initOverview();
+        $('#bike-calendar-loader').remove();
+        initCalendarPicker();
+        updateTimeRangeText();
+        updatePaymentExpirationText();
     }
 };
 
