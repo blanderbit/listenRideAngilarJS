@@ -9,17 +9,8 @@ var payment = {
 };
 
 $(document).ready(function () {
-    // close the drop down for the date time selector in calendar
-    window.onclick = closeDropDown;
-
-    // disable initially the time selector
-    $('.dropdown-calendar *').attr("disabled", "disabled").off('click');
-
-    // hide the payment credit card form
-    $('#payment-credit-card-form').hide();
-
-    // LOGIC CODE - NEEDS TO BE IN SEPERATE FILE
-    // RUNS BEFORE DOM MANIPULAITON
+    // perform common tasks on initialization
+    helper.preInit();
     // fetch user info
     var userId = helper.getUrlParameter('userId') || 1005;
     $.get("https://api.listnride.com/v2/users/" + userId, function (response) {
@@ -27,6 +18,7 @@ $(document).ready(function () {
         // fetch bike info
         var bikeId = helper.getUrlParameter('bikeId') || 165;
         $.get("https://listnride-staging.herokuapp.com/v2/rides/" + bikeId, function (bike) {
+            // populate calendar object
             calendar.bikeId = bikeId;
             calendar.priceHalfDay = bike.price_half_daily;
             calendar.priceDay = bike.price_daily;
@@ -35,12 +27,7 @@ $(document).ready(function () {
             calendar.requests = bike.requests;
             calendar.userId = bike.user.id;
 
-            initOverview();
-            // remove the calendar busy loader element
-            $('#bike-calendar-loader').remove();
-            initCalendarPicker();
-            updateTimeRangeText();
-            updatePaymentExpirationText();
+            helper.postInit();
         });
     });
 });
@@ -48,7 +35,6 @@ $(document).ready(function () {
 /**
  * date service
  * returns date for lnr format
- * date.service.js in angular app
  */
 function DateService() {
     return {
@@ -189,7 +175,7 @@ var helper = {
     },
 
     /**
-     * used to open the date (from/to) dropdowns 
+     * used to open the date (from/to) dropdowns for calendar 
      * @param {Number} id
      * @param {string} type
      * @returns {void}
@@ -220,6 +206,12 @@ var helper = {
         }
     },
 
+    /**
+     * used to open the date (from/to) dropdowns for expiration in payment 
+     * @param {Number} id
+     * @param {string} type
+     * @returns {void}
+     */
     openExpirationDropdown: function (id, type) {
         var dateId = 'lnr-payment-date-dropdown';
         var yearId = 'lnr-payment-year-dropdown';
@@ -270,9 +262,118 @@ var helper = {
         updatePaymentExpirationText();
     },
 
+    /**
+     * show credit card form
+     * @param {Number} id
+     * @param {string} type
+     * @returns {void}
+     */
     showCreditCardForm: function () {
         // hide the payment credit card form
         $('#payment-credit-card-form').show();
+    },
+
+    renderRentalInfo: function () {
+        var rentalInfo = $('rental-info');
+
+        var rentalInfoHTML =
+            '<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">' +
+            '<div class="lnr-tab-content show-no-divider">' +
+            '<p class="md-subhead-sm">Rent details</p>' +
+            '<ul class="lnr-list-sm mdl-list">' +
+            '<li class="mdl-list__item">' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 day, 0 hours</span>' +
+            '</li>' +
+            '<md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>' +
+            '<li class="mdl-list__item">' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>' +
+            '</li>' +
+            '<li class="mdl-list__item">' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">listnride fee (incl. tax)</span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-fee">0 &euro;</span>' +
+            '</li>' +
+            '<li class="mdl-list__item">' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">total</span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-total">0 &euro;</span>' +
+            ' </li>' +
+            '  </ul>' +
+            '</div>' +
+            '</div>'
+
+        rentalInfo.replaceWith(rentalInfoHTML);
+    },
+
+    renderNavButtons: function () {
+        var navButtons = $('nav-buttons');
+
+        // iterate each button for different tabs
+        navButtons.each(function () {
+            var element = $(this);
+            var back = element.attr('back'),
+                next = element.attr('next'),
+                backText = element.attr('back-text'),
+                nextText = element.attr('next-text');
+
+            // open the grid
+            var navButtonHTML =
+                '<div class="mdl-grid">' +
+                '<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">';
+
+            // back button
+            if (back) {
+                navButtonHTML = navButtonHTML
+                    .concat('<button id="lnr-back-button" onclick="helper.changeTab({id: ' + back + '})"')
+                    .concat('class="md-accent md-raised md-button md-ink-ripple"><span>' + backText + '</span></button></div>');
+            } else {
+                navButtonHTML = navButtonHTML.concat('</div>');
+            }
+
+            navButtonHTML = navButtonHTML
+                .concat('<div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">');
+
+            // next button
+            if (next) {
+                navButtonHTML = navButtonHTML
+                    .concat('<button onclick="helper.changeTab({id: ' + next + '})" class="md-accent md-raised md-button md-ink-ripple"><span>')
+                    .concat(nextText + '</span></button></div>');
+            } else {
+                navButtonHTML = navButtonHTML.concat('</div>');
+            }
+
+            // close the grid
+            navButtonHTML = navButtonHTML.concat('</div>');
+
+            // render html for each navigation
+            element.replaceWith(navButtonHTML);
+        });
+    },
+
+    preInit: function () {
+        // close the drop down for the date time selector in calendar
+        window.onclick = closeDropDown;
+
+        // disable initially the time selector
+        $('.dropdown-calendar *').attr("disabled", "disabled").off('click');
+
+        // hide the payment credit card form
+        $('#payment-credit-card-form').hide();
+
+        this.renderRentalInfo();
+        this.renderNavButtons();
+    },
+
+    /**
+     * initialize calendar, payment, date range
+     * @returns {void}
+     */
+    postInit: function () {
+        initOverview();
+        $('#bike-calendar-loader').remove();
+        initCalendarPicker();
+        updateTimeRangeText();
+        updatePaymentExpirationText();
     }
 };
 
