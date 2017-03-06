@@ -1,11 +1,10 @@
 
-/*------------ FONTS ------------*/
+/*------------ GLOBAL SETTINGS ------------*/
 
 html>body {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif!important;
   -webkit-font-smoothing: antialiased;
 }
-
 
 /*------------ PAYMENT ------------*/
 
@@ -24,30 +23,9 @@ html>body {
   background-color: hsl(205, 65%, 56%);
 }
 
-.md-button.lnr-mastercard {
-  margin: 7px 0px;
-  width: 100%;
-  background-color: #d0782c;
+.mdl-grid {
+  max-width: 840px;
 }
-
-
-/*------------ LOGO & HEADER ------------*/
-
-#lnr-header-logo.mdl-layout__header-row {
-  height: 60px;
-  margin: 0;
-  padding: 0 40px 0 24px;
-}
-
-lnr-header-text {
-  position: absolute;
-  right: 0px;
-  padding: 24px;
-  font-size: 12px;
-}
-
-
-/* general */
 
 .md-color-foreground {
   color: rgb(85, 85, 85) !important;
@@ -93,7 +71,43 @@ a.lnr-links {
   font-family: 'Roboto', sans-serif !important;
 }
 
-/* layout */
+
+/*------------ PAYMENT ------------*/
+
+#sp-payment.md-button {
+  min-width: 0;
+}
+
+.md-button.lnr-paypal {
+  margin: 7px 0px;
+  width: 100%;
+  background-color: hsl(205, 65%, 56%);
+}
+
+.md-button.lnr-mastercard {
+  margin: 7px 0px;
+  width: 100%;
+  background-color: #d0782c;
+}
+
+
+/*------------ LOGO & HEADER ------------*/
+
+#lnr-header-logo.mdl-layout__header-row {
+  height: 60px;
+  margin: 0;
+  padding: 0 40px 0 24px;
+}
+
+lnr-header-text {
+  position: absolute;
+  right: 0px;
+  padding: 24px;
+  font-size: 12px;
+}
+
+
+/*------------ LAYOUT ------------*/
 
 .layout,
 .layout-column,
@@ -269,15 +283,28 @@ container.md-input-invalid .md-input {
 
 .lnr-tab-content {
   padding: 12px;
-  min-height: 400px;
+}
+
+@media (min-width: 480px) {
+  .lnr-tab-content {
+    min-height: 460px;
+    padding: 12px;
+  }
+}
+
+lnr-horizontal-divider {
   border-top-width: 0;
   border-right-width: 1px;
   border-right-style: solid;
   border-color: #e0e0e0;
 }
 
-div.show-no-divider {
-  border-color: #ffffff;
+md-divider {
+  display: block;
+  border-top-width: 1px;
+  border-top-style: solid;
+  margin: 0;
+  border-top-color: rgba(225, 230, 230, 1.0);
 }
 
 .mdl-list__item .mdl-list__item-primary-content {
@@ -304,6 +331,7 @@ div#lnr-tab-bar {
 
 .lnr-list-sm>li {
   min-height: 40px !important;
+  padding: 0px !important;
 }
 
 div .date-picker-wrapper {
@@ -315,15 +343,7 @@ div .date-picker-wrapper {
 }
 
 .lnr-margin-lrg {
-  margin: 16px 8px;
-}
-
-md-divider {
-  display: block;
-  border-top-width: 1px;
-  border-top-style: solid;
-  margin: 0;
-  border-top-color: rgba(225, 230, 230, 1.0);
+  margin: 16px 0px;
 }
 
 

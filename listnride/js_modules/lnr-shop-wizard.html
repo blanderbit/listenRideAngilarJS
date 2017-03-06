@@ -45,7 +45,7 @@
                     <div class="mdl-tabs__panel is-active" id="duration-panel">
                         <div class="mdl-grid">
                             <!-- duration calendar -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
                                 <div class="lnr-tab-content">
                                     <p class="md-subhead-sm">Please mark rent period:</p>
                                     <!-- busy loader until calendar loads -->
@@ -56,7 +56,7 @@
                                     <div id="bike-calendar"></div>
                                     <!-- time range selection -->
                                     <div id="time-range">
-                                        <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet dropdown-calendar">
+                                        <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone dropdown-calendar">
                                             <span class="label" id="lnr-date-start">from</span>
                                             <button 
                                                     id="lnr-date-start-button" 
@@ -66,7 +66,7 @@
                                             </button>
                                             <div id="lnr-date-from-dropdown" class="dropdown-content"></div>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet dropdown-calendar">
+                                        <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone dropdown-calendar">
                                             <span class="label" id="lnr-date-end">to</span>
                                             <button 
                                                     id="lnr-date-end-button" 
@@ -79,6 +79,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <lnr-horizontal-divider></lnr-horizontal-divider>
                             <!-- rent info -->
                             <rental-info></rental-info>
                         </div>
@@ -87,11 +88,11 @@
                     </div>
                     <!-- user info tab -->
                     <div class="mdl-tabs__panel" id="basic-info-panel">
-                        <div class="mdl-grid ">
+                        <div class="mdl-grid">
                             <!-- personal info form -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                                <form>
-                                    <div class="lnr-tab-content">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+                                <div class="lnr-tab-content">
+                                    <form>
                                         <p class="md-subhead-sm">Please fill you personal info:</p>
                                         <div class="lnr-input-containers" layout="row">
                                             <md-input-container flex>
@@ -111,9 +112,10 @@
                                                 <input name="email" class="md-input" ng-model="signupDialog.email" type="email">
                                             </md-input-container>
                                         </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             </div>
+                            <lnr-horizontal-divider></lnr-horizontal-divider>
                             <!-- rent info -->
                             <rental-info></rental-info>
                         </div>
@@ -124,7 +126,7 @@
                     <div class="mdl-tabs__panel" id="payment-details-panel">
                         <div class="mdl-grid">
                             <!-- payment info form -->
-                            <div id="sp-payment" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
+                            <div id="sp-payment" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
                                 <div class="lnr-tab-content">
                                     <div class="mdl-grid">
                                         <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
@@ -174,8 +176,9 @@
                                     </form>
                                 </div>
                             </div>
+                            <lnr-horizontal-divider></lnr-horizontal-divider>
                             <!-- rent info -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
+                            <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
                                 <div class="lnr-tab-content show-no-divider">
                                     <p class="md-subhead-sm">Enter your Payment Details</p>
                                     <p>All your data gets transmitted securely via SSH. You can pay by Paypal or Credit Card.</p>
@@ -189,10 +192,11 @@
                     <div class="mdl-tabs__panel" id="booking-overview-panel">
                         <div class="mdl-grid ">
                             <!-- overview info -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
                                 <div class="lnr-tab-content">
                                 </div>
                             </div>
+                            <lnr-horizontal-divider></lnr-horizontal-divider>
                             <!-- rent info -->
                             <rental-info></rental-info>
                         </div>
