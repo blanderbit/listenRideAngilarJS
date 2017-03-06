@@ -277,8 +277,8 @@ var helper = {
         var rentalInfo = $('rental-info');
 
         var rentalInfoHTML =
-            '<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">' +
-            '<div class="lnr-tab-content show-no-divider">' +
+            '<div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">' +
+            '<div class="lnr-tab-content">' +
             '<p class="md-subhead-sm">Rent details</p>' +
             '<ul class="lnr-list-sm mdl-list">' +
             '<li class="mdl-list__item">' +
@@ -319,7 +319,7 @@ var helper = {
             // open the grid
             var navButtonHTML =
                 '<div class="mdl-grid">' +
-                '<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">';
+                '<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">';
 
             // back button
             if (back) {
@@ -331,7 +331,7 @@ var helper = {
             }
 
             navButtonHTML = navButtonHTML
-                .concat('<div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">');
+                .concat('<div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">');
 
             // next button
             if (next) {
