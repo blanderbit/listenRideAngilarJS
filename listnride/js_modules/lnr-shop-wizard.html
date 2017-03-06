@@ -58,14 +58,20 @@
                                     <div id="time-range">
                                         <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet dropdown-calendar">
                                             <span class="label" id="lnr-date-start">from</span>
-                                            <button id="lnr-date-start-button" onclick="helper.openCalendarDropDown('lnr-date-from-dropdown', '\'start\'')" class="lnr-dropdown-button">
+                                            <button 
+                                                    id="lnr-date-start-button" 
+                                                    onclick="helper.openCalendarDropDown('lnr-date-from-dropdown', '\'start\'')" 
+                                                    class="lnr-dropdown-button">
                                                     From
                                             </button>
                                             <div id="lnr-date-from-dropdown" class="dropdown-content"></div>
                                         </div>
                                         <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet dropdown-calendar">
                                             <span class="label" id="lnr-date-end">to</span>
-                                            <button id="lnr-date-end-button" onclick="helper.openCalendarDropDown('lnr-date-to-dropdown', '\'end\'')" class="lnr-dropdown-button">
+                                            <button 
+                                                    id="lnr-date-end-button" 
+                                                    onclick="helper.openCalendarDropDown('lnr-date-to-dropdown', '\'end\'')" 
+                                                    class="lnr-dropdown-button">
                                                     To
                                             </button>
                                             <div id="lnr-date-to-dropdown" class="dropdown-content"></div>
@@ -77,14 +83,7 @@
                             <rental-info></rental-info>
                         </div>
                         <!-- nav buttons -->
-                        <div class="mdl-grid">
-                            <!-- no back button -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button"></div>
-                            <!-- next button -->
-                            <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button onclick="helper.changeTab({id: 'tab-basic-info'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
-                            </div>
-                        </div>
+                        <nav-buttons back="" back-text="" next="'tab-basic-info'" next-text="Next"></nav-buttons>
                     </div>
                     <!-- user info tab -->
                     <div class="mdl-tabs__panel" id="basic-info-panel">
@@ -119,14 +118,7 @@
                             <rental-info></rental-info>
                         </div>
                         <!-- nav buttons -->
-                        <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button id="lnr-back-button" onclick="helper.changeTab({id: 'tab-duration'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
-                            </div>
-                            <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button onclick="helper.changeTab({id: 'tab-payment-details'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
-                            </div>
-                        </div>
+                        <nav-buttons back="'tab-duration'" back-text="Back" next="'tab-payment-details'" next-text="Next"></nav-buttons>
                     </div>
                     <!-- payment tab -->
                     <div class="mdl-tabs__panel" id="payment-details-panel">
@@ -188,14 +180,7 @@
                             </div>
                         </div>
                         <!-- nav buttons -->
-                        <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button id="lnr-back-button" onclick="helper.changeTab({id: 'tab-basic-info'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
-                            </div>
-                            <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button onclick="helper.changeTab({id: 'tab-booking-overview'})" class="md-accent md-raised md-button md-ink-ripple"><span>Next</span></button>
-                            </div>
-                        </div>
+                        <nav-buttons back="'tab-basic-info'" back-text="Back" next="'tab-booking-overview'" next-text="Next"></nav-buttons>
                     </div>
                     <!-- booking overview tab -->
                     <div class="mdl-tabs__panel" id="booking-overview-panel">
@@ -209,14 +194,7 @@
                             <rental-info></rental-info>
                         </div>
                         <!-- nav buttons -->
-                        <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button id="lnr-back-button" onclick="helper.changeTab({id: 'tab-payment-details'})" class="md-accent md-raised md-button md-ink-ripple"><span>Back</span></button>
-                            </div>
-                            <div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">
-                                <button onclick="helper.changeTab({id: 'tab-duration'})" class="md-accent md-raised md-button md-ink-ripple"><span>Proceed</span></button>
-                            </div>
-                        </div>
+                        <nav-buttons back="'tab-payment-details'" back-text="Back" next="'tab-duration'" next-text="Proceed"></nav-buttons>
                     </div>
                 </div>
             </div>

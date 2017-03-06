@@ -305,6 +305,51 @@ var helper = {
         rentalInfo.replaceWith(rentalInfoHTML);
     },
 
+    renderNavButtons: function () {
+        var navButtons = $('nav-buttons');
+
+        // iterate each button for different tabs
+        navButtons.each(function () {
+            var element = $(this);
+            var back = element.attr('back'),
+                next = element.attr('next'),
+                backText = element.attr('back-text'),
+                nextText = element.attr('next-text');
+
+            // open the grid
+            var navButtonHTML =
+                '<div class="mdl-grid">' +
+                '<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">';
+
+            // back button
+            if (back) {
+                navButtonHTML = navButtonHTML
+                    .concat('<button id="lnr-back-button" onclick="helper.changeTab({id: ' + back + '})"')
+                    .concat('class="md-accent md-raised md-button md-ink-ripple"><span>' + backText + '</span></button></div>');
+            } else {
+                navButtonHTML = navButtonHTML.concat('</div>');
+            }
+
+            navButtonHTML = navButtonHTML
+                .concat('<div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet wizard-nav-button">');
+
+            // next button
+            if (next) {
+                navButtonHTML = navButtonHTML
+                    .concat('<button onclick="helper.changeTab({id: ' + next + '})" class="md-accent md-raised md-button md-ink-ripple"><span>')
+                    .concat(nextText + '</span></button></div>');
+            } else {
+                navButtonHTML = navButtonHTML.concat('</div>');
+            }
+
+            // close the grid
+            navButtonHTML = navButtonHTML.concat('</div>');
+
+            // render html for each navigation
+            element.replaceWith(navButtonHTML);
+        });
+    },
+
     preInit: function () {
         // close the drop down for the date time selector in calendar
         window.onclick = closeDropDown;
@@ -316,6 +361,7 @@ var helper = {
         $('#payment-credit-card-form').hide();
 
         this.renderRentalInfo();
+        this.renderNavButtons();
     },
 
     /**
