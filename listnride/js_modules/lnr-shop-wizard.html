@@ -43,61 +43,38 @@
                     </div>
                     <!-- duration tab -->
                     <div class="mdl-tabs__panel is-active" id="duration-panel">
-                        <div class="mdl-grid ">
+                        <div class="mdl-grid">
                             <!-- duration calendar -->
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                                <div class="md-dialog-content">
+                                <div class="lnr-tab-content">
                                     <p class="md-subhead-sm">Please mark rent period:</p>
                                     <!-- busy loader until calendar loads -->
-                                    <div id="bike-calendar-loader" style="padding: 45% 45%;">
+                                    <div id="bike-calendar-loader">
                                         <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
                                     </div>
                                     <!-- render the calendar here -->
                                     <div id="bike-calendar"></div>
                                     <!-- time range selection -->
-                                    <div id="time-range" layout="row" layout-align="start center" layout-padding>
+                                    <div id="time-range">
                                         <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet dropdown-calendar">
                                             <span class="label" id="lnr-date-start">from</span>
-                                            <button id="lnr-date-start-button" onclick="helper.openCalendarDropDown('lnr-date-from-dropdown', '\'start\'')" class="lnr-dropdown-button">From
+                                            <button id="lnr-date-start-button" onclick="helper.openCalendarDropDown('lnr-date-from-dropdown', '\'start\'')" class="lnr-dropdown-button">
+                                                    From
                                             </button>
-                                            <div id="lnr-date-from-dropdown" class="dropdown-content">
-                                            </div>
+                                            <div id="lnr-date-from-dropdown" class="dropdown-content"></div>
                                         </div>
                                         <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet dropdown-calendar">
                                             <span class="label" id="lnr-date-end">to</span>
-                                            <button id="lnr-date-end-button" onclick="helper.openCalendarDropDown('lnr-date-to-dropdown', '\'end\'')" class="lnr-dropdown-button">To
+                                            <button id="lnr-date-end-button" onclick="helper.openCalendarDropDown('lnr-date-to-dropdown', '\'end\'')" class="lnr-dropdown-button">
+                                                    To
                                             </button>
-                                            <div id="lnr-date-to-dropdown" class="dropdown-content">
-                                            </div>
+                                            <div id="lnr-date-to-dropdown" class="dropdown-content"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- rent info -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                                <div class="md-dialog-content show-no-divider">
-                                    <p class="md-subhead-sm">Rent details</p>
-                                    <ul class="lnr-list-sm mdl-list">
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 day, 0 hours</span>
-                                        </li>
-                                        <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>
-                                        </li>
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">listnride fee (incl. tax)</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-fee">0 &euro;</span>
-                                        </li>
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">total</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-total">0 &euro;</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <rental-info></rental-info>
                         </div>
                         <!-- nav buttons -->
                         <div class="mdl-grid">
@@ -115,7 +92,7 @@
                             <!-- personal info form -->
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
                                 <form>
-                                    <div class="md-dialog-content">
+                                    <div class="lnr-tab-content">
                                         <p class="md-subhead-sm">Please fill you personal info:</p>
                                         <div class="lnr-input-containers" layout="row">
                                             <md-input-container flex>
@@ -139,30 +116,7 @@
                                 </form>
                             </div>
                             <!-- rent info -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                                <div class="md-dialog-content show-no-divider">
-                                    <p class="md-subhead-sm">Rent details</p>
-                                    <ul class="lnr-list-sm mdl-list">
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 day, 0 hours</span>
-                                        </li>
-                                        <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>
-                                        </li>
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">listnride fee (incl. tax)</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-fee">0 &euro;</span>
-                                        </li>
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">total</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-total">0 &euro;</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <rental-info></rental-info>
                         </div>
                         <!-- nav buttons -->
                         <div class="mdl-grid">
@@ -179,7 +133,7 @@
                         <div class="mdl-grid ">
                             <!-- payment info form -->
                             <div id="sp-payment" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                                <div class="md-dialog-content">
+                                <div class="lnr-tab-content">
                                     <div class="mdl-grid">
                                         <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
                                             <button class="lnr-paypal md-accent md-raised md-button"><span>PayPal</span></button>
@@ -227,7 +181,7 @@
                             </div>
                             <!-- rent info -->
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                                <div class="md-dialog-content show-no-divider">
+                                <div class="lnr-tab-content show-no-divider">
                                     <p class="md-subhead-sm">Enter your Payment Details</p>
                                     <p>All your data gets transmitted securely via SSH. You can pay by Paypal or Credit Card.</p>
                                 </div>
@@ -248,34 +202,11 @@
                         <div class="mdl-grid ">
                             <!-- overview info -->
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                                <div class="md-dialog-content">
+                                <div class="lnr-tab-content">
                                 </div>
                             </div>
                             <!-- rent info -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
-                                <div class="md-dialog-content show-no-divider">
-                                    <p class="md-subhead-sm">Rent details</p>
-                                    <ul class="lnr-list-sm mdl-list">
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 day, 0 hours</span>
-                                        </li>
-                                        <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>
-                                        </li>
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">listnride fee (incl. tax)</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-fee">0 &euro;</span>
-                                        </li>
-                                        <li class="mdl-list__item">
-                                            <span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">total</span>
-                                            <span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-total">0 &euro;</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <rental-info></rental-info>
                         </div>
                         <!-- nav buttons -->
                         <div class="mdl-grid">
