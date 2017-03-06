@@ -270,7 +270,7 @@ var helper = {
      */
     showCreditCardForm: function () {
         // hide the payment credit card form
-        $('#payment-credit-card-form').show();
+        $('#sp-payment-form').show();
     },
 
     renderRentalInfo: function () {
@@ -358,7 +358,7 @@ var helper = {
         $('.dropdown-calendar *').attr("disabled", "disabled").off('click');
 
         // hide the payment credit card form
-        $('#payment-credit-card-form').hide();
+        $('#sp-payment-form').hide();
 
         this.renderRentalInfo();
         this.renderNavButtons();

@@ -122,69 +122,56 @@
                     </div>
                     <!-- payment tab -->
                     <div class="mdl-tabs__panel" id="payment-details-panel">
-                        <div class="mdl-grid ">
+                        <div class="mdl-grid">
                             <!-- payment info form -->
                             <div id="sp-payment" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-tablet">
                                 <div class="lnr-tab-content">
                                     <div class="mdl-grid">
                                         <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                                            <button class="lnr-paypal md-accent md-raised md-button"><span>PayPal</span></button>
+                                            <button id="sp-button-paypal" class="lnr-paypal md-accent md-raised md-button"><span>PayPal</span></button>
                                         </div>
                                         <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
                                             <button class="lnr-mastercard md-accent md-raised md-button" onclick="helper.showCreditCardForm()"><span>Credit Card</span></button>
                                         </div>
                                     </div>
-                                    <div id="payment-credit-card-form" class="mdl-grid">
-                                        <form id="checkout-form" action="/transaction-endpoint" method="post">
-                                            <div id="error-message"></div>
-    
-                                            <label for="card-number">Card Number</label>
-                                            <div class="hosted-field" id="card-number"></div>
-                                            
-                                            <label for="cvv">CVV</label>
-                                            <div class="hosted-field" id="cvv"></div>
-                                            
-                                            <label for="expiration-date">Expiration Date</label>
-                                            <div class="hosted-field" id="expiration-date"></div>
-                                            
-                                            <input type="hidden" name="payment_method_nonce">
-                                        <input type="submit" value="Pay $10" disabled>
-                                        </form>
-
-                                        <!-- <div class="mdl-cell mdl-cell--12-col lnr-input-containers">
-                                            <md-input-container flex>
-                                                <label>Cardholder Name *</label>
-                                                <input id="sp-payment-cardholder" class="md-input" required>
-                                            </md-input-container>
-                                        </div>
-                                        <div class="mdl-cell mdl-cell--12-col lnr-input-containers">
-                                            <md-input-container flex>
-                                                <label>Card Number *</label>
-                                                <input id="sp-payment-cardnumber" class="md-input" required>
-                                            </md-input-container>
-                                        </div>
-                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown-payment">
-                                            <label>Expires</label>
-                                            <button id="lnr-payment-date-button" onclick="helper.openExpirationDropdown('lnr-payment-date-dropdown', '\'date\'')" class="lnr-dropdown-button"></button>
-                                            <div id="lnr-payment-date-dropdown" class="dropdown-content">
-                                            </div>
-                                        </div>
-                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown-payment">
-                                            <label>&nbsp;</label>
-                                            <button id="lnr-payment-year-button" onclick="helper.openExpirationDropdown('lnr-payment-year-dropdown', '\'year\'')" class="lnr-dropdown-button">To
-                                        </button>
-                                            <div id="lnr-payment-year-dropdown" class="dropdown-content">
-                                            </div>
-                                        </div>
-                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
-                                            <div class="lnr-input-containers">
-                                                <md-input-container>
-                                                    <label>CVV</label>
-                                                    <input id="sp-payment-cvv" placeholder="123" class="md-input" ng-model="signupDialog.email" type="text">
+                                    <form id="sp-payment-form">
+                                        <div class="mdl-grid">
+                                            <div class="mdl-cell mdl-cell--12-col lnr-input-containers">
+                                                <md-input-container flex>
+                                                    <label>Cardholder Name *</label>
+                                                    <input name="sp-payment-cardholder" class="md-input" required>
                                                 </md-input-container>
                                             </div>
-                                        </div> -->
-                                    </div>
+                                            <div class="mdl-cell mdl-cell--12-col lnr-input-containers">
+                                                <md-input-container flex>
+                                                    <label>Card Number *</label>
+                                                    <input name="sp-payment-cardnumber" class="md-input" required>
+                                                </md-input-container>
+                                            </div>
+                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown-payment">
+                                                <label>Expires</label>
+                                                <button id="lnr-payment-date-button" onclick="helper.openExpirationDropdown('   lnr-payment-date-dropdown', '\'date\'')" class="lnr-dropdown-button"></button>
+                                                <div id="lnr-payment-date-dropdown" class="dropdown-content">
+                                                </div>
+                                            </div>
+                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown-payment">
+                                                <label>&nbsp;</label>
+                                                <button id="lnr-payment-year-button" onclick="helper.openExpirationDropdown('   lnr-payment-year-dropdown', '\'year\'')" class="lnr-dropdown-button">To
+                                            </button>
+                                                <div id="lnr-payment-year-dropdown" class="dropdown-content">
+                                                </div>
+                                            </div>
+                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                                                <div class="lnr-input-containers">
+                                                    <md-input-container>
+                                                        <label>CVV</label>
+                                                        <input name="sp-payment-cvv" placeholder="123" class="md-input" ng-model="  signupDialog.email" type="text">
+                                                    </md-input-container>
+                                                </div>
+                                            </div>
+                                            <button id="sp-save-payment-data">Save Data</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                             <!-- rent info -->
@@ -220,59 +207,94 @@
 
     <!-- Loading Braintree -->
     <script src="https://js.braintreegateway.com/web/3.9.0/js/client.min.js"></script>
-    <script src="https://js.braintreegateway.com/web/3.9.0/js/hosted-fields.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.9.0/js/paypal.min.js"></script>
 
     <script>
         // We generated a client token for you so you can test out this code
         // immediately. In a production-ready integration, you will need to
         // generate a client token on your server (see section below).
         var authorization = 'eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiI4MWI5MjUzNDk3ODllNjg0YzBlMzg0YjQ5MTA4MTNlM      jI5M2I2NjdiZDhkYzJkYzQ1YTJlNTZiZTFmZTE0NzU4fGNyZWF0ZWRfYXQ9MjAxNy0wMy0wNlQxMTozMTowMC4zNTU5NjUzNTArMDAwMFx1MDAyNm1lcmN      oYW50X2lkPTM0OHBrOWNnZjNiZ3l3MmJcdTAwMjZwdWJsaWNfa2V5PTJuMjQ3ZHY4OWJxOXZtcHIiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kY    m94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGF        sbGVuZ2VzIjpbXSwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5L      mNvbTo0NDMvbWVyY2hhbnRzLzM0OHBrOWNnZjNiZ3l3MmIvY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV      3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6I    mh0dHBzOi8vY2xpZW50LWFuYWx5dGljcy5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tLzM0OHBrOWNnZjNiZ3l3MmIifSwidGhyZWVEU2VjdXJlRW5        hYmxlZCI6dHJ1ZSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImRpc3BsYXlOYW1lIjoiQWNtZSBXaWRnZXRzLCBMdGQuIChTYW5kYm94KSIsI      mNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmN      vbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBhe    XBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI        6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwiYnJhaW50cmVlQ2xpZW50SWQiOiJtYXN0ZXJjbGllbnQzIiwiYmlsbGluZ0FncmVlbWVud      HNFbmFibGVkIjp0cnVlLCJtZXJjaGFudEFjY291bnRJZCI6ImFjbWV3aWRnZXRzbHRkc2FuZGJveCIsImN1cnJlbmN5SXNvQ29kZSI6IlVTRCJ9LCJjb2l      uYmFzZUVuYWJsZWQiOmZhbHNlLCJtZXJjaGFudElkIjoiMzQ4cGs5Y2dmM2JneXcyYiIsInZlbm1vIjoib2ZmIn0=';
-        var submit = document.querySelector('input[type="submit"]');
         
         braintree.client.create({
-          authorization: authorization
+            authorization: authorization
         }, function (clientErr, clientInstance) {
-          if (clientErr) {
-            // Handle error in client creation
-            return;
-          }
-        
-          braintree.hostedFields.create({
-            client: clientInstance,
-            styles: {
-              'input': {
-                'font-size': '14pt'
-              },
-              'input.invalid': {
-                'color': 'red'
-              },
-              'input.valid': {
-                'color': 'green'
-              }
-            },
-            fields: {
-              number: {
-                selector: '#card-number',
-                placeholder: '4111 1111 1111 1111'
-              },
-              cvv: {
-                selector: '#cvv',
-                placeholder: '123'
-              },
-              expirationDate: {
-                selector: '#expiration-date',
-                placeholder: '10/2019'
-              }
+            if (clientErr) {
+                // Handle error in client creation
+                return;
             }
-          }, function (hostedFieldsErr, hostedFieldsInstance) {
-            if (hostedFieldsErr) {
-              // Handle error in Hosted Fields creation
-              return;
-            }
-        
-            submit.removeAttribute('disabled');
-          });
-        });
+
+            $('#sp-save-payment-data')[0].addEventListener('click', function() {
+                var form = document.getElementById('sp-payment-form')
+                var data = {
+                    creditCard: {
+                        number: form['sp-payment-cardnumber'].value,
+                        cvv: form['sp-payment-cvv'].value,
+                        expirationDate: "10/2020",
+                        options: {
+                            validate: false
+                        }
+                    }
+                };
+                clientInstance.request({
+                    endpoint: 'payment_methods/credit_cards',
+                    method: 'post',
+                    data: data
+                }, function (requestErr, response) {
+                    // More detailed example of handling API errors: https://codepen.io/braintree/pen/MbwjdM
+                    if (requestErr) { throw new Error(requestErr); }
+                    console.log('Got nonce:', response.creditCards[0].nonce);
+                });
+            });
+
+            braintree.paypal.create(
+                {
+                    client: clientInstance
+                },
+                function (createErr, paypalInstance) {
+                    if (createErr) {
+                        if (createErr.code === 'PAYPAL_BROWSER_NOT_SUPPORTED') {
+                            console.error('This browser is not supported.');
+                        } else {
+                            console.error('Error!', createErr);
+                        }
+                    }
+                    $("#sp-button-paypal")[0].addEventListener('click', function () {
+                        // Disable the button so that we don't attempt to open multiple popups.
+                        $("#sp-button-paypal")[0].setAttribute('disabled', 'disabled');
+                        $('#sp-payment-form').hide();
+    
+                        // Because PayPal tokenization opens a popup, this must be called
+                        // as a result of a user action, such as a button click.
+                        paypalInstance.tokenize(
+                            {
+                                flow: 'vault' // Required
+                                // Any other tokenization options
+                            },
+                            function (tokenizeErr, payload) {
+                                $("#sp-button-paypal")[0].removeAttribute('disabled');
+                                if (tokenizeErr) {
+                                // Handle tokenization errors or premature flow closure
+                                    switch (tokenizeErr.code) {
+                                      case 'PAYPAL_POPUP_CLOSED':
+                                        console.error('Customer closed PayPal popup.');
+                                        break;
+                                      case 'PAYPAL_ACCOUNT_TOKENIZATION_FAILED':
+                                        console.error('PayPal tokenization failed. See details:', tokenizeErr.details);
+                                        break;
+                                      case 'PAYPAL_FLOW_FAILED':
+                                        console.error('Unable to initialize PayPal flow. Are your options correct?', tokenizeErr.      details);
+                                        break;
+                                      default:
+                                        console.error('Error!', tokenizeErr);
+                                    }
+                                } else {
+                                    // Submit payload.nonce to your server
+                                }
+                            });
+                        }
+                        );
+                });
+       });
     </script>
 </body>
 
