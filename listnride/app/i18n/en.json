@@ -42,7 +42,8 @@
     "lister": "Lister",
     "reviews": "Reviews",
     "for": "for",
-    "per-day": "per day"
+    "per-day": "per day",
+    "voucher": "Voucher"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
