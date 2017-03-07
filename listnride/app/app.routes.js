@@ -355,6 +355,12 @@
       });
 
       $stateProvider.state({
+        name: 'factoryberlin',
+        url: '/factoryberlin',
+        template: '<user></user>'
+      });
+
+      $stateProvider.state({
         name: 'cities-berlin',
         url: '/berlin',
         templateUrl: 'app/modules/static/cities-berlin.template.html'
