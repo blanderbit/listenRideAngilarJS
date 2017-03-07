@@ -12,20 +12,33 @@ angular.module('requests',[]).component('requests', {
       var requests = this;
       var poller;
 
-      requests.requests = [];
-      requests.request = {};
+      // total requests for rider or lister
+      requests.riderRequests = [];
+      requests.listerRequests = [];
+      // selected request for rider or lister
+      requests.riderRequest = {};
+      requests.listerRequest = {};
+      
       requests.message = "";
       requests.showChat = false;
       requests.$mdMedia = $mdMedia;
-      requests.request.glued = false;
+      
+      requests.riderRequests.glued = false;
+      requests.listerRequests.glued = false;
+      
       requests.loadingList = true;
       requests.loadingChat = false;
-      requests.request.rideChat;
-      requests.request.chatFlow;
+      
+      requests.riderRequests.rideChat;
+      requests.riderRequests.rideChat;
+      requests.listerRequests.chatFlow;
+      requests.listerRequests.chatFlow;
+
       requests.userId = $localStorage.userId;
 
       api.get('/users/' + $localStorage.userId + '/requests').then(
         function(success) {
+          requests.selectedTab = 0;
           requests.allRequests = success.data;
           requests.filterBikesAsLister(requests.allRequests);
           requests.filterBikesAsRider(requests.allRequests);
@@ -35,7 +48,6 @@ angular.module('requests',[]).component('requests', {
           }
         },
         function(error) {
-          console.log("Error fetching request list");
           requests.loadingList = false;
         }
       );
@@ -50,15 +62,15 @@ angular.module('requests',[]).component('requests', {
       }
 
       // Handles initial request loading
-      requests.loadRequest = function(requestId) {
+      requests.loadRequest = function(requestId, userId) {
         $state.go(".", { requestId: requestId }, {notify: false});
         requests.loadingChat = true;
         // Cancel the poller
         $interval.cancel(poller);
         // Clear former request
-        requests.request = {};
+        $localStorage.userId === userId ? requests.listerRequest = {} : requests.riderRequest = {};
         // Load the new request and activate the poller
-        reloadRequest(requestId);
+        reloadRequest(requestId, userId);
         poller = $interval(function() {
             reloadRequest(requestId);
         }, 10000);
@@ -80,30 +92,41 @@ angular.module('requests',[]).component('requests', {
         }
       };
 
-      var reloadRequest = function(requestId) {
+      var reloadRequest = function(requestId, userId) {
         api.get('/requests/' + requestId).then(
           function(success) {
+            // if user id matches to current user
+            // select the lister tab
+            var selectedRequest = '';
+            if (success.data.user.id === $localStorage.userId) {
+              requests.selectedTab = 1;
+              selectedRequest = 'listerRequest';
+            } else {
+              requests.selectedTab = 0;
+              selectedRequest = 'riderRequest';
+            }
+            
             // On initial load
-            if (requests.request.messages == null || requests.request.messages.length != success.data.messages.length) {
-              requests.request = success.data;
-              requests.request.glued = true;
-              requests.request = success.data;
-              requests.request.rideChat = $localStorage.userId == requests.request.user.id;
-              requests.request.rideChat? requests.request.chatFlow = "rideChat" : requests.request.chatFlow = "listChat";
+            if (requests[selectedRequest].messages == null || requests[selectedRequest].messages.length != success.data.messages.length) {
+              requests[selectedRequest] = success.data;
+              requests[selectedRequest].glued = true;
+              requests[selectedRequest] = success.data;
+              requests[selectedRequest].rideChat = $localStorage.userId == requests[selectedRequest].user.id;
+              requests[selectedRequest].rideChat ? requests[selectedRequest].chatFlow = "rideChat" : requests[selectedRequest].chatFlow = "listChat";
 
-              if (requests.request.rideChat) {
-                requests.request.rating = requests.request.lister.rating_lister + requests.request.lister.rating_rider;
-                if (requests.request.lister.rating_lister != 0 && requests.request.lister.rating_rider != 0) {
-                  requests.request.rating = requests.request.rating / 2
+              if (requests[selectedRequest].rideChat) {
+                requests[selectedRequest].rating = requests[selectedRequest].lister.rating_lister + requests[selectedRequest].lister.rating_rider;
+                if (requests[selectedRequest].lister.rating_lister != 0 && requests[selectedRequest].lister.rating_rider != 0) {
+                  requests[selectedRequest].rating = requests[selectedRequest].rating / 2
                 }
               }
               else {
-                requests.request.rating = requests.request.user.rating_lister + requests.request.user.rating_rider;
-                if (requests.request.user.rating_lister != 0 && requests.request.user.rating_rider != 0) {
-                  requests.request.rating = requests.request.rating / 2
+                requests[selectedRequest].rating = requests[selectedRequest].user.rating_lister + requests[selectedRequest].user.rating_rider;
+                if (requests[selectedRequest].user.rating_lister != 0 && requests[selectedRequest].user.rating_rider != 0) {
+                  requests[selectedRequest].rating = requests[selectedRequest].rating / 2
                 }
               }
-              requests.request.rating = Math.round(requests.request.rating);
+              requests[selectedRequest].rating = Math.round(requests[selectedRequest].rating);
 
               requests.loadingChat = false;
             }
@@ -123,11 +146,11 @@ angular.module('requests',[]).component('requests', {
       };
 
       // This function handles booking and all necessary validations
-      requests.confirmBooking = function() {
+      requests.confirmBooking = function(request) {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
-            if (requests.request.subtotal == 0 || success.data.current_payment_method) {
-              showBookingDialog();
+            if (requests[request].subtotal == 0 || success.data.current_payment_method) {
+              showBookingDialog(request);
             } else {
               // User did not enter any payment method yet
               showPaymentDialog();
@@ -167,7 +190,7 @@ angular.module('requests',[]).component('requests', {
         });
       }
 
-      var showBookingDialog = function(event) {
+      var showBookingDialog = function(event, request) {
         $mdDialog.show({
           controller: BookingDialogController,
           controllerAs: 'bookingDialog',
@@ -201,11 +224,12 @@ angular.module('requests',[]).component('requests', {
       };
 
       // Sends a new message by directly appending it locally and posting it to the API
-      requests.sendMessage = function() {
-        requests.request.glued = true
+      requests.sendMessage = function(request) {
+        console.log('req: ', request);
+        requests[request].glued = true
         if( requests.message ) {
           var data = {
-            "request_id": requests.request.id,
+            "request_id": requests[request].id,
             "sender": $localStorage.userId,
             "content": requests.message,
             "is_read": false
@@ -213,14 +237,14 @@ angular.module('requests',[]).component('requests', {
           var message = {
             "message": data
           };
-          requests.request.messages.push(data);
+          requests[request].messages.push(data);
           api.post('/messages', message).then(function(success) {
-            reloadRequest(requests.request.id);
+            reloadRequest(requests[request].id);
           }, function(error) {
             console.log("Error occured sending message");
           });
         } else {
-          confirmBooking();
+          requests.confirmBooking(request);
         }
         requests.message = "";
       };
@@ -239,7 +263,8 @@ angular.module('requests',[]).component('requests', {
         };
       };
 
-      var BookingDialogController = function() {
+      var BookingDialogController = function(request) {
+        console.log('req in booking ctrl: ', request);
         var bookingDialog = this;
         bookingDialog.requests = requests;
         bookingDialog.duration = date.duration(requests.request.start_date, requests.request.end_date);

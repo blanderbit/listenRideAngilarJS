@@ -1,6 +1,6 @@
 <!-- to avoid scrolling the content -->
 <md-content class="content" flex layout="row" layout-fill>
-  <md-tabs flex md-no-ink md-no-ink-bars md-center-tabs="true">
+  <md-tabs flex md-no-ink md-no-ink-bars md-center-tabs="true" md-selected="requests.selectedTab">
 
     <!-- requests: as a rider -->
     <md-tab label="As Rider">
@@ -9,11 +9,11 @@
         <!-- Right Column displaying actual Chat -->
         <div flex-gt-sm="75" flex-sm="70" flex-order="2" layout="column" hide-xs>
           <md-progress-linear class="md-accent" ng-if="requests.loadingChat" md-mode="query"></md-progress-linear>
-          <div scroll-glue="requests.request.glued" class="chat" flex="90">
-            <message ng-repeat="message in requests.request.messages" content="message.content" sender="message.sender" status="message.status"
-              request="requests.request" confirm-booking="requests.confirmBooking()" show-rating-dialog="requests.showRatingDialog()"></message>
+          <div scroll-glue="requests.riderRequest.glued" class="chat" flex="90">
+            <message ng-repeat="message in requests.riderRequest.messages" content="message.content" sender="message.sender" status="message.status"
+              request="requests.riderRequest" confirm-booking="requests.confirmBooking('riderRequest')" show-rating-dialog="requests.showRatingDialog()"></message>
           </div>
-          <form class="lnr-message-form" ng-submit="requests.sendMessage()" layout="row" layout-padding ng-if="requests.request.messages">
+          <form class="lnr-message-form" ng-submit="requests.sendMessage('riderRequest')" layout="row" layout-padding ng-if="requests.riderRequest.messages">
             <md-input-container class="ap-chat" flex md-no-float>
               <input ng-model="requests.message" placeholder="{{ 'requests.write-message' | translate }}"></input>
             </md-input-container>
@@ -23,14 +23,15 @@
           </form>
         </div>
         <!-- Left Column displaying list of all Requests -->
+        <!-- showing only as a rider -->
         <md-content flex class="requests-list" flex-order="1">
           <md-progress-linear class="md-accent" ng-if="requests.loadingList" md-mode="query"></md-progress-linear>
           <div layout="column" layout-align="center center" layout-fill ng-if="!requests.loadingList && requests.riderRequests.length == 0">
             <p class="lnr-center">{{ 'requests.no-requests-yet' | translate }}</p>
           </div>
-          <md-list class="lnr-no-padding" md-no-ink ng-if="requests.requests != []">
+          <md-list class="lnr-no-padding" md-no-ink ng-if="requests.riderRequests != []">
             <div ng-repeat="request in requests.riderRequests | orderBy: '-updated_at'">
-              <md-list-item class="md-2-line" ng-click="requests.loadRequest(request.id)">
+              <md-list-item class="md-2-line" ng-click="requests.loadRequest(request.id, request.user.id)">
                 <img ng-src="{{requests.profilePicture(request)}}" class="md-avatar" alt="{{item.who}}" />
                 <div class="md-list-item-text" layout="column">
                   <h4 ng-if="request.last_message.is_read">{{request.ride.name}}</h4>
@@ -53,11 +54,11 @@
         <!-- Right Column displaying actual Chat -->
         <div flex-gt-sm="75" flex-sm="70" flex-order="2" layout="column" hide-xs>
           <md-progress-linear class="md-accent" ng-if="requests.loadingChat" md-mode="query"></md-progress-linear>
-          <div scroll-glue="requests.request.glued" class="chat" flex="90">
-            <message ng-repeat="message in requests.request.messages" content="message.content" sender="message.sender" status="message.status"
-              request="requests.request" confirm-booking="requests.confirmBooking()" show-rating-dialog="requests.showRatingDialog()"></message>
+          <div scroll-glue="requests.listerRequest.glued" class="chat" flex="90">
+            <message ng-repeat="message in requests.listerRequest.messages" content="message.content" sender="message.sender" status="message.status"
+              request="requests.listerRequest" confirm-booking="requests.confirmBooking('listerRequest')" show-rating-dialog="requests.showRatingDialog()"></message>
           </div>
-          <form class="lnr-message-form" ng-submit="requests.sendMessage()" layout="row" layout-padding ng-if="requests.request.messages">
+          <form class="lnr-message-form" ng-submit="requests.sendMessage('listerRequest')" layout="row" layout-padding ng-if="requests.listerRequest.messages">
             <md-input-container class="ap-chat" flex md-no-float>
               <input ng-model="requests.message" placeholder="{{ 'requests.write-message' | translate }}"></input>
             </md-input-container>
@@ -72,9 +73,9 @@
           <div layout="column" layout-align="center center" layout-fill ng-if="!requests.loadingList && requests.listerRequests.length == 0">
             <p class="lnr-center">{{ 'requests.no-requests-yet' | translate }}</p>
           </div>
-          <md-list class="lnr-no-padding" md-no-ink ng-if="requests.requests != []">
+          <md-list class="lnr-no-padding" md-no-ink ng-if="requests.listerRequests != []">
             <div ng-repeat="request in requests.listerRequests | orderBy: '-updated_at'">
-              <md-list-item class="md-2-line" ng-click="requests.loadRequest(request.id)">
+              <md-list-item class="md-2-line" ng-click="requests.loadRequest(request.id, request.user.id)">
                 <img ng-src="{{requests.profilePicture(request)}}" class="md-avatar" alt="{{item.who}}" />
                 <div class="md-list-item-text" layout="column">
                   <h4 ng-if="request.last_message.is_read">{{request.ride.name}}</h4>
