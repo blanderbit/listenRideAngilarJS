@@ -281,6 +281,9 @@ autocomplete .md-errors-spacer {
   width: 100%;
 }
 
+.lnr-tab-content-no-scroll {
+  position: fixed;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* SVG
@@ -1224,7 +1227,7 @@ requests md-input-container  {
 }
 
 .requests-list {
-  min-width: 300px;
+  min-width: 320px !important;
   max-width: 450px;
   border-right: 1px solid #efefef;
 }

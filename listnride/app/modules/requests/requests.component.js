@@ -28,7 +28,7 @@ angular.module('requests',[]).component('requests', {
         function(success) {
           requests.allRequests = success.data;
           requests.filterBikesAsLister(requests.allRequests);
-          // requests.requests = success.data;
+          requests.filterBikesAsRider(requests.allRequests);
           requests.loadingList = false;
           if ($stateParams.requestId) {
             requests.loadRequest($stateParams.requestId);
@@ -347,13 +347,13 @@ angular.module('requests',[]).component('requests', {
       };
 
       requests.filterBikesAsLister = function () {
-        requests.requests = requests.allRequests.filter(function (response) {
+        requests.listerRequests = requests.allRequests.filter(function (response) {
           return (response.user.id === $localStorage.userId);
         });
       };
 
       requests.filterBikesAsRider = function () {
-        requests.requests = requests.allRequests.filter(function (response) {
+        requests.riderRequests = requests.allRequests.filter(function (response) {
           return (response.user.id !== $localStorage.userId);
         });
       };
