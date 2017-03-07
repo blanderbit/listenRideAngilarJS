@@ -74,6 +74,30 @@
 
             <div layout="row" layout-xs="column">
               <div flex-gt-xs layout-margin>
+                <span class="md-body-2">Contact</span>
+              </div>
+              <div flex-gt-xs="70" layout-margin>
+                <div layout="row" layout-xs="column">
+                  <md-input-container flex-gt-xs="45">
+                    <label>{{ 'shared.phone-number' | translate }}</label>
+                    <input name="phone_number" ng-disabled="true" placeholder="+49 175 12345678" ng-model="settings.user.phone_number_privatized"></input>
+                  </md-input-container>
+                  <span hide-xs flex></span>
+                  <md-input-container layout="row" flex="45">
+                    <md-button ng-if="!settings.sentConfirmationSms" flex class="md-raised md-primary lnr-btn-inline" ng-click="settings.changePhoneNumber($event)">
+                      {{ 'forms.update-contact' | translate }}
+                    </md-button>
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
                 <span class="md-body-2">{{ 'forms.address' | translate }}</span>
               </div>
               <div flex-gt-xs="70" layout-margin>

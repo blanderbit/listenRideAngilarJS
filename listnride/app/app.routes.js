@@ -355,6 +355,12 @@
       });
 
       $stateProvider.state({
+        name: 'factoryberlin',
+        url: '/factoryberlin',
+        template: '<user></user>'
+      });
+
+      $stateProvider.state({
         name: 'cities-berlin',
         url: '/berlin',
         templateUrl: 'app/modules/static/cities-berlin.template.html'
@@ -395,6 +401,19 @@
             return '<div><script src="https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.js"></script><div id="listnride" data-user="' +
               $stateParams.userId + '" data-lang="' + $stateParams.userLang + '"></div><div>'
           }, 100);
+        }
+      });
+
+      // temporary state, for testing
+      $stateProvider.state({
+        name: 'lnr-embed',
+        url: '/embed-wizard/',
+        controller: function () {
+          var userId = 1005;
+          var bikeId = 165;
+          var url = 'lnr-wizard-module/lnr-shop-wizard.html?userId=' + userId + '&bikeId=' + bikeId;
+          var params = 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=700,height=600,top=10,left=10';
+          window.open(url, '_blank', params);
         }
       });
       $stateProvider.state('404', {

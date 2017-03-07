@@ -8,7 +8,7 @@
       <span flex></span>
       <h2 class="md-headline">{{ 'requests.booking-overview' | translate }}</h2>
       <span flex></span>
-      <md-button class="md-icon-button" ng-click="bookingDialog.hide()">
+      <md-button class="md-icon-button" ng-click="bookingDialog.hide()" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="close booking">
         <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
       </md-button>
     </div>
@@ -53,9 +53,9 @@
       <p class="md-caption lnr-center">By booking I accept the Terms and Conditions</p >
 
       <div class="md-dialog-buttons" layout="row" layout-align="space-between center">
-        <md-button class="md-lined md-warn" ng-click="bookingDialog.hide()">{{ 'shared.cancel' | translate }}</md-button>
+        <md-button class="md-lined md-warn" ng-click="bookingDialog.hide()" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="cancel booking">{{ 'shared.cancel' | translate }}</md-button>
         <span flex></span>
-        <md-button class="md-raised md-primary" ng-click="bookingDialog.book()">{{ 'requests.book' | translate }}</md-button>
+        <md-button class="md-raised md-primary" ng-click="bookingDialog.book()" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="request booking">{{ 'requests.book' | translate }}</md-button>
       </div>
     </div>
   </md-dialog-content>

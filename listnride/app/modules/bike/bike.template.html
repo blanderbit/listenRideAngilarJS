@@ -1,6 +1,6 @@
  <md-content class="single-column"> 
   <div id="hero-shot" class="lnr-preload-bg" style="{{'background-image: url(' + bike.data.image_file_1.image_file_1.large.url + ')'}};" layout="row" layout-align="start end">
-    <md-button class="md-raised" ng-click="bike.showGalleryDialog($event)" md-no-ink>{{ 'bike.view-pictures' | translate }}</md-button>
+    <md-button class="md-raised" ng-click="bike.showGalleryDialog($event)" md-no-ink analytics-on analytics-category="button" analytics-event="clicked" analytics-label="view photos">{{ 'bike.view-pictures' | translate }}</md-button>
   </div>
 
   <div class="content" layout="column">
@@ -18,13 +18,13 @@
       <div flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center">
           <div flex="33" layout="column" layout-align="center center">
             <span class="md-headline">{{ bike.data.price_half_daily | number : 0 }} €</span>
-            <span class="md-caption" ng-if="bike.data.family != 9">{{ 'shared.half-day' | translate }}</span>
-            <span class="md-caption" ng-if="bike.data.family == 9"><= 4h</span>
+            <span class="md-caption" ng-if="bike.data.family != 9 && bike.data.family != 11">{{ 'shared.half-day' | translate }}</span>
+            <span class="md-caption" ng-if="bike.data.family == 9 || bike.data.family == 11"><= 4h</span>
           </div>
           <div flex="33" layout="column" layout-align="center center">
             <span class="md-headline">{{ bike.data.price_daily | number : 0 }} €</span>
-            <span class="md-caption" ng-if="bike.data.family != 9">{{ 'shared.day-6h' | translate }}</span>
-            <span class="md-caption" ng-if="bike.data.family == 9">> 4h</span>
+            <span class="md-caption" ng-if="bike.data.family != 9 && bike.data.family != 11">{{ 'shared.day-6h' | translate }}</span>
+            <span class="md-caption" ng-if="bike.data.family == 9 || bike.data.family == 11">> 4h</span>
           </div>
           <div flex="33" layout="column" layout-align="center center">
             <span class="md-headline">{{ bike.data.price_weekly | number : 0 }} €</span>

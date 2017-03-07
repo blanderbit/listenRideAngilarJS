@@ -243,7 +243,8 @@
     "street": "Straat en huisnr.",
     "zip": "Postcode",
     "city": "Plaats",
-    "country": "Land"
+    "country": "Land",
+    "update-contact": "Contactgegevens wijzigen"
   },
 
   "autocomplete": {
@@ -313,7 +314,9 @@
       "label": "Foto's",
       "select-images": "Foto's kiezen",
       "remove": "verwijderen",
-      "upload-bike-header": "Voeg een paar scherpe foto's toe"
+      "upload-bike-header": "Voeg een paar scherpe foto's toe",
+      "under-min-size": "Sommige foto's zijn kleiner dan 1500x1000:",
+      "invalid-images": "Afmetingen foto ontoereikend"
     },
     "location": {
       "header": "Waar kan de fiets worden opgehaald?",
@@ -345,7 +348,7 @@
         "indoor": "Baanfiets"
       },
       "3": {
-        "tracking": "Tracking",
+        "trecking": "Trecking",
         "enduro": "Enduro",
         "freeride": "Freeride",
         "cross-country": "Cross Country",

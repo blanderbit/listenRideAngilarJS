@@ -26,39 +26,39 @@
 
     <div ng-if="!message.request.rideChat && message.status == 1">
       <div layout="row" layout-align="center center">
-        <md-button class="md-warn" ng-disabled="message.request.status != 1" ng-click="message.updateStatus(8)">{{ 'message.reject' | translate }}</md-button>
-        <md-button ng-disabled="message.request.status != 1" ng-click="message.updateStatus(2)">{{ 'message.accept' | translate }}</md-button>
+        <md-button class="md-warn" ng-disabled="message.request.status != 1" ng-click="message.updateStatus(8)" analytics-on analytics-category="link" analytics-event="clicked" analytics-label="request reject">{{ 'message.reject' | translate }}</md-button>
+        <md-button ng-disabled="message.request.status != 1" ng-click="message.updateStatus(2)" analytics-on analytics-category="link" analytics-event="clicked" analytics-label="request accept">{{ 'message.accept' | translate }}</md-button>
       </div>
     </div>
 
     <div ng-if="!message.request.rideChat && message.status == 3">
       <div layout="row" layout-align="center center">
-        <md-button ng-disabled="message.request.status != 3" ng-click="message.updateStatus(4)">{{ 'message.confirm_return' | translate }}</md-button>
+        <md-button ng-disabled="message.request.status != 3" ng-click="message.updateStatus(4)" analytics-on analytics-category="link" analytics-event="clicked" analytics-label="return confirm">{{ 'message.confirm_return' | translate }}</md-button>
       </div>
     </div>
 
     <div ng-if="!message.request.rideChat && message.status == 4">
       <div layout="row" layout-align="center center">
-        <md-button ng-disabled="message.request.status != 4" ng-click="message.showRatingDialog()">{{ 'message.rate' | translate }}</md-button>
+        <md-button ng-disabled="message.request.status != 4" ng-click="message.showRatingDialog()" analytics-on analytics-category="rating" analytics-event="clicked" analytics-label="{{ 'message.rate' | translate }}">{{ 'message.rate' | translate }}</md-button>
       </div>
     </div>
 
     <div ng-if="message.request.rideChat && message.status == 1">
       <div layout="row" layout-align="center center">
-        <md-button class="md-warn" ng-disabled="message.request.status != 1" ng-click="message.updateStatus(9)">{{ 'shared.cancel' | translate }}</md-button>
+        <md-button class="md-warn" ng-disabled="message.request.status != 1" ng-click="message.updateStatus(9)" analytics-on analytics-category="link" analytics-event="clicked" analytics-label="request cancel">{{ 'shared.cancel' | translate }}</md-button>
       </div>
     </div>
 
     <div ng-if="message.request.rideChat && message.status == 2">
       <div layout="row" layout-align="center center">
-        <md-button class="md-warn" ng-disabled="message.request.status != 2" ng-click="message.updateStatus(9)">{{ 'shared.cancel' | translate }}</md-button>
-        <md-button ng-disabled="message.request.status != 2" ng-click="message.confirmBooking()">{{ 'message.confirm' | translate }}</md-button>
+        <md-button class="md-warn" ng-disabled="message.request.status != 2" ng-click="message.updateStatus(9)" analytics-on analytics-category="link" analytics-event="clicked" analytics-label="booking cancel">{{ 'shared.cancel' | translate }}</md-button>
+        <md-button ng-disabled="message.request.status != 2" ng-click="message.confirmBooking()" analytics-on analytics-category="link" analytics-event="clicked" analytics-label="booking confirm">{{ 'message.confirm' | translate }}</md-button>
       </div>
     </div>
 
     <div ng-if="message.request.rideChat && message.status == 5">
       <div layout="row" layout-align="center center">
-        <md-button ng-disabled="message.request.status != 5" ng-click="message.showRatingDialog()">{{ 'message.rate' | translate }}</md-button>
+        <md-button ng-disabled="message.request.status != 5" ng-click="message.showRatingDialog()" analytics-on analytics-category="rating" analytics-event="clicked" analytics-label="{{ 'message.rate' | translate }}">{{ 'message.rate' | translate }}</md-button>
       </div>
     </div>
   </div>

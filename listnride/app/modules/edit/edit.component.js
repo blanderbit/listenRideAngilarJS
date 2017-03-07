@@ -18,6 +18,8 @@ angular.module('edit',[]).component('edit', {
       edit.categoryOptions = bikeOptions.categoryOptions();
       edit.subcategoryOptions = bikeOptions.subcategoryOptions();
       edit.accessoryOptions = bikeOptions.accessoryOptions();
+      edit.validateObj = {height: {min: 1000}, width: {min: 1500}, duration: {max: '5m'}};
+      edit.invalidFiles = {};
 
       api.get('/rides/' + $stateParams.bikeId).then(
         function(response) {
@@ -105,13 +107,11 @@ angular.module('edit',[]).component('edit', {
 
       edit.nextTab = function() {
         edit.selectedIndex = edit.selectedIndex + 1;
-        console.log(edit.form);
-      }
+      };
 
       edit.previousTab = function() {
         edit.selectedIndex = edit.selectedIndex - 1;
-        console.log(edit.form);
-      }
+      };
 
       edit.addImage = function(files) {
         if (files && files.length)
@@ -122,7 +122,6 @@ angular.module('edit',[]).component('edit', {
 
       edit.removeImage = function(index) {
         edit.form.images.splice(index, 1);
-        console.log(edit.form.images);
       };
 
       edit.isFormValid = function() {

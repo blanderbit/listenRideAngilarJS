@@ -243,7 +243,8 @@
     "street": "Straße und Hausnr.",
     "zip": "PLZ",
     "city": "Stadt",
-    "country": "Land"
+    "country": "Land",
+    "update-contact": "Kontakt aktualisieren"
   },
 
   "autocomplete": {
@@ -313,7 +314,9 @@
       "label": "Fotos",
       "select-images": "Fotos Wählen",
       "remove": "Löschen",
-      "upload-bike-header": "Lade ein paar Fotos hoch"
+      "upload-bike-header": "Lade ein paar Fotos hoch",
+      "under-min-size": "Einige Bilder haben eine kleinere Abmessung kleiner als 1500x1000:",
+      "invalid-images": "Bildgröße unzureichend"
     },
     "location": {
       "header": "Wo kann das Rad abgeholt werden?",
@@ -345,7 +348,7 @@
         "indoor": "Bahnrad"
       },
       "3": {
-        "tracking": "Trecking",
+        "trecking": "Trecking",
         "enduro": "Enduro",
         "freeride": "Freeride",
         "cross-country": "Cross Country",

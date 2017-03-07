@@ -217,7 +217,8 @@
     "street": "Street and Number",
     "zip": "Zip Code",
     "city": "City",
-    "country": "Country"
+    "country": "Country",
+    "update-contact": "Update Contact"
   },
   "home": {
     "landing-section-header": "The perfect bike. Simply rent it.",
@@ -297,7 +298,9 @@
       "label": "Pictures",
       "select-images": "Select images",
       "remove": "Remove",
-      "upload-bike-header": "Upload some pictures of your bike"
+      "upload-bike-header": "Upload some pictures of your bike",
+      "under-min-size": "Some of your images size is less than allowable minimum 1500x1000:",
+      "invalid-images": "Invalid images"
     },
     "location": {
       "header": "Where can the bike be picked up?",
@@ -329,7 +332,7 @@
         "indoor": "Indoor"
       },
       "3": {
-        "tracking": "Tracking",
+        "trecking": "Trecking",
         "enduro": "Enduro",
         "freeride": "Freeride",
         "cross-country": "Cross Country",

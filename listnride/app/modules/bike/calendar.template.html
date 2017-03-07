@@ -1,8 +1,8 @@
-<div id="bikeCalendar" ng-hide="calendar.bikeFamily == 2 || calendar.bikeFamily == 9"></div>
+<div id="bikeCalendar" ng-hide="calendar.bikeFamily == 2 || calendar.bikeFamily == 9 || calendar.bikeFamily == 11"></div>
 
 
 
-<!--        EVENT CALENDAR          -->
+<!--        EVENT CALENDAR 1        -->
 <div layout="column" layout-margin ng-if="calendar.bikeFamily == 2 || calendar.bikeFamily == 9">
   <p class="md-headline lnr-center">BFS Calendar</p>
   <p class="md-body-1 lnr-center">During the Berliner Fahrradschau, you can test ride a great variety of high end bikes. Just select which day and time you want to rent it. All rentals up to 4 hours are free!</p>
@@ -53,15 +53,48 @@
 </div>
 <!--      END EVENT CALENDAR        -->
 
+<!--        EVENT CALENDAR 2        -->
+<div layout="column" layout-margin ng-if="calendar.bikeFamily == 11">
+  <p class="md-headline lnr-center">BFS Calendar</p>
+  <p class="md-body-1 lnr-center">On Friday, 3rd of March, you can test ride a great variety of high end bikes. Just select what time you want to rent it. All rentals up to 4 hours are free!</p>
+  
+  <md-input-container class="md-block">
+    <label>1. Select pickup time</label>
+    <md-select ng-model="calendar.event2.pickupSlotId" ng-change="calendar.event2.changePickupSlot()">
+
+      <md-option ng-repeat="slot in calendar.event2.slots" ng-disabled="slot.reserved" ng-if="3 == slot.day && slot.pickupEnabled" value="{{$index}}">
+        {{slot.text}}
+      </md-option>
+    
+    </md-select>
+  </md-input-container>
+
+  <md-input-container class="md-block">
+    <label>2. Select return time</label>
+    <md-select ng-model="calendar.event2.returnSlotId" ng-change="calendar.event2.changeReturnSlot()">
+
+      <md-option ng-if="!calendar.event2.pickupSlotId">
+        Please select a pickup time first
+      </md-option>
+
+      <md-option ng-repeat="slot in calendar.event2.slots" ng-disabled="slot.returnDisabled" ng-if="3 == slot.day" value="{{$index}}">
+        {{slot.text}}
+      </md-option>
+    
+    </md-select>
+  </md-input-container>
+</div>
+<!--      END EVENT CALENDAR 2      -->
 
 
-<div id="timeRange" layout="row" layout-align="start center" layout-padding ng-if="calendar.bikeFamily != 2 && calendar.bikeFamily != 9">
+
+<div id="timeRange" layout="row" layout-align="start center" layout-padding ng-if="calendar.bikeFamily != 2 && calendar.bikeFamily != 9 && calendar.bikeFamily != 11">
   <md-input-container flex>
     <label>{{ 'shared.from' | translate }} {{ calendar.startDate | date }}</label>
     <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')"
-      ng-model="calendar.startTime" placeholder="{{ 'shared.from' | translate }}">
+      ng-model="calendar.startTime" placeholder="{{ 'shared.from' | translate }}" analytics-on analytics-category="calendar" analytics-event="clicked" analytics-label="time from">
       <md-option ng-disabled="!calendar.isOptionEnabled($index, calendar.startDate)" ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
-        {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.startDate)}}
+        {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.startDate) }}
       </md-option>
     </md-select>
   </md-input-container>
@@ -69,7 +102,7 @@
   <md-input-container flex>
     <label>{{ 'shared.to' | translate }}  {{ calendar.endDate | date }}</label>
     <md-select ng-disabled="calendar.endDate === undefined" ng-change="calendar.onTimeChange('end')"
-      ng-model="calendar.endTime" placeholder="{{ 'shared.to' | translate }}">
+      ng-model="calendar.endTime" placeholder="{{ 'shared.to' | translate }}" analytics-on analytics-category="calendar" analytics-event="clicked" analytics-label="time to">
       <md-option ng-disabled="!calendar.isOptionEnabled($index, calendar.endDate)" ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
         {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.endDate)}}
       </md-option>
@@ -102,7 +135,7 @@
     </div>
   </div>
 
-  <md-button type="submit" class="md-raised md-primary lnr-margin-lrg" ng-click="calendar.onBikeRequest()" ng-if="calendar.authentication.loggedIn() && !calendar.isFormInvalid()" ng-disabled="calendar.owner">
+  <md-button type="submit" class="md-raised md-primary lnr-margin-lrg" ng-click="calendar.onBikeRequest()" ng-if="calendar.authentication.loggedIn() && !calendar.isFormInvalid()" ng-disabled="calendar.owner" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="request">
     {{ 'calendar.request-bike' | translate }}
   </md-button>
   <md-button type="submit" class="md-raised md-primary lnr-margin-lrg" ng-click="calendar.onBikeRequest()" ng-if="calendar.authentication.loggedIn() && calendar.isFormInvalid()" ng-disabled="true">

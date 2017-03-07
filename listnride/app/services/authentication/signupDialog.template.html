@@ -10,7 +10,7 @@
         <span flex></span>
         <h2>{{ 'forms.sign-up' | translate }}</h2>
         <span flex></span>
-        <md-button class="md-icon-button" ng-click="signupDialog.hide()">
+        <md-button class="md-icon-button" ng-click="signupDialog.hide()" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="close signup modal">
           <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
         </md-button>
       </div>
@@ -18,7 +18,7 @@
 
     <md-dialog-content>
       <div class="md-dialog-content" layout="column">
-        <md-button ng-click="signupDialog.connectFb()" class="md-primary md-lined lnr-btn-fb">{{ 'forms.sign-up-with-facebook' | translate }}</md-button>
+        <md-button ng-click="signupDialog.connectFb()" class="md-primary md-lined lnr-btn-fb" analytics-on analytics-category="sign up" analytics-event="clicked" analytics-label="facebook login button">{{ 'forms.sign-up-with-facebook' | translate }}</md-button>
         <div class="lnr-middle-divider">
           {{ 'forms.or' | translate }}
         </div>
@@ -63,7 +63,7 @@
         </md-input-container>
         
         <div class="md-dialog-buttons" layout="column">
-          <md-button type="submit" class="md-accent md-raised" ng-disabled="signupDialog.signingUp">{{ 'forms.sign-up' | translate }}</md-button>
+          <md-button type="submit" class="md-accent md-raised" ng-disabled="signupDialog.signingUp" analytics-on analytics-category="sign up" analytics-event="clicked " analytics-label="listnride login button">{{ 'forms.sign-up' | translate }}</md-button>
         </div>
 
       </div>

@@ -6,7 +6,6 @@ var gulpif = require('gulp-if');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var useref = require('gulp-useref');
-var argv = require('yargs').argv;
 var inject = require('gulp-inject');
 var replace = require('gulp-replace');
 var rename = require("gulp-rename");
@@ -20,9 +19,11 @@ var ngAnnotate = require('gulp-ng-annotate');
 var ngConstant = require('gulp-ng-constant');
 var templateCache = require('gulp-angular-templatecache');
 var htmlreplace = require('gulp-html-replace');
+
 var path = config.path;
 var environments = config.environments;
-var argvEnv = ('local' === argv.env || 'staging' === argv.env || 'production' === argv.env) ? argv.env : 'local'
+var processEnv = process.env.ENVIRONMENT;
+var argvEnv = ('local' === processEnv || 'staging' === processEnv || 'production' === processEnv) ? processEnv : 'local';
 var env = environments[argvEnv];
 
 gulp.task('lint', lint);
@@ -49,6 +50,7 @@ gulp.task('watch', watch);
 gulp.task('revisions', revisions);
 gulp.task('replace-revisions-index', replaceRevisionsIndex);
 gulp.task('embed', embed);
+gulp.task('copy-moment', copyMoment);
 gulp.task('images', ['images-svg', 'images-png']);
 gulp.task('local', local);
 gulp.task('default', ['local']);
@@ -333,14 +335,22 @@ function embed() {
         .pipe(concat('lnr-embed.min.css'))
         .pipe(gulp.dest(path.dist.root));
 
-    return gulp.src(path.embed.js)
+    gulp.src(path.embed.js)
         .pipe(concat('lnr-embed.min.js'))
         .pipe(ngAnnotate())
         .pipe(gulp.dest(path.dist.root))
         .pipe(uglify('lnr-embed.min.js'))
         .pipe(gulp.dest(path.dist.root));
 
+    return gulp.src(path.app.js_modules)
+        .pipe(gulp.dest(path.dist.js_modules));
 }
+
+function copyMoment() {
+    return gulp.src(path.app.momentjs)
+        .pipe(gulp.dest(path.dist.moment));
+}
+
 /**
  * tasks for local development
  * @returns {gulp} for chaining
@@ -366,6 +376,7 @@ function local(cb) {
 function deploy(cb) {
     runSequence(
         'clean',
+        'copy-moment',
         'constants',
         'copy-index-tmp',
         'cache-templates-modules',

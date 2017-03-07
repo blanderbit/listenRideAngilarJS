@@ -12,7 +12,10 @@
   css_mdl.href = "https://code.getmdl.io/1.2.1/material.blue_grey-blue.min.css";
   css_mdl.rel = "stylesheet";
 
-  document.getElementsByTagName("head")[0].appendChild(css_mdl).appendChild(css_lnr).appendChild(scr_lnr);
+  var header = document.getElementsByTagName("head")[0];
+  header.appendChild(css_mdl);
+  header.appendChild(css_lnr);
+  header.appendChild(scr_lnr);
 
   /**
    * renders the bikes
@@ -40,7 +43,7 @@
 
       $("#listnride")
         // intro text
-        .append('<div class="mdl-grid"</div><div mdl-cell mdl-cell--4-col><div class="lnr-introtext">' + selectedLangText + '</div></div>')
+        .append('<div class="mdl-grid"><div mdl-cell mdl-cell--4-col><div class="lnr-introtext">' + selectedLangText + '</div></div>')
         // bikes rendering
         .append('<div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid"></div>');
 
@@ -61,7 +64,7 @@
           '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">' +
           '<bike-card>' +
           '<md-card class="lnr-bike-card _md">' +
-          '<a target="_blank" href="http://www.listnride.com/bikes/' + rideId + '"><img src="' + imageUrl + '"></img></a>' +
+          '<a target="_blank" class="lnr-links" href="http://www.listnride.com/bikes/' + rideId + '"><img src="' + imageUrl + '"></img></a>' +
           '<md-card-title layout="row" class="layout-row">' +
           '<md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true">'+
           '<img src="' + svgUrl + '" height="48" width="48"></img></md-icon>' +
