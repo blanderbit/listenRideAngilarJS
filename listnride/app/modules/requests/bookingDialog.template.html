@@ -39,7 +39,7 @@
       </div>
       <div layout="row" layout-align="space-between center">
         <span class="md-body-2">{{ 'shared.lnr-fee' | translate }}</span>
-        <span class="md-body-1">{{ bookingDialog.requests.request.total - bookingDialog.request.subtotal | currency: '€' }}</span>
+        <span class="md-body-1">{{ bookingDialog.requests.request.total - bookingDialog.requests.request.subtotal | currency: '€' }}</span>
       </div>
       <div layout="row" layout-align="space-between center" ng-if="bookingDialog.requests.request.voucher_value">
         <span class="md-body-2">{{ 'shared.voucher' | translate }}</span>
