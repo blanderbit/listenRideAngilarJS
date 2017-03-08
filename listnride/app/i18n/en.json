@@ -43,7 +43,8 @@
     "reviews": "Reviews",
     "for": "for",
     "per-day": "per day",
-    "join": "Join"
+    "join": "Join",
+    "voucher": "voucher"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",

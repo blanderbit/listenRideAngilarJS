@@ -285,7 +285,7 @@ var helper = {
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm">duration</span>' +
             '<span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 day, 0 hours</span>' +
             '</li>' +
-            '<md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>' +
+            '<lnr-vertical-divider></lnr-vertical-divider>' +
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm">subtotal</span>' +
             '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>' +
