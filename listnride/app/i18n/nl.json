@@ -724,10 +724,7 @@
       "text-1": "Conceived as the Airbnb for bicycles, listnride offers an alternative to the classic bike rental: private owners, dealers or manufacturers offer their bicycles for rent on listnride. Tourists, citizens, families, sportsmen and business travelers rent the right bike for their style and needs.",
       "text-2": "Especially for the MCBW, visitors can rent a bike of the brands <b>Brompton Folding Bike</b> and <b>Ampler E-Bike</b> for free <b>(Voucher Code: LNR2017)</b> for half a day. listnride pursues the vision of offering as many people anywhere in the world uncomplicated access to high-quality, stylish bicycles. If you want to explore Munich, go cycling with listnride!",
       "location-description": "Choose one of the four locations",
-<<<<<<< HEAD
       "location-text": "The four locations are <b>① Munix Finest Bicycles</b> in Wörthstraße 11, <b>② Velofactum</b> in Schopenhauerstraße 69,<br><b>③ Velocompany</b> in Schleißheimerstraße 106 and <b>④ listnride</b> at Pündterplatz 1"
-=======
-      "location-text": "The four locations are ① Munix Finest Bicycles in Wörthstraße 11, ② Velofactum in Frohschammerstr. 14, ③ Velocompany in Schleißheimerstr. 106 and ④ ourselves at Münchner Freiheit"
     },
     "cwd": {
       "home": {
@@ -753,7 +750,6 @@
         "text-1": "If you do not own a roadbike, or just do not want to bring your own bike, we have roadbikes available which you can easily rent for free for the ride. During the Cycling World, we are hosting a group ride which will take you out of the city into the countryside. Leaving from our booth (# O-1) on the fair ground, we’ll head towards the former rocket station Hombroich, where we will have a quick stop with snacks and drinks. Refuelled from the break the ride will continue through the relatively unknown but beautiful scenery until we’re back at the fairground. Arrived back at the fairground, you are invited to have a refreshment at the booth of Schickemütze (# xx)<br><br>Test bikes are available from Cervélo and Ridley. Sign-up and book one of the outstanding bikes for the ride for free, first come first served. The overview of all bikes available you can find here (deeplink to bike page)",
         "text-2": "<b>Start:</b><br><br><b>Distance:</b> ca. 75km<br><br><b>Speed:</b> 25-28 kmh, moderate<br><br><b>Pit-Stop:</b> A Café at the rocketstation Hombroich provides snacks and drinks<br><br><b>Requirement:</b> Roadbike, Helmet, Clipless shoes"
       }
->>>>>>> dev
     }
   },
 

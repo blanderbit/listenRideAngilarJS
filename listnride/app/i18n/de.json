@@ -726,10 +726,7 @@
       "text-1": "Konzipiert als Airbnb für Fahrräder, bietet listnride eine Alternative zum klassischen Fahrradverleih: Privatleute, Händler oder Hersteller bieten bei listnride ihre Fahrräder zum Verleih an. Touristen, Mitbürger, Familien, Sportler und Geschäftsreisende mieten je nach Bedarf genau das richtige Rad für ihren Stil und Zweck.",
       "text-2": "Während der MCBW können Besucher nun exklusiv an vier Standorten Räder der Marken <b>Brompton Faltrad</b> und <b>Ampler E-Bike</b> kostenfrei <b>(Gutschein Code: LNR2017)</b> für einen halben Tag leihen. listnride verfolgt die Vision, möglichst vielen Menschen überall auf der Welt unkomplizierten und bedarfsgerechten Zugang zu hochwertigen, stilvollen Fahrrädern zu ermöglichen.",
       "location-description": "Wähle einen der vier Standorte",
-<<<<<<< HEAD
       "location-text": "Die vier Standorte sind <b>① Munix Finest Bicycles</b> in der Wörthstraße 11, <b>② Velofactum</b> in der Schopenhauerstraße 69,<br><b>③ Velocompany</b> in der Schleißheimerstraße 106 und <b>④ listnride</b> am Pündterplatz 1"
-=======
-      "location-text": "Die vier Standorte sind ① Munix Finest Bicycles in der Wörthstraße 11, ② Velofactum in der Frohschammerstr. 14, ③ Velocompany in der Schleißheimerstr. 106 und ④ wir an der Münchner Freiheit"
     },
     "cwd": {
       "home": {
@@ -755,7 +752,6 @@
         "text-1": "Um gemeinsam auf dem Rennrad eine schöne Zeit zu verbringen,  laden Schickemütze und wir euch ein, das Düsseldorfer Umland mit uns während der Cycling World zu erkunden. Raus aus Düsseldorf, geht es Richtung Raketenstation Hombroich, wo wir uns kurz mit Snacks und Getränken erfrischen werden um dann die Tour frisch gestärkt fortzusetzen bis wir wieder am Messegelände ankommen.<br><br>Falls du kein Rennrad dein eigen nennst, oder sich die Anreise mit dem Fahrrad nicht lohnt, wir haben Rennräder von Cervélo und Ridley zur Verfügung die du dir ganz einfach und kostenfrei für die Ausfahrt leihen kannst.",
         "text-2": "<b>Start:</b><br><br><b>Distance:</b> ca. 75km<br><br><b>Speed:</b> 25-28 kmh, moderate<br><br><b>Pit-Stop:</b> Café at rocketstation Hombroich snacks + drinks provided<br><br><b>Requirements:</b> Road bike, helmets and foot retention"
       }
->>>>>>> dev
     }
   },
 
