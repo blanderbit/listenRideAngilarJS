@@ -402,15 +402,61 @@ angular.module('requests',[]).component('requests', {
         });
       };
 
-      // It is a request sent by rider, but not yet accepted by the lister. 
-      // The pending request moves to Upcoming Rentals as soon as the lister
-      // accepted and the rider accepted and paid
+      /**
+       * It is a request sent by rider, but not yet accepted by the lister. 
+       * The pending request moves to Upcoming Rentals as soon as the lister
+       * accepted and the rider accepted and paid
+       */
       requests.filterPendingRequests = function (request) {
         // filter for lister or rider
         requests.filterBikes(request);
         // filter for pending requests
         requests[request] = requests[request].filter(function (response) {
           return (response.status === 1 || response.status === 2);
+        });
+      };
+
+      /**
+       * It is a request sent by rider, but not yet accepted by the lister. 
+       * The pending request moves to Upcoming Rentals as soon as the lister
+       * accepted and the rider accepted and paid
+       */
+      requests.filterUpcomingRentals = function (request) {
+        var currentDate = new Date();
+        // filter for lister or rider
+        requests.filterBikes(request);
+        // filter for pending requests
+        requests[request] = requests[request].filter(function (response) {
+          return (response.status === 3 && (response.start_date > currentDate));
+        });
+      };
+
+      /**
+       * Rentals accepted and paid but are now in the past,
+       * meaning 24h after the End Date.
+       */
+      requests.filterPastRentals = function (request) {
+        var currentDate = new Date();
+        // filter for lister or rider
+        requests.filterBikes(request);
+        // filter for pending requests
+        requests[request] = requests[request].filter(function (response) {
+          return (response.status === 3 && (response.end_date < currentDate));
+        });
+      };
+
+      /**
+       * These were the pending requests
+       * but their end time is now over
+       * 
+       */
+      requests.filterExpiredRequests = function (request) {
+        var currentDate = new Date();
+        // filter for lister or rider
+        requests.filterBikes(request);
+        // filter for pending requests
+        requests[request] = requests[request].filter(function (response) {
+          return ((response.status === 1 || response.status === 2) && (response.end_date < currentDate));
         });
       };
     }
