@@ -56,7 +56,9 @@
     "Thu": "Thu",
     "Fri": "Fri",
     "Sat": "Sat",
-    "Sun": "Sun"
+    "Sun": "Sun",
+    "join": "Join",
+    "voucher": "Voucher"
   },
 
   "toasts": {
@@ -722,7 +724,36 @@
       "text-1": "Conceived as the Airbnb for bicycles, listnride offers an alternative to the classic bike rental: private owners, dealers or manufacturers offer their bicycles for rent on listnride. Tourists, citizens, families, sportsmen and business travelers rent the right bike for their style and needs.",
       "text-2": "Especially for the MCBW, visitors can rent a bike of the brands <b>Brompton Folding Bike</b> and <b>Ampler E-Bike</b> for free <b>(Voucher Code: LNR2017)</b> for half a day. listnride pursues the vision of offering as many people anywhere in the world uncomplicated access to high-quality, stylish bicycles. If you want to explore Munich, go cycling with listnride!",
       "location-description": "Choose one of the four locations",
+<<<<<<< HEAD
       "location-text": "The four locations are <b>① Munix Finest Bicycles</b> in Wörthstraße 11, <b>② Velofactum</b> in Schopenhauerstraße 69,<br><b>③ Velocompany</b> in Schleißheimerstraße 106 and <b>④ listnride</b> at Pündterplatz 1"
+=======
+      "location-text": "The four locations are ① Munix Finest Bicycles in Wörthstraße 11, ② Velofactum in Frohschammerstr. 14, ③ Velocompany in Schleißheimerstr. 106 and ④ ourselves at Münchner Freiheit"
+    },
+    "cwd": {
+      "home": {
+        "title": "listnride at the Cycling World Düsseldorf",
+        "description": "Düsseldorf will host a new trade fair for cycling: the Cycling World. We, listnride will be on the spot with selected brands and manufacturers such as Ampler and Cervelo, to demonstrate our community platform on the basis of test-rides. In addition, we want to explore the surrounding countryside with you on two guided roadbike tours to bring the motivation gained at the fair straight to the road!",
+        "pp-title": "Saturday",
+        "kr-title": "Sunday",
+        "pp-description": "Whether you’re a seasoned racer or a brand new roadie, the Push'n'Post Ride provides the perfect opportunity to join for a social ride in the beautiful surroundings of Düsseldorf during CWD. The ride is powered by Cervelo and Cycle Cafe.",
+        "kr-description": "Kuchen & Raketen means Cakes & Rockets. During the Cycling World, we will together with Schickemütze host a group ride which will take you out to an abandoned rocket station.",
+        "title2": "We've got perfect bikes to try, by Ampler und Cervélo",
+        "subtitle2": "Whether you want to try the bike a minute or an hour - simply book it for free",
+        "ampler": "The Estonian start-up will provide innovative and urban E-Bikes to test ride. Choose between Hawk, the dynamic single-speed or Bilberry, the comfortable city-bike and get to know e-bikes on a whole new level.",
+        "cervelo": "The Canadian roadbike manufacturer Cervélo will bring the latest models to the Cycling World, which you can test out during one of the social rides over the weekend.",
+        "our-bikes": "See all our Bikes"
+      },
+      "pp": {
+        "title": "Push'n'Post",
+        "text-1": "This event provides the perfect occasion for you to join a social ride during Cycling World Düsself. Cervélo offers some of their latest models to test for free. Whether you’re a seasoned racer or a brand-new roadie, the Push'n'Post ride invites you to join for this social ride in the beautiful surroundings of Düsseldorf. Sign-up and book one of the outstanding Cervélo Bikes for the ride, first come first served. The overview of all bikes available you can find here (deeplink to bike page). Last but not least, you can win a starter kit for Rad am Ring including a Cervélo by participating in our Instagram hashtag contest. Details on this will be announced prior to the event.<br><br>Take the chance to test one of the outstanding Cervélo Bikes for the ride. You can book one of the listed bikes below. Addiotionally, there will be a photo challenge on Instagram, where you'll get the chance to win a rare Rad am Ring starter package including a Cervélo bike for the event. More details will be announced prior to the event.",
+        "text-2": "<b>Start:</b> meet for coffee at 11:00AM Cervelo / Cycle Cafe booth D1/2<br><br><b>Roll out:</b> at 11:30AM from the listnride booth O1<br><br><b>Distance:</b> This ride will be 60 to 70 km<br><br><b>Pace:</b> 24-27 kph avg, moderat<br><br><b>After Ride:</b> Fuel up with a coffee and a snack<br><br><b>Requirements:</b> Road bike, helmets and clipless shoes<br><br>"
+      },
+      "kr": {
+        "title": "Kuchen und Raketen",
+        "text-1": "If you do not own a roadbike, or just do not want to bring your own bike, we have roadbikes available which you can easily rent for free for the ride. During the Cycling World, we are hosting a group ride which will take you out of the city into the countryside. Leaving from our booth (# O-1) on the fair ground, we’ll head towards the former rocket station Hombroich, where we will have a quick stop with snacks and drinks. Refuelled from the break the ride will continue through the relatively unknown but beautiful scenery until we’re back at the fairground. Arrived back at the fairground, you are invited to have a refreshment at the booth of Schickemütze (# xx)<br><br>Test bikes are available from Cervélo and Ridley. Sign-up and book one of the outstanding bikes for the ride for free, first come first served. The overview of all bikes available you can find here (deeplink to bike page)",
+        "text-2": "<b>Start:</b><br><br><b>Distance:</b> ca. 75km<br><br><b>Speed:</b> 25-28 kmh, moderate<br><br><b>Pit-Stop:</b> A Café at the rocketstation Hombroich provides snacks and drinks<br><br><b>Requirement:</b> Roadbike, Helmet, Clipless shoes"
+      }
+>>>>>>> dev
     }
   },
 

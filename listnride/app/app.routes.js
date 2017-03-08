@@ -150,6 +150,24 @@
       });
 
       $stateProvider.state({
+        name: 'cwd',
+        url: '/cyclingworld',
+        templateUrl: 'app/modules/events/cwd/cwd.template.html'
+      });
+
+      $stateProvider.state({
+        name: 'pushnpost',
+        url: '/pushnpost',
+        template: '<pushnpost></pushnpost>'
+      });
+
+      $stateProvider.state({
+        name: 'kuchenundraketen',
+        url: '/kuchenundraketen',
+        template: '<kuchenundraketen></kuchenundraketen>'
+      });
+
+      $stateProvider.state({
         name: 'listingABike',
         url: '/listing-a-bike',
         template: '<listing-a-bike></listing-a-bike>',
