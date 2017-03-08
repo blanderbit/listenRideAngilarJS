@@ -25,6 +25,13 @@
         <!-- Left Column displaying list of all Requests -->
         <!-- showing only as a rider -->
         <md-content flex class="requests-list" flex-order="1">
+          <div layout="column" layout-align="center end" layout-margin>
+            <md-input-container class="md-block">
+              <md-select ng-model="requests.filters.riderSelected" ng-change="requests.filters.applyFilter('riderRequests', requests.filters.riderSelected)">
+                <md-option ng-repeat="filter in ::requests.filters.options" value="{{$index}}">{{filter | titlecase}}</md-option>
+              </md-select>
+            </md-input-container>
+          </div>
           <md-progress-linear class="md-accent" ng-if="requests.loadingList" md-mode="query"></md-progress-linear>
           <div layout="column" layout-align="center center" layout-fill ng-if="!requests.loadingList && requests.riderRequests.length == 0">
             <p class="lnr-center">{{ 'requests.no-requests-yet' | translate }}</p>
@@ -69,6 +76,13 @@
         </div>
         <!-- Left Column displaying list of all Requests -->
         <md-content flex class="requests-list" flex-order="1">
+          <div layout="column" layout-align="center end" layout-margin>
+            <md-input-container class="md-block">
+              <md-select ng-model="requests.filters.listerSelected" ng-change="requests.filters.applyFilter('listerRequests', requests.filters.listerSelected)">
+                <md-option ng-repeat="filter in ::requests.filters.options" value="{{$index}}">{{filter | titlecase}}</md-option>
+              </md-select>
+            </md-input-container>
+          </div>
           <md-progress-linear class="md-accent" ng-if="requests.loadingList" md-mode="query"></md-progress-linear>
           <div layout="column" layout-align="center center" layout-fill ng-if="!requests.loadingList && requests.listerRequests.length == 0">
             <p class="lnr-center">{{ 'requests.no-requests-yet' | translate }}</p>

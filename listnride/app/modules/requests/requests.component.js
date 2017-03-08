@@ -15,6 +15,20 @@ angular.module('requests',[]).component('requests', {
       // total requests for rider or lister
       requests.riderRequests = [];
       requests.listerRequests = [];
+      requests.selectedTab = 0;
+
+      requests.filters = {
+        options: ['all requests', 'current rentals', 'pending rentals', 'upcoming rentals', 'past rentals'],
+        riderSelected: 0,
+        listerSelected: 0,
+        applyFilter: function (request, selected) {
+          selected = parseInt(selected);
+          // all requests for selected tab (rider or lister)
+          if (selected === 0) requests.filterBikes(request);
+          else if (selected === 1) requests.filterCurrentRentals(request);
+          else if (selected === 2) requests.filterPendingRequests(request);
+        }
+      };
       // selected request for rider or lister
       requests.riderRequest = {};
       requests.listerRequest = {};
@@ -39,9 +53,12 @@ angular.module('requests',[]).component('requests', {
       api.get('/users/' + $localStorage.userId + '/requests').then(
         function(success) {
           requests.selectedTab = 0;
+          // get all requests
           requests.allRequests = success.data;
-          requests.filterBikesAsLister(requests.allRequests);
-          requests.filterBikesAsRider(requests.allRequests);
+          // get all requests for lister
+          requests.filterBikes('listerRequests');
+          // get all requests for rider
+          requests.filterBikes('riderRequests');
           requests.loadingList = false;
           if ($stateParams.requestId) {
             requests.loadRequest($stateParams.requestId);
@@ -92,7 +109,7 @@ angular.module('requests',[]).component('requests', {
         }
       };
 
-      var reloadRequest = function(requestId, userId) {
+      var reloadRequest = function(requestId) {
         api.get('/requests/' + requestId).then(
           function(success) {
             // if user id matches to current user
@@ -146,11 +163,11 @@ angular.module('requests',[]).component('requests', {
       };
 
       // This function handles booking and all necessary validations
-      requests.confirmBooking = function(request) {
+      requests.confirmBooking = function() {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
-            if (requests[request].subtotal == 0 || success.data.current_payment_method) {
-              showBookingDialog(request);
+            if (requests.listerRequest.subtotal == 0 || success.data.current_payment_method) {
+              showBookingDialog();
             } else {
               // User did not enter any payment method yet
               showPaymentDialog();
@@ -190,7 +207,7 @@ angular.module('requests',[]).component('requests', {
         });
       }
 
-      var showBookingDialog = function(event, request) {
+      var showBookingDialog = function(event) {
         $mdDialog.show({
           controller: BookingDialogController,
           controllerAs: 'bookingDialog',
@@ -225,7 +242,6 @@ angular.module('requests',[]).component('requests', {
 
       // Sends a new message by directly appending it locally and posting it to the API
       requests.sendMessage = function(request) {
-        console.log('req: ', request);
         requests[request].glued = true
         if( requests.message ) {
           var data = {
@@ -263,8 +279,7 @@ angular.module('requests',[]).component('requests', {
         };
       };
 
-      var BookingDialogController = function(request) {
-        console.log('req in booking ctrl: ', request);
+      var BookingDialogController = function() {
         var bookingDialog = this;
         bookingDialog.requests = requests;
         bookingDialog.duration = date.duration(requests.request.start_date, requests.request.end_date);
@@ -322,12 +337,12 @@ angular.module('requests',[]).component('requests', {
           };
           var newStatus;
 
-          if (requests.request.rideChat) {
-            data.rating.ride_id = requests.request.ride.id;
+          if (requests.riderRequest.rideChat) {
+            data.rating.ride_id = requests.riderRequest.ride.id;
             newStatus = 6;
           }
           else {
-            data.rating.user_id = requests.request.user.id;
+            data.rating.user_id = requests.riderRequest.user.id;
             newStatus = 5
           }
 
@@ -340,16 +355,16 @@ angular.module('requests',[]).component('requests', {
                   "status": newStatus
                 }
               };
-              api.put("/requests/" + requests.request.id, data).then(
+              api.put("/requests/" + requests.riderRequest.id, data).then(
                 function(success) {
-                  reloadRequest(requests.request.id);
+                  reloadRequest(requests.riderRequest.id);
                 },
                 function(error) {
-                  reloadRequest(requests.request.id);
+                  reloadRequest(requests.riderRequest.id);
                   console.log("error updating request");
                 }
               );
-              },
+            },
             function(error) {
               console.log("Error occured while rating");
             }
@@ -359,46 +374,43 @@ angular.module('requests',[]).component('requests', {
         ratingDialog.hide = hideDialog;
       }
 
-      var compareStartDates = function (timespan) {
-        var start = timespan.slice(0, timespan.indexOf("-"));
-        var end = timespan.substr(timespan.indexOf("-") + 1);
-      };
-
-      var compareEndDates = function (timespan) {
-        var start = timespan.slice(0, timespan.indexOf("-"));
-        var end = timespan.substr(timespan.indexOf("-") + 1);
-        var array  =[];
-        for (var loop =0; loop < 3; loop +=1) array.push(start.split('.')[loop]);
-      };
-
-      requests.filterBikesAsLister = function () {
-        requests.listerRequests = requests.allRequests.filter(function (response) {
-          return (response.user.id === $localStorage.userId);
+      /**
+       * filter lister/rider requests from all requests
+       * DOM filtering is avoid b/c of performance overhead
+       * @return {requests} requests[requests]
+       * @param {string} requests 
+       */
+      requests.filterBikes = function (request) {
+        requests[request] = requests.allRequests.filter(function (response) {
+          var condition = response.user.id === $localStorage.userId;
+          return (request === 'listerRequests') ? condition : !condition;
         });
       };
 
-      requests.filterBikesAsRider = function () {
-        requests.riderRequests = requests.allRequests.filter(function (response) {
-          return (response.user.id !== $localStorage.userId);
-        });
-      };
-
-      requests.filterCurrentRentals = function () {
-        requests.requests = requests.allRequests.filter(function (response) {
+      /**
+       * All rentals which are currently rented out.
+       * Within Request Start Date and End Date.
+       * @return {requests} requests[requests]
+       * @param {string} requests 
+       */
+      requests.filterCurrentRentals = function (request) {
+        // filter for lister or rider
+        requests.filterBikes(request);
+        // filter for pending requests
+        requests[request] = requests[request].filter(function (response) {
           return (response.status === 3);
         });
       };
 
-      requests.filterPendingRequests = function () {
-        requests.requests = requests.allRequests.filter(function (response) {
+      // It is a request sent by rider, but not yet accepted by the lister. 
+      // The pending request moves to Upcoming Rentals as soon as the lister
+      // accepted and the rider accepted and paid
+      requests.filterPendingRequests = function (request) {
+        // filter for lister or rider
+        requests.filterBikes(request);
+        // filter for pending requests
+        requests[request] = requests[request].filter(function (response) {
           return (response.status === 1 || response.status === 2);
-        });
-      };
-
-      requests.filterUpcomingRentals = function () {
-        var date = today.getFullYear()+'.'+(today.getMonth()+1)+'.'+today.getDate();
-        requests.requests = requests.allRequests.filter(function (response) {
-          return (response.status === 3 && response.status === 2);
         });
       };
     }
