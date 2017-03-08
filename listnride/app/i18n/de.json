@@ -42,7 +42,8 @@
     "lister": "Vermieter",
     "reviews": "Bewertungen",
     "for": "für",
-    "per-day": "pro Tag"
+    "per-day": "pro Tag",
+    "join": "Mitmachen"
   },
 
   "toasts": {
@@ -709,6 +710,31 @@
       "text-2": "Während der MCBW können Besucher nun exklusiv an vier Standorten Räder der Marken <b>Brompton Faltrad</b> und <b>Ampler E-Bike</b> kostenfrei (Gutschein Code: <b>LNR2017</b>) für einen halben Tag leihen. listnride verfolgt die Vision, möglichst vielen Menschen überall auf der Welt unkomplizierten und bedarfsgerechten Zugang zu hochwertigen, stilvollen Fahrrädern zu ermöglichen.",
       "location-description": "Wähle einen der vier Standorte",
       "location-text": "Die vier Standorte sind ① Munix Finest Bicycles in der Wörthstraße 11, ② Velofactum in der Frohschammerstr. 14, ③ Velocompany in der Schleißheimerstr. 106 und ④ wir an der Münchner Freiheit"
+    },
+    "cwd": {
+      "home": {
+        "title": "listnride auf der Cycling World Düsseldorf",
+        "description": "Deutschland bekommt mit der Cycling World eine neue, innovative Messe rund ums Fahrrad. Wir, listnride werden mit ausgewählten Marken und Herstellern wie Ampler und Cervelo vor Ort sein, unsere Online Plattform präsentieren und euch spontane Testfahrten anbieten. Zusätzlich wollen wir mit euch auf zwei geführten Rennrad Touren das Umland erkunden um die auf der Messe gewonnene Motivation direkt auf die Straße zu bringen!",
+        "pp-title": "Samstag",
+        "kr-title": "Sonntag",
+        "pp-description": "Egal ob Du ein erfahrener Roadbiker oder ein brandneuer Rooky bist, der Push'n'Post Ride bietet die perfekte Gelegenheit für eine Ausfahrt mit Gleichgesinnten in der schönen Umgebung Düssseldorfs während der CWD. Die Ausfahrt wird von unseren Partnern Cervelo und Cycle Cafe unterstützt.",
+        "kr-description": "Das ist das Motto dieser Gruppenausfahrt, die zusammen mit Schickemütze während der Cycling World stattfindet und zu einer ehemaligen Raketenstation führt.",
+        "title2": "Wir bringen euch perfekte Räder zum Testen, von Ampler und Cervélo",
+        "subtitle2": "Ob nur für ein paar Minuten oder ein paar Stunden - einfach umsonst buchen",
+        "ampler": "Innovative, urbane E-Bikes aus Estland. Wähle zwischen Hawk, einem dynamischen Single-Speed, oder Bilberry, dem komfortablen City-Bike und entdecke E-Bikes neu.",
+        "cervelo": "Die kanadische Edelrennrad-Schmiede Cervélo gibt euch die Chance die neuesten Modelle an unserem Stand ausgiebig auf Herz und Nieren zu testen.",
+        "our-bikes": "Unsere Räder auf der Messe"
+      },
+      "pp": {
+        "title": "Push'n'Post",
+        "text-1": "Egal ob Du ein erfahrener Roadbiker oder ein frischer Rookie bist, der Push'n'Post Ride bietet die perfekte Gelegenheit für eine Ausfahrt mit Gleichgesinnten in der schönen Umgebung Düssseldorfs während der Cycling World Düsseldorf. Cervélo und Cycle Café stehen uns dabei unterstützend zur Seite.<br><br>Nutze die Gelegenheit und leihe dir ein hochwertiges Cervélo Bike für die Ausfahrt. Du kannst einfach und kostenlos eines der gelisteten Bikes buchen. Zusätzlich wird es einen Fotowettbewerb auf Instagram geben, bei dem es Chance gibt einen Rad Am Ring Startplatz samt Cervélo Leihrad zu gewinnen gibt. Nähere Infos werden folgen.",
+        "text-2": "<b>Start:</b> mit Kaffee um 11:00 Uhr Cervélo / Cycle Cafe, Stand D1/2<br><br><b>Abfahrt:</b> um 11:30 Uhr bei listnride, Stand O1<br><br><b>Distanz:</b> Diese Fahrt beträgt 60 bis 70 km<br><br><b>Tempo:</b> 24-27 kmh, locker<br><br><b>Nach der Fahrt:</b> Genießen bei Kaffee und Kuchen<br><br><b>Voraussetzungen:</b> Rennrad, Helm und Klickpedale"
+      },
+      "kr": {
+        "title": "Kuchen und Raketen",
+        "text-1": "Um gemeinsam auf dem Rennrad eine schöne Zeit zu verbringen,  laden Schickemütze und wir euch ein, das Düsseldorfer Umland mit uns während der Cycling World zu erkunden. Raus aus Düsseldorf, geht es Richtung Raketenstation Hombroich, wo wir uns kurz mit Snacks und Getränken erfrischen werden um dann die Tour frisch gestärkt fortzusetzen bis wir wieder am Messegelände ankommen.<br><br>Falls du kein Rennrad dein eigen nennst, oder sich die Anreise mit dem Fahrrad nicht lohnt, wir haben Rennräder von Cervélo und Ridley zur Verfügung die du dir ganz einfach und kostenfrei für die Ausfahrt leihen kannst.",
+        "text-2": "<b>Start:</b><br><br><b>Distance:</b> ca. 75km<br><br><b>Speed:</b> 25-28 kmh, moderate<br><br><b>Pit-Stop:</b> Café at rocketstation Hombroich snacks + drinks provided<br><br><b>Requirements:</b> Road bike, helmets and foot retention"
+      }
     }
   },
 
