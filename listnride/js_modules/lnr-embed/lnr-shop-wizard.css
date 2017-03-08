@@ -6,6 +6,7 @@ html>body {
   -webkit-font-smoothing: antialiased;
 }
 
+
 /*------------ PAYMENT ------------*/
 
 #sp-payment.md-button {
@@ -299,12 +300,13 @@ lnr-horizontal-divider {
   border-color: #e0e0e0;
 }
 
-md-divider {
+lnr-vertical-divider {
   display: block;
   border-top-width: 1px;
   border-top-style: solid;
-  margin: 0;
   border-top-color: rgba(225, 230, 230, 1.0);
+  margin: 16px 0px;
+  padding: 0;
 }
 
 .mdl-list__item .mdl-list__item-primary-content {
@@ -336,14 +338,6 @@ div#lnr-tab-bar {
 
 div .date-picker-wrapper {
   margin-left: -8px;
-}
-
-.lnr-no-padding {
-  padding: 0;
-}
-
-.lnr-margin-lrg {
-  margin: 16px 0px;
 }
 
 
