@@ -27,6 +27,8 @@ angular.module('listnride', [
   'static',
   'brand-integration',
   'mcbw',
+  'pushnpost',
+  'kuchenundraketen',
   'listnride.constant',
   /* external modules */
   'ngMaterial',
