@@ -7,9 +7,16 @@ angular.module('pushnpost',[]).component('pushnpost', {
     function PushnpostController(api) {
       var pushnpost = this;
 
+      pushnpost.bikes = [];
+
       api.get('/users/1998').then(
         function(response) {
-          pushnpost.bikes = response.data.rides;
+          // Only retrieve the road bikes of the specified lister for the event
+          _.each(response.data.rides, function (value, index) {
+            if (value.category == 20) {
+              pushnpost.bikes.push(value);
+            }
+          });
         },
         function(error) {
           console.log("Error retrieving User", error);
