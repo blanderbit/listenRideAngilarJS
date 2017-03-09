@@ -16,22 +16,26 @@
 
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center" layout-padding>
       <div layout="column" flex-gt-xs="45">
-        <img flex="50" src="app/assets/ui_images/events/cwd_pushnpost.svg">
+        <div layout layout-align="center">
+          <img flex="40" src="app/assets/ui_images/events/cwd_pushnpost.svg"> 
+        </div>
         <h3 style="text-align: center" class="md-subhead">{{ 'events.cwd.home.pp-title' | translate }}</h3>
         <p style="text-align: center" translate="events.cwd.home.pp-description"></p>
         <div layout layout-align="center end">
-          <md-button ui-sref="pushnpost" target="_blank" flex="30" class="md-raised md-primary">{{ 'shared.join' | translate }}</md-button>
+          <md-button ui-sref="pushnpost" flex="30" class="md-raised md-primary">{{ 'shared.join' | translate }}</md-button>
         </div>
       </div>
       <div layout="row" flex-gt-xs="10" layout-align="center">
         <md-divider></md-divider>
       </div>
       <div layout="column" flex-gt-xs="45">
-        <img flex="55" src="app/assets/ui_images/events/cwd_kuchenraketen.svg">
+        <div layout layout-align="center">
+          <img flex="50" src="app/assets/ui_images/events/cwd_kuchenraketen.svg">
+        </div>
         <h3 style="text-align: center" class="md-subhead">{{ 'events.cwd.home.kr-title' | translate }}</h3>
-        <p style="text-align: center" translate="events.cwd.home.kr-description"></p>
+        <p style="text-align: center" translate="events.cwd.home.kr-description"></p><br>
         <div layout layout-align="center end">
-          <md-button ui-sref="kuchenundraketen" target="_blank" flex="30" class="md-raised md-primary">{{ 'shared.join' | translate }}</md-button>
+          <md-button ui-sref="kuchenundraketen" flex="30" class="md-raised md-primary">{{ 'shared.join' | translate }}</md-button>
         </div>
       </div>
     </div>
