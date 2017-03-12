@@ -13,7 +13,7 @@ angular.module('pushnpost',[]).component('pushnpost', {
         function(response) {
           // Only retrieve the road bikes of the specified lister for the event
           _.each(response.data.rides, function (value, index) {
-            if (value.category == 20) {
+            if (value.category == 20 && value.id < 730) {
               pushnpost.bikes.push(value);
             }
           });
