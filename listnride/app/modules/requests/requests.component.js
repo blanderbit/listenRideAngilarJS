@@ -151,6 +151,22 @@ angular.module('requests',[]).component('requests', {
         });
       }
 
+      var showPayoutDialog = function(event) {
+        $mdDialog.show({
+          controller: PayoutDialogController,
+          controllerAs: 'payoutDialog',
+          templateUrl: 'app/modules/requests/dialogs/payoutDialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: true,
+          fullscreen: true // Only for -xs, -sm breakpoints.
+        });
+      }
+
+      showPayoutDialog();
+
       var showChatDialog = function(event) {
         $mdDialog.show({
           controller: ChatDialogController,
@@ -278,6 +294,44 @@ angular.module('requests',[]).component('requests', {
           // For small screens, show Chat Dialog again
           hideDialog();
         }
+      };
+
+      var PayoutDialogController = function() {
+        var payoutDialog = this;
+
+        payoutDialog.addPayoutMethod = function () {
+        var data = {
+          "payment_method": payoutDialog.payoutMethod
+        };
+
+        data.payment_method.user_id = $localStorage.userId;
+
+        if (payoutDialog.payoutMethod.family == 1) {
+          data.payment_method.email = "";
+        } else {
+          data.payment_method.iban = "";
+          data.payment_method.bic = "";
+        }
+
+        api.post('/users/' + $localStorage.userId + '/payment_methods', data).then(
+          function (success) {
+            $mdToast.show(
+              $mdToast.simple()
+              .textContent($translate.instant('toasts.add-payout-success'))
+              .hideDelay(4000)
+              .position('top center')
+            );
+          },
+          function (error) {
+            $mdToast.show(
+              $mdToast.simple()
+              .textContent($translate.instant('toasts.error'))
+              .hideDelay(4000)
+              .position('top center')
+            );
+          }
+        );
+      };
       };
 
       var RatingDialogController = function() {

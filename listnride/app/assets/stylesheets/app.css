@@ -481,6 +481,7 @@ footer .lnr-link {
 @media (max-width:599px) {
  .md-dialog-content {
     width: 100%;
+    margin: 0 !important;
   } 
 }
 
