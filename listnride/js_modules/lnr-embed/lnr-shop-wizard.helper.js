@@ -60,7 +60,7 @@ var helper = {
         $("[translate]").each(function () {
             var element = $(this),
                 path = element.attr("translate");
-            element.text(helper.accessProperty(translations, path));
+            element.html(helper.accessProperty(translations, path));
         });
         return this;
     },
