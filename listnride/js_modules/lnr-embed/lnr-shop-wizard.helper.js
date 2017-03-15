@@ -38,11 +38,9 @@ var helper = {
      */
     getTranslations: function (lang) {
         switch (lang) {
-            case 'en-US':
+            case 'en':
                 return this.translationsConfigObject.en;
-            case 'en-UK':
-                return this.translationsConfigObject.en;
-            case 'de-DE':
+            case 'de':
                 return this.translationsConfigObject.de;
         }
     },
@@ -56,7 +54,8 @@ var helper = {
         // get elements with 'translate' attribute
         // and get attribute value
         // apply text from translation object 
-        translations = helper.getTranslations(navigator.language);
+        var lang = navigator.language.split('-')[0].toLowerCase();
+        var translations = helper.getTranslations(lang);
         $("[translate]").each(function () {
             var element = $(this),
                 path = element.attr("translate");
