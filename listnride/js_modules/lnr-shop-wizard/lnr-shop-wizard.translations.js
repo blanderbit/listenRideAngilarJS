@@ -18,10 +18,12 @@ var translationsConfigObject = {
             infoText: ''
         },
         basicInfoPanel: {
-            info: 'Please fill you personal info:',
+            title: '',
+            info: 'Now, please provide your name as well as a valid email address we can send your booking confirmation to.',
             firstName: 'Firstname',
             lastName: 'Lastname',
             email: 'Email Address',
+            emailRepeat: 'Repeat Email',
             infoHeader: '',
             infoText: ''
         },
@@ -69,10 +71,12 @@ var translationsConfigObject = {
             infoText: ''
         },
         basicInfoPanel: {
-            info: 'Bitte f&uuml;llen Sie bitte pers&ouml;nliche Informationen:',
+            title: '',
+            info: 'Bitte gib deinen Namen und eine g&uuml;ltige Email-Adresse an, an welche wir die Buchungsbest&auml;tigung senden k&ouml;nnen.',
             firstName: 'Vorname',
             lastName: 'Nachname',
-            email: 'E-Mail-Adresse',
+            email: 'Email-Adresse',
+            emailRepeat: 'Email wiederholen',
             infoHeader: '',
             infoText: ''
         },
@@ -123,6 +127,7 @@ var translationsConfigObject = {
             firstName: 'Voornaam',
             lastName: 'Achternaam',
             email: 'E-mailadres',
+            emailRepeat: 'Repeat Email',
             infoHeader: '',
             infoText: ''
         },

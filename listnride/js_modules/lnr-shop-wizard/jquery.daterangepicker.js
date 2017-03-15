@@ -211,7 +211,7 @@
 			'week-5' : 'fr',
 			'week-6' : 'sa',
 			'week-7' : 'so',
-			'month-name': ['januar','februar','märz','april','mai','juni','juli','august','september','oktober','november','dezember'],
+			'month-name': ['januar','februar','m&auml;rz','april','mai','juni','juli','august','september','oktober','november','dezember'],
 			'shortcuts' : 'Schnellwahl',
 			'past': 'Vorherige',
 			'following':'Folgende',

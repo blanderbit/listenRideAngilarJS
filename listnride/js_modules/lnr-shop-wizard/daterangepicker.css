@@ -16,21 +16,17 @@
 {
 	position:absolute;
 	z-index:1;
-	// font-size:14px;
 	line-height:20px;
-	// color:#aaa;
-	// box-shadow:3px 3px 10px rgba(0,0,0,0.5);
 	box-sizing: initial;
 }
 .date-picker-wrapper.inline-wrapper { position: relative; box-shadow: none; display:inline-block;}
 .date-picker-wrapper.single-date {
 	width:auto;
 }
-/*// .date-picker-wrapper.no-shortcuts { padding-bottom:12px;}*/
-/*// .date-picker-wrapper.no-topbar { padding-top:12px;}*/
+/* .date-picker-wrapper.no-shortcuts { padding-bottom:12px;}*/
+/* .date-picker-wrapper.no-topbar { padding-top:12px;}*/
 .date-picker-wrapper .footer
 {
-	// font-size:11px;
 	padding-top: 3px;
 }
 .date-picker-wrapper b
@@ -54,7 +50,7 @@
 	// padding:5px;
 	cursor:default;
 	position:relative;
-	_overflow:hidden;
+	/*_overflow:hidden;*/
 }
 
 .date-picker-wrapper .month-wrapper thead
@@ -67,7 +63,8 @@
 .date-picker-wrapper .month-wrapper table
 {
 	width:100%;
-	// float:left;
+	font-size: 14px !important;
+	/* float:left; */
 }
 .date-picker-wrapper .month-wrapper table.month2
 {
@@ -218,7 +215,7 @@
 	top: 6px;
 	padding:3px 5px;
 	margin:0;
-	// font-size:12px;
+	/* font-size:12px; */
 	border-radius:4px;
 	cursor:pointer;
 	

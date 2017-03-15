@@ -196,7 +196,6 @@ var helper = {
 
         var rentalInfoHTML =
             '<div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">' +
-            '<div class="lnr-tab-content">' +
             '<p class="md-subhead-sm">Rent details</p>' +
             '<ul class="lnr-list-sm mdl-list">' +
             '<li class="mdl-list__item">' +
@@ -215,9 +214,8 @@ var helper = {
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm" translate="rental.total"></span>' +
             '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-total">0 &euro;</span>' +
-            ' </li>' +
-            '  </ul>' +
-            '</div>' +
+            '</li>' +
+            '</ul>' +
             '</div>'
 
         rentalInfo.replaceWith(rentalInfoHTML);
@@ -237,8 +235,8 @@ var helper = {
 
             // open the grid
             var navButtonHTML =
-                '<div class="mdl-grid">' +
-                '<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">';
+                '<div class="lnr-button-bar mdl-grid">' +
+                '<div class="lnr-button-cell mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">';
 
             // back button
             if (back) {
@@ -250,7 +248,7 @@ var helper = {
             }
 
             navButtonHTML = navButtonHTML
-                .concat('<div align="right" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">');
+                .concat('<div align="right" class="lnr-button-cell mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">');
 
             // next button
             if (next) {
