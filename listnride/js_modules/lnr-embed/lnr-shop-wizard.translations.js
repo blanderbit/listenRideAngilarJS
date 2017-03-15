@@ -102,48 +102,48 @@ var translationsConfigObject = {
             lnrHeaderText: 'The perfect bike. Simply rent it.'
         },
         tabs: {
-            tabDuration: 'Duration',
-            tabBasicInfo: 'User Info',
-            tabPaymentDetail: 'Payment Details',
-            tabBookingOverview: 'Booking Overview'
+            tabDuration: 'Duur',
+            tabBasicInfo: 'Gebruikers Informatie',
+            tabPaymentDetail: 'Betalingsdetails',
+            tabBookingOverview: 'Booking Overzicht'
         },
         durationPanel: {
-            info: 'Please mark rent period:',
-            from: 'from',
-            to: 'to',
+            info: 'Aankruisen huurperiode:',
+            from: 'van',
+            to: 'tot',
             infoHeader: '',
             infoText: ''
         },
         basicInfoPanel: {
-            info: 'Please fill you personal info:',
-            firstName: 'Firstname',
-            lastName: 'Lastname',
-            email: 'Email Address',
+            info: 'Vul je persoonlijke informatie:',
+            firstName: 'Voornaam',
+            lastName: 'Achternaam',
+            email: 'E-mailadres',
             infoHeader: '',
             infoText: ''
         },
         paymentDetailsPanel: {
-            cardholderName: 'Cardholder Name',
-            cardNumber: 'Card Number',
+            cardholderName: 'Naam Pashouder',
+            cardNumber: 'Kaartnummer',
             payPal: 'PayPal',
             creditCard: 'Credit Card',
-            expiry: 'Expires',
+            expiry: 'Verloopt',
             CVV: 'CVV',
-            save: 'Save Data',
-            infoHeader: 'Enter your Payment Details',
-            infoText: 'All your data gets transmitted securely via SSH. You can pay by Paypal or Credit Card.'
+            save: 'Gegevens Opslaan',
+            infoHeader: 'Voer uw betalingsgegevens',
+            infoText: 'Al uw data wordt veilig verzonden via SSH. U kunt betalen met Paypal of creditcard.'
         },
         rental: {
-            duration: 'duration',
+            duration: 'duur',
             fee: 'listnride fee (incl. tax)',
             total: 'total',
             subtotal: 'subtotal'
         },
         bookingOverviewPanel: {},
         navigation: {
-            back: 'Back',
-            next: 'Next',
-            proceed: 'Proceed'
+            back: 'Terug',
+            next: 'Volgende',
+            proceed: 'Doorgaan'
         }
     },
 }
