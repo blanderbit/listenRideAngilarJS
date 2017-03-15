@@ -1,7 +1,8 @@
 var translationsConfigObject = {
     en: {
         shared: {
-            lnrHeaderText: 'The perfect bike. Simply rent it.'
+            lnrHeaderText: 'The perfect bike. Simply rent it.',
+            hello: 'Hello'
         },
         tabs: {
             tabDuration: 'Duration',
@@ -50,16 +51,18 @@ var translationsConfigObject = {
     },
     de: {
         shared: {
-            lnrHeaderText: 'Das perfekte Fahrrad. Einfach mieten'
+            lnrHeaderText: 'Das perfekte Fahrrad. Einfach mieten',
+            hello: 'Hallo'
         },
         tabs: {
-            tabDuration: 'Dauer',
-            tabBasicInfo: 'Benutzerinformation',
+            tabDuration: 'Zeitraum',
+            tabBasicInfo: 'Anmeldung',
             tabPaymentDetail: 'Zahlungsdetails',
             tabBookingOverview: 'Buchungs&uuml;bersicht'
         },
         durationPanel: {
-            info: 'Bitte Mietzeit beachten:',
+            info: 'Hallo!',
+            info2: '',
             from: 'von',
             to: 'bis',
             infoHeader: '',
@@ -99,7 +102,8 @@ var translationsConfigObject = {
     },
     nl: {
         shared: {
-            lnrHeaderText: 'The perfect bike. Simply rent it.'
+            lnrHeaderText: 'The perfect bike. Simply rent it.',
+            hello: 'Hej'
         },
         tabs: {
             tabDuration: 'Duur',

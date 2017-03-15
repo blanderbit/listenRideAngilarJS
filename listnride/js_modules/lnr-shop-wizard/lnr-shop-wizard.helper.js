@@ -42,7 +42,7 @@ var helper = {
                 return this.translationsConfigObject.en;
             case 'en-UK':
                 return this.translationsConfigObject.en;
-            case 'de-DE':
+            case 'de-de':
                 return this.translationsConfigObject.de;
         }
     },
