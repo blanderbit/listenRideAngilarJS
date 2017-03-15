@@ -18,7 +18,11 @@
     <!-- Include Required Prerequisites -->
     <link rel="stylesheet" href="daterangepicker/daterangepicker.css">
     <script type="text/javascript" src="daterangepicker/jquery.daterangepicker.js"></script>
+    <!-- lnr wizard: translations, helper and implementation -->
+    <script type="text/javascript" src="lnr-embed/lnr-shop-wizard.translations.js"></script>
+    <script type="text/javascript" src="lnr-embed/lnr-shop-wizard.date.js"></script>
     <script type="text/javascript" src="lnr-embed/lnr-shop-wizard.js"></script>
+    <script type="text/javascript" src="lnr-embed/lnr-shop-wizard.helper.js"></script>
 </head>
 
 <body>
@@ -27,7 +31,7 @@
         <header class="mdl-layout__header" id="lnr-header">
             <div class="mdl-layout__header-row" id="lnr-header-logo">
                 <img src="lnr-embed/lnr_logo_bold.svg" width="95">
-                <lnr-header-text>The perfect bike. Simply rent it.</lnr-header-text>
+                <lnr-header-text translate="shared.lnrHeaderText">lnrHeaderText</lnr-header-text>
             </div>
         </header>
         <!-- wizard -->
@@ -36,10 +40,10 @@
                 <div class="mdl-tabs mdl-js-tabs">
                     <!-- tabs -->
                     <div class="mdl-tabs__tab-bar" id="lnr-tab-bar">
-                        <a href="#duration-panel" class="mdl-tabs__tab is-active" id="tab-duration">Duration</a>
-                        <a href="#basic-info-panel" class="mdl-tabs__tab" id="tab-basic-info">User Info</a>
-                        <a href="#payment-details-panel" class="mdl-tabs__tab" id="tab-payment-details">Payment Details</a>
-                        <a href="#booking-overview-panel" class="mdl-tabs__tab" id="tab-booking-overview">Booking Overview</a>
+                        <a href="#duration-panel" class="mdl-tabs__tab is-active" id="tab-duration" translate="tabs.tabDuration"></a>
+                        <a href="#basic-info-panel" class="mdl-tabs__tab" id="tab-basic-info" translate="tabs.tabBasicInfo"></a>
+                        <a href="#payment-details-panel" class="mdl-tabs__tab" id="tab-payment-details" translate="tabs.tabPaymentDetail"></a>
+                        <a href="#booking-overview-panel" class="mdl-tabs__tab" id="tab-booking-overview" translate="tabs.tabBookingOverview"></a>
                     </div>
                     <!-- duration tab -->
                     <div class="mdl-tabs__panel is-active" id="duration-panel">
@@ -47,7 +51,7 @@
                             <!-- duration calendar -->
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
                                 <div class="lnr-tab-content">
-                                    <p class="md-subhead-sm">Please mark rent period:</p>
+                                    <p class="md-subhead-sm" translations="durationPanel.info"></p>
                                     <!-- busy loader until calendar loads -->
                                     <div id="bike-calendar-loader">
                                         <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
@@ -57,23 +61,13 @@
                                     <!-- time range selection -->
                                     <div id="time-range">
                                         <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone dropdown-calendar">
-                                            <span class="label" id="lnr-date-start">from</span>
-                                            <button 
-                                                    id="lnr-date-start-button" 
-                                                    onclick="helper.openCalendarDropDown('lnr-date-from-dropdown', '\'start\'')" 
-                                                    class="lnr-dropdown-button">
-                                                    From
-                                            </button>
+                                            <span class="label" id="lnr-date-start" translattion="durationPanel.from"></span>
+                                            <button id="lnr-date-start-button" onclick="helper.openCalendarDropDown('lnr-date-from-dropdown', '\'start\'')" class="lnr-dropdown-button"></button>
                                             <div id="lnr-date-from-dropdown" class="dropdown-content"></div>
                                         </div>
                                         <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone dropdown-calendar">
-                                            <span class="label" id="lnr-date-end">to</span>
-                                            <button 
-                                                    id="lnr-date-end-button" 
-                                                    onclick="helper.openCalendarDropDown('lnr-date-to-dropdown', '\'end\'')" 
-                                                    class="lnr-dropdown-button">
-                                                    To
-                                            </button>
+                                            <span class="label" id="lnr-date-end" translattion="translations.durationPanel.to"></span>
+                                            <button id="lnr-date-end-button" onclick="helper.openCalendarDropDown('lnr-date-to-dropdown', '\'end\'')" class="lnr-dropdown-button"></button>
                                             <div id="lnr-date-to-dropdown" class="dropdown-content"></div>
                                         </div>
                                     </div>
@@ -84,7 +78,7 @@
                             <rental-info></rental-info>
                         </div>
                         <!-- nav buttons -->
-                        <nav-buttons back="" back-text="" next="'tab-basic-info'" next-text="Next"></nav-buttons>
+                        <nav-buttons back="" back-text="" next="'tab-basic-info'" next-text="navigation.next"></nav-buttons>
                     </div>
                     <!-- user info tab -->
                     <div class="mdl-tabs__panel" id="basic-info-panel">
@@ -93,22 +87,22 @@
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
                                 <div class="lnr-tab-content">
                                     <form>
-                                        <p class="md-subhead-sm">Please fill you personal info:</p>
+                                        <p class="md-subhead-sm" translate="basicInfoPanel.info"></p>
                                         <div class="lnr-input-containers" layout="row">
                                             <md-input-container flex>
-                                                <label>Firstname *</label>
+                                                <label translate="basicInfoPanel.firstName"></label>
                                                 <input name="first_name" class="md-input" ng-model="signupDialog.firstName" required ng-maxlength="20">
                                             </md-input-container>
                                         </div>
                                         <div class="lnr-input-containers" layout="row">
                                             <md-input-container flex>
-                                                <label>Lastname *</label>
+                                                <label translate="basicInfoPanel.lastName"></label>
                                                 <input name="last_name" class="md-input" ng-model="signupDialog.lastName" required ng-maxlength="30">
                                             </md-input-container>
                                         </div>
                                         <div class="lnr-input-containers" layout="row">
                                             <md-input-container>
-                                                <label>Email Address *</label>
+                                                <label translate="basicInfoPanel.email"></label>
                                                 <input name="email" class="md-input" ng-model="signupDialog.email" type="email">
                                             </md-input-container>
                                         </div>
@@ -120,7 +114,7 @@
                             <rental-info></rental-info>
                         </div>
                         <!-- nav buttons -->
-                        <nav-buttons back="'tab-duration'" back-text="Back" next="'tab-payment-details'" next-text="Next"></nav-buttons>
+                        <nav-buttons back="'tab-duration'" back-text="navigation.back" next="'tab-payment-details'" next-text="navigation.next"></nav-buttons>
                     </div>
                     <!-- payment tab -->
                     <div class="mdl-tabs__panel" id="payment-details-panel">
@@ -130,28 +124,28 @@
                                 <div class="lnr-tab-content">
                                     <div class="mdl-grid">
                                         <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                                            <button id="sp-button-paypal" class="lnr-paypal md-accent md-raised md-button"><span>PayPal</span></button>
+                                            <button id="sp-button-paypal" class="lnr-paypal md-accent md-raised md-button"><span translate="paymentDetailsPanel.payPal"></span></button>
                                         </div>
                                         <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                                            <button class="lnr-mastercard md-accent md-raised md-button" onclick="helper.showCreditCardForm()"><span>Credit Card</span></button>
+                                            <button class="lnr-mastercard md-accent md-raised md-button" onclick="helper.showCreditCardForm()"><span translate="paymentDetailsPanel.creditCard"></span></button>
                                         </div>
                                     </div>
                                     <form id="sp-payment-form">
                                         <div class="mdl-grid">
                                             <div class="mdl-cell mdl-cell--12-col lnr-input-containers">
                                                 <md-input-container flex>
-                                                    <label>Cardholder Name *</label>
+                                                    <label translate="paymentDetailsPanel.cardholderName"></label>
                                                     <input name="sp-payment-cardholder" class="md-input" required>
                                                 </md-input-container>
                                             </div>
                                             <div class="mdl-cell mdl-cell--12-col lnr-input-containers">
                                                 <md-input-container flex>
-                                                    <label>Card Number *</label>
+                                                    <label translate="paymentDetailsPanel.cardNumber"></label>
                                                     <input name="sp-payment-cardnumber" class="md-input" required>
                                                 </md-input-container>
                                             </div>
                                             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown-payment">
-                                                <label>Expires</label>
+                                                <label translate="paymentDetailsPanel.expiry"></label>
                                                 <button id="lnr-payment-date-button" onclick="helper.openExpirationDropdown('lnr-payment-date-dropdown', '\'date\'')" class="lnr-dropdown-button"></button>
                                                 <div id="lnr-payment-date-dropdown" class="dropdown-content">
                                                 </div>
@@ -159,19 +153,19 @@
                                             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown-payment">
                                                 <label>&nbsp;</label>
                                                 <button id="lnr-payment-year-button" onclick="helper.openExpirationDropdown('lnr-payment-year-dropdown', '\'year\'')" class="lnr-dropdown-button">To
-                                            </button>
+                                                </button>
                                                 <div id="lnr-payment-year-dropdown" class="dropdown-content">
                                                 </div>
                                             </div>
                                             <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                                                 <div class="lnr-input-containers">
                                                     <md-input-container>
-                                                        <label>CVV</label>
+                                                        <label translate="paymentDetailsPanel.CVV"></label>
                                                         <input name="sp-payment-cvv" placeholder="123" class="md-input" type="text">
                                                     </md-input-container>
                                                 </div>
                                             </div>
-                                            <button id="sp-save-payment-data">Save Data</button>
+                                            <button id="sp-save-payment-data" translate="paymentDetailsPanel.save"></button>
                                         </div>
                                     </form>
                                 </div>
@@ -180,13 +174,13 @@
                             <!-- rent info -->
                             <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
                                 <div class="lnr-tab-content show-no-divider">
-                                    <p class="md-subhead-sm">Enter your Payment Details</p>
-                                    <p>All your data gets transmitted securely via SSH. You can pay by Paypal or Credit Card.</p>
+                                    <p class="md-subhead-sm" translate="paymentDetailsPanel.infoHeader"></p>
+                                    <p translate="paymentDetailsPanel.infoText"></p>
                                 </div>
                             </div>
                         </div>
                         <!-- nav buttons -->
-                        <nav-buttons back="'tab-basic-info'" back-text="Back" next="'tab-booking-overview'" next-text="Next"></nav-buttons>
+                        <nav-buttons back="'tab-basic-info'" back-text="navigation.back" next="'tab-booking-overview'" next-text="navigation.next"></nav-buttons>
                     </div>
                     <!-- booking overview tab -->
                     <div class="mdl-tabs__panel" id="booking-overview-panel">
@@ -201,18 +195,15 @@
                             <rental-info></rental-info>
                         </div>
                         <!-- nav buttons -->
-                        <nav-buttons back="'tab-payment-details'" back-text="Back" next="'tab-duration'" next-text="Proceed"></nav-buttons>
+                        <nav-buttons back="'tab-payment-details'" back-text="navigation.back" next="'tab-duration'" next-text="navigation.proceed"></nav-buttons>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-    </div>
-
     <!-- Loading Braintree -->
     <script src="https://js.braintreegateway.com/web/3.9.0/js/client.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.9.0/js/paypal.min.js"></script>
-
     <script>
         // We generated a client token for you so you can test out this code
         // immediately. In a production-ready integration, you will need to
