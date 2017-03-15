@@ -29,16 +29,19 @@
   function renderBikes ($, user_id, user_lang, introText, categoryFilter) {
     $.get("https://api.listnride.com/v2/users/" + user_id, function (response) {
 
-      var selectedLangText, dayText;
+      var selectedLangText, dayText, sizeText;
       if ('en' === user_lang) {
         selectedLangText = introText.en;
         dayText = 'per day';
+        sizeText = 'For';
       } else if ('nl' === user_lang) {
         selectedLangText = introText.nl;
         dayText = 'per dag';
+        sizeText = 'Voor';
       } else {
         selectedLangText = introText.de;
         dayText = 'pro Tag';
+        sizeText = 'F&uuml;r';
       }
 
       $("#listnride")
@@ -70,7 +73,7 @@
           '<img src="' + svgUrl + '" height="48" width="48"></img></md-icon>' +
           '<md-card-title-text class="lnr-margin-left layout-align-space-around-start layout-column">' +
           '<span class="md-subhead">' + brand + ', ' + categoryDesc + '</span>' +
-          '<span>' + name + '</span>' +
+          '<span>' + sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size+10) + ' cm</span>' + 
           '</md-card-title-text>' +
           '<div layout="column" class="layout-align-space-around-center layout-column">' +
           '<span class="md-headline">' + price + '&euro;</span>' +
