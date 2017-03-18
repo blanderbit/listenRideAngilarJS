@@ -423,7 +423,7 @@
                     creditCard: {
                         number: form['sp-payment-cardnumber'].value,
                         cvv: form['sp-payment-cvv'].value,
-                        expirationDate: "10/2020",
+                        expirationDate: payment.date+"/"+payment.year,
                         options: {
                             validate: false
                         }
