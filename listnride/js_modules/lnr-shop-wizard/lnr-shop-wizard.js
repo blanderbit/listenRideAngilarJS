@@ -28,6 +28,7 @@ $(document).ready(function () {
             calendar.bikeFamily = bike.family;
             calendar.requests = bike.requests;
             calendar.userId = bike.user.id;
+            $('#bike_picture').attr("src", bike.image_file_1.image_file_1.small.url);
 
             helper.postInit();
         });
