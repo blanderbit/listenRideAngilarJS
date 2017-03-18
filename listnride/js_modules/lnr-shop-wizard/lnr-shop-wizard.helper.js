@@ -103,16 +103,18 @@ var helper = {
      */
     changeTab: function (element) {
         switch (element.id) {
-            case 'tab-basic-info': document.getElementById(element.id).click();
-            case 'tab-payment-details': signup(); document.getElementById(element.id).click();
-            case 'tab-booking-overview': document.getElementById(element.id).click();
-            case 'tab-duration': document.getElementById(element.id).click();
+            case 'tab-basic-info': break;
+            case 'tab-payment-details': signup(function() {helper.nextTab(element)}); break;
+            case 'tab-booking-overview': break;
+            case 'tab-duration': break;
         }
+
+        // document.getElementById(element.id).click();
     },
 
     // Virtually click on the actual tab
     nextTab: function (element) {
-        // document.getElementById(element.id).click();
+        document.getElementById(element.id).click();
     },
 
     /**
@@ -337,7 +339,7 @@ var helper = {
 
 /*--------------- API ACTIONS ---------------*/
 
-function signup() {
+function signup(success) {
 
     var data = {
         'user': {
@@ -349,9 +351,21 @@ function signup() {
 
     console.log(data);
 
-    // $.post(apiUrl, data, function(response) {
-    //     console.log(response);
-    // });
+    $.post({
+        url: apiUrl + "/users",
+        data: data,
+        success: function(response) {
+            console.log("SUCCESS");
+            console.log(response);
+            success();
+
+        },
+        error: function(response) {
+            console.log("ERROR :(");
+            console.log(response);
+            success();
+        }
+    });
 }
 
 
