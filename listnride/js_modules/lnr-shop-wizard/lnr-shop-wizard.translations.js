@@ -13,9 +13,7 @@ var translationsConfigObject = {
         durationPanel: {
             info: 'Please mark rent period:',
             from: 'from',
-            to: 'to',
-            infoHeader: '',
-            infoText: ''
+            to: 'to'
         },
         info: {
             title: 'Alright',
@@ -24,9 +22,7 @@ var translationsConfigObject = {
             firstName: 'Firstname',
             lastName: 'Lastname',
             email: 'Email Address',
-            emailRepeat: 'Repeat Email',
-            infoHeader: '',
-            infoText: ''
+            emailRepeat: 'Repeat Email'
         },
         payment: {
             title: 'How would you like to pay?',
@@ -62,7 +58,7 @@ var translationsConfigObject = {
         navigation: {
             back: 'Back',
             next: 'Next',
-            proceed: 'Proceed'
+            book: 'Book'
         }
     },
     de: {
@@ -78,37 +74,31 @@ var translationsConfigObject = {
         },
         durationPanel: {
             from: 'von',
-            to: 'bis',
-            infoHeader: '',
-            infoText: ''
+            to: 'bis'
         },
         info: {
-            title: 'Alright',
-            titleEmpty: 'Alright,',
-            description: 'Please provide your name and email address. Make sure your email address is valid as we\'ll send your booking confirmation to it.<br><br>No worries, your data is safe.',
-            firstName: 'Firstname',
-            lastName: 'Lastname',
-            email: 'Email Address',
-            emailRepeat: 'Repeat Email',
-            infoHeader: '',
-            infoText: ''
+            title: 'Perfekt',
+            titleEmpty: 'Perfekt,',
+            description: 'Gib nun deinen Namen und Email-Adresse an. Stell sicher dass die Email stimmt, da wir die Buchungsbest&auml;tigung dorthin senden.<br><br>Keine Sorge, deine Daten sind sicher.',
+            firstName: 'Vorname',
+            lastName: 'Nachname',
+            email: 'Email-Adresse',
+            emailRepeat: 'Email-Adresse wiederholen'
         },
         payment: {
-            title: 'How would you like to pay?',
-            description: 'Choose between Paypal or Credit Card and simply enter the details. All information will get transferred securely.',
-            cardholderName: 'Cardholder Name',
-            cardNumber: 'Card Number',
+            title: 'Wie w&uuml;rdest du gerne zahlen?',
+            description: 'W&auml;hle zwischen Paypal und Kreditkarte. Alle Informationen werden sicher &uuml;bertragen.',
+            cardholderName: 'Karteninhaber',
+            cardNumber: 'Kartennummer',
             payPal: 'PayPal',
-            creditCard: 'Credit Card',
-            expiry: 'Expires',
+            creditCard: 'Kreditkarte',
+            expiry: 'G&uuml;ltig bis',
             CVV: 'CVV',
-            save: 'Save Data',
-            infoHeader: 'Enter your Payment Details',
-            infoText: 'All your data gets transmitted securely via SSH. You can pay by Paypal or Credit Card.'
+            save: 'Save Data'
         },
         rental: {
             title: 'Hallo!',
-            description: 'Fahrr&auml;der buchen ist einfach und sicher! W&auml;hle zuerst mittels des Kalenders von wann bis wann du das Rad mieten m&ouml;chtest.',
+            description: 'Fahrr&auml;der buchen ist einfach und sicher. W&auml;hle zuerst mittels des Kalenders von wann bis wann du das Rad mieten m&ouml;chtest.',
             duration: 'Dauer',
             fee: 'Servicegeb&uuml;hr (inkl. MwSt.)',
             total: 'Ingesamt',
@@ -121,13 +111,13 @@ var translationsConfigObject = {
             weeks: 'Wochen'
         },
         overview: {
-            title: 'Just one more click!',
-            description: 'Simply check again all your data and click the \'Book\' Button below to book the bike. You\'ll get a booking confirmation via email.'
+            title: 'Nur noch ein Klick!',
+            description: '&Uuml;berpr&uuml;fe nochmals deine Daten und klicke auf \'Buchen\' um das Rad zu buchen. Wir schicken dir eine Buchungsbest&auml;tigung via Email.'
         },
         navigation: {
-            back: 'Back',
-            next: 'Next',
-            proceed: 'Proceed'
+            back: 'Zur&uuml;ck',
+            next: 'Weiter',
+            book: 'Buchen'
         }
     },
     nl: {
@@ -189,7 +179,7 @@ var translationsConfigObject = {
         navigation: {
             back: 'Back',
             next: 'Next',
-            proceed: 'Proceed'
+            book: 'Book'
         }
     }
 }
