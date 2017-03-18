@@ -103,6 +103,12 @@ var helper = {
      */
     changeTab: function (element) {
         document.getElementById(element.id).click(); // Click on the checkbox
+
+        console.log(element);
+        switch (element.id) {
+            case 'tab-basic-info': return;
+            case 'tab-payment-details': signup(); return;
+        }
     },
 
     /**
@@ -292,8 +298,8 @@ var helper = {
             e.preventDefault();
         });
         // Connect the first_name input with the info description title
-        $('#first_name_input').keyup(function () {
-            var input = $('#first_name_input').val();
+        $('#form_first_name').keyup(function () {
+            var input = $('#form_first_name').val();
             if (input) {
                 $('.info-title-empty').hide();
                 $('.info-title').show();
@@ -324,3 +330,30 @@ var helper = {
         updatePaymentExpirationText();
     }
 };
+
+/*--------------- API ACTIONS ---------------*/
+
+function signup() {
+
+    var data = {
+        'user': {
+            'first_name': $('#form_first_name').val(),
+            'last_name': $('#form_last_name').val(),
+            'email': $('#form_email').val()
+        }
+    };
+
+    console.log(data);
+
+    // $.post(
+    //     apiUrl,
+    //     {
+    //         first_name: $('#form_first_name').val();
+    //         last_name: $('#form_last_name').val();
+    //         email: $('#form_email').val();
+    //     }
+    // );
+}
+
+
+/*--------------------------------------------*/

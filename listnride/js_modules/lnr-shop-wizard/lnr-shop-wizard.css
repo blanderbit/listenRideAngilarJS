@@ -64,6 +64,17 @@ html>body {
   color: rgb(221, 44, 0);
 }
 
+/*------------- INFO --------------*/
+
+form#user-info {
+  margin-top: 2px;
+}
+
+/*---------------------------------*/
+
+
+
+
 /*------------ PAYMENT ------------*/
 
 #sp-payment.md-button {

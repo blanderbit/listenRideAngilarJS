@@ -294,18 +294,3 @@ calendar.isFormInvalid = function () {
         (calendar.startDate !== undefined && calendar.startDate.getTime() >=
             calendar.endDate.getTime());
 };
-
-
-/*--------------- API ACTIONS ---------------*/
-
-// function signup() {
-//     $.post(
-//         apiUrl,
-//         {
-            
-//         }
-//     );
-// }
-
-
-/*--------------------------------------------*/
