@@ -298,9 +298,14 @@ calendar.isFormInvalid = function () {
 
 /*--------------- API ACTIONS ---------------*/
 
-function signup() {
-
-}
+// function signup() {
+//     $.post(
+//         apiUrl,
+//         {
+            
+//         }
+//     );
+// }
 
 
 /*--------------------------------------------*/
