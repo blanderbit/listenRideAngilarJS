@@ -5,10 +5,10 @@ var translationsConfigObject = {
             hello: 'Hello'
         },
         tabs: {
-            tabDuration: 'Duration',
-            tabBasicInfo: 'User Info',
-            tabPaymentDetail: 'Payment Details',
-            tabBookingOverview: 'Booking Overview'
+            tabDuration: '1. Duration',
+            tabBasicInfo: '2. Info',
+            tabPaymentDetail: '3. Payment',
+            tabBookingOverview: '4. Booking'
         },
         durationPanel: {
             info: 'Please mark rent period:',
@@ -25,7 +25,7 @@ var translationsConfigObject = {
             emailRepeat: 'Repeat Email',
             invalidForm: 'Please correct input fields',
             errorTitle: 'Oups',
-            errorDescription: 'This email address is already registered in our system.'
+            errorDescription: 'This email address is invalid or already registered in our system.'
         },
         payment: {
             title: 'How would you like to pay?',
@@ -89,7 +89,7 @@ var translationsConfigObject = {
             emailRepeat: 'Email-Adresse wiederholen',
             invalidForm: 'Please correct input fields',
             errorTitle: 'Ups!',
-            errorDescription: 'Diese Email-Addresse ist bereits in unserem System vorhanden.'
+            errorDescription: 'Diese Email-Addresse ist ungültig oder bereits in unserem System vorhanden.'
         },
         payment: {
             title: 'Wie w&uuml;rdest du gerne zahlen?',
@@ -156,7 +156,7 @@ var translationsConfigObject = {
             infoText: '',
             invalidForm: 'Please correct input fields',
             errorTitle: 'Oups',
-            errorDescription: 'This email address is already registered in our system.'
+            errorDescription: 'This email address is invalid or already registered in our system.'
         },
         payment: {
             title: 'How would you like to pay?',

@@ -97,23 +97,23 @@ var helper = {
     },
 
     /**
-     * used to change the tabs in the wizard
+     * used to go to the next tab
      * @param {Element} element
      * @returns {void}
      */
-    changeTab: function (element) {
+    nextTab: function (element) {
         switch (element.id) {
-            case 'tab-basic-info': helper.nextTab(element); break;
-            case 'tab-payment-details': signup(function() {helper.nextTab(element)}); break;
-            case 'tab-booking-overview': helper.nextTab(element); break;
-            case 'tab-duration': helper.nextTab(element); break;
+            case 'tab-basic-info': helper.changeTab(element); break;
+            case 'tab-payment-details': signup(function() {helper.changeTab(element)}); break;
+            case 'tab-booking-overview': helper.changeTab(element); break;
+            case 'tab-duration': helper.changeTab(element); break;
         }
 
         // document.getElementById(element.id).click();
     },
 
-    // Virtually click on the actual tab
-    nextTab: function (element) {
+    // Virtually click on the actual tab, used to change to a certain tab
+    changeTab: function (element) {
         document.getElementById(element.id).click();
     },
 
@@ -277,7 +277,7 @@ var helper = {
             // next button
             if (nextTab) {
                 navButtonHTML = navButtonHTML
-                    .concat('<button id="lnr-next-button-' + currentTab + '" onclick="helper.changeTab({id: ' + nextTab + '})" class="md-accent md-raised md-button md-ink-ripple"><span translate="')
+                    .concat('<button id="lnr-next-button-' + currentTab + '" onclick="helper.nextTab({id: ' + nextTab + '})" class="md-accent md-raised md-button md-ink-ripple"><span translate="')
                     .concat(nextText + '"></span></button></div>');
             } else {
                 navButtonHTML = navButtonHTML.concat('</div>');

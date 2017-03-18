@@ -306,7 +306,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="button" id="sp-save-payment-data" translate="payment.save"></button>
                                 </form>
                             </div>
                             <!-- rent info -->
@@ -381,7 +380,7 @@
                 return;
             }
 
-            $('#sp-save-payment-data')[0].addEventListener('click', function () {
+            $('#lnr-next-button-tab-payment-details')[0].addEventListener('click', function () {
                 var form = document.getElementById('sp-payment-form')
                 var data = {
                     creditCard: {
@@ -402,7 +401,20 @@
                     if (requestErr) {
                         throw new Error(requestErr);
                     }
-                    console.log('Got nonce:', response.creditCards[0].nonce);
+                    // Received Payment Nonce by Braintree, now try to send it to the backend
+                    $.post(
+                        apiUrl + "/users/"+user.id+"/payment_methods",
+                        {
+                            "payment_method_nonce": response.creditCards[0].nonce,
+                            "device_data": ''
+                        }
+                    ).done(function (data) {
+                        console.log('success!');
+                        console.log(data);
+                    }).fail(function(data) {
+                        console.log('error!');
+                        console.log(data);
+                    });
                 });
             });
 

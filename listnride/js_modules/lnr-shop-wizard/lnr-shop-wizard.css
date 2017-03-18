@@ -417,6 +417,7 @@ lnr-vertical-divider {
 
 .mdl-tabs__tab {
   text-transform: initial;
+  color: #BBBBBB;
 }
 
 .lnr-list-sm>li {
