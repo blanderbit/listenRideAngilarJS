@@ -122,8 +122,8 @@ var helper = {
             element.append(
                 '<div class="lnr-date-selector" onclick="helper.onTimeValueSelect(' +
                 parseInt(index + 6) + ', ' + type + ')" + id="lnr-date-from-select-"' +
-                index + '>' + (index + 6) + ":00" +
-                calendar.availabilityMessage(index, calendar.endDate) + '</div>'
+                index + '><span>' + (index + 6) + ":00" +
+                calendar.availabilityMessage(index, calendar.endDate) + '</span></div>'
             );
         }
 
@@ -254,7 +254,7 @@ var helper = {
             if (backTab) {
                 navButtonHTML = navButtonHTML
                     .concat('<button id="lnr-back-button-' + currentTab + '" onclick="helper.changeTab({id: ' + backTab + '})"')
-                    .concat('class="md-accent md-raised md-button md-ink-ripple"><span translate="' + backText + '"></span></button></div>');
+                    .concat('class="md-accent md-raised md-button md-ink-ripple lnr-back-button"><span translate="' + backText + '"></span></button></div>');
             } else {
                 navButtonHTML = navButtonHTML.concat('</div>');
             }
