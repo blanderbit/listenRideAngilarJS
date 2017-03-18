@@ -102,14 +102,17 @@ var helper = {
      * @returns {void}
      */
     changeTab: function (element) {
-        document.getElementById(element.id).click(); // Click on the checkbox
-
         switch (element.id) {
-            case 'tab-basic-info': return;
-            case 'tab-payment-details': signup(); return;
-            case 'tab-booking-overview': return;
-            case 'tab-duration': return;
+            case 'tab-basic-info': document.getElementById(element.id).click();
+            case 'tab-payment-details': signup(); document.getElementById(element.id).click();
+            case 'tab-booking-overview': document.getElementById(element.id).click();
+            case 'tab-duration': document.getElementById(element.id).click();
         }
+    },
+
+    // Virtually click on the actual tab
+    nextTab: function (element) {
+        // document.getElementById(element.id).click();
     },
 
     /**
@@ -346,14 +349,9 @@ function signup() {
 
     console.log(data);
 
-    // $.post(
-    //     apiUrl,
-    //     {
-    //         first_name: $('#form_first_name').val();
-    //         last_name: $('#form_last_name').val();
-    //         email: $('#form_email').val();
-    //     }
-    // );
+    // $.post(apiUrl, data, function(response) {
+    //     console.log(response);
+    // });
 }
 
 
