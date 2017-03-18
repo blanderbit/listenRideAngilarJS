@@ -235,14 +235,15 @@ var helper = {
 
     renderNavButtons: function () {
         var navButtons = $('nav-buttons');
-
+    
         // iterate each button for different tabs
         navButtons.each(function () {
             var element = $(this);
             var back = element.attr('back'),
                 next = element.attr('next'),
                 backText = element.attr('back-text'),
-                nextText = element.attr('next-text');
+                nextText = element.attr('next-text'),
+                currentTabId = element.attr('current-tab');
 
             // open the grid
             var navButtonHTML =
@@ -252,7 +253,7 @@ var helper = {
             // back button
             if (back) {
                 navButtonHTML = navButtonHTML
-                    .concat('<button id="lnr-back-button" onclick="helper.changeTab({id: ' + back + '})"')
+                    .concat('<button id="lnr-back-button-' + currentTabId  +'" onclick="helper.changeTab({id: ' + back + '})"')
                     .concat('class="md-accent md-raised md-button md-ink-ripple"><span translate="' + backText + '"></span></button></div>');
             } else {
                 navButtonHTML = navButtonHTML.concat('</div>');
@@ -264,7 +265,7 @@ var helper = {
             // next button
             if (next) {
                 navButtonHTML = navButtonHTML
-                    .concat('<button id="lnr-next-button" onclick="helper.changeTab({id: ' + next + '})" class="md-accent md-raised md-button md-ink-ripple"><span translate="')
+                    .concat('<button id="lnr-next-button-' + currentTabId  +'" onclick="helper.changeTab({id: ' + next + '})" class="md-accent md-raised md-button md-ink-ripple"><span translate="')
                     .concat(nextText + '"></span></button></div>');
             } else {
                 navButtonHTML = navButtonHTML.concat('</div>');
