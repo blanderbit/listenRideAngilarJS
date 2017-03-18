@@ -1,7 +1,6 @@
 //User info form validation
 $(function () {
     $('#user-info-validation').addClass('hidden');
-    // $('#user-info-validation').addClass('hidden');
     $('#user-info').on('keyup', function () {
         if ($('#user-info md-input-container.is-invalid').length == 0) {
             $('#user-info-validation').addClass('hidden')
@@ -13,7 +12,7 @@ $(function () {
     $('#form_last_name').blur(function(){ validateField('#form_last_name', '#user')});
     $('#form_email').blur(function(){ validateField('#form_email', '#user')});
     $('#form_email_repeat').blur(function(){
-        if ($('#form_email_repeat') != $('#form_email_repeat').val) $('#form_email_repeat').parent().addClass('is-invalid');
+        if ($('#form_email_repeat').val() != $('#form_email_repeat').val()) $('#form_email_repeat').parent().addClass('is-invalid');
         validateField('#form_email_repeat', '#user')
     });
 });
@@ -36,6 +35,7 @@ $(function () {
 });
 
 $(function () {
+    // $('#lnr-next-button-tab-basic-info').prop('disabled', true);
 
 });
 
