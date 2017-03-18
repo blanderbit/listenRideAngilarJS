@@ -23,6 +23,7 @@
     <script type="text/javascript" src="lnr-shop-wizard.date.js"></script>
     <script type="text/javascript" src="lnr-shop-wizard.js"></script>
     <script type="text/javascript" src="lnr-shop-wizard.helper.js"></script>
+    <script type="text/javascript" src="lnr-shop-wizard.validation.js"></script>
 </head>
 
 <body>
@@ -83,29 +84,53 @@
                         <div class="mdl-grid">
                             <!-- personal info form -->
                             <div class="lnr-column-left mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--4-col-phone">
-                                <form>
+                                <form id="user-info">
                                     <div class="lnr-input-containers" layout="row">
-                                        <md-input-container flex>
+                                        <md-input-container flex class="mdl-textfield mdl-js-textfield">
                                             <label translate="basicInfoPanel.firstName"></label>
-                                            <input name="first_name" class="md-input" required ng-maxlength="20">
+                                            <input
+                                                    name="first_name"
+                                                    class="md-input mdl-textfield__input"
+                                                    type="text"
+                                                    pattern="^([a-zA-Z ]){2,20}$"
+                                                    required
+                                            >
                                         </md-input-container>
                                     </div>
                                     <div class="lnr-input-containers" layout="row">
-                                        <md-input-container flex>
+                                        <md-input-container flex class="mdl-textfield mdl-js-textfield">
                                             <label translate="basicInfoPanel.lastName"></label>
-                                            <input name="last_name" class="md-input" required ng-maxlength="30">
+                                            <input
+                                                    name="last_name"
+                                                    class="md-input mdl-textfield__input"
+                                                    type="text"
+                                                    pattern="^([a-zA-Z ]){2,30}$"
+                                                    required
+                                            >
                                         </md-input-container>
                                     </div>
                                     <div class="lnr-input-containers" layout="row">
-                                        <md-input-container>
+                                        <md-input-container class="mdl-textfield mdl-js-textfield">
                                             <label translate="basicInfoPanel.email"></label>
-                                            <input name="email" class="md-input" type="email">
+                                            <input
+                                                    name="email"
+                                                    class="md-input mdl-textfield__input"
+                                                    type="email"
+                                                    pattern="\S+@\S+"
+                                                    required
+                                            >
                                         </md-input-container>
                                     </div>
                                     <div class="lnr-input-containers" layout="row">
-                                        <md-input-container>
+                                        <md-input-container class="mdl-textfield mdl-js-textfield">
                                             <label translate="basicInfoPanel.emailRepeat"></label>
-                                            <input name="email" class="md-input" type="email">
+                                            <input
+                                                    name="email"
+                                                    class="md-input"
+                                                    type="email"
+                                                    pattern="\S+@\S+"
+                                                    required
+                                            >
                                         </md-input-container>
                                     </div>
                                 </form>
@@ -113,6 +138,7 @@
                             <!-- rent info -->
                             <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
                                 <p class="md-subhead-sm" translate="basicInfoPanel.info"></p>
+                                <p id="user-info-validation" class="text-invalid" translate="basicInfoPanel.invalidForm"></p>
                             </div>
                         </div>
                         <!-- nav buttons -->
@@ -134,24 +160,34 @@
                                 <form id="sp-payment-form">
                                     <div class="mdl-grid">
                                         <div class="mdl-cell mdl-cell--12-col lnr-input-containers">
-                                            <md-input-container flex>
+                                            <md-input-container flex class="mdl-textfield mdl-js-textfield">
                                                 <label translate="paymentDetailsPanel.cardholderName"></label>
-                                                <input name="sp-payment-cardholder" class="md-input" required>
+                                                <input
+                                                        name="sp-payment-cardholder"
+                                                        class="md-input mdl-textfield__input"
+                                                        pattern="^([a-zA-Z ]){2,30}$"
+                                                        required
+                                                >
                                             </md-input-container>
                                         </div>
                                         <div class="mdl-cell mdl-cell--12-col lnr-input-containers">
-                                            <md-input-container flex>
+                                            <md-input-container flex class="mdl-textfield mdl-js-textfield">
                                                 <label translate="paymentDetailsPanel.cardNumber"></label>
-                                                <input name="sp-payment-cardnumber" class="md-input" required>
+                                                <input
+                                                        name="sp-payment-cardnumber"
+                                                        class="md-input mdl-textfield__input"
+                                                        pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
+                                                        required
+                                                >
                                             </md-input-container>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown-payment">
+                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown-payment mdl-textfield mdl-js-textfield">
                                             <label translate="paymentDetailsPanel.expiry"></label>
                                             <button id="lnr-payment-date-button" onclick="helper.openExpirationDropdown('lnr-payment-date-dropdown', '\'date\'')" class="lnr-dropdown-button"></button>
                                             <div id="lnr-payment-date-dropdown" class="dropdown-content">
                                             </div>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown-payment">
+                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown-payment mdl-textfield mdl-js-textfield">
                                             <label>&nbsp;</label>
                                             <button id="lnr-payment-year-button" onclick="helper.openExpirationDropdown('lnr-payment-year-dropdown', '\'year\'')" class="lnr-dropdown-button">To
                                             </button>
@@ -160,9 +196,16 @@
                                         </div>
                                         <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                                             <div class="lnr-input-containers">
-                                                <md-input-container>
+                                                <md-input-container class="mdl-textfield mdl-js-textfield">
                                                     <label translate="paymentDetailsPanel.CVV"></label>
-                                                    <input name="sp-payment-cvv" placeholder="123" class="md-input" type="text">
+                                                    <input
+                                                            name="sp-payment-cvv"
+                                                            placeholder="123"
+                                                            class="md-input mdl-textfield__input"
+                                                            type="text"
+                                                            pattern="^[0-9]{3,4}$"
+                                                            required
+                                                    >
                                                 </md-input-container>
                                             </div>
                                         </div>
@@ -173,6 +216,7 @@
                             <!-- rent info -->
                             <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
                                 <p class="md-subhead-sm">Rent details</p>
+                                <p id="payment-info-validation" class="text-invalid" translate="basicInfoPanel.invalidForm"></p>
                             </div>
                         </div>
                         <!-- nav buttons -->
