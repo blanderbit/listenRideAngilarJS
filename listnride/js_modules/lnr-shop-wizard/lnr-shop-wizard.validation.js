@@ -16,33 +16,30 @@ var paymentFormOverview = {
 //User info form validation
 $(function () {
     $('#lnr-next-button-tab-basic-info').prop('disabled', true);
-    $('#user-info').on('keyup click change keydown keypress', function () {
-        // debugger
-        if ($('#user-info md-input-container.is-invalid').length == 0) {
-            userButtonValidator('valid', true);
-            $('#user-info-validation').addClass('hidden')
-        } else {
-            userButtonValidator('valid', false);
-            $('#user-info-validation').removeClass('hidden')
-        }
+    $('#user-info').on('keyup', function () {
+        userInputErrorAny()
     });
     $('#form_first_name').blur(function () {
         userButtonValidator(this.id, true);
         validateField(this.id, '#user');
+        userInputErrorAny();
     });
     $('#form_last_name').blur(function () {
         userButtonValidator(this.id, true);
         validateField(this.id, '#user');
+        userInputErrorAny();
     });
     $('#form_email').blur(function () {
         userButtonValidator(this.id, true);
         validateField(this.id, '#user');
         compareEmail();
+        userInputErrorAny();
     });
     $('#form_email_repeat').blur(function () {
         userButtonValidator(this.id, true);
         validateField(this.id, '#user');
-        compareEmail()
+        compareEmail();
+        userInputErrorAny();
     });
 });
 
@@ -50,26 +47,22 @@ $(function () {
 $(function () {
     $('#lnr-next-button-tab-payment-details').prop('disabled', true);
     $('#sp-payment-form').on('keyup', function () {
-        if ($('#sp-payment-form md-input-container.is-invalid').length == 0) {
-            paymentButtonValidator('valid', true);
-            $('#payment-info-validation').addClass('hidden')
-        } else {
-            paymentButtonValidator('valid', false);
-            $('#payment-info-validation').removeClass('hidden')
-        }
+        paymentInputErrorAny();
     });
-
     $('#sp-payment-cardholder').blur(function () {
         paymentButtonValidator(this.id, true);
-        validateField(this.id, '#payment')
+        validateField(this.id, '#payment');
+        paymentInputErrorAny();
     });
     $('#sp-payment-cardnumber').blur(function () {
         paymentButtonValidator(this.id, true);
-        validateField(this.id, '#payment')
+        validateField(this.id, '#payment');
+        paymentInputErrorAny();
     });
     $('#sp-payment-cvv').blur(function () {
         paymentButtonValidator(this.id, true);
-        validateField(this.id, '#payment')
+        validateField(this.id, '#payment');
+        paymentInputErrorAny();
     });
     $('#sp-payment-cvv').on('keyup', function () {
         if (this.value.length > 4) {
@@ -79,16 +72,23 @@ $(function () {
 });
 
 function compareEmail() {
-    if ($('#form_email_repeat').val().length > 0 && $('#form_email').val().length > 0) {
-        if ($('#form_email').val() == $('#form_email_repeat').val()) {
-            $('#form_email').parent().removeClass('is-invalid');
-            $('#form_email_repeat').parent().removeClass('is-invalid');
+    var $email = $('#form_email');
+    var $repeat = $('#form_email_repeat');
+    if ($repeat.val().length > 0 && $('#form_email').val().length > 0) {
+        if ($email.val() == $repeat.val()) {
+            $email.parent().removeClass('is-invalid');
+            $email.closest("div").find("label").removeClass('text-invalid');
+            $repeat.parent().removeClass('is-invalid');
+            $repeat.closest("div").find("label").removeClass('text-invalid');
         } else {
-            $('#form_email').parent().addClass('is-invalid');
-            $('#form_email_repeat').parent().addClass('is-invalid');
+            $email.closest("div").find("label").addClass('text-invalid');
+            $email.parent().addClass('is-invalid');
+            $repeat.parent().addClass('is-invalid');
+            $repeat.closest("div").find("label").addClass('text-invalid');
         }
     }
 }
+
 
 function userButtonValidator(field, value) {
     userFormOverview[field] = value;
@@ -97,6 +97,26 @@ function userButtonValidator(field, value) {
         $('#lnr-next-button-tab-basic-info').prop('disabled', false);
     } else {
         $('#lnr-next-button-tab-basic-info').prop('disabled', true);
+    }
+}
+
+function userInputErrorAny(){
+    if ($('#user-info md-input-container.is-invalid').length == 0) {
+        userButtonValidator('valid', true);
+        $('#user-info-validation').addClass('hidden')
+    } else {
+        userButtonValidator('valid', false);
+        $('#user-info-validation').removeClass('hidden')
+    }
+}
+
+function paymentInputErrorAny(){
+    if ($('#sp-payment-form md-input-container.is-invalid').length == 0) {
+        paymentButtonValidator('valid', true);
+        $('#payment-info-validation').addClass('hidden')
+    } else {
+        paymentButtonValidator('valid', false);
+        $('#payment-info-validation').removeClass('hidden')
     }
 }
 
