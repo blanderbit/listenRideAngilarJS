@@ -159,42 +159,49 @@
                         <div class="mdl-grid">
                             <!-- payment info form -->
                             <div id="sp-payment" class="lnr-column-left mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--4-col-phone">
-                                <div class="mdl-grid" style="padding: 0">
+                                <div class="mdl-grid mdl-grid--buttons">
                                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone" style="margin: 0 10px 0 0">
                                         <button id="sp-button-paypal" class="lnr-paypal md-accent md-raised md-button"><span translate="payment.payPal"></span></button>
                                     </div>
+                                    <div class="mdl-layout-spacer"></div>
                                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone" style="margin: 0 0 0 10px">
                                         <button class="lnr-mastercard md-accent md-raised md-button" onclick="helper.showCreditCardForm()" style="float: right"><span translate="payment.creditCard"></span></button>
                                     </div>
                                 </div>
-                                <form id="sp-payment-form">
+                                <form id="sp-payment-form" style="margin: 20px 0">
+                                    <div class="lnr-input-containers">
+                                        <md-input-container>
+                                            <label translate="payment.cardholderName"></label>
+                                            <input name="sp-payment-cardholder" class="md-input" required>
+                                        </md-input-container>
+                                    </div>
+                                    <div class="lnr-input-containers">
+                                        <md-input-container>
+                                            <label translate="payment.cardNumber"></label>
+                                            <input name="sp-payment-cardnumber" class="md-input" required>
+                                        </md-input-container>
+                                    </div>
                                     <div class="mdl-grid">
-                                        <div class="mdl-cell mdl-cell--12-col lnr-input-containers">
-                                            <md-input-container flex>
-                                                <label translate="payment.cardholderName"></label>
-                                                <input name="sp-payment-cardholder" class="md-input" required>
-                                            </md-input-container>
-                                        </div>
-                                        <div class="mdl-cell mdl-cell--12-col lnr-input-containers">
-                                            <md-input-container flex>
-                                                <label translate="payment.cardNumber"></label>
-                                                <input name="sp-payment-cardnumber" class="md-input" required>
-                                            </md-input-container>
-                                        </div>
-                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown-payment">
-                                            <label translate="payment.expiry"></label>
-                                            <button id="lnr-payment-date-button" onclick="helper.openExpirationDropdown('lnr-payment-date-dropdown', '\'date\'')" class="lnr-dropdown-button"></button>
-                                            <div id="lnr-payment-date-dropdown" class="dropdown-content">
+                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--2-col-phone">
+                                            <div class="dropdown-payment lnr-input-containers">
+                                                <label translate="payment.expiry"></label>
+                                                <button id="lnr-payment-date-button" onclick="helper.openExpirationDropdown('   lnr-payment-date-dropdown', '\'date\'')" class="lnr-dropdown-button"></button>
+                                                <div id="lnr-payment-date-dropdown" class="dropdown-content">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown-payment">
-                                            <label>&nbsp;</label>
-                                            <button id="lnr-payment-year-button" onclick="helper.openExpirationDropdown('lnr-payment-year-dropdown', '\'year\'')" class="lnr-dropdown-button">To
-                                            </button>
-                                            <div id="lnr-payment-year-dropdown" class="dropdown-content">
+                                        <div class="mdl-layout-spacer"></div>
+                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--1-col-phone">
+                                            <div class="dropdown-payment lnr-input-containers">
+                                                <label>&nbsp;</label>
+                                                <button id="lnr-payment-year-button" onclick="helper.openExpirationDropdown('   lnr-payment-year-dropdown', '\'year\'')" class="lnr-dropdown-button">To
+                                                </button>
+                                                <div id="lnr-payment-year-dropdown" class="dropdown-content">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                                        <div class="mdl-layout-spacer"></div>
+                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
                                             <div class="lnr-input-containers">
                                                 <md-input-container>
                                                     <label translate="payment.CVV"></label>
@@ -202,8 +209,8 @@
                                                 </md-input-container>
                                             </div>
                                         </div>
-                                        <button id="sp-save-payment-data" translate="payment.save"></button>
                                     </div>
+                                    <button id="sp-save-payment-data" translate="payment.save"></button>
                                 </form>
                             </div>
                             <!-- rent info -->

@@ -71,11 +71,11 @@ html>body {
   color: rgb(85, 85, 85);
 }
 
-#sp-payment.mdl-grid {
+#sp-payment .mdl-grid {
   padding: 0 !important;
 }
 
-#sp-payment-form.mdl-cell {
+#sp-payment-form .mdl-cell {
   margin: 0 !important;
 }
 
@@ -88,6 +88,10 @@ html>body {
 .mdl-grid {
   max-width: 640px;
   padding: 0 8px;
+}
+
+.mdl-grid--buttons {
+  margin: 6px 0;
 }
 
 .md-color-foreground {
