@@ -499,7 +499,8 @@ lnr-vertical-divider {
 }
 
 .lnr-date-selector {
-padding: 12px 16px;
+  padding: 12px 16px;
+  cursor: pointer;
 }
 
 .lnr-date-selector:hover {
