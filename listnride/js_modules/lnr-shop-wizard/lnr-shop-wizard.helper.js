@@ -245,7 +245,7 @@ var helper = {
             }
 
             navButtonHTML = navButtonHTML
-                .concat('<div align="right" class="lnr-button-cell mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">');
+                .concat('<div class="mdl-layout-spacer"></div><div align="right" class="lnr-button-cell mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">');
 
             // next button
             if (next) {
