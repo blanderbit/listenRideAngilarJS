@@ -103,10 +103,10 @@ var helper = {
      */
     changeTab: function (element) {
         switch (element.id) {
-            case 'tab-basic-info': break;
+            case 'tab-basic-info': helper.nextTab(element); break;
             case 'tab-payment-details': signup(function() {helper.nextTab(element)}); break;
-            case 'tab-booking-overview': break;
-            case 'tab-duration': break;
+            case 'tab-booking-overview': helper.nextTab(element); break;
+            case 'tab-duration': helper.nextTab(element); break;
         }
 
         // document.getElementById(element.id).click();
@@ -300,6 +300,7 @@ var helper = {
         // hide the payment credit card form
         $('#sp-payment-form').hide();
         $('.info-title').hide();
+        $('#info_error').hide();
         $('#email-repeat').on('paste', function (e) {
             e.preventDefault();
         });
@@ -339,7 +340,7 @@ var helper = {
 
 /*--------------- API ACTIONS ---------------*/
 
-function signup(success) {
+function signup(nextTab) {
 
     var data = {
         'user': {
@@ -355,15 +356,13 @@ function signup(success) {
         url: apiUrl + "/users",
         data: data,
         success: function(response) {
-            console.log("SUCCESS");
-            console.log(response);
-            success();
-
+            $('#info_description').show();
+            $('#info_error').hide();
+            nextTab();
         },
         error: function(response) {
-            console.log("ERROR :(");
-            console.log(response);
-            success();
+            $('#info_description').hide();
+            $('#info_error').show();
         }
     });
 }

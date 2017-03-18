@@ -61,7 +61,7 @@ html>body {
 }
 
 .text-invalid {
-  color: rgb(221, 44, 0);
+  color: rgb(221, 44, 0) !important;
 }
 
 label {

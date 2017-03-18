@@ -23,7 +23,9 @@ var translationsConfigObject = {
             lastName: 'Lastname',
             email: 'Email Address',
             emailRepeat: 'Repeat Email',
-            invalidForm: 'Please correct input fields'
+            invalidForm: 'Please correct input fields',
+            errorTitle: 'Oups',
+            errorDescription: 'This email address is already registered in our system.'
         },
         payment: {
             title: 'How would you like to pay?',
