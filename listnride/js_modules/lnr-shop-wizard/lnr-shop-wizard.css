@@ -28,6 +28,10 @@ html>body {
   margin: 0 !important;
 }
 
+.text-invalid {
+  color: rgb(221, 44, 0);;
+}
+
 /*------------ PAYMENT ------------*/
 
 #sp-payment.md-button {
@@ -446,4 +450,20 @@ lnr-vertical-divider {
 
 .show {
   display: block;
+}
+
+/*----------------- MDL Styles -------------*/
+
+.mdl-button:hover {
+  background-color: inherit !important;
+}
+
+.mdl-button[disabled][disabled], .mdl-button.mdl-button--disabled.mdl-button--disabled {
+  color: rgb(255, 255, 255);
+  border-color: rgba(225,230,230,1.0);
+  background-color: rgba(206,212,216,0.9);
+  cursor: not-allowed;
+}
+.mdl-button[disabled][disabled]:hover, .mdl-button.mdl-button--disabled.mdl-button--disabled {
+  background-color: rgba(206,212,216,0.9) !important;
 }
