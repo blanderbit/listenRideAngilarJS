@@ -66,12 +66,12 @@
                                 <!-- time range selection -->
                                 <div id="time-range">
                                     <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone dropdown-calendar">
-                                        <span class="label" id="lnr-date-start" translation="durationPanel.from"></span>
+                                        <span class="label" id="lnr-date-start" translattion="durationPanel.from"></span>
                                         <button id="lnr-date-start-button" onclick="helper.openCalendarDropDown('lnr-date-from-dropdown', '\'start\'')" class="lnr-dropdown-button"></button>
                                         <div id="lnr-date-from-dropdown" class="dropdown-content"></div>
                                     </div>
                                     <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone dropdown-calendar">
-                                        <span class="label" id="lnr-date-end" translation="durationPanel.to"></span>
+                                        <span class="label" id="lnr-date-end" translattion="translations.durationPanel.to"></span>
                                         <button id="lnr-date-end-button" onclick="helper.openCalendarDropDown('lnr-date-to-dropdown', '\'end\'')" class="lnr-dropdown-button"></button>
                                         <div id="lnr-date-to-dropdown" class="dropdown-content"></div>
                                     </div>
@@ -130,7 +130,7 @@
                                     <div class="lnr-input-containers" layout="row">
                                         <md-input-container>
                                             <label translate="info.emailRepeat"></label>
-                                            <input name="email" class="md-input" type="email">
+                                            <input id="email-repeat" name="email-repeat" class="md-input" type="email">
                                         </md-input-container>
                                     </div>
                                 </form>
@@ -193,7 +193,7 @@
                                         <div class="mdl-layout-spacer"></div>
                                         <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--1-col-phone">
                                             <div class="dropdown-payment lnr-input-containers">
-                                                <label>&nbsp;</label>
+                                                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                                                 <button id="lnr-payment-year-button" onclick="helper.openExpirationDropdown('   lnr-payment-year-dropdown', '\'year\'')" class="lnr-dropdown-button">To
                                                 </button>
                                                 <div id="lnr-payment-year-dropdown" class="dropdown-content">

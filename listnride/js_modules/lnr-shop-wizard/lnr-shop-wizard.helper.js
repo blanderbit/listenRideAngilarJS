@@ -235,9 +235,11 @@ var helper = {
 
     renderNavButtons: function () {
         var navButtons = $('nav-buttons');
+        var counter = 0;
 
         // iterate each button for different tabs
         navButtons.each(function () {
+            counter++;
             var element = $(this);
             var back = element.attr('back'),
                 next = element.attr('next'),
@@ -264,7 +266,7 @@ var helper = {
             // next button
             if (next) {
                 navButtonHTML = navButtonHTML
-                    .concat('<button onclick="helper.changeTab({id: ' + next + '})" class="md-accent md-raised md-button md-ink-ripple"><span translate="')
+                    .concat('<button id="next-button-' + counter + '" onclick="helper.changeTab({id: ' + next + '})" class="md-accent md-raised md-button md-ink-ripple"><span translate="')
                     .concat(nextText + '"></span></button></div>');
             } else {
                 navButtonHTML = navButtonHTML.concat('</div>');
@@ -287,6 +289,9 @@ var helper = {
         // hide the payment credit card form
         $('#sp-payment-form').hide();
         $('.info-title').hide();
+        $('#email-repeat').on('paste', function(e) {
+            e.preventDefault();
+        });
         // Connect the first_name input with the info description title
         $('#first_name_input').keyup(function () {
             var input = $('#first_name_input').val();

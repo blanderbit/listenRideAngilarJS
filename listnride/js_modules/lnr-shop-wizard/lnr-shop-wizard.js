@@ -6,18 +6,19 @@ var $,
         date: "Month",
         year: "Year"
     },
-    translations;
+    translations,
+    apiUrl = "https://listnride-staging.herokuapp.com/v2";
 
 $(document).ready(function () {
     // perform common tasks on initialization
     helper.preInit();
     // fetch user info
     var userId = helper.getUrlParameter('userId') || 1005;
-    $.get("https://api.listnride.com/v2/users/" + userId, function (response) {
+    $.get(apiUrl + "/users/" + userId, function (response) {
         calendar.bikeOwner = response;
         // fetch bike info
         var bikeId = helper.getUrlParameter('bikeId') || 165;
-        $.get("https://listnride-staging.herokuapp.com/v2/rides/" + bikeId, function (bike) {
+        $.get(apiUrl + "/rides/" + bikeId, function (bike) {
             // populate calendar object
             calendar.bikeId = bikeId;
             calendar.priceHalfDay = bike.price_half_daily;
@@ -293,3 +294,13 @@ calendar.isFormInvalid = function () {
         (calendar.startDate !== undefined && calendar.startDate.getTime() >=
             calendar.endDate.getTime());
 };
+
+
+/*--------------- API ACTIONS ---------------*/
+
+function signup() {
+
+}
+
+
+/*--------------------------------------------*/
