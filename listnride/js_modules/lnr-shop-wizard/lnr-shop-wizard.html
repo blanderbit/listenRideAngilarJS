@@ -67,7 +67,7 @@
                                 <!-- time range selection -->
                                 <div class="mdl-grid" id="time-range">
                                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone dropdown-calendar">
-                                    <label id="lnr-date-start" translation="durationPanel.from"></label>
+                                    <label id="lnr-date-start" translate="durationPanel.from"></label>
                                         <button 
                                                 type="button" 
                                                 id="lnr-date-start-button" 
@@ -78,7 +78,7 @@
                                     </div>
                                     
                                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone dropdown-calendar">
-                                        <label id="lnr-date-end" translation="durationPanel.to"></label>
+                                        <label id="lnr-date-end" translate="durationPanel.to"></label>
                                         <button 
                                                 type="button" 
                                                 id="lnr-date-end-button" 
@@ -208,7 +208,13 @@
                                     <div class="lnr-input-containers">
                                         <md-input-container class="mdl-textfield mdl-js-textfield">
                                             <label translate="payment.cardholderName"></label>
-                                            <input name="sp-payment-cardholder" class="md-input mdl-textfield__input" pattern="^([a-zA-Z ]){2,30}$" required>
+                                            <input
+                                                    name="sp-payment-cardholder"
+                                                    id="sp-payment-cardholder"
+                                                    class="md-input mdl-textfield__input"
+                                                    pattern="^([a-zA-Z ]){2,30}$"
+                                                    required
+                                            >
                                         </md-input-container>
                                     </div>
                                     <div class="lnr-input-containers">
@@ -216,7 +222,8 @@
                                             <label translate="payment.cardNumber"></label>
                                             <input 
                                                  name="sp-payment-cardnumber" 
-                                                 class="md-input mdl-textfield__input" 
+                                                 id="sp-payment-cardnumber"
+                                                 class="md-input mdl-textfield__input"
                                                  pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
                                                  required
                                                  type="number">
@@ -254,7 +261,15 @@
                                             <div class="lnr-input-containers">
                                                 <md-input-container class="mdl-textfield mdl-js-textfield">
                                                     <label translate="payment.CVV"></label>
-                                                    <input name="sp-payment-cvv" placeholder="123" class="md-input mdl-textfield__input" pattern="^[0-9]{3,4}$" type="number" required>
+                                                    <input
+                                                            name="sp-payment-cvv"
+                                                            id="sp-payment-cvv"
+                                                            placeholder="123"
+                                                            class="md-input mdl-textfield__input"
+                                                            pattern="^[0-9]{3,4}$"
+                                                            type="number"
+                                                            required
+                                                    >
                                                 </md-input-container>
                                             </div>
                                         </div>
