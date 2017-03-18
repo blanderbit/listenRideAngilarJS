@@ -356,8 +356,11 @@ function signup(nextTab) {
         url: apiUrl + "/users",
         data: data,
         success: function(response) {
+            console.log(response);
             $('#info_description').show();
             $('#info_error').hide();
+            user.id = response.id;
+            console.log(user.id);
             nextTab();
         },
         error: function(response) {

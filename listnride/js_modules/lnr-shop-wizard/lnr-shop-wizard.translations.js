@@ -87,7 +87,9 @@ var translationsConfigObject = {
             lastName: 'Nachname',
             email: 'Email-Adresse',
             emailRepeat: 'Email-Adresse wiederholen',
-            invalidForm: 'Please correct input fields'
+            invalidForm: 'Please correct input fields',
+            errorTitle: 'Ups!',
+            errorDescription: 'Diese Email-Addresse ist bereits in unserem System vorhanden.'
         },
         payment: {
             title: 'Wie w&uuml;rdest du gerne zahlen?',
@@ -152,7 +154,9 @@ var translationsConfigObject = {
             emailRepeat: 'Repeat Email',
             infoHeader: '',
             infoText: '',
-            invalidForm: 'Please correct input fields'
+            invalidForm: 'Please correct input fields',
+            errorTitle: 'Oups',
+            errorDescription: 'This email address is already registered in our system.'
         },
         payment: {
             title: 'How would you like to pay?',
