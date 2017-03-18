@@ -8,7 +8,7 @@ var $,
     },
     translations,
     apiUrl = "https://listnride-staging.herokuapp.com/v2",
-    user = {id: null};
+    user = {id: 1428};
 
 $(document).ready(function () {
     // perform common tasks on initialization

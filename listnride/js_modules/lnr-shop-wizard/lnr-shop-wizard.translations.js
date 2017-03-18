@@ -37,8 +37,8 @@ var translationsConfigObject = {
             expiry: 'Expires',
             CVV: 'CVV',
             save: 'Save Data',
-            infoHeader: 'Enter your Payment Details',
-            infoText: 'All your data gets transmitted securely via SSH. You can pay by Paypal or Credit Card.'
+            titleError: 'Oh no!',
+            descriptionError: 'Your payment data seems to be invalid, because:'
         },
         rental: {
             title: 'Hey there!',
@@ -100,7 +100,9 @@ var translationsConfigObject = {
             creditCard: 'Kreditkarte',
             expiry: 'G&uuml;ltig bis',
             CVV: 'CVV',
-            save: 'Save Data'
+            save: 'Save Data',
+            titleError: 'Oh nein!',
+            descriptionError: 'Deine Zahlungsdaten scheinen ungültig zu sein, denn:'
         },
         rental: {
             title: 'Hallo!',
@@ -168,8 +170,8 @@ var translationsConfigObject = {
             expiry: 'Expires',
             CVV: 'CVV',
             save: 'Save Data',
-            infoHeader: 'Enter your Payment Details',
-            infoText: 'All your data gets transmitted securely via SSH. You can pay by Paypal or Credit Card.'
+            titleError: 'Oh no!',
+            descriptionError: 'Your payment data seems to be invalid, because:'
         },
         rental: {
             title: 'Hey there!',

@@ -105,7 +105,7 @@ var helper = {
         switch (element.id) {
             case 'tab-basic-info': helper.changeTab(element); break;
             case 'tab-payment-details': signup(function() {helper.changeTab(element)}); break;
-            case 'tab-booking-overview': helper.changeTab(element); break;
+            case 'tab-booking-overview': break;
             case 'tab-duration': helper.changeTab(element); break;
         }
 
@@ -300,8 +300,9 @@ var helper = {
         // hide the payment credit card form
         $('#sp-payment-form').hide();
         $('.info-title').hide();
-        $('#info_error').hide();
-        $('#email-repeat').on('paste', function (e) {
+        $('.info-error').hide();
+        $('.payment-error').hide();
+        $('#form_email_repeat').on('paste', function (e) {
             e.preventDefault();
         });
         // Connect the first_name input with the info description title
@@ -342,32 +343,36 @@ var helper = {
 
 function signup(nextTab) {
 
-    var data = {
-        'user': {
-            'first_name': $('#form_first_name').val(),
-            'last_name': $('#form_last_name').val(),
-            'email': $('#form_email').val()
-        }
-    };
-
-    console.log(data);
-
-    $.post({
-        url: apiUrl + "/users",
-        data: data,
-        success: function(response) {
-            console.log(response);
-            $('#info_description').show();
-            $('#info_error').hide();
-            user.id = response.id;
-            console.log(user.id);
-            nextTab();
-        },
-        error: function(response) {
-            $('#info_description').hide();
-            $('#info_error').show();
-        }
-    });
+    if (user.id == null) {
+        var data = {
+            'user': {
+                'first_name': $('#form_first_name').val(),
+                'last_name': $('#form_last_name').val(),
+                'email': $('#form_email').val()
+            }
+        };
+    
+        console.log(data);
+    
+        $.post({
+            url: apiUrl + "/users",
+            data: data,
+            success: function(response) {
+                console.log(response);
+                $('.info-description').show();
+                $('.info-error').hide();
+                user.id = response.id;
+                console.log(user.id);
+                nextTab();
+            },
+            error: function(response) {
+                $('.info-description').hide();
+                $('.info-error').show();
+            }
+        });
+    } else {
+        nextTab();
+    }
 }
 
 
