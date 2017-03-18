@@ -25,7 +25,8 @@ var translationsConfigObject = {
             email: 'Email Address',
             emailRepeat: 'Repeat Email',
             infoHeader: '',
-            infoText: ''
+            infoText: '',
+            invalidForm: 'Please correct input fields'
         },
         paymentDetailsPanel: {
             cardholderName: 'Cardholder Name',
@@ -78,7 +79,8 @@ var translationsConfigObject = {
             email: 'Email-Adresse',
             emailRepeat: 'Email wiederholen',
             infoHeader: '',
-            infoText: ''
+            infoText: '',
+            invalidForm: 'Please correct input fields'
         },
         paymentDetailsPanel: {
             cardholderName: 'Name des Karteninhabers',
@@ -129,7 +131,8 @@ var translationsConfigObject = {
             email: 'E-mailadres',
             emailRepeat: 'Repeat Email',
             infoHeader: '',
-            infoText: ''
+            infoText: '',
+            invalidForm: 'Please correct input fields'
         },
         paymentDetailsPanel: {
             cardholderName: 'Naam Pashouder',
