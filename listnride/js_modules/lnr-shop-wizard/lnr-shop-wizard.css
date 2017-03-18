@@ -64,6 +64,10 @@ html>body {
   color: rgb(221, 44, 0) !important;
 }
 
+.text-right {
+  text-align: right;
+}
+
 label {
   font-weight: 600;
   color: rgb(85, 85, 85);
@@ -195,6 +199,12 @@ lnr-header-text {
   right: 0px;
   padding: 24px;
   font-size: 12px;
+}
+
+/*------------ BOOKING OVERVIEW ------------*/
+
+#bike_picture {
+  margin: 7px 0;
 }
 
 
@@ -421,7 +431,7 @@ lnr-vertical-divider {
 }
 
 .lnr-list-sm>li {
-  min-height: 40px !important;
+  min-height: 30px !important;
   padding: 0px !important;
 }
 
