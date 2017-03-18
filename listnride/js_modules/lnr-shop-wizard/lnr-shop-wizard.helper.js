@@ -104,10 +104,11 @@ var helper = {
     changeTab: function (element) {
         document.getElementById(element.id).click(); // Click on the checkbox
 
-        console.log(element);
         switch (element.id) {
             case 'tab-basic-info': return;
             case 'tab-payment-details': signup(); return;
+            case 'tab-booking-overview': return;
+            case 'tab-duration': return;
         }
     },
 
