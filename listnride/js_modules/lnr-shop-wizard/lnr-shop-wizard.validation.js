@@ -1,5 +1,7 @@
+//User info form validation
 $(function () {
     $('#user-info-validation').addClass('hidden');
+    // $('#user-info-validation').addClass('hidden');
     $('#user-info').on('keyup', function () {
         if ($('#user-info md-input-container.is-invalid').length == 0) {
             $('#user-info-validation').addClass('hidden')
@@ -16,7 +18,7 @@ $(function () {
     });
 });
 
-
+//Payment info form validation
 $(function () {
     $('#payment-info-validation').addClass('hidden');
     $('#sp-payment-form').on('keyup', function () {
@@ -33,16 +35,23 @@ $(function () {
     });
 });
 
+$(function () {
+
+});
+
 function validateField(input_id, text_id) {
     if ($(input_id).parent().hasClass('is-invalid') || $(input_id).val().length == 0) {
         $(input_id).parent().addClass('is-invalid');
         $(input_id).closest("div").find("label").addClass('text-invalid');
         $(text_id + '-info-validation').removeClass('hidden');
     } else {
+        $(input_id).closest("div").find("label").removeClass('text-invalid');
         $(text_id + '-info-validation').addClass('hidden');
     }
 }
 
+
+//Dirty hack for require working properly
 MaterialTextfield.prototype.checkValidity = function () {
     if (this.input_.validity.valid) {
         this.element_.classList.remove(this.CssClasses_.IS_INVALID);
