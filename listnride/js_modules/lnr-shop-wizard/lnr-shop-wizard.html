@@ -116,7 +116,7 @@
                                         <input
                                                 id="first_name_input"
                                                 name="first_name"
-                                                class="md-input"
+                                                class="md-input mdl-textfield__input"
                                                 pattern="^([a-zA-Z ]){2,20}$"
                                                 required
                                         >
@@ -127,7 +127,7 @@
                                         <label translate="info.lastName"></label>
                                         <input
                                                 name="last_name"
-                                                class="md-input"
+                                                class="md-input mdl-textfield__input"
                                                 pattern="^([a-zA-Z ]){2,30}$"
                                                 required
                                         >
@@ -138,7 +138,7 @@
                                         <label translate="info.email"></label>
                                         <input
                                                 name="email"
-                                                class="md-input"
+                                                class="md-input mdl-textfield__input"
                                                 type="email"
                                                 pattern="\S+@\S+"
                                                 required
@@ -150,7 +150,7 @@
                                         <label translate="info.emailRepeat"></label>
                                         <input
                                                 name="email"
-                                                class="md-input"
+                                                class="md-input mdl-textfield__input"
                                                 type="email"
                                                 pattern="\S+@\S+"
                                                 required
@@ -199,7 +199,7 @@
                                         <label translate="payment.cardholderName"></label>
                                         <input
                                                 name="sp-payment-cardholder"
-                                                class="md-input"
+                                                class="md-input mdl-textfield__input"
                                                 pattern="^([a-zA-Z ]){2,30}$"
                                                 required
                                         >
@@ -210,14 +210,14 @@
                                         <label translate="payment.cardNumber"></label>
                                         <input
                                                 name="sp-payment-cardnumber"
-                                                class="md-input"
+                                                class="md-input mdl-textfield__input"
                                                 pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
                                                 required
                                         >
                                     </md-input-container>
                                 </div>
                                 <div class="mdl-grid">
-                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--2-col-phone">
+                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--2-col-phone mdl-textfield mdl-js-textfield">
                                         <div class="dropdown-payment lnr-input-containers">
                                             <label translate="payment.expiry"></label>
                                             <button id="lnr-payment-date-button" onclick="helper.openExpirationDropdown('   lnr-payment-date-dropdown', '\'date\'')" class="lnr-dropdown-button"></button>
@@ -226,7 +226,7 @@
                                         </div>
                                     </div>
                                     <div class="mdl-layout-spacer"></div>
-                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--1-col-phone">
+                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--1-col-phone mdl-textfield mdl-js-textfield">
                                         <div class="dropdown-payment lnr-input-containers">
                                             <label>&nbsp;</label>
                                             <button id="lnr-payment-year-button" onclick="helper.openExpirationDropdown('   lnr-payment-year-dropdown', '\'year\'')" class="lnr-dropdown-button">To
@@ -243,7 +243,7 @@
                                                 <input
                                                         name="sp-payment-cvv"
                                                         placeholder="123"
-                                                        class="md-input"
+                                                        class="md-input mdl-textfield__input"
                                                         pattern="^[0-9]{3,4}$"
                                                         type="text"
                                                         required
