@@ -26,6 +26,11 @@ $(function () {
     $('#sp-payment-cardholder').blur(function(){ validateField('#sp-payment-cardholder', '#payment')});
     $('#sp-payment-cardnumber').blur(function(){ validateField('#sp-payment-cardnumber', '#payment')});
     $('#sp-payment-cvv').blur(function(){ validateField('#sp-payment-cvv', '#payment')});
+    $('#sp-payment-cvv').on('keyup', function () {
+        if (this.value.length > 4) {
+            this.value = this.value.slice(0,4);
+        }
+    });
 });
 
 function validateField(input_id, text_id) {
