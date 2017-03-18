@@ -22,6 +22,15 @@ var helper = {
      */
     translationsConfigObject: translationsConfigObject,
     /**
+     * removes calendar busy loader once calendar is loaded
+     * @param {void}
+     * @returns {this} allow chaining
+     */
+    removeCalendarBusyLoader: function() {
+        $('#bike-calendar-loader').remove();
+        return this;
+    },
+    /**
      * returns the nested property value
      * @param {object} obj
      * @returns {string} path to the property as a string
@@ -36,13 +45,18 @@ var helper = {
      * @param {string} lang
      * @returns {void}
      */
-    getTranslations: function (lang) {
+    getTranslations: function () {
+        var lang = navigator.language.split('-')[0].toLowerCase();
         switch (lang) {
             case 'en':
-                return this.translationsConfigObject.de;
+                translations = this.translationsConfigObject.en;
+                break;
             case 'de':
-                return this.translationsConfigObject.de;
+                translations = this.translationsConfigObject.de;
+                break;
         }
+
+        return this;
     },
     /**
      * returns the required paramater from the url
@@ -54,11 +68,10 @@ var helper = {
         // get elements with 'translate' attribute
         // and get attribute value
         // apply text from translation object 
-        var lang = navigator.language.split('-')[0].toLowerCase();
-        var translations = helper.getTranslations(lang);
         $("[translate]").each(function () {
             var element = $(this),
                 path = element.attr("translate");
+
             element.html(helper.accessProperty(translations, path));
         });
         return this;
@@ -198,7 +211,8 @@ var helper = {
             '<ul class="lnr-list-sm mdl-list">' +
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" translate="rental.duration"></span>' +
-            '<span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 day, 0 hours</span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 ' +
+            translations.rental.day + ', 0 ' + translations.rental.hour + '</span>' +
             '</li>' +
             '<lnr-vertical-divider></lnr-vertical-divider>' +
             '<li class="mdl-list__item">' +
@@ -274,7 +288,7 @@ var helper = {
         $('#sp-payment-form').hide();
         $('.info-title').hide();
         // Connect the first_name input with the info description title
-        $('#first_name_input').keyup(function() {
+        $('#first_name_input').keyup(function () {
             var input = $('#first_name_input').val();
             if (input) {
                 $('.info-title-empty').hide();
@@ -288,6 +302,7 @@ var helper = {
         });
         // render rentals, navigation and apply translation
         helper
+            .getTranslations()
             .renderRentalInfo()
             .renderNavButtons()
             .applyTranslations();
@@ -299,7 +314,7 @@ var helper = {
      */
     postInit: function () {
         initOverview();
-        $('#bike-calendar-loader').remove();
+        helper.removeCalendarBusyLoader();
         initCalendarPicker();
         updateTimeRangeText();
         updatePaymentExpirationText();

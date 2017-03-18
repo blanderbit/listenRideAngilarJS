@@ -44,8 +44,12 @@ var translationsConfigObject = {
             fee: 'Service fee (incl. tax)',
             total: 'Total',
             subtotal: 'Subtotal',
-            days: 'Days',
-            hours: 'Hours'
+            day: 'day',
+            days: 'days',
+            hour: 'hour',
+            hours: 'hours',
+            week: 'week',
+            weeks: 'weeks'
         },
         overview: {
             title: 'Just one more click!',
@@ -99,8 +103,12 @@ var translationsConfigObject = {
             fee: 'Servicegeb&uuml;hr (inkl. MwSt.)',
             total: 'Ingesamt',
             subtotal: 'Zwischensumme',
+            day: 'Tag',
             days: 'Tage',
-            hours: 'Stunden'
+            hour: 'Stunde',
+            hours: 'Stunden',
+            week: 'Woche',
+            weeks: 'Wochen'
         },
         overview: {
             title: 'Nur noch ein Klick!',
