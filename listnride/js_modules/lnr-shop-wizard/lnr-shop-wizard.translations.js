@@ -17,9 +17,9 @@ var translationsConfigObject = {
             infoHeader: '',
             infoText: ''
         },
-        basicInfoPanel: {
-            title: '',
-            info: 'Now, please provide your name as well as a valid email address we can send your booking confirmation to.',
+        info: {
+            title: 'Alright',
+            description: 'Please provide your name and email address. Make sure your email address is valid as we\'ll send your booking confirmation to it.<br><br>No worries, your data is safe.',
             firstName: 'Firstname',
             lastName: 'Lastname',
             email: 'Email Address',
@@ -27,7 +27,9 @@ var translationsConfigObject = {
             infoHeader: '',
             infoText: ''
         },
-        paymentDetailsPanel: {
+        payment: {
+            title: 'How would you like to pay?',
+            description: 'Choose between Paypal or Credit Card and simply enter the details. All information will get transferred securely.',
             cardholderName: 'Cardholder Name',
             cardNumber: 'Card Number',
             payPal: 'PayPal',
@@ -39,12 +41,17 @@ var translationsConfigObject = {
             infoText: 'All your data gets transmitted securely via SSH. You can pay by Paypal or Credit Card.'
         },
         rental: {
-            duration: 'duration',
-            fee: 'listnride fee (incl. tax)',
-            total: 'total',
-            subtotal: 'subtotal'
+            title: 'Hey there!',
+            description: 'Booking the bike is simple and secure! First, select from when to when you want to book it using the calendar.',
+            duration: 'Duration',
+            fee: 'Service fee (incl. tax)',
+            total: 'Total',
+            subtotal: 'Subtotal'
         },
-        bookingOverviewPanel: {},
+        overview: {
+            title: 'Just one more click!',
+            description: 'Simply check again all your data and click the \'Book\' Button below to book the bike. You\'ll get a booking confirmation via email.'
+        },
         navigation: {
             back: 'Back',
             next: 'Next',
@@ -70,8 +77,9 @@ var translationsConfigObject = {
             infoHeader: '',
             infoText: ''
         },
-        basicInfoPanel: {
-            title: '',
+        info: {
+            title: 'Alright,',
+            description: 'Booking the bike is simple and secure! First, select from when to when you want to book it using the calendar.',
             info: 'Bitte gib deinen Namen und eine g&uuml;ltige Email-Adresse an, an welche wir die Buchungsbest&auml;tigung senden k&ouml;nnen.',
             firstName: 'Vorname',
             lastName: 'Nachname',
@@ -97,7 +105,10 @@ var translationsConfigObject = {
             total: 'total',
             subtotal: 'subtotal'
         },
-        bookingOverviewPanel: {},
+        overview: {
+            title: '',
+            description: ''
+        },
         navigation: {
             back: "Zur&uuml;ck",
             next: 'N&auml;chste',
@@ -122,8 +133,9 @@ var translationsConfigObject = {
             infoHeader: '',
             infoText: ''
         },
-        basicInfoPanel: {
-            info: 'Vul je persoonlijke informatie:',
+        info: {
+            title: 'Alright,',
+            description: 'Booking the bike is simple and secure! First, select from when to when you want to book it using the calendar.',
             firstName: 'Voornaam',
             lastName: 'Achternaam',
             email: 'E-mailadres',
@@ -148,7 +160,10 @@ var translationsConfigObject = {
             total: 'total',
             subtotal: 'subtotal'
         },
-        bookingOverviewPanel: {},
+        overview: {
+            title: '',
+            description: ''
+        },
         navigation: {
             back: 'Terug',
             next: 'Volgende',

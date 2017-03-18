@@ -47,6 +47,12 @@
                     </div>
                     <!-- duration tab -->
                     <div class="mdl-tabs__panel is-active" id="duration-panel">
+                        <div class="mdl-grid lnr-row-top">
+                            <div class="mdl-cell">
+                                <p class="md-title-sm" translate="rental.title"></p>
+                                <p class="md-subhead-sm" translate="rental.description"></p>
+                            </div>
+                        </div>
                         <div class="mdl-grid">
                             <!-- duration calendar -->
                             <div class="lnr-column-left mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--4-col-phone">
@@ -69,50 +75,71 @@
                                         <div id="lnr-date-to-dropdown" class="dropdown-content"></div>
                                     </div>
                                 </div>
-                                <!-- <lnr-horizontal-divider></lnr-horizontal-divider> -->
                             </div>
                             
                             <!-- rent info -->
-                            <rental-info></rental-info>
+                            <div class="lnr-column-right mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
+                                <p class="md-title-sm" translate="rental.title"></p>
+                                <p class="md-subhead-sm" translate="rental.description"></p>
+                                <rental-info></rental-info>
+                            </div>
+                        </div>
+                        <div class="mdl-grid lnr-row-bot">
+                            <div class="mdl-cell">
+                                <rental-info></rental-info>
+                            </div>
                         </div>
                         <!-- nav buttons -->
                         <nav-buttons back="" back-text="" next="'tab-basic-info'" next-text="navigation.next"></nav-buttons>
                     </div>
                     <!-- user info tab -->
                     <div class="mdl-tabs__panel" id="basic-info-panel">
+                        <div class="mdl-grid lnr-row-top">
+                            <div class="mdl-cell">
+                                <p class="md-title-sm">
+                                    <span translate="info.title"></span>
+                                    <span id="first_name_text_1">,</span>
+                                </p>
+                                <p class="md-subhead-sm" translate="info.description"></p>
+                            </div>
+                        </div>
                         <div class="mdl-grid">
                             <!-- personal info form -->
                             <div class="lnr-column-left mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--4-col-phone">
                                 <form>
                                     <div class="lnr-input-containers" layout="row">
                                         <md-input-container flex>
-                                            <label translate="basicInfoPanel.firstName"></label>
-                                            <input name="first_name" class="md-input" required ng-maxlength="20">
+                                            <label translate="info.firstName"></label>
+                                            <input id="first_name_input" name="first_name" class="md-input" required>
                                         </md-input-container>
                                     </div>
                                     <div class="lnr-input-containers" layout="row">
                                         <md-input-container flex>
-                                            <label translate="basicInfoPanel.lastName"></label>
-                                            <input name="last_name" class="md-input" required ng-maxlength="30">
+                                            <label translate="info.lastName"></label>
+                                            <input name="last_name" class="md-input" required>
                                         </md-input-container>
                                     </div>
                                     <div class="lnr-input-containers" layout="row">
                                         <md-input-container>
-                                            <label translate="basicInfoPanel.email"></label>
+                                            <label translate="info.email"></label>
                                             <input name="email" class="md-input" type="email">
                                         </md-input-container>
                                     </div>
                                     <div class="lnr-input-containers" layout="row">
                                         <md-input-container>
-                                            <label translate="basicInfoPanel.emailRepeat"></label>
+                                            <label translate="info.emailRepeat"></label>
                                             <input name="email" class="md-input" type="email">
                                         </md-input-container>
                                     </div>
                                 </form>
                             </div>
                             <!-- rent info -->
-                            <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
-                                <p class="md-subhead-sm" translate="basicInfoPanel.info"></p>
+                            <div class="lnr-column-right mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
+                                <p class="md-title-sm">
+                                    <span translate="info.title"></span>
+                                    <span id="first_name_text_2">,</span>
+                                </p>
+                                <p class="md-subhead-sm" translate="info.description"></p>
                             </div>
                         </div>
                         <!-- nav buttons -->
@@ -120,33 +147,39 @@
                     </div>
                     <!-- payment tab -->
                     <div class="mdl-tabs__panel" id="payment-details-panel">
+                        <div class="mdl-grid lnr-row-top">
+                            <div class="mdl-cell">
+                                <p class="md-title-sm" translate="payment.title"></p>
+                                <p class="md-subhead-sm" translate="payment.description"></p>
+                            </div>
+                        </div>
                         <div class="mdl-grid">
                             <!-- payment info form -->
                             <div id="sp-payment" class="lnr-column-left mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--4-col-phone">
                                 <div class="mdl-grid" style="padding: 0">
                                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone" style="margin: 0 10px 0 0">
-                                        <button id="sp-button-paypal" class="lnr-paypal md-accent md-raised md-button"><span translate="paymentDetailsPanel.payPal"></span></button>
+                                        <button id="sp-button-paypal" class="lnr-paypal md-accent md-raised md-button"><span translate="payment.payPal"></span></button>
                                     </div>
                                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone" style="margin: 0 0 0 10px">
-                                        <button class="lnr-mastercard md-accent md-raised md-button" onclick="helper.showCreditCardForm()" style="float: right"><span translate="paymentDetailsPanel.creditCard"></span></button>
+                                        <button class="lnr-mastercard md-accent md-raised md-button" onclick="helper.showCreditCardForm()" style="float: right"><span translate="payment.creditCard"></span></button>
                                     </div>
                                 </div>
                                 <form id="sp-payment-form">
                                     <div class="mdl-grid">
                                         <div class="mdl-cell mdl-cell--12-col lnr-input-containers">
                                             <md-input-container flex>
-                                                <label translate="paymentDetailsPanel.cardholderName"></label>
+                                                <label translate="payment.cardholderName"></label>
                                                 <input name="sp-payment-cardholder" class="md-input" required>
                                             </md-input-container>
                                         </div>
                                         <div class="mdl-cell mdl-cell--12-col lnr-input-containers">
                                             <md-input-container flex>
-                                                <label translate="paymentDetailsPanel.cardNumber"></label>
+                                                <label translate="payment.cardNumber"></label>
                                                 <input name="sp-payment-cardnumber" class="md-input" required>
                                             </md-input-container>
                                         </div>
                                         <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet dropdown-payment">
-                                            <label translate="paymentDetailsPanel.expiry"></label>
+                                            <label translate="payment.expiry"></label>
                                             <button id="lnr-payment-date-button" onclick="helper.openExpirationDropdown('lnr-payment-date-dropdown', '\'date\'')" class="lnr-dropdown-button"></button>
                                             <div id="lnr-payment-date-dropdown" class="dropdown-content">
                                             </div>
@@ -161,18 +194,19 @@
                                         <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                                             <div class="lnr-input-containers">
                                                 <md-input-container>
-                                                    <label translate="paymentDetailsPanel.CVV"></label>
+                                                    <label translate="payment.CVV"></label>
                                                     <input name="sp-payment-cvv" placeholder="123" class="md-input" type="text">
                                                 </md-input-container>
                                             </div>
                                         </div>
-                                        <button id="sp-save-payment-data" translate="paymentDetailsPanel.save"></button>
+                                        <button id="sp-save-payment-data" translate="payment.save"></button>
                                     </div>
                                 </form>
                             </div>
                             <!-- rent info -->
-                            <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
-                                <p class="md-subhead-sm">Rent details</p>
+                            <div class="lnr-column-right mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
+                                <p class="md-title-sm" translate="payment.title"></p>
+                                <p class="md-subhead-sm" translate="payment.description"></p>
                             </div>
                         </div>
                         <!-- nav buttons -->
@@ -180,13 +214,28 @@
                     </div>
                     <!-- booking overview tab -->
                     <div class="mdl-tabs__panel" id="booking-overview-panel">
-                        <div class="mdl-grid ">
+                        <div class="mdl-grid lnr-row-top">
+                            <div class="mdl-cell">
+                                <p class="md-title-sm" translate="overview.title"></p>
+                                <p class="md-subhead-sm" translate="overview.description"></p>
+                            </div>
+                        </div>
+                        <div class="mdl-grid">
                             <!-- overview info -->
                             <div class="lnr-column-left mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet mdl-cell--4-col-phone">
                                 <p>blabla</p>
                             </div>
                             <!-- rent info -->
-                            <rental-info></rental-info>
+                            <div class="lnr-column-right mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
+                                <p class="md-title-sm" translate="overview.title"></p>
+                                <p class="md-subhead-sm" translate="overview.description"></p>
+                                <rental-info></rental-info>
+                            </div>
+                        </div>
+                        <div class="mdl-grid lnr-row-bot">
+                            <div class="mdl-cell">
+                                <rental-info></rental-info>
+                            </div>
                         </div>
                         <!-- nav buttons -->
                         <nav-buttons back="'tab-payment-details'" back-text="navigation.back" next="'tab-duration'" next-text="navigation.proceed"></nav-buttons>

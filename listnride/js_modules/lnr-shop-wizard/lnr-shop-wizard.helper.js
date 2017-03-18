@@ -195,8 +195,6 @@ var helper = {
         var rentalInfo = $('rental-info');
 
         var rentalInfoHTML =
-            '<div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">' +
-            '<p class="md-subhead-sm">Rent details</p>' +
             '<ul class="lnr-list-sm mdl-list">' +
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" translate="rental.duration"></span>' +
@@ -215,8 +213,7 @@ var helper = {
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm" translate="rental.total"></span>' +
             '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-total">0 &euro;</span>' +
             '</li>' +
-            '</ul>' +
-            '</div>'
+            '</ul>'
 
         rentalInfo.replaceWith(rentalInfoHTML);
         return this;
@@ -275,6 +272,12 @@ var helper = {
         $('.dropdown-calendar *').attr("disabled", "disabled").off('click');
         // hide the payment credit card form
         $('#sp-payment-form').hide();
+        // Connect the first_name input with the info description title
+        $('#first_name_input').keyup(function() {
+            var title = $('#first_name_input').val() + ",";
+            $('#first_name_text_1').text(title);
+            $('#first_name_text_2').text(title);
+        });
         // render rentals, navigation and apply translation
         helper
             .renderRentalInfo()

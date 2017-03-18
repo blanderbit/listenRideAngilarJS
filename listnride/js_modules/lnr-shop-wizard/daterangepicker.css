@@ -64,7 +64,7 @@
 {
 	width:100%;
 	font-size: 14px !important;
-	/* float:left; */
+	 /*float: left; */
 }
 .date-picker-wrapper .month-wrapper table.month2
 {
@@ -85,9 +85,8 @@
 {
 	vertical-align:middle;
 	text-align:center;
-	line-height:14px;
+	line-height:12px;
 	margin : 0px;
-	// padding : 0px;
 	font-weight: 400;
 }
 .date-picker-wrapper .month-wrapper table .day

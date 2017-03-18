@@ -6,6 +6,16 @@ html>body {
   -webkit-font-smoothing: antialiased;
 }
 
+.lnr-column-right {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .lnr-column-right {
+    display: block;
+  }
+}
+
 @media (min-width: 480px) {
   .lnr-column-left {
     border-right: 1px solid rgba(225, 230, 230, 1.0);
@@ -16,7 +26,7 @@ html>body {
 
 #lnr-tab-bar {
   border-bottom: 0px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .lnr-button-bar {
@@ -26,6 +36,28 @@ html>body {
 .lnr-button-cell {
   padding: 0 !important;
   margin: 0 !important;
+}
+
+.lnr-row-top {
+  border-bottom: 1px solid rgba(225, 230, 230, 1.0);
+  margin-bottom: 10px;
+}
+
+@media (min-width: 480px) {
+  .lnr-row-top {
+    display: none;
+  }
+}
+
+.lnr-row-bot {
+  border-top: 1px solid rgba(225, 230, 230, 1.0);
+  margin-top: 15px;
+}
+
+@media (min-width: 480px) {
+  .lnr-row-bot {
+    display: none;
+  }
 }
 
 /*------------ PAYMENT ------------*/
@@ -96,6 +128,15 @@ a.lnr-links {
 .md-subhead-sm {
   font-size: 14px;
   font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 24px;
+  color: #584e4e;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.md-title-sm {
+  font-size: 14px;
+  font-weight: 600;
   letter-spacing: 0.01em;
   line-height: 24px;
   color: #584e4e;
