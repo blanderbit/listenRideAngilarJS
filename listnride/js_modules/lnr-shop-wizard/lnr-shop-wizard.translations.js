@@ -19,6 +19,7 @@ var translationsConfigObject = {
         },
         info: {
             title: 'Alright',
+            titleEmpty: 'Alright,',
             description: 'Please provide your name and email address. Make sure your email address is valid as we\'ll send your booking confirmation to it.<br><br>No worries, your data is safe.',
             firstName: 'Firstname',
             lastName: 'Lastname',

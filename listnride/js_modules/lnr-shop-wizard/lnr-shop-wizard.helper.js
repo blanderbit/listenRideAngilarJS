@@ -272,11 +272,19 @@ var helper = {
         $('.dropdown-calendar *').attr("disabled", "disabled").off('click');
         // hide the payment credit card form
         $('#sp-payment-form').hide();
+        $('.info-title').hide();
         // Connect the first_name input with the info description title
         $('#first_name_input').keyup(function() {
-            var title = $('#first_name_input').val() + ",";
-            $('#first_name_text_1').text(title);
-            $('#first_name_text_2').text(title);
+            var input = $('#first_name_input').val();
+            if (input) {
+                $('.info-title-empty').hide();
+                $('.info-title').show();
+                $('.first-name-text').text(input + ",");
+            } else {
+                $('.info-title').hide();
+                $('.info-title-empty').show();
+                $('.first-name-text').text(input);
+            }
         });
         // render rentals, navigation and apply translation
         helper
