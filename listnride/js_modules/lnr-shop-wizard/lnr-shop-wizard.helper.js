@@ -39,7 +39,7 @@ var helper = {
     getTranslations: function (lang) {
         switch (lang) {
             case 'en':
-                return this.translationsConfigObject.en;
+                return this.translationsConfigObject.de;
             case 'de':
                 return this.translationsConfigObject.de;
         }
