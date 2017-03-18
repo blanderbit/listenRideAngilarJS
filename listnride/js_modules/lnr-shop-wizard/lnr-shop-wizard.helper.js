@@ -22,6 +22,15 @@ var helper = {
      */
     translationsConfigObject: translationsConfigObject,
     /**
+     * removes calendar busy loader once calendar is loaded
+     * @param {void}
+     * @returns {this} allow chaining
+     */
+    removeCalendarBusyLoader: function() {
+        $('#bike-calendar-loader').remove();
+        return this;
+    },
+    /**
      * returns the nested property value
      * @param {object} obj
      * @returns {string} path to the property as a string
@@ -36,13 +45,18 @@ var helper = {
      * @param {string} lang
      * @returns {void}
      */
-    getTranslations: function (lang) {
+    getTranslations: function () {
+        var lang = navigator.language.split('-')[0].toLowerCase();
         switch (lang) {
             case 'en':
-                return this.translationsConfigObject.en;
+                translations = this.translationsConfigObject.en;
+                break;
             case 'de':
-                return this.translationsConfigObject.de;
+                translations = this.translationsConfigObject.de;
+                break;
         }
+
+        return this;
     },
     /**
      * returns the required paramater from the url
@@ -54,11 +68,10 @@ var helper = {
         // get elements with 'translate' attribute
         // and get attribute value
         // apply text from translation object 
-        var lang = navigator.language.split('-')[0].toLowerCase();
-        var translations = helper.getTranslations(lang);
         $("[translate]").each(function () {
             var element = $(this),
                 path = element.attr("translate");
+
             element.html(helper.accessProperty(translations, path));
         });
         return this;
@@ -195,12 +208,11 @@ var helper = {
         var rentalInfo = $('rental-info');
 
         var rentalInfoHTML =
-            '<div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">' +
-            '<p class="md-subhead-sm">Rent details</p>' +
             '<ul class="lnr-list-sm mdl-list">' +
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" translate="rental.duration"></span>' +
-            '<span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 day, 0 hours</span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 ' +
+            translations.rental.day + ', 0 ' + translations.rental.hour + '</span>' +
             '</li>' +
             '<lnr-vertical-divider></lnr-vertical-divider>' +
             '<li class="mdl-list__item">' +
@@ -215,8 +227,7 @@ var helper = {
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm" translate="rental.total"></span>' +
             '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-total">0 &euro;</span>' +
             '</li>' +
-            '</ul>' +
-            '</div>'
+            '</ul>'
 
         rentalInfo.replaceWith(rentalInfoHTML);
         return this;
@@ -248,7 +259,7 @@ var helper = {
             }
 
             navButtonHTML = navButtonHTML
-                .concat('<div align="right" class="lnr-button-cell mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">');
+                .concat('<div class="mdl-layout-spacer"></div><div align="right" class="lnr-button-cell mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">');
 
             // next button
             if (next) {
@@ -275,8 +286,23 @@ var helper = {
         $('.dropdown-calendar *').attr("disabled", "disabled").off('click');
         // hide the payment credit card form
         $('#sp-payment-form').hide();
+        $('.info-title').hide();
+        // Connect the first_name input with the info description title
+        $('#first_name_input').keyup(function () {
+            var input = $('#first_name_input').val();
+            if (input) {
+                $('.info-title-empty').hide();
+                $('.info-title').show();
+                $('.first-name-text').text(input + ",");
+            } else {
+                $('.info-title').hide();
+                $('.info-title-empty').show();
+                $('.first-name-text').text(input);
+            }
+        });
         // render rentals, navigation and apply translation
         helper
+            .getTranslations()
             .renderRentalInfo()
             .renderNavButtons()
             .applyTranslations();
@@ -288,7 +314,7 @@ var helper = {
      */
     postInit: function () {
         initOverview();
-        $('#bike-calendar-loader').remove();
+        helper.removeCalendarBusyLoader();
         initCalendarPicker();
         updateTimeRangeText();
         updatePaymentExpirationText();

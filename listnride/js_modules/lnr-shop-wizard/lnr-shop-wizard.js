@@ -5,7 +5,8 @@ var $,
     payment = {
         date: "Month",
         year: "Year"
-    };
+    },
+    translations;
 
 $(document).ready(function () {
     // perform common tasks on initialization
