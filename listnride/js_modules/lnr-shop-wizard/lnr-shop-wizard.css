@@ -514,20 +514,10 @@ lnr-vertical-divider {
 
 /*----------------- MDL Styles -------------*/
 
-.mdl-button:hover {
-  background-color: inherit !important;
-}
-
-.mdl-button[disabled][disabled], .mdl-button.mdl-button--disabled.mdl-button--disabled {
+.mdl-button:disabled,
+button[disabled] {
   color: rgb(255, 255, 255);
   border-color: rgba(225,230,230,1.0);
   background-color: rgba(206,212,216,0.9);
   cursor: not-allowed;
-}
-.mdl-button[disabled][disabled]:hover, .mdl-button.mdl-button--disabled.mdl-button--disabled {
-  background-color: rgba(206,212,216,0.9) !important;
-}
-
-.mdl-textfield {
-  padding: 0 !important;
 }
