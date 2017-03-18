@@ -416,6 +416,7 @@ lnr-vertical-divider {
 /*------------ DROPDOWN ------------*/
 
 .lnr-dropdown-button {
+  margin: 6px 0px;
   text-align: left;
   box-sizing: border-box;
   border-color: rgba(206, 212, 216, 0.9);
@@ -456,7 +457,6 @@ lnr-vertical-divider {
   max-height: 220px;
   min-height: 38px;
   top: 0px;
-  left: 8px;
   overflow-y: scroll;
 }
 
@@ -475,7 +475,7 @@ lnr-vertical-divider {
 }
 
 #bike-calendar {
-  margin: 6px 0;
+  margin: 6px 6px;
 }
 
 .date-picker-wrapper {
