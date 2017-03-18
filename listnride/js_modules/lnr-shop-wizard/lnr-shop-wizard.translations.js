@@ -22,7 +22,8 @@ var translationsConfigObject = {
             firstName: 'Firstname',
             lastName: 'Lastname',
             email: 'Email Address',
-            emailRepeat: 'Repeat Email'
+            emailRepeat: 'Repeat Email',
+            invalidForm: 'Please correct input fields'
         },
         payment: {
             title: 'How would you like to pay?',
@@ -83,7 +84,8 @@ var translationsConfigObject = {
             firstName: 'Vorname',
             lastName: 'Nachname',
             email: 'Email-Adresse',
-            emailRepeat: 'Email-Adresse wiederholen'
+            emailRepeat: 'Email-Adresse wiederholen',
+            invalidForm: 'Please correct input fields'
         },
         payment: {
             title: 'Wie w&uuml;rdest du gerne zahlen?',
@@ -147,7 +149,8 @@ var translationsConfigObject = {
             email: 'Email Address',
             emailRepeat: 'Repeat Email',
             infoHeader: '',
-            infoText: ''
+            infoText: '',
+            invalidForm: 'Please correct input fields'
         },
         payment: {
             title: 'How would you like to pay?',

@@ -254,7 +254,7 @@ var helper = {
             if (back) {
                 navButtonHTML = navButtonHTML
                     .concat('<button id="lnr-back-button-' + currentTabId  +'" onclick="helper.changeTab({id: ' + back + '})"')
-                    .concat('class="md-accent md-raised md-button md-ink-ripple"><span translate="' + backText + '"></span></button></div>');
+                    .concat('class="md-accent md-raised md-button md-ink-ripple mdl-button mdl-js-button"><span translate="' + backText + '"></span></button></div>');
             } else {
                 navButtonHTML = navButtonHTML.concat('</div>');
             }
@@ -265,7 +265,7 @@ var helper = {
             // next button
             if (next) {
                 navButtonHTML = navButtonHTML
-                    .concat('<button id="lnr-next-button-' + currentTabId  +'" onclick="helper.changeTab({id: ' + next + '})" class="md-accent md-raised md-button md-ink-ripple"><span translate="')
+                    .concat('<button id="lnr-next-button-' + currentTabId  +'" onclick="helper.changeTab({id: ' + next + '})" class="md-accent md-raised md-button md-ink-ripple  mdl-button mdl-js-button"><span translate="')
                     .concat(nextText + '"></span></button></div>');
             } else {
                 navButtonHTML = navButtonHTML.concat('</div>');
@@ -288,6 +288,9 @@ var helper = {
         // hide the payment credit card form
         $('#sp-payment-form').hide();
         $('.info-title').hide();
+        $('#email-repeat').on('paste', function(e) {
+            e.preventDefault();
+        });
         // Connect the first_name input with the info description title
         $('#first_name_input').keyup(function () {
             var input = $('#first_name_input').val();
