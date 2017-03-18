@@ -265,7 +265,7 @@ var helper = {
             // next button
             if (next) {
                 navButtonHTML = navButtonHTML
-                    .concat('<button id="lnr-next-button-' + currentTabId  +'" onclick="helper.changeTab({id: ' + next + '})" class="md-accent md-raised md-button md-ink-ripple"><span translate="')
+                    .concat('<button id="lnr-next-button-' + currentTabId  +'" class="md-accent md-raised md-button md-ink-ripple"><span translate="')
                     .concat(nextText + '"></span></button></div>');
             } else {
                 navButtonHTML = navButtonHTML.concat('</div>');
@@ -292,8 +292,8 @@ var helper = {
             e.preventDefault();
         });
         // Connect the first_name input with the info description title
-        $('#first_name_input').keyup(function () {
-            var input = $('#first_name_input').val();
+        $('#form_first_name').keyup(function () {
+            var input = $('#form_first_name').val();
             if (input) {
                 $('.info-title-empty').hide();
                 $('.info-title').show();
@@ -324,3 +324,31 @@ var helper = {
         updatePaymentExpirationText();
     }
 };
+
+/*--------------- API ACTIONS ---------------*/
+
+function signup() {
+
+    var data = {
+        'user': {
+            'first_name': $('#form_first_name').val(),
+            'last_name': $('#form_last_name').val(),
+            'email': $('#form_email').val()
+        }
+    };
+
+    console.log(data);
+    helper.changeTab({id: 'tab-payment-details'});
+
+    // $.post(
+    //     apiUrl,
+    //     {
+    //         first_name: $('#form_first_name').val();
+    //         last_name: $('#form_last_name').val();
+    //         email: $('#form_email').val();
+    //     }
+    // );
+}
+
+
+/*--------------------------------------------*/
