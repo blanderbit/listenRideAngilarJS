@@ -512,3 +512,7 @@ lnr-vertical-divider {
 .mdl-button[disabled][disabled]:hover, .mdl-button.mdl-button--disabled.mdl-button--disabled {
   background-color: rgba(206,212,216,0.9) !important;
 }
+
+.mdl-textfield {
+  padding: 0 !important;
+}
