@@ -1,45 +1,105 @@
+var userFormOverview = {
+    'form_first_name': false,
+    'form_last_name': false,
+    'form_email': false,
+    'form_email_repeat': false,
+    'valid': false
+};
+
+var paymentFormOverview = {
+    'sp-payment-cardholder': false,
+    'sp-payment-cardnumber': false,
+    'sp-payment-cvv': false,
+    'valid': false
+};
+
 //User info form validation
 $(function () {
+    $('#lnr-next-button-tab-basic-info').prop('disabled', true);
     $('#user-info-validation').addClass('hidden');
     $('#user-info').on('keyup', function () {
         if ($('#user-info md-input-container.is-invalid').length == 0) {
+            userButtonValidator('valid', true);
             $('#user-info-validation').addClass('hidden')
         } else {
+            userButtonValidator('valid', false);
             $('#user-info-validation').removeClass('hidden')
         }
     });
-    $('#form_first_name').blur(function(){ validateField('#form_first_name', '#user')});
-    $('#form_last_name').blur(function(){ validateField('#form_last_name', '#user')});
-    $('#form_email').blur(function(){ validateField('#form_email', '#user')});
-    $('#form_email_repeat').blur(function(){
+    $('#form_first_name').blur(function () {
+        userButtonValidator(this.id, true);
+        validateField(this.id, '#user')
+    });
+    $('#form_last_name').blur(function () {
+        userButtonValidator(this.id, true);
+        validateField(this.id, '#user')
+    });
+    $('#form_email').blur(function () {
+        userButtonValidator(this.id, true);
+        validateField(this.id, '#user')
+    });
+    $('#form_email_repeat').blur(function () {
+        userButtonValidator(this.id, true);
         if ($('#form_email_repeat').val() != $('#form_email_repeat').val()) $('#form_email_repeat').parent().addClass('is-invalid');
-        validateField('#form_email_repeat', '#user')
+        validateField(this.id, '#user')
     });
 });
 
 //Payment info form validation
 $(function () {
+    $('#lnr-next-button-tab-payment-details').prop('disabled', true);
     $('#payment-info-validation').addClass('hidden');
     $('#sp-payment-form').on('keyup', function () {
-        $('#payment-info-validation').toggleClass('hidden', $('#sp-payment-form md-input-container.is-invalid').length == 0);
+        if ($('#sp-payment-form md-input-container.is-invalid').length == 0) {
+            paymentButtonValidator('valid', true);
+            $('#payment-info-validation').addClass('hidden')
+        } else {
+            paymentButtonValidator('valid', false);
+            $('#payment-info-validation').removeClass('hidden')
+        }
     });
 
-    $('#sp-payment-cardholder').blur(function(){ validateField('#sp-payment-cardholder', '#payment')});
-    $('#sp-payment-cardnumber').blur(function(){ validateField('#sp-payment-cardnumber', '#payment')});
-    $('#sp-payment-cvv').blur(function(){ validateField('#sp-payment-cvv', '#payment')});
+    $('#sp-payment-cardholder').blur(function () {
+        paymentButtonValidator(this.id, true);
+        validateField(this.id, '#payment')
+    });
+    $('#sp-payment-cardnumber').blur(function () {
+        paymentButtonValidator(this.id, true);
+        validateField(this.id, '#payment')
+    });
+    $('#sp-payment-cvv').blur(function () {
+        paymentButtonValidator(this.id, true);
+        validateField(this.id, '#payment')
+    });
     $('#sp-payment-cvv').on('keyup', function () {
         if (this.value.length > 4) {
-            this.value = this.value.slice(0,4);
+            this.value = this.value.slice(0, 4);
         }
     });
 });
 
-$(function () {
-    // $('#lnr-next-button-tab-basic-info').prop('disabled', true);
+function userButtonValidator(field, value) {
+    userFormOverview[field] = value;
 
-});
+    if (allTrue(userFormOverview)) {
+        $('#lnr-next-button-tab-basic-info').prop('disabled', false);
+    } else {
+        $('#lnr-next-button-tab-basic-info').prop('disabled', true);
+    }
+}
+
+function paymentButtonValidator(field, value) {
+    paymentFormOverview[field] = value;
+
+    if (allTrue(paymentFormOverview)) {
+        $('#lnr-next-button-tab-payment-details').prop('disabled', false);
+    } else {
+        $('#lnr-next-button-tab-payment-details').prop('disabled', true);
+    }
+}
 
 function validateField(input_id, text_id) {
+    input_id = '#' + input_id;
     if ($(input_id).parent().hasClass('is-invalid') || $(input_id).val().length == 0) {
         $(input_id).parent().addClass('is-invalid');
         $(input_id).closest("div").find("label").addClass('text-invalid');
@@ -50,6 +110,12 @@ function validateField(input_id, text_id) {
     }
 }
 
+function allTrue(obj)
+{
+    for(var o in obj)
+        if(!obj[o]) return false;
+    return true;
+}
 
 //Dirty hack for require working properly
 MaterialTextfield.prototype.checkValidity = function () {
