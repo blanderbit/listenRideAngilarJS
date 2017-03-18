@@ -26,7 +26,7 @@ var helper = {
      * @param {void}
      * @returns {this} allow chaining
      */
-    removeCalendarBusyLoader: function() {
+    removeCalendarBusyLoader: function () {
         $('#bike-calendar-loader').remove();
         return this;
     },
@@ -103,6 +103,12 @@ var helper = {
      */
     changeTab: function (element) {
         document.getElementById(element.id).click(); // Click on the checkbox
+
+        console.log(element);
+        switch (element.id) {
+            case 'tab-basic-info': return;
+            case 'tab-payment-details': signup(); return;
+        }
     },
 
     /**
@@ -122,8 +128,8 @@ var helper = {
             element.append(
                 '<div class="lnr-date-selector" onclick="helper.onTimeValueSelect(' +
                 parseInt(index + 6) + ', ' + type + ')" + id="lnr-date-from-select-"' +
-                index + '>' + (index + 6) + ":00" +
-                calendar.availabilityMessage(index, calendar.endDate) + '</div>'
+                index + '><span>' + (index + 6) + ":00" +
+                calendar.availabilityMessage(index, calendar.endDate) + '</span></div>'
             );
         }
 
@@ -235,15 +241,15 @@ var helper = {
 
     renderNavButtons: function () {
         var navButtons = $('nav-buttons');
-    
+
         // iterate each button for different tabs
         navButtons.each(function () {
             var element = $(this);
-            var back = element.attr('back'),
-                next = element.attr('next'),
+            var currentTab = element.attr('current-tab'),
+                backTab = element.attr('back-tab'),
+                nextTab = element.attr('next-tab'),
                 backText = element.attr('back-text'),
-                nextText = element.attr('next-text'),
-                currentTabId = element.attr('current-tab');
+                nextText = element.attr('next-text');
 
             // open the grid
             var navButtonHTML =
@@ -251,10 +257,10 @@ var helper = {
                 '<div class="lnr-button-cell mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">';
 
             // back button
-            if (back) {
+            if (backTab) {
                 navButtonHTML = navButtonHTML
-                    .concat('<button id="lnr-back-button-' + currentTabId  +'" onclick="helper.changeTab({id: ' + back + '})"')
-                    .concat('class="md-accent md-raised md-button md-ink-ripple"><span translate="' + backText + '"></span></button></div>');
+                    .concat('<button id="lnr-back-button-' + currentTab + '" onclick="helper.changeTab({id: ' + backTab + '})"')
+                    .concat('class="md-accent md-raised md-button md-ink-ripple lnr-back-button"><span translate="' + backText + '"></span></button></div>');
             } else {
                 navButtonHTML = navButtonHTML.concat('</div>');
             }
@@ -263,9 +269,9 @@ var helper = {
                 .concat('<div class="mdl-layout-spacer"></div><div align="right" class="lnr-button-cell mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">');
 
             // next button
-            if (next) {
+            if (nextTab) {
                 navButtonHTML = navButtonHTML
-                    .concat('<button id="lnr-next-button-' + currentTabId  +'" class="md-accent md-raised md-button md-ink-ripple"><span translate="')
+                    .concat('<button id="lnr-next-button-' + currentTab + '" onclick="helper.changeTab({id: ' + nextTab + '})" class="md-accent md-raised md-button md-ink-ripple"><span translate="')
                     .concat(nextText + '"></span></button></div>');
             } else {
                 navButtonHTML = navButtonHTML.concat('</div>');
@@ -288,7 +294,7 @@ var helper = {
         // hide the payment credit card form
         $('#sp-payment-form').hide();
         $('.info-title').hide();
-        $('#email-repeat').on('paste', function(e) {
+        $('#email-repeat').on('paste', function (e) {
             e.preventDefault();
         });
         // Connect the first_name input with the info description title
@@ -338,7 +344,6 @@ function signup() {
     };
 
     console.log(data);
-    helper.changeTab({id: 'tab-payment-details'});
 
     // $.post(
     //     apiUrl,

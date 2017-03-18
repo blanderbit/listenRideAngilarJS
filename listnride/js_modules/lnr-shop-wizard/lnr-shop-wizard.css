@@ -20,7 +20,7 @@ html>body {
   .lnr-column-left {
     border-right: 1px solid rgba(225, 230, 230, 1.0);
     padding-right: 14px;
-    min-height: 400px;
+    min-height: 410px;
   }
 }
 
@@ -317,7 +317,7 @@ container.md-input-invalid .md-input {
 }
 
 #time-range .label {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .md-button {
@@ -366,7 +366,7 @@ container.md-input-invalid .md-input {
   background-color: rgb(95, 198, 147);
 }
 
-#lnr-back-button.md-button {
+.lnr-back-button.md-button {
   color: rgb(85, 85, 85);
   border: 1px solid rgb(220, 220, 220);
   background-color: rgba(255, 255, 255, 0.95);
@@ -427,6 +427,7 @@ lnr-vertical-divider {
 /*------------ DROPDOWN ------------*/
 
 .lnr-dropdown-button {
+  text-align: left;
   box-sizing: border-box;
   border-color: rgba(206, 212, 216, 0.9);
   background-color: white;
@@ -457,14 +458,16 @@ lnr-vertical-divider {
   display: none;
   position: absolute;
   background-color: white;
-  min-width: 160px;
+  min-width: 120px;
   z-index: 90;
   border-color: rgba(206, 212, 216, 0.9);
   border-style: solid;
   border-radius: 4px;
   border-width: 1px;
-  max-height: 190px;
+  max-height: 220px;
   min-height: 38px;
+  top: 0px;
+  left: 8px;
   overflow-y: scroll;
 }
 
@@ -492,12 +495,7 @@ lnr-vertical-divider {
 }
 
 .lnr-date-selector {
-  padding: 0 16px;
-  height: 38px;
-}
-
-.lnr-date-selector:first-child {
-  padding-top: 16px;
+padding: 12px 16px;
 }
 
 .lnr-date-selector:hover {

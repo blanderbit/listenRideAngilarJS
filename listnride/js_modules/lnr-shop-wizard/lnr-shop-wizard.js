@@ -221,14 +221,14 @@ function dateChange(startDate, endDate) {
 
     // // calendar start date
     $('[id=lnr-date-start]').each(function (index, element) {
-        $(element).text('from ' + startDate.getDate() +
+        $(element).html('from ' + startDate.getDate() +
             '.' + startDate.getMonth() +
             '.' + startDate.getFullYear());
     });
 
     // // calendar end date
     $('[id=lnr-date-end]').each(function (index, element) {
-        $(element).text('to ' + endDate.getDate() +
+        $(element).html('to ' + endDate.getDate() +
             '.' + endDate.getMonth() +
             '.' + endDate.getFullYear());
     });
