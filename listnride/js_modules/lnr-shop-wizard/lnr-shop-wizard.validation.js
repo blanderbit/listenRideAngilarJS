@@ -9,7 +9,6 @@ $(function () {
     $('#payment-info-validation').addClass('hidden');
     $('#sp-payment-form .mdl-grid').on('click', function () {
         $('#payment-info-validation').toggleClass('hidden', $('#sp-payment-form md-input-container.is-invalid').length == 0);
-        $('#payment-info-validation').toggleClass('hidden', $('#sp-payment-form md-input-container.is-invalid').length == 0);
     });
 
     // $('#lnr-payment-date-button').on('change', function () {
