@@ -242,7 +242,7 @@ var helper = {
             if (back) {
                 navButtonHTML = navButtonHTML
                     .concat('<button id="lnr-back-button" onclick="helper.changeTab({id: ' + back + '})"')
-                    .concat('class="md-accent md-raised md-button md-ink-ripple"><span translate="' + backText + '"></span></button></div>');
+                    .concat('class="md-accent md-raised md-button md-ink-ripple mdl-button mdl-js-button"><span translate="' + backText + '"></span></button></div>');
             } else {
                 navButtonHTML = navButtonHTML.concat('</div>');
             }
@@ -253,7 +253,7 @@ var helper = {
             // next button
             if (next) {
                 navButtonHTML = navButtonHTML
-                    .concat('<button onclick="helper.changeTab({id: ' + next + '})" class="md-accent md-raised md-button md-ink-ripple"><span translate="')
+                    .concat('<button id="lnr-next-button" onclick="helper.changeTab({id: ' + next + '})" class="md-accent md-raised md-button md-ink-ripple mdl-button mdl-js-button"><span translate="')
                     .concat(nextText + '"></span></button></div>');
             } else {
                 navButtonHTML = navButtonHTML.concat('</div>');
