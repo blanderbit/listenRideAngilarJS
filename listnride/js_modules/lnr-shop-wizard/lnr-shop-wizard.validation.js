@@ -13,7 +13,12 @@ var paymentFormOverview = {
     'valid': false
 };
 
-//User info form validation
+/*------------ Calendar validation ------------*/
+
+
+
+/*------------ User info form validation ------------*/
+
 $(function () {
     $('#lnr-next-button-tab-basic-info').prop('disabled', true);
     $('#user-info').on('keyup', function () {
@@ -39,11 +44,57 @@ $(function () {
         userButtonValidator(this.id, true);
         validateField(this.id, '#user');
         compareEmail();
-        userInputErrorAny();
+    });
+    $('#form_email').on('keyup', function () {
+        compareEmail();
+    });
+    $('#form_email_repeat').on('keyup', function () {
+        compareEmail();
     });
 });
 
-//Payment info form validation
+function compareEmail() {
+    var $email = $('#form_email');
+    var $repeat = $('#form_email_repeat');
+    if ($repeat.val().length > 0 && $('#form_email').val().length > 0) {
+        if ($email.val() == $repeat.val()) {
+            $email.parent().removeClass('is-invalid');
+            $email.closest("div").find("label").removeClass('text-invalid');
+            $repeat.parent().removeClass('is-invalid');
+            $repeat.closest("div").find("label").removeClass('text-invalid');
+        } else {
+            $email.closest("div").find("label").addClass('text-invalid');
+            $email.parent().addClass('is-invalid');
+            $repeat.parent().addClass('is-invalid');
+            $repeat.closest("div").find("label").addClass('text-invalid');
+        }
+    }
+    userInputErrorAny();
+}
+
+function userButtonValidator(field, value) {
+    userFormOverview[field] = value;
+
+    if (allTrue(userFormOverview)) {
+        $('#lnr-next-button-tab-basic-info').prop('disabled', false);
+    } else {
+        $('#lnr-next-button-tab-basic-info').prop('disabled', true);
+    }
+}
+
+function userInputErrorAny(){
+    if ($('#user-info md-input-container.is-invalid').length == 0) {
+        userButtonValidator('valid', true);
+        $('#user-info-validation').addClass('hidden')
+    } else {
+        userButtonValidator('valid', false);
+        $('#user-info-validation').removeClass('hidden')
+    }
+}
+
+/*------------ Payment info form validation ------------*/
+
+
 $(function () {
     $('#lnr-next-button-tab-payment-details').prop('disabled', true);
     $('#sp-payment-form').on('keyup', function () {
@@ -71,45 +122,6 @@ $(function () {
     });
 });
 
-function compareEmail() {
-    var $email = $('#form_email');
-    var $repeat = $('#form_email_repeat');
-    if ($repeat.val().length > 0 && $('#form_email').val().length > 0) {
-        if ($email.val() == $repeat.val()) {
-            $email.parent().removeClass('is-invalid');
-            $email.closest("div").find("label").removeClass('text-invalid');
-            $repeat.parent().removeClass('is-invalid');
-            $repeat.closest("div").find("label").removeClass('text-invalid');
-        } else {
-            $email.closest("div").find("label").addClass('text-invalid');
-            $email.parent().addClass('is-invalid');
-            $repeat.parent().addClass('is-invalid');
-            $repeat.closest("div").find("label").addClass('text-invalid');
-        }
-    }
-}
-
-
-function userButtonValidator(field, value) {
-    userFormOverview[field] = value;
-
-    if (allTrue(userFormOverview)) {
-        $('#lnr-next-button-tab-basic-info').prop('disabled', false);
-    } else {
-        $('#lnr-next-button-tab-basic-info').prop('disabled', true);
-    }
-}
-
-function userInputErrorAny(){
-    if ($('#user-info md-input-container.is-invalid').length == 0) {
-        userButtonValidator('valid', true);
-        $('#user-info-validation').addClass('hidden')
-    } else {
-        userButtonValidator('valid', false);
-        $('#user-info-validation').removeClass('hidden')
-    }
-}
-
 function paymentInputErrorAny(){
     if ($('#sp-payment-form md-input-container.is-invalid').length == 0) {
         paymentButtonValidator('valid', true);
@@ -129,6 +141,8 @@ function paymentButtonValidator(field, value) {
         $('#lnr-next-button-tab-payment-details').prop('disabled', true);
     }
 }
+
+/*------------ Shared stuff ------------*/
 
 function validateField(input_id, text_id) {
     input_id = '#' + input_id;
