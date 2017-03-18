@@ -66,7 +66,7 @@
                                 <div id="bike-calendar"></div>
                                 <!-- time range selection -->
                                 <div class="mdl-grid" id="time-range">
-                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone dropdown-calendar">
+                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone dropdown-calendar">
                                         <span class="label" id="lnr-date-start" translation="durationPanel.from"></span>
                                         <button 
                                                 type="button" 
@@ -76,7 +76,8 @@
                                         </button>
                                         <div id="lnr-date-from-dropdown" class="dropdown-content"></div>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone dropdown-calendar">
+                                    
+                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone dropdown-calendar">
                                         <span class="label" id="lnr-date-end" translation="durationPanel.to"></span>
                                         <button 
                                                 type="button" 
@@ -222,28 +223,27 @@
                                         </md-input-container>
                                     </div>
                                     <div class="mdl-grid">
-                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--2-col-phone mdl-textfield mdl-js-textfield">
+                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone mdl-textfield mdl-js-textfield">
                                             <div class="dropdown-payment lnr-input-containers">
                                                 <label translate="payment.expiry"></label>
                                                 <button 
                                                         type="button" 
                                                         id="lnr-payment-date-button" 
                                                         onclick="helper.openExpirationDropdown('lnr-payment-date-dropdown', '\'date\'')"
-                                                        class="md-accent md-raised md-button lnr-dropdown-button">
+                                                        class="md-accent md-raised md-button lnr-back-button lnr-dropdown-button">
                                                 </button>
-                                                <div id="lnr-payment-date-dropdown" class="dropdown-content">
-                                                </div>
+                                                <div id="lnr-payment-date-dropdown" class="dropdown-content"></div>
                                             </div>
                                         </div>
                                         <div class="mdl-layout-spacer"></div>
-                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--1-col-phone mdl-textfield mdl-js-textfield">
+                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone mdl-textfield mdl-js-textfield">
                                             <div class="dropdown-payment lnr-input-containers">
                                                 <label>&nbsp;</label>
                                                 <button 
                                                         type="button" 
                                                         id="lnr-payment-year-button" 
                                                         onclick="helper.openExpirationDropdown('lnr-payment-year-dropdown', '\'year\'')"
-                                                        class="md-accent md-raised md-button md-ink-ripple lnr-dropdown-button">To
+                                                        class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button">To
                                                 </button>
                                                 <div id="lnr-payment-year-dropdown" class="dropdown-content">
                                                 </div>
