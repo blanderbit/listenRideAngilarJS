@@ -170,6 +170,9 @@ var helper = {
             calendar.endTime + ':00'
         );
 
+        $('#lnr-date-start-button').attr("title", "");
+        $('#lnr-date-end-button').attr("title", "");
+
         // // calendar end date
         $('[id=lnr-date-end]').each(function (index, element) {
             $(element).html('to ' + endDate.getDate() +
@@ -356,7 +359,7 @@ var helper = {
 
             navButtonHTML = navButtonHTML
                 .concat('<div class="mdl-layout-spacer"></div><div align="right" class="lnr-button-cell mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">') 
-                .concat('<button id="lnr_print_button" onclick="window.print()" class="md-raised md-button md-ink-ripple"><span translate="shared.print">Print</span></button>');
+                .concat('<button onclick="window.print()" class="lnr-print-button lnr-back-button md-raised md-button md-ink-ripple"><span translate="shared.print"></span></button>');
 
             // next button
             if (nextTab) {
@@ -410,6 +413,12 @@ var helper = {
     preInit: function () {
         // close the drop down for the date time selector in calendar
         window.onclick = closeDropDown;
+        // render rentals, navigation and apply translation
+        helper
+            .getTranslations()
+            .renderRentalInfo()
+            .renderNavButtons()
+            .applyTranslations();
         // disable initially the time selector
         $('.dropdown-calendar *').attr("disabled", "disabled").off('click');
         // hide the payment credit card form
@@ -418,9 +427,12 @@ var helper = {
         $('.info-error').hide();
         $('.payment-error').hide();
         $('.overview-success').hide();
+        $('.lnr-print-button').hide();
         $('#form_email_repeat').on('paste', function (e) {
             e.preventDefault();
         });
+        $('#lnr-date-start-button').attr("title", translations.durationPanel.selectDaysFirst);
+        $('#lnr-date-end-button').attr("title", translations.durationPanel.selectDaysFirst);
         // Connect the first_name input with the info description title
         $('#form_first_name').keyup(function () {
             var input = $('#form_first_name').val();
@@ -434,13 +446,6 @@ var helper = {
                 $('.first-name-text').text(input);
             }
         });
-        // render rentals, navigation and apply translation
-        helper
-            .getTranslations()
-            .renderRentalInfo()
-            .renderNavButtons()
-            .applyTranslations();
-        $('#lnr_print_button').hide();
     },
 
     /**
@@ -489,32 +494,38 @@ function signup(nextTab) {
 }
 
 function createRequest(nextTab) {
-    var data = {
-        'request': {
-            'user_id': user.id,
-            'ride_id': calendar.bikeId,
-            'start_date': calendar.startDate,
-            'end_date': calendar.endDate
-        }
-    };
 
-    $.post({
-        url: apiUrl + "/requests",
-        data: data,
-        success: function(response) {
-            debugger
-            console.log(response);
-            $('.info-description').show();
-            $('.info-error').hide();
-            user.id = response.id;
-            console.log(user.id);
-            nextTab();
-        },
-        error: function(response) {
-            $('.info-description').hide();
-            $('.info-error').show();
-        }
-    });
+    $('#lnr-next-button-tab-booking-overview').hide();
+    $('.lnr-print-button').show();
+    $('#lnr-back-button-tab-booking-overview').hide();
+    $('.overview-description').hide();
+    $('.overview-success').show();
+    // var data = {
+    //     'request': {
+    //         'user_id': user.id,
+    //         'ride_id': calendar.bikeId,
+    //         'start_date': calendar.startDate,
+    //         'end_date': calendar.endDate
+    //     }
+    // };
+
+    // $.post({
+    //     url: apiUrl + "/requests",
+    //     data: data,
+    //     success: function(response) {
+    //         debugger
+    //         console.log(response);
+    //         $('.info-description').show();
+    //         $('.info-error').hide();
+    //         user.id = response.id;
+    //         console.log(user.id);
+    //         nextTab();
+    //     },
+    //     error: function(response) {
+    //         $('.info-description').hide();
+    //         $('.info-error').show();
+    //     }
+    // });
 }
 
 

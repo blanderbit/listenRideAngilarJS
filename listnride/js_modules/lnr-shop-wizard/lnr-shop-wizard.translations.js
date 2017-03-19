@@ -2,18 +2,20 @@ var translationsConfigObject = {
     en: {
         shared: {
             lnrHeaderText: 'The perfect bike. Simply rent it.',
-            hello: 'Hello'
+            hello: 'Hello',
+            print: 'Print Page'
         },
         tabs: {
-            tabDuration: '1. Duration',
-            tabBasicInfo: '2. Info',
-            tabPaymentDetail: '3. Payment',
-            tabBookingOverview: '4. Booking'
+            tabDuration: '1.&nbsp;Duration',
+            tabBasicInfo: '2.&nbsp;Info',
+            tabPaymentDetail: '3.&nbsp;Payment',
+            tabBookingOverview: '4.&nbsp;Booking'
         },
         durationPanel: {
             info: 'Please mark rent period:',
             from: 'from',
-            to: 'to'
+            to: 'to',
+            selectDaysFirst: 'Please select the days first'
         },
         info: {
             title: 'Alright',
@@ -23,7 +25,7 @@ var translationsConfigObject = {
             lastName: 'Lastname',
             email: 'Email Address',
             emailRepeat: 'Repeat Email',
-            invalidForm: 'Please correct input fields',
+            invalidForm: 'It seems like there\'s invalid data in the form.',
             errorTitle: 'Oups',
             errorDescription: 'This email address is invalid or already registered in our system.'
         },
@@ -56,7 +58,7 @@ var translationsConfigObject = {
         },
         overview: {
             title: 'Just one more click!',
-            description: 'Simply check again all your data and click the \'Book\' Button below to book the bike. You\'ll get a booking confirmation via email.',
+            description: 'Simply check again all your data and click the \'Book\' Button below to book the bike. You\'ll get a booking confirmation via email, including all contact data like address and phone number.',
             titleSuccess: 'Congratulations!',
             descriptionSuccess: 'You\'ve successfully booked the bike. We\'ve send you a booking confirmation containing all informations to your email address.'
         },
@@ -69,7 +71,8 @@ var translationsConfigObject = {
     de: {
         shared: {
             lnrHeaderText: 'Das perfekte Rad. Einfach mieten.',
-            hello: 'Hallo'
+            hello: 'Hallo',
+            print: 'Seite Drucken'
         },
         tabs: {
             tabDuration: 'Dauer',
@@ -79,7 +82,8 @@ var translationsConfigObject = {
         },
         durationPanel: {
             from: 'von',
-            to: 'bis'
+            to: 'bis',
+            selectDaysFirst: 'Bitte zuerst die Tage selektieren'
         },
         info: {
             title: 'Perfekt',
@@ -89,7 +93,7 @@ var translationsConfigObject = {
             lastName: 'Nachname',
             email: 'Email-Adresse',
             emailRepeat: 'Email-Adresse wiederholen',
-            invalidForm: 'Please correct input fields',
+            invalidForm: 'Das Formular scheint nicht ganz korrekt ausgef&uuml;llt zu sein.',
             errorTitle: 'Ups!',
             errorDescription: 'Diese Email-Addresse ist ungültig oder bereits in unserem System vorhanden.'
         },
@@ -122,7 +126,7 @@ var translationsConfigObject = {
         },
         overview: {
             title: 'Nur noch ein Klick!',
-            description: '&Uuml;berpr&uuml;fe nochmals deine Daten und klicke auf \'Buchen\' um das Rad zu buchen. Wir schicken dir eine Buchungsbest&auml;tigung via Email.',
+            description: '&Uuml;berpr&uuml;fe nochmals deine Daten und klicke auf \'Buchen\' um das Rad zu buchen. Wir schicken dir eine Buchungsbest&auml;tigung via Email, mit weiteren Kontaktdaten wie Adresse und Telefonnummer.',
             titleSuccess: 'Gl&uuml;ckwunsch!',
             descriptionSuccess: 'Du hast das Fahrrad erfolgreich gebucht. Wir haben dir soeben eine Buchungsbest&auml;tigung mit s&auml;mtlichen Informationen an deine Email-Adresse geschickt.'
         },
@@ -135,7 +139,8 @@ var translationsConfigObject = {
     nl: {
         shared: {
             lnrHeaderText: 'The perfect bike. Simply rent it.',
-            hello: 'Hello'
+            hello: 'Hello',
+            print: 'Print Page'
         },
         tabs: {
             tabDuration: 'Duration',
@@ -147,8 +152,7 @@ var translationsConfigObject = {
             info: 'Please mark rent period:',
             from: 'from',
             to: 'to',
-            infoHeader: '',
-            infoText: ''
+            selectDaysFirst: 'Please select the days first'
         },
         info: {
             title: 'Alright',
@@ -189,7 +193,7 @@ var translationsConfigObject = {
         },
         overview: {
             title: 'Just one more click!',
-            description: 'Simply check again all your data and click the \'Book\' Button below to book the bike. You\'ll get a booking confirmation via email.',
+            description: 'Simply check again all your data and click the \'Book\' Button below to book the bike. You\'ll get a booking confirmation via email, including all contact data like address and phone number.',
             titleSuccess: 'Congratulations!',
             descriptionSuccess: 'You\'ve successfully booked the bike. We\'ve send you a booking confirmation containing all informations to your email address.'
         },
