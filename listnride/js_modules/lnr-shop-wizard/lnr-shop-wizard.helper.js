@@ -49,17 +49,17 @@ var helper = {
         var lang = navigator.language.split('-')[0].toLowerCase();
         switch (lang) {
             case 'en': return {
-                colorize: true,
+                colorize: false,
                 decimalSymbol: '.',
                 digitGroupSymbol: ','
             }
             case 'de': return {
-                colorize: true,
+                colorize: false,
                 decimalSymbol: ',',
                 digitGroupSymbol: '.'
             }
             case 'nl': return {
-                colorize: true,
+                colorize: false,
                 decimalSymbol: ',',
                 digitGroupSymbol: '.'
             }
@@ -187,7 +187,7 @@ var helper = {
             case 'tab-basic-info': helper.changeTab(element); break;
             case 'tab-payment-details': signup(function() {helper.changeTab(element)}); break;
             case 'tab-booking-overview': break;
-            case 'tab-duration': helper.changeTab(element); break;
+            case 'tab-duration': createRequest(function() {helper.changeTab(element)}); break;
         }
 
         // document.getElementById(element.id).click();
@@ -468,18 +468,14 @@ function signup(nextTab) {
                 'email': $('#form_email').val()
             }
         };
-    
-        console.log(data);
-    
+
         $.post({
             url: apiUrl + "/users",
             data: data,
             success: function(response) {
-                console.log(response);
                 $('.info-description').show();
                 $('.info-error').hide();
                 user.id = response.id;
-                console.log(user.id);
                 nextTab();
             },
             error: function(response) {
@@ -490,6 +486,35 @@ function signup(nextTab) {
     } else {
         nextTab();
     }
+}
+
+function createRequest(nextTab) {
+    var data = {
+        'request': {
+            'user_id': user.id,
+            'ride_id': calendar.bikeId,
+            'start_date': calendar.startDate,
+            'end_date': calendar.endDate
+        }
+    };
+
+    $.post({
+        url: apiUrl + "/requests",
+        data: data,
+        success: function(response) {
+            debugger
+            console.log(response);
+            $('.info-description').show();
+            $('.info-error').hide();
+            user.id = response.id;
+            console.log(user.id);
+            nextTab();
+        },
+        error: function(response) {
+            $('.info-description').hide();
+            $('.info-error').show();
+        }
+    });
 }
 
 
