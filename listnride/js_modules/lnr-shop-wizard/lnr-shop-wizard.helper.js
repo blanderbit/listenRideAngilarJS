@@ -190,7 +190,7 @@ var helper = {
             case 'tab-basic-info': helper.changeTab(element); break;
             case 'tab-payment-details': signup(function() {helper.changeTab(element)}); break;
             case 'tab-booking-overview': break;
-            case 'tab-duration': createRequest(function() {helper.changeTab(element)}); break;
+            case 'tab-duration': createRequest(); break;
         }
 
         // document.getElementById(element.id).click();
@@ -480,6 +480,8 @@ function signup(nextTab) {
             success: function(response) {
                 $('.info-description').show();
                 $('.info-error').hide();
+                var encoded = base64Encode(response.email + ":" + response.password_hashed);
+                user.auth = 'Basic ' + encoded;
                 user.id = response.id;
                 nextTab();
             },
@@ -493,40 +495,75 @@ function signup(nextTab) {
     }
 }
 
-function createRequest(nextTab) {
+function createRequest() {
+    var data = {
+        'request': {
+            'user_id': user.id,
+            'ride_id': calendar.bikeId,
+            'start_date': calendar.startDate,
+            'end_date': calendar.endDate,
+            'instant': true
+        }
+    };
 
-    $('#lnr-next-button-tab-booking-overview').hide();
-    $('.lnr-print-button').show();
-    $('#lnr-back-button-tab-booking-overview').hide();
-    $('.overview-description').hide();
-    $('.overview-success').show();
-    // var data = {
-    //     'request': {
-    //         'user_id': user.id,
-    //         'ride_id': calendar.bikeId,
-    //         'start_date': calendar.startDate,
-    //         'end_date': calendar.endDate
-    //     }
-    // };
-
-    // $.post({
-    //     url: apiUrl + "/requests",
-    //     data: data,
-    //     success: function(response) {
-    //         debugger
-    //         console.log(response);
-    //         $('.info-description').show();
-    //         $('.info-error').hide();
-    //         user.id = response.id;
-    //         console.log(user.id);
-    //         nextTab();
-    //     },
-    //     error: function(response) {
-    //         $('.info-description').hide();
-    //         $('.info-error').show();
-    //     }
-    // });
+    $.post({
+        url: apiUrl + "/requests",
+        data: data,
+        beforeSend: function(request) {
+            request.setRequestHeader("Authorization", user.auth);
+        },
+        success: function(response) {
+            $('#lnr-next-button-tab-booking-overview').hide();
+            $('.lnr-print-button').show();
+            $('#lnr-back-button-tab-booking-overview').hide();
+            $('.overview-description').hide();
+            $('.overview-success').show();
+        },
+        error: function(response) {
+            console.log(response);
+            // TODO: return an error
+        }
+    });
 }
 
 
-/*--------------------------------------------*/
+/*------------------- Encrypting -------------------------*/
+
+function base64Encode(input) {
+    var keyStr = 'ABCDEFGHIJKLMNOP' +
+        'QRSTUVWXYZabcdef' +
+        'ghijklmnopqrstuv' +
+        'wxyz0123456789+/' +
+        '=';
+    var output = "";
+    var chr1, chr2, chr3 = "";
+    var enc1, enc2, enc3, enc4 = "";
+    var i = 0;
+
+    do {
+        chr1 = input.charCodeAt(i++);
+        chr2 = input.charCodeAt(i++);
+        chr3 = input.charCodeAt(i++);
+
+        enc1 = chr1 >> 2;
+        enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+        enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+        enc4 = chr3 & 63;
+
+        if (isNaN(chr2)) {
+            enc3 = enc4 = 64;
+        } else if (isNaN(chr3)) {
+            enc4 = 64;
+        }
+
+        output = output +
+            keyStr.charAt(enc1) +
+            keyStr.charAt(enc2) +
+            keyStr.charAt(enc3) +
+            keyStr.charAt(enc4);
+        chr1 = chr2 = chr3 = "";
+        enc1 = enc2 = enc3 = enc4 = "";
+    } while (i < input.length);
+
+    return output;
+}
