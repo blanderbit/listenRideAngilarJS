@@ -265,12 +265,37 @@ angular.
         );
       };
 
+      var tokenLogin = function(token, email) {
+        var user = {
+          "shop_token": token,
+          "email": email
+        };
+        return api.post('/users/login', user);
+      }
+
+      // var tokenLogin = function(token, email, successCallback, errorCallback) {
+      //   var user = {
+      //     "shop_token": token,
+      //     "email": email
+      //   };
+      //   api.post('/users/login', user).then(function(success) {
+      //     setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
+      //     console.log("tokenlogin success");
+      //     successCallback();
+      //   }, function(error) {
+      //     console.log(error);
+      //     errorCallback();
+      //   });
+      // }
+
       // Further all functions to be exposed in the service
       return {
         showSignupDialog: showSignupDialog,
         showLoginDialog: showLoginDialog,
         loggedIn: loggedIn,
         logout: logout,
+        tokenLogin: tokenLogin,
+        setCredentials: setCredentials,
         profilePicture: function() {
           return $localStorage.profilePicture
         },
