@@ -60,7 +60,9 @@ var translationsConfigObject = {
             title: 'Just one more click!',
             description: 'Simply check again all your data and click the \'Book\' Button below to book the bike. You\'ll get a booking confirmation via email, including all contact data like address and phone number.',
             titleSuccess: 'Congratulations!',
-            descriptionSuccess: 'You\'ve successfully booked the bike. We\'ve send you a booking confirmation containing all informations to your email address.'
+            descriptionSuccess: 'You\'ve successfully booked the bike. We\'ve send you a booking confirmation containing all informations to your email address.',
+            errorTitle: 'Ushh..',
+            errorDescription: 'Something went wrong with your booking'
         },
         navigation: {
             back: 'Back',
@@ -128,7 +130,9 @@ var translationsConfigObject = {
             title: 'Nur noch ein Klick!',
             description: '&Uuml;berpr&uuml;fe nochmals deine Daten und klicke auf \'Buchen\' um das Rad zu buchen. Wir schicken dir eine Buchungsbest&auml;tigung via Email, mit weiteren Kontaktdaten wie Adresse und Telefonnummer.',
             titleSuccess: 'Gl&uuml;ckwunsch!',
-            descriptionSuccess: 'Du hast das Fahrrad erfolgreich gebucht. Wir haben dir soeben eine Buchungsbest&auml;tigung mit s&auml;mtlichen Informationen an deine Email-Adresse geschickt.'
+            descriptionSuccess: 'Du hast das Fahrrad erfolgreich gebucht. Wir haben dir soeben eine Buchungsbest&auml;tigung mit s&auml;mtlichen Informationen an deine Email-Adresse geschickt.',
+            errorTitle: 'Ushh..',
+            errorDescription: 'Something went wrong with your booking'
         },
         navigation: {
             back: 'Zur&uuml;ck',
@@ -195,7 +199,9 @@ var translationsConfigObject = {
             title: 'Just one more click!',
             description: 'Simply check again all your data and click the \'Book\' Button below to book the bike. You\'ll get a booking confirmation via email, including all contact data like address and phone number.',
             titleSuccess: 'Congratulations!',
-            descriptionSuccess: 'You\'ve successfully booked the bike. We\'ve send you a booking confirmation containing all informations to your email address.'
+            descriptionSuccess: 'You\'ve successfully booked the bike. We\'ve send you a booking confirmation containing all informations to your email address.',
+            errorTitle: 'Ushh..',
+            errorDescription: 'Something went wrong with your booking'
         },
         navigation: {
             back: 'Back',
