@@ -1,5 +1,15 @@
 /*! Listnride | bike rendering */
 
+/**
+   * spawns the shop wizard in a new popup
+   * based on userId and bikeId
+   * @param {Number} userId id who owns the bike
+   * @param {Number} bikeId id of the bike requested
+   */
+  function spawnWizard (userId, bikeId) {
+    window.open('https://s3.eu-central-1.amazonaws.com/listnride-cdn/shop-wizard/lnr-shop-wizard.html?userId=' + userId + '&bikeId=' + bikeId, '_blank', 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=700,height=660,top=10,left=10');
+  };
+
 (function () {
 
   var scr_lnr = document.createElement("SCRIPT");
@@ -29,7 +39,7 @@
    * @param {any} categoryFilter function which returns the category desc based on category id.
    */
   function renderBikes ($, user_id, user_lang, introText, categoryFilter) {
-    $.get("https://api.listnride.com/v2/users/" + user_id, function (response) {
+    $.get("https://listnride-staging.herokuapp.com/v2/users/" + user_id, function (response) {
 
       var selectedLangText, dayText, sizeText;
       if ('en' === user_lang) {
@@ -69,7 +79,7 @@
           '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">' +
           '<bike-card>' +
           '<md-card class="lnr-bike-card _md">' +
-          '<a target="_blank" class="lnr-links" href="http://www.listnride.com/bikes/' + rideId + '"><img src="' + imageUrl + '"></img></a>' +
+          '<a target="_blank" class="lnr-links" onclick="spawnWizard(' + ride.user_id + ', ' + ride.id + ')"><img src="' + imageUrl + '"></img></a>' +
           '<md-card-title layout="row" class="layout-row">' +
           '<md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true">'+
           '<img src="' + svgUrl + '" height="48" width="48"></img></md-icon>' +
