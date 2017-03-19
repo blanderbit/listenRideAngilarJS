@@ -49,17 +49,17 @@ var helper = {
         var lang = navigator.language.split('-')[0].toLowerCase();
         switch (lang) {
             case 'en': return {
-                colorize: true,
+                colorize: false,
                 decimalSymbol: '.',
                 digitGroupSymbol: ','
             }
             case 'de': return {
-                colorize: true,
+                colorize: false,
                 decimalSymbol: ',',
                 digitGroupSymbol: '.'
             }
             case 'nl': return {
-                colorize: true,
+                colorize: false,
                 decimalSymbol: ',',
                 digitGroupSymbol: '.'
             }
