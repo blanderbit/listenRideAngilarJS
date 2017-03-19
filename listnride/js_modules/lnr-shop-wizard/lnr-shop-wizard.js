@@ -5,18 +5,22 @@ var $,
     payment = {
         date: "Month",
         year: "Year"
-    };
+    },
+    translations,
+    apiUrl = "https://listnride-staging.herokuapp.com/v2",
+    user = {id: null};
 
 $(document).ready(function () {
     // perform common tasks on initialization
     helper.preInit();
     // fetch user info
     var userId = helper.getUrlParameter('userId') || 1005;
-    $.get("https://api.listnride.com/v2/users/" + userId, function (response) {
+    $.get(apiUrl + "/users/" + userId, function (response) {
         calendar.bikeOwner = response;
         // fetch bike info
         var bikeId = helper.getUrlParameter('bikeId') || 165;
-        $.get("https://listnride-staging.herokuapp.com/v2/rides/" + bikeId, function (bike) {
+        $.get(apiUrl + "/rides/" + bikeId, function (bike) {
+            console.log(bike);
             // populate calendar object
             calendar.bikeId = bikeId;
             calendar.priceHalfDay = bike.price_half_daily;
@@ -25,6 +29,11 @@ $(document).ready(function () {
             calendar.bikeFamily = bike.family;
             calendar.requests = bike.requests;
             calendar.userId = bike.user.id;
+            $('#bike_picture').attr("src", bike.image_file_1.image_file_1.small.url);
+            $('#overview_bike').text(bike.brand + ", " + helper.categoryName(bike.category));
+            $('#overview_name').text(bike.name);
+            $('#overview_lister').text(bike.user.first_name + " " + bike.user.last_name);
+            $('#overview_location').text(bike.user.city);
 
             helper.postInit();
         });
@@ -66,16 +75,16 @@ function updateTimeRangeText() {
     // initialize the button texts for time range selection
     var startButton = $('#lnr-date-start-button');
     var endButton = $('#lnr-date-end-button');
-    startButton.html(calendar.startTime + ':00');
-    endButton.html(calendar.endTime + ':00');
+    startButton.html(calendar.startTime + ':00 <div class="dropdown-caret" style="float: right"></div>');
+    endButton.html(calendar.endTime + ':00 <div class="dropdown-caret" style="float: right"></div>');
 }
 
 function updatePaymentExpirationText() {
     // initialize the button texts for expiration 
     var dateButton = $('#lnr-payment-date-button');
     var yearButton = $('#lnr-payment-year-button');
-    dateButton.html(payment.date);
-    yearButton.html(payment.year);
+    dateButton.html(payment.date + '<div class="dropdown-caret" style="float: right"></div>');
+    yearButton.html(payment.year + '<div class="dropdown-caret" style="float: right"></div>');
 }
 
 function closeDropDown(event) {
@@ -196,40 +205,7 @@ function dateChange(startDate, endDate) {
         calendar.lnrFee = fee + tax;
         calendar.total = subtotal + fee + tax;
     }
-
-    // calendar duration
-    $('*[id*=lnr-calendar-duration]').each(function (index, element) {
-        $(element).html(calendar.duration);
-    });
-
-    // calendar subtotal
-    $('*[id*=lnr-calendar-subtotal]').each(function (index, element) {
-        $(element).html(calendar.subtotal + ' &euro;');
-    });
-
-    // calendar lnr fee
-    $('*[id*=lnr-calendar-fee]').each(function (index, element) {
-        $(element).html(calendar.lnrFee + ' &euro;');
-    });
-
-    // calendar total
-    $('*[id*=lnr-calendar-total]').each(function (index, element) {
-        $(element).html(calendar.total + ' &euro;');
-    });
-
-    // // calendar start date
-    $('[id=lnr-date-start]').each(function (index, element) {
-        $(element).text('from ' + startDate.getDate() +
-            '.' + startDate.getMonth() +
-            '.' + startDate.getFullYear());
-    });
-
-    // // calendar end date
-    $('[id=lnr-date-end]').each(function (index, element) {
-        $(element).text('to ' + endDate.getDate() +
-            '.' + endDate.getMonth() +
-            '.' + endDate.getFullYear());
-    });
+    helper.onDateChange(startDate, endDate, calendar);
 }
 
 function countInvalidDays(startDate, endDate) {
@@ -284,11 +260,4 @@ calendar.onTimeChange = function (slot) {
     date.setHours(calendar[slotTime], 0, 0, 0);
     calendar[slotDate] = date;
     dateChange(calendar.startDate, calendar.endDate);
-};
-
-calendar.isFormInvalid = function () {
-    return calendar.bikeId === undefined || calendar.startDate ===
-        undefined ||
-        (calendar.startDate !== undefined && calendar.startDate.getTime() >=
-            calendar.endDate.getTime());
 };

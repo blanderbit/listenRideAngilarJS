@@ -6,6 +6,109 @@ html>body {
   -webkit-font-smoothing: antialiased;
 }
 
+.lnr-column-right {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .lnr-column-right {
+    display: block;
+  }
+}
+
+@media (min-width: 480px) {
+  .lnr-column-left {
+    border-right: 1px solid rgba(225, 230, 230, 1.0);
+    padding-right: 14px;
+    min-height: 410px;
+  }
+}
+
+#lnr-tab-bar {
+  border-bottom: 0px;
+  padding-bottom: 15px;
+}
+
+.lnr-button-bar {
+  padding: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .lnr-button-bar {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 59px;
+    z-index: 100;
+    background-color: #ffffff;
+  }
+}
+
+.lnr-button-cell {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.lnr-row-top {
+  border-bottom: 1px solid rgba(225, 230, 230, 1.0);
+  margin-bottom: 10px;
+}
+
+@media (min-width: 480px) {
+  .lnr-row-top {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mdl-layout__content {
+    padding-bottom: 28px;
+  }
+}
+
+.lnr-row-bot {
+  border-top: 1px solid rgba(225, 230, 230, 1.0);
+  margin-top: 15px;
+}
+
+@media (min-width: 480px) {
+  .lnr-row-bot {
+    display: none;
+  }
+}
+
+.text-invalid {
+  color: rgb(221, 44, 0) !important;
+}
+
+.text-valid {
+  color: rgb(95, 198, 147) !important;
+}
+
+.text-right {
+  text-align: right;
+}
+
+label {
+  font-weight: 600;
+  color: rgb(85, 85, 85);
+}
+
+.mdl-textfield {
+  padding: 0;
+}
+
+/*------------- INFO --------------*/
+
+form#user-info {
+  margin-top: 2px;
+}
+
+/*---------------------------------*/
+
+
+
 
 /*------------ PAYMENT ------------*/
 
@@ -13,9 +116,12 @@ html>body {
   min-width: 0;
 }
 
-#sp-payment label {
-  font-weight: 600;
-  color: rgb(85, 85, 85);
+#sp-payment .mdl-grid {
+  padding: 0 !important;
+}
+
+#sp-payment-form .mdl-cell {
+  margin: 0 !important;
 }
 
 .md-button.lnr-paypal {
@@ -25,7 +131,12 @@ html>body {
 }
 
 .mdl-grid {
-  max-width: 840px;
+  max-width: 640px;
+  padding: 0 4px;
+}
+
+.mdl-grid--buttons {
+  margin: 6px 0;
 }
 
 .md-color-foreground {
@@ -72,6 +183,15 @@ a.lnr-links {
   font-family: 'Roboto', sans-serif !important;
 }
 
+.md-title-sm {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 24px;
+  color: #584e4e;
+  font-family: 'Roboto', sans-serif !important;
+}
+
 
 /*------------ PAYMENT ------------*/
 
@@ -80,13 +200,13 @@ a.lnr-links {
 }
 
 .md-button.lnr-paypal {
-  margin: 7px 0px;
+  margin: 0px;
   width: 100%;
   background-color: hsl(205, 65%, 56%);
 }
 
 .md-button.lnr-mastercard {
-  margin: 7px 0px;
+  margin: 0px;
   width: 100%;
   background-color: #d0782c;
 }
@@ -105,6 +225,12 @@ lnr-header-text {
   right: 0px;
   padding: 24px;
   font-size: 12px;
+}
+
+/*------------ BOOKING OVERVIEW ------------*/
+
+#bike_picture {
+  margin: 7px 0;
 }
 
 
@@ -155,7 +281,7 @@ lnr-header-text {
   flex-direction: row;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: 14px;
-  height: 81px;
+  height: 75px;
   outline-color: rgb(85, 85, 85);
   outline-style: none;
   outline-width: 0px;
@@ -173,7 +299,7 @@ lnr-header-text {
   font-size: 14px;
   height: 65px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 4px;
   min-width: 0px;
@@ -205,6 +331,7 @@ lnr-header-text {
   width: 100%;
   box-sizing: border-box;
   float: left;
+  font-size: 14px;
 }
 
 container.md-input-invalid .md-input {
@@ -227,7 +354,7 @@ container.md-input-invalid .md-input {
 }
 
 #time-range .label {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .md-button {
@@ -276,20 +403,22 @@ container.md-input-invalid .md-input {
   background-color: rgb(95, 198, 147);
 }
 
-#lnr-back-button.md-button {
+.lnr-back-button.md-button {
   color: rgb(85, 85, 85);
   border: 1px solid rgb(220, 220, 220);
   background-color: rgba(255, 255, 255, 0.95);
 }
 
 .lnr-tab-content {
-  padding: 12px;
+  /*padding: 0 12px;*/
+  padding: 0;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 460px) {
   .lnr-tab-content {
     min-height: 460px;
-    padding: 12px;
+    /*padding: 12px;*/
+    padding: 0;
   }
 }
 
@@ -315,7 +444,7 @@ lnr-vertical-divider {
 }
 
 .wizard-nav-button {
-  padding: 8px;
+  padding: 0;
 }
 
 #lnr-header.mdl-layout__header {
@@ -324,35 +453,40 @@ lnr-vertical-divider {
 
 .mdl-tabs__tab {
   text-transform: initial;
-}
-
-div#lnr-tab-bar {
-  border-bottom: 0px;
-  padding-bottom: 20px;
+  color: #BBBBBB;
 }
 
 .lnr-list-sm>li {
-  min-height: 40px !important;
+  min-height: 30px !important;
   padding: 0px !important;
 }
 
-div .date-picker-wrapper {
-  margin-left: -8px;
+.dropdown-caret {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #584e4e;
+    margin-top: 15px;
 }
 
 
 /*------------ DROPDOWN ------------*/
 
 .lnr-dropdown-button {
+  margin: 0px; /* no margin applied. to match with ours input containers */
+  text-align: left;
   box-sizing: border-box;
   border-color: rgba(206, 212, 216, 0.9);
   background-color: white;
   border-style: solid;
   border-width: 1px;
   border-radius: 4px;
-  padding: 0 10px 0 16px;
+  padding: 0 10px 0 16px; /* text inside of the dropdown */
   width: 100%;
   height: 40px;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .lnr-dropdown-button:hover,
@@ -374,19 +508,31 @@ div .date-picker-wrapper {
   display: none;
   position: absolute;
   background-color: white;
-  min-width: 160px;
-  z-index: 90;
+  min-width: 120px;
+  z-index: 99; /* below the naigation bar on mobile */
   border-color: rgba(206, 212, 216, 0.9);
   border-style: solid;
   border-radius: 4px;
   border-width: 1px;
-  max-height: 190px;
+  max-height: 220px;
   min-height: 38px;
+  font-weight: 400;
   overflow-y: scroll;
 }
 
+@media only screen and (max-width: 480px) {
+  .dropdown-content {
+    bottom: 0px; /* open dropdown upwards on mobile */
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .dropdown-content {
+    top: 0px; /* open dropdown downwards on mobile */
+  }
+}
 .dropdown-content a {
-  color: black;
+  color: #584e4e;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -396,20 +542,21 @@ div .date-picker-wrapper {
 /*------------ DATE SELECTION ------------*/
 
 #bike-calendar-loader {
-  padding: 45% 45%;
+  padding: 42% 45%;
+}
+
+#bike-calendar {
+  margin: 6px 6px;
 }
 
 .date-picker-wrapper {
   font-size: 12px !important;
+  width: 100%;
 }
 
 .lnr-date-selector {
-  padding: 0 16px;
-  height: 38px;
-}
-
-.lnr-date-selector:first-child {
-  padding-top: 16px;
+  padding: 12px 16px;
+  cursor: pointer;
 }
 
 .lnr-date-selector:hover {
@@ -418,4 +565,18 @@ div .date-picker-wrapper {
 
 .show {
   display: block;
+}
+
+.mdl-tabs__tab-bar {
+  pointer-events: none;
+}
+
+/*----------------- MDL Styles -------------*/
+
+.mdl-button:disabled,
+button[disabled] {
+  color: rgb(255, 255, 255);
+  border-color: rgba(225,230,230,1.0);
+  background-color: rgba(206,212,216,0.9);
+  cursor: not-allowed;
 }

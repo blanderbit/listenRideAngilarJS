@@ -4,8 +4,9 @@ module.exports = function () {
         nodeModules: '/node_modules/**/*.js',
         app: {
             root: './app/',
+            base: '<base href="/">',
             constant: 'app.constants.js',
-            index: 'index.html',
+            index: './index.html',
             templates: './app/modules/**/*.html',
             serviceTemplate: './app/services/**/*.html',
             js: ['./app/*.js', './app/**/*.js', '!**/*test.js'],
@@ -27,6 +28,7 @@ module.exports = function () {
         dist: {
             root: './dist/',
             app: './dist/app.min.js',
+            vendors: './dist/vendors.min.js',
             index: './dist/index.html',
             templatesCache: './dist/**/*.tpl.min.js',
             images: './dist/app/assets/ui_images',
@@ -34,15 +36,39 @@ module.exports = function () {
             manifest: './dist/rev-manifest.json',
             fonts: './dist/app/assets/fonts/',
             js: './dist/*.min.js',
+            source: 'app.min.js',
+            sourceVendors: 'vendors.min.js',
             css: './dist/**/.min.css',
             i18n: './dist/app/i18n',
             js_modules: './dist/lnr-wizard-module/',
             moment: './dist/lnr-wizard-module/moment',
+            lnrShopSolution: './dist/lnr-shop-solution'
         },
-        embed: {
-            css: './js_modules/lnr-embed/lnr-embed.css',
+        lnrShopIntegration: {
+            css: 'lnr-embed.min.css',
+            style: './js_modules/lnr-embed/lnr-embed.css',
             js: './js_modules/lnr-embed/lnr-embed.js',
-            wizardjs: './js_modules/lnr-embed/lnr-shop-wizard.js',
+            source: 'lnr-embed.min.js',
+        },
+        lnrShopSolution: {
+            root: './js_modules/lnr-shop-wizard/',
+            html: './js_modules/lnr-shop-wizard/lnr-shop-wizard.html',
+            js: './js_modules/lnr-shop-wizard/**/*.js',
+            css: [
+                './js_modules/lnr-shop-wizard/lnr-shop-wizard.css',
+                './js_modules/lnr-shop-wizard/daterangepicker.css'
+            ],
+            resource: [
+                './js_modules/lnr-shop-wizard/lnr_logo_bold.svg'
+            ],
+            dist: {
+                js: 'lnr-shop-solution.min.js',
+                css: 'lnr-shop-solution.min.css',
+                root: './js_modules/lnr-shop-wizard/dist/',
+                source: './js_modules/lnr-shop-wizard/dist/lnr-shop-solution.min.js',
+                style: './js_modules/lnr-shop-wizard/dist/lnr-shop-solution.min.css',
+                html: './js_modules/lnr-shop-wizard/dist/lnr-shop-wizard.html'
+            }
         }
     };
     var environments = {
