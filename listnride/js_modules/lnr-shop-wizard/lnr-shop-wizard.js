@@ -8,7 +8,7 @@ var $,
     },
     translations,
     apiUrl = "https://listnride-staging.herokuapp.com/v2",
-    user = {id: 1428};
+    user = {id: 1440};
 
 $(document).ready(function () {
     // perform common tasks on initialization
@@ -75,16 +75,16 @@ function updateTimeRangeText() {
     // initialize the button texts for time range selection
     var startButton = $('#lnr-date-start-button');
     var endButton = $('#lnr-date-end-button');
-    startButton.html(calendar.startTime + ':00');
-    endButton.html(calendar.endTime + ':00');
+    startButton.html(calendar.startTime + ':00 <div class="dropdown-caret" style="float: right"></div>');
+    endButton.html(calendar.endTime + ':00 <div class="dropdown-caret" style="float: right"></div>');
 }
 
 function updatePaymentExpirationText() {
     // initialize the button texts for expiration 
     var dateButton = $('#lnr-payment-date-button');
     var yearButton = $('#lnr-payment-year-button');
-    dateButton.html(payment.date);
-    yearButton.html(payment.year);
+    dateButton.html(payment.date + '<div class="dropdown-caret" style="float: right"></div>');
+    yearButton.html(payment.year + '<div class="dropdown-caret" style="float: right"></div>');
 }
 
 function closeDropDown(event) {
