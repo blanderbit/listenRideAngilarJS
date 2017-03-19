@@ -537,6 +537,10 @@ lnr-vertical-divider {
   display: block;
 }
 
+.mdl-tabs__tab-bar {
+  pointer-events: none;
+}
+
 /*----------------- MDL Styles -------------*/
 
 .mdl-button:disabled,
