@@ -1,3 +1,7 @@
+$(function () {
+    $('#lnr-next-button-tab-duration').prop('disabled', true);
+});
+
 /*------------ User info form validation ------------*/
 
 var userFormOverview = {
