@@ -426,6 +426,8 @@ var helper = {
         $('.info-title').hide();
         $('.info-error').hide();
         $('.payment-error').hide();
+        $('.user-info-validation').hide();
+        $('.payment-info-validation').hide();
         $('.overview-success').hide();
         $('.lnr-print-button').hide();
         $('#form_email_repeat').on('paste', function (e) {

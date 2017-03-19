@@ -72,10 +72,10 @@ function userButtonValidator(field, value) {
 function userInputErrorAny(){
     if ($('#user-info md-input-container.is-invalid').length == 0) {
         userButtonValidator('valid', true);
-        $('#user-info-validation').addClass('hidden')
+        $('.user-info-validation').hide();
     } else {
         userButtonValidator('valid', false);
-        $('#user-info-validation').removeClass('hidden')
+        $('.user-info-validation').show();
     }
 }
 
@@ -116,10 +116,10 @@ $(function () {
 function paymentInputErrorAny(){
     if ($('#sp-payment-form md-input-container.is-invalid').length == 0) {
         paymentButtonValidator('valid', true);
-        $('#payment-info-validation').addClass('hidden')
+        $('.payment-info-validation').hide();
     } else {
         paymentButtonValidator('valid', false);
-        $('#payment-info-validation').removeClass('hidden')
+        $('.payment-info-validation').show();
     }
 }
 
