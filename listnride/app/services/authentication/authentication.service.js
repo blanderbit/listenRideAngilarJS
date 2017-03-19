@@ -78,6 +78,8 @@ angular.
 
         signupDialog.connectFb = function() {
           ezfb.getLoginStatus(function(response) {
+            console.log("FB Get Login Status, Response:");
+            console.log(response);
             if (response.status === 'connected') {
               var accessToken = response.authResponse.accessToken;
               ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
@@ -85,6 +87,9 @@ angular.
               });
             } else {
               ezfb.login(function(response) {
+                console.log("FB Login, Response:");
+                console.log(response);
+                var accessToken = response.authResponse.accessToken;
                 ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
                   signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name);
                 });

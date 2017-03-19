@@ -760,8 +760,13 @@ home #featuredTilesGrid .tile {
   background-color: #7ab2f8;
 }
 
-home #featuredTilesGrid img {
+home #featuredTilesGrid .img-container {
   height: 40%;
+  width: 100%;
+}
+
+home #featuredTilesGrid img {
+  height: 100%;
 }
 
 @media (max-width:599px) {
@@ -832,28 +837,10 @@ listing-card md-card img.md-card-image {
 }
 
 .lnr-bike-card md-card-title-text span {
-  max-width: 155px;
+  max-width: 95%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-@media (max-width:599px) {
-  .lnr-bike-card md-card-title-text span {
-    max-width: 180px!important;
-  }
-}
-
-@media (max-width:639px) and (min-width: 600px) {
-  .lnr-bike-card md-card-title-text span {
-    max-width: 120px!important;
-  }
-}
-
-@media (max-width: 1110px) and (min-width: 640px) {
-  .lnr-bike-card md-card-title-text span {
-    max-width: 140px;
-  }
 }
 
 home #featuredCities a {
@@ -996,6 +983,10 @@ ng-map md-card.lnr-bike-card md-icon {
 
 ng-map md-card.lnr-bike-card md-card-title-text span {
   max-width: 120px;
+}
+
+.lnr-bike-title {
+  max-width: 58%;
 }
 
 .ng-map-info-window > div:first-child div {
@@ -1345,6 +1336,10 @@ mcbw md-pagination-wrapper {
   width: 300px !important;
 }
 
+.column-image {
+  width: 100%;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  CITY PAGES
 /*-----------------------------------------------------------------------------------*/
@@ -1459,3 +1454,6 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
   background-color: #5FC693 !important
 }
 
+.white-space-pre-line {
+  white-space: pre-line;
+}

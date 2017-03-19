@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('list',[]).component('list', {
-  templateUrl: 'app/modules/list/list.template.html',
+  templateUrl: 'app/modules/bike/list/list.template.html',
   controllerAs: 'list',
   controller: ['$mdDialog', '$localStorage', '$state', '$scope', 'Upload', 'bikeOptions', 'api', '$timeout', 'verification', 'accessControl', 'loadingDialog',
     function ListController($mdDialog, $localStorage, $state, $scope, Upload, bikeOptions, api, $timeout, verification, accessControl, loadingDialog) {
@@ -10,6 +10,8 @@ angular.module('list',[]).component('list', {
       }
 
       var list = this;
+      list.validateObj = {height: {min: 1000}, width: {min: 1500}, duration: {max: '5m'}};
+      list.invalidFiles = {};
 
       list.form = {
         images: []
