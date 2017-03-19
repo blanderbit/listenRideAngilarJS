@@ -500,7 +500,7 @@ lnr-vertical-divider {
   position: absolute;
   background-color: white;
   min-width: 120px;
-  z-index: 90;
+  z-index: 99; /* below the naigation bar on mobile */
   border-color: rgba(206, 212, 216, 0.9);
   border-style: solid;
   border-radius: 4px;
@@ -508,10 +508,20 @@ lnr-vertical-divider {
   max-height: 220px;
   min-height: 38px;
   font-weight: 400;
-  top: 0px;
   overflow-y: scroll;
 }
 
+@media only screen and (max-width: 480px) {
+  .dropdown-content {
+    bottom: 0px; /* open dropdown upwards on mobile */
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .dropdown-content {
+    top: 0px; /* open dropdown downwards on mobile */
+  }
+}
 .dropdown-content a {
   color: #584e4e;
   padding: 12px 16px;
