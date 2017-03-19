@@ -90,6 +90,34 @@
       });
 
       $stateProvider.state({
+        name: 'tokenlogin',
+        url: '/requests/{requestId: int}/tokenlogin?shop_token&email',
+        template: '<requests></requests>',
+        resolve: {
+          login: ['$state', '$stateParams', 'authentication', function($state, $stateParams, authentication) {
+            return authentication.tokenLogin($stateParams.shop_token, $stateParams.email).then(
+              function (success) {
+                console.log('success');
+                authentication.setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
+              },
+              function (error) {
+                console.log('error');
+              }
+            );
+            // authentication.tokenLogin($stateParams.shop_token, $stateParams.email,
+            //   function () {
+            //     return;
+            //   },
+            //   function () {
+            //     console.log("error");
+            //     $state.go('404');
+            //   }
+            // );
+          }]
+        },
+      })
+
+      $stateProvider.state({
         name: 'list',
         url: '/list-bike',
         template: '<list></list>'
@@ -434,6 +462,7 @@
           window.open(url, '_blank', params);
         }
       });
+
       $stateProvider.state('404', {
         templateUrl: 'app/modules/static/error-404.template.html',
         data: {
