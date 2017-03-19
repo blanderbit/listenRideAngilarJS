@@ -42,6 +42,7 @@ module.exports = function () {
             i18n: './dist/app/i18n',
             js_modules: './dist/lnr-wizard-module/',
             moment: './dist/lnr-wizard-module/moment',
+            lnrShopSolution: './dist/lnr-shop-solution'
         },
         lnrShopIntegration: {
             css: 'lnr-embed.min.css',

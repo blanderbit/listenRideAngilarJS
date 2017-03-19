@@ -54,6 +54,7 @@ gulp.task('concat-lnr-shop-solution', concatLnrShopSolution);
 gulp.task('minify-lnr-shop-solution', minifyLnrShopSolution);
 gulp.task('clean-lnr-shop-solution', cleanLnrShopSolution);
 gulp.task('deploy-lnr-shop-solution', deployLnrShopSolution);
+gulp.task('copy-lnr-shop-solution', copyLnrShopSolution);
 gulp.task('images', ['images-svg', 'images-png']);
 gulp.task('local', local);
 gulp.task('default', ['local']);
@@ -413,6 +414,15 @@ function deployLnrShopSolution(cb) {
     );
 }
 /**
+ * run all shop solution tasks [clean, resource, concat, minify]
+ * sequential tasks
+ * @returns {gulp} chaining
+ */
+function copyLnrShopSolution() {
+    return gulp.src(path.lnrShopSolution.dist.root + '**/*')
+        .pipe(gulp.dest(path.dist.lnrShopSolution));
+}
+/**
  * tasks for local development
  * @returns {gulp} for chaining
  * @param {local~localCallback} cb - The callback that handles the response.
@@ -455,5 +465,8 @@ function deploy(cb) {
         'copy-sitemap',
         'clean-extras',
         'clean-extras-local',
+        'deploy-lnr-shop-solution',
+        'copy-lnr-shop-solution',
+        'clean-lnr-shop-solution',
         cb);
 }
