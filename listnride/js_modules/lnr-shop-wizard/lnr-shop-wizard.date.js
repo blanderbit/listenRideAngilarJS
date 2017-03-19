@@ -6,7 +6,7 @@ function DateService() {
     return {
         duration: function (startDate, endDate, invalidDays) {
             if (startDate === undefined || endDate === undefined) {
-                return "0 " + "days" + " , 0 " + "hours"
+                return "0 " + translations.rental.days + " , 0 " + translations.rental.hours;
             } else {
                 var startDate = new Date(startDate);
                 var endDate = new Date(endDate);
@@ -23,11 +23,9 @@ function DateService() {
                 days = days - invalidDays;
                 var weeks = (days / 7) | 0;
                 days -= weeks * 7;
-
-                var weeksLabel = (weeks == 1) ? "week" : "weeks";
-                var daysLabel = (days == 1) ? "day" : "days";
-                var hoursLabel = (hours == 1) ? "hour" : "hours";
-
+                var weeksLabel = (weeks == 1) ? translations.rental.week : translations.rental.weeks;
+                var daysLabel = (days == 1) ? translations.rental.day : translations.rental.days;
+                var hoursLabel = (hours == 1) ? translations.rental.hour : translations.rental.hours;
                 var displayDuration = "";
 
                 if (weeks > 0)
