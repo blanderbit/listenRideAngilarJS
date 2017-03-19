@@ -2,7 +2,7 @@ var del = require('del');
 var gulp = require('gulp');
 var config = require('./gulp.config.js')();
 var rev = require('gulp-rev');
-var gulpif = require('gulp-if');
+var gulpIf = require('gulp-if');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var useref = require('gulp-useref');
@@ -19,7 +19,7 @@ var revReplace = require('gulp-rev-replace');
 var ngAnnotate = require('gulp-ng-annotate');
 var ngConstant = require('gulp-ng-constant');
 var templateCache = require('gulp-angular-templatecache');
-var htmlreplace = require('gulp-html-replace');
+var htmlReplace = require('gulp-html-replace');
 var path = config.path;
 var environments = config.environments;
 var argvEnv = ('local' === argv.env || 'staging' === argv.env || 'production' === argv.env) ? argv.env : 'local'
@@ -48,13 +48,12 @@ gulp.task('changes-in-index', changesInIndex);
 gulp.task('watch', watch);
 gulp.task('revisions', revisions);
 gulp.task('replace-revisions-index', replaceRevisionsIndex);
-gulp.task('embed', embed);
+gulp.task('deploy-lnr-shop-integration', deployLnrShopIntegration);
 gulp.task('resources-lnr-shop-solution', resourcesLnrShopSolution);
 gulp.task('concat-lnr-shop-solution', concatLnrShopSolution);
 gulp.task('minify-lnr-shop-solution', minifyLnrShopSolution);
 gulp.task('clean-lnr-shop-solution', cleanLnrShopSolution);
 gulp.task('deploy-lnr-shop-solution', deployLnrShopSolution);
-gulp.task('copy-moment', copyMoment);
 gulp.task('images', ['images-svg', 'images-png']);
 gulp.task('local', local);
 gulp.task('default', ['local']);
@@ -141,11 +140,11 @@ function copySitemap() {
  * @returns {gulp} for chaining
  */
 function vendors() {
-    return gulp.src('index.html')
+    return gulp.src(path.app.index)
         .pipe(useref())
-        .pipe(gulpif(path.app.js, uglify()))
-        .pipe(gulpif(path.nodeModules, uglify()))
-        .pipe(gulpif('*.css', minifyCss()))
+        .pipe(gulpIf(path.app.js, uglify()))
+        .pipe(gulpIf(path.nodeModules, uglify()))
+        .pipe(gulpIf('*.css', minifyCss()))
         .pipe(gulp.dest(path.dist.root));
 }
 /**
@@ -155,7 +154,7 @@ function vendors() {
  */
 function copyIndexDist() {
     return gulp.src('./app/index.html')
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest(path.dist.root));
 }
 /**
  * concat all development js files - local
@@ -163,11 +162,15 @@ function copyIndexDist() {
  * @returns {gulp} for chaining
  */
 function scriptsDeploy() {
-    return gulp.src(path.dist.app)
-        .pipe(concat('app.min.js'))
+    gulp.src(path.dist.app)
+        .pipe(concat(path.dist.source))
         .pipe(ngAnnotate())
         .pipe(gulp.dest(path.dist.root))
-        .pipe(uglify('app.min.js'))
+        .pipe(uglify(path.dist.source))
+        .pipe(gulp.dest(path.dist.root));
+
+    return gulp.src(path.dist.vendors)
+        .pipe(uglify(path.dist.sourceVendors))
         .pipe(gulp.dest(path.dist.root));
 }
 /**
@@ -176,8 +179,8 @@ function scriptsDeploy() {
  */
 function baseTag() {
     return gulp.src(path.dist.index)
-        .pipe(htmlreplace({
-            'base': '<base href="/">'
+        .pipe(htmlReplace({
+            'base': path.app.base
         }))
         .pipe(gulp.dest(path.dist.root));
 }
@@ -218,7 +221,7 @@ function imagesPng() {
 }
 /**
  * optimize svg images
- * loseless compression
+ * lose-less compression
  * @returns {gulp} for chaining
  */
 function imagesSvg() {
@@ -334,16 +337,16 @@ function replaceRevisionsIndex() {
  * our js file which is used to embed bikes in other sites.
  * @returns {gulp} for chaining
  */
-function embed() {
-    gulp.src(path.embed.css)
-        .pipe(concat('lnr-embed.min.css'))
+function deployLnrShopIntegration() {
+    gulp.src(path.lnrShopIntegration.style)
+        .pipe(concat(path.lnrShopIntegration.css))
         .pipe(gulp.dest(path.dist.root));
 
-    gulp.src(path.embed.js)
-        .pipe(concat('lnr-embed.min.js'))
+    gulp.src(path.lnrShopIntegration.source)
+        .pipe(concat(path.lnrShopIntegration.js))
         .pipe(ngAnnotate())
         .pipe(gulp.dest(path.dist.root))
-        .pipe(uglify('lnr-embed.min.js'))
+        .pipe(uglify(path.lnrShopIntegration.js))
         .pipe(gulp.dest(path.dist.root));
 
     return gulp.src(path.app.js_modules)
@@ -361,20 +364,20 @@ function resourcesLnrShopSolution() {
  * get build tags from template
  * generate concatenated source and style
  * save results in dist folder
- * @returns 
+ * @returns {gulp} chaining
  */
 function concatLnrShopSolution() {
    return gulp.src(path.lnrShopSolution.html)
         .pipe(useref())
-        .pipe(gulpif(path.lnrShopSolution.source, uglify()))
-        .pipe(gulpif(path.lnrShopSolution.style, minifyCss()))        
+        .pipe(gulpIf(path.lnrShopSolution.source, uglify()))
+        .pipe(gulpIf(path.lnrShopSolution.style, minifyCss()))        
         .pipe(gulp.dest(path.lnrShopSolution.dist.root));
 }
 /**
  * get build tags from template
  * generate concatenated source and style
  * save results in dist folder
- * @returns 
+ * @returns {gulp} chaining
  */
 function minifyLnrShopSolution() {
     gulp.src(path.lnrShopSolution.dist.source)
@@ -389,13 +392,17 @@ function minifyLnrShopSolution() {
 }
 /**
  * clean dist folder
- * @returns 
+ * @returns {gulp} chaining
  */
 function cleanLnrShopSolution(cb) {
     var cleanFiles = [path.lnrShopSolution.dist.root];
     return del(cleanFiles, cb);
 }
-
+/**
+ * run all shop solution tasks [clean, resource, concat, minify]
+ * sequential tasks
+ * @returns {gulp} chaining
+ */
 function deployLnrShopSolution(cb) {
     runSequence(
         'clean-lnr-shop-solution',
@@ -405,12 +412,6 @@ function deployLnrShopSolution(cb) {
         cb
     );
 }
-
-function copyMoment() {
-    return gulp.src(path.app.momentjs)
-        .pipe(gulp.dest(path.dist.moment));
-}
-
 /**
  * tasks for local development
  * @returns {gulp} for chaining
@@ -436,7 +437,6 @@ function local(cb) {
 function deploy(cb) {
     runSequence(
         'clean',
-        'copy-moment',
         'constants',
         'copy-index-tmp',
         'cache-templates-modules',
@@ -453,7 +453,6 @@ function deploy(cb) {
         'replace-revisions-index',
         'base-tag',
         'copy-sitemap',
-        'embed',
         'clean-extras',
         'clean-extras-local',
         cb);

@@ -4,6 +4,7 @@ module.exports = function () {
         nodeModules: '/node_modules/**/*.js',
         app: {
             root: './app/',
+            base: '<base href="/">',
             constant: 'app.constants.js',
             index: './index.html',
             templates: './app/modules/**/*.html',
@@ -27,6 +28,7 @@ module.exports = function () {
         dist: {
             root: './dist/',
             app: './dist/app.min.js',
+            vendors: './dist/vendors.min.js',
             index: './dist/index.html',
             templatesCache: './dist/**/*.tpl.min.js',
             images: './dist/app/assets/ui_images',
@@ -34,15 +36,18 @@ module.exports = function () {
             manifest: './dist/rev-manifest.json',
             fonts: './dist/app/assets/fonts/',
             js: './dist/*.min.js',
+            source: 'app.min.js',
+            sourceVendors: 'vendors.min.js',
             css: './dist/**/.min.css',
             i18n: './dist/app/i18n',
             js_modules: './dist/lnr-wizard-module/',
             moment: './dist/lnr-wizard-module/moment',
         },
-        embed: {
-            css: './js_modules/lnr-embed/lnr-embed.css',
+        lnrShopIntegration: {
+            css: 'lnr-embed.min.css',
+            style: './js_modules/lnr-embed/lnr-embed.css',
             js: './js_modules/lnr-embed/lnr-embed.js',
-            wizardjs: './js_modules/lnr-embed/lnr-shop-wizard.js',
+            source: 'lnr-embed.min.js',
         },
         lnrShopSolution: {
             root: './js_modules/lnr-shop-wizard/',
