@@ -356,7 +356,7 @@ var helper = {
 
             navButtonHTML = navButtonHTML
                 .concat('<div class="mdl-layout-spacer"></div><div align="right" class="lnr-button-cell mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone wizard-nav-button">') 
-                .concat('<button id="lnr_print_button" onclick="window.print()" class="md-accent lnr-back-button md-raised md-button md-ink-ripple"><span translate="shared.print">Print</span></button>');
+                .concat('<button id="lnr_print_button" onclick="window.print()" class="md-raised md-button md-ink-ripple"><span translate="shared.print">Print</span></button>');
 
             // next button
             if (nextTab) {
@@ -418,7 +418,6 @@ var helper = {
         $('.info-error').hide();
         $('.payment-error').hide();
         $('.overview-success').hide();
-        $('#lnr_print_button').hide();
         $('#form_email_repeat').on('paste', function (e) {
             e.preventDefault();
         });
@@ -441,6 +440,7 @@ var helper = {
             .renderRentalInfo()
             .renderNavButtons()
             .applyTranslations();
+        $('#lnr_print_button').hide();
     },
 
     /**
