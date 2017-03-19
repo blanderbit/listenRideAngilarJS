@@ -289,10 +289,3 @@ calendar.onTimeChange = function (slot) {
     calendar[slotDate] = date;
     dateChange(calendar.startDate, calendar.endDate);
 };
-
-calendar.isFormInvalid = function () {
-    return calendar.bikeId === undefined || calendar.startDate ===
-        undefined ||
-        (calendar.startDate !== undefined && calendar.startDate.getTime() >=
-            calendar.endDate.getTime());
-};
