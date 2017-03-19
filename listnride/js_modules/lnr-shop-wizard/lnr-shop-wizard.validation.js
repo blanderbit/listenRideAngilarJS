@@ -1,3 +1,5 @@
+/*------------ User info form validation ------------*/
+
 var userFormOverview = {
     'form_first_name': false,
     'form_last_name': false,
@@ -5,19 +7,6 @@ var userFormOverview = {
     'form_email_repeat': false,
     'valid': false
 };
-
-var paymentFormOverview = {
-    'sp-payment-cardholder': false,
-    'sp-payment-cardnumber': false,
-    'sp-payment-cvv': false,
-    'valid': false
-};
-
-/*------------ Calendar validation ------------*/
-
-
-
-/*------------ User info form validation ------------*/
 
 $(function () {
     $('#lnr-next-button-tab-basic-info').prop('disabled', true);
@@ -94,6 +83,12 @@ function userInputErrorAny(){
 
 /*------------ Payment info form validation ------------*/
 
+var paymentFormOverview = {
+    'sp-payment-cardholder': false,
+    'sp-payment-cardnumber': false,
+    'sp-payment-cvv': false,
+    'valid': false
+};
 
 $(function () {
     $('#lnr-next-button-tab-payment-details').prop('disabled', true);
