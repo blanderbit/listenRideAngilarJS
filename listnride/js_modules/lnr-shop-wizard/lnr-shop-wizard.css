@@ -568,7 +568,7 @@ lnr-vertical-divider {
 }
 
 .mdl-tabs__tab-bar {
-  /*pointer-events: none;*/
+  pointer-events: none;
 }
 
 /*----------------- MDL Styles -------------*/
