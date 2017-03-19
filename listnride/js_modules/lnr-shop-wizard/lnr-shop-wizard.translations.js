@@ -56,7 +56,9 @@ var translationsConfigObject = {
         },
         overview: {
             title: 'Just one more click!',
-            description: 'Simply check again all your data and click the \'Book\' Button below to book the bike. You\'ll get a booking confirmation via email.'
+            description: 'Simply check again all your data and click the \'Book\' Button below to book the bike. You\'ll get a booking confirmation via email.',
+            titleSuccess: 'Congratulations!',
+            descriptionSuccess: 'You\'ve successfully booked the bike. We\'ve send you a booking confirmation containing all informations to your email address.'
         },
         navigation: {
             back: 'Back',
@@ -120,7 +122,9 @@ var translationsConfigObject = {
         },
         overview: {
             title: 'Nur noch ein Klick!',
-            description: '&Uuml;berpr&uuml;fe nochmals deine Daten und klicke auf \'Buchen\' um das Rad zu buchen. Wir schicken dir eine Buchungsbest&auml;tigung via Email.'
+            description: '&Uuml;berpr&uuml;fe nochmals deine Daten und klicke auf \'Buchen\' um das Rad zu buchen. Wir schicken dir eine Buchungsbest&auml;tigung via Email.',
+            titleSuccess: 'Gl&uuml;ckwunsch!',
+            descriptionSuccess: 'Du hast das Fahrrad erfolgreich gebucht. Wir haben dir soeben eine Buchungsbest&auml;tigung mit s&auml;mtlichen Informationen an deine Email-Adresse geschickt.'
         },
         navigation: {
             back: 'Zur&uuml;ck',
@@ -185,7 +189,9 @@ var translationsConfigObject = {
         },
         overview: {
             title: 'Just one more click!',
-            description: 'Simply check again all your data and click the \'Book\' Button below to book the bike. You\'ll get a booking confirmation via email.'
+            description: 'Simply check again all your data and click the \'Book\' Button below to book the bike. You\'ll get a booking confirmation via email.',
+            titleSuccess: 'Congratulations!',
+            descriptionSuccess: 'You\'ve successfully booked the bike. We\'ve send you a booking confirmation containing all informations to your email address.'
         },
         navigation: {
             back: 'Back',

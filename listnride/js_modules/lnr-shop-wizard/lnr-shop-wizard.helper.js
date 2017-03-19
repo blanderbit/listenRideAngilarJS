@@ -222,21 +222,24 @@ var helper = {
         var rentalInfoHTML =
             '<ul class="lnr-list-sm mdl-list">' +
             '<li class="mdl-list__item">' +
-            '<span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" translate="rental.duration"></span>' +
-            '<span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">0 ' +
-            translations.rental.day + ', 0 ' + translations.rental.hour + '</span>' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="durationPanel.from"></span>' +
+            '<span align="right" class="rental-info-from mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">-</span>' +
+            '</li>' +
+            '<li class="mdl-list__item">' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="durationPanel.to"></span>' +
+            '<span align="right" class="rental-info-to mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">-</span>' +
+            '</li>' +
+            '<li class="mdl-list__item">' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-title-sm" translate="rental.duration"></span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">-</span>' +
             '</li>' +
             '<lnr-vertical-divider></lnr-vertical-divider>' +
             '<li class="mdl-list__item">' +
-            '<span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm" translate="rental.subtotal"></span>' +
-            '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>' +
-            '</li>' +
-            '<li class="mdl-list__item">' +
-            '<span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm" translate="rental.fee"></span>' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="rental.fee"></span>' +
             '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-fee">0 &euro;</span>' +
             '</li>' +
             '<li class="mdl-list__item">' +
-            '<span style="flex: 50;" class="mdl-list__item-primary-content md-subhead-sm" translate="rental.total"></span>' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="rental.total"></span>' +
             '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-total">0 &euro;</span>' +
             '</li>' +
             '</ul>'
@@ -292,6 +295,37 @@ var helper = {
         return this;
     },
 
+    categoryName: function (categoryId) {
+
+        switch(categoryId) {
+            case 10: return 'dutch-bike'; break;
+            case 11: return 'touring-bike'; break;
+            case 12: return 'fixie'; break;
+            case 13: return 'single-speed'; break;   
+            case 20: return 'road-bike'; break;
+            case 21: return 'triathlon'; break;
+            case 22: return 'indoor'; break; 
+            case 30: return 'trecking'; break;
+            case 31: return 'enduro'; break;
+            case 32: return 'freeride'; break;
+            case 33: return 'cross-country'; break;
+            case 34: return 'downhill'; break;
+            case 35: return 'cyclocross'; break; 
+            case 40: return 'city'; break;
+            case 41: return 'all-terrain'; break;
+            case 42: return 'road'; break;   
+            case 50: return 'pedelec'; break;
+            case 51: return 'e-bike'; break; 
+            case 60: return 'folding-bike'; break;
+            case 61: return 'tandem'; break;
+            case 62: return 'cruiser'; break;
+            case 63: return 'cargo-bike'; break;
+            case 64: return 'recumbent'; break;
+            case 65: return 'mono-bike'; break;  
+            default: return ""; break;
+        }
+    },
+
     preInit: function () {
         // close the drop down for the date time selector in calendar
         window.onclick = closeDropDown;
@@ -302,6 +336,7 @@ var helper = {
         $('.info-title').hide();
         $('.info-error').hide();
         $('.payment-error').hide();
+        $('.overview-success').hide();
         $('#form_email_repeat').on('paste', function (e) {
             e.preventDefault();
         });

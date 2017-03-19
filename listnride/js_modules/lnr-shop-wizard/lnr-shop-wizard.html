@@ -358,26 +358,32 @@
                                 <ul class="lnr-list-sm mdl-list">
                                     <li class="mdl-list__item">
                                         <span style="flex: 50;" class="md-title-sm mdl-list__item-primary-content">Bike</span>
-                                        <span align="right" class="md-subhead-sm mdl-list__item-primary-content">Brand, Subcategory</span>
+                                        <span id="overview_bike" class="md-subhead-sm mdl-list__item-primary-content"></span>
                                     </li>
                                     <li class="mdl-list__item">
                                         <span style="flex: 50;" class="md-title-sm mdl-list__item-primary-content">Name</span>
-                                        <span align="right" class="md-subhead-sm mdl-list__item-primary-content">Brand, Subcategory</span>
+                                        <span id="overview_name" class="md-subhead-sm mdl-list__item-primary-content"></span>
                                     </li>
                                     <li class="mdl-list__item">
                                         <span style="flex: 50;" class="md-title-sm mdl-list__item-primary-content">Lister</span>
-                                        <span class="md-subhead-sm mdl-list__item-primary-content text-right">Brand, Subcategory</span>
+                                        <span id="overview_lister" class="md-subhead-sm mdl-list__item-primary-content text-right"></span>
                                     </li>
                                     <li class="mdl-list__item">
                                         <span style="flex: 50;" class="md-title-sm mdl-list__item-primary-content">Location</span>
-                                        <span class="md-subhead-sm mdl-list__item-primary-content">Munich</span>
+                                        <span id="overview_location" class="md-subhead-sm mdl-list__item-primary-content"></span>
                                     </li>
                                 </ul>
                             </div>
                             <!-- rent info -->
                             <div class="lnr-column-right mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
-                                <p class="md-title-sm" translate="overview.title"></p>
-                                <p class="md-subhead-sm" translate="overview.description"></p>
+                                <div class="overview-description">
+                                    <p class="md-title-sm" translate="overview.title"></p>
+                                    <p class="md-subhead-sm" translate="overview.description"></p>
+                                </div>
+                                <div class="overview-success">
+                                    <p class="text-valid md-title-sm" translate="overview.titleSuccess"></p>
+                                    <p class="text-valid md-subhead-sm" translate="overview.descriptionSuccess"></p>
+                                </div>
                                 <rental-info></rental-info>
                             </div>
                         </div>

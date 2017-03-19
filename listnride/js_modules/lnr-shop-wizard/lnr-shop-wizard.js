@@ -20,6 +20,7 @@ $(document).ready(function () {
         // fetch bike info
         var bikeId = helper.getUrlParameter('bikeId') || 165;
         $.get(apiUrl + "/rides/" + bikeId, function (bike) {
+            console.log(bike);
             // populate calendar object
             calendar.bikeId = bikeId;
             calendar.priceHalfDay = bike.price_half_daily;
@@ -29,6 +30,10 @@ $(document).ready(function () {
             calendar.requests = bike.requests;
             calendar.userId = bike.user.id;
             $('#bike_picture').attr("src", bike.image_file_1.image_file_1.small.url);
+            $('#overview_bike').text(bike.brand + ", " + helper.categoryName(bike.category));
+            $('#overview_name').text(bike.name);
+            $('#overview_lister').text(bike.user.first_name + " " + bike.user.last_name);
+            $('#overview_location').text(bike.user.city);
 
             helper.postInit();
         });
@@ -227,6 +232,9 @@ function dateChange(startDate, endDate) {
             '.' + startDate.getMonth() +
             '.' + startDate.getFullYear());
     });
+
+    $('.rental-info-from').text(startDate.getDate() + '.' + startDate.getMonth() + '.' + startDate.getFullYear() + ', ' + calendar.startTime + ':00');
+    $('.rental-info-to').text(endDate.getDate() + '.' + endDate.getMonth() + '.' + endDate.getFullYear() + ', ' + calendar.endTime + ':00');
 
     // // calendar end date
     $('[id=lnr-date-end]').each(function (index, element) {

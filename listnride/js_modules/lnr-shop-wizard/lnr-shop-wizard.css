@@ -64,6 +64,10 @@ html>body {
   color: rgb(221, 44, 0) !important;
 }
 
+.text-valid {
+  color: rgb(95, 198, 147) !important;
+}
+
 .text-right {
   text-align: right;
 }
@@ -71,6 +75,10 @@ html>body {
 label {
   font-weight: 600;
   color: rgb(85, 85, 85);
+}
+
+.mdl-textfield {
+  padding: 0;
 }
 
 /*------------- INFO --------------*/
