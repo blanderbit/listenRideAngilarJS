@@ -17,31 +17,25 @@ $(function () {
     $('#user-info').on('keyup', function () {
         userInputErrorAny()
     });
-    $('#form_first_name').blur(function () {
+    $('#form_first_name').on('keyup blur', function () {
         userButtonValidator(this.id, true);
         validateField(this.id, '#user');
         userInputErrorAny();
     });
-    $('#form_last_name').blur(function () {
+    $('#form_last_name').on('keyup blur', function () {
         userButtonValidator(this.id, true);
         validateField(this.id, '#user');
         userInputErrorAny();
     });
-    $('#form_email').blur(function () {
+    $('#form_email').on('keyup blur', function () {
         userButtonValidator(this.id, true);
         validateField(this.id, '#user');
         compareEmail();
         userInputErrorAny();
     });
-    $('#form_email_repeat').blur(function () {
+    $('#form_email_repeat').on('keyup blur', function () {
         userButtonValidator(this.id, true);
         validateField(this.id, '#user');
-        compareEmail();
-    });
-    $('#form_email').on('keyup', function () {
-        compareEmail();
-    });
-    $('#form_email_repeat').on('keyup', function () {
         compareEmail();
     });
 });
@@ -99,22 +93,20 @@ $(function () {
     $('#sp-payment-form').on('keyup', function () {
         paymentInputErrorAny();
     });
-    $('#sp-payment-cardholder').blur(function () {
+    $('#sp-payment-cardholder').on('keyup blur', function () {
         paymentButtonValidator(this.id, true);
         validateField(this.id, '#payment');
         paymentInputErrorAny();
     });
-    $('#sp-payment-cardnumber').blur(function () {
+    $('#sp-payment-cardnumber').on('keyup blur', function () {
         paymentButtonValidator(this.id, true);
         validateField(this.id, '#payment');
         paymentInputErrorAny();
     });
-    $('#sp-payment-cvv').blur(function () {
+    $('#sp-payment-cvv').on('keyup blur', function () {
         paymentButtonValidator(this.id, true);
         validateField(this.id, '#payment');
         paymentInputErrorAny();
-    });
-    $('#sp-payment-cvv').on('keyup', function () {
         if (this.value.length > 4) {
             this.value = this.value.slice(0, 4);
         }
