@@ -425,6 +425,7 @@ var helper = {
         $('#sp-payment-form').hide();
         $('.info-title').hide();
         $('.info-error').hide();
+        $('.overview-error').hide();
         $('.payment-error').hide();
         $('.user-info-validation').hide();
         $('.payment-info-validation').hide();
@@ -519,11 +520,17 @@ function createRequest() {
             $('.lnr-print-button').show();
             $('#lnr-back-button-tab-booking-overview').hide();
             $('.overview-description').hide();
+            $('.overview-error').hide();
             $('.overview-success').show();
         },
         error: function(response) {
-            console.log(response);
-            // TODO: return an error
+            if(response.responseJSON) {
+                $('.overview-error-description').text(response.responseJSON.errors[0].detail);
+            } else if (response.statusText) {
+                $('.overview-error-description').text(response.statusText);
+            }
+            $('.overview-description').hide();
+            $('.overview-error').show();
         }
     });
 }
