@@ -205,43 +205,7 @@ function dateChange(startDate, endDate) {
         calendar.lnrFee = fee + tax;
         calendar.total = subtotal + fee + tax;
     }
-
-    // calendar duration
-    $('*[id*=lnr-calendar-duration]').each(function (index, element) {
-        $(element).html(calendar.duration);
-    });
-
-    // calendar subtotal
-    $('*[id*=lnr-calendar-subtotal]').each(function (index, element) {
-        $(element).html(calendar.subtotal + ' &euro;');
-    });
-
-    // calendar lnr fee
-    $('*[id*=lnr-calendar-fee]').each(function (index, element) {
-        $(element).html(calendar.lnrFee + ' &euro;');
-    });
-
-    // calendar total
-    $('*[id*=lnr-calendar-total]').each(function (index, element) {
-        $(element).html(calendar.total + ' &euro;');
-    });
-
-    // // calendar start date
-    $('[id=lnr-date-start]').each(function (index, element) {
-        $(element).html('from ' + startDate.getDate() +
-            '.' + startDate.getMonth() +
-            '.' + startDate.getFullYear());
-    });
-
-    $('.rental-info-from').text(startDate.getDate() + '.' + startDate.getMonth() + '.' + startDate.getFullYear() + ', ' + calendar.startTime + ':00');
-    $('.rental-info-to').text(endDate.getDate() + '.' + endDate.getMonth() + '.' + endDate.getFullYear() + ', ' + calendar.endTime + ':00');
-
-    // // calendar end date
-    $('[id=lnr-date-end]').each(function (index, element) {
-        $(element).html('to ' + endDate.getDate() +
-            '.' + endDate.getMonth() +
-            '.' + endDate.getFullYear());
-    });
+    helper.onDateChange(startDate, endDate, calendar);
 }
 
 function countInvalidDays(startDate, endDate) {

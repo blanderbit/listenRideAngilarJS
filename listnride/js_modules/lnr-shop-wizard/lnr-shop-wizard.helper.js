@@ -41,6 +41,31 @@ var helper = {
         return obj;
     },
     /**
+     * returns the currency format for user language  
+     * @param {void}
+     * @returns {object} config object
+     */
+    getCurrencyFormat: function () {
+        var lang = navigator.language.split('-')[0].toLowerCase();
+        switch (lang) {
+            case 'en': return {
+                colorize: true,
+                decimalSymbol: '.',
+                digitGroupSymbol: ','
+            }
+            case 'de': return {
+                colorize: true,
+                decimalSymbol: ',',
+                digitGroupSymbol: '.'
+            }
+            case 'nl': return {
+                colorize: true,
+                decimalSymbol: ',',
+                digitGroupSymbol: '.'
+            }
+        }
+    },
+    /**
      * returns the translations for the user browser language
      * @param {string} lang
      * @returns {void}
@@ -95,7 +120,63 @@ var helper = {
             }
         }
     },
+    /**
+     * runs whenever date-picker change event is fired
+     */
+    onDateChange: function (startDate, endDate, calendar) {
 
+        // calendar duration
+        $('*[id*=lnr-calendar-duration]').each(function (index, element) {
+            $(element).html(calendar.duration);
+        });
+
+        // calendar subtotal
+        $('*[id*=lnr-calendar-subtotal]').each(function (index, element) {
+            var elem = $(element);
+            elem.html(calendar.subtotal).formatCurrency(helper.getCurrencyFormat());
+            elem.append(' &euro;');
+        });
+
+        // calendar lnr fee
+        $('*[id*=lnr-calendar-fee]').each(function (index, element) {
+            var elem = $(element);
+            elem.html(calendar.lnrFee).formatCurrency(helper.getCurrencyFormat());
+            elem.append(' &euro;');
+        });
+
+        // calendar total
+        $('*[id*=lnr-calendar-total]').each(function (index, element) {
+            var elem = $(element);
+            elem.html(calendar.total).formatCurrency(helper.getCurrencyFormat());
+            elem.append(' &euro;');
+        });
+
+        // calendar start date
+        $('[id=lnr-date-start]').each(function (index, element) {
+            $(element).html('from ' + startDate.getDate() +
+                '.' + startDate.getMonth() +
+                '.' + startDate.getFullYear());
+        });
+
+        $('.rental-info-from').text(startDate.getDate() + '.' +
+            startDate.getMonth() + '.' +
+            startDate.getFullYear() + ', ' +
+            calendar.startTime + ':00'
+        );
+
+        $('.rental-info-to').text(endDate.getDate() + '.' +
+            endDate.getMonth() + '.' +
+            endDate.getFullYear() + ', ' +
+            calendar.endTime + ':00'
+        );
+
+        // // calendar end date
+        $('[id=lnr-date-end]').each(function (index, element) {
+            $(element).html('to ' + endDate.getDate() +
+                '.' + endDate.getMonth() +
+                '.' + endDate.getFullYear());
+        });
+    },
     /**
      * used to go to the next tab
      * @param {Element} element
@@ -204,7 +285,6 @@ var helper = {
         payment[slot] = parseInt(value);
         updatePaymentExpirationText();
     },
-
     /**
      * show credit card form
      * @param {Number} id
