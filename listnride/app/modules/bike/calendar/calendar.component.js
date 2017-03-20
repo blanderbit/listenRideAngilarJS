@@ -34,7 +34,7 @@ angular.module('bike').component('calendar', {
           if (calendar.requests !== undefined) {
             deregisterRequestsWatcher();
             calendar.owner = calendar.userId == $localStorage.userId;
-            if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9 || calendar.bikeFamily == 11) {
+            if (calendar.bikeFamily == calendar.event.familyId) {
               calendar.event.reserved();
             }
             angular.element('#bikeCalendar').dateRangePicker({
@@ -80,7 +80,7 @@ angular.module('bike').component('calendar', {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             var user = success.data;
-            if (calendar.bikeFamily == 12 || (user.has_address && user.confirmed_phone && user.status >= 1)) {
+            if (calendar.bikeFamily == calendar.event.familyId || (user.has_address && user.confirmed_phone && user.status >= 1)) {
               var data = {
                 user_id: $localStorage.userId,
                 ride_id: calendar.bikeId,
@@ -138,9 +138,12 @@ angular.module('bike').component('calendar', {
       calendar.event.pickupSlotId;
       calendar.event.returnSlotId;
 
+      calendar.event.familyId = 12;
+
       var slotDuration = 1;
       var eventYear = 2017;
       var eventMonth = 2;   // Months start at 0, so February = 1
+
 
       // Calendar Slots are currently set for Cycling World Düsseldorf
       calendar.event.slots = [
@@ -219,6 +222,7 @@ angular.module('bike').component('calendar', {
           for (var j = 0; j < calendar.event.slots.length; j ++) {
             if (startYear == eventYear && startMonth == eventMonth && calendar.event.slots[j].day == startDay && calendar.event.slots[j].hour >= startTime && (calendar.event.slots[j].overnight || calendar.event.slots[j].hour + slotDuration <= endTime)) {
               calendar.event.slots[j].reserved = true;
+              calendar.event.slots[j].text = calendar.event.slots[j].text.split(" ", 1) + " (booked)";
             }
           }
         }
