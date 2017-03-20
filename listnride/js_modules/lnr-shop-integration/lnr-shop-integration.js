@@ -7,7 +7,7 @@
    * @param {Number} bikeId id of the bike requested
    */
   function spawnWizard (userId, bikeId) {
-    window.open('https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.html?userId=' + userId + '&bikeId=' + bikeId, '_blank', 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=700,height=660,top=10,left=10');
+    window.open('https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-solution.html?userId=' + userId + '&bikeId=' + bikeId, '_blank', 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=700,height=660,top=10,left=10');
   };
 
 (function () {
@@ -34,7 +34,7 @@
    * @param {any} categoryFilter function which returns the category desc based on category id.
    */
   function renderBikes ($, user_id, user_lang, introText, categoryFilter) {
-    $.get("https://api.listnride.com/v2/users/" + user_id, function (response) {
+    $.get("https://listnride-staging.herokuapp.com/v2/users/" + user_id, function (response) {
 
       var selectedLangText, dayText, sizeText;
       if ('en' === user_lang) {
