@@ -11,7 +11,7 @@
   };
 
 (function () {
-
+  
   var css_lnr = document.createElement("LINK");
   css_lnr.href = "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.css";
   css_lnr.rel = "stylesheet";
@@ -34,7 +34,7 @@
    * @param {any} categoryFilter function which returns the category desc based on category id.
    */
   function renderBikes ($, user_id, user_lang, introText, categoryFilter) {
-    $.get("https://listnride-staging.herokuapp.com/v2/users/" + user_id, function (response) {
+    $.get("https://api.listnride.com/v2/users/" + user_id, function (response) {
 
       var selectedLangText, dayText, sizeText;
       if ('en' === user_lang) {
