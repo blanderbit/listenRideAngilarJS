@@ -7,7 +7,7 @@
    * @param {Number} bikeId id of the bike requested
    */
   function spawnWizard (userId, bikeId) {
-    window.open('https://s3.eu-central-1.amazonaws.com/listnride-cdn/shop-wizard/lnr-shop-wizard.html?userId=' + userId + '&bikeId=' + bikeId, '_blank', 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=700,height=660,top=10,left=10');
+    window.open('https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-solution.html?userId=' + userId + '&bikeId=' + bikeId, '_blank', 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=700,height=660,top=10,left=10');
   };
 
 (function () {
