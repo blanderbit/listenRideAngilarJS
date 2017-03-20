@@ -1,24 +1,32 @@
+// Make sure we have all external setup variables with us
+if (!env || !userId || !bikeId) {
+    throw "Not all Setup Variables are present";
+}
+
 // DOM MANIPULATION CODE
 var $,
-    // now we need to fetch the details of the bikes and bind it to calendar object
+    // Define some global variables
     calendar = {},
     payment = {
         date: "Month",
         year: "Year"
     },
     translations,
-    apiUrl = "https://listnride-staging.herokuapp.com/v2",
-    user = {id: null};
+    user = {id: null, hasPaymentMethod: false};
+
+if (env === "production") {
+    var apiUrl = "https://api.listnride.com/v2";
+} else {
+    var apiUrl = "https://listnride-staging.herokuapp.com/v2";
+}
 
 $(document).ready(function () {
     // perform common tasks on initialization
     helper.preInit();
     // fetch user info
-    var userId = helper.getUrlParameter('userId') || 1005;
     $.get(apiUrl + "/users/" + userId, function (response) {
         calendar.bikeOwner = response;
         // fetch bike info
-        var bikeId = helper.getUrlParameter('bikeId') || 165;
         $.get(apiUrl + "/rides/" + bikeId, function (bike) {
             console.log(bike);
             // populate calendar object

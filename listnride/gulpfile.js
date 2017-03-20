@@ -26,35 +26,47 @@ var argvEnv = ('local' === processEnv || 'staging' === processEnv || 'production
 var env = environments[argvEnv];
 
 gulp.task('lint', lint);
+
 gulp.task('inject-templates-modules', injectTemplatesModules);
 gulp.task('cache-templates-modules', cacheTemplatesModules);
 gulp.task('cache-templates-services', cacheTemplatesServices);
+
 gulp.task('copy-index-tmp', copyIndexTmp);
 gulp.task('copy-index-dist', copyIndexDist);
 gulp.task('copy-index-app', copyIndexApp);
 gulp.task('copy-sitemap', copySitemap);
+gulp.task('copy-i18n', copyI18n);
+gulp.task('copy-fonts', copyFonts);
+
 gulp.task('vendors', vendors);
 gulp.task('scripts-deploy', scriptsDeploy);
 gulp.task('base-tag', baseTag);
-gulp.task('copy-i18n', copyI18n);
-gulp.task('copy-fonts', copyFonts);
+
 gulp.task('images-png', imagesPng);
 gulp.task('images-svg', imagesSvg);
 gulp.task('constants', appConstants);
+
 gulp.task('clean', clean);
 gulp.task('clean-extras', cleanExtras);
 gulp.task('clean-extras-local', cleanExtrasLocal);
 gulp.task('changes-in-index', changesInIndex);
 gulp.task('watch', watch);
+
 gulp.task('revisions', revisions);
 gulp.task('replace-revisions-index', replaceRevisionsIndex);
+
+gulp.task('minify-lnr-shop-integration', minifyLnrShopIntegration);
+gulp.task('clean-lnr-shop-integration', cleanLnrShopIntegration);
 gulp.task('deploy-lnr-shop-integration', deployLnrShopIntegration);
+
 gulp.task('resources-lnr-shop-solution', resourcesLnrShopSolution);
 gulp.task('concat-lnr-shop-solution', concatLnrShopSolution);
 gulp.task('minify-lnr-shop-solution', minifyLnrShopSolution);
 gulp.task('clean-lnr-shop-solution', cleanLnrShopSolution);
 gulp.task('deploy-lnr-shop-solution', deployLnrShopSolution);
-gulp.task('copy-lnr-shop-solution', copyLnrShopSolution);
+
+gulp.task('clean-lnr-shop', cleanLnrShop);
+
 gulp.task('images', ['images-svg', 'images-png']);
 gulp.task('local', local);
 gulp.task('default', ['local']);
@@ -335,23 +347,45 @@ function replaceRevisionsIndex() {
         .pipe(gulp.dest(path.dist.root));
 }
 /**
- * our js file which is used to embed bikes in other sites.
+ * minify -- shop integration
  * @returns {gulp} for chaining
  */
-function deployLnrShopIntegration() {
-    gulp.src(path.lnrShopIntegration.style)
-        .pipe(concat(path.lnrShopIntegration.css))
-        .pipe(gulp.dest(path.dist.root));
+function minifyLnrShopIntegration() {
 
-    gulp.src(path.lnrShopIntegration.source)
-        .pipe(concat(path.lnrShopIntegration.js))
-        .pipe(ngAnnotate())
-        .pipe(gulp.dest(path.dist.root))
-        .pipe(uglify(path.lnrShopIntegration.js))
-        .pipe(gulp.dest(path.dist.root));
+    // minify style for shop integration
+    // copy to dist folder of shop integration
+    gulp.src(path.lnrShopIntegration.css)
+        .pipe(concat(path.lnrShopIntegration.dist.style))
+        .pipe(gulp.dest(path.lnrShopIntegration.dist.root))
+        .pipe(minifyCss(path.lnrShopIntegration.dist.style))
+        .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
 
-    return gulp.src(path.app.js_modules)
-        .pipe(gulp.dest(path.dist.js_modules));
+    // minify source for shop integration
+    // copy to dist folder of shop integration
+    return gulp.src(path.lnrShopIntegration.js)
+        .pipe(concat(path.lnrShopIntegration.dist.source))
+        .pipe(gulp.dest(path.lnrShopIntegration.dist.root))
+        .pipe(uglify(path.lnrShopIntegration.dist.source))
+        .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
+}
+/**
+ * clean dist folder -- shop integration
+ * @returns {gulp} for chaining
+ */
+function cleanLnrShopIntegration(cb) {
+    var cleanFiles = [path.lnrShopIntegration.dist.root];
+    return del(cleanFiles, cb);
+}
+/**
+ * minification and clean -- shop integration
+ * @returns {gulp} for chaining
+ */
+function deployLnrShopIntegration(cb) {
+    runSequence(
+        'clean-lnr-shop-integration',
+        'minify-lnr-shop-integration',
+        cb
+    );
 }
 /**
  * copy template to tmp folder
@@ -392,7 +426,7 @@ function minifyLnrShopSolution() {
         .pipe(gulp.dest(path.lnrShopSolution.dist.root));
 }
 /**
- * clean dist folder
+ * clean dist folder -- shop solution
  * @returns {gulp} chaining
  */
 function cleanLnrShopSolution(cb) {
@@ -414,13 +448,12 @@ function deployLnrShopSolution(cb) {
     );
 }
 /**
- * run all shop solution tasks [clean, resource, concat, minify]
- * sequential tasks
+ * clean dist folder -- shop solution
  * @returns {gulp} chaining
  */
-function copyLnrShopSolution() {
-    return gulp.src(path.lnrShopSolution.dist.root + '**/*')
-        .pipe(gulp.dest(path.dist.lnrShopSolution));
+function cleanLnrShop(cb) {
+    var cleanFiles = [path.lnrShopSolution.dist.root, path.lnrShopIntegration.dist.root];
+    return del(cleanFiles, cb);
 }
 /**
  * tasks for local development
@@ -465,8 +498,5 @@ function deploy(cb) {
         'copy-sitemap',
         'clean-extras',
         'clean-extras-local',
-        'deploy-lnr-shop-solution',
-        'copy-lnr-shop-solution',
-        'clean-lnr-shop-solution',
         cb);
 }
