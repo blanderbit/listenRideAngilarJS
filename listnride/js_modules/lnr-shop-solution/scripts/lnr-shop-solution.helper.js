@@ -18,7 +18,7 @@ var helper = {
         startOfWeek: 'monday'
     },
 
-    lang: 'de',//navigator.language.split('-')[0].toLowerCase(),
+    lang: navigator.language.split('-')[0].toLowerCase(),
     /**
      * translation for en, de and nl
      */
@@ -50,11 +50,13 @@ var helper = {
     getCurrencyFormat: function () {
         switch (helper.lang) {
             case 'en': return {
+                regions: 'en',
                 colorize: false,
                 decimalSymbol: '.',
                 digitGroupSymbol: ','
             }
             case 'de': return {
+                regions: 'de',
                 colorize: false,
                 decimalSymbol: ',',
                 digitGroupSymbol: '.'
