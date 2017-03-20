@@ -12,12 +12,8 @@
 
 (function () {
 
-  var scr_lnr = document.createElement("SCRIPT");
-  scr_lnr.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js';
-  scr_lnr.type = 'text/javascript';
-
   var css_lnr = document.createElement("LINK");
-  css_lnr.href = "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.css";
+  css_lnr.href = "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.css";
   css_lnr.rel = "stylesheet";
 
   var css_mdl = document.createElement("LINK");
@@ -27,7 +23,6 @@
   var header = document.getElementsByTagName("head")[0];
   header.appendChild(css_mdl);
   header.appendChild(css_lnr);
-  header.appendChild(scr_lnr);
 
   /**
    * renders the bikes
