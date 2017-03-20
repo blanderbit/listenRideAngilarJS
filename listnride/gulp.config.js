@@ -68,11 +68,11 @@ module.exports = function () {
             html: './js_modules/lnr-shop-solution/lnr-shop-solution.html',
             js: './js_modules/lnr-shop-solution/**/*.js',
             css: [
-                './js_modules/lnr-shop-solution/lnr-shop-solution.css',
-                './js_modules/lnr-shop-solution/daterangepicker.css'
+                './js_modules/lnr-shop-solution/styles/lnr-shop-solution.css',
+                './js_modules/lnr-shop-solution/styles/daterangepicker.css'
             ],
             resource: [
-                './js_modules/lnr-shop-solution/lnr_logo_bold.svg'
+                './js_modules/lnr-shop-solution/resources/lnr_logo_bold.svg'
             ],
             dist: {
                 js: 'lnr-shop-solution.min.js',
