@@ -9,7 +9,7 @@ var helper = {
     calenderConfigObject: {
         alwaysOpen: true,
         container: '#bike-calendar',
-        beforeShowDay: classifyDate,
+        beforeShowDay: calendar.classifyDate,
         inline: true,
         selectForward: true,
         showShortcuts: false,
@@ -188,9 +188,9 @@ var helper = {
     nextTab: function (element) {
         switch (element.id) {
             case 'tab-basic-info': helper.changeTab(element); break;
-            case 'tab-payment-details': signup(function() {helper.changeTab(element)}); break;
+            case 'tab-payment-details': api.signup(function() {helper.changeTab(element)}); break;
             case 'tab-booking-overview': break;
-            case 'tab-duration': createRequest(); break;
+            case 'tab-duration': api.createRequest(); break;
         }
 
         // document.getElementById(element.id).click();
@@ -281,12 +281,12 @@ var helper = {
         var slotTime = slot + "Time";
         calendar[slotTime] = index;
         calendar.onTimeChange(slot);
-        updateTimeRangeText();
+        helper.updateTimeRangeText();
     },
 
     onExpirationValueSelect: function (value, slot) {
         payment[slot] = parseInt(value);
-        updatePaymentExpirationText();
+        helper.updatePaymentExpirationText();
     },
     /**
      * show credit card form
@@ -412,7 +412,7 @@ var helper = {
 
     preInit: function () {
         // close the drop down for the date time selector in calendar
-        window.onclick = closeDropDown;
+        window.onclick = helper.closeDropDown;
         // render rentals, navigation and apply translation
         helper
             .getTranslations()
@@ -456,123 +456,38 @@ var helper = {
      * @returns {void}
      */
     postInit: function () {
-        initOverview();
+       calendar.initOverview();
         helper.removeCalendarBusyLoader();
-        initCalendarPicker();
-        updateTimeRangeText();
-        updatePaymentExpirationText();
+        calendar.initCalendarPicker();
+        helper.updateTimeRangeText();
+        helper.updatePaymentExpirationText();
+    },
+
+    updateTimeRangeText: function () {
+        // initialize the button texts for time range selection
+        var startButton = $('#lnr-date-start-button');
+        var endButton = $('#lnr-date-end-button');
+        startButton.html(calendar.startTime + ':00 <div class="dropdown-caret" style="float: right"></div>');
+        endButton.html(calendar.endTime + ':00 <div class="dropdown-caret" style="float: right"></div>');
+    },
+
+    updatePaymentExpirationText: function () {
+        // initialize the button texts for expiration 
+        var dateButton = $('#lnr-payment-date-button');
+        var yearButton = $('#lnr-payment-year-button');
+        dateButton.html(payment.date + '<div class="dropdown-caret" style="float: right"></div>');
+        yearButton.html(payment.year + '<div class="dropdown-caret" style="float: right"></div>');
+    },
+
+    closeDropDown: function (event) {
+        if (!event.target.matches('.lnr-dropdown-button')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var loop = 0; loop < dropdowns.length; loop += 1) {
+                var openDropdown = dropdowns[loop];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
     }
 };
-
-/*--------------- API ACTIONS ---------------*/
-
-function signup(nextTab) {
-
-    if (user.id == null) {
-        var data = {
-            'user': {
-                'first_name': $('#form_first_name').val(),
-                'last_name': $('#form_last_name').val(),
-                'email': $('#form_email').val()
-            }
-        };
-
-        $.post({
-            url: apiUrl + "/users",
-            data: data,
-            success: function(response) {
-                $('.info-description').show();
-                $('.info-error').hide();
-                var encoded = base64Encode(response.email + ":" + response.password_hashed);
-                user.auth = 'Basic ' + encoded;
-                user.id = response.id;
-                nextTab();
-            },
-            error: function(response) {
-                $('.info-description').hide();
-                $('.info-error').show();
-            }
-        });
-    } else {
-        nextTab();
-    }
-}
-
-function createRequest() {
-    var data = {
-        'request': {
-            'user_id': user.id,
-            'ride_id': calendar.bikeId,
-            'start_date': calendar.startDate,
-            'end_date': calendar.endDate,
-            'instant': true
-        }
-    };
-
-    $.post({
-        url: apiUrl + "/requests",
-        data: data,
-        beforeSend: function(request) {
-            request.setRequestHeader("Authorization", user.auth);
-        },
-        success: function(response) {
-            $('#lnr-next-button-tab-booking-overview').hide();
-            $('.lnr-print-button').show();
-            $('#lnr-back-button-tab-booking-overview').hide();
-            $('.overview-description').hide();
-            $('.overview-error').hide();
-            $('.overview-success').show();
-        },
-        error: function(response) {
-            if(response.responseJSON) {
-                $('.overview-error-description').text(response.responseJSON.errors[0].detail);
-            } else if (response.statusText) {
-                $('.overview-error-description').text(response.statusText);
-            }
-            $('.overview-description').hide();
-            $('.overview-error').show();
-        }
-    });
-}
-
-
-/*------------------- Encrypting -------------------------*/
-
-function base64Encode(input) {
-    var keyStr = 'ABCDEFGHIJKLMNOP' +
-        'QRSTUVWXYZabcdef' +
-        'ghijklmnopqrstuv' +
-        'wxyz0123456789+/' +
-        '=';
-    var output = "";
-    var chr1, chr2, chr3 = "";
-    var enc1, enc2, enc3, enc4 = "";
-    var i = 0;
-
-    do {
-        chr1 = input.charCodeAt(i++);
-        chr2 = input.charCodeAt(i++);
-        chr3 = input.charCodeAt(i++);
-
-        enc1 = chr1 >> 2;
-        enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
-        enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
-        enc4 = chr3 & 63;
-
-        if (isNaN(chr2)) {
-            enc3 = enc4 = 64;
-        } else if (isNaN(chr3)) {
-            enc4 = 64;
-        }
-
-        output = output +
-            keyStr.charAt(enc1) +
-            keyStr.charAt(enc2) +
-            keyStr.charAt(enc3) +
-            keyStr.charAt(enc4);
-        chr1 = chr2 = chr3 = "";
-        enc1 = enc2 = enc3 = enc4 = "";
-    } while (i < input.length);
-
-    return output;
-}
