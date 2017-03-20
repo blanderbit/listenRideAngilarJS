@@ -436,32 +436,32 @@
         templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html'
       });
 
-      // for testing embed-bikes feature
-      // change userID in route to fetch new bikes
-      // ONLY for staging environment
-      $stateProvider.state({
-        name: 'embed',
-        url: '/embed-bikes-test/{userId}/{userLang}',
-        templateProvider: function ($timeout, $stateParams) {
-          return $timeout(function () {
-            return '<div><script src="https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.js"></script><div id="listnride" data-user="' +
-              $stateParams.userId + '" data-lang="' + $stateParams.userLang + '"></div><div>'
-          }, 100);
-        }
-      });
+      // // for testing embed-bikes feature
+      // // change userId in route to fetch new bikes
+      // // ONLY for staging environment
+      // $stateProvider.state({
+      //   name: 'lnr-shop-integration',
+      //   url: '/shop-integration/{userId}/{userLang}',
+      //   templateProvider: function ($timeout, $stateParams) {
+      //     return $timeout(function () {
+      //       return '<script src="https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.js"></script>' + 
+      //       '<div id="listnride" data-user="' + $stateParams.userId + '" data-lang="' + $stateParams.userLang + '"></div>'
+      //     }, 100);
+      //   }
+      // });
 
-      // temporary state, for testing
-      $stateProvider.state({
-        name: 'lnr-embed',
-        url: '/embed-wizard/',
-        controller: function () {
-          var userId = 1005;
-          var bikeId = 165;
-          var url = 'lnr-wizard-module/lnr-shop-wizard.html?userId=' + userId + '&bikeId=' + bikeId;
-          var params = 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=700,height=600,top=10,left=10';
-          window.open(url, '_blank', params);
-        }
-      });
+      // // lnr shop solution
+      // $stateProvider.state({
+      //   name: 'lnr-shop-solution',
+      //   url: '/shop-solution/',
+      //   controller: function () {
+      //     var userId = 1005;
+      //     var bikeId = 165;
+      //     var url = 'app/modules/lnr-shop-solution/lnr-shop-solution.html?userId=' + userId + '&bikeId=' + bikeId;
+      //     var params = 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=700,height=600,top=10,left=10';
+      //     window.open(url, '_blank', params);
+      //   }
+      // });
 
       $stateProvider.state('404', {
         templateUrl: 'app/modules/static/error-404.template.html',

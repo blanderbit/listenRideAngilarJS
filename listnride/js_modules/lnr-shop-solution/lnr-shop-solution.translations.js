@@ -13,8 +13,8 @@ var translationsConfigObject = {
         },
         durationPanel: {
             info: 'Please mark rent period:',
-            from: 'from',
-            to: 'to',
+            from: 'From',
+            to: 'To',
             selectDaysFirst: 'Please select the days first'
         },
         info: {
@@ -46,7 +46,7 @@ var translationsConfigObject = {
             title: 'Hey there!',
             description: 'Booking the bike is simple and secure! First, select from when to when you want to book it using the calendar.',
             duration: 'Duration',
-            fee: 'Service fee (incl. tax)',
+            fee: 'Fee (incl. tax)',
             total: 'Total',
             subtotal: 'Subtotal',
             day: 'day',
@@ -62,7 +62,11 @@ var translationsConfigObject = {
             titleSuccess: 'Congratulations!',
             descriptionSuccess: 'You\'ve successfully booked the bike. We\'ve send you a booking confirmation containing all informations to your email address.',
             errorTitle: 'Ushh..',
-            errorDescription: 'Something went wrong with your booking'
+            errorDescription: 'Something went wrong with your booking',
+            bike: "Bike",
+            name: "Name",
+            lister: "Lister",
+            location: "Location"
         },
         navigation: {
             back: 'Back',
@@ -83,8 +87,8 @@ var translationsConfigObject = {
             tabBookingOverview: '&Uuml;bersicht'
         },
         durationPanel: {
-            from: 'von',
-            to: 'bis',
+            from: 'Von',
+            to: 'Bis',
             selectDaysFirst: 'Bitte zuerst die Tage selektieren'
         },
         info: {
@@ -97,7 +101,7 @@ var translationsConfigObject = {
             emailRepeat: 'Email-Adresse wiederholen',
             invalidForm: 'Das Formular scheint nicht ganz korrekt ausgef&uuml;llt zu sein.',
             errorTitle: 'Ups!',
-            errorDescription: 'Diese Email-Addresse ist ungültig oder bereits in unserem System vorhanden.'
+            errorDescription: 'Diese Email-Addresse ist ung&uuml;ltig oder bereits in unserem System vorhanden.'
         },
         payment: {
             title: 'Wie w&uuml;rdest du gerne zahlen?',
@@ -110,13 +114,13 @@ var translationsConfigObject = {
             CVV: 'CVV',
             save: 'Save Data',
             titleError: 'Oh nein!',
-            descriptionError: 'Deine Zahlungsdaten scheinen ungültig zu sein, denn:'
+            descriptionError: 'Deine Zahlungsdaten scheinen ung&uuml;ltig zu sein, denn:'
         },
         rental: {
             title: 'Hallo!',
             description: 'Fahrr&auml;der buchen ist einfach und sicher. W&auml;hle zuerst mittels des Kalenders von wann bis wann du das Rad mieten m&ouml;chtest.',
             duration: 'Dauer',
-            fee: 'Servicegeb&uuml;hr (inkl. MwSt.)',
+            fee: 'Geb&uuml;hr (inkl. MwSt.)',
             total: 'Ingesamt',
             subtotal: 'Zwischensumme',
             day: 'Tag',
@@ -132,7 +136,11 @@ var translationsConfigObject = {
             titleSuccess: 'Gl&uuml;ckwunsch!',
             descriptionSuccess: 'Du hast das Fahrrad erfolgreich gebucht. Wir haben dir soeben eine Buchungsbest&auml;tigung mit s&auml;mtlichen Informationen an deine Email-Adresse geschickt.',
             errorTitle: 'Ushh..',
-            errorDescription: 'Something went wrong with your booking'
+            errorDescription: 'Something went wrong with your booking',
+            bike: "Fahrrad",
+            name: "Name",
+            lister: "Vermieter",
+            location: "Ort"
         },
         navigation: {
             back: 'Zur&uuml;ck',
@@ -154,8 +162,8 @@ var translationsConfigObject = {
         },
         durationPanel: {
             info: 'Please mark rent period:',
-            from: 'from',
-            to: 'to',
+            from: 'From',
+            to: 'To',
             selectDaysFirst: 'Please select the days first'
         },
         info: {
@@ -189,7 +197,7 @@ var translationsConfigObject = {
             title: 'Hey there!',
             description: 'Booking the bike is simple and secure! First, select from when to when you want to book it using the calendar.',
             duration: 'Duration',
-            fee: 'Service fee (incl. tax)',
+            fee: 'Fee (incl. tax)',
             total: 'Total',
             subtotal: 'Subtotal',
             days: 'Days',
@@ -201,7 +209,11 @@ var translationsConfigObject = {
             titleSuccess: 'Congratulations!',
             descriptionSuccess: 'You\'ve successfully booked the bike. We\'ve send you a booking confirmation containing all informations to your email address.',
             errorTitle: 'Ushh..',
-            errorDescription: 'Something went wrong with your booking'
+            errorDescription: 'Something went wrong with your booking',
+            bike: "Bike",
+            name: "Name",
+            lister: "Lister",
+            location: "Location"
         },
         navigation: {
             back: 'Back',

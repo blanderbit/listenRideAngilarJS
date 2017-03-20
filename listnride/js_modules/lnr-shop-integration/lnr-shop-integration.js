@@ -11,13 +11,9 @@
   };
 
 (function () {
-
-  var scr_lnr = document.createElement("SCRIPT");
-  scr_lnr.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js';
-  scr_lnr.type = 'text/javascript';
-
+  
   var css_lnr = document.createElement("LINK");
-  css_lnr.href = "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.css";
+  css_lnr.href = "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.css";
   css_lnr.rel = "stylesheet";
 
   var css_mdl = document.createElement("LINK");
@@ -27,7 +23,6 @@
   var header = document.getElementsByTagName("head")[0];
   header.appendChild(css_mdl);
   header.appendChild(css_lnr);
-  header.appendChild(scr_lnr);
 
   /**
    * renders the bikes
@@ -39,7 +34,7 @@
    * @param {any} categoryFilter function which returns the category desc based on category id.
    */
   function renderBikes ($, user_id, user_lang, introText, categoryFilter) {
-    $.get("https://listnride-staging.herokuapp.com/v2/users/" + user_id, function (response) {
+    $.get("https://api.listnride.com/v2/users/" + user_id, function (response) {
 
       var selectedLangText, dayText, sizeText;
       if ('en' === user_lang) {
