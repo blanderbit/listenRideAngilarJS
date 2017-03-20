@@ -90,6 +90,34 @@
       });
 
       $stateProvider.state({
+        name: 'tokenlogin',
+        url: '/requests/{requestId: int}/tokenlogin?shop_token&email',
+        template: '<requests></requests>',
+        resolve: {
+          login: ['$state', '$stateParams', 'authentication', function($state, $stateParams, authentication) {
+            return authentication.tokenLogin($stateParams.shop_token, $stateParams.email).then(
+              function (success) {
+                console.log('success');
+                authentication.setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
+              },
+              function (error) {
+                console.log('error');
+              }
+            );
+            // authentication.tokenLogin($stateParams.shop_token, $stateParams.email,
+            //   function () {
+            //     return;
+            //   },
+            //   function () {
+            //     console.log("error");
+            //     $state.go('404');
+            //   }
+            // );
+          }]
+        },
+      })
+
+      $stateProvider.state({
         name: 'list',
         url: '/list-bike',
         template: '<list></list>'
@@ -408,32 +436,33 @@
         templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html'
       });
 
-      // for testing embed-bikes feature
-      // change userID in route to fetch new bikes
-      // ONLY for staging environment
-      $stateProvider.state({
-        name: 'embed',
-        url: '/embed-bikes-test/{userId}/{userLang}',
-        templateProvider: function ($timeout, $stateParams) {
-          return $timeout(function () {
-            return '<div><script src="https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.js"></script><div id="listnride" data-user="' +
-              $stateParams.userId + '" data-lang="' + $stateParams.userLang + '"></div><div>'
-          }, 100);
-        }
-      });
+      // // for testing embed-bikes feature
+      // // change userId in route to fetch new bikes
+      // // ONLY for staging environment
+      // $stateProvider.state({
+      //   name: 'lnr-shop-integration',
+      //   url: '/shop-integration/{userId}/{userLang}',
+      //   templateProvider: function ($timeout, $stateParams) {
+      //     return $timeout(function () {
+      //       return '<script src="https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.js"></script>' + 
+      //       '<div id="listnride" data-user="' + $stateParams.userId + '" data-lang="' + $stateParams.userLang + '"></div>'
+      //     }, 100);
+      //   }
+      // });
 
-      // temporary state, for testing
-      $stateProvider.state({
-        name: 'lnr-embed',
-        url: '/embed-wizard/',
-        controller: function () {
-          var userId = 1005;
-          var bikeId = 165;
-          var url = 'lnr-wizard-module/lnr-shop-wizard.html?userId=' + userId + '&bikeId=' + bikeId;
-          var params = 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=700,height=600,top=10,left=10';
-          window.open(url, '_blank', params);
-        }
-      });
+      // // lnr shop solution
+      // $stateProvider.state({
+      //   name: 'lnr-shop-solution',
+      //   url: '/shop-solution/',
+      //   controller: function () {
+      //     var userId = 1005;
+      //     var bikeId = 165;
+      //     var url = 'app/modules/lnr-shop-solution/lnr-shop-solution.html?userId=' + userId + '&bikeId=' + bikeId;
+      //     var params = 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=700,height=600,top=10,left=10';
+      //     window.open(url, '_blank', params);
+      //   }
+      // });
+
       $stateProvider.state('404', {
         templateUrl: 'app/modules/static/error-404.template.html',
         data: {

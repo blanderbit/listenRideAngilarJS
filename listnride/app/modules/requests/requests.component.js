@@ -4,7 +4,8 @@ angular.module('requests',[]).component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
   controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$window', 'api', '$timeout', '$location', '$anchorScroll', '$state', '$stateParams', '$translate', 'date', 'accessControl', 'ENV',
-    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $window, api, $timeout, $location, $anchorScroll, $state, $stateParams, $translate, date, accessControl, ENV) {
+    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $window, api, $timeout, $location, $anchorScroll, $state, $stateParams, $translate, date, accessControl, ENV, login) {
+      console.log('TOUCHED!');
       if (accessControl.requireLogin()) {
         return;
       }

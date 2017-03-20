@@ -265,12 +265,25 @@ angular.
         );
       };
 
+      var tokenLogin = function(token, email) {
+        var user = {
+          "user": {
+            "shop_token": token,
+            "email": email
+          }
+        };
+        console.log(user);
+        return api.post('/users/login', user);
+      }
+
       // Further all functions to be exposed in the service
       return {
         showSignupDialog: showSignupDialog,
         showLoginDialog: showLoginDialog,
         loggedIn: loggedIn,
         logout: logout,
+        tokenLogin: tokenLogin,
+        setCredentials: setCredentials,
         profilePicture: function() {
           return $localStorage.profilePicture
         },

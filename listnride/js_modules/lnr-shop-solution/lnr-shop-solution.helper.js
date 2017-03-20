@@ -17,6 +17,8 @@ var helper = {
         singleMonth: true,
         startOfWeek: 'monday'
     },
+
+    lang: 'de',//navigator.language.split('-')[0].toLowerCase(),
     /**
      * translation for en, de and nl
      */
@@ -46,8 +48,7 @@ var helper = {
      * @returns {object} config object
      */
     getCurrencyFormat: function () {
-        var lang = navigator.language.split('-')[0].toLowerCase();
-        switch (lang) {
+        switch (helper.lang) {
             case 'en': return {
                 colorize: false,
                 decimalSymbol: '.',
@@ -71,8 +72,7 @@ var helper = {
      * @returns {void}
      */
     getTranslations: function () {
-        var lang = navigator.language.split('-')[0].toLowerCase();
-        switch (lang) {
+        switch (helper.lang) {
             case 'en':
                 translations = this.translationsConfigObject.en;
                 break;
