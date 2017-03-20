@@ -479,9 +479,6 @@ function local(cb) {
  */
 function deploy(cb) {
     runSequence(
-        'deploy-lnr-shop-solution',
-        'copy-lnr-shop-solution',
-        'clean-lnr-shop-solution',
         'clean',
         'constants',
         'copy-index-tmp',
