@@ -12,8 +12,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <!-- build:css lnr-shop-solution.min.css -->
-    <link rel="stylesheet" href="lnr-shop-solution.css"></link>
-    <link rel="stylesheet" href="daterangepicker.css"></link>
+    <link rel="stylesheet" href="./styles/lnr-shop-solution.css"></link>
+    <link rel="stylesheet" href="./styles/daterangepicker.css"></link>
     <!-- endbuild -->
     <script>
         var userId = 1001;
@@ -21,13 +21,15 @@
         var env = "staging";
     </script>
     <!-- build:js lnr-shop-solution.min.js -->
-    <script type="text/javascript" src="jquery.daterangepicker.js"></script>
-    <script type="text/javascript" src="jquery.formatCurrency.min.js"></script>
-    <script type="text/javascript" src="lnr-shop-solution.translations.js"></script>
-    <script type="text/javascript" src="lnr-shop-solution.date.js"></script>
-    <script type="text/javascript" src="lnr-shop-solution.js"></script>
-    <script type="text/javascript" src="lnr-shop-solution.helper.js"></script>
-    <script type="text/javascript" src="lnr-shop-solution.validation.js"></script>
+    <script type="text/javascript" src="./vendors/jquery.daterangepicker.js"></script>
+    <script type="text/javascript" src="./vendors/jquery.formatCurrency.js"></script>
+    <script type="text/javascript" src="./scripts/lnr-shop-solution.translations.js"></script>
+    <script type="text/javascript" src="./scripts/lnr-shop-solution.date.js"></script>
+    <script type="text/javascript" src="./scripts/lnr-shop-solution.js"></script>
+    <script type="text/javascript" src="./scripts/lnr-shop-solution.calendar.js"></script>
+    <script type="text/javascript" src="./scripts/lnr-shop-solution.api.js"></script>
+    <script type="text/javascript" src="./scripts/lnr-shop-solution.helper.js"></script>
+    <script type="text/javascript" src="./scripts/lnr-shop-solution.validation.js"></script>
     <!-- endbuild -->
 </head>
 
@@ -36,7 +38,7 @@
         <!-- header -->
         <header class="mdl-layout__header" id="lnr-header">
             <div class="mdl-layout__header-row" id="lnr-header-logo">
-                <img src="lnr_logo_bold.svg" width="95">
+                <img src="./resources/lnr_logo_bold.svg" width="95">
                 <lnr-header-text translate="shared.lnrHeaderText"></lnr-header-text>
             </div>
         </header>

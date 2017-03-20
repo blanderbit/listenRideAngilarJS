@@ -1,58 +1,5 @@
-// Make sure we have all external setup variables with us
-if (!env || !userId || !bikeId) {
-    throw "Not all Setup Variables are present";
-}
-
-// DOM MANIPULATION CODE
-var $,
-    // Define some global variables
-    calendar = {},
-    payment = {
-        date: "Month",
-        year: "Year"
-    },
-    translations,
-    user = {id: null, hasPaymentMethod: false};
-
-if (env === "production") {
-    var apiUrl = "https://api.listnride.com/v2";
-} else {
-    var apiUrl = "https://listnride-staging.herokuapp.com/v2";
-}
-
-$(document).ready(function () {
-    // perform common tasks on initialization
-    helper.preInit();
-    // fetch user info
-    $.get(apiUrl + "/users/" + userId, function (response) {
-        calendar.bikeOwner = response;
-        // fetch bike info
-        $.get(apiUrl + "/rides/" + bikeId, function (bike) {
-            console.log(bike);
-            // populate calendar object
-            calendar.bikeId = bikeId;
-            calendar.priceHalfDay = bike.price_half_daily;
-            calendar.priceDay = bike.price_daily;
-            calendar.priceWeek = bike.price_weekly;
-            calendar.bikeFamily = bike.family;
-            calendar.requests = bike.requests;
-            calendar.userId = bike.user.id;
-            $('#bike_picture').attr("src", bike.image_file_1.image_file_1.small.url);
-            $('#overview_bike').text(bike.brand + ", " + helper.categoryName(bike.category));
-            $('#overview_name').text(bike.name);
-            $('#overview_lister').text(bike.user.first_name + " " + bike.user.last_name);
-            $('#overview_location').text(bike.user.city);
-
-            helper.postInit();
-        });
-    });
-});
-
-// instance of the date service
-var date = new DateService();
-
 // render the calendar
-function initCalendarPicker() {
+calendar.initCalendarPicker = function() {
     if (calendar.requests !== undefined) {
         calendar.owner = calendar.userId;
         if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9) {
@@ -67,9 +14,9 @@ function initCalendarPicker() {
 
                 calendar.startDate = start;
                 calendar.endDate = end;
-                dateChange(calendar.startDate, calendar.endDate);
-                if (openingHoursAvailable()) {
-                    setInitHours();
+               calendar.dateChange(calendar.startDate, calendar.endDate);
+                if (calendar.openingHoursAvailable()) {
+                    calendar.setInitHours();
                 }
 
                 // enable the time selector
@@ -77,45 +24,17 @@ function initCalendarPicker() {
                 $('.dropdown-payment *').attr("disabled", false);
             });
     }
-}
+};
 
-function updateTimeRangeText() {
-    // initialize the button texts for time range selection
-    var startButton = $('#lnr-date-start-button');
-    var endButton = $('#lnr-date-end-button');
-    startButton.html(calendar.startTime + ':00 <div class="dropdown-caret" style="float: right"></div>');
-    endButton.html(calendar.endTime + ':00 <div class="dropdown-caret" style="float: right"></div>');
-}
-
-function updatePaymentExpirationText() {
-    // initialize the button texts for expiration 
-    var dateButton = $('#lnr-payment-date-button');
-    var yearButton = $('#lnr-payment-year-button');
-    dateButton.html(payment.date + '<div class="dropdown-caret" style="float: right"></div>');
-    yearButton.html(payment.year + '<div class="dropdown-caret" style="float: right"></div>');
-}
-
-function closeDropDown(event) {
-    if (!event.target.matches('.lnr-dropdown-button')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var loop = 0; loop < dropdowns.length; loop += 1) {
-            var openDropdown = dropdowns[loop];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}
-
-function getWeekDay(date) {
+calendar.getWeekDay = function(date) {
     var dayOfWeek = date.getDay() - 1;
     if (dayOfWeek == -1) {
         dayOfWeek = 6;
     }
     return dayOfWeek
-}
+};
 
-function openHours(weekDay) {
+calendar.openHours = function(weekDay) {
     var workingHours = [];
     $.each(weekDay, function (key, value) {
         var from = value.start_at / 3600;
@@ -123,48 +42,48 @@ function openHours(weekDay) {
         $.merge(workingHours, _.range(from, until))
     });
     return workingHours
-}
+};
 
-function setInitHours() {
-    var firstDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(calendar.startDate)];
-    var lastDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(calendar.endDate)];
-    firstDay = openHours(firstDay);
-    lastDay = openHours(lastDay);
+calendar.setInitHours = function() {
+    var firstDay = calendar.bikeOwner.opening_hours.hours[calendar.getWeekDay(calendar.startDate)];
+    var lastDay = calendar.bikeOwner.opening_hours.hours[calendar.getWeekDay(calendar.endDate)];
+    firstDay = calendar.openHours(firstDay);
+    lastDay = calendar.openHours(lastDay);
     calendar.startTime = firstDay[0];
     calendar.endTime = lastDay[lastDay.length - 1]
-}
+};
 
-function classifyDate(date) {
+calendar.classifyDate = function(date) {
     date.setHours(0, 0, 0, 0);
     var now = new Date();
     now.setHours(0, 0, 0, 0);
     if (date.getTime() < now.getTime()) {
         return [false, "date-past", ""];
-    } else if (isReserved(date)) {
+    } else if (calendar.isReserved(date)) {
         return [false, "date-reserved", ""];
-    } else if (dateClosed(date)) {
+    } else if (calendar.dateClosed(date)) {
         return [false, "date-closed", ""];
     } else {
         return [true, "date-available", ""];
     }
-}
+};
 
-function dateClosed(date) {
-    if (openingHoursAvailable()) {
-        return calendar.bikeOwner.opening_hours.hours[getWeekDay(date)] == null;
+calendar.dateClosed = function(date) {
+    if (calendar.openingHoursAvailable()) {
+        return calendar.bikeOwner.opening_hours.hours[calendar.getWeekDay(date)] == null;
     }
     return false
-}
+};
 
-function openingHoursAvailable() {
+calendar.openingHoursAvailable = function() {
     var returnBool = calendar.bikeOwner &&
         calendar.bikeOwner.opening_hours &&
         calendar.bikeOwner.opening_hours.enabled &&
         _.some(calendar.bikeOwner.opening_hours.hours, Array);
     return returnBool;
-}
+};
 
-function isReserved(date) {
+calendar.isReserved = function(date) {
     for (var i = 0; i < calendar.requests.length; ++i) {
         var start = new Date(calendar.requests[i].start_date);
         start.setHours(0, 0, 0, 0);
@@ -177,9 +96,9 @@ function isReserved(date) {
         }
     }
     return false;
-}
+};
 
-function initOverview() {
+calendar.initOverview = function() {
     calendar.startTime = 10;
     calendar.endTime = 18;
 
@@ -190,9 +109,9 @@ function initOverview() {
 
     calendar.formValid = false;
     calendar.datesValid = false;
-}
+};
 
-function dateChange(startDate, endDate) {
+calendar.dateChange = function(startDate, endDate) {
     if (calendar.isDateInvalid()) {
         calendar.duration = date.duration(undefined, undefined, 0);
         calendar.subtotal = 0;
@@ -214,8 +133,8 @@ function dateChange(startDate, endDate) {
         calendar.total = subtotal + fee + tax;
     }
     helper.onDateChange(startDate, endDate, calendar);
-}
-
+};
+    
 function countInvalidDays(startDate, endDate) {
     var totalDays = Math.abs(startDate.getDate() - endDate.getDate()) + 1;
     var currentDay = new Date(endDate);
@@ -224,7 +143,7 @@ function countInvalidDays(startDate, endDate) {
     var invalidDays = 0;
     while (i < totalDays) {
         i++;
-        if (isReserved(currentDay)) invalidDays++;
+        if (calendar.isReserved(currentDay)) invalidDays++;
         currentDay.setDate(currentDay.getDate() - 1);
         currentDay.setHours(0, 0, 0, 0);
     }
@@ -239,12 +158,12 @@ calendar.availabilityMessage = function ($index, date) {
 };
 
 calendar.isOptionEnabled = function ($index, date) {
-    if (date == undefined || !openingHoursAvailable()) {
+    if (date == undefined || !calendar.openingHoursAvailable()) {
         return true
     }
-    var weekDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(date)];
+    var weekDay = calendar.bikeOwner.opening_hours.hours[calendar.getWeekDay(date)];
     if (weekDay !== null) {
-        var workingHours = openHours(weekDay);
+        var workingHours = calendar.openHours(weekDay);
         return workingHours.includes($index + 6);
     }
     return false
@@ -267,5 +186,5 @@ calendar.onTimeChange = function (slot) {
     var date = new Date(calendar[slotDate]);
     date.setHours(calendar[slotTime], 0, 0, 0);
     calendar[slotDate] = date;
-    dateChange(calendar.startDate, calendar.endDate);
+   calendar.dateChange(calendar.startDate, calendar.endDate);
 };
