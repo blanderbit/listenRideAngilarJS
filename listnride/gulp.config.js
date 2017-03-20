@@ -4,6 +4,7 @@ module.exports = function () {
         nodeModules: '/node_modules/**/*.js',
         app: {
             root: './app/',
+            module: '.app/modules/',
             base: '<base href="/">',
             constant: 'app.constants.js',
             index: './index.html',
@@ -45,10 +46,22 @@ module.exports = function () {
             lnrShopSolution: './dist/lnr-shop-solution'
         },
         lnrShopIntegration: {
-            css: 'lnr-embed.min.css',
-            style: './js_modules/lnr-embed/lnr-embed.css',
-            js: './js_modules/lnr-embed/lnr-embed.js',
-            source: 'lnr-embed.min.js',
+            root: './js_modules/lnr-shop-integration/',
+            dist: {
+                root: './js_modules/lnr-shop-integration/dist/',
+                oldJs: './js_modules/lnr-shop-integration/dist/lnr-embed.min.js',
+                oldSource: 'lnr-embed.min.js',
+                js: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.js',
+                source: 'lnr-shop-integration.min.js',
+                css: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.css',
+                style: 'lnr-shop-integration.min.css'
+            },
+            style: 'lnr-shop-integration.css',
+            css: './js_modules/lnr-shop-integration/lnr-shop-integration.css',
+            js: [
+                './js_modules/lnr-shop-integration/lnr-shop-integration.js'
+            ],
+            source: 'lnr-shop-integration.js'
         },
         lnrShopSolution: {
             root: './js_modules/lnr-shop-solution/',
