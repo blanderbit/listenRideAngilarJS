@@ -91,11 +91,11 @@
 
       $stateProvider.state({
         name: 'tokenlogin',
-        url: '/requests/{requestId: int}/tokenlogin?shop_token&email',
+        url: '/requests/{requestId: int}/tokenlogin?shop_token&user_email',
         template: '<requests></requests>',
         resolve: {
           login: ['$state', '$stateParams', 'authentication', function($state, $stateParams, authentication) {
-            return authentication.tokenLogin($stateParams.shop_token, $stateParams.email).then(
+            return authentication.tokenLogin($stateParams.shop_token, $stateParams.user_email).then(
               function (success) {
                 console.log('success');
                 authentication.setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);

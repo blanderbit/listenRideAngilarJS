@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="lnr-shop-solution.css"></link>
     <link rel="stylesheet" href="daterangepicker.css"></link>
     <!-- endbuild -->
+    <script>
+        var userId = 1001;
+        var bikeId = 1;
+        var env = "staging";
+    </script>
     <!-- build:js lnr-shop-solution.min.js -->
     <script type="text/javascript" src="jquery.daterangepicker.js"></script>
     <script type="text/javascript" src="jquery.formatCurrency.min.js"></script>
@@ -372,19 +377,19 @@
                                 <img id="bike_picture" style="width: 100%">
                                 <ul class="lnr-list-sm mdl-list">
                                     <li class="mdl-list__item">
-                                        <span style="flex: 50;" class="md-title-sm mdl-list__item-primary-content">Bike</span>
+                                        <span style="flex: 50;" class="md-title-sm mdl-list__item-primary-content" translate="overview.bike"></span>
                                         <span id="overview_bike" class="md-subhead-sm mdl-list__item-primary-content"></span>
                                     </li>
                                     <li class="mdl-list__item">
-                                        <span style="flex: 50;" class="md-title-sm mdl-list__item-primary-content">Name</span>
+                                        <span style="flex: 50;" class="md-title-sm mdl-list__item-primary-content" translate="overview.name"></span>
                                         <span id="overview_name" class="md-subhead-sm mdl-list__item-primary-content"></span>
                                     </li>
                                     <li class="mdl-list__item">
-                                        <span style="flex: 50;" class="md-title-sm mdl-list__item-primary-content">Lister</span>
+                                        <span style="flex: 50;" class="md-title-sm mdl-list__item-primary-content" translate="overview.lister"></span>
                                         <span id="overview_lister" class="md-subhead-sm mdl-list__item-primary-content text-right"></span>
                                     </li>
                                     <li class="mdl-list__item">
-                                        <span style="flex: 50;" class="md-title-sm mdl-list__item-primary-content">Location</span>
+                                        <span style="flex: 50;" class="md-title-sm mdl-list__item-primary-content" translate="overview.location"></span>
                                         <span id="overview_location" class="md-subhead-sm mdl-list__item-primary-content"></span>
                                     </li>
                                 </ul>
@@ -490,6 +495,7 @@
                     ).done(function (data) {
                         $('.payment-error').hide();
                         $('.payment-description').show();
+                        user.hasPaymentMethod = true;
                         helper.changeTab({id: 'tab-booking-overview'});
                     }).fail(function(data) {
                         $('.payment-description').hide();
@@ -552,6 +558,7 @@
                                     ).done(function (data) {
                                         $('.payment-error').hide();
                                         $('.payment-description').show();
+                                        user.hasPaymentMethod = true;
                                         helper.changeTab({id: 'tab-booking-overview'});
                                     }).fail(function(data) {
                                         $('.payment-description').hide();
