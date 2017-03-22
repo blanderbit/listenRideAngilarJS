@@ -50,9 +50,9 @@ function checkEmailRegexp(id){
     var email = $('#' + id);
     var match = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email.val());
     if (!match) {
-        addEmailError(email)
+        addFieldError(email)
     } else {
-        removeEmailError(email);
+        removeFieldError(email);
     }
 }
 
@@ -61,13 +61,13 @@ function compareFullEmail() {
     var $repeat = $('#form_email_repeat');
     if ($repeat.val().length > 0 && $email.val().length > 0) {
         if ($email.val() == $repeat.val()) {
-            removeEmailError($email);
-            removeEmailError($repeat);
+            removeFieldError($email);
+            removeFieldError($repeat);
             userButtonValidator($email.attr('id'), true);
             userButtonValidator($repeat.attr('id'), true);
         } else {
-            addEmailError($email);
-            addEmailError($repeat);
+            addFieldError($email);
+            addFieldError($repeat);
         }
     }
     userInputErrorAny();
@@ -79,26 +79,16 @@ function compareEmailOnFly() {
     var max_length = Math.max($repeat.val().length, $email.val().length);
     var min_length = Math.min($repeat.val().length, $email.val().length);
     if (max_length != min_length && $email.val().substring(0,min_length) == $repeat.val().substring(0,min_length)) {
-        removeEmailError($email);
-        removeEmailError($repeat);
+        removeFieldError($email);
+        removeFieldError($repeat);
         userButtonValidator($email.attr('id'), false);
         userButtonValidator($repeat.attr('id'), false);
     } else if(max_length == min_length) {
         compareFullEmail();
     } else {
-        addEmailError($email);
-        addEmailError($repeat);
+        addFieldError($email);
+        addFieldError($repeat);
     }
-}
-
-function addEmailError(email) {
-    email.parent().addClass('is-invalid');
-    email.closest("div").find("label").addClass('text-invalid');
-}
-
-function removeEmailError(email) {
-    email.parent().removeClass('is-invalid');
-    email.closest("div").find("label").removeClass('text-invalid');
 }
 
 function userButtonValidator(field, value) {
@@ -129,6 +119,15 @@ var paymentFormOverview = {
     'sp-payment-cvv': false,
     'valid': false
 };
+
+$(function() {
+    $('#sp-button-paypal').on('click', function (){
+        removeFieldError($('#sp-payment-cardholder'));
+        removeFieldError($('#sp-payment-cardnumber'));
+        removeFieldError($('#sp-payment-cvv'));
+        paymentInputErrorAny();
+    })
+});
 
 $(function () {
     $('#lnr-next-button-tab-payment-details').prop('disabled', true);
@@ -187,6 +186,16 @@ function validateField(input_id, text_id) {
         $(input_id).closest("div").find("label").removeClass('text-invalid');
         $(text_id + '-info-validation').addClass('hidden');
     }
+}
+
+function addFieldError(field) {
+    field.parent().addClass('is-invalid');
+    field.closest("div").find("label").addClass('text-invalid');
+}
+
+function removeFieldError(field) {
+    field.parent().removeClass('is-invalid');
+    field.closest("div").find("label").removeClass('text-invalid');
 }
 
 function allTrue(obj)
