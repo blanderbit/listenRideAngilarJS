@@ -17,46 +17,88 @@ $(function () {
     $('#user-info').on('keyup', function () {
         userInputErrorAny()
     });
-    $('#form_first_name').on('keyup blur', function () {
+    $('#form_first_name').on('blur', function () {
         userButtonValidator(this.id, true);
         validateField(this.id, '#user');
         userInputErrorAny();
     });
-    $('#form_last_name').on('keyup blur', function () {
+    $('#form_last_name').on('blur', function () {
         userButtonValidator(this.id, true);
         validateField(this.id, '#user');
         userInputErrorAny();
     });
-    $('#form_email').on('keyup blur', function () {
-        userButtonValidator(this.id, true);
+    $('#form_email').on('blur', function () {
         validateField(this.id, '#user');
-        compareEmail();
-        userInputErrorAny();
+        checkEmailRegexp(this.id);
+        compareFullEmail();
     });
-    $('#form_email_repeat').on('keyup blur', function () {
-        userButtonValidator(this.id, true);
+    $('#form_email').on('keyup change', function () {
+        compareEmailOnFly();
+    });
+    $('#form_email_repeat').on('blur', function () {
         validateField(this.id, '#user');
-        compareEmail();
+        checkEmailRegexp(this.id);
+        compareFullEmail();
+    });
+
+    $('#form_email_repeat').on('keyup change', function () {
+        compareEmailOnFly();
     });
 });
 
-function compareEmail() {
+function checkEmailRegexp(id){
+    var email = $('#' + id);
+    var match = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email.val());
+    if (!match) {
+        addEmailError(email)
+    } else {
+        removeEmailError(email);
+    }
+}
+
+function compareFullEmail() {
     var $email = $('#form_email');
     var $repeat = $('#form_email_repeat');
-    if ($repeat.val().length > 0 && $('#form_email').val().length > 0) {
+    if ($repeat.val().length > 0 && $email.val().length > 0) {
         if ($email.val() == $repeat.val()) {
-            $email.parent().removeClass('is-invalid');
-            $email.closest("div").find("label").removeClass('text-invalid');
-            $repeat.parent().removeClass('is-invalid');
-            $repeat.closest("div").find("label").removeClass('text-invalid');
+            removeEmailError($email);
+            removeEmailError($repeat);
+            userButtonValidator($email.attr('id'), true);
+            userButtonValidator($repeat.attr('id'), true);
         } else {
-            $email.closest("div").find("label").addClass('text-invalid');
-            $email.parent().addClass('is-invalid');
-            $repeat.parent().addClass('is-invalid');
-            $repeat.closest("div").find("label").addClass('text-invalid');
+            addEmailError($email);
+            addEmailError($repeat);
         }
     }
     userInputErrorAny();
+}
+
+function compareEmailOnFly() {
+    var $email = $('#form_email');
+    var $repeat = $('#form_email_repeat');
+    var max_length = Math.max($repeat.val().length, $email.val().length);
+    var min_length = Math.min($repeat.val().length, $email.val().length);
+    if (max_length != min_length && $email.val().substring(0,min_length) == $repeat.val().substring(0,min_length)) {
+        removeEmailError($email);
+        removeEmailError($repeat);
+        userButtonValidator($email.attr('id'), false);
+        userButtonValidator($repeat.attr('id'), false);
+    } else if(max_length == min_length) {
+        compareFullEmail();
+    } else {
+        addEmailError($email);
+        addEmailError($repeat);
+    }
+}
+
+function addEmailError(email) {
+    email.parent().addClass('is-invalid');
+    email.closest("div").find("label").addClass('text-invalid');
+}
+
+function removeEmailError(email) {
+    email.parent().removeClass('is-invalid');
+    email.closest("div").find("label").removeClass('text-invalid');
 }
 
 function userButtonValidator(field, value) {

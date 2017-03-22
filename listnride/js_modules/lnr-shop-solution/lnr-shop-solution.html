@@ -142,8 +142,9 @@
                                                     id="form_first_name"
                                                     name="first_name"
                                                     class="md-input mdl-textfield__input"
-                                                    pattern="^([\u00C0-\u017Fa-zA-Z '][\u00C0-\u017Fa-zA-Z- ' ]+[\u00C0-\u017Fa-zA-Z ']){1,20}$"
+                                                    pattern="^[\u00C0-\u017FA-Za-z]+$"
                                                     maxlength="30"
+                                                    type="text"
                                                     required
                                             >
                                         </md-input-container>
@@ -155,8 +156,9 @@
                                                     id="form_last_name"
                                                     name="last_name"
                                                     class="md-input mdl-textfield__input"
-                                                    pattern="^([\u00C0-\u017Fa-zA-Z '][\u00C0-\u017Fa-zA-Z- ' ]+[\u00C0-\u017Fa-zA-Z ']){1,30}$"
+                                                    pattern="^[\u00C0-\u017FA-Za-z]+$"
                                                     maxlength="30"
+                                                    type="text"
                                                     required
                                             >
                                         </md-input-container>
@@ -168,8 +170,7 @@
                                                     id="form_email"
                                                     name="email"
                                                     class="md-input mdl-textfield__input"
-                                                    type="email"
-                                                    pattern="\S+@\S+"
+                                                    autocomplete="off"
                                                     required
                                             >
                                         </md-input-container>
@@ -181,8 +182,7 @@
                                                     id="form_email_repeat"
                                                     name="email"
                                                     class="md-input mdl-textfield__input"
-                                                    type="email"
-                                                    pattern="\S+@\S+"
+                                                    autocomplete="off"
                                                     required
                                             >
                                         </md-input-container>
