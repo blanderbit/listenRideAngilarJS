@@ -290,7 +290,7 @@ angular.module('requests',[]).component('requests', {
           var data = {
             "rating": {
               "score": ratingDialog.rating,
-              "message": ratingDialog.message,
+              "message": ratingDialog.message || "",
               "author_id": $localStorage.userId,
             }
           };
