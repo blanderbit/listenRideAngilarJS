@@ -47,7 +47,8 @@
       </div>
       <div layout="row" layout-align="space-between center">
         <span class="md-body-2">{{ 'shared.total' | translate }}</span>
-        <span class="md-body-2">{{ bookingDialog.requests.request.total - bookingDialog.requests.request.voucher_value | currency: '€'  }}</span>
+        <span ng-if="bookingDialog.requests.request.total - bookingDialog.requests.request.voucher_value < 0" class="md-body-2">{{ 0 | currency: '€' }}</span>
+        <span ng-if="bookingDialog.requests.request.total - bookingDialog.requests.request.voucher_value >= 0" class="md-body-2">{{ bookingDialog.requests.request.total - bookingDialog.requests.request.voucher_value | currency: '€'  }}</span>
       </div>
 
       <p class="md-caption lnr-center">By booking I accept the Terms and Conditions</p >

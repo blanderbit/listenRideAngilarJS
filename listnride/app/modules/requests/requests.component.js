@@ -285,12 +285,14 @@ angular.module('requests',[]).component('requests', {
         var ratingDialog = this;
 
         ratingDialog.rating = 5;
+        ratingDialog.request = requests.request,
+        console.log(ratingDialog.request);
 
         ratingDialog.rate = function() {
           var data = {
             "rating": {
               "score": ratingDialog.rating,
-              "message": ratingDialog.message,
+              "message": ratingDialog.message || "",
               "author_id": $localStorage.userId,
             }
           };
