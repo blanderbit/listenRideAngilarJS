@@ -1,3 +1,4 @@
+/* global calendar */
 // render the calendar
 calendar.initCalendarPicker = function() {
     if (calendar.requests !== undefined) {

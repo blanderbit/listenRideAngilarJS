@@ -402,31 +402,31 @@ var helper = {
     categoryName: function (categoryId) {
 
         switch(categoryId) {
-            case 10: return 'dutch-bike'; break;
-            case 11: return 'touring-bike'; break;
-            case 12: return 'fixie'; break;
-            case 13: return 'single-speed'; break;   
-            case 20: return 'road-bike'; break;
-            case 21: return 'triathlon'; break;
-            case 22: return 'indoor'; break; 
-            case 30: return 'trecking'; break;
-            case 31: return 'enduro'; break;
-            case 32: return 'freeride'; break;
-            case 33: return 'cross-country'; break;
-            case 34: return 'downhill'; break;
-            case 35: return 'cyclocross'; break; 
-            case 40: return 'city'; break;
-            case 41: return 'all-terrain'; break;
-            case 42: return 'road'; break;   
-            case 50: return 'pedelec'; break;
-            case 51: return 'e-bike'; break; 
-            case 60: return 'folding-bike'; break;
-            case 61: return 'tandem'; break;
-            case 62: return 'cruiser'; break;
-            case 63: return 'cargo-bike'; break;
-            case 64: return 'recumbent'; break;
-            case 65: return 'mono-bike'; break;  
-            default: return ""; break;
+            case 10: return 'dutch-bike';
+            case 11: return 'touring-bike';
+            case 12: return 'fixie';
+            case 13: return 'single-speed';   
+            case 20: return 'road-bike';
+            case 21: return 'triathlon';
+            case 22: return 'indoor'; 
+            case 30: return 'trecking';
+            case 31: return 'enduro';
+            case 32: return 'freeride';
+            case 33: return 'cross-country';
+            case 34: return 'downhill';
+            case 35: return 'cyclocross'; 
+            case 40: return 'city';
+            case 41: return 'all-terrain';
+            case 42: return 'road';   
+            case 50: return 'pedelec';
+            case 51: return 'e-bike'; 
+            case 60: return 'folding-bike';
+            case 61: return 'tandem';
+            case 62: return 'cruiser';
+            case 63: return 'cargo-bike';
+            case 64: return 'recumbent';
+            case 65: return 'mono-bike';  
+            default: return "";
         }
     },
     /**
