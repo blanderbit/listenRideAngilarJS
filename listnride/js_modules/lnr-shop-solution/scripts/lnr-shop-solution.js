@@ -1,4 +1,5 @@
-// DOM MANIPULATION CODE
+/*global DateService helper */
+/*eslint no-undef: "error"*/
 var $,
     // Define some global variables
     calendar = {},
