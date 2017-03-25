@@ -1,3 +1,9 @@
+/* global 
+        calendar
+        $
+        apiUrl
+        user
+*/
 var api = {
     /*--------------- API ACTIONS ---------------*/
     signup: function (nextTab) {
@@ -22,7 +28,7 @@ var api = {
                     user.id = response.id;
                     nextTab();
                 },
-                error: function (response) {
+                error: function () {
                     $('.info-description').hide();
                     $('.info-error').show();
                 }
@@ -48,7 +54,7 @@ var api = {
             beforeSend: function (request) {
                 request.setRequestHeader("Authorization", user.auth);
             },
-            success: function (response) {
+            success: function () {
                 $('#lnr-next-button-tab-booking-overview').hide();
                 $('.lnr-print-button').show();
                 $('#lnr-back-button-tab-booking-overview').hide();

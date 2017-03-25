@@ -7,7 +7,7 @@
    * @param {Number} bikeId id of the bike requested
    */
   function spawnWizard (userId, bikeId) {
-    window.open('https://s3.eu-central-1.amazonaws.com/listnride-cdn/shop-wizard/lnr-shop-wizard.html?userId=' + userId + '&bikeId=' + bikeId, '_blank', 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=700,height=660,top=10,left=10');
+    window.open('https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-solution.html?userId=' + userId + '&bikeId=' + bikeId, '_blank', 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=700,height=660,top=10,left=10');
   };
 
 (function () {
@@ -16,14 +16,8 @@
   css_lnr.href = "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.css";
   css_lnr.rel = "stylesheet";
 
-  var css_mdl = document.createElement("LINK");
-  css_mdl.href = "https://code.getmdl.io/1.2.1/material.blue_grey-blue.min.css";
-  css_mdl.rel = "stylesheet";
-
   var header = document.getElementsByTagName("head")[0];
-  header.appendChild(css_mdl);
   header.appendChild(css_lnr);
-
   /**
    * renders the bikes
    * based on user_id and user_lang
@@ -96,7 +90,7 @@
   }
   var fetchBikesData = function (callback) {
     if (window.lnrJquery) {
-      callback(lnrJquery);
+      return callback(lnrJquery);
     } else {
       window.setTimeout(function () {
         fetchBikesData(callback);

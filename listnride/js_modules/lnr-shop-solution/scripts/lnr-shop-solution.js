@@ -1,9 +1,5 @@
-// Make sure we have all external setup variables with us
-if (!env || !userId || !bikeId) {
-    throw "Not all Setup Variables are present";
-}
-
-// DOM MANIPULATION CODE
+/*global DateService helper */
+/*eslint no-undef: "error"*/
 var $,
     // Define some global variables
     calendar = {},
@@ -19,13 +15,16 @@ var $,
     date = new DateService(),
     apiUrl = "";
 
-if (env === "production") {
-    apiUrl = "https://api.listnride.com/v2";
-} else {
-    apiUrl = "https://listnride-staging.herokuapp.com/v2";
-}
-
 $(document).ready(function () {
+    var userId = helper.getUrlParameter('userId');
+    var bikeId = helper.getUrlParameter('bikeId');
+    var env = "staging";
+
+    if (env === "production") {
+        apiUrl = "https://api.listnride.com/v2";
+    } else {
+        apiUrl = "https://listnride-staging.herokuapp.com/v2";
+    }
     // perform common tasks on initialization
     helper.preInit();
     // fetch user info

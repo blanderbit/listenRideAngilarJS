@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- served from cdn -->
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css"></link>
     <link href="https://code.getmdl.io/1.2.1/material.blue_grey-blue.min.css" rel="stylesheet"></link>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -15,11 +15,6 @@
     <link rel="stylesheet" href="./styles/lnr-shop-solution.css"></link>
     <link rel="stylesheet" href="./styles/daterangepicker.css"></link>
     <!-- endbuild -->
-    <script>
-        var userId = 1001;
-        var bikeId = 1;
-        var env = "staging";
-    </script>
     <!-- build:js lnr-shop-solution.min.js -->
     <script type="text/javascript" src="./vendors/jquery.daterangepicker.js"></script>
     <script type="text/javascript" src="./vendors/jquery.formatCurrency.js"></script>
@@ -147,8 +142,9 @@
                                                     id="form_first_name"
                                                     name="first_name"
                                                     class="md-input mdl-textfield__input"
-                                                    pattern="^([\u00C0-\u017Fa-zA-Z '][\u00C0-\u017Fa-zA-Z- ' ]+[\u00C0-\u017Fa-zA-Z ']){1,20}$"
+                                                    pattern="^[\u00C0-\u017FA-Za-z]+$"
                                                     maxlength="30"
+                                                    type="text"
                                                     required
                                             >
                                         </md-input-container>
@@ -160,8 +156,9 @@
                                                     id="form_last_name"
                                                     name="last_name"
                                                     class="md-input mdl-textfield__input"
-                                                    pattern="^([\u00C0-\u017Fa-zA-Z '][\u00C0-\u017Fa-zA-Z- ' ]+[\u00C0-\u017Fa-zA-Z ']){1,30}$"
+                                                    pattern="^[\u00C0-\u017FA-Za-z]+$"
                                                     maxlength="30"
+                                                    type="text"
                                                     required
                                             >
                                         </md-input-container>
@@ -173,8 +170,7 @@
                                                     id="form_email"
                                                     name="email"
                                                     class="md-input mdl-textfield__input"
-                                                    type="email"
-                                                    pattern="\S+@\S+"
+                                                    autocomplete="off"
                                                     required
                                             >
                                         </md-input-container>
@@ -186,8 +182,7 @@
                                                     id="form_email_repeat"
                                                     name="email"
                                                     class="md-input mdl-textfield__input"
-                                                    type="email"
-                                                    pattern="\S+@\S+"
+                                                    autocomplete="off"
                                                     required
                                             >
                                         </md-input-container>
@@ -267,8 +262,8 @@
                                                     name="sp-payment-cardholder"
                                                     id="sp-payment-cardholder"
                                                     class="md-input mdl-textfield__input"
-                                                    pattern="^([\u00C0-\u017Fa-zA-Z '][\u00C0-\u017Fa-zA-Z- ' ]+[\u00C0-\u017Fa-zA-Z ']){1,30}$"
-                                                    maxlength="30"
+                                                    pattern="^[\u00C0-\u017FA-Za-z]+$"
+                                                    maxlength="40"
                                                     required
                                             >
                                         </md-input-container>
