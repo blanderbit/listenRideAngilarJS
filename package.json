@@ -37,7 +37,8 @@
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1",
     "run-sequence": "^1.2.2",
-    "prerender-node": "^2.5.0"
+    "prerender-node": "^2.5.0",
+    "postcss": "^5.2.16"
   },
   "keywords": [
     "node",
