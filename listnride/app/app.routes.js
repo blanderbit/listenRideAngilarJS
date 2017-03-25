@@ -119,7 +119,7 @@
 
       $stateProvider.state({
         name: 'list',
-        url: '/list',
+        url: '/list-bike',
         template: '<list></list>'
       });
 
@@ -131,7 +131,7 @@
 
       $stateProvider.state({
         name: 'edit',
-        url: '/edit/{bikeId:int}',
+        url: '/edit-bike/{bikeId:int}',
         template: '<edit></edit>'
       });
 
@@ -175,6 +175,24 @@
         name: 'mcbw',
         url: '/mcbw',
         template: '<mcbw></mcbw>'
+      });
+
+      $stateProvider.state({
+        name: 'cwd',
+        url: '/cyclingworld',
+        templateUrl: 'app/modules/events/cwd/cwd.template.html'
+      });
+
+      $stateProvider.state({
+        name: 'pushnpost',
+        url: '/pushnpost',
+        template: '<pushnpost></pushnpost>'
+      });
+
+      $stateProvider.state({
+        name: 'kuchenundraketen',
+        url: '/kuchenundraketen',
+        template: '<kuchenundraketen></kuchenundraketen>'
       });
 
       $stateProvider.state({

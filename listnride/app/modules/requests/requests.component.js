@@ -125,7 +125,7 @@ angular.module('requests',[]).component('requests', {
       requests.confirmBooking = function() {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
-            if (requests.request.ride.family == 2 || success.data.current_payment_method) {
+            if (requests.request.subtotal == 0 || success.data.current_payment_method) {
               showBookingDialog();
             } else {
               // User did not enter any payment method yet
@@ -285,12 +285,14 @@ angular.module('requests',[]).component('requests', {
         var ratingDialog = this;
 
         ratingDialog.rating = 5;
+        ratingDialog.request = requests.request,
+        console.log(ratingDialog.request);
 
         ratingDialog.rate = function() {
           var data = {
             "rating": {
               "score": ratingDialog.rating,
-              "message": ratingDialog.message,
+              "message": ratingDialog.message || "",
               "author_id": $localStorage.userId,
             }
           };
