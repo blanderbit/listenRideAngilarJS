@@ -1,6 +1,18 @@
+/* global 
+        calendar 
+        translationsConfigObject 
+        translations 
+        api 
+        payment 
+        $
+*/
+/*eslint no-undef: "error"*/
+/*eslint no-native-reassign: "error"*/
+
 /** 
- * These are the methods specific for the adoption of the 
- * angular calendar code to plain javascript calendar code
+ * methods which binds the whole shop solution together
+ * contains main logic of the shop solution
+ * also utilizes : [calendar, translates, date, validation, api] services
  */
 var helper = {
     /**
@@ -25,7 +37,6 @@ var helper = {
     translationsConfigObject: translationsConfigObject,
     /**
      * removes calendar busy loader once calendar is loaded
-     * @param {void}
      * @returns {this} allow chaining
      */
     removeCalendarBusyLoader: function () {
@@ -34,8 +45,9 @@ var helper = {
     },
     /**
      * returns the nested property value
-     * @param {object} obj
-     * @returns {string} path to the property as a string
+     * @param {object} obj of which property to be accessed
+     * @param {string} path to the property as a string
+     * @returns {object} returns property of the object
      */
     accessProperty: function (obj, path) {
         path = path.split('.');
@@ -43,8 +55,7 @@ var helper = {
         return obj;
     },
     /**
-     * returns the currency format for user language  
-     * @param {void}
+     * returns the currency format for user language 
      * @returns {object} config object
      */
     getCurrencyFormat: function () {
@@ -70,7 +81,7 @@ var helper = {
     },
     /**
      * returns the translations for the user browser language
-     * @param {string} lang
+     * @param {void} requires nothings
      * @returns {void}
      */
     getTranslations: function () {
@@ -87,7 +98,6 @@ var helper = {
     },
     /**
      * returns the required paramater from the url
-     * @param {void}
      * @returns {this} chaining
      */
     applyTranslations: function () {
@@ -105,18 +115,15 @@ var helper = {
     },
     /**
      * returns the required paramater from the url
-     * @param {string} sParam
+     * @param {string} sParam is param taken from url
      * @returns {string} param
      */
     getUrlParameter: function (sParam) {
         var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-            sURLVariables = sPageURL.split('&'),
-            sParameterName,
-            i;
+            sURLVariables = sPageURL.split('&');
 
-        for (i = 0; i < sURLVariables.length; i++) {
-            sParameterName = sURLVariables[i].split('=');
-
+        for (var loop = 0; loop < sURLVariables.length; loop+=1) {
+            var sParameterName = sURLVariables[loop].split('=');
             if (sParameterName[0] === sParam) {
                 return sParameterName[1] === undefined ? true : sParameterName[1];
             }
@@ -124,6 +131,10 @@ var helper = {
     },
     /**
      * runs whenever date-picker change event is fired
+     * @param {Date} startDate start date from calendar
+     * @param {Date} endDate end date from calendar
+     * @param {object} calendar it is an object 
+     * @returns {string} param
      */
     onDateChange: function (startDate, endDate, calendar) {
 
@@ -175,7 +186,7 @@ var helper = {
         $('#lnr-date-start-button').attr("title", "");
         $('#lnr-date-end-button').attr("title", "");
 
-        // // calendar end date
+        // calendar end date
         $('[id=lnr-date-end]').each(function (index, element) {
             $(element).html('to ' + endDate.getDate() +
                 '.' + endDate.getMonth() +
@@ -184,7 +195,7 @@ var helper = {
     },
     /**
      * used to go to the next tab
-     * @param {Element} element
+     * @param {Element} element DOM element
      * @returns {void}
      */
     nextTab: function (element) {
@@ -194,19 +205,15 @@ var helper = {
             case 'tab-booking-overview': break;
             case 'tab-duration': api.createRequest(); break;
         }
-
-        // document.getElementById(element.id).click();
     },
-
     // Virtually click on the actual tab, used to change to a certain tab
     changeTab: function (element) {
         document.getElementById(element.id).click();
     },
-
     /**
      * used to open the date (from/to) dropdowns for calendar 
-     * @param {Number} id
-     * @param {string} type
+     * @param {string} id id of the dropdown button for calendar
+     * @param {string} type start or end
      * @returns {void}
      */
     openCalendarDropDown: function (id, type) {
@@ -224,7 +231,6 @@ var helper = {
                 calendar.availabilityMessage(index, calendar.endDate) + '</span></div>'
             );
         }
-
         // at a time only 1 dropdown should be shown
         if (id === startId) {
             $('#' + endId).removeClass("show");
@@ -234,11 +240,10 @@ var helper = {
             element.toggleClass("show");
         }
     },
-
     /**
      * used to open the date (from/to) dropdowns for expiration in payment 
-     * @param {Number} id
-     * @param {string} type
+     * @param {Number} id id of the dropdown button for payment
+     * @param {string} type from or to
      * @returns {void}
      */
     openExpirationDropdown: function (id, type) {
@@ -255,10 +260,10 @@ var helper = {
             }
         } else if ('\'year\'' == type) {
             var currentYear = (new Date()).getFullYear();
-            for (var index = currentYear; index <= (currentYear + 10); index += 1) {
+            for (var loop = currentYear; loop <= (currentYear + 10); loop += 1) {
                 element.append(
-                    '<div class="lnr-date-selector" onclick="helper.onExpirationValueSelect(' + index + ',' + type + ')">' +
-                    parseInt(index) + '</div>'
+                    '<div class="lnr-date-selector" onclick="helper.onExpirationValueSelect(' + loop + ',' + type + ')">' +
+                    parseInt(loop) + '</div>'
                 );
             }
         }
@@ -272,11 +277,11 @@ var helper = {
             element.toggleClass("show");
         }
     },
-
     /**
-     * called when user selects time from time range dropdown (from/to)
-     * @param {Number} index
-     * @param {string} slot
+     * called when user selects time 
+     * from time range dropdown (from/to)
+     * @param {Number} index index of value selected from dropdown
+     * @param {string} slot start or end
      * @returns {void}
      */
     onTimeValueSelect: function (index, slot) {
@@ -292,15 +297,17 @@ var helper = {
     },
     /**
      * show credit card form
-     * @param {Number} id
-     * @param {string} type
      * @returns {void}
      */
     showCreditCardForm: function () {
         // hide the payment credit card form
         $('#sp-payment-form').show();
     },
-
+    /**
+     * directive
+     * renders rental info of bike
+     * @returns {this} chaining
+     */
     renderRentalInfo: function () {
         var rentalInfo = $('rental-info');
 
@@ -332,7 +339,13 @@ var helper = {
         rentalInfo.replaceWith(rentalInfoHTML);
         return this;
     },
-
+    /**
+     * directive
+     * renders navigation buttons
+     * navigation buttons for each step ...
+     * ... has different ids
+     * @returns {this} chaining
+     */
     renderNavButtons: function () {
         var navButtons = $('nav-buttons');
 
@@ -380,38 +393,47 @@ var helper = {
         });
         return this;
     },
-
+    /**
+     * returns category of the bikes
+     * using the bike id
+     * @param {string} categoryId id of the category
+     * @returns {void}
+     */
     categoryName: function (categoryId) {
 
         switch(categoryId) {
-            case 10: return 'dutch-bike'; break;
-            case 11: return 'touring-bike'; break;
-            case 12: return 'fixie'; break;
-            case 13: return 'single-speed'; break;   
-            case 20: return 'road-bike'; break;
-            case 21: return 'triathlon'; break;
-            case 22: return 'indoor'; break; 
-            case 30: return 'trecking'; break;
-            case 31: return 'enduro'; break;
-            case 32: return 'freeride'; break;
-            case 33: return 'cross-country'; break;
-            case 34: return 'downhill'; break;
-            case 35: return 'cyclocross'; break; 
-            case 40: return 'city'; break;
-            case 41: return 'all-terrain'; break;
-            case 42: return 'road'; break;   
-            case 50: return 'pedelec'; break;
-            case 51: return 'e-bike'; break; 
-            case 60: return 'folding-bike'; break;
-            case 61: return 'tandem'; break;
-            case 62: return 'cruiser'; break;
-            case 63: return 'cargo-bike'; break;
-            case 64: return 'recumbent'; break;
-            case 65: return 'mono-bike'; break;  
-            default: return ""; break;
+            case 10: return 'dutch-bike';
+            case 11: return 'touring-bike';
+            case 12: return 'fixie';
+            case 13: return 'single-speed';   
+            case 20: return 'road-bike';
+            case 21: return 'triathlon';
+            case 22: return 'indoor'; 
+            case 30: return 'trecking';
+            case 31: return 'enduro';
+            case 32: return 'freeride';
+            case 33: return 'cross-country';
+            case 34: return 'downhill';
+            case 35: return 'cyclocross'; 
+            case 40: return 'city';
+            case 41: return 'all-terrain';
+            case 42: return 'road';   
+            case 50: return 'pedelec';
+            case 51: return 'e-bike'; 
+            case 60: return 'folding-bike';
+            case 61: return 'tandem';
+            case 62: return 'cruiser';
+            case 63: return 'cargo-bike';
+            case 64: return 'recumbent';
+            case 65: return 'mono-bike';  
+            default: return "";
         }
     },
-
+    /**
+     * after DOM is rendered first time
+     * runs once before calling user and bike api
+     * @returns {void}
+     */
     preInit: function () {
         // close the drop down for the date time selector in calendar
         window.onclick = helper.closeDropDown;
@@ -451,20 +473,29 @@ var helper = {
                 $('.first-name-text').text(input);
             }
         });
+        // disable the navigation next button until
+        // user correctly fills the form 
+        $('#lnr-next-button-tab-duration').prop('disabled', true);
     },
 
     /**
      * initialize calendar, payment, date range
+     * runs once after calling user and bike api
      * @returns {void}
      */
     postInit: function () {
-       calendar.initOverview();
+        calendar.initOverview();
         helper.removeCalendarBusyLoader();
         calendar.initCalendarPicker();
         helper.updateTimeRangeText();
         helper.updatePaymentExpirationText();
     },
-
+    /**
+     * update the value selected by user using
+     * calendar drop-down.
+     * updates start and end time of calendar form
+     * @returns {void}
+     */
     updateTimeRangeText: function () {
         // initialize the button texts for time range selection
         var startButton = $('#lnr-date-start-button');
@@ -472,7 +503,12 @@ var helper = {
         startButton.html(calendar.startTime + ':00 <div class="dropdown-caret" style="float: right"></div>');
         endButton.html(calendar.endTime + ':00 <div class="dropdown-caret" style="float: right"></div>');
     },
-
+    /**
+     * update the value selected by user using
+     * payment drop-down.
+     * updates date and year of payment form
+     * @returns {void}
+     */
     updatePaymentExpirationText: function () {
         // initialize the button texts for expiration 
         var dateButton = $('#lnr-payment-date-button');
@@ -480,7 +516,12 @@ var helper = {
         dateButton.html(payment.date + '<div class="dropdown-caret" style="float: right"></div>');
         yearButton.html(payment.year + '<div class="dropdown-caret" style="float: right"></div>');
     },
-
+    /**
+     * close the drop-downs for calendar
+     * as well as payment
+     * @params {event} event fired by browser
+     * @returns {void}
+     */
     closeDropDown: function (event) {
         if (!event.target.matches('.lnr-dropdown-button')) {
             var dropdowns = document.getElementsByClassName("dropdown-content");

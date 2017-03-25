@@ -99,6 +99,10 @@ label {
   padding: 0;
 }
 
+.mdl-tabs__tab-bar {
+  pointer-events: none;
+}
+
 /*------------- INFO --------------*/
 
 form#user-info {
@@ -410,14 +414,12 @@ container.md-input-invalid .md-input {
 }
 
 .lnr-tab-content {
-  /*padding: 0 12px;*/
   padding: 0;
 }
 
 @media (min-width: 460px) {
   .lnr-tab-content {
     min-height: 460px;
-    /*padding: 12px;*/
     padding: 0;
   }
 }
@@ -565,10 +567,6 @@ lnr-vertical-divider {
 
 .show {
   display: block;
-}
-
-.mdl-tabs__tab-bar {
-  pointer-events: none;
 }
 
 /*----------------- MDL Styles -------------*/
