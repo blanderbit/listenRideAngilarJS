@@ -1,3 +1,4 @@
+/* global $ MaterialTextfield */
 $(function () {
     $('#lnr-next-button-tab-duration').prop('disabled', true);
 });
@@ -198,8 +199,7 @@ function removeFieldError(field) {
     field.closest("div").find("label").removeClass('text-invalid');
 }
 
-function allTrue(obj)
-{
+function allTrue(obj) {
     for(var o in obj)
         if(!obj[o]) return false;
     return true;
