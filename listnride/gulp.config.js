@@ -58,10 +58,12 @@ module.exports = function () {
             },
             style: 'lnr-shop-integration.css',
             css: './js_modules/lnr-shop-integration/lnr-shop-integration.css',
+            vendorCss: './js_modules/lnr-shop-integration/vendor.min.css',
             js: [
                 './js_modules/lnr-shop-integration/lnr-shop-integration.js'
             ],
-            source: 'lnr-shop-integration.js'
+            source: 'lnr-shop-integration.js',
+            prefix: '#listnride'
         },
         lnrShopSolution: {
             root: './js_modules/lnr-shop-solution/',

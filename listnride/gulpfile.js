@@ -25,6 +25,12 @@ var environments = config.environments;
 var argvEnv = ('local' === argv.env || 'staging' === argv.env || 'production' === argv.env) ? argv.env : 'local'
 var env = environments[argvEnv];
 
+var es = require('event-stream');
+var postcss = require('postcss');
+
+var scopeSelector;
+var scope;
+
 gulp.task('lint', lint);
 
 gulp.task('inject-templates-modules', injectTemplatesModules);
@@ -55,6 +61,7 @@ gulp.task('watch', watch);
 gulp.task('revisions', revisions);
 gulp.task('replace-revisions-index', replaceRevisionsIndex);
 
+gulp.task('prefix-lnr-shop-integration', prefixLnrShopIntegration);
 gulp.task('minify-lnr-shop-integration', minifyLnrShopIntegration);
 gulp.task('clean-lnr-shop-integration', cleanLnrShopIntegration);
 gulp.task('deploy-lnr-shop-integration', deployLnrShopIntegration);
@@ -72,6 +79,48 @@ gulp.task('local', local);
 gulp.task('default', ['local']);
 gulp.task('deploy', deploy);
 
+/**
+ * helper method for lnrPrefixCss
+ */
+scope = postcss(function(css) {
+	css.walkRules(function(rule) {
+		rule.selectors = rule.selectors.map(function(selector) {
+			if (selector.trim().toLowerCase() === 'body') {
+				return scopeSelector;
+			} else {
+				return scopeSelector + ' ' + selector;
+			}
+		});
+	});
+});
+/**
+ * prefixes the styles with
+ * given prefixer
+ * could be used to avoid styles global leakage
+ * @param {object} scopeSelectorOption options for prefixes
+ * @returns {callback} callback 
+ */
+function lnrPrefixCss(scopeSelectorOption) {
+	scopeSelector = scopeSelectorOption;
+	return es.map(function(file, callback) {
+		if (file.isNull()) {
+			return cb(null, file);
+		}
+		if (file.isBuffer()) {
+			file.contents = new Buffer(scope.process(file.contents).css);
+		}
+		if (file.isStream()) {
+			var through = es.through();
+			var wait = es.wait(function(err, contents) {
+				through.write(scope.process(contents).css);
+				through.end();
+			});
+			file.contents.pipe(wait);
+			file.contents = through;
+		}
+		return callback(null, file);
+	})
+}
 /**
  * eslint through all js files
  * @returns {gulp} for chaining
@@ -347,6 +396,17 @@ function replaceRevisionsIndex() {
         .pipe(gulp.dest(path.dist.root));
 }
 /**
+ * prefix lnr shop integration and vendors styles
+ * with listnride id to avoid leakage of styles
+ * other option is to used iframe
+ * @returns {gulp} for chaining
+ */
+function prefixLnrShopIntegration() {
+    return gulp.src(path.lnrShopIntegration.dist.css)
+        .pipe(lnrPrefixCss(path.lnrShopIntegration.prefix))
+        .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
+}
+/**
  * minify -- shop integration
  * @returns {gulp} for chaining
  */
@@ -354,7 +414,7 @@ function minifyLnrShopIntegration() {
 
     // minify style for shop integration
     // copy to dist folder of shop integration
-    gulp.src(path.lnrShopIntegration.css)
+    gulp.src([path.lnrShopIntegration.css, path.lnrShopIntegration.vendorCss])
         .pipe(concat(path.lnrShopIntegration.dist.style))
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root))
         .pipe(minifyCss(path.lnrShopIntegration.dist.style))
@@ -384,6 +444,7 @@ function deployLnrShopIntegration(cb) {
     runSequence(
         'clean-lnr-shop-integration',
         'minify-lnr-shop-integration',
+        'prefix-lnr-shop-integration',
         cb
     );
 }
@@ -410,7 +471,7 @@ function concatLnrShopSolution() {
 }
 /**
  * get build tags from template
- * generate concatenated source and style
+ * generate minified source and style
  * save results in dist folder
  * @returns {gulp} chaining
  */
