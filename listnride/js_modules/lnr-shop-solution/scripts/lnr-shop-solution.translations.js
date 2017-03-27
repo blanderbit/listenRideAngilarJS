@@ -176,8 +176,6 @@ var translationsConfigObject = {
             lastName: 'Lastname',
             email: 'Email Address',
             emailRepeat: 'Repeat Email',
-            infoHeader: '',
-            infoText: '',
             invalidForm: 'Please correct input fields',
             errorTitle: 'Oups',
             errorDescription: 'This email address is invalid or already registered in our system.'
