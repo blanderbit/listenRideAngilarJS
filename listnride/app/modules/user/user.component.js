@@ -7,7 +7,7 @@ angular.module('user',[]).component('user', {
     function ProfileController($localStorage, $stateParams, $translate, ngMeta, api) {
       var user = this;
       user.hours = {};
-      user.weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+      user.weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
       user.loaded = false;
       user.closedDay = closedDay;
 
@@ -42,6 +42,12 @@ angular.module('user',[]).component('user', {
 
       function setOpeningHours() {
         if (!user.anyHours) return;
+        cookHours();
+        compactHours();
+        compactDays();
+      }
+
+      function cookHours() {
         _.each(user.weekDays, function (day, key) {
           var weekDay = user.openingHours[key];
           var dayRange = [];
@@ -55,6 +61,44 @@ angular.module('user',[]).component('user', {
           });
           user.hours[day] = dayRange;
         });
+      }
+      
+      function compactHours() {
+        var dayName = '', currentDay = {}, prevDay = {}, shortenHours = {};
+
+        _.each(user.weekDays, function (day) {
+          currentDay = user.hours[day];
+
+          if (_.isEqual(currentDay, prevDay) && currentDay !== user.hours['Mon']) {
+            if (!_.isEmpty(shortenHours[dayName])) delete shortenHours[dayName];
+            dayName = dayName + ', ' + $translate.instant('shared.' + day);
+            shortenHours[dayName] = currentDay;
+          } else {
+            dayName = $translate.instant('shared.' + day);
+            shortenHours[dayName] = currentDay;
+            prevDay = currentDay;
+          }
+        });
+        user.hours = shortenHours;
+      }
+
+      function compactDays() {
+        var ranges = [];
+        var hours = {};
+        _.each(_.keys(user.hours), function (daysRange) {
+          var d = daysRange.split(', ');
+          if (d.length > 1) {
+            var rangeDays = d[0] + ' - ' +  d[d.length-1];
+            ranges.push(rangeDays);
+            hours[rangeDays] = user.hours[daysRange];
+          } else {
+            var rangeDay = d[0];
+            ranges.push(rangeDay);
+            hours[rangeDay] = user.hours[rangeDay];
+          }
+        });
+        user.weekDays = ranges;
+        user.hours = hours;
       }
 
       function closedDay(range) {

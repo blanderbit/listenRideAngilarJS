@@ -14,20 +14,6 @@
   }
 }
 
-/*@media (max-width: 840px) {
-  .mdl-cell--4-col, .mdl-cell--4-col-desktop.mdl-cell--4-col-desktop {
-    width: calc(1% - 1px);
-    margin: 0px;
-  }
-}*/
-
-/*@media (max-width: 839px) and (min-width: 480px) {
-  .mdl-cell--4-col, .mdl-cell--4-col-tablet.mdl-cell--4-col-tablet {
-    width: calc(50% - 1px);
-    margin: 0px;
-  }
-}*/
-
 .mdl-card__media {
   background-color: #fff !important
 }

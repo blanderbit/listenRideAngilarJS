@@ -93,6 +93,7 @@ angular.module('settings',[]).component('settings', {
         settings.error = false;
         settings.openingHoursId = null;
         settings.weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+        settings.completeClosed = false;
         settings.hoursFormValid = hoursFormValid;
         settings.getInputDate = getInputDate;
         settings.onSubmit = onSubmit;
@@ -127,6 +128,7 @@ angular.module('settings',[]).component('settings', {
           _.each(settings.weekDays, function (weekDay, key) {
             setDayTime(weekDay, null, null, 0);
           });
+          completeClosed()
         } else {
           onSubmit()
         }
@@ -149,6 +151,7 @@ angular.module('settings',[]).component('settings', {
         }
 
         hoursFormValid();
+        completeClosed();
       }
 
       function saveDate(weekDay, key, value, index) {
@@ -180,7 +183,8 @@ angular.module('settings',[]).component('settings', {
         if (model) {
           fillInputDate(weekDay)
         } else {
-          clearInputDate(weekDay)
+          clearInputDate(weekDay);
+          completeClosed();
         }
       }
 
@@ -358,6 +362,7 @@ angular.module('settings',[]).component('settings', {
               setDayTime(weekDay, null, null, 0);
             }
           });
+          completeClosed();
         }
       }
 
@@ -541,6 +546,18 @@ angular.module('settings',[]).component('settings', {
           return settings.startTime[day].push({})
         }
         settings.startTime[day] = [{}]
+      }
+
+      function completeClosed() {
+        if (!settings.openingHoursEnabled) return settings.completeClosed = false;
+        _.each(formData, function (weekDay, key) {
+          if (_.isEmpty(weekDay[0])) return settings.completeClosed = true;
+          if (weekDay[0].start_at != undefined || weekDay[0].end_at!= undefined) {
+            return settings.completeClosed = false
+          } else {
+            settings.completeClosed =  true
+          }
+        });
       }
     }
   ]

@@ -42,7 +42,23 @@
     "lister": "Lister",
     "reviews": "Reviews",
     "for": "for",
-    "per-day": "per day"
+    "per-day": "per day",
+    "Monday": "Monday",
+    "Tuesday": "Tuesday",
+    "Wednesday": "Wednesday",
+    "Thursday": "Thursday",
+    "Friday": "Friday",
+    "Saturday": "Saturday",
+    "Sunday": "Sunday",
+    "Mon": "Mon",
+    "Tue": "Tue",
+    "Wed": "Wed",
+    "Thu": "Thu",
+    "Fri": "Fri",
+    "Sat": "Sat",
+    "Sun": "Sun",
+    "join": "Join",
+    "voucher": "voucher"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
@@ -64,9 +80,9 @@
     "profile": "Profile",
     "account": "Account",
     "availability": "Availability",
-    "availability-option": "Availability option",
     "from": "From",
     "to": "To",
+    "mark-as-closed": "Marked all days as closed",
     "payment-method": "Payment Method",
     "payout-method": "Payout Method",
     "payment-method-description": "Your payment method is used to pay for your rentals. It can be a credit card or paypal account.",
@@ -140,6 +156,8 @@
   },
   "requests": {
     "booking-overview": "Booking Overview",
+    "booking": "Booking",
+    "price": "Price",
     "book": "Book",
     "rating": "Rating",
     "listChat": "Request by {{user.first_name}} {{user.last_name}}",
@@ -669,15 +687,40 @@
       "text": "During the Berliner Fahrradschau we want to explore with you our local cross playground, the forest with uncountable awesome trails, the Grunewald.<br><br>On the 5th of March 10am sharp we start rolling from the front gate BFS venue STATION Berlin. The social paced ride lasts for ~3 hours / 50km in the nature and bring you back well charged. We highly recommend a CX/Gravel bike, warm clothes, and a fit body. Helmets are required! <br><br>In case you need a suitable bike or would like to test a new cross bike, check out the great Bikes offered by <a href='http://www.votec.de' target='_blank'>Votec</a> and our community below. If you like to join, you need to <a target='_blank' href='https://ti.to/listnride/crossride'>register</a>. As part of the BFS program we offer you a discounted ticket for the show. After registration for the listnride CX ride, you get a coupon-code for your <a target='_blank' href='https://berlinerfahrradschau.de/en/tickets/'>ticket purchase</a>."
     },
     "mcbw": {
-      "title": "Munich Creative Business Week",
+      "title": "",
       "description": "Explore Munich by bike, go cycling with listnride!",
       "subdescription": "Together with Brompton and Ampler we rent out fantastic bikes for free",
       "subhead-1": "The new bike rental",
       "subhead-2": "Rent a bike for free",
       "text-1": "Conceived as the Airbnb for bicycles, listnride offers an alternative to the classic bike rental: private owners, dealers or manufacturers offer their bicycles for rent on listnride. Tourists, citizens, families, sportsmen and business travelers rent the right bike for their style and needs.",
-      "text-2": "Especially for the MCBW, visitors can rent a bike of the brands <b>Brompton Folding Bike</b> and <b>Ampler E-Bike</b> for free (Voucher Code: <b>LNR2017</b>) for half a day. listnride pursues the vision of offering as many people anywhere in the world uncomplicated access to high-quality, stylish bicycles. If you want to explore Munich, go cycling with listnride!",
+      "text-2": "Especially for the MCBW, visitors can rent a bike of the brands <b>Brompton Folding Bike</b> and <b>Ampler E-Bike</b> for free <b>(Voucher Code: LNR2017)</b> for half a day. listnride pursues the vision of offering as many people anywhere in the world uncomplicated access to high-quality, stylish bicycles. If you want to explore Munich, go cycling with listnride!",
       "location-description": "Choose one of the four locations",
-      "location-text": "The four locations are ① Munix Finest Bicycles in Wörthstraße 11, ② Velofactum in Frohschammerstr. 14, ③ Velocompany in Schleißheimerstr. 106 and ④ ourselves at Münchner Freiheit"
+      "location-text": "The four locations are <b>① Munix Finest Bicycles</b> in Wörthstraße 11, <b>② Velofactum</b> in Schopenhauerstraße 69,<br><b>③ Velocompany</b> in Schleißheimerstraße 106 and <b>④ listnride</b> at Pündterplatz 1"
+    },
+    "cwd": {
+      "home": {
+        "title": "listnride at the Cycling World Düsseldorf",
+        "description": "Düsseldorf will host a new lifestyle trade fair around cycling: the Cycling World. We, listnride will be at the main entrance with selected brands and manufacturers such as Ampler and Cervélo, to present our bike sharing platform with exclusive of test-rides. In addition, we invite you to explore the surrounding countryside on two guided roadbike tours to bring the motivation gained at the fair straight to the road!",
+        "pp-title": "Saturday",
+        "kr-title": "Sunday",
+        "pp-description": "Whether you’re a seasoned racer or a brand new roadie, the Push'n'Post Ride provides the perfect opportunity to join for a social ride in the beautiful surroundings of Düsseldorf during CWD. The ride is powered by Cervelo and Cycle Cafe.",
+        "kr-description": "Together with the Schickemütze we host a group ride which will take you out the city to the beautiful country-side where an abounded rocket station will be one of the highlights. Rental bikes are available by Cervélo and Ridley.",
+        "title2": "We've got perfect bikes to try, by Ampler und Cervélo",
+        "subtitle2": "Whether you want to try the bike a minute or an hour - simply book it for free",
+        "ampler": "The Estonian start-up will provide innovative and urban E-Bikes to test ride. Choose between Hawk, the dynamic single-speed or Bilberry, the comfortable city-bike and get to know e-bikes on a whole new level.",
+        "cervelo": "The Canadian roadbike manufacturer Cervélo will bring the latest models to the Cycling World, which you can test out during one of the social rides over the weekend.",
+        "our-bikes": "See all our Bikes"
+      },
+      "pp": {
+        "title": "Push'n'Post",
+        "text-1": "This event provides the perfect occasion for you to join a social ride during Cycling World Düsseldorf. Cervélo offers some of their latest models to test for free. Whether you’re a seasoned racer or a brand-new roadie, the Push'n'Post ride invites you to join for this social ride in the beautiful surroundings of Düsseldorf. Sign-up and book one of the outstanding Cervélo Bikes for the ride, first come first served. Find the overview of all bikes available just below.<br><br>Further, we raffle two races for the 24h race at <a href=\"https://www.radamring.de/en/\" target=\"_blank\">RadamRing 2017</a> with Cycle-Cafe 8 team. With an exclusive Cervélo racer during the event, the question of the perfect material for the race is also clarified.<br><br>The price includes:<br>- Participation in the 24h Race at the Cycle Cafe  on 29. & 30.07.<br>- Cervélo road bike incl. Bikefitting for the entire duration of the event<br>- Cervélo / Cycle Cafe VIP package",
+        "text-2": "<b>Start:</b> 25.03, 11:00AM Cervelo / Cycle Cafe booth D1/2<br><br><b>Roll out:</b> at 11:30AM from the listnride booth O1<br><br><b>Distance:</b> This ride will be 60 to 70 km<br><br><b>Pace:</b> 24-27 kph avg, moderat<br><br><b>After Ride:</b> Fuel up with a coffee and a snack<br><br><b>Requirements:</b> Road bike, helmets and clipless shoes<br><br>"
+      },
+      "kr": {
+        "title": "Kuchen und Raketen",
+        "text-1": "If you do not own a roadbike, or just do not want to bring your own bike, we have roadbikes available which you can easily rent for free for the ride. During the Cycling World, we are hosting a group ride which will take you out of the city into the countryside. Leaving from our booth (# O-1) on the fair ground, we’ll head towards the former rocket station Hombroich, where we will have a quick stop with snacks and drinks. Refuelled from the break the ride will continue through the relatively unknown but beautiful scenery until we’re back at the fairground. Arrived back at the fairground, you are invited to have a refreshment at the booth of Schickemütze (# xx)<br><br>Test bikes are available from Cervélo and Ridley. Sign-up and book one of the outstanding bikes for the ride for free, first come first served. The overview of all bikes available you can find here (deeplink to bike page)",
+        "text-2": "<b>Meet:</b> 26.03, 10:00AM, Start 10:30 at the listnride booth (O-1)<br><br><b>Distance:</b> ca. 75km<br><br><b>Speed:</b> 25-28 kmh, moderate<br><br><b>Pit-Stop:</b> A Café at the Rocketstation Hombroich provides snacks and drinks<br><br><b>Requirement:</b> Roadbike, Helmet, Clipless shoes"
+      }
     }
   },
   "error-404": {
@@ -805,8 +848,8 @@
     "headline-2": "Background",
     "content-2": "Keep your background as simple as possible. Try to create a contrast to your bicycle. For example you can place your bicycle in front of a concrete wall.",
     "headline-3": "What to shoot",
-    "content-3": "ZShow some perspective of your bicycle, so rather shoot from an angle than a frontal perspective. ",
+    "content-3": "Show some perspective of your bicycle, so rather shoot from an angle than a frontal perspective. Resolution matters: Take photos that are at least 1800 x 1200 pixel. When in doubt, a bigger photo is better.",
     "headline-4": "Setting",
-    "content-4": "Highlight what’s amazing. It is not required that the whole bicycle is shown on all photos, rather shoot some details, like brand name, colouring, lights, lock etc. Let pictures get the message across."
+    "content-4": "Highlight what’s amazing. It is not required that the whole bicycle is shown on all photos, rather shoot some details, like brand name, colouring, lights, lock etc. Let pictures get the message across. Take your photos in landscape format: Vertical photos won’t showcase your bicycle as well."
   }
 }

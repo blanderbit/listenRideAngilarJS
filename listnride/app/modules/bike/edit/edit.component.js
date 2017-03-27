@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('edit',[]).component('edit', {
-  templateUrl: 'app/modules/edit/edit.template.html',
+  templateUrl: 'app/modules/bike/edit/edit.template.html',
   controllerAs: 'edit',
   controller: ['$mdDialog', '$localStorage', '$state', '$stateParams', 'Upload', 'bikeOptions', 'api', 'accessControl', 'loadingDialog',
     function EditController($mdDialog, $localStorage, $state, $stateParams, Upload, bikeOptions, api, accessControl, loadingDialog) {

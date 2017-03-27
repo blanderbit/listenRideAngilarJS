@@ -1,6 +1,8 @@
+/* global translations */
 /**
  * date service
  * returns date for lnr format
+ * @returns {object} duration and subtotal
  */
 function DateService() {
     return {
@@ -32,14 +34,10 @@ function DateService() {
                     displayDuration += weeks + " " + weeksLabel;
 
                 if (days > 0)
-                    displayDuration += (weeks > 0) ?
-                    (", " + days + " " + daysLabel) :
-                    (days + " " + daysLabel);
+                    displayDuration += (weeks > 0) ? (", " + days + " " + daysLabel) : (days + " " + daysLabel);
 
                 if (hours > 0)
-                    displayDuration += (days > 0 || weeks > 0) ?
-                    (", " + hours + " " + hoursLabel) :
-                    (hours + " " + hoursLabel);
+                    displayDuration += (days > 0 || weeks > 0) ? (", " + hours + " " + hoursLabel) : (hours + " " + hoursLabel);
 
 
                 return displayDuration;

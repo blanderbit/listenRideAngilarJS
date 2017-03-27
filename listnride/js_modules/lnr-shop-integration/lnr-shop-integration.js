@@ -16,14 +16,8 @@
   css_lnr.href = "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.css";
   css_lnr.rel = "stylesheet";
 
-  var css_mdl = document.createElement("LINK");
-  css_mdl.href = "https://code.getmdl.io/1.2.1/material.blue_grey-blue.min.css";
-  css_mdl.rel = "stylesheet";
-
   var header = document.getElementsByTagName("head")[0];
-  header.appendChild(css_mdl);
   header.appendChild(css_lnr);
-
   /**
    * renders the bikes
    * based on user_id and user_lang
@@ -34,7 +28,7 @@
    * @param {any} categoryFilter function which returns the category desc based on category id.
    */
   function renderBikes ($, user_id, user_lang, introText, categoryFilter) {
-    $.get("https://listnride-staging.herokuapp.com/v2/users/" + user_id, function (response) {
+    $.get("https://api.listnride.com/v2/users/" + user_id, function (response) {
 
       var selectedLangText, dayText, sizeText;
       if ('en' === user_lang) {
@@ -96,7 +90,7 @@
   }
   var fetchBikesData = function (callback) {
     if (window.lnrJquery) {
-      callback(lnrJquery);
+      return callback(lnrJquery);
     } else {
       window.setTimeout(function () {
         fetchBikesData(callback);
