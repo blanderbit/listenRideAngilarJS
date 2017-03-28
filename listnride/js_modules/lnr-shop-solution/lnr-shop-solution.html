@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="./styles/daterangepicker.css"></link>
     <!-- endbuild -->
     <script>
-        var userId = <%= @user_id %>
-        var bikeId = <%= @bike_id %>
+        var userId = '<%= @user_id %>';
+        var bikeId = '<%= @ride_id %>';
         var env = "production";
     </script>
 
@@ -133,7 +133,10 @@
                                 </div>
                                 <div class="info-error">
                                     <p class="text-invalid md-title-sm" translate="info.errorTitle"></p>
-                                    <p class="text-invalid md-subhead-sm" translate="info.errorDescription"></p>
+                                    <p>
+                                        <span class="text-invalid md-subhead-sm" translate="info.errorDescription"></span>
+                                        <a id="platform-link" href="#" translate="shared.here"></a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -208,7 +211,10 @@
                                 </div>
                                 <div class="info-error">
                                     <p class="text-invalid md-title-sm" translate="info.errorTitle"></p>
-                                    <p class="text-invalid md-subhead-sm" translate="info.errorDescription"></p>
+                                    <p>
+                                        <span class="text-invalid md-subhead-sm" translate="info.errorDescription"></span>
+                                        <a id="platform-link" href="#" translate="shared.here"></a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -441,8 +447,7 @@
         // We generated a client token for you so you can test out this code
         // immediately. In a production-ready integration, you will need to
         // generate a client token on your server (see section below).
-        var authorization =
-            'eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiIzYWNlYjVkOGFjMzczNzkyNmQ5YmUxOTY3ZjE1NGVjOGQ2OTZhYWU2YmJmZDJmMWZjZWI5MTU2ZTYwYTZiOTk1fGNyZWF0ZWRfYXQ9MjAxNy0wMy0xOFQyMjowMTo1MS4wOTIzMTcxMDYrMDAwMFx1MDAyNm1lcmNoYW50X2lkPXQ0cHRuNTRtc3d4bXBuZDVcdTAwMjZwdWJsaWNfa2V5PXY5d203eXR6anhzcDg5a3EiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvdDRwdG41NG1zd3htcG5kNS9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbImN2diJdLCJlbnZpcm9ubWVudCI6InNhbmRib3giLCJjbGllbnRBcGlVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvdDRwdG41NG1zd3htcG5kNS9jbGllbnRfYXBpIiwiYXNzZXRzVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhdXRoVXJsIjoiaHR0cHM6Ly9hdXRoLnZlbm1vLnNhbmRib3guYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhbmFseXRpY3MiOnsidXJsIjoiaHR0cHM6Ly9jbGllbnQtYW5hbHl0aWNzLnNhbmRib3guYnJhaW50cmVlZ2F0ZXdheS5jb20vdDRwdG41NG1zd3htcG5kNSJ9LCJ0aHJlZURTZWN1cmVFbmFibGVkIjp0cnVlLCJwYXlwYWxFbmFibGVkIjp0cnVlLCJwYXlwYWwiOnsiZGlzcGxheU5hbWUiOiJMaXN0IG4gUmlkZSIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwiYnJhaW50cmVlQ2xpZW50SWQiOiJtYXN0ZXJjbGllbnQzIiwiYmlsbGluZ0FncmVlbWVudHNFbmFibGVkIjpmYWxzZSwibWVyY2hhbnRBY2NvdW50SWQiOiJjano5cTV0Zjk0cHdkM2Y5IiwiY3VycmVuY3lJc29Db2RlIjoiVVNEIn0sImNvaW5iYXNlRW5hYmxlZCI6ZmFsc2UsIm1lcmNoYW50SWQiOiJ0NHB0bjU0bXN3eG1wbmQ1IiwidmVubW8iOiJvZmYifQ==';
+        var authorization = "<%= @client_token %>";
 
         var deviceData;
 

@@ -5,7 +5,8 @@ var translationsConfigObject = {
         shared: {
             lnrHeaderText: 'The perfect bike. Simply rent it.',
             hello: 'Hello',
-            print: 'Print Page'
+            print: 'Print Page',
+            here: 'here'
         },
         tabs: {
             tabDuration: '1.&nbsp;Duration',
@@ -29,7 +30,7 @@ var translationsConfigObject = {
             emailRepeat: 'Repeat Email',
             invalidForm: 'It seems like there\'s invalid data in the form.',
             errorTitle: 'Oups',
-            errorDescription: 'This email address is invalid or already registered in our system.'
+            errorDescription: 'The email address seems to be invalid or you\'re already signed up at listnride! In latter case, you can book the bike directly on our platform through this link, '
         },
         payment: {
             title: 'How would you like to pay?',
@@ -80,7 +81,8 @@ var translationsConfigObject = {
         shared: {
             lnrHeaderText: 'Das perfekte Rad. Einfach mieten.',
             hello: 'Hallo',
-            print: 'Seite Drucken'
+            print: 'Seite Drucken',
+            here: 'hier'
         },
         tabs: {
             tabDuration: 'Dauer',
@@ -103,7 +105,7 @@ var translationsConfigObject = {
             emailRepeat: 'Email-Adresse wiederholen',
             invalidForm: 'Das Formular scheint nicht ganz korrekt ausgef&uuml;llt zu sein.',
             errorTitle: 'Ups!',
-            errorDescription: 'Diese Email-Addresse ist ung&uuml;ltig oder bereits in unserem System vorhanden.'
+            errorDescription: 'Die Email-Addresse ist ung&uuml;ltig oder bereits bei listnride angemeldet! In diesem Fall kannst du das Rad direkt über unsere Plattform buchen, '
         },
         payment: {
             title: 'Wie w&uuml;rdest du gerne zahlen?',
@@ -154,7 +156,8 @@ var translationsConfigObject = {
         shared: {
             lnrHeaderText: 'The perfect bike. Simply rent it.',
             hello: 'Hello',
-            print: 'Print Page'
+            print: 'Print Page',
+            here: 'here'
         },
         tabs: {
             tabDuration: 'Duration',
@@ -178,7 +181,7 @@ var translationsConfigObject = {
             emailRepeat: 'Repeat Email',
             invalidForm: 'Please correct input fields',
             errorTitle: 'Oups',
-            errorDescription: 'This email address is invalid or already registered in our system.'
+            errorDescription: 'The email address seems to be invalid or you\'re already signed up at listnride! In latter case, you can book the bike directly on our platform through this link, '
         },
         payment: {
             title: 'How would you like to pay?',
