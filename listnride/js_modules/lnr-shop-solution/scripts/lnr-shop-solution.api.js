@@ -31,7 +31,7 @@ var api = {
                 error: function () {
                     $('.info-description').hide();
                     $('.info-error').show();
-                    $('#platform-link').attr("href", "http://www.listnride.com/bikes/" + calendar.bikeId);
+                    $('.platform-link').attr("href", "http://www.listnride.com/bikes/" + calendar.bikeId);
                 }
             });
         } else {
