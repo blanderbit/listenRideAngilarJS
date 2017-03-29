@@ -58,7 +58,8 @@
     "Sat": "Sat",
     "Sun": "Sun",
     "join": "Join",
-    "voucher": "voucher"
+    "voucher": "voucher",
+    "download": "Download"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
