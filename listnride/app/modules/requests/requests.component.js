@@ -120,8 +120,27 @@ angular.module('requests',[]).component('requests', {
         );
       };
 
+      var updateStatus = function(statusId) {
+        var data = {
+          "request": {
+            "status": statusId
+          }
+        };
+
+        api.put("/requests/" + requests.request.id, data).then(
+          function(success) {
+            reloadRequest(requests.request.id);
+          },
+          function(error) {
+            reloadRequest(requests.request.id);
+            console.log("error updating request");
+          }
+        );
+      };
+
       // This function handles booking and all necessary validations
       requests.confirmBooking = function() {
+        requests.loadingChat = true;
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             if (requests.request.subtotal == 0 || success.data.current_payment_method) {
@@ -142,8 +161,11 @@ angular.module('requests',[]).component('requests', {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             if (success.data.current_payout_method) {
-              showPayoutDialog(success.data);
+              // Lister has already a payout method, so simply accept the request
+              requests.loadingChat = true;
+              updateStatus(2);
             } else {
+              // Lister has no payout method yet, so show the payout method dialog
               showPayoutDialog(success.data);
             }
           },
@@ -152,8 +174,6 @@ angular.module('requests',[]).component('requests', {
           }
         );
       }
-
-      requests.acceptBooking();
 
       var showPaymentDialog = function(event) {
         $mdDialog.show({
@@ -278,22 +298,8 @@ angular.module('requests',[]).component('requests', {
         bookingDialog.hide = hideDialog;
 
         bookingDialog.book = function() {
-          var data = {
-            "request": {
-              "status": 3
-            }
-          };
-          bookingDialog.hide();
-          requests.loadingChat = true;
-          api.put("/requests/" + requests.request.id, data).then(
-            function(success) {
-              reloadRequest(requests.request.id);
-            },
-            function(error) {
-              reloadRequest(requests.request.id);
-              console.log("error updating request");
-            }
-          );
+          updateStatus(3);
+          hideDialog();
         };
       };
 
@@ -313,10 +319,11 @@ angular.module('requests',[]).component('requests', {
         }
       };
 
+      // TODO: this code is appearing twice, here and in the settings Controller (settings.component.rb)
       var PayoutDialogController = function(user) {
         var payoutDialog = this;
+
         payoutDialog.user = user;
-        console.log(user);
 
         payoutDialog.addPayoutMethod = function () {
           var data = {
@@ -340,6 +347,9 @@ angular.module('requests',[]).component('requests', {
                 .hideDelay(4000)
                 .position('top center')
               );
+              requests.loadingChat = true;
+              updateStatus(2);
+              hideDialog();
             },
             function (error) {
               $mdToast.show(
