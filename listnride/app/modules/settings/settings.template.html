@@ -1,424 +1,368 @@
-<!--<md-content class="single-column">-->
-  <!--<div class="content lnr-page-margin" layout="column">-->
-    <!--<div class="lnr-section-title lnr-center" layout="column" layout-align="center center">-->
-      <!--<h1 class="md-headline">{{ 'settings.settings' | translate }}</h1>-->
-    <!--</div>-->
-
-    <!--<md-tabs flex md-dynamic-height md-no-ink md-no-ink-bars md-selected="list.selectedIndex" md-center-tabs="on">-->
-      <!--&lt;!&ndash; profile &ndash;&gt;-->
-      <!--<md-tab class="profile" label="{{ 'settings.profile' | translate }}">-->
-        <!--<br>-->
-        <!--<div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">-->
-          <!--<form name="settings.form">-->
-            <!--<div layout="row" layout-xs="column">-->
-              <!--<div flex-gt-xs layout-margin>-->
-                <!--<span class="md-body-2">{{ 'forms.profile-picture' | translate }}</span>-->
-              <!--</div>-->
-              <!--<div flex-gt-xs="70" layout="column" layout-margin>-->
-
-              <!--<img class="lnr-profile-lrg lnr-clickable" ngf-select ng-model="settings.profilePicture" name="profilePicture" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-fix-orientation="true" ngf-min-height="100" ngf-background="settings.profilePicture || settings.user.profile_picture.profile_picture.url || 'app/assets/ui_images/no-image.jpg'" ngf-as-background="true"></img>-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<br>-->
-            <!--<md-divider></md-divider>-->
-            <!--<br>-->
-
-            <!--<div layout="row" layout-xs="column">-->
-              <!--<div flex-gt-xs layout-margin>-->
-                <!--<span class="md-body-2">{{ 'forms.general' | translate }}</span>-->
-              <!--</div>-->
-              <!--<div flex-gt-xs="70" layout="column" layout-margin>-->
-                <!--<div layout="row" layout-xs="column">-->
-                  <!--<md-input-container flex-gt-xs="45">-->
-                    <!--<label>{{ 'forms.first-name' | translate }}</label>-->
-                    <!--<input disabled name="firstName" ng-model="settings.user.first_name"></input>-->
-                  <!--</md-input-container>-->
-                  <!--<span hide-xs flex></span>-->
-                  <!--<md-input-container flex-gt-xs="45">-->
-                    <!--<label>{{ 'forms.last-name' | translate }}</label>-->
-                    <!--<input disabled name="lastName" ng-model="settings.user.last_name"></input>-->
-                  <!--</md-input-container>-->
-                <!--</div>-->
-                <!--<div layout="row" layout-xs="column">-->
-                  <!--<md-input-container flex>-->
-                    <!--<label>{{ 'forms.email-address' | translate }}</label>-->
-                    <!--<input disabled name="email" ng-model="settings.user.email"></input>-->
-                  <!--</md-input-container>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<br>-->
-            <!--<md-divider></md-divider>-->
-            <!--<br>-->
-
-            <!--<div layout="row" layout-xs="column">-->
-              <!--<div flex-gt-xs layout-margin>-->
-                <!--<span class="md-body-2">{{ 'forms.password' | translate }}</span>-->
-              <!--</div>-->
-              <!--<div flex-gt-xs="70" layout="column" layout-margin>-->
-                <!--<md-input-container flex>-->
-                  <!--<label>{{ 'forms.password' | translate }}</label>-->
-                  <!--<input minlength="6" placeholder="***********" name="password" type="password" ng-model="settings.password"></input>-->
-                <!--</md-input-container>-->
-                <!--<div ng-messages="settings.form.password.$error" role="alert">-->
-                  <!--<div ng-message="minlength">Password shouldn't be shorter than 6 characters.</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<br>-->
-            <!--<md-divider></md-divider>-->
-            <!--<br>-->
-
-            <!--<div layout="row" layout-xs="column">-->
-              <!--<div flex-gt-xs layout-margin>-->
-                <!--<span class="md-body-2">Contact</span>-->
-              <!--</div>-->
-              <!--<div flex-gt-xs="70" layout-margin>-->
-                <!--<div layout="row" layout-xs="column">-->
-                  <!--<md-input-container flex-gt-xs="45">-->
-                    <!--<label>{{ 'shared.phone-number' | translate }}</label>-->
-                    <!--<input name="phone_number" ng-disabled="true" placeholder="+49 175 12345678" ng-model="settings.user.phone_number_privatized"></input>-->
-                  <!--</md-input-container>-->
-                  <!--<span hide-xs flex></span>-->
-                  <!--<md-input-container layout="row" flex="45">-->
-                    <!--<md-button ng-if="!settings.sentConfirmationSms" flex class="md-raised md-primary lnr-btn-inline" ng-click="settings.changePhoneNumber($event)">-->
-                      <!--{{ 'forms.update-contact' | translate }}-->
-                    <!--</md-button>-->
-                  <!--</md-input-container>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<br>-->
-            <!--<md-divider></md-divider>-->
-            <!--<br>-->
-
-            <!--<div layout="row" layout-xs="column">-->
-              <!--<div flex-gt-xs layout-margin>-->
-                <!--<span class="md-body-2">{{ 'forms.address' | translate }}</span>-->
-              <!--</div>-->
-              <!--<div flex-gt-xs="70" layout-margin>-->
-                <!--<div layout="row" layout-xs="column">-->
-
-                  <!--<autocomplete-->
-                    <!--autocomplete-id="settings" layout="column" location="settings.user.street"-->
-                    <!--label-id="{{ 'list.location.street-number' | translate }}"-->
-                    <!--required="true" place-changed="settings.fillAddress(place)"-->
-                    <!--flex-gt-xs="45">-->
-                  <!--</autocomplete>-->
-                  <!--<span hide-xs flex></span>-->
-                  <!--<md-input-container flex-gt-xs="45">-->
-                  <!--<label>{{ 'forms.zip' | translate }}</label>-->
-                    <!--<input required name="zip" ng-model="settings.user.zip"></input>-->
-                  <!--</md-input-container>-->
-                <!--</div>-->
-                <!--<div layout="row" layout-xs="column">-->
-                  <!--<md-input-container flex-gt-xs="45">-->
-                  <!--<label>{{ 'forms.city' | translate }}</label>-->
-                    <!--<input required name="city" ng-model="settings.user.city"></input>-->
-                  <!--</md-input-container>-->
-                  <!--<span hide-xs flex></span>-->
-                  <!--<md-input-container flex-gt-xs="45">-->
-                    <!--<label>{{ 'forms.country' | translate }}</label>-->
-                    <!--<input required name="country" ng-model="settings.user.country"></input>-->
-                  <!--</md-input-container>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<br>-->
-            <!--<md-divider></md-divider>-->
-            <!--<br>-->
-
-            <!--<div layout="row" layout-xs="column">-->
-              <!--<div flex-gt-xs layout-margin>-->
-                <!--<span class="md-body-2">{{ 'forms.description' | translate }}</span>-->
-              <!--</div>-->
-              <!--<div flex-gt-xs="70" layout="column" layout-margin>-->
-                <!--<md-input-container flex>-->
-                  <!--<label>{{ 'forms.description' | translate }}</label>-->
-                  <!--<textarea required md-no-resize name="description" minlength="100" md-maxlength="800" ng-model="settings.user.description" rows="3"></textarea>-->
-                  <!--<div ng-messages="settings.form.description.$error" role="alert">-->
-                    <!--<div ng-message="minlength">{{ 'forms.description_min_100' | translate }}</div>-->
-                  <!--</div>-->
-                <!--</md-input-container>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</form>-->
-        <!--</div>-->
-
-        <!--<div class="navigation" layout="row" layout-align="end center" layout-margin>-->
-          <!--<md-button ng-click="settings.updateUser()" class="md-raised md-primary">{{ 'edit.save-changes' | translate }}</md-button>-->
-        <!--</div>-->
-      <!--</md-tab>-->
-       <!--&lt;!&ndash;end profile &ndash;&gt;-->
-
-      <!--&lt;!&ndash; account &ndash;&gt;-->
-      <!--<md-tab class="account" label="{{ 'settings.account' | translate }}" layout="column">-->
-        <!--<br>-->
-        <!--<div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">-->
-          <!--<form name="settingsForm">-->
-            <!--<div layout="row" layout-xs="column">-->
-              <!--<div flex-gt-xs layout-margin>-->
-                <!--<span class="md-body-2">{{ 'settings.payment-method' | translate }}</span>-->
-              <!--</div>-->
-              <!--<div flex-gt-xs="70" layout="column" layout-margin>-->
-                <!--<p>{{ 'settings.payment-method-description' | translate }}</p>-->
-                <!--<p class="md-body-2" ng-if="settings.user.current_payment_method && settings.user.current_payment_method.type == 1">{{ 'settings.payment-credit-card' | translate }} {{ settings.user.current_payment_method.details }}</p>-->
-                <!--<p class="md-body-2" ng-if="settings.user.current_payment_method && settings.user.current_payment_method.type == 2">{{ 'settings.payment-paypal' | translate }} {{ settings.user.current_payment_method.details }}</p>-->
-                <!--<p ng-if="!settings.user.current_payment_method">{{ 'settings.no-payment-method' | translate }}</p>-->
-                <!--<div layout="row" layout-align="end">-->
-                  <!--<md-button class="md-raised md-primary" ng-click="settings.openPaymentWindow()">{{ 'settings.add-payment-method' | translate }}</md-button>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<br>-->
-            <!--<md-divider></md-divider>-->
-            <!--<br>-->
-
-            <!--<div layout="row" layout-xs="column">-->
-              <!--<div flex-gt-xs layout-margin>-->
-                <!--<span class="md-body-2">{{ 'settings.payout-method' | translate }}</span>-->
-              <!--</div>-->
-              <!--<div flex-gt-xs="70" layout-margin>-->
-                <!--<p>{{ 'settings.payout-method-description' | translate }}</p>-->
-                <!--<p ng-if="!settings.user.current_payout_method">{{ 'settings.no-payout-method' | translate }}</p>-->
-                <!--<p class="md-body-2" ng-if="settings.user.current_payout_method && settings.user.current_payout_method.family == 1">{{ 'settings.payout-bank' | translate }} {{ settings.user.current_payout_method.details }}</p>-->
-                <!--<p class="md-body-2" ng-if="settings.user.current_payout_method && settings.user.current_payout_method.family == 2">{{ 'settings.payout-paypal' | translate }} {{ settings.user.current_payout_method.details }}</p>-->
-                <!--<br>-->
-                <!--<div layout="column">-->
-                  <!--<md-radio-group ng-model="settings.payoutMethod.family" layout="row">-->
-                    <!--<md-radio-button value="1">{{ 'settings.bank-account' | translate }}</md-radio-button>-->
-                    <!--<md-radio-button value="2">{{ 'settings.paypal' | translate }}</md-radio-button>-->
-                  <!--</md-radio-group>-->
-                  <!--<form name="paypalForm">-->
-                    <!--<div ng-if="settings.payoutMethod.family == 2">-->
-                      <!--<p class="md-caption">{{ 'settings.enter-paypal-info' | translate }}</p>-->
-                      <!--<div layout="row" layout-margin>-->
-                        <!--<md-input-container>-->
-                          <!--<label>{{ 'forms.email-address' | translate }}</label>-->
-                          <!--<input required name="email" ng-model="settings.payoutMethod.email"></input>-->
-                        <!--</md-input-container>-->
-                      <!--</div>-->
-                    <!--</div>-->
-                    <!--<div ng-if="settings.payoutMethod.family == 1">-->
-                      <!--<p class="md-caption">{{ 'settings.enter-bank-info' | translate }}</p>-->
-                      <!--<div layout="row" layout-margin>-->
-                        <!--<md-input-container flex="50">-->
-                          <!--<label>{{ 'forms.first-name' | translate }}</label>-->
-                          <!--<input required ng-model="settings.payoutMethod.first_name"></input>-->
-                        <!--</md-input-container>-->
-                        <!--<md-input-container flex="50">-->
-                          <!--<label>{{ 'forms.last-name' | translate }}</label>-->
-                          <!--<input required ng-model="settings.payoutMethod.last_name"></input>-->
-                        <!--</md-input-container>-->
-                      <!--</div>-->
-                      <!--<div layout="row" layout-margin>-->
-                        <!--<md-input-container flex="50">-->
-                          <!--<label>IBAN</label>-->
-                          <!--<input required ng-model="settings.payoutMethod.iban"></input>-->
-                        <!--</md-input-container>-->
-                        <!--<md-input-container flex="50">-->
-                          <!--<label>BIC</label>-->
-                          <!--<input required ng-model="settings.payoutMethod.bic"></input>-->
-                        <!--</md-input-container>-->
-                      <!--</div>-->
-                    <!--</div>-->
-                    <!--<div layout="row" ng-if="settings.payoutMethod.family" layout-align="end">-->
-                      <!--<md-button class="md-raised md-primary" ng-click="settings.addPayoutMethod()">{{ 'settings.save-payout-method' | translate }}</md-button>-->
-                    <!--</div>-->
-                  <!--</form>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<br>-->
-            <!--<md-divider></md-divider>-->
-            <!--<br>-->
-
-            <!--<div layout="row" layout-xs="column">-->
-              <!--<div flex-gt-xs layout-margin>-->
-                <!--<span class="md-body-2">{{ 'settings.vouchers' | translate }}</span>-->
-              <!--</div>-->
-              <!--<div flex-gt-xs="70" layout-margin>-->
-                <!--<p>-->
-                  <!--<span class="md-body-1">{{ 'settings.current-vouchers' | translate }}</span> <span class="md-body-2">{{ settings.user.balance | number : 0 }} €</span>-->
-                <!--</p>-->
-                <!--<md-input-container>-->
-                  <!--<label>{{ 'settings.voucher-code' | translate }}</label>-->
-                  <!--<input ng-model="settings.voucherCode"></input>-->
-                <!--</md-input-container>-->
-                <!--<div layout="row" layout-align="end">-->
-                  <!--<md-button ng-disabled="!settings.voucherCode" class="md-raised md-primary" ng-click="settings.addVoucher()">{{ 'settings.add-voucher' | translate }}</md-button>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-
-          <!--</form>-->
-        <!--</div>-->
-      <!--</md-tab>-->
-       <!--&lt;!&ndash;end account &ndash;&gt;-->
-
-      <!--&lt;!&ndash; hours &ndash;&gt;-->
-      <!--<md-tab class="hours" label="{{ 'settings.availability' | translate }}" layout="column">-->
-        <!--<br>-->
-        <!--<div class="tab-content" layout="column" layout-align="space-around none">-->
-          <!--<div layout="row" layout-align="none center" layout-margin>-->
-            <!--<h3>{{ 'settings.availability' | translate }}</h3>-->
-            <!--<md-switch-->
-                    <!--ng-model="settings.openingHoursEnabled"-->
-                    <!--ng-change="settings.performOpeningHours(settings.openingHoursEnabled)"-->
-            <!--&gt;</md-switch>-->
-            <!--<div ng-style="{'display': settings.completeClosed ? '' : 'none'}">-->
-              <!--({{ 'settings.mark-as-closed' | translate }})-->
-            <!--</div>-->
-          <!--</div>-->
-
-          <!--<form name="hoursForm" ng-style="{'display': settings.openingHoursEnabled ? '' : 'none'}">-->
-
-            <!--<div ng-repeat="day in settings.weekDays">-->
-              <!--<div layout="row" layout-wrap ng-class="{'form-error': settings.errorTime[day]}">-->
-                <!--<div flex="20">-->
-                  <!--<div layout="row" layout-wrap layout-align="space-between center">-->
-                    <!--<div flex="50"ng-class="{'text-error': settings.errorTime[day]}">{{ 'shared.' + day | translate  }}</div>-->
-                    <!--<div flex="50">-->
-                      <!--<md-switch-->
-                              <!--ng-model="settings.enabledTime[day]"-->
-                              <!--ng-change="settings.performInputDay(day, settings.enabledTime[day])"-->
-                      <!--&gt;-->
-                      <!--</md-switch>-->
-                    <!--</div>-->
-                  <!--</div>-->
-                <!--</div>-->
-                <!--<div flex="80">-->
-                  <!--<div layout="row" layout-wrap>-->
-                    <!--<div ng-repeat="range in settings.startTime[day] track by $index">-->
-                      <!--<div flex="33" ng-class="{'disabled': !settings.enabledTime[day]}">-->
-                        <!--<div layout="row" layout-wrap layout-align="start center">-->
-                          <!--<div flex="47">-->
-                            <!--<md-input-container>-->
-                              <!--<label>{{ 'settings.from' | translate }}</label>-->
-                              <!--<md-select-->
-                                      <!--ng-change="settings.getInputDate(day, true, $index)"-->
-                                      <!--ng-model="settings.startTime[day][$index]"-->
-                                      <!--placeholder="{{ 'shared.from' | translate }}">-->
-                                <!--<md-option ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">-->
-                                  <!--{{ ($index + 6) + ":00" }}-->
-                                <!--</md-option>-->
-                              <!--</md-select>-->
-                            <!--</md-input-container>-->
-                          <!--</div>-->
-                          <!--<div flex="47">-->
-                            <!--<md-input-container>-->
-                              <!--<label>{{ 'settings.to' | translate }}</label>-->
-                              <!--<md-select-->
-                                      <!--ng-change="settings.getInputDate(day, false, $index)"-->
-                                      <!--ng-model="settings.endTime[day][$index]"-->
-                                      <!--placeholder="{{ 'shared.from' | translate }}" >-->
-                                <!--<md-option ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">-->
-                                  <!--{{ ($index + 6) + ":00" }}-->
-                                <!--</md-option>-->
-                              <!--</md-select>-->
-                            <!--</md-input-container>-->
-                          <!--</div>-->
-                          <!--<div flex="5">-->
-                            <!--<md-button-->
-                                    <!--ng-style="{'display': $index == 0 ? 'none' : ''}"-->
-                                    <!--class="md-icon-button md-warn"-->
-                                    <!--ng-click="settings.removeInputDate(day, $index)">-->
-                              <!--<md-icon md-font-icon="fa-times"  class="fa"></md-icon>-->
-                            <!--</md-button>-->
-
-                            <!--<md-button-->
-                                    <!--ng-style="{'display': $index == 0 ? '' : 'none'}"-->
-                                    <!--class="md-icon-button md-primary"-->
-                                    <!--ng-click="settings.addChild(day)">-->
-                              <!--<md-icon md-font-icon="fa-plus"  class="fa"></md-icon>-->
-                            <!--</md-button>-->
-                          <!--</div>-->
-                        <!--</div>-->
-                      <!--</div>-->
-                    <!--</div>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="navigation" layout="row" layout-align="end center" layout-margin>-->
-              <!--<md-button-->
-                      <!--ng-click="settings.onSubmit()"-->
-                      <!--class="md-raised md-primary"-->
-                      <!--ng-disabled="settings.error"-->
-              <!--&gt;-->
-                <!--{{ 'edit.save-changes' | translate }}-->
-              <!--</md-button>-->
-            <!--</div>-->
-          <!--</form>-->
-        <!--</div>-->
-      <!--</md-tab>-->
-      <!--&lt;!&ndash; end hours &ndash;&gt;-->
-    <!--</md-tabs>-->
-  <!--</div>-->
-
-  <!--<footer></footer>-->
-<!--</md-content>-->
-
 <md-content class="single-column">
   <div class="content lnr-page-margin" layout="column">
     <div class="lnr-section-title lnr-center" layout="column" layout-align="center center">
-      <h1 class="md-headline">Invoices</h1>
-      <p class="md-subhead ng-binding">You have 15 invoices in total</p>
+      <h1 class="md-headline">{{ 'settings.settings' | translate }}</h1>
     </div>
+
+    <md-tabs flex md-dynamic-height md-no-ink md-no-ink-bars md-selected="list.selectedIndex" md-center-tabs="on">
+      <!-- profile -->
+      <md-tab class="profile" label="{{ 'settings.profile' | translate }}">
+        <br>
+        <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
+          <form name="settings.form">
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'forms.profile-picture' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout="column" layout-margin>
+
+              <img class="lnr-profile-lrg lnr-clickable" ngf-select ng-model="settings.profilePicture" name="profilePicture" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-fix-orientation="true" ngf-min-height="100" ngf-background="settings.profilePicture || settings.user.profile_picture.profile_picture.url || 'app/assets/ui_images/no-image.jpg'" ngf-as-background="true"></img>
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'forms.general' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout="column" layout-margin>
+                <div layout="row" layout-xs="column">
+                  <md-input-container flex-gt-xs="45">
+                    <label>{{ 'forms.first-name' | translate }}</label>
+                    <input disabled name="firstName" ng-model="settings.user.first_name"></input>
+                  </md-input-container>
+                  <span hide-xs flex></span>
+                  <md-input-container flex-gt-xs="45">
+                    <label>{{ 'forms.last-name' | translate }}</label>
+                    <input disabled name="lastName" ng-model="settings.user.last_name"></input>
+                  </md-input-container>
+                </div>
+                <div layout="row" layout-xs="column">
+                  <md-input-container flex>
+                    <label>{{ 'forms.email-address' | translate }}</label>
+                    <input disabled name="email" ng-model="settings.user.email"></input>
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'forms.password' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout="column" layout-margin>
+                <md-input-container flex>
+                  <label>{{ 'forms.password' | translate }}</label>
+                  <input minlength="6" placeholder="***********" name="password" type="password" ng-model="settings.password"></input>
+                </md-input-container>
+                <div ng-messages="settings.form.password.$error" role="alert">
+                  <div ng-message="minlength">Password shouldn't be shorter than 6 characters.</div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">Contact</span>
+              </div>
+              <div flex-gt-xs="70" layout-margin>
+                <div layout="row" layout-xs="column">
+                  <md-input-container flex-gt-xs="45">
+                    <label>{{ 'shared.phone-number' | translate }}</label>
+                    <input name="phone_number" ng-disabled="true" placeholder="+49 175 12345678" ng-model="settings.user.phone_number_privatized"></input>
+                  </md-input-container>
+                  <span hide-xs flex></span>
+                  <md-input-container layout="row" flex="45">
+                    <md-button ng-if="!settings.sentConfirmationSms" flex class="md-raised md-primary lnr-btn-inline" ng-click="settings.changePhoneNumber($event)">
+                      {{ 'forms.update-contact' | translate }}
+                    </md-button>
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'forms.address' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout-margin>
+                <div layout="row" layout-xs="column">
+
+                  <autocomplete
+                    autocomplete-id="settings" layout="column" location="settings.user.street"
+                    label-id="{{ 'list.location.street-number' | translate }}"
+                    required="true" place-changed="settings.fillAddress(place)"
+                    flex-gt-xs="45">
+                  </autocomplete>
+                  <span hide-xs flex></span>
+                  <md-input-container flex-gt-xs="45">
+                  <label>{{ 'forms.zip' | translate }}</label>
+                    <input required name="zip" ng-model="settings.user.zip"></input>
+                  </md-input-container>
+                </div>
+                <div layout="row" layout-xs="column">
+                  <md-input-container flex-gt-xs="45">
+                  <label>{{ 'forms.city' | translate }}</label>
+                    <input required name="city" ng-model="settings.user.city"></input>
+                  </md-input-container>
+                  <span hide-xs flex></span>
+                  <md-input-container flex-gt-xs="45">
+                    <label>{{ 'forms.country' | translate }}</label>
+                    <input required name="country" ng-model="settings.user.country"></input>
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'forms.description' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout="column" layout-margin>
+                <md-input-container flex>
+                  <label>{{ 'forms.description' | translate }}</label>
+                  <textarea required md-no-resize name="description" minlength="100" md-maxlength="800" ng-model="settings.user.description" rows="3"></textarea>
+                  <div ng-messages="settings.form.description.$error" role="alert">
+                    <div ng-message="minlength">{{ 'forms.description_min_100' | translate }}</div>
+                  </div>
+                </md-input-container>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="navigation" layout="row" layout-align="end center" layout-margin>
+          <md-button ng-click="settings.updateUser()" class="md-raised md-primary">{{ 'edit.save-changes' | translate }}</md-button>
+        </div>
+      </md-tab>
+       <!--end profile -->
+
+      <!-- account -->
+      <md-tab class="account" label="{{ 'settings.account' | translate }}" layout="column">
+        <br>
+        <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
+          <form name="settingsForm">
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'settings.payment-method' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout="column" layout-margin>
+                <p>{{ 'settings.payment-method-description' | translate }}</p>
+                <p class="md-body-2" ng-if="settings.user.current_payment_method && settings.user.current_payment_method.type == 1">{{ 'settings.payment-credit-card' | translate }} {{ settings.user.current_payment_method.details }}</p>
+                <p class="md-body-2" ng-if="settings.user.current_payment_method && settings.user.current_payment_method.type == 2">{{ 'settings.payment-paypal' | translate }} {{ settings.user.current_payment_method.details }}</p>
+                <p ng-if="!settings.user.current_payment_method">{{ 'settings.no-payment-method' | translate }}</p>
+                <div layout="row" layout-align="end">
+                  <md-button class="md-raised md-primary" ng-click="settings.openPaymentWindow()">{{ 'settings.add-payment-method' | translate }}</md-button>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'settings.payout-method' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout-margin>
+                <p>{{ 'settings.payout-method-description' | translate }}</p>
+                <p ng-if="!settings.user.current_payout_method">{{ 'settings.no-payout-method' | translate }}</p>
+                <p class="md-body-2" ng-if="settings.user.current_payout_method && settings.user.current_payout_method.family == 1">{{ 'settings.payout-bank' | translate }} {{ settings.user.current_payout_method.details }}</p>
+                <p class="md-body-2" ng-if="settings.user.current_payout_method && settings.user.current_payout_method.family == 2">{{ 'settings.payout-paypal' | translate }} {{ settings.user.current_payout_method.details }}</p>
+                <br>
+                <div layout="column">
+                  <md-radio-group ng-model="settings.payoutMethod.family" layout="row">
+                    <md-radio-button value="1">{{ 'settings.bank-account' | translate }}</md-radio-button>
+                    <md-radio-button value="2">{{ 'settings.paypal' | translate }}</md-radio-button>
+                  </md-radio-group>
+                  <form name="paypalForm">
+                    <div ng-if="settings.payoutMethod.family == 2">
+                      <p class="md-caption">{{ 'settings.enter-paypal-info' | translate }}</p>
+                      <div layout="row" layout-margin>
+                        <md-input-container>
+                          <label>{{ 'forms.email-address' | translate }}</label>
+                          <input required name="email" ng-model="settings.payoutMethod.email"></input>
+                        </md-input-container>
+                      </div>
+                    </div>
+                    <div ng-if="settings.payoutMethod.family == 1">
+                      <p class="md-caption">{{ 'settings.enter-bank-info' | translate }}</p>
+                      <div layout="row" layout-margin>
+                        <md-input-container flex="50">
+                          <label>{{ 'forms.first-name' | translate }}</label>
+                          <input required ng-model="settings.payoutMethod.first_name"></input>
+                        </md-input-container>
+                        <md-input-container flex="50">
+                          <label>{{ 'forms.last-name' | translate }}</label>
+                          <input required ng-model="settings.payoutMethod.last_name"></input>
+                        </md-input-container>
+                      </div>
+                      <div layout="row" layout-margin>
+                        <md-input-container flex="50">
+                          <label>IBAN</label>
+                          <input required ng-model="settings.payoutMethod.iban"></input>
+                        </md-input-container>
+                        <md-input-container flex="50">
+                          <label>BIC</label>
+                          <input required ng-model="settings.payoutMethod.bic"></input>
+                        </md-input-container>
+                      </div>
+                    </div>
+                    <div layout="row" ng-if="settings.payoutMethod.family" layout-align="end">
+                      <md-button class="md-raised md-primary" ng-click="settings.addPayoutMethod()">{{ 'settings.save-payout-method' | translate }}</md-button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'settings.vouchers' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout-margin>
+                <p>
+                  <span class="md-body-1">{{ 'settings.current-vouchers' | translate }}</span> <span class="md-body-2">{{ settings.user.balance | number : 0 }} €</span>
+                </p>
+                <md-input-container>
+                  <label>{{ 'settings.voucher-code' | translate }}</label>
+                  <input ng-model="settings.voucherCode"></input>
+                </md-input-container>
+                <div layout="row" layout-align="end">
+                  <md-button ng-disabled="!settings.voucherCode" class="md-raised md-primary" ng-click="settings.addVoucher()">{{ 'settings.add-voucher' | translate }}</md-button>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </md-tab>
+       <!--end account -->
+
+      <!-- hours -->
+      <md-tab class="hours" label="{{ 'settings.availability' | translate }}" layout="column">
+        <br>
+        <div class="tab-content" layout="column" layout-align="space-around none">
+          <div layout="row" layout-align="none center" layout-margin>
+            <h3>{{ 'settings.availability' | translate }}</h3>
+            <md-switch
+                    ng-model="settings.openingHoursEnabled"
+                    ng-change="settings.performOpeningHours(settings.openingHoursEnabled)"
+            ></md-switch>
+            <div ng-style="{'display': settings.completeClosed ? '' : 'none'}">
+              ({{ 'settings.mark-as-closed' | translate }})
+            </div>
+          </div>
+
+          <form name="hoursForm" ng-style="{'display': settings.openingHoursEnabled ? '' : 'none'}">
+
+            <div ng-repeat="day in settings.weekDays">
+              <div layout="row" layout-wrap ng-class="{'form-error': settings.errorTime[day]}">
+                <div flex="20">
+                  <div layout="row" layout-wrap layout-align="space-between center">
+                    <div flex="50"ng-class="{'text-error': settings.errorTime[day]}">{{ 'shared.' + day | translate  }}</div>
+                    <div flex="50">
+                      <md-switch
+                              ng-model="settings.enabledTime[day]"
+                              ng-change="settings.performInputDay(day, settings.enabledTime[day])"
+                      >
+                      </md-switch>
+                    </div>
+                  </div>
+                </div>
+                <div flex="80">
+                  <div layout="row" layout-wrap>
+                    <div ng-repeat="range in settings.startTime[day] track by $index">
+                      <div flex="33" ng-class="{'disabled': !settings.enabledTime[day]}">
+                        <div layout="row" layout-wrap layout-align="start center">
+                          <div flex="47">
+                            <md-input-container>
+                              <label>{{ 'settings.from' | translate }}</label>
+                              <md-select
+                                      ng-change="settings.getInputDate(day, true, $index)"
+                                      ng-model="settings.startTime[day][$index]"
+                                      placeholder="{{ 'shared.from' | translate }}">
+                                <md-option ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
+                                  {{ ($index + 6) + ":00" }}
+                                </md-option>
+                              </md-select>
+                            </md-input-container>
+                          </div>
+                          <div flex="47">
+                            <md-input-container>
+                              <label>{{ 'settings.to' | translate }}</label>
+                              <md-select
+                                      ng-change="settings.getInputDate(day, false, $index)"
+                                      ng-model="settings.endTime[day][$index]"
+                                      placeholder="{{ 'shared.from' | translate }}" >
+                                <md-option ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
+                                  {{ ($index + 6) + ":00" }}
+                                </md-option>
+                              </md-select>
+                            </md-input-container>
+                          </div>
+                          <div flex="5">
+                            <md-button
+                                    ng-style="{'display': $index == 0 ? 'none' : ''}"
+                                    class="md-icon-button md-warn"
+                                    ng-click="settings.removeInputDate(day, $index)">
+                              <md-icon md-font-icon="fa-times"  class="fa"></md-icon>
+                            </md-button>
+
+                            <md-button
+                                    ng-style="{'display': $index == 0 ? '' : 'none'}"
+                                    class="md-icon-button md-primary"
+                                    ng-click="settings.addChild(day)">
+                              <md-icon md-font-icon="fa-plus"  class="fa"></md-icon>
+                            </md-button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="navigation" layout="row" layout-align="end center" layout-margin>
+              <md-button
+                      ng-click="settings.onSubmit()"
+                      class="md-raised md-primary"
+                      ng-disabled="settings.error"
+              >
+                {{ 'edit.save-changes' | translate }}
+              </md-button>
+            </div>
+          </form>
+        </div>
+      </md-tab>
+      <!-- end hours -->
+    </md-tabs>
   </div>
 
-  <md-toolbar class="md-table-toolbar md-default">
-    <div class="md-toolbar-tools">
-      <span>Nutrition</span>
-    </div>
-  </md-toolbar>
-
-  <!-- exact table from live demo -->
-  <md-table-container>
-    <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
-      <thead md-head md-order="query.order" md-on-reorder="getDesserts">
-      <tr md-row>
-        <th md-column md-order-by="nameToLower"><span>Dessert (100g serving)</span></th>
-        <th md-column md-numeric md-order-by="calories.value"><span>Calories</span></th>
-        <th md-column md-numeric>Fat (g)</th>
-        <th md-column md-numeric>Carbs (g)</th>
-        <th md-column md-numeric>Protein (g)</th>
-        <th md-column md-numeric>Sodium (mg)</th>
-        <th md-column md-numeric>Calcium (%)</th>
-        <th md-column md-numeric>Iron (%)</th>
-      </tr>
-      </thead>
-      <tbody md-body>
-      <tr md-row md-select="dessert" md-select-id="name" md-auto-select ng-repeat="dessert in desserts.data">
-        <td md-cell>{{dessert.name}}</td>
-        <td md-cell>{{dessert.calories.value}}</td>
-        <td md-cell>{{dessert.fat.value | number: 1}}</td>
-        <td md-cell>{{dessert.carbs.value}}</td>
-        <td md-cell>{{dessert.protein.value | number: 1}}</td>
-        <td md-cell>{{dessert.sodium.value}}</td>
-        <td md-cell>{{dessert.calcium.value}}{{dessert.calcium.unit}}</td>
-        <td md-cell>{{dessert.iron.value}}{{dessert.iron.unit}}</td>
-      </tr>
-      </tbody>
-    </table>
-  </md-table-container>
-
-  <md-table-pagination md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{desserts.count}}" md-on-paginate="getDesserts" md-page-select></md-table-pagination>
-
-  <div layout="row">
-    <div flex="70" style="background-color: indianred">
-      [flex="70"]
-    </div>
-    <div flex style="background-color: lightgreen">
-      [flex]
-    </div>
-  </div>
+  <footer></footer>
 </md-content>

@@ -1457,3 +1457,17 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
 .white-space-pre-line {
   white-space: pre-line;
 }
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  INVOICES
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-table-head {
+  background-color: #E5E5E5;
+  font-weight: bold;
+}
+
+.lnr-table-head .flex {
+  text-align: center;
+}
