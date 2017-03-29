@@ -1,5 +1,5 @@
 /*! Listnride | bike rendering */
-var env = "staging";
+var env = "production";
 
 /**
    * spawns the shop wizard in a new popup
