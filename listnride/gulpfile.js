@@ -104,7 +104,7 @@ function lnrPrefixCss(scopeSelectorOption) {
 	scopeSelector = scopeSelectorOption;
 	return es.map(function(file, callback) {
 		if (file.isNull()) {
-			return cb(null, file);
+			return callback(null, file);
 		}
 		if (file.isBuffer()) {
 			file.contents = new Buffer(scope.process(file.contents).css);
@@ -119,7 +119,7 @@ function lnrPrefixCss(scopeSelectorOption) {
 			file.contents = through;
 		}
 		return callback(null, file);
-	})
+	});
 }
 /**
  * eslint through all js files
