@@ -3,8 +3,8 @@
 angular.module('requests',[]).component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
-  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$window', 'api', '$timeout', '$location', '$anchorScroll', '$state', '$stateParams', '$translate', 'date', 'accessControl', 'ENV',
-    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $window, api, $timeout, $location, $anchorScroll, $state, $stateParams, $translate, date, accessControl, ENV) {
+  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$mdToast', '$window', 'api', '$timeout', '$location', '$anchorScroll', '$state', '$stateParams', '$translate', 'date', 'accessControl', 'ENV',
+    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $mdToast, $window, api, $timeout, $location, $anchorScroll, $state, $stateParams, $translate, date, accessControl, ENV) {
       if (accessControl.requireLogin()) {
         return;
       }
@@ -135,7 +135,25 @@ angular.module('requests',[]).component('requests', {
             console.log("Error retrieving User Details");
           }
         );
+      };
+
+      // This function handles request accept and all validations
+      requests.acceptBooking = function() {
+        api.get('/users/' + $localStorage.userId).then(
+          function (success) {
+            if (success.data.current_payout_method) {
+              showPayoutDialog(success.data);
+            } else {
+              showPayoutDialog(success.data);
+            }
+          },
+          function (error) {
+
+          }
+        );
       }
+
+      requests.acceptBooking();
 
       var showPaymentDialog = function(event) {
         $mdDialog.show({
@@ -151,21 +169,20 @@ angular.module('requests',[]).component('requests', {
         });
       }
 
-      var showPayoutDialog = function(event) {
+      var showPayoutDialog = function(user, event) {
         $mdDialog.show({
+          locals: {user: user},
           controller: PayoutDialogController,
-          controllerAs: 'payoutDialog',
+          controllerAs: 'settings',
           templateUrl: 'app/modules/requests/dialogs/payoutDialog.template.html',
           parent: angular.element(document.body),
           targetEvent: event,
           openFrom: angular.element(document.body),
           closeTo: angular.element(document.body),
-          clickOutsideToClose: true,
+          clickOutsideToClose: false,
           fullscreen: true // Only for -xs, -sm breakpoints.
         });
       }
-
-      showPayoutDialog();
 
       var showChatDialog = function(event) {
         $mdDialog.show({
@@ -296,42 +313,44 @@ angular.module('requests',[]).component('requests', {
         }
       };
 
-      var PayoutDialogController = function() {
+      var PayoutDialogController = function(user) {
         var payoutDialog = this;
+        payoutDialog.user = user;
+        console.log(user);
 
         payoutDialog.addPayoutMethod = function () {
-        var data = {
-          "payment_method": payoutDialog.payoutMethod
-        };
-
-        data.payment_method.user_id = $localStorage.userId;
-
-        if (payoutDialog.payoutMethod.family == 1) {
-          data.payment_method.email = "";
-        } else {
-          data.payment_method.iban = "";
-          data.payment_method.bic = "";
-        }
-
-        api.post('/users/' + $localStorage.userId + '/payment_methods', data).then(
-          function (success) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.add-payout-success'))
-              .hideDelay(4000)
-              .position('top center')
-            );
-          },
-          function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.error'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+          var data = {
+            "payment_method": payoutDialog.payoutMethod
+          };
+  
+          data.payment_method.user_id = $localStorage.userId;
+  
+          if (payoutDialog.payoutMethod.family == 1) {
+            data.payment_method.email = "";
+          } else {
+            data.payment_method.iban = "";
+            data.payment_method.bic = "";
           }
-        );
-      };
+  
+          api.post('/users/' + $localStorage.userId + '/payment_methods', data).then(
+            function (success) {
+              $mdToast.show(
+                $mdToast.simple()
+                .textContent($translate.instant('toasts.add-payout-success'))
+                .hideDelay(4000)
+                .position('top center')
+              );
+            },
+            function (error) {
+              $mdToast.show(
+                $mdToast.simple()
+                .textContent($translate.instant('toasts.error'))
+                .hideDelay(4000)
+                .position('top center')
+              );
+            }
+          );
+        };
       };
 
       var RatingDialogController = function() {
