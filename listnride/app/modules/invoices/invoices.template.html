@@ -5,62 +5,39 @@
       <p class="md-subhead ng-binding">You have {{invoices.transactions.length}} invoices in total</p>
     </div>
 
-    <div layout="row">
-      <div flex="70">
+    <md-tabs flex md-dynamic-height md-no-ink md-no-ink-bars md-selected="list.selectedIndex" md-center-tabs="on">
+      <!-- profile -->
+      <md-tab class="profile" label="{{ 'settings.profile' | translate }}">
+      </md-tab>
+    </md-tabs>
 
-        <!--TABLE START HERE-->
+    <!--TABLE START HERE-->
 
-        <md-list>
-          <md-list-item class="md-2-line lnr-table-head">
-            <div class="md-list-item-text" layout="row" layout-align="start center">
-              <span flex="20">ID</span>
-              <span flex="25">Bike</span>
-              <span flex="25">Rental Period</span>
-              <span flex="10">Payout</span>
-              <!--<span flex="15">Status</span>-->
-              <span flex>Invoice</span>
-            </div>
-          </md-list-item>
+    <md-list>
+      <md-list-item class="md-2-line lnr-table-head">
+        <div class="md-list-item-text" layout="row" layout-align="start center">
+          <span flex="20">ID</span>
+          <span flex="25">Bike</span>
+          <span flex="25">Rental Period</span>
+          <span flex="10">Payout</span>
+          <!--<span flex="15">Status</span>-->
+          <span flex>Invoice</span>
+        </div>
+      </md-list-item>
 
-          <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)" ng-repeat="item in invoices.transactions">
-            <span flex="25">{{item.id}}</span>
-            <span flex="25">{{item.bike}}</span>
-            <span flex="35">{{item.rental_period}}</span>
-            <span flex="15">{{item.payout}} €</span>
-            <span flex>
-              <md-button md-no-ink class="md-primary" ng-click="doSecondaryAction($event)">{{ 'shared.download' | translate }}</md-button>
-            </span>
-          </md-list-item>
+      <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)" ng-repeat="item in invoices.transactions">
+        <span flex="25">{{item.id}}</span>
+        <span flex="25">{{item.bike}}</span>
+        <span flex="35">{{item.rental_period}}</span>
+        <span flex="15">{{item.payout}} €</span>
+        <span flex>
+          <md-button md-no-ink class="md-primary" ng-click="doSecondaryAction($event)">{{ 'shared.download' | translate }}</md-button>
+        </span>
+      </md-list-item>
+    </md-list>
 
+    <!--TABLE END HERE-->
 
-          <!--<md-list-item class="md-2-line" ng-repeat="item in invoices.transactions">-->
-            <!--<div class="md-list-item-text secondary-button-padding" layout="row" layout-align="center center">-->
-              <!--<span flex="15">{{item.id}}</span>-->
-              <!--<span flex="20">{{item.bike}}</span>-->
-              <!--<span flex="30">{{item.rental_period}}</span>-->
-              <!--<span flex="15">{{item.payout}} €</span>-->
-              <!--&lt;!&ndash;<span flex="15">{{item.status}}</span>&ndash;&gt;-->
-              <!--<span flex>-->
-                <!--<md-button class="md-raised md-primary" ng-disabled="false" ng-click="">-->
-                  <!--{{ 'shared.download' | translate }}-->
-                <!--</md-button>-->
-              <!--</span>-->
-            <!--</div>-->
-          <!--</md-list-item>-->
-        </md-list>
-
-        <!--TABLE END HERE-->
-
-      </div>
-      <div flex>
-
-        <!--TIMELINE START HERE-->
-
-        Super beautiful goes here
-
-        <!--TIMELINE END HERE-->
-
-      </div>
     </div>
   </div>
 </md-content>
