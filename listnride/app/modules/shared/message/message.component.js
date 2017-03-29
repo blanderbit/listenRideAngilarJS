@@ -10,6 +10,7 @@ angular.module('message',[]).component('message', {
     receiver: '<',
     timestamp: '<',
     confirmBooking: '&',
+    acceptBooking: '&',
     showRatingDialog: '&',
     request: '<'
   },
@@ -38,7 +39,7 @@ angular.module('message',[]).component('message', {
         // return message.status != null && message.status != 7 && (!message.request.rideChat && message.status != 6);
       }
 
-      // Unfortunately doublecoded in message.component and requests.component#bookingDialog
+      // TODO: Unfortunately doublecoded in message.component and requests.component
       message.updateStatus = function(statusId) {
         var data = {
           "request_id": message.request.id,
