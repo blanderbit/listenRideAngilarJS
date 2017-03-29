@@ -398,6 +398,7 @@ angular.module('settings',[]).component('settings', {
         }
       };
 
+      // TODO: this code is appearing twice, here and in the paoutDialog Controller (requests.component.rb)
       settings.addPayoutMethod = function () {
         var data = {
           "payment_method": settings.payoutMethod
