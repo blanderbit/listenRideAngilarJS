@@ -154,74 +154,77 @@ var translationsConfigObject = {
     },
     nl: {
         shared: {
-            lnrHeaderText: 'The perfect bike. Simply rent it.',
-            hello: 'Hello',
-            print: 'Print Page',
-            here: 'here'
+            lnrHeaderText: 'De perfekte fiets. Gewoon huren.',
+            hello: 'Hallo',
+            print: 'Pagina printen'
         },
         tabs: {
-            tabDuration: 'Duration',
-            tabBasicInfo: 'User Info',
-            tabPaymentDetail: 'Payment Details',
-            tabBookingOverview: 'Booking Overview'
+            tabDuration: '1.&nbsp;Periode',
+            tabBasicInfo: '2.&nbsp;Info',
+            tabPaymentDetail: '3.&nbsp;Betaling',
+            tabBookingOverview: '4.&nbsp;Boeking'
         },
         durationPanel: {
-            info: 'Please mark rent period:',
-            from: 'From',
-            to: 'To',
-            selectDaysFirst: 'Please select the days first'
+            info: 'Selecteer de huurperiode:',
+            from: 'Van',
+            to: 'Tot',
+            selectDaysFirst: 'Selecteer eerst de startdatum en einddatum'
         },
         info: {
-            title: 'Alright',
+            title: 'OK',
             titleEmpty: 'Alright,',
-            description: 'Please provide your name and email address. Make sure your email address is valid as we\'ll send your booking confirmation to it.<br><br>No worries, your data is safe.',
-            firstName: 'Firstname',
-            lastName: 'Lastname',
-            email: 'Email Address',
-            emailRepeat: 'Repeat Email',
-            invalidForm: 'Please correct input fields',
-            errorTitle: 'Oups',
-            errorDescription: 'The email address seems to be invalid or you\'re already signed up at listnride! In latter case, you can book the bike directly on our platform through this link, '
+            description: 'Vul hieronder je naam en emailadres in. Zorg ervoor dat je een correct emailadres invult, hier ontvang je namelijk de boekingsbevestiging.<br><br>Je gegevens worden veilig opgeslagen.',
+            firstName: 'voornaam',
+            lastName: 'achternaam',
+            email: 'Emailadres',
+            emailRepeat: 'Herhaal Emailadres',
+            invalidForm: 'Er zijn helaas foutieve gegevens ingevuld',
+            errorTitle: 'Oops',
+            errorDescription: 'Dit emailadres in incorrect of al geregistreerd in ons bestand.'
         },
         payment: {
-            title: 'How would you like to pay?',
-            description: 'Choose between Paypal or Credit Card and simply enter the details. All information will get transferred securely.',
-            cardholderName: 'Cardholder Name',
-            cardNumber: 'Card Number',
+            title: 'Hoe wil je de betaling doen?',
+            description: 'Kies tussen Paypal or Kredietkaart en vul de benodigde gegevens in. Alle informatie wordt via een veilige verbinding verstuurd.',
+            cardholderName: 'Naam Kaarthouder',
+            cardNumber: 'Kaartnummer',
             payPal: 'PayPal',
-            creditCard: 'Credit Card',
-            expiry: 'Expires',
-            CVV: 'CVV',
-            save: 'Save Data',
-            titleError: 'Oh no!',
-            descriptionError: 'Your payment data seems to be invalid, because:'
+            creditCard: 'Kredietkaart',
+            expiry: 'Vervaldatum',
+            CVV: 'Veiligheidscode (CVV)',
+            save: 'Gegevens Opslaan',
+            titleError: 'Helaas!',
+            descriptionError: 'De ingevoerde betaalgegevens zijn incorrect, omdat:'
         },
         rental: {
-            title: 'Hey there!',
-            description: 'Booking the bike is simple and secure! First, select from when to when you want to book it using the calendar.',
-            duration: 'Duration',
-            fee: 'Fee (incl. tax)',
-            total: 'Total',
-            subtotal: 'Subtotal',
-            days: 'Days',
-            hours: 'Hours'
+            title: 'Hallo daar!',
+            description: 'Het boeken van de fiets is simple and zeker! Eeerst, selecteer je de startdatum en eindatum als ook de tijden, middels de calendar.',
+            duration: 'Periode',
+            fee: 'Reserveringskosten (incl. btw)',
+            total: 'Totaal',
+            subtotal: 'Subtotaal',
+            day: 'dag',
+            days: 'dagen',
+            hour: 'Uur',
+            hours: 'Uren',
+            week: 'Week',
+            weeks: 'Weken'
         },
         overview: {
-            title: 'Just one more click!',
-            description: 'Simply check again all your data and click the \'Book\' Button below to book the bike. You\'ll get a booking confirmation via email, including all contact data like address and phone number.',
-            titleSuccess: 'Congratulations!',
-            descriptionSuccess: 'You\'ve successfully booked the bike. We\'ve send you a booking confirmation containing all informations to your email address.',
-            errorTitle: 'Ushh..',
-            errorDescription: 'Something went wrong with your booking',
-            bike: "Bike",
-            name: "Name",
+            title: 'Nog &eacute;&eacute;n Klik!',
+            description: 'Controleer nog eens alle gegevens en bevestig je boeking. Na het boeken ontvang je een boekingsbevestiging per email met all relevante gegevens, zoals de contactgegevens van de verhuuder.',
+            titleSuccess: 'Gefeliciteerd!',
+            descriptionSuccess: 'De boeking is rond!. We hebben je een bevestiging met alle relevante information per email verstuurd.',
+            errorTitle: 'Oepsie..',
+            errorDescription: 'Er is iets mis gegaan met je boeking',
+            bike: "Fiets",
+            name: "Naam",
             lister: "Lister",
-            location: "Location"
+            location: "Plaats"
         },
         navigation: {
-            back: 'Back',
-            next: 'Next',
-            book: 'Book'
+            back: 'Terug',
+            next: 'Volgende',
+            book: 'Boeken'
         }
     }
 }
