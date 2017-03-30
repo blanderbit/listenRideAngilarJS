@@ -10,46 +10,20 @@ angular.module('invoices',[]).component('invoices', {
             }
             var invoices = this;
 
-            invoices.aza = [{
-                id: "123",
-                bike: "Example Pro bike",
-                rental_period: "12.12.2017 - 17.12.2017",
-                payout: "13.99 E",
-                status: "Upcoming"
-            }, {
-                id: "124",
-                bike: "Example Pro bike",
-                rental_period: "12.12.2017 - 17.12.2017",
-                payout: "13.99 E",
-                status: "Upcoming"
-            }, {
-                id: "125",
-                bike: "Example Pro bike",
-                rental_period: "12.12.2017 - 17.12.2017",
-                payout: "13.99 E",
-                status: "Upcoming"
-            }, {
-                id: "126",
-                bike: "Example Pro bike",
-                rental_period: "12.12.2017 - 17.12.2017",
-                payout: "13.99 E",
-                status: "Upcoming"
-            }, {
-                id: "127",
-                bike: "Example Pro bike",
-                rental_period: "12.12.2017 - 17.12.2017",
-                payout: "13.99 E",
-                status: "Upcoming"
-            }];
+            // api.get('/users/' + $localStorage.userId + "/reports").then(
+            //     function(response) {
+            //         invoices.asLister = response.data.as_lister;
+            //         invoices.asRider = response.data.as_rider;
+            //     },
+            //     function(error) {
+            //         console.log("Error retrieving User", error);
+            //     }
+            // );
 
-            api.get('/users/' + $localStorage.userId + "/report").then(
-                function(response) {
-                    invoices.transactions = response.data.transactions;
-                },
-                function(error) {
-                    console.log("Error retrieving User", error);
-                }
-            );
+            invoices.items = [];
+            for (var i = 0; i < 100001; i++) {
+                invoices.items.push(i);
+            }
         }
     ]
 });

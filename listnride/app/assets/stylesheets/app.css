@@ -1466,8 +1466,26 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
 .lnr-table-head {
   background-color: #E5E5E5;
   font-weight: bold;
+  margin-top: 48px;
 }
 
 .lnr-table-head .flex {
   text-align: center;
+}
+
+md-content {
+  margin: 16px;
+}
+
+#vertical-container {
+  height: 444px;
+  width: 600px;
+  border: solid 1px grey;
+}
+
+.repeated-item {
+  border-bottom: 1px solid #ddd;
+  padding-left: 16px;
+  padding-bottom : 20px;
+  padding-top:20px;
 }

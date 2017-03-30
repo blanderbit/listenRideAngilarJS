@@ -1,43 +1,96 @@
 <md-content class="single-column">
   <div class="content lnr-page-margin" layout="column">
     <div class="lnr-section-title lnr-center" layout="column" layout-align="center center">
-      <h1 class="md-headline">Invoices</h1>
-      <p class="md-subhead ng-binding">You have {{invoices.transactions.length}} invoices in total</p>
+      <h1 class="md-headline">Billing</h1>
     </div>
 
     <md-tabs flex md-dynamic-height md-no-ink md-no-ink-bars md-selected="list.selectedIndex" md-center-tabs="on">
-      <!-- profile -->
-      <md-tab class="profile" label="{{ 'settings.profile' | translate }}">
+      <md-tab class="profile" label="As Rider">
+
+        <!--TABLE START HERE-->
+
+        <!--<md-virtual-repeat-container id="vertical-container">-->
+          <!--<div class="repeated-item"-->
+               <!--md-virtual-repeat="i in invoices.items"-->
+               <!--md-item-size="220">-->
+            <!--<div>-->
+              <!--<div>{{i}} - John Smith (jts) - 01/01/2015</div><br/>-->
+            <!--</div>-->
+            <!--<div class="description">-->
+              <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non magna vel sem suscipit volutpat quis dictum orci.-->
+              <!--Fusce sed pretium risus. Ut aliquet enim id sagittis finibus.-->
+              <!--Nullam felis sapien, vestibulum vitae tempor id, malesuada commodo nisl.-->
+            <!--</div>-->
+            <!--<br/>-->
+            <!--<div>Priority: changed to 1</div>-->
+            <!--<div>Status: changed to WIP</div>-->
+            <!--<div>Due date: changed to 01/01/2015</div>-->
+          <!--</div>-->
+        <!--</md-virtual-repeat-container>-->
+
+        <md-list>
+          <md-list-item class="md-2-line lnr-table-head">
+            <div class="md-list-item-text" layout="row" layout-align="start center">
+              <span flex="10">Request ID</span>
+              <span flex="20">Bike</span>
+              <span flex="15">Start date</span>
+              <span flex="15">End date</span>
+              <span flex="15">Location</span>
+              <span flex="10">Payout</span>
+              <span flex>Invoice</span>
+            </div>
+          </md-list-item>
+
+          <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)" ng-repeat="item in invoices.asRider">
+            <span flex="10">{{item.id}}</span>
+            <span flex="20">{{item.bike}}</span>
+            <span flex="15">{{invoices.parseDate(item.start_date)}}</span>
+            <span flex="15">{{invoices.parseDate(item.end_date)}}</span>
+            <span flex="15">{{item.city}}</span>
+            <span flex="10">{{item.payout}} €</span>
+            <span flex>
+              <md-button md-no-ink class="md-primary" ng-click="doSecondaryAction($event)">{{ 'shared.download' | translate }}</md-button>
+            </span>
+          </md-list-item>
+        </md-list>
+
+        <!--TABLE END HERE-->
+
+      </md-tab>
+      <md-tab class="profile" label="As Lister">
+
+        <!--TABLE START HERE-->
+
+        <md-list>
+          <md-list-item class="md-2-line lnr-table-head">
+            <div class="md-list-item-text" layout="row" layout-align="start center">
+              <span flex="10">Request ID</span>
+              <span flex="20">Bike</span>
+              <span flex="15">Start date</span>
+              <span flex="15">End date</span>
+              <span flex="15">Location</span>
+              <span flex="15">You Paid</span>
+              <span flex>Invoice</span>
+            </div>
+          </md-list-item>
+
+          <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)" ng-repeat="item in invoices.asLister">
+            <span flex="10">{{item.id}}</span>
+            <span flex="20">{{item.bike}}</span>
+            <span flex="15">{{invoices.parseDate(item.start_date)}}</span>
+            <span flex="15">{{invoices.parseDate(item.end_date)}}</span>
+            <span flex="15">{{item.city}}</span>
+            <span flex="10">{{item.payout}} €</span>
+            <span flex>
+              <md-button md-no-ink class="md-primary" ng-click="doSecondaryAction($event)">{{ 'shared.download' | translate }}</md-button>
+            </span>
+          </md-list-item>
+        </md-list>
+
+        <!--TABLE END HERE-->
+
       </md-tab>
     </md-tabs>
-
-    <!--TABLE START HERE-->
-
-    <md-list>
-      <md-list-item class="md-2-line lnr-table-head">
-        <div class="md-list-item-text" layout="row" layout-align="start center">
-          <span flex="20">ID</span>
-          <span flex="25">Bike</span>
-          <span flex="25">Rental Period</span>
-          <span flex="10">Payout</span>
-          <!--<span flex="15">Status</span>-->
-          <span flex>Invoice</span>
-        </div>
-      </md-list-item>
-
-      <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)" ng-repeat="item in invoices.transactions">
-        <span flex="25">{{item.id}}</span>
-        <span flex="25">{{item.bike}}</span>
-        <span flex="35">{{item.rental_period}}</span>
-        <span flex="15">{{item.payout}} €</span>
-        <span flex>
-          <md-button md-no-ink class="md-primary" ng-click="doSecondaryAction($event)">{{ 'shared.download' | translate }}</md-button>
-        </span>
-      </md-list-item>
-    </md-list>
-
-    <!--TABLE END HERE-->
-
     </div>
   </div>
 </md-content>
