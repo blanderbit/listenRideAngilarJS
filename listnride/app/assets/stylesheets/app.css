@@ -1460,7 +1460,7 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
 
 
 /*-----------------------------------------------------------------------------------*/
-/*  INVOICES
+/*  Invoices
 /*-----------------------------------------------------------------------------------*/
 
 .lnr-table-head {
@@ -1473,19 +1473,16 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
   text-align: center;
 }
 
-md-content {
-  margin: 16px;
+.lnr-no-rental {
+  text-align: center;
+  margin-top: 48px;
 }
 
 #vertical-container {
-  height: 444px;
-  width: 600px;
-  border: solid 1px grey;
+  height: 350px;
 }
 
-.repeated-item {
+.repeated-items h1{
   border-bottom: 1px solid #ddd;
-  padding-left: 16px;
-  padding-bottom : 20px;
-  padding-top:20px;
+  padding: 15px;
 }
