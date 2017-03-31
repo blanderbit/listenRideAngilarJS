@@ -9,25 +9,6 @@
 
         <!--TABLE START HERE-->
 
-        <!--<md-virtual-repeat-container id="vertical-container">-->
-          <!--<div class="repeated-item"-->
-               <!--md-virtual-repeat="i in invoices.items"-->
-               <!--md-item-size="220">-->
-            <!--<div>-->
-              <!--<div>{{i}} - John Smith (jts) - 01/01/2015</div><br/>-->
-            <!--</div>-->
-            <!--<div class="description">-->
-              <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non magna vel sem suscipit volutpat quis dictum orci.-->
-              <!--Fusce sed pretium risus. Ut aliquet enim id sagittis finibus.-->
-              <!--Nullam felis sapien, vestibulum vitae tempor id, malesuada commodo nisl.-->
-            <!--</div>-->
-            <!--<br/>-->
-            <!--<div>Priority: changed to 1</div>-->
-            <!--<div>Status: changed to WIP</div>-->
-            <!--<div>Due date: changed to 01/01/2015</div>-->
-          <!--</div>-->
-        <!--</md-virtual-repeat-container>-->
-
         <md-list>
           <md-list-item class="md-2-line lnr-table-head">
             <div class="md-list-item-text" layout="row" layout-align="start center">
@@ -36,23 +17,41 @@
               <span flex="15">Start date</span>
               <span flex="15">End date</span>
               <span flex="15">Location</span>
-              <span flex="10">Payout</span>
+              <span flex="10">You paid</span>
               <span flex>Invoice</span>
             </div>
           </md-list-item>
-
-          <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)" ng-repeat="item in invoices.asRider">
-            <span flex="10">{{item.id}}</span>
-            <span flex="20">{{item.bike}}</span>
-            <span flex="15">{{invoices.parseDate(item.start_date)}}</span>
-            <span flex="15">{{invoices.parseDate(item.end_date)}}</span>
-            <span flex="15">{{item.city}}</span>
-            <span flex="10">{{item.payout}} €</span>
-            <span flex>
-              <md-button md-no-ink class="md-primary" ng-click="doSecondaryAction($event)">{{ 'shared.download' | translate }}</md-button>
-            </span>
-          </md-list-item>
+          <md-virtual-repeat-container id="vertical-container">
+            <div ng-style="{'display': invoices.ridesAsRiderAny ? 'none' : ''}" class="lnr-no-rental">
+              <h2>You had no rides yet</h2>
+            </div>
+            <div class="repeated-items"
+                 md-virtual-repeat="year in invoices.years"
+                 md-item-size="220">
+              <h1>{{year}}</h1>
+              <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)" ng-repeat="item in invoices.asRider[year]">
+                <span flex="10">{{item.id}}</span>
+                <span flex="20">{{item.bike}}</span>
+                <span flex="15">{{invoices.parseDate(item.start_date)}}</span>
+                <span flex="15">{{invoices.parseDate(item.end_date)}}</span>
+                <span flex="15">{{item.city}}</span>
+                <span flex="10">{{item.payout}} €</span>
+                <span flex>
+                  <md-button md-no-ink class="md-primary" ng-click="doSecondaryAction($event)">{{ 'shared.download' | translate }}</md-button>
+                </span>
+              </md-list-item>
+            </div>
+          </md-virtual-repeat-container>
         </md-list>
+
+        <md-button
+                md-no-ink
+                class="md-primary"
+                ng-click="invoices.getCsv('rider')"
+                ng-style="{'display': invoices.ridesAsRiderAny ? '' : 'none'}"
+        >
+          {{ 'shared.download' | translate }} CSV
+        </md-button>
 
         <!--TABLE END HERE-->
 
@@ -69,23 +68,41 @@
               <span flex="15">Start date</span>
               <span flex="15">End date</span>
               <span flex="15">Location</span>
-              <span flex="15">You Paid</span>
+              <span flex="10">Payout</span>
               <span flex>Invoice</span>
             </div>
           </md-list-item>
-
-          <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)" ng-repeat="item in invoices.asLister">
-            <span flex="10">{{item.id}}</span>
-            <span flex="20">{{item.bike}}</span>
-            <span flex="15">{{invoices.parseDate(item.start_date)}}</span>
-            <span flex="15">{{invoices.parseDate(item.end_date)}}</span>
-            <span flex="15">{{item.city}}</span>
-            <span flex="10">{{item.payout}} €</span>
-            <span flex>
-              <md-button md-no-ink class="md-primary" ng-click="doSecondaryAction($event)">{{ 'shared.download' | translate }}</md-button>
-            </span>
-          </md-list-item>
+          <md-virtual-repeat-container id="vertical-container">
+            <div ng-style="{'display': invoices.ridesAsRiderAny ? 'none' : ''}" class="lnr-no-rental">
+              <h2>You had no rentals yet</h2>
+            </div>
+            <div class="repeated-items"
+                 md-virtual-repeat="year in invoices.years"
+                 md-item-size="220">
+              <h1>{{year}}</h1>
+              <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)" ng-repeat="item in invoices.asLister[year]">
+                <span flex="10">{{item.id}}</span>
+                <span flex="20">{{item.bike}}</span>
+                <span flex="15">{{invoices.parseDate(item.start_date)}}</span>
+                <span flex="15">{{invoices.parseDate(item.end_date)}}</span>
+                <span flex="15">{{item.city}}</span>
+                <span flex="10">{{item.payout}} €</span>
+                <span flex>
+                  <md-button md-no-ink class="md-primary" ng-click="doSecondaryAction($event)">{{ 'shared.download' | translate }}</md-button>
+                </span>
+              </md-list-item>
+            </div>
+          </md-virtual-repeat-container>
         </md-list>
+
+        <md-button
+                md-no-ink
+                class="md-primary"
+                ng-click="invoices.getCsv('lister')"
+                ng-style="{'display': invoices.ridesAsRiderAny ? '' : 'none'}"
+        >
+          {{ 'shared.download' | translate }} CSV
+        </md-button>
 
         <!--TABLE END HERE-->
 
