@@ -58,7 +58,8 @@
     "Sat": "Sat",
     "Sun": "Sun",
     "join": "Join",
-    "voucher": "Voucher"
+    "voucher": "Voucher",
+    "download": "Download"
   },
 
   "toasts": {
