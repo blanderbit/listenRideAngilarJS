@@ -28,6 +28,7 @@ var translationsConfigObject = {
             lastName: 'Lastname',
             email: 'Email Address',
             emailRepeat: 'Repeat Email',
+            password: 'Password',
             invalidForm: 'It seems like there\'s invalid data in the form.',
             errorTitle: 'Oups',
             errorDescription: 'The email address seems to be invalid or you\'re already signed up at listnride! In latter case, you can book the bike directly on our platform through this link, '
@@ -103,6 +104,7 @@ var translationsConfigObject = {
             lastName: 'Nachname',
             email: 'Email-Adresse',
             emailRepeat: 'Email-Adresse wiederholen',
+            password: 'Passwort',
             invalidForm: 'Das Formular scheint nicht ganz korrekt ausgef&uuml;llt zu sein.',
             errorTitle: 'Ups!',
             errorDescription: 'Die Email-Addresse ist ung&uuml;ltig oder bereits bei listnride angemeldet! In diesem Fall kannst du das Rad direkt über unsere Plattform buchen, '
@@ -178,6 +180,7 @@ var translationsConfigObject = {
             lastName: 'achternaam',
             email: 'Emailadres',
             emailRepeat: 'Herhaal Emailadres',
+            password: 'wachtwoord',
             invalidForm: 'Er zijn helaas foutieve gegevens ingevuld',
             errorTitle: 'Oops',
             errorDescription: 'Dit emailadres in incorrect of al geregistreerd in ons bestand.'

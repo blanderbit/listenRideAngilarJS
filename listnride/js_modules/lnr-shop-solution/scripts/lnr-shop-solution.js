@@ -16,9 +16,11 @@ var $,
     apiUrl = "";
 
 $(document).ready(function () {
-    // var userId = helper.getUrlParameter('userId');
-    // var bikeId = helper.getUrlParameter('bikeId');
-    // var env = "staging";
+    // --- THIS SETUP CODE IS SOLELY FOR TESTING ---
+    var userId = helper.getUrlParameter('userId');
+    var bikeId = helper.getUrlParameter('bikeId');
+    var env = "staging";
+    // ---------------------------------------------
 
     if (env === "production") {
         apiUrl = "https://api.listnride.com/v2";

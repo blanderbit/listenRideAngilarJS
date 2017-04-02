@@ -54,6 +54,13 @@ var helper = {
         for (var loop = 0, length = path.length; loop < length; loop += 1) obj = obj[path[loop]];
         return obj;
     },
+    storeLogin: function (email, token) {
+        localStorage.setItem("lnr-email", email);
+        localStorage.setItem("lnr-token", token);
+    },
+    hasStoredLogin: function () {
+        localStorage.getItem("lnr-email") && localStorage.getItem("lnr-token") ? return true : return false;
+    },
     /**
      * returns the currency format for user language 
      * @returns {object} config object
