@@ -58,7 +58,8 @@
     "Sat": "Sat",
     "Sun": "Sun",
     "join": "Join",
-    "voucher": "Voucher"
+    "voucher": "Voucher",
+    "download": "Download"
   },
 
   "toasts": {
@@ -87,8 +88,9 @@
     "mark-as-closed": "Marked all days as closed",
     "payment-method": "Betaalmethoden",
     "payout-method": "uitbetaalmethoden",
+    "add-payout-method": "Uitbetaalmethode toevoegen",
     "payment-method-description": "Je betaalmethode wordt gebruikt om de kosten van de fietshuur af te boeken.",
-    "payout-method-description": "Op de aangegeven uitbetaalmethode wordt de huuropbrengst aan je overgemaakt.",
+    "payout-method-description": "Op de aangegeven uitbetaalmethode wordt de huuropbrengst aan je overgemaakt. Therefore you have to add it latest when accepting a request as a lister.",
     "add-payment-method": "Betaalmiddel toevoegen",
     "vouchers": "Vouchers",
     "payment-credit-card": "Je aktuele betaalmiddel is creditkaart die eindigt op",

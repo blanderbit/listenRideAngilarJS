@@ -61,7 +61,7 @@
           special: {
             value: "false",
             squash: true
-          },
+          }
         }
       });
 
@@ -114,8 +114,8 @@
             //   }
             // );
           }]
-        },
-      })
+        }
+      });
 
       $stateProvider.state({
         name: 'list',
@@ -127,6 +127,12 @@
         name: 'listings',
         url: '/listings',
         template: '<listings></listings>'
+      });
+
+      $stateProvider.state({
+        name: 'invoices',
+        url: '/invoices',
+        template: '<invoices></invoices>'
       });
 
       $stateProvider.state({

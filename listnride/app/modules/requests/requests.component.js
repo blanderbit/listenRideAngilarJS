@@ -3,9 +3,8 @@
 angular.module('requests',[]).component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
-  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$window', 'api', '$timeout', '$location', '$anchorScroll', '$state', '$stateParams', '$translate', 'date', 'accessControl', 'ENV',
-    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $window, api, $timeout, $location, $anchorScroll, $state, $stateParams, $translate, date, accessControl, ENV, login) {
-      console.log('TOUCHED!');
+  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$mdToast', '$window', 'api', '$timeout', '$location', '$anchorScroll', '$state', '$stateParams', '$translate', 'date', 'accessControl', 'ENV',
+    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $mdToast, $window, api, $timeout, $location, $anchorScroll, $state, $stateParams, $translate, date, accessControl, ENV, login) {
       if (accessControl.requireLogin()) {
         return;
       }
@@ -121,8 +120,27 @@ angular.module('requests',[]).component('requests', {
         );
       };
 
+      var updateStatus = function(statusId) {
+        var data = {
+          "request": {
+            "status": statusId
+          }
+        };
+
+        api.put("/requests/" + requests.request.id, data).then(
+          function(success) {
+            reloadRequest(requests.request.id);
+          },
+          function(error) {
+            reloadRequest(requests.request.id);
+            console.log("error updating request");
+          }
+        );
+      };
+
       // This function handles booking and all necessary validations
       requests.confirmBooking = function() {
+        requests.loadingChat = true;
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             if (requests.request.subtotal == 0 || success.data.current_payment_method) {
@@ -134,6 +152,25 @@ angular.module('requests',[]).component('requests', {
           },
           function (error) {
             console.log("Error retrieving User Details");
+          }
+        );
+      };
+
+      // This function handles request accept and all validations
+      requests.acceptBooking = function() {
+        api.get('/users/' + $localStorage.userId).then(
+          function (success) {
+            if (success.data.current_payout_method) {
+              // Lister has already a payout method, so simply accept the request
+              requests.loadingChat = true;
+              updateStatus(2);
+            } else {
+              // Lister has no payout method yet, so show the payout method dialog
+              showPayoutDialog(success.data);
+            }
+          },
+          function (error) {
+
           }
         );
       }
@@ -149,6 +186,21 @@ angular.module('requests',[]).component('requests', {
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,
           fullscreen: false // Only for -xs, -sm breakpoints.
+        });
+      }
+
+      var showPayoutDialog = function(user, event) {
+        $mdDialog.show({
+          locals: {user: user},
+          controller: PayoutDialogController,
+          controllerAs: 'settings',
+          templateUrl: 'app/modules/requests/dialogs/payoutDialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: false,
+          fullscreen: true // Only for -xs, -sm breakpoints.
         });
       }
 
@@ -246,22 +298,8 @@ angular.module('requests',[]).component('requests', {
         bookingDialog.hide = hideDialog;
 
         bookingDialog.book = function() {
-          var data = {
-            "request": {
-              "status": 3
-            }
-          };
-          bookingDialog.hide();
-          requests.loadingChat = true;
-          api.put("/requests/" + requests.request.id, data).then(
-            function(success) {
-              reloadRequest(requests.request.id);
-            },
-            function(error) {
-              reloadRequest(requests.request.id);
-              console.log("error updating request");
-            }
-          );
+          updateStatus(3);
+          hideDialog();
         };
       };
 
@@ -279,6 +317,50 @@ angular.module('requests',[]).component('requests', {
           // For small screens, show Chat Dialog again
           hideDialog();
         }
+      };
+
+      // TODO: this code is appearing twice, here and in the settings Controller (settings.component.rb)
+      var PayoutDialogController = function(user) {
+        var payoutDialog = this;
+
+        payoutDialog.user = user;
+
+        payoutDialog.addPayoutMethod = function () {
+          var data = {
+            "payment_method": payoutDialog.payoutMethod
+          };
+  
+          data.payment_method.user_id = $localStorage.userId;
+  
+          if (payoutDialog.payoutMethod.family == 1) {
+            data.payment_method.email = "";
+          } else {
+            data.payment_method.iban = "";
+            data.payment_method.bic = "";
+          }
+  
+          api.post('/users/' + $localStorage.userId + '/payment_methods', data).then(
+            function (success) {
+              $mdToast.show(
+                $mdToast.simple()
+                .textContent($translate.instant('toasts.add-payout-success'))
+                .hideDelay(4000)
+                .position('top center')
+              );
+              requests.loadingChat = true;
+              updateStatus(2);
+              hideDialog();
+            },
+            function (error) {
+              $mdToast.show(
+                $mdToast.simple()
+                .textContent($translate.instant('toasts.error'))
+                .hideDelay(4000)
+                .position('top center')
+              );
+            }
+          );
+        };
       };
 
       var RatingDialogController = function() {

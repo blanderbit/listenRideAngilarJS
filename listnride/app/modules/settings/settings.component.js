@@ -398,6 +398,7 @@ angular.module('settings',[]).component('settings', {
         }
       };
 
+      // TODO: this code is appearing twice, here and in the paoutDialog Controller (requests.component.rb)
       settings.addPayoutMethod = function () {
         var data = {
           "payment_method": settings.payoutMethod
@@ -420,6 +421,10 @@ angular.module('settings',[]).component('settings', {
               .hideDelay(4000)
               .position('top center')
             );
+            // TODO: Properly configure API to output payout method details and use those instead of making another call to the user
+            userApi.getUserData().then(function (response) {
+              settings.user.current_payout_method = response.data.current_payout_method;
+            });
           },
           function (error) {
             $mdToast.show(

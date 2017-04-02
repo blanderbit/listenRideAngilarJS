@@ -481,6 +481,7 @@ footer .lnr-link {
 @media (max-width:599px) {
  .md-dialog-content {
     width: 100%;
+    margin: 0 !important;
   } 
 }
 
@@ -1456,4 +1457,33 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
 
 .white-space-pre-line {
   white-space: pre-line;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Invoices
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-table-head {
+  background-color: #E5E5E5;
+  font-weight: bold;
+  margin-top: 48px;
+}
+
+.lnr-table-head .flex {
+  text-align: center;
+}
+
+.lnr-no-rental {
+  text-align: center;
+  margin-top: 48px;
+}
+
+#vertical-container {
+  height: 350px;
+}
+
+.repeated-items h1{
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
 }
