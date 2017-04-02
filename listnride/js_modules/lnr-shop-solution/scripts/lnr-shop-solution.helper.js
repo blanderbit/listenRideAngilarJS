@@ -54,6 +54,54 @@ var helper = {
         for (var loop = 0, length = path.length; loop < length; loop += 1) obj = obj[path[loop]];
         return obj;
     },
+    /* ---------- USER LOGIN ----------- */
+    triggerLoginForm: function () {
+        $('#user-info').hide()
+        $('#user-login').show();
+        $('.info-description').hide();
+        $('.info-login').show();
+        $('#lnr-next-button-tab-basic-info').prop('disabled', false);
+        loginFlow = true;
+    },
+    triggerSignupForm: function() {
+        $('#user-info').show();
+        $('#user-login').hide();
+        $('.info-error').hide();
+        $('.info-login').hide();
+        $('.info-description').show();
+        $('#lnr-next-button-tab-basic-info').prop('disabled', true);
+        loginFlow = false;
+    },
+    /* --------------------------------- */
+
+    /* --------- TOKEN LOGIN ----------- */
+    // stores login as a timestamp
+    storeLogin: function (email) {
+        localStorage.setItem("lnrLastLogin", Date.now());
+        localStorage.setItem("lnrEmail", email);
+    },
+    // // checks if login exists and is not expired
+    // hasStoredLogin: function () {
+    //     // if login doesn't exist or exists and is older than 2 days: remove it and return false
+    //     if (((Date.now() - localStorage.getItem("lnrTimestamp")) / (1000*60*60)) > 48 ) {
+    //         helper.clearStoredLogin();
+    //         return false;
+    //     } 
+    //     // otherwise check if all data exists and return true/false
+    //     else {
+    //         return (localStorage.getItem("lnrEmail") && localStorage.getItem("lnrToken")) ? true : false;
+    //     }
+    // },
+    // returns login data from localstorage, to be used in conjunction with hasStoredLogin()
+    getLastLogin: function () {
+        return {lnrLastLogin: localStorage.getItem("lnrLastLogin"), lnrEmail: localStorage.getItem("lnrEmail")};
+    },
+    // removes login data from localstorage
+    clearStoredLogin: function () {
+        localStorage.removeItem("lnrLastLogin");
+        localStorage.removeItem("lnrEmail");
+    },
+    /* --------------------------------- */
     /**
      * returns the currency format for user language 
      * @returns {object} config object
@@ -201,7 +249,7 @@ var helper = {
     nextTab: function (element) {
         switch (element.id) {
             case 'tab-basic-info': helper.changeTab(element); break;
-            case 'tab-payment-details': api.signup(function() {helper.changeTab(element)}); break;
+            case 'tab-payment-details': loginFlow ? api.login(function() {helper.changeTab(element)}) : api.signup(function() {helper.changeTab(element)}); break;
             case 'tab-booking-overview': break;
             case 'tab-duration': api.createRequest(); break;
         }
@@ -209,6 +257,9 @@ var helper = {
     // Virtually click on the actual tab, used to change to a certain tab
     changeTab: function (element) {
         document.getElementById(element.id).click();
+    },
+    signupOrLogin: function (changeTabCallback) {
+        // TODO: 
     },
     /**
      * used to open the date (from/to) dropdowns for calendar 
@@ -312,6 +363,8 @@ var helper = {
     showCreditCardForm: function () {
         // hide the payment credit card form
         $('#sp-payment-form').show();
+        // Reset users' payment method
+        user.hasPaymentMethod = false;
     },
     /**
      * directive
@@ -458,6 +511,7 @@ var helper = {
         // hide the payment credit card form
         $('#sp-payment-form').hide();
         $('.info-title').hide();
+        $('.info-login').hide();
         $('.info-error').hide();
         $('.overview-error').hide();
         $('.payment-error').hide();
@@ -499,6 +553,13 @@ var helper = {
         calendar.initCalendarPicker();
         helper.updateTimeRangeText();
         helper.updatePaymentExpirationText();
+        // For recurring users, show login form instead of signup
+        if (helper.getLastLogin()) {
+            helper.triggerLoginForm();
+            $('#form_login_email').val(helper.getLastLogin().lnrEmail);
+        } else {
+            helper.triggerSignupForm();
+        }
     },
     /**
      * update the value selected by user using

@@ -41,10 +41,17 @@ $(function () {
         checkEmailRegexp(this.id);
         compareFullEmail();
     });
-
     $('#form_email_repeat').on('keyup change', function () {
         compareEmailOnFly();
     });
+    // TODO: Add proper validations for the login form
+    // $('#form_login_email').on('blur', function() {
+    //     validateField(this.id, '#user');
+    //     checkEmailRegexp(this.id);
+    // });
+    // $('#form_login_password').on('blur', function() {
+    //     validateField(this.id, '#user');
+    // });
 });
 
 function checkEmailRegexp(id){
@@ -98,7 +105,10 @@ function userButtonValidator(field, value) {
     if (allTrue(userFormOverview)) {
         $('#lnr-next-button-tab-basic-info').prop('disabled', false);
     } else {
-        $('#lnr-next-button-tab-basic-info').prop('disabled', true);
+        // Only disable the button in case the loginFlow is false
+        if (!loginFlow) {
+            $('#lnr-next-button-tab-basic-info').prop('disabled', true);
+        }
     }
 }
 

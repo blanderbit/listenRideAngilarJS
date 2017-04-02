@@ -13,12 +13,15 @@ var $,
         hasPaymentMethod: false
     },
     date = new DateService(),
+    loginFlow = false,
     apiUrl = "";
 
 $(document).ready(function () {
+    // --- THIS SETUP CODE IS SOLELY FOR TESTING ---
     // var userId = helper.getUrlParameter('userId');
     // var bikeId = helper.getUrlParameter('bikeId');
     // var env = "staging";
+    // ---------------------------------------------
 
     if (env === "production") {
         apiUrl = "https://api.listnride.com/v2";

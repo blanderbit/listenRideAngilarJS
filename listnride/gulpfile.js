@@ -104,7 +104,7 @@ function lnrPrefixCss(scopeSelectorOption) {
 	scopeSelector = scopeSelectorOption;
 	return es.map(function(file, callback) {
 		if (file.isNull()) {
-			return cb(null, file);
+			return callback(null, file);
 		}
 		if (file.isBuffer()) {
 			file.contents = new Buffer(scope.process(file.contents).css);
@@ -119,7 +119,7 @@ function lnrPrefixCss(scopeSelectorOption) {
 			file.contents = through;
 		}
 		return callback(null, file);
-	})
+	});
 }
 /**
  * eslint through all js files
@@ -416,9 +416,15 @@ function minifyLnrShopIntegration() {
     // copy to dist folder of shop integration
     gulp.src([path.lnrShopIntegration.css, path.lnrShopIntegration.vendorCss])
         .pipe(concat(path.lnrShopIntegration.dist.style))
-        .pipe(gulp.dest(path.lnrShopIntegration.dist.root))
-        .pipe(minifyCss(path.lnrShopIntegration.dist.style))
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
+
+        // currently disabling moinification
+        // breaking @element becuase its not ...
+        // ... standard component
+        // @element is used in place of media queries
+        
+        // .pipe(minifyCss(path.lnrShopIntegration.dist.style))
+        // .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
 
     // minify source for shop integration
     // copy to dist folder of shop integration

@@ -1,5 +1,5 @@
 /*! Listnride | bike rendering */
-var env = "staging";
+var env = "production";
 
 /**
    * spawns the shop wizard in a new popup
@@ -108,24 +108,18 @@ var env = "staging";
       var user_id = document.getElementById('listnride').dataset.user;
       var user_lang = document.getElementById('listnride').dataset.lang;
       var introText = {
-        
         // english intro text
-        en: 'The bikes below are currently available for you to rent. ' +
-        'Simply click on the bike you&rsquo;d like to rent and you will be forwarded to ' +
-        '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a>, ' +
-        'where you can make the booking online.',
-        
+        en: 'The bikes below are currently for you available to rent. ' +
+        'You can simply click on the bike you&rsquo;d like to rent and book it directly online. ' +
+        'We will have the bike awaiting your pick-up!',
         // deutsch intro text
-        de: 'Diese Fahrr&auml;der stehen aktuell f&uuml;r den Verleih an Sie zur Verf&uuml;gung. ' +
-        'Durch klicken auf das gew&uuml;nschte Fahrrad, werden Sie auf ' +
-        '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a> ' +
-        'weitergeleitet und k&ouml;nnen dort die Online-Buchung abschlie&szlig;en.',
-        
+        de: 'Diese Fahrr&auml;der stehen aktuell f&uuml;r den Verleih zur Verf&uuml;gung. ' +
+        'Durch klicken auf das gew&uuml;nschte Fahrrad k&ouml;nnen Sie einfach das Rad direkt'  + 
+        'online buchen. Das Fahrrad ist somit f&uuml;r Sie reserviert',
         // dutch intro text
-        nl: 'De onderstaande fietsen bieden wij uw momenteel te huur aan. ' +
-        'Indien je de fiets naar wens aanklikt, kom je op de site ' +
-        '<a target="_blank" href="http://www.listnride.com">www.listnride.com</a> ' +
-        'terecht alwaar je de boeking online kan afronden. '
+        nl: 'De onderstaande fietsen bieden wij momenteel te huur aan. ' + 
+        'U kunt de fietsen eenvoudig online boeken, door op de gewenst fiets te klikken. ' + 
+        'De fiets is na de boeking voor uw gereserveerd. '
       };
       function categoryFilter(categoryId) {
         switch (categoryId) {
