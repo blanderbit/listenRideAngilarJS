@@ -36,6 +36,10 @@ $(function () {
     $('#form_email').on('keyup change', function () {
         compareEmailOnFly();
     });
+    $('#form_login_email').on('blur', function() {
+        validateField(this.id, '#user');
+        checkEmailRegexp(this.id);
+    });
     $('#form_email_repeat').on('blur', function () {
         validateField(this.id, '#user');
         checkEmailRegexp(this.id);

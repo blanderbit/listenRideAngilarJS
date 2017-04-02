@@ -30,8 +30,9 @@ var translationsConfigObject = {
             emailRepeat: 'Repeat Email',
             password: 'Password',
             invalidForm: 'It seems like there\'s invalid data in the form.',
-            errorTitle: 'Oups',
-            errorDescription: 'The email address seems to be invalid or you\'re already signed up at listnride! In latter case, you can book the bike directly on our platform through this link, '
+            errorTitle: 'Hey again',
+            errorDescription: 'It looks like you\'ve already got an account at listnride! Simply log in using your password.',
+            alreadyHaveAccount: 'Already have an account?'
         },
         payment: {
             title: 'How would you like to pay?',
@@ -106,8 +107,9 @@ var translationsConfigObject = {
             emailRepeat: 'Email-Adresse wiederholen',
             password: 'Passwort',
             invalidForm: 'Das Formular scheint nicht ganz korrekt ausgef&uuml;llt zu sein.',
-            errorTitle: 'Ups!',
-            errorDescription: 'Die Email-Addresse ist ung&uuml;ltig oder bereits bei listnride angemeldet! In diesem Fall kannst du das Rad direkt über unsere Plattform buchen, '
+            errorTitle: 'Willkommen zur&uuml;ck!',
+            errorDescription: 'Du scheinst bereits ein Account bei listnride zu haben! Melde dich einfach mit deinem Passwort an.',
+            alreadyHaveAccount: 'Schon angemeldet?'
         },
         payment: {
             title: 'Wie w&uuml;rdest du gerne zahlen?',
@@ -183,7 +185,8 @@ var translationsConfigObject = {
             password: 'wachtwoord',
             invalidForm: 'Er zijn helaas foutieve gegevens ingevuld',
             errorTitle: 'Oops',
-            errorDescription: 'Dit emailadres in incorrect of al geregistreerd in ons bestand.'
+            errorDescription: 'Dit emailadres in incorrect of al geregistreerd in ons bestand.',
+            alreadyHaveAccount: 'Already have an account?'
         },
         payment: {
             title: 'Hoe wil je de betaling doen?',

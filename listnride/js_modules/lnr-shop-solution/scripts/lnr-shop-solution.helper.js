@@ -54,13 +54,47 @@ var helper = {
         for (var loop = 0, length = path.length; loop < length; loop += 1) obj = obj[path[loop]];
         return obj;
     },
+    /* ---------- USER LOGIN ----------- */
+    triggerLoginForm: function () {
+        $('#user-info').hide()
+        $('#user-login').show();
+    },
+    triggerSignupForm: function() {
+        $('#user-info').show();
+        $('#user-login').hide()
+    },
+    /* --------------------------------- */
+
+    /* --------- TOKEN LOGIN ----------- */
+    // stores login data including a timestamp in localstorage
     storeLogin: function (email, token) {
-        localStorage.setItem("lnr-email", email);
-        localStorage.setItem("lnr-token", token);
+        localStorage.setItem("lnrEmail", email);
+        localStorage.setItem("lnrToken", token);
+        localStorage.setItem("lnrTimestamp", Date.now());
     },
+    // checks if login exists and is not expired
     hasStoredLogin: function () {
-        localStorage.getItem("lnr-email") && localStorage.getItem("lnr-token") ? return true : return false;
+        // if login doesn't exist or exists and is older than 2 days: remove it and return false
+        if (((Date.now() - localStorage.getItem("lnrTimestamp")) / (1000*60*60)) > 48 ) {
+            helper.clearStoredLogin();
+            return false;
+        } 
+        // otherwise check if all data exists and return true/false
+        else {
+            return (localStorage.getItem("lnrEmail") && localStorage.getItem("lnrToken")) ? true : false;
+        }
     },
+    // returns login data from localstorage, to be used in conjunction with hasStoredLogin()
+    getStoredLogin: function () {
+        return {lnrEmail: localStorage.getItem("lnrEmail"), lnrToken: localStorage.getItem("lnrToken")};
+    },
+    // removes login data from localstorage
+    clearStoredLogin: function () {
+        localStorage.removeItem("lnrEmail");
+        localStorage.removeItem("lnrToken");
+        localStorage.removeItem("lnrTimestamp");
+    },
+    /* --------------------------------- */
     /**
      * returns the currency format for user language 
      * @returns {object} config object
@@ -216,6 +250,9 @@ var helper = {
     // Virtually click on the actual tab, used to change to a certain tab
     changeTab: function (element) {
         document.getElementById(element.id).click();
+    },
+    signupOrLogin: function (changeTabCallback) {
+        // TODO: 
     },
     /**
      * used to open the date (from/to) dropdowns for calendar 
@@ -462,6 +499,7 @@ var helper = {
         $('.payment-info-validation').hide();
         $('.overview-success').hide();
         $('.lnr-print-button').hide();
+        $('#user-login').hide();
         $('#form_email_repeat').on('paste', function (e) {
             e.preventDefault();
         });

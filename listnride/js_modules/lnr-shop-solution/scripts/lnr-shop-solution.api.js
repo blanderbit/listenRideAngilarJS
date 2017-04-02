@@ -26,17 +26,40 @@ var api = {
                     var encoded = api.base64Encode(response.email + ":" + response.password_hashed);
                     user.auth = 'Basic ' + encoded;
                     user.id = response.id;
+                    // store the login data in local storage
+                    helper.storeLogin(response.email, response.password_hashed);
                     nextTab();
                 },
                 error: function () {
                     $('.info-description').hide();
                     $('.info-error').show();
-                    $('.platform-link').attr("href", "http://www.listnride.com/bikes/" + calendar.bikeId);
+                    $('#form_login_email').val($('#form_email').val());
+                    helper.triggerLoginForm();
                 }
             });
         } else {
             nextTab();
         }
+    },
+    login: function(email, password_hashed) {
+        var data = {
+            "user": {
+                "email": email,
+                "password_hashed": password_hashed
+            }
+        };
+
+        $.post({
+            url: apiUrl + "/users/login",
+            data: data,
+            success: function (response) {
+                console.log("Login Successful");
+                console.log(response);
+            },
+            error: function () {
+                return false;
+            }
+        });
     },
     createRequest: function () {
         var data = {
