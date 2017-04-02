@@ -107,7 +107,7 @@ label {
 }
 
 .mdl-tabs__tab-bar {
-  /*pointer-events: none;*/
+  pointer-events: none;
 }
 
 /*------------- INFO --------------*/
