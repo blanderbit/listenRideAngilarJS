@@ -76,8 +76,9 @@ var helper = {
 
     /* --------- TOKEN LOGIN ----------- */
     // stores login as a timestamp
-    storeLogin: function () {
+    storeLogin: function (email) {
         localStorage.setItem("lnrLastLogin", Date.now());
+        localStorage.setItem("lnrEmail", email);
     },
     // // checks if login exists and is not expired
     // hasStoredLogin: function () {
@@ -93,11 +94,12 @@ var helper = {
     // },
     // returns login data from localstorage, to be used in conjunction with hasStoredLogin()
     getLastLogin: function () {
-        return localStorage.getItem("lnrLastLogin");
+        return {lnrLastLogin: localStorage.getItem("lnrLastLogin"), lnrEmail: localStorage.getItem("lnrEmail")};
     },
     // removes login data from localstorage
     clearStoredLogin: function () {
         localStorage.removeItem("lnrLastLogin");
+        localStorage.removeItem("lnrEmail");
     },
     /* --------------------------------- */
     /**
@@ -512,12 +514,6 @@ var helper = {
         });
         $('#lnr-date-start-button').attr("title", translations.durationPanel.selectDaysFirst);
         $('#lnr-date-end-button').attr("title", translations.durationPanel.selectDaysFirst);
-        // For recurring users, show login form instead of signup
-        if (helper.getLastLogin()) {
-            helper.triggerLoginForm();
-        } else {
-            helper.triggerSignupForm();
-        }
         // Connect the first_name input with the info description title
         $('#form_first_name').keyup(function () {
             var input = $('#form_first_name').val();
@@ -547,6 +543,13 @@ var helper = {
         calendar.initCalendarPicker();
         helper.updateTimeRangeText();
         helper.updatePaymentExpirationText();
+        // For recurring users, show login form instead of signup
+        if (helper.getLastLogin()) {
+            helper.triggerLoginForm();
+            $('#form_login_email').val(helper.getLastLogin().lnrEmail);
+        } else {
+            helper.triggerSignupForm();
+        }
     },
     /**
      * update the value selected by user using
