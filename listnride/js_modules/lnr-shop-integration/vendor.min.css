@@ -6904,7 +6904,8 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 
 .mdl-grid.mdl-grid--no-spacing {
-    padding: 0
+    padding: 0;
+    max-width: 1048px;
 }
 
 .mdl-cell {
@@ -7207,7 +7208,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
     }
 }
 
-@media (min-width:480px) and (max-width:839px) {
+@media (min-width:600px) and (max-width:960px) {
     .mdl-grid {
         padding: 8px
     }
@@ -7435,7 +7436,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
     }
 }
 
-@media (min-width:840px) {
+@media (min-width:960px) {
     .mdl-grid {
         padding: 8px
     }
