@@ -55,6 +55,13 @@ html>body {
   margin-bottom: 10px;
 }
 
+.lnr-input-link {
+  color: rgb(85, 85, 85);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 13px;
+}
+
 @media (min-width: 480px) {
   .lnr-row-top {
     display: none;
@@ -109,6 +116,9 @@ form#user-info {
   margin-top: 2px;
 }
 
+form#user-login {
+  margin-top: 2px;
+}
 /*---------------------------------*/
 
 

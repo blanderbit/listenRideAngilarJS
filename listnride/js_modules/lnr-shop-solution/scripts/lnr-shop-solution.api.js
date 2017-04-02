@@ -32,7 +32,7 @@ var api = {
                 },
                 error: function () {
                     $('.info-description').hide();
-                    $('.info-error').show();
+                    $('.info-login').show();
                     $('#form_login_email').val($('#form_email').val());
                     helper.triggerLoginForm();
                 }
@@ -41,11 +41,11 @@ var api = {
             nextTab();
         }
     },
-    login: function(email, password_hashed) {
+    login: function(nextTab) {
         var data = {
             "user": {
-                "email": email,
-                "password_hashed": password_hashed
+                "email": $('#form_login_email').val(),
+                "password_hashed": $('#form_login_password').val()
             }
         };
 
@@ -57,6 +57,8 @@ var api = {
                 console.log(response);
             },
             error: function () {
+                $('.info-login').hide();
+                $('.info-error').show();
                 return false;
             }
         });

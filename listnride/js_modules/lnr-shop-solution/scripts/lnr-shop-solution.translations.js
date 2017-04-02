@@ -30,9 +30,12 @@ var translationsConfigObject = {
             emailRepeat: 'Repeat Email',
             password: 'Password',
             invalidForm: 'It seems like there\'s invalid data in the form.',
-            errorTitle: 'Hey again',
-            errorDescription: 'It looks like you\'ve already got an account at listnride! Simply log in using your password.',
-            alreadyHaveAccount: 'Already have an account?'
+            loginTitle: 'Hey again',
+            loginDescription: 'It looks like you\'ve already got an account at listnride! Simply log in using your password.',
+            errorTitle: 'Oups',
+            errorDescription: 'The password seems to be wrong.',
+            alreadyHaveAccount: 'Already have an account?',
+            noAccountYet: "No account yet?"
         },
         payment: {
             title: 'How would you like to pay?',
@@ -107,9 +110,12 @@ var translationsConfigObject = {
             emailRepeat: 'Email-Adresse wiederholen',
             password: 'Passwort',
             invalidForm: 'Das Formular scheint nicht ganz korrekt ausgef&uuml;llt zu sein.',
-            errorTitle: 'Willkommen zur&uuml;ck!',
-            errorDescription: 'Du scheinst bereits ein Account bei listnride zu haben! Melde dich einfach mit deinem Passwort an.',
-            alreadyHaveAccount: 'Schon angemeldet?'
+            loginTitle: 'Willkommen zur&uuml;ck!',
+            loginDescription: 'Du scheinst bereits ein Account bei listnride zu haben! Melde dich einfach mit deinem Passwort an.',
+            errorTitle: 'Ups',
+            errorDescription: 'Das eingegebene Passwort scheint nicht zu stimmen.',
+            alreadyHaveAccount: 'Schon angemeldet?',
+            noAccountYet: "Noch kein Account?"
         },
         payment: {
             title: 'Wie w&uuml;rdest du gerne zahlen?',
@@ -184,9 +190,12 @@ var translationsConfigObject = {
             emailRepeat: 'Herhaal Emailadres',
             password: 'wachtwoord',
             invalidForm: 'Er zijn helaas foutieve gegevens ingevuld',
+            loginTitle: 'Hey again',
+            loginDescription: 'It looks like you\'ve already got an account at listnride! Simply log in using your password.',
             errorTitle: 'Oops',
             errorDescription: 'Dit emailadres in incorrect of al geregistreerd in ons bestand.',
-            alreadyHaveAccount: 'Already have an account?'
+            alreadyHaveAccount: 'Already have an account?',
+            noAccountYet: "No account yet?"
         },
         payment: {
             title: 'Hoe wil je de betaling doen?',

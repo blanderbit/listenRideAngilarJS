@@ -58,10 +58,19 @@ var helper = {
     triggerLoginForm: function () {
         $('#user-info').hide()
         $('#user-login').show();
+        $('.info-description').hide();
+        $('.info-login').show();
+        $('#lnr-next-button-tab-basic-info').prop('disabled', false);
+        loginFlow = true;
     },
     triggerSignupForm: function() {
         $('#user-info').show();
-        $('#user-login').hide()
+        $('#user-login').hide();
+        $('.info-error').hide();
+        $('.info-login').hide();
+        $('.info-description').show();
+        $('#lnr-next-button-tab-basic-info').prop('disabled', true);
+        loginFlow = false;
     },
     /* --------------------------------- */
 
@@ -242,7 +251,7 @@ var helper = {
     nextTab: function (element) {
         switch (element.id) {
             case 'tab-basic-info': helper.changeTab(element); break;
-            case 'tab-payment-details': api.signup(function() {helper.changeTab(element)}); break;
+            case 'tab-payment-details': loginFlow ? api.login(function() {helper.changeTab(element)}) : api.signup(function() {helper.changeTab(element)}); break;
             case 'tab-booking-overview': break;
             case 'tab-duration': api.createRequest(); break;
         }
@@ -492,6 +501,7 @@ var helper = {
         // hide the payment credit card form
         $('#sp-payment-form').hide();
         $('.info-title').hide();
+        $('.info-login').hide();
         $('.info-error').hide();
         $('.overview-error').hide();
         $('.payment-error').hide();

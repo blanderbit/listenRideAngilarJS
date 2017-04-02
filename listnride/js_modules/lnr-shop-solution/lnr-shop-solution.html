@@ -131,9 +131,13 @@
                                     <p class="md-subhead-sm" translate="info.description"></p>
                                     <p class="user-info-validation text-invalid" translate="info.invalidForm"></p>
                                 </div>
+                                <div class="info-login">
+                                    <p class="md-title-sm" translate="info.loginTitle"></p>
+                                    <p class="md-subhead-sm" translate="info.loginDescription"></p>
+                                </div>
                                 <div class="info-error">
-                                    <p class="md-title-sm" translate="info.errorTitle"></p>
-                                    <p class="md-subhead-sm" translate="info.errorDescription"></p>
+                                    <p class="text-invalid md-title-sm" translate="info.errorTitle"></p>
+                                    <p class="text-invalid md-subhead-sm" translate="info.errorDescription"></p>
                                 </div>
                             </div>
                         </div>
@@ -193,8 +197,9 @@
                                             >
                                         </md-input-container>
                                     </div>
+                                    <a class="lnr-input-link" onclick="helper.triggerLoginForm()" translate="info.alreadyHaveAccount"></a>
                                 </form>
-                                <!-- Login Form will be added in the future -->
+
                                 <form id="user-login">
                                     <div class="lnr-input-containers" layout="row">
                                         <md-input-container class="mdl-textfield mdl-js-textfield">
@@ -216,10 +221,12 @@
                                                     name="password"
                                                     class="md-input mdl-textfield__input"
                                                     autocomplete="off"
+                                                    type="password"
                                                     required
                                             >
                                         </md-input-container>
                                     </div>
+                                    <a class="lnr-input-link" onclick="helper.triggerSignupForm()" translate="info.noAccountYet"></a>
                                 </form>
                             </div>
                             <!-- rent info -->
@@ -233,9 +240,13 @@
                                     <p class="md-subhead-sm" translate="info.description"></p>
                                     <p class="user-info-validation text-invalid" translate="info.invalidForm"></p>
                                 </div>
+                                <div class="info-login">
+                                    <p class="md-title-sm" translate="info.loginTitle"></p>
+                                    <p class="md-subhead-sm" translate="info.loginDescription"></p>
+                                </div>
                                 <div class="info-error">
-                                    <p class="md-title-sm" translate="info.errorTitle"></p>
-                                    <p class="md-subhead-sm" translate="info.errorDescription"></p>
+                                    <p class="text-invalid md-title-sm" translate="info.errorTitle"></p>
+                                    <p class="text-invalid md-subhead-sm" translate="info.errorDescription"></p>
                                 </div>
                             </div>
                         </div>

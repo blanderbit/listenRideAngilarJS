@@ -36,19 +36,21 @@ $(function () {
     $('#form_email').on('keyup change', function () {
         compareEmailOnFly();
     });
-    $('#form_login_email').on('blur', function() {
-        validateField(this.id, '#user');
-        checkEmailRegexp(this.id);
-    });
     $('#form_email_repeat').on('blur', function () {
         validateField(this.id, '#user');
         checkEmailRegexp(this.id);
         compareFullEmail();
     });
-
     $('#form_email_repeat').on('keyup change', function () {
         compareEmailOnFly();
     });
+    // $('#form_login_email').on('blur', function() {
+    //     validateField(this.id, '#user');
+    //     checkEmailRegexp(this.id);
+    // });
+    // $('#form_login_password').on('blur', function() {
+    //     validateField(this.id, '#user');
+    // });
 });
 
 function checkEmailRegexp(id){
