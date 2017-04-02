@@ -3755,7 +3755,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     text-decoration: none
 }
 
-@media screen and (min-width:760px) {
+@element "#listnride" and (min-width:760px) {
     .mdl-mega-footer--left-section,
     .mdl-mega-footer__left-section {
         float: left
@@ -3789,7 +3789,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     position: relative
 }
 
-@media screen and (min-width:760px) {
+@element "#listnride" and (min-width:760px) {
     .mdl-mega-footer--drop-down-section,
     .mdl-mega-footer__drop-down-section {
         width: 33%
@@ -3825,7 +3825,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     }
 }
 
-@media screen and (min-width:1024px) {
+@element "#listnride" and (min-width:1024px) {
     .mdl-mega-footer--drop-down-section,
     .mdl-mega-footer--drop-down-section:nth-child(3),
     .mdl-mega-footer--drop-down-section:nth-child(4),
@@ -3933,7 +3933,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     white-space: nowrap
 }
 
-@media screen and (min-width:760px) {
+@element "#listnride" and (min-width:760px) {
     .mdl-mega-footer--heading-checkbox,
     .mdl-mega-footer__heading-checkbox {
         display: none
@@ -3980,7 +3980,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     margin-right: 16px
 }
 
-@media screen and (min-width:760px) {
+@element "#listnride" and (min-width:760px) {
     .mdl-logo {
         float: left;
         margin-bottom: 0;
@@ -4031,7 +4031,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     margin-right: 16px
 }
 
-@media screen and (min-width:760px) {
+@element "#listnride" and (min-width:760px) {
     .mdl-mini-footer--link-list li,
     .mdl-mini-footer__link-list li {
         line-height: 36px
@@ -4790,7 +4790,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     padding-left: 40px
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout__drawer>.mdl-layout__title,
     .mdl-layout__drawer>.mdl-layout-title {
         line-height: 56px;
@@ -4819,7 +4819,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     color: #757575
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
         padding: 16px
     }
@@ -4834,7 +4834,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     color: #000
 }
 
-@media screen and (min-width:1025px) {
+@element "#listnride" and (min-width:1025px) {
     .mdl-layout--fixed-drawer>.mdl-layout__drawer {
         -webkit-transform: translateX(0);
         transform: translateX(0)
@@ -4869,20 +4869,20 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     background-color: inherit
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout__header .mdl-layout__drawer-button {
         margin: 4px
     }
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout__drawer-button {
         margin: 4px;
         color: rgba(0, 0, 0, .5)
     }
 }
 
-@media screen and (min-width:1025px) {
+@element "#listnride" and (min-width:1025px) {
     .mdl-layout__drawer-button {
         line-height: 54px
     }
@@ -4925,7 +4925,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     transition-property: max-height, box-shadow
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout__header {
         min-height: 56px
     }
@@ -4936,7 +4936,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     width: calc(100% - 240px)
 }
 
-@media screen and (min-width:1025px) {
+@element "#listnride" and (min-width:1025px) {
     .mdl-layout--fixed-drawer>.mdl-layout__header .mdl-layout__header-row {
         padding-left: 40px
     }
@@ -4953,7 +4953,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     display: block
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout__header>.mdl-layout-icon {
         left: 16px;
         top: 12px
@@ -4968,7 +4968,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     max-height: 64px
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout__header.is-compact {
         max-height: 56px
     }
@@ -4978,13 +4978,13 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     height: 112px
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout__header.is-compact.has-tabs {
         min-height: 104px
     }
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout__header {
         display: none
     }
@@ -5049,13 +5049,13 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     padding-left: 40px
 }
 
-@media screen and (min-width:1025px) {
+@element "#listnride" and (min-width:1025px) {
     .mdl-layout--no-desktop-drawer-button .mdl-layout__header-row {
         padding-left: 40px
     }
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout__header-row {
         height: 56px;
         padding: 0 16px 0 72px
@@ -5088,7 +5088,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     align-items: center
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout__header-row .mdl-navigation {
         height: 56px
     }
@@ -5101,7 +5101,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     padding: 0 24px
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout__header-row .mdl-navigation__link {
         line-height: 56px;
         padding: 0 16px
@@ -5162,7 +5162,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     overflow: visible
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout--fixed-drawer>.mdl-layout__content {
         margin-left: 0
     }
@@ -5194,14 +5194,14 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     width: calc(100% - 32px)
 }
 
-@media screen and (min-width:1025px) {
+@element "#listnride" and (min-width:1025px) {
     .mdl-layout--no-desktop-drawer-button .mdl-layout__tab-bar {
         padding-left: 16px;
         width: calc(100% - 32px)
     }
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout__tab-bar {
         width: calc(100% - 60px);
         padding: 0 0 0 60px
@@ -5268,7 +5268,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     left: -4px
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout__tab-bar-button {
         width: 60px
     }
@@ -5318,7 +5318,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     overflow: hidden
 }
 
-@media screen and (max-width:1024px) {
+@element "#listnride" and (max-width:1024px) {
     .mdl-layout__tab {
         padding: 0 12px
     }
@@ -5856,7 +5856,7 @@ _:-ms-input-placeholder,
     pointer-events: none
 }
 
-@media (max-width:479px) {
+@element "#listnride" and (max-width:479px) {
     .mdl-snackbar {
         width: 100%;
         left: 0;
@@ -5865,7 +5865,7 @@ _:-ms-input-placeholder,
     }
 }
 
-@media (min-width:480px) {
+@element "#listnride" and (min-width:480px) {
     .mdl-snackbar {
         min-width: 288px;
         max-width: 568px;
@@ -5883,7 +5883,7 @@ _:-ms-input-placeholder,
     transition: transform .25s cubic-bezier(0, 0, .2, 1), -webkit-transform .25s cubic-bezier(0, 0, .2, 1)
 }
 
-@media (min-width:480px) {
+@element "#listnride" and (min-width:480px) {
     .mdl-snackbar--active {
         -webkit-transform: translate(-50%, 0);
         transform: translate(-50%, 0)
@@ -7012,7 +7012,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
     order: 12
 }
 
-@media (max-width:479px) {
+@element "#listnride" and (max-width:479px) {
     .mdl-grid {
         padding: 8px
     }
@@ -7208,7 +7208,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
     }
 }
 
-@media (min-width:600px) and (max-width:960px) {
+@element "#listnride" and (min-width:600px) and (max-width:960px) {
     .mdl-grid {
         padding: 8px
     }
@@ -7436,7 +7436,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
     }
 }
 
-@media (min-width:960px) {
+@element "#listnride" and (min-width:960px) {
     .mdl-grid {
         padding: 8px
     }
