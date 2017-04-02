@@ -105,7 +105,10 @@ function userButtonValidator(field, value) {
     if (allTrue(userFormOverview)) {
         $('#lnr-next-button-tab-basic-info').prop('disabled', false);
     } else {
-        $('#lnr-next-button-tab-basic-info').prop('disabled', true);
+        // Only disable the button in case the loginFlow is false
+        if (!loginFlow) {
+            $('#lnr-next-button-tab-basic-info').prop('disabled', true);
+        }
     }
 }
 
