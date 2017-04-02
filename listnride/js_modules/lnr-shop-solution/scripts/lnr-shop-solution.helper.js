@@ -75,33 +75,29 @@ var helper = {
     /* --------------------------------- */
 
     /* --------- TOKEN LOGIN ----------- */
-    // stores login data including a timestamp in localstorage
-    storeLogin: function (email, token) {
-        localStorage.setItem("lnrEmail", email);
-        localStorage.setItem("lnrToken", token);
-        localStorage.setItem("lnrTimestamp", Date.now());
+    // stores login as a timestamp
+    storeLogin: function () {
+        localStorage.setItem("lnrLastLogin", Date.now());
     },
-    // checks if login exists and is not expired
-    hasStoredLogin: function () {
-        // if login doesn't exist or exists and is older than 2 days: remove it and return false
-        if (((Date.now() - localStorage.getItem("lnrTimestamp")) / (1000*60*60)) > 48 ) {
-            helper.clearStoredLogin();
-            return false;
-        } 
-        // otherwise check if all data exists and return true/false
-        else {
-            return (localStorage.getItem("lnrEmail") && localStorage.getItem("lnrToken")) ? true : false;
-        }
-    },
+    // // checks if login exists and is not expired
+    // hasStoredLogin: function () {
+    //     // if login doesn't exist or exists and is older than 2 days: remove it and return false
+    //     if (((Date.now() - localStorage.getItem("lnrTimestamp")) / (1000*60*60)) > 48 ) {
+    //         helper.clearStoredLogin();
+    //         return false;
+    //     } 
+    //     // otherwise check if all data exists and return true/false
+    //     else {
+    //         return (localStorage.getItem("lnrEmail") && localStorage.getItem("lnrToken")) ? true : false;
+    //     }
+    // },
     // returns login data from localstorage, to be used in conjunction with hasStoredLogin()
-    getStoredLogin: function () {
-        return {lnrEmail: localStorage.getItem("lnrEmail"), lnrToken: localStorage.getItem("lnrToken")};
+    getLastLogin: function () {
+        return localStorage.getItem("lnrLastLogin");
     },
     // removes login data from localstorage
     clearStoredLogin: function () {
-        localStorage.removeItem("lnrEmail");
-        localStorage.removeItem("lnrToken");
-        localStorage.removeItem("lnrTimestamp");
+        localStorage.removeItem("lnrLastLogin");
     },
     /* --------------------------------- */
     /**
@@ -355,6 +351,8 @@ var helper = {
     showCreditCardForm: function () {
         // hide the payment credit card form
         $('#sp-payment-form').show();
+        // Reset users' payment method
+        user.hasPaymentMethod = false;
     },
     /**
      * directive
@@ -509,12 +507,17 @@ var helper = {
         $('.payment-info-validation').hide();
         $('.overview-success').hide();
         $('.lnr-print-button').hide();
-        $('#user-login').hide();
         $('#form_email_repeat').on('paste', function (e) {
             e.preventDefault();
         });
         $('#lnr-date-start-button').attr("title", translations.durationPanel.selectDaysFirst);
         $('#lnr-date-end-button').attr("title", translations.durationPanel.selectDaysFirst);
+        // For recurring users, show login form instead of signup
+        if (helper.getLastLogin()) {
+            helper.triggerLoginForm();
+        } else {
+            helper.triggerSignupForm();
+        }
         // Connect the first_name input with the info description title
         $('#form_first_name').keyup(function () {
             var input = $('#form_first_name').val();

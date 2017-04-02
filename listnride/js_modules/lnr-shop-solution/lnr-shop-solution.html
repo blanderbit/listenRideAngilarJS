@@ -505,44 +505,48 @@
             });
 
             $('#lnr-next-button-tab-payment-details')[0].addEventListener('click', function () {
-                var form = document.getElementById('sp-payment-form')
-                var data = {
-                    creditCard: {
-                        number: form['sp-payment-cardnumber'].value,
-                        cvv: form['sp-payment-cvv'].value,
-                        expirationDate: payment.date+"/"+payment.year,
-                        options: {
-                            validate: false
+                if (!user.hasPaymentMethod) {
+                    var form = document.getElementById('sp-payment-form')
+                    var data = {
+                        creditCard: {
+                            number: form['sp-payment-cardnumber'].value,
+                            cvv: form['sp-payment-cvv'].value,
+                            expirationDate: payment.date+"/"+payment.year,
+                            options: {
+                                validate: false
+                            }
                         }
-                    }
-                };
-                clientInstance.request({
-                    endpoint: 'payment_methods/credit_cards',
-                    method: 'post',
-                    data: data
-                }, function (requestErr, response) {
-                    // More detailed example of handling API errors: https://codepen.io/braintree/pen/MbwjdM
-                    if (requestErr) {
-                        throw new Error(requestErr);
-                    }
-                    // Received Payment Nonce by Braintree, now try to send it to the backend
-                    $.post(
-                        apiUrl + "/users/"+user.id+"/payment_methods",
-                        {
-                            "payment_method_nonce": response.creditCards[0].nonce,
-                            "device_data": deviceData
+                    };
+                    clientInstance.request({
+                        endpoint: 'payment_methods/credit_cards',
+                        method: 'post',
+                        data: data
+                    }, function (requestErr, response) {
+                        // More detailed example of handling API errors: https://codepen.io/braintree/pen/MbwjdM
+                        if (requestErr) {
+                            throw new Error(requestErr);
                         }
-                    ).done(function (data) {
-                        $('.payment-error').hide();
-                        $('.payment-description').show();
-                        user.hasPaymentMethod = true;
-                        helper.changeTab({id: 'tab-booking-overview'});
-                    }).fail(function(data) {
-                        $('.payment-description').hide();
-                        $('.payment-error-description').text(data.responseJSON.errors[0].detail);
-                        $('.payment-error').show();
+                        // Received Payment Nonce by Braintree, now try to send it to the backend
+                        $.post(
+                            apiUrl + "/users/"+user.id+"/payment_methods",
+                            {
+                                "payment_method_nonce": response.creditCards[0].nonce,
+                                "device_data": deviceData
+                            }
+                        ).done(function (data) {
+                            $('.payment-error').hide();
+                            $('.payment-description').show();
+                            user.hasPaymentMethod = true;
+                            helper.changeTab({id: 'tab-booking-overview'});
+                        }).fail(function(data) {
+                            $('.payment-description').hide();
+                            $('.payment-error-description').text(data.responseJSON.errors[0].detail);
+                            $('.payment-error').show();
+                        });
                     });
-                });
+                } else {
+                    helper.changeTab({id: 'tab-booking-overview'});
+                }
             });
 
             braintree.paypal.create({
@@ -560,6 +564,8 @@
                         // Disable the button so that we don't attempt to open multiple popups.
                         $("#sp-button-paypal")[0].setAttribute('disabled', 'disabled');
                         $('#sp-payment-form').hide();
+                        // Reset the users' payment method
+                        user.hasPaymentMethod = false;
 
                         // Because PayPal tokenization opens a popup, this must be called
                         // as a result of a user action, such as a button click.
@@ -599,6 +605,7 @@
                                         $('.payment-error').hide();
                                         $('.payment-description').show();
                                         user.hasPaymentMethod = true;
+                                        $('#lnr-next-button-tab-payment-details').prop('disabled', false);
                                         helper.changeTab({id: 'tab-booking-overview'});
                                     }).fail(function(data) {
                                         $('.payment-description').hide();

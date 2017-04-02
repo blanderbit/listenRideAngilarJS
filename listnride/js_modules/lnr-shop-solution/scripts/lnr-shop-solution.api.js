@@ -27,7 +27,7 @@ var api = {
                     user.auth = 'Basic ' + encoded;
                     user.id = response.id;
                     // store the login data in local storage
-                    helper.storeLogin(response.email, response.password_hashed);
+                    helper.storeLogin();
                     nextTab();
                 },
                 error: function () {
@@ -42,26 +42,41 @@ var api = {
         }
     },
     login: function(nextTab) {
-        var data = {
-            "user": {
-                "email": $('#form_login_email').val(),
-                "password_hashed": $('#form_login_password').val()
-            }
-        };
-
-        $.post({
-            url: apiUrl + "/users/login",
-            data: data,
-            success: function (response) {
-                console.log("Login Successful");
-                console.log(response);
-            },
-            error: function () {
-                $('.info-login').hide();
-                $('.info-error').show();
-                return false;
-            }
-        });
+        if (user.id == null) {
+            var data = {
+                "user": {
+                    "email": $('#form_login_email').val(),
+                    "password_hashed": $('#form_login_password').val()
+                }
+            };
+    
+            $.post({
+                url: apiUrl + "/users/login",
+                data: data,
+                success: function (response) {
+                    console.log("Login Successful");
+                    console.log(response);
+                    helper.storeLogin();
+                    var encoded = api.base64Encode(response.email + ":" + response.password_hashed);
+                    user.auth = 'Basic ' + encoded;
+                    user.id = response.id;
+                    if (response.current_payment_method) {
+                        user.hasPaymentMethod = true;
+                        $('#lnr-next-button-tab-payment-details').prop('disabled', false);
+                        helper.changeTab({id: 'tab-booking-overview'});   
+                    } else {
+                        helper.changeTab({id: 'tab-payment-details'});
+                    }
+                },
+                error: function () {
+                    $('.info-login').hide();
+                    $('.info-error').show();
+                    return false;
+                }
+            });
+        } else {
+            nextTab();
+        }
     },
     createRequest: function () {
         var data = {

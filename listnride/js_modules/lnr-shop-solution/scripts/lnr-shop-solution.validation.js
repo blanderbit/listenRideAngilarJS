@@ -44,6 +44,7 @@ $(function () {
     $('#form_email_repeat').on('keyup change', function () {
         compareEmailOnFly();
     });
+    // TODO: Add proper validations for the login form
     // $('#form_login_email').on('blur', function() {
     //     validateField(this.id, '#user');
     //     checkEmailRegexp(this.id);

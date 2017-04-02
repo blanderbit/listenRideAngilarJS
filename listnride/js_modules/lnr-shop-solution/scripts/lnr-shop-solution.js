@@ -52,8 +52,4 @@ $(document).ready(function () {
             helper.postInit();
         });
     });
-    // Check if the user is logged in already
-    if (helper.hasStoredLogin()) {
-        var data = helper.getStoredLogin();
-    }
 });
