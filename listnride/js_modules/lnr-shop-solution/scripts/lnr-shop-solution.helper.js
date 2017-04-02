@@ -220,16 +220,26 @@ var helper = {
 
         var startId = 'lnr-date-from-dropdown';
         var endId = 'lnr-date-to-dropdown';
-
         var element = $('#' + id);
         element.html('');
         for (var index = 0; index < 17; index += 1) {
+            
+            // render the element
             element.append(
-                '<div class="lnr-date-selector" onclick="helper.onTimeValueSelect(' +
-                parseInt(index + 6) + ', ' + type + ')" + id="lnr-date-from-select-"' +
-                index + '><span>' + (index + 6) + ":00" +
+                '<div class="lnr-date-selector" onclick="helper.onTimeValueSelect(' + 
+                parseInt(index + 6) + ', ' + type + ')"' + 
+                'id="' + id + '-select-' + index + '"><span>' + (index + 6) + ":00" +
                 calendar.availabilityMessage(index, calendar.endDate) + '</span></div>'
             );
+            
+            // disable it when isOptionEnabled is false
+            if (calendar.isOptionEnabled(index, calendar.endDate) === false) {
+                var currentDropdownSelectId = '#' + id + '-select-' + index;
+                $(currentDropdownSelectId).css({
+                    "pointer-events": "none",
+                    "color": "#c6c6c6"
+                });
+            }
         }
         // at a time only 1 dropdown should be shown
         if (id === startId) {
@@ -522,7 +532,7 @@ var helper = {
      * @params {event} event fired by browser
      * @returns {void}
      */
-    closeDropDown: function (event) {
+    closeDropDown: function (event) {       
         if (!event.target.matches('.lnr-dropdown-button')) {
             var dropdowns = document.getElementsByClassName("dropdown-content");
             for (var loop = 0; loop < dropdowns.length; loop += 1) {

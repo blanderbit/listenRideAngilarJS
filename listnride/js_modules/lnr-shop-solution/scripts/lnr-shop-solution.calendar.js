@@ -1,4 +1,4 @@
-/* global calendar */
+/* global calendar _ $ helper*/
 // render the calendar
 calendar.initCalendarPicker = function() {
     if (calendar.requests !== undefined) {
@@ -71,7 +71,7 @@ calendar.classifyDate = function(date) {
 
 calendar.dateClosed = function(date) {
     if (calendar.openingHoursAvailable()) {
-        return calendar.bikeOwner.opening_hours.hours[calendar.getWeekDay(date)] == null;
+        return _.isEmpty(calendar.bikeOwner.opening_hours.hours[calendar.getWeekDay(date)]);
     }
     return false
 };
