@@ -11,8 +11,8 @@ var api = {
         if (user.id == null) {
             var data = {
                 'user': {
-                    'first_name': $('#form_first_name').val(),
-                    'last_name': $('#form_last_name').val(),
+                    'first_name': $('#form_first_name').val().trim(),
+                    'last_name': $('#form_last_name').val().trim(),
                     'email': $('#form_email').val()
                 }
             };
