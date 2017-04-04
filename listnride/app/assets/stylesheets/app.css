@@ -986,10 +986,6 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
   max-width: 120px;
 }
 
-.lnr-bike-title {
-  max-width: 58%;
-}
-
 .ng-map-info-window > div:first-child div {
   display: none;
 }
