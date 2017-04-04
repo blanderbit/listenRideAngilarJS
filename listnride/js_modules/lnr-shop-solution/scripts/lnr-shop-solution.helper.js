@@ -56,21 +56,17 @@ var helper = {
     },
     /* ---------- USER LOGIN ----------- */
     triggerLoginForm: function () {
-        $('#user-info').hide()
-        $('#user-login').show();
-        $('.info-description').hide();
-        $('.info-login').show();
-        $('#lnr-next-button-tab-basic-info').prop('disabled', false);
+        $('#user-login, .info-login').show();
+        $('#user-info, .info-description, .user-login-validation').hide();
+        toggleUserButton(loginFormOverview);
+
         loginFlow = true;
     },
     triggerSignupForm: function() {
-        $('#user-info').show();
-        $('#user-login').hide();
-        $('.info-error').hide();
-        $('.info-login').hide();
-        $('.user-info-email-validation').hide();
-        $('.info-description').show();
-        $('#lnr-next-button-tab-basic-info').prop('disabled', true);
+        $('#user-info, .info-description').show();
+        $('#user-login, .info-error, .info-login, .user-info-email-validation, .user-info-validation').hide();
+        toggleUserButton(userFormOverview);
+
         loginFlow = false;
     },
     /* --------------------------------- */
@@ -114,13 +110,13 @@ var helper = {
                 colorize: false,
                 decimalSymbol: '.',
                 digitGroupSymbol: ','
-            }
+            };
             case 'de': return {
                 regions: 'de',
                 colorize: false,
                 decimalSymbol: ',',
                 digitGroupSymbol: '.'
-            }
+            };
             case 'nl': return {
                 colorize: false,
                 decimalSymbol: ',',
