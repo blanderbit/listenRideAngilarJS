@@ -3,8 +3,8 @@
 angular.module('user',[]).component('user', {
   templateUrl: 'app/modules/user/user.template.html',
   controllerAs: 'user',
-  controller: ['$localStorage', '$stateParams', '$translate', 'ngMeta', 'api',
-    function ProfileController($localStorage, $stateParams, $translate, ngMeta, api) {
+  controller: ['$localStorage', '$state', '$stateParams', '$translate', 'ngMeta', 'api',
+    function ProfileController($localStorage, $state, $stateParams, $translate, ngMeta, api) {
       var user = this;
       user.hours = {};
       user.weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -16,24 +16,28 @@ angular.module('user',[]).component('user', {
 
       api.get('/users/' + userId).then(
         function(response) {
-          user.showAll = false;
-          user.user = response.data;
-          user.loaded = true;
-          user.anyHours = !_.isEmpty(response.data.opening_hours);
-          user.openingHoursEnabled = user.anyHours ? response.data.opening_hours.enabled : false;
-          user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
-          user.rating = (user.user.rating_lister + user.user.rating_rider);
-          if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
-            user.rating = user.rating / 2;
+          if (!response.active) {
+            $state.go('404');
+          } else {
+            user.showAll = false;
+            user.user = response.data;
+            user.loaded = true;
+            user.anyHours = !_.isEmpty(response.data.opening_hours);
+            user.openingHoursEnabled = user.anyHours ? response.data.opening_hours.enabled : false;
+            user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
+            user.rating = (user.user.rating_lister + user.user.rating_rider);
+            if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
+              user.rating = user.rating / 2;
+            }
+            user.rating = Math.round(user.rating);
+            if (user.openingHoursEnabled) setOpeningHours();
+  
+            $translate(["user.meta-title", "user.meta-description"] , { name: user.user.first_name })
+            .then(function(translations) {
+              ngMeta.setTitle(translations["user.meta-title"]);
+              ngMeta.setTag("description", translations["user.meta-description"]);
+            });
           }
-          user.rating = Math.round(user.rating);
-          if (user.openingHoursEnabled) setOpeningHours();
-
-          $translate(["user.meta-title", "user.meta-description"] , { name: user.user.first_name })
-          .then(function(translations) {
-            ngMeta.setTitle(translations["user.meta-title"]);
-            ngMeta.setTag("description", translations["user.meta-description"]);
-          });
         },
         function(error) {
           console.log("Error retrieving User", error);

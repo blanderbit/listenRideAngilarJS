@@ -104,15 +104,6 @@
                 console.log('error');
               }
             );
-            // authentication.tokenLogin($stateParams.shop_token, $stateParams.email,
-            //   function () {
-            //     return;
-            //   },
-            //   function () {
-            //     console.log("error");
-            //     $state.go('404');
-            //   }
-            // );
           }]
         },
       })
