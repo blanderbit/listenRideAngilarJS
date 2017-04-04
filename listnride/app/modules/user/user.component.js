@@ -16,7 +16,8 @@ angular.module('user',[]).component('user', {
 
       api.get('/users/' + userId).then(
         function(response) {
-          if (!response.active) {
+          console.log(response);
+          if (!response.data.active) {
             $state.go('404');
           } else {
             user.showAll = false;
