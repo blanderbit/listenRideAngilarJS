@@ -24,8 +24,8 @@ var translationsConfigObject = {
             title: 'Alright',
             titleEmpty: 'Alright,',
             description: 'Please provide your name and email address. Make sure your email address is valid as we\'ll send your booking confirmation to it.<br><br>No worries, your data is safe.',
-            firstName: 'Firstname',
-            lastName: 'Lastname',
+            firstName: 'First name',
+            lastName: 'Last name',
             email: 'Email Address',
             emailRepeat: 'Repeat Email',
             password: 'Password',
@@ -35,7 +35,8 @@ var translationsConfigObject = {
             errorTitle: 'Oups',
             errorDescription: 'The password seems to be wrong.',
             alreadyHaveAccount: 'Already have an account?',
-            noAccountYet: "No account yet?"
+            noAccountYet: "No account yet?",
+            invalidEmails: "Email doesn\'t match or incorrect"
         },
         payment: {
             title: 'How would you like to pay?',
@@ -115,7 +116,8 @@ var translationsConfigObject = {
             errorTitle: 'Ups',
             errorDescription: 'Das eingegebene Passwort scheint nicht zu stimmen.',
             alreadyHaveAccount: 'Schon angemeldet?',
-            noAccountYet: "Noch kein Account?"
+            noAccountYet: "Noch kein Account?",
+            invalidEmails: "Email doesn\'t match or incorrect"
         },
         payment: {
             title: 'Wie w&uuml;rdest du gerne zahlen?',
@@ -195,7 +197,8 @@ var translationsConfigObject = {
             errorTitle: 'Oops',
             errorDescription: 'Dit emailadres in incorrect of al geregistreerd in ons bestand.',
             alreadyHaveAccount: 'Already have an account?',
-            noAccountYet: "No account yet?"
+            noAccountYet: "No account yet?",
+            invalidEmails: "Email doesn\'t match or incorrect"
         },
         payment: {
             title: 'Hoe wil je de betaling doen?',
