@@ -56,26 +56,31 @@ $(function () {
 
 function checkEmailRegexp(id){
     var email = $('#' + id);
-    var match = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email.val());
-    if (!match) {
-        addFieldError(email)
-    } else {
+    if (emailRegexp(email)) {
         removeFieldError(email);
+    } else {
+        addFieldError(email)
     }
+}
+
+function emailRegexp(email){
+    return /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email.val());
 }
 
 function compareFullEmail() {
     var $email = $('#form_email');
     var $repeat = $('#form_email_repeat');
     if ($repeat.val().length > 0 && $email.val().length > 0) {
-        if ($email.val() == $repeat.val()) {
+        if ($email.val() == $repeat.val() && emailRegexp($repeat) && emailRegexp($email)) {
             removeFieldError($email);
             removeFieldError($repeat);
             userButtonValidator($email.attr('id'), true);
             userButtonValidator($repeat.attr('id'), true);
+            $('.user-info-email-validation').hide();
         } else {
             addFieldError($email);
             addFieldError($repeat);
+            $('.user-info-email-validation').show();
         }
     }
     userInputErrorAny();
@@ -91,11 +96,13 @@ function compareEmailOnFly() {
         removeFieldError($repeat);
         userButtonValidator($email.attr('id'), false);
         userButtonValidator($repeat.attr('id'), false);
+        $('.user-info-email-validation').hide();
     } else if(max_length == min_length) {
         compareFullEmail();
     } else {
         addFieldError($email);
         addFieldError($repeat);
+        $('.user-info-email-validation').show();
     }
 }
 

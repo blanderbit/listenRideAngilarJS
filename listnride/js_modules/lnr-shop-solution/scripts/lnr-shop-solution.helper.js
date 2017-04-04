@@ -68,6 +68,7 @@ var helper = {
         $('#user-login').hide();
         $('.info-error').hide();
         $('.info-login').hide();
+        $('.user-info-email-validation').hide();
         $('.info-description').show();
         $('#lnr-next-button-tab-basic-info').prop('disabled', true);
         loginFlow = false;
