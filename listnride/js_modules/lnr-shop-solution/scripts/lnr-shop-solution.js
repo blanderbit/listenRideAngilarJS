@@ -17,9 +17,9 @@ var $,
 
 $(document).ready(function () {
     // --- THIS SETUP CODE IS SOLELY FOR TESTING ---
-    //     var userId = helper.getUrlParameter('userId');
-    //     var bikeId = helper.getUrlParameter('bikeId');
-    //     var env = "production";
+        // var userId = helper.getUrlParameter('userId');
+        // var bikeId = helper.getUrlParameter('bikeId');
+        // var env = "production";
     // ---------------------------------------------
 
     if (env === "production") {
