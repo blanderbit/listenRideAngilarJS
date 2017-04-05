@@ -16,17 +16,17 @@ var userFormOverview = {
 $(function () {
     $('#lnr-next-button-tab-basic-info').prop('disabled', true);
     $('#user-info').on('keyup', function () {
-        userInputErrorAny()
+        userInputErrorAny('info')
     });
     $('#form_first_name').on('blur', function () {
         userButtonValidator(this.id, true);
         validateField(this.id, '#user');
-        userInputErrorAny();
+        userInputErrorAny('info');
     });
     $('#form_last_name').on('blur', function () {
         userButtonValidator(this.id, true);
         validateField(this.id, '#user');
-        userInputErrorAny();
+        userInputErrorAny('info');
     });
     $('#form_email').on('blur', function () {
         validateField(this.id, '#user');
@@ -44,41 +44,25 @@ $(function () {
     $('#form_email_repeat').on('keyup change', function () {
         compareEmailOnFly();
     });
-    // TODO: Add proper validations for the login form
-    // $('#form_login_email').on('blur', function() {
-    //     validateField(this.id, '#user');
-    //     checkEmailRegexp(this.id);
-    // });
-    // $('#form_login_password').on('blur', function() {
-    //     validateField(this.id, '#user');
-    // });
 });
-
-function checkEmailRegexp(id){
-    var email = $('#' + id);
-    var match = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email.val());
-    if (!match) {
-        addFieldError(email)
-    } else {
-        removeFieldError(email);
-    }
-}
 
 function compareFullEmail() {
     var $email = $('#form_email');
     var $repeat = $('#form_email_repeat');
     if ($repeat.val().length > 0 && $email.val().length > 0) {
-        if ($email.val() == $repeat.val()) {
+        if ($email.val() == $repeat.val() && emailRegexp($repeat) && emailRegexp($email)) {
             removeFieldError($email);
             removeFieldError($repeat);
             userButtonValidator($email.attr('id'), true);
             userButtonValidator($repeat.attr('id'), true);
+            $('.user-info-email-validation').hide();
         } else {
             addFieldError($email);
             addFieldError($repeat);
+            $('.user-info-email-validation').show();
         }
     }
-    userInputErrorAny();
+    userInputErrorAny('info');
 }
 
 function compareEmailOnFly() {
@@ -91,34 +75,87 @@ function compareEmailOnFly() {
         removeFieldError($repeat);
         userButtonValidator($email.attr('id'), false);
         userButtonValidator($repeat.attr('id'), false);
+        $('.user-info-email-validation').hide();
     } else if(max_length == min_length) {
         compareFullEmail();
     } else {
         addFieldError($email);
         addFieldError($repeat);
+        $('.user-info-email-validation').show();
     }
+}
+
+/*------------ User login form validation ------------*/
+
+var loginFormOverview = {
+    'form_login_email': false,
+    'form_login_password': false,
+    'valid': false
+};
+
+$(function () {
+    $('#user-login').on('keyup', function () {
+        userInputErrorAny('login')
+    });
+
+    $('#form_login_email').on('blur', function() {
+        validateField(this.id, '#login');
+        checkEmailRegexp(this.id);
+        userInputErrorAny('login');
+    });
+
+    $('#form_login_email').on('keyup change', function() {
+        userButtonValidator(this.id, true);
+        validateField(this.id, '#login');
+    });
+
+    $('#form_login_password').on('blur keyup', function() {
+        userButtonValidator(this.id, true);
+        validateField(this.id, '#login');
+        userInputErrorAny('login');
+    });
+});
+
+/*------------ User shared logic ------------*/
+
+function checkEmailRegexp(id){
+    var email = $('#' + id);
+    if (emailRegexp(email)) {
+        removeFieldError(email);
+    } else {
+        addFieldError(email)
+    }
+}
+
+function emailRegexp(email){
+    return /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email.val());
 }
 
 function userButtonValidator(field, value) {
-    userFormOverview[field] = value;
-
-    if (allTrue(userFormOverview)) {
-        $('#lnr-next-button-tab-basic-info').prop('disabled', false);
+    if (loginFlow) {
+        loginFormOverview[field] = value;
+        toggleUserButton(loginFormOverview);
     } else {
-        // Only disable the button in case the loginFlow is false
-        if (!loginFlow) {
-            $('#lnr-next-button-tab-basic-info').prop('disabled', true);
-        }
+        userFormOverview[field] = value;
+        toggleUserButton(userFormOverview);
     }
 }
 
-function userInputErrorAny(){
-    if ($('#user-info md-input-container.is-invalid').length == 0) {
+function toggleUserButton(from) {
+    if (allTrue(from)) {
+        $('#lnr-next-button-tab-basic-info').prop('disabled', false);
+    } else {
+        $('#lnr-next-button-tab-basic-info').prop('disabled', true);
+    }
+}
+
+function userInputErrorAny(form_name){
+    if ($('#user-' + form_name + ' md-input-container.is-invalid').length == 0) {
         userButtonValidator('valid', true);
-        $('.user-info-validation').hide();
+        $('.user-' + form_name + '-validation').hide();
     } else {
         userButtonValidator('valid', false);
-        $('.user-info-validation').show();
+        $('.user-' + form_name + '-validation').show();
     }
 }
 

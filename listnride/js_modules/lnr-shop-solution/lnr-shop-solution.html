@@ -128,12 +128,16 @@
                                         <span class="info-title" translate="info.title"></span>
                                         <span class="first-name-text"></span>
                                     </p>
-                                    <p class="md-subhead-sm" translate="info.description"></p>
-                                    <p class="user-info-validation text-invalid" translate="info.invalidForm"></p>
+                                     <p class="md-subhead-sm" translate="info.description"></p>
+                                     <p>
+                                       <span class="user-info-validation text-invalid" translate="info.invalidForm"></span>
+                                       <span class="user-info-email-validation text-invalid" translate="info.invalidEmails"></span>
+                                     </p>
                                 </div>
                                 <div class="info-login">
                                     <p class="md-title-sm" translate="info.loginTitle"></p>
                                     <p class="md-subhead-sm" translate="info.loginDescription"></p>
+                                    <p class="user-login-validation text-invalid" translate="info.invalidForm"></p>
                                 </div>
                                 <div class="info-error">
                                     <p class="text-invalid md-title-sm" translate="info.errorTitle"></p>
@@ -152,7 +156,7 @@
                                                     id="form_first_name"
                                                     name="first_name"
                                                     class="md-input mdl-textfield__input"
-                                                    pattern="^[\u00C0-\u017FA-Za-z]+$"
+                                                    pattern="^[\u00C0-\u017FA-Za-z \- ]+$"
                                                     maxlength="30"
                                                     type="text"
                                                     required
@@ -166,7 +170,7 @@
                                                     id="form_last_name"
                                                     name="last_name"
                                                     class="md-input mdl-textfield__input"
-                                                    pattern="^[\u00C0-\u017FA-Za-z]+$"
+                                                    pattern="^[\u00C0-\u017FA-Za-z \- ]+$"
                                                     maxlength="30"
                                                     type="text"
                                                     required
@@ -222,6 +226,7 @@
                                                     class="md-input mdl-textfield__input"
                                                     autocomplete="off"
                                                     type="password"
+                                                    minlength="1"
                                                     required
                                             >
                                         </md-input-container>
@@ -238,11 +243,15 @@
                                         <span class="first-name-text"></span>
                                     </p>
                                     <p class="md-subhead-sm" translate="info.description"></p>
-                                    <p class="user-info-validation text-invalid" translate="info.invalidForm"></p>
+                                    <p>
+                                      <span class="user-info-validation text-invalid" translate="info.invalidForm"></span>
+                                      <span class="user-info-email-validation text-invalid" translate="info.invalidEmails"></span>
+                                    </p>
                                 </div>
                                 <div class="info-login">
                                     <p class="md-title-sm" translate="info.loginTitle"></p>
                                     <p class="md-subhead-sm" translate="info.loginDescription"></p>
+                                    <p class="user-login-validation text-invalid" translate="info.invalidForm"></p>
                                 </div>
                                 <div class="info-error">
                                     <p class="text-invalid md-title-sm" translate="info.errorTitle"></p>
