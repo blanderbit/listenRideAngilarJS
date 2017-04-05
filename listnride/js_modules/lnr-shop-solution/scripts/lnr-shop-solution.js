@@ -18,9 +18,13 @@ var $,
 
 $(document).ready(function () {
     // --- THIS SETUP CODE IS SOLELY FOR TESTING ---
-    // var userId = helper.getUrlParameter('userId');
-    // var bikeId = helper.getUrlParameter('bikeId');
-    // var env = "staging";
+    // disabled by default
+    // use true to enable it
+    if (false) {
+        var userId = helper.getUrlParameter('userId');
+        var bikeId = helper.getUrlParameter('bikeId');
+        var env = "production";
+    }
     // ---------------------------------------------
 
     if (env === "production") {

@@ -2028,6 +2028,8 @@
 				if ( opt.start && moment(start).format('YYYY-MM-DD') == moment(time).format('YYYY-MM-DD') )
 				{
 					$(this).addClass('first-date-selected');
+					if ($('#lnr-next-button-tab-duration').length)
+						$('#lnr-next-button-tab-duration').prop('disabled', true);
 				}
 				else
 				{
@@ -2037,6 +2039,8 @@
 				if ( opt.end && moment(end).format('YYYY-MM-DD') == moment(time).format('YYYY-MM-DD') )
 				{
 					$(this).addClass('last-date-selected');
+					if ($('#lnr-next-button-tab-duration').length)
+						$('#lnr-next-button-tab-duration').prop('disabled', false);
 				}
 				else
 				{
