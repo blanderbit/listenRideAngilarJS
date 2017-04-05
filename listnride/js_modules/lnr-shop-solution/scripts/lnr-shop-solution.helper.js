@@ -373,28 +373,44 @@ var helper = {
 
         var rentalInfoHTML =
             '<ul class="lnr-list-sm mdl-list">' +
+            
+            // date -- from
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="durationPanel.from"></span>' +
-            '<span align="right" class="rental-info-from mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">-</span>' +
+            '<span align="right" class="rental-info-from mdl-list__item-primary-content md-subhead-sm">-</span>' +
             '</li>' +
+            
+            // date -- to
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="durationPanel.to"></span>' +
-            '<span align="right" class="rental-info-to mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">-</span>' +
+            '<span align="right" class="rental-info-to mdl-list__item-primary-content md-subhead-sm">-</span>' +
             '</li>' +
+            
+            // rental -- duration
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-title-sm" translate="rental.duration"></span>' +
             '<span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">-</span>' +
             '</li>' +
             '<lnr-vertical-divider></lnr-vertical-divider>' +
+
+            // rental -- subtotal
+            '<li class="mdl-list__item">' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="rental.subtotal"></span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>' +
+            '</li>' +
+
+            // rental -- fee
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="rental.fee"></span>' +
             '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-fee">0 &euro;</span>' +
             '</li>' +
+
+            // rental -- total
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="rental.total"></span>' +
             '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-total">0 &euro;</span>' +
             '</li>' +
-            '</ul>'
+            '</ul>';
 
         rentalInfo.replaceWith(rentalInfoHTML);
         return this;
