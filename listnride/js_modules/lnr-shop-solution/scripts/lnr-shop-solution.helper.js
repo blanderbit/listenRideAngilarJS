@@ -181,8 +181,7 @@ var helper = {
      * @param {object} calendar it is an object 
      * @returns {string} param
      */
-    onDateChange: function (startDate, endDate, calendar) {
-
+    onDateChange: function () {
         // calendar duration
         $('*[id*=lnr-calendar-duration]').each(function (index, element) {
             $(element).html(calendar.duration);
@@ -211,20 +210,20 @@ var helper = {
 
         // calendar start date
         $('[id=lnr-date-start]').each(function (index, element) {
-            $(element).html('from ' + startDate.getDate() +
-                '.' + startDate.getMonth() +
-                '.' + startDate.getFullYear());
+            $(element).html('from ' + calendar.startDate.getDate() +
+                '.' + calendar.startDate.getMonth() +
+                '.' + calendar.startDate.getFullYear());
         });
 
-        $('.rental-info-from').text(startDate.getDate() + '.' +
-            startDate.getMonth() + '.' +
-            startDate.getFullYear() + ', ' +
+        $('.rental-info-from').text(calendar.startDate.getDate() + '.' +
+            calendar.startDate.getMonth() + '.' +
+            calendar.startDate.getFullYear() + ', ' +
             calendar.startTime + ':00'
         );
 
-        $('.rental-info-to').text(endDate.getDate() + '.' +
-            endDate.getMonth() + '.' +
-            endDate.getFullYear() + ', ' +
+        $('.rental-info-to').text(calendar.endDate.getDate() + '.' +
+            calendar.endDate.getMonth() + '.' +
+            calendar.endDate.getFullYear() + ', ' +
             calendar.endTime + ':00'
         );
 
@@ -233,9 +232,9 @@ var helper = {
 
         // calendar end date
         $('[id=lnr-date-end]').each(function (index, element) {
-            $(element).html('to ' + endDate.getDate() +
-                '.' + endDate.getMonth() +
-                '.' + endDate.getFullYear());
+            $(element).html('to ' + calendar.endDate.getDate() +
+                '.' + calendar.endDate.getMonth() +
+                '.' + calendar.endDate.getFullYear());
         });
     },
     /**
@@ -373,28 +372,44 @@ var helper = {
 
         var rentalInfoHTML =
             '<ul class="lnr-list-sm mdl-list">' +
+            
+            // date -- from
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="durationPanel.from"></span>' +
-            '<span align="right" class="rental-info-from mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">-</span>' +
+            '<span align="right" class="rental-info-from mdl-list__item-primary-content md-subhead-sm">-</span>' +
             '</li>' +
+            
+            // date -- to
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="durationPanel.to"></span>' +
-            '<span align="right" class="rental-info-to mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">-</span>' +
+            '<span align="right" class="rental-info-to mdl-list__item-primary-content md-subhead-sm">-</span>' +
             '</li>' +
+            
+            // rental -- duration
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-title-sm" translate="rental.duration"></span>' +
             '<span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">-</span>' +
             '</li>' +
             '<lnr-vertical-divider></lnr-vertical-divider>' +
+
+            // rental -- subtotal
+            '<li class="mdl-list__item">' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="rental.subtotal"></span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>' +
+            '</li>' +
+
+            // rental -- fee
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="rental.fee"></span>' +
             '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-fee">0 &euro;</span>' +
             '</li>' +
+
+            // rental -- total
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="rental.total"></span>' +
             '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-total">0 &euro;</span>' +
             '</li>' +
-            '</ul>'
+            '</ul>';
 
         rentalInfo.replaceWith(rentalInfoHTML);
         return this;

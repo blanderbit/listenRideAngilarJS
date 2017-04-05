@@ -2,7 +2,6 @@
 /*eslint no-undef: "error"*/
 var $,
     // Define some global variables
-    calendar = {},
     payment = {
         date: "Month",
         year: "Year"
@@ -18,9 +17,9 @@ var $,
 
 $(document).ready(function () {
     // --- THIS SETUP CODE IS SOLELY FOR TESTING ---
-    // var userId = helper.getUrlParameter('userId');
-    // var bikeId = helper.getUrlParameter('bikeId');
-    // var env = "staging";
+    //     var userId = helper.getUrlParameter('userId');
+    //     var bikeId = helper.getUrlParameter('bikeId');
+    //     var env = "production";
     // ---------------------------------------------
 
     if (env === "production") {
