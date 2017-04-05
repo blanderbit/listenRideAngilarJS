@@ -28,7 +28,7 @@ angular.module('brand-integration',[]).component('ampler', {
               case "Wien": ampler.bikes.vienna.push(success.data[i]); break;
             }
           }
-          ampler.currentBikes = success.data;
+          ampler.currentBikes = ampler.bikes["berlin"];
         },
         function (error) {
           console.log('Error fetching Bikes');
