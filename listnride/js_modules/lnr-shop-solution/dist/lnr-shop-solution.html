@@ -115,15 +115,20 @@
                                         <span class="info-title" translate="info.title"></span>
                                         <span class="first-name-text"></span>
                                     </p>
-                                    <p class="md-subhead-sm" translate="info.description"></p>
-                                    <p class="user-info-validation text-invalid" translate="info.invalidForm"></p>
+                                     <p class="md-subhead-sm" translate="info.description"></p>
+                                     <p>
+                                       <span class="user-info-validation text-invalid" translate="info.invalidForm"></span>
+                                       <span class="user-info-email-validation text-invalid" translate="info.invalidEmails"></span>
+                                     </p>
+                                </div>
+                                <div class="info-login">
+                                    <p class="md-title-sm" translate="info.loginTitle"></p>
+                                    <p class="md-subhead-sm" translate="info.loginDescription"></p>
+                                    <p class="user-login-validation text-invalid" translate="info.invalidForm"></p>
                                 </div>
                                 <div class="info-error">
                                     <p class="text-invalid md-title-sm" translate="info.errorTitle"></p>
-                                    <p>
-                                        <span class="text-invalid md-subhead-sm" translate="info.errorDescription"></span>
-                                        <a class="platform-link" href="#" translate="shared.here"></a>
-                                    </p>
+                                    <p class="text-invalid md-subhead-sm" translate="info.errorDescription"></p>
                                 </div>
                             </div>
                         </div>
@@ -138,7 +143,7 @@
                                                     id="form_first_name"
                                                     name="first_name"
                                                     class="md-input mdl-textfield__input"
-                                                    pattern="^[\u00C0-\u017FA-Za-z]+$"
+                                                    pattern="^[\u00C0-\u017FA-Za-z \- ]+$"
                                                     maxlength="30"
                                                     type="text"
                                                     required
@@ -152,7 +157,7 @@
                                                     id="form_last_name"
                                                     name="last_name"
                                                     class="md-input mdl-textfield__input"
-                                                    pattern="^[\u00C0-\u017FA-Za-z]+$"
+                                                    pattern="^[\u00C0-\u017FA-Za-z \- ]+$"
                                                     maxlength="30"
                                                     type="text"
                                                     required
@@ -183,6 +188,37 @@
                                             >
                                         </md-input-container>
                                     </div>
+                                    <a class="lnr-input-link" onclick="helper.triggerLoginForm()" translate="info.alreadyHaveAccount"></a>
+                                </form>
+
+                                <form id="user-login">
+                                    <div class="lnr-input-containers" layout="row">
+                                        <md-input-container class="mdl-textfield mdl-js-textfield">
+                                            <label translate="info.email"></label>
+                                            <input
+                                                    id="form_login_email"
+                                                    name="email"
+                                                    class="md-input mdl-textfield__input"
+                                                    autocomplete="off"
+                                                    required
+                                            >
+                                        </md-input-container>
+                                    </div>
+                                    <div class="lnr-input-containers" layout="row">
+                                        <md-input-container class="mdl-textfield mdl-js-textfield">
+                                            <label translate="info.password"></label>
+                                            <input
+                                                    id="form_login_password"
+                                                    name="password"
+                                                    class="md-input mdl-textfield__input"
+                                                    autocomplete="off"
+                                                    type="password"
+                                                    minlength="1"
+                                                    required
+                                            >
+                                        </md-input-container>
+                                    </div>
+                                    <a class="lnr-input-link" onclick="helper.triggerSignupForm()" translate="info.noAccountYet"></a>
                                 </form>
                             </div>
                             <!-- rent info -->
@@ -194,14 +230,19 @@
                                         <span class="first-name-text"></span>
                                     </p>
                                     <p class="md-subhead-sm" translate="info.description"></p>
-                                    <p class="user-info-validation text-invalid" translate="info.invalidForm"></p>
+                                    <p>
+                                      <span class="user-info-validation text-invalid" translate="info.invalidForm"></span>
+                                      <span class="user-info-email-validation text-invalid" translate="info.invalidEmails"></span>
+                                    </p>
+                                </div>
+                                <div class="info-login">
+                                    <p class="md-title-sm" translate="info.loginTitle"></p>
+                                    <p class="md-subhead-sm" translate="info.loginDescription"></p>
+                                    <p class="user-login-validation text-invalid" translate="info.invalidForm"></p>
                                 </div>
                                 <div class="info-error">
                                     <p class="text-invalid md-title-sm" translate="info.errorTitle"></p>
-                                    <p>
-                                        <span class="text-invalid md-subhead-sm" translate="info.errorDescription"></span>
-                                        <a class="platform-link" href="#" translate="shared.here"></a>
-                                    </p>
+                                    <p class="text-invalid md-subhead-sm" translate="info.errorDescription"></p>
                                 </div>
                             </div>
                         </div>
@@ -460,44 +501,48 @@
             });
 
             $('#lnr-next-button-tab-payment-details')[0].addEventListener('click', function () {
-                var form = document.getElementById('sp-payment-form')
-                var data = {
-                    creditCard: {
-                        number: form['sp-payment-cardnumber'].value,
-                        cvv: form['sp-payment-cvv'].value,
-                        expirationDate: payment.date+"/"+payment.year,
-                        options: {
-                            validate: false
+                if (!user.hasPaymentMethod) {
+                    var form = document.getElementById('sp-payment-form')
+                    var data = {
+                        creditCard: {
+                            number: form['sp-payment-cardnumber'].value,
+                            cvv: form['sp-payment-cvv'].value,
+                            expirationDate: payment.date+"/"+payment.year,
+                            options: {
+                                validate: false
+                            }
                         }
-                    }
-                };
-                clientInstance.request({
-                    endpoint: 'payment_methods/credit_cards',
-                    method: 'post',
-                    data: data
-                }, function (requestErr, response) {
-                    // More detailed example of handling API errors: https://codepen.io/braintree/pen/MbwjdM
-                    if (requestErr) {
-                        throw new Error(requestErr);
-                    }
-                    // Received Payment Nonce by Braintree, now try to send it to the backend
-                    $.post(
-                        apiUrl + "/users/"+user.id+"/payment_methods",
-                        {
-                            "payment_method_nonce": response.creditCards[0].nonce,
-                            "device_data": deviceData
+                    };
+                    clientInstance.request({
+                        endpoint: 'payment_methods/credit_cards',
+                        method: 'post',
+                        data: data
+                    }, function (requestErr, response) {
+                        // More detailed example of handling API errors: https://codepen.io/braintree/pen/MbwjdM
+                        if (requestErr) {
+                            throw new Error(requestErr);
                         }
-                    ).done(function (data) {
-                        $('.payment-error').hide();
-                        $('.payment-description').show();
-                        user.hasPaymentMethod = true;
-                        helper.changeTab({id: 'tab-booking-overview'});
-                    }).fail(function(data) {
-                        $('.payment-description').hide();
-                        $('.payment-error-description').text(data.responseJSON.errors[0].detail);
-                        $('.payment-error').show();
+                        // Received Payment Nonce by Braintree, now try to send it to the backend
+                        $.post(
+                            apiUrl + "/users/"+user.id+"/payment_methods",
+                            {
+                                "payment_method_nonce": response.creditCards[0].nonce,
+                                "device_data": deviceData
+                            }
+                        ).done(function (data) {
+                            $('.payment-error').hide();
+                            $('.payment-description').show();
+                            user.hasPaymentMethod = true;
+                            helper.changeTab({id: 'tab-booking-overview'});
+                        }).fail(function(data) {
+                            $('.payment-description').hide();
+                            $('.payment-error-description').text(data.responseJSON.errors[0].detail);
+                            $('.payment-error').show();
+                        });
                     });
-                });
+                } else {
+                    helper.changeTab({id: 'tab-booking-overview'});
+                }
             });
 
             braintree.paypal.create({
@@ -515,6 +560,8 @@
                         // Disable the button so that we don't attempt to open multiple popups.
                         $("#sp-button-paypal")[0].setAttribute('disabled', 'disabled');
                         $('#sp-payment-form').hide();
+                        // Reset the users' payment method
+                        user.hasPaymentMethod = false;
 
                         // Because PayPal tokenization opens a popup, this must be called
                         // as a result of a user action, such as a button click.
@@ -554,6 +601,7 @@
                                         $('.payment-error').hide();
                                         $('.payment-description').show();
                                         user.hasPaymentMethod = true;
+                                        $('#lnr-next-button-tab-payment-details').prop('disabled', false);
                                         helper.changeTab({id: 'tab-booking-overview'});
                                     }).fail(function(data) {
                                         $('.payment-description').hide();
