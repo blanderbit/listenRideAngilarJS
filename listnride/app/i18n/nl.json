@@ -59,7 +59,19 @@
     "Sun": "Sun",
     "join": "Join",
     "voucher": "Voucher",
-    "download": "Download"
+    "download": "Download",
+    "Jan": "Jan",
+    "Feb": "Feb",
+    "Mar": "Maart",
+    "Apr": "Apr",
+    "May": "Mei",
+    "Jun": "Juni",
+    "Jul": "Juli",
+    "Aug": "Aug",
+    "Sep": "Sept",
+    "Oct": "Okt",
+    "Nov": "Nov",
+    "Dec": "Dec"
   },
 
   "toasts": {
@@ -590,6 +602,17 @@
     "apply": "Nu toepassen",
     "open": "Open Posities",
     "go-back": "Terug"
+  },
+
+  "invoices": {
+    "request_id": "Request ID",
+    "bike": "Bike",
+    "start_date": "Start date",
+    "end_date": "End date",
+    "location": "Location",
+    "payout": "Payout",
+    "you_paid": "You paid",
+    "invoice": "Invoice"
   },
 
   "contact-and-help": {

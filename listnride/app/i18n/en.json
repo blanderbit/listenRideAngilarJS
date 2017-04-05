@@ -59,7 +59,19 @@
     "Sun": "Sun",
     "join": "Join",
     "voucher": "voucher",
-    "download": "Download"
+    "download": "Download",
+    "Jan": "Jan",
+    "Feb": "Feb",
+    "Mar": "Mar",
+    "Apr": "Apr",
+    "May": "May",
+    "Jun": "Jun",
+    "Jul": "Jul",
+    "Aug": "Aug",
+    "Sep": "Sep",
+    "Oct": "Oct",
+    "Nov": "Nov",
+    "Dec": "Dec"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
@@ -106,7 +118,7 @@
     "current-vouchers": "Your current balance is",
     "add-voucher": "Add Voucher",
     "meta-title": "Profile Settings",
-    "meta-description": "Change your profile- und payment settings."
+    "meta-description": "Change your profile - und payment settings."
   },
   "verification": {
     "verify-profile": "Verify your Profile",
@@ -567,6 +579,18 @@
     "open": "Open Positions",
     "go-back": "Back"
   },
+
+  "invoices": {
+    "request_id": "Request ID",
+    "bike": "Bike",
+    "start_date": "Start date",
+    "end_date": "End date",
+    "location": "Location",
+    "payout": "Payout",
+    "you_paid": "You paid",
+    "invoice": "Invoice"
+  },
+
   "contact-and-help": {
     "title": "Contact & Support",
     "meta-title": "listnride is here for you",
