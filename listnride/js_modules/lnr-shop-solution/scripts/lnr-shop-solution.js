@@ -2,7 +2,6 @@
 /*eslint no-undef: "error"*/
 var $,
     // Define some global variables
-    calendar = {},
     payment = {
         date: "Month",
         year: "Year"
