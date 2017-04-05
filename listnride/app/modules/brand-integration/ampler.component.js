@@ -9,6 +9,11 @@ angular.module('brand-integration',[]).component('ampler', {
 
       ampler.currentBikes = [];
       ampler.currentCity = $translate.instant("brand-integration.ampler.choose-location");
+      $translate(["brand-integration.ampler.choose-location"]).then(
+        function (translations) {
+          ampler.currentCity = translations["brand-integration.ampler.choose-location"];
+        }
+      );
       ampler.bikes = {
         berlin: [],
         munich: [],

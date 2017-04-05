@@ -3,6 +3,8 @@ var gulp = require('gulp');
 var config = require('./gulp.config.js')();
 var rev = require('gulp-rev');
 var gulpIf = require('gulp-if');
+var es = require('event-stream');
+var postcss = require('postcss');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var useref = require('gulp-useref');
@@ -19,62 +21,68 @@ var ngAnnotate = require('gulp-ng-annotate');
 var ngConstant = require('gulp-ng-constant');
 var templateCache = require('gulp-angular-templatecache');
 var htmlReplace = require('gulp-html-replace');
+
+var scope;
+var scopeSelector;
 var path = config.path;
 var environments = config.environments;
 var processEnv = process.env.ENVIRONMENT;
 var argvEnv = ('local' === processEnv || 'staging' === processEnv || 'production' === processEnv) ? processEnv : 'local';
 var env = environments[argvEnv];
 
-var es = require('event-stream');
-var postcss = require('postcss');
-
-var scopeSelector;
-var scope;
-
+// linter and code checking
 gulp.task('lint', lint);
 
+// html cache related tasks
 gulp.task('inject-templates-modules', injectTemplatesModules);
 gulp.task('cache-templates-modules', cacheTemplatesModules);
 gulp.task('cache-templates-services', cacheTemplatesServices);
 
+// translations, fonts and app constant
 gulp.task('copy-index-tmp', copyIndexTmp);
 gulp.task('copy-index-dist', copyIndexDist);
 gulp.task('copy-index-app', copyIndexApp);
 gulp.task('copy-sitemap', copySitemap);
 gulp.task('copy-i18n', copyI18n);
-gulp.task('copy-fonts', copyFonts);
+gulp.task('constants', appConstants);
 
+// listnride and vendor scripts
 gulp.task('vendors', vendors);
 gulp.task('scripts-deploy', scriptsDeploy);
 gulp.task('base-tag', baseTag);
 
+// images and fonts
 gulp.task('images-png', imagesPng);
 gulp.task('images-svg', imagesSvg);
-gulp.task('constants', appConstants);
+gulp.task('copy-fonts', copyFonts);
+gulp.task('images', ['images-png', 'images-svg']);
 
+// remove the caches, clean extra folders after running scripts
 gulp.task('clean', clean);
 gulp.task('clean-extras', cleanExtras);
 gulp.task('clean-extras-local', cleanExtrasLocal);
 gulp.task('changes-in-index', changesInIndex);
 gulp.task('watch', watch);
 
+// append revisions to invalidate cache after deployment
 gulp.task('revisions', revisions);
 gulp.task('replace-revisions-index', replaceRevisionsIndex);
 
+// shop integration related tasks
 gulp.task('prefix-lnr-shop-integration', prefixLnrShopIntegration);
 gulp.task('minify-lnr-shop-integration', minifyLnrShopIntegration);
 gulp.task('clean-lnr-shop-integration', cleanLnrShopIntegration);
 gulp.task('deploy-lnr-shop-integration', deployLnrShopIntegration);
 
+// shop solution related tasks
 gulp.task('resources-lnr-shop-solution', resourcesLnrShopSolution);
 gulp.task('concat-lnr-shop-solution', concatLnrShopSolution);
 gulp.task('minify-lnr-shop-solution', minifyLnrShopSolution);
 gulp.task('clean-lnr-shop-solution', cleanLnrShopSolution);
 gulp.task('deploy-lnr-shop-solution', deployLnrShopSolution);
-
 gulp.task('clean-lnr-shop', cleanLnrShop);
 
-gulp.task('images', ['images-svg', 'images-png']);
+// gulp major tasks
 gulp.task('local', local);
 gulp.task('default', ['local']);
 gulp.task('deploy', deploy);
