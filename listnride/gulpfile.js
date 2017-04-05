@@ -78,7 +78,7 @@ gulp.task('clean-lnr-shop', cleanLnrShop);
 // failing on production
 // heroku on production uses
 // different version 
-gulp.task('images', ['images-png']);
+gulp.task('images', ['images-png', 'images-svg']);
 gulp.task('local', local);
 gulp.task('default', ['local']);
 gulp.task('deploy', deploy);
@@ -555,6 +555,7 @@ function deploy(cb) {
         'copy-index-tmp',
         'cache-templates-modules',
         'cache-templates-services',
+        'images',
         'copy-fonts',
         'vendors',
         'scripts-deploy',

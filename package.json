@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "node js packages, script to wrap angular app in Heroku",
   "engines": {
-    "node": "5.9.1"
+    "node": "6.9.x",
+    "npm": "4.1.x"
   },
   "main": "index.js",
   "scripts": {
