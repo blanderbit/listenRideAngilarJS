@@ -555,7 +555,6 @@ function deploy(cb) {
         'copy-index-tmp',
         'cache-templates-modules',
         'cache-templates-services',
-        'images',
         'copy-fonts',
         'vendors',
         'scripts-deploy',
