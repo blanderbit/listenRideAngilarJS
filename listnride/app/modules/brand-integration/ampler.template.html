@@ -36,10 +36,35 @@
     <br>
 
     <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h1 class="md-headline">{{ 'brand-integration.ampler.choose-location' | translate }}</h1>
+      <!-- <h1 class="md-headline">{{ 'brand-integration.ampler.choose-location' | translate }}</h1> -->
+      <md-menu md-position-mode="target bottom">
+        <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">
+          <h1 class="md-right-arrow md-headline">{{ 'brand-integration.ampler.choose-location' | translate }}</h1>
+        </md-button>
+        <md-menu-content width="5">        
+          <md-menu-item>
+            <md-button md-no-ink><h1 class="md-subhead">{{ 'shared.berlin' | translate }}</h1></md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button md-no-ink><h1 class="md-subhead">{{ 'shared.munich' | translate }}</h1></md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button md-no-ink><h1 class="md-subhead">{{ 'shared.hamburg' | translate }}</h1></md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button md-no-ink><h1 class="md-subhead">{{ 'shared.vienna' | translate }}</h1></md-button>
+          </md-menu-item>
+        </md-menu-content>
+      </md-menu>
     </div>
 
-    <md-tabs md-no-pagination md-dynamic-height md-no-ink md-no-ink-bars md-center-tabs="on">
+    <md-content>
+      <div flex-gt-xs layout="row" layout-wrap layout-padding>
+        <bike-card ng-repeat="bike in ampler.currentBikes" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+      </div>
+    </md-content>
+
+    <!-- <md-tabs md-no-pagination md-dynamic-height md-no-ink md-no-ink-bars md-center-tabs="on">
       <md-tab style="font-size: 40px" label="{{ 'shared.berlin' | translate }}">
         <md-content>
           <div flex-gt-xs layout="row" layout-wrap layout-padding>
@@ -54,7 +79,21 @@
           </div>
         </md-content>
       </md-tab>
-    </md-tabs>
+      <md-tab label="{{ 'shared.hamburg' | translate }}">
+        <md-content>
+          <div flex-gt-xs layout="row" layout-wrap layout-padding>
+            <bike-card ng-repeat="bike in ampler.bikesHamburg" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+          </div>
+        </md-content>
+      </md-tab>
+      <md-tab label="{{ 'shared.vienna' | translate }}">
+        <md-content>
+          <div flex-gt-xs layout="row" layout-wrap layout-padding>
+            <bike-card ng-repeat="bike in ampler.bikesVienna" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+          </div>
+        </md-content>
+      </md-tab>
+    </md-tabs> -->
 
     <br>
     <md-divider></md-divider>
