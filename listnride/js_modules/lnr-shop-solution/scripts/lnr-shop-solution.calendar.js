@@ -1,6 +1,6 @@
-/* global calendar _ $ helper*/
+/* global _ $ helper date */
 // render the calendar
-
+var calendar = {};
 calendar.event = {};
 calendar.event.pickupSlotId;
 calendar.event.returnSlotId;
@@ -26,7 +26,7 @@ calendar.initCalendarPicker = function () {
 
                 calendar.startDate = start;
                 calendar.endDate = end;
-                calendar.dateChange(calendar.startDate, calendar.endDate);
+                calendar.dateChange();
                 if (calendar.openingHoursAvailable()) {
                     calendar.setInitHours();
                 }
@@ -62,7 +62,9 @@ calendar.setInitHours = function () {
     firstDay = calendar.openHours(firstDay);
     lastDay = calendar.openHours(lastDay);
     calendar.startTime = firstDay[0];
-    calendar.endTime = lastDay[lastDay.length - 1]
+    calendar.endTime = lastDay[lastDay.length - 1];
+    helper.updateTimeRangeText();    
+    helper.onDateChange();
 };
 
 calendar.classifyDate = function (date) {
@@ -123,20 +125,21 @@ calendar.initOverview = function () {
     calendar.datesValid = false;
 };
 
-calendar.dateChange = function (startDate, endDate) {
+calendar.dateChange = function () {
     if (calendar.isDateInvalid()) {
         calendar.duration = date.duration(undefined, undefined, 0);
         calendar.subtotal = 0;
         calendar.lnrFee = 0;
         calendar.total = 0;
     } else {
-        var invalidDays = countInvalidDays(startDate, endDate);
-        calendar.duration = date.duration(startDate, endDate, invalidDays);
+        var invalidDays = countInvalidDays(calendar.startDate, calendar.endDate);
+        calendar.duration = date.duration(calendar.startDate, calendar.endDate, invalidDays);
         // Price calculation differs slightly between event rentals (bikeFamily 2 or 9) and standard rentals
-        if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9) {
-            var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, 4, invalidDays);
+        if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9 || calendar.bikeFamily == 11) {
+            invalidDays = 0;
+            var subtotal = date.subtotal(calendar.startDate, calendar.endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, 4, invalidDays);
         } else {
-            var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, null, invalidDays);
+            var subtotal = date.subtotal(calendar.startDate, calendar.endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, null, invalidDays);
         }
         var fee = subtotal * 0.125;
         var tax = fee * 0.19;
@@ -144,7 +147,7 @@ calendar.dateChange = function (startDate, endDate) {
         calendar.lnrFee = fee + tax;
         calendar.total = subtotal + fee + tax;
     }
-    helper.onDateChange(startDate, endDate, calendar);
+    helper.onDateChange();
 };
 
 function countInvalidDays(startDate, endDate) {
@@ -198,7 +201,7 @@ calendar.onTimeChange = function (slot) {
     var date = new Date(calendar[slotDate]);
     date.setHours(calendar[slotTime], 0, 0, 0);
     calendar[slotDate] = date;
-    calendar.dateChange(calendar.startDate, calendar.endDate);
+    calendar.dateChange();
 };
 
 calendar.event.changePickupSlot = function () {
@@ -227,7 +230,7 @@ calendar.event.changePickupSlot = function () {
     // Presets returnSlot to be (slotDuration) after pickupSlot 
     calendar.event.returnSlotId = parseInt(calendar.event.pickupSlotId) + slotDuration;
     calendar.event.changeReturnSlot();
-    calendar.dateChange(calendar.startDate, calendar.endDate);
+    calendar.dateChange();
 };
 
 calendar.event.changeReturnSlot = function () {
@@ -239,7 +242,7 @@ calendar.event.changeReturnSlot = function () {
         calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
     }
 
-    calendar.dateChange(calendar.startDate, calendar.endDate);
+    calendar.dateChange();
 };
 
 calendar.event.reserved = function () {

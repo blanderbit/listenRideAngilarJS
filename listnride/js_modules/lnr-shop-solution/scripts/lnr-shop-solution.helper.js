@@ -181,8 +181,7 @@ var helper = {
      * @param {object} calendar it is an object 
      * @returns {string} param
      */
-    onDateChange: function (startDate, endDate, calendar) {
-
+    onDateChange: function () {
         // calendar duration
         $('*[id*=lnr-calendar-duration]').each(function (index, element) {
             $(element).html(calendar.duration);
@@ -211,20 +210,20 @@ var helper = {
 
         // calendar start date
         $('[id=lnr-date-start]').each(function (index, element) {
-            $(element).html('from ' + startDate.getDate() +
-                '.' + startDate.getMonth() +
-                '.' + startDate.getFullYear());
+            $(element).html('from ' + calendar.startDate.getDate() +
+                '.' + calendar.startDate.getMonth() +
+                '.' + calendar.startDate.getFullYear());
         });
 
-        $('.rental-info-from').text(startDate.getDate() + '.' +
-            startDate.getMonth() + '.' +
-            startDate.getFullYear() + ', ' +
+        $('.rental-info-from').text(calendar.startDate.getDate() + '.' +
+            calendar.startDate.getMonth() + '.' +
+            calendar.startDate.getFullYear() + ', ' +
             calendar.startTime + ':00'
         );
 
-        $('.rental-info-to').text(endDate.getDate() + '.' +
-            endDate.getMonth() + '.' +
-            endDate.getFullYear() + ', ' +
+        $('.rental-info-to').text(calendar.endDate.getDate() + '.' +
+            calendar.endDate.getMonth() + '.' +
+            calendar.endDate.getFullYear() + ', ' +
             calendar.endTime + ':00'
         );
 
@@ -233,9 +232,9 @@ var helper = {
 
         // calendar end date
         $('[id=lnr-date-end]').each(function (index, element) {
-            $(element).html('to ' + endDate.getDate() +
-                '.' + endDate.getMonth() +
-                '.' + endDate.getFullYear());
+            $(element).html('to ' + calendar.endDate.getDate() +
+                '.' + calendar.endDate.getMonth() +
+                '.' + calendar.endDate.getFullYear());
         });
     },
     /**
