@@ -1,9 +1,20 @@
 /* global calendar _ $ helper*/
 // render the calendar
-calendar.initCalendarPicker = function() {
+
+calendar.event = {};
+calendar.event.pickupSlotId;
+calendar.event.returnSlotId;
+
+calendar.event.familyId = 12;
+
+var slotDuration = 1;
+var eventYear = 2017;
+var eventMonth = 2;   // Months start at 0, so February = 1
+
+calendar.initCalendarPicker = function () {
     if (calendar.requests !== undefined) {
         calendar.owner = calendar.userId;
-        if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9) {
+        if (calendar.bikeFamily == calendar.event.familyId) {
             calendar.event.reserved();
         }
         $('#bike-calendar').dateRangePicker(helper.calenderConfigObject)
@@ -15,7 +26,7 @@ calendar.initCalendarPicker = function() {
 
                 calendar.startDate = start;
                 calendar.endDate = end;
-               calendar.dateChange(calendar.startDate, calendar.endDate);
+                calendar.dateChange(calendar.startDate, calendar.endDate);
                 if (calendar.openingHoursAvailable()) {
                     calendar.setInitHours();
                 }
@@ -27,7 +38,7 @@ calendar.initCalendarPicker = function() {
     }
 };
 
-calendar.getWeekDay = function(date) {
+calendar.getWeekDay = function (date) {
     var dayOfWeek = date.getDay() - 1;
     if (dayOfWeek == -1) {
         dayOfWeek = 6;
@@ -35,7 +46,7 @@ calendar.getWeekDay = function(date) {
     return dayOfWeek
 };
 
-calendar.openHours = function(weekDay) {
+calendar.openHours = function (weekDay) {
     var workingHours = [];
     $.each(weekDay, function (key, value) {
         var from = value.start_at / 3600;
@@ -45,7 +56,7 @@ calendar.openHours = function(weekDay) {
     return workingHours
 };
 
-calendar.setInitHours = function() {
+calendar.setInitHours = function () {
     var firstDay = calendar.bikeOwner.opening_hours.hours[calendar.getWeekDay(calendar.startDate)];
     var lastDay = calendar.bikeOwner.opening_hours.hours[calendar.getWeekDay(calendar.endDate)];
     firstDay = calendar.openHours(firstDay);
@@ -54,7 +65,7 @@ calendar.setInitHours = function() {
     calendar.endTime = lastDay[lastDay.length - 1]
 };
 
-calendar.classifyDate = function(date) {
+calendar.classifyDate = function (date) {
     date.setHours(0, 0, 0, 0);
     var now = new Date();
     now.setHours(0, 0, 0, 0);
@@ -69,14 +80,14 @@ calendar.classifyDate = function(date) {
     }
 };
 
-calendar.dateClosed = function(date) {
+calendar.dateClosed = function (date) {
     if (calendar.openingHoursAvailable()) {
         return _.isEmpty(calendar.bikeOwner.opening_hours.hours[calendar.getWeekDay(date)]);
     }
     return false
 };
 
-calendar.openingHoursAvailable = function() {
+calendar.openingHoursAvailable = function () {
     var returnBool = calendar.bikeOwner &&
         calendar.bikeOwner.opening_hours &&
         calendar.bikeOwner.opening_hours.enabled &&
@@ -84,7 +95,7 @@ calendar.openingHoursAvailable = function() {
     return returnBool;
 };
 
-calendar.isReserved = function(date) {
+calendar.isReserved = function (date) {
     for (var i = 0; i < calendar.requests.length; ++i) {
         var start = new Date(calendar.requests[i].start_date);
         start.setHours(0, 0, 0, 0);
@@ -99,7 +110,7 @@ calendar.isReserved = function(date) {
     return false;
 };
 
-calendar.initOverview = function() {
+calendar.initOverview = function () {
     calendar.startTime = 10;
     calendar.endTime = 18;
 
@@ -112,7 +123,7 @@ calendar.initOverview = function() {
     calendar.datesValid = false;
 };
 
-calendar.dateChange = function(startDate, endDate) {
+calendar.dateChange = function (startDate, endDate) {
     if (calendar.isDateInvalid()) {
         calendar.duration = date.duration(undefined, undefined, 0);
         calendar.subtotal = 0;
@@ -135,7 +146,7 @@ calendar.dateChange = function(startDate, endDate) {
     }
     helper.onDateChange(startDate, endDate, calendar);
 };
-    
+
 function countInvalidDays(startDate, endDate) {
     var totalDays = Math.abs(startDate.getDate() - endDate.getDate()) + 1;
     var currentDay = new Date(endDate);
@@ -187,5 +198,65 @@ calendar.onTimeChange = function (slot) {
     var date = new Date(calendar[slotDate]);
     date.setHours(calendar[slotTime], 0, 0, 0);
     calendar[slotDate] = date;
-   calendar.dateChange(calendar.startDate, calendar.endDate);
+    calendar.dateChange(calendar.startDate, calendar.endDate);
+};
+
+calendar.event.changePickupSlot = function () {
+    // Define picked slot as pickupSlot
+    calendar.event.slots[calendar.event.pickupSlotId].pickup = true;
+    // Enable all following slots as returnSlots if no booking is inbetween
+    var bookingInBetween = false;
+    _.each(calendar.event.slots, function (value, index) {
+        if (index > calendar.event.pickupSlotId) {
+            if (value.reserved && calendar.event.slots[index - 1].reserved) {
+                bookingInBetween = true;
+            }
+            if (bookingInBetween) {
+                value.returnDisabled = true;
+            } else {
+                value.returnDisabled = false;
+            }
+        } else {
+            value.returnDisabled = true;
+        }
+    });
+
+    var slot = calendar.event.slots[calendar.event.pickupSlotId];
+    calendar.startDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
+
+    // Presets returnSlot to be (slotDuration) after pickupSlot 
+    calendar.event.returnSlotId = parseInt(calendar.event.pickupSlotId) + slotDuration;
+    calendar.event.changeReturnSlot();
+    calendar.dateChange(calendar.startDate, calendar.endDate);
+};
+
+calendar.event.changeReturnSlot = function () {
+    var slot = calendar.event.slots[calendar.event.returnSlotId];
+
+    if (slot.overnight) {
+        calendar.endDate = new Date(eventYear, eventMonth, slot.day + 1, slot.hour, 0, 0, 0);
+    } else {
+        calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
+    }
+
+    calendar.dateChange(calendar.startDate, calendar.endDate);
+};
+
+calendar.event.reserved = function () {
+    for (var i = 0; i < calendar.requests.length; i++) {
+        var startDate = new Date(calendar.requests[i].start_date);
+        var endDate = new Date(calendar.requests[i].end_date);
+        var startDay = startDate.getDate();
+        var startTime = startDate.getHours();
+        var endTime = endDate.getHours();
+        var startYear = startDate.getFullYear();
+        var startMonth = startDate.getMonth();
+
+        for (var j = 0; j < calendar.event.slots.length; j++) {
+            if (startYear == eventYear && startMonth == eventMonth && calendar.event.slots[j].day == startDay && calendar.event.slots[j].hour >= startTime && (calendar.event.slots[j].overnight || calendar.event.slots[j].hour + slotDuration <= endTime)) {
+                calendar.event.slots[j].reserved = true;
+                calendar.event.slots[j].text = calendar.event.slots[j].text.split(" ", 1) + " (booked)";
+            }
+        }
+    }
 };
