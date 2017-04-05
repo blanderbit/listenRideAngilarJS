@@ -8,10 +8,9 @@ angular.module('brand-integration',[]).component('ampler', {
       var ampler = this;
 
       ampler.currentBikes = [];
-      ampler.currentCity = $translate.instant("brand-integration.ampler.choose-location");
-      $translate(["brand-integration.ampler.choose-location"]).then(
+      $translate(["shared.berlin"]).then(
         function (translations) {
-          ampler.currentCity = translations["brand-integration.ampler.choose-location"];
+          ampler.currentCity = translations["shared.berlin"];
         }
       );
       ampler.bikes = {
