@@ -3,11 +3,12 @@
 angular.module('brand-integration',[]).component('ampler', {
   templateUrl: 'app/modules/brand-integration/ampler.template.html',
   controllerAs: 'ampler',
-  controller: [ 'api',
-    function AmplerController(api) {
+  controller: [ '$translate', 'api',
+    function AmplerController($translate, api) {
       var ampler = this;
 
       ampler.currentBikes = [];
+      ampler.currentCity = $translate.instant("brand-integration.ampler.choose-location");
       ampler.bikes = {
         berlin: [],
         munich: [],
@@ -34,7 +35,8 @@ angular.module('brand-integration',[]).component('ampler', {
         }
       );
 
-      ampler.switchCity = function(city) {
+      ampler.showBikesIn = function(city) {
+        ampler.currentCity = $translate.instant("shared." + city);
         ampler.currentBikes = ampler.bikes[city];
       }
 
