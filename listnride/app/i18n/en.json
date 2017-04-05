@@ -30,6 +30,7 @@
     "lnr-fee": "listnride fee (incl. tax)",
     "total": "total",
     "from": "from",
+    "from2": "from",
     "to": "to",
     "cancel": "Cancel",
     "send": "Send",

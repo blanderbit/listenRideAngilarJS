@@ -30,6 +30,7 @@
     "lnr-fee": "listnride Gebühren (inkl. MwSt)",
     "total": "Insgesamt",
     "from": "von",
+    "from2": "ab",
     "to": "bis",
     "cancel": "Abbrechen",
     "send": "Senden",
