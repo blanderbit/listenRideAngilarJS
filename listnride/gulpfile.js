@@ -74,7 +74,11 @@ gulp.task('deploy-lnr-shop-solution', deployLnrShopSolution);
 
 gulp.task('clean-lnr-shop', cleanLnrShop);
 
-gulp.task('images', ['images-svg', 'images-png']);
+// 'images-svg' -- disabled
+// failing on production
+// heroku on production uses
+// different version 
+gulp.task('images', ['images-png']);
 gulp.task('local', local);
 gulp.task('default', ['local']);
 gulp.task('deploy', deploy);
