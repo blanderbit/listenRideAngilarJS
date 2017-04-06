@@ -61,7 +61,19 @@
     "Sun": "So",
     "join": "Mitmachen",
     "voucher": "Gutschein",
-    "download": "Download"
+    "download": "Download",
+    "Jan": "Jän",
+    "Feb": "Feb",
+    "Mar": "März",
+    "Apr": "Apr",
+    "May": "Mai",
+    "Jun": "Juni",
+    "Jul": "Juli",
+    "Aug": "Aug",
+    "Sep": "Sept",
+    "Oct": "Okt",
+    "Nov": "Nov",
+    "Dec": "Dez"
   },
 
   "toasts": {
@@ -594,6 +606,18 @@
     "see-all": "See Other Jobs",
     "open": "Offene Positionen",
     "go-back" : "Zurück"
+  },
+
+  "invoices": {
+    "request_id": "Request ID",
+    "bike": "Bike",
+    "start_date": "Start date",
+    "end_date": "End date",
+    "location": "Location",
+    "payout": "Payout",
+    "you_paid": "You paid",
+    "invoice": "Invoice",
+    "billing": "Billing"
   },
 
   "contact-and-help": {
