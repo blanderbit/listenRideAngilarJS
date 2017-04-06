@@ -1484,6 +1484,15 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
   padding: 15px;
 }
 
+.repeated-mobile-items h1{
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+}
+
+.lnr-mobile-billing {
+  padding-top: 15px;
+}
+
 .lnr-list-button .md-button {
   min-height: inherit;
   min-width: inherit;
