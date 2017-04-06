@@ -588,7 +588,8 @@
     "location": "Location",
     "payout": "Payout",
     "you_paid": "You paid",
-    "invoice": "Invoice"
+    "invoice": "Invoice",
+    "billing": "Billing"
   },
 
   "contact-and-help": {
