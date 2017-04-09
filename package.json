@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "node js packages, script to wrap angular app in Heroku",
   "engines": {
-    "node": "5.9.1"
+    "node": "6.9.x",
+    "npm": "4.1.x"
   },
   "main": "index.js",
   "scripts": {
@@ -37,7 +38,8 @@
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1",
     "run-sequence": "^1.2.2",
-    "prerender-node": "^2.5.0"
+    "prerender-node": "^2.5.0",
+    "postcss": "^5.2.16"
   },
   "keywords": [
     "node",

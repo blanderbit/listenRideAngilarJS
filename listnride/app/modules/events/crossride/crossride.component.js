@@ -14,6 +14,7 @@ angular.module('crossride',[]).component('crossride', {
         function(error) {
           console.log("Error retrieving User", error);
         }
+        
       );
 
     }

@@ -1,0 +1,21 @@
+<md-dialog>
+
+  <md-toolbar class="md-accent">
+    <div class="md-toolbar-tools" layout-align="center center">
+      <md-button class="md-icon-button">
+        <md-icon></md-icon>
+      </md-button>
+      <span flex></span>
+      <h2 class="md-headline">{{ 'bike.rent-bike' | translate }}</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="calendarDialog.hide()">
+        <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-dialog-content>
+    <calendar bike-id="calendarDialog.bike.data.id" user-id="calendarDialog.bike.data.user.id" price-half-day="calendarDialog.bike.data.price_half_daily" price-day="calendarDialog.bike.data.price_daily" bike-family="calendarDialog.bike.data.family" price-week="calendarDialog.bike.data.price_weekly" requests="calendarDialog.bike.data.requests"></calendar>
+  </md-dialog-content>
+
+</md-dialog>

@@ -18,7 +18,7 @@ angular.module('requests',[]).component('requests', {
       requests.selectedTab = 0;
 
       requests.filters = {
-        options: ['all requests', 'current rentals', 'pending rentals', 'upcoming rentals', 'past rentals'],
+        options: ['all requests', 'current rentals', 'pending rentals', 'upcoming rentals', 'past rentals', 'expired requests'],
         riderSelected: 0,
         listerSelected: 0,
         applyFilter: function (request, selected) {
@@ -27,6 +27,9 @@ angular.module('requests',[]).component('requests', {
           if (selected === 0) requests.filterBikes(request);
           else if (selected === 1) requests.filterCurrentRentals(request);
           else if (selected === 2) requests.filterPendingRequests(request);
+          else if (selected === 3) requests.filterUpcomingRentals(request);
+          else if (selected === 4) requests.filterPastRentals(request);
+          else if (selected === 4) requests.filterExpiredRequests(request);
         }
       };
       // selected request for rider or lister
@@ -76,7 +79,7 @@ angular.module('requests',[]).component('requests', {
         } else {
           $mdDialog.hide();
         }
-      }
+      };
 
       // Handles initial request loading
       requests.loadRequest = function(requestId, userId) {
@@ -191,7 +194,7 @@ angular.module('requests',[]).component('requests', {
           clickOutsideToClose: true,
           fullscreen: false // Only for -xs, -sm breakpoints.
         });
-      }
+      };
 
       var showChatDialog = function(event) {
         $mdDialog.show({
@@ -205,7 +208,7 @@ angular.module('requests',[]).component('requests', {
           clickOutsideToClose: false,
           fullscreen: true // Only for -xs, -sm breakpoints.
         });
-      }
+      };
 
       var showBookingDialog = function(event) {
         $mdDialog.show({
@@ -372,13 +375,13 @@ angular.module('requests',[]).component('requests', {
         };
 
         ratingDialog.hide = hideDialog;
-      }
+      };
 
       /**
        * filter lister/rider requests from all requests
        * DOM filtering is avoid b/c of performance overhead
-       * @return {requests} requests[requests]
-       * @param {string} requests 
+       * @return {requests} returns requests based on provided filter
+       * @param {string} request type of request (as a lister or as a rider)
        */
       requests.filterBikes = function (request) {
         requests[request] = requests.allRequests.filter(function (response) {
@@ -390,8 +393,8 @@ angular.module('requests',[]).component('requests', {
       /**
        * All rentals which are currently rented out.
        * Within Request Start Date and End Date.
-       * @return {requests} requests[requests]
-       * @param {string} requests 
+       * @return {requests} current rentals
+       * @param {string} request type of request (as a lister or as a rider) 
        */
       requests.filterCurrentRentals = function (request) {
         // filter for lister or rider
@@ -406,6 +409,8 @@ angular.module('requests',[]).component('requests', {
        * It is a request sent by rider, but not yet accepted by the lister. 
        * The pending request moves to Upcoming Rentals as soon as the lister
        * accepted and the rider accepted and paid
+       * @return {requests} pending requests
+       * @param {string} request type of request (as a lister or as a rider)
        */
       requests.filterPendingRequests = function (request) {
         // filter for lister or rider
@@ -420,43 +425,51 @@ angular.module('requests',[]).component('requests', {
        * It is a request sent by rider, but not yet accepted by the lister. 
        * The pending request moves to Upcoming Rentals as soon as the lister
        * accepted and the rider accepted and paid
+       * @return {requests} upcoming rentals
+       * @param {string} request type of request (as a lister or as a rider)
        */
       requests.filterUpcomingRentals = function (request) {
-        var currentDate = new Date();
         // filter for lister or rider
         requests.filterBikes(request);
         // filter for pending requests
         requests[request] = requests[request].filter(function (response) {
-          return (response.status === 3 && (response.start_date > currentDate));
+          var currentDate = Date.parse(new Date());
+          var startDate = Date.parse(response.start_date);
+          return (response.status === 3 && (startDate > currentDate));
         });
       };
 
       /**
        * Rentals accepted and paid but are now in the past,
        * meaning 24h after the End Date.
+       * @return {requests} past rentals
+       * @param {string} request type of request (as a lister or as a rider)
        */
       requests.filterPastRentals = function (request) {
-        var currentDate = new Date();
         // filter for lister or rider
         requests.filterBikes(request);
         // filter for pending requests
         requests[request] = requests[request].filter(function (response) {
-          return (response.status === 3 && (response.end_date < currentDate));
+          var currentDate = Date.parse(new Date());
+          var endDate = Date.parse(response.end_date);
+          return (response.status === 3 && (endDate < currentDate));
         });
       };
 
       /**
        * These were the pending requests
        * but their end time is now over
-       * 
+       * @return {requests} expired requests
+       * @param {string} request type of request (as a lister or as a rider)
        */
       requests.filterExpiredRequests = function (request) {
-        var currentDate = new Date();
         // filter for lister or rider
         requests.filterBikes(request);
         // filter for pending requests
         requests[request] = requests[request].filter(function (response) {
-          return ((response.status === 1 || response.status === 2) && (response.end_date < currentDate));
+          var currentDate = Date.parse(new Date());
+          var endDate = Date.parse(response.end_date);
+          return ((response.status === 1 || response.status === 2) && (endDate < currentDate));
         });
       };
     }

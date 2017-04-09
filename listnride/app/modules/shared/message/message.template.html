@@ -27,7 +27,7 @@
     <div ng-if="!message.request.rideChat && message.status == 1">
       <div layout="row" layout-align="center center">
         <md-button class="md-warn" ng-disabled="message.request.status != 1" ng-click="message.updateStatus(8)" analytics-on analytics-category="link" analytics-event="clicked" analytics-label="request reject">{{ 'message.reject' | translate }}</md-button>
-        <md-button ng-disabled="message.request.status != 1" ng-click="message.updateStatus(2)" analytics-on analytics-category="link" analytics-event="clicked" analytics-label="request accept">{{ 'message.accept' | translate }}</md-button>
+        <md-button ng-disabled="message.request.status != 1" ng-click="message.acceptBooking()" analytics-on analytics-category="link" analytics-event="clicked" analytics-label="request accept">{{ 'message.accept' | translate }}</md-button>
       </div>
     </div>
 

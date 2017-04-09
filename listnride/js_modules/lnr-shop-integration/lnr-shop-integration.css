@@ -1,0 +1,223 @@
+.mdl-card__media {
+  background-color: #fff !important
+}
+
+.lnr-card-wide.mdl-card {
+  width: 100% !important
+}
+
+.lnr-card-wide>.mdl-card__menu {
+  color: #fff
+}
+
+.lnr-card-event>.mdl-card__actions {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center
+}
+
+.lnr-card-event>.mdl-card__actions>.material-icons {
+  padding-right: 10px !important
+}
+
+
+/* font */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+md-card {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+
+/* general */
+
+.md-color-foreground {
+  color: rgb(85, 85, 85) !important;
+}
+
+md-icon.lnr-icn-lrg {
+  width: 48px;
+  height: 48px;
+}
+md-icon > img {
+    border: none !important;
+}
+.lnr-margin-left {
+  margin-left: 8px;
+}
+div.lnr-intro-text {
+  padding: 40px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif !important;
+}
+a:link, a:visited, a:active, a:hover, a:focus {
+    color: rgb(95, 198, 147);
+}
+.md-subhead {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 24px;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.md-headline {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+
+/* bike card */
+
+.md-card-image {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+md-card>a>img,
+md-card>md-card-header a img,
+md-card md-card-title-media a img {
+  box-sizing: border-box;
+  display: flex;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  width: 100%;
+  height: auto;
+  border: none !important;
+}
+
+md-card {
+  box-sizing: border-box !important;;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  color: rgb(85, 85, 85);
+  background-color: rgb(255, 255, 255);
+  border-top-color: rgba(206, 212, 216, 0.901961);
+  border-right-color: rgba(206, 212, 216, 0.901961);
+  border-bottom-color: rgba(206, 212, 216, 0.901961);
+  border-left-color: rgba(206, 212, 216, 0.901961);
+}
+
+md-card md-card-title {
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  display: flex;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+}
+
+md-card md-card-title md-card-title-text {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  display: flex;
+}
+
+md-card md-card-title md-card-title-text .md-subhead {
+  font-weight: 500 !important;
+}
+
+md-card.lnr-bike-card md-card-title-text span {
+  max-width: 92%;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+}
+
+md-icon {
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  color: rgb(68, 68, 68);
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentcolor;
+  height: 24px;
+  width: 24px;
+  min-height: 24px;
+  min-width: 44px;
+}
+
+md-icon svg {
+  pointer-events: none;
+  display: block;
+  fill: rgb(85, 85, 85);
+}
+
+
+/* layout */
+
+.layout,
+.layout-column,
+.layout-row {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.layout-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+}
+
+.layout-align-space-around,
+.layout-align-space-around-center,
+.layout-align-space-around-start,
+.layout-align-space-around-end,
+.layout-align-space-around-stretch {
+  justify-content: space-around;
+}
+
+.layout-align-start-start,
+.layout-align-center-start,
+.layout-align-end-start,
+.layout-align-space-between-start,
+.layout-align-space-around-start {
+  -webkit-box-align: start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.layout-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-width: 0px;
+}

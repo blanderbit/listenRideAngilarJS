@@ -2,7 +2,9 @@ var del = require('del');
 var gulp = require('gulp');
 var config = require('./gulp.config.js')();
 var rev = require('gulp-rev');
-var gulpif = require('gulp-if');
+var gulpIf = require('gulp-if');
+var es = require('event-stream');
+var postcss = require('postcss');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var useref = require('gulp-useref');
@@ -18,44 +20,115 @@ var revReplace = require('gulp-rev-replace');
 var ngAnnotate = require('gulp-ng-annotate');
 var ngConstant = require('gulp-ng-constant');
 var templateCache = require('gulp-angular-templatecache');
-var htmlreplace = require('gulp-html-replace');
+var htmlReplace = require('gulp-html-replace');
 
+var scope;
+var scopeSelector;
 var path = config.path;
 var environments = config.environments;
 var processEnv = process.env.ENVIRONMENT;
 var argvEnv = ('local' === processEnv || 'staging' === processEnv || 'production' === processEnv) ? processEnv : 'local';
 var env = environments[argvEnv];
 
+// linter and code checking
 gulp.task('lint', lint);
+
+// html cache related tasks
 gulp.task('inject-templates-modules', injectTemplatesModules);
 gulp.task('cache-templates-modules', cacheTemplatesModules);
 gulp.task('cache-templates-services', cacheTemplatesServices);
+
+// translations, fonts and app constant
 gulp.task('copy-index-tmp', copyIndexTmp);
 gulp.task('copy-index-dist', copyIndexDist);
 gulp.task('copy-index-app', copyIndexApp);
 gulp.task('copy-sitemap', copySitemap);
+gulp.task('copy-i18n', copyI18n);
+gulp.task('constants', appConstants);
+
+// listnride and vendor scripts
 gulp.task('vendors', vendors);
 gulp.task('scripts-deploy', scriptsDeploy);
 gulp.task('base-tag', baseTag);
-gulp.task('copy-i18n', copyI18n);
-gulp.task('copy-fonts', copyFonts);
+
+// images and fonts
 gulp.task('images-png', imagesPng);
 gulp.task('images-svg', imagesSvg);
-gulp.task('constants', appConstants);
+gulp.task('copy-fonts', copyFonts);
+gulp.task('images', ['images-png', 'images-svg']);
+
+// remove the caches, clean extra folders after running scripts
 gulp.task('clean', clean);
 gulp.task('clean-extras', cleanExtras);
 gulp.task('clean-extras-local', cleanExtrasLocal);
 gulp.task('changes-in-index', changesInIndex);
 gulp.task('watch', watch);
+
+// append revisions to invalidate cache after deployment
 gulp.task('revisions', revisions);
 gulp.task('replace-revisions-index', replaceRevisionsIndex);
-gulp.task('embed', embed);
-gulp.task('copy-moment', copyMoment);
-gulp.task('images', ['images-svg', 'images-png']);
+
+// shop integration related tasks
+gulp.task('prefix-lnr-shop-integration', prefixLnrShopIntegration);
+gulp.task('minify-lnr-shop-integration', minifyLnrShopIntegration);
+gulp.task('clean-lnr-shop-integration', cleanLnrShopIntegration);
+gulp.task('deploy-lnr-shop-integration', deployLnrShopIntegration);
+
+// shop solution related tasks
+gulp.task('resources-lnr-shop-solution', resourcesLnrShopSolution);
+gulp.task('concat-lnr-shop-solution', concatLnrShopSolution);
+gulp.task('minify-lnr-shop-solution', minifyLnrShopSolution);
+gulp.task('clean-lnr-shop-solution', cleanLnrShopSolution);
+gulp.task('deploy-lnr-shop-solution', deployLnrShopSolution);
+gulp.task('clean-lnr-shop', cleanLnrShop);
+
+// gulp major tasks
 gulp.task('local', local);
 gulp.task('default', ['local']);
 gulp.task('deploy', deploy);
 
+/**
+ * helper method for lnrPrefixCss
+ */
+scope = postcss(function(css) {
+	css.walkRules(function(rule) {
+		rule.selectors = rule.selectors.map(function(selector) {
+			if (selector.trim().toLowerCase() === 'body') {
+				return scopeSelector;
+			} else {
+				return scopeSelector + ' ' + selector;
+			}
+		});
+	});
+});
+/**
+ * prefixes the styles with
+ * given prefixer
+ * could be used to avoid styles global leakage
+ * @param {object} scopeSelectorOption options for prefixes
+ * @returns {callback} callback 
+ */
+function lnrPrefixCss(scopeSelectorOption) {
+	scopeSelector = scopeSelectorOption;
+	return es.map(function(file, callback) {
+		if (file.isNull()) {
+			return callback(null, file);
+		}
+		if (file.isBuffer()) {
+			file.contents = new Buffer(scope.process(file.contents).css);
+		}
+		if (file.isStream()) {
+			var through = es.through();
+			var wait = es.wait(function(err, contents) {
+				through.write(scope.process(contents).css);
+				through.end();
+			});
+			file.contents.pipe(wait);
+			file.contents = through;
+		}
+		return callback(null, file);
+	});
+}
 /**
  * eslint through all js files
  * @returns {gulp} for chaining
@@ -137,11 +210,11 @@ function copySitemap() {
  * @returns {gulp} for chaining
  */
 function vendors() {
-    return gulp.src('index.html')
+    return gulp.src(path.app.index)
         .pipe(useref())
-        .pipe(gulpif(path.app.js, uglify()))
-        .pipe(gulpif(path.nodeModules, uglify()))
-        .pipe(gulpif('*.css', minifyCss()))
+        .pipe(gulpIf(path.app.js, uglify()))
+        .pipe(gulpIf(path.nodeModules, uglify()))
+        .pipe(gulpIf('*.css', minifyCss()))
         .pipe(gulp.dest(path.dist.root));
 }
 /**
@@ -151,7 +224,7 @@ function vendors() {
  */
 function copyIndexDist() {
     return gulp.src('./app/index.html')
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest(path.dist.root));
 }
 /**
  * concat all development js files - local
@@ -159,11 +232,15 @@ function copyIndexDist() {
  * @returns {gulp} for chaining
  */
 function scriptsDeploy() {
-    return gulp.src(path.dist.app)
-        .pipe(concat('app.min.js'))
+    gulp.src(path.dist.app)
+        .pipe(concat(path.dist.source))
         .pipe(ngAnnotate())
         .pipe(gulp.dest(path.dist.root))
-        .pipe(uglify('app.min.js'))
+        .pipe(uglify(path.dist.source))
+        .pipe(gulp.dest(path.dist.root));
+
+    return gulp.src(path.dist.vendors)
+        .pipe(uglify(path.dist.sourceVendors))
         .pipe(gulp.dest(path.dist.root));
 }
 /**
@@ -172,8 +249,8 @@ function scriptsDeploy() {
  */
 function baseTag() {
     return gulp.src(path.dist.index)
-        .pipe(htmlreplace({
-            'base': '<base href="/">'
+        .pipe(htmlReplace({
+            'base': path.app.base
         }))
         .pipe(gulp.dest(path.dist.root));
 }
@@ -214,7 +291,7 @@ function imagesPng() {
 }
 /**
  * optimize svg images
- * loseless compression
+ * lose-less compression
  * @returns {gulp} for chaining
  */
 function imagesSvg() {
@@ -327,30 +404,132 @@ function replaceRevisionsIndex() {
         .pipe(gulp.dest(path.dist.root));
 }
 /**
- * our js file which is used to embed bikes in other sites.
+ * prefix lnr shop integration and vendors styles
+ * with listnride id to avoid leakage of styles
+ * other option is to used iframe
  * @returns {gulp} for chaining
  */
-function embed() {
-    gulp.src(path.embed.css)
-        .pipe(concat('lnr-embed.min.css'))
-        .pipe(gulp.dest(path.dist.root));
-
-    gulp.src(path.embed.js)
-        .pipe(concat('lnr-embed.min.js'))
-        .pipe(ngAnnotate())
-        .pipe(gulp.dest(path.dist.root))
-        .pipe(uglify('lnr-embed.min.js'))
-        .pipe(gulp.dest(path.dist.root));
-
-    return gulp.src(path.app.js_modules)
-        .pipe(gulp.dest(path.dist.js_modules));
+function prefixLnrShopIntegration() {
+    return gulp.src(path.lnrShopIntegration.dist.css)
+        .pipe(lnrPrefixCss(path.lnrShopIntegration.prefix))
+        .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
 }
+/**
+ * minify -- shop integration
+ * @returns {gulp} for chaining
+ */
+function minifyLnrShopIntegration() {
 
-function copyMoment() {
-    return gulp.src(path.app.momentjs)
-        .pipe(gulp.dest(path.dist.moment));
+    // minify style for shop integration
+    // copy to dist folder of shop integration
+    gulp.src([path.lnrShopIntegration.css, path.lnrShopIntegration.vendorCss])
+        .pipe(concat(path.lnrShopIntegration.dist.style))
+        .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
+
+        // currently disabling moinification
+        // breaking @element becuase its not ...
+        // ... standard component
+        // @element is used in place of media queries
+        
+        // .pipe(minifyCss(path.lnrShopIntegration.dist.style))
+        // .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
+
+    // minify source for shop integration
+    // copy to dist folder of shop integration
+    return gulp.src(path.lnrShopIntegration.js)
+        .pipe(concat(path.lnrShopIntegration.dist.source))
+        .pipe(gulp.dest(path.lnrShopIntegration.dist.root))
+        .pipe(uglify(path.lnrShopIntegration.dist.source))
+        .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
 }
+/**
+ * clean dist folder -- shop integration
+ * @returns {gulp} for chaining
+ */
+function cleanLnrShopIntegration(cb) {
+    var cleanFiles = [path.lnrShopIntegration.dist.root];
+    return del(cleanFiles, cb);
+}
+/**
+ * minification and clean -- shop integration
+ * @returns {gulp} for chaining
+ */
+function deployLnrShopIntegration(cb) {
+    runSequence(
+        'clean-lnr-shop-integration',
+        'minify-lnr-shop-integration',
+        'prefix-lnr-shop-integration',
+        cb
+    );
+}
+/**
+ * copy template to tmp folder
+ * @returns 
+ */
+function resourcesLnrShopSolution() {
+    return gulp.src(path.lnrShopSolution.resource)
+        .pipe(gulp.dest(path.lnrShopSolution.dist.root));
+}
+/**
+ * get build tags from template
+ * generate concatenated source and style
+ * save results in dist folder
+ * @returns {gulp} chaining
+ */
+function concatLnrShopSolution() {
+   return gulp.src(path.lnrShopSolution.html)
+        .pipe(useref())
+        .pipe(gulpIf(path.lnrShopSolution.source, uglify()))
+        .pipe(gulpIf(path.lnrShopSolution.style, minifyCss()))        
+        .pipe(gulp.dest(path.lnrShopSolution.dist.root));
+}
+/**
+ * get build tags from template
+ * generate minified source and style
+ * save results in dist folder
+ * @returns {gulp} chaining
+ */
+function minifyLnrShopSolution() {
+    gulp.src(path.lnrShopSolution.dist.source)
+        .pipe(uglify(path.lnrShopSolution.dist.js))
+        .pipe(gulp.dest(path.lnrShopSolution.dist.root));
 
+    return gulp.src(path.lnrShopSolution.dist.style)
+        .pipe(concat(path.lnrShopSolution.dist.css))
+        .pipe(gulp.dest(path.lnrShopSolution.dist.root))
+        .pipe(minifyCss(path.lnrShopSolution.dist.css))
+        .pipe(gulp.dest(path.lnrShopSolution.dist.root));
+}
+/**
+ * clean dist folder -- shop solution
+ * @returns {gulp} chaining
+ */
+function cleanLnrShopSolution(cb) {
+    var cleanFiles = [path.lnrShopSolution.dist.root];
+    return del(cleanFiles, cb);
+}
+/**
+ * run all shop solution tasks [clean, resource, concat, minify]
+ * sequential tasks
+ * @returns {gulp} chaining
+ */
+function deployLnrShopSolution(cb) {
+    runSequence(
+        'clean-lnr-shop-solution',
+        'resources-lnr-shop-solution',
+        'concat-lnr-shop-solution',
+        'minify-lnr-shop-solution',
+        cb
+    );
+}
+/**
+ * clean dist folder -- shop solution
+ * @returns {gulp} chaining
+ */
+function cleanLnrShop(cb) {
+    var cleanFiles = [path.lnrShopSolution.dist.root, path.lnrShopIntegration.dist.root];
+    return del(cleanFiles, cb);
+}
 /**
  * tasks for local development
  * @returns {gulp} for chaining
@@ -376,7 +555,6 @@ function local(cb) {
 function deploy(cb) {
     runSequence(
         'clean',
-        'copy-moment',
         'constants',
         'copy-index-tmp',
         'cache-templates-modules',
@@ -393,7 +571,6 @@ function deploy(cb) {
         'replace-revisions-index',
         'base-tag',
         'copy-sitemap',
-        'embed',
         'clean-extras',
         'clean-extras-local',
         cb);

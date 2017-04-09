@@ -61,7 +61,7 @@
           special: {
             value: "false",
             squash: true
-          },
+          }
         }
       });
 
@@ -90,8 +90,27 @@
       });
 
       $stateProvider.state({
+        name: 'tokenlogin',
+        url: '/requests/{requestId: int}/tokenlogin?shop_token&email',
+        template: '<requests></requests>',
+        resolve: {
+          login: ['$state', '$stateParams', 'authentication', function($state, $stateParams, authentication) {
+            return authentication.tokenLogin($stateParams.shop_token, $stateParams.email).then(
+              function (success) {
+                console.log('success');
+                authentication.setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
+              },
+              function (error) {
+                console.log('error');
+              }
+            );
+          }]
+        }
+      });
+
+      $stateProvider.state({
         name: 'list',
-        url: '/list',
+        url: '/list-bike',
         template: '<list></list>'
       });
 
@@ -102,8 +121,14 @@
       });
 
       $stateProvider.state({
+        name: 'invoices',
+        url: '/invoices',
+        template: '<invoices></invoices>'
+      });
+
+      $stateProvider.state({
         name: 'edit',
-        url: '/edit/{bikeId:int}',
+        url: '/edit-bike/{bikeId:int}',
         template: '<edit></edit>'
       });
 
@@ -147,6 +172,24 @@
         name: 'mcbw',
         url: '/mcbw',
         template: '<mcbw></mcbw>'
+      });
+
+      $stateProvider.state({
+        name: 'cwd',
+        url: '/cyclingworld',
+        templateUrl: 'app/modules/events/cwd/cwd.template.html'
+      });
+
+      $stateProvider.state({
+        name: 'pushnpost',
+        url: '/pushnpost',
+        template: '<pushnpost></pushnpost>'
+      });
+
+      $stateProvider.state({
+        name: 'kuchenundraketen',
+        url: '/kuchenundraketen',
+        template: '<kuchenundraketen></kuchenundraketen>'
       });
 
       $stateProvider.state({
@@ -390,32 +433,6 @@
         templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html'
       });
 
-      // for testing embed-bikes feature
-      // change userID in route to fetch new bikes
-      // ONLY for staging environment
-      $stateProvider.state({
-        name: 'embed',
-        url: '/embed-bikes-test/{userId}/{userLang}',
-        templateProvider: function ($timeout, $stateParams) {
-          return $timeout(function () {
-            return '<div><script src="https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-embed.min.js"></script><div id="listnride" data-user="' +
-              $stateParams.userId + '" data-lang="' + $stateParams.userLang + '"></div><div>'
-          }, 100);
-        }
-      });
-
-      // temporary state, for testing
-      $stateProvider.state({
-        name: 'lnr-embed',
-        url: '/embed-wizard/',
-        controller: function () {
-          var userId = 1005;
-          var bikeId = 165;
-          var url = 'lnr-wizard-module/lnr-shop-wizard.html?userId=' + userId + '&bikeId=' + bikeId;
-          var params = 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=700,height=600,top=10,left=10';
-          window.open(url, '_blank', params);
-        }
-      });
       $stateProvider.state('404', {
         templateUrl: 'app/modules/static/error-404.template.html',
         data: {

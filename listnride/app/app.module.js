@@ -18,6 +18,7 @@ angular.module('listnride', [
   'edit',
   'rating',
   'settings',
+  'invoices',
   'jobs',
   'listingABike',
   'rentingABike',
@@ -27,6 +28,8 @@ angular.module('listnride', [
   'static',
   'brand-integration',
   'mcbw',
+  'pushnpost',
+  'kuchenundraketen',
   'listnride.constant',
   /* external modules */
   'ngMaterial',
