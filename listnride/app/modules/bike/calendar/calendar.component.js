@@ -1,5 +1,4 @@
 'use strict';
-/* global angular _ $ */
 angular.module('bike').component('calendar', {
   templateUrl: 'app/modules/bike/calendar/calendar.template.html',
   controllerAs: 'calendar',
