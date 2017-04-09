@@ -24,12 +24,14 @@ angular.module('requests',[]).component('requests', {
         applyFilter: function (request, selected) {
           selected = parseInt(selected);
           // all requests for selected tab (rider or lister)
-          if (selected === 0) requests.filterBikes(request);
-          else if (selected === 1) requests.filterCurrentRentals(request);
-          else if (selected === 2) requests.filterPendingRequests(request);
-          else if (selected === 3) requests.filterUpcomingRentals(request);
-          else if (selected === 4) requests.filterPastRentals(request);
-          else if (selected === 4) requests.filterExpiredRequests(request);
+          switch (selected) {
+            case 0: requests.filterBikes(request); break;
+            case 1: requests.filterCurrentRentals(request); break;
+            case 2: requests.filterPendingRequests(request); break;
+            case 3: requests.filterUpcomingRentals(request); break;
+            case 4: requests.filterPastRentals(request); break;
+            case 5: requests.filterExpiredRequests(request); break;
+          }
         }
       };
       // selected request for rider or lister
