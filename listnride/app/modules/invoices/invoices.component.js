@@ -37,7 +37,7 @@ angular.module('invoices',[]).component('invoices', {
                 var ampm = hours >= 12 ? 'pm' : 'am';
                 var monthIndex = date.getMonth();
                 var monthName = $translate.instant("shared." + monthNames[monthIndex]);
-                return day + ' ' + monthName + ' - ' + hours + ' ' + ampm
+                return day + ' ' + monthName + ', ' + hours + ' ' + ampm
             };
 
             invoices.getCsv = function (target) {
