@@ -15,6 +15,7 @@
     "munich": "München",
     "amsterdam": "Amsterdam",
     "vienna": "Wenen",
+    "hamburg": "Hamburg",
     "per": "per",
     "hour": "Uur",
     "hours": "Uren",
@@ -29,6 +30,7 @@
     "lnr-fee": "listnride Servicekosten (incl. BTW)",
     "total": "Totaal",
     "from": "van",
+    "from2": "van",
     "to": "tot",
     "cancel": "Afbreken",
     "send": "Sturen",
@@ -839,7 +841,7 @@
   "brand-integration": {
     "ampler": {
       "title": "Ampler. De slimme e-bike voor het stedelijke woon-werkverkeer.",
-      "description": "Huur en testride een Ampler E-Bike in Berlijn en München",
+      "description": "Huur en testride een Ampler E-Bike in Berlijn, München, Hamburg en Wenen",
       "subdescription": "Je kan kiezen tussen de Hawk, een dynamische Single-Speed, oder de Bilberry en Pennon, de comfortabele Stadsfiets",
       "item1-title": "Handgemaakt in Estland",
       "item1-description": "Op Bestelling<br>klantspecifieke oplossingen<br>Oog voor Detail<br>Tijdloos Design",

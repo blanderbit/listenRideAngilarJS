@@ -517,12 +517,13 @@ footer .lnr-link {
 /*-----------------------------------------------------------------------------------*/
 
 ampler md-tab-item span {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: normal;
+  width: 80px;
 }
 
 ampler md-pagination-wrapper {
-  width: 300px !important;
+  width: 500px !important;
 }
 
 /*-----------------------------------------------------------------------------------*/

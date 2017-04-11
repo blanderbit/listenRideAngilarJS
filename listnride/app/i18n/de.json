@@ -15,6 +15,7 @@
     "munich": "München",
     "amsterdam": "Amsterdam",
     "vienna": "Wien",
+    "hamburg": "Hamburg",
     "per": "pro",
     "hour": "Stunde",
     "hours": "Stunden",
@@ -29,6 +30,7 @@
     "lnr-fee": "listnride Gebühren (inkl. MwSt)",
     "total": "Insgesamt",
     "from": "von",
+    "from2": "ab",
     "to": "bis",
     "cancel": "Abbrechen",
     "send": "Senden",
@@ -841,7 +843,7 @@
   "brand-integration": {
     "ampler": {
       "title": "Ampler. Das smarte E-Bike für den urbanen Pendler.",
-      "description": "Miete und Teste Ampler E-Bikes in Berlin und München",
+      "description": "Miete und Teste Ampler E-Bikes in Berlin, München, Hamburg und Wien",
       "subdescription": "Wähle zwischen Hawk, einem dynamischen Single-Speed, oder Bilberry, dem komfortablen City-Bike",
       "item1-title": "Handgefertigt in Estland",
       "item1-description": "Auf Bestellung<br>Kundenspezifische Lösungen<br>Aufmerksamkeit zum Detail<br>Zeitloses Design",
