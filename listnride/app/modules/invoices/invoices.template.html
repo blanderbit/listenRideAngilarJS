@@ -1,7 +1,7 @@
 <md-content class="single-column">
   <md-progress-linear class="md-accent" ng-if="invoices.loadingRequests" md-mode="query"></md-progress-linear>
 
-  <div class="content lnr-page-margin" layout="column">
+  <div class="content lnr-page-margin lnr-billing-page" layout="column">
     <div class="lnr-section-title lnr-center" layout="column" layout-align="center center">
       <h1 class="md-headline">Billing</h1>
     </div>
@@ -12,7 +12,7 @@
           <!--TABLE START HERE-->
           <md-list>
             <div class="lnr-billing-table-head">
-              <md-list-item class="md-2-line lnr-billing-table-head">
+              <md-list-item class="md-2-line">
                 <div class="md-list-item-text" layout="row" layout-align="start center">
                   <span flex="10">{{ 'invoices.request_id' | translate }}</span>
                   <span flex="20">{{ 'invoices.bike' | translate }}</span>
@@ -88,7 +88,7 @@
             <md-list>
 
               <div class="lnr-billing-table-head">
-                <md-list-item class="md-2-line lnr-billing-table-head">
+                <md-list-item class="md-2-line">
                   <div class="md-list-item-text" layout="row" layout-align="start center">
                     <span flex="10">{{ 'invoices.request_id' | translate }}</span>
                     <span flex="20">{{ 'invoices.bike' | translate }}</span>
