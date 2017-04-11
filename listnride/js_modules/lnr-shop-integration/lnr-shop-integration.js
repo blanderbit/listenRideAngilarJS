@@ -10,7 +10,11 @@ var env = "production";
   function spawnWizard (userId, bikeId) {
     var url = "";
     env == "staging" ? url = "https://listnride-staging.herokuapp.com/v2/shop_solutions" : url = "https://api.listnride.com/v2/shop_solutions";
-    window.open(url + '?user_id=' + userId + '&ride_id=' + bikeId, '_blank', 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=700,height=660,top=10,left=10');
+    var width = 650;
+    var height = 700;
+    var left = (screen.width/2)-(width/2);
+    var top = (screen.height/2)-(height/2);
+    window.open(url + '?user_id=' + userId + '&ride_id=' + bikeId, '_blank', 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=' + width + ',height=' + height + ',top=' + top + ',left=' + left);
   };
 
 (function () {
@@ -18,6 +22,9 @@ var env = "production";
   var css_lnr = document.createElement("LINK");
   css_lnr.href = "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.css";
   css_lnr.rel = "stylesheet";
+
+  var header = document.getElementsByTagName("head")[0];
+  header.appendChild(css_lnr);
 
   var header = document.getElementsByTagName("head")[0];
   header.appendChild(css_lnr);
@@ -35,19 +42,22 @@ var env = "production";
     env == "staging" ? url = "https://listnride-staging.herokuapp.com/v2/users/" : url = "https://api.listnride.com/v2/users/";
     $.get(url + user_id, function (response) {
 
-      var selectedLangText, dayText, sizeText;
+      var selectedLangText, dayText, sizeText, buttonText;
       if ('en' === user_lang) {
         selectedLangText = introText.en;
         dayText = 'per day';
         sizeText = 'For';
+        buttonText = 'Rent this Bike';
       } else if ('nl' === user_lang) {
         selectedLangText = introText.nl;
         dayText = 'per dag';
         sizeText = 'Voor';
+        buttonText = 'Rent this Bike';
       } else {
         selectedLangText = introText.de;
         dayText = 'pro Tag';
         sizeText = 'F&uuml;r';
+        buttonText = 'Dieses Rad Mieten';
       }
 
       $("#listnride")
@@ -73,7 +83,7 @@ var env = "production";
           '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">' +
           '<bike-card>' +
           '<md-card class="lnr-bike-card _md">' +
-          '<a target="_blank" class="lnr-links" onclick="spawnWizard(' + ride.user_id + ', ' + ride.id + ')"><img src="' + imageUrl + '"></img></a>' +
+          '<a target="_blank" class="image-container lnr-links" onclick="spawnWizard(' + ride.user_id + ', ' + ride.id + ')"><img src="' + imageUrl + '"></img><div class="after"><span class="content">' + ride.description + '<br><br><button class="md-button">' + buttonText + '</button></span><span class="zoom"><i class="fa fa-search"></i></span></div></a>' +
           '<md-card-title layout="row" class="layout-row">' +
           '<md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true">'+
           '<img src="' + svgUrl + '" height="48" width="48"></img></md-icon>' +
@@ -125,6 +135,7 @@ var env = "production";
         switch (categoryId) {
           case 10: return "Holland";
           case 11: return "Touring";
+          case 12: return "Fixie";
           case 13: return "Single Speed";
           case 20: return "Roadbike";
           case 21: return "Triathlon";
