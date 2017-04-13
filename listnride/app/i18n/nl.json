@@ -611,7 +611,8 @@
     "bike": "Bike",
     "start_date": "Start date",
     "end_date": "End date",
-    "location": "Location",
+    "lister": "Lister",
+    "rider": "Rider",
     "payout": "Payout",
     "you_paid": "You paid",
     "invoice": "Invoice",
@@ -741,7 +742,7 @@
     },
     "velothon-bikerental": {
       "title": "Boek eenvoudig the perfekte racefiets voor de Velothon Berlijn",
-      "text": "De Velothon Berlijn is de grootste wielerwedstrijd in Berlijn en een mooi gelegenheid om te racen door Berlijn en omgeving met duizenden gelijkgestemde deelnemers en veel toeschouwers langs de route. Je gaat de uitdaging aan maar je zoekt nog een geschikte racefiets?",
+      "text": "De Velothon Berlijn is de grootste wielerwedstrijd in Berlijn en een mooi gelegenheid om te racen door Berlijn en omgeving met duizenden gelijkgestemde deelnemers en veel toeschouwers langs de route. Je gaat de uitdaging aan maar je zoekt nog een geschikte racefiets? <br><br> We helpen je! Samen met de listnride community bieden we vele racefietsen, waarbij er zeker enige zijn die passen aan je wensen. Je kan die eenvoudig zo lang als je die nodig hebt huren. Je hoeft slechts één van de onderstaande fietsen te kiezen, aanvragen voor de gewenste periode en ophalen wanneer de tijd is gekomen. Simpel als dat. <br><br> Je kunt niet deelnemen? Help iemand in nood, een <a href=\"/#/listing-a-bike\">plaats je fiets</a> en verdien zo wat extra zakgeld!",
       "meta-description": "Racefietsverhuur Berlijn, racefiets huren Berlijn"
     },
     "crossride": {
