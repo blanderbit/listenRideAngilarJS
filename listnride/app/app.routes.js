@@ -163,6 +163,12 @@
       });
 
       $stateProvider.state({
+        name: 'velothonBikerental',
+        url: '/velothon-bikerental',
+        template: '<velothon-bikerental></velothon-bikerental>'
+      });
+
+      $stateProvider.state({
         name: 'crossride',
         url: '/berliner-fahrradschau',
         template: '<crossride></crossride>'
