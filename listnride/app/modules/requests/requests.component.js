@@ -29,6 +29,7 @@ angular.module('requests', []).component('requests', {
       }
 
       var requests = this;
+      requests.selected = 0;
       var poller;
       requests.filters = {
         options: [
@@ -94,6 +95,7 @@ angular.module('requests', []).component('requests', {
 
       // Handles initial request loading
       requests.loadRequest = function (requestId) {
+        requests.selected = requestId;
         $state.go(".", { requestId: requestId }, { notify: false });
         requests.loadingChat = true;
         // Cancel the poller

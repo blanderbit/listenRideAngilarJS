@@ -1303,11 +1303,11 @@ message .status-message {
 
 .request-filter-switch:hover {
   color: rgb(110, 110, 110) !important;
-  background-color: #eef1f1 !important;
+  background-color: rgba(158,158,158,0.2) !important;
 }
 
 .request-filter-switch-active {
-  background-color: #eef1f1 !important;
+  background-color: rgba(158,158,158,0.2) !important;
 }
 
 .request-filter-dropdown {

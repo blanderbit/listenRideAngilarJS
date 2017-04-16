@@ -44,7 +44,9 @@
     <md-list class="lnr-no-padding" md-no-ink ng-if="requests.requests != []">
       <div ng-repeat="request in requests.requests">
         <md-divider md-insets></md-divider>
-        <md-list-item class="md-2-line" ng-click="requests.loadRequest(request.id)">
+        <md-list-item class="requests-list-item md-2-line" 
+                      ng-class="{'request-filter-switch-active':requests.selected === request.id}"
+                      ng-click="requests.loadRequest(request.id)">
           <img ng-src="{{requests.profilePicture(request)}}" class="md-avatar" alt="{{item.who}}" />
           <div class="md-list-item-text" layout="column">
             <h4 ng-if="request.last_message.is_read">{{request.ride.name}}</h4>
