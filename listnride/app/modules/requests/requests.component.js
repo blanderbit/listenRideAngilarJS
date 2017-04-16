@@ -57,8 +57,7 @@ angular.module('requests', []).component('requests', {
             requests.loadRequest($stateParams.requestId);
           }
         },
-        function (error) {
-          console.log("Error fetching request list");
+        function () {
           requests.loadingList = false;
         }
       );
@@ -131,16 +130,15 @@ angular.module('requests', []).component('requests', {
               requests.loadingChat = false;
             }
             api.post('/requests/' + requestId + '/messages/mark_as_read', { "user_id": $localStorage.userId }).then(
-              function (success) {
+              function () {
               },
-              function (error) {
+              function () {
                 //
               }
             );
           },
-          function (error) {
+          function () {
             requests.loadingChat = false;
-            console.log("Error fetching request!");
           }
         );
       };
@@ -156,8 +154,7 @@ angular.module('requests', []).component('requests', {
               showPaymentDialog();
             }
           },
-          function (error) {
-            console.log("Error retrieving User Details");
+          function () {
           }
         );
       }
@@ -237,13 +234,12 @@ angular.module('requests', []).component('requests', {
             "message": data
           };
           requests.request.messages.push(data);
-          api.post('/messages', message).then(function (success) {
+          api.post('/messages', message).then(function () {
             reloadRequest(requests.request.id);
-          }, function (error) {
-            console.log("Error occured sending message");
+          }, function () {
           });
         } else {
-          confirmBooking();
+          requests.confirmBooking();
         }
         requests.message = "";
       };
@@ -278,12 +274,11 @@ angular.module('requests', []).component('requests', {
           bookingDialog.hide();
           requests.loadingChat = true;
           api.put("/requests/" + requests.request.id, data).then(
-            function (success) {
+            function () {
               reloadRequest(requests.request.id);
             },
-            function (error) {
+            function () {
               reloadRequest(requests.request.id);
-              console.log("error updating request");
             }
           );
         };
@@ -332,24 +327,22 @@ angular.module('requests', []).component('requests', {
           requests.loadingChat = true;
           ratingDialog.hide();
           api.post('/ratings', data).then(
-            function (success) {
+            function () {
               var data = {
                 "request": {
                   "status": newStatus
                 }
               };
               api.put("/requests/" + requests.request.id, data).then(
-                function (success) {
+                function () {
                   reloadRequest(requests.request.id);
                 },
-                function (error) {
+                function () {
                   reloadRequest(requests.request.id);
-                  console.log("error updating request");
                 }
               );
             },
-            function (error) {
-              console.log("Error occured while rating");
+            function () {
             }
           );
         };
@@ -366,8 +359,9 @@ angular.module('requests', []).component('requests', {
       /**
         * filter lister/rider requests from all requests
         * DOM filtering is avoid b/c of performance overhead
-        * @return {string} reset_filter returns requests based on provided filter
         * @param {string} type type of request (as a lister or as a rider)
+        * @param {string} reset_filter returns requests based on provided filter
+        @returns {void}
         */
       requests.filterBikes = function (type, reset_filter) {
         if (type) {
