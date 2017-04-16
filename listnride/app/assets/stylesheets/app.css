@@ -1217,7 +1217,7 @@ requests md-input-container  {
 
 .requests-list {
   min-width: 320px !important;
-  max-width: 450px;
+  max-width: 450px !important;
   border-right: 1px solid #efefef;
 }
 
@@ -1291,6 +1291,44 @@ message .status-message {
   margin-top: -6px;
 }
 
+
+.request-filter-switch {
+  margin: 30px 0;
+  padding: 0px 32px 0px 30px;
+  text-transform: none;
+  font-weight: 400;
+  min-width: 96px;
+  border: solid #eef1f1 1px;
+}
+
+.request-filter-switch:hover {
+  color: rgb(110, 110, 110) !important;
+  background-color: #eef1f1 !important;
+}
+
+.request-filter-switch-active {
+  background-color: #eef1f1 !important;
+}
+
+.request-filter-dropdown {
+  margin: 0 0 30px 0;
+}
+
+.request-filter-dropdown md-select {
+  border-width: 0;
+}
+
+.md-button.left {
+  border-radius: 4px 0 0 4px;
+}
+
+.md-button.middle {
+  border-radius: 0;
+}
+
+.md-button.right {
+  border-radius: 0 4px 4px 0;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*  STATIC PAGES
