@@ -1242,7 +1242,7 @@ requests md-input-container  {
 }
 
 .lnr-message {
-  padding: 4px;
+  padding: 8px;
   border-radius: 4px;
 }
 
@@ -1258,7 +1258,7 @@ message .received-message {
 }
 
 message .status-message {
-  background-color: rgba(229, 234, 234, 0.16)
+  background-color: rgba(229, 234, 234, 0.16);
 }
 
 .sent-message:after {
@@ -1284,7 +1284,7 @@ message .status-message {
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-right-color: rgba(229,234,234,0.4);
+  border-right-color: rgb(237, 240, 240);
   border-width: 6px;
   margin-top: -6px;
 }
