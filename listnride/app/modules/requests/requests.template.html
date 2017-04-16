@@ -38,7 +38,7 @@
          layout-align="center center" 
          layout-fill 
          ng-if="!requests.loadingList && requests.requests.length == 0">
-         <p class="lnr-center">{{ 'requests.no-requests-yet' | translate }}</p>
+         <p class="requests-list-no-item lnr-center">{{ 'requests.no-requests-yet' | translate }}</p>
     </div>
 
     <md-list class="lnr-no-padding" md-no-ink ng-if="requests.requests != []">

@@ -76,7 +76,8 @@ angular.module('requests', []).component('requests', {
           if ($stateParams.requestId) {
             requests.loadRequest($stateParams.requestId);
           } else {
-            requests.loadRequest(requests.requests[0].id)
+            requests.selected = requests.requests[0].id;
+            requests.loadRequest(requests.selected);
           }
         },
         function () {
