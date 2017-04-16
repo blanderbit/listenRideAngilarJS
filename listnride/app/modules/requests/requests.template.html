@@ -34,13 +34,16 @@
     </div>
 
     <md-progress-linear class="md-accent" ng-if="requests.loadingList" md-mode="query"></md-progress-linear>
-    <div layout="column" layout-align="center center" layout-fill ng-if="!requests.loadingList && requests.requests.length == 0">
-      <p class="lnr-center">{{ 'requests.no-requests-yet' | translate }}</p>
+    <div layout="column" 
+         layout-align="center center" 
+         layout-fill 
+         ng-if="!requests.loadingList && requests.requests.length == 0">
+         <p class="lnr-center">{{ 'requests.no-requests-yet' | translate }}</p>
     </div>
 
     <md-list class="lnr-no-padding" md-no-ink ng-if="requests.requests != []">
-      <div ng-repeat="request in requests.requests | orderBy: '-updated_at'">
-        <md-divider md-insets ng-if="!$lasts"></md-divider>
+      <div ng-repeat="request in requests.requests">
+        <md-divider md-insets></md-divider>
         <md-list-item class="md-2-line" ng-click="requests.loadRequest(request.id)">
           <img ng-src="{{requests.profilePicture(request)}}" class="md-avatar" alt="{{item.who}}" />
           <div class="md-list-item-text" layout="column">
@@ -52,7 +55,7 @@
           </div>
         </md-list-item>
       </div>
-      <md-divider md-insets ng-if="!$lasts"></md-divider>
+      <md-divider md-insets></md-divider>
     </md-list>
   </md-content>
 

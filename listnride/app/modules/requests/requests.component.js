@@ -3,8 +3,27 @@
 angular.module('requests', []).component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
-  controller: ['$localStorage', '$interval', '$mdMedia', '$mdDialog', '$window', 'api', '$timeout', '$location', '$anchorScroll', '$state', '$stateParams', '$translate', 'date', 'accessControl', 'ENV',
-    function RequestsController($localStorage, $interval, $mdMedia, $mdDialog, $window, api, $timeout, $location, $anchorScroll, $state, $stateParams, $translate, date, accessControl, ENV) {
+  controller: ['$localStorage', 
+                '$interval', 
+                '$filter',
+                '$mdMedia', 
+                '$mdDialog', 
+                '$window', 
+                'api', 
+                '$timeout', 
+                '$location', 
+                '$anchorScroll', 
+                '$state', 
+                '$stateParams', 
+                '$translate', 
+                'date', 
+                'accessControl', 
+                'ENV',
+    function RequestsController($localStorage, $interval, $filter,
+                                $mdMedia, $mdDialog, $window, api, 
+                                $timeout, $location, $anchorScroll, 
+                                $state, $stateParams, $translate, date,
+                                accessControl, ENV) {
       if (accessControl.requireLogin()) {
         return;
       }
@@ -50,11 +69,13 @@ angular.module('requests', []).component('requests', {
 
       api.get('/users/' + $localStorage.userId + '/requests').then(
         function (success) {
-          requests.all_requests = success.data;
+          requests.all_requests = $filter('orderBy')(success.data, '-updated_at');
           requests.requests = angular.copy(requests.all_requests);
           requests.loadingList = false;
           if ($stateParams.requestId) {
             requests.loadRequest($stateParams.requestId);
+          } else {
+            requests.loadRequest(requests.requests[0].id)
           }
         },
         function () {
