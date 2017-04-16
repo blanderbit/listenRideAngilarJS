@@ -1242,8 +1242,13 @@ requests md-input-container  {
 }
 
 .lnr-message {
-  padding: 8px;
+  padding: 4px;
   border-radius: 4px;
+}
+
+.lnr-message .message-time {
+  text-align: right;
+  font-size: 10px;
 }
 
 message .sent-message {
