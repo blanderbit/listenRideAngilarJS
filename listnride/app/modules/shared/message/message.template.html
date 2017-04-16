@@ -1,5 +1,5 @@
 <div ng-if="message.sentMessage()" flex layout="row" layout-align="end end">
-  <div class="lnr-message sent-message" flex="30" flex-sm="60" flex-xs="60" layout-margin>
+  <div class="lnr-message sent-message" flex="30" flex-sm="60" flex-xs="70" layout-margin>
     <p>{{message.content}}</p>
     <p class="lnr-message message-time">{{message.messageTime}}</p>
   </div>
@@ -63,9 +63,9 @@
     </p>
 
     <div ng-if="!message.request.rideChat && message.status == 1">
-      <div layout="row" layout-align="space-around center">
+      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="space-between stretch">
         <md-button 
-                  class="md-raised md-warn lnr-no-margin md-button md-ink-ripple" 
+                  class="message-button md-raised md-warn lnr-no-margin md-button md-ink-ripple" 
                   ng-disabled="message.request.status != 1" 
                   ng-click="message.updateStatus(8)" 
                   analytics-on analytics-category="link"
@@ -74,7 +74,7 @@
                   {{ 'message.reject' | translate }}
         </md-button>
         <md-button
-                  class="md-raised md-primary lnr-no-margin md-button md-ink-ripple" 
+                  class="message-button md-raised md-primary lnr-no-margin md-button md-ink-ripple" 
                   ng-disabled="message.request.status != 1" 
                   ng-click="message.acceptBooking()" 
                   analytics-on analytics-category="link"
@@ -129,7 +129,7 @@
     <div ng-if="message.request.rideChat && message.status == 2">
       <div layout="row" layout-align="space-around center">
         <md-button 
-                  class="md-raised lnr-no-margin md-button md-ink-ripple md-warn" 
+                  class="message-button md-raised lnr-no-margin md-button md-ink-ripple md-warn" 
                   ng-disabled="message.request.status != 2" 
                   ng-click="message.updateStatus(9)" 
                   analytics-on analytics-category="link"
@@ -138,7 +138,7 @@
                   {{ 'shared.cancel' | translate }}
         </md-button>
         <md-button
-                  class="md-raised md-primary lnr-no-margin md-button md-ink-ripple" 
+                  class="message-button md-raised md-primary lnr-no-margin md-button md-ink-ripple" 
                   ng-disabled="message.request.status != 2" 
                   ng-click="message.confirmBooking()" 
                   analytics-on analytics-category="link"
@@ -151,7 +151,8 @@
 
     <div ng-if="message.request.rideChat && message.status == 5">
       <div layout="row" layout-align="space-around center">
-        <md-button 
+        <md-button
+                  class="message-button" 
                   ng-disabled="message.request.status != 5" 
                   ng-click="message.showRatingDialog()" 
                   analytics-on analytics-category="rating"
