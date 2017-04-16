@@ -65,8 +65,14 @@
   <div flex-order="2" layout="column" layout-fill hide-xs>
     <md-progress-linear class="md-accent" ng-if="requests.loadingChat" md-mode="query"></md-progress-linear>
     <div scroll-glue="requests.request.glued" class="chat" flex="90">
-      <message ng-repeat="message in requests.request.messages" content="message.content" sender="message.sender" status="message.status"
-        request="requests.request" confirm-booking="requests.confirmBooking()" show-rating-dialog="requests.showRatingDialog()"></message>
+      <message ng-repeat="message in requests.request.messages" 
+               content="message.content" 
+               sender="message.sender" 
+               status="message.status"
+               request="requests.request" 
+               confirm-booking="requests.confirmBooking()" 
+               show-rating-dialog="requests.showRatingDialog()">
+      </message>
     </div>
     <form class="lnr-message-form" ng-submit="requests.sendMessage()" layout="row" layout-padding ng-if="requests.request.messages">
       <md-input-container class="ap-chat" flex md-no-float>

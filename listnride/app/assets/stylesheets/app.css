@@ -1201,14 +1201,9 @@ md-toast.md-center {
 .chat {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  background-color: #efefef;
-}
-
-.chat {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
   padding: 48px 16px 24px 16px;
-  background: #fff;
+  margin: 0px 30px 0px 30px;
+  background-color: #fff;
 }
 
 requests md-input-container  {
@@ -1259,11 +1254,11 @@ message .sent-message {
 
 message .received-message {
   position: relative;
-  background-color: rgba(229,234,234,0.4);
+  background-color: rgb(237, 240, 240);
 }
 
 message .status-message {
-  background-color: rgba(229,234,234,0.4);
+  background-color: rgba(229, 234, 234, 0.16)
 }
 
 .sent-message:after {

@@ -73,12 +73,8 @@ angular.module('requests', []).component('requests', {
           requests.all_requests = $filter('orderBy')(success.data, '-updated_at');
           requests.requests = angular.copy(requests.all_requests);
           requests.loadingList = false;
-          if ($stateParams.requestId) {
-            requests.loadRequest($stateParams.requestId);
-          } else {
-            requests.selected = requests.requests[0].id;
-            requests.loadRequest(requests.selected);
-          }
+          requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
+          requests.loadRequest(requests.selected);
         },
         function () {
           requests.loadingList = false;
