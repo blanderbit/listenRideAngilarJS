@@ -86,8 +86,9 @@
     </div>
 
     <div ng-if="!message.request.rideChat && message.status == 3">
-      <div layout="row" layout-align="space-around center">
-        <md-button 
+      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="space-between stretch">
+        <md-button
+                  class="message-button"
                   ng-disabled="message.request.status != 3" 
                   ng-click="message.updateStatus(4)" 
                   analytics-on analytics-category="link"
@@ -99,9 +100,9 @@
     </div>
 
     <div ng-if="!message.request.rideChat && message.status == 4">
-      <div layout="row" layout-align="space-around center">
+      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="space-between stretch">
         <md-button
-                  class="md-raised lnr-no-margin md-button md-ink-ripple" 
+                  class="message-button md-raised lnr-no-margin md-button md-ink-ripple" 
                   ng-disabled="message.request.status != 4" 
                   ng-click="message.showRatingDialog()" 
                   analytics-on analytics-category="rating"
@@ -113,9 +114,9 @@
     </div>
 
     <div ng-if="message.request.rideChat && message.status == 1">
-      <div layout="row" layout-align="space-around center">
+      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="space-between stretch">
         <md-button 
-                  class="md-raised lnr-no-margin md-button md-ink-ripple md-warn" 
+                  class="message-button md-raised lnr-no-margin md-button md-ink-ripple md-warn" 
                   ng-disabled="message.request.status != 1" 
                   ng-click="message.updateStatus(9)" 
                   analytics-on analytics-category="link"
@@ -127,7 +128,7 @@
     </div>
 
     <div ng-if="message.request.rideChat && message.status == 2">
-      <div layout="row" layout-align="space-around center">
+      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="space-between stretch">
         <md-button 
                   class="message-button md-raised lnr-no-margin md-button md-ink-ripple md-warn" 
                   ng-disabled="message.request.status != 2" 
@@ -150,7 +151,7 @@
     </div>
 
     <div ng-if="message.request.rideChat && message.status == 5">
-      <div layout="row" layout-align="space-around center">
+      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="space-between stretch">
         <md-button
                   class="message-button" 
                   ng-disabled="message.request.status != 5" 
