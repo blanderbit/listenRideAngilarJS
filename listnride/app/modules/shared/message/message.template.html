@@ -63,7 +63,7 @@
     </p>
 
     <div ng-if="!message.request.rideChat && message.status == 1">
-      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="space-between stretch">
+      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <md-button 
                   class="message-button md-raised md-warn lnr-no-margin md-button md-ink-ripple" 
                   ng-disabled="message.request.status != 1" 
@@ -86,7 +86,7 @@
     </div>
 
     <div ng-if="!message.request.rideChat && message.status == 3">
-      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="space-between stretch">
+      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <md-button
                   class="message-button"
                   ng-disabled="message.request.status != 3" 
@@ -100,7 +100,7 @@
     </div>
 
     <div ng-if="!message.request.rideChat && message.status == 4">
-      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="space-between stretch">
+      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <md-button
                   class="message-button md-raised lnr-no-margin md-button md-ink-ripple" 
                   ng-disabled="message.request.status != 4" 
@@ -114,7 +114,7 @@
     </div>
 
     <div ng-if="message.request.rideChat && message.status == 1">
-      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="space-between stretch">
+      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <md-button 
                   class="message-button md-raised lnr-no-margin md-button md-ink-ripple md-warn" 
                   ng-disabled="message.request.status != 1" 
@@ -128,7 +128,7 @@
     </div>
 
     <div ng-if="message.request.rideChat && message.status == 2">
-      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="space-between stretch">
+      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <md-button 
                   class="message-button md-raised lnr-no-margin md-button md-ink-ripple md-warn" 
                   ng-disabled="message.request.status != 2" 
@@ -151,7 +151,7 @@
     </div>
 
     <div ng-if="message.request.rideChat && message.status == 5">
-      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="space-between stretch">
+      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <md-button
                   class="message-button" 
                   ng-disabled="message.request.status != 5" 

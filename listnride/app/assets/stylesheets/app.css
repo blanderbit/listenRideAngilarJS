@@ -1300,6 +1300,12 @@ message .status-message {
   }
 }
 
+@media (min-width: 601px) {
+  .message-button {
+    margin: 0 6px 0 6px;
+  }
+}
+
 .request-filter-switch {
   margin: 30px 0;
   padding: 0px 32px 0px 30px;
