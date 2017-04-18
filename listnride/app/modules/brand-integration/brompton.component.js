@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('brand-integration',[]).component('brompton', {
+angular.module('brompton-integration',[]).component('brompton', {
   templateUrl: 'app/modules/brand-integration/brompton.template.html',
   controllerAs: 'brompton',
   controller: [ '$translate', 'api',
