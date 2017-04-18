@@ -27,7 +27,7 @@
     vertical-align: center;
     box-sizing: border-box;
     padding: 5px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .image-container .after .zoom {
     color: #DDD;
