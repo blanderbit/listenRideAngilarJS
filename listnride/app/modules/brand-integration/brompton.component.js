@@ -16,14 +16,13 @@ angular.module('brand-integration',[]).component('brompton', {
       brompton.bikes = {
         berlin: [],
         munich: [],
-        hamburg: [],
-        vienna: []
+        dusseldorf: []
       };
 
       brompton.mapOptions = {
-        lat: 48.1574300,
-        lng: 11.5754900,
-        zoom: 10,
+        lat: 51.2167,
+        lng: 9.9167,
+        zoom: 6,
         radius: 500
       };
 
@@ -36,8 +35,7 @@ angular.module('brand-integration',[]).component('brompton', {
             switch (success.data[i].city) {
               case "Berlin": brompton.bikes.berlin.push(success.data[i]); break;
               case "München": brompton.bikes.munich.push(success.data[i]); break;
-              case "Hamburg": brompton.bikes.hamburg.push(success.data[i]); break;
-              case "Wien": brompton.bikes.vienna.push(success.data[i]); break;
+              case "Düsseldorf": brompton.bikes.dusseldorf.push(success.data[i]); break;
             }
           }
           brompton.currentBikes = brompton.bikes["berlin"];
