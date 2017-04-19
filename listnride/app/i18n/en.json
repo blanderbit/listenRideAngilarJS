@@ -587,7 +587,8 @@
     "bike": "Bike",
     "start_date": "Start date",
     "end_date": "End date",
-    "location": "Location",
+    "lister": "Lister",
+    "rider": "Rider",
     "payout": "Payout",
     "you_paid": "You paid",
     "invoice": "Invoice",
@@ -710,6 +711,11 @@
     "in-velo-veritas": {
       "title": "In Velo Veritas - The vintage bicycle tour that's timeless",
       "text": "The legendary “In Velo Veritas” happens this year the 5th time at the 10th/11th June 2017 in Stockerau. For those, who want to participate but need a guideline-matching bicycle, we collected some suiting bikes of our community-members to save your day. Just rent it! Bike enthusiasts like you are offering the different bikes below. If you can’t participate, have more vintage bicycles, or just want want to meet like-minded people, you can share your bike on our platform with others! Become a part of our growing community and make some extra money with your passion!"
+    },
+    "velothon-bikerental": {
+      "title": "Simply rent the perfect road bike for the Velothon Berlin",
+      "text": "Velothon Berlin is the city’s biggest bike race and one of the fastest and most exciting of the Velothon series. It’s a great opportunity to race through Berlin and its surroundings with thousands of like-minded cycling enthusiasts in front of crowds of cheering spectators. Are you looking to take on the challenge and in need of a good road bike? <br><br> We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that. <br><br> You can’t participate? Help out someone in need. <a href=\"/#/listing-a-bike\">List your bike</a> and make some extra pocket money!",
+      "meta-description": "Velothon, Velothon 2017, rent a roadbike, rent a bicycle, rent a bicycle Berlin, rent a road bike Berlin, Velothon Berlin, Velothon Berlin 2017, bike rental Berlin, bike rental, road bike rental Berlin, road bike rental"
     },
     "crossride": {
       "title": "listnride Crossride",

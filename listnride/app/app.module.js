@@ -19,6 +19,7 @@ angular.module('listnride', [
   'rating',
   'settings',
   'invoices',
+  'velothonBikerental',
   'jobs',
   'listingABike',
   'rentingABike',

@@ -611,7 +611,8 @@
     "bike": "Bike",
     "start_date": "Start date",
     "end_date": "End date",
-    "location": "Location",
+    "lister": "Lister",
+    "rider": "Rider",
     "payout": "Payout",
     "you_paid": "You paid",
     "invoice": "Invoice",
@@ -738,6 +739,11 @@
     "in-velo-veritas": {
       "title": "In Velo Veritas - The vintage bicycle tour that's timeless",
       "text": "The legendary “In Velo Veritas” happens this year the 5th time at the 10th/11th June 2017 in Stockerau. For those, who want to participate but need a guideline-matching bicycle, we collected some suiting bikes of our community-members to save your day. Just rent it! Bike enthusiasts like you are offering the different bikes below. If you can’t participate, have more vintage bicycles, or just want want to meet like-minded people, you can share your bike on our platform with others! Become a part of our growing community and make some extra money with your passion!"
+    },
+    "velothon-bikerental": {
+      "title": "Boek eenvoudig the perfekte racefiets voor de Velothon Berlijn",
+      "text": "De Velothon Berlijn is de grootste wielerwedstrijd in Berlijn en een mooi gelegenheid om te racen door Berlijn en omgeving met duizenden gelijkgestemde deelnemers en veel toeschouwers langs de route. Je gaat de uitdaging aan maar je zoekt nog een geschikte racefiets? <br><br> We helpen je! Samen met de listnride community bieden we vele racefietsen, waarbij er zeker enige zijn die passen aan je wensen. Je kan die eenvoudig zo lang als je die nodig hebt huren. Je hoeft slechts één van de onderstaande fietsen te kiezen, aanvragen voor de gewenste periode en ophalen wanneer de tijd is gekomen. Simpel als dat. <br><br> Je kunt niet deelnemen? Help iemand in nood, een <a href=\"/#/listing-a-bike\">plaats je fiets</a> en verdien zo wat extra zakgeld!",
+      "meta-description": "Racefietsverhuur Berlijn, racefiets huren Berlijn"
     },
     "crossride": {
       "title": "listnride Crossride",

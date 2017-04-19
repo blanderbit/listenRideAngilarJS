@@ -34,10 +34,10 @@ angular.module('invoices',[]).component('invoices', {
                 var date = new Date(milliseconds);
                 var day = date.getDate();
                 var hours = date.getHours();
-                var ampm = hours >= 12 ? 'pm' : 'am';
+                // var ampm = hours >= 12 ? 'pm' : 'am';
                 var monthIndex = date.getMonth();
                 var monthName = $translate.instant("shared." + monthNames[monthIndex]);
-                return day + ' ' + monthName + ' - ' + hours + ' ' + ampm
+                return day + ' ' + monthName + ', ' + hours + ':00'
             };
 
             invoices.getCsv = function (target) {
