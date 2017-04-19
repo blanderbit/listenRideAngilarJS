@@ -406,7 +406,7 @@ angular.module('requests', []).component('requests', {
           });
           if (reset_filter === true) requests.filters.selected = 0
         }
-        selectDefaultRequest();
+        if (reset_filter === true) selectDefaultRequest();
       };
 
       /**
