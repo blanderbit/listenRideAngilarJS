@@ -6,6 +6,7 @@ var env = "production";
    * based on userId and bikeId
    * @param {Number} userId id who owns the bike
    * @param {Number} bikeId id of the bike requested
+   * @returns {void}
    */
   function spawnWizard (userId, bikeId) {
     var url = "";
@@ -15,16 +16,12 @@ var env = "production";
     var left = (screen.width/2)-(width/2);
     var top = (screen.height/2)-(height/2);
     window.open(url + '?user_id=' + userId + '&ride_id=' + bikeId, '_blank', 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=' + width + ',height=' + height + ',top=' + top + ',left=' + left);
-  };
+  }
 
 (function () {
-  
   var css_lnr = document.createElement("LINK");
   css_lnr.href = "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.css";
   css_lnr.rel = "stylesheet";
-
-  var header = document.getElementsByTagName("head")[0];
-  header.appendChild(css_lnr);
 
   var header = document.getElementsByTagName("head")[0];
   header.appendChild(css_lnr);
@@ -34,8 +31,9 @@ var env = "production";
    * @param {any} $ lnrJquery
    * @param {Number} user_id id of the user for which bikes are to be fetched
    * @param {Number} user_lang language of the user. [english, german, dutch]
-   * @param {String} introText
+   * @param {String} introText text shown above the bikes
    * @param {any} categoryFilter function which returns the category desc based on category id.
+   * @returns {void}
    */
   function renderBikes ($, user_id, user_lang, introText, categoryFilter) {
     var url = "";
@@ -70,9 +68,7 @@ var env = "production";
       var grid = $("#lnr-grid");
 
       response.rides.forEach(function (ride) {
-        var rideId = ride.id,
-          brand = ride.brand,
-          name = ride.name,
+          var brand = ride.brand,
           category = ride.category,
           categoryDesc = categoryFilter(category),
           price = parseInt(ride.price_daily),

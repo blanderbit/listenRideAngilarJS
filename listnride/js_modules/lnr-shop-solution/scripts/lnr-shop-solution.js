@@ -1,4 +1,4 @@
-/*global DateService helper */
+/*global DateService helper calendar env*/
 /*eslint no-undef: "error"*/
 var $,
     // Define some global variables
@@ -6,7 +6,7 @@ var $,
         date: "Month",
         year: "Year"
     },
-    translations,
+    translations = {},
     user = {
         id: null,
         hasPaymentMethod: false
