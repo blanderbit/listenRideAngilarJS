@@ -41,7 +41,7 @@ angular.module('invoices',[]).component('invoices', {
             };
 
             invoices.getCsv = function (target) {
-                api.get('/users/' + $localStorage.userId + "/transaction_csv?target=" + target).then(
+                api.get('/users/' + $localStorage.userId + "/transaction_csv?target=" + target, 'attachment').then(
                     function(response) {
                         var anchor = angular.element('<a/>');
                         anchor.attr({
