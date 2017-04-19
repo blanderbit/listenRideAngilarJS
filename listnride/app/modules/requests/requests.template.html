@@ -75,12 +75,22 @@
                show-rating-dialog="requests.showRatingDialog()">
       </message>
     </div>
-    <form class="lnr-message-form" ng-submit="requests.sendMessage()" layout="row" layout-padding ng-if="requests.request.messages">
+    <form class="lnr-message-form" 
+          ng-submit="requests.sendMessage()" 
+          layout="row" 
+          layout-padding 
+          ng-if="requests.request.messages">
       <md-input-container class="ap-chat" flex md-no-float>
-        <input ng-model="requests.message" placeholder="{{ 'requests.write-message' | translate }}"></input>
+        <input ng-model="requests.message" 
+               placeholder="{{ 'requests.write-message' | translate }}">
+        </input>
       </md-input-container>
       <md-input-container layout="row" hide-xs flex-gt-sm="20" flex="30">
-        <md-button flex class="md-raised md-primary lnr-no-margin" type="submit">{{ 'shared.send' | translate }}</md-button>
+        <md-button flex 
+                   class="md-raised md-primary lnr-no-margin" 
+                   type="submit">
+                   {{ 'shared.send' | translate }}
+        </md-button>
       </md-input-container>
     </form>
   </div>

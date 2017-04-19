@@ -3,27 +3,27 @@
 angular.module('requests', []).component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
-  controller: ['$localStorage', 
-                '$interval', 
-                '$filter',
-                '$mdMedia', 
-                '$mdDialog', 
-                '$window', 
-                'api', 
-                '$timeout', 
-                '$location', 
-                '$anchorScroll', 
-                '$state', 
-                '$stateParams', 
-                '$translate', 
-                'date', 
-                'accessControl', 
-                'ENV',
+  controller: ['$localStorage',
+    '$interval',
+    '$filter',
+    '$mdMedia',
+    '$mdDialog',
+    '$window',
+    'api',
+    '$timeout',
+    '$location',
+    '$anchorScroll',
+    '$state',
+    '$stateParams',
+    '$translate',
+    'date',
+    'accessControl',
+    'ENV',
     function RequestsController($localStorage, $interval, $filter,
-                                $mdMedia, $mdDialog, $window, api, 
-                                $timeout, $location, $anchorScroll, 
-                                $state, $stateParams, $translate, date,
-                                accessControl, ENV) {
+      $mdMedia, $mdDialog, $window, api,
+      $timeout, $location, $anchorScroll,
+      $state, $stateParams, $translate, date,
+      accessControl, ENV) {
       if (accessControl.requireLogin()) {
         return;
       }
@@ -88,7 +88,21 @@ angular.module('requests', []).component('requests', {
         } else {
           $mdDialog.hide();
         }
-      }
+      };
+      /**
+       * called whenever user: 
+       *    1- changes the switch (All, Lister, Rider)
+       *    2- changes filter (all, current, pending, upcoming, past, expired)
+       * @returns {void}
+       */
+      var selectDefaultRequest = function () {
+        $timeout(function () {
+          if (requests.requests.length > 0) {
+            requests.selected = requests.requests[0].id;
+            requests.loadRequest(requests.selected);
+          }
+        }, 200);
+      };
 
       // Handles initial request loading
       requests.loadRequest = function (requestId) {
@@ -267,12 +281,6 @@ angular.module('requests', []).component('requests', {
       var ChatDialogController = function () {
         var chatDialog = this;
         chatDialog.requests = requests;
-
-        // $timeout(function() {
-        //   $location.hash('end');
-        //   $anchorScroll();
-        // }, 2000);
-
         chatDialog.hide = function () {
           $mdDialog.hide();
         };
@@ -398,6 +406,7 @@ angular.module('requests', []).component('requests', {
           });
           if (reset_filter === true) requests.filters.selected = 0
         }
+        selectDefaultRequest();
       };
 
       /**
@@ -413,6 +422,7 @@ angular.module('requests', []).component('requests', {
         requests.requests = requests.requests.filter(function (response) {
           return (response.status === 3);
         });
+        selectDefaultRequest();
       };
 
       /**
@@ -429,6 +439,7 @@ angular.module('requests', []).component('requests', {
         requests.requests = requests.requests.filter(function (response) {
           return (response.status === 1 || response.status === 2);
         });
+        selectDefaultRequest();
       };
 
       /**
@@ -447,6 +458,7 @@ angular.module('requests', []).component('requests', {
           var startDate = Date.parse(response.start_date);
           return (response.status === 3 && (startDate > currentDate));
         });
+        selectDefaultRequest();
       };
 
       /**
@@ -464,6 +476,7 @@ angular.module('requests', []).component('requests', {
           var endDate = Date.parse(response.end_date);
           return (response.status === 3 && (endDate < currentDate));
         });
+        selectDefaultRequest();
       };
 
       /**
@@ -481,6 +494,7 @@ angular.module('requests', []).component('requests', {
           var endDate = Date.parse(response.end_date);
           return ((response.status === 1 || response.status === 2) && (endDate < currentDate));
         });
+        selectDefaultRequest();
       };
     }
   ]
