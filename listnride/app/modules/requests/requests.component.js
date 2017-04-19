@@ -420,7 +420,9 @@ angular.module('requests', []).component('requests', {
         requests.filterBikes();
         // filter for pending requests
         requests.requests = requests.requests.filter(function (response) {
-          return (response.status === 3);
+          var currentDate = Date.parse(new Date());
+          var endDate = Date.parse(response.end_date);
+          return (response.status === 3 && (endDate > currentDate));
         });
         selectDefaultRequest();
       };
