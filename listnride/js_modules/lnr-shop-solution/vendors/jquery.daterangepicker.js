@@ -211,7 +211,7 @@
 			'week-5' : 'fr',
 			'week-6' : 'sa',
 			'week-7' : 'so',
-			'month-name': ['januar','februar','m&auml;rz','april','mai','juni','juli','august','september','oktober','november','dezember'],
+			'month-name': ['januar','februar','märz','april','mai','juni','juli','august','september','oktober','november','dezember'],
 			'shortcuts' : 'Schnellwahl',
 			'past': 'Vorherige',
 			'following':'Folgende',
@@ -870,8 +870,6 @@
 		var self = this;
 		var selfDom = $(self).get(0);
 		var domChangeTimer;
-		var invalidDaysPerMonth = 0;
-		var countedDays = 0;
 
 		$(this).unbind('.datepicker').bind('click.datepicker',function(evt)
 		{
@@ -1050,23 +1048,11 @@
 
 			box.find('.next').click(function()
 			{
-				getPrevMonthInvalidDays();
 				if(!opt.stickyMonths)
 					gotoNextMonth(this);
 				else
 					gotoNextMonth_stickily(this);
 			});
-
-			function getPrevMonthInvalidDays()
-			{
-				var firstDay = $("div.day.checked");
-				if (firstDay.length == 0) return invalidDaysPerMonth = 0;
-				var days = $("div.day.toMonth");
-				var lastDay = [days[days.length - 1]];
-				var start = firstDay[0].attributes.time.value;
-				var end = lastDay[0].attributes.time.value;
-				invalidDaysPerMonth = countInvalidDays(end, start, lastDay, true);
-			}
 
 			function gotoNextMonth(self)
 			{
@@ -1482,7 +1468,6 @@
 			if (day.hasClass('invalid')) return;
 			var time = day.attr('time');
 			day.addClass('checked');
-			countedDays = 0;
 			if ( opt.singleDate )
 			{
 				opt.start = time;
@@ -1639,8 +1624,12 @@
 		function updateSelectableRange()
 		{
 			box.find('.day.invalid.tmp').removeClass('tmp invalid').addClass('valid');
+			$("span.next").removeClass('disabled');
 			if (opt.start && !opt.end)
 			{
+				var day = $("div.day[time=" + opt.start + "]"); //TODO: Added by DY
+				anyReservedDays(day); //
+
 				box.find('.day.toMonth.valid').each(function()
 				{
 					var time = parseInt($(this).attr('time'), 10);
@@ -1659,7 +1648,6 @@
 		{
 			var hoverTime = parseInt(day.attr('time'));
 			var tooltip = '';
-			var invalidDays = 0;
 
 			if (day.hasClass('has-tooltip') && day.attr('data-tooltip'))
 			{
@@ -1697,7 +1685,7 @@
 							)
 						)
 						{
-							if (!$(this).hasClass('invalid')) // TODO: Added by DY
+							if (!$(this).hasClass('date-reserved')) // TODO: Added by DY
 							{
 								$(this).addClass('hovering');
 							}
@@ -1710,15 +1698,7 @@
 
 					if (opt.start && !opt.end)
 					{
-						if (hoverTime != opt.start) // TODO: Added by DY
-						{
-							invalidDays = countInvalidDays(hoverTime, opt.start, day, false);
-						}
-						else
-						{
-							invalidDaysPerMonth = 0;
-						}
-						var days = countDays(hoverTime, opt.start, invalidDays);
+						var days = countDays(hoverTime, opt.start);
 						if (opt.hoveringTooltip)
 						{
 							if (typeof opt.hoveringTooltip == 'function')
@@ -1760,20 +1740,36 @@
 			}
 		}
 
-		function countInvalidDays(end, start, day, needsCountAllDays) {
-			if (end == start) return 0;
-			var totalDays = Math.abs( daysFrom1970(start) - daysFrom1970(end) ) - countedDays;
-			var invalidDays = 0;
+		function anyReservedDays(day)
+		{
+			var days = $("div.day.toMonth");
+			if (day.length == 0 || days[0].attributes.time.value > day[0].attributes.time.value) return;
+			var lastDay = [days[days.length - 1]];
+			var start = day[0].attributes.time.value;
+			var end = lastDay[0].attributes.time.value;
+			var totalDays = Math.abs( daysFrom1970(start) - daysFrom1970(end) );
 			var i = 0;
 			while( i < totalDays )
 			{
+				if ($(day).hasClass('date-reserved')) return markTmpInvalid(day, totalDays - i);
+				var nextDay = parseInt(day[0].attributes.time.value) + 86400000;
+				day = $("div.day[time=" + nextDay + "]");
 				i++;
-				if (needsCountAllDays) countedDays++;
-				if ($(day).hasClass('invalid')) invalidDays++;
-				var prevDay = day[0].attributes.time.value - 86400000;
-				day = $("div.day[time=" + prevDay + "]");
 			}
-			return invalidDays + invalidDaysPerMonth;
+		}
+
+		function markTmpInvalid(firstDay, totalDays)
+		{
+			var day = firstDay;
+			var i = 0;
+			while( i <= totalDays )
+			{
+				if (!$(day).hasClass('invalid')) $(day).addClass('invalid tmp').removeClass('valid');
+				var nextDay = parseInt(day[0].attributes.time.value) + 86400000;
+				day = $("div.day[time=" + nextDay + "]");
+				i++;
+			}
+			$("span.next").addClass('disabled');
 		}
 
 		function clearHovering()
@@ -1904,9 +1900,9 @@
 			}
 		}
 
-		function countDays(start,end,invalidDays)
+		function countDays(start,end)
 		{
-			return Math.abs( daysFrom1970(start) - daysFrom1970(end) ) - invalidDays + 1;
+			return Math.abs( daysFrom1970(start) - daysFrom1970(end) ) + 1;
 		}
 
 		function setDateRange(date1,date2,silent)
@@ -2018,10 +2014,9 @@
 					( opt.start && !opt.end && moment(start).format('YYYY-MM-DD') == moment(time).format('YYYY-MM-DD') )
 				)
 				{
-					if (!$(this).hasClass('invalid')) //TODO: Added by DY
+					if (!$(this).hasClass('date-reserved')) //TODO: Added by DY
 					{
 						$(this).addClass('checked');
-						countedDays = 0;
 					}
 				}
 				else
@@ -2033,9 +2028,9 @@
 				if ( opt.start && moment(start).format('YYYY-MM-DD') == moment(time).format('YYYY-MM-DD') )
 				{
 					$(this).addClass('first-date-selected');
-                    //TODO: Shop wizard
-                    if ($('#lnr-next-button-tab-duration').length) $('#lnr-next-button-tab-duration').prop('disabled', true);
-                }
+					if ($('#lnr-next-button-tab-duration').length)
+						$('#lnr-next-button-tab-duration').prop('disabled', true);
+				}
 				else
 				{
 					$(this).removeClass('first-date-selected');
@@ -2044,8 +2039,8 @@
 				if ( opt.end && moment(end).format('YYYY-MM-DD') == moment(time).format('YYYY-MM-DD') )
 				{
 					$(this).addClass('last-date-selected');
-                    //TODO: Shop wizard
-                    if ($('#lnr-next-button-tab-duration').length) $('#lnr-next-button-tab-duration').prop('disabled', false);
+					if ($('#lnr-next-button-tab-duration').length)
+						$('#lnr-next-button-tab-duration').prop('disabled', false);
 				}
 				else
 				{

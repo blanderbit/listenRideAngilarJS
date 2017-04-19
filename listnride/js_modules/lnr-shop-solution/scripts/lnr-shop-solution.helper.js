@@ -54,6 +54,51 @@ var helper = {
         for (var loop = 0, length = path.length; loop < length; loop += 1) obj = obj[path[loop]];
         return obj;
     },
+    /* ---------- USER LOGIN ----------- */
+    triggerLoginForm: function () {
+        $('#user-login, .info-login').show();
+        $('#user-info, .info-description, .user-login-validation').hide();
+        toggleUserButton(loginFormOverview);
+
+        loginFlow = true;
+    },
+    triggerSignupForm: function() {
+        $('#user-info, .info-description').show();
+        $('#user-login, .info-error, .info-login, .user-info-email-validation, .user-info-validation').hide();
+        toggleUserButton(userFormOverview);
+
+        loginFlow = false;
+    },
+    /* --------------------------------- */
+
+    /* --------- TOKEN LOGIN ----------- */
+    // stores login as a timestamp
+    storeLogin: function (email) {
+        localStorage.setItem("lnrLastLogin", Date.now());
+        localStorage.setItem("lnrEmail", email);
+    },
+    // // checks if login exists and is not expired
+    // hasStoredLogin: function () {
+    //     // if login doesn't exist or exists and is older than 2 days: remove it and return false
+    //     if (((Date.now() - localStorage.getItem("lnrTimestamp")) / (1000*60*60)) > 48 ) {
+    //         helper.clearStoredLogin();
+    //         return false;
+    //     } 
+    //     // otherwise check if all data exists and return true/false
+    //     else {
+    //         return (localStorage.getItem("lnrEmail") && localStorage.getItem("lnrToken")) ? true : false;
+    //     }
+    // },
+    // returns login data from localstorage, to be used in conjunction with hasStoredLogin()
+    getLastLogin: function () {
+        return {lnrLastLogin: localStorage.getItem("lnrLastLogin"), lnrEmail: localStorage.getItem("lnrEmail")};
+    },
+    // removes login data from localstorage
+    clearStoredLogin: function () {
+        localStorage.removeItem("lnrLastLogin");
+        localStorage.removeItem("lnrEmail");
+    },
+    /* --------------------------------- */
     /**
      * returns the currency format for user language 
      * @returns {object} config object
@@ -65,13 +110,13 @@ var helper = {
                 colorize: false,
                 decimalSymbol: '.',
                 digitGroupSymbol: ','
-            }
+            };
             case 'de': return {
                 regions: 'de',
                 colorize: false,
                 decimalSymbol: ',',
                 digitGroupSymbol: '.'
-            }
+            };
             case 'nl': return {
                 colorize: false,
                 decimalSymbol: ',',
@@ -136,8 +181,7 @@ var helper = {
      * @param {object} calendar it is an object 
      * @returns {string} param
      */
-    onDateChange: function (startDate, endDate, calendar) {
-
+    onDateChange: function () {
         // calendar duration
         $('*[id*=lnr-calendar-duration]').each(function (index, element) {
             $(element).html(calendar.duration);
@@ -166,20 +210,20 @@ var helper = {
 
         // calendar start date
         $('[id=lnr-date-start]').each(function (index, element) {
-            $(element).html('from ' + startDate.getDate() +
-                '.' + startDate.getMonth() +
-                '.' + startDate.getFullYear());
+            $(element).html('from ' + calendar.startDate.getDate() +
+                '.' + calendar.startDate.getMonth() +
+                '.' + calendar.startDate.getFullYear());
         });
 
-        $('.rental-info-from').text(startDate.getDate() + '.' +
-            startDate.getMonth() + '.' +
-            startDate.getFullYear() + ', ' +
+        $('.rental-info-from').text(calendar.startDate.getDate() + '.' +
+            calendar.startDate.getMonth() + '.' +
+            calendar.startDate.getFullYear() + ', ' +
             calendar.startTime + ':00'
         );
 
-        $('.rental-info-to').text(endDate.getDate() + '.' +
-            endDate.getMonth() + '.' +
-            endDate.getFullYear() + ', ' +
+        $('.rental-info-to').text(calendar.endDate.getDate() + '.' +
+            calendar.endDate.getMonth() + '.' +
+            calendar.endDate.getFullYear() + ', ' +
             calendar.endTime + ':00'
         );
 
@@ -188,9 +232,9 @@ var helper = {
 
         // calendar end date
         $('[id=lnr-date-end]').each(function (index, element) {
-            $(element).html('to ' + endDate.getDate() +
-                '.' + endDate.getMonth() +
-                '.' + endDate.getFullYear());
+            $(element).html('to ' + calendar.endDate.getDate() +
+                '.' + calendar.endDate.getMonth() +
+                '.' + calendar.endDate.getFullYear());
         });
     },
     /**
@@ -201,7 +245,7 @@ var helper = {
     nextTab: function (element) {
         switch (element.id) {
             case 'tab-basic-info': helper.changeTab(element); break;
-            case 'tab-payment-details': api.signup(function() {helper.changeTab(element)}); break;
+            case 'tab-payment-details': loginFlow ? api.login(function() {helper.changeTab(element)}) : api.signup(function() {helper.changeTab(element)}); break;
             case 'tab-booking-overview': break;
             case 'tab-duration': api.createRequest(); break;
         }
@@ -209,6 +253,9 @@ var helper = {
     // Virtually click on the actual tab, used to change to a certain tab
     changeTab: function (element) {
         document.getElementById(element.id).click();
+    },
+    signupOrLogin: function (changeTabCallback) {
+        // TODO: 
     },
     /**
      * used to open the date (from/to) dropdowns for calendar 
@@ -220,16 +267,26 @@ var helper = {
 
         var startId = 'lnr-date-from-dropdown';
         var endId = 'lnr-date-to-dropdown';
-
         var element = $('#' + id);
         element.html('');
         for (var index = 0; index < 17; index += 1) {
+            
+            // render the element
             element.append(
-                '<div class="lnr-date-selector" onclick="helper.onTimeValueSelect(' +
-                parseInt(index + 6) + ', ' + type + ')" + id="lnr-date-from-select-"' +
-                index + '><span>' + (index + 6) + ":00" +
+                '<div class="lnr-date-selector" onclick="helper.onTimeValueSelect(' + 
+                parseInt(index + 6) + ', ' + type + ')"' + 
+                'id="' + id + '-select-' + index + '"><span>' + (index + 6) + ":00" +
                 calendar.availabilityMessage(index, calendar.endDate) + '</span></div>'
             );
+            
+            // disable it when isOptionEnabled is false
+            if (calendar.isOptionEnabled(index, calendar.endDate) === false) {
+                var currentDropdownSelectId = '#' + id + '-select-' + index;
+                $(currentDropdownSelectId).css({
+                    "pointer-events": "none",
+                    "color": "#c6c6c6"
+                });
+            }
         }
         // at a time only 1 dropdown should be shown
         if (id === startId) {
@@ -302,6 +359,8 @@ var helper = {
     showCreditCardForm: function () {
         // hide the payment credit card form
         $('#sp-payment-form').show();
+        // Reset users' payment method
+        user.hasPaymentMethod = false;
     },
     /**
      * directive
@@ -313,28 +372,44 @@ var helper = {
 
         var rentalInfoHTML =
             '<ul class="lnr-list-sm mdl-list">' +
+            
+            // date -- from
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="durationPanel.from"></span>' +
-            '<span align="right" class="rental-info-from mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">-</span>' +
+            '<span align="right" class="rental-info-from mdl-list__item-primary-content md-subhead-sm">-</span>' +
             '</li>' +
+            
+            // date -- to
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="durationPanel.to"></span>' +
-            '<span align="right" class="rental-info-to mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">-</span>' +
+            '<span align="right" class="rental-info-to mdl-list__item-primary-content md-subhead-sm">-</span>' +
             '</li>' +
+            
+            // rental -- duration
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-list-compact md-title-sm" translate="rental.duration"></span>' +
             '<span align="right" class="mdl-list__item-primary-content md-list-compact md-subhead-sm" id="lnr-calendar-duration">-</span>' +
             '</li>' +
             '<lnr-vertical-divider></lnr-vertical-divider>' +
+
+            // rental -- subtotal
+            '<li class="mdl-list__item">' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="rental.subtotal"></span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>' +
+            '</li>' +
+
+            // rental -- fee
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="rental.fee"></span>' +
             '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-fee">0 &euro;</span>' +
             '</li>' +
+
+            // rental -- total
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="rental.total"></span>' +
             '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-total">0 &euro;</span>' +
             '</li>' +
-            '</ul>'
+            '</ul>';
 
         rentalInfo.replaceWith(rentalInfoHTML);
         return this;
@@ -448,6 +523,7 @@ var helper = {
         // hide the payment credit card form
         $('#sp-payment-form').hide();
         $('.info-title').hide();
+        $('.info-login').hide();
         $('.info-error').hide();
         $('.overview-error').hide();
         $('.payment-error').hide();
@@ -489,6 +565,13 @@ var helper = {
         calendar.initCalendarPicker();
         helper.updateTimeRangeText();
         helper.updatePaymentExpirationText();
+        // For recurring users, show login form instead of signup
+        if (helper.getLastLogin()) {
+            helper.triggerLoginForm();
+            $('#form_login_email').val(helper.getLastLogin().lnrEmail);
+        } else {
+            helper.triggerSignupForm();
+        }
     },
     /**
      * update the value selected by user using
@@ -522,7 +605,7 @@ var helper = {
      * @params {event} event fired by browser
      * @returns {void}
      */
-    closeDropDown: function (event) {
+    closeDropDown: function (event) {       
         if (!event.target.matches('.lnr-dropdown-button')) {
             var dropdowns = document.getElementsByClassName("dropdown-content");
             for (var loop = 0; loop < dropdowns.length; loop += 1) {

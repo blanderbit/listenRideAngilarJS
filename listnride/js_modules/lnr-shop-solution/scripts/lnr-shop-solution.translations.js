@@ -5,7 +5,8 @@ var translationsConfigObject = {
         shared: {
             lnrHeaderText: 'The perfect bike. Simply rent it.',
             hello: 'Hello',
-            print: 'Print Page'
+            print: 'Print Page',
+            here: 'here'
         },
         tabs: {
             tabDuration: '1.&nbsp;Duration',
@@ -23,13 +24,19 @@ var translationsConfigObject = {
             title: 'Alright',
             titleEmpty: 'Alright,',
             description: 'Please provide your name and email address. Make sure your email address is valid as we\'ll send your booking confirmation to it.<br><br>No worries, your data is safe.',
-            firstName: 'Firstname',
-            lastName: 'Lastname',
+            firstName: 'First name',
+            lastName: 'Last name',
             email: 'Email Address',
             emailRepeat: 'Repeat Email',
+            password: 'Password',
             invalidForm: 'It seems like there\'s invalid data in the form.',
+            loginTitle: 'Hey again',
+            loginDescription: 'It looks like you\'ve already got an account at listnride! Simply log in using your password. If you didn\'t set any so far, you\'ll find it in the first email we\'ve sent to you.',
             errorTitle: 'Oups',
-            errorDescription: 'This email address is invalid or already registered in our system.'
+            errorDescription: 'The password seems to be wrong.',
+            alreadyHaveAccount: 'Already have an account?',
+            noAccountYet: "No account yet?",
+            invalidEmails: "Email doesn\'t match or incorrect"
         },
         payment: {
             title: 'How would you like to pay?',
@@ -80,7 +87,8 @@ var translationsConfigObject = {
         shared: {
             lnrHeaderText: 'Das perfekte Rad. Einfach mieten.',
             hello: 'Hallo',
-            print: 'Seite Drucken'
+            print: 'Seite Drucken',
+            here: 'hier'
         },
         tabs: {
             tabDuration: 'Dauer',
@@ -101,9 +109,15 @@ var translationsConfigObject = {
             lastName: 'Nachname',
             email: 'Email-Adresse',
             emailRepeat: 'Email-Adresse wiederholen',
+            password: 'Passwort',
             invalidForm: 'Das Formular scheint nicht ganz korrekt ausgef&uuml;llt zu sein.',
-            errorTitle: 'Ups!',
-            errorDescription: 'Diese Email-Addresse ist ung&uuml;ltig oder bereits in unserem System vorhanden.'
+            loginTitle: 'Willkommen zur&uuml;ck!',
+            loginDescription: 'Du scheinst bereits ein Account bei listnride zu haben! Melde dich einfach mit deinem Passwort an. Falls du bisher keins festgelegt hast, findest du es in der ersten Email die wir die geschickt hatten.',
+            errorTitle: 'Ups',
+            errorDescription: 'Das eingegebene Passwort scheint nicht zu stimmen.',
+            alreadyHaveAccount: 'Schon angemeldet?',
+            noAccountYet: "Noch kein Account?",
+            invalidEmails: "Email doesn\'t match or incorrect"
         },
         payment: {
             title: 'Wie w&uuml;rdest du gerne zahlen?',
@@ -152,73 +166,83 @@ var translationsConfigObject = {
     },
     nl: {
         shared: {
-            lnrHeaderText: 'The perfect bike. Simply rent it.',
-            hello: 'Hello',
-            print: 'Print Page'
+            lnrHeaderText: 'De perfekte fiets. Gewoon huren.',
+            hello: 'Hallo',
+            print: 'Pagina printen'
         },
         tabs: {
-            tabDuration: 'Duration',
-            tabBasicInfo: 'User Info',
-            tabPaymentDetail: 'Payment Details',
-            tabBookingOverview: 'Booking Overview'
+            tabDuration: '1.&nbsp;Periode',
+            tabBasicInfo: '2.&nbsp;Info',
+            tabPaymentDetail: '3.&nbsp;Betaling',
+            tabBookingOverview: '4.&nbsp;Boeking'
         },
         durationPanel: {
-            info: 'Please mark rent period:',
-            from: 'From',
-            to: 'To',
-            selectDaysFirst: 'Please select the days first'
+            info: 'Selecteer de huurperiode:',
+            from: 'Van',
+            to: 'Tot',
+            selectDaysFirst: 'Selecteer eerst de startdatum en einddatum'
         },
         info: {
-            title: 'Alright',
+            title: 'OK',
             titleEmpty: 'Alright,',
-            description: 'Please provide your name and email address. Make sure your email address is valid as we\'ll send your booking confirmation to it.<br><br>No worries, your data is safe.',
-            firstName: 'Firstname',
-            lastName: 'Lastname',
-            email: 'Email Address',
-            emailRepeat: 'Repeat Email',
-            invalidForm: 'Please correct input fields',
-            errorTitle: 'Oups',
-            errorDescription: 'This email address is invalid or already registered in our system.'
+            description: 'Vul hieronder je naam en emailadres in. Zorg ervoor dat je een correct emailadres invult, hier ontvang je namelijk de boekingsbevestiging.<br><br>Je gegevens worden veilig opgeslagen.',
+            firstName: 'voornaam',
+            lastName: 'achternaam',
+            email: 'Emailadres',
+            emailRepeat: 'Herhaal Emailadres',
+            password: 'wachtwoord',
+            invalidForm: 'Er zijn helaas foutieve gegevens ingevuld',
+            loginTitle: 'Hey again',
+            loginDescription: 'It looks like you\'ve already got an account at listnride! Simply log in using your password. If you didn\'t set any so far, you\'ll find it in the first email we\'ve sent to you.',
+            errorTitle: 'Oops',
+            errorDescription: 'Dit emailadres in incorrect of al geregistreerd in ons bestand.',
+            alreadyHaveAccount: 'Already have an account?',
+            noAccountYet: "No account yet?",
+            invalidEmails: "Email doesn\'t match or incorrect"
         },
         payment: {
-            title: 'How would you like to pay?',
-            description: 'Choose between Paypal or Credit Card and simply enter the details. All information will get transferred securely.',
-            cardholderName: 'Cardholder Name',
-            cardNumber: 'Card Number',
+            title: 'Hoe wil je de betaling doen?',
+            description: 'Kies tussen Paypal or Kredietkaart en vul de benodigde gegevens in. Alle informatie wordt via een veilige verbinding verstuurd.',
+            cardholderName: 'Naam Kaarthouder',
+            cardNumber: 'Kaartnummer',
             payPal: 'PayPal',
-            creditCard: 'Credit Card',
-            expiry: 'Expires',
-            CVV: 'CVV',
-            save: 'Save Data',
-            titleError: 'Oh no!',
-            descriptionError: 'Your payment data seems to be invalid, because:'
+            creditCard: 'Kredietkaart',
+            expiry: 'Vervaldatum',
+            CVV: 'Veiligheidscode (CVV)',
+            save: 'Gegevens Opslaan',
+            titleError: 'Helaas!',
+            descriptionError: 'De ingevoerde betaalgegevens zijn incorrect, omdat:'
         },
         rental: {
-            title: 'Hey there!',
-            description: 'Booking the bike is simple and secure! First, select from when to when you want to book it using the calendar.',
-            duration: 'Duration',
-            fee: 'Fee (incl. tax)',
-            total: 'Total',
-            subtotal: 'Subtotal',
-            days: 'Days',
-            hours: 'Hours'
+            title: 'Hallo daar!',
+            description: 'Het boeken van de fiets is simple and zeker! Eeerst, selecteer je de startdatum en eindatum als ook de tijden, middels de calendar.',
+            duration: 'Periode',
+            fee: 'Reserveringskosten (incl. btw)',
+            total: 'Totaal',
+            subtotal: 'Subtotaal',
+            day: 'dag',
+            days: 'dagen',
+            hour: 'Uur',
+            hours: 'Uren',
+            week: 'Week',
+            weeks: 'Weken'
         },
         overview: {
-            title: 'Just one more click!',
-            description: 'Simply check again all your data and click the \'Book\' Button below to book the bike. You\'ll get a booking confirmation via email, including all contact data like address and phone number.',
-            titleSuccess: 'Congratulations!',
-            descriptionSuccess: 'You\'ve successfully booked the bike. We\'ve send you a booking confirmation containing all informations to your email address.',
-            errorTitle: 'Ushh..',
-            errorDescription: 'Something went wrong with your booking',
-            bike: "Bike",
-            name: "Name",
+            title: 'Nog &eacute;&eacute;n Klik!',
+            description: 'Controleer nog eens alle gegevens en bevestig je boeking. Na het boeken ontvang je een boekingsbevestiging per email met all relevante gegevens, zoals de contactgegevens van de verhuuder.',
+            titleSuccess: 'Gefeliciteerd!',
+            descriptionSuccess: 'De boeking is rond!. We hebben je een bevestiging met alle relevante information per email verstuurd.',
+            errorTitle: 'Oepsie..',
+            errorDescription: 'Er is iets mis gegaan met je boeking',
+            bike: "Fiets",
+            name: "Naam",
             lister: "Lister",
-            location: "Location"
+            location: "Plaats"
         },
         navigation: {
-            back: 'Back',
-            next: 'Next',
-            book: 'Book'
+            back: 'Terug',
+            next: 'Volgende',
+            book: 'Boeken'
         }
     }
 }

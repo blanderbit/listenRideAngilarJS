@@ -1,5 +1,4 @@
 'use strict';
-
 angular.module('bike').component('calendar', {
   templateUrl: 'app/modules/bike/calendar/calendar.template.html',
   controllerAs: 'calendar',
@@ -16,8 +15,6 @@ angular.module('bike').component('calendar', {
     function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, date, api, authentication, verification) {
       var calendar = this;
       calendar.authentication = authentication;
-
-      console.log(calendar);
 
       calendar.$onChanges = function (changes) {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {

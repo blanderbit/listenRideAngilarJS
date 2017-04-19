@@ -1,32 +1,50 @@
 'use strict';
 
-angular.module('brand-integration',[]).component('ampler', {
+angular.module('ampler-integration',[]).component('ampler', {
   templateUrl: 'app/modules/brand-integration/ampler.template.html',
   controllerAs: 'ampler',
-  controller: [ 'api',
-    function AmplerController(api) {
+  controller: [ '$translate', 'api',
+    function AmplerController($translate, api) {
       var ampler = this;
 
-      ampler.bikesBerlin = [];
-      ampler.bikesMunich = [];
+      console.log("launching ctrl");
+
+      ampler.currentBikes = [];
+      $translate(["shared.berlin"]).then(
+        function (translations) {
+          ampler.currentCity = translations["shared.berlin"];
+        }
+      );
+      ampler.bikes = {
+        berlin: [],
+        munich: [],
+        hamburg: [],
+        vienna: []
+      };
 
       api.get('/rides?family=8').then(
         function (success) {
           console.log(success.data);
 
           for (var i=0; i<success.data.length; i++) {
-            if (success.data[i].city == "Berlin") {
-              ampler.bikesBerlin.push(success.data[i]);
-            }
-            else {
-              ampler.bikesMunich.push(success.data[i]);
+            switch (success.data[i].city) {
+              case "Berlin": ampler.bikes.berlin.push(success.data[i]); break;
+              case "München": ampler.bikes.munich.push(success.data[i]); break;
+              case "Hamburg": ampler.bikes.hamburg.push(success.data[i]); break;
+              case "Wien": ampler.bikes.vienna.push(success.data[i]); break;
             }
           }
+          ampler.currentBikes = ampler.bikes["berlin"];
         },
         function (error) {
           console.log('Error fetching Bikes');
         }
       );
+
+      ampler.showBikesIn = function(city) {
+        ampler.currentCity = $translate.instant("shared." + city);
+        ampler.currentBikes = ampler.bikes[city];
+      }
 
     }
   ]
