@@ -29,11 +29,13 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
         //   $state.reload();
         // });
         $window.location.href = 'http://' + locale + "." + url + $location.path();
-      }
+      };
       
       footer.onAppClick = function() {
         $window.open('https://itunes.apple.com/de/app/list-n-ride/id992114091?l=' + $translate.use(), '_blank');
-      }
+      };
+
+      footer.year = moment().year();
 
       function getLanguage(locale) {
         if (locale === 'en') {

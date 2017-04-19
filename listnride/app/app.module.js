@@ -19,6 +19,7 @@ angular.module('listnride', [
   'rating',
   'settings',
   'invoices',
+  'velothonBikerental',
   'jobs',
   'listingABike',
   'rentingABike',
@@ -46,7 +47,8 @@ angular.module('listnride', [
   'ngMeta',
   'slickCarousel',
   'angulartics',
-  'angulartics.google.analytics'
+  'angulartics.google.analytics',
+  'angularMoment'
 ])
 .config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider', 'ENV',
   function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider, ENV) {

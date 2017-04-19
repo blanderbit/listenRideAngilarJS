@@ -281,6 +281,9 @@ autocomplete .md-errors-spacer {
   width: 100%;
 }
 
+.lnr-tab-content-no-scroll {
+  position: fixed;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* SVG
@@ -1213,7 +1216,7 @@ requests md-input-container  {
 }
 
 .requests-list {
-  min-width: 300px;
+  min-width: 320px !important;
   max-width: 450px;
   border-right: 1px solid #efefef;
 }
@@ -1461,11 +1464,15 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
 /*  Invoices
 /*-----------------------------------------------------------------------------------*/
 
-.lnr-table-head {
-  background-color: #E5E5E5;
+.lnr-billing-page .lnr-billing-table-head md-list-item.md-2-line {
+  background-color: #e1e1e1;
+  min-height: 40px;
+  height: 40px;
   font-weight: bold;
+  padding-top: 10px;
   margin-top: 48px;
 }
+
 
 .lnr-table-head .flex {
   text-align: center;
@@ -1476,11 +1483,61 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
   margin-top: 48px;
 }
 
-#vertical-container {
-  height: 350px;
+.repeated-billing-items h1{
+  border-bottom: 1px solid #e1e1e1;
+  padding: 15px;
+  margin: 0;
 }
 
-.repeated-items h1{
-  border-bottom: 1px solid #ddd;
+.repeated-mobile-items h1{
+  border-bottom: 1px solid #e1e1e1;
   padding: 15px;
+}
+
+.lnr-mobile-billing {
+  padding-top: 15px;
+}
+
+.lnr-list-button .md-button {
+  min-height: inherit;
+  min-width: inherit;
+  line-height: 17px;
+  color: rgb(95,198,147);
+  padding: unset;
+  margin: unset;
+}
+
+/*.lnr-billing-page .repeated-billing-items .md-button:not([disabled]):hover {*/
+  /*background-color: rgba(229, 234, 236, 0.2);*/
+/*}*/
+
+.lnr-list-button .md-button:not([disabled]):hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.lnr-csv-button {
+  margin-top: 30px;
+}
+
+.lnr-billing-list-item {
+  height: 50px;
+  border-bottom: 1px solid #e1e1e1;
+  cursor: default;
+}
+
+.lnr-billing-list-item .md-button {
+  cursor: default;
+}
+
+.billing-bike-title span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.billing-bike-title .md-button {
+  width: 95%;
+  text-align: left;
 }

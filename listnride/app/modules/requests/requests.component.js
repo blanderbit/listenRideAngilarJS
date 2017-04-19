@@ -164,7 +164,7 @@ angular.module('requests',[]).component('requests', {
               // Lister has already a payout method, so simply accept the request
               requests.loadingChat = true;
               updateStatus(2);
-            } else {
+            } else {
               // Lister has no payout method yet, so show the payout method dialog
               showPayoutDialog(success.data);
             }
