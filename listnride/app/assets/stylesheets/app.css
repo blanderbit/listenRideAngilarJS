@@ -1230,7 +1230,7 @@ requests md-input-container  {
 }
 
 .lnr-message-form {
-  background: rgba(229,234,234,0.7);
+  background: rgb(236, 236, 236);
 }
 
 .lnr-message-form input {
@@ -1343,7 +1343,6 @@ message .status-message {
 .md-button.right {
   border-radius: 0 4px 4px 0;
 }
-
 /*-----------------------------------------------------------------------------------*/
 /*  STATIC PAGES
 /*-----------------------------------------------------------------------------------*/
