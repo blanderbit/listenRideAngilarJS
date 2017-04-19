@@ -49,11 +49,11 @@
                       ng-click="requests.loadRequest(request.id)">
           <img ng-src="{{requests.profilePicture(request)}}" class="md-avatar" alt="{{item.who}}" />
           <div class="md-list-item-text" layout="column">
-            <h4 ng-if="request.last_message.is_read">{{request.ride.name}}</h4>
-            <p ng-if="requests.is_rider(request)">{{ request.ride.category | category }}</p>
-            <p ng-if="request.last_message.is_read && requests.is_lister(request)">{{request.timespan}}</p>
+            <h4 ng-if="requests.is_rider(request) && request.last_message.is_read">{{request.ride.name}}</h4>
+            <h4 ng-if="requests.is_lister(request) && request.last_message.is_read">{{request.user.first_name}} {{request.user.last_name}}</h4>
+            <p ng-if="request.last_message.is_read">{{request.timespan}}</p>
             <h4 ng-if="!request.last_message.is_read" class="lnr-bold">{{request.ride.name}}</h4>
-            <p ng-if="!request.last_message.is_read && requests.is_lister(request)" class="lnr-bold">{{request.timespan}}</p>
+            <p ng-if="!request.last_message.is_read" class="lnr-bold">{{request.timespan}}</p>
           </div>
         </md-list-item>
       </div>
