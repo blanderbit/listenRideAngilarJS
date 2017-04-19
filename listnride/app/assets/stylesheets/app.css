@@ -1242,13 +1242,18 @@ requests md-input-container  {
 }
 
 .lnr-message {
-  padding: 4px;
+  padding: 4px 4px 2px 4px;
   border-radius: 4px;
 }
 
 .lnr-message .message-time {
   text-align: right;
   font-size: 10px;
+  margin: 2px 2px 2px 2px;
+}
+
+.lnr-message .message-text {
+  margin-bottom: 2px;
 }
 
 message .sent-message {
@@ -1297,6 +1302,8 @@ message .status-message {
 @media (max-width: 600px) {
   .message-button {
     margin: 6px 0 6px 0;
+  }
+  .md-primary {
     color: rgb(255, 255, 255) !important;
   }
 }
@@ -1304,6 +1311,8 @@ message .status-message {
 @media (min-width: 601px) {
   .message-button {
     margin: 0 6px 0 6px;
+  }
+  .md-primary {
     color: rgb(255, 255, 255) !important;
   }
 }

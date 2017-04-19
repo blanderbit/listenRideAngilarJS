@@ -1,14 +1,14 @@
 <div ng-if="message.sentMessage()" flex layout="row" layout-align="end end">
   <div class="lnr-message sent-message" flex="30" flex-sm="60" flex-xs="70" layout-margin>
-    <p>{{message.content}}</p>
-    <p class="lnr-message message-time">{{message.messageTime}}</p>
+    <p class="message-text">{{message.content}}</p>
+    <p class="message-time">{{message.messageTime}}</p>
   </div>
 </div>
 
 <div ng-if="message.receivedMessage()" layout="row" layout-align="start end">
   <div class="lnr-message received-message" flex="30" flex-sm="60" flex-xs="60" layout-margin>
-    <p>{{message.content}}</p>
-    <p class="lnr-message message-time">{{message.messageTime}}</p>
+    <p class="message-text">{{message.content}}</p>
+    <p class="message-time">{{message.messageTime}}</p>
   </div>
 </div>
 
@@ -88,7 +88,7 @@
     <div ng-if="!message.request.rideChat && message.status == 3">
       <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <md-button
-                  class="message-button"
+                  class="message-button md-raised md-primary lnr-no-margin md-button md-ink-ripple"
                   ng-disabled="message.request.status != 3" 
                   ng-click="message.updateStatus(4)" 
                   analytics-on analytics-category="link"
@@ -102,7 +102,7 @@
     <div ng-if="!message.request.rideChat && message.status == 4">
       <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <md-button
-                  class="message-button md-raised lnr-no-margin md-button md-ink-ripple" 
+                  class="message-button md-raised md-primary lnr-no-margin md-button md-ink-ripple" 
                   ng-disabled="message.request.status != 4" 
                   ng-click="message.showRatingDialog()" 
                   analytics-on analytics-category="rating"
