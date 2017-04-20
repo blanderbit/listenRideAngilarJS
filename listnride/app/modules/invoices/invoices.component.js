@@ -41,7 +41,7 @@ angular.module('invoices',[]).component('invoices', {
             };
 
             invoices.getCsv = function (target) {
-                api.get('/users/' + $localStorage.userId + "/transaction_csv?target=" + target).then(
+                api.get('/users/' + $localStorage.userId + "/transaction_csv?target=" + target, 'attachment').then(
                     function(response) {
                         var anchor = angular.element('<a/>');
                         anchor.attr({
@@ -54,6 +54,19 @@ angular.module('invoices',[]).component('invoices', {
                         console.log("Error retrieving CSV", error);
                     }
                 );
+            };
+
+            invoices.getPdf = function(id, target) {
+                var fileName = 'Invoice ' + id + ' ' + moment().format('MMMM Do YYYY') + '.pdf';
+                var a = document.createElement('a');
+                document.body.appendChild(a);
+                api.get('/users/' + $localStorage.userId + '/invoices/' + id + '?target=' + target, 'blob').then(function (result) {
+                    var file = new Blob([result.data], {type: 'application/pdf'});
+                    var fileURL = window.URL.createObjectURL(file);
+                    a.href = fileURL;
+                    a.download = fileName;
+                    a.click();
+                });
             };
 
             invoices.ridesAny = function(target) {

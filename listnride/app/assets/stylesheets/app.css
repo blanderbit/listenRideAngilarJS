@@ -1647,3 +1647,7 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
   width: 95%;
   text-align: left;
 }
+
+.lnr-green-text span {
+  color: #5fc693;
+}
