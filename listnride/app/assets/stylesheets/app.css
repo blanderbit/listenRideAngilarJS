@@ -309,11 +309,15 @@ autocomplete .md-errors-spacer {
   height: 58px;
 }
 
+.lnr-icn-mlrg--big {
+  width: 90px;
+  height: 60px;
+}
+
 .lnr-icn-xlrg {
   width: 120px;
   height: 120px;
 }
-
 
 /*-----------------------------------------------------------------------------------*/
 /* PROFILE PICTURE
