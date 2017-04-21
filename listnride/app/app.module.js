@@ -43,6 +43,7 @@ angular.module('listnride', [
   'ngMap',
   'luegg.directives',
   'ngFileUpload',
+  'ngImgCrop',
   'ngSanitize',
   'angular-input-stars',
   'ngMeta',

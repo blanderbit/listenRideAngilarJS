@@ -357,6 +357,11 @@ settings .lnr-profile-lrg {
   padding: 0;
 }
 
+.cropArea {
+  overflow: hidden;
+  width:300px;
+  height:200px;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* NAVBAR

@@ -34,7 +34,37 @@
             <div class="tab-content" layout="column">
               <p class="md-body-1 lnr-center">{{ 'verification.2.description' | translate }}</p>
               <form name="verificationDialog.descriptionForm" layout="column" layout-align="center center">
-                <img class="lnr-profile-lrg lnr-clickable" ngf-select ng-model="verificationDialog.profilePicture" name="profilePicture" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-fix-orientation="true" ngf-min-height="100" ngf-background="verificationDialog.profilePicture || 'app/assets/ui_images/add-image.jpg'" ngf-as-background="true"></img>
+                <img
+                  ng-style="{'display': verificationDialog.profilePicture ? 'none' : ''}"
+                  class="lnr-profile-lrg lnr-clickable"
+                  ngf-select
+                  name="uncropedProfilePicture"
+                  ng-model="verificationDialog.profilePicture"
+                  accept="image/*"
+                  ngf-pattern="'image/*'"
+                  ngf-fix-orientation="true"
+                  ngf-background="verificationDialog.profilePicture || 'app/assets/ui_images/add-image.jpg'"
+                  ngf-validate="verificationDialog.validateObj"
+                  ngf-model-invalid="verificationDialog.invalidFiles">
+                </img>
+
+                <div
+                  ng-style="{'display': verificationDialog.profilePicture ? '' : 'none'}"
+                  ngf-drop
+                  ng-model="verificationDialog.profilePicture"
+                  ngf-pattern="image/*"
+                  class="cropArea">
+                  <img-crop
+                    ng-style="{'display': verificationDialog.profilePicture ? '' : 'none'}"
+                    image="verificationDialog.profilePicture  | ngfDataUrl"
+                    result-image="verificationDialog.croppedDataUrl"
+                    ng-init="croppedDataUrl=''">
+                  </img-crop>
+                </div>
+
+                <div ng-if="verificationDialog.invalidFiles.$error !== undefined" class="text-error" layout="column">
+                  <p>Image file, more than 20 mb</p>
+                </div>
               </form>
               <br>
             </div>
