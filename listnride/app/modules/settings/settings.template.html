@@ -16,7 +16,18 @@
               </div>
               <div flex-gt-xs="70" layout="column" layout-margin>
 
-              <img class="lnr-profile-lrg lnr-clickable" ngf-select ng-model="settings.profilePicture" name="profilePicture" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-fix-orientation="true" ngf-min-height="100" ngf-background="settings.profilePicture || settings.user.profile_picture.profile_picture.url || 'app/assets/ui_images/no-image.jpg'" ngf-as-background="true"></img>
+              <img class="lnr-profile-lrg lnr-clickable"
+                   ngf-select
+                   ng-model="settings.profilePicture"
+                   name="profilePicture"
+                   ngf-pattern="'image/*'"
+                   ngf-accept="'image/*'"
+                   ngf-max-size="20MB"
+                   ngf-fix-orientation="true"
+                   ngf-min-height="100"
+                   ngf-background="settings.profilePicture || settings.user.profile_picture.profile_picture.url || 'app/assets/ui_images/no-image.jpg'"
+                   ngf-as-background="true">
+                </img>
               </div>
             </div>
 
