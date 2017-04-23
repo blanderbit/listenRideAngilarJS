@@ -1,11 +1,13 @@
 'use strict';
 
-angular.module('brand-integration',[]).component('ampler', {
+angular.module('ampler-integration',[]).component('ampler', {
   templateUrl: 'app/modules/brand-integration/ampler.template.html',
   controllerAs: 'ampler',
   controller: [ '$translate', 'api',
     function AmplerController($translate, api) {
       var ampler = this;
+
+      console.log("launching ctrl");
 
       ampler.currentBikes = [];
       $translate(["shared.berlin"]).then(

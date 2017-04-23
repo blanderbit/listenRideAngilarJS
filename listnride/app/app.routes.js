@@ -416,6 +416,12 @@
       });
 
       $stateProvider.state({
+        name: 'brompton',
+        url: '/rent-brompton-bikes',
+        template: '<brompton></brompton>'
+      });
+
+      $stateProvider.state({
         name: 'factoryberlin',
         url: '/factoryberlin',
         template: '<user></user>'
