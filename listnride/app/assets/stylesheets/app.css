@@ -309,6 +309,11 @@ autocomplete .md-errors-spacer {
   height: 58px;
 }
 
+.lnr-icn-mlrg--medium {
+  width: 80px;
+  height: 60px;
+}
+
 .lnr-icn-mlrg--big {
   width: 90px;
   height: 60px;
@@ -670,6 +675,35 @@ brompton .cb-slideshow li span {
   -moz-animation: imageAnimation 20s linear infinite 0s;
   -o-animation: imageAnimation 20s linear infinite 0s;
   animation: imageAnimation 20s linear infinite 0s; 
+}
+
+ampler .cb-slideshow li:nth-child(1) span { 
+  background-image: url(../ui_images/brand-integration/brompton_hero1.jpg); 
+  background-position: 75% 50%;
+}
+
+ampler .cb-slideshow li:nth-child(2) span { 
+  background-image: url(../ui_images/brand-integration/brompton_hero2.jpg);
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  -o-animation-delay: 5s; 
+  animation-delay: 5s;
+}
+
+ampler .cb-slideshow li:nth-child(3) span { 
+  background-image: url(../ui_images/brand-integration/brompton_hero3.jpg);
+  -webkit-animation-delay: 10s;
+  -moz-animation-delay: 10s;
+  -o-animation-delay: 10s; 
+  animation-delay: 10s;
+}
+
+ampler .cb-slideshow li:nth-child(4) span { 
+  background-image: url(../ui_images/brand-integration/brompton_hero4.jpg);
+  -webkit-animation-delay: 15s;
+  -moz-animation-delay: 15s;
+  -o-animation-delay: 15s; 
+  animation-delay: 15s;
 }
 
 @-webkit-keyframes imageAnimation { 
