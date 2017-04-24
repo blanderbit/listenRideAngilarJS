@@ -19,7 +19,8 @@ angular.module('ampler-integration',[]).component('ampler', {
         berlin: [],
         munich: [],
         hamburg: [],
-        vienna: []
+        vienna: [],
+        zurich: []
       };
 
       api.get('/rides?family=8').then(
@@ -32,6 +33,7 @@ angular.module('ampler-integration',[]).component('ampler', {
               case "München": ampler.bikes.munich.push(success.data[i]); break;
               case "Hamburg": ampler.bikes.hamburg.push(success.data[i]); break;
               case "Wien": ampler.bikes.vienna.push(success.data[i]); break;
+              case "Zürich": ampler.bikes.zurich.push(success.data[i]); break;
             }
           }
           ampler.currentBikes = ampler.bikes["berlin"];
