@@ -594,7 +594,8 @@
     "payout": "Payout",
     "you_paid": "You paid",
     "invoice": "Invoice",
-    "billing": "Billing"
+    "billing": "Billing",
+    "download-csv": "Download CSV"
   },
 
   "contact-and-help": {

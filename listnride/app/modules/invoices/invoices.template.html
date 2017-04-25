@@ -3,7 +3,7 @@
 
   <div class="content lnr-page-margin lnr-billing-page" layout="column">
     <div class="lnr-section-title lnr-center" layout="column" layout-align="center center">
-      <h1 class="md-headline">Billing</h1>
+      <h1 class="md-headline">{{ 'invoices.billing' | translate }}</h1>
     </div>
 
     <md-tabs flex md-dynamic-height md-no-ink md-no-ink-bars md-selected="list.selectedIndex" md-center-tabs="on">
@@ -57,7 +57,7 @@
                     ng-click="invoices.getCsv('lister')"
                     ng-style="{'display': invoices.ridesAsListerAny && !invoices.loadingRequests ? '' : 'none'}"
             >
-              {{ 'shared.download' | translate }} CSV
+              {{ 'invoices.download-csv' | translate }} CSV
             </md-button>
           </div>
           <!--TABLE END HERE-->
@@ -141,7 +141,7 @@
                     ng-click="invoices.getCsv('rider')"
                     ng-style="{'display': invoices.ridesAsRiderAny && !invoices.loadingRequests ? '' : 'none'}"
             >
-              {{ 'shared.download' | translate }} CSV
+              {{ 'invoices.download-csv' | translate }}
             </md-button>
           </div>
           <!--TABLE END HERE-->
