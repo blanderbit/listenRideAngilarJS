@@ -18,7 +18,7 @@ angular.module('invoices',[]).component('invoices', {
                     invoices.asLister = response.data.as_lister;
                     invoices.asRider = response.data.as_rider;
                     invoices.yearsRider = Object.keys(invoices.asRider).reverse();
-                    invoices.yearsLister = Object.keys(invoices.asRider).reverse();
+                    invoices.yearsLister = Object.keys(invoices.asLister).reverse();
                     invoices.ridesAny('rider');
                     invoices.ridesAny('lister');
                     invoices.loadingRequests = false;
