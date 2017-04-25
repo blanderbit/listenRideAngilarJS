@@ -18,6 +18,9 @@ angular.
         verificationDialog.profilePicture = false;
         verificationDialog.hasProfilePicture = false;
         verificationDialog.sentConfirmationSms = false;
+        verificationDialog.croppedDataUrl = false;
+        verificationDialog.validateObj = {size: {max: '20MB'}};
+        verificationDialog.invalidFiles = {};
 
         $state.current.name == "home" ? verificationDialog.firstTime = true : verificationDialog.firstTime = false;
         // Fires if scope gets destroyed and cancels poller
@@ -61,9 +64,9 @@ angular.
         };
 
         var uploadPicture = function() {
-          var profilePicture = {
+            var profilePicture = {
             "user": {
-              "profile_picture": verificationDialog.profilePicture
+              "profile_picture": Upload.dataUrltoBlob(verificationDialog.croppedDataUrl, verificationDialog.profilePicture.name)
             }
           };
 
@@ -75,14 +78,13 @@ angular.
               'Authorization': $localStorage.auth
             }
           }).then(
-          function(response) {
-            console.log(response.data);
-            $localStorage.profilePicture = response.data.profile_picture.profile_picture.url;
-          },
-          function(error) {
-            console.log("Error while uploading profile picture", error);
-          }
-        );
+            function(response) {
+              $localStorage.profilePicture = response.data.profile_picture.profile_picture.url;
+            },
+            function(error) {
+              console.log("Error while uploading profile picture", error);
+            }
+          );
         };
 
         var uploadAddress = function() {
@@ -107,7 +109,7 @@ angular.
 
             }
           );
-        }
+        };
 
         verificationDialog.resendEmail = function() {
           api.post('/users/' + $localStorage.userId + '/resend_confirmation_mail').then(

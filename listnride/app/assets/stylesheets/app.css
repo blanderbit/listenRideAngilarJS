@@ -362,6 +362,11 @@ settings .lnr-profile-lrg {
   padding: 0;
 }
 
+.cropArea {
+  overflow: hidden;
+  width:300px;
+  height:200px;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* NAVBAR
@@ -1279,14 +1284,9 @@ md-toast.md-center {
 .chat {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  background-color: #efefef;
-}
-
-.chat {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
   padding: 48px 16px 24px 16px;
-  background: #fff;
+  margin: 0px 30px 0px 30px;
+  background-color: #fff;
 }
 
 requests md-input-container  {
@@ -1295,10 +1295,13 @@ requests md-input-container  {
 
 .requests-list {
   min-width: 320px !important;
-  max-width: 450px;
+  max-width: 450px !important;
   border-right: 1px solid #efefef;
 }
 
+.requests-list .lnr-center {
+  padding: 0px 12px 0px 12px
+}
 .requests-list md-list-item .md-avatar {
   width: 50px;
   height: 50px;
@@ -1310,7 +1313,7 @@ requests md-input-container  {
 }
 
 .lnr-message-form {
-  background: rgba(229,234,234,0.7);
+  background: rgb(236, 236, 236);
 }
 
 .lnr-message-form input {
@@ -1322,8 +1325,18 @@ requests md-input-container  {
 }
 
 .lnr-message {
-  padding: 4px;
+  padding: 4px 4px 2px 4px;
   border-radius: 4px;
+}
+
+.lnr-message .message-time {
+  text-align: right;
+  font-size: 10px;
+  margin: 2px 2px 2px 2px;
+}
+
+.lnr-message .message-text {
+  margin-bottom: 2px;
 }
 
 message .sent-message {
@@ -1334,11 +1347,11 @@ message .sent-message {
 
 message .received-message {
   position: relative;
-  background-color: rgba(229,234,234,0.4);
+  background-color: rgb(237, 240, 240);
 }
 
 message .status-message {
-  background-color: rgba(229,234,234,0.4);
+  background-color: rgba(229, 234, 234, 0.16);
 }
 
 .sent-message:after {
@@ -1364,12 +1377,66 @@ message .status-message {
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-right-color: rgba(229,234,234,0.4);
+  border-right-color: rgb(237, 240, 240);
   border-width: 6px;
   margin-top: -6px;
 }
 
+@media (max-width: 600px) {
+  .message-button {
+    margin: 6px 0 6px 0;
+  }
+  .md-primary {
+    color: rgb(255, 255, 255) !important;
+  }
+}
 
+@media (min-width: 601px) {
+  .message-button {
+    margin: 0 6px 0 6px;
+  }
+  .md-primary {
+    color: rgb(255, 255, 255) !important;
+  }
+}
+
+.request-filter-switch {
+  margin: 30px 0;
+  padding: 0px 32px 0px 30px;
+  text-transform: none;
+  font-weight: 400;
+  min-width: 96px;
+  border: solid #eef1f1 1px;
+}
+
+.request-filter-switch:hover {
+  color: rgb(110, 110, 110) !important;
+  background-color: rgba(158,158,158,0.2) !important;
+}
+
+.request-filter-switch-active {
+  background-color: rgba(158,158,158,0.2) !important;
+}
+
+.request-filter-dropdown {
+  margin: 0 0 30px 0;
+}
+
+.request-filter-dropdown md-select {
+  border-width: 0;
+}
+
+.md-button.left {
+  border-radius: 4px 0 0 4px;
+}
+
+.md-button.middle {
+  border-radius: 0;
+}
+
+.md-button.right {
+  border-radius: 0 4px 4px 0;
+}
 /*-----------------------------------------------------------------------------------*/
 /*  STATIC PAGES
 /*-----------------------------------------------------------------------------------*/
@@ -1618,4 +1685,8 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
 .billing-bike-title .md-button {
   width: 95%;
   text-align: left;
+}
+
+.lnr-green-text span {
+  color: #5fc693;
 }
