@@ -26,7 +26,7 @@ angular.module('requests', []).component('requests', {
       accessControl, ENV) {
       if (accessControl.requireLogin()) {
         return;
-      }
+      } 
 
       var requests = this;
       requests.selected = 0;
@@ -243,6 +243,21 @@ angular.module('requests', []).component('requests', {
         });
       }
 
+      var showPayoutDialog = function(user, event) {
+        $mdDialog.show({
+          locals: {user: user},
+          controller: PayoutDialogController,
+          controllerAs: 'settings',
+          templateUrl: 'app/modules/requests/dialogs/payoutDialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: false,
+          fullscreen: true // Only for -xs, -sm breakpoints.
+        });
+      }
+
       var showChatDialog = function (event) {
         $mdDialog.show({
           controller: ChatDialogController,
@@ -293,11 +308,15 @@ angular.module('requests', []).component('requests', {
       // Sends a new message by directly appending it locally and posting it to the API
       requests.sendMessage = function () {
         requests.request.glued = true
+        // add property created_at_readable using current time
+        // used in message timestamp
+        var current_date = $filter('date')(new Date(), "MMM dd, HH:mm").replace(".", "");
         if (requests.message) {
           var data = {
             "request_id": requests.request.id,
             "sender": $localStorage.userId,
             "content": requests.message,
+            "created_at_readable": current_date,
             "is_read": false
           };
           var message = {
@@ -362,6 +381,50 @@ angular.module('requests', []).component('requests', {
           // For small screens, show Chat Dialog again
           hideDialog();
         }
+      };
+
+      // TODO: this code is appearing twice, here and in the settings Controller (settings.component.rb)
+      var PayoutDialogController = function(user) {
+        var payoutDialog = this;
+
+        payoutDialog.user = user;
+
+        payoutDialog.addPayoutMethod = function () {
+          var data = {
+            "payment_method": payoutDialog.payoutMethod
+          };
+  
+          data.payment_method.user_id = $localStorage.userId;
+  
+          if (payoutDialog.payoutMethod.family == 1) {
+            data.payment_method.email = "";
+          } else {
+            data.payment_method.iban = "";
+            data.payment_method.bic = "";
+          }
+  
+          api.post('/users/' + $localStorage.userId + '/payment_methods', data).then(
+            function (success) {
+              $mdToast.show(
+                $mdToast.simple()
+                .textContent($translate.instant('toasts.add-payout-success'))
+                .hideDelay(4000)
+                .position('top center')
+              );
+              requests.loadingChat = true;
+              updateStatus(2);
+              hideDialog();
+            },
+            function (error) {
+              $mdToast.show(
+                $mdToast.simple()
+                .textContent($translate.instant('toasts.error'))
+                .hideDelay(4000)
+                .position('top center')
+              );
+            }
+          );
+        };
       };
 
       var RatingDialogController = function () {
