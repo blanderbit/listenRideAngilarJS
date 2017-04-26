@@ -99,13 +99,13 @@ angular.module('requests', []).component('requests', {
         $timeout(function () {
           if (requests.requests.length > 0) {
             requests.selected = requests.requests[0].id;
-            requests.loadRequest(requests.selected);
+            requests.loadRequest(requests.selected, false);
           }
         }, 200);
       };
 
       // Handles initial request loading
-      requests.loadRequest = function (requestId) {
+      requests.loadRequest = function (requestId, showDialog) {
         requests.selected = requestId;
         $state.go(".", { requestId: requestId }, { notify: false });
         requests.loadingChat = true;
@@ -122,7 +122,7 @@ angular.module('requests', []).component('requests', {
         // For small screens, disable the embedded chat and show chat in a fullscreen dialog instead
         if ($mdMedia('xs')) {
           requests.showChat = false;
-          showChatDialog();
+          if (showDialog) showChatDialog();
         } else {
           requests.showChat = true;
         }

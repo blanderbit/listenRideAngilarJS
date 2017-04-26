@@ -1198,7 +1198,7 @@ md-toast.md-center {
   transform: translate3d(-50%, 0, 0);
 }
 
-@media (max-width:599px) {
+@media (max-width:959px) {
   .chat {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
@@ -1207,7 +1207,7 @@ md-toast.md-center {
   }
 }
 
-@media (min-width:600px) {
+@media (min-width:960px) {
   .chat {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
