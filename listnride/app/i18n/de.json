@@ -614,22 +614,22 @@
   },
 
   "invoices": {
-    "request_id": "Request ID",
-    "bike": "Bike",
-    "start_date": "Start date",
-    "end_date": "End date",
-    "lister": "Lister",
-    "rider": "Rider",
-    "payout": "Payout",
-    "you_paid": "You paid",
-    "invoice": "Invoice",
-    "billing": "Billing",
-    "download-csv": "Download CSV",
-    "download-pdf": "Download PDF",
-    "no-rentals": "You had no rentals yet",
-    "as-lister": "As Lister",
-    "as-rider": "As Rider",
-    "no-rides": "You had no rides yet"
+    "request_id": "Anfrage ID",
+    "bike": "Rad",
+    "start_date": "Startdatum",
+    "end_date": "Enddatum",
+    "lister": "Vermieter",
+    "rider": "Mieter",
+    "payout": "Ausbezahlt",
+    "you_paid": "Bezahlt",
+    "invoice": "Rechnung",
+    "billing": "Rechnungen",
+    "download-csv": "CSV herunterladen",
+    "download-pdf": "PDF herunterladen",
+    "no-rentals": "Es gab noch keine Vermietungen",
+    "as-lister": "Als Vermieter",
+    "as-rider": "Als Mieter",
+    "no-rides": "Noch keine Räder gemietet"
   },
 
   "contact-and-help": {
