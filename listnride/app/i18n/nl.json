@@ -612,22 +612,20 @@
   },
 
   "invoices": {
-    "request_id": "Request ID",
-    "bike": "Bike",
-    "start_date": "Start date",
-    "end_date": "End date",
-    "lister": "Lister",
-    "rider": "Rider",
-    "payout": "Payout",
-    "you_paid": "You paid",
-    "invoice": "Invoice",
-    "billing": "Billing",
+    "request_id": "Aanvraag ID",
+    "bike": "Fiets",
+    "start_date": "Start datum",
+    "end_date": "Eind datum",
+    "payout": "Uitbetaald",
+    "you_paid": "Betaald",
+    "invoice": "Factuur",
+    "billing": "Facturen",
     "download-csv": "Download CSV",
     "download-pdf": "Download PDF",
-    "no-rentals": "You had no rentals yet",
-    "as-lister": "As Lister",
-    "as-rider": "As Rider",
-    "no-rides": "You had no rides yet"
+    "no-rentals": "Nog geen verhuurtransacties gerealiseerd",
+    "as-lister": "Als Verhuurder",
+    "as-rider": "Als huurder",
+    "no-rides": "Nog geen huurtransacties gerealiseerd"
   },
 
   "contact-and-help": {
