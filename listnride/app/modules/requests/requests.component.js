@@ -26,7 +26,7 @@ angular.module('requests', []).component('requests', {
       accessControl, ENV) {
       if (accessControl.requireLogin()) {
         return;
-      }
+      } 
 
       var requests = this;
       requests.selected = 0;
@@ -308,11 +308,15 @@ angular.module('requests', []).component('requests', {
       // Sends a new message by directly appending it locally and posting it to the API
       requests.sendMessage = function () {
         requests.request.glued = true
+        // add property created_at_readable using current time
+        // used in message timestamp
+        var current_date = $filter('date')(new Date(), "MMM dd, HH:mm").replace(".", "");
         if (requests.message) {
           var data = {
             "request_id": requests.request.id,
             "sender": $localStorage.userId,
             "content": requests.message,
+            "created_at_readable": current_date,
             "is_read": false
           };
           var message = {
