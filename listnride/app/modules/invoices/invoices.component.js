@@ -3,8 +3,8 @@
 angular.module('invoices',[]).component('invoices', {
     templateUrl: 'app/modules/invoices/invoices.template.html',
     controllerAs: 'invoices',
-    controller: ['$localStorage', 'api', 'accessControl', '$translate',
-        function InvoicesController($localStorage, api, accessControl, $translate) {
+    controller: ['$localStorage', 'api', 'accessControl', '$translate', '$window',
+        function InvoicesController($localStorage, api, accessControl, $translate, $window) {
             if (accessControl.requireLogin()) {
                 return
             }
@@ -64,9 +64,10 @@ angular.module('invoices',[]).component('invoices', {
                 api.get('/users/' + $localStorage.userId + '/invoices/' + id + '?target=' + target, 'blob').then(function (result) {
                     var file = new Blob([result.data], {type: 'application/pdf'});
                     var fileURL = window.URL.createObjectURL(file);
-                    a.href = fileURL;
-                    a.download = fileName;
-                    a.click();
+                    // a.href = fileURL;
+                    // a.download = fileName;
+                    // a.click();
+                    $window.open(fileURL, '_blank');
                 });
             };
 
