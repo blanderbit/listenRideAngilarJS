@@ -71,7 +71,7 @@
             <md-list-item class="md-3-line"  ng-repeat="item in invoices.asLister[year]">
               <div class="md-list-item-text">
                 <div layout="row" layout-align="space-between center" flex>
-                  <div>
+                  <div ui-sref="requests({requestId: item.request_id})" class="lnr-green-text">
                     <h4>#{{item.id}}</h4>
                   </div>
                   <div>
@@ -84,7 +84,7 @@
                 </div>
                 <p>{{invoices.parseDate(item.start_date)}} - {{invoices.parseDate(item.end_date)}}</p>
                 <div layout="row" layout-align="space-between center" flex>
-                  <div><h3><b>{{item.bike}}</b></h3></div>
+                  <div ui-sref="bike({bikeId: item.bike_id})" class="lnr-green-text"><h3><b>{{item.bike}}</b></h3></div>
                   <div><h3><b>{{item.payout}}</b></h3></div>
                 </div>
               </div>
@@ -158,7 +158,7 @@
             <md-list-item class="md-3-line"  ng-repeat="item in invoices.asRider[year]">
               <div class="md-list-item-text">
                 <div layout="row" layout-align="space-between center" flex>
-                  <div>
+                  <div ui-sref="requests({requestId: item.request_id})" class="lnr-green-text">
                     <h4>#{{item.id}}</h4>
                   </div>
                   <div>
@@ -171,7 +171,7 @@
                 </div>
                 <p>{{invoices.parseDate(item.start_date)}} - {{invoices.parseDate(item.end_date)}}</p>
                 <div layout="row" layout-align="space-between center" flex>
-                  <div><h3><b>{{item.bike}}</b></h3></div>
+                  <div ui-sref="bike({bikeId: item.bike_id})" class="lnr-green-text"><h3><b>{{item.bike}}</b></h3></div>
                   <div><h3><b>{{item.payout}}</b></h3></div>
                 </div>
               </div>
