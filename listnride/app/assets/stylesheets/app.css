@@ -1628,6 +1628,9 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
   margin-top: 48px;
 }
 
+.lnr-billing-page .repeated-billing-items .md-button {
+  line-height: normal;
+}
 
 .lnr-table-head .flex {
   text-align: center;
@@ -1698,5 +1701,9 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
 }
 
 .lnr-green-text span {
+  color: #5fc693;
+}
+
+.lnr-green-text {
   color: #5fc693;
 }
