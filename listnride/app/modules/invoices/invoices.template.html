@@ -7,7 +7,7 @@
     </div>
 
     <md-tabs flex md-dynamic-height md-no-ink md-no-ink-bars md-selected="list.selectedIndex" md-center-tabs="on">
-      <md-tab label="As Lister">
+      <md-tab label="{{ 'invoices.as-lister' | translate }}">
         <div hide show-gt-xs flex>
           <!--TABLE START HERE-->
           <md-list>
@@ -27,7 +27,7 @@
             </div>
 
             <div ng-style="{'display': invoices.ridesAsListerAny ? 'none' : ''}" class="lnr-no-rental">
-              <h2>You had no rentals yet</h2>
+              <h2>{{ 'invoices.no-rentals' | translate }}</h2>
             </div>
 
             <div class="repeated-billing-items" ng-repeat="year in invoices.yearsLister" ng-style="{'display': invoices.ridesAsListerAny ? '' : 'none'}">
@@ -45,7 +45,7 @@
                 <span flex="10" layout="row" layout-align="end center">{{item.payout}}</span>
                 <span flex class="lnr-list-button" layout="row" layout-align="center center">
                     <md-button md-no-ink class="md-primary lnr-green-text" ng-click="invoices.getPdf(item.id, 'lister')">{{ 'shared.download' | translate }}</md-button>
-                  </span>
+                </span>
               </md-list-item>
             </div>
           </md-list>
@@ -53,18 +53,18 @@
           <div class="lnr-csv-button">
             <md-button
                     md-no-ink
-                    class="md-primary"
+                    class="md-primary lnr-green-text"
                     ng-click="invoices.getCsv('lister')"
                     ng-style="{'display': invoices.ridesAsListerAny && !invoices.loadingRequests ? '' : 'none'}"
             >
-              {{ 'invoices.download-csv' | translate }} CSV
+              {{ 'invoices.download-csv'  | translate }}
             </md-button>
           </div>
           <!--TABLE END HERE-->
         </div>
-        <div hide show-xs flex>
+        <div hide show-xs flex class='lnr-mobile-billing'>
           <div ng-style="{'display': invoices.ridesAsListerAny ? 'none' : ''}" class="lnr-no-rental">
-            <h2>You had no rentals yet</h2>
+            <h2>{{ 'invoices.no-rentals' | translate }}</h2>
           </div>
           <div class="repeated-mobile-items" ng-repeat="year in invoices.yearsLister" ng-style="{'display': invoices.ridesAsListerAny ? '' : 'none'}">
             <h1>{{year}}</h1>
@@ -74,11 +74,13 @@
                   <div>
                     <h4>#{{item.id}}</h4>
                   </div>
-                  <!--<div>-->
-                  <!--<md-button class="md-icon-button" aria-label="More">-->
-                  <!--<md-icon md-font-icon="fa-ellipsis-h fa-2x" class="fa"></md-icon>-->
-                  <!--</md-button>-->
-                  <!--</div>-->
+                  <div>
+                    <span flex class="lnr-list-button" layout="row" layout-align="center center">
+                      <md-button md-no-ink class="md-primary lnr-green-text" ng-click="invoices.getPdf(item.id, 'lister')">
+                        {{ 'invoices.download-pdf' | translate }}
+                      </md-button>
+                    </span>
+                  </div>
                 </div>
                 <p>{{invoices.parseDate(item.start_date)}} - {{invoices.parseDate(item.end_date)}}</p>
                 <div layout="row" layout-align="space-between center" flex>
@@ -92,7 +94,7 @@
         </div>
       </md-tab>
 
-      <md-tab label="As Rider">
+      <md-tab label="{{ 'invoices.as-rider' | translate }}">
         <div hide show-gt-xs flex>
           <!--TABLE START HERE-->
           <md-list>
@@ -111,7 +113,7 @@
             </div>
 
             <div ng-style="{'display': invoices.ridesAsRiderAny ? 'none' : ''}" class="lnr-no-rental">
-              <h2>You had no rides yet</h2>
+              <h2>{{ 'invoices.no-rides' | translate }}</h2>
             </div>
 
             <div class="repeated-billing-items" ng-repeat="year in invoices.yearsRider" ng-style="{'display': invoices.ridesAsRiderAny ? '' : 'none'}">
@@ -134,7 +136,7 @@
             </div>
           </md-list>
 
-          <div class="lnr-csv-button">
+          <div class="lnr-csv-button lnr-green-text">
             <md-button
                     md-no-ink
                     class="md-primary"
@@ -148,14 +150,25 @@
         </div>
 
         <div hide show-xs flex class='lnr-mobile-billing'>
-          <div ng-style="{'display': invoices.ridesAsRiderAny ? 'none' : ''}" class="lnr-no-rental" ng-style="{'display': invoices.ridesAsRiderAny ? '' : 'none'}">
-            <h1>You had no rides yet</h1>
+          <div ng-style="{'display': invoices.ridesAsRiderAny ? 'none' : ''}" class="lnr-no-rental">
+            <h2>{{ 'invoices.no-rides' | translate }}</h2>
           </div>
-          <div class="repeated-mobile-items" ng-repeat="year in invoices.yearsRider">
+          <div class="repeated-mobile-items" ng-repeat="year in invoices.yearsRider" ng-style="{'display': invoices.ridesAsRiderAny ? '' : 'none'}">
             <h1>{{year}}</h1>
             <md-list-item class="md-3-line"  ng-repeat="item in invoices.asRider[year]">
               <div class="md-list-item-text">
-                <h4>#{{item.id}}</h4>
+                <div layout="row" layout-align="space-between center" flex>
+                  <div>
+                    <h4>#{{item.id}}</h4>
+                  </div>
+                  <div>
+                    <span flex class="lnr-list-button" layout="row" layout-align="center center">
+                      <md-button md-no-ink class="md-primary lnr-green-text" ng-click="invoices.getPdf(item.id, 'rider')">
+                        {{ 'invoices.download-pdf' | translate }}
+                      </md-button>
+                    </span>
+                  </div>
+                </div>
                 <p>{{invoices.parseDate(item.start_date)}} - {{invoices.parseDate(item.end_date)}}</p>
                 <div layout="row" layout-align="space-between center" flex>
                   <div><h3><b>{{item.bike}}</b></h3></div>
