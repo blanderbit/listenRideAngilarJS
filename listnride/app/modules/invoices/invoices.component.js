@@ -12,6 +12,7 @@ angular.module('invoices',[]).component('invoices', {
             invoices.ridesAsListerAny = true;
             invoices.ridesAsRiderAny = true;
             invoices.loadingRequests = true;
+            invoices.filtersType = 'lister';
 
             api.get('/users/' + $localStorage.userId + "/reports").then(
                 function(response) {
@@ -81,6 +82,10 @@ angular.module('invoices',[]).component('invoices', {
             for (var i = 0; i < 100001; i++) {
                 invoices.items.push(i);
             }
+
+            invoices.filterInvoices = function (type) {
+                invoices.filtersType = type;
+            };
         }
     ]
 });
