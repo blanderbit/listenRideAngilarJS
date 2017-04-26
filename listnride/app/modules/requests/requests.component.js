@@ -99,13 +99,13 @@ angular.module('requests', []).component('requests', {
         $timeout(function () {
           if (requests.requests.length > 0) {
             requests.selected = requests.requests[0].id;
-            requests.loadRequest(requests.selected);
+            requests.loadRequest(requests.selected, false);
           }
         }, 200);
       };
 
       // Handles initial request loading
-      requests.loadRequest = function (requestId) {
+      requests.loadRequest = function (requestId, showDialog) {
         requests.selected = requestId;
         $state.go(".", { requestId: requestId }, { notify: false });
         requests.loadingChat = true;
@@ -122,7 +122,7 @@ angular.module('requests', []).component('requests', {
         // For small screens, disable the embedded chat and show chat in a fullscreen dialog instead
         if ($mdMedia('xs')) {
           requests.showChat = false;
-          showChatDialog();
+          if (showDialog) showChatDialog();
         } else {
           requests.showChat = true;
         }
@@ -177,6 +177,23 @@ angular.module('requests', []).component('requests', {
         );
       };
 
+      var updateStatus = function (statusId) {
+        var data = {
+          "request": {
+            "status": statusId
+          }
+        };
+
+        api.put("/requests/" + requests.request.id, data).then(
+          function (success) {
+            reloadRequest(requests.request.id);
+          },
+          function (error) {
+            reloadRequest(requests.request.id);
+          }
+        );
+      };
+
       // This function handles booking and all necessary validations
       requests.confirmBooking = function () {
         api.get('/users/' + $localStorage.userId).then(
@@ -189,6 +206,25 @@ angular.module('requests', []).component('requests', {
             }
           },
           function () {
+          }
+        );
+      }
+
+      // This function handles request accept and all validations
+      requests.acceptBooking = function() {
+        api.get('/users/' + $localStorage.userId).then(
+          function (success) {
+            if (success.data.current_payout_method) {
+              // Lister has already a payout method, so simply accept the request
+              requests.loadingChat = true;
+              updateStatus(2);
+            } else {
+              // Lister has no payout method yet, so show the payout method dialog
+              showPayoutDialog(success.data);
+            }
+          },
+          function (error) {
+
           }
         );
       }

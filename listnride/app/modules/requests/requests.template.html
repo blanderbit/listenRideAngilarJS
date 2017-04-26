@@ -15,13 +15,13 @@
                    ng-class="{'request-filter-switch-active':requests.filters.type == 'lister'}"  
                    class="request-filter-switch middle" 
                    ng-click="requests.filterBikes('lister', true)">
-                   Lister
+                   {{ 'shared.as' | translate }} {{ 'shared.lister' | translate}}
         </md-button>
         <md-button md-no-ink
                    ng-class="{'request-filter-switch-active':requests.filters.type == 'rider'}"  
                    class="request-filter-switch right" 
                    ng-click="requests.filterBikes('rider', true)">
-                   Rider
+                   {{ 'shared.as' | translate }} {{ 'shared.rider' | translate}}
         </md-button>
       </section>
     </div>
@@ -46,7 +46,7 @@
         <md-divider md-insets></md-divider>
         <md-list-item class="requests-list-item md-2-line" 
                       ng-class="{'request-filter-switch-active':requests.selected === request.id}"
-                      ng-click="requests.loadRequest(request.id)">
+                      ng-click="requests.loadRequest(request.id, true)">
           <img ng-src="{{requests.profilePicture(request)}}" class="md-avatar" alt="{{item.who}}" />
           <div class="md-list-item-text" layout="column">
             <h4 ng-if="requests.is_rider(request) && request.last_message.is_read">{{request.ride.name}}</h4>
@@ -71,7 +71,8 @@
                status="message.status"
                request="requests.request" 
                message-time="message.created_at_readable"
-               confirm-booking="requests.confirmBooking()" 
+               confirm-booking="requests.confirmBooking()"
+               accept-booking="requests.acceptBooking()"
                show-rating-dialog="requests.showRatingDialog()">
       </message>
     </div>
