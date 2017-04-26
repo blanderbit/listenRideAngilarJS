@@ -1198,12 +1198,22 @@ md-toast.md-center {
   transform: translate3d(-50%, 0, 0);
 }
 
-.chat {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  padding: 48px 16px 24px 16px;
-  margin: 0px 30px 0px 30px;
-  background-color: #fff;
+@media (max-width:599px) {
+  .chat {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 46px 6px 46px 6px;
+    background-color: #fff;
+  }
+}
+
+@media (min-width:600px) {
+  .chat {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 46px 46px 46px 46px;
+    background-color: #fff;
+  }
 }
 
 requests md-input-container  {
