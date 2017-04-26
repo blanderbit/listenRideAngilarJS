@@ -9,7 +9,7 @@
                    ng-class="{'request-filter-switch-active':requests.filters.type == 'all'}" 
                    class="request-filter-switch left md-noink"
                    ng-click="requests.filterBikes('all', true)">
-                   All
+                   {{ 'shared.all' | translate }}
         </md-button>
         <md-button md-no-ink
                    ng-class="{'request-filter-switch-active':requests.filters.type == 'lister'}"  
