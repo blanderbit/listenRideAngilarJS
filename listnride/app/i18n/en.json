@@ -196,12 +196,12 @@
     "complete-profile-description": "To book the bike, please enter your payment information. All informations are transmitted over a secure connection.",
     "no-requests-yet": "As soon as you made or got requests, they'll show up here.",
     "filters": {
-      "all-requests": "all requests",
-      "current-rentals": "current rentals",
-      "pending-requests": "pending requests",
-      "upcoming-rentals": "upcoming rentals",
-      "past-rentals": "past rentals",
-      "expired-requests": "expired requests"
+      "all-requests": "All Requests",
+      "current-rentals": "Current Rentals",
+      "pending-requests": "Pending Requests",
+      "upcoming-rentals": "Upcoming Rentals",
+      "past-rentals": "Past Rentals",
+      "expired-requests": "Expired Requests"
     }
   },
   "message": {

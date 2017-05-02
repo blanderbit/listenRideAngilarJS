@@ -202,12 +202,12 @@
     "complete-profile-description": "Om de fiets te boeken, vul je betaalgegevens in. Alle gegevens worden via een versleutelde, zekere verbinding verstuurd.",
     "no-requests-yet": "Op het moment, dat je een aanvraag doet of ontvangt, vind je de aanvragen hier.",
     "filters": {
-      "all-requests": "alle aanvragen",
-      "current-rentals": "actueel verhuur",
-      "pending-requests": "openstaande aanvragen",
-      "upcoming-rentals": "aankomend verhuur",
-      "past-rentals": "afgelopen verhuur",
-      "expired-requests": "verlopen aanvragen"
+      "all-requests": "Alle Aanvragen",
+      "current-rentals": "Actueel Verhuur",
+      "pending-requests": "Openstaande Aanvragen",
+      "upcoming-rentals": "Aankomend Verhuur",
+      "past-rentals": "Afgelopen Verhuur",
+      "expired-requests": "Verlopen Aanvragen"
     }
   },
 

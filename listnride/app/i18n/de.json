@@ -202,12 +202,12 @@
     "complete-profile-description": "Um das Rad zu buchen, gebe dein Zahlungsmittel an. Alle Daten werden über eine gesicherte Verbindung übertragen.",
     "no-requests-yet": "Sobald du Anfragen gestellt oder bekommen hast, werden sie hier angezeigt.",
     "filters": {
-      "all-requests": "alle anfragen",
-      "current-rentals": "aktuelle mieten",
-      "pending-requests": "offene anfragen",
-      "upcoming-rentals": "bevorstehende miete",
-      "past-rentals": "vergangene vermietungen",
-      "expired-requests": "abgelaufene anfragen"
+      "all-requests": "Alle Anfragen",
+      "current-rentals": "Aktuelle Mieten",
+      "pending-requests": "Offene Anfragen",
+      "upcoming-rentals": "Bevorstehende Miete",
+      "past-rentals": "Vergangene Vermietungen",
+      "expired-requests": "Abgelaufene Anfragen"
     }
   },
 
