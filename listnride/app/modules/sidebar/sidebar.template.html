@@ -16,6 +16,8 @@
       <md-divider ng-if="sidebar.authentication.loggedIn()"></md-divider>
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="settings" ng-click="sidebar.toggle();">{{ 'settings.settings' | translate }}</md-button>
       <md-divider ng-if="sidebar.authentication.loggedIn()"></md-divider>
+      <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="invoices" ng-click="sidebar.toggle();">{{ 'invoices.billing' | translate }}</md-button>
+      <md-divider ng-if="sidebar.authentication.loggedIn()"></md-divider>
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="home" ng-click="sidebar.toggle(); sidebar.authentication.logout()">{{ 'forms.log-out' | translate }}</md-button>
     </md-content>
 </md-sidenav>

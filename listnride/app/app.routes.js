@@ -163,6 +163,24 @@
       });
 
       $stateProvider.state({
+        name: 'velothonBikerental',
+        url: '/velothon-bikerental',
+        template: '<velothon-bikerental></velothon-bikerental>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.velothon-bikerental.title", "events.velothon-bikerental.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.velothon-bikerental.title"]);
+                ngMeta.setTag("description", translations["events.velothon-bikerental.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'crossride',
         url: '/berliner-fahrradschau',
         template: '<crossride></crossride>'
@@ -395,6 +413,12 @@
         name: 'ampler',
         url: '/rent-ampler-bikes',
         template: '<ampler></ampler>'
+      });
+
+      $stateProvider.state({
+        name: 'brompton',
+        url: '/rent-brompton-bikes',
+        template: '<brompton></brompton>'
       });
 
       $stateProvider.state({

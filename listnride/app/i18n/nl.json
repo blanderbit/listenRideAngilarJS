@@ -16,6 +16,7 @@
     "amsterdam": "Amsterdam",
     "vienna": "Wenen",
     "hamburg": "Hamburg",
+    "dusseldorf": "Düsseldorf",
     "per": "per",
     "hour": "Uur",
     "hours": "Uren",
@@ -30,6 +31,7 @@
     "lnr-fee": "listnride Servicekosten (incl. BTW)",
     "total": "Totaal",
     "from": "van",
+    "from2": "van",
     "to": "tot",
     "cancel": "Afbreken",
     "send": "Sturen",
@@ -60,7 +62,19 @@
     "Sun": "Sun",
     "join": "Join",
     "voucher": "Voucher",
-    "download": "Download"
+    "download": "Download",
+    "Jan": "Jan",
+    "Feb": "Feb",
+    "Mar": "Maart",
+    "Apr": "Apr",
+    "May": "Mei",
+    "Jun": "Juni",
+    "Jul": "Juli",
+    "Aug": "Aug",
+    "Sep": "Sept",
+    "Oct": "Okt",
+    "Nov": "Nov",
+    "Dec": "Dec"
   },
 
   "toasts": {
@@ -593,6 +607,19 @@
     "go-back": "Terug"
   },
 
+  "invoices": {
+    "request_id": "Request ID",
+    "bike": "Bike",
+    "start_date": "Start date",
+    "end_date": "End date",
+    "lister": "Lister",
+    "rider": "Rider",
+    "payout": "Payout",
+    "you_paid": "You paid",
+    "invoice": "Invoice",
+    "billing": "Billing"
+  },
+
   "contact-and-help": {
     "title": "Contact & Help",
     "meta-title": "listnride - We zijn er voor jou!",
@@ -713,6 +740,11 @@
     "in-velo-veritas": {
       "title": "In Velo Veritas - The vintage bicycle tour that's timeless",
       "text": "The legendary “In Velo Veritas” happens this year the 5th time at the 10th/11th June 2017 in Stockerau. For those, who want to participate but need a guideline-matching bicycle, we collected some suiting bikes of our community-members to save your day. Just rent it! Bike enthusiasts like you are offering the different bikes below. If you can’t participate, have more vintage bicycles, or just want want to meet like-minded people, you can share your bike on our platform with others! Become a part of our growing community and make some extra money with your passion!"
+    },
+    "velothon-bikerental": {
+      "title": "Boek eenvoudig the perfekte racefiets voor de Velothon Berlijn",
+      "text": "De Velothon Berlijn is de grootste wielerwedstrijd in Berlijn en een mooi gelegenheid om te racen door Berlijn en omgeving met duizenden gelijkgestemde deelnemers en veel toeschouwers langs de route. Je gaat de uitdaging aan maar je zoekt nog een geschikte racefiets? <br><br> We helpen je! Samen met de listnride community bieden we vele racefietsen, waarbij er zeker enige zijn die passen aan je wensen. Je kan die eenvoudig zo lang als je die nodig hebt huren. Je hoeft slechts één van de onderstaande fietsen te kiezen, aanvragen voor de gewenste periode en ophalen wanneer de tijd is gekomen. Simpel als dat. <br><br> Je kunt niet deelnemen? Help iemand in nood, een <a href=\"/#/listing-a-bike\">plaats je fiets</a> en verdien zo wat extra zakgeld!",
+      "meta-description": "Racefietsverhuur Berlijn, racefiets huren Berlijn"
     },
     "crossride": {
       "title": "listnride Crossride",
@@ -838,6 +870,10 @@
   },
 
   "brand-integration": {
+    "shared": {
+      "choose-location": "Choose a location",
+      "faq": "The frequently asked questions"
+    },
     "ampler": {
       "title": "Ampler. De slimme e-bike voor het stedelijke woon-werkverkeer.",
       "description": "Huur en testride een Ampler E-Bike in Berlijn, München, Hamburg en Wenen",
@@ -869,6 +905,28 @@
       "faq-answer-8": "Ja. Je kan binnen 14 dagen na ontvangst de fiets terug sturen. Om het volledige aankoopbedrag retour te krijgen, dient de fiets in zijn oorspronkelijke toestand en onbeschadigd te zijn. Houd er rekening mee dat de kosten voor het retour zenden zelf betaald moeten worden.",
       "faq-question-9": "Zijn de fiesten legaal?",
       "faq-answer-9": "Ja. Onze fietsen zijn legaal en naar europese richtlijn EN15194 afgesteld met een maximale snelheid van 25 km/u. Op eigen verantwoording kan je de de maximale snelheid via de smartphone App op 35 km/u instellen."
+    },
+    "brompton": {
+      "title": "Brompton. Made for Cities. Made for You.",
+      "description": "Test and Rent Bromptons all over Germany",
+      "subdescription": "Choose from various Model types the Brompton that fits you most!",
+      "item1-title": "Freely configurable",
+      "item1-description": "Custom made to your exact specification. choose from a range of colours, gearing options, riding styles and accessories",
+      "item2-title": "Unique folding system",
+      "item2-description": "Folding in 10-20 seconds<br>Small pack size<br>Easy to stow away",
+      "item3-title": "Handmade in London",
+      "item3-description": "High load capacity<br>Robust steel frame<br>High production quality",
+      "find-out-more": "Learn more about Brompton",
+      "faq-question-1": "What types of handlebars are available?",
+      "faq-answer-1": "Three different types:<br>M-Type - Classic shape, upright riding position<br>H-Type - For taller riders and everyone who likes to ride upright<br>S-Type Straight shape, sporty riding position",
+      "faq-question-2": "What are the riding characteristics of the Brompton?",
+      "faq-answer-2": "The small wheels allow the Brompton to accelerate quickly and make it very agile - ideal for the frequent stop and start urban traffic. The small diameter also increases the stability and strength of the rims. And an excellent suspension system ensures comfort on uneven ground and on long journeys.",
+      "faq-question-3": "How can I use the luggage system?",
+      "faq-answer-3": "The unique Brompton luggage system makes your bike fit for everyday use: it offers the right solution for almost every application. The bags are available in many different designs, materials and sizes - suitable for every situation. And since they are not fastened to the handlebars, but directly to the frame, they do not interfere with either steerability or stability.",
+      "faq-question-4": "What are the gearing variants?",
+      "faq-answer-4": "There are four translation options, each of which can be varied, ie reduced or increased according to your riding style and terrain. From the beginner to the trained climber - for everyone there is the appropriate circuit.<br>1 Speed - Simple and light weight, suitable for flat terrain in the city<br>2 Speed - One gear for mountains and to start and one gear for the normal riding speed, flexible and easy.<br>3 Speed - A robust hub shift for daily riding<br>6 Speed - The all-rounder, the right choice for longer tours and stronger slopes",
+      "faq-question-5": "In which colors can I assemble a Brompton?",
+      "faq-answer-5": "Brompton folding bikes are available in 12 colors. You can choose between one- and two-color finishing. There is also a clear lacquer version, in which the soldering seams are visible."
     }
   },
 

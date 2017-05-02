@@ -3,39 +3,41 @@
 angular.module('invoices',[]).component('invoices', {
     templateUrl: 'app/modules/invoices/invoices.template.html',
     controllerAs: 'invoices',
-    controller: ['$localStorage', 'api', 'accessControl',
-        function InvoicesController($localStorage, api, accessControl) {
+    controller: ['$localStorage', 'api', 'accessControl', '$translate',
+        function InvoicesController($localStorage, api, accessControl, $translate) {
             if (accessControl.requireLogin()) {
                 return
             }
             var invoices = this;
-            invoices.ridesAsListerAny = false;
-            invoices.ridesAsRiderAny = false;
+            invoices.ridesAsListerAny = true;
+            invoices.ridesAsRiderAny = true;
+            invoices.loadingRequests = true;
 
             api.get('/users/' + $localStorage.userId + "/reports").then(
                 function(response) {
                     invoices.asLister = response.data.as_lister;
                     invoices.asRider = response.data.as_rider;
-                    invoices.years = Object.keys(invoices.asRider).reverse();
+                    invoices.yearsRider = Object.keys(invoices.asRider).reverse();
+                    invoices.yearsLister = Object.keys(invoices.asRider).reverse();
                     invoices.ridesAny('rider');
                     invoices.ridesAny('lister');
+                    invoices.loadingRequests = false;
                 },
                 function(error) {
+                    invoices.loadingRequests = false;
                     console.log("Error retrieving User", error);
                 }
             );
 
             invoices.parseDate = function (milliseconds) {
-                var monthNames = ["Jan", "Feb", "Mar",
-                    "Apr", "May", "Jun", "Jul",
-                    "Aug", "Sep", "Oct",
-                    "Nov", "Dec"];
+                var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
                 var date = new Date(milliseconds);
                 var day = date.getDate();
                 var hours = date.getHours();
-                var ampm = hours >= 12 ? 'pm' : 'am';
+                // var ampm = hours >= 12 ? 'pm' : 'am';
                 var monthIndex = date.getMonth();
-                return day + ' ' + monthNames[monthIndex] + ' - ' + hours + ' ' + ampm
+                var monthName = $translate.instant("shared." + monthNames[monthIndex]);
+                return day + ' ' + monthName + ', ' + hours + ':00'
             };
 
             invoices.getCsv = function (target) {
@@ -45,7 +47,7 @@ angular.module('invoices',[]).component('invoices', {
                         anchor.attr({
                             href: 'data:attachment/csv;charset=utf-8,' + encodeURI(response.data),
                             target: '_blank',
-                            download: 'Billings as ' + target + '' + moment().format('MMMM Do YYYY') + '.csv'
+                            download: 'Billings as ' + target + ' ' + moment().format('MMMM Do YYYY') + '.csv'
                         })[0].click();
                     },
                     function(error) {

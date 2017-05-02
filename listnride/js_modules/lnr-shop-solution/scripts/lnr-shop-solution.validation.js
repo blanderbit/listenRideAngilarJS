@@ -94,6 +94,13 @@ var loginFormOverview = {
 };
 
 $(function () {
+    if (!_.isEmpty(localStorage.getItem("lnrEmail"))) {
+        loginFormOverview['form_login_email'] = true;
+        loginFormOverview['valid'] = true;
+    }
+});
+
+$(function () {
     $('#user-login').on('keyup', function () {
         userInputErrorAny('login')
     });

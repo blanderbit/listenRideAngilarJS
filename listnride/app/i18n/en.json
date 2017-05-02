@@ -16,6 +16,7 @@
     "amsterdam": "Amsterdam",
     "vienna": "Vienna",
     "hamburg": "Hamburg",
+    "dusseldorf": "Düsseldorf",
     "per": "per",
     "hour": "hour",
     "hours": "hours",
@@ -30,6 +31,7 @@
     "lnr-fee": "listnride fee (incl. tax)",
     "total": "total",
     "from": "from",
+    "from2": "from",
     "to": "to",
     "cancel": "Cancel",
     "send": "Send",
@@ -60,7 +62,19 @@
     "Sun": "Sun",
     "join": "Join",
     "voucher": "voucher",
-    "download": "Download"
+    "download": "Download",
+    "Jan": "Jan",
+    "Feb": "Feb",
+    "Mar": "Mar",
+    "Apr": "Apr",
+    "May": "May",
+    "Jun": "Jun",
+    "Jul": "Jul",
+    "Aug": "Aug",
+    "Sep": "Sep",
+    "Oct": "Oct",
+    "Nov": "Nov",
+    "Dec": "Dec"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
@@ -107,7 +121,7 @@
     "current-vouchers": "Your current balance is",
     "add-voucher": "Add Voucher",
     "meta-title": "Profile Settings",
-    "meta-description": "Change your profile- und payment settings."
+    "meta-description": "Change your profile - und payment settings."
   },
   "verification": {
     "verify-profile": "Verify your Profile",
@@ -568,6 +582,20 @@
     "open": "Open Positions",
     "go-back": "Back"
   },
+
+  "invoices": {
+    "request_id": "Request ID",
+    "bike": "Bike",
+    "start_date": "Start date",
+    "end_date": "End date",
+    "lister": "Lister",
+    "rider": "Rider",
+    "payout": "Payout",
+    "you_paid": "You paid",
+    "invoice": "Invoice",
+    "billing": "Billing"
+  },
+
   "contact-and-help": {
     "title": "Contact & Support",
     "meta-title": "listnride is here for you",
@@ -684,6 +712,11 @@
     "in-velo-veritas": {
       "title": "In Velo Veritas - The vintage bicycle tour that's timeless",
       "text": "The legendary “In Velo Veritas” happens this year the 5th time at the 10th/11th June 2017 in Stockerau. For those, who want to participate but need a guideline-matching bicycle, we collected some suiting bikes of our community-members to save your day. Just rent it! Bike enthusiasts like you are offering the different bikes below. If you can’t participate, have more vintage bicycles, or just want want to meet like-minded people, you can share your bike on our platform with others! Become a part of our growing community and make some extra money with your passion!"
+    },
+    "velothon-bikerental": {
+      "title": "Simply rent the perfect road bike for the Velothon Berlin",
+      "text": "Velothon Berlin is the city’s biggest bike race and one of the fastest and most exciting of the Velothon series. It’s a great opportunity to race through Berlin and its surroundings with thousands of like-minded cycling enthusiasts in front of crowds of cheering spectators. Are you looking to take on the challenge and in need of a good road bike? <br><br> We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that. <br><br> You can’t participate? Help out someone in need. <a href=\"/#/listing-a-bike\">List your bike</a> and make some extra pocket money!",
+      "meta-description": "Velothon, Velothon 2017, rent a roadbike, rent a bicycle, rent a bicycle Berlin, rent a road bike Berlin, Velothon Berlin, Velothon Berlin 2017, bike rental Berlin, bike rental, road bike rental Berlin, road bike rental"
     },
     "crossride": {
       "title": "listnride Crossride",
@@ -808,6 +841,10 @@
   },
 
   "brand-integration": {
+    "shared": {
+      "choose-location": "Choose a location",
+      "faq": "The frequently asked questions"
+    },
     "ampler": {
       "title": "Ampler. The smart electric bicycle for the urban commuter",
       "description": "Rent and test Ampler E-Bikes in Berlin, Munich, Hamburg and Vienna",
@@ -818,7 +855,6 @@
       "item2-description": "Upright riding position<br>Comfortable seat and grips<br>Stable kickstand<br>Lightweight",
       "item3-title": "Electric Assist",
       "item3-description": "Smooth and quiet pedal assist<br>Comfortable user experience<br>Easy to charge<br>Long lasting",
-      "choose-location": "Choose your location",
       "find-out-more": "Learn more about Ampler Bikes",
       "order-online": "<a href=\"https://amplerbikes.com/bikes\" target=\"_BLANK\">Order one of their bikes online</a> and get your rental reimbursed.<br>See the most frequently asked questions below.",
       "faq-question-1": "How often do I have to charge the battery?",
@@ -839,6 +875,28 @@
       "faq-answer-8": "Yes. You can return the bike in 14 days after receiving it. The bike must be in its original condition for full refund. Please note that have to pay the return postage yourself.",
       "faq-question-9": "Are the bikes street legal?",
       "faq-answer-9": "Yes. Our bikes are capable of a top speed of 35km/h but by default are limited according to EN15194 to the top speed of 25 km/h. This means that the motor will only help you up to 25km/h. You can change these settings from the smartphone app."
+    },
+    "brompton": {
+      "title": "Brompton. Made for Cities. Made for You.",
+      "description": "Test and Rent Bromptons all over Germany",
+      "subdescription": "Choose from various Model types the Brompton that fits you most!",
+      "item1-title": "Freely configurable",
+      "item1-description": "Custom made to your exact specification. choose from a range of colours, gearing options, riding styles and accessories",
+      "item2-title": "Unique folding system",
+      "item2-description": "Folding in 10-20 seconds<br>Small pack size<br>Easy to stow away",
+      "item3-title": "Handmade in London",
+      "item3-description": "High load capacity<br>Robust steel frame<br>High production quality",
+      "find-out-more": "Learn more about Brompton",
+      "faq-question-1": "What types of handlebars are available?",
+      "faq-answer-1": "Three different types:<br>M-Type - Classic shape, upright riding position<br>H-Type - For taller riders and everyone who likes to ride upright<br>S-Type Straight shape, sporty riding position",
+      "faq-question-2": "What are the riding characteristics of the Brompton?",
+      "faq-answer-2": "The small wheels allow the Brompton to accelerate quickly and make it very agile - ideal for the frequent stop and start urban traffic. The small diameter also increases the stability and strength of the rims. And an excellent suspension system ensures comfort on uneven ground and on long journeys.",
+      "faq-question-3": "How can I use the luggage system?",
+      "faq-answer-3": "The unique Brompton luggage system makes your bike fit for everyday use: it offers the right solution for almost every application. The bags are available in many different designs, materials and sizes - suitable for every situation. And since they are not fastened to the handlebars, but directly to the frame, they do not interfere with either steerability or stability.",
+      "faq-question-4": "What are the gearing variants?",
+      "faq-answer-4": "There are four translation options, each of which can be varied, ie reduced or increased according to your riding style and terrain. From the beginner to the trained climber - for everyone there is the appropriate circuit.<br>1 Speed - Simple and light weight, suitable for flat terrain in the city<br>2 Speed - One gear for mountains and to start and one gear for the normal riding speed, flexible and easy.<br>3 Speed - A robust hub shift for daily riding<br>6 Speed - The all-rounder, the right choice for longer tours and stronger slopes",
+      "faq-question-5": "In which colors can I assemble a Brompton?",
+      "faq-answer-5": "Brompton folding bikes are available in 12 colors. You can choose between one- and two-color finishing. There is also a clear lacquer version, in which the soldering seams are visible."
     }
   },
 

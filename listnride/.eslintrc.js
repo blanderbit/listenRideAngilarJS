@@ -4,6 +4,11 @@ module.exports = {
         "node": true,
         "commonjs": true
     },
+    "globals":{
+        "angular": true,
+        "$": true,
+        "_": true
+    },
     "extends": "eslint:recommended",
     "rules": {
         "accessor-pairs": "error",
