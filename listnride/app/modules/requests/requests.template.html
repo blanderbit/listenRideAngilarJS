@@ -28,7 +28,7 @@
     <div flex layout="row" layout-align="space-around center">
       <md-input-container class="request-filter-dropdown md-block">
         <md-select ng-model="requests.filters.selected" ng-change="requests.filters.applyFilter(requests.filters.selected)">
-          <md-option ng-repeat="filter in ::requests.filters.options" value="{{$index}}">{{filter}}</md-option>
+          <md-option ng-repeat="filter in ::requests.filters.options" value="{{$index}}">{{filter | translate}}</md-option>
         </md-select>
       </md-input-container>
     </div>
