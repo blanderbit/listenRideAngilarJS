@@ -202,7 +202,15 @@
     "write-message": "Schreibe eine Nachricht...",
     "complete-profile": "Vervollständige dein Profil",
     "complete-profile-description": "Um das Rad zu buchen, gebe dein Zahlungsmittel an. Alle Daten werden über eine gesicherte Verbindung übertragen.",
-    "no-requests-yet": "Sobald du Anfragen gestellt oder bekommen hast, werden sie hier angezeigt."
+    "no-requests-yet": "Sobald du Anfragen gestellt oder bekommen hast, werden sie hier angezeigt.",
+    "filters": {
+      "all-requests": "Alle Anfragen",
+      "current-rentals": "Aktuelle Mieten",
+      "pending-requests": "Offene Anfragen",
+      "upcoming-rentals": "Bevorstehende Miete",
+      "past-rentals": "Vergangene Vermietungen",
+      "expired-requests": "Abgelaufene Anfragen"
+    }
   },
 
   "message": {
