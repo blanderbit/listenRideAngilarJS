@@ -189,12 +189,20 @@
       "4": "Good",
       "5": "Excellent",
       "rating_text_rider": "Please summarize your rental experience in a few sentences. The lister will do the same",
-      "rating_text_lister": "Please summarize your rental experience in a few sentences. The rider will do the same"
+      "rating_text_lister":   "Please summarize your rental experience in a few sentences. The rider will do the same"
     },
     "write-message": "Write a message...",
     "complete-profile": "Complete your Profile",
     "complete-profile-description": "To book the bike, please enter your payment information. All informations are transmitted over a secure connection.",
-    "no-requests-yet": "As soon as you made or got requests, they'll show up here."
+    "no-requests-yet": "As soon as you made or got requests, they'll show up here.",
+    "filters": {
+      "all-requests": "all requests",
+      "current-rentals": "current rentals",
+      "pending-requests": "pending requests",
+      "upcoming-rentals": "upcoming rentals",
+      "past-rentals": "past rentals",
+      "expired-requests": "expired requests"
+    }
   },
   "message": {
     "accept": "Accept",

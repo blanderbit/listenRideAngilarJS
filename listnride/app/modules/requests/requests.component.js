@@ -33,12 +33,12 @@ angular.module('requests', []).component('requests', {
       var poller;
       requests.filters = {
         options: [
-          'all requests',
-          'current rentals',
-          'pending rentals',
-          'upcoming rentals',
-          'past rentals',
-          'expired requests'
+          $translate.instant('requests.filters.all-requests'),
+          $translate.instant('requests.filters.current-rentals'),
+          $translate.instant('requests.filters.pending-requests'),
+          $translate.instant('requests.filters.upcoming-rentals'),
+          $translate.instant('requests.filters.past-rentals'),
+          $translate.instant('requests.filters.expired-requests')
         ],
         selected: 0,
         type: 'all',
@@ -70,7 +70,7 @@ angular.module('requests', []).component('requests', {
 
       api.get('/users/' + $localStorage.userId + '/requests').then(
         function (success) {
-          requests.all_requests = $filter('orderBy')(success.data, '-updated_at');
+          requests.all_requests = $filter('orderBy')(success.data, '-created_at');
           requests.requests = angular.copy(requests.all_requests);
           requests.loadingList = false;
           requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
