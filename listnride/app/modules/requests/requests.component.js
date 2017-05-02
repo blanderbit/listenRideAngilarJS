@@ -70,7 +70,7 @@ angular.module('requests', []).component('requests', {
 
       api.get('/users/' + $localStorage.userId + '/requests').then(
         function (success) {
-          requests.all_requests = $filter('orderBy')(success.data, '-created_at');
+          requests.all_requests = $filter('orderBy')(success.data, '-created_at', true);
           requests.requests = angular.copy(requests.all_requests);
           requests.loadingList = false;
           requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
