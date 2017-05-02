@@ -33,12 +33,12 @@ angular.module('requests', []).component('requests', {
       var poller;
       requests.filters = {
         options: [
-          $translate.instant('requests.filters.all-requests'),
-          $translate.instant('requests.filters.current-rentals'),
-          $translate.instant('requests.filters.pending-requests'),
-          $translate.instant('requests.filters.upcoming-rentals'),
-          $translate.instant('requests.filters.past-rentals'),
-          $translate.instant('requests.filters.expired-requests')
+          'requests.filters.all-requests',
+          'requests.filters.current-rentals',
+          'requests.filters.pending-requests',
+          'requests.filters.upcoming-rentals',
+          'requests.filters.past-rentals',
+          'requests.filters.expired-requests'
         ],
         selected: 0,
         type: 'all',
