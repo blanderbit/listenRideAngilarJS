@@ -676,52 +676,52 @@ home md-grid-list md-grid-tile.tile4 {
   background-image: url(../ui_images/cities/lnr_vienna.jpg);
 }
 
-home .testimonials-container {
+.testimonials-container {
   margin: auto;
   width: calc(100% - 50px);
 }
 
-home #testimonials img.testimonials-img {
+#testimonials img.testimonials-img {
   width: 75px;
   height: auto;
   border-radius: 50%;
   margin-top: 16px;
 }
 
-home .testimonials-text {
+.testimonials-text {
   font-size: 20px;
   text-align: center;
   width: 75%;
 }
 
-home .testimonials-name {
+.testimonials-name {
   font-weight: 500;
 }
 
-home .testimonials-slick-slide {
+.testimonials-slick-slide {
   display: flex !important;
 }
 
-home #testimonials .testimonials-prev-arrow {
+#testimonials .testimonials-prev-arrow {
   height: 50px;
   width: 30px;
   opacity: 0.25;
 }
 
-home #featuredTilesGrid {
+#featuredTilesGrid {
   text-align: center;
 }
 
-home #featuredTilesGrid .tile {
+#featuredTilesGrid .tile {
   background-color: #7ab2f8;
 }
 
-home #featuredTilesGrid .img-container {
+#featuredTilesGrid .img-container {
   height: 40%;
   width: 100%;
 }
 
-home #featuredTilesGrid img {
+#featuredTilesGrid img {
   height: 100%;
 }
 
