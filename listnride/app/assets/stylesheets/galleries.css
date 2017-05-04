@@ -191,31 +191,31 @@ brompton .cb-slideshow li:nth-child(4) span {
 @-webkit-keyframes bromptonAnimation { 
   0% { opacity: 0; animation-timing-function: ease-in; }
   5% { opacity: 1; animation-timing-function: ease-out; }
-  20% { opacity: 1 }
-  30% { opacity: 0 }
+  25% { opacity: 1 }
+  35% { opacity: 0 }
   100% { opacity: 0 }
 }
 
 @-moz-keyframes bromptonAnimation { 
   0% { opacity: 0; animation-timing-function: ease-in; }
   5% { opacity: 1; animation-timing-function: ease-out; }
-  20% { opacity: 1 }
-  30% { opacity: 0 }
+  25% { opacity: 1 }
+  35% { opacity: 0 }
   100% { opacity: 0 }
 }
 
 @-o-keyframes bromptonAnimation { 
   0% { opacity: 0; animation-timing-function: ease-in; }
   5% { opacity: 1; animation-timing-function: ease-out; }
-  20% { opacity: 1 }
-  30% { opacity: 0 }
+  25% { opacity: 1 }
+  35% { opacity: 0 }
   100% { opacity: 0 }
 }
 
 @keyframes bromptonAnimation { 
   0% { opacity: 0; animation-timing-function: ease-in; }
   5% { opacity: 1; animation-timing-function: ease-out; }
-  20% { opacity: 1 }
-  30% { opacity: 0 }
+  25% { opacity: 1 }
+  35% { opacity: 0 }
   100% { opacity: 0 }
 }
