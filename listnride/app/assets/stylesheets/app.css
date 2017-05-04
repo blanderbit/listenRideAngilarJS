@@ -1543,3 +1543,10 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
 .lnr-green-text {
   color: #5fc693;
 }
+
+.lnr-mobile-bike {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
