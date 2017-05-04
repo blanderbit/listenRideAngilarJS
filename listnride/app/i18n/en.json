@@ -78,7 +78,8 @@
     "Sep": "Sep",
     "Oct": "Oct",
     "Nov": "Nov",
-    "Dec": "Dec"
+    "Dec": "Dec",
+    "testimonials-header": "What are people saying?"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
@@ -915,6 +916,17 @@
       "faq-answer-4": "There are four translation options, each of which can be varied, ie reduced or increased according to your riding style and terrain. From the beginner to the trained climber - for everyone there is the appropriate circuit.<br>1 Speed - Simple and light weight, suitable for flat terrain in the city<br>2 Speed - One gear for mountains and to start and one gear for the normal riding speed, flexible and easy.<br>3 Speed - A robust hub shift for daily riding<br>6 Speed - The all-rounder, the right choice for longer tours and stronger slopes",
       "faq-question-5": "In which colors can I assemble a Brompton?",
       "faq-answer-5": "Brompton folding bikes are available in 12 colors. You can choose between one- and two-color finishing. There is also a clear lacquer version, in which the soldering seams are visible."
+    },
+    "muli": {
+      "title": "Designed for daily urban life",
+      "description": "Test and rent muli in Berlin or Munich",
+      "subdescription": "The muli is a hybrid between a compact citybike and a big cargo-bike. This combination makes a bike that perfectly suits daily city life.",
+      "item1-title": "Title Graphic 1",
+      "item1-description": "Description Graphic 1",
+      "item2-title": "Title Graphic 2",
+      "item2-description": "Description Graphic 2",
+      "find-out-more": "Questions?",
+      "find-out-more-description": "Learn more about muli cycles and how to buy one or check out their faq"
     }
   },
 

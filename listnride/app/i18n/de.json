@@ -78,7 +78,8 @@
     "Sep": "Sept",
     "Oct": "Okt",
     "Nov": "Nov",
-    "Dec": "Dez"
+    "Dec": "Dez",
+    "testimonials-header": "Was die Leute sagen"
   },
 
   "toasts": {
@@ -947,6 +948,17 @@
       "faq-answer-4": "Es gibt vier Übersetzungsoptionen, die jeweils entsprechend Ihrem Fahrstil und dem Gelände noch variiert, d. h. reduziert oder erhöht, werden können. Vom Anfänger bis zum trainierten Bergfahrer – für jeden findet sich die geeignete Schaltung.<br>1-GANG – Einfach und leichtgängig, geeignet für ebenes Gelände in der Stadt<br>2-GANG – Ein Gang für Berge und zum Anfahren und ein Gang für die normale Fahrgeschwindigkeit, flexibel und leicht<br>3-GANG – Eine robuste Nabenschaltung für tägliches Fahren<br>6-GANG – Der Allrounder, die richtige Wahl für längere Touren und stärkere Steigungen",
       "faq-question-5": "In welchen Farben kann ich mir ein Brompton zusammenstellen?",
       "faq-answer-5": "Brompton-Falträder sind in 12 Farben verfügbar. Sie können zwischen einer Ein- und Zweifarblackierung wählen. Außerdem gibt es eine Klarlack-Version, bei der die Lötnähte sichtbar sind."
+    },
+    "muli": {
+      "title": "Konzipiert für den städtischen Alltag",
+      "description": "Teste und miete ein muli in Berlin oder München",
+      "subdescription": "Das muli ist ein Hybrid aus kleinem Kompaktrad und großem Cargobike. Diese Kombination macht das muli zu einem Fahrrad, das perfekt in den städtischen Alltag passt.",
+      "item1-title": "Frei konfigurierbar",
+      "item1-description": "Nach persönlichen Wunschvorstellungen<br>Große Modell- und Farbauswahl<br>Große Taschenauswahl, speziell fürs Brompton",
+      "item2-title": "Einzigartiger Faltmechanismus",
+      "item2-description": "Falten in 10-20 Sekunden<br>Kleinstes Packmaß<br>Gut verstaubar",
+      "find-out-more": "Du hast noch Fragen?",
+      "find-out-more-description": "Erfahre mehr über muli-cycles und wie du eins kaufen kannst oder schau Dir die muli FAQs an"
     }
   },
 
