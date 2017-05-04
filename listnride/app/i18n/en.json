@@ -74,7 +74,8 @@
     "Sep": "Sep",
     "Oct": "Oct",
     "Nov": "Nov",
-    "Dec": "Dec"
+    "Dec": "Dec",
+    "testimonials-header": "What are people saying?"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
