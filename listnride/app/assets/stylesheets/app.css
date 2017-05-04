@@ -579,38 +579,6 @@ home #landingSection #homeHeroShot {
   padding: 0;
 }
 
-@-webkit-keyframes imageAnimation { 
-  0% { opacity: 0; animation-timing-function: linear; }
-  2% { opacity: 1; animation-timing-function: linear; }
-  25% { opacity: 1 }
-  27% { opacity: 0 }
-  100% { opacity: 0 }
-}
-
-@-moz-keyframes imageAnimation { 
-  0% { opacity: 0; animation-timing-function: linear; }
-  2% { opacity: 1; animation-timing-function: linear; }
-  25% { opacity: 1 }
-  27% { opacity: 0 }
-  100% { opacity: 0 }
-}
-
-@-o-keyframes imageAnimation { 
-  0% { opacity: 0; animation-timing-function: linear; }
-  2% { opacity: 1; animation-timing-function: linear; }
-  25% { opacity: 1 }
-  27% { opacity: 0 }
-  100% { opacity: 0 }
-}
-
-@keyframes imageAnimation { 
-  0% { opacity: 0; animation-timing-function: linear; }
-  2% { opacity: 1; animation-timing-function: linear; }
-  25% { opacity: 1 }
-  27% { opacity: 0 }
-  100% { opacity: 0 }
-}
-
 .lnr-search-bar {
   width: 52%;
   max-width: 720px;
