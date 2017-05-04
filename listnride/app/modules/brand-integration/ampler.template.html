@@ -1,20 +1,16 @@
  <md-content class="single-column"> 
-  <!-- <div id="slideshow" md-theme="lnr-dark" layout="column" layout-align="center center">
+ 
+   <div id="slideshow" md-theme="lnr-dark" layout="column" layout-align="center center">
     <ul class="cb-slideshow">
+      <li><span></span></li>
       <li><span></span></li>
       <li><span></span></li>
       <li><span></span></li>
       <li><span></span></li>
     </ul>
 
-    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
+    <div class="lnr-page-title md-color-white" layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ 'brand-integration.ampler.title' | translate }}</h1>    
-    </div>
-  </div> -->
-
-  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/brand-integration/ampler_header.jpg'); height: 70vh" layout="row" layout-align="center center">
-    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
-      <h1 class="md-display-1">{{ 'brand-integration.ampler.title' | translate }}</h1>
     </div>
   </div>
 
@@ -110,6 +106,28 @@
         </md-content>
       </md-tab>
     </md-tabs> -->
+
+    <br>
+    <md-divider></md-divider>
+    <br>
+
+    <div id="testimonials" class="content section" layout-align="start center">
+      <div class="lnr-section-title" layout="column" layout-align="center center">
+        <h2 class="md-headline">{{ 'shared.testimonials-header' | translate }}</h2>
+      </div>  
+      <div class="testimonials-container" layout-padding>
+        <slick settings="ampler.slickConfig">   
+          <div ng-repeat="testimonial in ampler.testimonials"
+            class="testimonials-slick-slide" layout="column" layout-align="center center">
+            <div class="testimonials-text md-subhead">&ldquo;{{ testimonial.text }}&rdquo;</div>
+              <a ui-sref="user({userId: testimonial.userId})" analytics-on analytics-category="testimonial" analytics-event="click" analytics-label="{{   testimonial.userName }}">
+                <img class="testimonials-img" ng-src="{{ testimonial.userImagePath}}">
+              </a>
+            <h3 class="md-subhead testimonials-name">{{ testimonial.userName }}</h3>
+          </div>  
+        </slick>
+      </div>
+    </div>
 
     <br>
     <md-divider></md-divider>

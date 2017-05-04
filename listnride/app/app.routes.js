@@ -446,6 +446,12 @@
       });
 
       $stateProvider.state({
+        name: 'muli',
+        url: '/rent-muli-bikes',
+        template: '<muli></muli>'
+      });
+
+      $stateProvider.state({
         name: 'factoryberlin',
         url: '/factoryberlin',
         template: '<user></user>'
