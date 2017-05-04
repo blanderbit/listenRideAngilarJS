@@ -1,10 +1,4 @@
  <md-content class="single-column"> 
-  <!-- <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/brand-integration/brompton_header.jpg')" layout="row" layout-align="center center">
-    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
-      <h1 class="md-display-1">{{ 'brand-integration.brompton.title' | translate }}</h1>
-    </div>
-  </div>
- -->
 
  <div id="slideshow" md-theme="lnr-dark" layout="column" layout-align="center center">
     <ul class="cb-slideshow">
@@ -15,36 +9,34 @@
     </ul>
 
     <div class="lnr-page-title md-color-white" layout="column" layout-align="center center">
-      <div>
+<!--       <div>
         <img ng-src="app/assets/ui_images/brand-integration/brompton_logo.png" flex="40"></img><br><br>
-      </div>
-      <h1 class="md-display-1">{{ 'brand-integration.brompton.title' | translate }}</h1>    
+      </div> -->
+      <h1 class="md-display-1">{{ 'brand-integration.muli.title' | translate }}</h1>    
     </div>
   </div>
 
   <div class="content" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h1 class="md-headline">{{ 'brand-integration.brompton.description' | translate }}</h1>
-      <h2 class="md-subhead">{{ 'brand-integration.brompton.subdescription' | translate }}</h2>
+      <h1 class="md-headline">{{ 'brand-integration.muli.description' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'brand-integration.muli.subdescription' | translate }}</h2>
     </div>
 
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
-      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg--big" md-svg-src="app/assets/ui_images/brand-integration/brompton_feature_1.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">{{ 'brand-integration.brompton.item1-title' | translate }}</h3>
-        <p class="lnr-center" translate="{{ 'brand-integration.brompton.item1-description' | translate }}"></p>
+      <div flex-gt-xs="50" layout="column" layout-align="none center" layout-margin>
+        <div layout layout-align="center center">
+          <img ng-src="app/assets/ui_images/brand-integration/muli/muli_col_left.png" flex="90"></img>
+        </div>
+        <h3  class="md-subhead lnr-center">{{ 'brand-integration.muli.item1-title' | translate }}</h3>
+        <p class="lnr-center" translate="{{ 'brand-integration.muli.item1-description' | translate }}"></p>
       </div>
 
-      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg--big" md-svg-src="app/assets/ui_images/brand-integration/brompton_feature_2.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">{{ 'brand-integration.brompton.item2-title' | translate }}</h3>
-        <p class="lnr-center" translate="{{ 'brand-integration.brompton.item2-description' | translate }}"></p>
-      </div>
-
-      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg--big" md-svg-src="app/assets/ui_images/brand-integration/brompton_feature_3.svg"></md-icon>
-        <h3  class="md-subhead lnr-center">{{ 'brand-integration.brompton.item3-title' | translate }}</h3>
-        <p class="lnr-center" translate="{{ 'brand-integration.brompton.item3-description' | translate }}"></p>
+      <div flex-gt-xs="50" layout="column" layout-align="none center" layout-margin>
+        <div layout layout-align="center center">
+          <img ng-src="app/assets/ui_images/brand-integration/muli/muli_col_right.png" flex="90"></img>
+        </div>
+        <h3  class="md-subhead lnr-center">{{ 'brand-integration.muli.item2-title' | translate }}</h3>
+        <p class="lnr-center" translate="{{ 'brand-integration.muli.item2-description' | translate }}"></p>
       </div>
     </div>
 
@@ -52,6 +44,8 @@
     <md-divider></md-divider>
     <br>
 
+    <bike-card bike="muli.bike_berlin" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+    <bike-card bike="muli.bike_munich" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <md-menu md-position-mode="target bottom">
         <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">
