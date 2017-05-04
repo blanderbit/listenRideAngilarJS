@@ -29,6 +29,7 @@ angular.module('listnride', [
   'static',
   'ampler-integration',
   'brompton-integration',
+  'muli-integration',
   'mcbw',
   'pushnpost',
   'kuchenundraketen',
