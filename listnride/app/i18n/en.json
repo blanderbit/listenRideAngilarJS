@@ -902,12 +902,10 @@
       "title": "Designed for daily urban life",
       "description": "Test and rent muli in Berlin or Munich",
       "subdescription": "The muli is a hybrid between a compact citybike and a big cargo-bike. This combination makes a bike that perfectly suits daily city life.",
-      "item1-title": "Title Graphic 1",
-      "item1-description": "Description Graphic 1",
-      "item2-title": "Title Graphic 2",
-      "item2-description": "Description Graphic 2",
+      "item1-description": "Length <b>198cm</b><br>Total Payload <b>170kg</b><br>Weight <b>24kg</b><br>Handlebar Adustability <b>10cm</b>",
+      "item2-description": "Basket Width <b>28-60cm</b><br>Basket Payload <b>70kg</b><br>Basket Volume <b>90l</b><br>Eurobox <b>40x60cm</b>",
       "find-out-more": "Questions?",
-      "find-out-more-description": "Learn more about muli cycles and how to buy one or check out their faq"
+      "find-out-more-description": "Learn more about <a href=\"https://muli-cycles.de/7-shop\" target=\"_blank\">muli cycles</a> and how to buy one or check out their <a href=\"https://muli-cycles.de/content/8-faq\" target=\"_blank\">FAQ</a>"
     }
   },
 
