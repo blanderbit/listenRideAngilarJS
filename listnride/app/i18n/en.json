@@ -729,13 +729,16 @@
       "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
     },
     "in-velo-veritas": {
+      "meta-title":"In Velo Veritas - Rent a bike with listnride",
+      "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country.",
       "title": "In Velo Veritas - The vintage bicycle tour that's timeless",
       "text": "The legendary “In Velo Veritas” happens this year the 5th time at the 10th/11th June 2017 in Stockerau. For those, who want to participate but need a guideline-matching bicycle, we collected some suiting bikes of our community-members to save your day. Just rent it! Bike enthusiasts like you are offering the different bikes below. If you can’t participate, have more vintage bicycles, or just want want to meet like-minded people, you can share your bike on our platform with others! Become a part of our growing community and make some extra money with your passion!"
     },
     "velothon-bikerental": {
+      "meta-title":"Simply rent the perfect road bike for the Velothon Berlin",
+      "meta-description":"Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!",
       "title": "Simply rent the perfect road bike for the Velothon Berlin",
-      "text": "We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that. <br><br> You can’t participate? Help out someone in need. <a href=\"/#/listing-a-bike\">List your bike</a> and make some extra pocket money!",
-      "meta-description": "Velothon, Velothon 2017, rent a roadbike, rent a bicycle, rent a bicycle Berlin, rent a road bike Berlin, Velothon Berlin, Velothon Berlin 2017, bike rental Berlin, bike rental, road bike rental Berlin, road bike rental"
+      "text": "We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that. <br><br> You can’t participate? Help out someone in need. <a href=\"/#/listing-a-bike\">List your bike</a> and make some extra pocket money!"
     },
     "crossride": {
       "title": "listnride Crossride",
@@ -795,6 +798,8 @@
     },
 
     "berlin": {
+      "meta-title":"Explore Berlin by bike with listnride",
+      "meta-description":"Discover Berlin by bike. With listnride, you can find a bike for rent in Berlin that matches your needs and your style.",
       "title": "Berlin",
       "subtitle": "Explore Berlin by bike",
       "description": "Find interesting places off the beaten track",
@@ -811,6 +816,8 @@
     },
 
     "munich": {
+      "meta-title":"Explore Munich by bike with listnride",
+      "meta-description":"Discover Munich by bike. With listnride, you can find a bike for rent in Munich that matches your needs and your style.",
       "title": "Munich",
       "subtitle": "Explore Munich by bike",
       "description": "Find interesting places off the beaten track",
@@ -827,6 +834,8 @@
     },
 
     "amsterdam": {
+      "meta-title":"Explore Amsterdam by bike with listnride",
+      "meta-description":"Discover Amsterdam by bike. With listnride, you can find a bike for rent in Amsterdam that matches your needs and your style.",
       "title": "Amsterdam",
       "subtitle": "Explore Amsterdam by bike",
       "description": "Find interesting places off the beaten track",
@@ -843,6 +852,8 @@
     },
 
     "vienna": {
+      "meta-title":"Explore Vienna by bike with listnride",
+      "meta-description":"Discover Vienna by bike. With listnride, you can find a bike for rent in Vienna that matches your needs and your style.",
       "title": "Vienna",
       "subtitle": "Explore Vienna by bike",
       "description": "Find interesting places off the beaten track",
@@ -865,6 +876,8 @@
       "faq": "The frequently asked questions"
     },
     "ampler": {
+      "meta-title":"E-Bike Test Ride Program",
+      "meta-descr": "Test ride an E-Bike today! Electric assist bikes from Ampler available on listnride. Rent one in Berlin, Munich, Hamburg and Vienna.",
       "title": "Ampler. The smart electric bicycle for the urban commuter",
       "description": "Rent and test Ampler E-Bikes in Berlin, Munich, Hamburg and Vienna",
       "subdescription": "Choose between Hawk, the dynamic single-speed or Bilberry, the comfortable city-bike",

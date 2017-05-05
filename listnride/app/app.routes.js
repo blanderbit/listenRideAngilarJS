@@ -159,7 +159,19 @@
       $stateProvider.state({
         name: 'inVeloVeritas',
         url: '/in-velo-veritas',
-        template: '<in-velo-veritas></in-velo-veritas>'
+        template: '<in-velo-veritas></in-velo-veritas>',
+          resolve: {
+              data: function ($translate, ngMeta) {
+                  $translate(["events.in-velo-veritas.meta-title", "events.in-velo-veritas.meta-description"])
+                      .then(function (translations) {
+                          ngMeta.setTitle(translations["events.in-velo-veritas.meta-title"]);
+                          ngMeta.setTag("description", translations["events.in-velo-veritas.meta-description"]);
+                      })
+              }
+          },
+          meta: {
+              disableUpdate: true
+          }
       });
 
       $stateProvider.state({
@@ -168,9 +180,9 @@
         template: '<velothon-bikerental></velothon-bikerental>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["events.velothon-bikerental.title", "events.velothon-bikerental.meta-description"])
+            $translate(["events.velothon-bikerental.meta-title", "events.velothon-bikerental.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["events.velothon-bikerental.title"]);
+                ngMeta.setTitle(translations["events.velothon-bikerental.meta-title"]);
                 ngMeta.setTag("description", translations["events.velothon-bikerental.meta-description"]);
               })
           }
@@ -412,7 +424,19 @@
       $stateProvider.state({
         name: 'ampler',
         url: '/rent-ampler-bikes',
-        template: '<ampler></ampler>'
+        template: '<ampler></ampler>',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["brand-integration.ampler.meta-title", "brand-integration.ampler.meta-descr"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["brand-integration.ampler.meta-title"]);
+                        ngMeta.setTag("description", translations["brand-integration.ampler.meta-descr"]);
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
       });
 
       $stateProvider.state({
@@ -436,25 +460,73 @@
       $stateProvider.state({
         name: 'cities-berlin',
         url: '/berlin',
-        templateUrl: 'app/modules/static/cities-berlin.template.html'
+        templateUrl: 'app/modules/static/cities-berlin.template.html',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["cities.berlin.meta-title", "cities.berlin.meta-description"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["cities.berlin.meta-title"]);
+                        ngMeta.setTag("description", translations["cities.berlin.meta-description"]);
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
       });
 
       $stateProvider.state({
         name: 'cities-munich',
         url: '/munich',
-        templateUrl: 'app/modules/static/cities-munich.template.html'
+        templateUrl: 'app/modules/static/cities-munich.template.html',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["cities.munich.meta-title", "cities.munich.meta-description"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["cities.munich.meta-title"]);
+                        ngMeta.setTag("description", translations["cities.munich.meta-description"]);
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
       });
 
       $stateProvider.state({
         name: 'cities-amsterdam',
         url: '/amsterdam',
-        templateUrl: 'app/modules/static/cities-amsterdam.template.html'
+        templateUrl: 'app/modules/static/cities-amsterdam.template.html',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["cities.amsterdam.meta-title", "cities.amsterdam.meta-description"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["cities.amsterdam.meta-title"]);
+                        ngMeta.setTag("description", translations["cities.amsterdam.meta-description"]);
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
       });
 
       $stateProvider.state({
         name: 'cities-vienna',
         url: '/vienna',
-        templateUrl: 'app/modules/static/cities-vienna.template.html'
+        templateUrl: 'app/modules/static/cities-vienna.template.html',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["cities.vienna.meta-title", "cities.vienna.meta-description"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["cities.vienna.meta-title"]);
+                        ngMeta.setTag("description", translations["cities.vienna.meta-description"]);
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
       });
 
       $stateProvider.state({
