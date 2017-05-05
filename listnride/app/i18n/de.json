@@ -953,12 +953,10 @@
       "title": "Konzipiert für den städtischen Alltag",
       "description": "Teste und miete ein muli in Berlin oder München",
       "subdescription": "Das muli ist ein Hybrid aus kleinem Kompaktrad und großem Cargobike. Diese Kombination macht das muli zu einem Fahrrad, das perfekt in den städtischen Alltag passt.",
-      "item1-title": "Frei konfigurierbar",
-      "item1-description": "Nach persönlichen Wunschvorstellungen<br>Große Modell- und Farbauswahl<br>Große Taschenauswahl, speziell fürs Brompton",
-      "item2-title": "Einzigartiger Faltmechanismus",
-      "item2-description": "Falten in 10-20 Sekunden<br>Kleinstes Packmaß<br>Gut verstaubar",
+      "item1-description": "Länge <b>198cm</b><br>Gesamtzuladung <b>170kg</b><br>Gewicht <b>24kg</b><br>Höhenverstellbarer Lenker <b>10cm</b>",
+      "item2-description": "Korbbreite <b>28-60cm</b><br>Korbzuladung <b>70kg</b><br>Korbvolumen <b>90l</b><br>Eurobox Auflagen<b>40x60cm</b>",
       "find-out-more": "Du hast noch Fragen?",
-      "find-out-more-description": "Erfahre mehr über muli-cycles und wie du eins kaufen kannst oder schau Dir die muli FAQs an"
+      "find-out-more-description": "Erfahre mehr über <a href=\"https://muli-cycles.de/7-shop\" target=\"_blank\">muli-cycles</a> und wie du eins kaufen kannst oder schau Dir die muli <a href=\"https://muli-cycles.de/content/8-faq\" target=\"_blank\">FAQs an</a>"
     }
   },
 
