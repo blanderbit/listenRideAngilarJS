@@ -15,6 +15,7 @@ angular.module('bike').component('calendar', {
     function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, date, api, authentication, verification) {
       var calendar = this;
       calendar.authentication = authentication;
+      calendar.requested = false;
 
       calendar.$onChanges = function (changes) {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
@@ -74,6 +75,7 @@ angular.module('bike').component('calendar', {
 
       calendar.onBikeRequest = function() {
         $mdDialog.hide();
+        calendar.requested = true;
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             var user = success.data;
@@ -90,6 +92,7 @@ angular.module('bike').component('calendar', {
                   console.log("Success", response);
                 },
                 function(error) {
+                  calendar.requested = false;
                   console.log("Error posting request", error);
                 }
               );
