@@ -1,0 +1,74 @@
+ <md-content class="single-column"> 
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_hero6.jpg')" layout="row" layout-align="center center">
+    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ "Moritz" }} {{ 'invite-landing.header' | translate }}</h1>
+    </div>
+  </div>
+
+  <!-- greeting -->
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline">{{ 'invite-landing.subheader' | translate }}</h2>
+      <h3 class="md-subhead">{{ 'invite-landing.subsubheader' | translate }}</h3>
+    </div>
+    <div class="spacer"></div>
+    <md-divider></md-divider>
+  </div>
+  <!-- end greeting -->
+
+
+  <!-- sign up -->
+<!--   <div id="invite-signup" class="section"  md-theme="lnr-dark" layout="column" layout-align="space-between none">
+    <div class="lnr-center md-color-white" flex layout="column" layout-align="center center">
+      <h2 class="md-display-1">{{ 'invite-landing.sign-up-get-voucher' | translate }}</h2>
+      <p class="md-subhead">{{ 'invite-landing.sign-up-get-voucher-description' | translate }}</p>
+    </div>
+
+    <div flex layout="column" layout-align="center center">
+        <md-button ng-if="inviteLanding.authentication.loggedIn()" ui-sref="list" class="md-raised md-primary md-lrg">{{ 'shared.sign-up' | translate }}</md-button>
+        <md-button ng-if="!inviteLanding.authentication.loggedIn()" ng-click="listingABike.authentication.showSignupDialog()" class="md-raised md-primary md-lrg">{{ 'shared.sign-up' | translate }}</md-button>
+    </div>
+  </div> -->
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline">{{ 'invite-landing.sign-up-get-voucher' | translate }}</h2>
+      <h3 class="md-subhead">{{ 'invite-landing.sign-up-get-voucher-description' | translate }}</h3>
+    </div>
+    <div flex layout="column" layout-align="center center">
+      <md-button ng-if="!inviteLanding.authentication.loggedIn()" ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)" class="md-raised md-primary md-lrg">{{ 'forms.sign-up' | translate }}</md-button>
+      <md-button ng-if="inviteLanding.authentication.loggedIn()" ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)" class="md-raised md-primary md-lrg">{{ 'forms.sign-up' | translate }}</md-button>
+    </div>
+    <div class="spacer"></div>
+    <md-divider></md-divider>
+  </div>
+  <!-- end sign up -->
+
+  <!-- how it works -->
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline">{{ 'invite-landing.how-lnr-works' | translate }}</h2>
+    </div>
+    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_rent_find.svg"></md-icon>
+        <h3 class="md-subhead lnr-center">{{ 'invite-landing.explanation-1-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'invite-landing.explanation-1-description' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_rent_request.svg"></md-icon>
+        <h3 class="md-subhead lnr-center">{{ 'invite-landing.explanation-2-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'invite-landing.explanation-2-description' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_rent_time.svg"></md-icon>
+        <h3 class="md-subhead lnr-center">{{ 'invite-landing.explanation-3-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'invite-landing.explanation-3-description' | translate }}
+      </div>
+    </div>
+  </div>
+  <!-- end how it works -->
+
+  <footer></footer>
+</md-content>

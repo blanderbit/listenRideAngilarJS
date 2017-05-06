@@ -941,6 +941,21 @@
     }
   },
 
+  "invite-landing" : {
+    "header": "gave you 10€ for a ride",
+    "subheader": "Welcome to the bike sharing community",
+    "subsubheader": "listnride allows you to rent and rent out beautiful bikes, everywhere, anytime. Whether fixie or roadbike, cargo or e-bike, you'll find one that perfectly suites your style and needs.",
+    "sign-up-get-voucher": "Sign up to get the Voucher",
+    "sign-up-get-voucher-description": "The voucher will be automatically added to your account and redeemed when you rent a bike",
+    "how-lnr-works": "How listnride works",
+    "explanation-1-title": "1. Find and request a bike",
+    "explanation-1-description": "Find the perfect bike near you and request it.",
+    "explanation-2-title": "2. Book and pick up",
+    "explanation-2-description": "Book the bike and meet the lister to pick it up.",
+    "explanation-3-title": "3. Enjoy the ride",
+    "explanation-3-description": "Have a great time and return the bike to the lister afterwards."
+  },
+
   "how-to-shoot-bike-photo" : {
     "header": "Photo Tips",
     "title": "A couple of photo tips for a stand out listing",

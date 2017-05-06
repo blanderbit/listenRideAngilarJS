@@ -20,8 +20,10 @@ angular.
       };
 
       // The Signup Dialog Controller
-      var SignupDialogController = function($mdDialog) {
+      var SignupDialogController = function($mdDialog, inviteCode) {
         var signupDialog = this;
+
+        console.log(inviteCode);
 
         signupDialog.signingUp = false;
 
@@ -33,7 +35,8 @@ angular.
               "facebook_access_token": fbAccessToken,
               "profile_picture_url": profilePicture,
               "first_name": firstName,
-              "last_name": lastName
+              "last_name": lastName,
+              "ref_code": inviteCode
             }
           };
           api.post("/users", user).then(function(success) {
@@ -63,7 +66,8 @@ angular.
               'email': signupDialog.email,
               'password_hashed': sha256.encrypt(signupDialog.password),
               'first_name': signupDialog.firstName,
-              'last_name': signupDialog.lastName
+              'last_name': signupDialog.lastName,
+              'ref_code': inviteCode
             }
           };
           signupDialog.signingUp = true;
@@ -203,7 +207,7 @@ angular.
 
       };
 
-      var showSignupDialog = function(event) {
+      var showSignupDialog = function(inviteCode, event) {;
         $mdDialog.show({
           controller: SignupDialogController,
           controllerAs: 'signupDialog',
@@ -213,7 +217,10 @@ angular.
           openFrom: angular.element(document.body),
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,
-          fullscreen: true // Only for -xs, -sm breakpoints.
+          fullscreen: true, // Only for -xs, -sm breakpoints.
+          locals : {
+            inviteCode : inviteCode
+          }
         })
         .then(function(answer) {
           //
