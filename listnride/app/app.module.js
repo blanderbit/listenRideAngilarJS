@@ -33,6 +33,7 @@ angular.module('listnride', [
   'mcbw',
   'pushnpost',
   'kuchenundraketen',
+  'invite',
   'listnride.constant',
   /* external modules */
   'ngMaterial',

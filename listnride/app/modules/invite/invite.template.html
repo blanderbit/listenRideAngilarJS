@@ -1,0 +1,39 @@
+ <md-content class="single-column"> 
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/static/lnr_rent_a_bike.jpg')" layout="row" layout-align="center center">
+    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'invite.title' | translate }}</h1>
+    </div>
+  </div>
+
+  <!-- info -->
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline">{{ 'invite.info-section.header' | translate }}</h2>
+      <h3 class="md-subhead">{{ 'invite.info-section.subheader' | translate }}</3>
+    </div>
+
+    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_choice.svg"></md-icon>
+        <h3 class="md-subhead lnr-center">{{ 'invite.info-section.choice-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'invite.info-section.choice-content' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_price.svg"></md-icon>
+        <h3 class="md-subhead lnr-center">{{ 'invite.info-section.price-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'invite.info-section.price-content' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_easy.svg"></md-icon>
+        <h3 class="md-subhead lnr-center">{{ 'invite.info-section.easy-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'invite.info-section.easy-content' | translate }}
+        <a class="lnr-link" href="https://itunes.apple.com/de/app/list-n-ride/id992114091?l=de" target="_blank">iPhone App</a>.</p>
+      </div>
+    </div>
+  </div>
+  <!-- end info -->
+
+  <footer></footer>
+</md-content>

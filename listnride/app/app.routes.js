@@ -535,6 +535,12 @@
         templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html'
       });
 
+      $stateProvider.state({
+        name: 'invite',
+        url: '/invite-friends',
+        templateUrl: 'app/modules/invite/invite.template.html'
+      });
+
       $stateProvider.state('404', {
         templateUrl: 'app/modules/static/error-404.template.html',
         data: {
