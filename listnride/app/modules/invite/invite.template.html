@@ -32,8 +32,28 @@
         <a class="lnr-link" href="https://itunes.apple.com/de/app/list-n-ride/id992114091?l=de" target="_blank">iPhone App</a>.</p>
       </div>
     </div>
+
+    <md-divider></md-divider>
   </div>
   <!-- end info -->
+
+  <!-- invitation form -->
+  <div id="inviteForm" class="section"  md-theme="lnr-dark" layout="column" layout-align="space-between none">
+    <div class="lnr-center md-color-white" flex layout="column" layout-align="center center">
+      <h2 class="md-display-1">{{ 'invite.invite-form.header' | translate }}</h2>
+      <p class="md-subhead">{{ 'invite.invite-form.subheader' | translate }}</p>
+    </div>
+
+    <div flex layout="column" layout-align="center center">
+      <div class="lnr-search-bar md-whiteframe-3dp" layout="row" md-theme="default">
+        <md-input-container flex="75">
+          <input type="text" ng-readonly="true" ng-model="invite.inviteUrl">
+        </md-input-container>
+        <md-button class="md-raised md-primary" flex="25" ng-click="invite.onCopyButtonClick()">{{ 'invite.invite-form.copy' | translate }}</md-button>
+      </div>
+    </div>
+  </div>
+  <!-- end invitation form -->
 
   <footer></footer>
 </md-content>

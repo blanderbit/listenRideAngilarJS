@@ -1501,6 +1501,18 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
   margin: unset;
 }
 
+/*-----------------------------------------------------------------------------------*/
+/*  Invitations
+/*-----------------------------------------------------------------------------------*/
+
+invite #inviteForm {
+  height: 320px;
+  padding: 24px 0;
+  background-size: cover;
+  background-position: 15% 40%;
+  background-image: url(../ui_images/static/lnr_listabike.jpg);
+}
+
 /*.lnr-billing-page .repeated-billing-items .md-button:not([disabled]):hover {*/
   /*background-color: rgba(229, 234, 236, 0.2);*/
 /*}*/

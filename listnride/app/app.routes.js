@@ -538,7 +538,7 @@
       $stateProvider.state({
         name: 'invite',
         url: '/invite-friends',
-        templateUrl: 'app/modules/invite/invite.template.html'
+        template: '<invite></invite>'
       });
 
       $stateProvider.state('404', {
