@@ -73,9 +73,11 @@ angular.
           signupDialog.signingUp = true;
           api.post('/users', user).then(function(success) {
             setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
+            $state.go('home');
             verification.openDialog();
           }, function(error) {
             showSignupError();
+            verification.openDialog();
             signupDialog.signingUp = false;
           });
         };

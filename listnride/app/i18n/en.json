@@ -133,6 +133,7 @@
     "resend-email": "Resend Email",
     "1": {
       "text1": "Welcome to our passionate bike sharing community, featuring lots of bikes and bike enthusiasts all over the world.",
+      "text-invited": "You've got invited by a friend so we've put a voucher in your account which gets redeemed automatically for your first rental!",
       "text2": "We're a sharing community, so the trust and safety of you and the other users have highest priority.",
       "text3": "We therefore kindly ask you to verify your profile through a few simple steps. It'll only take you a few minutes. The better the information you enter, the higher are chances that your requests will be accepted and bikes will be requested."
     },
