@@ -11,33 +11,24 @@
       <h2 class="md-headline">{{ 'invite-landing.subheader' | translate }}</h2>
       <h3 class="md-subhead">{{ 'invite-landing.subsubheader' | translate }}</h3>
     </div>
-    <div class="spacer"></div>
-    <md-divider></md-divider>
+    <!-- <div class="spacer"></div> -->
+    <!-- <md-divider></md-divider> -->
   </div>
   <!-- end greeting -->
 
 
   <!-- sign up -->
-<!--   <div id="invite-signup" class="section"  md-theme="lnr-dark" layout="column" layout-align="space-between none">
-    <div class="lnr-center md-color-white" flex layout="column" layout-align="center center">
-      <h2 class="md-display-1">{{ 'invite-landing.sign-up-get-voucher' | translate }}</h2>
-      <p class="md-subhead">{{ 'invite-landing.sign-up-get-voucher-description' | translate }}</p>
-    </div>
-
-    <div flex layout="column" layout-align="center center">
-        <md-button ng-if="inviteLanding.authentication.loggedIn()" ui-sref="list" class="md-raised md-primary md-lrg">{{ 'shared.sign-up' | translate }}</md-button>
-        <md-button ng-if="!inviteLanding.authentication.loggedIn()" ng-click="listingABike.authentication.showSignupDialog()" class="md-raised md-primary md-lrg">{{ 'shared.sign-up' | translate }}</md-button>
-    </div>
-  </div> -->
   <div class="content" layout-padding>
-    <div class="lnr-section-title" layout="column" layout-align="center center">
+  <!-- <div class="highlight-tile"> -->
+    <!-- <div class="lnr-section-title" layout="column" layout-align="center center">
       <h2 class="md-headline">{{ 'invite-landing.sign-up-get-voucher' | translate }}</h2>
       <h3 class="md-subhead">{{ 'invite-landing.sign-up-get-voucher-description' | translate }}</h3>
-    </div>
+    </div> -->
     <div flex layout="column" layout-align="center center">
-      <md-button ng-if="!inviteLanding.authentication.loggedIn()" ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)" class="md-raised md-primary md-lrg">{{ 'forms.sign-up' | translate }}</md-button>
-      <md-button ng-if="inviteLanding.authentication.loggedIn()" ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)" class="md-raised md-primary md-lrg">{{ 'forms.sign-up' | translate }}</md-button>
+      <md-button ng-if="!inviteLanding.authentication.loggedIn()" ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)" class="md-raised md-primary md-xlrg">{{ 'invite-landing.sign-up-get-voucher' | translate }}</md-button>
+      <md-button ng-if="inviteLanding.authentication.loggedIn()" ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)" class="md-raised md-primary md-xlrg">{{ 'invite-landing.sign-up-get-voucher' | translate }}</md-button>
     </div>
+    <!-- </div> -->
     <div class="spacer"></div>
     <md-divider></md-divider>
   </div>
