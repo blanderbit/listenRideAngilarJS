@@ -35,6 +35,7 @@ angular.module('listnride', [
   'kuchenundraketen',
   'invite',
   'listnride.constant',
+  'inviteLanding',
   /* external modules */
   'ngMaterial',
   'ngMessages',

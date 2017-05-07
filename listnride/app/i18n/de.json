@@ -79,7 +79,8 @@
     "Oct": "Okt",
     "Nov": "Nov",
     "Dec": "Dez",
-    "testimonials-header": "Was die Leute sagen"
+    "testimonials-header": "Was die Leute sagen",
+    "balance": "Guthaben"
   },
 
   "toasts": {
@@ -137,6 +138,7 @@
     "resend-email": "Email erneut senden",
     "1": {
       "text1": "Willkommen bei listnride!",
+      "text-invited": "Du wurdest von einem Freund eingeladen, dein Account hat daher automatisch einen Gutschein bekommen, der bei der ersten Fahrt eingelöst wird.",
       "text2": "Herzlich willkommen in unserer Bike-Sharing-Community mit vielen tollen Bikes und begeisterten Fahrradliebhabern aus aller Welt. In unserer Community dreht sich alles darum, sein geliebtes Zweirad mit anderen zu teilen – gegenseitiges Vertrauen und Sicherheit für Dich und die anderen User stehen daher für uns an erster Stelle.",
       "text3": "Deshalb bitten wir dich, dein Profil in ein paar einfach Schritten zu verifizieren. Umso besser die eingegebenen Informationen sind, umso höher die Chance auf erfolgreiche Vermietungen."
     },
@@ -972,6 +974,21 @@
       "find-out-more": "Du hast noch Fragen?",
       "find-out-more-description": "Erfahre mehr über <a href=\"https://muli-cycles.de/7-shop\" target=\"_blank\">muli-cycles</a> und wie du eins kaufen kannst oder schau Dir die muli <a href=\"https://muli-cycles.de/content/8-faq\" target=\"_blank\">FAQs an</a>"
     }
+  },
+
+  "invite-landing" : {
+    "header": "hat dir 10€ für eine Fahrt geschenkt",
+    "subheader": "Willkommen bei listnride, der Bike Sharing Community",
+    "subsubheader": "listnride ist eine Community, die passionierte Radfahrer zusammen bringt, um online und via App das eigene Bike zu vermieten oder genau das Fahrrad für den individuellen Zweck und Stil auszuleihen.",
+    "subsubsubheader": "{{ name }} hat dich eingeladen. Wenn du dich anmeldest, erhälst du einen Gutschein der deinem Konto hinterlegt wird. Du kannst diesen für die nächste Radmiete einsetzen.",
+    "sign-up-get-voucher": "Registrieren und Gutschein erhalten",
+    "how-lnr-works": "Bike-Sharing völlig unkompliziert",
+    "explanation-1-title": "1. Find and request",
+    "explanation-1-description": "Find the perfect bike near you and request it.",
+    "explanation-2-title": "2. Book and pick up",
+    "explanation-2-description": "Book the bike and meet the lister to pick it up.",
+    "explanation-3-title": "3. Enjoy the ride",
+    "explanation-3-description": "Have a great time with the bike."
   },
 
   "how-to-shoot-bike-photo" : {

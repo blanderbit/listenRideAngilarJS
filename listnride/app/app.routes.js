@@ -541,6 +541,12 @@
         template: '<invite></invite>'
       });
 
+      $stateProvider.state({
+        name: 'inviteLanding',
+        url: '/invitation/{inviteCode: string}',
+        template: '<invite-landing></invite-landing>'
+      });
+
       $stateProvider.state('404', {
         templateUrl: 'app/modules/static/error-404.template.html',
         data: {
