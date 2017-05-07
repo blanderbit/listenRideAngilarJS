@@ -37,7 +37,6 @@ angular.module('invite',[]).component('invite', {
 
       api.get("/users/" + $localStorage.userId + "/overview ").then(function(response) {
         invite.invitedFriends = response.data;
-        console.log(response.data);
         var activeFriends = invite.invitedFriends.filter(function(invitation) {
           return invitation.status == 2 || invitation.status == 3;
         });
