@@ -3,11 +3,17 @@
 angular.module('invite',[]).component('invite', {
   templateUrl: 'app/modules/invite/invite.template.html',
   controllerAs: 'invite',
-  controller: ['api', '$localStorage', '$translate', 'Socialshare', 'accessControl',
-    function InviteController(api, $localStorage, $translate, Socialshare, accessControl) {
+  controller: ['api', '$localStorage', '$translate', 'Socialshare', 'accessControl', 'ngMeta',
+    function InviteController(api, $localStorage, $translate, Socialshare, accessControl, ngMeta) {
       if (accessControl.requireLogin()) {
         return;
       }
+
+      $translate(["invite.meta-title", "invite.meta-description"])
+        .then(function (translations) {
+          ngMeta.setTitle(translations["invite.meta-title"]);
+          ngMeta.setTag("description", translations["invite.meta-description"]);
+        });
 
       var invite = this;
       invite.inviteUrl = api.getWebappUrl() + "/" + $localStorage.referenceCode;

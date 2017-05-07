@@ -538,19 +538,7 @@
       $stateProvider.state({
         name: 'invite',
         url: '/invite-friends',
-        template: '<invite></invite>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["invite.meta-title", "invite.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["invite.meta-title"]);
-                ngMeta.setTag("description", translations["invite.meta-description"]);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
+        template: '<invite></invite>'
       });
 
       $stateProvider.state('404', {
