@@ -79,7 +79,8 @@
     "Oct": "Oct",
     "Nov": "Nov",
     "Dec": "Dec",
-    "testimonials-header": "What are people saying?"
+    "testimonials-header": "What are people saying?",
+    "balance": "Balance"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
@@ -133,6 +134,7 @@
     "resend-email": "Resend Email",
     "1": {
       "text1": "Welcome to our passionate bike sharing community, featuring lots of bikes and bike enthusiasts all over the world.",
+      "text-invited": "You've got invited by a friend so we've put a voucher in your account which gets redeemed automatically for your first rental!",
       "text2": "We're a sharing community, so the trust and safety of you and the other users have highest priority.",
       "text3": "We therefore kindly ask you to verify your profile through a few simple steps. It'll only take you a few minutes. The better the information you enter, the higher are chances that your requests will be accepted and bikes will be requested."
     },
@@ -939,6 +941,21 @@
       "find-out-more": "Questions?",
       "find-out-more-description": "Learn more about <a href=\"https://muli-cycles.de/7-shop\" target=\"_blank\">muli cycles</a> and how to buy one or check out their <a href=\"https://muli-cycles.de/content/8-faq\" target=\"_blank\">FAQ</a>"
     }
+  },
+
+  "invite-landing" : {
+    "header": "gave you 10€ for a ride",
+    "subheader": "Welcome to listnride, the bike sharing community",
+    "subsubheader": "listnride is a community that brings together cycling enthusiasts so that they can rent out their own bikes via our website and app or rent someone else’s bike that perfectly suits their personal style and meets their needs.",
+    "subsubsubheader": "You've got invited by {{name}}. When signing up you get a voucher added to your account, which can be used for your next bike rental.",
+    "sign-up-get-voucher": "Sign up to get the Voucher",
+    "how-lnr-works": "Bike sharing without the hassle",
+    "explanation-1-title": "1. Find and request",
+    "explanation-1-description": "Find the perfect bike near you and request it.",
+    "explanation-2-title": "2. Book and pick up",
+    "explanation-2-description": "Book the bike and meet the lister to pick it up.",
+    "explanation-3-title": "3. Enjoy the ride",
+    "explanation-3-description": "Have a great time with the bike."
   },
 
   "how-to-shoot-bike-photo" : {
