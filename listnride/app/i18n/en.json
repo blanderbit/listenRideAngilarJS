@@ -976,7 +976,9 @@
     },
     "share": {
       "email-subject": "{{full_name}} just sent you 10€ on listnride",
-      "email-body": "Hello :),%0A%0A{{full_name}} just invited your to join listnride. Click on the voucher link below and earn a 10€ voucher.%0A%0A{{voucher_url}}%0A%0AHappy biking,%0Alistnride"
+      "email-body": "Hello :),%0A%0A{{full_name}} just invited your to join listnride. Click on the voucher link below and earn a 10€ voucher.%0A%0A{{voucher_url}}%0A%0AHappy biking,%0Alistnride",
+      "facebook-title": "10€ listnride credit from {{full_name}}",
+      "facebook-desription": "Sign up to listnride through {{first_name}}'s link and get a 10€ voucher."
     }
   }
 }

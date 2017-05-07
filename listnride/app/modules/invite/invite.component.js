@@ -3,10 +3,10 @@
 angular.module('invite',[]).component('invite', {
   templateUrl: 'app/modules/invite/invite.template.html',
   controllerAs: 'invite',
-  controller: ['api', '$localStorage', '$translate', 
-    function InviteController(api, $localStorage, $translate) {
+  controller: ['api', '$localStorage', '$translate', 'Socialshare',
+    function InviteController(api, $localStorage, $translate, Socialshare) {
       var invite = this;
-      invite.inviteUrl = "http://www.listnride.com/invitation/amrXXX69";
+      invite.inviteUrl = "http://www.listnride.com" + "/" + "amrXXX69";
 
       invite.copyToClipboard = function() {
         document.getElementById("linkContainer").select();
@@ -14,7 +14,12 @@ angular.module('invite',[]).component('invite', {
       };
 
       invite.shareThroughFacebook = function() {
-
+        Socialshare.share({
+          'provider': 'facebook',
+          'attrs': {
+            'socialshareUrl': invite.inviteUrl,
+          }
+        });
       };
 
       invite.shareThroughEmail = function() {
