@@ -974,6 +974,21 @@
     }
   },
 
+  "invite-landing" : {
+    "header": "hat dir 10€ für eine Fahrt geschenkt",
+    "subheader": "Willkommen bei listnride, der Bike Sharing Community",
+    "subsubheader": "listnride ist eine Community, die passionierte Radfahrer zusammen bringt, um online und via App das eigene Bike zu vermieten oder genau das Fahrrad für den individuellen Zweck und Stil auszuleihen.",
+    "subsubsubheader": "{{ name }} hat dich eingeladen. Wenn du dich anmeldest, erhälst du einen Gutschein der deinem Konto hinterlegt wird. Du kannst diesen für die nächste Radmiete einsetzen.",
+    "sign-up-get-voucher": "Registrieren und Gutschein erhalten",
+    "how-lnr-works": "Bike-Sharing völlig unkompliziert",
+    "explanation-1-title": "1. Find and request",
+    "explanation-1-description": "Find the perfect bike near you and request it.",
+    "explanation-2-title": "2. Book and pick up",
+    "explanation-2-description": "Book the bike and meet the lister to pick it up.",
+    "explanation-3-title": "3. Enjoy the ride",
+    "explanation-3-description": "Have a great time with the bike."
+  },
+
   "how-to-shoot-bike-photo" : {
     "header": "Foto Tipps",
     "title": "Ein paar Foto Tipps für ein attraktives Inserat",

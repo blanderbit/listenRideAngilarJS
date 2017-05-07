@@ -3,8 +3,8 @@
 angular.module('inviteLanding',[]).component('inviteLanding', {
   templateUrl: 'app/modules/invite-landing/invite-landing.template.html',
   controllerAs: 'inviteLanding',
-  controller: [ '$stateParams', '$state', 'authentication', 'api',
-    function InviteLandingController($stateParams, $state, authentication, api, referrer) {
+  controller: [ '$stateParams', '$state', '$translate', 'authentication', 'api',
+    function InviteLandingController($stateParams, $state, $translate, authentication, api, referrer) {
       var inviteLanding = this;
 
       inviteLanding.hidden = true;
@@ -14,9 +14,9 @@ angular.module('inviteLanding',[]).component('inviteLanding', {
       api.get('/referrals/' + inviteLanding.inviteCode).then(
         function (success) {
           inviteLanding.referrer = success.data;
-          console.log(inviteLanding.referrer);
           inviteLanding.picture = inviteLanding.referrer.profile_picture.profile_picture.url;
-          console.log(inviteLanding.picture);
+          inviteLanding.subsubsubheader = $translate.instant("invite-landing.subsubsubheader", {name: success.data.first_name})
+          console.log(inviteLanding.subsubsubheader);
           inviteLanding.hidden = false;
         },
         function (error) {

@@ -970,6 +970,21 @@
     }
   },
 
+  "invite-landing" : {
+    "header": "gave you 10€ for a ride",
+    "subheader": "Welcome to listnride, the bike sharing community",
+    "subsubheader": "listnride is a community that brings together cycling enthusiasts so that they can rent out their own bikes via our website and app or rent someone else’s bike that perfectly suits their personal style and meets their needs.",
+    "subsubsubheader": "You've got invited by {{name}}. When signing up you get a voucher added to your account, which can be used for your next bike rental.",
+    "sign-up-get-voucher": "Sign up to get the Voucher",
+    "how-lnr-works": "Bike sharing without the hassle",
+    "explanation-1-title": "1. Find and request",
+    "explanation-1-description": "Find the perfect bike near you and request it.",
+    "explanation-2-title": "2. Book and pick up",
+    "explanation-2-description": "Book the bike and meet the lister to pick it up.",
+    "explanation-3-title": "3. Enjoy the ride",
+    "explanation-3-description": "Have a great time with the bike."
+  },
+
   "how-to-shoot-bike-photo" : {
     "header": "Photo Tips",
     "title": "A couple of photo tips for a stand out listing",
