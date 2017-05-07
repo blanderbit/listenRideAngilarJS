@@ -982,7 +982,7 @@
     },
     "share": {
       "email-subject": "{{full_name}} just sent you 10€ on listnride",
-      "email-body": "Hello :),%0A%0A{{full_name}} just invited your to join listnride. Click on the voucher link below and earn a 10€ voucher.%0A%0A{{voucher_url}}%0A%0AHappy biking,%0Alistnride"
+      "email-body": "Hello,%0AI would like to invite you to join listnride's growing community.%0A%0Alistnride is a community that brings together cycling enthusiasts so that they can rent out their own bikes via our website and app or rent someone else’s bike that perfectly suits their personal style and meets their needs.%0A%0AThe perfect bike. Simply rent it.%0A%0ASign up now through my personal code and get 10 € credit.%0A{{voucher_url}}"
     }
   }
 }

@@ -1005,16 +1005,16 @@
       "copy": "Kopieren"
     },
     "invitations": {
-      "header": "Your friends have earned you {{ credit }}€",
+      "header": "Du hast {{credit}}€ durch deine Freunde erhalten",
       "status": {
-        "1": "Signed up but has not listed or rented a bike",
-        "2": "Signed up and rented a bike",
-        "3": "Signed up and listed a bike"
+        "1": "Registriert, noch kein Rad eingestellt oder eins geliehen",
+        "2": "Registriert und ein Rad geliehen",
+        "3": "Registriert und ein Rad eingestellt"
       }
     },
     "share": {
-      "email-subject": "{{full_name}} just sent you 10€ on listnride",
-      "email-body": "Hello :),%0A%0A{{full_name}} just invited your to join listnride. Click on the voucher link below and earn a 10€ voucher.%0A%0A{{voucher_url}}%0A%0AHappy biking,%0Alistnride"
+      "email-subject": "{{full_name}} hat dir 10€ Guthaben auf listnride gesendet",
+      "email-body": "Hallo,%0Aich bin bereits zufriedener listnride Nutzer und lade dich ein, Teil der wachsenden listnride Community zu werden.%0A%0Alistnride ist eine Community, die passionierte Radfahrer zusammen bringt, um online und via App das eigene Bike zu vermieten oder genau das Fahrrad für den individuellen Zweck und Stil auszuleihen.%0A%0ADas perfekte Rad. Einfach mieten.%0A%0ARegistriere dich jetzt über meinen persönlichen Code und erhalte 10€ Guthaben.%0A{{voucher_url}}"
     }
   }
 }
