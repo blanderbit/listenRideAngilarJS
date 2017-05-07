@@ -1513,6 +1513,14 @@ invite #inviteForm .invite-form-container {
   background-color: rgba(250,250,250,1);
 }
 
+invite .share-icon {
+  cursor: pointer;
+}
+
+invite .voucher-link {
+  margin: initial;
+}
+
 /*.lnr-billing-page .repeated-billing-items .md-button:not([disabled]):hover {*/
   /*background-color: rgba(229, 234, 236, 0.2);*/
 /*}*/

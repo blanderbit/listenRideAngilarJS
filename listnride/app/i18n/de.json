@@ -1005,6 +1005,10 @@
     },
     "invitations": {
       "header": "Your friends have earned you {{ credit }}€"
+    },
+    "share": {
+      "email-subject": "{{full_name}} just sent you 10€ on listnride",
+      "email-body": "Hello :),%0A%0A{{full_name}} just invited your to join listnride. Click on the voucher link below and earn a 10€ voucher.%0A%0A{{voucher_url}}%0A%0AHappy biking,%0Alistnride"
     }
   }
 }
