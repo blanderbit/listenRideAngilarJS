@@ -37,7 +37,10 @@ angular.module('invite',[]).component('invite', {
 
       api.get("/users/" + $localStorage.userId + "/overview ").then(function(response) {
         invite.invitedFriends = response.data;
-        var activeFriends = invite.invitedFriends.filter(function(invitation) {return invitation.status});
+        console.log(response.data);
+        var activeFriends = invite.invitedFriends.filter(function(invitation) {
+          return invitation.status == 2 || invitation.status == 3;
+        });
         invite.totalCredit = activeFriends.length * 10;
       });
     }

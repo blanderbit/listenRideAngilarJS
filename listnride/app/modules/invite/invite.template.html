@@ -67,8 +67,7 @@
         <img class="lnr-profile-md" ng-src="{{friend.profile_picture}}"></img>
         <div flex class="lnr-margin-left">
           <p class="lnr-comment-name md-body-2">{{friend.full_name}}</p>
-          <p ng-if="friend.status" class="lnr-comment-content md-body-1">Signed up, but has not listed or rented a bike</p>
-          <p ng-if="!friend.status" class="lnr-comment-content md-body-1">Signed up and rented a bike</p>
+          <p class="lnr-comment-content md-body-1">{{ 'invite.invitations.status.' + friend.status | translate }}</p>
         </div>
       </div>
     </div>
