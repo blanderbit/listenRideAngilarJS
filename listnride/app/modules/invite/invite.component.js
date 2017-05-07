@@ -3,8 +3,12 @@
 angular.module('invite',[]).component('invite', {
   templateUrl: 'app/modules/invite/invite.template.html',
   controllerAs: 'invite',
-  controller: ['api', '$localStorage', '$translate', 'Socialshare',
-    function InviteController(api, $localStorage, $translate, Socialshare) {
+  controller: ['api', '$localStorage', '$translate', 'Socialshare', 'accessControl',
+    function InviteController(api, $localStorage, $translate, Socialshare, accessControl) {
+      if (accessControl.requireLogin()) {
+        return;
+      }
+
       var invite = this;
       invite.inviteUrl = api.getWebappUrl() + "/" + $localStorage.referenceCode;
 
