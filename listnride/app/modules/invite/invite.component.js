@@ -6,7 +6,7 @@ angular.module('invite',[]).component('invite', {
   controller: ['api', '$localStorage', '$translate', 'Socialshare',
     function InviteController(api, $localStorage, $translate, Socialshare) {
       var invite = this;
-      invite.inviteUrl = api.getWebappUrl() + "/" + "amrXXX69";
+      invite.inviteUrl = api.getWebappUrl() + "/" + $localStorage.referenceCode;
 
       invite.copyToClipboard = function() {
         document.getElementById("linkContainer").select();
