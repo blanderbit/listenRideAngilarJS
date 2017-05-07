@@ -15,6 +15,9 @@ angular.module('invite',[]).component('invite', {
 
       api.get("/users/" + $localStorage.userId + "/overview ").then(function(response) {
         invite.invitedFriends = response.data;
+
+        //invite.invitedFriends = [];
+
         invite.totalCredit = invite.invitedFriends.filter(function(invitation) {return invitation.status}).length * 10;
         console.log("invite.invitedFriends", invite.invitedFriends, invite.totalCredit);
       });
