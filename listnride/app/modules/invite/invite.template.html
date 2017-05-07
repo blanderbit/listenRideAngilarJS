@@ -32,8 +32,6 @@
         <a class="lnr-link" href="https://itunes.apple.com/de/app/list-n-ride/id992114091?l=de" target="_blank">iPhone App</a>.</p>
       </div>
     </div>
-
-    <md-divider></md-divider>
   </div>
   <!-- end info -->
 
@@ -54,6 +52,27 @@
     </div>
   </div>
   <!-- end invitation form -->
+
+  <!-- referral responses -->
+    <div ng-if="invite.invitedFriends !== undefined && invite.invitedFriends.length > 0" class="content" layout-padding>
+      <div class="lnr-section-title" layout="column" layout-align="center center">
+        <h2 translate="invite.invitations.header" translate-value-credit="{{invite.totalCredit}}" class="md-headline"></h2>
+      </div>
+
+      <div layout="column" layout-wrap layout-gt-xs="row" layout-padding>
+
+        <div flex-gt-xs="50" class="lnr-comment" layout="column" layout-align="centr center" ng-repeat="friend in invite.invitedFriends">
+          <img class="lnr-profile-md" ng-src="{{ friend.profile_picture }}"></img>
+          <div flex layout="column" layout-align="center center">
+            <p class="lnr-comment-name md-body-2">{{ friend.full_name }}</p>
+            <p ng-if="friend.status" class="lnr-comment-content md-body-1">Signed up, but has not listed or rented a bike</p>
+            <p ng-if="!friend.status" class="lnr-comment-content md-body-1">Signed up and rented a bike</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  <!-- end referral responses -->
 
   <footer></footer>
 </md-content>

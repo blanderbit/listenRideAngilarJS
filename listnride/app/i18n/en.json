@@ -973,6 +973,9 @@
       "header": "Share your link",
       "subheader": "Send this link to your friends and they will receive your gift.",
       "copy": "copy"
+    },
+    "invitations": {
+      "header": "Your friends have earned you {{ credit }}€"
     }
   }
 }
