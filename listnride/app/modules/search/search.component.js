@@ -121,7 +121,6 @@ angular.module('search',[]).component('search', {
         $translate("search.meta-title", data).then(
           function (translation) {
             ngMeta.setTitle(translation);
-            console.log("translation is: " + translation);
           }
         );
         ngMeta.setTitle($translate.instant("search.meta-title", data));
