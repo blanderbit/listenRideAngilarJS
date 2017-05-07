@@ -16,7 +16,7 @@ angular.module('invite',[]).component('invite', {
         });
 
       var invite = this;
-      invite.inviteUrl = api.getWebappUrl() + "/" + $localStorage.referenceCode;
+      invite.inviteUrl = api.getWebappUrl() + "/invitation/" + $localStorage.referenceCode;
 
       invite.copyToClipboard = function() {
         document.getElementById("linkContainer").select();
