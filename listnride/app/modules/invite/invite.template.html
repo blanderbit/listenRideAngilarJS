@@ -1,5 +1,5 @@
  <md-content class="single-column"> 
-  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/static/lnr_rent_a_bike.jpg')" layout="row" layout-align="center center">
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_referral_program.jpg')" layout="row" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ 'invite.title' | translate }}</h1>
     </div>
@@ -14,22 +14,18 @@
 
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
       <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_invitation.svg"></md-icon>
-        <h3 class="md-subhead lnr-center">{{ 'invite.info-section.choice-title' | translate }}</h3>
-        <p class="lnr-center">{{ 'invite.info-section.choice-content' | translate }}</p>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_uebergabe_delivery.svg"></md-icon>
+        <h3 class="md-subhead lnr-center">1. {{ 'invite.info-section.invite-friends' | translate }}</h3>
       </div>
 
       <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_gift.svg"></md-icon>
-        <h3 class="md-subhead lnr-center">{{ 'invite.info-section.price-title' | translate }}</h3>
-        <p class="lnr-center">{{ 'invite.info-section.price-content' | translate }}</p>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_notalone.svg"></md-icon>
+        <h3 class="md-subhead lnr-center">2. {{ 'invite.info-section.community' | translate }}</h3>
       </div>
 
       <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_price.svg"></md-icon>
-        <h3 class="md-subhead lnr-center">{{ 'invite.info-section.easy-title' | translate }}</h3>
-        <p class="lnr-center">{{ 'invite.info-section.easy-content' | translate }}
-        <a class="lnr-link" href="https://itunes.apple.com/de/app/list-n-ride/id992114091?l=de" target="_blank">iPhone App</a>.</p>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_covered.svg"></md-icon>
+        <h3 class="md-subhead lnr-center">3. {{ 'invite.info-section.earn-credit' | translate }}</h3>
       </div>
     </div>
   </div>
@@ -46,7 +42,7 @@
       <div flex layout="column" layout-align="center center">
         <div class="lnr-search-bar md-whiteframe-3dp" layout="row" md-theme="default">
           <md-input-container flex="75">
-            <input type="text" ng-readonly="true" ng-model="invite.inviteUrl">
+            <input id="linkContainer" type="text" ng-readonly="true" ng-model="invite.inviteUrl">
           </md-input-container>
           <md-button class="md-raised md-primary" flex="25" ng-click="invite.onCopyButtonClick()">{{ 'invite.invite-form.copy' | translate }}</md-button>
         </div>

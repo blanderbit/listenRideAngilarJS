@@ -956,23 +956,20 @@
   },
 
   "invite": {
-    "meta-title": "Rent a bike via listnride!",
-    "meta-description": "Fantastic selection. Great value for money. Easy online service.",
-    "title": "Sharing is Caring.",
+    "meta-title": "listnride Voucher Codes - Invite your friends",
+    "meta-description": "Invite your friends to listnride via email, or share your referral code on Facebook.",
+    "title": "Invite friends and earn free rides",
     "info-section": {
-      "header": "Gift your friends a 10€ voucher and claim your own gift too.",
-      "subheader": "One that complements your style and meets your needs. From people like you and me.",
-      "choice-title": "Invite friends.",
-      "choice-content": "The range of bikes offered on listnride is as diverse as our users. Here you will find everything from high-end road bikes and trendy urban bikes to cargo bicycles and bike trailers for kids. Rent a bike that suits your style and meets your needs.",
-      "price-title": "Send a gift.",
-      "price-content": "The bikes listed on our platform are rented out by private owners as well as specialist dealers and rental services. What’s in it for you: the perfect bike at good value for money.",
-      "easy-title": "Get listnride credit.",
-      "easy-content": "Find and book your rental bike before going on a trip or simply on the go – online or using our "
+      "header": "Earn 10€ credit when a friend rides or rents out his bikes.",
+      "subheader": "You are enthusiastic about listnride and find that your friends should also borrow a nice bike? Then invite them to join and become part of the listnride community.",
+      "invite-friends": "Invite friends",
+      "community": "Become part of the community",
+      "earn-credit": "Earn listnride credit"
     },
     "invite-form": {
       "header": "Share your link",
-      "subheader": "Send this link to your friends and they will receive your gift.",
-      "copy": "copy"
+      "subheader": "Send this link to your friends and they can activate the voucher.",
+      "copy": "Copy"
     },
     "invitations": {
       "header": "Your friends have earned you {{ credit }}€"
