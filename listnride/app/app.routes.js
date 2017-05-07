@@ -536,6 +536,12 @@
       });
 
       $stateProvider.state({
+        name: 'invite',
+        url: '/invite-friends',
+        template: '<invite></invite>'
+      });
+
+      $stateProvider.state({
         name: 'inviteLanding',
         url: '/invitation/{inviteCode: string}',
         template: '<invite-landing></invite-landing>'

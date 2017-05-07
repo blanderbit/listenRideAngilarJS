@@ -101,6 +101,7 @@
 
   "settings": {
     "settings": "Einstellungen",
+    "invite": "Fruende einladen",
     "profile": "Profil",
     "account": "Account",
     "availability": "Verfügbarkeit",
@@ -1002,5 +1003,35 @@
     "content-3": "Zeige verschiedene Perspektiven deines Fahrrads, mach das Foto z.B. aus einem Winkel als ausschließlich direkt von vorne. Die Auflösung ist wichtig: Nimm Fotos auf, die mindestens 1800 x 1200 Pixel groß sind. Im Zweifel ist ein größeres Foto immer besser.",
     "headline-4": "Motiv",
     "content-4": "Hebe die Besonderheiten hervor. Nicht auf allen Bildern muss das Fahrrad komplett zu sehen sein. Es ist besser, einige Detailaufnahmen zu machen, wie vom Markennamen, der Farbe, den Lichtern, Schloss etc. Bilder sagen oft mehr als Worte. Nimm deine Fotos im Querformat auf: Vertikale Bilder zeigen deine Räder nicht so gut."
+  },
+
+  "invite": {
+    "meta-title": "listnride Gutscheincodes - Lade deine Freunde ein",
+    "meta-description": "Lade deine Freunde per E-Mail ein, oder teilen Sie Ihren Empfehlungscode auf Facebook.",
+    "title": "Freunde einladen und Freifahrten verdienen",
+    "info-section": {
+      "header": "Erhalte 10€ Guthaben, wenn ein Freund ein Rad bei listnride leiht oder verleiht.",
+      "subheader": "Du bist begeistert von listnride und findet, dass sich auch Deine Freunde ein schönes Rad leihen sollten? Dann lade sie jetzt ein mitzumachen und Teil der listnride Community zu werden.",
+      "invite-friends": "Freunde einladen",
+      "community": "Teil der Community werden",
+      "earn-credit": "Belohnung erhalten"
+    },
+    "invite-form": {
+      "header": "Teile deinen Link",
+      "subheader": "Sende diesen Link an deine Freunde, um den Gutschein zu erhalten.",
+      "copy": "Kopieren"
+    },
+    "invitations": {
+      "header": "Du hast {{credit}}€ durch deine Freunde erhalten",
+      "status": {
+        "1": "Registriert, noch kein Rad eingestellt oder eins geliehen",
+        "2": "Registriert und ein Rad geliehen",
+        "3": "Registriert und ein Rad eingestellt"
+      }
+    },
+    "share": {
+      "email-subject": "{{full_name}} hat dir 10€ Guthaben auf listnride gesendet",
+      "email-body": "Hallo,%0Aich bin bereits zufriedener listnride Nutzer und lade dich ein, Teil der wachsenden listnride Community zu werden.%0A%0Alistnride ist eine Community, die passionierte Radfahrer zusammen bringt, um online und via App das eigene Bike zu vermieten oder genau das Fahrrad für den individuellen Zweck und Stil auszuleihen.%0A%0ADas perfekte Rad. Einfach mieten.%0A%0ARegistriere dich jetzt über meinen persönlichen Code und erhalte 10€ Guthaben.%0A{{voucher_url}}"
+    }
   }
 }

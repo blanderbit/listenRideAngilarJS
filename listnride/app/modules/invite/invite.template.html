@@ -1,0 +1,78 @@
+ <md-content class="single-column"> 
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_referral_program.jpg')" layout="row" layout-align="center center">
+    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'invite.title' | translate }}</h1>
+    </div>
+  </div>
+
+  <!-- info -->
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline">{{ 'invite.info-section.header' | translate }}</h2>
+      <h3 class="md-subhead">{{ 'invite.info-section.subheader' | translate }}</3>
+    </div>
+
+    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_uebergabe_delivery.svg"></md-icon>
+        <h3 class="md-subhead lnr-center">1. {{ 'invite.info-section.invite-friends' | translate }}</h3>
+      </div>
+
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_notalone.svg"></md-icon>
+        <h3 class="md-subhead lnr-center">2. {{ 'invite.info-section.community' | translate }}</h3>
+      </div>
+
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_covered.svg"></md-icon>
+        <h3 class="md-subhead lnr-center">3. {{ 'invite.info-section.earn-credit' | translate }}</h3>
+      </div>
+    </div>
+  </div>
+  <!-- end info -->
+
+  <!-- invitation form -->
+  <div id="inviteForm" layout-padding>
+    <div class="invite-form-container content" md-theme="lnr-dark" layout="column" layout-align="space-between none">
+      <div class="lnr-center" flex layout="column" layout-align="center center">
+        <h2 class="md-display-1">{{ 'invite.invite-form.header' | translate }}</h2>
+        <p class="md-subhead">{{ 'invite.invite-form.subheader' | translate }}</p>
+      </div>
+
+      <div class="button-container" layout-margin layout="row" layout-align="center center">
+        <md-icon ng-click="invite.shareThroughFacebook()" class="lnr-icn-lrg share-icon" md-svg-src="app/assets/ui_icons/icn_facebook_share.svg"></md-icon>
+        <md-icon ng-click="invite.shareThroughEmail()" class="lnr-icn-lrg share-icon" md-svg-src="app/assets/ui_icons/icn_email_share.svg"></md-icon>
+      </div>
+
+      <div flex layout="column" layout-align="center center">
+        <div class="lnr-search-bar voucher-link md-whiteframe-3dp" layout="row" md-theme="default">
+          <md-input-container flex="75">
+            <input id="linkContainer" type="text" ng-readonly="true" ng-model="invite.inviteUrl">
+          </md-input-container>
+          <md-button class="md-raised md-primary" flex="25" ng-click="invite.copyToClipboard()">{{ 'invite.invite-form.copy' | translate }}</md-button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end invitation form -->
+
+  <!-- referral responses -->
+  <div ng-if="invite.invitedFriends !== undefined && invite.invitedFriends.length > 0" class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 translate="invite.invitations.header" translate-value-credit="{{invite.totalCredit}}" class="md-headline"></h2>
+    </div>
+
+    <div layout="column" layout-wrap layout-gt-xs="row" layout-padding>
+      <div flex-gt-xs="50" class="lnr-comment" layout="row" ng-repeat="friend in invite.invitedFriends">
+        <img class="lnr-profile-md" ng-src="{{friend.profile_picture}}"></img>
+        <div flex class="lnr-margin-left">
+          <p class="lnr-comment-name md-body-2">{{friend.full_name}}</p>
+          <p class="lnr-comment-content md-body-1">{{ 'invite.invitations.status.' + friend.status | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end referral responses -->
+
+  <footer></footer>
+</md-content>

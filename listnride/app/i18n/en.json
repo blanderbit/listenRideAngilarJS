@@ -100,6 +100,7 @@
   "settings": {
     "settings": "Settings",
     "profile": "Profile",
+    "invite": "Invite Friends",
     "account": "Account",
     "availability": "Availability",
     "from": "From",
@@ -970,5 +971,35 @@
     "content-3": "Show some perspective of your bicycle, so rather shoot from an angle than a frontal perspective. Resolution matters: Take photos that are at least 1800 x 1200 pixel. When in doubt, a bigger photo is better.",
     "headline-4": "Setting",
     "content-4": "Highlight what’s amazing. It is not required that the whole bicycle is shown on all photos, rather shoot some details, like brand name, colouring, lights, lock etc. Let pictures get the message across. Take your photos in landscape format: Vertical photos won’t showcase your bicycle as well."
+  },
+
+  "invite": {
+    "meta-title": "listnride Voucher Codes - Invite your friends",
+    "meta-description": "Invite your friends to listnride via email, or share your referral code on Facebook.",
+    "title": "Invite friends and earn free rides",
+    "info-section": {
+      "header": "Earn 10€ credit when a friend rides or rents out his bikes.",
+      "subheader": "You are enthusiastic about listnride and find that your friends should also borrow a nice bike? Then invite them to join and become part of the listnride community.",
+      "invite-friends": "Invite friends",
+      "community": "Become part of the community",
+      "earn-credit": "Earn listnride credit"
+    },
+    "invite-form": {
+      "header": "Share your link",
+      "subheader": "Send this link to your friends and they can activate the voucher.",
+      "copy": "Copy"
+    },
+    "invitations": {
+      "header": "Your friends have earned you {{ credit }}€",
+      "status": {
+        "1": "Signed up but has not listed or rented a bike",
+        "2": "Signed up and rented a bike",
+        "3": "Signed up and listed a bike"
+      }
+    },
+    "share": {
+      "email-subject": "{{full_name}} just sent you 10€ on listnride",
+      "email-body": "Hello,%0AI would like to invite you to join listnride's growing community.%0A%0Alistnride is a community that brings together cycling enthusiasts so that they can rent out their own bikes via our website and app or rent someone else’s bike that perfectly suits their personal style and meets their needs.%0A%0AThe perfect bike. Simply rent it.%0A%0ASign up now through my personal code and get 10 € credit.%0A{{voucher_url}}"
+    }
   }
 }
