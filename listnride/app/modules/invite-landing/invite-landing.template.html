@@ -1,7 +1,7 @@
- <md-content class="single-column"> 
+ <md-content class="single-column" ng-hide="inviteLanding.hidden"> 
   <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_hero6.jpg')" layout="row" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
-      <h1 class="md-display-1">{{ inviteLanding.referrer }} {{ 'invite-landing.header' | translate }}</h1>
+      <h1 class="md-display-1">{{ inviteLanding.referrer.first_name }} {{ 'invite-landing.header' | translate }}</h1>
     </div>
   </div>
 
@@ -9,33 +9,38 @@
   <div class="content" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <h2 class="md-headline">{{ 'invite-landing.subheader' | translate }}</h2>
-      <h3 class="md-subhead">{{ 'invite-landing.subsubheader' | translate }}</h3>
+      <h3 class="md-subhead" translate="{{ 'invite-landing.subsubheader' | translate }}"></h3><div class="spacer"></div>
     </div>
-    <!-- <div class="spacer"></div> -->
-    <!-- <md-divider></md-divider> -->
   </div>
   <!-- end greeting -->
 
 
   <!-- sign up -->
   <div class="content" layout-padding>
-  <!-- <div class="highlight-tile"> -->
-    <!-- <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h2 class="md-headline">{{ 'invite-landing.sign-up-get-voucher' | translate }}</h2>
-      <h3 class="md-subhead">{{ 'invite-landing.sign-up-get-voucher-description' | translate }}</h3>
-    </div> -->
-    <div flex layout="column" layout-align="center center">
-      <md-button ng-if="!inviteLanding.authentication.loggedIn()" ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)" class="md-raised md-primary md-xlrg">{{ 'invite-landing.sign-up-get-voucher' | translate }}</md-button>
-      <md-button ng-if="inviteLanding.authentication.loggedIn()" ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)" class="md-raised md-primary md-xlrg" translate="{{ 'invite-landing.sign-up-get-voucher' | translate }}"></md-button>
+    <div class="content highlight-tile" layout="column" layout-padding layout-align="center center">
+      <div layout layout-align="center center" flex>
+        <div layout="row" flex-gt-sm="50" flex-gt-xs="75">
+          <div layout layout-align="center center">
+            <img class="lnr-profile-md-lrg" ng-src="{{ inviteLanding.referrer.profile_picture.profile_picture.url }}"></img>
+          </div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <h4 class="md-body-1" flex  layout layout-align="center center">{{ 'invite-landing.subsubsubheader' | translate }}</h4>
+        </div>
+      </div>
+      <div flex layout="column" layout-align="center center">
+        <md-button ng-if="!inviteLanding.authentication.loggedIn()" ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)" class="md-raised md-primary md-xlrg">{{ 'invite-landing.sign-up-get-voucher' | translate }}</md-button>
+        <md-button ng-if="inviteLanding.authentication.loggedIn()" ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)" class="md-raised md-primary md-xlrg" translate="{{ 'invite-landing.sign-up-get-voucher' | translate }}"></md-button>
+      </div>
     </div>
-    <!-- </div> -->
-    <div class="spacer"></div>
-    <md-divider></md-divider>
   </div>
   <!-- end sign up -->
+  <div class="spacer"></div>
 
   <!-- how it works -->
   <div class="content" layout-padding>
+    <!-- <md-divider></md-divider> -->
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <h2 class="md-headline">{{ 'invite-landing.how-lnr-works' | translate }}</h2>
     </div>

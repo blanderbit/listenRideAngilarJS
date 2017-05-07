@@ -945,7 +945,8 @@
   "invite-landing" : {
     "header": "gave you 10€ for a ride",
     "subheader": "Welcome to the bike sharing community",
-    "subsubheader": "listnride allows you to rent and rent out beautiful bikes, everywhere, anytime. Whether fixie or roadbike, cargo or e-bike, you'll find one that perfectly suites your style and needs.<br>You've got invited by a friend, so you'll get a voucher for signing up which will be automatically added to your account and redeemed when you rent a bike",
+    "subsubheader": "listnride allows you to rent and rent out beautiful bikes, everywhere, anytime. Whether fixie or roadbike, cargo or e-bike, you'll find one that perfectly suites your style and needs.",
+    "subsubsubheader": "You've got invited by a friend, so you'll get a voucher for signing up which will be automatically added to your account and redeemed when you rent a bike.",
     "sign-up-get-voucher": "Sign up to get the Voucher",
     "sign-up-get-voucher-description": "The voucher will be automatically added to your account and redeemed when you rent a bike",
     "how-lnr-works": "How listnride works",
