@@ -1,7 +1,7 @@
  <md-content class="single-column"> 
   <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_hero6.jpg')" layout="row" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
-      <h1 class="md-display-1">{{ "Moritz" }} {{ 'invite-landing.header' | translate }}</h1>
+      <h1 class="md-display-1">{{ inviteLanding.referrer }} {{ 'invite-landing.header' | translate }}</h1>
     </div>
   </div>
 
@@ -26,7 +26,7 @@
     </div> -->
     <div flex layout="column" layout-align="center center">
       <md-button ng-if="!inviteLanding.authentication.loggedIn()" ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)" class="md-raised md-primary md-xlrg">{{ 'invite-landing.sign-up-get-voucher' | translate }}</md-button>
-      <md-button ng-if="inviteLanding.authentication.loggedIn()" ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)" class="md-raised md-primary md-xlrg">{{ 'invite-landing.sign-up-get-voucher' | translate }}</md-button>
+      <md-button ng-if="inviteLanding.authentication.loggedIn()" ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)" class="md-raised md-primary md-xlrg" translate="{{ 'invite-landing.sign-up-get-voucher' | translate }}"></md-button>
     </div>
     <!-- </div> -->
     <div class="spacer"></div>
@@ -61,5 +61,6 @@
   </div>
   <!-- end how it works -->
 
+  <div class="spacer"></div>
   <footer></footer>
 </md-content>

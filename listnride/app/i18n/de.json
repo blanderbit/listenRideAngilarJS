@@ -136,6 +136,7 @@
     "resend-email": "Email erneut senden",
     "1": {
       "text1": "Willkommen bei listnride!",
+      "text-invited": "Du wurdest von einem Freund eingeladen, dein Account hat daher automatisch einen Gutschein bekommen, der bei der ersten Fahrt eingelöst wird.",
       "text2": "Herzlich willkommen in unserer Bike-Sharing-Community mit vielen tollen Bikes und begeisterten Fahrradliebhabern aus aller Welt. In unserer Community dreht sich alles darum, sein geliebtes Zweirad mit anderen zu teilen – gegenseitiges Vertrauen und Sicherheit für Dich und die anderen User stehen daher für uns an erster Stelle.",
       "text3": "Deshalb bitten wir dich, dein Profil in ein paar einfach Schritten zu verifizieren. Umso besser die eingegebenen Informationen sind, umso höher die Chance auf erfolgreiche Vermietungen."
     },
