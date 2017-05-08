@@ -160,6 +160,19 @@ brompton .cb-slideshow li span {
   animation: bromptonAnimation 20s linear infinite 0s; 
 }
 
+#slideshow div { 
+    z-index: 1000;
+    position: absolute;
+/*    bottom: 30px;
+    left: 0px;
+    text-align: center;*/
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    color: #fff;
+    animation: bromptonAnimation 20s linear infinite 0s; 
+}
+
 brompton .cb-slideshow li:nth-child(1) span { 
   background-image: url(../ui_images/brand-integration/brompton_hero1.jpg); 
 }
