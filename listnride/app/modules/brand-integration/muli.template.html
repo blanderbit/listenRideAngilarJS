@@ -9,6 +9,9 @@
     </ul>
 
     <div class="lnr-page-title md-color-white" layout="column" layout-align="center center">
+      <div>
+        <img ng-src="app/assets/ui_images/brand-integration/muli/muli_logo.png" flex="40"></img><br><br>
+      </div>
       <h1 class="md-display-1">{{ 'brand-integration.muli.title' | translate }}</h1>    
     </div>
   </div>
@@ -24,28 +27,29 @@
         <div layout layout-align="center center">
           <img ng-src="app/assets/ui_images/brand-integration/muli/muli_col_left.png" flex="90"></img>
         </div>
-        <p class="" translate="{{ 'brand-integration.muli.item1-description' | translate }}"></p>
+        <p class="lnr-center" translate="{{ 'brand-integration.muli.item1-description' | translate }}"></p>
       </div>
 
       <div flex-gt-xs="50" layout="column" layout-align="none center" layout-margin>
         <div layout layout-align="center center">
           <img ng-src="app/assets/ui_images/brand-integration/muli/muli_col_right.png" flex="90"></img>
         </div>
-        <p class="" translate="{{ 'brand-integration.muli.item2-description' | translate }}"></p>
+        <p class="lnr-center" translate="{{ 'brand-integration.muli.item2-description' | translate }}"></p>
       </div>
     </div>
 
     <br>
     <md-divider></md-divider>
     <br>
-    <div layout="row" flex-gt-xs layout-wrap layout-padding layout-align="center center">
+    <h2 class="md-headline lnr-center">{{ 'brand-integration.muli.available-cities' | translate }}</h2>
+    <div layout="row" flex-gt-xs layout-wrap layout-padding layout-align="center start">
       <div flex="100" flex-gt-xs="45" flex-gt-sm="33" layout="column">
-        <p class="md-headline lnr-center">{{ 'shared.berlin' | translate }}</p>
+        <p class="md-subhead lnr-center">{{ 'shared.berlin' | translate }}</p>
         <bike-card ng-repeat="bike in muli.bikes.berlin" bike="bike"></bike-card>
       </div>
       <div layout="row" flex-gt-xs="10"></div>
       <div flex="100" flex-gt-xs="45" flex-gt-sm="33" layout="column">
-        <p class="md-headline lnr-center">{{ 'shared.munich' | translate }}</p>
+        <p class="md-subhead lnr-center">{{ 'shared.munich' | translate }}</p>
         <bike-card ng-repeat="bike in muli.bikes.munich" bike="bike"></bike-card>
       </div>
     </div>
