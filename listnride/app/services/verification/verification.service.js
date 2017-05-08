@@ -5,19 +5,23 @@ angular.
   factory('verification', ['$mdDialog', '$mdToast','$q', '$interval', '$localStorage', '$state', '$translate', 'api', 'Upload',
     function($mdDialog, $mdToast, $q, $interval, $localStorage, $state, $translate, api, Upload) {
 
-      var VerificationDialogController = function(lister) {
+      var VerificationDialogController = function(lister, invited) {
         var verificationDialog = this;
         var poller = $interval(function() {
           reloadUser();
         }, 5000);
 
         verificationDialog.lister = lister;
+        verificationDialog.invited = invited;
         verificationDialog.selectedIndex;
         verificationDialog.activeTab = 1;
         verificationDialog.firstName = $localStorage.firstName;
         verificationDialog.profilePicture = false;
         verificationDialog.hasProfilePicture = false;
         verificationDialog.sentConfirmationSms = false;
+        verificationDialog.croppedDataUrl = false;
+        verificationDialog.validateObj = {size: {max: '20MB'}};
+        verificationDialog.invalidFiles = {};
 
         $state.current.name == "home" ? verificationDialog.firstTime = true : verificationDialog.firstTime = false;
         // Fires if scope gets destroyed and cancels poller
@@ -61,9 +65,9 @@ angular.
         };
 
         var uploadPicture = function() {
-          var profilePicture = {
+            var profilePicture = {
             "user": {
-              "profile_picture": verificationDialog.profilePicture
+              "profile_picture": Upload.dataUrltoBlob(verificationDialog.croppedDataUrl, verificationDialog.profilePicture.name)
             }
           };
 
@@ -75,14 +79,13 @@ angular.
               'Authorization': $localStorage.auth
             }
           }).then(
-          function(response) {
-            console.log(response.data);
-            $localStorage.profilePicture = response.data.profile_picture.profile_picture.url;
-          },
-          function(error) {
-            console.log("Error while uploading profile picture", error);
-          }
-        );
+            function(response) {
+              $localStorage.profilePicture = response.data.profile_picture.profile_picture.url;
+            },
+            function(error) {
+              console.log("Error while uploading profile picture", error);
+            }
+          );
         };
 
         var uploadAddress = function() {
@@ -107,7 +110,7 @@ angular.
 
             }
           );
-        }
+        };
 
         verificationDialog.resendEmail = function() {
           api.post('/users/' + $localStorage.userId + '/resend_confirmation_mail').then(
@@ -213,11 +216,12 @@ angular.
         }
       };
 
-      var openDialog = function(lister, event) {
+      var openDialog = function(lister, invited, event) {
         $mdDialog.show({
           controller: VerificationDialogController,
           locals: {
-            lister: lister
+            lister: lister,
+            invited: invited
           },
           controllerAs: 'verificationDialog',
           templateUrl: 'app/services/verification/verification.template.html',

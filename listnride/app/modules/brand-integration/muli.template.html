@@ -1,0 +1,70 @@
+ <md-content class="single-column"> 
+
+ <div id="slideshow" md-theme="lnr-dark" layout="column" layout-align="center center">
+    <ul class="cb-slideshow">
+      <li><span></span></li>
+      <li><span></span></li>
+      <li><span></span></li>
+      <li><span></span></li>
+    </ul>
+
+    <div class="lnr-page-title md-color-white" layout="column" layout-align="center center">
+      <div>
+        <img ng-src="app/assets/ui_images/brand-integration/muli/muli_logo.png" flex="40"></img><br><br>
+      </div>
+      <h1 class="md-display-1">{{ 'brand-integration.muli.title' | translate }}</h1>    
+    </div>
+  </div>
+
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'brand-integration.muli.description' | translate }}</h1>
+      <h2 class="md-subhead">{{ 'brand-integration.muli.subdescription' | translate }}</h2>
+    </div>
+
+    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
+      <div flex-gt-xs="50" layout="column" layout-align="none center" layout-margin>
+        <div layout layout-align="center center">
+          <img ng-src="app/assets/ui_images/brand-integration/muli/muli_col_left.png" flex="90"></img>
+        </div>
+        <p class="lnr-center" translate="{{ 'brand-integration.muli.item1-description' | translate }}"></p>
+      </div>
+
+      <div flex-gt-xs="50" layout="column" layout-align="none center" layout-margin>
+        <div layout layout-align="center center">
+          <img ng-src="app/assets/ui_images/brand-integration/muli/muli_col_right.png" flex="90"></img>
+        </div>
+        <p class="lnr-center" translate="{{ 'brand-integration.muli.item2-description' | translate }}"></p>
+      </div>
+    </div>
+
+    <br>
+    <md-divider></md-divider>
+    <br>
+    <h2 class="md-headline lnr-center">{{ 'brand-integration.muli.available-cities' | translate }}</h2>
+    <div layout="row" flex-gt-xs layout-wrap layout-padding layout-align="center start">
+      <div flex="100" flex-gt-xs="45" flex-gt-sm="33" layout="column">
+        <p class="md-subhead lnr-center">{{ 'shared.berlin' | translate }}</p>
+        <bike-card ng-repeat="bike in muli.bikes.berlin" bike="bike"></bike-card>
+      </div>
+      <div layout="row" flex-gt-xs="10"></div>
+      <div flex="100" flex-gt-xs="45" flex-gt-sm="33" layout="column">
+        <p class="md-subhead lnr-center">{{ 'shared.munich' | translate }}</p>
+        <bike-card ng-repeat="bike in muli.bikes.munich" bike="bike"></bike-card>
+      </div>
+    </div>
+
+    <br>
+    <md-divider></md-divider>
+    <br>
+
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'brand-integration.muli.find-out-more' | translate }}</h1>
+      <h2 class="md-subhead" translate="{{ 'brand-integration.muli.find-out-more-description' | translate }}"></h2>
+    </div>
+    <br>
+    <br>
+  </div>
+
+  <footer></footer>
+</md-content>

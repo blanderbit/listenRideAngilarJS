@@ -17,6 +17,7 @@
     "vienna": "Wien",
     "hamburg": "Hamburg",
     "dusseldorf": "Düsseldorf",
+    "zurich": "Zürich",
     "per": "pro",
     "hour": "Stunde",
     "hours": "Stunden",
@@ -33,6 +34,8 @@
     "from": "von",
     "from2": "ab",
     "to": "bis",
+    "as": "Als",
+    "all": "Alle",
     "cancel": "Abbrechen",
     "send": "Senden",
     "search": "Suche",
@@ -43,6 +46,7 @@
     "phone-number": "Telefonnummer",
     "wait": "Lädt hoch, dies kann einen Moment dauern..",
     "lister": "Vermieter",
+    "rider": "Mieter",
     "reviews": "Bewertungen",
     "for": "für",
     "per-day": "pro Tag",
@@ -74,7 +78,9 @@
     "Sep": "Sept",
     "Oct": "Okt",
     "Nov": "Nov",
-    "Dec": "Dez"
+    "Dec": "Dez",
+    "testimonials-header": "Was die Leute sagen",
+    "balance": "Guthaben"
   },
 
   "toasts": {
@@ -95,6 +101,7 @@
 
   "settings": {
     "settings": "Einstellungen",
+    "invite": "Freunde einladen",
     "profile": "Profil",
     "account": "Account",
     "availability": "Verfügbarkeit",
@@ -131,6 +138,7 @@
     "resend-email": "Email erneut senden",
     "1": {
       "text1": "Willkommen bei listnride!",
+      "text-invited": "Du wurdest von einem Freund eingeladen, dein Account hat daher automatisch einen Gutschein bekommen, der bei der ersten Fahrt eingelöst wird.",
       "text2": "Herzlich willkommen in unserer Bike-Sharing-Community mit vielen tollen Bikes und begeisterten Fahrradliebhabern aus aller Welt. In unserer Community dreht sich alles darum, sein geliebtes Zweirad mit anderen zu teilen – gegenseitiges Vertrauen und Sicherheit für Dich und die anderen User stehen daher für uns an erster Stelle.",
       "text3": "Deshalb bitten wir dich, dein Profil in ein paar einfach Schritten zu verifizieren. Umso besser die eingegebenen Informationen sind, umso höher die Chance auf erfolgreiche Vermietungen."
     },
@@ -198,7 +206,15 @@
     "write-message": "Schreibe eine Nachricht...",
     "complete-profile": "Vervollständige dein Profil",
     "complete-profile-description": "Um das Rad zu buchen, gebe dein Zahlungsmittel an. Alle Daten werden über eine gesicherte Verbindung übertragen.",
-    "no-requests-yet": "Sobald du Anfragen gestellt oder bekommen hast, werden sie hier angezeigt."
+    "no-requests-yet": "Sobald du Anfragen gestellt oder bekommen hast, werden sie hier angezeigt.",
+    "filters": {
+      "all-requests": "Alle Anfragen",
+      "current-rentals": "Aktuelle Mieten",
+      "pending-requests": "Offene Anfragen",
+      "upcoming-rentals": "Bevorstehende Miete",
+      "past-rentals": "Vergangene Vermietungen",
+      "expired-requests": "Abgelaufene Anfragen"
+    }
   },
 
   "message": {
@@ -610,16 +626,22 @@
   },
 
   "invoices": {
-    "request_id": "Request ID",
-    "bike": "Bike",
-    "start_date": "Start date",
-    "end_date": "End date",
-    "lister": "Lister",
-    "rider": "Rider",
-    "payout": "Payout",
-    "you_paid": "You paid",
-    "invoice": "Invoice",
-    "billing": "Billing"
+    "request_id": "Anfrage ID",
+    "bike": "Rad",
+    "start_date": "Startdatum",
+    "end_date": "Enddatum",
+    "lister": "Vermieter",
+    "rider": "Mieter",
+    "payout": "Ausbezahlt",
+    "you_paid": "Bezahlt",
+    "invoice": "Rechnung",
+    "billing": "Rechnungen",
+    "download-csv": "CSV herunterladen",
+    "download-pdf": "PDF herunterladen",
+    "no-rentals": "Es gab noch keine Vermietungen",
+    "as-lister": "Als Vermieter",
+    "as-rider": "Als Mieter",
+    "no-rides": "Noch keine Räder gemietet"
   },
 
   "contact-and-help": {
@@ -740,13 +762,16 @@
       "text": "Der Rapha Super Cross ist wieder zurück in München, zum dritten Mal. Wenn du gerne dabei sein möchtest aber kein geeignetes Rad hast, kannst du über listnride ein Rad mieten. Die listnride bike sharing community bietet verschiedene Crossräder zum Verleih an. Die Räder können vor der Veranstaltung bei den einzelnen Anbietern angefragt und gebucht werden. Die Übergabe wird direkt mit dem Vermieter vereinbart. Zusätzlich verfügbare Räder können auch noch zur Vermietung angeboten werden, um damit etwas zu verdienen und interessante Leute zu treffen, welche an der Veranstaltung teilnehmen. Werde Teil der wachsenden Community!"
     },
     "in-velo-veritas": {
+      "meta-title":"In Velo Veritas - Rent a bike with listnride",
+      "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country.",
       "title": "In Velo Veritas - Die zeitlos Rad-Rundfahrt",
       "text": "Die legendäre Vintage-Rennrad Tour findet nun zum 5. Mal statt. Am 10. und 11. Juni 2017 versammeln sich Fahrradliebhaber in Stockeraus (Österreich) um dort gemeinsam die Touren zu bestreiten. Für alle die gerne teilnehmen würden, allerdings kein zugelassenes Rennrad besitzen, haben wir passende Vintage-Räder von unserer Community zusammengestellt. Alle unten aufgeführten Räder entsprechen dem Reglement und Du kannst Sie einfach über listnride mieten. Falls du nicht teilnehmen kannst, vielleicht sogar mehrer Rennräder hast oder einfach einem gleichgesinnten Fahrrad Enthusiasten aushelfen möchtest: Mach mit und verleihe dein Fahrrad an Gleichgesinnte über listnride."
     },
     "velothon-bikerental": {
+      "meta-title":"Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
+      "meta-description":"Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!",
       "title": "Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
-      "text": "Der Velothon Berlin ist das größte Radrennen Berlins und gibt Euch die großartige Gelegenheit, auf abgesperrten Straßen, zusammen mit tausenden gleichgesinnten Rennrad Enthusiasten und vielen Zuschauer entlang der Strecke, durch Berlin und das Umland zu fahren. <br>Für alle die diese Herausforderung annehmen möchten, aber kein passendes Rennrad zur Hand haben, bzw. nicht damit anreisen möchten, gibt es hier die passende Alternative. <br><br> Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist. <br><br> Du kannst leider nicht am Velothon teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und <a href=\"/#/listing-a-bike\">vermiete dein Rad</a>.",
-      "meta-description": "Velothon, Velothon 2017, Rennrad mieten, Rennrad leihen, Rennrad mieten Berlin, Rennrad leihen Berlin, Velothon Berlin, Velothon Berlin 2017, Fahrradverleih Berlin, Fahrradverleih, Rennradverleih Berlin, Rennradverleih"
+      "text": "Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist. <br><br> Du kannst leider nicht am Velothon teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und <a href=\"/#/listing-a-bike\">vermiete dein Rad</a>."
     },
     "crossride": {
       "title": "listnride Crossride",
@@ -807,6 +832,8 @@
     },
 
     "berlin": {
+      "meta-title":"Explore Berlin by bike with listnride",
+      "meta-description":"Discover Berlin by bike. With listnride, you can find a bike for rent in Berlin that matches your needs and your style.",
       "title": "Berlin",
       "subtitle": "Entdecke Berlin auf dem Fahrrad mit listnride",
       "description": "Miete dir ein Rad und erkunde die Haupstadt auf eigene Faust",
@@ -823,6 +850,8 @@
     },
 
     "munich": {
+      "meta-title":"Explore Munich by bike with listnride",
+      "meta-description":"Discover Munich by bike. With listnride, you can find a bike for rent in Munich that matches your needs and your style.",
       "title": "München",
       "subtitle": "Entdecke München auf dem Fahrrad mit listnride",
       "description": "Miete dir ein Rad und erkunde die RadlHaupstadt auf eigene Faust",
@@ -839,6 +868,8 @@
     },
 
     "amsterdam": {
+      "meta-title":"Explore Amsterdam by bike with listnride",
+      "meta-description":"Discover Amsterdam by bike. With listnride, you can find a bike for rent in Amsterdam that matches your needs and your style.",
       "title": "Amsterdam",
       "subtitle": "Entdecke Amsterdam auf dem Fahrrad mit listnride",
       "description": "Miete dir ein Rad und erkunde die Haupstadt der Niederlande auf eigene Faust",
@@ -855,6 +886,8 @@
     },
 
     "vienna": {
+      "meta-title":"Explore Vienna by bike with listnride",
+      "meta-description":"Discover Vienna by bike. With listnride, you can find a bike for rent in Vienna that matches your needs and your style.",
       "title": "Wien",
       "subtitle": "Entdecke Wien auf dem Fahrrad mit listnride",
       "description": "Miete dir ein Rad und erkunde die Haupstadt auf eigene Faust",
@@ -877,6 +910,8 @@
       "faq": "Die häufigsten Fragen"
     },
     "ampler": {
+      "meta-title":"E-Bike Test Ride Program",
+      "meta-descr": "Test ride an E-Bike today! Electric assist bikes from Ampler available on listnride. Rent one in Berlin, Munich, Hamburg and Vienna.",
       "title": "Ampler. Das smarte E-Bike für den urbanen Pendler.",
       "description": "Miete und Teste Ampler E-Bikes in Berlin, München, Hamburg und Wien",
       "subdescription": "Wähle zwischen Hawk, einem dynamischen Single-Speed, oder Bilberry, dem komfortablen City-Bike",
@@ -929,7 +964,32 @@
       "faq-answer-4": "Es gibt vier Übersetzungsoptionen, die jeweils entsprechend Ihrem Fahrstil und dem Gelände noch variiert, d. h. reduziert oder erhöht, werden können. Vom Anfänger bis zum trainierten Bergfahrer – für jeden findet sich die geeignete Schaltung.<br>1-GANG – Einfach und leichtgängig, geeignet für ebenes Gelände in der Stadt<br>2-GANG – Ein Gang für Berge und zum Anfahren und ein Gang für die normale Fahrgeschwindigkeit, flexibel und leicht<br>3-GANG – Eine robuste Nabenschaltung für tägliches Fahren<br>6-GANG – Der Allrounder, die richtige Wahl für längere Touren und stärkere Steigungen",
       "faq-question-5": "In welchen Farben kann ich mir ein Brompton zusammenstellen?",
       "faq-answer-5": "Brompton-Falträder sind in 12 Farben verfügbar. Sie können zwischen einer Ein- und Zweifarblackierung wählen. Außerdem gibt es eine Klarlack-Version, bei der die Lötnähte sichtbar sind."
+    },
+    "muli": {
+      "title": "Konzipiert für den städtischen Alltag",
+      "description": "Teste und miete ein muli in Berlin oder München",
+      "subdescription": "Das muli ist ein Hybrid aus kleinem Kompaktrad und großem Cargobike. Diese Kombination macht das muli zu einem Fahrrad, das perfekt in den städtischen Alltag passt.",
+      "item1-description": "Länge <b>198cm</b><br>Gewicht <b>24kg</b><br>Gesamtzuladung <b>170kg</b><br>Höhenverstellbarer Lenker <b>10cm</b>",
+      "item2-description": "Korbbreite <b>28-60cm</b><br>Korbzuladung <b>70kg</b><br>Korbvolumen <b>90l</b><br>Eurobox Auflagen<b>40x60cm</b>",
+      "available-cities": "In Berlin und München verfügbar",
+      "find-out-more": "Du hast noch Fragen?",
+      "find-out-more-description": "Erfahre mehr über <a href=\"https://muli-cycles.de/7-shop\" target=\"_blank\">muli-cycles</a> und wie du eins kaufen kannst oder schau Dir die muli <a href=\"https://muli-cycles.de/content/8-faq\" target=\"_blank\">FAQs an.</a>"
     }
+  },
+
+  "invite-landing" : {
+    "header": "hat dir 10€ für eine Fahrt geschenkt",
+    "subheader": "Willkommen bei listnride, der Bike Sharing Community",
+    "subsubheader": "listnride ist eine Community, die passionierte Radfahrer zusammen bringt, um online und via App das eigene Bike zu vermieten oder genau das Fahrrad für den individuellen Zweck und Stil auszuleihen.",
+    "subsubsubheader": "{{ name }} hat dich eingeladen. Wenn du dich anmeldest, erhälst du einen Gutschein der deinem Konto hinterlegt wird. Du kannst diesen für die nächste Radmiete einsetzen.",
+    "sign-up-get-voucher": "Registrieren und Gutschein erhalten",
+    "how-lnr-works": "Bike-Sharing völlig unkompliziert",
+    "explanation-1-title": "1. Find and request",
+    "explanation-1-description": "Find the perfect bike near you and request it.",
+    "explanation-2-title": "2. Book and pick up",
+    "explanation-2-description": "Book the bike and meet the lister to pick it up.",
+    "explanation-3-title": "3. Enjoy the ride",
+    "explanation-3-description": "Have a great time with the bike."
   },
 
   "how-to-shoot-bike-photo" : {
@@ -944,5 +1004,35 @@
     "content-3": "Zeige verschiedene Perspektiven deines Fahrrads, mach das Foto z.B. aus einem Winkel als ausschließlich direkt von vorne. Die Auflösung ist wichtig: Nimm Fotos auf, die mindestens 1800 x 1200 Pixel groß sind. Im Zweifel ist ein größeres Foto immer besser.",
     "headline-4": "Motiv",
     "content-4": "Hebe die Besonderheiten hervor. Nicht auf allen Bildern muss das Fahrrad komplett zu sehen sein. Es ist besser, einige Detailaufnahmen zu machen, wie vom Markennamen, der Farbe, den Lichtern, Schloss etc. Bilder sagen oft mehr als Worte. Nimm deine Fotos im Querformat auf: Vertikale Bilder zeigen deine Räder nicht so gut."
+  },
+
+  "invite": {
+    "meta-title": "listnride Gutscheincodes - Lade deine Freunde ein",
+    "meta-description": "Lade deine Freunde per E-Mail ein, oder teilen Sie Ihren Empfehlungscode auf Facebook.",
+    "title": "Freunde einladen und Freifahrten verdienen",
+    "info-section": {
+      "header": "Erhalte 10€ Guthaben, wenn ein Freund ein Rad bei listnride leiht oder verleiht.",
+      "subheader": "Du bist begeistert von listnride und findest, dass sich auch Deine Freunde ein schönes Rad leihen sollten? Dann lade sie jetzt ein mitzumachen und Teil der listnride Community zu werden.",
+      "invite-friends": "Freunde einladen",
+      "community": "Teil der Community werden",
+      "earn-credit": "Belohnung erhalten"
+    },
+    "invite-form": {
+      "header": "Teile deinen Link",
+      "subheader": "Sende diesen Link an deine Freunde, um den Gutschein zu erhalten.",
+      "copy": "Kopieren"
+    },
+    "invitations": {
+      "header": "Du hast {{credit}}€ durch deine Freunde erhalten",
+      "status": {
+        "1": "Registriert, noch kein Rad eingestellt oder eins geliehen",
+        "2": "Registriert und ein Rad geliehen",
+        "3": "Registriert und ein Rad eingestellt"
+      }
+    },
+    "share": {
+      "email-subject": "{{full_name}} hat dir 10€ Guthaben auf listnride gesendet",
+      "email-body": "Hallo,%0Aich bin bereits zufriedener listnride Nutzer und lade dich ein, Teil der wachsenden listnride Community zu werden.%0A%0Alistnride ist eine Community, die passionierte Radfahrer zusammen bringt, um online und via App das eigene Bike zu vermieten oder genau das Fahrrad für den individuellen Zweck und Stil auszuleihen.%0A%0ADas perfekte Rad. Einfach mieten.%0A%0ARegistriere dich jetzt über meinen persönlichen Code und erhalte 10€ Guthaben.%0A{{voucher_url}}"
+    }
   }
 }

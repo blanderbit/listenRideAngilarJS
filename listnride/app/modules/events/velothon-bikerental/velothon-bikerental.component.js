@@ -7,7 +7,7 @@ angular.module('velothonBikerental',[]).component('velothonBikerental', {
         function VelothonBikerental(NgMap, api) {
             var velothonBikerental = this;
 
-            api.get('/rides?location=Berlin&cat1=false&cat3=false&cat4=false&cat5=false&cat6=false').then(
+            api.get('/rides?category=20&location=Berlin&priority=velothon').then(
                 function(response) {
                     velothonBikerental.bikes = response.data;
                 },

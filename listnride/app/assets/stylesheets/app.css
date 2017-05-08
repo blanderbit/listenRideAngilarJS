@@ -90,6 +90,25 @@ md-grid-list md-grid-tile {
             user-select: none;
 }
 
+.spacer {
+  height: 40px;
+}
+
+.highlight-tile {
+  height: 260px;
+  padding: 24px 0;
+  border-radius: 4px;
+  border: 1px solid rgba(95, 198, 147, 0.25);
+  background-color: rgba(250,250,250,1);
+
+}
+
+.md-xlrg {
+  padding: 10px 0 !important;
+  min-width: 300px !important;
+  font-size: 16px !important;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
@@ -171,6 +190,11 @@ autocomplete .md-errors-spacer {
 
 .lnr-center {
   text-align: center;
+}
+
+.lnr-center-center {
+  text-align: center;
+  vertical-align: center;
 }
 
 .lnr-right {
@@ -309,6 +333,11 @@ autocomplete .md-errors-spacer {
   height: 58px;
 }
 
+.lnr-icn-mlrg--medium {
+  width: 80px;
+  height: 60px;
+}
+
 .lnr-icn-mlrg--big {
   width: 90px;
   height: 60px;
@@ -342,6 +371,16 @@ autocomplete .md-errors-spacer {
   background-size: cover;
 }
 
+.lnr-profile-md-lrg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
 .lnr-profile-lrg {
   width: 135px;
   height: 135px;
@@ -357,6 +396,11 @@ settings .lnr-profile-lrg {
   padding: 0;
 }
 
+.cropArea {
+  overflow: hidden;
+  width:300px;
+  height:200px;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* NAVBAR
@@ -531,6 +575,23 @@ footer .lnr-link {
 }
 
 /*-----------------------------------------------------------------------------------*/
+/* INVITE LANDING
+/*-----------------------------------------------------------------------------------*/
+
+#invite-signup {
+  height: 160px;
+  padding: 24px 0;
+  background-size: cover;
+  background-position: 15% 40%;
+  /*background-image: url(../ui_images/static/lnr_listabike.jpg);*/
+  background-color: #666666;
+}
+
+.highlight-tile button {
+  margin-bottom: -30px;
+}
+
+/*-----------------------------------------------------------------------------------*/
 /* HOME
 /*-----------------------------------------------------------------------------------*/
 
@@ -634,52 +695,52 @@ home md-grid-list md-grid-tile.tile4 {
   background-image: url(../ui_images/cities/lnr_vienna.jpg);
 }
 
-home .testimonials-container {
+.testimonials-container {
   margin: auto;
   width: calc(100% - 50px);
 }
 
-home #testimonials img.testimonials-img {
+#testimonials img.testimonials-img {
   width: 75px;
   height: auto;
   border-radius: 50%;
   margin-top: 16px;
 }
 
-home .testimonials-text {
+.testimonials-text {
   font-size: 20px;
   text-align: center;
   width: 75%;
 }
 
-home .testimonials-name {
+.testimonials-name {
   font-weight: 500;
 }
 
-home .testimonials-slick-slide {
+.testimonials-slick-slide {
   display: flex !important;
 }
 
-home #testimonials .testimonials-prev-arrow {
+#testimonials .testimonials-prev-arrow {
   height: 50px;
   width: 30px;
   opacity: 0.25;
 }
 
-home #featuredTilesGrid {
+#featuredTilesGrid {
   text-align: center;
 }
 
-home #featuredTilesGrid .tile {
+#featuredTilesGrid .tile {
   background-color: #7ab2f8;
 }
 
-home #featuredTilesGrid .img-container {
+#featuredTilesGrid .img-container {
   height: 40%;
   width: 100%;
 }
 
-home #featuredTilesGrid img {
+#featuredTilesGrid img {
   height: 100%;
 }
 
@@ -1107,17 +1168,22 @@ md-toast.md-center {
   transform: translate3d(-50%, 0, 0);
 }
 
-.chat {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  background-color: #efefef;
+@media (max-width:959px) {
+  .chat {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 46px 6px 46px 6px;
+    background-color: #fff;
+  }
 }
 
-.chat {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  padding: 48px 16px 24px 16px;
-  background: #fff;
+@media (min-width:960px) {
+  .chat {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 46px 46px 46px 46px;
+    background-color: #fff;
+  }
 }
 
 requests md-input-container  {
@@ -1126,10 +1192,13 @@ requests md-input-container  {
 
 .requests-list {
   min-width: 320px !important;
-  max-width: 450px;
+  max-width: 450px !important;
   border-right: 1px solid #efefef;
 }
 
+.requests-list .lnr-center {
+  padding: 0px 12px 0px 12px
+}
 .requests-list md-list-item .md-avatar {
   width: 50px;
   height: 50px;
@@ -1141,7 +1210,7 @@ requests md-input-container  {
 }
 
 .lnr-message-form {
-  background: rgba(229,234,234,0.7);
+  background: rgb(236, 236, 236);
 }
 
 .lnr-message-form input {
@@ -1153,8 +1222,18 @@ requests md-input-container  {
 }
 
 .lnr-message {
-  padding: 4px;
+  padding: 4px 4px 2px 4px;
   border-radius: 4px;
+}
+
+.lnr-message .message-time {
+  text-align: right;
+  font-size: 10px;
+  margin: 2px 2px 2px 2px;
+}
+
+.lnr-message .message-text {
+  margin-bottom: 2px;
 }
 
 message .sent-message {
@@ -1165,11 +1244,11 @@ message .sent-message {
 
 message .received-message {
   position: relative;
-  background-color: rgba(229,234,234,0.4);
+  background-color: rgb(237, 240, 240);
 }
 
 message .status-message {
-  background-color: rgba(229,234,234,0.4);
+  background-color: rgba(229, 234, 234, 0.16);
 }
 
 .sent-message:after {
@@ -1195,12 +1274,66 @@ message .status-message {
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-right-color: rgba(229,234,234,0.4);
+  border-right-color: rgb(237, 240, 240);
   border-width: 6px;
   margin-top: -6px;
 }
 
+@media (max-width: 959px) {
+  .message-button {
+    margin: 6px 0 6px 0;
+  }
+  .md-primary {
+    color: rgb(255, 255, 255) !important;
+  }
+}
 
+@media (min-width: 960px) {
+  .message-button {
+    margin: 0 6px 0 6px;
+  }
+  .md-primary {
+    color: rgb(255, 255, 255) !important;
+  }
+}
+
+.request-filter-switch {
+  margin: 16px 0;
+  padding: 0px 8px 0px 8px;
+  text-transform: none;
+  font-weight: 400;
+  min-width: 96px;
+  border: solid #eef1f1 1px;
+}
+
+.request-filter-switch:hover {
+  color: rgb(110, 110, 110) !important;
+  background-color: rgba(158,158,158,0.2) !important;
+}
+
+.request-filter-switch-active {
+  background-color: rgba(158,158,158,0.2) !important;
+}
+
+.request-filter-dropdown {
+  margin: 0 0 16px 0;
+}
+
+.request-filter-dropdown md-select {
+  border-width: 0;
+}
+
+.md-button.left {
+  border-radius: 4px 0 0 4px;
+}
+
+.md-button.middle {
+  border-radius: 0;
+}
+
+.md-button.right {
+  border-radius: 0 4px 4px 0;
+}
 /*-----------------------------------------------------------------------------------*/
 /*  STATIC PAGES
 /*-----------------------------------------------------------------------------------*/
@@ -1382,6 +1515,9 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
   margin-top: 48px;
 }
 
+.lnr-billing-page .repeated-billing-items .md-button {
+  line-height: normal;
+}
 
 .lnr-table-head .flex {
   text-align: center;
@@ -1389,7 +1525,7 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
 
 .lnr-no-rental {
   text-align: center;
-  margin-top: 48px;
+  margin-top: 150px;
 }
 
 .repeated-billing-items h1{
@@ -1414,6 +1550,26 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
   color: rgb(95,198,147);
   padding: unset;
   margin: unset;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  Invitations
+/*-----------------------------------------------------------------------------------*/
+
+invite #inviteForm .invite-form-container {
+  height: 320px;
+  padding: 24px 0;
+  border-radius: 4px;
+  border: 1px solid rgba(95, 198, 147, 0.25);
+  background-color: rgba(250,250,250,1);
+}
+
+invite .share-icon {
+  cursor: pointer;
+}
+
+invite .voucher-link {
+  margin: initial;
 }
 
 /*.lnr-billing-page .repeated-billing-items .md-button:not([disabled]):hover {*/
@@ -1449,4 +1605,12 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
 .billing-bike-title .md-button {
   width: 95%;
   text-align: left;
+}
+
+.lnr-green-text span {
+  color: #5fc693;
+}
+
+.lnr-green-text {
+  color: #5fc693;
 }

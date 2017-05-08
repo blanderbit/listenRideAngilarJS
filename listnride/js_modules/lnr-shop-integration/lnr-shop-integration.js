@@ -113,9 +113,10 @@ var env = "production";
         'You can simply click on the bike you&rsquo;d like to rent and book it directly online. ' +
         'We will have the bike awaiting your pick-up!',
         // deutsch intro text
-        de: 'Diese Fahrr&auml;der stehen aktuell f&uuml;r den Verleih zur Verf&uuml;gung. ' +
-        'Durch klicken auf das gew&uuml;nschte Fahrrad k&ouml;nnen Sie einfach das Rad direkt'  + 
-        'online buchen. Das Fahrrad ist somit f&uuml;r Sie reserviert',
+        //
+        de: 'Diese Fahrr&auml;der bieten wir aktuell zum Vermieten an. ' +
+        'Durch klicken auf das gew&uuml;nschte Fahrrad k&ouml;nnen Sie einfach das Rad direkt online buchen. ' +
+        'Das Fahrrad ist somit f&uuml;r Sie reserviert',
         // dutch intro text
         nl: 'De onderstaande fietsen bieden wij momenteel te huur aan. ' + 
         'U kunt de fietsen eenvoudig online boeken, door op de gewenst fiets te klikken. ' + 

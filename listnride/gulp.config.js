@@ -98,7 +98,8 @@ module.exports = function () {
                     name: 'listnride',
                     html5Mode: false,
                     apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
-                    userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/'
+                    userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
+                    webappUrl: "http://www.staging.listnride.com"
                 }
             }
         },
@@ -112,7 +113,8 @@ module.exports = function () {
                     name: 'listnride',
                     html5Mode: true,
                     apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
-                    userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/'
+                    userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
+                    webappUrl: "http://www.staging.listnride.com"
                 }
             }
         },
@@ -126,7 +128,8 @@ module.exports = function () {
                     name: 'listnride',
                     html5Mode: true,
                     apiEndpoint: 'https://api.listnride.com/v2',
-                    userEndpoint: 'https://api.listnride.com/v2/users/'
+                    userEndpoint: 'https://api.listnride.com/v2/users/',
+                    webappUrl: "http://www.listnride.com"
                 }
             }
         }

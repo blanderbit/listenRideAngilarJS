@@ -29,10 +29,13 @@ angular.module('listnride', [
   'static',
   'ampler-integration',
   'brompton-integration',
+  'muli-integration',
   'mcbw',
   'pushnpost',
   'kuchenundraketen',
+  'invite',
   'listnride.constant',
+  'inviteLanding',
   /* external modules */
   'ngMaterial',
   'ngMessages',
@@ -43,13 +46,15 @@ angular.module('listnride', [
   'ngMap',
   'luegg.directives',
   'ngFileUpload',
+  'ngImgCrop',
   'ngSanitize',
   'angular-input-stars',
   'ngMeta',
   'slickCarousel',
   'angulartics',
   'angulartics.google.analytics',
-  'angularMoment'
+  'angularMoment',
+  '720kb.socialshare'
 ])
 .config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider', 'ENV',
   function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider, ENV) {

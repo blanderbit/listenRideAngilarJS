@@ -12,7 +12,8 @@ angular.module('message',[]).component('message', {
     confirmBooking: '&',
     acceptBooking: '&',
     showRatingDialog: '&',
-    request: '<'
+    request: '<',
+    messageTime: '<'
   },
   controller: [ '$translate', '$localStorage', '$mdDialog', 'api',
     function MessageController($translate, $localStorage, $mdDialog, api) {
