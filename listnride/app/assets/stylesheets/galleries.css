@@ -128,6 +128,19 @@ brompton .cb-slideshow li span {
   animation: quattroAnimation 20s linear infinite 0s; 
 }
 
+#slideshow div { 
+    z-index: 1000;
+/*    position: absolute;
+    height: 75vh;
+    width: 100%;*/
+    opacity: 0;
+    color: #fff;
+    animation: bromptonTitleAnimation 20s linear infinite 0s;
+    -webkit-animation: bromptonTitleAnimation 20s linear infinite 0s;
+    -moz-animation: bromptonTitleAnimation 20s linear infinite 0s;
+    -o-animation: bromptonTitleAnimation 20s linear infinite 0s;
+}
+
 brompton .cb-slideshow li:nth-child(1) span { 
   background-image: url(../ui_images/brand-integration/brompton_hero1.jpg); 
 }
@@ -261,4 +274,32 @@ muli .cb-slideshow li:nth-child(4) span {
   25% { opacity: 1 }
   27% { opacity: 0 }
   100% { opacity: 0 }
+}
+
+@-webkit-keyframes bromptonTitleAnimation { 
+  10% { opacity: 0; }
+  25% { opacity: 0; animation-timing-function: ease-in; }
+  30% { opacity: 1; animation-timing-function: ease-out; }
+  98% { opacity: 1; }
+}
+
+@-moz-keyframes bromptonTitleAnimation { 
+  10% { opacity: 0; }
+  25% { opacity: 0; animation-timing-function: ease-in; }
+  30% { opacity: 1; animation-timing-function: ease-out; }
+  98% { opacity: 1; }
+}
+
+@-o-keyframes bromptonTitleAnimation { 
+  10% { opacity: 0; }
+  25% { opacity: 0; animation-timing-function: ease-in; }
+  30% { opacity: 1; animation-timing-function: ease-out; }
+  98% { opacity: 1; }
+}
+
+@keyframes bromptonTitleAnimation { 
+  10% { opacity: 0; }
+  25% { opacity: 0; animation-timing-function: ease-in; }
+  30% { opacity: 1; animation-timing-function: ease-out; }
+  98% { opacity: 1; }
 }
