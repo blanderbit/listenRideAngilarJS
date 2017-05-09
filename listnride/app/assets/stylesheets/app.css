@@ -1614,3 +1614,10 @@ invite .voucher-link {
 .lnr-green-text {
   color: #5fc693;
 }
+
+.lnr-mobile-bike {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}

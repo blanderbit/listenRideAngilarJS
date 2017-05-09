@@ -64,10 +64,10 @@ angular.module('invoices',[]).component('invoices', {
                 api.get('/users/' + $localStorage.userId + '/invoices/' + id + '?target=' + target, 'blob').then(function (result) {
                     var file = new Blob([result.data], {type: 'application/pdf'});
                     var fileURL = window.URL.createObjectURL(file);
-                    // a.href = fileURL;
-                    // a.download = fileName;
-                    // a.click();
-                    $window.open(fileURL, '_blank');
+                    a.href = fileURL;
+                    a.download = fileName;
+                    a.click();
+                    // $window.open(fileURL, '_blank');
                 });
             };
 
