@@ -31,6 +31,8 @@ var helper = {
     },
 
     lang: navigator.language.split('-')[0].toLowerCase(),
+    termsAndConditionsEnglish: "http://cdn.listnride.com/en/tacs.pdf",
+    termsAndConditionsDeutsch: "http://cdn.listnride.com/de/tacs.pdf",
     /**
      * translation for en, de and nl
      */
@@ -554,6 +556,11 @@ var helper = {
         // disable the navigation next button until
         // user correctly fills the form 
         $('#lnr-next-button-tab-duration').prop('disabled', true);
+        // terms and conditions url based on browser language
+        $('.overview-toa').attr(
+            "href",
+            helper.lang == 'de' ? helper.termsAndConditionsDeutsch : helper.termsAndConditionsEnglish
+        );
     },
 
     /**

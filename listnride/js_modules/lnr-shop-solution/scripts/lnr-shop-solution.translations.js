@@ -76,7 +76,8 @@ var translationsConfigObject = {
             bike: "Bike",
             name: "Name",
             lister: "Lister",
-            location: "Location"
+            location: "Location",
+            toa: "Terms and Conditions apply."
         },
         navigation: {
             back: 'Back',
@@ -158,7 +159,8 @@ var translationsConfigObject = {
             bike: "Fahrrad",
             name: "Name",
             lister: "Vermieter",
-            location: "Ort"
+            location: "Ort",
+            toa: "Gesch&auml;ftsbedingungen gelten."
         },
         navigation: {
             back: 'Zur&uuml;ck',
@@ -240,7 +242,8 @@ var translationsConfigObject = {
             bike: "Fiets",
             name: "Naam",
             lister: "Lister",
-            location: "Plaats"
+            location: "Plaats",
+            toa: "Voorwaarden zijn van toepassing"
         },
         navigation: {
             back: 'Terug',
