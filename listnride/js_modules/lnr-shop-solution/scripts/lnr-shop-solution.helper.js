@@ -478,33 +478,32 @@ var helper = {
      * @returns {void}
      */
     categoryName: function (categoryId) {
-
-        switch(categoryId) {
-            case 10: return 'dutch-bike';
-            case 11: return 'touring-bike';
-            case 12: return 'fixie';
-            case 13: return 'single-speed';   
-            case 20: return 'road-bike';
-            case 21: return 'triathlon';
-            case 22: return 'indoor'; 
-            case 30: return 'trecking';
-            case 31: return 'enduro';
-            case 32: return 'freeride';
-            case 33: return 'cross-country';
-            case 34: return 'downhill';
-            case 35: return 'cyclocross'; 
-            case 40: return 'city';
-            case 41: return 'all-terrain';
-            case 42: return 'road';   
-            case 50: return 'pedelec';
-            case 51: return 'e-bike'; 
-            case 60: return 'folding-bike';
-            case 61: return 'tandem';
-            case 62: return 'cruiser';
-            case 63: return 'cargo-bike';
-            case 64: return 'recumbent';
-            case 65: return 'mono-bike';  
-            default: return "";
+        switch (categoryId) {
+          case 10: return "Holland";
+          case 11: return "Touring";
+          case 12: return "Fixie";
+          case 13: return "Single Speed";
+          case 20: return "Roadbike";
+          case 21: return "Triathlon";
+          case 22: return "Indoor";
+          case 30: return "Trecking";
+          case 31: return "Enduro";
+          case 32: return "Freeride";
+          case 33: return "Cross Country";
+          case 34: return "Downhill";
+          case 35: return "Cyclocross";
+          case 40: return "Children City";
+          case 41: return "Children Allterrain";
+          case 42: return "Children Road";
+          case 50: return "Pedelec";
+          case 51: return "E-Bike";
+          case 60: return "Folding";
+          case 61: return "Tandem";
+          case 62: return "Cruiser";
+          case 63: return "Cargo";
+          case 64: return "Recumbent";
+          case 65: return "Mono";
+          default: return "";
         }
     },
     /**
