@@ -1,8 +1,12 @@
 'use strict';
 
 angular.module('jobs', [])
-    .controller('JobsListController', ['JobsService',
-        function (JobsService) {
+    .controller('JobsListController', ['JobsService', '$translate', 'ngMeta',
+        function (JobsService, $translate, ngMeta) {
+
+            ngMeta.setTitle($translate.instant("jobs.meta-title"));
+            ngMeta.setTag("description", $translate.instant("jobs.meta-description"));
+
             var jobs = this;
             JobsService.getAvailableJobs().then(function (response) {
                 jobs.availableJobs = response.data;
