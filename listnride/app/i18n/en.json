@@ -591,8 +591,8 @@
       "content": "Do you always know more about bikes than others? Do you love jumping on the saddle and going for a ride, come rain or shine? Then you are in all likelihood a true bike aficionado – and would make a great addition to our team. Have a look to see if we currently have a vacancy that is right for you, and feel free to send us your application."
     },
     "view": "View",
-    "meta-title": "Jobs at listnride",
-    "meta-description": "Become a member of our team and promote the modern approach to renting bikes.",
+    "meta-title": "Work for listnride",
+    "meta-description": "Join the listnride bike sharing team in Berlin or Munich to build the global biking community",
     "apply": "Apply Now",
     "see-all": "See Other Jobs",
     "open": "Open Positions",
@@ -702,6 +702,8 @@
     }
   },
   "terms-and-conditions": {
+    "meta-title": "listnride | Website Terms & Conditions",
+    "meta-description": "The Terms and Conditions of the Bike-Sharing-Community listnride apply to the use of the online platform.",
     "title": "Terms and conditions",
     "header": "General Terms and Conditions of Business for the listnride Online Platform",
     "download": "Download here",
@@ -724,7 +726,7 @@
     "commercial-register-number": "Commercial Register Number",
     "berlin-court-of-registry": "Berlin Court of Registry (Charlottenburg)",
     "vat-id": "VAT ID",
-    "meta-title": "listnride Imprint",
+    "meta-title": "listnride | Imprint",
     "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
   },
   "events": {
@@ -912,6 +914,8 @@
       "faq-answer-9": "Yes. Our bikes are capable of a top speed of 35km/h but by default are limited according to EN15194 to the top speed of 25 km/h. This means that the motor will only help you up to 25km/h. You can change these settings from the smartphone app."
     },
     "brompton": {
+      "meta-title": "Rent a Brompton bike with listnride",
+      "meta-description": "Test ride a Brompton bike today! These urban folding bikes are available on listnride. Rent one in Berlin, Munich, Hamburg, Düsseldorf or Frankfurt.",
       "title": "Just ride a Brompton",
       "description": "Rent a Brompton and test its excellent riding and folding characteristics. Experience Germany's cities different - with a bike perfect for the city.",
       "subdescription": "Choose from various Model types the Brompton that fits you most!",
@@ -934,6 +938,8 @@
       "faq-answer-5": "Brompton folding bikes are available in 12 colors. You can choose between one- and two-color finishing. There is also a clear lacquer version, in which the soldering seams are visible."
     },
     "muli": {
+      "meta-title": "Rent a Muli cargo bike with listnride",
+      "meta-description": "Test ride a Muli cargo bike today! These urban cargo bikes are available on listnride. Rent one in Berlin or Munich.",
       "title": "Designed for daily urban life",
       "description": "Test and rent muli in Berlin or Munich",
       "subdescription": "The muli is a hybrid between a compact citybike and a big cargo-bike. This combination makes a bike that perfectly suits daily city life.",

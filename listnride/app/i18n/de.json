@@ -617,8 +617,8 @@
       "content": "Über Fahrräder weißt Du immer mehr als andere? Du liebst es, auch bei Wind und Wetter in die Pedale zu treten? Dann bist Du wahrscheinlich ein Fahrrad-Fanatiker – und passt schon mal gut zu unserem Team. Schau, ob wir aktuell einen passenden Job für Dich haben und schicke uns gerne Deine Bewerbung."
     },
     "view": "Anzeigen",
-    "meta-title": "Stellenangebote bei listnride",
-    "meta-description": "Werde Mitglied des Teams und treibe die zeitgemäße Art des Fahrradverleihs voran.",
+    "meta-title": "Jobs | listnride",
+    "meta-description": "Werde Teil des Teams und unterstütze die globale Fahrrad Community!",
     "apply": "Jetzt bewerben",
     "see-all": "See Other Jobs",
     "open": "Offene Positionen",
@@ -729,6 +729,8 @@
   },
 
   "terms-and-conditions" : {
+    "meta-title": "listnride | AGB",
+    "meta-description": "AGB",
     "title" : "Terms and conditions",
     "header" : "Allgemeine Geschäftsbedingungen für die Online-Plattform listnride",
     "download" : "Hier zum download",
@@ -762,14 +764,14 @@
       "text": "Der Rapha Super Cross ist wieder zurück in München, zum dritten Mal. Wenn du gerne dabei sein möchtest aber kein geeignetes Rad hast, kannst du über listnride ein Rad mieten. Die listnride bike sharing community bietet verschiedene Crossräder zum Verleih an. Die Räder können vor der Veranstaltung bei den einzelnen Anbietern angefragt und gebucht werden. Die Übergabe wird direkt mit dem Vermieter vereinbart. Zusätzlich verfügbare Räder können auch noch zur Vermietung angeboten werden, um damit etwas zu verdienen und interessante Leute zu treffen, welche an der Veranstaltung teilnehmen. Werde Teil der wachsenden Community!"
     },
     "in-velo-veritas": {
-      "meta-title":"In Velo Veritas - Rent a bike with listnride",
-      "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country.",
+      "meta-title":"Klassikerausfahrt: In Velo Veritas mit listnride",
+      "meta-description": "Miete dir ein klassisches Stahl Rennrad für die Ausfahrt durch eines der schönsten Weinanbaugebiete Österreichs.",
       "title": "In Velo Veritas - Die zeitlos Rad-Rundfahrt",
       "text": "Die legendäre Vintage-Rennrad Tour findet nun zum 5. Mal statt. Am 10. und 11. Juni 2017 versammeln sich Fahrradliebhaber in Stockeraus (Österreich) um dort gemeinsam die Touren zu bestreiten. Für alle die gerne teilnehmen würden, allerdings kein zugelassenes Rennrad besitzen, haben wir passende Vintage-Räder von unserer Community zusammengestellt. Alle unten aufgeführten Räder entsprechen dem Reglement und Du kannst Sie einfach über listnride mieten. Falls du nicht teilnehmen kannst, vielleicht sogar mehrer Rennräder hast oder einfach einem gleichgesinnten Fahrrad Enthusiasten aushelfen möchtest: Mach mit und verleihe dein Fahrrad an Gleichgesinnte über listnride."
     },
     "velothon-bikerental": {
       "meta-title":"Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
-      "meta-description":"Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!",
+      "meta-description":"Das Rennrad Event des Jahres in Berlin! Nimm teil und miete dir das passende Rennrad!",
       "title": "Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
       "text": "Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist. <br><br> Du kannst leider nicht am Velothon teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und <a href=\"/#/listing-a-bike\">vermiete dein Rad</a>."
     },
@@ -832,8 +834,8 @@
     },
 
     "berlin": {
-      "meta-title":"Explore Berlin by bike with listnride",
-      "meta-description":"Discover Berlin by bike. With listnride, you can find a bike for rent in Berlin that matches your needs and your style.",
+      "meta-title":"Entdecke Berlin auf dem Fahrrad mit listnride",
+      "meta-description":"Erkunde Berlin auf dem Fahrrad. Wähle aus einer Vielzahl von Fahrrädern und miete das optimale Zweirad für deine Fahrradtour!",
       "title": "Berlin",
       "subtitle": "Entdecke Berlin auf dem Fahrrad mit listnride",
       "description": "Miete dir ein Rad und erkunde die Haupstadt auf eigene Faust",
@@ -850,8 +852,8 @@
     },
 
     "munich": {
-      "meta-title":"Explore Munich by bike with listnride",
-      "meta-description":"Discover Munich by bike. With listnride, you can find a bike for rent in Munich that matches your needs and your style.",
+      "meta-title":"Entdecke München auf dem Fahrrad mit listnride",
+      "meta-description":"Erkunde München auf dem Fahrrad. Wähle aus einer Vielzahl von Fahrrädern und miete das optimale Zweirad für deine Fahrradtour!",
       "title": "München",
       "subtitle": "Entdecke München auf dem Fahrrad mit listnride",
       "description": "Miete dir ein Rad und erkunde die RadlHaupstadt auf eigene Faust",
@@ -868,8 +870,8 @@
     },
 
     "amsterdam": {
-      "meta-title":"Explore Amsterdam by bike with listnride",
-      "meta-description":"Discover Amsterdam by bike. With listnride, you can find a bike for rent in Amsterdam that matches your needs and your style.",
+      "meta-title":"Entdecke Amsterdam auf dem Fahrrad mit listnride",
+      "meta-description":"Erkunde Amsterdam auf dem Fahrrad. Wähle aus einer Vielzahl von Fahrrädern und miete das optimale Zweirad für deine Fahrradtour!",
       "title": "Amsterdam",
       "subtitle": "Entdecke Amsterdam auf dem Fahrrad mit listnride",
       "description": "Miete dir ein Rad und erkunde die Haupstadt der Niederlande auf eigene Faust",
@@ -886,8 +888,8 @@
     },
 
     "vienna": {
-      "meta-title":"Explore Vienna by bike with listnride",
-      "meta-description":"Discover Vienna by bike. With listnride, you can find a bike for rent in Vienna that matches your needs and your style.",
+      "meta-title":"Entdecke Wien auf dem Fahrrad mit listnride",
+      "meta-description":"Erkunde Wien auf dem Fahrrad. Wähle aus einer Vielzahl von Fahrrädern und miete das optimale Zweirad für deine Fahrradtour!",
       "title": "Wien",
       "subtitle": "Entdecke Wien auf dem Fahrrad mit listnride",
       "description": "Miete dir ein Rad und erkunde die Haupstadt auf eigene Faust",
@@ -910,8 +912,8 @@
       "faq": "Die häufigsten Fragen"
     },
     "ampler": {
-      "meta-title":"E-Bike Test Ride Program",
-      "meta-descr": "Test ride an E-Bike today! Electric assist bikes from Ampler available on listnride. Rent one in Berlin, Munich, Hamburg and Vienna.",
+      "meta-title":"E Bike Test Programm",
+      "meta-descr": "Teste noch heute ein Ampler Bikes E-Bike! Die Elektrofahrräder stehen zum Testen in Berlin, München, Hamburg, Zürich und Wien zur Verfügung.",
       "title": "Ampler. Das smarte E-Bike für den urbanen Pendler.",
       "description": "Miete und Teste Ampler E-Bikes in Berlin, München, Hamburg und Wien",
       "subdescription": "Wähle zwischen Hawk, einem dynamischen Single-Speed, oder Bilberry, dem komfortablen City-Bike",
@@ -944,6 +946,8 @@
       "faq-answer-9": "Ja. Unsere Fahrräder sind in der Lage eine Höchstgeschwindigkeit von 35km/h zu erreichen, sind aber standardmäßig nach EN15194 auf die Höchstgeschwindigkeit von 25 km/h begrenzt. Das bedeutet, dass der Motor nur bis zu 25km/h unterstützt. Du kannst diese Einstellungen über unsere Smartphone-App ändern."
     },
     "brompton": {
+      "meta-title": "Miete das Brompton Faltrad mit listnride",
+      "meta-description": "Teste noch heute ein Brompton! Die Brompton Falträder stehen zum Testen in Berlin, München, Hamburg, Düsseldorf und Frankfurt zur Verfügung",
       "title": "Fahr mal Brompton",
       "description": "Miete ein Brompton und teste seine hervorragenden Fahr- und Falteigenschaften. Erlebe Deutschlands Städte neu – mit einem Rad perfekt für die Stadt.",
       "subdescription": "Wähle aus verschiedenen Modellvarianten genau das Brompton, das dir entspricht!",
@@ -966,6 +970,8 @@
       "faq-answer-5": "Brompton-Falträder sind in 12 Farben verfügbar. Sie können zwischen einer Ein- und Zweifarblackierung wählen. Außerdem gibt es eine Klarlack-Version, bei der die Lötnähte sichtbar sind."
     },
     "muli": {
+      "meta-title": "Miete das Muli Lastenrad mit listnride",
+      "meta-description": "Teste noch heute ein Muli Lastenrad! Die Lastenräder stehen zum Testen in Berlin und München zur Verfügung",
       "title": "Konzipiert für den städtischen Alltag",
       "description": "Teste und miete ein muli in Berlin oder München",
       "subdescription": "Das muli ist ein Hybrid aus kleinem Kompaktrad und großem Cargobike. Diese Kombination macht das muli zu einem Fahrrad, das perfekt in den städtischen Alltag passt.",
