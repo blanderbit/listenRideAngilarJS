@@ -3,11 +3,14 @@
 angular.module('muli-integration',[]).component('muli', {
   templateUrl: 'app/modules/brand-integration/muli.template.html',
   controllerAs: 'muli',
-  controller: [ '$translate', 'api',
-    function MuliController($translate, api) {
+  controller: [ '$translate', 'api', 'ngMeta',
+    function MuliController($translate, api, ngMeta) {
+
+      ngMeta.setTitle($translate.instant("brand-integration.muli.meta-title"));
+      ngMeta.setTag("description", $translate.instant("brand-integration.muli.meta-description"));
+
       var muli = this;
 
-      muli.test = "blablbalba"
 
       muli.bikes = {
         berlin: [],
@@ -16,7 +19,6 @@ angular.module('muli-integration',[]).component('muli', {
 
       api.get('/rides?family=14').then(
         function (success) {
-          console.log(success.data);
 
           for (var i=0; i<success.data.length; i++) {
             switch (success.data[i].city) {
@@ -25,7 +27,6 @@ angular.module('muli-integration',[]).component('muli', {
             }
           }
 
-          console.log(muli.bikes);
         },
         function (error) {
           console.log('Error fetching Bikes');
