@@ -73,13 +73,13 @@ var env = "production";
           categoryDesc = categoryFilter(category),
           price = parseInt(ride.price_daily),
           imageUrl = ride.image_file_1.image_file_1.small.url,
-          svgUrl = rootUrl + '/app/assets/ui_icons/biketype_' + (category + '').slice(0, 1) + '.svg';
-
+          svgUrl = rootUrl + '/app/assets/ui_icons/biketype_' + (category + '').slice(0, 1) + '.svg',
+          rideDescription = ride.description.slice(0, 150).concat(' ...');
         grid.append(
           '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">' +
           '<bike-card>' +
           '<md-card class="lnr-bike-card _md">' +
-          '<a target="_blank" class="image-container lnr-links" onclick="spawnWizard(' + ride.user_id + ', ' + ride.id + ')"><img src="' + imageUrl + '"></img><div class="after"><span class="content">' + ride.description + '<br><br><button class="md-button">' + buttonText + '</button></span><span class="zoom"><i class="fa fa-search"></i></span></div></a>' +
+          '<a target="_blank" class="image-container lnr-links" onclick="spawnWizard(' + ride.user_id + ', ' + ride.id + ')"><img src="' + imageUrl + '"></img><div class="after"><span class="content">' + rideDescription + '<br><br><button class="md-button">' + buttonText + '</button></span><span class="zoom"><i class="fa fa-search"></i></span></div></a>' +
           '<md-card-title layout="row" class="layout-row">' +
           '<md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true">'+
           '<img src="' + svgUrl + '" height="48" width="48"></img></md-icon>' +
