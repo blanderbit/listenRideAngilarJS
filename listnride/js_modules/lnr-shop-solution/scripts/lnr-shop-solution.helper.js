@@ -184,8 +184,8 @@ var helper = {
      */
     getDateFormatted: function (paramDate, paramTime) {
         var returnDate = '';
-        returnDate += ('0' + parseInt(paramDate.getDate() + 1)).slice(-2) + '.';
-        returnDate += ('0' + paramDate.getMonth()).slice(-2) + '.';
+        returnDate += ('0' + paramDate.getDate()).slice(-2) + '.';
+        returnDate += ('0' + parseInt(paramDate.getMonth() + 1)).slice(-2) + '.';
         returnDate += calendar.startDate.getFullYear();
         if (paramTime) {
             returnDate += ', ' + ('0' + paramTime).slice(-2) + ':00'

@@ -7,7 +7,8 @@ var translationsConfigObject = {
             hello: 'Hello',
             print: 'Print Page',
             here: 'here',
-            description: 'Description'
+            description: 'Description',
+            rent: 'Rent '
         },
         tabs: {
             tabDuration: '1.&nbsp;Info',
@@ -77,7 +78,7 @@ var translationsConfigObject = {
             name: "Name",
             lister: "Lister",
             location: "Location",
-            toa: "Terms and Conditions apply."
+            toa: "By booking I accept the terms and conditions."
         },
         navigation: {
             back: 'Back',
@@ -91,7 +92,8 @@ var translationsConfigObject = {
             hello: 'Hallo',
             print: 'Seite Drucken',
             here: 'hier',
-            description: 'Beschreibung'
+            description: 'Beschreibung',
+            rent: 'Miete'
         },
         tabs: {
             tabDuration: '1.&nbsp;Info',
@@ -160,7 +162,7 @@ var translationsConfigObject = {
             name: "Name",
             lister: "Vermieter",
             location: "Ort",
-            toa: "Gesch&auml;ftsbedingungen gelten."
+            toa: "Durch das Buchen akzeptiere ich die Allgemeinen Gesch&auml;ftsbedingungen."
         },
         navigation: {
             back: 'Zur&uuml;ck',
@@ -173,7 +175,8 @@ var translationsConfigObject = {
             lnrHeaderText: 'De perfekte fiets. Gewoon huren.',
             hello: 'Hallo',
             print: 'Pagina printen',
-            description: 'Beschrijving'
+            description: 'Beschrijving',
+            rent: "Huur"
         },
         tabs: {
             tabDuration: '1.&nbsp;Info',
@@ -243,7 +246,7 @@ var translationsConfigObject = {
             name: "Naam",
             lister: "Lister",
             location: "Plaats",
-            toa: "Voorwaarden zijn van toepassing"
+            toa: "Bij het boeken accepteer ik de algemene voorwaarden."
         },
         navigation: {
             back: 'Terug',
