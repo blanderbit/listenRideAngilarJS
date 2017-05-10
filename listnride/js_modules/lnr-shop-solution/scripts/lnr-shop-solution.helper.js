@@ -175,6 +175,22 @@ var helper = {
         }
     },
     /**
+     * returns the date in correct form at
+     * @param {object} paramDate date object
+     * @param {object} paramTime time object
+     * @returns {string} correct format date
+     */
+    getDateFormatted: function (paramDate, paramTime) {
+        var returnDate = '';
+        returnDate += ('0' + parseInt(paramDate.getDate() + 1)).slice(-2) + '.';
+        returnDate += ('0' + paramDate.getMonth()).slice(-2) + '.';
+        returnDate += calendar.startDate.getFullYear();
+        if (paramTime) {
+            returnDate += ', ' + ('0' + paramTime).slice(-2) + ':00'
+        }
+        return returnDate;
+    },
+    /**
      * runs whenever date-picker change event is fired
      * @param {Date} startDate start date from calendar
      * @param {Date} endDate end date from calendar
@@ -210,31 +226,18 @@ var helper = {
 
         // calendar start date
         $('[id=lnr-date-start]').each(function (index, element) {
-            $(element).html('from ' + calendar.startDate.getDate() +
-                '.' + calendar.startDate.getMonth() +
-                '.' + calendar.startDate.getFullYear());
+            $(element).html('from ' + helper.getDateFormatted(calendar.startDate));
         });
 
-        $('.rental-info-from').text(calendar.startDate.getDate() + '.' +
-            calendar.startDate.getMonth() + '.' +
-            calendar.startDate.getFullYear() + ', ' +
-            calendar.startTime + ':00'
-        );
-
-        $('.rental-info-to').text(calendar.endDate.getDate() + '.' +
-            calendar.endDate.getMonth() + '.' +
-            calendar.endDate.getFullYear() + ', ' +
-            calendar.endTime + ':00'
-        );
+        $('.rental-info-from').text(helper.getDateFormatted(calendar.startDate, calendar.startTime));
+        $('.rental-info-to').text(helper.getDateFormatted(calendar.endDate, calendar.endTime));
 
         $('#lnr-date-start-button').attr("title", "");
         $('#lnr-date-end-button').attr("title", "");
 
         // calendar end date
         $('[id=lnr-date-end]').each(function (index, element) {
-            $(element).html('to ' + calendar.endDate.getDate() +
-                '.' + calendar.endDate.getMonth() +
-                '.' + calendar.endDate.getFullYear());
+            $(element).html('to ' + helper.getDateFormatted(calendar.endDate));
         });
     },
     /**
