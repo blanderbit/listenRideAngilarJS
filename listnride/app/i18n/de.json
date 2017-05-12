@@ -941,13 +941,13 @@
       "faq-answer-9": "Ja. Unsere Fahrräder sind in der Lage eine Höchstgeschwindigkeit von 35km/h zu erreichen, sind aber standardmäßig nach EN15194 auf die Höchstgeschwindigkeit von 25 km/h begrenzt. Das bedeutet, dass der Motor nur bis zu 25km/h unterstützt. Du kannst diese Einstellungen über unsere Smartphone-App ändern."
     },
     "brompton": {
-      "title": "Fahr mal Brompton",
+      "title": "#FAHRMALBROMPTON",
       "description": "Miete ein Brompton und teste seine hervorragenden Fahr- und Falteigenschaften.",
       "subdescription": "Erlebe Deutschlands Städte neu – mit einem Rad perfekt für die Stadt.",
       "item1-title": "Kostenlos mitnehmbar",
       "item1-description": "Kostenlose Mitnahme in öffentlichem Nah- und Fernverkehr (u. U. Verstauen in Tasche/Überwurf erforderlich)",
       "item2-title": "Einzigartiger Faltmechanismus",
-      "item2-description": "Falten in 10–20 Sekunden<br>Faltmaß (HxBxT): 59cm x 57cm x 27cm<br>Leicht tragbar (9- 13 kg) schwer",
+      "item2-description": "Falten in 10–20 Sekunden<br>Faltmaß (HxBxT): 59cm x 57cm x 27cm<br>Handlich zu tragen (nur ca. 9-13 kg)",
       "item3-title": "Londoner Kult-Rad",
       "item3-description": "Top Fahreigenschaften<br>Englischer Style<br>Handgefertigt in London",
       "find-out-more": "Erfahre mehr über Brompton",
@@ -963,7 +963,7 @@
       "faq-question-5": "Welche Schaltungsvarianten gibt es?",
       "faq-answer-5": "Es gibt vier Übersetzungsoptionen (1-Gang, 2-Gang, 3-Gang und 6-Gang). Vom Anfänger bis zum geübten Bergfahrer – für jeden findet sich die geeignete Schaltung.",
       "faq-question-6": "Wie funktioniert der Faltmechanismus?",
-      "faq-answer-6": "Das Brompton hat 3 Faltachsen, eine für die beiden Räder und noch eine für die Lenkstange. Sie sind durch einfach zu bedienende Drehverschlüsse gesichert. Dabei liegt nach dem Falten die Kette und Gangschaltung im Inneren, sodass sie nicht in Berührung mit Kleidung und Gepäck kommen können. <a href=\"http://de.brompton.com/The-Bike/How-it-works\" target=\"_blank\">(Video)</a>"
+      "faq-answer-6": "Das Brompton hat 3 Faltachsen, eine für die beiden Räder und noch eine für das Steuerrohr. Sie sind durch einfach zu bedienende Drehverschlüsse gesichert. Dabei liegt nach dem Falten die Kette und Gangschaltung im Inneren, sodass sie nicht in Berührung mit Kleidung und Gepäck kommen können. <a href=\"http://de.brompton.com/The-Bike/How-it-works\" target=\"_blank\">(Video)</a>"
     },
     "muli": {
       "title": "Konzipiert für den städtischen Alltag",
