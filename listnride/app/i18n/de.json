@@ -990,12 +990,12 @@
     "subsubsubheader": "{{ name }} hat dich eingeladen. Wenn du dich anmeldest, erhälst du einen Gutschein der deinem Konto hinterlegt wird. Du kannst diesen für die nächste Radmiete einsetzen.",
     "sign-up-get-voucher": "Registrieren und Gutschein erhalten",
     "how-lnr-works": "Bike-Sharing völlig unkompliziert",
-    "explanation-1-title": "1. Find and request",
-    "explanation-1-description": "Find the perfect bike near you and request it.",
-    "explanation-2-title": "2. Book and pick up",
-    "explanation-2-description": "Book the bike and meet the lister to pick it up.",
-    "explanation-3-title": "3. Enjoy the ride",
-    "explanation-3-description": "Have a great time with the bike."
+    "explanation-1-title": "1. Finden und Anfragen",
+    "explanation-1-description": "Finde das perfekte Rad in deiner Nähe und frage es an.",
+    "explanation-2-title": "2. Buchen und abholen",
+    "explanation-2-description": "Buche das Rad und triff dich mit dem Vermieter um es abzuholen",
+    "explanation-3-title": "3. Genieß die Fahrt",
+    "explanation-3-description": "Genieße die Zeit mit dem Fahrrad."
   },
 
   "how-to-shoot-bike-photo" : {
