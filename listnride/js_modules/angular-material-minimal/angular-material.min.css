@@ -2663,10 +2663,10 @@ md-menu-content {
   -webkit-flex-direction: column;
           flex-direction: column;
   padding: 8px 0;
-  max-height: 244px;
+  max-height: 310px;
   overflow-y: auto; }
   md-menu-content.md-dense {
-    max-height: 244px; }
+    max-height: 310px; }
     md-menu-content.md-dense md-menu-item {
       height: 38px;
       min-height: 0px; }
