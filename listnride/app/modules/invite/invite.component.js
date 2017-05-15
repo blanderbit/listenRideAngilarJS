@@ -27,7 +27,7 @@ angular.module('invite',[]).component('invite', {
         Socialshare.share({
           'provider': 'facebook',
           'attrs': {
-            'socialshareUrl': invite.inviteUrl,
+            'socialshareUrl': invite.inviteUrl
           }
         });
       };
@@ -46,7 +46,8 @@ angular.module('invite',[]).component('invite', {
       };   
 
       api.get("/users/" + $localStorage.userId + "/overview ").then(function(response) {
-        invite.invitedFriends = response.data;
+        invite.invitedFriends = response.data.friends;
+        invite.inviteUrl = api.getWebappUrl() + "/invitation/" + response.data.author.ref_code;
         var activeFriends = invite.invitedFriends.filter(function(invitation) {
           return invitation.status == 2 || invitation.status == 3;
         });
