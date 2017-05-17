@@ -53,8 +53,9 @@ angular.module('listnride', [
   'slickCarousel',
   'angulartics',
   'angulartics.google.analytics',
-  'angularMoment',
-  '720kb.socialshare'
+  'angulartics.facebook.pixel',
+  '720kb.socialshare',
+  'angularMoment'
 ])
 .config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider', 'ENV',
   function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider, ENV) {

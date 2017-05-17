@@ -98,6 +98,7 @@ angular.module('bike').component('calendar', {
               );
             }
             else {
+              calendar.requested = false;
               verification.openDialog(false);
             }
           },

@@ -15,7 +15,7 @@ angular.
         case 21: return $translate.instant('list.subcategory.2.triathlon'); break;
         case 22: return $translate.instant('list.subcategory.2.indoor'); break;
 
-        case 30: return $translate.instant('list.subcategory.3.trecking'); break;
+        case 30: return $translate.instant('list.subcategory.3.tracking'); break;
         case 31: return $translate.instant('list.subcategory.3.enduro'); break;
         case 32: return $translate.instant('list.subcategory.3.freeride'); break;
         case 33: return $translate.instant('list.subcategory.3.cross-country'); break;
