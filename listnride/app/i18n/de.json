@@ -1018,16 +1018,16 @@
   "invite": {
     "meta-title": "listnride Gutscheincodes - Lade deine Freunde ein",
     "meta-description": "Lade deine Freunde per E-Mail ein, oder teilen Sie Ihren Empfehlungscode auf Facebook.",
-    "title": "Freunde einladen und Freifahrten verdienen",
+    "title": "Freunde einladen und 10€ verdienen",
     "info-section": {
-      "header": "Erhalte 10€ Guthaben, wenn ein Freund ein Rad bei listnride leiht oder verleiht.",
-      "subheader": "Du bist begeistert von listnride und findest, dass sich auch Deine Freunde ein schönes Rad leihen sollten? Dann lade sie jetzt ein mitzumachen und Teil der listnride Community zu werden.",
+      "header": "Erhalte 10€ Guthaben für dein nächstes Mietrad, wenn einer deiner Freunde ein Rad bei listnride leiht oder verleiht.",
+      "subheader": "Du bist begeistert von listnride und findest, dass auch deine Freunde ein schönes Rad leihen sollten? Lade Sie ein Teil der Bikesharing Community zu werden!",
       "invite-friends": "Freunde einladen",
       "community": "Teil der Community werden",
       "earn-credit": "Belohnung erhalten"
     },
     "invite-form": {
-      "header": "Teile deinen Link",
+      "header": "Teile deinen persönlichen Link",
       "subheader": "Sende diesen Link an deine Freunde, um den Gutschein zu erhalten.",
       "copy": "Kopieren"
     },
