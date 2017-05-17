@@ -16,13 +16,14 @@ angular.module('requests', []).component('requests', {
     '$state',
     '$stateParams',
     '$translate',
+    '$mdToast',
     'date',
     'accessControl',
     'ENV',
     function RequestsController($localStorage, $interval, $filter,
       $mdMedia, $mdDialog, $window, api,
       $timeout, $location, $anchorScroll,
-      $state, $stateParams, $translate, date,
+      $state, $stateParams, $translate, $mdToast, date,
       accessControl, ENV) {
       if (accessControl.requireLogin()) {
         return;
