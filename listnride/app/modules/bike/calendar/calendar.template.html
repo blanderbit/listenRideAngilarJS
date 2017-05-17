@@ -2,18 +2,21 @@
 
 
 
-<!--        EVENT CALENDAR 1        -->
-<div layout="column" layout-margin ng-if="calendar.bikeFamily == calendar.event.familyId">
-  <p class="md-headline lnr-center">CWD Calendar</p>
-  <p class="md-body-1 lnr-center">During the Cycling World Düsseldorf, you can test ride a great variety of high end bikes. Just select which day and time you want to rent it. All rentals up to 4 hours are free!</p>
+<!--        EVENT CALENDAR PICKUP+RETURN        -->
+<!-- <div layout="column" layout-margin ng-if="calendar.bikeFamily == calendar.event.familyId">
+  <p class="md-headline lnr-center">E-Bike Days Calendar</p>
+  <p class="md-body-1 lnr-center">During the E-Bike Days, you can test ride a great variety of high end e-bikes. Just select which day and time you want to rent it. All rentals are free!</p>
   <md-input-container class="md-block">
     <label>1. Select the Rental Day</label>
     <md-select ng-model="calendar.day">
-      <md-option value="25">
-        Saturday, 25th of Mar
+      <md-option value="19">
+        Friday, 19th of May
       </md-option>
-      <md-option value="26">
-        Sunday, 26th of Mar
+      <md-option value="20">
+        Saturday, 20th of May
+      </md-option>
+      <md-option value="20">
+        Sunday, 21th of May
       </md-option>
     </md-select>
   </md-input-container>
@@ -34,6 +37,57 @@
   </md-input-container>
 
   <md-input-container class="md-block">
+    <label>3. Select return time</label>
+    <md-select ng-model="calendar.event.returnSlotId" ng-change="calendar.event.changeReturnSlot()">
+
+      <md-option ng-if="!calendar.day">
+        Please select a pickup time first
+      </md-option>
+
+      <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.returnDisabled" ng-if="calendar.day == slot.day" value="{{$index}}">
+        {{slot.text}}
+      </md-option>
+    
+    </md-select>
+  </md-input-container>
+</div> -->
+<!--      END EVENT CALENDAR        -->
+
+<!--        EVENT CALENDAR FIXED SLOT        -->
+<div layout="column" layout-margin ng-if="calendar.bikeFamily == calendar.event.familyId">
+  <p class="md-headline lnr-center">E-Bike Days Calendar</p>
+  <p class="md-body-1 lnr-center">During the E-Bike Days, you can test ride a great variety of high end e-bikes. Just select which day and time you want to rent it, all 1 hour rentals are free!</p>
+  <md-input-container class="md-block">
+    <label>1. Select the Rental Day</label>
+    <md-select ng-model="calendar.day">
+      <md-option value="19">
+        Friday, 19th of May
+      </md-option>
+      <md-option value="20">
+        Saturday, 20th of May
+      </md-option>
+      <md-option value="21">
+        Sunday, 21th of May
+      </md-option>
+    </md-select>
+  </md-input-container>
+  
+  <md-input-container class="md-block">
+    <label>2. Select Rental Slot</label>
+    <md-select ng-model="calendar.event.pickupSlotId" ng-change="calendar.event.changePickupSlot()">
+
+      <md-option ng-if="!calendar.day">
+        Please select a day first
+      </md-option>
+
+      <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.reserved" ng-if="calendar.day == slot.day && slot.pickupEnabled" value="{{$index}}">
+        {{slot.text}}
+      </md-option>
+    
+    </md-select>
+  </md-input-container>
+
+  <md-input-container class="md-block" ng-hide="true">
     <label>3. Select return time</label>
     <md-select ng-model="calendar.event.returnSlotId" ng-change="calendar.event.changeReturnSlot()">
 
