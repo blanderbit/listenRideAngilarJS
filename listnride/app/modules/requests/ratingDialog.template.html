@@ -18,6 +18,7 @@
     <div class="md-dialog-content" layout="column">
       <h3 class="md-subhead lnr-center">How did you like the overall experience?</h3>
       <span class="md-body-1 lnr-center">{{ 'requests.ratings.description' | translate }}</span>
+      <br>
       <div layout="column" layout-align="center center">
         <input-stars max="5" ng-model="ratingDialog.rating"></input-stars>
         <span class="md-body-2 lnr-center" translate="requests.ratings.{{ratingDialog.rating}}"></span>
@@ -28,7 +29,7 @@
           <md-input-container class="md-input-container-compact">
             <textarea name="message" placeholder="{{ 'requests.ratings.rating_text_lister' | translate }}" ng-model="ratingDialog.message" md-maxlength="800" minlength="60" required rows="3" md-select-on-focus></textarea>
             <div ng-messages="ratingDialog.ratingForm.message.$error" role="alert">
-              <div ng-message="required">This is required.</div>
+              <div ng-message="required">This is required.{{ratingDialog.request.ride.family}}</div>
               <div ng-message="minlength">Please write a few more words (min. 60 words)</div>
             </div>
           </md-input-container>

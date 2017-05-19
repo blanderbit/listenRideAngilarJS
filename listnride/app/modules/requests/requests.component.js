@@ -432,6 +432,7 @@ angular.module('requests', []).component('requests', {
         var ratingDialog = this;
 
         ratingDialog.rating = 5;
+        ratingDialog.request = requests.request;
 
         ratingDialog.rate = function () {
           var data = {
