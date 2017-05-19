@@ -80,7 +80,9 @@
     "Nov": "Nov",
     "Dec": "Dec",
     "testimonials-header": "What are people saying?",
-    "balance": "Balance"
+    "balance": "Balance",
+    "tac": "Terms and Conditions",
+    "booking-accept-tac": "By booking I accept the"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",

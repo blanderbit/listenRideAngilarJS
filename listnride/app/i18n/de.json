@@ -80,7 +80,9 @@
     "Nov": "Nov",
     "Dec": "Dez",
     "testimonials-header": "Was die Leute sagen",
-    "balance": "Guthaben"
+    "balance": "Guthaben",
+    "tac": "Allgemeinen Geschäftsbedingungen",
+    "booking-accept-tac": "Durch Buchen bestätige ich die"
   },
 
   "toasts": {

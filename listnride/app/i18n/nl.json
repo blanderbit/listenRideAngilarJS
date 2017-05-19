@@ -80,7 +80,9 @@
     "Nov": "Nov",
     "Dec": "Dec",
     "testimonials-header": "Wat zeggen onze gebruikers?",
-    "balance": "Saldo"
+    "balance": "Saldo",
+    "tac": "algemene voorwaarden",
+    "booking-accept-tac": "Bij het bevestigen van de boeking accepteer ik de"
   },
 
   "toasts": {
