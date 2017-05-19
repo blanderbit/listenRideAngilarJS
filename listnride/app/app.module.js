@@ -57,8 +57,8 @@ angular.module('listnride', [
   '720kb.socialshare',
   'angularMoment'
 ])
-.config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider', 'ENV',
-  function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider, ENV) {
+.config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider', 'ENV', 'socialshareConfProvider',
+  function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider, ENV, socialshareConfProvider) {
     $mdAriaProvider.disableWarnings();
 
     ezfbProvider.setInitParams({
@@ -68,6 +68,17 @@ angular.module('listnride', [
       // https://developers.facebook.com/docs/javascript/reference/FB.init
       version: 'v2.8'
     });
+
+    socialshareConfProvider.configure([
+    {
+      'provider': 'facebook',
+      'conf': {
+        'trigger': 'click',
+        'popupHeight': 800,
+        'popupWidth' : 400
+      }
+    }
+    ]);
 
     // cause to fail the route reload
     // when you are some route like /renting-a-bike or any

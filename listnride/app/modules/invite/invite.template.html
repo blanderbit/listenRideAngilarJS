@@ -49,11 +49,12 @@
           <md-input-container flex="75">
             <input id="linkContainer" type="text" ng-readonly="true" ng-model="invite.inviteUrl">
           </md-input-container>
-          <md-button class="md-raised md-primary" flex="25" ng-click="invite.copyToClipboard()">{{ 'invite.invite-form.copy' | translate }}</md-button>
+          <md-button class="md-raised md-primary" flex="25" ng-click="invite.copyToClipboard()">{{ invite.buttonLabel }}</md-button>
         </div>
       </div>
     </div>
   </div>
+  <br>
   <!-- end invitation form -->
 
   <!-- referral responses -->

@@ -1025,7 +1025,8 @@
     "invite-form": {
       "header": "Share your link",
       "subheader": "Send this link to your friends and they can activate the voucher.",
-      "copy": "Copy"
+      "copy": "Copy",
+      "copied": "Copied!"
     },
     "invitations": {
       "header": "Your friends have earned you {{ credit }}€",

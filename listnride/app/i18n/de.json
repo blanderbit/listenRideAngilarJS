@@ -1016,9 +1016,9 @@
   },
 
   "invite": {
-    "meta-title": "listnride Gutscheincodes - Lade deine Freunde ein",
-    "meta-description": "Lade deine Freunde per E-Mail ein, oder teilen Sie Ihren Empfehlungscode auf Facebook.",
-    "title": "Freunde einladen und 10€ verdienen",
+    "meta-title": "listnride | Lade deine Freunde ein",
+    "meta-description": "Lade deine Freunde über Facebook oder E-Mail zu listnride ein und schenke ihnen 10€ und verdiene 10€ sobald Sie ein Fahrrad mieten oder vermieten.",
+    "title": "Lade Freunde ein und verdiene 10€",
     "info-section": {
       "header": "Erhalte 10€ Guthaben für dein nächstes Mietrad, wenn einer deiner Freunde ein Rad bei listnride leiht oder verleiht.",
       "subheader": "Du bist begeistert von listnride und findest, dass auch deine Freunde ein schönes Rad leihen sollten? Lade Sie ein Teil der Bikesharing Community zu werden!",
@@ -1028,8 +1028,9 @@
     },
     "invite-form": {
       "header": "Teile deinen persönlichen Link",
-      "subheader": "Sende diesen Link an deine Freunde, um den Gutschein zu erhalten.",
-      "copy": "Kopieren"
+      "subheader": "Sende diesen Link an deine Freunde und erhalte 10€ wenn sie ein Fahrrad mieten oder vermieten",
+      "copy": "Kopieren",
+      "copied": "Kopiert!"
     },
     "invitations": {
       "header": "Du hast {{credit}}€ durch deine Freunde erhalten",
@@ -1040,8 +1041,8 @@
       }
     },
     "share": {
-      "email-subject": "{{full_name}} hat dir 10€ Guthaben auf listnride gesendet",
-      "email-body": "Hallo,%0Aich bin bereits zufriedener listnride Nutzer und lade dich ein, Teil der wachsenden listnride Community zu werden.%0A%0Alistnride ist eine Community, die passionierte Radfahrer zusammen bringt, um online und via App das eigene Bike zu vermieten oder genau das Fahrrad für den individuellen Zweck und Stil auszuleihen.%0A%0ADas perfekte Rad. Einfach mieten.%0A%0ARegistriere dich jetzt über meinen persönlichen Code und erhalte 10€ Guthaben.%0A{{voucher_url}}"
+      "email-subject": "{{full_name}} hat dich zu listnride eingeladen!",
+      "email-body": "{{first_name}} hat dir 10€ für dein erstes Abenteuer auf einem Fahrrad deiner Wahl geschenkt!%0AWerde auch du Teil von listnride, der schnell wachsenden Bikesharing Community und erhalte Zugriff auf unzählige Fahrräder für jeden erdenklichen Zweck!%0A%0A{{first_name}} sei dank, erhälst du sofort 10€ Startguthaben, sobald du dich registrierst.%0ADu möchtest dich bei {{first_name}} bedanken?%0AMiete ein Rad oder biete deins zum Verleih an und auch {{first_name}} erhält 10€ Guthaben :).%0A%0AViel Spaß, wir sehen uns auf der Straße."
     }
   }
 }

@@ -17,17 +17,23 @@ angular.module('invite',[]).component('invite', {
 
       var invite = this;
       invite.inviteUrl = api.getWebappUrl() + "/invitation/" + $localStorage.referenceCode;
+      invite.buttonLabel = $translate.instant('invite.invite-form.copy');
 
       invite.copyToClipboard = function() {
         document.getElementById("linkContainer").select();
         document.execCommand('copy');
+        invite.buttonLabel = $translate.instant('invite.invite-form.copied');
       };
 
       invite.shareThroughFacebook = function() {
         Socialshare.share({
           'provider': 'facebook',
           'attrs': {
-            'socialshareUrl': invite.inviteUrl
+            'socialshareUrl': invite.inviteUrl,
+            'socialshareTitle': "testtitel",
+            'socialshareDescription': "Description",
+            'socialsharePopupHeight': 600,
+            'socialsharePopupWidth': 400
           }
         });
       };
@@ -35,9 +41,10 @@ angular.module('invite',[]).component('invite', {
       invite.shareThroughEmail = function() {
         var userFullName = $localStorage.name;
         var voucherUrl = invite.inviteUrl;
+        var firstName = $localStorage.firstName;
         $translate(
           ["invite.share.email-subject", "invite.share.email-body"],
-          {full_name: userFullName, voucher_url: voucherUrl})
+          {full_name: userFullName, voucher_url: voucherUrl, first_name: firstName})
           .then(function (translations) {
             var subject = translations["invite.share.email-subject"];
             var body = translations["invite.share.email-body"];
