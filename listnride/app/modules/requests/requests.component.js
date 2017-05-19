@@ -345,23 +345,29 @@ angular.module('requests', []).component('requests', {
       var BookingDialogController = function () {
         var bookingDialog = this;
         bookingDialog.requests = requests;
+        bookingDialog.errors = {};
+        bookingDialog.in_process = false;
         bookingDialog.duration = date.duration(requests.request.start_date, requests.request.end_date);
 
         bookingDialog.hide = hideDialog;
 
         bookingDialog.book = function () {
+          bookingDialog.in_process = true;
           var data = {
             "request": {
               "status": 3
             }
           };
-          bookingDialog.hide();
           requests.loadingChat = true;
           api.put("/requests/" + requests.request.id, data).then(
-            function () {
+            function (response) {
+              bookingDialog.in_process = false;
+              bookingDialog.hide();
               reloadRequest(requests.request.id);
             },
-            function () {
+            function (error) {
+              bookingDialog.in_process = false;
+              bookingDialog.errors = error.data.errors;
               reloadRequest(requests.request.id);
             }
           );

@@ -16,6 +16,20 @@
 
   <md-dialog-content layout="column">
     <div class="md-dialog-content" layout="column">
+
+      <div ng-style="{'display': bookingDialog.errors[0] == undefined ? 'none' : ''}" class="text-error">
+        <p class="md-subhead">
+          <md-icon md-font-icon="fa-exclamation-triangle" class="lnr-icn-sm md-color-disabled lnr-margin-right fa"></md-icon>
+          {{ 'requests.booking-failed' | translate }}
+        </p>
+        <ul>
+          <div ng-repeat="error in bookingDialog.errors" class="text-error">
+            <li>{{error.detail}}</li>
+          </div>
+        </ul>
+        <br>
+      </div>
+
       <h3 class="md-title">{{ 'requests.booking' | translate }}</h3>
       <div layout="row" layout-align="space-between center">
         <span class="md-body-2">{{ 'shared.from' | translate }}</span>
@@ -54,9 +68,25 @@
       <p class="md-caption lnr-center">By booking I accept the Terms and Conditions</p >
 
       <div class="md-dialog-buttons" layout="row" layout-align="space-between center">
-        <md-button class="md-lined md-warn" ng-click="bookingDialog.hide()" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="cancel booking">{{ 'shared.cancel' | translate }}</md-button>
+        <md-button
+          class="md-lined md-warn"
+          ng-click="bookingDialog.hide()"
+          analytics-on analytics-category="button"
+          analytics-event="clicked"
+          ng-disabled="bookingDialog.in_process"
+          analytics-label="cancel booking">
+          {{ 'shared.cancel' | translate }}
+        </md-button>
         <span flex></span>
-        <md-button class="md-raised md-primary" ng-click="bookingDialog.book()" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="request booking">{{ 'requests.book' | translate }}</md-button>
+        <md-button
+          class="md-raised md-primary"
+          ng-click="bookingDialog.book()"
+          analytics-on analytics-category="button"
+          analytics-event="clicked"
+          ng-disabled="bookingDialog.in_process"
+          analytics-label="request booking">
+          {{ 'requests.book' | translate }}
+        </md-button>
       </div>
     </div>
   </md-dialog-content>
