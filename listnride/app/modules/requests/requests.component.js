@@ -71,7 +71,6 @@ angular.module('requests', []).component('requests', {
 
       api.get('/users/' + $localStorage.userId + '/requests').then(
         function (success) {
-          console.log(success.data);
           requests.all_requests = $filter('orderBy')(success.data, '-created_at', false);
           requests.requests = angular.copy(requests.all_requests);
           requests.loadingList = false;
