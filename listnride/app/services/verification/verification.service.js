@@ -5,13 +5,14 @@ angular.
   factory('verification', ['$mdDialog', '$mdToast','$q', '$interval', '$localStorage', '$state', '$translate', 'api', 'Upload',
     function($mdDialog, $mdToast, $q, $interval, $localStorage, $state, $translate, api, Upload) {
 
-      var VerificationDialogController = function(lister) {
+      var VerificationDialogController = function(lister, invited) {
         var verificationDialog = this;
         var poller = $interval(function() {
           reloadUser();
         }, 5000);
 
         verificationDialog.lister = lister;
+        verificationDialog.invited = invited;
         verificationDialog.selectedIndex;
         verificationDialog.activeTab = 1;
         verificationDialog.firstName = $localStorage.firstName;
@@ -215,11 +216,12 @@ angular.
         }
       };
 
-      var openDialog = function(lister, event) {
+      var openDialog = function(lister, invited, event) {
         $mdDialog.show({
           controller: VerificationDialogController,
           locals: {
-            lister: lister
+            lister: lister,
+            invited: invited
           },
           controllerAs: 'verificationDialog',
           templateUrl: 'app/services/verification/verification.template.html',

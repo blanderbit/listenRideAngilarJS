@@ -90,6 +90,29 @@ md-grid-list md-grid-tile {
             user-select: none;
 }
 
+.spacer {
+  height: 40px;
+}
+
+.highlight-tile {
+  height: 260px;
+  padding: 24px 0;
+  border-radius: 4px;
+  border: 1px solid rgba(95, 198, 147, 0.25);
+  background-color: rgba(250,250,250,1);
+
+}
+
+.md-xlrg {
+  padding: 10px 0 !important;
+  min-width: 300px !important;
+  font-size: 16px !important;
+}
+
+md-menu-content {
+  max-height: 300px;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
@@ -171,6 +194,11 @@ autocomplete .md-errors-spacer {
 
 .lnr-center {
   text-align: center;
+}
+
+.lnr-center-center {
+  text-align: center;
+  vertical-align: center;
 }
 
 .lnr-right {
@@ -343,6 +371,16 @@ autocomplete .md-errors-spacer {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   background-color: #f3f3f3;
+  background-position: center;
+  background-size: cover;
+}
+
+.lnr-profile-md-lrg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   background-position: center;
   background-size: cover;
 }
@@ -538,6 +576,23 @@ footer .lnr-link {
   height: 78vh;
   overflow: visible;
   position: relative;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* INVITE LANDING
+/*-----------------------------------------------------------------------------------*/
+
+#invite-signup {
+  height: 160px;
+  padding: 24px 0;
+  background-size: cover;
+  background-position: 15% 40%;
+  /*background-image: url(../ui_images/static/lnr_listabike.jpg);*/
+  background-color: #666666;
+}
+
+.highlight-tile button {
+  margin-bottom: -30px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -1507,6 +1562,26 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
   color: rgb(95,198,147);
   padding: unset;
   margin: unset;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  Invitations
+/*-----------------------------------------------------------------------------------*/
+
+invite #inviteForm .invite-form-container {
+  height: 320px;
+  padding: 24px 0;
+  border-radius: 4px;
+  border: 1px solid rgba(95, 198, 147, 0.25);
+  background-color: rgba(250,250,250,1);
+}
+
+invite .share-icon {
+  cursor: pointer;
+}
+
+invite .voucher-link {
+  margin: initial;
 }
 
 /*.lnr-billing-page .repeated-billing-items .md-button:not([disabled]):hover {*/

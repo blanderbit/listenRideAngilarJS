@@ -23,7 +23,8 @@
           <div class="tab-content" layout="column" layout-align="space-between start" md-on-select="verificationDialog.activeTab = 1">
             <div layout="column" layout-align="center center">
               <p ng-if="verificationDialog.firstTime" class="md-subhead">Hi, {{verificationDialog.firstName}}!</p>
-              <p ng-if="verificationDialog.firstTime" class="md-body-1">{{ 'verification.1.text1' | translate }}</p>
+              <p ng-if="verificationDialog.invited" class="md-body-1 lnr-center">{{ 'verification.1.text-invited' | translate }}</p>
+              <p ng-if="" class="md-body-1 lnr-center">{{ 'verification.1.text-int'}}
               <p class="md-body-1 lnr-center">{{ 'verification.1.text2' | translate }}</p>
               <p class="md-body-1 lnr-center">{{ 'verification.1.text3' | translate }}</p>
             </div>

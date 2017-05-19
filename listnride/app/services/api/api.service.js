@@ -5,6 +5,7 @@ angular.
   factory('api', ['$http', '$localStorage', 'ENV',
     function($http, $localStorage, ENV, authentication) {
       var apiUrl = ENV.apiEndpoint;
+      var webappUrl = ENV.webappUrl;
       return {
         get: function(url, type) {
           if (typeof type === 'undefined') { type = 'json'; }
@@ -42,6 +43,9 @@ angular.
         },
         getApiUrl: function() {
           return apiUrl;
+        },
+        getWebappUrl: function() {
+          return webappUrl;
         }
       }
     }

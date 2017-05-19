@@ -79,7 +79,10 @@
     "Oct": "Okt",
     "Nov": "Nov",
     "Dec": "Dec",
-    "testimonials-header": "What are people saying?"
+    "testimonials-header": "Wat zeggen onze gebruikers?",
+    "balance": "Saldo",
+    "tac": "algemene voorwaarden",
+    "booking-accept-tac": "Bij het bevestigen van de boeking accepteer ik de"
   },
 
   "toasts": {
@@ -101,6 +104,7 @@
   "settings": {
     "settings": "Instellingen",
     "profile": "Profiel",
+    "invite": "Invite Friends",
     "account": "Account",
     "availability": "Openingstijden",
     "from": "From",
@@ -136,6 +140,7 @@
     "resend-email": "Stuur e-mail opnieuw",
     "1": {
       "text1": "Welkom bij listnride!",
+      "text-invited": "You've got invited by a friend so we've put a voucher in your account which gets redeemed automatically for your first rental!",
       "text2": "Hartelijk welkom tot onze Bike-Sharing-Community met veel mooie fietsen en enthousiaste fietsliefhebbers vanuit de hele wereld. Onze community biedt een omgeving waar je jouw geliefde tweewieler zorgenloos aan anderen kan uitlenen – wederzijds vertrouwen en zekerheid voor jou en andere gebruikers staat daarom bij ons op de eerste plaats.",
       "text3": "We vragen je daarom, je profiel in een paar stappen te voltooien. Hoe beter en volledig je profielbeschrijving, des te groter de kans op aanvragen en successvolle verhuur."
     },
@@ -395,7 +400,7 @@
         "indoor": "Baanfiets"
       },
       "3": {
-        "trecking": "Trecking",
+        "tracking": "Tracking",
         "enduro": "Enduro",
         "freeride": "Freeride",
         "cross-country": "Cross Country",
@@ -613,8 +618,8 @@
       "content": "Je weet altijd meer over fietsen dan anderen? Je houdt ervan bij weer en wind op de fiets te zitten? Dan ben je waarschijnlijk een fietsfanaat – en pas je waarschijnlijk ook goed in ons team. Check of wij momenteel een interessante baan voor je hebben of stuur ons je sollicitatie toe."
     },
     "view": "Bekijk",
-    "meta-title": "Werken bij listnride",
-    "meta-description": "Join ons team en help mee aan het bouwen van een nieuwe generatie fietsverhuur.",
+    "meta-title": "Werken voor listnride",
+    "meta-description": "Wordt deel van het listnride bike sharing team in Berlijn of Munchen om te bouwen aan een wereldwijde fietscommunity",
     "apply": "Nu toepassen",
     "open": "Open Posities",
     "go-back": "Terug"
@@ -722,6 +727,8 @@
   },
 
   "terms-and-conditions": {
+    "meta-title": "listnride | Algemene Voorwaarden",
+    "meta-description": "The Terms and Conditions of the Bike-Sharing-Community listnride apply to the use of the online platform.",
     "title": "Terms and conditions",
     "header": "Algemene voorwaarden van het Online-Platform listnride",
     "download": "Hier te downloaden",
@@ -746,8 +753,8 @@
     "commercial-register-number": "Handelsregisternummer",
     "berlin-court-of-registry": "Kantongerecht Berlijn (Charlottenburg)",
     "vat-id": "BTW-Nr.",
-    "meta-title": "listnride bedrijfgegevens",
-    "meta-description": "Huur de perfecte fiets van de listnride community. Vind de fiets die bij je past of nodig hebt."
+    "meta-title": "listnride Impressum",
+    "meta-description": "Huur de perfecte fiets van de listnride community. Huur een fiets die past bij jouw stijl en behoeften."
   },
 
   "events": {
@@ -755,14 +762,14 @@
       "text": "De Rapha Super Cross is weer terug in München, voor het derde jaar op rij. Indien je er graag bij wil zijn, maar geen geschickte fiets hebt, kann je via listnride een passende fiets huren. De listnride bike sharing community biedt verschillende cyclocrossfietsen te huur aan. De fietsen kunnen voor het evenement bij de verschillende aanbieders worden aangevraagd en geboekt. De overdracht wordt direct met de verhuurder afgesproken. Indien je een fiets hebt die niet benut wordt, kan je deze gewoon aanbieden om daarmee wat geld te verdienen ein interessante mensen te leren kennen, die aan het evenement deelnemen. Sluit je aan bij de groeiende Community!"
     },
     "in-velo-veritas": {
-      "meta-title":"In Velo Veritas - Rent a bike with listnride",
-      "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country.",
+      "meta-title":"In Velo Veritas - Huur een klassieke racefiets via listnride",
+      "meta-description": "Huur de perfecte stalen vintage racefiets voor de In Velo Veritas. Listnride biedt verschillende klassieke racefietsen te huur voor de mooie tour in het Oostenrijkse Weinviertel.",
       "title": "In Velo Veritas - The vintage bicycle tour that's timeless",
       "text": "The legendary “In Velo Veritas” happens this year the 5th time at the 10th/11th June 2017 in Stockerau. For those, who want to participate but need a guideline-matching bicycle, we collected some suiting bikes of our community-members to save your day. Just rent it! Bike enthusiasts like you are offering the different bikes below. If you can’t participate, have more vintage bicycles, or just want want to meet like-minded people, you can share your bike on our platform with others! Become a part of our growing community and make some extra money with your passion!"
     },
     "velothon-bikerental": {
-      "meta-title":"Boek eenvoudig the perfekte racefiets voor de Velothon Berlijn",
-      "meta-description":"Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!",
+      "meta-title":"Boek eenvoudig the perfekte racefiets voor de Velothon in Berlijn",
+      "meta-description":"Neem deel aan de Velothon Berlin 2017! Huur een racefiets via de listnride community en geniet van de wielerkoers!",
       "title": "Boek eenvoudig the perfekte racefiets voor de Velothon Berlijn",
       "text": "We helpen je! Samen met de listnride community bieden we vele racefietsen, waarbij er zeker enige zijn die passen aan je wensen. Je kan die eenvoudig zo lang als je die nodig hebt huren. Je hoeft slechts één van de onderstaande fietsen te kiezen, aanvragen voor de gewenste periode en ophalen wanneer de tijd is gekomen. Simpel als dat. <br><br> Je kunt niet deelnemen? Help iemand in nood, een <a href=\"/#/listing-a-bike\">plaats je fiets</a> en verdien zo wat extra zakgeld!"
     },
@@ -825,8 +832,8 @@
     },
 
     "berlin": {
-      "meta-title":"Explore Berlin by bike with listnride",
-      "meta-description":"Discover Berlin by bike. With listnride, you can find a bike for rent in Berlin that matches your needs and your style.",
+      "meta-title":"Ontdek Berlin op de fiets met listnride",
+      "meta-description":"Ontdek Berlin op de fiets. Met listnride, huur je een fiets in Berlin die past bij jouw smaak en stijl.",
       "title": "Berlijn",
       "subtitle": "Berlijn op de fiets ontdekkenen",
       "description": "Huur een fiets en leer Berlijn kennen als ware je een insider.",
@@ -843,8 +850,8 @@
     },
 
     "munich": {
-      "meta-title":"Explore Munich by bike with listnride",
-      "meta-description":"Discover Munich by bike. With listnride, you can find a bike for rent in Munich that matches your needs and your style.",
+      "meta-title":"Ontdek Munchen op de fiets met listnride",
+      "meta-description":"Ontdek München op de fiets. Met listnride, huur je een fiets in München die past bij jouw smaak en stijl.",
       "title": "München",
       "subtitle": "München op de fiets ontdekken",
       "description": "Huur een fiets en leer München kennen als ware je een insider.",
@@ -861,8 +868,8 @@
     },
 
     "amsterdam": {
-      "meta-title":"Explore Amsterdam by bike with listnride",
-      "meta-description":"Discover Amsterdam by bike. With listnride, you can find a bike for rent in Amsterdam that matches your needs and your style.",
+      "meta-title":"Ontdek Amsterdam op de fiets met listnride",
+      "meta-description":"Ontdek Amsterdam op de fiets. Met listnride, huur je een fiets in Amsterdam die past bij jouw smaak en stijl.",
       "title": "Amsterdam",
       "subtitle": "Amsterdam op de fiets ontdekken",
       "description": "Huur een fiets en leer Amsterdam kennen als ware je een insider.",
@@ -879,8 +886,8 @@
     },
 
     "vienna": {
-      "meta-title":"Explore Vienna by bike with listnride",
-      "meta-description":"Discover Vienna by bike. With listnride, you can find a bike for rent in Vienna that matches your needs and your style.",
+      "meta-title":"Ontdek Wenen op de fiets met listnride",
+      "meta-description":"Ontdek Wenen op de fiets. Met listnride, huur je een fiets in Wenen die past bij jouw smaak en stijl.",
       "title": "Wenen",
       "subtitle": "Wenen op de fiets ontdekken",
       "description": "Huur een fiets en leer Wenen kennen als ware je een insider.",
@@ -903,10 +910,10 @@
       "faq": "The frequently asked questions"
     },
     "ampler": {
-      "meta-title":"E-Bike Test Ride Program",
-      "meta-descr": "Test ride an E-Bike today! Electric assist bikes from Ampler available on listnride. Rent one in Berlin, Munich, Hamburg and Vienna.",
+      "meta-title":"E-Bike Proefrit Programma",
+      "meta-descr": "Test een elektrische fiets vandaag! De elektrische fietsen van Ampler zijn nu direkt beschikbaar op listnride. Huur er één in Berlijn, München, Hamburg, Zürich of Wenen.",
       "title": "Ampler. De slimme e-bike voor het stedelijke woon-werkverkeer.",
-      "description": "Huur en testride een Ampler E-Bike in Berlijn, München, Hamburg en Wenen",
+      "description": "Huur en testride een Ampler E-Bike in Berlijn, München, Hamburg, Wenen en Zürich",
       "subdescription": "Je kan kiezen tussen de Hawk, een dynamische Single-Speed, oder de Bilberry en Pennon, de comfortabele Stadsfiets",
       "item1-title": "Handgemaakt in Estland",
       "item1-description": "Op Bestelling<br>klantspecifieke oplossingen<br>Oog voor Detail<br>Tijdloos Design",
@@ -937,6 +944,8 @@
       "faq-answer-9": "Ja. Onze fietsen zijn legaal en naar europese richtlijn EN15194 afgesteld met een maximale snelheid van 25 km/u. Op eigen verantwoording kan je de de maximale snelheid via de smartphone App op 35 km/u instellen."
     },
     "brompton": {
+      "meta-title": "Maak een proefrit met de Brompton vouwfiets via listnride",
+      "meta-description": "Test een Brompton vandaag! De vouwfietsen van Brompton zijn nu direkt beschikbaar op listnride. Huur er één in Berlijn, München, Hamburg, Düsseldorf of Frankfurt.",
       "title": "#FAHRMALBROMPTON",
       "description": "Rent a Brompton and test its excellent riding and folding characteristics.",
       "subdescription": "Experience Germany's cities different - with a bike perfect for the city.",
@@ -962,6 +971,8 @@
       "faq-answer-6": "The Brompton has 3 folding axles, one for the two wheels and one for the steering rod. They are secured by easy-to-operate rotary locks. After folding, the chain and gear shift is inside so that they can not come into contact with clothing and luggage. <a href=\"http://brompton.com/The-Bike/How-it-works\" target=\"blank\">(Video)</a>"
     },
     "muli": {
+      "meta-title": "Maak een proefrit met de Muli cargo via listnride",
+      "meta-description": "Test een Muli bakfiets vandaag! De bakfietsen van Muli Cycles zijn nu direkt beschikbaar op listnride. Huur er één in Berlijn of München.",
       "title": "Designed for daily urban life",
       "description": "Test and rent muli in Berlin or Munich",
       "subdescription": "The muli is a hybrid between a compact citybike and a big cargo-bike. This combination makes a bike that perfectly suits daily city life.",
@@ -971,6 +982,21 @@
       "find-out-more": "Questions?",
       "find-out-more-description": "Learn more about <a href=\"https://muli-cycles.de/7-shop\" target=\"_blank\">muli cycles</a> and how to buy one or check out their <a href=\"https://muli-cycles.de/content/8-faq\" target=\"_blank\">FAQ.</a>"
     }
+  },
+
+  "invite-landing" : {
+    "header": "gave you 10€ for a ride",
+    "subheader": "Welcome to listnride, the bike sharing community",
+    "subsubheader": "listnride is a community that brings together cycling enthusiasts so that they can rent out their own bikes via our website and app or rent someone else’s bike that perfectly suits their personal style and meets their needs.",
+    "subsubsubheader": "You've got invited by {{name}}. When signing up you get a voucher added to your account, which can be used for your next bike rental.",
+    "sign-up-get-voucher": "Sign up to get the Voucher",
+    "how-lnr-works": "Bike sharing without the hassle",
+    "explanation-1-title": "1. Find and request",
+    "explanation-1-description": "Find the perfect bike near you and request it.",
+    "explanation-2-title": "2. Book and pick up",
+    "explanation-2-description": "Book the bike and meet the lister to pick it up.",
+    "explanation-3-title": "3. Enjoy the ride",
+    "explanation-3-description": "Have a great time with the bike."
   },
 
   "how-to-shoot-bike-photo" : {
@@ -985,5 +1011,36 @@
     "content-3": "Show some perspective of your bicycle, so rather shoot from an angle than a frontal perspective. ",
     "headline-4": "Setting",
     "content-4": "Highlight what’s amazing. It is not required that the whole bicycle is shown on all photos, rather shoot some details, like brand name, colouring, lights, lock etc. Let pictures get the message across."
+  },
+
+  "invite": {
+    "meta-title": "listnride Voucher Codes - Invite your friends",
+    "meta-description": "Invite your friends to listnride via email, or share your referral code on Facebook.",
+    "title": "Invite friends and earn free rides",
+    "info-section": {
+      "header": "Earn 10€ credit when a friend rides or rents out his bikes.",
+      "subheader": "You are enthusiastic about listnride and find that your friends should also borrow a nice bike? Then invite them to join and become part of the listnride community.",
+      "invite-friends": "Invite friends",
+      "community": "Become part of the community",
+      "earn-credit": "Earn listnride credit"
+    },
+    "invite-form": {
+      "header": "Share your link",
+      "subheader": "Send this link to your friends and they can activate the voucher.",
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
+    "invitations": {
+      "header": "Your friends have earned you {{ credit }}€",
+      "status": {
+        "1": "Signed up but has not listed or rented a bike",
+        "2": "Signed up and rented a bike",
+        "3": "Signed up and listed a bike"
+      }
+    },
+    "share": {
+      "email-subject": "{{full_name}} just sent you 10€ on listnride",
+      "email-body": "Hello,%0AI would like to invite you to join listnride's growing community.%0A%0Alistnride is a community that brings together cycling enthusiasts so that they can rent out their own bikes via our website and app or rent someone else’s bike that perfectly suits their personal style and meets their needs.%0A%0AThe perfect bike. Simply rent it.%0A%0ASign up now through my personal code and get 10 € credit.%0A{{voucher_url}}"
+    }
   }
 }

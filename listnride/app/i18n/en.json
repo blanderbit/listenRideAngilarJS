@@ -17,7 +17,7 @@
     "vienna": "Vienna",
     "hamburg": "Hamburg",
     "dusseldorf": "Düsseldorf",
-    "zurich": "Zürich",
+    "zurich": "Zurich",
     "per": "per",
     "hour": "hour",
     "hours": "hours",
@@ -79,7 +79,10 @@
     "Oct": "Oct",
     "Nov": "Nov",
     "Dec": "Dec",
-    "testimonials-header": "What are people saying?"
+    "testimonials-header": "What are people saying?",
+    "balance": "Balance",
+    "tac": "Terms and Conditions",
+    "booking-accept-tac": "By booking I accept the"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
@@ -99,6 +102,7 @@
   "settings": {
     "settings": "Settings",
     "profile": "Profile",
+    "invite": "Invite Friends",
     "account": "Account",
     "availability": "Availability",
     "from": "From",
@@ -133,6 +137,7 @@
     "resend-email": "Resend Email",
     "1": {
       "text1": "Welcome to our passionate bike sharing community, featuring lots of bikes and bike enthusiasts all over the world.",
+      "text-invited": "You've got invited by a friend so we've put a voucher in your account which gets redeemed automatically for your first rental!",
       "text2": "We're a sharing community, so the trust and safety of you and the other users have highest priority.",
       "text3": "We therefore kindly ask you to verify your profile through a few simple steps. It'll only take you a few minutes. The better the information you enter, the higher are chances that your requests will be accepted and bikes will be requested."
     },
@@ -379,7 +384,7 @@
         "indoor": "Indoor"
       },
       "3": {
-        "trecking": "Trecking",
+        "tracking": "Tracking",
         "enduro": "Enduro",
         "freeride": "Freeride",
         "cross-country": "Cross Country",
@@ -588,8 +593,8 @@
       "content": "Do you always know more about bikes than others? Do you love jumping on the saddle and going for a ride, come rain or shine? Then you are in all likelihood a true bike aficionado – and would make a great addition to our team. Have a look to see if we currently have a vacancy that is right for you, and feel free to send us your application."
     },
     "view": "View",
-    "meta-title": "Jobs at listnride",
-    "meta-description": "Become a member of our team and promote the modern approach to renting bikes.",
+    "meta-title": "Work for listnride",
+    "meta-description": "Join the listnride bike sharing team in Berlin or Munich to build the global biking community",
     "apply": "Apply Now",
     "see-all": "See Other Jobs",
     "open": "Open Positions",
@@ -699,6 +704,8 @@
     }
   },
   "terms-and-conditions": {
+    "meta-title": "listnride | Website Terms & Conditions",
+    "meta-description": "The Terms and Conditions of the Bike-Sharing-Community listnride apply to the use of the online platform.",
     "title": "Terms and conditions",
     "header": "General Terms and Conditions of Business for the listnride Online Platform",
     "download": "Download here",
@@ -721,7 +728,7 @@
     "commercial-register-number": "Commercial Register Number",
     "berlin-court-of-registry": "Berlin Court of Registry (Charlottenburg)",
     "vat-id": "VAT ID",
-    "meta-title": "listnride Imprint",
+    "meta-title": "listnride | Imprint",
     "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
   },
   "events": {
@@ -879,7 +886,7 @@
       "meta-title":"E-Bike Test Ride Program",
       "meta-descr": "Test ride an E-Bike today! Electric assist bikes from Ampler available on listnride. Rent one in Berlin, Munich, Hamburg and Vienna.",
       "title": "Ampler. The smart electric bicycle for the urban commuter",
-      "description": "Rent and test Ampler E-Bikes in Berlin, Munich, Hamburg and Vienna",
+      "description": "Rent and test Ampler E-Bikes in Berlin, Munich, Hamburg, Vienna and Zurich",
       "subdescription": "Choose between Hawk, the dynamic single-speed or Bilberry, the comfortable city-bike",
       "item1-title": "Handmade in Estonia",
       "item1-description": "Made to order<br>Custom solutions<br>Attention to detail<br>Timeless Design",
@@ -909,6 +916,8 @@
       "faq-answer-9": "Yes. Our bikes are capable of a top speed of 35km/h but by default are limited according to EN15194 to the top speed of 25 km/h. This means that the motor will only help you up to 25km/h. You can change these settings from the smartphone app."
     },
     "brompton": {
+      "meta-title": "Rent a Brompton bike with listnride",
+      "meta-description": "Test ride a Brompton bike today! These urban folding bikes are available on listnride. Rent one in Berlin, Munich, Hamburg, Düsseldorf or Frankfurt.",
       "title": "#FAHRMALBROMPTON",
       "description": "Rent a Brompton and test its excellent riding and folding characteristics.",
       "subdescription": "Experience Germany's cities different - with a bike perfect for the city.",
@@ -934,6 +943,8 @@
       "faq-answer-6": "The Brompton has 3 folding axles, one for the two wheels and one for the steering rod. They are secured by easy-to-operate rotary locks. After folding, the chain and gear shift is inside so that they can not come into contact with clothing and luggage. <a href=\"http://brompton.com/The-Bike/How-it-works\" target=\"blank\">(Video)</a>"
     },
     "muli": {
+      "meta-title": "Rent a Muli cargo bike with listnride",
+      "meta-description": "Test ride a Muli cargo bike today! These urban cargo bikes are available on listnride. Rent one in Berlin or Munich.",
       "title": "Designed for daily urban life",
       "description": "Test and rent muli in Berlin or Munich",
       "subdescription": "The muli is a hybrid between a compact citybike and a big cargo-bike. This combination makes a bike that perfectly suits daily city life.",
@@ -943,6 +954,21 @@
       "find-out-more": "Questions?",
       "find-out-more-description": "Learn more about <a href=\"https://muli-cycles.de/7-shop\" target=\"_blank\">muli cycles</a> and how to buy one or check out their <a href=\"https://muli-cycles.de/content/8-faq\" target=\"_blank\">FAQ.</a>"
     }
+  },
+
+  "invite-landing" : {
+    "header": "gave you 10€ for a ride",
+    "subheader": "Welcome to listnride, the bike sharing community",
+    "subsubheader": "listnride is a community that brings together cycling enthusiasts so that they can rent out their own bikes via our website and app or rent someone else’s bike that perfectly suits their personal style and meets their needs.",
+    "subsubsubheader": "You've got invited by {{name}}. When signing up you get a voucher added to your account, which can be used for your next bike rental.",
+    "sign-up-get-voucher": "Sign up to get the Voucher",
+    "how-lnr-works": "Bike sharing without the hassle",
+    "explanation-1-title": "1. Find and request",
+    "explanation-1-description": "Find the perfect bike near you and request it.",
+    "explanation-2-title": "2. Book and pick up",
+    "explanation-2-description": "Book the bike and meet the lister to pick it up.",
+    "explanation-3-title": "3. Enjoy the ride",
+    "explanation-3-description": "Have a great time with the bike."
   },
 
   "how-to-shoot-bike-photo" : {
@@ -957,5 +983,36 @@
     "content-3": "Show some perspective of your bicycle, so rather shoot from an angle than a frontal perspective. Resolution matters: Take photos that are at least 1800 x 1200 pixel. When in doubt, a bigger photo is better.",
     "headline-4": "Setting",
     "content-4": "Highlight what’s amazing. It is not required that the whole bicycle is shown on all photos, rather shoot some details, like brand name, colouring, lights, lock etc. Let pictures get the message across. Take your photos in landscape format: Vertical photos won’t showcase your bicycle as well."
+  },
+
+  "invite": {
+    "meta-title": "listnride | Invite your friends",
+    "meta-description": "Give the gift of cycling! When you invite a friend to listnride, they’ll get a 10€ voucher as soon as they join. When they rent a bike or list their own, you’ll get 10€ too!",
+    "title": "Invite Friends and Earn 10€",
+    "info-section": {
+      "header": "Earn 10€ credit when a friend rents a bike or lists one of their own.",
+      "subheader": "Are you enthusiastic about listnride and want to spread the word? Then invite your friends to become part of the listnride bike sharing community.",
+      "invite-friends": "Invite friends",
+      "community": "Help grow the community",
+      "earn-credit": "Earn listnride credit"
+    },
+    "invite-form": {
+      "header": "Share your personal link",
+      "subheader": "Send this link to your friends and they can activate the voucher. You'll get rewarded with a 10€ credit as soon they list or rent a bike.",
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
+    "invitations": {
+      "header": "Your friends have earned you {{ credit }}€",
+      "status": {
+        "1": "Signed up but has not listed or rented a bike",
+        "2": "Signed up and rented a bike",
+        "3": "Signed up and listed a bike"
+      }
+    },
+    "share": {
+      "email-subject": "{{full_name}} has invited you to join listnride!",
+      "email-body": "{{first_name}} has given you 10€ for your first adventure on the bike of your choice!%0AJoin listnride, the fastest growing bike sharing community, and get access to countless bikes for every purpose imaginable!%0AWhen you sign up, you’ll immediately receive a 10€ credit.%0A%0ADo you want to thank {{first_name}}? Rent a bike or list one of your own, and {{first_name}} receives a 10€ credit, too!%0A%0AHave fun, and see you on the bike paths!%0A{{voucher_url}}"
+    }
   }
 }

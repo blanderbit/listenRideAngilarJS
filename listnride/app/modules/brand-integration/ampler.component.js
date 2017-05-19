@@ -3,11 +3,12 @@
 angular.module('ampler-integration',[]).component('ampler', {
   templateUrl: 'app/modules/brand-integration/ampler.template.html',
   controllerAs: 'ampler',
-  controller: [ '$translate', 'api',
-    function AmplerController($translate, api) {
+  controller: [ '$translate', 'api', 'ngMeta',
+    function AmplerController($translate, api, ngMeta) {
       var ampler = this;
 
-      console.log("launching ctrl");
+      ngMeta.setTitle($translate.instant("brand-integration.ampler.meta-title"));
+      ngMeta.setTag("description", $translate.instant("brand-integration.ampler.meta-descr"));
 
       ampler.currentBikes = [];
       $translate(["shared.berlin"]).then(

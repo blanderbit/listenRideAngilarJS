@@ -79,7 +79,10 @@
     "Oct": "Okt",
     "Nov": "Nov",
     "Dec": "Dez",
-    "testimonials-header": "Was die Leute sagen"
+    "testimonials-header": "Was die Leute sagen",
+    "balance": "Guthaben",
+    "tac": "Allgemeinen Geschäftsbedingungen",
+    "booking-accept-tac": "Durch Buchen bestätige ich die"
   },
 
   "toasts": {
@@ -100,6 +103,7 @@
 
   "settings": {
     "settings": "Einstellungen",
+    "invite": "Freunde einladen",
     "profile": "Profil",
     "account": "Account",
     "availability": "Verfügbarkeit",
@@ -136,6 +140,7 @@
     "resend-email": "Email erneut senden",
     "1": {
       "text1": "Willkommen bei listnride!",
+      "text-invited": "Du wurdest von einem Freund eingeladen, dein Account hat daher automatisch einen Gutschein bekommen, der bei der ersten Fahrt eingelöst wird.",
       "text2": "Herzlich willkommen in unserer Bike-Sharing-Community mit vielen tollen Bikes und begeisterten Fahrradliebhabern aus aller Welt. In unserer Community dreht sich alles darum, sein geliebtes Zweirad mit anderen zu teilen – gegenseitiges Vertrauen und Sicherheit für Dich und die anderen User stehen daher für uns an erster Stelle.",
       "text3": "Deshalb bitten wir dich, dein Profil in ein paar einfach Schritten zu verifizieren. Umso besser die eingegebenen Informationen sind, umso höher die Chance auf erfolgreiche Vermietungen."
     },
@@ -266,7 +271,7 @@
     "featured-cities-header": "Im Sattel durch den Großstadtdschungel",
     "featured-cities-subheader": "In immer mehr Metropolen gibt es den Fahrradverleih über listnride. Erste Insider-Tipps hier:",
     "list-a-bike-header": "Dein Bike ist zu schön, um rumzustehen?",
-    "list-a-bike-subheader": "Liste Dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und kurble nebenbei Dein Konto an.",
+    "list-a-bike-subheader": "Liste Dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und kurbel nebenbei Dein Konto an.",
     "meta-title": "listnride - Die Bike-Sharing-Community",
     "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie Du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
   },
@@ -395,7 +400,7 @@
         "indoor": "Bahnrad"
       },
       "3": {
-        "trecking": "Trecking",
+        "tracking": "Tracking",
         "enduro": "Enduro",
         "freeride": "Freeride",
         "cross-country": "Cross Country",
@@ -614,8 +619,8 @@
       "content": "Über Fahrräder weißt Du immer mehr als andere? Du liebst es, auch bei Wind und Wetter in die Pedale zu treten? Dann bist Du wahrscheinlich ein Fahrrad-Fanatiker – und passt schon mal gut zu unserem Team. Schau, ob wir aktuell einen passenden Job für Dich haben und schicke uns gerne Deine Bewerbung."
     },
     "view": "Anzeigen",
-    "meta-title": "Stellenangebote bei listnride",
-    "meta-description": "Werde Mitglied des Teams und treibe die zeitgemäße Art des Fahrradverleihs voran.",
+    "meta-title": "Jobs | listnride",
+    "meta-description": "Werde Teil des Teams und unterstütze die globale Fahrrad Community!",
     "apply": "Jetzt bewerben",
     "see-all": "See Other Jobs",
     "open": "Offene Positionen",
@@ -726,6 +731,8 @@
   },
 
   "terms-and-conditions" : {
+    "meta-title": "listnride | AGB",
+    "meta-description": "AGB",
     "title" : "Terms and conditions",
     "header" : "Allgemeine Geschäftsbedingungen für die Online-Plattform listnride",
     "download" : "Hier zum download",
@@ -759,14 +766,14 @@
       "text": "Der Rapha Super Cross ist wieder zurück in München, zum dritten Mal. Wenn du gerne dabei sein möchtest aber kein geeignetes Rad hast, kannst du über listnride ein Rad mieten. Die listnride bike sharing community bietet verschiedene Crossräder zum Verleih an. Die Räder können vor der Veranstaltung bei den einzelnen Anbietern angefragt und gebucht werden. Die Übergabe wird direkt mit dem Vermieter vereinbart. Zusätzlich verfügbare Räder können auch noch zur Vermietung angeboten werden, um damit etwas zu verdienen und interessante Leute zu treffen, welche an der Veranstaltung teilnehmen. Werde Teil der wachsenden Community!"
     },
     "in-velo-veritas": {
-      "meta-title":"In Velo Veritas - Rent a bike with listnride",
-      "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country.",
+      "meta-title":"Klassikerausfahrt: In Velo Veritas mit listnride",
+      "meta-description": "Miete dir ein klassisches Stahl Rennrad für die Ausfahrt durch eines der schönsten Weinanbaugebiete Österreichs.",
       "title": "In Velo Veritas - Die zeitlos Rad-Rundfahrt",
       "text": "Die legendäre Vintage-Rennrad Tour findet nun zum 5. Mal statt. Am 10. und 11. Juni 2017 versammeln sich Fahrradliebhaber in Stockeraus (Österreich) um dort gemeinsam die Touren zu bestreiten. Für alle die gerne teilnehmen würden, allerdings kein zugelassenes Rennrad besitzen, haben wir passende Vintage-Räder von unserer Community zusammengestellt. Alle unten aufgeführten Räder entsprechen dem Reglement und Du kannst Sie einfach über listnride mieten. Falls du nicht teilnehmen kannst, vielleicht sogar mehrer Rennräder hast oder einfach einem gleichgesinnten Fahrrad Enthusiasten aushelfen möchtest: Mach mit und verleihe dein Fahrrad an Gleichgesinnte über listnride."
     },
     "velothon-bikerental": {
       "meta-title":"Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
-      "meta-description":"Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!",
+      "meta-description":"Das Rennrad Event des Jahres in Berlin! Nimm teil und miete dir das passende Rennrad!",
       "title": "Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
       "text": "Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist. <br><br> Du kannst leider nicht am Velothon teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und <a href=\"/#/listing-a-bike\">vermiete dein Rad</a>."
     },
@@ -829,8 +836,8 @@
     },
 
     "berlin": {
-      "meta-title":"Explore Berlin by bike with listnride",
-      "meta-description":"Discover Berlin by bike. With listnride, you can find a bike for rent in Berlin that matches your needs and your style.",
+      "meta-title":"Entdecke Berlin auf dem Fahrrad mit listnride",
+      "meta-description":"Erkunde Berlin auf dem Fahrrad. Wähle aus einer Vielzahl von Fahrrädern und miete das optimale Zweirad für deine Fahrradtour!",
       "title": "Berlin",
       "subtitle": "Entdecke Berlin auf dem Fahrrad mit listnride",
       "description": "Miete dir ein Rad und erkunde die Haupstadt auf eigene Faust",
@@ -847,8 +854,8 @@
     },
 
     "munich": {
-      "meta-title":"Explore Munich by bike with listnride",
-      "meta-description":"Discover Munich by bike. With listnride, you can find a bike for rent in Munich that matches your needs and your style.",
+      "meta-title":"Entdecke München auf dem Fahrrad mit listnride",
+      "meta-description":"Erkunde München auf dem Fahrrad. Wähle aus einer Vielzahl von Fahrrädern und miete das optimale Zweirad für deine Fahrradtour!",
       "title": "München",
       "subtitle": "Entdecke München auf dem Fahrrad mit listnride",
       "description": "Miete dir ein Rad und erkunde die RadlHaupstadt auf eigene Faust",
@@ -865,8 +872,8 @@
     },
 
     "amsterdam": {
-      "meta-title":"Explore Amsterdam by bike with listnride",
-      "meta-description":"Discover Amsterdam by bike. With listnride, you can find a bike for rent in Amsterdam that matches your needs and your style.",
+      "meta-title":"Entdecke Amsterdam auf dem Fahrrad mit listnride",
+      "meta-description":"Erkunde Amsterdam auf dem Fahrrad. Wähle aus einer Vielzahl von Fahrrädern und miete das optimale Zweirad für deine Fahrradtour!",
       "title": "Amsterdam",
       "subtitle": "Entdecke Amsterdam auf dem Fahrrad mit listnride",
       "description": "Miete dir ein Rad und erkunde die Haupstadt der Niederlande auf eigene Faust",
@@ -883,8 +890,8 @@
     },
 
     "vienna": {
-      "meta-title":"Explore Vienna by bike with listnride",
-      "meta-description":"Discover Vienna by bike. With listnride, you can find a bike for rent in Vienna that matches your needs and your style.",
+      "meta-title":"Entdecke Wien auf dem Fahrrad mit listnride",
+      "meta-description":"Erkunde Wien auf dem Fahrrad. Wähle aus einer Vielzahl von Fahrrädern und miete das optimale Zweirad für deine Fahrradtour!",
       "title": "Wien",
       "subtitle": "Entdecke Wien auf dem Fahrrad mit listnride",
       "description": "Miete dir ein Rad und erkunde die Haupstadt auf eigene Faust",
@@ -907,10 +914,10 @@
       "faq": "Die häufigsten Fragen"
     },
     "ampler": {
-      "meta-title":"E-Bike Test Ride Program",
-      "meta-descr": "Test ride an E-Bike today! Electric assist bikes from Ampler available on listnride. Rent one in Berlin, Munich, Hamburg and Vienna.",
+      "meta-title":"E Bike Test Programm",
+      "meta-descr": "Teste noch heute ein Ampler Bikes E-Bike! Die Elektrofahrräder stehen zum Testen in Berlin, München, Hamburg, Zürich und Wien zur Verfügung.",
       "title": "Ampler. Das smarte E-Bike für den urbanen Pendler.",
-      "description": "Miete und Teste Ampler E-Bikes in Berlin, München, Hamburg und Wien",
+      "description": "Miete und Teste Ampler E-Bikes in Berlin, München, Hamburg, Wien und Zürich",
       "subdescription": "Wähle zwischen Hawk, einem dynamischen Single-Speed, oder Bilberry, dem komfortablen City-Bike",
       "item1-title": "Handgefertigt in Estland",
       "item1-description": "Auf Bestellung<br>Kundenspezifische Lösungen<br>Aufmerksamkeit zum Detail<br>Zeitloses Design",
@@ -941,6 +948,8 @@
       "faq-answer-9": "Ja. Unsere Fahrräder sind in der Lage eine Höchstgeschwindigkeit von 35km/h zu erreichen, sind aber standardmäßig nach EN15194 auf die Höchstgeschwindigkeit von 25 km/h begrenzt. Das bedeutet, dass der Motor nur bis zu 25km/h unterstützt. Du kannst diese Einstellungen über unsere Smartphone-App ändern."
     },
     "brompton": {
+      "meta-title": "Miete das Brompton Faltrad mit listnride",
+      "meta-description": "Teste noch heute ein Brompton! Die Brompton Falträder stehen zum Testen in Berlin, München, Hamburg, Düsseldorf und Frankfurt zur Verfügung",
       "title": "#FAHRMALBROMPTON",
       "description": "Miete ein Brompton und teste seine hervorragenden Fahr- und Falteigenschaften.",
       "subdescription": "Erlebe Deutschlands Städte neu – mit einem Rad perfekt für die Stadt.",
@@ -966,15 +975,32 @@
       "faq-answer-6": "Das Brompton hat 3 Faltachsen, eine für die beiden Räder und noch eine für das Steuerrohr. Sie sind durch einfach zu bedienende Drehverschlüsse gesichert. Dabei liegt nach dem Falten die Kette und Gangschaltung im Inneren, sodass sie nicht in Berührung mit Kleidung und Gepäck kommen können. <a href=\"http://de.brompton.com/The-Bike/How-it-works\" target=\"_blank\">(Video)</a>"
     },
     "muli": {
+      "meta-title": "Miete das Muli Lastenrad mit listnride",
+      "meta-description": "Teste noch heute ein Muli Lastenrad! Die Lastenräder stehen zum Testen in Berlin und München zur Verfügung",
       "title": "Konzipiert für den städtischen Alltag",
       "description": "Teste und miete ein muli in Berlin oder München",
       "subdescription": "Das muli ist ein Hybrid aus kleinem Kompaktrad und großem Cargobike. Diese Kombination macht das muli zu einem Fahrrad, das perfekt in den städtischen Alltag passt.",
       "item1-description": "Länge <b>198cm</b><br>Gewicht <b>24kg</b><br>Gesamtzuladung <b>170kg</b><br>Höhenverstellbarer Lenker <b>10cm</b>",
-      "item2-description": "Korbbreite <b>28-60cm</b><br>Korbzuladung <b>70kg</b><br>Korbvolumen <b>90l</b><br>Eurobox Auflagen<b>40x60cm</b>",
+      "item2-description": "Korbbreite <b>28-60cm</b><br>Korbzuladung <b>70kg</b><br>Korbvolumen <b>90l</b><br>Eurobox Auflagen <b>40x60cm</b>",
       "available-cities": "In Berlin und München verfügbar",
       "find-out-more": "Du hast noch Fragen?",
       "find-out-more-description": "Erfahre mehr über <a href=\"https://muli-cycles.de/7-shop\" target=\"_blank\">muli-cycles</a> und wie du eins kaufen kannst oder schau Dir die muli <a href=\"https://muli-cycles.de/content/8-faq\" target=\"_blank\">FAQs an.</a>"
     }
+  },
+
+  "invite-landing" : {
+    "header": "hat dir 10€ für eine Fahrt geschenkt",
+    "subheader": "Willkommen bei listnride, der Bike Sharing Community",
+    "subsubheader": "listnride ist eine Community, die passionierte Radfahrer zusammen bringt, um online und via App das eigene Bike zu vermieten oder genau das Fahrrad für den individuellen Zweck und Stil auszuleihen.",
+    "subsubsubheader": "{{ name }} hat dich eingeladen. Wenn du dich anmeldest, erhälst du einen Gutschein der deinem Konto hinterlegt wird. Du kannst diesen für die nächste Radmiete einsetzen.",
+    "sign-up-get-voucher": "Registrieren und Gutschein erhalten",
+    "how-lnr-works": "Bike-Sharing völlig unkompliziert",
+    "explanation-1-title": "1. Finden und Anfragen",
+    "explanation-1-description": "Finde das perfekte Rad in deiner Nähe und frage es an.",
+    "explanation-2-title": "2. Buchen und abholen",
+    "explanation-2-description": "Buche das Rad und triff dich mit dem Vermieter um es abzuholen",
+    "explanation-3-title": "3. Genieß die Fahrt",
+    "explanation-3-description": "Genieße die Zeit mit dem Fahrrad."
   },
 
   "how-to-shoot-bike-photo" : {
@@ -989,5 +1015,36 @@
     "content-3": "Zeige verschiedene Perspektiven deines Fahrrads, mach das Foto z.B. aus einem Winkel als ausschließlich direkt von vorne. Die Auflösung ist wichtig: Nimm Fotos auf, die mindestens 1800 x 1200 Pixel groß sind. Im Zweifel ist ein größeres Foto immer besser.",
     "headline-4": "Motiv",
     "content-4": "Hebe die Besonderheiten hervor. Nicht auf allen Bildern muss das Fahrrad komplett zu sehen sein. Es ist besser, einige Detailaufnahmen zu machen, wie vom Markennamen, der Farbe, den Lichtern, Schloss etc. Bilder sagen oft mehr als Worte. Nimm deine Fotos im Querformat auf: Vertikale Bilder zeigen deine Räder nicht so gut."
+  },
+
+  "invite": {
+    "meta-title": "listnride | Lade deine Freunde ein",
+    "meta-description": "Lade deine Freunde über Facebook oder E-Mail zu listnride ein und schenke ihnen 10€ und verdiene 10€ sobald Sie ein Fahrrad mieten oder vermieten.",
+    "title": "Lade Freunde ein und verdiene 10€",
+    "info-section": {
+      "header": "Erhalte 10€ Guthaben für dein nächstes Mietrad, wenn einer deiner Freunde ein Rad bei listnride leiht oder verleiht.",
+      "subheader": "Du bist begeistert von listnride und findest, dass auch deine Freunde ein schönes Rad leihen sollten? Lade Sie ein Teil der Bikesharing Community zu werden!",
+      "invite-friends": "Freunde einladen",
+      "community": "Teil der Community werden",
+      "earn-credit": "Belohnung erhalten"
+    },
+    "invite-form": {
+      "header": "Teile deinen persönlichen Link",
+      "subheader": "Sende diesen Link an deine Freunde und erhalte 10€ wenn sie ein Fahrrad mieten oder vermieten",
+      "copy": "Kopieren",
+      "copied": "Kopiert!"
+    },
+    "invitations": {
+      "header": "Du hast {{credit}}€ durch deine Freunde erhalten",
+      "status": {
+        "1": "Registriert, noch kein Rad eingestellt oder eins geliehen",
+        "2": "Registriert und ein Rad geliehen",
+        "3": "Registriert und ein Rad eingestellt"
+      }
+    },
+    "share": {
+      "email-subject": "{{full_name}} hat dich zu listnride eingeladen!",
+      "email-body": "{{first_name}} hat dir 10€ für dein erstes Abenteuer auf einem Fahrrad deiner Wahl geschenkt!%0AWerde auch du Teil von listnride, der schnell wachsenden Bikesharing Community und erhalte Zugriff auf unzählige Fahrräder für jeden erdenklichen Zweck!%0A%0A{{first_name}} sei dank, erhälst du sofort 10€ Startguthaben, sobald du dich registrierst.%0ADu möchtest dich bei {{first_name}} bedanken?%0AMiete ein Rad oder biete deins zum Verleih an und auch {{first_name}} erhält 10€ Guthaben :).%0A%0AViel Spaß, wir sehen uns auf der Straße."
+    }
   }
 }

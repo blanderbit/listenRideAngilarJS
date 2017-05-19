@@ -297,7 +297,19 @@
       $stateProvider.state({
         name: 'terms',
         url: '/terms',
-        templateUrl: 'app/modules/static/terms.template.html'
+        templateUrl: 'app/modules/static/terms.template.html',
+          resolve: {
+              data: function ($translate, ngMeta) {
+                  $translate(["terms-and-conditions.meta-title", "terms-and-conditions.meta-description"])
+                      .then(function (translations) {
+                          ngMeta.setTitle(translations["terms-and-conditions.meta-title"]);
+                          ngMeta.setTag("description", translations["terms-and-conditions.meta-description"]);
+                      })
+              }
+          },
+          meta: {
+              disableUpdate: true
+          }
       });
 
       $stateProvider.state({
@@ -334,6 +346,18 @@
             templateUrl: 'app/modules/jobs/jobs.list.template.html',
             controller: 'JobsListController as jobs'
           }
+        },
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["jobs.meta-title", "jobs.meta-description"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["jobs.meta-title"]);
+                        ngMeta.setTag("description", translations["jobs.meta-description"]);
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
         }
       });
 
@@ -442,13 +466,37 @@
       $stateProvider.state({
         name: 'brompton',
         url: '/rent-brompton-bikes',
-        template: '<brompton></brompton>'
+        template: '<brompton></brompton>',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["brand-integration.brompton.meta-title", "brand-integration.brompton.meta-descr"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["brand-integration.brompton.meta-title"]);
+                        ngMeta.setTag("description", translations["brand-integration.brompton.meta-descr"]);
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
       });
 
       $stateProvider.state({
         name: 'muli',
         url: '/rent-muli-bikes',
-        template: '<muli></muli>'
+        template: '<muli></muli>',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["brand-integration.muli.meta-title", "brand-integration.muli.meta-descr"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["brand-integration.muli.meta-title"]);
+                        ngMeta.setTag("description", translations["brand-integration.muli.meta-descr"]);
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
       });
 
       $stateProvider.state({
@@ -533,6 +581,18 @@
         name: 'how-to-shoot-bike-photos',
         url: '/how-to-shoot-bike-photos',
         templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html'
+      });
+
+      $stateProvider.state({
+        name: 'invite',
+        url: '/invite-friends',
+        template: '<invite></invite>'
+      });
+
+      $stateProvider.state({
+        name: 'inviteLanding',
+        url: '/invitation/{inviteCode: string}',
+        template: '<invite-landing></invite-landing>'
       });
 
       $stateProvider.state('404', {
