@@ -187,6 +187,7 @@
 
   "requests": {
     "booking-overview": "Buchungsübersicht",
+    "booking-failed": "Booking failed",
     "booking": "Buchung",
     "price": "Preis",
     "book": "Buchen",
