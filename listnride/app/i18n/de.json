@@ -1019,10 +1019,10 @@
 
   "invite": {
     "meta-title": "listnride | Lade deine Freunde ein",
-    "meta-description": "Lade deine Freunde über Facebook oder E-Mail zu listnride ein und schenke ihnen 10€ und verdiene 10€ sobald Sie ein Fahrrad mieten oder vermieten.",
+    "meta-description": "Teil dein Fahrradbegeisterung mit Freunden! lade deine Freunde zum listnride ein und bekomme einen 10€ Gutschein, sobald sich einen anmeldet. Wenn sie ein Fahrrad mieten oder das Eigene zur vermieten anbietet, bekommst du 10 €!",
     "title": "Lade Freunde ein und verdiene 10€",
     "info-section": {
-      "header": "Erhalte 10€ Guthaben für dein nächstes Mietrad, wenn einer deiner Freunde ein Rad bei listnride leiht oder verleiht.",
+      "header": "Erhalte 10€ Guthaben, wenn einer deiner Freunde ein Rad bei listnride leiht oder ein Rad anbietet.",
       "subheader": "Du bist begeistert von listnride und findest, dass auch deine Freunde ein schönes Rad leihen sollten? Lade Sie ein Teil der Bikesharing Community zu werden!",
       "invite-friends": "Freunde einladen",
       "community": "Teil der Community werden",
@@ -1044,7 +1044,7 @@
     },
     "share": {
       "email-subject": "{{full_name}} hat dich zu listnride eingeladen!",
-      "email-body": "{{first_name}} hat dir 10€ für dein erstes Abenteuer auf einem Fahrrad deiner Wahl geschenkt!%0AWerde auch du Teil von listnride, der schnell wachsenden Bikesharing Community und erhalte Zugriff auf unzählige Fahrräder für jeden erdenklichen Zweck!%0A%0A{{first_name}} sei dank, erhälst du sofort 10€ Startguthaben, sobald du dich registrierst.%0ADu möchtest dich bei {{first_name}} bedanken?%0AMiete ein Rad oder biete deins zum Verleih an und auch {{first_name}} erhält 10€ Guthaben :).%0A%0AViel Spaß, wir sehen uns auf der Straße."
+      "email-body": "{{first_name}} hat dir 10€ für dein erstes Abenteuer auf einem Fahrrad deiner Wahl geschenkt!%0AWerde auch du Teil von listnride, der schnellstwachsenden Bikesharing Community und erhalte Zugriff auf unzählige Fahrräder für jeden erdenklichen Zweck!%0A%0A{{first_name}} sei dank, erhältst du sofort 10€ Startguthaben, sobald du dich registrierst.%0ADu möchtest dich bei {{first_name}} bedanken?%0AMiete ein Rad oder biete deins zum Verleih an und auch {{first_name}} erhält 10€ Guthaben :).%0A%0AViel Spaß und Fahrvergnügen."
     }
   }
 }

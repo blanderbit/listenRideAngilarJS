@@ -1015,18 +1015,18 @@
 
   "invite": {
     "meta-title": "listnride Voucher Codes - Invite your friends",
-    "meta-description": "Invite your friends to listnride via email, or share your referral code on Facebook.",
-    "title": "Invite friends and earn free rides",
+    "meta-description": "Deel het geschenk van het fietsen! nodig je vrienden uit, en schenk ze 10 euro tegoed bij aanmelding. Als zij en fiets huren of een fiets plaatsen, ontvangt u ook een 10 euro tegoed!",
+    "title": "Nodig vrieden uit en verdien 10€",
     "info-section": {
-      "header": "Earn 10€ credit when a friend rides or rents out his bikes.",
-      "subheader": "You are enthusiastic about listnride and find that your friends should also borrow a nice bike? Then invite them to join and become part of the listnride community.",
-      "invite-friends": "Invite friends",
-      "community": "Become part of the community",
-      "earn-credit": "Earn listnride credit"
+      "header": "Ontvang 10€ tegoed, als één vriend een fiets huurt of zijn fiets aanbiedt op listnride.",
+      "subheader": "Ben je een fan van bike sharing en de listnride service? nodig dan je vrienden uit om deel uit te maken van onze community.",
+      "invite-friends": "Vrienden uitnodigen",
+      "community": "Wordt deel van de community",
+      "earn-credit": "Ontvang listnride toegoed"
     },
     "invite-form": {
-      "header": "Share your link",
-      "subheader": "Send this link to your friends and they can activate the voucher.",
+      "header": "Deel jouw persoonlijke link",
+      "subheader": "Stuur deze link aan je vrienden en ontvang 10€ tegoed na een eerste aktiviteit.",
       "copy": "Copy",
       "copied": "Copied!"
     },
@@ -1039,8 +1039,8 @@
       }
     },
     "share": {
-      "email-subject": "{{full_name}} just sent you 10€ on listnride",
-      "email-body": "Hello,%0AI would like to invite you to join listnride's growing community.%0A%0Alistnride is a community that brings together cycling enthusiasts so that they can rent out their own bikes via our website and app or rent someone else’s bike that perfectly suits their personal style and meets their needs.%0A%0AThe perfect bike. Simply rent it.%0A%0ASign up now through my personal code and get 10 € credit.%0A{{voucher_url}}"
+      "email-subject": "{{full_name}} nodigt je uit om je bij listnride aan te melden!",
+      "email-body": "{{first_name}} heeft jou 10€ tegoed geschenkt voor je eerste fietsavontuur naar keuze!%0A%0AMeld je nu aan bij listnride, de snelst groeiende bikesharing community, en krijg toegang tot talloze verschillende fietsen!%0AMeld je aan en ontvangt onmiddellijk een 10 € toegoed.%0AWil je {{first_name}} bedanken? Op het moment dat je een fiets huurt of je eigen fiets aanbied, ontvangt {{first_name}} ook een 10€ tegoed!%0A%0AVeel plezier en geniet van het fietsen!%0A{{voucher_url}}"
     }
   }
 }

@@ -1012,7 +1012,7 @@
     },
     "share": {
       "email-subject": "{{full_name}} has invited you to join listnride!",
-      "email-body": "{{first_name}} has given you 10€ for your first adventure on the bike of your choice!%0AJoin listnride, the fastest growing bike sharing community, and get access to countless bikes for every purpose imaginable!%0AWhen you sign up, you’ll immediately receive a 10€ credit.%0A%0ADo you want to thank {{first_name}}? Rent a bike or list one of your own, and {{first_name}} receives a 10€ credit, too!%0A%0AHave fun, and see you on the bike paths!%0A{{voucher_url}}"
+      "email-body": "{{first_name}} has given you 10€ for your first adventure on the bike of your choice!%0AJoin listnride, the fastest growing bike sharing community, and get access to countless bikes for every purpose!%0ASign up and immediately receive a 10€ credit.%0A%0ADo you want to thank {{first_name}}? Rent a bike or list your bike and {{first_name}} receives a 10€ credit, too!%0A%0AHave fun, and enjoy the ride!%0A{{voucher_url}}"
     }
   }
 }
