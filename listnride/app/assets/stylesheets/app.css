@@ -522,6 +522,7 @@ footer .lnr-link {
   width: 100%;
   min-height: 300px;
   overflow: visible;
+  z-index: 1;
 }
 
 .lnr-verification-modal md-tab-content {
