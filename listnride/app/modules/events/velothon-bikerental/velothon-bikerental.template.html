@@ -4,7 +4,7 @@
       <!-- <h1 class="md-display-1">{{ 'cities.berlin.title' | translate }}</h1> -->
     </div>
   </div>
-  <div class="content" layout="column" layout-align="center center" layout-padding>
+  <div class="content" layout="column" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
 
       <h1 class="md-headline">{{ 'events.velothon-bikerental.title' | translate }}</h1>
@@ -12,9 +12,21 @@
       </div>
     </div>
 
-    <div layout-xs="column" layout="row">
+    <md-divider></md-divider>
+
+    <div flex layout="column" layout-fill>
+      <div layout="row" layout-padding>
+        <md-input-container layout="column" flex="30" style="padding-bottom: 0">
+          <label>{{ 'list.details.size' | translate }}</label>
+          <md-select flex ng-model="filterSize">
+            <md-option ng-repeat="option in velothonBikerental.sizeOptions" value="{{option.value}}">
+              {{option.label}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </div>
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in velothonBikerental.bikes" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33">
+        <bike-card ng-repeat="bike in velothonBikerental.bikes | filter : {size : filterSize}" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33">
         </bike-card>
       </div>
     </div>
