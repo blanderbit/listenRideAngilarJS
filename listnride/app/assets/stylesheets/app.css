@@ -489,10 +489,6 @@ footer .lnr-link {
 /* DIALOG MODALS
 /*-----------------------------------------------------------------------------------*/
 
-.md-dialog-content {
-  /*width: 450px;*/
-}
-
 .lnr-input-containers md-input-container {
   margin-right: 4px;
   margin-left: 4px;
@@ -542,6 +538,10 @@ footer .lnr-link {
   width: 100%;
   float: left;
   max-height: 250px;
+}
+
+.lnr-verification-modal .md-dialog-content {
+  overflow-x: hidden;
 }
 
 @media (max-width:599px) {
