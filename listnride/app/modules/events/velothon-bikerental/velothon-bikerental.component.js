@@ -19,11 +19,15 @@ angular.module('velothonBikerental',[]).component('velothonBikerental', {
                 {value: 195, label: "195 - 205 cm"}
             ];
 
+            velothonBikerental.isAvailable = function (bike) {
+                console.log(bike);
+            }
+
             $translate('search.all-sizes').then(function (translation) {
                 velothonBikerental.sizeOptions[0].label = translation;
             });
 
-            api.get('/rides?category=20&location=Berlin&priority=velothon').then(
+            api.get('/rides?category=20&location=Berlin&priority=velothon&booked_at=2017-06-18').then(
                 function(response) {
                     console.log(response.data);
                     velothonBikerental.bikes = response.data;

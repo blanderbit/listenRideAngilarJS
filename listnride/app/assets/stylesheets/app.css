@@ -782,7 +782,7 @@ home md-grid-list md-grid-tile.tile4 {
 
 
 /*-----------------------------------------------------------------------------------*/
-/*  BIKE CARD
+/*  BIKE CARD & LISTING CARD
 /*-----------------------------------------------------------------------------------*/
 
 bike-card .bg,
@@ -826,6 +826,15 @@ home #featuredCities a {
   width: 100%;
   height: 100%;
   color: #fff;
+}
+
+.lnr-bike-card.lnr-unavailable {
+  background-color: rgb(250, 250, 250);
+  opacity: 0.8;
+}
+
+.lnr-bike-card.lnr-unavailable img {
+  opacity: 0.6;
 }
 
 
@@ -1108,15 +1117,6 @@ edit .accessory-label {
 listings .lnr-bike-listings {
   min-height: 350px;
   width: 100%;
-}
-
-listings .lnr-bike-card.lnr-unavailable {
-  background-color: rgb(250, 250, 250);
-  opacity: 0.8;
-}
-
-listings .lnr-bike-card.lnr-unavailable img {
-  opacity: 0.6;
 }
 
 #deleteBikeDialog .delete-bike-text {
