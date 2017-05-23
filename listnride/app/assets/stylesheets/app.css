@@ -521,6 +521,12 @@ footer .lnr-link {
 .lnr-verification-modal md-tabs {
   width: 100%;
   min-height: 300px;
+  overflow: visible;
+  z-index: 1;
+}
+
+.lnr-verification-modal md-tab-content {
+  overflow: visible;
 }
 
 .lnr-verification-modal md-tab-item {
@@ -532,6 +538,11 @@ footer .lnr-link {
   height: 100%;
 }
 
+.lnr-tel-int .intl-tel-input{
+  width: 100%;
+  float: left;
+  max-height: 250px;
+}
 
 @media (max-width:599px) {
  .md-dialog-content {

@@ -112,9 +112,17 @@
               <p class="md-body-1 lnr-center">{{ 'verification.5.description' | translate }}</p>
               <div layout="row" layout-align="center center">
                 <md-input-container flex>
-                  <form name="verificationDialog.phoneForm">
+                  <form name="verificationDialog.phoneForm" class="lnr-tel-int">
                     <label>{{ 'shared.phone-number' | translate }}</label>
-                    <input required name="phone_number" ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/" placeholder="+49 175 12345678" ng-model="verificationDialog.newUser.phone_number"></input>
+                    <input
+                      required
+                      type="text"
+                      international-phone-number
+                      ng-model="verificationDialog.newUser.phone_number"
+                      ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/"
+                      name="phone_number"
+                      preferred-countries="de, nl"
+                    >
                     <div ng-messages="verificationDialog.phoneForm.phone_number.$error" role="alert">
                       <div ng-message="pattern">{{ 'verification.5.enter-valid-phone-nr' | translate }}</div>
                     </div>

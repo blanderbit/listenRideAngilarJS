@@ -41,6 +41,7 @@ angular.module('listnride', [
   'ngMessages',
   'pascalprecht.translate',
   'ui.router',
+  'internationalPhoneNumber',
   'ngStorage',
   'ezfb',
   'ngMap',
