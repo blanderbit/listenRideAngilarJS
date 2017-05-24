@@ -2,7 +2,7 @@
   <md-card class="lnr-bike-card" ng-class="{'lnr-unavailable': bikeCard.booked}">
     <div class="bg lnr-preload-bg"></div>
     <img class="md-card-image" ng-src="{{bikeCard.bike.image_file_1.image_file_1.medium.url}}" alt="{{ ::bikeCard.bike.brand }} - {{ ::bikeCard.bike.name }}">
-
+    <div class="after" ng-if="bikeCard.booked"><div>{{ 'shared.already-booked' | translate }}</div></div>
     <md-card-title layout="row">
       <md-icon flex="15" ng-if="::bikeCard.bike.category" class="lnr-icn-lrg md-color-foreground" md-svg-src="app/assets/ui_icons/biketype_{{ ::bikeCard.bike.category | limitTo: 1 }}.svg"></md-icon>
 
