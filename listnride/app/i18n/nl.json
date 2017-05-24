@@ -986,18 +986,20 @@
   },
 
   "invite-landing" : {
-    "header": "gave you 10€ for a ride",
-    "subheader": "Welcome to listnride, the bike sharing community",
-    "subsubheader": "listnride is a community that brings together cycling enthusiasts so that they can rent out their own bikes via our website and app or rent someone else’s bike that perfectly suits their personal style and meets their needs.",
-    "subsubsubheader": "You've got invited by {{name}}. When signing up you get a voucher added to your account, which can be used for your next bike rental.",
+    "meta-title": "listnride | 10€ voor jou!",
+    "meta-description": "Deel het genot van het fietsen! nodig je vrienden uit, en schenk ze 10 euro tegoed bij aanmelding. Als zij en fiets huren of een fiets plaatsen, ontvangt u ook een 10 euro tegoed!",
+    "header": "heeft je 10€ geschenkt!",
+    "subheader": "Welkom bij listnride, de Bike Sharing Community",
+    "subsubheader": "listnride is een Community die fietsvrienden bij elkaar brengt en zich wederzijds ondersteunen. Heb je een fiets voor een bepaald doeleinde nodig? Die vind je zeker hier! Wil je jouw fiets verhuren? Plaats je fiets en verdien wat extra zakgeld.",
+    "subsubsubheader": "Je bent uitgenodigd door {{ name }}. Meld je eenvoudig aan en ontvang een 10 € toegoed op je account bijgeschreven. Bij de eerste fietshuur kan je deze direk gebruiken.",
     "sign-up-get-voucher": "Sign up to get the Voucher",
-    "how-lnr-works": "Bike sharing without the hassle",
-    "explanation-1-title": "1. Find and request",
-    "explanation-1-description": "Find the perfect bike near you and request it.",
-    "explanation-2-title": "2. Book and pick up",
-    "explanation-2-description": "Book the bike and meet the lister to pick it up.",
-    "explanation-3-title": "3. Enjoy the ride",
-    "explanation-3-description": "Have a great time with the bike."
+    "how-lnr-works": "Bike Sharing super eenvoudig",
+    "explanation-1-title": "1. Zoeken en aanvragen",
+    "explanation-1-description": "vind de fiets naar wens en vraag het aan.",
+    "explanation-2-title": "2. Boeken en ophalen",
+    "explanation-2-description": "Boek de fiets en spreek af voor de overdracht.",
+    "explanation-3-title": "3. Daar gaat ie dan!",
+    "explanation-3-description": "Geniet van je fietstocht."
   },
 
   "how-to-shoot-bike-photo" : {

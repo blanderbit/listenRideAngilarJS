@@ -958,18 +958,20 @@
   },
 
   "invite-landing" : {
-    "header": "gave you 10€ for a ride",
-    "subheader": "Welcome to listnride, the bike sharing community",
-    "subsubheader": "listnride is a community that brings together cycling enthusiasts so that they can rent out their own bikes via our website and app or rent someone else’s bike that perfectly suits their personal style and meets their needs.",
-    "subsubsubheader": "You've got invited by {{name}}. When signing up you get a voucher added to your account, which can be used for your next bike rental.",
+    "meta-title": "listnride | 10€ for you!",
+    "meta-description": "Give the gift of cycling! When you invite a friend to listnride, they’ll get a 10€ voucher as soon as they join. When they rent a bike or list their own, you’ll get 10€ too!",
+    "header": "sent you 10€",
+    "subheader": "Welcome to listnride, the Bike Sharing Community",
+    "subsubheader": "listnride is the bike sharing community that brings together cycling enthusiasts of all sorts. Members can rent out their own bikes via our website or app, or rent a bike that perfectly suits their style and needs.",
+    "subsubsubheader": "You've been invited by {{ name }}. Sign up now and you'll get a 10€ voucher added to your account. It can be used for your next bike rental. ",
     "sign-up-get-voucher": "Sign up to get the Voucher",
     "how-lnr-works": "Bike sharing without the hassle",
     "explanation-1-title": "1. Find and request",
-    "explanation-1-description": "Find the perfect bike near you and request it.",
-    "explanation-2-title": "2. Book and pick up",
+    "explanation-1-description": "Find the right bike near you and request it.",
+    "explanation-2-title": "2. Book and pick it up",
     "explanation-2-description": "Book the bike and meet the lister to pick it up.",
     "explanation-3-title": "3. Enjoy the ride",
-    "explanation-3-description": "Have a great time with the bike."
+    "explanation-3-description": "Ride safe, have fun!"
   },
 
   "how-to-shoot-bike-photo" : {

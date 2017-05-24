@@ -990,18 +990,20 @@
   },
 
   "invite-landing" : {
-    "header": "hat dir 10€ für eine Fahrt geschenkt",
+    "meta-title": "listnride | 10€ für dich!",
+    "meta-description": "Lade deine Freunde per E-Mail ein, oder teile deinen Link auf Facebook und schenke ihnen dadurch 10€. Für jede Anmeldung über deinen Link, erhälst du 10€ Gutschrift, sobald deine Freunde aktiv werden! (Leihen und Verleihen)",
+    "header": "hat dir 10€ geschenkt",
     "subheader": "Willkommen bei listnride, der Bike Sharing Community",
-    "subsubheader": "listnride ist eine Community, die passionierte Radfahrer zusammen bringt, um online und via App das eigene Bike zu vermieten oder genau das Fahrrad für den individuellen Zweck und Stil auszuleihen.",
-    "subsubsubheader": "{{ name }} hat dich eingeladen. Wenn du dich anmeldest, erhälst du einen Gutschein der deinem Konto hinterlegt wird. Du kannst diesen für die nächste Radmiete einsetzen.",
+    "subsubheader": "listnride ist eine Community die passionierte Radfahrer zusammen bringt um sich gegenseitig zu unterstützen. Du benötigst ein Fahrrad für ein bestimmtes Terrain? Du wirst es hier finden! Du möchtest deine Räder mit anderen teilen? Biete Sie an und verdiene zusätzliches Taschengeld!",
+    "subsubsubheader": "{{ name }} hat dich eingeladen. Melde dich einfach kurz an um deine 10€ zu erhalten! Der Gutschein wird deinem Nutzerkonto sofort gutgeschrieben und kann sofort genutzt werden.",
     "sign-up-get-voucher": "Registrieren und Gutschein erhalten",
     "how-lnr-works": "Bike-Sharing völlig unkompliziert",
-    "explanation-1-title": "1. Finden und Anfragen",
-    "explanation-1-description": "Finde das perfekte Rad in deiner Nähe und frage es an.",
+    "explanation-1-title": "1. Suchen und Anfragen",
+    "explanation-1-description": "Finde ein passendes Rad und frage es an.",
     "explanation-2-title": "2. Buchen und abholen",
-    "explanation-2-description": "Buche das Rad und triff dich mit dem Vermieter um es abzuholen",
-    "explanation-3-title": "3. Genieß die Fahrt",
-    "explanation-3-description": "Genieße die Zeit mit dem Fahrrad."
+    "explanation-2-description": "Buche das Rad und vereinbare die Abholung",
+    "explanation-3-title": "3. Los geht's!",
+    "explanation-3-description": "Genieße deine Fahrt."
   },
 
   "how-to-shoot-bike-photo" : {
