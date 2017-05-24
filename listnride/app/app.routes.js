@@ -463,6 +463,25 @@
         }
       });
 
+      // TODO: The following state is redundant and only a hotfix for a wrong PR email
+      $stateProvider.state({
+        name: 'ampler2',
+        url: '/rent-ampler-bike',
+        template: '<ampler></ampler>',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["brand-integration.ampler.meta-title", "brand-integration.ampler.meta-descr"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["brand-integration.ampler.meta-title"]);
+                        ngMeta.setTag("description", translations["brand-integration.ampler.meta-descr"]);
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
+      });
+
       $stateProvider.state({
         name: 'brompton',
         url: '/rent-brompton-bikes',
