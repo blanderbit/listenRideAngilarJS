@@ -82,7 +82,8 @@
     "testimonials-header": "Was die Leute sagen",
     "balance": "Guthaben",
     "tac": "Allgemeinen Geschäftsbedingungen",
-    "booking-accept-tac": "Durch Buchen bestätige ich die"
+    "booking-accept-tac": "Durch Buchen bestätige ich die",
+    "already-booked": "Bereits Gebucht"
   },
 
   "toasts": {
