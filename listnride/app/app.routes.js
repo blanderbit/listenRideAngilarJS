@@ -193,6 +193,12 @@
       });
 
       $stateProvider.state({
+        name: 'coffeespin',
+        url: '/coffeespin',
+        template: '<coffeespin></coffeespin>'
+      });
+
+      $stateProvider.state({
         name: 'crossride',
         url: '/berliner-fahrradschau',
         template: '<crossride></crossride>'
