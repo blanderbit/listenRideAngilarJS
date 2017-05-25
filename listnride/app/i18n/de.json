@@ -776,7 +776,14 @@
       "meta-title":"Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
       "meta-description":"Das Rennrad Event des Jahres in Berlin! Nimm teil und miete dir das passende Rennrad!",
       "title": "Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
-      "text": "Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist. <br><br> Du kannst leider nicht am Velothon teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und <a href=\"/#/listing-a-bike\">vermiete dein Rad</a>."
+      "text": "Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist. <br><br> Du kannst leider nicht am Velothon teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und <a href=\"/#/listing-a-bike\">vermiete dein Rad</a>.",
+      "coffeespin": {
+        "meta-title": "listnride beim Velothon Berlin",
+        "title": "Mach dich bereit für den Velothon!",
+        "text-1": "Für alle Velothon Teilnehmer bietet dieser Ride die perfekte Gelegenheit noch ein letztes mal vor dem großen Tag die Beine zu lockern..<br><br>Zusammen mit Radsport.land und freundlicher Unterstützung von Wahoo & Katusha laden wir euch zu dieser entspannten Ausfahrt mit anschließendem Mittagessen und Getränken ein. Das Beste: Die gesamte Veranstaltung ist gratis!",
+        "text-2": "<b>Start</b> mit Kaffee um 09:30 Uhr am S-Bahn Grunewald – Schmetterlingsplatz Berlin<br><br><b>Abfahrt</b> um 10:00 Uhr <br><br><b>Distanz</b> bis 70 km<br><br><b>Tempo</b> 24-27 kmh, locker<br><br><b>Nach der Fahrt</b> Leckeres Mittagsessen & Drinks @factoryberlin - Rheinsberger Str. 76/77<br><br><b>Voraussetzungen</b> Rennrad, Helm und Klickpedale",
+        "sign-up": "Anmelden"
+      }
     },
     "crossride": {
       "title": "listnride Crossride",
