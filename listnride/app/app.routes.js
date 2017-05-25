@@ -194,7 +194,7 @@
 
       $stateProvider.state({
         name: 'coffeespin',
-        url: '/coffeespin',
+        url: '/velothon-coffeespin',
         template: '<coffeespin></coffeespin>'
       });
 

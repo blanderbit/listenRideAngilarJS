@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('velothonBikerental',[]).component('coffeespin', {
+angular.module('coffeespin',[]).component('coffeespin', {
   templateUrl: 'app/modules/events/velothon-bikerental/coffeespin.template.html',
   controllerAs: 'coffeespin',
   controller: ['api',

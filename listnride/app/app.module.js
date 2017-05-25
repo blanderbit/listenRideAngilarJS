@@ -36,6 +36,7 @@ angular.module('listnride', [
   'invite',
   'listnride.constant',
   'inviteLanding',
+  'coffeespin',
   /* external modules */
   'ngMaterial',
   'ngMessages',
