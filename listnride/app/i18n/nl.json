@@ -98,7 +98,8 @@
     "could-not-log-in": "Inloggen mislukt. Check of je je al hebt geregistreerd en je inloggegevens correct zijn.",
     "reset-password-success": "We hebben zojuist een nieuw wachtwoord naar je toegemaild! Deze kan elk ogenblik aankomen.",
     "opening-hours-success": "Opening hours successfully changed.",
-    "opening-hours-error": "Could not save opening hours."
+    "opening-hours-error": "Could not save opening hours.",
+    "uniq-phone": "Phone number already registered in our system."
   },
 
   "settings": {

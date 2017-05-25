@@ -132,6 +132,12 @@ angular.
           sendSms(verificationDialog.newUser.phone_number).then(function () {
             verificationDialog.sentConfirmationSms = true;
           }, function () {
+              $mdToast.show(
+                $mdToast.simple()
+                .textContent($translate.instant('toasts.uniq-phone'))
+                .hideDelay(4000)
+                .position('top center')
+              );
             verificationDialog.sentConfirmationSms = false;
           });
         };

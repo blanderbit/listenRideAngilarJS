@@ -77,7 +77,7 @@ angular.module('settings',[]).component('settings', {
         };
 
         changeContact.onInit(); 
-      }
+      };
   
       settings.$onInit = initSettings;
       function initSettings() {

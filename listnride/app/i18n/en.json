@@ -97,7 +97,8 @@
     "could-not-log-in": "Could not log in. Please make sure you're signed up already and your credentials are valid.",
     "reset-password-success": "We've just sent you a new password to your email address! It should arrive in the next few minutes.",
     "opening-hours-success": "Opening hours successfully changed.",
-    "opening-hours-error": "Could not save opening hours."
+    "opening-hours-error": "Could not save opening hours.",
+    "uniq-phone": "Phone number already registered in our system."
   },
   "settings": {
     "settings": "Settings",
