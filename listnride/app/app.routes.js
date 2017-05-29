@@ -193,6 +193,12 @@
       });
 
       $stateProvider.state({
+        name: 'coffeespin',
+        url: '/velothon-coffeespin',
+        template: '<coffeespin></coffeespin>'
+      });
+
+      $stateProvider.state({
         name: 'crossride',
         url: '/berliner-fahrradschau',
         template: '<crossride></crossride>'
@@ -448,6 +454,25 @@
       $stateProvider.state({
         name: 'ampler',
         url: '/rent-ampler-bikes',
+        template: '<ampler></ampler>',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["brand-integration.ampler.meta-title", "brand-integration.ampler.meta-descr"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["brand-integration.ampler.meta-title"]);
+                        ngMeta.setTag("description", translations["brand-integration.ampler.meta-descr"]);
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
+      });
+
+      // TODO: The following state is redundant and only a hotfix for a wrong PR email
+      $stateProvider.state({
+        name: 'ampler2',
+        url: '/rent-ampler-bike',
         template: '<ampler></ampler>',
         resolve: {
             data: function ($translate, ngMeta) {

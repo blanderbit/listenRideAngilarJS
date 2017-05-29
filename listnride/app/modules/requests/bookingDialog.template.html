@@ -56,7 +56,7 @@
         <span class="md-body-1">{{ bookingDialog.requests.request.total - bookingDialog.requests.request.subtotal | currency: '€' }}</span>
       </div>
       <!-- TO BE ACTIVATED WHEN NEW BACKEND GETS DEPLOYED -->
-      <!-- <div layout="row" layout-align="space-between center" ng-if="bookingDialog.requests.request.user.balance">
+      <div layout="row" layout-align="space-between center" ng-if="bookingDialog.requests.request.user.balance">
         <span class="md-body-2">{{ 'shared.balance' | translate }}</span>
         <span class="md-body-1">{{ bookingDialog.requests.request.user.balance | currency: '€' }}</span>
       </div>
@@ -64,8 +64,8 @@
         <span class="md-body-2">{{ 'shared.total' | translate }}</span>
         <span ng-if="bookingDialog.requests.request.total - bookingDialog.requests.request.user.balance < 0" class="md-body-2">{{ 0 | currency: '€' }}</span>
         <span ng-if="bookingDialog.requests.request.total - bookingDialog.requests.request.user.balance >= 0" class="md-body-2">{{ bookingDialog.requests.request.total - bookingDialog.requests.request.voucher_value | currency: '€'  }}</span>
-      </div> -->
-      <div layout="row" layout-align="space-between center" ng-if="bookingDialog.requests.request.voucher_value">
+      </div>
+      <!-- <div layout="row" layout-align="space-between center" ng-if="bookingDialog.requests.request.voucher_value">
         <span class="md-body-2">{{ 'shared.voucher' | translate }}</span>
         <span class="md-body-1">{{ bookingDialog.requests.request.voucher_value | currency: '€' }}</span>
       </div>
@@ -73,7 +73,7 @@
         <span class="md-body-2">{{ 'shared.total' | translate }}</span>
         <span ng-if="bookingDialog.requests.request.total - bookingDialog.requests.request.voucher_value < 0" class="md-body-2">{{ 0 | currency: '€' }}</span>
         <span ng-if="bookingDialog.requests.request.total - bookingDialog.requests.request.voucher_value >= 0" class="md-body-2">{{ bookingDialog.requests.request.total - bookingDialog.requests.request.voucher_value | currency: '€'  }}</span>
-      </div>
+      </div> -->
 
       <p class="md-caption lnr-center">{{ 'shared.booking-accept-tac' | translate }} <a ui-sref="terms" target="_blank">{{ 'shared.tac' | translate }}</a></p >
 

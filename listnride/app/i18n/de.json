@@ -82,7 +82,8 @@
     "testimonials-header": "Was die Leute sagen",
     "balance": "Guthaben",
     "tac": "Allgemeinen Geschäftsbedingungen",
-    "booking-accept-tac": "Durch Buchen bestätige ich die"
+    "booking-accept-tac": "Durch Buchen bestätige ich die",
+    "already-booked": "Bereits Gebucht"
   },
 
   "toasts": {
@@ -777,7 +778,14 @@
       "meta-title":"Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
       "meta-description":"Das Rennrad Event des Jahres in Berlin! Nimm teil und miete dir das passende Rennrad!",
       "title": "Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
-      "text": "Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist. <br><br> Du kannst leider nicht am Velothon teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und <a href=\"/#/listing-a-bike\">vermiete dein Rad</a>."
+      "text": "Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist. <br><br> Du kannst leider nicht am Velothon teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und <a href=\"/#/listing-a-bike\">vermiete dein Rad</a>.",
+      "coffeespin": {
+        "meta-title": "listnride beim Velothon Berlin",
+        "title": "Mach dich bereit für den Velothon!",
+        "text-1": "Für alle Velothon Teilnehmer bietet dieser Ride die perfekte Gelegenheit noch ein letztes mal vor dem großen Tag die Beine zu lockern..<br><br>Zusammen mit Radsport.land und freundlicher Unterstützung von Wahoo & Katusha laden wir euch zu dieser entspannten Ausfahrt mit anschließendem Mittagessen und Getränken ein. Das Beste: Die gesamte Veranstaltung ist gratis!",
+        "text-2": "<b>Start</b> mit Kaffee um 09:30 Uhr am S-Bahn Grunewald – Schmetterlingsplatz Berlin<br><br><b>Abfahrt</b> um 10:00 Uhr <br><br><b>Distanz</b> bis 70 km<br><br><b>Tempo</b> 24-27 kmh, locker<br><br><b>Nach der Fahrt</b> Leckeres Mittagsessen & Drinks @factoryberlin - Rheinsberger Str. 76/77<br><br><b>Voraussetzungen</b> Rennrad, Helm und Klickpedale",
+        "sign-up": "Anmelden"
+      }
     },
     "crossride": {
       "title": "listnride Crossride",
@@ -991,18 +999,20 @@
   },
 
   "invite-landing" : {
-    "header": "hat dir 10€ für eine Fahrt geschenkt",
+    "meta-title": "listnride | 10€ für dich!",
+    "meta-description": "Lade deine Freunde per E-Mail ein, oder teile deinen Link auf Facebook und schenke ihnen dadurch 10€. Für jede Anmeldung über deinen Link, erhälst du 10€ Gutschrift, sobald deine Freunde aktiv werden! (Leihen und Verleihen)",
+    "header": "hat dir 10€ geschenkt",
     "subheader": "Willkommen bei listnride, der Bike Sharing Community",
-    "subsubheader": "listnride ist eine Community, die passionierte Radfahrer zusammen bringt, um online und via App das eigene Bike zu vermieten oder genau das Fahrrad für den individuellen Zweck und Stil auszuleihen.",
-    "subsubsubheader": "{{ name }} hat dich eingeladen. Wenn du dich anmeldest, erhälst du einen Gutschein der deinem Konto hinterlegt wird. Du kannst diesen für die nächste Radmiete einsetzen.",
+    "subsubheader": "listnride ist eine Community die passionierte Radfahrer zusammen bringt um sich gegenseitig zu unterstützen. Du benötigst ein Fahrrad für ein bestimmtes Terrain? Du wirst es hier finden! Du möchtest deine Räder mit anderen teilen? Biete Sie an und verdiene zusätzliches Taschengeld!",
+    "subsubsubheader": "{{ name }} hat dich eingeladen. Melde dich einfach kurz an um deine 10€ zu erhalten! Der Gutschein wird deinem Nutzerkonto sofort gutgeschrieben und kann sofort genutzt werden.",
     "sign-up-get-voucher": "Registrieren und Gutschein erhalten",
     "how-lnr-works": "Bike-Sharing völlig unkompliziert",
-    "explanation-1-title": "1. Finden und Anfragen",
-    "explanation-1-description": "Finde das perfekte Rad in deiner Nähe und frage es an.",
+    "explanation-1-title": "1. Suchen und Anfragen",
+    "explanation-1-description": "Finde ein passendes Rad und frage es an.",
     "explanation-2-title": "2. Buchen und abholen",
-    "explanation-2-description": "Buche das Rad und triff dich mit dem Vermieter um es abzuholen",
-    "explanation-3-title": "3. Genieß die Fahrt",
-    "explanation-3-description": "Genieße die Zeit mit dem Fahrrad."
+    "explanation-2-description": "Buche das Rad und vereinbare die Abholung",
+    "explanation-3-title": "3. Los geht's!",
+    "explanation-3-description": "Genieße deine Fahrt."
   },
 
   "how-to-shoot-bike-photo" : {
@@ -1021,10 +1031,10 @@
 
   "invite": {
     "meta-title": "listnride | Lade deine Freunde ein",
-    "meta-description": "Lade deine Freunde über Facebook oder E-Mail zu listnride ein und schenke ihnen 10€ und verdiene 10€ sobald Sie ein Fahrrad mieten oder vermieten.",
+    "meta-description": "Teil dein Fahrradbegeisterung mit Freunden! lade deine Freunde zum listnride ein und bekomme einen 10€ Gutschein, sobald sich einen anmeldet. Wenn sie ein Fahrrad mieten oder das Eigene zur vermieten anbietet, bekommst du 10 €!",
     "title": "Lade Freunde ein und verdiene 10€",
     "info-section": {
-      "header": "Erhalte 10€ Guthaben für dein nächstes Mietrad, wenn einer deiner Freunde ein Rad bei listnride leiht oder verleiht.",
+      "header": "Erhalte 10€ Guthaben, wenn einer deiner Freunde deine Einladung annimmt und ein Rad bei listnride leiht oder sein Rad anbietet.",
       "subheader": "Du bist begeistert von listnride und findest, dass auch deine Freunde ein schönes Rad leihen sollten? Lade Sie ein Teil der Bikesharing Community zu werden!",
       "invite-friends": "Freunde einladen",
       "community": "Teil der Community werden",
@@ -1046,7 +1056,7 @@
     },
     "share": {
       "email-subject": "{{full_name}} hat dich zu listnride eingeladen!",
-      "email-body": "{{first_name}} hat dir 10€ für dein erstes Abenteuer auf einem Fahrrad deiner Wahl geschenkt!%0AWerde auch du Teil von listnride, der schnell wachsenden Bikesharing Community und erhalte Zugriff auf unzählige Fahrräder für jeden erdenklichen Zweck!%0A%0A{{first_name}} sei dank, erhälst du sofort 10€ Startguthaben, sobald du dich registrierst.%0ADu möchtest dich bei {{first_name}} bedanken?%0AMiete ein Rad oder biete deins zum Verleih an und auch {{first_name}} erhält 10€ Guthaben :).%0A%0AViel Spaß, wir sehen uns auf der Straße."
+      "email-body": "{{first_name}} hat dir 10€ für dein erstes Abenteuer auf einem Fahrrad deiner Wahl geschenkt!%0AWerde auch du Teil von listnride, der schnellstwachsenden Bikesharing Community und erhalte Zugriff auf unzählige Fahrräder für jeden erdenklichen Zweck!%0A%0A{{first_name}} sei dank, erhältst du sofort 10€ Startguthaben, sobald du dich registrierst.%0ADu möchtest dich bei {{first_name}} bedanken?%0AMiete ein Rad oder biete deins zum Verleih an und auch {{first_name}} erhält 10€ Guthaben :).%0A%0AViel Spaß und Fahrvergnügen."
     }
   }
 }

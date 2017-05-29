@@ -17,7 +17,11 @@ angular.module('invite',[]).component('invite', {
 
       var invite = this;
       invite.inviteUrl = api.getWebappUrl() + "/invitation/" + $localStorage.referenceCode;
-      invite.buttonLabel = $translate.instant('invite.invite-form.copy');
+      $translate('invite.invite-form.copy').then(
+        function (translation) {
+          invite.buttonLabel = translation;
+        }
+      );
 
       invite.copyToClipboard = function() {
         document.getElementById("linkContainer").select();

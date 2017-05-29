@@ -82,7 +82,8 @@
     "testimonials-header": "What are people saying?",
     "balance": "Balance",
     "tac": "Terms and Conditions",
-    "booking-accept-tac": "By booking I accept the"
+    "booking-accept-tac": "By booking I accept the",
+    "already-booked": "Already Booked"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
@@ -747,7 +748,14 @@
       "meta-title":"Simply rent the perfect road bike for the Velothon Berlin",
       "meta-description":"Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!",
       "title": "Simply rent the perfect road bike for the Velothon Berlin",
-      "text": "We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that. <br><br> You can’t participate? Help out someone in need. <a href=\"/#/listing-a-bike\">List your bike</a> and make some extra pocket money!"
+      "text": "We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that. <br><br> You can’t participate? Help out someone in need. <a href=\"/#/listing-a-bike\">List your bike</a> and make some extra pocket money!",
+      "coffeespin": {
+        "meta-title": "listnride at the Velothon Berlin",
+        "title": "Get ready for the Velothon!",
+        "text-1": "For all who participate in the Velothon Berlin, there is now the perfect opportunity to ride and socialize with like-minded a day prior to the race.<br><br>Listnride & Radsportland organize this event in cooperation with our partners Wahoo & Katusha and invite you for this free event.",
+        "text-2": "<b>Start</b> with coffee at 09:30 am at the S-Bahn Grunewald - Schmetterlingsplatz Berlin<br><br><b>Departure</b> at 10:00 hours<br><br><b>Distance</b> up to 70 km<br><br><b>Speed</b> 24-27 kmh, easy<br><br><b>After the trip</b> Enjoyable lunch & drinks @factoryberlin - Rheinsberger Str. 76/77, Berlin<br><br><b>Requirements</b> road bike, helmet and click pedals",
+        "sign-up": "RSVP"
+      }
     },
     "crossride": {
       "title": "listnride Crossride",
@@ -959,18 +967,20 @@
   },
 
   "invite-landing" : {
-    "header": "gave you 10€ for a ride",
-    "subheader": "Welcome to listnride, the bike sharing community",
-    "subsubheader": "listnride is a community that brings together cycling enthusiasts so that they can rent out their own bikes via our website and app or rent someone else’s bike that perfectly suits their personal style and meets their needs.",
-    "subsubsubheader": "You've got invited by {{name}}. When signing up you get a voucher added to your account, which can be used for your next bike rental.",
+    "meta-title": "listnride | 10€ for you!",
+    "meta-description": "Give the gift of cycling! When you invite a friend to listnride, they’ll get a 10€ voucher as soon as they join. When they rent a bike or list their own, you’ll get 10€ too!",
+    "header": "sent you 10€",
+    "subheader": "Welcome to listnride, the Bike Sharing Community",
+    "subsubheader": "listnride is the bike sharing community that brings together cycling enthusiasts of all sorts. Members can rent out their own bikes via our website or app, or rent a bike that perfectly suits their style and needs.",
+    "subsubsubheader": "You've been invited by {{ name }}. Sign up now and you'll get a 10€ voucher added to your account. It can be used for your next bike rental. ",
     "sign-up-get-voucher": "Sign up to get the Voucher",
     "how-lnr-works": "Bike sharing without the hassle",
     "explanation-1-title": "1. Find and request",
-    "explanation-1-description": "Find the perfect bike near you and request it.",
-    "explanation-2-title": "2. Book and pick up",
+    "explanation-1-description": "Find the right bike near you and request it.",
+    "explanation-2-title": "2. Book and pick it up",
     "explanation-2-description": "Book the bike and meet the lister to pick it up.",
     "explanation-3-title": "3. Enjoy the ride",
-    "explanation-3-description": "Have a great time with the bike."
+    "explanation-3-description": "Ride safe, have fun!"
   },
 
   "how-to-shoot-bike-photo" : {
@@ -992,7 +1002,7 @@
     "meta-description": "Give the gift of cycling! When you invite a friend to listnride, they’ll get a 10€ voucher as soon as they join. When they rent a bike or list their own, you’ll get 10€ too!",
     "title": "Invite Friends and Earn 10€",
     "info-section": {
-      "header": "Earn 10€ credit when a friend rents a bike or lists one of their own.",
+      "header": "Earn 10€ credit when a friend accepts your invite and rents a bike or lists one of their own.",
       "subheader": "Are you enthusiastic about listnride and want to spread the word? Then invite your friends to become part of the listnride bike sharing community.",
       "invite-friends": "Invite friends",
       "community": "Help grow the community",
@@ -1014,7 +1024,7 @@
     },
     "share": {
       "email-subject": "{{full_name}} has invited you to join listnride!",
-      "email-body": "{{first_name}} has given you 10€ for your first adventure on the bike of your choice!%0AJoin listnride, the fastest growing bike sharing community, and get access to countless bikes for every purpose imaginable!%0AWhen you sign up, you’ll immediately receive a 10€ credit.%0A%0ADo you want to thank {{first_name}}? Rent a bike or list one of your own, and {{first_name}} receives a 10€ credit, too!%0A%0AHave fun, and see you on the bike paths!%0A{{voucher_url}}"
+      "email-body": "{{first_name}} has given you 10€ for your first adventure on the bike of your choice!%0AJoin listnride, the fastest growing bike sharing community, and get access to countless bikes for every purpose!%0ASign up and immediately receive a 10€ credit.%0A%0ADo you want to thank {{first_name}}? Rent a bike or list your bike and {{first_name}} receives a 10€ credit, too!%0A%0AHave fun, and enjoy the ride!%0A{{voucher_url}}"
     }
   }
 }
