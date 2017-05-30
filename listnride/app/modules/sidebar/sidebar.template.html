@@ -14,7 +14,7 @@
       <md-button ng-if="!sidebar.authentication.loggedIn()" ui-sref="trustAndSafety" ng-click="sidebar.toggle()">{{ 'shared.trust-and-safety' | translate }}</md-button>
       <md-divider ng-if="sidebar.authentication.loggedIn()"></md-divider>
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="settings" ng-click="sidebar.toggle();">{{ 'settings.settings' | translate }}</md-button>
-      <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="invite" ng-click="sidebar.toggle();">{{ 'settings.invite' | translate }}</md-button>
+      <!-- <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="invite" ng-click="sidebar.toggle();">{{ 'settings.invite' | translate }}</md-button> -->
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="invoices" ng-click="sidebar.toggle();">{{ 'invoices.billing' | translate }}</md-button>
       <md-divider ng-if="sidebar.authentication.loggedIn()"></md-divider>
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="home" ng-click="sidebar.toggle(); sidebar.authentication.logout()">{{ 'forms.log-out' | translate }}</md-button>
