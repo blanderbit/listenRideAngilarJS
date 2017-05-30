@@ -304,6 +304,9 @@ angular.
         profilePicture: function() {
           return $localStorage.profilePicture
         },
+        name: function() {
+          return $localStorage.name
+        },
         userId: function() {
           return $localStorage.userId
         }
