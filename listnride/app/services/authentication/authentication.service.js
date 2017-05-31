@@ -299,6 +299,9 @@ angular.
         },
         userId: function() {
           return $localStorage.userId
+        },
+        unreadMessages: function() {
+          return $localStorage.unreadMessages
         }
       };
     }
