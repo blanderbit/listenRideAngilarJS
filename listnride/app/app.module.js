@@ -120,9 +120,13 @@ angular.module('listnride', [
     ngMetaProvider.setDefaultTag('prerender-status-code', '200');
   }
 ])
-.run(['ngMeta', '$rootScope', '$location', function(ngMeta, $rootScope, $location) {
+.run(['ngMeta', '$rootScope', '$location', 'authentication', function(ngMeta, $rootScope, $location, authentication) {
 
   $rootScope.location = $location;
   ngMeta.init();
+
+  if (authentication.loggedIn) {
+    console.log("Logged In Already");
+  }
 
 }]);
