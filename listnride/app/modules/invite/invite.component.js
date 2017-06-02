@@ -16,7 +16,7 @@ angular.module('invite',[]).component('invite', {
         });
 
       var invite = this;
-      invite.inviteUrl = "www." + api.getWebappUrl().substring(api.getWebappUrl().indexOf(".") + 1) + "/invitation/" + $localStorage.referenceCode;
+      invite.inviteUrl = "www.listnride.com/invitation/" + $localStorage.referenceCode;
       $translate('invite.invite-form.copy').then(
         function (translation) {
           invite.buttonLabel = translation;
