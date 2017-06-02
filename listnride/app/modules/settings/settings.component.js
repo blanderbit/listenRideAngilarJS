@@ -101,6 +101,7 @@ angular.module('settings',[]).component('settings', {
         settings.performOpeningHours = performOpeningHours;
         settings.addChild = addChild;
         settings.removeInputDate = removeInputDate;
+        settings.emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         userApi.getUserData().then(function (response) {
           settings.user = response.data;
           updatePrivatePhoneNumber(response.data.phone_number);
