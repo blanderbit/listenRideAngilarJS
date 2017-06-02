@@ -58,7 +58,7 @@ angular.module('invite',[]).component('invite', {
 
       api.get("/users/" + $localStorage.userId + "/overview ").then(function(response) {
         invite.invitedFriends = response.data.friends;
-        invite.inviteUrl = api.getWebappUrl() + "/invitation/" + response.data.author.ref_code;
+        invite.inviteUrl = "http://www.listnride.com/invitation/" + response.data.author.ref_code;
         var activeFriends = invite.invitedFriends.filter(function(invitation) {
           return invitation.status == 2 || invitation.status == 3;
         });
