@@ -108,8 +108,16 @@
   <md-input-container flex>
     <label>{{ 'shared.from' | translate }} {{ calendar.startDate | date }}</label>
     <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')"
-      ng-model="calendar.startTime" placeholder="{{ 'shared.from' | translate }}" analytics-on analytics-category="calendar" analytics-event="clicked" analytics-label="time from">
-      <md-option ng-disabled="!calendar.isOptionEnabled($index, calendar.startDate)" ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
+      ng-model="calendar.startTime"
+      placeholder="{{ 'shared.from' | translate }}"
+      analytics-on analytics-category="calendar"
+      analytics-event="clicked"
+      analytics-label="time from">
+      <md-option
+        ng-disabled="!calendar.isOptionEnabled($index, calendar.startDate)"
+        ng-repeat="i in [].constructor(17) track by $index"
+        value="{{$index + 6}}"
+      >
         {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.startDate) }}
       </md-option>
     </md-select>
@@ -117,9 +125,20 @@
 
   <md-input-container flex>
     <label>{{ 'shared.to' | translate }}  {{ calendar.endDate | date }}</label>
-    <md-select ng-disabled="calendar.endDate === undefined" ng-change="calendar.onTimeChange('end')"
-      ng-model="calendar.endTime" placeholder="{{ 'shared.to' | translate }}" analytics-on analytics-category="calendar" analytics-event="clicked" analytics-label="time to">
-      <md-option ng-disabled="!calendar.isOptionEnabled($index, calendar.endDate)" ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
+    <md-select
+      ng-disabled="calendar.endDate === undefined"
+      ng-change="calendar.onTimeChange('end')"
+      ng-model="calendar.endTime"
+      placeholder="{{ 'shared.to' | translate }}"
+      analytics-on analytics-category="calendar"
+      analytics-event="clicked"
+      analytics-label="time to"
+    >
+      <md-option
+        ng-disabled="!calendar.isOptionEnabled($index, calendar.endDate)"
+        ng-repeat="i in [].constructor(17) track by $index"
+        value="{{$index + 6}}"
+      >
         {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.endDate)}}
       </md-option>
     </md-select>
