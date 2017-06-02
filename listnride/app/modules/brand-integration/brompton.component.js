@@ -20,7 +20,8 @@ angular.module('brompton-integration',[]).component('brompton', {
       brompton.bikes = {
         berlin: [],
         munich: [],
-        dusseldorf: []
+        dusseldorf: [],
+        ulm: []
       };
 
       brompton.mapOptions = {
@@ -33,13 +34,12 @@ angular.module('brompton-integration',[]).component('brompton', {
       // Family ID for Brompton Brand Bikes is 13
       api.get('/rides?family=13').then(
         function (success) {
-          console.log(success.data);
-
           for (var i=0; i<success.data.length; i++) {
             switch (success.data[i].city) {
               case "Berlin": brompton.bikes.berlin.push(success.data[i]); break;
               case "München": brompton.bikes.munich.push(success.data[i]); break;
               case "Düsseldorf": brompton.bikes.dusseldorf.push(success.data[i]); break;
+              case "Ulm": brompton.bikes.ulm.push(success.data[i]); break;
             }
           }
           brompton.currentBikes = brompton.bikes["berlin"];
