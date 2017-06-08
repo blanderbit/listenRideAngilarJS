@@ -101,7 +101,8 @@
     "reset-password-success": "Wir haben dir soeben ein neues Passwort via Email geschickt. Es sollte in den nächsten Minuten eintreffen.",
     "opening-hours-success": "Opening hours successfully changed.",
     "opening-hours-error": "Could not save opening hours.",
-    "uniq-phone": "Phone number already registered in our system."
+    "uniq-phone": "Phone number already registered in our system.",
+    "pending-requests": "Du hast noch eine offene Anfrage für dieses Rad. Beantworte diese (Ablehnen/ Annehmen) bevor du es entfernen kannst."
   },
 
   "settings": {

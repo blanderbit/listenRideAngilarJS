@@ -83,7 +83,7 @@ angular.module('listingCard',[]).component('listingCard', {
           function(error) {
             $mdToast.show(
               $mdToast.simple()
-                .textContent($translate.instant('toasts.error'))
+                .textContent($translate.instant('toasts.pending-requests'))
                 .hideDelay(4000)
                 .position('top center')
             );

@@ -100,7 +100,8 @@
     "reset-password-success": "We've just sent you a new password to your email address! It should arrive in the next few minutes.",
     "opening-hours-success": "Opening hours successfully changed.",
     "opening-hours-error": "Could not save opening hours.",
-    "uniq-phone": "Phone number already registered in our system."
+    "uniq-phone": "Phone number already registered in our system.",
+    "pending-requests": "Looks like you have an open request for this bike. Before you can delete the bike you need to accept or cancel it."
   },
   "settings": {
     "settings": "Settings",
