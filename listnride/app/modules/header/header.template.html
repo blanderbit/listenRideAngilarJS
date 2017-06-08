@@ -43,7 +43,7 @@
 
       <md-button ng-if="!header.authentication.loggedIn()" md-no-ink ng-click="header.authentication.showSignupDialog()" analytics-on analytics-event="click" analytics-label="sign up" analytics-category="topnav link" analytics-value="10">{{ 'forms.sign-up' | translate }}</md-button>
       <md-button ng-if="!header.authentication.loggedIn()" md-no-ink ng-click="header.authentication.showLoginDialog()" analytics-on analytics-event="click" analytics-label="login" analytics-category="topnav link" analytics-value="8">{{ 'forms.log-in' | translate }}</md-button>
-      <md-button ng-if="header.authentication.loggedIn()" md-no-ink ui-sref="requests"><div class="notification-bubble">{{header.authentication.unreadMessages()}}</div>{{ 'shared.requests' | translate }}</md-button>
+      <md-button ng-if="header.authentication.loggedIn()" md-no-ink ui-sref="requests"><div class="notification-bubble" ng-if="header.authentication.unreadMessages()">{{header.authentication.unreadMessages()}}</div>{{ 'shared.requests' | translate }}</md-button>
 
       <md-menu md-position-mode="target bottom" ng-if="header.authentication.loggedIn()">
         <md-button ng-click="$mdOpenMenu($event)" class="md-img">

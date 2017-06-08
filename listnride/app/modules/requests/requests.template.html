@@ -53,7 +53,7 @@
               <h4 ng-if="requests.is_rider(request)" class="lnr-bold">{{request.ride.name}}</h4>
               <h4 ng-if="requests.is_lister(request)" class="lnr-bold">{{request.user.first_name}} {{request.user.last_name}}</h4>
               <div flex></div>
-              <div class="unread-indicator" ng-if="!request.last_message.is_read"></div>
+              <div class="unread-indicator" ng-if="!request.last_message.is_read && request.last_message.receiver == requests.userId"></div>
             </div>
             <p>{{request.timespan}}</p>
           </div>
