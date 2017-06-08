@@ -84,7 +84,8 @@
     "balance": "Guthaben",
     "tac": "Allgemeinen Geschäftsbedingungen",
     "booking-accept-tac": "Durch Buchen bestätige ich die",
-    "already-booked": "Bereits Gebucht"
+    "already-booked": "Bereits Gebucht",
+    "contact-us": "Bitte kontaktiere uns via "
   },
 
   "toasts": {

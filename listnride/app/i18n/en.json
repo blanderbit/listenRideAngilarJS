@@ -84,7 +84,8 @@
     "balance": "Balance",
     "tac": "Terms and Conditions",
     "booking-accept-tac": "By booking I accept the",
-    "already-booked": "Already Booked"
+    "already-booked": "Already Booked",
+    "contact-us": "Please get in touch with us via "
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
