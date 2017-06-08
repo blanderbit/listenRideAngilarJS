@@ -3,11 +3,10 @@
 angular.module('invite',[]).component('invite', {
   templateUrl: 'app/modules/invite/invite.template.html',
   controllerAs: 'invite',
-  controller: ['api', '$localStorage', '$translate', 'Socialshare', 'accessControl', 'ngMeta',
-    function InviteController(api, $localStorage, $translate, Socialshare, accessControl, ngMeta) {
-      if (accessControl.requireLogin()) {
-        return;
-      }
+  controller: ['api', '$localStorage', '$translate', 'Socialshare', 'ngMeta', 'authentication',
+    function InviteController(api, $localStorage, $translate, Socialshare, ngMeta, authentication) {
+      var invite = this;
+      invite.authentication = authentication
 
       $translate(["invite.meta-title", "invite.meta-description"])
         .then(function (translations) {
@@ -15,7 +14,6 @@ angular.module('invite',[]).component('invite', {
           ngMeta.setTag("description", translations["invite.meta-description"]);
         });
 
-      var invite = this;
       invite.inviteUrl = "www.listnride.com/invitation/" + $localStorage.referenceCode;
       $translate('invite.invite-form.copy').then(
         function (translation) {
