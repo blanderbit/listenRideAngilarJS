@@ -28,6 +28,7 @@ angular.module('listnride', [
   'crossride',
   'static',
   'ampler-integration',
+  'vello-integration',
   'brompton-integration',
   'muli-integration',
   'mcbw',
