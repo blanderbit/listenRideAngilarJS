@@ -966,6 +966,21 @@
       "available-cities": "Available in Berlin and Munich",
       "find-out-more": "Questions?",
       "find-out-more-description": "Learn more about <a href=\"https://muli-cycles.de/7-shop\" target=\"_blank\">muli cycles</a> and how to buy one or check out their <a href=\"https://muli-cycles.de/content/8-faq\" target=\"_blank\">FAQ.</a>"
+    },
+    "vello": {
+      "meta-title":"VELLO BIKE+ The First Self-Charging Folding E-Bike",
+      "meta-description":"VELLO BIKE+ The First Self-Charging Electric Folding Bike. The VELLO BIKE is a high-performance folding bike developed for the perfect urban cycling experience.",
+      "title": "VELLO BIKE+ The First Self-Charging Electric Folding Bike",
+      "description": "The VELLO BIKE+ sets a new standard: using four electronic sensors, the energy supply is optimized for use, and activated only when you need it. When climbing uphill the power is there to assist you, and when you’re cruising downhill energy is recovered and fed back into the battery. The combination of a lightweight (from 10.9kg) folding bike, with a unique power system which gives you unlimited support, makes this the ultimate means of urban transportation. battery power.",
+      "item1-title": "Unique E-Drive",
+      "item1-description": "This unique power system harvests energy during braking and coasting downhill, similar to many hybrid systems, but also converts mechanical energy into electrical energy thanks to the Integrated Kinetic Energy System (K.E.R.S.).",
+      "item2-title": "Patented Folding Mechanism",
+      "item2-description": "With an ultra-portable design, the VELLO is the lightest E-Bike on the market (clocking in at less than 12kg/ 26lbs), and capable of folding down to suitcase size for easy transport and carrying.",
+      "item3-title": "4 Different Models",
+      "item3-description": "VELLO bikes are available in 4 different models, with e-drive and without: \"Urbano\", \"Rocky\", \"Speedster\" und \"VELLO BIKE+\". All models offer the best of urban riding, and come with high-end city, trekking, or road bike components.",
+      "available-cities": "Available in Berlin and Munich",
+      "question": "Questions?",
+      "faq-question": "Learn more about VELLO bikes and how to buy one or check out their FAQ."
     }
   },
 
