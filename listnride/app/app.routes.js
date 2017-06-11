@@ -469,6 +469,24 @@
         }
       });
 
+      $stateProvider.state({
+        name: 'vello',
+        url: '/rent-vello-bikes',
+        template: '<vello></vello>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["brand-integration.vello.meta-title", "brand-integration.vello.meta-description"])
+              .then(function (translations) {
+                  ngMeta.setTitle(translations["brand-integration.vello.meta-title"]);
+                  ngMeta.setTag("description", translations["brand-integration.vello.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
       // TODO: The following state is redundant and only a hotfix for a wrong PR email
       $stateProvider.state({
         name: 'ampler2',

@@ -19,7 +19,7 @@
       <h3 class="md-subhead lnr-center">How did you like the overall experience?</h3>
       <span class="md-body-1 lnr-center">{{ 'requests.ratings.description' | translate }}</span>
       <br>
-      <div layout="column" layout-align="center center">
+      <div layout="column" layout-align="center center" class="rating-stars">
         <input-stars max="5" ng-model="ratingDialog.rating"></input-stars>
         <span class="md-body-2 lnr-center" translate="requests.ratings.{{ratingDialog.rating}}"></span>
       </div>

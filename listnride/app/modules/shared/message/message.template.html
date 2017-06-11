@@ -162,7 +162,7 @@
     <div ng-if="message.request.rideChat && message.status == 5">
       <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <md-button
-                  class="message-button" 
+                  class="message-button md-raised md-primary lnr-no-margin md-button md-ink-ripple"
                   ng-disabled="message.request.status != 5" 
                   ng-click="message.showRatingDialog()" 
                   analytics-on analytics-category="rating"

@@ -17,16 +17,20 @@
   <md-dialog-content layout="column">
     <div class="md-dialog-content" layout="column">
 
-      <div ng-style="{'display': bookingDialog.errors[0] == undefined ? 'none' : ''}" class="text-error">
-        <p class="md-subhead">
-          <md-icon md-font-icon="fa-exclamation-triangle" class="lnr-icn-sm md-color-disabled lnr-margin-right fa"></md-icon>
-          {{ 'requests.booking-failed' | translate }}
-        </p>
-        <ul>
-          <div ng-repeat="error in bookingDialog.errors" class="text-error">
-            <li>{{error.detail}}</li>
-          </div>
-        </ul>
+      <div ng-style="{'display': bookingDialog.errors[0] == undefined ? 'none' : ''}">
+        <div class="text-error">
+          <p class="md-subhead">
+            <md-icon md-font-icon="fa-exclamation-triangle" class="lnr-icn-sm md-color-disabled lnr-margin-right fa"></md-icon>
+            {{ 'requests.booking-failed' | translate }}
+          </p>
+          <ul>
+            <div ng-repeat="error in bookingDialog.errors" class="text-error">
+              <li>{{error.detail}}</li>
+            </div>
+          </ul>
+        </div>
+        <br>
+        <span class="md-body-2">{{ 'shared.contact-us' | translate }} <a href="mailto:contact@listnride">email</a></span>
         <br>
       </div>
 

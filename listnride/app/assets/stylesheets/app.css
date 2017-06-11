@@ -548,6 +548,10 @@ footer .lnr-link {
   height: 100%;
 }
 
+.lnr-rating-dialog .rating-stars  {
+  min-height: 48px;
+}
+
 .lnr-tel-int .intl-tel-input{
   width: 100%;
   float: left;

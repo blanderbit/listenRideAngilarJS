@@ -162,7 +162,7 @@
         </div>
 
         <div class="navigation" layout="row" layout-align="end center" layout-margin>
-          <md-button ng-click="settings.updateUser()" class="md-raised md-primary">{{ 'edit.save-changes' | translate }}</md-button>
+          <md-button ng-click="settings.updateUser()" ng-disabled="!settings.form.$valid" class="md-raised md-primary">{{ 'edit.save-changes' | translate }}</md-button>
         </div>
       </md-tab>
        <!--end profile -->
