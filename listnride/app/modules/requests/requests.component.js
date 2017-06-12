@@ -120,7 +120,9 @@ angular.module('requests', []).component('requests', {
           function (success) {
             // if (index) {
               requests.requests[index].last_message.is_read = true;
-              $localStorage.unreadMessages -= 1;
+              if ($localStorage.unreadMessages > 0) {
+                $localStorage.unreadMessages -= 1;
+              }
             // }
           }
         );
