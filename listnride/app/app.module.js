@@ -29,6 +29,7 @@ angular.module('listnride', [
   'static',
   'ampler-integration',
   'vello-integration',
+  'veletage-integration',
   'brompton-integration',
   'muli-integration',
   'mcbw',
