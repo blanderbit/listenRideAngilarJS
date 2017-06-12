@@ -129,10 +129,6 @@ brompton .cb-slideshow li span {
 }
 
 #slideshow div { 
-    z-index: 1000;
-/*    position: absolute;
-    height: 75vh;
-    width: 100%;*/
     opacity: 0;
     color: #fff;
     animation: bromptonTitleAnimation 20s linear infinite 0s;
