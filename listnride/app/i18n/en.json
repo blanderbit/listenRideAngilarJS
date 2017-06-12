@@ -184,7 +184,8 @@
     "meta-title": "{{name}}'s profile",
     "meta-description": "Rent bikes on listnride from {{name}}.",
     "availability": "Availability",
-    "not-available": "Not available"
+    "not-available": "Not available",
+    "verified": "verified"
   },
   "requests": {
     "booking-overview": "Booking Overview",
