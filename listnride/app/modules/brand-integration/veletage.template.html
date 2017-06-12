@@ -1,0 +1,67 @@
+<md-content class="single-column">
+
+    <div id="slideshow" md-theme="lnr-dark" layout="column" layout-align="center center">
+        <ul class="cb-slideshow">
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+        </ul>
+    </div>
+
+    <div class="content" layout-padding>
+        <div class="lnr-section-title" layout="column" layout-align="center center">
+            <h1 class="md-headline">{{ 'brand-integration.veletage.description' | translate }}</h1>
+            <h2 class="md-subhead">{{ 'brand-integration.veletage.subdescription' | translate }}</h2>
+        </div>
+
+        <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
+            <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+                <img class="md-card-image" src="app/assets/ui_images/brand-integration/veletage/lnr_veletage_teaser_custom.jpg" alt="">
+                <h3  class="md-subhead lnr-center">{{ 'brand-integration.veletage.item1-title' | translate }}</h3>
+                <p class="lnr-center" translate="{{ 'brand-integration.veletage.item1-description' | translate }}"></p>
+            </div>
+
+            <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+                <img class="md-card-image" src="app/assets/ui_images/brand-integration/veletage/lnr_veletage_teaser_apparel.jpg" alt="">
+                <h3  class="md-subhead lnr-center">{{ 'brand-integration.veletage.item2-title' | translate }}</h3>
+                <p class="lnr-center" translate="{{ 'brand-integration.veletage.item2-description' | translate }}"></p>
+            </div>
+
+            <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+                <img class="md-card-image" src="app/assets/ui_images/brand-integration/veletage/lnr_veletage_teaser_service.jpg" alt="">
+                <h3  class="md-subhead lnr-center">{{ 'brand-integration.veletage.item3-title' | translate }}</h3>
+                <p class="lnr-center" translate="{{ 'brand-integration.veletage.item3-description' | translate }}"></p>
+            </div>
+        </div>
+
+        <br>
+        <md-divider></md-divider>
+        <br>
+
+        <h2 class="md-headline lnr-center">{{ 'brand-integration.veletage.rent-title' | translate }}</h2>
+        <div layout="row" flex-gt-xs layout-wrap layout-padding layout-align="center start">
+            <div flex="100" flex-gt-xs="45" flex-gt-sm="33" layout="column">
+                <p class="md-subhead lnr-center">{{ 'shared.berlin' | translate }}</p>
+                <bike-card ng-repeat="bike in veletage.bikes.berlin" bike="bike"></bike-card>
+            </div>
+            <div layout="row" flex-gt-xs="10"></div>
+            <div flex="100" flex-gt-xs="45" flex-gt-sm="33" layout="column">
+                <p class="md-subhead lnr-center">{{ 'shared.munich' | translate }}</p>
+                <bike-card ng-repeat="bike in veletage.bikes.munich" bike="bike"></bike-card>
+            </div>
+        </div>
+
+        <br>
+        <md-divider></md-divider>
+        <br>
+
+        <div class="lnr-section-title" layout="column" layout-align="center center">
+            <h1 class="md-headline" translate="{{ 'brand-integration.veletage.find-out-more' | translate }}"></h1>
+        </div>
+
+    </div>
+
+
+    <footer></footer>
+</md-content>
