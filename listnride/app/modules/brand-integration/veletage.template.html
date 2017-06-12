@@ -40,17 +40,12 @@
         <br>
 
         <h2 class="md-headline lnr-center">{{ 'brand-integration.veletage.rent-title' | translate }}</h2>
-        <div layout="row" flex-gt-xs layout-wrap layout-padding layout-align="center start">
-            <div flex="100" flex-gt-xs="45" flex-gt-sm="33" layout="column">
-                <p class="md-subhead lnr-center">{{ 'shared.berlin' | translate }}</p>
-                <bike-card ng-repeat="bike in veletage.bikes.berlin" bike="bike"></bike-card>
+
+        <md-content>
+            <div flex-gt-xs layout="row" layout-wrap layout-padding layout-align="center center">
+                <bike-card ng-repeat="bike in veletage.bikes.munich" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
             </div>
-            <div layout="row" flex-gt-xs="10"></div>
-            <div flex="100" flex-gt-xs="45" flex-gt-sm="33" layout="column">
-                <p class="md-subhead lnr-center">{{ 'shared.munich' | translate }}</p>
-                <bike-card ng-repeat="bike in veletage.bikes.munich" bike="bike"></bike-card>
-            </div>
-        </div>
+        </md-content>
 
         <br>
         <md-divider></md-divider>
@@ -59,9 +54,6 @@
         <div class="lnr-section-title" layout="column" layout-align="center center">
             <h1 class="md-headline" translate="{{ 'brand-integration.veletage.find-out-more' | translate }}"></h1>
         </div>
-
     </div>
-
-
     <footer></footer>
 </md-content>

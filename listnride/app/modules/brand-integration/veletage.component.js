@@ -13,7 +13,6 @@ angular.module('veletage-integration',[]).component('veletage', {
       veletage.currentBikes = [];
 
       veletage.bikes = {
-        berlin: [],
         munich: []
       };
 
@@ -23,7 +22,6 @@ angular.module('veletage-integration',[]).component('veletage', {
 
           for (var i=0; i<success.data.length; i++) {
             switch (success.data[i].city) {
-              case "Berlin": veletage.bikes.berlin.push(success.data[i]); break;
               case "München": veletage.bikes.munich.push(success.data[i]); break;
             }
           }
