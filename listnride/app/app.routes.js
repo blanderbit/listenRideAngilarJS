@@ -487,6 +487,24 @@
         }
       });
 
+        $stateProvider.state({
+          name: 'veletage',
+          url: '/veletage',
+          template: '<veletage></veletage>',
+          resolve: {
+            data: function ($translate, ngMeta) {
+              $translate(["brand-integration.veletage.meta-title", "brand-integration.veletage.meta-descr"])
+                .then(function (translations) {
+                    ngMeta.setTitle(translations["brand-integration.veletage.meta-title"]);
+                    ngMeta.setTag("description", translations["brand-integration.veletage.meta-descr"]);
+                  })
+            }
+          },
+          meta: {
+            disableUpdate: true
+          }
+        });
+
       // TODO: The following state is redundant and only a hotfix for a wrong PR email
       $stateProvider.state({
         name: 'ampler2',
