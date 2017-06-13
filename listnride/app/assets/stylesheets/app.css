@@ -1701,3 +1701,7 @@ invite .voucher-link {
   text-overflow: ellipsis;
   padding-right: 10px;
 }
+
+.vello-bikes bike-card {
+  padding-bottom: 25px;
+}
