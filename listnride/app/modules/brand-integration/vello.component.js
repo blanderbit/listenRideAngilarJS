@@ -15,7 +15,7 @@ angular.module('vello-integration',[]).component('vello', {
         munich: []
       };
 
-      api.get('/rides?family=8').then(
+      api.get('/rides?family=9').then(
         function (success) {
 
           for (var i=0; i<success.data.length; i++) {

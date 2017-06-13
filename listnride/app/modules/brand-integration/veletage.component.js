@@ -16,7 +16,7 @@ angular.module('veletage-integration',[]).component('veletage', {
         munich: []
       };
 
-      api.get('/rides?family=8').then(
+      api.get('/rides?family=10').then(
         function (success) {
           console.log(success.data);
 
