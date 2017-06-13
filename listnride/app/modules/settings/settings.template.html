@@ -162,7 +162,7 @@
         </div>
 
         <div class="navigation" layout="row" layout-align="end center" layout-margin>
-          <md-button ng-click="settings.updateUser()" class="md-raised md-primary">{{ 'edit.save-changes' | translate }}</md-button>
+          <md-button ng-click="settings.updateUser()" ng-disabled="!settings.form.$valid" class="md-raised md-primary">{{ 'edit.save-changes' | translate }}</md-button>
         </div>
       </md-tab>
        <!--end profile -->
@@ -206,13 +206,20 @@
                     <md-radio-button value="1">{{ 'settings.bank-account' | translate }}</md-radio-button>
                     <md-radio-button value="2">{{ 'settings.paypal' | translate }}</md-radio-button>
                   </md-radio-group>
-                  <form name="paypalForm">
+                  <ng-form name="paypalForm">
                     <div ng-if="settings.payoutMethod.family == 2">
                       <p class="md-caption">{{ 'settings.enter-paypal-info' | translate }}</p>
                       <div layout="row" layout-margin>
                         <md-input-container>
                           <label>{{ 'forms.email-address' | translate }}</label>
-                          <input required name="email" ng-model="settings.payoutMethod.email"></input>
+                          <input
+                            required
+                            id="form_paypal_email"
+                            name="email"
+                            type="email"
+                            ng-model="settings.payoutMethod.email"
+                            ng-pattern="settings.emailFormat"
+                          ></input>
                         </md-input-container>
                       </div>
                     </div>
@@ -240,9 +247,15 @@
                       </div>
                     </div>
                     <div layout="row" ng-if="settings.payoutMethod.family" layout-align="end">
-                      <md-button class="md-raised md-primary" ng-click="settings.addPayoutMethod()">{{ 'settings.save-payout-method' | translate }}</md-button>
+                      <md-button
+                        class="md-raised md-primary"
+                        ng-click="settings.addPayoutMethod(settingsForm)"
+                        ng-disabled="!paypalForm.$valid"
+                      >
+                        {{ 'settings.save-payout-method' | translate }}
+                      </md-button>
                     </div>
-                  </form>
+                  </ng-form>
                 </div>
               </div>
             </div>

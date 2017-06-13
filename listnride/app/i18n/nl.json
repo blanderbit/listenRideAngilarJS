@@ -17,6 +17,7 @@
     "vienna": "Wenen",
     "hamburg": "Hamburg",
     "dusseldorf": "Düsseldorf",
+    "ulm": "Ulm",
     "zurich": "Zürich",
     "per": "per",
     "hour": "Uur",
@@ -83,7 +84,8 @@
     "balance": "Saldo",
     "tac": "algemene voorwaarden",
     "booking-accept-tac": "Bij het bevestigen van de boeking accepteer ik de",
-    "already-booked": "al geboekt"
+    "already-booked": "al geboekt",
+    "contact-us": "Neem contact met ons op per "
   },
 
   "toasts": {
@@ -100,7 +102,8 @@
     "reset-password-success": "We hebben zojuist een nieuw wachtwoord naar je toegemaild! Deze kan elk ogenblik aankomen.",
     "opening-hours-success": "Opening hours successfully changed.",
     "opening-hours-error": "Could not save opening hours.",
-    "uniq-phone": "Phone number already registered in our system."
+    "uniq-phone": "Phone number already registered in our system.",
+    "pending-requests": "Looks like you have an open request for this bike. Before you can delete the bike you need to accept or cancel it."
   },
 
   "settings": {
@@ -142,7 +145,7 @@
     "resend-email": "Stuur e-mail opnieuw",
     "1": {
       "text1": "Welkom bij listnride!",
-      "text-invited": "You've got invited by a friend so we've put a voucher in your account which gets redeemed automatically for your first rental!",
+      "text-invited": "Aangezien je door een vriend bent uitgenodigd, hebben we voucher van 10€ aan je account toegevoegd. Deze kan je direct bij je eerste fietshuur verzilveren.",
       "text2": "Hartelijk welkom tot onze Bike-Sharing-Community met veel mooie fietsen en enthousiaste fietsliefhebbers vanuit de hele wereld. Onze community biedt een omgeving waar je jouw geliefde tweewieler zorgenloos aan anderen kan uitlenen – wederzijds vertrouwen en zekerheid voor jou en andere gebruikers staat daarom bij ons op de eerste plaats.",
       "text3": "We vragen je daarom, je profiel in een paar stappen te voltooien. Hoe beter en volledig je profielbeschrijving, des te groter de kans op aanvragen en successvolle verhuur."
     },
@@ -991,6 +994,35 @@
       "available-cities": "Available in Berlin and Munich",
       "find-out-more": "Questions?",
       "find-out-more-description": "Learn more about <a href=\"https://muli-cycles.de/7-shop\" target=\"_blank\">muli cycles</a> and how to buy one or check out their <a href=\"https://muli-cycles.de/content/8-faq\" target=\"_blank\">FAQ.</a>"
+    },
+    "vello": {
+      "meta-title":"Rent and test VELLO E-Bikes in Berlin & Munich",
+      "meta-description":"VELLO BIKE+ The First Self-Charging Electric Folding Bike. The VELLO BIKE is a high-performance folding bike developed for the perfect urban cycling experience.",
+      "title": "Rent and test VELLO E-Bikes in Berlin & Munich",
+      "description": "The VELLO BIKE+ sets a new standard: using four electronic sensors, the energy supply is optimized for use, and activated only when you need it. When climbing uphill the power is there to assist you, and when you’re cruising downhill energy is recovered and fed back into the battery. The combination of a lightweight (from 10.9kg) folding bike, with a unique power system which gives you unlimited support, makes this the ultimate means of urban transportation. battery power.",
+      "item1-title": "Unique E-Drive",
+      "item1-description": "This unique power system harvests energy during braking and coasting downhill, similar to many hybrid systems, but also converts mechanical energy into electrical energy thanks to the Integrated Kinetic Energy System (K.E.R.S.).",
+      "item2-title": "Patented Folding Mechanism",
+      "item2-description": "With an ultra-portable design, the VELLO is the lightest E-Bike on the market (clocking in at less than 12kg/ 26lbs), and capable of folding down to suitcase size for easy transport and carrying.",
+      "item3-title": "4 Different Models",
+      "item3-description": "VELLO bikes are available in 4 different models, with e-drive and without: \"Urbano\", \"Rocky\", \"Speedster\" und \"VELLO BIKE+\". All models offer the best of urban riding, and come with high-end city, trekking, or road bike components.",
+      "available-cities": "Available in Berlin and Munich",
+      "question": "Questions?",
+      "faq-question": "Learn more about <a href=\"http://vello.bike/index.php\">VELLO bikes</a> and how to buy one or check out their <a href=\"http://vello.bike/index.php/pages/help-faq.html\">FAQ</a>."
+    },
+    "veletage": {
+      "meta-title": "VELETAGE Salon für Radkultur",
+      "meta-descr": "VELETAGE Salon für Radkultur - Custom made racing bikes, clothing, wheelsets, bike fittings",
+      "description": "VELETAGE Ride pretty fast!",
+      "subdescription": "At VELETAGE, the salon for cycling culture in the heart of Vienna, you can rent the most beautiful, unique bicycles available, whether for a short test ride, a long weekend, or even a week of cycling around the city. We’re here to help with suggestions for scenic routes, and also help outfit you with the right apparel.  And if you follow us on Facebook, we’ll happily provide you with news and details about our upcoming group rides.",
+      "item1-title": "Custom Road Bikes",
+      "item1-description": "With our unique selection on offer, we’ll find exactly the right bike for you. On top of that, we can help with our professional bike fitting service. Some of the brands we carry include Festka, Cervélo, Schindlehauer, and OPEN.",
+      "item2-title": "Unique Apparel",
+      "item2-description": "The right clothing is almost as important as the perfect bike. With our many years of experience, we know what you need and can help you find what’s best for you. We carry clothing from POC, Cafè du Cycliste, Sportful, Defeet, and many others.",
+      "item3-title": "Great Service",
+      "item3-description": "Once you’ve found the perfect bike, we can help dial it in with a professional bike fitting. And before you hit the road, enjoy a cup of our delicious coffee.",
+      "rent-title": "Rent our Bikes",
+      "find-out-more": "Learn more about Veletage on <a href=\"https://www.facebook.com/veletage\" target=\"_BLANK\">Facebook</a> or <a href=\"https://www.instagram.com/veletage\" target=\"_BLANK\">Instagram</a> and sign up for our newsletter <a href=\"http://www.veletage.com/nl/nl.html\" target=\"_BLANK\">Velozette</a>."
     }
   },
 

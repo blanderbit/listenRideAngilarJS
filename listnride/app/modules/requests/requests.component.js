@@ -74,8 +74,10 @@ angular.module('requests', []).component('requests', {
           requests.all_requests = $filter('orderBy')(success.data, '-created_at', false);
           requests.requests = angular.copy(requests.all_requests);
           requests.loadingList = false;
-          requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
-          requests.loadRequest(requests.selected);
+          if (requests.all_requests.length > 0) {
+            requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
+            requests.loadRequest(requests.selected);
+          }
         },
         function () {
           requests.loadingList = false;
@@ -100,13 +102,13 @@ angular.module('requests', []).component('requests', {
         $timeout(function () {
           if (requests.requests.length > 0) {
             requests.selected = requests.requests[0].id;
-            requests.loadRequest(requests.selected, false);
+            requests.loadRequest(requests.selected, false, 0);
           }
         }, 200);
       };
 
       // Handles initial request loading
-      requests.loadRequest = function (requestId, showDialog) {
+      requests.loadRequest = function (requestId, showDialog, index) {
         requests.selected = requestId;
         $state.go(".", { requestId: requestId }, { notify: false });
         requests.loadingChat = true;
@@ -116,6 +118,16 @@ angular.module('requests', []).component('requests', {
         requests.request = {};
         // Load the new request and activate the poller
         reloadRequest(requestId);
+        api.post('/requests/' + requestId + '/messages/mark_as_read', { "user_id": $localStorage.userId }).then(
+          function (success) {
+            // if (index) {
+              requests.requests[index].last_message.is_read = true;
+              if ($localStorage.unreadMessages > 0) {
+                $localStorage.unreadMessages -= 1;
+              }
+            // }
+          }
+        );
         poller = $interval(function () {
           reloadRequest(requestId);
         }, 10000);
@@ -131,9 +143,9 @@ angular.module('requests', []).component('requests', {
 
       requests.profilePicture = function (request) {
         if ($localStorage.userId == request.user.id) {
-          return request.ride.image_file_1.thumb.url;
+          return request.ride.image_file_1.image_file_1.thumb.url;
         } else {
-          return request.user.profile_picture.url;
+          return request.user.profile_picture.profile_picture.url;
         }
       };
 
@@ -164,13 +176,6 @@ angular.module('requests', []).component('requests', {
 
               requests.loadingChat = false;
             }
-            api.post('/requests/' + requestId + '/messages/mark_as_read', { "user_id": $localStorage.userId }).then(
-              function () {
-              },
-              function () {
-                //
-              }
-            );
           },
           function () {
             requests.loadingChat = false;

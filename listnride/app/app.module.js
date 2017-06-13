@@ -28,6 +28,8 @@ angular.module('listnride', [
   'crossride',
   'static',
   'ampler-integration',
+  'vello-integration',
+  'veletage-integration',
   'brompton-integration',
   'muli-integration',
   'mcbw',
@@ -105,10 +107,8 @@ angular.module('listnride', [
       var retrievedLanguage = host.split('.')[0];
   
       if (availableLanguages.indexOf(retrievedLanguage) >= 0) {
-        console.log("Language set to " + retrievedLanguage);
         return retrievedLanguage;
       } else {
-        console.log("Language defaulting to " + defaultLanguage);
         return defaultLanguage;
       }
     
@@ -120,9 +120,23 @@ angular.module('listnride', [
     ngMetaProvider.setDefaultTag('prerender-status-code', '200');
   }
 ])
-.run(['ngMeta', '$rootScope', '$location', function(ngMeta, $rootScope, $location) {
+.run(['ngMeta', '$rootScope', '$location', 'authentication', 'api', function(ngMeta, $rootScope, $location, authentication, api) {
 
   $rootScope.location = $location;
   ngMeta.init();
+
+  if (authentication.loggedIn) {
+    console.log("Logged In Already");
+    api.get('/users/' + authentication.userId()).then(
+      function (success) {
+        var user = success.data;
+        console.log(user);
+        authentication.setCredentials(user.email, user.password_hashed, user.id, user.profile_picture.profile_picture.url, user.first_name, user.last_name, user.unread_messages, user.ref_code);
+      },
+      function (error) {
+
+      }
+    );
+  }
 
 }]);

@@ -13,8 +13,8 @@ angular.module('listingCard',[]).component('listingCard', {
     available: '<',
     removeBike: '&'
   },
-  controller: [ '$state', '$mdDialog', '$translate', 'api',
-    function ListingCardController($state, $mdDialog, $translate, api) {
+  controller: [ '$state', '$mdDialog', '$translate', 'api', '$mdToast',
+    function ListingCardController($state, $mdDialog, $translate, api, $mdToast) {
       var listingCard = this;
 
       listingCard.onDeleteClick = function(event) {
@@ -31,7 +31,7 @@ angular.module('listingCard',[]).component('listingCard', {
             deleteBike: deleteBike
           }
         });
-      }
+      };
 
       var DeleteBikeController = function(deleteBike) {
         var deleteBikeDialog = this;
@@ -44,7 +44,7 @@ angular.module('listingCard',[]).component('listingCard', {
           deleteBike();
           $mdDialog.hide();
         }
-      }
+      };
 
       listingCard.onActivateClick = function() {
         listingCard.disableActivate = true;
@@ -75,16 +75,21 @@ angular.module('listingCard',[]).component('listingCard', {
       };
 
       function deleteBike() {
-        listingCard.disableDelete = true;
         api.put("/rides/" + listingCard.bikeId, {"ride": {"active": "false"}}).then(
           function(response) {
             listingCard.removeBike({'bikeId': listingCard.bikeId});
+            listingCard.disableDelete = true;
           },
           function(error) {
-            console.log("Error deleting bike", error);
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.pending-requests'))
+                .hideDelay(4000)
+                .position('top center')
+            );
           }
         );
-      };
+      }
     }
   ]
 });

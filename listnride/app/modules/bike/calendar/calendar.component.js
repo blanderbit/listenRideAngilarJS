@@ -324,12 +324,16 @@ angular.module('bike').component('calendar', {
 
       calendar.availabilityMessage = function($index, date) {
         if (!calendar.isOptionEnabled($index, date)) {
-          return ' (closed)'
+          return openingHoursAvailable() ? ' (closed)' : ' (in past)'
         }
       };
 
       calendar.isOptionEnabled = function($index, date) {
-        if (date == undefined || !openingHoursAvailable()) {
+        if (date == undefined) {
+          return true
+        } else if (moment().startOf('day').isSame(moment(date).startOf('day'))){ // Date today chosen
+          return $index + 6 >= moment().hour() + 1;
+        } else if (!openingHoursAvailable()) {
           return true
         }
         var weekDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(date)];

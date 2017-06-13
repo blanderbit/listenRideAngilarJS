@@ -121,7 +121,7 @@
                       ng-model="verificationDialog.newUser.phone_number"
                       ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/"
                       name="phone_number"
-                      preferred-countries="de, nl"
+                      preferred-countries="de, at, nl, ch, uk, fr, es, it, dk, pt, be, pl"
                     >
                     <div ng-messages="verificationDialog.phoneForm.phone_number.$error" role="alert">
                       <div ng-message="pattern">{{ 'verification.5.enter-valid-phone-nr' | translate }}</div>

@@ -24,11 +24,21 @@
       {{ 'listingCard.edit-bike' | translate }}
     </md-button>
 
-    <md-button md-no-ink flex ng-disabled="listingCard.disableDeactivate" ng-click="listingCard.onDeactivateClick()" ng-if="listingCard.available">
+    <md-button
+      md-no-ink
+      flex
+      ng-disabled="listingCard.disableDeactivate"
+      ng-click="listingCard.onDeactivateClick()"
+      ng-if="listingCard.available">
       {{ 'listingCard.deactivate-bike' | translate }}
     </md-button>
 
-    <md-button md-no-ink flex class="md-primary" ng-disabled="listingCard.disableActivate" ng-click="listingCard.onActivateClick()" ng-if="!listingCard.available">
+    <md-button
+      md-no-ink
+      flex
+      ng-disabled="listingCard.disableActivate"
+      ng-click="listingCard.onActivateClick()"
+      ng-if="!listingCard.available">
       {{ 'listingCard.activate-bike' | translate }}
     </md-button>
 

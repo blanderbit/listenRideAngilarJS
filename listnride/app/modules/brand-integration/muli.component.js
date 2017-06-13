@@ -11,7 +11,6 @@ angular.module('muli-integration',[]).component('muli', {
 
       var muli = this;
 
-
       muli.bikes = {
         berlin: [],
         munich: []

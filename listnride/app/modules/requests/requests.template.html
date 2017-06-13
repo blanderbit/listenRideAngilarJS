@@ -46,14 +46,16 @@
         <md-divider md-insets></md-divider>
         <md-list-item class="requests-list-item md-2-line" 
                       ng-class="{'request-filter-switch-active':requests.selected === request.id}"
-                      ng-click="requests.loadRequest(request.id, true)">
+                      ng-click="requests.loadRequest(request.id, true, $index)">
           <img ng-src="{{requests.profilePicture(request)}}" class="md-avatar" alt="{{item.who}}" />
           <div class="md-list-item-text" layout="column">
-            <h4 ng-if="requests.is_rider(request) && request.last_message.is_read">{{request.ride.name}}</h4>
-            <h4 ng-if="requests.is_lister(request) && request.last_message.is_read">{{request.user.first_name}} {{request.user.last_name}}</h4>
-            <p ng-if="request.last_message.is_read">{{request.timespan}}</p>
-            <h4 ng-if="!request.last_message.is_read" class="lnr-bold">{{request.ride.name}}</h4>
-            <p ng-if="!request.last_message.is_read" class="lnr-bold">{{request.timespan}}</p>
+            <div layout="row">
+              <h4 ng-if="requests.is_rider(request)" class="lnr-bold">{{request.ride.name}}</h4>
+              <h4 ng-if="requests.is_lister(request)" class="lnr-bold">{{request.user.first_name}} {{request.user.last_name}}</h4>
+              <div flex></div>
+              <div class="unread-indicator" ng-if="!request.last_message.is_read && request.last_message.receiver == requests.userId"></div>
+            </div>
+            <p>{{request.timespan}}</p>
           </div>
         </md-list-item>
       </div>
@@ -89,7 +91,7 @@
       <md-input-container layout="row" hide-xs flex-gt-sm="20" flex="30">
         <md-button flex 
                    class="md-raised md-primary lnr-no-margin" 
-                   type="submit">
+                   type="submit" ng-disabled="!requests.message">
                    {{ 'shared.send' | translate }}
         </md-button>
       </md-input-container>
