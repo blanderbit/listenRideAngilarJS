@@ -10,22 +10,11 @@ angular.module('veletage-integration',[]).component('veletage', {
       ngMeta.setTitle($translate.instant("brand-integration.veletage.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.veletage.meta-descr"));
 
-      veletage.currentBikes = [];
-
-      veletage.bikes = {
-        munich: []
-      };
+      veletage.bikes = [];
 
       api.get('/rides?family=16').then(
         function (success) {
-          console.log(success.data);
-
-          for (var i=0; i<success.data.length; i++) {
-            switch (success.data[i].city) {
-              case "München": veletage.bikes.munich.push(success.data[i]); break;
-            }
-          }
-          veletage.currentBikes = veletage.bikes["München"];
+          veletage.bikes = success.data;
         },
         function (error) {
           console.log('Error fetching Bikes');
