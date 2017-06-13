@@ -74,8 +74,10 @@ angular.module('requests', []).component('requests', {
           requests.all_requests = $filter('orderBy')(success.data, '-created_at', false);
           requests.requests = angular.copy(requests.all_requests);
           requests.loadingList = false;
-          requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
-          requests.loadRequest(requests.selected);
+          if (requests.all_requests.length > 0) {
+            requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
+            requests.loadRequest(requests.selected);
+          }
         },
         function () {
           requests.loadingList = false;
