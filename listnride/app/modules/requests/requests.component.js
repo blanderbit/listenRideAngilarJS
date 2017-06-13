@@ -118,16 +118,19 @@ angular.module('requests', []).component('requests', {
         requests.request = {};
         // Load the new request and activate the poller
         reloadRequest(requestId);
-        api.post('/requests/' + requestId + '/messages/mark_as_read', { "user_id": $localStorage.userId }).then(
-          function (success) {
+        var last_message = requests.requests[index].last_message
+        if (!last_message.is_read && last_message.receiver == $localStorage.userId) {
+          api.post('/requests/' + requestId + '/messages/mark_as_read', { "user_id": $localStorage.userId }).then(
+            function (success) {
             // if (index) {
               requests.requests[index].last_message.is_read = true;
               if ($localStorage.unreadMessages > 0) {
                 $localStorage.unreadMessages -= 1;
               }
             // }
-          }
-        );
+            }
+          );
+        }
         poller = $interval(function () {
           reloadRequest(requestId);
         }, 10000);
