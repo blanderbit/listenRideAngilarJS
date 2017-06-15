@@ -506,15 +506,15 @@
       });
 
       $stateProvider.state({
-        name: 'bonvello',
-        url: '/rent-bonvello-bikes',
-        template: '<bonvello></bonvello>',
+        name: 'bonvelo',
+        url: '/rent-bonvelo-bikes',
+        template: '<bonvelo></bonvelo>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["brand-integration.bonvello.meta-title", "brand-integration.bonvello.meta-description"])
+            $translate(["brand-integration.bonvelo.meta-title", "brand-integration.bonvelo.meta-description"])
               .then(function (translations) {
-                  ngMeta.setTitle(translations["brand-integration.bonvello.meta-title"]);
-                  ngMeta.setTag("description", translations["brand-integration.bonvello.meta-description"]);
+                  ngMeta.setTitle(translations["brand-integration.bonvelo.meta-title"]);
+                  ngMeta.setTag("description", translations["brand-integration.bonvelo.meta-description"]);
                 })
           }
         },
