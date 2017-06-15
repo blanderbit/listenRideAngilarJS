@@ -21,7 +21,8 @@ angular.module('brompton-integration',[]).component('brompton', {
         berlin: [],
         munich: [],
         dusseldorf: [],
-        ulm: []
+        ulm: [],
+        tubingen: []
       };
 
       brompton.mapOptions = {
@@ -40,6 +41,7 @@ angular.module('brompton-integration',[]).component('brompton', {
               case "München": brompton.bikes.munich.push(success.data[i]); break;
               case "Düsseldorf": brompton.bikes.dusseldorf.push(success.data[i]); break;
               case "Ulm": brompton.bikes.ulm.push(success.data[i]); break;
+              case "Tübingen": brompton.bikes.tubingen.push(success.data[i]); break;
             }
           }
           brompton.currentBikes = brompton.bikes["berlin"];
