@@ -55,9 +55,7 @@ angular.module('bike').component('calendar', {
                 calendar.startDate = start;
                 calendar.endDate = end;
                 dateChange(calendar.startDate, calendar.endDate);
-                if (openingHoursAvailable()) {
-                  setInitHours();
-                }
+                setInitHours();
               });
             });
           }
@@ -363,12 +361,18 @@ angular.module('bike').component('calendar', {
       }
 
       function setInitHours() {
-        var firstDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(calendar.startDate)];
-        var lastDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(calendar.endDate)];
-        firstDay = openHours(firstDay);
-        lastDay = openHours(lastDay);
-        calendar.startTime = firstDay[0];
-        calendar.endTime = lastDay[lastDay.length - 1]
+        if (openingHoursAvailable()) {
+          var firstDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(calendar.startDate)];
+          var lastDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(calendar.endDate)];
+          firstDay = openHours(firstDay);
+          lastDay = openHours(lastDay);
+          calendar.startTime = firstDay[0];
+          calendar.endTime = lastDay[lastDay.length - 1]
+        } else if (moment(calendar.startDate).isSame(moment(), 'day')) {
+          calendar.startTime = moment().add(1, 'hours').hour()
+        } else {
+          calendar.startTime = 10
+        }
       }
 
       function classifyDate(date) {
