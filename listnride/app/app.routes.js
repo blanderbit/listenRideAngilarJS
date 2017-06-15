@@ -487,23 +487,41 @@
         }
       });
 
-        $stateProvider.state({
-          name: 'veletage',
-          url: '/veletage',
-          template: '<veletage></veletage>',
-          resolve: {
-            data: function ($translate, ngMeta) {
-              $translate(["brand-integration.veletage.meta-title", "brand-integration.veletage.meta-descr"])
-                .then(function (translations) {
-                    ngMeta.setTitle(translations["brand-integration.veletage.meta-title"]);
-                    ngMeta.setTag("description", translations["brand-integration.veletage.meta-descr"]);
-                  })
-            }
-          },
-          meta: {
-            disableUpdate: true
+      $stateProvider.state({
+        name: 'veletage',
+        url: '/veletage',
+        template: '<veletage></veletage>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["brand-integration.veletage.meta-title", "brand-integration.veletage.meta-descr"])
+              .then(function (translations) {
+                  ngMeta.setTitle(translations["brand-integration.veletage.meta-title"]);
+                  ngMeta.setTag("description", translations["brand-integration.veletage.meta-descr"]);
+                })
           }
-        });
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'bonvello',
+        url: '/rent-bonvello-bikes',
+        template: '<bonvello></bonvello>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["brand-integration.bonvello.meta-title", "brand-integration.bonvello.meta-descr"])
+              .then(function (translations) {
+                  ngMeta.setTitle(translations["brand-integration.bonvello.meta-title"]);
+                  ngMeta.setTag("description", translations["brand-integration.bonvello.meta-descr"]);
+                })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
 
       // TODO: The following state is redundant and only a hotfix for a wrong PR email
       $stateProvider.state({
