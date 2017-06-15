@@ -511,10 +511,10 @@
         template: '<bonvello></bonvello>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["brand-integration.bonvello.meta-title", "brand-integration.bonvello.meta-descr"])
+            $translate(["brand-integration.bonvello.meta-title", "brand-integration.bonvello.meta-description"])
               .then(function (translations) {
                   ngMeta.setTitle(translations["brand-integration.bonvello.meta-title"]);
-                  ngMeta.setTag("description", translations["brand-integration.bonvello.meta-descr"]);
+                  ngMeta.setTag("description", translations["brand-integration.bonvello.meta-description"]);
                 })
           }
         },

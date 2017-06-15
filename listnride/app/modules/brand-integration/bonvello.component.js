@@ -8,7 +8,7 @@ angular.module('bonvello-integration',[]).component('bonvello', {
       var bonvello = this;
 
       ngMeta.setTitle($translate.instant("brand-integration.bonvello.meta-title"));
-      ngMeta.setTag("description", $translate.instant("brand-integration.bonvello.meta-descr"));
+      ngMeta.setTag("description", $translate.instant("brand-integration.bonvello.meta-description"));
 
       bonvello.bikes = [];
 
