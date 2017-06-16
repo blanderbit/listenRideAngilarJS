@@ -1086,5 +1086,32 @@
       "email-subject": "{{full_name}} nodigt je uit om je bij listnride aan te melden!",
       "email-body": "{{first_name}} heeft jou 10€ tegoed geschenkt voor je eerste fietsavontuur naar keuze!%0A%0AMeld je nu aan bij listnride, de snelst groeiende bikesharing community, en krijg toegang tot talloze verschillende fietsen!%0AMeld je aan en ontvangt onmiddellijk een 10 € toegoed.%0A%0A{{voucher_url}}%0A%0AWil je {{first_name}} bedanken? Op het moment dat je een fiets huurt of je eigen fiets aanbied, ontvangt {{first_name}} ook een 10€ tegoed!%0A%0AVeel plezier en geniet van het fietsen!%0A"
     }
+  },
+
+  "invest": {
+    "meta-title": "listnride is crowdfunding! Be part of it and invest in the future of mobility.",
+    "meta-description": "Visit Seedrs to learn more about investing in listnride.",
+    "description": "listnride is crowdfunding! Be part of it and invest in the future of mobility.",
+    "subdescription": "Learn more about listnride in our <a href=\"https://drive.google.com/open?id=0B9jmC49XLkSHd2tDVXg1ai1KZEk\" target=\"_blank\">investor presentation</a> and why it is worth to invest.",
+    "subsubdescription": "Soon, a crowdfunding campaign will start on <a href=\"https://seedrs.com\" target=\"_blank\">Seedrs</a>, Europe's largest equity crowdfunding platform. As an early adopter, business partner or friend, we're giving you first access, before we launch to the public. Simply tell us the amount you consider to invest.",
+    "learn-more": "Learn more about listnride",
+    "known-from": "Known by",
+    "investment": "Investment",
+    "faq-question-1": "WHY DOES LISTNRIDE START A CROWDFUNDING CAMPAIGN?",
+    "faq-answer-1": "We are a young company with a well developed product, a growing community of tenants and bicycle owners. To drive further growth, we offer the community and the public the opportunity to invest in our company alongside our current investors. With these additional resources, we will make further improvements to our product as well as continue to grow geographically and so grow the community, resulting in greater choice for riders and greater demand for listers.",
+    "faq-question-2": "HOW CAN I INVEST IN LISTNRIDE?",
+    "faq-answer-2": "We are working with <a href=\"https://seedrs.com\" target=\"_blank\">Seedrs</a>, the leading Crowdfunding platform from the United Kingdom to run our Crowdfunding campaign. To invest, simply create an account at www.seedrs.com and follow the instructions.",
+    "faq-question-3": "ARE THERE ANY RISKS INVOLVED?",
+    "faq-answer-3": "Investing in startups involves risks, including loss of capital, illiquidity, lack of dividends and dilution, and it should be done only as part of a diversified portfolio. If you would like to read more Seedrs has a more detailed explanation about these <a href=\"https://www.seedrs.com/risk_warning\" target=\"_blank\">risks here</a>.",
+    "faq-question-4": "WHAT IS THE MINIMUM INVESTMENT AMOUT?",
+    "faq-answer-4": "Because we want to involve as many people as possible, we keep the minimum investment amount low, around £ 15 (exact amount depends on exchange rates). We are happy to receive any amount!",
+    "faq-question-5": "WHAT DID LISTNRIDE ACCOMPLISH SO FAR?",
+    "faq-answer-5": "Since our official start in September 2016, launching a fully functional web platform: listnride has grown to be the largest community bike-sharing platform in the German speaking market (DE, AT, CH), with over 1100 bikes listed and 1,600 registered users. listnride has already over 100 bike shops integrated and 5 innovative bike brands up and running with test ride programs. We have built up a strong presence in Berlin, Munich, Vienna, Amsterdam and Mallorca and are expanding into other large cities like Hamburg, Zurich and Düsseldorf.",
+    "faq-question-6": "HOW CAN I MAKE MONEY WITH MY INVESTMENT?",
+    "faq-answer-6": "Your investment in listnride is a long-term investment in the future of the company. Mainly, you can earn money by selling your shares for more money than you paid. If listnride makes an exit and for example, is taken over by another company, it is likely that you can sell your shares at this time. Seedrs has a detailed explanation here: <a href=\"https://www.seedrs.com/learn/help/how-do-i-make-a-profit-from-my-investment\" target=\"_blank\">Seedrs Campaign</a>",
+    "faq-question-7": "WHAT IS THE MONEY RAISED USED FOR?",
+    "faq-answer-7": "We will use your invested money for two primary purposes: To finance our growth and win new users, especially in our existing markets / cities. Our community, with higher user numbers, can offer riders a wider choice, and provide higher demand to listers, making the service more appealing overall. To improve our platform steadily through new features that make the rental experience as easy and efficient as possible. Integrating an insurance product and new mobile apps are the biggest milestones set.",
+    "faq-question-8": "FURTHER QUESTIONS?",
+    "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
   }
 }
