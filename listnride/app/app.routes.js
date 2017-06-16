@@ -285,7 +285,7 @@
       $stateProvider.state({
         name: 'invest',
         url: '/invest',
-        templateUrl: 'app/modules/static/invest.template.html',
+        template: '<invest></invest>',
         resolve: {
           // data: function ($translate, ngMeta) {
           //   $translate(["about-us.meta-title", "about-us.meta-description"])
