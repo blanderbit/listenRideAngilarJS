@@ -1090,5 +1090,29 @@
       "email-subject": "{{full_name}} hat dich zu listnride eingeladen!",
       "email-body": "{{first_name}} hat dir 10€ für dein erstes Abenteuer auf einem Fahrrad deiner Wahl geschenkt!%0AWerde auch du Teil von listnride, der schnellstwachsenden Bikesharing Community und erhalte Zugriff auf unzählige Fahrräder für jeden erdenklichen Zweck!%0A%0A{{first_name}} sei dank, erhältst du sofort 10€ Startguthaben, sobald du dich registrierst.%0A%0A{{voucher_url}}%0A%0ADu möchtest dich bei {{first_name}} bedanken?%0AMiete ein Rad oder biete deins zum Verleih an und auch {{first_name}} erhält 10€ Guthaben :).%0A%0AViel Spaß und Fahrvergnügen."
     }
+  },
+
+  "invest": {
+    "description": "listnride startet ein Crowdfunding! Sei Teil davon und investiere in die Zukunft der Mobilität.",
+    "subdescription": "Erfahre mehr über listnride in unserer Investoren Präsentation und warum es sich lohnt zu investieren.",
+    "subsubdescription": "In Kürze startet die listnride Crowdfunding Kampagne auf Seedrs, der führenden Equity Crowdfunding Plattform in Europa. Als Mitgliedern der ersten Stunde, Geschäftspartner oder Freunde, bieten wir euch vorzeitigen Zugriff bevor wir die Kampagne der Öffentlichkeit zugänglich machen. Sag uns wie hoch Deine Investition sein wird.",
+    "learn-more": "Erfahre mehr über listnride",
+    "how-much": "Wie viel möchtest du investieren",
+    "faq-question-1": "WARUM STARTET LISTNRIDE EINE CROWDFUNDING-KAMPAGNE?",
+    "faq-answer-1": "Wir sind ein junges Unternehmen mit einem gut entwickelten Produkt, einer wachsenden Community von Mietern und Fahrradbesitzern. Um weiteres Wachstum voranzutreiben eröffnen wir der Community und der Öffentlichkeit die Möglichkeit, neben weiteren Investoren, in unser Unternehmen zu investieren. Mit diesen zusätzlichen Ressourcen werden wir weitere Verbesserungen an unserem Produkt vornehmen, so wie weiterhin geografisch expandieren. Damit können wir die Community entwickeln, Mietern eine größere Auswahl an Fahrrädern und Fahrradbesitzern eine größere Nachfrage zu bieten.",
+    "faq-question-2": "WIE KANN ICH IN LISTNRIDE INVESTIEREN?",
+    "faq-answer-2": "Wir arbeiten mit Seedrs.com, der führende Crowdfunding-Plattform ain Europa, um unsere Crowdfunding-Kampagne durchzuführen. Um zu investieren, musst du lediglich auf der Website www.seedrs.com einen Account erstellen.",
+    "faq-question-3": "WELCHE RISIKEN SIND DAMIT VERBUNDEN?",
+    "faq-answer-3": "In ein Startup zu investieren birgt auch immer einige Risiken, wie z.B. den Verlust von Kapital, Zahlungsunfähigkeit, das Ausbleiben von Dividenden und Kapitalverwässerung. Daher sollte es immer Teil eines diversifizierten Portfolios sein. Falls du mehr erfahren möchtest, bietet Seedrs eine detaillierte Beschreibung der Risiken",
+    "faq-question-4": "GIBT ES EINEN MINDESTBETRAG, DEN ICH INVESTIEREN MUSS?",
+    "faq-answer-4": "Da wir so viele Personen wie möglich involvieren wollen, halten wir das Mindestinvestment niedrig, bei unter £15 (exakter Betrag hängt von den Wechselkursen ab). Wir freuen uns über jeden Beitrag!",
+    "faq-question-5": "WAS HAT LISTNRIDE BISHER ERREICHT?",
+    "faq-answer-5": "Seit unserem offiziellen Start im September 2016 mit Launch ein funktionsfähigen Web Plattform: Ist listnride zur größten Community Bike-Sharing Plattform in der DACH region, mit über 1100 Räder und 1.600 registrierten Usern, gewachsen. listnride hat über 100 Fahrradläden integriert und 5 innovativen Fahrradmarken für ein Testride Program auf der Plattform integriert. listnride hat ein starke Präsenz in Berlin, München, Wien, Amsterdam und Mallorca aufgebaut und wächst entwickelt sich in weiteren Großstädten wie Hamburg, Zürich und Düsseldorf.",
+    "faq-question-6": "WIE KANN ICH MIT MEINEM INVESTMENT GELD VERDIENEN?",
+    "faq-answer-6": "Das Investment in listnride ist ein langfristiges Investment in die Zukunft des Unternehmens. Hauptsächlich kannst du damit Geld verdienen, wenn du deine Anteile für mehr Geld verkaufst, als du bezahlt hast. Wenn listnride ein Exit macht und zum Beispiel von einem anderen Unternehmen übernommen wird, ist es wahrscheinlich, dass du deine Anteile zu diesem Zeitpunkt verkaufen kannst. Seedrs hat eine ausführliche Erklärung hier: Seedrs Campaign",
+    "faq-question-7": "WIE WIRD DAS EINGESSALMTE GELD VERWENDET?",
+    "faq-answer-7": "Wir werden euer investiertes Geld für zwei primäre Zwecke einsetzen: Um unser Wachstum zu finanzieren und neue Nutzer, vornehmlich in den vorhandenen Märkten, zu gewinnen. Unsere Community kann mit höheren Nutzerzahlen den Mietern eine größere Auswahl, und Vermietern eine höhere Nachfrage bieten, was den Service für alle attraktiver macht. Um unser Plattform stetig durch neue Funktionen zu verbessern die das Miet-Erlebnis so einfach und effizient wie möglich macht. Intergration einer Versicherung und neue mobile Apps sind dabei die größten Milestones.",
+    "faq-question-8": "WEITERE FRAGEN?",
+    "faq-answer-8": "wir freuen uns auf Ihr Interesse und weitere Fragen. Kontaktiere uns einfach unter contact@listnride.com und wir werden uns schnellstmöglich melden."
   }
 }

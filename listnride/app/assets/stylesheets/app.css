@@ -607,6 +607,12 @@ footer .lnr-link {
   background-position: 50% 50%;
 }
 
+#hero-shot-large {
+  height: 70vh;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* BRAND INTEGRATION
 /*-----------------------------------------------------------------------------------*/
