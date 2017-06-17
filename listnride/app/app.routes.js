@@ -283,6 +283,24 @@
       });
 
       $stateProvider.state({
+        name: 'invest',
+        url: '/invest',
+        template: '<invest></invest>',
+        resolve: {
+          // data: function ($translate, ngMeta) {
+          //   $translate(["about-us.meta-title", "about-us.meta-description"])
+          //     .then(function (translations) {
+          //       ngMeta.setTitle(translations["about-us.meta-title"]);
+          //       ngMeta.setTag("description", translations["about-us.meta-description"]);
+          //     })
+          // }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'trustAndSafety',
         url: '/trust-and-safety',
         templateUrl: 'app/modules/static/trust-and-safety.template.html',
