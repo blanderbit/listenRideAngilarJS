@@ -528,22 +528,6 @@ footer .lnr-link {
   white-space: normal;
 }
 
-.lnr-verification-modal md-tabs {
-  width: 100%;
-  min-height: 300px;
-  overflow: visible;
-  z-index: 1;
-}
-
-.lnr-verification-modal md-tab-content {
-  overflow: visible;
-}
-
-.lnr-verification-modal md-tab-item {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
 .lnr-rating-dialog .md-input-messages-animation  {
   height: 100%;
 }
@@ -556,20 +540,6 @@ footer .lnr-link {
   width: 100%;
   float: left;
   max-height: 250px;
-}
-
-.lnr-verification-modal .md-dialog-content {
-  overflow-x: hidden;
-}
-
-.lnr-verification-modal .iti-flag {
-  background-image: url(../ui_images/flags.png);
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .lnr-verification-modal .iti-flag {
-    background-image: url(../ui_images/flags@2x.png);
-  }
 }
 
 @media (max-width:599px) {

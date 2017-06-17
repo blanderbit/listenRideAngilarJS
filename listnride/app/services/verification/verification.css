@@ -1,0 +1,64 @@
+.lnr-verification-modal md-tabs {
+    width: 100%;
+    min-height: 300px;
+    overflow: visible;
+    z-index: 1;
+}
+
+.lnr-verification-modal .md-tab.md-active{
+    color: #7ab2f8;
+    opacity: 1;
+}
+
+.lnr-verification-modal md-tab-content {
+    overflow: visible;
+}
+
+.lnr-verification-modal md-tab-item {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.lnr-verification-modal .md-dialog-content {
+    overflow-x: hidden;
+}
+
+.lnr-verification-modal .iti-flag {
+    background-image: url(../ui_images/flags.png);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .lnr-verification-modal .iti-flag {
+        background-image: url(../ui_images/flags@2x.png);
+    }
+}
+
+.lnr-verification-modal .verification-icon {
+    width: 100px;
+    height: 102px;
+}
+
+.lnr-verification-modal .verif-1 .md-headline {
+    margin: 22px 0;
+}
+
+.lnr-verification-modal .verif-1 .md-body-1 {
+    width: 577px;
+    margin: 0.3rem 6rem;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.lnr-verification-modal .verif-1 .lnr-start {
+    margin-top: 5.5rem;
+    width: 10rem;
+}
+
+.lnr-verification-modal .verif-1 .under-text {
+    font-size: 12px;
+    line-height: 28px;
+    height: 28px;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
