@@ -1,35 +1,52 @@
 <md-dialog class="lnr-verification-modal">
 
-  <md-toolbar class="md-accent" hide show-xs>
-    <div class="md-toolbar-tools" layout-align="center center">
-      <md-button class="md-icon-button">
-        <md-icon></md-icon>
-      </md-button>
-      <span flex></span>
-      <h2 class="md-headline">Verify your Profile</h2>
-      <span flex></span>
-      <md-button class="md-icon-button" ng-click="verificationDialog.hide()">
-        <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
-      </md-button>
-    </div>
-  </md-toolbar>
+  <!--<md-toolbar class="md-accent" hide show-xs ng-hide="true">-->
+    <!--<div class="md-toolbar-tools" layout-align="center center">-->
+      <!--&lt;!&ndash;<md-button class="md-icon-button">&ndash;&gt;-->
+        <!--&lt;!&ndash;<md-icon></md-icon>&ndash;&gt;-->
+      <!--&lt;!&ndash;</md-button>&ndash;&gt;-->
+      <!--&lt;!&ndash;<span flex></span>&ndash;&gt;-->
+      <!--&lt;!&ndash;<h2 class="md-headline">Verify your Profile</h2>&ndash;&gt;-->
+      <!--&lt;!&ndash;<span flex></span>&ndash;&gt;-->
+      <!--<md-button class="md-icon-button" ng-click="verificationDialog.hide()">-->
+        <!--<md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>-->
+      <!--</md-button>-->
+    <!--</div>-->
+  <!--</md-toolbar>-->
 
   <md-dialog-content>
     <div class="md-dialog-content" layout="column">
-      <p hide-xs class="md-headline lnr-center">{{ 'verification.verify-profile' | translate }}</p>
       <md-tabs class="content" md-dynamic-height md-no-ink md-no-ink-bar md-center-tabs="on" md-selected="verificationDialog.selectedIndex">
 
+
+
         <md-tab label="⬤" layout="row" ng-disabled="true">
-          <div class="tab-content" layout="column" layout-align="space-between start" md-on-select="verificationDialog.activeTab = 1">
+          <md-button class="md-icon-button md-" ng-click="verificationDialog.hide()">
+            <md-icon md-font-icon="fa-times" class="fa"></md-icon>
+          </md-button>
+
+
+          <div class="tab-content verif-1" layout="column" layout-align="space-between start" md-on-select="verificationDialog.activeTab = 1">
             <div layout="column" layout-align="center center">
+              <md-icon md-svg-src="app/assets/ui_icons/lnr_icon_verification.svg" class="verification-icon"></md-icon>
+
+              <p hide-xs class="md-headline lnr-center">Please Verify your Account</p>
               <p ng-if="verificationDialog.firstTime" class="md-subhead">Hi, {{verificationDialog.firstName}}!</p>
               <p ng-if="verificationDialog.invited" class="md-body-1 lnr-center">{{ 'verification.1.text-invited' | translate }}</p>
               <p ng-if="" class="md-body-1 lnr-center">{{ 'verification.1.text-int'}}
               <p class="md-body-1 lnr-center">{{ 'verification.1.text2' | translate }}</p>
-              <p class="md-body-1 lnr-center">{{ 'verification.1.text3' | translate }}</p>
+
+              <md-button
+                class="md-raised md-primary lnr-no-margin md-button md-ink-ripple lnr-start"
+                ng-click="verificationDialog.next()"
+              >
+                Let's start
+              </md-button>
+              <p class="under-text">It only takes 1 minute.</p>
             </div>
           </div> 
         </md-tab>
+
 
         <md-tab label="⬤" layout="row" ng-if="!verificationDialog.hasProfilePicture" md-on-select="verificationDialog.activeTab = 2" ng-disabled="true">
             <div class="tab-content" layout="column">
@@ -192,13 +209,13 @@
         </md-tab>
 
       </md-tabs>
-      <div class="md-dialog-buttons" layout="row">
-        <md-button class="md-lined" ng-click="verificationDialog.hide()" ng-if="verificationDialog.firstTime">{{ 'shared.later' | translate }}</md-button>
-        <md-button class="md-lined md-warn" ng-if="!verificationDialog.lister && !verificationDialog.firstTime" ng-click="verificationDialog.hide()" ng-if="!verificationDialog.firstTime">{{ 'shared.cancel' | translate }}</md-button>
-        <md-button class="md-lined md-warn" ng-if="verificationDialog.lister" ng-click="verificationDialog.hide()" ui-sref="home">{{ 'shared.cancel' | translate }}</md-button>
-        <span flex></span>
-        <md-button class="md-accent md-raised" ng-disabled="verificationDialog.nextDisabled()" ng-click="verificationDialog.next()">{{ 'shared.next' | translate }}</md-button>
-      </div>
+      <!--<div class="md-dialog-buttons" layout="row">-->
+        <!--<md-button class="md-lined" ng-click="verificationDialog.hide()" ng-if="verificationDialog.firstTime">{{ 'shared.later' | translate }}</md-button>-->
+        <!--<md-button class="md-lined md-warn" ng-if="!verificationDialog.lister && !verificationDialog.firstTime" ng-click="verificationDialog.hide()" ng-if="!verificationDialog.firstTime">{{ 'shared.cancel' | translate }}</md-button>-->
+        <!--<md-button class="md-lined md-warn" ng-if="verificationDialog.lister" ng-click="verificationDialog.hide()" ui-sref="home">{{ 'shared.cancel' | translate }}</md-button>-->
+        <!--<span flex></span>-->
+        <!--<md-button class="md-accent md-raised" ng-disabled="verificationDialog.nextDisabled()" ng-click="verificationDialog.next()">{{ 'shared.next' | translate }}</md-button>-->
+      <!--</div>-->
     </div>
   </md-dialog-content>
 

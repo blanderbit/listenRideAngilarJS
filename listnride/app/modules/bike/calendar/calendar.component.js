@@ -17,6 +17,15 @@ angular.module('bike').component('calendar', {
       calendar.authentication = authentication;
       calendar.requested = false;
 
+
+
+      //FIXME AFTER TESTING
+      verification.openDialog(false);
+
+
+
+
+
       calendar.$onChanges = function (changes) {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
           api.get('/users/' + changes.userId.currentValue).then(function (response) {
