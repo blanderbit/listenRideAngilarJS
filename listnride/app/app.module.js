@@ -40,6 +40,7 @@ angular.module('listnride', [
   'listnride.constant',
   'inviteLanding',
   'coffeespin',
+  'depart',
   'invest',
   /* external modules */
   'ngMaterial',

@@ -193,6 +193,24 @@
       });
 
       $stateProvider.state({
+        name: 'depart',
+        url: '/grande-depart',
+        template: '<depart></depart>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.depart.meta-title", "events.depart.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.depart.meta-title"]);
+                ngMeta.setTag("description", translations["events.depart.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'coffeespin',
         url: '/velothon-coffeespin',
         template: '<coffeespin></coffeespin>'
