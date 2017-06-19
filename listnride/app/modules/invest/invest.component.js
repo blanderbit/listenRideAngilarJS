@@ -6,11 +6,13 @@ angular.module('invest',[]).component('invest', {
   controller: [ '$translate', 'api', 'ngMeta',
     function InvestController($translate, api, ngMeta) {
 
-      ngMeta.setTitle($translate.instant("brand-integration.muli.meta-title"));
-      ngMeta.setTag("description", $translate.instant("brand-integration.muli.meta-description"));
+      ngMeta.setTitle($translate.instant("invest.meta-title"));
+      ngMeta.setTag("description", $translate.instant("invest.meta-description"));
 
       var invest = this;
 
+      invest.submitted = false;
+      invest.submitting = false;
       invest.values = [
         "10 - 250€",
         "250 - 500€",
@@ -19,13 +21,26 @@ angular.module('invest',[]).component('invest', {
         "10.000 - 20.000€",
         "20.000 - 50.000€"
       ];
-
       invest.user = {
         firstName: "",
         lastName: "",
         email: "",
         value: invest.values[0]
       };
+
+      invest.submit = function() {
+        var data = {};
+        invest.submitting = true
+        data.preregistration = invest.user;
+        api.post('/preregistrations', data).then(
+          function (success) {
+            invest.submitted = true;
+          },
+          function (error) {
+
+          }
+        );
+      }
 
     }
   ]
