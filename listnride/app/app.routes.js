@@ -194,7 +194,7 @@
 
       $stateProvider.state({
         name: 'depart',
-        url: '/grande-depart',
+        url: '/grand-depart',
         template: '<depart></depart>',
         resolve: {
           data: function ($translate, ngMeta) {
