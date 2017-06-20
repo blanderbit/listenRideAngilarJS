@@ -31,6 +31,7 @@ angular.module('listnride', [
   'vello-integration',
   'veletage-integration',
   'brompton-integration',
+  'bonvelo-integration',
   'muli-integration',
   'mcbw',
   'pushnpost',
@@ -39,6 +40,7 @@ angular.module('listnride', [
   'listnride.constant',
   'inviteLanding',
   'coffeespin',
+  'depart',
   'invest',
   /* external modules */
   'ngMaterial',

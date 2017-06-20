@@ -18,6 +18,7 @@
     "hamburg": "Hamburg",
     "dusseldorf": "Düsseldorf",
     "ulm": "Ulm",
+    "tubingen": "Tübingen",
     "zurich": "Zürich",
     "per": "pro",
     "hour": "Stunde",
@@ -790,6 +791,14 @@
         "sign-up": "Anmelden"
       }
     },
+    "depart": {
+      "meta-title": "Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
+      "meta-description": "Radel mit listnride und Schickemütze zum Grand Depart und miete dir hochwertige Rennräder aus der Community",
+      "title": "Der Social Ride zum Grand Depart der Tour de France in Düsseldorf!",
+      "text-1": "Eine Ausfahrt für alle Radenthusiasten die Lust haben gemeinsam den Beginn der Tour de France in Düsseldorf zu zelebrieren. <br><br>Zusammen mit unseren Freunden und Lokalhelden von der <a href=\"www.schickemuetze.de\">Schickemütze</a> laden wir euch zu einer entspannten Ausfahrt ein. Mit entspannten Tempo werden wir eine schöne Runde durch die Hügellandschaft Düsseldorfs fahren.<br>Falls du noch ein Rennrad für die Ausfahrt benötigst, bist Du herzlich willkommen dir ein hochwertiges Rennrad aus der listnride Bikesharing Community zu mieten. Wir sehen uns auf dem Rad :)",
+      "text-2": "<b>Start mit Kaffee bei der Schickemütze - Untere Talstraße 22-24, Düsseldorf <br><br>Abfahrt um 10:00 Uhr <br><br>Distanz bis 60 km <br><br>Tempo 24-27 kmh, locker <br><br>Nach der Fahrt ab 18:00 - BBQ & Drinks @Schickemütze - Untere Talstraße 22-24, Düsseldorf <br><br>Voraussetzungen Rennrad, Helm und Klickpedale</b>",
+      "sign-up": "Kostenlose Anmeldung"
+    },
     "crossride": {
       "title": "listnride Crossride",
       "text": "During the Berliner Fahrradschau we want to explore with you our local cross playground, the forest with uncountable awesome trails, the Grunewald.<br><br>On the 5th of March 10am sharp we start rolling from the front gate BFS venue STATION Berlin. The social paced ride lasts for ~3 hours / 50km in the nature and bring you back well charged. We highly recommend a CX/Gravel bike, warm clothes, and a fit body. Helmets are required! <br><br>In case you need a suitable bike or would like to test a new cross bike, check out the great Bikes offered by <a href='http://www.votec.de' target='_blank'>Votec</a> and our community below. If you like to join, you need to <a target='_blank' href='https://ti.to/listnride/crossride'>register</a>. As part of the BFS program we offer you a discounted ticket for the show. After registration for the listnride CX ride, you get a coupon-code for your <a target='_blank' href='https://berlinerfahrradschau.de/en/tickets/'>ticket purchase</a>."
@@ -1027,6 +1036,37 @@
       "item3-description": "Bei der Suche nach dem richtigen Rad helfen wir dir mit einem professionellen Bike Fitting. Zusätzlich kannst du dabei unseren köstlichen Kaffee genießen.",
       "rent-title": "Miete unsere Fahrräder",
       "find-out-more": "Erfahre mehr über die Veletage auf <a href=\"https://www.facebook.com/veletage\" target=\"_BLANK\">Facebook</a> oder <a href=\"https://www.instagram.com/veletage\" target=\"_BLANK\">Instagram</a> und abonniere unseren Newsletter <a href=\"http://www.veletage.com/nl/nl.html\" target=\"_BLANK\">Velozette</a>."
+    },
+    "bonvelo": {
+      "meta-title":"Miete und Teste Bonvelo Singlespeed Bikes in Berlin & München",
+      "meta-description": "Das Singlespeed/Fixie-Bike \"BLIZZ\" ist in vier unterschiedlichen Rahmengrößen zum Test in Berlin verfügbar ",
+      "description": "bonvelo – Singlespeed & Fixie Bikes designed in Hamburg",
+      "subdescription": "Das Singlespeed/Fixie-Bike \"bonvelo BLIZZ\" ist in vier unterschiedlichen Rahmengrößen zum Test in Berlin verfügbar ",
+      "item1-title": "Passt zu Dir!",
+      "item1-description": "4 unterschiedliche Rahmengrößen<br>8 stylische Farbvarianten<br>Individuelles Zubehör erhältlich",
+      "item2-title": "Dein Bike für Deinen Kiez",
+      "item2-description": "Wendiges Fahrverhalten<br>Unempfindliche Pulverbeschichtung<br>Hochwertige, belastbare Komponenten<br>Purer Vortrieb & langanhaltender Fahrspaß",
+      "item3-title": "Tolles Preis-/Leistungserlebnis",
+      "item3-description": "Singlespeed Bikes schon ab €349<br>Hohe Kundenzufriedenheit<br>Persönlicher Service<br>Schnelle Lieferung nach Berlin ",
+      "test-bike": "Teste ein bonvelo in Berlin",
+      "testimonial-1": "Tolles Fahrrad. Wurde ordentlich und sauber vormontiert. Kann ich weiter empfehlen.",
+      "testimonial-2": "Sehr freundlicher Kundenservice, rasche Bearbeitung der Bestellung und bei Fragen schnelle Beantwortung und hohe Kundenorientierung. Weiter so.",
+      "testimonial-3": "Bonvelo ist einfach nur der Hammer. Hier stimmt alles. Kundenservice ist unglaublich gut. So etwas habe ich noch niergends gefunden. Antwort auf meine Anfrage kam sogar am Sonntag. Super nett und kompetent. Lieferzeit top Und das Bike ist ja noch geiler als auf den Bildern Zusammenbau ist super Einfach. Und der Preis ist Super. Ich werde Bonvelo auf alle Fälle weiterempfehlen. Gruß aus Münche",
+      "find-out-more": "Lern mehr über bonvelo Bikes",
+      "faq-description": "Bestelle Dein <a href=\"https://bonvelo.de\">bonvelo</a> und wir erstatten Dir die Miete für Deine Testfahrt in Berlin!",
+      "faq-question-1": "Was ist ein Singlespeed / Fixie Bike?",
+      "faq-answer-1": "Für schnelles Biken in eher ebenen Städten haben unsere Bikes nur einen Gang. Zudem kannst Du durch die Position des Hinterrades wählen, ob Du im Singlespeed-Modus (mit Leerlauf) oder mit starrer Nabe (Fixie) fahren möchtest.",
+      "faq-question-2":"Und was genau ist der Unterschied zwischen einem Singlespeed und einem Fixie?",
+      "faq-answer-2": "Es geht hierbei nur um eines: Das Hinterrad. Aber der Reihe nach: Singlespeed Räder sind immer Fahrräder mit nur einem Gang, bei denen der Leerlauf montiert ist und Du das Bike mit den Felgenbremsen zum Stehen bringst oder Speed rausnehmen kannst. Wenn Du jetzt an ein und demselben Rad das Hinterrad mit der starren Nabe montierst, wird das Singlespeed Bike zu einem Bike mit einem fixed gear, einem starren Gang. Daher der Name Fixie. Fixie-Profis fahren ihre Bikes allein mit diesem fixierten oder auch blockierten Hinterrad („skidden“), wir liefern die montierten Felgenbremsen jedoch immer mit. ",
+      "faq-question-3":"Was macht bonvelo Räder so gut?",
+      "faq-answer-3": "Du nutzt Dein Bike täglich und fährst damit zur Arbeit oder Uni? Perfekt, denn genau dafür sind unsere Räder gemacht. Miese Schlaglöcher werden von 32 Speichen pro Rad abgefedert, der Thickslick-Mantel bietet super Fahrverhalten und ist robust gegen fast alles, was die Straßen so für ihn bereithalten. Und der Rahmen ist von uns selbst entwickelt worden, extrem stabil und sieht zudem noch unverschämt gut aus. Das Ergebnis? Dynamische, wendige und belastbare Fahrräder!",
+      "faq-question-4":"Wie kommt ein bonvelo bei mir an? Was muss ich noch montieren?",
+      "faq-answer-4": "Wir versenden etwa 80% unserer Bikes an Kunden in ganz Deutschland und weitere europäische Länder. Als Versandpartner haben wir UPS gewählt, die Dein Bike sehr schnell und sicher in unserer Bike-Box verpackt bis vor Deine Tür liefern. Unsere Bikes sind zu 85% fertig montiert, Du musst lediglich noch das Vorderrad einsetzen, den Lenker und Sattel befestigen sowie die Pedale eindrehen. Benötigtes Werkzeug liefern wir Dir mit! ",
+      "faq-question-5":"Warum sind die Bikes so günstig?",
+      "faq-answer-5": "Wir wollten kein Schnickschnack, das war von Beginn an Ziel bei bonvelo. Alle Prozesse laufen direkt über unseren Hersteller und Produzenten, so dass es keine Zwischenhändler und -stufen gibt, die für höhere Preise sorgen könnten. Wir kümmern uns schlicht um alles selbst, unsere Bikes sind nur auf unserer <a href=\"https://bonvelo.de\">Website</a> und unserem Showroom in Hamburg erhältlich. Was die bonvelo Kunden bisher über ihre Bikes sagen, zeigt, dass wir auf dem richtigen Weg sind – lies hier nach (Stimmen / Trusted Shops)",
+      "faq-question-6":"Was gibt es bei bonvelo noch?",
+      "faq-answer-6": "Tolles zu unseren Bikes passendes Zubehör findest Du hier <a href=\"https://bonvelo.de/fahrrad-zubehoer\">bonvelo.de/fahrrad-zubehoer</a>",
+      "bottom-text": "Für den richtigen bonvelo-Style gibt es jetzt auch das richtige bonvelo-Outfit mit coolen Hoodies, Shirts und Rucksäcken. Mehr dazu findest Du unter <a href=\"https://bonvelo.de/wear\">bonvelo.de/wear</a>"
     }
   },
 
@@ -1098,25 +1138,27 @@
     "description": "listnride startet ein Crowdfunding! Sei Teil davon und investiere in den Aufbau von Europas führender Bike Sharing Community.",
     "subdescription": "Erfahre mehr über listnride in unserer <a href=\"https://drive.google.com/open?id=0B9jmC49XLkSHd2tDVXg1ai1KZEk\" target=\"_blank\">Investoren Präsentation</a> und warum es sich lohnt zu investieren.",
     "subsubdescription": "In Kürze startet die listnride Crowdfunding Kampagne auf <a href=\"https://seedrs.com\" target=\"_blank\">Seedrs</a>, der führenden Equity Crowdfunding Plattform in Europa. Als Mitgliedern der ersten Stunde, Geschäftspartner oder Freunde, bieten wir euch vorzeitigen Zugriff bevor wir die Kampagne der Öffentlichkeit zugänglich machen. Sag uns wie hoch Deine Investition sein wird.",
-    "learn-more": "Erfahre mehr über listnride",
-    "known-from": "Bekannt aus",
+    "learn-more": "Crowdfunding FAQ",
+    "known-from": "listnride in den Medien",
     "how-much": "Wie viel möchtest du investieren",
-    "investment": "Investment",
+    "investment": "Investition",
+    "submit": "Eintragen",
+    "form-feedback": "Danke für deinen Investitions-Vorschlag.",
     "faq-question-1": "WARUM STARTET LISTNRIDE EINE CROWDFUNDING-KAMPAGNE?",
-    "faq-answer-1": "Wir sind ein junges Unternehmen mit einem gut entwickelten Produkt, einer wachsenden Community von Mietern und Fahrradbesitzern. Um weiteres Wachstum voranzutreiben eröffnen wir der Community und der Öffentlichkeit die Möglichkeit, neben weiteren Investoren, in unser Unternehmen zu investieren. Mit diesen zusätzlichen Ressourcen werden wir weitere Verbesserungen an unserem Produkt vornehmen, so wie weiterhin geografisch expandieren. Damit können wir die Community entwickeln, Mietern eine größere Auswahl an Fahrrädern und Fahrradbesitzern eine größere Nachfrage zu bieten.",
+    "faq-answer-1": "Wir sind ein junges Unternehmen mit einem gut entwickelten Produkt, einer wachsenden Community von Mietern und Fahrradbesitzern. Um weiteres Wachstum voranzutreiben eröffnen wir der Community und der Öffentlichkeit die Möglichkeit, neben weiteren Investoren, in unser Unternehmen zu investieren. Mit diesen zusätzlichen Ressourcen werden wir weitere Verbesserungen an unserem Produkt vornehmen, so wie weiterhin geografisch expandieren. Damit können wir die Community entwickeln, Mietern eine größere Auswahl an Fahrrädern und Fahrradbesitzern eine größere Nachfrage bieten.",
     "faq-question-2": "WIE KANN ICH IN LISTNRIDE INVESTIEREN?",
-    "faq-answer-2": "Wir arbeiten mit <a href=\"https://seedrs.com\" target=\"_blank\">Seedrs.com</a>, der führende Crowdfunding-Plattform ain Europa, um unsere Crowdfunding-Kampagne durchzuführen. Um zu investieren, musst du lediglich auf der Website www.seedrs.com einen Account erstellen.",
+    "faq-answer-2": "Wir arbeiten mit Seedrs, der führende Crowdfunding-Plattform in Europa, um unsere Crowdfunding-Kampagne durchzuführen. Um zu investieren, musst du lediglich auf der Website <a href=\"https://seedrs.com\" target=\"_blank\">www.seedrs.com</a> einen Account erstellen.",
     "faq-question-3": "WELCHE RISIKEN SIND DAMIT VERBUNDEN?",
-    "faq-answer-3": "In ein Startup zu investieren birgt auch immer einige <a href=\"https://www.seedrs.com/risk_warning\" target=\"_blank\">Risiken</a>, wie z.B. den Verlust von Kapital, Zahlungsunfähigkeit, das Ausbleiben von Dividenden und Kapitalverwässerung. Daher sollte es immer Teil eines diversifizierten Portfolios sein. Falls du mehr erfahren möchtest, bietet Seedrs eine detaillierte Beschreibung der Risiken",
+    "faq-answer-3": "In ein Startup zu investieren birgt auch immer einige Risiken, wie z.B. den Verlust von Kapital, Zahlungsunfähigkeit, das Ausbleiben von Dividenden und Kapitalverwässerung. Daher sollte es immer Teil eines diversifizierten Portfolios sein. Falls du mehr erfahren möchtest, bietet Seedrs eine detaillierte Beschreibung der <a href=\"https://www.seedrs.com/risk_warning\" target=\"_blank\">Risiken</a>",
     "faq-question-4": "GIBT ES EINEN MINDESTBETRAG, DEN ICH INVESTIEREN MUSS?",
-    "faq-answer-4": "Da wir so viele Personen wie möglich involvieren wollen, halten wir das Mindestinvestment niedrig, bei unter £15 (exakter Betrag hängt von den Wechselkursen ab). Wir freuen uns über jeden Beitrag!",
+    "faq-answer-4": "Da wir so viele Personen wie möglich involvieren wollen, halten wir das Mindestinvestment niedrig, bei unter 10€ (exakter Betrag hängt von den Wechselkursen ab). Wir freuen uns über jeden Beitrag!",
     "faq-question-5": "WAS HAT LISTNRIDE BISHER ERREICHT?",
     "faq-answer-5": "Seit unserem offiziellen Start im September 2016 mit Launch ein funktionsfähigen Web Plattform: Ist listnride zur größten Community Bike-Sharing Plattform in der DACH region, mit über 1100 Räder und 1.600 registrierten Usern, gewachsen. listnride hat über 100 Fahrradläden integriert und 5 innovativen Fahrradmarken für ein Testride Program auf der Plattform integriert. listnride hat ein starke Präsenz in Berlin, München, Wien, Amsterdam und Mallorca aufgebaut und wächst entwickelt sich in weiteren Großstädten wie Hamburg, Zürich und Düsseldorf.",
     "faq-question-6": "WIE KANN ICH MIT MEINEM INVESTMENT GELD VERDIENEN?",
-    "faq-answer-6": "Das Investment in listnride ist ein langfristiges Investment in die Zukunft des Unternehmens. Hauptsächlich kannst du damit Geld verdienen, wenn du deine Anteile für mehr Geld verkaufst, als du bezahlt hast. Wenn listnride ein Exit macht und zum Beispiel von einem anderen Unternehmen übernommen wird, ist es wahrscheinlich, dass du deine Anteile zu diesem Zeitpunkt verkaufen kannst. Seedrs hat eine ausführliche Erklärung hier: <a href=\"https://www.seedrs.com/learn/help/how-do-i-make-a-profit-from-my-investment\" target=\"_blank\">Seedrs Campaign</a>",
+    "faq-answer-6": "Es handelt sich um eine langfristige Investition und du kannst damit Gewinne erzielen, wenn du deine Anteile für mehr Geld verkaufst, als du bezahlt hast. Wenn listnride einen Exit macht und zum Beispiel von einem anderen Unternehmen übernommen wird, ist es wahrscheinlich, dass du deine Anteile zu diesem Zeitpunkt verkaufen kannst. Seedrs hat eine ausführliche Erklärung hier: <a href=\"https://www.seedrs.com/learn/help/how-do-i-make-a-profit-from-my-investment\" target=\"_blank\">Seedrs Campaign</a>",
     "faq-question-7": "WIE WIRD DAS EINGESSALMTE GELD VERWENDET?",
     "faq-answer-7": "Wir werden euer investiertes Geld für zwei primäre Zwecke einsetzen: Um unser Wachstum zu finanzieren und neue Nutzer, vornehmlich in den vorhandenen Märkten, zu gewinnen. Unsere Community kann mit höheren Nutzerzahlen den Mietern eine größere Auswahl, und Vermietern eine höhere Nachfrage bieten, was den Service für alle attraktiver macht. Um unser Plattform stetig durch neue Funktionen zu verbessern die das Miet-Erlebnis so einfach und effizient wie möglich macht. Intergration einer Versicherung und neue mobile Apps sind dabei die größten Milestones.",
     "faq-question-8": "WEITERE FRAGEN?",
-    "faq-answer-8": "wir freuen uns auf Ihr Interesse und weitere Fragen. Kontaktiere uns einfach unter <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a> und wir werden uns schnellstmöglich melden."
+    "faq-answer-8": "Wir freuen uns über dein Interesse. Wenn du weitere Fragen hast, kontaktiere uns einfach unter <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a> und wir werden uns schnellstmöglich melden."
   }
 }

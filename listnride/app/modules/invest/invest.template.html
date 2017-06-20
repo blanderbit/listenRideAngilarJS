@@ -1,6 +1,6 @@
  <md-content class="single-column"> 
  
-  <div id="hero-shot-large" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/static/lnr_invest.jpg')" layout="row" layout-align="center center">
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/static/lnr_invest.jpg')" layout="row" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ 'invest.description' | translate }}</h1>
     </div>
@@ -15,34 +15,39 @@
     <div class="spacer"></div>
 
     <div class="content highlight-tile" layout="column" >
-      <div layout="row" layout-padding layout-align="center none">
-        <md-input-container flex-gt-sm="30" flex="45">
-          <label>{{ 'forms.first-name' | translate }}</label>
-          <input ng-model="invest.user.firstName">
-        </md-input-container>
-        
-        <md-input-container flex-gt-sm="30" flex="45">
-          <label>{{ 'forms.last-name' | translate }}</label>
-          <input ng-model="invest.user.lastName">
-        </md-input-container>
+      <div ng-hide="!invest.submitted" layout="column" layout-fill layout-align="center center">
+        <p class="md-headline lnr-center lnr-light">You've successfully entered an Investment Proposal</p>
       </div>
-      <div layout="row" layout-padding layout-align="center none">
-        <md-input-container flex-gt-sm="30" flex="45">
-          <label>{{ 'forms.email-address' | translate }}</label>
-          <input ng-model="invest.user.email">
-        </md-input-container>
-        <md-input-container flex-gt-sm="30" flex="45">
-          <label>{{ 'invest.investment' | translate }}</label>
-          <md-select ng-model="invest.user.value">
-            <md-option ng-repeat="value in invest.values" value="{{ value }}">
-              {{ value }}
-            </md-option>
-          </md-select>
-        </md-input-container>
-      </div>
-      <div layout="row" layout-padding layout-align="center center">
-        <div layout flex-gt-sm="60" flex="90" layout-align="end start">
-          <md-button class="md-primary md-raised">Submit</md-button>
+      <div ng-hide="invest.submitted">
+        <div layout="row" layout-padding layout-align="center none">
+          <md-input-container flex-gt-sm="30" flex="45">
+            <label>{{ 'forms.first-name' | translate }}</label>
+            <input ng-model="invest.user.firstName">
+          </md-input-container>
+          
+          <md-input-container flex-gt-sm="30" flex="45">
+            <label>{{ 'forms.last-name' | translate }}</label>
+            <input ng-model="invest.user.lastName">
+          </md-input-container>
+        </div>
+        <div layout="row" layout-padding layout-align="center none">
+          <md-input-container flex-gt-sm="30" flex="45">
+            <label>{{ 'forms.email-address' | translate }}</label>
+            <input ng-model="invest.user.email">
+          </md-input-container>
+          <md-input-container flex-gt-sm="30" flex="45">
+            <label>{{ 'invest.investment' | translate }}</label>
+            <md-select ng-model="invest.user.value">
+              <md-option ng-repeat="value in invest.values" value="{{ value }}">
+                {{ value }}
+              </md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+        <div layout="row" style="padding: 0px 8px 0 0" layout-align="center center">
+          <div layout flex-gt-sm="60" flex="90" layout-align="end start">
+            <md-button ng-disabled="invest.submitting" class="md-primary md-raised" ng-click="invest.submit()">{{ 'invest.submit' | translate }}</md-button>
+          </div>
         </div>
       </div>
       <br>

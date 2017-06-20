@@ -103,7 +103,8 @@ md-grid-list md-grid-tile {
 }
 
 invest .highlight-tile {
-  height: 280px;
+  height: 320px;
+  padding: 4px;
 }
 
 .highlight-tile input {
@@ -206,6 +207,10 @@ autocomplete .md-errors-spacer {
 
 .lnr-center {
   text-align: center;
+}
+
+.lnr-light {
+  opacity: 0.5;
 }
 
 .lnr-center-center {
@@ -615,12 +620,6 @@ footer .lnr-link {
 
 #hero-shot {
   height: 42vh;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-#hero-shot-large {
-  height: 70vh;
   background-size: cover;
   background-position: 50% 50%;
 }

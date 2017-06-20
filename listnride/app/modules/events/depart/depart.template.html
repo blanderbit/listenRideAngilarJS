@@ -1,0 +1,44 @@
+<md-content class="single-column">
+  <div
+    id="hero-shot"
+    class="lnr-preload-bg"
+    style="background-image: url('app/assets/ui_images/events/depart_hero.jpg');"
+    layout="row"
+    layout-align="center center"
+  >
+    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
+    </div>
+  </div>
+
+  <div class="content" layout="column" layout-align="center center" layout-padding>
+    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center" layout-padding>
+      <div layout="column" flex-gt-xs="45">
+        <h1 class="md-headline">{{ 'events.depart.title' | translate }}</h1>
+        <p translate="events.depart.text-1"></p>
+      </div>
+      <div layout="row" flex-gt-xs="10" layout-align="center">
+        <md-divider></md-divider>
+      </div>
+      <div layout="column" flex-gt-xs="45" layout-align="center start">
+        <p translate="events.depart.text-2"></p>
+      </div>
+    </div>
+    <div layout>
+      <md-button
+        class="md-raised md-primary"
+        target="_blank"
+        href="https://ti.to/listnride/muetzenrunde/"
+      >
+        {{ 'events.depart.sign-up' | translate }}
+      </md-button>
+    </div>
+
+    <md-content>
+      <div flex-gt-xs layout="row" layout-wrap layout-padding layout-align="center center">
+        <bike-card ng-repeat="bike in depart.bikes" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+      </div>
+    </md-content>
+  </div>
+
+  <footer></footer>
+<md-content>
