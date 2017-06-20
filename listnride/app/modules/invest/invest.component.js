@@ -22,10 +22,10 @@ angular.module('invest',[]).component('invest', {
         "20.000 - 50.000€"
       ];
       invest.user = {
-        firstName: "",
-        lastName: "",
+        first_name: "",
+        last_name: "",
         email: "",
-        value: invest.values[0]
+        investment: invest.values[0]
       };
 
       invest.submit = function() {

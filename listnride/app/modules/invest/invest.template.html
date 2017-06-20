@@ -22,12 +22,12 @@
         <div layout="row" layout-padding layout-align="center none">
           <md-input-container flex-gt-sm="30" flex="45">
             <label>{{ 'forms.first-name' | translate }}</label>
-            <input ng-model="invest.user.firstName">
+            <input ng-model="invest.user.first_name">
           </md-input-container>
           
           <md-input-container flex-gt-sm="30" flex="45">
             <label>{{ 'forms.last-name' | translate }}</label>
-            <input ng-model="invest.user.lastName">
+            <input ng-model="invest.user.last_name">
           </md-input-container>
         </div>
         <div layout="row" layout-padding layout-align="center none">
@@ -37,7 +37,7 @@
           </md-input-container>
           <md-input-container flex-gt-sm="30" flex="45">
             <label>{{ 'invest.investment' | translate }}</label>
-            <md-select ng-model="invest.user.value">
+            <md-select ng-model="invest.user.investment">
               <md-option ng-repeat="value in invest.values" value="{{ value }}">
                 {{ value }}
               </md-option>
