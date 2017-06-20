@@ -9,6 +9,7 @@
     "journal": "Blog",
     "later": "Later",
     "next": "Next",
+    "previous": "Previous",
     "requests": "Requests",
     "top-cities": "Top Cities",
     "berlin": "Berlin",
@@ -147,11 +148,11 @@
       "text2": "We're a sharing community, so the trust and safety of you and the other users have highest priority. We therefore kindly ask you to verify your profile through a few simple steps. The better the information you enter, the higher are chances that your requests will be accepted and bikes will be requested."
     },
     "2": {
-      "description": "Upload a profile picture of yourself! Seeing the face behind a profile is what's most important for the users."
+      "title": "Upload your Profile Picture",
+      "description": "Show other user who is the person behind your profile."
     },
     "3": {
-      "description": "Write a couple sentences about yourself and your relation to biking. It gives your profile personality!",
-      "label": "Description (min. 100 Characters)"
+      "title": "Tell something about you"
     },
     "4": {
       "description": "Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder.",
@@ -167,7 +168,7 @@
       "phone-nr-verified": "Your number is successfully verified!"
     },
     "6": {
-      "description": "Ultimately, enter your home address."
+      "title": "What is your address"
     }
   },
   "bike": {
