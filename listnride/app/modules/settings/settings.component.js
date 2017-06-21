@@ -72,7 +72,7 @@ angular.module('settings',[]).component('settings', {
         changeContact.onInit = function () {
           userApi.getUserData().then(function (response) {
             changeContact.user = response.data;
-            changeContact.user.new_phone_number = angular.copy(changeContact.user.phone_number);
+            changeContact.user.new_phone_number = angular.copy('+' + changeContact.user.phone_number);
           });
         };
 
