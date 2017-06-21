@@ -11,8 +11,8 @@ angular.module('bike').component('calendar', {
     priceWeek: '<',
     requests: '<'
   },
-  controller: ['$scope', '$localStorage', '$state', '$mdDialog', '$translate', 'date', 'api', 'authentication', 'verification',
-    function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, date, api, authentication, verification) {
+  controller: ['$scope', '$localStorage', '$state', '$mdDialog', '$translate', '$mdToast', 'date', 'api', 'authentication', 'verification',
+    function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, $mdToast, date, api, authentication, verification) {
       var calendar = this;
       calendar.authentication = authentication;
       calendar.requested = false;
@@ -87,11 +87,15 @@ angular.module('bike').component('calendar', {
               api.post('/requests', data).then(
                 function(response) {
                   $state.go('requests', {requestId: response.data.id});
-                  console.log("Success", response);
                 },
                 function(error) {
                   calendar.requested = false;
-                  console.log("Error posting request", error);
+                  $mdToast.show(
+                    $mdToast.simple()
+                      .textContent(error.data.errors[0].detail)
+                      .hideDelay(4000)
+                      .position('top center')
+                  );
                 }
               );
             }
@@ -210,7 +214,6 @@ angular.module('bike').component('calendar', {
 
         if (slot.overnight) {
           calendar.endDate = new Date(eventYear, eventMonth, slot.day + 1, slot.hour, 0, 0, 0);
-          console.log(calendar.endDate);
         } else {
           calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);  
         }
@@ -292,7 +295,6 @@ angular.module('bike').component('calendar', {
 
         if (slot.overnight) {
           calendar.endDate = new Date(eventYear, eventMonth, slot.day + 1, slot.hour, 0, 0, 0);
-          console.log(calendar.endDate);
         } else {
           calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);  
         }
