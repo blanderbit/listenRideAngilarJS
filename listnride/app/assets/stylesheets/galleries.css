@@ -284,7 +284,7 @@ veletage .cb-slideshow li:nth-child(4) span {
 }
 
 /*---------------------------------------------------------*/
-/* BONVELLO
+/* BONVELO
 /*---------------------------------------------------------*/
 
 bonvelo .cb-slideshow li span {
@@ -296,7 +296,7 @@ bonvelo .cb-slideshow li span {
 
 bonvelo .cb-slideshow li:nth-child(1) span {
   background-image: url(../ui_images/brand-integration/bonvelo/lnr_bonvelo_hero_1.jpg);
-  background-position: 75% 50%;
+  background-size: cover;
 }
 
 bonvelo .cb-slideshow li:nth-child(2) span {
