@@ -305,13 +305,13 @@
         url: '/invest',
         template: '<invest></invest>',
         resolve: {
-          // data: function ($translate, ngMeta) {
-          //   $translate(["about-us.meta-title", "about-us.meta-description"])
-          //     .then(function (translations) {
-          //       ngMeta.setTitle(translations["about-us.meta-title"]);
-          //       ngMeta.setTag("description", translations["about-us.meta-description"]);
-          //     })
-          // }
+          data: function ($translate, ngMeta) {
+            $translate(["invest.meta-title", "invest.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["invest.meta-title"]);
+                ngMeta.setTag("description", translations["invest.meta-description"]);
+              })
+          }
         },
         meta: {
           disableUpdate: true
