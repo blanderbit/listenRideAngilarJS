@@ -82,6 +82,7 @@ angular.module('settings',[]).component('settings', {
       settings.$onInit = initSettings;
       function initSettings() {
         settings.user = {};
+        settings.croppedDataUrl = false;
         settings.loaded = false;
         settings.payoutMethod = {};
         settings.password = "";
@@ -472,7 +473,7 @@ angular.module('settings',[]).component('settings', {
         var data = {
           "user": {
             "description": settings.user.description,
-            "profile_picture": settings.profilePicture,
+            "profile_picture": Upload.dataUrltoBlob(settings.croppedDataUrl, settings.profilePicture.name),
             "street": settings.user.street,
             "zip": settings.user.zip,
             "city": settings.user.city,
@@ -504,6 +505,7 @@ angular.module('settings',[]).component('settings', {
             );
             settings.user = success.data;
             $localStorage.profilePicture = success.data.profile_picture.profile_picture.url;
+            settings.profilePicture = false;
             var encoded = Base64.encode(success.data.email + ":" + success.data.password_hashed);
             $localStorage.auth = 'Basic ' + encoded;
           },
