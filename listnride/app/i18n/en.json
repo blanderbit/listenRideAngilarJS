@@ -24,6 +24,7 @@
     "paderborn": "Paderborn",
     "utting": "Utting",
     "heidelberg": "Heidelberg",
+    "marl": "Marl",
     "per": "per",
     "hour": "hour",
     "hours": "hours",
@@ -775,7 +776,7 @@
       "text-2": "<b>Start with coffee at the Schickemutze - Untere Talstraße 22-24, Dusseldorf<br><br>Departure at 10:00 hours<br><br>Distance up to 60 km<br><br>Tempo 24-27 kmh, easy going<br><br>After the ride from 18:00 - BBQ & Drinks @ Schickemutze - Untere Talstraße 22-24, Dusseldorf<br><br>Requirements Road bike, helmet and click pedal</b>",
       "sign-up": "Sign up for free",
       "description": "Still need a road bike for the big weekend?",
-      "subdescription": "We’ve got a wide selection of race-worthy bikes available during the Velothon. They’re going fast, so book yours here today!"
+      "subdescription": "Don't hesitate to book a great bike from our bike-sharing community."
     },
     "crossride": {
       "title": "listnride Crossride",
