@@ -16,7 +16,7 @@
 
     <div class="content highlight-tile" layout="column" >
       <div ng-hide="!invest.submitted" layout="column" layout-fill layout-align="center center">
-        <p class="md-headline lnr-center lnr-light">You've successfully entered an Investment Proposal</p>
+        <p class="md-headline lnr-center lnr-light">{{ 'invest.form-feedback' | translate }}</p>
       </div>
       <div ng-hide="invest.submitted">
         <div layout="row" layout-padding layout-align="center none">
