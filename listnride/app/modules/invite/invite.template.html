@@ -54,7 +54,7 @@
       </div>
 
       <div layout="column" layout-align="center center">
-      <md-button ng-if="!invite.authentication.loggedIn()" ng-click="invite.authentication.showLoginDialog()" class="md-raised md-primary">Log in to get your Invite Link</md-button>
+      <md-button ng-if="!invite.authentication.loggedIn()" ng-click="invite.authentication.showLoginDialog()" class="md-raised md-primary">{{ 'invite.login' | translate }}</md-button>
       </div>
     </div>
   </div>
