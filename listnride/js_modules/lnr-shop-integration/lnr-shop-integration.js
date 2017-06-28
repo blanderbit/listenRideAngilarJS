@@ -21,6 +21,7 @@ var env = "production";
 (function () {
   var css_lnr = document.createElement("LINK");
   css_lnr.href = "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.css";
+  // css_lnr.href = "lnr-shop-integration.css";
   css_lnr.rel = "stylesheet";
 
   var header = document.getElementsByTagName("head")[0];
@@ -59,8 +60,8 @@ var env = "production";
       }
 
       $("#listnride")
-        // intro text
-        .append('<div class="mdl-grid"><div mdl-cell mdl-cell--4-col><div class="lnr-intro-text">' + selectedLangText + '</div></div>')
+        // intro text (DISABLED)
+        // .append('<div class="mdl-grid"><div mdl-cell mdl-cell--4-col><div class="lnr-intro-text">' + selectedLangText + '</div></div>')
         // bikes rendering
         .append('<div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid"></div>');
 
@@ -70,16 +71,22 @@ var env = "production";
       response.rides.forEach(function (ride) {
           var brand = ride.brand,
           category = ride.category,
+          rideName = ride.name,
           categoryDesc = categoryFilter(category),
           price = parseInt(ride.price_daily),
           imageUrl = ride.image_file_1.image_file_1.small.url,
-          svgUrl = rootUrl + '/app/assets/ui_icons/biketype_' + (category + '').slice(0, 1) + '.svg',
+          svgUrl = 'https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/biketype_' + (category + '').slice(0, 1) + '.svg',
           rideDescription = ride.description.slice(0, 150).concat(' ...');
         grid.append(
           '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">' +
           '<bike-card>' +
           '<md-card class="lnr-bike-card _md">' +
-          '<a target="_blank" class="image-container lnr-links" onclick="spawnWizard(' + ride.user_id + ', ' + ride.id + ')"><img src="' + imageUrl + '"></img><div class="after"><span class="content">' + rideDescription + '<br><br><button class="md-button">' + buttonText + '</button></span><span class="zoom"><i class="fa fa-search"></i></span></div></a>' +
+          '<a target="_blank" class="image-container lnr-links" title="' + ride.description + '" onclick="spawnWizard(' + ride.user_id + ', ' + ride.id + ')">' +
+          '<img src="' + imageUrl + '"></img><div class="after">' +
+          // '<span class="content">' + rideName + '</span>' +
+          '<span class="content"><span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>' +
+          '<button class="md-button">' + buttonText + '</button></span>' +
+          '<span class="zoom"><i class="fa fa-search"></i></span></div></a>' +
           '<md-card-title layout="row" class="layout-row">' +
           '<md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true">'+
           '<img src="' + svgUrl + '" height="48" width="48"></img></md-icon>' +
