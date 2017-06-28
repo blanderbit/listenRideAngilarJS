@@ -44,17 +44,17 @@ var env = "production";
       var selectedLangText, dayText, sizeText, buttonText;
       if ('en' === user_lang) {
         selectedLangText = introText.en;
-        dayText = 'per day';
+        dayText = 'from';
         sizeText = 'For';
         buttonText = 'Rent this Bike';
       } else if ('nl' === user_lang) {
         selectedLangText = introText.nl;
-        dayText = 'per dag';
+        dayText = 'van';
         sizeText = 'Voor';
         buttonText = 'Rent this Bike';
       } else {
         selectedLangText = introText.de;
-        dayText = 'pro Tag';
+        dayText = 'ab';
         sizeText = 'F&uuml;r';
         buttonText = 'Dieses Rad Mieten';
       }
@@ -73,7 +73,7 @@ var env = "production";
           category = ride.category,
           rideName = ride.name,
           categoryDesc = categoryFilter(category),
-          price = parseInt(ride.price_daily),
+          price = parseInt(ride.price_half_daily),
           imageUrl = ride.image_file_1.image_file_1.small.url,
           svgUrl = 'https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/biketype_' + (category + '').slice(0, 1) + '.svg',
           rideDescription = ride.description.slice(0, 150).concat(' ...');
@@ -95,8 +95,8 @@ var env = "production";
           '<span>' + sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size+10) + ' cm</span>' + 
           '</md-card-title-text>' +
           '<div layout="column" class="layout-align-space-around-center layout-column">' +
+          '<span style="text-align: center">' + dayText + '</span>' +
           '<span class="md-headline">' + price + '&euro;</span>' +
-          '<span>' + dayText + '</span>' +
           ' </div>' +
           '</md-card-title>' +
           '</md-card>' +
