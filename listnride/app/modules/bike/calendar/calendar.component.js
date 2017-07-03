@@ -141,7 +141,8 @@ angular.module('bike').component('calendar', {
       calendar.event.pickupSlotId;
       calendar.event.returnSlotId;
 
-      calendar.event.familyId = 15;
+      // Absurdly high id to deactivate calendar
+      calendar.event.familyId = 1500;
 
       var slotDuration = 1;
       var eventYear = 2017;
