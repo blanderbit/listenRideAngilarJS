@@ -24,6 +24,18 @@
       });
 
       $stateProvider.state({
+        name: 'verify',
+        url: '/verify',
+        template: '<home></home>'
+      });
+
+      $stateProvider.state({
+        name: 'confirm',
+        url: '/confirm/{confirmationCode:string}',
+        template: '<home></home>'
+      });
+
+      $stateProvider.state({
         name: 'bike',
         url: '/bikes/{bikeId:int}',
         template: '<bike></bike>'

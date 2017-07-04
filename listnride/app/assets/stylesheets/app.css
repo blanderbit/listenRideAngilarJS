@@ -1365,6 +1365,10 @@ message .status-message {
   margin-top: -6px;
 }
 
+button.md-primary {
+  background-color: #0ECC92 !important;
+}
+
 @media (max-width: 959px) {
   .message-button {
     margin: 6px 0 6px 0;
