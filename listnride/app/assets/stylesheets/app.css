@@ -1365,7 +1365,7 @@ message .status-message {
   margin-top: -6px;
 }
 
-button.md-primary {
+button.md-primary.md-confirm-button {
   background-color: #0ECC92 !important;
 }
 
