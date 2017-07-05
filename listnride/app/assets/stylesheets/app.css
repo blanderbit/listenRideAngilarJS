@@ -67,6 +67,14 @@ h1.md-subhead {
   margin: 4px 0;
 }*/
 
+md-select-menu md-content {
+  max-height: 300px;
+}
+
+md-select-menu {
+  max-height: 300px;
+}
+
 h3.md-body-2 {
   margin: 1em 0;
 }
