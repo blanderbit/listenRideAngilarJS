@@ -473,7 +473,7 @@ angular.module('settings',[]).component('settings', {
         var data = {
           "user": {
             "description": settings.user.description,
-            "profile_picture": Upload.dataUrltoBlob(settings.croppedDataUrl, settings.profilePicture.name),
+            "profile_picture": Upload.dataUrltoBlob(settings.croppedDataUrl, _.isEmpty(settings.profilePicture) ? '' : settings.profilePicture.name),
             "street": settings.user.street,
             "zip": settings.user.zip,
             "city": settings.user.city,
