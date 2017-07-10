@@ -368,7 +368,7 @@ angular.module('bike').component('calendar', {
         bookingDialog.errors = {};
         bookingDialog.in_process = false;
         bookingDialog.duration = date.duration(calendar.startDate, calendar.endDate);
-        bookingDialog.total = calendar.total;
+        bookingDialog.total = totalPriceCalculator();
         bookingDialog.startDate = calendar.startDate;
         bookingDialog.endDate = calendar.endDate;
         bookingDialog.lnrFee = calendar.lnrFee;
@@ -460,6 +460,12 @@ angular.module('bike').component('calendar', {
           fullscreen: true // Only for -xs, -sm breakpoints.
         });
       };
+
+      function totalPriceCalculator() {
+        var total = calendar.total - calendar.rider.balance;
+        total >= 0 ? total : total = 0;
+        return total
+      }
 
       function getWeekDay(date) {
         var dayOfWeek = date.getDay() - 1;

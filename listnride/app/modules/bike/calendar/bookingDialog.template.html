@@ -65,8 +65,7 @@
       </div>
       <div layout="row" layout-align="space-between center">
         <span class="md-body-2">{{ 'shared.total' | translate }}</span>
-        <span ng-if="bookingDialog.total - bookingDialog.balance < 0" class="md-body-2">{{ 0 | currency: '€' }}</span>
-        <span ng-if="bookingDialog.total - bookingDialog.balance >= 0" class="md-body-2">{{ bookingDialog.total - bookingDialog.balance | currency: '€'  }}</span>
+        <span class="md-body-2">{{ bookingDialog.total | currency: '€' }}</span>
       </div>
       <!-- <div layout="row" layout-align="space-between center" ng-if="bookingDialog.requests.request.voucher_value">
         <span class="md-body-2">{{ 'shared.voucher' | translate }}</span>
