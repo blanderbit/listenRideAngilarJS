@@ -400,28 +400,6 @@ angular.module('bike').component('calendar', {
               );
             }
           );
-
-          //TODO: Move it to "on Accept" action
-
-          // bookingDialog.in_process = true;
-          // var data = {
-          //   "request": {
-          //     "status": 3
-          //   }
-          // };
-          // // requests.loadingChat = true;
-          // api.put("/requests/" + requests.request.id, data).then(
-          //   function (response) {
-          //     bookingDialog.in_process = false;
-          //     bookingDialog.hide();
-          //     reloadRequest(requests.request.id);
-          //   },
-          //   function (error) {
-          //     bookingDialog.in_process = false;
-          //     bookingDialog.errors = error.data.errors;
-          //     reloadRequest(requests.request.id);
-          //   }
-          // );
         };
 
         bookingDialog.cancel = function () {

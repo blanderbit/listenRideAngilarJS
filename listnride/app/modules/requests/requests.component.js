@@ -19,12 +19,11 @@ angular.module('requests', []).component('requests', {
     '$mdToast',
     'date',
     'accessControl',
-    'ENV',
     function RequestsController($localStorage, $interval, $filter,
       $mdMedia, $mdDialog, $window, api,
       $timeout, $location, $anchorScroll,
       $state, $stateParams, $translate, $mdToast, date,
-      accessControl, ENV) {
+      accessControl) {
       if (accessControl.requireLogin()) {
         return;
       } 
@@ -210,7 +209,7 @@ angular.module('requests', []).component('requests', {
             if (success.data.current_payout_method) {
               // Lister has already a payout method, so simply accept the request
               requests.loadingChat = true;
-              updateStatus(2);
+              updateStatus(3);
             } else {
               // Lister has no payout method yet, so show the payout method dialog
               showPayoutDialog(success.data);
