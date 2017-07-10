@@ -343,7 +343,6 @@ angular.module('bike').component('calendar', {
       calendar.confirmBooking = function () {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
-            debugger
             if (calendar.bikeFamily == 15 || success.data.current_payment_method) {
               showBookingDialog();
             } else {
@@ -430,6 +429,11 @@ angular.module('bike').component('calendar', {
           //   }
           // );
         };
+
+        bookingDialog.cancel = function () {
+          bookingDialog.hide();
+          calendar.requested = false;
+        }
       };
 
       var showPaymentDialog = function (event) {
