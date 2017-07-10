@@ -59,17 +59,14 @@
         <span class="md-body-2">{{ 'shared.lnr-fee' | translate }}</span>
         <span class="md-body-1">{{ bookingDialog.lnrFee | currency: '€' }}</span>
       </div>
-      <!--TODO VOUCHERS!!!-->
-      <!--<div layout="row" layout-align="space-between center" ng-if="bookingDialog.requests.request.user.balance">-->
-        <!--<span class="md-body-2">{{ 'shared.balance' | translate }}</span>-->
-        <!--<span class="md-body-1">{{ bookingDialog.requests.request.user.balance | currency: '€' }}</span>-->
-      <!--</div>-->
+      <div layout="row" layout-align="space-between center" ng-if="bookingDialog.balance">
+        <span class="md-body-2">{{ 'shared.balance' | translate }}</span>
+        <span class="md-body-1">{{ bookingDialog.balance | currency: '€' }}</span>
+      </div>
       <div layout="row" layout-align="space-between center">
         <span class="md-body-2">{{ 'shared.total' | translate }}</span>
-        <span class="md-body-2">{{ bookingDialog.total | currency: '€' }}</span>
-        <!--TODO VOUCHERS!!!-->
-        <!--<span ng-if="bookingDialog.requests.request.total - bookingDialog.requests.request.user.balance < 0" class="md-body-2">{{ 0 | currency: '€' }}</span>-->
-        <!--<span ng-if="bookingDialog.requests.request.total - bookingDialog.requests.request.user.balance >= 0" class="md-body-2">{{ bookingDialog.requests.request.total - bookingDialog.requests.request.voucher_value | currency: '€'  }}</span>-->
+        <span ng-if="bookingDialog.total - bookingDialog.balance < 0" class="md-body-2">{{ 0 | currency: '€' }}</span>
+        <span ng-if="bookingDialog.total - bookingDialog.balance >= 0" class="md-body-2">{{ bookingDialog.total - bookingDialog.balance | currency: '€'  }}</span>
       </div>
       <!-- <div layout="row" layout-align="space-between center" ng-if="bookingDialog.requests.request.voucher_value">
         <span class="md-body-2">{{ 'shared.voucher' | translate }}</span>

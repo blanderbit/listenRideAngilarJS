@@ -89,8 +89,8 @@ angular.module('bike').component('calendar', {
         calendar.requested = true;
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
-            var user = success.data;
-            if (calendar.bikeFamily == calendar.event.familyId || (user.has_address && user.confirmed_phone && user.status >= 1)) {
+            calendar.rider = success.data;
+            if (calendar.bikeFamily == calendar.event.familyId || (calendar.rider.has_address && calendar.rider.confirmed_phone && calendar.rider.status >= 1)) {
               calendar.confirmBooking();
             }
             else {
@@ -341,18 +341,12 @@ angular.module('bike').component('calendar', {
 
       // This function handles booking and all necessary validations
       calendar.confirmBooking = function () {
-        api.get('/users/' + $localStorage.userId).then(
-          function (success) {
-            if (calendar.bikeFamily == 15 || success.data.current_payment_method) {
-              showBookingDialog();
-            } else {
-              // User did not enter any payment method yet
-              showPaymentDialog();
-            }
-          },
-          function () {
-          }
-        );
+        if (calendar.bikeFamily == 15 || calendar.rider.current_payment_method) {
+          showBookingDialog();
+        } else {
+          // User did not enter any payment method yet
+          showPaymentDialog();
+        }
       };
 
       var showBookingDialog = function (event) {
@@ -379,7 +373,7 @@ angular.module('bike').component('calendar', {
         bookingDialog.endDate = calendar.endDate;
         bookingDialog.lnrFee = calendar.lnrFee;
         bookingDialog.subtotal = calendar.subtotal;
-
+        bookingDialog.balance = calendar.rider.balance;
         bookingDialog.hide = hideDialog;
 
         bookingDialog.book = function () {
