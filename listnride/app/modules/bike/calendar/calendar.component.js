@@ -67,8 +67,8 @@ angular.module('bike').component('calendar', {
               $scope.$apply(function () {
                 calendar.startDate = start;
                 calendar.endDate = end;
-                dateChange(calendar.startDate, calendar.endDate);
                 setInitHours();
+                dateChange(calendar.startDate, calendar.endDate);
               });
             });
           }
@@ -492,11 +492,16 @@ angular.module('bike').component('calendar', {
           firstDay = openHours(firstDay);
           lastDay = openHours(lastDay);
           calendar.startTime = firstDay[0];
-          calendar.endTime = lastDay[lastDay.length - 1]
-        } else if (moment(calendar.startDate).isSame(moment(), 'day')) {
-          calendar.startTime = moment().add(1, 'hours').hour()
+          calendar.endTime = lastDay[lastDay.length - 1];
+          calendar.startDate = moment(calendar.startDate).hour(calendar.startTime)._d;
+          calendar.endDate = moment(calendar.endDate).hour(calendar.endTime)._d;
         } else {
           calendar.startTime = 10
+        }
+        // If date today
+        if (moment(calendar.startDate).isSame(moment(), 'day')) {
+          calendar.startTime = moment().add(1, 'hours').hour();
+          calendar.startDate = moment(calendar.startDate).hour(calendar.startTime)._d;
         }
       }
 
