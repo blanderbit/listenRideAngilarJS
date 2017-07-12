@@ -8,12 +8,12 @@ angular.module('home',[]).component('home', {
       var home = this;
 
       if ($state.current.name == "verify" && authentication.loggedIn()) {
-        verification.openDialog(false);
+        verification.openDialog(false, false, window.event);
       } else if ($state.current.name == "confirm") {
         $mdDialog.show({
           templateUrl: 'app/modules/shared/dialogs/spinner.template.html',
           parent: angular.element(document.body),
-          targetEvent: event,
+          targetEvent: window.event,
           openFrom: angular.element(document.body),
           closeTo: angular.element(document.body),
           clickOutsideToClose: false,
