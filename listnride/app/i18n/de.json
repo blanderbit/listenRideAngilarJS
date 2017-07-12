@@ -208,6 +208,7 @@
     "listChat": "Anfrage von",
     "rideChat": "Anfrage an",
     "ratings": {
+      "title": "Wie hat dir die Gesamterfahrung gefallen?",
       "description": "Vertrauen und Sicherheit sind für uns das Wichtigste. Mit einer kurzen Bewertung hilfst du der gesamten Community.",
       "1": "Inakzeptabel",
       "2": "Schlecht",

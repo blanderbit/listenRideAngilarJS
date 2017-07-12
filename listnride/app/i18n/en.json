@@ -203,6 +203,7 @@
     "listChat": "Request by {{user.first_name}} {{user.last_name}}",
     "rideChat": "Request at {{lister.first_name}} {{lister.last_name}}",
     "ratings": {
+      "title": "How did you like the overall experience?",
       "description": "Trust and Safety are our paramount concern. By writing a short review, you'll help the whole community.",
       "1": "Unacceptable",
       "2": "Bad",

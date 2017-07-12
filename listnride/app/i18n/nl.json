@@ -208,6 +208,7 @@
     "listChat": "Aanvragen van",
     "rideChat": "Aanvragen aan",
     "ratings": {
+      "title": "How did you like the overall experience?",
       "description": "Vertrouwen en Veiligheid zijn voor ons het belangrijkste. Met een korte recensie help je de gehele community.",
       "1": "onacceptabel",
       "2": "Slecht",
