@@ -341,7 +341,7 @@ angular.module('bike').component('calendar', {
 
       // This function handles booking and all necessary validations
       calendar.confirmBooking = function () {
-        if (calendar.bikeFamily == 15 || calendar.rider.current_payment_method) {
+        if (calendar.bikeFamily === 15 || !_.isEmpty(calendar.rider.current_payment_method)) {
           showBookingDialog();
         } else {
           // User did not enter any payment method yet
@@ -435,6 +435,7 @@ angular.module('bike').component('calendar', {
           $window.open(ENV.userEndpoint + $localStorage.userId + "/payment_methods/new?locale=" + locale, "popup", "width=" + w + ",height=" + h + ",left=" + left + ",top=" + top);
           // For small screens, show Chat Dialog again
           hideDialog();
+          calendar.requested = false;
         }
       };
 
