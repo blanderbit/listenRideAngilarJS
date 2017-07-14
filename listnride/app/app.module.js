@@ -20,6 +20,7 @@ angular.module('listnride', [
   'settings',
   'invoices',
   'velothonBikerental',
+  'cyclassicsHamburg',
   'jobs',
   'listingABike',
   'rentingABike',

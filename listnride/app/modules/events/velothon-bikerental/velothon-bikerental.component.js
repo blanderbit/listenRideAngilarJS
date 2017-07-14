@@ -21,7 +21,7 @@ angular.module('velothonBikerental',[]).component('velothonBikerental', {
 
             velothonBikerental.isAvailable = function (bike) {
                 console.log(bike);
-            }
+            };
 
             $translate('search.all-sizes').then(function (translation) {
                 velothonBikerental.sizeOptions[0].label = translation;
