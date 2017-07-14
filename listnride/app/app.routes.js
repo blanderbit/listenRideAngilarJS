@@ -175,6 +175,24 @@
       });
 
       $stateProvider.state({
+        name: 'cyclassicsHamburg',
+        url: '/cyclassics-hamburg',
+        template: '<cyclassics-hamburg></cyclassics-hamburg>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.cyclassics-hamburg.meta-title", "events.cyclassics-hamburg.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.cyclassics-hamburg.meta-title"]);
+                ngMeta.setTag("description", translations["events.cyclassics-hamburg.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'velothonBikerental',
         url: '/velothon-bikerental',
         template: '<velothon-bikerental></velothon-bikerental>',
