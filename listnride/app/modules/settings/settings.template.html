@@ -192,9 +192,9 @@
               </div>
               <div flex-gt-xs="70" layout="column" layout-margin>
                 <p>{{ 'settings.payment-method-description' | translate }}</p>
-                <p class="md-body-2" ng-if="settings.user.current_payment_method && settings.user.current_payment_method.type == 1">{{ 'settings.payment-credit-card' | translate }} {{ settings.user.current_payment_method.details }}</p>
-                <p class="md-body-2" ng-if="settings.user.current_payment_method && settings.user.current_payment_method.type == 2">{{ 'settings.payment-paypal' | translate }} {{ settings.user.current_payment_method.details }}</p>
-                <p ng-if="!settings.user.current_payment_method">{{ 'settings.no-payment-method' | translate }}</p>
+                <p class="md-body-2" ng-if="settings.current_payment && settings.user.current_payment_method.type == 1">{{ 'settings.payment-credit-card' | translate }} {{ settings.user.current_payment_method.details }}</p>
+                <p class="md-body-2" ng-if="settings.current_payment && settings.user.current_payment_method.type == 2">{{ 'settings.payment-paypal' | translate }} {{ settings.user.current_payment_method.details }}</p>
+                <p ng-if="!settings.current_payment">{{ 'settings.no-payment-method' | translate }}</p>
                 <div layout="row" layout-align="end">
                   <md-button class="md-raised md-primary" ng-click="settings.openPaymentWindow()">{{ 'settings.add-payment-method' | translate }}</md-button>
                 </div>
