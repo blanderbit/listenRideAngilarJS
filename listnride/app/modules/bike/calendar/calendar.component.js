@@ -90,18 +90,23 @@ angular.module('bike').component('calendar', {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             calendar.rider = success.data;
-            if (calendar.bikeFamily == calendar.event.familyId || (calendar.rider.has_address && calendar.rider.confirmed_phone && calendar.rider.status >= 1)) {
-              calendar.confirmBooking();
-            }
-            else {
-              calendar.requested = false;
-              verification.openDialog(false);
-            }
+            varifyOrConfirm();
           },
           function (error) {
           }
         );
       };
+
+
+      function varifyOrConfirm() {
+        if (calendar.bikeFamily == calendar.event.familyId || (calendar.rider.has_address && calendar.rider.confirmed_phone && calendar.rider.status >= 1)) {
+          calendar.confirmBooking();
+        }
+        else {
+          calendar.requested = false;
+          verification.openDialog(false, false, false, calendar.confirmBooking);
+        }
+      }
 
       calendar.promptAuthentication = function(event) {
         // Appending dialog to document.body to cover sidenav in docs app
