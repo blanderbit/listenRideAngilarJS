@@ -19,12 +19,11 @@ angular.module('requests', []).component('requests', {
     '$mdToast',
     'date',
     'accessControl',
-    'ENV',
     function RequestsController($localStorage, $interval, $filter,
       $mdMedia, $mdDialog, $window, api,
       $timeout, $location, $anchorScroll,
       $state, $stateParams, $translate, $mdToast, date,
-      accessControl, ENV) {
+      accessControl) {
       if (accessControl.requireLogin()) {
         return;
       } 
@@ -203,22 +202,6 @@ angular.module('requests', []).component('requests', {
         );
       };
 
-      // This function handles booking and all necessary validations
-      requests.confirmBooking = function () {
-        api.get('/users/' + $localStorage.userId).then(
-          function (success) {
-            if (requests.request.ride.family == 15 || success.data.current_payment_method) {
-              showBookingDialog();
-            } else {
-              // User did not enter any payment method yet
-              showPaymentDialog();
-            }
-          },
-          function () {
-          }
-        );
-      }
-
       // This function handles request accept and all validations
       requests.acceptBooking = function() {
         api.get('/users/' + $localStorage.userId).then(
@@ -226,7 +209,7 @@ angular.module('requests', []).component('requests', {
             if (success.data.current_payout_method) {
               // Lister has already a payout method, so simply accept the request
               requests.loadingChat = true;
-              updateStatus(2);
+              updateStatus(3);
             } else {
               // Lister has no payout method yet, so show the payout method dialog
               showPayoutDialog(success.data);
@@ -236,21 +219,7 @@ angular.module('requests', []).component('requests', {
 
           }
         );
-      }
-
-      var showPaymentDialog = function (event) {
-        $mdDialog.show({
-          controller: PaymentDialogController,
-          controllerAs: 'paymentDialog',
-          templateUrl: 'app/modules/requests/paymentDialog.template.html',
-          parent: angular.element(document.body),
-          targetEvent: event,
-          openFrom: angular.element(document.body),
-          closeTo: angular.element(document.body),
-          clickOutsideToClose: true,
-          fullscreen: false // Only for -xs, -sm breakpoints.
-        });
-      }
+      };
 
       var showPayoutDialog = function(user, event) {
         $mdDialog.show({
@@ -265,27 +234,13 @@ angular.module('requests', []).component('requests', {
           clickOutsideToClose: false,
           fullscreen: true // Only for -xs, -sm breakpoints.
         });
-      }
+      };
 
       var showChatDialog = function (event) {
         $mdDialog.show({
           controller: ChatDialogController,
           controllerAs: 'chatDialog',
           templateUrl: 'app/modules/requests/chatDialog.template.html',
-          parent: angular.element(document.body),
-          targetEvent: event,
-          openFrom: angular.element(document.body),
-          closeTo: angular.element(document.body),
-          clickOutsideToClose: false,
-          fullscreen: true // Only for -xs, -sm breakpoints.
-        });
-      }
-
-      var showBookingDialog = function (event) {
-        $mdDialog.show({
-          controller: BookingDialogController,
-          controllerAs: 'bookingDialog',
-          templateUrl: 'app/modules/requests/bookingDialog.template.html',
           parent: angular.element(document.body),
           targetEvent: event,
           openFrom: angular.element(document.body),
@@ -348,54 +303,6 @@ angular.module('requests', []).component('requests', {
         chatDialog.hide = function () {
           $mdDialog.hide();
         };
-      };
-
-      var BookingDialogController = function () {
-        var bookingDialog = this;
-        bookingDialog.requests = requests;
-        bookingDialog.errors = {};
-        bookingDialog.in_process = false;
-        bookingDialog.duration = date.duration(requests.request.start_date, requests.request.end_date);
-
-        bookingDialog.hide = hideDialog;
-
-        bookingDialog.book = function () {
-          bookingDialog.in_process = true;
-          var data = {
-            "request": {
-              "status": 3
-            }
-          };
-          requests.loadingChat = true;
-          api.put("/requests/" + requests.request.id, data).then(
-            function (response) {
-              bookingDialog.in_process = false;
-              bookingDialog.hide();
-              reloadRequest(requests.request.id);
-            },
-            function (error) {
-              bookingDialog.in_process = false;
-              bookingDialog.errors = error.data.errors;
-              reloadRequest(requests.request.id);
-            }
-          );
-        };
-      };
-
-      var PaymentDialogController = function () {
-        var paymentDialog = this;
-
-        paymentDialog.openPaymentForm = function () {
-          var w = 550;
-          var h = 700;
-          var left = (screen.width / 2) - (w / 2);
-          var top = (screen.height / 2) - (h / 2);
-
-          var locale = $translate.use();
-          $window.open(ENV.userEndpoint + $localStorage.userId + "/payment_methods/new?locale=" + locale, "popup", "width=" + w + ",height=" + h + ",left=" + left + ",top=" + top);
-          // For small screens, show Chat Dialog again
-          hideDialog();
-        }
       };
 
       // TODO: this code is appearing twice, here and in the settings Controller (settings.component.rb)

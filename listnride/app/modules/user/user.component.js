@@ -9,6 +9,7 @@ angular.module('user',[]).component('user', {
       user.hours = {};
       user.weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
       user.loaded = false;
+      user.current_payment = false;
       user.closedDay = closedDay;
 
       var userId;
@@ -16,7 +17,6 @@ angular.module('user',[]).component('user', {
 
       api.get('/users/' + userId).then(
         function(response) {
-          console.log(response);
           if (!response.data.active) {
             $state.go('404');
           } else {
@@ -27,6 +27,7 @@ angular.module('user',[]).component('user', {
             user.openingHoursEnabled = user.anyHours ? response.data.opening_hours.enabled : false;
             user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
             user.rating = (user.user.rating_lister + user.user.rating_rider);
+            user.current_payment = !_.isEmpty(response.data.current_payment_method);
             if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
               user.rating = user.rating / 2;
             }

@@ -8,7 +8,7 @@
       <span flex></span>
       <h2 class="md-headline">{{ 'requests.booking-overview' | translate }}</h2>
       <span flex></span>
-      <md-button class="md-icon-button" ng-click="bookingDialog.hide()" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="close booking">
+      <md-button class="md-icon-button" ng-click="bookingDialog.cancel()" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="close booking">
         <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
       </md-button>
     </div>
@@ -37,11 +37,11 @@
       <h3 class="md-title">{{ 'requests.booking' | translate }}</h3>
       <div layout="row" layout-align="space-between center">
         <span class="md-body-2">{{ 'shared.from' | translate }}</span>
-        <span class="md-body-1">{{ bookingDialog.requests.request.start_date | date: "dd.MM.yyyy, HH:mm" }}</span>
+        <span class="md-body-1">{{ bookingDialog.startDate | date: "dd.MM.yyyy, HH:mm" }}</span>
       </div>
       <div layout="row" layout-align="space-between center">
         <span class="md-body-2">{{ 'shared.to' | translate }}</span>
-        <span class="md-body-1">{{ bookingDialog.requests.request.end_date | date: "dd.MM.yyyy, HH:mm" }}</span>
+        <span class="md-body-1">{{ bookingDialog.endDate | date: "dd.MM.yyyy, HH:mm" }}</span>
       </div>
       <div layout="row" layout-align="space-between center">
         <span class="md-body-2">{{ 'shared.duration' | translate }}</span>
@@ -53,21 +53,19 @@
       <h3 class="md-title">{{ 'requests.price' | translate }}</h3>
       <div layout="row" layout-align="space-between center">
         <span class="md-body-2">{{ 'shared.subtotal' | translate }}</span>
-        <span class="md-body-1">{{ bookingDialog.requests.request.subtotal | currency: '€' }}</span>
+        <span class="md-body-1">{{ bookingDialog.subtotal | currency: '€' }}</span>
       </div>
       <div layout="row" layout-align="space-between center">
         <span class="md-body-2">{{ 'shared.lnr-fee' | translate }}</span>
-        <span class="md-body-1">{{ bookingDialog.requests.request.total - bookingDialog.requests.request.subtotal | currency: '€' }}</span>
+        <span class="md-body-1">{{ bookingDialog.lnrFee | currency: '€' }}</span>
       </div>
-      <!-- TO BE ACTIVATED WHEN NEW BACKEND GETS DEPLOYED -->
-      <div layout="row" layout-align="space-between center" ng-if="bookingDialog.requests.request.user.balance">
+      <div layout="row" layout-align="space-between center" ng-if="bookingDialog.balance">
         <span class="md-body-2">{{ 'shared.balance' | translate }}</span>
-        <span class="md-body-1">{{ bookingDialog.requests.request.user.balance | currency: '€' }}</span>
+        <span class="md-body-1">{{ bookingDialog.balance | currency: '€' }}</span>
       </div>
       <div layout="row" layout-align="space-between center">
         <span class="md-body-2">{{ 'shared.total' | translate }}</span>
-        <span ng-if="bookingDialog.requests.request.total - bookingDialog.requests.request.user.balance < 0" class="md-body-2">{{ 0 | currency: '€' }}</span>
-        <span ng-if="bookingDialog.requests.request.total - bookingDialog.requests.request.user.balance >= 0" class="md-body-2">{{ bookingDialog.requests.request.total - bookingDialog.requests.request.voucher_value | currency: '€'  }}</span>
+        <span class="md-body-2">{{ bookingDialog.total | currency: '€' }}</span>
       </div>
       <!-- <div layout="row" layout-align="space-between center" ng-if="bookingDialog.requests.request.voucher_value">
         <span class="md-body-2">{{ 'shared.voucher' | translate }}</span>
@@ -84,7 +82,7 @@
       <div class="md-dialog-buttons" layout="row" layout-align="space-between center">
         <md-button
           class="md-lined md-warn"
-          ng-click="bookingDialog.hide()"
+          ng-click="bookingDialog.cancel()"
           analytics-on analytics-category="button"
           analytics-event="clicked"
           ng-disabled="bookingDialog.in_process"

@@ -20,6 +20,21 @@ angular.
         $localStorage.referenceCode = referenceCode;
       };
 
+      // TODO: This is a duplicate of app.module.js
+      var retrieveLocale = function() {
+        var defaultLanguage = "en";
+        var availableLanguages = ["de", "en", "nl"];
+    
+        var host = window.location.host;
+        var retrievedLanguage = host.split('.')[0];
+    
+        if (availableLanguages.indexOf(retrievedLanguage) >= 0) {
+          return retrievedLanguage;
+        } else {
+          return defaultLanguage;
+        }
+      };
+
       // The Signup Dialog Controller
       var SignupDialogController = function($mdDialog, inviteCode) {
         var signupDialog = this;
@@ -37,7 +52,8 @@ angular.
               "profile_picture_url": profilePicture,
               "first_name": firstName,
               "last_name": lastName,
-              "ref_code": inviteCode
+              "ref_code": inviteCode,
+              "language": retrieveLocale()
             }
           };
           var invited = false;
@@ -72,7 +88,8 @@ angular.
               'password_hashed': sha256.encrypt(signupDialog.password),
               'first_name': signupDialog.firstName,
               'last_name': signupDialog.lastName,
-              'ref_code': inviteCode
+              'ref_code': inviteCode,
+              'language': retrieveLocale()
             }
           };
           signupDialog.signingUp = true;

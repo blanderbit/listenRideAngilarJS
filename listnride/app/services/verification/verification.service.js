@@ -5,7 +5,7 @@ angular.
   factory('verification', ['$mdDialog', '$mdToast','$q', '$interval', '$localStorage', '$state', '$translate', 'api', 'Upload',
     function($mdDialog, $mdToast, $q, $interval, $localStorage, $state, $translate, api, Upload) {
 
-      var VerificationDialogController = function(lister, invited) {
+      var VerificationDialogController = function(lister, invited, callback) {
         var verificationDialog = this;
         var poller = $interval(function() {
           reloadUser();
@@ -13,6 +13,7 @@ angular.
 
         verificationDialog.lister = lister;
         verificationDialog.invited = invited;
+        verificationDialog.callback = callback;
         verificationDialog.selectedIndex;
         verificationDialog.activeTab = 1;
         verificationDialog.firstName = $localStorage.firstName;
@@ -177,7 +178,7 @@ angular.
             case 3: uploadDescription(); verificationDialog.selectedIndex += 1; break;
             case 4: verificationDialog.selectedIndex += 1; break;
             case 5: verificationDialog.selectedIndex += 1; break;
-            case 6: uploadAddress(); $mdDialog.hide(); break;
+            case 6: uploadAddress(); if (callback) {callback()}; $mdDialog.hide(); break;
           }
         };
 
@@ -222,12 +223,13 @@ angular.
         }
       };
 
-      var openDialog = function(lister, invited, event) {
+      var openDialog = function(lister, invited, event, callback) {
         $mdDialog.show({
           controller: VerificationDialogController,
           locals: {
             lister: lister,
-            invited: invited
+            invited: invited,
+            callback: callback
           },
           controllerAs: 'verificationDialog',
           templateUrl: 'app/services/verification/verification.template.html',

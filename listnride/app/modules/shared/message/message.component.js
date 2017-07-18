@@ -33,9 +33,9 @@ angular.module('message',[]).component('message', {
 
       message.statusMessage = function() {
         if (message.request.rideChat) {
-          return message.status != null && message.status != 7
+          return message.status != null && message.status != 7 && message.status != 2 && message.status != 4;
         } else {
-          return message.status != null && message.status != 7 && message.status != 6;
+          return message.status != null && message.status != 7 && message.status != 6 && message.status != 2 && message.status != 4;
         }
         // return message.status != null && message.status != 7 && (!message.request.rideChat && message.status != 6);
       }

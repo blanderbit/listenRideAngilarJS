@@ -103,8 +103,10 @@ angular.module('settings',[]).component('settings', {
         settings.addChild = addChild;
         settings.removeInputDate = removeInputDate;
         settings.emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        settings.current_payment = false;
         userApi.getUserData().then(function (response) {
           settings.user = response.data;
+          settings.current_payment = !_.isEmpty(response.data.current_payment_method);
           updatePrivatePhoneNumber(response.data.phone_number);
           settings.loaded = true;
           settings.openingHoursEnabled = settings.user.opening_hours ? settings.user.opening_hours.enabled : false;

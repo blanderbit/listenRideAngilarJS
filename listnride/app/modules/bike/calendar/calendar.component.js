@@ -11,8 +11,21 @@ angular.module('bike').component('calendar', {
     priceWeek: '<',
     requests: '<'
   },
-  controller: ['$scope', '$localStorage', '$state', '$mdDialog', '$translate', '$mdToast', 'date', 'api', 'authentication', 'verification',
-    function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, $mdToast, date, api, authentication, verification) {
+  controller: ['$scope',
+      '$localStorage',
+      '$state',
+      '$mdDialog',
+      '$translate',
+      '$mdToast',
+      '$mdMedia',
+      '$window',
+      'date',
+      'api',
+      'authentication',
+      'verification',
+      'ENV',
+    function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, $mdToast,
+                                $mdMedia, $window, date, api, authentication, verification, ENV) {
       var calendar = this;
       calendar.authentication = authentication;
       calendar.requested = false;
@@ -54,8 +67,8 @@ angular.module('bike').component('calendar', {
               $scope.$apply(function () {
                 calendar.startDate = start;
                 calendar.endDate = end;
-                dateChange(calendar.startDate, calendar.endDate);
                 setInitHours();
+                dateChange(calendar.startDate, calendar.endDate);
               });
             });
           }
@@ -76,38 +89,24 @@ angular.module('bike').component('calendar', {
         calendar.requested = true;
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
-            var user = success.data;
-            if (calendar.bikeFamily == calendar.event.familyId || (user.has_address && user.confirmed_phone && user.status >= 1)) {
-              var data = {
-                user_id: $localStorage.userId,
-                ride_id: calendar.bikeId,
-                start_date: calendar.startDate.toISOString(),
-                end_date: calendar.endDate.toISOString()
-              };
-              api.post('/requests', data).then(
-                function(response) {
-                  $state.go('requests', {requestId: response.data.id});
-                },
-                function(error) {
-                  calendar.requested = false;
-                  $mdToast.show(
-                    $mdToast.simple()
-                      .textContent(error.data.errors[0].detail)
-                      .hideDelay(4000)
-                      .position('top center')
-                  );
-                }
-              );
-            }
-            else {
-              calendar.requested = false;
-              verification.openDialog(false);
-            }
+            calendar.rider = success.data;
+            varifyOrConfirm();
           },
           function (error) {
           }
         );
       };
+
+
+      function varifyOrConfirm() {
+        if (calendar.bikeFamily == calendar.event.familyId || (calendar.rider.has_address && calendar.rider.confirmed_phone && calendar.rider.status >= 1)) {
+          calendar.confirmBooking();
+        }
+        else {
+          calendar.requested = false;
+          verification.openDialog(false, false, false, calendar.confirmBooking);
+        }
+      }
 
       calendar.promptAuthentication = function(event) {
         // Appending dialog to document.body to cover sidenav in docs app
@@ -141,6 +140,7 @@ angular.module('bike').component('calendar', {
       calendar.event.pickupSlotId;
       calendar.event.returnSlotId;
 
+      // Absurdly high id to deactivate calendar
       calendar.event.familyId = 1500;
 
       var slotDuration = 1;
@@ -344,6 +344,135 @@ angular.module('bike').component('calendar', {
         return false
       };
 
+      // This function handles booking and all necessary validations
+      calendar.confirmBooking = function () {
+        if (calendar.bikeFamily === 15 || !_.isEmpty(calendar.rider.current_payment_method)) {
+          showBookingDialog();
+        } else {
+          // User did not enter any payment method yet
+          showPaymentDialog();
+        }
+      };
+
+      var showBookingDialog = function (event) {
+        $mdDialog.show({
+          controller: BookingDialogController,
+          controllerAs: 'bookingDialog',
+          templateUrl: 'app/modules/bike/calendar/bookingDialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: false,
+          fullscreen: true // Only for -xs, -sm breakpoints.
+        });
+      };
+
+      var BookingDialogController = function () {
+        var bookingDialog = this;
+        bookingDialog.errors = {};
+        bookingDialog.in_process = false;
+        bookingDialog.duration = date.duration(calendar.startDate, calendar.endDate);
+        bookingDialog.total = totalPriceCalculator();
+        bookingDialog.startDate = calendar.startDate;
+        bookingDialog.endDate = calendar.endDate;
+        bookingDialog.lnrFee = calendar.lnrFee;
+        bookingDialog.subtotal = calendar.subtotal;
+        bookingDialog.balance = calendar.rider.balance;
+        bookingDialog.hide = hideDialog;
+
+        bookingDialog.book = function () {
+          bookingDialog.hide();
+
+          var data = {
+            user_id: $localStorage.userId,
+            ride_id: calendar.bikeId,
+            start_date: calendar.startDate.toISOString(),
+            end_date: calendar.endDate.toISOString()
+          };
+
+          api.post('/requests', data).then(
+            function(response) {
+              $state.go('requests', {requestId: response.data.id});
+            },
+            function(error) {
+              calendar.requested = false;
+              $mdToast.show(
+                $mdToast.simple()
+                  .textContent(error.data.errors[0].detail)
+                  .hideDelay(4000)
+                  .position('top center')
+              );
+            }
+          );
+        };
+
+        bookingDialog.cancel = function () {
+          bookingDialog.hide();
+          calendar.requested = false;
+        }
+      };
+
+      var showPaymentDialog = function (event) {
+        $mdDialog.show({
+          controller: PaymentDialogController,
+          controllerAs: 'paymentDialog',
+          templateUrl: 'app/modules/bike/calendar/paymentDialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: true,
+          fullscreen: false // Only for -xs, -sm breakpoints.
+        });
+      };
+
+      var PaymentDialogController = function () {
+        var paymentDialog = this;
+
+        paymentDialog.openPaymentForm = function () {
+          var w = 550;
+          var h = 700;
+          var left = (screen.width / 2) - (w / 2);
+          var top = (screen.height / 2) - (h / 2);
+
+          var locale = $translate.use();
+          $window.open(ENV.userEndpoint + $localStorage.userId + "/payment_methods/new?locale=" + locale, "popup", "width=" + w + ",height=" + h + ",left=" + left + ",top=" + top);
+          // For small screens, show Chat Dialog again
+          hideDialog();
+          calendar.requested = false;
+        }
+      };
+
+      var hideDialog = function () {
+        // For small screens, show Chat Dialog again
+        if ($mdMedia('xs')) {
+            showChatDialog();
+        } else {
+            $mdDialog.hide();
+        }
+      };
+
+      var showChatDialog = function (event) {
+        $mdDialog.show({
+          controller: ChatDialogController,
+          controllerAs: 'chatDialog',
+          templateUrl: 'app/modules/requests/chatDialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: false,
+          fullscreen: true // Only for -xs, -sm breakpoints.
+        });
+      };
+
+      function totalPriceCalculator() {
+        var total = calendar.total - calendar.rider.balance;
+        total >= 0 ? total : total = 0;
+        return total
+      }
+
       function getWeekDay(date) {
         var dayOfWeek = date.getDay() - 1;
         if (dayOfWeek == - 1) {
@@ -369,11 +498,16 @@ angular.module('bike').component('calendar', {
           firstDay = openHours(firstDay);
           lastDay = openHours(lastDay);
           calendar.startTime = firstDay[0];
-          calendar.endTime = lastDay[lastDay.length - 1]
-        } else if (moment(calendar.startDate).isSame(moment(), 'day')) {
-          calendar.startTime = moment().add(1, 'hours').hour()
+          calendar.endTime = lastDay[lastDay.length - 1];
+          calendar.startDate = moment(calendar.startDate).hour(calendar.startTime)._d;
+          calendar.endDate = moment(calendar.endDate).hour(calendar.endTime)._d;
         } else {
           calendar.startTime = 10
+        }
+        // If date today
+        if (moment(calendar.startDate).isSame(moment(), 'day')) {
+          calendar.startTime = moment().add(1, 'hours').hour();
+          calendar.startDate = moment(calendar.startDate).hour(calendar.startTime)._d;
         }
       }
 
