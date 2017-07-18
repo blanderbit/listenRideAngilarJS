@@ -24,6 +24,7 @@
     "paderborn": "Paderborn",
     "utting": "Utting",
     "heidelberg": "Heidelberg",
+    "marl": "Marl",
     "frankfurt": "Frankfurt",
     "per": "pro",
     "hour": "Stunde",
@@ -273,8 +274,8 @@
   "home": {
     "landing-section-header": "Das perfekte Rad. Einfach mieten.",
     "landing-section-subheader": "Miete Dir auf listnride ein Fahrrad, wie Du es magst und gerade brauchst.",
-    "featured-bikes-header": "Fahrradverleih: Die Lieblinge der Rider",
-    "featured-bikes-subheader": "Schau, welche Fahrräder andere mieten und  entdecke Goldstückchen von Schindelhauer, Specialized und vielen mehr.",
+    "featured-bikes-header": "Fahrradverleih: Die Lieblinge der Community",
+    "featured-bikes-subheader": "Egal ob Rennrad, Mountain Bike, Stadtrad oder E-Bike, du kannst sie alle mieten. Hier sind die aktuellen Favoriten der Community.",
     "featured-tiles-header": "Lass dich inspirieren",
     "featured-tiles-subheader": "Wir arbeiten mit interessanten Marken zusammen, schreiben über unsere Erfahrung und fahren mit großartigen Menschen.",
     "featured-cities-header": "Im Sattel durch den Großstadtdschungel",
@@ -804,8 +805,10 @@
       "meta-description": "Radel mit listnride und Schicke Mütze  zum Grand Depart und miete dir hochwertige Rennräder aus der Community",
       "title": "Der Social Ride zum Grand Depart der Tour de France in Düsseldorf!",
       "text-1": "Eine Ausfahrt für alle Radenthusiasten die Lust haben gemeinsam den Beginn der Tour de France in Düsseldorf zu zelebrieren. <br><br>Zusammen mit unseren Freunden und Lokalhelden von der <a href=\"http://schickemuetze.de\">Schicke Mütze </a> laden wir euch zu einer entspannten Ausfahrt ein. Mit entspannten Tempo werden wir eine schöne Runde durch die Hügellandschaft Düsseldorfs fahren.<br>Falls du noch ein Rennrad für die Ausfahrt benötigst, bist Du herzlich willkommen dir ein hochwertiges Rennrad aus der listnride Bikesharing Community zu mieten. Wir sehen uns auf dem Rad :)",
-      "text-2": "<b>Start mit Kaffee bei der Schicke Mütze  - Untere Talstraße 22-24, Düsseldorf <br><br>Abfahrt um 10:00 Uhr <br><br>Distanz bis 60 km <br><br>Tempo 24-27 kmh, locker <br><br>Nach der Fahrt ab 18:00 - BBQ & Drinks @Schicke Mütze  - Untere Talstraße 22-24, Düsseldorf <br><br>Voraussetzungen Rennrad, Helm und Klickpedale</b>",
-      "sign-up": "Kostenlose Anmeldung"
+      "text-2": "<b>Am Freitag, 30. Juni 2017</b><br><br><b>Start mit Kaffee bei der Schicke Mütze  - Untere Talstraße 22-24, Düsseldorf <br><br>Abfahrt um 10:00 Uhr <br><br>Distanz bis 60 km <br><br>Tempo 24-27 kmh, locker <br><br>Nach der Fahrt ab 18:00 - BBQ & Drinks @Schicke Mütze  - Untere Talstraße 22-24, Düsseldorf <br><br>Voraussetzungen Rennrad, Helm und Klickpedale</b>",
+      "sign-up": "Kostenlos Anmelden",
+      "description": "Brauchst du noch ein Rennrad für das Wochenende?",
+      "subdescription": "Du bist herzlich willkommen dir ein hochwertiges Rennrad aus der listnride Bikesharing Community zu mieten. Wir sehen uns auf dem Rad!"
     },
     "crossride": {
       "title": "listnride Crossride",
@@ -1113,6 +1116,7 @@
     "meta-title": "listnride | Lade deine Freunde ein",
     "meta-description": "Teil dein Fahrradbegeisterung mit Freunden! lade deine Freunde zum listnride ein und bekomme einen 10€ Gutschein, sobald sich einen anmeldet. Wenn sie ein Fahrrad mieten oder das Eigene zur vermieten anbietet, bekommst du 10 €!",
     "title": "Lade Freunde ein und verdiene 10€",
+    "login": "Einloggen, um den Link zu sehen",
     "info-section": {
       "header": "Erhalte 10€ Guthaben, wenn einer deiner Freunde ein Rad bei listnride leiht oder sein Rad anbietet.",
       "subheader": "Du bist begeistert von listnride und findest, dass auch deine Freunde ein schönes Rad leihen sollten? Lade Sie ein Teil der Bikesharing Community zu werden!",
@@ -1151,7 +1155,7 @@
     "how-much": "Wie viel möchtest du investieren",
     "investment": "Investition",
     "submit": "Vormerken",
-    "form-feedback": "Danke für deinen Investitions-Vorschlag.",
+    "form-feedback": "Vielen Dank! Du hast dich erfolgreich für eine Investition vorgemerkt.",
     "faq-question-1": "WARUM STARTET LISTNRIDE EINE CROWDFUNDING-KAMPAGNE?",
     "faq-answer-1": "Wir sind ein junges Unternehmen mit einem gut entwickelten Produkt, einer wachsenden Community von Mietern und Fahrradbesitzern. Um weiteres Wachstum voranzutreiben eröffnen wir der Community und der Öffentlichkeit die Möglichkeit, neben weiteren Investoren, in unser Unternehmen zu investieren. Mit diesen zusätzlichen Ressourcen werden wir weitere Verbesserungen an unserem Produkt vornehmen, so wie weiterhin geografisch expandieren. Damit können wir die Community entwickeln, Mietern eine größere Auswahl an Fahrrädern und Fahrradbesitzern eine größere Nachfrage bieten.",
     "faq-question-2": "WIE KANN ICH IN LISTNRIDE INVESTIEREN?",
@@ -1161,11 +1165,11 @@
     "faq-question-4": "GIBT ES EINEN MINDESTBETRAG, DEN ICH INVESTIEREN MUSS?",
     "faq-answer-4": "Da wir so viele Personen wie möglich involvieren wollen, halten wir das Mindestinvestment niedrig, bei unter 10€ (exakter Betrag hängt von den Wechselkursen ab). Wir freuen uns über jeden Beitrag!",
     "faq-question-5": "WAS HAT LISTNRIDE BISHER ERREICHT?",
-    "faq-answer-5": "Seit unserem offiziellen Start im September 2016 mit Launch ein funktionsfähigen Web Plattform: Ist listnride zur größten Community Bike-Sharing Plattform in der DACH region, mit über 1100 Räder und 1.600 registrierten Usern, gewachsen. listnride hat über 100 Fahrradläden integriert und 5 innovativen Fahrradmarken für ein Testride Program auf der Plattform integriert. listnride hat ein starke Präsenz in Berlin, München, Wien, Amsterdam und Mallorca aufgebaut und wächst entwickelt sich in weiteren Großstädten wie Hamburg, Zürich und Düsseldorf.",
+    "faq-answer-5": "Seit unserem offiziellen Start im September 2016 mit Launch ein funktionsfähigen Web Plattform: Ist listnride zur größten Community Bike-Sharing Plattform in der DACH region, mit über 1.100 Räder und 1.600 registrierten Usern, gewachsen. listnride hat über 100 Fahrradläden und 5 innovative Fahrradmarken für ein Testride Program auf der Plattform integriert. listnride hat eine starke Präsenz in Berlin, München, Wien, Amsterdam und Mallorca aufgebaut und wächst in weiteren Großstädten wie Hamburg, Zürich und Düsseldorf.",
     "faq-question-6": "WIE KANN ICH MIT MEINEM INVESTMENT GELD VERDIENEN?",
     "faq-answer-6": "Es handelt sich um eine langfristige Investition und du kannst damit Gewinne erzielen, wenn du deine Anteile für mehr Geld verkaufst, als du bezahlt hast. Wenn listnride einen Exit macht und zum Beispiel von einem anderen Unternehmen übernommen wird, ist es wahrscheinlich, dass du deine Anteile zu diesem Zeitpunkt verkaufen kannst. Seedrs hat eine ausführliche Erklärung hier: <a href=\"https://www.seedrs.com/learn/help/how-do-i-make-a-profit-from-my-investment\" target=\"_blank\">Seedrs Campaign</a>",
     "faq-question-7": "WIE WIRD DAS EINGESAMMELTE GELD VERWENDET?",
-    "faq-answer-7": "Wir werden euer investiertes Geld für zwei primäre Zwecke einsetzen: Um unser Wachstum zu finanzieren und neue Nutzer, vornehmlich in den vorhandenen Märkten, zu gewinnen. Unsere Community kann mit höheren Nutzerzahlen den Mietern eine größere Auswahl, und Vermietern eine höhere Nachfrage bieten, was den Service für alle attraktiver macht. Um unser Plattform stetig durch neue Funktionen zu verbessern die das Miet-Erlebnis so einfach und effizient wie möglich macht. Intergration einer Versicherung und neue mobile Apps sind dabei die größten Milestones.",
+    "faq-answer-7": "Wir werden euer investiertes Geld für zwei primäre Zwecke einsetzen: Um unser Wachstum zu finanzieren und neue Nutzer, vornehmlich in den vorhandenen Märkten, zu gewinnen. Unsere Community kann mit höheren Nutzerzahlen den Mietern eine größere Auswahl, und Vermietern eine höhere Nachfrage bieten, was den Service für alle attraktiver macht. Um unsere Plattform stetig durch neue Funktionen zu verbessern die das Miet-Erlebnis so einfach und effizient wie möglich macht. Intergration einer Versicherung und neue mobile Apps sind dabei die größten Milestones.",
     "faq-question-8": "WEITERE FRAGEN?",
     "faq-answer-8": "Wir freuen uns über dein Interesse. Wenn du weitere Fragen hast, kontaktiere uns einfach unter <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a> und wir werden uns schnellstmöglich melden."
   }

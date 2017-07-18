@@ -51,8 +51,8 @@ var env = "production";
       }
 
       $("#listnride")
-        // intro text
-        .append('<div class="mdl-grid"><div mdl-cell mdl-cell--4-col><div class="lnr-intro-text">' + selectedLangText + '</div></div>')
+        // intro text (Disabled due to request by Jo 27.06.2017)
+        // .append('<div class="mdl-grid"><div mdl-cell mdl-cell--4-col><div class="lnr-intro-text">' + selectedLangText + '</div></div>')
         // bikes rendering
         .append('<div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid"></div>');
 

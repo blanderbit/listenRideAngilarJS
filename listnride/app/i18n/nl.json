@@ -24,6 +24,7 @@
     "paderborn": "Paderborn",
     "utting": "Utting",
     "heidelberg": "Heidelberg",
+    "marl": "Marl",
     "frankfurt": "Frankfurt",
     "per": "per",
     "hour": "Uur",
@@ -273,8 +274,8 @@
   "home": {
     "landing-section-header": "De perfekte fiets. Gewoon huren.",
     "landing-section-subheader": "Huur een fiets via listnride naar eigen smaak en gebruik.",
-    "featured-bikes-header": "Fietsverhuur: De hartendieven van de Riders",
-    "featured-bikes-subheader": "Zie ook welke fietsen andere huren en ontdek paradepaardjes van onder andere Bianchi, Canyon en nog veel meer.",
+    "featured-bikes-header": "Fietsverhuur: De favorieten van onze Community",
+    "featured-bikes-subheader": "of je nu een racefiets, mountainbike, stadsfiets of e-bike wilt, je huurt ze hier. Dit zijn de favorieten van onze Community.",
     "featured-tiles-header": "Raak geïnspireerd",
     "featured-tiles-subheader": "We werken samen met innovatieve merken, schrijven over interessante ontwikkelingen en nemen deel aan speciale evenementen",
     "featured-cities-header": "in het zadel door de Urban jungle",
@@ -800,8 +801,10 @@
       "meta-description": "Join listnride and Schicke Mütze for a social road ride in celebration of the Grand Départ. Rent a high-end road bike from the listnride bike-sharing community.",
       "title": "Rijd met ons mee en ontdek meer van de omgeving van Düsseldorf!",
       "text-1": "Voor alle wielerliefhebbers die voor de start van de Tour de France in Düsseldorf zijn en de benen los willen maken.<br><br> Samen met onze vrienden van de <a href=\"http://schickemuetze.de\">Schicke Mütze </a> nodigen je u uit voor deze ontspannen social ride. We zullen een mooie tour in de heuvels van Düsseldorf in een ontspannen tempo rijden.<br>Als u nog steeds een fiets nodig voor de tour, kan je een hoge kwaliteit racefiets uit de lijst van onze bike-sharing community huren. Veel fietsplezier :)",
-      "text-2": "<b>09:30 - Start met vooraf koffie bij de Schicke Mütze  - Untere 22-24, Düsseldorf<br><br>Vertrek om 10.00 uur<br><br>Afstand tot 60 km<br><br>24-27 kmh tempo, relaxt<br><br>Na de tour om 18:00 - BBQ & drankjes @ de Schicke Mütze , Düsseldorf<br><br>Verplicht racefiets, helm en klikpedalen</b>",
-      "sign-up": "Aanmelding kostenloos"
+      "text-2": "<b>Op vrijdag 30 juni</b><br><br><b>09:30 - Start met vooraf koffie bij de Schicke Mütze  - Untere 22-24, Düsseldorf<br><br>Vertrek om 10.00 uur<br><br>Afstand tot 60 km<br><br>24-27 kmh tempo, relaxt<br><br>Na de tour om 18:00 - BBQ & drankjes @ de Schicke Mütze , Düsseldorf<br><br>Verplicht racefiets, helm en klikpedalen</b>",
+      "sign-up": "Nü aanmelden",
+      "description": "Heb je nog een racefiets nodig voor het weekend?",
+      "subdescription": "We hebben we een breed scala aan mooie racefietsen. Ze gaan snel, dus boek de jouwe hier vandaag!"
     },
     "crossride": {
       "title": "listnride Crossride",
@@ -1109,6 +1112,7 @@
     "meta-title": "listnride Voucher Codes - Invite your friends",
     "meta-description": "Deel het geschenk van het fietsen! nodig je vrienden uit, en schenk ze 10 euro tegoed bij aanmelding. Als zij en fiets huren of een fiets plaatsen, ontvangt u ook een 10 euro tegoed!",
     "title": "Nodig vrieden uit en verdien 10€",
+    "login": "log in en ontvang je persoonlijke link",
     "info-section": {
       "header": "Ontvang 10€ tegoed, als één van je vrienden je uitnodiging aanneemt en een fiets huurt of zijn fiets aanbiedt op listnride.",
       "subheader": "Ben je een fan van bike sharing en de listnride service? nodig dan je vrienden uit om deel uit te maken van onze community.",
@@ -1146,7 +1150,7 @@
     "known-from": "listnride in the news",
     "investment": "Investment",
     "submit": "Preregister",
-    "form-feedback": "Thanks for your Investment Proposal.",
+    "form-feedback": "Thank you! You've successfully shared your level of interest with us.",
     "faq-question-1": "WHY DOES LISTNRIDE START A CROWDFUNDING CAMPAIGN?",
     "faq-answer-1": "We are a young company with a well developed product, a growing community of tenants and bicycle owners. To drive further growth, we offer the community and the public the opportunity to invest in our company alongside our current investors. With these additional resources, we will make further improvements to our product as well as continue to grow geographically and so grow the community, resulting in greater choice for riders and greater demand for listers.",
     "faq-question-2": "HOW CAN I INVEST IN LISTNRIDE?",

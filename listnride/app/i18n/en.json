@@ -24,6 +24,7 @@
     "paderborn": "Paderborn",
     "utting": "Utting",
     "heidelberg": "Heidelberg",
+    "marl": "Marl",
     "frankfurt": "Frankfurt",
     "per": "per",
     "hour": "hour",
@@ -285,8 +286,8 @@
   "home": {
     "landing-section-header": "The perfect bike. Simply rent it.",
     "landing-section-subheader": "Join listnride and find the bike that is right for you.",
-    "featured-bikes-header": "Bike rental: Our riders’ favorites",
-    "featured-bikes-subheader": "Have a look at the bikes other riders are renting and discover special gems by Schindelhauer, Specialized and many more.",
+    "featured-bikes-header": "Bike Rental: Our Community’s Favorites",
+    "featured-bikes-subheader": "Whether it’s road bikes, mountain bikes, cargo bikes, city bikes or e-bikes, you can rent them all. These are the current favorite rental bikes of the community.",
     "featured-tiles-header": "Get inspired",
     "featured-tiles-subheader": "We partner up with innovative brands, write about interesting developments and take part in special events.",
     "featured-cities-header": "Pedaling through the urban jungle",
@@ -776,8 +777,10 @@
       "text-1": "",
       "text-1": "Calling all cyclists in town for the start of the Tour de France in Düsseldorf - Let’s ride!<br><br>Together with our friends at <a href=\"http://schickemuetze.de\">Schicke Mütze</a>, we invite you to an easy paced social ride. We will ride a nice tour through the hilly surroundings of Düsseldorf, starting and finishing at the Schicke Mütze shop.<br><br>If you still need a road bike for the ride, you’re welcome to rent a high-end bike from the listnride bike-sharing community. See you out there :)",
       "title": "Join us for a social ride and discover Düsseldorf's beautiful surroundings!",
-      "text-2": "<b>Start with coffee at the Schickemutze - Untere Talstraße 22-24, Dusseldorf<br><br>Departure at 10:00 hours<br><br>Distance up to 60 km<br><br>Tempo 24-27 kmh, easy going<br><br>After the ride from 18:00 - BBQ & Drinks @ Schickemutze - Untere Talstraße 22-24, Dusseldorf<br><br>Requirements Road bike, helmet and click pedal</b>",
-      "sign-up": "Free Registration"
+      "text-2": "<b>On Friday, June 30, 2017</b><br><br><b>Start with coffee at the Schicke Mütze - Untere Talstraße 22-24, Dusseldorf<br><br>Departure at 10:00 hours<br><br>Distance up to 60 km<br><br>Tempo 24-27 kmh, easy going<br><br>After the ride from 18:00 - BBQ & Drinks @ Schicke Mütze - Untere Talstraße 22-24, Dusseldorf<br><br>Requirements Road bike, helmet and click pedal</b>",
+      "sign-up": "Sign up for free",
+      "description": "Still need a road bike for the big weekend?",
+      "subdescription": "Don't hesitate to book a great bike from our bike-sharing community."
     },
     "crossride": {
       "title": "listnride Crossride",
@@ -1083,6 +1086,7 @@
     "meta-title": "listnride | Invite your friends",
     "meta-description": "Give the gift of cycling! When you invite a friend to listnride, they’ll get a 10€ voucher as soon as they join. When they rent a bike or list their own, you’ll get 10€ too!",
     "title": "Invite Friends and Earn 10€",
+    "login": "Log in to get your invite link",
     "info-section": {
       "header": "Earn 10€ credit when a friend accepts your invite and rents a bike or lists one of their own.",
       "subheader": "Are you enthusiastic about listnride and want to spread the word? Then invite your friends to become part of the listnride bike sharing community.",
@@ -1120,7 +1124,7 @@
     "known-from": "listnride in the news",
     "investment": "Investment",
     "submit": "Preregister",
-    "form-feedback": "Thanks for your Investment Proposal.",
+    "form-feedback": "Thank you! You've successfully shared your level of interest with us.",
     "faq-question-1": "WHY DOES LISTNRIDE START A CROWDFUNDING CAMPAIGN?",
     "faq-answer-1": "We are a young company with a well developed product, a growing community of tenants and bicycle owners. To drive further growth, we offer the community and the public the opportunity to invest in our company alongside our current investors. With these additional resources, we will make further improvements to our product as well as continue to grow geographically and so grow the community, resulting in greater choice for riders and greater demand for listers.",
     "faq-question-2": "HOW CAN I INVEST IN LISTNRIDE?",
