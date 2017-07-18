@@ -48,13 +48,12 @@ angular.module('brompton-integration',[]).component('brompton', {
               case "Frankfurt": brompton.bikes.frankfurt.push(success.data[i]); break;
               case "Freiburg": brompton.bikes.freiburg.push(success.data[i]); break;
               case "Heidelberg": brompton.bikes.heidelberg.push(success.data[i]); break;
-              case "Marl": brompton.bikes.marl.push(success[i]); break;
+              case "Marl": brompton.bikes.marl.push(success.data[i]); break;
               case "München": brompton.bikes.munich.push(success.data[i]); break;
               case "Paderborn": brompton.bikes.paderborn.push(success.data[i]); break;
               case "Tübingen": brompton.bikes.tubingen.push(success.data[i]); break;
               case "Ulm": brompton.bikes.ulm.push(success.data[i]); break;
               case "Utting": brompton.bikes.utting.push(success.data[i]); break;
-              case "Heidelberg": brompton.bikes.heidelberg.push(success.data[i]); break;
             }
           }
           brompton.currentBikes = brompton.bikes["berlin"];
