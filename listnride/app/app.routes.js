@@ -31,7 +31,7 @@
 
       $stateProvider.state({
         name: 'confirm',
-        url: '/confirm/{confirmationCode:string}',
+        url: '/confirm/{userId:int}/{confirmationCode:string}',
         template: '<home></home>'
       });
 
