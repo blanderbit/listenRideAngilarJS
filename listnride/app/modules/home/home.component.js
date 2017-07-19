@@ -19,7 +19,7 @@ angular.module('home',[]).component('home', {
           clickOutsideToClose: false,
           escapeToClose: false
         });
-        api.get('/users/' + $localStorage.userId + '/confirm/' + $stateParams.confirmationCode).then(
+        api.get('/users/' + $stateParams.userId + '/confirm/' + $stateParams.confirmationCode).then(
           function (success) {
             $mdDialog.show(
               $mdDialog.alert()
