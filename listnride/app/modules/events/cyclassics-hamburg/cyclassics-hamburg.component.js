@@ -27,7 +27,7 @@ angular.module('cyclassicsHamburg',[]).component('cyclassicsHamburg', {
             cyclassicsHamburg.sizeOptions[0].label = translation;
         });
 
-        api.get('/rides?family=20').then(
+        api.get('/rides?category=20&location=Hamburg').then(
             function(response) {
                 cyclassicsHamburg.bikes = response.data;
             },
