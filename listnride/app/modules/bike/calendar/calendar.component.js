@@ -382,8 +382,6 @@ angular.module('bike').component('calendar', {
         bookingDialog.hide = hideDialog;
 
         bookingDialog.book = function () {
-          bookingDialog.hide();
-
           var data = {
             user_id: $localStorage.userId,
             ride_id: calendar.bikeId,
@@ -392,8 +390,27 @@ angular.module('bike').component('calendar', {
           };
 
           api.post('/requests', data).then(
-            function(response) {
-              $state.go('requests', {requestId: response.data.id});
+            function(success) {
+              calendar.current_request = success.data;
+              calendar.current_request.glued = true;
+              calendar.current_request.rideChat = $localStorage.userId == calendar.current_request.user.id;
+              calendar.current_request.rideChat ? calendar.current_request.chatFlow = "rideChat" : calendar.current_request.chatFlow = "listChat";
+
+              if (calendar.current_request.rideChat) {
+                calendar.current_request.rating = calendar.current_request.lister.rating_lister + calendar.current_request.lister.rating_rider;
+                if (calendar.current_request.lister.rating_lister != 0 && calendar.current_request.lister.rating_rider != 0) {
+                  calendar.current_request.rating = calendar.current_request.rating / 2
+                }
+              }
+              else {
+                calendar.current_request.rating = calendar.current_request.user.rating_lister + calendar.current_request.user.rating_rider;
+                if (calendar.current_request.user.rating_lister != 0 && calendar.current_request.user.rating_rider != 0) {
+                  calendar.current_request.rating = calendar.current_request.rating / 2
+                }
+              }
+              calendar.current_request.rating = Math.round(calendar.current_request.rating);
+              $state.go('requests', {requestId: success.data.id});
+              bookingDialog.hide();
             },
             function(error) {
               calendar.requested = false;
@@ -447,9 +464,9 @@ angular.module('bike').component('calendar', {
       var hideDialog = function () {
         // For small screens, show Chat Dialog again
         if ($mdMedia('xs')) {
-            showChatDialog();
+          showChatDialog();
         } else {
-            $mdDialog.hide();
+          $mdDialog.hide();
         }
       };
 
@@ -457,7 +474,7 @@ angular.module('bike').component('calendar', {
         $mdDialog.show({
           controller: ChatDialogController,
           controllerAs: 'chatDialog',
-          templateUrl: 'app/modules/requests/chatDialog.template.html',
+          templateUrl: 'app/modules/bike/calendar/chatDialog.template.html',
           parent: angular.element(document.body),
           targetEvent: event,
           openFrom: angular.element(document.body),
@@ -465,6 +482,14 @@ angular.module('bike').component('calendar', {
           clickOutsideToClose: false,
           fullscreen: true // Only for -xs, -sm breakpoints.
         });
+      };
+
+      var ChatDialogController = function () {
+        var chatDialog = this;
+        chatDialog.request = calendar.current_request;
+        chatDialog.hide = function () {
+          $mdDialog.hide();
+        };
       };
 
       function totalPriceCalculator() {
