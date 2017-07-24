@@ -129,8 +129,7 @@ angular.module('listnride', [
   $rootScope.location = $location;
   ngMeta.init();
 
-  if (authentication.loggedIn) {
-    console.log("Logged In Already");
+  if (authentication.loggedIn && !_.isEmpty(authentication.userId())) {
     api.get('/users/' + authentication.userId()).then(
       function (success) {
         var user = success.data;
