@@ -8,7 +8,8 @@
 
       <md-card-title-text flex="65" class="lnr-margin-left lnr-bike-title" layout="column" layout-align="space-around start">
         <span class="md-subhead">{{ ::bikeCard.bike.brand }}, {{ ::bikeCard.bike.category | category }}</span>
-        <span>{{ ::bikeCard.bike.name }}</span>
+        <span ng-if="!bikeCard.home">{{ ::bikeCard.bike.name }}</span>
+        <span ng-if="bikeCard.home">in {{ ::bikeCard.bike.city }}</span>
       </md-card-title-text>
 
       <div flex="20" layout="column" layout-align="space-around center">
