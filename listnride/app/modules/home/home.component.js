@@ -7,9 +7,9 @@ angular.module('home',[]).component('home', {
     function HomeController($state, $stateParams, $translate, $analytics, $localStorage, $mdDialog, verification, authentication, api, ngMeta, loadingDialog) {
       var home = this;
 
-      if ($state.current.name == "verify" && authentication.loggedIn()) {
+      if ($state.current.name === "verify" && authentication.loggedIn()) {
         verification.openDialog(false, false, window.event);
-      } else if ($state.current.name == "confirm") {
+      } else if ($state.current.name === "confirm") {
         $mdDialog.show({
           templateUrl: 'app/modules/shared/dialogs/spinner.template.html',
           parent: angular.element(document.body),
@@ -22,7 +22,7 @@ angular.module('home',[]).component('home', {
         api.get('/users/' + $stateParams.userId + '/confirm/' + $stateParams.confirmationCode).then(
           function (success) {
             $mdDialog.show(
-              $mdDialog.alert()
+              $mdDialog.show()
                 .clickOutsideToClose(true)
                 .title('Confirmation successful')
                 .textContent('Great, you\'ve successfully confirmed your email address!')
@@ -32,7 +32,7 @@ angular.module('home',[]).component('home', {
           },
           function (error) {
             $mdDialog.show(
-              $mdDialog.alert()
+              $mdDialog.show()
                 .clickOutsideToClose(true)
                 .title('Confirmation was not successful')
                 .textContent('The confirmation code seems to be wrong, please reach out to our customer support.')
