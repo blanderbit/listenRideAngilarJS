@@ -39,8 +39,6 @@ angular.
       var SignupDialogController = function($mdDialog, inviteCode) {
         var signupDialog = this;
 
-        console.log(inviteCode);
-
         signupDialog.signingUp = false;
 
         var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName) {
@@ -61,8 +59,8 @@ angular.
             invited = true;
           }
           api.post("/users", user).then(function(success) {
-            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages, success.data.ref_code);            
-            verification.openDialog(false, invited);
+            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages, success.data.ref_code);
+            verification.openDialog(false, invited, false, signupDialog.showProfile);
           }, function(error) {
             showSignupError();
           });
@@ -75,7 +73,7 @@ angular.
             .hideDelay(4000)
             .position('top center')
           );
-        }
+        };
 
         signupDialog.hide = function() {
           $mdDialog.hide();
@@ -100,7 +98,7 @@ angular.
           api.post('/users', user).then(function(success) {
             setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages, success.data.ref_code);
             $state.go('home');
-            verification.openDialog(false, invited);
+            verification.openDialog(false, invited, false, signupDialog.showProfile);
           }, function(error) {
             showSignupError();
             signupDialog.signingUp = false;
@@ -109,8 +107,6 @@ angular.
 
         signupDialog.connectFb = function() {
           ezfb.getLoginStatus(function(response) {
-            console.log("FB Get Login Status, Response:");
-            console.log(response);
             if (response.status === 'connected') {
               var accessToken = response.authResponse.accessToken;
               ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
@@ -118,8 +114,6 @@ angular.
               });
             } else {
               ezfb.login(function(response) {
-                console.log("FB Login, Response:");
-                console.log(response);
                 var accessToken = response.authResponse.accessToken;
                 ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
                   signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name);
@@ -129,6 +123,9 @@ angular.
           });
         };
 
+        signupDialog.showProfile = function() {
+          $state.go("user", {userId: $localStorage.userId});
+        };
       };
 
       // The Login Dialog Controller
@@ -143,7 +140,7 @@ angular.
             .hideDelay(3000)
             .position('top center')
           );
-        }
+        };
 
         var showLoginError = function() {
           $mdToast.show(
@@ -152,7 +149,7 @@ angular.
             .hideDelay(4000)
             .position('top center')
           );
-        }
+        };
 
         var loginFb = function(email, facebookId) {
           var user = {
@@ -164,10 +161,9 @@ angular.
           api.post('/users/login', user).then(function(response) {
             setCredentials(response.data.email, response.data.password_hashed, response.data.id, response.data.profile_picture.profile_picture.url, response.data.first_name, response.data.last_name, response.data.unread_messages, response.data.ref_code);
             showLoginSuccess();
-            if (!response.data.has_address || !response.data.confirmed_phone || response.data.status == 0) {
+            if (!response.data.has_address || !response.data.confirmed_phone || response.data.status === 0) {
               verification.openDialog(false);
             }
-            console.log(response.data);
           }, function(response) {
             showLoginError();
           });
@@ -175,7 +171,7 @@ angular.
 
         loginDialog.hide = function() {
           $mdDialog.hide();
-        }
+        };
 
         loginDialog.login = function() {
           var user = {
@@ -191,28 +187,25 @@ angular.
               verification.openDialog(false);
             }
           }, function(error) {
-            console.log(error);
             showLoginError();
           });
-        }
+        };
 
         loginDialog.connectFb = function() {
           ezfb.getLoginStatus(function(response) {
             if (response.status === 'connected') {
               ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                console.log(response);
                 loginFb(response.email, response.id);
               });
             } else {
               ezfb.login(function(response) {
                 ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                  console.log(response);
                   loginFb(response.email, response.id);
                 });
               }, {scope: 'email'});
             }
           });
-        }
+        };
 
         loginDialog.resetPassword = function() {
           var user = {
@@ -228,13 +221,12 @@ angular.
               .position('top center')
             );
           }, function(error) {
-            console.log(response);
+
           });
         }
-
       };
 
-      var showSignupDialog = function(inviteCode, event) {;
+      var showSignupDialog = function(inviteCode, event) {
         $mdDialog.show({
           controller: SignupDialogController,
           controllerAs: 'signupDialog',
@@ -276,11 +268,7 @@ angular.
       };
 
       var loggedIn = function() {
-        if ($localStorage.auth) {
-          return true;
-        } else {
-          return false;
-        }
+        return !!$localStorage.auth;
       };
 
       // Logs out the user by deleting the auth header from localStorage
@@ -306,9 +294,8 @@ angular.
             "email": email
           }
         };
-        console.log(user);
         return api.post('/users/login', user);
-      }
+      };
 
       // Further all functions to be exposed in the service
       return {
