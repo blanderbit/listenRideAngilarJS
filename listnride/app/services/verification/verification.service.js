@@ -11,6 +11,7 @@ angular.
           reloadUser();
         }, 5000);
 
+        verificationDialog.loaded = false;
         verificationDialog.lister = lister;
         verificationDialog.invited = invited;
         verificationDialog.callback = callback;
@@ -40,8 +41,10 @@ angular.
                 }
               }
               verificationDialog.user = success.data;
+              verificationDialog.loaded = true;
             },
             function (error) {
+              verificationDialog.loaded = true;
               console.log("Error fetching User Details");
             }
           );
