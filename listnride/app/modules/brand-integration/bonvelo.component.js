@@ -3,9 +3,10 @@
 angular.module('bonvelo-integration',[]).component('bonvelo', {
   templateUrl: 'app/modules/brand-integration/bonvelo.template.html',
   controllerAs: 'bonvelo',
-  controller: [ '$translate', 'api', 'ngMeta',
-    function BonveloController($translate, api, ngMeta) {
+  controller: [ '$translate', '$analytics', 'api', 'ngMeta',
+    function BonveloController($translate, $analytics, api, ngMeta) {
       var bonvelo = this;
+      $analytics.eventTrack('View Content', {  category: 'Brand Page', label: 'Bonvelo'});
 
       ngMeta.setTitle($translate.instant("brand-integration.bonvelo.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.bonvelo.meta-description"));

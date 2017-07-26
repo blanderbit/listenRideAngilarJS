@@ -3,9 +3,10 @@
 angular.module('inVeloVeritas',[]).component('inVeloVeritas', {
   templateUrl: 'app/modules/events/in-velo-veritas/in-velo-veritas.template.html',
   controllerAs: 'inVeloVeritas',
-  controller: ['NgMap', 'api', '$translate', 'ngMeta',
-    function InVeloVeritasController(NgMap, api, $translate, ngMeta) {
+  controller: ['NgMap', 'api', '$translate', '$analytics', 'ngMeta',
+    function InVeloVeritasController(NgMap, api, $translate, $analytics, ngMeta) {
       var inVeloVeritas = this;
+      $analytics.eventTrack('View Content', {  category: 'Event Page', label: 'inVeloVeritas'});
 
       ngMeta.setTitle($translate.instant("events.in-velo-veritas.meta-title"));
       ngMeta.setTag("description", $translate.instant("events.in-velo-veritas.meta-description"));

@@ -3,9 +3,10 @@
 angular.module('coffeespin',[]).component('coffeespin', {
   templateUrl: 'app/modules/events/velothon-bikerental/coffeespin.template.html',
   controllerAs: 'coffeespin',
-  controller: ['api',
-    function CoffeespinController(api) {
+  controller: ['$analytics', 'api',
+    function CoffeespinController($analytics, api) {
       var coffeespin = this;
+      $analytics.eventTrack('View Content', {  category: 'Event Page', label: 'Coffeespin'});
 
       coffeespin.bikes = [];
 

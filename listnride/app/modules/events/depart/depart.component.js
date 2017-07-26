@@ -3,9 +3,11 @@
 angular.module('depart',[]).component('depart', {
   templateUrl: 'app/modules/events/depart/depart.template.html',
   controllerAs: 'depart',
-  controller: ['api',
-    function DepartController(api) {
+  controller: ['$analytics', 'api',
+    function DepartController($analytics, api) {
       var depart = this;
+        $analytics.eventTrack('View Content', {  category: 'Event Page', label: 'Depart'});
+
         depart.bikes = [];
 
         api.get('/rides?family=18').then(
