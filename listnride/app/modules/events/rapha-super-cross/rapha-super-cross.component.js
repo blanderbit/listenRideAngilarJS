@@ -6,7 +6,7 @@ angular.module('raphaSuperCross',[]).component('raphaSuperCross', {
   controller: ['$analytics', 'NgMap', 'api',
     function RaphaSuperCrossController($analytics, NgMap, api) {
       var raphaSuperCross = this;
-      $analytics.eventTrack('View Content', {  category: 'Event Page', label: 'RaphaSuperCross'});
+      $analytics.eventTrack('ViewContent', {  category: 'Event Page', label: 'RaphaSuperCross'});
 
       api.get('/rides?family=7').then(
         function(response) {

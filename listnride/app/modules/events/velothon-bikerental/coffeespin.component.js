@@ -6,7 +6,7 @@ angular.module('coffeespin',[]).component('coffeespin', {
   controller: ['$analytics', 'api',
     function CoffeespinController($analytics, api) {
       var coffeespin = this;
-      $analytics.eventTrack('View Content', {  category: 'Event Page', label: 'Coffeespin'});
+      $analytics.eventTrack('ViewContent', {  category: 'Event Page', label: 'Coffeespin'});
 
       coffeespin.bikes = [];
 

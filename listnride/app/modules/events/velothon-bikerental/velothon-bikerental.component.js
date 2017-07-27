@@ -6,7 +6,7 @@ angular.module('velothonBikerental',[]).component('velothonBikerental', {
     controller: ['NgMap', 'api', '$translate', '$analytics', 'ngMeta',
         function VelothonBikerental(NgMap, api, $translate, $analytics, ngMeta) {
             var velothonBikerental = this;
-            $analytics.eventTrack('View Content', {  category: 'Event Page', label: 'Velothon Bikerental'});
+            $analytics.eventTrack('ViewContent', {  category: 'Event Page', label: 'Velothon Bikerental'});
 
             ngMeta.setTitle($translate.instant("events.velothon-bikerental.meta-title"));
             ngMeta.setTag("description", $translate.instant("events.velothon-bikerental.meta-description"));

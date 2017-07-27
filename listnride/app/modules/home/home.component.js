@@ -97,7 +97,7 @@ angular.module('home',[]).component('home', {
       };
 
       home.cityAnalytics = function(city) {
-        $analytics.eventTrack('View Content', {  category: 'City Page', label: city});
+        $analytics.eventTrack('ViewContent', {  category: 'City Page', label: city});
       };
     }
   ]

@@ -6,7 +6,7 @@ angular.module('mcbw',[]).component('mcbw', {
   controller: ['$analytics', 'api',
     function AmplerController($analytics, api) {
       var mcbw = this;
-      $analytics.eventTrack('View Content', {  category: 'Event Page', label: 'Mcbw'});
+      $analytics.eventTrack('ViewContent', {  category: 'Event Page', label: 'Mcbw'});
 
       mcbw.bikes1 = [];
       mcbw.bikes2 = [];

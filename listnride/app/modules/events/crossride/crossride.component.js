@@ -6,7 +6,7 @@ angular.module('crossride',[]).component('crossride', {
   controller: ['$analytics', 'api',
     function CrossrideController($analytics, api) {
       var crossride = this;
-      $analytics.eventTrack('View Content', {  category: 'Event Page', label: 'Bonvelo'});
+      $analytics.eventTrack('ViewContent', {  category: 'Event Page', label: 'Bonvelo'});
 
       api.get('/rides?family=9').then(
         function(response) {

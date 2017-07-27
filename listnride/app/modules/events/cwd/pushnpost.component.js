@@ -6,7 +6,7 @@ angular.module('pushnpost',[]).component('pushnpost', {
   controller: ['$analytics', 'api',
     function PushnpostController($analytics, api) {
       var pushnpost = this;
-      $analytics.eventTrack('View Content', {  category: 'Event Page', label: 'Pushnpost'});
+      $analytics.eventTrack('ViewContent', {  category: 'Event Page', label: 'Pushnpost'});
 
       pushnpost.bikes = [];
 

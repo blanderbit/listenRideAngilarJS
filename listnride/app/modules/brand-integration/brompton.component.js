@@ -5,7 +5,7 @@ angular.module('brompton-integration',[]).component('brompton', {
   controllerAs: 'brompton',
   controller: [ '$translate', '$analytics', 'api', 'ngMeta',
     function BromptonController($translate, $analytics, api, ngMeta) {
-      $analytics.eventTrack('View Content', {  category: 'Brand Page', label: 'Brompton'});
+      $analytics.eventTrack('ViewContent', {  category: 'Brand Page', label: 'Brompton'});
 
       ngMeta.setTitle($translate.instant("brand-integration.brompton.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.brompton.meta-description"));

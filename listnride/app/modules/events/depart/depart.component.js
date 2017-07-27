@@ -6,7 +6,7 @@ angular.module('depart',[]).component('depart', {
   controller: ['$analytics', 'api',
     function DepartController($analytics, api) {
       var depart = this;
-        $analytics.eventTrack('View Content', {  category: 'Event Page', label: 'Depart'});
+        $analytics.eventTrack('ViewContent', {  category: 'Event Page', label: 'Depart'});
 
         depart.bikes = [];
 

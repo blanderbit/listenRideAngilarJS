@@ -6,7 +6,7 @@ angular.module('kuchenundraketen',[]).component('kuchenundraketen', {
   controller: ['$analytics', 'api',
     function KuchenundraketenController($analytics, api) {
       var kuchenundraketen = this;
-      $analytics.eventTrack('View Content', {  category: 'Event Page', label: 'Kuchenundraketen'});
+      $analytics.eventTrack('ViewContent', {  category: 'Event Page', label: 'Kuchenundraketen'});
 
       kuchenundraketen.bikes = [];
 

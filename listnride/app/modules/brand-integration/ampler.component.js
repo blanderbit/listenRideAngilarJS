@@ -6,7 +6,7 @@ angular.module('ampler-integration',[]).component('ampler', {
   controller: [ '$translate', '$analytics', 'api', 'ngMeta',
     function AmplerController($translate, $analytics, api, ngMeta) {
       var ampler = this;
-      $analytics.eventTrack('View Content', {  category: 'Brand Page', label: 'Ampler'});
+      $analytics.eventTrack('ViewContent', {  category: 'Brand Page', label: 'Ampler'});
 
       ngMeta.setTitle($translate.instant("brand-integration.ampler.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.ampler.meta-descr"));

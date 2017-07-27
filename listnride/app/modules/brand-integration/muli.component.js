@@ -5,7 +5,7 @@ angular.module('muli-integration',[]).component('muli', {
   controllerAs: 'muli',
   controller: [ '$translate', '$analytics', 'api', 'ngMeta',
     function MuliController($translate, $analytics, api, ngMeta) {
-      $analytics.eventTrack('View Content', {  category: 'Brand Page', label: 'Muli'});
+      $analytics.eventTrack('ViewContent', {  category: 'Brand Page', label: 'Muli'});
 
       ngMeta.setTitle($translate.instant("brand-integration.muli.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.muli.meta-description"));
