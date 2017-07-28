@@ -110,6 +110,10 @@ md-grid-list md-grid-tile {
   background-color: rgba(250,250,250,1);
 }
 
+home .highlight-tile {
+  padding: 24px 0px;
+}
+
 invest .highlight-tile {
   height: 320px;
   padding: 4px;
@@ -785,19 +789,22 @@ home .section {
   background-image: url(../ui_images/static/lnr_listabike.jpg);
 }
 
-home md-grid-list md-grid-tile.tile1 {
+home md-grid-list md-grid-tile.tile-munich {
   background-image: url(../ui_images/cities/lnr_munich.jpg);
+  background-position: 50% 70%;
 }
 
-home md-grid-list md-grid-tile.tile2 {
+home md-grid-list md-grid-tile.tile-berlin {
   background-image: url(../ui_images/cities/lnr_berlin.jpg);
+  background-position: 70% 85%;
 }
 
-home md-grid-list md-grid-tile.tile3 {
+home md-grid-list md-grid-tile.tile-amsterdam {
   background-image: url(../ui_images/cities/lnr_amsterdam.jpg);
+  background-position: 50% 85%;
 }
 
-home md-grid-list md-grid-tile.tile4 {
+home md-grid-list md-grid-tile.tile-vienna {
   background-image: url(../ui_images/cities/lnr_vienna.jpg);
 }
 
@@ -811,6 +818,10 @@ home md-grid-list md-grid-tile.tile4 {
   height: auto;
   border-radius: 50%;
   margin-top: 16px;
+}
+
+#testimonials {
+  margin: 70px auto 25px auto;
 }
 
 .testimonials-text {
@@ -842,12 +853,21 @@ home md-grid-list md-grid-tile.tile4 {
 }
 
 #featuredTilesGrid .img-container {
-  height: 40%;
-  width: 100%;
+/*  height: 100px;*/
+  width: 130px;
+  height: 130px;
 }
 
 #featuredTilesGrid img {
-  height: 100%;
+  width: 100%;
+}
+
+#featuredTiles {
+  margin-top: 50px;
+}
+
+#featuredTiles h3 {
+  margin-top: 140px;
 }
 
 @media (max-width:599px) {
@@ -944,7 +964,7 @@ listing-card md-card img.md-card-image {
   text-overflow: ellipsis;
 }
 
-home #featuredCities a {
+home #featuredTiles a {
   width: 100%;
   height: 100%;
   color: #fff;
