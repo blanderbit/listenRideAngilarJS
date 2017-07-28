@@ -19,13 +19,14 @@ angular.module('bike').component('calendar', {
       '$mdToast',
       '$mdMedia',
       '$window',
+      '$analytics',
       'date',
       'api',
       'authentication',
       'verification',
       'ENV',
     function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, $mdToast,
-                                $mdMedia, $window, date, api, authentication, verification, ENV) {
+                                $mdMedia, $window, $analytics, date, api, authentication, verification, ENV) {
       var calendar = this;
       calendar.authentication = authentication;
       calendar.requested = false;
@@ -190,11 +191,7 @@ angular.module('bike').component('calendar', {
             if (value.reserved && calendar.event.slots[index-1].reserved) {
               bookingInBetween = true;
             }
-            if (bookingInBetween) {
-              value.returnDisabled = true;
-            } else {
-              value.returnDisabled = false;
-            }
+            value.returnDisabled = bookingInBetween;
           } else {
             value.returnDisabled = true;
           }
@@ -329,7 +326,7 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.isOptionEnabled = function($index, date) {
-        if (date == undefined) {
+        if (date === undefined) {
           return true
         } else if (moment().startOf('day').isSame(moment(date).startOf('day'))){ // Date today chosen
           return $index + 6 >= moment().hour() + 1;
@@ -411,6 +408,7 @@ angular.module('bike').component('calendar', {
               calendar.current_request.rating = Math.round(calendar.current_request.rating);
               $state.go('requests', {requestId: success.data.id});
               bookingDialog.hide();
+              $analytics.eventTrack('Request Bike', {  category: 'Book', label: 'Bike booked'});
             },
             function(error) {
               calendar.requested = false;
@@ -427,6 +425,7 @@ angular.module('bike').component('calendar', {
         bookingDialog.cancel = function () {
           bookingDialog.hide();
           calendar.requested = false;
+          $analytics.eventTrack('Request Bike', {  category: 'Cancel', label: 'Bike cancel'});
         }
       };
 

@@ -3,9 +3,10 @@
 angular.module('kuchenundraketen',[]).component('kuchenundraketen', {
   templateUrl: 'app/modules/events/cwd/kuchenundraketen.template.html',
   controllerAs: 'kuchenundraketen',
-  controller: ['api',
-    function KuchenundraketenController(api) {
+  controller: ['$analytics', 'api',
+    function KuchenundraketenController($analytics, api) {
       var kuchenundraketen = this;
+      $analytics.eventTrack('ViewContent', {  category: 'Event Page', label: 'Kuchenundraketen'});
 
       kuchenundraketen.bikes = [];
 
