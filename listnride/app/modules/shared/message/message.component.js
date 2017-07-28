@@ -18,9 +18,16 @@ angular.module('message',[]).component('message', {
   controller: [ '$translate', '$localStorage', '$mdDialog', 'api',
     function MessageController($translate, $localStorage, $mdDialog, api) {
       var message = this;
+
+      message.buttonClicked = false;
       
       message.closeDialog = function() {
         $mdDialog.hide();
+      }
+
+      message.book = function() {
+        message.buttonClicked = true;
+        message.acceptBooking();
       }
 
       message.sentMessage = function() {
@@ -42,6 +49,7 @@ angular.module('message',[]).component('message', {
 
       // TODO: Unfortunately doublecoded in message.component and requests.component
       message.updateStatus = function(statusId) {
+        message.buttonClicked = true;
         var data = {
           "request_id": message.request.id,
           "sender": $localStorage.userId,
@@ -65,6 +73,7 @@ angular.module('message',[]).component('message', {
           },
           function(error) {
             console.log("error updating request");
+            message.buttonClicked = false;
           }
         );
       };
