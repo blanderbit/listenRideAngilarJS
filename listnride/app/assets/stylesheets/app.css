@@ -791,14 +791,17 @@ home .section {
 
 home md-grid-list md-grid-tile.tile-munich {
   background-image: url(../ui_images/cities/lnr_munich.jpg);
+  background-position: 50% 70%;
 }
 
 home md-grid-list md-grid-tile.tile-berlin {
   background-image: url(../ui_images/cities/lnr_berlin.jpg);
+  background-position: 70% 85%;
 }
 
 home md-grid-list md-grid-tile.tile-amsterdam {
   background-image: url(../ui_images/cities/lnr_amsterdam.jpg);
+  background-position: 50% 85%;
 }
 
 home md-grid-list md-grid-tile.tile-vienna {
@@ -815,6 +818,10 @@ home md-grid-list md-grid-tile.tile-vienna {
   height: auto;
   border-radius: 50%;
   margin-top: 16px;
+}
+
+#testimonials {
+  margin: 70px auto 25px auto;
 }
 
 .testimonials-text {
@@ -853,6 +860,10 @@ home md-grid-list md-grid-tile.tile-vienna {
 
 #featuredTilesGrid img {
   width: 100%;
+}
+
+#featuredTiles {
+  margin-top: 50px;
 }
 
 #featuredTiles h3 {
