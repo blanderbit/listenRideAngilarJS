@@ -22,7 +22,8 @@ angular.module('ampler-integration',[]).component('ampler', {
         munich: [],
         hamburg: [],
         vienna: [],
-        zurich: []
+        zurich: [],
+        frankfurt: []
       };
       ampler.slickConfig = {
         enabled: true,
@@ -75,6 +76,7 @@ angular.module('ampler-integration',[]).component('ampler', {
               case "Hamburg": ampler.bikes.hamburg.push(success.data[i]); break;
               case "Wien": ampler.bikes.vienna.push(success.data[i]); break;
               case "Zürich": ampler.bikes.zurich.push(success.data[i]); break;
+              case "Frankfurt": ampler.bikes.frankfurt.push(success.data[i]); break;
             }
           }
           ampler.currentBikes = ampler.bikes["berlin"];
