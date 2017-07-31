@@ -43,6 +43,7 @@ angular.module('listnride', [
   'coffeespin',
   'depart',
   'invest',
+  'seoLanding',
   /* external modules */
   'ngMaterial',
   'ngMessages',
