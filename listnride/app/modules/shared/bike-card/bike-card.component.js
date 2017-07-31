@@ -5,7 +5,8 @@ angular.module('bikeCard',[]).component('bikeCard', {
   controllerAs: 'bikeCard',
   bindings: {
     bike: '<',
-    booked: '<'
+    booked: '<',
+    home: '<'
   },
   controller: ['$mdMedia',
     function BikeCardController($mdMedia) {
