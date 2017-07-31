@@ -42,6 +42,12 @@
       });
 
       $stateProvider.state({
+        name: 'seo-landing',
+        url: '/rent-ebikes-berlin',
+        template: '<seo-landing></seo-landing>'
+      });
+
+      $stateProvider.state({
         name: 'search',
         url: '/search/{location}?size&allterrain&race&city&kids&ebikes&special',
         template: '<search></search>',
