@@ -18,8 +18,27 @@
     </div>
 
     <form class="lnr-search-bar md-whiteframe-3dp" layout="row" md-theme="default">
-      <autocomplete autocomplete-id="home" flex="75" layout="column" location="home.location" placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}" place-changed="home.placeChanged(place)"></autocomplete>
-      <md-button ng-click="home.onSearchClick()" class="md-raised md-primary" id="submit" flex="25" analytics-on analytics-event="search" analytics-label="{{ home.location }}" analytics-category="form" analytics-value="8">{{ 'shared.search' | translate }}</md-button>
+      <autocomplete
+        autocomplete-id="home"
+        flex="75"
+        layout="column"
+        location="home.location"
+        placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"
+        place-changed="home.placeChanged(place)">
+      </autocomplete>
+      <md-button
+        ng-click="home.onSearchClick()"
+        class="md-raised md-primary"
+        id="submit"
+        flex="25"
+        analytics-on
+        analytics-event="Search"
+        analytics-label="{{ home.location }}"
+        analytics-category="City Search"
+        analytics-value="8"
+      >
+        {{ 'shared.search' | translate }}
+      </md-button>
     </form>
   </div>
 
@@ -146,25 +165,25 @@
     
     <md-grid-list class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="3" md-gutter="16px" md-row-height="1:1">
       <md-grid-tile class="tile1" md-colspan-gt-xs="2">
-        <a ui-sref="cities-munich" layout="row" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="munich">
+        <a ui-sref="cities-munich" layout="row" layout-align="center center" ng-click="home.cityAnalytics('munich')">
           <h3 class="md-title">{{ 'shared.munich' | translate }}</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile2" md-rowspan-gt-xs="2">
-        <a ui-sref="cities-berlin" layout="row" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="berlin">
+        <a ui-sref="cities-berlin" layout="row" layout-align="center center" ng-click="home.cityAnalytics('berlin')">
           <h3 class="md-title">{{ 'shared.berlin' | translate }}</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile3">
-        <a ui-sref="cities-amsterdam" layout="row" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="amsterdam">
+        <a ui-sref="cities-amsterdam" layout="row" layout-align="center center" ng-click="home.cityAnalytics('amsterdam')">
           <h3 class="md-title">{{ 'shared.amsterdam' | translate }}</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile4">
-        <a ui-sref="cities-vienna" layout="row" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="vienna">
+        <a ui-sref="cities-vienna" layout="row" layout-align="center center" ng-click="home.cityAnalytics('vienna')">
           <h3 class="md-title">{{ 'shared.vienna' | translate }}</h3>
         </a>
       </md-grid-tile>
@@ -185,7 +204,7 @@
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-munich">
-        <a href="cities-munich" target="_blank" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="munich">
+        <a ui-sref="cities-munich" target="_blank" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="munich">
           <h3 class="md-title">Munich</h3>
         </a>
       </md-grid-tile>

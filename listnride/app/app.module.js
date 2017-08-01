@@ -44,6 +44,7 @@ angular.module('listnride', [
   'depart',
   'invest',
   'supercrossMunich',
+  'seoLanding',
   /* external modules */
   'ngMaterial',
   'ngMessages',

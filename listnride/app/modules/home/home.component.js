@@ -3,8 +3,10 @@
 angular.module('home',[]).component('home', {
   templateUrl: 'app/modules/home/home.template.html',
   controllerAs: 'home',
-  controller: [ '$state', '$stateParams', '$translate', '$analytics', '$localStorage', '$mdDialog', 'verification', 'authentication', 'api', 'ngMeta', 'loadingDialog',
-    function HomeController($state, $stateParams, $translate, $analytics, $localStorage, $mdDialog, verification, authentication, api, ngMeta, loadingDialog) {
+  controller: [ '$state', '$stateParams', '$translate', '$analytics', '$localStorage',
+    '$mdDialog', 'verification', 'authentication', 'api', 'ngMeta', 'loadingDialog',
+    function HomeController($state, $stateParams, $translate, $analytics, $localStorage, $mdDialog,
+                            verification, authentication, api, ngMeta) {
       var home = this;
 
       if ($state.current.name === "verify" && authentication.loggedIn()) {
@@ -92,6 +94,10 @@ angular.module('home',[]).component('home', {
 
       home.onSearchClick = function() {
         $state.go('search', {location: home.location});
+      };
+
+      home.cityAnalytics = function(city) {
+        $analytics.eventTrack('ViewContent', {  category: 'City Page', label: city});
       };
     }
   ]

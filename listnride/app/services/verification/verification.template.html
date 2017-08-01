@@ -15,7 +15,7 @@
   </md-toolbar>
 
   <md-dialog-content>
-    <div class="md-dialog-content" layout="column">
+    <div class="md-dialog-content" layout="column" ng-style="{'display': verificationDialog.loaded ? '' : 'none'}">
       <p hide-xs class="md-headline lnr-center">{{ 'verification.verify-profile' | translate }}</p>
       <md-tabs class="content" md-dynamic-height md-no-ink md-no-ink-bar md-center-tabs="on" md-selected="verificationDialog.selectedIndex">
 

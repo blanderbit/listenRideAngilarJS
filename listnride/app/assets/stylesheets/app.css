@@ -789,22 +789,22 @@ home .section {
   background-image: url(../ui_images/static/lnr_listabike.jpg);
 }
 
-home md-grid-list md-grid-tile.tile-munich {
+md-grid-list md-grid-tile.tile-munich {
   background-image: url(../ui_images/cities/lnr_munich.jpg);
   background-position: 50% 70%;
 }
 
-home md-grid-list md-grid-tile.tile-berlin {
+md-grid-list md-grid-tile.tile-berlin {
   background-image: url(../ui_images/cities/lnr_berlin.jpg);
   background-position: 70% 85%;
 }
 
-home md-grid-list md-grid-tile.tile-amsterdam {
+md-grid-list md-grid-tile.tile-amsterdam {
   background-image: url(../ui_images/cities/lnr_amsterdam.jpg);
   background-position: 50% 85%;
 }
 
-home md-grid-list md-grid-tile.tile-vienna {
+md-grid-list md-grid-tile.tile-vienna {
   background-image: url(../ui_images/cities/lnr_vienna.jpg);
 }
 
@@ -1799,4 +1799,13 @@ invite .voucher-link {
 
 .vello-bikes bike-card {
   padding-bottom: 25px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  SEO-Landing
+/*-----------------------------------------------------------------------------------*/
+
+seo-landing .lnr-section-title {
+  margin-bottom: 0;
 }

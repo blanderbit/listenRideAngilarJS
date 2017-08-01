@@ -1149,5 +1149,20 @@
     "faq-answer-7": "We will use your invested money for two primary purposes: To finance our growth and win new users, especially in our existing markets / cities. Our community, with higher user numbers, can offer riders a wider choice, and provide higher demand to listers, making the service more appealing overall. To improve our platform steadily through new features that make the rental experience as easy and efficient as possible. Integrating an insurance product and new mobile apps are the biggest milestones set.",
     "faq-question-8": "FURTHER QUESTIONS?",
     "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
+  },
+
+  "seo": {
+    "berlin-ebike": {
+      "meta-title": "E-Bike Rentals in Berlin - Book a Test Ride",
+      "meta-description": "Test ride an E-Bike or Pedelec. Berlin’s biggest selection of e-bikes and pedelecs available for rent on listnride.com. Sign up and book yours today!",
+      "title": "Rent an E-Bike in Berlin",
+      "description": "We’ve got Berlin’s biggest selection of e-bikes and pedelecs for rent. Test one for a half day, full day, or even a week! Simply join the listnride community and book yours today.",
+      "headline-1": "Featured E-Bikes",
+      "headline-2": "More E-Bikes and Pedelecs",
+      "headline-3": "See our full selection of E-Bikes and Pedelecs for rent <a href=\"/search/berlin?ebikes=true\">here</a>",
+      "headline-4": "People in Berlin also rented <a href=\"/search/berlin?race=true\">Road Bikes</a>",
+      "headline-5": "Planning to Travel? Check out our other cities:",
+      "text": "E-Bikes can be the perfect option for the urban commuter. But for some, it’s simply too imprudent to make a significant investment without trying it out first. That’s where the listnride bike sharing community can help. With our selection of e-bikes and pedelecs for rent, you can test various models before you buy. E-Bikes are also great for renting while visiting Berlin. You can cover a lot more ground in a day - with a lot less effort - on an e-bike. Our community offers e-bikes and pedelecs from leading brands such as Ampler, Gazelle, Coboc, Cortina, Haibike, Smart, GoCycle, and Vello! Rent one today - they're available in Mitte near Alexanderplatz, in Prenzlauerberg, Kreuzberg, and throughout the city!"
+    }
   }
 }
