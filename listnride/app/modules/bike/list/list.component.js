@@ -3,8 +3,8 @@
 angular.module('list',[]).component('list', {
   templateUrl: 'app/modules/bike/list/list.template.html',
   controllerAs: 'list',
-  controller: ['$mdDialog', '$localStorage', '$state', '$scope', 'Upload', 'bikeOptions', 'api', '$timeout', 'verification', 'accessControl', 'loadingDialog',
-    function ListController($mdDialog, $localStorage, $state, $scope, Upload, bikeOptions, api, $timeout, verification, accessControl, loadingDialog) {
+  controller: ['$mdDialog', '$localStorage', '$state', '$scope', '$analytics', 'Upload', 'bikeOptions', 'api', '$timeout', 'verification', 'accessControl', 'loadingDialog',
+    function ListController($mdDialog, $localStorage, $state, $scope, $analytics, Upload, bikeOptions, api, $timeout, verification, accessControl, loadingDialog) {
       if (accessControl.requireLogin()) {
         return;
       }
@@ -91,6 +91,7 @@ angular.module('list',[]).component('list', {
                 function(response) {
                   loadingDialog.close();
                   $state.go("listings");
+                  $analytics.eventTrack('List a Bike', {  category: 'Bike Listed', label: 'Bike Listed'});
                 },
                 function(error) {
                   list.submitDisabled = false;
@@ -109,11 +110,11 @@ angular.module('list',[]).component('list', {
 
       list.nextTab = function() {
         list.selectedIndex = list.selectedIndex + 1;
-      }
+      };
 
       list.previousTab = function() {
         list.selectedIndex = list.selectedIndex - 1;
-      }
+      };
 
       list.addImage = function(files) {
         if (files && files.length)
@@ -124,7 +125,7 @@ angular.module('list',[]).component('list', {
 
       list.removeImage = function(index) {
         list.form.images.splice(index, 1);
-      }
+      };
 
       list.isCategoryValid = function() {
         return list.form.mainCategory !== undefined &&

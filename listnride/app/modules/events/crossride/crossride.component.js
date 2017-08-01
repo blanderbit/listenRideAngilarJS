@@ -3,9 +3,10 @@
 angular.module('crossride',[]).component('crossride', {
   templateUrl: 'app/modules/events/crossride/crossride.template.html',
   controllerAs: 'crossride',
-  controller: ['api',
-    function CrossrideController(api) {
+  controller: ['$analytics', 'api',
+    function CrossrideController($analytics, api) {
       var crossride = this;
+      $analytics.eventTrack('ViewContent', {  category: 'Event Page', label: 'Bonvelo'});
 
       api.get('/rides?family=9').then(
         function(response) {
@@ -14,9 +15,7 @@ angular.module('crossride',[]).component('crossride', {
         function(error) {
           console.log("Error retrieving User", error);
         }
-        
       );
-
     }
   ]
 });

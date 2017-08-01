@@ -42,6 +42,12 @@
       });
 
       $stateProvider.state({
+        name: 'seo-landing',
+        url: '/rent-ebikes-berlin',
+        template: '<seo-landing></seo-landing>'
+      });
+
+      $stateProvider.state({
         name: 'search',
         url: '/search/{location}?size&allterrain&race&city&kids&ebikes&special',
         template: '<search></search>',
@@ -214,6 +220,24 @@
               .then(function (translations) {
                 ngMeta.setTitle(translations["events.velothon-bikerental.meta-title"]);
                 ngMeta.setTag("description", translations["events.velothon-bikerental.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'supercrossMunich',
+        url: '/supercross-munich',
+        template: '<supercross-munich></supercross-munich>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.supercross-munich.meta-title", "events.supercross-munich.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.supercross-munich.meta-title"]);
+                ngMeta.setTag("description", translations["events.supercross-munich.meta-description"]);
               })
           }
         },
