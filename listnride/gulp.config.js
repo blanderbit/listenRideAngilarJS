@@ -134,10 +134,8 @@ module.exports = function () {
                 ENV: {
                     name: 'listnride',
                     html5Mode: true,
-                    // apiEndpoint: 'https://api.listnride.com/v2',
-                    // userEndpoint: 'https://api.listnride.com/v2/users/',
-                    apiEndpoint: 'https://listnride.herokuapp.com/v2',
-                    userEndpoint: 'https://listnride.herokuapp.com/v2/users/',
+                    apiEndpoint: 'https://api.listnride.com/v2',
+                    userEndpoint: 'https://api.listnride.com/v2/users/',
                     webappUrl: "http://www.listnride.com"
                 }
             }
