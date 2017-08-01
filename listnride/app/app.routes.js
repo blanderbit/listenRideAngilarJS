@@ -229,6 +229,24 @@
       });
 
       $stateProvider.state({
+        name: 'supercrossMunich',
+        url: '/supercross-munich',
+        template: '<supercross-munich></supercross-munich>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.supercross-munich.meta-title", "events.supercross-munich.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.supercross-munich.meta-title"]);
+                ngMeta.setTag("description", translations["events.supercross-munich.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'depart',
         url: '/grand-depart',
         template: '<depart></depart>',
