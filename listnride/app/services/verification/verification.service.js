@@ -2,8 +2,8 @@
 
 angular.
   module('listnride').
-  factory('verification', ['$mdDialog', '$mdToast','$q', '$interval', '$localStorage', '$state', '$translate', 'api', 'Upload',
-    function($mdDialog, $mdToast, $q, $interval, $localStorage, $state, $translate, api, Upload) {
+  factory('verification', ['$mdDialog', '$mdToast', '$q', '$interval', '$localStorage', '$state', '$translate', '$mdMedia', 'api', 'Upload',
+    function($mdDialog, $mdToast, $q, $interval, $localStorage, $state, $translate, $mdMedia, api, Upload) {
 
       var VerificationDialogController = function(lister, invited) {
         var verificationDialog = this;
@@ -22,6 +22,7 @@ angular.
         verificationDialog.croppedDataUrl = false;
         verificationDialog.validateObj = {size: {max: '20MB'}};
         verificationDialog.invalidFiles = {};
+        verificationDialog.mobileScreen = $mdMedia('xs');
 
         $state.current.name == "home" ? verificationDialog.firstTime = true : verificationDialog.firstTime = false;
         // Fires if scope gets destroyed and cancels poller
@@ -307,6 +308,6 @@ angular.
         openDialog: openDialog,
         sendSms: sendSms,
         confirmPhone: confirmPhone
-      }
+      };
     }
   ]);

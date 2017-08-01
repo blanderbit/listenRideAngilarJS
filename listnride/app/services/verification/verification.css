@@ -1,9 +1,12 @@
 .lnr-verification-modal md-tabs {
     width: 100%;
-    min-height: 470px;
-    min-width: 726px;
     overflow: visible;
     z-index: 1;
+}
+
+.lnr-verification-modal .verif-desktop {
+    min-height: 470px;
+    min-width: 726px;
 }
 
 .lnr-verification-modal .label {
@@ -17,6 +20,7 @@
     text-align: center;
     margin-left: 5px;
 }
+
 .lnr-verification-modal .label-public {
     background-color: #5FC693;
 }
@@ -39,7 +43,7 @@
     padding-bottom: 0;
 }
 
-.lnr-verification-modal md-tab-data{
+.lnr-verification-modal md-tab-data {
     opacity: 1;
     display: table;
     right: 0;
@@ -66,12 +70,12 @@
 }
 
 .lnr-verification-modal .iti-flag {
-    background-image: url(../ui_images/flags.png);
+    background-image: url(/app/assets/ui_images/flags.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .lnr-verification-modal .iti-flag {
-        background-image: url(../ui_images/flags@2x.png);
+        background-image: url(/app/assets/ui_images/flags@2x.png);
     }
 }
 
@@ -85,10 +89,13 @@
 }
 
 .lnr-verification-modal .md-body-1 {
-    width: 577px;
-    margin: 0.3rem 6rem;
     font-size: 16px;
     line-height: 28px;
+}
+
+.lnr-verification-modal .md-body-desktop {
+    width: 577px;
+    margin: 0.3rem 6rem;
 }
 
 .lnr-verification-modal .verif-1 .lnr-start {
@@ -105,7 +112,7 @@
 }
 
 .lnr-verification-modal .verif-2 .md-headline {
-    margin: 22px 0 22px 48px;
+    margin: 22px 0;
 }
 
 .lnr-verification-modal .verif-2 .md-body-1 {
@@ -121,8 +128,12 @@
     margin-top: 80px;
 }
 
-.lnr-verification-modal .verif-3 textarea {
+.lnr-verification-modal .verif-3 .verif-textarea-desktop textarea {
     width: 500px;
+}
+
+.lnr-verification-modal .verif-3 .verif-textarea-mobile textarea {
+    width: 300px;
 }
 
 .lnr-verification-modal .verif-buttons {
