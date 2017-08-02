@@ -27,7 +27,7 @@ angular.module('supercrossMunich',[]).component('supercrossMunich', {
                 supercrossMunich.sizeOptions[0].label = translation;
             });
 
-            api.get('/rides?category=35&location=Munich&priority=supercross&booked_at=2017-10-14').then(
+            api.get('/rides?category=35&location=Munich&booked_at=2017-10-14').then(
                 function(response) {
                     supercrossMunich.bikes = response.data;
                 },
