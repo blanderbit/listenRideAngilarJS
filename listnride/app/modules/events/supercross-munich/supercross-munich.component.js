@@ -29,7 +29,7 @@ angular.module('supercrossMunich',[]).component('supercrossMunich', {
 
             api.get('/rides?category=35&location=Munich&booked_at=2017-10-14').then(
                 function(response) {
-                    supercrossMunich.bikes = response.data;
+                    supercrossMunich.bikes = response.data.reverse();
                 },
                 function(error) {
                     console.log("Error retrieving User", error);
