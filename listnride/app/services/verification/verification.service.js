@@ -23,8 +23,9 @@ angular.
         verificationDialog.validateObj = {size: {max: '20MB'}};
         verificationDialog.invalidFiles = {};
         verificationDialog.mobileScreen = $mdMedia('xs');
+        verificationDialog.business = false;
 
-        $state.current.name == "home" ? verificationDialog.firstTime = true : verificationDialog.firstTime = false;
+        $state.current.name === "home" ? verificationDialog.firstTime = true : verificationDialog.firstTime = false;
         // Fires if scope gets destroyed and cancels poller
         verificationDialog.$onDestroy = function() {
           $interval.cancel(poller);
@@ -40,6 +41,7 @@ angular.
                 }
               }
               verificationDialog.user = success.data;
+              verificationDialog.business = success.data.has_business;
             },
             function (error) {
               console.log("Error fetching User Details");
@@ -90,7 +92,7 @@ angular.
         };
 
         var uploadAddress = function() {
-          var data = {
+          var address = {
             "user": {
               "street": verificationDialog.newUser.street, 
               "zip": verificationDialog.newUser.zip,
@@ -98,7 +100,16 @@ angular.
               "country": verificationDialog.newUser.country
             }
           };
-          api.put('/users/' + $localStorage.userId, data).then(
+
+          var business = {
+            'business': {
+              'vat': verificationDialog.newUser.vat
+            }
+          };
+
+          // ToDO: Finish with VAT
+
+          api.put('/users/' + $localStorage.userId, address).then(
             function (success) {
               $mdToast.show(
                 $mdToast.simple()
