@@ -149,7 +149,9 @@
     },
     "2": {
       "title": "Upload your Profile Picture",
-      "description": "Show other user who is the person behind your profile."
+      "description": "Show other user who is the person behind your profile.",
+      "business-description": "Having your logo shown on listnride is a great way to attract more request",
+      "business-title": "Upload your Shop Logo"
     },
     "3": {
       "title": "Tell something about you"
@@ -278,6 +280,7 @@
     "zip": "Zip Code",
     "city": "City",
     "country": "Country",
+    "company-name": "Company name",
     "update-contact": "Update Contact"
   },
   "home": {

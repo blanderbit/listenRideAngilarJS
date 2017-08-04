@@ -151,11 +151,13 @@
       "text3": "We vragen je daarom, je profiel in een paar stappen te voltooien. Hoe beter en volledig je profielbeschrijving, des te groter de kans op aanvragen en successvolle verhuur."
     },
     "2": {
-      "description": "Voeg een pasfoto toe, het is zeer belangrijk een persoonlijk beeld bij een profiel te hebben."
+      "title": "Upload your Profile Picture",
+      "description": "Voeg een pasfoto toe, het is zeer belangrijk een persoonlijk beeld bij een profiel te hebben.",
+      "business-description": "Having your logo shown on listnride is a great way to attract more request",
+      "business-title": "Upload your Shop Logo"
     },
     "3": {
-      "description": "Schrijf ein paar regels tekst over jezelf en wat fietsen voor je betekent of iets anders interessants voor je profiel!",
-      "label": "omschrijving (min. 100 tekens)"
+      "title": "Tell something about you"
     },
     "4": {
       "description": "Bevestig je emailadres, door op de aktiveringslink te klicken in de toegestuurde bevestigingsmail. Deze heb je direkt na je aanmelding ontvangen. Indien je deze mail niet meer kan vinden, kan je de mail nogmaals aanvragen. Verschijnt de mail niet direct in je postvak, wacht dan nog een paar minuten of check de spamfolder.",
@@ -171,7 +173,7 @@
       "phone-nr-verified": "Je telefoonnummer is met succes geverifieerd!"
     },
     "6": {
-      "description": "Geef als laatste uw adres aan."
+      "title": "What is your address"
     }
   },
 
@@ -303,6 +305,7 @@
     "zip": "Postcode",
     "city": "Plaats",
     "country": "Land",
+    "company-name": "Company name",
     "update-contact": "Contactgegevens wijzigen"
   },
 

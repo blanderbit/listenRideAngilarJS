@@ -151,11 +151,13 @@
       "text3": "Deshalb bitten wir dich, dein Profil in ein paar einfach Schritten zu verifizieren. Umso besser die eingegebenen Informationen sind, umso höher die Chance auf erfolgreiche Vermietungen."
     },
     "2": {
-      "description": "Lade ein Profilbild von Dir hoch! Für andere Nutzer ist es äußerst wichtig zu sehen, wer sich hinter einem Profil verbirgt."
+      "title": "Upload your Profile Picture",
+      "description": "Lade ein Profilbild von Dir hoch! Für andere Nutzer ist es äußerst wichtig zu sehen, wer sich hinter einem Profil verbirgt.",
+      "business-description": "Having your logo shown on listnride is a great way to attract more request",
+      "business-title": "Upload your Shop Logo"
     },
     "3": {
-      "description": "Schreib ein paar Zeilen über Dich und das Fahrradfahren und bring so mehr Leben in Dein Profil!",
-      "label": "Beschreibung (min. 100 Buchstaben)"
+      "title": "Tell something about you"
     },
     "4": {
       "description": "Bestätige Deine E-Mail-Adresse, indem Du auf den Link in der Bestätigungsmail klickst, die wir Dir nach der Registrierung schicken. Falls Du sie nicht mehr findest, kannst Du die Mail erneut anfordern. Erscheint sie nicht sofort in Deinem Postfach, warte bitte noch ein paar Minuten oder überprüfe deinen Spam-Ordner.",
@@ -171,7 +173,7 @@
       "phone-nr-verified": "Deine Nummer wurde erfolgreich verifiziert!"
     },
     "6": {
-      "description": "Gib zu guter Letzt noch Deine Wohnanschrift ein."
+      "title": "What is your address"
     }
   },
 
@@ -303,6 +305,7 @@
     "zip": "PLZ",
     "city": "Stadt",
     "country": "Land",
+    "company-name": "Company name",
     "update-contact": "Kontakt aktualisieren"
   },
 
