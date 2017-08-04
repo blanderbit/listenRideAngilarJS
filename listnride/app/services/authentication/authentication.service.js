@@ -24,9 +24,10 @@ angular.
       var SignupDialogController = function($mdDialog, inviteCode) {
         var signupDialog = this;
 
-        console.log(inviteCode);
-
         signupDialog.signingUp = false;
+        signupDialog.business = false;
+        signupDialog.businessError = false;
+        var invited = !!inviteCode;
 
         var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName) {
           var user = {
@@ -40,10 +41,7 @@ angular.
               "ref_code": inviteCode
             }
           };
-          var invited = false;
-          if (inviteCode) {
-            invited = true;
-          }
+
           api.post("/users", user).then(function(success) {
             setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages, success.data.ref_code);            
             verification.openDialog(false, invited);
@@ -59,13 +57,30 @@ angular.
             .hideDelay(4000)
             .position('top center')
           );
-        }
+        };
 
         signupDialog.hide = function() {
           $mdDialog.hide();
         };
 
+        signupDialog.setBusiness = function() {
+          signupDialog.business = true;
+        };
+
+        signupDialog.showLogin = function() {
+          $mdDialog.hide();
+          showLoginDialog();
+        };
+
         signupDialog.signup = function() {
+          if (signupDialog.businessError && signupDialog.business) {
+            signupDialog.createBusiness();
+          } else {
+            signupDialog.createUser();
+          }
+        };
+
+        signupDialog.createUser = function() {
           var user = {
             'user': {
               'email': signupDialog.email,
@@ -75,25 +90,42 @@ angular.
               'ref_code': inviteCode
             }
           };
+
           signupDialog.signingUp = true;
-          var invited = false;
-          if (inviteCode) {
-            invited = true;
-          }
+
           api.post('/users', user).then(function(success) {
             setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages, success.data.ref_code);
-            $state.go('home');
-            verification.openDialog(false, invited);
+            if (signupDialog.business) {
+              signupDialog.createBusiness();
+            } else {
+              $state.go('home');
+              verification.openDialog(false, invited);
+            }
           }, function(error) {
             showSignupError();
             signupDialog.signingUp = false;
           });
         };
 
+        signupDialog.createBusiness = function() {
+          var business = {
+            'business': {
+              'company_name': signupDialog.companyName
+            }
+          };
+
+          api.post('/businesses', business).then(function(success) {
+            $state.go('home');
+            verification.openDialog(false, invited);
+          }, function(error) {
+            signupDialog.businessError = true;
+            signupDialog.signingUp = false;
+            showSignupError();
+          });
+        };
+
         signupDialog.connectFb = function() {
           ezfb.getLoginStatus(function(response) {
-            console.log("FB Get Login Status, Response:");
-            console.log(response);
             if (response.status === 'connected') {
               var accessToken = response.authResponse.accessToken;
               ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
@@ -126,7 +158,7 @@ angular.
             .hideDelay(3000)
             .position('top center')
           );
-        }
+        };
 
         var showLoginError = function() {
           $mdToast.show(
@@ -135,7 +167,7 @@ angular.
             .hideDelay(4000)
             .position('top center')
           );
-        }
+        };
 
         var loginFb = function(email, facebookId) {
           var user = {
