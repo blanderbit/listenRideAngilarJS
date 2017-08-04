@@ -75,7 +75,7 @@
       <div layout-gt-sm="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <md-button 
                   class="message-button md-raised md-warn lnr-no-margin md-button md-ink-ripple" 
-                  ng-disabled="message.request.status != 1" 
+                  ng-disabled="message.request.status != 1 || message.buttonClicked" 
                   ng-click="message.updateStatus(8)" 
                   analytics-on analytics-category="link"
                   analytics-event="clicked" 
@@ -84,8 +84,8 @@
         </md-button>
         <md-button
                   class="message-button md-raised md-primary lnr-no-margin md-button md-ink-ripple" 
-                  ng-disabled="message.request.status != 1" 
-                  ng-click="message.acceptBooking()" 
+                  ng-disabled="message.request.status != 1 || message.buttonClicked" 
+                  ng-click="message.book()" 
                   analytics-on analytics-category="link"
                   analytics-event="clicked" 
                   analytics-label="request accept">
@@ -99,25 +99,11 @@
         <md-button
                   class="message-button md-raised md-primary lnr-no-margin md-button md-ink-ripple"
                   ng-disabled="message.request.status != 3" 
-                  ng-click="message.updateStatus(4)" 
+                  ng-click="message.showRatingDialog()" 
                   analytics-on analytics-category="link"
                   analytics-event="clicked" 
                   analytics-label="return confirm">
                   {{ 'message.confirm_return' | translate }}
-        </md-button>
-      </div>
-    </div>
-
-    <div ng-if="!message.request.rideChat && message.status == 4">
-      <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
-        <md-button
-                  class="message-button md-raised md-primary lnr-no-margin md-button md-ink-ripple" 
-                  ng-disabled="message.request.status != 4" 
-                  ng-click="message.showRatingDialog()" 
-                  analytics-on analytics-category="rating"
-                  analytics-event="clicked" 
-                  analytics-label="{{ 'message.rate' | translate }}">
-                  {{ 'message.rate' | translate }}
         </md-button>
       </div>
     </div>

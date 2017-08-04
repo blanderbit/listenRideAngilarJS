@@ -3,9 +3,10 @@
 angular.module('ampler-integration',[]).component('ampler', {
   templateUrl: 'app/modules/brand-integration/ampler.template.html',
   controllerAs: 'ampler',
-  controller: [ '$translate', 'api', 'ngMeta',
-    function AmplerController($translate, api, ngMeta) {
+  controller: [ '$translate', '$analytics', 'api', 'ngMeta',
+    function AmplerController($translate, $analytics, api, ngMeta) {
       var ampler = this;
+      $analytics.eventTrack('ViewContent', {  category: 'Brand Page', label: 'Ampler'});
 
       ngMeta.setTitle($translate.instant("brand-integration.ampler.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.ampler.meta-descr"));
@@ -21,7 +22,8 @@ angular.module('ampler-integration',[]).component('ampler', {
         munich: [],
         hamburg: [],
         vienna: [],
-        zurich: []
+        zurich: [],
+        frankfurt: []
       };
       ampler.slickConfig = {
         enabled: true,
@@ -74,6 +76,7 @@ angular.module('ampler-integration',[]).component('ampler', {
               case "Hamburg": ampler.bikes.hamburg.push(success.data[i]); break;
               case "Wien": ampler.bikes.vienna.push(success.data[i]); break;
               case "Zürich": ampler.bikes.zurich.push(success.data[i]); break;
+              case "Frankfurt am Main": ampler.bikes.frankfurt.push(success.data[i]); break;
             }
           }
           ampler.currentBikes = ampler.bikes["berlin"];

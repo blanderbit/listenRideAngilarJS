@@ -20,6 +20,7 @@ angular.module('listnride', [
   'settings',
   'invoices',
   'velothonBikerental',
+  'cyclassicsHamburg',
   'jobs',
   'listingABike',
   'rentingABike',
@@ -40,6 +41,10 @@ angular.module('listnride', [
   'listnride.constant',
   'inviteLanding',
   'coffeespin',
+  'depart',
+  'invest',
+  'supercrossMunich',
+  'seoLanding',
   /* external modules */
   'ngMaterial',
   'ngMessages',
@@ -126,8 +131,7 @@ angular.module('listnride', [
   $rootScope.location = $location;
   ngMeta.init();
 
-  if (authentication.loggedIn) {
-    console.log("Logged In Already");
+  if (authentication.loggedIn && !_.isEmpty(authentication.userId())) {
     api.get('/users/' + authentication.userId()).then(
       function (success) {
         var user = success.data;

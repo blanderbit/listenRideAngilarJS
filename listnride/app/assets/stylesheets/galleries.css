@@ -209,10 +209,10 @@ muli .cb-slideshow li:nth-child(4) span {
 /*---------------------------------------------------------*/
 
 vello .cb-slideshow li span {
-  -webkit-animation: pentaAnimation 20s linear infinite 0s;
-  -moz-animation: pentaAnimation 20s linear infinite 0s;
-  -o-animation: pentaAnimation 20s linear infinite 0s;
-  animation: pentaAnimation 20s linear infinite 0s;
+  -webkit-animation: quattroAnimation 20s linear infinite 0s;
+  -moz-animation: quattroAnimation 20s linear infinite 0s;
+  -o-animation: quattroAnimation 20s linear infinite 0s;
+  animation: quattroAnimation 20s linear infinite 0s;
 }
 
 vello .cb-slideshow li:nth-child(1) span {
@@ -248,15 +248,15 @@ vello .cb-slideshow li:nth-child(4) span {
 /*---------------------------------------------------------*/
 
 veletage .cb-slideshow li span {
-  -webkit-animation: pentaAnimation 20s linear infinite 0s;
-  -moz-animation: pentaAnimation 20s linear infinite 0s;
-  -o-animation: pentaAnimation 20s linear infinite 0s;
-  animation: pentaAnimation 20s linear infinite 0s;
+  -webkit-animation: quattroAnimation 20s linear infinite 0s;
+  -moz-animation: quattroAnimation 20s linear infinite 0s;
+  -o-animation: quattroAnimation 20s linear infinite 0s;
+  animation: quattroAnimation 20s linear infinite 0s;
 }
 
 veletage .cb-slideshow li:nth-child(1) span {
   background-image: url(../ui_images/brand-integration/veletage/lnr_veletage_hero_1.jpg);
-  background-position: 75% 50%;
+  background-position: 50% 50%;
 }
 
 veletage .cb-slideshow li:nth-child(2) span {
@@ -284,19 +284,19 @@ veletage .cb-slideshow li:nth-child(4) span {
 }
 
 /*---------------------------------------------------------*/
-/* BONVELLO
+/* BONVELO
 /*---------------------------------------------------------*/
 
 bonvelo .cb-slideshow li span {
-  -webkit-animation: pentaAnimation 20s linear infinite 0s;
-  -moz-animation: pentaAnimation 20s linear infinite 0s;
-  -o-animation: pentaAnimation 20s linear infinite 0s;
-  animation: pentaAnimation 20s linear infinite 0s;
+  -webkit-animation: quattroAnimation 20s linear infinite 0s;
+  -moz-animation: quattroAnimation 20s linear infinite 0s;
+  -o-animation: quattroAnimation 20s linear infinite 0s;
+  animation: quattroAnimation 20s linear infinite 0s;
 }
 
 bonvelo .cb-slideshow li:nth-child(1) span {
   background-image: url(../ui_images/brand-integration/bonvelo/lnr_bonvelo_hero_1.jpg);
-  background-position: 75% 50%;
+  background-size: cover;
 }
 
 bonvelo .cb-slideshow li:nth-child(2) span {

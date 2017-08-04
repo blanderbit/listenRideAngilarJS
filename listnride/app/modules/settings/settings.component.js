@@ -72,7 +72,7 @@ angular.module('settings',[]).component('settings', {
         changeContact.onInit = function () {
           userApi.getUserData().then(function (response) {
             changeContact.user = response.data;
-            changeContact.user.new_phone_number = angular.copy(changeContact.user.phone_number);
+            changeContact.user.new_phone_number = angular.copy('+' + changeContact.user.phone_number);
           });
         };
 
@@ -82,6 +82,7 @@ angular.module('settings',[]).component('settings', {
       settings.$onInit = initSettings;
       function initSettings() {
         settings.user = {};
+        settings.croppedDataUrl = false;
         settings.loaded = false;
         settings.payoutMethod = {};
         settings.password = "";
@@ -102,8 +103,10 @@ angular.module('settings',[]).component('settings', {
         settings.addChild = addChild;
         settings.removeInputDate = removeInputDate;
         settings.emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        settings.current_payment = false;
         userApi.getUserData().then(function (response) {
           settings.user = response.data;
+          settings.current_payment = !_.isEmpty(response.data.current_payment_method);
           updatePrivatePhoneNumber(response.data.phone_number);
           settings.loaded = true;
           settings.openingHoursEnabled = settings.user.opening_hours ? settings.user.opening_hours.enabled : false;
@@ -472,7 +475,7 @@ angular.module('settings',[]).component('settings', {
         var data = {
           "user": {
             "description": settings.user.description,
-            "profile_picture": settings.profilePicture,
+            "profile_picture": Upload.dataUrltoBlob(settings.croppedDataUrl, _.isEmpty(settings.profilePicture) ? '' : settings.profilePicture.name),
             "street": settings.user.street,
             "zip": settings.user.zip,
             "city": settings.user.city,
@@ -504,6 +507,7 @@ angular.module('settings',[]).component('settings', {
             );
             settings.user = success.data;
             $localStorage.profilePicture = success.data.profile_picture.profile_picture.url;
+            settings.profilePicture = false;
             var encoded = Base64.encode(success.data.email + ":" + success.data.password_hashed);
             $localStorage.auth = 'Basic ' + encoded;
           },

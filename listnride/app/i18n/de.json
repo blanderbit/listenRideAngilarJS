@@ -12,6 +12,7 @@
     "requests": "Anfragen",
     "top-cities": "Beliebte Städte",
     "berlin": "Berlin",
+    "dortmund": "Dortmund",
     "munich": "München",
     "amsterdam": "Amsterdam",
     "vienna": "Wien",
@@ -20,6 +21,12 @@
     "ulm": "Ulm",
     "tubingen": "Tübingen",
     "zurich": "Zürich",
+    "freiburg": "Freiburg",
+    "paderborn": "Paderborn",
+    "utting": "Utting",
+    "heidelberg": "Heidelberg",
+    "marl": "Marl",
+    "frankfurt": "Frankfurt",
     "per": "pro",
     "hour": "Stunde",
     "hours": "Stunden",
@@ -205,6 +212,7 @@
     "listChat": "Anfrage von",
     "rideChat": "Anfrage an",
     "ratings": {
+      "title": "Wie hat dir die Gesamterfahrung gefallen?",
       "description": "Vertrauen und Sicherheit sind für uns das Wichtigste. Mit einer kurzen Bewertung hilfst du der gesamten Community.",
       "1": "Inakzeptabel",
       "2": "Schlecht",
@@ -233,25 +241,21 @@
     "reject": "Ablehnen",
     "rate": "Bewerten",
     "confirm": "Bestätigen",
-    "confirm_return": "Rückgabe Bestätigen"
+    "confirm_return": "Rückgabe Bestätigen und Bewerten"
   },
 
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} würde gerne dein <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare alle weiteren Details über den Chat.",
-    "2": "Du hast die Anfrage akzeptiert. Der Mieter hat nun die Möglichkeit, die Buchung zu bestätigen.",
-    "3": "{{user.first_name}} hat die Buchung bestätigt. Du verleihst nun Dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via Email zugesendet.\n \nName: {{user.first_name}} {{user.last_name}} \nNummer: {{user.phone_number}} \nAdresse: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
-    "4": "Du hast die Rückgabe Deines Rads bestätigt. Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",
+    "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} würde gerne dein <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} für mieten. Sobald du die Anfrage annimmst, wird sie gebucht. Vereinbare alle weiteren Details über den Chat.",
+    "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun Dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via Email zugesendet.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon-Nummer: {{user.phone_number}} <br>Adresse: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
     "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
     "9": "Leider hat {{user.first_name}} die Anfrage nicht bestätigt."
   },
 
   "rideChat": {
-    "1": "Du würdest gerne {{lister.first_name}} {{lister.last_name}}'s <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, kannst du das Rad buchen.",
-    "2": "{{lister.first_name}} hat Deine Anfrage angenommen. Bestätige die Buchung, die Zahlung erfolgt erst im nächsten Schritt.",
-    "3": "Glückwunsch, Du hast das Rad erfolgreich gebucht und kannst dich zum vereinbarten Zeitpunkt mit dem Verleiher treffen um es abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via Email zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Email address: {{lister.email}}<br>Adresse: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
-    "4": "{{lister.first_name}} hat die Rückgabe des Rades bestätigt.",
-    "5": "Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",
+    "1": "Du würdest gerne {{lister.first_name}} {{lister.last_name}}'s <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, ist das Rad gebucht.",
+    "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via Email zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.phone_number}}<br>Adresse: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
+    "5": "{{lister.first_name}} hat die Rückgabe des Rades bestätigt und dich bewertet.<br>Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",
     "6": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
     "8": "Leider hat der Verleiher die Anfrage abgelehnt. Frage einfach ein paar andere schöne Räder an.",
     "9": "Du hast die Anfrage abgebrochen. Bitte schreib dem Verleiher, warum du die Buchung nicht bestätigen konntest."
@@ -273,8 +277,8 @@
   "home": {
     "landing-section-header": "Das perfekte Rad. Einfach mieten.",
     "landing-section-subheader": "Miete Dir auf listnride ein Fahrrad, wie Du es magst und gerade brauchst.",
-    "featured-bikes-header": "Fahrradverleih: Die Lieblinge der Rider",
-    "featured-bikes-subheader": "Schau, welche Fahrräder andere mieten und  entdecke Goldstückchen von Schindelhauer, Specialized und vielen mehr.",
+    "featured-bikes-header": "Fahrradverleih: Die Lieblinge der Community",
+    "featured-bikes-subheader": "Egal ob Rennrad, Mountain Bike, Stadtrad oder E-Bike, du kannst sie alle mieten. Hier sind die aktuellen Favoriten der Community.",
     "featured-tiles-header": "Lass dich inspirieren",
     "featured-tiles-subheader": "Wir arbeiten mit interessanten Marken zusammen, schreiben über unsere Erfahrung und fahren mit großartigen Menschen.",
     "featured-cities-header": "Im Sattel durch den Großstadtdschungel",
@@ -609,8 +613,8 @@
     "subheader": "Infos bereit zum Download. listnride bereit zum Gespräch.",
     "kit": {
       "title": "Pressemappe",
-      "content": "Andere nennen sich Fahrradverleihsystem. Wir sind eine Bike-Sharing-Community. Erfahren Sie mehr in unserer Pressemappe, die wir Ihnen bereitgestellt haben",
-      "download": "hier zum Download"
+      "content": "Andere nennen sich Fahrradverleihsystem. Wir sind eine Bike-Sharing-Community. Erfahren Sie mehr in unserer Pressemappe,",
+      "download": "die wir Ihnen hier bereitgestellt haben"
     },
     "contact": {
       "title": "Pressekontakt",
@@ -794,6 +798,23 @@
         "sign-up": "Anmelden"
       }
     },
+    "cyclassics-hamburg": {
+      "meta-title": "Miete dir einfach das perfekte Rennrad für den Cyclassics Hamburg",
+      "meta-description": "Fahre die Cyclassics Hamburg auf dem Rennrad deiner Träume! Wähle  Specialized, Ridley, Cervelo, Bianchi, sowie Simplon und miete es ganz bequem und einfach von Zuhause. ",
+      "title": "Miete dir einfach das perfekte Rennrad für den Cyclassics Hamburg",
+      "text": "Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist. <br><br> Du kannst leider nicht bei den Cyclassics teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und vermiete dein Rad.",
+      "description": "wo: <b>Hamburg</b>  |  was: <b>Jedermannrennen 60, 120 or 180km</b>  |  wann: <b>20.08.2017</b>"
+    },
+    "depart": {
+      "meta-title": "Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
+      "meta-description": "Radel mit listnride und Schicke Mütze  zum Grand Depart und miete dir hochwertige Rennräder aus der Community",
+      "title": "Der Social Ride zum Grand Depart der Tour de France in Düsseldorf!",
+      "text-1": "Eine Ausfahrt für alle Radenthusiasten die Lust haben gemeinsam den Beginn der Tour de France in Düsseldorf zu zelebrieren. <br><br>Zusammen mit unseren Freunden und Lokalhelden von der <a href=\"http://schickemuetze.de\">Schicke Mütze </a> laden wir euch zu einer entspannten Ausfahrt ein. Mit entspannten Tempo werden wir eine schöne Runde durch die Hügellandschaft Düsseldorfs fahren.<br>Falls du noch ein Rennrad für die Ausfahrt benötigst, bist Du herzlich willkommen dir ein hochwertiges Rennrad aus der listnride Bikesharing Community zu mieten. Wir sehen uns auf dem Rad :)",
+      "text-2": "<b>Am Freitag, 30. Juni 2017</b><br><br><b>Start mit Kaffee bei der Schicke Mütze  - Untere Talstraße 22-24, Düsseldorf <br><br>Abfahrt um 10:00 Uhr <br><br>Distanz bis 60 km <br><br>Tempo 24-27 kmh, locker <br><br>Nach der Fahrt ab 18:00 - BBQ & Drinks @Schicke Mütze  - Untere Talstraße 22-24, Düsseldorf <br><br>Voraussetzungen Rennrad, Helm und Klickpedale</b>",
+      "sign-up": "Kostenlos Anmelden",
+      "description": "Brauchst du noch ein Rennrad für das Wochenende?",
+      "subdescription": "Du bist herzlich willkommen dir ein hochwertiges Rennrad aus der listnride Bikesharing Community zu mieten. Wir sehen uns auf dem Rad!"
+    },
     "crossride": {
       "title": "listnride Crossride",
       "text": "During the Berliner Fahrradschau we want to explore with you our local cross playground, the forest with uncountable awesome trails, the Grunewald.<br><br>On the 5th of March 10am sharp we start rolling from the front gate BFS venue STATION Berlin. The social paced ride lasts for ~3 hours / 50km in the nature and bring you back well charged. We highly recommend a CX/Gravel bike, warm clothes, and a fit body. Helmets are required! <br><br>In case you need a suitable bike or would like to test a new cross bike, check out the great Bikes offered by <a href='http://www.votec.de' target='_blank'>Votec</a> and our community below. If you like to join, you need to <a target='_blank' href='https://ti.to/listnride/crossride'>register</a>. As part of the BFS program we offer you a discounted ticket for the show. After registration for the listnride CX ride, you get a coupon-code for your <a target='_blank' href='https://berlinerfahrradschau.de/en/tickets/'>ticket purchase</a>."
@@ -816,7 +837,7 @@
         "pp-title": "Samstag",
         "kr-title": "Sonntag",
         "pp-description": "Egal ob Du ein erfahrener Roadbiker oder ein brandneuer Rooky bist, der Push'n'Post Ride bietet die perfekte Gelegenheit für eine Ausfahrt mit Gleichgesinnten in der schönen Umgebung Düssseldorfs während der CWD. Die Ausfahrt wird von unseren Partnern Cervelo und Cycle Cafe unterstützt.",
-        "kr-description": "Gemeinsam mit der Schickemütze wird diese social Ride während der Cycling World stattfinden. Es wird eine sehr schöne Tour, welche unter anderem zu einer ehemaligen Raketenstation führt. Leihräder werden freundlicherweise von Cervélo und Ridley angeboten.",
+        "kr-description": "Gemeinsam mit der Schicke Mütze  wird diese social Ride während der Cycling World stattfinden. Es wird eine sehr schöne Tour, welche unter anderem zu einer ehemaligen Raketenstation führt. Leihräder werden freundlicherweise von Cervélo und Ridley angeboten.",
         "title2": "Wir bringen euch perfekte Räder zum Testen, von Ampler und Cervélo",
         "subtitle2": "Ob nur für ein paar Minuten oder ein paar Stunden - einfach umsonst buchen",
         "ampler": "Innovative, urbane E-Bikes aus Estland. Wähle zwischen Hawk, einem dynamischen Single-Speed, oder Bilberry, dem komfortablen City-Bike und entdecke E-Bikes neu.",
@@ -830,9 +851,15 @@
       },
       "kr": {
         "title": "Kuchen und Raketen",
-        "text-1": "Um gemeinsam auf dem Rennrad eine schöne Zeit zu verbringen, laden Schickemütze und wir euch ein, das Düsseldorfer Umland mit uns während der Cycling World zu erkunden. Raus aus Düsseldorf, geht es Richtung Raketenstation Hombroich, wo wir uns kurz mit Snacks und Getränken erfrischen werden um dann die Tour frisch gestärkt fortzusetzen bis wir wieder am Messegelände ankommen.<br><br>Falls du kein Rennrad dein eigen nennst, oder sich die Anreise mit dem Fahrrad nicht lohnt, wir haben Rennräder von Cervélo und Ridley zur Verfügung die du dir ganz einfach und kostenfrei für die Ausfahrt leihen kannst.",
+        "text-1": "Um gemeinsam auf dem Rennrad eine schöne Zeit zu verbringen, laden Schicke Mütze  und wir euch ein, das Düsseldorfer Umland mit uns während der Cycling World zu erkunden. Raus aus Düsseldorf, geht es Richtung Raketenstation Hombroich, wo wir uns kurz mit Snacks und Getränken erfrischen werden um dann die Tour frisch gestärkt fortzusetzen bis wir wieder am Messegelände ankommen.<br><br>Falls du kein Rennrad dein eigen nennst, oder sich die Anreise mit dem Fahrrad nicht lohnt, wir haben Rennräder von Cervélo und Ridley zur Verfügung die du dir ganz einfach und kostenfrei für die Ausfahrt leihen kannst.",
         "text-2": "<b>Start:</b> 26.03, 10:00 Uhr, Abfahrt 10:30 Uhr vom listnride Stand (O-1)<br><br><b>Distanz:</b> ca. 75km<br><br><b>Geschwindigkeit:</b> 25-28 kmh, moderat<br><br><b>Verpflegungspause:</b> Café at Rocketstation Hombroich mit Getränken und Snacks<br><br><b>Voraussetzungen:</b> Rennrad, Helm, Klickschuhe"
       }
+    },
+    "supercross-munich": {
+      "meta-title": "Miete dir das perfekte Cyclocross Bike für den Supercross München bei listnride",
+      "meta-description": "Fahre den Supercross München auf dem Cyclocross Bike deiner Träume! Wähle BMC, Votec, Ridley, SRAM, Specialized, Bianchi, Pasculli, Focus und anderen Marken.",
+      "title": "Miete das perfekte Cyclocross Bike für den Supercross München",
+      "text": "Die listnride Community bietet dir die passenden Cyclocross Bikes für den Supercross München. Leihe dir ein Bike für das Rennen einen der Cross Social Rides oder um an den Cyclocross Workshops teilzunehmen.<br><br>Scrolle durch das Angebot und klicke auf ein Inserat, um es zu öffnen. Um mehr darüber zu erfahren, lies die Beschreibung und prüfe die verfügbare Ausstattung. Über den Buchungskalender kannst du dann das gewünschte Rad buchen."
     }
   },
 
@@ -1100,6 +1127,7 @@
     "meta-title": "listnride | Lade deine Freunde ein",
     "meta-description": "Teil dein Fahrradbegeisterung mit Freunden! lade deine Freunde zum listnride ein und bekomme einen 10€ Gutschein, sobald sich einen anmeldet. Wenn sie ein Fahrrad mieten oder das Eigene zur vermieten anbietet, bekommst du 10 €!",
     "title": "Lade Freunde ein und verdiene 10€",
+    "login": "Einloggen, um den Link zu sehen",
     "info-section": {
       "header": "Erhalte 10€ Guthaben, wenn einer deiner Freunde ein Rad bei listnride leiht oder sein Rad anbietet.",
       "subheader": "Du bist begeistert von listnride und findest, dass auch deine Freunde ein schönes Rad leihen sollten? Lade Sie ein Teil der Bikesharing Community zu werden!",
@@ -1125,5 +1153,35 @@
       "email-subject": "{{full_name}} hat dich zu listnride eingeladen!",
       "email-body": "{{first_name}} hat dir 10€ für dein erstes Abenteuer auf einem Fahrrad deiner Wahl geschenkt!%0AWerde auch du Teil von listnride, der schnellstwachsenden Bikesharing Community und erhalte Zugriff auf unzählige Fahrräder für jeden erdenklichen Zweck!%0A%0A{{first_name}} sei dank, erhältst du sofort 10€ Startguthaben, sobald du dich registrierst.%0A%0A{{voucher_url}}%0A%0ADu möchtest dich bei {{first_name}} bedanken?%0AMiete ein Rad oder biete deins zum Verleih an und auch {{first_name}} erhält 10€ Guthaben :).%0A%0AViel Spaß und Fahrvergnügen."
     }
+  },
+
+  "invest": {
+    "meta-title": "listnride startet ein Crowdfunding! Sei Teil davon und investiere in den Aufbau von Europas führender Bike Sharing Community.",
+    "meta-description": "Besuche Seedrs und erfahre wie du in listnride investieren kannst.",
+    "description": "listnride startet ein Crowdfunding! Sei Teil davon und investiere in den Aufbau von Europas führender Bike Sharing Community.",
+    "subdescription": "Erfahre mehr über listnride in unserer <a href=\"http://cdn.listnride.com/en/Seedrs_listnride+Investor+Presentation.pdf\" target=\"_blank\">Investoren Präsentation</a> und warum es sich lohnt zu investieren.",
+    "subsubdescription": "In Kürze startet die listnride Crowdfunding Kampagne auf <a href=\"https://seedrs.com\" target=\"_blank\">Seedrs</a>, der führenden Equity Crowdfunding Plattform in Europa. Als Mitgliedern der ersten Stunde, Geschäftspartner oder Freunde, bieten wir euch vorzeitigen Zugriff bevor wir die Kampagne der Öffentlichkeit zugänglich machen. Sag uns wie hoch Deine Investition wäre und merke sie unverbindlich vor.",
+    "learn-more": "Crowdfunding FAQ",
+    "known-from": "listnride in den Medien",
+    "how-much": "Wie viel möchtest du investieren",
+    "investment": "Investition",
+    "submit": "Vormerken",
+    "form-feedback": "Vielen Dank! Du hast dich erfolgreich für eine Investition vorgemerkt.",
+    "faq-question-1": "WARUM STARTET LISTNRIDE EINE CROWDFUNDING-KAMPAGNE?",
+    "faq-answer-1": "Wir sind ein junges Unternehmen mit einem gut entwickelten Produkt, einer wachsenden Community von Mietern und Fahrradbesitzern. Um weiteres Wachstum voranzutreiben eröffnen wir der Community und der Öffentlichkeit die Möglichkeit, neben weiteren Investoren, in unser Unternehmen zu investieren. Mit diesen zusätzlichen Ressourcen werden wir weitere Verbesserungen an unserem Produkt vornehmen, so wie weiterhin geografisch expandieren. Damit können wir die Community entwickeln, Mietern eine größere Auswahl an Fahrrädern und Fahrradbesitzern eine größere Nachfrage bieten.",
+    "faq-question-2": "WIE KANN ICH IN LISTNRIDE INVESTIEREN?",
+    "faq-answer-2": "Wir arbeiten mit Seedrs, der führende Crowdfunding-Plattform in Europa, um unsere Crowdfunding-Kampagne durchzuführen. Um zu investieren, musst du lediglich auf der Website <a href=\"https://seedrs.com\" target=\"_blank\">www.seedrs.com</a> einen Account erstellen.",
+    "faq-question-3": "WELCHE RISIKEN SIND DAMIT VERBUNDEN?",
+    "faq-answer-3": "In ein Startup zu investieren birgt auch immer einige Risiken, wie z.B. den Verlust von Kapital, Zahlungsunfähigkeit, das Ausbleiben von Dividenden und Kapitalverwässerung. Daher sollte es immer Teil eines diversifizierten Portfolios sein. Falls du mehr erfahren möchtest, bietet Seedrs eine detaillierte Beschreibung der <a href=\"https://www.seedrs.com/risk_warning\" target=\"_blank\">Risiken</a>",
+    "faq-question-4": "GIBT ES EINEN MINDESTBETRAG, DEN ICH INVESTIEREN MUSS?",
+    "faq-answer-4": "Da wir so viele Personen wie möglich involvieren wollen, halten wir das Mindestinvestment niedrig, bei unter 10€ (exakter Betrag hängt von den Wechselkursen ab). Wir freuen uns über jeden Beitrag!",
+    "faq-question-5": "WAS HAT LISTNRIDE BISHER ERREICHT?",
+    "faq-answer-5": "Seit unserem offiziellen Start im September 2016 mit Launch ein funktionsfähigen Web Plattform: Ist listnride zur größten Community Bike-Sharing Plattform in der DACH region, mit über 1.100 Räder und 1.600 registrierten Usern, gewachsen. listnride hat über 100 Fahrradläden und 5 innovative Fahrradmarken für ein Testride Program auf der Plattform integriert. listnride hat eine starke Präsenz in Berlin, München, Wien, Amsterdam und Mallorca aufgebaut und wächst in weiteren Großstädten wie Hamburg, Zürich und Düsseldorf.",
+    "faq-question-6": "WIE KANN ICH MIT MEINEM INVESTMENT GELD VERDIENEN?",
+    "faq-answer-6": "Es handelt sich um eine langfristige Investition und du kannst damit Gewinne erzielen, wenn du deine Anteile für mehr Geld verkaufst, als du bezahlt hast. Wenn listnride einen Exit macht und zum Beispiel von einem anderen Unternehmen übernommen wird, ist es wahrscheinlich, dass du deine Anteile zu diesem Zeitpunkt verkaufen kannst. Seedrs hat eine ausführliche Erklärung hier: <a href=\"https://www.seedrs.com/learn/help/how-do-i-make-a-profit-from-my-investment\" target=\"_blank\">Seedrs Campaign</a>",
+    "faq-question-7": "WIE WIRD DAS EINGESAMMELTE GELD VERWENDET?",
+    "faq-answer-7": "Wir werden euer investiertes Geld für zwei primäre Zwecke einsetzen: Um unser Wachstum zu finanzieren und neue Nutzer, vornehmlich in den vorhandenen Märkten, zu gewinnen. Unsere Community kann mit höheren Nutzerzahlen den Mietern eine größere Auswahl, und Vermietern eine höhere Nachfrage bieten, was den Service für alle attraktiver macht. Um unsere Plattform stetig durch neue Funktionen zu verbessern die das Miet-Erlebnis so einfach und effizient wie möglich macht. Intergration einer Versicherung und neue mobile Apps sind dabei die größten Milestones.",
+    "faq-question-8": "WEITERE FRAGEN?",
+    "faq-answer-8": "Wir freuen uns über dein Interesse. Wenn du weitere Fragen hast, kontaktiere uns einfach unter <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a> und wir werden uns schnellstmöglich melden."
   }
 }

@@ -33,8 +33,8 @@
         <span class="md-body-1">
           <md-icon class="lnr-icn-sm lnr-margin-right"
           md-svg-src="app/assets/ui_icons/icn_verified.svg"
-          ng-class="user.user.current_payment_method? 'md-color-primary' : 'md-color-disabled'"></md-icon>
-          <md-tooltip ng-if="user.user.current_payment_method" md-direction="left">{{ 'user.verified' | translate }}</md-tooltip>
+          ng-class="user.current_payment ? 'md-color-primary' : 'md-color-disabled'"></md-icon>
+          <md-tooltip ng-if="user.current_payment" md-direction="left">{{ 'user.verified' | translate }}</md-tooltip>
           {{ 'settings.payment-method' | translate }}
         </span>
       </div>

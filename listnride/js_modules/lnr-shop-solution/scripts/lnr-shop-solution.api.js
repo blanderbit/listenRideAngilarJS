@@ -60,7 +60,7 @@ var api = {
                     var encoded = api.base64Encode(response.email + ":" + response.password_hashed);
                     user.auth = 'Basic ' + encoded;
                     user.id = response.id;
-                    if (response.current_payment_method) {
+                    if (Object.keys(response.current_payment_method).length !== 0) {
                         user.hasPaymentMethod = true;
                         $('#lnr-next-button-tab-payment-details').prop('disabled', false);
                         helper.changeTab({id: 'tab-booking-overview'});   

@@ -12,6 +12,7 @@
     "requests": "Aanvragen",
     "top-cities": "Favoriete Steden",
     "berlin": "Berlijn",
+    "dortmund": "Dortmund",
     "munich": "München",
     "amsterdam": "Amsterdam",
     "vienna": "Wenen",
@@ -20,6 +21,12 @@
     "ulm": "Ulm",
     "tubingen": "Tübingen",
     "zurich": "Zürich",
+    "freiburg": "Freiburg",
+    "paderborn": "Paderborn",
+    "utting": "Utting",
+    "heidelberg": "Heidelberg",
+    "marl": "Marl",
+    "frankfurt": "Frankfurt",
     "per": "per",
     "hour": "Uur",
     "hours": "Uren",
@@ -205,6 +212,7 @@
     "listChat": "Aanvragen van",
     "rideChat": "Aanvragen aan",
     "ratings": {
+      "title": "How did you like the overall experience?",
       "description": "Vertrouwen en Veiligheid zijn voor ons het belangrijkste. Met een korte recensie help je de gehele community.",
       "1": "onacceptabel",
       "2": "Slecht",
@@ -238,20 +246,16 @@
 
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} uit {{user.city}} zou graag jouw <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. leg alle verdere details vast via de Chat.",
-    "2": "Je hebt de aanvraag geaccepteerd. De huurder heeft nu de mogelijkheid, de Boeking te bevestigen.",
     "3": "{{user.first_name}} heeft de boeking bevestigd. Je fiets is nu verhuurd van {{timespan}}! De Contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\n \nNaam: {{user.first_name}} {{user.last_name}} \nNummer: {{user.phone_number}} \nAdres: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
-    "4": "Je hebt de retour van je fiets bevestigd. Tenslotte vragen wij je een recensie van de ervaring achter te laten. Dit helpt onze community zeer en rondt tevens de transactie af.",
     "5": "Hartelijk bedankt voor je recensie. De verhuurtransactie is nu afgerond en het Geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons graag een e-mail aan hello@listnride.com",
     "8": "Je hebt de aanvraag afgewezen. Schrijf de aanvrager kort een berichtje waarom het niet lukt.",
     "9": "helaas heeft {{user.first_name}} de aanvraag niet bevestigd."
   },
 
   "rideChat": {
-    "1": "Je zou graag {{lister.first_name}} {{lister.last_name}}'s <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. Spreek de verdere details met de verhuurder af. Op het moment dat je aanvraag wordt geaccepteerd, dien je deze nog te bevestigen om de boeking af te ronden.",
-    "2": "{{lister.first_name}} heeft je aanvraag geaccepteerd. Bevestig de boeking, de betaling volgt bij de volgende stap.",
-    "3": "Gefeliciteerd, je hebt de fiets geboekt en je kan de fiets op de afgesproken tijd en plaats ophalen. De contactgegevens zijn de volgende, alle details worden je ook per email toegestuurd.<br><br>Naam: {{lister.first_name}} {{lister.last_name}}<br>E-mail adres: {{lister.email}}<br>Adres: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
-    "4": "{{lister.first_name}} heeft de teruggave van de fiets bevestigd.",
-    "5": "Tenslotte vragen wij je een recensie van de ervaring achter te laten. Dit helpt onze community zeer en rondt tevens de transactie af.",
+    "1": "Je zou graag {{lister.first_name}} {{lister.last_name}}'s <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. Spreek de verdere details met de verhuurder af. Zodra je aanvraag wordt aangenomen, is de boeking rond.",
+    "3": "Gefeliciteerd, {{lister.first_name}} heeft je aanvraag geaccepteerd, je boeking is hiermee bevestigd. De contactgegevens zijn de volgende, alle details worden je ook per email toegestuurd.<br><br>Naam: {{lister.first_name}} {{lister.last_name}}<br>Nummer: {{lister.phone_number}}<br>Adres: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
+    "5": "{{lister.first_name}} heeft de teruggave van de fiets bevestigd. Tenslotte vragen wij je een recensie van de ervaring achter te laten. Dit helpt onze community zeer en rondt tevens de transactie af.",
     "6": "Bedankt voor je recensie. De verhuur is succesvol verlopen.",
     "8": "Helaas heeft de verhuurder je aanvraag afgewezen. Gelukkig zijn er genoeg andere mooie fietsen die je kan aanvragen.",
     "9": "Je hebt de aanvraag afgewezen. Stuur de verhuuder kort een berichtje, waarom je aanvraag niet geboekt hebt."
@@ -273,8 +277,8 @@
   "home": {
     "landing-section-header": "De perfekte fiets. Gewoon huren.",
     "landing-section-subheader": "Huur een fiets via listnride naar eigen smaak en gebruik.",
-    "featured-bikes-header": "Fietsverhuur: De hartendieven van de Riders",
-    "featured-bikes-subheader": "Zie ook welke fietsen andere huren en ontdek paradepaardjes van onder andere Bianchi, Canyon en nog veel meer.",
+    "featured-bikes-header": "Fietsverhuur: De favorieten van onze Community",
+    "featured-bikes-subheader": "of je nu een racefiets, mountainbike, stadsfiets of e-bike wilt, je huurt ze hier. Dit zijn de favorieten van onze Community.",
     "featured-tiles-header": "Raak geïnspireerd",
     "featured-tiles-subheader": "We werken samen met innovatieve merken, schrijven over interessante ontwikkelingen en nemen deel aan speciale evenementen",
     "featured-cities-header": "in het zadel door de Urban jungle",
@@ -608,8 +612,8 @@
     "subheader": "Informatie ter download. listnride klaar voor een gesprek.",
     "kit": {
       "title": "Persmap",
-      "content": "Anderen noemen zich fietsverhuursystemen. Wij zijn een Bike-Sharing-Community. Kom meer over ons te weten in onze persmap, die wij uw aanbieden",
-      "download": "Hier te downloaden"
+      "content": "Anderen noemen zich fietsverhuursystemen. Wij zijn een Bike-Sharing-Community. Kom meer over ons te weten in onze persmap,",
+      "download": "die u hier kunt bekijken"
     },
     "contact": {
       "title": "Perscontact",
@@ -790,6 +794,23 @@
         "sign-up": "RSVP"
       }
     },
+    "cyclassics-hamburg": {
+      "meta-title": "Boek eenvoudig the perfekte racefiets voor de Cyclassics Hamburg",
+      "meta-description": "Huur de perfekte racefiets voor de Cyclassics in Hamburg van merken zoals Specialized, Ridley, Cervelo en Bianchi",
+      "title": "Boek eenvoudig the perfekte racefiets voor de Cyclassics Hamburg",
+      "text": "We helpen je! Samen met de listnride community bieden we vele racefietsen, waarbij er zeker enige zijn die passen aan je wensen. Je kan die eenvoudig zo lang als je die nodig hebt huren. Je hoeft slechts één van de onderstaande fietsen te kiezen, aanvragen voor de gewenste periode en ophalen wanneer de tijd is gekomen. Simpel als dat. <br><br> Je kunt niet deelnemen? Help iemand in nood, een plaats je fiets en verdien zo wat extra zakgeld!",
+      "description": "waar: <b>Hamburg</b>  |  wat: <b>Wielerkoers 60, 120 or 180km</b>  |  wanneer: <b>20.08.2017</b>"
+    },
+    "depart": {
+      "meta-title": "Boek eenvoudig the perfekte racefiets voor de Velothon Berlijn",
+      "meta-description": "Join listnride and Schicke Mütze for a social road ride in celebration of the Grand Départ. Rent a high-end road bike from the listnride bike-sharing community.",
+      "title": "Rijd met ons mee en ontdek meer van de omgeving van Düsseldorf!",
+      "text-1": "Voor alle wielerliefhebbers die voor de start van de Tour de France in Düsseldorf zijn en de benen los willen maken.<br><br> Samen met onze vrienden van de <a href=\"http://schickemuetze.de\">Schicke Mütze </a> nodigen je u uit voor deze ontspannen social ride. We zullen een mooie tour in de heuvels van Düsseldorf in een ontspannen tempo rijden.<br>Als u nog steeds een fiets nodig voor de tour, kan je een hoge kwaliteit racefiets uit de lijst van onze bike-sharing community huren. Veel fietsplezier :)",
+      "text-2": "<b>Op vrijdag 30 juni</b><br><br><b>09:30 - Start met vooraf koffie bij de Schicke Mütze  - Untere 22-24, Düsseldorf<br><br>Vertrek om 10.00 uur<br><br>Afstand tot 60 km<br><br>24-27 kmh tempo, relaxt<br><br>Na de tour om 18:00 - BBQ & drankjes @ de Schicke Mütze , Düsseldorf<br><br>Verplicht racefiets, helm en klikpedalen</b>",
+      "sign-up": "Nü aanmelden",
+      "description": "Heb je nog een racefiets nodig voor het weekend?",
+      "subdescription": "We hebben we een breed scala aan mooie racefietsen. Ze gaan snel, dus boek de jouwe hier vandaag!"
+    },
     "crossride": {
       "title": "listnride Crossride",
       "text": "During the Berliner Fahrradschau we want to explore with you our local cross playground, the forest with uncountable awesome trails, the Grunewald.<br><br>On the 5th of March 10am sharp we start rolling from the front gate BFS venue STATION Berlin. The social paced ride lasts for ~3 hours / 50km in the nature and bring you back well charged. We highly recommend a CX/Gravel bike, warm clothes, and a fit body. Helmets are required! <br><br>In case you need a suitable bike or would like to test a new cross bike, check out the great Bikes offered by <a href='http://www.votec.de' target='_blank'>Votec</a> and our community below. If you like to join, you need to <a target='_blank' href='https://ti.to/listnride/crossride'>register</a>. As part of the BFS program we offer you a discounted ticket for the show. After registration for the listnride CX ride, you get a coupon-code for your <a target='_blank' href='https://berlinerfahrradschau.de/en/tickets/'>ticket purchase</a>."
@@ -812,7 +833,7 @@
         "pp-title": "Saturday",
         "kr-title": "Sunday",
         "pp-description": "Whether you’re a seasoned racer or a brand new roadie, the Push'n'Post Ride provides the perfect opportunity to join for a social ride in the beautiful surroundings of Düsseldorf during CWD. The ride is powered by Cervelo and Cycle Cafe.",
-        "kr-description": "Together with the Schickemütze we host a group ride which will take you out the city to the beautiful country-side where an abounded rocket station will be one of the highlights. Rental bikes are available by Cervélo and Ridley.",
+        "kr-description": "Together with the Schicke Mütze  we host a group ride which will take you out the city to the beautiful country-side where an abounded rocket station will be one of the highlights. Rental bikes are available by Cervélo and Ridley.",
         "title2": "We've got perfect bikes to try, by Ampler und Cervélo",
         "subtitle2": "Whether you want to try the bike a minute or an hour - simply book it for free",
         "ampler": "The Estonian start-up will provide innovative and urban E-Bikes to test ride. Choose between Hawk, the dynamic single-speed or Bilberry, the comfortable city-bike and get to know e-bikes on a whole new level.",
@@ -826,9 +847,15 @@
       },
       "kr": {
         "title": "Kuchen und Raketen",
-        "text-1": "If you do not own a roadbike, or just do not want to bring your own bike, we have roadbikes available which you can easily rent for free for the ride. During the Cycling World, we are hosting a group ride which will take you out of the city into the countryside. Leaving from our booth (# O-1) on the fair ground, we’ll head towards the former rocket station Hombroich, where we will have a quick stop with snacks and drinks. Refuelled from the break the ride will continue through the relatively unknown but beautiful scenery until we’re back at the fairground. Arrived back at the fairground, you are invited to have a refreshment at the booth of Schickemütze (# xx)<br><br>Test bikes are available from Cervélo and Ridley. Sign-up and book one of the outstanding bikes for the ride for free, first come first served. The overview of all bikes available you can find here (deeplink to bike page)",
+        "text-1": "If you do not own a roadbike, or just do not want to bring your own bike, we have roadbikes available which you can easily rent for free for the ride. During the Cycling World, we are hosting a group ride which will take you out of the city into the countryside. Leaving from our booth (# O-1) on the fair ground, we’ll head towards the former rocket station Hombroich, where we will have a quick stop with snacks and drinks. Refuelled from the break the ride will continue through the relatively unknown but beautiful scenery until we’re back at the fairground. Arrived back at the fairground, you are invited to have a refreshment at the booth of Schicke Mütze  (# xx)<br><br>Test bikes are available from Cervélo and Ridley. Sign-up and book one of the outstanding bikes for the ride for free, first come first served. The overview of all bikes available you can find here (deeplink to bike page)",
         "text-2": "<b>Meet:</b> 26.03, 10:00AM, Start 10:30 at the listnride booth (O-1)<br><br><b>Distance:</b> ca. 75km<br><br><b>Speed:</b> 25-28 kmh, moderate<br><br><b>Pit-Stop:</b> A Café at the Rocketstation Hombroich provides snacks and drinks<br><br><b>Requirement:</b> Roadbike, Helmet, Clipless shoes"
       }
+    },
+    "supercross-munich": {
+      "meta-title": "Rent the perfect cyclocross Bike for the Supercross Munich on listnride",
+      "meta-description": "Rent the perfect cyclocross bike for the Supercross in Munich easily online. Choose from brands such as BMC, Votec, Ridley, SRAM, Specialized, Bianchi, Pasculli, Focus and other brands.",
+      "title": "Rent the perfect bike for the Supercross Munich",
+      "text": "The listnride community offers you the right cyclocross bike for the Supercross Munich. Rent a bike to participate in the race, one of the cross social rides or try one of the cyclocross workshops.<br><br>Scroll through the offering and click to open it. To find out more, read the description and review the available equipment. You can then book the desired bike via the booking calendar."
     }
   },
 
@@ -1096,6 +1123,7 @@
     "meta-title": "listnride Voucher Codes - Invite your friends",
     "meta-description": "Deel het geschenk van het fietsen! nodig je vrienden uit, en schenk ze 10 euro tegoed bij aanmelding. Als zij en fiets huren of een fiets plaatsen, ontvangt u ook een 10 euro tegoed!",
     "title": "Nodig vrieden uit en verdien 10€",
+    "login": "log in en ontvang je persoonlijke link",
     "info-section": {
       "header": "Ontvang 10€ tegoed, als één van je vrienden je uitnodiging aanneemt en een fiets huurt of zijn fiets aanbiedt op listnride.",
       "subheader": "Ben je een fan van bike sharing en de listnride service? nodig dan je vrienden uit om deel uit te maken van onze community.",
@@ -1121,5 +1149,34 @@
       "email-subject": "{{full_name}} nodigt je uit om je bij listnride aan te melden!",
       "email-body": "{{first_name}} heeft jou 10€ tegoed geschenkt voor je eerste fietsavontuur naar keuze!%0A%0AMeld je nu aan bij listnride, de snelst groeiende bikesharing community, en krijg toegang tot talloze verschillende fietsen!%0AMeld je aan en ontvangt onmiddellijk een 10 € toegoed.%0A%0A{{voucher_url}}%0A%0AWil je {{first_name}} bedanken? Op het moment dat je een fiets huurt of je eigen fiets aanbied, ontvangt {{first_name}} ook een 10€ tegoed!%0A%0AVeel plezier en geniet van het fietsen!%0A"
     }
+  },
+
+  "invest": {
+    "meta-title": "listnride is crowdfunding! Be part of it and invest in Building Europe’s leading bike sharing community.",
+    "meta-description": "Visit Seedrs to learn more about investing in listnride.",
+    "description": "listnride is crowdfunding! Be part of it and invest in building Europe’s leading bike sharing community.",
+    "subdescription": "Learn more about listnride in our <a href=\"http://cdn.listnride.com/en/Seedrs_listnride+Investor+Presentation.pdf\" target=\"_blank\">investor presentation</a> and why it is worth to invest.",
+    "subsubdescription": "Soon, a crowdfunding campaign will start on <a href=\"https://seedrs.com\" target=\"_blank\">Seedrs</a>, Europe's largest equity crowdfunding platform. As an early adopter, business partner or friend, we're giving you first access, before we launch to the public. Tell us your level of interest and preregister without obligation.",
+    "learn-more": "Crowdfunding FAQ",
+    "known-from": "listnride in the news",
+    "investment": "Investment",
+    "submit": "Preregister",
+    "form-feedback": "Thank you! You've successfully shared your level of interest with us.",
+    "faq-question-1": "WHY DOES LISTNRIDE START A CROWDFUNDING CAMPAIGN?",
+    "faq-answer-1": "We are a young company with a well developed product, a growing community of tenants and bicycle owners. To drive further growth, we offer the community and the public the opportunity to invest in our company alongside our current investors. With these additional resources, we will make further improvements to our product as well as continue to grow geographically and so grow the community, resulting in greater choice for riders and greater demand for listers.",
+    "faq-question-2": "HOW CAN I INVEST IN LISTNRIDE?",
+    "faq-answer-2": "We are working with Seedrs, the leading Crowdfunding platform from the United Kingdom to run our Crowdfunding campaign. To invest, simply create an account at <a href=\"https://seedrs.com\" target=\"_blank\">www.seedrs.com</a> and follow the instructions.",
+    "faq-question-3": "ARE THERE ANY RISKS INVOLVED?",
+    "faq-answer-3": "Investing in startups involves risks, including loss of capital, illiquidity, lack of dividends and dilution, and it should be done only as part of a diversified portfolio. If you would like to read more Seedrs has a more detailed explanation about these <a href=\"https://www.seedrs.com/risk_warning\" target=\"_blank\">risks here</a>.",
+    "faq-question-4": "WHAT IS THE MINIMUM INVESTMENT AMOUNT?",
+    "faq-answer-4": "Because we want to involve as many people as possible, we keep the minimum investment amount low, around €10 (exact amount depends on exchange rates). We are happy to receive any amount!",
+    "faq-question-5": "WHAT HAS LISTNRIDE ACCOMPLISHED SO FAR?",
+    "faq-answer-5": "Since our official start in September 2016, launching a fully functional web platform: listnride has grown to be the largest community bike-sharing platform in the German speaking market (DE, AT, CH), with over 1.100 bikes listed and 1.600 registered users. listnride has already over 100 bike shops integrated and 5 innovative bike brands up and running with test ride programs. We have built up a strong presence in Berlin, Munich, Vienna, Amsterdam and Mallorca and are expanding into other large cities like Hamburg, Zurich and Düsseldorf.",
+    "faq-question-6": "HOW CAN I MAKE MONEY WITH MY INVESTMENT?",
+    "faq-answer-6": "To make a profit on your investment, you will generally need to sell your shares for more than the amount you invested. In a best case scenario, the value of your shares will rise in line with the growth of business you invested in, and you will be able to see your shares when the business floats on a stock exchange or is bought by another company (i.e. an exit event). More info <a href=\"https://www.seedrs.com/learn/help/how-do-i-make-a-profit-from-my-investment\" target=\"_blank\">here</a>",
+    "faq-question-7": "WHAT IS THE MONEY RAISED USED FOR?",
+    "faq-answer-7": "We will use your invested money for two primary purposes: To finance our growth and win new users, especially in our existing markets / cities. Our community, with higher user numbers, can offer riders a wider choice, and provide higher demand to listers, making the service more appealing overall. To improve our platform steadily through new features that make the rental experience as easy and efficient as possible. Integrating an insurance product and new mobile apps are the biggest milestones set.",
+    "faq-question-8": "FURTHER QUESTIONS?",
+    "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
   }
 }

@@ -9,14 +9,36 @@
       <li><span></span></li>
     </ul>
 
+    <div class="lnr-badge-container">
+      <a href="https://www.seedrs.com/listnride" target="_blank"><img class="lnr-badge" ng-src="app/assets/ui_images/invest/crowdfunding_badge.png"></img></a>
+    </div>
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ 'home.landing-section-header' | translate }}</h1>
       <p class="md-subhead">{{ 'home.landing-section-subheader' | translate }}</p>    
     </div>
 
     <form class="lnr-search-bar md-whiteframe-3dp" layout="row" md-theme="default">
-      <autocomplete autocomplete-id="home" flex="75" layout="column" location="home.location" placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}" place-changed="home.placeChanged(place)"></autocomplete>
-      <md-button ng-click="home.onSearchClick()" class="md-raised md-primary" id="submit" flex="25" analytics-on analytics-event="search" analytics-label="{{ home.location }}" analytics-category="form" analytics-value="8">{{ 'shared.search' | translate }}</md-button>
+      <autocomplete
+        autocomplete-id="home"
+        flex="75"
+        layout="column"
+        location="home.location"
+        placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"
+        place-changed="home.placeChanged(place)">
+      </autocomplete>
+      <md-button
+        ng-click="home.onSearchClick()"
+        class="md-raised md-primary"
+        id="submit"
+        flex="25"
+        analytics-on
+        analytics-event="Search"
+        analytics-label="{{ home.location }}"
+        analytics-category="City Search"
+        analytics-value="8"
+      >
+        {{ 'shared.search' | translate }}
+      </md-button>
     </form>
   </div>
 
@@ -27,13 +49,34 @@
     </div>
     <div layout-xs="column" layout="row">
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in home.featuredBikes" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33">
+        <bike-card ng-repeat="bike in home.featuredBikes" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33" home="true">
         </bike-card>
       </div>
     </div>
   </div>
 
-  <div id="featuredTiles" class="content section" layout-align="start center">
+  <div id="testimonials" class="content section" layout-align="start center">
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline">What are people saying?</h2>
+    </div>
+
+    <div class="testimonials-container" layout-padding>
+      <slick settings="home.slickConfig">
+
+        <div ng-repeat="testimonial in home.testimonials"
+          class="testimonials-slick-slide" layout="column" layout-align="center center">
+          <div class="testimonials-text md-subhead">&ldquo;{{ testimonial.text }}&rdquo;</div>
+            <a ui-sref="user({userId: testimonial.userId})" analytics-on analytics-category="testimonial" analytics-event="click" analytics-label="{{ testimonial.userName }}">
+              <img class="testimonials-img" ng-src="{{ testimonial.userImagePath}}">
+            </a>
+          <h3 class="md-subhead testimonials-name">{{ testimonial.userName }}</h3>
+        </div>
+
+      </slick>
+    </div>
+  </div>
+
+  <!-- <div id="featuredTiles" class="content section" layout-align="start center">
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <h2 class="md-headline">{{ 'home.featured-tiles-header' | translate }}</h2>
       <p class="md-subhead">{{ 'home.featured-tiles-subheader' | translate }}</p>
@@ -59,17 +102,62 @@
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-3">
-        <a ui-sref="velothonBikerental" layout-padding layout="column" layout-align="center center">
+        <a ui-sref="cyclassicsHamburg" layout-padding layout="column" layout-align="center center">
           <div class="img-container">
             <img ng-src="app/assets/ui_icons/biketype_allterrain.png">
           </div>
-          <h3 class="md-title">Velothon Berlin</h3>
+          <h3 class="md-title">Cyclassics Hamburg 20.08.2017</h3>
+        </a>
+      </md-grid-tile>
+    </md-grid-list>
+  </div> -->
+
+  <div id="featuredTiles" class="content section" layout-align="start center">
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline">{{ 'home.featured-tiles-header' | translate }}</h2>
+      <p class="md-subhead">{{ 'home.featured-tiles-subheader' | translate }}</p>
+    </div>
+    
+    <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="4" md-gutter="16px" md-row-height="1:1">
+      <md-grid-tile class="tile" md-colspan-gt-xs="1" style="background-image: url('/app/assets/ui_images/featured-tiles/ampler.jpg')">
+        <a ui-sref="ampler" layout="column" layout-align="center center">
+          <h3 class="md-title">Ampler E-Bikes</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile" md-colspan-gt-xs="1" style="background-image: url('/app/assets/ui_images/featured-tiles/muli.jpg')">
+        <a ui-sref="muli" layout="column" layout-align="center center">
+          <h3 class="md-title">Muli E-Cargos</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile" md-colspan-gt-xs="1" style="background-image: url('/app/assets/ui_images/featured-tiles/brompton.jpg')">
+        <a ui-sref="brompton" layout="column" layout-align="center center">
+          <h3 class="md-title">Brompton Foldings</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile" md-rowspan-gt-xs="2" style="background-image: url('/app/assets/ui_images/featured-tiles/cyclassics.jpg')">
+        <a ui-sref="cyclassicsHamburg" layout="column" layout-align="center center">
+          <h3 class="md-title">Cyclassics Hamburg, 20.08.2017</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile" md-colspan-gt-xs="2" style="background-image: url('/app/assets/ui_images/featured-tiles/journal.jpg')">
+        <a href="https://journal.listnride.com" layout="column" layout-align="center center">
+          <h3 class="md-title">The listnride Journal</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile" style="background-image: url('/app/assets/ui_images/featured-tiles/bonvelo.jpg')">
+        <a ui-sref="bonvelo" layout="column" layout-align="center center" >
+          <h3 class="md-title">Bonvelo Singlespeed/Fixies</h3>
         </a>
       </md-grid-tile>
     </md-grid-list>
   </div>
 
-  <div id="featuredCities" class="content section" layout-align="start center">
+  <!-- <div id="featuredCities" class="content section" layout-align="start center">
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <h2 class="md-headline">{{ 'home.featured-cities-header' | translate }}</h2>
       <p class="md-subhead">{{ 'home.featured-cities-subheader' | translate }}</p>
@@ -77,51 +165,65 @@
     
     <md-grid-list class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="3" md-gutter="16px" md-row-height="1:1">
       <md-grid-tile class="tile1" md-colspan-gt-xs="2">
-        <a ui-sref="cities-munich" layout="row" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="munich">
+        <a ui-sref="cities-munich" layout="row" layout-align="center center" ng-click="home.cityAnalytics('munich')">
           <h3 class="md-title">{{ 'shared.munich' | translate }}</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile2" md-rowspan-gt-xs="2">
-        <a ui-sref="cities-berlin" layout="row" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="berlin">
+        <a ui-sref="cities-berlin" layout="row" layout-align="center center" ng-click="home.cityAnalytics('berlin')">
           <h3 class="md-title">{{ 'shared.berlin' | translate }}</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile3">
-        <a ui-sref="cities-amsterdam" layout="row" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="amsterdam">
+        <a ui-sref="cities-amsterdam" layout="row" layout-align="center center" ng-click="home.cityAnalytics('amsterdam')">
           <h3 class="md-title">{{ 'shared.amsterdam' | translate }}</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile4">
-        <a ui-sref="cities-vienna" layout="row" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="vienna">
+        <a ui-sref="cities-vienna" layout="row" layout-align="center center" ng-click="home.cityAnalytics('vienna')">
           <h3 class="md-title">{{ 'shared.vienna' | translate }}</h3>
+        </a>
+      </md-grid-tile>
+    </md-grid-list>
+  </div> -->
+
+  <div id="featuredCities" class="content section" layout-align="start center">
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline">{{ 'home.featured-cities-header' | translate }}</h2>
+      <p class="md-subhead">{{ 'home.featured-cities-subheader' | translate }}</p>
+    </div>
+    
+    <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="2" md-cols-gt-sm="4" md-gutter="16px" md-row-height="1.5:1">
+      <md-grid-tile class="tile tile-berlin">
+        <a ui-sref="cities-berlin" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="berlin">
+          <h3 class="md-title">Berlin</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile tile-munich">
+        <a ui-sref="cities-munich" target="_blank" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="munich">
+          <h3 class="md-title">Munich</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile tile-amsterdam">
+        <a ui-sref="cities-amsterdam" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="amsterdam">
+          <h3 class="md-title">Amsterdam</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile tile-vienna">
+        <a ui-sref="cities-vienna" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="vienna">
+          <h3 class="md-title">Vienna</h3>
         </a>
       </md-grid-tile>
     </md-grid-list>
   </div>
 
-  <div id="testimonials" class="content section" layout-align="start center">
-    <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h2 class="md-headline">What are people saying?</h2>
-    </div>
-
-    <div class="testimonials-container" layout-padding>
-      <slick settings="home.slickConfig">
-
-        <div ng-repeat="testimonial in home.testimonials"
-          class="testimonials-slick-slide" layout="column" layout-align="center center">
-          <div class="testimonials-text md-subhead">&ldquo;{{ testimonial.text }}&rdquo;</div>
-            <a ui-sref="user({userId: testimonial.userId})" analytics-on analytics-category="testimonial" analytics-event="click" analytics-label="{{ testimonial.userName }}">
-              <img class="testimonials-img" ng-src="{{ testimonial.userImagePath}}">
-            </a>
-          <h3 class="md-subhead testimonials-name">{{ testimonial.userName }}</h3>
-        </div>
-
-      </slick>
-    </div>
-  </div>
+  <br>
 
   <div id="listBike" class="section"  md-theme="lnr-dark" layout="column" layout-align="space-between none">
     <div class="lnr-center md-color-white lnr-margin-top" flex layout="column" layout-align="center center">
@@ -133,6 +235,14 @@
         <md-button ui-sref="listingABike" class="md-raised md-primary md-xlrg" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="list a bike">{{ 'shared.list-a-bike' | translate }}</md-button>
     </div>
   </div>
+
+  <!-- <div class="content highlight-tile" layout="column" layout-padding layout-align="center center">
+      <h2 class="md-display-1">{{ 'home.list-a-bike-header' | translate }}</h2>
+      <p class="md-subhead">{{ 'home.list-a-bike-subheader' | translate }}</p>
+      <div flex layout="column" layout-align="center center">
+        <md-button ui-sref="listingABike" class="md-raised md-primary md-xlrg" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="list a bike">{{ 'shared.list-a-bike' | translate }}</md-button>
+      </div>
+  </div> -->
 
   <footer></footer>
 </md-content>

@@ -3,9 +3,47 @@
 angular.module('home',[]).component('home', {
   templateUrl: 'app/modules/home/home.template.html',
   controllerAs: 'home',
-  controller: [ '$state', '$translate', '$analytics', 'api', 'ngMeta',
-    function HomeController($state, $translate, $analytics, api, ngMeta) {
+  controller: [ '$state', '$stateParams', '$translate', '$analytics', '$localStorage',
+    '$mdDialog', 'verification', 'authentication', 'api', 'ngMeta', 'loadingDialog',
+    function HomeController($state, $stateParams, $translate, $analytics, $localStorage, $mdDialog,
+                            verification, authentication, api, ngMeta) {
       var home = this;
+
+      if ($state.current.name === "verify" && authentication.loggedIn()) {
+        verification.openDialog(false, false, window.event);
+      } else if ($state.current.name === "confirm") {
+        $mdDialog.show({
+          templateUrl: 'app/modules/shared/dialogs/spinner.template.html',
+          parent: angular.element(document.body),
+          targetEvent: window.event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: false,
+          escapeToClose: false
+        });
+        api.get('/users/' + $stateParams.userId + '/confirm/' + $stateParams.confirmationCode).then(
+          function (success) {
+            $mdDialog.show(
+              $mdDialog.show()
+                .clickOutsideToClose(true)
+                .title('Confirmation successful')
+                .textContent('Great, you\'ve successfully confirmed your email address!')
+                .ok('Ok')
+                // .targetEvent(ev)
+            );
+          },
+          function (error) {
+            $mdDialog.show(
+              $mdDialog.show()
+                .clickOutsideToClose(true)
+                .title('Confirmation was not successful')
+                .textContent('The confirmation code seems to be wrong, please reach out to our customer support.')
+                .ok('Ok')
+                // .targetEvent(ev)
+            );
+          }
+        );
+      }
 
       ngMeta.setTitle($translate.instant("home.meta-title"));
       ngMeta.setTag("description", $translate.instant("home.meta-description"));
@@ -56,6 +94,10 @@ angular.module('home',[]).component('home', {
 
       home.onSearchClick = function() {
         $state.go('search', {location: home.location});
+      };
+
+      home.cityAnalytics = function(city) {
+        $analytics.eventTrack('ViewContent', {  category: 'City Page', label: city});
       };
     }
   ]

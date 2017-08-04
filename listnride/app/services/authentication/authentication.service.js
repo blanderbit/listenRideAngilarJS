@@ -3,8 +3,8 @@
 angular.
   module('listnride').
   factory('authentication', [
-    'Base64', '$http', '$localStorage', '$mdDialog', '$mdToast', '$window', '$state', '$q', '$translate', 'ezfb', 'api', 'verification', 'sha256',
-    function(Base64, $http, $localStorage, $mdDialog, $mdToast, $window, $state, $q, $translate, ezfb, api, verification, sha256){
+    'Base64', '$http', '$localStorage', '$mdDialog', '$mdToast', '$window', '$state', '$q', '$translate', '$analytics', 'ezfb', 'api', 'verification', 'sha256',
+    function(Base64, $http, $localStorage, $mdDialog, $mdToast, $window, $state, $q, $translate, $analytics, ezfb, api, verification, sha256){
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (email, password, id, profilePicture, firstName, lastName, unreadMessages, referenceCode) {
@@ -18,6 +18,21 @@ angular.
         $localStorage.unreadMessages = unreadMessages;
         $localStorage.email = email;
         $localStorage.referenceCode = referenceCode;
+      };
+
+      // TODO: This is a duplicate of app.module.js
+      var retrieveLocale = function() {
+        var defaultLanguage = "en";
+        var availableLanguages = ["de", "en", "nl"];
+    
+        var host = window.location.host;
+        var retrievedLanguage = host.split('.')[0];
+    
+        if (availableLanguages.indexOf(retrievedLanguage) >= 0) {
+          return retrievedLanguage;
+        } else {
+          return defaultLanguage;
+        }
       };
 
       // The Signup Dialog Controller
@@ -38,13 +53,15 @@ angular.
               "profile_picture_url": profilePicture,
               "first_name": firstName,
               "last_name": lastName,
-              "ref_code": inviteCode
+              "ref_code": inviteCode,
+              "language": retrieveLocale()
             }
           };
 
           api.post("/users", user).then(function(success) {
-            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages, success.data.ref_code);            
-            verification.openDialog(false, invited);
+            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages, success.data.ref_code);
+            verification.openDialog(false, invited, false, signupDialog.showProfile);
+            $analytics.eventTrack('Sign Up', {  category: 'Facebook Sign-Up', label: 'Sign-Up'});
           }, function(error) {
             showSignupError();
           });
@@ -87,7 +104,8 @@ angular.
               'password_hashed': sha256.encrypt(signupDialog.password),
               'first_name': signupDialog.firstName,
               'last_name': signupDialog.lastName,
-              'ref_code': inviteCode
+              'ref_code': inviteCode,
+              'language': retrieveLocale()
             }
           };
 
@@ -116,7 +134,8 @@ angular.
 
           api.post('/businesses', business).then(function(success) {
             $state.go('home');
-            verification.openDialog(false, invited);
+            verification.openDialog(false, invited, false, signupDialog.showProfile);
+            $analytics.eventTrack('Sign Up', {  category: 'Non-FB Sign-Up', label: 'Sign-Up'});
           }, function(error) {
             signupDialog.businessError = true;
             signupDialog.signingUp = false;
@@ -133,8 +152,6 @@ angular.
               });
             } else {
               ezfb.login(function(response) {
-                console.log("FB Login, Response:");
-                console.log(response);
                 var accessToken = response.authResponse.accessToken;
                 ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
                   signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name);
@@ -144,6 +161,9 @@ angular.
           });
         };
 
+        signupDialog.showProfile = function() {
+          $state.go("user", {userId: $localStorage.userId});
+        };
       };
 
       // The Login Dialog Controller
@@ -179,18 +199,18 @@ angular.
           api.post('/users/login', user).then(function(response) {
             setCredentials(response.data.email, response.data.password_hashed, response.data.id, response.data.profile_picture.profile_picture.url, response.data.first_name, response.data.last_name, response.data.unread_messages, response.data.ref_code);
             showLoginSuccess();
-            if (!response.data.has_address || !response.data.confirmed_phone || response.data.status == 0) {
+            $analytics.eventTrack('Login', {  category: 'Facebook Login', label: 'Login'});
+            if (!response.data.has_address || !response.data.confirmed_phone || response.data.status === 0) {
               verification.openDialog(false);
             }
-            console.log(response.data);
-          }, function(response) {
+          }, function(error) {
             showLoginError();
           });
         };
 
         loginDialog.hide = function() {
           $mdDialog.hide();
-        }
+        };
 
         loginDialog.login = function() {
           var user = {
@@ -202,32 +222,30 @@ angular.
           api.post('/users/login', user).then(function(success) {
             setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages, success.data.ref_code);
             showLoginSuccess();
-            if (!success.data.has_address || !success.data.confirmed_phone || success.data.status == 0) {
+            $analytics.eventTrack('Login', {  category: 'Non-FB Login', label: 'Login'});
+            if (!success.data.has_address || !success.data.confirmed_phone || success.data.status === 0) {
               verification.openDialog(false);
             }
           }, function(error) {
-            console.log(error);
             showLoginError();
           });
-        }
+        };
 
         loginDialog.connectFb = function() {
           ezfb.getLoginStatus(function(response) {
             if (response.status === 'connected') {
               ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                console.log(response);
                 loginFb(response.email, response.id);
               });
             } else {
               ezfb.login(function(response) {
                 ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                  console.log(response);
                   loginFb(response.email, response.id);
                 });
               }, {scope: 'email'});
             }
           });
-        }
+        };
 
         loginDialog.resetPassword = function() {
           var user = {
@@ -243,13 +261,12 @@ angular.
               .position('top center')
             );
           }, function(error) {
-            console.log(response);
+
           });
         }
-
       };
 
-      var showSignupDialog = function(inviteCode, event) {;
+      var showSignupDialog = function(inviteCode, event) {
         $mdDialog.show({
           controller: SignupDialogController,
           controllerAs: 'signupDialog',
@@ -291,11 +308,7 @@ angular.
       };
 
       var loggedIn = function() {
-        if ($localStorage.auth) {
-          return true;
-        } else {
-          return false;
-        }
+        return !!$localStorage.auth;
       };
 
       // Logs out the user by deleting the auth header from localStorage
@@ -321,9 +334,8 @@ angular.
             "email": email
           }
         };
-        console.log(user);
         return api.post('/users/login', user);
-      }
+      };
 
       // Further all functions to be exposed in the service
       return {

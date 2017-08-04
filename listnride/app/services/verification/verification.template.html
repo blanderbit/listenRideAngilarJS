@@ -15,7 +15,7 @@
   <!--</md-toolbar>-->
 
   <md-dialog-content>
-    <div class="md-dialog-content" layout="column">
+    <div class="md-dialog-content" layout="column" ng-style="{'display': verificationDialog.loaded ? '' : 'none'}">
       <md-tabs
         class="content"
         md-dynamic-height
