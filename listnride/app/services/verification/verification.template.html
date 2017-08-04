@@ -59,15 +59,22 @@
           <div class="tab-content verif-2" layout="column">
             <div layout="column" layout-align="center center" hide show-xs >
               <div class="label label-public">public</div>
-              <p class="md-headline">{{ 'verification.2.title' | translate }}</p>
+              <p class="md-headline">
+                {{ verificationDialog.business ? 'verification.2.business-title' : 'verification.2.title' | translate }}
+              </p>
             </div>
+
             <div layout="row" layout-align="center center" hide-xs >
-              <p class="md-headline lnr-center">{{ 'verification.2.title' | translate }}</p>
+              <p class="md-headline lnr-center">
+                {{ verificationDialog.business ? 'verification.2.business-title' : 'verification.2.title' | translate }}
+              </p>
               <div class="label label-public">public</div>
             </div>
+
             <p class="md-body-1 lnr-center" ng-class="verificationDialog.mobileScreen ? '' : 'md-body-desktop'">
-              {{ 'verification.2.description' | translate }}
+              {{ verificationDialog.business ? 'verification.2.business-description' : 'verification.2.description' | translate }}
             </p>
+
             <form name="verificationDialog.descriptionForm" layout="column" layout-align="center center">
               <img
                 ng-style="{'display': verificationDialog.profilePicture ? 'none' : ''}"
@@ -139,7 +146,9 @@
 
         <md-tab label="⬤" layout="row" ng-if="verificationDialog.newUser.status == 0" md-on-select="verificationDialog.activeTab = 4" ng-disabled="true">
             <div class="tab-content" layout="column">
-              <p class="md-body-1 lnr-center">{{ 'verification.4.description' | translate }}</p>
+              <p class="md-body-1 lnr-center" ng-class="verificationDialog.mobileScreen ? '' : 'md-body-desktop'">
+                {{ 'verification.4.description' | translate }}
+              </p>
               <div layout="row" layout-align="center center">
                 <md-input-container flex>
                   <form name="emailForm">
@@ -158,7 +167,10 @@
 
         <md-tab label="⬤" layout="row" ng-if="!verificationDialog.newUser.confirmed_phone" md-on-select="verificationDialog.activeTab = 5" ng-disabled="true">
             <div class="tab-content" layout="column">
-              <p class="md-body-1 lnr-center">{{ 'verification.5.description' | translate }}</p>
+              <p class="md-body-1 lnr-center" ng-class="verificationDialog.mobileScreen ? '' : 'md-body-desktop'">
+                {{ 'verification.5.description' | translate }}
+              </p>
+
               <div layout="row" layout-align="center center">
                 <md-input-container flex>
                   <form name="verificationDialog.phoneForm" class="lnr-tel-int">
@@ -210,7 +222,12 @@
               <div class="label label-private">private</div>
             </div>
 
-            <form name="verificationDialog.addressForm" layout="column" class="md-body-1">
+            <form
+              name="verificationDialog.addressForm"
+              layout="column"
+              class="md-body-1"
+              ng-class="verificationDialog.mobileScreen ? '' : 'md-body-desktop'"
+            >
               <autocomplete
                 md-no-float
                 autocomplete-id="verificationDialog"
@@ -219,12 +236,11 @@
                 required
                 required="true"
                 class="md-block my-custom-class"
-                ng-attr-placeholder="What is your favorite US state?"
                 place-changed="verificationDialog.fillAddress(place)">
               </autocomplete>
 
-              <div layout="row" layout-align="space-between center" hide-xs>
-                <md-input-container md-no-float flex-gt-xs="45">
+              <div class="lnr-input-containers" layout="row" hide-xs>
+                <md-input-container md-no-float flex>
                   <input
                     required
                     name="zip"
@@ -236,7 +252,7 @@
                   </div>
                 </md-input-container>
 
-                <md-input-container md-no-float flex-gt-xs="45">
+                <md-input-container md-no-float flex>
                   <input
                     required
                     name="city"
@@ -274,21 +290,33 @@
               </md-input-container>
 
               <md-input-container md-no-float class="md-block">
-                <input required name="country" ng-model="verificationDialog.newUser.country" placeholder="{{ 'list.location.country' | translate }}">
+                <input
+                  required
+                  name="country"
+                  ng-model="verificationDialog.newUser.country"
+                  placeholder="{{ 'list.location.country' | translate }}"
+                >
                 <div ng-messages="verificationDialog.addressForm.country.$error" role="alert">
                   <div ng-message="required">This is required.</div>
                 </div>
               </md-input-container>
+
+              <!--<md-input-container md-no-float>-->
+                <!--<input-->
+                  <!--name="vat"-->
+                  <!--ng-model="verificationDialog.newUser.vat"-->
+                  <!--placeholder="VAT"-->
+                  <!--ng-required='verificationDialog.business'-->
+                <!--&gt;-->
+                <!--<div ng-messages="verificationDialog.addressForm.vat.$error" role="alert">-->
+                  <!--<div ng-message="required">This is required.</div>-->
+                <!--</div>-->
+              <!--</md-input-container>-->
             </form>
           </div>
         </md-tab>
       </md-tabs>
       <div class="md-dialog-buttons" layout="row" layout-align="end center" hide-xs>
-        <!--<md-button class="md-lined" ng-click="verificationDialog.hide()" ng-if="verificationDialog.firstTime">{{ 'shared.later' | translate }}</md-button>-->
-        <!--<md-button class="md-lined md-warn" ng-if="!verificationDialog.lister && !verificationDialog.firstTime" ng-click="verificationDialog.hide()" ng-if="!verificationDialog.firstTime">{{ 'shared.cancel' | translate }}</md-button>-->
-        <!--<md-button class="md-lined md-warn" ng-if="verificationDialog.lister" ng-click="verificationDialog.hide()" ui-sref="home">{{ 'shared.cancel' | translate }}</md-button>-->
-        <!--<span flex></span>-->
-
         <md-button
           class="md-raised md-primary lnr-no-margin md-button md-ink-ripple"
           ng-disabled="verificationDialog.nextDisabled()"
