@@ -1521,6 +1521,12 @@ md-grid-list a {
 .text-error {
   color: rgb(221,44,0);
 }
+
+md-input-container .md-input.form-input-error {
+  border: 1px solid rgb(221,44,0);
+  border-radius: 4px;
+}
+
 .disabled {
   pointer-events: none;
   opacity: 0.5;
@@ -1674,4 +1680,8 @@ invite .voucher-link {
 
 .vello-bikes bike-card {
   padding-bottom: 25px;
+}
+
+.sign-up-links {
+  margin-top: 20px;
 }
