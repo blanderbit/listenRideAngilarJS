@@ -136,7 +136,7 @@ angular.module('listnride', [
       function (success) {
         var user = success.data;
         console.log(user);
-        authentication.setCredentials(user.email, user.password_hashed, user.id, user.profile_picture.profile_picture.url, user.first_name, user.last_name, user.unread_messages, user.ref_code);
+        authentication.setCredentials(user);
       },
       function (error) {
 
