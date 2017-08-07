@@ -178,6 +178,9 @@
     },
     "6": {
       "title": "What is your address"
+    },
+    "7": {
+      "title": "Company information"
     }
   },
   "bike": {
