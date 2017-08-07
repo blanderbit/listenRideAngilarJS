@@ -105,16 +105,34 @@ angular.
             }
           };
 
+          api.put('/users/' + $localStorage.userId, address).then(
+            function (success) {
+              if (!verificationDialog.business) {
+                $mdToast.show(
+                  $mdToast.simple()
+                    .textContent('Congratulations, your profile was successfully verified!')
+                    .hideDelay(4000)
+                    .position('top center')
+                );
+              }
+            },
+            function (error) {
+
+            }
+          );
+        };
+
+        var uploadCompany = function() {
           var business = {
             'business': {
               'vat': verificationDialog.newUser.vat
             }
           };
 
-          // ToDO: Finish with VAT
-
-          api.put('/users/' + $localStorage.userId, address).then(
+          api.put('/businesses/' + verificationDialog.user.business.id, business).then(
             function (success) {
+              if (callback) {callback()}
+              $mdDialog.hide();
               $mdToast.show(
                 $mdToast.simple()
                 .textContent('Congratulations, your profile was successfully verified!')
@@ -123,7 +141,12 @@ angular.
               );
             },
             function (error) {
-
+              $mdToast.show(
+                $mdToast.simple()
+                  .textContent(error.data.errors[0].detail)
+                  .hideDelay(4000)
+                  .position('top center')
+              );
             }
           );
         };
@@ -193,7 +216,8 @@ angular.
             case 3: uploadDescription(); verificationDialog.selectedIndex += 1; break;
             case 4: verificationDialog.selectedIndex += 1; break;
             case 5: verificationDialog.selectedIndex += 1; break;
-            case 6: uploadAddress(); if (callback) {callback()}; $mdDialog.hide(); break;
+            case 6: uploadAddress(); showUploadCompany(); break;
+            case 7: uploadCompany(); break;
           }
         };
 
@@ -205,6 +229,16 @@ angular.
             case 4: return verificationDialog.user.status == 0
             case 5: return !verificationDialog.user.confirmed_phone;
             case 6: return !verificationDialog.addressForm.$valid;
+            case 7: return !verificationDialog.companyForm.$valid;
+          }
+        };
+
+        var showUploadCompany = function() {
+          if (verificationDialog.business) {
+            verificationDialog.selectedIndex += 1
+          } else {
+            if (callback) { callback() }
+            $mdDialog.hide();
           }
         };
 

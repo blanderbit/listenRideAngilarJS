@@ -211,7 +211,7 @@
             </div>
         </md-tab>
 
-        <md-tab label="⬤" layout="row" md-on-select="verificationDialog.activeTab = 6" ng-disabled="true">
+        <md-tab label="⬤" layout="row" ng-if="!verificationDialog.newUser.has_address" md-on-select="verificationDialog.activeTab = 6" ng-disabled="true">
           <div class="tab-content verif-6" layout="column">
             <div layout="column" layout-align="center center" hide show-xs>
               <div class="label label-private">private</div>
@@ -300,18 +300,38 @@
                   <div ng-message="required">This is required.</div>
                 </div>
               </md-input-container>
+            </form>
+          </div>
+        </md-tab>
 
-              <!--<md-input-container md-no-float>-->
-                <!--<input-->
-                  <!--name="vat"-->
-                  <!--ng-model="verificationDialog.newUser.vat"-->
-                  <!--placeholder="VAT"-->
-                  <!--ng-required='verificationDialog.business'-->
-                <!--&gt;-->
-                <!--<div ng-messages="verificationDialog.addressForm.vat.$error" role="alert">-->
-                  <!--<div ng-message="required">This is required.</div>-->
-                <!--</div>-->
-              <!--</md-input-container>-->
+        <md-tab label="⬤" layout="row" md-on-select="verificationDialog.activeTab = 7" ng-disabled="true" data-ng-if="verificationDialog.business">
+          <div class="tab-content verif-7" layout="column">
+            <div layout="column" layout-align="center center" hide show-xs>
+              <div class="label label-private">private</div>
+              <p class="md-headline">{{ 'verification.7.title' | translate }}</p>
+            </div>
+            <div layout="row" layout-align="center center" hide-xs >
+              <p class="md-headline lnr-center">{{ 'verification.7.title' | translate }}</p>
+              <div class="label label-private">private</div>
+            </div>
+
+            <form
+              name="verificationDialog.companyForm"
+              layout="column"
+              class="md-body-1"
+              ng-class="verificationDialog.mobileScreen ? '' : 'md-body-desktop'"
+            >
+              <md-input-container md-no-float>
+                <input
+                  name="vat"
+                  ng-model="verificationDialog.newUser.vat"
+                  placeholder="VAT"
+                  ng-required='verificationDialog.business'
+                >
+                <div ng-messages="verificationDialog.companyForm.vat.$error" role="alert">
+                  <div ng-message="required">This is required.</div>
+                </div>
+              </md-input-container>
             </form>
           </div>
         </md-tab>
