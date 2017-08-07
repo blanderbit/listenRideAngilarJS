@@ -18,9 +18,24 @@
 
     <md-dialog-content>
       <div class="md-dialog-content" layout="column">
-        <md-button ng-click="signupDialog.connectFb()" class="md-primary md-lined lnr-btn-fb" analytics-on analytics-category="sign up" analytics-event="clicked" analytics-label="facebook login button">{{ 'forms.sign-up-with-facebook' | translate }}</md-button>
-        <div class="lnr-middle-divider">
+        <md-button
+          ng-hide="signupDialog.business"
+          ng-click="signupDialog.connectFb()"
+          class="md-primary md-lined lnr-btn-fb"
+          analytics-on
+          analytics-category="sign up"
+          analytics-event="clicked"
+          analytics-label="facebook login button"
+        >
+          {{ 'forms.sign-up-with-facebook' | translate }}
+        </md-button>
+
+        <div class="lnr-middle-divider" ng-hide="signupDialog.business">
           {{ 'forms.or' | translate }}
+        </div>
+
+        <div class="sign-up-tip" ng-hide="!signupDialog.business">
+          Please fill form with company contact person information.
         </div>
 
         <md-input-container ng-hide="!signupDialog.business">
