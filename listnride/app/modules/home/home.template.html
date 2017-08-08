@@ -63,15 +63,26 @@
     <div class="testimonials-container" layout-padding>
       <slick settings="home.slickConfig">
 
-        <div ng-repeat="testimonial in home.testimonials"
-          class="testimonials-slick-slide" layout="column" layout-align="center center">
-          <div class="testimonials-text md-subhead">&ldquo;{{ testimonial.text }}&rdquo;</div>
-            <a ui-sref="user({userId: testimonial.userId})" analytics-on analytics-category="testimonial" analytics-event="click" analytics-label="{{ testimonial.userName }}">
+        <div
+          ng-repeat="testimonial in home.testimonials"
+          class="testimonials-slick-slide"
+          layout="row"
+          layout-align="center center"
+        >
+          <div layout="column" layout-align="center center">
+            <a
+              ui-sref="user({userId: testimonial.userId})"
+              analytics-on
+              analytics-category="testimonial"
+              analytics-event="click"
+              analytics-label="{{ testimonial.userName }}"
+            >
               <img class="testimonials-img" ng-src="{{ testimonial.userImagePath}}">
             </a>
-          <h3 class="md-subhead testimonials-name">{{ testimonial.userName }}</h3>
+            <h3 class="md-subhead testimonials-name">{{ testimonial.userName }}</h3>
+          </div>
+          <div class="testimonials-text md-subhead">&ldquo;{{ testimonial.text }}&rdquo;</div>
         </div>
-
       </slick>
     </div>
   </div>
