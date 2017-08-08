@@ -814,7 +814,7 @@ md-grid-list md-grid-tile.tile-vienna {
 }
 
 #testimonials img.testimonials-img {
-  width: 85px;
+  width: 75px;
   height: auto;
   border-radius: 50%;
   margin-top: 16px;
@@ -829,14 +829,12 @@ md-grid-list md-grid-tile.tile-vienna {
   text-align: center;
 }
 
-.testimonials-name {
-  font-weight: 500;
-  text-align: right;
-  width: 85%;
-}
-
 .testimonials-slick-slide {
   display: flex !important;
+}
+
+.testimonial-avatar {
+  min-width: 85px;
 }
 
 #testimonials .testimonials-prev-arrow {
@@ -892,6 +890,7 @@ md-grid-list md-grid-tile.tile-vienna {
 
   home .testimonials-text {
     width: 100%;
+    font-size: 16px;
   }
 }
 
