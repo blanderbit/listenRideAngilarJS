@@ -62,14 +62,14 @@
 
     <div class="testimonials-container" layout-padding>
       <slick settings="home.slickConfig">
-
         <div
           ng-repeat="testimonial in home.testimonials"
           class="testimonials-slick-slide"
+          flex
           layout="row"
           layout-align="center center"
         >
-          <div layout="column" layout-align="center center">
+          <div flex="15" layout="column" layout-align="center center" class="testimonial-avatar">
             <a
               ui-sref="user({userId: testimonial.userId})"
               analytics-on
@@ -79,9 +79,10 @@
             >
               <img class="testimonials-img" ng-src="{{ testimonial.userImagePath}}">
             </a>
-            <h3 class="md-subhead testimonials-name">{{ testimonial.userName }}</h3>
           </div>
-          <div class="testimonials-text md-subhead">&ldquo;{{ testimonial.text }}&rdquo;</div>
+          <div class="testimonials-text md-subhead" flex="85">
+            &ldquo;{{ testimonial.text }}&rdquo; - <b>{{ testimonial.userName }}</b>
+          </div>
         </div>
       </slick>
     </div>
