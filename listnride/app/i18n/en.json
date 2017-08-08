@@ -233,7 +233,7 @@
     "reject": "Reject",
     "rate": "Rate",
     "confirm": "Confirm",
-    "confirm_return": "Confirm Return and Rate"
+    "confirm_return": "Confirm Return"
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{timespan}}. Agree on further details using the chat.",

@@ -185,7 +185,7 @@ angular.module('requests', []).component('requests', {
         );
       };
 
-      var updateStatus = function (statusId) {
+      var updateStatus = function (statusId, paymentWarning) {
         var data = {
           "request": {
             "status": statusId
@@ -198,6 +198,18 @@ angular.module('requests', []).component('requests', {
           },
           function (error) {
             reloadRequest(requests.request.id);
+            requests.loadingChat = false;
+            if (paymentWarning) {
+              $mdDialog.show(
+                $mdDialog.alert(event)
+                  .parent(angular.element(document.body))
+                  .clickOutsideToClose(true)
+                  .title('The bike couldn\'t be booked')
+                  .textContent('Unfortunately, the payment didn\'t succeed, so the bike could not be booked. The rider already got informed and we\'ll get back to you as soon as possible to finish the booking.')
+                  .ok('Okay')
+                  .targetEvent(event)
+              );
+            }
           }
         );
       };
@@ -209,7 +221,7 @@ angular.module('requests', []).component('requests', {
             if (success.data.current_payout_method) {
               // Lister has already a payout method, so simply accept the request
               requests.loadingChat = true;
-              updateStatus(3);
+              updateStatus(3, true);
             } else {
               // Lister has no payout method yet, so show the payout method dialog
               showPayoutDialog(success.data);
@@ -334,7 +346,7 @@ angular.module('requests', []).component('requests', {
                 .position('top center')
               );
               requests.loadingChat = true;
-              updateStatus(2);
+              updateStatus(2, false);
               hideDialog();
             },
             function (error) {
