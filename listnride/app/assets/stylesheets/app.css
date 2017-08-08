@@ -814,7 +814,7 @@ md-grid-list md-grid-tile.tile-vienna {
 }
 
 #testimonials img.testimonials-img {
-  width: 75px;
+  width: 85px;
   height: auto;
   border-radius: 50%;
   margin-top: 16px;
@@ -827,12 +827,12 @@ md-grid-list md-grid-tile.tile-vienna {
 .testimonials-text {
   font-size: 20px;
   text-align: center;
-  width: 75%;
 }
 
 .testimonials-name {
   font-weight: 500;
-  text-align: center;
+  text-align: right;
+  width: 85%;
 }
 
 .testimonials-slick-slide {
