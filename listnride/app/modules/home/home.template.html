@@ -67,9 +67,10 @@
           class="testimonials-slick-slide"
           flex
           layout="row"
+          layout-xs="column"
           layout-align="center center"
         >
-          <div flex="15" layout="column" layout-align="center center" class="testimonial-avatar">
+          <div layout="column" layout-align="center center" class="testimonial-avatar">
             <a
               ui-sref="user({userId: testimonial.userId})"
               analytics-on
@@ -80,8 +81,8 @@
               <img class="testimonials-img" ng-src="{{ testimonial.userImagePath}}">
             </a>
           </div>
-          <div class="testimonials-text md-subhead" flex="85">
-            &ldquo;{{ testimonial.text }}&rdquo; - <b>{{ testimonial.userName }}</b>
+          <div class="testimonials-text md-subhead">
+            &ldquo;{{ testimonial.text }}&rdquo; <strong>{{ testimonial.userName }}</strong>
           </div>
         </div>
       </slick>
