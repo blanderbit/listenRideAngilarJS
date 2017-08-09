@@ -3,9 +3,9 @@
 angular.module('home',[]).component('home', {
   templateUrl: 'app/modules/home/home.template.html',
   controllerAs: 'home',
-  controller: [ '$state', '$stateParams', '$translate', '$analytics', '$localStorage',
+  controller: [ '$state', '$stateParams', '$translate', '$localStorage',
     '$mdDialog', 'verification', 'authentication', 'api', 'ngMeta', 'loadingDialog',
-    function HomeController($state, $stateParams, $translate, $analytics, $localStorage, $mdDialog,
+    function HomeController($state, $stateParams, $translate, $localStorage, $mdDialog,
                             verification, authentication, api, ngMeta) {
       var home = this;
 
@@ -88,16 +88,11 @@ angular.module('home',[]).component('home', {
 
       home.placeChanged = function(place) {
         var location = place.formatted_address || place.name;
-        $analytics.eventTrack('search', {  category: 'form', label: location, value: 8 });
         $state.go('search', {location: location});
       };
 
       home.onSearchClick = function() {
         $state.go('search', {location: home.location});
-      };
-
-      home.cityAnalytics = function(city) {
-        $analytics.eventTrack('ViewContent', {  category: 'City Page', label: city});
       };
     }
   ]

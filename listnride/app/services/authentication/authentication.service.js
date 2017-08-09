@@ -61,7 +61,7 @@ angular.
           api.post("/users", user).then(function(success) {
             setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages, success.data.ref_code);
             verification.openDialog(false, invited, false, signupDialog.showProfile);
-            $analytics.eventTrack('Sign Up', {  category: 'Facebook Sign-Up', label: 'Sign-Up'});
+            $analytics.eventTrack('Sign Up', {  category: 'Facebook Sign-Up', label: 'Quick Sign-Up Complete'});
           }, function(error) {
             showSignupError();
           });
@@ -100,7 +100,7 @@ angular.
             setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages, success.data.ref_code);
             $state.go('home');
             verification.openDialog(false, invited, false, signupDialog.showProfile);
-            $analytics.eventTrack('Sign Up', {  category: 'Non-FB Sign-Up', label: 'Sign-Up'});
+            $analytics.eventTrack('Sign Up', {  category: 'Non-FB Sign-Up', label: 'Quick Sign-Up Complete'});
           }, function(error) {
             showSignupError();
             signupDialog.signingUp = false;
@@ -163,7 +163,6 @@ angular.
           api.post('/users/login', user).then(function(response) {
             setCredentials(response.data.email, response.data.password_hashed, response.data.id, response.data.profile_picture.profile_picture.url, response.data.first_name, response.data.last_name, response.data.unread_messages, response.data.ref_code);
             showLoginSuccess();
-            $analytics.eventTrack('Login', {  category: 'Facebook Login', label: 'Login'});
             if (!response.data.has_address || !response.data.confirmed_phone || response.data.status === 0) {
               verification.openDialog(false);
             }
@@ -186,7 +185,6 @@ angular.
           api.post('/users/login', user).then(function(success) {
             setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages, success.data.ref_code);
             showLoginSuccess();
-            $analytics.eventTrack('Login', {  category: 'Non-FB Login', label: 'Login'});
             if (!success.data.has_address || !success.data.confirmed_phone || success.data.status === 0) {
               verification.openDialog(false);
             }

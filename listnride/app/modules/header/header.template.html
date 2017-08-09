@@ -13,26 +13,26 @@
     </div>
 
     <div class="lnr-nav-menu" hide-xs>
-      <md-button class="md-lined" ui-sref="listingABike" md-no-ink analytics-on analytics-event="click" analytics-label="list a bike" analytics-category="topnav link" analytics-value="8">{{ 'shared.list-a-bike' | translate }}</md-button>
+      <md-button class="md-lined" ui-sref="listingABike" md-no-ink>{{ 'shared.list-a-bike' | translate }}</md-button>
 
       <md-menu md-position-mode="target bottom">
-        <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)" analytics-on analytics-event="click" analytics-label="learn more" analytics-category="topnav link" analytics-value="5">{{ 'shared.learn-more' | translate }} </md-button>
+        <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">{{ 'shared.learn-more' | translate }}</md-button>
         <md-menu-content width="2">        
           <md-menu-item>
-            <md-button md-no-ink ui-sref="howItWorks" analytics-on analytics-category="topnav link" analytics-event="click" analytics-label="{{ 'shared.how-it-works' | translate }}">{{ 'shared.how-it-works' | translate }}</md-button>
+            <md-button md-no-ink ui-sref="howItWorks">{{ 'shared.how-it-works' | translate }}</md-button>
           </md-menu-item>
           <md-menu-item>
-            <md-button md-no-ink ui-sref="listingABike" analytics-on analytics-category="topnav link" analytics-event="click" analytics-label="{{ 'shared.listing-a-bike' | translate }}">{{ 'shared.listing-a-bike' | translate }}</md-button>
+            <md-button md-no-ink ui-sref="listingABike">{{ 'shared.listing-a-bike' | translate }}</md-button>
           </md-menu-item>
           <md-menu-item>
-            <md-button md-no-ink ui-sref="rentingABike" analytics-on analytics-category="topnav link" analytics-event="click" analytics-label="{{ 'shared.renting-a-bike' | translate }}">{{ 'shared.renting-a-bike' | translate }}</md-button>
+            <md-button md-no-ink ui-sref="rentingABike">{{ 'shared.renting-a-bike' | translate }}</md-button>
           </md-menu-item>
           <md-menu-divider></md-menu-divider>
           <md-menu-item>
-            <md-button md-no-ink ui-sref="trustAndSafety" analytics-on analytics-category="topnav link" analytics-event="click" analytics-label="{{  'shared.trust-and-safety' | translate }}">{{  'shared.trust-and-safety' | translate }}</md-button>
+            <md-button md-no-ink ui-sref="trustAndSafety">{{  'shared.trust-and-safety' | translate }}</md-button>
           </md-menu-item>
           <md-menu-item>
-            <md-button md-no-ink ui-sref="help" analytics-on analytics-category="topnav link" analytics-event="click" analytics-label="{{ 'shared.contact' | translate }}">{{ 'shared.contact' | translate }}</md-button>
+            <md-button md-no-ink ui-sref="help">{{ 'shared.contact' | translate }}</md-button>
           </md-menu-item>
           <md-menu-divider></md-menu-divider>
           <md-menu-item>
@@ -41,8 +41,12 @@
         </md-menu-content>
       </md-menu>
 
-      <md-button ng-if="!header.authentication.loggedIn()" md-no-ink ng-click="header.authentication.showSignupDialog()" analytics-on analytics-event="click" analytics-label="sign up" analytics-category="topnav link" analytics-value="10">{{ 'forms.sign-up' | translate }}</md-button>
-      <md-button ng-if="!header.authentication.loggedIn()" md-no-ink ng-click="header.authentication.showLoginDialog()" analytics-on analytics-event="click" analytics-label="login" analytics-category="topnav link" analytics-value="8">{{ 'forms.log-in' | translate }}</md-button>
+      <md-button ng-if="!header.authentication.loggedIn()" md-no-ink ng-click="header.authentication.showSignupDialog()">
+        {{ 'forms.sign-up' | translate }}
+      </md-button>
+      <md-button ng-if="!header.authentication.loggedIn()" md-no-ink ng-click="header.authentication.showLoginDialog()">
+        {{ 'forms.log-in' | translate }}
+      </md-button>
       <md-button ng-if="header.authentication.loggedIn()" md-no-ink ui-sref="requests"><!-- <div class="notification-bubble" ng-if="header.authentication.unreadMessages()">{{header.authentication.unreadMessages()}}</div> -->{{ 'shared.requests' | translate }}</md-button>
 
       <md-menu md-position-mode="target bottom" ng-if="header.authentication.loggedIn()">

@@ -31,11 +31,6 @@
         class="md-raised md-primary"
         id="submit"
         flex="25"
-        analytics-on
-        analytics-event="Search"
-        analytics-label="{{ home.location }}"
-        analytics-category="City Search"
-        analytics-value="8"
       >
         {{ 'shared.search' | translate }}
       </md-button>
@@ -72,10 +67,6 @@
           <div flex="15" layout="column" layout-align="center center" class="testimonial-avatar">
             <a
               ui-sref="user({userId: testimonial.userId})"
-              analytics-on
-              analytics-category="testimonial"
-              analytics-event="click"
-              analytics-label="{{ testimonial.userName }}"
             >
               <img class="testimonials-img" ng-src="{{ testimonial.userImagePath}}">
             </a>
@@ -210,25 +201,25 @@
     
     <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="2" md-cols-gt-sm="4" md-gutter="16px" md-row-height="1.5:1">
       <md-grid-tile class="tile tile-berlin">
-        <a ui-sref="cities-berlin" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="berlin">
+        <a ui-sref="cities-berlin" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">Berlin</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-munich">
-        <a ui-sref="cities-munich" target="_blank" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="munich">
+        <a ui-sref="cities-munich" target="_blank" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">Munich</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-amsterdam">
-        <a ui-sref="cities-amsterdam" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="amsterdam">
+        <a ui-sref="cities-amsterdam" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">Amsterdam</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-vienna">
-        <a ui-sref="cities-vienna" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="vienna">
+        <a ui-sref="cities-vienna" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">Vienna</h3>
         </a>
       </md-grid-tile>
@@ -244,7 +235,7 @@
     </div>
 
     <div flex layout="column" layout-align="center center">
-        <md-button ui-sref="listingABike" class="md-raised md-primary md-xlrg" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="list a bike">{{ 'shared.list-a-bike' | translate }}</md-button>
+        <md-button ui-sref="listingABike" class="md-raised md-primary md-xlrg">{{ 'shared.list-a-bike' | translate }}</md-button>
     </div>
   </div>
 
@@ -252,7 +243,7 @@
       <h2 class="md-display-1">{{ 'home.list-a-bike-header' | translate }}</h2>
       <p class="md-subhead">{{ 'home.list-a-bike-subheader' | translate }}</p>
       <div flex layout="column" layout-align="center center">
-        <md-button ui-sref="listingABike" class="md-raised md-primary md-xlrg" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="list a bike">{{ 'shared.list-a-bike' | translate }}</md-button>
+        <md-button ui-sref="listingABike" class="md-raised md-primary md-xlrg">{{ 'shared.list-a-bike' | translate }}</md-button>
       </div>
   </div> -->
 

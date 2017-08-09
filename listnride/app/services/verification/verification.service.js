@@ -2,8 +2,8 @@
 
 angular.
   module('listnride').
-  factory('verification', ['$mdDialog', '$mdToast','$q', '$interval', '$localStorage', '$state', '$translate', 'api', 'Upload',
-    function($mdDialog, $mdToast, $q, $interval, $localStorage, $state, $translate, api, Upload) {
+  factory('verification', ['$mdDialog', '$mdToast','$q', '$interval', '$localStorage', '$state', '$translate', '$analytics', 'api', 'Upload',
+    function($mdDialog, $mdToast, $q, $interval, $localStorage, $state, $translate, $analytics, api, Upload) {
 
       var VerificationDialogController = function(lister, invited, callback) {
         var verificationDialog = this;
@@ -291,6 +291,7 @@ angular.
             );
             // resolve the promise
             deferred.resolve(success);
+            $analytics.eventTrack('Sign Up', {  category: 'Profile Verified', label: 'Phone Number Verified'});
           },
           // reject api: error
           function (error) {

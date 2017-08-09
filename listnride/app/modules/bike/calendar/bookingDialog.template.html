@@ -8,7 +8,7 @@
       <span flex></span>
       <h2 class="md-headline">{{ 'requests.booking-overview' | translate }}</h2>
       <span flex></span>
-      <md-button class="md-icon-button" ng-click="bookingDialog.cancel()" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="close booking">
+      <md-button class="md-icon-button" ng-click="bookingDialog.cancel()">
         <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
       </md-button>
     </div>
@@ -83,20 +83,16 @@
         <md-button
           class="md-lined md-warn"
           ng-click="bookingDialog.cancel()"
-          analytics-on analytics-category="button"
-          analytics-event="clicked"
           ng-disabled="bookingDialog.in_process"
-          analytics-label="cancel booking">
+        >
           {{ 'shared.cancel' | translate }}
         </md-button>
         <span flex></span>
         <md-button
           class="md-raised md-primary"
           ng-click="bookingDialog.book()"
-          analytics-on analytics-category="button"
-          analytics-event="clicked"
           ng-disabled="bookingDialog.in_process"
-          analytics-label="request booking">
+        >
           {{ 'requests.book' | translate }}
         </md-button>
       </div>

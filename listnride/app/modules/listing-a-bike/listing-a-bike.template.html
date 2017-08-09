@@ -88,8 +88,8 @@
     </div>
 
     <div flex layout="column" layout-align="center center">
-        <md-button ng-if="listingABike.authentication.loggedIn()" ui-sref="list" class="md-raised md-primary md-lrg" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="list a bike logged in">{{ 'list.list-your-bike' | translate }}</md-button>
-        <md-button ng-if="!listingABike.authentication.loggedIn()" ng-click="listingABike.authentication.showSignupDialog()" class="md-raised md-primary md-lrg" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="list a bike not logged in">{{ 'list-a-bike.list-section.sign-up' | translate }}</md-button>
+        <md-button ng-if="listingABike.authentication.loggedIn()" ui-sref="list" class="md-raised md-primary md-lrg">{{ 'list.list-your-bike' | translate }}</md-button>
+        <md-button ng-if="!listingABike.authentication.loggedIn()" ng-click="listingABike.authentication.showSignupDialog()" class="md-raised md-primary md-lrg">{{ 'list-a-bike.list-section.sign-up' | translate }}</md-button>
     </div>
   </div>
   <!-- end list a bike -->
