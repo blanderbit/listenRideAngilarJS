@@ -484,6 +484,28 @@
       "public-location": "Freedom is yours"
     }
   },
+  "shop-landing": {
+    "meta-title": "listnride Shop Plugin - Get your bike rental online",
+    "meta-description": "listnride now offers a free plug-in to easily integrate a bike rental booking engine on your website.",
+    "title": "Your rental bikes directly bookable on your website",
+    "subtitle": "listnride now offers a free plug-in to easily integrate a bike rental booking engine on your website.",
+    "description": "You also realize having your own online bike rental shop is needed to engage with the online consumer? Within a few clicks you have your rental bikes listed on listnride bookable on your own website. Your clients can directly see available bikes and book them!",
+    "feature-1": {
+      "title": "Increase your rentals",
+      "description": "The online consumer wants to have a choice. Offer your clients the convenience to look at the bikes you have available for rent and the option to book them directly online. To your convenience most of the paperwork is done online as well so you can focus on your business. A clear win-win"
+    },
+    "feature-2": {
+      "title": "No programming skills needed",
+      "description": "The listnride plug-in requires no web development on your end. No expensive web agencies need and so saving you extra cost. The technology we provide is maintenance free and shows real-time the bikes available, so any changes made to the bikes you are offer are directly visible online"
+    },
+    "feature-3": {
+      "title": "Focus on your business",
+      "description": "The listnride terms and conditions cover all important details of a rental agreement. Here it is outlined that the moment the bike is handed over to the rider, all liability and responsibility are with him or her. So, no more paperwork needed. Furthermore, you’ll have a clear dashboard with the necessary overviews on your open requests, rentals, invoices and revenues made. Just by logging in to your account."
+    },
+    "join-now": "Join us now, it is free",
+    "join-now-description": "Interested to learn more and get started?",
+    "contact-us": "Contact Us"
+  },
   "rent-a-bike": {
     "meta-title": "Rent a bike via listnride!",
     "meta-description": "Fantastic selection. Great value for money. Easy online service.",
