@@ -408,7 +408,7 @@ angular.module('bike').component('calendar', {
               calendar.current_request.rating = Math.round(calendar.current_request.rating);
               $state.go('requests', {requestId: success.data.id});
               bookingDialog.hide();
-              $analytics.eventTrack('Request Bike', {  category: 'Book', label: 'Bike booked'});
+              $analytics.eventTrack('Request Bike', {  category: 'Book', label: 'Request'});
             },
             function(error) {
               calendar.requested = false;
@@ -425,7 +425,7 @@ angular.module('bike').component('calendar', {
         bookingDialog.cancel = function () {
           bookingDialog.hide();
           calendar.requested = false;
-          $analytics.eventTrack('Request Bike', {  category: 'Cancel', label: 'Bike cancel'});
+          $analytics.eventTrack('Request Bike', {  category: 'Cancel', label: 'Cancel Request'});
         }
       };
 

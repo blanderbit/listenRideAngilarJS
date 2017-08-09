@@ -15,28 +15,28 @@ angular.module('message',[]).component('message', {
     request: '<',
     messageTime: '<'
   },
-  controller: [ '$translate', '$localStorage', '$mdDialog', 'api',
-    function MessageController($translate, $localStorage, $mdDialog, api) {
+  controller: [ '$translate', '$localStorage', '$mdDialog', '$analytics', 'api',
+    function MessageController($translate, $localStorage, $mdDialog, $analytics, api) {
       var message = this;
 
       message.buttonClicked = false;
       
       message.closeDialog = function() {
         $mdDialog.hide();
-      }
+      };
 
       message.book = function() {
         message.buttonClicked = true;
         message.acceptBooking();
-      }
+      };
 
       message.sentMessage = function() {
         return message.status == null && $localStorage.userId == message.sender;
-      }
+      };
 
       message.receivedMessage = function() {
         return message.status == null && $localStorage.userId != message.sender;
-      }
+      };
 
       message.statusMessage = function() {
         if (message.request.rideChat) {
@@ -45,7 +45,7 @@ angular.module('message',[]).component('message', {
           return message.status != null && message.status != 7 && message.status != 6 && message.status != 2 && message.status != 4;
         }
         // return message.status != null && message.status != 7 && (!message.request.rideChat && message.status != 6);
-      }
+      };
 
       // TODO: Unfortunately doublecoded in message.component and requests.component
       message.updateStatus = function(statusId) {
@@ -68,11 +68,11 @@ angular.module('message',[]).component('message', {
 
         api.put("/requests/" + message.request.id, data).then(
           function(success) {
-            console.log("successfully updated request");
-            // message.request.status = statusId;
+            if (statusId === 8) {
+              $analytics.eventTrack('Rent Bike', {  category: 'Request Received ', label: 'Reject'});
+            }
           },
           function(error) {
-            console.log("error updating request");
             message.buttonClicked = false;
           }
         );
