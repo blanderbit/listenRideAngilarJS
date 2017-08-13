@@ -1,5 +1,5 @@
  <md-content class="single-column"> 
-  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/seo/berlin-ebikes.jpg'); background-position: 50% 10%;" layout="row" layout-align="center center">
+  <div id="hero-shot-small" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/seo/berlin-ebikes.jpg'); background-position: 50% 20%;" layout="row" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ 'seo.berlin-ebike.title' | translate }}</h1>
       <p class="md-subhead">{{ 'seo.berlin-ebike.description' | translate }}</p>
@@ -9,11 +9,12 @@
   <div class="content section" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <h2 class="md-headline">{{ 'seo.berlin-ebike.headline-1' | translate }}</h2>
+      <p class="md-body-1">These are our most popular Ebikes to rent. Book yours now!</p>
     </div>
 
     <div layout-xs="column" layout="row">
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in seoLanding.featuredBikes" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <bike-card ng-repeat="bike in seoLanding.featuredBikes" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
         </bike-card>
       </div>
     </div>
@@ -22,11 +23,12 @@
   <div class="content section" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <h2 class="md-headline">{{ 'seo.berlin-ebike.headline-2' | translate }}</h2>
+      <p class="md-body-1">These are our most popular Ebikes to rent. Book yours now!</p>
     </div>
 
     <div layout-xs="column" layout="row">
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in seoLanding.featuredBikes" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <bike-card ng-repeat="bike in seoLanding.featuredBikes" bike="bike" seo="true" flex="100" flex-gt-xs="50" flex-gt-sm="25">
         </bike-card>
       </div>
     </div>
@@ -45,11 +47,12 @@
   <div class="content section" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <h2 class="md-headline" translate="seo.berlin-ebike.headline-4"></h2>
+      <p class="md-body-1">These are our most popular Ebikes to rent. Book yours now!</p>
     </div>
 
     <div layout-xs="column" layout="row">
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in seoLanding.featuredBikes" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <bike-card ng-repeat="bike in seoLanding.featuredBikes" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
         </bike-card>
       </div>
     </div>
@@ -62,32 +65,32 @@
     
     <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="2" md-cols-gt-sm="4" md-gutter="16px" md-row-height="1.5:1">
       <md-grid-tile class="tile tile-berlin">
-        <a ui-sref="cities-berlin" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="berlin">
+        <a ui-sref="search({location: 'Berlin'})" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="berlin">
           <h3 class="md-title">Berlin</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-munich">
-        <a href="cities-munich" target="_blank" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="munich">
+        <a ui-sref="search({location: 'Munich'})" target="_blank" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="munich">
           <h3 class="md-title">Munich</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-amsterdam">
-        <a ui-sref="cities-amsterdam" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="amsterdam">
+        <a ui-sref="search({location: 'Amsterdam'})" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="amsterdam">
           <h3 class="md-title">Amsterdam</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-vienna">
-        <a ui-sref="cities-vienna" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="vienna">
+        <a ui-sref="search({location: 'Vienna'})" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="vienna">
           <h3 class="md-title">Vienna</h3>
         </a>
       </md-grid-tile>
     </md-grid-list>
   </div>
 
-  <br><br>
+  <br><br><br><br>
 
   <footer></footer>
 </md-content>

@@ -139,6 +139,10 @@ md-menu-content {
   max-height: 500px;
 }
 
+md-card md-card-title {
+  padding: 8px;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
@@ -639,6 +643,12 @@ footer .lnr-link {
 
 #hero-shot-large {
   height: 60vh;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#hero-shot-small {
+  height: 28vh;
   background-size: cover;
   background-position: 50% 50%;
 }
