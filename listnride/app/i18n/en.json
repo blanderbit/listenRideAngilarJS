@@ -118,6 +118,7 @@
     "invite": "Invite Friends",
     "account": "Account",
     "availability": "Availability",
+    "business": "Business",
     "from": "From",
     "to": "To",
     "mark-as-closed": "Marked all days as closed",
@@ -143,7 +144,10 @@
     "current-vouchers": "Your current balance is",
     "add-voucher": "Add Voucher",
     "meta-title": "Profile Settings",
-    "meta-description": "Change your profile - und payment settings."
+    "meta-description": "Change your profile - und payment settings.",
+    "company-name":"Company name",
+    "company-information":"Company information",
+    "vat":"VAT"
   },
   "verification": {
     "verify-profile": "Verify your Profile",

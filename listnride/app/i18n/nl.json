@@ -120,6 +120,7 @@
     "invite": "Vrienden uitnodigen",
     "account": "Account",
     "availability": "Openingstijden",
+    "business": "Business",
     "from": "From",
     "to": "To",
     "mark-as-closed": "Marked all days as closed",
@@ -146,6 +147,9 @@
     "add-voucher": "Voucher inwisselen",
     "meta-title": "Profiel instellingen",
     "meta-description": "Pas je profiel- en of betaalgegevens aan"
+    "company-name":"Company name",
+    "company-information":"Company information",
+    "vat":"VAT"
   },
 
   "verification": {
