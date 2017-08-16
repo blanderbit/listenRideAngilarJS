@@ -104,6 +104,8 @@ angular.module('settings',[]).component('settings', {
         settings.removeInputDate = removeInputDate;
         settings.emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         settings.current_payment = false;
+        settings.business = {};
+        settings.user.business = false;
         userApi.getUserData().then(function (response) {
           settings.user = response.data;
           settings.current_payment = !_.isEmpty(response.data.current_payment_method);
@@ -111,6 +113,7 @@ angular.module('settings',[]).component('settings', {
           settings.loaded = true;
           settings.openingHoursEnabled = settings.user.opening_hours ? settings.user.opening_hours.enabled : false;
           $timeout(setInitFormState.bind(this), 0);
+          if (!_.isEmpty(settings.user.business)) { getBusinessData() }
         });
       }
 
@@ -125,6 +128,17 @@ angular.module('settings',[]).component('settings', {
         var endings = phone_number.slice(-3);
         var length = phone_number.length - initials.length - endings.length + 1;
         settings.user.phone_number_privatized = initials.concat(Array(length).join('*')).concat(endings);
+      }
+
+      function getBusinessData() {
+        api.get('/businesses/' + settings.user.business.id).then(
+          function(response) {
+            settings.business = response.data;
+          },
+          function(error) {
+
+          }
+        );
       }
 
       function performOpeningHours(model) {
@@ -518,6 +532,36 @@ angular.module('settings',[]).component('settings', {
               .textContent($translate.instant('toasts.error'))
               .hideDelay(4000)
               .position('top center')
+            );
+          }
+        );
+      };
+
+      settings.updateBusiness = function () {
+        var data = {
+          'business': {
+            'company_name': settings.business.company_name,
+            'vat': settings.business.vat
+          }
+        };
+
+        api.put("/businesses/" + settings.user.business.id, data).then(
+          function (success) {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.update-profile-success'))
+                .hideDelay(4000)
+                .position('top center')
+            );
+
+            settings.user.business = true;
+          },
+          function (error) {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.error'))
+                .hideDelay(4000)
+                .position('top center')
             );
           }
         );

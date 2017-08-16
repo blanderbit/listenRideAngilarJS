@@ -18,7 +18,7 @@
 
     <md-dialog-content>
       <div class="md-dialog-content" layout="column">
-        <md-button ng-click="signupDialog.connectFb()" class="md-primary md-lined lnr-btn-fb">
+        <md-button ng-click="signupDialog.connectFb()" class="md-primary md-lined lnr-btn-fb" ng-hide="signupDialog.business">
           {{ 'forms.sign-up-with-facebook' | translate }}
         </md-button>
         <div class="lnr-middle-divider" ng-hide="signupDialog.business">
