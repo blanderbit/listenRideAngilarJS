@@ -61,7 +61,7 @@ angular.
           api.post("/users", user).then(function(success) {
             setCredentials(success.data);
             verification.openDialog(false, invited, false, signupDialog.showProfile);
-            $analytics.eventTrack('Sign Up', {  category: 'Facebook Sign-Up', label: 'Sign-Up'});
+            $analytics.eventTrack('Sign Up', {  category: 'Facebook Sign-Up', label: 'Quick Sign-Up Complete'});
           }, function(error) {
             showSignupError();
           });
@@ -135,7 +135,7 @@ angular.
           api.post('/businesses', business).then(function(success) {
             $state.go('home');
             verification.openDialog(false, invited, false, signupDialog.showProfile);
-            $analytics.eventTrack('Sign Up', {  category: 'Non-FB Sign-Up', label: 'Sign-Up'});
+            $analytics.eventTrack('Sign Up', {  category: 'Non-FB Sign-Up', label: 'Quick Sign-Up Complete'});
           }, function(error) {
             signupDialog.businessError = true;
             signupDialog.signingUp = false;
@@ -199,7 +199,6 @@ angular.
           api.post('/users/login', user).then(function(response) {
             setCredentials(response.data);
             showLoginSuccess();
-            $analytics.eventTrack('Login', {  category: 'Facebook Login', label: 'Login'});
             if (!response.data.has_address || !response.data.confirmed_phone || response.data.status === 0) {
               verification.openDialog(false);
             }
@@ -222,7 +221,6 @@ angular.
           api.post('/users/login', user).then(function(success) {
             setCredentials(success.data);
             showLoginSuccess();
-            $analytics.eventTrack('Login', {  category: 'Non-FB Login', label: 'Login'});
             if (!success.data.has_address || !success.data.confirmed_phone || success.data.status === 0) {
               verification.openDialog(false);
             }

@@ -17,12 +17,13 @@ angular.module('requests', []).component('requests', {
     '$stateParams',
     '$translate',
     '$mdToast',
+    '$analytics',
     'date',
     'accessControl',
     function RequestsController($localStorage, $interval, $filter,
       $mdMedia, $mdDialog, $window, api,
       $timeout, $location, $anchorScroll,
-      $state, $stateParams, $translate, $mdToast, date,
+      $state, $stateParams, $translate, $mdToast, $analytics, date,
       accessControl) {
       if (accessControl.requireLogin()) {
         return;
@@ -161,6 +162,7 @@ angular.module('requests', []).component('requests', {
               requests.request = success.data;
               requests.request.rideChat = $localStorage.userId == requests.request.user.id;
               requests.request.rideChat ? requests.request.chatFlow = "rideChat" : requests.request.chatFlow = "listChat";
+              requests.request.past = (new Date(requests.request.end_date).getTime() < Date.now());
 
               if (requests.request.rideChat) {
                 requests.request.rating = requests.request.lister.rating_lister + requests.request.lister.rating_rider;
@@ -185,7 +187,7 @@ angular.module('requests', []).component('requests', {
         );
       };
 
-      var updateStatus = function (statusId) {
+      var updateStatus = function (statusId, paymentWarning) {
         var data = {
           "request": {
             "status": statusId
@@ -198,6 +200,18 @@ angular.module('requests', []).component('requests', {
           },
           function (error) {
             reloadRequest(requests.request.id);
+            requests.loadingChat = false;
+            if (paymentWarning) {
+              $mdDialog.show(
+                $mdDialog.alert(event)
+                  .parent(angular.element(document.body))
+                  .clickOutsideToClose(true)
+                  .title('The bike couldn\'t be booked')
+                  .textContent('Unfortunately, the payment didn\'t succeed, so the bike could not be booked. The rider already got informed and we\'ll get back to you as soon as possible to finish the booking.')
+                  .ok('Okay')
+                  .targetEvent(event)
+              );
+            }
           }
         );
       };
@@ -209,7 +223,8 @@ angular.module('requests', []).component('requests', {
             if (success.data.current_payout_method) {
               // Lister has already a payout method, so simply accept the request
               requests.loadingChat = true;
-              updateStatus(3);
+              updateStatus(3, true);
+              $analytics.eventTrack('Rent Bike', {  category: 'Request Received ', label: 'Accept'});
             } else {
               // Lister has no payout method yet, so show the payout method dialog
               showPayoutDialog(success.data);
@@ -334,7 +349,7 @@ angular.module('requests', []).component('requests', {
                 .position('top center')
               );
               requests.loadingChat = true;
-              updateStatus(2);
+              updateStatus(2, false);
               hideDialog();
             },
             function (error) {

@@ -10,7 +10,7 @@
         <span flex></span>
         <h2 class="md-headline">{{ 'forms.log-in' | translate }}</h2>
         <span flex></span>
-        <md-button class="md-icon-button" ng-click="loginDialog.hide()" analytics-on analytics-category="button" analytics-event="clicked" analytics-label="close login modal">
+        <md-button class="md-icon-button" ng-click="loginDialog.hide()">
           <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
         </md-button>
       </div>
@@ -18,7 +18,9 @@
 
     <md-dialog-content>
       <div class="md-dialog-content" layout="column">
-        <md-button class="md-primary md-lined lnr-btn-fb" ng-click="loginDialog.connectFb()" analytics-on analytics-category="login" analytics-event="clicked" analytics-label="facebook login">Login with facebook</md-button>
+        <md-button class="md-primary md-lined lnr-btn-fb" ng-click="loginDialog.connectFb()">
+          Login with facebook
+        </md-button>
         <div class="lnr-middle-divider">
           {{ 'forms.or' | translate }}
         </div>
@@ -44,8 +46,12 @@
         </md-input-container>
 
         <div class="md-dialog-buttons" layout="row" layout-align="space-between center">
-          <span class="lnr-link" ng-click="loginDialog.resetPassword()" analytics-on analytics-category="login" analytics-event="clicked" analytics-label="forget password">{{ 'forms.forgot-password' | translate }}</span>
-          <md-button type="submit" class="md-accent md-raised" analytics-on analytics-category="login" analytics-event="clicked" analytics-label="listnride login button">{{ 'forms.log-in' | translate }}</md-button>
+          <span class="lnr-link" ng-click="loginDialog.resetPassword()">
+            {{ 'forms.forgot-password' | translate }}
+          </span>
+          <md-button type="submit" class="md-accent md-raised">
+            {{ 'forms.log-in' | translate }}
+          </md-button>
         </div>
       </div>
     </md-dialog-content>

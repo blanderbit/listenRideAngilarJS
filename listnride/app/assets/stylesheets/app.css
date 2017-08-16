@@ -139,6 +139,15 @@ md-menu-content {
   max-height: 500px;
 }
 
+.lnr-image-card {
+  border-width: 0;
+  margin: 0;
+}
+
+md-card md-card-title {
+  padding: 8px;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
@@ -613,6 +622,12 @@ footer .lnr-link {
   background-position: 50% 50%;
 }
 
+#hero-shot-small {
+  height: 28vh;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* BRAND INTEGRATION
 /*-----------------------------------------------------------------------------------*/
@@ -787,7 +802,6 @@ md-grid-list md-grid-tile.tile-vienna {
   width: 75px;
   height: auto;
   border-radius: 50%;
-  margin-top: 16px;
 }
 
 #testimonials {
@@ -795,17 +809,16 @@ md-grid-list md-grid-tile.tile-vienna {
 }
 
 .testimonials-text {
-  font-size: 20px;
   text-align: center;
-  width: 75%;
-}
-
-.testimonials-name {
-  font-weight: 500;
+  padding: 0 10px;
 }
 
 .testimonials-slick-slide {
   display: flex !important;
+}
+
+.testimonial-avatar {
+  margin-left: 10px;
 }
 
 #testimonials .testimonials-prev-arrow {
@@ -861,6 +874,7 @@ md-grid-list md-grid-tile.tile-vienna {
 
   home .testimonials-text {
     width: 100%;
+    font-size: 16px;
   }
 }
 

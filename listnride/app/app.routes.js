@@ -542,6 +542,24 @@
       });
 
       $stateProvider.state({
+        name: 'shopLanding',
+        url: '/bikeshop',
+        templateUrl: 'app/modules/static/shop-landing.template.html',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["shop-landing.meta-title", "shop-landing.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["shop-landing.meta-title"]);
+                ngMeta.setTag("description", translations["shop-landing.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'ampler',
         url: '/rent-ampler-bikes',
         template: '<ampler></ampler>',
