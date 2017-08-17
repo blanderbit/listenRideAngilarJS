@@ -93,7 +93,8 @@
     "tac": "Allgemeinen Geschäftsbedingungen",
     "booking-accept-tac": "Durch Buchen bestätige ich die",
     "already-booked": "Bereits Gebucht",
-    "contact-us": "Bitte kontaktiere uns via "
+    "contact-us": "Bitte kontaktiere uns via ",
+    "required": "Dies ist erforderlich"
   },
 
   "toasts": {
@@ -147,8 +148,8 @@
     "add-voucher": "Gutschein hinzufügen",
     "meta-title": "Profileinstellungen",
     "meta-description": "Ändere deine Profil- und Zahlungsdaten.",
-    "company-name":"Company name",
-    "company-information":"Company information",
+    "company-name":"Unternehmensname",
+    "company-information":"Unternehmensinformationen",
     "vat":"VAT"
   },
 
@@ -162,13 +163,13 @@
       "text3": "Deshalb bitten wir dich, dein Profil in ein paar einfach Schritten zu verifizieren. Umso besser die eingegebenen Informationen sind, umso höher die Chance auf erfolgreiche Vermietungen."
     },
     "2": {
-      "title": "Upload your Profile Picture",
+      "title": "Lade ein Profilbild hoch",
       "description": "Lade ein Profilbild von Dir hoch! Für andere Nutzer ist es äußerst wichtig zu sehen, wer sich hinter einem Profil verbirgt.",
-      "business-description": "Having your logo shown on listnride is a great way to attract more request",
-      "business-title": "Upload your Shop Logo"
+      "business-description": "Mit deinem Logo auf listnride erhöhst du die Chance auf viele Anfragen",
+      "business-title": "Lade dein Geschäftslogo hoch"
     },
     "3": {
-      "title": "Tell something about you"
+      "title": "Erzähle etwas über dich"
     },
     "4": {
       "description": "Bestätige Deine E-Mail-Adresse, indem Du auf den Link in der Bestätigungsmail klickst, die wir Dir nach der Registrierung schicken. Falls Du sie nicht mehr findest, kannst Du die Mail erneut anfordern. Erscheint sie nicht sofort in Deinem Postfach, warte bitte noch ein paar Minuten oder überprüfe deinen Spam-Ordner.",
@@ -184,10 +185,10 @@
       "phone-nr-verified": "Deine Nummer wurde erfolgreich verifiziert!"
     },
     "6": {
-      "title": "What is your address"
+      "title": "Was ist deine Adresse"
     },
     "7": {
-      "title": "Company information"
+      "title": "Unternehmensinformationen"
     }
   },
 
@@ -317,7 +318,19 @@
     "city": "Stadt",
     "country": "Land",
     "company-name": "Company name",
-    "update-contact": "Kontakt aktualisieren"
+    "update-contact": "Kontakt aktualisieren",
+    "errors": {
+      "password-length": "Das Passwort sollte min. 6 Zeichen lang sein",
+      "password-missing": "Bitte gib ein Passwort an",
+      "valid-email": "Bitte gib eine gültige Email-Adresse an",
+      "empty-email": "Bitte gib deine Email-Adresse an",
+      "empty-last-name": "Bitte gib deinen Nachnamen an",
+      "empty-first-name": "Bitte gib deinen Vornamen an",
+      "max-size-last-name": "Der Nachname sollte maximal 30 Buchstaben lang sein",
+      "max-size-first-name": "Der Vorname sollte maximal 20 Buchstaben lang sein",
+      "empty-company-name": "Please enter your company name",
+      "min-size-company-name": "Company name should be longer than 2 characters "
+    }
   },
 
   "autocomplete": {

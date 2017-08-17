@@ -94,7 +94,8 @@
     "tac": "Terms and Conditions",
     "booking-accept-tac": "By booking I accept the",
     "already-booked": "Already Booked",
-    "contact-us": "Please get in touch with us via "
+    "contact-us": "Please get in touch with us via ",
+    "required": "This is required"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
@@ -292,7 +293,19 @@
     "city": "City",
     "country": "Country",
     "company-name": "Company name",
-    "update-contact": "Update Contact"
+    "update-contact": "Update Contact",
+    "errors": {
+      "password-length": "Password should be at least 6 characters",
+      "password-missing": "Please provide a password",
+      "valid-email": "Please enter a valid email address",
+      "empty-email": "Please enter your email address",
+      "empty-last-name": "Please enter your last name",
+      "empty-first-name": "Please enter your first name",
+      "max-size-last-name": "Last name shouldn't exceed 30 characters",
+      "max-size-first-name": "First name shouldn't be longer than 20 characters",
+      "empty-company-name": "Please enter your company name",
+      "min-size-company-name": "Company name should be longer than 2 characters "
+    }
   },
   "home": {
     "landing-section-header": "The perfect bike. Simply rent it.",

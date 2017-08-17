@@ -39,8 +39,8 @@
             ng-required='signupDialog.business'
           >
           <div ng-messages="signupForm.company_name.$error" role="alert">
-            <div ng-message="required">Please enter your company name.</div>
-            <div ng-message="minlength">Company name should be longer than 2 characters</div>
+            <div ng-message="required">{{ 'forms.errors.empty-company-name' | translate }}</div>
+            <div ng-message="minlength">{{ 'forms.errors.min-size-company-name' | translate }}</div>
           </div>
         </md-input-container>
 
@@ -55,8 +55,8 @@
               ng-disabled="signupDialog.businessError"
             >
             <div ng-messages="signupForm.first_name.$error" role="alert">
-              <div ng-message="required">Please enter your first name.</div>
-              <div ng-message="maxlength">First name shouldn't be longer than 20 characters</div>
+              <div ng-message="required">{{ 'forms.errors.empty-first-name' | translate }}</div>
+              <div ng-message="maxlength">{{ 'forms.errors.max-size-first-name' | translate }}</div>
             </div>
           </md-input-container>
 
@@ -70,8 +70,8 @@
               ng-disabled="signupDialog.businessError"
             >
             <div ng-messages="signupForm.last_name.$error" role="alert">
-              <div ng-message="required">Please enter your last name.</div>
-              <div ng-message="maxlength">Last name shouldn't exceed 30 characters</div>
+              <div ng-message="required">{{ 'forms.errors.empty-last-name' | translate }}</div>
+              <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
             </div>
           </md-input-container>
         </div>
@@ -87,9 +87,9 @@
             ng-disabled="signupDialog.businessError"
           >
           <div ng-messages="signupForm.email.$error" role="alert">
-              <div ng-message="required">Please enter your email address.</div>
-              <div ng-message="email">Please enter a valid email address</div>
-              <div ng-message="pattern">Please enter a valid email address</div>
+              <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
+              <div ng-message="email">{{ 'forms.errors.valid-email' | translate }}</div>
+              <div ng-message="pattern">{{ 'forms.errors.valid-email' | translate }}</div>
           </div>
         </md-input-container>
 
@@ -104,8 +104,8 @@
             ng-disabled="signupDialog.businessError"
           >
           <div ng-messages="signupForm.password.$error" role="alert">
-            <div ng-message="required">Please provide a password</div>
-            <div ng-message="minlength">Password should be at least 6 characters</div>
+            <div ng-message="required">{{ 'forms.errors.password-missing' | translate }}</div>
+            <div ng-message="minlength">{{ 'forms.errors.password-length' | translate }}</div>
           </div>
         </md-input-container>
         

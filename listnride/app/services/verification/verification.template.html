@@ -36,7 +36,7 @@
             <div layout="column" layout-align="center center">
               <md-icon md-svg-src="app/assets/ui_icons/lnr_icon_verification.svg" class="verification-icon"></md-icon>
 
-              <p hide-xs class="md-headline lnr-center">Please Verify your Account</p>
+              <p hide-xs class="md-headline lnr-center">{{ 'verification.verify-profile' | translate }}</p>
               <p ng-if="verificationDialog.invited" class="md-body-1 lnr-center">
                 {{ 'verification.1.text-invited' | translate }}
               </p>
@@ -248,7 +248,7 @@
                     placeholder="{{ 'list.location.zip' | translate }}"
                   >
                   <div ng-messages="verificationDialog.addressForm.zip.$error" role="alert">
-                    <div ng-message="required">This is required.</div>
+                    <div ng-message="required">{{ 'shared.required' | translate }}</div>
                   </div>
                 </md-input-container>
 
@@ -260,7 +260,7 @@
                     placeholder="{{ 'list.location.city' | translate }}"
                   >
                   <div ng-messages="verificationDialog.addressForm.city.$error" role="alert">
-                    <div ng-message="required">This is required.</div>
+                    <div ng-message="required">{{ 'shared.required' | translate }}</div>
                   </div>
                 </md-input-container>
               </div>
@@ -273,7 +273,7 @@
                   placeholder="{{ 'list.location.zip' | translate }}"
                 >
                 <div ng-messages="verificationDialog.addressForm.zip.$error" role="alert">
-                  <div ng-message="required">This is required.</div>
+                  <div ng-message="required">{{ 'shared.required' | translate }}</div>
                 </div>
               </md-input-container>
 
@@ -285,7 +285,7 @@
                   placeholder="{{ 'list.location.city' | translate }}"
                 >
                 <div ng-messages="verificationDialog.addressForm.city.$error" role="alert">
-                  <div ng-message="required">This is required.</div>
+                  <div ng-message="required">{{ 'shared.required' | translate }}</div>
                 </div>
               </md-input-container>
 
@@ -297,7 +297,7 @@
                   placeholder="{{ 'list.location.country' | translate }}"
                 >
                 <div ng-messages="verificationDialog.addressForm.country.$error" role="alert">
-                  <div ng-message="required">This is required.</div>
+                  <div ng-message="required">{{ 'shared.required' | translate }}</div>
                 </div>
               </md-input-container>
             </form>
@@ -329,7 +329,7 @@
                   ng-required='verificationDialog.business'
                 >
                 <div ng-messages="verificationDialog.companyForm.vat.$error" role="alert">
-                  <div ng-message="required">This is required.</div>
+                  <div ng-message="required">{{ 'shared.required' | translate }}</div>
                 </div>
               </md-input-container>
             </form>

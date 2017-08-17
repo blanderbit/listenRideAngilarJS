@@ -93,7 +93,8 @@
     "tac": "algemene voorwaarden",
     "booking-accept-tac": "Bij het bevestigen van de boeking accepteer ik de",
     "already-booked": "al geboekt",
-    "contact-us": "Neem contact met ons op per "
+    "contact-us": "Neem contact met ons op per ",
+    "required": "Dit is verplicht"
   },
 
   "toasts": {
@@ -146,9 +147,9 @@
     "current-vouchers": "Je aktuele tegoedsaldo bedraagt",
     "add-voucher": "Voucher inwisselen",
     "meta-title": "Profiel instellingen",
-    "meta-description": "Pas je profiel- en of betaalgegevens aan"
-    "company-name":"Company name",
-    "company-information":"Company information",
+    "meta-description": "Pas je profiel- en of betaalgegevens aan",
+    "company-name":"Bedrijfsnaam",
+    "company-information":"Bedrijfsgegevens",
     "vat":"VAT"
   },
 
@@ -162,13 +163,13 @@
       "text3": "We vragen je daarom, je profiel in een paar stappen te voltooien. Hoe beter en volledig je profielbeschrijving, des te groter de kans op aanvragen en successvolle verhuur."
     },
     "2": {
-      "title": "Upload your Profile Picture",
+      "title": "Foto toevoegen",
       "description": "Voeg een pasfoto toe, het is zeer belangrijk een persoonlijk beeld bij een profiel te hebben.",
-      "business-description": "Having your logo shown on listnride is a great way to attract more request",
-      "business-title": "Upload your Shop Logo"
+      "business-description": "Met een duidelijk logo ontvang je meer vertrouwen en aanvragen",
+      "business-title": "Logo toevoegen"
     },
     "3": {
-      "title": "Tell something about you"
+      "title": "Vertel iets over jezelf / je winkel"
     },
     "4": {
       "description": "Bevestig je emailadres, door op de aktiveringslink te klicken in de toegestuurde bevestigingsmail. Deze heb je direkt na je aanmelding ontvangen. Indien je deze mail niet meer kan vinden, kan je de mail nogmaals aanvragen. Verschijnt de mail niet direct in je postvak, wacht dan nog een paar minuten of check de spamfolder.",
@@ -184,10 +185,10 @@
       "phone-nr-verified": "Je telefoonnummer is met succes geverifieerd!"
     },
     "6": {
-      "title": "What is your address"
+      "title": "Wat is je adres"
     },
     "7": {
-      "title": "Company information"
+      "title": "Bedrijfsgegevens"
     }
   },
 
@@ -317,7 +318,19 @@
     "city": "Plaats",
     "country": "Land",
     "company-name": "Company name",
-    "update-contact": "Contactgegevens wijzigen"
+    "update-contact": "Contactgegevens wijzigen",
+    "errors": {
+      "password-length": "Wachtwoord dient minimaal 6 karakters lang te zijn",
+      "password-missing": "Wachtwoord aanmaken",
+      "valid-email": "Vul een geldig emailadres in",
+      "empty-email": "Vul uw emailadres in",
+      "empty-last-name": "Vul uw achternaam in",
+      "empty-first-name": "Vul uw voornaam in",
+      "max-size-last-name": "Achternaam mag maximaal 30 karakters lang zijn",
+      "max-size-first-name": "Voornaam mag maximaal 20 karakters lang zijn",
+      "empty-company-name": "Please enter your company name",
+      "min-size-company-name": "Company name should be longer than 2 characters "
+    }
   },
 
   "autocomplete": {
