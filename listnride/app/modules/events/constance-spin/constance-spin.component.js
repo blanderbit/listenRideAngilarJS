@@ -1,13 +1,13 @@
 'use strict';
 
-angular.module('coffeespin',[]).component('coffeespin', {
-  templateUrl: 'app/modules/events/velothon-bikerental/coffeespin.template.html',
-  controllerAs: 'coffeespin',
+angular.module('constanceSpin',[]).component('constanceSpin', {
+  templateUrl: 'app/modules/events/constance-spin/constance-spin.template.html',
+  controllerAs: 'constanceSpin',
   controller: ['api',
-    function CoffeespinController(api) {
-      var coffeespin = this;
+    function ConstanceSpinController(api) {
+      var constanceSpin = this;
 
-      coffeespin.bikes = [];
+      constanceSpin.bikes = [];
 
       // api.get('/users/1998').then(
       //   function(response) {

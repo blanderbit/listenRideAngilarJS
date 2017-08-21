@@ -265,6 +265,24 @@
       });
 
       $stateProvider.state({
+        name: 'constanceSpin',
+        url: '/constance-spin',
+        template: '<constance-spin></constance-spin>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.constance-spin.meta-title", "events.constance-spin.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.constance-spin.meta-title"]);
+                ngMeta.setTag("description", translations["events.constance-spin.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      })
+
+      $stateProvider.state({
         name: 'crossride',
         url: '/berliner-fahrradschau',
         template: '<crossride></crossride>'
