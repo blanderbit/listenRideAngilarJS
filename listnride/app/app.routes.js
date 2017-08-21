@@ -110,7 +110,7 @@
             return authentication.tokenLogin($stateParams.shop_token, $stateParams.email).then(
               function (success) {
                 console.log('success');
-                authentication.setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages);
+                authentication.setCredentials(success.data);
               },
               function (error) {
                 console.log('error');

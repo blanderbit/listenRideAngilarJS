@@ -3,11 +3,9 @@
 angular.module('cyclassicsHamburg',[]).component('cyclassicsHamburg', {
     templateUrl: 'app/modules/events/cyclassics-hamburg/cyclassics-hamburg.template.html',
     controllerAs: 'cyclassicsHamburg',
-    controller: ['NgMap', 'api', '$translate', '$analytics', 'ngMeta',
-    function CyclassicsHamburg(NgMap, api, $translate, $analytics, ngMeta) {
+    controller: ['NgMap', 'api', '$translate', 'ngMeta',
+    function CyclassicsHamburg(NgMap, api, $translate, ngMeta) {
         var cyclassicsHamburg = this;
-        $analytics.eventTrack('ViewContent', {  category: 'Event Page', label: 'Cyclassics Hamburg'});
-
         ngMeta.setTitle($translate.instant("events.cyclassics-hamburg.meta-title"));
         ngMeta.setTag("description", $translate.instant("events.cyclassics-hamburg.meta-description"));
 

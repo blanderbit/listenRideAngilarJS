@@ -3,11 +3,9 @@
 angular.module('pushnpost',[]).component('pushnpost', {
   templateUrl: 'app/modules/events/cwd/pushnpost.template.html',
   controllerAs: 'pushnpost',
-  controller: ['$analytics', 'api',
-    function PushnpostController($analytics, api) {
+  controller: ['api',
+    function PushnpostController(api) {
       var pushnpost = this;
-      $analytics.eventTrack('ViewContent', {  category: 'Event Page', label: 'Pushnpost'});
-
       pushnpost.bikes = [];
 
       api.get('/users/1998').then(

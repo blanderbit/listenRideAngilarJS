@@ -179,12 +179,57 @@
           <md-button ng-click="settings.updateUser()" ng-disabled="!settings.form.$valid" class="md-raised md-primary">{{ 'edit.save-changes' | translate }}</md-button>
         </div>
       </md-tab>
-       <!--end profile -->
+      <!--end profile -->
 
       <!-- account -->
       <md-tab class="account" label="{{ 'settings.account' | translate }}" layout="column">
         <br>
         <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
+          <form name="businessForm" ng-submit="settings.updateBusiness(businessForm)" ng-hide="!settings.user.business">
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'settings.company-information' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout="column" layout-margin>
+                <div layout="row" layout-xs="column">
+                  <md-input-container flex flex-gt-xs="45">
+                    <label>{{ 'settings.company-name' | translate }}</label>
+                    <input name="company_name" ng-model="settings.business.company_name" required ng-minlength="2">
+                    <div ng-messages="businessForm.company_name.$error" role="alert">
+                      <div ng-message="required">Please enter your company name.</div>
+                      <div ng-message="minlength">Company name should be longer than 2 characters</div>
+                    </div>
+                  </md-input-container>
+
+                  <span hide-xs flex></span>
+
+                  <md-input-container flex flex-gt-xs="45">
+                    <label>{{ 'settings.vat' | translate }}</label>
+                    <input name="vat" ng-model="settings.business.vat" required ng-minlength="2">
+                    <div ng-messages="businessForm.vat.$error" role="alert">
+                      <div ng-message="required">Please enter your VAT number.</div>
+                      <div ng-message="minlength">VAT should be longer than 2 characters</div>
+                    </div>
+                  </md-input-container>
+                </div>
+
+                <div layout="row" layout-align="end">
+                  <md-button
+                    class="md-raised md-primary"
+                    type="submit"
+                    ng-disabled="!businessForm.$valid"
+                  >
+                    Update
+                  </md-button>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+          </form>
+
           <form name="settingsForm">
             <div layout="row" layout-xs="column">
               <div flex-gt-xs layout-margin>
@@ -399,6 +444,58 @@
         </div>
       </md-tab>
       <!-- end hours -->
+
+      <!-- business -->
+      <!--<md-tab class="business" label="{{ 'settings.business' | translate }}" layout="column" data-ng-if="settings.user.business">-->
+        <!--<br>-->
+        <!--<div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">-->
+          <!--<form name="businessForm" ng-submit="settings.updateBusiness(businessForm)">-->
+            <!--<div layout="row" layout-xs="column">-->
+              <!--<div flex-gt-xs layout-margin>-->
+                <!--<span class="md-body-2">{{ 'settings.company-information' | translate }}</span>-->
+              <!--</div>-->
+              <!--<div flex-gt-xs="70" layout="column" layout-margin>-->
+                <!--<div layout="row" layout-xs="column">-->
+                  <!--<md-input-container flex>-->
+                    <!--<label>{{ 'settings.company-name' | translate }}</label>-->
+                    <!--<input name="company_name" ng-model="settings.business.company_name" required ng-minlength="2">-->
+                    <!--<div ng-messages="businessForm.company_name.$error" role="alert">-->
+                      <!--<div ng-message="required">Please enter your company name.</div>-->
+                      <!--<div ng-message="minlength">Company name should be longer than 2 characters</div>-->
+                    <!--</div>-->
+                  <!--</md-input-container>-->
+                <!--</div>-->
+
+                <!--<div layout="row" layout-xs="column">-->
+                  <!--<md-input-container flex>-->
+                    <!--<label>{{ 'settings.vat' | translate }}</label>-->
+                    <!--<input name="vat" ng-model="settings.business.vat" required ng-minlength="2">-->
+                    <!--<div ng-messages="businessForm.vat.$error" role="alert">-->
+                      <!--<div ng-message="required">Please enter your VAT number.</div>-->
+                      <!--<div ng-message="minlength">VAT should be longer than 2 characters</div>-->
+                    <!--</div>-->
+                  <!--</md-input-container>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+
+            <!--<div layout="row" layout-align="end">-->
+              <!--<md-button-->
+                <!--class="md-raised md-primary"-->
+                <!--type="submit"-->
+                <!--ng-disabled="!businessForm.$valid"-->
+              <!--&gt;-->
+                <!--Update-->
+              <!--</md-button>-->
+            <!--</div>-->
+
+            <!--<br>-->
+            <!--<md-divider></md-divider>-->
+            <!--<br>-->
+          <!--</form>-->
+        <!--</div>-->
+      <!--</md-tab>-->
+      <!--end business -->
     </md-tabs>
   </div>
 

@@ -3,8 +3,8 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', '$analytics', 'ngMeta',
-    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, $analytics, ngMeta) {
+  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', 'ngMeta',
+    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, ngMeta) {
       var bike = this;
 
       bike.mapOptions = {
@@ -24,8 +24,6 @@ angular.module('bike',[]).component('bike', {
       // not for logic and api calls
       api.get('/rides/' + $stateParams.bikeId).then(
         function(response) {
-          $analytics.eventTrack('View Bike', {  category: 'Bike Page', label: response.data.id });
-
           bike.showAll = false;
           bike.data = response.data;
           bike.mapOptions.lat = bike.data.lat_rnd;
