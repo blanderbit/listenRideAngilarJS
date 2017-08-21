@@ -1,0 +1,54 @@
+{
+  "id": 1,
+  "city": "Amsterdam",
+  "category_id": "",
+  "bikes": {
+    "featured": [
+      911,
+      399,
+      345,
+      352
+    ],
+    "more": [
+      343,
+      178,
+      101,
+      911
+    ],
+    "related": [
+      1228,
+      1109,
+      910,
+      740
+    ]
+  },
+  "header_image": {
+    "image_url": ""
+  },
+  "texts": {
+    "main": {
+      "title": "Miete ein Lastenrad in Amsterdam",
+      "description": "Hier findest du Lastenräder in Amsterdam. Miete den halben oder ganzen Tag oder einfach so lange du möchtest! Einfach kurz und einfach anmelden und heute noch online buchen. "
+    },
+    "featured": {
+      "title": "Top Lastenräder",
+      "description": "Das sind die beliebtesten Lastenräder. Miete deins jetzt!"
+    },
+    "more": {
+      "title": "Andere Lastenräder in Amsterdam",
+      "description": "Mehr Favoriten der Community"
+    },
+    "selection": {
+      "title": "Klicke hier für alle verfügbaren Lastenräder in Amsterdam ",
+      "description": "Die listnride Bike Sharing Community bietet Dir eine große Auwahl an hochwertigen Fahrrädern zum mieten an. Hier findest du Lastenräder von bekannten Herstellern wie Gazelle, Johnny Loco, bakfiets.nl, Urban Arrow und viele mehr. Die Lastenräder sind in der ganzen Stadt verteilt.\nAmsterdam und Umland sind optimal um mit dem Lastenrad erkundet zu werden. Jedoch besteht immer die Gefahr das die Reise mit dem eigenen Lastenrad unglücklich verläuft und es Schaden nimmt. Vermeide Risiko und Stress - Tritt der Bike Sharing Community mit deiner Anmeldung bei und miete dir das perfekte Lastenrad online!"
+    },
+    "related": {
+      "title": "Außerdem häufig in Amsterdam gemietete Fahrräder ",
+      "description": "Wir haben außerdem eine große Auswahl hochwertiger Cityräder für dich."
+    }
+  },
+  "meta_data": {
+    "title": "Miete dir ein Lastenrad in Amsterdam",
+    "description": "Miete das perfekte Lastenrad in Amsterdam. listnride bietet dir eine große Auswahl an Rädern zum Mieten. Einfach anmelden und online buchen!"
+  }
+}

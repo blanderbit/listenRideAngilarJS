@@ -1,20 +1,20 @@
  <md-content class="single-column"> 
   <div id="hero-shot-small" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/seo/berlin-ebikes.jpg'); background-position: 50% 20%;" layout="row" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
-      <h1 class="md-display-1">{{ 'seo.berlin-ebike.title' | translate }}</h1>
-      <p class="md-subhead">{{ 'seo.berlin-ebike.description' | translate }}</p>
+      <h1 class="md-display-1">{{ seoLanding.data.texts.main.title }}</h1>
+      <p class="md-subhead">{{ seoLanding.data.texts.main.description }}</p>
     </div>
   </div>
 
   <div class="content section" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h2 class="md-headline">{{ 'seo.berlin-ebike.headline-1' | translate }}</h2>
-      <p class="md-body-1">These are our most popular Ebikes to rent. Book yours now!</p>
+      <h2 class="md-headline">{{ seoLanding.data.texts.featured.title }}</h2>
+      <p class="md-body-1">{{ seoLanding.data.texts.featured.description }}</p>
     </div>
 
     <div layout-xs="column" layout="row">
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in seoLanding.featuredBikes" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <bike-card ng-repeat="bike in seoLanding.bikes.slice(0,4)" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
         </bike-card>
       </div>
     </div>
@@ -22,13 +22,13 @@
 
   <div class="content section" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h2 class="md-headline">{{ 'seo.berlin-ebike.headline-2' | translate }}</h2>
-      <p class="md-body-1">These are our most popular Ebikes to rent. Book yours now!</p>
+      <h2 class="md-headline">{{ seoLanding.data.texts.more.title }}</h2>
+      <p class="md-body-1">{{ seoLanding.data.texts.more.description }}</p>
     </div>
 
     <div layout-xs="column" layout="row">
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in seoLanding.featuredBikes" bike="bike" seo="true" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <bike-card ng-repeat="bike in seoLanding.bikes.slice(4,8)" bike="bike" seo="true" flex="100" flex-gt-xs="50" flex-gt-sm="25">
         </bike-card>
       </div>
     </div>
@@ -37,8 +37,8 @@
   <div class="content section" layout-padding>
     <md-divider></md-divider>
     <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h2 class="md-headline" translate="seo.berlin-ebike.headline-3"></h2>
-      <p class="md-body-1">{{ 'seo.berlin-ebike.text' | translate }}</p>
+      <h2 class="md-headline">{{ seoLanding.data.texts.selection.title }}</h2>
+      <p class="md-body-1">{{ seoLanding.data.texts.selection.description }}</p>
     </div>
     <br>
     <md-divider></md-divider>
@@ -46,13 +46,13 @@
 
   <div class="content section" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h2 class="md-headline" translate="seo.berlin-ebike.headline-4"></h2>
-      <p class="md-body-1">These are our most popular Ebikes to rent. Book yours now!</p>
+      <h2 class="md-headline">{{ seoLanding.data.texts.related.title }}</h2>
+      <p class="md-body-1">{{ seoLanding.data.texts.related.title }}</p>
     </div>
 
     <div layout-xs="column" layout="row">
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in seoLanding.featuredBikes" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <bike-card ng-repeat="bike in seoLanding.bikes.slice(9,12)" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
         </bike-card>
       </div>
     </div>
@@ -60,7 +60,7 @@
 
   <div id="featuredCities" class="content section" layout-align="start center">
     <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h2 class="md-headline">{{ 'seo.berlin-ebike.headline-5' | translate }}</h2>
+      <h2 class="md-headline">{{ 'seo.cities-title' | translate }}</h2>
     </div>
     
     <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="2" md-cols-gt-sm="4" md-gutter="16px" md-row-height="1.5:1">

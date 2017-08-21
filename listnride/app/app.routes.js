@@ -806,7 +806,7 @@
 
       $stateProvider.state({
         name: 'seo-landing',
-        url: '/rent-{seoPage: string}',
+        url: '/rent-{pageTitle: string}',
         template: '<seo-landing></seo-landing>'
       });
 

@@ -1,0 +1,51 @@
+{
+  "id": 1,
+  "city": "Munich",
+  "category_id": "",
+  "bikes": {
+    "featured": [
+      1071,
+      1068,
+      645,
+      657
+    ],
+    "more": [
+      638,
+      391,
+      1067,
+      1069
+    ],
+    "related": [
+
+    ]
+  },
+  "header_image": {
+    "image_url": ""
+  },
+  "texts": {
+    "main": {
+      "title": "Miete ein Rennrad in München",
+      "description": "Wir haben München's größte Auswahl für Rennräder. Miete dir dein Wunschrad für einen halben Tag, einen ganzen Tag oder so lange Du möchtest! Melde dich an, tritt der listnride Community bei und buche dein Rennrad direkt online."
+    },
+    "featured": {
+      "title": "Top Rennräder in München",
+      "description": "Das sind die beliebtesten Rennräder. Miete deins jetzt!"
+    },
+    "more": {
+      "title": "Mehr Rennräder",
+      "description": "Mehr Favoriten der Community"
+    },
+    "selection": {
+      "title": "Klicke hier für alle verfügbaren Rennräder ",
+      "description": "Die listnride Bike Sharing Community bietet Dir eine große Auwahl an hochwertigen Rennrädern zum mieten an. Hier findest du Rennräder von bekannten Herstellern wie Cervelo, Spezialiced, Cannondale, Canyon uvm. Die Rennräder sind in der ganzen Stadt verteilt und daurch einfach zu erreichen.\nMünchen und Umland sind optimal um mit dem Rennrad erkundet zu werden. Jedoch besteht immer die Gefahr das die Reise mit Rennrad unglücklich verläuft und es Schaden nimmt. Vermeide Risiko und Stress - Tritt der Bike Sharing Community mit deiner Anmeldung bei und miete dir das perfekte Rennrad online!"
+    },
+    "related": {
+      "title": "Leute in München mieten ebenfalls E-Bikes ",
+      "description": "Wir haben außerdem eine große Auswahl hochwertiger E-Bikes und Pedelecs für dich."
+    }
+  },
+  "meta_data": {
+    "title": "Miete dir ein Rennrad in München",
+    "description": "Miete dir das perfekte Rennrad - listnride hat München's größte Auswahl für Rennräder. Einfach anmelden, Rennrad auswählen und direkt online buchen!"
+  }
+}

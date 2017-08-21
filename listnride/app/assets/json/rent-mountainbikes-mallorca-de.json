@@ -1,0 +1,51 @@
+{
+  "id": 1,
+  "city": "Mallorca",
+  "category_id": "",
+  "bikes": {
+    "featured": [
+      887,
+      792,
+      685,
+      602
+    ],
+    "more": [
+      555,
+      599,
+      889,
+      781
+    ],
+    "related": [
+
+    ]
+  },
+  "header_image": {
+    "image_url": ""
+  },
+  "texts": {
+    "main": {
+      "title": "Miete ein Mountain Bike auf Mallorca",
+      "description": "Hier findest du die größte Auswahl an Mountain Bikes auf Mallorca. Miete den halben oder ganzen Tag oder einfach so lange du möchtest! Einfach kurz und einfach anmelden und heute noch online buchen. "
+    },
+    "featured": {
+      "title": "Top Mountain Bikes",
+      "description": "Das sind die beliebtesten Mountain Bikes. Miete deins jetzt!"
+    },
+    "more": {
+      "title": "Mehr Mountain Bikes und Cross Räder",
+      "description": "Mehr Favoriten der Community"
+    },
+    "selection": {
+      "title": "Klicke hier für alle verfügbaren Mountain Bikes ",
+      "description": "Die listnride Bike Sharing Community bietet Dir eine große Auwahl an hochwertigen Mountain Bikes zum mieten an. Hier findest du Mountain Bikes von bekannten Herstellern wie Stevens, Ghost, Trek, Cube, Spezialiced, Cannondale, Canyon uvm. Die Mountain Bikes sind auf der ganzen Insel verteilz und dadurch einfach zu erreichen.\nDie spanische Insel ist optimal um mit dem Mountain Bike erkundet zu werden. Jedoch besteht immer die Gefahr das die Reise mit dem eigenen Rad unglücklich verläuft und es Schaden nimmt. Vermeide Risiko und Stress - Tritt der Bike Sharing Community mit deiner Anmeldung bei und miete dir das perfekte Rad online!"
+    },
+    "related": {
+      "title": "Außerdem häufig auf Mallorca gemietet ",
+      "description": "Wir haben außerdem eine große Auswahl hochwertiger Rennräder für dich."
+    }
+  },
+  "meta_data": {
+    "title": "Miete dir ein Mountain Bike auf Mallorca",
+    "description": "Miete das perfekte Mountain Bike auf Mallorca. listnride hat Mallorcas größte Auswahl an Mountain Bikes zum Verleih. Einfach anmelden und direkt online mieten!"
+  }
+}

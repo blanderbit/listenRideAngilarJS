@@ -3,15 +3,55 @@
 angular.module('seoLanding',[]).component('seoLanding', {
   templateUrl: 'app/modules/seo-landing/seo-landing.template.html',
   controllerAs: 'seoLanding',
-  controller: ['$translate', 'api',
-    function SeoLandingController($translate, api) {
+  controller: ['$translate', '$stateParams', '$http', 'api',
+    function SeoLandingController($translate, $stateParams, $http, api) {
 
       var seoLanding = this;
-      seoLanding.featuredBikes = {};
+      seoLanding.bikes = {};
 
-      api.get("/featured").then(function(response) {
-        seoLanding.featuredBikes = response.data.slice(0,4);
-      });
+      var params = determineParams()
+      var url = api.getApiUrl() + "/seopages?city=" + params.city + "&category_id=" + params.category_id;
+
+      $http({
+        method: 'GET',
+        url: 'app/assets/json/rent-' + $stateParams.pageTitle + '-de.json',
+        responseType: "json"
+      }).then(
+        function (success) {
+          seoLanding.data = success.data;
+          console.log('/rides?ids=' + seoLanding.data.bikes.featured + "," + seoLanding.data.bikes.more + "," + seoLanding.data.bikes.related);
+          api.get('/rides?ids=' + seoLanding.data.bikes.featured + "," + seoLanding.data.bikes.more + "," + seoLanding.data.bikes.related).then(
+            function (success) {
+              seoLanding.bikes = success.data;
+            },
+            function (error) {
+
+            }
+          );
+        },
+        function (error) {
+          console.log(error.data);
+        }
+      );
+
+      function determineParams() {
+        switch($stateParams.pageTitle) {
+          case 'ebikes-berlin': return {city: "Berlin", category_id: "5"}
+          case 'roadbikes-berlin': return {city: "Berlin", category_id: "2"}
+          case 'ebikes-munich': return {city: "Munich", category_id: "5"}
+          case 'roadbikes-munich': return {city: "Munich", category_id: "2"}
+          case 'ebikes-hamburg': return {city: "Hamburg", category_id: "5"}
+          case 'roadbikes-hamburg': return {city: "Hamburg", category_id: "2"}
+          case 'ebikes-vienna': return {city: "Vienna", category_id: "5"}
+          case 'roadbikes-vienna': return {city: "Vienna", category_id: "2"}
+          case 'mountainbikes-vienna': return {city: "Vienna", category_id: "3"}
+          case 'roadbikes-mallorca': return {city: "Mallorca", category_id: "2"}
+          case 'mountainbikes-mallorca': return {city: "Mallorca", category_id: "3"}
+          case 'citybikes-amsterdam': return {city: "Amsterdam", category_id: "1"}
+          case 'cargobikes-amsterdam': return {city: "Amsterdam", category_id: "6"}
+          default: console.log("meh");
+        }
+      }
     }
   ]
 });
