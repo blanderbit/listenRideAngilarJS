@@ -1,0 +1,54 @@
+{
+  "id": 1,
+  "city": "Munich",
+  "category_id": "",
+  "bikes": {
+    "featured": [
+      338,
+      407,
+      946,
+      1050
+    ],
+    "more": [
+      948,
+      938,
+      531,
+      410
+    ],
+    "related": [
+      1071,
+      1068,
+      645,
+      657
+    ]
+  },
+  "header_image": {
+    "image_url": ""
+  },
+  "texts": {
+    "main": {
+      "title": "Huur een elektrische fiets in München",
+      "description": "Hier vind je de grootste selectie eletrische fietsen in München. Huur ze voor een halve dag, dag of week! meld je eenvoudig aan bij listnride en boek je fiets vandaag!"
+    },
+    "featured": {
+      "title": "Onze paradepaardjes ",
+      "description": "Dit zijn de populairste elektrische huurfietsen. Boek je fiets nu!"
+    },
+    "more": {
+      "title": "Meer elektrische fietsen",
+      "description": "DIt zijn nog meer favorieten van onze deelgemeenschap"
+    },
+    "selection": {
+      "title": "Kijk <a target=\"_blank\" href=\"/search/Munich?ebikes=true\">hier voor alle elektrische huurfietsen en pedelecs</a>",
+      "description": "Elektrische fietsen kunnen de perfecte optie zijn voor de stedelijke fietser. Voor sommige die een eletrische fiets willen aanschaven en te onzeker zijn om een ​​belangrijke investering te maken zonder het eerst te testen, kan de listnride deelgemeenschap helpen. Met onze selectie van e-bikes en pedelecs, kan je verschillende modellen huren en testen voordat je tot aankoop overgaat.\nE-Fietsen zijn ook geweldig om te huren tijdens je bezoek aan München. Je kan op de fiets ontspannen veel meer van de stad ontdekken.\nOnze gemeenschap biedt e-bikes en pedelecs van toonaangevende merken zoals Ampler, Gazelle, Coboc, Cortina, Haibike, Smart, GoCycle en Vello! Huur er één vandaag!"
+    },
+    "related": {
+      "title": "Andere mensen in München hebben ook deze racefietsen gehuurd ",
+      "description": "We hebben ook een super aanbod aan hoogwaardige racefietsen voor je"
+    }
+  },
+  "meta_data": {
+    "title": "Elektrische fiets huren in München - boek een testrit",
+    "description": "Huur een elektrische fiets! testen of gewoon huren - listnride heeft München's grootste aanbod elektrische fietsen. Eenvoudig aanmelden en direkt online boeken"
+  }
+}

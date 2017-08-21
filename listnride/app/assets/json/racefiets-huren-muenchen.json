@@ -1,0 +1,54 @@
+{
+  "id": 1,
+  "city": "Munich",
+  "category_id": "",
+  "bikes": {
+    "featured": [
+      1071,
+      1068,
+      645,
+      657
+    ],
+    "more": [
+      638,
+      391,
+      1067,
+      1069
+    ],
+    "related": [
+      338,
+      407,
+      946,
+      1050
+    ]
+  },
+  "header_image": {
+    "image_url": ""
+  },
+  "texts": {
+    "main": {
+      "title": "Huur een racefiets in München",
+      "description": "Hier vind je de grootste selectie racefietsen in München. Huur ze voor een halve dag, dag of week! meld je eenvoudig aan bij listnride en boek je fiets vandaag!"
+    },
+    "featured": {
+      "title": "Onze paradepaardjes ",
+      "description": "Dit zijn de populairste racefietsen te huur. Boek je fiets nu!"
+    },
+    "more": {
+      "title": "Meer racefietsen",
+      "description": "DIt zijn nog meer favorieten van onze deelgemeenschap"
+    },
+    "selection": {
+      "title": "Kijk <a target=\"_blank\" href=\"/search/Munich?race=true\">hier voor alle racefietsen te huur in München</a>",
+      "description": "Onze deelgemeenschap biedt een grote keuze aan high-end racefietsen voor jou te huren. Hier vind je racefietsen van merken zoals Cervelo, Specialized, Cannondale en Canyon als ook vele andere merken. De racefietsen zijn te huur in München Centrum, Schwabing, Haidhausen, Maxvorstadt en in andere delen van München. Een mooie toertocht is de perfecte manier om München en omgeving te ontdekken, echter is het vaak lastig een passende racefiets te vinden. Ook is het meenemen van je eigen racefiets een riskante en moeizame operatie. Dus maak je geen zorgen! – meld je aan bij de listnride community en huur eenvoudig de perfekte racefiets hier!"
+    },
+    "related": {
+      "title": "Andere mensen in München hebben ook deze elektrische fietsen gehuurd ",
+      "description": "We hebben ook een super aanbod aan hoogwaardige elektrische fietsen en Pedelecs"
+    }
+  },
+  "meta_data": {
+    "title": "Huur een racefiets in München",
+    "description": "Huur de perfekte racefiets - listnride heeft München's grootste aanbod racefietsen. Meld je aan en boek je fiets vandaag!"
+  }
+}

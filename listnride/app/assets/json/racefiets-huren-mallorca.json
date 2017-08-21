@@ -1,0 +1,54 @@
+{
+  "id": 1,
+  "city": "Mallorca",
+  "category_id": "",
+  "bikes": {
+    "featured": [
+      584,
+      884,
+      881,
+      879
+    ],
+    "more": [
+      779,
+      773,
+      770,
+      573
+    ],
+    "related": [
+      887,
+      792,
+      685,
+      602
+    ]
+  },
+  "header_image": {
+    "image_url": ""
+  },
+  "texts": {
+    "main": {
+      "title": "Huur een racefiets in Mallorca",
+      "description": "Hier vind je de grootste selectie racefietsen in Mallorca. Huur ze voor een halve dag, dag of week! meld je eenvoudig aan bij listnride en boek je fiets vandaag!"
+    },
+    "featured": {
+      "title": "Onze paradepaardjes ",
+      "description": "Dit zijn de populairste racefietsen te huur. Boek je fiets nu!"
+    },
+    "more": {
+      "title": "Meer racefietsen",
+      "description": "DIt zijn nog meer favorieten van onze deelgemeenschap"
+    },
+    "selection": {
+      "title": "Kijk hier voor alle racefietsen te huur in Mallorca  ",
+      "description": "Onze deelgemeenschap biedt een grote keuze aan high-end racefietsen voor jou te huren. Hier vind je racefietsen van merken zoals Cervelo, Specialized, Cannondale en Canyon als ook vele andere merken. De racefietsen zijn te huur in Palma, Alcudia, Can Picafort en in andere delen van Mallorca. Een mooie toertocht is de perfecte manier om Mallorca en omgeving te ontdekken, echter is het vaak lastig een passende racefiets te vinden. Ook is het meenemen van je eigen racefiets een riskante en moeizame operatie. Dus maak je geen zorgen! – meld je aan bij de listnride community en huur eenvoudig de perfekte racefiets hier!"
+    },
+    "related": {
+      "title": "Andere mensen in Mallorca hebben ook deze mountainbikes gehuurd ",
+      "description": "We hebben ook een super aanbod aan hoogwaardige elektrische fietsen en Pedelecs"
+    }
+  },
+  "meta_data": {
+    "title": "Huur een racefiets in Mallorca",
+    "description": "Huur de perfekte racefiets - listnride heeft Mallorca's grootste aanbod racefietsen. Meld je aan en boek je fiets vandaag!"
+  }
+}

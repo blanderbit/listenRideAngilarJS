@@ -139,13 +139,13 @@ md-menu-content {
   max-height: 500px;
 }
 
+md-card md-card-title {
+  padding: 8px;
+}
+
 .lnr-image-card {
   border-width: 0;
   margin: 0;
-}
-
-md-card md-card-title {
-  padding: 8px;
 }
 
 /*-----------------------------------------------------------------------------------*/

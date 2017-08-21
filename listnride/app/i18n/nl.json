@@ -93,6 +93,7 @@
     "tac": "algemene voorwaarden",
     "booking-accept-tac": "Bij het bevestigen van de boeking accepteer ik de",
     "already-booked": "al geboekt",
+    "for-shops": "For Bikeshops",
     "contact-us": "Neem contact met ons op per ",
     "required": "Dit is verplicht"
   },
@@ -1224,5 +1225,9 @@
     "faq-answer-7": "We will use your invested money for two primary purposes: To finance our growth and win new users, especially in our existing markets / cities. Our community, with higher user numbers, can offer riders a wider choice, and provide higher demand to listers, making the service more appealing overall. To improve our platform steadily through new features that make the rental experience as easy and efficient as possible. Integrating an insurance product and new mobile apps are the biggest milestones set.",
     "faq-question-8": "FURTHER QUESTIONS?",
     "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
+  },
+
+  "seo": {
+    "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden"
   }
 }

@@ -1,0 +1,54 @@
+{
+  "id": 1,
+  "city": "Berlin",
+  "category_id": "",
+  "bikes": {
+    "featured": [
+      428,
+      1052,
+      427,
+      962
+    ],
+    "more": [
+      896,
+      165,
+      925,
+      666
+    ],
+    "related": [
+      935,
+      1161,
+      922,
+      1047
+    ]
+  },
+  "header_image": {
+    "image_url": ""
+  },
+  "texts": {
+    "main": {
+      "title": "Huur een elektrische fiets",
+      "description": "Hier vind je de grootste selectie eletrische fietsen in Berlijn. Huur ze voor een halve dag, dag of week! meld je eenvoudig aan bij listnride en boek je fiets vandaag!"
+    },
+    "featured": {
+      "title": "Onze paradepaardjes ",
+      "description": "Dit zijn de populairste elektrische huurfietsen. Boek je fiets nu!"
+    },
+    "more": {
+      "title": "Meer elektrische fietsen",
+      "description": "DIt zijn nog meer favorieten van onze deelgemeenschap"
+    },
+    "selection": {
+      "title": "Kijk hier voor alle elektrische huurfietsen en pedelecs  ",
+      "description": "Elektrische fietsen kunnen de perfecte optie zijn voor de stedelijke fietser. Voor sommige die een eletrische fiets willen aanschaven en te onzeker zijn om een ​​belangrijke investering te maken zonder het eerst te testen, kan de listnride deelgemeenschap helpen. Met onze selectie van e-bikes en pedelecs, kan je verschillende modellen huren en testen voordat je tot aankoop overgaat.\nE-Fietsen zijn ook geweldig om te huren tijdens je bezoek aan Berlijn. Je kan op de fiets ontspannen veel meer van de stad ontdekken.\nOnze gemeenschap biedt e-bikes en pedelecs van toonaangevende merken zoals Ampler, Gazelle, Coboc, Cortina, Haibike, Smart, GoCycle en Vello! Huur er één vandaag! De elektrische fietsen zijn te huur in Berlijn Mitte (bij Alexanderplatz), Prenzlauerberg, kreuzberg en in andere delen van Berlijn."
+    },
+    "related": {
+      "title": "Andere mensen in Berlijn hebben ook deze racefietsen gehuurd ",
+      "description": "We hebben ook een super aanbod aan hoogwaardige racefietsen voor je"
+    }
+  },
+  "meta_data": {
+    "title": "Elektrische fiets huren in Berlijn - boek een testrit",
+    "description": "Huur een elektrische fiets! testen of gewoon huren - listnride heeft berlijn's grootste aanbod elektrische fietsen. Eenvoudig aanmelden en direkt online boeken"
+  }
+}

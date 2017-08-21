@@ -94,6 +94,7 @@
     "tac": "Terms and Conditions",
     "booking-accept-tac": "By booking I accept the",
     "already-booked": "Already Booked",
+    "for-shops": "For Bikeshops",
     "contact-us": "Please get in touch with us via ",
     "required": "This is required"
   },
@@ -1106,6 +1107,31 @@
       "faq-question-6":"What else is there at bonvelo?",
       "faq-answer-6": "You can find great accessories for your bike here: <a href=\"https://bonvelo.de/fahrrad-zubehoer\">bonvelo.de/fahrrad-zubehoer</a>",
       "bottom-text": "To ride in maximum style, we’ve also got bonvelo hoodies, shirts and backpacks. Check out our selection at <a href=\"https://bonvelo.de/wear\">bonvelo.de/wear</a>"
+    },
+    "motoparilla": {
+      "meta-title":"Rent and Test the Moto Parilla Carbon SUV E-Bike in Munich",
+      "meta-description": "The Carbon SUV E-Bike from Moto Parilla can be tested in Munich. Simply book online and enjoy the ride!",
+      "description": "Moto Parilla – Carbon SUV E-Bikes designed in Italy",
+      "subdescription": "The perfect blend of design, engineering and art delivered in a revolutionary new mode of transportation. Book one on listnride today!",
+      "item1-title": "Oversized Tires",
+      "item1-description": "Offering better balance for beginners or casual riders, these fat tires will take you places you've never been before. The oversized tires provide improved grip and traction on the most challenging terrain.",
+      "item2-title": "Comfort and Design",
+      "item2-description": "Due to its commanding presence, the Carbon SUV is bound to make an impression on friends and people you pass along the street. Riding such a bike is the only way to understand why everybody is talking about it - it's an experience like no other.",
+      "item3-title": "Electric Motor",
+      "item3-description": "Pedal-assist or throttle modes offer you the most comfort when commuting, providing a smooth ride without the need to pedal. The throttle override toggle allows the rider to add power in any driving mode.",
+      "test-bike": "Test a Moto Parilla Carbon SUV E-Bike in Munich",
+      "testimonial-1": "This bike is essentially a powered mountain bike on stereoids that's made primarily of carbon fiber",
+      "testimonial-2": "This E-Bike is part speedway dragster, part bionic arm",
+      "testimonial-3": "Wow! I want one, if not to ride then to look at. It really is a work of art!",
+      "find-out-more": "Learn more about the Moto Parilla Carbon SUV E-Bike",
+      "faq-description": "When you order your <a href=\"https://bonvelo.de\">bonvelo</a>, we will refund you the cost of your rental / test ride in Berlin!",
+      "faq-question-1": "How high can the seat extend?",
+      "faq-answer-1": "The seat can extend a full 5 cm.",
+      "faq-question-2":"Where is the battery located?",
+      "faq-answer-2": "With an effortless push of a button, you’ll access to the battery inside the frame lifting the cover.",
+      "faq-question-3":"Is the battery replacable?",
+      "faq-answer-3": "Yes, it is possible to replace the battery.",
+      "bottom-text": "To ride in maximum style, we’ve also got bonvelo hoodies, shirts and backpacks. Check out our selection at <a href=\"https://bonvelo.de/wear\">bonvelo.de/wear</a>"
     }
   },
 
@@ -1202,17 +1228,6 @@
   },
 
   "seo": {
-    "berlin-ebike": {
-      "meta-title": "E-Bike Rentals in Berlin - Book a Test Ride",
-      "meta-description": "Test ride an E-Bike or Pedelec. Berlin’s biggest selection of e-bikes and pedelecs available for rent on listnride.com. Sign up and book yours today!",
-      "title": "Rent an E-Bike in Berlin",
-      "description": "We’ve got Berlin’s biggest selection of e-bikes and pedelecs for rent. Test one for a half day, full day, or even a week! Simply join the listnride community and book yours today.",
-      "headline-1": "Featured E-Bikes",
-      "headline-2": "More E-Bikes and Pedelecs",
-      "headline-3": "See our <a href=\"/search/berlin?ebikes=true\">full selection of E-Bikes and Pedelecs</a> for rent",
-      "headline-4": "People in Berlin also rented <a href=\"/search/berlin?race=true\">Road Bikes</a>",
-      "headline-5": "Planning to Travel? Check out our other cities:",
-      "text": "E-Bikes can be the perfect option for the urban commuter. But for some, it’s simply too imprudent to make a significant investment without trying it out first. That’s where the listnride bike sharing community can help. With our selection of e-bikes and pedelecs for rent, you can test various models before you buy. E-Bikes are also great for renting while visiting Berlin. You can cover a lot more ground in a day - with a lot less effort - on an e-bike. Our community offers e-bikes and pedelecs from leading brands such as Ampler, Gazelle, Coboc, Cortina, Haibike, Smart, GoCycle, and Vello! Rent one today - they're available in Mitte near Alexanderplatz, in Prenzlauerberg, Kreuzberg, and throughout the city!"
-    }
+    "cities-title": "Planning to Travel? Check out more cities:"
   }
 }
