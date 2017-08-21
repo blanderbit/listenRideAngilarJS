@@ -9,7 +9,16 @@ angular.module('constanceSpin',[]).component('constanceSpin', {
 
       constanceSpin.bikes = [];
 
-      // api.get('/users/1998').then(
+      api.get('/rides?family=21').then(
+        function (success) {
+          constanceSpin.bikes = success.data;
+        },
+        function (error) {
+
+        }
+      );
+
+      // api.get('/bikes/1998').then(
       //   function(response) {
       //     // Only retrieve the road bikes of the specified lister for the event
       //     _.each(response.data.rides, function (value, index) {
