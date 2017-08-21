@@ -11,7 +11,7 @@ angular.module('seoLanding',[]).component('seoLanding', {
 
       $http({
         method: 'GET',
-        url: 'app/assets/json/' + $stateParams.pageTitle + ".json",
+        url: 'app/assets/ui_images/json/' + $stateParams.pageTitle + ".json",
         responseType: "json"
       }).then(
         function (success) {
