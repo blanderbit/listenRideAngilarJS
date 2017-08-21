@@ -3,8 +3,8 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', 'ngMeta',
-    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, ngMeta) {
+  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', '$analytics', 'ngMeta',
+    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, $analytics, ngMeta) {
       var bike = this;
 
       bike.mapOptions = {
@@ -15,12 +15,7 @@ angular.module('bike',[]).component('bike', {
       };
 
       bike.mobileCalendar = function() {
-        if ($mdMedia('xs') || $mdMedia('sm')) {
-          return true;
-        }
-        else {
-          return false;
-        }
+        return !!($mdMedia('xs') || $mdMedia('sm'));
       };
 
       // TODO: move all api calls in service
@@ -29,6 +24,8 @@ angular.module('bike',[]).component('bike', {
       // not for logic and api calls
       api.get('/rides/' + $stateParams.bikeId).then(
         function(response) {
+          $analytics.eventTrack('View Bike', {  category: 'Bike Page', label: response.data.id });
+
           bike.showAll = false;
           bike.data = response.data;
           bike.mapOptions.lat = bike.data.lat_rnd;
@@ -85,7 +82,7 @@ angular.module('bike',[]).component('bike', {
           clickOutsideToClose: true,
           fullscreen: true // Only for -xs, -sm breakpoints.
         });
-      }
+      };
 
       function GalleryDialogController($mdDialog, bikeData) {
         var galleryDialog = this;

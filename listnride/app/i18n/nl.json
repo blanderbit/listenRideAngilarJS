@@ -93,6 +93,7 @@
     "tac": "algemene voorwaarden",
     "booking-accept-tac": "Bij het bevestigen van de boeking accepteer ik de",
     "already-booked": "al geboekt",
+    "for-shops": "For Bikeshops",
     "contact-us": "Neem contact met ons op per "
   },
 
@@ -239,7 +240,7 @@
     "reject": "afwijzen",
     "rate": "Beoordelen",
     "confirm": "Bevestigen",
-    "confirm_return": "teruggave fiets bevestigen"
+    "confirm_return": "Bevestig teruggave"
   },
 
   "listChat": {
@@ -502,7 +503,28 @@
       "public-location": "De grote vrijheid"
     }
   },
-
+  "shop-landing": {
+    "meta-title": "listnride Shop Plugin - Je huurfietsen online boekbaar",
+    "meta-description": "listnride biedt een gratis plug-in waarmee uw huurfietsen direct op uw webiste te boeken zijn.",
+    "title": "Je huurfietsen direct online boeken op uw eigen website?",
+    "subtitle": "listnride biedt een gratis plug-in waarmee uw huurfietsen direct op uw webiste te boeken zijn.",
+    "description": "Besef je ook dat het hebben van jou eigen online fietsenverhuurwinkel nodig is om de online consument te bedienen? Binnen een paar muisklikken heb je je huurfietsen die op listnride geplaatsts hebt direct te boeken op uw eigen website. Daarmee kunnen uw klanten direct zien welke fietsen beschikbaar zijn en ze online boeken.",
+    "feature-1": {
+      "title": "Meer fietsen verhuren",
+      "description": "De online consument wil kiezen. Bied uw klanten het gemak de beschikbare huurfietsen te bekijken met de mogelijkheid deze direct online teboeken. Hiermee wordt ook het grootste deel van het papierwerk efficient online geregeld, zodat u zich kunt concentreren op het runnen van uw bedrijf. Een duidelijke win-win"
+    },
+    "feature-2": {
+      "title": "Geen programmeur nodig",
+      "description": "Om onze plugin te gebruiken moet je een programmeur te zijn en hoef je je geen zorgen te maken over onderhoud of updates. De fietsen altijd up-to-date en lopen synchroon met listnride. Plaats je een fiets op listnride, is deze ook direct zichtbaar en boekbaar op uw eigen website."
+    },
+    "feature-3": {
+      "title": "Meer tijd om je eigen bedrijf te runnen",
+      "description": "De algemene voorwaarden van listnride omvatten de belangrijkste details van een huurovereenkomst. Hier is onder andere vastgelegd dat op het moment dat de huurfiets wordt overgedragen aan de huurder, de verantwoordelijkheid en aansprakelijkheid voor hem of haar is. Dus, geen papierwerk meer nodig. Verder heeft u een duidelijk dashboard met de nodige overzichten van uw aanvragen, verhuurtransacties, facturen en totale omzet. Simpel door in loggen op je account."
+    },
+    "join-now": "Wees erbij! De plug-in is gratis",
+    "join-now-description": "Geinteresseerd en meer meer te weten komen?",
+    "contact-us": "Contact"
+  },
   "rent-a-bike": {
     "meta-title": "Huur een fiets via listnride!",
     "meta-description": "Super Keuze. Super prijs. Eenvoudig online boeken.",
@@ -847,6 +869,12 @@
         "text-1": "If you do not own a roadbike, or just do not want to bring your own bike, we have roadbikes available which you can easily rent for free for the ride. During the Cycling World, we are hosting a group ride which will take you out of the city into the countryside. Leaving from our booth (# O-1) on the fair ground, we’ll head towards the former rocket station Hombroich, where we will have a quick stop with snacks and drinks. Refuelled from the break the ride will continue through the relatively unknown but beautiful scenery until we’re back at the fairground. Arrived back at the fairground, you are invited to have a refreshment at the booth of Schicke Mütze  (# xx)<br><br>Test bikes are available from Cervélo and Ridley. Sign-up and book one of the outstanding bikes for the ride for free, first come first served. The overview of all bikes available you can find here (deeplink to bike page)",
         "text-2": "<b>Meet:</b> 26.03, 10:00AM, Start 10:30 at the listnride booth (O-1)<br><br><b>Distance:</b> ca. 75km<br><br><b>Speed:</b> 25-28 kmh, moderate<br><br><b>Pit-Stop:</b> A Café at the Rocketstation Hombroich provides snacks and drinks<br><br><b>Requirement:</b> Roadbike, Helmet, Clipless shoes"
       }
+    },
+    "supercross-munich": {
+      "meta-title": "Rent the perfect cyclocross Bike for the Supercross Munich on listnride",
+      "meta-description": "Rent the perfect cyclocross bike for the Supercross in Munich easily online. Choose from brands such as BMC, Votec, Ridley, SRAM, Specialized, Bianchi, Pasculli, Focus and other brands.",
+      "title": "Rent the perfect bike for the Supercross Munich",
+      "text": "The listnride community offers you the right cyclocross bike for the Supercross Munich. Rent a bike to participate in the race, one of the cross social rides or try one of the cyclocross workshops.<br><br>Scroll through the offering and click to open it. To find out more, read the description and review the available equipment. You can then book the desired bike via the booking calendar."
     }
   },
 

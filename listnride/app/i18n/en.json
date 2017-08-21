@@ -93,6 +93,7 @@
     "tac": "Terms and Conditions",
     "booking-accept-tac": "By booking I accept the",
     "already-booked": "Already Booked",
+    "for-shops": "For Bikeshops",
     "contact-us": "Please get in touch with us via "
   },
   "toasts": {
@@ -233,7 +234,7 @@
     "reject": "Reject",
     "rate": "Rate",
     "confirm": "Confirm",
-    "confirm_return": "Confirm Return and Rate"
+    "confirm_return": "Confirm Return"
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{timespan}}. Agree on further details using the chat.",
@@ -483,6 +484,28 @@
       "rider-location": "X marks the Spot",
       "public-location": "Freedom is yours"
     }
+  },
+  "shop-landing": {
+    "meta-title": "listnride Shop Plugin - Get your bike rental online",
+    "meta-description": "listnride now offers a free plug-in to easily integrate a bike rental booking engine on your website.",
+    "title": "Your rental bikes directly bookable on your website",
+    "subtitle": "listnride now offers a free plug-in to easily integrate a bike rental booking engine on your website.",
+    "description": "You also realize having your own online bike rental shop is needed to engage with the online consumer? Within a few clicks you have your rental bikes listed on listnride bookable on your own website. Your clients can directly see available bikes and book them!",
+    "feature-1": {
+      "title": "Increase your rentals",
+      "description": "The online consumer wants to have a choice. Offer your clients the convenience to look at the bikes you have available for rent and the option to book them directly online. To your convenience most of the paperwork is done online as well so you can focus on your business. A clear win-win"
+    },
+    "feature-2": {
+      "title": "No programming skills needed",
+      "description": "The listnride plug-in requires no web development on your end. No expensive web agencies need and so saving you extra cost. The technology we provide is maintenance free and shows real-time the bikes available, so any changes made to the bikes you are offer are directly visible online"
+    },
+    "feature-3": {
+      "title": "Focus on your business",
+      "description": "The listnride terms and conditions cover all important details of a rental agreement. Here it is outlined that the moment the bike is handed over to the rider, all liability and responsibility are with him or her. So, no more paperwork needed. Furthermore, you’ll have a clear dashboard with the necessary overviews on your open requests, rentals, invoices and revenues made. Just by logging in to your account."
+    },
+    "join-now": "Join us now, it is free",
+    "join-now-description": "Interested to learn more and get started?",
+    "contact-us": "Contact Us"
   },
   "rent-a-bike": {
     "meta-title": "Rent a bike via listnride!",
@@ -823,6 +846,12 @@
         "text-1": "If you do not own a roadbike, or just do not want to bring your own bike, we have roadbikes available which you can easily rent for free for the ride. During the Cycling World, we are hosting a group ride which will take you out of the city into the countryside. Leaving from our booth (# O-1) on the fair ground, we’ll head towards the former rocket station Hombroich, where we will have a quick stop with snacks and drinks. Refuelled from the break the ride will continue through the relatively unknown but beautiful scenery until we’re back at the fairground. Arrived back at the fairground, you are invited to have a refreshment at the booth of Schickemütze (# xx)<br><br>Test bikes are available from Cervélo and Ridley. Sign-up and book one of the outstanding bikes for the ride for free, first come first served. The overview of all bikes available you can find here (deeplink to bike page)",
         "text-2": "<b>Meet:</b> 26.03, 10:00AM, Start 10:30 at the listnride booth (O-1)<br><br><b>Distance:</b> ca. 75km<br><br><b>Speed:</b> 25-28 kmh, moderate<br><br><b>Pit-Stop:</b> A Café at the Rocketstation Hombroich provides snacks and drinks<br><br><b>Requirement:</b> Roadbike, Helmet, Clipless shoes"
       }
+    },
+    "supercross-munich": {
+      "meta-title": "Rent the perfect cyclocross Bike for the Supercross Munich on listnride",
+      "meta-description": "Rent the perfect cyclocross bike for the Supercross in Munich easily online. Choose from brands such as BMC, Votec, Ridley, SRAM, Specialized, Bianchi, Pasculli, Focus and other brands.",
+      "title": "Rent the perfect bike for the Supercross Munich",
+      "text": "The listnride community offers you the right cyclocross bike for the Supercross Munich. Rent a bike to participate in the race, one of the cross social rides or try one of the cyclocross workshops. Scroll through the offering and click to open it. To find out more, read the description and review the available equipment. You can then book the desired bike via the booking calendar."
     }
   },
   "error-404": {
@@ -1049,6 +1078,31 @@
       "faq-answer-5": "We’re not concerned with frills or gimmicks, and designing a bike around this principle was an early goal of ours. All processes run directly through our manufacturers and producers, so there are no middlemen adding to the final price. We take care of everything else ourselves - our bikes are only available on our <a href=\"https://bonvelo.de\">website</a> and our showroom in Hamburg. From our customer feedback so far, we think we’re on the right track. Read here: <a href=\"https://bonvelo.de\">bonvelo.de</a>",
       "faq-question-6":"What else is there at bonvelo?",
       "faq-answer-6": "You can find great accessories for your bike here: <a href=\"https://bonvelo.de/fahrrad-zubehoer\">bonvelo.de/fahrrad-zubehoer</a>",
+      "bottom-text": "To ride in maximum style, we’ve also got bonvelo hoodies, shirts and backpacks. Check out our selection at <a href=\"https://bonvelo.de/wear\">bonvelo.de/wear</a>"
+    },
+    "motoparilla": {
+      "meta-title":"Rent and Test the Moto Parilla Carbon SUV E-Bike in Munich",
+      "meta-description": "The Carbon SUV E-Bike from Moto Parilla can be tested in Munich. Simply book online and enjoy the ride!",
+      "description": "Moto Parilla – Carbon SUV E-Bikes designed in Italy",
+      "subdescription": "The perfect blend of design, engineering and art delivered in a revolutionary new mode of transportation. Book one on listnride today!",
+      "item1-title": "Oversized Tires",
+      "item1-description": "Offering better balance for beginners or casual riders, these fat tires will take you places you've never been before. The oversized tires provide improved grip and traction on the most challenging terrain.",
+      "item2-title": "Comfort and Design",
+      "item2-description": "Due to its commanding presence, the Carbon SUV is bound to make an impression on friends and people you pass along the street. Riding such a bike is the only way to understand why everybody is talking about it - it's an experience like no other.",
+      "item3-title": "Electric Motor",
+      "item3-description": "Pedal-assist or throttle modes offer you the most comfort when commuting, providing a smooth ride without the need to pedal. The throttle override toggle allows the rider to add power in any driving mode.",
+      "test-bike": "Test a Moto Parilla Carbon SUV E-Bike in Munich",
+      "testimonial-1": "This bike is essentially a powered mountain bike on stereoids that's made primarily of carbon fiber",
+      "testimonial-2": "This E-Bike is part speedway dragster, part bionic arm",
+      "testimonial-3": "Wow! I want one, if not to ride then to look at. It really is a work of art!",
+      "find-out-more": "Learn more about the Moto Parilla Carbon SUV E-Bike",
+      "faq-description": "When you order your <a href=\"https://bonvelo.de\">bonvelo</a>, we will refund you the cost of your rental / test ride in Berlin!",
+      "faq-question-1": "How high can the seat extend?",
+      "faq-answer-1": "The seat can extend a full 5 cm.",
+      "faq-question-2":"Where is the battery located?",
+      "faq-answer-2": "With an effortless push of a button, you’ll access to the battery inside the frame lifting the cover.",
+      "faq-question-3":"Is the battery replacable?",
+      "faq-answer-3": "Yes, it is possible to replace the battery.",
       "bottom-text": "To ride in maximum style, we’ve also got bonvelo hoodies, shirts and backpacks. Check out our selection at <a href=\"https://bonvelo.de/wear\">bonvelo.de/wear</a>"
     }
   },

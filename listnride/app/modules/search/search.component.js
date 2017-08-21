@@ -19,12 +19,12 @@ angular.module('search',[]).component('search', {
       };
 
       search.categoryFilter = {
-        allterrain: $stateParams.allterrain == "true",
-        city: $stateParams.city == "true",
-        ebikes: $stateParams.ebikes == "true",
-        kids: $stateParams.kids == "true",
-        race: $stateParams.race == "true",
-        special: $stateParams.special == "true"
+        allterrain: $stateParams.allterrain === "true",
+        city: $stateParams.city === "true",
+        ebikes: $stateParams.ebikes === "true",
+        kids: $stateParams.kids === "true",
+        race: $stateParams.race === "true",
+        special: $stateParams.special === "true"
       };
 
       search.sizeOptions = [
@@ -56,7 +56,7 @@ angular.module('search',[]).component('search', {
       search.showBikeWindow = function(evt, bikeId) {
         if (search.map) {
           search.selectedBike = search.bikes.find(function(bike) {
-            return bike.id == bikeId;
+            return bike.id === bikeId;
           });
 
           search.map.showInfoWindow('searchMapWindow', this);

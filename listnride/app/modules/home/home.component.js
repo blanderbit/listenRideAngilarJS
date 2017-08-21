@@ -3,8 +3,10 @@
 angular.module('home',[]).component('home', {
   templateUrl: 'app/modules/home/home.template.html',
   controllerAs: 'home',
-  controller: [ '$state', '$stateParams', '$translate', '$analytics', '$localStorage', '$mdDialog', 'verification', 'authentication', 'api', 'ngMeta', 'loadingDialog',
-    function HomeController($state, $stateParams, $translate, $analytics, $localStorage, $mdDialog, verification, authentication, api, ngMeta, loadingDialog) {
+  controller: [ '$state', '$stateParams', '$translate', '$analytics', '$localStorage',
+    '$mdDialog', 'verification', 'authentication', 'api', 'ngMeta', 'loadingDialog',
+    function HomeController($state, $stateParams, $translate, $analytics, $localStorage, $mdDialog,
+                            verification, authentication, api, ngMeta) {
       var home = this;
 
       if ($state.current.name === "verify" && authentication.loggedIn()) {
@@ -65,19 +67,19 @@ angular.module('home',[]).component('home', {
         home.testimonials = [
           {
             userId: 1090,
-            userName: "Jetske " + translation + " Amsterdam",
+            userName: "- Jetske " + translation + " Amsterdam",
             userImagePath: "app/assets/ui_images/testmonials/jetske_amsterdam.jpg",
             text: "On listnride I rent out my bikes providing families a simple solution to discover my home town. Besides meeting nice people I make some extra pocket money ☺"
           },
           {
             userId: 1203,
-            userName: "John " + translation + " Potsdam",
+            userName: "- John " + translation + " Potsdam",
             userImagePath: "app/assets/ui_images/testmonials/john_potsdam.jpg",
             text: "Ich habe einige Räder rumstehen und finde es toll diese zu vermieten und Besuchern meiner Stadt ein cooles Rad anzubieten. Immer sehr tolle Mieter gehabt!"
           },
           {
             userId: 1739,
-            userName: "Cornelia " + translation + " Basel",
+            userName: "- Cornelia " + translation + " Basel",
             userImagePath: "app/assets/ui_images/testmonials/cornelia_basel.jpg",
             text: "Wir waren zu Besuch in Berlin und wollten diesmal ein schönes E-Bike testfahren. Auf listnride haben wir E-Bikes der Marke Ampler gefunden und zwei davon gemietet. Klappte einwandfrei und auch noch zu einem guten Preis!"
           }
@@ -92,6 +94,10 @@ angular.module('home',[]).component('home', {
 
       home.onSearchClick = function() {
         $state.go('search', {location: home.location});
+      };
+
+      home.cityAnalytics = function(city) {
+        $analytics.eventTrack('ViewContent', {  category: 'City Page', label: city});
       };
     }
   ]

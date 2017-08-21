@@ -22,22 +22,116 @@
         <div layout="column">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'shared.learn-more' | translate }}</md-subheader>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="howItWorks" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="{{ 'shared.how-it-works' | translate }}">{{ 'shared.how-it-works' | translate }}</a></md-list-item>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="rentingABike" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="{{ 'shared.renting-a-bike' | translate }}">{{ 'shared.renting-a-bike' | translate }}</a></md-list-item>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="listingABike" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="{{ 'shared.listing-a-bike' | translate }}">{{ 'shared.listing-a-bike' | translate }}</a></md-list-item>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="trustAndSafety" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="{{ 'shared.trust-and-safety' | translate }}">{{ 'shared.trust-and-safety' | translate }}</a></md-list-item>
-            <md-list-item class="md-body-1"><a class="lnr-link" href="http://journal.listnride.com" target="_blank">{{ 'shared.journal' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1">
+              <a
+                class="lnr-link"
+                ui-sref="howItWorks"
+                analytics-on
+                analytics-category="How it Works"
+                analytics-event="Learn More"
+                analytics-label="How it Works">
+                {{ 'shared.how-it-works' | translate }}
+              </a>
+            </md-list-item>
+            <md-list-item class="md-body-1">
+              <a
+                class="lnr-link"
+                ui-sref="rentingABike"
+                analytics-on
+                analytics-category="Renting a Bike"
+                analytics-event="Learn More"
+                analytics-label="Renting a Bike">
+                {{ 'shared.renting-a-bike' | translate }}
+              </a>
+            </md-list-item>
+            <md-list-item class="md-body-1">
+              <a
+                class="lnr-link"
+                ui-sref="listingABike"
+                analytics-on
+                analytics-category="Listing a Bike"
+                analytics-event="Learn More"
+                analytics-label="Listing a Bike">
+                {{ 'shared.listing-a-bike' | translate }}
+              </a>
+            </md-list-item>
+            <md-list-item class="md-body-1">
+              <a
+                class="lnr-link"
+                ui-sref="shopLanding"
+                analytics-on
+                analytics-category="For Shops"
+                analytics-event="Learn More"
+                analytics-label="For Shops">
+                {{ 'shared.for-shops' | translate }}
+              </a>
+            </md-list-item>
+            <md-list-item class="md-body-1">
+              <a
+                class="lnr-link"
+                href="http://journal.listnride.com"
+                target="_blank">{{ 'shared.journal' | translate }}</a></md-list-item>
           </md-list>
         </div>
 
         <div layout="column">
           <md-list>
             <md-subheader class="md-no-sticky">listnride</md-subheader>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="about" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="about">{{ 'footer.about' | translate }}</a></md-list-item>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="press" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="press">{{ 'footer.press' | translate }}</a></md-list-item>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="jobs-list" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="jobs">{{ 'footer.jobs' | translate }}</a></md-list-item>
-             <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="invite" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="invite friends">{{ 'settings.invite' | translate }}</a></md-list-item>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="help" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="contact & support">{{ 'shared.contact' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1">
+              <a
+                class="lnr-link"
+                ui-sref="about"
+                analytics-on
+                analytics-category="About"
+                analytics-event="Learn More"
+                analytics-label="About">
+                {{ 'footer.about' | translate }}
+              </a>
+            </md-list-item>
+            <md-list-item class="md-body-1">
+              <a
+                class="lnr-link"
+                ui-sref="press"
+                analytics-on
+                analytics-category="Press"
+                analytics-event="Learn More"
+                analytics-label="Press">
+                {{ 'footer.press' | translate }}
+              </a>
+            </md-list-item>
+            <md-list-item class="md-body-1">
+              <a
+                class="lnr-link"
+                ui-sref="jobs-list"
+                analytics-on
+                analytics-category="Jobs"
+                analytics-event="Learn More"
+                analytics-label="Jobs">
+                {{ 'footer.jobs' | translate }}
+              </a>
+            </md-list-item>
+            <md-list-item class="md-body-1">
+              <a
+                class="lnr-link"
+                ui-sref="invite"
+                analytics-on
+                analytics-category="Invite friends"
+                analytics-event="Learn More"
+                analytics-label="Invite friends">
+                {{ 'settings.invite' | translate }}
+              </a>
+            </md-list-item>
+            <md-list-item class="md-body-1">
+              <a
+                class="lnr-link"
+                ui-sref="help"
+                analytics-on
+                analytics-category="Contact & Support"
+                analytics-event="Learn More"
+                analytics-label="Contact & Support">
+                {{ 'shared.contact' | translate }}
+              </a>
+            </md-list-item>
           </md-list>
         </div>
 
@@ -47,6 +141,17 @@
             <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="terms" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="terms">{{ 'footer.terms-and-conditions' | translate }}</a></md-list-item>
             <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="privacy" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="privacy">{{ 'footer.privacy-statement' | translate }}</a></md-list-item>
             <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="imprint" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="imprint">{{ 'footer.imprint' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1">
+              <a
+                class="lnr-link"
+                ui-sref="trustAndSafety"
+                analytics-on
+                analytics-category="Trust and Safety"
+                analytics-event="Learn More"
+                analytics-label="Trust and Safety">
+                {{ 'shared.trust-and-safety' | translate }}
+              </a>
+            </md-list-item>
           </md-list>
         </div>
 

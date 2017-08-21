@@ -33,6 +33,7 @@ angular.module('listnride', [
   'veletage-integration',
   'brompton-integration',
   'bonvelo-integration',
+  'motoparilla-integration',
   'muli-integration',
   'mcbw',
   'pushnpost',
@@ -43,6 +44,7 @@ angular.module('listnride', [
   'coffeespin',
   'depart',
   'invest',
+  'supercrossMunich',
   'seoLanding',
   /* external modules */
   'ngMaterial',

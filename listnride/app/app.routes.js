@@ -42,12 +42,6 @@
       });
 
       $stateProvider.state({
-        name: 'seo-landing',
-        url: '/rent-ebikes-berlin',
-        template: '<seo-landing></seo-landing>'
-      });
-
-      $stateProvider.state({
         name: 'search',
         url: '/search/{location}?size&allterrain&race&city&kids&ebikes&special',
         template: '<search></search>',
@@ -220,6 +214,24 @@
               .then(function (translations) {
                 ngMeta.setTitle(translations["events.velothon-bikerental.meta-title"]);
                 ngMeta.setTag("description", translations["events.velothon-bikerental.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'supercrossMunich',
+        url: '/supercross-munich',
+        template: '<supercross-munich></supercross-munich>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.supercross-munich.meta-title", "events.supercross-munich.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.supercross-munich.meta-title"]);
+                ngMeta.setTag("description", translations["events.supercross-munich.meta-description"]);
               })
           }
         },
@@ -524,6 +536,24 @@
       });
 
       $stateProvider.state({
+        name: 'shopLanding',
+        url: '/bikeshop',
+        templateUrl: 'app/modules/static/shop-landing.template.html',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["shop-landing.meta-title", "shop-landing.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["shop-landing.meta-title"]);
+                ngMeta.setTag("description", translations["shop-landing.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'ampler',
         url: '/rent-ampler-bikes',
         template: '<ampler></ampler>',
@@ -587,6 +617,24 @@
               .then(function (translations) {
                   ngMeta.setTitle(translations["brand-integration.bonvelo.meta-title"]);
                   ngMeta.setTag("description", translations["brand-integration.bonvelo.meta-description"]);
+                })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'motoparilla',
+        url: '/rent-motoparilla-bikes',
+        template: '<motoparilla></motoparilla>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["brand-integration.motoparilla.meta-title", "brand-integration.motoparilla.meta-description"])
+              .then(function (translations) {
+                  ngMeta.setTitle(translations["brand-integration.motoparilla.meta-title"]);
+                  ngMeta.setTag("description", translations["brand-integration.motoparilla.meta-description"]);
                 })
           }
         },
@@ -754,6 +802,12 @@
             'prerender-status-code': '404'
           }
         }
+      });
+
+      $stateProvider.state({
+        name: 'seo-landing',
+        url: '/rent-{seoPage: string}',
+        template: '<seo-landing></seo-landing>'
       });
 
       $urlRouterProvider.otherwise(function ($injector) {

@@ -93,6 +93,7 @@
     "tac": "Allgemeinen Geschäftsbedingungen",
     "booking-accept-tac": "Durch Buchen bestätige ich die",
     "already-booked": "Bereits Gebucht",
+    "for-shops": "Für Fahrradläden",
     "contact-us": "Bitte kontaktiere uns via "
   },
 
@@ -239,7 +240,7 @@
     "reject": "Ablehnen",
     "rate": "Bewerten",
     "confirm": "Bestätigen",
-    "confirm_return": "Rückgabe Bestätigen und Bewerten"
+    "confirm_return": "Rückgabe Bestätigen"
   },
 
   "listChat": {
@@ -503,7 +504,28 @@
       "public-location" : "Die große Freiheit"
     }
   },
-
+  "shop-landing": {
+    "meta-title": "listnride Shop Plugin - Online Fahrräder vermieten",
+    "meta-description": "Mit dem listnride Plugin kannst du einfach deine Leihräder/Testräder in deine Online Präsenz integrieren und anbieten.",
+    "title": "Vermiete deine Leihräder direkt über deine Website",
+    "subtitle": "Mit dem listnride Plugin kannst du einfach deine Leihräder/Testräder in deine Online Präsenz integrieren und anbieten.",
+    "description": "Einfach vermieten! Kunden wählen auf deiner Website ihren Wunschzeitraum aus, bezahlen bequem online und holen das Rad ab. Die komplette Logistik, wie Bezahlung, Rechnung und Verfügbarkeit bleibt bei listnride.",
+    "feature-1": {
+      "title": "Verleih mehr Räder",
+      "description": "Mit unserem Plugin sehen deine Kunden sofort welche Räder du anbietest, wann sie verfügbar sind und was sie kosten. Die komplette Buchungsabwicklung passiert umkompliziert online und mit nur wenigen Klicks!"
+    },
+    "feature-2": {
+      "title": "Keine Programmierkentnisse nötig",
+      "description": "Um unser Plugin zu nutzen musst du kein Programmierer sein. Wartung und Updates übernehmen wir im Hintergrund. Zu dem bleiben die Räder immer auf den aktuellen Stand. Stellst du neue Räder auf listnride ein, sind sie im gleichen Moment auch auf deiner Website zu sehen."
+    },
+    "feature-3": {
+      "title": "Mehr Zeit für dein Geschäft",
+      "description": "Mit unserem System übernehmen wir alle wichtigen Aspekte der Vermietung für dich. Vorbei ist die Zeit in der du dich mit Papierkram herumschlagen musst. Wir kümmern uns um die Bezahlung, die Verwaltug der Räder und die Rechnungslegung. Zu dem bieten wir dir ein übersichtliches Dashboard, über das du beqeum die Übersicht behältst."
+    },
+    "join-now": "Mach mit. Das Plugin ist kostenlos.",
+    "join-now-description": "Willst du mehr erfahren?",
+    "contact-us": "Kontaktiere Uns"
+  },
   "rent-a-bike": {
     "meta-title": "Fahrrad mieten über listnride!",
     "meta-description": "Grandiose Auswahl. Top Preis-Leistungsverhältnis. Einfach online.",
@@ -851,6 +873,12 @@
         "text-1": "Um gemeinsam auf dem Rennrad eine schöne Zeit zu verbringen, laden Schicke Mütze  und wir euch ein, das Düsseldorfer Umland mit uns während der Cycling World zu erkunden. Raus aus Düsseldorf, geht es Richtung Raketenstation Hombroich, wo wir uns kurz mit Snacks und Getränken erfrischen werden um dann die Tour frisch gestärkt fortzusetzen bis wir wieder am Messegelände ankommen.<br><br>Falls du kein Rennrad dein eigen nennst, oder sich die Anreise mit dem Fahrrad nicht lohnt, wir haben Rennräder von Cervélo und Ridley zur Verfügung die du dir ganz einfach und kostenfrei für die Ausfahrt leihen kannst.",
         "text-2": "<b>Start:</b> 26.03, 10:00 Uhr, Abfahrt 10:30 Uhr vom listnride Stand (O-1)<br><br><b>Distanz:</b> ca. 75km<br><br><b>Geschwindigkeit:</b> 25-28 kmh, moderat<br><br><b>Verpflegungspause:</b> Café at Rocketstation Hombroich mit Getränken und Snacks<br><br><b>Voraussetzungen:</b> Rennrad, Helm, Klickschuhe"
       }
+    },
+    "supercross-munich": {
+      "meta-title": "Miete dir das perfekte Cyclocross Bike für den Supercross München bei listnride",
+      "meta-description": "Fahre den Supercross München auf dem Cyclocross Bike deiner Träume! Wähle BMC, Votec, Ridley, SRAM, Specialized, Bianchi, Pasculli, Focus und anderen Marken.",
+      "title": "Miete das perfekte Cyclocross Bike für den Supercross München",
+      "text": "Die listnride Community bietet dir die passenden Cyclocross Bikes für den Supercross München. Leihe dir ein Bike für das Rennen einen der Cross Social Rides oder um an den Cyclocross Workshops teilzunehmen.<br><br>Scrolle durch das Angebot und klicke auf ein Inserat, um es zu öffnen. Um mehr darüber zu erfahren, lies die Beschreibung und prüfe die verfügbare Ausstattung. Über den Buchungskalender kannst du dann das gewünschte Rad buchen."
     }
   },
 
