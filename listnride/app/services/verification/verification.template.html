@@ -68,7 +68,10 @@
               <p class="md-headline lnr-center">
                 {{ verificationDialog.business ? 'verification.2.business-title' : 'verification.2.title' | translate }}
               </p>
-              <div class="label label-public">public</div>
+              <div class="label label-public">
+                <md-tooltip md-direction="top">{{ 'verification.public-tip' | translate }}</md-tooltip>
+                {{ 'verification.public' | translate }}
+              </div>
             </div>
 
             <p class="md-body-1 lnr-center" ng-class="verificationDialog.mobileScreen ? '' : 'md-body-desktop'">
@@ -121,7 +124,10 @@
             </div>
             <div layout="row" layout-align="center center" hide-xs >
               <p class="md-headline lnr-center">{{ 'verification.3.title' | translate }}</p>
-              <div class="label label-public">public</div>
+              <div class="label label-public">
+                <md-tooltip md-direction="top">{{ 'verification.public-tip' | translate }}</md-tooltip>
+                {{ 'verification.public' | translate }}
+              </div>
             </div>
             <div layout="row" layout-align="center center" ng-class="verificationDialog.mobileScreen ? 'verif-textarea-mobile' : 'verif-textarea-desktop'">
               <md-input-container>
@@ -173,7 +179,10 @@
               </div>
               <div layout="row" layout-align="center center" hide-xs >
                 <p class="md-headline lnr-center">{{ 'verification.5.title' | translate }}</p>
-                <div class="label label-private">private</div>
+                <div class="label label-private">
+                  <md-tooltip md-direction="top">{{ 'verification.private-tip' | translate }}</md-tooltip>
+                  {{ 'verification.private' | translate }}
+                </div>
               </div>
 
               <p class="md-body-1 lnr-center" ng-class="verificationDialog.mobileScreen ? '' : 'md-body-desktop'">
@@ -228,7 +237,10 @@
             </div>
             <div layout="row" layout-align="center center" hide-xs >
               <p class="md-headline lnr-center">{{ 'verification.6.title' | translate }}</p>
-              <div class="label label-private">private</div>
+              <div class="label label-private">
+                <md-tooltip md-direction="top">{{ 'verification.private-tip' | translate }}</md-tooltip>
+                {{ 'verification.private' | translate }}
+              </div>
             </div>
 
             <form
@@ -321,7 +333,10 @@
             </div>
             <div layout="row" layout-align="center center" hide-xs >
               <p class="md-headline lnr-center">{{ 'verification.7.title' | translate }}</p>
-              <div class="label label-private">private</div>
+              <div class="label label-private">
+                <md-tooltip md-direction="top">{{ 'verification.private-tip' | translate }}</md-tooltip>
+                {{ 'verification.private' | translate }}
+              </div>
             </div>
 
             <form
