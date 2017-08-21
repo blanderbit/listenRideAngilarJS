@@ -42,12 +42,6 @@
       });
 
       $stateProvider.state({
-        name: 'seo-landing',
-        url: '/rent-ebikes-berlin',
-        template: '<seo-landing></seo-landing>'
-      });
-
-      $stateProvider.state({
         name: 'search',
         url: '/search/{location}?size&allterrain&race&city&kids&ebikes&special',
         template: '<search></search>',
@@ -631,6 +625,24 @@
         }
       });
 
+      $stateProvider.state({
+        name: 'motoparilla',
+        url: '/rent-motoparilla-bikes',
+        template: '<motoparilla></motoparilla>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["brand-integration.motoparilla.meta-title", "brand-integration.motoparilla.meta-description"])
+              .then(function (translations) {
+                  ngMeta.setTitle(translations["brand-integration.motoparilla.meta-title"]);
+                  ngMeta.setTag("description", translations["brand-integration.motoparilla.meta-description"]);
+                })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
       // TODO: The following state is redundant and only a hotfix for a wrong PR email
       $stateProvider.state({
         name: 'ampler2',
@@ -790,6 +802,12 @@
             'prerender-status-code': '404'
           }
         }
+      });
+
+      $stateProvider.state({
+        name: 'seo-landing',
+        url: '/rent-{seoPage: string}',
+        template: '<seo-landing></seo-landing>'
       });
 
       $urlRouterProvider.otherwise(function ($injector) {

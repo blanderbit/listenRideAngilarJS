@@ -33,6 +33,7 @@ angular.module('listnride', [
   'veletage-integration',
   'brompton-integration',
   'bonvelo-integration',
+  'motoparilla-integration',
   'muli-integration',
   'mcbw',
   'pushnpost',
