@@ -3,18 +3,15 @@
 angular.module('seoLanding',[]).component('seoLanding', {
   templateUrl: 'app/modules/seo-landing/seo-landing.template.html',
   controllerAs: 'seoLanding',
-  controller: ['$translate', '$stateParams', '$http', 'api',
-    function SeoLandingController($translate, $stateParams, $http, api) {
+  controller: ['$translate', '$stateParams', '$state', '$http', 'api',
+    function SeoLandingController($translate, $stateParams, $state, $http, api) {
 
       var seoLanding = this;
       seoLanding.bikes = {};
 
-      var params = determineParams()
-      var url = api.getApiUrl() + "/seopages?city=" + params.city + "&category_id=" + params.category_id;
-
       $http({
         method: 'GET',
-        url: 'app/assets/json/rent-' + $stateParams.pageTitle + '-de.json',
+        url: 'app/assets/json/' + $stateParams.pageTitle + ".json",
         responseType: "json"
       }).then(
         function (success) {
@@ -30,7 +27,7 @@ angular.module('seoLanding',[]).component('seoLanding', {
           );
         },
         function (error) {
-          console.log(error.data);
+          $state.go('404');
         }
       );
 

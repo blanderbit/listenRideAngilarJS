@@ -39,7 +39,7 @@
       "description": "Here's some more of our community's favourites."
     },
     "selection": {
-      "title": "See our full selection of mountain bikes for rent here: ",
+      "title": "See our <a target=\"_blank\" href=\"/search/Vienna?allterrain=true\">full selection of mountain bikes for rent here:</a>",
       "description": "The listnride bike sharing community has a large selection of high-end mountain bikes available for you to rent. Here you’ll find mountain bikes from brands like Trek, Cube, Ghost, Stevens and Mondraker, along with many others.\nA nice long ride can be the perfect way to discover Vienna and its surroundings, but it can be tricky to find a mountain bike that suits your needs. Furthermore, travelling with your beloved mountain bike can be risky and stressful. So don’t worry about it -- simply join the listnride community and rent the perfect bike here!"
     },
     "related": {

@@ -39,7 +39,7 @@
       "description": "Here's some more of our community's favourites."
     },
     "selection": {
-      "title": "See our full selection of bikes for rent in Amsterdam here: ",
+      "title": "See our <a target=\"_blank\" href=\"/search/Amsterdam?city=true\">full selection of bikes for rent in Amsterdam here:</a>",
       "description": "The listnride bike sharing community has a large selection of bikes available for you to rent. Here you’ll find bikes from brands like Gazelle, Batavus, Bakfiets.nl, Cortina and Urbanarrow, along with many others. The bikes are available in de Jordaan, de Pijp, and all across Amsterdam.\nA nice long ride can be the perfect way to explore Amsterdam, but it can be tricky to find a bike that suits your needs. Furthermore, travelling with your beloved bike can be risky and stressful. So don’t worry about it -- simply join the listnride community and rent the perfect bike here!"
     },
     "related": {

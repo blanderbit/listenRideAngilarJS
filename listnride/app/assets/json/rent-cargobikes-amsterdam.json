@@ -39,7 +39,7 @@
       "description": "Here's some more of our community's favourites."
     },
     "selection": {
-      "title": "See our full selection of cargo bikes for rent in Amsterdam here: ",
+      "title": "See our <a target=\"_blank\" href=\"/search/Amsterdam?special=true\">full selection of cargo bikes for rent in Amsterdam here:</a>",
       "description": "The listnride bike sharing community has a large selection of high-end cargo bikes available for you to rent. Here you’ll find cargo bikes from brands like Gazelle, Johnny Loco, bakfiets.nl and Urbanarrow, along with many others. The bikes are available in de Jordaan, de Pijp, and all across Amsterdam.\nA cargo bike can be the perfect vehicle for running errands while you explore Amsterdam, but it can be tricky to find a bike that suits the needs of you and your family. That's why we're here -- simply join the listnride community and rent the perfect bike!"
     },
     "related": {
