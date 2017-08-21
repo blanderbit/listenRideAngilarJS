@@ -143,3 +143,17 @@
 .lnr-verification-modal .verif-buttons button{
     width: 145px;
 }
+
+/* iPhone 5*/
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+    .lnr-verification-modal .md-button {
+        font-size: 12px;
+    }
+
+    body {
+        font-size: 13px;
+    }
+}
