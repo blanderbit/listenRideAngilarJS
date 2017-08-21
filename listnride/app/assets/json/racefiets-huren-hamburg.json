@@ -1,0 +1,54 @@
+{
+  "id": 1,
+  "city": "Hamburg",
+  "category_id": "",
+  "bikes": {
+    "featured": [
+      1177,
+      1163,
+      1153,
+      1264
+    ],
+    "more": [
+      1170,
+      1162,
+      1256,
+      1152
+    ],
+    "related": [
+      1054,
+      1053,
+      983,
+      1054
+    ]
+  },
+  "header_image": {
+    "image_url": ""
+  },
+  "texts": {
+    "main": {
+      "title": "Huur een racefiets in Hamburg",
+      "description": "Hier vind je de grootste selectie racefietsen in Hamburg. Huur ze voor een halve dag, dag of week! meld je eenvoudig aan bij listnride en boek je fiets vandaag!"
+    },
+    "featured": {
+      "title": "Onze paradepaardjes ",
+      "description": "Dit zijn de populairste racefietsen te huur. Boek je fiets nu!"
+    },
+    "more": {
+      "title": "Meer racefietsen",
+      "description": "DIt zijn nog meer favorieten van onze deelgemeenschap"
+    },
+    "selection": {
+      "title": "Kijk hier voor alle racefietsen te huur in Hamburg  ",
+      "description": "Onze deelgemeenschap biedt een grote keuze aan high-end racefietsen voor jou te huren. Hier vind je racefietsen van merken zoals Cervelo, Specialized, Cannondale en Canyon als ook vele andere merken. De racefietsen zijn te huur in Hamburg centrum, Sankt Pauli, Schanzenviertel en in andere delen van Hamburg. Een mooie toertocht is de perfecte manier om Hamburg en omgeving te ontdekken, echter is het vaak lastig een passende racefiets te vinden. Ook is het meenemen van je eigen racefiets een riskante en moeizame operatie. Dus maak je geen zorgen! – meld je aan bij de listnride community en huur eenvoudig de perfekte racefiets hier!"
+    },
+    "related": {
+      "title": "Andere mensen in Hamburg hebben ook deze elektrische fietsen gehuurd ",
+      "description": "We hebben ook een super aanbod aan hoogwaardige elektrische fietsen en Pedelecs"
+    }
+  },
+  "meta_data": {
+    "title": "Huur een racefiets in Hamburg",
+    "description": "Huur de perfekte racefiets - listnride heeft Hamburg's grootste aanbod racefietsen. Meld je aan en boek je fiets vandaag!"
+  }
+}

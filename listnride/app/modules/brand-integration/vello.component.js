@@ -3,11 +3,9 @@
 angular.module('vello-integration',[]).component('vello', {
   templateUrl: 'app/modules/brand-integration/vello.template.html',
   controllerAs: 'vello',
-  controller: [ '$translate', '$analytics', 'api', 'ngMeta',
-    function VelloController($translate, $analytics, api, ngMeta) {
+  controller: [ '$translate', 'api', 'ngMeta',
+    function VelloController($translate, api, ngMeta) {
       var vello = this;
-      $analytics.eventTrack('ViewContent', {  category: 'Brand Page', label: 'Vello'});
-
       ngMeta.setTitle($translate.instant("brand-integration.vello.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.vello.meta-descr"));
 

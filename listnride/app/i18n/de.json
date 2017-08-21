@@ -94,7 +94,8 @@
     "booking-accept-tac": "Durch Buchen bestätige ich die",
     "already-booked": "Bereits Gebucht",
     "for-shops": "Für Fahrradläden",
-    "contact-us": "Bitte kontaktiere uns via "
+    "contact-us": "Bitte kontaktiere uns via ",
+    "required": "Dies ist erforderlich"
   },
 
   "toasts": {
@@ -121,6 +122,7 @@
     "profile": "Profil",
     "account": "Account",
     "availability": "Verfügbarkeit",
+    "business": "Business",
     "from": "From",
     "to": "To",
     "mark-as-closed": "Marked all days as closed",
@@ -146,12 +148,19 @@
     "current-vouchers": "Dein aktuelles Guthaben beträgt",
     "add-voucher": "Gutschein hinzufügen",
     "meta-title": "Profileinstellungen",
-    "meta-description": "Ändere deine Profil- und Zahlungsdaten."
+    "meta-description": "Ändere deine Profil- und Zahlungsdaten.",
+    "company-name":"Unternehmensname",
+    "company-information":"Unternehmensinformationen",
+    "vat":"VAT"
   },
 
   "verification": {
     "verify-profile": "Verifiziere dein Profil",
     "resend-email": "Email erneut senden",
+    "public": "Öfftl.",
+    "private": "Privat",
+    "private-tip": "Diese Informationen sind nicht öffentlich einsehbar",
+    "public-tip": "Diese Informationen sind für jeden sichtbar auf deiner Profilseite",
     "1": {
       "text1": "Willkommen bei listnride!",
       "text-invited": "Du wurdest von einem Freund eingeladen, dein Account hat daher automatisch einen Gutschein bekommen, der bei der ersten Fahrt eingelöst wird.",
@@ -159,27 +168,33 @@
       "text3": "Deshalb bitten wir dich, dein Profil in ein paar einfach Schritten zu verifizieren. Umso besser die eingegebenen Informationen sind, umso höher die Chance auf erfolgreiche Vermietungen."
     },
     "2": {
-      "description": "Lade ein Profilbild von Dir hoch! Für andere Nutzer ist es äußerst wichtig zu sehen, wer sich hinter einem Profil verbirgt."
+      "title": "Lade ein Profilbild hoch",
+      "description": "Lade ein Profilbild von Dir hoch! Für andere Nutzer ist es äußerst wichtig zu sehen, wer sich hinter einem Profil verbirgt.",
+      "business-description": "Mit deinem Logo auf listnride erhöhst du die Chance auf viele Anfragen",
+      "business-title": "Lade dein Geschäftslogo hoch"
     },
     "3": {
-      "description": "Schreib ein paar Zeilen über Dich und das Fahrradfahren und bring so mehr Leben in Dein Profil!",
-      "label": "Beschreibung (min. 100 Buchstaben)"
+      "title": "Erzähle etwas über dich"
     },
     "4": {
       "description": "Bestätige Deine E-Mail-Adresse, indem Du auf den Link in der Bestätigungsmail klickst, die wir Dir nach der Registrierung schicken. Falls Du sie nicht mehr findest, kannst Du die Mail erneut anfordern. Erscheint sie nicht sofort in Deinem Postfach, warte bitte noch ein paar Minuten oder überprüfe deinen Spam-Ordner.",
       "email-verified": "Email-Adresse erfolgreich verifiziert"
     },
     "5": {
+      "title": "Was ist deine nummer",
       "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst.",
       "enter-valid-phone-nr": "Bitte gib eine valide Telefonnummer an",
       "send-confirmation-sms": "Bestätigungs-SMS schicken",
-      "resend-confirmation-sms": "SMS erneut schicken",
-      "sms-verification-code": "SMS-Verifizierungs-Code",
+      "resend-confirmation-sms": "Erneut schicken",
+      "sms-verification-code": "Verifizierungs-Code",
       "confirm-code": "Code Bestätigen",
       "phone-nr-verified": "Deine Nummer wurde erfolgreich verifiziert!"
     },
     "6": {
-      "description": "Gib zu guter Letzt noch Deine Wohnanschrift ein."
+      "title": "Was ist deine Adresse"
+    },
+    "7": {
+      "title": "Unternehmensinformationen"
     }
   },
 
@@ -308,7 +323,20 @@
     "zip": "PLZ",
     "city": "Stadt",
     "country": "Land",
-    "update-contact": "Kontakt aktualisieren"
+    "company-name": "Company name",
+    "update-contact": "Kontakt aktualisieren",
+    "errors": {
+      "password-length": "Das Passwort sollte min. 6 Zeichen lang sein",
+      "password-missing": "Bitte gib ein Passwort an",
+      "valid-email": "Bitte gib eine gültige Email-Adresse an",
+      "empty-email": "Bitte gib deine Email-Adresse an",
+      "empty-last-name": "Bitte gib deinen Nachnamen an",
+      "empty-first-name": "Bitte gib deinen Vornamen an",
+      "max-size-last-name": "Der Nachname sollte maximal 30 Buchstaben lang sein",
+      "max-size-first-name": "Der Vorname sollte maximal 20 Buchstaben lang sein",
+      "empty-company-name": "Please enter your company name",
+      "min-size-company-name": "Company name should be longer than 2 characters "
+    }
   },
 
   "autocomplete": {
@@ -1202,5 +1230,9 @@
     "faq-answer-7": "Wir werden euer investiertes Geld für zwei primäre Zwecke einsetzen: Um unser Wachstum zu finanzieren und neue Nutzer, vornehmlich in den vorhandenen Märkten, zu gewinnen. Unsere Community kann mit höheren Nutzerzahlen den Mietern eine größere Auswahl, und Vermietern eine höhere Nachfrage bieten, was den Service für alle attraktiver macht. Um unsere Plattform stetig durch neue Funktionen zu verbessern die das Miet-Erlebnis so einfach und effizient wie möglich macht. Intergration einer Versicherung und neue mobile Apps sind dabei die größten Milestones.",
     "faq-question-8": "WEITERE FRAGEN?",
     "faq-answer-8": "Wir freuen uns über dein Interesse. Wenn du weitere Fragen hast, kontaktiere uns einfach unter <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a> und wir werden uns schnellstmöglich melden."
+  },
+
+  "seo": {
+    "cities-title": "Du planst zu reisen? Schau dir mehr Städte an:"
   }
 }

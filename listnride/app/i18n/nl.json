@@ -94,7 +94,8 @@
     "booking-accept-tac": "Bij het bevestigen van de boeking accepteer ik de",
     "already-booked": "al geboekt",
     "for-shops": "For Bikeshops",
-    "contact-us": "Neem contact met ons op per "
+    "contact-us": "Neem contact met ons op per ",
+    "required": "Dit is verplicht"
   },
 
   "toasts": {
@@ -121,6 +122,7 @@
     "invite": "Vrienden uitnodigen",
     "account": "Account",
     "availability": "Openingstijden",
+    "business": "Business",
     "from": "From",
     "to": "To",
     "mark-as-closed": "Marked all days as closed",
@@ -146,12 +148,19 @@
     "current-vouchers": "Je aktuele tegoedsaldo bedraagt",
     "add-voucher": "Voucher inwisselen",
     "meta-title": "Profiel instellingen",
-    "meta-description": "Pas je profiel- en of betaalgegevens aan"
+    "meta-description": "Pas je profiel- en of betaalgegevens aan",
+    "company-name":"Bedrijfsnaam",
+    "company-information":"Bedrijfsgegevens",
+    "vat":"VAT"
   },
 
   "verification": {
     "verify-profile": "Voltooi je profiel",
     "resend-email": "Stuur e-mail opnieuw",
+    "public": "Publiek",
+    "private": "Privé",
+    "private-tip": "Deze informatie is niet zichbaar voor het publiek",
+    "public-tip": "Deze informatie is openlijk zichtbaar op je profielpagina",
     "1": {
       "text1": "Welkom bij listnride!",
       "text-invited": "Aangezien je door een vriend bent uitgenodigd, hebben we voucher van 10€ aan je account toegevoegd. Deze kan je direct bij je eerste fietshuur verzilveren.",
@@ -159,27 +168,33 @@
       "text3": "We vragen je daarom, je profiel in een paar stappen te voltooien. Hoe beter en volledig je profielbeschrijving, des te groter de kans op aanvragen en successvolle verhuur."
     },
     "2": {
-      "description": "Voeg een pasfoto toe, het is zeer belangrijk een persoonlijk beeld bij een profiel te hebben."
+      "title": "Foto toevoegen",
+      "description": "Voeg een pasfoto toe, het is zeer belangrijk een persoonlijk beeld bij een profiel te hebben.",
+      "business-description": "Met een duidelijk logo ontvang je meer vertrouwen en aanvragen",
+      "business-title": "Logo toevoegen"
     },
     "3": {
-      "description": "Schrijf ein paar regels tekst over jezelf en wat fietsen voor je betekent of iets anders interessants voor je profiel!",
-      "label": "omschrijving (min. 100 tekens)"
+      "title": "Vertel iets over jezelf / je winkel"
     },
     "4": {
       "description": "Bevestig je emailadres, door op de aktiveringslink te klicken in de toegestuurde bevestigingsmail. Deze heb je direkt na je aanmelding ontvangen. Indien je deze mail niet meer kan vinden, kan je de mail nogmaals aanvragen. Verschijnt de mail niet direct in je postvak, wacht dan nog een paar minuten of check de spamfolder.",
       "email-verified": "emailadres met succes geverifieerd"
     },
     "5": {
+      "title": "Wat is je telefoonnummer",
       "description": "Bevestig je telefoonnummer, zodat we je per SMS kunnen informeren als er een nieuwe aanvraag voor je is. Voer uw telefoonnummer in en klik op \"Bevestiging versturen\". Je ontvangt dan een sms met een code die je hieronder kunt invoeren.",
       "enter-valid-phone-nr": "Voer een geldig telefoonnummer in",
-      "send-confirmation-sms": "Bevestigings-SMS versturen",
-      "resend-confirmation-sms": "Nogmaals sms-bevestiging versturen",
+      "send-confirmation-sms": "Bevestigings versturen",
+      "resend-confirmation-sms": "Bevestiging versturen",
       "sms-verification-code": "SMS-Verificatie-Code",
       "confirm-code": "Code Bevestigen",
       "phone-nr-verified": "Je telefoonnummer is met succes geverifieerd!"
     },
     "6": {
-      "description": "Geef als laatste uw adres aan."
+      "title": "Wat is je adres"
+    },
+    "7": {
+      "title": "Bedrijfsgegevens"
     }
   },
 
@@ -308,7 +323,20 @@
     "zip": "Postcode",
     "city": "Plaats",
     "country": "Land",
-    "update-contact": "Contactgegevens wijzigen"
+    "company-name": "Company name",
+    "update-contact": "Contactgegevens wijzigen",
+    "errors": {
+      "password-length": "Wachtwoord dient minimaal 6 karakters lang te zijn",
+      "password-missing": "Wachtwoord aanmaken",
+      "valid-email": "Vul een geldig emailadres in",
+      "empty-email": "Vul uw emailadres in",
+      "empty-last-name": "Vul uw achternaam in",
+      "empty-first-name": "Vul uw voornaam in",
+      "max-size-last-name": "Achternaam mag maximaal 30 karakters lang zijn",
+      "max-size-first-name": "Voornaam mag maximaal 20 karakters lang zijn",
+      "empty-company-name": "Please enter your company name",
+      "min-size-company-name": "Company name should be longer than 2 characters "
+    }
   },
 
   "autocomplete": {
@@ -1197,5 +1225,9 @@
     "faq-answer-7": "We will use your invested money for two primary purposes: To finance our growth and win new users, especially in our existing markets / cities. Our community, with higher user numbers, can offer riders a wider choice, and provide higher demand to listers, making the service more appealing overall. To improve our platform steadily through new features that make the rental experience as easy and efficient as possible. Integrating an insurance product and new mobile apps are the biggest milestones set.",
     "faq-question-8": "FURTHER QUESTIONS?",
     "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
+  },
+
+  "seo": {
+    "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden"
   }
 }

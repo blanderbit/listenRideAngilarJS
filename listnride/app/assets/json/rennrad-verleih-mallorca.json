@@ -1,0 +1,54 @@
+{
+  "id": 1,
+  "city": "Mallorca",
+  "category_id": "",
+  "bikes": {
+    "featured": [
+      584,
+      884,
+      881,
+      879
+    ],
+    "more": [
+      779,
+      773,
+      770,
+      573
+    ],
+    "related": [
+      887,
+      792,
+      685,
+      602
+    ]
+  },
+  "header_image": {
+    "image_url": ""
+  },
+  "texts": {
+    "main": {
+      "title": "Miete ein Rennrad auf Mallorca",
+      "description": "Wir haben Mallorca's größte Auswahl für Rennräder. Miete dir dein Wunschrad für einen halben Tag, einen ganzen Tag oder so lange Du möchtest! Melde dich an, tritt der listnride Community bei und buche dein Rennrad direkt online."
+    },
+    "featured": {
+      "title": "Top Rennräder",
+      "description": "Das sind die beliebtesten Rennräder. Miete deins jetzt!"
+    },
+    "more": {
+      "title": "Mehr Rennräder",
+      "description": "Mehr Favoriten der Community"
+    },
+    "selection": {
+      "title": "Klicke hier für alle verfügbaren Rennräder ",
+      "description": "Die listnride Bike Sharing Community bietet Dir eine große Auwahl an hochwertigen Rennrädern zum mieten an. Hier findest du Rennräder von bekannten Herstellern wie Cervelo, Spezialiced, Cannondale, Canyon uvm. Die Rennräder sind auf der gesamten Insel verteilt und daurch einfach zu erreichen.\nEgal ob Palma, Alcudia oder Petra - alle Orte sind optimal um mit dem Rennrad erkundet zu werden. Jedoch besteht immer die Gefahr das die Reise mit Rennrad unglücklich verläuft und es Schaden nimmt. Vermeide Risiko und Stress - Tritt der Bike Sharing Community mit deiner Anmeldung bei und miete dir das perfekte Rennrad online!"
+    },
+    "related": {
+      "title": "Leute auf Mallorca mieten ebenfalls Mountain Bikes ",
+      "description": "Wir haben außerdem eine große Auswahl hochwertiger Mountain Bikes und Cyclocross Räder für dich."
+    }
+  },
+  "meta_data": {
+    "title": "Miete ein Rennrad auf Mallorca",
+    "description": "Miete dir das perfekte Rennrad - listnride hat Mallorca's größte Auswahl für Rennräder. Einfach anmelden, Rennrad auswählen und direkt online buchen!"
+  }
+}

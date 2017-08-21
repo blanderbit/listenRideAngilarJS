@@ -1,13 +1,16 @@
-<a ui-sref="bike({bikeId: bikeCard.bike.id})" ng-attr-target="{{ bikeCard.isPhoneScreen ? '_self' : '_blank' }}" analytics-on analytics-event="click" analytics-label="{{ bikeCard.bike.id }}" analytics-category="featured bikes" analytics-value="8">
+<a ui-sref="bike({bikeId: bikeCard.bike.id})" ng-attr-target="{{ bikeCard.isPhoneScreen ? '_self' : '_blank' }}">
   <md-card class="lnr-bike-card" ng-class="{'lnr-unavailable': bikeCard.booked}">
     <div class="bg lnr-preload-bg"></div>
     <img class="md-card-image" ng-src="{{bikeCard.bike.image_file_1.image_file_1.medium.url}}" alt="{{ ::bikeCard.bike.brand }} - {{ ::bikeCard.bike.name }}">
     <div class="after" ng-if="bikeCard.booked"><div>{{ 'shared.already-booked' | translate }}</div></div>
     <md-card-title layout="row">
-      <md-icon flex="15" ng-if="::bikeCard.bike.category" class="lnr-icn-lrg md-color-foreground" md-svg-src="app/assets/ui_icons/biketype_{{ ::bikeCard.bike.category | limitTo: 1 }}.svg"></md-icon>
+      <div flex="20" layout-align="start center" ng-if="::bikeCard.showIcon">
+        <md-icon class="lnr-icn-lrg md-color-foreground" md-svg-src="app/assets/ui_icons/biketype_{{ ::bikeCard.bike.category | limitTo: 1 }}.svg"></md-icon>
+      </div>
 
       <md-card-title-text flex="65" class="lnr-margin-left lnr-bike-title" layout="column" layout-align="space-around start">
-        <span class="md-subhead">{{ ::bikeCard.bike.brand }}, {{ ::bikeCard.bike.category | category }}</span>
+        <span class="md-subhead" style="width: 200px">{{ ::bikeCard.bike.brand }}</span>
+        <!-- <span class="md-subhead">{{ ::bikeCard.bike.brand }}</span> -->
         <span ng-if="!bikeCard.home">{{ ::bikeCard.bike.name }}</span>
         <span ng-if="bikeCard.home">in {{ ::bikeCard.bike.city }}</span>
       </md-card-title-text>

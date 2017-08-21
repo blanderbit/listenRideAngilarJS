@@ -2,9 +2,8 @@
 
 angular.
   module('listnride').
-  factory('verification', ['$mdDialog', '$mdToast','$q', '$interval', '$localStorage', '$state', '$translate', 'api', 'Upload',
-    function($mdDialog, $mdToast, $q, $interval, $localStorage, $state, $translate, api, Upload) {
-
+  factory('verification', ['$mdDialog', '$mdToast','$q', '$interval', '$localStorage', '$state', '$translate', '$mdMedia', '$analytics', 'api', 'Upload',
+    function($mdDialog, $mdToast, $q, $interval, $localStorage, $state, $translate, $mdMedia, $analytics, api, Upload) {
       var VerificationDialogController = function(lister, invited, callback) {
         var verificationDialog = this;
         var poller = $interval(function() {
@@ -24,8 +23,10 @@ angular.
         verificationDialog.croppedDataUrl = false;
         verificationDialog.validateObj = {size: {max: '20MB'}};
         verificationDialog.invalidFiles = {};
+        verificationDialog.mobileScreen = $mdMedia('xs');
+        verificationDialog.business = false;
 
-        $state.current.name == "home" ? verificationDialog.firstTime = true : verificationDialog.firstTime = false;
+        $state.current.name === "home" ? verificationDialog.firstTime = true : verificationDialog.firstTime = false;
         // Fires if scope gets destroyed and cancels poller
         verificationDialog.$onDestroy = function() {
           $interval.cancel(poller);
@@ -41,6 +42,7 @@ angular.
                 }
               }
               verificationDialog.user = success.data;
+              verificationDialog.business = success.data.has_business;
               verificationDialog.loaded = true;
             },
             function (error) {
@@ -93,7 +95,7 @@ angular.
         };
 
         var uploadAddress = function() {
-          var data = {
+          var address = {
             "user": {
               "street": verificationDialog.newUser.street, 
               "zip": verificationDialog.newUser.zip,
@@ -101,8 +103,35 @@ angular.
               "country": verificationDialog.newUser.country
             }
           };
-          api.put('/users/' + $localStorage.userId, data).then(
+
+          api.put('/users/' + $localStorage.userId, address).then(
             function (success) {
+              if (!verificationDialog.business) {
+                $mdToast.show(
+                  $mdToast.simple()
+                    .textContent('Congratulations, your profile was successfully verified!')
+                    .hideDelay(4000)
+                    .position('top center')
+                );
+              }
+            },
+            function (error) {
+
+            }
+          );
+        };
+
+        var uploadCompany = function() {
+          var business = {
+            'business': {
+              'vat': verificationDialog.newUser.vat
+            }
+          };
+
+          api.put('/businesses/' + verificationDialog.user.business.id, business).then(
+            function (success) {
+              if (callback) {callback()}
+              $mdDialog.hide();
               $mdToast.show(
                 $mdToast.simple()
                 .textContent('Congratulations, your profile was successfully verified!')
@@ -111,7 +140,12 @@ angular.
               );
             },
             function (error) {
-
+              $mdToast.show(
+                $mdToast.simple()
+                  .textContent(error.data.errors[0].detail)
+                  .hideDelay(4000)
+                  .position('top center')
+              );
             }
           );
         };
@@ -181,7 +215,8 @@ angular.
             case 3: uploadDescription(); verificationDialog.selectedIndex += 1; break;
             case 4: verificationDialog.selectedIndex += 1; break;
             case 5: verificationDialog.selectedIndex += 1; break;
-            case 6: uploadAddress(); if (callback) {callback()}; $mdDialog.hide(); break;
+            case 6: uploadAddress(); showUploadCompany(); break;
+            case 7: uploadCompany(); break;
           }
         };
 
@@ -193,6 +228,16 @@ angular.
             case 4: return verificationDialog.user.status == 0
             case 5: return !verificationDialog.user.confirmed_phone;
             case 6: return !verificationDialog.addressForm.$valid;
+            case 7: return !verificationDialog.companyForm.$valid;
+          }
+        };
+
+        var showUploadCompany = function() {
+          if (verificationDialog.business) {
+            verificationDialog.selectedIndex += 1
+          } else {
+            if (callback) { callback() }
+            $mdDialog.hide();
           }
         };
 
@@ -291,6 +336,7 @@ angular.
             );
             // resolve the promise
             deferred.resolve(success);
+            $analytics.eventTrack('Sign Up', {  category: 'Profile Verified', label: 'Phone Number Verified'});
           },
           // reject api: error
           function (error) {
@@ -312,6 +358,6 @@ angular.
         openDialog: openDialog,
         sendSms: sendSms,
         confirmPhone: confirmPhone
-      }
+      };
     }
   ]);

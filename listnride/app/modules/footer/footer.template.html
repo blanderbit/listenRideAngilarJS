@@ -26,10 +26,7 @@
               <a
                 class="lnr-link"
                 ui-sref="howItWorks"
-                analytics-on
-                analytics-category="How it Works"
-                analytics-event="Learn More"
-                analytics-label="How it Works">
+              >
                 {{ 'shared.how-it-works' | translate }}
               </a>
             </md-list-item>
@@ -37,10 +34,7 @@
               <a
                 class="lnr-link"
                 ui-sref="rentingABike"
-                analytics-on
-                analytics-category="Renting a Bike"
-                analytics-event="Learn More"
-                analytics-label="Renting a Bike">
+              >
                 {{ 'shared.renting-a-bike' | translate }}
               </a>
             </md-list-item>
@@ -48,10 +42,7 @@
               <a
                 class="lnr-link"
                 ui-sref="listingABike"
-                analytics-on
-                analytics-category="Listing a Bike"
-                analytics-event="Learn More"
-                analytics-label="Listing a Bike">
+              >
                 {{ 'shared.listing-a-bike' | translate }}
               </a>
             </md-list-item>
@@ -81,10 +72,7 @@
               <a
                 class="lnr-link"
                 ui-sref="about"
-                analytics-on
-                analytics-category="About"
-                analytics-event="Learn More"
-                analytics-label="About">
+              >
                 {{ 'footer.about' | translate }}
               </a>
             </md-list-item>
@@ -92,10 +80,7 @@
               <a
                 class="lnr-link"
                 ui-sref="press"
-                analytics-on
-                analytics-category="Press"
-                analytics-event="Learn More"
-                analytics-label="Press">
+              >
                 {{ 'footer.press' | translate }}
               </a>
             </md-list-item>
@@ -103,10 +88,7 @@
               <a
                 class="lnr-link"
                 ui-sref="jobs-list"
-                analytics-on
-                analytics-category="Jobs"
-                analytics-event="Learn More"
-                analytics-label="Jobs">
+              >
                 {{ 'footer.jobs' | translate }}
               </a>
             </md-list-item>
@@ -114,10 +96,7 @@
               <a
                 class="lnr-link"
                 ui-sref="invite"
-                analytics-on
-                analytics-category="Invite friends"
-                analytics-event="Learn More"
-                analytics-label="Invite friends">
+              >
                 {{ 'settings.invite' | translate }}
               </a>
             </md-list-item>
@@ -125,10 +104,7 @@
               <a
                 class="lnr-link"
                 ui-sref="help"
-                analytics-on
-                analytics-category="Contact & Support"
-                analytics-event="Learn More"
-                analytics-label="Contact & Support">
+              >
                 {{ 'shared.contact' | translate }}
               </a>
             </md-list-item>
@@ -162,13 +138,13 @@
               <md-button class="lnr-btn-lang md-lined md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">{{ footer.language }}</md-button>
               <md-menu-content width="2">
                 <md-menu-item>
-                  <md-button md-no-ink ng-click="footer.switchLanguage('de')" analytics-on analytics-category="language " analytics-event="click" analytics-label="de">Deutsch</md-button>
+                  <md-button md-no-ink ng-click="footer.switchLanguage('de')">Deutsch</md-button>
                 </md-menu-item>
                 <md-menu-item>
-                  <md-button md-no-ink ng-click="footer.switchLanguage('en')" analytics-on analytics-category="language " analytics-event="click" analytics-label="en">English</md-button>
+                  <md-button md-no-ink ng-click="footer.switchLanguage('en')">English</md-button>
                 </md-menu-item>
                 <md-menu-item>
-                  <md-button md-no-ink ng-click="footer.switchLanguage('nl')" analytics-on analytics-category="language " analytics-event="click" analytics-label="nl">Nederlands</md-button>
+                  <md-button md-no-ink ng-click="footer.switchLanguage('nl')">Nederlands</md-button>
                 </md-menu-item>
               </md-menu-content>
             </md-menu>
@@ -187,7 +163,7 @@
     <md-divider></md-divider>
 
     <div layout="row" layout-align="space-between center" layout-padding>
-      <div>© {{footer.year}} List and Ride GmbH. <a class="lnr-link lnr-underline" ui-sref="imprint" analytics-on analytics-category="bottomnav link" analytics-event="click" analytics-label="imprint">{{ 'footer.imprint' | translate }}</a></div>
+      <div>© {{footer.year}} List and Ride GmbH. <a class="lnr-link lnr-underline" ui-sref="imprint">{{ 'footer.imprint' | translate }}</a></div>
       <div layout="row" layout-align="space-between stretch" layout-padding>
         <a class="lnr-link" href="https://www.facebook.com/listnride" target="_blank">
           <md-icon class="lnr-icn-md md-color-white" md-svg-src="app/assets/ui_icons/icn_facebook.svg"></md-icon>

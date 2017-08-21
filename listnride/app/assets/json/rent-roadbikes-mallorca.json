@@ -1,0 +1,54 @@
+{
+  "id": 1,
+  "city": "Mallorca",
+  "category_id": "",
+  "bikes": {
+    "featured": [
+      584,
+      884,
+      881,
+      879
+    ],
+    "more": [
+      779,
+      773,
+      770,
+      573
+    ],
+    "related": [
+      887,
+      792,
+      685,
+      602
+    ]
+  },
+  "header_image": {
+    "image_url": ""
+  },
+  "texts": {
+    "main": {
+      "title": "Rent a Road Bike in Mallorca",
+      "description": "We’ve got Mallorca's biggest selection of road and racing bikes for rent. Rent one for a half day, full day, or even a week! Simply join the listnride community and book yours today."
+    },
+    "featured": {
+      "title": "Featured Road Bikes",
+      "description": "These are our most popular road bikes for rent. Book yours now!"
+    },
+    "more": {
+      "title": "More Road and Racing Bikes",
+      "description": "Here's some more of our community's favourites."
+    },
+    "selection": {
+      "title": "See our full selection of Road and Racing bikes for rent here: ",
+      "description": "The listnride bike sharing community has a large selection of high-end road bikes available for you to rent. Here you’ll find road bikes from brands like Cervelo, Specialized, Cannondale and Canyon, along with many others. The bikes are available in Palma, Alcudia, Can Picafort, and all across Mallorca.\nA nice long ride can be the perfect way to explore Mallorca or get your training miles in, but it can be tricky to find a road bike that suits your needs. Furthermore, travelling with your beloved road bike can be risky and stressful. So don’t worry about it -- simply join the listnride community and rent the perfect bike here!"
+    },
+    "related": {
+      "title": "People in Mallorca also rented Mountain Bikes ",
+      "description": "We've got a great selection of mountain bikes and cross bikes available for you."
+    }
+  },
+  "meta_data": {
+    "title": "Rent a Road Bike in Mallorca",
+    "description": "Rent the perfect road bike in Mallorca. listnride has Mallorca's biggest selection of road bikes available for rent. Sign up and book yours today!"
+  }
+}

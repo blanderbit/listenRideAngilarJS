@@ -7,17 +7,17 @@ angular.
     function(Base64, $http, $localStorage, $mdDialog, $mdToast, $window, $state, $q, $translate, $analytics, ezfb, api, verification, sha256){
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
-      var setCredentials = function (email, password, id, profilePicture, firstName, lastName, unreadMessages, referenceCode) {
-        var encoded = Base64.encode(email + ":" + password);
+      var setCredentials = function (response) {
+        var encoded = Base64.encode(response.email + ":" + response.password_hashed);
         // Sets the Basic Auth String for the Authorization Header 
         $localStorage.auth = 'Basic ' + encoded;
-        $localStorage.userId = id;
-        $localStorage.name = firstName + " " + lastName;
-        $localStorage.firstName = firstName;
-        $localStorage.profilePicture = profilePicture;
-        $localStorage.unreadMessages = unreadMessages;
-        $localStorage.email = email;
-        $localStorage.referenceCode = referenceCode;
+        $localStorage.userId = response.id;
+        $localStorage.name = response.first_name + " " + response.last_name;
+        $localStorage.firstName = response.first_name;
+        $localStorage.profilePicture = response.profile_picture.profile_picture.url;
+        $localStorage.unreadMessages = response.unread_messages;
+        $localStorage.email = response.email;
+        $localStorage.referenceCode = response.ref_code;
       };
 
       // TODO: This is a duplicate of app.module.js
@@ -40,6 +40,9 @@ angular.
         var signupDialog = this;
 
         signupDialog.signingUp = false;
+        signupDialog.business = false;
+        signupDialog.businessError = false;
+        var invited = !!inviteCode;
 
         var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName) {
           var user = {
@@ -54,14 +57,11 @@ angular.
               "language": retrieveLocale()
             }
           };
-          var invited = false;
-          if (inviteCode) {
-            invited = true;
-          }
+
           api.post("/users", user).then(function(success) {
-            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages, success.data.ref_code);
+            setCredentials(success.data);
             verification.openDialog(false, invited, false, signupDialog.showProfile);
-            $analytics.eventTrack('Sign Up', {  category: 'Facebook Sign-Up', label: 'Sign-Up'});
+            $analytics.eventTrack('Sign Up', {  category: 'Facebook Sign-Up', label: 'Quick Sign-Up Complete'});
           }, function(error) {
             showSignupError();
           });
@@ -80,7 +80,24 @@ angular.
           $mdDialog.hide();
         };
 
+        signupDialog.setBusiness = function() {
+          signupDialog.business = true;
+        };
+
+        signupDialog.showLogin = function() {
+          $mdDialog.hide();
+          showLoginDialog();
+        };
+
         signupDialog.signup = function() {
+          if (signupDialog.businessError && signupDialog.business) {
+            signupDialog.createBusiness();
+          } else {
+            signupDialog.createUser();
+          }
+        };
+
+        signupDialog.createUser = function() {
           var user = {
             'user': {
               'email': signupDialog.email,
@@ -91,19 +108,38 @@ angular.
               'language': retrieveLocale()
             }
           };
+
           signupDialog.signingUp = true;
-          var invited = false;
-          if (inviteCode) {
-            invited = true;
-          }
+
           api.post('/users', user).then(function(success) {
-            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages, success.data.ref_code);
-            $state.go('home');
-            verification.openDialog(false, invited, false, signupDialog.showProfile);
-            $analytics.eventTrack('Sign Up', {  category: 'Non-FB Sign-Up', label: 'Sign-Up'});
+            setCredentials(success.data);
+            if (signupDialog.business) {
+              signupDialog.createBusiness();
+            } else {
+              $state.go('home');
+              verification.openDialog(false, invited);
+            }
           }, function(error) {
             showSignupError();
             signupDialog.signingUp = false;
+          });
+        };
+
+        signupDialog.createBusiness = function() {
+          var business = {
+            'business': {
+              'company_name': signupDialog.companyName
+            }
+          };
+
+          api.post('/businesses', business).then(function(success) {
+            $state.go('home');
+            verification.openDialog(false, invited, false, signupDialog.showProfile);
+            $analytics.eventTrack('Sign Up', {  category: 'Non-FB Sign-Up', label: 'Quick Sign-Up Complete'});
+          }, function(error) {
+            signupDialog.businessError = true;
+            signupDialog.signingUp = false;
+            showSignupError();
           });
         };
 
@@ -161,9 +197,8 @@ angular.
             }
           };
           api.post('/users/login', user).then(function(response) {
-            setCredentials(response.data.email, response.data.password_hashed, response.data.id, response.data.profile_picture.profile_picture.url, response.data.first_name, response.data.last_name, response.data.unread_messages, response.data.ref_code);
+            setCredentials(response.data);
             showLoginSuccess();
-            $analytics.eventTrack('Login', {  category: 'Facebook Login', label: 'Login'});
             if (!response.data.has_address || !response.data.confirmed_phone || response.data.status === 0) {
               verification.openDialog(false);
             }
@@ -184,9 +219,8 @@ angular.
             }
           };
           api.post('/users/login', user).then(function(success) {
-            setCredentials(success.data.email, success.data.password_hashed, success.data.id, success.data.profile_picture.profile_picture.url, success.data.first_name, success.data.last_name, success.data.unread_messages, success.data.ref_code);
+            setCredentials(success.data);
             showLoginSuccess();
-            $analytics.eventTrack('Login', {  category: 'Non-FB Login', label: 'Login'});
             if (!success.data.has_address || !success.data.confirmed_phone || success.data.status === 0) {
               verification.openDialog(false);
             }

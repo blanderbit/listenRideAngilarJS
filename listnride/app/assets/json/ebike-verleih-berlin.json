@@ -1,0 +1,54 @@
+{
+  "id": 1,
+  "city": "Berlin",
+  "category_id": "",
+  "bikes": {
+    "featured": [
+      428,
+      1052,
+      427,
+      962
+    ],
+    "more": [
+      896,
+      165,
+      925,
+      666
+    ],
+    "related": [
+      935,
+      1161,
+      922,
+      1047
+    ]
+  },
+  "header_image": {
+    "image_url": ""
+  },
+  "texts": {
+    "main": {
+      "title": "Miete Dir ein E-Bike in Berlin",
+      "description": "Hier findest du die größte Auswahl an E-Bikes und Pedelecs in Berlin. Miete den halben oder ganzen Tag oder einfach so lange du möchtest! Einfach kurz und einfach anmelden und heute noch online buchen. "
+    },
+    "featured": {
+      "title": "Top E-Bikes",
+      "description": "Das sind die beliebtesten E-Bikes. Miete deins jetzt!"
+    },
+    "more": {
+      "title": "Mehr E-Bikes und Pedelecs",
+      "description": "Mehr Favoriten der Community"
+    },
+    "selection": {
+      "title": "Alle E-Bikes und Pedelecs zum Mieten ",
+      "description": "E-Bikes können die einfachste Lösung zum täglichen bestreiten des Arbeitsweges sein. Jedoch fällt die Entscheidung zum Kauf häufig schwer ohne vorher einmal drauf gesessen zu haben. Mit Hilfe unserer Bike Sharing Community können wir Dir genau das bieten! Dank der großen Auswahl hast du die Möglichkeit verschiedene E-Bikes und Pedelecs zu testen sowie miteinander zu vergleichen. E-Bikes und Pedelecs eignen sich zusätzlich hervorragend dazu Berlin zu erkunden und kennenzulernen. Ohne Anstrengung kommt man ruckzuck vom Brandenburger Tor bis zum Tempelhofer Feld, kann dort ein paar Runden drehen und andere Empfehlungen mühelos besuchen. Die listnride Community bietet E-Bikes und Pedelecs von großen Herstellern wie Ampler, Gazelle, Coboc, Cortina, Haibike, Smart, GoCycle und Vello an! \nEinfach schnell anmelden und direkt online mieten!"
+    },
+    "related": {
+      "title": "Leute in Berlin mieten ebenfalls Rennräder  ",
+      "description": "Wir haben außerdem eine große Auswahl hochwertiger Rennräder für dich."
+    }
+  },
+  "meta_data": {
+    "title": "E-Bike Mieten in Berlin - Buche deine Testfahrt",
+    "description": "Miete dir ein E-Bike! Sei es zum Testen oder um zum See zu fahren - listnride hat Berlins größte Auswahl an E-Bikes und Pedelecs. Einfach kurz anmelden und direkt online buchen!"
+  }
+}

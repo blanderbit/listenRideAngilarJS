@@ -17,12 +17,13 @@ angular.module('requests', []).component('requests', {
     '$stateParams',
     '$translate',
     '$mdToast',
+    '$analytics',
     'date',
     'accessControl',
     function RequestsController($localStorage, $interval, $filter,
       $mdMedia, $mdDialog, $window, api,
       $timeout, $location, $anchorScroll,
-      $state, $stateParams, $translate, $mdToast, date,
+      $state, $stateParams, $translate, $mdToast, $analytics, date,
       accessControl) {
       if (accessControl.requireLogin()) {
         return;
@@ -223,6 +224,7 @@ angular.module('requests', []).component('requests', {
               // Lister has already a payout method, so simply accept the request
               requests.loadingChat = true;
               updateStatus(3, true);
+              $analytics.eventTrack('Rent Bike', {  category: 'Request Received ', label: 'Accept'});
             } else {
               // Lister has no payout method yet, so show the payout method dialog
               showPayoutDialog(success.data);

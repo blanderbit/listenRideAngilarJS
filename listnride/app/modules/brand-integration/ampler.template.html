@@ -123,7 +123,7 @@
           <div ng-repeat="testimonial in ampler.testimonials"
             class="testimonials-slick-slide" layout="column" layout-align="center center">
             <div class="testimonials-text md-subhead">&ldquo;{{ testimonial.text }}&rdquo;</div>
-              <a ui-sref="user({userId: testimonial.userId})" analytics-on analytics-category="testimonial" analytics-event="click" analytics-label="{{   testimonial.userName }}">
+              <a ui-sref="user({userId: testimonial.userId})">
                 <img class="testimonials-img" ng-src="{{ testimonial.userImagePath}}">
               </a>
             <h3 class="md-subhead testimonials-name">{{ testimonial.userName }}</h3>

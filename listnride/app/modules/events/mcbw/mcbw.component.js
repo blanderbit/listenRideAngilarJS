@@ -3,10 +3,9 @@
 angular.module('mcbw',[]).component('mcbw', {
   templateUrl: 'app/modules/events/mcbw/mcbw.template.html',
   controllerAs: 'mcbw',
-  controller: ['$analytics', 'api',
-    function AmplerController($analytics, api) {
+  controller: ['api',
+    function AmplerController(api) {
       var mcbw = this;
-      $analytics.eventTrack('ViewContent', {  category: 'Event Page', label: 'Mcbw'});
 
       mcbw.bikes1 = [];
       mcbw.bikes2 = [];

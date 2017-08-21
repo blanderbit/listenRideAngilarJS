@@ -1,0 +1,54 @@
+{
+  "id": 1,
+  "city": "Mallorca",
+  "category_id": "",
+  "bikes": {
+    "featured": [
+      887,
+      792,
+      685,
+      602
+    ],
+    "more": [
+      555,
+      599,
+      889,
+      781
+    ],
+    "related": [
+      584,
+      884,
+      881,
+      879
+    ]
+  },
+  "header_image": {
+    "image_url": ""
+  },
+  "texts": {
+    "main": {
+      "title": "Huur een mountainbike in Mallorca",
+      "description": "Hier vind je de grootste selectie mountainbikes in Mallorca. Huur ze voor een halve dag, dag of week! meld je eenvoudig aan bij listnride en boek je fiets vandaag!"
+    },
+    "featured": {
+      "title": "Meer mountainbikes en crossfietsen",
+      "description": "Dit zijn de populairste mountainbikes te huur. Boek je fiets nu!"
+    },
+    "more": {
+      "title": "Meer mountainbikes en crossfietsen",
+      "description": "DIt zijn nog meer favorieten van onze deelgemeenschap"
+    },
+    "selection": {
+      "title": "Kijk hier voor alle mountainbikes te huur in Mallorca  ",
+      "description": "Onze deelgemeenschap biedt een grote keuze aan high-end mountainbikes voor jou te huren. Hier vind je mountainbikes van merken zoals Trek, Cube, Ghost, Stevens en Mondraker als ook vele andere merken. De mountainbikes zijn te huur in Palma, Alcudia, Can Picafort en in andere delen van Mallorca Een mooie toertocht is de perfecte manier om Mallorca en omgeving te ontdekken, echter is het vaak lastig een passende mountainbike te vinden. Ook is het meenemen van je eigen mountainbike een riskante en moeizame operatie. Dus maak je geen zorgen! – meld je aan bij de listnride community en huur eenvoudig de perfekte mountainbike hier!"
+    },
+    "related": {
+      "title": "Andere mensen in Mallorca hebben ook deze racefietsen gehuurd ",
+      "description": "We hebben ook een super aanbod aan hoogwaardige racefietsen voor je"
+    }
+  },
+  "meta_data": {
+    "title": "Huur een mountainbike in Mallorca",
+    "description": "Huur de perfekte mountainbike - listnride heeft Mallorca's grootste aanbod mountainbikes. Meld je aan en boek je fiets vandaag!"
+  }
+}
