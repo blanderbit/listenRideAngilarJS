@@ -156,6 +156,10 @@
   "verification": {
     "verify-profile": "Verifiziere dein Profil",
     "resend-email": "Email erneut senden",
+    "public": "Öffentlich",
+    "private": "Privat",
+    "private-tip": "Diese Informationen sind nicht öffentlich einsehbar",
+    "public-tip": "Diese Informationen sind für jeden sichtbar auf deiner Profilseite",
     "1": {
       "text1": "Willkommen bei listnride!",
       "text-invited": "Du wurdest von einem Freund eingeladen, dein Account hat daher automatisch einen Gutschein bekommen, der bei der ersten Fahrt eingelöst wird.",
