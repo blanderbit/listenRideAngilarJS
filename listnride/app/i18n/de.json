@@ -176,11 +176,12 @@
       "email-verified": "Email-Adresse erfolgreich verifiziert"
     },
     "5": {
+      "title": "Was ist deine nummer",
       "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst.",
       "enter-valid-phone-nr": "Bitte gib eine valide Telefonnummer an",
       "send-confirmation-sms": "Bestätigungs-SMS schicken",
-      "resend-confirmation-sms": "SMS erneut schicken",
-      "sms-verification-code": "SMS-Verifizierungs-Code",
+      "resend-confirmation-sms": "Erneut schicken",
+      "sms-verification-code": "Verifizierungs-Code",
       "confirm-code": "Code Bestätigen",
       "phone-nr-verified": "Deine Nummer wurde erfolgreich verifiziert!"
     },

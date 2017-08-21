@@ -176,10 +176,11 @@
       "email-verified": "emailadres met succes geverifieerd"
     },
     "5": {
+      "title": "Wat is je telefoonnummer",
       "description": "Bevestig je telefoonnummer, zodat we je per SMS kunnen informeren als er een nieuwe aanvraag voor je is. Voer uw telefoonnummer in en klik op \"Bevestiging versturen\". Je ontvangt dan een sms met een code die je hieronder kunt invoeren.",
       "enter-valid-phone-nr": "Voer een geldig telefoonnummer in",
-      "send-confirmation-sms": "Bevestigings-SMS versturen",
-      "resend-confirmation-sms": "Nogmaals sms-bevestiging versturen",
+      "send-confirmation-sms": "Bevestigings versturen",
+      "resend-confirmation-sms": "Bevestiging versturen",
       "sms-verification-code": "SMS-Verificatie-Code",
       "confirm-code": "Code Bevestigen",
       "phone-nr-verified": "Je telefoonnummer is met succes geverifieerd!"
