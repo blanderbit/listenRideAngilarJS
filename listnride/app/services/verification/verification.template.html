@@ -167,6 +167,15 @@
 
         <md-tab label="⬤" layout="row" ng-if="!verificationDialog.newUser.confirmed_phone" md-on-select="verificationDialog.activeTab = 5" ng-disabled="true">
             <div class="tab-content" layout="column">
+              <div layout="column" layout-align="center center" hide show-xs>
+                <div class="label label-private">private</div>
+                <p class="md-headline">{{ 'verification.5.title' | translate }}</p>
+              </div>
+              <div layout="row" layout-align="center center" hide-xs >
+                <p class="md-headline lnr-center">{{ 'verification.5.title' | translate }}</p>
+                <div class="label label-private">private</div>
+              </div>
+
               <p class="md-body-1 lnr-center" ng-class="verificationDialog.mobileScreen ? '' : 'md-body-desktop'">
                 {{ 'verification.5.description' | translate }}
               </p>
