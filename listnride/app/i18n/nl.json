@@ -156,6 +156,10 @@
   "verification": {
     "verify-profile": "Voltooi je profiel",
     "resend-email": "Stuur e-mail opnieuw",
+    "public": "Publiek",
+    "private": "Privé",
+    "private-tip": "Deze informatie is niet zichbaar voor het publiek",
+    "public-tip": "Deze informatie is openlijk zichtbaar op je profielpagina",
     "1": {
       "text1": "Welkom bij listnride!",
       "text-invited": "Aangezien je door een vriend bent uitgenodigd, hebben we voucher van 10€ aan je account toegevoegd. Deze kan je direct bij je eerste fietshuur verzilveren.",
