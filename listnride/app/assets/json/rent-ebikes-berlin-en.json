@@ -1,0 +1,51 @@
+{
+  "id": 1,
+  "city": "Berlin",
+  "category_id": "",
+  "bikes": {
+    "featured": [
+      428,
+      1052,
+      427,
+      962
+    ],
+    "more": [
+      896,
+      165,
+      925,
+      666
+    ],
+    "related": [
+
+    ]
+  },
+  "header_image": {
+    "image_url": ""
+  },
+  "texts": {
+    "main": {
+      "title": "Rent an E-Bike in Berlin",
+      "description": "We’ve got Berlin’s biggest selection of e-bikes and pedelecs for rent. Test one for a half day, full day, or even a week! Simply join the listnride community and book yours today."
+    },
+    "featured": {
+      "title": "Featured E-Bikes",
+      "description": "These are our most popular e-bikes for rent. Book yours now!"
+    },
+    "more": {
+      "title": "More E-Bikes and Pedelecs",
+      "description": "Here's some more of our community's favourites."
+    },
+    "selection": {
+      "title": "See our full selection of E-Bikes and Pedelecs for rent here: ",
+      "description": "E-Bikes can be the perfect option for the urban commuter. But for some, it’s simply too imprudent to make a significant investment without trying it out first. That’s where the listnride bike sharing community can help. With our selection of e-bikes and pedelecs for rent, you can test various models before you buy.\nE-Bikes are also great for renting while visiting Berlin. You can cover a lot more ground in a day - with a lot less effort - on an e-bike. \nOur community offers e-bikes and pedelecs from leading brands such as Ampler, Gazelle, Coboc, Cortina, Haibike, Smart, GoCycle, and Vello! Rent one today - they're available in Mitte near Alexanderplatz, in Prenzlauerberg, Kreuzberg, and throughout the city! \n"
+    },
+    "related": {
+      "title": "People in Berlin also rented Road Bikes ",
+      "description": "We've got a great selection of high end road bikes available for you."
+    }
+  },
+  "meta_data": {
+    "title": "E-Bike Rentals in Berlin - Book a Test Ride",
+    "description": "Test ride an E-Bike or Pedelec. Berlin’s biggest selection of e-bikes and pedelecs available for rent on listnride.com. Sign up and book yours today!"
+  }
+}
