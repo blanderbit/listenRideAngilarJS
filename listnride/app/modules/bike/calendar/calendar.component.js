@@ -385,7 +385,7 @@ angular.module('bike').component('calendar', {
           // The local timezone-dependent dates get converted into neutral,
           // non-timezone utc dates, preserving the actually selected date values
           var startDate_utc = new Date(
-            Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDay(), startDate.getHours())
+            Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours())
           );
           var endDate_utc = new Date(
             Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDay(), endDate.getHours())
