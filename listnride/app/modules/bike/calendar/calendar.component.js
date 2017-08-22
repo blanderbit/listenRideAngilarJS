@@ -388,7 +388,7 @@ angular.module('bike').component('calendar', {
             Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours())
           );
           var endDate_utc = new Date(
-            Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDay(), endDate.getHours())
+            Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), endDate.getHours())
           );
 
           var data = {
