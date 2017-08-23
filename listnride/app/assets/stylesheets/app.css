@@ -1811,3 +1811,12 @@ invite .voucher-link {
 seo-landing .lnr-section-title {
   margin-bottom: 0;
 }
+
+/*-----------------------------------------------------------------------------------*/
+/*  EVENTS
+/*-----------------------------------------------------------------------------------*/
+
+.constance-spin .lnr-section-title .event-logo{
+  width: 150px;
+  margin-top: 15px;
+}
