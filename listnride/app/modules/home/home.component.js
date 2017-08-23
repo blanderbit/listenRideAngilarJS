@@ -24,16 +24,18 @@ angular.module('home',[]).component('home', {
         api.get('/users/' + $stateParams.userId + '/confirm/' + $stateParams.confirmationCode).then(
           function (success) {
             $mdDialog.show(
-              .clickOutsideToClose(true)
-              .title('Confirmation successful')
-              .textContent('Great, you\'ve successfully confirmed your email address!')
-              .ok('Ok')
-              // .targetEvent(ev)
+              $mdDialog.alert()
+                .parent(angular.element(document.body))
+                .clickOutsideToClose(true)
+                .title('Confirmation successful')
+                .textContent('Great, you\'ve successfully confirmed your email address!')
+                .ariaLabel('Confirmation Successful')
+                .ok('Ok')
             );
           },
           function (error) {
             $mdDialog.show(
-              $mdDialog.show()
+              $mdDialog.alert()
                 .clickOutsideToClose(true)
                 .title('Confirmation was not successful')
                 .textContent('The confirmation code seems to be wrong, please reach out to our customer support.')
