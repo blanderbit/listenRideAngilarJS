@@ -17,9 +17,7 @@ angular.module('home',[]).component('home', {
           parent: angular.element(document.body),
           targetEvent: window.event,
           openFrom: angular.element(document.body),
-          closeTo: angular.element(document.body),
-          clickOutsideToClose: false,
-          escapeToClose: false
+          closeTo: angular.element(document.body)
         });
         api.get('/users/' + $stateParams.userId + '/confirm/' + $stateParams.confirmationCode).then(
           function (success) {
