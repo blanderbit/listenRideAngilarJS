@@ -280,7 +280,7 @@
         meta: {
           disableUpdate: true
         }
-      })
+      });
 
       $stateProvider.state({
         name: 'crossride',
