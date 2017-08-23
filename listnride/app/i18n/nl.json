@@ -314,6 +314,8 @@
     "log-out": "Uitloggen",
     "sign-up": "Aanmelden",
     "sign-up-with-facebook": "Met facebook aanmelden",
+    "member-already": "Al geregistreerd?",
+    "business": "Fietswinkel?",
     "description": "Beschrijving",
     "description_min_100": "Beschrijvingstekst moet min. 100 tekens lang zijn",
     "address": "Adres",

@@ -114,9 +114,9 @@
             {{ 'forms.sign-up' | translate }}
           </md-button>
         </div>
-        <div class="sign-up-links" flex layout="row" layout-align="space-around center">
-          <a class="lnr-link" ng-click="signupDialog.showLogin()">Member already?</a>
-          <a class="lnr-link" ng-click="signupDialog.setBusiness()">Business?</a>
+        <div class="sign-up-links" flex layout="row" layout-align="space-between center">
+          <a class="lnr-link" ng-click="signupDialog.showLogin()">{{ 'forms.member-already' | translate }}</a>
+          <a class="lnr-link" ng-click="signupDialog.setBusiness()">{{ 'forms.business' | translate }}</a>
         </div>
       </div>
     </md-dialog-content>
