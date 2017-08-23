@@ -24,11 +24,11 @@ angular.module('home',[]).component('home', {
         api.get('/users/' + $stateParams.userId + '/confirm/' + $stateParams.confirmationCode).then(
           function (success) {
             $mdDialog.show(
-              $mdDialog.show()
-                .title('Confirmation successful')
-                .textContent('Great, you\'ve successfully confirmed your email address!')
-                .ok('Ok')
-                // .targetEvent(ev)
+              .clickOutsideToClose(true)
+              .title('Confirmation successful')
+              .textContent('Great, you\'ve successfully confirmed your email address!')
+              .ok('Ok')
+              // .targetEvent(ev)
             );
           },
           function (error) {
