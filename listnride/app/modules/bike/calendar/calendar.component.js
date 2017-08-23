@@ -326,13 +326,12 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.isOptionEnabled = function($index, date) {
-        if (date === undefined) {
-          return true
-        } else if (moment().startOf('day').isSame(moment(date).startOf('day'))){ // Date today chosen
-          return $index + 6 >= moment().hour() + 1;
-        } else if (!openingHoursAvailable()) {
-          return true
-        }
+        if (date === undefined) { return true }
+
+        var isDateToday = moment().startOf('day').isSame(moment(date).startOf('day'));
+        // Date today chosen
+        if (isDateToday) { return $index + 6 >= moment().hour() + 1; }
+        if (!openingHoursAvailable()) { return true }
         var weekDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(date)];
         if (weekDay !== null) {
           var workingHours = openHours(weekDay);
@@ -542,8 +541,13 @@ angular.module('bike').component('calendar', {
         }
         // If date today
         if (moment(calendar.startDate).isSame(moment(), 'day')) {
-          calendar.startTime = moment().add(1, 'hours').hour();
-          calendar.startDate = moment(calendar.startDate).hour(calendar.startTime)._d;
+          var hour_now = moment().add(1, 'hours').hour();
+          if (hour_now < 6) { hour_now = 6 }
+          if (hour_now < calendar.startTime && openingHoursAvailable()) {
+            hour_now = calendar.startTime
+          }
+          calendar.startTime = hour_now;
+          calendar.startDate = moment(calendar.startDate).hour(hour_now)._d;
         }
       }
 
@@ -571,7 +575,7 @@ angular.module('bike').component('calendar', {
 
       function openingHoursAvailable() {
         return calendar.bikeOwner &&
-          calendar.bikeOwner.opening_hours &&
+          !!calendar.bikeOwner.opening_hours &&
           calendar.bikeOwner.opening_hours.enabled &&
           _.some(calendar.bikeOwner.opening_hours.hours, Array)
       }
