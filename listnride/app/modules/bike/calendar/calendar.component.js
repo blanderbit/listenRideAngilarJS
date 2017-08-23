@@ -578,9 +578,9 @@ angular.module('bike').component('calendar', {
 
       function isReserved(date) {
         for (var i = 0; i < calendar.requests.length; ++i) {
-          var start = new Date(calendar.requests[i].start_date);
+          var start = new Date(calendar.requests[i].start_date_tz);
           start.setHours(0,0,0,0);
-          var end = new Date(calendar.requests[i].end_date);
+          var end = new Date(calendar.requests[i].end_date_tz);
           end.setHours(0,0,0,0);
 
           if (start.getTime() <= date.getTime()
