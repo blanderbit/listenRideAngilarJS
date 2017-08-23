@@ -379,11 +379,23 @@ angular.module('bike').component('calendar', {
         bookingDialog.hide = hideDialog;
 
         bookingDialog.book = function () {
+          var startDate = calendar.startDate;
+          var endDate = calendar.endDate;
+
+          // The local timezone-dependent dates get converted into neutral,
+          // non-timezone utc dates, preserving the actually selected date values
+          var startDate_utc = new Date(
+            Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours())
+          );
+          var endDate_utc = new Date(
+            Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), endDate.getHours())
+          );
+
           var data = {
             user_id: $localStorage.userId,
             ride_id: calendar.bikeId,
-            start_date: calendar.startDate.toISOString(),
-            end_date: calendar.endDate.toISOString()
+            start_date: startDate_utc.toISOString(),
+            end_date: endDate_utc.toISOString()
           };
 
           api.post('/requests', data).then(
@@ -566,9 +578,9 @@ angular.module('bike').component('calendar', {
 
       function isReserved(date) {
         for (var i = 0; i < calendar.requests.length; ++i) {
-          var start = new Date(calendar.requests[i].start_date);
+          var start = new Date(calendar.requests[i].start_date_tz);
           start.setHours(0,0,0,0);
-          var end = new Date(calendar.requests[i].end_date);
+          var end = new Date(calendar.requests[i].end_date_tz);
           end.setHours(0,0,0,0);
 
           if (start.getTime() <= date.getTime()
