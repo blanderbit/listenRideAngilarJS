@@ -181,7 +181,7 @@
       "email-verified": "Email-Adresse erfolgreich verifiziert"
     },
     "5": {
-      "title": "Was ist deine nummer",
+      "title": "Was ist deine Nummer",
       "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst.",
       "enter-valid-phone-nr": "Bitte gib eine valide Telefonnummer an",
       "send-confirmation-sms": "Bestätigungs-SMS schicken",
