@@ -336,7 +336,7 @@ angular.
             );
             // resolve the promise
             deferred.resolve(success);
-            $analytics.eventTrack('Sign Up', {  category: 'Profile Verified', label: 'Phone Number Verified'});
+            $analytics.eventTrack('Profile Verified', {  category: 'Sign Up', label: 'Phone Number Verified'});
           },
           // reject api: error
           function (error) {

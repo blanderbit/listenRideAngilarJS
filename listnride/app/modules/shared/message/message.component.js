@@ -69,7 +69,7 @@ angular.module('message',[]).component('message', {
         api.put("/requests/" + message.request.id, data).then(
           function(success) {
             if (statusId === 8) {
-              $analytics.eventTrack('Rent Bike', {  category: 'Request Received ', label: 'Reject'});
+              $analytics.eventTrack('Request Received', {  category: 'Rent Bike', label: 'Reject'});
             }
           },
           function(error) {
