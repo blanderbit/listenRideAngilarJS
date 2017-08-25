@@ -224,7 +224,7 @@ angular.module('requests', []).component('requests', {
               // Lister has already a payout method, so simply accept the request
               requests.loadingChat = true;
               updateStatus(3, true);
-              $analytics.eventTrack('Rent Bike', {  category: 'Request Received ', label: 'Accept'});
+              $analytics.eventTrack('Request Received', {  category: 'Rent Bike', label: 'Accept'});
             } else {
               // Lister has no payout method yet, so show the payout method dialog
               showPayoutDialog(success.data);

@@ -6,7 +6,7 @@ angular.module('motoparilla-integration',[]).component('motoparilla', {
   controller: [ '$translate', '$analytics', 'api', 'ngMeta',
     function MotoparillaController($translate, $analytics, api, ngMeta) {
       var motoparilla = this;
-      $analytics.eventTrack('ViewContent', {  category: 'Brand Page', label: 'Motoparilla'});
+      $analytics.eventTrack('Brand Page', {  category: 'ViewContent', label: 'Motoparilla'});
 
       ngMeta.setTitle($translate.instant("brand-integration.motoparilla.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.motoparilla.meta-description"));
