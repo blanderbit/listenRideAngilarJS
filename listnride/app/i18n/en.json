@@ -96,7 +96,8 @@
     "already-booked": "Already Booked",
     "for-shops": "For Bikeshops",
     "contact-us": "Please get in touch with us via ",
-    "required": "This is required"
+    "required": "This is required",
+    "update": "Update"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",

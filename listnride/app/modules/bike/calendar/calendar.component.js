@@ -534,10 +534,11 @@ angular.module('bike').component('calendar', {
           lastDay = openHours(lastDay);
           calendar.startTime = firstDay[0];
           calendar.endTime = lastDay[lastDay.length - 1];
-          calendar.startDate = moment(calendar.startDate).hour(calendar.startTime)._d;
+          setStartDate(calendar.startTime);
           calendar.endDate = moment(calendar.endDate).hour(calendar.endTime)._d;
         } else {
-          calendar.startTime = 10
+          calendar.startTime = 10;
+          setStartDate(calendar.startTime);
         }
         // If date today
         if (moment(calendar.startDate).isSame(moment(), 'day')) {
@@ -547,8 +548,12 @@ angular.module('bike').component('calendar', {
             hour_now = calendar.startTime
           }
           calendar.startTime = hour_now;
-          calendar.startDate = moment(calendar.startDate).hour(hour_now)._d;
+          setStartDate(hour_now);
         }
+      }
+
+      function setStartDate(startTime) {
+        calendar.startDate = moment(calendar.startDate).hour(startTime)._d;
       }
 
       function classifyDate(date) {
