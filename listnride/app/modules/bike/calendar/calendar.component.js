@@ -368,7 +368,7 @@ angular.module('bike').component('calendar', {
       var BookingDialogController = function () {
         var bookingDialog = this;
         bookingDialog.errors = {};
-        bookingDialog.in_process = false;
+        bookingDialog.inProcess = false;
         bookingDialog.duration = date.duration(calendar.startDate, calendar.endDate);
         bookingDialog.total = totalPriceCalculator();
         bookingDialog.startDate = calendar.startDate;
@@ -379,6 +379,7 @@ angular.module('bike').component('calendar', {
         bookingDialog.hide = hideDialog;
 
         bookingDialog.book = function () {
+          bookingDialog.inProcess = true;
           var data = {
             user_id: $localStorage.userId,
             ride_id: calendar.bikeId,
@@ -411,6 +412,7 @@ angular.module('bike').component('calendar', {
               $analytics.eventTrack('Request Bike', {  category: 'Book', label: 'Request'});
             },
             function(error) {
+              bookingDialog.inProcess = false;
               calendar.requested = false;
               $mdToast.show(
                 $mdToast.simple()
