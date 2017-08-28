@@ -326,13 +326,12 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.isOptionEnabled = function($index, date) {
-        if (date === undefined) {
-          return true
-        } else if (moment().startOf('day').isSame(moment(date).startOf('day'))){ // Date today chosen
-          return $index + 6 >= moment().hour() + 1;
-        } else if (!openingHoursAvailable()) {
-          return true
-        }
+        if (date === undefined) { return true }
+
+        var isDateToday = moment().startOf('day').isSame(moment(date).startOf('day'));
+        // Date today chosen
+        if (isDateToday) { return $index + 6 >= moment().hour() + 1; }
+        if (!openingHoursAvailable()) { return true }
         var weekDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(date)];
         if (weekDay !== null) {
           var workingHours = openHours(weekDay);
@@ -379,11 +378,23 @@ angular.module('bike').component('calendar', {
         bookingDialog.hide = hideDialog;
 
         bookingDialog.book = function () {
+          var startDate = calendar.startDate;
+          var endDate = calendar.endDate;
+
+          // The local timezone-dependent dates get converted into neutral,
+          // non-timezone utc dates, preserving the actually selected date values
+          var startDate_utc = new Date(
+            Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours())
+          );
+          var endDate_utc = new Date(
+            Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), endDate.getHours())
+          );
+
           var data = {
             user_id: $localStorage.userId,
             ride_id: calendar.bikeId,
-            start_date: calendar.startDate.toISOString(),
-            end_date: calendar.endDate.toISOString()
+            start_date: startDate_utc.toISOString(),
+            end_date: endDate_utc.toISOString()
           };
 
           api.post('/requests', data).then(
@@ -408,7 +419,7 @@ angular.module('bike').component('calendar', {
               calendar.current_request.rating = Math.round(calendar.current_request.rating);
               $state.go('requests', {requestId: success.data.id});
               bookingDialog.hide();
-              $analytics.eventTrack('Request Bike', {  category: 'Book', label: 'Request'});
+              $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
             },
             function(error) {
               calendar.requested = false;
@@ -425,7 +436,7 @@ angular.module('bike').component('calendar', {
         bookingDialog.cancel = function () {
           bookingDialog.hide();
           calendar.requested = false;
-          $analytics.eventTrack('Request Bike', {  category: 'Cancel', label: 'Cancel Request'});
+          $analytics.eventTrack('Cancel', {  category: 'Request Bike', label: 'Cancel Request'});
         }
       };
 
@@ -523,16 +534,26 @@ angular.module('bike').component('calendar', {
           lastDay = openHours(lastDay);
           calendar.startTime = firstDay[0];
           calendar.endTime = lastDay[lastDay.length - 1];
-          calendar.startDate = moment(calendar.startDate).hour(calendar.startTime)._d;
+          setStartDate(calendar.startTime);
           calendar.endDate = moment(calendar.endDate).hour(calendar.endTime)._d;
         } else {
-          calendar.startTime = 10
+          calendar.startTime = 10;
+          setStartDate(calendar.startTime);
         }
         // If date today
         if (moment(calendar.startDate).isSame(moment(), 'day')) {
-          calendar.startTime = moment().add(1, 'hours').hour();
-          calendar.startDate = moment(calendar.startDate).hour(calendar.startTime)._d;
+          var hour_now = moment().add(1, 'hours').hour();
+          if (hour_now < 6) { hour_now = 6 }
+          if (hour_now < calendar.startTime && openingHoursAvailable()) {
+            hour_now = calendar.startTime
+          }
+          calendar.startTime = hour_now;
+          setStartDate(hour_now);
         }
+      }
+
+      function setStartDate(startTime) {
+        calendar.startDate = moment(calendar.startDate).hour(startTime)._d;
       }
 
       function classifyDate(date) {
@@ -559,16 +580,16 @@ angular.module('bike').component('calendar', {
 
       function openingHoursAvailable() {
         return calendar.bikeOwner &&
-          calendar.bikeOwner.opening_hours &&
+          !!calendar.bikeOwner.opening_hours &&
           calendar.bikeOwner.opening_hours.enabled &&
           _.some(calendar.bikeOwner.opening_hours.hours, Array)
       }
 
       function isReserved(date) {
         for (var i = 0; i < calendar.requests.length; ++i) {
-          var start = new Date(calendar.requests[i].start_date);
+          var start = new Date(calendar.requests[i].start_date_tz);
           start.setHours(0,0,0,0);
-          var end = new Date(calendar.requests[i].end_date);
+          var end = new Date(calendar.requests[i].end_date_tz);
           end.setHours(0,0,0,0);
 
           if (start.getTime() <= date.getTime()

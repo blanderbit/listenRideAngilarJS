@@ -79,7 +79,7 @@ angular.module('listingCard',[]).component('listingCard', {
           function(response) {
             listingCard.removeBike({'bikeId': listingCard.bikeId});
             listingCard.disableDelete = true;
-            $analytics.eventTrack('List Bike', {  category: 'List a Bike', label: 'Bike Removed'});
+            $analytics.eventTrack('List a Bike', {  category: 'List Bike', label: 'Bike Removed'});
           },
           function(error) {
             $mdToast.show(

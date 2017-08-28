@@ -95,7 +95,8 @@
     "already-booked": "Bereits Gebucht",
     "for-shops": "Für Fahrradläden",
     "contact-us": "Bitte kontaktiere uns via ",
-    "required": "Dies ist erforderlich"
+    "required": "Dies ist erforderlich",
+    "update": "Aktualisiert"
   },
 
   "toasts": {
@@ -122,7 +123,7 @@
     "profile": "Profil",
     "account": "Account",
     "availability": "Verfügbarkeit",
-    "business": "Business",
+    "business": "Fahrradgeschäft",
     "from": "From",
     "to": "To",
     "mark-as-closed": "Marked all days as closed",
@@ -181,7 +182,7 @@
       "email-verified": "Email-Adresse erfolgreich verifiziert"
     },
     "5": {
-      "title": "Was ist deine nummer",
+      "title": "Was ist deine Nummer",
       "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst.",
       "enter-valid-phone-nr": "Bitte gib eine valide Telefonnummer an",
       "send-confirmation-sms": "Bestätigungs-SMS schicken",
@@ -314,6 +315,8 @@
     "log-out": "Log-Out",
     "sign-up": "Registrieren",
     "sign-up-with-facebook": "Mit facebook registrieren",
+    "member-already": "Bereits registriert?",
+    "business": "Fahrradgeschäft?",
     "description": "Beschreibung",
     "description_min_100": "Beschreibung sollte min. 100 Buchstaben lang sein",
     "address": "Adresse",

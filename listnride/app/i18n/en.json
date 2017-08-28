@@ -96,7 +96,8 @@
     "already-booked": "Already Booked",
     "for-shops": "For Bikeshops",
     "contact-us": "Please get in touch with us via ",
-    "required": "This is required"
+    "required": "This is required",
+    "update": "Update"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
@@ -289,6 +290,8 @@
     "log-out": "Log Out",
     "sign-up": "Sign Up",
     "sign-up-with-facebook": "Sign Up with facebook",
+    "member-already": "Already signed up?",
+    "business": "Bikeshop?",
     "description": "Description",
     "description_min_100": "Description should be min. 100 characters",
     "address": "Address",
