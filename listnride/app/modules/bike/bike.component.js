@@ -39,6 +39,7 @@ angular.module('bike',[]).component('bike', {
 
           ngMeta.setTitle($translate.instant("bike.meta-title", metaData));
           ngMeta.setTag("description", $translate.instant("bike.meta-description", metaData));
+          console.log(bike.data);
         },
         function(error) {
           console.log("Error retrieving bike", error);

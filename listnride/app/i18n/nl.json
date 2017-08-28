@@ -95,7 +95,8 @@
     "already-booked": "al geboekt",
     "for-shops": "For Bikeshops",
     "contact-us": "Neem contact met ons op per ",
-    "required": "Dit is verplicht"
+    "required": "Dit is verplicht",
+    "update": "Bijwerken"
   },
 
   "toasts": {
@@ -122,7 +123,7 @@
     "invite": "Vrienden uitnodigen",
     "account": "Account",
     "availability": "Openingstijden",
-    "business": "Business",
+    "business": "Fietswinkel",
     "from": "From",
     "to": "To",
     "mark-as-closed": "Marked all days as closed",
@@ -314,6 +315,8 @@
     "log-out": "Uitloggen",
     "sign-up": "Aanmelden",
     "sign-up-with-facebook": "Met facebook aanmelden",
+    "member-already": "Al geregistreerd?",
+    "business": "Fietswinkel?",
     "description": "Beschrijving",
     "description_min_100": "Beschrijvingstekst moet min. 100 tekens lang zijn",
     "address": "Adres",

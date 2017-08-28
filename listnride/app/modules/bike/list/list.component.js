@@ -91,7 +91,7 @@ angular.module('list',[]).component('list', {
                 function(response) {
                   loadingDialog.close();
                   $state.go("listings");
-                  $analytics.eventTrack('List Bike', {  category: 'List a Bike', label: 'Bike Added'});
+                  $analytics.eventTrack('List a Bike', {  category: 'List Bike', label: 'Bike Added'});
                 },
                 function(error) {
                   list.submitDisabled = false;

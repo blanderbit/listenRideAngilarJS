@@ -61,7 +61,7 @@ angular.
           api.post("/users", user).then(function(success) {
             setCredentials(success.data);
             verification.openDialog(false, invited, false, signupDialog.showProfile);
-            $analytics.eventTrack('Sign Up', {  category: 'Facebook Sign-Up', label: 'Quick Sign-Up Complete'});
+            $analytics.eventTrack('Facebook Sign-Up', {  category: 'Sign Up', label: 'Quick Sign-Up Complete'});
           }, function(error) {
             showSignupError();
           });
@@ -80,8 +80,8 @@ angular.
           $mdDialog.hide();
         };
 
-        signupDialog.setBusiness = function() {
-          signupDialog.business = true;
+        signupDialog.setBusiness = function(val) {
+          signupDialog.business = val;
         };
 
         signupDialog.showLogin = function() {
@@ -135,7 +135,7 @@ angular.
           api.post('/businesses', business).then(function(success) {
             $state.go('home');
             verification.openDialog(false, invited, false, signupDialog.showProfile);
-            $analytics.eventTrack('Sign Up', {  category: 'Non-FB Sign-Up', label: 'Quick Sign-Up Complete'});
+            $analytics.eventTrack('Non-FB Sign-Up', {  category: 'Sign Up', label: 'Quick Sign-Up Complete'});
           }, function(error) {
             signupDialog.businessError = true;
             signupDialog.signingUp = false;
