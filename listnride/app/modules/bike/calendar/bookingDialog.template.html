@@ -83,7 +83,7 @@
         <md-button
           class="md-lined md-warn"
           ng-click="bookingDialog.cancel()"
-          ng-disabled="bookingDialog.in_process"
+          ng-disabled="bookingDialog.inProcess"
         >
           {{ 'shared.cancel' | translate }}
         </md-button>
@@ -91,7 +91,7 @@
         <md-button
           class="md-raised md-primary"
           ng-click="bookingDialog.book()"
-          ng-disabled="bookingDialog.in_process"
+          ng-disabled="bookingDialog.inProcess"
         >
           {{ 'requests.book' | translate }}
         </md-button>
