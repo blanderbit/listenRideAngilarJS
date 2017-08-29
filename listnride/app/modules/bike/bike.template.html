@@ -1,5 +1,12 @@
  <md-content class="single-column"> 
-  <div id="hero-shot" class="lnr-preload-bg" style="{{'background-image: url(' + bike.data.image_file_1.image_file_1.large.url + ')'}};" layout="row" layout-align="start end">
+  <div
+    id="hero-shot"
+    class="lnr-preload-bg"
+    style="{{'background-image: url(' + bike.data.image_file_1.image_file_1.large.url + ')'}};"
+    layout="row"
+    layout-align="start end"
+    ng-click="bike.showGalleryDialog($event)"
+  >
     <md-button
       class="md-raised"
       ng-click="bike.showGalleryDialog($event)"
