@@ -283,15 +283,15 @@
       });
 
       $stateProvider.state({
-        name: 'freising',
+        name: 'velosoph',
         url: '/herbstausfahrt',
-        template: '<freising></freising>',
+        template: '<velosoph></velosoph>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["events.freising.meta-title", "events.freising.meta-description"])
+            $translate(["events.velosoph.meta-title", "events.velosoph.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["events.freising.meta-title"]);
-                ngMeta.setTag("description", translations["events.freising.meta-description"]);
+                ngMeta.setTitle(translations["events.velosoph.meta-title"]);
+                ngMeta.setTag("description", translations["events.velosoph.meta-description"]);
               })
           }
         },
