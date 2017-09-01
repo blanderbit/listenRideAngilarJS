@@ -283,6 +283,24 @@
       });
 
       $stateProvider.state({
+        name: 'velosoph',
+        url: '/herbstausfahrt',
+        template: '<velosoph></velosoph>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.velosoph.meta-title", "events.velosoph.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.velosoph.meta-title"]);
+                ngMeta.setTag("description", translations["events.velosoph.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'crossride',
         url: '/berliner-fahrradschau',
         template: '<crossride></crossride>'
