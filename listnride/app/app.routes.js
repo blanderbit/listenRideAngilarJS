@@ -283,6 +283,24 @@
       });
 
       $stateProvider.state({
+        name: 'freising',
+        url: '/herbstausfahrt',
+        template: '<freising></freising>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.freising.meta-title", "events.freising.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.freising.meta-title"]);
+                ngMeta.setTag("description", translations["events.freising.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'crossride',
         url: '/berliner-fahrradschau',
         template: '<crossride></crossride>'
