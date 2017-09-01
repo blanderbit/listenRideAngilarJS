@@ -1841,4 +1841,24 @@ seo-landing .lnr-section-title {
 
 .velosoph .lnr-event-logos .wahoo img {
   width: 130px;
+  margin-left: -70px;
+}
+
+/* iPhone 5*/
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+  .velosoph .lnr-event-logos .katusha img {
+    width: 25vw;
+  }
+
+  .velosoph .lnr-event-logos .pasculli img {
+    width: 25vw;
+  }
+
+  .velosoph .lnr-event-logos .wahoo img {
+    width: 14vw;
+    margin-left: -30px;
+  }
 }
