@@ -100,12 +100,12 @@ module.exports = function () {
 
                     // !!! For testing only !!!
                     // -------------------------
-                    apiEndpoint: 'http://localhost:3000/v2',
-                    userEndpoint: 'http://localhost:3000/v2/users/',
+                    // apiEndpoint: 'http://localhost:3000/v2',
+                    // userEndpoint: 'http://localhost:3000/v2/users/',
                     // -------------------------
 
-                    // apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
-                    // userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
+                    apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
+                    userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com"
                 }
             }

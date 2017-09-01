@@ -1822,13 +1822,8 @@ seo-landing .lnr-section-title {
 }
 
 .velosoph .lnr-section-title .lnr-event-logos {
-  width: 100%;
+  width: 80%;
   height: 80px;
-}
-
-.velosoph .lnr-section-title .lnr-event-logos .event-logo {
-  justify-content: center;
-  align-items: center;
 }
 
 .velosoph .lnr-event-logos .katusha img {
@@ -1841,4 +1836,22 @@ seo-landing .lnr-section-title {
 
 .velosoph .lnr-event-logos .wahoo img {
   width: 130px;
+}
+
+/* iPhone 5*/
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+  .velosoph .lnr-event-logos .katusha img {
+    width: 25vw;
+  }
+
+  .velosoph .lnr-event-logos .pasculli img {
+    width: 25vw;
+  }
+
+  .velosoph .lnr-event-logos .wahoo img {
+    width: 14vw;
+  }
 }
