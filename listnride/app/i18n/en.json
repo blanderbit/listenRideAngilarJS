@@ -265,7 +265,8 @@
     "5": "{{lister.first_name}} has confirmed the return of the ride and gave you a review. Finally, please also rate the ride. This helps our community a lot and completes the rental.",
     "6": "Thanks for rating, the rental was successfully completed.",
     "8": "Unfortunately, the lister could't accept your request. Simply request some other great bikes.",
-    "9": "You cancelled the request, please tell the lister why you couldn’t confirm the booking."
+    "9": "You cancelled the request, please tell the lister why you couldn’t confirm the booking.",
+    "10": "The request got cancelled by the system."
   },
   "footer": {
     "language": "Language",
@@ -827,6 +828,17 @@
       "text-1": "Join us on the ride on Wednesday, the 30th of August to relax from a busy day at the fair.<br><br>The ride is a great opportunity to explore the countryside around Lake Constance away from the daily business at the show. We have a local guide with us.<br><br>We will stop for drinks, food and socializing towards the end of the ride at a selected local venue and then guide you back to Eurobike. <br><br>We offer complimentary bike loans to those unable to bring their own provided by Pure Cycles. Please select and reserve your bike. You will need to bring your own shoes and pedals.",
       "text-2": "<b>When</b> Wednesday 30th August<br><br><b>Where</b> <a href=\"https://goo.gl/maps/KyrZ9kpuVAU2\">Meet at the parking in front of the customs office</a><br><br><b>Departure</b> Ride from 6pm, 2 hours<br><br><b>Distance</b> Ca. 50 kmph <br><br><b>Speed</b> 25-27 kmph<br><br>To secure your spot on a ride, please pre-register before using the link below.",
       "sign-up": "RSVP"
+    },
+    "velosoph": {
+      "meta-title": "Autumn ride, a local riders' favourite route through Holledau.",
+      "meta-description": "A local riders' favourite route through Holledau. listnride pays a visit to Velosoph, the Cycling Café in Freising.",
+      "main-title": "Autumn Ride Holledau",
+      "title": "Autumn Ride Holledau. listnride pays a visit to Velosoph",
+      "text-1": "The course leads us out of Freising towards Holledau along little-known, scenic secondary roads through hilly terrain and fields of hops. The route ends back in Freising at the Velosoph Cycle-Café with a Bavarian “Vesper”. For this social ride you have the opportunity to test Pasculli bikes and Wahoo bike computers, and Katusha Sports will be waiting with a small gift at the end of the ride.",
+      "text-2": "Register in advance to participate:<br><br><b>When</b> Sunday, September 24th, 9:30am at the Café<br><br><b>Where</b> <a href=\"https://goo.gl/maps/QUoZoMcSQYk\">Velosoph Ziegelgasse 19, 85354 Freising</a><br><br><b>Departure</b> Riding out at 10:00am<br><br><b>Distance</b> Approx. 60 km <br><br><b>Speed</b> 25-27 kmph",
+      "sign-up": "Register",
+      "home-page-1": "listnride x Velosoph",
+      "home-page-2": "Autumn Ride 24. Sep."
     },
     "cyclassics-hamburg": {
       "meta-title": "Rent a road bike for the Cyclassics Hamburg on listnride",

@@ -47,6 +47,7 @@ angular.module('listnride', [
   'supercrossMunich',
   'seoLanding',
   'constanceSpin',
+  'velosoph',
   /* external modules */
   'ngMaterial',
   'ngMessages',
