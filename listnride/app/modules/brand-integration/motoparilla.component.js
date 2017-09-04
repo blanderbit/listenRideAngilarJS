@@ -30,7 +30,7 @@ angular.module('motoparilla-integration',[]).component('motoparilla', {
         ];
       });
 
-      api.get('/rides?family=21').then(
+      api.get('/rides?family=23').then(
         function (success) {
           motoparilla.bikes = success.data;
         },
