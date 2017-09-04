@@ -8,6 +8,12 @@
       <li><span></span></li>
       <li><span></span></li>
     </ul>
+
+    <div class="lnr-page-title md-color-white" layout="column" layout-align="center center">
+      <div>
+        <img ng-src="app/assets/ui_images/brand-integration/motoparilla/logo.png" flex="60"></img><br><br>
+      </div>
+    </div>
   </div>
 
   <div class="content" layout-padding>
@@ -58,6 +64,7 @@
         <slick settings="motoparilla.slickConfig">   
           <div ng-repeat="testimonial in motoparilla.testimonials"
             class="testimonials-slick-slide" layout="column" layout-align="center center">
+            <!-- <img class="testimonials-img" ng-src="{{ testimonial.userImagePath}}"> -->
             <div class="testimonials-text md-subhead">&ldquo;{{ testimonial.text }}&rdquo;</div>
           </div>
         </slick>

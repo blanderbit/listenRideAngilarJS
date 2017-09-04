@@ -24,13 +24,13 @@ angular.module('motoparilla-integration',[]).component('motoparilla', {
 
       $translate('shared.from-place').then(function(translation) {
         motoparilla.testimonials = [
-          {text: $translate.instant("brand-integration.motoparilla.testimonial-1")},
-          {text: $translate.instant("brand-integration.motoparilla.testimonial-2")},
-          {text: $translate.instant("brand-integration.motoparilla.testimonial-3")}
+          {text: $translate.instant("brand-integration.motoparilla.testimonial-1"), userImagePath: "app/assets/ui_images/brand-integration/motoparilla/icon1.jpg"},
+          {text: $translate.instant("brand-integration.motoparilla.testimonial-2"), userImagePath: "app/assets/ui_images/brand-integration/motoparilla/icon1.jpg"},
+          {text: $translate.instant("brand-integration.motoparilla.testimonial-3"), userImagePath: "app/assets/ui_images/brand-integration/motoparilla/icon1.jpg"}
         ];
       });
 
-      api.get('/rides?family=19').then(
+      api.get('/rides?family=21').then(
         function (success) {
           motoparilla.bikes = success.data;
         },
