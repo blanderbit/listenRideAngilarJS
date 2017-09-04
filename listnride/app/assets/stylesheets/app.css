@@ -1854,4 +1854,8 @@ and (max-device-width : 568px) {
   .velosoph .lnr-event-logos .wahoo img {
     width: 14vw;
   }
+
+  .lnr-no-events {
+    pointer-events: none;
+  }
 }
