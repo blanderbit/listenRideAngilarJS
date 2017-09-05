@@ -329,6 +329,7 @@
     "country": "Land",
     "company-name": "Company name",
     "update-contact": "Kontakt aktualisieren",
+    "company-contact-info": "Bitte trage die Daten der Kontaktperson des Unternehmens ein.",
     "errors": {
       "password-length": "Das Passwort sollte min. 6 Zeichen lang sein",
       "password-missing": "Bitte gib ein Passwort an",

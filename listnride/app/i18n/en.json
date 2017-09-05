@@ -304,6 +304,7 @@
     "country": "Country",
     "company-name": "Company name",
     "update-contact": "Update Contact",
+    "company-contact-info": "Please fill form with company contact person information.",
     "errors": {
       "password-length": "Password should be at least 6 characters",
       "password-missing": "Please provide a password",
