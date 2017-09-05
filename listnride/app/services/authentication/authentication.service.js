@@ -80,10 +80,6 @@ angular.
           $mdDialog.hide();
         };
 
-        signupDialog.setBusiness = function(val) {
-          signupDialog.business = val;
-        };
-
         signupDialog.showLogin = function() {
           $mdDialog.hide();
           showLoginDialog();
