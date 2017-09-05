@@ -1816,7 +1816,42 @@ seo-landing .lnr-section-title {
 /*  EVENTS
 /*-----------------------------------------------------------------------------------*/
 
-.constance-spin .lnr-section-title .event-logo{
+.constance-spin .lnr-section-title .event-logo {
   width: 150px;
   margin-top: 15px;
+}
+
+.velosoph .lnr-section-title .lnr-event-logos {
+  width: 80%;
+  height: 80px;
+}
+
+.velosoph .lnr-event-logos .katusha img {
+  width: 210px;
+}
+
+.velosoph .lnr-event-logos .pasculli img {
+  width: 210px;
+}
+
+.velosoph .lnr-event-logos .wahoo img {
+  width: 130px;
+}
+
+/* iPhone 5*/
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+  .velosoph .lnr-event-logos .katusha img {
+    width: 25vw;
+  }
+
+  .velosoph .lnr-event-logos .pasculli img {
+    width: 25vw;
+  }
+
+  .velosoph .lnr-event-logos .wahoo img {
+    width: 14vw;
+  }
 }
