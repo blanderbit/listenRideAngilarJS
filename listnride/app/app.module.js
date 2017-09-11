@@ -21,6 +21,7 @@ angular.module('listnride', [
   'invoices',
   'velothonBikerental',
   'cyclassicsHamburg',
+  'riderman',
   'jobs',
   'listingABike',
   'rentingABike',
