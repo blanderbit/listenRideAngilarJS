@@ -42,7 +42,7 @@ gulp.task('cache-templates-services', cacheTemplatesServices);
 gulp.task('copy-index-tmp', copyIndexTmp);
 gulp.task('copy-index-dist', copyIndexDist);
 gulp.task('copy-index-app', copyIndexApp);
-gulp.task('copy-sitemap', copySitemap);
+gulp.task('copy-sitemaps', copySitemaps);
 gulp.task('copy-i18n', copyI18n);
 gulp.task('constants', appConstants);
 
@@ -198,11 +198,14 @@ function copyIndexApp() {
         .pipe(gulp.dest('./'));
 }
 /**
- * copy the sitemap at root for deployment 
+ * copy the sitemaps at root for deployment 
  * @returns {gulp} for chaining
  */
-function copySitemap() {
+function copySitemaps() {
     return gulp.src(path.app.sitemap).pipe(gulp.dest(path.dist.root));
+    return gulp.src(path.app.sitemapDe).pipe(gulp.dest(path.dist.root));
+    return gulp.src(path.app.sitemapEn).pipe(gulp.dest(path.dist.root));
+    return gulp.src(path.app.sitemapNl).pipe(gulp.dest(path.dist.root));
 }
 /**
  * concat all vendors files, js and css
