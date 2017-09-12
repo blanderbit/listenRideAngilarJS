@@ -573,7 +573,7 @@ function deploy(cb) {
         'revisions',
         'replace-revisions-index',
         'base-tag',
-        'copy-sitemap',
+        'copy-sitemaps',
         'clean-extras',
         'clean-extras-local',
         cb);
