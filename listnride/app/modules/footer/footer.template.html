@@ -1,4 +1,4 @@
-<md-content id="footer" class="md-scroll-shrink" md-theme="lnr-dark">
+<md-content id="footer" class="md-scroll-shrink" md-theme="lnr-dark" ng-hide="footer.hideFooter">
   <div class="content" layout="column">
     <div layout="row" layout-xs="column" layout-padding>
 
@@ -8,7 +8,7 @@
         </div>
       </div>
 
-      <div layout="row" layout-xs="column" layout-align="space-between start" flex>
+      <div layout="row" layout-wrap layout-align="space-between start" flex>
         <div layout="column">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'shared.top-cities' | translate }}</md-subheader>

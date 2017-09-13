@@ -20,7 +20,7 @@
         },
         meta: {
           disableUpdate: true
-        }
+        },
       });
 
       $stateProvider.state({
@@ -46,6 +46,7 @@
         url: '/search/{location}?size&allterrain&race&city&kids&ebikes&special',
         template: '<search></search>',
         params: {
+          hideFooter: true,
           size: {
             value: "",
             squash: true
@@ -93,6 +94,7 @@
         name: 'requests',
         url: '/requests/{requestId:int}',
         params: {
+          hideFooter: true,
           requestId: {
             squash: true,
             value: null
