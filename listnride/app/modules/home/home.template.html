@@ -80,41 +80,7 @@
     </div>
   </div>
 
-  <!-- <div id="featuredTiles" class="content section" layout-align="start center">
-    <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h2 class="md-headline">{{ 'home.featured-tiles-header' | translate }}</h2>
-      <p class="md-subhead">{{ 'home.featured-tiles-subheader' | translate }}</p>
-    </div>
-    
-    <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="3" md-gutter="16px" md-row-height="1.5:1">
-      <md-grid-tile class="tile tile-1">
-        <a ui-sref="ampler" layout-padding layout="column" layout-align="center center">
-          <div class="img-container">
-            <img ng-src="app/assets/ui_icons/Ampler_white.png">  
-          </div>
-          <h3 class="md-title">E-Bike Test Ride Program</h3>
-        </a>
-      </md-grid-tile>
-
-      <md-grid-tile class="tile tile-2">
-        <a href="http://journal.listnride.com" target="_blank" layout-padding layout="column" layout-align="center center">
-          <div class="img-container">
-            <img ng-src="app/assets/ui_icons/lnr_logo_face.png">
-          </div>
-          <h3 class="md-title">The listnride Journal</h3>
-        </a>
-      </md-grid-tile>
-
-      <md-grid-tile class="tile tile-3">
-        <a ui-sref="cyclassicsHamburg" layout-padding layout="column" layout-align="center center">
-          <div class="img-container">
-            <img ng-src="app/assets/ui_icons/biketype_allterrain.png">
-          </div>
-          <h3 class="md-title">Cyclassics Hamburg 20.08.2017</h3>
-        </a>
-      </md-grid-tile>
-    </md-grid-list>
-  </div> -->
+  <!-- START FEATURED TILES -->
 
   <div id="featuredTiles" class="content section" layout-align="start center">
     <div class="lnr-section-title" layout="column" layout-align="center center">
@@ -147,9 +113,15 @@
         </a>
       </md-grid-tile>
 
-      <md-grid-tile class="tile" md-colspan-gt-xs="2" style="background-image: url('/app/assets/ui_images/featured-tiles/journal.jpg')">
+      <md-grid-tile class="tile" md-colspan-gt-xs="1" style="background-image: url('/app/assets/ui_images/featured-tiles/journal_small.jpg')">
         <a href="https://journal.listnride.com" layout="column" layout-align="center center">
           <h3 class="md-title">The listnride Journal</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile" md-colspan-gt-xs="1" style="background-image: url('/app/assets/ui_images/featured-tiles/motoparilla_small.jpg')">
+        <a ui-sref="motoparilla" layout="column" layout-align="center center">
+          <h3 class="md-title">Moto Parilla E-Bikes</h3>
         </a>
       </md-grid-tile>
 
@@ -161,38 +133,9 @@
     </md-grid-list>
   </div>
 
-  <!-- <div id="featuredCities" class="content section" layout-align="start center">
-    <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h2 class="md-headline">{{ 'home.featured-cities-header' | translate }}</h2>
-      <p class="md-subhead">{{ 'home.featured-cities-subheader' | translate }}</p>
-    </div>
-    
-    <md-grid-list class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="3" md-gutter="16px" md-row-height="1:1">
-      <md-grid-tile class="tile1" md-colspan-gt-xs="2">
-        <a ui-sref="cities-munich" layout="row" layout-align="center center" ng-click="home.cityAnalytics('munich')">
-          <h3 class="md-title">{{ 'shared.munich' | translate }}</h3>
-        </a>
-      </md-grid-tile>
+  <!-- END FEATURED TILES -->
 
-      <md-grid-tile class="tile2" md-rowspan-gt-xs="2">
-        <a ui-sref="cities-berlin" layout="row" layout-align="center center" ng-click="home.cityAnalytics('berlin')">
-          <h3 class="md-title">{{ 'shared.berlin' | translate }}</h3>
-        </a>
-      </md-grid-tile>
-
-      <md-grid-tile class="tile3">
-        <a ui-sref="cities-amsterdam" layout="row" layout-align="center center" ng-click="home.cityAnalytics('amsterdam')">
-          <h3 class="md-title">{{ 'shared.amsterdam' | translate }}</h3>
-        </a>
-      </md-grid-tile>
-
-      <md-grid-tile class="tile4">
-        <a ui-sref="cities-vienna" layout="row" layout-align="center center" ng-click="home.cityAnalytics('vienna')">
-          <h3 class="md-title">{{ 'shared.vienna' | translate }}</h3>
-        </a>
-      </md-grid-tile>
-    </md-grid-list>
-  </div> -->
+  <!-- START FEATURED CITIES -->
 
   <div id="featuredCities" class="content section" layout-align="start center">
     <div class="lnr-section-title" layout="column" layout-align="center center">
@@ -226,6 +169,8 @@
       </md-grid-tile>
     </md-grid-list>
   </div>
+
+  <!-- END FEATURED CITIES -->
 
   <br>
 
