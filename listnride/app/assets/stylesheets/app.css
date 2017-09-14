@@ -1409,7 +1409,8 @@ message .status-message {
   margin-top: -6px;
 }
 
-button.md-primary.md-confirm-button {
+button.md-primary.md-confirm-button,
+button.md-primary.md-cancel-button {
   background-color: #0ECC92 !important;
 }
 
