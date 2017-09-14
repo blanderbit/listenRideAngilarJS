@@ -71,8 +71,8 @@ angular.module('listnride', [
   '720kb.socialshare',
   'angularMoment'
 ])
-.config(['$translateProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider', 'ENV', 'socialshareConfProvider',
-  function($translateProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider, ENV, socialshareConfProvider) {
+.config(['$translateProvider', '$localStorageProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider', 'ENV', 'socialshareConfProvider',
+  function($translateProvider, $localStorageProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider, ENV, socialshareConfProvider) {
     $mdAriaProvider.disableWarnings();
 
     ezfbProvider.setInitParams({
@@ -109,19 +109,26 @@ angular.module('listnride', [
     });
 
     // Retrieves locale from subdomain if valid, otherwise sets the default.
-    var retrieveLocale = function() {
+    var retrieveLocale = function () {
+      // get language from local storage
+      var selectedLanguage = $localStorageProvider.get('selectedLanguage');
+      // default and avaiable languages
       var defaultLanguage = "en";
       var availableLanguages = ["de", "en", "nl"];
-  
+      // host and domains
       var host = window.location.host;
-      var retrievedLanguage = host.split('.')[0];
-  
+      var domain = host.split('.');
+      // sub domain, currenlty in use
+      var subDomain = domain[0];
+      // top level domain, will be used in future
+      var topLevelDomain = domain[domain.length - 1];
+      // select language
+      var retrievedLanguage = selectedLanguage ? selectedLanguage : subDomain;
       if (availableLanguages.indexOf(retrievedLanguage) >= 0) {
         return retrievedLanguage;
       } else {
         return defaultLanguage;
       }
-    
     };
 
     $translateProvider.preferredLanguage(retrieveLocale());
