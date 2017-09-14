@@ -14,7 +14,7 @@
 
     <div layout-xs="column" layout="row">
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in seoLanding.bikes.slice(0,4)" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <bike-card ng-repeat="bike in seoLanding.bikes.featured" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
         </bike-card>
       </div>
     </div>
@@ -28,7 +28,7 @@
 
     <div layout-xs="column" layout="row">
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in seoLanding.bikes.slice(4,8)" bike="bike" seo="true" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <bike-card ng-repeat="bike in seoLanding.bikes.more" bike="bike" seo="true" flex="100" flex-gt-xs="50" flex-gt-sm="25">
         </bike-card>
       </div>
     </div>
@@ -52,7 +52,7 @@
 
     <div layout-xs="column" layout="row">
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in seoLanding.bikes.slice(8,12)" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <bike-card ng-repeat="bike in seoLanding.bikes.related" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
         </bike-card>
       </div>
     </div>
