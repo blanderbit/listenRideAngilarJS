@@ -4,7 +4,7 @@
 
       <div layout="column" layout-align="center start" flex="25" flex-sm="20" hide-sm hide-xs>
         <div>
-          <md-icon class="lnr-icn-xlrg md-color-white" md-svg-src="app/assets/ui_icons/lnr_logo_full.svg">
+          <md-icon class="lnr-icn-xlrg md-color-white" md-svg-src="app/assets/ui_icons/lnr_logo_full.svg"></md-icon>
         </div>
       </div>
 
@@ -21,7 +21,9 @@
 
         <div layout="column">
           <md-list>
-            <md-subheader class="md-no-sticky">{{ 'shared.learn-more' | translate }}</md-subheader>
+            <md-subheader class="md-no-sticky">
+              {{ 'shared.learn-more' | translate }}
+            </md-subheader>
             <md-list-item class="md-body-1">
               <a
                 class="lnr-link"
@@ -52,10 +54,10 @@
               </a>
             </md-list-item>
             <md-list-item class="md-body-1">
-              <a
-                class="lnr-link"
-                href="http://journal.listnride.com"
-                target="_blank">{{ 'shared.journal' | translate }}</a></md-list-item>
+              <a class="lnr-link" href="http://journal.listnride.com" target="_blank">
+                {{ 'shared.journal' | translate }}
+              </a>
+            </md-list-item>
           </md-list>
         </div>
 
@@ -110,17 +112,17 @@
             <md-subheader class="md-no-sticky">{{ 'footer.legal' | translate }}</md-subheader>
             <md-list-item class="md-body-1">
               <a class="lnr-link" ui-sref="terms">
-              {{ 'footer.terms-and-conditions' | translate }}
+                {{ 'footer.terms-and-conditions' | translate }}
               </a>
             </md-list-item>
             <md-list-item class="md-body-1">
               <a class="lnr-link" ui-sref="privacy">
-              {{ 'footer.privacy-statement' | translate }}
+                {{ 'footer.privacy-statement' | translate }}
               </a>
             </md-list-item>
             <md-list-item class="md-body-1">
               <a class="lnr-link" ui-sref="imprint">
-              {{ 'footer.imprint' | translate }}
+                {{ 'footer.imprint' | translate }}
               </a>
             </md-list-item>
             <md-list-item class="md-body-1">
