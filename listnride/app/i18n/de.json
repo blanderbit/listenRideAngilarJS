@@ -123,6 +123,7 @@
     "profile": "Profil",
     "account": "Account",
     "availability": "Verfügbarkeit",
+    "availability-description": "Du kannst deine Verfügbarkeitszeiten für den Radverleih einstellen",
     "business": "Fahrradgeschäft",
     "from": "From",
     "to": "To",
@@ -274,7 +275,7 @@
     "6": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
     "8": "Leider hat der Verleiher die Anfrage abgelehnt. Frage einfach ein paar andere schöne Räder an.",
     "9": "Du hast die Anfrage abgebrochen. Bitte schreib dem Verleiher, warum du die Buchung nicht bestätigen konntest.",
-    "10": "Die Anfrage wurde vom System abgebrochen."
+    "10": "Die Anfrage wurde abgebrochen."
   },
 
   "footer": {
@@ -876,6 +877,13 @@
       "text": "Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist. <br><br> Du kannst leider nicht bei den Cyclassics teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und vermiete dein Rad.",
       "description": "wo: <b>Hamburg</b>  |  was: <b>Jedermannrennen 60, 120 or 180km</b>  |  wann: <b>20.08.2017</b>"
     },
+    "riderman": {
+      "meta-title": "Miete dir einfach das perfekte Rennrad für die RiderMan in Bad Dürrheim",
+      "meta-description": "Fahre die RiderMan Bad Dürrheim auf dem Rennrad deiner Träume! Wähle  Specialized, Ridley, Cervelo, Bianchi, sowie Simplon und miete es ganz bequem und einfach von Zuhause. ",
+      "title": "Miete dir einfach das perfekte Rennrad für den RiderMan Bad Dürrheim",
+      "text": "Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist. <br><br> Du kannst leider nicht bei den RiderMan teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und vermiete dein Rad.",
+      "description": "Wo: <b>Bad Dürrheim</b>  |  Was: <b>RiderMan - 3-Etappenrennen</b>  |  Wann: <b>29.09 - 01-10.2017</b>"
+    },
     "depart": {
       "meta-title": "Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
       "meta-description": "Radel mit listnride und Schicke Mütze  zum Grand Depart und miete dir hochwertige Rennräder aus der Community",
@@ -1032,7 +1040,7 @@
       "meta-title":"E Bike Test Programm",
       "meta-descr": "Teste noch heute ein Ampler Bikes E-Bike! Die Elektrofahrräder stehen zum Testen in Berlin, München, Hamburg, Zürich und Wien zur Verfügung.",
       "title": "Ampler. Das smarte E-Bike für den urbanen Pendler.",
-      "description": "Miete und Teste Ampler E-Bikes in Berlin, München, Hamburg, Wien und Zürich",
+      "description": "Miete und Teste Ampler E-Bikes in Berlin, München, Hamburg, Wien, Zürich und Frankfurt",
       "subdescription": "Wähle zwischen Hawk, einem dynamischen Single-Speed, oder Bilberry, dem komfortablen City-Bike",
       "item1-title": "Handgefertigt in Estland",
       "item1-description": "Auf Bestellung<br>Kundenspezifische Lösungen<br>Aufmerksamkeit zum Detail<br>Zeitloses Design",

@@ -43,7 +43,7 @@ angular.module('jobs').factory('JobsService', ['$q', function ($q) {
             offer: {
                 title: 'What we have',
                 desc: [
-                    'Launched a successful bike sharing platform late 2015, now growing fast',
+                    'Launched a successful bike sharing platform late 2016, now growing fast',
                     'A mentality always looking for “what is right” and not “who is right” ',
                     'Believe in the sharing economy and technology as key facilitator',
                     'Experienced leadership team, a unique vision and global ambition ',
@@ -78,7 +78,7 @@ angular.module('jobs').factory('JobsService', ['$q', function ($q) {
             offer: {
                 title: 'What we have',
                 desc: [
-                    'Launched a successful bike sharing platform late 2015, now growing fast',
+                    'Launched a successful bike sharing platform late 2016, now growing fast',
                     'A mentality always looking for “what is right” and not “who is right” ',
                     'Believe in the sharing economy and technology as key facilitator',
                     'Experienced leadership team, a unique vision and global ambition ',
@@ -112,7 +112,7 @@ angular.module('jobs').factory('JobsService', ['$q', function ($q) {
             offer: {
                 title: 'What we have',
                 desc: [
-                    'Launched a successful bike sharing platform late 2015, now growing fast',
+                    'Launched a successful bike sharing platform late 2016, now growing fast',
                     'A mentality always looking for “what is right” and not “who is right” ',
                     'Believe in the sharing economy and technology as key facilitator',
                     'Experienced leadership team, a unique vision and global ambition ',

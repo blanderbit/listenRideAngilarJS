@@ -40,8 +40,8 @@
     "subtotal": "Subtotaal",
     "lnr-fee": "listnride Servicekosten (incl. BTW)",
     "total": "Totaal",
-    "from": "van",
-    "from2": "van",
+    "from": "uit",
+    "from2": "vanaf",
     "to": "tot",
     "as": "Als",
     "all": "Alle",
@@ -123,6 +123,7 @@
     "invite": "Vrienden uitnodigen",
     "account": "Account",
     "availability": "Openingstijden",
+    "availability-description": "You can set your availability times for renting out bikes.",
     "business": "Fietswinkel",
     "from": "From",
     "to": "To",
@@ -274,7 +275,7 @@
     "6": "Bedankt voor je recensie. De verhuur is succesvol verlopen.",
     "8": "Helaas heeft de verhuurder je aanvraag afgewezen. Gelukkig zijn er genoeg andere mooie fietsen die je kan aanvragen.",
     "9": "Je hebt de aanvraag afgewezen. Stuur de verhuuder kort een berichtje, waarom je aanvraag niet geboekt hebt.",
-    "10": "The request got cancelled by the system."
+    "10": "Het verzoek is geannuleerd."
   },
 
   "footer": {
@@ -872,6 +873,13 @@
       "text": "We helpen je! Samen met de listnride community bieden we vele racefietsen, waarbij er zeker enige zijn die passen aan je wensen. Je kan die eenvoudig zo lang als je die nodig hebt huren. Je hoeft slechts één van de onderstaande fietsen te kiezen, aanvragen voor de gewenste periode en ophalen wanneer de tijd is gekomen. Simpel als dat. <br><br> Je kunt niet deelnemen? Help iemand in nood, een plaats je fiets en verdien zo wat extra zakgeld!",
       "description": "waar: <b>Hamburg</b>  |  wat: <b>Wielerkoers 60, 120 or 180km</b>  |  wanneer: <b>20.08.2017</b>"
     },
+    "riderman": {
+      "meta-title": "Boek eenvoudig de perfekte racefiets voor de RiderMan in Bad Dürrheim",
+      "meta-description": "Huur de perfekte racefiets voor de RiderMan in Bad Dürrheim van merken zoals Simplon, Specialized, Ridley, Cervelo en Bianchi",
+      "title": "Boek eenvoudig de perfekte racefiets voor de RiderMan Bad Dürrheim",
+      "text": "We helpen je! Samen met de listnride community bieden we vele racefietsen, waarbij er zeker enige zijn die passen aan je wensen. Je kan die eenvoudig zo lang als je die nodig hebt huren. Je hoeft slechts één van de onderstaande fietsen te kiezen, aanvragen voor de gewenste periode en ophalen wanneer de tijd is gekomen. Simpel als dat. <br><br>Je kunt niet deelnemen? Help iemand in nood, een plaats je fiets en verdien zo wat extra zakgeld!",
+      "description": "Waar: <b>Bad Dürrheim</b>  |  Wat: <b>RiderMan - 3-etappen koers</b>  |  Datum: <b>29.09 - 01-10.2017</b>"
+    },
     "depart": {
       "meta-title": "Boek eenvoudig the perfekte racefiets voor de Velothon Berlijn",
       "meta-description": "Join listnride and Schicke Mütze for a social road ride in celebration of the Grand Départ. Rent a high-end road bike from the listnride bike-sharing community.",
@@ -1028,7 +1036,7 @@
       "meta-title":"E-Bike Proefrit Programma",
       "meta-descr": "Test een elektrische fiets vandaag! De elektrische fietsen van Ampler zijn nu direkt beschikbaar op listnride. Huur er één in Berlijn, München, Hamburg, Zürich of Wenen.",
       "title": "Ampler. De slimme e-bike voor het stedelijke woon-werkverkeer.",
-      "description": "Huur en testride een Ampler E-Bike in Berlijn, München, Hamburg, Wenen en Zürich",
+      "description": "Huur en testride een Ampler E-Bike in Berlijn, München, Hamburg, Wenen, Zürich en Frankfurt",
       "subdescription": "Je kan kiezen tussen de Hawk, een dynamische Single-Speed, oder de Bilberry en Pennon, de comfortabele Stadsfiets",
       "item1-title": "Handgemaakt in Estland",
       "item1-description": "Op Bestelling<br>klantspecifieke oplossingen<br>Oog voor Detail<br>Tijdloos Design",

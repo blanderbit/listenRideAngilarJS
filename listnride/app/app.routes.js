@@ -205,6 +205,24 @@
       });
 
       $stateProvider.state({
+          name: 'riderman',
+          url: '/riderman-rothaus',
+          template: '<riderman></riderman>',
+          resolve: {
+              data: function ($translate, ngMeta) {
+                  $translate(["events.riderman.meta-title", "events.riderman.meta-description"])
+                      .then(function (translations) {
+                          ngMeta.setTitle(translations["events.riderman.meta-title"]);
+                          ngMeta.setTag("description", translations["events.riderman.meta-description"]);
+                      })
+              }
+          },
+          meta: {
+              disableUpdate: true
+          }
+      });
+
+      $stateProvider.state({
         name: 'velothonBikerental',
         url: '/velothon-bikerental',
         template: '<velothon-bikerental></velothon-bikerental>',
