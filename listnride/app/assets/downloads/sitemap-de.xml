@@ -6,192 +6,192 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>http://de.listnride.com/</loc>
+  <loc>https://www.listnride.de/</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/listing-a-bike</loc>
+  <loc>https://www.listnride.de/listing-a-bike</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/how-it-works</loc>
+  <loc>https://www.listnride.de/how-it-works</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/renting-a-bike</loc>
+  <loc>https://www.listnride.de/renting-a-bike</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/trust-and-safety</loc>
+  <loc>https://www.listnride.de/trust-and-safety</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/help</loc>
+  <loc>https://www.listnride.de/help</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/rent-ampler-bikes</loc>
+  <loc>https://www.listnride.de/rent-ampler-bikes</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/rent-muli-bikes</loc>
+  <loc>https://www.listnride.de/rent-muli-bikes</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/rent-brompton-bikes</loc>
+  <loc>https://www.listnride.de/rent-brompton-bikes</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/herbstausfahrt</loc>
+  <loc>https://www.listnride.de/herbstausfahrt</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/rent-bonvelo-bikes</loc>
+  <loc>https://www.listnride.de/rent-bonvelo-bikes</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/ebike-verleih-berlin</loc>
+  <loc>https://www.listnride.de/ebike-verleih-berlin</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/rennrad-verleih-berlin</loc>
+  <loc>https://www.listnride.de/rennrad-verleih-berlin</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/ebike-verleih-muenchen</loc>
+  <loc>https://www.listnride.de/ebike-verleih-muenchen</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/rennrad-verleih-muenchen</loc>
+  <loc>https://www.listnride.de/rennrad-verleih-muenchen</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/ebike-verleih-hamburg</loc>
+  <loc>https://www.listnride.de/ebike-verleih-hamburg</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/rennrad-verleih-hamburg</loc>
+  <loc>https://www.listnride.de/rennrad-verleih-hamburg</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/ebike-verleih-wien</loc>
+  <loc>https://www.listnride.de/ebike-verleih-wien</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/rennrad-verleih-wien</loc>
+  <loc>https://www.listnride.de/rennrad-verleih-wien</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/mountainbike-verleih-wien</loc>
+  <loc>https://www.listnride.de/mountainbike-verleih-wien</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/rennrad-verleih-mallorca</loc>
+  <loc>https://www.listnride.de/rennrad-verleih-mallorca</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/mountainbike-verleih-mallorca</loc>
+  <loc>https://www.listnride.de/mountainbike-verleih-mallorca</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/berlin</loc>
+  <loc>https://www.listnride.de/berlin</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/munich</loc>
+  <loc>https://www.listnride.de/munich</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/amsterdam</loc>
+  <loc>https://www.listnride.de/amsterdam</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/vienna</loc>
+  <loc>https://www.listnride.de/vienna</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/search/Berlin</loc>
+  <loc>https://www.listnride.de/search/Berlin</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/search/Munich</loc>
+  <loc>https://www.listnride.de/search/Munich</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/search/Amsterdam</loc>
+  <loc>https://www.listnride.de/search/Amsterdam</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/search/Vienna</loc>
+  <loc>https://www.listnride.de/search/Vienna</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/bikeshop</loc>
+  <loc>https://www.listnride.de/bikeshop</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/about</loc>
+  <loc>https://www.listnride.de/about</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/press</loc>
+  <loc>https://www.listnride.de/press</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/jobs</loc>
+  <loc>https://www.listnride.de/jobs</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/invite-friends</loc>
+  <loc>https://www.listnride.de/invite-friends</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/terms</loc>
+  <loc>https://www.listnride.de/terms</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/privacy</loc>
+  <loc>https://www.listnride.de/privacy</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://de.listnride.com/imprint</loc>
+  <loc>https://www.listnride.de/imprint</loc>
   <lastmod>2017-09-01T14:30:54+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
