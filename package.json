@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "node js packages, script to wrap angular app in Heroku",
   "engines": {
-    "node": "6.9.x",
-    "npm": "4.1.x"
+    "node": "8.5.x",
+    "npm": "5.3.x"
   },
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,9 @@
     "postinstall": "npm install --production --prefix listnride/ && gulp deploy --gulpfile listnride/gulpfile.js"
   },
   "dependencies": {
-    "express": "4.13.3",
     "del": "^2.2.2",
+    "express": "4.13.3",
+    "express-enforces-ssl": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-angular-templatecache": "^2.0.0",
     "gulp-clean-css": "^2.0.13",
@@ -35,11 +36,12 @@
     "gulp-uglify": "^2.0.0",
     "gulp-uglifyjs": "^0.6.2",
     "gulp-useref": "^3.1.2",
+    "helmet": "^3.8.1",
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1",
-    "run-sequence": "^1.2.2",
+    "postcss": "^5.2.16",
     "prerender-node": "^2.5.0",
-    "postcss": "^5.2.16"
+    "run-sequence": "^1.2.2"
   },
   "keywords": [
     "node",
