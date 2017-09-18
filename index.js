@@ -23,24 +23,6 @@ app.set('port', (process.env.PORT || 9003));
 // see all transactions through server
 app.use(logger);
 
-app.use(function (req, res, next) {
-  var lastSubdomain = req.subdomains[req.subdomains.length - 1];
-  if (lastSubdomain === 'www') {
-    var host = req.get('host');
-    var subdomainlessHost = host.substr(host.indexOf("."));
-    var language = req.acceptsLanguages("en", "de", "nl");
-    var newURL;
-    if (language) {
-      newURL = req.protocol + "://" + language + subdomainlessHost + req.originalUrl;
-    } else {
-      newURL = req.protocol + "://en" + subdomainlessHost + req.originalUrl;
-    }
-    res.redirect(302, newURL);
-  } else {
-    return next();
-  }
-});
-
 // by default serves index.html
 // http://expressjs.com/en/4x/api.html#express.static
 app.use(express.static(__dirname.concat('/listnride/dist'), {index: 'index.html'}));
