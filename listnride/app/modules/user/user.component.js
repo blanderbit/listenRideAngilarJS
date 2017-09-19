@@ -27,7 +27,7 @@ angular.module('user',[]).component('user', {
             user.openingHoursEnabled = user.anyHours ? response.data.opening_hours.enabled : false;
             user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
             user.rating = (user.user.rating_lister + user.user.rating_rider);
-            user.current_payment = !_.isEmpty(response.data.current_payment_method);
+            user.current_payment = response.data.status === 3;
             if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
               user.rating = user.rating / 2;
             }

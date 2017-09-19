@@ -342,7 +342,7 @@ angular.module('bike').component('calendar', {
 
       // This function handles booking and all necessary validations
       calendar.confirmBooking = function () {
-        if (calendar.bikeFamily === 15 || !_.isEmpty(calendar.rider.current_payment_method)) {
+        if (calendar.bikeFamily === 15 || calendar.rider.status === 3) {
           showBookingDialog();
         } else {
           // User did not enter any payment method yet
