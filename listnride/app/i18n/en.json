@@ -174,7 +174,8 @@
       "business-title": "Upload your Shop Logo"
     },
     "3": {
-      "title": "Tell something about yourself or shop"
+      "title": "Tell something about yourself or shop",
+      "label": "Description (min. 20 Characters)"
     },
     "4": {
       "description": "Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder.",
