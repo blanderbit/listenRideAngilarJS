@@ -135,7 +135,7 @@
     "payout-method-description": "Auf deine Auszahlungsmethode überweisen wir dir deine Mieteinnahmen. Du musst sie daher spätestens hinzufügen, wenn du eine Miet-Anfrage als Vermieter akzeptierst.",
     "add-payment-method": "Zahlungsmittel hinzufügen",
     "vouchers": "Gutscheine",
-    "payment-credit-card": "Dein aktuelles Zahlungsmittel ist eine Kreditkarte und endet auf",
+    "payment-credit-card": "Dein aktuelles Zahlungsmittel ist eine Kreditkarte ",
     "payment-paypal": "Dein aktuelles Zahlungsmittel ist ein Paypal-Konto mit der Email-Adresse",
     "no-payment-method": "Du hast bisher kein Zahlungsmittel angegeben.",
     "no-payout-method": "Du hast bisher keine Auszahlungsmethode angegeben.",
@@ -153,7 +153,8 @@
     "meta-description": "Ändere deine Profil- und Zahlungsdaten.",
     "company-name":"Unternehmensname",
     "company-information":"Unternehmensinformationen",
-    "vat":"VAT"
+    "vat":"VAT",
+    "payment-info":"Show current Payment"
   },
 
   "verification": {

@@ -134,7 +134,7 @@
     "payout-method-description": "Your payout method is where we send you your rental income. Therefore you have to add it latest when accepting a request as a lister.",
     "add-payment-method": "Add Payment Method",
     "vouchers": "Vouchers",
-    "payment-credit-card": "Your current payment method is a credit card ending with",
+    "payment-credit-card": "Your current payment method is a credit card ",
     "payment-paypal": "Your current payment method is a paypal account with email address",
     "no-payment-method": "You didn't enter any payment method so far.",
     "no-payout-method": "You didn't enter any payout method so far.",
@@ -152,7 +152,8 @@
     "meta-description": "Change your profile - und payment settings.",
     "company-name":"Company name",
     "company-information":"Company information",
-    "vat":"VAT"
+    "vat":"VAT",
+    "payment-info":"Show current Payment"
   },
   "verification": {
     "verify-profile": "Verify your Profile",

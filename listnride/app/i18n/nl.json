@@ -135,7 +135,7 @@
     "payout-method-description": "Op de aangegeven uitbetaalmethode wordt de huuropbrengst aan je overgemaakt. Therefore you have to add it latest when accepting a request as a lister.",
     "add-payment-method": "Betaalmiddel toevoegen",
     "vouchers": "Vouchers",
-    "payment-credit-card": "Je aktuele betaalmiddel is creditkaart die eindigt op",
+    "payment-credit-card": "Je aktuele betaalmiddel is creditkaart ",
     "payment-paypal": "Je aktuele betaalmiddel is Paypal met het bijbehorende e-mailadres",
     "no-payment-method": "Je hebt nog geen betaalmiddel opgeslagen.",
     "no-payout-method": "Je hebt nog geen uitbetaalmiddel opgeslagen.",
@@ -153,7 +153,8 @@
     "meta-description": "Pas je profiel- en of betaalgegevens aan",
     "company-name":"Bedrijfsnaam",
     "company-information":"Bedrijfsgegevens",
-    "vat":"VAT"
+    "vat":"VAT",
+    "payment-info":"Show current Payment"
   },
 
   "verification": {
