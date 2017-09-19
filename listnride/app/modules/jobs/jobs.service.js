@@ -47,7 +47,7 @@ angular.module('jobs').factory('JobsService', ['$q', function ($q) {
         'Personal interest in the biking scene and ideally with existing relevant contacts in the industry',
         'High drive for success and high discipline in executing sales plan in a structured manner',
         'Senior personality that easily gains trust talking to shop owners and bike brands',
-        '2+ years experience working in a commercial role, with a proven track record',
+        '2+ years experience working in a commercial role, with a proven track record'
       ]
     },
     offer: {
@@ -70,7 +70,8 @@ angular.module('jobs').factory('JobsService', ['$q', function ($q) {
           'Content creation for SEO purposes, community engagement and or social media',
           'Manage Facebook page, Instagram account, Newsletter, and Blog',
           'Optimize onsite content, add new relevant topics to make our presence more appealing',
-          'Identify and connect with the leaders, celebrities, champions and influencers in the bike scene and adjacencies to increase the buzz around and adoption of listnride',
+          'Identify and connect with the leaders, celebrities, champions and influencers in the bike scene.',
+          'Connect with adjacencies to increase the buzz around and adoption of listnride'
         ]
       },
       required: {
