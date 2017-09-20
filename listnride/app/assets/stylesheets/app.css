@@ -148,6 +148,10 @@ md-card md-card-title {
   margin: 0;
 }
 
+button.md-primary.md-cancel-button.md-button.ng-scope.md-default-theme.md-ink-ripple {
+  background-color: rgb(122, 178, 248);
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
@@ -1860,3 +1864,15 @@ and (max-device-width : 568px) {
     pointer-events: none;
   }
 }
+
+/* intl-tel-input -- required for build minification */
+.iti-flag {
+  background-image: url("../ui_images/flags.png") !important;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .iti-flag {
+    background-image: url("../ui_images/flags@2x.png") !important;
+  }
+}
+
