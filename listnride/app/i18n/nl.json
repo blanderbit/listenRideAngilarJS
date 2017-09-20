@@ -96,7 +96,8 @@
     "for-shops": "For Bikeshops",
     "contact-us": "Neem contact met ons op per ",
     "required": "Dit is verplicht",
-    "update": "Bijwerken"
+    "update": "Bijwerken",
+    "load-more": "Load more"
   },
 
   "toasts": {
@@ -267,7 +268,8 @@
     "3": "{{user.first_name}} heeft de boeking bevestigd. Je fiets is nu verhuurd van {{timespan}}! De Contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\n \nNaam: {{user.first_name}} {{user.last_name}} \nNummer: {{user.phone_number}} \nAdres: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
     "5": "Hartelijk bedankt voor je recensie. De verhuurtransactie is nu afgerond en het Geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons graag een e-mail aan hello@listnride.com",
     "8": "Je hebt de aanvraag afgewezen. Schrijf de aanvrager kort een berichtje waarom het niet lukt.",
-    "9": "helaas heeft {{user.first_name}} de aanvraag niet bevestigd."
+    "9": "helaas heeft {{user.first_name}} de aanvraag niet bevestigd.",
+    "10": "Your request was cancelled by system"
   },
 
   "rideChat": {
