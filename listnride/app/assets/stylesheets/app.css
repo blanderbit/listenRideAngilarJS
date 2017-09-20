@@ -148,6 +148,10 @@ md-card md-card-title {
   margin: 0;
 }
 
+button.md-primary.md-cancel-button.md-button.ng-scope.md-default-theme.md-ink-ripple {
+  background-color: rgb(122, 178, 248);
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
