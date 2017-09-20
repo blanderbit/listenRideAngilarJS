@@ -47,6 +47,7 @@ angular.module('bike',[]).component('bike', {
       );
 
       bike.showGalleryDialog = function(event) {
+        event.stopPropagation();
         $mdDialog.show({
           controller: GalleryDialogController,
           controllerAs: 'galleryDialog',
