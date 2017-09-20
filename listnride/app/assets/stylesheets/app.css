@@ -797,6 +797,62 @@ md-grid-list md-grid-tile.tile-vienna {
   background-image: url(../ui_images/cities/lnr_vienna.jpg);
 }
 
+.md-dialog-fullscreen.dialog-bikes,
+.md-dialog-fullscreen.dialog-bikes .dialog-content {
+  overflow: visible !important;
+}
+
+.bikes .slick-dots li.slick-active button:before,
+.bikes .slick-dots li button:hover:before {
+  color: #7ab2f8;
+}
+
+.bikes .slick-dots li button:before {
+  font-size: 12px;
+}
+
+.bikes .arrow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-top: -30px;
+  padding: 30px;
+  cursor: pointer;
+}
+
+.bikes .arrow-prev {
+  right: 100%;
+  padding-right: 0;
+}
+.bikes .arrow-prev:before,
+.bikes .arrow-next:before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.bikes .arrow-prev:before {
+  border-top: 5px solid #fff;
+  border-left: 5px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.bikes .arrow-next {
+  left: 100%;
+  padding-left: 0;
+}
+
+.bikes .arrow-next:before {
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 .testimonials-container {
   margin: auto;
   width: calc(100% - 50px);
