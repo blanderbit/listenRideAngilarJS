@@ -165,7 +165,7 @@
               <div flex-gt-xs="70" layout="column" layout-margin>
                 <md-input-container flex>
                   <label>{{ 'forms.description' | translate }}</label>
-                  <textarea required md-no-resize name="description" minlength="100" md-maxlength="800" ng-model="settings.user.description" rows="3"></textarea>
+                  <textarea required md-no-resize name="description" minlength="50" md-maxlength="800" ng-model="settings.user.description" rows="3"></textarea>
                   <div ng-messages="settings.form.description.$error" role="alert">
                     <div ng-message="minlength">{{ 'forms.description_min_100' | translate }}</div>
                   </div>
