@@ -108,7 +108,7 @@ angular.module('settings',[]).component('settings', {
         settings.user.business = false;
         userApi.getUserData().then(function (response) {
           settings.user = response.data;
-          settings.current_payment = !_.isEmpty(response.data.current_payment_method);
+          settings.current_payment = response.data.status === 3;
           updatePrivatePhoneNumber(response.data.phone_number);
           settings.loaded = true;
           settings.openingHoursEnabled = settings.user.opening_hours ? settings.user.opening_hours.enabled : false;
@@ -574,6 +574,17 @@ angular.module('settings',[]).component('settings', {
         var top = (screen.height / 2) - (h / 2);
 
         $window.open(ENV.userEndpoint + $localStorage.userId + "/payment_methods/new", "popup", "width=" + w + ",height=" + h + ",left=" + left + ",top=" + top);
+      };
+
+      settings.currentPaymentMethod = function () {
+        api.get('/users/' + settings.user.id + '/current_payment').then(
+          function(response) {
+            settings.user.current_payment_method = response.data;
+          },
+          function(error) {
+
+          }
+        );
       };
       
       settings.changePhoneNumber = function (event) {

@@ -96,7 +96,8 @@
     "for-shops": "Für Fahrradläden",
     "contact-us": "Bitte kontaktiere uns via ",
     "required": "Dies ist erforderlich",
-    "update": "Aktualisiert"
+    "update": "Aktualisiert",
+    "load-more": "Load more"
   },
 
   "toasts": {
@@ -135,7 +136,7 @@
     "payout-method-description": "Auf deine Auszahlungsmethode überweisen wir dir deine Mieteinnahmen. Du musst sie daher spätestens hinzufügen, wenn du eine Miet-Anfrage als Vermieter akzeptierst.",
     "add-payment-method": "Zahlungsmittel hinzufügen",
     "vouchers": "Gutscheine",
-    "payment-credit-card": "Dein aktuelles Zahlungsmittel ist eine Kreditkarte und endet auf",
+    "payment-credit-card": "Dein aktuelles Zahlungsmittel ist eine Kreditkarte ",
     "payment-paypal": "Dein aktuelles Zahlungsmittel ist ein Paypal-Konto mit der Email-Adresse",
     "no-payment-method": "Du hast bisher kein Zahlungsmittel angegeben.",
     "no-payout-method": "Du hast bisher keine Auszahlungsmethode angegeben.",
@@ -153,7 +154,8 @@
     "meta-description": "Ändere deine Profil- und Zahlungsdaten.",
     "company-name":"Unternehmensname",
     "company-information":"Unternehmensinformationen",
-    "vat":"VAT"
+    "vat":"VAT",
+    "payment-info":"Show current Payment"
   },
 
   "verification": {
@@ -176,7 +178,8 @@
       "business-title": "Lade dein Geschäftslogo hoch"
     },
     "3": {
-      "title": "Erzähle etwas über dich"
+      "title": "Erzähle etwas über dich",
+      "label": "Beschreibung (min. 20 Buchstaben)"
     },
     "4": {
       "description": "Bestätige Deine E-Mail-Adresse, indem Du auf den Link in der Bestätigungsmail klickst, die wir Dir nach der Registrierung schicken. Falls Du sie nicht mehr findest, kannst Du die Mail erneut anfordern. Erscheint sie nicht sofort in Deinem Postfach, warte bitte noch ein paar Minuten oder überprüfe deinen Spam-Ordner.",
@@ -265,7 +268,8 @@
     "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun Dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via Email zugesendet.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon-Nummer: {{user.phone_number}} <br>Adresse: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
     "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
-    "9": "Leider hat {{user.first_name}} die Anfrage nicht bestätigt."
+    "9": "Leider hat {{user.first_name}} die Anfrage nicht bestätigt.",
+    "10": "Your request was cancelled by system"
   },
 
   "rideChat": {

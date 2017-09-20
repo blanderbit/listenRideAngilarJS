@@ -64,6 +64,7 @@ angular.module('listnride', [
   'ngSanitize',
   'angular-input-stars',
   'ngMeta',
+  'infinite-scroll',
   'slickCarousel',
   'angulartics',
   'angulartics.google.analytics',
