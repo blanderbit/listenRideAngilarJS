@@ -20,7 +20,7 @@
         },
         meta: {
           disableUpdate: true
-        },
+        }
       });
 
       $stateProvider.state({
