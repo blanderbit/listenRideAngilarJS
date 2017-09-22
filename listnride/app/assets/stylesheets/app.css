@@ -47,7 +47,6 @@ ui-view {
   position: relative;
 }
 
-.single-column,
 requests,
 search {
   position: absolute;

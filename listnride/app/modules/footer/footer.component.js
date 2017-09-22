@@ -4,9 +4,20 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
   templateUrl: 'app/modules/footer/footer.template.html',
   controllerAs: 'footer',
   controller: [
-    '$window', '$location', '$translate', '$state', '$localStorage',
-    function FooterController($window, $location, $translate, $state, $localStorage) {
+    '$scope', '$window', '$location', '$translate', '$stateParams',
+    function FooterController($scope, $window, $location, $translate, $stateParams) {
       var footer = this;
+
+      footer.hideFooter = $stateParams.hideFooter;
+
+      $scope.$watch(
+        function() { return $stateParams.hideFooter; },
+        function(newValue, oldValue) {
+          if ( newValue !== oldValue ) {
+            footer.hideFooter = newValue;
+          }
+        }
+      );
 
       var url = "";
       var host = $location.host().split('.');
