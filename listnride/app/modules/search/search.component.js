@@ -49,7 +49,6 @@ angular.module('search',[]).component('search', {
       populateBikes(search.location);
 
       NgMap.getMap({id: "searchMap"}).then(function(map) {
-        // console.log(map, map.infoWindows.infoWindow);
         search.map = map;
       });
 
