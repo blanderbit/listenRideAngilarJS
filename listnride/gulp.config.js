@@ -18,7 +18,7 @@ module.exports = function () {
             i18n: './app/i18n/**/*',
             fonts: 'node_modules/font-awesome/fonts/*',
             momentjs: 'node_modules/moment/**/*',
-            sitemap: './app/assets/downloads/sitemap.xml',
+            downloadables: './app/assets/downloads/*',
             js_modules: './js_modules/**/*'
         },
         js: ['./app/*.js', './app/**/*.js', '!**/*test.js'],

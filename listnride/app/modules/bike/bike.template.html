@@ -162,7 +162,14 @@
    
   </div>
 
-  <ng-map ng-if="bike.data !== undefined" default-style="false" style="height: 350px" center="[{{bike.mapOptions.lat}},{{bike.mapOptions.lng}}]" zoom="{{bike.mapOptions.zoom}}" scrollwheel="false">
+  <ng-map
+    ng-if="bike.data !== undefined"
+    default-style="false"
+    style="height: 350px"
+    center="[{{bike.mapOptions.lat}},{{bike.mapOptions.lng}}]"
+    zoom="{{bike.mapOptions.zoom}}"
+    class="lnr-no-events"
+  >
     <shape name="circle" no-watcher="true"
       stroke-color="#7AB2F8"
       stroke-opacity="1"

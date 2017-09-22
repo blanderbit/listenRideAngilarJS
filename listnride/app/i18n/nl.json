@@ -318,7 +318,7 @@
     "sign-up": "Aanmelden",
     "sign-up-with-facebook": "Met facebook aanmelden",
     "member-already": "Al geregistreerd?",
-    "business": "Fietswinkel?",
+    "business": "Zakelijke gebruiker?",
     "description": "Beschrijving",
     "description_min_100": "Beschrijvingstekst moet min. 100 tekens lang zijn",
     "address": "Adres",
@@ -330,6 +330,7 @@
     "country": "Land",
     "company-name": "Company name",
     "update-contact": "Contactgegevens wijzigen",
+    "company-contact-info": "Vul uw Bedrijfsnaam en naam van de contact persoon in",
     "errors": {
       "password-length": "Wachtwoord dient minimaal 6 karakters lang te zijn",
       "password-missing": "Wachtwoord aanmaken",

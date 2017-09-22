@@ -11,7 +11,10 @@ angular.module('bike',[]).component('bike', {
         lat: 0,
         lng: 0,
         zoom: 14,
-        radius: 500
+        radius: 500,
+        scrollwheel: false,
+        draggable: false,
+        gestureHandling: 'cooperative'
       };
 
       bike.mobileCalendar = function() {

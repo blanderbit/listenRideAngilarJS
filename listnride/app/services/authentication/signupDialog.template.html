@@ -18,18 +18,20 @@
 
     <md-dialog-content>
       <div class="md-dialog-content" layout="column">
-        <md-button ng-click="signupDialog.connectFb()" class="md-primary md-lined lnr-btn-fb" ng-hide="signupDialog.business">
-          {{ 'forms.sign-up-with-facebook' | translate }}
-        </md-button>
-        <div class="lnr-middle-divider" ng-hide="signupDialog.business">
-          {{ 'forms.or' | translate }}
+        <div ng-style="{'display': signupDialog.business ? 'none' : ''}" layout="column">
+          <md-button ng-click="signupDialog.connectFb()" class="md-primary md-lined lnr-btn-fb">
+            {{ 'forms.sign-up-with-facebook' | translate }}
+          </md-button>
+          <div class="lnr-middle-divider">
+            {{ 'forms.or' | translate }}
+          </div>
         </div>
 
-        <div class="sign-up-tip" ng-hide="!signupDialog.business">
-          Please fill form with company contact person information.
+        <div class="sign-up-tip" ng-style="{'display': signupDialog.business ? '' : 'none'}">
+          {{ 'forms.company-contact-info' | translate }}
         </div>
 
-        <md-input-container ng-hide="!signupDialog.business">
+        <md-input-container ng-style="{'display': signupDialog.business ? '' : 'none'}">
           <label ng-class="{'text-error': signupDialog.businessError}">{{ 'forms.company-name' | translate }}</label>
           <input
             name="company_name"
@@ -116,11 +118,8 @@
         </div>
         <div class="sign-up-links" flex layout="row" layout-align="space-between center">
           <a class="lnr-link" ng-click="signupDialog.showLogin()">{{ 'forms.member-already' | translate }}</a>
-          <a class="lnr-link" ng-click="signupDialog.setBusiness(false)" ng-hide="!signupDialog.business">
-            {{ 'verification.private' | translate }}?
-          </a>
-          <a class="lnr-link" ng-click="signupDialog.setBusiness(true)" ng-hide="signupDialog.business">
-            {{ 'forms.business' | translate }}
+          <a class="lnr-link" ng-click="signupDialog.business = !signupDialog.business">
+            {{ (signupDialog.business ? 'verification.private' : 'forms.business') | translate }}
           </a>
         </div>
       </div>
