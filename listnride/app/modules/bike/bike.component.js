@@ -97,6 +97,17 @@ angular.module('bike',[]).component('bike', {
         galleryDialog.hide = function() {
           $mdDialog.hide();
         }
+        galleryDialog.slickConfig = {
+          enabled: true,
+          autoplay: true,
+          draggable: true,
+          autoplaySpeed: 12000,
+          ease: 'ease-in-out',
+          speed: '500',
+          dots: true,
+          prevArrow: "<div class='arrow arrow-prev'></div>",
+          nextArrow: "<div class='arrow arrow-next'></div>"
+        }
       }
 
       var CalendarDialogController = function() {
