@@ -50,6 +50,7 @@ angular.module('bike',[]).component('bike', {
       );
 
       bike.showGalleryDialog = function(event) {
+        event.stopPropagation();
         $mdDialog.show({
           controller: GalleryDialogController,
           controllerAs: 'galleryDialog',
@@ -95,6 +96,17 @@ angular.module('bike',[]).component('bike', {
         galleryDialog.image_5 = bikeData.image_file_5.image_file_5.url;
         galleryDialog.hide = function() {
           $mdDialog.hide();
+        }
+        galleryDialog.slickConfig = {
+          enabled: true,
+          autoplay: true,
+          draggable: true,
+          autoplaySpeed: 12000,
+          ease: 'ease-in-out',
+          speed: '500',
+          dots: true,
+          prevArrow: "<div class='arrow arrow-prev'></div>",
+          nextArrow: "<div class='arrow arrow-next'></div>"
         }
       }
 

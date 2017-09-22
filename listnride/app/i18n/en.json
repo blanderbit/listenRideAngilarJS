@@ -97,7 +97,8 @@
     "for-shops": "For Bikeshops",
     "contact-us": "Please get in touch with us via ",
     "required": "This is required",
-    "update": "Update"
+    "update": "Update",
+    "load-more": "Load more"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
@@ -134,7 +135,7 @@
     "payout-method-description": "Your payout method is where we send you your rental income. Therefore you have to add it latest when accepting a request as a lister.",
     "add-payment-method": "Add Payment Method",
     "vouchers": "Vouchers",
-    "payment-credit-card": "Your current payment method is a credit card ending with",
+    "payment-credit-card": "Your current payment method is a credit card ",
     "payment-paypal": "Your current payment method is a paypal account with email address",
     "no-payment-method": "You didn't enter any payment method so far.",
     "no-payout-method": "You didn't enter any payout method so far.",
@@ -152,7 +153,8 @@
     "meta-description": "Change your profile - und payment settings.",
     "company-name":"Company name",
     "company-information":"Company information",
-    "vat":"VAT"
+    "vat":"VAT",
+    "payment-info":"Show current Payment"
   },
   "verification": {
     "verify-profile": "Verify your Profile",
@@ -173,7 +175,8 @@
       "business-title": "Upload your Shop Logo"
     },
     "3": {
-      "title": "Tell something about yourself or shop"
+      "title": "Tell something about yourself or shop",
+      "label": "Description (min. 20 Characters)"
     },
     "4": {
       "description": "Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder.",
@@ -258,7 +261,8 @@
     "3": "You've accepted the request. The bike is now booked and you'll rent it out from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Phone: {{user.phone_number}} <br>Address: {{user.street}}, {{user.zip}} {{user.city}}, {{user.country}}",
     "5": "Thanks for confirming retrieval of your bike and rating {{user.first_name}}. The rental was successful and the money will get transferred to the bank account you provided during the next 7 working days.<br><br>In case of any further questions or feedback, we’d love to receive them under <a mailto:\"hello@listnride.com\">hello@listnride.com</a>",
     "8": "You rejected the request. Please tell the rider why you can't rent him the bike.",
-    "9": "Unfortunately {{user.first_name}} didn't confirm the request"
+    "9": "Unfortunately {{user.first_name}} didn't confirm the request",
+    "10": "Your request was cancelled by system"
   },
   "rideChat": {
     "1": "You would like to rent the <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> by {{lister.first_name}} {{lister.last_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
@@ -553,7 +557,7 @@
       "price-title": "Super price.",
       "price-content": "The bikes listed on our platform are rented out by private owners as well as specialist dealers and rental services. What’s in it for you: the perfect bike at good value for money.",
       "easy-title": "Super easy.",
-      "easy-content": "Find and book your rental bike before going on a trip or simply on the go – online or using our "
+      "easy-content": "Find and book your rental bike before going on a trip or simply on the go by using our mobile website."
     },
     "search-section": {
       "header": "Where would you like to go?",

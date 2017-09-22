@@ -165,7 +165,7 @@
               <div flex-gt-xs="70" layout="column" layout-margin>
                 <md-input-container flex>
                   <label>{{ 'forms.description' | translate }}</label>
-                  <textarea required md-no-resize name="description" minlength="100" md-maxlength="800" ng-model="settings.user.description" rows="3"></textarea>
+                  <textarea required md-no-resize name="description" minlength="50" md-maxlength="800" ng-model="settings.user.description" rows="3"></textarea>
                   <div ng-messages="settings.form.description.$error" role="alert">
                     <div ng-message="minlength">{{ 'forms.description_min_100' | translate }}</div>
                   </div>
@@ -237,11 +237,22 @@
               </div>
               <div flex-gt-xs="70" layout="column" layout-margin>
                 <p>{{ 'settings.payment-method-description' | translate }}</p>
-                <p class="md-body-2" ng-if="settings.current_payment && settings.user.current_payment_method.type == 1">{{ 'settings.payment-credit-card' | translate }} {{ settings.user.current_payment_method.details }}</p>
-                <p class="md-body-2" ng-if="settings.current_payment && settings.user.current_payment_method.type == 2">{{ 'settings.payment-paypal' | translate }} {{ settings.user.current_payment_method.details }}</p>
-                <p ng-if="!settings.current_payment">{{ 'settings.no-payment-method' | translate }}</p>
+                <p class="md-body-2" ng-if="settings.current_payment && settings.user.current_payment_method.type == 1">
+                  {{ 'settings.payment-credit-card' | translate }} {{ settings.user.current_payment_method.details }}
+                </p>
+                <p class="md-body-2" ng-if="settings.current_payment && settings.user.current_payment_method.type == 2">
+                  {{ 'settings.payment-paypal' | translate }} {{ settings.user.current_payment_method.details }}
+                </p>
+                <p ng-if="!settings.current_payment">
+                  {{ 'settings.no-payment-method' | translate }}
+                </p>
                 <div layout="row" layout-align="end">
-                  <md-button class="md-raised md-primary" ng-click="settings.openPaymentWindow()">{{ 'settings.add-payment-method' | translate }}</md-button>
+                  <md-button class="md-raised md-primary" ng-click="settings.currentPaymentMethod()">
+                    {{ 'settings.payment-info' | translate }}
+                  </md-button>
+                  <md-button class="md-raised md-primary" ng-click="settings.openPaymentWindow()">
+                    {{ 'settings.add-payment-method' | translate }}
+                  </md-button>
                 </div>
               </div>
             </div>
@@ -500,6 +511,4 @@
       <!--end business -->
     </md-tabs>
   </div>
-
-  <footer></footer>
 </md-content>

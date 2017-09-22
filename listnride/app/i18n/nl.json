@@ -96,7 +96,8 @@
     "for-shops": "For Bikeshops",
     "contact-us": "Neem contact met ons op per ",
     "required": "Dit is verplicht",
-    "update": "Bijwerken"
+    "update": "Bijwerken",
+    "load-more": "Load more"
   },
 
   "toasts": {
@@ -135,7 +136,7 @@
     "payout-method-description": "Op de aangegeven uitbetaalmethode wordt de huuropbrengst aan je overgemaakt. Therefore you have to add it latest when accepting a request as a lister.",
     "add-payment-method": "Betaalmiddel toevoegen",
     "vouchers": "Vouchers",
-    "payment-credit-card": "Je aktuele betaalmiddel is creditkaart die eindigt op",
+    "payment-credit-card": "Je aktuele betaalmiddel is creditkaart ",
     "payment-paypal": "Je aktuele betaalmiddel is Paypal met het bijbehorende e-mailadres",
     "no-payment-method": "Je hebt nog geen betaalmiddel opgeslagen.",
     "no-payout-method": "Je hebt nog geen uitbetaalmiddel opgeslagen.",
@@ -153,7 +154,8 @@
     "meta-description": "Pas je profiel- en of betaalgegevens aan",
     "company-name":"Bedrijfsnaam",
     "company-information":"Bedrijfsgegevens",
-    "vat":"VAT"
+    "vat":"VAT",
+    "payment-info":"Show current Payment"
   },
 
   "verification": {
@@ -176,7 +178,8 @@
       "business-title": "Logo toevoegen"
     },
     "3": {
-      "title": "Vertel iets over jezelf / je winkel"
+      "title": "Vertel iets over jezelf / je winkel",
+      "label": "omschrijving (min. 20 tekens)"
     },
     "4": {
       "description": "Bevestig je emailadres, door op de aktiveringslink te klicken in de toegestuurde bevestigingsmail. Deze heb je direkt na je aanmelding ontvangen. Indien je deze mail niet meer kan vinden, kan je de mail nogmaals aanvragen. Verschijnt de mail niet direct in je postvak, wacht dan nog een paar minuten of check de spamfolder.",
@@ -265,7 +268,8 @@
     "3": "{{user.first_name}} heeft de boeking bevestigd. Je fiets is nu verhuurd van {{timespan}}! De Contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\n \nNaam: {{user.first_name}} {{user.last_name}} \nNummer: {{user.phone_number}} \nAdres: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
     "5": "Hartelijk bedankt voor je recensie. De verhuurtransactie is nu afgerond en het Geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons graag een e-mail aan hello@listnride.com",
     "8": "Je hebt de aanvraag afgewezen. Schrijf de aanvrager kort een berichtje waarom het niet lukt.",
-    "9": "helaas heeft {{user.first_name}} de aanvraag niet bevestigd."
+    "9": "helaas heeft {{user.first_name}} de aanvraag niet bevestigd.",
+    "10": "Your request was cancelled by system"
   },
 
   "rideChat": {
@@ -571,7 +575,7 @@
       "price-title": "Super Prijs.",
       "price-content": "Op listnride verhuren particulieren als ook zakelijke aanbieders, zoals fietswinkels, hun fietsen. Jouw voordeel: De perfecte fiets voor een faire prijs.",
       "easy-title": "Super eenvoudig.",
-      "easy-content": "Zoek en boek een mooie huurfiets, vóórdat je op vakantie gaat, of simple onderweg: online of met onze"
+      "easy-content": "Zoek en boek een mooie huurfiets, vóórdat je op vakantie gaat, of simple onderweg: online met onze mobile website"
     },
     "search-section": {
       "header": "Waar gaan we heen?",

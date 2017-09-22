@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('requests', []).component('requests', {
+angular.module('requests', ['infinite-scroll'])
+  .component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
   controller: ['$localStorage',
@@ -58,6 +59,7 @@ angular.module('requests', []).component('requests', {
       };
 
       requests.requests = [];
+      requests.all_requests = [];
       requests.request = {};
       requests.message = "";
       requests.showChat = false;
@@ -68,21 +70,29 @@ angular.module('requests', []).component('requests', {
       requests.request.rideChat;
       requests.request.chatFlow;
       requests.userId = $localStorage.userId;
+      requests.currentPage = 1;
 
-      api.get('/users/' + $localStorage.userId + '/requests').then(
-        function (success) {
-          requests.all_requests = $filter('orderBy')(success.data, '-created_at', false);
-          requests.requests = angular.copy(requests.all_requests);
-          requests.loadingList = false;
-          if (requests.all_requests.length > 0) {
-            requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
-            requests.loadRequest(requests.selected);
+      requests.nextPage = function() {
+        console.log(requests.currentPage)
+        requests.loadingList = true;
+        api.get('/users/' + $localStorage.userId + '/requests?page=' + requests.currentPage++).then(
+          function (success) {
+            var newRequests = success.data;
+            requests.all_requests = requests.all_requests.concat(newRequests);
+            requests.requests = angular.copy(requests.all_requests);
+            requests.filterBikes(requests.filters.type, false);
+            requests.filters.applyFilter(requests.filters.selected);
+            requests.loadingList = false;
+            if (requests.all_requests.length > 0) {
+              requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
+              requests.loadRequest(requests.selected);
+            }
+          },
+          function (error) {
+            requests.loadingList = false;
           }
-        },
-        function () {
-          requests.loadingList = false;
-        }
-      );
+        );
+      };
 
       var hideDialog = function () {
         // For small screens, show Chat Dialog again
