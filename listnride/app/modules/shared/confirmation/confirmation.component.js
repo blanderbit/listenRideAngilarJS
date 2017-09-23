@@ -32,10 +32,9 @@ angular.module('confirmation', []).component('confirmation', {
       confirmation.openDialog = function (ev) {
         $mdDialog.show({
           templateUrl: 'app/modules/shared/confirmation/confirmation.template.html',
-          controller: ['$scope', function ($scope) {
-            $scope.confirmation = confirmation;
-          }],
+          controller: ['$scope', function ($scope) {$scope.confirmation = confirmation;}],
           parent: angular.element(document.body),
+          clickOutsideToClose: true,
           targetEvent: ev
         })
         .then(function () {
