@@ -73,13 +73,13 @@
 
     <div ng-if="!message.request.rideChat && message.status == 1">
       <div layout-gt-sm="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
-        <md-button 
-          class="message-button md-raised md-warn lnr-no-margin md-button md-ink-ripple"
-          ng-disabled="message.request.status != 1 || message.buttonClicked"
-          ng-click="message.updateStatus(8)"
-        >
-          {{ 'message.reject' | translate }}
-        </md-button>
+        <confirmation
+            button-class="'message-button md-raised md-warn lnr-no-margin md-button md-ink-ripple'"
+            button-text="'message.reject'"
+            button-disable="message.request.status != 1 || message.buttonClicked"
+            confirm-text="'Are you sure?'"
+            on-success="message.updateStatus(8)">
+        </confirmation>
         <md-button
           class="message-button md-raised md-primary lnr-no-margin md-button md-ink-ripple"
           ng-disabled="message.request.status != 1 || message.buttonClicked"
@@ -104,13 +104,13 @@
 
     <div ng-if="message.request.rideChat && message.status == 1">
       <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
-        <md-button 
-          class="message-button md-raised lnr-no-margin md-button md-ink-ripple md-warn"
-          ng-disabled="message.request.status != 1"
-          ng-click="message.updateStatus(9)"
-        >
-          {{ 'shared.cancel' | translate }}
-        </md-button>
+        <confirmation
+            button-class="'message-button md-raised lnr-no-margin md-button md-ink-ripple md-warn'"
+            button-text="'shared.cancel'"
+            button-disable="message.request.status != 1"
+            confirm-text="'Are you sure?'"
+            on-success="message.updateStatus(9)">
+        </confirmation>
       </div>
     </div>
 

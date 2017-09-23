@@ -1,0 +1,23 @@
+<md-dialog>
+  <div show-xs>
+    <div class="md-toolbar-tools" layout-align="center center">
+      <md-button class="md-icon-button">
+        <md-icon></md-icon>
+      </md-button>
+      <span flex></span>
+      <h2 class="md-headline">Confirmation</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="confirmation.cancel()">
+        <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </div>
+  <md-dialog-content>
+    <div class="md-dialog-content" layout="column">{{confirmation.confirmText}}</div>
+  </md-dialog-content>
+  <md-dialog-actions layout="row">
+    <md-button class="{{confirmation.buttonClass}}" ng-click="confirmation.confirm()">
+      Confirm
+    </md-button>
+  </md-dialog-actions>
+</md-dialog>
