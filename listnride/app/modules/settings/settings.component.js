@@ -62,7 +62,7 @@ angular.module('settings',[]).component('settings', {
           verification.sendSms(changeContact.user.new_phone_number).then(function () {
             changeContact.sentConfirmationSms = true;
           }, function () {
-            changeContact.hangeContact.sentConfirmationSms = false;
+            changeContact.changeContact.sentConfirmationSms = false;
           });
         };
         
@@ -71,8 +71,9 @@ angular.module('settings',[]).component('settings', {
 
         changeContact.onInit = function () {
           userApi.getUserData().then(function (response) {
+            var phone_number = response.data.phone_number ? angular.copy('+' + response.data.phone_number) : null;
             changeContact.user = response.data;
-            changeContact.user.new_phone_number = angular.copy('+' + changeContact.user.phone_number);
+            changeContact.user.new_phone_number = phone_number;
           });
         };
 

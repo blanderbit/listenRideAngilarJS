@@ -584,6 +584,10 @@ footer .lnr-link {
   max-height: 250px;
 }
 
+.lnr-tel-int  .intl-tel-input .country-list {
+  max-height: 100px !important;
+}
+
 @media (max-width:599px) {
  .md-dialog-content {
     width: 100%;
