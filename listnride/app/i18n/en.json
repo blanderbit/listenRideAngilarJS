@@ -98,7 +98,10 @@
     "contact-us": "Please get in touch with us via ",
     "required": "This is required",
     "update": "Update",
-    "load-more": "Load more"
+    "load-more": "Load more",
+    "confirm": "Confirm",
+    "confirmation": "Confirmation",
+    "confirmation-text": "Are you sure?"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
