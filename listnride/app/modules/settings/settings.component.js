@@ -487,14 +487,12 @@ angular.module('settings',[]).component('settings', {
 
       settings.updateUser = function () {
         var data = {
-          "user": {
-            "description": settings.user.description,
-            "profile_picture": Upload.dataUrltoBlob(settings.croppedDataUrl, _.isEmpty(settings.profilePicture) ? '' : settings.profilePicture.name),
-            "street": settings.user.street,
-            "zip": settings.user.zip,
-            "city": settings.user.city,
-            "country": settings.user.country
-          }
+          "description": settings.user.description,
+          "profile_picture": Upload.dataUrltoBlob(settings.croppedDataUrl, _.isEmpty(settings.profilePicture) ? '' : settings.profilePicture.name),
+          "street": settings.user.street,
+          "zip": settings.user.zip,
+          "city": settings.user.city,
+          "country": settings.user.country
         };
 
         if (settings.password && settings.password.length >= 6) {
@@ -506,7 +504,7 @@ angular.module('settings',[]).component('settings', {
         Upload.upload({
           method: 'PUT',
           url: api.getApiUrl() + '/users/' + $localStorage.userId,
-          data: data,
+          data: {'user': settings.compactObject(data)},
           headers: {
             'Authorization': $localStorage.auth
           }
@@ -535,6 +533,16 @@ angular.module('settings',[]).component('settings', {
             );
           }
         );
+      };
+
+      settings.compactObject  = function(o) {
+        var clone = _.clone(o);
+        _.each(clone, function(v, k) {
+          if(!v) {
+            delete clone[k];
+          }
+        });
+        return clone;
       };
 
       settings.updateBusiness = function () {
