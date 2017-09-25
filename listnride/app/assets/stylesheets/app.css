@@ -803,11 +803,19 @@ md-grid-list md-grid-tile.tile-vienna {
 
 .bikes .slick-dots li.slick-active button:before,
 .bikes .slick-dots li button:hover:before {
-  color: #7ab2f8;
+  background-color: #7ab2f8;
 }
 
 .bikes .slick-dots li button:before {
-  font-size: 12px;
+  content: '';
+  display: block;
+  position: static;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  font-size: 0;
+  background-color: #000;
+
 }
 
 .bikes .arrow {
