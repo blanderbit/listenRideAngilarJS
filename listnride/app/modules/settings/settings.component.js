@@ -19,11 +19,12 @@ angular.module('settings',[]).component('settings', {
     'userApi',
     '$timeout',
     '$mdDialog',
+    'authentication',
     function SettingsController(
       $localStorage, $window, $mdToast,
       $translate, api, accessControl, sha256, Base64,
       Upload, loadingDialog, ENV, ngMeta,
-      userApi, $timeout, $mdDialog
+      userApi, $timeout, $mdDialog, authentication
       ) {
       if (accessControl.requireLogin()) {
         return;
@@ -484,6 +485,32 @@ angular.module('settings',[]).component('settings', {
           }
         );
       };
+
+      settings.deleteAccount = function(event) {
+        var confirm = $mdDialog.confirm()
+          .title($translate.instant('settings.delete-account-sure'))
+          .textContent($translate.instant('settings.delete-account-sure-description'))
+          .targetEvent(event)
+          .ok($translate.instant('settings.delete-account-yes'))
+          .cancel($translate.instant('settings.delete-account-no'));
+
+        $mdDialog.show(confirm).then(
+          function() {
+            api.delete('/users/' + authentication.userId()).then(
+              function(success) {
+                console.log("User successfully deleted");
+                authentication.logout();
+              },
+              function(error) {
+                console.log("User could not be deleted");
+              }
+            );
+          },
+          function() {
+          
+          }
+        );
+      }
 
       settings.updateUser = function () {
         var data = {
