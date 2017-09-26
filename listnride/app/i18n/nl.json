@@ -97,7 +97,10 @@
     "contact-us": "Neem contact met ons op per ",
     "required": "Dit is verplicht",
     "update": "Bijwerken",
-    "load-more": "Load more"
+    "load-more": "Load more",
+    "confirm": "Bevestigen",
+    "confirmation": "Bevestiging",
+    "confirmation-text": "Weet je het zeker?"
   },
 
   "toasts": {
