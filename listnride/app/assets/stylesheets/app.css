@@ -1077,6 +1077,10 @@ bike .date-picker-wrapper tr > td:last-child {
   padding-right: 16px;
 }
 
+bike .per-day {
+  margin-bottom: 3px;
+}
+
 md-dialog md-dialog-content .date-picker-wrapper,
 md-dialog md-dialog-content .date-picker-wrapper.inline-wrapper,
 md-dialog md-dialog-content .month-wrapper {

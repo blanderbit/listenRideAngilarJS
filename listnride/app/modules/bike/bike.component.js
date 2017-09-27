@@ -3,8 +3,8 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', 'ngMeta',
-    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, ngMeta) {
+  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', 'ngMeta', 'price',
+    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, ngMeta, price) {
       var bike = this;
 
       bike.mapOptions = {
@@ -16,6 +16,8 @@ angular.module('bike',[]).component('bike', {
         draggable: false,
         gestureHandling: 'cooperative'
       };
+
+      var prices = [20,36,54,72,90,108,112,16];
 
       bike.mobileCalendar = function() {
         return !!($mdMedia('xs') || $mdMedia('sm'));
@@ -32,11 +34,16 @@ angular.module('bike',[]).component('bike', {
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
 
-          bike.prices = {
-            one_day: 20,
-            three_days: 54,
-            seven_days: 112
-          };
+          bike.data.prices = [
+            20,
+            36,
+            54,
+            72,
+            90,
+            108,
+            112,
+            16
+          ];
 
           var metaData = {
             name: bike.data.name,

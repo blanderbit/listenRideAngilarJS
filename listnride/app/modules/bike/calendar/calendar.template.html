@@ -149,9 +149,19 @@
 
     <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
 
-    <div layout="row" layout-align="space-between center">
+    <!-- <div layout="row" layout-align="space-between center">
       <div>{{ 'shared.subtotal' | translate }}</div>
       <div>{{ calendar.subtotal | currency:"€":2 }}</div>
+    </div> -->
+
+    <div layout="row" layout-align="space-between center">
+      <div>Price 4 Days * 10€</div>
+      <div>{{ calendar.subtotal | currency:"€":2 }}</div>
+    </div>
+
+    <div layout="row" layout-align="space-between center">
+      <div class="lnr-dark-green-text">Discount 4 Days * 2€</div>
+      <div class="lnr-dark-green-text">-8 €</div>
     </div>
 
     <div layout="row" layout-align="space-between center">

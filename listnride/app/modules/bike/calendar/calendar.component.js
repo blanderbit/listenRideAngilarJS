@@ -9,6 +9,7 @@ angular.module('bike').component('calendar', {
     priceHalfDay: '<',
     priceDay: '<',
     priceWeek: '<',
+    prices: '<',
     requests: '<'
   },
   controller: ['$scope',
@@ -21,12 +22,13 @@ angular.module('bike').component('calendar', {
       '$window',
       '$analytics',
       'date',
+      'price',
       'api',
       'authentication',
       'verification',
       'ENV',
     function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, $mdToast,
-                                $mdMedia, $window, $analytics, date, api, authentication, verification, ENV) {
+                                $mdMedia, $window, $analytics, date, price, api, authentication, verification, ENV) {
       var calendar = this;
       calendar.authentication = authentication;
       calendar.requested = false;
@@ -38,6 +40,7 @@ angular.module('bike').component('calendar', {
             initOverview();
             initCalendarPicker();
           })
+          console.log(calendar.prices);
         }
       };
 
@@ -629,7 +632,9 @@ angular.module('bike').component('calendar', {
             invalidDays = 0;
             var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, 4, invalidDays);
           } else {
-            var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, null, invalidDays);
+            // var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, null, invalidDays);
+            var prices = price.calculatePrices(startDate, endDate, calendar.prices);
+            console.log(prices);
           }
           var fee = subtotal * 0.125;
           var tax = fee * 0.19;
