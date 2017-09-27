@@ -441,7 +441,17 @@
       "weekly-discount-placeholder": "Rabatt in %",
       "half-daily-price": "Halber Tag",
       "daily-price": "Ganzer Tag",
-      "weekly-price": "Eine Woche"
+      "weekly-price": "Eine Woche",
+      "daily-discount": "Ganzer Discount",
+      "weekly-discount": "Wöchentlich Discount",
+      "price_2_days": "2 Tagen",
+      "price_3_days": "3 Tagen",
+      "price_4_days": "4 Tagen",
+      "price_5_days": "5 Tagen",
+      "price_6_days": "6 Tagen",
+      "price_7_days": "7 Tagen (1 Woche)",
+      "price_8_days": "8 Tagen",
+      "price_30_days": "30 Tagen (1 Monat)"
     },
     "subcategory": {
       "1": {

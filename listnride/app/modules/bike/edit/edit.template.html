@@ -319,7 +319,8 @@
                          maxlength="3"
                          placeholder="{{'list.pricing.daily-price-placeholder' | translate}}"
                          ng-model="edit.form.price_daily"
-                         ng-init="edit.form.price_daily = 0"
+                         ng-change="edit.setCustomPrices()"
+                         ng-model-options='{ debounce: 500 }'
                          required>
                 </md-input-container>
                 <div layout="row" layout-align="space-between center">
@@ -348,7 +349,7 @@
                 </div>
                 <div layout="row" layout-align="space-between center">
                   <p>Use Custom Prices</p>
-                  <md-switch ng-click="edit.showCustomPrices()"></md-switch>
+                  <md-switch ng-click="edit.setCustomPrices(true)"></md-switch>
                   <div ng-style="{'display': settings.completeClosed ? '' : 'none'}">
                     ({{ 'settings.mark-as-closed' | translate }})
                   </div>
@@ -357,96 +358,96 @@
                   <div layout="row" layout-align="space-between center">
                     <div flex="45">
                       <md-input-container class="md-block">
-                        <label>2 Days </label>
+                        <label>{{'list.pricing.price_2_days' | translate}} </label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
                                placeholder="Discount in %"
                                maxlength="3"
-                               required
-                               ng-model="edit.price_2_days">
+                               ng-model="edit.form.price_2_days"
+                               required>
                       </md-input-container>
                     </div>
                     <div flex="45">
                       <md-input-container class="md-block">
-                        <label>3 Days</label>
+                        <label>{{'list.pricing.price_3_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
                                placeholder="Discount in %"
                                maxlength="3"
-                               required
-                               ng-model="edit.form.price_3_days">
-                      </md-input-container>
-                    </div>
-                  </div>
-                  <div layout="row" layout-align="space-between center">
-                    <div flex="45">
-                      <md-input-container class="md-block">
-                        <label>4 Days</label>
-                        <input type="text"
-                               ng-pattern="/^\d+$/"
-                               placeholder="Discount in %"
-                               maxlength="3"
-                               required
-                               ng-model="edit.form.price_4_days">
-                      </md-input-container>
-                    </div>
-                    <div flex="45">
-                      <md-input-container class="md-block">
-                        <label>5 Days</label>
-                        <input type="text"
-                               ng-pattern="/^\d+$/"
-                               placeholder="Discount in %"
-                               maxlength="3"
-                               required
-                               ng-model="edit.form.price_5_days">
+                               ng-model="edit.form.price_3_days"
+                               required>
                       </md-input-container>
                     </div>
                   </div>
                   <div layout="row" layout-align="space-between center">
                     <div flex="45">
                       <md-input-container class="md-block">
-                        <label>6 Days</label>
+                        <label>{{'list.pricing.price_4_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
                                placeholder="Discount in %"
                                maxlength="3"
-                               required
-                               ng-model="edit.form.price_6_days">
+                               ng-model="edit.form.price_4_days"
+                               required>
                       </md-input-container>
                     </div>
                     <div flex="45">
                       <md-input-container class="md-block">
-                        <label>7 Days (1 week)</label>
+                        <label>{{'list.pricing.price_5_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
                                placeholder="Discount in %"
                                maxlength="3"
-                               required
-                               ng-model="edit.form.price_7_days">
+                               ng-model="edit.form.price_5_days"
+                               required>
                       </md-input-container>
                     </div>
                   </div>
                   <div layout="row" layout-align="space-between center">
                     <div flex="45">
                       <md-input-container class="md-block">
-                        <label>8 Days</label>
+                        <label>{{'list.pricing.price_6_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
                                placeholder="Discount in %"
                                maxlength="3"
-                               required
-                               ng-model="edit.form.price_8_days">
+                               ng-model="edit.form.price_6_days"
+                               required>
                       </md-input-container>
                     </div>
                     <div flex="45">
                       <md-input-container class="md-block">
-                        <label>30 Days (1 month)</label>
+                        <label>{{'list.pricing.price_7_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
                                placeholder="Discount in %"
                                maxlength="3"
-                               required
-                               ng-model="edit.form.price_30_days">
+                               ng-model="edit.form.price_7_days"
+                               required>
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div layout="row" layout-align="space-between center">
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_8_days' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="Discount in %"
+                               maxlength="3"
+                               ng-model="edit.form.price_8_days"
+                               required>
+                      </md-input-container>
+                    </div>
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_30_days' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="Discount in %"
+                               maxlength="3"
+                               ng-model="edit.form.price_30_days"
+                               required>
                       </md-input-container>
                     </div>
                   </div>

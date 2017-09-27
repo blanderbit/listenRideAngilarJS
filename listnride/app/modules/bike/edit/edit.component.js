@@ -45,8 +45,8 @@ angular.module('edit',[]).component('edit', {
             data.size = parseInt(data.size);
             data.mainCategory = (data.category + "").charAt(0);
             data.subCategory = (data.category + "").charAt(1);
-            data.discount_daily = data.discount_daily ? parseInt(data.discount_daily) :0;
-            data.discount_weekly = data.discount_weekly ? parseInt(data.discount_weekly) :0;
+            data.discount_daily = data.discount_daily ? parseInt(data.discount_daily) : 0;
+            data.discount_weekly = data.discount_weekly ? parseInt(data.discount_weekly) : 0;
 
             edit.form = data;
           }
@@ -56,16 +56,16 @@ angular.module('edit',[]).component('edit', {
         }
       );
 
-      edit.showCustomPrices = function () {
-        edit.customPrices = !edit.customPrices;
-        edit.price_2_days = edit.form.discount_daily !== 0 ? 2 * edit.form.price_daily * (100 - edit.form.discount_daily) / 100 : 2 * edit.form.price_daily;
-        edit.form.price_3_days = edit.form.discount_daily !== 0 ? 3 * edit.form.price_daily * (100 - edit.form.discount_daily) / 100 : 3 * edit.form.price_daily;
-        edit.form.price_4_days = edit.form.discount_daily !== 0 ? 4 * edit.form.price_daily * (100 - edit.form.discount_daily) / 100 : 4 * edit.form.price_daily;
-        edit.form.price_5_days = edit.form.discount_daily !== 0 ? 5 * edit.form.price_daily * (100 - edit.form.discount_daily) / 100 : 5 * edit.form.price_daily;
-        edit.form.price_6_days = edit.form.discount_daily !== 0 ? 6 * edit.form.price_daily * (100 - edit.form.discount_daily) / 100 : 6 * edit.form.price_daily;
-        edit.form.price_7_days = edit.form.discount_weekly !== 0 ? 7 * edit.form.price_daily * (100 - edit.form.discount_weekly) / 100 : 7 * edit.form.price_daily;
-        edit.form.price_8_days = edit.form.discount_daily !== 0 ? 8 * edit.form.price_daily * (100 - edit.form.discount_daily) / 100 : 8 * edit.form.price_daily;
-        edit.form.price_30_days = edit.form.discount_daily !== 0 ? 8 * edit.form.price_daily * (100 - edit.form.discount_daily) / 100 : 8 * edit.form.price_daily;
+      edit.setCustomPrices = function (showCustom) {
+        edit.customPrices = showCustom === true ? !edit.customPrices: edit.customPrices;
+        edit.form.price_2_days = Math.round(2 * edit.form.price_daily * (100 - edit.form.discount_daily) / 100);
+        edit.form.price_3_days = Math.round(3 * edit.form.price_daily * (100 - edit.form.discount_daily) / 100);
+        edit.form.price_4_days = Math.round(4 * edit.form.price_daily * (100 - edit.form.discount_daily) / 100);
+        edit.form.price_5_days = Math.round(5 * edit.form.price_daily * (100 - edit.form.discount_daily) / 100);
+        edit.form.price_6_days = Math.round(6 * edit.form.price_daily * (100 - edit.form.discount_daily) / 100);
+        edit.form.price_7_days = Math.round(7 * edit.form.price_daily * (100 - edit.form.discount_weekly) / 100);
+        edit.form.price_8_days = Math.round(8 * edit.form.price_daily * (100 - edit.form.discount_daily) / 100);
+        edit.form.price_30_days = Math.round(30 * edit.form.price_daily * (100 - edit.form.discount_daily) / 100);
       };
 
 

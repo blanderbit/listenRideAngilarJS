@@ -428,7 +428,15 @@
       "weekly-discount-placeholder": "Discount in %",
       "weekly-price": "Weekly Price",
       "daily-discount": "Daily Discount",
-      "weekly-discount": "Weekly Discount"
+      "weekly-discount": "Weekly Discount",
+      "price_2_days": "2 days",
+      "price_3_days": "3 days",
+      "price_4_days": "4 days",
+      "price_5_days": "5 days",
+      "price_6_days": "6 days",
+      "price_7_days": "7 days (1 week)",
+      "price_8_days": "8 days",
+      "price_30_days": "30 days (1 month)"
     },
     "subcategory": {
       "1": {
