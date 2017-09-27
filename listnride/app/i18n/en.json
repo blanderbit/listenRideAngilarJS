@@ -421,6 +421,8 @@
       "hint-para-2": "A rental period for less than 6 hours equals a half-day rental, 6 to 24 hours a day’s rental.",
       "hint-para-3": "To encourage longer rentals, some listers set a daily or weekly discount." ,
       "label": "Pricing",
+      "discount": "Discount",
+      "custom-prices": "Use Custom Prices",
       "half-daily-price": "Half-daily Price",
       "daily-price": "Daily Price",
       "daily-price-placeholder": "Price in €",

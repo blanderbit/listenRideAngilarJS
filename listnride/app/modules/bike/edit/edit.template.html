@@ -348,7 +348,7 @@
                   </div>
                 </div>
                 <div layout="row" layout-align="space-between center">
-                  <p>Use Custom Prices</p>
+                  <p>{{'list.pricing.custom-prices' | translate}}</p>
                   <md-switch ng-click="edit.setCustomPrices(true)"></md-switch>
                   <div ng-style="{'display': settings.completeClosed ? '' : 'none'}">
                     ({{ 'settings.mark-as-closed' | translate }})
@@ -361,7 +361,7 @@
                         <label>{{'list.pricing.price_2_days' | translate}} </label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="Discount in %"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_2_days"
                                required>
@@ -372,7 +372,7 @@
                         <label>{{'list.pricing.price_3_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="Discount in %"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_3_days"
                                required>
@@ -385,7 +385,7 @@
                         <label>{{'list.pricing.price_4_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="Discount in %"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_4_days"
                                required>
@@ -396,7 +396,7 @@
                         <label>{{'list.pricing.price_5_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="Discount in %"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_5_days"
                                required>
@@ -409,7 +409,7 @@
                         <label>{{'list.pricing.price_6_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="Discount in %"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_6_days"
                                required>
@@ -420,7 +420,7 @@
                         <label>{{'list.pricing.price_7_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="Discount in %"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_7_days"
                                required>
@@ -433,7 +433,7 @@
                         <label>{{'list.pricing.price_8_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="Discount in %"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_8_days"
                                required>
@@ -444,7 +444,7 @@
                         <label>{{'list.pricing.price_30_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="Discount in %"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_30_days"
                                required>
