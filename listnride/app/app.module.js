@@ -50,6 +50,7 @@ angular.module('listnride', [
   'constanceSpin',
   'velosoph',
   /* external modules */
+  'ngAnimate',
   'ngMaterial',
   'ngMessages',
   'pascalprecht.translate',

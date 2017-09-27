@@ -430,9 +430,15 @@
       "country": "Land"
     },
     "pricing": {
-      "header": "Für welchen Preis bietest Du dein Rad an?",
-      "hint": "Nun setze noch einen angemessenen Mietpreis. Der Mietpreis sollte bezahlbar sein und sich nach Rad und Ausstattung richten. Schau Dir gern ähnliche Listings als Referenz an. Eine Mietdauer unter 6 Stunde ist eine Halbtagsmiete, 6-24 Stunde steht für eine Tagesmiete.",
+      "header": "Tagespreis",
+      "description": "Dein Tagespreis ist dein Standardpreis pro Tag.",
+      "hint-para-1": "Über den Preis, den du für dein Rad nimmst, entscheidest du selbst. Der Mietpreis sollte sich nach Rad und Ausstattung richten. Um eine Vorstellung von den Preisen am Markt zu erhalten, schaue Dir vergleichbare Angebote an.",
+      "hint-para-2": "Eine Mietdauer unter 6 Stunden ist eine Halbtagesmiete, 6-24 Stunde steht für eine Tagesmiete.",
+      "hint-para-3": "Um mehr Langzeitbuchungen zu erhalten, legen manche Vermieter einen Tages- oder Wochenrabatt fest.",
       "label": "Preis",
+      "daily-price-placeholder": "Preis in €",
+      "daily-discount-placeholder": "Rabatt in %",
+      "weekly-discount-placeholder": "Rabatt in %",
       "half-daily-price": "Halber Tag",
       "daily-price": "Ganzer Tag",
       "weekly-price": "Eine Woche"

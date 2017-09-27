@@ -430,9 +430,15 @@
       "country": "Land"
     },
     "pricing": {
-      "header": "Kies een aantal mooie foto's van je fiets",
-      "hint": "Bepaal nu een aantrekkelijk huurprijs. De Huurprijs dient betaalbaar te zijn en afhankelijk van de staat van de fiets en vergelijkbare fietsen in de buurt geprijsd te zijn. Een duur tot een lengte van 6 uren is een halve dag, 6-24 uren staat voor een dag huur.",
+      "header": "Dagprijs",
+      "description": "Je dagprijs is je standaard dag tarief.",
+      "hint-para-1": "Je bepaalt zelf de prijs die je vraagt voor je fiets. De prijs moet gebaseerd zijn op de fiets en de uitrusting. Om een ​​idee te krijgen van marktprijzen, kunt u vergelijkbare aanbiedingen bekijken.",
+      "hint-para-2": "Een duur tot een lengte van 6 uren is een halve dag, 6-24 uren staat voor een dag huur.",
+      "hint-para-3": "Om langere verblijven aan te moedigen, stellen sommige verhuurders een dag of wekelijkse korting in.",
       "label": "Prijs",
+      "daily-price-placeholder": "Prijs in €",
+      "daily-discount-placeholder": "Rabatt in %",
+      "weekly-discount-placeholder": "Rabatt in %",
       "half-daily-price": "Halve dag",
       "daily-price": "hele dag",
       "weekly-price": "Een Week"

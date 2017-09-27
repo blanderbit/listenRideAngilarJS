@@ -5,37 +5,41 @@
     </div>
 
     <div layout="row" layout-align="end center">
-      <md-button class="md-raised md-primary" ng-disabled="!edit.isFormValid() || edit.submitDisabled" ng-click="edit.onFormSubmit()">
+      <md-button class="md-raised md-primary" ng-disabled="!edit.isFormValid() || edit.submitDisabled"
+                 ng-click="edit.onFormSubmit()">
         {{ 'edit.save-changes' | translate }}
       </md-button>
     </div>
 
     <form name="listBike" layout="column" layout-align="start center" layout-padding>
-      <md-tabs md-no-pagination md-dynamic-height md-no-ink md-no-ink-bars md-selected="edit.selectedIndex" md-center-tabs="on">
-        
+      <md-tabs md-no-pagination md-dynamic-height md-no-ink md-no-ink-bars md-selected="edit.selectedIndex"
+               md-center-tabs="on">
+
         <!-- categories -->
         <md-tab class="categories" label="{{ 'list.category.label' | translate }}" layout="row">
           <md-content class="md-padding" layout="column">
             <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
-              
+
               <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
                 <div class="lnr-list-title">
                   <h3 class="md-subhead">{{ 'list.category.header' | translate }}</h3>
                 </div>
                 <div layout="row" layout-align="space-between start">
                   <md-radio-group ng-model="edit.form.mainCategory" flex="50" layout="column"
-                  ng-change="edit.categoryChange({{edit.form.mainCategory}})">
-                    <md-radio-button class="main-category" ng-repeat="cat in edit.categoryOptions"  value="{{cat.value}}">
+                                  ng-change="edit.categoryChange({{edit.form.mainCategory}})">
+                    <md-radio-button class="main-category" ng-repeat="cat in edit.categoryOptions"
+                                     value="{{cat.value}}">
                       <md-icon class="lnr-icn-sm md-color-foreground accessory-icon"
-                      md-svg-src="app/assets/ui_icons/{{cat.iconFileName}}"
-                      ng-class="edit.form.mainCategory == cat.value ? 'checked' : 'unchecked'"></md-icon>
-                      
+                               md-svg-src="app/assets/ui_icons/{{cat.iconFileName}}"
+                               ng-class="edit.form.mainCategory == cat.value ? 'checked' : 'unchecked'"></md-icon>
+
                       {{ 'list.category.' + cat.label.replace(' ', '-') | translate }}
                     </md-radio-button>
                   </md-radio-group>
 
                   <md-radio-group ng-model="edit.form.subCategory" flex layout="column">
-                    <md-radio-button ng-repeat="subcat in edit.subcategoryOptions[edit.form.mainCategory]" value="{{subcat.value}}">
+                    <md-radio-button ng-repeat="subcat in edit.subcategoryOptions[edit.form.mainCategory]"
+                                     value="{{subcat.value}}">
                       {{ 'list.subcategory.' + edit.form.mainCategory + '.' + subcat.label | translate }}
                     </md-radio-button>
                   </md-radio-group>
@@ -44,14 +48,16 @@
 
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
 
-              <div flex="50" hide-xs layout-margin>              
+              <div flex="50" hide-xs layout-margin>
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead"><md-icon class="lnr-icn-sm md-color-disabled lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>Info</h3>
+                  <h3 class="md-subhead">
+                    Info
+                  </h3>
                 </div>
                 <p class="md-body-1">{{ 'list.category.hint' | translate }}</p>
               </div>
             </div>
-            
+
             <div class="navigation" layout="row" layout-align="end center" layout-margin>
               <md-button class="md-lined" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
             </div>
@@ -80,11 +86,13 @@
                 <md-input-container>
                   <label>{{ 'list.details.size' | translate }}</label>
                   <md-select required ng-model="edit.form.size">
-                    <md-option ng-if="edit.form.mainCategory == 4" ng-repeat="size in edit.kidsSizeOptions" value="{{ size.value }}">
+                    <md-option ng-if="edit.form.mainCategory == 4" ng-repeat="size in edit.kidsSizeOptions"
+                               value="{{ size.value }}">
                       {{ size.label }}
                     </md-option>
 
-                    <md-option ng-if="edit.form.mainCategory != 4" ng-repeat="size in edit.sizeOptions" value="{{ size.value }}">
+                    <md-option ng-if="edit.form.mainCategory != 4" ng-repeat="size in edit.sizeOptions"
+                               value="{{ size.value }}">
                       {{ size.label }}
                     </md-option>
                   </md-select>
@@ -92,7 +100,8 @@
 
                 <md-input-container>
                   <label>{{ 'list.details.description' | translate }}</label>
-                  <textarea required md-no-resize minlength="100" md-maxlength="800"  name="description" ng-model="edit.form.description" rows="2"></textarea>
+                  <textarea required md-no-resize minlength="100" md-maxlength="800" name="description"
+                            ng-model="edit.form.description" rows="2"></textarea>
                   <div ng-messages="listBike.description.$error" role="alert">
                     <div ng-message="minlength">{{ 'list.details.min-length-warning' | translate }}</div>
                   </div>
@@ -101,15 +110,17 @@
 
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
 
-              <div flex="50" hide-xs layout-margin>              
+              <div flex="50" hide-xs layout-margin>
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead"><md-icon class="lnr-icn-sm md-color-disabled lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>Info</h3>
+                  <h3 class="md-subhead">
+                    Info
+                  </h3>
                 </div>
                 <p class="md-body-1">{{ 'list.details.hint' | translate }}</p>
               </div>
 
             </div>
-            
+
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
               <md-button class="md-lined" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
               <md-button class="md-lined" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
@@ -127,24 +138,31 @@
                   <h3 class="md-subhead">{{ 'list.accessories.header' | translate }}</h3>
                 </div>
 
-                <div ng-repeat="acc in edit.accessoryOptions" class="accessory-checkbox" layout="row" layout-align="start center">
-                  <md-icon ng-class="edit.form[acc.model] ? 'checked' : 'unchecked'" class="lnr-icn-sm md-color-foreground accessory-icon"
-                    md-svg-src="app/assets/ui_icons/{{acc.iconFileName}}" ng-click="edit.onAccessoryClick(acc.model)"></md-icon>
-                  <div class="accessory-label no-select" ng-click="edit.onAccessoryClick(acc.model)">{{ 'list.accessories.' + acc.label | translate }}</div>
+                <div ng-repeat="acc in edit.accessoryOptions" class="accessory-checkbox" layout="row"
+                     layout-align="start center">
+                  <md-icon ng-class="edit.form[acc.model] ? 'checked' : 'unchecked'"
+                           class="lnr-icn-sm md-color-foreground accessory-icon"
+                           md-svg-src="app/assets/ui_icons/{{acc.iconFileName}}"
+                           ng-click="edit.onAccessoryClick(acc.model)"></md-icon>
+                  <div class="accessory-label no-select" ng-click="edit.onAccessoryClick(acc.model)">{{
+                    'list.accessories.' + acc.label | translate }}
+                  </div>
                 </div>
               </div>
 
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
-              
-              <div flex="50" hide-xs layout-margin>              
+
+              <div flex="50" hide-xs layout-margin>
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead"><md-icon class="lnr-icn-sm md-color-disabled lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>Info</h3>
+                  <h3 class="md-subhead">
+                    Info
+                  </h3>
                 </div>
                 <p class="md-body-1">{{ 'list.accessories.hint' | translate }}</p>
               </div>
 
             </div>
-            
+
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
               <md-button class="md-lined" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
               <md-button class="md-lined" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
@@ -157,35 +175,39 @@
         <md-tab class="pictures" label="{{ 'list.pictures.label' | translate }}" layout="row">
           <md-content class="md-padding" layout="column">
             <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
-              <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">              
+              <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
                 <div class="lnr-list-title">
                   <h3 class="md-subhead">{{ 'list.pictures.header' | translate }}</h3>
                 </div>
                 <md-button
-                        class="md-raised md-primary lnr-no-margin"
-                        ng-disabled="edit.form.images.length > 4"
-                        ngf-multiple="true"
-                        ngf-select="edit.addImage($files)"
-                        accept=".jpg,.jpeg,.png"
-                        ngf-validate="edit.validateObj"
-                        ngf-model-invalid="edit.invalidFiles"
+                    class="md-raised md-primary lnr-no-margin"
+                    ng-disabled="edit.form.images.length > 4"
+                    ngf-multiple="true"
+                    ngf-select="edit.addImage($files)"
+                    accept=".jpg,.jpeg,.png"
+                    ngf-validate="edit.validateObj"
+                    ngf-model-invalid="edit.invalidFiles"
                 >
                   {{ 'list.pictures.select-images' | translate }}
                 </md-button>
 
                 <div class="preview-container lnr-margin-top" layout="column" layout-wrap>
-                  <div ng-repeat="img in edit.form.images track by $index" layout="row" layout-align="space-between center">
+                  <div ng-repeat="img in edit.form.images track by $index" layout="row"
+                       layout-align="space-between center">
                     <div ng-if="img.local == 'true'" class="img-preview lnr-margin-top"
-                      ngf-background="img.src" ngf-as-background="true">
+                         ngf-background="img.src" ngf-as-background="true">
                     </div>
 
                     <div ng-if="img.local == 'false'" class="img-preview lnr-margin-top"
-                      ng-style="{'background-image': 'url(' + img.url + ')'}">
+                         ng-style="{'background-image': 'url(' + img.url + ')'}">
                     </div>
-                    <md-button class="md-lined md-warn" ng-click="edit.removeImage($index)">{{ 'list.pictures.remove' | translate}}</md-button>
+                    <md-button class="md-lined md-warn" ng-click="edit.removeImage($index)">{{ 'list.pictures.remove' |
+                      translate}}
+                    </md-button>
                   </div>
                 </div>
-                <div ng-if="edit.invalidFiles[0] !== undefined" class="text-error" layout="column" hide-gt-xs layout-padding>
+                <div ng-if="edit.invalidFiles[0] !== undefined" class="text-error" layout="column" hide-gt-xs
+                     layout-padding>
                   {{ 'list.pictures.under-min-size' | translate}}
                   <ul>
                     <div ng-repeat="invalideImage in edit.invalidFiles" class="text-error">
@@ -197,9 +219,11 @@
 
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
 
-              <div flex="50" hide-xs layout-margin>              
+              <div flex="50" hide-xs layout-margin>
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead"><md-icon class="lnr-icn-sm md-color-disabled lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>Info</h3>
+                  <h3 class="md-subhead">
+                    Info
+                  </h3>
                 </div>
                 <p class="md-body-1">{{ 'list.pictures.hint' | translate }}</p>
                 <a ui-sref="how-to-shoot-bike-photos" target="_blank">{{ 'list.pictures.how-to' | translate }}</a>
@@ -207,7 +231,9 @@
                 <div ng-if="edit.invalidFiles[0] !== undefined" class="text-error">
                   <div class="lnr-list-title">
                     <h3 class="md-subhead">
-                      <md-icon md-font-icon="fa-exclamation-triangle"  class="lnr-icn-sm md-color-disabled lnr-margin-right fa"></md-icon>{{ 'list.pictures.invalid-images' | translate}}
+                      <md-icon md-font-icon="fa-exclamation-triangle"
+                               class="lnr-icn-sm md-color-disabled lnr-margin-right fa"></md-icon>
+                      {{ 'list.pictures.invalid-images' | translate}}
                     </h3>
                   </div>
                   {{ 'list.pictures.under-min-size' | translate}}
@@ -219,7 +245,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
               <md-button class="md-lined" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
               <md-button class="md-lined" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
@@ -237,7 +263,9 @@
                   <h3 class="md-subhead">{{ 'list.location.header' | translate }}</h3>
                 </div>
 
-                <autocomplete autocomplete-id="edit" layout="column" location="edit.form.street" label-id="{{ 'list.location.street-number' | translate }}" required="true" place-changed="edit.fillAddress(place)">
+                <autocomplete autocomplete-id="edit" layout="column" location="edit.form.street"
+                              label-id="{{ 'list.location.street-number' | translate }}" required="true"
+                              place-changed="edit.fillAddress(place)">
                 </autocomplete>
 
                 <md-input-container>
@@ -258,15 +286,17 @@
 
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
 
-              <div flex="50" hide-xs layout-margin>              
+              <div flex="50" hide-xs layout-margin>
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead"><md-icon class="lnr-icn-sm md-color-disabled lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>Info</h3>
+                  <h3 class="md-subhead">
+                    Info
+                  </h3>
                 </div>
                 <p class="md-body-1">{{ 'list.location.hint' | translate }}</p>
               </div>
 
             </div>
-            
+
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
               <md-button class="md-lined" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
               <md-button class="md-lined" ng-click="edit.nextTab()">{{ 'list.next' | translate }}</md-button>
@@ -280,37 +310,164 @@
           <md-content class="md-padding" layout="column">
             <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
               <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
-                <div class="lnr-list-title">
-                  <h3 class="md-subhead">{{ 'list.pricing.header' | translate }}</h3>
+                <h3 class="md-subhead">{{ 'list.pricing.header' | translate }}</h3>
+                <p>{{'list.pricing.description' | translate}}</p>
+                <md-input-container class="md-block">
+                  <label>{{ 'list.pricing.header' | translate }} (€)</label>
+                  <input type="text"
+                         ng-pattern="/^\d+$/"
+                         maxlength="3"
+                         placeholder="{{'list.pricing.daily-price-placeholder' | translate}}"
+                         ng-model="edit.form.price_daily"
+                         ng-init="edit.form.price_daily = 0"
+                         required>
+                </md-input-container>
+                <div layout="row" layout-align="space-between center">
+                  <div flex="45">
+                    <md-input-container class="md-block">
+                      <label>{{ 'list.pricing.daily-discount' | translate }} (%)</label>
+                      <input type="text"
+                             ng-pattern="/^\d+$/"
+                             placeholder="{{'list.pricing.daily-discount-placeholder' | translate}}"
+                             maxlength="2"
+                             ng-model="edit.form.discount_daily"
+                             ng-disabled="edit.customPrices">
+                    </md-input-container>
+                  </div>
+                  <div flex="45">
+                    <md-input-container class="md-block">
+                      <label>{{ 'list.pricing.weekly-discount' | translate }} (%)</label>
+                      <input type="text"
+                             ng-pattern="/^\d+$/"
+                             placeholder="{{'list.pricing.weekly-discount-placeholder' | translate}}"
+                             maxlength="2"
+                             ng-model="edit.form.discount_weekly"
+                             ng-disabled="edit.customPrices">
+                    </md-input-container>
+                  </div>
                 </div>
-
-                <md-input-container>
-                  <label>{{ 'list.pricing.half-daily-price' | translate }} (€)</label>
-                  <input type="text" ng-pattern="/^\d+$/" maxlength="3" required ng-model="edit.form.price_half_daily">
-                </md-input-container>
-
-                <md-input-container>
-                  <label>{{ 'list.pricing.daily-price' | translate }} (€)</label>
-                  <input type="text" ng-pattern="/^\d+$/" maxlength="3" required ng-model="edit.form.price_daily">
-                </md-input-container>
-
-                <md-input-container>
-                  <label>{{ 'list.pricing.weekly-price' | translate }} (€)</label>
-                  <input type="text" ng-pattern="/^\d+$/" maxlength="3" required ng-model="edit.form.price_weekly">
-                </md-input-container>
+                <div layout="row" layout-align="space-between center">
+                  <p>Use Custom Prices</p>
+                  <md-switch ng-click="edit.showCustomPrices()"></md-switch>
+                  <div ng-style="{'display': settings.completeClosed ? '' : 'none'}">
+                    ({{ 'settings.mark-as-closed' | translate }})
+                  </div>
+                </div>
+                <div class="bikes-custom-price" ng-show="edit.customPrices">
+                  <div layout="row" layout-align="space-between center">
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>2 Days </label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="Discount in %"
+                               maxlength="3"
+                               required
+                               ng-model="edit.price_2_days">
+                      </md-input-container>
+                    </div>
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>3 Days</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="Discount in %"
+                               maxlength="3"
+                               required
+                               ng-model="edit.form.price_3_days">
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div layout="row" layout-align="space-between center">
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>4 Days</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="Discount in %"
+                               maxlength="3"
+                               required
+                               ng-model="edit.form.price_4_days">
+                      </md-input-container>
+                    </div>
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>5 Days</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="Discount in %"
+                               maxlength="3"
+                               required
+                               ng-model="edit.form.price_5_days">
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div layout="row" layout-align="space-between center">
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>6 Days</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="Discount in %"
+                               maxlength="3"
+                               required
+                               ng-model="edit.form.price_6_days">
+                      </md-input-container>
+                    </div>
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>7 Days (1 week)</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="Discount in %"
+                               maxlength="3"
+                               required
+                               ng-model="edit.form.price_7_days">
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div layout="row" layout-align="space-between center">
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>8 Days</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="Discount in %"
+                               maxlength="3"
+                               required
+                               ng-model="edit.form.price_8_days">
+                      </md-input-container>
+                    </div>
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>30 Days (1 month)</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="Discount in %"
+                               maxlength="3"
+                               required
+                               ng-model="edit.form.price_30_days">
+                      </md-input-container>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
 
-              <div flex="50" hide-xs layout-margin>              
+              <div flex="50" hide-xs layout-margin>
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead"><md-icon class="lnr-icn-sm md-color-disabled lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>Info</h3>
+                  <h3 class="md-subhead">
+                    Info
+                  </h3>
                 </div>
-                <p class="md-body-1">{{ 'list.pricing.hint' | translate }}</p>
+                <p class="md-body-1">{{ 'list.pricing.hint-para-1' | translate }}</p>
+                <p class="md-body-1">{{ 'list.pricing.hint-para-2' | translate }}</p>
+                <p class="md-body-1">{{ 'list.pricing.hint-para-3' | translate }}</p>
               </div>
 
             </div>
-            
+
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
               <md-button class="md-lined" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
             </div>

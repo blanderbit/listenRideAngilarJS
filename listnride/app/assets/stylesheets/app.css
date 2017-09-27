@@ -856,6 +856,15 @@ md-grid-list md-grid-tile.tile-vienna {
   transform: rotate(45deg);
 }
 
+.bikes-custom-price {
+  transition: .2s linear all;
+  height: 320px;
+  overflow: hidden;
+}
+.bikes-custom-price.ng-hide {
+  height:0;
+}
+
 .testimonials-container {
   margin: auto;
   width: calc(100% - 50px);
@@ -1242,7 +1251,7 @@ list .md-tab.md-disabled {
 }
 
 .lnr-list-title {
-  margin: 8px 0 24px 0;
+  margin: -8px 0 24px 0;
 }
 
 list md-tabs .lnr-list-form,
@@ -1935,3 +1944,7 @@ and (max-device-width : 568px) {
   }
 }
 
+
+.ng-hide-add, .ng-hide-remove {
+  display: block !important;
+}
