@@ -32,6 +32,12 @@ angular.module('bike',[]).component('bike', {
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
 
+          bike.prices = {
+            one_day: 20,
+            three_days: 54,
+            seven_days: 112
+          };
+
           var metaData = {
             name: bike.data.name,
             brand: bike.data.brand,
