@@ -28,7 +28,7 @@
       <div flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center">
           <div flex="30" layout="column" layout-align="center center">
             <div layout="row">
-              <span class="md-headline">{{ bike.data.prices[0] / 1 | number : 0 }}€</span>
+              <span class="md-headline">{{ bike.data.prices[0].price | number : 0 }}€</span>
               <span class="md-caption per-day" layout layout-align="end end">&nbsp;p.d.</span>
             </div>
             <span class="md-caption" ng-if="bike.data.family != 9 && bike.data.family != 11">{{ 'shared.single-day' | translate }}</span>
@@ -36,7 +36,7 @@
           </div>
           <div flex="30" layout="column" layout-align="center center">
             <div layout="row">
-              <span class="md-headline">{{ bike.data.prices[2] / 3 | number : 0 }}€</span>
+              <span class="md-headline">{{ bike.data.prices[2].price | number : 0 }}€</span>
               <span class="md-caption per-day" layout layout-align="end end">&nbsp;p.d.</span>
             </div>
             <span class="md-caption" ng-if="bike.data.family != 9 && bike.data.family != 11">{{ 'shared.discount-day' | translate }}</span>
@@ -44,7 +44,7 @@
           </div>
           <div flex="30" layout="column" layout-align="center center" class="lnr-dark-green-text">
             <div layout="row">
-              <span class="md-headline">{{ bike.data.prices[6] / 7 | number : 0 }}€</span>
+              <span class="md-headline">{{ bike.data.prices[6].price | number : 0 }}€</span>
               <span class="md-caption per-day" layout layout-align="end end">&nbsp;p.d.</span>
             </div>
             <span class="md-caption"  >{{ 'shared.discount-week' | translate }}</span>

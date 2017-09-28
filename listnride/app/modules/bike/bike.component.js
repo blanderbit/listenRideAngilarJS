@@ -17,8 +17,6 @@ angular.module('bike',[]).component('bike', {
         gestureHandling: 'cooperative'
       };
 
-      var prices = [20,36,54,72,90,108,112,16];
-
       bike.mobileCalendar = function() {
         return !!($mdMedia('xs') || $mdMedia('sm'));
       };
@@ -31,19 +29,9 @@ angular.module('bike',[]).component('bike', {
         function(response) {
           bike.showAll = false;
           bike.data = response.data;
+          console.log(bike.data);
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
-
-          bike.data.prices = [
-            20,
-            36,
-            54,
-            72,
-            90,
-            108,
-            112,
-            16
-          ];
 
           var metaData = {
             name: bike.data.name,

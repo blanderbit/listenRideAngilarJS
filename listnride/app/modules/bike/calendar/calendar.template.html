@@ -159,8 +159,10 @@
 
     <div layout="row" layout-align="space-between center">
       <div>
-        <span ng-if="calendar.durationDays">{{calendar.durationDays}} {{ 'days' | translate }} x {{ calendar.prices[0] | currency:"€":2 }}</span>
-        <span ng-if="!calendar.durationDays">0 {{ 'days' | translate }} x {{ calendar.prices[0] | currency:"€":2 }}
+        <span ng-if="calendar.durationDays">{{calendar.durationDays}} {{ 'days' | translate }} x {{ calendar.prices[0].price | currency:"€":2 }}</span>
+        <span ng-if="!calendar.durationDays">0 {{ 'days' | translate }} x {{ calendar.prices[0].price | currency:"€":2 }}</span>
+        <md-icon style="height: 8px !important; width: 8px !important;" class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+        <md-tooltip md-direction="left">This is the regular daily price times the amount of days you want to rent the bike</md-tooltip>
       </div>
       <div>{{ calendar.subtotal | currency:"€":2 }}</div>
     </div>
@@ -168,12 +170,18 @@
     <div layout="row" layout-align="space-between center" ng-if="calendar.discount">
       <div class="lnr-dark-green-text">
         {{ 'Discount' | translate }} {{calendar.durationDays}} {{ 'days' | translate }} x {{ calendar.discountRelative | currency:"€":2 }}
+        <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+        <md-tooltip md-direction="left">The discount shows the average daily discount you get per day by renting out for a longer period of time</md-tooltip>
       </div>
       <div class="lnr-dark-green-text">-{{ calendar.discount | currency:"€":2 }}</div>
     </div>
 
     <div layout="row" layout-align="space-between center">
-      <div>{{ 'shared.lnr-fee' | translate }}</div>
+      <div>
+        {{ 'shared.lnr-fee' | translate }}
+        <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+        <md-tooltip md-direction="left">The service fee is used for providing a secure experience and running our platform</md-tooltip>
+      </div>
       <div>{{ calendar.lnrFee | currency:"€":2 }}</div>
     </div>
 

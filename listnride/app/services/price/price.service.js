@@ -17,11 +17,13 @@ angular.module('listnride').factory('price', ['$translate', 'date',
           var days = date.durationDays(startDate, endDate);
         }
         if (days <= 0) return result;
-        result.subtotal = days * prices[0];
+        result.subtotal = days * prices[0].price;
         if (days < 8) {
-          result.subtotalDiscounted = prices[days - 1];
+          result.subtotalDiscounted = prices[days - 1].price * days;
+        } else if (days <= 28) {
+          result.subtotalDiscounted = prices[6].price + (days - 7) * prices[7].price;
         } else {
-          result.subtotalDiscounted = prices[6] + (days - 7) * prices[7];
+          result.subtotalDiscounted = prices[8].price * days;
         }
         // Service Fee is 12,5% and includes 0,19% MwSt
         result.serviceFee = (result.subtotalDiscounted * 0.125) * 1.19;
