@@ -12,9 +12,9 @@
          layout-align="end center"
          ng-if="!list.isListMode">
       <md-button class="md-raised md-primary"
-                 ng-disabled="!edit.isFormValid() || edit.submitDisabled"
-                 ng-click="edit.onFormSubmit()">
-        {{ 'edit.save-changes' | translate }}
+                 ng-disabled="!list.isFormValid() || list.submitDisabled"
+                 ng-click="list.onFormSubmit()">
+        {{ 'list.save-changes' | translate }}
       </md-button>
     </div>
 
@@ -260,7 +260,9 @@
         <!-- end accessories -->
 
         <!-- pictures -->
-        <md-tab ng-disabled="list.isListMode" class="pictures" label="{{ 'list.pictures.label' | translate }}"
+        <md-tab ng-disabled="list.isListMode"
+                class="pictures"
+                label="{{ 'list.pictures.label' | translate }}"
                 layout="row">
           <md-content class="md-padding" layout="column">
             <div class="tab-content"
@@ -303,8 +305,9 @@
                          ng-if="img.local == 'false'"
                          ng-style="{'background-image': 'url(' + img.url + ')'}">
                     </div>
-                    <md-button class="md-lined md-warn" ng-click="list.removeImage($index)">{{ 'list.pictures.remove' |
-                      translate}}
+                    <md-button class="md-lined md-warn"
+                               ng-click="list.removeImage($index)">
+                      {{ 'list.pictures.remove' | translate}}
                     </md-button>
                   </div>
                 </div>
@@ -595,12 +598,12 @@
                   <div layout="row" layout-align="space-between center">
                     <div flex="45">
                       <md-input-container class="md-block">
-                        <label>{{'list.pricing.price_8_days' | translate}}</label>
+                        <label>{{'list.pricing.price_8_days_long' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
-                               ng-model="list.form.price_8_days"
+                               ng-model="list.form.price_8_days_long"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
                                required>
@@ -608,7 +611,7 @@
                     </div>
                     <div flex="45">
                       <md-input-container class="md-block">
-                        <label>{{'list.pricing.price_30_days' | translate}}</label>
+                        <label hide-gt-sm>{{'list.pricing.price_30_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.discount' | translate}} in %"

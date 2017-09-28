@@ -439,8 +439,10 @@
       "price_5_days": "5 days",
       "price_6_days": "6 days",
       "price_7_days": "7 days (1 week)",
-      "price_8_days": "8 days onwards (each day)",
-      "price_30_days": "30 days (1 month)"
+      "price_8_days": "8 days onwards",
+      "price_8_days_long": "8 days onwards (each day)",
+      "price_30_days": "30 days",
+      "price_30_days_long": "30 days (1 month)"
     },
     "subcategory": {
       "1": {
@@ -689,7 +691,6 @@
     "open": "Open Positions",
     "go-back": "Back"
   },
-
   "invoices": {
     "request_id": "Request ID",
     "bike": "Bike",
@@ -708,7 +709,6 @@
     "as-rider": "As Rider",
     "no-rides": "You had no rides yet"
   },
-
   "contact-and-help": {
     "title": "Contact & Support",
     "meta-title": "listnride is here for you",
@@ -938,7 +938,6 @@
     "details": "The page you are looking for does not exist!",
     "home-link": "Back to the homepage"
   },
-  
   "cities": {
     "shared": {
       "rent-city": "Rent a City Bike",
@@ -1021,7 +1020,6 @@
       "cafes-bars-content": "If you like vegan and vegetarian food, we recommend a visit at <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> at the Karmeliterplatz. If you prefer the more traditional Austrian kitchen, we highly recommend <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>. Order a traditional Tafelspitz or Wiener Schnitzel and enjoy it outside with the view on the famous Vienna Opera. You’ll have a great night to remember! For finishing touch of the day, it makes sense to walk towards the Danube. On the way you’ll find plenty of interesting bars or just sit outside under the stars at the river."
     }
   },
-
   "brand-integration": {
     "shared": {
       "choose-location": "Choose a location",
@@ -1184,7 +1182,6 @@
       "faq-answer-3": "Yes, it is possible to replace the battery."
     }
   },
-
   "invite-landing" : {
     "meta-title": "listnride | 10€ for you!",
     "meta-description": "Give the gift of cycling! When you invite a friend to listnride, they’ll get a 10€ voucher as soon as they join. When they rent a bike or list their own, you’ll get 10€ too!",
@@ -1201,7 +1198,6 @@
     "explanation-3-title": "3. Enjoy the ride",
     "explanation-3-description": "Ride safe, have fun!"
   },
-
   "how-to-shoot-bike-photo" : {
     "header": "Photo Tips",
     "title": "A couple of photo tips for a stand out listing",
@@ -1215,7 +1211,6 @@
     "headline-4": "Setting",
     "content-4": "Highlight what’s amazing. It is not required that the whole bicycle is shown on all photos, rather shoot some details, like brand name, colouring, lights, lock etc. Let pictures get the message across. Take your photos in landscape format: Vertical photos won’t showcase your bicycle as well."
   },
-
   "invite": {
     "meta-title": "listnride | Invite your friends",
     "meta-description": "Give the gift of cycling! When you invite a friend to listnride, they’ll get a 10€ voucher as soon as they join. When they rent a bike or list their own, you’ll get 10€ too!",
@@ -1247,7 +1242,6 @@
       "email-body": "{{first_name}} has given you 10€ for your first adventure on the bike of your choice!%0AJoin listnride, the fastest growing bike sharing community, and get access to countless bikes for every purpose!%0ASign up and immediately receive a 10€ credit.%0A%0A{{voucher_url}}%0A%0ADo you want to thank {{first_name}}? Rent a bike or list your bike and {{first_name}} receives a 10€ credit, too!%0A%0AHave fun, and enjoy the ride!"
     }
   },
-
   "invest": {
     "meta-title": "listnride is crowdfunding! Be part of it and invest in Building Europe’s leading bike sharing community.",
     "meta-description": "Visit Seedrs to learn more about investing in listnride.",
@@ -1276,7 +1270,6 @@
     "faq-question-8": "FURTHER QUESTIONS?",
     "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
   },
-
   "seo": {
     "cities-title": "Planning to Travel? Check out more cities:"
   }
