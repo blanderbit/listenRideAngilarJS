@@ -95,11 +95,6 @@ angular.module('list', []).component('list', {
               data.mainCategory = (data.category + "").charAt(0);
               data.subCategory = (data.category + "").charAt(1);
 
-              // daily and weekly discounts
-              // by default the discounts are 0
-              data.discount_daily = data.discount_daily ? parseInt(data.discount_daily) : 0;
-              data.discount_weekly = data.discount_weekly ? parseInt(data.discount_weekly) : 0;
-
               // form data for edit bikes
               list.form = data;
               list.form.prices = prices;
@@ -178,52 +173,53 @@ angular.module('list', []).component('list', {
       // form submission for existing ride
       list.submitEditedRide = function () {
         var prices = bikeOptions.inverseTransformPrices(list.form.prices);
-        console.log("inverted prices: ", prices);
-        // var ride = {
-        //   "ride[name]": list.form.name,
-        //   "ride[brand]": list.form.brand,
-        //   "ride[description]": list.form.description,
-        //   "ride[size]": list.form.size,
-        //   "ride[category]": list.form.mainCategory.concat(list.form.subCategory),
-        //   "ride[has_lock]": list.form.has_lock || false,
-        //   "ride[has_helmet]": list.form.has_helmet || false,
-        //   "ride[has_lights]": list.form.has_lights || false,
-        //   "ride[has_basket]": list.form.has_basket || false,
-        //   "ride[has_trailer]": list.form.has_trailer || false,
-        //   "ride[has_childseat]": list.form.has_childseat || false,
-        //   "ride[user_id]": $localStorage.userId,
-        //   "ride[street]": list.form.street,
-        //   "ride[city]": list.form.city,
-        //   "ride[zip]": list.form.zip,
-        //   "ride[country]": list.form.country,
-        //   "ride[price_daily]": list.form.price_daily,
-        //   "ride[price_weekly]": list.form.price_weekly,
-        //   "ride[image_file_1]": (list.form.images[0]) ? list.form.images[0].src : undefined,
-        //   "ride[image_file_2]": (list.form.images[1]) ? list.form.images[1].src : undefined,
-        //   "ride[image_file_3]": (list.form.images[2]) ? list.form.images[2].src : undefined,
-        //   "ride[image_file_4]": (list.form.images[3]) ? list.form.images[3].src : undefined,
-        //   "ride[image_file_5]": (list.form.images[4]) ? list.form.images[4].src : undefined
-        // };
-        //
-        // Upload.upload({
-        //   method: 'PUT',
-        //   url: api.getApiUrl() + '/rides/' + $stateParams.bikeId,
-        //   data: ride,
-        //   headers: {
-        //     'Authorization': $localStorage.auth
-        //   }
-        // }).then(
-        //   function (response) {
-        //     loadingDialog.close();
-        //     $state.go("bike", {bikeId: response.data.id});
-        //     console.log("Success", response);
-        //   },
-        //   function (error) {
-        //     list.submitDisabled = false;
-        //     loadingDialog.close();
-        //     console.log("Error while listing bike", error);
-        //   }
-        // );
+        var ride = {
+          "ride[name]": list.form.name,
+          "ride[brand]": list.form.brand,
+          "ride[description]": list.form.description,
+          "ride[size]": list.form.size,
+          "ride[category]": list.form.mainCategory.concat(list.form.subCategory),
+          "ride[has_lock]": list.form.has_lock || false,
+          "ride[has_helmet]": list.form.has_helmet || false,
+          "ride[has_lights]": list.form.has_lights || false,
+          "ride[has_basket]": list.form.has_basket || false,
+          "ride[has_trailer]": list.form.has_trailer || false,
+          "ride[has_childseat]": list.form.has_childseat || false,
+          "ride[user_id]": $localStorage.userId,
+          "ride[street]": list.form.street,
+          "ride[city]": list.form.city,
+          "ride[zip]": list.form.zip,
+          "ride[country]": list.form.country,
+          "ride[prices]": list.form.prices,
+          "ride[custom_price]": list.form.custom_price,
+          "ride[discounts]": list.form.discounts,
+          "ride[image_file_1]": (list.form.images[0]) ? list.form.images[0].src : undefined,
+          "ride[image_file_2]": (list.form.images[1]) ? list.form.images[1].src : undefined,
+          "ride[image_file_3]": (list.form.images[2]) ? list.form.images[2].src : undefined,
+          "ride[image_file_4]": (list.form.images[3]) ? list.form.images[3].src : undefined,
+          "ride[image_file_5]": (list.form.images[4]) ? list.form.images[4].src : undefined
+        };
+
+        console.log("put data: ", ride);
+        Upload.upload({
+          method: 'PUT',
+          url: api.getApiUrl() + '/rides/' + $stateParams.bikeId,
+          data: ride,
+          headers: {
+            'Authorization': $localStorage.auth
+          }
+        }).then(
+          function (response) {
+            loadingDialog.close();
+            $state.go("bike", {bikeId: response.data.id});
+            console.log("Success", response);
+          },
+          function (error) {
+            list.submitDisabled = false;
+            loadingDialog.close();
+            console.log("Error while listing bike", error);
+          }
+        );
       };
 
       // submit the form
@@ -248,11 +244,13 @@ angular.module('list', []).component('list', {
 
       // disable custom discounts fields
       list.disableDiscounts = function () {
+        list.form.custom_price = true;
         list.discountFieldEditable = false;
       };
 
       // enable custom discounts fields
       list.enableDiscounts = function () {
+        list.form.custom_price = false;
         list.discountFieldEditable = true;
       };
 
@@ -308,24 +306,10 @@ angular.module('list', []).component('list', {
       };
 
       list.isPricingValid = function () {
-        // 1 day
-        return list.form.prices[0].price !== undefined &&
-          // 2 day
-          list.form.prices[1].price !== undefined &&
-          // 3 day
-          list.form.prices[2].price !== undefined &&
-          // 4 day
-          list.form.prices[3].price !== undefined &&
-          // 5 day
-          list.form.prices[4].price !== undefined &&
-          // 6 day
-          list.form.prices[5].price !== undefined &&
-          // 7 day (week)
-          list.form.prices[6].price !== undefined &&
-          // additional day
-          list.form.prices[7].price !== undefined &&
-          // month
-          list.form.prices[8].price !== undefined;
+        list.form.prices.forEach(function (price) {
+          if (price.price === undefined) return false;
+        });
+        return true;
       };
 
       list.categoryChange = function (oldCategory) {
