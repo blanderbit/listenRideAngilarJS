@@ -291,10 +291,8 @@ angular.module('bike').component('calendar', {
         var bookingDialog = this;
         bookingDialog.errors = {};
         bookingDialog.inProcess = false;
-        bookingDialog.duration = date.duration(calendar.startDate, calendar.endDate);
+        bookingDialog.calendar = calendar;
         bookingDialog.total = totalPriceCalculator();
-        bookingDialog.startDate = calendar.startDate;
-        bookingDialog.endDate = calendar.endDate;
         bookingDialog.lnrFee = calendar.lnrFee;
         bookingDialog.subtotal = calendar.subtotal;
         bookingDialog.balance = calendar.rider.balance;
@@ -547,10 +545,12 @@ angular.module('bike').component('calendar', {
         } else {
           var invalidDays = countInvalidDays(startDate, endDate);
           calendar.duration = date.duration(startDate, endDate, invalidDays);
+          calendar.durationDays = date.durationDays(startDate, endDate);
           var prices = price.calculatePrices(startDate, endDate, calendar.prices);
           console.log(prices);
           calendar.subtotal = prices.subtotal;
           calendar.discount = prices.subtotal - prices.subtotalDiscounted;
+          calendar.discountRelative = calendar.discount / calendar.durationDays;
           calendar.lnrFee = prices.serviceFee;
           calendar.total = prices.total;
         }

@@ -37,6 +37,7 @@
     "days": "days",
     "week": "week",
     "weeks": "weeks",
+    "discount": "discount",
     "discount-day": "from 3 days",
     "discount-week": "from a week",
     "single-day": "for one day",
