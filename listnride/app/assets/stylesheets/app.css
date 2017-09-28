@@ -359,6 +359,15 @@ autocomplete .md-errors-spacer {
 /* SVG
 /*-----------------------------------------------------------------------------------*/
 
+.lnr-icn-xs {
+  min-width: 20px;
+  min-height: 20px;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 3px;
+  margin-left: 3px;
+}
+
 .lnr-icn-sm {
   width: 24px;
   height: 24px;
@@ -1084,6 +1093,10 @@ bike .date-picker-wrapper tr > td:first-child {
 
 bike .date-picker-wrapper tr > td:last-child {
   padding-right: 16px;
+}
+
+bike .per-day {
+  margin-bottom: 3px;
 }
 
 md-dialog md-dialog-content .date-picker-wrapper,
@@ -1851,6 +1864,10 @@ invite .voucher-link {
 
 .lnr-green-text {
   color: #5fc693;
+}
+
+.lnr-dark-green-text {
+  color: #00AD68;
 }
 
 .lnr-mobile-bike {

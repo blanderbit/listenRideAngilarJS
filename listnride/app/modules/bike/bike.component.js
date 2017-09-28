@@ -3,8 +3,8 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', 'ngMeta',
-    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, ngMeta) {
+  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', 'ngMeta', 'price',
+    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, ngMeta, price) {
       var bike = this;
 
       bike.mapOptions = {
@@ -29,6 +29,7 @@ angular.module('bike',[]).component('bike', {
         function(response) {
           bike.showAll = false;
           bike.data = response.data;
+          console.log(bike.data);
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
 
