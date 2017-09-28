@@ -294,37 +294,192 @@
           <md-content class="md-padding" layout="column">
             <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
               <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
-                <div class="lnr-list-title">
-                  <h3 class="md-subhead">{{ 'list.pricing.header' | translate }}</h3>
+                <h3 class="md-subhead">{{ 'list.pricing.header' | translate }}</h3>
+                <p>{{'list.pricing.description' | translate}}</p>
+                <!-- Daily Price -->
+                <md-input-container class="md-block">
+                  <label>{{ 'list.pricing.header' | translate }} (€)</label>
+                  <input type="text"
+                         ng-pattern="/^\d+$/"
+                         maxlength="3"
+                         placeholder="{{'list.pricing.daily-price-placeholder' | translate}}"
+                         ng-model="list.form.price_daily"
+                         ng-change="list.setCustomPrices()"
+                         ng-model-options='{ debounce: 300 }'
+                         required>
+                </md-input-container>
+                <!-- Daily and Weekly Discounts -->
+                <div layout="row" layout-align="space-between center">
+                  <div flex="45">
+                    <md-input-container class="md-block">
+                      <label>{{ 'list.pricing.daily-discount' | translate }} (%)</label>
+                      <input type="text"
+                             ng-pattern="/^\d+$/"
+                             placeholder="{{'list.pricing.daily-discount-placeholder' | translate}}"
+                             maxlength="2"
+                             ng-model="list.form.discount_daily"
+                             ng-change="list.setCustomPrices()"
+                             ng-model-options='{ debounce: 300 }'
+                             ng-disabled="!list.discountFieldEditable">
+                    </md-input-container>
+                  </div>
+                  <div flex="45">
+                    <md-input-container class="md-block">
+                      <label>{{ 'list.pricing.weekly-discount' | translate }} (%)</label>
+                      <input type="text"
+                             ng-pattern="/^\d+$/"
+                             placeholder="{{'list.pricing.weekly-discount-placeholder' | translate}}"
+                             maxlength="2"
+                             ng-model="list.form.discount_weekly"
+                             ng-change="list.setCustomPrices()"
+                             ng-model-options='{ debounce: 300 }'
+                             ng-disabled="!list.discountFieldEditable">
+                    </md-input-container>
+                  </div>
                 </div>
-
-                <md-input-container>
-                  <label>{{ 'list.pricing.half-daily-price' | translate }} (€)</label>
-                  <input name="halfDailyPrice" type="text" ng-pattern="/^[1-9]+[0-9]*$/" maxlength="3" required ng-model="list.form.price_half_daily" ng-change="list.halfPriceChanged()">
-                </md-input-container>
-
-                <md-input-container>
-                  <label>{{ 'list.pricing.daily-price' | translate }} (€)</label>
-                  <input name="dailyPrice" type="text" ng-pattern="/^\d+$/" maxlength="3" required ng-model="list.form.price_daily">
-                </md-input-container>
-
-                <md-input-container>
-                  <label>{{ 'list.pricing.weekly-price' | translate }} (€)</label>
-                  <input name="weeklyPrice" type="text" ng-pattern="/^\d+$/" maxlength="3" required ng-model="list.form.price_weekly">
-                </md-input-container>
+                <!-- Switch for Custom Prices -->
+                <div layout="row" layout-align="space-between center">
+                  <p>{{'list.pricing.custom-prices' | translate}}</p>
+                  <md-switch ng-model="list.customPrices"
+                             ng-change="list.enableDiscounts()"
+                             ng-model-options='{ debounce: 300 }'
+                             ng-click="list.setCustomPrices()">
+                  </md-switch>
+                  <div ng-style="{'display': settings.completeClosed ? '' : 'none'}">
+                    ({{ 'settings.mark-as-closed' | translate }})
+                  </div>
+                </div>
+                <!-- Custom Prices -->
+                <div class="bikes-custom-price" ng-show="list.customPrices">
+                  <div layout="row" layout-align="space-between center">
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_2_days' | translate}} </label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.price_2_days"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_3_days' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.price_3_days"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div layout="row" layout-align="space-between center">
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_4_days' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.price_4_days"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_5_days' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.price_5_days"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div layout="row" layout-align="space-between center">
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_6_days' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.price_6_days"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_7_days' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.price_7_days"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div layout="row" layout-align="space-between center">
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_8_days' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.price_8_days"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_30_days' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.price_30_days"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                  </div>
+                </div>
               </div>
-
+              <!-- Divider between Left and Right Columns -->
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
-
+              <!-- Info Column -->
               <div flex="50" hide-xs layout-margin>              
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead"><md-icon class="lnr-icn-sm md-color-disabled lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>Info</h3>
+                  <h3 class="md-subhead">
+                    Info
+                  </h3>
                 </div>
-                <p class="md-body-1">{{ 'list.pricing.hint' | translate }}</p>
+                <p class="md-body-1">{{ 'list.pricing.hint-para-1' | translate }}</p>
+                <p class="md-body-1">{{ 'list.pricing.hint-para-2' | translate }}</p>
+                <p class="md-body-1">{{ 'list.pricing.hint-para-3' | translate }}</p>
               </div>
-
             </div>
-            
+            <!-- Navigation Buttons -->
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
               <md-button class="md-lined" ng-click="list.previousTab()">
                 {{ 'list.back' | translate }}

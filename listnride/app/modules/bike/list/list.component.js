@@ -17,6 +17,9 @@ angular.module('list',[]).component('list', {
         images: []
       };
 
+      // flag for daily and weekly discount fields
+      list.discountFieldEditable = true;
+
       api.get('/users/' + $localStorage.userId).then(
         function (success) {
           var user = success.data;
@@ -27,6 +30,11 @@ angular.module('list',[]).component('list', {
           list.form.zip = user.zip;
           list.form.city = user.city;
           list.form.country = user.country;
+          // daily and weekly discounts
+          // by default the discounts are 0
+          list.form.discount_daily = user.discount_daily ? parseInt(list.form.discount_daily) : 0;
+          list.form.discount_weekly = user.discount_weekly ? parseInt(list.form.discount_weekly) : 0;
+
         },
         function (error) {
           console.log("Error fetching User");
@@ -106,6 +114,23 @@ angular.module('list',[]).component('list', {
           }
         );
 
+      };
+
+      // set the custom prices for a bike
+      list.setCustomPrices = function () {
+        // only when discount fields are enabled
+        if (list.discountFieldEditable) {
+          // set the custom prices
+          list.form = bikeOptions.setCustomPrices(list.form);
+        }
+      };
+
+      list.disableDiscounts = function () {
+        list.discountFieldEditable = false;
+      };
+
+      list.enableDiscounts = function () {
+        list.discountFieldEditable = true;
       };
 
       list.nextTab = function() {

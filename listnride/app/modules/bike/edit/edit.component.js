@@ -20,6 +20,8 @@ angular.module('edit',[]).component('edit', {
       edit.accessoryOptions = bikeOptions.accessoryOptions();
       edit.validateObj = {height: {min: 1000}, width: {min: 1500}, duration: {max: '5m'}};
       edit.invalidFiles = {};
+
+      // flag for daily and weekly discount fields
       edit.discountFieldEditable = true;
 
       api.get('/rides/' + $stateParams.bikeId).then(
@@ -63,8 +65,11 @@ angular.module('edit',[]).component('edit', {
 
       // set the custom prices for a bike
       edit.setCustomPrices = function () {
-        // set the custom prices
-        edit.form = bikeOptions.setCustomPrices(edit.form);
+        // only when discount fields are enabled
+        if (edit.discountFieldEditable) {
+          // set the custom prices
+          edit.form = bikeOptions.setCustomPrices(edit.form);
+        }
       };
 
       edit.disableDiscounts = function () {

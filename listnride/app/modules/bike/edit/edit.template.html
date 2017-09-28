@@ -312,6 +312,7 @@
               <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
                 <h3 class="md-subhead">{{ 'list.pricing.header' | translate }}</h3>
                 <p>{{'list.pricing.description' | translate}}</p>
+                <!-- Daily Price -->
                 <md-input-container class="md-block">
                   <label>{{ 'list.pricing.header' | translate }} (€)</label>
                   <input type="text"
@@ -323,6 +324,7 @@
                          ng-model-options='{ debounce: 300 }'
                          required>
                 </md-input-container>
+                <!-- Daily and Weekly Discounts -->
                 <div layout="row" layout-align="space-between center">
                   <div flex="45">
                     <md-input-container class="md-block">
@@ -351,6 +353,7 @@
                     </md-input-container>
                   </div>
                 </div>
+                <!-- Switch for Custom Prices -->
                 <div layout="row" layout-align="space-between center">
                   <p>{{'list.pricing.custom-prices' | translate}}</p>
                   <md-switch ng-model="edit.customPrices"
@@ -362,6 +365,7 @@
                     ({{ 'settings.mark-as-closed' | translate }})
                   </div>
                 </div>
+                <!-- Custom Prices -->
                 <div class="bikes-custom-price" ng-show="edit.customPrices">
                   <div layout="row" layout-align="space-between center">
                     <div flex="45">
@@ -477,9 +481,9 @@
                   </div>
                 </div>
               </div>
-
+              <!-- Divider between Left and Right Columns -->
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
-
+              <!-- Info Column -->
               <div flex="50" hide-xs layout-margin>
                 <div class="lnr-list-title">
                   <h3 class="md-subhead">
@@ -490,9 +494,8 @@
                 <p class="md-body-1">{{ 'list.pricing.hint-para-2' | translate }}</p>
                 <p class="md-body-1">{{ 'list.pricing.hint-para-3' | translate }}</p>
               </div>
-
             </div>
-
+            <!-- Navigation Buttons -->
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
               <md-button class="md-lined" ng-click="edit.previousTab()">{{ 'list.back' | translate }}</md-button>
             </div>
