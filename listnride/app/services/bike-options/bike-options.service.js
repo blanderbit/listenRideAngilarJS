@@ -90,42 +90,80 @@ angular.module('listnride')
 
       // estimate prices for several days
       // based on daily price && daily and weekly discounts
-      // formula: (no. days)(daily price)(100 - discount)/100
       setCustomPrices: function (data) {
-        data.price_2_days = Math.round(2 * data.price_daily * (100 - data.discount_daily) / 100);
-        data.price_3_days = Math.round(3 * data.price_daily * (100 - data.discount_daily) / 100);
-        data.price_4_days = Math.round(4 * data.price_daily * (100 - data.discount_daily) / 100);
-        data.price_5_days = Math.round(5 * data.price_daily * (100 - data.discount_daily) / 100);
-        data.price_6_days = Math.round(6 * data.price_daily * (100 - data.discount_daily) / 100);
-        data.price_7_days = Math.round(7 * data.price_daily * (100 - data.discount_weekly) / 100);
-        data.price_8_days = Math.round(1 * data.price_daily * (100 - data.discount_weekly) / 100);
-        data.price_30_days = Math.round(30 * data.price_daily * (100 - data.discount_weekly) / 100);
-        return data;
+
+        // daily price updates
+        for (var day = 1; day < 6; day += 1) {
+          data.prices[day].price = Math.floor((day + 1) * (data.prices[0].price) * (100 - data.discounts.daily) / 100);
+        }
+
+        // week price update
+        data.prices[6].price = Math.floor(7 * (data.prices[0].price) * (100 - data.discounts.weekly) / 100);
+
+        // additional day price update
+        data.prices[7].price = Math.floor(1 * (data.prices[0].price) * (100 - data.discounts.weekly) / 100);
+
+        // month price update
+        data.prices[8].price = Math.floor(28 * (data.prices[0].price) * (100 - data.discounts.weekly) / 100);
+
+        return data.prices;
       },
 
       // server to client transformation
       transformPrices: function (originalPrices) {
         var prices = [];
 
-        // prices for day 1 to day 7
+        // daily and weekly price updates
         for (var day = 0; day < 7; day += 1) {
           prices[day] = {
             id: originalPrices[day].id,
-            price: (day + 1) * parseFloat(originalPrices[day].price),
+            price: (day + 1) * Math.round(originalPrices[day].price),
             start_at: originalPrices[day].start_at
           };
         }
 
+        // additional day price update
         prices.push({
           id: originalPrices[7].id,
-          price: parseFloat(originalPrices[7].price),
+          price: Math.round(originalPrices[7].price),
           start_at: originalPrices[7].start_at
         });
 
+        // month price update
         prices.push({
           id: originalPrices[8].id,
-          price: 28 * parseFloat(originalPrices[8].price),
+          price: 28 * Math.round(originalPrices[8].price),
           start_at: originalPrices[8].start_at
+        });
+
+        return prices;
+      },
+
+      // client to server transformation
+      inverseTransformPrices: function (transformedPrices) {
+        var prices = [];
+
+        // daily and weekly price updates
+        for (var day = 0; day < 7; day += 1) {
+          prices[day] = {
+            id: transformedPrices[day].id,
+            price: Math.round(transformedPrices[day].price) / (day + 1),
+            start_at: transformedPrices[day].start_at
+          };
+        }
+
+        // additional day price update
+        prices.push({
+          id: transformedPrices[7].id,
+          price: Math.round(transformedPrices[7].price),
+          start_at: transformedPrices[7].start_at
+        });
+
+        // month price update
+        prices.push({
+          id: transformedPrices[8].id,
+          price: Math.round(transformedPrices[8].price) / 28,
+          start_at: transformedPrices[8].start_at
         });
 
         return prices;
