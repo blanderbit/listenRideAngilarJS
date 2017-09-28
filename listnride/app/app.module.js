@@ -15,7 +15,6 @@ angular.module('listnride', [
   'autocomplete',
   'listings',
   'listingCard',
-  'edit',
   'rating',
   'settings',
   'invoices',

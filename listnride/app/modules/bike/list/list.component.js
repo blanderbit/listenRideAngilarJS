@@ -42,7 +42,7 @@ angular.module('list', []).component('list', {
       list.validateObj = {height: {min: 1000}, width: {min: 1500}, duration: {max: '5m'}};
       list.invalidFiles = {};
 
-      list.populateListBikeData = function () {
+      list.populateNewBikeData = function () {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             var data = success.data;
@@ -64,11 +64,10 @@ angular.module('list', []).component('list', {
         );
       };
 
-      list.populateEditBikeData = function () {
+      list.populateExistingBikeData = function () {
         api.get('/rides/' + $stateParams.bikeId).then(
           function (response) {
             var data = response.data;
-
             if (data.user.id == $localStorage.userId) {
               var images = [];
               for (var i = 1; i <= 5; ++i) {
@@ -83,7 +82,7 @@ angular.module('list', []).component('list', {
               }
 
               data.images = images;
-              data.price_daily = parseInt(data.price_daily);
+              data.price_daily = parseInt(data.prices[0]);
               data.discount_daily = parseInt(data.discount_daily);
               data.discount_weekly = parseInt(data.discount_daily);
               data.size = parseInt(data.size);
@@ -357,8 +356,8 @@ angular.module('list', []).component('list', {
       };
 
       // populate data for list or edit bike
-      if (list.isListMode) list.populateListBikeData();
-      else list.populateEditBikeData();
+      if (list.isListMode) list.populateNewBikeData();
+      else list.populateExistingBikeData();
     }
   ]
 });
