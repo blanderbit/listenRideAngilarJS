@@ -463,7 +463,7 @@
                          ng-pattern="/^\d+$/"
                          maxlength="3"
                          placeholder="{{'list.pricing.daily-price-placeholder' | translate}}"
-                         ng-model="list.form.price_daily"
+                         ng-model="list.form.prices[0].price"
                          ng-change="list.setCustomPrices()"
                          ng-model-options='{ debounce: 300 }'
                          required>
@@ -519,7 +519,7 @@
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
-                               ng-model="list.form.price_2_days"
+                               ng-model="list.form.prices[1].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
                                required>
@@ -532,7 +532,7 @@
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
-                               ng-model="list.form.price_3_days"
+                               ng-model="list.form.prices[2].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
                                required>
@@ -547,7 +547,7 @@
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
-                               ng-model="list.form.price_4_days"
+                               ng-model="list.form.prices[3].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
                                required>
@@ -560,7 +560,7 @@
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
-                               ng-model="list.form.price_5_days"
+                               ng-model="list.form.prices[4].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
                                required>
@@ -575,7 +575,7 @@
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
-                               ng-model="list.form.price_6_days"
+                               ng-model="list.form.prices[5].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
                                required>
@@ -588,7 +588,7 @@
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
-                               ng-model="list.form.price_7_days"
+                               ng-model="list.form.prices[6].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
                                required>
@@ -603,7 +603,7 @@
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
-                               ng-model="list.form.price_8_days_long"
+                               ng-model="list.form.prices[7].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
                                required>
@@ -616,7 +616,7 @@
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
-                               ng-model="list.form.price_30_days"
+                               ng-model="list.form.prices[8].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
                                required>

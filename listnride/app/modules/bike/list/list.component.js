@@ -82,6 +82,7 @@ angular.module('list', []).component('list', {
               }
 
               data.images = images;
+              var prices = bikeOptions.transformPrices(data.prices);
               data.price_daily = parseInt(data.prices[0]);
               data.discount_daily = parseInt(data.discount_daily);
               data.discount_weekly = parseInt(data.discount_daily);
@@ -96,6 +97,7 @@ angular.module('list', []).component('list', {
 
               // form data for edit bikes
               list.form = data;
+              list.form.prices = prices;
               list.setCustomPrices();
             }
           },
