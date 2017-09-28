@@ -373,6 +373,8 @@
   },
 
   "list": {
+    "edit-bike": "Fiets bewerken",
+    "save-changes": "Aanpassingen opslaan",
     "list-your-bike": "Fiets plaatsen",
     "back": "terug",
     "next": "verder",
@@ -494,12 +496,6 @@
       }
     }
   },
-
-  "edit": {
-    "edit-bike": "Fiets bewerken",
-    "save-changes": "Aanpassingen opslaan"
-  },
-
   "listings": {
     "my-bikes": "Mijn fietsen",
     "no-bikes": "Je hebt nog geen fietsen online geplaatst."

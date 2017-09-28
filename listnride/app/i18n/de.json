@@ -373,6 +373,8 @@
   },
 
   "list": {
+    "edit-bike": "Rad bearbeiten",
+    "save-changes": "Änderungen Speichern",
     "list-your-bike": "Rad einstellen",
     "back": "Zurück",
     "next": "Weiter",
@@ -494,12 +496,6 @@
       }
     }
   },
-
-  "edit": {
-    "edit-bike": "Rad bearbeiten",
-    "save-changes": "Änderungen Speichern"
-  },
-
   "listings": {
     "my-bikes": "Meine Räder",
     "no-bikes": "Du hast noch keine eigenen Fahrräder online gestellt.",

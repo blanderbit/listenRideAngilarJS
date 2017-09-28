@@ -358,6 +358,8 @@
     "select-timespan-description": "Before you can request, please set the timespan of your rental. Simply click on the days and select pickup and dropoff times in the above calendar."
   },
   "list": {
+    "edit-bike": "Edit Bike",
+    "save-changes": "Save Changes",
     "list-your-bike": "List your bike",
     "back": "Back",
     "next": "Next",
@@ -478,10 +480,6 @@
         "mono-bike": "Mono Bike"
       }
     }
-  },
-  "edit": {
-    "edit-bike": "Edit Bike",
-    "save-changes": "Save Changes"
   },
   "listings": {
     "my-bikes": "My Bikes",

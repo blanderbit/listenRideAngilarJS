@@ -10,6 +10,8 @@ angular.module('list',[]).component('list', {
       }
 
       var list = this;
+      list.heading = 'list.list-your-bike';
+      list.isListMode = true;
       list.validateObj = {height: {min: 1000}, width: {min: 1500}, duration: {max: '5m'}};
       list.invalidFiles = {};
 
@@ -49,8 +51,6 @@ angular.module('list',[]).component('list', {
       list.accessoryOptions = bikeOptions.accessoryOptions();
 
       list.onFormSubmit = function() {
-
-
         list.submitDisabled = true;
         loadingDialog.open();
 
@@ -175,13 +175,16 @@ angular.module('list',[]).component('list', {
           list.form.country !== undefined;
       };
 
-      list.isPricingValid = function() {
-        return list.form.price_half_daily !== undefined &&
-          list.form.price_daily !== undefined &&
-          list.form.price_weekly !== undefined &&
-          list.form.price_weekly < 1000 &&
-          list.form.price_half_daily < 1000 &&
-          list.form.price_daily < 1000;
+      list.isPricingValid = function () {
+        return list.form.price_daily !== undefined &&
+          list.form.price_2_days !== undefined &&
+          list.form.price_3_days !== undefined &&
+          list.form.price_4_days !== undefined &&
+          list.form.price_5_days !== undefined &&
+          list.form.price_6_days !== undefined &&
+          list.form.price_7_days !== undefined &&
+          list.form.price_8_days !== undefined &&
+          list.form.price_30_days !== undefined;
       };
 
       list.categoryChange = function(oldCategory) {
