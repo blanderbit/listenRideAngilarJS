@@ -320,7 +320,7 @@
                          placeholder="{{'list.pricing.daily-price-placeholder' | translate}}"
                          ng-model="edit.form.price_daily"
                          ng-change="edit.setCustomPrices()"
-                         ng-model-options='{ debounce: 500 }'
+                         ng-model-options='{ debounce: 300 }'
                          required>
                 </md-input-container>
                 <div layout="row" layout-align="space-between center">
@@ -332,7 +332,9 @@
                              placeholder="{{'list.pricing.daily-discount-placeholder' | translate}}"
                              maxlength="2"
                              ng-model="edit.form.discount_daily"
-                             ng-disabled="edit.customPrices">
+                             ng-change="edit.setCustomPrices()"
+                             ng-model-options='{ debounce: 300 }'
+                             ng-disabled="!edit.discountFieldEditable">
                     </md-input-container>
                   </div>
                   <div flex="45">
@@ -343,13 +345,19 @@
                              placeholder="{{'list.pricing.weekly-discount-placeholder' | translate}}"
                              maxlength="2"
                              ng-model="edit.form.discount_weekly"
-                             ng-disabled="edit.customPrices">
+                             ng-change="edit.setCustomPrices()"
+                             ng-model-options='{ debounce: 300 }'
+                             ng-disabled="!edit.discountFieldEditable">
                     </md-input-container>
                   </div>
                 </div>
                 <div layout="row" layout-align="space-between center">
                   <p>{{'list.pricing.custom-prices' | translate}}</p>
-                  <md-switch ng-click="edit.setCustomPrices(true)"></md-switch>
+                  <md-switch ng-model="edit.customPrices"
+                             ng-change="edit.enableDiscounts()"
+                             ng-model-options='{ debounce: 300 }'
+                             ng-click="edit.setCustomPrices()">
+                  </md-switch>
                   <div ng-style="{'display': settings.completeClosed ? '' : 'none'}">
                     ({{ 'settings.mark-as-closed' | translate }})
                   </div>
@@ -364,6 +372,8 @@
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_2_days"
+                               ng-change="edit.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
                                required>
                       </md-input-container>
                     </div>
@@ -375,6 +385,8 @@
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_3_days"
+                               ng-change="edit.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
                                required>
                       </md-input-container>
                     </div>
@@ -388,6 +400,8 @@
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_4_days"
+                               ng-change="edit.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
                                required>
                       </md-input-container>
                     </div>
@@ -399,6 +413,8 @@
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_5_days"
+                               ng-change="edit.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
                                required>
                       </md-input-container>
                     </div>
@@ -412,6 +428,8 @@
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_6_days"
+                               ng-change="edit.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
                                required>
                       </md-input-container>
                     </div>
@@ -423,6 +441,8 @@
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_7_days"
+                               ng-change="edit.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
                                required>
                       </md-input-container>
                     </div>
@@ -436,6 +456,8 @@
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_8_days"
+                               ng-change="edit.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
                                required>
                       </md-input-container>
                     </div>
@@ -447,6 +469,8 @@
                                placeholder="{{'list.pricing.discount' | translate}} in %"
                                maxlength="3"
                                ng-model="edit.form.price_30_days"
+                               ng-change="edit.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
                                required>
                       </md-input-container>
                     </div>

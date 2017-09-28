@@ -20,6 +20,7 @@ angular.module('edit',[]).component('edit', {
       edit.accessoryOptions = bikeOptions.accessoryOptions();
       edit.validateObj = {height: {min: 1000}, width: {min: 1500}, duration: {max: '5m'}};
       edit.invalidFiles = {};
+      edit.discountFieldEditable = true;
 
       api.get('/rides/' + $stateParams.bikeId).then(
         function(response) {
@@ -45,9 +46,13 @@ angular.module('edit',[]).component('edit', {
             data.size = parseInt(data.size);
             data.mainCategory = (data.category + "").charAt(0);
             data.subCategory = (data.category + "").charAt(1);
+
+            // daily and weekly discounts
+            // by default the discounts are 0
             data.discount_daily = data.discount_daily ? parseInt(data.discount_daily) : 0;
             data.discount_weekly = data.discount_weekly ? parseInt(data.discount_weekly) : 0;
 
+            // form data for edit bikes
             edit.form = data;
           }
         },
@@ -56,11 +61,19 @@ angular.module('edit',[]).component('edit', {
         }
       );
 
-      edit.setCustomPrices = function (showCustom) {
-        edit.customPrices = showCustom === true ? !edit.customPrices: edit.customPrices;
+      // set the custom prices for a bike
+      edit.setCustomPrices = function () {
+        // set the custom prices
         edit.form = bikeOptions.setCustomPrices(edit.form);
       };
 
+      edit.disableDiscounts = function () {
+        edit.discountFieldEditable = false;
+      };
+
+      edit.enableDiscounts = function () {
+        edit.discountFieldEditable = true;
+      };
 
       edit.onFormSubmit = function() {
         edit.submitDisabled = true;
@@ -179,31 +192,31 @@ angular.module('edit',[]).component('edit', {
       function isCategoryValid() {
         return edit.form.mainCategory !== undefined &&
           edit.form.subCategory !== undefined;
-      };
+      }
 
       function isDetailsValid() {
         return edit.form.name !== undefined &&
           edit.form.brand !== undefined &&
           edit.form.size !== undefined &&
           edit.form.description !== undefined;
-      };
+      }
 
       function isPictureValid() {
         return edit.form.images.length > 0;
-      };
+      }
 
       function isLocationValid() {
         return edit.form.street !== undefined &&
           edit.form.zip !== undefined &&
           edit.form.city !== undefined &&
           edit.form.country !== undefined;
-      };
+      }
 
       function isPricingValid() {
         return edit.form.price_half_daily !== undefined &&
           edit.form.price_daily !== undefined &&
           edit.form.price_weekly !== undefined;
-      };
+      }
 
     }
   ]
