@@ -4,6 +4,11 @@ angular.module('listnride').factory('date', ['$translate',
   function($translate) {
 
     return {
+      durationDays: function(startDate, endDate) {
+        var hours = Math.abs(endDate - startDate) / (1000*60*60);
+        var days = Math.max(1, Math.ceil(hours / 24));
+        return days;
+      },
       duration: function(startDate, endDate, invalidDays) {
         if (startDate === undefined || endDate === undefined) {
           return "0 " + $translate.instant("shared.days") + " , 0 " + $translate.instant("shared.hours");

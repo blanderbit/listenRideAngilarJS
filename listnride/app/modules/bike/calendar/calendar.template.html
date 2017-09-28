@@ -161,7 +161,7 @@
 
     <div layout="row" layout-align="space-between center">
       <div class="lnr-dark-green-text">Discount 4 Days * 2€</div>
-      <div class="lnr-dark-green-text">-8 €</div>
+      <div class="lnr-dark-green-text">-{{ calendar.discount | currency:"€":2 }}</div>
     </div>
 
     <div layout="row" layout-align="space-between center">
