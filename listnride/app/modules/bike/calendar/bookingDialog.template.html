@@ -52,7 +52,7 @@
 
       <h3 class="md-title">{{ 'requests.price' | translate }}</h3>
       <div layout="row" layout-align="space-between center">
-        <span class="md-body-2">{{ bookingDialog.calendar.durationDays }} {{ 'days' | translate }} x {{ bookingDialog.calendar.prices[0] | currency:"€":2 }}</span>
+        <span class="md-body-2">{{ bookingDialog.calendar.durationDays }} {{ 'days' | translate }} x {{ bookingDialog.calendar.prices[0].price | currency:"€":2 }}</span>
         <span class="md-body-1">{{ bookingDialog.calendar.subtotal | currency: '€' }}</span>
       </div>
       <div layout="row" layout-align="space-between center">
