@@ -472,7 +472,15 @@
                 <div layout="row" layout-align="space-between center">
                   <div flex="45">
                     <md-input-container class="md-block">
-                      <label>{{ 'list.pricing.daily-discount' | translate }} (%)</label>
+                      <div layout layout-align="space-between center">
+                        <div>
+                          <label>{{ 'list.pricing.daily-discount' | translate }} (%)</label>
+                        </div>
+                        <div>
+                          <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+                          <md-tooltip md-direction="right">Discount on the price if the bike<br>is rented more than a day</md-tooltip>
+                        </div>
+                      </div>
                       <input type="text"
                              ng-pattern="/^\d+$/"
                              placeholder="{{'list.pricing.daily-discount-placeholder' | translate}}"
@@ -485,7 +493,15 @@
                   </div>
                   <div flex="45">
                     <md-input-container class="md-block">
-                      <label>{{ 'list.pricing.weekly-discount' | translate }} (%)</label>
+                      <div layout layout-align="space-between center">
+                        <div>
+                          <label>{{ 'list.pricing.weekly-discount' | translate }} (%)</label>
+                        </div>
+                        <div>
+                          <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+                          <md-tooltip md-direction="right">Discount on the price if the bike<br>is rented a week or more</md-tooltip>
+                        </div>
+                      </div>
                       <input type="text"
                              ng-pattern="/^\d+$/"
                              placeholder="{{'list.pricing.weekly-discount-placeholder' | translate}}"
@@ -496,6 +512,9 @@
                              ng-disabled="!list.discountFieldEditable">
                     </md-input-container>
                   </div>
+                </div>
+                <div>
+                  <span ng-if="list.form.discounts.weekly && list.form.prices[0].price" class="md-caption">Average weekly price with {{list.form.discounts.weekly}}% discount: {{7*list.form.prices[0].price*(list.form.discounts.weekly/100)}}€</span><span>&nbsp;</span>
                 </div>
                 <!-- Switch for Custom Prices -->
                 <div layout="row" layout-align="space-between center">
