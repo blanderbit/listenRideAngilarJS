@@ -91,6 +91,9 @@ angular
         };
       },
 
+      // estimate prices for several days
+      // based on daily price && daily and weekly discounts
+      // formula: (no. days)(daily price)(100 - discount)/100
       setCustomPrices: function (data) {
         data.price_2_days = Math.round(2 * data.price_daily * (100 - data.discount_daily) / 100);
         data.price_3_days = Math.round(3 * data.price_daily * (100 - data.discount_daily) / 100);
@@ -98,7 +101,7 @@ angular
         data.price_5_days = Math.round(5 * data.price_daily * (100 - data.discount_daily) / 100);
         data.price_6_days = Math.round(6 * data.price_daily * (100 - data.discount_daily) / 100);
         data.price_7_days = Math.round(7 * data.price_daily * (100 - data.discount_weekly) / 100);
-        data.price_8_days = Math.round(8 * data.price_daily * (100 - data.discount_daily) / 100);
+        data.price_8_days = Math.round(1 * data.price_daily * (100 - data.discount_daily) / 100);
         data.price_30_days = Math.round(30 * data.price_daily * (100 - data.discount_daily) / 100);
         return data;
       }

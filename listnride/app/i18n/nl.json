@@ -437,7 +437,7 @@
       "hint-para-3": "Om langere verblijven aan te moedigen, stellen sommige verhuurders een dag of wekelijkse korting in.",
       "label": "Prijs",
       "discount": "Korting",
-      "custom-prices": "Aangepaste prijs",
+      "custom-price": "Aangepaste prijs",
       "daily-price-placeholder": "Prijs in €",
       "daily-discount-placeholder": "Korting in %",
       "weekly-discount-placeholder": "Korting in %",
@@ -452,7 +452,7 @@
       "price_5_days": "5 dagen",
       "price_6_days": "6 dagen",
       "price_7_days": "7 dagen (1 week)",
-      "price_8_days": "vanaf 8 dagen ",
+      "price_8_days": "vanaf 8 dagen (elke dag)",
       "price_30_days": "30 dagen (1 maand)"
     },
     "subcategory": {
