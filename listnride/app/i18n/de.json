@@ -377,6 +377,8 @@
   },
 
   "list": {
+    "edit-bike": "Rad bearbeiten",
+    "save-changes": "Änderungen Speichern",
     "list-your-bike": "Rad einstellen",
     "back": "Zurück",
     "next": "Weiter",
@@ -434,12 +436,32 @@
       "country": "Land"
     },
     "pricing": {
-      "header": "Für welchen Preis bietest Du dein Rad an?",
-      "hint": "Nun setze noch einen angemessenen Mietpreis. Der Mietpreis sollte bezahlbar sein und sich nach Rad und Ausstattung richten. Schau Dir gern ähnliche Listings als Referenz an. Eine Mietdauer unter 6 Stunde ist eine Halbtagsmiete, 6-24 Stunde steht für eine Tagesmiete.",
+      "header": "Tagespreis",
+      "description": "Dein Tagespreis ist dein Standardpreis pro Tag.",
+      "hint-para-1": "Über den Preis, den du für dein Rad nimmst, entscheidest du selbst. Der Mietpreis sollte sich nach Rad und Ausstattung richten. Um eine Vorstellung von den Preisen am Markt zu erhalten, schaue Dir vergleichbare Angebote an.",
+      "hint-para-2": "Eine Mietdauer unter 6 Stunden ist eine Halbtagesmiete, 6-24 Stunde steht für eine Tagesmiete.",
+      "hint-para-3": "Um mehr Langzeitbuchungen zu erhalten, legen manche Vermieter einen Tages- oder Wochenrabatt fest.",
       "label": "Preis",
+      "discount": "Rabatt",
+      "custom-prices": "Individuelle Preise",
+      "daily-price-placeholder": "Preis in €",
+      "daily-discount-placeholder": "Rabatt in %",
+      "weekly-discount-placeholder": "Rabatt in %",
       "half-daily-price": "Halber Tag",
       "daily-price": "Ganzer Tag",
-      "weekly-price": "Eine Woche"
+      "weekly-price": "Eine Woche",
+      "daily-discount": "Ganzer Discount",
+      "weekly-discount": "Wöchentlich Discount",
+      "price_2_days": "2 Tage",
+      "price_3_days": "3 Tage",
+      "price_4_days": "4 Tage",
+      "price_5_days": "5 Tage",
+      "price_6_days": "6 Tage",
+      "price_7_days": "7 Tage (1 Woche)",
+      "price_8_days": "ab 8 Tage",
+      "price_8_days_long": "ab 8 Tage (jeden Tag)",
+      "price_30_days": "30 Tagen",
+      "price_30_days_long": "30 Tagen (1 Monat)"
     },
     "subcategory": {
       "1": {
@@ -480,12 +502,6 @@
       }
     }
   },
-
-  "edit": {
-    "edit-bike": "Rad bearbeiten",
-    "save-changes": "Änderungen Speichern"
-  },
-
   "listings": {
     "my-bikes": "Meine Räder",
     "no-bikes": "Du hast noch keine eigenen Fahrräder online gestellt.",

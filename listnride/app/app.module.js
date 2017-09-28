@@ -15,7 +15,6 @@ angular.module('listnride', [
   'autocomplete',
   'listings',
   'listingCard',
-  'edit',
   'rating',
   'settings',
   'invoices',
@@ -50,6 +49,7 @@ angular.module('listnride', [
   'constanceSpin',
   'velosoph',
   /* external modules */
+  'ngAnimate',
   'ngMaterial',
   'ngMessages',
   'pascalprecht.translate',

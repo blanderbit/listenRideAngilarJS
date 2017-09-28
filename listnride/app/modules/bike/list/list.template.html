@@ -1,37 +1,71 @@
-<!--TODO: REFACTOR & MERGE code with edit component-->
-
 <md-content class="single-column">
-  <div class="content lnr-page-margin" layout="column" layout-align="center center">
-    <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h1 class="md-headline">{{ 'list.list-your-bike' | translate }}</h1>
+  <div class="content lnr-page-margin"
+       layout="column"
+       layout-align="center center">
+    <div class="lnr-section-title"
+         layout="column"
+         layout-align="center center">
+      <h1 class="md-headline">{{ list.heading | translate }}</h1>
     </div>
 
-    <form name="listBike" layout="column" layout-align="start center" layout-padding>
-      <md-tabs md-no-pagination md-dynamic-height md-no-ink md-no-ink-bars md-selected="list.selectedIndex" md-center-tabs="on">
-        
+    <div layout="row"
+         layout-align="end center"
+         ng-if="!list.isListMode">
+      <md-button class="md-raised md-primary"
+                 ng-disabled="!list.isFormValid() || list.submitDisabled"
+                 ng-click="list.onFormSubmit()">
+        {{ 'list.save-changes' | translate }}
+      </md-button>
+    </div>
+
+    <form name="listBike"
+          layout="column"
+          layout-align="start center"
+          layout-padding>
+      <md-tabs md-no-pagination
+               md-dynamic-height
+               md-no-ink
+               md-no-ink-bars
+               md-selected="list.selectedIndex"
+               md-center-tabs="on">
+
         <!-- categories -->
-        <md-tab ng-disabled="true" class="categories" label="{{ 'list.category.label' | translate }}" layout="row">
+        <md-tab ng-disabled="list.isListMode"
+                class="categories"
+                label="{{ 'list.category.label' | translate }}"
+                layout="row">
           <md-content class="md-padding" layout="column">
-            <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
-              
-              <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
+            <div class="tab-content"
+                 layout="row"
+                 layout-align="space-between none"
+                 layout-padding>
+              <div class="lnr-list-form"
+                   flex-xs="100"
+                   flex-gt-xs="50"
+                   layout="column">
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead">{{ 'list.category.header' | translate }}</h3>
+                  <h3 class="md-subhead">
+                    {{ 'list.category.header' | translate }}
+                  </h3>
                 </div>
                 <div layout="row" layout-align="space-between start">
                   <md-radio-group ng-model="list.form.mainCategory" flex="50" layout="column"
-                  ng-change="list.categoryChange({{list.form.mainCategory}})">
-                    <md-radio-button class="main-category" ng-repeat="cat in list.categoryOptions" value="{{cat.value}}">
+                                  ng-change="list.categoryChange({{list.form.mainCategory}})">
+                    <md-radio-button class="main-category"
+                                     ng-repeat="cat in list.categoryOptions"
+                                     value="{{cat.value}}">
                       <md-icon class="lnr-icn-sm md-color-foreground accessory-icon"
-                      md-svg-src="app/assets/ui_icons/{{cat.iconFileName}}"
-                      ng-class="list.form.mainCategory == cat.value ? 'checked' : 'unchecked'"></md-icon>
-
+                               md-svg-src="app/assets/ui_icons/{{cat.iconFileName}}"
+                               ng-class="list.form.mainCategory == cat.value ? 'checked' : 'unchecked'"></md-icon>
                       {{ 'list.category.' + cat.label.replace(' ', '-') | translate }}
                     </md-radio-button>
                   </md-radio-group>
 
-                  <md-radio-group ng-model="list.form.subCategory" flex layout="column">
-                    <md-radio-button ng-repeat="subcat in list.subcategoryOptions[list.form.mainCategory]" value="{{subcat.value}}">
+                  <md-radio-group ng-model="list.form.subCategory"
+                                  flex
+                                  layout="column">
+                    <md-radio-button ng-repeat="subcat in list.subcategoryOptions[list.form.mainCategory]"
+                                     value="{{subcat.value}}">
                       {{ 'list.subcategory.' + list.form.mainCategory + '.' + subcat.label | translate }}
                     </md-radio-button>
                   </md-radio-group>
@@ -40,16 +74,23 @@
 
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
 
-              <div flex="50" hide-xs layout-margin>              
+              <div flex="50" hide-xs layout-margin>
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead"><md-icon class="lnr-icn-sm md-color-disabled lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>Info</h3>
+                  <h3 class="md-subhead">
+                    Info
+                  </h3>
                 </div>
                 <p class="md-body-1">{{ 'list.category.hint' | translate }}</p>
               </div>
             </div>
-            
-            <div class="navigation" layout="row" layout-align="end center" layout-margin>
-              <md-button class="md-raised md-primary" ng-disabled="!list.isCategoryValid()" ng-click="list.nextTab()">
+
+            <div class="navigation"
+                 layout="row"
+                 layout-align="end center"
+                 layout-margin>
+              <md-button class="md-raised md-primary"
+                         ng-disabled="!list.isCategoryValid() && list.isListMode"
+                         ng-click="list.nextTab()">
                 {{ 'list.next' | translate }}
               </md-button>
             </div>
@@ -58,31 +99,47 @@
         <!-- end categories -->
 
         <!-- details -->
-        <md-tab ng-disabled="true" class="details" label="{{ 'list.details.label' | translate }}" layout="row">
+        <md-tab ng-disabled="list.isListMode" class="details" label="{{ 'list.details.label' | translate }}"
+                layout="row">
           <md-content class="md-padding" layout="column">
-            <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
-              <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
+            <div class="tab-content"
+                 layout="row"
+                 layout-align="space-between none"
+                 layout-padding>
+              <div class="lnr-list-form"
+                   flex-xs="100"
+                   flex-gt-xs="50"
+                   layout="column">
                 <div class="lnr-list-title">
                   <h3 class="md-subhead">{{ 'list.details.header' | translate }}</h3>
                 </div>
                 <md-input-container>
                   <label>{{ 'list.details.brand' | translate }}</label>
-                  <input name="brand" required ng-model="list.form.brand" maxlength="25">
+                  <input name="brand"
+                         required
+                         ng-model="list.form.brand"
+                         maxlength="25">
                 </md-input-container>
 
                 <md-input-container>
                   <label>{{ 'list.details.name' | translate }}</label>
-                  <input required ng-model="list.form.name" maxlength="25">
+                  <input required
+                         ng-model="list.form.name"
+                         maxlength="25">
                 </md-input-container>
 
                 <md-input-container>
                   <label>{{ 'list.details.size' | translate }}</label>
                   <md-select required ng-model="list.form.size">
-                    <md-option ng-if="list.form.mainCategory == 4" ng-repeat="size in list.kidsSizeOptions" value="{{ size.value }}">
+                    <md-option ng-if="list.form.mainCategory == 4"
+                               ng-repeat="size in list.kidsSizeOptions"
+                               value="{{ size.value }}">
                       {{ size.label }}
                     </md-option>
 
-                    <md-option ng-if="list.form.mainCategory != 4" ng-repeat="size in list.sizeOptions" value="{{ size.value }}">
+                    <md-option ng-if="list.form.mainCategory != 4"
+                               ng-repeat="size in list.sizeOptions"
+                               value="{{ size.value }}">
                       {{ size.label }}
                     </md-option>
                   </md-select>
@@ -90,29 +147,46 @@
 
                 <md-input-container>
                   <label>{{ 'list.details.description' | translate }}</label>
-                  <textarea required md-no-resize minlength="100" md-maxlength="800"  name="description" ng-model="list.form.description" rows="2"></textarea>
+                  <textarea required
+                            md-no-resize
+                            minlength="100"
+                            md-maxlength="800"
+                            name="description"
+                            ng-model="list.form.description"
+                            rows="2"></textarea>
                   <div ng-messages="listBike.description.$error" role="alert">
-                    <div ng-message="minlength">{{ 'list.details.min-length-warning' | translate }}</div>
+                    <div ng-message="minlength">
+                      {{ 'list.details.min-length-warning' | translate }}
+                    </div>
                   </div>
                 </md-input-container>
               </div>
 
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
 
-              <div flex="50" hide-xs layout-margin>              
+              <div flex="50" hide-xs layout-margin>
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead"><md-icon class="lnr-icn-sm md-color-disabled lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>Info</h3>
+                  <h3 class="md-subhead">
+                    Info
+                  </h3>
                 </div>
-                <p class="md-body-1">{{ 'list.details.hint' | translate }}</p>
+                <p class="md-body-1">
+                  {{ 'list.details.hint' | translate }}
+                </p>
               </div>
 
             </div>
-            
-            <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
+
+            <div class="navigation"
+                 layout="row"
+                 layout-align="space-between center"
+                 layout-margin>
               <md-button class="md-lined" ng-click="list.previousTab()">
                 {{ 'list.back' | translate }}
               </md-button>
-              <md-button class="md-raised md-primary" ng-disabled="!list.isDetailsValid()" ng-click="list.nextTab()">
+              <md-button class="md-lined"
+                         ng-disabled="!list.isDetailsValid() && list.isListMode"
+                         ng-click="list.nextTab()">
                 {{ 'list.next' | translate }}
               </md-button>
             </div>
@@ -121,39 +195,63 @@
         <!-- end details -->
 
         <!-- accessories -->
-        <md-tab ng-disabled="true" class="accessories" label="{{ 'list.accessories.label' | translate }}" layout="row">
+        <md-tab ng-disabled="list.isListMode" class="accessories" label="{{ 'list.accessories.label' | translate }}"
+                layout="row">
           <md-content class="md-padding" layout="column">
-            <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
-              <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
+            <div class="tab-content"
+                 layout="row"
+                 layout-align="space-between none"
+                 layout-padding>
+              <div class="lnr-list-form"
+                   flex-xs="100"
+                   flex-gt-xs="50"
+                   layout="column">
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead">{{ 'list.accessories.header' | translate }}</h3>
+                  <h3 class="md-subhead">
+                    {{ 'list.accessories.header' | translate }}
+                  </h3>
                 </div>
 
-                <div ng-repeat="acc in list.accessoryOptions" class="accessory-checkbox" layout="row" layout-align="start center">
-                  <md-icon ng-class="list.form[acc.model] ? 'checked' : 'unchecked'" class="lnr-icn-sm md-color-foreground accessory-icon"
-                    md-svg-src="app/assets/ui_icons/{{acc.iconFileName}}" ng-click="list.onAccessoryClick(acc.model)"></md-icon>
-                  <div class="accessory-label no-select" ng-click="list.onAccessoryClick(acc.model)">
-                    {{ 'list.accessories.' + acc.label | translate }}
+                <div ng-repeat="acc in list.accessoryOptions"
+                     class="accessory-checkbox"
+                     layout="row"
+                     layout-align="start center">
+                  <md-icon ng-class="list.form[acc.model] ? 'checked' : 'unchecked'"
+                           class="lnr-icn-sm md-color-foreground accessory-icon"
+                           md-svg-src="app/assets/ui_icons/{{acc.iconFileName}}"
+                           ng-click="list.onAccessoryClick(acc.model)"></md-icon>
+                  <div class="accessory-label no-select"
+                       ng-click="list.onAccessoryClick(acc.model)">
+                    {{'list.accessories.' + acc.label | translate }}
                   </div>
                 </div>
               </div>
 
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
-              
-              <div flex="50" hide-xs layout-margin>              
+
+              <div flex="50" hide-xs layout-margin>
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead"><md-icon class="lnr-icn-sm md-color-disabled lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>Info</h3>
+                  <h3 class="md-subhead">
+                    Info
+                  </h3>
                 </div>
-                <p class="md-body-1">{{ 'list.accessories.hint' | translate }}</p>
+                <p class="md-body-1">
+                  {{ 'list.accessories.hint' | translate }}
+                </p>
               </div>
 
             </div>
-            
-            <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
-              <md-button class="md-lined" ng-click="list.previousTab()">
+
+            <div class="navigation"
+                 layout="row"
+                 layout-align="space-between center"
+                 layout-margin>
+              <md-button class="md-lined"
+                         ng-click="list.previousTab()">
                 {{ 'list.back' | translate }}
               </md-button>
-              <md-button class="md-raised md-primary" ng-click="list.nextTab()">
+              <md-button class="md-lined"
+                         ng-click="list.nextTab()">
                 {{ 'list.next' | translate }}
               </md-button>
             </div>
@@ -162,41 +260,68 @@
         <!-- end accessories -->
 
         <!-- pictures -->
-        <md-tab ng-disabled="true" class="pictures" label="{{ 'list.pictures.label' | translate }}" layout="row">
+        <md-tab ng-disabled="list.isListMode"
+                class="pictures"
+                label="{{ 'list.pictures.label' | translate }}"
+                layout="row">
           <md-content class="md-padding" layout="column">
-            <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
-              <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">              
+            <div class="tab-content"
+                 layout="row"
+                 layout-align="space-between none"
+                 layout-padding>
+              <div class="lnr-list-form"
+                   flex-xs="100"
+                   flex-gt-xs="50"
+                   layout="column">
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead">{{ 'list.pictures.header' | translate }}</h3>
+                  <h3 class="md-subhead">
+                    {{ 'list.pictures.header' | translate }}
+                  </h3>
                 </div>
-
                 <md-button
-                        class="md-raised md-primary lnr-no-margin"
-                        ng-disabled="list.form.images.length > 4"
-                        ngf-multiple="true"
-                        ngf-select="list.addImage($files)"
-                        ngf-fix-orientation="true"
-                        accept=".jpg,.jpeg,.png"
-                        ngf-validate="list.validateObj"
-                        ngf-model-invalid="list.invalidFiles"
-                >
+                    class="md-raised md-primary lnr-no-margin"
+                    ng-disabled="list.form.images.length > 4"
+                    ngf-multiple="true"
+                    ngf-select="list.addImage($files)"
+                    accept=".jpg,.jpeg,.png"
+                    ngf-validate="list.validateObj"
+                    ngf-model-invalid="list.invalidFiles">
                   {{ 'list.pictures.select-images' | translate }}
                 </md-button>
 
-                <div class="preview-container lnr-margin-top" layout="column" layout-wrap>
-                  <div ng-repeat="img in list.form.images track by $index" layout="row" layout-align="space-between center">
-                    <div class="img-preview lnr-margin-top" ngf-background="img" ngf-as-background="true"></div>
+                <div class="preview-container lnr-margin-top"
+                     layout="column"
+                     layout-wrap>
+                  <div ng-repeat="img in list.form.images track by $index"
+                       layout="row"
+                       layout-align="space-between center">
+                    <div ng-if="img.local == 'true' && !list.isListMode"
+                         class="img-preview lnr-margin-top"
+                         ngf-background="img.src"
+                         ngf-as-background="true">
+                    </div>
 
-                    <md-button class="md-lined md-warn" ng-click="list.removeImage($index)">
+                    <div ng-if="!list.isListMode" class="img-preview lnr-margin-top"
+                         ng-if="img.local == 'false'"
+                         ng-style="{'background-image': 'url(' + img.url + ')'}">
+                    </div>
+                    <md-button class="md-lined md-warn"
+                               ng-click="list.removeImage($index)">
                       {{ 'list.pictures.remove' | translate}}
                     </md-button>
                   </div>
                 </div>
-                <div ng-if="list.invalidFiles[0] !== undefined" class="text-error" layout="column" hide-gt-xs layout-padding>
+                <div class="text-error"
+                     ng-if="list.invalidFiles[0] !== undefined"
+                     layout="column"
+                     hide-gt-xs
+                     layout-padding>
                   {{ 'list.pictures.under-min-size' | translate}}
                   <ul>
                     <div ng-repeat="invalideImage in list.invalidFiles" class="text-error">
-                      <li>{{invalideImage.name}} - {{invalideImage.$ngfWidth}}x{{invalideImage.$ngfHeight}}</li>
+                      <li>
+                        {{invalideImage.name}} - {{invalideImage.$ngfWidth}}x{{invalideImage.$ngfHeight}}
+                      </li>
                     </div>
                   </ul>
                 </div>
@@ -204,33 +329,45 @@
 
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
 
-              <div flex="50" hide-xs layout-margin>              
+              <div flex="50" hide-xs layout-margin>
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead"><md-icon class="lnr-icn-sm md-color-disabled lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>Info</h3>
+                  <h3 class="md-subhead">
+                    Info
+                  </h3>
                 </div>
                 <p class="md-body-1">{{ 'list.pictures.hint' | translate }}</p>
                 <a ui-sref="how-to-shoot-bike-photos" target="_blank">{{ 'list.pictures.how-to' | translate }}</a>
+
                 <div ng-if="list.invalidFiles[0] !== undefined" class="text-error">
                   <div class="lnr-list-title">
                     <h3 class="md-subhead">
-                      <md-icon md-font-icon="fa-exclamation-triangle"  class="lnr-icn-sm md-color-disabled lnr-margin-right fa"></md-icon>{{ 'list.pictures.invalid-images' | translate}}
+                      <md-icon md-font-icon="fa-exclamation-triangle"
+                               class="lnr-icn-sm md-color-disabled lnr-margin-right fa">
+                      </md-icon>
+                      {{ 'list.pictures.invalid-images' | translate}}
                     </h3>
                   </div>
                   {{ 'list.pictures.under-min-size' | translate}}
                   <ul>
                     <div ng-repeat="invalideImage in list.invalidFiles" class="text-error">
-                      <li>{{invalideImage.name}} - {{invalideImage.$ngfWidth}}x{{invalideImage.$ngfHeight}}</li>
+                      <li>
+                        {{invalideImage.name}} - {{invalideImage.$ngfWidth}}x{{invalideImage.$ngfHeight}}
+                      </li>
                     </div>
                   </ul>
                 </div>
               </div>
             </div>
-            
-            <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
+
+            <div class="navigation"
+                 layout="row"
+                 layout-align="space-between center"
+                 layout-margin>
               <md-button class="md-lined" ng-click="list.previousTab()">
                 {{ 'list.back' | translate }}
               </md-button>
-              <md-button class="md-raised md-primary" ng-disabled="!list.isPictureValid()" ng-click="list.nextTab()">
+              <md-button class="md-lined" ng-click="list.nextTab()"
+                         ng-disabled="!list.isPictureValid() && list.isListMode">
                 {{ 'list.next' | translate }}
               </md-button>
             </div>
@@ -239,15 +376,31 @@
         <!-- end pictures -->
 
         <!-- location -->
-        <md-tab ng-disabled="true" class="location" label="{{ 'list.location.label' | translate }}" layout="row">
+        <md-tab class="location"
+                ng-disabled="list.isListMode"
+                label="{{ 'list.location.label' | translate }}"
+                layout="row">
           <md-content class="md-padding" layout="column">
-            <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
-              <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
+            <div class="tab-content"
+                 layout="row"
+                 layout-align="space-between none"
+                 layout-padding>
+              <div class="lnr-list-form"
+                   flex-xs="100"
+                   flex-gt-xs="50"
+                   layout="column">
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead">{{ 'list.location.header' | translate }}</h3>
+                  <h3 class="md-subhead">
+                    {{ 'list.location.header' | translate }}
+                  </h3>
                 </div>
 
-                <autocomplete autocomplete-id="list" layout="column" location="list.form.street" label-id="{{ 'list.location.street-number' | translate }}" required="true" place-changed="list.fillAddress(place)">
+                <autocomplete autocomplete-id="list"
+                              layout="column"
+                              location="list.form.street"
+                              label-id="{{ 'list.location.street-number' | translate }}"
+                              required="true"
+                              place-changed="list.fillAddress(place)">
                 </autocomplete>
 
                 <md-input-container>
@@ -268,20 +421,26 @@
 
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
 
-              <div flex="50" hide-xs layout-margin>              
+              <div flex="50" hide-xs layout-margin>
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead"><md-icon class="lnr-icn-sm md-color-disabled lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>Info</h3>
+                  <h3 class="md-subhead">
+                    Info
+                  </h3>
                 </div>
-                <p class="md-body-1">{{ 'list.location.hint' | translate }}</p>
+                <p class="md-body-1">
+                  {{ 'list.location.hint' | translate }}
+                </p>
               </div>
 
             </div>
-            
+
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
               <md-button class="md-lined" ng-click="list.previousTab()">
                 {{ 'list.back' | translate }}
               </md-button>
-              <md-button class="md-raised md-primary" ng-disabled="!list.isLocationValid()" ng-click="list.nextTab()">
+              <md-button class="md-lined"
+                         ng-disabled="!list.isLocationValid() && list.isListMode"
+                         ng-click="list.nextTab()">
                 {{ 'list.next' | translate }}
               </md-button>
             </div>
@@ -290,52 +449,211 @@
         <!-- end location -->
 
         <!-- pricing -->
-        <md-tab ng-disabled="true" class="pricing" label="{{ 'list.pricing.label' | translate }}" layout="row">
+        <md-tab ng-disabled="list.isListMode" class="pricing" label="{{ 'list.pricing.label' | translate }}"
+                layout="row">
           <md-content class="md-padding" layout="column">
             <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
               <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
-                <div class="lnr-list-title">
-                  <h3 class="md-subhead">{{ 'list.pricing.header' | translate }}</h3>
+                <h3 class="md-subhead">{{ 'list.pricing.header' | translate }}</h3>
+                <p>{{'list.pricing.description' | translate}}</p>
+                <!-- Daily Price -->
+                <md-input-container class="md-block">
+                  <label>{{ 'list.pricing.header' | translate }} (€)</label>
+                  <input type="text"
+                         ng-pattern="/^\d+$/"
+                         maxlength="3"
+                         placeholder="{{'list.pricing.daily-price-placeholder' | translate}}"
+                         ng-model="list.form.prices[0].price"
+                         ng-change="list.setCustomPrices()"
+                         ng-model-options='{ debounce: 300 }'
+                         required>
+                </md-input-container>
+                <!-- Daily and Weekly Discounts -->
+                <div layout="row" layout-align="space-between center">
+                  <div flex="45">
+                    <md-input-container class="md-block">
+                      <label>{{ 'list.pricing.daily-discount' | translate }} (%)</label>
+                      <input type="text"
+                             ng-pattern="/^\d+$/"
+                             placeholder="{{'list.pricing.daily-discount-placeholder' | translate}}"
+                             maxlength="2"
+                             ng-model="list.form.discount_daily"
+                             ng-change="list.setCustomPrices()"
+                             ng-model-options='{ debounce: 300 }'
+                             ng-disabled="!list.discountFieldEditable">
+                    </md-input-container>
+                  </div>
+                  <div flex="45">
+                    <md-input-container class="md-block">
+                      <label>{{ 'list.pricing.weekly-discount' | translate }} (%)</label>
+                      <input type="text"
+                             ng-pattern="/^\d+$/"
+                             placeholder="{{'list.pricing.weekly-discount-placeholder' | translate}}"
+                             maxlength="2"
+                             ng-model="list.form.discount_weekly"
+                             ng-change="list.setCustomPrices()"
+                             ng-model-options='{ debounce: 300 }'
+                             ng-disabled="!list.discountFieldEditable">
+                    </md-input-container>
+                  </div>
                 </div>
-
-                <md-input-container>
-                  <label>{{ 'list.pricing.half-daily-price' | translate }} (€)</label>
-                  <input name="halfDailyPrice" type="text" ng-pattern="/^[1-9]+[0-9]*$/" maxlength="3" required ng-model="list.form.price_half_daily" ng-change="list.halfPriceChanged()">
-                </md-input-container>
-
-                <md-input-container>
-                  <label>{{ 'list.pricing.daily-price' | translate }} (€)</label>
-                  <input name="dailyPrice" type="text" ng-pattern="/^\d+$/" maxlength="3" required ng-model="list.form.price_daily">
-                </md-input-container>
-
-                <md-input-container>
-                  <label>{{ 'list.pricing.weekly-price' | translate }} (€)</label>
-                  <input name="weeklyPrice" type="text" ng-pattern="/^\d+$/" maxlength="3" required ng-model="list.form.price_weekly">
-                </md-input-container>
+                <!-- Switch for Custom Prices -->
+                <div layout="row" layout-align="space-between center">
+                  <p>{{'list.pricing.custom-prices' | translate}}</p>
+                  <md-switch ng-model="list.customPrices"
+                             ng-change="list.enableDiscounts()"
+                             ng-model-options='{ debounce: 300 }'
+                             ng-click="list.setCustomPrices()">
+                  </md-switch>
+                  <div ng-style="{'display': settings.completeClosed ? '' : 'none'}">
+                    ({{ 'settings.mark-as-closed' | translate }})
+                  </div>
+                </div>
+                <!-- Custom Prices -->
+                <div class="bikes-custom-price" ng-show="list.customPrices">
+                  <div layout="row" layout-align="space-between center">
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_2_days' | translate}} </label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.prices[1].price"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_3_days' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.prices[2].price"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div layout="row" layout-align="space-between center">
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_4_days' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.prices[3].price"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_5_days' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.prices[4].price"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div layout="row" layout-align="space-between center">
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_6_days' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.prices[5].price"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_7_days' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.prices[6].price"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                  </div>
+                  <div layout="row" layout-align="space-between center">
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label>{{'list.pricing.price_8_days_long' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.prices[7].price"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                    <div flex="45">
+                      <md-input-container class="md-block">
+                        <label hide-gt-sm>{{'list.pricing.price_30_days' | translate}}</label>
+                        <input type="text"
+                               ng-pattern="/^\d+$/"
+                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               maxlength="3"
+                               ng-model="list.form.prices[8].price"
+                               ng-change="list.disableDiscounts()"
+                               ng-model-options='{ debounce: 300 }'
+                               required>
+                      </md-input-container>
+                    </div>
+                  </div>
+                </div>
               </div>
-
+              <!-- Divider between Left and Right Columns -->
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
-
-              <div flex="50" hide-xs layout-margin>              
+              <!-- Info Column -->
+              <div flex="50" hide-xs layout-margin>
                 <div class="lnr-list-title">
-                  <h3 class="md-subhead"><md-icon class="lnr-icn-sm md-color-disabled lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>Info</h3>
+                  <h3 class="md-subhead">Info</h3>
                 </div>
-                <p class="md-body-1">{{ 'list.pricing.hint' | translate }}</p>
+                <p class="md-body-1">{{ 'list.pricing.hint-para-1' | translate }}</p>
+                <p class="md-body-1">{{ 'list.pricing.hint-para-2' | translate }}</p>
+                <p class="md-body-1">{{ 'list.pricing.hint-para-3' | translate }}</p>
               </div>
-
             </div>
-            
+            <!-- Navigation Buttons -->
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
-              <md-button class="md-lined" ng-click="list.previousTab()">
+              <md-button class="md-lined"
+                         ng-click="list.previousTab()">
                 {{ 'list.back' | translate }}
               </md-button>
-              <md-button class="md-raised md-primary" ng-disabled="!list.isPricingValid() || list.submitDisabled" ng-click="list.onFormSubmit()">
+              <md-button ng-if="list.isListMode"
+                         class="md-raised md-primary"
+                         ng-disabled="!list.isPricingValid() || list.submitDisabled"
+                         ng-click="list.onFormSubmit()">
                 {{ 'list.list-bike' | translate }}
               </md-button>
             </div>
           </md-content>
         </md-tab>
         <!-- end pricing -->
+
       </md-tabs>
     </form>
   </div>

@@ -1,12 +1,9 @@
 'use strict';
 
-angular
-.module('listnride')
-.factory('bikeOptions', [
-  function() {
-
+angular.module('listnride')
+  .factory('bikeOptions', [function () {
     return {
-      accessoryOptions: function() {
+      accessoryOptions: function () {
         return [
           {model: "has_lock", label: "lock", iconFileName: "accessoire_lock.svg"},
           {model: "has_helmet", label: "helmet", iconFileName: "accessoire_helmet.svg"},
@@ -17,7 +14,7 @@ angular
         ]
       },
 
-      sizeOptions: function() {
+      sizeOptions: function () {
         return [
           {value: 155, label: "155 cm - 165 cm"},
           {value: 165, label: "165 cm - 175 cm"},
@@ -27,7 +24,7 @@ angular
         ];
       },
 
-      kidsSizeOptions: function() {
+      kidsSizeOptions: function () {
         return [
           {value: 85, label: "85 cm - 95 cm"},
           {value: 95, label: "95 cm - 105 cm"},
@@ -39,7 +36,7 @@ angular
         ];
       },
 
-      categoryOptions: function() {
+      categoryOptions: function () {
         return [
           {value: 1, label: "city", iconFileName: "biketype_1.svg"},
           {value: 2, label: "race", iconFileName: "biketype_2.svg"},
@@ -50,7 +47,7 @@ angular
         ];
       },
 
-      subcategoryOptions: function() {
+      subcategoryOptions: function () {
         return {
           "1": [
             {value: 0, label: "dutch-bike"},
@@ -89,9 +86,49 @@ angular
             {value: 5, label: "mono-bike"}
           ],
         };
+      },
+
+      // estimate prices for several days
+      // based on daily price && daily and weekly discounts
+      // formula: (no. days)(daily price)(100 - discount)/100
+      setCustomPrices: function (data) {
+        data.price_2_days = Math.round(2 * data.price_daily * (100 - data.discount_daily) / 100);
+        data.price_3_days = Math.round(3 * data.price_daily * (100 - data.discount_daily) / 100);
+        data.price_4_days = Math.round(4 * data.price_daily * (100 - data.discount_daily) / 100);
+        data.price_5_days = Math.round(5 * data.price_daily * (100 - data.discount_daily) / 100);
+        data.price_6_days = Math.round(6 * data.price_daily * (100 - data.discount_daily) / 100);
+        data.price_7_days = Math.round(7 * data.price_daily * (100 - data.discount_weekly) / 100);
+        data.price_8_days = Math.round(1 * data.price_daily * (100 - data.discount_weekly) / 100);
+        data.price_30_days = Math.round(30 * data.price_daily * (100 - data.discount_weekly) / 100);
+        return data;
+      },
+
+      // server to client transformation
+      transformPrices: function (originalPrices) {
+        var prices = [];
+
+        // prices for day 1 to day 7
+        for (var day = 0; day < 7; day += 1) {
+          prices[day] = {
+            id: originalPrices[day].id,
+            price: (day + 1) * parseFloat(originalPrices[day].price),
+            start_at: originalPrices[day].start_at
+          };
+        }
+
+        prices.push({
+          id: originalPrices[7].id,
+          price: parseFloat(originalPrices[7].price),
+          start_at: originalPrices[7].start_at
+        });
+
+        prices.push({
+          id: originalPrices[8].id,
+          price: 28 * parseFloat(originalPrices[8].price),
+          start_at: originalPrices[8].start_at
+        });
+
+        return prices;
       }
-
     };
-
-  }
-]);
+  }]);

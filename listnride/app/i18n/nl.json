@@ -377,6 +377,8 @@
   },
 
   "list": {
+    "edit-bike": "Fiets bewerken",
+    "save-changes": "Aanpassingen opslaan",
     "list-your-bike": "Fiets plaatsen",
     "back": "terug",
     "next": "verder",
@@ -434,12 +436,32 @@
       "country": "Land"
     },
     "pricing": {
-      "header": "Kies een aantal mooie foto's van je fiets",
-      "hint": "Bepaal nu een aantrekkelijk huurprijs. De Huurprijs dient betaalbaar te zijn en afhankelijk van de staat van de fiets en vergelijkbare fietsen in de buurt geprijsd te zijn. Een duur tot een lengte van 6 uren is een halve dag, 6-24 uren staat voor een dag huur.",
+      "header": "Dagprijs",
+      "description": "Je dagprijs is je standaard dag tarief.",
+      "hint-para-1": "Je bepaalt zelf de prijs die je vraagt voor je fiets. De prijs moet gebaseerd zijn op de fiets en de uitrusting. Om een ​​idee te krijgen van marktprijzen, kunt u vergelijkbare aanbiedingen bekijken.",
+      "hint-para-2": "Een duur tot een lengte van 6 uren is een halve dag, 6-24 uren staat voor een dag huur.",
+      "hint-para-3": "Om langere verblijven aan te moedigen, stellen sommige verhuurders een dag of wekelijkse korting in.",
       "label": "Prijs",
+      "discount": "Korting",
+      "custom-price": "Aangepaste prijs",
+      "daily-price-placeholder": "Prijs in €",
+      "daily-discount-placeholder": "Korting in %",
+      "weekly-discount-placeholder": "Korting in %",
       "half-daily-price": "Halve dag",
-      "daily-price": "hele dag",
-      "weekly-price": "Een Week"
+      "daily-price": "Hele dag",
+      "weekly-price": "Een week",
+      "daily-discount": "Hele Korting",
+      "weekly-discount": "Een Korting",
+      "price_2_days": "2 dagen",
+      "price_3_days": "3 dagen",
+      "price_4_days": "4 dagen",
+      "price_5_days": "5 dagen",
+      "price_6_days": "6 dagen",
+      "price_7_days": "7 dagen (1 week)",
+      "price_8_days": "vanaf 8 dagen",
+      "price_8_days_long": "vanaf 8 dagen (elke dag)",
+      "price_30_days": "30 dagen (1 maand)",
+      "price_30_days_long": "30 dagen (1 Monat)"
     },
     "subcategory": {
       "1": {
@@ -480,12 +502,6 @@
       }
     }
   },
-
-  "edit": {
-    "edit-bike": "Fiets bewerken",
-    "save-changes": "Aanpassingen opslaan"
-  },
-
   "listings": {
     "my-bikes": "Mijn fietsen",
     "no-bikes": "Je hebt nog geen fietsen online geplaatst."
