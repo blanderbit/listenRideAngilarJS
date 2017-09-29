@@ -159,8 +159,8 @@
 
     <div layout="row" layout-align="space-between center">
       <div layout="row" layout-align="start center">
-        <span ng-if="calendar.durationDays">{{calendar.durationDays}} {{ 'days' | translate }} x {{ calendar.prices[0].price | currency:"€":2 }}</span>
-        <span ng-if="!calendar.durationDays">0 {{ 'days' | translate }} x {{ calendar.prices[0].price | currency:"€":2 }}</span>
+        <span ng-if="calendar.durationDays">{{calendar.durationDays}} {{ 'days' | translate }} x {{ calendar.prices[0].price | currency:"€":0 }}</span>
+        <span ng-if="!calendar.durationDays">0 {{ 'days' | translate }} x {{ calendar.prices[0].price | currency:"€":0 }}</span>
         <div>
           <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
           <md-tooltip md-direction="right">This is the regular daily price<br>times the amount of days<br>you want to rent the bike</md-tooltip>
