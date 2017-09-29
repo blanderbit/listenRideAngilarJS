@@ -262,13 +262,17 @@ angular.module('list', []).component('list', {
 
       // set the custom prices for a bike
       list.setCustomPrices = function (dailyPriceChanged) {
+        console.log("discount fields: ", list.discountFieldEditable);
+        console.log("custom price: ", list.form.custom_price);
         if (dailyPriceChanged === true && list.show_reset_button === false) {
           console.log("daily price changed");
           list.form.prices = bikeOptions.setCustomPrices(list.form);
         }
 
-        // only when discount fields are enabled
-        else if ((list.discountFieldEditable && list.form.custom_price === true) || list.show_reset_button) {
+        // discount fields are enabled as well as reset button is hidden
+        // OR
+        // when reset button is pressed
+        else if ((list.discountFieldEditable && list.show_reset_button === false) || list.show_reset_button) {
           console.log("set custom price");
           // set the custom prices
           list.form.prices = bikeOptions.setCustomPrices(list.form);
