@@ -519,7 +519,7 @@
                 <!-- Switch for Custom Prices -->
                 <div layout="row" layout-align="space-between center">
                   <p>{{'list.pricing.custom-prices' | translate}}</p>
-                  <md-switch ng-model="list.customPrices"
+                  <md-switch ng-model="list.form.custom_price"
                              ng-change="list.enableDiscounts()"
                              ng-model-options='{ debounce: 50 }'
                              ng-click="list.setCustomPrices()">
@@ -529,7 +529,7 @@
                   </div>
                 </div>
                 <!-- Custom Prices -->
-                <div class="bikes-custom-price" ng-show="list.customPrices">
+                <div class="bikes-custom-price" n> <!-- ng-show="list.form.custom_price" -->
                   <div layout="row" layout-align="space-between center">
                     <div flex="45">
                       <md-input-container class="md-block">
@@ -541,6 +541,7 @@
                                ng-model="list.form.prices[1].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
+                               ng-disabled="!list.form.custom_price"
                                required>
                       </md-input-container>
                     </div>
@@ -554,6 +555,7 @@
                                ng-model="list.form.prices[2].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
+                               ng-disabled="!list.form.custom_price"
                                required>
                       </md-input-container>
                     </div>
@@ -569,6 +571,7 @@
                                ng-model="list.form.prices[3].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
+                               ng-disabled="!list.form.custom_price"
                                required>
                       </md-input-container>
                     </div>
@@ -582,6 +585,7 @@
                                ng-model="list.form.prices[4].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
+                               ng-disabled="!list.form.custom_price"
                                required>
                       </md-input-container>
                     </div>
@@ -597,6 +601,7 @@
                                ng-model="list.form.prices[5].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
+                               ng-disabled="!list.form.custom_price"
                                required>
                       </md-input-container>
                     </div>
@@ -610,6 +615,7 @@
                                ng-model="list.form.prices[6].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
+                               ng-disabled="!list.form.custom_price"
                                required>
                       </md-input-container>
                     </div>
@@ -625,6 +631,7 @@
                                ng-model="list.form.prices[7].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
+                               ng-disabled="!list.form.custom_price"
                                required>
                       </md-input-container>
                     </div>
@@ -638,6 +645,7 @@
                                ng-model="list.form.prices[8].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
+                               ng-disabled="!list.form.custom_price"
                                required>
                       </md-input-container>
                     </div>

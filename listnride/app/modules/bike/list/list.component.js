@@ -98,6 +98,10 @@ angular.module('list', []).component('list', {
               // form data for edit bikes
               list.form = data;
               list.form.prices = prices;
+
+              if (list.form.custom_price) {
+                list.disableDiscounts();
+              }
             }
           },
           function (error) {
@@ -190,7 +194,7 @@ angular.module('list', []).component('list', {
           "ride[city]": list.form.city,
           "ride[zip]": list.form.zip,
           "ride[country]": list.form.country,
-          "ride[prices]": list.form.prices,
+          "ride[prices]": prices,
           "ride[custom_price]": list.form.custom_price,
           "ride[discounts]": list.form.discounts,
           "ride[image_file_1]": (list.form.images[0]) ? list.form.images[0].src : undefined,

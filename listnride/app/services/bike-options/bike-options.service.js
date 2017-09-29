@@ -94,17 +94,17 @@ angular.module('listnride')
 
         // daily price updates
         for (var day = 1; day < 6; day += 1) {
-          data.prices[day].price = Math.round((day + 1) * (data.prices[0].price) * (100 - data.discounts.daily) / 100);
+          data.prices[day].price = ((day + 1) * (data.prices[0].price) * (100 - data.discounts.daily) / 100);
         }
 
         // week price update
-        data.prices[6].price = Math.round(7 * (data.prices[0].price) * (100 - data.discounts.weekly) / 100);
+        data.prices[6].price = (7 * (data.prices[0].price) * (100 - data.discounts.weekly) / 100);
 
         // additional day price update
-        data.prices[7].price = Math.round(1 * (data.prices[0].price) * (100 - data.discounts.weekly) / 100);
+        data.prices[7].price = (1 * (data.prices[0].price) * (100 - data.discounts.weekly) / 100);
 
         // month price update
-        data.prices[8].price = Math.round(28 * (data.prices[0].price) * (100 - data.discounts.weekly) / 100);
+        data.prices[8].price = (28 * (data.prices[0].price) * (100 - data.discounts.weekly) / 100);
 
         return data.prices;
       },
@@ -117,7 +117,7 @@ angular.module('listnride')
         for (var day = 0; day < 7; day += 1) {
           prices[day] = {
             id: originalPrices[day].id,
-            price: (day + 1) * Math.round(originalPrices[day].price),
+            price: (day + 1) * (originalPrices[day].price),
             start_at: originalPrices[day].start_at
           };
         }
@@ -125,14 +125,14 @@ angular.module('listnride')
         // additional day price update
         prices.push({
           id: originalPrices[7].id,
-          price: Math.round(originalPrices[7].price),
+          price: (originalPrices[7].price),
           start_at: originalPrices[7].start_at
         });
 
         // month price update
         prices.push({
           id: originalPrices[8].id,
-          price: 28 * Math.round(originalPrices[8].price),
+          price: 28 * (originalPrices[8].price),
           start_at: originalPrices[8].start_at
         });
 
@@ -147,7 +147,7 @@ angular.module('listnride')
         for (var day = 0; day < 7; day += 1) {
           prices[day] = {
             id: transformedPrices[day].id,
-            price: Math.round(transformedPrices[day].price / (day + 1)),
+            price: (transformedPrices[day].price / (day + 1)),
             start_at: transformedPrices[day].start_at
           };
         }
@@ -155,14 +155,14 @@ angular.module('listnride')
         // additional day price update
         prices.push({
           id: transformedPrices[7].id,
-          price: Math.round(transformedPrices[7].price),
+          price: (transformedPrices[7].price),
           start_at: transformedPrices[7].start_at
         });
 
         // month price update
         prices.push({
           id: transformedPrices[8].id,
-          price: Math.round(transformedPrices[8].price / 28),
+          price: (transformedPrices[8].price / 28),
           start_at: transformedPrices[8].start_at
         });
 
