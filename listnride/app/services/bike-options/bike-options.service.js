@@ -94,17 +94,17 @@ angular.module('listnride')
 
         // daily price updates
         for (var day = 1; day < 6; day += 1) {
-          data.prices[day].price = ((day + 1) * (data.prices[0].price) * (100 - data.discounts.daily) / 100);
+          data.prices[day].price = Math.round(((day + 1) * (data.prices[0].price) * (100 - data.discounts.daily) / 100));
         }
 
         // week price update
-        data.prices[6].price = (7 * (data.prices[0].price) * (100 - data.discounts.weekly) / 100);
+        data.prices[6].price = Math.round((7 * (data.prices[0].price) * (100 - data.discounts.weekly) / 100));
 
-        // additional day price update
-        data.prices[7].price = (1 * (data.prices[0].price) * (100 - data.discounts.weekly) / 100);
+        // additional day price updat)e
+        data.prices[7].price = Math.round((1 * (data.prices[0].price) * (100 - data.discounts.weekly) / 100));
 
         // month price update
-        data.prices[8].price = (28 * (data.prices[0].price) * (100 - data.discounts.weekly) / 100);
+        data.prices[8].price = Math.round((28 * (data.prices[0].price) * (100 - data.discounts.weekly) / 100));
 
         return data.prices;
       },

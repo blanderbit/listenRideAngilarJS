@@ -99,8 +99,17 @@ angular.module('list', []).component('list', {
               list.form = data;
               list.form.prices = prices;
 
+              // if custom price is enabled
               if (list.form.custom_price) {
                 list.disableDiscounts();
+                list.show_custom_price = true;
+                list.show_reset_button = true;
+              }
+
+              // if custom price is disabled
+              else if (list.form.custom_price === false) {
+                list.show_custom_price = false;
+                list.show_reset_button = false;
               }
             }
           },
@@ -238,24 +247,48 @@ angular.module('list', []).component('list', {
       };
 
       // set the custom prices for a bike
-      list.setCustomPrices = function () {
-        // only when discount fields are enabled
-        if (list.discountFieldEditable) {
-          // set the custom prices
+      list.setCustomPrices = function (dailyPriceChanged) {
+        if (dailyPriceChanged === true && list.show_reset_button === false) {
+          console.log("daily price changed");
           list.form.prices = bikeOptions.setCustomPrices(list.form);
         }
+
+        // only when discount fields are enabled
+        else if ((list.discountFieldEditable && list.form.custom_price === true) || list.show_reset_button) {
+          console.log("set custom price");
+          // set the custom prices
+          list.form.prices = bikeOptions.setCustomPrices(list.form);
+          if (list.show_reset_button) {
+            list.show_reset_button = false;
+          }
+        }
+
+        console.log("set custom price");
       };
 
       // disable custom discounts fields
       list.disableDiscounts = function () {
+        console.log("disable discounts");
+        list.show_reset_button = true;
         list.form.custom_price = true;
         list.discountFieldEditable = false;
       };
 
       // enable custom discounts fields
       list.enableDiscounts = function () {
+
         list.form.custom_price = false;
         list.discountFieldEditable = true;
+      };
+
+      list.toggleDiscount = function () {
+        if (list.form.custom_price === true) {
+          list.show_custom_price = true;
+          // list.discountFieldEditable = false;
+        } else if (list.form.custom_price === false) {
+          list.show_custom_price = false;
+          list.discountFieldEditable = true;
+        }
       };
 
       // go to next tab
