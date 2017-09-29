@@ -146,24 +146,24 @@ angular.module('listnride')
         // daily and weekly price updates
         for (var day = 0; day < 7; day += 1) {
           prices[day] = {
-            id: transformedPrices[day].id,
+            id: transformedPrices[day].id || 0,
             price: (transformedPrices[day].price / (day + 1)),
-            start_at: transformedPrices[day].start_at
+            start_at: transformedPrices[day].start_at || 0
           };
         }
 
         // additional day price update
         prices.push({
-          id: transformedPrices[7].id,
+          id: transformedPrices[7].id || 0,
           price: (transformedPrices[7].price),
-          start_at: transformedPrices[7].start_at
+          start_at: transformedPrices[7].start_at || 0
         });
 
         // month price update
         prices.push({
-          id: transformedPrices[8].id,
+          id: transformedPrices[8].id || 0,
           price: (transformedPrices[8].price / 28),
-          start_at: transformedPrices[8].start_at
+          start_at: transformedPrices[8].start_at || 0
         });
 
         return prices;

@@ -53,10 +53,22 @@ angular.module('list', []).component('list', {
             list.form.zip = data.zip;
             list.form.city = data.city;
             list.form.country = data.country;
-            // daily and weekly discounts
-            // by default the discounts are 0
-            list.form.discount_daily = data.discount_daily ? parseInt(list.form.discount_daily) : 0;
-            list.form.discount_weekly = data.discount_weekly ? parseInt(list.form.discount_weekly) : 0;
+
+            list.form.prices = [];
+            for (var day = 0; day < 9; day += 1) {
+              list.form.prices[day] = {
+                price: 0
+              }
+            }
+
+            console.log("new prices: ", list.form.prices);
+            list.form.discounts = {
+              "daily": 0,
+              "weekly": 0
+            };
+
+            list.form.custom_price = false;
+            list.show_reset_button = false;
           },
           function (error) {
             console.log("Error fetching User");
@@ -88,9 +100,6 @@ angular.module('list', []).component('list', {
               var inversePrices = bikeOptions.inverseTransformPrices(prices);
               console.log("inverse prices: ", inversePrices);
               */
-              data.price_daily = parseInt(data.prices[0]);
-              data.discount_daily = parseInt(data.discount_daily);
-              data.discount_weekly = parseInt(data.discount_daily);
               data.size = parseInt(data.size);
               data.mainCategory = (data.category + "").charAt(0);
               data.subCategory = (data.category + "").charAt(1);
@@ -121,7 +130,10 @@ angular.module('list', []).component('list', {
 
       // form submission for new ride
       list.submitNewRide = function () {
-
+        console.log("images: ", list.form.images);
+        console.log("o prices: ", list.form.prices);
+        var prices = bikeOptions.inverseTransformPrices(list.form.prices);
+        console.log("t prices: ", prices);
         var ride = {
           "ride[name]": list.form.name,
           "ride[brand]": list.form.brand,
@@ -139,15 +151,17 @@ angular.module('list', []).component('list', {
           "ride[city]": list.form.city,
           "ride[zip]": list.form.zip,
           "ride[country]": list.form.country,
-          "ride[price_half_daily]": list.form.price_half_daily,
-          "ride[price_daily]": list.form.price_daily,
-          "ride[price_weekly]": list.form.price_weekly,
+          "ride[prices]": prices,
+          "ride[custom_price]": list.form.custom_price,
+          "ride[discounts]": list.form.discounts,
           "ride[image_file_1]": list.form.images[0],
           "ride[image_file_2]": list.form.images[1],
           "ride[image_file_3]": list.form.images[2],
           "ride[image_file_4]": list.form.images[3],
           "ride[image_file_5]": list.form.images[4]
         };
+
+        console.log("put data: ", ride);
 
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
@@ -306,8 +320,14 @@ angular.module('list', []).component('list', {
         if (files && files.length)
           for (var i = 0; i < files.length && list.form.images.length < 5; ++i)
             if (files[i] !== null) {
-              if (list.isListMode) list.form.images.push(files[i]);
-              else list.form.images.push({src: files[i], local: "true"});
+              if (list.isListMode) {
+                list.form.images.push(files[i]);
+                console.log("images in add image: ", list.form.images);
+              }
+              else {
+                list.form.images.push({src: files[i], local: "true"});
+                console.log("images in add image: ", list.form.images);
+              }
             }
       };
 
