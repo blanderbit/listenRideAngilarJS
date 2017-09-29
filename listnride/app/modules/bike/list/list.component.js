@@ -132,7 +132,7 @@ angular.module('list', []).component('list', {
       list.submitNewRide = function () {
         console.log("images: ", list.form.images);
         console.log("o prices: ", list.form.prices);
-        var prices = bikeOptions.inverseTransformPrices(list.form.prices);
+        var prices = bikeOptions.inverseTransformPrices(list.form.prices, list.isListMode);
         console.log("t prices: ", prices);
         var ride = {
           "ride[name]": list.form.name,
@@ -154,11 +154,11 @@ angular.module('list', []).component('list', {
           "ride[prices]": prices,
           "ride[custom_price]": list.form.custom_price,
           "ride[discounts]": list.form.discounts,
-          "ride[image_file_1]": list.form.images[0],
-          "ride[image_file_2]": list.form.images[1],
-          "ride[image_file_3]": list.form.images[2],
-          "ride[image_file_4]": list.form.images[3],
-          "ride[image_file_5]": list.form.images[4]
+          "ride[image_file_1]": (list.form.images[0]) ? list.form.images[0].src : undefined,
+          "ride[image_file_2]": (list.form.images[1]) ? list.form.images[1].src : undefined,
+          "ride[image_file_3]": (list.form.images[2]) ? list.form.images[2].src : undefined,
+          "ride[image_file_4]": (list.form.images[3]) ? list.form.images[3].src : undefined,
+          "ride[image_file_5]": (list.form.images[4]) ? list.form.images[4].src : undefined
         };
 
         console.log("put data: ", ride);
@@ -321,7 +321,7 @@ angular.module('list', []).component('list', {
           for (var i = 0; i < files.length && list.form.images.length < 5; ++i)
             if (files[i] !== null) {
               if (list.isListMode) {
-                list.form.images.push(files[i]);
+                list.form.images.push({src: files[i], local: "true"});
                 console.log("images in add image: ", list.form.images);
               }
               else {
@@ -363,9 +363,14 @@ angular.module('list', []).component('list', {
       };
 
       list.isPricingValid = function () {
-        list.form.prices.forEach(function (price) {
-          if (price.price === undefined) return false;
-        });
+        if (!list.form.prices) {
+          return false;
+        }
+        else {
+          list.form.prices.forEach(function (price) {
+            if (price.price === undefined) return false;
+          });
+        }
         return true;
       };
 

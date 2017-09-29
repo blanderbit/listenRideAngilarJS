@@ -295,13 +295,14 @@
                   <div ng-repeat="img in list.form.images track by $index"
                        layout="row"
                        layout-align="space-between center">
-                    <div ng-if="img.local == 'true' && !list.isListMode"
+                    <div ng-if="img.local == 'true'"
                          class="img-preview lnr-margin-top"
                          ngf-background="img.src"
                          ngf-as-background="true">
                     </div>
 
-                    <div ng-if="!list.isListMode" class="img-preview lnr-margin-top"
+                    <div
+                         class="img-preview lnr-margin-top"
                          ng-if="img.local == 'false'"
                          ng-style="{'background-image': 'url(' + img.url + ')'}">
                     </div>

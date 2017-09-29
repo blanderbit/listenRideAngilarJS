@@ -140,31 +140,57 @@ angular.module('listnride')
       },
 
       // client to server transformation
-      inverseTransformPrices: function (transformedPrices) {
+      inverseTransformPrices: function (transformedPrices, isListMode) {
         var prices = [];
+        var start_at_seconds = [0, 86400, 172800, 259200, 345600, 432000, 518400, 604800, 691200, 2419200];
 
-        // daily and weekly price updates
-        for (var day = 0; day < 7; day += 1) {
-          prices[day] = {
-            id: transformedPrices[day].id || 0,
-            price: (transformedPrices[day].price / (day + 1)),
-            start_at: transformedPrices[day].start_at || 0
-          };
+        // listing a bike
+        if (isListMode) {
+          // daily and weekly price updates
+          for (var day = 0; day < 7; day += 1) {
+            prices[day] = {
+              price: (transformedPrices[day].price / (day + 1)),
+              start_at: transformedPrices[day].start_at || start_at_seconds[day]
+            };
+          }
+
+          // additional day price update
+          prices.push({
+            price: (transformedPrices[7].price),
+            start_at: transformedPrices[7].start_at ||  start_at_seconds[7]
+          });
+
+          // month price update
+          prices.push({
+            price: (transformedPrices[8].price / 28),
+            start_at: transformedPrices[8].start_at || start_at_seconds[8]
+          });
         }
+        // editing a bike
+        else {
+          // daily and weekly price updates
+          for (var day = 0; day < 7; day += 1) {
+            prices[day] = {
+              id: transformedPrices[day].id || 0,
+              price: (transformedPrices[day].price / (day + 1)),
+              start_at: transformedPrices[day].start_at || start_at_seconds[7]
+            };
+          }
 
-        // additional day price update
-        prices.push({
-          id: transformedPrices[7].id || 0,
-          price: (transformedPrices[7].price),
-          start_at: transformedPrices[7].start_at || 0
-        });
+          // additional day price update
+          prices.push({
+            id: transformedPrices[7].id || 0,
+            price: (transformedPrices[7].price),
+            start_at: transformedPrices[7].start_at || 0
+          });
 
-        // month price update
-        prices.push({
-          id: transformedPrices[8].id || 0,
-          price: (transformedPrices[8].price / 28),
-          start_at: transformedPrices[8].start_at || 0
-        });
+          // month price update
+          prices.push({
+            id: transformedPrices[8].id || 0,
+            price: (transformedPrices[8].price / 28),
+            start_at: transformedPrices[8].start_at || 0
+          });
+        }
 
         return prices;
       }
