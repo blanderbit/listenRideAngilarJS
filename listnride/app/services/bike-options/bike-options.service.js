@@ -117,7 +117,7 @@ angular.module('listnride')
         for (var day = 0; day < 7; day += 1) {
           prices[day] = {
             id: originalPrices[day].id,
-            price: (day + 1) * (originalPrices[day].price),
+            price: Math.round((day + 1) * (originalPrices[day].price)),
             start_at: originalPrices[day].start_at
           };
         }
@@ -125,14 +125,14 @@ angular.module('listnride')
         // additional day price update
         prices.push({
           id: originalPrices[7].id,
-          price: (originalPrices[7].price),
+          price: Math.round((originalPrices[7].price)),
           start_at: originalPrices[7].start_at
         });
 
         // month price update
         prices.push({
           id: originalPrices[8].id,
-          price: 28 * (originalPrices[8].price),
+          price: Math.round(28 * (originalPrices[8].price)),
           start_at: originalPrices[8].start_at
         });
 
