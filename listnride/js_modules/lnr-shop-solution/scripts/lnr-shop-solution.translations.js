@@ -6,13 +6,15 @@ var translationsConfigObject = {
             lnrHeaderText: 'The perfect bike. Simply rent it.',
             hello: 'Hello',
             print: 'Print Page',
-            here: 'here'
+            here: 'here',
+            description: 'Description',
+            rent: 'Rent '
         },
         tabs: {
-            tabDuration: '1.&nbsp;Duration',
-            tabBasicInfo: '2.&nbsp;Info',
+            tabDuration: '1.&nbsp;Info',
+            tabBasicInfo: '2.&nbsp;Profile',
             tabPaymentDetail: '3.&nbsp;Payment',
-            tabBookingOverview: '4.&nbsp;Booking'
+            tabBookingOverview: '4.&nbsp;Checkout'
         },
         durationPanel: {
             info: 'Please mark rent period:',
@@ -75,7 +77,8 @@ var translationsConfigObject = {
             bike: "Bike",
             name: "Name",
             lister: "Lister",
-            location: "Location"
+            location: "Location",
+            toa: "By booking I accept the terms and conditions."
         },
         navigation: {
             back: 'Back',
@@ -88,13 +91,15 @@ var translationsConfigObject = {
             lnrHeaderText: 'Das perfekte Rad. Einfach mieten.',
             hello: 'Hallo',
             print: 'Seite Drucken',
-            here: 'hier'
+            here: 'hier',
+            description: 'Beschreibung',
+            rent: 'Miete'
         },
         tabs: {
-            tabDuration: 'Dauer',
-            tabBasicInfo: 'Info',
-            tabPaymentDetail: 'Zahlung',
-            tabBookingOverview: '&Uuml;bersicht'
+            tabDuration: '1.&nbsp;Info',
+            tabBasicInfo: '2.&nbsp;Profil',
+            tabPaymentDetail: '3.&nbsp;Zahlung',
+            tabBookingOverview: '4.&nbsp;Kasse'
         },
         durationPanel: {
             from: 'Von',
@@ -156,7 +161,8 @@ var translationsConfigObject = {
             bike: "Fahrrad",
             name: "Name",
             lister: "Vermieter",
-            location: "Ort"
+            location: "Ort",
+            toa: "Durch das Buchen akzeptiere ich die Allgemeinen Gesch&auml;ftsbedingungen."
         },
         navigation: {
             back: 'Zur&uuml;ck',
@@ -168,11 +174,13 @@ var translationsConfigObject = {
         shared: {
             lnrHeaderText: 'De perfekte fiets. Gewoon huren.',
             hello: 'Hallo',
-            print: 'Pagina printen'
+            print: 'Pagina printen',
+            description: 'Beschrijving',
+            rent: "Huur"
         },
         tabs: {
-            tabDuration: '1.&nbsp;Periode',
-            tabBasicInfo: '2.&nbsp;Info',
+            tabDuration: '1.&nbsp;Info',
+            tabBasicInfo: '2.&nbsp;Profiel',
             tabPaymentDetail: '3.&nbsp;Betaling',
             tabBookingOverview: '4.&nbsp;Boeking'
         },
@@ -237,7 +245,8 @@ var translationsConfigObject = {
             bike: "Fiets",
             name: "Naam",
             lister: "Lister",
-            location: "Plaats"
+            location: "Plaats",
+            toa: "Bij het boeken accepteer ik de algemene voorwaarden."
         },
         navigation: {
             back: 'Terug',

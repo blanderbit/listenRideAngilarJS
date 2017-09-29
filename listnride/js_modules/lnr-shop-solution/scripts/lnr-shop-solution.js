@@ -1,4 +1,4 @@
-/*global DateService helper */
+/*global DateService helper calendar env*/
 /*eslint no-undef: "error"*/
 var $,
     // Define some global variables
@@ -6,7 +6,7 @@ var $,
         date: "Month",
         year: "Year"
     },
-    translations,
+    translations = {},
     user = {
         id: null,
         hasPaymentMethod: false
@@ -44,7 +44,7 @@ $(document).ready(function () {
             calendar.requests = bike.requests;
             calendar.userId = bike.user.id;
             $('#bike_picture').attr("src", bike.image_file_1.image_file_1.small.url);
-            $('#overview_bike').text(bike.brand + ", " + helper.categoryName(bike.category));
+            $('.overview_bike').append(bike.brand + ", " + helper.categoryName(bike.category));
             $('#overview_name').text(bike.name);
             $('#overview_lister').text(bike.user.first_name + " " + bike.user.last_name);
             $('#overview_location').text(bike.user.city);
