@@ -21,7 +21,7 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         if (days < 8) {
           result.subtotalDiscounted = prices[days - 1].price * days;
         } else if (days <= 28) {
-          result.subtotalDiscounted = prices[6].price + (days - 7) * prices[7].price;
+          result.subtotalDiscounted = prices[6].price * 7 + (days - 7) * prices[7].price;
         } else {
           result.subtotalDiscounted = prices[8].price * days;
         }
