@@ -94,7 +94,7 @@ angular.module('list', []).component('list', {
               }
 
               data.images = images;
-              var prices = bikeOptions.transformPrices(data.prices);
+              var prices = bikeOptions.transformPrices(data.prices, data.discounts);
               /*
               // only for testing inverse pricing test
               var inversePrices = bikeOptions.inverseTransformPrices(prices);
@@ -289,11 +289,11 @@ angular.module('list', []).component('list', {
       list.resetCustomPrices = function () {
         bikeOptions.resetCustomPrices(list.form);
         list.show_reset_button = false;
+        list.discountFieldEditable = true;
       };
 
       // disable custom discounts fields
       list.disableDiscounts = function () {
-        console.log("disable discounts");
         list.show_reset_button = true;
         list.form.custom_price = true;
         list.discountFieldEditable = false;
