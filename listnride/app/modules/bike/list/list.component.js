@@ -276,12 +276,19 @@ angular.module('list', []).component('list', {
           console.log("set custom price");
           // set the custom prices
           list.form.prices = bikeOptions.setCustomPrices(list.form);
-          if (list.show_reset_button) {
-            list.show_reset_button = false;
-          }
+        }
+        else if (list.show_reset_button) {
+          list.form.prices = bikeOptions.resetCustomPrices(list.form);
+          list.show_reset_button = false;
+          list.discountFieldEditable = true;
         }
 
         console.log("set custom price");
+      };
+
+      list.resetCustomPrices = function () {
+        bikeOptions.resetCustomPrices(list.form);
+        list.show_reset_button = false;
       };
 
       // disable custom discounts fields

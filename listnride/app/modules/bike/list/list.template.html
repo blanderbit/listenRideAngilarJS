@@ -302,9 +302,9 @@
                     </div>
 
                     <div
-                         class="img-preview lnr-margin-top"
-                         ng-if="img.local == 'false'"
-                         ng-style="{'background-image': 'url(' + img.url + ')'}">
+                        class="img-preview lnr-margin-top"
+                        ng-if="img.local == 'false'"
+                        ng-style="{'background-image': 'url(' + img.url + ')'}">
                     </div>
                     <md-button class="md-lined md-warn"
                                ng-click="list.removeImage($index)">
@@ -478,8 +478,11 @@
                           <label>{{ 'list.pricing.daily-discount' | translate }} (%)</label>
                         </div>
                         <div>
-                          <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
-                          <md-tooltip md-direction="right">Discount on the price if the bike<br>is rented more than a day</md-tooltip>
+                          <md-icon class="lnr-icn-xs md-color-black"
+                                   md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+                          <md-tooltip md-direction="right">Discount on the price if the bike<br>is rented more than a
+                            day
+                          </md-tooltip>
                         </div>
                       </div>
                       <input type="text"
@@ -499,8 +502,10 @@
                           <label>{{ 'list.pricing.weekly-discount' | translate }} (%)</label>
                         </div>
                         <div>
-                          <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
-                          <md-tooltip md-direction="right">Discount on the price if the bike<br>is rented a week or more</md-tooltip>
+                          <md-icon class="lnr-icn-xs md-color-black"
+                                   md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+                          <md-tooltip md-direction="right">Discount on the price if the bike<br>is rented a week or more
+                          </md-tooltip>
                         </div>
                       </div>
                       <input type="text"
@@ -520,18 +525,18 @@
                 <!-- Switch for Custom Prices -->
                 <div layout="row" layout-align="space-between center">
                   <p>{{'list.pricing.custom-prices' | translate}}</p>
-                  <md-button ng-show="list.show_reset_button" ng-click="list.setCustomPrices()">Reset</md-button>
+                  <md-button ng-if="list.show_reset_button" ng-click="list.resetCustomPrices()">Reset</md-button>
                   <md-switch ng-model="list.form.custom_price"
                              ng-change="list.toggleDiscount()"
                              ng-model-options='{ debounce: 1 }'
-                             >
+                  >
                   </md-switch>
                   <div ng-style="{'display': settings.completeClosed ? '' : 'none'}">
                     ({{ 'settings.mark-as-closed' | translate }})
                   </div>
                 </div>
                 <!-- Custom Prices -->
-                <div class="bikes-custom-price" ng-show="list.show_custom_price"> <!-- ng-show="list.form.custom_price" -->
+                <div class="bikes-custom-price" ng-show="list.show_custom_price">
                   <div layout="row" layout-align="space-between center">
                     <div flex="45">
                       <md-input-container class="md-block">
