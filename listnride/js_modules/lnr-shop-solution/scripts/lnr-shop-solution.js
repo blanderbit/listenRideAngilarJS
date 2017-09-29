@@ -12,6 +12,7 @@ var $,
         hasPaymentMethod: false
     },
     date = new DateService(),
+    price = new PriceService(),
     loginFlow = false,
     apiUrl = "";
 
@@ -23,10 +24,17 @@ $(document).ready(function () {
         // var env = "production";
     // ---------------------------------------------
 
+    if (userId !== undefined && bikeId !== undefined) {
+        $("#lnr-container").show();
+    } else {
+        alert("No valid user and bike data provided. Please contact listnride support under contact@listnride.com");
+        window.close();
+    }
+
     if (env === "production") {
         apiUrl = "https://api.listnride.com/v2";
     } else {
-        apiUrl = "https://listnride-staging.herokuapp.com/v2";
+        apiUrl = "https://listnride-staging-pr-130.herokuapp.com/v2";
     }
     // perform common tasks on initialization
     helper.preInit();
@@ -37,6 +45,7 @@ $(document).ready(function () {
         $.get(apiUrl + "/rides/" + bikeId, function (bike) {
             // populate calendar object
             calendar.bikeId = bikeId;
+            calendar.prices = bike.prices;
             calendar.priceHalfDay = bike.price_half_daily;
             calendar.priceDay = bike.price_daily;
             calendar.priceWeek = bike.price_weekly;

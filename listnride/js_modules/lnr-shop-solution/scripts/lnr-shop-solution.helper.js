@@ -212,6 +212,16 @@ var helper = {
             elem.append(' &euro;');
         });
 
+        // calendar discount
+        $('*[id*=lnr-calendar-discount]').each(function (index, element) {
+            var elem = $(element);
+            elem.html(calendar.discount).formatCurrency(helper.getCurrencyFormat());
+            elem.append(' &euro;');
+        });
+        $('*[id*=lnr-discount]').each(function (index, element) {
+            $(element).show();
+        });
+
         // calendar lnr fee
         $('*[id*=lnr-calendar-fee]').each(function (index, element) {
             var elem = $(element);
@@ -401,6 +411,12 @@ var helper = {
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="rental.subtotal"></span>' +
             '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>' +
+            '</li>' +
+
+            // rental -- discount
+            '<li class="mdl-list__item" id="lnr-discount" style="display: none;">' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm lnr-dark-green-text" translate="rental.discount"></span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-subhead-sm lnr-dark-green-text" id="lnr-calendar-discount">0 &euro;</span>' +
             '</li>' +
 
             // rental -- fee

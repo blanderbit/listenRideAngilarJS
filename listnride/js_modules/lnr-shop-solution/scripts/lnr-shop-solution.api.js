@@ -60,13 +60,24 @@ var api = {
                     var encoded = api.base64Encode(response.email + ":" + response.password_hashed);
                     user.auth = 'Basic ' + encoded;
                     user.id = response.id;
-                    if (Object.keys(response.current_payment_method).length !== 0) {
-                        user.hasPaymentMethod = true;
-                        $('#lnr-next-button-tab-payment-details').prop('disabled', false);
-                        helper.changeTab({id: 'tab-booking-overview'});   
-                    } else {
+                    $.get({
+                      url: apiUrl + "/users/" + user.id + "/current_payment",
+                      beforeSend: function (request) {
+                        request.setRequestHeader("Authorization", user.auth);
+                      },
+                      success: function (response) {
+                        if (Object.keys(response).length !== 0) {
+                          user.hasPaymentMethod = true;
+                          $('#lnr-next-button-tab-payment-details').prop('disabled', false);
+                          helper.changeTab({id: 'tab-booking-overview'});   
+                        } else {
+                          helper.changeTab({id: 'tab-payment-details'});
+                        }
+                      },
+                      error: function () {
                         helper.changeTab({id: 'tab-payment-details'});
-                    }
+                      }
+                    });
                 },
                 error: function () {
                     $('.info-login').hide();
