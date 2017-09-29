@@ -860,11 +860,11 @@
         }
       });
 
-      $stateProvider.state({
-        name: 'seo-landing',
-        url: '/{pageTitle: string}',
-        template: '<seo-landing></seo-landing>'
-      });
+      // $stateProvider.state({
+      //   name: 'seo-landing',
+      //   url: '/{pageTitle: string}',
+      //   template: '<seo-landing></seo-landing>'
+      // });
 
       $urlRouterProvider.otherwise(function ($injector) {
         var state = $injector.get('$state');
