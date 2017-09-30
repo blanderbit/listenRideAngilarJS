@@ -1,0 +1,34 @@
+<md-content>
+  <div class="content lnr-page-margin" layout="column" layout-align="center stretch">
+    <md-list>
+      <md-list-item class="lnr-listing-list-item"
+                    id="$index"
+                    ng-repeat="bike in list.bikes"
+                    ng-mouseenter="list.onBikeHovered($index, true)"
+                    ng-mouseleave="list.onBikeHovered($index, false)">
+        <md-checkbox ng-model="list.selected[$index]"
+                     ng-change="list.onBikeSelected($index)">
+        </md-checkbox>
+        <img ng-src="{{bike.image_file_1.image_file_1.thumb.url}}" class="md-avatar"/>
+        <div layout="column" flex="100">
+          <div layout="row" layout-align="space-around center">
+            <div flex="10">{{bike.id}}</div>
+            <div flex="30"> {{bike.name}}</div>
+            <div flex="30"> {{bike.brand}}</div>
+            <div flex="10"> {{bike.size}}</div>
+            <div flex="10"> {{bike.price_daily}}</div>
+            <md-icon class="md-secondary"
+                     style="padding-right: 8px;"
+                     ng-style="list.visibility[$index] || {'visibility': 'hidden'}"
+                     ng-click="list.editBike($event)"
+                     md-svg-src="app/assets/ui_icons/icn_info.svg">
+            </md-icon>
+            <md-icon class="md-secondary"
+                     ng-style="list.visibility[$index] || {'visibility': 'hidden'}"
+                     md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+          </div>
+        </div>
+      </md-list-item>
+    </md-list>
+  </div>
+</md-content>

@@ -1935,3 +1935,8 @@ and (max-device-width : 568px) {
   }
 }
 
+.lnr-listing-list-item {
+  height: 60px;
+  border-bottom: 1px solid #e1e1e1;
+  cursor: default;
+}

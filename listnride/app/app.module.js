@@ -9,6 +9,7 @@ angular.module('listnride', [
   'bikeCard',
   'user',
   'bike',
+  'bikeListView',
   'requests',
   'message',
   'list',
@@ -125,7 +126,7 @@ angular.module('listnride', [
       var topLevelDomain = domain[domain.length - 1].split("/")[0];
 
       var retrievedLanguage = "";
-      
+
       // select the language
       if (availableLanguages.includes(localStorageLanguage)) retrievedLanguage = localStorageLanguage;
       else if (availableLanguages.includes(subDomain)) retrievedLanguage = subDomain;
