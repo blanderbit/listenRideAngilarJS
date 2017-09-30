@@ -1,28 +1,37 @@
-<div flex="100" layout="column" layout-fill>
-<!--   <md-toolbar>
-    <div class="md-toolbar-tools">
-      <h2 class="md-flex">Toolbar: md-warn</h2>
-    </div>
-  </md-toolbar> -->
+<!-- Layout for the Tile View -->
+<md-content ng-if="!listings.listView">
+  <div class="content lnr-page-margin" layout-align="center center">
+    <tile-view bikes="listings.bikes"></tile-view>
+  </div>
+  <footer></footer>
+</md-content>
+<!------------------------------>
 
-  <div layout="column">
-    <div layout="row" class="content" layout-fill>
-      <md-input-container>
-        <label></label>
+<!-- Layout for the List View -->
+<div ng-if="listings.listView" flex="100" layout="column" layout-fill>
+  <div class="listings-header" layout="column">
+    <div layout="row" class="content" layout-fill layout-align="space-between center">
+      <md-input-container flex="30">
+        <label style="display: none"></label>
         <input placeholder="{{ 'shared.search-bikes' | translate }}" ng-model="listView.search"/>
       </md-input-container>
+      <div layout="row">
+        <md-button class="md-primary md-confirm-button">New Bike</md-button>
+        <md-button ng-disabled="!listings.bikesSelected" class="md-lined">Edit Selected</md-button>
+        <md-button ng-disabled="!listings.bikesSelected" class="md-lined md-warn">Delete Selected</md-button>
+      </div>
     </div>
   </div>
   <md-divider></md-divider>
 
-  <md-content>
+  <md-content id="list-view">
     <div class="content lnr-page-margin" layout-align="center center">
-      <tile-view ng-if="!listings.listView" bikes="listings.bikes"></tile-view>
       <list-view ng-if="listings.listView" bikes="listings.bikes"></list-view>
     </div>
-    <footer ng-if="!listings.listView"></footer>
   </md-content>
 </div>
+<!------------------------------>
+
 <md-sidenav md-disable-scroll-target="body" class="md-sidenav-right md-whiteframe-4dp" md-component-id="edit">
   sdafafdsf
   asfdafsd
