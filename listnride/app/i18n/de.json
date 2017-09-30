@@ -461,7 +461,8 @@
       "price_8_days": "ab 8 Tage",
       "price_8_days_long": "ab 8 Tage (jeden Tag)",
       "price_30_days": "30 Tagen",
-      "price_30_days_long": "30 Tagen (1 Monat)"
+      "price_30_days_long": "30 Tagen (1 Monat)",
+      "reset-prices": "Zurücksetzen"
     },
     "subcategory": {
       "1": {

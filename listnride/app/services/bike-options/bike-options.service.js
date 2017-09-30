@@ -144,7 +144,7 @@ angular.module('listnride')
           start_at: originalPrices[7].start_at
         });
 
-        // additional day price update
+        // weekly price update
         prices.push({
           id: originalPrices[7].id,
           price: Math.round((originalPrices[7].price) * ((100 - parseFloat(discounts.weekly)) / 100)),

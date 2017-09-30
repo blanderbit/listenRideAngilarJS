@@ -515,21 +515,24 @@
                              ng-model="list.form.discounts.weekly"
                              ng-change="list.setCustomPrices()"
                              ng-model-options='{ debounce: 300 }'
+                             show-as-integer
                              ng-disabled="!list.discountFieldEditable">
                     </md-input-container>
                   </div>
                 </div>
                 <div>
-                  <span ng-if="list.form.discounts.weekly && list.form.prices[0].price" class="md-caption">With a weekly discount of  {{list.form.discounts.weekly}}% you'll get {{list.form.prices[6].price}}€ per week.</span><span>&nbsp;</span>
+                  <span class="md-caption"
+                        ng-if="list.form.discounts.weekly && list.form.prices[0].price">
+                    With a weekly discount of  {{list.form.discounts.weekly | number:0}}% you'll get {{list.form.prices[6].price}}€ per week.
+                  </span>
+                  <span>&nbsp</span>
                 </div>
                 <!-- Switch for Custom Prices -->
                 <div layout="row" layout-align="space-between center">
                   <p>{{'list.pricing.custom-prices' | translate}}</p>
-                  <md-button ng-if="list.show_reset_button" ng-click="list.resetCustomPrices()">Reset</md-button>
                   <md-switch ng-model="list.form.custom_price"
                              ng-change="list.toggleDiscount()"
-                             ng-model-options='{ debounce: 1 }'
-                  >
+                             ng-model-options='{ debounce: 1 }'>
                   </md-switch>
                   <div ng-style="{'display': settings.completeClosed ? '' : 'none'}">
                     ({{ 'settings.mark-as-closed' | translate }})
@@ -648,7 +651,7 @@
                         <input type="text"
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.discount' | translate}} in %"
-                               maxlength="3"
+                               maxlength="4"
                                ng-model="list.form.prices[8].price"
                                ng-change="list.disableDiscounts()"
                                ng-model-options='{ debounce: 300 }'
@@ -671,16 +674,29 @@
             </div>
             <!-- Navigation Buttons -->
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
-              <md-button class="md-lined"
-                         ng-click="list.previousTab()">
-                {{ 'list.back' | translate }}
-              </md-button>
-              <md-button ng-if="list.isListMode"
-                         class="md-raised md-primary"
-                         ng-disabled="!list.isPricingValid() || list.submitDisabled"
-                         ng-click="list.onFormSubmit()">
-                {{ 'list.list-bike' | translate }}
-              </md-button>
+              <div flex="50" layout="row">
+                <div flex="50">
+                  <md-button class="md-lined"
+                             ng-click="list.previousTab()">
+                    {{ 'list.back' | translate }}
+                  </md-button>
+                </div>
+                <div flex="50">
+                  <md-button ng-if="list.show_reset_button"
+                             class="md-raised md-warn"
+                             ng-click="list.resetCustomPrices()">
+                    {{'list.pricing.reset-prices' | translate}}
+                  </md-button>
+                </div>
+              </div>
+              <div flex="50">
+                <md-button ng-if="list.isListMode"
+                           class="md-raised md-primary"
+                           ng-disabled="!list.isPricingValid() || list.submitDisabled"
+                           ng-click="list.onFormSubmit()">
+                  {{ 'list.list-bike' | translate }}
+                </md-button>
+              </div>
             </div>
           </md-content>
         </md-tab>
