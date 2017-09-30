@@ -10,6 +10,8 @@ angular.module('listings',[]).component('listings', {
       }
       var listings = this;
 
+      listings.listViewTreshold = 6;
+
       api.get('/users/' + $localStorage.userId + "/rides").then(
         function(response) {
           listings.bikes = response.data;
