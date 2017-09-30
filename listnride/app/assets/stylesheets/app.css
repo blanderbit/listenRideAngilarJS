@@ -10,7 +10,7 @@
 
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL
-/*-----------------------------------------------------------------------------------*/ 
+/*-----------------------------------------------------------------------------------*/
 
 * {
   outline: 0;
@@ -594,7 +594,7 @@ footer .lnr-link {
  .md-dialog-content {
     width: 100%;
     margin: 0 !important;
-  } 
+  }
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -685,7 +685,7 @@ home #landingSection {
 
 .lnr-badge {
   width: 150px;
-  height: 150px; 
+  height: 150px;
   box-shadow: 0 1px 8px 0 rgba(0,0,0,.09), 0 3px 4px 0 rgba(0,0,0,.06), 0 3px 3px -2px rgba(0,0,0,.05);
   border-radius: 75px;
   -ms-transform: rotate(-9deg); /* IE 9 */
@@ -715,7 +715,7 @@ home #landingSection #homeHeroShot {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-position: center center; 
+  background-position: center center;
 }
 
 home #landingSection #homeHeroShot {
@@ -723,7 +723,7 @@ home #landingSection #homeHeroShot {
 }
 
 .cb-slideshow,
-.cb-slideshow:after { 
+.cb-slideshow:after {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1216,7 +1216,7 @@ user .lnr-user-rating  {
 /*  LIST BIKE
 /*-----------------------------------------------------------------------------------*/
 
-.angular-input-stars {  
+.angular-input-stars {
   display: inline-block;
   padding: 0;
   list-style: none;
@@ -1969,23 +1969,22 @@ and (max-device-width : 568px) {
 }
 
 .lnr-listing-list-item {
-  height: 60px;
-  border-bottom: 1px solid #e1e1e1;
-  cursor: default;
+    height: 60px;
+    border-bottom: 1px solid #e1e1e1;
+    cursor: default;
 }
 
 .lnr-listing-list-item:hover {
-  background-color: rgba(158,158,158,0.2);
+    background-color: rgba(158, 158, 158, 0.2);
 }
 
 .lnr-listing-header {
-  background-color: #e1e1e1;
-  min-height: 40px;
-  font-weight: 700;
-  padding: 8px 0 8px 0;
-  margin-top: 50px;
+    background-color: #e1e1e1;
+    min-height: 40px;
+    font-weight: 700;
+    padding: 8px 0 8px 0;
 }
 
 .lnr-check-box {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }

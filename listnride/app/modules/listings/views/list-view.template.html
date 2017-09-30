@@ -1,23 +1,62 @@
-<!-- YOU CAN REMOVE THE PLACEHOLDER BELOW -->
-<div layout="column">
-  adsdfadfsa
-    <div layout flex="20">
-      <div layout="column">
-        <md-button ng-click="listView.toggleSidenav()">Sidebar :)</md-button>
-        <md-button ng-click="listView.toggleSidenav()">Sidebar :)</md-button>
-        <md-button ng-click="listView.toggleSidenav()">Sidebar :)</md-button>
-        <md-button ng-click="listView.toggleSidenav()">Sidebar :)</md-button>
-        <md-button ng-click="listView.toggleSidenav()">Sidebar :)</md-button>
-        <md-button ng-click="listView.toggleSidenav()">Sidebar :)</md-button>
-        <md-button ng-click="listView.toggleSidenav()">Sidebar :)</md-button>
-        <md-button ng-click="listView.toggleSidenav()">Sidebar :)</md-button>
-        <md-button ng-click="listView.toggleSidenav()">Sidebar :)</md-button>
-        <md-button ng-click="listView.toggleSidenav()">Sidebar :)</md-button>
-        <md-button ng-click="listView.toggleSidenav()">Sidebar :)</md-button>
-        <md-button ng-click="listView.toggleSidenav()">Sidebar :)</md-button>
-        <md-button ng-click="listView.toggleSidenav()">Sidebar :)</md-button>
-        <md-button ng-click="listView.toggleSidenav()">Sidebar :)</md-button>
-        <md-button ng-click="listView.toggleSidenav()">Sidebar :(</md-button>
-      </div>
+<md-content>
+  <div layout="row" layout-align="space-between stretch">
+    <div flex="100">
+      <!-- header -->
+      <md-list>
+        <div class="lnr-listing-header">
+          <md-list-item>
+            <div layout="column" flex="100">
+              <div layout="row" layout-align="space-between center">
+                <div flex="5"></div>
+                <div flex="10"></div>
+                <div flex="10" ng-click="listView.order('id')">ID</div>
+                <div flex="25" ng-click="listView.order('name')">Name</div>
+                <div flex="20" ng-click="listView.order('brand')">Brand</div>
+                <div flex="10" ng-click="listView.order('size')">Size</div>
+                <div flex="10" ng-click="listView.order('price')">Price</div>
+                <div flex></div>
+                <div flex></div>
+              </div>
+            </div>
+          </md-list-item>
+        </div>
+      </md-list>
+
+      <!-- table -->
+      <md-list>
+        <md-list-item class="lnr-listing-list-item"
+                      ng-style="listView.listElementBackground[$index] || {'background-color': '#ffff'}"
+                      id="$index"
+                      ng-repeat="bike in listView.bikes"
+                      ng-mouseenter="listView.onBikeHovered($index, true)"
+                      ng-mouseleave="listView.onBikeHovered($index, false)">
+          <div layout="column" flex="100">
+            <div layout="row" layout-align="space-between center">
+              <md-checkbox flex="5"
+                           class="lnr-check-box"
+                           ng-model="listView.selected[$index]"
+                           ng-change="listView.onBikeSelected($index)"></md-checkbox>
+              <img hide-xs flex="10"
+                   ng-src="{{bike.image_file_1.image_file_1.thumb.url}}"
+                   class="md-avatar"/>
+              <div flex="10" class="lnr-list-button">{{bike.id}}</div>
+              <div flex="25"> {{bike.name}}</div>
+              <div flex="20"> {{bike.brand}}</div>
+              <div flex="10"> {{bike.size}}</div>
+              <div flex="10"> {{bike.price_daily}}</div>
+              <md-icon class="md-secondary"
+                       style="padding-right: 8px;"
+                       ng-style="listView.visibility[$index] || {'visibility': 'hidden'}"
+                       ng-click="listView.editBike($event)"
+                       md-svg-src="app/assets/ui_icons/icn_info.svg">
+              </md-icon>
+              <md-icon class="md-secondary"
+                       ng-style="listView.visibility[$index] || {'visibility': 'hidden'}"
+                       md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+            </div>
+          </div>
+        </md-list-item>
+      </md-list>
     </div>
-</div>
+  </div>
+</md-content>
