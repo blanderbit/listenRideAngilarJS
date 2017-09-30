@@ -9,7 +9,7 @@ angular.module('listings',[]).component('listings', {
         return
       }
       var listings = this;
-      listings.maxTiles = 8;
+      listings.maxTiles = 3;
       listings.bikesSelected = false;
 
       api.get('/users/' + $localStorage.userId + "/rides").then(
@@ -24,7 +24,7 @@ angular.module('listings',[]).component('listings', {
 
       listings.removeBike = function(bikeId) {
         listings.bikes = listings.bikes.filter(function(bike) {
-          return bike.id != bikeId;
+          return bike.id !== bikeId;
         })
       };  
     }

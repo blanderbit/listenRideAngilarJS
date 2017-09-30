@@ -1,22 +1,22 @@
 angular.module('bikeListView', []).component('bikeListView', {
-  templateUrl: 'app/modules/bike/list-view/list-view.template.html',
-  controllerAs: 'list',
+  templateUrl: 'app/modules/bike/lis-view/lis-view.template.html',
+  controllerAs: 'lis',
   controller: ['$stateParams',
     'api',
     'bikeOptions',
     'orderByFilter', function ($stateParams, api, bikeOptions, orderBy) {
-      var list = this;
+      var lis = this;
 
       api.get('/rides/').then(
         function (response) {
-          list.bikes = response.data.slice(10, 20);
-          list.selected = [];
-          list.hovered = [];
-          list.visibility = [];
-          list.listElementBackground = [];
-          list.selectedCount = 0;
-          list.propertyName = 'name';
-          list.reverse = true;
+          lis.bikes = response.data.slice(10, 20);
+          lis.selected = [];
+          lis.hovered = [];
+          lis.visibility = [];
+          lis.listElementBackground = [];
+          lis.selectedCount = 0;
+          lis.propertyName = 'name';
+          lis.reverse = true;
         },
         function (error) {
           console.log("Error editing bike", error);
@@ -24,45 +24,45 @@ angular.module('bikeListView', []).component('bikeListView', {
       );
 
       // bike checkbox is selected
-      list.onBikeSelected = function (index) {
-        if (list.selected[index]) {
+      lis.onBikeSelected = function (index) {
+        if (lis.selected[index]) {
           // clear the hover status of the item
-          list.hovered = [];
+          lis.hovered = [];
           // hide the action buttons for the item
-          list.visibility[index] = false;
+          lis.visibility[index] = false;
           // set background for the item
-          list.listElementBackground[index] = {'background-color': 'rgba(158, 158, 158, 0.2)'}
+          lis.listElementBackground[index] = {'background-color': 'rgba(158, 158, 158, 0.2)'}
         } else {
-          list.listElementBackground = [];
+          lis.listElementBackground = [];
         }
       };
 
       // check if a bike checkbox is selected
-      list.isBikeSelected = function (threshold) {
-        if (list.selected.filter(function (isTrue) {
+      lis.isBikeSelected = function (threshold) {
+        if (lis.selected.filter(function (isTrue) {
             return isTrue;
           }).length > threshold) {
           return true;
         }
       };
 
-      list.order = function (propertyName) {
-        list.reverse = (propertyName !== null && list.propertyName === propertyName) ? !list.reverse : false;
-        list.propertyName = propertyName;
-        list.bikes = orderBy(list.bikes, list.propertyName, list.reverse);
+      lis.order = function (propertyName) {
+        lis.reverse = (propertyName !== null && lis.propertyName === propertyName) ? !lis.reverse : false;
+        lis.propertyName = propertyName;
+        lis.bikes = orderBy(lis.bikes, lis.propertyName, lis.reverse);
       };
 
       //
-      list.onBikeHovered = function (index, value) {
-        if (!list.isBikeSelected(0)) {
-          list.hovered[index] = value;
+      lis.onBikeHovered = function (index, value) {
+        if (!lis.isBikeSelected(0)) {
+          lis.hovered[index] = value;
           // used in place of ng-show
           // using visibility instead of display for hiding/showing the elements
-          list.visibility[index] = value === true ? {'visibility': 'visible'} : {'visibility': 'hidden'};
+          lis.visibility[index] = value === true ? {'visibility': 'visible'} : {'visibility': 'hidden'};
         }
       };
 
-      list.editBike = function (event) {
+      lis.editBike = function (event) {
         console.log("$event: ", event);
       };
     }]
