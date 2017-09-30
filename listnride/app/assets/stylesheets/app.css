@@ -1326,7 +1326,7 @@ listings .lnr-bike-listings {
 
 /* TODO: OPTIMIZE */
 @-moz-document url-prefix() {
-    listings md-content {
+    listings #list-view {
         margin-left: 6px;
     }
 }

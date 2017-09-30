@@ -1,4 +1,11 @@
-<div flex="100" layout="column" layout-fill>
+<md-content ng-if="!listings.listView">
+  <div class="content lnr-page-margin" layout-align="center center">
+    <tile-view bikes="listings.bikes"></tile-view>
+  </div>
+  <footer></footer>
+</md-content>
+
+<div ng-if="listings.listView" flex="100" layout="column" layout-fill>
 <!--   <md-toolbar>
     <div class="md-toolbar-tools">
       <h2 class="md-flex">Toolbar: md-warn</h2>
@@ -15,14 +22,13 @@
   </div>
   <md-divider></md-divider>
 
-  <md-content>
+  <md-content id="list-view">
     <div class="content lnr-page-margin" layout-align="center center">
-      <tile-view ng-if="!listings.listView" bikes="listings.bikes"></tile-view>
       <list-view ng-if="listings.listView" bikes="listings.bikes"></list-view>
     </div>
-    <footer ng-if="!listings.listView"></footer>
   </md-content>
 </div>
+
 <md-sidenav md-disable-scroll-target="body" class="md-sidenav-right md-whiteframe-4dp" md-component-id="edit">
   sdafafdsf
   asfdafsd
