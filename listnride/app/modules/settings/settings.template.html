@@ -127,28 +127,31 @@
               </div>
               <div flex-gt-xs="70" layout-margin>
                 <div layout="row" layout-xs="column">
-
                   <autocomplete
-                    autocomplete-id="settings" layout="column" location="settings.user.street"
+                    autocomplete-id="settings"
+                    layout="column"
+                    location="settings.user.street"
                     label-id="{{ 'list.location.street-number' | translate }}"
-                    required="true" place-changed="settings.fillAddress(place)"
-                    flex-gt-xs="45">
+                    required="true"
+                    place-changed="settings.fillAddress(place)"
+                    flex-gt-xs="45"
+                  >
                   </autocomplete>
                   <span hide-xs flex></span>
                   <md-input-container flex-gt-xs="45">
                   <label>{{ 'forms.zip' | translate }}</label>
-                    <input required name="zip" ng-model="settings.user.zip"></input>
+                    <input required name="zip" ng-model="settings.user.zip">
                   </md-input-container>
                 </div>
                 <div layout="row" layout-xs="column">
                   <md-input-container flex-gt-xs="45">
                   <label>{{ 'forms.city' | translate }}</label>
-                    <input required name="city" ng-model="settings.user.city"></input>
+                    <input required name="city" ng-model="settings.user.city">
                   </md-input-container>
                   <span hide-xs flex></span>
                   <md-input-container flex-gt-xs="45">
                     <label>{{ 'forms.country' | translate }}</label>
-                    <input required name="country" ng-model="settings.user.country"></input>
+                    <input required name="country" ng-model="settings.user.country">
                   </md-input-container>
                 </div>
               </div>
@@ -176,7 +179,8 @@
         </div>
 
         <div class="navigation" layout="row" layout-align="end center" layout-margin>
-          <md-button ng-click="settings.updateUser()" ng-disabled="!settings.form.$valid" class="md-raised md-primary">{{ 'edit.save-changes' | translate }}</md-button>
+          <!--ng-disabled="!settings.form.$valid"-->
+          <md-button ng-click="settings.updateUser()" ng-disabled="!settings.form.$dirty" class="md-raised md-primary">{{ 'edit.save-changes' | translate }}</md-button>
         </div>
       </md-tab>
       <!--end profile -->
@@ -458,57 +462,7 @@
       </md-tab>
       <!-- end hours -->
 
-      <!-- business -->
-      <!--<md-tab class="business" label="{{ 'settings.business' | translate }}" layout="column" data-ng-if="settings.user.business">-->
-        <!--<br>-->
-        <!--<div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">-->
-          <!--<form name="businessForm" ng-submit="settings.updateBusiness(businessForm)">-->
-            <!--<div layout="row" layout-xs="column">-->
-              <!--<div flex-gt-xs layout-margin>-->
-                <!--<span class="md-body-2">{{ 'settings.company-information' | translate }}</span>-->
-              <!--</div>-->
-              <!--<div flex-gt-xs="70" layout="column" layout-margin>-->
-                <!--<div layout="row" layout-xs="column">-->
-                  <!--<md-input-container flex>-->
-                    <!--<label>{{ 'settings.company-name' | translate }}</label>-->
-                    <!--<input name="company_name" ng-model="settings.business.company_name" required ng-minlength="2">-->
-                    <!--<div ng-messages="businessForm.company_name.$error" role="alert">-->
-                      <!--<div ng-message="required">Please enter your company name.</div>-->
-                      <!--<div ng-message="minlength">Company name should be longer than 2 characters</div>-->
-                    <!--</div>-->
-                  <!--</md-input-container>-->
-                <!--</div>-->
-
-                <!--<div layout="row" layout-xs="column">-->
-                  <!--<md-input-container flex>-->
-                    <!--<label>{{ 'settings.vat' | translate }}</label>-->
-                    <!--<input name="vat" ng-model="settings.business.vat" required ng-minlength="2">-->
-                    <!--<div ng-messages="businessForm.vat.$error" role="alert">-->
-                      <!--<div ng-message="required">Please enter your VAT number.</div>-->
-                      <!--<div ng-message="minlength">VAT should be longer than 2 characters</div>-->
-                    <!--</div>-->
-                  <!--</md-input-container>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<div layout="row" layout-align="end">-->
-              <!--<md-button-->
-                <!--class="md-raised md-primary"-->
-                <!--type="submit"-->
-                <!--ng-disabled="!businessForm.$valid"-->
-              <!--&gt;-->
-                <!--Update-->
-              <!--</md-button>-->
-            <!--</div>-->
-
-            <!--<br>-->
-            <!--<md-divider></md-divider>-->
-            <!--<br>-->
-          <!--</form>-->
-        <!--</div>-->
-      <!--</md-tab>-->
-      <!--end business -->
     </md-tabs>
   </div>
+  <footer></footer>
 </md-content>

@@ -3,16 +3,18 @@
 angular.module('listings',[]).component('listings', {
   templateUrl: 'app/modules/listings/listings.template.html',
   controllerAs: 'listings',
-  controller: ['$localStorage', 'api', 'accessControl',
-    function ListingsController($localStorage, api, accessControl) {
+  controller: ['$localStorage', '$mdSidenav', 'api', 'accessControl',
+    function ListingsController($localStorage, $mdSidenav, api, accessControl) {
       if (accessControl.requireLogin()) {
         return
       }
       var listings = this;
+      listings.maxTiles = 8;
 
       api.get('/users/' + $localStorage.userId + "/rides").then(
         function(response) {
           listings.bikes = response.data;
+          listings.listView = listings.bikes.length >= listings.maxTiles;
         },
         function(error) {
           console.log("Error retrieving User", error);

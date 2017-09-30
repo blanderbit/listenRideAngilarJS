@@ -1,24 +1,30 @@
-<md-content class="single-column">
-  <div class="content lnr-page-margin" layout-align="center center">
-    <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h1 class="md-headline">{{ 'listings.my-bikes' | translate }}</h1>
+<div flex="100" layout="column" layout-fill>
+<!--   <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Toolbar: md-warn</h2>
     </div>
+  </md-toolbar> -->
 
-    <div ng-if="listings.bikes !== undefined && listings.bikes.length == 0" layout="column" layout-align="center center">
-      {{ 'listings.no-bikes' | translate }}<br><br>
-      <md-button ui-sref="listingABike" class="md-raised md-primary md-lrg">{{ 'shared.list-a-bike' | translate }}</md-button>
-    </div>
-
-    <div ng-if="listings.bikes !== undefined && listings.bikes.length > 0" layout="column" layout-align="center center">
-      <md-button ui-sref="list" class="md-raised md-primary md-lrg">{{ 'shared.list-a-bike' | translate }}</md-button>
-    </div>
-
-    <div flex-gt-xs layout="row" layout-wrap layout-padding layout-align="center center">
-      <listing-card ng-repeat="bike in listings.bikes" flex="100" flex-gt-xs="50" flex-gt-sm="33"
-        bike-id="bike.id" name="bike.name" brand="bike.brand" category="bike.category" price="bike.price_daily"
-        image-url=" bike.image_file_1.image_file_1.small.url" available="bike.available"
-        remove-bike="listings.removeBike(bikeId)">
-      </listing-card>
+  <div layout="column">
+    <div layout="row" class="content" layout-fill>
+      <md-input-container>
+        <label></label>
+        <input placeholder="{{ 'shared.search-bikes' | translate }}" ng-model="listView.search"/>
+      </md-input-container>
     </div>
   </div>
-</md-content>
+  <md-divider></md-divider>
+
+  <md-content>
+    <div class="content lnr-page-margin" layout-align="center center">
+      <tile-view ng-if="!listings.listView" bikes="listings.bikes"></tile-view>
+      <list-view ng-if="listings.listView" bikes="listings.bikes"></list-view>
+    </div>
+    <footer ng-if="!listings.listView"></footer>
+  </md-content>
+</div>
+<md-sidenav md-disable-scroll-target="body" class="md-sidenav-right md-whiteframe-4dp" md-component-id="edit">
+  sdafafdsf
+  asfdafsd
+  fasdfasd
+</md-sidenav>

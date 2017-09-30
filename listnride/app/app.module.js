@@ -14,6 +14,7 @@ angular.module('listnride', [
   'message',
   'list',
   'autocomplete',
+  'confirmation',
   'listings',
   'listingCard',
   'edit',

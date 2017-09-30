@@ -48,6 +48,7 @@
     "cancel": "Abbrechen",
     "send": "Senden",
     "search": "Suche",
+    "search-bikes": "Durchsuche deine Räder",
     "from-place" : "aus",
     "contact": "Kontakt & Hilfe",
     "show-more" : "zeig mehr",
@@ -97,7 +98,10 @@
     "contact-us": "Bitte kontaktiere uns via ",
     "required": "Dies ist erforderlich",
     "update": "Aktualisiert",
-    "load-more": "Load more"
+    "load-more": "Load more",
+    "confirm": "Bestätigen",
+    "confirmation": "Bestätigung",
+    "confirmation-text": "Bist du sicher?"
   },
 
   "toasts": {
