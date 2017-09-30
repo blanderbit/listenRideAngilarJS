@@ -10,6 +10,7 @@ angular.module('listings',[]).component('listings', {
       }
       var listings = this;
       listings.maxTiles = 8;
+      listings.bikesSelected = false;
 
       api.get('/users/' + $localStorage.userId + "/rides").then(
         function(response) {

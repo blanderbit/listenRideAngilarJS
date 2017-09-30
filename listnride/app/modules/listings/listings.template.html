@@ -11,14 +11,14 @@
 <div ng-if="listings.listView" flex="100" layout="column" layout-fill>
   <div class="listings-header" layout="column">
     <div layout="row" class="content" layout-fill layout-align="space-between center">
-      <md-input-container>
+      <md-input-container flex="30">
         <label style="display: none"></label>
         <input placeholder="{{ 'shared.search-bikes' | translate }}" ng-model="listView.search"/>
       </md-input-container>
-      <div>
-        <md-button class="md-warn">Delete</md-button>
-        <md-button class="md-lined">Edit</md-button>
+      <div layout="row">
         <md-button class="md-primary md-confirm-button">New Bike</md-button>
+        <md-button ng-disabled="!listings.bikesSelected" class="md-lined">Edit Selected</md-button>
+        <md-button ng-disabled="!listings.bikesSelected" class="md-lined md-warn">Delete Selected</md-button>
       </div>
     </div>
   </div>

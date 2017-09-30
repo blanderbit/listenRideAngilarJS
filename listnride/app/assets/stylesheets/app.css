@@ -1839,6 +1839,10 @@ invite .voucher-link {
   cursor: pointer;
 }
 
+.md-button .md-lined:not([disabled]) {
+  color: #FFFFFF !important;
+}
+
 .lnr-csv-button {
   margin-top: 30px;
 }
