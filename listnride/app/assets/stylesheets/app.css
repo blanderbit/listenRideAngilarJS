@@ -1694,8 +1694,7 @@ md-grid-list a {
 }
 
 @media (min-width: 960px) {
-  #jobs-details md-list-item,
-  md-list-item .md-list-item-inner {
+  #jobs-details md-list-item {
     min-height: 30px;
     height: 32px;
   }

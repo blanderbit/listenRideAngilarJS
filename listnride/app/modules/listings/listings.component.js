@@ -22,6 +22,11 @@ angular.module('listings',[]).component('listings', {
         }
       );
 
+      listings.toggleSidenav = function () {
+        console.log($localStorage.userId);
+        $mdSidenav('edit').toggle();
+      };
+
       listings.removeBike = function(bikeId) {
         listings.bikes = listings.bikes.filter(function(bike) {
           return bike.id !== bikeId;
