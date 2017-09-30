@@ -1,5 +1,26 @@
 <md-content>
   <div class="content lnr-page-margin" layout="column" layout-align="center stretch">
+
+    <md-list>
+      <div class="lnr-listing-header">
+        <md-list-item>
+          <div layout="column" flex="100">
+            <div layout="row" layout-align="space-between center">
+              <div flex="5"></div>
+              <div flex="10"></div>
+              <div flex="10" ng-click="list.order('id')">ID</div>
+              <div flex="25" ng-click="list.order('name')">Name</div>
+              <div flex="20" ng-click="list.order('brand')">Brand</div>
+              <div flex="10" ng-click="list.order('size')">Size</div>
+              <div flex="10" ng-click="list.order('price')">Price</div>
+              <div flex></div>
+              <div flex></div>
+            </div>
+          </div>
+        </md-list-item>
+      </div>
+    </md-list>
+
     <md-list>
       <md-list-item class="lnr-listing-list-item"
                     ng-style="list.listElementBackground[$index] || {'background-color': '#ffff'}"
@@ -7,15 +28,18 @@
                     ng-repeat="bike in list.bikes"
                     ng-mouseenter="list.onBikeHovered($index, true)"
                     ng-mouseleave="list.onBikeHovered($index, false)">
-        <md-checkbox ng-model="list.selected[$index]"
-                     ng-change="list.onBikeSelected($index)">
-        </md-checkbox>
-        <img ng-src="{{bike.image_file_1.image_file_1.thumb.url}}" class="md-avatar"/>
         <div layout="column" flex="100">
-          <div layout="row" layout-align="space-around center">
+          <div layout="row" layout-align="space-between center">
+            <md-checkbox flex="5"
+                         class="lnr-check-box"
+                         ng-model="list.selected[$index]"
+                         ng-change="list.onBikeSelected($index)"></md-checkbox>
+            <img hide-xs flex="10"
+                 ng-src="{{bike.image_file_1.image_file_1.thumb.url}}"
+                 class="md-avatar"/>
             <div flex="10" class="lnr-list-button">{{bike.id}}</div>
-            <div flex="30"> {{bike.name}}</div>
-            <div flex="30"> {{bike.brand}}</div>
+            <div flex="25"> {{bike.name}}</div>
+            <div flex="20"> {{bike.brand}}</div>
             <div flex="10"> {{bike.size}}</div>
             <div flex="10"> {{bike.price_daily}}</div>
             <md-icon class="md-secondary"
