@@ -1,11 +1,30 @@
-<md-content class="single-column">
-  <div class="content lnr-page-margin" layout-align="center center">
-    <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h1 class="md-headline">{{ 'listings.my-bikes' | translate }}</h1>
+<div flex="100" layout="column" layout-fill>
+<!--   <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Toolbar: md-warn</h2>
     </div>
+  </md-toolbar> -->
 
-    <tile-view ng-if="listings.bikes.length < listings.listViewTreshold" bikes="listings.bikes"></tile-view>
-    <list-view ng-if="listings.bikes.length >= listings.listViewTreshold" bikes="listings.bikes"></list-view>
+  <div layout="column">
+    <div layout="row" class="content" layout-fill>
+      <md-input-container>
+        <label></label>
+        <input placeholder="{{ 'shared.search-bikes' | translate }}" ng-model="listView.search"/>
+      </md-input-container>
+    </div>
   </div>
-  <footer></footer>
-</md-content>
+  <md-divider></md-divider>
+
+  <md-content>
+    <div class="content lnr-page-margin" layout-align="center center">
+      <tile-view ng-if="!listings.listView" bikes="listings.bikes"></tile-view>
+      <list-view ng-if="listings.listView" bikes="listings.bikes"></list-view>
+    </div>
+    <footer ng-if="!listings.listView"></footer>
+  </md-content>
+</div>
+<md-sidenav md-disable-scroll-target="body" class="md-sidenav-right md-whiteframe-4dp" md-component-id="edit">
+  sdafafdsf
+  asfdafsd
+  fasdfasd
+</md-sidenav>
