@@ -1940,3 +1940,7 @@ and (max-device-width : 568px) {
   border-bottom: 1px solid #e1e1e1;
   cursor: default;
 }
+
+.lnr-listing-list-item:hover {
+  background-color: rgba(158,158,158,0.2);
+}

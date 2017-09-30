@@ -2,6 +2,7 @@
   <div class="content lnr-page-margin" layout="column" layout-align="center stretch">
     <md-list>
       <md-list-item class="lnr-listing-list-item"
+                    ng-style="list.listElementBackground[$index] || {'background-color': '#ffff'}"
                     id="$index"
                     ng-repeat="bike in list.bikes"
                     ng-mouseenter="list.onBikeHovered($index, true)"
@@ -12,7 +13,7 @@
         <img ng-src="{{bike.image_file_1.image_file_1.thumb.url}}" class="md-avatar"/>
         <div layout="column" flex="100">
           <div layout="row" layout-align="space-around center">
-            <div flex="10">{{bike.id}}</div>
+            <div flex="10" class="lnr-list-button">{{bike.id}}</div>
             <div flex="30"> {{bike.name}}</div>
             <div flex="30"> {{bike.brand}}</div>
             <div flex="10"> {{bike.size}}</div>
