@@ -111,10 +111,6 @@ md-grid-list md-grid-tile {
   background-color: rgba(250,250,250,1);
 }
 
-.lnr-toolbar {
-  background-color: #FFFFFF !important;
-}
-
 home .highlight-tile {
   padding: 24px 0px;
 }
@@ -1324,6 +1320,16 @@ listings .lnr-bike-listings {
   width: 100%;
 }
 
+.listings-header {
+  background-color: #FFFFFF;
+  height: 120px;
+}
+
+.listings-header md-input-container {
+  margin: 0;
+  padding: 0;
+}
+
 /* TODO: OPTIMIZE */
 @-moz-document url-prefix() {
     listings #list-view {
@@ -1333,11 +1339,6 @@ listings .lnr-bike-listings {
 
 #deleteBikeDialog .delete-bike-text {
   padding: 24px;
-}
-
-.listings-header {
-  z-index:1;
-  position: absolute;
 }
 
 

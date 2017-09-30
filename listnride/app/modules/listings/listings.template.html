@@ -1,23 +1,25 @@
+<!-- Layout for the Tile View -->
 <md-content ng-if="!listings.listView">
   <div class="content lnr-page-margin" layout-align="center center">
     <tile-view bikes="listings.bikes"></tile-view>
   </div>
   <footer></footer>
 </md-content>
+<!------------------------------>
 
+<!-- Layout for the List View -->
 <div ng-if="listings.listView" flex="100" layout="column" layout-fill>
-<!--   <md-toolbar>
-    <div class="md-toolbar-tools">
-      <h2 class="md-flex">Toolbar: md-warn</h2>
-    </div>
-  </md-toolbar> -->
-
-  <div layout="column">
-    <div layout="row" class="content" layout-fill>
+  <div class="listings-header" layout="column">
+    <div layout="row" class="content" layout-fill layout-align="space-between center">
       <md-input-container>
-        <label></label>
+        <label style="display: none"></label>
         <input placeholder="{{ 'shared.search-bikes' | translate }}" ng-model="listView.search"/>
       </md-input-container>
+      <div>
+        <md-button class="md-warn">Delete</md-button>
+        <md-button class="md-lined">Edit</md-button>
+        <md-button class="md-primary md-confirm-button">New Bike</md-button>
+      </div>
     </div>
   </div>
   <md-divider></md-divider>
@@ -28,6 +30,7 @@
     </div>
   </md-content>
 </div>
+<!------------------------------>
 
 <md-sidenav md-disable-scroll-target="body" class="md-sidenav-right md-whiteframe-4dp" md-component-id="edit">
   sdafafdsf
