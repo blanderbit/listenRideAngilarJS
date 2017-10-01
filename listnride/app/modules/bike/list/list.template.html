@@ -521,9 +521,12 @@
                   </div>
                 </div>
                 <div>
-                  <span class="md-caption"
-                        ng-if="list.form.discounts.weekly && list.form.prices[0].price">
-                    With a weekly discount of  {{list.form.discounts.weekly | number:0}}% you'll get {{list.form.prices[6].price}}€ per week.
+                  <span class="md-caption" ng-if="list.form.discounts.weekly && list.form.prices[0].price">
+                    {{'list.pricing.discount-description-initial' | translate}}
+                    {{list.form.discounts.weekly | number:0}}%
+                    {{'list.pricing.discount-description-mid' | translate}}
+                    {{list.form.prices[6].price}}€
+                    {{'list.pricing.discount-description-ending' | translate}}
                   </span>
                   <span>&nbsp</span>
                 </div>
