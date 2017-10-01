@@ -22,9 +22,10 @@ angular.module('list', ['ngLocale']).component('list', {
     'verification',
     'accessControl',
     'loadingDialog',
+    'price',
     function ListController($mdDialog, $localStorage, $stateParams, $state,
                             $scope, $analytics, Upload, bikeOptions, api,
-                            $timeout, verification, accessControl, loadingDialog) {
+                            $timeout, verification, accessControl, loadingDialog, price) {
 
       if (accessControl.requireLogin()) {
         return;
@@ -91,12 +92,7 @@ angular.module('list', ['ngLocale']).component('list', {
               }
 
               data.images = images;
-              var prices = bikeOptions.transformPrices(data.prices, data.discounts);
-              /*
-              // only for testing inverse pricing test
-              var inversePrices = bikeOptions.inverseTransformPrices(prices);
-              console.log("inverse prices: ", inversePrices);
-              */
+              var prices = price.transformPrices(data.prices, data.discounts);
               data.size = parseInt(data.size);
               data.mainCategory = (data.category + "").charAt(0);
               data.subCategory = (data.category + "").charAt(1);
@@ -125,10 +121,7 @@ angular.module('list', ['ngLocale']).component('list', {
 
       // form submission for new ride
       list.submitNewRide = function () {
-        console.log("images: ", list.form.images);
-        console.log("o prices: ", list.form.prices);
-        var prices = bikeOptions.inverseTransformPrices(list.form.prices, list.isListMode);
-        console.log("t prices: ", prices);
+        var prices = price.inverseTransformPrices(list.form.prices, list.isListMode);
         var ride = {
           "ride[name]": list.form.name,
           "ride[brand]": list.form.brand,
@@ -192,7 +185,7 @@ angular.module('list', ['ngLocale']).component('list', {
 
       // form submission for existing ride
       list.submitEditedRide = function () {
-        var prices = bikeOptions.inverseTransformPrices(list.form.prices);
+        var prices = price.inverseTransformPrices(list.form.prices);
         var ride = {
           "ride[name]": list.form.name,
           "ride[brand]": list.form.brand,
@@ -257,7 +250,7 @@ angular.module('list', ['ngLocale']).component('list', {
         // discount fields are enabled and no custom price are set manually
         if (list.discountFieldEditable) {
           // set the prices based on the daily price
-          list.form.prices = bikeOptions.setCustomPrices(list.form);
+          list.form.prices = price.setCustomPrices(list.form);
         }
       };
 
@@ -266,7 +259,7 @@ angular.module('list', ['ngLocale']).component('list', {
         // enable discount field
         list.discountFieldEditable = true;
         // set the prices based on the daily price
-        bikeOptions.setCustomPrices(list.form);
+        price.setCustomPrices(list.form);
       };
 
       // disable custom discounts fields
@@ -349,13 +342,9 @@ angular.module('list', ['ngLocale']).component('list', {
       };
 
       list.isPricingValid = function () {
-        if (!list.form.prices) {
-          return false;
-        }
-        else {
-          list.form.prices.forEach(function (price) {
-            if (price.price === undefined) return false;
-          });
+        if (!list.form.prices) return false;
+        for (var loop = 0; loop < list.form.prices.length; loop += 1) {
+          if (list.form.prices[loop].price === undefined) return false;
         }
         return true;
       };
