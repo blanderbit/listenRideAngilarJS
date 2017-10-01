@@ -427,6 +427,7 @@
       "hint-para-3": "Om langere verblijven aan te moedigen, stellen sommige verhuurders een dag of wekelijkse korting in.",
       "label": "Prijs",
       "discount": "Korting",
+      "set_custom_price": "Prijs in €",
       "custom-price": "Aangepaste prijs",
       "daily-price-placeholder": "Prijs in €",
       "daily-discount-placeholder": "Korting in %",
