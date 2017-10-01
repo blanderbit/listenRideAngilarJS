@@ -119,7 +119,6 @@ angular.module('listnride')
           price: parseInt(originalPrices[0].price),
           start_at: originalPrices[0].start_at
         };
-        console.log(originalPrices);
         // daily and weekly price updates
         for (var day = 1; day < 6; day += 1) {
           prices[day] = {

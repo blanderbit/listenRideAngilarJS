@@ -521,9 +521,13 @@
                   </div>
                 </div>
                 <div>
-                  <span class="md-caption"
-                        ng-if="list.form.discounts.weekly && list.form.prices[0].price">
-                    With a weekly discount of  {{list.form.discounts.weekly | number:0}}% you'll get {{list.form.prices[6].price}}€ per week.
+                  <!-- description is not shown when custom prices are used.-->
+                  <span class="md-caption" ng-if="list.form.discounts.weekly && list.form.prices[0].price && !list.show_reset_button">
+                    {{'list.pricing.discount-description-initial' | translate}}
+                    {{list.form.discounts.weekly | number:0}}%
+                    {{'list.pricing.discount-description-mid' | translate}}
+                    {{list.form.prices[6].price}}€
+                    {{'list.pricing.discount-description-ending' | translate}}
                   </span>
                   <span>&nbsp</span>
                 </div>
@@ -546,7 +550,7 @@
                         <label>{{'list.pricing.price_2_days' | translate}} </label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="3"
                                ng-model="list.form.prices[1].price"
                                ng-change="list.disableDiscounts()"
@@ -560,7 +564,7 @@
                         <label>{{'list.pricing.price_3_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="3"
                                ng-model="list.form.prices[2].price"
                                ng-change="list.disableDiscounts()"
@@ -576,7 +580,7 @@
                         <label>{{'list.pricing.price_4_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="3"
                                ng-model="list.form.prices[3].price"
                                ng-change="list.disableDiscounts()"
@@ -590,7 +594,7 @@
                         <label>{{'list.pricing.price_5_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="3"
                                ng-model="list.form.prices[4].price"
                                ng-change="list.disableDiscounts()"
@@ -606,7 +610,7 @@
                         <label>{{'list.pricing.price_6_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="3"
                                ng-model="list.form.prices[5].price"
                                ng-change="list.disableDiscounts()"
@@ -620,7 +624,7 @@
                         <label>{{'list.pricing.price_7_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="3"
                                ng-model="list.form.prices[6].price"
                                ng-change="list.disableDiscounts()"
@@ -636,7 +640,7 @@
                         <label>{{'list.pricing.price_8_days_long' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="3"
                                ng-model="list.form.prices[7].price"
                                ng-change="list.disableDiscounts()"
@@ -650,7 +654,7 @@
                         <label>{{'list.pricing.price_30_days' | translate}}</label>
                         <input type="text"
                                ng-pattern="/^\d+$/"
-                               placeholder="{{'list.pricing.discount' | translate}} in %"
+                               placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="4"
                                ng-model="list.form.prices[8].price"
                                ng-change="list.disableDiscounts()"
@@ -666,7 +670,7 @@
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right-double"></md-divider>
               <!-- Info Column -->
               <div flex="50" hide-xs>
-                <h3 class="md-subhead">Info</h3>
+                <h3 class="md-subhead">{{'list.pricing.info' | translate }}</h3>
                 <p class="md-body-1">{{ 'list.pricing.hint-para-1' | translate }}</p>
                 <p class="md-body-1">{{ 'list.pricing.hint-para-3' | translate }}</p>
               </div>

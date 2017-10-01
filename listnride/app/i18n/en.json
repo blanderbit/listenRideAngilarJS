@@ -421,6 +421,7 @@
       "country": "Country"
     },
     "pricing": {
+      "info": "Your daily price is your default daily rate.",
       "header": "Daily Price",
       "description": "Your daily price is your default daily rate.",
       "hint-para-1": "The price you charge for your bike is up to you. The price should be based on the bike and equipment. To get an idea of market prices, you can view comparable listings. ",
@@ -428,6 +429,10 @@
       "hint-para-3": "To encourage longer rentals, some listers set a daily or weekly discount." ,
       "label": "Pricing",
       "discount": "Discount",
+      "discount-description-initial": "With a weekly discount of ",
+      "discount-description-mid": " you'll get ",
+      "discount-description-ending": " per week.",
+      "set_custom_price": "Price in €",
       "custom-prices": "Show Custom Prices",
       "half-daily-price": "Half-daily Price",
       "daily-price": "Daily Price",

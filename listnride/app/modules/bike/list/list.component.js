@@ -60,8 +60,6 @@ angular.module('list', ['ngLocale']).component('list', {
                 price: 0
               }
             }
-
-            console.log("new prices: ", list.form.prices);
             list.form.discounts = {
               "daily": 0,
               "weekly": 0
@@ -161,8 +159,6 @@ angular.module('list', ['ngLocale']).component('list', {
           "ride[image_file_5]": (list.form.images[4]) ? list.form.images[4].src : undefined
         };
 
-        console.log("put data: ", ride);
-
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             var user = success.data;
@@ -227,7 +223,6 @@ angular.module('list', ['ngLocale']).component('list', {
           "ride[image_file_5]": (list.form.images[4]) ? list.form.images[4].src : undefined
         };
 
-        console.log("put data: ", ride);
         Upload.upload({
           method: 'PUT',
           url: api.getApiUrl() + '/rides/' + $stateParams.bikeId,
@@ -262,34 +257,20 @@ angular.module('list', ['ngLocale']).component('list', {
 
       // set the custom prices for a bike
       list.setCustomPrices = function (dailyPriceChanged) {
-        console.log("discount fields: ", list.discountFieldEditable);
-        console.log("custom price: ", list.form.custom_price);
-        if (dailyPriceChanged === true && list.show_reset_button === false) {
-          console.log("daily price changed");
+        // discount fields are enabled and no custom price are set manually
+        if (list.show_reset_button === false && list.discountFieldEditable) {
+          // set the prices based on the daily price
           list.form.prices = bikeOptions.setCustomPrices(list.form);
         }
-
-        // discount fields are enabled as well as reset button is hidden
-        // OR
-        // when reset button is pressed
-        else if ((list.discountFieldEditable && list.show_reset_button === false) || list.show_reset_button) {
-          console.log("set custom price");
-          // set the custom prices
-          list.form.prices = bikeOptions.setCustomPrices(list.form);
-        }
-        else if (list.show_reset_button) {
-          list.form.prices = bikeOptions.resetCustomPrices(list.form);
-          list.show_reset_button = false;
-          list.discountFieldEditable = true;
-        }
-
-        console.log("set custom price");
       };
 
       list.resetCustomPrices = function () {
-        bikeOptions.setCustomPrices(list.form);
+        // hide reset button
         list.show_reset_button = false;
+        // enable discount field
         list.discountFieldEditable = true;
+        // set the prices based on the daily price
+        bikeOptions.setCustomPrices(list.form);
       };
 
       // disable custom discounts fields
@@ -333,11 +314,9 @@ angular.module('list', ['ngLocale']).component('list', {
             if (files[i] !== null) {
               if (list.isListMode) {
                 list.form.images.push({src: files[i], local: "true"});
-                console.log("images in add image: ", list.form.images);
               }
               else {
                 list.form.images.push({src: files[i], local: "true"});
-                console.log("images in add image: ", list.form.images);
               }
             }
       };
@@ -469,7 +448,6 @@ angular.module('list', ['ngLocale']).component('list', {
 
         // Listen for change events to enable binding
         element.bind('blur', function () {
-          console.log("model value: ", ngModel.$modelValue);
           element.val(roundAsInteger(ngModel.$modelValue));
         });
 
