@@ -421,6 +421,7 @@
       "country": "Country"
     },
     "pricing": {
+      "info": "Your daily price is your default daily rate.",
       "header": "Daily Price",
       "description": "Your daily price is your default daily rate.",
       "hint-para-1": "The price you charge for your bike is up to you. The price should be based on the bike and equipment. To get an idea of market prices, you can view comparable listings. ",

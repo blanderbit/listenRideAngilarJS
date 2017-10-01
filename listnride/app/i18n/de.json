@@ -436,6 +436,7 @@
       "country": "Land"
     },
     "pricing": {
+      "info": "Dein Tagespreis ist dein Standardpreis pro Tag.",
       "header": "Tagespreis",
       "description": "Dein Tagespreis ist dein Standardpreis pro Tag.",
       "hint-para-1": "Über den Preis, den du für dein Rad nimmst, entscheidest du selbst. Der Mietpreis sollte sich nach Rad und Ausstattung richten. Um eine Vorstellung von den Preisen am Markt zu erhalten, schaue Dir vergleichbare Angebote an.",
@@ -451,8 +452,8 @@
       "half-daily-price": "Halber Tag",
       "daily-price": "Ganzer Tag",
       "weekly-price": "Eine Woche",
-      "daily-discount": "Ganzer Discount",
-      "weekly-discount": "Wöchentlich Discount",
+      "daily-discount": "Tagesrabatt",
+      "weekly-discount": "Wochenrabatt",
       "price_2_days": "2 Tage",
       "price_3_days": "3 Tage",
       "price_4_days": "4 Tage",

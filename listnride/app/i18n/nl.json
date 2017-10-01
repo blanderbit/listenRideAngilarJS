@@ -420,6 +420,7 @@
       "country": "Land"
     },
     "pricing": {
+      "info": "Je dagprijs is je standaard dag tarief.",
       "header": "Dagprijs",
       "description": "Je dagprijs is je standaard dag tarief.",
       "hint-para-1": "Je bepaalt zelf de prijs die je vraagt voor je fiets. De prijs moet gebaseerd zijn op de fiets en de uitrusting. Om een ​​idee te krijgen van marktprijzen, kunt u vergelijkbare aanbiedingen bekijken.",
@@ -435,8 +436,8 @@
       "half-daily-price": "Halve dag",
       "daily-price": "Hele dag",
       "weekly-price": "Een week",
-      "daily-discount": "Hele Korting",
-      "weekly-discount": "Een Korting",
+      "daily-discount": "Dag korting",
+      "weekly-discount": "Wekelijkse korting",
       "price_2_days": "2 dagen",
       "price_3_days": "3 dagen",
       "price_4_days": "4 dagen",
