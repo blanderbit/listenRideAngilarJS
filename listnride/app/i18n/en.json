@@ -208,7 +208,10 @@
     "view-pictures": "View Pictures",
     "for": "for",
     "meta-title": "Rent the {{name}} - {{category}} by {{brand}} in {{location}}.",
-    "meta-description": "{{description}}"
+    "meta-description": "{{description}}",
+    "per-day": "1 day",
+    "from-2-days": "from 2 days",
+    "from-week": "from 1 week"
   },
   "user": {
     "verified-through": "Verified through",
@@ -359,7 +362,11 @@
     "log-in-to-request-title": "Log in or Sign up",
     "log-in-to-request-description": "Log in to request the bike. If you don't have an account yet, feel free to sign up.",
     "select-timespan": "Choose rental timespan first",
-    "select-timespan-description": "Before you can request, please set the timespan of your rental. Simply click on the days and select pickup and dropoff times in the above calendar."
+    "select-timespan-description": "Before you can request, please set the timespan of your rental. Simply click on the days and select pickup and dropoff times in the above calendar.",
+    "info-subtotal": "This is the regular daily price<br>times the amount of days you want<br>to rent the bike.",
+    "info-discount": "Average daily discount you<br>get per day by renting out<br>for a longer period of time.",
+    "info-service-fee": "The service fee is<br>used for providing<br>listnride. It includes VAT.",
+    "info": "In the calendar above click first on the day you wish to rent out the bike, and second on the day you want to return it."
   },
   "list": {
     "edit-bike": "Edit Bike",
@@ -433,7 +440,7 @@
       "discount-description-mid": " you'll get ",
       "discount-description-ending": " per week.",
       "set_custom_price": "Price in €",
-      "custom-prices": "Show Custom Prices",
+      "custom-prices": "Individual pricing",
       "half-daily-price": "Half-daily Price",
       "daily-price": "Daily Price",
       "daily-price-placeholder": "Price in €",

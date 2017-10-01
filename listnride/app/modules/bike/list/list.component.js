@@ -67,7 +67,6 @@ angular.module('list', ['ngLocale']).component('list', {
             };
 
             list.form.custom_price = false;
-            list.show_reset_button = false;
           },
           function (error) {
             console.log("Error fetching User");
@@ -106,13 +105,11 @@ angular.module('list', ['ngLocale']).component('list', {
               if (list.form.custom_price) {
                 list.disableDiscounts();
                 list.show_custom_price = true;
-                list.show_reset_button = true;
               }
 
               // if custom price is disabled
               else if (list.form.custom_price === false) {
                 list.show_custom_price = false;
-                list.show_reset_button = false;
               }
             }
           },
@@ -251,7 +248,7 @@ angular.module('list', ['ngLocale']).component('list', {
       // set the custom prices for a bike
       list.setCustomPrices = function (dailyPriceChanged) {
         // discount fields are enabled and no custom price are set manually
-        if (list.show_reset_button === false && list.discountFieldEditable) {
+        if (list.discountFieldEditable) {
           // set the prices based on the daily price
           list.form.prices = price.setCustomPrices(list.form);
         }
@@ -259,7 +256,6 @@ angular.module('list', ['ngLocale']).component('list', {
 
       list.resetCustomPrices = function () {
         // hide reset button
-        list.show_reset_button = false;
         // enable discount field
         list.discountFieldEditable = true;
         // set the prices based on the daily price
@@ -268,7 +264,6 @@ angular.module('list', ['ngLocale']).component('list', {
 
       // disable custom discounts fields
       list.disableDiscounts = function () {
-        list.show_reset_button = true;
         list.form.custom_price = true;
         list.discountFieldEditable = false;
       };
@@ -282,6 +277,7 @@ angular.module('list', ['ngLocale']).component('list', {
 
       list.toggleDiscount = function () {
         if (list.form.custom_price === true) {
+          list.resetCustomPrices();
           list.show_custom_price = true;
           // list.discountFieldEditable = false;
         } else if (list.form.custom_price === false) {
