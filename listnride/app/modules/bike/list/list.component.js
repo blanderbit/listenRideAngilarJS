@@ -62,8 +62,8 @@ angular.module('list', ['ngLocale']).component('list', {
               }
             }
             list.form.discounts = {
-              "daily": 0,
-              "weekly": 0
+              "daily": 10,
+              "weekly": 20
             };
 
             list.form.custom_price = false;
