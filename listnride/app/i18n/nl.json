@@ -207,7 +207,10 @@
     "rent-bike": "Fiets huren",
     "view-pictures": "Foto's bekijken",
     "meta-title": "Huur de {{name}} - {{category}} van {{brand}} in {{location}}",
-    "meta-description": "{{description}}"
+    "meta-description": "{{description}}",
+    "per-day": "1 dag",
+    "from-2-days": "vanaf 2 dagen",
+    "from-week": "van een week"
   },
   "user": {
     "verified-through": "geverifieerd door",
@@ -358,7 +361,11 @@
     "log-in-to-request-title": "log-in of meld je aan",
     "log-in-to-request-description": "log-in om de fiets aan te vragen. Indien je je nog niet hebt aangemeld, doe dit dan eerst.",
     "select-timespan": "Kies eerst de huurperiode",
-    "select-timespan-first": "Before you can request, please set the timespan of your rental. Simply click on the days and select pickup and dropoff times in the above calendar."
+    "select-timespan-first": "Before you can request, please set the timespan of your rental. Simply click on the days and select pickup and dropoff times in the above calendar.",
+    "info-subtotal": "Dit zijn de normale dagelijkse<br>prijslijsten, het aantal dagen dat<br> u de fiets wilt huren.",
+    "info-discount": "Gemiddelde dagelijkse korting<br>krijgt u per dag door voor<br>een langere periode te huren.",
+    "info-service-fee": "De servicegeld wordt gebruikt<br>voor het aanbieden van listnride.<br>Het is inclusief BTW.",
+    "info": "Klik eerst in de bovenstaande kalender op de dag waarop u de fiets wilt huren en op de tweede dag dat u het wenst te retourneren."
   },
   "list": {
     "edit-bike": "Fiets bewerken",
