@@ -287,7 +287,7 @@ angular.module('list', ['ngLocale']).component('list', {
       };
 
       list.resetCustomPrices = function () {
-        bikeOptions.resetCustomPrices(list.form);
+        bikeOptions.setCustomPrices(list.form);
         list.show_reset_button = false;
         list.discountFieldEditable = true;
       };
