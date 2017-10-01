@@ -13,6 +13,7 @@ angular.module('listings',[]).component('listings', {
       api.get('/users/' + $localStorage.userId + "/rides").then(
         function(response) {
           listings.bikes = response.data;
+          console.log(listings.bikes);
         },
         function(error) {
           console.log("Error retrieving User", error);
