@@ -521,7 +521,8 @@
                   </div>
                 </div>
                 <div>
-                  <span class="md-caption" ng-if="list.form.discounts.weekly && list.form.prices[0].price">
+                  <!-- description is not shown when custom prices are used.-->
+                  <span class="md-caption" ng-if="list.form.discounts.weekly && list.form.prices[0].price && !list.show_reset_button">
                     {{'list.pricing.discount-description-initial' | translate}}
                     {{list.form.discounts.weekly | number:0}}%
                     {{'list.pricing.discount-description-mid' | translate}}
