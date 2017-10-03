@@ -458,7 +458,13 @@
       "price_8_days_long": "vanaf 8 dagen (elke dag)",
       "price_30_days": "30 dagen (1 maand)",
       "price_30_days_long": "30 dagen (1 Monat)",
-      "reset-prices": "Zurücksetzen"
+      "reset-prices": "Zurücksetzen",
+      "validations":{
+        "required": {
+          "daily_price": "Dagprijs is required",
+          "price": "Prijs is required"
+        }
+      }
     },
     "subcategory": {
       "1": {

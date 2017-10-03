@@ -454,7 +454,8 @@
                 layout="row">
           <md-content class="md-padding" layout="column">
             <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
-              <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
+              <!-- form for the price -->
+              <div ng-form name="list.priceForm" class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
                 <h3 class="md-subhead">{{ 'list.pricing.header' | translate }}</h3>
                 <p>{{'list.pricing.description' | translate}}</p>
                 <!-- Daily Price -->
@@ -462,6 +463,7 @@
                 <md-input-container class="md-block">
                   <label>{{ 'list.pricing.header' | translate }} (€)</label>
                   <input type="text"
+                         name="daily_price"
                          ng-pattern="/^\d+$/"
                          maxlength="3"
                          placeholder="{{'list.pricing.daily-price-placeholder' | translate}}"
@@ -469,6 +471,9 @@
                          ng-change="list.setCustomPrices(true)"
                          ng-model-options='{ debounce: 300 }'
                          required>
+                  <div ng-messages="list.priceForm.daily_price.$error" ng-show="list.priceForm.daily_price.$dirty">
+                    <div ng-message="required">{{'list.pricing.validations.required.daily_price' | translate}}</div>
+                  </div>
                 </md-input-container>
                 <!-- Daily and Weekly Discounts -->
                 <div layout="row" layout-align="space-between center">
@@ -508,7 +513,8 @@
                         <div>
                           <md-icon class="lnr-icn-xs md-color-black"
                                    md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
-                          <md-tooltip md-direction="right">Discount on the price if the bike<br>is rented a week or more
+                          <md-tooltip md-direction="right">Discount on the price if the bike<br>is rented a week or
+                            more
                           </md-tooltip>
                         </div>
                       </div>
@@ -526,7 +532,8 @@
                 </div>
                 <div>
                   <!-- description is not shown when custom prices are used.-->
-                  <span class="md-caption" ng-if="list.form.discounts.weekly && list.form.prices[0].price && !list.show_reset_button">
+                  <span class="md-caption"
+                        ng-if="list.form.discounts.weekly && list.form.prices[0].price && !list.show_reset_button">
                     {{'list.pricing.discount-description-initial' | translate}}
                     {{list.form.discounts.weekly | number:0}}%
                     {{'list.pricing.discount-description-mid' | translate}}
@@ -553,6 +560,7 @@
                       <md-input-container class="md-block">
                         <label>{{'list.pricing.price_2_days' | translate}} </label>
                         <input type="text"
+                               name="price_2_days"
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="3"
@@ -561,12 +569,16 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
+                        <div ng-messages="list.priceForm.price_2_days.$error" ng-show="list.priceForm.price_2_days.$dirty">
+                          <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
+                        </div>
                       </md-input-container>
                     </div>
                     <div flex="45">
                       <md-input-container class="md-block">
                         <label>{{'list.pricing.price_3_days' | translate}}</label>
                         <input type="text"
+                               name="price_3_days"
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="3"
@@ -575,6 +587,9 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
+                        <div ng-messages="list.priceForm.price_3_days.$error" ng-show="list.priceForm.price_3_days.$dirty">
+                          <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
+                        </div>
                       </md-input-container>
                     </div>
                   </div>
@@ -583,6 +598,7 @@
                       <md-input-container class="md-block">
                         <label>{{'list.pricing.price_4_days' | translate}}</label>
                         <input type="text"
+                               name="price_4_days"
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="3"
@@ -591,12 +607,16 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
+                        <div ng-messages="list.priceForm.price_4_days.$error" ng-show="list.priceForm.price_4_days.$dirty">
+                          <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
+                        </div>
                       </md-input-container>
                     </div>
                     <div flex="45">
                       <md-input-container class="md-block">
                         <label>{{'list.pricing.price_5_days' | translate}}</label>
                         <input type="text"
+                               name="price_5_days"
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="3"
@@ -605,6 +625,9 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
+                        <div ng-messages="list.priceForm.price_5_days.$error" ng-show="list.priceForm.price_5_days.$dirty">
+                          <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
+                        </div>
                       </md-input-container>
                     </div>
                   </div>
@@ -613,6 +636,7 @@
                       <md-input-container class="md-block">
                         <label>{{'list.pricing.price_6_days' | translate}}</label>
                         <input type="text"
+                               name="price_6_days"
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="3"
@@ -621,12 +645,16 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
+                        <div ng-messages="list.priceForm.price_6_days.$error" ng-show="list.priceForm.price_6_days.$dirty">
+                          <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
+                        </div>
                       </md-input-container>
                     </div>
                     <div flex="45">
                       <md-input-container class="md-block">
                         <label>{{'list.pricing.price_7_days' | translate}}</label>
                         <input type="text"
+                               name="price_7_days"
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="3"
@@ -635,6 +663,9 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
+                        <div ng-messages="list.priceForm.price_7_days.$error" ng-show="list.priceForm.price_7_days.$dirty">
+                          <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
+                        </div>
                       </md-input-container>
                     </div>
                   </div>
@@ -643,6 +674,7 @@
                       <md-input-container class="md-block">
                         <label>{{'list.pricing.price_8_days_long' | translate}}</label>
                         <input type="text"
+                               name="price_8_days"
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="3"
@@ -651,12 +683,16 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
+                        <div ng-messages="list.priceForm.price_8_days.$error" ng-show="list.priceForm.price_8_days.$dirty">
+                          <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
+                        </div>
                       </md-input-container>
                     </div>
                     <div flex="45">
                       <md-input-container class="md-block">
                         <label>{{'list.pricing.price_30_days' | translate}}</label>
                         <input type="text"
+                               name="price_30_days"
                                ng-pattern="/^\d+$/"
                                placeholder="{{'list.pricing.set_custom_price' | translate}}"
                                maxlength="4"
@@ -665,6 +701,9 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
+                        <div ng-messages="list.priceForm.price_30_days.$error" ng-show="list.priceForm.price_30_days.$dirty">
+                          <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
+                        </div>
                       </md-input-container>
                     </div>
                   </div>
