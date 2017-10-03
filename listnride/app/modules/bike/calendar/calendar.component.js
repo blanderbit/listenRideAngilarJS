@@ -141,15 +141,14 @@ angular.module('bike').component('calendar', {
       calendar.event.pickupSlotId;
       calendar.event.returnSlotId;
 
-      // Absurdly high id to deactivate calendar
-      calendar.event.familyId = 1500;
+      calendar.event.familyId = 24;
 
-      var slotDuration = 1;
+      var slotDuration = 2;
       var eventYear = 2017;
-      var eventMonth = 4;   // Months start at 0, so February = 1
+      var eventMonth = 9;   // Months start at 0, so February = 1
 
 
-      // Calendar Slots are currently set for Cycling World Düsseldorf
+      // Calendar Slots are currently set for Supercross Munich
       calendar.event.slots = [
         {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 19, month: eventMonth, year: eventYear, text: "09:00 - 10:00", hour: 9},
         {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 19, month: eventMonth, year: eventYear, text: "10:00 - 11:00", hour: 10},
