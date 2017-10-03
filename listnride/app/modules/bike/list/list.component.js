@@ -69,7 +69,6 @@ angular.module('list', ['ngLocale']).component('list', {
             list.form.custom_price = false;
           },
           function (error) {
-            console.log("Error fetching User");
           }
         );
       };
@@ -78,7 +77,7 @@ angular.module('list', ['ngLocale']).component('list', {
         api.get('/rides/' + $stateParams.bikeId).then(
           function (response) {
             var data = response.data;
-            if (data.user.id == $localStorage.userId) {
+            if (parseInt(data.user.id) === $localStorage.userId) {
               var images = [];
               for (var i = 1; i <= 5; ++i) {
                 if (data["image_file_" + i] !== undefined &&
@@ -114,7 +113,6 @@ angular.module('list', ['ngLocale']).component('list', {
             }
           },
           function (error) {
-            console.log("Error editing bike", error);
           }
         );
       };
@@ -172,13 +170,11 @@ angular.module('list', ['ngLocale']).component('list', {
                 function (error) {
                   list.submitDisabled = false;
                   loadingDialog.close();
-                  console.log("Error while listing bike", error);
                 }
               );
             }
           },
           function (error) {
-            console.log("Error fetching User");
           }
         );
       };
@@ -224,12 +220,10 @@ angular.module('list', ['ngLocale']).component('list', {
           function (response) {
             loadingDialog.close();
             $state.go("bike", {bikeId: response.data.id});
-            console.log("Success", response);
           },
           function (error) {
             list.submitDisabled = false;
             loadingDialog.close();
-            console.log("Error while listing bike", error);
           }
         );
       };
@@ -350,7 +344,7 @@ angular.module('list', ['ngLocale']).component('list', {
       };
 
       list.categoryChange = function (oldCategory) {
-        if (list.form.mainCategory == 4 || oldCategory == 4) {
+        if (parseInt(list.form.mainCategory) === 4 || parseInt(oldCategory) === 4) {
           list.form.size = undefined;
         }
       };

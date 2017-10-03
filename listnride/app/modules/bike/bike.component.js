@@ -29,7 +29,6 @@ angular.module('bike',[]).component('bike', {
         function(response) {
           bike.showAll = false;
           bike.data = response.data;
-          console.log(bike.data);
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
 
@@ -43,10 +42,8 @@ angular.module('bike',[]).component('bike', {
 
           ngMeta.setTitle($translate.instant("bike.meta-title", metaData));
           ngMeta.setTag("description", $translate.instant("bike.meta-description", metaData));
-          console.log(bike.data);
         },
         function(error) {
-          console.log("Error retrieving bike", error);
         }
       );
 
@@ -97,7 +94,7 @@ angular.module('bike',[]).component('bike', {
         galleryDialog.image_5 = bikeData.image_file_5.image_file_5.url;
         galleryDialog.hide = function() {
           $mdDialog.hide();
-        }
+        };
         galleryDialog.slickConfig = {
           enabled: true,
           autoplay: true,
