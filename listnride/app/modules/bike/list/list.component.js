@@ -47,7 +47,7 @@ angular.module('list', ['ngLocale']).component('list', {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             var data = success.data;
-            if (!data.has_address || !data.confirmed_phone || data.status == 0) {
+            if (!data.has_address || !data.confirmed_phone || data.status === 0) {
               verification.openDialog(true);
             }
             list.form.street = data.street;
@@ -391,57 +391,4 @@ angular.module('list', ['ngLocale']).component('list', {
       else list.populateExistingBikeData();
     }
   ]
-})
-  .directive('showAsInteger', function ($filter, $locale) {
-    return {
-      terminal: true,
-      restrict: 'A',
-      require: '?ngModel',
-      link: function (scope, element, attrs, ngModel) {
-
-        // do nothing if no ng-model
-        if (!ngModel) return;
-
-        // get the number format
-        var formats = $locale.NUMBER_FORMATS;
-
-        // fix up the incoming number to make sure
-        // it will parse into a number correctly
-        var parseNumber = function (number) {
-          if (number) {
-            if (typeof number !== 'number') {
-              number = number.replace(',', '');
-              number = parseFloat(number);
-            }
-          }
-          return number;
-        };
-
-        // function to do the rounding
-        var roundAsInteger = function (number) {
-          number = parseNumber(number);
-          if (number) {
-            return $filter('number')(number, 0);
-          }
-        };
-
-        // Listen for change events to enable binding
-        element.bind('blur', function () {
-          element.val(roundAsInteger(ngModel.$modelValue));
-        });
-
-        // push a formatter so the model knows how to render
-        ngModel.$formatters.push(function (value) {
-          if (value) {
-            return roundAsInteger(value);
-          }
-        });
-
-        // push a parser to remove any special
-        // rendering and make sure the inputted number is rounded
-        ngModel.$parsers.push(function (value) {
-          return value;
-        });
-      }
-    };
-  });
+});
