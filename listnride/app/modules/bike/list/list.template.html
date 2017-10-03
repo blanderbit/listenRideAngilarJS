@@ -485,8 +485,7 @@
                         <div>
                           <md-icon class="lnr-icn-xs md-color-black"
                                    md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
-                          <md-tooltip md-direction="right">Discount on the price if the bike<br>is rented more than a
-                            day
+                          <md-tooltip md-direction="right">{{ 'list.pricing.daily-discount-tooltip' | translate }}
                           </md-tooltip>
                         </div>
                       </div>
@@ -512,9 +511,7 @@
                         <div>
                           <md-icon class="lnr-icn-xs md-color-black"
                                    md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
-                          <md-tooltip md-direction="right">Discount on the price if the bike<br>is rented a week or
-                            more
-                          </md-tooltip>
+                          <md-tooltip md-direction="right">{{ 'list.pricing.weekly-discount-tooltip' | translate }}
                         </div>
                       </div>
                       <input type="text"
@@ -720,7 +717,7 @@
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right-double"></md-divider>
               <!-- Info Column -->
               <div flex="50" hide-xs>
-                <h3 class="md-subhead">{{'list.pricing.info' | translate }}</h3>
+                <h3 class="md-subhead">{{'list.pricing.info-description' | translate }}</h3>
                 <p class="md-body-1">{{ 'list.pricing.hint-para-1' | translate }}</p>
                 <p class="md-body-1">{{ 'list.pricing.hint-para-3' | translate }}</p>
               </div>

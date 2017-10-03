@@ -445,6 +445,7 @@
     },
     "pricing": {
       "info": "Dein Tagespreis ist dein Standardpreis pro Tag.",
+      "info-description": "Information zum Mietpreis",
       "header": "Tagespreis",
       "description": "Dein Tagespreis ist dein Standardpreis pro Tag.",
       "daily-price-description": "Bei Eingabe des Tagespreises schlagen wir<br>dir automatisch ein Rabattschema für<br>längerfristige Vermietungen vor.<br>Du kannst die Preise allerdings<br>auch einzeln anpassen.",
@@ -460,7 +461,9 @@
       "custom-prices": "Individuelle Preise",
       "daily-price-placeholder": "Preis in €",
       "daily-discount-placeholder": "Rabatt in %",
+      "daily-discount-tooltip": "Rabatt, wenn das Fahrrad für mehr als einen Tag gemietet wird.",
       "weekly-discount-placeholder": "Rabatt in %",
+      "weekly-discount-tooltip": "Rabatt, wenn das Fahrrad für eine Woche oder mehr gemietet wird.",
       "half-daily-price": "Halber Tag",
       "daily-price": "Ganzer Tag",
       "weekly-price": "Eine Woche",

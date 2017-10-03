@@ -430,6 +430,7 @@
     },
     "pricing": {
       "info": "Your daily price is your default daily rate.",
+      "info-description": "Information about the rental price",
       "header": "Daily Price",
       "description": "Your daily price is your default daily rate.",
       "hint-para-1": "The price you charge for your bike is up to you. The price should be based on the bike and equipment. To get an idea of market prices, you can view comparable listings. ",
@@ -446,7 +447,9 @@
       "daily-price": "Daily Price",
       "daily-price-placeholder": "Price in €",
       "daily-discount-placeholder": "Discount in %",
+      "daily-discount-tooltip": "Discount if the bike is rented for more than a day.",
       "weekly-discount-placeholder": "Discount in %",
+      "weekly-discount-tooltip": "Discount if the bike is rented for a week or more.",
       "weekly-price": "Weekly Price",
       "daily-discount": "Daily Discount",
       "weekly-discount": "Weekly Discount",
