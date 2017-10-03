@@ -459,17 +459,8 @@
                 <h3 class="md-subhead">{{ 'list.pricing.header' | translate }}</h3>
                 <p>{{'list.pricing.description' | translate}}</p>
                 <!-- Daily Price -->
-                <form name="pricesForm">
                 <md-input-container class="md-block">
-                  <div layout layout-align="space-between center">
-                    <div>
-                      <label>{{ 'list.pricing.header' | translate }} (€)</label>
-                    </div>
-                    <div>
-                      <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
-                      <md-tooltip md-direction="right"><span translate="list.pricing.daily-price-description"></span>
-                      </md-tooltip>
-                    </div>
+                  <label>{{ 'list.pricing.header' | translate }} (€)</label>
                   <input type="text"
                          name="daily_price"
                          ng-pattern="/^\d+$/"
@@ -577,7 +568,8 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
-                        <div ng-messages="list.priceForm.price_2_days.$error" ng-show="list.priceForm.price_2_days.$dirty">
+                        <div ng-messages="list.priceForm.price_2_days.$error"
+                             ng-show="list.priceForm.price_2_days.$dirty">
                           <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
                         </div>
                       </md-input-container>
@@ -595,7 +587,8 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
-                        <div ng-messages="list.priceForm.price_3_days.$error" ng-show="list.priceForm.price_3_days.$dirty">
+                        <div ng-messages="list.priceForm.price_3_days.$error"
+                             ng-show="list.priceForm.price_3_days.$dirty">
                           <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
                         </div>
                       </md-input-container>
@@ -615,7 +608,8 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
-                        <div ng-messages="list.priceForm.price_4_days.$error" ng-show="list.priceForm.price_4_days.$dirty">
+                        <div ng-messages="list.priceForm.price_4_days.$error"
+                             ng-show="list.priceForm.price_4_days.$dirty">
                           <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
                         </div>
                       </md-input-container>
@@ -633,7 +627,8 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
-                        <div ng-messages="list.priceForm.price_5_days.$error" ng-show="list.priceForm.price_5_days.$dirty">
+                        <div ng-messages="list.priceForm.price_5_days.$error"
+                             ng-show="list.priceForm.price_5_days.$dirty">
                           <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
                         </div>
                       </md-input-container>
@@ -653,7 +648,8 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
-                        <div ng-messages="list.priceForm.price_6_days.$error" ng-show="list.priceForm.price_6_days.$dirty">
+                        <div ng-messages="list.priceForm.price_6_days.$error"
+                             ng-show="list.priceForm.price_6_days.$dirty">
                           <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
                         </div>
                       </md-input-container>
@@ -671,7 +667,8 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
-                        <div ng-messages="list.priceForm.price_7_days.$error" ng-show="list.priceForm.price_7_days.$dirty">
+                        <div ng-messages="list.priceForm.price_7_days.$error"
+                             ng-show="list.priceForm.price_7_days.$dirty">
                           <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
                         </div>
                       </md-input-container>
@@ -691,7 +688,8 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
-                        <div ng-messages="list.priceForm.price_8_days.$error" ng-show="list.priceForm.price_8_days.$dirty">
+                        <div ng-messages="list.priceForm.price_8_days.$error"
+                             ng-show="list.priceForm.price_8_days.$dirty">
                           <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
                         </div>
                       </md-input-container>
@@ -709,14 +707,14 @@
                                ng-model-options='{ debounce: 300 }'
                                ng-disabled="!list.form.custom_price"
                                required>
-                        <div ng-messages="list.priceForm.price_30_days.$error" ng-show="list.priceForm.price_30_days.$dirty">
+                        <div ng-messages="list.priceForm.price_30_days.$error"
+                             ng-show="list.priceForm.price_30_days.$dirty">
                           <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
                         </div>
                       </md-input-container>
                     </div>
                   </div>
                 </div>
-                </form>
               </div>
               <!-- Divider between Left and Right Columns -->
               <md-divider hide-xs class="lnr-margin-left lnr-margin-right-double"></md-divider>
