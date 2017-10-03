@@ -496,9 +496,6 @@
                              ng-change="list.setCustomPrices()"
                              ng-model-options='{ debounce: 300 }'
                              ng-disabled="!list.discountFieldEditable">
-                      <div ng-messages="pricesForm.dailyDiscount.$error" role="alert">
-                        <div ng-message="amount">This value sux</div>
-                      </div>
                     </md-input-container>
                   </div>
                   <div flex="45">
