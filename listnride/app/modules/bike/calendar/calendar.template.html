@@ -104,9 +104,6 @@
 </div>
 <!--      END EVENT CALENDAR        -->
 
-<div layout-padding ng-if="calendar.bikeFamily != calendar.event.familyId && !calendar.startDate" style="padding-top: 0">
-  <p class="md-body-1 lnr-bold">{{ 'calendar.info' | translate }}</p>
-</div>
 <div id="timeRange" layout="row" layout-align="start center" layout-padding ng-if="calendar.bikeFamily != calendar.event.familyId && calendar.startDate">
   <md-input-container flex>
     <label>{{ 'shared.from' | translate }} {{ calendar.startDate | date }}</label>
@@ -146,7 +143,13 @@
 <div id="formSubmit" layout="column" layout-align="center stretch">
   <div id="requestOverview" layout="column" layout-align="center stretch" layout-padding>
     <div layout="row" layout-align="space-between center" ng-if="calendar.bikeFamily != 2">
-      <div>{{ 'shared.duration' | translate }}</div>
+      <div layout="row" layout-align="start center">
+        <div>{{ 'shared.duration' | translate }}</div>
+        <div>
+          <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+          <md-tooltip md-direction="right"><span translate="calendar.info"></span></md-tooltip>
+        </div>
+      </div>
       <div>{{ calendar.duration }}</div>
     </div>
 
