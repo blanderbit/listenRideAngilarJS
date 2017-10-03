@@ -13,18 +13,16 @@ angular.module('listings',[]).component('listings', {
       api.get('/users/' + $localStorage.userId + "/rides").then(
         function(response) {
           listings.bikes = response.data;
-          console.log(listings.bikes);
         },
         function(error) {
-          console.log("Error retrieving User", error);
         }
       );
 
       listings.removeBike = function(bikeId) {
         listings.bikes = listings.bikes.filter(function(bike) {
-          return bike.id != bikeId;
+          return parseInt(bike.id) !== bikeId;
         })
-      };  
+      };
     }
   ]
 });

@@ -47,7 +47,7 @@ angular.module('list', ['ngLocale']).component('list', {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             var data = success.data;
-            if (!data.has_address || !data.confirmed_phone || data.status == 0) {
+            if (!data.has_address || !data.confirmed_phone || data.status === 0) {
               verification.openDialog(true);
             }
             list.form.street = data.street;
@@ -58,18 +58,17 @@ angular.module('list', ['ngLocale']).component('list', {
             list.form.prices = [];
             for (var day = 0; day < 9; day += 1) {
               list.form.prices[day] = {
-                price: 0
+                price: undefined
               }
             }
             list.form.discounts = {
-              "daily": 0,
-              "weekly": 0
+              "daily": 10,
+              "weekly": 20
             };
 
             list.form.custom_price = false;
           },
           function (error) {
-            console.log("Error fetching User");
           }
         );
       };
@@ -78,7 +77,7 @@ angular.module('list', ['ngLocale']).component('list', {
         api.get('/rides/' + $stateParams.bikeId).then(
           function (response) {
             var data = response.data;
-            if (data.user.id == $localStorage.userId) {
+            if (parseInt(data.user.id) === $localStorage.userId) {
               var images = [];
               for (var i = 1; i <= 5; ++i) {
                 if (data["image_file_" + i] !== undefined &&
@@ -114,7 +113,6 @@ angular.module('list', ['ngLocale']).component('list', {
             }
           },
           function (error) {
-            console.log("Error editing bike", error);
           }
         );
       };
@@ -172,13 +170,11 @@ angular.module('list', ['ngLocale']).component('list', {
                 function (error) {
                   list.submitDisabled = false;
                   loadingDialog.close();
-                  console.log("Error while listing bike", error);
                 }
               );
             }
           },
           function (error) {
-            console.log("Error fetching User");
           }
         );
       };
@@ -224,12 +220,10 @@ angular.module('list', ['ngLocale']).component('list', {
           function (response) {
             loadingDialog.close();
             $state.go("bike", {bikeId: response.data.id});
-            console.log("Success", response);
           },
           function (error) {
             list.submitDisabled = false;
             loadingDialog.close();
-            console.log("Error while listing bike", error);
           }
         );
       };
@@ -350,7 +344,7 @@ angular.module('list', ['ngLocale']).component('list', {
       };
 
       list.categoryChange = function (oldCategory) {
-        if (list.form.mainCategory == 4 || oldCategory == 4) {
+        if (parseInt(list.form.mainCategory) === 4 || parseInt(oldCategory) === 4) {
           list.form.size = undefined;
         }
       };
@@ -397,57 +391,4 @@ angular.module('list', ['ngLocale']).component('list', {
       else list.populateExistingBikeData();
     }
   ]
-})
-  .directive('showAsInteger', function ($filter, $locale) {
-    return {
-      terminal: true,
-      restrict: 'A',
-      require: '?ngModel',
-      link: function (scope, element, attrs, ngModel) {
-
-        // do nothing if no ng-model
-        if (!ngModel) return;
-
-        // get the number format
-        var formats = $locale.NUMBER_FORMATS;
-
-        // fix up the incoming number to make sure
-        // it will parse into a number correctly
-        var parseNumber = function (number) {
-          if (number) {
-            if (typeof number !== 'number') {
-              number = number.replace(',', '');
-              number = parseFloat(number);
-            }
-          }
-          return number;
-        };
-
-        // function to do the rounding
-        var roundAsInteger = function (number) {
-          number = parseNumber(number);
-          if (number) {
-            return $filter('number')(number, 0);
-          }
-        };
-
-        // Listen for change events to enable binding
-        element.bind('blur', function () {
-          element.val(roundAsInteger(ngModel.$modelValue));
-        });
-
-        // push a formatter so the model knows how to render
-        ngModel.$formatters.push(function (value) {
-          if (value) {
-            return roundAsInteger(value);
-          }
-        });
-
-        // push a parser to remove any special
-        // rendering and make sure the inputted number is rounded
-        ngModel.$parsers.push(function (value) {
-          return value;
-        });
-      }
-    };
-  });
+});

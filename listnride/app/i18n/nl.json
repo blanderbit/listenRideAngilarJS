@@ -371,8 +371,8 @@
     "edit-bike": "Fiets bewerken",
     "save-changes": "Aanpassingen opslaan",
     "list-your-bike": "Fiets plaatsen",
-    "back": "terug",
-    "next": "verder",
+    "back": "Terug",
+    "next": "Verder",
     "list-bike": "Fiets plaatsen",
     "accessories": {
       "header": "Welke accessoires bied je aan?",
@@ -420,7 +420,7 @@
     "location": {
       "header": "Waar kan de fiets worden opgehaald?",
       "hint": "Op welk adres staat je fiets? Maak je geen zorgen, het exacte adres wordt pas na de boeking aan de huurder doorgegeven en is dus niet openbaar zichtbaar.",
-      "label": "locatie van de fiets",
+      "label": "Locatie van de fiets",
       "street-number": "Straat en huisnr.",
       "zip": "Postcode",
       "city": "Plaats",
