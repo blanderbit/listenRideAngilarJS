@@ -336,11 +336,21 @@ angular.module('list', ['ngLocale']).component('list', {
       };
 
       list.isPricingValid = function () {
+        // if prices is undefined
         if (!list.form.prices) return false;
+        // if one of the price is not provided
         for (var loop = 0; loop < list.form.prices.length; loop += 1) {
           if (list.form.prices[loop].price === undefined) return false;
         }
         return true;
+      };
+
+      list.isPricingValid2 = function () {
+        // prices for some day should be higher than the previous day
+        // from day 2 to day 7
+        for (var day = 1; day < 7; day += 1) {
+            // if ()
+        }
       };
 
       list.categoryChange = function (oldCategory) {

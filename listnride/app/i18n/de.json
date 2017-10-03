@@ -474,7 +474,13 @@
       "price_8_days_long": "ab 8 Tage (jeden Tag)",
       "price_30_days": "30 Tagen",
       "price_30_days_long": "30 Tagen (1 Monat)",
-      "reset-prices": "Zurücksetzen"
+      "reset-prices": "Zurücksetzen",
+      "validations":{
+        "required": {
+          "daily_price": "Tagespreis is required",
+          "price": "preis is required"
+        }
+      }
     },
     "subcategory": {
       "1": {
