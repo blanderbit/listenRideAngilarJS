@@ -461,7 +461,15 @@
                 <!-- Daily Price -->
                 <form name="pricesForm">
                 <md-input-container class="md-block">
-                  <label>{{ 'list.pricing.header' | translate }} (€)</label>
+                  <div layout layout-align="space-between center">
+                    <div>
+                      <label>{{ 'list.pricing.header' | translate }} (€)</label>
+                    </div>
+                    <div>
+                      <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+                      <md-tooltip md-direction="right"><span translate="list.pricing.daily-price-description"></span>
+                      </md-tooltip>
+                    </div>
                   <input type="text"
                          name="daily_price"
                          ng-pattern="/^\d+$/"
@@ -476,7 +484,7 @@
                   </div>
                 </md-input-container>
                 <!-- Daily and Weekly Discounts -->
-                <div layout="row" layout-align="space-between center">
+                <div layout="row" layout-align="space-between center" ng-if="!list.businessUser">
                   <div flex="45">
                     <md-input-container class="md-block">
                       <div layout layout-align="space-between center">
@@ -530,7 +538,7 @@
                     </md-input-container>
                   </div>
                 </div>
-                <div>
+                <div ng-if="!list.businessUser">
                   <!-- description is not shown when custom prices are used.-->
                   <span class="md-caption"
                         ng-if="list.form.discounts.weekly && list.form.prices[0].price && !list.show_reset_button">
@@ -543,7 +551,7 @@
                   <span>&nbsp</span>
                 </div>
                 <!-- Switch for Custom Prices -->
-                <div layout="row" layout-align="space-between center">
+                <div ng-if="!list.businessUser" layout="row" layout-align="space-between center">
                   <p>{{'list.pricing.custom-prices' | translate}}</p>
                   <md-switch ng-model="list.form.custom_price"
                              ng-change="list.toggleDiscount()"

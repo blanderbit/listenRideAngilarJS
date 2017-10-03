@@ -31,6 +31,23 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         return result;
       },
 
+      // proposes custom prices through daily price acc. to a scheme of us
+      // without using custom discounts
+      proposeCustomPrices: function (data) {
+        var basePrice = data.prices[0].price * (1/1.25);
+
+        data.prices[1].price = Math.round(basePrice * 2);
+        data.prices[2].price = Math.round(basePrice * 2.7);
+        data.prices[3].price = Math.round(basePrice * 3.3);
+        data.prices[4].price = Math.round(basePrice * 3.9);
+        data.prices[5].price = Math.round(basePrice * 4.4);
+        data.prices[6].price = Math.round(basePrice * 4.9);
+        data.prices[7].price = Math.round(data.prices[0].price * 0.35);
+        data.prices[8].price = Math.round(data.prices[7].price * 28);
+
+        return data.prices;
+      },
+
       // estimate prices for several days
       // based on daily price && daily and weekly discounts
       setCustomPrices: function (data) {

@@ -18,13 +18,14 @@ angular.module('list', ['ngLocale']).component('list', {
     'Upload',
     'bikeOptions',
     'api',
+    'authentication',
     '$timeout',
     'verification',
     'accessControl',
     'loadingDialog',
     'price',
     function ListController($mdDialog, $localStorage, $stateParams, $state,
-                            $scope, $analytics, Upload, bikeOptions, api,
+                            $scope, $analytics, Upload, bikeOptions, api, authentication,
                             $timeout, verification, accessControl, loadingDialog, price) {
 
       if (accessControl.requireLogin()) {
@@ -42,6 +43,17 @@ angular.module('list', ['ngLocale']).component('list', {
       list.accessoryOptions = bikeOptions.accessoryOptions();
       list.validateObj = {height: {min: 1000}, width: {min: 1500}, duration: {max: '5m'}};
       list.invalidFiles = {};
+      list.businessUser = false;
+
+      var setBusinessForm = function() {
+        if (true) { //(authentication.isBusiness)
+          list.businessUser = true;
+          list.form.custom_price = true;
+          list.show_custom_price = true;
+        } else {
+          list.businessUser = false;
+        }
+      }
 
       list.populateNewBikeData = function () {
         api.get('/users/' + $localStorage.userId).then(
@@ -66,7 +78,8 @@ angular.module('list', ['ngLocale']).component('list', {
               "weekly": 20
             };
 
-            list.form.custom_price = false;
+            // Slightly modify form for business listers
+            setBusinessForm();
           },
           function (error) {
           }
@@ -101,15 +114,17 @@ angular.module('list', ['ngLocale']).component('list', {
               list.form.prices = prices;
 
               // if custom price is enabled
-              if (list.form.custom_price) {
+              if (list.form.custom_price && !list.businessUser) {
                 list.disableDiscounts();
                 list.show_custom_price = true;
               }
 
               // if custom price is disabled
-              else if (list.form.custom_price === false) {
+              else if (list.form.custom_price === false && !list.businessUser) {
                 list.show_custom_price = false;
               }
+
+              setBusinessForm();
             }
           },
           function (error) {
@@ -170,6 +185,7 @@ angular.module('list', ['ngLocale']).component('list', {
                 function (error) {
                   list.submitDisabled = false;
                   loadingDialog.close();
+                  console.log(error);
                 }
               );
             }
@@ -241,10 +257,15 @@ angular.module('list', ['ngLocale']).component('list', {
 
       // set the custom prices for a bike
       list.setCustomPrices = function (dailyPriceChanged) {
-        // discount fields are enabled and no custom price are set manually
-        if (list.discountFieldEditable) {
+        // business users get their prices proposed according to a fixed scheme
+        if(list.businessUser) {
+          list.form.prices = price.proposeCustomPrices(list.form);
+        } else {
+          // discount fields are enabled and no custom price are set manually
+          if (list.discountFieldEditable) {
           // set the prices based on the daily price
-          list.form.prices = price.setCustomPrices(list.form);
+            list.form.prices = price.setCustomPrices(list.form);
+          }
         }
       };
 

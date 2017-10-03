@@ -446,6 +446,7 @@
       "info": "Dein Tagespreis ist dein Standardpreis pro Tag.",
       "header": "Tagespreis",
       "description": "Dein Tagespreis ist dein Standardpreis pro Tag.",
+      "daily-price-description": "Bei Eingabe des Tagespreises schlagen wir<br>dir automatisch ein Rabattschema für<br>längerfristige Vermietungen vor.<br>Du kannst die Preise allerdings<br>auch einzeln anpassen.",
       "hint-para-1": "Über den Preis, den du für dein Rad nimmst, entscheidest du selbst. Der Mietpreis sollte sich nach Rad und Ausstattung richten. Um eine Vorstellung von den Preisen am Markt zu erhalten, schaue Dir vergleichbare Angebote an.",
       "hint-para-2": "Eine Mietdauer unter 6 Stunden ist eine Halbtagesmiete, 6-24 Stunde steht für eine Tagesmiete.",
       "hint-para-3": "Um mehr Langzeitbuchungen zu erhalten, legen manche Vermieter einen Tages- oder Wochenrabatt fest.",
@@ -471,9 +472,9 @@
       "price_6_days": "6 Tage",
       "price_7_days": "7 Tage (1 Woche)",
       "price_8_days": "ab 8 Tage",
-      "price_8_days_long": "ab 8 Tage (jeden Tag)",
-      "price_30_days": "30 Tagen",
-      "price_30_days_long": "30 Tagen (1 Monat)",
+      "price_8_days_long": "ab 8 Tage (pro Tag)",
+      "price_30_days": "30 Tage",
+      "price_30_days_long": "30 Tage (1 Monat)",
       "reset-prices": "Zurücksetzen",
       "validations":{
         "required": {
