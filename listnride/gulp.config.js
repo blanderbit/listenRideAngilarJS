@@ -104,8 +104,8 @@ module.exports = function () {
                     // userEndpoint: 'http://localhost:3000/v2/users/',
                     // -------------------------
 
-                    apiEndpoint: 'https://listnride-staging-pr-130.herokuapp.com/v2',
-                    userEndpoint: 'https://listnride-staging-pr-130.herokuapp.com/v2/users/',
+                    apiEndpoint: 'https://listnride-staging-pr-132.herokuapp.com/v2',
+                    userEndpoint: 'https://listnride-staging-pr-132.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com"
                 }
             }
