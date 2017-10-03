@@ -58,7 +58,7 @@ angular.module('list', ['ngLocale']).component('list', {
             list.form.prices = [];
             for (var day = 0; day < 9; day += 1) {
               list.form.prices[day] = {
-                price: 0
+                price: undefined
               }
             }
             list.form.discounts = {
