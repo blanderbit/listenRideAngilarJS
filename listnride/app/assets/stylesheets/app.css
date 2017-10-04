@@ -47,6 +47,7 @@ ui-view {
   position: relative;
 }
 
+.single-column,
 requests,
 search {
   position: absolute;
@@ -1944,4 +1945,3 @@ and (max-device-width : 568px) {
     background-image: url("../ui_images/flags@2x.png") !important;
   }
 }
-
