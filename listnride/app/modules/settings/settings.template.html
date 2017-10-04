@@ -356,6 +356,24 @@
               </div>
             </div>
 
+            <br>
+            <md-divider></md-divider>
+            <br>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">{{ 'settings.delete-account' | translate }}</span>
+              </div>
+              <div flex-gt-xs="70" layout-margin>
+                <p>
+                  <span class="md-body-1">{{ 'settings.delete-account-description' | translate }}</span>
+                </p>
+                <div layout="row" layout-align="end">
+                  <md-button class="md-raised md-primary md-warn" ng-click="settings.deleteAccount()">{{ 'settings.delete-account' | translate }}</md-button>
+                </div>
+              </div>
+            </div>
+
           </form>
         </div>
       </md-tab>

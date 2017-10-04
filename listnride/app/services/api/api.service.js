@@ -41,6 +41,16 @@ angular.
             }
           });
         },
+        delete: function(url) {
+          return $http({
+            method: 'DELETE',
+            url: apiUrl + url,
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': $localStorage.auth
+            }
+          });
+        },
         getApiUrl: function() {
           return apiUrl;
         },
