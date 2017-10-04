@@ -173,6 +173,7 @@ angular.module('requests', ['infinite-scroll'])
               requests.request.rideChat = $localStorage.userId == requests.request.user.id;
               requests.request.rideChat ? requests.request.chatFlow = "rideChat" : requests.request.chatFlow = "listChat";
               requests.request.past = (new Date(requests.request.end_date).getTime() < Date.now());
+              requests.request.started = (new Date(requests.request.start_date).getTime() < Date.now());
 
               if (requests.request.rideChat) {
                 requests.request.rating = requests.request.lister.rating_lister + requests.request.lister.rating_rider;
