@@ -31,6 +31,13 @@ angular.module('bike',[]).component('bike', {
           bike.data = response.data;
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
+          $translate($filter('category')(bike.data.category)).then(
+            function (translation) {
+              bike.category = translation;
+              console.log(bike.category);
+            }
+          );
+          console.log(bike.category);
 
           var metaData = {
             name: bike.data.name,
