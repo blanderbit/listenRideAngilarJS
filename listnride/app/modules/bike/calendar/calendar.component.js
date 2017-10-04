@@ -345,7 +345,8 @@ angular.module('bike').component('calendar', {
               calendar.requested = false;
               $mdToast.show(
                 $mdToast.simple()
-                  .textContent(error.data.errors[0].detail)
+                  // .textContent(error.data.errors[0].detail)
+                  .textContent("There was an error requesting the bike")
                   .hideDelay(4000)
                   .position('top center')
               );
