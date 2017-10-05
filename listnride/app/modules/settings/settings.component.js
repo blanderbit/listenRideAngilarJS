@@ -108,6 +108,7 @@ angular.module('settings',[]).component('settings', {
         settings.current_payment = false;
         settings.business = {};
         settings.user.business = false;
+        settings.user.paymentLoading = false;
         userApi.getUserData().then(function (response) {
           settings.user = response.data;
           settings.current_payment = response.data.status === 3;
@@ -613,8 +614,10 @@ angular.module('settings',[]).component('settings', {
       };
 
       settings.currentPaymentMethod = function () {
+        settings.user.paymentLoading = true;
         api.get('/users/' + settings.user.id + '/current_payment').then(
           function(response) {
+            settings.user.paymentLoading = false;
             settings.user.current_payment_method = response.data;
           },
           function(error) {

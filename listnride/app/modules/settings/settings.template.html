@@ -251,8 +251,20 @@
                   {{ 'settings.no-payment-method' | translate }}
                 </p>
                 <div layout="row" layout-align="end">
-                  <md-button class="md-raised md-primary" ng-click="settings.currentPaymentMethod()">
+                  <md-button
+                    class="md-raised md-primary"
+                    ng-click="settings.currentPaymentMethod()"
+                    ng-if="!settings.user.paymentLoading"
+                  >
                     {{ 'settings.payment-info' | translate }}
+                  </md-button>
+                  <md-button
+                    class="md-raised md-primary"
+                    ng-click="settings.currentPaymentMethod()"
+                    ng-if="settings.user.paymentLoading"
+                    ng-disabled="true"
+                  >
+                    {{ 'shared.loading' | translate }}
                   </md-button>
                   <md-button class="md-raised md-primary" ng-click="settings.openPaymentWindow()">
                     {{ 'settings.add-payment-method' | translate }}

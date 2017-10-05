@@ -100,7 +100,8 @@
     "load-more": "Load more",
     "confirm": "Bestätigen",
     "confirmation": "Bestätigung",
-    "confirmation-text": "Bist du sicher?"
+    "confirmation-text": "Bist du sicher?",
+    "loading": "Laden"
   },
 
   "toasts": {

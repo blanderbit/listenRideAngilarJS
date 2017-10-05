@@ -100,7 +100,8 @@
     "load-more": "Load more",
     "confirm": "Bevestigen",
     "confirmation": "Bevestiging",
-    "confirmation-text": "Weet je het zeker?"
+    "confirmation-text": "Weet je het zeker?",
+    "loading": "Het laden"
   },
 
   "toasts": {

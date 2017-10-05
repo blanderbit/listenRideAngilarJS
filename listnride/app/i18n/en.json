@@ -101,7 +101,8 @@
     "load-more": "Load more",
     "confirm": "Confirm",
     "confirmation": "Confirmation",
-    "confirmation-text": "Are you sure?"
+    "confirmation-text": "Are you sure?",
+    "loading": "Loading"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
