@@ -346,7 +346,7 @@
     "update-contact": "Contactgegevens wijzigen",
     "company-contact-info": "Vul uw Bedrijfsnaam en naam van de contact persoon in",
     "errors": {
-      "password-length": "Wachtwoord dient minimaal 6 karakters lang te zijn",
+      "password-length": "Wachtwoord dient 6-30 karakters lang te zijn",
       "password-missing": "Wachtwoord aanmaken",
       "valid-email": "Vul een geldig emailadres in",
       "empty-email": "Vul uw emailadres in",

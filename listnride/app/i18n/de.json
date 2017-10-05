@@ -346,7 +346,7 @@
     "update-contact": "Kontakt aktualisieren",
     "company-contact-info": "Bitte trage die Daten der Kontaktperson des Unternehmens ein.",
     "errors": {
-      "password-length": "Das Passwort sollte min. 6 Zeichen lang sein",
+      "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
       "password-missing": "Bitte gib ein Passwort an",
       "valid-email": "Bitte gib eine gültige Email-Adresse an",
       "empty-email": "Bitte gib deine Email-Adresse an",

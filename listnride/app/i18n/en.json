@@ -321,7 +321,7 @@
     "update-contact": "Update Contact",
     "company-contact-info": "Please fill form with company contact person information.",
     "errors": {
-      "password-length": "Password should be at least 6 characters",
+      "password-length": "Password should be 6-30 characters",
       "password-missing": "Please provide a password",
       "valid-email": "Please enter a valid email address",
       "empty-email": "Please enter your email address",
