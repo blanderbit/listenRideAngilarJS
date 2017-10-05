@@ -17,7 +17,7 @@
       <div layout="row" layout-padding>
         <md-input-container layout="column" flex="30" style="padding-bottom: 0">
           <label>{{ 'list.details.size' | translate }}</label>
-          <md-select flex ng-model="filterSize">
+          <md-select flex ng-model="filterSize" placeholder="{{ 'list.details.size' | translate }}">
             <md-option ng-repeat="option in cyclassicsHamburg.sizeOptions" value="{{option.value}}">
               {{option.label}}
             </md-option>
@@ -30,4 +30,5 @@
       </div>
     </div>
   </div>
+  <footer></footer>
 </md-content>

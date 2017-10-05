@@ -128,8 +128,8 @@ angular.module('requests', ['infinite-scroll'])
         requests.request = {};
         // Load the new request and activate the poller
         reloadRequest(requestId);
-        var last_message = requests.requests[index].last_message
-        if (!last_message.is_read && last_message.receiver == $localStorage.userId) {
+        var last_message = requests.requests[index] ? requests.requests[index].last_message: null;
+        if (!!last_message && !last_message.is_read && last_message.receiver === parseInt($localStorage.userId)) {
           api.post('/requests/' + requestId + '/messages/mark_as_read', { "user_id": $localStorage.userId }).then(
             function (success) {
             // if (index) {
@@ -173,6 +173,7 @@ angular.module('requests', ['infinite-scroll'])
               requests.request.rideChat = $localStorage.userId == requests.request.user.id;
               requests.request.rideChat ? requests.request.chatFlow = "rideChat" : requests.request.chatFlow = "listChat";
               requests.request.past = (new Date(requests.request.end_date).getTime() < Date.now());
+              requests.request.started = (new Date(requests.request.start_date).getTime() < Date.now());
 
               if (requests.request.rideChat) {
                 requests.request.rating = requests.request.lister.rating_lister + requests.request.lister.rating_rider;

@@ -97,7 +97,11 @@
     "contact-us": "Neem contact met ons op per ",
     "required": "Dit is verplicht",
     "update": "Bijwerken",
-    "load-more": "Load more"
+    "load-more": "Load more",
+    "confirm": "Bevestigen",
+    "confirmation": "Bevestiging",
+    "confirmation-text": "Weet je het zeker?",
+    "loading": "Het laden"
   },
 
   "toasts": {
@@ -123,6 +127,12 @@
     "profile": "Profiel",
     "invite": "Vrienden uitnodigen",
     "account": "Account",
+    "delete-account": "Verwijder Account",
+    "delete-account-description": "Hier kan je jouw listnride account verwijderen. Deze stap kan niet worden teruggedraaid.",
+    "delete-account-sure": "Are you really sure?",
+    "delete-account-sure-description": "This step can not be undone.",
+    "delete-account-yes": "Yes, delete",
+    "delete-account-no": "No",
     "availability": "Openingstijden",
     "availability-description": "You can set your availability times for renting out bikes.",
     "business": "Fietswinkel",
@@ -336,7 +346,7 @@
     "update-contact": "Contactgegevens wijzigen",
     "company-contact-info": "Vul uw Bedrijfsnaam en naam van de contact persoon in",
     "errors": {
-      "password-length": "Wachtwoord dient minimaal 6 karakters lang te zijn",
+      "password-length": "Wachtwoord dient 6-30 karakters lang te zijn",
       "password-missing": "Wachtwoord aanmaken",
       "valid-email": "Vul een geldig emailadres in",
       "empty-email": "Vul uw emailadres in",

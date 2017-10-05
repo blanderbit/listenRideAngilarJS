@@ -25,7 +25,7 @@
       </div>
 
       <form name="ratingDialog.ratingForm">
-        <div layout="column" ng-if="ratingDialog.request.ride.family != 15">
+        <div layout="column" ng-if="ratingDialog.request.ride.family != 24">
           <md-input-container class="md-input-container-compact">
             <textarea name="message" placeholder="{{ 'requests.ratings.rating_text_lister' | translate }}" ng-model="ratingDialog.message" md-maxlength="800" minlength="20" required rows="3" md-select-on-focus></textarea>
             <div ng-messages="ratingDialog.ratingForm.message.$error" role="alert">
