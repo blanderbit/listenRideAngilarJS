@@ -71,9 +71,9 @@ angular.module('requests', ['infinite-scroll'])
       requests.request.chatFlow;
       requests.userId = $localStorage.userId;
       requests.currentPage = 1;
+      requests.requestsLeft = false;
 
       requests.nextPage = function() {
-        console.log(requests.currentPage)
         requests.loadingList = true;
         api.get('/users/' + $localStorage.userId + '/requests?page=' + requests.currentPage++).then(
           function (success) {
@@ -83,6 +83,7 @@ angular.module('requests', ['infinite-scroll'])
             requests.filterBikes(requests.filters.type, false);
             requests.filters.applyFilter(requests.filters.selected);
             requests.loadingList = false;
+            requests.requestsLeft = newRequests.length === 10;
             if (requests.all_requests.length > 0) {
               requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
               requests.loadRequest(requests.selected);
