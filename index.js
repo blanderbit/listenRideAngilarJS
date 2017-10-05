@@ -15,7 +15,7 @@ app.enable('trust proxy');
 app.use(expressEnforcesSSL());
 
 // prerender
-app.use(prerender.set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
+app.use(require('prerender-node').set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
 
 // get port from env
 app.set('port', (process.env.PORT || 9003));
