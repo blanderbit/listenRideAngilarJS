@@ -7,15 +7,15 @@ var logger = function (req, res, next) {
   next();
 };
 
+// prerender
+app.use(require('prerender-node').set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
+
 // setting proper http headers
 app.use(helmet());
 
 // redirect to https
 app.enable('trust proxy');
 app.use(expressEnforcesSSL());
-
-// prerender
-app.use(require('prerender-node').set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
 
 // get port from env
 app.set('port', (process.env.PORT || 9003));
