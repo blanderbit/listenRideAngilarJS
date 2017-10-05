@@ -837,7 +837,7 @@ md-grid-list md-grid-tile.tile-vienna {
 .bikes .arrow-prev {
   right: 100%;
   padding-right: 0;
-  margin-right: -65px;
+  /*margin-right: -65px;*/
 }
 .bikes .arrow-prev:before,
 .bikes .arrow-next:before {
@@ -857,7 +857,7 @@ md-grid-list md-grid-tile.tile-vienna {
 .bikes .arrow-next {
   left: 100%;
   padding-left: 0;
-  margin-left: -65px;
+  /*margin-left: -65px;*/
 }
 
 .bikes .arrow-next:before {
