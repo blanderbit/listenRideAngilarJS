@@ -82,11 +82,13 @@ var env = "production";
           '<bike-card>' +
           '<md-card class="lnr-bike-card _md">' +
           '<a target="_blank" class="image-container lnr-links" title="' + ride.description + '" onclick="spawnWizard(' + ride.user_id + ', ' + ride.id + ')">' +
-          '<img src="' + imageUrl + '"></img><div class="after">' +
-          // '<span class="content">' + rideName + '</span>' +
+          '<img src="' + imageUrl + '"></img>'+
+          '<div class="after">' +
           '<span class="content"><span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>' +
           '<button class="md-button">' + buttonText + '</button></span>' +
-          '<span class="zoom"><i class="fa fa-search"></i></span></div></a>' +
+          // removing search icon among the text
+          // '<span class="zoom"><i class="fa fa-search"></i></span>'+
+          '</div></a>' +
           '<md-card-title layout="row" class="layout-row">' +
           '<md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true">'+
           '<img src="' + svgUrl + '" height="48" width="48"></img></md-icon>' +
