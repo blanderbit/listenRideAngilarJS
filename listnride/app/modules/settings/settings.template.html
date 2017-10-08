@@ -8,7 +8,7 @@
       <!-- profile -->
       <md-tab class="profile" label="{{ 'settings.profile' | translate }}">
         <br>
-        <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
+        <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding>
           <form name="settings.form">
             <div layout="row" layout-xs="column">
               <div flex-gt-xs layout-margin>
@@ -108,8 +108,8 @@
                     <input name="phone_number" ng-disabled="true" placeholder="+49 175 12345678" ng-model="settings.user.phone_number_privatized"></input>
                   </md-input-container>
                   <span hide-xs flex></span>
-                  <md-input-container layout="row" flex="45">
-                    <md-button ng-if="!settings.sentConfirmationSms" flex class="md-raised md-primary lnr-btn-inline" ng-click="settings.changePhoneNumber($event)">
+                  <md-input-container layout="row" flex-gt-xs="45" flex="100">
+                    <md-button ng-if="!settings.sentConfirmationSms" flex class="md-raised md-primary lnr-btn-inline lnr-btn-mobile" ng-click="settings.changePhoneNumber($event)">
                       {{ 'forms.update-contact' | translate }}
                     </md-button>
                   </md-input-container>
@@ -176,9 +176,17 @@
           </form>
         </div>
 
-        <div class="navigation" layout="row" layout-align="end center" layout-margin>
-          <!--ng-disabled="!settings.form.$valid"-->
-          <md-button ng-click="settings.updateUser()" ng-disabled="!settings.form.$dirty" class="md-raised md-primary">{{ 'edit.save-changes' | translate }}</md-button>
+        <div class="navigation" 
+             layout="row" 
+             layout-align-xs="center stretch" 
+             layout-align="end center" 
+             layout-margin
+             flex-xs>
+            <md-button flex-xs="90" ng-click="settings.updateUser()" 
+                       ng-disabled="!settings.form.$dirty" 
+                       class="md-raised md-primary">
+              {{ 'edit.save-changes' | translate }}
+            </md-button>
         </div>
       </md-tab>
       <!--end profile -->
