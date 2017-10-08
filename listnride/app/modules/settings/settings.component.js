@@ -636,7 +636,8 @@ angular.module('settings',[]).component('settings', {
           openFrom: angular.element(document.body),
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,
-          escapeToClose: true
+          escapeToClose: true,
+          fullscreen: true
         }).then(function (success) {
           // update model with new number
           settings.user.phone_number = success.phone_number;
