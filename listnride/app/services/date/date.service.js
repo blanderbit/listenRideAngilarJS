@@ -2,8 +2,27 @@
 
 angular.module('listnride').factory('date', ['$translate',
   function($translate) {
-
+    var calculateDays = function(startDate, endDate) {
+        var hours = Math.abs(endDate - startDate) / (1000*60*60);
+        return Math.max(1, Math.ceil(hours / 24));
+    };
     return {
+      durationDays: function(startDate, endDate) {
+        return calculateDays(startDate, endDate);
+      },
+      durationDaysPretty: function(startDate, endDate) {
+        var days = calculateDays(startDate, endDate);
+        var weeks = (days / 7) | 0;
+        var output = "";
+        days -= weeks * 7;
+        var weeksLabel = (weeks == 1) ? $translate.instant('shared.week') : $translate.instant('shared.weeks');
+        var daysLabel = (days == 1) ? $translate.instant('shared.day') : $translate.instant('shared.days');
+        if (weeks > 0)
+          output += weeks + " " + weeksLabel;
+        if (days > 0)
+                output += (weeks > 0) ? (", " + days + " " + daysLabel) : (days + " " + daysLabel);
+        return output;
+      },
       duration: function(startDate, endDate, invalidDays) {
         if (startDate === undefined || endDate === undefined) {
           return "0 " + $translate.instant("shared.days") + " , 0 " + $translate.instant("shared.hours");

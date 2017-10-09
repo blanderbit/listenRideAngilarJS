@@ -102,6 +102,14 @@ md-grid-list md-grid-tile {
   height: 40px;
 }
 
+/* Allows Linebreaks for Tooltips */
+md-tooltip .md-content {
+    height: auto;
+    font-size: 12px;
+    padding: 6px 10px;
+    line-height: 1.1;
+}
+
 .highlight-tile {
   height: 260px;
   padding: 24px 0;
@@ -256,6 +264,10 @@ autocomplete .md-errors-spacer {
   margin-right: 8px;
 }
 
+.lnr-margin-right-double {
+  margin-right: 16px;
+}
+
 .lnr-margin-left {
   margin-left: 8px;
 }
@@ -359,6 +371,14 @@ autocomplete .md-errors-spacer {
 /*-----------------------------------------------------------------------------------*/
 /* SVG
 /*-----------------------------------------------------------------------------------*/
+
+.lnr-icn-xs {
+  min-width: 20px;
+  min-height: 20px;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+}
 
 .lnr-icn-sm {
   width: 24px;
@@ -805,7 +825,9 @@ md-grid-list md-grid-tile.tile-vienna {
 .md-dialog-fullscreen.dialog-bikes .dialog-content {
   overflow: visible !important;
 }
-
+.bikes .slick-slide div {
+  display: block !important;
+}
 .bikes .slick-dots li.slick-active button:before,
 .bikes .slick-dots li button:hover:before {
   background-color: #7ab2f8;
@@ -823,48 +845,81 @@ md-grid-list md-grid-tile.tile-vienna {
 
 }
 
+.bikes .slick-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 50px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.bikes .slick-arrow_prew {
+  left: 0;
+  background: -webkit-linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+}
+
+.bikes .slick-arrow_next {
+  right: 0;
+  background: -webkit-linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+}
+
+.bikes .slick-arrow_next .arrow {
+  right: 15px;
+}
+.bikes .slick-arrow_prew .arrow {
+  left: 15px;
+}
+
 .bikes .arrow {
   position: absolute;
   z-index: 1;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  margin-top: -30px;
-  padding: 30px;
+  margin-top: -20px;
   cursor: pointer;
 }
 
-.bikes .arrow-prev {
-  right: 100%;
-  padding-right: 0;
-  /*margin-right: -65px;*/
-}
-.bikes .arrow-prev:before,
-.bikes .arrow-next:before {
+.bikes .slick-arrow_prew .arrow:before,
+.bikes .slick-arrow_next .arrow:before {
   content: '';
   display: block;
   width: 30px;
   height: 30px;
 }
 
-.bikes .arrow-prev:before {
+.bikes .slick-arrow_prew .arrow:before {
   border-top: 5px solid #fff;
   border-left: 5px solid #fff;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.bikes .arrow-next {
-  left: 100%;
-  padding-left: 0;
-  /*margin-left: -65px;*/
-}
 
-.bikes .arrow-next:before {
+.bikes .slick-arrow_next .arrow:before {
   border-top: 5px solid #fff;
   border-right: 5px solid #fff;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.bikes-custom-price {
+  transition: .2s linear all;
+  height: 320px;
+  overflow: hidden;
+}
+.bikes-custom-price.ng-hide {
+  height:0;
+}
+
+@media (max-width: 599px) {
+  .bikes .slick-arrow {
+    display: none !important;
+  }
 }
 
 .testimonials-container {
@@ -1088,6 +1143,10 @@ bike .date-picker-wrapper tr > td:last-child {
   padding-right: 16px;
 }
 
+bike .per-day {
+  margin-bottom: 3px;
+}
+
 md-dialog md-dialog-content .date-picker-wrapper,
 md-dialog md-dialog-content .date-picker-wrapper.inline-wrapper,
 md-dialog md-dialog-content .month-wrapper {
@@ -1253,7 +1312,7 @@ list .md-tab.md-disabled {
 }
 
 .lnr-list-title {
-  margin: 8px 0 24px 0;
+  margin: -8px 0 24px 0;
 }
 
 list md-tabs .lnr-list-form,
@@ -1855,6 +1914,10 @@ invite .voucher-link {
   color: #5fc693;
 }
 
+.lnr-dark-green-text {
+  color: #00AD68;
+}
+
 .lnr-mobile-bike {
   white-space: nowrap;
   overflow: hidden;
@@ -1944,4 +2007,8 @@ and (max-device-width : 568px) {
   .iti-flag {
     background-image: url("../ui_images/flags@2x.png") !important;
   }
+}
+
+.ng-hide-add, .ng-hide-remove {
+  display: block !important;
 }

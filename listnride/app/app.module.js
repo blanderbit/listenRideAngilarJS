@@ -16,7 +16,6 @@ angular.module('listnride', [
   'confirmation',
   'listings',
   'listingCard',
-  'edit',
   'rating',
   'settings',
   'invoices',
@@ -52,6 +51,7 @@ angular.module('listnride', [
   'velosoph',
   'metaTags',
   /* external modules */
+  'ngAnimate',
   'ngMaterial',
   'ngMessages',
   'pascalprecht.translate',

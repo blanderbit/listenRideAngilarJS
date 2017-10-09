@@ -221,7 +221,7 @@
 	color: #d9eef7;
 	border: solid 1px #0076a3;
 	background: #0095cd;
-	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+	background: linear-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
 	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
 	color:white;
@@ -234,7 +234,7 @@
 	color: #606060;
 	border: solid 1px #b7b7b7;
 	background: #fff;
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+	background: linear-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
 	background: -moz-linear-gradient(top,  #fff,  #ededed);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
 }
@@ -285,10 +285,10 @@
 .date-picker-wrapper .week-number 
 {
 	padding:5px 0;
-	line-height:1;
-	// font-size:12px;
-	margin-bottom:1px;
-	color:#999;
+	line-height: 1;
+	/*font-size: 12px;*/
+	margin-bottom: 1px;
+	color: #999;
 	cursor: pointer;
 }
 .date-picker-wrapper .week-number.week-number-selected { color: #4499EE; font-weight:500;  }

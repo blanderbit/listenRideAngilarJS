@@ -37,10 +37,14 @@
     "days": "days",
     "week": "week",
     "weeks": "weeks",
-    "duration": "duration",
+    "discount": "discount",
+    "discount-day": "from 3 days",
+    "discount-week": "from a week",
+    "single-day": "for one day",
+    "duration": "Duration",
     "subtotal": "subtotal",
-    "lnr-fee": "listnride fee (incl. tax)",
-    "total": "total",
+    "lnr-fee": "Service fee",
+    "total": "Total",
     "from": "from",
     "from2": "from",
     "to": "to",
@@ -60,6 +64,7 @@
     "reviews": "Reviews",
     "for": "for",
     "per-day": "per day",
+    "pd": "p.d.",
     "Monday": "Monday",
     "Tuesday": "Tuesday",
     "Wednesday": "Wednesday",
@@ -214,7 +219,10 @@
     "view-pictures": "View Pictures",
     "for": "for",
     "meta-title": "Rent the {{name}} - {{category}} by {{brand}} in {{location}}.",
-    "meta-description": "{{description}}"
+    "meta-description": "{{description}}",
+    "per-day": "1 day",
+    "from-2-days": "from 2 days",
+    "from-week": "from 1 week"
   },
   "user": {
     "verified-through": "Verified through",
@@ -365,9 +373,15 @@
     "log-in-to-request-title": "Log in or Sign up",
     "log-in-to-request-description": "Log in to request the bike. If you don't have an account yet, feel free to sign up.",
     "select-timespan": "Choose rental timespan first",
-    "select-timespan-description": "Before you can request, please set the timespan of your rental. Simply click on the days and select pickup and dropoff times in the above calendar."
+    "select-timespan-description": "Before you can request, please set the timespan of your rental. Simply click on the days and select pickup and dropoff times in the above calendar.",
+    "info-subtotal": "This is the regular daily price<br>times the amount of days you want<br>to rent the bike.",
+    "info-discount": "Average daily discount you<br>get per day by renting out<br>for a longer period of time.",
+    "info-service-fee": "The service fee is<br>used for providing<br>listnride. It includes VAT.",
+    "info": "In the calendar above click first<br>on the day you wish to rent<br>out the bike, and second on<br>the day you want to return it."
   },
   "list": {
+    "edit-bike": "Edit Bike",
+    "save-changes": "Save Changes",
     "list-your-bike": "List your bike",
     "back": "Back",
     "next": "Next",
@@ -425,12 +439,47 @@
       "country": "Country"
     },
     "pricing": {
-      "header": "Your bike pricing?",
-      "hint": "Last, set an appropriate rental price. The price should be affordable and based on you ride and equipment. You may take similar listings as a reference. A rental period for less than 6 hours equals a half-day rental, 6 to 24 hours a day’s rental.",
+      "info": "Your daily price is your default daily rate.",
+      "info-description": "Information about the rental price",
+      "header": "Daily Price",
+      "description": "Your daily price is your default daily rate.",
+      "hint-para-1": "The price you charge for your bike is up to you. The price should be based on the bike and equipment. To get an idea of market prices, you can view comparable listings. ",
+      "hint-para-2": "A rental period for less than 6 hours equals a half-day rental, 6 to 24 hours a day’s rental.",
+      "hint-para-3": "To encourage longer rentals, some listers set a daily or weekly discount." ,
       "label": "Pricing",
+      "discount": "Discount",
+      "discount-description-initial": "With a weekly discount of ",
+      "discount-description-mid": " you'll get ",
+      "discount-description-ending": " per week.",
+      "set_custom_price": "Price in €",
+      "custom-prices": "Individual pricing",
       "half-daily-price": "Half-daily Price",
       "daily-price": "Daily Price",
-      "weekly-price": "Weekly Price"
+      "daily-price-placeholder": "Price in €",
+      "daily-discount-placeholder": "Discount in %",
+      "daily-discount-tooltip": "Discount if the bike is rented for more than a day.",
+      "weekly-discount-placeholder": "Discount in %",
+      "weekly-discount-tooltip": "Discount if the bike is rented for a week or more.",
+      "weekly-price": "Weekly Price",
+      "daily-discount": "Daily Discount",
+      "weekly-discount": "Weekly Discount",
+      "price_2_days": "2 days",
+      "price_3_days": "3 days",
+      "price_4_days": "4 days",
+      "price_5_days": "5 days",
+      "price_6_days": "6 days",
+      "price_7_days": "7 days (1 week)",
+      "price_8_days": "8 days onwards",
+      "price_8_days_long": "8 days onwards (each day)",
+      "price_30_days": "30 days",
+      "price_30_days_long": "30 days (1 month)",
+      "reset-prices": "Reset",
+      "validations":{
+        "required": {
+          "daily_price": "Daily price is required",
+          "price": "Price is required"
+        }
+      }
     },
     "subcategory": {
       "1": {
@@ -470,10 +519,6 @@
         "mono-bike": "Mono Bike"
       }
     }
-  },
-  "edit": {
-    "edit-bike": "Edit Bike",
-    "save-changes": "Save Changes"
   },
   "listings": {
     "my-bikes": "My Bikes",
@@ -683,7 +728,6 @@
     "open": "Open Positions",
     "go-back": "Back"
   },
-
   "invoices": {
     "request_id": "Request ID",
     "bike": "Bike",
@@ -702,7 +746,6 @@
     "as-rider": "As Rider",
     "no-rides": "You had no rides yet"
   },
-
   "contact-and-help": {
     "title": "Contact & Support",
     "meta-title": "listnride is here for you",
@@ -932,7 +975,6 @@
     "details": "The page you are looking for does not exist!",
     "home-link": "Back to the homepage"
   },
-  
   "cities": {
     "shared": {
       "rent-city": "Rent a City Bike",
@@ -1015,7 +1057,6 @@
       "cafes-bars-content": "If you like vegan and vegetarian food, we recommend a visit at <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> at the Karmeliterplatz. If you prefer the more traditional Austrian kitchen, we highly recommend <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>. Order a traditional Tafelspitz or Wiener Schnitzel and enjoy it outside with the view on the famous Vienna Opera. You’ll have a great night to remember! For finishing touch of the day, it makes sense to walk towards the Danube. On the way you’ll find plenty of interesting bars or just sit outside under the stars at the river."
     }
   },
-
   "brand-integration": {
     "shared": {
       "choose-location": "Choose a location",
@@ -1178,7 +1219,6 @@
       "faq-answer-3": "Yes, it is possible to replace the battery."
     }
   },
-
   "invite-landing" : {
     "meta-title": "listnride | 10€ for you!",
     "meta-description": "Give the gift of cycling! When you invite a friend to listnride, they’ll get a 10€ voucher as soon as they join. When they rent a bike or list their own, you’ll get 10€ too!",
@@ -1195,7 +1235,6 @@
     "explanation-3-title": "3. Enjoy the ride",
     "explanation-3-description": "Ride safe, have fun!"
   },
-
   "how-to-shoot-bike-photo" : {
     "header": "Photo Tips",
     "title": "A couple of photo tips for a stand out listing",
@@ -1209,7 +1248,6 @@
     "headline-4": "Setting",
     "content-4": "Highlight what’s amazing. It is not required that the whole bicycle is shown on all photos, rather shoot some details, like brand name, colouring, lights, lock etc. Let pictures get the message across. Take your photos in landscape format: Vertical photos won’t showcase your bicycle as well."
   },
-
   "invite": {
     "meta-title": "listnride | Invite your friends",
     "meta-description": "Give the gift of cycling! When you invite a friend to listnride, they’ll get a 10€ voucher as soon as they join. When they rent a bike or list their own, you’ll get 10€ too!",
@@ -1241,7 +1279,6 @@
       "email-body": "{{first_name}} has given you 10€ for your first adventure on the bike of your choice!%0AJoin listnride, the fastest growing bike sharing community, and get access to countless bikes for every purpose!%0ASign up and immediately receive a 10€ credit.%0A%0A{{voucher_url}}%0A%0ADo you want to thank {{first_name}}? Rent a bike or list your bike and {{first_name}} receives a 10€ credit, too!%0A%0AHave fun, and enjoy the ride!"
     }
   },
-
   "invest": {
     "meta-title": "listnride is crowdfunding! Be part of it and invest in Building Europe’s leading bike sharing community.",
     "meta-description": "Visit Seedrs to learn more about investing in listnride.",
@@ -1270,7 +1307,6 @@
     "faq-question-8": "FURTHER QUESTIONS?",
     "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
   },
-
   "seo": {
     "cities-title": "Planning to Travel? Check out more cities:"
   }
