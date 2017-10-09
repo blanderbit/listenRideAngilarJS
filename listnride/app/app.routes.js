@@ -129,7 +129,7 @@
       $stateProvider.state({
         name: 'list',
         url: '/list-bike',
-        template: '<list></list>'
+        template: '<list heading="\'list.list-bike\'" is-list-mode=true discount-field-editable=true></list>'
       });
 
       $stateProvider.state({
@@ -147,7 +147,7 @@
       $stateProvider.state({
         name: 'edit',
         url: '/edit-bike/{bikeId:int}',
-        template: '<edit></edit>'
+        template: '<list heading="\'list.edit-bike\'" is-list-mode=false discount-field-editable=true></list>'
       });
 
       $stateProvider.state({

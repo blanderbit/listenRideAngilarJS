@@ -18,6 +18,7 @@ angular.
         $localStorage.unreadMessages = response.unread_messages;
         $localStorage.email = response.email;
         $localStorage.referenceCode = response.ref_code;
+        $localStorage.isBusiness = (response.business !== undefined);
       };
 
       // TODO: This is a duplicate of app.module.js
