@@ -9,13 +9,13 @@
       </div>
 
       <md-card-title-text flex="65" class="lnr-margin-left lnr-bike-title" layout="column" layout-align="space-around start">
-        <span class="md-subhead" style="width: 200px">{{ ::bikeCard.bike.brand }}</span>
+        <span class="md-subhead">{{ ::bikeCard.bike.brand }}</span>
         <!-- <span class="md-subhead">{{ ::bikeCard.bike.brand }}</span> -->
         <span ng-if="!bikeCard.home">{{ ::bikeCard.bike.name }}</span>
         <span ng-if="bikeCard.home">in {{ ::bikeCard.bike.city }}</span>
       </md-card-title-text>
 
-      <div flex="20" layout="column" layout-align="space-around center">
+      <div flex="auto" layout="column" layout-align="space-around center">
         <span>{{ 'shared.from2' | translate }}</span>
         <span class="md-headline">{{ ::bikeCard.from | number }}€</span>
       </div>
