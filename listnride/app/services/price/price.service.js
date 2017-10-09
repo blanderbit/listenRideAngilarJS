@@ -92,7 +92,7 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         prices.push({
           id: originalPrices[6].id,
           price: Math.round(7 * originalPrices[6].price),
-          start_at: originalPrices[7].start_at
+          start_at: originalPrices[6].start_at
         });
 
         // additional day price update
