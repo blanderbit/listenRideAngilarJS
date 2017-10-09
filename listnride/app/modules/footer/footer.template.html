@@ -2,14 +2,14 @@
   <div class="content" layout="column">
     <div layout="row" layout-xs="column" layout-padding>
 
-      <div layout="column" layout-align="center start" flex="25" flex-sm="20" hide-sm hide-xs>
+      <div layout="column" layout-align="center start" flex="20" flex-sm="20" hide-sm hide-xs>
         <div>
           <md-icon class="lnr-icn-xlrg md-color-white" md-svg-src="app/assets/ui_icons/lnr_logo_full.svg"></md-icon>
         </div>
       </div>
 
       <div layout="row" layout-wrap layout-align="space-between start" flex>
-        <div layout="column">
+        <div layout="column" flex-xs="50">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'shared.top-cities' | translate }}</md-subheader>
             <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="search({ location: 'Berlin' })" >{{ 'shared.berlin' | translate }}</a></md-list-item>
@@ -19,7 +19,7 @@
           </md-list>
         </div>
 
-        <div layout="column">
+        <div layout="column" flex-xs="50">
           <md-list>
             <md-subheader class="md-no-sticky">
               {{ 'shared.learn-more' | translate }}
@@ -61,7 +61,7 @@
           </md-list>
         </div>
 
-        <div layout="column">
+        <div layout="column" flex-xs="50">
           <md-list>
             <md-subheader class="md-no-sticky">listnride</md-subheader>
             <md-list-item class="md-body-1">
@@ -107,7 +107,7 @@
           </md-list>
         </div>
 
-        <div layout="column">
+        <div layout="column" flex-xs="50">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'footer.legal' | translate }}</md-subheader>
             <md-list-item class="md-body-1">

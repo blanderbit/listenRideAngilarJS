@@ -19,11 +19,12 @@ angular.module('settings',[]).component('settings', {
     'userApi',
     '$timeout',
     '$mdDialog',
+    'authentication',
     function SettingsController(
       $localStorage, $window, $mdToast,
       $translate, api, accessControl, sha256, Base64,
       Upload, loadingDialog, ENV, ngMeta,
-      userApi, $timeout, $mdDialog
+      userApi, $timeout, $mdDialog, authentication
       ) {
       if (accessControl.requireLogin()) {
         return;
@@ -107,6 +108,7 @@ angular.module('settings',[]).component('settings', {
         settings.current_payment = false;
         settings.business = {};
         settings.user.business = false;
+        settings.user.paymentLoading = false;
         userApi.getUserData().then(function (response) {
           settings.user = response.data;
           settings.current_payment = response.data.status === 3;
@@ -486,16 +488,40 @@ angular.module('settings',[]).component('settings', {
         );
       };
 
+      settings.deleteAccount = function(event) {
+        var confirm = $mdDialog.confirm()
+          .title($translate.instant('settings.delete-account-sure'))
+          .textContent($translate.instant('settings.delete-account-sure-description'))
+          .targetEvent(event)
+          .ok($translate.instant('settings.delete-account-yes'))
+          .cancel($translate.instant('settings.delete-account-no'));
+
+        $mdDialog.show(confirm).then(
+          function() {
+            api.delete('/users/' + authentication.userId()).then(
+              function(success) {
+                console.log("User successfully deleted");
+                authentication.logout();
+              },
+              function(error) {
+                console.log("User could not be deleted");
+              }
+            );
+          },
+          function() {
+          
+          }
+        );
+      }
+
       settings.updateUser = function () {
         var data = {
-          "user": {
-            "description": settings.user.description,
-            "profile_picture": Upload.dataUrltoBlob(settings.croppedDataUrl, _.isEmpty(settings.profilePicture) ? '' : settings.profilePicture.name),
-            "street": settings.user.street,
-            "zip": settings.user.zip,
-            "city": settings.user.city,
-            "country": settings.user.country
-          }
+          "description": settings.user.description,
+          "profile_picture": Upload.dataUrltoBlob(settings.croppedDataUrl, _.isEmpty(settings.profilePicture) ? '' : settings.profilePicture.name),
+          "street": settings.user.street,
+          "zip": settings.user.zip,
+          "city": settings.user.city,
+          "country": settings.user.country
         };
 
         if (settings.password && settings.password.length >= 6) {
@@ -507,7 +533,7 @@ angular.module('settings',[]).component('settings', {
         Upload.upload({
           method: 'PUT',
           url: api.getApiUrl() + '/users/' + $localStorage.userId,
-          data: data,
+          data: {'user': settings.compactObject(data)},
           headers: {
             'Authorization': $localStorage.auth
           }
@@ -536,6 +562,16 @@ angular.module('settings',[]).component('settings', {
             );
           }
         );
+      };
+
+      settings.compactObject  = function(o) {
+        var clone = _.clone(o);
+        _.each(clone, function(v, k) {
+          if(!v) {
+            delete clone[k];
+          }
+        });
+        return clone;
       };
 
       settings.updateBusiness = function () {
@@ -578,8 +614,10 @@ angular.module('settings',[]).component('settings', {
       };
 
       settings.currentPaymentMethod = function () {
+        settings.user.paymentLoading = true;
         api.get('/users/' + settings.user.id + '/current_payment').then(
           function(response) {
+            settings.user.paymentLoading = false;
             settings.user.current_payment_method = response.data;
           },
           function(error) {

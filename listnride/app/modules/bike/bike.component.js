@@ -31,6 +31,13 @@ angular.module('bike',[]).component('bike', {
           bike.data = response.data;
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
+          $translate($filter('category')(bike.data.category)).then(
+            function (translation) {
+              bike.category = translation;
+              console.log(bike.category);
+            }
+          );
+          console.log(bike.category);
 
           var metaData = {
             name: bike.data.name,
@@ -103,8 +110,8 @@ angular.module('bike',[]).component('bike', {
           ease: 'ease-in-out',
           speed: '500',
           dots: true,
-          prevArrow: "<div class='arrow arrow-prev'></div>",
-          nextArrow: "<div class='arrow arrow-next'></div>"
+          prevArrow: "<div class='slick-arrow slick-arrow_prew'><span class='arrow'></span></div>",
+          nextArrow: "<div class='slick-arrow slick-arrow_next'><div class='arrow'></div></div>"
         }
       }
 
