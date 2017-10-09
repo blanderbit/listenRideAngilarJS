@@ -2008,11 +2008,7 @@ and (max-device-width : 568px) {
     background-image: url("../ui_images/flags@2x.png") !important;
   }
 }
-<<<<<<< HEAD
-
 
 .ng-hide-add, .ng-hide-remove {
   display: block !important;
 }
-=======
->>>>>>> dev
