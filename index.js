@@ -10,12 +10,12 @@ var logger = function (req, res, next) {
 // prerender
 app.use(require('prerender-node').set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
 
-// // setting proper http headers
-// app.use(helmet());
+// setting proper http headers
+app.use(helmet());
 
-// // redirect to https
-// app.enable('trust proxy');
-// app.use(expressEnforcesSSL());
+// redirect to https
+app.enable('trust proxy');
+app.use(expressEnforcesSSL());
 
 // get port from env
 app.set('port', (process.env.PORT || 9003));
