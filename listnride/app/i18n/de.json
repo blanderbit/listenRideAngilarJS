@@ -194,7 +194,7 @@
     },
     "3": {
       "title": "Erzähle etwas über dich",
-      "label": "Beschreibung (min. 20 Buchstaben)"
+      "label": "Beschreibung (min. 50 Buchstaben)"
     },
     "4": {
       "description": "Bestätige Deine E-Mail-Adresse, indem Du auf den Link in der Bestätigungsmail klickst, die wir Dir nach der Registrierung schicken. Falls Du sie nicht mehr findest, kannst Du die Mail erneut anfordern. Erscheint sie nicht sofort in Deinem Postfach, warte bitte noch ein paar Minuten oder überprüfe deinen Spam-Ordner.",
