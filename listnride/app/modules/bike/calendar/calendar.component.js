@@ -9,6 +9,7 @@ angular.module('bike').component('calendar', {
     priceHalfDay: '<',
     priceDay: '<',
     priceWeek: '<',
+    prices: '<',
     requests: '<'
   },
   controller: ['$scope',
@@ -21,12 +22,13 @@ angular.module('bike').component('calendar', {
       '$window',
       '$analytics',
       'date',
+      'price',
       'api',
       'authentication',
       'verification',
       'ENV',
     function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, $mdToast,
-                                $mdMedia, $window, $analytics, date, api, authentication, verification, ENV) {
+                                $mdMedia, $window, $analytics, date, price, api, authentication, verification, ENV) {
       var calendar = this;
       calendar.authentication = authentication;
       calendar.requested = false;
@@ -38,7 +40,7 @@ angular.module('bike').component('calendar', {
             calendar.bikeOwner = response.data;
             initOverview();
             initCalendarPicker();
-          })
+          });
         }
       };
 
@@ -223,86 +225,6 @@ angular.module('bike').component('calendar', {
 
       /* ------------------------------------------------- */
 
-      /* ---------- CODE FOR THE EVENT CALENDAR 2 ---------- */
-      // This whole code block including the corresponding code in calendar.template.html should be deleted immediately after the event
-      // We have to think of a long-term solution for setting up multiple different event calendars soon to prevent such ugly spaghetticodes
-
-      calendar.event2 = {};
-      calendar.event2.pickupSlotId;
-      calendar.event2.returnSlotId;
-
-      // Calendar Slots are currently set for Berliner Fahrradschau 2017
-      calendar.event2.slots = [
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "12:00", hour: 12},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "13:00", hour: 13},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "14:00", hour: 14},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "15:00", hour: 15},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "16:00", hour: 16},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "17:00", hour: 17},
-        {overnight: false, reserved: false, pickupEnabled: false, returnDisabled: true, day: 3, month: eventMonth, year: eventYear, text: "18:00", hour: 18}
-      ];
-
-      calendar.event2.changePickupSlot = function() {
-        // Define picked slot as pickupSlot
-        calendar.event2.slots[calendar.event2.pickupSlotId].pickup = true;
-        // Enable all following slots as returnSlots if no booking is inbetween
-        var bookingInBetween = false;
-        _.each(calendar.event2.slots, function(value, index) {
-          if (index > calendar.event2.pickupSlotId) {
-            if (value.reserved && calendar.event2.slots[index-1].reserved) {
-              bookingInBetween = true;
-            }
-            if (bookingInBetween) {
-              value.returnDisabled = true;
-            } else {
-              value.returnDisabled = false;
-            }
-          } else {
-            value.returnDisabled = true;
-          }
-        });
-
-        var slot = calendar.event2.slots[calendar.event2.pickupSlotId];
-        calendar.startDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
-
-        // Presets returnSlot to be (slotDuration) after pickupSlot 
-        calendar.event2.returnSlotId = parseInt(calendar.event2.pickupSlotId) + slotDuration;
-        calendar.event2.changeReturnSlot();
-        dateChange(calendar.startDate, calendar.endDate);
-      };
-
-      calendar.event2.changeReturnSlot = function() {
-        var slot = calendar.event2.slots[calendar.event2.returnSlotId];
-
-        if (slot.overnight) {
-          calendar.endDate = new Date(eventYear, eventMonth, slot.day + 1, slot.hour, 0, 0, 0);
-        } else {
-          calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);  
-        }
-
-        dateChange(calendar.startDate, calendar.endDate);
-      };
-
-      calendar.event2.reserved = function() {
-        for (var i = 0; i < calendar.requests.length; i ++) {
-          var startDate = new Date(calendar.requests[i].start_date);
-          var endDate = new Date(calendar.requests[i].end_date);
-          var startDay = startDate.getDate();
-          var startTime = startDate.getHours();
-          var endTime = endDate.getHours();
-          var startYear = startDate.getFullYear();
-          var startMonth = startDate.getMonth();
-
-          for (var j = 0; j < calendar.event2.slots.length; j ++) {
-            if (startYear == eventYear && startMonth == eventMonth && calendar.event2.slots[j].day == startDay && calendar.event2.slots[j].hour >= startTime && (calendar.event2.slots[j].overnight || calendar.event2.slots[j].hour + slotDuration <= endTime)) {
-              calendar.event2.slots[j].reserved = true;
-            }
-          }
-        }
-      };
-
-      /* ------------------------------------------------- */
-
       calendar.availabilityMessage = function($index, date) {
         if (!calendar.isOptionEnabled($index, date)) {
           return openingHoursAvailable() ? ' (closed)' : ' (in past)'
@@ -352,12 +274,8 @@ angular.module('bike').component('calendar', {
         var bookingDialog = this;
         bookingDialog.errors = {};
         bookingDialog.inProcess = false;
-        bookingDialog.duration = date.duration(calendar.startDate, calendar.endDate);
+        bookingDialog.calendar = calendar;
         bookingDialog.total = totalPriceCalculator();
-        bookingDialog.startDate = calendar.startDate;
-        bookingDialog.endDate = calendar.endDate;
-        bookingDialog.lnrFee = calendar.lnrFee;
-        bookingDialog.subtotal = calendar.subtotal;
         bookingDialog.balance = calendar.rider.balance;
         bookingDialog.hide = hideDialog;
 
@@ -411,7 +329,8 @@ angular.module('bike').component('calendar', {
               calendar.requested = false;
               $mdToast.show(
                 $mdToast.simple()
-                  .textContent(error.data.errors[0].detail)
+                  // .textContent(error.data.errors[0].detail)
+                  .textContent("There was an error requesting the bike")
                   .hideDelay(4000)
                   .position('top center')
               );
@@ -608,18 +527,13 @@ angular.module('bike').component('calendar', {
         } else {
           var invalidDays = countInvalidDays(startDate, endDate);
           calendar.duration = date.duration(startDate, endDate, invalidDays);
-          // Price calculation differs slightly between event rentals (bikeFamily 2 or 9) and standard rentals
-          if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9 || calendar.bikeFamily == 11) {
-            invalidDays = 0;
-            var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, 4, invalidDays);
-          } else {
-            var subtotal = date.subtotal(startDate, endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, null, invalidDays);
-          }
-          var fee = subtotal * 0.125;
-          var tax = fee * 0.19;
-          calendar.subtotal = subtotal;
-          calendar.lnrFee = fee + tax;
-          calendar.total = subtotal + fee + tax;
+          calendar.durationDays = date.durationDays(startDate, endDate);
+          var prices = price.calculatePrices(startDate, endDate, calendar.prices);
+          calendar.subtotal = prices.subtotal;
+          calendar.discount = prices.subtotal - prices.subtotalDiscounted;
+          calendar.discountRelative = calendar.discount / calendar.durationDays;
+          calendar.lnrFee = prices.serviceFee;
+          calendar.total = prices.total;
         }
       }
 

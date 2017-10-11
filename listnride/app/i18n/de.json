@@ -36,9 +36,13 @@
     "days": "Tage",
     "week": "Woche",
     "weeks": "Wochen",
+    "discount": "Rabatt",
+    "discount-day": "ab 2 Tagen",
+    "discount-week": "ab 7 Tagen",
+    "single-day": "für 1 Tag",
     "duration": "Dauer",
     "subtotal": "Zwischensumme",
-    "lnr-fee": "listnride Gebühren (inkl. MwSt)",
+    "lnr-fee": "Servicegebühren",
     "total": "Insgesamt",
     "from": "von",
     "from2": "ab",
@@ -59,6 +63,7 @@
     "reviews": "Bewertungen",
     "for": "für",
     "per-day": "pro Tag",
+    "pd": "p.T.",
     "Monday": "Montag",
     "Tuesday": "Dienstag",
     "Wednesday": "Mittwoch",
@@ -220,7 +225,10 @@
     "rent-bike": "Fahrrad Mieten",
     "view-pictures": "Bilder ansehen",
     "meta-title": "{{name}} - {{category}} von {{brand}} in {{location}} mieten.",
-    "meta-description": "{{description}}"
+    "meta-description": "{{description}}",
+    "per-day": "1 Tag",
+    "from-2-days": "ab 2 Tagen",
+    "from-week": "ab 1 Woche"
   },
 
   "user": {
@@ -383,10 +391,16 @@
     "log-in-to-request-title": "Einloggen oder Registrieren",
     "log-in-to-request-description": "Logge dich ein um das Rad anzufragen. Falls du noch kein Account hast, registriere dich einfach.",
     "select-timespan": "Wähle zuerst die Mietdauer",
-    "select-timespan-first": "Bevor du anfrägst, bestimme bitte die Zeitspanne. Klicke einfach auf die Tage and wähle Abhol- und Rückgabezeiten im obigen Kalender."
+    "select-timespan-first": "Bevor du anfrägst, bestimme bitte die Zeitspanne. Klicke einfach auf die Tage and wähle Abhol- und Rückgabezeiten im obigen Kalender.",
+    "info-subtotal": "Dies ist Tagespreis für die<br>Anzahl der Tage, die du das<br>Fahrrad mieten möchten.",
+    "info-discount": "Durchschnittlicher Tagesrabatt<br>pro Tag bei Miete für<br>einen längeren Zeitraum.",
+    "info-service-fee": "Die Servicegebühr hilft uns,<br>listnride zu betreiben. Sie enthält <br>die Umsatzsteuer.",
+    "info": "Im Kalender oben zuerst auf den Tag klicken,<br>an dem du das Fahrrad mieten möchtest,<br>und dann auf den Tag, an dem<br>du es zurückgeben magst."
   },
 
   "list": {
+    "edit-bike": "Rad bearbeiten",
+    "save-changes": "Änderungen Speichern",
     "list-your-bike": "Rad einstellen",
     "back": "Zurück",
     "next": "Weiter",
@@ -444,12 +458,48 @@
       "country": "Land"
     },
     "pricing": {
-      "header": "Für welchen Preis bietest Du dein Rad an?",
-      "hint": "Nun setze noch einen angemessenen Mietpreis. Der Mietpreis sollte bezahlbar sein und sich nach Rad und Ausstattung richten. Schau Dir gern ähnliche Listings als Referenz an. Eine Mietdauer unter 6 Stunde ist eine Halbtagsmiete, 6-24 Stunde steht für eine Tagesmiete.",
+      "info": "Dein Tagespreis ist dein Standardpreis pro Tag.",
+      "info-description": "Information zum Mietpreis",
+      "header": "Tagespreis",
+      "description": "Dein Tagespreis ist dein Standardpreis pro Tag.",
+      "daily-price-description": "Bei Eingabe des Tagespreises schlagen wir<br>dir automatisch ein Rabattschema für<br>längerfristige Vermietungen vor.<br>Du kannst die Preise allerdings<br>auch einzeln anpassen.",
+      "hint-para-1": "Über den Preis, den du für dein Rad nimmst, entscheidest du selbst. Der Mietpreis sollte sich nach Rad und Ausstattung richten. Um eine Vorstellung von den Preisen am Markt zu erhalten, schaue Dir vergleichbare Angebote an.",
+      "hint-para-2": "Eine Mietdauer unter 6 Stunden ist eine Halbtagesmiete, 6-24 Stunde steht für eine Tagesmiete.",
+      "hint-para-3": "Um mehr Langzeitbuchungen zu erhalten, legen manche Vermieter einen Tages- oder Wochenrabatt fest.",
       "label": "Preis",
+      "discount": "Rabatt",
+      "discount-description-initial": "Bei einem Wochenrabatt von ",
+      "discount-description-mid": " erhältst Du ",
+      "discount-description-ending": " pro Woche.",
+      "set_custom_price": "Preise in €",
+      "custom-prices": "Individuelle Preise",
+      "daily-price-placeholder": "Preis in €",
+      "daily-discount-placeholder": "Rabatt in %",
+      "daily-discount-tooltip": "Rabatt, wenn das Fahrrad für mehr als einen Tag gemietet wird.",
+      "weekly-discount-placeholder": "Rabatt in %",
+      "weekly-discount-tooltip": "Rabatt, wenn das Fahrrad für eine Woche oder mehr gemietet wird.",
       "half-daily-price": "Halber Tag",
       "daily-price": "Ganzer Tag",
-      "weekly-price": "Eine Woche"
+      "weekly-price": "Eine Woche",
+      "daily-discount": "Tagesrabatt",
+      "weekly-discount": "Wochenrabatt",
+      "price_2_days": "2 Tage",
+      "price_3_days": "3 Tage",
+      "price_4_days": "4 Tage",
+      "price_5_days": "5 Tage",
+      "price_6_days": "6 Tage",
+      "price_7_days": "7 Tage (1 Woche)",
+      "price_8_days": "ab 8 Tage",
+      "price_8_days_long": "ab 8 Tage (pro Tag)",
+      "price_30_days": "30 Tage",
+      "price_30_days_long": "30 Tage (1 Monat)",
+      "reset-prices": "Zurücksetzen",
+      "validations":{
+        "required": {
+          "daily_price": "Tagespreis is required",
+          "price": "preis is required"
+        }
+      }
     },
     "subcategory": {
       "1": {
@@ -490,12 +540,6 @@
       }
     }
   },
-
-  "edit": {
-    "edit-bike": "Rad bearbeiten",
-    "save-changes": "Änderungen Speichern"
-  },
-
   "listings": {
     "my-bikes": "Meine Räder",
     "no-bikes": "Du hast noch keine eigenen Fahrräder online gestellt.",
