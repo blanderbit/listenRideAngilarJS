@@ -461,7 +461,7 @@
       "info": "Dein Tagespreis ist dein basis Preis bei 1 Tagesmiete.",
       "info-description": "Information zum Mietpreis",
       "header": "Tagespreis",
-      "description": "Dein Tagespreis ist dein Standardpreis pro Tag.",
+      "description": "Dein Tagespreis ist dein basis Preis bei 1 Tagesmiete.",
       "daily-price-description": "Bei Eingabe des Tagespreises schlagen wir<br>dir automatisch ein Rabattschema für<br>längerfristige Vermietungen vor.<br>Du kannst die Preise allerdings<br>auch einzeln anpassen.",
       "hint-para-1": "Über den Preis, den du für dein Rad nimmst, entscheidest du selbst. Der Mietpreis sollte sich nach Rad und Ausstattung richten. Um eine Vorstellung von den Preisen am Markt zu erhalten, schaue Dir vergleichbare Angebote an.",
       "hint-para-2": "Eine Mietdauer unter 6 Stunden ist eine Halbtagesmiete, 6-24 Stunde steht für eine Tagesmiete.",
