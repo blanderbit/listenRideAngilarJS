@@ -444,7 +444,7 @@
       "country": "Country"
     },
     "pricing": {
-      "info": "Your daily price is your default daily rate.",
+      "info": "Your daily price is your base price for 1 day.",
       "info-description": "Information about the rental price",
       "header": "Daily Price",
       "description": "Your daily price is your default daily rate.",

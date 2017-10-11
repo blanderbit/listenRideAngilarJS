@@ -458,7 +458,7 @@
       "country": "Land"
     },
     "pricing": {
-      "info": "Dein Tagespreis ist dein Standardpreis pro Tag.",
+      "info": "Dein Tagespreis ist dein basis Preis bei 1 Tagesmiete.",
       "info-description": "Information zum Mietpreis",
       "header": "Tagespreis",
       "description": "Dein Tagespreis ist dein Standardpreis pro Tag.",
