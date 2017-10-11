@@ -9,12 +9,12 @@
       <li><span></span></li>
     </ul>
 
-    <div class="lnr-badge-container">
+    <!-- <div class="lnr-badge-container" ng-hide>
       <a href="https://www.seedrs.com/listnride" target="_blank"><img class="lnr-badge" ng-src="app/assets/ui_images/invest/crowdfunding_badge.png"></img></a>
-    </div>
+    </div> -->
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ 'home.landing-section-header' | translate }}</h1>
-      <p class="md-subhead">{{ 'home.landing-section-subheader' | translate }}</p>    
+      <p class="md-subhead">{{ 'home.landing-section-subheader' | translate }}</p>
     </div>
 
     <form class="lnr-search-bar md-whiteframe-3dp" layout="row" md-theme="default">
@@ -55,7 +55,7 @@
       <h2 class="md-headline">What are people saying?</h2>
     </div>
 
-    <div class="testimonials-container" layout-padding>
+    <div class="testimonials-container" layout-padding ng-if="home.testimonials.length">
       <slick settings="home.slickConfig">
         <div
           ng-repeat="testimonial in home.testimonials"
@@ -67,7 +67,7 @@
         >
           <div layout="column" layout-align="center center" class="testimonial-avatar">
             <a
-              ui-sref="user({userId: testimonial.userId})"
+                ui-sref="user({userId: testimonial.userId})"
             >
               <img class="testimonials-img" ng-src="{{ testimonial.userImagePath}}">
             </a>
@@ -87,7 +87,7 @@
       <h2 class="md-headline">{{ 'home.featured-tiles-header' | translate }}</h2>
       <p class="md-subhead">{{ 'home.featured-tiles-subheader' | translate }}</p>
     </div>
-    
+
     <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="4" md-gutter="16px" md-row-height="1:1">
       <md-grid-tile class="tile" md-colspan-gt-xs="1" style="background-image: url('/app/assets/ui_images/featured-tiles/ampler.jpg')">
         <a ui-sref="ampler" layout="column" layout-align="center center">
@@ -142,7 +142,7 @@
       <h2 class="md-headline">{{ 'home.featured-cities-header' | translate }}</h2>
       <p class="md-subhead">{{ 'home.featured-cities-subheader' | translate }}</p>
     </div>
-    
+
     <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="2" md-cols-gt-sm="4" md-gutter="16px" md-row-height="1.5:1">
       <md-grid-tile class="tile tile-berlin">
         <a ui-sref="cities-berlin" layout-padding layout="column" layout-align="center center">
@@ -192,6 +192,5 @@
         <md-button ui-sref="listingABike" class="md-raised md-primary md-xlrg">{{ 'shared.list-a-bike' | translate }}</md-button>
       </div>
   </div> -->
-
   <footer></footer>
 </md-content>

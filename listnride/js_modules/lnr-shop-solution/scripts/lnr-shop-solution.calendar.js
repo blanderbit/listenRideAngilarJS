@@ -132,20 +132,13 @@ calendar.dateChange = function () {
         calendar.lnrFee = 0;
         calendar.total = 0;
     } else {
-        var invalidDays = countInvalidDays(calendar.startDate, calendar.endDate);
-        calendar.duration = date.duration(calendar.startDate, calendar.endDate, invalidDays);
+        calendar.duration = date.durationDaysPretty(calendar.startDate, calendar.endDate);
         // Price calculation differs slightly between event rentals (bikeFamily 2 or 9) and standard rentals
-        if (calendar.bikeFamily == 2 || calendar.bikeFamily == 9 || calendar.bikeFamily == 11) {
-            invalidDays = 0;
-            var subtotal = date.subtotal(calendar.startDate, calendar.endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, 4, invalidDays);
-        } else {
-            var subtotal = date.subtotal(calendar.startDate, calendar.endDate, calendar.priceHalfDay, calendar.priceDay, calendar.priceWeek, null, invalidDays);
-        }
-        var fee = subtotal * 0.125;
-        var tax = fee * 0.19;
-        calendar.subtotal = subtotal;
-        calendar.lnrFee = fee + tax;
-        calendar.total = subtotal + fee + tax;
+        var prices = price.calculatePrices(calendar.startDate, calendar.endDate, calendar.prices);
+        calendar.subtotal = prices.subtotal;
+        calendar.discount = prices.subtotal - prices.subtotalDiscounted;
+        calendar.lnrFee = prices.serviceFee;
+        calendar.total = prices.total;
     }
     helper.onDateChange();
 };

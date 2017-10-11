@@ -4,9 +4,25 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
   templateUrl: 'app/modules/footer/footer.template.html',
   controllerAs: 'footer',
   controller: [
-    '$window', '$location', '$translate', '$state',
-    function FooterController($window, $location, $translate, $state) {
+    '$scope',
+    '$window',
+    '$location',
+    '$localStorage',
+    '$translate',
+    '$stateParams',
+    function FooterController($scope, $window, $location, $localStorage, $translate, $stateParams) {
       var footer = this;
+
+      footer.hideFooter = $stateParams.hideFooter;
+
+      $scope.$watch(
+        function() { return $stateParams.hideFooter; },
+        function(newValue, oldValue) {
+          if ( newValue !== oldValue ) {
+            footer.hideFooter = newValue;
+          }
+        }
+      );
 
       var url = "";
       var host = $location.host().split('.');
@@ -23,14 +39,15 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
 
       footer.language = getLanguage($translate.use());
 
-      footer.switchLanguage = function(locale) {
-        // $translate.use(locale).then(function(data) {
-        //   footer.language = getLanguage(locale);
-        //   $state.reload();
-        // });
-        $window.location.href = 'http://' + locale + "." + url + $location.path();
+      footer.switchLanguage = function (locale) {
+        // update the language
+        $translate.use(locale).then(function () {
+          // save in local storage
+          $localStorage.selectedLanguage = locale;
+          footer.language = getLanguage(locale);
+        });
       };
-      
+
       footer.onAppClick = function() {
         $window.open('https://itunes.apple.com/de/app/list-n-ride/id992114091?l=' + $translate.use(), '_blank');
       };

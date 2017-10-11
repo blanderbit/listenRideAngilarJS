@@ -18,7 +18,7 @@ module.exports = function () {
             i18n: './app/i18n/**/*',
             fonts: 'node_modules/font-awesome/fonts/*',
             momentjs: 'node_modules/moment/**/*',
-            sitemap: './app/assets/downloads/sitemap.xml',
+            downloadables: './app/assets/downloads/*',
             js_modules: './js_modules/**/*'
         },
         js: ['./app/*.js', './app/**/*.js', '!**/*test.js'],
@@ -104,8 +104,8 @@ module.exports = function () {
                     // userEndpoint: 'http://localhost:3000/v2/users/',
                     // -------------------------
 
-                    apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
-                    userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
+                    apiEndpoint: 'https://listnride-staging-pr-130.herokuapp.com/v2',
+                    userEndpoint: 'https://listnride-staging-pr-130.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com"
                 }
             }

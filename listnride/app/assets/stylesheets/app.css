@@ -102,6 +102,14 @@ md-grid-list md-grid-tile {
   height: 40px;
 }
 
+/* Allows Linebreaks for Tooltips */
+md-tooltip .md-content {
+    height: auto;
+    font-size: 12px;
+    padding: 6px 10px;
+    line-height: 1.1;
+}
+
 .highlight-tile {
   height: 260px;
   padding: 24px 0;
@@ -146,6 +154,10 @@ md-card md-card-title {
 .lnr-image-card {
   border-width: 0;
   margin: 0;
+}
+
+button.md-primary.md-cancel-button.md-button.ng-scope.md-default-theme.md-ink-ripple {
+  background-color: rgb(122, 178, 248);
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -252,6 +264,10 @@ autocomplete .md-errors-spacer {
   margin-right: 8px;
 }
 
+.lnr-margin-right-double {
+  margin-right: 16px;
+}
+
 .lnr-margin-left {
   margin-left: 8px;
 }
@@ -355,6 +371,14 @@ autocomplete .md-errors-spacer {
 /*-----------------------------------------------------------------------------------*/
 /* SVG
 /*-----------------------------------------------------------------------------------*/
+
+.lnr-icn-xs {
+  min-width: 20px;
+  min-height: 20px;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+}
 
 .lnr-icn-sm {
   width: 24px;
@@ -581,6 +605,10 @@ footer .lnr-link {
   max-height: 250px;
 }
 
+.lnr-tel-int  .intl-tel-input .country-list {
+  max-height: 100px !important;
+}
+
 @media (max-width:599px) {
  .md-dialog-content {
     width: 100%;
@@ -791,6 +819,107 @@ md-grid-list md-grid-tile.tile-amsterdam {
 
 md-grid-list md-grid-tile.tile-vienna {
   background-image: url(../ui_images/cities/lnr_vienna.jpg);
+}
+
+.md-dialog-fullscreen.dialog-bikes,
+.md-dialog-fullscreen.dialog-bikes .dialog-content {
+  overflow: visible !important;
+}
+.bikes .slick-slide div {
+  display: block !important;
+}
+.bikes .slick-dots li.slick-active button:before,
+.bikes .slick-dots li button:hover:before {
+  background-color: #7ab2f8;
+}
+
+.bikes .slick-dots li button:before {
+  content: '';
+  display: block;
+  position: static;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  font-size: 0;
+  background-color: #000;
+
+}
+
+.bikes .slick-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 50px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.bikes .slick-arrow_prew {
+  left: 0;
+  background: -webkit-linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+}
+
+.bikes .slick-arrow_next {
+  right: 0;
+  background: -webkit-linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+}
+
+.bikes .slick-arrow_next .arrow {
+  right: 15px;
+}
+.bikes .slick-arrow_prew .arrow {
+  left: 15px;
+}
+
+.bikes .arrow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-top: -20px;
+  cursor: pointer;
+}
+
+.bikes .slick-arrow_prew .arrow:before,
+.bikes .slick-arrow_next .arrow:before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.bikes .slick-arrow_prew .arrow:before {
+  border-top: 5px solid #fff;
+  border-left: 5px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+.bikes .slick-arrow_next .arrow:before {
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.bikes-custom-price {
+  transition: .2s linear all;
+  height: 320px;
+  overflow: hidden;
+}
+.bikes-custom-price.ng-hide {
+  height:0;
+}
+
+@media (max-width: 599px) {
+  .bikes .slick-arrow {
+    display: none !important;
+  }
 }
 
 .testimonials-container {
@@ -1014,6 +1143,10 @@ bike .date-picker-wrapper tr > td:last-child {
   padding-right: 16px;
 }
 
+bike .per-day {
+  margin-bottom: 3px;
+}
+
 md-dialog md-dialog-content .date-picker-wrapper,
 md-dialog md-dialog-content .date-picker-wrapper.inline-wrapper,
 md-dialog md-dialog-content .month-wrapper {
@@ -1179,7 +1312,7 @@ list .md-tab.md-disabled {
 }
 
 .lnr-list-title {
-  margin: 8px 0 24px 0;
+  margin: -8px 0 24px 0;
 }
 
 list md-tabs .lnr-list-form,
@@ -1409,7 +1542,8 @@ message .status-message {
   margin-top: -6px;
 }
 
-button.md-primary.md-confirm-button {
+button.md-primary.md-confirm-button,
+button.md-primary.md-cancel-button {
   background-color: #0ECC92 !important;
 }
 
@@ -1780,6 +1914,10 @@ invite .voucher-link {
   color: #5fc693;
 }
 
+.lnr-dark-green-text {
+  color: #00AD68;
+}
+
 .lnr-mobile-bike {
   white-space: nowrap;
   overflow: hidden;
@@ -1854,4 +1992,23 @@ and (max-device-width : 568px) {
   .velosoph .lnr-event-logos .wahoo img {
     width: 14vw;
   }
+
+  .lnr-no-events {
+    pointer-events: none;
+  }
+}
+
+/* intl-tel-input -- required for build minification */
+.iti-flag {
+  background-image: url("../ui_images/flags.png") !important;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .iti-flag {
+    background-image: url("../ui_images/flags@2x.png") !important;
+  }
+}
+
+.ng-hide-add, .ng-hide-remove {
+  display: block !important;
 }

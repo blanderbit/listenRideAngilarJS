@@ -3,15 +3,18 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', 'ngMeta',
-    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, ngMeta) {
+  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', 'ngMeta', 'price',
+    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, ngMeta, price) {
       var bike = this;
 
       bike.mapOptions = {
         lat: 0,
         lng: 0,
         zoom: 14,
-        radius: 500
+        radius: 500,
+        scrollwheel: false,
+        draggable: false,
+        gestureHandling: 'cooperative'
       };
 
       bike.mobileCalendar = function() {
@@ -28,6 +31,13 @@ angular.module('bike',[]).component('bike', {
           bike.data = response.data;
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
+          $translate($filter('category')(bike.data.category)).then(
+            function (translation) {
+              bike.category = translation;
+              console.log(bike.category);
+            }
+          );
+          console.log(bike.category);
 
           var metaData = {
             name: bike.data.name,
@@ -39,14 +49,13 @@ angular.module('bike',[]).component('bike', {
 
           ngMeta.setTitle($translate.instant("bike.meta-title", metaData));
           ngMeta.setTag("description", $translate.instant("bike.meta-description", metaData));
-          console.log(bike.data);
         },
         function(error) {
-          console.log("Error retrieving bike", error);
         }
       );
 
       bike.showGalleryDialog = function(event) {
+        event.stopPropagation();
         $mdDialog.show({
           controller: GalleryDialogController,
           controllerAs: 'galleryDialog',
@@ -92,6 +101,17 @@ angular.module('bike',[]).component('bike', {
         galleryDialog.image_5 = bikeData.image_file_5.image_file_5.url;
         galleryDialog.hide = function() {
           $mdDialog.hide();
+        };
+        galleryDialog.slickConfig = {
+          enabled: true,
+          autoplay: true,
+          draggable: true,
+          autoplaySpeed: 12000,
+          ease: 'ease-in-out',
+          speed: '500',
+          dots: true,
+          prevArrow: "<div class='slick-arrow slick-arrow_prew'><span class='arrow'></span></div>",
+          nextArrow: "<div class='slick-arrow slick-arrow_next'><div class='arrow'></div></div>"
         }
       }
 

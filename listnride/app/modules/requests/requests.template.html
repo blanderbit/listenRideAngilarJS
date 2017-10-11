@@ -41,26 +41,46 @@
          <p class="requests-list-no-item lnr-center">{{ 'requests.no-requests-yet' | translate }}</p>
     </div>
 
-    <md-list class="lnr-no-padding" md-no-ink ng-if="requests.requests != []">
-      <div ng-repeat="request in requests.requests">
-        <md-divider md-insets></md-divider>
-        <md-list-item class="requests-list-item md-2-line" 
-                      ng-class="{'request-filter-switch-active':requests.selected === request.id}"
-                      ng-click="requests.loadRequest(request.id, true, $index)">
-          <img ng-src="{{requests.profilePicture(request)}}" class="md-avatar" alt="{{item.who}}" />
-          <div class="md-list-item-text" layout="column">
-            <div layout="row">
-              <h4 ng-if="requests.is_rider(request)" class="lnr-bold">{{request.ride.name}}</h4>
-              <h4 ng-if="requests.is_lister(request)" class="lnr-bold">{{request.user.first_name}} {{request.user.last_name}}</h4>
-              <div flex></div>
-              <div class="unread-indicator" ng-if="!request.last_message.is_read && request.last_message.receiver == requests.userId"></div>
+    <!--#list-wrapper {-->
+    <!--max-height: 700px;-->
+    <!--overflow-y: scroll;-->
+    <!--}-->
+    <div id="list-wrapper" >
+      <div
+        infinite-scroll='requests.nextPage()'
+        infinite-scroll-distance='0'
+        infinite-scroll-container="'#list-wrapper'"
+        infinite-scroll-listen-for-event='requests.nextPage()'
+      >
+        <div ng-repeat="request in requests.requests track by $index" >
+          <md-divider md-insets></md-divider>
+          <md-list-item class="requests-list-item md-2-line"
+                        ng-class="{'request-filter-switch-active':requests.selected === request.id}"
+                        ng-click="requests.loadRequest(request.id, true, $index)">
+            <img ng-src="{{requests.profilePicture(request)}}" class="md-avatar" alt="{{item.who}}" />
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <h4 ng-if="requests.is_rider(request)" class="lnr-bold">{{request.ride.name}}</h4>
+                <h4 ng-if="requests.is_lister(request)" class="lnr-bold">{{request.user.first_name}} {{request.user.last_name}}</h4>
+                <div flex></div>
+                <div class="unread-indicator" ng-if="!request.last_message.is_read && request.last_message.receiver == requests.userId"></div>
+              </div>
+              <p>{{request.timespan}}</p>
             </div>
-            <p>{{request.timespan}}</p>
-          </div>
-        </md-list-item>
+          </md-list-item>
+        </div>
+        <md-divider md-insets></md-divider>
+        <span></span>
+        <md-button
+          class="md-raised md-primary"
+          ng-click="requests.nextPage()"
+          ng-style="{'display': requests.loadingList ? 'none' : ''}"
+          ng-if="requests.requestsLeft"
+        >
+          {{ 'shared.load-more' | translate }}
+        </md-button>
       </div>
-      <md-divider md-insets></md-divider>
-    </md-list>
+    </div>
   </md-content>
 
   <!-- Right Column displaying actual Chat -->

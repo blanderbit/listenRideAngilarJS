@@ -7,7 +7,7 @@
             <span flex></span>
             <h2 class="md-headline">{{ 'forms.update-contact' | translate }}</h2>
             <span flex></span>
-            <md-button class="md-icon-button" ng-click="changeContact.closeDialog()">
+            <md-button class="md-icon-button" ng-click="changeContact.closeDialog">
                 <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
             </md-button>
         </div>
@@ -26,7 +26,7 @@
                                 ng-model="changeContact.user.new_phone_number"
                                 ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/"
                                 name="phone_number"
-                                preferred-countries="de, nl"
+                                preferred-countries="de, at, nl, fr, lv, es, ch, gb"
                             >
                             <div ng-messages="contact.phone_number.$error" role="alert">
                                 <div ng-message="pattern">{{ 'verification.5.enter-valid-phone-nr' | translate }}</div>

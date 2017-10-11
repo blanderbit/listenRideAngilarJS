@@ -15,12 +15,11 @@
 
     <div flex-gt-xs layout="row" layout-wrap layout-padding layout-align="center center">
       <listing-card ng-repeat="bike in listings.bikes" flex="100" flex-gt-xs="50" flex-gt-sm="33"
-        bike-id="bike.id" name="bike.name" brand="bike.brand" category="bike.category" price="bike.price_daily"
+        bike-id="bike.id" name="bike.name" brand="bike.brand" category="bike.category" price="bike.price_from"
         image-url=" bike.image_file_1.image_file_1.small.url" available="bike.available"
         remove-bike="listings.removeBike(bikeId)">
       </listing-card>
     </div>
   </div>
-
   <footer></footer>
 </md-content>

@@ -1,4 +1,4 @@
-<md-dialog flex="65">
+<md-dialog flex="65" class="dialog-bikes">
 
   <md-toolbar class="md-accent">
     <div class="md-toolbar-tools" layout-align="center center">
@@ -14,25 +14,25 @@
     </div>
   </md-toolbar>
 
-  <md-dialog-content>
+  <md-dialog-content class="dialog-content">
     <div layout="column" style="height: 100%" layout="column">
-      <md-tabs md-align-tabs="bottom" md-center-tabs md-dynamic-height md-swipe-content="true">
-        <md-tab label="1" ng-if="galleryDialog.image_1 != null">
-          <img style="max-width: 100%" ng-src="{{galleryDialog.image_1}}"></img>
-        </md-tab>
-        <md-tab label="2" ng-if="galleryDialog.image_2 != null">
-          <img style="max-width: 100%" ng-src="{{galleryDialog.image_2}}"></img>
-        </md-tab>
-        <md-tab label="3" ng-if="galleryDialog.image_3 != null">
-          <img style="max-width: 100%" ng-src="{{galleryDialog.image_3}}"></img>
-        </md-tab>
-        <md-tab label="4" ng-if="galleryDialog.image_4 != null">
-          <img style="max-width: 100%" ng-src="{{galleryDialog.image_4}}"></img>
-        </md-tab>
-        <md-tab label="5" ng-if="galleryDialog.image_5 != null">
-          <img style="max-width: 100%" ng-src="{{galleryDialog.image_5}}"></img>
-        </md-tab>
-      </md-tabs>
+      <slick settings="galleryDialog.slickConfig" class="bikes">
+          <div label="1" ng-if="galleryDialog.image_1 != null">
+            <img style="max-width: 100%" ng-src="{{galleryDialog.image_1}}">
+          </div>
+          <div label="2" ng-if="galleryDialog.image_2 != null">
+            <img style="max-width: 100%" ng-src="{{galleryDialog.image_2}}">
+          </div>
+          <div label="3" ng-if="galleryDialog.image_3 != null">
+            <img style="max-width: 100%" ng-src="{{galleryDialog.image_3}}">
+          </div>
+          <div label="4" ng-if="galleryDialog.image_4 != null">
+            <img style="max-width: 100%" ng-src="{{galleryDialog.image_4}}">
+          </div>
+          <div label="5" ng-if="galleryDialog.image_5 != null">
+            <img style="max-width: 100%" ng-src="{{galleryDialog.image_5}}">
+          </div>
+      </slick>
     </div>
   </md-dialog-content>
 

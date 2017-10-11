@@ -15,11 +15,15 @@
               .then(function (translations) {
                 ngMeta.setTitle(translations["home.meta-title"]);
                 ngMeta.setTag("description", translations["home.meta-description"]);
+                // Below is how to set the OG:IMAGE if disableUpdate is true
+                // ngMeta.setTag("og:image", "imageurl.jpg");
               })
           }
         },
         meta: {
           disableUpdate: true
+          // Below is how to set the OG:IMAGE if disableUpate is false
+          // 'og:image': 'imageurl.jpg'
         }
       });
 
@@ -46,6 +50,7 @@
         url: '/search/{location}?size&allterrain&race&city&kids&ebikes&special',
         template: '<search></search>',
         params: {
+          hideFooter: true,
           size: {
             value: "",
             squash: true
@@ -93,6 +98,7 @@
         name: 'requests',
         url: '/requests/{requestId:int}',
         params: {
+          hideFooter: true,
           requestId: {
             squash: true,
             value: null
@@ -123,7 +129,7 @@
       $stateProvider.state({
         name: 'list',
         url: '/list-bike',
-        template: '<list></list>'
+        template: '<list heading="\'list.list-bike\'" is-list-mode=true discount-field-editable=true></list>'
       });
 
       $stateProvider.state({
@@ -141,7 +147,7 @@
       $stateProvider.state({
         name: 'edit',
         url: '/edit-bike/{bikeId:int}',
-        template: '<edit></edit>'
+        template: '<list heading="\'list.edit-bike\'" is-list-mode=false discount-field-editable=true></list>'
       });
 
       $stateProvider.state({
@@ -858,11 +864,11 @@
         }
       });
 
-      $stateProvider.state({
-        name: 'seo-landing',
-        url: '/{pageTitle: string}',
-        template: '<seo-landing></seo-landing>'
-      });
+      // $stateProvider.state({
+      //   name: 'seo-landing',
+      //   url: '/{pageTitle: string}',
+      //   template: '<seo-landing></seo-landing>'
+      // });
 
       $urlRouterProvider.otherwise(function ($injector) {
         var state = $injector.get('$state');
