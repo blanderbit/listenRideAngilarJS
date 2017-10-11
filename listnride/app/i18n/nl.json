@@ -168,7 +168,7 @@
     "company-name": "Bedrijfsnaam",
     "company-information": "Bedrijfsgegevens",
     "vat": "VAT",
-    "payment-info": "Show current Payment"
+    "payment-info": "Betaalmethode toon"
   },
   "verification": {
     "verify-profile": "Voltooi je profiel",
@@ -202,9 +202,13 @@
       "description": "Bevestig je telefoonnummer, zodat we je per SMS kunnen informeren als er een nieuwe aanvraag voor je is. Voer uw telefoonnummer in en klik op \"Bevestiging versturen\". Je ontvangt dan een sms met een code die je hieronder kunt invoeren.",
       "enter-valid-phone-nr": "Voer een geldig telefoonnummer in",
       "send-confirmation-sms": "Bevestigings versturen",
+      "send-confirmation-sms-mobile": "Code versturen",
       "resend-confirmation-sms": "Bevestiging versturen",
+      "resend-confirmation-sms-mobile": "Bevestiging versturen",
       "sms-verification-code": "SMS-Verificatie-Code",
+      "sms-verification-code-mobile": "Verificatie-Code",
       "confirm-code": "Code Bevestigen",
+      "confirm-code-mobile": "Bevestigen",
       "phone-nr-verified": "Je telefoonnummer is met succes geverifieerd!"
     },
     "6": {
@@ -340,6 +344,7 @@
     "country": "Land",
     "company-name": "Company name",
     "update-contact": "Contactgegevens wijzigen",
+    "update-contact-mobile": "Contactgegevens",    
     "company-contact-info": "Vul uw Bedrijfsnaam en naam van de contact persoon in",
     "errors": {
       "password-length": "Wachtwoord dient 6-30 karakters lang te zijn",

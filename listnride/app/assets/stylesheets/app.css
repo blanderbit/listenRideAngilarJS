@@ -368,6 +368,18 @@ autocomplete .md-errors-spacer {
   position: fixed;
 }
 
+
+/*-----------------------------------------------------------------------------------*/
+/* MOBILE UI ADJUSTMENTS
+/*-----------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+  /* on mobile, the margin from left is set to 0 */
+  .lnr-btn-mobile {
+    margin-left: 0;
+  }
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* SVG
 /*-----------------------------------------------------------------------------------*/
@@ -1734,6 +1746,28 @@ md-grid-list a {
   background-image: url(../ui_images/citypages/amsterdam-rent-cargo.jpg);
 }
 
+.form-error {
+  border: 1px solid rgb(221,44,0);
+  border-radius: 4px;
+}
+.text-error {
+  color: rgb(221,44,0);
+}
+
+md-input-container .md-input.form-input-error {
+  border: 1px solid rgb(221,44,0);
+  border-radius: 4px;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  JOBS POSTINGS
+/*-----------------------------------------------------------------------------------*/
+
 @media (min-width: 960px) {
   #jobs-details md-list-item,
   md-list-item .md-list-item-inner {
@@ -1755,24 +1789,6 @@ md-grid-list a {
 }
 #jobs-details .list-align {
    margin-left: -10px;
-}
-
-.form-error {
-  border: 1px solid rgb(221,44,0);
-  border-radius: 4px;
-}
-.text-error {
-  color: rgb(221,44,0);
-}
-
-md-input-container .md-input.form-input-error {
-  border: 1px solid rgb(221,44,0);
-  border-radius: 4px;
-}
-
-.disabled {
-  pointer-events: none;
-  opacity: 0.5;
 }
 
 /*-----------------------------------------------------------------------------------*/

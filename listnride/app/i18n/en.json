@@ -202,9 +202,13 @@
       "description": "Verify your phone number, this allows SMS notifications for your requests. Simply enter your number and click 'Send Confirmation'. You'll receive a code via SMS that you can then enter below.",
       "enter-valid-phone-nr": "Please enter a valid phone number",
       "send-confirmation-sms": "Send Confirmation",
+      "send-confirmation-sms-mobile": "Send SMS Code",
       "resend-confirmation-sms": "Resend Confirmation",
+      "resend-confirmation-sms-mobile": "Resend",
       "sms-verification-code": "SMS Verification Code",
+      "sms-verification-code-mobile": "Verification Code",
       "confirm-code": "Confirm Code",
+      "confirm-code-mobile": "Confirm",
       "phone-nr-verified": "Your number is successfully verified!"
     },
     "6": {
@@ -327,6 +331,7 @@
     "country": "Country",
     "company-name": "Company name",
     "update-contact": "Update Contact",
+    "update-contact-mobile": "Contact",
     "company-contact-info": "Please fill form with company contact person information.",
     "errors": {
       "password-length": "Password should be 6-30 characters",
