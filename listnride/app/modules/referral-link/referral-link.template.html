@@ -1,16 +1,20 @@
 <!-- invitation form -->
-<div id="inviteForm" layout-padding style="margin-bottom: 35px;">
-    <div class="invite-form-container content" md-theme="lnr-dark" layout="column" layout-align="space-between none">
-        <div class="lnr-center" flex layout="column" layout-align="center center">
+<div id="inviteForm" layout-padding>
+    <div class="invite-form-container content" md-theme="lnr-dark" layout="column" layout-align="space-around none">
+        <div class="lnr-center" flex layout="column" layout-align="start center">
             <h2 class="md-display-1">{{ referral.header | translate }}</h2>
-            <p class="md-subhead" layout layout-align="center center"><span flex="90">{{ referral.subHeader | translate }}</span>
+        </div>
+        <div class="lnr-center" flex layout="column" layout-align="center center">
+            <p class="md-subhead" layout layout-align="center center">
+                <span flex="90">{{ referral.subHeader | translate }}</span>
             </p>
         </div>
 
         <div ng-if="referral.authentication.loggedIn()"
              class="button-container"
-             layout-margin layout="row"
-             layout-align="center center">
+             layout="row"
+             layout-align="center center" 
+             layout-margin>
             <img ng-click="referral.shareThroughFacebook()"
                  class="lnr-icn-lrg share-icon"
                  ng-src="app/assets/ui_icons/icn_facebook_share.png">
@@ -20,7 +24,6 @@
                  ng-src="app/assets/ui_icons/icn_email_share.png">
             </img>
         </div>
-
         <div ng-if="referral.authentication.loggedIn()"
              flex
              layout="column"
