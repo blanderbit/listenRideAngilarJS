@@ -181,21 +181,20 @@
                 </md-input-container>
               </div>
             </div>
+            <div class="navigation" 
+                 layout="row" 
+                 layout-align-xs="center stretch" 
+                 layout-align="end center" 
+                 layout-margin 
+                 flex-xs>
+              <md-button flex-xs
+                         class="md-raised md-primary" 
+                         ng-click="settings.updateUser()" 
+                         ng-disabled="!settings.form.$dirty">
+                {{ 'list.save-changes' | translate }}
+              </md-button>
+            </div>
           </form>
-        </div>
-
-        <div class="navigation"
-             layout="row"
-             layout-align-xs="center stretch"
-             layout-align="end center"
-             layout-margin
-             flex-xs>
-          <md-button flex-xs="90" 
-                     class="md-raised md-primary"
-                     ng-click="settings.updateUser()"
-                     ng-disabled="!settings.form.$dirty">
-            {{ 'edit.save-changes' | translate }}
-          </md-button>
         </div>
       </md-tab>
       <!--end profile -->
@@ -270,13 +269,13 @@
                   <div layout="row" layout-xs="column">
                     <md-input-container layout="row" flex-gt-xs="45" flex="100">
                       <md-button flex 
-                                 class="md-raised md-primary" 
+                                 class="md-raised md-primary lnr-btn-inline" 
                                  ng-click="settings.currentPaymentMethod()" 
                                  ng-if="!settings.user.paymentLoading">
                         {{ 'settings.payment-info' | translate }}
                       </md-button>
                       <md-button flex
-                                 class="md-raised md-primary" 
+                                 class="md-raised md-primary lnr-btn-inline" 
                                  ng-click="settings.currentPaymentMethod()" 
                                  ng-if="settings.user.paymentLoading" 
                                  ng-disabled="true">
@@ -286,7 +285,7 @@
                     <span flex></span>
                     <md-input-container layout="row" flex-gt-xs="45" flex="100">
                       <md-button flex
-                                 class="md-raised md-primary" 
+                                 class="md-raised md-primary lnr-btn-inline" 
                                  ng-click="settings.openPaymentWindow()">
                         {{ 'settings.add-payment-method' | translate }}
                       </md-button>
@@ -448,8 +447,8 @@
                  layout-align="end center" 
                  layout-margin 
                  flex-xs>
-              <md-button flex-xs="90" 
-                         class="md-raised md-primary md-warn lnr-btn-mobile" 
+              <md-button flex-xs 
+                         class="md-raised md-primary md-warn" 
                          ng-click="settings.deleteAccount()">
                 {{'settings.delete-account' | translate }}
               </md-button>
@@ -554,7 +553,7 @@
                   class="md-raised md-primary"
                   ng-disabled="settings.error"
               >
-                {{ 'edit.save-changes' | translate }}
+                {{ 'list.save-changes' | translate }}
               </md-button>
             </div>
           </form>
