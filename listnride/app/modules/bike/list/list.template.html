@@ -483,7 +483,7 @@
                           <label>{{ 'list.pricing.daily-discount' | translate }} (%)</label>
                         </div>
                         <div>
-                          <md-icon class="lnr-icn-xs md-color-black"
+                          <md-icon hide-xs class="lnr-icn-xs md-color-black"
                                    md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
                           <md-tooltip md-direction="right">{{ 'list.pricing.daily-discount-tooltip' | translate }}
                           </md-tooltip>
@@ -509,7 +509,7 @@
                           <label>{{ 'list.pricing.weekly-discount' | translate }} (%)</label>
                         </div>
                         <div>
-                          <md-icon class="lnr-icn-xs md-color-black"
+                          <md-icon hide-xs class="lnr-icn-xs md-color-black"
                                    md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
                           <md-tooltip md-direction="right">{{ 'list.pricing.weekly-discount-tooltip' | translate }}
                         </div>
@@ -674,7 +674,9 @@
                   <div layout="row" layout-align="space-between center">
                     <div flex="45">
                       <md-input-container class="md-block">
-                        <label>{{'list.pricing.price_8_days_long' | translate}}</label>
+                        <!-- don't use `hide-sm` here. causes issues in ipad split screen -->
+                        <label hide-xs>{{'list.pricing.price_8_days_long' | translate}}</label>
+                        <label hide-gt-xs>{{'list.pricing.price_8_days' | translate}}</label>
                         <input type="text"
                                name="price_8_days"
                                ng-pattern="/^\d+$/"
