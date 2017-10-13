@@ -194,7 +194,7 @@
     },
     "3": {
       "title": "Erzähle etwas über dich",
-      "label": "Beschreibung (min. 20 Buchstaben)"
+      "label": "Beschreibung (min. 50 Buchstaben)"
     },
     "4": {
       "description": "Bestätige Deine E-Mail-Adresse, indem Du auf den Link in der Bestätigungsmail klickst, die wir Dir nach der Registrierung schicken. Falls Du sie nicht mehr findest, kannst Du die Mail erneut anfordern. Erscheint sie nicht sofort in Deinem Postfach, warte bitte noch ein paar Minuten oder überprüfe deinen Spam-Ordner.",
@@ -205,9 +205,12 @@
       "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst.",
       "enter-valid-phone-nr": "Bitte gib eine valide Telefonnummer an",
       "send-confirmation-sms": "Bestätigungs-SMS schicken",
+      "send-confirmation-sms-mobile": "Code schicken",
       "resend-confirmation-sms": "Erneut schicken",
       "sms-verification-code": "Verifizierungs-Code",
+      "sms-verification-code-mobile": "Verifizierungs-Code",
       "confirm-code": "Code Bestätigen",
+      "confirm-code-mobile": "Bestätigen",
       "phone-nr-verified": "Deine Nummer wurde erfolgreich verifiziert!"
     },
     "6": {
@@ -352,6 +355,7 @@
     "country": "Land",
     "company-name": "Company name",
     "update-contact": "Kontakt aktualisieren",
+    "update-contact-mobile": "Kontakt",
     "company-contact-info": "Bitte trage die Daten der Kontaktperson des Unternehmens ein.",
     "errors": {
       "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
@@ -454,10 +458,10 @@
       "country": "Land"
     },
     "pricing": {
-      "info": "Dein Tagespreis ist dein Standardpreis pro Tag.",
+      "info": "Dein Tagespreis ist dein basis Preis bei 1 Tagesmiete.",
       "info-description": "Information zum Mietpreis",
       "header": "Tagespreis",
-      "description": "Dein Tagespreis ist dein Standardpreis pro Tag.",
+      "description": "Dein Tagespreis ist dein basis Preis bei 1 Tagesmiete.",
       "daily-price-description": "Bei Eingabe des Tagespreises schlagen wir<br>dir automatisch ein Rabattschema für<br>längerfristige Vermietungen vor.<br>Du kannst die Preise allerdings<br>auch einzeln anpassen.",
       "hint-para-1": "Über den Preis, den du für dein Rad nimmst, entscheidest du selbst. Der Mietpreis sollte sich nach Rad und Ausstattung richten. Um eine Vorstellung von den Preisen am Markt zu erhalten, schaue Dir vergleichbare Angebote an.",
       "hint-para-2": "Eine Mietdauer unter 6 Stunden ist eine Halbtagesmiete, 6-24 Stunde steht für eine Tagesmiete.",

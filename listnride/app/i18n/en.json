@@ -191,7 +191,7 @@
     },
     "3": {
       "title": "Tell something about yourself or shop",
-      "label": "Description (min. 20 Characters)"
+      "label": "Description (min. 50 Characters)"
     },
     "4": {
       "description": "Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder.",
@@ -202,9 +202,13 @@
       "description": "Verify your phone number, this allows SMS notifications for your requests. Simply enter your number and click 'Send Confirmation'. You'll receive a code via SMS that you can then enter below.",
       "enter-valid-phone-nr": "Please enter a valid phone number",
       "send-confirmation-sms": "Send Confirmation",
+      "send-confirmation-sms-mobile": "Send SMS Code",
       "resend-confirmation-sms": "Resend Confirmation",
+      "resend-confirmation-sms-mobile": "Resend",
       "sms-verification-code": "SMS Verification Code",
+      "sms-verification-code-mobile": "Verification Code",
       "confirm-code": "Confirm Code",
+      "confirm-code-mobile": "Confirm",
       "phone-nr-verified": "Your number is successfully verified!"
     },
     "6": {
@@ -327,6 +331,7 @@
     "country": "Country",
     "company-name": "Company name",
     "update-contact": "Update Contact",
+    "update-contact-mobile": "Contact",
     "company-contact-info": "Please fill form with company contact person information.",
     "errors": {
       "password-length": "Password should be 6-30 characters",
@@ -439,10 +444,10 @@
       "country": "Country"
     },
     "pricing": {
-      "info": "Your daily price is your default daily rate.",
+      "info": "Your daily price is your base price for 1 day.",
       "info-description": "Information about the rental price",
       "header": "Daily Price",
-      "description": "Your daily price is your default daily rate.",
+      "description": "Your daily price is your base price for 1 day.",
       "hint-para-1": "The price you charge for your bike is up to you. The price should be based on the bike and equipment. To get an idea of market prices, you can view comparable listings. ",
       "hint-para-2": "A rental period for less than 6 hours equals a half-day rental, 6 to 24 hours a day’s rental.",
       "hint-para-3": "To encourage longer rentals, some listers set a daily or weekly discount." ,
@@ -470,7 +475,7 @@
       "price_6_days": "6 days",
       "price_7_days": "7 days (1 week)",
       "price_8_days": "8 days onwards",
-      "price_8_days_long": "8 days onwards (each day)",
+      "price_8_days_long": "8 days onwards (per day)",
       "price_30_days": "30 days",
       "price_30_days_long": "30 days (1 month)",
       "reset-prices": "Reset",

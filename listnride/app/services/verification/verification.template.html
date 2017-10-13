@@ -141,7 +141,7 @@
                     ng-model="verificationDialog.newUser.description"
                     rows="{{ verificationDialog.mobileScreen ? '9' : '5'}}">
                   </textarea>
-                  <div ng-messages="verificationDialog.descriptionForm.description.$error" role="alert">
+                  <div ng-messages="verificationDialog.descriptionForm.description.$error"  ng-show='verificationDialog.descriptionForm.description.$dirty && verificationDialog.descriptionForm.description.$invalid' role="alert">
                     <div ng-message="minlength">{{ 'verification.3.label' | translate }}</div>
                   </div>
                 </form>
