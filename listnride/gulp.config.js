@@ -60,6 +60,8 @@ module.exports = function () {
             css: './js_modules/lnr-shop-integration/lnr-shop-integration.css',
             vendorCss: './js_modules/lnr-shop-integration/vendor.css',
             js: [
+                './js_modules/lnr-shop-integration/lnr-shop-integration.constants.js',
+                './js_modules/lnr-shop-integration/lnr-shop-integration.helper.js',
                 './js_modules/lnr-shop-integration/lnr-shop-integration.js',
                 './js_modules/lnr-shop-integration/vendor.js'
             ],
