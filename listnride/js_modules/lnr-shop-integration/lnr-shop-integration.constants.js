@@ -19,6 +19,14 @@ var lnrConstants = {
   // shop solution for staging and production
   staging_shop_solution: "https://listnride-staging.herokuapp.com/v2/shop_solutions",
   production_shop_solution: "https://api.listnride.com/v2/shop_solutions",
+
+  // users for staging and production
+  staging_users: "https://listnride-staging.herokuapp.com/v2/users/",
+  production_users: "https://api.listnride.com/v2/users/",
+
+  // root url for svg files
+  svgUrlRoot: 'https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/biketype_',
+
   // map of the categories for en, de and nl languages
   subCategory : {
     // subcategory - english

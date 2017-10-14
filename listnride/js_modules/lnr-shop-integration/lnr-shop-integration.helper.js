@@ -1,6 +1,6 @@
 var lnrHelper = {
   /**
-   * wrapper for fetching bikes after 100ms  
+   * wrapper for fetching bikes after 100ms
    */
   fetchBikes: function (callback) {
     if (window.lnrJquery) {
@@ -12,7 +12,7 @@ var lnrHelper = {
     }
   },
   /**
-   * select the category name based on the category id received from server side 
+   * select the category name based on the category id received from server side
    * based on user_id and user_lang
    * @param {Number} categoryId id of the category
    * @param {String} user_lang language of the user. [english, german, dutch]
@@ -30,25 +30,25 @@ var lnrHelper = {
       case 11: return selectedCategory["1"]["touring-bike"];
       case 12: return selectedCategory["1"]["fixie"];
       case 13: return selectedCategory["1"]["single-speed"];
-      
+
       case 20: return selectedCategory["2"]["road-bike"];
       case 21: return selectedCategory["2"]["triathlon"];
       case 22: return selectedCategory["2"]["indoor"];
-      
+
       case 30: return selectedCategory["3"]["tracking"];
       case 31: return selectedCategory["3"]["enduro"];
       case 32: return selectedCategory["3"]["freeride"];
       case 33: return selectedCategory["3"]["cross-country"];
       case 34: return selectedCategory["3"]["downhill"];
       case 35: return selectedCategory["3"]["cyclocross"];
-      
+
       case 40: return selectedCategory["4"]["city"];
       case 41: return selectedCategory["4"]["all-terrain"];
       case 42: return selectedCategory["4"]["road"];
-      
+
       case 50: return selectedCategory["5"]["pedelec"];
       case 51: return selectedCategory["5"]["e-bike"];
-      
+
       case 60: return selectedCategory["6"]["folding-bike"];
       case 61: return selectedCategory["6"]["tandem"];
       case 62: return selectedCategory["6"]["cruiser"];
@@ -69,7 +69,7 @@ var lnrHelper = {
    */
   renderBikes: function ($, user_id, user_lang) {
     var url = "";
-    lnrConstants.env == "staging" ? url = "https://listnride-staging.herokuapp.com/v2/users/" : url = "https://api.listnride.com/v2/users/";
+    lnrConstants.env == "staging" ? url = lnrConstants.staging_users : url = lnrConstants.production_users;
     $.get(url + user_id, function (response) {
 
       var selectedLangText, dayText, sizeText, buttonText;
@@ -92,7 +92,7 @@ var lnrHelper = {
       // grid for the bikes cards
       $("#listnride").append('<div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid"></div>');
 
-      // production root 
+      // production root
       var rootUrl = 'http://www.listnride.com';
 
       // grid selector
@@ -106,7 +106,7 @@ var lnrHelper = {
           categoryDesc = lnrHelper.categoryFilter(category, user_lang),
           price = parseInt(ride.price_from),
           imageUrl = ride.image_file_1.image_file_1.small.url,
-          svgUrl = 'https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/biketype_' + (category + '').slice(0, 1) + '.svg',
+          svgUrl = lnrConstants.svgUrlRoot + (category + '').slice(0, 1) + '.svg',
           rideDescription = ride.description.slice(0, 150).concat(' ...');
         grid.append(
           '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">' +
@@ -165,7 +165,7 @@ var lnrHelper = {
       height = 700,
       left = (screen.width / 2) - (width / 2),
       top = (screen.height / 2) - (height / 2);
-    
+
       return {
           // dimensions
           width: width,
