@@ -170,7 +170,7 @@
     "company-name":"Unternehmensname",
     "company-information":"Unternehmensinformationen",
     "vat":"VAT",
-    "payment-info":"Show current Payment"
+    "payment-info":"Aktuelle Zahlungsmethode anzeigen"
   },
 
   "verification": {

@@ -168,7 +168,7 @@
     "company-name": "Bedrijfsnaam",
     "company-information": "Bedrijfsgegevens",
     "vat": "VAT",
-    "payment-info": "Betaalmethode toon"
+    "payment-info": "Aktuele betaalmethode tonen"
   },
   "verification": {
     "verify-profile": "Voltooi je profiel",
