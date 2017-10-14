@@ -26,56 +26,37 @@ var lnrHelper = {
     else selectedCategory = lnrConstants.subCategory.de;
     // select sub category based on the user language
     switch (categoryId) {
-      case 10:
-        return selectedCategory["1"]["dutch-bike"];
-      case 11:
-        return selectedCategory["1"]["touring-bike"];
-      case 12:
-        return selectedCategory["1"]["fixie"];
-      case 13:
-        return selectedCategory["1"]["single-speed"];
-      case 20:
-        return selectedCategory["2"]["road-bike"];
-      case 21:
-        return selectedCategory["2"]["triathlon"];
-      case 22:
-        return selectedCategory["2"]["indoor"];
-      case 30:
-        return selectedCategory["3"]["tracking"];
-      case 31:
-        return selectedCategory["3"]["enduro"];
-      case 32:
-        return selectedCategory["3"]["freeride"];
-      case 33:
-        return selectedCategory["3"]["cross-country"];
-      case 34:
-        return selectedCategory["3"]["downhill"];
-      case 35:
-        return selectedCategory["3"]["cyclocross"];
-      case 40:
-        return selectedCategory["4"]["city"];
-      case 41:
-        return selectedCategory["4"]["all-terrain"];
-      case 42:
-        return selectedCategory["4"]["road"];
-      case 50:
-        return selectedCategory["5"]["pedelec"];
-      case 51:
-        return selectedCategory["5"]["e-bike"];
-      case 60:
-        return selectedCategory["6"]["folding-bike"];
-      case 61:
-        return selectedCategory["6"]["tandem"];
-      case 62:
-        return selectedCategory["6"]["cruiser"];
-      case 63:
-        return selectedCategory["6"]["cargo-bike"];
-      case 64:
-        return selectedCategory["6"]["recumbent"];
-      case 65:
-        return selectedCategory["6"]["mono-bike"];
-      default:
-        return "";
+      case 10: return selectedCategory["1"]["dutch-bike"];
+      case 11: return selectedCategory["1"]["touring-bike"];
+      case 12: return selectedCategory["1"]["fixie"];
+      case 13: return selectedCategory["1"]["single-speed"];
+      
+      case 20: return selectedCategory["2"]["road-bike"];
+      case 21: return selectedCategory["2"]["triathlon"];
+      case 22: return selectedCategory["2"]["indoor"];
+      
+      case 30: return selectedCategory["3"]["tracking"];
+      case 31: return selectedCategory["3"]["enduro"];
+      case 32: return selectedCategory["3"]["freeride"];
+      case 33: return selectedCategory["3"]["cross-country"];
+      case 34: return selectedCategory["3"]["downhill"];
+      case 35: return selectedCategory["3"]["cyclocross"];
+      
+      case 40: return selectedCategory["4"]["city"];
+      case 41: return selectedCategory["4"]["all-terrain"];
+      case 42: return selectedCategory["4"]["road"];
+      
+      case 50: return selectedCategory["5"]["pedelec"];
+      case 51: return selectedCategory["5"]["e-bike"];
+      
+      case 60: return selectedCategory["6"]["folding-bike"];
+      case 61: return selectedCategory["6"]["tandem"];
+      case 62: return selectedCategory["6"]["cruiser"];
+      case 63: return selectedCategory["6"]["cargo-bike"];
+      case 64: return selectedCategory["6"]["recumbent"];
+      case 65: return selectedCategory["6"]["mono-bike"];
+
+      default: return "";
     }
   },
   /**
@@ -170,21 +151,33 @@ var lnrHelper = {
     // select shop solution based on the environment
     (lnrConstants.env == "staging") ? (url = lnrConstants.staging_shop_solution) : (url = lnrConstants.production_shop_solution);
     // window dimensions, url, parameter, and open type
-    var windowObj = {
-      // dimensions
-      width: 650,
-      height: 700,
-      left: (screen.width / 2) - (this.width / 2),
-      top: (screen.height / 2) - (this.height / 2),
-      //window url
-      url: url + '?user_id=' + userId + '&ride_id=' + bikeId,
-      // open type
-      type: '_blank',
-      // window params
-      params: 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=' + this.width + ',height=' + this.height + ',top=' + this.top + ',left=' + this.left
-    };
+    var windowObj = lnrHelper.getWindowParams(url, userId, bikeId);
     // open window for selected environment and dimensions
     window.open(windowObj.url, windowObj.type, windowObj.params);
+  },
+  /**
+   * get window configuration for opening the lnr shop solution
+   * window dimensions, url, opening type, and window parameter
+   */
+  getWindowParams: function (url, userId, bikeId) {
+    // dimensions
+    var width = 650,
+      height = 700,
+      left = (screen.width / 2) - (width / 2),
+      top = (screen.height / 2) - (height / 2);
+    
+      return {
+          // dimensions
+          width: width,
+          height: height,
+          left: left,
+          top: top,
+          //window url
+          url: url + '?user_id=' + userId + '&ride_id=' + bikeId,
+          // open type
+          type: '_blank',
+          // window params
+          params: 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=' + width + ',height=' + height + ',top=' + top + ',left=' + left
+    };
   }
-
 };
