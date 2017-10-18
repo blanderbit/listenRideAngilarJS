@@ -79,19 +79,16 @@ var lnrHelper = {
     lnrConstants.env == "staging" ? url = lnrConstants.staging_users : url = lnrConstants.production_users;
     $.get(url + user_id, function (response) {
 
-      var selectedLangText, dayText, sizeText, buttonText;
+      var dayText, sizeText, buttonText;
       if ('en' === user_lang) {
-        selectedLangText = lnrConstants.introText.en;
         dayText = 'from';
         sizeText = 'For';
         buttonText = 'Rent this Bike';
       } else if ('nl' === user_lang) {
-        selectedLangText = lnrConstants.introText.nl;
         dayText = 'van';
         sizeText = 'Voor';
         buttonText = 'Rent this Bike';
       } else {
-        selectedLangText = lnrConstants.introText.de;
         dayText = 'ab';
         sizeText = 'F&uuml;r';
         buttonText = 'Dieses Rad Mieten';
