@@ -525,7 +525,7 @@ angular.module('settings',[]).component('settings', {
         };
 
         if (settings.password && settings.password.length >= 6) {
-          data.user.password_hashed = sha256.encrypt(settings.password);
+          data.password_hashed = sha256.encrypt(settings.password);
         }
 
         loadingDialog.open();
