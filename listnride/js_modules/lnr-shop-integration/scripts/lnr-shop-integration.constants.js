@@ -1,3 +1,6 @@
+/* global
+        $
+*/
 var lnrConstants = {
   env: "production",
   lnrStyles: "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.css",
@@ -28,7 +31,7 @@ var lnrConstants = {
   svgUrlRoot: 'https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/biketype_',
 
   // map of the categories for en, de and nl languages
-  subCategory : {
+  subCategory: {
     // subcategory - english
     en: {
       "1": {

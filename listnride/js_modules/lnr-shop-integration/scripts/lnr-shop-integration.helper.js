@@ -1,6 +1,13 @@
+/* global
+        lnrConstants
+        lnrJquery
+        $
+*/
 var lnrHelper = {
   /**
    * wrapper for fetching bikes after 100ms
+   * @param {callback} callback to be called
+   * @returns {void}
    */
   fetchBikes: function (callback) {
     if (window.lnrJquery) {
@@ -92,9 +99,6 @@ var lnrHelper = {
       // grid for the bikes cards
       $("#listnride").append('<div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid"></div>');
 
-      // production root
-      var rootUrl = 'http://www.listnride.com';
-
       // grid selector
       var grid = $("#lnr-grid");
 
@@ -158,6 +162,10 @@ var lnrHelper = {
   /**
    * get window configuration for opening the lnr shop solution
    * window dimensions, url, opening type, and window parameter
+   * @param {String} url id who owns the bike
+   * @param {String} userId id of the bike requested
+   * @param {String} bikeId id of the bike requested
+   * @returns {Object} window objects
    */
   getWindowParams: function (url, userId, bikeId) {
     // dimensions
