@@ -47,6 +47,7 @@ ui-view {
   position: relative;
 }
 
+.single-column,
 requests,
 search {
   position: absolute;
@@ -365,6 +366,18 @@ autocomplete .md-errors-spacer {
 
 .lnr-tab-content-no-scroll {
   position: fixed;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* MOBILE UI ADJUSTMENTS
+/*-----------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+  /* on mobile, the margin from left is set to 0 */
+  .lnr-btn-mobile {
+    margin-left: 0;
+  }
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -824,14 +837,53 @@ md-grid-list md-grid-tile.tile-vienna {
 .md-dialog-fullscreen.dialog-bikes .dialog-content {
   overflow: visible !important;
 }
-
+.bikes .slick-slide div {
+  display: block !important;
+}
 .bikes .slick-dots li.slick-active button:before,
 .bikes .slick-dots li button:hover:before {
-  color: #7ab2f8;
+  background-color: #7ab2f8;
 }
 
 .bikes .slick-dots li button:before {
-  font-size: 12px;
+  content: '';
+  display: block;
+  position: static;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  font-size: 0;
+  background-color: #000;
+
+}
+
+.bikes .slick-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 50px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.bikes .slick-arrow_prew {
+  left: 0;
+  background: -webkit-linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+}
+
+.bikes .slick-arrow_next {
+  right: 0;
+  background: -webkit-linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+}
+
+.bikes .slick-arrow_next .arrow {
+  right: 15px;
+}
+.bikes .slick-arrow_prew .arrow {
+  left: 15px;
 }
 
 .bikes .arrow {
@@ -840,36 +892,27 @@ md-grid-list md-grid-tile.tile-vienna {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  margin-top: -30px;
-  padding: 30px;
+  margin-top: -20px;
   cursor: pointer;
 }
 
-.bikes .arrow-prev {
-  right: 100%;
-  padding-right: 0;
-}
-.bikes .arrow-prev:before,
-.bikes .arrow-next:before {
+.bikes .slick-arrow_prew .arrow:before,
+.bikes .slick-arrow_next .arrow:before {
   content: '';
   display: block;
   width: 30px;
   height: 30px;
 }
 
-.bikes .arrow-prev:before {
+.bikes .slick-arrow_prew .arrow:before {
   border-top: 5px solid #fff;
   border-left: 5px solid #fff;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.bikes .arrow-next {
-  left: 100%;
-  padding-left: 0;
-}
 
-.bikes .arrow-next:before {
+.bikes .slick-arrow_next .arrow:before {
   border-top: 5px solid #fff;
   border-right: 5px solid #fff;
   -webkit-transform: rotate(45deg);
@@ -883,6 +926,12 @@ md-grid-list md-grid-tile.tile-vienna {
 }
 .bikes-custom-price.ng-hide {
   height:0;
+}
+
+@media (max-width: 599px) {
+  .bikes .slick-arrow {
+    display: none !important;
+  }
 }
 
 .testimonials-container {
@@ -1697,6 +1746,28 @@ md-grid-list a {
   background-image: url(../ui_images/citypages/amsterdam-rent-cargo.jpg);
 }
 
+.form-error {
+  border: 1px solid rgb(221,44,0);
+  border-radius: 4px;
+}
+.text-error {
+  color: rgb(221,44,0);
+}
+
+md-input-container .md-input.form-input-error {
+  border: 1px solid rgb(221,44,0);
+  border-radius: 4px;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  JOBS POSTINGS
+/*-----------------------------------------------------------------------------------*/
+
 @media (min-width: 960px) {
   #jobs-details md-list-item,
   md-list-item .md-list-item-inner {
@@ -1718,24 +1789,6 @@ md-grid-list a {
 }
 #jobs-details .list-align {
    margin-left: -10px;
-}
-
-.form-error {
-  border: 1px solid rgb(221,44,0);
-  border-radius: 4px;
-}
-.text-error {
-  color: rgb(221,44,0);
-}
-
-md-input-container .md-input.form-input-error {
-  border: 1px solid rgb(221,44,0);
-  border-radius: 4px;
-}
-
-.disabled {
-  pointer-events: none;
-  opacity: 0.5;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -1819,7 +1872,7 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
 /*-----------------------------------------------------------------------------------*/
 
 invite #inviteForm .invite-form-container {
-  height: 320px;
+  max-height: 320px;
   padding: 24px 0;
   border-radius: 4px;
   border: 1px solid rgba(95, 198, 147, 0.25);
@@ -1971,7 +2024,6 @@ and (max-device-width : 568px) {
     background-image: url("../ui_images/flags@2x.png") !important;
   }
 }
-
 
 .ng-hide-add, .ng-hide-remove {
   display: block !important;

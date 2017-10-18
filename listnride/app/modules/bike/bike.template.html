@@ -21,7 +21,7 @@
       <div flex-sm="55" layout="row" layout-align="start center">
         <md-icon ng-if="bike.data.category" class="lnr-margin-right lnr-icn-mlrg md-color-foreground lnr-no-padding" md-svg-src="app/assets/ui_icons//biketype_{{ bike.data.category | limitTo: 1 }}.svg"></md-icon>
         <div flex layout="column">
-          <h1 class="md-title">{{ bike.data.brand }}, {{ bike.data.category | category }}</h1>
+          <h1 class="md-title">{{ bike.data.brand }}, {{ bike.category }}</h1>
           <h2 class="md-subhead">{{ bike.data.name }}</h2>
         </div>
       </div>
@@ -29,25 +29,24 @@
           <div flex="30" layout="column" layout-align="center center">
             <div layout="row">
               <span class="md-headline">{{ bike.data.prices[0].price | number : 0 }}€</span>
-              <span class="md-caption per-day" layout layout-align="end end">&nbsp;p.d.</span>
             </div>
-            <span class="md-caption" ng-if="bike.data.family != 9 && bike.data.family != 11">{{ 'shared.single-day' | translate }}</span>
+            <span class="md-caption" ng-if="bike.data.family != 9 && bike.data.family != 11">{{ 'bike.per-day' | translate }}</span>
             <span class="md-caption" ng-if="bike.data.family == 9 || bike.data.family == 11"><= 4h</span>
           </div>
           <div flex="30" layout="column" layout-align="center center">
             <div layout="row">
-              <span class="md-headline">{{ bike.data.prices[2].price | number : 0 }}€</span>
-              <span class="md-caption per-day" layout layout-align="end end">&nbsp;p.d.</span>
+              <span class="md-headline">{{ bike.data.prices[1].price | number : 0 }}€</span>
+              <span class="md-caption per-day" layout layout-align="end end">&nbsp;{{ 'shared.pd' | translate }}</span>
             </div>
-            <span class="md-caption" ng-if="bike.data.family != 9 && bike.data.family != 11">{{ 'shared.discount-day' | translate }}</span>
+            <span class="md-caption" ng-if="bike.data.family != 9 && bike.data.family != 11">{{ 'bike.from-2-days' | translate }}</span>
             <span class="md-caption" ng-if="bike.data.family == 9 || bike.data.family == 11">> 4h</span>
           </div>
           <div flex="30" layout="column" layout-align="center center" class="lnr-dark-green-text">
             <div layout="row">
               <span class="md-headline">{{ bike.data.prices[6].price | number : 0 }}€</span>
-              <span class="md-caption per-day" layout layout-align="end end">&nbsp;p.d.</span>
+              <span class="md-caption per-day" layout layout-align="end end">&nbsp;{{ 'shared.pd' | translate }}</span>
             </div>
-            <span class="md-caption"  >{{ 'shared.discount-week' | translate }}</span>
+            <span class="md-caption"  >{{ 'bike.from-week' | translate }}</span>
           </div>
       </div>
     </div>
@@ -124,7 +123,7 @@
             </div>
             <div layout="row" layout-align="start center">
               <p flex="20" class="md-body-2">{{ 'list.category.label' | translate }}</p>
-              <p class="md-body-1">{{ bike.data.category | category }}</p>
+              <p class="md-body-1">{{ bike.data.category | category | translate  }}</p>
             </div>
           </div>
         </div>
@@ -188,4 +187,5 @@
       radius="500">
     </shape>
   </ng-map>
+  <footer></footer>
 </md-content>

@@ -43,7 +43,7 @@
     "single-day": "for one day",
     "duration": "Duration",
     "subtotal": "subtotal",
-    "lnr-fee": "listnride fee (incl. tax)",
+    "lnr-fee": "Service fee",
     "total": "Total",
     "from": "from",
     "from2": "from",
@@ -64,6 +64,7 @@
     "reviews": "Reviews",
     "for": "for",
     "per-day": "per day",
+    "pd": "p.d.",
     "Monday": "Monday",
     "Tuesday": "Tuesday",
     "Wednesday": "Wednesday",
@@ -102,7 +103,11 @@
     "contact-us": "Please get in touch with us via ",
     "required": "This is required",
     "update": "Update",
-    "load-more": "Load more"
+    "load-more": "Load more",
+    "confirm": "Confirm",
+    "confirmation": "Confirmation",
+    "confirmation-text": "Are you sure?",
+    "loading": "Loading"
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
@@ -126,6 +131,12 @@
     "profile": "Profile",
     "invite": "Invite Friends",
     "account": "Account",
+    "delete-account": "Delete Account",
+    "delete-account-description": "Here you can delete your listnride account. This step can not be undone.",
+    "delete-account-sure": "Are you really sure?",
+    "delete-account-sure-description": "This step can not be undone.",
+    "delete-account-yes": "Yes, delete",
+    "delete-account-no": "No",
     "availability": "Availability",
     "availability-description": "You can set your availability times for renting out bikes.",
     "business": "Business",
@@ -180,7 +191,7 @@
     },
     "3": {
       "title": "Tell something about yourself or shop",
-      "label": "Description (min. 20 Characters)"
+      "label": "Description (min. 50 Characters)"
     },
     "4": {
       "description": "Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder.",
@@ -191,9 +202,13 @@
       "description": "Verify your phone number, this allows SMS notifications for your requests. Simply enter your number and click 'Send Confirmation'. You'll receive a code via SMS that you can then enter below.",
       "enter-valid-phone-nr": "Please enter a valid phone number",
       "send-confirmation-sms": "Send Confirmation",
+      "send-confirmation-sms-mobile": "Send SMS Code",
       "resend-confirmation-sms": "Resend Confirmation",
+      "resend-confirmation-sms-mobile": "Resend",
       "sms-verification-code": "SMS Verification Code",
+      "sms-verification-code-mobile": "Verification Code",
       "confirm-code": "Confirm Code",
+      "confirm-code-mobile": "Confirm",
       "phone-nr-verified": "Your number is successfully verified!"
     },
     "6": {
@@ -208,7 +223,10 @@
     "view-pictures": "View Pictures",
     "for": "for",
     "meta-title": "Rent the {{name}} - {{category}} by {{brand}} in {{location}}.",
-    "meta-description": "{{description}}"
+    "meta-description": "{{description}}",
+    "per-day": "1 day",
+    "from-2-days": "from 2 days",
+    "from-week": "from 1 week"
   },
   "user": {
     "verified-through": "Verified through",
@@ -313,9 +331,10 @@
     "country": "Country",
     "company-name": "Company name",
     "update-contact": "Update Contact",
+    "update-contact-mobile": "Contact",
     "company-contact-info": "Please fill form with company contact person information.",
     "errors": {
-      "password-length": "Password should be at least 6 characters",
+      "password-length": "Password should be 6-30 characters",
       "password-missing": "Please provide a password",
       "valid-email": "Please enter a valid email address",
       "empty-email": "Please enter your email address",
@@ -359,7 +378,11 @@
     "log-in-to-request-title": "Log in or Sign up",
     "log-in-to-request-description": "Log in to request the bike. If you don't have an account yet, feel free to sign up.",
     "select-timespan": "Choose rental timespan first",
-    "select-timespan-description": "Before you can request, please set the timespan of your rental. Simply click on the days and select pickup and dropoff times in the above calendar."
+    "select-timespan-description": "Before you can request, please set the timespan of your rental. Simply click on the days and select pickup and dropoff times in the above calendar.",
+    "info-subtotal": "This is the regular daily price<br>times the amount of days you want<br>to rent the bike.",
+    "info-discount": "Average daily discount you<br>get per day by renting out<br>for a longer period of time.",
+    "info-service-fee": "The service fee is<br>used for providing<br>listnride. It includes VAT.",
+    "info": "In the calendar above click first<br>on the day you wish to rent<br>out the bike, and second on<br>the day you want to return it."
   },
   "list": {
     "edit-bike": "Edit Bike",
@@ -421,19 +444,27 @@
       "country": "Country"
     },
     "pricing": {
+      "info": "Your daily price is your base price for 1 day.",
+      "info-description": "Information about the rental price",
       "header": "Daily Price",
-      "description": "Your daily price is your default daily rate.",
+      "description": "Your daily price is your base price for 1 day.",
       "hint-para-1": "The price you charge for your bike is up to you. The price should be based on the bike and equipment. To get an idea of market prices, you can view comparable listings. ",
       "hint-para-2": "A rental period for less than 6 hours equals a half-day rental, 6 to 24 hours a day’s rental.",
       "hint-para-3": "To encourage longer rentals, some listers set a daily or weekly discount." ,
       "label": "Pricing",
       "discount": "Discount",
-      "custom-prices": "Use Custom Prices",
+      "discount-description-initial": "With a weekly discount of ",
+      "discount-description-mid": " you'll get ",
+      "discount-description-ending": " per week.",
+      "set_custom_price": "Price in €",
+      "custom-prices": "Individual pricing",
       "half-daily-price": "Half-daily Price",
       "daily-price": "Daily Price",
       "daily-price-placeholder": "Price in €",
       "daily-discount-placeholder": "Discount in %",
+      "daily-discount-tooltip": "Discount if the bike is rented for more than a day.",
       "weekly-discount-placeholder": "Discount in %",
+      "weekly-discount-tooltip": "Discount if the bike is rented for a week or more.",
       "weekly-price": "Weekly Price",
       "daily-discount": "Daily Discount",
       "weekly-discount": "Weekly Discount",
@@ -444,9 +475,16 @@
       "price_6_days": "6 days",
       "price_7_days": "7 days (1 week)",
       "price_8_days": "8 days onwards",
-      "price_8_days_long": "8 days onwards (each day)",
+      "price_8_days_long": "8 days onwards (per day)",
       "price_30_days": "30 days",
-      "price_30_days_long": "30 days (1 month)"
+      "price_30_days_long": "30 days (1 month)",
+      "reset-prices": "Reset",
+      "validations":{
+        "required": {
+          "daily_price": "Daily price is required",
+          "price": "Price is required"
+        }
+      }
     },
     "subcategory": {
       "1": {

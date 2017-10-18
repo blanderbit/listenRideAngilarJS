@@ -103,11 +103,13 @@
             type="password"
             required
             ng-minlength="6"
+            ng-maxlength="30"
             ng-disabled="signupDialog.businessError"
           >
           <div ng-messages="signupForm.password.$error" role="alert">
             <div ng-message="required">{{ 'forms.errors.password-missing' | translate }}</div>
             <div ng-message="minlength">{{ 'forms.errors.password-length' | translate }}</div>
+            <div ng-message="maxlength">{{ 'forms.errors.password-length' | translate }}</div>
           </div>
         </md-input-container>
         

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('list', []).component('list', {
+angular.module('list', ['ngLocale']).component('list', {
   templateUrl: 'app/modules/bike/list/list.template.html',
   bindings: {
     heading: "<",
@@ -18,13 +18,15 @@ angular.module('list', []).component('list', {
     'Upload',
     'bikeOptions',
     'api',
+    'authentication',
     '$timeout',
     'verification',
     'accessControl',
     'loadingDialog',
+    'price',
     function ListController($mdDialog, $localStorage, $stateParams, $state,
-                            $scope, $analytics, Upload, bikeOptions, api,
-                            $timeout, verification, accessControl, loadingDialog) {
+                            $scope, $analytics, Upload, bikeOptions, api, authentication,
+                            $timeout, verification, accessControl, loadingDialog, price) {
 
       if (accessControl.requireLogin()) {
         return;
@@ -41,25 +43,45 @@ angular.module('list', []).component('list', {
       list.accessoryOptions = bikeOptions.accessoryOptions();
       list.validateObj = {height: {min: 1000}, width: {min: 1500}, duration: {max: '5m'}};
       list.invalidFiles = {};
+      list.businessUser = false;
+
+      var setBusinessForm = function() {
+        if (authentication.isBusiness) {
+          list.businessUser = true;
+          list.form.custom_price = true;
+          list.show_custom_price = true;
+        } else {
+          list.businessUser = false;
+        }
+      }
 
       list.populateNewBikeData = function () {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             var data = success.data;
-            if (!data.has_address || !data.confirmed_phone || data.status == 0) {
+            if (!data.has_address || !data.confirmed_phone || data.status === 0) {
               verification.openDialog(true);
             }
             list.form.street = data.street;
             list.form.zip = data.zip;
             list.form.city = data.city;
             list.form.country = data.country;
-            // daily and weekly discounts
-            // by default the discounts are 0
-            list.form.discount_daily = data.discount_daily ? parseInt(list.form.discount_daily) : 0;
-            list.form.discount_weekly = data.discount_weekly ? parseInt(list.form.discount_weekly) : 0;
+
+            list.form.prices = [];
+            for (var day = 0; day < 9; day += 1) {
+              list.form.prices[day] = {
+                price: undefined
+              }
+            }
+            list.form.discounts = {
+              "daily": 10,
+              "weekly": 20
+            };
+
+            // Slightly modify form for business listers
+            setBusinessForm();
           },
           function (error) {
-            console.log("Error fetching User");
           }
         );
       };
@@ -68,7 +90,7 @@ angular.module('list', []).component('list', {
         api.get('/rides/' + $stateParams.bikeId).then(
           function (response) {
             var data = response.data;
-            if (data.user.id == $localStorage.userId) {
+            if (parseInt(data.user.id) === $localStorage.userId) {
               var images = [];
               for (var i = 1; i <= 5; ++i) {
                 if (data["image_file_" + i] !== undefined &&
@@ -82,15 +104,7 @@ angular.module('list', []).component('list', {
               }
 
               data.images = images;
-              var prices = bikeOptions.transformPrices(data.prices);
-              /*
-              // only for testing inverse pricing test
-              var inversePrices = bikeOptions.inverseTransformPrices(prices);
-              console.log("inverse prices: ", inversePrices);
-              */
-              data.price_daily = parseInt(data.prices[0]);
-              data.discount_daily = parseInt(data.discount_daily);
-              data.discount_weekly = parseInt(data.discount_daily);
+              var prices = price.transformPrices(data.prices, data.discounts);
               data.size = parseInt(data.size);
               data.mainCategory = (data.category + "").charAt(0);
               data.subCategory = (data.category + "").charAt(1);
@@ -98,17 +112,29 @@ angular.module('list', []).component('list', {
               // form data for edit bikes
               list.form = data;
               list.form.prices = prices;
+
+              // if custom price is enabled
+              if (list.form.custom_price && !list.businessUser) {
+                list.disableDiscounts();
+                list.show_custom_price = true;
+              }
+
+              // if custom price is disabled
+              else if (list.form.custom_price === false && !list.businessUser) {
+                list.show_custom_price = false;
+              }
+
+              setBusinessForm();
             }
           },
           function (error) {
-            console.log("Error editing bike", error);
           }
         );
       };
 
       // form submission for new ride
       list.submitNewRide = function () {
-
+        var prices = price.inverseTransformPrices(list.form.prices, list.isListMode);
         var ride = {
           "ride[name]": list.form.name,
           "ride[brand]": list.form.brand,
@@ -126,14 +152,14 @@ angular.module('list', []).component('list', {
           "ride[city]": list.form.city,
           "ride[zip]": list.form.zip,
           "ride[country]": list.form.country,
-          "ride[price_half_daily]": list.form.price_half_daily,
-          "ride[price_daily]": list.form.price_daily,
-          "ride[price_weekly]": list.form.price_weekly,
-          "ride[image_file_1]": list.form.images[0],
-          "ride[image_file_2]": list.form.images[1],
-          "ride[image_file_3]": list.form.images[2],
-          "ride[image_file_4]": list.form.images[3],
-          "ride[image_file_5]": list.form.images[4]
+          "ride[prices]": prices,
+          "ride[custom_price]": list.form.custom_price,
+          "ride[discounts]": list.form.discounts,
+          "ride[image_file_1]": (list.form.images[0]) ? list.form.images[0].src : undefined,
+          "ride[image_file_2]": (list.form.images[1]) ? list.form.images[1].src : undefined,
+          "ride[image_file_3]": (list.form.images[2]) ? list.form.images[2].src : undefined,
+          "ride[image_file_4]": (list.form.images[3]) ? list.form.images[3].src : undefined,
+          "ride[image_file_5]": (list.form.images[4]) ? list.form.images[4].src : undefined
         };
 
         api.get('/users/' + $localStorage.userId).then(
@@ -159,20 +185,19 @@ angular.module('list', []).component('list', {
                 function (error) {
                   list.submitDisabled = false;
                   loadingDialog.close();
-                  console.log("Error while listing bike", error);
+                  console.log(error);
                 }
               );
             }
           },
           function (error) {
-            console.log("Error fetching User");
           }
         );
       };
 
       // form submission for existing ride
       list.submitEditedRide = function () {
-        var prices = bikeOptions.inverseTransformPrices(list.form.prices);
+        var prices = price.inverseTransformPrices(list.form.prices);
         var ride = {
           "ride[name]": list.form.name,
           "ride[brand]": list.form.brand,
@@ -190,7 +215,7 @@ angular.module('list', []).component('list', {
           "ride[city]": list.form.city,
           "ride[zip]": list.form.zip,
           "ride[country]": list.form.country,
-          "ride[prices]": list.form.prices,
+          "ride[prices]": prices,
           "ride[custom_price]": list.form.custom_price,
           "ride[discounts]": list.form.discounts,
           "ride[image_file_1]": (list.form.images[0]) ? list.form.images[0].src : undefined,
@@ -200,7 +225,6 @@ angular.module('list', []).component('list', {
           "ride[image_file_5]": (list.form.images[4]) ? list.form.images[4].src : undefined
         };
 
-        console.log("put data: ", ride);
         Upload.upload({
           method: 'PUT',
           url: api.getApiUrl() + '/rides/' + $stateParams.bikeId,
@@ -212,12 +236,10 @@ angular.module('list', []).component('list', {
           function (response) {
             loadingDialog.close();
             $state.go("bike", {bikeId: response.data.id});
-            console.log("Success", response);
           },
           function (error) {
             list.submitDisabled = false;
             loadingDialog.close();
-            console.log("Error while listing bike", error);
           }
         );
       };
@@ -234,12 +256,25 @@ angular.module('list', []).component('list', {
       };
 
       // set the custom prices for a bike
-      list.setCustomPrices = function () {
-        // only when discount fields are enabled
-        if (list.discountFieldEditable) {
-          // set the custom prices
-          list.form.prices = bikeOptions.setCustomPrices(list.form);
+      list.setCustomPrices = function (dailyPriceChanged) {
+        // business users get their prices proposed according to a fixed scheme
+        if(list.businessUser) {
+          list.form.prices = price.proposeCustomPrices(list.form);
+        } else {
+          // discount fields are enabled and no custom price are set manually
+          if (list.discountFieldEditable) {
+          // set the prices based on the daily price
+            list.form.prices = price.setCustomPrices(list.form);
+          }
         }
+      };
+
+      list.resetCustomPrices = function () {
+        // hide reset button
+        // enable discount field
+        list.discountFieldEditable = true;
+        // set the prices based on the daily price
+        price.setCustomPrices(list.form);
       };
 
       // disable custom discounts fields
@@ -250,8 +285,20 @@ angular.module('list', []).component('list', {
 
       // enable custom discounts fields
       list.enableDiscounts = function () {
+
         list.form.custom_price = false;
         list.discountFieldEditable = true;
+      };
+
+      list.toggleDiscount = function () {
+        if (list.form.custom_price === true) {
+          list.resetCustomPrices();
+          list.show_custom_price = true;
+          // list.discountFieldEditable = false;
+        } else if (list.form.custom_price === false) {
+          list.show_custom_price = false;
+          list.discountFieldEditable = true;
+        }
       };
 
       // go to next tab
@@ -269,8 +316,12 @@ angular.module('list', []).component('list', {
         if (files && files.length)
           for (var i = 0; i < files.length && list.form.images.length < 5; ++i)
             if (files[i] !== null) {
-              if (list.isListMode) list.form.images.push(files[i]);
-              else list.form.images.push({src: files[i], local: "true"});
+              if (list.isListMode) {
+                list.form.images.push({src: files[i], local: "true"});
+              }
+              else {
+                list.form.images.push({src: files[i], local: "true"});
+              }
             }
       };
 
@@ -306,14 +357,25 @@ angular.module('list', []).component('list', {
       };
 
       list.isPricingValid = function () {
-        list.form.prices.forEach(function (price) {
-          if (price.price === undefined) return false;
-        });
+        // if prices is undefined
+        if (!list.form.prices) return false;
+        // if one of the price is not provided
+        for (var loop = 0; loop < list.form.prices.length; loop += 1) {
+          if (list.form.prices[loop].price === undefined) return false;
+        }
         return true;
       };
 
+      list.isPricingValid2 = function () {
+        // prices for some day should be higher than the previous day
+        // from day 2 to day 7
+        for (var day = 1; day < 7; day += 1) {
+            // if ()
+        }
+      };
+
       list.categoryChange = function (oldCategory) {
-        if (list.form.mainCategory == 4 || oldCategory == 4) {
+        if (parseInt(list.form.mainCategory) === 4 || parseInt(oldCategory) === 4) {
           list.form.size = undefined;
         }
       };

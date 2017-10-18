@@ -29,9 +29,15 @@ angular.module('bike',[]).component('bike', {
         function(response) {
           bike.showAll = false;
           bike.data = response.data;
-          console.log(bike.data);
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
+          $translate($filter('category')(bike.data.category)).then(
+            function (translation) {
+              bike.category = translation;
+              console.log(bike.category);
+            }
+          );
+          console.log(bike.category);
 
           var metaData = {
             name: bike.data.name,
@@ -43,10 +49,8 @@ angular.module('bike',[]).component('bike', {
 
           ngMeta.setTitle($translate.instant("bike.meta-title", metaData));
           ngMeta.setTag("description", $translate.instant("bike.meta-description", metaData));
-          console.log(bike.data);
         },
         function(error) {
-          console.log("Error retrieving bike", error);
         }
       );
 
@@ -97,7 +101,7 @@ angular.module('bike',[]).component('bike', {
         galleryDialog.image_5 = bikeData.image_file_5.image_file_5.url;
         galleryDialog.hide = function() {
           $mdDialog.hide();
-        }
+        };
         galleryDialog.slickConfig = {
           enabled: true,
           autoplay: true,
@@ -106,8 +110,8 @@ angular.module('bike',[]).component('bike', {
           ease: 'ease-in-out',
           speed: '500',
           dots: true,
-          prevArrow: "<div class='arrow arrow-prev'></div>",
-          nextArrow: "<div class='arrow arrow-next'></div>"
+          prevArrow: "<div class='slick-arrow slick-arrow_prew'><span class='arrow'></span></div>",
+          nextArrow: "<div class='slick-arrow slick-arrow_next'><div class='arrow'></div></div>"
         }
       }
 

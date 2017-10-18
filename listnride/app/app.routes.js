@@ -15,11 +15,15 @@
               .then(function (translations) {
                 ngMeta.setTitle(translations["home.meta-title"]);
                 ngMeta.setTag("description", translations["home.meta-description"]);
+                // Below is how to set the OG:IMAGE if disableUpdate is true
+                // ngMeta.setTag("og:image", "imageurl.jpg");
               })
           }
         },
         meta: {
           disableUpdate: true
+          // Below is how to set the OG:IMAGE if disableUpate is false
+          // 'og:image': 'imageurl.jpg'
         }
       });
 
@@ -860,11 +864,11 @@
         }
       });
 
-      $stateProvider.state({
-        name: 'seo-landing',
-        url: '/{pageTitle: string}',
-        template: '<seo-landing></seo-landing>'
-      });
+      // $stateProvider.state({
+      //   name: 'seo-landing',
+      //   url: '/{pageTitle: string}',
+      //   template: '<seo-landing></seo-landing>'
+      // });
 
       $urlRouterProvider.otherwise(function ($injector) {
         var state = $injector.get('$state');

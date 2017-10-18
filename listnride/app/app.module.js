@@ -13,6 +13,7 @@ angular.module('listnride', [
   'message',
   'list',
   'autocomplete',
+  'confirmation',
   'listings',
   'listingCard',
   'rating',
@@ -48,6 +49,7 @@ angular.module('listnride', [
   'seoLanding',
   'constanceSpin',
   'velosoph',
+  'metaTags',
   /* external modules */
   'ngAnimate',
   'ngMaterial',
@@ -72,9 +74,10 @@ angular.module('listnride', [
   '720kb.socialshare',
   'angularMoment'
 ])
-.config(['$translateProvider', '$localStorageProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', 'ngMetaProvider', 'ENV', 'socialshareConfProvider',
-  function($translateProvider, $localStorageProvider, ezfbProvider, $mdAriaProvider, $locationProvider, ngMetaProvider, ENV, socialshareConfProvider) {
+.config(['$translateProvider', '$localStorageProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', '$compileProvider', 'ngMetaProvider', 'ENV', 'socialshareConfProvider',
+  function($translateProvider, $localStorageProvider, ezfbProvider, $mdAriaProvider, $locationProvider, $compileProvider, ngMetaProvider, ENV, socialshareConfProvider) {
     $mdAriaProvider.disableWarnings();
+    $compileProvider.debugInfoEnabled(false);
 
     ezfbProvider.setInitParams({
       appId: '895499350535682',
@@ -138,7 +141,9 @@ angular.module('listnride', [
     $translateProvider.preferredLanguage(retrieveLocale());
     $translateProvider.useSanitizeValueStrategy(['escapeParameters']);
     ngMetaProvider.setDefaultTitle('listnride');
+    // These default tags below are also set in ngMeta.js to be used if disableUpdate is true
     ngMetaProvider.setDefaultTag('prerender-status-code', '200');
+    ngMetaProvider.setDefaultTag('og:image', 'http://www.listnride.com/app/assets/ui_images/opengraph/lnr_standard.jpg');
   }
 ])
 .run(['ngMeta', '$rootScope', '$location', 'authentication', 'api', function(ngMeta, $rootScope, $location, authentication, api) {

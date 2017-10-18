@@ -42,7 +42,7 @@
     "single-day": "für 1 Tag",
     "duration": "Dauer",
     "subtotal": "Zwischensumme",
-    "lnr-fee": "listnride Gebühren (inkl. MwSt)",
+    "lnr-fee": "Servicegebühren",
     "total": "Insgesamt",
     "from": "von",
     "from2": "ab",
@@ -63,6 +63,7 @@
     "reviews": "Bewertungen",
     "for": "für",
     "per-day": "pro Tag",
+    "pd": "p.T.",
     "Monday": "Montag",
     "Tuesday": "Dienstag",
     "Wednesday": "Mittwoch",
@@ -101,7 +102,11 @@
     "contact-us": "Bitte kontaktiere uns via ",
     "required": "Dies ist erforderlich",
     "update": "Aktualisiert",
-    "load-more": "Load more"
+    "load-more": "Load more",
+    "confirm": "Bestätigen",
+    "confirmation": "Bestätigung",
+    "confirmation-text": "Bist du sicher?",
+    "loading": "Laden"
   },
 
   "toasts": {
@@ -127,6 +132,12 @@
     "invite": "Freunde einladen",
     "profile": "Profil",
     "account": "Account",
+    "delete-account": "Account löschen",
+    "delete-account-description": "Hier kannst du dein listnride Account löschen. Dieser Schritt kann nicht rückgängig gemacht werden.",
+    "delete-account-sure": "Bist du dir wirklich sicher?",
+    "delete-account-sure-description": "Dieser Schritt kann leider nicht rückgängig gemacht werden.",
+    "delete-account-yes": "Ja, löschen",
+    "delete-account-no": "Nein",
     "availability": "Verfügbarkeit",
     "availability-description": "Du kannst deine Verfügbarkeitszeiten für den Radverleih einstellen",
     "business": "Fahrradgeschäft",
@@ -159,7 +170,7 @@
     "company-name":"Unternehmensname",
     "company-information":"Unternehmensinformationen",
     "vat":"VAT",
-    "payment-info":"Show current Payment"
+    "payment-info":"Aktuelle Zahlungsmethode anzeigen"
   },
 
   "verification": {
@@ -183,7 +194,7 @@
     },
     "3": {
       "title": "Erzähle etwas über dich",
-      "label": "Beschreibung (min. 20 Buchstaben)"
+      "label": "Beschreibung (min. 50 Buchstaben)"
     },
     "4": {
       "description": "Bestätige Deine E-Mail-Adresse, indem Du auf den Link in der Bestätigungsmail klickst, die wir Dir nach der Registrierung schicken. Falls Du sie nicht mehr findest, kannst Du die Mail erneut anfordern. Erscheint sie nicht sofort in Deinem Postfach, warte bitte noch ein paar Minuten oder überprüfe deinen Spam-Ordner.",
@@ -194,9 +205,12 @@
       "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst.",
       "enter-valid-phone-nr": "Bitte gib eine valide Telefonnummer an",
       "send-confirmation-sms": "Bestätigungs-SMS schicken",
+      "send-confirmation-sms-mobile": "Code schicken",
       "resend-confirmation-sms": "Erneut schicken",
       "sms-verification-code": "Verifizierungs-Code",
+      "sms-verification-code-mobile": "Verifizierungs-Code",
       "confirm-code": "Code Bestätigen",
+      "confirm-code-mobile": "Bestätigen",
       "phone-nr-verified": "Deine Nummer wurde erfolgreich verifiziert!"
     },
     "6": {
@@ -211,7 +225,10 @@
     "rent-bike": "Fahrrad Mieten",
     "view-pictures": "Bilder ansehen",
     "meta-title": "{{name}} - {{category}} von {{brand}} in {{location}} mieten.",
-    "meta-description": "{{description}}"
+    "meta-description": "{{description}}",
+    "per-day": "1 Tag",
+    "from-2-days": "ab 2 Tagen",
+    "from-week": "ab 1 Woche"
   },
 
   "user": {
@@ -338,9 +355,10 @@
     "country": "Land",
     "company-name": "Company name",
     "update-contact": "Kontakt aktualisieren",
+    "update-contact-mobile": "Kontakt",
     "company-contact-info": "Bitte trage die Daten der Kontaktperson des Unternehmens ein.",
     "errors": {
-      "password-length": "Das Passwort sollte min. 6 Zeichen lang sein",
+      "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
       "password-missing": "Bitte gib ein Passwort an",
       "valid-email": "Bitte gib eine gültige Email-Adresse an",
       "empty-email": "Bitte gib deine Email-Adresse an",
@@ -373,7 +391,11 @@
     "log-in-to-request-title": "Einloggen oder Registrieren",
     "log-in-to-request-description": "Logge dich ein um das Rad anzufragen. Falls du noch kein Account hast, registriere dich einfach.",
     "select-timespan": "Wähle zuerst die Mietdauer",
-    "select-timespan-first": "Bevor du anfrägst, bestimme bitte die Zeitspanne. Klicke einfach auf die Tage and wähle Abhol- und Rückgabezeiten im obigen Kalender."
+    "select-timespan-first": "Bevor du anfrägst, bestimme bitte die Zeitspanne. Klicke einfach auf die Tage and wähle Abhol- und Rückgabezeiten im obigen Kalender.",
+    "info-subtotal": "Dies ist Tagespreis für die<br>Anzahl der Tage, die du das<br>Fahrrad mieten möchten.",
+    "info-discount": "Durchschnittlicher Tagesrabatt<br>pro Tag bei Miete für<br>einen längeren Zeitraum.",
+    "info-service-fee": "Die Servicegebühr hilft uns,<br>listnride zu betreiben. Sie enthält <br>die Umsatzsteuer.",
+    "info": "Im Kalender oben zuerst auf den Tag klicken,<br>an dem du das Fahrrad mieten möchtest,<br>und dann auf den Tag, an dem<br>du es zurückgeben magst."
   },
 
   "list": {
@@ -436,22 +458,31 @@
       "country": "Land"
     },
     "pricing": {
+      "info": "Dein Tagespreis ist dein basis Preis bei 1 Tagesmiete.",
+      "info-description": "Information zum Mietpreis",
       "header": "Tagespreis",
-      "description": "Dein Tagespreis ist dein Standardpreis pro Tag.",
+      "description": "Dein Tagespreis ist dein basis Preis bei 1 Tagesmiete.",
+      "daily-price-description": "Bei Eingabe des Tagespreises schlagen wir<br>dir automatisch ein Rabattschema für<br>längerfristige Vermietungen vor.<br>Du kannst die Preise allerdings<br>auch einzeln anpassen.",
       "hint-para-1": "Über den Preis, den du für dein Rad nimmst, entscheidest du selbst. Der Mietpreis sollte sich nach Rad und Ausstattung richten. Um eine Vorstellung von den Preisen am Markt zu erhalten, schaue Dir vergleichbare Angebote an.",
       "hint-para-2": "Eine Mietdauer unter 6 Stunden ist eine Halbtagesmiete, 6-24 Stunde steht für eine Tagesmiete.",
       "hint-para-3": "Um mehr Langzeitbuchungen zu erhalten, legen manche Vermieter einen Tages- oder Wochenrabatt fest.",
       "label": "Preis",
       "discount": "Rabatt",
+      "discount-description-initial": "Bei einem Wochenrabatt von ",
+      "discount-description-mid": " erhältst Du ",
+      "discount-description-ending": " pro Woche.",
+      "set_custom_price": "Preise in €",
       "custom-prices": "Individuelle Preise",
       "daily-price-placeholder": "Preis in €",
       "daily-discount-placeholder": "Rabatt in %",
+      "daily-discount-tooltip": "Rabatt, wenn das Fahrrad für mehr als einen Tag gemietet wird.",
       "weekly-discount-placeholder": "Rabatt in %",
+      "weekly-discount-tooltip": "Rabatt, wenn das Fahrrad für eine Woche oder mehr gemietet wird.",
       "half-daily-price": "Halber Tag",
       "daily-price": "Ganzer Tag",
       "weekly-price": "Eine Woche",
-      "daily-discount": "Ganzer Discount",
-      "weekly-discount": "Wöchentlich Discount",
+      "daily-discount": "Tagesrabatt",
+      "weekly-discount": "Wochenrabatt",
       "price_2_days": "2 Tage",
       "price_3_days": "3 Tage",
       "price_4_days": "4 Tage",
@@ -459,9 +490,16 @@
       "price_6_days": "6 Tage",
       "price_7_days": "7 Tage (1 Woche)",
       "price_8_days": "ab 8 Tage",
-      "price_8_days_long": "ab 8 Tage (jeden Tag)",
-      "price_30_days": "30 Tagen",
-      "price_30_days_long": "30 Tagen (1 Monat)"
+      "price_8_days_long": "ab 8 Tage (pro Tag)",
+      "price_30_days": "30 Tage",
+      "price_30_days_long": "30 Tage (1 Monat)",
+      "reset-prices": "Zurücksetzen",
+      "validations":{
+        "required": {
+          "daily_price": "Tagespreis is required",
+          "price": "preis is required"
+        }
+      }
     },
     "subcategory": {
       "1": {
