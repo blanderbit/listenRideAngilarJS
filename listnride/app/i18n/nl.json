@@ -120,10 +120,10 @@
     "successfully-logged-out": "Je bent uitgelogd.",
     "could-not-log-in": "Inloggen mislukt. Check of je je al hebt geregistreerd en je inloggegevens correct zijn.",
     "reset-password-success": "We hebben zojuist een nieuw wachtwoord naar je toegemaild! Deze kan elk ogenblik aankomen.",
-    "opening-hours-success": "Opening hours successfully changed.",
-    "opening-hours-error": "Could not save opening hours.",
-    "uniq-phone": "Phone number already registered in our system.",
-    "pending-requests": "Looks like you have an open request for this bike. Before you can delete the bike you need to accept or cancel it."
+    "opening-hours-success": "De openingstijden zijn succesvol gewijzigd.",
+    "opening-hours-error": "Kan openingstijden niet opslaan.",
+    "uniq-phone": "Telefoonnummer is al geregistreerd in ons systeem.",
+    "pending-requests": "Het lijkt alsof u een open verzoek voor deze fiets heeft. Voordat u de fiets kunt verwijderen, moet u deze accepteren of annuleren."
   },
   "settings": {
     "settings": "Instellingen",
@@ -132,12 +132,12 @@
     "account": "Account",
     "delete-account": "Verwijder Account",
     "delete-account-description": "Hier kan je jouw listnride account verwijderen. Deze stap kan niet worden teruggedraaid.",
-    "delete-account-sure": "Are you really sure?",
-    "delete-account-sure-description": "This step can not be undone.",
+    "delete-account-sure": "Weet je het echt zeker?",
+    "delete-account-sure-description": "Deze stap kan niet worden ongedaan gemaakt.",
     "delete-account-yes": "Yes, delete",
     "delete-account-no": "No",
     "availability": "Openingstijden",
-    "availability-description": "You can set your availability times for renting out bikes.",
+    "availability-description": "U kunt uw beschikbaarheidstijden instellen voor het huren van fietsen.",
     "business": "Fietswinkel",
     "from": "From",
     "to": "To",
@@ -239,7 +239,7 @@
   },
   "requests": {
     "booking-overview": "Bookingsoverzicht",
-    "booking-failed": "Booking failed",
+    "booking-failed": "Boeking mislukt",
     "booking": "Boeking",
     "price": "Prijs",
     "book": "Boeken",
@@ -247,7 +247,7 @@
     "listChat": "Aanvragen van",
     "rideChat": "Aanvragen aan",
     "ratings": {
-      "title": "How did you like the overall experience?",
+      "title": "Hoe vond je de algehele ervaring?",
       "description": "Vertrouwen en Veiligheid zijn voor ons het belangrijkste. Met een korte recensie help je de gehele community.",
       "1": "onacceptabel",
       "2": "Slecht",
@@ -283,7 +283,7 @@
     "5": "Hartelijk bedankt voor je recensie. De verhuurtransactie is nu afgerond en het Geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons graag een e-mail aan hello@listnride.com",
     "8": "Je hebt de aanvraag afgewezen. Schrijf de aanvrager kort een berichtje waarom het niet lukt.",
     "9": "helaas heeft {{user.first_name}} de aanvraag niet bevestigd.",
-    "10": "Your request was cancelled by system"
+    "10": "Uw verzoek is geannuleerd door systeem."
   },
   "rideChat": {
     "1": "Je zou graag {{lister.first_name}} {{lister.last_name}}'s <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. Spreek de verdere details met de verhuurder af. Zodra je aanvraag wordt aangenomen, is de boeking rond.",
@@ -355,8 +355,8 @@
       "empty-first-name": "Vul uw voornaam in",
       "max-size-last-name": "Achternaam mag maximaal 30 karakters lang zijn",
       "max-size-first-name": "Voornaam mag maximaal 20 karakters lang zijn",
-      "empty-company-name": "Please enter your company name",
-      "min-size-company-name": "Company name should be longer than 2 characters "
+      "empty-company-name": "Vul alstublieft uw bedrijfsnaam in",
+      "min-size-company-name": "Bedrijfsnaam moet langer zijn dan 2 karakters "
     }
   },
   "autocomplete": {

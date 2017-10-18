@@ -121,9 +121,9 @@
     "successfully-logged-out": "Du bist ausgeloggt.",
     "could-not-log-in": "Login fehlgeschlagen. Bitte stell sicher dass du bereits registriert bist und deine Anmelde-Daten stimmen.",
     "reset-password-success": "Wir haben dir soeben ein neues Passwort via Email geschickt. Es sollte in den nächsten Minuten eintreffen.",
-    "opening-hours-success": "Opening hours successfully changed.",
-    "opening-hours-error": "Could not save opening hours.",
-    "uniq-phone": "Phone number already registered in our system.",
+    "opening-hours-success": "Öffnungszeiten erfolgreich geändert.",
+    "opening-hours-error": "Die Öffnungszeiten konnten nicht gespeichert werden.",
+    "uniq-phone": "Telefonnummer ist bereits in unserem System registriert.",
     "pending-requests": "Du hast noch eine offene Anfrage für dieses Rad. Beantworte diese (Ablehnen/ Annehmen) bevor du es entfernen kannst."
   },
 
@@ -244,7 +244,7 @@
 
   "requests": {
     "booking-overview": "Buchungsübersicht",
-    "booking-failed": "Booking failed",
+    "booking-failed": "Buchung fehlgeschlagen",
     "booking": "Buchung",
     "price": "Preis",
     "book": "Buchen",
@@ -290,7 +290,7 @@
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
     "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
     "9": "Leider hat {{user.first_name}} die Anfrage nicht bestätigt.",
-    "10": "Your request was cancelled by system"
+    "10": "Ihre Anfrage wurde vom System abgebrochen."
   },
 
   "rideChat": {
@@ -366,8 +366,8 @@
       "empty-first-name": "Bitte gib deinen Vornamen an",
       "max-size-last-name": "Der Nachname sollte maximal 30 Buchstaben lang sein",
       "max-size-first-name": "Der Vorname sollte maximal 20 Buchstaben lang sein",
-      "empty-company-name": "Please enter your company name",
-      "min-size-company-name": "Company name should be longer than 2 characters "
+      "empty-company-name": "Bitte geben Sie Ihren Firmennamen ein",
+      "min-size-company-name": "Der Firmenname sollte länger als 2 Zeichen sein "
     }
   },
 
