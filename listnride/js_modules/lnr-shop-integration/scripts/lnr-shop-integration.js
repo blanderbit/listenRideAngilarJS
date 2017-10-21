@@ -13,7 +13,7 @@
     $(function () {
       var user_id = document.getElementById('listnride').dataset.user;
       var user_lang = document.getElementById('listnride').dataset.lang;
-      lnrHelper.renderBikes($, user_id, user_lang);
+      lnrHelper.renderBikes(user_id, user_lang);
     });
   });
 })();

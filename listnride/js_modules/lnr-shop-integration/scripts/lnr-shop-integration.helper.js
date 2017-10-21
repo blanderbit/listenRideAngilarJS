@@ -69,13 +69,22 @@ var lnrHelper = {
   /**
    * renders the bikes
    * based on user_id and user_lang
-   * @param {any} $ lnrJquery
    * @param {Number} user_id id of the user for which bikes are to be fetched
    * @param {Number} user_lang language of the user. [english, german, dutch]
+   * @param {Bool} is_demo_mode are user id and language provided from debugging fields
    * @returns {void}
    */
-  renderBikes: function ($, user_id, user_lang) {
+  renderBikes: function (user_id, user_lang, is_demo_mode) {
+    var $ = lnrJquery;
     var url = "";
+    // only used for demo
+    // user id and lang can be provided manually
+    // is_demo_mode flag is provided from template
+    // not for end user
+    if (is_demo_mode === true) {
+      user_id = $('#user_demo_id').val();
+      user_lang = $('#user_demo_lang').val();
+    }
     lnrConstants.env == "staging" ? url = lnrConstants.staging_users : url = lnrConstants.production_users;
     $.get(url + user_id, function (response) {
 
@@ -87,18 +96,18 @@ var lnrHelper = {
       } else if ('nl' === user_lang) {
         dayText = 'van';
         sizeText = 'Voor';
-        buttonText = 'Rent this Bike';
+        buttonText = 'Huur deze fiets';
       } else {
         dayText = 'ab';
         sizeText = 'F&uuml;r';
         buttonText = 'Dieses Rad Mieten';
       }
       // grid for the bikes cards
+      $('#listnride').html('');
       $("#listnride").append('<div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid"></div>');
 
       // grid selector
       var grid = $("#lnr-grid");
-
       // populate grid with the bikes data
       response.rides.forEach(function (ride) {
         var brand = ride.brand,
@@ -118,8 +127,6 @@ var lnrHelper = {
           '<div class="after">' +
           '<span class="content"><span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>' +
           '<button class="md-button">' + buttonText + '</button></span>' +
-          // removing search icon among the text
-          // '<span class="zoom"><i class="fa fa-search"></i></span>'+
           '</div></a>' +
           '<md-card-title layout="row" class="layout-row">' +
           '<md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true">' +
