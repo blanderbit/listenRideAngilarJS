@@ -1,35 +1,91 @@
 /* global
         lnrConstants
         lnrJquery
-        $
 */
 var lnrHelper = {
   /**
-   * wrapper for fetching bikes after 100ms
-   * @param {callback} callback to be called
+   * after DOM is rendered first time
+   * runs once before calling user and bike api
    * @returns {void}
    */
-  fetchBikes: function (callback) {
-    if (window.lnrJquery) {
-      return callback(lnrJquery);
-    } else {
-      window.setTimeout(function () {
-        lnrHelper.fetchBikes(callback);
-      }, 100);
+  preInit: function () {
+    var css_lnr = document.createElement("LINK");
+    css_lnr.href = lnrConstants.lnrStylesLocal;
+    css_lnr.rel = "stylesheet";
+    var header = document.getElementsByTagName("head")[0];
+    header.appendChild(css_lnr);
+  },
+  /**
+   * initialize calendar, payment, date range
+   * runs once after calling user and bike api
+   * @returns {void}
+   */
+  postInit: function () {
+    // location button
+    var locationButton = lnrJquery('#lnr-location-button');
+    locationButton.html('Location Button <div class="dropdown-caret" style="float: right"></div>');
+
+    // close location dropdown on window click
+    window.onclick = lnrHelper.closeDropDown;
+
+    // get user id and language
+    var user_id = document.getElementById('listnride').dataset.user;
+    var user_lang = document.getElementById('listnride').dataset.lang;
+
+    // render the bikes for the user
+    lnrHelper.renderBikes(user_id, user_lang);
+  },
+  /**
+   * close the drop-downs for calendar
+   * as well as payment
+   * @params {event} event fired by browser
+   * @returns {void}
+   */
+  closeDropDown: function (event) {
+    if (!event.target.matches('.lnr-dropdown-button')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var loop = 0; loop < dropdowns.length; loop += 1) {
+        var openDropdown = dropdowns[loop];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
     }
   },
   /**
    * select the category name based on the category id received from server side
    * based on user_id and user_lang
    * @param {Number} categoryId id of the category
-   * @param {String} user_lang language of the user. [english, german, dutch]
    * @returns {String} category name
    */
-  categoryFilter: function (categoryId, user_lang) {
+  openDropDown: function () {
+
+    // get location dropdown element
+    var element = lnrJquery('#lnr-location-dropdown');
+    element.html('');
+
+    // list cities in the dropdown menu
+    lnrConstants.cities.forEach(function (city, index) {
+      element.append('<div class="lnr-date-selector" ' +
+        'onclick="lnrHelper.showSelectedCityBikes(' + index + ')"' +
+        '<span>' + city + '</span></div>'
+      );
+    });
+
+    // show the location drop down menu
+    element.toggleClass("show");
+  },
+  /**
+   * select the category name based on the category id received from server side
+   * based on user_id and user_lang
+   * @param {Number} categoryId id of the category
+   * @returns {String} category name
+   */
+  categoryFilter: function (categoryId) {
     // select category based on the user language
     var selectedCategory = "";
-    if ('en' === user_lang) selectedCategory = lnrConstants.subCategory.en;
-    else if ('nl' === user_lang) selectedCategory = lnrConstants.subCategory.nl;
+    if ('en' === lnrConstants.user_lang) selectedCategory = lnrConstants.subCategory.en;
+    else if ('nl' === lnrConstants.user_lang) selectedCategory = lnrConstants.subCategory.nl;
     else selectedCategory = lnrConstants.subCategory.de;
     // select sub category based on the user language
     switch (categoryId) {
@@ -67,6 +123,47 @@ var lnrHelper = {
     }
   },
   /**
+   * show the bikes for the specific city
+   * wrapper for fetching bikes after 100ms
+   * @param {callback} callback to be called
+   * @returns {void}
+   */
+  fetchBikes: function (callback) {
+    if (window.lnrJquery) {
+      return callback(lnrJquery);
+    } else {
+      window.setTimeout(function () {
+        lnrHelper.fetchBikes(callback);
+      }, 100);
+    }
+  },
+  /**
+   * show the bikes for the specific city
+   * wrapper for fetching bikes after 100ms
+   * @param {index} index to be called
+   * @returns {void}
+   */
+  showSelectedCityBikes: function (index) {
+
+    // default user rides for all locations
+    var rides = lnrConstants.getLnrRides();
+
+    // city selected by user from dropdown
+    var selectedCity = lnrConstants.cities[index];
+
+    // bikes for selected city
+    var selectedRides = [];
+
+    // filter bikes for selected city
+    rides.forEach(function (ride) {
+      if (ride.city === selectedCity) selectedRides.push(ride);
+    });
+
+    // render filtered bikes
+    lnrHelper.renderBikesHTML(selectedRides);
+    console.log("selected rides: ", selectedRides);
+  },
+  /**
    * renders the bikes
    * based on user_id and user_lang
    * @param {Number} user_id id of the user for which bikes are to be fetched
@@ -75,77 +172,102 @@ var lnrHelper = {
    * @returns {void}
    */
   renderBikes: function (user_id, user_lang, is_demo_mode) {
-    var $ = lnrJquery;
     var url = "";
     // only used for demo
     // user id and lang can be provided manually
     // is_demo_mode flag is provided from template
     // not for end user
     if (is_demo_mode === true) {
-      user_id = $('#user_demo_id').val();
-      user_lang = $('#user_demo_lang').val();
+      lnrConstants.user_id = lnrJquery('#user_demo_id').val();
+      lnrConstants.user_lang = lnrJquery('#user_demo_lang').val();
+    } else {
+      lnrConstants.user_id = user_id;
+      lnrConstants.user_lang = user_lang;
     }
-    lnrConstants.env == "staging" ? url = lnrConstants.staging_users : url = lnrConstants.production_users;
-    $.get(url + user_id, function (response) {
 
-      var dayText, sizeText, buttonText;
-      if ('en' === user_lang) {
-        dayText = 'from';
-        sizeText = 'For';
-        buttonText = 'Rent this Bike';
-      } else if ('nl' === user_lang) {
-        dayText = 'van';
-        sizeText = 'Voor';
-        buttonText = 'Huur deze fiets';
-      } else {
-        dayText = 'ab';
-        sizeText = 'F&uuml;r';
-        buttonText = 'Dieses Rad Mieten';
-      }
+    // set the environment: staging or production
+    url = (lnrConstants.env === 'staging') ? lnrConstants.staging_users : lnrConstants.production_users;
+
+    // fetch the user and rides info
+    lnrJquery.get(url + lnrConstants.user_id, function (response) {
       // grid for the bikes cards
-      $('#listnride').html('');
-      $("#listnride").append('<div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid"></div>');
+      lnrJquery('#listnride').html('');
+      lnrJquery("#listnride").append('<div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid"></div>');
 
-      // grid selector
-      var grid = $("#lnr-grid");
-      // populate grid with the bikes data
-      response.rides.forEach(function (ride) {
-        var brand = ride.brand,
-          category = ride.category,
-          rideName = ride.name,
-          categoryDesc = lnrHelper.categoryFilter(category, user_lang),
-          price = parseInt(ride.price_from),
-          imageUrl = ride.image_file_1.image_file_1.small.url,
-          svgUrl = lnrConstants.svgUrlRoot + (category + '').slice(0, 1) + '.svg',
-          rideDescription = ride.description.slice(0, 150).concat(' ...');
-        grid.append(
-          '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">' +
-          '<bike-card>' +
-          '<md-card class="lnr-bike-card _md">' +
-          '<a target="_blank" class="image-container lnr-links" title="' + ride.description + '" onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')">' +
-          '<img src="' + imageUrl + '"></img>' +
-          '<div class="after">' +
-          '<span class="content"><span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>' +
-          '<button class="md-button">' + buttonText + '</button></span>' +
-          '</div></a>' +
-          '<md-card-title layout="row" class="layout-row">' +
-          '<md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true">' +
-          '<img src="' + svgUrl + '" height="48" width="48"></img></md-icon>' +
-          '<md-card-title-text class="lnr-margin-left layout-align-space-around-start layout-column">' +
-          '<span class="md-subhead">' + brand + ', ' + categoryDesc + '</span>' +
-          '<span>' + sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size + 10) + ' cm</span>' +
-          '</md-card-title-text>' +
-          '<div layout="column" class="layout-align-space-around-center layout-column">' +
-          '<span style="text-align: center">' + dayText + '</span>' +
-          '<span class="md-headline">' + price + '&euro;</span>' +
-          ' </div>' +
-          '</md-card-title>' +
-          '</md-card>' +
-          '</bike-card>' +
-          '</div>'
-        );
-      });
+      // populate grid with mock bikes data
+      response = lnrConstants.mockUserApiResponse;
+
+      // get cities information from the bikes
+      lnrConstants.cities = lnrHelper.getBikeCities(response.rides);
+
+      // save rides in lnrConstants
+      lnrConstants.rides = response.rides;
+      // render bikes html
+      lnrHelper.renderBikesHTML(lnrConstants.rides);
     });
+  },
+  renderBikesHTML: function (rides) {
+
+    // grid selector
+    var grid = lnrJquery("#lnr-grid");
+
+    // clear gird template
+    grid.html('');
+
+    var basicInfo = lnrHelper.getBikesBasicInfo();
+    rides.forEach(function (ride) {
+      var brand = ride.brand,
+        category = ride.category,
+        rideName = ride.name,
+        categoryDesc = lnrHelper.categoryFilter(category),
+        price = parseInt(ride.price_from),
+        imageUrl = ride.image_file_1.image_file_1.small.url,
+        svgUrl = lnrConstants.svgUrlRoot + (category + '').slice(0, 1) + '.svg',
+        rideDescription = ride.description.slice(0, 150).concat(' ...');
+      grid.append(
+        '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">' +
+        '<bike-card>' +
+        '<md-card class="lnr-bike-card _md">' +
+        '<a target="_blank" class="image-container lnr-links" title="' + ride.description + '" onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')">' +
+        '<img src="' + imageUrl + '"></img>' +
+        '<div class="after">' +
+        '<span class="content"><span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>' +
+        '<button class="md-button">' + basicInfo.buttonText + '</button></span>' +
+        '</div></a>' +
+        '<md-card-title layout="row" class="layout-row">' +
+        '<md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true">' +
+        '<img src="' + svgUrl + '" height="48" width="48"></img></md-icon>' +
+        '<md-card-title-text class="lnr-margin-left layout-align-space-around-start layout-column">' +
+        '<span class="md-subhead">' + brand + ', ' + categoryDesc + '</span>' +
+        '<span>' + basicInfo.sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size + 10) + ' cm</span>' +
+        '</md-card-title-text>' +
+        '<div layout="column" class="layout-align-space-around-center layout-column">' +
+        '<span style="text-align: center">' + basicInfo.dayText + '</span>' +
+        '<span class="md-headline">' + price + '&euro;</span>' +
+        ' </div>' +
+        '</md-card-title>' +
+        '</md-card>' +
+        '</bike-card>' +
+        '</div>'
+      );
+    });
+  },
+  getBikesBasicInfo: function () {
+    var basicInfo = {};
+    if ('en' === lnrConstants.user_lang) {
+      basicInfo.dayText = 'from';
+      basicInfo.sizeText = 'For';
+      basicInfo.buttonText = 'Rent this Bike';
+    } else if ('nl' === lnrConstants.user_lang) {
+      basicInfo.dayText = 'van';
+      basicInfo.sizeText = 'Voor';
+      basicInfo.buttonText = 'Huur deze fiets';
+    } else {
+      basicInfo.dayText = 'ab';
+      basicInfo.sizeText = 'F&uuml;r';
+      basicInfo.buttonText = 'Dieses Rad Mieten';
+    }
+    return basicInfo;
   },
   /**
    * spawns the shop wizard in a new popup
@@ -155,9 +277,8 @@ var lnrHelper = {
    * @returns {void}
    */
   spawnWizard: function (userId, bikeId) {
-    var url = "";
     // select shop solution based on the environment
-    (lnrConstants.env == "staging") ? (url = lnrConstants.staging_shop_solution) : (url = lnrConstants.production_shop_solution);
+    var url = (lnrConstants.env === 'staging') ? lnrConstants.staging_shop_url : lnrConstants.production_shop_url;
     // window dimensions, url, parameter, and open type
     var windowObj = lnrHelper.getWindowParams(url, userId, bikeId);
     // open window for selected environment and dimensions
@@ -178,18 +299,28 @@ var lnrHelper = {
       left = (screen.width / 2) - (width / 2),
       top = (screen.height / 2) - (height / 2);
 
-      return {
-          // dimensions
-          width: width,
-          height: height,
-          left: left,
-          top: top,
-          //window url
-          url: url + '?user_id=' + userId + '&ride_id=' + bikeId,
-          // open type
-          type: '_blank',
-          // window params
-          params: 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=' + width + ',height=' + height + ',top=' + top + ',left=' + left
+    return {
+      // dimensions
+      width: width,
+      height: height,
+      left: left,
+      top: top,
+      //window url
+      url: url + '?user_id=' + userId + '&ride_id=' + bikeId,
+      // open type
+      type: '_blank',
+      // window params
+      params: 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=' + width + ',height=' + height + ',top=' + top + ',left=' + left
     };
+  },
+  getBikeCities: function (rides) {
+    // list of cities for a given user's bikes
+    var cities = [];
+    rides.forEach(function (ride) {
+      if (cities.includes(ride.city) === false) {
+        cities.push(ride.city);
+      }
+    });
+    return cities;
   }
 };
