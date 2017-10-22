@@ -50,6 +50,7 @@ angular.module('listnride', [
   'constanceSpin',
   'velosoph',
   'metaTags',
+  'votec-integration',
   /* external modules */
   'ngAnimate',
   'ngMaterial',
@@ -114,7 +115,7 @@ angular.module('listnride', [
 
     // Retrieves locale from subdomain if valid, otherwise sets the default.
     var retrieveLocale = function () {
-      // default and avaiable languages
+      // default and available languages
       var defaultLanguage = "en";
       var availableLanguages = ["de", "en", "nl"];
       // get language from local storage
@@ -125,14 +126,14 @@ angular.module('listnride', [
       // sub domain, currently in use
       var subDomain = domain[0];
       // top level domain, will be used in future
-      var topLevelDomain = domain[domain.length - 1].split("/")[0];
+      var topLevelDomain = domain[domain.length - 1];
 
       var retrievedLanguage = "";
       
       // select the language
-      if (availableLanguages.includes(localStorageLanguage)) retrievedLanguage = localStorageLanguage;
-      else if (availableLanguages.includes(subDomain)) retrievedLanguage = subDomain;
-      else if (availableLanguages.includes(topLevelDomain)) retrievedLanguage = topLevelDomain;
+      if (availableLanguages.indexOf(localStorageLanguage) >= 0) retrievedLanguage = localStorageLanguage;
+      else if (availableLanguages.indexOf(subDomain) >= 0) retrievedLanguage = subDomain;
+      else if (availableLanguages.indexOf(topLevelDomain) >= 0) retrievedLanguage = topLevelDomain;
       else retrievedLanguage = defaultLanguage;
 
       return retrievedLanguage;

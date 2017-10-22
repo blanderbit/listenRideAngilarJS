@@ -632,6 +632,24 @@
       });
 
       $stateProvider.state({
+        name: 'votec',
+        url: '/rent-votec-bikes',
+        template: '<votec></votec>',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["brand-integration.votec.meta-title", "brand-integration.votec.meta-descr"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["brand-integration.votec.meta-title"]);
+                        ngMeta.setTag("description", translations["brand-integration.votec.meta-descr"]);
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'vello',
         url: '/rent-vello-bikes',
         template: '<vello></vello>',
