@@ -247,6 +247,24 @@
       });
 
       $stateProvider.state({
+        name: 'capeArgus',
+        url: '/capeargus',
+        template: '<cape-argus></cape-argus>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.cape-argus.meta-title", "events.cape-argus.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.cape-argus.meta-title"]);
+                ngMeta.setTag("description", translations["events.cape-argus.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'supercrossMunich',
         url: '/supercross-munich',
         template: '<supercross-munich></supercross-munich>',
