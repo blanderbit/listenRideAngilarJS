@@ -51,6 +51,7 @@ angular.module('listnride', [
   'velosoph',
   'metaTags',
   'votec-integration',
+  'capeArgus',
   /* external modules */
   'ngAnimate',
   'ngMaterial',
