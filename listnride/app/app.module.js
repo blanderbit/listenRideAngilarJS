@@ -50,6 +50,7 @@ angular.module('listnride', [
   'constanceSpin',
   'velosoph',
   'metaTags',
+  'votec-integration',
   /* external modules */
   'ngAnimate',
   'ngMaterial',
