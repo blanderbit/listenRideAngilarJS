@@ -7,6 +7,10 @@ angular.module('capeArgus',[]).component('capeArgus', {
         function CapeArgusController(NgMap, api, $translate, ngMeta) {
             var capeArgus = this;
 
+            capeArgus.submitting = false;
+            capeArgus.email = "";
+            capeArgus.submitted = false;
+
             ngMeta.setTitle($translate.instant("events.cape-argus.meta-title"));
             ngMeta.setTag("description", $translate.instant("events.cape-argus.meta-description"));
 
@@ -34,6 +38,24 @@ angular.module('capeArgus',[]).component('capeArgus', {
                     console.log("Error retrieving User", error);
                 }
             );
+
+            capeArgus.submit = function() {
+                var data = {
+                    "preregistration": {
+                        first_name: "Cape",
+                        last_name: "Argus",
+                        email: capeArgus.email,
+                    }
+                };
+                capeArgus.submitting = true
+                api.post('/preregistrations', data).then(
+                    function (success) {
+                        capeArgus.submitted = true;
+                    },
+                    function (error) {
+                    }
+                );
+            }
 
         }
     ]
