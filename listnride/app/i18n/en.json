@@ -330,8 +330,8 @@
     "city": "City",
     "country": "Country",
     "company-name": "Company name",
-    "update-contact": "Update Contact",
-    "update-contact-mobile": "Contact",
+    "update-contact": "Change Phone number",
+    "update-contact-mobile": "Phone number",
     "company-contact-info": "Please fill form with company contact person information.",
     "errors": {
       "password-length": "Password should be 6-30 characters",

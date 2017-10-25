@@ -343,8 +343,8 @@
     "city": "Plaats",
     "country": "Land",
     "company-name": "Company name",
-    "update-contact": "Contactgegevens wijzigen",
-    "update-contact-mobile": "Contactgegevens",    
+    "update-contact": "Wijzig mobiele nummer",
+    "update-contact-mobile": "Mobiele nummer",
     "company-contact-info": "Vul uw Bedrijfsnaam en naam van de contact persoon in",
     "errors": {
       "password-length": "Wachtwoord dient 6-30 karakters lang te zijn",
