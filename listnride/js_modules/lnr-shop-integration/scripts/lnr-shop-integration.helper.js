@@ -155,22 +155,28 @@ var lnrHelper = {
       locationButton.html(lnrConstants.translate.all.selected + '<div class="dropdown-caret" style="float: right"></div>');
       return;
     }
+
     // city selected by user from dropdown
     var selectedCity = lnrConstants.cities[index];
 
     // bikes for selected city
     var selectedRides = [];
 
-    // filter bikes for selected city
-    rides.forEach(function (ride) {
-      if (ride.city === selectedCity) selectedRides.push(ride);
-    });
+    if (rides.length) {
 
-    // update the button text
-    locationButton.html(selectedCity + '<div class="dropdown-caret" style="float: right"></div>');
+      // filter bikes for selected city
+      for (var loop = 0; loop < rides.length; loop += 1) {
+        if (rides[loop] && rides[loop].city === selectedCity) {
+          selectedRides.push(rides[loop]);
+        }
+      }
 
-    // render filtered bikes
-    lnrHelper.renderBikesHTML(selectedRides);
+      // update the button text
+      locationButton.html(selectedCity + '<div class="dropdown-caret" style="float: right"></div>');
+
+      // render filtered bikes
+      lnrHelper.renderBikesHTML(selectedRides);
+    }
   },
   /**
    * renders the bikes
@@ -209,7 +215,10 @@ var lnrHelper = {
       lnrConstants.rides = response.rides;
 
       // render the locations selector
-      lnrHelper.renderLocationSelector();
+      // only when user has >1 bikes
+      if (lnrConstants.rides && lnrConstants.rides.length > 1) {
+        lnrHelper.renderLocationSelector();
+      }
 
       // render bikes html
       lnrHelper.renderBikesHTML(lnrConstants.rides);
