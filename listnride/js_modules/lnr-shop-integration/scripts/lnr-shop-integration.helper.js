@@ -148,10 +148,14 @@ var lnrHelper = {
     // default user rides for all locations
     var rides = lnrConstants.getLnrRides();
 
-    if (index === 0) {
-      lnrHelper.renderBikesHTML(rides);
+    // if there is only single city
+    // there is no need for selection
+    if (lnrConstants.cities.length === 1) return;
 
-      // update the button text
+    // if there are several language
+    // and 'All' is selected
+    else if (index === 0) {
+      lnrHelper.renderBikesHTML(rides);
       locationButton.html(lnrConstants.translate.all.selected + '<div class="dropdown-caret" style="float: right"></div>');
       return;
     }
@@ -163,7 +167,6 @@ var lnrHelper = {
     var selectedRides = [];
 
     if (rides.length) {
-
       // filter bikes for selected city
       for (var loop = 0; loop < rides.length; loop += 1) {
         if (rides[loop] && rides[loop].city === selectedCity) {
@@ -215,10 +218,8 @@ var lnrHelper = {
       lnrConstants.rides = response.rides;
 
       // render the locations selector
-      // only when user has >1 bikes
-      if (lnrConstants.rides && lnrConstants.rides.length > 1) {
-        lnrHelper.renderLocationSelector();
-      }
+      // only when user has at least 1  bikes
+      if (lnrConstants.rides && lnrConstants.rides.length > 0) lnrHelper.renderLocationSelector();
 
       // render bikes html
       lnrHelper.renderBikesHTML(lnrConstants.rides);
@@ -289,7 +290,10 @@ var lnrHelper = {
 
     // location button
     var locationButton = lnrJquery('#lnr-location-button');
-    locationButton.html(lnrConstants.translate.all.selected + '<div class="dropdown-caret" style="float: right"></div>');
+
+    // show default location
+    var default_location = lnrConstants.cities.length === 1 ? lnrConstants.cities[0] : lnrConstants.translate.all.selected;
+    locationButton.html(default_location + '<div class="dropdown-caret" style="float: right"></div>');
 
     // close location dropdown on window click
     window.onclick = lnrHelper.closeDropDown;
@@ -368,7 +372,8 @@ var lnrHelper = {
     });
 
     // add option as All in the dropdown menu
-    cities.unshift(lnrConstants.translate.all.selected);
+    // only when more than 1 cities are present
+    if (cities.length > 1) cities.unshift(lnrConstants.translate.all.selected);
 
     return cities;
   }
