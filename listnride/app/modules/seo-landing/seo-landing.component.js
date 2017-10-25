@@ -8,11 +8,13 @@ angular.module('seoLanding',[]).component('seoLanding', {
 
       var seoLanding = this;
       seoLanding.bikes = {};
+      seoLanding.loading = true;
 
       api.get('/seo_pages?url=' + $stateParams.pageTitle).then(
         function (success) {
           seoLanding.data = success.data;
           seoLanding.bikes = success.data.bikes
+          seoLanding.loading = false;
         },
         function (error) {
           $state.go('404');
