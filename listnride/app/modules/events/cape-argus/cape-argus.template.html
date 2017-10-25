@@ -2,7 +2,7 @@
   <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/events/cape-argus_hero.jpg');" layout="row" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
       <div>
-        <img flex="60" ng-src="app/assets/ui_images/events/cape-argus_logo.png" />
+        <img flex="50" ng-src="app/assets/ui_images/events/cape-argus_logo.png" />
       </div>
     </div>
   </div>
@@ -30,7 +30,7 @@
             <md-button ng-click="capeArgus.submit()" ng-disabled="capeArgus.submitting || !capeArgus.email" class="md-raised md-primary" flex-order="2" style="margin: 0 8px">{{ 'invest.submit' | translate }}</md-button>
           </div>
         </md-input-container>
-        <p class="lnr-green-text" ng-if="capeArgus.submitted">Thanks, you'll get notified as soon as all bikes got published!</p>
+        <p class="lnr-green-text" ng-if="capeArgus.submitted">{{ 'events.cape-argus.preregister-thanks' | translate }}</p>
       </div>
     </div>
 
