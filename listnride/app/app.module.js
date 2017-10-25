@@ -50,6 +50,7 @@ angular.module('listnride', [
   'constanceSpin',
   'velosoph',
   'metaTags',
+  'vanmoofIntegration',
   /* external modules */
   'ngAnimate',
   'ngMaterial',

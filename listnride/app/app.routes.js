@@ -632,6 +632,24 @@
       });
 
       $stateProvider.state({
+        name: 'vanmoof',
+        url: '/rent-vanmoof-bikes',
+        template: '<vanmoof></vanmoof>',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["brand-integration.vanmoof.meta-title", "brand-integration.vanmoof.meta-descr"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["brand-integration.vanmoof.meta-title"]);
+                        ngMeta.setTag("description", translations["brand-integration.vanmoof.meta-descr"]);
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'vello',
         url: '/rent-vello-bikes',
         template: '<vello></vello>',
