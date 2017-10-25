@@ -354,8 +354,8 @@
     "city": "Stadt",
     "country": "Land",
     "company-name": "Company name",
-    "update-contact": "Kontakt aktualisieren",
-    "update-contact-mobile": "Kontakt",
+    "update-contact": "Handynummer ändern",
+    "update-contact-mobile": "Handynummer",
     "company-contact-info": "Bitte trage die Daten der Kontaktperson des Unternehmens ein.",
     "errors": {
       "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
