@@ -1,9 +1,7 @@
 <md-content class="single-column">
   <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/events/cape-argus_hero.jpg');" layout="row" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
-      <div>
-        <img flex="50" ng-src="app/assets/ui_images/events/cape-argus_logo.png" />
-      </div>
+      
     </div>
   </div>
   <div class="content" layout="column" layout-padding>
@@ -15,6 +13,9 @@
     </div> -->
 
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center" layout-padding>
+      <div hide-gt-xs layout layout-align="center center">
+          <img flex="50" ng-src="app/assets/ui_images/events/cape-argus_logo.png" />
+      </div>
       <div layout="column" flex-gt-xs="45">
         <h1 class="md-headline" style="margin-top: 15px">{{ 'events.cape-argus.title' | translate }}</h1>
         <p translate="events.cape-argus.text-1"></p>
@@ -23,6 +24,9 @@
         <md-divider></md-divider>
       </div>
       <div layout="column" flex-gt-xs="45" layout-align="center start">
+        <div hide-xs>
+          <img flex="50" ng-src="app/assets/ui_images/events/cape-argus_logo.png" />
+        </div>
         <p translate="events.cape-argus.text-2"></p>
         <md-input-container flex md-no-float ng-if="!capeArgus.submitted">
           <div layout="row">
