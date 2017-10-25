@@ -202,9 +202,6 @@ var lnrHelper = {
       // grid for the bikes cards
       lnrJquery('#listnride').html('');
 
-      // populate grid with mock bikes data
-      response = lnrConstants.mockUserApiResponse;
-
       // get cities information from the bikes
       lnrConstants.cities = lnrHelper.getBikeCities(response.rides);
 
