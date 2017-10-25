@@ -18,10 +18,7 @@ angular.module('vanmoofIntegration',[]).component('vanmoof', {
       vanmoof.bikes = {
         berlin: [],
         munich: [],
-        hamburg: [],
-        vienna: [],
-        zurich: [],
-        frankfurt: []
+        hamburg: []
       };
       vanmoof.slickConfig = {
         enabled: true,
@@ -43,9 +40,6 @@ angular.module('vanmoofIntegration',[]).component('vanmoof', {
               case "Berlin": vanmoof.bikes.berlin.push(success.data[i]); break;
               case "München": vanmoof.bikes.munich.push(success.data[i]); break;
               case "Hamburg": vanmoof.bikes.hamburg.push(success.data[i]); break;
-              case "Wien": vanmoof.bikes.vienna.push(success.data[i]); break;
-              case "Zürich": vanmoof.bikes.zurich.push(success.data[i]); break;
-              case "Frankfurt am Main": vanmoof.bikes.frankfurt.push(success.data[i]); break;
             }
           }
           vanmoof.currentBikes = vanmoof.bikes["berlin"];
