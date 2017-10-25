@@ -3,7 +3,7 @@
 */
 var lnrConstants = {
   env: 'production',
-  lnrStyles: "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.css",
+  lnrStyles: "https://s3.eu-central-1.amazonaws.com/listnride-cdns/lnr-shop-integration.min.css",
   lnrStylesLocal: "styles/lnr-shop-integration.css",
   introText: {
     // english intro text
@@ -20,6 +20,17 @@ var lnrConstants = {
     'U kunt de fietsen eenvoudig online boeken, door op de gewenst fiets te klikken. ' +
     'De fiets is na de boeking voor uw gereserveerd. '
   },
+
+  // translation object
+  translate: {
+    all: {
+      "en": 'All',
+      "de": 'Alle',
+      "nl": 'Alles',
+      "selected": ''
+    }
+  },
+
   // shop solution for staging and production
   staging_shop_url: "https://listnride-staging.herokuapp.com/v2/shop_solutions",
   production_shop_url: "https://api.listnride.com/v2/shop_solutions",
@@ -1027,6 +1038,7 @@ var lnrConstants = {
       }
     ]
   },
+
   getLnrRides: function () {
     return lnrConstants.rides;
   }

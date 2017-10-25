@@ -10,7 +10,7 @@ var lnrHelper = {
    */
   preInit: function () {
     var css_lnr = document.createElement("LINK");
-    css_lnr.href = lnrConstants.lnrStylesLocal;
+    css_lnr.href = lnrConstants.lnrStyles;
     css_lnr.rel = "stylesheet";
     var header = document.getElementsByTagName("head")[0];
     header.appendChild(css_lnr);
@@ -21,19 +21,16 @@ var lnrHelper = {
    * @returns {void}
    */
   postInit: function () {
-    // location button
-    var locationButton = lnrJquery('#lnr-location-button');
-    locationButton.html('Location Button <div class="dropdown-caret" style="float: right"></div>');
-
-    // close location dropdown on window click
-    window.onclick = lnrHelper.closeDropDown;
-
     // get user id and language
     var user_id = document.getElementById('listnride').dataset.user;
     var user_lang = document.getElementById('listnride').dataset.lang;
 
+    if ("de" === user_lang) lnrConstants.translate.all.selected = lnrConstants.translate.all.de;
+    else if ('nl' === user_lang) lnrConstants.translate.all.selected = lnrConstants.translate.all.nl;
+    else lnrConstants.translate.all.selected = lnrConstants.translate.all.en;
+
     // render the bikes for the user
-    lnrHelper.renderBikes(user_id, user_lang);
+    lnrHelper.renderBikes(user_id, user_lang, false);
   },
   /**
    * close the drop-downs for calendar
@@ -67,7 +64,7 @@ var lnrHelper = {
     // list cities in the dropdown menu
     lnrConstants.cities.forEach(function (city, index) {
       element.append('<div class="lnr-date-selector" ' +
-        'onclick="lnrHelper.showSelectedCityBikes(' + index + ')"' +
+        'onclick="lnrHelper.onCitySelect(' + index + ')"' +
         '<span>' + city + '</span></div>'
       );
     });
@@ -140,14 +137,24 @@ var lnrHelper = {
   /**
    * show the bikes for the specific city
    * wrapper for fetching bikes after 100ms
-   * @param {index} index to be called
+   * @param {Number} index to be called
    * @returns {void}
    */
-  showSelectedCityBikes: function (index) {
+  onCitySelect: function (index) {
+
+    // location button
+    var locationButton = lnrJquery('#lnr-location-button');
 
     // default user rides for all locations
     var rides = lnrConstants.getLnrRides();
 
+    if (index === 0) {
+      lnrHelper.renderBikesHTML(rides);
+
+      // update the button text
+      locationButton.html(lnrConstants.translate.all.selected + '<div class="dropdown-caret" style="float: right"></div>');
+      return;
+    }
     // city selected by user from dropdown
     var selectedCity = lnrConstants.cities[index];
 
@@ -159,16 +166,18 @@ var lnrHelper = {
       if (ride.city === selectedCity) selectedRides.push(ride);
     });
 
+    // update the button text
+    locationButton.html(selectedCity + '<div class="dropdown-caret" style="float: right"></div>');
+
     // render filtered bikes
     lnrHelper.renderBikesHTML(selectedRides);
-    console.log("selected rides: ", selectedRides);
   },
   /**
    * renders the bikes
    * based on user_id and user_lang
-   * @param {Number} user_id id of the user for which bikes are to be fetched
-   * @param {Number} user_lang language of the user. [english, german, dutch]
-   * @param {Bool} is_demo_mode are user id and language provided from debugging fields
+   * @param {Number} user_id id: of the user for which bikes are to be fetched
+   * @param {String} user_lang: language of the user. [english, german, dutch]
+   * @param {bool} is_demo_mode: user id and language provided from debugging fields
    * @returns {void}
    */
   renderBikes: function (user_id, user_lang, is_demo_mode) {
@@ -192,7 +201,6 @@ var lnrHelper = {
     lnrJquery.get(url + lnrConstants.user_id, function (response) {
       // grid for the bikes cards
       lnrJquery('#listnride').html('');
-      lnrJquery("#listnride").append('<div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid"></div>');
 
       // populate grid with mock bikes data
       response = lnrConstants.mockUserApiResponse;
@@ -202,11 +210,20 @@ var lnrHelper = {
 
       // save rides in lnrConstants
       lnrConstants.rides = response.rides;
+
+      // render the locations selector
+      lnrHelper.renderLocationSelector();
+
       // render bikes html
       lnrHelper.renderBikesHTML(lnrConstants.rides);
     });
   },
   renderBikesHTML: function (rides) {
+
+    // create grid for the
+    lnrJquery("#listnride").append(
+      '<div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid"></div>'
+    );
 
     // grid selector
     var grid = lnrJquery("#lnr-grid");
@@ -251,6 +268,25 @@ var lnrHelper = {
         '</div>'
       );
     });
+  },
+  renderLocationSelector: function () {
+    lnrJquery('#listnride').append(
+      '<div class="mdl-grid mdl-grid--no-spacing">' +
+      '<div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet mdl-cell--2-col-phone"></div>' +
+      '<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">' +
+      '<div style="margin-left:8px; margin-right:8px;">' +
+      '<button type="button" style="color: black;" id="lnr-location-button" onclick="lnrHelper.openDropDown()" ' +
+      'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button"></button>' +
+      '<div id="lnr-location-dropdown" class="dropdown-content" style="float: right"></div>' +
+      '</div></div></div>'
+    );
+
+    // location button
+    var locationButton = lnrJquery('#lnr-location-button');
+    locationButton.html(lnrConstants.translate.all.selected + '<div class="dropdown-caret" style="float: right"></div>');
+
+    // close location dropdown on window click
+    window.onclick = lnrHelper.closeDropDown;
   },
   getBikesBasicInfo: function () {
     var basicInfo = {};
@@ -314,13 +350,20 @@ var lnrHelper = {
     };
   },
   getBikeCities: function (rides) {
+
     // list of cities for a given user's bikes
     var cities = [];
+
+    // unique cities of the bikes
     rides.forEach(function (ride) {
       if (cities.includes(ride.city) === false) {
         cities.push(ride.city);
       }
     });
+
+    // add option as All in the dropdown menu
+    cities.unshift(lnrConstants.translate.all.selected);
+
     return cities;
   }
 };
