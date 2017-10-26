@@ -50,6 +50,9 @@ angular.module('listnride', [
   'constanceSpin',
   'velosoph',
   'metaTags',
+  'vanmoofIntegration',
+  'votec-integration',
+  'capeArgus',
   /* external modules */
   'ngAnimate',
   'ngMaterial',

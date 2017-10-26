@@ -120,10 +120,10 @@
     "successfully-logged-out": "Je bent uitgelogd.",
     "could-not-log-in": "Inloggen mislukt. Check of je je al hebt geregistreerd en je inloggegevens correct zijn.",
     "reset-password-success": "We hebben zojuist een nieuw wachtwoord naar je toegemaild! Deze kan elk ogenblik aankomen.",
-    "opening-hours-success": "Opening hours successfully changed.",
-    "opening-hours-error": "Could not save opening hours.",
-    "uniq-phone": "Phone number already registered in our system.",
-    "pending-requests": "Looks like you have an open request for this bike. Before you can delete the bike you need to accept or cancel it."
+    "opening-hours-success": "De openingstijden zijn succesvol gewijzigd.",
+    "opening-hours-error": "Kan openingstijden niet opslaan.",
+    "uniq-phone": "Telefoonnummer is al geregistreerd in ons systeem.",
+    "pending-requests": "Het lijkt alsof u een open verzoek voor deze fiets heeft. Voordat u de fiets kunt verwijderen, moet u deze accepteren of annuleren."
   },
   "settings": {
     "settings": "Instellingen",
@@ -132,12 +132,12 @@
     "account": "Account",
     "delete-account": "Verwijder Account",
     "delete-account-description": "Hier kan je jouw listnride account verwijderen. Deze stap kan niet worden teruggedraaid.",
-    "delete-account-sure": "Are you really sure?",
-    "delete-account-sure-description": "This step can not be undone.",
+    "delete-account-sure": "Weet je het echt zeker?",
+    "delete-account-sure-description": "Deze stap kan niet worden ongedaan gemaakt.",
     "delete-account-yes": "Yes, delete",
     "delete-account-no": "No",
     "availability": "Openingstijden",
-    "availability-description": "You can set your availability times for renting out bikes.",
+    "availability-description": "U kunt uw beschikbaarheidstijden instellen voor het huren van fietsen.",
     "business": "Fietswinkel",
     "from": "From",
     "to": "To",
@@ -239,7 +239,7 @@
   },
   "requests": {
     "booking-overview": "Bookingsoverzicht",
-    "booking-failed": "Booking failed",
+    "booking-failed": "Boeking mislukt",
     "booking": "Boeking",
     "price": "Prijs",
     "book": "Boeken",
@@ -247,7 +247,7 @@
     "listChat": "Aanvragen van",
     "rideChat": "Aanvragen aan",
     "ratings": {
-      "title": "How did you like the overall experience?",
+      "title": "Hoe vond je de algehele ervaring?",
       "description": "Vertrouwen en Veiligheid zijn voor ons het belangrijkste. Met een korte recensie help je de gehele community.",
       "1": "onacceptabel",
       "2": "Slecht",
@@ -283,7 +283,7 @@
     "5": "Hartelijk bedankt voor je recensie. De verhuurtransactie is nu afgerond en het Geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons graag een e-mail aan hello@listnride.com",
     "8": "Je hebt de aanvraag afgewezen. Schrijf de aanvrager kort een berichtje waarom het niet lukt.",
     "9": "helaas heeft {{user.first_name}} de aanvraag niet bevestigd.",
-    "10": "Your request was cancelled by system"
+    "10": "Uw verzoek is geannuleerd door systeem."
   },
   "rideChat": {
     "1": "Je zou graag {{lister.first_name}} {{lister.last_name}}'s <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. Spreek de verdere details met de verhuurder af. Zodra je aanvraag wordt aangenomen, is de boeking rond.",
@@ -343,8 +343,8 @@
     "city": "Plaats",
     "country": "Land",
     "company-name": "Company name",
-    "update-contact": "Contactgegevens wijzigen",
-    "update-contact-mobile": "Contactgegevens",    
+    "update-contact": "Wijzig mobiele nummer",
+    "update-contact-mobile": "Mobiele nummer",
     "company-contact-info": "Vul uw Bedrijfsnaam en naam van de contact persoon in",
     "errors": {
       "password-length": "Wachtwoord dient 6-30 karakters lang te zijn",
@@ -355,8 +355,8 @@
       "empty-first-name": "Vul uw voornaam in",
       "max-size-last-name": "Achternaam mag maximaal 30 karakters lang zijn",
       "max-size-first-name": "Voornaam mag maximaal 20 karakters lang zijn",
-      "empty-company-name": "Please enter your company name",
-      "min-size-company-name": "Company name should be longer than 2 characters "
+      "empty-company-name": "Vul alstublieft uw bedrijfsnaam in",
+      "min-size-company-name": "Bedrijfsnaam moet langer zijn dan 2 karakters "
     }
   },
   "autocomplete": {
@@ -968,6 +968,14 @@
       "meta-description": "Rent the perfect cyclocross bike for the Supercross in Munich easily online. Choose from brands such as BMC, Votec, Ridley, SRAM, Specialized, Bianchi, Pasculli, Focus and other brands.",
       "title": "Rent the perfect bike for the Supercross Munich",
       "text": "The listnride community offers you the right cyclocross bike for the Supercross Munich. Rent a bike to participate in the race, one of the cross social rides or try one of the cyclocross workshops.<br><br>Scroll through the offering and click to open it. To find out more, read the description and review the available equipment. You can then book the desired bike via the booking calendar."
+    },
+    "cape-argus": {
+      "meta-title":"Boek eenvoudig de perfekte racefiets voor de Cape Town Cycle Tour",
+      "meta-description":"Huur de perfekte racefiets voor de Cycle Tour in Kaapstad van merken zoals Specialized, Ridley, Cervelo en Bianchi",
+      "title": "Boek eenvoudig the perfekte racefiets voor de Cycle Tour in Kaapstad",
+      "text-1": "Na de Velothon Berlin en Hamburg Cyclassics, biedt de listnride community binnenkort ook hoogwaardige racefietsen voor de Cape Argus aan. Huur de perfecte racefiets voor de gewenste periode. Laat je eigen fiets gewoon thuis, bespaar je de romslomp en gun jezelf een mooie huurfiets! <br><br>Je kan niet deelnemen aan de Cycling Tour in Kaapstad, help dan iemand anders en verdien wat zakgeld en verhuur uw racefiets.",
+      "text-2": "<span class=\"md-body-2\">Commerciele aanbieder?</span><br>Meld je <a href=\"mailto:contact@listnride.com\">hier</a> aan.<br><br><br><span class=\"md-body-2\">Wil je geinformeerd worden, zodra het aanbod wordt gepubliceerd?</span><br>Laat hier je e-mailadres achter en wij houden je op de hoogte.",
+      "preregister-thanks": "dankjewel! We zullen je informeren, zodra de fietsen online worden geplaatst"
     }
   },
   "error-404": {
@@ -1214,6 +1222,29 @@
       "faq-answer-2": "With an effortless push of a button, you’ll access to the battery inside the frame lifting the cover.",
       "faq-question-3": "Is the battery replacable?",
       "faq-answer-3": "Yes, it is possible to replace the battery."
+    },
+    "votec": {
+      "meta-title":"Rent and Test the newest Votec Bikes",
+      "meta-descr": "VOTEC - Fusion of Functionality, Design and Quality",
+      "title": "VOTEC - Fusion of Functionality, Design and Quality",
+      "description": "Rent and Test the newest Votec Bikes",
+      "subdescription": "Since ever Votec stands for high-quality bike, guaranteeing a maximum of riding fun. The VOTEC team is highly experienced in all kinds of cycling. Therefore our customers get only products which the whole team is satisfied with until it goes into production.",
+      "item1-title": "Experience",
+      "item1-description": "The VOTEC team transfers its professional expertise directly on the bike - the countless positive reviews in all classes of road- and mountain - bikes give a clear tone.",
+      "item2-title": "Quality",
+      "item2-description": "VOTEC Bikes are tested to the roots by the independent Zetler Institution for Cycle technique. We trust our bikes and fully believe in the quality, meaning for you 10 years of warranty for alumnium frames and 6 years on carbon frames.",
+      "item3-title": "Service",
+      "item3-description": "With VOTEC you get the best products for the best money. Our direct sell distribution allows it. You can only get our bikes in our online shops. Proffesionially pre-mounted, we send your dream bike directly to its future owner.",
+      "find-out-more": "Learn more about Votec Bikes",
+      "order-online": "When you order your Votec, we will refund you the cost of your rental / test ride!<br>See the most frequently asked questions below.",
+      "faq-question-1": "Do I have warranty",
+      "faq-answer-1": "Under the normal legal guarantee, VOTEC voluntarily grants the original owner an additional guarantee of 10 years from the date of purchase on aluminum frames and of 6 years on carbon frames and road bike carbons. This warranty is subject to repair or a replacement by a successor model and does not include additional costs such as assembly and transportation fees. Excluded are damages caused by improper use, eg. jumps, fall, overload and neglect. The warranty expires in the case of unauthorized modifications to the frame as well as installation or modification of additional components.",
+      "faq-question-2": "Does racing influence the VOTEC Warranty?",
+      "faq-answer-2": "VOTEC does not exclude racing for warranty purpose.",
+      "faq-question-3": "Is there a right of return?",
+      "faq-answer-3": "The buyer has a right of return of 100 days from date of purchase.",
+      "faq-question-4": "What frame size do I need?",
+      "faq-answer-4": "In the geometry tables of the respective models you will find a size recommendation which refers to the body size and your step length. How to determine your step length: You need a cane and a water balance. If you do not have a water scale, you can easily use a book. Pull out your shoes and pants (depending on how pants are cut, it affects the result). If you have a water scale, pull it upwards as far as possible between the legs. It works the same way with a book, but you should place yourself on a door or wall so that the top of your 'meter' is parallel to the ground. Now measure the stick from the floor to the upper edge of the water scale or the book. The value you have now determined is your so-called step length (step height)."
     }
   },
   "invite-landing": {
@@ -1285,7 +1316,7 @@
     "learn-more": "Crowdfunding FAQ",
     "known-from": "listnride in the news",
     "investment": "Investment",
-    "submit": "Preregister",
+    "submit": "Aanmelden",
     "form-feedback": "Thank you! You've successfully shared your level of interest with us.",
     "faq-question-1": "WHY DOES LISTNRIDE START A CROWDFUNDING CAMPAIGN?",
     "faq-answer-1": "We are a young company with a well developed product, a growing community of tenants and bicycle owners. To drive further growth, we offer the community and the public the opportunity to invest in our company alongside our current investors. With these additional resources, we will make further improvements to our product as well as continue to grow geographically and so grow the community, resulting in greater choice for riders and greater demand for listers.",

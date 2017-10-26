@@ -3,8 +3,8 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', 'ngMeta', 'price',
-    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, ngMeta, price) {
+  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', '$state', 'ngMeta', 'price',
+    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price) {
       var bike = this;
 
       bike.mapOptions = {
@@ -51,6 +51,7 @@ angular.module('bike',[]).component('bike', {
           ngMeta.setTag("description", $translate.instant("bike.meta-description", metaData));
         },
         function(error) {
+        	$state.go('404');
         }
       );
 

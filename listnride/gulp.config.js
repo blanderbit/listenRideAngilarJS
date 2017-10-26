@@ -57,11 +57,14 @@ module.exports = function () {
                 style: 'lnr-shop-integration.min.css'
             },
             style: 'lnr-shop-integration.css',
-            css: './js_modules/lnr-shop-integration/lnr-shop-integration.css',
-            vendorCss: './js_modules/lnr-shop-integration/vendor.css',
+            css: './js_modules/lnr-shop-integration/styles/lnr-shop-integration.css',
+            vendorCss: './js_modules/lnr-shop-integration/styles/lnr-shop-integration.vendor.css',
             js: [
-                './js_modules/lnr-shop-integration/lnr-shop-integration.js',
-                './js_modules/lnr-shop-integration/vendor.js'
+                './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.constants.js',
+                './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.helper.js',
+                './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.js',
+                './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.jquery.js',
+                './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.vendor.js'
             ],
             source: 'lnr-shop-integration.js',
             prefix: '#listnride'

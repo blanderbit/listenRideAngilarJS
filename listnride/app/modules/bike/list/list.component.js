@@ -235,6 +235,7 @@ angular.module('list', ['ngLocale']).component('list', {
         }).then(
           function (response) {
             loadingDialog.close();
+            $state.go("listings");
             $state.go("bike", {bikeId: response.data.id});
           },
           function (error) {

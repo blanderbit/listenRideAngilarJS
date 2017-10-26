@@ -121,9 +121,9 @@
     "successfully-logged-out": "Du bist ausgeloggt.",
     "could-not-log-in": "Login fehlgeschlagen. Bitte stell sicher dass du bereits registriert bist und deine Anmelde-Daten stimmen.",
     "reset-password-success": "Wir haben dir soeben ein neues Passwort via Email geschickt. Es sollte in den nächsten Minuten eintreffen.",
-    "opening-hours-success": "Opening hours successfully changed.",
-    "opening-hours-error": "Could not save opening hours.",
-    "uniq-phone": "Phone number already registered in our system.",
+    "opening-hours-success": "Öffnungszeiten erfolgreich geändert.",
+    "opening-hours-error": "Die Öffnungszeiten konnten nicht gespeichert werden.",
+    "uniq-phone": "Telefonnummer ist bereits in unserem System registriert.",
     "pending-requests": "Du hast noch eine offene Anfrage für dieses Rad. Beantworte diese (Ablehnen/ Annehmen) bevor du es entfernen kannst."
   },
 
@@ -244,7 +244,7 @@
 
   "requests": {
     "booking-overview": "Buchungsübersicht",
-    "booking-failed": "Booking failed",
+    "booking-failed": "Buchung fehlgeschlagen",
     "booking": "Buchung",
     "price": "Preis",
     "book": "Buchen",
@@ -290,7 +290,7 @@
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
     "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
     "9": "Leider hat {{user.first_name}} die Anfrage nicht bestätigt.",
-    "10": "Your request was cancelled by system"
+    "10": "Ihre Anfrage wurde vom System abgebrochen."
   },
 
   "rideChat": {
@@ -354,8 +354,8 @@
     "city": "Stadt",
     "country": "Land",
     "company-name": "Company name",
-    "update-contact": "Kontakt aktualisieren",
-    "update-contact-mobile": "Kontakt",
+    "update-contact": "Handynummer ändern",
+    "update-contact-mobile": "Handynummer",
     "company-contact-info": "Bitte trage die Daten der Kontaktperson des Unternehmens ein.",
     "errors": {
       "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
@@ -366,8 +366,8 @@
       "empty-first-name": "Bitte gib deinen Vornamen an",
       "max-size-last-name": "Der Nachname sollte maximal 30 Buchstaben lang sein",
       "max-size-first-name": "Der Vorname sollte maximal 20 Buchstaben lang sein",
-      "empty-company-name": "Please enter your company name",
-      "min-size-company-name": "Company name should be longer than 2 characters "
+      "empty-company-name": "Bitte geben Sie Ihren Firmennamen ein",
+      "min-size-company-name": "Der Firmenname sollte länger als 2 Zeichen sein "
     }
   },
 
@@ -1001,6 +1001,14 @@
       "meta-description": "Fahre den Supercross München auf dem Cyclocross Bike deiner Träume! Wähle BMC, Votec, Ridley, SRAM, Specialized, Bianchi, Pasculli, Focus und anderen Marken.",
       "title": "Miete das perfekte Cyclocross Bike für den Supercross München",
       "text": "Die listnride Community bietet dir die passenden Cyclocross Bikes für den Supercross München. Leihe dir ein Bike für das Rennen einen der Cross Social Rides oder um an den Cyclocross Workshops teilzunehmen.<br><br>Scrolle durch das Angebot und klicke auf ein Inserat, um es zu öffnen. Um mehr darüber zu erfahren, lies die Beschreibung und prüfe die verfügbare Ausstattung. Über den Buchungskalender kannst du dann das gewünschte Rad buchen."
+    },
+    "cape-argus": {
+      "meta-title":"Miete dir einfach das perfekte Rennrad für die Kapstadt Cycle Tour",
+      "meta-description":"Fahre die Kapstadt Cycle auf dem Rennrad deiner Träume! Wähle Specialized, Ridley, Cervelo, Bianchi, sowie Simplon und miete es ganz bequem und einfach von Zuhause.",
+      "title": "Miete dir einfach das perfekte Rennrad für den Cycle Tour in Kapstadt",
+      "text-1": "Nach der Velothon Berlin und Hamburg Cyclassics, bietet die listnride Community euch in kürze passende Rennräder für die Cape Argus an. Das perfekte Rennrad ohne weiteres für den Wunschzeitraum einfach mieten. Lassen Sie Ihr Rad einfach und bequem zu Hause und gönnen Sie sich was anderes, einfach so!<br><br>Kannst Du leider nicht bei den Cycle Tour in Kapstadt teilnehmen, Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und vermiete dein Rad.",
+      "text-2": "<span class=\"md-body-2\">Gewerbliche Anbieter?</span><br>Melden Sie sich <a href=\"mailto:contact@listnride.com\">hier</a><br><br><br><span class=\"md-body-2\">Möchtest du informiert werden, sobald alle Räder veröffentlicht sind?</span><br>Hinterlasse hier deine Email Adresse.",
+      "preregister-thanks": "Danke, du wirst informiert sobald alle Räder veröffentlicht sind!"
     }
   },
 
@@ -1254,6 +1262,29 @@
       "faq-answer-2": "Mit einem einfachen Knopfdruck öffnest du die Klappe am Rahmen und hast Zugriff auf den Akku.",
       "faq-question-3":"Kann man den Akku tauschen?",
       "faq-answer-3": "Ja, man kann den Akku tauschen."
+    },
+    "votec": {
+      "meta-title":"Miete und Teste die neusten Votec Bikes",
+      "meta-descr": "VOTEC – Fusion aus Funktion, Design und Qualität",
+      "title": "VOTEC – Fusion aus Funktion, Design und Qualität",
+      "description": "Miete und Teste die neusten Votec Bikes",
+      "subdescription": "Seit jeher steht VOTEC für High-End Bikes, die maximalen Fahrspaß garantieren. Das VOTEC Team besteht aus Mitarbeitern, die eine große Erfahrung in allen Bereichen des Radsports mitbringen. Davon profitieren unsere Kunden, denn nur Konzepte die unser Team voll überzeugen, schaffen es von einer Idee zu einem Serienprodukt heranzureifen.",
+      "item1-title": "Erfahrung",
+      "item1-description": "Das VOTEC Team hat seine geballte Kompetenz direkt auf die Bikes übertragen – die zahlreichen Testerfolge mit den neuesten Modellen im Road- und Mountainbikebereich, in allen Klassen sprechen eine deutliche Sprache.",
+      "item2-title": "Qualität",
+      "item2-description": "VOTEC Bikes sind vom unabhängigen Zedler Institut für Fahrradtechnik und -sicherheit auf Herz und Nieren getestet. Nicht nur deshalb sind wir so überzeugt von unseren Bikes und geben dir 10 Jahre Garantie auf alle Aluminium- und 6 Jahre auf alle Carbon-Rahmen ab 2013.",
+      "item3-title": "Service",
+      "item3-description": "Bei VOTEC bekommen Sie die besten Produkte zum besten Preis – Unser Direktvertrieb macht’s möglich, denn VOTEC Bikes bekommen Sie nur in unseren Onlineshops. Professionell vormontiert und sicher verpackt schicken wir Ihnen Ihr neues Traumbike direkt zu Ihnen nach Hause.",
+      "find-out-more": "Lern mehr über Votec Bikes",
+      "order-online": "Bestelle Dein Votec und wir erstatten Dir die Miete für Deine Testfahrt!<br>Siehe unten die häufigsten Fragen und Antworten.",
+      "faq-question-1": "Habe ich Garantie auf mein VOTEC Bike?",
+      "faq-answer-1": "Über die normale gesetzliche Gewährleistung gewährt VOTEC für den Erstbesitzer freiwillig eine zusätzliche Garantie von 10 Jahren ab Kaufdatum auf Aluminiumrahmen und von 6 Jahren auf Carbonrahmen und Rennrad-Carbongabeln. Diese Garantie gilt vorbehaltlich einer Reparatur oder eines Austauschs gegen ein Nachfolgermodell und umfasst keine Folgekosten wie Montage und Transport. Ausgeschlossen sind Schäden durch nicht bestimmungsgemäßen Gebrauch wie zB. Sprünge, Sturz, Überlastung sowie Vernachlässigung. Die Garantie erlischt bei eigenmächtigen Veränderungen am Rahmen sowie An- bzw. Umbau zusätzlicher Komponenten.",
+      "faq-question-2": "Erlischt die VOTEC Garantie bei Renneinsatz?",
+      "faq-answer-2": "VOTEC schließt den Renneinsatz nicht aus.",
+      "faq-question-3": "Gibt es ein Rückgaberecht?",
+      "faq-answer-3": "Der Käufer hat ein Rückgaberecht von 100 Tagen nach Kaufdatum.",
+      "faq-question-4": "Welche Rahmengröße benötige ich?",
+      "faq-answer-4": "In den Geometrietabellen der jeweiligen Modelle finden sie eine Größenempfehlung die sich auf die Körpergröße und Ihre Schrittlänge bezieht. So ermitteln Sie Ihre Schrittlänge: Sie benötigen einen Zollstock und eine Wasserwaage. Haben Sie keine Wasserwaage, können Sie auch problemlos ein Buch verwenden. Ziehen Sie Ihre Schuhe und Hose aus (je nachdem, wie ihre Hose geschnitten ist, beeinflusst sie das Messergebnis). Falls Sie eine Wasserwaage besitzen, ziehen Sie diese möglichst waagerecht zwischen den Beinen nach oben. Mit einem Buch funktioniert es genauso, allerdings sollten Sie sich an eine Tür oder Wand stellen, damit sich die Oberkante Ihres ‚Messinstrumentes‘ parallel zum Boden befindet. Messen Sie nun mit dem Zollstock vom Boden bis zur Oberkante der Wasserwaage bzw. des Buches. Der Wert, den Sie nun ermittelt haben, ist Ihre sog. Schrittlänge (Schritthöhe)."
     }
   },
 
