@@ -427,14 +427,10 @@ function minifyLnrShopIntegration() {
         .pipe(concat(path.lnrShopIntegration.dist.style))
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
 
-        // currently disabling moinification
-        // breaking @element becuase its not ...
-        // ... standard component
-        // @element is used in place of media queries
+    // copy template to dist folder
+    gulp.src(path.lnrShopIntegration.html)
+        .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
         
-        // .pipe(minifyCss(path.lnrShopIntegration.dist.style))
-        // .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
-
     // minify source for shop integration
     // copy to dist folder of shop integration
     return gulp.src(path.lnrShopIntegration.js)

@@ -35,7 +35,7 @@ var lnrHelper = {
   /**
    * close the drop-downs for calendar
    * as well as payment
-   * @params {event} event fired by browser
+   * @params {string} event: fired by browser
    * @returns {void}
    */
   closeDropDown: function (event) {

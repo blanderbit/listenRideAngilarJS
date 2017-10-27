@@ -47,18 +47,12 @@ module.exports = function () {
         },
         lnrShopIntegration: {
             root: './js_modules/lnr-shop-integration/',
-            dist: {
-                root: './js_modules/lnr-shop-integration/dist/',
-                oldJs: './js_modules/lnr-shop-integration/dist/lnr-embed.min.js',
-                oldSource: 'lnr-embed.min.js',
-                js: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.js',
-                source: 'lnr-shop-integration.min.js',
-                css: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.css',
-                style: 'lnr-shop-integration.min.css'
-            },
             style: 'lnr-shop-integration.css',
             css: './js_modules/lnr-shop-integration/styles/lnr-shop-integration.css',
             vendorCss: './js_modules/lnr-shop-integration/styles/lnr-shop-integration.vendor.css',
+            html: './js_modules/lnr-shop-integration/lnr-shop-integration.html',
+            source: 'lnr-shop-integration.js',
+            prefix: '#listnride',
             js: [
                 './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.constants.js',
                 './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.helper.js',
@@ -66,8 +60,16 @@ module.exports = function () {
                 './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.jquery.js',
                 './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.vendor.js'
             ],
-            source: 'lnr-shop-integration.js',
-            prefix: '#listnride'
+            dist: {
+                root: './js_modules/lnr-shop-integration/dist/',
+                oldJs: './js_modules/lnr-shop-integration/dist/lnr-embed.min.js',
+                oldSource: 'lnr-embed.min.js',
+                js: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.js',
+                html: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.html',
+                source: 'lnr-shop-integration.min.js',
+                css: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.css',
+                style: 'lnr-shop-integration.min.css'
+            },
         },
         lnrShopSolution: {
             root: './js_modules/lnr-shop-solution/',
