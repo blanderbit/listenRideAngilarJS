@@ -116,7 +116,7 @@ angular.module('listnride', [
     var retrieveLocale = function () {
       // default and available languages
       var defaultLanguage = "en";
-      var availableLanguages = ["de", "en", "nl"];
+      var availableLanguages = ["de", "en", "nl", "it"];
       // get language from local storage
       var localStorageLanguage = $localStorageProvider.get('selectedLanguage');
       // host and domains

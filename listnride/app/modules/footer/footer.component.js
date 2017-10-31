@@ -61,6 +61,8 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
           return 'Deutsch';
         } else if (locale === 'nl') {
           return 'Nederlands';
+        } else if (locale === 'it') {
+          return 'Italiano';
         } else {
           return 'English';
         }
