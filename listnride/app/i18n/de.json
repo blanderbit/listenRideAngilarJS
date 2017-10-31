@@ -174,6 +174,8 @@
   },
 
   "verification": {
+    "lets-start": "Loslegen",
+    "lets-start-description": "Es dauert nur 3 Minuten",
     "verify-profile": "Verifiziere dein Profil",
     "resend-email": "Email erneut senden",
     "public": "Öfftl.",
@@ -341,6 +343,7 @@
     "log-in": "Log-In",
     "log-out": "Log-Out",
     "sign-up": "Registrieren",
+    "sign-up-to-book": "Registrieren, um das Rad zu leihen",
     "sign-up-with-facebook": "Mit facebook registrieren",
     "member-already": "Bereits registriert?",
     "business": "Fahrradgeschäft?",

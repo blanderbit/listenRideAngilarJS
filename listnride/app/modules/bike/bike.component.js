@@ -44,7 +44,7 @@ angular.module('bike',[]).component('bike', {
             brand: bike.data.brand,
             description: bike.data.description,
             location: bike.data.city,
-            category: $filter('category')(bike.data.category)
+            category: $translate.instant($filter('category')(bike.data.category))
           };
 
           ngMeta.setTitle($translate.instant("bike.meta-title", metaData));

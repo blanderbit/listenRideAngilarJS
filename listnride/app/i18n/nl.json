@@ -171,6 +171,8 @@
     "payment-info": "Aktuele betaalmethode tonen"
   },
   "verification": {
+    "lets-start": "Aan de slag",
+    "lets-start-description": "Het duurt slechts 3 minuten",
     "verify-profile": "Voltooi je profiel",
     "resend-email": "Stuur e-mail opnieuw",
     "public": "Publiek",
@@ -330,6 +332,7 @@
     "log-in": "Inloggen",
     "log-out": "Uitloggen",
     "sign-up": "Aanmelden",
+    "sign-up-to-book": "Meld je aan om de fiets te huren.",
     "sign-up-with-facebook": "Met facebook aanmelden",
     "member-already": "Al geregistreerd?",
     "business": "Zakelijke gebruiker?",
