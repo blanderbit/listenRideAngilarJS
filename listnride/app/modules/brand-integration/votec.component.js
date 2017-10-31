@@ -10,18 +10,16 @@ angular.module('votec-integration',[]).component('votec', {
       ngMeta.setTag("description", $translate.instant("brand-integration.votec.meta-descr"));
 
       votec.currentBikes = [];
-      $translate(["shared.berlin"]).then(
+      $translate(["shared.munich"]).then(
         function (translations) {
-          votec.currentCity = translations["shared.berlin"];
+          votec.currentCity = translations["shared.munich"];
         }
       );
       votec.bikes = {
-        berlin: [],
+        frankfurt: [],
         munich: [],
-        hamburg: [],
-        vienna: [],
-        zurich: [],
-        frankfurt: []
+        heidelberg: [],
+        stuttgart: []
       };
       votec.slickConfig = {
         enabled: true,
@@ -63,21 +61,19 @@ angular.module('votec-integration',[]).component('votec', {
         ];
       });
 
-      api.get('/rides?family=8').then(
+      api.get('/rides?family=26').then(
         function (success) {
           console.log(success.data);
 
           for (var i=0; i<success.data.length; i++) {
             switch (success.data[i].city) {
-              case "Berlin": votec.bikes.berlin.push(success.data[i]); break;
-              case "München": votec.bikes.munich.push(success.data[i]); break;
-              case "Hamburg": votec.bikes.hamburg.push(success.data[i]); break;
-              case "Wien": votec.bikes.vienna.push(success.data[i]); break;
-              case "Zürich": votec.bikes.zurich.push(success.data[i]); break;
               case "Frankfurt am Main": votec.bikes.frankfurt.push(success.data[i]); break;
+              case "Heidelberg": votec.bikes.heidelberg.push(success.data[i]); break;
+              case "München": votec.bikes.munich.push(success.data[i]); break;
+              case "Stuttgart": votec.bikes.stuttgart.push(success.data[i]); break;
             }
           }
-          votec.currentBikes = votec.bikes["berlin"];
+          votec.currentBikes = votec.bikes["munich"];
         },
         function (error) {
           console.log('Error fetching Bikes');
