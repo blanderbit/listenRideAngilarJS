@@ -123,7 +123,8 @@
     "opening-hours-success": "De openingstijden zijn succesvol gewijzigd.",
     "opening-hours-error": "Kan openingstijden niet opslaan.",
     "uniq-phone": "Telefoonnummer is al geregistreerd in ons systeem.",
-    "pending-requests": "Het lijkt alsof u een open verzoek voor deze fiets heeft. Voordat u de fiets kunt verwijderen, moet u deze accepteren of annuleren."
+    "pending-requests": "Het lijkt alsof u een open verzoek voor deze fiets heeft. Voordat u de fiets kunt verwijderen, moet u deze accepteren of annuleren.",
+    "account-deleted":"Uw account is verwijderd"
   },
   "settings": {
     "settings": "Instellingen",
