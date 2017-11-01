@@ -6,7 +6,7 @@ var lnrHelper = {
   /**
    * after DOM is rendered the first time
    * runs once before calling user and bike api
-   * injects lnr styles 
+   * injects lnr styles
    * @returns {void}
    */
   preInit: function () {
@@ -166,7 +166,7 @@ var lnrHelper = {
     if (rides.length) {
       // filter bikes for selected city
       for (var loop = 0; loop < rides.length; loop += 1) {
-        if (rides[loop] && rides[loop].city === selectedCity) {
+        if (rides[loop] && lnrHelper.toSentenceCase(rides[loop].city) === selectedCity) {
           selectedRides.push(rides[loop]);
         }
       }
@@ -216,7 +216,9 @@ var lnrHelper = {
 
       // render the locations selector
       // only when user has at least 1  bikes
-      if (lnrConstants.rides && lnrConstants.rides.length > 0) lnrHelper.renderLocationSelector();
+      if (lnrConstants.rides && lnrConstants.rides.length > 0 && lnrConstants.cities.length > 1) {
+        lnrHelper.renderLocationSelector();
+      }
 
       // render bikes html
       lnrHelper.renderBikesHTML(lnrConstants.rides);
@@ -226,7 +228,7 @@ var lnrHelper = {
    * renders the HTML of the bikes
    * @param {Object} rides bikes of the user. either city specific or all
    * @returns {void}
-  */
+   */
   renderBikesHTML: function (rides) {
 
     // create grid for the
@@ -281,7 +283,7 @@ var lnrHelper = {
   /**
    * renders the locaiton selector dropdown
    * @returns {void}
-  */
+   */
   renderLocationSelector: function () {
     lnrJquery('#listnride').append(
       '<div class="mdl-grid mdl-grid--no-spacing">' +
@@ -308,7 +310,7 @@ var lnrHelper = {
    * get the misc language dependent bike info
    * includes day text, size text, button text
    * @returns {void}
-  */
+   */
   getBikesBasicInfo: function () {
     var basicInfo = {};
     if ('en' === lnrConstants.user_lang) {
@@ -372,9 +374,9 @@ var lnrHelper = {
   },
   /**
    * get the unique cities from the user bikes
-   * @param {Object} rides bikes of the users 
-   * @returns {void}
-  */
+   * @param {Object} rides bikes of the users
+   * @returns {Object} cities List of the unique cities
+   */
   getBikeCities: function (rides) {
 
     // list of cities for a given user's bikes
@@ -382,8 +384,9 @@ var lnrHelper = {
 
     // unique cities of the bikes
     rides.forEach(function (ride) {
-      if (cities.includes(ride.city) === false) {
-        cities.push(ride.city);
+      var city = lnrHelper.toSentenceCase(ride.city);
+      if (cities.includes(city) === false) {
+        cities.push(city);
       }
     });
 
@@ -392,5 +395,11 @@ var lnrHelper = {
     if (cities.length > 1) cities.unshift(lnrConstants.translate.all.selected);
 
     return cities;
+  },
+
+  toSentenceCase: function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
   }
 };
