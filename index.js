@@ -23,7 +23,7 @@ app.set('port', (process.env.PORT || 9003));
 // see all transactions through server
 app.use(logger);
 
-var determineUrl = function(language) {
+var determineTld = function(language) {
   switch (language) {
     case "en": return "listnride.com";
     case "de": return "listnride.de";
@@ -36,17 +36,13 @@ var determineUrl = function(language) {
 // proper redirects based on browser language
 app.use(function(req, res, next) {
 	var language = req.acceptsLanguages("en", "de", "nl", "it") || "en";
-  var correctUrl = determineUrl(language);
+  var correctUrl = req.subdomains.join(".") + "." + determineTld(language);
+  console.log(req.hostname);
+  console.log(correctUrl);
   if (req.hostname == correctUrl) {
     next();
   } else {
-    var destination = "";
-    if (req.subdomains[req.subdomains.length - 1] === "staging") {
-      destination = "https://www." + determineUrl(language) + req.originalUrl;
-    } else {
-      destination = "https://www.staging." + determineUrl(language) + req.originalUrl;
-    }
-    res.redirect(302, destination);
+    res.redirect(302, "https://" + correctUrl + req.originalUrl);
   }
 });
 
