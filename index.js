@@ -24,7 +24,7 @@ app.set('port', (process.env.PORT || 9003));
 app.use(logger);
 
 var determineUrl = function(language) {
-  switch (locale) {
+  switch (language) {
     case "en": return "listnride.com";
     case "de": return "listnride.de";
     case "nl": return "listnride.nl";
