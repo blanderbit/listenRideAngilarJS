@@ -23,6 +23,29 @@ app.set('port', (process.env.PORT || 9003));
 // see all transactions through server
 app.use(logger);
 
+// proper redirects based on browser language
+app.use(function(req, res, next) {
+	var language = req.acceptsLanguages("en", "de", "nl", "it");
+  var domain = "";
+  switch (language) {
+    case "en": domain = "listnride.com"; break;
+    case "de": domain = "listnride.de"; break;
+    case "nl": domain = "listnride.nl"; break;
+    case "it": domain = "listnride.it"; break;
+    default: break;
+  }
+  if (req.subdomains[req.subdomains.length - 1] === "staging") {
+    destination = "https://www." + domain + req.originalUrl;
+  } else {
+    destination = "https://www.staging." + domain + req.originalUrl;
+  }
+  if (language) {
+    res.redirect(302, destination);
+  } else {
+    next();
+  }
+}
+
 // by default serves index.html
 // http://expressjs.com/en/4x/api.html#express.static
 app.use(express.static(__dirname.concat('/listnride/dist'), {index: 'index.html'}));
