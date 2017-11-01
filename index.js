@@ -45,7 +45,7 @@ app.use(function(req, res, next) {
   } else {
     next();
   }
-}
+});
 
 // by default serves index.html
 // http://expressjs.com/en/4x/api.html#express.static
