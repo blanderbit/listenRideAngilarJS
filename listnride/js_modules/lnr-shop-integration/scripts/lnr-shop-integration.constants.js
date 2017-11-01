@@ -24,9 +24,9 @@ var lnrConstants = {
   // translation object
   translate: {
     all: {
-      "en": 'All',
-      "de": 'Alle',
-      "nl": 'Alles',
+      "en": 'All locations',
+      "de": 'Alle Standorte',
+      "nl": 'Alle locaties',
       "selected": ''
     }
   },
