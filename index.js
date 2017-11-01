@@ -23,27 +23,30 @@ app.set('port', (process.env.PORT || 9003));
 // see all transactions through server
 app.use(logger);
 
+var determineUrl = function(language) {
+  switch (locale) {
+    case "en": return "listnride.com";
+    case "de": return "listnride.de";
+    case "nl": return "listnride.nl";
+    case "it": return "listnride.it";
+    default: return "listnride.com";
+  }
+};
+
 // proper redirects based on browser language
 app.use(function(req, res, next) {
-	var language = req.acceptsLanguages("en", "de", "nl", "it");
-  var domain = "";
-  var destination = "";
-  switch (language) {
-    case "en": domain = "listnride.com"; break;
-    case "de": domain = "listnride.de"; break;
-    case "nl": domain = "listnride.nl"; break;
-    case "it": domain = "listnride.it"; break;
-    default: break;
-  }
-  if (req.subdomains[req.subdomains.length - 1] === "staging") {
-    destination = "https://www." + domain + req.originalUrl;
-  } else {
-    destination = "https://www.staging." + domain + req.originalUrl;
-  }
-  if (language) {
-    res.redirect(302, destination);
-  } else {
+	var language = req.acceptsLanguages("en", "de", "nl", "it") || "en";
+  var correctUrl = determineUrl(language);
+  if (req.hostname == correctUrl) {
     next();
+  } else {
+    var destination = "";
+    if (req.subdomains[req.subdomains.length - 1] === "staging") {
+      destination = "https://www." + determineUrl(language) + req.originalUrl;
+    } else {
+      destination = "https://www.staging." + determineUrl(language) + req.originalUrl;
+    }
+    res.redirect(302, destination);
   }
 });
 
