@@ -37,12 +37,13 @@ angular.
       };
 
       // The Signup Dialog Controller
-      var SignupDialogController = function($mdDialog, inviteCode) {
+      var SignupDialogController = function($mdDialog, inviteCode, requesting) {
         var signupDialog = this;
 
         signupDialog.signingUp = false;
         signupDialog.business = false;
         signupDialog.businessError = false;
+        signupDialog.requesting = requesting;
         var invited = !!inviteCode;
 
         var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName) {
@@ -113,7 +114,9 @@ angular.
             if (signupDialog.business) {
               signupDialog.createBusiness();
             } else {
-              $state.go('home');
+              if (!signupDialog.requesting) {
+                $state.go('home');
+              }
               verification.openDialog(false, invited);
             }
           }, function(error) {
@@ -261,7 +264,7 @@ angular.
         }
       };
 
-      var showSignupDialog = function(inviteCode, event) {
+      var showSignupDialog = function(inviteCode, requesting, event) {
         $mdDialog.show({
           controller: SignupDialogController,
           controllerAs: 'signupDialog',
@@ -273,7 +276,8 @@ angular.
           clickOutsideToClose: true,
           fullscreen: true, // Only for -xs, -sm breakpoints.
           locals : {
-            inviteCode : inviteCode
+            inviteCode : inviteCode,
+            requesting: requesting
           }
         })
         .then(function(answer) {
