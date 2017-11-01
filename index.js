@@ -36,7 +36,7 @@ var determineTld = function(language) {
 // proper redirects based on browser language
 app.use(function(req, res, next) {
 	var language = req.acceptsLanguages("en", "de", "nl", "it") || "en";
-  var correctUrl = req.subdomains.join(".") + "." + determineTld(language);
+  var correctUrl = req.subdomains.reverse().join(".") + "." + determineTld(language);
   console.log(req.hostname);
   console.log(correctUrl);
   if (req.hostname == correctUrl) {
