@@ -144,6 +144,7 @@
     "from": "From",
     "to": "To",
     "mark-as-closed": "Marked all days as closed",
+    "change-address-info": "Updating your address doesn't update the address of your bikes.",
     "payment-method": "Payment Method",
     "payout-method": "Payout Method",
     "add-payout-method": "Add a Payout Method",

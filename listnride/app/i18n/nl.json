@@ -143,6 +143,7 @@
     "from": "From",
     "to": "To",
     "mark-as-closed": "Marked all days as closed",
+    "change-address-info": "Bij het updaten van uw adres wordt het adres van uw fietsen niet bijgewerkt.",
     "payment-method": "Betaalmethoden",
     "payout-method": "uitbetaalmethoden",
     "add-payout-method": "Uitbetaalmethode toevoegen",
