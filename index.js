@@ -27,6 +27,7 @@ app.use(logger);
 app.use(function(req, res, next) {
 	var language = req.acceptsLanguages("en", "de", "nl", "it");
   var domain = "";
+  var destination = "";
   switch (language) {
     case "en": domain = "listnride.com"; break;
     case "de": domain = "listnride.de"; break;
