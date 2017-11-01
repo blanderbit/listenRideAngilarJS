@@ -4,8 +4,9 @@
 */
 var lnrHelper = {
   /**
-   * after DOM is rendered first time
+   * after DOM is rendered the first time
    * runs once before calling user and bike api
+   * injects lnr styles 
    * @returns {void}
    */
   preInit: function () {
@@ -16,8 +17,9 @@ var lnrHelper = {
     header.appendChild(css_lnr);
   },
   /**
-   * initialize calendar, payment, date range
-   * runs once after calling user and bike api
+   * runs once the document is loaded
+   * sets translations
+   * renders bikes
    * @returns {void}
    */
   postInit: function () {
@@ -33,9 +35,8 @@ var lnrHelper = {
     lnrHelper.renderBikes(user_id, user_lang, false);
   },
   /**
-   * close the drop-downs for calendar
-   * as well as payment
-   * @params {string} event: fired by browser
+   * close the drop-downs for locations
+   * @param {String} event fired by browser
    * @returns {void}
    */
   closeDropDown: function (event) {
@@ -50,13 +51,10 @@ var lnrHelper = {
     }
   },
   /**
-   * select the category name based on the category id received from server side
-   * based on user_id and user_lang
-   * @param {Number} categoryId id of the category
+   * open the location dropdown
    * @returns {String} category name
    */
   openDropDown: function () {
-
     // get location dropdown element
     var element = lnrJquery('#lnr-location-dropdown');
     element.html('');
@@ -120,7 +118,7 @@ var lnrHelper = {
     }
   },
   /**
-   * show the bikes for the specific city
+   * show the bikes for the user
    * wrapper for fetching bikes after 100ms
    * @param {callback} callback to be called
    * @returns {void}
@@ -136,7 +134,6 @@ var lnrHelper = {
   },
   /**
    * show the bikes for the specific city
-   * wrapper for fetching bikes after 100ms
    * @param {Number} index to be called
    * @returns {void}
    */
@@ -225,6 +222,11 @@ var lnrHelper = {
       lnrHelper.renderBikesHTML(lnrConstants.rides);
     });
   },
+  /**
+   * renders the HTML of the bikes
+   * @param {Object} rides bikes of the user. either city specific or all
+   * @returns {void}
+  */
   renderBikesHTML: function (rides) {
 
     // create grid for the
@@ -276,6 +278,10 @@ var lnrHelper = {
       );
     });
   },
+  /**
+   * renders the locaiton selector dropdown
+   * @returns {void}
+  */
   renderLocationSelector: function () {
     lnrJquery('#listnride').append(
       '<div class="mdl-grid mdl-grid--no-spacing">' +
@@ -298,6 +304,11 @@ var lnrHelper = {
     // close location dropdown on window click
     window.onclick = lnrHelper.closeDropDown;
   },
+  /**
+   * get the misc language dependent bike info
+   * includes day text, size text, button text
+   * @returns {void}
+  */
   getBikesBasicInfo: function () {
     var basicInfo = {};
     if ('en' === lnrConstants.user_lang) {
@@ -359,6 +370,11 @@ var lnrHelper = {
       params: 'location=0,menubar=0,resizable=0,scrollbars=yes,titlebar=no,width=' + width + ',height=' + height + ',top=' + top + ',left=' + left
     };
   },
+  /**
+   * get the unique cities from the user bikes
+   * @param {Object} rides bikes of the users 
+   * @returns {void}
+  */
   getBikeCities: function (rides) {
 
     // list of cities for a given user's bikes
