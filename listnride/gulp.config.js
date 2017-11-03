@@ -11,6 +11,7 @@ module.exports = function () {
             templates: './app/modules/**/*.html',
             serviceTemplate: './app/services/**/*.html',
             js: ['./app/*.js', './app/**/*.js', '!**/*test.js'],
+            appjs: 'app/app.min.js',
             images: './app/assets/ui_images/**/*',
             icons: './app/assets/ui_icons/**/*',
             requests: 'app/modules/requests/',
@@ -90,7 +91,26 @@ module.exports = function () {
                 style: './js_modules/lnr-shop-solution/dist/lnr-shop-solution.min.css',
                 html: './js_modules/lnr-shop-solution/dist/lnr-shop-solution.html'
             }
-        }
+        },
+        filesToBeCleaned: [
+            'dist/assets',
+            'dist/app/index.html',
+            'dist/app/vendors.min.js',
+            'dist/app.min.js',
+            'dist/modules.tpl.min.js',
+            'dist/services.tpl.min.js',
+            'dist/vendors.min.js',
+            'dist/rev-manifest.json',
+            '.tmp'
+        ],
+        filesToBeCleanedProduction: ['app',
+            'node_modules',
+            'js_modules',
+            'angular-material-minimal'],
+        watchers: ['lint',
+            'clean',
+            'scripts'
+        ]
     };
     var environments = {
         local: {
@@ -102,17 +122,15 @@ module.exports = function () {
                 ENV: {
                     name: 'listnride',
                     html5Mode: false,
-
-                    // !!! For testing only !!!
-                    // -------------------------
-                    // apiEndpoint: 'http://localhost:3000/v2',
-                    // userEndpoint: 'http://localhost:3000/v2/users/',
-                    // -------------------------
-
                     apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
                     userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com"
                 }
+            },
+            imageOptions: {
+                optimizationLevel: 7,
+                bitDepthReduction: true,
+                colorTypeReduction: true
             }
         },
         staging: {
@@ -128,6 +146,11 @@ module.exports = function () {
                     userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com"
                 }
+            },        
+            imageminOptions: {
+                optimizationLevel: 7,
+                bitDepthReduction: true,
+                colorTypeReduction: true
             }
         },
         production: {
@@ -143,6 +166,11 @@ module.exports = function () {
                     userEndpoint: 'https://api.listnride.com/v2/users/',
                     webappUrl: "http://www.listnride.com"
                 }
+            },
+            imageminOptions: {
+                optimizationLevel: 7,
+                bitDepthReduction: true,
+                colorTypeReduction: true
             }
         }
     };
