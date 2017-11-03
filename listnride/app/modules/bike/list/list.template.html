@@ -283,6 +283,7 @@
                     ng-disabled="list.form.images.length > 4"
                     ngf-multiple="true"
                     ngf-select="list.addImage($files)"
+                    ngf-resize="{width: 1600, height: 1200, quality: .9}"
                     accept=".jpg,.jpeg,.png"
                     ngf-validate="list.validateObj"
                     ngf-model-invalid="list.invalidFiles">
