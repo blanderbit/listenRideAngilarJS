@@ -107,12 +107,6 @@ var helper = {
      */
     getCurrencyFormat: function () {
         switch (helper.lang) {
-            case 'en': return {
-                regions: 'en',
-                colorize: false,
-                decimalSymbol: '.',
-                digitGroupSymbol: ','
-            };
             case 'de': return {
                 regions: 'de',
                 colorize: false,
@@ -120,10 +114,17 @@ var helper = {
                 digitGroupSymbol: '.'
             };
             case 'nl': return {
+                regions: 'nl',
                 colorize: false,
                 decimalSymbol: ',',
                 digitGroupSymbol: '.'
-            }
+            };
+            default: return {
+                regions: 'en',
+                colorize: false,
+                decimalSymbol: '.',
+                digitGroupSymbol: ','
+              };
         }
     },
     /**
@@ -133,11 +134,14 @@ var helper = {
      */
     getTranslations: function () {
         switch (helper.lang) {
-            case 'en':
-                translations = this.translationsConfigObject.en;
-                break;
-            case 'de':
+           case 'de':
                 translations = this.translationsConfigObject.de;
+                break;
+           case 'nl':
+                translations = this.translationsConfigObject.nl;
+                break;
+           default:
+                translations = this.translationsConfigObject.en;
                 break;
         }
 
