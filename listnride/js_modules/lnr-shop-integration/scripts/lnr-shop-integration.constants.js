@@ -2,8 +2,9 @@
         $
 */
 var lnrConstants = {
-  env: "production",
+  env: 'production', // options: staging, production
   lnrStyles: "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.css",
+  lnrStylesLocal: "styles/lnr-shop-integration.css",
   introText: {
     // english intro text
     en: 'The bikes below are currently for you available to rent. ' +
@@ -19,9 +20,20 @@ var lnrConstants = {
     'U kunt de fietsen eenvoudig online boeken, door op de gewenst fiets te klikken. ' +
     'De fiets is na de boeking voor uw gereserveerd. '
   },
+
+  // translation object
+  translate: {
+    all: {
+      "en": 'All locations',
+      "de": 'Alle Standorte',
+      "nl": 'Alle locaties',
+      "selected": ''
+    }
+  },
+
   // shop solution for staging and production
-  staging_shop_solution: "https://listnride-staging.herokuapp.com/v2/shop_solutions",
-  production_shop_solution: "https://api.listnride.com/v2/shop_solutions",
+  staging_shop_url: "https://listnride-staging.herokuapp.com/v2/shop_solutions",
+  production_shop_url: "https://api.listnride.com/v2/shop_solutions",
 
   // users for staging and production
   staging_users: "https://listnride-staging.herokuapp.com/v2/users/",
@@ -149,5 +161,9 @@ var lnrConstants = {
         "mono-bike": "Eenwieler"
       }
     }
+  },
+
+  getLnrRides: function () {
+    return lnrConstants.rides;
   }
 };

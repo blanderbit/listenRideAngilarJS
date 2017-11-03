@@ -103,8 +103,7 @@ scope = postcss(function(css) {
 });
 /**
  * prefixes the styles with
- * given prefixer
- * could be used to avoid styles global leakage
+ * prefixer is be used to avoid styles global leakage
  * @param {object} scopeSelectorOption options for prefixes
  * @returns {callback} callback 
  */
@@ -155,7 +154,7 @@ function injectTemplatesModules() {
 }
 /**
  * create templates.js file to serve all html files
- * js cache of html from module folder
+ * js cache of html from module/ folder
  * @returns {gulp} for chaining
  */
 function cacheTemplatesModules() {
@@ -199,6 +198,7 @@ function copyIndexApp() {
 }
 /**
  * copy all files from downloads folder to root for deployment 
+ * mostly sitemap.xml files
  * @returns {gulp} for chaining
  */
 function copyDownloadables() {
@@ -246,6 +246,7 @@ function scriptsDeploy() {
 }
 /**
  * base tag for deployment
+ * used in production so that `/#/` needs not to be used with url 
  * @returns {gulp} for chaining
  */
 function baseTag() {
@@ -280,13 +281,7 @@ function imagesPng() {
     return gulp.src(path.app.images)
         .pipe(imagemin({
             progressive: true,
-            plugins: [
-                imagemin.optipng({
-                    optimizationLevel: 7,
-                    bitDepthReduction: true,
-                    colorTypeReduction: true
-                })
-            ]
+            plugins: [imagemin.optipng(env.imageOptions)]
         }))
         .pipe(gulp.dest(path.dist.images))
 }
@@ -321,18 +316,7 @@ function clean(cb) {
  * @param {cleanExtras~cleanExtrasCallback} cb - The callback that handles the response.
  */
 function cleanExtras(cb) {
-    var cleanFiles = [
-        'dist/assets',
-        'dist/app/index.html',
-        'dist/app/vendors.min.js',
-        'dist/app.min.js',
-        'dist/modules.tpl.min.js',
-        'dist/services.tpl.min.js',
-        'dist/vendors.min.js',
-        'dist/rev-manifest.json',
-        '.tmp'
-    ];
-    return del(cleanFiles, cb);
+    return del(path.filesToBeCleaned, cb);
 }
 /**
  * generate the angular constant
@@ -347,7 +331,7 @@ function appConstants() {
             name: env.context.name + '.constant',
             stream: true,
         })
-        .pipe(rename('app.constants.js'))
+        .pipe(rename(path.app.constant))
         .pipe(gulp.dest(path.app.root));
 }
 /**
@@ -356,7 +340,7 @@ function appConstants() {
  * @param {cleanExtrasLocal~cleanExtrasLocalCallback} cb - The callback that handles the response.
  */
 function cleanExtrasLocal(cb) {
-    var cleanFiles = 'local' === argvEnv ? [] : ['app', 'node_modules', 'js_modules', 'angular-material-minimal'];
+    var cleanFiles = 'local' === argvEnv ? [] : path.filesToBeCleanedProduction;
     return del(cleanFiles, cb);
 }
 /**
@@ -367,8 +351,8 @@ function cleanExtrasLocal(cb) {
  * @returns {gulp} for chaining
  */
 function changesInIndex() {
-    return gulp.src(['dist/index.html'])
-        .pipe(replace('app/app.min.js', 'app.min.js'))
+    return gulp.src([path.dist.index])
+        .pipe(replace(path.app.appjs, path.dist.source))
         .pipe(gulp.dest(path.dist.root));
 }
 /**
@@ -376,7 +360,7 @@ function changesInIndex() {
  * @returns {gulp} for chaining
  */
 function watch() {
-    gulp.watch(path.alljs, ['lint', 'clean', 'scripts']);
+    gulp.watch(path.alljs, path.watchers);
 }
 /**
  * generate revisions of js files
@@ -399,9 +383,7 @@ function revisions() {
 function replaceRevisionsIndex() {
     var manifest = gulp.src(path.dist.manifest);
     return gulp.src(path.dist.index)
-        .pipe(revReplace({
-            manifest: manifest
-        }))
+        .pipe(revReplace({manifest: manifest}))
         .pipe(gulp.dest(path.dist.root));
 }
 /**
@@ -427,14 +409,10 @@ function minifyLnrShopIntegration() {
         .pipe(concat(path.lnrShopIntegration.dist.style))
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
 
-        // currently disabling moinification
-        // breaking @element becuase its not ...
-        // ... standard component
-        // @element is used in place of media queries
+    // copy template to dist folder
+    gulp.src(path.lnrShopIntegration.html)
+        .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
         
-        // .pipe(minifyCss(path.lnrShopIntegration.dist.style))
-        // .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
-
     // minify source for shop integration
     // copy to dist folder of shop integration
     return gulp.src(path.lnrShopIntegration.js)
@@ -445,7 +423,8 @@ function minifyLnrShopIntegration() {
 }
 /**
  * clean dist folder -- shop integration
- * @returns {gulp} for chaining
+ * @param {Callback} cb for chaining
+ * @returns {Callback} callback from del
  */
 function cleanLnrShopIntegration(cb) {
     var cleanFiles = [path.lnrShopIntegration.dist.root];
@@ -453,7 +432,8 @@ function cleanLnrShopIntegration(cb) {
 }
 /**
  * minification and clean -- shop integration
- * @returns {gulp} for chaining
+ * @param {Callback} cb for chaining
+ * @returns {void}
  */
 function deployLnrShopIntegration(cb) {
     runSequence(
@@ -465,7 +445,7 @@ function deployLnrShopIntegration(cb) {
 }
 /**
  * copy template to tmp folder
- * @returns 
+ * @returns {Object} gulp object for chaining
  */
 function resourcesLnrShopSolution() {
     return gulp.src(path.lnrShopSolution.resource)
@@ -488,7 +468,7 @@ function concatLnrShopSolution() {
  * get build tags from template
  * generate minified source and style
  * save results in dist folder
- * @returns {gulp} chaining
+ * @returns {Object} gulp object for chaining
  */
 function minifyLnrShopSolution() {
     gulp.src(path.lnrShopSolution.dist.source)
@@ -503,7 +483,8 @@ function minifyLnrShopSolution() {
 }
 /**
  * clean dist folder -- shop solution
- * @returns {gulp} chaining
+ * @param {Callback} cb for chaining
+ * @returns {Callback} callback from del
  */
 function cleanLnrShopSolution(cb) {
     var cleanFiles = [path.lnrShopSolution.dist.root];
@@ -512,7 +493,8 @@ function cleanLnrShopSolution(cb) {
 /**
  * run all shop solution tasks [clean, resource, concat, minify]
  * sequential tasks
- * @returns {gulp} chaining
+ * @param {Callback} cb for chaining
+ * @returns {void}
  */
 function deployLnrShopSolution(cb) {
     runSequence(
@@ -525,7 +507,8 @@ function deployLnrShopSolution(cb) {
 }
 /**
  * clean dist folder -- shop solution
- * @returns {gulp} chaining
+ * @param {Callback} cb for chaining
+ * @returns {Callback} callback from del
  */
 function cleanLnrShop(cb) {
     var cleanFiles = [path.lnrShopSolution.dist.root, path.lnrShopIntegration.dist.root];
@@ -547,9 +530,11 @@ function local(cb) {
 }
 /**
  * tasks for deployment
+ * 
  * DO NOT CHANGE THE SEQUENCE - SYNCHRONOUS COMMANDS
  * CHANGING THE SEQUENCE WILL MAKE YOU SLEEPLESS
  * DO NOT RUN IN LOCAL ENVIRONMENT
+ * 
  * @returns {gulp} for chaining
  * @param {deploy~deployCallback} cb - The callback that handles the response.
  */
