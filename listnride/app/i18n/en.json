@@ -124,7 +124,8 @@
     "opening-hours-success": "Opening hours successfully changed.",
     "opening-hours-error": "Could not save opening hours.",
     "uniq-phone": "Phone number already registered in our system.",
-    "pending-requests": "Looks like you have an open request for this bike. Before you can delete the bike you need to accept or cancel it."
+    "pending-requests": "Looks like you have an open request for this bike. Before you can delete the bike you need to accept or cancel it.",
+    "account-deleted": "Your account has been deleted"
   },
   "settings": {
     "settings": "Settings",
@@ -143,6 +144,7 @@
     "from": "From",
     "to": "To",
     "mark-as-closed": "Marked all days as closed",
+    "change-address-info": "Updating your address doesn't update the address of your bikes.",
     "payment-method": "Payment Method",
     "payout-method": "Payout Method",
     "add-payout-method": "Add a Payout Method",
@@ -172,6 +174,8 @@
     "payment-info":"Show current Payment"
   },
   "verification": {
+    "lets-start": "Let's start",
+    "lets-start-description": "It only takes 3 minutes",
     "verify-profile": "Verify your Profile",
     "resend-email": "Resend Email",
     "public": "Public",
@@ -260,6 +264,7 @@
     },
     "write-message": "Write a message...",
     "complete-profile": "Complete your Profile",
+    "add-payment": "Payment Method",
     "complete-profile-description": "To book the bike, please enter your payment information. All informations are transmitted over a secure connection.",
     "no-requests-yet": "As soon as you made or got requests, they'll show up here.",
     "filters": {
@@ -317,6 +322,7 @@
     "log-in": "Log In",
     "log-out": "Log Out",
     "sign-up": "Sign Up",
+    "sign-up-to-book": "Sign up to book the bike",
     "sign-up-with-facebook": "Sign Up with facebook",
     "member-already": "Already signed up?",
     "business": "Bikeshop?",

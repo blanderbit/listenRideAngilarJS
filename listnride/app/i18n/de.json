@@ -124,7 +124,8 @@
     "opening-hours-success": "Öffnungszeiten erfolgreich geändert.",
     "opening-hours-error": "Die Öffnungszeiten konnten nicht gespeichert werden.",
     "uniq-phone": "Telefonnummer ist bereits in unserem System registriert.",
-    "pending-requests": "Du hast noch eine offene Anfrage für dieses Rad. Beantworte diese (Ablehnen/ Annehmen) bevor du es entfernen kannst."
+    "pending-requests": "Du hast noch eine offene Anfrage für dieses Rad. Beantworte diese (Ablehnen/ Annehmen) bevor du es entfernen kannst.",
+    "account-deleted": "Dein Account wurde gelöscht"
   },
 
   "settings": {
@@ -144,6 +145,7 @@
     "from": "From",
     "to": "To",
     "mark-as-closed": "Marked all days as closed",
+    "change-address-info": "Wenn Sie Ihre Adresse aktualisieren, wird die Adresse Ihrer Fahrräder nicht aktualisiert.",
     "payment-method": "Zahlungsart",
     "payout-method": "Auszahlungsmethode",
     "add-payout-method": "Füge eine Auszahlungsmethode hinzu",
@@ -174,6 +176,8 @@
   },
 
   "verification": {
+    "lets-start": "Loslegen",
+    "lets-start-description": "Es dauert nur 3 Minuten",
     "verify-profile": "Verifiziere dein Profil",
     "resend-email": "Email erneut senden",
     "public": "Öfftl.",
@@ -341,6 +345,7 @@
     "log-in": "Log-In",
     "log-out": "Log-Out",
     "sign-up": "Registrieren",
+    "sign-up-to-book": "Registrieren, um das Rad zu leihen",
     "sign-up-with-facebook": "Mit facebook registrieren",
     "member-already": "Bereits registriert?",
     "business": "Fahrradgeschäft?",

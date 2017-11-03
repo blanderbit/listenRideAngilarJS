@@ -500,16 +500,21 @@ angular.module('settings',[]).component('settings', {
           function() {
             api.delete('/users/' + authentication.userId()).then(
               function(success) {
-                console.log("User successfully deleted");
-                authentication.logout();
+                $mdToast.show(
+                  $mdToast.simple()
+                  .textContent($translate.instant('toasts.account-deleted'))
+                  .hideDelay(1100)
+                  .position('top center')
+                ).then(function(){
+                  authentication.logout();
+                });
               },
               function(error) {
-                console.log("User could not be deleted");
               }
             );
           },
           function() {
-          
+        
           }
         );
       }
