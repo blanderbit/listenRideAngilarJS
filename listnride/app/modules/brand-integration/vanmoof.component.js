@@ -31,7 +31,7 @@ angular.module('vanmoofIntegration',[]).component('vanmoof', {
         nextArrow: "<img class='testimonials-prev-arrow slick-next' src='app/assets/ui_images/next.png'>"
       };
 
-      api.get('/rides?family=26').then(
+      api.get('/rides?family=27').then(
         function (success) {
           console.log(success.data);
 
