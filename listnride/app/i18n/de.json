@@ -541,7 +541,8 @@
         "cruiser": "Cruiser",
         "cargo-bike": "Lastenrad",
         "recumbent": "Liegerad",
-        "mono-bike": "Einrad"
+        "mono-bike": "Einrad",
+        "trailer": "Anhänger"
       }
     }
   },
