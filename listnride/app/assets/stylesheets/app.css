@@ -1872,7 +1872,6 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
 /*-----------------------------------------------------------------------------------*/
 
 invite #inviteForm .invite-form-container {
-  max-height: 320px;
   padding: 24px 0;
   border-radius: 4px;
   border: 1px solid rgba(95, 198, 147, 0.25);

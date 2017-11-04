@@ -121,10 +121,11 @@
     "successfully-logged-out": "Du bist ausgeloggt.",
     "could-not-log-in": "Login fehlgeschlagen. Bitte stell sicher dass du bereits registriert bist und deine Anmelde-Daten stimmen.",
     "reset-password-success": "Wir haben dir soeben ein neues Passwort via Email geschickt. Es sollte in den nächsten Minuten eintreffen.",
-    "opening-hours-success": "Opening hours successfully changed.",
-    "opening-hours-error": "Could not save opening hours.",
-    "uniq-phone": "Phone number already registered in our system.",
-    "pending-requests": "Du hast noch eine offene Anfrage für dieses Rad. Beantworte diese (Ablehnen/ Annehmen) bevor du es entfernen kannst."
+    "opening-hours-success": "Öffnungszeiten erfolgreich geändert.",
+    "opening-hours-error": "Die Öffnungszeiten konnten nicht gespeichert werden.",
+    "uniq-phone": "Telefonnummer ist bereits in unserem System registriert.",
+    "pending-requests": "Du hast noch eine offene Anfrage für dieses Rad. Beantworte diese (Ablehnen/ Annehmen) bevor du es entfernen kannst.",
+    "account-deleted": "Dein Account wurde gelöscht"
   },
 
   "settings": {
@@ -144,6 +145,7 @@
     "from": "From",
     "to": "To",
     "mark-as-closed": "Marked all days as closed",
+    "change-address-info": "Wenn Sie Ihre Adresse aktualisieren, wird die Adresse Ihrer Fahrräder nicht aktualisiert.",
     "payment-method": "Zahlungsart",
     "payout-method": "Auszahlungsmethode",
     "add-payout-method": "Füge eine Auszahlungsmethode hinzu",
@@ -174,6 +176,8 @@
   },
 
   "verification": {
+    "lets-start": "Loslegen",
+    "lets-start-description": "Es dauert nur 3 Minuten",
     "verify-profile": "Verifiziere dein Profil",
     "resend-email": "Email erneut senden",
     "public": "Öfftl.",
@@ -244,7 +248,7 @@
 
   "requests": {
     "booking-overview": "Buchungsübersicht",
-    "booking-failed": "Booking failed",
+    "booking-failed": "Buchung fehlgeschlagen",
     "booking": "Buchung",
     "price": "Preis",
     "book": "Buchen",
@@ -290,7 +294,7 @@
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
     "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
     "9": "Leider hat {{user.first_name}} die Anfrage nicht bestätigt.",
-    "10": "Your request was cancelled by system"
+    "10": "Ihre Anfrage wurde vom System abgebrochen."
   },
 
   "rideChat": {
@@ -341,6 +345,7 @@
     "log-in": "Log-In",
     "log-out": "Log-Out",
     "sign-up": "Registrieren",
+    "sign-up-to-book": "Registrieren, um das Rad zu leihen",
     "sign-up-with-facebook": "Mit facebook registrieren",
     "member-already": "Bereits registriert?",
     "business": "Fahrradgeschäft?",
@@ -354,8 +359,8 @@
     "city": "Stadt",
     "country": "Land",
     "company-name": "Company name",
-    "update-contact": "Kontakt aktualisieren",
-    "update-contact-mobile": "Kontakt",
+    "update-contact": "Handynummer ändern",
+    "update-contact-mobile": "Handynummer",
     "company-contact-info": "Bitte trage die Daten der Kontaktperson des Unternehmens ein.",
     "errors": {
       "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
@@ -366,8 +371,8 @@
       "empty-first-name": "Bitte gib deinen Vornamen an",
       "max-size-last-name": "Der Nachname sollte maximal 30 Buchstaben lang sein",
       "max-size-first-name": "Der Vorname sollte maximal 20 Buchstaben lang sein",
-      "empty-company-name": "Please enter your company name",
-      "min-size-company-name": "Company name should be longer than 2 characters "
+      "empty-company-name": "Bitte geben Sie Ihren Firmennamen ein",
+      "min-size-company-name": "Der Firmenname sollte länger als 2 Zeichen sein "
     }
   },
 
@@ -1001,6 +1006,14 @@
       "meta-description": "Fahre den Supercross München auf dem Cyclocross Bike deiner Träume! Wähle BMC, Votec, Ridley, SRAM, Specialized, Bianchi, Pasculli, Focus und anderen Marken.",
       "title": "Miete das perfekte Cyclocross Bike für den Supercross München",
       "text": "Die listnride Community bietet dir die passenden Cyclocross Bikes für den Supercross München. Leihe dir ein Bike für das Rennen einen der Cross Social Rides oder um an den Cyclocross Workshops teilzunehmen.<br><br>Scrolle durch das Angebot und klicke auf ein Inserat, um es zu öffnen. Um mehr darüber zu erfahren, lies die Beschreibung und prüfe die verfügbare Ausstattung. Über den Buchungskalender kannst du dann das gewünschte Rad buchen."
+    },
+    "cape-argus": {
+      "meta-title":"Miete dir einfach das perfekte Rennrad für die Kapstadt Cycle Tour",
+      "meta-description":"Fahre die Kapstadt Cycle auf dem Rennrad deiner Träume! Wähle Specialized, Ridley, Cervelo, Bianchi, sowie Simplon und miete es ganz bequem und einfach von Zuhause.",
+      "title": "Miete dir einfach das perfekte Rennrad für den Cycle Tour in Kapstadt",
+      "text-1": "Nach der Velothon Berlin und Hamburg Cyclassics, bietet die listnride Community euch in kürze passende Rennräder für die Cape Argus an. Das perfekte Rennrad ohne weiteres für den Wunschzeitraum einfach mieten. Lassen Sie Ihr Rad einfach und bequem zu Hause und gönnen Sie sich was anderes, einfach so!<br><br>Kannst Du leider nicht bei den Cycle Tour in Kapstadt teilnehmen, Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und vermiete dein Rad.",
+      "text-2": "<span class=\"md-body-2\">Gewerbliche Anbieter?</span><br>Melden Sie sich <a href=\"mailto:contact@listnride.com\">hier</a><br><br><br><span class=\"md-body-2\">Möchtest du informiert werden, sobald alle Räder veröffentlicht sind?</span><br>Hinterlasse hier deine Email Adresse.",
+      "preregister-thanks": "Danke, du wirst informiert sobald alle Räder veröffentlicht sind!"
     }
   },
 
@@ -1254,6 +1267,56 @@
       "faq-answer-2": "Mit einem einfachen Knopfdruck öffnest du die Klappe am Rahmen und hast Zugriff auf den Akku.",
       "faq-question-3":"Kann man den Akku tauschen?",
       "faq-answer-3": "Ja, man kann den Akku tauschen."
+    },
+    "votec": {
+      "meta-title":"Miete und Teste die neusten Votec Bikes",
+      "meta-descr": "VOTEC – Fusion aus Funktion, Design und Qualität",
+      "title": "VOTEC – Fusion aus Funktion, Design und Qualität",
+      "description": "Miete und Teste die neusten Votec Bikes",
+      "subdescription": "Seit jeher steht VOTEC für High-End Bikes, die maximalen Fahrspaß garantieren. Das VOTEC Team besteht aus Mitarbeitern, die eine große Erfahrung in allen Bereichen des Radsports mitbringen. Davon profitieren unsere Kunden, denn nur Konzepte die unser Team voll überzeugen, schaffen es von einer Idee zu einem Serienprodukt heranzureifen.",
+      "item1-title": "Erfahrung",
+      "item1-description": "Das VOTEC Team hat seine geballte Kompetenz direkt auf die Bikes übertragen – die zahlreichen Testerfolge mit den neuesten Modellen im Road- und Mountainbikebereich, in allen Klassen sprechen eine deutliche Sprache.",
+      "item2-title": "Qualität",
+      "item2-description": "VOTEC Bikes sind vom unabhängigen Zedler Institut für Fahrradtechnik und -sicherheit auf Herz und Nieren getestet. Nicht nur deshalb sind wir so überzeugt von unseren Bikes und geben dir 10 Jahre Garantie auf alle Aluminium- und 6 Jahre auf alle Carbon-Rahmen ab 2013.",
+      "item3-title": "Service",
+      "item3-description": "Bei VOTEC bekommen Sie die besten Produkte zum besten Preis – Unser Direktvertrieb macht’s möglich, denn VOTEC Bikes bekommen Sie nur in unseren Onlineshops. Professionell vormontiert und sicher verpackt schicken wir Ihnen Ihr neues Traumbike direkt zu Ihnen nach Hause.",
+      "find-out-more": "Lern mehr über Votec Bikes",
+      "order-online": "Bestelle Dein Votec und wir erstatten Dir die Miete für Deine Testfahrt!<br>Siehe unten die häufigsten Fragen und Antworten.",
+      "faq-question-1": "Habe ich Garantie auf mein VOTEC Bike?",
+      "faq-answer-1": "Über die normale gesetzliche Gewährleistung gewährt VOTEC für den Erstbesitzer freiwillig eine zusätzliche Garantie von 10 Jahren ab Kaufdatum auf Aluminiumrahmen und von 6 Jahren auf Carbonrahmen und Rennrad-Carbongabeln. Diese Garantie gilt vorbehaltlich einer Reparatur oder eines Austauschs gegen ein Nachfolgermodell und umfasst keine Folgekosten wie Montage und Transport. Ausgeschlossen sind Schäden durch nicht bestimmungsgemäßen Gebrauch wie zB. Sprünge, Sturz, Überlastung sowie Vernachlässigung. Die Garantie erlischt bei eigenmächtigen Veränderungen am Rahmen sowie An- bzw. Umbau zusätzlicher Komponenten.",
+      "faq-question-2": "Erlischt die VOTEC Garantie bei Renneinsatz?",
+      "faq-answer-2": "VOTEC schließt den Renneinsatz nicht aus.",
+      "faq-question-3": "Gibt es ein Rückgaberecht?",
+      "faq-answer-3": "Der Käufer hat ein Rückgaberecht von 100 Tagen nach Kaufdatum.",
+      "faq-question-4": "Welche Rahmengröße benötige ich?",
+      "faq-answer-4": "In den Geometrietabellen der jeweiligen Modelle finden sie eine Größenempfehlung die sich auf die Körpergröße und Ihre Schrittlänge bezieht. So ermitteln Sie Ihre Schrittlänge: Sie benötigen einen Zollstock und eine Wasserwaage. Haben Sie keine Wasserwaage, können Sie auch problemlos ein Buch verwenden. Ziehen Sie Ihre Schuhe und Hose aus (je nachdem, wie ihre Hose geschnitten ist, beeinflusst sie das Messergebnis). Falls Sie eine Wasserwaage besitzen, ziehen Sie diese möglichst waagerecht zwischen den Beinen nach oben. Mit einem Buch funktioniert es genauso, allerdings sollten Sie sich an eine Tür oder Wand stellen, damit sich die Oberkante Ihres ‚Messinstrumentes‘ parallel zum Boden befindet. Messen Sie nun mit dem Zollstock vom Boden bis zur Oberkante der Wasserwaage bzw. des Buches. Der Wert, den Sie nun ermittelt haben, ist Ihre sog. Schrittlänge (Schritthöhe)."
+    },
+    "vanmoof": {
+      "meta-title":"Miete und Teste die Electrified S E-Bikes in Berlin, München und Hamburg",
+      "meta-descr": "Das Perfekte Rad für die Stadt - VanMoof",
+      "title": "Das Perfekte Rad für die Stadt - VanMoof",
+      "description": "Electrified S - Das revolutionäre E-Bike von VanMoof",
+      "subdescription": "Gebaut von leidenschaftlichen Erfindern",
+      "item1-title": "Holländisches Design",
+      "item1-description": "Startbereit<br>Smarte Technologie<br>Anti-Diebstahl <br>Innovatives Design",
+      "item2-title": "Fahrfreude",
+      "item2-description": "Aufrechte Sitzposition<br>Vollintegriertes Schaltwerk<br>Touch display im Rahmen integriert<br>Leichtgewicht 18,4 kg",
+      "item3-title": "Elektrische Unterstützung",
+      "item3-description": "Turbo Boost Knopf<br>Komfortable Nutzerbedienung<br>Integrierter E-Schloss und G-sensor<br>Smartphone Kompatiblität",
+      "find-out-more": "Erfahre mehr über die VanMoof Räder",
+      "order-online": "Bestelle Dein VanMoof online und wir erstatten Dir die Miete für Deine Testfahrt.<br>Werf' auch einen Blick auf die häufigsten Fragen.",
+      "faq-question-1": "Welche Reichweite hat das M3 Electrified?",
+      "faq-answer-1": "Das Electrified hat eine maximale Reichweite von 60 km, wenn auf halbe Unterstützungsstärke eingestellt, und auf flachen Straßen gefahren wird. Die tatsächliche Reichweite kann je nach verschiedenen Faktoren wie Unterstützungsniveau, Reifendruck, Fahrergewicht, Alter und Zustand der Batterie, Fahrstil, Umweltbedingungen und Klimabedingungen variieren.",
+      "faq-question-2": "Was ist der \"Turbo Boost\" Knopf?",
+      "faq-answer-2": "Es ist ein kleiner Schalter am linken Lenker. Um deinem Bike mehr Power zu geben, drücke und halte es einfach solange du einen Turbo Boost brauchst. Es funktioniert nur bei Geschwindigkeiten unter 20 km/h und ist besonders nützlich auf Hügeln.",
+      "faq-question-3": "Wie funktioniert das Anti-Diebstahl-Tracking meines 2016 Electrified S?",
+      "faq-answer-3": "Wir werden erst anfangen, dein Fahrrad zu verfolgen, sobald du es über die App als gestohlen gemeldet hast. Wir senden dir dann einen Link, über den du die Wiedergewinnung deines Fahrrads verfolgen kannst. In der Zwischenzeit, um Energie zu sparen, werden alle Systeme außer dem Tracking-System, heruntergefahren. Diese Funktion verwendet zellulare GSM-Informationen, die als LBS bezeichnet werden. So können wir das Fahrrad überallhin verfolgen, sogar innerhalb eines Gebäudes. Wir haben eng mit Vodafone zusammengearbeitet, um diesen Service so genau wie möglich zu gestalten. Für die letzte Kilometer des Tracking verwenden wir eine andere Technologie, um sicherzustellen, dass wir den genauen Standort Ihres Fahrrads finden.",
+      "faq-question-4": "Kann ich die Batterie selbst entfernen?",
+      "faq-answer-4": "Nein. Die Batterie ist im Rahmen befestigt, kann aber bei Bedarf von unseren VanMoof Fahrradärzten entfernt werden. Zum Glück muss es nur zum Austausch entfernt werden.",
+      "faq-question-5": "Wie lade ich die Batterie des Electrified S auf?",
+      "faq-answer-5": "Ihr Fahrrad wird mit einem Ladegerät geliefert. Stecken Sie den Stecker einfach so ein, wie Sie Ihr Smartphone anschließen würden, und sechs Stunden später ist er voll aufgeladen.",
+      "faq-question-6": "Was bekomme ich mit einem Electrified S?",
+      "faq-answer-6": "• Zwei Jahre Garantie auf Material- und Verarbeitungsfehler.<br>• Backup-Remote-Taste zum Sperren oder Entsperren des Fahrrads, wenn Ihr Smartphone nicht verfügbar ist oder keine Batterie vorhanden ist<br>• Fahrradladegerät (36V, 2A. Ladegerät)<br>• GSM und Bluetooth Anti-Diebstahl-Tracking<br>• Smartphone App für Android und iOS<br>• Bedienungsanleitung und Benutzerhandbuch<br>• Anti-Theft Tool für die Laufräder<br>• Die Electrified S Reifen 28 \"\" x 2,35 \"\" Reifen. (60-622)<br>• Kabel für das integrierte Schloss<br>• Werkzeug zum Einstellen der Sitz- und Lenkerposition."
     }
   },
 

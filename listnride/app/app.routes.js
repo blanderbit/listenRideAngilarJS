@@ -247,6 +247,24 @@
       });
 
       $stateProvider.state({
+        name: 'capeArgus',
+        url: '/capeargus',
+        template: '<cape-argus></cape-argus>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.cape-argus.meta-title", "events.cape-argus.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.cape-argus.meta-title"]);
+                ngMeta.setTag("description", translations["events.cape-argus.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'supercrossMunich',
         url: '/supercross-munich',
         template: '<supercross-munich></supercross-munich>',
@@ -623,6 +641,42 @@
                     .then(function (translations) {
                         ngMeta.setTitle(translations["brand-integration.ampler.meta-title"]);
                         ngMeta.setTag("description", translations["brand-integration.ampler.meta-descr"]);
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'vanmoof',
+        url: '/rent-vanmoof-bikes',
+        template: '<vanmoof></vanmoof>',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["brand-integration.vanmoof.meta-title", "brand-integration.vanmoof.meta-descr"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["brand-integration.vanmoof.meta-title"]);
+                        ngMeta.setTag("description", translations["brand-integration.vanmoof.meta-descr"]);
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'votec',
+        url: '/rent-votec-bikes',
+        template: '<votec></votec>',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["brand-integration.votec.meta-title", "brand-integration.votec.meta-descr"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["brand-integration.votec.meta-title"]);
+                        ngMeta.setTag("description", translations["brand-integration.votec.meta-descr"]);
                     })
             }
         },

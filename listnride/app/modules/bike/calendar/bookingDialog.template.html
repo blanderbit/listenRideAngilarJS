@@ -52,11 +52,11 @@
 
       <h3 class="md-title">{{ 'requests.price' | translate }}</h3>
       <div layout="row" layout-align="space-between center">
-        <span class="md-body-2">{{ bookingDialog.calendar.durationDays }} {{ 'days' | translate }} x {{ bookingDialog.calendar.prices[0].price | currency:"€":2 }}</span>
+        <span class="md-body-2">{{ bookingDialog.calendar.durationDays }} {{ 'shared.days' | translate }} x {{ bookingDialog.calendar.prices[0].price | currency:"€":2 }}</span>
         <span class="md-body-1">{{ bookingDialog.calendar.subtotal | currency: '€' }}</span>
       </div>
-      <div layout="row" layout-align="space-between center">
-        <span class="md-body-2 lnr-dark-green-text">{{ 'Discount' | translate }} {{bookingDialog.calendar.durationDays}} {{ 'days' | translate }} x {{ bookingDialog.calendar.discountRelative | currency:"€":2 }}</span>
+      <div layout="row" layout-align="space-between center" ng-if="bookingDialog.calendar.discount">
+        <span class="md-body-2 lnr-dark-green-text">{{ 'shared.discount' | translate }} {{bookingDialog.calendar.durationDays}} {{ 'shared.days' | translate }} x {{ bookingDialog.calendar.discountRelative | currency:"€":2 }}</span>
         <span class="md-body-1 lnr-dark-green-text">-{{ bookingDialog.calendar.discount | currency: '€' }}</span>
       </div>
       <div layout="row" layout-align="space-between center">

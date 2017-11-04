@@ -85,6 +85,7 @@
   <script src="app/modules/brand-integration/brompton.component.js"></script>
   <script src="app/modules/brand-integration/bonvelo.component.js"></script>
   <script src="app/modules/brand-integration/motoparilla.component.js"></script>
+  <script src="app/modules/brand-integration/vanmoof.component.js"></script>
   <script src="app/modules/events/crossride/crossride.component.js"></script>
   <script src="app/modules/events/in-velo-veritas/in-velo-veritas.component.js"></script>
   <script src="app/modules/events/velothon-bikerental/velothon-bikerental.component.js"></script>
@@ -122,11 +123,13 @@
   <script src="app/modules/events/cwd/kuchenundraketen.component.js"></script>
   <script src="app/modules/brand-integration/brompton.component.js"></script>
   <script src="app/modules/brand-integration/muli.component.js"></script>
+  <script src="app/modules/brand-integration/votec.component.js"></script>
   <script src="app/modules/invite/invite.component.js"></script>
   <script src="app/modules/referral-link/referral-link.component.js"></script>
   <script src="app/modules/invite-landing/invite-landing.component.js"></script>
   <script src="app/modules/invest/invest.component.js"></script>
   <script src="app/modules/events/supercross-munich/supercross-munich.component.js"></script>
+  <script src="app/modules/events/cape-argus/cape-argus.component.js"></script>
   <script src="app/modules/meta-tags/meta-tags.component.js"></script>
   <script src="app/modules/seo-landing/seo-landing.component.js"></script>
 
@@ -155,6 +158,45 @@
   <!-- endbuild -->
   <!-- inject:js -->
   <!-- endinject -->
+
+  <!-- organizational schema.org -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "listnride",
+      "legalName": "List and Ride GmbH",
+      "description": "The perfect bike. Simply rent it. Join listnride and find the bike that is right for you.",
+      "foundingDate": "2016",
+      "founders": [
+        {
+          "@type": "Person",
+          "name": "Gert-Jan van Wijk"
+        },
+        {
+          "@type": "Person",
+          "name": "Johannes Stuhler"
+        },
+        {
+          "@type": "Person",
+          "name": "Moritz Hofmann"
+        }
+      ],
+      "url": "https://www.listnride.com",
+      "logo": "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/14657519_1883887185177339_3365828092985602698_n.png?oh=9ad272284dcab01378bd3cc6b08c0c8f&oe=5AA59707",
+      "sameAs": [
+          "https://www.facebook.com/listnride",
+          "https://instagram.com/listnride"
+      ],
+      "contactPoint": [
+        { "@type": "ContactPoint",
+          "contactType": "customer service",
+          "url": "https://www.listnride.com/help"
+        }
+      ]
+    }
+  </script>
+  <!-- end organizational schema.org -->
 
   <!-- Facebook Pixel Code -->
   <script>

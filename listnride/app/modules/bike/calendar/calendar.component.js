@@ -113,19 +113,7 @@ angular.module('bike').component('calendar', {
       }
 
       calendar.promptAuthentication = function(event) {
-        // Appending dialog to document.body to cover sidenav in docs app
-        var confirm = $mdDialog.confirm()
-          .title($translate.instant('calendar.log-in-to-request-title'))
-          .textContent($translate.instant('calendar.log-in-to-request-description'))
-          .targetEvent(event)
-          .ok($translate.instant('forms.log-in'))
-          .cancel($translate.instant('forms.sign-up'));
-
-        $mdDialog.show(confirm).then(function() {
-          authentication.showLoginDialog();
-        }, function() {
-          authentication.showSignupDialog();
-        });
+        authentication.showSignupDialog(false, true, event);
       };
 
       calendar.isFormInvalid = function() {

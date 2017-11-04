@@ -11,6 +11,7 @@ module.exports = function () {
             templates: './app/modules/**/*.html',
             serviceTemplate: './app/services/**/*.html',
             js: ['./app/*.js', './app/**/*.js', '!**/*test.js'],
+            appjs: 'app/app.min.js',
             images: './app/assets/ui_images/**/*',
             icons: './app/assets/ui_icons/**/*',
             requests: 'app/modules/requests/',
@@ -47,24 +48,29 @@ module.exports = function () {
         },
         lnrShopIntegration: {
             root: './js_modules/lnr-shop-integration/',
+            style: 'lnr-shop-integration.css',
+            css: './js_modules/lnr-shop-integration/styles/lnr-shop-integration.css',
+            vendorCss: './js_modules/lnr-shop-integration/styles/lnr-shop-integration.vendor.css',
+            html: './js_modules/lnr-shop-integration/lnr-shop-integration.html',
+            source: 'lnr-shop-integration.js',
+            prefix: '#listnride',
+            js: [
+                './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.constants.js',
+                './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.helper.js',
+                './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.js',
+                './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.jquery.js',
+                './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.vendor.js'
+            ],
             dist: {
                 root: './js_modules/lnr-shop-integration/dist/',
                 oldJs: './js_modules/lnr-shop-integration/dist/lnr-embed.min.js',
                 oldSource: 'lnr-embed.min.js',
                 js: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.js',
+                html: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.html',
                 source: 'lnr-shop-integration.min.js',
                 css: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.css',
                 style: 'lnr-shop-integration.min.css'
             },
-            style: 'lnr-shop-integration.css',
-            css: './js_modules/lnr-shop-integration/lnr-shop-integration.css',
-            vendorCss: './js_modules/lnr-shop-integration/vendor.css',
-            js: [
-                './js_modules/lnr-shop-integration/lnr-shop-integration.js',
-                './js_modules/lnr-shop-integration/vendor.js'
-            ],
-            source: 'lnr-shop-integration.js',
-            prefix: '#listnride'
         },
         lnrShopSolution: {
             root: './js_modules/lnr-shop-solution/',
@@ -85,7 +91,26 @@ module.exports = function () {
                 style: './js_modules/lnr-shop-solution/dist/lnr-shop-solution.min.css',
                 html: './js_modules/lnr-shop-solution/dist/lnr-shop-solution.html'
             }
-        }
+        },
+        filesToBeCleaned: [
+            'dist/assets',
+            'dist/app/index.html',
+            'dist/app/vendors.min.js',
+            'dist/app.min.js',
+            'dist/modules.tpl.min.js',
+            'dist/services.tpl.min.js',
+            'dist/vendors.min.js',
+            'dist/rev-manifest.json',
+            '.tmp'
+        ],
+        filesToBeCleanedProduction: ['app',
+            'node_modules',
+            'js_modules',
+            'angular-material-minimal'],
+        watchers: ['lint',
+            'clean',
+            'scripts'
+        ]
     };
     var environments = {
         local: {
@@ -97,17 +122,15 @@ module.exports = function () {
                 ENV: {
                     name: 'listnride',
                     html5Mode: false,
-
-                    // !!! For testing only !!!
-                    // -------------------------
-                    // apiEndpoint: 'http://localhost:3000/v2',
-                    // userEndpoint: 'http://localhost:3000/v2/users/',
-                    // -------------------------
-
                     apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
                     userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com"
                 }
+            },
+            imageOptions: {
+                optimizationLevel: 7,
+                bitDepthReduction: true,
+                colorTypeReduction: true
             }
         },
         staging: {
@@ -123,6 +146,11 @@ module.exports = function () {
                     userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com"
                 }
+            },        
+            imageminOptions: {
+                optimizationLevel: 7,
+                bitDepthReduction: true,
+                colorTypeReduction: true
             }
         },
         production: {
@@ -138,6 +166,11 @@ module.exports = function () {
                     userEndpoint: 'https://api.listnride.com/v2/users/',
                     webappUrl: "http://www.listnride.com"
                 }
+            },
+            imageminOptions: {
+                optimizationLevel: 7,
+                bitDepthReduction: true,
+                colorTypeReduction: true
             }
         }
     };
