@@ -94,7 +94,7 @@ var lnrHelper = {
 
     // element id
     var id = 'lnr-size-dropdown';
-    
+
     // get size dropdown element
     var element = lnrJquery('#' + id);
 
@@ -104,10 +104,11 @@ var lnrHelper = {
     // list cities in the dropdown menu
     lnrConstants.sizes.default.forEach(function (size, index) {
       // HTML of the element
+      var condition = index === 0 && lnrConstants.sizes.available.length > 1
       var elementHTML = ['<div class="lnr-date-selector" ',
         'onclick="lnrHelper.onSizeSelect(' + index + ')" ',
         'id="' + id + '-select-' + index + '" ',
-        (index > 0) ? ('<span>' + size  + ' cm - ' + parseInt(size+10)  + ' cm </span></div>'): ('<span>' + size + '</span></div>')
+        condition ? '<span>' + size + '</span></div>' : '<span>' + size + ' cm - ' + parseInt(size + 10) + ' cm </span></div>'
       ].join('');
 
       // render element
@@ -299,7 +300,11 @@ var lnrHelper = {
       lnrConstants.user_lang = lnrJquery('#user_demo_lang').val();
     } else {
       lnrConstants.user_id = user_id;
-      lnrConstants.user_lang = user_lang;
+      if (user_lang != 'de' || user_lang != 'nl') {
+        lnrConstants.user_lang = 'en';
+      } else {
+        lnrConstants.user_lang = user_lang;
+      }
     }
 
     // set the environment: staging or production
@@ -320,8 +325,8 @@ var lnrHelper = {
       lnrConstants.rides = response.rides;
 
       // render the locations selector
-      // only when user has at least 1  bikes
-      if (lnrConstants.rides && lnrConstants.rides.length > 0) {
+      // only when user has at least 2  bikes
+      if (lnrConstants.rides && lnrConstants.rides.length > 1) {
         var shouldRenderLocationSelector = lnrConstants.cities.length > 1;
         lnrHelper.renderSelectors(shouldRenderLocationSelector);
       }
@@ -397,6 +402,9 @@ var lnrHelper = {
     // HTML for the selectors
     var selectors = lnrHelper.renderSelectorsHTML(shouldRenderLocationSelector);
 
+    // clear element HTML
+    element.html('');
+
     // render selectors HTML
     element.append(selectors);
 
@@ -454,6 +462,7 @@ var lnrHelper = {
  * @returns {void}
  */
   setDefaultSelectorValues: function () {
+
     // location button
     var locationButton = lnrJquery('#lnr-location-button');
     var sizeButton = lnrJquery('#lnr-size-button');
@@ -461,9 +470,15 @@ var lnrHelper = {
     // show default location
     var default_location = lnrConstants.cities.length === 1 ? lnrConstants.cities[0] : lnrConstants.translate.allLocations.selected;
     locationButton.html(default_location + '<div class="dropdown-caret" style="float: right"></div>');
-
-    var default_size = lnrConstants.sizes.available.length === 1 ? lnrConstants.sizes.available[0] : lnrConstants.translate.allSizes.selected;
-    sizeButton.html(default_size + '<div class="dropdown-caret" style="float: right"></div>');
+        
+    var default_size = 0;
+    if (lnrConstants.sizes.available > 1) {
+      default_size = lnrConstants.sizes.available.length === 1 ? lnrConstants.sizes.available[0] : lnrConstants.translate.allSizes.selected;
+      sizeButton.html(default_size + ' cm - ' + parseInt(default_size + 10) + ' cm <div class="dropdown-caret" style="float: right"></div>');
+    } else {
+      default_size = lnrConstants.sizes.available[0];
+      sizeButton.html(default_size + '<div class="dropdown-caret" style="float: right"></div>');
+    }
   },
   /**
    * get the misc language dependent bike info
@@ -577,7 +592,11 @@ var lnrHelper = {
     // only when more than 1 sizes are present
     if (sizes.length > 1) {
       sizes.unshift(lnrConstants.translate.allSizes.selected);
-      lnrConstants.sizes.default.unshift(lnrConstants.translate.allSizes.selected);
+      // add All option only once
+      if (lnrConstants.sizes.unshifts < 1) {
+        lnrConstants.sizes.default.unshift(lnrConstants.translate.allSizes.selected);
+        lnrConstants.sizes.unshifts+=1;
+      }
     }
 
     return sizes;

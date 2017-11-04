@@ -43,7 +43,7 @@ var lnrConstants = {
     },
     allSizes: {
       "en": 'All sizes',
-      "de": 'Alle Größen',
+      "de": 'Alle Gr&ouml;&beta;en',
       "nl": 'Alle maten',
       "selected": ''
     }
@@ -173,7 +173,8 @@ var lnrConstants = {
   // all sizes of the rides
   sizes: {
     default: [155, 165, 175, 185, 195],
-    available: [] // gets populated from rides api 
+    available: [], // gets populated from rides api 
+    unshifts: 0
   },
 
   disabledButtonCss: {
