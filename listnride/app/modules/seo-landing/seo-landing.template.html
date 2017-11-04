@@ -1,4 +1,4 @@
- <md-content class="single-column"> 
+ <md-content class="single-column" ng-hide="seoLanding.loading"> 
   <div id="hero-shot-small" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/seo/berlin-ebikes.jpg'); background-position: 50% 20%;" layout="row" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ seoLanding.data.texts.main.title }}</h1>
@@ -14,7 +14,7 @@
 
     <div layout-xs="column" layout="row">
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in seoLanding.bikes.slice(0,4)" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <bike-card ng-repeat="bike in seoLanding.bikes.featured" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
         </bike-card>
       </div>
     </div>
@@ -28,7 +28,7 @@
 
     <div layout-xs="column" layout="row">
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in seoLanding.bikes.slice(4,8)" bike="bike" seo="true" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <bike-card ng-repeat="bike in seoLanding.bikes.more" bike="bike" seo="true" flex="100" flex-gt-xs="50" flex-gt-sm="25">
         </bike-card>
       </div>
     </div>
@@ -52,7 +52,7 @@
 
     <div layout-xs="column" layout="row">
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in seoLanding.bikes.slice(8,12)" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <bike-card ng-repeat="bike in seoLanding.bikes.related" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
         </bike-card>
       </div>
     </div>
@@ -65,25 +65,25 @@
     
     <md-grid-list layout-padding id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="2" md-cols-gt-sm="4" md-gutter="16px" md-row-height="1.5:1">
       <md-grid-tile class="tile tile-berlin">
-        <a ui-sref="search({location: 'Berlin'})" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="berlin">
+        <a ui-sref="search({location: 'Berlin'})" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">Berlin</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-munich">
-        <a ui-sref="search({location: 'Munich'})" target="_blank" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="munich">
+        <a ui-sref="search({location: 'Munich'})" target="_blank" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">Munich</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-amsterdam">
-        <a ui-sref="search({location: 'Amsterdam'})" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="amsterdam">
+        <a ui-sref="search({location: 'Amsterdam'})" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">Amsterdam</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-vienna">
-        <a ui-sref="search({location: 'Vienna'})" layout-padding layout="column" layout-align="center center" analytics-on analytics-category="city page" analytics-event="click" analytics-label="vienna">
+        <a ui-sref="search({location: 'Vienna'})" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">Vienna</h3>
         </a>
       </md-grid-tile>
@@ -91,6 +91,5 @@
   </div>
 
   <br><br><br><br>
-
   <footer></footer>
 </md-content>

@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('requests', []).component('requests', {
+angular.module('requests', ['infinite-scroll'])
+  .component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
   controller: ['$localStorage',
@@ -58,6 +59,7 @@ angular.module('requests', []).component('requests', {
       };
 
       requests.requests = [];
+      requests.all_requests = [];
       requests.request = {};
       requests.message = "";
       requests.showChat = false;
@@ -68,21 +70,30 @@ angular.module('requests', []).component('requests', {
       requests.request.rideChat;
       requests.request.chatFlow;
       requests.userId = $localStorage.userId;
+      requests.currentPage = 1;
+      requests.requestsLeft = false;
 
-      api.get('/users/' + $localStorage.userId + '/requests').then(
-        function (success) {
-          requests.all_requests = $filter('orderBy')(success.data, '-created_at', false);
-          requests.requests = angular.copy(requests.all_requests);
-          requests.loadingList = false;
-          if (requests.all_requests.length > 0) {
-            requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
-            requests.loadRequest(requests.selected);
+      requests.nextPage = function() {
+        requests.loadingList = true;
+        api.get('/users/' + $localStorage.userId + '/requests?page=' + requests.currentPage++).then(
+          function (success) {
+            var newRequests = success.data;
+            requests.all_requests = requests.all_requests.concat(newRequests);
+            requests.requests = angular.copy(requests.all_requests);
+            requests.filterBikes(requests.filters.type, false);
+            requests.filters.applyFilter(requests.filters.selected);
+            requests.loadingList = false;
+            requests.requestsLeft = newRequests.length === 10;
+            if (requests.all_requests.length > 0) {
+              requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
+              requests.loadRequest(requests.selected);
+            }
+          },
+          function (error) {
+            requests.loadingList = false;
           }
-        },
-        function () {
-          requests.loadingList = false;
-        }
-      );
+        );
+      };
 
       var hideDialog = function () {
         // For small screens, show Chat Dialog again
@@ -118,8 +129,8 @@ angular.module('requests', []).component('requests', {
         requests.request = {};
         // Load the new request and activate the poller
         reloadRequest(requestId);
-        var last_message = requests.requests[index].last_message
-        if (!last_message.is_read && last_message.receiver == $localStorage.userId) {
+        var last_message = requests.requests[index] ? requests.requests[index].last_message: null;
+        if (!!last_message && !last_message.is_read && last_message.receiver === parseInt($localStorage.userId)) {
           api.post('/requests/' + requestId + '/messages/mark_as_read', { "user_id": $localStorage.userId }).then(
             function (success) {
             // if (index) {
@@ -163,6 +174,7 @@ angular.module('requests', []).component('requests', {
               requests.request.rideChat = $localStorage.userId == requests.request.user.id;
               requests.request.rideChat ? requests.request.chatFlow = "rideChat" : requests.request.chatFlow = "listChat";
               requests.request.past = (new Date(requests.request.end_date).getTime() < Date.now());
+              requests.request.started = (new Date(requests.request.start_date).getTime() < Date.now());
 
               if (requests.request.rideChat) {
                 requests.request.rating = requests.request.lister.rating_lister + requests.request.lister.rating_rider;

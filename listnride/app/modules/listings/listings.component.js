@@ -15,15 +15,14 @@ angular.module('listings',[]).component('listings', {
           listings.bikes = response.data;
         },
         function(error) {
-          console.log("Error retrieving User", error);
         }
       );
 
       listings.removeBike = function(bikeId) {
         listings.bikes = listings.bikes.filter(function(bike) {
-          return bike.id != bikeId;
+          return parseInt(bike.id) !== bikeId;
         })
-      };  
+      };
     }
   ]
 });

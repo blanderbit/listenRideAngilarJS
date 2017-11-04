@@ -55,19 +55,16 @@
 
 <!--        EVENT CALENDAR FIXED SLOT        -->
 <div layout="column" layout-margin ng-if="calendar.bikeFamily == calendar.event.familyId">
-  <p class="md-headline lnr-center">E-Bike Days Calendar</p>
-  <p class="md-body-1 lnr-center">During the E-Bike Days, you can test ride a great variety of high end e-bikes. Just select which day and time you want to rent it, all 1 hour rentals are free!</p>
+  <p class="md-headline lnr-center">Supercross Calendar</p>
+  <p class="md-body-1 lnr-center">During the Munich Supercross, you can rent fantastic Cyclocross bikes for free! Just select which day and what time slot you'd like to test them!</p>
   <md-input-container class="md-block">
     <label>1. Select the Rental Day</label>
     <md-select ng-model="calendar.day">
-      <md-option value="19">
-        Friday, 19th of May
+      <md-option value="14">
+        Saturday, 14th of Oct
       </md-option>
-      <md-option value="20">
-        Saturday, 20th of May
-      </md-option>
-      <md-option value="21">
-        Sunday, 21th of May
+      <md-option value="15">
+        Sunday, 15th of Oct
       </md-option>
     </md-select>
   </md-input-container>
@@ -104,7 +101,7 @@
 </div>
 <!--      END EVENT CALENDAR        -->
 
-<div id="timeRange" layout="row" layout-align="start center" layout-padding ng-if="calendar.bikeFamily != calendar.event.familyId">
+<div id="timeRange" layout="row" layout-align="start center" layout-padding ng-if="calendar.bikeFamily != calendar.event.familyId && calendar.startDate">
   <md-input-container flex>
     <label>{{ 'shared.from' | translate }} {{ calendar.startDate | date }}</label>
     <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')"
@@ -143,25 +140,69 @@
 <div id="formSubmit" layout="column" layout-align="center stretch">
   <div id="requestOverview" layout="column" layout-align="center stretch" layout-padding>
     <div layout="row" layout-align="space-between center" ng-if="calendar.bikeFamily != 2">
-      <div>{{ 'shared.duration' | translate }}</div>
+      <div layout="row" layout-align="start center">
+        <div>{{ 'shared.duration' | translate }}</div>
+        <div>
+          <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+          <md-tooltip md-direction="right"><span translate="calendar.info"></span></md-tooltip>
+        </div>
+      </div>
       <div>{{ calendar.duration }}</div>
     </div>
 
     <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
 
-    <div layout="row" layout-align="space-between center">
+    <!-- <div layout="row" layout-align="space-between center">
       <div>{{ 'shared.subtotal' | translate }}</div>
+      <div>{{ calendar.subtotal | currency:"€":2 }}</div>
+    </div> -->
+
+    <div layout="row" layout-align="space-between center">
+      <div layout="row" layout-align="start center">
+        <span ng-if="calendar.durationDays">{{calendar.durationDays}} {{ 'shared.days' | translate }} x {{ calendar.prices[0].price | currency:"€":0 }}</span>
+        <span ng-if="!calendar.durationDays">0 {{ 'shared.days' | translate }} x {{ calendar.prices[0].price | currency:"€":0 }}</span>
+        <div>
+          <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+          <md-tooltip md-direction="right"><span translate="calendar.info-subtotal"></span></md-tooltip>
+        </div>
+      </div>
       <div>{{ calendar.subtotal | currency:"€":2 }}</div>
     </div>
 
+    <div layout="row" layout-align="space-between center" ng-if="calendar.discount">
+      <div class="lnr-dark-green-text" layout="row" layout-align="start center">
+        {{ 'shared.discount' | translate }} {{calendar.durationDays}} {{ 'shared.days' | translate }} x {{ calendar.discountRelative | currency:"€":2 }}
+        <div>
+          <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+          <md-tooltip md-direction="right"><span translate="calendar.info-discount"></span></md-tooltip>
+        </div>
+      </div>
+      <div class="lnr-dark-green-text">-{{ calendar.discount | currency:"€":2 }}</div>
+    </div>
+
     <div layout="row" layout-align="space-between center">
-      <div>{{ 'shared.lnr-fee' | translate }}</div>
+      <div layout="row">
+        {{ 'shared.lnr-fee' | translate }}
+        <div>
+          <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+          <md-tooltip md-direction="right"><span translate="calendar.info-service-fee"></span></md-tooltip>
+        </div>
+      </div>
       <div>{{ calendar.lnrFee | currency:"€":2 }}</div>
     </div>
 
     <div layout="row" layout-align="space-between center">
       <div>{{ 'shared.total' | translate }}</div>
       <div>{{ calendar.total | currency:"€":2 }}</div>
+    </div>
+    <div class="text-error md-caption"
+         ng-if="calendar.bikeFamily != 2 && calendar.isDateInvalid()"
+         layout-padding>
+      {{ 'calendar.invalid-date' | translate }}
+    </div>
+    <div class="text-error md-caption"
+         ng-if="calendar.owner">
+      {{ 'calendar.own-bike' | translate }}
     </div>
   </div>
 
@@ -190,7 +231,4 @@
     {{ 'calendar.request-bike' | translate }}
   </md-button>
   <!-- <p ng-if="!calendar.authentication.loggedIn()" class="md-caption center-text lnr-margin-lrg">{{ 'calendar.to-request-bike-please' | translate }} {{ 'forms.sign-up' | translate }} {{ 'forms.or' | translate }} {{ 'forms.log-in' | translate }}</p> -->
-  <p ng-if="calendar.owner" class="md-caption center-text lnr-margin-lrg">{{ 'calendar.own-bike' | translate }}</p>
-
-  <div ng-if="calendar.bikeFamily != 2 && calendar.isDateInvalid()" layout-padding>{{ 'calendar.invalid-date' | translate }}</div>
 </div>
