@@ -527,7 +527,8 @@
         "cruiser": "Cruiser",
         "cargo-bike": "Cargo Bike",
         "recumbent": "Recumbent",
-        "mono-bike": "Mono Bike"
+        "mono-bike": "Mono Bike",
+        "trailer": "Trailer"
       }
     }
   },

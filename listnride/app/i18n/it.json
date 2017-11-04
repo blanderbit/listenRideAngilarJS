@@ -522,7 +522,8 @@
         "cruiser": "Cruiser",
         "cargo-bike": "Bici da carico",
         "recumbent": "Bicicletta reclinata",
-        "mono-bike": "Mono Bike"
+        "mono-bike": "Mono Bike",
+        "trailer": "Trailer"
       }
     }
   },

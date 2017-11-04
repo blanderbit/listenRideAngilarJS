@@ -42,7 +42,8 @@ app.use(function(req, res, next) {
   if (req.hostname == correctUrl) {
     next();
   } else {
-    res.redirect(302, "https://" + correctUrl + req.originalUrl);
+    // res.redirect(302, "https://" + correctUrl + req.originalUrl);
+    next();
   }
 });
 

@@ -525,7 +525,8 @@
         "cruiser": "Cruiser",
         "cargo-bike": "transportfiets",
         "recumbent": "Ligfiets",
-        "mono-bike": "Eenwieler"
+        "mono-bike": "Eenwieler",
+        "trailer": "Aanhangwagen"
       }
     }
   },
