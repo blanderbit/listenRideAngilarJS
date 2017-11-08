@@ -16,6 +16,7 @@ var imagemin = require('gulp-imagemin');
 var stylish = require('jshint-stylish');
 var minifyCss = require('gulp-clean-css');
 var runSequence = require('run-sequence');
+var jsonminify = require('gulp-jsonminify');
 var revReplace = require('gulp-rev-replace');
 var ngAnnotate = require('gulp-ng-annotate');
 var ngConstant = require('gulp-ng-constant');
@@ -39,12 +40,13 @@ gulp.task('cache-templates-modules', cacheTemplatesModules);
 gulp.task('cache-templates-services', cacheTemplatesServices);
 
 // translations, fonts and app constant
-gulp.task('copy-index-tmp', copyIndexTmp);
-gulp.task('copy-index-dist', copyIndexDist);
-gulp.task('copy-index-app', copyIndexApp);
 gulp.task('copy-downloadables', copyDownloadables);
-gulp.task('copy-i18n', copyI18n);
+gulp.task('copy-index-dist', copyIndexDist);
+gulp.task('copy-index-tmp', copyIndexTmp);
+gulp.task('copy-index-app', copyIndexApp);
+gulp.task('minify-i18n', minifyI18n);
 gulp.task('constants', appConstants);
+gulp.task('copy-i18n', copyI18n);
 
 // listnride and vendor scripts
 gulp.task('vendors', vendors);
@@ -257,11 +259,20 @@ function baseTag() {
         .pipe(gulp.dest(path.dist.root));
 }
 /**
- * copy i18n to dist folder
+ * copy i18n translations to dist folder
  * @returns {gulp} for chaining
  */
 function copyI18n() {
     return gulp.src(path.app.i18n)
+        .pipe(gulp.dest(path.dist.i18n));
+}
+/**
+ * minify i18n translations
+ * @returns {gulp} for chaining
+ */
+function minifyI18n() {
+    return gulp.src(path.dist.i18nFiles)
+        .pipe(jsonminify())
         .pipe(gulp.dest(path.dist.i18n));
 }
 /**
@@ -552,6 +563,7 @@ function deploy(cb) {
         'inject-templates-modules',
         'copy-index-app',
         'copy-i18n',
+        'minify-i18n',
         'changes-in-index',
         'revisions',
         'replace-revisions-index',
