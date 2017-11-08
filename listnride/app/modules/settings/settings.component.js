@@ -130,7 +130,7 @@ angular.module('settings',[]).component('settings', {
         var initials = phone_number.slice(0, 3);
         var endings = phone_number.slice(-3);
         var length = phone_number.length - initials.length - endings.length + 1;
-        settings.user.phone_number_privatized = initials.concat(Array(length).join('*')).concat(endings);
+        settings.user.phone_number_privatized = "+" + initials.concat(Array(length).join('*')).concat(endings);
       }
 
       function getBusinessData() {
