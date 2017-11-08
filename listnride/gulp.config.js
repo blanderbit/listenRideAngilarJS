@@ -42,6 +42,7 @@ module.exports = function () {
             sourceVendors: 'vendors.min.js',
             css: './dist/**/.min.css',
             i18n: './dist/app/i18n',
+            i18nFiles: ['./dist/app/i18n/*.json'],
             js_modules: './dist/lnr-wizard-module/',
             moment: './dist/lnr-wizard-module/moment',
             lnrShopSolution: './dist/lnr-shop-solution'

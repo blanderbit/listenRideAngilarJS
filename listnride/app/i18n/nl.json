@@ -351,6 +351,7 @@
     "update-contact": "Wijzig mobiele nummer",
     "update-contact-mobile": "Mobiele nummer",
     "company-contact-info": "Vul uw Bedrijfsnaam en naam van de contact persoon in",
+    "signing-up-accept-tac": "Door een account aan te maken accepteer je de",
     "errors": {
       "password-length": "Wachtwoord dient 6-30 karakters lang te zijn",
       "password-missing": "Wachtwoord aanmaken",
@@ -1251,6 +1252,33 @@
       "faq-answer-3": "The buyer has a right of return of 100 days from date of purchase.",
       "faq-question-4": "What frame size do I need?",
       "faq-answer-4": "In the geometry tables of the respective models you will find a size recommendation which refers to the body size and your step length. How to determine your step length: You need a cane and a water balance. If you do not have a water scale, you can easily use a book. Pull out your shoes and pants (depending on how pants are cut, it affects the result). If you have a water scale, pull it upwards as far as possible between the legs. It works the same way with a book, but you should place yourself on a door or wall so that the top of your 'meter' is parallel to the ground. Now measure the stick from the floor to the upper edge of the water scale or the book. The value you have now determined is your so-called step length (step height)."
+    },
+    "vanmoof": {
+      "meta-title":"Rent and test the Electrified S E-Bikes in Berlin, Munich and Hamburg",
+      "meta-descr": "The perfect city bike - VanMoof",
+      "title": "The perfect city bike - VanMoof",
+      "description": "Electrified S - The revolutionary electric bike by VanMoof",
+      "subdescription": "Built by a team of restless inventors",
+      "item1-title": "Dutch Design",
+      "item1-description": "Ready to go<br>Smart Technology<br>Anti-theft features<br>Innovative Design",
+      "item2-title": "Joyride",
+      "item2-description": "Upright riding position<br>Completely integrated gearing<br>Touch display built into frame<br>Lightweight 18,4 kg",
+      "item3-title": "Electric Assist",
+      "item3-description": "Turbo Boost button<br>Comfortable user experienc<br>Integrated e-lock and G-senso<br>Smartphone compatible",
+      "find-out-more": "Learn more about VanMoof Bikes",
+      "order-online": "Order one of their bikes online and get your rental reimbursed.<br>See the most frequently asked questions below.",
+      "faq-question-1": "How far will my M3 Electrified be able to bring me?",
+      "faq-answer-1": "The Electrified has a maximum range of 60km, when set on half power output, and on flat roads.The actual range may vary based on several factors like power assistance level, tire pressure, user weight, battery age and condition, driving style, environmental and climate conditions.",
+      "faq-question-2": "What is the power booster button?",
+      "faq-answer-2": "It's a small switch on the left handlebar. To give your bike more power, just press and hold it while pedaling for as long as you need a power boost. It only works at speeds under 20km/h and is especially useful on hills.",
+      "faq-question-3": "How does the anti-theft tracking of my 2016 Electrified S work?",
+      "faq-answer-3": "We will only start tracking your bike the moment you report it stolen through the app. We will then send you a link where you can track the recovery of your bike. In the meantime, to save energy, all electronic functions, except for the tracking system, will be shut down. This feature uses GSM cellular information called LBS. This allows us to track the bike wherever it is, even inside a building. We worked closely together with Vodafone to make this service as accurate as possible. For the last mile of tracking we use another technology, to ensure we find your bike's exact location.",
+      "faq-question-4": "Can I remove the battery myself?",
+      "faq-answer-4": "No. The battery is fixed in the frame, but can be removed by our VanMoof bike doctors if needed. Luckily it will only need to be removed for replacement.",
+      "faq-question-5": "How do I charge the battery of the Electrified S?",
+      "faq-answer-5": "Your bike will ship with a charger. Simply plug in the connector just like you'd plug in your smartphone, and six hours later it will be fully charged.",
+      "faq-question-6": "What do I get with an Electrified S?",
+      "faq-answer-6": "• A two-year warranty covering defects in workmanship and materials. <br>• Backup remote key, for locking or unlocking your bike when your smartphone is not available or out of battery<br>• Bike Charger (36V, 2A. charger)<br>• GSM and Bluetooth Anti-Theft Tracking<br>• Smartphone App for Android and iOS<br>• Operating Manual and User Guide<br>• Anti-Theft Tool for your bike's wheel nuts <br>• The Electrified S tyres 28\" x 2.35\" tyres. (60-622)<br>• Cable for the integrated lock<br>• Tool for adjusting the seat and handlebar position"
     }
   },
   "invite-landing": {
