@@ -339,6 +339,7 @@
     "update-contact": "Change Phone number",
     "update-contact-mobile": "Phone number",
     "company-contact-info": "Please fill form with company contact person information.",
+    "signing-up-accept-tac": "By signing up I accept the",
     "errors": {
       "password-length": "Password should be 6-30 characters",
       "password-missing": "Please provide a password",

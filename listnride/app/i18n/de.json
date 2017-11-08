@@ -362,6 +362,7 @@
     "update-contact": "Handynummer ändern",
     "update-contact-mobile": "Handynummer",
     "company-contact-info": "Bitte trage die Daten der Kontaktperson des Unternehmens ein.",
+    "signing-up-accept-tac": "Mit der Registrierung akzeptiere ich die",
     "errors": {
       "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
       "password-missing": "Bitte gib ein Passwort an",
