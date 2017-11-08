@@ -351,6 +351,7 @@
     "update-contact": "Wijzig mobiele nummer",
     "update-contact-mobile": "Mobiele nummer",
     "company-contact-info": "Vul uw Bedrijfsnaam en naam van de contact persoon in",
+    "signing-up-accept-tac": "Door een account aan te maken accepteer je de",
     "errors": {
       "password-length": "Wachtwoord dient 6-30 karakters lang te zijn",
       "password-missing": "Wachtwoord aanmaken",
