@@ -659,6 +659,7 @@
                     .then(function (translations) {
                         ngMeta.setTitle(translations["brand-integration.vanmoof.meta-title"]);
                         ngMeta.setTag("description", translations["brand-integration.vanmoof.meta-descr"]);
+                        ngMeta.setTag("og:image", "app/assets/ui_images/opengraph/vanmoof.jpg");
                     })
             }
         },
