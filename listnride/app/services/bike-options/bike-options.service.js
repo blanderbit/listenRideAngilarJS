@@ -83,7 +83,8 @@ angular.module('listnride')
             {value: 2, label: "cruiser"},
             {value: 3, label: "cargo-bike"},
             {value: 4, label: "recumbent"},
-            {value: 5, label: "mono-bike"}
+            {value: 5, label: "mono-bike"},
+            {value: 6, label: "trailer"}
           ],
         };
       }
