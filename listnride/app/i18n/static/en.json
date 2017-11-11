@@ -198,11 +198,6 @@
       "preregister-thanks": "Thanks, you’ll get notified as soon as all bikes are published!"
     }
   },
-  "error-404": {
-    "title": "404 Page not found",
-    "details": "The page you are looking for does not exist!",
-    "home-link": "Back to the homepage"
-  },
   "how-to-shoot-bike-photo": {
     "header": "Photo Tips",
     "title": "A couple of photo tips for a stand out listing",
@@ -644,18 +639,6 @@
       "rider-location": "X marks the Spot",
       "public-location": "Freedom is yours"
     }
-  },
-  "footer": {
-    "language": "Language",
-    "company": "Company",
-    "legal": "Legal",
-    "terms-and-conditions": "Terms",
-    "privacy-statement": "Privacy",
-    "imprint": "Imprint",
-    "about": "About",
-    "press": "Press",
-    "jobs": "Jobs",
-    "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
   "jobs": {
     "title": "Jobs",

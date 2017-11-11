@@ -198,11 +198,6 @@
       "preregister-thanks": "dankjewel! We zullen je informeren, zodra de fietsen online worden geplaatst"
     }
   },
-  "error-404": {
-    "title": "404 pagina niet gevonden",
-    "details": "De gezochte pagina bestaat niet!",
-    "home-link": "Terug naar de Homepage"
-  },
   "how-to-shoot-bike-photo": {
     "header": "Photo Tips",
     "title": "A couple of photo tips for a stand out listing",
@@ -645,18 +640,6 @@
       "rider-location": "Keuzemenu",
       "public-location": "De grote vrijheid"
     }
-  },
-  "footer": {
-    "language": "Taal",
-    "company": "Bedrijf",
-    "legal": "Colofon",
-    "terms-and-conditions": "Algemene voorwaarden",
-    "privacy-statement": "Privacybeleid",
-    "imprint": "Bedrijfsgegevens",
-    "about": "Over ons",
-    "press": "Pers",
-    "jobs": "Werken bij",
-    "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=nl"
   },
   "jobs": {
     "title": "Werken bij",

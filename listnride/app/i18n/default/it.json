@@ -695,5 +695,22 @@
       "email-subject": "{{full_name}}ti ha invitato a iscriverti a listnride!",
       "email-body": "{{first_name}}ti ha regalato 10 € per la tua prima avventura sulla bicicletta che preferisci!%0 Unisciti a listnride, la comunità di bike sharing che sta crescendo sempre di più e otterrai accesso a innumerevoli biciclette per ogni scopo!% 0 Iscriviti e riceverai immediatamente un credito di 10 € % 0A% 0A {{voucher_url}}% 0A% 0 Desideri ringraziare {{first_name}}? Noleggia una bicicletta o registra la tua e {{first_name}}riceverà anche un credito di 10 €!% 0A% 0 Buon divertimento e goditi la corsa!"
     }
+  },
+  "error-404": {
+    "title": "404 pagina non trovata",
+    "details": "La pagina che stai cercando non esiste!",
+    "home-link": "Torna alla homepage"
+  },
+  "footer": {
+    "language": "Lingua",
+    "company": "Società",
+    "legal": "Note legali",
+    "terms-and-conditions": "Termini",
+    "privacy-statement": "Privacy",
+    "imprint": "Info",
+    "about": "Su di noi",
+    "press": "Stampa",
+    "jobs": "Lavora con noi",
+    "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   }
 }
