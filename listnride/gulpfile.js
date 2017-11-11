@@ -263,7 +263,17 @@ function baseTag() {
  * @returns {gulp} for chaining
  */
 function copyI18n() {
+
+    // copy and minify angular local source file
+    gulp.src(path.app.i18nJs)
+        .pipe(gulp.dest(path.dist.i18n))
+        .pipe(uglify(path.dist.i18nJs))
+        .pipe(gulp.dest(path.dist.i18n));
+
+    // copy and minify translation files
     return gulp.src(path.app.i18n)
+        .pipe(gulp.dest(path.dist.i18n))
+        .pipe(jsonminify())
         .pipe(gulp.dest(path.dist.i18n));
 }
 /**
