@@ -3,13 +3,13 @@
 angular.module('brompton-integration',[]).component('brompton', {
   templateUrl: 'app/modules/brand-integration/brompton.template.html',
   controllerAs: 'brompton',
-  controller: [ '$translate', 'api', 'ngMeta',
-    function BromptonController($translate, api, ngMeta) {
+  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta',
+    function BromptonController($translate, $tpl, api, ngMeta) {
       ngMeta.setTitle($translate.instant("brand-integration.brompton.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.brompton.meta-description"));
 
       var brompton = this;
-
+      $tpl.addPart('static');
       brompton.currentBikes = [];
       $translate(["shared.berlin"]).then(
         function (translations) {

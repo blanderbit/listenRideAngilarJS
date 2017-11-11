@@ -823,6 +823,7 @@
         name: 'cities-berlin',
         url: '/berlin',
         templateUrl: 'app/modules/static/cities-berlin.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
             data: function ($translate, ngMeta) {
                 $translate(["cities.berlin.meta-title", "cities.berlin.meta-description"])
@@ -841,6 +842,7 @@
         name: 'cities-munich',
         url: '/munich',
         templateUrl: 'app/modules/static/cities-munich.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
             data: function ($translate, ngMeta) {
                 $translate(["cities.munich.meta-title", "cities.munich.meta-description"])
@@ -859,6 +861,7 @@
         name: 'cities-amsterdam',
         url: '/amsterdam',
         templateUrl: 'app/modules/static/cities-amsterdam.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
             data: function ($translate, ngMeta) {
                 $translate(["cities.amsterdam.meta-title", "cities.amsterdam.meta-description"])
@@ -877,6 +880,7 @@
         name: 'cities-vienna',
         url: '/vienna',
         templateUrl: 'app/modules/static/cities-vienna.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
             data: function ($translate, ngMeta) {
                 $translate(["cities.vienna.meta-title", "cities.vienna.meta-description"])
@@ -894,7 +898,8 @@
       $stateProvider.state({
         name: 'how-to-shoot-bike-photos',
         url: '/how-to-shoot-bike-photos',
-        templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html'
+        templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
       });
 
       $stateProvider.state({
@@ -910,7 +915,8 @@
       });
 
       $stateProvider.state('404', {
-        templateUrl: 'app/modules/static/error-404.template.html',
+        templateUrl: 'app/modules/static/error-404.template.html',        
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         data: {
           meta: {
             'title': 'listnride - 404',
