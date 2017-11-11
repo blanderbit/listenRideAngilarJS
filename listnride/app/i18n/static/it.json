@@ -592,5 +592,8 @@
     "description": "List e Ride GmbH (di seguito \"listnride\") ti informa nei Regolamenti di Protezione dei Dati sulla gestione dei tuoi dati personali. <br><br><a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Qui puoi visualizzare e scaricare le norme sulla protezione dei dati. </a>",
     "meta-title": "Politica sulla privacy di listnride",
     "meta-description": "La Politica sulla privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online."
+  },
+  "seo": {
+    "cities-title": "Planning to Travel? Check out more cities:"
   }
 }
