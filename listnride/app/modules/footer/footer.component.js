@@ -9,10 +9,11 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
     '$location',
     '$localStorage',
     '$translate',
+    '$translatePartialLoader',
     '$stateParams',
-    function FooterController($scope, $window, $location, $localStorage, $translate, $stateParams) {
+    function FooterController($scope, $window, $location, $localStorage, $translate,  $tpl, $stateParams) {
       var footer = this;
-
+      $tpl.addPart('static');
       footer.hideFooter = $stateParams.hideFooter;
 
       $scope.$watch(
