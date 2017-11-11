@@ -62,6 +62,7 @@
     "gulp-imagemin": "^3.1.1",
     "gulp-inject": "^4.3.0",
     "gulp-jshint": "^2.0.2",
+    "gulp-jsonminify": "^1.0.0",
     "gulp-load-plugins": "^1.4.0",
     "gulp-ng-annotate": "^2.0.0",
     "gulp-ng-constant": "^2.0.0-2",

@@ -1,8 +1,17 @@
-/* global
-        $
-*/
 var lnrConstants = {
   env: 'production', // options: staging, production
+  
+  // shop solution for staging and production
+  staging_shop_url: "https://listnride-staging.herokuapp.com/v2/shop_solutions",
+  production_shop_url: "https://api.listnride.com/v2/shop_solutions",
+
+  // users for staging and production
+  staging_users: "https://listnride-staging.herokuapp.com/v2/users/",
+  production_users: "https://api.listnride.com/v2/users/",
+
+  // root url for svg files
+  svgUrlRoot: 'https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/biketype_',
+
   lnrStyles: "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.css",
   lnrStylesLocal: "styles/lnr-shop-integration.css",
   introText: {
@@ -23,24 +32,19 @@ var lnrConstants = {
 
   // translation object
   translate: {
-    all: {
+    allLocations: {
       "en": 'All locations',
       "de": 'Alle Standorte',
       "nl": 'Alle locaties',
       "selected": ''
+    },
+    allSizes: {
+      "en": 'All sizes',
+      "de": 'Alle Gr&ouml;&beta;en',
+      "nl": 'Alle maten',
+      "selected": ''
     }
   },
-
-  // shop solution for staging and production
-  staging_shop_url: "https://listnride-staging.herokuapp.com/v2/shop_solutions",
-  production_shop_url: "https://api.listnride.com/v2/shop_solutions",
-
-  // users for staging and production
-  staging_users: "https://listnride-staging.herokuapp.com/v2/users/",
-  production_users: "https://api.listnride.com/v2/users/",
-
-  // root url for svg files
-  svgUrlRoot: 'https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/biketype_',
 
   // map of the categories for en, de and nl languages
   subCategory: {
@@ -163,7 +167,15 @@ var lnrConstants = {
     }
   },
 
-  getLnrRides: function () {
-    return lnrConstants.rides;
+  // all sizes of the rides
+  sizes: {
+    default: [155, 165, 175, 185, 195],
+    available: [], // gets populated from rides api 
+    unshifts: 0
+  },
+
+  disabledButtonCss: {
+    "pointer-events": "none",
+    "color": "#c6c6c6"
   }
 };

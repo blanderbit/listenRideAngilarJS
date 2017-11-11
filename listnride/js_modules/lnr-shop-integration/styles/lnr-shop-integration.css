@@ -341,6 +341,7 @@ md-icon svg {
   border-radius: 4px;
   padding: 0 10px 0 16px; /* text inside of the dropdown */
   width: 100%;
+  min-width: 138px;
   height: 40px;
   font-weight: 400;
   font-size: 14px;
@@ -361,11 +362,15 @@ md-icon svg {
   display: inline-block;
 }
 
+.lnr-dropdown-parent {
+  max-width: 172px;
+  min-width: 152px;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: white;
-  min-width: 120px;
   z-index: 99; /* below the naigation bar on mobile */
   border-color: rgba(206, 212, 216, 0.9);
   border-style: solid;
@@ -373,8 +378,16 @@ md-icon svg {
   border-width: 1px;
   max-height: 220px;
   min-height: 38px;
+  max-width: 172px;
+  min-width: 154px;
   font-weight: 400;
   overflow-y: scroll;
+}
+
+@media (max-width: 680px) {
+  .dropdown-content {
+    min-width: 138px;
+  }
 }
 
 .dropdown-content a {
