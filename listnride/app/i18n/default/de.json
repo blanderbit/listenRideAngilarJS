@@ -678,5 +678,22 @@
       "email-subject": "{{full_name}} hat dich zu listnride eingeladen!",
       "email-body": "{{first_name}} hat dir 10€ für dein erstes Abenteuer auf einem Fahrrad deiner Wahl geschenkt!%0AWerde auch du Teil von listnride, der schnellstwachsenden Bikesharing Community und erhalte Zugriff auf unzählige Fahrräder für jeden erdenklichen Zweck!%0A%0A{{first_name}} sei dank, erhältst du sofort 10€ Startguthaben, sobald du dich registrierst.%0A%0A{{voucher_url}}%0A%0ADu möchtest dich bei {{first_name}} bedanken?%0AMiete ein Rad oder biete deins zum Verleih an und auch {{first_name}} erhält 10€ Guthaben :).%0A%0AViel Spaß und Fahrvergnügen."
     }
+  },
+  "error-404": {
+    "title": "404 Seite nicht gefunden",
+    "details": "Die gesuchte Seite existiert nicht!",
+    "home-link": "Zurück nach Homepage"
+  },
+  "footer": {
+    "language": "Sprache",
+    "company": "Company",
+    "legal": "Rechtliches",
+    "terms-and-conditions": "AGB",
+    "privacy-statement": "Datenschutz",
+    "imprint": "Impressum",
+    "about": "Über uns",
+    "press": "Presse",
+    "jobs": "Jobs",
+    "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=de"
   }
 }

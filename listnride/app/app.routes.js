@@ -925,8 +925,7 @@
       });
 
       $stateProvider.state('404', {
-        templateUrl: 'app/modules/static/error-404.template.html',        
-        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
+        templateUrl: 'app/modules/static/error-404.template.html',
         data: {
           meta: {
             'title': 'listnride - 404',
