@@ -307,19 +307,6 @@
     "10": "Die Anfrage wurde abgebrochen."
   },
 
-  "footer": {
-    "language": "Sprache",
-    "company": "Company",
-    "legal": "Rechtliches",
-    "terms-and-conditions": "AGB",
-    "privacy-statement": "Datenschutz",
-    "imprint": "Impressum",
-    "about": "Über uns",
-    "press": "Presse",
-    "jobs": "Jobs",
-    "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=de"
-  },
-
   "home": {
     "landing-section-header": "Das perfekte Rad. Einfach mieten.",
     "landing-section-subheader": "Miete Dir auf listnride ein Fahrrad, wie Du es magst und gerade brauchst.",
@@ -564,71 +551,6 @@
     "dialog-subtitle": "Es wird unwiderruflich von der Plattform entfernt, aktive Anfragen sind davon nicht betroffen."
   },
 
-  "how-it-works" : {
-    "meta-title": "Unkompliziertes Bike-Sharing",
-    "meta-description": "listnride ist so simpel wie eine Verabredung zum Kaffee. Probier’s aus!",
-    "title" : "Bike-Sharing völlig unkompliziert",
-    "header" : "Mit listnride kommst Du ganz leicht in die Gänge",
-    "subheader": "Bei uns ist Fahrrad(ver-)leihen so einfach wie eine Verabredung zum Kaffee:",
-    "lister-section" : {
-      "header" : "Rad vermieten",
-      "step-1-title" : "Rad Vermieten",
-      "step-1-content" : "Unter Angabe von Details, Fotos, Preis und Ort des Rads",
-      "step-2-title" : "Anfrage erhalten",
-      "step-2-content" : "Für ein bestimmtes Datum und Uhrzeit",
-      "step-3-title" : "Anfrage annehmen",
-      "step-3-content" : "Oder Alternativvorschlag machen",
-      "step-4-title" : "Fahrer treffen",
-      "step-4-content" : "Fahrradübergabe, Plaudern und Insider- Tipps geben",
-      "step-5-title" : "Bezahlung erhalten",
-      "step-5-content" : "Geld wird auf deinem Konto gut geschrieben"
-    },
-    "rider-section" : {
-      "header" : "Rad mieten",
-      "step-1-title" : "Rad finden",
-      "step-1-content" : "Suche nach Ort und Radtyp",
-      "step-2-title" : "Anfragen & reservieren",
-      "step-2-content" : "Kontakt aufnehmen und Übergabetermin ausmachen",
-      "step-3-title" : "Rad abholen",
-      "step-3-content" : "Plaudern und Insider- tipps erhalten",
-      "step-4-title" : "Los geht's!",
-      "step-4-content" : "Genieße deine Fahrt!",
-      "step-5-title" : "Rückgabe",
-      "step-5-content" : "Rad zum vereinbarten Zeitpunkt und Ort zurückbringen"
-    },
-    "handover-section" : {
-      "header": "Persönliche oder flexible Bike-Übergabe",
-      "content" : "Wir behaupten mal: Gerade nette Leute fahren Fahrrad. Und verleihen es sogar. Deshalb finden wir:  eine persönliche Übergabe lohnt sich – schon wegen toller neuer Kontakte und nützlicher Tipps zur Stadt. Da aber die Zeit dafür nicht immer mitspielt, habt Ihr bei listnride drei Möglichkeiten zur Fahrradübergabe:",
-      "list-1" : "Der Mieter (Rider) holt das Rad beim Vermieter (Lister) ab.",
-      "list-2" : "Der Lister übergibt das Rad an einem vereinbarten Ort an den Rider.",
-      "list-3" : "Der Lister sperrt das Rad an einem öffentlichen Ort ab und sendet dem Rider die Zahlenschloss-Kombination.",
-      "lister-location" : "Home, sweet Home",
-      "rider-location" : "Wunschkonzert",
-      "public-location" : "Die große Freiheit"
-    }
-  },
-  "shop-landing": {
-    "meta-title": "listnride Shop Plugin - Online Fahrräder vermieten",
-    "meta-description": "Mit dem listnride Plugin kannst du einfach deine Leihräder/Testräder in deine Online Präsenz integrieren und anbieten.",
-    "title": "Vermiete deine Leihräder direkt über deine Website",
-    "subtitle": "Mit dem listnride Plugin kannst du einfach deine Leihräder/Testräder in deine Online Präsenz integrieren und anbieten.",
-    "description": "Einfach vermieten! Kunden wählen auf deiner Website ihren Wunschzeitraum aus, bezahlen bequem online und holen das Rad ab. Die komplette Logistik, wie Bezahlung, Rechnung und Verfügbarkeit bleibt bei listnride.",
-    "feature-1": {
-      "title": "Verleih mehr Räder",
-      "description": "Mit unserem Plugin sehen deine Kunden sofort welche Räder du anbietest, wann sie verfügbar sind und was sie kosten. Die komplette Buchungsabwicklung passiert umkompliziert online und mit nur wenigen Klicks!"
-    },
-    "feature-2": {
-      "title": "Keine Programmierkentnisse nötig",
-      "description": "Um unser Plugin zu nutzen musst du kein Programmierer sein. Wartung und Updates übernehmen wir im Hintergrund. Zu dem bleiben die Räder immer auf den aktuellen Stand. Stellst du neue Räder auf listnride ein, sind sie im gleichen Moment auch auf deiner Website zu sehen."
-    },
-    "feature-3": {
-      "title": "Mehr Zeit für dein Geschäft",
-      "description": "Mit unserem System übernehmen wir alle wichtigen Aspekte der Vermietung für dich. Vorbei ist die Zeit in der du dich mit Papierkram herumschlagen musst. Wir kümmern uns um die Bezahlung, die Verwaltug der Räder und die Rechnungslegung. Zu dem bieten wir dir ein übersichtliches Dashboard, über das du beqeum die Übersicht behältst."
-    },
-    "join-now": "Mach mit. Das Plugin ist kostenlos.",
-    "join-now-description": "Willst du mehr erfahren?",
-    "contact-us": "Kontaktiere Uns"
-  },
   "rent-a-bike": {
     "meta-title": "Fahrrad mieten über listnride!",
     "meta-description": "Grandiose Auswahl. Top Preis-Leistungsverhältnis. Einfach online.",
@@ -689,80 +611,6 @@
     }
   },
 
-  "trust-and-safety": {
-    "meta-title": "Sichere Fahrradvermietung – listnride gibt Dir Rückendeckung",
-    "meta-description": "Vertrauen ist in einer Sharing-Community das A und O. Wir unterstützten Fairness und Sicherheit durch Verifizierung und unsere Vermieter-Garantie.",
-    "title": "Vertrauen & Sicherheit",
-    "header": "Sorgenlos in die Pedale treten",
-    "guarantee-icon" : "garantie_de",
-    "subheader": "Fahrrad ausleihen wird mit listnride genauso sicher wie unkompliziert.",
-    "guarantee": {
-      "title": "Die Vermieter-Garantie von listnride",
-      "content": "listnride ist eine Community von Fahrradliebhabern. Aber hey, manchmal geht auch bei den Sorgsamsten was daneben. Deshalb haben wir die Vermieter-Garantie in petto: Wird Dein Fahrrad während der Mietzeit beschädigt oder gestohlen und kann Dein Mieter den Schaden nicht ersetzen, bietet sie Schutz bis zu einer Höhe von 5.000 EUR. Die Zahlungen unterliegen bestimmten Bedingungen, Einschränkungen und Ausnahmen. Bitte lese für weitere Details unsere <a class='lnr-link' ui-sref='terms'>Nutzungs- und Mietbedingungen</a>."
-    },
-    "responsibility": {
-      "title": "Verantwortungsvoller Umgang mit Deinen Daten",
-      "content": "Deine exakte Adresse bzw. der Standort Deines Fahrrads sind nicht Teil Deines öffentlichen Profils. Erst, wenn eine Buchung bestätigt ist, werden die Daten dem Sharing-Partner übermittelt."
-    },
-    "verification": {
-      "title": "Verifizierung schafft Vertrauen",
-      "content": "Theoretisch kennt wohl jeder jeden über 3,5 bis 6,6 Ecken. Aber würdest Du Dich beim Fahrradausleihen darauf verlassen wollen? Verknüpfe Dein Profil mit persönlichen Informationen und schaffe somit Vertrauen beim Vermieter bzw. Mieter. listnride bietet Dir folgende Möglichkeiten der Verifizierung:",
-      "list-1": "ID-Verifizierung: Verbinde Dein Profil mit Facebook und hinterlege Deine Kreditkarte. Stelle sicher, dass Du Email-Nachrichten erhalten kannst.",
-      "list-2": "Telefonnummer: Wir teilen Deine verifizierte Telefonnummer mit Deinem Vermieter bzw. Mieter sobald eine Buchung angenommen wurde.",
-      "list-3": "Bewertungen: Bewertungen von Deinen Mietern und Vermietern ordnen wir Deinem Profil zu. So kannst Du Dir einen guten Ruf aufbauen."
-    }
-  },
-
-  "about-us": {
-    "title": "Über uns",
-    "header": "Über listnride",
-    "subheader": "Warum uns der uniforme Fahrradverleih zur bunten Bike-Sharing-Community inspirierte.",
-    "community": {
-      "title": "listnride im Kopf",
-      "content": "Wir von listnride sind Fahrrad-Fans. Jeder von uns liebt sein persönliches Schätzchen und die schöne Vielfalt – vom urbanen Commuter Bike bis zum Mountain Bike, vom schnellen Rennrad bis zum superschnellen S-Pedelec, vom exzentrischen Pony bis zum Lastenesel. Deshalb hatten wir uns einst gefragt: Warum kann man nicht immer die Wahl und jederzeit genau das Fahrrad haben, das man gerade braucht – in der eigenen Stadt und auf Reisen? Muss es immer der Tiefeinsteiger aus dem Fahrradverleih sein? Die Idee zur Bike-Sharing-Community listnride war geboren."
-    },
-    "future": {
-      "title": "listnride in voller Fahrt",
-      "content": "Heute ist listnride in Metropolen wie Amsterdam, Berlin, München und Wien am Start. Und es werden immer mehr. Privatmenschen und professionelle Händler bieten bei uns ihre Fahrräder zum Verleih an. Touristen und Mitbürger, Familien und Geschäftsreisende mieten genau das richtige Rad für ihren Stil und Zweck – und nehmen gleich noch den ein oder anderen nützlichen Tipp von ihrem Vermieter mit. Unsere Idee ist Wirklichkeit geworden. Sei ein Teil davon und teile dein Fahrrad – oder bike doch einfach, was Du willst! Wir freuen uns, Dich in unserer Community begrüßen zu dürfen."
-    },
-    "meta-title": "listnride - das Unternehmen",
-    "meta-description": "Gegründet von Fahrrad-Begeisterten für ihre Brüder und Schwestern im Geiste."
-  },
-
-  "press": {
-    "title": "Press",
-    "header": "Pressebereich",
-    "subheader": "Infos bereit zum Download. listnride bereit zum Gespräch.",
-    "kit": {
-      "title": "Pressemappe",
-      "content": "Andere nennen sich Fahrradverleihsystem. Wir sind eine Bike-Sharing-Community. Erfahren Sie mehr in unserer Pressemappe,",
-      "download": "die wir Ihnen hier bereitgestellt haben"
-    },
-    "contact": {
-      "title": "Pressekontakt",
-      "content": "Sie haben weitere Fragen zu listnride oder brauchen einen Ansprechpartner für Themen rund um Fahrradverleihsystem, Mieträder und Mobilitätskonzepte? Dann kontaktieren Sie uns direkt:"
-    },
-    "meta-title": "listnride Pressebereich",
-    "meta-description": "Wir lieben Bike-Sharing. Und beantworten gerne Ihre Fragen."
-  },
-
-  "jobs": {
-    "title": "Jobs",
-    "header": "Stellenangebote",
-    "subheader": "Vergrößere unsere Bike-Sharing-Community.",
-    "contact": {
-      "title": "Werde Teil unseres Teams",
-      "content": "Über Fahrräder weißt Du immer mehr als andere? Du liebst es, auch bei Wind und Wetter in die Pedale zu treten? Dann bist Du wahrscheinlich ein Fahrrad-Fanatiker – und passt schon mal gut zu unserem Team. Schau, ob wir aktuell einen passenden Job für Dich haben und schicke uns gerne Deine Bewerbung."
-    },
-    "view": "Anzeigen",
-    "meta-title": "Jobs | listnride",
-    "meta-description": "Werde Teil des Teams und unterstütze die globale Fahrrad Community!",
-    "apply": "Jetzt bewerben",
-    "see-all": "See Other Jobs",
-    "open": "Offene Positionen",
-    "go-back" : "Zurück"
-  },
-
   "invoices": {
     "request_id": "Anfrage ID",
     "bike": "Rad",
@@ -780,121 +628,6 @@
     "as-lister": "Als Vermieter",
     "as-rider": "Als Mieter",
     "no-rides": "Noch keine Räder gemietet"
-  },
-
-  "contact-and-help": {
-    "title": "Kontakt & Hilfe",
-    "meta-title": "listnride ist für dich da",
-    "meta-description": "Kontaktiere uns, wenn Du spezielle Fragen oder Probleme hast.",
-    "faq-section" : {
-      "header": "Wir sind für Dich da!",
-      "subheader": "Die häufigsten Fragen unserer Lister und Rider.",
-      "lister-faq": {
-        "title" : "FAQ Vermieter",
-        "question-1": "Welche Sicherheiten gibt es für mich, wenn ich mein Fahrrad verleihen möchte?",
-        "answer-1": "Sobald eine Mietanfrage eingeht, kannst Du über den Chat ganz einfach mit dem Interessenten in Kontakt treten. So weißt Du schon vorher einiges darüber, wer derjenige ist und warum er sich das Fahrrad ausleihen möchte. Um Betrug vorzubeugen, verifizieren wir auf der listnride-Plattform alle User. Wenn Du noch mehr Sicherheit möchtest, verlang doch bei Übergabe des Mietrads vom Mieter einen Ausweis oder eine Kaution. Und nicht vergessen: Es geht den Mietern um Spaß am Fahren; daher kannst Du davon ausgehen, dass sie das Mietrad auch entsprechend sorgfältig behandeln werden. ",
-        "question-2": "Wie kann ich sichergehen, dass der Rider/Fahrer das Mietrad auch zurückbringt?",
-        "answer-2": "Wir tun unser Bestes, um gegenseitiges Vertrauen und Respekt füreinander auf unserer Plattform ganz groß zu schreiben. Deswegen fordern wir von unseren Usern auch einen Identitätsnachweis, bevor sie sich ein Fahrrad ausleihen bzw. ein Mietrad anbieten können. Dieser Nachweis wird entweder über die Handynummer, über facebook oder E-Mail und Zahlungsinformationen geführt. Wenn Dir das noch nicht sicher genug ist, kannst Du den Mieter jederzeit auch um eine Ausweiskopie oder eine Kaution bitten. Dies muss dem Mieter jedoch vor der Bestätigung und Bezahlung des Mietrads eindeutig mitgeteilt werden.  Natürlich kann es auch einmal vorkommen, dass sich Rider verspäten, insbesondere, wenn sie sich in der Gegend nicht auskennen und vielleicht Probleme haben, den Weg zurück zu finden. Versuch zunächst, den Fahrer telefonisch, per SMS oder über den In-App-Chat zu kontaktieren, um heraus zu finden, was los ist. Klappt das nicht, bitten wir Dich, uns dies über unsere Webseite im Bereich „Kontakt und Support“ zu melden. Wir setzen uns dann mit dem Rider in Verbindung und kümmern uns um die Angelegenheit, damit Du Dein Mietrad zurückbekommst.",
-        "question-3": "Was tun, wenn mein Mietrad gestohlen oder beschädigt wird?",
-        "answer-3": "Fahrraddiebstähle kommen vor – allerdings nicht oft, wenn das Rad ordnungsgemäß abgesperrt oder in einem Gebäude abgestellt wird. Helf mit, Diebstählen vorzubeugen, indem Du das Mietrad mit einem guten Fahrradschloss ausstattet. Falls doch mal etwas schiefgeht, ist der Rider für alle möglicherweise entstandenen Schäden oder auch einen Diebstahl und die damit verbundenen Kosten verantwortlich. Wird Dein Mietrad während des Mietzeitraums gestohlen bzw. beschädigt, ist es erforderlich, dass Du und der Rider euch über unsere Webseite unter „Kontakt“ mit uns in Verbindung setzt. Nachdem wir uns einen Überblick über die Situation verschafft haben, melden wir uns bei Dir und suchen eine Lösung. Wurde das Mietrad gestohlen und der Rider kann keinen Schadensersatz leisten, ist über die listnride-Garantie gewährleistet, dass alles abgedeckt ist! Wurde Dein Mietrad jedoch gestohlen, als es gerade nicht über listnride verliehen wurde, können wir nicht zu einer Problemlösung beitragen. In diesen Fällen musst Du die Sachlage direkt mit dem Rider klären.",
-        "question-4": "Was tun, wenn im Mietzeitraum der Fahrer oder eine andere Person zu Schaden kommt oder ein Sachschaden entsteht? ",
-        "answer-4": "Stell immer sicher, dass das Mietrad bei Übergabe in einem guten Zustand ist. Davon profitieren beide Seiten: Der Rider hat mehr Spaß beim Fahren, und Du erhältst nach Rückgabe eine positive Bewertung. Leiht er sich ein Rad über listnride, erklärt sich der Mieter mit den jeweils geltenden Bestimmungen einverstanden. Diese Bestimmungen schützen Dich, wenn der Rider verletzt oder das Eigentum Dritter beschädigt wird – als Lister/Anbieter bist Du nie dafür verantwortlich, wenn der Mieter während einer Fahrt mit Deinem Rad zu Schaden kommt.",
-        "question-5": "Was tun, wenn der Rider nicht wie vereinbart zum Abholen des Rads erscheint?",
-        "answer-5": "Es kann einmal vorkommen, dass die Rider Probleme haben, an den vereinbarten Übergabeort zu gelangen. Daher ist es wichtig, hier zumindest ein bisschen flexibel zu sein. Dauert es jedoch übermäßig lang und Du hast bereits über den Chat in der listnride-App oder auch direkt telefonisch versucht, den Rider zu erreichen und dieser meldet sich nicht, kannst Du den Mietvorgang über eine Nachricht im Chat stornieren. Hierfür musts Du den Stornierungsgrund angeben. ",
-        "question-6": "Wie biete ich mein Fahrrad zum Verleih an?",
-        "answer-6": "Um ein Mietrad anzubieten, musst Du Dich zunächst registrieren. Klick dazu einfach auf „Registrieren“ und mach alle notwendigen Angaben. Hast Du Dich registriert, meldest Du Dich einfach mit Deiner E-Mail-Adresse und Deinem Passwort an. Klick oben rechts auf Deinen Account und dann auf „Mietrad anbieten“. Mach detaillierte Angaben zum Mietrad und füge noch einige gute, scharfe Fotos hinzu. Leg einen Preis fest und klick auf „Mietrad anbieten“. Nach ein paar Sekunden sind Deine Angaben hochgeladen. Du findest Dein Mietrad dann im Menü Deines Accounts unter „Angebotene Mieträder“. Dort kannst Du Deine Mieträder auch bearbeiten oder entfernen.",
-        "question-7": "Wie lege ich einen Preis für mein Mietrad fest?",
-        "answer-7": "Du kannst den Mietpreis für einen halben Tag, ganzen Tag oder auch eine Woche frei wählen. Der Mindestpreis beträgt 1 €. Attraktive Preise locken mehr Interessenten an, weil die meisten Leute insbesondere auf ein gutes Preis-/Leistungsverhältnis achten. Um den für Dich passenden Preis zu finden, schau Dir doch einfach ähnliche Mieträder auf listnride an oder vergleich Deine Preise mit denen eines Fahrradverleihs bei Dir vor Ort.",
-        "question-8": "Was muss ich zahlen, um mein Fahrrad zum Verleih anzubieten?",
-        "answer-8": "Ein Mietrad über listnride anzubieten ist kostenlos. Erst, wenn es tatsächlich zu einer Buchung kommt, erhalten wir eine Provision auf den Gesamtmietpreis in Höhe von 7,5 %. Ein Beispiel: Verleihst Du Dein Mietrad für 5 Tage zu einem Preis von 20 € pro Tag, beträgt der Gesamtpreis 100 €. Wir zahlen Dir in diesem Beispiel dann 92,50 €. Hier sind dann auch bereits alle Kosten abgezogen, die bei Kreditkartenzahlung durch Transaktionsgebühren entstehen. ",
-        "question-9": "Wie erhalte ich mein Geld für das Mietrad?",
-        "answer-9": "Die Zahlung des Gesamtmietpreises abzüglich der listnride-Provision in Höhe von 7,5 % erfolgt innerhalb von 5 Werktagen nach Ende des Mietzeitraums. Die Zahlung wird entweder über PayPal oder per Banküberweisung durchgeführt. Unter „Profil bearbeiten“ in Deinem Account kannst Du Deine Kontodaten eingeben bzw. ändern. ",
-        "question-10": "Kann ich mein Mietrad auch an anderen Standorten anbieten, die nicht auf der Webseite aufgeführt sind?",
-        "answer-10": "Ja, listnride ist eine internationale Plattform, auf der Mieträder an jedem Standort weltweit gelistet werden können. ",
-        "question-11": "Wie kann ich eine Listung vorübergehend aussetzen oder ein Mietrad deaktivieren?",
-        "answer-11": "Wenn Dein Mietrad eine Zeit lang nicht zur Verfügung steht, musst Du Deine Listung nicht löschen. Über „Angebotene Mieträder“ im Menü Deines Accounts kannst Du das entsprechende Mietrad einfach deaktivieren. In diesem Untermenü findest Du all Deine Mieträder. Klick einfach auf „Mietrad deaktivieren“ für das Rad, das Du gerne deaktivieren würdet. ",
-        "question-12": "Wie ändere ich die Bilder oder Infos zu einem Mietrad?",
-        "answer-12": "Um die Bilder oder Detailangaben zu einem Mietrad zu ändern, klick einfach auf „Angebotene Mieträder“ im Menü Deines Accounts. Klick dann auf „Mietrad bearbeiten“, um Deine Änderungen durchzuführen. Bestätige Deine Änderungen durch einen Klick auf „Mietrad aktualisieren“.",
-        "question-13": "Wie lösche ich mein Mietrad?",
-        "answer-13": "Willst Du ein bestimmtes Mietrad nicht mehr anbieten, kannst Du es unter „Angebotene Mieträder“ im Menü Deines Accounts löschen. In der iPhone-App wischt Du dazu einfach nach links über das Mietrad, das Du löschen möchtest und klickst auf „Löschen“. Auf der Webseite klickst Du einfach auf „Mietrad löschen“. Nach einigen Sekunden erhältst Du die Bestätigung „Mietrad erfolgreich gelöscht“. ",
-        "question-14": "Wie verleihe ich über listnride ein Fahrrad?",
-        "answer-14": "Wenn Du eine Anfrage für eines Deiner Mieträder erhalten hast, geh einfach in die App oder auf die Webseite und melde Dich mit Deinem Account an. In der Accountübersicht klickst Du oben rechts und gehst dann auf „Anfrage an mich“ im Menü Deines Accounts. Hier findest Du die Anfrage, die Du erhalten hast. Klick auf die Anfrage und antworte dem Interessenten und nehm die Anfrage entweder an oder lehn sie ab. Gleichzeitig kannst Du auch mit dem Interessenten chatten, um alle Details zu klären. Wenn Du die Anfrage annimmst, muss der Interessent seine Anfrage noch bestätigen und per Vorkasse bezahlen. Sobald er bestätigt und die Zahlung getätigt hat, erhältst Du per E-Mail eine Benachrichtigung und der Status in Deinem Account wird aktualisiert. ",
-        "question-15": "Was tun, wenn der ursprünglich angefragte Zeitraum nicht mit dem tatsächlichen Zeitraum übereinstimmt?",
-        "answer-15": "Wenn sich der Mietzeitraum im Laufe Deiner Kommunikation mit dem Interessenten geändert hat, solltest Du ihn darum bitten, Dir eine neue Anfrage mit den korrekten Datum und der richtigen Uhrzeit zu senden, damit die listnride-Garantie für den Verleih gilt. ",
-        "question-16": "Was tun, wenn der angefragte Zeitraum für mich ungünstig ist?",
-        "answer-16": "Passt der angefragte Mietzeitraum bei Dir nicht, könntest Du entweder jemanden bitten, ob er für Dich das Mietrad und die Schlüssel übergeben kann, oder, falls das nicht möglich ist, die Anfrage einfach ablehnen. Wir würden uns freuen, wenn Du kurz begründest, warum die Anfrage abgelehnt werden muss. ",
-        "question-17": "Wie kontaktiere ich den Rider sobald das Mietrad bestätigt wurde?",
-        "answer-17": "Hierfür kannst Du wieder den In-App-Chat verwenden, den Du auch schon für die Klärung der Mietanfrage genutzt hast. Geh einfach auf „Anfragen an mich“ im Menü Deines Accounts und klick auf das entsprechende Mietrad. In der Bestätigungsmail zum Verleih findest Du alle Angaben über den Mieter – einschließlich seiner Handynummer. ",
-        "question-18": "Wie erhalte ich Bewertungen für meine Listung?",
-        "answer-18": "Nach Rückgabe des Fahrrads wird der Rider gebeten, Dich als Lister und Dein Mietrad zu bewerten. Sobald eine Bewertung abgegeben wurde, wird bei Deinem Mietrad ein Bewertungsscore angezeigt. Um gute Bewertungen zu erhalten, empfehlen wir Dir, das Mietrad und den jeweiligen Zustand wahrheitsgemäß zu beschreiben. "
-      },
-      "rider-faq": {
-        "title" : "FAQ Mieter",
-        "question-1": "Wie leihe ich mir ein Fahrrad aus?",
-        "answer-1": "Bevor Du Dir ein Fahrrad ausleihen kannst, musst Du Dich zunächst registrieren. Klick dazu einfach auf „Registrieren“ und mach alle erforderlichen Angaben. Sobald Du registriert bist, kannst Du Dich mit Deiner E-Mail-Adresse und Deinem Passwort anmelden. Such Dir ein Fahrrad aus, das Dir gefällt und Deine Anforderungen erfüllt, und wähle ein Startdatum, eine Abholzeit, ein Enddatum und eine Rückgabezeit, und klick dann auf „Mietrad anfragen“. Wurde Deine Anfrage angenommen, kannst Du über die Schaltfläche „Anfrage bestätigen“ fest zusagen und die Zahlung durchführen. Sobald der Zahlungsvorgang erfolgreich abgeschlossen wurde, erhältst Du eine Bestätigung mit allen Einzelheiten zum Verleih.",
-        "question-2": "Wie storniere ich eine Anfrage?",
-        "answer-2": "In der Statusanzeige für Deine Anfrage kannst Du die Anfrage vor Durchführung der Zahlung jederzeit stornieren. Klick dazu im Anfragefenster auf „Anfrage stornieren“. ",
-        "question-3": "Kann ich mehr als eine Anfrage gleichzeitig senden?",
-        "answer-3": "Ja, Du kannst für mehrere Mieträder gleichzeitig eine Anfrage senden, wenn Du möglichst schnell eine Rückmeldung von einem der Anbieter erhalten möchtest. Sobald einer der Besitzer eines Mietrads Deine Anfrage angenommen hat, kannst Du die Anfrage bestätigen. Solange Du eine Anfrage nicht bestätigt hast, kommt keine Buchung und damit auch keine Transaktion zustande. Sagst Du jedoch eines der angefragten Mieträder zu, möchten wir Dich bitten, daran zu denken, die anderen Anfragen zu stornieren, damit die anderen Anbieter Bescheid wissen.",
-        "question-4": "Was mache ich, wenn der Lister nicht reagiert?",
-        "answer-4": "Leider kann aus verschiedenen Gründen nicht jeder Anbieter immer direkt antworten – beispielsweise, wenn er gerade kein Internet zur Verfügung hat. Wir tun unser Bestes, um die Reaktionszeiten so kurz wie möglich zu halten. Wenn Du kurzfristig ein Fahrrad ausleihen willst, empfehlen wir, mehrere Anfragen gleichzeitig zu stellen, um Deine Chancen zu erhöhen, ein Fahrrad zu finden, das Dir gefällt und Deinen Anforderungen entspricht. ",
-        "question-5": "Wie bezahle ich das Mietrad?",
-        "answer-5": "Du kannst entweder über die App oder unsere Webseite eine Anfrage bestätigen und die entsprechende Zahlung tätigen. Mögliche Zahlungsmethoden sind Kreditkarte oder PayPal. Wir erweitern derzeit jedoch die angebotenen Zahlungsmöglichkeiten – wir halten euch auf dem Laufenden!",
-        "question-6": "Was mache ich, wenn ich einen Platten habe?",
-        "answer-6": "Ein platter Reifen kommt immer mal wieder vor. Du bist dafür verantwortlich, das Fahrrad in dem Zustand wieder zurückzubringen, in dem Du es bei Übergabe erhalten hast. Daher solltest Du entweder ein Fahrradgeschäft aufsuchen, um den Platten reparieren lassen, oder bereit sein, den Schaden entsprechend zu begleichen. Wir sind der Auffassung, dass eine Zahlung von etwa 15 € hierfür angemessen wäre.",
-        "question-7": "Wie schließe ich mein Rad sicher ab, und wie kann ich einen Diebstahl verhindern?",
-        "answer-7": "Um einen Diebstahl zu verhindern, empfehlen wir, den Lister danach zu fragen, wie man sich vor Ort am besten verhält. Wir empfehlen normalerweise, das Fahrrad an einen festen Gegenstand anzuschließen (Laternenpfahl, Baum, o. Ä.) und dabei das Schloss durch Vorderreifen und Rahmen zu ziehen, damit das Rad nicht einfach wegbewegt werden kann. Über Nacht empfehlen wir, das Fahrrad immer in einem geschlossenen Bereich oder in einem Gebäude abzustellen.",
-        "question-8": "Was tun, wenn mir das Rad während der Mietdauer gestohlen wird?",
-        "answer-8": "Ein Diebstahl des Mietrads ist immer sehr ungünstig. Bitte nutze den Helpdesk, um uns unverzüglich davon in Kenntnis zu setzen. Wir teilen Dir dann mit, was zu tun ist. Denk immer daran, dass Du alleine während der Mietdauer für das Fahrrad verantwortlich bist, und das Fahrrad unter Umständen ersetzen musst. ",
-        "question-9": "Bin ich versichert, wenn ich bei listnride ausleihe?",
-        "answer-9": "Listnride stellt keine Versicherung – wir unterstützen lediglich den Mietvorgang. Das Ausleihen eines Fahrrads erfolgt ausschließlich auf eigenes Risiko des Mieters, und Du alleine bist im Falle eines Diebstahls oder bei Beschädigung des Mietrads im Mietzeitraum für das Fahrrad verantwortlich. Wir empfehlen allen Mietern, sich bei ihrer Reise- und/oder Haftpflichtversicherung zu erkundigen, ob solche Fälle möglicherweise dort miteingeschlossen sind. ",
-        "question-10": "Was tun, wenn das Mietrad nicht so aussieht, wie das, das ich gebucht habe?",
-        "answer-10": "Bitte schick uns Bilder des Mietrads und erklär uns, was genau anders ist. Wenn Deine Einwände berechtigt sind, können wir den Vorgang stornieren. Ansonsten hast Du auch über Deine Bewertung nach Ende des Mietzeitraums die Möglichkeit, das Mietrad entsprechend zu bewerten. ",
-        "question-11": "Muss ich ein eigenes Schloss und meinen eigenen Helm mitbringen? Kann ich meine eigenen Pedale bzw. einen eigenen Sattel mitbringen? ",
-        "answer-11": "Wenn der Anbieter kein Fahrradschloss zur Verfügung stellt, würden wir empfehlen, eines mitzubringen. Denk daran, dass Du dafür verantwortlich bist, das Fahrrad zurückzubringen und einen möglichen Diebstahl zu verhindern. Manche Lister stellen einen Helm zur Verfügung, aber falls Du lieber Deinen eigenen Helm trägst oder keiner verfügbar ist, solltest Du Deinen eigenen Fahrradhelm mitbringen. Wenn Du gerne andere Pedale oder einen anderen Sattel verwenden würdest, solltest Du Dir bitte vorher vom Anbieter bestätigen lassen, dass das erlaubt ist. Denk immer daran, dass Dir das Mietrad nicht gehört."
-      }
-    },
-    "contact-section" : {
-      "header": "Keine Antwort für Dich dabei?",
-      "subheader": "Kontaktiere uns zu speziellen Fragen oder falls Unstimmigkeiten beim Bike-Sharing über listnride auftauchen:",
-      "list-1" : "Ich möchte eine verdächtige Anfrage melden",
-      "title" : "Unsere FAQs haben nicht die richtige Antwort für Dich parat? Dann wähle:",
-      "list-2" : "Ich möchte eine verdächtige Listung melden",
-      "list-3" : "Ich möchte Schwierigkeiten mit meinem Mieter/Vermieter melden",
-      "list-4" : "Ich habe eine Frage zu Zahlungen",
-      "list-5" : "Ich habe eine allgemeine Frage"
-    }
-  },
-
-  "terms-and-conditions" : {
-    "meta-title": "listnride | AGB",
-    "meta-description": "AGB",
-    "title" : "Terms and conditions",
-    "header" : "Allgemeine Geschäftsbedingungen für die Online-Plattform listnride",
-    "download" : "Hier zum download",
-    "description": "<a href=\"http://cdn.listnride.com/de/tacs.pdf\" target=\"_blank\">Sie können die AGBs hier anschauen und herunterladen.",
-    "subtitle": "Die List and Ride GmbH (im Folgenden „listnride“) vermittelt über die Webseite www.listnride.com (im Folgenden „Webseite“) Mietverträge über Fahrräder und andere Sport- und Freizeitausrüstung. Die nachfolgenden Allgemeinen Nutzungsbedingungen (im Folgenden „Nutzungsbedingungen“) im Abschnitt I. werden Bestandteil des Vertrages der zwischen dem Nutzer und listnride über die Vermittlungsleistung zustande kommt. Wird über die Webseite ein Vertrag über die Anmietung des Gebrauchsgegenstandes (im Folgenden „Mietvertrag“) geschlossen, kommt dieser zu den im Abschnitt II. genannten Allgemeinen Mietbedingungen (im Folgenden „Mietbedingungen“) zustande."
-  },
-
-  "privacy" : {
-    "title" : "Datenschutz",
-    "subtitle": "Datenschutzrichtlinien",
-    "description": "Mit den Datenschutzbestimmungen informiert die List and Ride GmbH (im Folgenden „listnride“) Sie über den Umgang mit Ihren personenbezogenen Daten.<br><br><a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Sie können die Datenschutzbestimmungen hier abrufen und ausdrucken.</a>",
-    "meta-title": "Datenschutzrichtlinien von listnride",
-    "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform."
-  },
-
-  "imprint" : {
-    "title" : "Impressum",
-    "header" : "Impressum",
-    "managing-director": "Geschäftsführer",
-    "telephone": "Telefon",
-    "germany": "Deutschland",
-    "commercial-register-number": "Handelsregisternummer",
-    "berlin-court-of-registry": "Amtsgericht Berlin (Charlottenburg)",
-    "vat-id": "USt-ID-Nr.",
-    "meta-title": "listnride Impressum",
-    "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie Du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
   },
 
   "invite-landing" : {
@@ -944,36 +677,6 @@
       "email-subject": "{{full_name}} hat dich zu listnride eingeladen!",
       "email-body": "{{first_name}} hat dir 10€ für dein erstes Abenteuer auf einem Fahrrad deiner Wahl geschenkt!%0AWerde auch du Teil von listnride, der schnellstwachsenden Bikesharing Community und erhalte Zugriff auf unzählige Fahrräder für jeden erdenklichen Zweck!%0A%0A{{first_name}} sei dank, erhältst du sofort 10€ Startguthaben, sobald du dich registrierst.%0A%0A{{voucher_url}}%0A%0ADu möchtest dich bei {{first_name}} bedanken?%0AMiete ein Rad oder biete deins zum Verleih an und auch {{first_name}} erhält 10€ Guthaben :).%0A%0AViel Spaß und Fahrvergnügen."
     }
-  },
-
-  "invest": {
-    "meta-title": "listnride startet ein Crowdfunding! Sei Teil davon und investiere in den Aufbau von Europas führender Bike Sharing Community.",
-    "meta-description": "Besuche Seedrs und erfahre wie du in listnride investieren kannst.",
-    "description": "listnride startet ein Crowdfunding! Sei Teil davon und investiere in den Aufbau von Europas führender Bike Sharing Community.",
-    "subdescription": "Erfahre mehr über listnride in unserer <a href=\"http://cdn.listnride.com/en/Seedrs_listnride+Investor+Presentation.pdf\" target=\"_blank\">Investoren Präsentation</a> und warum es sich lohnt zu investieren.",
-    "subsubdescription": "In Kürze startet die listnride Crowdfunding Kampagne auf <a href=\"https://seedrs.com\" target=\"_blank\">Seedrs</a>, der führenden Equity Crowdfunding Plattform in Europa. Als Mitgliedern der ersten Stunde, Geschäftspartner oder Freunde, bieten wir euch vorzeitigen Zugriff bevor wir die Kampagne der Öffentlichkeit zugänglich machen. Sag uns wie hoch Deine Investition wäre und merke sie unverbindlich vor.",
-    "learn-more": "Crowdfunding FAQ",
-    "known-from": "listnride in den Medien",
-    "how-much": "Wie viel möchtest du investieren",
-    "investment": "Investition",
-    "submit": "Vormerken",
-    "form-feedback": "Vielen Dank! Du hast dich erfolgreich für eine Investition vorgemerkt.",
-    "faq-question-1": "WARUM STARTET LISTNRIDE EINE CROWDFUNDING-KAMPAGNE?",
-    "faq-answer-1": "Wir sind ein junges Unternehmen mit einem gut entwickelten Produkt, einer wachsenden Community von Mietern und Fahrradbesitzern. Um weiteres Wachstum voranzutreiben eröffnen wir der Community und der Öffentlichkeit die Möglichkeit, neben weiteren Investoren, in unser Unternehmen zu investieren. Mit diesen zusätzlichen Ressourcen werden wir weitere Verbesserungen an unserem Produkt vornehmen, so wie weiterhin geografisch expandieren. Damit können wir die Community entwickeln, Mietern eine größere Auswahl an Fahrrädern und Fahrradbesitzern eine größere Nachfrage bieten.",
-    "faq-question-2": "WIE KANN ICH IN LISTNRIDE INVESTIEREN?",
-    "faq-answer-2": "Wir arbeiten mit Seedrs, der führende Crowdfunding-Plattform in Europa, um unsere Crowdfunding-Kampagne durchzuführen. Um zu investieren, musst du lediglich auf der Website <a href=\"https://seedrs.com\" target=\"_blank\">www.seedrs.com</a> einen Account erstellen.",
-    "faq-question-3": "WELCHE RISIKEN SIND DAMIT VERBUNDEN?",
-    "faq-answer-3": "In ein Startup zu investieren birgt auch immer einige Risiken, wie z.B. den Verlust von Kapital, Zahlungsunfähigkeit, das Ausbleiben von Dividenden und Kapitalverwässerung. Daher sollte es immer Teil eines diversifizierten Portfolios sein. Falls du mehr erfahren möchtest, bietet Seedrs eine detaillierte Beschreibung der <a href=\"https://www.seedrs.com/risk_warning\" target=\"_blank\">Risiken</a>",
-    "faq-question-4": "GIBT ES EINEN MINDESTBETRAG, DEN ICH INVESTIEREN MUSS?",
-    "faq-answer-4": "Da wir so viele Personen wie möglich involvieren wollen, halten wir das Mindestinvestment niedrig, bei unter 10€ (exakter Betrag hängt von den Wechselkursen ab). Wir freuen uns über jeden Beitrag!",
-    "faq-question-5": "WAS HAT LISTNRIDE BISHER ERREICHT?",
-    "faq-answer-5": "Seit unserem offiziellen Start im September 2016 mit Launch ein funktionsfähigen Web Plattform: Ist listnride zur größten Community Bike-Sharing Plattform in der DACH region, mit über 1.100 Räder und 1.600 registrierten Usern, gewachsen. listnride hat über 100 Fahrradläden und 5 innovative Fahrradmarken für ein Testride Program auf der Plattform integriert. listnride hat eine starke Präsenz in Berlin, München, Wien, Amsterdam und Mallorca aufgebaut und wächst in weiteren Großstädten wie Hamburg, Zürich und Düsseldorf.",
-    "faq-question-6": "WIE KANN ICH MIT MEINEM INVESTMENT GELD VERDIENEN?",
-    "faq-answer-6": "Es handelt sich um eine langfristige Investition und du kannst damit Gewinne erzielen, wenn du deine Anteile für mehr Geld verkaufst, als du bezahlt hast. Wenn listnride einen Exit macht und zum Beispiel von einem anderen Unternehmen übernommen wird, ist es wahrscheinlich, dass du deine Anteile zu diesem Zeitpunkt verkaufen kannst. Seedrs hat eine ausführliche Erklärung hier: <a href=\"https://www.seedrs.com/learn/help/how-do-i-make-a-profit-from-my-investment\" target=\"_blank\">Seedrs Campaign</a>",
-    "faq-question-7": "WIE WIRD DAS EINGESAMMELTE GELD VERWENDET?",
-    "faq-answer-7": "Wir werden euer investiertes Geld für zwei primäre Zwecke einsetzen: Um unser Wachstum zu finanzieren und neue Nutzer, vornehmlich in den vorhandenen Märkten, zu gewinnen. Unsere Community kann mit höheren Nutzerzahlen den Mietern eine größere Auswahl, und Vermietern eine höhere Nachfrage bieten, was den Service für alle attraktiver macht. Um unsere Plattform stetig durch neue Funktionen zu verbessern die das Miet-Erlebnis so einfach und effizient wie möglich macht. Intergration einer Versicherung und neue mobile Apps sind dabei die größten Milestones.",
-    "faq-question-8": "WEITERE FRAGEN?",
-    "faq-answer-8": "Wir freuen uns über dein Interesse. Wenn du weitere Fragen hast, kontaktiere uns einfach unter <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a> und wir werden uns schnellstmöglich melden."
   },
 
   "seo": {

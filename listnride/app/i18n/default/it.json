@@ -296,18 +296,6 @@
     "9": "Hai annullato la richiesta, ti preghiamo di informare il noleggiatore del motivo per cui non è possibile confermare la prenotazione.",
     "10": "La richiesta è stata annullata."
   },
-  "footer": {
-    "language": "Lingua",
-    "company": "Società",
-    "legal": "Note legali",
-    "terms-and-conditions": "Termini",
-    "privacy-statement": "Privacy",
-    "imprint": "Info",
-    "about": "Su di noi",
-    "press": "Stampa",
-    "jobs": "Lavora con noi",
-    "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
-  },
   "forms": {
     "first-name": "Nome",
     "last-name": "Cognome",
@@ -585,28 +573,6 @@
       "public-location": "La libertà è tua"
     }
   },
-  "shop-landing": {
-    "meta-title": "listnride Shop Plugin- Il tuo noleggio online di biciclette ",
-    "meta-description": "listnride offre ora un plug-in gratuito per integrare facilmente una lista prenotazione per il noleggio biciclette sul tuo sito web.",
-    "title": "Le biciclette a noleggio direttamente prenotabili sul tuo sito web",
-    "subtitle": "listnride offre ora un plug-in gratuito per integrare facilmente una lista prenotazione per il noleggio biciclette sul tuo sito web.",
-    "description": "Ti rendi conto dell'opportunità di avere il tuo negozio di biciclette online? Con pochi e semplici clic avrai la tua lista di biciclette disponibili per il noleggio su listnride direttamente sul tuo sito web.\nI tuoi clienti possono vederle direttamente e prenotarle in pochi secondi.",
-    "feature-1": {
-      "title": "Aumenta i tuoi noleggi",
-      "description": "Il cliente online vuole avere una scelta. Offri ai tuoi clienti la possibilità di vedere le biciclette disponibili per il noleggio e di prenotarle subito online. In questo modo non ti dovrai più preoccupare delle pratiche cartacee, in quanto tutto avviene online e così potrai concentrarti sulla tua attività. Efficaci ed efficienti"
-    },
-    "feature-2": {
-      "title": "Non è necessaria alcuna abilità informatica.",
-      "description": "Il plug-in di listnride non richiede nessun tipo di sviluppo web per te. Non si necessita di nessuna agenzia informatica costosa e quindi questo ti permette di risparmiare su eventuali costi aggiuntivi. La tecnologia che forniamo non richiede manutenzione e mostra in tempo reale le biciclette disponibili, in modo tale che le eventuali modifiche apportate siano direttamente visibili online."
-    },
-    "feature-3": {
-      "title": "Concentrati sul tuo business",
-      "description": "I termini e le condizioni listnride coprono tutti i dettagli importanti di un contratto di noleggio. Qui è indicato che nel momento in cui la bicicletta viene consegnata al noleggiante, tutte le responsabilità ricadono su di lui. Quindi, non occorrono più documenti cartacei. Inoltre, avrai una tabella riassuntiva con tutte le vostre richieste aperte, noleggi, fatture e ricavi. Solo accedendo al tuo profilo."
-    },
-    "join-now": "Unisciti a noi, è gratuito",
-    "join-now-description": "Interessato a saperne di più e ad iniziare?",
-    "contact-us": "Contattaci"
-  },
   "rent-a-bike": {
     "meta-title": "Noleggia una bicicletta con listnride!",
     "meta-description": "Un'ampia e fantastica scelta. Ottimo rapporto qualità / prezzo. Semplice servizio online.",
@@ -665,76 +631,6 @@
       "subheader": "Molte persone sono già diventate parte della nostra community di listnride. Leggi le loro esperienze personali:"
     }
   },
-  "trust-and-safety": {
-    "meta-title": "Il Noleggio di biciclette è sicuro - listnride ti tutela",
-    "meta-description": "La fiducia è tutto in una sharing community. Promuoviamo la giustizia e la sicurezza verificando le identità degli utenti e offrendo una garanzia ai noleggiatori.",
-    "title": "Fiducia e Sicurezza",
-    "header": "Pedalare senza preoccupazioni",
-    "subheader": "Grazie a listnride, noleggiare una bicicletta è facile e sicuro.",
-    "guarantee-icon": "garantie_it",
-    "guarantee": {
-      "title": "La garanzia dei noleggiatori di listnride",
-      "content": "Listnride è una comunità di appassionati per la bicicletta. Ma ehi, a volte le cose vanno male, non importa quanto stai attento. Per questo motivo abbiamo la nostra garanzia per i noleggiatori: Se la tua bicicletta viene danneggiata o rubata durante il noleggio e il noleggiante non può pagare il rimborso, la garanzia garantisce una copertura fino a 5.000 euro. I pagamenti sono soggetti a determinate condizioni, limitazioni ed eccezioni. Per ulteriori informazioni, fai riferimento ai nostri termini e condizioni di noleggio <a class=\"lnr-link\" ui-sref=\"terms\"></a>."
-    },
-    "responsibility": {
-      "title": "Trattiamo i tuoi dati in modo responsabile",
-      "content": "L'indirizzo o la posizione della tua bicicletta non compare nel tuo profilo pubblico. Questi dati vengono trasmessi al partner del noleggio solo una volta confermata la prenotazione."
-    },
-    "verification": {
-      "title": "La verifica crea fiducia",
-      "content": "Fornisci i tuoi dati personali nel tuo profilo per aumentare la tua fiducia quando comunichi con un noleggiatore o con un noleggiante. Ci sono diversi modi per verificare l'identità di una persona in listnride:",
-      "list-1": "Verifica dell'identità: connettere il profilo di listnride alla tua pagina facebook e memorizzare i dettagli della tua carta di credito. Assicurati di ricevere e-mail.",
-      "list-2": "Numero di telefono: Trasmettiamo il tuo numero di telefono verificato al tuo noleggiatore/noleggiante non appena è accettata la richiesta di prenotazione.",
-      "list-3": "Recensioni: Il tuo profilo contiene le valutazioni presentate dai tuoi noleggiatori/noleggianti dopo il noleggio. Questo ti permette di costruire una buona reputazione."
-    }
-  },
-  "about-us": {
-    "title": "Su di noi",
-    "header": "Informazioni su listnride",
-    "subheader": "Come i convenzionali servizi di noleggio biciclette ci hanno ispirato a creare una comunità di bike sharing",
-    "community": {
-      "title": "listnride: l'idea che ha generato una comunità",
-      "content": "Qui a listnride, tutti amiamo le biciclette. Ognuno di noi ha la propria tipologia preferita: dalle biciclette da città alle mountain bike, dalle veloci bici da strada alle E-bike. Ecco perché abbiamo iniziato a chiederci: perché non è possibile scegliere e avere una bicicletta specifica che ti serve per un determinato scopo in qualsiasi momento, indipendentemente dal fatto che tu sia in viaggio o nella tua città di origine? Saremo sempre vincolati dalle biciclette a basso prezzo dal negozio di noleggio locale? E così nasce l'idea di costruire la comunità bike sharing di listnride."
-    },
-    "future": {
-      "title": "listnride: a tutta velocità verso il futuro",
-      "content": "Oggi, listnride è disponibile in grandi città come Amsterdam, Berlino, Monaco di Baviera e Vienna. E questo numero continua a crescere. I proprietari privati così come i rivenditori specializzati offrono le loro biciclette in noleggio sulla nostra piattaforma. Ciò consente ai turisti e cittadini locali, alle famiglie e agli uomini d'affari di trovare la bicicletta ideale che si abbina al loro stile personale e soddisfa le loro esigenze - e magari anche ottenere uno o due suggerimenti utili sulla località visitata. La nostra idea è diventata una realtà. Essere parte di esso e condividere la tua bicicletta- o semplicemente guidare qualsiasi bicicletta che vuoi! Non vediamo l'ora di accoglierti nella nostra comunità."
-    },
-    "meta-title": "listnride - l'azienda",
-    "meta-description": "Fondata da appassionati di biciclette per gli amanti delle due ruote"
-  },
-  "press": {
-    "title": "Stampa",
-    "header": "Sezione Stampa",
-    "subheader": "Le informazioni sono pronte per essere scaricate. listnride è pronto a parlare.",
-    "kit": {
-      "title": "Kit stampa",
-      "content": "Gli altri si chiamano sistemi di noleggio biciclette. Noi siamo una comunità bike sharing. Scopri di più nel nostro kit di stampa, che può essere",
-      "download": "trovato qui"
-    },
-    "contact": {
-      "title": "Contatto stampa",
-      "content": "Hai altre domande su listnride o hai bisogno di ulteriori informazioni sul sistema bike sharing, noleggio biciclette e concetti di mobilità? Potrai contattarci direttamente:"
-    },
-    "meta-title": "stampa listnride",
-    "meta-description": "Noi amiamo il bike sharing. E risponderemo con piacere a tutte le vostre domande."
-  },
-  "jobs": {
-    "title": "Lavora con noi",
-    "header": "Offerte di lavoro",
-    "subheader": "Aiuta la nostra comunità bike sharing a crescere",
-    "contact": {
-      "title": "Unisciti al nostro gruppo",
-      "content": "Sai sempre di più sulle biciclette? Ti piace saltare sulla sella e andare in giro, sia con la pioggia che con il sole? Allora sei veramente un vero e proprio ciclista - e saresti un grande valore aggiunto nella nostra squadra. Dai un'occhiata per vedere se abbiamo attualmente un posto vacante che è giusto per te e non esitare a inviarci la tua richiesta."
-    },
-    "view": "Mostra",
-    "meta-title": "Lavora per listnrid",
-    "meta-description": "Unisciti alla squadra bike sharing di listnride a Berlino o Monaco di Baviera per costruire la comunità globale della bicicletta",
-    "apply": "Candidati ora",
-    "see-all": "Vedi altri lavori",
-    "open": "Posizioni aperte",
-    "go-back": "Indietro"
-  },
   "invoices": {
     "request_id": "Richiesta ID",
     "bike": "Bicicletta",
@@ -752,117 +648,6 @@
     "as-lister": "Come noleggiatore",
     "as-rider": "Come noleggiante",
     "no-rides": "Nessuna bicicletta ancora noleggiata"
-  },
-  "contact-and-help": {
-    "title": "Contatti e Supporto",
-    "meta-title": "listnride è qui per te",
-    "meta-description": "Contattaci se hai domande specifiche o hai bisogno di aiuto per risolvere un problema",
-    "faq-section": {
-      "header": "Siamo qui per te!",
-      "subheader": "Le domande più frequenti dei nostri utenti",
-      "lister-faq": {
-        "title": "FAQ Noleggiatore",
-        "question-1": "Cosa devo fare per noleggiare la mia bicicletta ?",
-        "answer-1": "Una volta ricevuta una richiesta di noleggio, puoi comunicare con il richiedente tramite la comoda funzione di chat. Avrai già una buona idea di chi è la persona e perché desidera noleggiare la tua bicicletta. La piattaforma listnride fornisce una verifica dell'utente per ridurre al minimo il rischio di frode. Se desideri ancora più tranquillità, potresti chiedere al noleggiante di portare la carta d'identità per ulteriori verifiche e / o darvi una caparra quando ritira la bicicletta. Tieni presente che tutti vogliono divertirsi e godersi la corsa e pertanto staranno attenti con la bicicletta che gli hai affittato.",
-        "question-2": "Come posso essere sicuro che il noleggiante ritorna la mia bicicletta ?",
-        "answer-2": "Facciamo il nostro meglio per creare un mercato basato sulla fiducia e rispetto. Questo è il motivo per cui richiediamo ai nostri utenti di verificare la loro identità prima di noleggiare una bicicletta di qualcuno o offrire la propria in noleggio. La verifica avviene tramite il numero di cellulare, facebook o e-mail e con i dettagli di pagamento. Se ancora non siete sicuri, è possibile chiedere al noleggiante di fornire una copia della propria carta d'identità e / o lasciare un determinato deposito di sicurezza. In tal caso, assicuratevi di informare il noleggiante in anticipo prima di confermare e di far pagare per il noleggio. Tuttavia, il noleggiante potrebbe essere in ritardo, poiché non ha familiarità con la zona e potrebbe quindi non essere in grado di trovare facilmente il modo di tornare indietro. Prova a contattare il ciclista per telefono, SMS o la chat in-app per scoprire il motivo del ritardo. Se non funziona, segnalate la situazione tramite il nostro sito web facendo clic su \"Contatto e supporto\". Contattiamo il ciclista e risolveremo il problema per assicurarci che la tua bicicletta sia restituita.",
-        "question-3": "Cosa succede se la mia bicicletta viene rubata o danneggiata?",
-        "answer-3": "Il furto della bicicletta può accadere. Tuttavia, la bicicletta è meno probabile che venga rubata se è correttamente bloccata e / o  riposta in casa. Aiuta a prevenire il furto fornendo una serratura sicura con la tua bicicletta. Nel caso in cui qualcosa va storto, il noleggiante sarà responsabile di tutti i costi derivanti da eventuali danni e / o furti. Se la tua bicicletta è stata rubata e / o danneggiata durante il periodo di noleggio, dovresti contattarci tramite il nostro sito web facendo clic su \"Contattaci\". Una volta chiarita la situazione, ti contatteremo per risolvere il problema. Se è stata rubata e il noleggiante non può pagare i danni, la garanzia listnride assicurerà che tutto sia coperto! Se la bicicletta è stata rubata mentre non è stata noleggiata tramite listnride, tuttavia non possiamo aiutare a risolvere il problema. In questo caso è necessario risolvere il problema direttamente con il noleggiante.",
-        "question-4": "Cosa succede se il noleggiante o qualcun altro viene ferito e / o il mezzo viene danneggiato durante il periodo di noleggio?",
-        "answer-4": "Assicurati che la tua bicicletta sia in buone condizioni quando la consegni. Ciò è vantaggioso per entrambe le parti: il noleggiante avrà una bella esperienza e riceverai un punteggio positivo dopo che la bicicletta sarà stata restituita. Quando si prenota una bicicletta attraverso la lista, il noleggiatore accetta i termini e le condizioni applicabili. Questi termini e condizioni offrono protezione contro la responsabilità per eventuali lesioni del noleggiante e / o danni ai loro mezzi o di qualcun altro. Come noleggiatore, non sarai mai responsabile se il noleggiante viene ferito durante un giro.",
-        "question-5": "Cosa succede se il noleggiante non si presenta come concordato a ritirare la mia bicicletta ?",
-        "answer-5": "A volte il noleggiante potrebbe avere difficoltà a raggiungere la località concordata. Un po' di flessibilità da parte tua è essenziale. Tuttavia, se le cose stanno prendendo troppo tempo e hai provato a contattarlo - sia tramite la chat in diretta o direttamente per telefono - ma non risponde, ti preghiamo di annullare il noleggio inviando al noleggiante un messaggio chat e descrivere il motivo della cancellazione.",
-        "question-6": "Come posso offrire la mia bicicletta per il noleggio ?",
-        "answer-6": "È necessario iscriversi prima di poter offrire la tua bicicletta in noleggio. Basta cliccare su \"Iscriviti\" e compilare i dettagli richiesti. Una volta eseguito l'accesso, accedi semplicemente utilizzando l'indirizzo e-mail e la password. Fai clic sul tuo profilo nell'angolo in alto a destra e seleziona \"Registra una bicicletta\". Fornire tutti i dettagli necessari, tra cui alcune belle immagini chiare della tua bicicletta e, dopo aver impostato il prezzo del noleggio, fai clic su \"Registra la mia bicicletta\". Richiede alcuni secondi per le informazioni da caricare. Successivamente, puoi trovare, modificare ed eliminare la tua biciclette nel menù del profilo sotto \"Biciclette registrate\".",
-        "question-7": "Come posso impostare il prezzo del noleggio per la mia bicicletta?",
-        "answer-7": "Sei libero di decidere qualsiasi prezzo per il noleggio di mezza giornata / un giorno / una settimana. Il minimo è di € 1. Un prezzo interessante genererà più noleggi, in quanto le persone cercano un buon rapporto qualità-prezzo. Per determinare il prezzo giusto, guarda le  biciclette simili su listnride e / o confrontare il prezzo con i negozi locali nella tua zona.",
-        "question-8": "Che cosa devo pagare per offrire la mia bicicletta in noleggio ?",
-        "answer-8": "Offrire la tua bicicletta in noleggio su listnride è gratuito. Solo quando viene effettuata una prenotazione deduciamo una commissione dal prezzo totale del noleggio. La nostra commissione è del 7,5% del prezzo totale del noleggio. Esempio: Se noleggi la tua bicicletta per 5 giorni a 20 €  al giorno, il prezzo del noleggio totale sarà di 100 € , noi ti pagheremo per una cifra pari a  92.50 € . Ciò include tutti i costi sostenuti per le tasse della carta di credito.",
-        "question-9": "Come ricevo i soldi per aver noleggiato la mia bicicletta ?",
-        "answer-9": "Il prezzo totale del noleggio meno il 7,5% di commissione di listnride verrà versato sul tuo conto bancario entro 5 giorni lavorativi dopo la fine del periodo di noleggio. I soldi verranno trasferiti tramite PayPal o tramite bonifico bancario. Puoi inserire e / o modificare i tuoi dettagli di pagamento nel tuo conto di listnride facendo clic su \"Modifica profilo\".",
-        "question-10": "Posso anche offrire la mia bicicletta in noleggio in altre località che attualmente non sono elencate sul sito?",
-        "answer-10": "Sì. listnride è una piattaforma globale, quindi è aperta a qualsiasi bicicletta ovunque.",
-        "question-11": "Come posso sospendere temporaneamente il mio annuncio o disattivare la mia bicicletta ?",
-        "answer-11": "Se non sei in grado di offrire la tua bicicletta per un certo periodo di tempo, non devi eliminare il tuo annuncio. Invece, puoi disattivarla selezionando \"Biciclette registrate\" nel menu del profilo, dove potrai vedere la tua bicicletta. Ora basta cliccare su \"Disattiva bicicletta\" per la bicicletta che desideri disattivare.",
-        "question-12": "Come faccio a cambiare le foto o i dettagli della mia bicicletta ?",
-        "answer-12": "È possibile modificare le immagini e / o i dettagli della tua bicicletta cliccando su \"Biciclette registrate\" nel menu dell'account. Quindi selezionare \"Modifica bicicletta\" e apportare le modifiche desiderate. Confermare le modifiche facendo clic su \"Aggiorna Bicicletta\".",
-        "question-13": "Come faccio a cancellare il mia bicicletta ?",
-        "answer-13": "Nel caso in cui non sia più possibile o non desideri più offrire una certa bicicletta in noleggio, puoi eliminarla scegliendo \"Biciclette registrate\" nel menù del profilo. Se stai usando la nostra applicazione per iPhone, scorri e seleziona la bicicletta che desideri eliminare sulla sinistra e fai clic su \"Elimina\". Se stai usando il nostro sito web, seleziona \"Elimina bicicletta\". Dopo alcuni secondi, vedrai un messaggio di conferma che dice che \"la bicicletta è stata eliminata correttamente\".",
-        "question-14": "Come faccio a noleggiare la mia bicicletta attraverso listnride?",
-        "answer-14": "Una volta ricevuta una richiesta per la tua bicicletta, apri l'app o vai al nostro sito web e accedi al tuo profilo. Fai clic sulla pagina del tuo profilo nell'angolo in alto a destra e fai clic su \"Richieste\" nel menù del profilo. Qui troverai la richiesta che ti è stata inviata. Fai clic sulla richiesta e rispondi al richiedente accettando o rifiutando la richiesta. Puoi anche chattare con il richiedente per chiarire i dettagli. Una volta accettata la richiesta, l'altra persona deve confermare la sua richiesta e pagare in anticipo. Non appena la conferma e il pagamento sono completati, riceverai una notifica via e-mail e un aggiornamento dello stato nel tuo profilo.",
-        "question-15": "Cosa devo fare se il periodo di noleggio inizialmente richiesto non è lo stesso del periodo effettivo?",
-        "answer-15": "Se il periodo del noleggio finale è cambiato durante la comunicazione con il richiedente, è consigliabile chiedere loro una nuova richiesta con la data e l'ora corretta, in modo che il noleggio sia coperto dalla garanzia listnride.",
-        "question-16": "Cosa devo fare se il periodo di noleggio richiesto è scomodo?",
-        "answer-16": "Se il periodo di noleggio richiesto non rientra nel tuo programma, puoi controllare se qualcun altro può consegnare la bicicletta e le chiavi a tuo nome. Se questo non è possibile, respingi semplicemente la richiesta. Aggiungendo un breve messaggio che spiega perché hai rifiutato la richiesta, in quanto sarebbe apprezzabile.",
-        "question-17": "Come posso contattare il noleggiante una volta che il noleggio della bicicletta è confermato? ",
-        "answer-17": "È possibile contattare il noleggiante tramite la stessa chat in-app utilizzata per la richiesta di noleggio. Basta andare alla pagina \"Richieste\" nel menù profilo e cliccare sulla bicicletta che hai noleggiato. Troverai anche tutti i dettagli del noleggiante, compreso il loro numero di cellulare, nella e-mail di conferma del noleggio.",
-        "question-18": "Come posso ottenere una recensione per il mio annuncio ?",
-        "answer-18": "Dopo che il noleggio è finito, il noleggiante sarà chiamato a darti un voto come noleggiatore così come alla tua bicicletta. Una volta che la valutazione viene inviata, la tua bicicletta mostrerà un valore di valutazione. Per ottenere buone recensioni, si consiglia di descrivere la tua bicicletta e la sua condizione in maniera veritiera."
-      },
-      "rider-faq": {
-        "title": "FAQ Noleggiante",
-        "question-1": "Come faccio a noleggiare una bicicletta?",
-        "answer-1": "È necessario iscriversi prima di poter noleggiare una bicicletta. Basta cliccare su \"Iscriviti\" e compilare i dettagli richiesti. Una volta eseguito l'accesso, accedi semplicemente utilizzando l'indirizzo e-mail e la password. Dopo aver selezionato la bicicletta che si adatta alle tue esigenze, seleziona la data di inizio noleggio desiderata, l'orario del ritiro, la data di fine noleggio e l'orario di riconsegna, quindi fai clic su \"Richiedi la bicicletta\". Una volta accettata la richiesta dal noleggiatore, è necessario confermare cliccando su \"Conferma richiesta\" e completare il processo di pagamento. Non appena il pagamento è stato completato, riceverai un messaggio di conferma della prenotazione nonché una e-mail con tutti i dettagli relativi al noleggio.",
-        "question-2": "Come faccio a cancellare una richiesta?",
-        "answer-2": "Nello stato della richiesta, è possibile annullare la richiesta in qualsiasi momento prima di completare il processo di pagamento facendo clic su \"Annulla richiesta\" nella finestra di richiesta.",
-        "question-3": "Posso inviare più di una richiesta contemporaneamente?",
-        "answer-3": "Sì, puoi richiedere più biciclette contemporaneamente. Ciò ha senso per ottenere una risposta più veloce da uno dei proprietari delle biciclette. Una volta che uno dei proprietari ha accettato la tua richiesta, puoi confermare la tua richiesta. Finché non confermi, non ci sarà nessuna prenotazione e quindi nessuna transazione di pagamento. Quando prenoti una bicicletta, ricorda di annullare tutte le altre richieste per lo stesso periodo di noleggio affinché gli altri proprietari siano informati.",
-        "question-4": "Cosa devo fare se il noleggiatore non risponde?",
-        "answer-4": "Purtroppo non tutti i noleggiatori sono in grado di rispondere subito, ad esempio se non dispongono di accesso a Internet al momento. Facciamo tutto il possibile per migliorare i tempi di risposta. Se stai richiedendo un noleggio a breve termine, ti consigliamo di richiedere più biciclette allo stesso tempo per aumentare le possibilità di trovarne una che sia adatta al tuo stile e alle tue esigenze.",
-        "question-5": "Come faccio a pagare per il noleggio di una bicicletta ?",
-        "answer-5": "Puoi confermare e pagare per la richiesta nell'applicazione o sul nostro sito web. Il pagamento è possibile tramite carta di credito o PayPal. Stiamo lavorando per mettere a disposizione nuovi metodi di pagamento.",
-        "question-6": "Che cosa faccio in caso di gomma sgonfia ?",
-        "answer-6": "Una gomma sgonfia può succedere durante la guida della bicicletta. È vostra responsabilità restituire la bicicletta nella condizione in cui è stata consegnata. Trovare un negozio di bici e riparare il pneumatico o contattare il noleggiatore e concordare un giusto compenso. Riteniamo che un equo compenso dovrebbe essere di circa 15 euro.",
-        "question-7": "Come dovrei bloccare la mia bicicletta in modo sicuro per prevenire furti?",
-        "answer-7": "Per evitare che la bicicletta venga rubata, ti suggeriamo di chiedere al noleggiatore. In generale, consigliamo di chiudere la serratura attraverso il pneumatico anteriore e il telaio, e collegarla una ad un oggetto fisso (lampione, albero, ecc.) In modo che non possa essere spostato facilmente. Se stai noleggiando la bicicletta durante la notte, raccomandiamo di riporla in una zona chiusa o in interno dell'alloggio.",
-        "question-8": "Cosa succede se la bicicletta viene rubata durante il periodo di noleggio?",
-        "answer-8": "Situazione molto sfortunata se la bicicletta viene rubata. Informa immediatamente il nostro helpdesk su \"contatti e supporto\" se questo accade. Vi faremo sapere cosa deve essere fatto. Ricorda: La bicicletta è tua completa responsabilità per la durata del periodo di noleggio.",
-        "question-9": "Ho una copertura assicurativa quando noleggio con listnride ?",
-        "answer-9": "Listnride non fornisce alcuna assicurazione; facilitiamo semplicemente la transazione del noleggio. Tutti i noleggi di biciclette sono a rischio del noleggiante, vale a dire che sarete ritenuti responsabili di eventuali furti o danni durante il periodo del noleggio. Raccomandiamo ai noleggianti di verificare la loro copertura assicurativa e / o responsabilità civile per l'eventuale copertura.",
-        "question-10": "Cosa succede se la bicicletta non è uguale a quella che pensavo di aver prenotato?",
-        "answer-10": "Ti preghiamo di inviarci alcune immagini della bicicletta e spiegare in che modo è diversa da quello originariamente prenotata, affinché possiamo annullare il noleggio, se la tua richiesta sembra giustificata. In alternativa, è possibile valutare la bicicletta quando viene chiesto di presentare una recensione dopo che il periodo di noleggio è finito.",
-        "question-11": "Devo portare il mio lucchetto e il mio casco, e posso anche portare i miei pedali / sella?",
-        "answer-11": "Se il listener non fornisce un lucchetto per biciclette, ti consigliamo di portare il proprio. Ricorda: sei responsabile di riportare la bicicletta e assicurarti che non venga rubata. I noleggiatori possono fornire caschi se lo desiderano, ma se preferisci puoi indossare il tuo o se non è fornito. Nel caso in cui desideri cambiare i pedali o la sella, ti preghiamo di chiedere l'approvazione preventiva dal noleggiatore. Ricorda: questa è la bicicletta di qualcun altro, non la tua."
-      }
-    },
-    "contact-section": {
-      "header": "Nessuna risposta per la tua questione?",
-      "subheader": "Contattaci se hai domande particolari o se si verificano problemi durante il processo di noleggio su listnride.",
-      "title": "Non riesci a trovare la risposta che ti serve nella sezione FAQ ? Quindi scegli una delle seguenti:",
-      "list-1": "Vorrei segnalare una richiesta sospetta",
-      "list-2": "Vorrei segnalare un annuncio sospetto",
-      "list-3": "Vorrei segnalare un problema con il proprietario/richiedente",
-      "list-4": "Ho una domanda in merito ai pagamenti",
-      "list-5": "Ho una domanda generale"
-    }
-  },
-  "terms-and-conditions": {
-    "meta-title": "listnride | Termini e condizioni del sito",
-    "meta-description": "I termini e le condizioni della comunità bike sharing di listnride si applicano all'uso della piattaforma online.",
-    "title": "Termini e Condizioni",
-    "header": "Condizioni generali per la piattaforma online listnride",
-    "download": "Scarica qui",
-    "description": "<a href=\"http://cdn.listnride.com/en/tacs.pdf\" target=\"_blank\">Qui puoi visualizzare e scaricare le condizioni generali",
-    "subtitle": "List and Ride GmbH (di seguito \"listnride\") organizza contratti di locazione per biciclette e altre attrezzature per lo sport e il tempo libero attraverso il sito www.listnride.com (di seguito \"Sito web\"). I seguenti Termini e Condizioni Generali di Utilizzo (di seguito \"Termini di Utilizzo\") nella Sezione I rientreranno nell'accordo concluso tra l'utente e listnride nel rispetto del servizio di disposizione. Qualsiasi accordo per il noleggio dell'oggetto utilizzato (di seguito \"contratto di noleggio\") concluso tramite il sito web deve essere conforme alle condizioni generali di noleggio (di seguito \"termini di noleggio\") specificati nella sezione II."
-  },
-  "privacy": {
-    "title": "Privacy",
-    "subtitle": "Norme sulla protezione dei dati",
-    "description": "List e Ride GmbH (di seguito \"listnride\") ti informa nei Regolamenti di Protezione dei Dati sulla gestione dei tuoi dati personali. <br><br><a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Qui puoi visualizzare e scaricare le norme sulla protezione dei dati. </a>",
-    "meta-title": "Politica sulla privacy di listnride",
-    "meta-description": "La Politica sulla privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online."
-  },
-  "imprint": {
-    "title": "Info ",
-    "header": "Info ",
-    "managing-director": "Amministratore delegato",
-    "telephone": "Telefono",
-    "germany": "Germania",
-    "commercial-register-number": "Numero di registrazione commerciale",
-    "berlin-court-of-registry": "Berlin Court of Registry (Charlottenburg)",
-    "vat-id": "Partita Iva",
-    "meta-title": "listnride | Info",
-    "meta-description": "Noleggia la tua bicicletta perfetta nella comunità listnride. Trovane una che si adatti al tuo stile e alle tue esigenze."
   },
   "invite-landing": {
     "meta-title": "listnride | 10 € per te!",
