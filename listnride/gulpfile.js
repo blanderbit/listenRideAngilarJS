@@ -404,7 +404,7 @@ function replaceRevisionsIndex() {
  * @returns {gulp} for chaining
  */
 function prefixLnrShopIntegration() {
-    return gulp.src(path.lnrShopIntegration.dist.css)
+    return gulp.src(path.lnrShopIntegration.dist.style)
         .pipe(lnrPrefixCss(path.lnrShopIntegration.prefix))
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
 }
@@ -414,23 +414,30 @@ function prefixLnrShopIntegration() {
  */
 function minifyLnrShopIntegration() {
 
-    // minify style for shop integration
-    // copy to dist folder of shop integration
-    gulp.src([path.lnrShopIntegration.css, path.lnrShopIntegration.vendorCss])
-        .pipe(concat(path.lnrShopIntegration.dist.style))
-        .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
-
     // copy template to dist folder
     gulp.src(path.lnrShopIntegration.html)
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
         
     // minify source for shop integration
     // copy to dist folder of shop integration
-    return gulp.src(path.lnrShopIntegration.js)
+    gulp.src(path.lnrShopIntegration.js)
         .pipe(concat(path.lnrShopIntegration.dist.source))
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root))
         .pipe(uglify(path.lnrShopIntegration.dist.source))
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
+
+    // concat style for shop integration
+    // copy to dist folder of shop integration
+    return gulp.src(path.lnrShopIntegration.css)
+    .pipe(concat(path.lnrShopIntegration.dist.css))
+    .pipe(gulp.dest(path.lnrShopIntegration.dist.root))
+
+    /* 
+    css minification is disabled
+    it was causing issues with mdl lite grid styles
+    .pipe(minifyCss(path.lnrShopIntegration.dist.css))
+    .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
+    */
 }
 /**
  * clean dist folder -- shop integration

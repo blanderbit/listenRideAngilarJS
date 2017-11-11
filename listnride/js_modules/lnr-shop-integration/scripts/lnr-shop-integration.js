@@ -1,5 +1,5 @@
 /* global
-        lnrHelper
+        lnrHelper: '/listnride/js_modules/lnr-shop-integration/scripts/lnr-shop-integration.js'
 */
 (function () {
   lnrHelper.preInit();
