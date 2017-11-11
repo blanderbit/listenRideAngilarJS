@@ -412,6 +412,7 @@
         name: 'about',
         url: '/about',
         templateUrl: 'app/modules/static/about.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["about-us.meta-title", "about-us.meta-description"])
@@ -448,6 +449,7 @@
         name: 'trustAndSafety',
         url: '/trust-and-safety',
         templateUrl: 'app/modules/static/trust-and-safety.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["trust-and-safety.meta-title", "trust-and-safety.meta-description"])
@@ -466,6 +468,7 @@
         name: 'terms',
         url: '/terms',
         templateUrl: 'app/modules/static/terms.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
           resolve: {
               data: function ($translate, ngMeta) {
                   $translate(["terms-and-conditions.meta-title", "terms-and-conditions.meta-description"])
@@ -484,6 +487,7 @@
         name: 'help',
         url: '/help',
         templateUrl: 'app/modules/static/help.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["contact-and-help.meta-title", "contact-and-help.meta-description"])
@@ -502,7 +506,8 @@
         name: 'jobs',
         abstract: true,
         url: '',
-        templateUrl: 'app/modules/jobs/jobs.template.html'
+        templateUrl: 'app/modules/jobs/jobs.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}]
       });
 
       $stateProvider.state({
@@ -545,6 +550,7 @@
         name: 'press',
         url: '/press',
         templateUrl: 'app/modules/static/press.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["press.meta-title", "press.meta-description"])
@@ -563,6 +569,7 @@
         name: 'imprint',
         url: '/imprint',
         templateUrl: 'app/modules/static/imprint.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["imprint.meta-title", "imprint.meta-description"])
@@ -581,6 +588,7 @@
         name: 'privacy',
         url: '/privacy',
         templateUrl: 'app/modules/static/privacy.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["privacy.meta-title", "privacy.meta-description"])
@@ -599,6 +607,7 @@
         name: 'howItWorks',
         url: '/how-it-works',
         templateUrl: 'app/modules/static/how-it-works.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["how-it-works.meta-title", "how-it-works.meta-description"])
@@ -617,6 +626,7 @@
         name: 'shopLanding',
         url: '/bikeshop',
         templateUrl: 'app/modules/static/shop-landing.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["shop-landing.meta-title", "shop-landing.meta-description"])
@@ -659,6 +669,7 @@
                     .then(function (translations) {
                         ngMeta.setTitle(translations["brand-integration.vanmoof.meta-title"]);
                         ngMeta.setTag("description", translations["brand-integration.vanmoof.meta-descr"]);
+                        ngMeta.setTag("og:image", "app/assets/ui_images/opengraph/vanmoof.jpg");
                     })
             }
         },
@@ -822,6 +833,7 @@
         name: 'cities-berlin',
         url: '/berlin',
         templateUrl: 'app/modules/static/cities-berlin.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
             data: function ($translate, ngMeta) {
                 $translate(["cities.berlin.meta-title", "cities.berlin.meta-description"])
@@ -840,6 +852,7 @@
         name: 'cities-munich',
         url: '/munich',
         templateUrl: 'app/modules/static/cities-munich.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
             data: function ($translate, ngMeta) {
                 $translate(["cities.munich.meta-title", "cities.munich.meta-description"])
@@ -858,6 +871,7 @@
         name: 'cities-amsterdam',
         url: '/amsterdam',
         templateUrl: 'app/modules/static/cities-amsterdam.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
             data: function ($translate, ngMeta) {
                 $translate(["cities.amsterdam.meta-title", "cities.amsterdam.meta-description"])
@@ -876,6 +890,7 @@
         name: 'cities-vienna',
         url: '/vienna',
         templateUrl: 'app/modules/static/cities-vienna.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         resolve: {
             data: function ($translate, ngMeta) {
                 $translate(["cities.vienna.meta-title", "cities.vienna.meta-description"])
@@ -893,7 +908,8 @@
       $stateProvider.state({
         name: 'how-to-shoot-bike-photos',
         url: '/how-to-shoot-bike-photos',
-        templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html'
+        templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html',
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
       });
 
       $stateProvider.state({
@@ -909,7 +925,8 @@
       });
 
       $stateProvider.state('404', {
-        templateUrl: 'app/modules/static/error-404.template.html',
+        templateUrl: 'app/modules/static/error-404.template.html',        
+        controller: ['$translatePartialLoader', function ($tpl) {$tpl.addPart('static');}],
         data: {
           meta: {
             'title': 'listnride - 404',

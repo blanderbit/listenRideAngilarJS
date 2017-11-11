@@ -3,10 +3,11 @@
 angular.module('seoLanding',[]).component('seoLanding', {
   templateUrl: 'app/modules/seo-landing/seo-landing.template.html',
   controllerAs: 'seoLanding',
-  controller: ['$translate', '$stateParams', '$state', '$http', 'api',
-    function SeoLandingController($translate, $stateParams, $state, $http, api) {
+  controller: ['$translate', '$translatePartialLoader', '$stateParams', '$state', '$http', 'api',
+    function SeoLandingController($translate, $tpl, $stateParams, $state, $http, api) {
 
       var seoLanding = this;
+      $tpl.addPart('static');
       seoLanding.bikes = {};
       seoLanding.loading = true;
 

@@ -1,0 +1,599 @@
+{
+  "cities": {
+    "shared": {
+      "rent-city": "Noleggia una bicicletta",
+      "rent-ebike": "Noleggia una E-Bike",
+      "rent-terrain": "Noleggio una mountain bike",
+      "rent-road": "Noleggia una bicicletta da strada",
+      "rent-folding": "Noleggia una bici pieghevole",
+      "rent-cargo": "Noleggia una bicicletta da carico"
+    },
+    "berlin": {
+      "meta-title": "Esplora Berlino in bicicletta con listnride",
+      "meta-description": "Scopri Berlino in bicicletta. Con listnride puoi trovare una bicicletta a Berlino che corrisponde alle tue esigenze e al tuo stile.",
+      "title": "Berlino",
+      "subtitle": "Esplora Berlino in bicicletta",
+      "description": "Trova luoghi interessanti da scoprire",
+      "search-title": "Dai un'occhiata all'offerta per il noleggio biciclette a Berlino",
+      "search-subtitle": "Noleggia una bicicletta adatta al tuo stile e alle tue necessità",
+      "about": "A proposito di Berlino",
+      "about-content": "Nell'ultimo decennio, Berlino ha visto un enorme aumento del ciclismo, portando una nuova dimensione alla vivida cultura della bicicletta di Berlino. Il fatto che la città e il paese che circonda Berlino abbiano tanto da offrire e la geografia favorevole alle biciclette (gli inverni sono più caldi) potrebbero essere i motivi per cui questo sta accadendo.",
+      "bike-routes": "Itinerari ciclabili",
+      "bike-shops": "Negozi di biciclette",
+      "cafes-bars": "Caffè, Bar e Ristoranti",
+      "bike-routes-content": "Il <a href=\"http://www.thf-berlin.de/standortinfos/tempelhofer-feld\" target=\"_blank\">Tempelhofer Feld </a>offre un parco giochi perfetto per attività all'aperto. Le prime pista aeroportuali sono ottime per fare alcuni giri e godersi lo scenario degli sport urbani e dei giochi che si svolgono intorno a te. A <a href=\"https://www.lollapaloozade.com/en/treptower-park\" target=\"_blank\">Treptower Park </a>troverai innumerevoli interessanti esperienze. C'è il monumento sovietico che ti ricorda i tempi in cui la Germania fu divisa in due nazioni. Per coloro che preferiscono, un viaggio lungo il <a href=\"https://en.wikipedia.org/wiki/Landwehr_Canal\" target=\"_blank\">Landwehrkanal </a>può essere un ottimo modo per scoprire Berlino, partendo dal paesaggio verde di Treptow e andando fino in città Kreuzberg e Neukölln. Se ti piace fare lunghe passeggiate, controlla il <a href=\"http://panke.info/pages/portal-touren.php\" target=\"_blank\">Panke Radweg </a>(~ 30km) che ti porta nelle zone rurali di Berlin Wedding. Più natura? Prova una parte del <a href=\"http://www.germany.travel/en/leisure-and-recreation/cycling/berlin-usedom-island-cycle-route.html\" target=\"_blank\">percorso Berlino per Usedom </a>, portandoti in una natura quasi intatta e tranquilla.",
+      "bike-shops-content": "Berlino ha molte marche locali che sono state recentemente fondate. Il marchio urbano <a href=\"http://www.schindelhauerbikes.com\" target=\"_blank\">Schindelhauer </a> crea biciclette molto eleganti per il ciclista sportivo della città. Se preferisci una single-speed o una a scatto fisso, puoi guardare a <a href=\"https://8bar-bikes.com\" target=\"_blank\">8bar </a>e Bike Punk. Se preferisci una bicicletta da strada, allora <a href=\"http://www.standert.de\" target=\"_blank\">Standert </a>può sicuramente offrire qualcosa di speciale. Ci sono anche molti interessanti negozi specializzati. <a href=\"http://www.pret-a-velo.de/en\" target=\"_blank\">Prét-á-vélo </a>offrono un'ampia selezione di biciclette e accessori classici, <a href=\"http://www.wingwheels.de/?lang=en\" target=\"_blank\">Wingwheels </a>per la più ampia selezione di E-bike. Se hai una passione per le biciclette piegabili e tutto ciò che lo circonda, <a href=\"http://boxbike.de\" target=\"_blank\">boxbike </a>offre un'ottima esperienza nel settore.",
+      "cafes-bars-content": "Dopo una giornata in giro ti consigliamo di visitare <a href=\"http://www.fiveelephant.com\" target=\"_blank\">il Cafè five elephant  </a>a Neukölln o Mitte per prendere un caffè o anche due e provare la loro offerta di pasticceria in stile nord americano. Per la cena o il pranzo, a <a href=\"http://www.kimchiprincess.com\" target=\"_blank\">Kimchi Princess </a>a Kreuzberg, un ristorante coreano specializzato in grigliate. Visita <a href=\"http://kaschk.de\" target=\"_blank\">Kaschk </a>a Mitte che serve una grande selezione di birra artigianale scozzese e locale e caffè appena tostato."
+    },
+    "munich": {
+      "meta-title": "Esplora Monaco di Baviera in bicicletta con listnride",
+      "meta-description": "Scoprite Monaco di Baviera in bicicletta. Con listnride puoi trovare la bicicletta che corrisponde alle tue esigenze e al tuo stile.",
+      "title": "Monaco di Baviera",
+      "subtitle": "Esplora Monaco di Baviera in bicicletta",
+      "description": "Trova luoghi interessanti da scoprire",
+      "search-title": "Dai un'occhiata all'offerta per il noleggio biciclette a Monaco di Baviera.",
+      "search-subtitle": "Noleggia una bicicletta adatta al tuo stile e alle tue necessità",
+      "about": "A proposito di Monaco di Baviera",
+      "about-content": "Il ciclismo a Monaco di Baviera è un'esperienza unica. La città offre un'infrastruttura bike-friendly e una varietà di splendide località nelle vicinanze. Uno sguardo al paesaggio urbano di Monaco rivela l'enorme popolarità del ciclismo attraverso tutti gli stili. Puoi girare nel centro città e con un paio di pedalate in più poi arrivare alla campagna circostante. Con una centinaia di km di piste ciclabili e percorsi ciclabili in città e nei dintorni sono gli ambienti perfetti per il ciclismo.",
+      "bike-routes": "Itinerari ciclabili",
+      "bike-shops": "Negozi di biciclette",
+      "cafes-bars": "Caffè, Bar e Ristoranti",
+      "bike-routes-content": "Era il 1972 quando i Giochi Olimpici Estivi avvenivano</a> all' Olympiapark <a href=\"http://www.olympiapark.de\" target=\"_blank\"> di Monaco di Baviera. Oggi l' Olympiapark è diventato un luogo popolare da visitare e per godersi i suoi giardini. Vicino al centro, troverete \"il parco centrale\" di Monaco, l' <a href=\"http://www.muenchen.de/int/en/sights/parks/english-garden.html\" target=\"_blank\">Englischer Garten </a>. Ha un'atmosfera tranquilla e nobile, invitando voi e la vostra bicicletta ad esplorarla. Vai in <a href=\"http://www.aumeister.de\" target=\"_blank\">Aumeister Beergarten </a>sull'estremità nord del parco e concediti un tipico boccale di birra bavarese. Se stai cercando percorsi diversi: tieni d'occhio il <a href=\"http://hikeandbike.de/2015/03/19/isartrails-muenchen\" target=\"_blank\">lato est del fiume Isar </a>. Fornisce moltissimi percorsi per tutte le abilità.",
+      "bike-shops-content": "Se vuoi conoscere lo scenario ciclistico di Monaco, ti consigliamo di visitare alcuni dei seguenti negozi. A <a href=\"http://bikedress.de\" target=\"_blank\">Bikedress </a>troverai un assortimento di abbigliamento e accessori per ciclisti più raffinati, con marchi come ASSOS e PEDAL ED. Avete fame / sete? Nessuna preoccupazione, accanto a Bikedress troverete il \"Monaco Velo Club Café\" che vi offre autentiche specialità italiane in un'atmosfera classica di ciclismo. <a href=\"http://www.gutenbiken.com\" target=\"_blank\">Guten Bike </a>è un negozio specializzato in biciclette incentrato su riparazioni di alta qualità, restauri e costruzioni personalizzate. Se sei più interessato a biciclette da città ben progettate, devi assolutamente dare un'occhiata a <a href=\"http://www.munixfinestbicycles.de\" target=\"_blank\">MunixFinest </a>.",
+      "cafes-bars-content": "<a href=\"http://www.necado.de\" target=\"_blank\">Necado </a>a Schwabing  un ottimo caffè d'assaporare. Alla ricerca di cibo? Vai da <a href=\"http://charl.ie\" target=\"_blank\">Charlie </a>, il ristorante vietnamita, che offre ottimi piatti tradizionali vietnamiti in un ambiente rilassato. L'ambiente tipico bavarese, lo troverai a <a href=\"http://www.fraunhofertheater.de/index.php?page_id=23\" target=\"_blank\">Fraunhofer </a>. Situato nel Glockenbackviertel, Frauenhofer offre esattamente ciò per cui la Baviera è nota: ottima birra e piatti tradizionali."
+    },
+    "amsterdam": {
+      "meta-title": "Esplora Amsterdam in bicicletta con listnride",
+      "meta-description": "Scopri Amsterdam in bicicletta. Con listnride puoi trovare una bicicletta che corrisponde alle tue esigenze e al tuo stile.",
+      "title": "Amsterdam",
+      "subtitle": "Esplora Amsterdam in bicicletta",
+      "description": "Trova luoghi interessanti da scoprire",
+      "search-title": "Dai un'occhiata all'offerta per il noleggio biciclette a Amsterdam",
+      "search-subtitle": "Noleggia una bicicletta adatta al tuo stile e alle tue necessità",
+      "about": "A proposito di Amsterdam",
+      "about-content": "La capitale Europea della bicicletta ha molto da offrire per gli amanti della bici. Con un'infrastruttura molto centrata sulla bicicletta, è un vero piacere muoversi per la città. Come noterete i cittadini locali fanno quasi tutto con le loro biciclette, creando incidentalmente il traffico. Gli abitanti del luogo vanno in bicicletta tutto l'anno con qualsiasi condizione atmosferica. La cultura della bicicletta di Amsterdam è un mix vibrante di classiche biciclette \"olandesi\", bici da carico \"Bakfiets\" e bici da corsa sportive.",
+      "bike-routes": "Itinerari ciclabili",
+      "bike-shops": "Negozi di biciclette",
+      "cafes-bars": "Caffè, Bar e Ristoranti",
+      "bike-routes-content": "Girare per la città in bicicletta è veramente un piacere. Puoi iniziare con i canali, per poi visitare le \"9 straatjes\" e continuare verso la piazza del museo seguita da una visita al vivace mercato <a href=\"http://albertcuyp-markt.amsterdam\" target=\"_blank\">de Albert Cuyp </a>. Ti richiederà solo 30-45 minuti. Se volete pedalare un po 'più là ci sono alcuni piacevoli itinerari che consigliamo. Puoi scoprire le vie dell'acqua e \"het IJsselmeer\" viaggiare verso <a href=\"https://www.bikingamsterdam.com/en/routes/durgerdam\" target=\"_blank\">Durgerdam </a> fino a <a href=\"http://www.holland-cycling.com/where-to-go/day-trips/101-marken-cycle-route?highlight=WyJtYXJrZW4iXQ==\" target=\"_blank\">Marken </a>. Questo percorso è di circa 50km.  Per avere un percorso un po' più breve si può andare verso sud alla <a href=\"http://www.amsterdamsebos.nl\" target=\"_blank\">foresta di Amsterdam </a>e godere dell'ambiente tranquillo offerto.",
+      "bike-shops-content": "Si è sviluppata una nuova generazione di marche di biciclette, utilizzando le conoscenze e gli standard qualitativi della bicicletta olandese aggiungendo un tocco più moderno. Per dare un'occhiata ai progetti più recenti, ti consigliamo di fare una visita allo showroom di <a href=\"http://www.vanmoof.com\" target=\"_blank\">VanMoof </a>, noto per il loro straordinario e vincente design. Situato nel centro della città. Dopo un po 'di tragitto verso la parte nord della città, troverete <a href=\"http://www.meescustomcycles.nl\" target=\"_blank\">Mees </a>, che produce biciclette da strada personalizzate in carbonio o titanio. ",
+      "cafes-bars-content": "Dopo una lunga giornata in bicicletta, avrete a disposizione una ampia scelta per potervi rilassare. Una visita obbligatoria è alla boutique Rapha, sede del <a href=\"http://pages.rapha.cc/de/clubs-de/amsterdam\" target=\"_blank\">Rapha Cycling Club </a>. Combina una bella selezione di abbigliamento da bicicletta con dell'ottimo caffè. Se ne avete avuto abbastanza delle biciclette e volete solo del buon cibo o qualche bevanda, visitate il lato storico \"<a href=\"http://dehallen-amsterdam.nl/gebruikers\" target=\"_blank\">The Hallen </a>\". Recentemente ha aperto le sue porte al cinema in stile artistico, ristoranti, bar,  e anche ad uno studio televisivo e una sala per artigianato. Un'altra magnifica zona dove potrete andare a rilassarvi, è <a href=\"http://adamtoren.nl\" target=\"_blank\">Adamtoren </a>,  di fronte alla stazione centrale dove avrete la possibilità di godervi la vista della città vecchia."
+    },
+    "vienna": {
+      "meta-title": "Esplora Vienna in bicicletta con listnride",
+      "meta-description": "Scopri Vienna in bicicletta. Con listnride puoi trovare una bicicletta  che corrisponde alle tue esigenze e al tuo stile.",
+      "title": "Vienna",
+      "subtitle": "Esplora Vienna in bicicletta",
+      "description": "Trova luoghi interessanti da scoprire",
+      "search-title": "Dai un'occhiata all'offerta per il noleggio biciclette a Vienna",
+      "search-subtitle": "Noleggia una bicicletta che si adatta al tuo stile e alla tue necessità",
+      "about": "A proposito di Vienna",
+      "about-content": "Vienna. La città imperiale sul Danubio, trasformandosi lentamente in una metropoli per la bicicletta. Soprattutto nei suoi festival come <a href=\"http://www.bikefestival.at\" target=\"_blank\">Argus Bike </a>, Radkult, e nel 2016, <a href=\"http://www.wienerfahrradschau.at\" target=\"_blank\">Wiener Fahrradschau </a>, si è svolta per la prima volta uno spin-off del Fahrradschau di Berlino. Accanto a questi eventi, il ciclismo non perde la scena a livello locale, poiché è cresciuto velocemente come la città stessa.",
+      "bike-routes": "Itinerari ciclabili",
+      "bike-shops": "Negozi di biciclette",
+      "cafes-bars": "Caffè, Bar e Ristoranti",
+      "bike-routes-content": "Il moderno sviluppo urbano di Vienna, con una particolare attenzione alla cultura bicicletta, è predestinato ad un'esplorazione su due ruote. Il Danubio, che attraversa Vienna, offre una vasta gamma di attività. Seguendo i percorsi ciclabili <a href=\"http://www.stadt-wien.at/freizeit/sport/radfahren/radweg-donauroute-donauradweg.html\" target=\"_blank\">lungo il fiume </a>, innumerevoli bellissimi prati e parchi vi invitano a rilassarvi. Se il tuo stomaco comincia a brontolare, puoi sedere al riverbend con una vasta gamma di bancarelle e caffè che offrono bevande e cibo. Naturalmente, il centro storico ha molto da offrire livello culinario. Andate verso il <a href=\"https://www.wien.info/en/shopping-wining-dining/markets/karmeliter-district\" target=\"_blank\">Karmeliterplatz </a>per vivere il fascino della città e  sarete circondati da un' ampia offerta culturale e di buoni ristoranti.",
+      "bike-shops-content": "La bicicletta, l'abbigliamento e la cultura ciclistica possono essere trovati a <a href=\"http://www.veletage.com\" target=\"_blank\">Veletage </a>. Oltre all'offerta  velocouture, biciclette e accessori, il salone offre ottimi caffè e alcune interessanti riviste. Sicuramente vale la pena passare un po' di tempo qui! Se state cercando un posto che sa tutto ciò che riguarda la vita quotidiana della bicicletta, <a href=\"http://www.citybiker.at\" target=\"_blank\">citybiker </a>vi offre un ottimo servizio e belle biciclette urbane. <a href=\"http://www.ciclopia.at\" target=\"_blank\">Ciclopia </a>ha un'ampia selezione di biciclette e offre anche un workshop su come sistemare e mantenere in buono stato la vostra bicicletta.",
+      "cafes-bars-content": "Se vi  piace il cibo vegano e vegetariano, ti consigliamo di visitare <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot </a>presso la Karmeliterplatz. Se preferisci la cucina austriaca più tradizionale, ti consigliamo <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta </a>. Ordinare un tradizionale Tafelspitz o Wiener Schnitzel e godersela all'aperto con la vista sulla celebre Opera di Vienna. Si avrà una grande notte da ricordare! Per finire, è opportuno camminare lungo il Danubio. Sulla strada troverete molti bar interessanti e potrete sedervi all'aperto sotto le stelle lungo il fiume."
+    }
+  },
+  "events": {
+    "rapha-super-cross": {
+      "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
+    },
+    "in-velo-veritas": {
+      "meta-title": "In Velo Veritas - Rent a bike with listnride",
+      "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country.",
+      "title": "In Velo Veritas - The vintage bicycle tour that's timeless",
+      "text": "The legendary “In Velo Veritas” happens this year the 5th time at the 10th/11th June 2017 in Stockerau. For those, who want to participate but need a guideline-matching bicycle, we collected some suiting bikes of our community-members to save your day. Just rent it! Bike enthusiasts like you are offering the different bikes below. If you can’t participate, have more vintage bicycles, or just want want to meet like-minded people, you can share your bike on our platform with others! Become a part of our growing community and make some extra money with your passion!"
+    },
+    "velothon-bikerental": {
+      "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
+      "meta-description": "Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!",
+      "title": "Simply rent the perfect road bike for the Velothon Berlin",
+      "text": "We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that. <br><br> You can’t participate? Help out someone in need. <a href=\"/#/listing-a-bike\">List your bike</a> and make some extra pocket money!<br><br>Next to the bikes you can rent below, we are inviting you to our social warm-up ride the day before! Join us for an easy pace spin and have lunch with and on us, afterwards. <a href=\"http://en.listnride.com/velothon-coffeespin\">More info and registration</a>.",
+      "coffeespin": {
+        "meta-title": "listnride at the Velothon Berlin",
+        "title": "Get ready for the Velothon!",
+        "text-1": "For all those participating in the Velothon Berlin, there’s now a perfect opportunity to ride and socialize with like-minded cyclists a day prior to the race.<br>listnride & Radsport.land present this event in cooperation with our partners Wahoo & Katusha, and we invite you to participate for free! The event is limited to 75 participants, so please RSVP soon!<br><br><br>Still need a road bike for the big weekend? We’ve got a wide selection of race-worthy bikes available during the Velothon. They’re going fast, so book yours <a href=\"http://en.listnride.com/velothon-bikerental\" target=\"_blank\">here</a> today!",
+        "text-2": "<b>Where</b> Saturday, June 17th, 2017<br><br><b>When</b> Coffee at 09:30 am at the S-Bahn Grunewald - Schmetterlingsplatz Berlin<br><br><b>Departure</b> 10:00 am<br><br><b>Distance</b> up to 70 km<br><br><b>Speed</b> 24-27 kmh, nice and easy, conversational pace<br><br><b>After the trip</b> Tasty lunch & refreshing drinks @factoryberlin - Rheinsberger Str. 76/77, Berlin<br><br><b>Requirements</b> road bike, helmet and click pedals",
+        "sign-up": "RSVP"
+      }
+    },
+    "constance-spin": {
+      "meta-title": "Rent the perfect road bike during Eurobike",
+      "meta-description": "Get out and ride your bike at Eurobike with listnride and Katusha",
+      "title": "The listnride Constance Spin",
+      "text-1": "Join us on the ride on Wednesday, the 30th of August to relax from a busy day at the fair.<br><br>The ride is a great opportunity to explore the countryside around Lake Constance away from the daily business at the show. We have a local guide with us.<br><br>We will stop for drinks, food and socializing towards the end of the ride at a selected local venue and then guide you back to Eurobike. <br><br>We offer complimentary bike loans to those unable to bring their own provided by Pure Cycles. Please select and reserve your bike. You will need to bring your own shoes and pedals.",
+      "text-2": "<b>When</b> Wednesday 30th August<br><br><b>Where</b> <a href=\"https://goo.gl/maps/KyrZ9kpuVAU2\">Meet at the parking in front of the customs office</a><br><br><b>Departure</b> Ride from 6pm, 2 hours<br><br><b>Distance</b> Ca. 50 kmph <br><br><b>Speed</b> 25-27 kmph<br><br>To secure your spot on a ride, please pre-register before using the link below.",
+      "sign-up": "RSVP"
+    },
+    "velosoph": {
+      "meta-title": "Autumn ride, a local riders' favourite route through Holledau.",
+      "meta-description": "A local riders' favourite route through Holledau. listnride pays a visit to Velosoph, the Cycling Café in Freising.",
+      "main-title": "Autumn Ride Holledau",
+      "title": "Autumn Ride Holledau. listnride pays a visit to Velosoph",
+      "text-1": "The course leads us out of Freising towards Holledau along little-known, scenic secondary roads through hilly terrain and fields of hops. The route ends back in Freising at the Velosoph Cycle-Café with a Bavarian “Vesper”. For this social ride you have the opportunity to test Pasculli bikes and Wahoo bike computers, and Katusha Sports will be waiting with a small gift at the end of the ride.",
+      "text-2": "Register in advance to participate:<br><br><b>When</b> Sunday, September 24th, 9:30am at the Café<br><br><b>Where</b> <a href=\"https://goo.gl/maps/QUoZoMcSQYk\">Velosoph Ziegelgasse 19, 85354 Freising</a><br><br><b>Departure</b> Riding out at 10:00am<br><br><b>Distance</b> Approx. 60 km <br><br><b>Speed</b> 25-27 kmph",
+      "sign-up": "Register",
+      "home-page-1": "listnride x Velosoph",
+      "home-page-2": "Autumn Ride 24. Sep."
+    },
+    "cyclassics-hamburg": {
+      "meta-title": "Rent a road bike for the Cyclassics Hamburg on listnride",
+      "meta-description": "Rent the perfect road bike for the Cyclassics in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi",
+      "title": "Rent a road bike for the Cyclassics Hamburg on listnride",
+      "text": "You need a road bike for the Cyclassics in Hamburg? We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.<br><br>You can’t participate? Help out someone in need. List your bike and make some extra pocket money!",
+      "description": "where: <b>Hamburg</b>  |  what: <b>roadbike race 60, 120 or 180km</b>  |  when: <b>20.08.2017</b>"
+    },
+    "riderman": {
+      "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",
+      "meta-description": "Rent the perfect road bike for the RiderMan in Bad Duerrheim easily online and choose from brands such as Siplon, Specialized, Ridley, Cervelo and Bianchi",
+      "title": "Simply rent the perfect road bike for the RiderMan in Bad Duerrheim",
+      "text": "You need a road bike for the RiderMan in Bad Duerrheim? We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that. <br><br>You can’t participate? Help out someone in need. List your bike and make some extra pocket money!",
+      "description": "Where: <b>Bad Duerrheim</b>  |  What: <b>RiderMan - 3-stage race</b>  |  When: <b>29.09 - 01-10.2017</b>"
+    },
+    "depart": {
+      "meta-title": "Rent a road bike for the Grand Départ on listnride",
+      "meta-description": "Join listnride and Schicke Mütze for a social road ride in celebration of the Grand Départ. Rent a high-end road bike from the listnride bike-sharing community.",
+      "text-1": "Calling all cyclists in town for the start of the Tour de France in Düsseldorf - Let’s ride!<br><br>Together with our friends at <a href=\"http://schickemuetze.de\">Schicke Mütze</a>, we invite you to an easy paced social ride. We will ride a nice tour through the hilly surroundings of Düsseldorf, starting and finishing at the Schicke Mütze shop.<br><br>If you still need a road bike for the ride, you’re welcome to rent a high-end bike from the listnride bike-sharing community. See you out there :)",
+      "title": "Join us for a social ride and discover Düsseldorf's beautiful surroundings!",
+      "text-2": "<b>On Friday, June 30, 2017</b><br><br><b>Start with coffee at the Schicke Mütze - Untere Talstraße 22-24, Dusseldorf<br><br>Departure at 10:00 hours<br><br>Distance up to 60 km<br><br>Tempo 24-27 kmh, easy going<br><br>After the ride from 18:00 - BBQ & Drinks @ Schicke Mütze - Untere Talstraße 22-24, Dusseldorf<br><br>Requirements Road bike, helmet and click pedal</b>",
+      "sign-up": "Sign up for free",
+      "description": "Still need a road bike for the big weekend?",
+      "subdescription": "Don't hesitate to book a great bike from our bike-sharing community."
+    },
+    "crossride": {
+      "title": "listnride Crossride",
+      "text": "During the Berliner Fahrradschau we want to explore with you our local cross playground, the forest with uncountable awesome trails, the Grunewald.<br><br>On the 5th of March 10am sharp we start rolling from the front gate BFS venue STATION Berlin. The social paced ride lasts for ~3 hours / 50km in the nature and bring you back well charged. We highly recommend a CX/Gravel bike, warm clothes, and a fit body. Helmets are required! <br><br>In case you need a suitable bike or would like to test a new cross bike, check out the great Bikes offered by <a href='http://www.votec.de' target='_blank'>Votec</a> and our community below. If you like to join, you need to <a target='_blank' href='https://ti.to/listnride/crossride'>register</a>. As part of the BFS program we offer you a discounted ticket for the show. After registration for the listnride CX ride, you get a coupon-code for your <a target='_blank' href='https://berlinerfahrradschau.de/en/tickets/'>ticket purchase</a>."
+    },
+    "mcbw": {
+      "title": "",
+      "description": "Explore Munich by bike, go cycling with listnride!",
+      "subdescription": "Together with Brompton and Ampler we rent out fantastic bikes for free",
+      "subhead-1": "The new bike rental",
+      "subhead-2": "Rent a bike for free",
+      "text-1": "Conceived as the Airbnb for bicycles, listnride offers an alternative to the classic bike rental: private owners, dealers or manufacturers offer their bicycles for rent on listnride. Tourists, citizens, families, sportsmen and business travelers rent the right bike for their style and needs.",
+      "text-2": "Especially for the MCBW, visitors can rent a bike of the brands <b>Brompton Folding Bike</b> and <b>Ampler E-Bike</b> for free <b>(Voucher Code: LNR2017)</b> for half a day. listnride pursues the vision of offering as many people anywhere in the world uncomplicated access to high-quality, stylish bicycles. If you want to explore Munich, go cycling with listnride!",
+      "location-description": "Choose one of the four locations",
+      "location-text": "The four locations are <b>① Munix Finest Bicycles</b> in Wörthstraße 11, <b>② Velofactum</b> in Schopenhauerstraße 69,<br><b>③ Velocompany</b> in Schleißheimerstraße 106 and <b>④ listnride</b> at Pündterplatz 1"
+    },
+    "cwd": {
+      "home": {
+        "title": "listnride at the Cycling World Düsseldorf",
+        "description": "Düsseldorf will host a new lifestyle trade fair around cycling: the Cycling World. We, listnride will be at the main entrance with selected brands and manufacturers such as Ampler and Cervélo, to present our bike sharing platform with exclusive of test-rides. In addition, we invite you to explore the surrounding countryside on two guided roadbike tours to bring the motivation gained at the fair straight to the road!",
+        "pp-title": "Saturday",
+        "kr-title": "Sunday",
+        "pp-description": "Whether you’re a seasoned racer or a brand new roadie, the Push'n'Post Ride provides the perfect opportunity to join for a social ride in the beautiful surroundings of Düsseldorf during CWD. The ride is powered by Cervelo and Cycle Cafe.",
+        "kr-description": "Together with the Schickemütze we host a group ride which will take you out the city to the beautiful country-side where an abounded rocket station will be one of the highlights. Rental bikes are available by Cervélo and Ridley.",
+        "title2": "We've got perfect bikes to try, by Ampler und Cervélo",
+        "subtitle2": "Whether you want to try the bike a minute or an hour - simply book it for free",
+        "ampler": "The Estonian start-up will provide innovative and urban E-Bikes to test ride. Choose between Hawk, the dynamic single-speed or Bilberry, the comfortable city-bike and get to know e-bikes on a whole new level.",
+        "cervelo": "The Canadian roadbike manufacturer Cervélo will bring the latest models to the Cycling World, which you can test out during one of the social rides over the weekend.",
+        "our-bikes": "See all our Bikes"
+      },
+      "pp": {
+        "title": "Push'n'Post",
+        "text-1": "This event provides the perfect occasion for you to join a social ride during Cycling World Düsseldorf. Cervélo offers some of their latest models to test for free. Whether you’re a seasoned racer or a brand-new roadie, the Push'n'Post ride invites you to join for this social ride in the beautiful surroundings of Düsseldorf. Sign-up and book one of the outstanding Cervélo Bikes for the ride, first come first served. Find the overview of all bikes available just below.<br><br>Further, we raffle two races for the 24h race at <a href=\"https://www.radamring.de/en/\" target=\"_blank\">RadamRing 2017</a> with Cycle-Cafe 8 team. With an exclusive Cervélo racer during the event, the question of the perfect material for the race is also clarified.<br><br>The price includes:<br>- Participation in the 24h Race at the Cycle Cafe  on 29. & 30.07.<br>- Cervélo road bike incl. Bikefitting for the entire duration of the event<br>- Cervélo / Cycle Cafe VIP package",
+        "text-2": "<b>Start:</b> 25.03, 11:00AM Cervelo / Cycle Cafe booth D1/2<br><br><b>Roll out:</b> at 11:30AM from the listnride booth O1<br><br><b>Distance:</b> This ride will be 60 to 70 km<br><br><b>Pace:</b> 24-27 kph avg, moderat<br><br><b>After Ride:</b> Fuel up with a coffee and a snack<br><br><b>Requirements:</b> Road bike, helmets and clipless shoes<br><br>"
+      },
+      "kr": {
+        "title": "Kuchen und Raketen",
+        "text-1": "If you do not own a roadbike, or just do not want to bring your own bike, we have roadbikes available which you can easily rent for free for the ride. During the Cycling World, we are hosting a group ride which will take you out of the city into the countryside. Leaving from our booth (# O-1) on the fair ground, we’ll head towards the former rocket station Hombroich, where we will have a quick stop with snacks and drinks. Refuelled from the break the ride will continue through the relatively unknown but beautiful scenery until we’re back at the fairground. Arrived back at the fairground, you are invited to have a refreshment at the booth of Schickemütze (# xx)<br><br>Test bikes are available from Cervélo and Ridley. Sign-up and book one of the outstanding bikes for the ride for free, first come first served. The overview of all bikes available you can find here (deeplink to bike page)",
+        "text-2": "<b>Meet:</b> 26.03, 10:00AM, Start 10:30 at the listnride booth (O-1)<br><br><b>Distance:</b> ca. 75km<br><br><b>Speed:</b> 25-28 kmh, moderate<br><br><b>Pit-Stop:</b> A Café at the Rocketstation Hombroich provides snacks and drinks<br><br><b>Requirement:</b> Roadbike, Helmet, Clipless shoes"
+      }
+    },
+    "supercross-munich": {
+      "meta-title": "Rent the perfect cyclocross Bike for the Supercross Munich on listnride",
+      "meta-description": "Rent the perfect cyclocross bike for the Supercross in Munich easily online. Choose from brands such as BMC, Votec, Ridley, SRAM, Specialized, Bianchi, Pasculli, Focus and other brands.",
+      "title": "Rent the perfect bike for the Supercross Munich",
+      "text": "The listnride community offers you the right cyclocross bike for the Supercross Munich. Rent a bike to participate in the race, one of the cross social rides or try one of the cyclocross workshops. Scroll through the offering and click to open it. To find out more, read the description and review the available equipment. You can then book the desired bike via the booking calendar."
+    },
+    "cape-argus": {
+      "meta-title": "Rent a road bike for the Cape Town Cycle Tour on listnride",
+      "meta-description": "Rent the perfect road bike for the  Cape Town Cycle Tour easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi",
+      "title": "Simply rent the perfect road bike for the Cape Town Cycle Tour",
+      "text-1": "After the Velothon Berlin and Hamburg Cyclassics, the listnride community will soon also offer high-quality road bikes for the Cape Argus. Rent the perfect road bike for the period you need it. Leave your own bike home, save yourself the hassle and just book a high-end road bike!<br><br>You cannot participate in the Cape Town Cycling Tour, then help someone else and earn some pocket money on the side by lending out your road bike.",
+      "text-2": "<span class=\"md-body-2\">Commercial Provider?</span><br>Contact us <a href=\"mailto:contact@listnride.com\">here</a><br><br><br><span class=\"md-body-2\">Want to be informed once all bikes are published?</span><br>Just leave your email address here and we will keep you informed.",
+      "preregister-thanks": "Thanks, you’ll get notified as soon as all bikes are published!"
+    }
+  },
+  "error-404": {
+    "title": "404 pagina non trovata",
+    "details": "La pagina che stai cercando non esiste!",
+    "home-link": "Torna alla homepage"
+  },
+  "how-to-shoot-bike-photo": {
+    "header": "Suggerimenti per la foto",
+    "title": "Alcuni suggerimenti per le foto per mettere il tuo annuncio in evidenza",
+    "subtitle": "La prima cosa che i potenziali ciclisti guardano quando valutano una bicicletta per il noleggio su listnride sono le foto nella panoramica delle liste. Le inserzioni dille biciclette con buone foto riceveranno più interesse rispetto alle altre.",
+    "headline-1": "Illuminazione",
+    "content-1": "Utilizzate la luce naturale, fai le foto all'aperto con la luce del giorno o vicino ad una finestra o con dietro una parete bianca. La luce del primo mattino e del tardo pomeriggio produrrà i migliori risultati.",
+    "headline-2": "Sfondo",
+    "content-2": "Mantieni il tuo sfondo il più semplice possibile. Prova a creare un contrasto con la tua bicicletta. Ad esempio puoi posizionare la bicicletta davanti a un muro di cemento.",
+    "headline-3": "Come fotografare",
+    "content-3": "Mostra qualche prospettiva della tua bicicletta, quindi prova diverse angolazioni. Risoluzione: prendere foto che siano almeno 1800 x 1200 pixel. Quando c'è un dubbio, una foto più grande è sempre migliore.",
+    "headline-4": "Che cosa fotografare ",
+    "content-4": "Evidenziare ciò che è incredibile. Non è richiesto che tutta la bicicletta sia mostrata in tutte le foto, piuttosto fotografa alcuni dettagli, come il nome del marchio, la colorazione, le luci, ecc. Seleziona le fotografie in formato orizzontale: le foto verticali non mostreranno in maniera ottimale la bicicletta."
+  },
+  "brand-integration": {
+    "shared": {
+      "choose-location": "Scegli una località",
+      "faq": "Le domande frequenti"
+    },
+    "ampler": {
+      "meta-title": "E-Bike Test Ride Programma",
+      "meta-descr": "Prova a guidare una E-Bike oggi! Bici elettriche a pedalata assistita di Ampler sono disponibili su listnride. Noleggiane una a Berlino, Monaco di Baviera, Amburgo e Vienna.",
+      "title": "Ampler. La bicicletta elettrica intelligente per il pendolare urbano",
+      "description": "Noleggia e prova Ampler E-Bikes a Berlino, Monaco di Baviera, Amburgo, Vienna, Zurigo e Francoforte",
+      "subdescription": "Scegli tra Hawk, la dinamica single-speed o la Bilberry, la comoda bici da città",
+      "item1-title": "Fatte a mano in Estonia",
+      "item1-description": "Su ordinazione <br>Soluzioni personalizzate <br>Attenzione ai dettagli <br>Design senza tempo",
+      "item2-title": "Comode per il viaggio",
+      "item2-description": "Posizione di guida verticale <br>Sedile e presa confortevoli <br>Cavalletto stabile <br>Leggera",
+      "item3-title": "Supporto elettrico",
+      "item3-description": "Pedalata assistita regolare e silenziosa   <br>Esperienza confortevole per il ciclista<br>Facile da ricaricare<br>Lunga durata",
+      "find-out-more": "Ulteriori informazioni su Ampler Bikes",
+      "order-online": "<a href=\"https://amplerbikes.com/bikes\" target=\"_BLANK\">Ordina online una delle loro bicicletta  </a>e ricevi il rimborso del tuo noleggio. <br>Vedere le domande più frequenti qui sotto.",
+      "faq-question-1": "Quanto spesso devo ricaricare la batteria?",
+      "faq-answer-1": "La durata media del supporto elettrico è di 70 km, e se si esaurisce, puoi semplicemente pedalare come su una normale bicicletta. La ricarica della batteria da scarica al massimo richiede solo 3 ore. È possibile collegare il caricabatteria a qualsiasi normale presa della corrente.",
+      "faq-question-2": "Cosa succede quando la batteria si scarica completamente?",
+      "faq-answer-2": "Dopo aver esaurito la carica della batteria o spegnendo il supporto, puoi ancora guidare con Ampler come faresti con una bicicletta normale",
+      "faq-question-3": "Può essere rimossa la batteria?",
+      "faq-answer-3": "Sì. Il telaio e la batteria sono progettati in modo che ogni negozio di biciclette professionale possa rimuovere la batteria e, se necessario, sostituirla con una nuova in meno di un'ora.",
+      "faq-question-4": "Come faccio a occuparmi della bicicletta ?",
+      "faq-answer-4": "La manutenzione è effettuata come su una bicicletta regolare e ogni negozio di biciclette professionale sarà in grado di occuparsi delle nostre biciclette.",
+      "faq-question-5": "Come vengono consegnate le bici?",
+      "faq-answer-5": "Le biciclette sono imballate in modo sicuro in una scatola e richiedono un montaggio minimo.",
+      "faq-question-6": "Come assemblare la bicicletta quando mi viene consegnata ?",
+      "faq-answer-6": "L'assemblaggio della bicicletta è super semplice. Includiamo le istruzioni. Puoi farlo da solo o, se preferisci, portarla in un negozio locale di biciclette",
+      "faq-question-7": "Offrite la garanzia?",
+      "faq-answer-7": "Sì. Tutte le biciclette Ampler sono coperte da 2 anni di garanzia.Tuttavia, l'usura normale di pneumatici, pastiglie dei freni, catene e cuscinetti è una parte inevitabile del ciclismo, quindi non sono coperte.",
+      "faq-question-8": "Posso restituire la bicicletta?",
+      "faq-answer-8": "Sì. È possibile restituire la bicicletta entro 14 giorni dalla ricezione. La bicicletta deve essere nella sua condizione originale per il rimborso completo. Tieni presente che dovrai pagare le spese della consegna.",
+      "faq-question-9": "Le biciclette sono legali in strada?",
+      "faq-answer-9": "Sì. Le nostre biciclette sono in grado di raggiungere una velocità massima di 35 km / h, ma per impostazione predefinita sono limitate secondo EN15194 alla velocità massima di 25 km / h. Ciò significa che il motore ti aiuterà solo fino a 25 km / h. È possibile modificare queste impostazioni dall'app smartphone."
+    },
+    "brompton": {
+      "meta-title": "Noleggia una bicicletta Brompton con listnride",
+      "meta-description": "Prova una bicicletta Brompton oggi! Queste biciclette pieghevoli urbane sono disponibili su listnride. Noleggiane una a Berlino, Monaco di Baviera, Amburgo, Düsseldorf o a Francoforte.",
+      "title": "#FAHRMALBROMPTON",
+      "description": "Noleggia una Brompton e prova le sue eccellenti caratteristiche di guida e utilizzo",
+      "subdescription": "Vivi le diverse città della Germania - con una bicicletta perfetta per la città.",
+      "item1-title": "Semplice e gratuita da trasportare",
+      "item1-description": "Libero di prendere il trasporto pubblico locale (può essere riposta in una borsa)",
+      "item2-title": "Sistema di piegatura unico",
+      "item2-description": "Pieghevole in 10-20 secondi <br>Dimensione pieghevole (HxWxD): 59 cm x 57 cm x 27 cm <br>Facile da trasportare (9-13 kg)",
+      "item3-title": "La bicicletta cult a Londra",
+      "item3-description": "Eccellenti caratteristiche di guida <br>Stile inglese <br>Fatte a mano a Londra",
+      "find-out-more": "Ulteriori informazioni su Brompton",
+      "find-out-more-ext": "Per saperne di più su Brompton vai sul sito <a href=\"http://www.brompton.com\" target=\"_blank\">www.brompton.com </a>",
+      "faq-question-1": "Quali tipi di manubri sono disponibili?",
+      "faq-answer-1": "Tre tipi diversi: <br>M-Type - Forma classica, posizione di guida verticale <br>H-Type - Per i più alti e tutti coloro che amano guidare in verticale <br>S-Type Forma diritta, posizione sportiva",
+      "faq-question-2": "Come faccio a sapere quale modello è?",
+      "faq-answer-2": "Le biciclette di Brompton sono sempre contrassegnate (es. H6LD). I singoli caratteri rappresentano: <br>Tipo di comando: classico (M) / in posizione verticale (H) / sportiva (S) <br>Cambio: 1-velocità / 2 velocità / 3 velocità / 6 velocità <br>Portapacchi: parabordi, senza portapacchi (L) / portapacchi e parabordi (L) <br>Luce: con dinamo (D) / luce batteria Set (-)",
+      "faq-question-3": "Quali sono le caratteristiche di guida della Brompton?",
+      "faq-answer-3": "Le piccole ruote permettono alla Brompton di accelerare rapidamente e renderla molto agile - ideale per muoversi nel traffico urbano. Il piccolo diametro aumenta anche la stabilità e la forza dei cerchi. E un eccellente sistema di sospensioni garantisce comfort su terreni sconnessi e su lunghi viaggi.",
+      "faq-question-4": "Come posso utilizzare il sistema bagaglio?",
+      "faq-answer-4": "L'esclusivo sistema di bagaglio Brompton rende la vostra bicicletta adatta all'utilizzo quotidiano: offre la soluzione giusta per quasi tutte le applicazioni. Le borse sono disponibili in molti e differenti stili, materiali e dimensioni- adatti a ogni situazione. E poiché non sono fissati al manubrio, ma direttamente al telaio, non interferiscono con la stabilità. <a href=\"http://de.brompton.com/Luggage\" target=\"_blank\">(video) </a>",
+      "faq-question-5": "Quali sono le varianti del cambio ?",
+      "faq-answer-5": "Sono disponibili quattro opzioni di cambio (1, 2, 3 e 6 marce. Dal principiante all'esperto - per tutti c'è la soluzione appropriata.",
+      "faq-question-6": "Come funziona il meccanismo di piegatura?",
+      "faq-answer-6": "Il Brompton ha 3 assi piegabili, uno per le due ruote e uno per l'asta dello sterzo. Sono fissati da serrature rotative di facile utilizzo. Dopo la piegatura, la catena e il cambio di marcia sono all'interno in modo che non possano entrare in contatto con gli indumenti e i bagagli. <a href=\"http://brompton.com/The-Bike/How-it-works\" target=\"blank\">(video) </a>"
+    },
+    "muli": {
+      "meta-title": "Noleggia una bicicletta da carico Muli con listnride",
+      "meta-description": "Prova a guidare una bicicletta cargo Muli oggi! Queste biciclette urbane da carico sono disponibili su listnride. Noleggiane una a Berlino o a Monaco di Baviera.",
+      "title": "Progettata per la vita quotidiana in città",
+      "description": "Prova e noleggia una muli a Berlino o Monaco di Baviera",
+      "subdescription": "La muli è un ibrido tra una bicicletta da città e una grossa bicicletta da carico. Questa combinazione la rende perfettamente adatta alla vita quotidiana della città.",
+      "item1-description": "Lunghezza <b>198 centimetri </b><br>Peso <b>24kg </b><br>Capacità di carico<b>170 kg </b><br>Manubrio regolabile<b>10 centimetri </b>",
+      "item2-description": "Larghezza cestino <b>28-60cm </b><br>Capacità di carico cestino<b>70kg </b><br>Volume cestino <b>90l </b><br>Eurobox <b>40x60cm </b>",
+      "available-cities": "Disponibile a Berlino e Monaco di Baviera",
+      "find-out-more": "Domande?",
+      "find-out-more-description": "Per saperne di più sui <a href=\"https://muli-cycles.de/7-shop\" target=\"_blank\">cicli muli </a>e sulle modalità di acquisto controllare le loro FAQ <a href=\"https://muli-cycles.de/content/8-faq\" target=\"_blank\">. </a>"
+    },
+    "vello": {
+      "meta-title": "Noleggia e testa VELLO E-Bikes a Berlino e Monaco di Baviera",
+      "meta-description": "VELLO BIKE + La prima bicicletta elettrica auto ricaricabile pieghevole. Il VELLO BIKE è una bicicletta pieghevole ad alte prestazioni sviluppata per una perfetta esperienza di ciclismo urbano.",
+      "title": "Noleggia e testa VELLO E-Bikes a Berlino e Monaco di Baviera",
+      "description": "La VELLO BIKE + imposta un nuovo standard: utilizzando quattro sensori elettronici, l'alimentazione elettrica è ottimizzata per l'uso e viene attivata solo quando ne avete bisogno. Quando ci si arrampica in salita, il supporto elettrico è lì per aiutarti, e quando si sta andando in discesa l'energia viene recuperata e la batteria si ricarica. La combinazione di una bicicletta pieghevole leggera (da 10,9 kg), con un sistema di potenza unico che offre un supporto illimitato, rende questo il mezzo ideale per il trasporto urbano.",
+      "item1-title": "Unico E-Drive",
+      "item1-description": "Questo innovativo sistema raccoglie energia durante la frenata e la discesa, simile a molti sistemi ibridi, ma è in grado anche di convertire l'energia meccanica in energia elettrica grazie al Sistema Integrato Kinetic Energy (K.E.R.S.).",
+      "item2-title": "Meccanismo pieghevole brevettato",
+      "item2-description": "Con un design ultra-portatile, la  VELLO è la più leggera E-Bike disponibile sul mercato (meno di 12kg / 26lbs) e piegandosi si ottiene una dimensione pari a quella di una valigia per un facile trasporto",
+      "item3-title": "4 modelli differenti",
+      "item3-description": "Le biciclette VELLO sono disponibili in 4 diversi modelli, con e-drive e senza: \"Urbano\", \"Rocky\", \"Speedster\" e \"VELLO BIKE +\". Tutti i modelli offrono il meglio della guida urbana e sono dotati di componenti high-end di città, trekking o road bike.",
+      "available-cities": "Disponibile a Berlino e a Monaco di Baviera",
+      "question": "Domande?",
+      "faq-question": "Per saperne di più sulle <a href=\"http://vello.bike/index.php\">biciclette VELLO </a> e sulle modalità di acquisto controllare le loro <a href=\"http://vello.bike/index.php/pages/help-faq.html\" target=\"_BLANK\">FAQ </a>."
+    },
+    "veletage": {
+      "meta-title": "VELETAGE Salon für Radkultur",
+      "meta-descr": "VELETAGE Salon für Radkultur - Biciclette da corsa su misura, abbigliamento, ruote, accessori per biciclette",
+      "description": "VELETAGE Gira piuttosto veloce!",
+      "subdescription": "A VELETAGE, nel salone della cultura ciclistica nel cuore di Vienna, puoi noleggiare le biciclette più belle e uniche, sia per una breve corsa di prova, per un lungo weekend o per una settimana di ciclismo in città. Siamo qui per aiutarti con suggerimenti per percorsi stimolanti e anche per aiutarti a vestirvi con l'abbigliamento giusto. E se ci segui su Facebook, saremo lieti di fornirti notizie e dettagli sulle nostre prossime gare di gruppo.",
+      "item1-title": "Biciclette da strada personalizzate",
+      "item1-description": "Con la nostra esclusiva selezione in offerta, troveremo esattamente la giusta bicicletta per te. Oltre a ciò, possiamo aiutarti con il nostro servizio professionale. Alcuni dei marchi che abbiamo includono Festka, Cervélo, Schindelhauer e OPEN.",
+      "item2-title": "Abbigliamento unico",
+      "item2-description": "L'abbigliamento giusto è quasi importante come la bicicletta perfetta. Con i nostri molti anni di esperienza, sappiamo ciò che ti serve e ti aiuteremo a trovare ciò che è meglio per te. Abbiamo anche abiti da Cafe du Cycliste, Ashmei, Huez * e Velocio.",
+      "item3-title": "Ottimo servizio",
+      "item3-description": "Una volta trovata la bicicletta perfetta, possiamo aiutarti a comporre una bicicletta professionale. E prima di metterti in strada, gustati una deliziosa tazza di caffè.",
+      "rent-title": "Noleggia le nostre biciclette",
+      "find-out-more": "Scopri di più di Veletage su <a href=\"https://www.facebook.com/veletage\" target=\"_BLANK\">Facebook </a>o <a href=\"https://www.instagram.com/veletage\" target=\"_BLANK\">Instagram </a>e iscriviti alla nostra newsletter <a href=\"http://www.veletage.com/nl/nl.html\" target=\"_BLANK\">Velozette </a>."
+    },
+    "bonvelo": {
+      "meta-title": "Noleggia e prova Bonvelo Singlespeed Bikes a Berlino e a Monaco di Baviera",
+      "meta-description": "La \"bonvelo BLIZZ\" a scatto fisso/singlespeed è disponibile per il noleggio e il test a Berlino in quattro dimensioni. Prenotane una su listnride oggi!",
+      "description": "bonvelo - Singlespeed & Fixie Bikes progettate a Amburgo",
+      "subdescription": "La \"bonvelo BLIZZ\" a scatto fisso/singlespeed è disponibile per il noleggio e il test a Berlino in quattro dimensioni. Prenotane una su listnride oggi!",
+      "item1-title": "La tua bicicletta - il tuo stile",
+      "item1-description": "4 diverse dimensioni disponibili <br>8 eleganti varianti di colore <br>Molti accessori personalizzabili",
+      "item2-title": "La tua bicicletta per la tua città",
+      "item2-description": "Agile e veloce <br>Verniciatura a polveri resistente e duratura <br>Componenti di alta qualità <br>Puro piacere di guida",
+      "item3-title": "Ottimo prezzo - Elevate prestazioni",
+      "item3-description": "Le biciclette singlespeed a partire da 349 € <br>Alta soddisfazione del cliente <br>Servizio personalizzato <br>Consegna rapida a Berlino",
+      "test-bike": "Prova una bicicletta bonvelo a Berlino",
+      "testimonial-1": "Design bello e pulito e arriva pre-assemblata.",
+      "testimonial-2": "Servizio clienti molto amichevole, elaborazione rapida dell'ordine e risposta super veloce alle mie domande.",
+      "testimonial-3": "Bonvelo è impressionante. Tutto è proprio qui. Ottimo servizio clienti - hanno risposto rapidamente anche quando ho fatto una domanda di domenica. Il tempo di consegna è stato davvero veloce e la bicicletta è arrivata quasi completamente assemblata, con solo un paio di cose semplici da finire. La bicicletta sembra eccezionale, e il prezzo era ancora migliore. Ci tornerò sicuramente. Saluti da Monaco!",
+      "find-out-more": "Ulteriori informazioni sulle biciclette bonvelo",
+      "faq-description": "Quando ordini la tua <a href=\"https://bonvelo.de\">bonvelo </a>, ti rimborseremo del costo della tuo noleggio / provala a Berlino!",
+      "faq-question-1": "Che cosa è una bicicletta Singlespeed / Fixie?",
+      "faq-answer-1": "Per un rapido giro in città (soprattutto) piane, il modo più semplice è quello di avere solo una marcia. Le biciclette Singlespeed / Fixie beneficiano anche di un aspetto più pulito e più minimalista. Oltre a ciò, è possibile scegliere la posizione della ruota posteriore; posizionarla come singolo velivolo (possibilità di ruota libera) o come ingranaggio fisso.",
+      "faq-question-2": "Qual è esattamente la differenza tra un Singlespeed e una Fixie?",
+      "faq-answer-2": "La ruota posteriore. Le biciclette Singlespeed hanno una sola marcia, ma usano un freehub che permette al ciclista di andare senza pedalare. Il ciclista in genere ferma o rallenta la bicicletta utilizzando i freni anteriori. Quando la ruota è montata con il mozzo fisso, la bicicletta diventa a ingranaggio fisso. In questa configurazione, quando la bicicletta sta andando, i pedali stanno girando - non c'è nessuna manovra. I ciclisti esperti sentono più controllo con questa configurazione e possono fermarsi o rallentare con i pedali. Si consiglia di guidare sempre con entrambi i freni completamente assemblati.",
+      "faq-question-3": "Che cosa rende le biciclette bonvelo così eccezionali?",
+      "faq-answer-3": "Quotidianamente pendolari per lavoro o università? Perfetto, perché le nostre biciclette sono fatte per questo. I ciottoli e le strade dure non sono un problema per la ruota a 32 raggi e il pneumatico Thickslick offre una grande durata e una trazione contro qualsiasi cosa la strada metta sotto di essa. Il telaio è sviluppato in-house - è estremamente stabile e anche solido. Mettete tutto questo insieme e il risultato è una bicicletta dinamica, agile e durevole, perfetta per la giungla urbana!",
+      "faq-question-4": "Come mi viene consegnato la bonvelo? Cosa devo assemblare?",
+      "faq-answer-4": "Spediamo circa l'80% delle nostre biciclette a clienti in tutta la Germania e nel resto dell'Europa. Abbiamo scelto UPS come nostro partner di spedizione e imballiamo le nostre biciclette saldamente in scatole per biciclette per una consegna sicura. La tua bicicletta arriverà all'85% assemblata - basta inserire la ruota anteriore, i manubri, la sella e i pedali. Forniamo tutti gli strumenti necessari!",
+      "faq-question-5": "Perché le biciclette sono così economiche?",
+      "faq-answer-5": "La progettazione di questa bicicletta segue questo principio che è stato subito un nostro obiettivo. Tutti i processi sono gestiti direttamente dai nostri artigiani e produttori, quindi non ci sono intermediari che aggiungono qualcosa al prezzo finale. Ci occupiamo di tutto: le nostre biciclette sono disponibili solo sul nostro sito <a href=\"https://bonvelo.de\"></a>e presso il nostro showroom di Amburgo. Dalle risposte dei nostri clienti finora, crediamo di essere sulla buona strada. Leggi qui: <a href=\"https://bonvelo.de\">bonvelo.de </a>",
+      "faq-question-6": "Cosa c'è ancora a bonvelo?",
+      "faq-answer-6": "Qui puoi trovare grandi accessori per la tua bicicletta: <a href=\"https://bonvelo.de/fahrrad-zubehoer\">bonvelo.de/fahrrad-zubehoer </a>",
+      "bottom-text": "Per guidare con il massimo stile, abbiamo anche l'abbigliamento bonvelo, felpe, camicie e zaini. Controlla la nostra offerta su <a href=\"https://bonvelo.de/wear\">bonvelo.de/wear </a>"
+    },
+    "motoparilla": {
+      "meta-title": "Noleggia e prova la Moto Parilla Carbon SUV E-Bike a Monaco di Baviera",
+      "meta-description": "Il Carbon SUV E-Bike di Moto Parilla può essere testato a Monaco di Baviera. Basta prenotarsi online e godersi la corsa!",
+      "description": "Moto Parilla - Carbon SUV E-Bikes design progettato in Italia",
+      "subdescription": "La miscela perfetta del design, dell'ingegneria e dell'arte in una nuova modalità di trasporto rivoluzionario. Prenotane una su listnride oggi!",
+      "item1-title": "Pneumatici più grandi del normale",
+      "item1-description": "Offrendo un migliore equilibrio per i principianti o per il pilota occasionale, questi grandi pneumatici ti porteranno in luoghi dove non siete mai stati prima. I pneumatici di grandi dimensioni garantiscono una migliore presa e trazione sul terreno più impegnativo.",
+      "item2-title": "Comfort e design",
+      "item2-description": "Data la sua presenza imponente, il Carbon SUV è portato a fare un'impressione particolare su amici e persone quando si passa lungo la strada. La sua guida è l'unico modo per capire perché tutti ne stanno parlando - è un'esperienza unica.",
+      "item3-title": "Motore elettrico",
+      "item3-description": "Le modalità di pedalata assistita o a motore offrono la massima comodità, offrendo un giro regolare senza la necessità di pedalare. Il cambio ausiliario consente al pilota di aggiungere potenza in qualsiasi modalità di guida.",
+      "test-bike": "Prova una Moto Parilla Carbon SUV E-Bike a Monaco di Baviera",
+      "testimonial-1": "Questa bicicletta è essenzialmente una mountain bike potenziata, fatta principalmente con fibra di carbonio",
+      "testimonial-2": "Questa E-Bike è un mix tra una macchina da corsa e un corpo bionico",
+      "testimonial-3": "Wow! La voglio, anche solo per guardarla. È davvero un'opera d'arte!",
+      "find-out-more": "Ulteriori informazioni sulla Moto Parilla Carbon SUV E-Bike",
+      "faq-description": "Per saperne di più sulla SUV Ebike e su come puoi <a href=\"http://www.motoparilla.it/store\">acquistarne una </a> controlla le <a href=\"http://www.motoparilla.it/faq/\">FAQ </a>.",
+      "faq-question-1": "Quanto si può alzare la sella ?",
+      "faq-answer-1": "Il sedile può estendersi fino a 5 cm.",
+      "faq-question-2": "Dove si trova la batteria?",
+      "faq-answer-2": "Spingendo un semplice pulsante, accederai alla batteria all'interno del telaio sollevando il coperchio.",
+      "faq-question-3": "La batteria è sostituibile?",
+      "faq-answer-3": "Sì, è possibile sostituire la batteria."
+    }
+  },
+  "about-us": {
+    "title": "Su di noi",
+    "header": "Informazioni su listnride",
+    "subheader": "Come i convenzionali servizi di noleggio biciclette ci hanno ispirato a creare una comunità di bike sharing",
+    "community": {
+      "title": "listnride: l'idea che ha generato una comunità",
+      "content": "Qui a listnride, tutti amiamo le biciclette. Ognuno di noi ha la propria tipologia preferita: dalle biciclette da città alle mountain bike, dalle veloci bici da strada alle E-bike. Ecco perché abbiamo iniziato a chiederci: perché non è possibile scegliere e avere una bicicletta specifica che ti serve per un determinato scopo in qualsiasi momento, indipendentemente dal fatto che tu sia in viaggio o nella tua città di origine? Saremo sempre vincolati dalle biciclette a basso prezzo dal negozio di noleggio locale? E così nasce l'idea di costruire la comunità bike sharing di listnride."
+    },
+    "future": {
+      "title": "listnride: a tutta velocità verso il futuro",
+      "content": "Oggi, listnride è disponibile in grandi città come Amsterdam, Berlino, Monaco di Baviera e Vienna. E questo numero continua a crescere. I proprietari privati così come i rivenditori specializzati offrono le loro biciclette in noleggio sulla nostra piattaforma. Ciò consente ai turisti e cittadini locali, alle famiglie e agli uomini d'affari di trovare la bicicletta ideale che si abbina al loro stile personale e soddisfa le loro esigenze - e magari anche ottenere uno o due suggerimenti utili sulla località visitata. La nostra idea è diventata una realtà. Essere parte di esso e condividere la tua bicicletta- o semplicemente guidare qualsiasi bicicletta che vuoi! Non vediamo l'ora di accoglierti nella nostra comunità."
+    },
+    "meta-title": "listnride - l'azienda",
+    "meta-description": "Fondata da appassionati di biciclette per gli amanti delle due ruote"
+  },
+  "contact-and-help": {
+    "title": "Contatti e Supporto",
+    "meta-title": "listnride è qui per te",
+    "meta-description": "Contattaci se hai domande specifiche o hai bisogno di aiuto per risolvere un problema",
+    "faq-section": {
+      "header": "Siamo qui per te!",
+      "subheader": "Le domande più frequenti dei nostri utenti",
+      "lister-faq": {
+        "title": "FAQ Noleggiatore",
+        "question-1": "Cosa devo fare per noleggiare la mia bicicletta ?",
+        "answer-1": "Una volta ricevuta una richiesta di noleggio, puoi comunicare con il richiedente tramite la comoda funzione di chat. Avrai già una buona idea di chi è la persona e perché desidera noleggiare la tua bicicletta. La piattaforma listnride fornisce una verifica dell'utente per ridurre al minimo il rischio di frode. Se desideri ancora più tranquillità, potresti chiedere al noleggiante di portare la carta d'identità per ulteriori verifiche e / o darvi una caparra quando ritira la bicicletta. Tieni presente che tutti vogliono divertirsi e godersi la corsa e pertanto staranno attenti con la bicicletta che gli hai affittato.",
+        "question-2": "Come posso essere sicuro che il noleggiante ritorna la mia bicicletta ?",
+        "answer-2": "Facciamo il nostro meglio per creare un mercato basato sulla fiducia e rispetto. Questo è il motivo per cui richiediamo ai nostri utenti di verificare la loro identità prima di noleggiare una bicicletta di qualcuno o offrire la propria in noleggio. La verifica avviene tramite il numero di cellulare, facebook o e-mail e con i dettagli di pagamento. Se ancora non siete sicuri, è possibile chiedere al noleggiante di fornire una copia della propria carta d'identità e / o lasciare un determinato deposito di sicurezza. In tal caso, assicuratevi di informare il noleggiante in anticipo prima di confermare e di far pagare per il noleggio. Tuttavia, il noleggiante potrebbe essere in ritardo, poiché non ha familiarità con la zona e potrebbe quindi non essere in grado di trovare facilmente il modo di tornare indietro. Prova a contattare il ciclista per telefono, SMS o la chat in-app per scoprire il motivo del ritardo. Se non funziona, segnalate la situazione tramite il nostro sito web facendo clic su \"Contatto e supporto\". Contattiamo il ciclista e risolveremo il problema per assicurarci che la tua bicicletta sia restituita.",
+        "question-3": "Cosa succede se la mia bicicletta viene rubata o danneggiata?",
+        "answer-3": "Il furto della bicicletta può accadere. Tuttavia, la bicicletta è meno probabile che venga rubata se è correttamente bloccata e / o  riposta in casa. Aiuta a prevenire il furto fornendo una serratura sicura con la tua bicicletta. Nel caso in cui qualcosa va storto, il noleggiante sarà responsabile di tutti i costi derivanti da eventuali danni e / o furti. Se la tua bicicletta è stata rubata e / o danneggiata durante il periodo di noleggio, dovresti contattarci tramite il nostro sito web facendo clic su \"Contattaci\". Una volta chiarita la situazione, ti contatteremo per risolvere il problema. Se è stata rubata e il noleggiante non può pagare i danni, la garanzia listnride assicurerà che tutto sia coperto! Se la bicicletta è stata rubata mentre non è stata noleggiata tramite listnride, tuttavia non possiamo aiutare a risolvere il problema. In questo caso è necessario risolvere il problema direttamente con il noleggiante.",
+        "question-4": "Cosa succede se il noleggiante o qualcun altro viene ferito e / o il mezzo viene danneggiato durante il periodo di noleggio?",
+        "answer-4": "Assicurati che la tua bicicletta sia in buone condizioni quando la consegni. Ciò è vantaggioso per entrambe le parti: il noleggiante avrà una bella esperienza e riceverai un punteggio positivo dopo che la bicicletta sarà stata restituita. Quando si prenota una bicicletta attraverso la lista, il noleggiatore accetta i termini e le condizioni applicabili. Questi termini e condizioni offrono protezione contro la responsabilità per eventuali lesioni del noleggiante e / o danni ai loro mezzi o di qualcun altro. Come noleggiatore, non sarai mai responsabile se il noleggiante viene ferito durante un giro.",
+        "question-5": "Cosa succede se il noleggiante non si presenta come concordato a ritirare la mia bicicletta ?",
+        "answer-5": "A volte il noleggiante potrebbe avere difficoltà a raggiungere la località concordata. Un po' di flessibilità da parte tua è essenziale. Tuttavia, se le cose stanno prendendo troppo tempo e hai provato a contattarlo - sia tramite la chat in diretta o direttamente per telefono - ma non risponde, ti preghiamo di annullare il noleggio inviando al noleggiante un messaggio chat e descrivere il motivo della cancellazione.",
+        "question-6": "Come posso offrire la mia bicicletta per il noleggio ?",
+        "answer-6": "È necessario iscriversi prima di poter offrire la tua bicicletta in noleggio. Basta cliccare su \"Iscriviti\" e compilare i dettagli richiesti. Una volta eseguito l'accesso, accedi semplicemente utilizzando l'indirizzo e-mail e la password. Fai clic sul tuo profilo nell'angolo in alto a destra e seleziona \"Registra una bicicletta\". Fornire tutti i dettagli necessari, tra cui alcune belle immagini chiare della tua bicicletta e, dopo aver impostato il prezzo del noleggio, fai clic su \"Registra la mia bicicletta\". Richiede alcuni secondi per le informazioni da caricare. Successivamente, puoi trovare, modificare ed eliminare la tua biciclette nel menù del profilo sotto \"Biciclette registrate\".",
+        "question-7": "Come posso impostare il prezzo del noleggio per la mia bicicletta?",
+        "answer-7": "Sei libero di decidere qualsiasi prezzo per il noleggio di mezza giornata / un giorno / una settimana. Il minimo è di € 1. Un prezzo interessante genererà più noleggi, in quanto le persone cercano un buon rapporto qualità-prezzo. Per determinare il prezzo giusto, guarda le  biciclette simili su listnride e / o confrontare il prezzo con i negozi locali nella tua zona.",
+        "question-8": "Che cosa devo pagare per offrire la mia bicicletta in noleggio ?",
+        "answer-8": "Offrire la tua bicicletta in noleggio su listnride è gratuito. Solo quando viene effettuata una prenotazione deduciamo una commissione dal prezzo totale del noleggio. La nostra commissione è del 7,5% del prezzo totale del noleggio. Esempio: Se noleggi la tua bicicletta per 5 giorni a 20 €  al giorno, il prezzo del noleggio totale sarà di 100 € , noi ti pagheremo per una cifra pari a  92.50 € . Ciò include tutti i costi sostenuti per le tasse della carta di credito.",
+        "question-9": "Come ricevo i soldi per aver noleggiato la mia bicicletta ?",
+        "answer-9": "Il prezzo totale del noleggio meno il 7,5% di commissione di listnride verrà versato sul tuo conto bancario entro 5 giorni lavorativi dopo la fine del periodo di noleggio. I soldi verranno trasferiti tramite PayPal o tramite bonifico bancario. Puoi inserire e / o modificare i tuoi dettagli di pagamento nel tuo conto di listnride facendo clic su \"Modifica profilo\".",
+        "question-10": "Posso anche offrire la mia bicicletta in noleggio in altre località che attualmente non sono elencate sul sito?",
+        "answer-10": "Sì. listnride è una piattaforma globale, quindi è aperta a qualsiasi bicicletta ovunque.",
+        "question-11": "Come posso sospendere temporaneamente il mio annuncio o disattivare la mia bicicletta ?",
+        "answer-11": "Se non sei in grado di offrire la tua bicicletta per un certo periodo di tempo, non devi eliminare il tuo annuncio. Invece, puoi disattivarla selezionando \"Biciclette registrate\" nel menu del profilo, dove potrai vedere la tua bicicletta. Ora basta cliccare su \"Disattiva bicicletta\" per la bicicletta che desideri disattivare.",
+        "question-12": "Come faccio a cambiare le foto o i dettagli della mia bicicletta ?",
+        "answer-12": "È possibile modificare le immagini e / o i dettagli della tua bicicletta cliccando su \"Biciclette registrate\" nel menu dell'account. Quindi selezionare \"Modifica bicicletta\" e apportare le modifiche desiderate. Confermare le modifiche facendo clic su \"Aggiorna Bicicletta\".",
+        "question-13": "Come faccio a cancellare il mia bicicletta ?",
+        "answer-13": "Nel caso in cui non sia più possibile o non desideri più offrire una certa bicicletta in noleggio, puoi eliminarla scegliendo \"Biciclette registrate\" nel menù del profilo. Se stai usando la nostra applicazione per iPhone, scorri e seleziona la bicicletta che desideri eliminare sulla sinistra e fai clic su \"Elimina\". Se stai usando il nostro sito web, seleziona \"Elimina bicicletta\". Dopo alcuni secondi, vedrai un messaggio di conferma che dice che \"la bicicletta è stata eliminata correttamente\".",
+        "question-14": "Come faccio a noleggiare la mia bicicletta attraverso listnride?",
+        "answer-14": "Una volta ricevuta una richiesta per la tua bicicletta, apri l'app o vai al nostro sito web e accedi al tuo profilo. Fai clic sulla pagina del tuo profilo nell'angolo in alto a destra e fai clic su \"Richieste\" nel menù del profilo. Qui troverai la richiesta che ti è stata inviata. Fai clic sulla richiesta e rispondi al richiedente accettando o rifiutando la richiesta. Puoi anche chattare con il richiedente per chiarire i dettagli. Una volta accettata la richiesta, l'altra persona deve confermare la sua richiesta e pagare in anticipo. Non appena la conferma e il pagamento sono completati, riceverai una notifica via e-mail e un aggiornamento dello stato nel tuo profilo.",
+        "question-15": "Cosa devo fare se il periodo di noleggio inizialmente richiesto non è lo stesso del periodo effettivo?",
+        "answer-15": "Se il periodo del noleggio finale è cambiato durante la comunicazione con il richiedente, è consigliabile chiedere loro una nuova richiesta con la data e l'ora corretta, in modo che il noleggio sia coperto dalla garanzia listnride.",
+        "question-16": "Cosa devo fare se il periodo di noleggio richiesto è scomodo?",
+        "answer-16": "Se il periodo di noleggio richiesto non rientra nel tuo programma, puoi controllare se qualcun altro può consegnare la bicicletta e le chiavi a tuo nome. Se questo non è possibile, respingi semplicemente la richiesta. Aggiungendo un breve messaggio che spiega perché hai rifiutato la richiesta, in quanto sarebbe apprezzabile.",
+        "question-17": "Come posso contattare il noleggiante una volta che il noleggio della bicicletta è confermato? ",
+        "answer-17": "È possibile contattare il noleggiante tramite la stessa chat in-app utilizzata per la richiesta di noleggio. Basta andare alla pagina \"Richieste\" nel menù profilo e cliccare sulla bicicletta che hai noleggiato. Troverai anche tutti i dettagli del noleggiante, compreso il loro numero di cellulare, nella e-mail di conferma del noleggio.",
+        "question-18": "Come posso ottenere una recensione per il mio annuncio ?",
+        "answer-18": "Dopo che il noleggio è finito, il noleggiante sarà chiamato a darti un voto come noleggiatore così come alla tua bicicletta. Una volta che la valutazione viene inviata, la tua bicicletta mostrerà un valore di valutazione. Per ottenere buone recensioni, si consiglia di descrivere la tua bicicletta e la sua condizione in maniera veritiera."
+      },
+      "rider-faq": {
+        "title": "FAQ Noleggiante",
+        "question-1": "Come faccio a noleggiare una bicicletta?",
+        "answer-1": "È necessario iscriversi prima di poter noleggiare una bicicletta. Basta cliccare su \"Iscriviti\" e compilare i dettagli richiesti. Una volta eseguito l'accesso, accedi semplicemente utilizzando l'indirizzo e-mail e la password. Dopo aver selezionato la bicicletta che si adatta alle tue esigenze, seleziona la data di inizio noleggio desiderata, l'orario del ritiro, la data di fine noleggio e l'orario di riconsegna, quindi fai clic su \"Richiedi la bicicletta\". Una volta accettata la richiesta dal noleggiatore, è necessario confermare cliccando su \"Conferma richiesta\" e completare il processo di pagamento. Non appena il pagamento è stato completato, riceverai un messaggio di conferma della prenotazione nonché una e-mail con tutti i dettagli relativi al noleggio.",
+        "question-2": "Come faccio a cancellare una richiesta?",
+        "answer-2": "Nello stato della richiesta, è possibile annullare la richiesta in qualsiasi momento prima di completare il processo di pagamento facendo clic su \"Annulla richiesta\" nella finestra di richiesta.",
+        "question-3": "Posso inviare più di una richiesta contemporaneamente?",
+        "answer-3": "Sì, puoi richiedere più biciclette contemporaneamente. Ciò ha senso per ottenere una risposta più veloce da uno dei proprietari delle biciclette. Una volta che uno dei proprietari ha accettato la tua richiesta, puoi confermare la tua richiesta. Finché non confermi, non ci sarà nessuna prenotazione e quindi nessuna transazione di pagamento. Quando prenoti una bicicletta, ricorda di annullare tutte le altre richieste per lo stesso periodo di noleggio affinché gli altri proprietari siano informati.",
+        "question-4": "Cosa devo fare se il noleggiatore non risponde?",
+        "answer-4": "Purtroppo non tutti i noleggiatori sono in grado di rispondere subito, ad esempio se non dispongono di accesso a Internet al momento. Facciamo tutto il possibile per migliorare i tempi di risposta. Se stai richiedendo un noleggio a breve termine, ti consigliamo di richiedere più biciclette allo stesso tempo per aumentare le possibilità di trovarne una che sia adatta al tuo stile e alle tue esigenze.",
+        "question-5": "Come faccio a pagare per il noleggio di una bicicletta ?",
+        "answer-5": "Puoi confermare e pagare per la richiesta nell'applicazione o sul nostro sito web. Il pagamento è possibile tramite carta di credito o PayPal. Stiamo lavorando per mettere a disposizione nuovi metodi di pagamento.",
+        "question-6": "Che cosa faccio in caso di gomma sgonfia ?",
+        "answer-6": "Una gomma sgonfia può succedere durante la guida della bicicletta. È vostra responsabilità restituire la bicicletta nella condizione in cui è stata consegnata. Trovare un negozio di bici e riparare il pneumatico o contattare il noleggiatore e concordare un giusto compenso. Riteniamo che un equo compenso dovrebbe essere di circa 15 euro.",
+        "question-7": "Come dovrei bloccare la mia bicicletta in modo sicuro per prevenire furti?",
+        "answer-7": "Per evitare che la bicicletta venga rubata, ti suggeriamo di chiedere al noleggiatore. In generale, consigliamo di chiudere la serratura attraverso il pneumatico anteriore e il telaio, e collegarla una ad un oggetto fisso (lampione, albero, ecc.) In modo che non possa essere spostato facilmente. Se stai noleggiando la bicicletta durante la notte, raccomandiamo di riporla in una zona chiusa o in interno dell'alloggio.",
+        "question-8": "Cosa succede se la bicicletta viene rubata durante il periodo di noleggio?",
+        "answer-8": "Situazione molto sfortunata se la bicicletta viene rubata. Informa immediatamente il nostro helpdesk su \"contatti e supporto\" se questo accade. Vi faremo sapere cosa deve essere fatto. Ricorda: La bicicletta è tua completa responsabilità per la durata del periodo di noleggio.",
+        "question-9": "Ho una copertura assicurativa quando noleggio con listnride ?",
+        "answer-9": "Listnride non fornisce alcuna assicurazione; facilitiamo semplicemente la transazione del noleggio. Tutti i noleggi di biciclette sono a rischio del noleggiante, vale a dire che sarete ritenuti responsabili di eventuali furti o danni durante il periodo del noleggio. Raccomandiamo ai noleggianti di verificare la loro copertura assicurativa e / o responsabilità civile per l'eventuale copertura.",
+        "question-10": "Cosa succede se la bicicletta non è uguale a quella che pensavo di aver prenotato?",
+        "answer-10": "Ti preghiamo di inviarci alcune immagini della bicicletta e spiegare in che modo è diversa da quello originariamente prenotata, affinché possiamo annullare il noleggio, se la tua richiesta sembra giustificata. In alternativa, è possibile valutare la bicicletta quando viene chiesto di presentare una recensione dopo che il periodo di noleggio è finito.",
+        "question-11": "Devo portare il mio lucchetto e il mio casco, e posso anche portare i miei pedali / sella?",
+        "answer-11": "Se il listener non fornisce un lucchetto per biciclette, ti consigliamo di portare il proprio. Ricorda: sei responsabile di riportare la bicicletta e assicurarti che non venga rubata. I noleggiatori possono fornire caschi se lo desiderano, ma se preferisci puoi indossare il tuo o se non è fornito. Nel caso in cui desideri cambiare i pedali o la sella, ti preghiamo di chiedere l'approvazione preventiva dal noleggiatore. Ricorda: questa è la bicicletta di qualcun altro, non la tua."
+      }
+    },
+    "contact-section": {
+      "header": "Nessuna risposta per la tua questione?",
+      "subheader": "Contattaci se hai domande particolari o se si verificano problemi durante il processo di noleggio su listnride.",
+      "title": "Non riesci a trovare la risposta che ti serve nella sezione FAQ ? Quindi scegli una delle seguenti:",
+      "list-1": "Vorrei segnalare una richiesta sospetta",
+      "list-2": "Vorrei segnalare un annuncio sospetto",
+      "list-3": "Vorrei segnalare un problema con il proprietario/richiedente",
+      "list-4": "Ho una domanda in merito ai pagamenti",
+      "list-5": "Ho una domanda generale"
+    }
+  },
+  "press": {
+    "title": "Stampa",
+    "header": "Sezione Stampa",
+    "subheader": "Le informazioni sono pronte per essere scaricate. listnride è pronto a parlare.",
+    "kit": {
+      "title": "Kit stampa",
+      "content": "Gli altri si chiamano sistemi di noleggio biciclette. Noi siamo una comunità bike sharing. Scopri di più nel nostro kit di stampa, che può essere",
+      "download": "trovato qui"
+    },
+    "contact": {
+      "title": "Contatto stampa",
+      "content": "Hai altre domande su listnride o hai bisogno di ulteriori informazioni sul sistema bike sharing, noleggio biciclette e concetti di mobilità? Potrai contattarci direttamente:"
+    },
+    "meta-title": "stampa listnride",
+    "meta-description": "Noi amiamo il bike sharing. E risponderemo con piacere a tutte le vostre domande."
+  },
+  "terms-and-conditions": {
+    "meta-title": "listnride | Termini e condizioni del sito",
+    "meta-description": "I termini e le condizioni della comunità bike sharing di listnride si applicano all'uso della piattaforma online.",
+    "title": "Termini e Condizioni",
+    "header": "Condizioni generali per la piattaforma online listnride",
+    "download": "Scarica qui",
+    "description": "<a href=\"http://cdn.listnride.com/en/tacs.pdf\" target=\"_blank\">Qui puoi visualizzare e scaricare le condizioni generali",
+    "subtitle": "List and Ride GmbH (di seguito \"listnride\") organizza contratti di locazione per biciclette e altre attrezzature per lo sport e il tempo libero attraverso il sito www.listnride.com (di seguito \"Sito web\"). I seguenti Termini e Condizioni Generali di Utilizzo (di seguito \"Termini di Utilizzo\") nella Sezione I rientreranno nell'accordo concluso tra l'utente e listnride nel rispetto del servizio di disposizione. Qualsiasi accordo per il noleggio dell'oggetto utilizzato (di seguito \"contratto di noleggio\") concluso tramite il sito web deve essere conforme alle condizioni generali di noleggio (di seguito \"termini di noleggio\") specificati nella sezione II."
+  },
+  "trust-and-safety": {
+    "meta-title": "Il Noleggio di biciclette è sicuro - listnride ti tutela",
+    "meta-description": "La fiducia è tutto in una sharing community. Promuoviamo la giustizia e la sicurezza verificando le identità degli utenti e offrendo una garanzia ai noleggiatori.",
+    "title": "Fiducia e Sicurezza",
+    "header": "Pedalare senza preoccupazioni",
+    "subheader": "Grazie a listnride, noleggiare una bicicletta è facile e sicuro.",
+    "guarantee-icon": "garantie_it",
+    "guarantee": {
+      "title": "La garanzia dei noleggiatori di listnride",
+      "content": "Listnride è una comunità di appassionati per la bicicletta. Ma ehi, a volte le cose vanno male, non importa quanto stai attento. Per questo motivo abbiamo la nostra garanzia per i noleggiatori: Se la tua bicicletta viene danneggiata o rubata durante il noleggio e il noleggiante non può pagare il rimborso, la garanzia garantisce una copertura fino a 5.000 euro. I pagamenti sono soggetti a determinate condizioni, limitazioni ed eccezioni. Per ulteriori informazioni, fai riferimento ai nostri termini e condizioni di noleggio <a class=\"lnr-link\" ui-sref=\"terms\"></a>."
+    },
+    "responsibility": {
+      "title": "Trattiamo i tuoi dati in modo responsabile",
+      "content": "L'indirizzo o la posizione della tua bicicletta non compare nel tuo profilo pubblico. Questi dati vengono trasmessi al partner del noleggio solo una volta confermata la prenotazione."
+    },
+    "verification": {
+      "title": "La verifica crea fiducia",
+      "content": "Fornisci i tuoi dati personali nel tuo profilo per aumentare la tua fiducia quando comunichi con un noleggiatore o con un noleggiante. Ci sono diversi modi per verificare l'identità di una persona in listnride:",
+      "list-1": "Verifica dell'identità: connettere il profilo di listnride alla tua pagina facebook e memorizzare i dettagli della tua carta di credito. Assicurati di ricevere e-mail.",
+      "list-2": "Numero di telefono: Trasmettiamo il tuo numero di telefono verificato al tuo noleggiatore/noleggiante non appena è accettata la richiesta di prenotazione.",
+      "list-3": "Recensioni: Il tuo profilo contiene le valutazioni presentate dai tuoi noleggiatori/noleggianti dopo il noleggio. Questo ti permette di costruire una buona reputazione."
+    }
+  },
+  "footer": {
+    "language": "Lingua",
+    "company": "Società",
+    "legal": "Note legali",
+    "terms-and-conditions": "Termini",
+    "privacy-statement": "Privacy",
+    "imprint": "Info",
+    "about": "Su di noi",
+    "press": "Stampa",
+    "jobs": "Lavora con noi",
+    "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
+  },
+  "jobs": {
+    "title": "Lavora con noi",
+    "header": "Offerte di lavoro",
+    "subheader": "Aiuta la nostra comunità bike sharing a crescere",
+    "contact": {
+      "title": "Unisciti al nostro gruppo",
+      "content": "Sai sempre di più sulle biciclette? Ti piace saltare sulla sella e andare in giro, sia con la pioggia che con il sole? Allora sei veramente un vero e proprio ciclista - e saresti un grande valore aggiunto nella nostra squadra. Dai un'occhiata per vedere se abbiamo attualmente un posto vacante che è giusto per te e non esitare a inviarci la tua richiesta."
+    },
+    "view": "Mostra",
+    "meta-title": "Lavora per listnrid",
+    "meta-description": "Unisciti alla squadra bike sharing di listnride a Berlino o Monaco di Baviera per costruire la comunità globale della bicicletta",
+    "apply": "Candidati ora",
+    "see-all": "Vedi altri lavori",
+    "open": "Posizioni aperte",
+    "go-back": "Indietro"
+  },
+  "shop-landing": {
+    "meta-title": "listnride Shop Plugin- Il tuo noleggio online di biciclette ",
+    "meta-description": "listnride offre ora un plug-in gratuito per integrare facilmente una lista prenotazione per il noleggio biciclette sul tuo sito web.",
+    "title": "Le biciclette a noleggio direttamente prenotabili sul tuo sito web",
+    "subtitle": "listnride offre ora un plug-in gratuito per integrare facilmente una lista prenotazione per il noleggio biciclette sul tuo sito web.",
+    "description": "Ti rendi conto dell'opportunità di avere il tuo negozio di biciclette online? Con pochi e semplici clic avrai la tua lista di biciclette disponibili per il noleggio su listnride direttamente sul tuo sito web.\nI tuoi clienti possono vederle direttamente e prenotarle in pochi secondi.",
+    "feature-1": {
+      "title": "Aumenta i tuoi noleggi",
+      "description": "Il cliente online vuole avere una scelta. Offri ai tuoi clienti la possibilità di vedere le biciclette disponibili per il noleggio e di prenotarle subito online. In questo modo non ti dovrai più preoccupare delle pratiche cartacee, in quanto tutto avviene online e così potrai concentrarti sulla tua attività. Efficaci ed efficienti"
+    },
+    "feature-2": {
+      "title": "Non è necessaria alcuna abilità informatica.",
+      "description": "Il plug-in di listnride non richiede nessun tipo di sviluppo web per te. Non si necessita di nessuna agenzia informatica costosa e quindi questo ti permette di risparmiare su eventuali costi aggiuntivi. La tecnologia che forniamo non richiede manutenzione e mostra in tempo reale le biciclette disponibili, in modo tale che le eventuali modifiche apportate siano direttamente visibili online."
+    },
+    "feature-3": {
+      "title": "Concentrati sul tuo business",
+      "description": "I termini e le condizioni listnride coprono tutti i dettagli importanti di un contratto di noleggio. Qui è indicato che nel momento in cui la bicicletta viene consegnata al noleggiante, tutte le responsabilità ricadono su di lui. Quindi, non occorrono più documenti cartacei. Inoltre, avrai una tabella riassuntiva con tutte le vostre richieste aperte, noleggi, fatture e ricavi. Solo accedendo al tuo profilo."
+    },
+    "join-now": "Unisciti a noi, è gratuito",
+    "join-now-description": "Interessato a saperne di più e ad iniziare?",
+    "contact-us": "Contattaci"
+  },
+  "imprint": {
+    "title": "Info ",
+    "header": "Info ",
+    "managing-director": "Amministratore delegato",
+    "telephone": "Telefono",
+    "germany": "Germania",
+    "commercial-register-number": "Numero di registrazione commerciale",
+    "berlin-court-of-registry": "Berlin Court of Registry (Charlottenburg)",
+    "vat-id": "Partita Iva",
+    "meta-title": "listnride | Info",
+    "meta-description": "Noleggia la tua bicicletta perfetta nella comunità listnride. Trovane una che si adatti al tuo stile e alle tue esigenze."
+  },
+  "privacy": {
+    "title": "Privacy",
+    "subtitle": "Norme sulla protezione dei dati",
+    "description": "List e Ride GmbH (di seguito \"listnride\") ti informa nei Regolamenti di Protezione dei Dati sulla gestione dei tuoi dati personali. <br><br><a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Qui puoi visualizzare e scaricare le norme sulla protezione dei dati. </a>",
+    "meta-title": "Politica sulla privacy di listnride",
+    "meta-description": "La Politica sulla privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online."
+  },
+  "seo": {
+    "cities-title": "Planning to Travel? Check out more cities:"
+  }
+}
