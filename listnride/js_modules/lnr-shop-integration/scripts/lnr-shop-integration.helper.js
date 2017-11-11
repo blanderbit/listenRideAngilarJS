@@ -1,6 +1,6 @@
 /* global
-        lnrConstants
-        lnrJquery
+        lnrConstants: '/listnride/js_modules/lnr-shop-integration/scripts/lnr-shop-integration.constants.js'
+        lnrJquery: '/listnride/js_modules/lnr-shop-integration/scripts/lnr-shop-integration.jquery.js'
 */
 var lnrHelper = {
   /**
@@ -336,7 +336,7 @@ var lnrHelper = {
     });
   },
   /**
-   * renders the HTML of the bikes
+   * HTML of the bikes
    * @param {Object} rides bikes of the user. either city specific or all
    * @returns {void}
    */
@@ -392,7 +392,7 @@ var lnrHelper = {
     });
   },
   /**
-   * renders the locaiton selector dropdown
+   * renders the location and size selectors
    * @param{Boolean} shouldRenderLocationSelector bool based on # of locations
    * @returns {void}
    */
@@ -414,13 +414,18 @@ var lnrHelper = {
     // close location dropdown on window click
     window.onclick = lnrHelper.closeDropDown;
   },
+  /**
+   * the HTML for location and size selector dropdown
+   * @param{Boolean} shouldRenderLocationSelector bool based on # of locations
+   * @returns {void}
+   */
   renderSelectorsHTML: function (shouldRenderLocationSelector) {
     // open mdl grid
     var mdlGridOpen = '<div class="mdl-grid mdl-grid--no-spacing">';
 
     // render size selector
     var sizeHTML = [
-      '<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">',
+      '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent">',
       '<div style="margin-left:8px; margin-right:8px;">',
       '<button type="button" style="color: black;" ',
       'id="lnr-size-button" ',
@@ -433,7 +438,7 @@ var lnrHelper = {
 
     // render location selector
     var locationHTML = [
-      '<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">',
+      '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent">',
       '<div style="margin-left:8px; margin-right:8px;">',
       '<button type="button" style="color: black;" ',
       'id="lnr-location-button" ',

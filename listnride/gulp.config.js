@@ -49,8 +49,11 @@ module.exports = function () {
         lnrShopIntegration: {
             root: './js_modules/lnr-shop-integration/',
             style: 'lnr-shop-integration.css',
-            css: './js_modules/lnr-shop-integration/styles/lnr-shop-integration.css',
-            vendorCss: './js_modules/lnr-shop-integration/styles/lnr-shop-integration.vendor.css',
+            css: [
+                './js_modules/lnr-shop-integration/styles/lnr-shop-integration.css',
+                './js_modules/lnr-shop-integration/styles/lnr-shop-integration.vendor.css'
+            ],
+            lnrCss: './js_modules/lnr-shop-integration/styles/lnr-shop-integration.css',
             html: './js_modules/lnr-shop-integration/lnr-shop-integration.html',
             source: 'lnr-shop-integration.js',
             prefix: '#listnride',
@@ -68,8 +71,8 @@ module.exports = function () {
                 js: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.js',
                 html: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.html',
                 source: 'lnr-shop-integration.min.js',
-                css: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.css',
-                style: 'lnr-shop-integration.min.css'
+                style: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.css',
+                css: 'lnr-shop-integration.min.css'
             },
         },
         lnrShopSolution: {
@@ -84,9 +87,9 @@ module.exports = function () {
                 './js_modules/lnr-shop-solution/resources/lnr_logo_bold.svg'
             ],
             dist: {
+                root: './js_modules/lnr-shop-solution/dist/',
                 js: 'lnr-shop-solution.min.js',
                 css: 'lnr-shop-solution.min.css',
-                root: './js_modules/lnr-shop-solution/dist/',
                 source: './js_modules/lnr-shop-solution/dist/lnr-shop-solution.min.js',
                 style: './js_modules/lnr-shop-solution/dist/lnr-shop-solution.min.css',
                 html: './js_modules/lnr-shop-solution/dist/lnr-shop-solution.html'

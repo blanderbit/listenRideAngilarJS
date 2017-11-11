@@ -1,6 +1,3 @@
-/* global
-        $
-*/
 var lnrConstants = {
   env: 'production', // options: staging, production
   

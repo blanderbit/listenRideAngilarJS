@@ -362,6 +362,11 @@ md-icon svg {
   display: inline-block;
 }
 
+.lnr-dropdown-parent {
+  max-width: 172px;
+  min-width: 152px;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -373,9 +378,16 @@ md-icon svg {
   border-width: 1px;
   max-height: 220px;
   min-height: 38px;
-  min-width: 144px;
+  max-width: 172px;
+  min-width: 154px;
   font-weight: 400;
   overflow-y: scroll;
+}
+
+@media (max-width: 680px) {
+  .dropdown-content {
+    min-width: 138px;
+  }
 }
 
 .dropdown-content a {
