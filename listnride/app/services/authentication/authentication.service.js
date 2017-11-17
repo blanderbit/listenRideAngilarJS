@@ -246,21 +246,30 @@ angular.
         };
 
         loginDialog.resetPassword = function() {
-          var user = {
-            "user": {
-              "email": loginDialog.email
-            }
-          };
-          api.post('/users/reset_password', user).then(function(success) {
+          if (loginDialog.email) {
+            var user = {
+              "user": {
+                "email": loginDialog.email
+              }
+            };
+            api.post('/users/reset_password', user).then(function(success) {
+              $mdToast.show(
+                $mdToast.simple()
+                  .textContent($translate.instant('toasts.reset-password-success'))
+                  .hideDelay(5000)
+                  .position('top center')
+              );
+            }, function(error) {
+              loginDialog.error = error.data.errors[0]
+            });
+          } else {
             $mdToast.show(
               $mdToast.simple()
-              .textContent($translate.instant('toasts.reset-password-success'))
-              .hideDelay(5000)
-              .position('top center')
+                .textContent($translate.instant('toasts.enter-email'))
+                .hideDelay(5000)
+                .position('top center')
             );
-          }, function(error) {
-
-          });
+          }
         }
       };
 

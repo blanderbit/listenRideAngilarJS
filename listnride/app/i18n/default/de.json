@@ -125,7 +125,8 @@
     "opening-hours-error": "Die Öffnungszeiten konnten nicht gespeichert werden.",
     "uniq-phone": "Telefonnummer ist bereits in unserem System registriert.",
     "pending-requests": "Du hast noch eine offene Anfrage für dieses Rad. Beantworte diese (Ablehnen/ Annehmen) bevor du es entfernen kannst.",
-    "account-deleted": "Dein Account wurde gelöscht"
+    "account-deleted": "Dein Account wurde gelöscht",
+    "enter-email": "Please enter your email."
   },
 
   "settings": {
