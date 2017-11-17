@@ -21,13 +21,10 @@ angular.
         $localStorage.isBusiness = (response.business !== undefined);
       };
 
-      // TODO: This is a duplicate of app.module.js
       var retrieveLocale = function() {
         var defaultLanguage = "en";
         var availableLanguages = ["de", "en", "nl"];
-    
-        var host = window.location.host;
-        var retrievedLanguage = host.split('.')[0];
+        var retrievedLanguage = $localStorage.selectedLanguage;
     
         if (availableLanguages.indexOf(retrievedLanguage) >= 0) {
           return retrievedLanguage;
