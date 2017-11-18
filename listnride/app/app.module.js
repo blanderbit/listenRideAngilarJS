@@ -125,24 +125,16 @@ angular.module('listnride', [
       // default and available languages
       var defaultLanguage = "en";
       var availableLanguages = ["de", "en", "nl", "it"];
-      // get language from local storage
-      var localStorageLanguage = $localStorageProvider.get('selectedLanguage');
       // host and domains
       var host = window.location.host;
       var domain = host.split(".");
-      // sub domain, currently in use
-      var subDomain = domain[0];
       // top level domain, will be used in future
       var topLevelDomain = domain[domain.length - 1];
-
       var retrievedLanguage = "";
-      
       // select the language
-      if (availableLanguages.indexOf(localStorageLanguage) >= 0) retrievedLanguage = localStorageLanguage;
-      else if (availableLanguages.indexOf(subDomain) >= 0) retrievedLanguage = subDomain;
-      else if (availableLanguages.indexOf(topLevelDomain) >= 0) retrievedLanguage = topLevelDomain;
+      // either get from top domain or select the english version
+      if (availableLanguages.indexOf(topLevelDomain) >= 0) retrievedLanguage = topLevelDomain;
       else retrievedLanguage = defaultLanguage;
-
       return retrievedLanguage;
     };
 
