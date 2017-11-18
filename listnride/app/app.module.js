@@ -53,6 +53,7 @@ angular.module('listnride', [
   'vanmoofIntegration',
   'votec-integration',
   'capeArgus',
+  'businessCommunity',
   /* external modules */
   'ngAnimate',
   'ngMaterial',

@@ -642,6 +642,24 @@
       });
 
       $stateProvider.state({
+        name: 'businessCommunity',
+        url: '/business-community',
+        template: '<business-community></business-community>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["business-community.meta-title", "business-community.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["business-community.meta-title"]);
+                ngMeta.setTag("description", translations["business-community.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'ampler',
         url: '/rent-ampler-bikes',
         template: '<ampler></ampler>',

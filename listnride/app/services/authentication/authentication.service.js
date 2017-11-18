@@ -34,11 +34,11 @@ angular.
       };
 
       // The Signup Dialog Controller
-      var SignupDialogController = function($mdDialog, inviteCode, requesting) {
+      var SignupDialogController = function($mdDialog, inviteCode, requesting, business) {
         var signupDialog = this;
 
         signupDialog.signingUp = false;
-        signupDialog.business = false;
+        signupDialog.business = business;
         signupDialog.businessError = false;
         signupDialog.requesting = requesting;
         var invited = !!inviteCode;
@@ -270,7 +270,7 @@ angular.
         }
       };
 
-      var showSignupDialog = function(inviteCode, requesting, event) {
+      var showSignupDialog = function(inviteCode, requesting, event, business) {
         $mdDialog.show({
           controller: SignupDialogController,
           controllerAs: 'signupDialog',
@@ -283,7 +283,8 @@ angular.
           fullscreen: true, // Only for -xs, -sm breakpoints.
           locals : {
             inviteCode : inviteCode,
-            requesting: requesting
+            requesting: requesting,
+            business: business
           }
         })
         .then(function(answer) {
