@@ -16,6 +16,7 @@ var imagemin = require('gulp-imagemin');
 var stylish = require('jshint-stylish');
 var minifyCss = require('gulp-clean-css');
 var runSequence = require('run-sequence');
+var jsonminify = require('gulp-jsonminify');
 var revReplace = require('gulp-rev-replace');
 var ngAnnotate = require('gulp-ng-annotate');
 var ngConstant = require('gulp-ng-constant');
@@ -39,12 +40,13 @@ gulp.task('cache-templates-modules', cacheTemplatesModules);
 gulp.task('cache-templates-services', cacheTemplatesServices);
 
 // translations, fonts and app constant
-gulp.task('copy-index-tmp', copyIndexTmp);
-gulp.task('copy-index-dist', copyIndexDist);
-gulp.task('copy-index-app', copyIndexApp);
 gulp.task('copy-downloadables', copyDownloadables);
-gulp.task('copy-i18n', copyI18n);
+gulp.task('copy-index-dist', copyIndexDist);
+gulp.task('copy-index-tmp', copyIndexTmp);
+gulp.task('copy-index-app', copyIndexApp);
+gulp.task('minify-i18n', minifyI18n);
 gulp.task('constants', appConstants);
+gulp.task('copy-i18n', copyI18n);
 
 // listnride and vendor scripts
 gulp.task('vendors', vendors);
@@ -257,11 +259,30 @@ function baseTag() {
         .pipe(gulp.dest(path.dist.root));
 }
 /**
- * copy i18n to dist folder
+ * copy i18n translations to dist folder
  * @returns {gulp} for chaining
  */
 function copyI18n() {
+
+    // copy and minify angular local source file
+    gulp.src(path.app.i18nJs)
+        .pipe(gulp.dest(path.dist.i18n))
+        .pipe(uglify(path.dist.i18nJs))
+        .pipe(gulp.dest(path.dist.i18n));
+
+    // copy and minify translation files
     return gulp.src(path.app.i18n)
+        .pipe(gulp.dest(path.dist.i18n))
+        .pipe(jsonminify())
+        .pipe(gulp.dest(path.dist.i18n));
+}
+/**
+ * minify i18n translations
+ * @returns {gulp} for chaining
+ */
+function minifyI18n() {
+    return gulp.src(path.dist.i18nFiles)
+        .pipe(jsonminify())
         .pipe(gulp.dest(path.dist.i18n));
 }
 /**
@@ -393,7 +414,7 @@ function replaceRevisionsIndex() {
  * @returns {gulp} for chaining
  */
 function prefixLnrShopIntegration() {
-    return gulp.src(path.lnrShopIntegration.dist.css)
+    return gulp.src(path.lnrShopIntegration.dist.style)
         .pipe(lnrPrefixCss(path.lnrShopIntegration.prefix))
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
 }
@@ -403,23 +424,30 @@ function prefixLnrShopIntegration() {
  */
 function minifyLnrShopIntegration() {
 
-    // minify style for shop integration
-    // copy to dist folder of shop integration
-    gulp.src([path.lnrShopIntegration.css, path.lnrShopIntegration.vendorCss])
-        .pipe(concat(path.lnrShopIntegration.dist.style))
-        .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
-
     // copy template to dist folder
     gulp.src(path.lnrShopIntegration.html)
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
         
     // minify source for shop integration
     // copy to dist folder of shop integration
-    return gulp.src(path.lnrShopIntegration.js)
+    gulp.src(path.lnrShopIntegration.js)
         .pipe(concat(path.lnrShopIntegration.dist.source))
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root))
         .pipe(uglify(path.lnrShopIntegration.dist.source))
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
+
+    // concat style for shop integration
+    // copy to dist folder of shop integration
+    return gulp.src(path.lnrShopIntegration.css)
+    .pipe(concat(path.lnrShopIntegration.dist.css))
+    .pipe(gulp.dest(path.lnrShopIntegration.dist.root))
+
+    /* 
+    css minification is disabled
+    it was causing issues with mdl lite grid styles
+    .pipe(minifyCss(path.lnrShopIntegration.dist.css))
+    .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
+    */
 }
 /**
  * clean dist folder -- shop integration
@@ -552,6 +580,7 @@ function deploy(cb) {
         'inject-templates-modules',
         'copy-index-app',
         'copy-i18n',
+        'minify-i18n',
         'changes-in-index',
         'revisions',
         'replace-revisions-index',

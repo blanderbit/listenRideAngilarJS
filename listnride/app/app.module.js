@@ -78,8 +78,8 @@ angular.module('listnride', [
   '720kb.socialshare',
   'angularMoment'
 ])
-.config(['$translateProvider', '$localStorageProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', '$compileProvider', 'ngMetaProvider', 'ENV', 'socialshareConfProvider',
-  function($translateProvider, $localStorageProvider, ezfbProvider, $mdAriaProvider, $locationProvider, $compileProvider, ngMetaProvider, ENV, socialshareConfProvider) {
+.config(['$translateProvider', '$localStorageProvider', '$translatePartialLoaderProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', '$compileProvider', 'ngMetaProvider', 'ENV', 'socialshareConfProvider',
+  function($translateProvider, $localStorageProvider, $translatePartialLoaderProvider, ezfbProvider, $mdAriaProvider, $locationProvider, $compileProvider, ngMetaProvider, ENV, socialshareConfProvider) {
     $mdAriaProvider.disableWarnings();
     $compileProvider.debugInfoEnabled(false);
 
@@ -97,7 +97,7 @@ angular.module('listnride', [
       'conf': {
         'trigger': 'click',
         'popupHeight': 800,
-        'popupWidth' : 400
+        'popupWidth': 400
       }
     }
     ]);
@@ -111,11 +111,15 @@ angular.module('listnride', [
       requireBase: false
     });
 
-    $translateProvider.useStaticFilesLoader({
-      prefix: 'app/i18n/',
-      suffix: '.json'
+    // use partial loader
+    $translatePartialLoaderProvider.addPart('default');
+    $translateProvider.useLoader('$translatePartialLoader', {
+      urlTemplate: 'app/i18n/{part}/{lang}.json'
     });
 
+    // use cached translation
+    $translateProvider.useLoaderCache(true);
+    
     // Retrieves locale from subdomain if valid, otherwise sets the default.
     var retrieveLocale = function () {
       // default and available languages
@@ -150,8 +154,11 @@ angular.module('listnride', [
     ngMetaProvider.setDefaultTag('og:image', 'http://www.listnride.com/app/assets/ui_images/opengraph/lnr_standard.jpg');
   }
 ])
-.run(['ngMeta', '$rootScope', '$location', 'authentication', 'api', function(ngMeta, $rootScope, $location, authentication, api) {
-
+.run(['$translate', 'ngMeta', '$rootScope', '$location', 'authentication', 'api', function($translate, ngMeta, $rootScope, $location, authentication, api) {
+  // load partial translations based on the language selected
+  $rootScope.$on('$translatePartialLoaderStructureChanged', function () {
+    $translate.refresh();
+  });
   $rootScope.location = $location;
   ngMeta.init();
 
@@ -159,11 +166,9 @@ angular.module('listnride', [
     api.get('/users/' + authentication.userId()).then(
       function (success) {
         var user = success.data;
-        console.log(user);
         authentication.setCredentials(user);
       },
       function (error) {
-
       }
     );
   }

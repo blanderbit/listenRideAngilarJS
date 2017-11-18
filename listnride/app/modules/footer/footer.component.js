@@ -12,7 +12,6 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
     '$stateParams',
     function FooterController($scope, $window, $location, $localStorage, $translate, $stateParams) {
       var footer = this;
-
       footer.hideFooter = $stateParams.hideFooter;
 
       $scope.$watch(

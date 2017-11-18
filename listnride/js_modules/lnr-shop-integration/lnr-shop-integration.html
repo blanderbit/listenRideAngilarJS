@@ -23,8 +23,17 @@
 <!-->
 
 <!-- used for demo. user id and language can be provided manually for testing -->
+<div style="margin:12px;">
+    <form>
+      <input placeholder="user id" name="user_id" id="user_demo_id">
+      <input placeholder="user lang" name="user_lang" id="user_demo_lang">
+      <button type="button" onclick="lnrHelper.renderBikes(0, 0, true)">Go</button>
+    </form>
+  </div>
+
+<!-- used for demo. user id and language can be provided manually for testing -->
 <div>
   <!-- required for production. renders bikes -->
-  <div id="listnride" data-user="1012" data-lang="en"></div>
+  <div id="listnride" data-user="1014" data-lang="de"></div>
 </div>
 </body>
