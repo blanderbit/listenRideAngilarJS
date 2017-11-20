@@ -168,6 +168,8 @@
         }
       });
 
+      /* event pages -- start */ 
+
       $stateProvider.state({
         name: 'raphaSuperCross',
         url: '/rapha-super-cross',
@@ -232,7 +234,6 @@
         name: 'velothonBikerental',
         url: '/velothon-bikerental',
         template: '<velothon-bikerental></velothon-bikerental>',
-        controller: 'StaticController',
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["events.velothon-bikerental.meta-title", "events.velothon-bikerental.meta-description"])
@@ -358,7 +359,8 @@
       $stateProvider.state({
         name: 'cwd',
         url: '/cyclingworld',
-        templateUrl: 'app/modules/events/cwd/cwd.template.html'
+        templateUrl: 'app/modules/events/cwd/cwd.template.html',
+        controller: 'StaticController'
       });
 
       $stateProvider.state({
@@ -923,6 +925,8 @@
             disableUpdate: true
         }
       });
+
+      /* event pages -- end */
 
       $stateProvider.state({
         name: 'how-to-shoot-bike-photos',

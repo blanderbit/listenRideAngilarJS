@@ -3,9 +3,10 @@
 angular.module('crossride',[]).component('crossride', {
   templateUrl: 'app/modules/events/crossride/crossride.template.html',
   controllerAs: 'crossride',
-  controller: ['api',
-    function CrossrideController(api) {
+  controller: ['api', '$translatePartialLoader',
+    function CrossrideController(api, $tpl) {
       var crossride = this;
+      $tpl.addPart('static');
       api.get('/rides?family=9').then(
         function(response) {
           crossride.bikes = response.data;

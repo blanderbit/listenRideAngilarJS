@@ -3,10 +3,10 @@
 angular.module('constanceSpin',[]).component('constanceSpin', {
   templateUrl: 'app/modules/events/constance-spin/constance-spin.template.html',
   controllerAs: 'constanceSpin',
-  controller: ['api',
-    function ConstanceSpinController(api) {
+  controller: ['api', '$translatePartialLoader',
+    function ConstanceSpinController(api, $tpl) {
       var constanceSpin = this;
-
+      $tpl.addPart('static');
       constanceSpin.bikes = [];
 
       api.get('/rides?family=21').then(
