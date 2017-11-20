@@ -3,9 +3,10 @@
 angular.module('pushnpost',[]).component('pushnpost', {
   templateUrl: 'app/modules/events/cwd/pushnpost.template.html',
   controllerAs: 'pushnpost',
-  controller: ['api',
-    function PushnpostController(api) {
+  controller: ['api', '$translatePartialLoader',
+    function PushnpostController(api, $tpl) {
       var pushnpost = this;
+      $tpl.addPart('static');
       pushnpost.bikes = [];
 
       api.get('/users/1998').then(

@@ -3,10 +3,10 @@
 angular.module('raphaSuperCross',[]).component('raphaSuperCross', {
   templateUrl: 'app/modules/events/rapha-super-cross/rapha-super-cross.template.html',
   controllerAs: 'raphaSuperCross',
-  controller: ['NgMap', 'api',
-    function RaphaSuperCrossController(NgMap, api) {
+  controller: ['NgMap', 'api', '$translatePartialLoader',
+    function RaphaSuperCrossController(NgMap, api, $tpl) {
       var raphaSuperCross = this;
-
+      $tpl.addPart('static');
       api.get('/rides?family=7').then(
         function(response) {
           raphaSuperCross.bikes = response.data;

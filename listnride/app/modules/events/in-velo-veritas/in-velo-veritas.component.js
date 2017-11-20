@@ -3,9 +3,10 @@
 angular.module('inVeloVeritas',[]).component('inVeloVeritas', {
   templateUrl: 'app/modules/events/in-velo-veritas/in-velo-veritas.template.html',
   controllerAs: 'inVeloVeritas',
-  controller: ['NgMap', 'api', '$translate', 'ngMeta',
-    function InVeloVeritasController(NgMap, api, $translate, ngMeta) {
+  controller: ['NgMap', 'api', '$translate', 'ngMeta', '$translatePartialLoader',
+    function InVeloVeritasController(NgMap, api, $translate, ngMeta, $tpl) {
       var inVeloVeritas = this;
+      $tpl.addPart('static');
       ngMeta.setTitle($translate.instant("events.in-velo-veritas.meta-title"));
       ngMeta.setTag("description", $translate.instant("events.in-velo-veritas.meta-description"));
 

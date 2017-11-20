@@ -4,7 +4,7 @@ angular.module('capeArgus',[]).component('capeArgus', {
     templateUrl: 'app/modules/events/cape-argus/cape-argus.template.html',
     controllerAs: 'capeArgus',
     controller: ['NgMap', 'api', '$translate', '$translatePartialLoader', 'ngMeta',
-        function CapeArgusController(NgMap, api, $translate,$tpl, ngMeta) {
+        function CapeArgusController(NgMap, api, $translate, $tpl, ngMeta) {
             var capeArgus = this;
             $tpl.addPart('static');
             capeArgus.submitting = false;
