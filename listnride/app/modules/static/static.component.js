@@ -1,13 +1,5 @@
-'use strict';
-
-angular.module('static',[]).component('static', {
-  controllerAs: 'static',
-  controller: ['$translate',
-    function StaticController($translate) {
-      if (accessControl.requireLogin()) {
-        return;
-      }
-
-    }
-  ]
-});
+angular
+.module('static', [])
+.controller('StaticController', ['$translate', '$translatePartialLoader', function ($translate, $tpl) {
+  $tpl.addPart('static');
+}]);
