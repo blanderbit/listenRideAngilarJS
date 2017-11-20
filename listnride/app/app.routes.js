@@ -232,6 +232,7 @@
         name: 'velothonBikerental',
         url: '/velothon-bikerental',
         template: '<velothon-bikerental></velothon-bikerental>',
+        controller: 'StaticController',
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["events.velothon-bikerental.meta-title", "events.velothon-bikerental.meta-description"])
