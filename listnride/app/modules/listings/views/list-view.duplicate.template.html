@@ -18,15 +18,13 @@
             <div class="tab-content" layout="column">
                 <div layout="row" layout-align="center center">
                     <md-input-container flex>
-                        <form name="duplicate_form" class="lnr-tel-int">
+                        <form name="duplicate_form">
                             <label>How how bikes?</label>
                             <input
-                                required
                                 type="number"
+                                required
                                 name="duplicate_number"
                                 ng-model="duplicate.duplicate_number"
-                                ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/"
-                                ng-maxlength="3"
                             >
                         </form>
                     </md-input-container>

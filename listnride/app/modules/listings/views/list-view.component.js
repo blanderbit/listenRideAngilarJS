@@ -172,8 +172,7 @@ angular.module('listings').component('listView', {
 
         // close the dialog succesfully
         duplicate.closeDialog = function () {
-          console.log(duplicate.duplicate_number);
-          $mdDialog.hide(duplicate.duplicate_number); // duplicate.duplicate_number
+          $mdDialog.hide(duplicate.duplicate_number);
         };
       };
 
@@ -190,10 +189,9 @@ angular.module('listings').component('listView', {
           escapeToClose: true,
           fullscreen: true
         }).then(function (duplicate_number) {
-          console.log("#: ", duplicate_number);
           api.post('/rides/duplicate', {
             "ids": [bike.id],
-            "quantity": 1
+            "quantity": duplicate_number
           }).then(
             function () {
             },
