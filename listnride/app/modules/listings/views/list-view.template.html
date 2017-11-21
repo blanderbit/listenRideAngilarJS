@@ -43,7 +43,9 @@
               <div flex="10"> {{bike.size}}</div>
               <div flex="10"> {{bike.prices[0].price | number : 0}}</div>
               <md-menu flex md-position-mode="target bottom">
-                <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">Options</md-button>
+                <md-button class="md-icon-button md-primary" md-no-ink ng-click="$mdOpenMenu($event)" aria-label="Menu">
+                  <md-icon md-svg-icon="app/assets/ui_icons/menu.svg"></md-icon>
+                </md-button>
                 <md-menu-content width="2">
                   <md-menu-item>
                     <md-button md-no-ink ng-click="listView.editBike(bike.id, $event)">Edit</md-button>
@@ -58,6 +60,7 @@
                   <md-menu-item>
                     <md-button md-no-ink ng-click="listView.onDeleteClick(bike.id, $event)">Delete</md-button>
                   </md-menu-item>
+                </md-menu-content>
               </md-menu>
             </div>
           </div>
