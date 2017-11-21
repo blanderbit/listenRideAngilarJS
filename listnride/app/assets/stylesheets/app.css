@@ -1341,6 +1341,13 @@ listings .lnr-bike-listings {
   padding: 24px;
 }
 
+.lnr-unavailable {
+  color: #adacac
+}
+
+.lnr-unavailable img {
+  opacity: 0.4;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*  CALCULATOR

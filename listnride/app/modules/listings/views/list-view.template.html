@@ -31,7 +31,7 @@
                       ng-click="listView.viewBike(bike.id, $event)"
                       ng-repeat="bike in listView.bikes">
           <div layout="column" flex="100">
-            <div layout="row" layout-align="start center">
+            <div layout="row" ng-class="{'lnr-unavailable': !bike.available}" layout-align="start center">
                   <img hide-xs
                   ng-src="{{bike.image_file_1.image_file_1.thumb.url}}"
                   class="md-avatar"/>
