@@ -3,8 +3,8 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', 'ngMeta',
-    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, ngMeta) {
+  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', '$state', 'ngMeta', 'price',
+    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price) {
       var bike = this;
 
       bike.mapOptions = {
@@ -31,21 +31,27 @@ angular.module('bike',[]).component('bike', {
           bike.data = response.data;
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
+          $translate($filter('category')(bike.data.category)).then(
+            function (translation) {
+              bike.category = translation;
+              console.log(bike.category);
+            }
+          );
+          console.log(bike.category);
 
           var metaData = {
             name: bike.data.name,
             brand: bike.data.brand,
             description: bike.data.description,
             location: bike.data.city,
-            category: $filter('category')(bike.data.category)
+            category: $translate.instant($filter('category')(bike.data.category))
           };
 
           ngMeta.setTitle($translate.instant("bike.meta-title", metaData));
           ngMeta.setTag("description", $translate.instant("bike.meta-description", metaData));
-          console.log(bike.data);
         },
         function(error) {
-          console.log("Error retrieving bike", error);
+        	$state.go('404');
         }
       );
 
@@ -96,7 +102,7 @@ angular.module('bike',[]).component('bike', {
         galleryDialog.image_5 = bikeData.image_file_5.image_file_5.url;
         galleryDialog.hide = function() {
           $mdDialog.hide();
-        }
+        };
         galleryDialog.slickConfig = {
           enabled: true,
           autoplay: true,
@@ -105,8 +111,8 @@ angular.module('bike',[]).component('bike', {
           ease: 'ease-in-out',
           speed: '500',
           dots: true,
-          prevArrow: "<div class='arrow arrow-prev'></div>",
-          nextArrow: "<div class='arrow arrow-next'></div>"
+          prevArrow: "<div class='slick-arrow slick-arrow_prew'><span class='arrow'></span></div>",
+          nextArrow: "<div class='slick-arrow slick-arrow_next'><div class='arrow'></div></div>"
         }
       }
 

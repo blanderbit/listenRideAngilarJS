@@ -829,7 +829,7 @@
 				singleMonth: 'auto',
 				hoveringTooltip: function(days, startTime, hoveringTime)
 				{
-					return days > 1 ? days + ' ' + lang('days') : '';
+					return days > 1 ? days + ' ' + lang('days') : days + ' ' + lang('day');
 				},
 				showTopbar: true,
 				swapTime: false,
@@ -1544,7 +1544,8 @@
 					});
 				dayHovering(day);
 			}
-			updateSelectableRange(time);
+			// updateSelectableRange(time);
+			updateSelectableRange();
 
 			checkSelectionValid();
 			showSelectedInfo();

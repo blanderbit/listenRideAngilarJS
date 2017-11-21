@@ -31,6 +31,8 @@ var helper = {
     },
 
     lang: navigator.language.split('-')[0].toLowerCase(),
+    termsAndConditionsEnglish: "http://cdn.listnride.com/en/tacs.pdf",
+    termsAndConditionsDeutsch: "http://cdn.listnride.com/de/tacs.pdf",
     /**
      * translation for en, de and nl
      */
@@ -105,12 +107,6 @@ var helper = {
      */
     getCurrencyFormat: function () {
         switch (helper.lang) {
-            case 'en': return {
-                regions: 'en',
-                colorize: false,
-                decimalSymbol: '.',
-                digitGroupSymbol: ','
-            };
             case 'de': return {
                 regions: 'de',
                 colorize: false,
@@ -118,10 +114,17 @@ var helper = {
                 digitGroupSymbol: '.'
             };
             case 'nl': return {
+                regions: 'nl',
                 colorize: false,
                 decimalSymbol: ',',
                 digitGroupSymbol: '.'
-            }
+            };
+            default: return {
+                regions: 'en',
+                colorize: false,
+                decimalSymbol: '.',
+                digitGroupSymbol: ','
+              };
         }
     },
     /**
@@ -131,11 +134,14 @@ var helper = {
      */
     getTranslations: function () {
         switch (helper.lang) {
-            case 'en':
-                translations = this.translationsConfigObject.en;
-                break;
-            case 'de':
+           case 'de':
                 translations = this.translationsConfigObject.de;
+                break;
+           case 'nl':
+                translations = this.translationsConfigObject.nl;
+                break;
+           default:
+                translations = this.translationsConfigObject.en;
                 break;
         }
 
@@ -175,6 +181,22 @@ var helper = {
         }
     },
     /**
+     * returns the date in correct form at
+     * @param {object} paramDate date object
+     * @param {object} paramTime time object
+     * @returns {string} correct format date
+     */
+    getDateFormatted: function (paramDate, paramTime) {
+        var returnDate = '';
+        returnDate += ('0' + paramDate.getDate()).slice(-2) + '.';
+        returnDate += ('0' + parseInt(paramDate.getMonth() + 1)).slice(-2) + '.';
+        returnDate += calendar.startDate.getFullYear();
+        if (paramTime) {
+            returnDate += ', ' + ('0' + paramTime).slice(-2) + ':00'
+        }
+        return returnDate;
+    },
+    /**
      * runs whenever date-picker change event is fired
      * @param {Date} startDate start date from calendar
      * @param {Date} endDate end date from calendar
@@ -194,6 +216,16 @@ var helper = {
             elem.append(' &euro;');
         });
 
+        // calendar discount
+        $('*[id*=lnr-calendar-discount]').each(function (index, element) {
+            var elem = $(element);
+            elem.html(calendar.discount).formatCurrency(helper.getCurrencyFormat());
+            elem.append(' &euro;');
+        });
+        $('*[id*=lnr-discount]').each(function (index, element) {
+            $(element).show();
+        });
+
         // calendar lnr fee
         $('*[id*=lnr-calendar-fee]').each(function (index, element) {
             var elem = $(element);
@@ -210,31 +242,18 @@ var helper = {
 
         // calendar start date
         $('[id=lnr-date-start]').each(function (index, element) {
-            $(element).html('from ' + calendar.startDate.getDate() +
-                '.' + calendar.startDate.getMonth() +
-                '.' + calendar.startDate.getFullYear());
+            $(element).html('from ' + helper.getDateFormatted(calendar.startDate));
         });
 
-        $('.rental-info-from').text(calendar.startDate.getDate() + '.' +
-            calendar.startDate.getMonth() + '.' +
-            calendar.startDate.getFullYear() + ', ' +
-            calendar.startTime + ':00'
-        );
-
-        $('.rental-info-to').text(calendar.endDate.getDate() + '.' +
-            calendar.endDate.getMonth() + '.' +
-            calendar.endDate.getFullYear() + ', ' +
-            calendar.endTime + ':00'
-        );
+        $('.rental-info-from').text(helper.getDateFormatted(calendar.startDate, calendar.startTime));
+        $('.rental-info-to').text(helper.getDateFormatted(calendar.endDate, calendar.endTime));
 
         $('#lnr-date-start-button').attr("title", "");
         $('#lnr-date-end-button').attr("title", "");
 
         // calendar end date
         $('[id=lnr-date-end]').each(function (index, element) {
-            $(element).html('to ' + calendar.endDate.getDate() +
-                '.' + calendar.endDate.getMonth() +
-                '.' + calendar.endDate.getFullYear());
+            $(element).html('to ' + helper.getDateFormatted(calendar.endDate));
         });
     },
     /**
@@ -398,6 +417,12 @@ var helper = {
             '<span align="right" class="mdl-list__item-primary-content md-subhead-sm" id="lnr-calendar-subtotal">0 &euro;</span>' +
             '</li>' +
 
+            // rental -- discount
+            '<li class="mdl-list__item" id="lnr-discount" style="display: none;">' +
+            '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm lnr-dark-green-text" translate="rental.discount"></span>' +
+            '<span align="right" class="mdl-list__item-primary-content md-subhead-sm lnr-dark-green-text" id="lnr-calendar-discount">0 &euro;</span>' +
+            '</li>' +
+
             // rental -- fee
             '<li class="mdl-list__item">' +
             '<span style="flex: 50;" class="mdl-list__item-primary-content md-title-sm" translate="rental.fee"></span>' +
@@ -475,33 +500,32 @@ var helper = {
      * @returns {void}
      */
     categoryName: function (categoryId) {
-
-        switch(categoryId) {
-            case 10: return 'dutch-bike';
-            case 11: return 'touring-bike';
-            case 12: return 'fixie';
-            case 13: return 'single-speed';   
-            case 20: return 'road-bike';
-            case 21: return 'triathlon';
-            case 22: return 'indoor'; 
-            case 30: return 'trecking';
-            case 31: return 'enduro';
-            case 32: return 'freeride';
-            case 33: return 'cross-country';
-            case 34: return 'downhill';
-            case 35: return 'cyclocross'; 
-            case 40: return 'city';
-            case 41: return 'all-terrain';
-            case 42: return 'road';   
-            case 50: return 'pedelec';
-            case 51: return 'e-bike'; 
-            case 60: return 'folding-bike';
-            case 61: return 'tandem';
-            case 62: return 'cruiser';
-            case 63: return 'cargo-bike';
-            case 64: return 'recumbent';
-            case 65: return 'mono-bike';  
-            default: return "";
+        switch (categoryId) {
+          case 10: return "Holland";
+          case 11: return "Touring";
+          case 12: return "Fixie";
+          case 13: return "Single Speed";
+          case 20: return "Roadbike";
+          case 21: return "Triathlon";
+          case 22: return "Indoor";
+          case 30: return "Trecking";
+          case 31: return "Enduro";
+          case 32: return "Freeride";
+          case 33: return "Cross Country";
+          case 34: return "Downhill";
+          case 35: return "Cyclocross";
+          case 40: return "Children City";
+          case 41: return "Children Allterrain";
+          case 42: return "Children Road";
+          case 50: return "Pedelec";
+          case 51: return "E-Bike";
+          case 60: return "Folding";
+          case 61: return "Tandem";
+          case 62: return "Cruiser";
+          case 63: return "Cargo";
+          case 64: return "Recumbent";
+          case 65: return "Mono";
+          default: return "";
         }
     },
     /**
@@ -552,6 +576,11 @@ var helper = {
         // disable the navigation next button until
         // user correctly fills the form 
         $('#lnr-next-button-tab-duration').prop('disabled', true);
+        // terms and conditions url based on browser language
+        $('.overview-toa').attr(
+            "href",
+            helper.lang == 'de' ? helper.termsAndConditionsDeutsch : helper.termsAndConditionsEnglish
+        );
     },
 
     /**

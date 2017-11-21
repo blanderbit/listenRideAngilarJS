@@ -3,9 +3,10 @@
 angular.module('kuchenundraketen',[]).component('kuchenundraketen', {
   templateUrl: 'app/modules/events/cwd/kuchenundraketen.template.html',
   controllerAs: 'kuchenundraketen',
-  controller: ['api',
-    function KuchenundraketenController(api) {
+  controller: ['api', '$translatePartialLoader',
+    function KuchenundraketenController(api, $tpl) {
       var kuchenundraketen = this;
+      $tpl.addPart('static');
       kuchenundraketen.bikes = [];
 
       api.get('/users/1998').then(

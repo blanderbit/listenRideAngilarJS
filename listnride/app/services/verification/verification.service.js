@@ -113,6 +113,7 @@ angular.
                     .hideDelay(4000)
                     .position('top center')
                 );
+
               }
             },
             function (error) {

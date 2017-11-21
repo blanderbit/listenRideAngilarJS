@@ -141,7 +141,11 @@
           meta = meta || {};
 
           if (meta.disableUpdate) {
-            setTag("prerender-status-code", "200");
+            // These default tags get set here, too (besides app.module.js)
+            // so they are not empty when disableUpdate is true
+            setTag("og:image", "http://www.listnride.com/app/assets/ui_images/opengraph/lnr_standard.jpg");
+            setTag('prerender-status-code', '200');
+            
             return false;
           }
 

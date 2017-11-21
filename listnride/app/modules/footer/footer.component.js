@@ -4,10 +4,14 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
   templateUrl: 'app/modules/footer/footer.template.html',
   controllerAs: 'footer',
   controller: [
-    '$scope', '$window', '$location', '$translate', '$stateParams',
-    function FooterController($scope, $window, $location, $translate, $stateParams) {
+    '$scope',
+    '$window',
+    '$location',
+    '$localStorage',
+    '$translate',
+    '$stateParams',
+    function FooterController($scope, $window, $location, $localStorage, $translate, $stateParams) {
       var footer = this;
-
       footer.hideFooter = $stateParams.hideFooter;
 
       $scope.$watch(
@@ -34,12 +38,37 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
 
       footer.language = getLanguage($translate.use());
 
+      // switch url based on language
+      footer.switchDomain = function (language) {
+        var url = window.location.host.split('.');
+        // using localhost
+        if (url.indexOf("localhost") >= 0) {
+          if (language == 'nl' || language == 'de') {
+            window.location = 'https://' + ['www.listnride', language].join('.');
+          } else {
+            window.location = "https://www.listnride.com";
+          }
+        }
+        // staging or production
+        else {
+          url.splice(-1).join('.');
+          if (language == 'nl' || language == 'de') {
+            url = url.join('.');
+            window.location = 'https://' + [url, language].join('.');
+          } else {
+            url = url.join('.');
+            window.location = 'https://' + [url, 'com'].join('.');
+          }
+        }
+      };
+
+      // switch url based on language
       footer.switchLanguage = function (locale) {
         // update the language
         $translate.use(locale).then(function () {
           // save in local storage
           $localStorage.selectedLanguage = locale;
-          footer.language = getLanguage(locale);
+          footer.switchDomain($localStorage.selectedLanguage);
         });
       };
 
@@ -56,6 +85,8 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
           return 'Deutsch';
         } else if (locale === 'nl') {
           return 'Nederlands';
+        } else if (locale === 'it') {
+          return 'Italiano';
         } else {
           return 'English';
         }

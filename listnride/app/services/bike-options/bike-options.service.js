@@ -1,12 +1,9 @@
 'use strict';
 
-angular
-.module('listnride')
-.factory('bikeOptions', [
-  function() {
-
+angular.module('listnride')
+  .factory('bikeOptions', [function () {
     return {
-      accessoryOptions: function() {
+      accessoryOptions: function () {
         return [
           {model: "has_lock", label: "lock", iconFileName: "accessoire_lock.svg"},
           {model: "has_helmet", label: "helmet", iconFileName: "accessoire_helmet.svg"},
@@ -17,7 +14,7 @@ angular
         ]
       },
 
-      sizeOptions: function() {
+      sizeOptions: function () {
         return [
           {value: 155, label: "155 cm - 165 cm"},
           {value: 165, label: "165 cm - 175 cm"},
@@ -27,7 +24,7 @@ angular
         ];
       },
 
-      kidsSizeOptions: function() {
+      kidsSizeOptions: function () {
         return [
           {value: 85, label: "85 cm - 95 cm"},
           {value: 95, label: "95 cm - 105 cm"},
@@ -39,7 +36,7 @@ angular
         ];
       },
 
-      categoryOptions: function() {
+      categoryOptions: function () {
         return [
           {value: 1, label: "city", iconFileName: "biketype_1.svg"},
           {value: 2, label: "race", iconFileName: "biketype_2.svg"},
@@ -50,7 +47,7 @@ angular
         ];
       },
 
-      subcategoryOptions: function() {
+      subcategoryOptions: function () {
         return {
           "1": [
             {value: 0, label: "dutch-bike"},
@@ -86,12 +83,10 @@ angular
             {value: 2, label: "cruiser"},
             {value: 3, label: "cargo-bike"},
             {value: 4, label: "recumbent"},
-            {value: 5, label: "mono-bike"}
+            {value: 5, label: "mono-bike"},
+            {value: 6, label: "trailer"}
           ],
         };
       }
-
     };
-
-  }
-]);
+  }]);

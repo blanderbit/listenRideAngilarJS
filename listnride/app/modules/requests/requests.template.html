@@ -71,7 +71,12 @@
         </div>
         <md-divider md-insets></md-divider>
         <span></span>
-        <md-button class="md-raised md-primary" ng-click="requests.nextPage()" ng-style="{'display': requests.loadingList ? 'none' : ''}">
+        <md-button
+          class="md-raised md-primary"
+          ng-click="requests.nextPage()"
+          ng-style="{'display': requests.loadingList ? 'none' : ''}"
+          ng-if="requests.requestsLeft"
+        >
           {{ 'shared.load-more' | translate }}
         </md-button>
       </div>

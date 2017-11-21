@@ -6,7 +6,8 @@
       <div flex-gt-xs="70" layout="row">
         <img class="lnr-profile-lrg" ng-src="{{user.user.profile_picture.profile_picture.url}}">
         <div layout="column" layout-align="center start" layout-padding>
-          <h1 class="md-headline">{{user.user.first_name}} {{user.user.last_name}}</h1>
+          <h1 ng-if="!user.user.business" class="md-headline">{{user.user.first_name}} {{user.user.last_name}}</h1>
+          <h1 ng-if="user.user.business" class="md-headline">{{user.user.business.company_name}}</h1>
           <input-stars class="lnr-user-rating rating" max="5" ng-model="user.rating" readonly></input-stars>
           <span class="md-body-1">{{user.user.city}}, {{user.user.country}}</span>
         </div>
@@ -42,7 +43,7 @@
 
     <md-divider></md-divider>
 
-    <div layout="column" flex="90" layout-padding>
+    <div layout="column" flex-xs="100" flex="90" layout-padding>
       <!-- description -->
       <div layout="row" layout-xs="column">
         <div flex-gt-xs="25">

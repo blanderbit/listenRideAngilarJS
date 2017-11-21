@@ -3,13 +3,13 @@
 angular.module('muli-integration',[]).component('muli', {
   templateUrl: 'app/modules/brand-integration/muli.template.html',
   controllerAs: 'muli',
-  controller: [ '$translate', 'api', 'ngMeta',
-    function MuliController($translate, api, ngMeta) {
+  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta',
+    function MuliController($translate, $tpl, api, ngMeta) {
       ngMeta.setTitle($translate.instant("brand-integration.muli.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.muli.meta-description"));
 
       var muli = this;
-
+      $tpl.addPart('static');
       muli.bikes = {
         berlin: [],
         munich: []

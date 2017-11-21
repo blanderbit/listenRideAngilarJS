@@ -1,8 +1,39 @@
 <!DOCTYPE html>
-<head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <body>
-    <script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.js"></script>
-    <div style="width:60%">
-        <div id="listnride" data-user="1005" data-lang="nl"></div>
-    </div>
+<!-- ***** S3 script for production *****
+<script type="text/javascript"
+        src="https://s3.eu-central-1.amazonaws.com/listnride-cdns/lnr-shop-integration.min.js"></script>
+<!-->
+
+<!--  ***** Local un-minified scripts *****
+<script src="scripts/lnr-shop-integration.constants.js"></script>
+<script src="scripts/lnr-shop-integration.helper.js"></script>
+<script src="scripts/lnr-shop-integration.jquery.js"></script>
+<script type="text/javascript" src="scripts/lnr-shop-integration.js"></script>
+ <!--<script type="text/javascript" src="scripts/lnr-shop-integration.vendor.js"></script> -->
+<!-->
+
+<!-- ***** local minified scripts ***** -->
+<script src="lnr-shop-integration.min.js"></script>
+<!-->
+
+<!-- used for demo. user id and language can be provided manually for testing -->
+<div style="margin:12px;">
+    <form>
+      <input placeholder="user id" name="user_id" id="user_demo_id">
+      <input placeholder="user lang" name="user_lang" id="user_demo_lang">
+      <button type="button" onclick="lnrHelper.renderBikes(0, 0, true)">Go</button>
+    </form>
+  </div>
+
+<!-- used for demo. user id and language can be provided manually for testing -->
+<div>
+  <!-- required for production. renders bikes -->
+  <div id="listnride" data-user="1014" data-lang="de"></div>
+</div>
 </body>

@@ -3,16 +3,19 @@
 angular.module('seoLanding',[]).component('seoLanding', {
   templateUrl: 'app/modules/seo-landing/seo-landing.template.html',
   controllerAs: 'seoLanding',
-  controller: ['$translate', '$stateParams', '$state', '$http', 'api',
-    function SeoLandingController($translate, $stateParams, $state, $http, api) {
+  controller: ['$translate', '$translatePartialLoader', '$stateParams', '$state', '$http', 'api',
+    function SeoLandingController($translate, $tpl, $stateParams, $state, $http, api) {
 
       var seoLanding = this;
+      $tpl.addPart('static');
       seoLanding.bikes = {};
+      seoLanding.loading = true;
 
       api.get('/seo_pages?url=' + $stateParams.pageTitle).then(
         function (success) {
           seoLanding.data = success.data;
           seoLanding.bikes = success.data.bikes
+          seoLanding.loading = false;
         },
         function (error) {
           $state.go('404');

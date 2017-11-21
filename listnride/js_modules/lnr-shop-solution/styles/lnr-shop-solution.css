@@ -10,6 +10,10 @@ html>body {
   display: none;
 }
 
+.lnr-dark-green-text {
+  color: #00AD68 !important;
+}
+
 @media (min-width: 480px) {
   .lnr-column-right {
     display: block;
@@ -473,17 +477,16 @@ lnr-vertical-divider {
   padding: 0px !important;
 }
 
-.dropdown-caret {
-    width: 0; 
-    height: 0; 
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 7px solid #584e4e;
-    margin-top: 15px;
-}
-
-
 /*------------ DROPDOWN ------------*/
+
+.dropdown-caret {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid #584e4e;
+  margin-top: 15px;
+}
 
 .lnr-dropdown-button {
   margin: 0px; /* no margin applied. to match with ours input containers */

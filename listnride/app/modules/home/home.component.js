@@ -46,8 +46,8 @@ angular.module('home',[]).component('home', {
         );
       }
 
-      ngMeta.setTitle($translate.instant("home.meta-title"));
-      ngMeta.setTag("description", $translate.instant("home.meta-description"));
+      // ngMeta.setTitle($translate.instant("home.meta-title"));
+      // ngMeta.setTag("description", $translate.instant("home.meta-description"));
 
       api.get("/featured").then(function(response) {
         home.featuredBikes = response.data.slice(0,6);

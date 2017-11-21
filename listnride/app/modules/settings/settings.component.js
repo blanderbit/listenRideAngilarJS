@@ -19,11 +19,12 @@ angular.module('settings',[]).component('settings', {
     'userApi',
     '$timeout',
     '$mdDialog',
+    'authentication',
     function SettingsController(
       $localStorage, $window, $mdToast,
       $translate, api, accessControl, sha256, Base64,
       Upload, loadingDialog, ENV, ngMeta,
-      userApi, $timeout, $mdDialog
+      userApi, $timeout, $mdDialog, authentication
       ) {
       if (accessControl.requireLogin()) {
         return;
@@ -107,6 +108,7 @@ angular.module('settings',[]).component('settings', {
         settings.current_payment = false;
         settings.business = {};
         settings.user.business = false;
+        settings.user.paymentLoading = false;
         userApi.getUserData().then(function (response) {
           settings.user = response.data;
           settings.current_payment = response.data.status === 3;
@@ -128,7 +130,7 @@ angular.module('settings',[]).component('settings', {
         var initials = phone_number.slice(0, 3);
         var endings = phone_number.slice(-3);
         var length = phone_number.length - initials.length - endings.length + 1;
-        settings.user.phone_number_privatized = initials.concat(Array(length).join('*')).concat(endings);
+        settings.user.phone_number_privatized = "+" + initials.concat(Array(length).join('*')).concat(endings);
       }
 
       function getBusinessData() {
@@ -486,6 +488,37 @@ angular.module('settings',[]).component('settings', {
         );
       };
 
+      settings.deleteAccount = function(event) {
+        var confirm = $mdDialog.confirm()
+          .title($translate.instant('settings.delete-account-sure'))
+          .textContent($translate.instant('settings.delete-account-sure-description'))
+          .targetEvent(event)
+          .ok($translate.instant('settings.delete-account-yes'))
+          .cancel($translate.instant('settings.delete-account-no'));
+
+        $mdDialog.show(confirm).then(
+          function() {
+            api.delete('/users/' + authentication.userId()).then(
+              function(success) {
+                $mdToast.show(
+                  $mdToast.simple()
+                  .textContent($translate.instant('toasts.account-deleted'))
+                  .hideDelay(1100)
+                  .position('top center')
+                ).then(function(){
+                  authentication.logout();
+                });
+              },
+              function(error) {
+              }
+            );
+          },
+          function() {
+        
+          }
+        );
+      }
+
       settings.updateUser = function () {
         var data = {
           "description": settings.user.description,
@@ -497,7 +530,7 @@ angular.module('settings',[]).component('settings', {
         };
 
         if (settings.password && settings.password.length >= 6) {
-          data.user.password_hashed = sha256.encrypt(settings.password);
+          data.password_hashed = sha256.encrypt(settings.password);
         }
 
         loadingDialog.open();
@@ -586,8 +619,10 @@ angular.module('settings',[]).component('settings', {
       };
 
       settings.currentPaymentMethod = function () {
+        settings.user.paymentLoading = true;
         api.get('/users/' + settings.user.id + '/current_payment').then(
           function(response) {
+            settings.user.paymentLoading = false;
             settings.user.current_payment_method = response.data;
           },
           function(error) {
@@ -606,7 +641,8 @@ angular.module('settings',[]).component('settings', {
           openFrom: angular.element(document.body),
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,
-          escapeToClose: true
+          escapeToClose: true,
+          fullscreen: true
         }).then(function (success) {
           // update model with new number
           settings.user.phone_number = success.phone_number;

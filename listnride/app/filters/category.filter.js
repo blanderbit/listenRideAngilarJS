@@ -3,41 +3,39 @@
 angular.
   module('listnride').
   filter('category', ['$translate', function($translate) {
-
     return function(categoryId) {
       switch(categoryId) {
-        case 10: return $translate.instant('list.subcategory.1.dutch-bike'); break;
-        case 11: return $translate.instant('list.subcategory.1.touring-bike'); break;
-        case 12: return $translate.instant('list.subcategory.1.fixie'); break;
-        case 13: return $translate.instant('list.subcategory.1.single-speed'); break;
+        case 10: return 'list.subcategory.1.dutch-bike';
+        case 11: return 'list.subcategory.1.touring-bike';
+        case 12: return 'list.subcategory.1.fixie';
+        case 13: return 'list.subcategory.1.single-speed';
 
-        case 20: return $translate.instant('list.subcategory.2.road-bike'); break;
-        case 21: return $translate.instant('list.subcategory.2.triathlon'); break;
-        case 22: return $translate.instant('list.subcategory.2.indoor'); break;
+        case 20: return 'list.subcategory.2.road-bike';
+        case 21: return 'list.subcategory.2.triathlon';
+        case 22: return 'list.subcategory.2.indoor';
 
-        case 30: return $translate.instant('list.subcategory.3.tracking'); break;
-        case 31: return $translate.instant('list.subcategory.3.enduro'); break;
-        case 32: return $translate.instant('list.subcategory.3.freeride'); break;
-        case 33: return $translate.instant('list.subcategory.3.cross-country'); break;
-        case 34: return $translate.instant('list.subcategory.3.downhill'); break;
-        case 35: return $translate.instant('list.subcategory.3.cyclocross'); break;
+        case 30: return 'list.subcategory.3.tracking';
+        case 31: return 'list.subcategory.3.enduro';
+        case 32: return 'list.subcategory.3.freeride';
+        case 33: return 'list.subcategory.3.cross-country';
+        case 34: return 'list.subcategory.3.downhill';
+        case 35: return 'list.subcategory.3.cyclocross';
 
-        case 40: return $translate.instant('list.subcategory.4.city'); break;
-        case 41: return $translate.instant('list.subcategory.4.all-terrain'); break;
-        case 42: return $translate.instant('list.subcategory.4.road'); break;
+        case 40: return 'list.subcategory.4.city';
+        case 41: return 'list.subcategory.4.all-terrain';
+        case 42: return 'list.subcategory.4.road';
 
-        case 50: return $translate.instant('list.subcategory.5.pedelec'); break;
-        case 51: return $translate.instant('list.subcategory.5.e-bike'); break;
+        case 50: return 'list.subcategory.5.pedelec';
+        case 51: return 'list.subcategory.5.e-bike';
 
-        case 60: return $translate.instant('list.subcategory.6.folding-bike'); break;
-        case 61: return $translate.instant('list.subcategory.6.tandem'); break;
-        case 62: return $translate.instant('list.subcategory.6.cruiser'); break;
-        case 63: return $translate.instant('list.subcategory.6.cargo-bike'); break;
-        case 64: return $translate.instant('list.subcategory.6.recumbent'); break;
-        case 65: return $translate.instant('list.subcategory.6.mono-bike'); break;
+        case 60: return 'list.subcategory.6.folding-bike';
+        case 61: return 'list.subcategory.6.tandem';
+        case 62: return 'list.subcategory.6.cruiser';
+        case 63: return 'list.subcategory.6.cargo-bike';
+        case 64: return 'list.subcategory.6.recumbent';
+        case 65: return 'list.subcategory.6.mono-bike';
 
-        default: return ""; break;
+        default: return "";
       }
-    }
-
+    };
   }]);

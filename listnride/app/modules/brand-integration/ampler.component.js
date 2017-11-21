@@ -3,9 +3,10 @@
 angular.module('ampler-integration',[]).component('ampler', {
   templateUrl: 'app/modules/brand-integration/ampler.template.html',
   controllerAs: 'ampler',
-  controller: [ '$translate', 'api', 'ngMeta',
-    function AmplerController($translate, api, ngMeta) {
+  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta',
+    function AmplerController($translate, $tpl, api, ngMeta) {
       var ampler = this;
+      $tpl.addPart('static');
       ngMeta.setTitle($translate.instant("brand-integration.ampler.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.ampler.meta-descr"));
 

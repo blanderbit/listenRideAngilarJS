@@ -18,15 +18,13 @@ angular.
         $localStorage.unreadMessages = response.unread_messages;
         $localStorage.email = response.email;
         $localStorage.referenceCode = response.ref_code;
+        $localStorage.isBusiness = (response.business !== undefined);
       };
 
-      // TODO: This is a duplicate of app.module.js
       var retrieveLocale = function() {
         var defaultLanguage = "en";
         var availableLanguages = ["de", "en", "nl"];
-    
-        var host = window.location.host;
-        var retrievedLanguage = host.split('.')[0];
+        var retrievedLanguage = $localStorage.selectedLanguage;
     
         if (availableLanguages.indexOf(retrievedLanguage) >= 0) {
           return retrievedLanguage;
@@ -36,12 +34,13 @@ angular.
       };
 
       // The Signup Dialog Controller
-      var SignupDialogController = function($mdDialog, inviteCode) {
+      var SignupDialogController = function($mdDialog, inviteCode, requesting, business) {
         var signupDialog = this;
 
         signupDialog.signingUp = false;
-        signupDialog.business = false;
+        signupDialog.business = business;
         signupDialog.businessError = false;
+        signupDialog.requesting = requesting;
         var invited = !!inviteCode;
 
         var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName) {
@@ -112,7 +111,9 @@ angular.
             if (signupDialog.business) {
               signupDialog.createBusiness();
             } else {
-              $state.go('home');
+              if (!signupDialog.requesting) {
+                $state.go('home');
+              }
               verification.openDialog(false, invited);
             }
           }, function(error) {
@@ -242,25 +243,34 @@ angular.
         };
 
         loginDialog.resetPassword = function() {
-          var user = {
-            "user": {
-              "email": loginDialog.email
-            }
-          };
-          api.post('/users/reset_password', user).then(function(success) {
+          if (loginDialog.email) {
+            var user = {
+              "user": {
+                "email": loginDialog.email
+              }
+            };
+            api.post('/users/reset_password', user).then(function(success) {
+              $mdToast.show(
+                $mdToast.simple()
+                  .textContent($translate.instant('toasts.reset-password-success'))
+                  .hideDelay(5000)
+                  .position('top center')
+              );
+            }, function(error) {
+              loginDialog.error = error.data.errors[0]
+            });
+          } else {
             $mdToast.show(
               $mdToast.simple()
-              .textContent($translate.instant('toasts.reset-password-success'))
-              .hideDelay(5000)
-              .position('top center')
+                .textContent($translate.instant('toasts.enter-email'))
+                .hideDelay(5000)
+                .position('top center')
             );
-          }, function(error) {
-
-          });
+          }
         }
       };
 
-      var showSignupDialog = function(inviteCode, event) {
+      var showSignupDialog = function(inviteCode, requesting, event, business) {
         $mdDialog.show({
           controller: SignupDialogController,
           controllerAs: 'signupDialog',
@@ -272,7 +282,9 @@ angular.
           clickOutsideToClose: true,
           fullscreen: true, // Only for -xs, -sm breakpoints.
           locals : {
-            inviteCode : inviteCode
+            inviteCode : inviteCode,
+            requesting: requesting,
+            business: business
           }
         })
         .then(function(answer) {

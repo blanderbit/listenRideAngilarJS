@@ -1,11 +1,29 @@
 <!-- Layout for the Tile View -->
-<md-content ng-if="!listings.listView">
+<md-content ng-if="!listings.listView" class="single-column">
   <div class="content lnr-page-margin" layout-align="center center">
-    <tile-view bikes="listings.bikes"></tile-view>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h1 class="md-headline">{{ 'listings.my-bikes' | translate }}</h1>
+    </div>
+
+    <div ng-if="listings.bikes !== undefined && listings.bikes.length == 0" layout="column" layout-align="center center">
+      {{ 'listings.no-bikes' | translate }}<br><br>
+      <md-button ui-sref="listingABike" class="md-raised md-primary md-lrg">{{ 'shared.list-a-bike' | translate }}</md-button>
+    </div>
+
+    <div ng-if="listings.bikes !== undefined && listings.bikes.length > 0" layout="column" layout-align="center center">
+      <md-button ui-sref="list" class="md-raised md-primary md-lrg">{{ 'shared.list-a-bike' | translate }}</md-button>
+    </div>
+
+    <div flex-gt-xs layout="row" layout-wrap layout-padding layout-align="center center">
+      <listing-card ng-repeat="bike in listings.bikes" flex="100" flex-gt-xs="50" flex-gt-sm="33"
+        bike-id="bike.id" name="bike.name" brand="bike.brand" category="bike.category" price="bike.price_from"
+        image-url=" bike.image_file_1.image_file_1.small.url" available="bike.available"
+        remove-bike="listings.removeBike(bikeId)">
+      </listing-card>
+    </div>
   </div>
   <footer></footer>
 </md-content>
-<!------------------------------>
 
 <!-- Layout for the List View -->
 <div ng-if="listings.listView" flex="100" layout="column" layout-fill>
@@ -30,8 +48,8 @@
     </div>
   </md-content>
 </div>
-<!------------------------------>
 
+<!-- side nav -->
 <md-sidenav md-disable-scroll-target="body" class="md-sidenav-right md-whiteframe-4dp" md-component-id="edit">
   sdafafdsf
   asfdafsd

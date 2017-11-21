@@ -1,4 +1,4 @@
- <md-content class="single-column"> 
+<md-content class="single-column"> 
   <div
     id="hero-shot"
     class="lnr-preload-bg"
@@ -17,36 +17,43 @@
   </div>
 
   <div class="content" layout="column">
-    <md-button class="md-raised md-primary lnr-margin-lrg" hide show-xs show-sm ng-click="bike.showCalendarDialog()">
-      {{ 'bike.rent-bike' | translate }}
-    </md-button>
-
     <div flex layout="row" layout-xs="column" layout-align="space-between none" layout-gt-sm-align="start none" layout-padding>
       <div flex-sm="55" layout="row" layout-align="start center">
         <md-icon ng-if="bike.data.category" class="lnr-margin-right lnr-icn-mlrg md-color-foreground lnr-no-padding" md-svg-src="app/assets/ui_icons//biketype_{{ bike.data.category | limitTo: 1 }}.svg"></md-icon>
         <div flex layout="column">
-          <h1 class="md-title">{{ bike.data.brand }}, {{ bike.data.category | category }}</h1>
+          <h1 class="md-title">{{ bike.data.brand }}, {{ bike.category }}</h1>
           <h2 class="md-subhead">{{ bike.data.name }}</h2>
         </div>
       </div>
-
       <div flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center">
-          <div flex="33" layout="column" layout-align="center center">
-            <span class="md-headline">{{ bike.data.price_half_daily | number : 0 }} €</span>
-            <span class="md-caption" ng-if="bike.data.family != 9 && bike.data.family != 11">{{ 'shared.half-day' | translate }}</span>
+          <div flex="30" layout="column" layout-align="center center">
+            <div layout="row">
+              <span class="md-headline">{{ bike.data.prices[0].price | number : 0 }}€</span>
+            </div>
+            <span class="md-caption" ng-if="bike.data.family != 9 && bike.data.family != 11">{{ 'bike.per-day' | translate }}</span>
             <span class="md-caption" ng-if="bike.data.family == 9 || bike.data.family == 11"><= 4h</span>
           </div>
-          <div flex="33" layout="column" layout-align="center center">
-            <span class="md-headline">{{ bike.data.price_daily | number : 0 }} €</span>
-            <span class="md-caption" ng-if="bike.data.family != 9 && bike.data.family != 11">{{ 'shared.day-6h' | translate }}</span>
+          <div flex="30" layout="column" layout-align="center center">
+            <div layout="row">
+              <span class="md-headline">{{ bike.data.prices[1].price | number : 0 }}€</span>
+              <span class="md-caption per-day" layout layout-align="end end">&nbsp;{{ 'shared.pd' | translate }}</span>
+            </div>
+            <span class="md-caption" ng-if="bike.data.family != 9 && bike.data.family != 11">{{ 'bike.from-2-days' | translate }}</span>
             <span class="md-caption" ng-if="bike.data.family == 9 || bike.data.family == 11">> 4h</span>
           </div>
-          <div flex="33" layout="column" layout-align="center center">
-            <span class="md-headline">{{ bike.data.price_weekly | number : 0 }} €</span>
-            <span class="md-caption"  >{{ 'shared.week' | translate }}</span>
+          <div flex="30" layout="column" layout-align="center center" class="lnr-dark-green-text">
+            <div layout="row">
+              <span class="md-headline">{{ bike.data.prices[6].price | number : 0 }}€</span>
+              <span class="md-caption per-day" layout layout-align="end end">&nbsp;{{ 'shared.pd' | translate }}</span>
+            </div>
+            <span class="md-caption"  >{{ 'bike.from-week' | translate }}</span>
           </div>
       </div>
     </div>
+
+    <md-button class="md-raised md-primary lnr-margin-lrg" hide show-xs show-sm ng-click="bike.showCalendarDialog()">
+      {{ 'bike.rent-bike' | translate }}
+    </md-button>
 
     <md-divider></md-divider>
 
@@ -116,7 +123,7 @@
             </div>
             <div layout="row" layout-align="start center">
               <p flex="20" class="md-body-2">{{ 'list.category.label' | translate }}</p>
-              <p class="md-body-1">{{ bike.data.category | category }}</p>
+              <p class="md-body-1">{{ bike.data.category | category | translate  }}</p>
             </div>
           </div>
         </div>
@@ -129,7 +136,8 @@
             <a ui-sref="user({userId: bike.data.user.id})">
               <img class="lnr-profile-md lnr-margin-right lnr-clickable" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
             </a>
-            <p class="md-subhead lnr-margin-left lnr-clickable" flex-offset="2" ui-sref="user({userId: bike.data.user.id})">{{bike.data.user.first_name}} {{bike.data.user.last_name}}</p>
+            <p ng-if="!bike.data.business" class="md-subhead lnr-margin-left lnr-clickable" flex-offset="2" ui-sref="user({userId: bike.data.user.id})">{{bike.data.user.first_name}} {{bike.data.user.last_name}}</p>
+            <p ng-if="bike.data.business" class="md-subhead lnr-margin-left lnr-clickable" flex-offset="2" ui-sref="user({userId: bike.data.user.id})">{{bike.data.business.company_name}}</p>
           </div>
         </div>
 
@@ -156,7 +164,7 @@
       <md-divider hide-sm hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
 
       <div flex="30" hide-sm hide-xs>
-        <calendar ng-if="!bike.mobileCalendar()" bike-id="bike.data.id" price-half-day="bike.data.price_half_daily" price-day="bike.data.price_daily" price-week="bike.data.price_weekly" bike-family="bike.data.family" requests="bike.data.requests" user-id="bike.data.user.id"></calendar>
+        <calendar ng-if="!bike.mobileCalendar()" bike-id="bike.data.id" price-half-day="bike.data.price_half_daily" price-day="bike.data.price_daily" price-week="bike.data.price_weekly" prices="bike.data.prices" bike-family="bike.data.family" requests="bike.data.requests" user-id="bike.data.user.id"></calendar>
       </div>
     </div>
    

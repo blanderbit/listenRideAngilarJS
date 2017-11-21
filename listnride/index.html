@@ -11,7 +11,7 @@
   <meta name="prerender-status-code" content="{{ngMeta['prerender-status-code']}}" />
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
   <meta name="fragment" content="!">
-  <meta property="og:image" content="http://www.listnride.com/app/assets/ui_images/opengraph/lnr_standard.jpg" />
+  <meta property="og:image" content="{{ngMeta['og:image']}}" />
   <meta property="og:image:width" content="800" /> 
   <meta property="og:image:height" content="534" />
   <meta property="og:description" content="{{ngMeta.description}}" />
@@ -57,6 +57,7 @@
   <script src="node_modules/angular-input-stars/angular-input-stars.js"></script>
   <script src="js_modules/angular-material-minimal/angular-material.min.js" type="text/javascript"></script>
   <script src="node_modules/angular-translate/dist/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+  <script src="node_modules/angular-translate-loader-partial/angular-translate-loader-partial.min.js"></script>
   <script src="node_modules/ngstorage/ngStorage.min.js"></script>
   <script src="node_modules/angular-easyfb/build/angular-easyfb.min.js"></script>
   <script src="node_modules/ngmap/build/scripts/ng-map.min.js"></script>
@@ -85,7 +86,7 @@
   <script src="app/modules/brand-integration/brompton.component.js"></script>
   <script src="app/modules/brand-integration/bonvelo.component.js"></script>
   <script src="app/modules/brand-integration/motoparilla.component.js"></script>
-  <script src="app/modules/bike/edit/edit.component.js"></script>
+  <script src="app/modules/brand-integration/vanmoof.component.js"></script>
   <script src="app/modules/events/crossride/crossride.component.js"></script>
   <script src="app/modules/events/in-velo-veritas/in-velo-veritas.component.js"></script>
   <script src="app/modules/events/velothon-bikerental/velothon-bikerental.component.js"></script>
@@ -101,7 +102,6 @@
   <script src="app/modules/header/header.component.js"></script>
   <script src="app/modules/home/home.component.js"></script>
   <script src="app/modules/bike/list/list.component.js"></script>
-  <script src="app/modules/bike/list-view/list-view.component.js"></script>
   <script src="app/modules/listing-a-bike/listing-a-bike.component.js"></script>
   <script src="app/modules/listings/listings.component.js"></script>
   <script src="app/modules/renting-a-bike/renting-a-bike.component.js"></script>
@@ -124,14 +124,18 @@
   <script src="app/modules/events/cwd/kuchenundraketen.component.js"></script>
   <script src="app/modules/brand-integration/brompton.component.js"></script>
   <script src="app/modules/brand-integration/muli.component.js"></script>
+  <script src="app/modules/brand-integration/votec.component.js"></script>
   <script src="app/modules/invite/invite.component.js"></script>
+  <script src="app/modules/referral-link/referral-link.component.js"></script>
   <script src="app/modules/invite-landing/invite-landing.component.js"></script>
   <script src="app/modules/invest/invest.component.js"></script>
   <script src="app/modules/events/supercross-munich/supercross-munich.component.js"></script>
+  <script src="app/modules/events/cape-argus/cape-argus.component.js"></script>
+  <script src="app/modules/meta-tags/meta-tags.component.js"></script>
   <script src="app/modules/seo-landing/seo-landing.component.js"></script>
+  <script src="app/modules/business-community/business-community.component.js"></script>
   <script src="app/modules/listings/views/tile-view.component.js"></script>
   <script src="app/modules/listings/views/list-view.component.js"></script>
-
   <script src="app/modules/jobs/jobs.controller.js"></script>  
   <script src="app/modules/jobs/jobs.service.js"></script>  
   
@@ -148,12 +152,54 @@
   <script src="app/services/access-control/access-control.service.js"></script>
   <script src="app/services/loading-dialog/loading-dialog.service.js"></script>
   <script src="app/services/user-api/user-api.service.js"></script>
+  <script src="app/services/price/price.service.js"></script>
   <script src="app/filters/category.filter.js"></script>
   <script src="app/filters/map-category.filter.js"></script>
   <script src="app/filters/title-case.filter.js"></script>
+
+  <script src="app/directives/showAsInteger.js"></script>
   <!-- endbuild -->
   <!-- inject:js -->
   <!-- endinject -->
+
+  <!-- organizational schema.org -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "listnride",
+      "legalName": "List and Ride GmbH",
+      "description": "The perfect bike. Simply rent it. Join listnride and find the bike that is right for you.",
+      "foundingDate": "2016",
+      "founders": [
+        {
+          "@type": "Person",
+          "name": "Gert-Jan van Wijk"
+        },
+        {
+          "@type": "Person",
+          "name": "Johannes Stuhler"
+        },
+        {
+          "@type": "Person",
+          "name": "Moritz Hofmann"
+        }
+      ],
+      "url": "https://www.listnride.com",
+      "logo": "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/14657519_1883887185177339_3365828092985602698_n.png?oh=9ad272284dcab01378bd3cc6b08c0c8f&oe=5AA59707",
+      "sameAs": [
+          "https://www.facebook.com/listnride",
+          "https://instagram.com/listnride"
+      ],
+      "contactPoint": [
+        { "@type": "ContactPoint",
+          "contactType": "customer service",
+          "url": "https://www.listnride.com/help"
+        }
+      ]
+    }
+  </script>
+  <!-- end organizational schema.org -->
 
   <!-- Facebook Pixel Code -->
   <script>

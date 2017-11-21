@@ -7,6 +7,9 @@ var logger = function (req, res, next) {
   next();
 };
 
+// prerender
+app.use(require('prerender-node').set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
+
 // setting proper http headers
 app.use(helmet());
 
@@ -14,14 +17,35 @@ app.use(helmet());
 app.enable('trust proxy');
 app.use(expressEnforcesSSL());
 
-// prerender
-app.use(prerender.set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
-
 // get port from env
 app.set('port', (process.env.PORT || 9003));
 
 // see all transactions through server
 app.use(logger);
+
+var determineTld = function(language) {
+  switch (language) {
+    case "en": return "listnride.com";
+    case "de": return "listnride.de";
+    case "nl": return "listnride.nl";
+    case "it": return "listnride.it";
+    default: return "listnride.com";
+  }
+};
+
+// proper redirects based on browser language
+app.use(function(req, res, next) {
+	var language = req.acceptsLanguages("en", "de", "nl", "it") || "en";
+  var correctUrl = req.subdomains.reverse().join(".") + "." + determineTld(language);
+  console.log(req.hostname);
+  console.log(correctUrl);
+  if (req.hostname == correctUrl) {
+    next();
+  } else {
+    // res.redirect(302, "https://" + correctUrl + req.originalUrl);
+    next();
+  }
+});
 
 // by default serves index.html
 // http://expressjs.com/en/4x/api.html#express.static
