@@ -1,0 +1,46 @@
+<md-dialog>
+    <div show-xs>
+        <div class="md-toolbar-tools" layout-align="center center">
+            <md-button class="md-icon-button">
+                <md-icon></md-icon>
+            </md-button>
+            <span flex></span>
+            <h2 class="md-headline" hide-xs>Duplicate Bikes</h2>
+            <h2 class="md-headline" hide-gt-xs>Duplicate Bikes</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="duplicate.cancelDialog()">
+                <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
+            </md-button>
+        </div>
+    </div>
+    <md-dialog-content>
+        <div class="md-dialog-content" layout="column">
+            <div class="tab-content" layout="column">
+                <div layout="row" layout-align="center center">
+                    <md-input-container flex>
+                        <form name="duplicate_form" class="lnr-tel-int">
+                            <label>How how bikes?</label>
+                            <input
+                                required
+                                type="number"
+                                name="duplicate_number"
+                                ng-model="duplicate.duplicate_number"
+                                ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/"
+                                ng-maxlength="3"
+                            >
+                        </form>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-align="center center">
+                    <span flex="50"></span>
+                    <md-input-container layout="row" flex="45">
+                        <md-button flex class="md-raised md-primary lnr-btn-inline" ng-click="duplicate.closeDialog()">
+                            <span hide-xs>Duplicate</span>
+                            <span hide-gt-xs>Duplicate</span>
+                        </md-button>
+                    </md-input-container>
+                </div>
+            </div>
+        </div>
+    </md-dialog-content>
+</md-dialog>

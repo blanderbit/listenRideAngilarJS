@@ -51,7 +51,7 @@
                     <md-button md-no-ink ng-click="listView.editBike(bike.id, $event)">Edit</md-button>
                   </md-menu-item>
                   <md-menu-item>
-                    <md-button md-no-ink ui-sref="listingABike">Duplicate</md-button>
+                    <md-button md-no-ink ng-click="listView.duplicateBike(bike, $event)">Duplicate</md-button>
                   </md-menu-item>
                   <md-menu-item>
                     <md-button md-no-ink ng-click="listView.onDeactivateClick($index)">{{!bike.available ? "Activate" : "Deactivate"}}</md-button>

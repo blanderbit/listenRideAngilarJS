@@ -78,7 +78,7 @@ angular.module('listings').component('listView', {
         if (event.stopPropogation) event.stopPropogation();
       };
 
-      
+
       listView.viewBike = function(id, event){
 
         // stop event from propograting
@@ -159,6 +159,50 @@ angular.module('listings').component('listView', {
       listView.openUrl = function () {
         var url = $state.href('listingABike', {parameter: "parameter"});
         window.open(url,'_blank');
+      };
+
+      var DuplicateBikeController = function() {
+        var duplicate = this;
+        duplicate.duplicate_number = 0;
+
+        // cancel the dialog
+        duplicate.cancelDialog = function() {
+          $mdDialog.cancel();
+        };
+
+        // close the dialog succesfully
+        duplicate.closeDialog = function () {
+          console.log(duplicate.duplicate_number);
+          $mdDialog.hide(duplicate.duplicate_number); // duplicate.duplicate_number
+        };
+      };
+
+      listView.duplicateBike = function (bike, event) {
+        $mdDialog.show({
+          templateUrl: 'app/modules/listings/views/list-view.duplicate.template.html',
+          controller: DuplicateBikeController,
+          controllerAs: 'duplicate',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: true,
+          escapeToClose: true,
+          fullscreen: true
+        }).then(function (duplicate_number) {
+          console.log("#: ", duplicate_number);
+          api.post('/rides/duplicate', {
+            "ids": [bike.id],
+            "quantity": 1
+          }).then(
+            function () {
+            },
+            function () {
+            }
+            );
+        }, function(){
+
+        });
       };
     }]
 });
