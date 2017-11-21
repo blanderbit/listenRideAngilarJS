@@ -77,6 +77,36 @@
       "cafes-bars-content": "Indien je eens wat anders wilt proberen en bijvoorbeeld een goede veganer / vegatarisch restaurant wilt proberen, reserveer dan een tafeltje bij <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> aan het Karmeliterplein. Als je meer van de traditionele oostenrijkse keuken houdt, is <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a> een absolute aanrader. Een heerlijke Tafelspitz of Wiener Schnitzel met blik op de fameuze Wiener Oper. Beter kan het niet, toch? Als laatste stop voor het nuttigen van een afzakker leent zich het gebied rond de Donau zich uitstekend."
     }
   },
+  "business-community": {
+    "meta-title": "Die listnride Business Community",
+    "meta-description": "Werde Teil des gewerblichen listnride Fahrradverleihs.",
+    "title": "Die listnride Business Community",
+    "subtitle": "Werde Teil des gewerblichen listnride Fahrradverleihs",
+    "description": "Wir möchten dich gerne in unseren gewerblichen Fahrradverleih einbinden und dir diesen so einfach wie möglich machen. Denn unsere Leidenschaft sind Fahrräder und wir möchten gerne mehr davon auf Europas Straßen sehen. Wie gut, dass wir uns gegenseitig bei dieser Mission unterstützen können.",
+    "feature-1": {
+      "title": "Vermiete deine Fahrräder",
+      "description": "Deine Kunden können ihr Leihfahrrad online über deine  Webseite auswählen und buchen. Den kompletten Buchungs-und Bezahlvorgang übernimmt listnride für dich."
+    },
+    "feature-2": {
+      "title": "Präsentiere deinen Shop online",
+      "description": "Wir geben dir die Möglichkeit deinen Shop online zu präsentieren und so deinen Kundenstamm zu erweitern und die ‘Generation Internet’ online abzuholen."
+    },
+    "feature-3": {
+      "title": "Profitiere von unserer Reichweite",
+      "description": "Listnride ist Europas größte Bikesharing Community und wir wachsen stetig weiter. Nutze diese Reichweite."
+    },
+    "text-2": {
+      "title": "Werde auch Du Teil der listnride Business Community",
+      "description": "Registriere dich jetzt und richte sofort deine eigene Shop Seite ein. Oder kontaktiere uns persönlich. Gerne hilft dir Martin weiter, kontaktiere ihn via<br><a href=\"mailto:ml@listnride.com\">ml@listnride.com</a> oder 0171&nbsp;83&nbsp;13&nbsp;348"
+    },
+    "text-3": {
+      "column-1": "listnride ist bereits jetzt schon Europas größte Bikesharing Community und so Spezialist für den privaten und gewerblichen Fahrradverleih.  Deshalb wissen wir wonach unsere KundInnen suchen und können sie direkt auf deine listnride Shop Seite leiten und ihnen den Weg in deinen Laden so einfach wie möglich machen.",
+      "column-2": "Uns ist wichtig, dass wir unserer fahrradbegeisterten Community ein breites Angebot an Fahrrädern anbieten können, dies reicht vom Crosser, übers Rennrad zum Hollandrad und Cargo-Bike. Mit dir zusammen können wir unseren Usern nicht nur das perfekte Leihrad für den Urlaub bieten, sondern ihnen auch bei Suche nach einem neuen, eigenen Fahrrad helfen."
+    },
+    "join-now": "Mach mit. Das Plugin ist kostenlos.",
+    "join-now-description": "Willst du mehr erfahren?",
+    "contact-us": "Kontaktiere Uns"
+  },
   "events": {
     "rapha-super-cross": {
       "text": "De Rapha Super Cross is weer terug in München, voor het derde jaar op rij. Indien je er graag bij wil zijn, maar geen geschickte fiets hebt, kann je via listnride een passende fiets huren. De listnride bike sharing community biedt verschillende cyclocrossfietsen te huur aan. De fietsen kunnen voor het evenement bij de verschillende aanbieders worden aangevraagd en geboekt. De overdracht wordt direct met de verhuurder afgesproken. Indien je een fiets hebt die niet benut wordt, kan je deze gewoon aanbieden om daarmee wat geld te verdienen ein interessante mensen te leren kennen, die aan het evenement deelnemen. Sluit je aan bij de groeiende Community!"
