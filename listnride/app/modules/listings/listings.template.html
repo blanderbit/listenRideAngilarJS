@@ -31,7 +31,12 @@
     <div layout="row" class="content" layout-fill layout-align="space-between center">
       <md-input-container flex="30">
         <label style="display: none"></label>
-        <input placeholder="{{ 'shared.search-bikes' | translate }}" ng-model="listView.search"/>
+        <input
+          placeholder="{{ 'shared.search-bikes' | translate }}"
+          ng-keyup="listings.search()"
+          ng-model="listings.input"
+          ng-model-options="{ debounce: 100 }"
+        />
       </md-input-container>
       <div layout="row">
         <md-button class="md-primary md-confirm-button" ng-click="listings.toggleSidenav()">New Bike</md-button>

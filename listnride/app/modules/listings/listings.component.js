@@ -3,8 +3,8 @@
 angular.module('listings',[]).component('listings', {
   templateUrl: 'app/modules/listings/listings.template.html',
   controllerAs: 'listings',
-  controller: ['$localStorage','$mdSidenav', 'api', 'accessControl',
-    function ListingsController($localStorage, $mdSidenav, api, accessControl) {
+  controller: ['$filter', '$localStorage','$mdSidenav', 'api', 'accessControl',
+    function ListingsController($filter, $localStorage, $mdSidenav, api, accessControl) {
       if (accessControl.requireLogin()) {
         return
       }
@@ -13,14 +13,18 @@ angular.module('listings',[]).component('listings', {
       api.get('/users/' + $localStorage.userId + "/rides").then(
         function(response) {
           listings.bikes = response.data;
+          listings.mirror_bikes = response.data;
           listings.listView = listings.bikes.length >= listings.maxTiles;
         },
         function(error) {
         }
       );
 
+      listings.search = function () {
+        listings.bikes = $filter('filter')(listings.mirror_bikes,{$ : listings.input});
+      };
+
       listings.toggleSidenav = function () {
-        console.log($localStorage.userId);
         $mdSidenav('edit').toggle();
       };
 

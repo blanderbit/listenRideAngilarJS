@@ -1986,5 +1986,9 @@ and (max-device-width : 568px) {
 }
 
 .lnr-check-box {
-    margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+.ng-hide-add, .ng-hide-remove {
+  display: block !important;
 }
