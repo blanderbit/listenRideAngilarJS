@@ -17,7 +17,7 @@ angular.module('listingCard',[]).component('listingCard', {
     function ListingCardController($state, $mdDialog, $translate, api, $mdToast) {
       var listingCard = this;
 
-      listingCard.onDeleteClick = function(event) {
+      listingCard.onDeleteClick = function(id, event) {
         $mdDialog.show({
           controller: DeleteBikeController,
           controllerAs: 'deleteBikeDialog',

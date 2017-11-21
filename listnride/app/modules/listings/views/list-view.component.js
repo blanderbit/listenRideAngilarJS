@@ -4,14 +4,21 @@ angular.module('listings').component('listView', {
   templateUrl: 'app/modules/listings/views/list-view.template.html',
   controllerAs: 'listView',
   bindings: {
-    bikes: '<'
+    bikes: '<',
+    removeBike: '<'
   },
   controller: [
     '$stateParams',
+    '$window',
     '$mdSidenav',
     'api',
     'bikeOptions',
-    'orderByFilter', function ($stateParams, $mdSidenav, api, bikeOptions, orderBy) {
+    '$state',
+    '$mdDialog',
+    '$mdToast',
+    '$translate',
+    'orderByFilter', function ($stateParams, $window, $mdSidenav, api,
+      bikeOptions, $state, $mdDialog, $mdToast, $translate, orderBy) {
       var listView = this;
 
       listView.$onInit = function () {
@@ -25,7 +32,6 @@ angular.module('listings').component('listView', {
       };
 
       listView.toggleSidenav = function () {
-        console.log($localStorage.userId);
         $mdSidenav('edit').toggle();
       };
 
@@ -68,8 +74,91 @@ angular.module('listings').component('listView', {
         }
       };
 
-      listView.editBike = function (event) {
-        console.log("$event: ", event);
+      listView.cancelEvent = function (event) {
+        if (event.stopPropogation) event.stopPropogation();
+      };
+
+      
+      listView.viewBike = function(id, event){
+
+        // stop event from propograting
+        if (event.stopPropogation) event.stopPropogation();
+
+        // create url
+        var url = $state.href('bike', {bikeId: id});
+        // open new tab
+        window.open(url, '_blank');
+      };
+      listView.editBike = function(id) {
+        // create url
+        var url = $state.href('edit', {bikeId: id});
+        // open new tab
+        window.open(url, '_blank');
+      };
+
+      listView.onDeactivateClick = function(index) {
+        listView.disableDeactivate = true;
+        api.put("/rides/" + listView.bikes[index].id, {"ride": {"available": !listView.bikes[index].available}}).then(
+          function() {
+            listView.bikes[index].available = !listView.bikes[index].available;
+          },
+          function() {
+            listView.disableDeactivate = false;
+          }
+        );
+      };
+
+      var DeleteBikeController = function(deleteBike, bikeId) {
+        var deleteBikeDialog = this;
+
+        deleteBikeDialog.hide = function() {
+          $mdDialog.hide();
+        };
+
+        deleteBikeDialog.deleteBike = function() {
+          deleteBike(bikeId);
+          $mdDialog.hide();
+        }
+      };
+
+      listView.onDeleteClick = function(id, event) {
+        $mdDialog.show({
+          controller: DeleteBikeController,
+          controllerAs: 'deleteBikeDialog',
+          templateUrl: 'app/modules/shared/listing-card/delete-bike-dialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: true,
+          locals: {
+            deleteBike: deleteBike,
+            bikeId: id
+          }
+        });
+      };
+
+      function deleteBike(id) {
+        api.put("/rides/" + id, {"ride": {"active": "false"}}).then(
+          function(response) {
+            listView.removeBike({'bikeId': id});
+            listView.disableDelete = true;
+            $analytics.eventTrack('List a Bike', {  category: 'List Bike', label: 'Bike Removed'});
+          },
+          function(error) {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.pending-requests'))
+                .hideDelay(4000)
+                .position('top center')
+            );
+          }
+        );
+      }
+
+      listView.openUrl = function () {
+        var url = $state.href('listingABike', {parameter: "parameter"});
+        window.open(url,'_blank');
       };
     }]
 });

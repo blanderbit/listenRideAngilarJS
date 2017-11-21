@@ -6,13 +6,13 @@
         <div class="lnr-listing-header">
           <md-list-item>
             <div layout="column" flex="100">
-              <div layout="row" layout-align="space-between center">
+              <div layout="row" layout-align="start center">
                 <div flex="5"></div>
-                <div flex="10"></div>
+                <div flex="5"></div>
                 <div flex="10" ng-click="listView.order('id')">ID</div>
-                <div flex="25" ng-click="listView.order('name')">Name</div>
-                <div flex="20" ng-click="listView.order('brand')">Brand</div>
-                <div flex="20" ng-click="listView.order('city')">Brand</div>
+                <div flex="20" ng-click="listView.order('name')">Name</div>
+                <div flex="15" ng-click="listView.order('brand')">Brand</div>
+                <div flex="15" ng-click="listView.order('city')">City</div>
                 <div flex="10" ng-click="listView.order('size')">Size</div>
                 <div flex="10" ng-click="listView.order('price_from')">Price</div>
                 <div flex></div>
@@ -25,32 +25,40 @@
 
       <!-- table -->
       <md-list>
-        <md-list-item class="lnr-listing-list-item"
+        <md-list-item class="lnr-listing-list-item md-list-item-text "
                       ng-style="listView.listElementBackground[$index] || {'background-color': '#ffff'}"
                       id="$index"
-                      ng-repeat="bike in listView.bikes"
-                      ng-mouseenter="listView.onBikeHovered($index, true)"
-                      ng-mouseleave="listView.onBikeHovered($index, false)">
+                      ng-click="listView.viewBike(bike.id, $event)"
+                      ng-repeat="bike in listView.bikes">
           <div layout="column" flex="100">
-            <div layout="row" layout-align="space-between center">
-              <img hide-xs flex="5"
-                   ng-src="{{bike.image_file_1.image_file_1.thumb.url}}"
-                   class="md-avatar"/>
-              <div flex="5" class="lnr-list-button">{{bike.id}}</div>
+            <div layout="row" layout-align="start center">
+                  <img hide-xs
+                  ng-src="{{bike.image_file_1.image_file_1.thumb.url}}"
+                  class="md-avatar"/>
+              <div flex="5"></div>
+              <div flex="10" class="lnr-list-button">{{bike.id}}</div>
               <div flex="20"> {{bike.name}}</div>
               <div flex="15"> {{bike.brand}}</div>
               <div flex="15"> {{bike.city}}</div>
               <div flex="10"> {{bike.size}}</div>
               <div flex="10"> {{bike.prices[0].price | number : 0}}</div>
-              <md-icon class="md-secondary"
-                       style="padding-right: 8px;"
-                       ng-style="listView.visibility[$index] || {'visibility': 'hidden'}"
-                       ng-click="listView.editBike($event)"
-                       md-svg-src="app/assets/ui_icons/icn_info.svg">
-              </md-icon>
-              <md-icon class="md-secondary"
-                       ng-style="listView.visibility[$index] || {'visibility': 'hidden'}"
-                       md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+              <md-menu flex md-position-mode="target bottom">
+                <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">Options</md-button>
+                <md-menu-content width="2">
+                  <md-menu-item>
+                    <md-button md-no-ink ng-click="listView.editBike(bike.id, $event)">Edit</md-button>
+                  </md-menu-item>
+                  <md-menu-item>
+                    <md-button md-no-ink ui-sref="listingABike">Duplicate</md-button>
+                  </md-menu-item>
+                  <md-menu-item>
+                    <md-button md-no-ink ng-click="listView.onDeactivateClick($index)">{{!bike.available ? "Activate" : "Deactivate"}}</md-button>
+                  </md-menu-item>
+                  <md-menu-divider></md-menu-divider>
+                  <md-menu-item>
+                    <md-button md-no-ink ng-click="listView.onDeleteClick(bike.id, $event)">Delete</md-button>
+                  </md-menu-item>
+              </md-menu>
             </div>
           </div>
         </md-list-item>
