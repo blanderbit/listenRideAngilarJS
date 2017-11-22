@@ -705,10 +705,10 @@
         template: '<moeve></moeve>',
         resolve: {
             data: function ($translate, ngMeta) {
-                $translate(["brand-integration.moeve.meta-title", "brand-integration.moeve.meta-descr"])
+                $translate(["meta.brand-integration.moeve.meta-title", "meta.brand-integration.moeve.meta-descr"])
                     .then(function (translations) {
-                        ngMeta.setTitle(translations["brand-integration.moeve.meta-title"]);
-                        ngMeta.setTag("description", translations["brand-integration.moeve.meta-descr"]);
+                        ngMeta.setTitle(translations["meta.brand-integration.moeve.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.brand-integration.moeve.meta-descr"]);
                         ngMeta.setTag("og:image", "app/assets/ui_images/opengraph/moeve.jpg");
                     })
             }
