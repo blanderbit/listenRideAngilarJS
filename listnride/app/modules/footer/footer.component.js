@@ -43,7 +43,7 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
         var url = window.location.host.split('.'), route = window.location.pathname, root = '';
         // using localhost
         if (url.indexOf("localhost") >= 0) {
-          if (language == 'nl' || language == 'de') {
+          if (language == 'nl' || language == 'de' || language == 'it') {
             root = ['www.listnride', language].join('.');
             window.location = 'https://' + root + route;
           } else {
