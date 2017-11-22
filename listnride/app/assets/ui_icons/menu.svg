@@ -4,9 +4,9 @@
 <g>
 	<g>
 		<g>
-			<circle cx="256" cy="256" r="64" fill="#555555"/>
-			<circle cx="256" cy="448" r="64" fill="#555555"/>
-			<circle cx="256" cy="64" r="64" fill="#555555"/>
+			<circle cx="256" cy="256" r="64" fill="#5fc693"/>
+			<circle cx="256" cy="448" r="64" fill="#5fc693"/>
+			<circle cx="256" cy="64" r="64" fill="#5fc693"/>
 		</g>
 	</g>
 </g>

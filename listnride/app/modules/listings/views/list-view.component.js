@@ -43,7 +43,7 @@ angular.module('listings').component('listView', {
           // hide the action buttons for the item
           listView.visibility[index] = false;
           // set background for the item
-          listView.listElementBackground[index] = {'background-color': 'rgba(158, 158, 158, 0.2)'}
+          listView.listElementBackground[index] = {'background-color': 'rgba(206, 206, 206, 0.2)'}
         } else {
           listView.listElementBackground = [];
         }
@@ -89,6 +89,12 @@ angular.module('listings').component('listView', {
         // open new tab
         window.open(url, '_blank');
       };
+
+      listView.viewBikes = function (id, event) {
+        // stop event from propograting
+        if (event.stopPropogation) event.stopPropogation();
+      };
+
       listView.editBike = function(id) {
         // create url
         var url = $state.href('edit', {bikeId: id});
@@ -141,8 +147,7 @@ angular.module('listings').component('listView', {
       function deleteBike(id) {
         api.put("/rides/" + id, {"ride": {"active": "false"}}).then(
           function(response) {
-            listView.removeBike({'bikeId': id});
-            listView.disableDelete = true;
+            listView.bikes = response.data;
             $analytics.eventTrack('List a Bike', {  category: 'List Bike', label: 'Bike Removed'});
           },
           function(error) {
@@ -190,16 +195,14 @@ angular.module('listings').component('listView', {
           fullscreen: true
         }).then(function (duplicate_number) {
           api.post('/rides/duplicate', {
-            "ids": [bike.id],
+            "id": bike.id,
             "quantity": duplicate_number
-          }).then(
-            function () {
-            },
-            function () {
-            }
-            );
-        }, function(){
-
+          }).then(function (response) {
+            console.log("server response: ", response);
+            listView.bikes = response.data;
+          }, function () {
+          });
+        }, function () {
         });
       };
     }]
