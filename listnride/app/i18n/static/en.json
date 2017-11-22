@@ -223,7 +223,7 @@
       "meta-title": "Rent a road bike for the Cape Town Cycle Tour on listnride",
       "meta-description": "Rent the perfect road bike for the  Cape Town Cycle Tour easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi",
       "title": "Simply rent the perfect road bike for the Cape Town Cycle Tour",
-      "text-1": "After the Velothon Berlin and Hamburg Cyclassics, the listnride community will soon also offer high-quality road bikes for the Cape Argus. Rent the perfect road bike for the period you need it. Leave your own bike home, save yourself the hassle and just book a high-end road bike!<br><br>You cannot participate in the Cape Town Cycling Tour, then help someone else and earn some pocket money on the side by lending out your road bike.<br><br>Secure a €10,- discount by entering this promo code: VELOTHON2018  in your account settings before booking!",
+      "text-1": "After the Velothon Berlin and Hamburg Cyclassics, the listnride community will soon also offer high-quality road bikes for the Cape Argus. Rent the perfect road bike for the period you need it. Leave your own bike home, save yourself the hassle and just book a high-end road bike!<br><br>You cannot participate in the Cape Town Cycling Tour, then help someone else and earn some pocket money on the side by lending out your road bike.",
       "text-2": "<span class=\"md-body-2\">Commercial Provider?</span><br>Contact us <a href=\"mailto:contact@listnride.com\">here</a><br><br><br><span class=\"md-body-2\">Want to be informed once all bikes are published?</span><br>Just leave your email address here and we will keep you informed.",
       "preregister-thanks": "Thanks, you’ll get notified as soon as all bikes are published!"
     }
@@ -624,8 +624,6 @@
     "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
   },
   "terms-and-conditions": {
-    "meta-title": "listnride | Website Terms & Conditions",
-    "meta-description": "The Terms and Conditions of the Bike-Sharing-Community listnride apply to the use of the online platform.",
     "title": "Terms and conditions",
     "header": "General Terms and Conditions of Business for the listnride Online Platform",
     "download": "Download here",
@@ -633,8 +631,6 @@
     "subtitle": "List and Ride GmbH (hereinafter “listnride”) arranges rental agreements for bicycles and other sport and leisure equipment via the website www.listnride.com (hereinafter “Website”). The following General Terms and Conditions of Use (hereinafter “Terms of Use”) in Section I shall form part of the agreement concluded between the user and listnride in respect of the arrangement service. Any agreement for rental of the used item (hereinafter “Rental Agreement”) concluded via the Website shall comply with the General Terms and Conditions of Rental (hereinafter “Rental Terms”) specified in Section II."
   },
   "trust-and-safety": {
-    "meta-title": "Bike hire made safe – listnride has your back",
-    "meta-description": "Trust is the be-all and end-all in a sharing community. We promote fairness and safety by verifying our users’ identities and offering a lister guarantee.",
     "title": "Trust & Safety",
     "header": "Carefree biking",
     "subheader": "Thanks to listnride, renting a bike is as safe as it is easy.",
@@ -715,8 +711,6 @@
     "go-back": "Back"
   },
   "shop-landing": {
-    "meta-title": "listnride Shop Plugin - Get your bike rental online",
-    "meta-description": "listnride now offers a free plug-in to easily integrate a bike rental booking engine on your website.",
     "title": "Your rental bikes directly bookable on your website",
     "subtitle": "listnride now offers a free plug-in to easily integrate a bike rental booking engine on your website.",
     "description": "You also realize having your own online bike rental shop is needed to engage with the online consumer? Within a few clicks you have your rental bikes listed on listnride bookable on your own website. Your clients can directly see available bikes and book them!",

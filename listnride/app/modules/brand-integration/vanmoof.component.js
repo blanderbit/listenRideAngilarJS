@@ -3,12 +3,10 @@
 angular.module('vanmoofIntegration',[]).component('vanmoof', {
   templateUrl: 'app/modules/brand-integration/vanmoof.template.html',
   controllerAs: 'vanmoof',
-  controller: ['$translate', '$translatePartialLoader', 'api', 'ngMeta',
-    function VanmoofController($translate, $tpl, api, ngMeta) {
+  controller: ['$translate', '$translatePartialLoader', 'api',
+    function VanmoofController($translate, $tpl, api) {
       var vanmoof = this;
       $tpl.addPart('static');
-      ngMeta.setTitle($translate.instant("brand-integration.vanmoof.meta-title"));
-      ngMeta.setTag("description", $translate.instant("brand-integration.vanmoof.meta-descr"));
 
       vanmoof.currentBikes = [];
       $translate(["shared.berlin"]).then(

@@ -3,12 +3,9 @@
 angular.module('invest',[]).component('invest', {
   templateUrl: 'app/modules/invest/invest.template.html',
   controllerAs: 'invest',
-  controller: ['$translatePartialLoader', '$translate', 'api', 'ngMeta',
-    function InvestController($tpl, $translate, api, ngMeta) {
+  controller: ['$translatePartialLoader', '$translate', 'api',
+    function InvestController($tpl, $translate, api) {
       
-      ngMeta.setTitle($translate.instant("invest.meta-title"));
-      ngMeta.setTag("description", $translate.instant("invest.meta-description"));
-
       var invest = this;
       $tpl.addPart('static');
       invest.submitted = false;

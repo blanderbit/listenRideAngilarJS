@@ -182,10 +182,10 @@
         template: '<in-velo-veritas></in-velo-veritas>',
           resolve: {
               data: function ($translate, ngMeta) {
-                  $translate(["events.in-velo-veritas.meta-title", "events.in-velo-veritas.meta-description"])
+                  $translate(["meta.events.in-velo-veritas.meta-title", "meta.events.in-velo-veritas.meta-description"])
                       .then(function (translations) {
-                          ngMeta.setTitle(translations["events.in-velo-veritas.meta-title"]);
-                          ngMeta.setTag("description", translations["events.in-velo-veritas.meta-description"]);
+                          ngMeta.setTitle(translations["meta.events.in-velo-veritas.meta-title"]);
+                          ngMeta.setTag("description", translations["meta.events.in-velo-veritas.meta-description"]);
                       })
               }
           },
@@ -200,10 +200,10 @@
         template: '<cyclassics-hamburg></cyclassics-hamburg>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["events.cyclassics-hamburg.meta-title", "events.cyclassics-hamburg.meta-description"])
+            $translate(["meta.events.cyclassics-hamburg.meta-title", "meta.events.cyclassics-hamburg.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["events.cyclassics-hamburg.meta-title"]);
-                ngMeta.setTag("description", translations["events.cyclassics-hamburg.meta-description"]);
+                ngMeta.setTitle(translations["meta.events.cyclassics-hamburg.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.cyclassics-hamburg.meta-description"]);
               })
           }
         },
@@ -218,10 +218,10 @@
           template: '<riderman></riderman>',
           resolve: {
               data: function ($translate, ngMeta) {
-                  $translate(["events.riderman.meta-title", "events.riderman.meta-description"])
+                  $translate(["meta.events.riderman.meta-title", "meta.events.riderman.meta-description"])
                       .then(function (translations) {
-                          ngMeta.setTitle(translations["events.riderman.meta-title"]);
-                          ngMeta.setTag("description", translations["events.riderman.meta-description"]);
+                          ngMeta.setTitle(translations["meta.events.riderman.meta-title"]);
+                          ngMeta.setTag("description", translations["meta.events.riderman.meta-description"]);
                       })
               }
           },
@@ -236,10 +236,10 @@
         template: '<velothon-bikerental></velothon-bikerental>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["events.velothon-bikerental.meta-title", "events.velothon-bikerental.meta-description"])
+            $translate(["meta.events.velothon-bikerental.meta-title", "meta.events.velothon-bikerental.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["events.velothon-bikerental.meta-title"]);
-                ngMeta.setTag("description", translations["events.velothon-bikerental.meta-description"]);
+                ngMeta.setTitle(translations["meta.events.velothon-bikerental.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.velothon-bikerental.meta-description"]);
               })
           }
         },
@@ -254,10 +254,10 @@
         template: '<cape-argus></cape-argus>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["events.cape-argus.meta-title", "events.cape-argus.meta-description"])
+            $translate(["meta.events.cape-argus.meta-title", "meta.events.cape-argus.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["events.cape-argus.meta-title"]);
-                ngMeta.setTag("description", translations["events.cape-argus.meta-description"]);
+                ngMeta.setTitle(translations["meta.events.cape-argus.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.cape-argus.meta-description"]);
               })
           }
         },
@@ -272,10 +272,10 @@
         template: '<supercross-munich></supercross-munich>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["events.supercross-munich.meta-title", "events.supercross-munich.meta-description"])
+            $translate(["meta.events.supercross-munich.meta-title", "meta.events.supercross-munich.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["events.supercross-munich.meta-title"]);
-                ngMeta.setTag("description", translations["events.supercross-munich.meta-description"]);
+                ngMeta.setTitle(translations["meta.events.supercross-munich.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.supercross-munich.meta-description"]);
               })
           }
         },
@@ -290,10 +290,10 @@
         template: '<depart></depart>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["events.depart.meta-title", "events.depart.meta-description"])
+            $translate(["meta.events.depart.meta-title", "meta.events.depart.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["events.depart.meta-title"]);
-                ngMeta.setTag("description", translations["events.depart.meta-description"]);
+                ngMeta.setTitle(translations["meta.events.depart.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.depart.meta-description"]);
               })
           }
         },
@@ -314,10 +314,10 @@
         template: '<constance-spin></constance-spin>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["events.constance-spin.meta-title", "events.constance-spin.meta-description"])
+            $translate(["meta.events.constance-spin.meta-title", "meta.events.constance-spin.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["events.constance-spin.meta-title"]);
-                ngMeta.setTag("description", translations["events.constance-spin.meta-description"]);
+                ngMeta.setTitle(translations["meta.events.constance-spin.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.constance-spin.meta-description"]);
               })
           }
         },
@@ -332,10 +332,10 @@
         template: '<velosoph></velosoph>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["events.velosoph.meta-title", "events.velosoph.meta-description"])
+            $translate(["meta.events.velosoph.meta-title", "meta.events.velosoph.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["events.velosoph.meta-title"]);
-                ngMeta.setTag("description", translations["events.velosoph.meta-description"]);
+                ngMeta.setTitle(translations["meta.events.velosoph.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.velosoph.meta-description"]);
               })
           }
         },
@@ -418,10 +418,10 @@
         controller: 'StaticController',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["about-us.meta-title", "about-us.meta-description"])
+            $translate(["meta.about-us.meta-title", "meta.about-us.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["about-us.meta-title"]);
-                ngMeta.setTag("description", translations["about-us.meta-description"]);
+                ngMeta.setTitle(translations["meta.about-us.meta-title"]);
+                ngMeta.setTag("description", translations["meta.about-us.meta-description"]);
               })
           }
         },
@@ -436,10 +436,10 @@
         template: '<invest></invest>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["invest.meta-title", "invest.meta-description"])
+            $translate(["meta.invest.meta-title", "meta.invest.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["invest.meta-title"]);
-                ngMeta.setTag("description", translations["invest.meta-description"]);
+                ngMeta.setTitle(translations["meta.invest.meta-title"]);
+                ngMeta.setTag("description", translations["meta.invest.meta-description"]);
               })
           }
         },
@@ -455,10 +455,10 @@
         controller: 'StaticController',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["trust-and-safety.meta-title", "trust-and-safety.meta-description"])
+            $translate(["meta.trust-and-safety.meta-title", "meta.trust-and-safety.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["trust-and-safety.meta-title"]);
-                ngMeta.setTag("description", translations["trust-and-safety.meta-description"]);
+                ngMeta.setTitle(translations["meta.trust-and-safety.meta-title"]);
+                ngMeta.setTag("description", translations["meta.trust-and-safety.meta-description"]);
               })
           }
         },
@@ -474,10 +474,10 @@
         controller: 'StaticController',
         resolve: {
               data: function ($translate, ngMeta) {
-                  $translate(["terms-and-conditions.meta-title", "terms-and-conditions.meta-description"])
+                  $translate(["meta.terms-and-conditions.meta-title", "meta.terms-and-conditions.meta-description"])
                       .then(function (translations) {
-                          ngMeta.setTitle(translations["terms-and-conditions.meta-title"]);
-                          ngMeta.setTag("description", translations["terms-and-conditions.meta-description"]);
+                          ngMeta.setTitle(translations["meta.terms-and-conditions.meta-title"]);
+                          ngMeta.setTag("description", translations["meta.terms-and-conditions.meta-description"]);
                       })
               }
           },
@@ -493,10 +493,10 @@
         controller: 'StaticController',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["contact-and-help.meta-title", "contact-and-help.meta-description"])
+            $translate(["meta.contact-and-help.meta-title", "meta.contact-and-help.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["contact-and-help.meta-title"]);
-                ngMeta.setTag("description", translations["contact-and-help.meta-description"]);
+                ngMeta.setTitle(translations["meta.contact-and-help.meta-title"]);
+                ngMeta.setTag("description", translations["meta.contact-and-help.meta-description"]);
               })
           }
         },
@@ -525,10 +525,10 @@
         },
         resolve: {
             data: function ($translate, ngMeta) {
-                $translate(["jobs.meta-title", "jobs.meta-description"])
+                $translate(["meta.jobs.meta-title", "meta.jobs.meta-description"])
                     .then(function (translations) {
-                        ngMeta.setTitle(translations["jobs.meta-title"]);
-                        ngMeta.setTag("description", translations["jobs.meta-description"]);
+                        ngMeta.setTitle(translations["meta.jobs.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.jobs.meta-description"]);
                     })
             }
         },
@@ -556,10 +556,10 @@
         controller: 'StaticController',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["press.meta-title", "press.meta-description"])
+            $translate(["meta.press.meta-title", "meta.press.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["press.meta-title"]);
-                ngMeta.setTag("description", translations["press.meta-description"]);
+                ngMeta.setTitle(translations["meta.press.meta-title"]);
+                ngMeta.setTag("description", translations["meta.press.meta-description"]);
               })
           }
         },
@@ -575,10 +575,10 @@
         controller: 'StaticController',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["imprint.meta-title", "imprint.meta-description"])
+            $translate(["meta.imprint.meta-title", "meta.imprint.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["imprint.meta-title"]);
-                ngMeta.setTag("description", translations["imprint.meta-description"]);
+                ngMeta.setTitle(translations["meta.imprint.meta-title"]);
+                ngMeta.setTag("description", translations["meta.imprint.meta-description"]);
               })
           }
         },
@@ -594,10 +594,10 @@
         controller: 'StaticController',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["privacy.meta-title", "privacy.meta-description"])
+            $translate(["meta.privacy.meta-title", "meta.privacy.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["privacy.meta-title"]);
-                ngMeta.setTag("description", translations["privacy.meta-description"]);
+                ngMeta.setTitle(translations["meta.privacy.meta-title"]);
+                ngMeta.setTag("description", translations["meta.privacy.meta-description"]);
               })
           }
         },
@@ -613,10 +613,10 @@
         controller: 'StaticController',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["how-it-works.meta-title", "how-it-works.meta-description"])
+            $translate(["meta.how-it-works.meta-title", "meta.how-it-works.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["how-it-works.meta-title"]);
-                ngMeta.setTag("description", translations["how-it-works.meta-description"]);
+                ngMeta.setTitle(translations["meta.how-it-works.meta-title"]);
+                ngMeta.setTag("description", translations["meta.how-it-works.meta-description"]);
               })
           }
         },
@@ -632,10 +632,10 @@
         controller: 'StaticController',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["shop-landing.meta-title", "shop-landing.meta-description"])
+            $translate(["meta.shop-landing.meta-title", "meta.shop-landing.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["shop-landing.meta-title"]);
-                ngMeta.setTag("description", translations["shop-landing.meta-description"]);
+                ngMeta.setTitle(translations["meta.shop-landing.meta-title"]);
+                ngMeta.setTag("description", translations["meta.shop-landing.meta-description"]);
               })
           }
         },
@@ -650,10 +650,10 @@
         template: '<business-community></business-community>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["business-community.meta-title", "business-community.meta-description"])
+            $translate(["meta.business-community.meta-title", "meta.business-community.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["business-community.meta-title"]);
-                ngMeta.setTag("description", translations["business-community.meta-description"]);
+                ngMeta.setTitle(translations["meta.business-community.meta-title"]);
+                ngMeta.setTag("description", translations["meta.business-community.meta-description"]);
               })
           }
         },
@@ -668,10 +668,10 @@
         template: '<ampler></ampler>',
         resolve: {
             data: function ($translate, ngMeta) {
-                $translate(["brand-integration.ampler.meta-title", "brand-integration.ampler.meta-descr"])
+                $translate(["meta.brand-integration.ampler.meta-title", "meta.brand-integration.ampler.meta-descr"])
                     .then(function (translations) {
-                        ngMeta.setTitle(translations["brand-integration.ampler.meta-title"]);
-                        ngMeta.setTag("description", translations["brand-integration.ampler.meta-descr"]);
+                        ngMeta.setTitle(translations["meta.brand-integration.ampler.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.brand-integration.ampler.meta-descr"]);
                     })
             }
         },
@@ -686,10 +686,10 @@
         template: '<vanmoof></vanmoof>',
         resolve: {
             data: function ($translate, ngMeta) {
-                $translate(["brand-integration.vanmoof.meta-title", "brand-integration.vanmoof.meta-descr"])
+                $translate(["meta.brand-integration.vanmoof.meta-title", "meta.brand-integration.vanmoof.meta-descr"])
                     .then(function (translations) {
-                        ngMeta.setTitle(translations["brand-integration.vanmoof.meta-title"]);
-                        ngMeta.setTag("description", translations["brand-integration.vanmoof.meta-descr"]);
+                        ngMeta.setTitle(translations["meta.brand-integration.vanmoof.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.brand-integration.vanmoof.meta-descr"]);
                         ngMeta.setTag("og:image", "app/assets/ui_images/opengraph/vanmoof.jpg");
                     })
             }
@@ -724,10 +724,10 @@
         template: '<votec></votec>',
         resolve: {
             data: function ($translate, ngMeta) {
-                $translate(["brand-integration.votec.meta-title", "brand-integration.votec.meta-descr"])
+                $translate(["meta.brand-integration.votec.meta-title", "meta.brand-integration.votec.meta-descr"])
                     .then(function (translations) {
-                        ngMeta.setTitle(translations["brand-integration.votec.meta-title"]);
-                        ngMeta.setTag("description", translations["brand-integration.votec.meta-descr"]);
+                        ngMeta.setTitle(translations["meta.brand-integration.votec.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.brand-integration.votec.meta-descr"]);
                     })
             }
         },
@@ -742,10 +742,10 @@
         template: '<vello></vello>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["brand-integration.vello.meta-title", "brand-integration.vello.meta-description"])
+            $translate(["meta.brand-integration.vello.meta-title", "meta.brand-integration.vello.meta-description"])
               .then(function (translations) {
-                  ngMeta.setTitle(translations["brand-integration.vello.meta-title"]);
-                  ngMeta.setTag("description", translations["brand-integration.vello.meta-description"]);
+                  ngMeta.setTitle(translations["meta.brand-integration.vello.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.brand-integration.vello.meta-description"]);
               })
           }
         },
@@ -760,10 +760,10 @@
         template: '<veletage></veletage>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["brand-integration.veletage.meta-title", "brand-integration.veletage.meta-descr"])
+            $translate(["meta.brand-integration.veletage.meta-title", "meta.brand-integration.veletage.meta-descr"])
               .then(function (translations) {
-                  ngMeta.setTitle(translations["brand-integration.veletage.meta-title"]);
-                  ngMeta.setTag("description", translations["brand-integration.veletage.meta-descr"]);
+                  ngMeta.setTitle(translations["meta.brand-integration.veletage.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.brand-integration.veletage.meta-descr"]);
                 })
           }
         },
@@ -778,10 +778,10 @@
         template: '<bonvelo></bonvelo>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["brand-integration.bonvelo.meta-title", "brand-integration.bonvelo.meta-description"])
+            $translate(["meta.brand-integration.bonvelo.meta-title", "meta.brand-integration.bonvelo.meta-description"])
               .then(function (translations) {
-                  ngMeta.setTitle(translations["brand-integration.bonvelo.meta-title"]);
-                  ngMeta.setTag("description", translations["brand-integration.bonvelo.meta-description"]);
+                  ngMeta.setTitle(translations["meta.brand-integration.bonvelo.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.brand-integration.bonvelo.meta-description"]);
                 })
           }
         },
@@ -796,10 +796,10 @@
         template: '<motoparilla></motoparilla>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["brand-integration.motoparilla.meta-title", "brand-integration.motoparilla.meta-description"])
+            $translate(["meta.brand-integration.motoparilla.meta-title", "meta.brand-integration.motoparilla.meta-description"])
               .then(function (translations) {
-                  ngMeta.setTitle(translations["brand-integration.motoparilla.meta-title"]);
-                  ngMeta.setTag("description", translations["brand-integration.motoparilla.meta-description"]);
+                  ngMeta.setTitle(translations["meta.brand-integration.motoparilla.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.brand-integration.motoparilla.meta-description"]);
                 })
           }
         },
@@ -815,10 +815,10 @@
         template: '<ampler></ampler>',
         resolve: {
             data: function ($translate, ngMeta) {
-                $translate(["brand-integration.ampler.meta-title", "brand-integration.ampler.meta-descr"])
+                $translate(["meta.brand-integration.ampler.meta-title", "meta.brand-integration.ampler.meta-descr"])
                     .then(function (translations) {
-                        ngMeta.setTitle(translations["brand-integration.ampler.meta-title"]);
-                        ngMeta.setTag("description", translations["brand-integration.ampler.meta-descr"]);
+                        ngMeta.setTitle(translations["meta.brand-integration.ampler.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.brand-integration.ampler.meta-descr"]);
                     })
             }
         },
@@ -833,10 +833,10 @@
         template: '<brompton></brompton>',
         resolve: {
             data: function ($translate, ngMeta) {
-                $translate(["brand-integration.brompton.meta-title", "brand-integration.brompton.meta-descr"])
+                $translate(["meta.brand-integration.brompton.meta-title", "meta.brand-integration.brompton.meta-descr"])
                     .then(function (translations) {
-                        ngMeta.setTitle(translations["brand-integration.brompton.meta-title"]);
-                        ngMeta.setTag("description", translations["brand-integration.brompton.meta-descr"]);
+                        ngMeta.setTitle(translations["meta.brand-integration.brompton.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.brand-integration.brompton.meta-descr"]);
                     })
             }
         },
@@ -851,10 +851,10 @@
         template: '<muli></muli>',
         resolve: {
             data: function ($translate, ngMeta) {
-                $translate(["brand-integration.muli.meta-title", "brand-integration.muli.meta-descr"])
+                $translate(["meta.brand-integration.muli.meta-title", "meta.brand-integration.muli.meta-descr"])
                     .then(function (translations) {
-                        ngMeta.setTitle(translations["brand-integration.muli.meta-title"]);
-                        ngMeta.setTag("description", translations["brand-integration.muli.meta-descr"]);
+                        ngMeta.setTitle(translations["meta.brand-integration.muli.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.brand-integration.muli.meta-descr"]);
                     })
             }
         },
@@ -876,10 +876,10 @@
         controller: 'StaticController',
         resolve: {
             data: function ($translate, ngMeta) {
-                $translate(["cities.berlin.meta-title", "cities.berlin.meta-description"])
+                $translate(["meta.cities.berlin.meta-title", "meta.cities.berlin.meta-description"])
                     .then(function (translations) {
-                        ngMeta.setTitle(translations["cities.berlin.meta-title"]);
-                        ngMeta.setTag("description", translations["cities.berlin.meta-description"]);
+                        ngMeta.setTitle(translations["meta.cities.berlin.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.cities.berlin.meta-description"]);
                     })
             }
         },
@@ -895,10 +895,10 @@
         controller: 'StaticController',
         resolve: {
             data: function ($translate, ngMeta) {
-                $translate(["cities.munich.meta-title", "cities.munich.meta-description"])
+                $translate(["meta.cities.munich.meta-title", "meta.cities.munich.meta-description"])
                     .then(function (translations) {
-                        ngMeta.setTitle(translations["cities.munich.meta-title"]);
-                        ngMeta.setTag("description", translations["cities.munich.meta-description"]);
+                        ngMeta.setTitle(translations["meta.cities.munich.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.cities.munich.meta-description"]);
                     })
             }
         },
@@ -914,10 +914,10 @@
         controller: 'StaticController',
         resolve: {
             data: function ($translate, ngMeta) {
-                $translate(["cities.amsterdam.meta-title", "cities.amsterdam.meta-description"])
+                $translate(["meta.cities.amsterdam.meta-title", "meta.cities.amsterdam.meta-description"])
                     .then(function (translations) {
-                        ngMeta.setTitle(translations["cities.amsterdam.meta-title"]);
-                        ngMeta.setTag("description", translations["cities.amsterdam.meta-description"]);
+                        ngMeta.setTitle(translations["meta.cities.amsterdam.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.cities.amsterdam.meta-description"]);
                     })
             }
         },
@@ -933,10 +933,10 @@
         controller: 'StaticController',
         resolve: {
             data: function ($translate, ngMeta) {
-                $translate(["cities.vienna.meta-title", "cities.vienna.meta-description"])
+                $translate(["meta.cities.vienna.meta-title", "meta.cities.vienna.meta-description"])
                     .then(function (translations) {
-                        ngMeta.setTitle(translations["cities.vienna.meta-title"]);
-                        ngMeta.setTag("description", translations["cities.vienna.meta-description"]);
+                        ngMeta.setTitle(translations["meta.cities.vienna.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.cities.vienna.meta-description"]);
                     })
             }
         },

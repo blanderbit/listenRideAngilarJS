@@ -40,13 +40,15 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
 
       // switch url based on language
       footer.switchDomain = function (language) {
-        var url = window.location.host.split('.');
+        var url = window.location.host.split('.'), route = window.location.pathname, root = '';
         // using localhost
         if (url.indexOf("localhost") >= 0) {
-          if (language == 'nl' || language == 'de') {
-            window.location = 'https://' + ['www.listnride', language].join('.');
+          if (language == 'nl' || language == 'de' || language == 'it') {
+            root = ['www.listnride', language].join('.');
+            window.location = 'https://' + root + route;
           } else {
-            window.location = "https://www.listnride.com";
+            root = "https://www.listnride.com";
+            window.location = root + route;
           }
         }
         // staging or production
@@ -54,10 +56,12 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
           url.splice(-1).join('.');
           if (language == 'nl' || language == 'de') {
             url = url.join('.');
-            window.location = 'https://' + [url, language].join('.');
+            root = [url, language].join('.');
+            window.location = 'https://' + root + route;
           } else {
             url = url.join('.');
-            window.location = 'https://' + [url, 'com'].join('.');
+            root = [url, 'com'].join('.');
+            window.location = 'https://' + root + route;
           }
         }
       };
