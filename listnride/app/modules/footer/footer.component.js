@@ -54,7 +54,7 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
         // staging or production
         else {
           url.splice(-1).join('.');
-          if (language == 'nl' || language == 'de') {
+          if (language == 'nl' || language == 'de' || language == 'it') {
             url = url.join('.');
             root = [url, language].join('.');
             window.location = 'https://' + root + route;
