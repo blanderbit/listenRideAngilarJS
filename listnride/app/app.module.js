@@ -54,6 +54,7 @@ angular.module('listnride', [
   'votec-integration',
   'capeArgus',
   'businessCommunity',
+  'moeveIntegration',
   /* external modules */
   'ngAnimate',
   'ngMaterial',

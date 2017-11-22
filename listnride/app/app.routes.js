@@ -700,6 +700,25 @@
       });
 
       $stateProvider.state({
+        name: 'moeve',
+        url: '/rent-moeve-bikes',
+        template: '<moeve></moeve>',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["brand-integration.moeve.meta-title", "brand-integration.moeve.meta-descr"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["brand-integration.moeve.meta-title"]);
+                        ngMeta.setTag("description", translations["brand-integration.moeve.meta-descr"]);
+                        ngMeta.setTag("og:image", "app/assets/ui_images/opengraph/moeve.jpg");
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'votec',
         url: '/rent-votec-bikes',
         template: '<votec></votec>',
