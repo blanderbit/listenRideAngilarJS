@@ -3,12 +3,10 @@
 angular.module('ampler-integration',[]).component('ampler', {
   templateUrl: 'app/modules/brand-integration/ampler.template.html',
   controllerAs: 'ampler',
-  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta',
-    function AmplerController($translate, $tpl, api, ngMeta) {
+  controller: [ '$translate', '$translatePartialLoader', 'api',
+    function AmplerController($translate, $tpl, api) {
       var ampler = this;
       $tpl.addPart('static');
-      ngMeta.setTitle($translate.instant("brand-integration.ampler.meta-title"));
-      ngMeta.setTag("description", $translate.instant("brand-integration.ampler.meta-descr"));
 
       ampler.currentBikes = [];
       $translate(["shared.berlin"]).then(
@@ -66,7 +64,6 @@ angular.module('ampler-integration',[]).component('ampler', {
 
       api.get('/rides?family=8').then(
         function (success) {
-          console.log(success.data);
 
           for (var i=0; i<success.data.length; i++) {
             switch (success.data[i].city) {

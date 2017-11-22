@@ -3,12 +3,10 @@
 angular.module('votec-integration',[]).component('votec', {
   templateUrl: 'app/modules/brand-integration/votec.template.html',
   controllerAs: 'votec',
-  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta',
-    function VotecController($translate, $tpl, api, ngMeta) {
+  controller: [ '$translate', '$translatePartialLoader', 'api',
+    function VotecController($translate, $tpl, api) {
       var votec = this;
       $tpl.addPart('static');
-      ngMeta.setTitle($translate.instant("brand-integration.votec.meta-title"));
-      ngMeta.setTag("description", $translate.instant("brand-integration.votec.meta-descr"));
 
       votec.currentBikes = [];
       $translate(["shared.munich"]).then(

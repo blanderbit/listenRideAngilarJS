@@ -4,11 +4,9 @@ angular.module('moeveIntegration',[]).component('moeve', {
   templateUrl: 'app/modules/brand-integration/moeve.template.html',
   controllerAs: 'moeve',
   controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta',
-    function MoeveController($translate, $tpl, api, ngMeta) {
+    function MoeveController($translate, $tpl, api) {
       var moeve = this;
       $tpl.addPart('static');
-      ngMeta.setTitle($translate.instant("brand-integration.moeve.meta-title"));
-      ngMeta.setTag("description", $translate.instant("brand-integration.moeve.meta-descr"));
 
       moeve.currentBikes = [];
       $translate(["shared.munich"]).then(
