@@ -518,7 +518,18 @@
   "listings": {
     "my-bikes": "Le mie biciclette",
     "no-bikes": "Non hai ancora registrato nessuna delle tue biciclette",
-    "list-a-bike": "Registra una bici"
+    "list-a-bike": "Registra una bici",
+    "duplicate": {
+      "duplicate": "Duplicare",
+      "how_many": "Quante biciclette?",
+      "header": "Bici duplicata",
+      "number_bikes": "Numero di bici",
+      "maxlength": "Funziona per un massimo di 99 biciclette",
+      "required": "Il numero di biciclette è richiesto"
+    },
+    "listView": {
+      "price": "Prezzo (€)"
+    }
   },
   "listingCard": {
     "activate-bike": "Attivare",

@@ -540,7 +540,18 @@
   "listings": {
     "my-bikes": "Meine Räder",
     "no-bikes": "Du hast noch keine eigenen Fahrräder online gestellt.",
-    "list-a-bike": "Rad einstellen"
+    "list-a-bike": "Rad einstellen",
+    "duplicate": {
+      "duplicate": "Duplikat",
+      "how_many": "Wie viele Fahrräder?",
+      "header": "Doppeltes Fahrrad",
+      "number_bikes": "Anzahl der Fahrräder",
+      "maxlength": "Arbeitet für maximal 99 Fahrräder",
+      "required": "Anzahl der Fahrräder ist erforderlich"
+    },
+    "listView": {
+      "price": "Preis (€)"
+    }
   },
 
   "listingCard": {

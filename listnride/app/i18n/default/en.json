@@ -526,7 +526,18 @@
   "listings": {
     "my-bikes": "My Bikes",
     "no-bikes": "You haven't listed any of your rides yet.",
-    "list-a-bike": "List a Bike"
+    "list-a-bike": "List a Bike",
+    "duplicate": {
+      "duplicate": "Duplicate",
+      "how_many": "How many bikes?",
+      "header": "Duplicate Bike",
+      "number_bikes": "Number of bikes",
+      "maxlength": "Works for maximum 99 bikes",
+      "required": "Number of bikes is required"
+    },
+  "listView": {
+      "price": "Price (€)"
+    }
   },
   "listingCard": {
     "activate-bike": "Activate",

@@ -523,7 +523,19 @@
   },
   "listings": {
     "my-bikes": "Mijn fietsen",
-    "no-bikes": "Je hebt nog geen fietsen online geplaatst."
+    "no-bikes": "Je hebt nog geen fietsen online geplaatst.",
+    "list-a-bike": "Fiets plaatsen",
+    "duplicate": {
+      "duplicate": "Duplicaat",
+      "how_many": "Hoeveel fietsen?",
+      "header": "Dubbele fiets",
+      "number_bikes": "Aantal fietsen",
+      "maxlength": "Werkt voor maximaal 99 fietsen",
+      "required": "Aantal fietsen is verplicht"
+    },
+    "listView": {
+      "price": "Prijs (€)"
+    }
   },
   "listingCard": {
     "activate-bike": "Activeren",

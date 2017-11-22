@@ -99,7 +99,7 @@ angular.module('listings').component('listView', {
         // create url
         var url = $state.href('edit', {bikeId: id});
         // open new tab
-        window.open(url, '_blank');
+        window.open(url);
       };
 
       listView.onDeactivateClick = function(index) {
@@ -163,12 +163,12 @@ angular.module('listings').component('listView', {
 
       listView.openUrl = function () {
         var url = $state.href('listingABike', {parameter: "parameter"});
-        window.open(url,'_blank');
+        window.open(url);
       };
 
       var DuplicateBikeController = function() {
         var duplicate = this;
-        duplicate.duplicate_number = 0;
+        duplicate.duplicate_number = 1;
 
         // cancel the dialog
         duplicate.cancelDialog = function() {
@@ -177,7 +177,7 @@ angular.module('listings').component('listView', {
 
         // close the dialog succesfully
         duplicate.closeDialog = function () {
-          $mdDialog.hide(duplicate.duplicate_number);
+          $mdDialog.hide(parseInt(duplicate.duplicate_number));
         };
       };
 
@@ -198,7 +198,6 @@ angular.module('listings').component('listView', {
             "id": bike.id,
             "quantity": duplicate_number
           }).then(function (response) {
-            console.log("server response: ", response);
             listView.bikes = response.data;
           }, function () {
           });
