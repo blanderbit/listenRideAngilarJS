@@ -26,6 +26,8 @@ app.use(logger);
 var determineTld = function(subdomains) {
   var domainPrefix = "www.";
   var domainEnding = ".com";
+  console.log("subdomains are" + subdomains);
+  console.log("first subdomain is" + subdomains[0]);
   for (var i = 0; i < subdomains.count; i++) {
     switch (subdomains[i]) {
       case "en": domainEnding = ".com";
