@@ -26,7 +26,7 @@ angular.module('listings',[]).component('listings', {
 
       listings.listBike = function() {
         $state.go('list');
-      }
+      };
 
       listings.removeBike = function(bikeId) {
         listings.bikes = listings.bikes.filter(function(bike) {

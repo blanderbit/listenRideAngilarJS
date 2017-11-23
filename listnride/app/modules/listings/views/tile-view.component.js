@@ -9,7 +9,6 @@ angular.module('listings').component('tileView', {
   controller: ['$localStorage', 'api',
     function TileViewController($localStorage, api) {
       var tileView = this;
-      console.log('gets executed');
     }
   ]
 });
