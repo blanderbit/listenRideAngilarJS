@@ -26,7 +26,7 @@ app.use(logger);
 var determineTld = function(subdomains) {
   var domainPrefix = "www.";
   var domainEnding = ".com";
-  console.log("subdomains are" + subdomains);
+  console.log("subdomains are" + subdomains.toString());
   console.log("first subdomain is" + subdomains[0]);
   for (var i = 0; i < subdomains.count; i++) {
     switch (subdomains[i]) {
@@ -46,6 +46,7 @@ var stripTrailingSlash = function(url) {
 
 // proper redirects
 app.use(function(req, res, next) {
+  console.log("starting redirect logic");
   var correctUrl = stripTrailingSlash(determineTld(req.subdomains));
   if (req.hostname === correctUrl) {
     console.log("proper hostname, no redirect necessary");
