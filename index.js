@@ -39,8 +39,7 @@ var determineTld = function(subdomains) {
       domainPrefix = "www.staging.";
     } 
     console.log(domainPrefix);
-    console.log(domainEnding)
-    }
+    console.log(domainEnding);
   }
   console.log(domainPrefix + "listnride" + domainEnding);
   return domainPrefix + "listnride" + domainEnding;
