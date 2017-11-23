@@ -23,28 +23,43 @@ app.set('port', (process.env.PORT || 9003));
 // see all transactions through server
 app.use(logger);
 
-var determineTld = function(language) {
-  switch (language) {
-    case "en": return "listnride.com";
-    case "de": return "listnride.de";
-    case "nl": return "listnride.nl";
-    case "it": return "listnride.it";
-    default: return "listnride.com";
+var determineTld = function(subdomains) {
+  var domainPrefix = "www.";
+  var domainEnding = ".com";
+  for (var i = 0; i < subdomains.count; i++) {
+    switch (subdomains[i]) {
+      case "en": domainEnding = ".com";
+      case "de": domainEnding = ".de";
+      case "nl": domainEnding = ".nl";
+      case "it": domainEnding = ".it";
+      case "staging": domainPrefix = "www.staging.";
+    }
   }
+  return domainPrefix + "listnride" + domainEnding;
 };
 
-// proper redirects based on browser language
+var stripTrailingSlash = function(url) {
+  return url.replace(/\/+$/, ""); 
+}
+
+// proper redirects
 app.use(function(req, res, next) {
-	var language = req.acceptsLanguages("en", "de", "nl", "it") || "en";
-  var correctUrl = req.subdomains.reverse().join(".") + "." + determineTld(language);
-  console.log(req.hostname);
-  console.log(correctUrl);
-  if (req.hostname == correctUrl) {
+  var correctUrl = stripTrailingSlash(determineTld(req.subdomains));
+  if (req.hostname === correctUrl) {
+    console.log("proper hostname, no redirect necessary");
     next();
   } else {
-    // res.redirect(302, "https://" + correctUrl + req.originalUrl);
-    next();
+    console.log("redirecting from hostname " + req.hostname + ", to correct Url " + correctUrl);
+    res.redirect(301, "https://" + correctUrl + req.originalUrl);
   }
+	// var language = req.acceptsLanguages("en", "de", "nl", "it") || "en";
+ //  var correctUrl = req.subdomains.reverse().join(".") + "." + determineTld(language);
+ //  if (req.hostname == correctUrl) {
+ //    next();
+ //  } else {
+ //    // res.redirect(302, "https://" + correctUrl + req.originalUrl);
+ //    next();
+ //  }
 });
 
 // by default serves index.html
