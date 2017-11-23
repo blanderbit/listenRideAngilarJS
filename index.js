@@ -23,9 +23,9 @@ app.set('port', (process.env.PORT || 9003));
 // see all transactions through server
 app.use(logger);
 
-var determineTld = function(subdomains) {
+var determineUrl = function(subdomains, hostname) {
   var domainPrefix = "www.";
-  var domainEnding = ".com";
+  var domainEnding = hostname.replace('listnride', '');
   console.log("subdomains are" + subdomains.toString());
   console.log("first subdomain is" + subdomains[0]);
   for (var i = 0; i < subdomains.length; i++) {
@@ -52,7 +52,7 @@ var stripTrailingSlash = function(url) {
 // proper redirects
 app.use(function(req, res, next) {
   console.log("starting redirect logic");
-  var correctUrl = stripTrailingSlash(determineTld(req.subdomains));
+  var correctUrl = stripTrailingSlash(determineUrl(req.subdomains, req.hostname));
   if (req.hostname === correctUrl) {
     console.log("proper hostname, no redirect necessary");
     next();
