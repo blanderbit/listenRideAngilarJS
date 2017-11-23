@@ -23,7 +23,7 @@ app.set('port', (process.env.PORT || 9003));
 // see all transactions through server
 app.use(logger);
 
-var determineUrl = function(subdomains, hostname) {
+var determineHostname = function(subdomains, hostname) {
   var domainPrefix = "www.";
   var domainEnding = retrieveTld(hostname);
   console.log("subdomains are " + subdomains.toString());
@@ -55,13 +55,14 @@ var retrieveTld = function(hostname) {
 // proper redirects
 app.use(function(req, res, next) {
   console.log("starting redirect logic");
-  var correctHostname = stripTrailingSlash(determineUrl(req.subdomains, req.hostname));
-  if (req.hostname === correctHostname) {
+  var correctHostname = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
+  var correctOriginalUrl = stripTrailingSlash(req.originalUrl);
+  if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
     console.log("proper hostname, no redirect necessary");
     next();
   } else {
     console.log("redirecting from hostname " + req.hostname + ", to correct hostname " + correctHostname);
-    res.redirect(301, "https://" + correctHostname + req.originalUrl);
+    res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
   }
 });
 
