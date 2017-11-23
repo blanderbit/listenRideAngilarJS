@@ -35,8 +35,11 @@ var determineTld = function(subdomains) {
       case "nl": domainEnding = ".nl";
       case "it": domainEnding = ".it";
       case "staging": domainPrefix = "www.staging.";
+      console.log(domainPrefix);
+      console.log(domainEnding)
     }
   }
+  console.log(domainPrefix + "listnride" + domainEnding);
   return domainPrefix + "listnride" + domainEnding;
 };
 
