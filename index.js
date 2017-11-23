@@ -25,7 +25,7 @@ app.use(logger);
 
 var determineUrl = function(subdomains, hostname) {
   var domainPrefix = "www.";
-  var domainEnding = hostname.replace('listnride', '');
+  var domainEnding = hostname.replace('listnride.', '');
   console.log("subdomains are" + subdomains.toString());
   console.log("first subdomain is" + subdomains[0]);
   for (var i = 0; i < subdomains.length; i++) {
@@ -52,22 +52,14 @@ var stripTrailingSlash = function(url) {
 // proper redirects
 app.use(function(req, res, next) {
   console.log("starting redirect logic");
-  var correctUrl = stripTrailingSlash(determineUrl(req.subdomains, req.hostname));
-  if (req.hostname === correctUrl) {
+  var correctHostname = stripTrailingSlash(determineUrl(req.subdomains, req.hostname));
+  if (req.hostname === correctHostname) {
     console.log("proper hostname, no redirect necessary");
     next();
   } else {
-    console.log("redirecting from hostname " + req.hostname + ", to correct Url " + correctUrl);
-    res.redirect(301, "https://" + correctUrl + req.originalUrl);
+    console.log("redirecting from hostname " + req.hostname + ", to correct hostname " + correctHostname);
+    res.redirect(301, "https://" + correctHostname + req.originalUrl);
   }
-	// var language = req.acceptsLanguages("en", "de", "nl", "it") || "en";
- //  var correctUrl = req.subdomains.reverse().join(".") + "." + determineTld(language);
- //  if (req.hostname == correctUrl) {
- //    next();
- //  } else {
- //    // res.redirect(302, "https://" + correctUrl + req.originalUrl);
- //    next();
- //  }
 });
 
 // by default serves index.html
