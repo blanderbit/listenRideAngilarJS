@@ -194,11 +194,10 @@ angular.module('listings').component('listView', {
           escapeToClose: true,
           fullscreen: true
         }).then(function (duplicate_number) {
-          api.post('/rides/duplicate', {
-            "id": bike.id,
+          api.post('/rides/' + bike.id + '/duplicate', {
             "quantity": duplicate_number
           }).then(function (response) {
-            listView.bikes = response.data;
+            var job_id = response.data.job_id;
           }, function () {
           });
         }, function () {
