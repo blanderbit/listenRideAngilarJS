@@ -25,9 +25,8 @@ app.use(logger);
 
 var determineUrl = function(subdomains, hostname) {
   var domainPrefix = "www.";
-  var domainEnding = hostname.replace('listnride.', '');
-  console.log("subdomains are" + subdomains.toString());
-  console.log("first subdomain is" + subdomains[0]);
+  var domainEnding = retrieveTld(hostname);
+  console.log("subdomains are " + subdomains.toString());
   for (var i = 0; i < subdomains.length; i++) {
     switch (subdomains[i]) {
       case "en": domainEnding = ".com"; break;
@@ -47,6 +46,10 @@ var determineUrl = function(subdomains, hostname) {
 
 var stripTrailingSlash = function(url) {
   return url.replace(/\/+$/, ""); 
+}
+
+var retrieveTld = function(hostname) {
+  return hostname.replace(/^(.*?)\listnride/, "");
 }
 
 // proper redirects
