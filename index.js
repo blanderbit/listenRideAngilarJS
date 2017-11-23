@@ -30,13 +30,16 @@ var determineTld = function(subdomains) {
   console.log("first subdomain is" + subdomains[0]);
   for (var i = 0; i < subdomains.length; i++) {
     switch (subdomains[i]) {
-      case "en": domainEnding = ".com";
-      case "de": domainEnding = ".de";
-      case "nl": domainEnding = ".nl";
-      case "it": domainEnding = ".it";
-      case "staging": domainPrefix = "www.staging.";
-      console.log(domainPrefix);
-      console.log(domainEnding)
+      case "en": domainEnding = ".com"; break;
+      case "de": domainEnding = ".de"; break;
+      case "nl": domainEnding = ".nl"; break;
+      case "it": domainEnding = ".it"; break;
+    }
+    if (subdomains[i] === "staging") {
+      domainPrefix = "www.staging.";
+    } 
+    console.log(domainPrefix);
+    console.log(domainEnding)
     }
   }
   console.log(domainPrefix + "listnride" + domainEnding);
