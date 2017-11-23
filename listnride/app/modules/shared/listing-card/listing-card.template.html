@@ -44,20 +44,20 @@
       md-no-ink
       flex
       class="md-icon-button md-primary"
-      ng-click="listingCard.onDuplicateClick()">
-      <md-icon md-svg-icon="app/assets/ui_icons/duplicate-image.svg"></md-icon>
-      <!--{{ 'listingCard.duplicate' | translate }}-->
+      ng-disabled="listingCard.disableActivate"
+      ng-click="listingCard.onActivateClick()"
+      ng-if="!listingCard.available">
+      <md-icon md-svg-icon="app/assets/ui_icons/visibility-button.svg"></md-icon>
+      <!--{{ 'listingCard.activate-bike' | translate }}-->
     </md-button>
 
     <md-button
       md-no-ink
       flex
       class="md-icon-button md-primary"
-      ng-disabled="listingCard.disableActivate"
-      ng-click="listingCard.onActivateClick()"
-      ng-if="!listingCard.available">
-      <md-icon md-svg-icon="app/assets/ui_icons/visibility-button.svg"></md-icon>
-      <!--{{ 'listingCard.activate-bike' | translate }}-->
+      ng-click="listingCard.onDuplicateClick()">
+      <md-icon md-svg-icon="app/assets/ui_icons/duplicate-image.svg"></md-icon>
+      <!--{{ 'listingCard.duplicate' | translate }}-->
     </md-button>
 
     <md-button
