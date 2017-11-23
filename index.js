@@ -24,15 +24,18 @@ app.set('port', (process.env.PORT || 9003));
 app.use(logger);
 
 var determineTld = function(subdomains) {
+  var domainPrefix = "www.";
+  var domainEnding = ".com";
   for (var i = 0; i < subdomains.count; i++) {
-    switch (language) {
-      case "en": return "www.listnride.com";
-      case "de": return "www.listnride.de";
-      case "nl": return "www.listnride.nl";
-      case "it": return "www.listnride.it";
+    switch (subdomains[i]) {
+      case "en": domainEnding = ".com";
+      case "de": domainEnding = ".de";
+      case "nl": domainEnding = ".nl";
+      case "it": domainEnding = ".it";
+      case "staging": domainPrefix = "www.staging.";
     }
   }
-  return "www.listnride.com";
+  return domainPrefix + "listnride" + domainEnding;
 };
 
 var stripTrailingSlash = function(url) {
@@ -43,8 +46,10 @@ var stripTrailingSlash = function(url) {
 app.use(function(req, res, next) {
   var correctUrl = stripTrailingSlash(determineTld(req.subdomains));
   if (req.hostname === correctUrl) {
+    console.log("proper hostname, no redirect necessary");
     next();
   } else {
+    console.log("redirecting from hostname " + req.hostname + ", to correct Url " + correctUrl);
     res.redirect(301, "https://" + correctUrl + req.originalUrl);
   }
 	// var language = req.acceptsLanguages("en", "de", "nl", "it") || "en";
