@@ -23,28 +23,38 @@ app.set('port', (process.env.PORT || 9003));
 // see all transactions through server
 app.use(logger);
 
-var determineTld = function(language) {
-  switch (language) {
-    case "en": return "listnride.com";
-    case "de": return "listnride.de";
-    case "nl": return "listnride.nl";
-    case "it": return "listnride.it";
-    default: return "listnride.com";
+var determineTld = function(subdomains) {
+  for (var i = 0; i < subdomains.count; i++) {
+    switch (language) {
+      case "en": return "www.listnride.com";
+      case "de": return "www.listnride.de";
+      case "nl": return "www.listnride.nl";
+      case "it": return "www.listnride.it";
+    }
   }
+  return "www.listnride.com";
 };
 
-// proper redirects based on browser language
+var stripTrailingSlash = function(url) {
+  return url.replace(/\/+$/, ""); 
+}
+
+// proper redirects
 app.use(function(req, res, next) {
-	var language = req.acceptsLanguages("en", "de", "nl", "it") || "en";
-  var correctUrl = req.subdomains.reverse().join(".") + "." + determineTld(language);
-  console.log(req.hostname);
-  console.log(correctUrl);
-  if (req.hostname == correctUrl) {
+  var correctUrl = stripTrailingSlash(determineTld(req.subdomains));
+  if (req.hostname === correctUrl) {
     next();
   } else {
-    // res.redirect(302, "https://" + correctUrl + req.originalUrl);
-    next();
+    res.redirect(301, "https://" + correctUrl + req.originalUrl);
   }
+	// var language = req.acceptsLanguages("en", "de", "nl", "it") || "en";
+ //  var correctUrl = req.subdomains.reverse().join(".") + "." + determineTld(language);
+ //  if (req.hostname == correctUrl) {
+ //    next();
+ //  } else {
+ //    // res.redirect(302, "https://" + correctUrl + req.originalUrl);
+ //    next();
+ //  }
 });
 
 // by default serves index.html
