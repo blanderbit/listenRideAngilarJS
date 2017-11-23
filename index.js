@@ -26,7 +26,6 @@ app.use(logger);
 var determineHostname = function(subdomains, hostname) {
   var domainPrefix = "www.";
   var domainEnding = retrieveTld(hostname);
-  console.log("subdomains are " + subdomains.toString());
   for (var i = 0; i < subdomains.length; i++) {
     switch (subdomains[i]) {
       case "en": domainEnding = ".com"; break;
@@ -37,10 +36,7 @@ var determineHostname = function(subdomains, hostname) {
     if (subdomains[i] === "staging") {
       domainPrefix = "www.staging.";
     } 
-    console.log(domainPrefix);
-    console.log(domainEnding);
   }
-  console.log(domainPrefix + "listnride" + domainEnding);
   return domainPrefix + "listnride" + domainEnding;
 };
 
@@ -54,14 +50,11 @@ var retrieveTld = function(hostname) {
 
 // proper redirects
 app.use(function(req, res, next) {
-  console.log("starting redirect logic");
   var correctHostname = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
   var correctOriginalUrl = stripTrailingSlash(req.originalUrl);
   if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
-    console.log("proper hostname, no redirect necessary");
     next();
   } else {
-    console.log("redirecting from hostname " + req.hostname + ", to correct hostname " + correctHostname);
     res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
   }
 });
