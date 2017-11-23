@@ -546,6 +546,7 @@
     "delete-bike": "Delete",
     "cancel": "Cancel",
     "delete": "Delete",
+    "duplicate": "Duplicate",
     "dialog-title": "Are you sure you want to delete your bike?",
     "dialog-subtitle": "The bike will get permanently removed from the platform. Current requests are not affected by this."
   },

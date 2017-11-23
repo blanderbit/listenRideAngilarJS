@@ -561,6 +561,7 @@
     "delete-bike": "Löschen",
     "cancel": "Abbrechen",
     "delete": "Löschen",
+    "duplicate": "Duplizieren",
     "dialog-title": "Möchtest du das Fahrrad wirklich löschen?",
     "dialog-subtitle": "Es wird unwiderruflich von der Plattform entfernt, aktive Anfragen sind davon nicht betroffen."
   },

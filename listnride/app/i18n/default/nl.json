@@ -544,6 +544,7 @@
     "delete-bike": "verwijderen",
     "cancel": "annuleren",
     "delete": "verwijderen",
+    "duplicate": "Duplicate",
     "dialog-title": "Wil je daadwerkelijk je fiets verwijderen?",
     "dialog-subtitle": "Het wordt onherroepelijk verwijderd van het platform, actieve aanvragen blijven gehandhaafd."
   },

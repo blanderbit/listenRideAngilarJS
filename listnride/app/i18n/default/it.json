@@ -538,6 +538,7 @@
     "delete-bike": "Elimina",
     "cancel": "Cancellare",
     "delete": "Elimina",
+    "duplicate": "Duplicate",
     "dialog-title": "Sei sicuro di voler eliminare la tua bicicletta ?",
     "dialog-subtitle": "La bicicletta verrà rimossa definitivamente dalla piattaforma. Le richieste attuali non sono influenzate da questo."
   },
