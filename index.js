@@ -54,7 +54,7 @@ var redirectUrl = function (req, res, next) {
   if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
     next();
   } else {
-    // res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
+    res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
     next();
   }
 };
@@ -79,7 +79,6 @@ that is because 'angular-sanitize.min.js.map' is missing
 and chrome requests it. not for safari and firefox
 */
 
-unnecessary
 app.use('/*', function (req, res) {
 
   res.sendFile(__dirname.concat('/listnride/dist/index.html'));
