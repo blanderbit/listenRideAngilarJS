@@ -1,40 +1,4 @@
-<!-- Layout for the Tile View -->
-<md-content ng-if="!listings.listView" class="single-column">
-  <div class="content lnr-page-margin" layout-align="center center">
-    <div ng-if="listings.bikes !== undefined && listings.bikes.length == 0" layout="column" layout-align="center center">
-      {{ 'listings.no-bikes' | translate }}<br><br>
-      <md-button ui-sref="listingABike" class="md-raised md-primary md-lrg">{{ 'shared.list-a-bike' | translate }}</md-button>
-    </div>
-
-    <div layout="row" layout="space-around center">
-      <span flex="33"></span>
-      <div flex="33" ng-if="listings.bikes !== undefined && listings.bikes.length > 0" layout="column" layout-align="center center">
-        <md-button ui-sref="list" class="md-raised md-primary md-lrg">{{ 'shared.list-a-bike' | translate }}</md-button>
-      </div>
-    
-      <div flex="33" hide-sm ng-if="listings.bikes !== undefined && listings.bikes.length > 0" layout="column" layout-align="end center">
-          <div layout="row" flex layout-align="end center">
-            <span flex></span>
-            <div flex="80"><h3>Show as List</h3></div>
-            <div flex="15"><md-switch ng-model="listings.listView"></md-switch></div>
-            <span flex></span>
-          </div>
-      </div>
-    </div>
-
-    <div flex-gt-xs layout="row" layout-wrap layout-padding layout-align="center center">
-      <listing-card ng-repeat="bike in listings.bikes" flex="100" flex-gt-xs="50" flex-gt-sm="33"
-        bike-id="bike.id" name="bike.name" brand="bike.brand" category="bike.category" price="bike.price_from"
-        image-url=" bike.image_file_1.image_file_1.small.url" available="bike.available"
-        remove-bike="listings.removeBike(bikeId)">
-      </listing-card>
-    </div>
-  </div>
-  <footer></footer>
-</md-content>
-
-<!-- Layout for the List View -->
-<md-content ng-if="listings.listView" flex="100" layout="column" layout-fill>
+<md-content flex="100" layout="column" layout-fill>
   <div class="listings-header" layout="column">
     <div layout="row" hide-xs class="content" layout-fill layout-align="space-around center">
       <md-input-container flex="30">
@@ -57,9 +21,40 @@
   </div>
   <md-divider></md-divider>
 
-  <md-content id="list-view">
+  <!-- Layout for the List View -->
+
+  <md-content id="list-view" ng-if="listings.listView">
     <div class="content" layout-align="center center">
       <list-view ng-if="listings.listView" bikes="listings.bikes"></list-view>
     </div>
   </md-content>
+
+  <!-- Layout for the Tile View -->
+
+  <md-content ng-if="!listings.listView" >
+    <div class="content" layout-align="center center">
+      <div ng-if="listings.bikes !== undefined && listings.bikes.length == 0" layout="column" layout-align="center center">
+        {{ 'listings.no-bikes' | translate }}<br><br>
+        <md-button ui-sref="listingABike" class="md-raised md-primary md-lrg">{{ 'shared.list-a-bike' | translate }}</md-button>
+      </div>
+
+      <div flex-gt-xs layout="row" layout-wrap layout-padding layout-align="center center">
+        <listing-card
+          ng-repeat="bike in listings.bikes"
+          flex="100"
+          flex-gt-xs="50"
+          flex-gt-sm="33"
+          bike-id="bike.id"
+          name="bike.name"
+          brand="bike.brand"
+          category="bike.category"
+          price="bike.price_from"
+          image-url=" bike.image_file_1.image_file_1.small.url"
+          available="bike.available"
+          remove-bike="listings.removeBike(bikeId)">
+        </listing-card>
+      </div>
+    </div>
+  </md-content>
+
 </md-content>
