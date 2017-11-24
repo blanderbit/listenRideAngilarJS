@@ -11,13 +11,14 @@ angular.module('listings').component('listView', {
     '$stateParams',
     '$window',
     '$mdSidenav',
+    '$timeout',
     'api',
     'bikeOptions',
     '$state',
     '$mdDialog',
     '$mdToast',
     '$translate',
-    'orderByFilter', function ($stateParams, $window, $mdSidenav, api,
+    'orderByFilter', function ($stateParams, $window, $mdSidenav, $timeout, api,
       bikeOptions, $state, $mdDialog, $mdToast, $translate, orderBy) {
       var listView = this;
 
@@ -198,10 +199,23 @@ angular.module('listings').component('listView', {
             "quantity": duplicate_number
           }).then(function (response) {
             var job_id = response.data.job_id;
+            listView.getStatus(bike, job_id, 'initialized')
           }, function () {
           });
         }, function () {
         });
       };
+
+      listView.getStatus = function (bike, jobId, status) {
+        api.get('/rides/' + bike.id + '/status/' + jobId).then(function (response) {
+          var newStatus = response.data.status;
+          if(newStatus !== 'complete') {
+            $timeout(listView.getStatus(bike, jobId, newStatus), 5000);
+            newStatus = '';
+          }
+        }, function (error) {
+
+        });
+      }
     }]
 });
