@@ -52,11 +52,14 @@ var redirectUrl = function (req, res, next) {
   var correctHostname = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
   var correctOriginalUrl = stripTrailingSlash(req.originalUrl);
   if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
-    next();
   } else {
-    res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
-    next();
+    console.log("correct host: ", correctHostname);
+    console.log("correct original: ", correctOriginalUrl);
+    // fake redirector for debugging
+    res.redirect(301, "https://www.listnride.com/listing-a-bike"); // "https://" + correctHostname + correctOriginalUrl
   }
+
+  return next();
 };
 
 // proper redirects
