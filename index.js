@@ -49,15 +49,15 @@ var retrieveTld = function(hostname) {
 }
 
 // proper redirects
-app.all('/', function(req, res, next) {
-  var correctHostname = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
-  var correctOriginalUrl = stripTrailingSlash(req.originalUrl);
-  if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
-    next();
-  } else {
-    res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
-  }
-});
+// app.all('/', function(req, res, next) {
+//   var correctHostname = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
+//   var correctOriginalUrl = stripTrailingSlash(req.originalUrl);
+//   if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
+//     next();
+//   } else {
+//     res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
+//   }
+// });
 
 // by default serves index.html
 // http://expressjs.com/en/4x/api.html#express.static
