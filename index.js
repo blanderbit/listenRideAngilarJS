@@ -48,16 +48,21 @@ var retrieveTld = function(hostname) {
   return hostname.replace(/^(.*?)\listnride/, "");
 }
 
-// // proper redirects
-// app.use(function(req, res, next) {
-//   var correctHostname = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
-//   var correctOriginalUrl = stripTrailingSlash(req.originalUrl);
-//   if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
-//     next();
-//   } else {
-//     res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
-//   }
-// });
+var redirectUrl = function (req, res, next) {
+  var correctHostname = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
+  var correctOriginalUrl = stripTrailingSlash(req.originalUrl);
+  if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
+    next();
+  } else {
+    res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
+    next();
+  }
+};
+
+// proper redirects
+app.use(function(req, res, next) {
+  redirectUrl(req, res, next);
+});
 
 // by default serves index.html
 // http://expressjs.com/en/4x/api.html#express.static
@@ -73,6 +78,8 @@ sometimes it will get called even on root in case of chrome
 that is because 'angular-sanitize.min.js.map' is missing
 and chrome requests it. not for safari and firefox
 */
+
+unnecessary
 app.use('/*', function (req, res) {
 
   res.sendFile(__dirname.concat('/listnride/dist/index.html'));
