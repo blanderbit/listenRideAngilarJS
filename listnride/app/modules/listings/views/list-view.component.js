@@ -5,7 +5,8 @@ angular.module('listings').component('listView', {
   controllerAs: 'listView',
   bindings: {
     bikes: '<',
-    removeBike: '<'
+    removeBike: '<',
+    status: '='
   },
   controller: [
     '$stateParams',
@@ -208,10 +209,11 @@ angular.module('listings').component('listView', {
 
       listView.getStatus = function (bike, jobId, status) {
         api.get('/rides/' + bike.id + '/status/' + jobId).then(function (response) {
-          var newStatus = response.data.status;
-          if(newStatus !== 'complete') {
-            $timeout(listView.getStatus(bike, jobId, newStatus), 5000);
-            newStatus = '';
+          listView.status = response.data.status;
+          if(listView.status !== 'complete') {
+            $timeout(listView.getStatus(bike, jobId, listView.status), 5000);
+          } else if(listView.status === 'complete') {
+            // $timeout(listView.status = '', 20000);
           }
         }, function (error) {
 
