@@ -24,7 +24,7 @@ app.set('port', (process.env.PORT || 9003));
 app.use(logger);
 
 var determineHostname = function(subdomains, hostname) {
-  var domainPrefix = "www.";
+  var domainPrefix = "";
   var domainEnding = retrieveTld(hostname);
   for (var i = 0; i < subdomains.length; i++) {
     switch (subdomains[i]) {
@@ -34,7 +34,7 @@ var determineHostname = function(subdomains, hostname) {
       case "it": domainEnding = ".it"; break;
     }
     if (subdomains[i] === "staging") {
-      domainPrefix = "www.staging.";
+      domainPrefix = "staging.";
     } 
   }
   return domainPrefix + "listnride" + domainEnding;
@@ -55,8 +55,9 @@ var redirectUrl = function (req, res, next) {
   } else {
     console.log("correct host: ", correctHostname);
     console.log("correct original: ", correctOriginalUrl);
+    console.log("complete url: ", correctHostname + correctOriginalUrl);
     // fake redirector for debugging
-    res.redirect(301, "https://www.listnride.com/listing-a-bike"); // "https://" + correctHostname + correctOriginalUrl
+    res.redirect(301, "de.staging.listnride.com/listing-a-bike");
   }
 
   return next();
