@@ -24,7 +24,7 @@ app.set('port', (process.env.PORT || 9003));
 app.use(logger);
 
 var determineHostname = function(subdomains, hostname) {
-  var domainPrefix = "www.";  
+  var domainPrefix = "www.";
   var domainEnding = retrieveTld(hostname);
   for (var i = 0; i < subdomains.length; i++) {
     switch (subdomains[i]) {
@@ -34,7 +34,7 @@ var determineHostname = function(subdomains, hostname) {
       case "it": domainEnding = ".it"; break;
     }
     if (subdomains[i] === "staging") {
-      domainPrefix = "www.staging.";      
+      domainPrefix = "www.staging.";
     } 
   }
   return domainPrefix + "listnride" + domainEnding;
@@ -53,13 +53,8 @@ var redirectUrl = function (req, res, next) {
   var correctOriginalUrl = stripTrailingSlash(req.originalUrl);
   if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
   } else {
-    console.log("correct host: ", correctHostname);
-    console.log("correct original: ", correctOriginalUrl);
-    console.log("complete url: ", correctHostname + correctOriginalUrl);
-    // fake redirector for debugging
-    res.redirect(301, "staging.listnride.de/listing-a-bike");
+    res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
   }
-
   return next();
 };
 
@@ -82,7 +77,6 @@ sometimes it will get called even on root in case of chrome
 that is because 'angular-sanitize.min.js.map' is missing
 and chrome requests it. not for safari and firefox
 */
-
 app.use('/*', function (req, res) {
 
   res.sendFile(__dirname.concat('/listnride/dist/index.html'));
