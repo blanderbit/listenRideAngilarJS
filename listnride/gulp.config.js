@@ -128,8 +128,8 @@ module.exports = function () {
                 ENV: {
                     name: 'listnride',
                     html5Mode: false,
-                    apiEndpoint: 'https://listnride-staging-pr-131.herokuapp.com/v2',
-                    userEndpoint: 'https://listnride-staging-pr-131.herokuapp.com/v2/users/',
+                    apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
+                    userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com"
                 }
             },
@@ -148,8 +148,8 @@ module.exports = function () {
                 ENV: {
                     name: 'listnride',
                     html5Mode: true,
-                    apiEndpoint: 'https://listnride-staging-pr-131.herokuapp.com/v2',
-                    userEndpoint: 'https://listnride-staging-pr-131.herokuapp.com/v2/users/',
+                    apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
+                    userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com"
                 }
             },        
