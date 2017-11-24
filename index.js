@@ -54,7 +54,7 @@ var redirectUrl = function (req, res, next) {
   if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
     next();
   } else {
-    res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
+    // res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
     next();
   }
 };
