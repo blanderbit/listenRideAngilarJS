@@ -33,27 +33,17 @@ var determineTld = function(language) {
   }
 };
 
-var stripTrailingSlash = function(url) {
-  // return url.replace(/\/+$/, "");
-  return url;
-}
-
-var retrieveTld = function(hostname) {
-  return hostname.replace(/^(.*?)\listnride/, "");
-}
-
-// proper redirects
+// proper redirects based on browser language
 app.use(function(req, res, next) {
-  var correctHostname = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
-  var correctOriginalUrl = stripTrailingSlash(req.originalUrl);
-  console.log("original url requested is: ");
-  console.log(req.hostname + req.originalUrl);
-  if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
-    console.log("hostname is fine, no redirect");
+	var language = req.acceptsLanguages("en", "de", "nl", "it") || "en";
+  var correctUrl = req.subdomains.reverse().join(".") + "." + determineTld(language);
+  console.log(req.hostname);
+  console.log(correctUrl);
+  if (req.hostname == correctUrl) {
     next();
   } else {
-    console.log("hostname is " + req.hostname + req.originalUrl + " but should be " + correctHostname + correctOriginalUrl);
-    res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
+    // res.redirect(302, "https://" + correctUrl + req.originalUrl);
+    next();
   }
 });
 
@@ -72,6 +62,7 @@ that is because 'angular-sanitize.min.js.map' is missing
 and chrome requests it. not for safari and firefox
 */
 app.use('/*', function (req, res) {
+
   res.sendFile(__dirname.concat('/listnride/dist/index.html'));
 });
 
