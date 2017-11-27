@@ -1372,6 +1372,11 @@ background-color: rgba(238, 238, 238, 0.2) !important;
   min-height: 40px;
   font-weight: 700;
   padding: 8px 0 8px 0;
+  line-height: 24px;
+}
+
+.lnr-listing-header .fa {
+  line-height: 24px;
 }
 
 /*-----------------------------------------------------------------------------------*/
