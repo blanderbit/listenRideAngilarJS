@@ -11,11 +11,15 @@ angular.module('listingCard',[]).component('listingCard', {
     price: '<',
     imageUrl: '<',
     available: '<',
-    removeBike: '&'
+    removeBike: '&',
+    status: '=',
+    duplicating: '='
   },
-  controller: [ '$state', '$mdDialog', '$translate', 'api', '$mdToast',
-    function ListingCardController($state, $mdDialog, $translate, api, $mdToast) {
+  controller: [ '$state', '$mdDialog', '$translate', '$timeout', 'api', '$mdToast',
+    function ListingCardController($state, $mdDialog, $translate, $timeout, api, $mdToast) {
       var listingCard = this;
+
+      listingCard.duplicating = false;
 
       listingCard.onDeleteClick = function(id, event) {
         $mdDialog.show({
@@ -105,14 +109,52 @@ angular.module('listingCard',[]).component('listingCard', {
             "quantity": duplicate_number
           }).then(function (response) {
             var job_id = response.data.job_id;
+            listingCard.getStatus(job_id, 'initialized');
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.duplicate-start'))
+                .hideDelay(4000)
+                .position('top center')
+            );
           }, function () {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.error'))
+                .hideDelay(4000)
+                .position('top center')
+            );
           });
         }, function () {
         });
       };
 
+      listingCard.getStatus = function (jobId, status) {
+        listingCard.duplicating = true;
+        api.get('/rides/' + listingCard.bikeId + '/status/' + jobId).then(function (response) {
+          listingCard.status = response.data.status;
+          if(listingCard.status !== 'complete') {
+            $timeout(function() { listingCard.getStatus(jobId, listingCard.status); }, 5000);
+          } else if(listingCard.status === 'complete') {
+            listingCard.duplicating = false;
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.duplicate-finish'))
+                .hideDelay(4000)
+                .position('top center')
+            );
+          }
+        }, function (error) {
+          $mdToast.show(
+            $mdToast.simple()
+              .textContent($translate.instant('toasts.error'))
+              .hideDelay(4000)
+              .position('top center')
+          );
+        });
+      };
+
       function deleteBike() {
-        api.put("/rides/" + listingCard.bikeId, {"ride": {"active": "false"}}).then(
+        api.delete("/rides/" + listingCard.bikeId, {"ride": {"active": "false"}}).then(
           function(response) {
             listingCard.removeBike({'bikeId': listingCard.bikeId});
             listingCard.disableDelete = true;
