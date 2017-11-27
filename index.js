@@ -41,7 +41,8 @@ var determineHostname = function(subdomains, hostname) {
 };
 
 var stripTrailingSlash = function(url) {
-  return url.replace(/\/+$/, ""); 
+  // return url.replace(/\/+$/, "");
+  return url;
 }
 
 var retrieveTld = function(hostname) {
