@@ -300,10 +300,10 @@ function copyFonts() {
  */
 function imagesPng() {
     return gulp.src(path.app.images)
-        .pipe(imagemin({
-            progressive: true,
-            plugins: [imagemin.optipng(env.imageOptions)]
-        }))
+        //.pipe(imagemin({
+        //    progressive: true,
+        //    plugins: [imagemin.optipng(env.imageOptions)]
+        //}))
         .pipe(gulp.dest(path.dist.images))
 }
 /**
@@ -313,11 +313,11 @@ function imagesPng() {
  */
 function imagesSvg() {
     return gulp.src(path.app.icons)
-        .pipe(imagemin({
-            progressive: true,
-            interlaced: true,
-            plugins: [imagemin.svgo()]
-        }))
+        //.pipe(imagemin({
+        //    progressive: true,
+        //    interlaced: true,
+        //    plugins: [imagemin.svgo()]
+        //}))
         .pipe(gulp.dest(path.dist.icons))
 }
 /**
