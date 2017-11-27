@@ -272,7 +272,8 @@
     "opening-hours-error": "Non puoi salvare l'orario di disponibilità.",
     "uniq-phone": "Numero telefonico già registrato nel nostro sistema.",
     "pending-requests": "Sembra che tu abbia una richiesta aperta per questa bicicletta. Prima  di cancellare la bicicletta è necessario accettarla o annullarla",
-    "duplicate-start": "Duplications process started."
+    "duplicate-start": "Duplication process started.",
+    "duplicate-finish": "Duplication process finished. Copies created successfully."
   },
   "settings": {
     "settings": "Impostazioni",
