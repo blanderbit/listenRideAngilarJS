@@ -77,6 +77,36 @@
       "cafes-bars-content": "Wer schon immer mal veganes Essen ausprobieren wollte oder Veganer ist, der sollte das <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest Bistrot</a> am Karmeliterplatz ausprobieren. Neben veganem Essen gibt es auch vegetarische Alternativen. Oder doch traditionell Österreichische Küche? Genieß einen Tafelspitz oder Wiener Schnitzel bei <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>, direkt gegenüber den Wiener Oper, besser geht nicht, oder? Möchte man den Abend mit einem Drink ausklingen lassen, eignet sich der Weg vom Karmeliterplatz Richtung Donau um in die ein oder andere Bar reinzuschnuppern. An der Donau kann man unter freiem Himmel den Abend ausklingen lassen."
     }
   },
+  "business-community": {
+    "meta-title": "Die listnride Business Community",
+    "meta-description": "Werde Teil des gewerblichen listnride Fahrradverleihs.",
+    "title": "Die listnride Business Community",
+    "subtitle": "Werde Teil des gewerblichen listnride Fahrradverleihs",
+    "description": "Wir möchten dich gerne in unseren gewerblichen Fahrradverleih einbinden und dir diesen so einfach wie möglich machen. Denn unsere Leidenschaft sind Fahrräder und wir möchten gerne mehr davon auf Europas Straßen sehen. Wie gut, dass wir uns gegenseitig bei dieser Mission unterstützen können.",
+    "feature-1": {
+      "title": "Vermiete deine Fahrräder",
+      "description": "Deine Kunden können ihr Leihfahrrad online über deine  Webseite auswählen und buchen. Den kompletten Buchungs-und Bezahlvorgang übernimmt listnride für dich."
+    },
+    "feature-2": {
+      "title": "Präsentiere deinen Shop online",
+      "description": "Wir geben dir die Möglichkeit deinen Shop online zu präsentieren und so deinen Kundenstamm zu erweitern und die ‘Generation Internet’ online abzuholen."
+    },
+    "feature-3": {
+      "title": "Profitiere von unserer Reichweite",
+      "description": "Listnride ist Europas größte Bikesharing Community und wir wachsen stetig weiter. Nutze diese Reichweite."
+    },
+    "text-2": {
+      "title": "Werde auch Du Teil der listnride Business Community",
+      "description": "Registriere dich jetzt und richte sofort deine eigene Shop Seite ein. Oder kontaktiere uns persönlich. Gerne hilft dir Martin weiter, kontaktiere ihn via<br><a href=\"mailto:ml@listnride.com\">ml@listnride.com</a> oder 0171&nbsp;83&nbsp;13&nbsp;348"
+    },
+    "text-3": {
+      "column-1": "listnride ist bereits jetzt schon Europas größte Bikesharing Community und so Spezialist für den privaten und gewerblichen Fahrradverleih.  Deshalb wissen wir wonach unsere KundInnen suchen und können sie direkt auf deine listnride Shop Seite leiten und ihnen den Weg in deinen Laden so einfach wie möglich machen.",
+      "column-2": "Uns ist wichtig, dass wir unserer fahrradbegeisterten Community ein breites Angebot an Fahrrädern anbieten können, dies reicht vom Crosser, übers Rennrad zum Hollandrad und Cargo-Bike. Mit dir zusammen können wir unseren Usern nicht nur das perfekte Leihrad für den Urlaub bieten, sondern ihnen auch bei Suche nach einem neuen, eigenen Fahrrad helfen."
+    },
+    "join-now": "Mach mit. Das Plugin ist kostenlos.",
+    "join-now-description": "Willst du mehr erfahren?",
+    "contact-us": "Kontaktiere Uns"
+  },
   "events": {
     "rapha-super-cross": {
       "text": "Der Rapha Super Cross ist wieder zurück in München, zum dritten Mal. Wenn du gerne dabei sein möchtest aber kein geeignetes Rad hast, kannst du über listnride ein Rad mieten. Die listnride bike sharing community bietet verschiedene Crossräder zum Verleih an. Die Räder können vor der Veranstaltung bei den einzelnen Anbietern angefragt und gebucht werden. Die Übergabe wird direkt mit dem Vermieter vereinbart. Zusätzlich verfügbare Räder können auch noch zur Vermietung angeboten werden, um damit etwas zu verdienen und interessante Leute zu treffen, welche an der Veranstaltung teilnehmen. Werde Teil der wachsenden Community!"
@@ -85,7 +115,7 @@
       "meta-title": "Klassikerausfahrt: In Velo Veritas mit listnride",
       "meta-description": "Miete dir ein klassisches Stahl Rennrad für die Ausfahrt durch eines der schönsten Weinanbaugebiete Österreichs.",
       "title": "In Velo Veritas - Die zeitlos Rad-Rundfahrt",
-      "text": "Die legendäre Vintage-Rennrad Tour findet nun zum 5. Mal statt. Am 10. und 11. Juni 2017 versammeln sich Fahrradliebhaber in Stockeraus (Österreich) um dort gemeinsam die Touren zu bestreiten. Für alle die gerne teilnehmen würden, allerdings kein zugelassenes Rennrad besitzen, haben wir passende Vintage-Räder von unserer Community zusammengestellt. Alle unten aufgeführten Räder entsprechen dem Reglement und Du kannst Sie einfach über listnride mieten. Falls du nicht teilnehmen kannst, vielleicht sogar mehrer Rennräder hast oder einfach einem gleichgesinnten Fahrrad Enthusiasten aushelfen möchtest: Mach mit und verleihe dein Fahrrad an Gleichgesinnte über listnride."
+      "text": "Die legendäre Vintage-Rennrad Tour findet nun zum 6. Mal statt. Am 09. und 10. Juni 2018 versammeln sich Fahrradliebhaber in Retz (Österreich) um dort gemeinsam die Touren zu bestreiten. Für alle die gerne teilnehmen würden, allerdings kein zugelassenes Rennrad besitzen, haben wir passende Vintage-Räder von unserer Community zusammengestellt. Alle unten aufgeführten Räder entsprechen dem Reglement und Du kannst Sie einfach über listnride mieten. Falls du nicht teilnehmen kannst, vielleicht sogar mehrer Rennräder hast oder einfach einem gleichgesinnten Fahrrad Enthusiasten aushelfen möchtest: Mach mit und verleihe dein Fahrrad an Gleichgesinnte über listnride."
     },
     "velothon-bikerental": {
       "meta-title": "Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
@@ -124,7 +154,7 @@
       "meta-description": "Fahre die Cyclassics Hamburg auf dem Rennrad deiner Träume! Wähle  Specialized, Ridley, Cervelo, Bianchi, sowie Simplon und miete es ganz bequem und einfach von Zuhause. ",
       "title": "Miete dir einfach das perfekte Rennrad für den Cyclassics Hamburg",
       "text": "Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist.<br><br>Sicher 10€ Guthaben und gebe diese Promocode:  CYCLASSICS2018 unter Einstellungen bevor du buchst! <br><br> Du kannst leider nicht bei den Cyclassics teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und vermiete dein Rad.",
-      "description": "wo: <b>Hamburg</b>  |  was: <b>Jedermannrennen 60, 120 or 180km</b>  |  wann: <b>19.08.2018</b>"
+      "description": "wo: <b>Hamburg</b>  |  was: <b>Jedermannrennen 60, 100 oder 160km</b>  |  wann: <b>19.08.2018</b>"
     },
     "riderman": {
       "meta-title": "Miete dir einfach das perfekte Rennrad für die RiderMan in Bad Dürrheim",
@@ -422,6 +452,33 @@
       "faq-answer-5": "Ihr Fahrrad wird mit einem Ladegerät geliefert. Stecken Sie den Stecker einfach so ein, wie Sie Ihr Smartphone anschließen würden, und sechs Stunden später ist er voll aufgeladen.",
       "faq-question-6": "Was bekomme ich mit einem Electrified S?",
       "faq-answer-6": "• Zwei Jahre Garantie auf Material- und Verarbeitungsfehler.<br>• Backup-Remote-Taste zum Sperren oder Entsperren des Fahrrads, wenn Ihr Smartphone nicht verfügbar ist oder keine Batterie vorhanden ist<br>• Fahrradladegerät (36V, 2A. Ladegerät)<br>• GSM und Bluetooth Anti-Diebstahl-Tracking<br>• Smartphone App für Android und iOS<br>• Bedienungsanleitung und Benutzerhandbuch<br>• Anti-Theft Tool für die Laufräder<br>• Die Electrified S Reifen 28 \"\" x 2,35 \"\" Reifen. (60-622)<br>• Kabel für das integrierte Schloss<br>• Werkzeug zum Einstellen der Sitz- und Lenkerposition."
+    },
+    "moeve": {
+      "meta-title": "Miete und Teste Möve bikes in München und Amsterdam",
+      "meta-descr": "Das Rad mit dem innovativsten Fahrradantrieb - Cyfly by Möve.",
+      "title": "",
+      "description": "Cyfly - Das Rad mit dem innovativen Fahrradantrieb von Möve.",
+      "subdescription": "Gebaut von leidenschaftlichen Ingenieuren",
+      "item1-title": "Cyfly",
+      "item1-description": "Bessere Kraftübertragung in den relevanten Sektoren. Das einzigartige Fahrgefühl und das kraftschonende pedalieren Sorgen für ein einmaliges Radfahrerlebnis.",
+      "item2-title": "Lackierung",
+      "item2-description": "Die Rahmen werden zweifarbig grundiert, von Hand werden der fliessende Farbverlauf und das grafische Thema (Gefieder Einer Möwe) in Airbrush-technik aufgesprüht. Eine gepulverte, matte und hochfeste Deckschicht versiegelt die Rahmen.",
+      "item3-title": "Rahmengeometrie",
+      "item3-description": "Perfekte Ergonomie und effektive Kraftübertragung – Die Rahmengeometrie wurde auf Cyfly und den Fahrer / Die Fahrerin zugeschnitten. Schnelles Vorankommen kombiniert mit komfortabler Sitzposition.",
+      "find-out-more": "Erfahre mehr über das Cyfly von Möve",
+      "order-online": "<a href=\"https://www.moeve-bikes.de/cyfly/\" target=\"_blank\">Bestelle dein Cyfly von Möve online</a> und wir erstatten dir die Miete für deine Testfahrt. Werf' auch einen Blick auf die häufigsten Fragen.",
+      "faq-question-1": "Was ist Cyfly?",
+      "faq-answer-1": "Cyfly ist ein patentiertes Mehrgelenkgetriebe bei dem die Tretkurbel nicht mehr direkt mit der Achse verbunden Ist, sondern sich hinter dieser abstützt.",
+      "faq-question-2": "Ist Cyfly nicht das Gleiche wie eine Schaltung?",
+      "faq-answer-2": "Nein. Herkömmliche Drehmomentwandler (Ketten-, Naben- oder Getriebeschaltungen) verlängern den Pedalweg um das Drehmoment zu erhöhen. Cyfly schafft eine neuartige Bewegungsbahn, wodurch eine bessere Kraftausnutzung der Beinkraft möglich Ist. Cyfly kann mit jeder herkömmlichen Schaltung am Hinterrad kombiniert werden.",
+      "faq-question-3": "Muss ich mir für Cyfly eine neue Tritttechnik angewöhnen?",
+      "faq-answer-3": "Unsere Erfahrung mit bisher mehr als 1000 Testfahrern zeigt, dass man sich beim Fahren mit Cyfly automatisch und ganz natürlich auf die neue Bewegung einstellt. Hierbei hat es sich bewährt die ersten Kilometer mit niedrigeren Trittfrequenzen und in schwereren Gängen zu beginnen.",
+      "faq-question-4": "Wo Wird Cyfly Befestigt?",
+      "faq-answer-4": "Cyfly sitzt an der Stelle eines üblichen Tretlagers. Es ersetzt den kompletten vorderen Teil des Antriebsstrangs eines herkömmlichen Rades. Der Cyfly-Antrieb enthält bereits Tretkurbeln, Lager und das zum Patent angemeldete Kettenblatt. Alle kKomponenten werden mit modernsten Fertigungstechnologien hergestellt. Cyfly ist eben 'state of the art'.",
+      "faq-question-5": "Kann man Cyfly nachrüsten?",
+      "faq-answer-5": "Da der Cyfly-Antrieb einen exakt angepassten Rahmen erfordert, kann er nicht ohne Weiteres nachgerüstet werden. Cyfly wird es zu Beginn nur als innovative Komponente an Premium-Fahrrädern geben.",
+      "faq-question-6": "Wie viel effizienter ist Cyfly?",
+      "faq-answer-6": "Jeder Mensch leitet seine Kraft beim Radfahren anders ein. Daher können wir objektiv keinen allgemeingültigen Effizienz-Zuwachs beziffern. Der Wert errechnet sich einerseits aus Daten mit festgelegten Randbedingungen und andererseits aus einer signifikanten Anzahl von Feldversuchen. Darüber hinaus wurde der Effizienz-Zuwachs durch ein externes Gutachten des Radlabors in Freiburg, bestätigt. Der Cyfly-Effekt wurde zudem von namhaften Profis aus Radrennsport und Triathlon bestätigt. Wie bei den meisten neuen Produkten empfehlen wir es selbst auszuprobieren."
     }
   },
   "about-us": {

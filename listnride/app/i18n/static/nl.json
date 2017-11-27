@@ -77,6 +77,36 @@
       "cafes-bars-content": "Indien je eens wat anders wilt proberen en bijvoorbeeld een goede veganer / vegatarisch restaurant wilt proberen, reserveer dan een tafeltje bij <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> aan het Karmeliterplein. Als je meer van de traditionele oostenrijkse keuken houdt, is <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a> een absolute aanrader. Een heerlijke Tafelspitz of Wiener Schnitzel met blik op de fameuze Wiener Oper. Beter kan het niet, toch? Als laatste stop voor het nuttigen van een afzakker leent zich het gebied rond de Donau zich uitstekend."
     }
   },
+  "business-community": {
+    "meta-title": "Die listnride Business Community",
+    "meta-description": "Werde Teil des gewerblichen listnride Fahrradverleihs.",
+    "title": "Die listnride Business Community",
+    "subtitle": "Werde Teil des gewerblichen listnride Fahrradverleihs",
+    "description": "Wir möchten dich gerne in unseren gewerblichen Fahrradverleih einbinden und dir diesen so einfach wie möglich machen. Denn unsere Leidenschaft sind Fahrräder und wir möchten gerne mehr davon auf Europas Straßen sehen. Wie gut, dass wir uns gegenseitig bei dieser Mission unterstützen können.",
+    "feature-1": {
+      "title": "Vermiete deine Fahrräder",
+      "description": "Deine Kunden können ihr Leihfahrrad online über deine  Webseite auswählen und buchen. Den kompletten Buchungs-und Bezahlvorgang übernimmt listnride für dich."
+    },
+    "feature-2": {
+      "title": "Präsentiere deinen Shop online",
+      "description": "Wir geben dir die Möglichkeit deinen Shop online zu präsentieren und so deinen Kundenstamm zu erweitern und die ‘Generation Internet’ online abzuholen."
+    },
+    "feature-3": {
+      "title": "Profitiere von unserer Reichweite",
+      "description": "Listnride ist Europas größte Bikesharing Community und wir wachsen stetig weiter. Nutze diese Reichweite."
+    },
+    "text-2": {
+      "title": "Werde auch Du Teil der listnride Business Community",
+      "description": "Registriere dich jetzt und richte sofort deine eigene Shop Seite ein. Oder kontaktiere uns persönlich. Gerne hilft dir Martin weiter, kontaktiere ihn via<br><a href=\"mailto:ml@listnride.com\">ml@listnride.com</a> oder 0171&nbsp;83&nbsp;13&nbsp;348"
+    },
+    "text-3": {
+      "column-1": "listnride ist bereits jetzt schon Europas größte Bikesharing Community und so Spezialist für den privaten und gewerblichen Fahrradverleih.  Deshalb wissen wir wonach unsere KundInnen suchen und können sie direkt auf deine listnride Shop Seite leiten und ihnen den Weg in deinen Laden so einfach wie möglich machen.",
+      "column-2": "Uns ist wichtig, dass wir unserer fahrradbegeisterten Community ein breites Angebot an Fahrrädern anbieten können, dies reicht vom Crosser, übers Rennrad zum Hollandrad und Cargo-Bike. Mit dir zusammen können wir unseren Usern nicht nur das perfekte Leihrad für den Urlaub bieten, sondern ihnen auch bei Suche nach einem neuen, eigenen Fahrrad helfen."
+    },
+    "join-now": "Mach mit. Das Plugin ist kostenlos.",
+    "join-now-description": "Willst du mehr erfahren?",
+    "contact-us": "Kontaktiere Uns"
+  },
   "events": {
     "rapha-super-cross": {
       "text": "De Rapha Super Cross is weer terug in München, voor het derde jaar op rij. Indien je er graag bij wil zijn, maar geen geschickte fiets hebt, kann je via listnride een passende fiets huren. De listnride bike sharing community biedt verschillende cyclocrossfietsen te huur aan. De fietsen kunnen voor het evenement bij de verschillende aanbieders worden aangevraagd en geboekt. De overdracht wordt direct met de verhuurder afgesproken. Indien je een fiets hebt die niet benut wordt, kan je deze gewoon aanbieden om daarmee wat geld te verdienen ein interessante mensen te leren kennen, die aan het evenement deelnemen. Sluit je aan bij de groeiende Community!"
@@ -85,7 +115,7 @@
       "meta-title": "In Velo Veritas - Huur een klassieke racefiets via listnride",
       "meta-description": "Huur de perfecte stalen vintage racefiets voor de In Velo Veritas. Listnride biedt verschillende klassieke racefietsen te huur voor de mooie tour in het Oostenrijkse Weinviertel.",
       "title": "In Velo Veritas - The vintage bicycle tour that's timeless",
-      "text": "The legendary “In Velo Veritas” happens this year the 5th time at the 10th/11th June 2017 in Stockerau. For those, who want to participate but need a guideline-matching bicycle, we collected some suiting bikes of our community-members to save your day. Just rent it! Bike enthusiasts like you are offering the different bikes below. If you can’t participate, have more vintage bicycles, or just want want to meet like-minded people, you can share your bike on our platform with others! Become a part of our growing community and make some extra money with your passion!"
+      "text": "The legendary “In Velo Veritas” happens this year the 6th time at the 09th/10th June 2018 in Retz. For those, who want to participate but need a guideline-matching bicycle, we collected some suiting bikes of our community-members to save your day. Just rent it! Bike enthusiasts like you are offering the different bikes below. If you can’t participate, have more vintage bicycles, or just want want to meet like-minded people, you can share your bike on our platform with others! Become a part of our growing community and make some extra money with your passion!"
     },
     "velothon-bikerental": {
       "meta-title": "Boek eenvoudig the perfekte racefiets voor de Velothon in Berlijn",
@@ -124,7 +154,7 @@
       "meta-description": "Huur de perfekte racefiets voor de Cyclassics in Hamburg van merken zoals Specialized, Ridley, Cervelo en Bianchi",
       "title": "Boek eenvoudig the perfekte racefiets voor de Cyclassics Hamburg",
       "text": "We helpen je! Samen met de listnride community bieden we vele racefietsen, waarbij er zeker enige zijn die passen aan je wensen. Je kan die eenvoudig zo lang als je die nodig hebt huren. Je hoeft slechts één van de onderstaande fietsen te kiezen, aanvragen voor de gewenste periode en ophalen wanneer de tijd is gekomen. Simpel als dat.<br><br>Cyclassics _ €10 korting! Vul deze promocode: CYCLASSICS2018 in, onder je account instellingen en boek je racefiets<br><br> Je kunt niet deelnemen? Help iemand in nood, een plaats je fiets en verdien zo wat extra zakgeld!",
-      "description": "waar: <b>Hamburg</b>  |  wat: <b>Wielerkoers 60, 120 or 180km</b>  |  wanneer: <b>19.08.2018</b>"
+      "description": "waar: <b>Hamburg</b>  |  wat: <b>Wielerkoers 60, 100 of 160km</b>  |  wanneer: <b>19.08.2018</b>"
     },
     "riderman": {
       "meta-title": "Boek eenvoudig de perfekte racefiets voor de RiderMan in Bad Dürrheim",
@@ -422,6 +452,32 @@
       "faq-answer-5": "Your bike will ship with a charger. Simply plug in the connector just like you'd plug in your smartphone, and six hours later it will be fully charged.",
       "faq-question-6": "What do I get with an Electrified S?",
       "faq-answer-6": "• A two-year warranty covering defects in workmanship and materials. <br>• Backup remote key, for locking or unlocking your bike when your smartphone is not available or out of battery<br>• Bike Charger (36V, 2A. charger)<br>• GSM and Bluetooth Anti-Theft Tracking<br>• Smartphone App for Android and iOS<br>• Operating Manual and User Guide<br>• Anti-Theft Tool for your bike's wheel nuts <br>• The Electrified S tyres 28\" x 2.35\" tyres. (60-622)<br>• Cable for the integrated lock<br>• Tool for adjusting the seat and handlebar position"
+    },
+    "moeve": {
+      "title": "",
+      "description": "De fiets met de meest innovatieve fietstransmissie - Cyfly van Möve",
+      "subdescription": "Gemaakt door gepassioneerde ingenieurs",
+      "item1-title": "Cyfly",
+      "item1-description": "Betere transmissie op de belangrijke momenten. Het bijzondere rijgedrag en de krachtige pedalen zorgen voor een unieke fietservaringen",
+      "item2-title": "Lackering",
+      "item2-description": "De frames worden tweekleurig geprimed. Met de hand, worden de vloeiende kleurgradiënt en het grafische element (verenkleed van een zeemeeuw) gespoten in airbrushtechniek. Een poedervormige, matte en zeer sterke toplaag dicht de frames af.",
+      "item3-title": "Framegeometrie",
+      "item3-description": "Perfecte ergonomie en effectieve krachtoverbrenging - De framegeometrie is afgestemd op Cyfly en de berijder. Snel acceleratie gecombineerd met comfortabele zitpositie.",
+      "choose-location": "Wähle deine Stadt",
+      "find-out-more": "Meer te weten komen over Möve",
+      "order-online": "<a href=\"https://www.moeve-bikes.de/cyfly/\" target=\"_blank\">Bestel uw Cyfly online bij Möve</a> en wij betalen de huur voor uw proefrit terug. Bekijk de meestgestelde vragen.",
+      "faq-question-1": "Wat is Cyfly?",
+      "faq-answer-1": "Cyfly is een gepatenteerde multi-link-transmissie waarbij het pedaal niet langer rechtstreeks op de as is aangesloten, maar erachter wordt bevestigd.",
+      "faq-question-2": "Is Cyfly niet hetzelfde als een Versnellingsysteem?",
+      "faq-answer-2": "Nee. Conventionele derailleurs (ketting, naaf of transmissie) verlengen de pedaalslag om de torque te verhogen. Cyfly creëert een nieuw traject, dat zorgt voor een beter overbrengen van de beenkracht. Cyfly kan worden gecombineerd met elke conventionele versnelling aan het achterwiel.",
+      "faq-question-3": "Moet ik wennen aan een nieuwe techniek voor Cyfly?",
+      "faq-answer-3": "Onze ervaring met meer dan 1000 testers laat tot dusver zien dat u zich automatisch en natuurlijk aanpast aan de nieuwe fietsbeweging by het fietsen met Cyfly. Hier is bewezen dat het de eerste paar kilometers met een lagere cadans en in zwaardere versnellingen aan te raden is.",
+      "faq-question-4": "Waar wordt de Cyfly gemonteerd?",
+      "faq-answer-4": "Cyfly zit op de plaats van een gebruikelijke trapas. Het vervangt het gehele trapas van een conventionele fiets. De Cyfly-aandrijving bevat de crank, lagers en het kettingblad waarvoor patent is aangevraagd. Alle componenten worden vervaardigd met behulp van de modernste productietechnologieën. Cyfly is state of the art.",
+      "faq-question-5": "Is het mogelijk om Cyfly achteraf aan te brengen?",
+      "faq-answer-5": "Aangezien de Cyfly-aandrijving een precies aangepast frame vereist, kan deze niet gemakkelijk achteraf worden aangebracht. In het begin zal Cyfly alleen een innovatief onderdeel van premium fietsen zijn.",
+      "faq-question-6": "Hoeveel efficiënter is Cyfly?",
+      "faq-answer-6": "Iedereen brengt zijn of haar kracht anders over bij het fietsen. Daarom is het moeilijk een gemiddelde toename van de efficiëntie objectief te kwantificeren. De waarde wordt enerzijds berekend aan de hand van gegevens met gedefinieerde randvoorwaarden en aan de andere kant uit een aanzienlijk aantal veldproeven. Bovendien werd de toename van de efficiëntie bevestigd door een extern rapport van het fietslaboratorium in Freiburg. Het Cyfly-effect werd ook bevestigd door bekende professionals uit wielrennen en triatlon. Zoals met de meeste nieuwe producten, raden we aan het zelf uit te proberen."
     }
   },
   "about-us": {

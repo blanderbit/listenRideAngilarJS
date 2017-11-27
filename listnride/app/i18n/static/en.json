@@ -77,6 +77,36 @@
       "cafes-bars-content": "If you like vegan and vegetarian food, we recommend a visit at <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> at the Karmeliterplatz. If you prefer the more traditional Austrian kitchen, we highly recommend <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>. Order a traditional Tafelspitz or Wiener Schnitzel and enjoy it outside with the view on the famous Vienna Opera. You’ll have a great night to remember! For finishing touch of the day, it makes sense to walk towards the Danube. On the way you’ll find plenty of interesting bars or just sit outside under the stars at the river."
     }
   },
+  "business-community": {
+    "meta-title": "Die listnride Business Community",
+    "meta-description": "Werde Teil des gewerblichen listnride Fahrradverleihs.",
+    "title": "Die listnride Business Community",
+    "subtitle": "Werde Teil des gewerblichen listnride Fahrradverleihs",
+    "description": "Wir möchten dich gerne in unseren gewerblichen Fahrradverleih einbinden und dir diesen so einfach wie möglich machen. Denn unsere Leidenschaft sind Fahrräder und wir möchten gerne mehr davon auf Europas Straßen sehen. Wie gut, dass wir uns gegenseitig bei dieser Mission unterstützen können.",
+    "feature-1": {
+      "title": "Vermiete deine Fahrräder",
+      "description": "Deine Kunden können ihr Leihfahrrad online über deine  Webseite auswählen und buchen. Den kompletten Buchungs-und Bezahlvorgang übernimmt listnride für dich."
+    },
+    "feature-2": {
+      "title": "Präsentiere deinen Shop online",
+      "description": "Wir geben dir die Möglichkeit deinen Shop online zu präsentieren und so deinen Kundenstamm zu erweitern und die ‘Generation Internet’ online abzuholen."
+    },
+    "feature-3": {
+      "title": "Profitiere von unserer Reichweite",
+      "description": "Listnride ist Europas größte Bikesharing Community und wir wachsen stetig weiter. Nutze diese Reichweite."
+    },
+    "text-2": {
+      "title": "Werde auch Du Teil der listnride Business Community",
+      "description": "Registriere dich jetzt und richte sofort deine eigene Shop Seite ein. Oder kontaktiere uns persönlich. Gerne hilft dir Martin weiter, kontaktiere ihn via<br><a href=\"mailto:ml@listnride.com\">ml@listnride.com</a> oder 0171&nbsp;83&nbsp;13&nbsp;348"
+    },
+    "text-3": {
+      "column-1": "listnride ist bereits jetzt schon Europas größte Bikesharing Community und so Spezialist für den privaten und gewerblichen Fahrradverleih.  Deshalb wissen wir wonach unsere KundInnen suchen und können sie direkt auf deine listnride Shop Seite leiten und ihnen den Weg in deinen Laden so einfach wie möglich machen.",
+      "column-2": "Uns ist wichtig, dass wir unserer fahrradbegeisterten Community ein breites Angebot an Fahrrädern anbieten können, dies reicht vom Crosser, übers Rennrad zum Hollandrad und Cargo-Bike. Mit dir zusammen können wir unseren Usern nicht nur das perfekte Leihrad für den Urlaub bieten, sondern ihnen auch bei Suche nach einem neuen, eigenen Fahrrad helfen."
+    },
+    "join-now": "Mach mit. Das Plugin ist kostenlos.",
+    "join-now-description": "Willst du mehr erfahren?",
+    "contact-us": "Kontaktiere Uns"
+  },
   "events": {
     "rapha-super-cross": {
       "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
@@ -85,7 +115,7 @@
       "meta-title": "In Velo Veritas - Rent a bike with listnride",
       "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country.",
       "title": "In Velo Veritas - The vintage bicycle tour that's timeless",
-      "text": "The legendary “In Velo Veritas” happens this year the 5th time at the 10th/11th June 2017 in Stockerau. For those, who want to participate but need a guideline-matching bicycle, we collected some suiting bikes of our community-members to save your day. Just rent it! Bike enthusiasts like you are offering the different bikes below. If you can’t participate, have more vintage bicycles, or just want want to meet like-minded people, you can share your bike on our platform with others! Become a part of our growing community and make some extra money with your passion!"
+      "text": "The legendary “In Velo Veritas” happens this year the 6th time at the 09th/10th June 2018 in Retz. For those, who want to participate but need a guideline-matching bicycle, we collected some suiting bikes of our community-members to save your day. Just rent it! Bike enthusiasts like you are offering the different bikes below. If you can’t participate, have more vintage bicycles, or just want want to meet like-minded people, you can share your bike on our platform with others! Become a part of our growing community and make some extra money with your passion!"
     },
     "velothon-bikerental": {
       "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
@@ -124,7 +154,7 @@
       "meta-description": "Rent the perfect road bike for the Cyclassics in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi",
       "title": "Rent a road bike for the Cyclassics Hamburg on listnride",
       "text": "You need a road bike for the Cyclassics in Hamburg? We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.<br><br>Secure a €10,- discount by entering this promo code: CYCLASSICS2018  in your account settings before booking!<br><br>You can’t participate? Help out someone in need. List your bike and make some extra pocket money!",
-      "description": "where: <b>Hamburg</b>  |  what: <b>roadbike race 60, 120 or 180km</b>  |  when: <b>19.08.2018</b>"
+      "description": "where: <b>Hamburg</b>  |  what: <b>roadbike race 60, 100 or 160km</b>  |  when: <b>19.08.2018</b>"
     },
     "riderman": {
       "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",
@@ -193,7 +223,7 @@
       "meta-title": "Rent a road bike for the Cape Town Cycle Tour on listnride",
       "meta-description": "Rent the perfect road bike for the  Cape Town Cycle Tour easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi",
       "title": "Simply rent the perfect road bike for the Cape Town Cycle Tour",
-      "text-1": "After the Velothon Berlin and Hamburg Cyclassics, the listnride community will soon also offer high-quality road bikes for the Cape Argus. Rent the perfect road bike for the period you need it. Leave your own bike home, save yourself the hassle and just book a high-end road bike!<br><br>You cannot participate in the Cape Town Cycling Tour, then help someone else and earn some pocket money on the side by lending out your road bike.<br><br>Secure a €10,- discount by entering this promo code: VELOTHON2018  in your account settings before booking!",
+      "text-1": "After the Velothon Berlin and Hamburg Cyclassics, the listnride community will soon also offer high-quality road bikes for the Cape Argus. Rent the perfect road bike for the period you need it. Leave your own bike home, save yourself the hassle and just book a high-end road bike!<br><br>You cannot participate in the Cape Town Cycling Tour, then help someone else and earn some pocket money on the side by lending out your road bike.",
       "text-2": "<span class=\"md-body-2\">Commercial Provider?</span><br>Contact us <a href=\"mailto:contact@listnride.com\">here</a><br><br><br><span class=\"md-body-2\">Want to be informed once all bikes are published?</span><br>Just leave your email address here and we will keep you informed.",
       "preregister-thanks": "Thanks, you’ll get notified as soon as all bikes are published!"
     }
@@ -421,6 +451,32 @@
       "faq-answer-5": "Your bike will ship with a charger. Simply plug in the connector just like you'd plug in your smartphone, and six hours later it will be fully charged.",
       "faq-question-6": "What do I get with an Electrified S?",
       "faq-answer-6": "• A two-year warranty covering defects in workmanship and materials. <br>• Backup remote key, for locking or unlocking your bike when your smartphone is not available or out of battery<br>• Bike Charger (36V, 2A. charger)<br>• GSM and Bluetooth Anti-Theft Tracking<br>• Smartphone App for Android and iOS<br>• Operating Manual and User Guide<br>• Anti-Theft Tool for your bike's wheel nuts <br>• The Electrified S tyres 28\" x 2.35\" tyres. (60-622)<br>• Cable for the integrated lock<br>• Tool for adjusting the seat and handlebar position"
+    },
+    "moeve": {
+      "title": "",
+      "description": "Cyfly - The bike with the unique drive system by Moeve",
+      "subdescription": "Built by a team of restless engineers",
+      "item1-title": "Cyfly",
+      "item1-description": "Better transmission in the relevant sectors. The unique riding and the powerful pedaling ensure a unique cyclist experience.",
+      "item2-title": "Painting",
+      "item2-description": "The framework has two colors. By hand the flowing color process and the graphic theme (plumage of a seagull) are spreaded in airbrush technology. A powdered, mat and high-resistance layer seals the frame.",
+      "item3-title": "Frame geometry",
+      "item3-description": "Perfect ergonomics and effective power transmission - the frame geometry was tailored to cyfly and the driver. Fast advance combined with comfortable seat position.",
+      "choose-location": "Wähle deine Stadt",
+      "find-out-more": "Learn more about the Cyfly by Moeve",
+      "order-online": "<a href=\"https://www.moeve-bikes.de/cyfly/\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed. See the most frequently asked questions below.",
+      "faq-question-1": "What is Cyfly?",
+      "faq-answer-1": "Cyfly is a patented multi-link transmission in which the pedal is no longer directly connected to the axle, but is supporting from behind.",
+      "faq-question-2": "Is Cyfly the same as a gear shift?",
+      "faq-answer-2": "No. In contrast to a conventional torque converter (dérailleur gears and gear hubs), Cyfly is a special force converter that, unlike conventional systems, does not lengthen the pedal travel to increase the torque. Cyfly can be combined with a conventional gear shift to use a broader range of gears.",
+      "faq-question-3": "Do I have to get used to a new technique in order to use Cyfly?",
+      "faq-answer-3": "Our experience with so far more than 1000 test drivers shows that you automatically and naturally adjust to the new movement when driving with Cyfly. Here it has proven to start the first few kilometers with lower cadence and in heavier gears.",
+      "faq-question-4": "Where is Cyfly attached?",
+      "faq-answer-4": "Cyfly is located in the position of a conventional bottom bracket. It replaces the entire front section of the drive train on a conventional bicycle. The cyfly drive system includes cranks, bearings and the patent-pending chain ring. All components are produced using highly modern production technologies. Cyfly is 'state of the art'.",
+      "faq-question-5": "Can Cyfly be retrofitted?",
+      "faq-answer-5": "Since the Cyfly drive system requires a precisely adapted frame, it cannot be retrofitted readily. Initially Cyfly will only be available as an innovative component of premium bicycles.",
+      "faq-question-6": "How much more efficient is Cyfly?",
+      "faq-answer-6": "Everyone applies force differently while cycling. Therefore we cannot provide an objective, generally applicable gain in efficiency. The value is calculated based on data with established constraints on the one hand and a significant number of field tests on the other hand. The efficiency gain was also verified by an external expert opinion from a bicycle laboratory in Freiburg, Germany. Furthermore, the Cyfly effect was confirmed by renowned bicycle racing and triathlon professionals."
     }
   },
   "about-us": {
@@ -566,8 +622,6 @@
     "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
   },
   "terms-and-conditions": {
-    "meta-title": "listnride | Website Terms & Conditions",
-    "meta-description": "The Terms and Conditions of the Bike-Sharing-Community listnride apply to the use of the online platform.",
     "title": "Terms and conditions",
     "header": "General Terms and Conditions of Business for the listnride Online Platform",
     "download": "Download here",
@@ -575,8 +629,6 @@
     "subtitle": "List and Ride GmbH (hereinafter “listnride”) arranges rental agreements for bicycles and other sport and leisure equipment via the website www.listnride.com (hereinafter “Website”). The following General Terms and Conditions of Use (hereinafter “Terms of Use”) in Section I shall form part of the agreement concluded between the user and listnride in respect of the arrangement service. Any agreement for rental of the used item (hereinafter “Rental Agreement”) concluded via the Website shall comply with the General Terms and Conditions of Rental (hereinafter “Rental Terms”) specified in Section II."
   },
   "trust-and-safety": {
-    "meta-title": "Bike hire made safe – listnride has your back",
-    "meta-description": "Trust is the be-all and end-all in a sharing community. We promote fairness and safety by verifying our users’ identities and offering a lister guarantee.",
     "title": "Trust & Safety",
     "header": "Carefree biking",
     "subheader": "Thanks to listnride, renting a bike is as safe as it is easy.",
@@ -657,8 +709,6 @@
     "go-back": "Back"
   },
   "shop-landing": {
-    "meta-title": "listnride Shop Plugin - Get your bike rental online",
-    "meta-description": "listnride now offers a free plug-in to easily integrate a bike rental booking engine on your website.",
     "title": "Your rental bikes directly bookable on your website",
     "subtitle": "listnride now offers a free plug-in to easily integrate a bike rental booking engine on your website.",
     "description": "You also realize having your own online bike rental shop is needed to engage with the online consumer? Within a few clicks you have your rental bikes listed on listnride bookable on your own website. Your clients can directly see available bikes and book them!",

@@ -1,28 +1,24 @@
 'use strict';
 
-angular.module('ampler-integration',[]).component('ampler', {
-  templateUrl: 'app/modules/brand-integration/ampler.template.html',
-  controllerAs: 'ampler',
-  controller: [ '$translate', '$translatePartialLoader', 'api',
-    function AmplerController($translate, $tpl, api) {
-      var ampler = this;
+angular.module('moeveIntegration',[]).component('moeve', {
+  templateUrl: 'app/modules/brand-integration/moeve.template.html',
+  controllerAs: 'moeve',
+  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta',
+    function MoeveController($translate, $tpl, api) {
+      var moeve = this;
       $tpl.addPart('static');
 
-      ampler.currentBikes = [];
-      $translate(["shared.berlin"]).then(
+      moeve.currentBikes = [];
+      $translate(["shared.munich"]).then(
         function (translations) {
-          ampler.currentCity = translations["shared.berlin"];
+          moeve.currentCity = translations["shared.munich"];
         }
       );
-      ampler.bikes = {
-        berlin: [],
+      moeve.bikes = {
         munich: [],
-        hamburg: [],
-        vienna: [],
-        zurich: [],
-        frankfurt: []
+        amsterdam: []
       };
-      ampler.slickConfig = {
+      moeve.slickConfig = {
         enabled: true,
         autoplay: true,
         draggable: true,
@@ -34,7 +30,7 @@ angular.module('ampler-integration',[]).component('ampler', {
       };
 
       $translate('shared.from-place').then(function(translation) {
-        ampler.testimonials = [
+        moeve.testimonials = [
           {
             userId: 1938,
             userName: "Robert " + translation + " Dresden",
@@ -62,29 +58,26 @@ angular.module('ampler-integration',[]).component('ampler', {
         ];
       });
 
-      api.get('/rides?family=8').then(
+      api.get('/rides?family=25').then(
         function (success) {
+          console.log(success.data);
 
           for (var i=0; i<success.data.length; i++) {
             switch (success.data[i].city) {
-              case "Berlin": ampler.bikes.berlin.push(success.data[i]); break;
-              case "München": ampler.bikes.munich.push(success.data[i]); break;
-              case "Hamburg": ampler.bikes.hamburg.push(success.data[i]); break;
-              case "Wien": ampler.bikes.vienna.push(success.data[i]); break;
-              case "Zürich": ampler.bikes.zurich.push(success.data[i]); break;
-              case "Frankfurt am Main": ampler.bikes.frankfurt.push(success.data[i]); break;
+              case "Munich": moeve.bikes.munich.push(success.data[i]); break;
+              case "Amsterdam": moeve.bikes.amsterdam.push(success.data[i]); break;
             }
           }
-          ampler.currentBikes = ampler.bikes["berlin"];
+          moeve.currentBikes = moeve.bikes["munich"];
         },
         function (error) {
           console.log('Error fetching Bikes');
         }
       );
 
-      ampler.showBikesIn = function(city) {
-        ampler.currentCity = $translate.instant("shared." + city);
-        ampler.currentBikes = ampler.bikes[city];
+      moeve.showBikesIn = function(city) {
+        moeve.currentCity = $translate.instant("shared." + city);
+        moeve.currentBikes = moeve.bikes[city];
       }
 
     }
