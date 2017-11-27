@@ -52,7 +52,8 @@
     "cancel": "Abbrechen",
     "send": "Senden",
     "search": "Suche",
-    "from-place": "aus",
+    "search-bikes": "Durchsuche deine Räder",
+    "from-place" : "aus",
     "contact": "Kontakt & Hilfe",
     "show-more": "zeig mehr",
     "show-less": "zeige weniger",
@@ -276,7 +277,8 @@
     "uniq-phone": "Telefonnummer ist bereits in unserem System registriert.",
     "pending-requests": "Du hast noch eine offene Anfrage für dieses Rad. Beantworte diese (Ablehnen/ Annehmen) bevor du es entfernen kannst.",
     "account-deleted": "Dein Account wurde gelöscht",
-    "enter-email": "Please enter your email."
+    "enter-email": "Please enter your email.",
+    "duplicate-start": "Duplications process started."
   },
   "settings": {
     "settings": "Einstellungen",
@@ -674,7 +676,18 @@
   "listings": {
     "my-bikes": "Meine Räder",
     "no-bikes": "Du hast noch keine eigenen Fahrräder online gestellt.",
-    "list-a-bike": "Rad einstellen"
+    "list-a-bike": "Rad einstellen",
+    "duplicate": {
+      "duplicate": "Duplikat",
+      "how_many": "Wie viele Fahrräder?",
+      "header": "Doppeltes Fahrrad",
+      "number_bikes": "Anzahl der Fahrräder",
+      "maxlength": "Arbeitet für maximal 99 Fahrräder",
+      "required": "Anzahl der Fahrräder ist erforderlich"
+    },
+    "listView": {
+      "price": "Preis (€)"
+    }
   },
   "listingCard": {
     "activate-bike": "Aktivieren",
@@ -683,6 +696,7 @@
     "delete-bike": "Löschen",
     "cancel": "Abbrechen",
     "delete": "Löschen",
+    "duplicate": "Duplizieren",
     "dialog-title": "Möchtest du das Fahrrad wirklich löschen?",
     "dialog-subtitle": "Es wird unwiderruflich von der Plattform entfernt, aktive Anfragen sind davon nicht betroffen."
   },

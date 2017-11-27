@@ -35,7 +35,7 @@ var determineHostname = function(subdomains, hostname) {
     }
     if (subdomains[i] === "staging") {
       domainPrefix = "www.staging.";
-    } 
+    }
   }
   return domainPrefix + "listnride" + domainEnding;
 };
@@ -43,11 +43,11 @@ var determineHostname = function(subdomains, hostname) {
 var stripTrailingSlash = function(url) {
   // return url.replace(/\/+$/, "");
   return url;
-}
+};
 
 var retrieveTld = function(hostname) {
   return hostname.replace(/^(.*?)\listnride/, "");
-}
+};
 
 // proper redirects
 app.use(function(req, res, next) {

@@ -20,30 +20,53 @@
   <md-divider></md-divider>
 
   <div class="bike-actions" layout="row" layout-align="space-between center">
-    <md-button md-no-ink flex ui-sref="edit({bikeId: {{ ::listingCard.bikeId }} })">
-      {{ 'listingCard.edit-bike' | translate }}
+    <md-button
+      md-no-ink
+      flex
+      class="md-icon-button md-primary"
+      ui-sref="edit({bikeId: {{ ::listingCard.bikeId }} })">
+      <md-icon md-svg-icon="app/assets/ui_icons/pencil-edit-button.svg"></md-icon>
+      <!--{{ 'listingCard.edit-bike' | translate }}-->
     </md-button>
 
     <md-button
       md-no-ink
       flex
+      class="md-icon-button md-primary"
       ng-disabled="listingCard.disableDeactivate"
       ng-click="listingCard.onDeactivateClick()"
       ng-if="listingCard.available">
-      {{ 'listingCard.deactivate-bike' | translate }}
+      <md-icon md-svg-icon="app/assets/ui_icons/turn-visibility-off-button.svg"></md-icon>
+      <!--{{ 'listingCard.deactivate-bike' | translate }}-->
     </md-button>
 
     <md-button
       md-no-ink
       flex
+      class="md-icon-button md-primary"
       ng-disabled="listingCard.disableActivate"
       ng-click="listingCard.onActivateClick()"
       ng-if="!listingCard.available">
-      {{ 'listingCard.activate-bike' | translate }}
+      <md-icon md-svg-icon="app/assets/ui_icons/visibility-button.svg"></md-icon>
+      <!--{{ 'listingCard.activate-bike' | translate }}-->
     </md-button>
 
-    <md-button md-no-ink flex class="md-warn" ng-disabled="listingCard.disableDelete" ng-click="listingCard.onDeleteClick()">
-      {{ 'listingCard.delete-bike' | translate }}
+    <md-button
+      md-no-ink
+      flex
+      class="md-icon-button md-primary"
+      ng-click="listingCard.onDuplicateClick()">
+      <md-icon md-svg-icon="app/assets/ui_icons/duplicate-image.svg"></md-icon>
+      <!--{{ 'listingCard.duplicate' | translate }}-->
+    </md-button>
+
+    <md-button
+      class="md-icon-button md-primary"
+      md-no-ink flex class="md-warn"
+      ng-disabled="listingCard.disableDelete"
+      ng-click="listingCard.onDeleteClick()">
+      <md-icon md-svg-icon="app/assets/ui_icons/trash-can.svg"></md-icon>
+      <!--{{ 'listingCard.delete-bike' | translate }}-->
     </md-button>
   </div>
 </md-card>

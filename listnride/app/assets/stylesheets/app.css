@@ -1,4 +1,4 @@
-/* 
+/*
 // #5FC693: Primary Color
 // #f3f3f3: Preload Color
 // 4px: border radius
@@ -10,7 +10,7 @@
 
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL
-/*-----------------------------------------------------------------------------------*/ 
+/*-----------------------------------------------------------------------------------*/
 
 * {
   outline: 0;
@@ -49,6 +49,7 @@ ui-view {
 
 .single-column,
 requests,
+listings,
 search {
   position: absolute;
   height: 100%;
@@ -100,14 +101,6 @@ md-grid-list md-grid-tile {
 
 .spacer {
   height: 40px;
-}
-
-/* Allows Linebreaks for Tooltips */
-md-tooltip .md-content {
-    height: auto;
-    font-size: 12px;
-    padding: 6px 10px;
-    line-height: 1.1;
 }
 
 .highlight-tile {
@@ -264,10 +257,6 @@ autocomplete .md-errors-spacer {
   margin-right: 8px;
 }
 
-.lnr-margin-right-double {
-  margin-right: 16px;
-}
-
 .lnr-margin-left {
   margin-left: 8px;
 }
@@ -368,29 +357,9 @@ autocomplete .md-errors-spacer {
   position: fixed;
 }
 
-
-/*-----------------------------------------------------------------------------------*/
-/* MOBILE UI ADJUSTMENTS
-/*-----------------------------------------------------------------------------------*/
-
-@media screen and (max-width: 480px) {
-  /* on mobile, the margin from left is set to 0 */
-  .lnr-btn-mobile {
-    margin-left: 0;
-  }
-}
-
 /*-----------------------------------------------------------------------------------*/
 /* SVG
 /*-----------------------------------------------------------------------------------*/
-
-.lnr-icn-xs {
-  min-width: 20px;
-  min-height: 20px;
-  width: 20px;
-  height: 20px;
-  margin-left: 8px;
-}
 
 .lnr-icn-sm {
   width: 24px;
@@ -625,7 +594,7 @@ footer .lnr-link {
  .md-dialog-content {
     width: 100%;
     margin: 0 !important;
-  } 
+  }
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -716,7 +685,7 @@ home #landingSection {
 
 .lnr-badge {
   width: 150px;
-  height: 150px; 
+  height: 150px;
   box-shadow: 0 1px 8px 0 rgba(0,0,0,.09), 0 3px 4px 0 rgba(0,0,0,.06), 0 3px 3px -2px rgba(0,0,0,.05);
   border-radius: 75px;
   -ms-transform: rotate(-9deg); /* IE 9 */
@@ -746,7 +715,7 @@ home #landingSection #homeHeroShot {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-position: center center; 
+  background-position: center center;
 }
 
 home #landingSection #homeHeroShot {
@@ -754,7 +723,7 @@ home #landingSection #homeHeroShot {
 }
 
 .cb-slideshow,
-.cb-slideshow:after { 
+.cb-slideshow:after {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -837,9 +806,7 @@ md-grid-list md-grid-tile.tile-vienna {
 .md-dialog-fullscreen.dialog-bikes .dialog-content {
   overflow: visible !important;
 }
-.bikes .slick-slide div {
-  display: block !important;
-}
+
 .bikes .slick-dots li.slick-active button:before,
 .bikes .slick-dots li button:hover:before {
   background-color: #7ab2f8;
@@ -857,81 +824,48 @@ md-grid-list md-grid-tile.tile-vienna {
 
 }
 
-.bikes .slick-arrow {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 50px;
-  height: 100%;
-  cursor: pointer;
-}
-
-.bikes .slick-arrow_prew {
-  left: 0;
-  background: -webkit-linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
-  background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
-}
-
-.bikes .slick-arrow_next {
-  right: 0;
-  background: -webkit-linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
-  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
-}
-
-.bikes .slick-arrow_next .arrow {
-  right: 15px;
-}
-.bikes .slick-arrow_prew .arrow {
-  left: 15px;
-}
-
 .bikes .arrow {
   position: absolute;
   z-index: 1;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  margin-top: -20px;
+  margin-top: -30px;
+  padding: 30px;
   cursor: pointer;
 }
 
-.bikes .slick-arrow_prew .arrow:before,
-.bikes .slick-arrow_next .arrow:before {
+.bikes .arrow-prev {
+  right: 100%;
+  padding-right: 0;
+  margin-right: -65px;
+}
+.bikes .arrow-prev:before,
+.bikes .arrow-next:before {
   content: '';
   display: block;
   width: 30px;
   height: 30px;
 }
 
-.bikes .slick-arrow_prew .arrow:before {
+.bikes .arrow-prev:before {
   border-top: 5px solid #fff;
   border-left: 5px solid #fff;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
+.bikes .arrow-next {
+  left: 100%;
+  padding-left: 0;
+  margin-left: -65px;
+}
 
-.bikes .slick-arrow_next .arrow:before {
+.bikes .arrow-next:before {
   border-top: 5px solid #fff;
   border-right: 5px solid #fff;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-}
-
-.bikes-custom-price {
-  transition: .2s linear all;
-  height: 320px;
-  overflow: hidden;
-}
-.bikes-custom-price.ng-hide {
-  height:0;
-}
-
-@media (max-width: 599px) {
-  .bikes .slick-arrow {
-    display: none !important;
-  }
 }
 
 .testimonials-container {
@@ -1155,10 +1089,6 @@ bike .date-picker-wrapper tr > td:last-child {
   padding-right: 16px;
 }
 
-bike .per-day {
-  margin-bottom: 3px;
-}
-
 md-dialog md-dialog-content .date-picker-wrapper,
 md-dialog md-dialog-content .date-picker-wrapper.inline-wrapper,
 md-dialog md-dialog-content .month-wrapper {
@@ -1286,7 +1216,7 @@ user .lnr-user-rating  {
 /*  LIST BIKE
 /*-----------------------------------------------------------------------------------*/
 
-.angular-input-stars {  
+.angular-input-stars {
   display: inline-block;
   padding: 0;
   list-style: none;
@@ -1324,7 +1254,7 @@ list .md-tab.md-disabled {
 }
 
 .lnr-list-title {
-  margin: -8px 0 24px 0;
+  margin: 8px 0 24px 0;
 }
 
 list md-tabs .lnr-list-form,
@@ -1390,10 +1320,59 @@ listings .lnr-bike-listings {
   width: 100%;
 }
 
+.listings-header {
+  background-color: #FFFFFF;
+  min-height: 60px;
+}
+
+.listings-header md-input-container {
+  margin: 0;
+  padding: 0;
+}
+
+.listings-header .content {
+  min-height: 60px;
+}
+
+/* TODO: OPTIMIZE */
+@-moz-document url-prefix() {
+    listings #list-view {
+        margin-left: 6px;
+    }
+}
+
 #deleteBikeDialog .delete-bike-text {
   padding: 24px;
 }
 
+.lnr-unavailable {
+  color: #adacac
+}
+
+.lnr-unavailable img {
+  opacity: 0.4;
+}
+
+.lnr-listing-list-item {
+  height: 60px;
+  border-bottom: 1px solid #e1e1e1;
+  cursor: default;
+}
+
+.lnr-listing-list-item:hover {
+  background-color: rgba(224, 224, 224, 0.2) !important;
+}
+
+.lnr-listing-list-item .md-button:hover {
+background-color: rgba(238, 238, 238, 0.2) !important;
+}
+
+.lnr-listing-header {
+  background-color: #e1e1e1;
+  min-height: 40px;
+  font-weight: 700;
+  padding: 8px 0 8px 0;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*  CALCULATOR
@@ -1746,31 +1725,8 @@ md-grid-list a {
   background-image: url(../ui_images/citypages/amsterdam-rent-cargo.jpg);
 }
 
-.form-error {
-  border: 1px solid rgb(221,44,0);
-  border-radius: 4px;
-}
-.text-error {
-  color: rgb(221,44,0);
-}
-
-md-input-container .md-input.form-input-error {
-  border: 1px solid rgb(221,44,0);
-  border-radius: 4px;
-}
-
-.disabled {
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-/*-----------------------------------------------------------------------------------*/
-/*  JOBS POSTINGS
-/*-----------------------------------------------------------------------------------*/
-
 @media (min-width: 960px) {
-  #jobs-details md-list-item,
-  md-list-item .md-list-item-inner {
+  #jobs-details md-list-item {
     min-height: 30px;
     height: 32px;
   }
@@ -1789,6 +1745,24 @@ md-input-container .md-input.form-input-error {
 }
 #jobs-details .list-align {
    margin-left: -10px;
+}
+
+.form-error {
+  border: 1px solid rgb(221,44,0);
+  border-radius: 4px;
+}
+.text-error {
+  color: rgb(221,44,0);
+}
+
+md-input-container .md-input.form-input-error {
+  border: 1px solid rgb(221,44,0);
+  border-radius: 4px;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -1822,7 +1796,7 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
 /*-----------------------------------------------------------------------------------*/
 
 .lnr-billing-page .lnr-billing-table-head md-list-item.md-2-line {
-  background-color: #e1e1e1;
+  background-color: #efefef;
   min-height: 40px;
   height: 40px;
   font-weight: bold;
@@ -1872,6 +1846,7 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
 /*-----------------------------------------------------------------------------------*/
 
 invite #inviteForm .invite-form-container {
+  height: 320px;
   padding: 24px 0;
   border-radius: 4px;
   border: 1px solid rgba(95, 198, 147, 0.25);
@@ -1895,13 +1870,17 @@ invite .voucher-link {
   cursor: pointer;
 }
 
+.md-button .md-lined:not([disabled]) {
+  color: #FFFFFF !important;
+}
+
 .lnr-csv-button {
   margin-top: 30px;
 }
 
 .lnr-billing-list-item {
   height: 50px;
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid#efefef;
   cursor: default;
 }
 
@@ -1927,10 +1906,6 @@ invite .voucher-link {
 
 .lnr-green-text {
   color: #5fc693;
-}
-
-.lnr-dark-green-text {
-  color: #00AD68;
 }
 
 .lnr-mobile-bike {
@@ -2022,6 +1997,10 @@ and (max-device-width : 568px) {
   .iti-flag {
     background-image: url("../ui_images/flags@2x.png") !important;
   }
+}
+
+.lnr-check-box {
+  margin-bottom: 0;
 }
 
 .ng-hide-add, .ng-hide-remove {

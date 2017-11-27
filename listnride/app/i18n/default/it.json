@@ -271,7 +271,8 @@
     "opening-hours-success": "Orari di disponibilità modificati con successo.",
     "opening-hours-error": "Non puoi salvare l'orario di disponibilità.",
     "uniq-phone": "Numero telefonico già registrato nel nostro sistema.",
-    "pending-requests": "Sembra che tu abbia una richiesta aperta per questa bicicletta. Prima  di cancellare la bicicletta è necessario accettarla o annullarla"
+    "pending-requests": "Sembra che tu abbia una richiesta aperta per questa bicicletta. Prima  di cancellare la bicicletta è necessario accettarla o annullarla",
+    "duplicate-start": "Duplications process started."
   },
   "settings": {
     "settings": "Impostazioni",
@@ -665,7 +666,18 @@
   "listings": {
     "my-bikes": "Le mie biciclette",
     "no-bikes": "Non hai ancora registrato nessuna delle tue biciclette",
-    "list-a-bike": "Registra una bici"
+    "list-a-bike": "Registra una bici",
+    "duplicate": {
+      "duplicate": "Duplicare",
+      "how_many": "Quante biciclette?",
+      "header": "Bici duplicata",
+      "number_bikes": "Numero di bici",
+      "maxlength": "Funziona per un massimo di 99 biciclette",
+      "required": "Il numero di biciclette è richiesto"
+    },
+    "listView": {
+      "price": "Prezzo (€)"
+    }
   },
   "listingCard": {
     "activate-bike": "Attivare",
@@ -674,6 +686,7 @@
     "delete-bike": "Elimina",
     "cancel": "Cancellare",
     "delete": "Elimina",
+    "duplicate": "Duplicate",
     "dialog-title": "Sei sicuro di voler eliminare la tua bicicletta ?",
     "dialog-subtitle": "La bicicletta verrà rimossa definitivamente dalla piattaforma. Le richieste attuali non sono influenzate da questo."
   },
