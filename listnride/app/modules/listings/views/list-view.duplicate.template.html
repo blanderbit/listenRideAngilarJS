@@ -25,7 +25,8 @@
                                       ng-model="duplicate.duplicate_number"
                                       minlength="1"
                                       maxlength="2"
-                                      ng-pattern="[1-9]{1,2}"
+                                      ng-pattern="/^\d+$/"
+                                      min="0"
                                       ng-model-options='{ debounce: 50 }'
                                       placeholder="{{'listings.duplicate.number_bikes' | translate}}"
                                       required>
