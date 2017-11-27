@@ -22,6 +22,7 @@
         autocomplete-id="home"
         flex="75"
         layout="column"
+        style="font-size: 18px"
         location="home.location"
         placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"
         place-changed="home.placeChanged(place)">
@@ -31,6 +32,7 @@
         class="md-raised md-primary"
         id="submit"
         flex="25"
+        style="font-size: 18px"
       >
         {{ 'shared.search' | translate }}
       </md-button>
@@ -107,15 +109,27 @@
         </a>
       </md-grid-tile>
 
-      <md-grid-tile class="tile" md-rowspan-gt-xs="2" style="background-image: url('/app/assets/ui_images/featured-tiles/brompton_big.jpg')">
+      <md-grid-tile class="tile" style="background-image: url('/app/assets/ui_images/featured-tiles/brompton.jpg')">
         <a ui-sref="brompton" layout="column" layout-align="center center">
           <h3 class="md-title">Brompton Foldings</h3>
         </a>
       </md-grid-tile>
 
-      <md-grid-tile class="tile" md-colspan-gt-xs="2" style="background-image: url('/app/assets/ui_images/featured-tiles/journal.jpg')">
-        <a href="https://journal.listnride.com" layout="column" layout-align="center center">
-          <h3 class="md-title">The listnride Journal</h3>
+      <md-grid-tile class="tile" style="background-image: url('/app/assets/ui_images/featured-tiles/moeve.jpg')">
+        <a ui-sref="moeve" layout="column" layout-align="center center">
+          <h3 class="md-title">Moeve Bikes</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile" style="background-image: url('/app/assets/ui_images/featured-tiles/vanmoof.jpg')">
+        <a ui-sref="vanmoof" layout="column" layout-align="center center">
+          <h3 class="md-title">Vanmoof E-Bikes</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile" style="background-image: url('/app/assets/ui_images/featured-tiles/votec.jpg')">
+        <a ui-sref="votec" layout="column" layout-align="center center">
+          <h3 class="md-title">Votec Cross-Country</h3>
         </a>
       </md-grid-tile>
 
@@ -140,25 +154,25 @@
     <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="2" md-cols-gt-sm="4" md-gutter="16px" md-row-height="1.5:1">
       <md-grid-tile class="tile tile-berlin">
         <a ui-sref="cities-berlin" layout-padding layout="column" layout-align="center center">
-          <h3 class="md-title">Berlin</h3>
+          <h3 class="md-title">{{ 'shared.berlin' | translate }}</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-munich">
         <a ui-sref="cities-munich" target="_blank" layout-padding layout="column" layout-align="center center">
-          <h3 class="md-title">Munich</h3>
+          <h3 class="md-title">{{ 'shared.munich' | translate }}</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-amsterdam">
         <a ui-sref="cities-amsterdam" layout-padding layout="column" layout-align="center center">
-          <h3 class="md-title">Amsterdam</h3>
+          <h3 class="md-title">{{ 'shared.amsterdam' | translate }}</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-vienna">
         <a ui-sref="cities-vienna" layout-padding layout="column" layout-align="center center">
-          <h3 class="md-title">Vienna</h3>
+          <h3 class="md-title">{{ 'shared.vienna' | translate }}</h3>
         </a>
       </md-grid-tile>
     </md-grid-list>
