@@ -23,14 +23,21 @@ app.set('port', (process.env.PORT || 9003));
 // see all transactions through server
 app.use(logger);
 
-var determineTld = function(language) {
-  switch (language) {
-    case "en": return "listnride.com";
-    case "de": return "listnride.de";
-    case "nl": return "listnride.nl";
-    case "it": return "listnride.it";
-    default: return "listnride.com";
+var determineHostname = function(subdomains, hostname) {
+  var domainPrefix = "www.";
+  var domainEnding = retrieveTld(hostname);
+  for (var i = 0; i < subdomains.length; i++) {
+    switch (subdomains[i]) {
+      case "en": domainEnding = ".com"; break;
+      case "de": domainEnding = ".de"; break;
+      case "nl": domainEnding = ".nl"; break;
+      case "it": domainEnding = ".it"; break;
+    }
+    if (subdomains[i] === "staging") {
+      domainPrefix = "www.staging.";
+    } 
   }
+  return domainPrefix + "listnride" + domainEnding;
 };
 
 var stripTrailingSlash = function(url) {
