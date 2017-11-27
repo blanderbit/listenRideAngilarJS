@@ -11,7 +11,7 @@
           placeholder="{{ 'shared.search-bikes' | translate }}"
           ng-keyup="listings.search()"
           ng-model="listings.input"
-          ng-model-options="{ debounce: 50 }"
+          ng-model-options="{ debounce: 200 }"
         />
       </md-input-container>
       <span hide-sm flex></span>
@@ -32,7 +32,14 @@
 
   <md-content id="list-view" ng-if="listings.listView">
     <div class="content" layout-align="center center">
-      <list-view ng-if="listings.listView" bikes="listings.bikes" status="listings.status" duplicating="listings.duplicating"></list-view>
+      <list-view
+        ng-if="listings.listView"
+        bikes="listings.bikes"
+        status="listings.status"
+        duplicating="listings.duplicating"
+        search="listings.input"
+        mirror="listings.mirror">
+      </list-view>
     </div>
   </md-content>
 
@@ -60,7 +67,10 @@
           price="bike.price_from"
           image-url=" bike.image_file_1.image_file_1.small.url"
           available="bike.available"
-          remove-bike="listings.removeBike(bikeId)">
+          remove-bike="listings.removeBike(bikeId)"
+          status="listings.status"
+          duplicating="listings.duplicating"
+        >
         </listing-card>
       </div>
     </div>

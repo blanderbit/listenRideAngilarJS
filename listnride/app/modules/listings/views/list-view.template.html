@@ -9,12 +9,48 @@
             <div layout="column" flex="100">
               <div layout="row" layout-align="start center">
                 <div flex="10"></div>
-                <div flex="10" ng-click="listView.order('id')">ID</div>
-                <div flex="20" ng-click="listView.order('name')">Name</div>
-                <div flex="15" ng-click="listView.order('brand')">Brand</div>
-                <div flex="15" ng-click="listView.order('city')">{{'forms.city' | translate}}</div>
-                <div flex="15" ng-click="listView.order('size')">{{'list.details.size' | translate}} (cm)</div>
-                <div flex="10" ng-click="listView.order('price_from')">{{'listings.listView.price' | translate}}</div>
+                <div flex="10" ng-click="listView.order('id')">ID
+                  <md-icon
+                    ng-if="listView.propertyName == 'id'"
+                    ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
+                    class="fa">
+                  </md-icon>
+                </div>
+                <div flex="20" ng-click="listView.order('name')">Name
+                  <md-icon
+                    ng-if="listView.propertyName == 'name'"
+                    ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
+                    class="fa">
+                  </md-icon>
+                </div>
+                <div flex="15" ng-click="listView.order('brand')">Brand
+                  <md-icon
+                    ng-if="listView.propertyName == 'brand'"
+                    ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
+                    class="fa">
+                  </md-icon>
+                </div>
+                <div flex="15" ng-click="listView.order('city')">{{'forms.city' | translate}}
+                  <md-icon
+                    ng-if="listView.propertyName == 'city'"
+                    ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
+                    class="fa">
+                  </md-icon>
+                </div>
+                <div flex="15" ng-click="listView.order('size')">{{'list.details.size' | translate}} (cm)
+                  <md-icon
+                    ng-if="listView.propertyName == 'size'"
+                    ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
+                    class="fa">
+                  </md-icon>
+                </div>
+                <div flex="10" ng-click="listView.order('price_from')">{{'listings.listView.price' | translate}}
+                  <md-icon
+                    ng-if="listView.propertyName == 'price_from'"
+                    ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
+                    class="fa">
+                  </md-icon>
+                </div>
                 <div flex></div>
               </div>
             </div>

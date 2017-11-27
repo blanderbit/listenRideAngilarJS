@@ -4,8 +4,10 @@ angular.module('listings').component('listView', {
   templateUrl: 'app/modules/listings/views/list-view.template.html',
   controllerAs: 'listView',
   bindings: {
-    bikes: '<',
+    bikes: '=',
+    mirror: '=',
     removeBike: '<',
+    search: '<',
     status: '=',
     duplicating: '='
   },
@@ -14,13 +16,14 @@ angular.module('listings').component('listView', {
     '$window',
     '$mdSidenav',
     '$timeout',
+    '$filter',
     'api',
     'bikeOptions',
     '$state',
     '$mdDialog',
     '$mdToast',
     '$translate',
-    'orderByFilter', function ($stateParams, $window, $mdSidenav, $timeout, api,
+    'orderByFilter', function ($stateParams, $window, $mdSidenav, $timeout, $filter, api,
       bikeOptions, $state, $mdDialog, $mdToast, $translate, orderBy) {
       var listView = this;
 
@@ -148,9 +151,10 @@ angular.module('listings').component('listView', {
       };
 
       function deleteBike(id) {
-        api.put("/rides/" + id, {"ride": {"active": "false"}}).then(
+        api.delete("/rides/" + id).then(
           function(response) {
-            listView.bikes = response.data;
+            listView.mirror = response.data;
+            listView.bikes = $filter('filter')(response.data,{$ : listView.search});
             $analytics.eventTrack('List a Bike', {  category: 'List Bike', label: 'Bike Removed'});
           },
           function(error) {
@@ -162,7 +166,7 @@ angular.module('listings').component('listView', {
             );
           }
         );
-      }
+      };
 
       listView.openUrl = function () {
         var url = $state.href('listingABike', {parameter: "parameter"});
@@ -225,13 +229,23 @@ angular.module('listings').component('listView', {
         api.get('/rides/' + bike.id + '/status/' + jobId).then(function (response) {
           listView.status = response.data.status;
           if(listView.status !== 'complete') {
-            $timeout(listView.getStatus(bike, jobId, listView.status), 5000);
+            $timeout(function() { listView.getStatus(bike, jobId, listView.status); }, 5000);
           } else if(listView.status === 'complete') {
             listView.duplicating = false;
-            // $timeout(listView.status = '', 20000);
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.duplicate-finish'))
+                .hideDelay(4000)
+                .position('top center')
+            );
           }
         }, function (error) {
-
+          $mdToast.show(
+            $mdToast.simple()
+              .textContent($translate.instant('toasts.error'))
+              .hideDelay(4000)
+              .position('top center')
+          );
         });
       }
     }]
