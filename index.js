@@ -52,9 +52,13 @@ var retrieveTld = function(hostname) {
 app.use(function(req, res, next) {
   var correctHostname = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
   var correctOriginalUrl = stripTrailingSlash(req.originalUrl);
+  console.log("original url requested is: ");
+  console.log(req.hostname + req.originalUrl);
   if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
+    console.log("hostname is fine, no redirect");
     next();
   } else {
+    console.log("hostname is " + req.hostname + req.originalUrl + " but should be " + correctHostname + correctOriginalUrl);
     res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
   }
 });
