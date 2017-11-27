@@ -15,7 +15,7 @@ angular.module('listings',[]).component('listings', {
       api.get('/users/' + $localStorage.userId + "/rides").then(
         function(response) {
           listings.bikes = response.data;
-          listings.mirror_bikes = response.data;
+          listings.mirror = response.data;
           listings.listView = (listings.bikes.length >= listings.maxTiles) && $mdMedia('gt-sm');
         },
         function(error) {
@@ -23,7 +23,7 @@ angular.module('listings',[]).component('listings', {
       );
 
       listings.search = function () {
-        listings.bikes = $filter('filter')(listings.mirror_bikes,{$ : listings.input});
+        listings.bikes = $filter('filter')(listings.mirror,{$ : listings.input});
       };
 
       listings.listBike = function() {
