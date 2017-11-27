@@ -1330,6 +1330,10 @@ listings .lnr-bike-listings {
   padding: 0;
 }
 
+.listings-header .content {
+  min-height: 60px;
+}
+
 /* TODO: OPTIMIZE */
 @-moz-document url-prefix() {
     listings #list-view {
