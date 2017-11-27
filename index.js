@@ -23,27 +23,44 @@ app.set('port', (process.env.PORT || 9003));
 // see all transactions through server
 app.use(logger);
 
-var determineTld = function(language) {
-  switch (language) {
-    case "en": return "listnride.com";
-    case "de": return "listnride.de";
-    case "nl": return "listnride.nl";
-    case "it": return "listnride.it";
-    default: return "listnride.com";
+var determineHostname = function(subdomains, hostname) {
+  var domainPrefix = "www.";
+  var domainEnding = retrieveTld(hostname);
+  for (var i = 0; i < subdomains.length; i++) {
+    switch (subdomains[i]) {
+      case "en": domainEnding = ".com"; break;
+      case "de": domainEnding = ".de"; break;
+      case "nl": domainEnding = ".nl"; break;
+      case "it": domainEnding = ".it"; break;
+    }
+    if (subdomains[i] === "staging") {
+      domainPrefix = "www.staging.";
+    } 
   }
+  return domainPrefix + "listnride" + domainEnding;
 };
 
-// proper redirects based on browser language
+var stripTrailingSlash = function(url) {
+  // return url.replace(/\/+$/, "");
+  return url;
+}
+
+var retrieveTld = function(hostname) {
+  return hostname.replace(/^(.*?)\listnride/, "");
+}
+
+// proper redirects
 app.use(function(req, res, next) {
-	var language = req.acceptsLanguages("en", "de", "nl", "it") || "en";
-  var correctUrl = req.subdomains.reverse().join(".") + "." + determineTld(language);
-  console.log(req.hostname);
-  console.log(correctUrl);
-  if (req.hostname == correctUrl) {
+  var correctHostname = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
+  var correctOriginalUrl = stripTrailingSlash(req.originalUrl);
+  console.log("original url requested is: ");
+  console.log(req.hostname + req.originalUrl);
+  if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
+    console.log("hostname is fine, no redirect");
     next();
   } else {
-    // res.redirect(302, "https://" + correctUrl + req.originalUrl);
-    next();
+    console.log("hostname is " + req.hostname + req.originalUrl + " but should be " + correctHostname + correctOriginalUrl);
+    res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
   }
 });
 
@@ -62,7 +79,6 @@ that is because 'angular-sanitize.min.js.map' is missing
 and chrome requests it. not for safari and firefox
 */
 app.use('/*', function (req, res) {
-
   res.sendFile(__dirname.concat('/listnride/dist/index.html'));
 });
 
