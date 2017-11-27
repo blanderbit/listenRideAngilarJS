@@ -11,6 +11,7 @@ angular.module('listings',[]).component('listings', {
       var listings = this;
       listings.maxTiles = 12;
       listings.status = '';
+      listings.duplicating = false;
       api.get('/users/' + $localStorage.userId + "/rides").then(
         function(response) {
           listings.bikes = response.data;

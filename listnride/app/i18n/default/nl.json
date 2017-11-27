@@ -126,7 +126,8 @@
     "uniq-phone": "Telefoonnummer is al geregistreerd in ons systeem.",
     "pending-requests": "Het lijkt alsof u een open verzoek voor deze fiets heeft. Voordat u de fiets kunt verwijderen, moet u deze accepteren of annuleren.",
     "account-deleted":"Uw account is verwijderd",
-    "enter-email": "Please enter your email."
+    "enter-email": "Please enter your email.",
+    "duplicate-start": "Duplications process started."
   },
   "settings": {
     "settings": "Instellingen",

@@ -127,7 +127,8 @@
     "uniq-phone": "Phone number already registered in our system.",
     "pending-requests": "Looks like you have an open request for this bike. Before you can delete the bike you need to accept or cancel it.",
     "account-deleted": "Your account has been deleted",
-    "enter-email": "Please enter your email."
+    "enter-email": "Please enter your email.",
+    "duplicate-start": "Duplications process started."
   },
   "settings": {
     "settings": "Settings",

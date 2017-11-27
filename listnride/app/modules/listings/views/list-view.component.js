@@ -6,7 +6,8 @@ angular.module('listings').component('listView', {
   bindings: {
     bikes: '<',
     removeBike: '<',
-    status: '='
+    status: '=',
+    duplicating: '='
   },
   controller: [
     '$stateParams',
@@ -200,19 +201,33 @@ angular.module('listings').component('listView', {
             "quantity": duplicate_number
           }).then(function (response) {
             var job_id = response.data.job_id;
-            listView.getStatus(bike, job_id, 'initialized')
+            listView.getStatus(bike, job_id, 'initialized');
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.duplicate-start'))
+                .hideDelay(4000)
+                .position('top center')
+            );
           }, function () {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.error'))
+                .hideDelay(4000)
+                .position('top center')
+            );
           });
         }, function () {
         });
       };
 
       listView.getStatus = function (bike, jobId, status) {
+        listView.duplicating = true;
         api.get('/rides/' + bike.id + '/status/' + jobId).then(function (response) {
           listView.status = response.data.status;
           if(listView.status !== 'complete') {
             $timeout(listView.getStatus(bike, jobId, listView.status), 5000);
           } else if(listView.status === 'complete') {
+            listView.duplicating = false;
             // $timeout(listView.status = '', 20000);
           }
         }, function (error) {
