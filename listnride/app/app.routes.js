@@ -179,7 +179,19 @@
       $stateProvider.state({
         name: 'raphaSuperCross',
         url: '/rapha-super-cross',
-        template: '<rapha-super-cross></rapha-super-cross>'
+        template: '<rapha-super-cross></rapha-super-cross>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.events.common.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
       });
 
       $stateProvider.state({
@@ -311,7 +323,19 @@
       $stateProvider.state({
         name: 'coffeespin',
         url: '/velothon-coffeespin',
-        template: '<coffeespin></coffeespin>'
+        template: '<coffeespin></coffeespin>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.events.common.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
       });
 
       $stateProvider.state({
@@ -353,32 +377,92 @@
       $stateProvider.state({
         name: 'crossride',
         url: '/berliner-fahrradschau',
-        template: '<crossride></crossride>'
+        template: '<crossride></crossride>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.events.common.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
       });
 
       $stateProvider.state({
         name: 'mcbw',
         url: '/mcbw',
-        template: '<mcbw></mcbw>'
+        template: '<mcbw></mcbw>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.events.common.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
       });
 
       $stateProvider.state({
         name: 'cwd',
         url: '/cyclingworld',
         templateUrl: 'app/modules/events/cwd/cwd.template.html',
-        controller: 'StaticController'
+        controller: 'StaticController',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.events.common.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
       });
 
       $stateProvider.state({
         name: 'pushnpost',
         url: '/pushnpost',
-        template: '<pushnpost></pushnpost>'
+        template: '<pushnpost></pushnpost>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.events.common.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
       });
 
       $stateProvider.state({
         name: 'kuchenundraketen',
         url: '/kuchenundraketen',
-        template: '<kuchenundraketen></kuchenundraketen>'
+        template: '<kuchenundraketen></kuchenundraketen>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.events.common.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
       });
 
       $stateProvider.state({
@@ -958,6 +1042,18 @@
         url: '/how-to-shoot-bike-photos',
         templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html',
         controller: 'StaticController',
+        resolve: {
+          data: function ($translate, ngMeta) {
+              $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
+                  .then(function () {
+                      ngMeta.setTitle("");
+                      ngMeta.setTag("description", "");
+                  })
+          }
+      },
+      meta: {
+          disableUpdate: true
+      }
       });
 
       $stateProvider.state({
