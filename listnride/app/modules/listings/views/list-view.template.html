@@ -9,44 +9,44 @@
             <div layout="column" flex="100">
               <div layout="row" layout-align="start center">
                 <div flex="10"></div>
-                <div flex="10" ng-click="listView.order('id')">ID
+                <div flex="10" ng-click="listView.order('id')" class="lnr-header-filter" ng-mouseover="id = true" ng-mouseleave="id = false">ID
                   <md-icon
-                    ng-if="listView.propertyName == 'id'"
+                    ng-if="listView.propertyName == 'id' || id === true"
                     ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
                     class="fa">
                   </md-icon>
                 </div>
-                <div flex="20" ng-click="listView.order('name')">Name
+                <div flex="20" ng-click="listView.order('name')" class="lnr-header-filter" ng-mouseover="name = true" ng-mouseleave="name = false">Name
                   <md-icon
-                    ng-if="listView.propertyName == 'name'"
+                    ng-if="listView.propertyName == 'name' || name === true"
                     ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
                     class="fa">
                   </md-icon>
                 </div>
-                <div flex="15" ng-click="listView.order('brand')">Brand
+                <div flex="15" ng-click="listView.order('brand')" class="lnr-header-filter" ng-mouseover="brand = true" ng-mouseleave="brand = false">Brand
                   <md-icon
-                    ng-if="listView.propertyName == 'brand'"
+                    ng-if="listView.propertyName == 'brand' || brand === true"
                     ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
                     class="fa">
                   </md-icon>
                 </div>
-                <div flex="15" ng-click="listView.order('city')">{{'forms.city' | translate}}
+                <div flex="15" ng-click="listView.order('city')" class="lnr-header-filter" ng-mouseover="city = true" ng-mouseleave="city = false">{{'forms.city' | translate}}
                   <md-icon
-                    ng-if="listView.propertyName == 'city'"
+                    ng-if="listView.propertyName == 'city' || city === true"
                     ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
                     class="fa">
                   </md-icon>
                 </div>
-                <div flex="15" ng-click="listView.order('size')">{{'list.details.size' | translate}} (cm)
+                <div flex="15" ng-click="listView.order('size')" class="lnr-header-filter" ng-mouseover="size = true" ng-mouseleave="size = false">{{'list.details.size' | translate}} (cm)
                   <md-icon
-                    ng-if="listView.propertyName == 'size'"
+                    ng-if="listView.propertyName == 'size' || size === true"
                     ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
                     class="fa">
                   </md-icon>
                 </div>
-                <div flex="10" ng-click="listView.order('price_from')">{{'listings.listView.price' | translate}}
+                <div flex="10" ng-click="listView.order('price_from')" class="lnr-header-filter" ng-mouseover="price_from = true" ng-mouseleave="price_from = false">{{'listings.listView.price' | translate}}
                   <md-icon
-                    ng-if="listView.propertyName == 'price_from'"
+                    ng-if="listView.propertyName == 'price_from' || price_from === true"
                     ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
                     class="fa">
                   </md-icon>
