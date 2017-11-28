@@ -32,8 +32,8 @@ angular.module('listings',[]).component('listings', {
 
       var filterFunction = function(bike) {
         //TODO improve search by reducing extra params from backend
-        var val = listings.input;
-        return bike.name.indexOf(val) > -1 || bike.city.indexOf(val) > -1 || bike.brand.indexOf(val) > -1;
+        var val = listings.input.toLocaleLowerCase();
+        return bike.name.toLocaleLowerCase().indexOf(val) > -1 || bike.city.toLocaleLowerCase().indexOf(val) > -1 || bike.brand.toLocaleLowerCase().indexOf(val) > -1;
       };
 
       listings.removeBike = function(bikeId) {

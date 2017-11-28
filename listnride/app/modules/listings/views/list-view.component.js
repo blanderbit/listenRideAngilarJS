@@ -170,8 +170,8 @@ angular.module('listings').component('listView', {
 
       var filterFunction = function(bike) {
         //TODO improve search by reducing extra params from backend && Code Duplication
-        var val = listView.search;
-        return bike.name.indexOf(val) > -1 || bike.city.indexOf(val) > -1 || bike.brand.indexOf(val) > -1;
+        var val = listView.search.toLocaleLowerCase();
+        return bike.name.toLocaleLowerCase().indexOf(val) > -1 || bike.city.toLocaleLowerCase().indexOf(val) > -1 || bike.brand.toLocaleLowerCase().indexOf(val) > -1;
       };
 
       listView.openUrl = function () {
