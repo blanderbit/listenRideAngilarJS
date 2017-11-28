@@ -154,7 +154,7 @@ angular.module('listings').component('listView', {
         api.delete("/rides/" + id).then(
           function(response) {
             listView.mirror = response.data;
-            listView.bikes = $filter('filter')(response.data,{$ : listView.search});
+            listView.bikes = $filter('filter')(response.data, filterFunction, {$ : listView.search});
             $analytics.eventTrack('List a Bike', {  category: 'List Bike', label: 'Bike Removed'});
           },
           function(error) {
@@ -166,6 +166,12 @@ angular.module('listings').component('listView', {
             );
           }
         );
+      };
+
+      var filterFunction = function(bike) {
+        //TODO improve search by reducing extra params from backend && Code Duplication
+        var val = listView.search;
+        return bike.name.indexOf(val) > -1 || bike.city.indexOf(val) > -1 || bike.brand.indexOf(val) > -1;
       };
 
       listView.openUrl = function () {

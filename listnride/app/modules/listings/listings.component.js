@@ -23,11 +23,17 @@ angular.module('listings',[]).component('listings', {
       );
 
       listings.search = function () {
-        listings.bikes = $filter('filter')(listings.mirror,{$ : listings.input});
+        listings.bikes = $filter('filter')(listings.mirror, filterFunction, {$ : listings.input});
       };
 
       listings.listBike = function() {
         $state.go('list');
+      };
+
+      var filterFunction = function(bike) {
+        //TODO improve search by reducing extra params from backend
+        var val = listings.input;
+        return bike.name.indexOf(val) > -1 || bike.city.indexOf(val) > -1 || bike.brand.indexOf(val) > -1;
       };
 
       listings.removeBike = function(bikeId) {
