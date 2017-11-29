@@ -20,13 +20,14 @@ angular.module('listings', []).component('listings', {
         return
       }
       var listings = this;
-
+      
       listings.$onInit = function () {
 
         listings.maxTiles = 12;
         listings.status = '';
         listings.isDuplicating = false;
 
+        if ($localStorage.listView === true) listings.listView = true;
         // fetch all bikes
         listings.get();
 
@@ -209,6 +210,7 @@ angular.module('listings', []).component('listings', {
             listings.mirror_bikes = response.data;
             if (listings.listView === false) {
               listings.listView = listings.bikes.length >= listings.maxTiles && $mdMedia('gt-sm');
+              $localStorage.listView = listings.listView;
             }
           },
           function (error) {
@@ -227,6 +229,11 @@ angular.module('listings', []).component('listings', {
         if (event && event.stopPropogation) event.stopPropogation();
         // sref
         $state.go('bike', { bikeId: id });
+      };
+
+      // save view mode in localstorage
+      listings.changeListingMode = function(mode) {
+          $localStorage.listView = mode;
       };
     }
   ]
