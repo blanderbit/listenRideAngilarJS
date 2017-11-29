@@ -33,7 +33,7 @@ angular.module('listings', []).component('listings', {
         listings.helper = {
 
           // local method to be called on duplicate success
-          onDuplicateSuccess: function (bike, duplicate_number) {
+          duplicateHelper: function (bike, duplicate_number) {
             api.post('/rides/' + bike.id + '/duplicate', {
               "quantity": duplicate_number
             }).then(function (response) {
@@ -57,7 +57,6 @@ angular.module('listings', []).component('listings', {
 
           // local method containing logic for bike deletion
           deleteHelper: function (id) {
-            console.log("delete helper");
             api.put("/rides/" + id, { "ride": { "active": "false" } }).then(
               function (response) {
                 listings.bikes = response.data;
@@ -163,7 +162,7 @@ angular.module('listings', []).component('listings', {
           fullscreen: true
         };
         $mdDialog.show(duplicateConfig).then(function (duplicate_number) {
-          listings.helper.onDuplicateSuccess(bike, duplicate_number);
+          listings.helper.duplicateHelper(bike, duplicate_number);
         }, function () {
         });
       };
@@ -208,7 +207,9 @@ angular.module('listings', []).component('listings', {
           function (response) {
             listings.bikes = response.data;
             listings.mirror_bikes = response.data;
-            listings.listView = (listings.bikes.length >= listings.maxTiles) && $mdMedia('gt-sm');
+            if (listings.listView === false) {
+              listings.listView = listings.bikes.length >= listings.maxTiles && $mdMedia('gt-sm');
+            }
           },
           function (error) {
           }
