@@ -25,14 +25,19 @@
     </div>
   </div>
 
-  <md-progress-linear class="md-accent" ng-if="listings.duplicating" md-mode="query"></md-progress-linear>
+  <md-progress-linear class="md-accent" ng-if="listings.isDuplicating" md-mode="query"></md-progress-linear>
   <md-divider></md-divider>
 
   <!-- Layout for the List View -->
 
   <md-content id="list-view" ng-if="listings.listView">
     <div class="content" layout-align="center center">
-      <list-view ng-if="listings.listView" bikes="listings.bikes" status="listings.status" duplicating="listings.duplicating"></list-view>
+      <list-view ng-if="listings.listView" 
+                 bikes="listings.bikes"
+                 status="listings.status"
+                 get-bikes="listings.getBikes"
+                 is-duplicating="listings.isDuplicating">
+      </list-view>
     </div>
   </md-content>
 

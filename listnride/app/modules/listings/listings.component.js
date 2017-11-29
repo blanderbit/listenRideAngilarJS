@@ -11,17 +11,7 @@ angular.module('listings',[]).component('listings', {
       var listings = this;
       listings.maxTiles = 12;
       listings.status = '';
-      listings.duplicating = false;
-      api.get('/users/' + $localStorage.userId + "/rides").then(
-        function(response) {
-          listings.bikes = response.data;
-          listings.mirror_bikes = response.data;
-          listings.listView = (listings.bikes.length >= listings.maxTiles) && $mdMedia('gt-sm');
-        },
-        function(error) {
-        }
-      );
-
+      listings.isDuplicating = false;
       listings.search = function () {
         listings.bikes = $filter('filter')(listings.mirror_bikes,{$ : listings.input});
       };
@@ -39,6 +29,19 @@ angular.module('listings',[]).component('listings', {
       listings.isDekstopView = function () {
         console.log($mdMedia);
       };
+
+      listings.getBikes = function () {
+        api.get('/users/' + $localStorage.userId + "/rides").then(
+          function (response) {
+            listings.bikes = response.data;
+            listings.mirror_bikes = response.data;
+          },
+          function (error) {
+          }
+        );
+      };
+
+      listings.getBikes();
     }
   ]
 });

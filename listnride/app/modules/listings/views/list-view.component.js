@@ -5,11 +5,12 @@ angular.module('listings').component('listView', {
   controllerAs: 'listView',
   bindings: {
     bikes: '<',
-    removeBike: '<',
     status: '=',
-    duplicating: '='
+    isDuplicating: '=',
+    getBikes: '<'
   },
   controller: [
+    '$localStorage',
     '$stateParams',
     '$analytics',
     '$window',
@@ -21,10 +22,9 @@ angular.module('listings').component('listView', {
     '$mdDialog',
     '$mdToast',
     '$translate',
-    'orderByFilter', function ($stateParams, $analytics, $window, $mdSidenav, $timeout, api,
+    'orderByFilter', function ($localStorage, $stateParams, $analytics, $window, $mdSidenav, $timeout, api,
       bikeOptions, $state, $mdDialog, $mdToast, $translate, orderBy) {
       var listView = this;
-
       listView.$onInit = function () {
         listView.selected = [];
         listView.hovered = [];
@@ -81,7 +81,6 @@ angular.module('listings').component('listView', {
       listView.cancelEvent = function (event) {
         if (event.stopPropogation) event.stopPropogation();
       };
-
 
       listView.viewBike = function(id, event){
 
@@ -222,9 +221,13 @@ angular.module('listings').component('listView', {
       };
 
       listView.getStatus = function (bike, jobId, status) {
-        listView.duplicating = true;
+        listView.isDuplicating = true;
         api.get('/rides/' + bike.id + '/status/' + jobId).then(function (response) {
           listView.status = response.data.status;
+          /*
+          if status is not complete
+          keep checking the status api every 5 seconds
+          */
           if (listView.status !== 'complete') {
             // avoid self invocation of a function
             $timeout(function () {
@@ -232,9 +235,14 @@ angular.module('listings').component('listView', {
             },
             // every 5 sec
               5000);
-          } else if (listView.status === 'complete') {
-            listView.duplicating = false;
-            // $timeout(listView.status = '', 20000);
+          } 
+          /*
+          once status is complete
+          bind new bikes with controller scope
+          */
+          else if (listView.status === 'complete') {
+            listView.isDuplicating = false;
+            listView.getBikes();
           }
         }, function (error) {
         });
