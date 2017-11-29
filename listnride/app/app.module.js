@@ -160,7 +160,7 @@ angular.module('listnride', [
     // In case of accessing the .com version, users will see the website
     // in their own system's language in case we support it
     // if (retrieveTld() == 'com' && determineUserLanguage() != 'en') {
-    if (retrieveTld() == 'localhost' && determineUserLanguage() == 'en') {
+    if (retrieveTld() == 'com' && determineUserLanguage() != 'en') {
       var newUrl = 'https://' +
         window.location.hostname.split('listnride')[0] +
         '.' + languageToTld(determineUserLanguage());
