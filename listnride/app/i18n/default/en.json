@@ -53,6 +53,7 @@
     "cancel": "Cancel",
     "send": "Send",
     "search": "Search",
+    "search-bikes": "Search your bikes",    
     "from-place": "from",
     "contact": "Contact & Support",
     "show-more": "show more",
@@ -281,7 +282,10 @@
     "uniq-phone": "Phone number already registered in our system.",
     "pending-requests": "Looks like you have an open request for this bike. Before you can delete the bike you need to accept or cancel it.",
     "account-deleted": "Your account has been deleted",
-    "enter-email": "Please enter your email."
+    "enter-email": "Please enter your email",
+    "duplicate-start": "Duplication process started",
+    "duplicate-finish": "Duplication process finished. Copies created successfully",
+    "bike-deleted": "Bike successfully deleted"
   },
   "settings": {
     "settings": "Settings",
@@ -680,7 +684,18 @@
   "listings": {
     "my-bikes": "My Bikes",
     "no-bikes": "You haven't listed any of your rides yet.",
-    "list-a-bike": "List a Bike"
+    "list-a-bike": "List a Bike",
+    "duplicate": {
+      "duplicate": "Duplicate",
+      "how_many": "How many bikes?",
+      "header": "Duplicate Bike",
+      "number_bikes": "Number of bikes",
+      "maxlength": "Works for maximum 99 bikes",
+      "required": "Number of bikes is required"
+    },
+  "listView": {
+      "price": "Price (€)"
+    }
   },
   "listingCard": {
     "activate-bike": "Activate",
@@ -689,6 +704,7 @@
     "delete-bike": "Delete",
     "cancel": "Cancel",
     "delete": "Delete",
+    "duplicate": "Duplicate",
     "dialog-title": "Are you sure you want to delete your bike?",
     "dialog-subtitle": "The bike will get permanently removed from the platform. Current requests are not affected by this."
   },

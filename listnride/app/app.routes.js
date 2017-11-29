@@ -46,6 +46,12 @@
       });
 
       $stateProvider.state({
+        name: 'list-view',
+        url: '/list-view',
+        template: '<bike-list-view></bike-list-view>'
+      });
+
+      $stateProvider.state({
         name: 'search',
         url: '/search/{location}?size&allterrain&race&city&kids&ebikes&special',
         template: '<search></search>',

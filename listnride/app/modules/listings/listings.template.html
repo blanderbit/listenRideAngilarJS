@@ -1,25 +1,88 @@
-<md-content class="single-column">
-  <div class="content lnr-page-margin" layout-align="center center">
-    <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h1 class="md-headline">{{ 'listings.my-bikes' | translate }}</h1>
-    </div>
-
-    <div ng-if="listings.bikes !== undefined && listings.bikes.length == 0" layout="column" layout-align="center center">
-      {{ 'listings.no-bikes' | translate }}<br><br>
-      <md-button ui-sref="listingABike" class="md-raised md-primary md-lrg">{{ 'shared.list-a-bike' | translate }}</md-button>
-    </div>
-
-    <div ng-if="listings.bikes !== undefined && listings.bikes.length > 0" layout="column" layout-align="center center">
+<md-content flex="100" layout="column" layout-fill>
+  <div class="listings-header" layout="column">
+    <div hide-gt-xs flex="33" layout="column" layout-align="center center">
       <md-button ui-sref="list" class="md-raised md-primary md-lrg">{{ 'shared.list-a-bike' | translate }}</md-button>
     </div>
 
-    <div flex-gt-xs layout="row" layout-wrap layout-padding layout-align="center center">
-      <listing-card ng-repeat="bike in listings.bikes" flex="100" flex-gt-xs="50" flex-gt-sm="33"
-        bike-id="bike.id" name="bike.name" brand="bike.brand" category="bike.category" price="bike.price_from"
-        image-url=" bike.image_file_1.image_file_1.small.url" available="bike.available"
-        remove-bike="listings.removeBike(bikeId)">
-      </listing-card>
+    <div layout="row" hide-xs class="content" layout-fill layout-align="space-around center">
+      <md-input-container flex="30">
+        <label style="display: none"></label>
+        <input
+          placeholder="{{ 'shared.search-bikes' | translate }}"
+          ng-keyup="listings.search()"
+          ng-model="listings.input"
+          ng-model-options="{ debounce: 50 }"
+        />
+      </md-input-container>
+      <span hide-sm flex></span>
+      <div flex="30" ng-if="listings.status !== ''"><h3>Duplication status: {{listings.status}}</h3></div>
+      <div layout="row" flex="35" layout-align="end center">
+          <div flex="30"><h3>Show as List</h3></div>
+        <div flex="15"><md-switch ng-model="listings.listView" ng-change="listings.changeListingMode(listings.listView)"></md-switch></div>
+        <span hide-sm flex></span>
+        <div flex="35">
+          <md-button class="md-primary md-confirm-button" ng-click="listings.listBike()">
+            {{'listings.list-a-bike' | translate}}
+          </md-button>
+        </div>
+      </div>
     </div>
   </div>
-  <footer></footer>
+
+  <md-progress-linear class="md-accent" ng-if="listings.isDuplicating" md-mode="query"></md-progress-linear>
+  <md-divider></md-divider>
+
+  <!-- Layout for the List View -->
+
+  <md-content id="list-view" ng-if="listings.listView">
+    <div class="content" layout-align="center center">
+      <list-view ng-if="listings.listView"
+                 bikes="listings.bikes"
+                 status="listings.status"
+                 edit="listings.edit"
+                 view="listings.view"
+                 duplicate="listings.duplicate"
+                 delete="listings.delete"
+                 deactivate="listings.deactivate"
+                 is-duplicating="listings.isDuplicating">
+      </list-view>
+    </div>
+    <div ng-if="listings.bikes !== undefined && listings.bikes.length == 0"  class="lnr-no-rental">
+      <h2>{{ 'listings.no-bikes' | translate }}</h2>
+    </div>
+  </md-content>
+
+  <!-- Layout for the Tile View -->
+
+  <md-content ng-if="!listings.listView" >
+    <div class="content" layout-align="center center">
+      <div ng-if="listings.bikes !== undefined && listings.bikes.length == 0"  class="lnr-no-rental">
+        <h2>{{ 'listings.no-bikes' | translate }}</h2>
+      </div>
+
+      <div flex-gt-xs layout="row" layout-wrap layout-padding layout-align="center center">
+        <listing-card
+          ng-repeat="bike in listings.bikes"
+          flex="100"
+          flex-gt-xs="50"
+          flex-gt-sm="33"
+          bike-id="bike.id"
+          bike="bike"
+          name="bike.name"
+          brand="bike.brand"
+          category="bike.category"
+          price="bike.prices[0].price"
+          image-url=" bike.image_file_1.image_file_1.small.url"
+          available="bike.available"
+          status="listings.status"
+          edit="listings.edit"
+          view="listings.view"
+          duplicate="listings.duplicate"
+          delete="listings.delete"
+          is-duplicating="listings.isDuplicating">
+        </listing-card>
+      </div>
+    </div>
+  </md-content>
+
 </md-content>

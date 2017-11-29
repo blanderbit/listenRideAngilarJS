@@ -52,6 +52,7 @@
     "cancel": "Afbreken",
     "send": "Sturen",
     "search": "Zoeken",
+    "search-bikes": "Zoek je fietsen",    
     "from-place": "uit",
     "contact": "Contact & Help",
     "show-more": "Toon meer",
@@ -280,7 +281,10 @@
     "uniq-phone": "Telefoonnummer is al geregistreerd in ons systeem.",
     "pending-requests": "Het lijkt alsof u een open verzoek voor deze fiets heeft. Voordat u de fiets kunt verwijderen, moet u deze accepteren of annuleren.",
     "account-deleted":"Uw account is verwijderd",
-    "enter-email": "Please enter your email."
+    "enter-email": "Vul alstublieft uw e-mailadres in",
+    "duplicate-start": "Duplicatieproces gestart",
+    "duplicate-finish": "Duplication process finished. Copies created successfully",
+    "bike-deleted" : "Fiets succesvol verwijderd"
   },
   "settings": {
     "settings": "Instellingen",
@@ -677,7 +681,19 @@
   },
   "listings": {
     "my-bikes": "Mijn fietsen",
-    "no-bikes": "Je hebt nog geen fietsen online geplaatst."
+    "no-bikes": "Je hebt nog geen fietsen online geplaatst.",
+    "list-a-bike": "Fiets plaatsen",
+    "duplicate": {
+      "duplicate": "Duplicaat",
+      "how_many": "Hoeveel fietsen?",
+      "header": "Dubbele fiets",
+      "number_bikes": "Aantal fietsen",
+      "maxlength": "Werkt voor maximaal 99 fietsen",
+      "required": "Aantal fietsen is verplicht"
+    },
+    "listView": {
+      "price": "Prijs (€)"
+    }
   },
   "listingCard": {
     "activate-bike": "Activeren",
@@ -686,6 +702,7 @@
     "delete-bike": "verwijderen",
     "cancel": "annuleren",
     "delete": "verwijderen",
+    "duplicate": "Duplicate",
     "dialog-title": "Wil je daadwerkelijk je fiets verwijderen?",
     "dialog-subtitle": "Het wordt onherroepelijk verwijderd van het platform, actieve aanvragen blijven gehandhaafd."
   },
