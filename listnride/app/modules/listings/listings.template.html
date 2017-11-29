@@ -36,6 +36,7 @@
                  bikes="listings.bikes"
                  status="listings.status"
                  get-bikes="listings.getBikes"
+                 duplicate="listings.duplicate"
                  is-duplicating="listings.isDuplicating">
       </list-view>
     </div>
@@ -59,13 +60,18 @@
           flex-gt-xs="50"
           flex-gt-sm="33"
           bike-id="bike.id"
+          bike="bike"
           name="bike.name"
           brand="bike.brand"
           category="bike.category"
           price="bike.price_from"
           image-url=" bike.image_file_1.image_file_1.small.url"
           available="bike.available"
-          remove-bike="listings.removeBike(bikeId)">
+          remove-bike="listings.removeBike(bikeId)"
+          status="listings.status"
+          get-bikes="listings.getBikes"
+          duplicate="listings.duplicate"
+          is-duplicating="listings.isDuplicating">
         </listing-card>
       </div>
     </div>

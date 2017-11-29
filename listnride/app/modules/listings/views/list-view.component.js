@@ -7,14 +7,14 @@ angular.module('listings').component('listView', {
     bikes: '<',
     status: '=',
     isDuplicating: '=',
-    getBikes: '<'
+    getBikes: '<',
+    duplicate: '<'
   },
   controller: [
     '$localStorage',
     '$stateParams',
     '$analytics',
     '$window',
-    '$mdSidenav',
     '$timeout',
     'api',
     'bikeOptions',
@@ -22,9 +22,10 @@ angular.module('listings').component('listView', {
     '$mdDialog',
     '$mdToast',
     '$translate',
-    'orderByFilter', function ($localStorage, $stateParams, $analytics, $window, $mdSidenav, $timeout, api,
+    'orderByFilter', function ($localStorage, $stateParams, $analytics, $window, $timeout, api,
       bikeOptions, $state, $mdDialog, $mdToast, $translate, orderBy) {
       var listView = this;
+
       listView.$onInit = function () {
         listView.selected = [];
         listView.hovered = [];
@@ -33,10 +34,6 @@ angular.module('listings').component('listView', {
         listView.selectedCount = 0;
         listView.propertyName = 'name';
         listView.reverse = true;
-      };
-
-      listView.toggleSidenav = function () {
-        $mdSidenav('edit').toggle();
       };
 
       // bike checkbox is selected
@@ -68,20 +65,6 @@ angular.module('listings').component('listView', {
         listView.bikes = orderBy(listView.bikes, listView.propertyName, listView.reverse);
       };
 
-      //
-      listView.onBikeHovered = function (index, value) {
-        if (!listView.isBikeSelected(0)) {
-          listView.hovered[index] = value;
-          // used in place of ng-show
-          // using visibility instead of display for hiding/showing the elements
-          listView.visibility[index] = value === true ? {'visibility': 'visible'} : {'visibility': 'hidden'};
-        }
-      };
-
-      listView.cancelEvent = function (event) {
-        if (event.stopPropogation) event.stopPropogation();
-      };
-
       listView.viewBike = function(id, event){
 
         // stop event from propograting
@@ -91,11 +74,6 @@ angular.module('listings').component('listView', {
         var url = $state.href('bike', {bikeId: id});
         // open new tab
         window.open(url, '_blank');
-      };
-
-      listView.viewBikes = function (id, event) {
-        // stop event from propograting
-        if (event.stopPropogation) event.stopPropogation();
       };
 
       listView.editBike = function(id) {
@@ -167,85 +145,6 @@ angular.module('listings').component('listView', {
       listView.openUrl = function () {
         var url = $state.href('listingABike', {parameter: "parameter"});
         window.open(url);
-      };
-
-      var DuplicateBikeController = function() {
-        var duplicate = this;
-        duplicate.duplicate_number = 1;
-
-        // cancel the dialog
-        duplicate.cancelDialog = function() {
-          $mdDialog.cancel();
-        };
-
-        // close the dialog succesfully
-        duplicate.closeDialog = function () {
-          $mdDialog.hide(parseInt(duplicate.duplicate_number));
-        };
-      };
-
-      listView.duplicateBike = function (bike, event) {
-        $mdDialog.show({
-          templateUrl: 'app/modules/listings/views/list-view.duplicate.template.html',
-          controller: DuplicateBikeController,
-          controllerAs: 'duplicate',
-          parent: angular.element(document.body),
-          targetEvent: event,
-          openFrom: angular.element(document.body),
-          closeTo: angular.element(document.body),
-          clickOutsideToClose: true,
-          escapeToClose: true,
-          fullscreen: true
-        }).then(function (duplicate_number) {
-          api.post('/rides/' + bike.id + '/duplicate', {
-            "quantity": duplicate_number
-          }).then(function (response) {
-            var job_id = response.data.job_id;
-            listView.getStatus(bike, job_id, 'initialized');
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.duplicate-start'))
-                .hideDelay(4000)
-                .position('top center')
-            );
-          }, function () {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.error'))
-                .hideDelay(4000)
-                .position('top center')
-            );
-          });
-        }, function () {
-        });
-      };
-
-      listView.getStatus = function (bike, jobId, status) {
-        listView.isDuplicating = true;
-        api.get('/rides/' + bike.id + '/status/' + jobId).then(function (response) {
-          listView.status = response.data.status;
-          /*
-          if status is not complete
-          keep checking the status api every 5 seconds
-          */
-          if (listView.status !== 'complete') {
-            // avoid self invocation of a function
-            $timeout(function () {
-              listView.getStatus(bike, jobId, listView.status)
-            },
-            // every 5 sec
-              5000);
-          } 
-          /*
-          once status is complete
-          bind new bikes with controller scope
-          */
-          else if (listView.status === 'complete') {
-            listView.isDuplicating = false;
-            listView.getBikes();
-          }
-        }, function (error) {
-        });
       };
     }]
 });

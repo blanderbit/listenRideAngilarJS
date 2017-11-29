@@ -4,19 +4,24 @@ angular.module('listingCard',[]).component('listingCard', {
   templateUrl: 'app/modules/shared/listing-card/listing-card.template.html',
   controllerAs: 'listingCard',
   bindings: {
+    status: '=',
     bikeId: '<',
+    bike: '<',
     name: '<',
     brand: '<',
     category: '<',
     price: '<',
     imageUrl: '<',
     available: '<',
-    removeBike: '&'
+    removeBike: '&',
+    isDuplicating: '=',
+    getBikes: '<',
+    duplicate: '<'
   },
   controller: [ '$state', '$mdDialog', '$translate', 'api', '$mdToast',
     function ListingCardController($state, $mdDialog, $translate, api, $mdToast) {
       var listingCard = this;
-
+      
       listingCard.onDeleteClick = function(id, event) {
         $mdDialog.show({
           controller: DeleteBikeController,
@@ -72,43 +77,6 @@ angular.module('listingCard',[]).component('listingCard', {
             console.log("Error deactivating bike", error);
           }
         );
-      };
-
-      var DuplicateBikeController = function() {
-        var duplicate = this;
-        duplicate.duplicate_number = 1;
-
-        // cancel the dialog
-        duplicate.cancelDialog = function() {
-          $mdDialog.cancel();
-        };
-
-        // close the dialog succesfully
-        duplicate.closeDialog = function () {
-          $mdDialog.hide(parseInt(duplicate.duplicate_number));
-        };
-      };
-
-      listingCard.onDuplicateClick = function() {
-        $mdDialog.show({
-          templateUrl: 'app/modules/listings/views/list-view.duplicate.template.html',
-          controller: DuplicateBikeController,
-          controllerAs: 'duplicate',
-          parent: angular.element(document.body),
-          openFrom: angular.element(document.body),
-          closeTo: angular.element(document.body),
-          clickOutsideToClose: true,
-          escapeToClose: true,
-          fullscreen: true
-        }).then(function (duplicate_number) {
-          api.post('/rides/' + listingCard.bikeId + '/duplicate', {
-            "quantity": duplicate_number
-          }).then(function (response) {
-            var job_id = response.data.job_id;
-          }, function () {
-          });
-        }, function () {
-        });
       };
 
       function deleteBike() {
