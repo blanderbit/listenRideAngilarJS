@@ -29,18 +29,17 @@ angular.module('listings', []).component('listings', {
 
         // fetch all bikes
         listings.get();
-        
+
         listings.helper = {
+          
           // local method to be used as duplicate dialog controller
           DuplicateController: function () {
             var duplicate = this;
             duplicate.duplicate_number = 1;
-
             // cancel the dialog
             duplicate.cancelDialog = function () {
               $mdDialog.cancel();
             };
-
             // close the dialog succesfully
             duplicate.closeDialog = function () {
               $mdDialog.hide(parseInt(duplicate.duplicate_number));
@@ -97,11 +96,11 @@ angular.module('listings', []).component('listings', {
           // local method to be used as delete controller
           DeleteController: function (deleteHelper, bikeId) {
             var deleteBikeDialog = this;
-
+            // cancel dialog
             deleteBikeDialog.hide = function () {
               $mdDialog.hide();
             };
-
+            // delete a bike after confirmation
             deleteBikeDialog.deleteBike = function () {
               deleteHelper(bikeId);
               $mdDialog.hide();
@@ -110,28 +109,25 @@ angular.module('listings', []).component('listings', {
         };
       };
       
+      // search functionality in header of My Bikes (List View)
       listings.search = function () {
-        listings.bikes = $filter('filter')(listings.mirror, filterFunction, {$ : listings.input});
+        listings.bikes = $filter('filter')(listings.mirror_bikes, { $: listings.input });
       };
 
+      // Redirect to bike list
       listings.listBike = function () {
         $state.go('list');
       };
 
-      var filterFunction = function(bike) {
-        //TODO improve search by reducing extra params from backend
-        var val = listings.input.toLocaleLowerCase();
-        return bike.name.toLocaleLowerCase().indexOf(val) > -1 || bike.city.toLocaleLowerCase().indexOf(val) > -1 || bike.brand.toLocaleLowerCase().indexOf(val) > -1;
-      };
-
+      // bikes duplication takes long time
+      // this method is used to keep checking status api
+      // and fetch bikes once they are uploaded
       listings.getStatus = function (bike, jobId) {
         listings.isDuplicating = true;
         api.get('/rides/' + bike.id + '/status/' + jobId).then(function (response) {
           listings.status = response.data.status;
-          /*
-          if status is not complete
-          keep checking the status api every 5 seconds
-          */
+          // if status is not complete
+          // keep checking the status api every 5 seconds
           if (listings.status !== 'complete') {
             // avoid self invocation of a function
             $timeout(function () {
@@ -140,10 +136,8 @@ angular.module('listings', []).component('listings', {
               // every 5 sec
               5000);
           }
-          /*
-          once status is complete
-          bind new bikes with controller scope
-          */
+          // once status is complete
+          // bind new bikes with controller scope
           else if (listings.status === 'complete') {
             listings.isDuplicating = false;
             listings.get();
@@ -152,6 +146,7 @@ angular.module('listings', []).component('listings', {
         });
       };
 
+      // duplicate a bike
       listings.duplicate = function (bike, event) {
         var duplicateConfig = {
           templateUrl: 'app/modules/listings/views/list-view.duplicate.template.html',
@@ -171,6 +166,8 @@ angular.module('listings', []).component('listings', {
         });
       };
 
+      // delete a bike
+      // asks for confirmation
       listings.delete = function (id, event) {
         $mdDialog.show({
           controller: listings.helper.DeleteController,
@@ -188,6 +185,9 @@ angular.module('listings', []).component('listings', {
         });
       };
 
+      // deactivate a bike
+      // used only in List View
+      // Tile View has its own implementation
       listings.deactivate = function (index) {
         var id = listings.bikes[index].id;
         listings.deactivated = true;
@@ -201,6 +201,7 @@ angular.module('listings', []).component('listings', {
         );
       };
 
+      // fetch bikes
       listings.get = function () {
         api.get('/users/' + $localStorage.userId + "/rides").then(
           function (response) {
@@ -213,10 +214,12 @@ angular.module('listings', []).component('listings', {
         );
       };
 
+      // Redirect to Edit Bike route
       listings.edit = function (id) {
         $state.go('edit', { bikeId: id });
       };
 
+      // Redirect to View Bike route
       listings.view = function (id, event) {
         // stop event from propograting
         if (event && event.stopPropogation) event.stopPropogation();

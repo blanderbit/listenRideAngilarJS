@@ -22,6 +22,8 @@ angular.module('listingCard',[]).component('listingCard', {
   controller: ['api', function ListingCardController(api) {
       var listingCard = this;
       
+      // activate a bike
+      // implementation is different from parent compoenent
       listingCard.onActivateClick = function() {
         listingCard.disableActivate = true;
         api.put("/rides/" + listingCard.bikeId, {"ride": {"available": "true"}}).then(
@@ -36,6 +38,8 @@ angular.module('listingCard',[]).component('listingCard', {
         );
       };
 
+      // deactivate a bike
+      // implementation is different from parent compoenent
       listingCard.deactivate = function() {
         listingCard.disableDeactivate = true;
         api.put("/rides/" + listingCard.bikeId, {"ride": {"available": "false"}}).then(
