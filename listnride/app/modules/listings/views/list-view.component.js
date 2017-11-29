@@ -7,9 +7,11 @@ angular.module('listings').component('listView', {
     bikes: '<',
     status: '=',
     isDuplicating: '=',
-    getBikes: '<',
+    edit: '<',
+    view: '<',
     duplicate: '<',
-    delete: '<'
+    delete: '<',
+    deactivate: '<',
   },
   controller: [
     '$localStorage',
@@ -37,7 +39,6 @@ angular.module('listings').component('listView', {
         listView.reverse = true;
       };
 
-      console.log('listView: ', listView);
       // bike checkbox is selected
       listView.onBikeSelected = function (index) {
         if (listView.selected[index]) {
@@ -61,45 +62,12 @@ angular.module('listings').component('listView', {
         }
       };
 
+      // order the bikes with the selected criteria (price, size, name, id ....)
       listView.order = function (propertyName) {
         listView.reverse = (propertyName !== null && listView.propertyName === propertyName) ? !listView.reverse : false;
         listView.propertyName = propertyName;
         listView.bikes = orderBy(listView.bikes, listView.propertyName, listView.reverse);
       };
 
-      listView.viewBike = function(id, event){
-
-        // stop event from propograting
-        if (event.stopPropogation) event.stopPropogation();
-
-        // create url
-        var url = $state.href('bike', {bikeId: id});
-        // open new tab
-        window.open(url, '_blank');
-      };
-
-      listView.editBike = function(id) {
-        // create url
-        var url = $state.href('edit', {bikeId: id});
-        // open new tab
-        window.open(url);
-      };
-
-      listView.onDeactivateClick = function(index) {
-        listView.disableDeactivate = true;
-        api.put("/rides/" + listView.bikes[index].id, {"ride": {"available": !listView.bikes[index].available}}).then(
-          function() {
-            listView.bikes[index].available = !listView.bikes[index].available;
-          },
-          function() {
-            listView.disableDeactivate = false;
-          }
-        );
-      };
-
-      listView.openUrl = function () {
-        var url = $state.href('listingABike', {parameter: "parameter"});
-        window.open(url);
-      };
     }]
 });

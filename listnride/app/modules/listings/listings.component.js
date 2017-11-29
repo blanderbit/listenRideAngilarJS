@@ -116,11 +116,7 @@ angular.module('listings', []).component('listings', {
         })
       };
 
-      listings.isDekstopView = function () {
-        console.log($mdMedia);
-      };
-
-      listings.getStatus = function (bike, jobId, status) {
+      listings.getStatus = function (bike, jobId) {
         listings.isDuplicating = true;
         api.get('/rides/' + bike.id + '/status/' + jobId).then(function (response) {
           listings.status = response.data.status;
@@ -184,6 +180,19 @@ angular.module('listings', []).component('listings', {
         });
       };
 
+      listings.deactivate = function (index) {
+        var id = listings.bikes[index].id;
+        listings.deactivated = true;
+        api.put("/rides/" + id, { "ride": { "available": !listings.bikes[index].available } }).then(
+          function () {
+            listings.bikes[index].available = !listings.bikes[index].available;
+          },
+          function () {
+            listings.deactivated = false;
+          }
+        );
+      };
+
       listings.getBikes = function () {
         api.get('/users/' + $localStorage.userId + "/rides").then(
           function (response) {
@@ -193,6 +202,17 @@ angular.module('listings', []).component('listings', {
           function (error) {
           }
         );
+      };
+
+      listings.edit = function (id) {
+        $state.go('edit', { bikeId: id });
+      };
+
+      listings.view = function(id, event){
+        // stop event from propograting
+        if (event && event.stopPropogation) event.stopPropogation();
+        // sref
+        $state.go('bike', {bikeId: id});
       };
 
       listings.getBikes();

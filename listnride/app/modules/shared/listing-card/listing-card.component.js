@@ -14,9 +14,10 @@ angular.module('listingCard',[]).component('listingCard', {
     imageUrl: '<',
     available: '<',
     isDuplicating: '=',
-    getBikes: '<',
     duplicate: '<',
-    delete: '<'
+    delete: '<',
+    edit: '<',
+    view: '<'
   },
   controller: [ '$state', '$mdDialog', '$translate', 'api', '$mdToast',
     function ListingCardController($state, $mdDialog, $translate, api, $mdToast) {
@@ -36,7 +37,7 @@ angular.module('listingCard',[]).component('listingCard', {
         );
       };
 
-      listingCard.onDeactivateClick = function() {
+      listingCard.deactivate = function() {
         listingCard.disableDeactivate = true;
         api.put("/rides/" + listingCard.bikeId, {"ride": {"available": "false"}}).then(
           function(response) {
