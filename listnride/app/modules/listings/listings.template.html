@@ -18,7 +18,7 @@
       <div flex="30" ng-if="listings.status !== ''"><h3>Duplication status: {{listings.status}}</h3></div>
       <div layout="row" flex="35" layout-align="end center">
           <div flex="30"><h3>Show as List</h3></div>
-        <div flex="15"><md-switch ng-model="listings.listView"></md-switch></div>
+        <div flex="15"><md-switch ng-model="listings.listView" ng-change="listings.changeListingMode(listings.listView)"></md-switch></div>
         <span hide-sm flex></span>
         <div flex="35"><md-button class="md-primary md-confirm-button" ng-click="listings.listBike()">{{'listings.list-a-bike' | translate}}</md-button></div>
       </div>
@@ -32,7 +32,7 @@
 
   <md-content id="list-view" ng-if="listings.listView">
     <div class="content" layout-align="center center">
-      <list-view ng-if="listings.listView" 
+      <list-view ng-if="listings.listView"
                  bikes="listings.bikes"
                  status="listings.status"
                  edit="listings.edit"
