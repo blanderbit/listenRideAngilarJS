@@ -163,7 +163,8 @@ angular.module('listnride', [
     if (retrieveTld() == 'com' && determineUserLanguage() != 'en') {
       var newUrl = 'https://' +
         window.location.hostname.split('listnride')[0] +
-        '.' + languageToTld(determineUserLanguage());
+        '.' + languageToTld(determineUserLanguage()) +
+        window.location.pathname;
       console.log(newUrl);
       window.location = newUrl;
     }
