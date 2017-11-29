@@ -58,10 +58,13 @@ angular.module('listings', []).component('listings', {
 
           // local method containing logic for bike deletion
           deleteHelper: function (id) {
-            api.put("/rides/" + id, { "ride": { "active": "false" } }).then(
+            api.delete("/rides/" + id).then(
               function (response) {
-                listings.bikes = response.data;
-                listings.mirror_bikes = response.data;
+                _.remove(listings.mirror_bikes, function(n) {
+                  return n.id === response.data.id;
+                });
+                listings.bikes = listings.mirror_bikes;
+                if (listings.input) { listings.search() }
                 $mdToast.show(
                   $mdToast.simple()
                     .textContent($translate.instant('toasts.bike-deleted'))
@@ -79,7 +82,7 @@ angular.module('listings', []).component('listings', {
                 );
               }
             );
-          },
+          }
         };
       };
 
@@ -113,7 +116,13 @@ angular.module('listings', []).component('listings', {
 
       // search functionality in header of My Bikes (List View)
       listings.search = function () {
-        listings.bikes = $filter('filter')(listings.mirror_bikes, { $: listings.input });
+        listings.bikes = $filter('filter')(listings.mirror_bikes, filterFunction, { $: listings.input });
+      };
+
+      var filterFunction = function(bike) {
+        //TODO improve search by reducing extra params from backend
+        var val = listings.input.toLocaleLowerCase();
+        return bike.name.toLocaleLowerCase().indexOf(val) > -1 || bike.city.toLocaleLowerCase().indexOf(val) > -1 || bike.brand.toLocaleLowerCase().indexOf(val) > -1;
       };
 
       // Redirect to bike list
@@ -208,6 +217,7 @@ angular.module('listings', []).component('listings', {
           function (response) {
             listings.bikes = response.data;
             listings.mirror_bikes = response.data;
+            if (listings.input) { listings.search() }
             if (listings.listView === false) {
               listings.listView = listings.bikes.length >= listings.maxTiles && $mdMedia('gt-sm');
               $localStorage.listView = listings.listView;
