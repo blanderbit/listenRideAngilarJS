@@ -149,10 +149,10 @@ angular.module('listnride', [
     // Determines TLD to a language key
     var languageToTld = function (language) {
       switch (language) {
-        case 'en': return "com";
-        case 'de': return "de";
-        case 'nl': return "nl";
-        case 'it': return "it";
+        case 'en': return "listnride.com";
+        case 'de': return "listnride.de";
+        case 'nl': return "listnride.nl";
+        case 'it': return "listnride.it";
         default: return null;
       }
     };
