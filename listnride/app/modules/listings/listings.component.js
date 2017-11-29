@@ -22,88 +22,91 @@ angular.module('listings', []).component('listings', {
       var listings = this;
 
       listings.$onInit = function () {
+
         listings.maxTiles = 12;
         listings.status = '';
         listings.isDuplicating = false;
-      };
 
-      // local method to be used as duplicate dialog controller
-      function DuplicateController() {
-        var duplicate = this;
-        duplicate.duplicate_number = 1;
+        listings.helper = {
+          // local method to be used as duplicate dialog controller
+          DuplicateController: function () {
+            var duplicate = this;
+            duplicate.duplicate_number = 1;
 
-        // cancel the dialog
-        duplicate.cancelDialog = function () {
-          $mdDialog.cancel();
-        };
+            // cancel the dialog
+            duplicate.cancelDialog = function () {
+              $mdDialog.cancel();
+            };
 
-        // close the dialog succesfully
-        duplicate.closeDialog = function () {
-          $mdDialog.hide(parseInt(duplicate.duplicate_number));
-        };
-      }
-
-      // local method to be called on duplicate success
-      function onDuplicateSuccess(bike, duplicate_number) {
-        api.post('/rides/' + bike.id + '/duplicate', {
-          "quantity": duplicate_number
-        }).then(function (response) {
-          var job_id = response.data.job_id;
-          listings.getStatus(bike, job_id, 'initialized');
-          $mdToast.show(
-            $mdToast.simple()
-              .textContent($translate.instant('toasts.duplicate-start'))
-              .hideDelay(4000)
-              .position('top center')
-          );
-        }, function () {
-          $mdToast.show(
-            $mdToast.simple()
-              .textContent($translate.instant('toasts.error'))
-              .hideDelay(4000)
-              .position('top center')
-          );
-        });
-      }
-
-      // local method containing logic for bike deletion
-      function deleteHelper(id) {
-        api.put("/rides/" + id, { "ride": { "active": "false" } }).then(
-          function (response) {
-            listings.bikes = response.data;
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.bike-deleted'))
-                .hideDelay(4000)
-                .position('top center')
-            );
-            $analytics.eventTrack('List a Bike', { category: 'List Bike', label: 'Bike Removed' });
+            // close the dialog succesfully
+            duplicate.closeDialog = function () {
+              $mdDialog.hide(parseInt(duplicate.duplicate_number));
+            };
           },
-          function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.pending-requests'))
-                .hideDelay(4000)
-                .position('top center')
+
+          // local method to be called on duplicate success
+          onDuplicateSuccess: function (bike, duplicate_number) {
+            api.post('/rides/' + bike.id + '/duplicate', {
+              "quantity": duplicate_number
+            }).then(function (response) {
+              var job_id = response.data.job_id;
+              listings.getStatus(bike, job_id, 'initialized');
+              $mdToast.show(
+                $mdToast.simple()
+                  .textContent($translate.instant('toasts.duplicate-start'))
+                  .hideDelay(4000)
+                  .position('top center')
+              );
+            }, function () {
+              $mdToast.show(
+                $mdToast.simple()
+                  .textContent($translate.instant('toasts.error'))
+                  .hideDelay(4000)
+                  .position('top center')
+              );
+            });
+          },
+
+          // local method containing logic for bike deletion
+          deleteHelper: function (id) {
+            api.put("/rides/" + id, { "ride": { "active": "false" } }).then(
+              function (response) {
+                listings.bikes = response.data;
+                $mdToast.show(
+                  $mdToast.simple()
+                    .textContent($translate.instant('toasts.bike-deleted'))
+                    .hideDelay(4000)
+                    .position('top center')
+                );
+                $analytics.eventTrack('List a Bike', { category: 'List Bike', label: 'Bike Removed' });
+              },
+              function (error) {
+                $mdToast.show(
+                  $mdToast.simple()
+                    .textContent($translate.instant('toasts.pending-requests'))
+                    .hideDelay(4000)
+                    .position('top center')
+                );
+              }
             );
+          },
+
+          // local method to be used as delete controller
+          DeleteController: function (deleteHelper, bikeId) {
+            var deleteBikeDialog = this;
+
+            deleteBikeDialog.hide = function () {
+              $mdDialog.hide();
+            };
+
+            deleteBikeDialog.deleteBike = function () {
+              deleteHelper(bikeId);
+              $mdDialog.hide();
+            }
           }
-        );
-      }
-
-      // local method to be used as delete controller
-      function DeleteController(deleteHelper, bikeId) {
-        var deleteBikeDialog = this;
-
-        deleteBikeDialog.hide = function () {
-          $mdDialog.hide();
         };
-
-        deleteBikeDialog.deleteBike = function () {
-          deleteHelper(bikeId);
-          $mdDialog.hide();
-        }
-      }
-
+      };
+      
       listings.search = function () {
         listings.bikes = $filter('filter')(listings.mirror_bikes, { $: listings.input });
       };
@@ -140,7 +143,7 @@ angular.module('listings', []).component('listings', {
           */
           else if (listings.status === 'complete') {
             listings.isDuplicating = false;
-            listings.getBikes();
+            listings.get();
           }
         }, function (error) {
         });
@@ -149,7 +152,7 @@ angular.module('listings', []).component('listings', {
       listings.duplicate = function (bike, event) {
         var duplicateConfig = {
           templateUrl: 'app/modules/listings/views/list-view.duplicate.template.html',
-          controller: DuplicateController,
+          controller: listings.helper.DuplicateController,
           controllerAs: 'duplicate',
           parent: angular.element(document.body),
           targetEvent: event,
@@ -160,14 +163,14 @@ angular.module('listings', []).component('listings', {
           fullscreen: true
         };
         $mdDialog.show(duplicateConfig).then(function (duplicate_number) {
-          onDuplicateSuccess(bike, duplicate_number);
+          listings.helper.onDuplicateSuccess(bike, duplicate_number);
         }, function () {
         });
       };
 
       listings.delete = function (id, event) {
         $mdDialog.show({
-          controller: DeleteController,
+          controller: listings.helper.DeleteController,
           controllerAs: 'deleteBikeDialog',
           templateUrl: 'app/modules/shared/listing-card/delete-bike-dialog.template.html',
           parent: angular.element(document.body),
@@ -176,7 +179,7 @@ angular.module('listings', []).component('listings', {
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,
           locals: {
-            deleteHelper: deleteHelper,
+            deleteHelper: listings.helper.deleteHelper,
             bikeId: id
           }
         });
@@ -200,7 +203,7 @@ angular.module('listings', []).component('listings', {
           function (response) {
             listings.bikes = response.data;
             listings.mirror_bikes = response.data;
-            listings.listView = (listings.bikes.length >= listings.maxTiles) && $mdMedia('gt-sm');           
+            listings.listView = (listings.bikes.length >= listings.maxTiles) && $mdMedia('gt-sm');
           },
           function (error) {
           }
@@ -211,11 +214,11 @@ angular.module('listings', []).component('listings', {
         $state.go('edit', { bikeId: id });
       };
 
-      listings.view = function(id, event){
+      listings.view = function (id, event) {
         // stop event from propograting
         if (event && event.stopPropogation) event.stopPropogation();
         // sref
-        $state.go('bike', {bikeId: id});
+        $state.go('bike', { bikeId: id });
       };
 
       // fetch all bikes
