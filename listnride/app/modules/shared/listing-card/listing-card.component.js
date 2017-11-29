@@ -19,8 +19,7 @@ angular.module('listingCard',[]).component('listingCard', {
     edit: '<',
     view: '<'
   },
-  controller: [ '$state', '$mdDialog', '$translate', 'api', '$mdToast',
-    function ListingCardController($state, $mdDialog, $translate, api, $mdToast) {
+  controller: ['api', function ListingCardController(api) {
       var listingCard = this;
       
       listingCard.onActivateClick = function() {

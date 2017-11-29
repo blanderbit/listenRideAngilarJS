@@ -21,6 +21,12 @@ angular.module('listings', []).component('listings', {
       }
       var listings = this;
 
+      listings.$onInit = function () {
+        listings.maxTiles = 12;
+        listings.status = '';
+        listings.isDuplicating = false;
+      };
+
       // local method to be used as duplicate dialog controller
       function DuplicateController() {
         var duplicate = this;
@@ -97,10 +103,6 @@ angular.module('listings', []).component('listings', {
           $mdDialog.hide();
         }
       }
-
-      listings.maxTiles = 12;
-      listings.status = '';
-      listings.isDuplicating = false;
 
       listings.search = function () {
         listings.bikes = $filter('filter')(listings.mirror_bikes, { $: listings.input });
@@ -193,11 +195,12 @@ angular.module('listings', []).component('listings', {
         );
       };
 
-      listings.getBikes = function () {
+      listings.get = function () {
         api.get('/users/' + $localStorage.userId + "/rides").then(
           function (response) {
             listings.bikes = response.data;
             listings.mirror_bikes = response.data;
+            listings.listView = (listings.bikes.length >= listings.maxTiles) && $mdMedia('gt-sm');           
           },
           function (error) {
           }
@@ -215,7 +218,8 @@ angular.module('listings', []).component('listings', {
         $state.go('bike', {bikeId: id});
       };
 
-      listings.getBikes();
+      // fetch all bikes
+      listings.get();
     }
   ]
 });
