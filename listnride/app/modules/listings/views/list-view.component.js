@@ -11,6 +11,7 @@ angular.module('listings').component('listView', {
   },
   controller: [
     '$stateParams',
+    '$analytics',
     '$window',
     '$mdSidenav',
     '$timeout',
@@ -20,7 +21,7 @@ angular.module('listings').component('listView', {
     '$mdDialog',
     '$mdToast',
     '$translate',
-    'orderByFilter', function ($stateParams, $window, $mdSidenav, $timeout, api,
+    'orderByFilter', function ($stateParams, $analytics, $window, $mdSidenav, $timeout, api,
       bikeOptions, $state, $mdDialog, $mdToast, $translate, orderBy) {
       var listView = this;
 
@@ -224,15 +225,19 @@ angular.module('listings').component('listView', {
         listView.duplicating = true;
         api.get('/rides/' + bike.id + '/status/' + jobId).then(function (response) {
           listView.status = response.data.status;
-          if(listView.status !== 'complete') {
-            $timeout(listView.getStatus(bike, jobId, listView.status), 5000);
-          } else if(listView.status === 'complete') {
+          if (listView.status !== 'complete') {
+            // avoid self invocation of a function
+            $timeout(function () {
+              listView.getStatus(bike, jobId, listView.status)
+            },
+            // every 5 sec
+              5000);
+          } else if (listView.status === 'complete') {
             listView.duplicating = false;
             // $timeout(listView.status = '', 20000);
           }
         }, function (error) {
-
         });
-      }
+      };
     }]
 });
