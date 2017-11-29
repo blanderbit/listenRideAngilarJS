@@ -3,10 +3,10 @@
 angular.module('mcbw',[]).component('mcbw', {
   templateUrl: 'app/modules/events/mcbw/mcbw.template.html',
   controllerAs: 'mcbw',
-  controller: ['api', '$translatePartialLoader',
-    function AmplerController(api, $tpl) {
+  controller: ['api', '$translatePartialLoader', 'ENV',
+    function AmplerController(api, $tpl, ENV) {
       var mcbw = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
       mcbw.bikes1 = [];
       mcbw.bikes2 = [];
       mcbw.bikes3 = [];

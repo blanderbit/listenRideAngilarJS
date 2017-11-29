@@ -3,10 +3,10 @@
 angular.module('ampler-integration',[]).component('ampler', {
   templateUrl: 'app/modules/brand-integration/ampler.template.html',
   controllerAs: 'ampler',
-  controller: [ '$translate', '$translatePartialLoader', 'api',
-    function AmplerController($translate, $tpl, api) {
+  controller: [ '$translate', '$translatePartialLoader', 'api', 'ENV',
+    function AmplerController($translate, $tpl, api, ENV) {
       var ampler = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
 
       ampler.currentBikes = [];
       $translate(["shared.berlin"]).then(

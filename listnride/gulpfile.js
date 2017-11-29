@@ -46,6 +46,7 @@ gulp.task('copy-index-tmp', copyIndexTmp);
 gulp.task('copy-index-app', copyIndexApp);
 gulp.task('minify-i18n', minifyI18n);
 gulp.task('constants', appConstants);
+gulp.task('translation-constants', translationConstants);
 gulp.task('copy-i18n', copyI18n);
 
 // listnride and vendor scripts
@@ -88,6 +89,18 @@ gulp.task('clean-lnr-shop', cleanLnrShop);
 gulp.task('local', local);
 gulp.task('default', ['local']);
 gulp.task('deploy', deploy);
+
+// create two new variables for translation provider
+function translationConstants() {
+    return ngConstant({
+        wrap: false,
+        constants: env.constants,
+        name: env.context.name + '.constant',
+        stream: true,
+    })
+        .pipe(rename(path.app.constant))
+        .pipe(gulp.dest(path.app.root));
+}
 
 /**
  * helper method for lnrPrefixCss
