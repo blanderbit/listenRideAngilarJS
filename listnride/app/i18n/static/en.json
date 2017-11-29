@@ -78,34 +78,31 @@
     }
   },
   "business-community": {
-    "meta-title": "Die listnride Business Community",
-    "meta-description": "Werde Teil des gewerblichen listnride Fahrradverleihs.",
-    "title": "Die listnride Business Community",
-    "subtitle": "Werde Teil des gewerblichen listnride Fahrradverleihs",
-    "description": "Wir möchten dich gerne in unseren gewerblichen Fahrradverleih einbinden und dir diesen so einfach wie möglich machen. Denn unsere Leidenschaft sind Fahrräder und wir möchten gerne mehr davon auf Europas Straßen sehen. Wie gut, dass wir uns gegenseitig bei dieser Mission unterstützen können.",
+    "meta-title": "The listnride business community",
+    "meta-description": "Join the listnride business community for bike rental",
+    "title": "The listnride business community",
+    "subtitle": "Join the listnride business community for bike rental",
+    "description": "We would like to onboard you onto our commercial bike rental solutions and make it as easy as possible for you. Because our passion is cycling and we would like to see more of it on Europe's streets. Isn’t it great we can support each other in this mission?",
     "feature-1": {
-      "title": "Vermiete deine Fahrräder",
-      "description": "Deine Kunden können ihr Leihfahrrad online über deine  Webseite auswählen und buchen. Den kompletten Buchungs-und Bezahlvorgang übernimmt listnride für dich."
+      "title": "Rent more bikes via listnride",
+      "description": "Your customers can select and book their rental bike online on listnride as well as through your website. The complete booking and payment process takes listnride for you."
     },
     "feature-2": {
-      "title": "Präsentiere deinen Shop online",
-      "description": "Wir geben dir die Möglichkeit deinen Shop online zu präsentieren und so deinen Kundenstamm zu erweitern und die ‘Generation Internet’ online abzuholen."
+      "title": "Present your shop online",
+      "description": "Present your shop online and thus expand your customer base by better reaching 'Generation Internet' through web and mobile."
     },
     "feature-3": {
-      "title": "Profitiere von unserer Reichweite",
-      "description": "Listnride ist Europas größte Bikesharing Community und wir wachsen stetig weiter. Nutze diese Reichweite."
+      "title": "Benefit from our reach",
+      "description": "Listnride is Europe's largest bike sharing community and we continue to grow. Use this reach and win new international customers."
     },
     "text-2": {
-      "title": "Werde auch Du Teil der listnride Business Community",
-      "description": "Registriere dich jetzt und richte sofort deine eigene Shop Seite ein. Oder kontaktiere uns persönlich. Gerne hilft dir Martin weiter, kontaktiere ihn via<br><a href=\"mailto:ml@listnride.com\">ml@listnride.com</a> oder 0171&nbsp;83&nbsp;13&nbsp;348"
+      "title": "Join the listnride Business Community!",
+      "description": "Register now and set up your own shop page instantly. Or contact us personally. Martin will be happy to help, contact him at: <br><a href=\"mailto:ml@listnride.com\">ml@listnride.com</a> or 0171&nbsp;83&nbsp;13&nbsp;348"
     },
     "text-3": {
-      "column-1": "listnride ist bereits jetzt schon Europas größte Bikesharing Community und so Spezialist für den privaten und gewerblichen Fahrradverleih.  Deshalb wissen wir wonach unsere KundInnen suchen und können sie direkt auf deine listnride Shop Seite leiten und ihnen den Weg in deinen Laden so einfach wie möglich machen.",
-      "column-2": "Uns ist wichtig, dass wir unserer fahrradbegeisterten Community ein breites Angebot an Fahrrädern anbieten können, dies reicht vom Crosser, übers Rennrad zum Hollandrad und Cargo-Bike. Mit dir zusammen können wir unseren Usern nicht nur das perfekte Leihrad für den Urlaub bieten, sondern ihnen auch bei Suche nach einem neuen, eigenen Fahrrad helfen."
-    },
-    "join-now": "Mach mit. Das Plugin ist kostenlos.",
-    "join-now-description": "Willst du mehr erfahren?",
-    "contact-us": "Kontaktiere Uns"
+      "column-1": "listnride is already the largest community for bicycle sharing in Europe and with that a specialist for private and commercial bike rental. We know what our customers are looking for and so can direct them to your listnride shop page to easily find and book your rental bikes.",
+      "column-2": "We believe it is important to offer our bicycle minded community a wide range of bicycles, from a crosser to a road bike and from a touring bike to a cargo bike. Together with you, we can not only offer our users the perfect rental bike for the holiday, but also help to find a new bike (purchase)."
+    }
   },
   "events": {
     "rapha-super-cross": {
