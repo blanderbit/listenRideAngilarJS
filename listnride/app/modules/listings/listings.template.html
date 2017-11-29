@@ -37,6 +37,7 @@
                  status="listings.status"
                  get-bikes="listings.getBikes"
                  duplicate="listings.duplicate"
+                 delete="listings.delete"
                  is-duplicating="listings.isDuplicating">
       </list-view>
     </div>
@@ -67,10 +68,10 @@
           price="bike.price_from"
           image-url=" bike.image_file_1.image_file_1.small.url"
           available="bike.available"
-          remove-bike="listings.removeBike(bikeId)"
           status="listings.status"
           get-bikes="listings.getBikes"
           duplicate="listings.duplicate"
+          delete="listings.delete"
           is-duplicating="listings.isDuplicating">
         </listing-card>
       </div>

@@ -8,7 +8,8 @@ angular.module('listings').component('listView', {
     status: '=',
     isDuplicating: '=',
     getBikes: '<',
-    duplicate: '<'
+    duplicate: '<',
+    delete: '<'
   },
   controller: [
     '$localStorage',
@@ -36,6 +37,7 @@ angular.module('listings').component('listView', {
         listView.reverse = true;
       };
 
+      console.log('listView: ', listView);
       // bike checkbox is selected
       listView.onBikeSelected = function (index) {
         if (listView.selected[index]) {
@@ -94,53 +96,6 @@ angular.module('listings').component('listView', {
           }
         );
       };
-
-      var DeleteBikeController = function(deleteBike, bikeId) {
-        var deleteBikeDialog = this;
-
-        deleteBikeDialog.hide = function() {
-          $mdDialog.hide();
-        };
-
-        deleteBikeDialog.deleteBike = function() {
-          deleteBike(bikeId);
-          $mdDialog.hide();
-        }
-      };
-
-      listView.onDeleteClick = function(id, event) {
-        $mdDialog.show({
-          controller: DeleteBikeController,
-          controllerAs: 'deleteBikeDialog',
-          templateUrl: 'app/modules/shared/listing-card/delete-bike-dialog.template.html',
-          parent: angular.element(document.body),
-          targetEvent: event,
-          openFrom: angular.element(document.body),
-          closeTo: angular.element(document.body),
-          clickOutsideToClose: true,
-          locals: {
-            deleteBike: deleteBike,
-            bikeId: id
-          }
-        });
-      };
-
-      function deleteBike(id) {
-        api.put("/rides/" + id, {"ride": {"active": "false"}}).then(
-          function(response) {
-            listView.bikes = response.data;
-            $analytics.eventTrack('List a Bike', {  category: 'List Bike', label: 'Bike Removed'});
-          },
-          function(error) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.pending-requests'))
-                .hideDelay(4000)
-                .position('top center')
-            );
-          }
-        );
-      }
 
       listView.openUrl = function () {
         var url = $state.href('listingABike', {parameter: "parameter"});
