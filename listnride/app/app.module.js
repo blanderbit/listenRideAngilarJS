@@ -149,21 +149,22 @@ angular.module('listnride', [
     // Determines TLD to a language key
     var languageToTld = function (language) {
       switch (language) {
-        case 'en': return "listnride.com";
-        case 'de': return "listnride.de";
-        case 'nl': return "listnride.nl";
-        case 'it': return "listnride.it";
-        default: return null;
+        case 'en': return 'com';
+        case 'de': return 'de';
+        case 'nl': return 'nl';
+        case 'it': return 'it';
+        default: return 'com';
       }
     };
 
     // In case of accessing the .com version, users will see the website
     // in their own system's language in case we support it
     // if (retrieveTld() == 'com' && determineUserLanguage() != 'en') {
-    if (retrieveTld() == 'com' && determineUserLanguage() != 'en') {
+    var userLanguage = determineUserLanguage();
+    if (retrieveTld() == 'com' && userLanguage != 'en' && languageToTld(userLanguage) != 'com') {
       var newUrl = 'https://' +
         window.location.hostname.split('listnride')[0] +
-        languageToTld(determineUserLanguage()) +
+        'listnride.' + languageToTld(determineUserLanguage()) +
         window.location.pathname;
       console.log(newUrl);
       window.location = newUrl;
