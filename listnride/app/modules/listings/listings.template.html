@@ -20,7 +20,11 @@
           <div flex="30"><h3>Show as List</h3></div>
         <div flex="15"><md-switch ng-model="listings.listView" ng-change="listings.changeListingMode(listings.listView)"></md-switch></div>
         <span hide-sm flex></span>
-        <div flex="35"><md-button class="md-primary md-confirm-button" ng-click="listings.listBike()">{{'listings.list-a-bike' | translate}}</md-button></div>
+        <div flex="35">
+          <md-button class="md-primary md-confirm-button" ng-click="listings.listBike()">
+            {{'listings.list-a-bike' | translate}}
+          </md-button>
+        </div>
       </div>
     </div>
   </div>
@@ -43,17 +47,17 @@
                  is-duplicating="listings.isDuplicating">
       </list-view>
     </div>
+    <div ng-if="listings.bikes !== undefined && listings.bikes.length == 0"  class="lnr-no-rental">
+      <h2>{{ 'listings.no-bikes' | translate }}</h2>
+    </div>
   </md-content>
 
   <!-- Layout for the Tile View -->
 
   <md-content ng-if="!listings.listView" >
     <div class="content" layout-align="center center">
-      <div ng-if="listings.bikes !== undefined && listings.bikes.length == 0" layout="column" layout-align="center center">
-        {{ 'listings.no-bikes' | translate }}<br><br>
-        <md-button ui-sref="listingABike" class="md-raised md-primary md-lrg">
-          {{ 'shared.list-a-bike' | translate }}
-        </md-button>
+      <div ng-if="listings.bikes !== undefined && listings.bikes.length == 0"  class="lnr-no-rental">
+        <h2>{{ 'listings.no-bikes' | translate }}</h2>
       </div>
 
       <div flex-gt-xs layout="row" layout-wrap layout-padding layout-align="center center">
