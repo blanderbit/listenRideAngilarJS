@@ -66,6 +66,7 @@ module.exports = function () {
                 './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.js',
                 './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.vendor.js'
             ],
+            jsGlob: './js_modules/lnr-shop-integration/scripts/*.js',
             dist: {
                 root: './js_modules/lnr-shop-integration/dist/',
                 oldJs: './js_modules/lnr-shop-integration/dist/lnr-embed.min.js',

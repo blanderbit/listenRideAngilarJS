@@ -12,6 +12,7 @@ var inject = require('gulp-inject');
 var replace = require('gulp-replace');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglifyjs');
+var purifyCss = require('gulp-purifycss');
 var imagemin = require('gulp-imagemin');
 var stylish = require('jshint-stylish');
 var minifyCss = require('gulp-clean-css');
@@ -22,7 +23,6 @@ var ngAnnotate = require('gulp-ng-annotate');
 var ngConstant = require('gulp-ng-constant');
 var templateCache = require('gulp-angular-templatecache');
 var htmlReplace = require('gulp-html-replace');
-
 var scope;
 var scopeSelector;
 var path = config.path;
@@ -417,6 +417,8 @@ function resourcesLnrShopIntegration() {
     return gulp.src(path.lnrShopIntegration.css)
         // concat lnr and vendor css files 
         .pipe(concat(path.lnrShopIntegration.dist.css))
+        // remove unused styles from css files
+        .pipe(purifyCss([path.lnrShopIntegration.jsGlob]))
         // prefix style with #listnride
         .pipe(lnrPrefixCss(path.lnrShopIntegration.prefix))
         // minify concatinated css
