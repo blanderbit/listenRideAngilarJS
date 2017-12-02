@@ -192,13 +192,15 @@ var lnrHelper = {
    * @returns {void}
    */
   fetchBikes: function (callback) {
-    if (window.lnrJquery) {
-      return callback(lnrJquery);
-    } else {
-      window.setTimeout(function () {
-        lnrHelper.fetchBikes(callback);
-      }, 100);
-    }
+    lnrHelper.postInit();
+    // lnrHelper.postInit();
+    // if (window.lnrJquery) {
+    //   return callback(lnrJquery);
+    // } else {
+    //   window.setTimeout(function () {
+    //     lnrHelper.fetchBikes(callback);
+    //   }, 100);
+    // }
   },
   /**
    * show the bikes for the specific city
