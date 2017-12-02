@@ -109,7 +109,6 @@ var lnrHelper = {
       ].join('');
 
       // render element
-      // element.append(elementHTML);
       element.innerHTML += elementHTML;
 
       // disable it when size is not available
@@ -124,7 +123,6 @@ var lnrHelper = {
     });
 
     // show the size drop down menu
-    // element.toggleClass("show");
     element.classList.toggle("show");
   },
   /**
@@ -266,10 +264,6 @@ var lnrHelper = {
         '<div class="dropdown-caret" style="float: right"></div>'
       ].join('');
       sizeButton.innerHTML = element;
-      // sizeButton.html([
-      //   index > 0 ? (selectedSize + ' cm - ' + parseInt(selectedSize + 10) + ' cm') : selectedSize,
-      //   '<div class="dropdown-caret" style="float: right"></div>'
-      // ].join(''));
 
       // render filtered bikes
       lnrHelper.renderBikesHTML(selectedRides);
@@ -403,7 +397,6 @@ var lnrHelper = {
     element.innerHTML = '';
 
     // render selectors HTML
-    // element.append(selectors);
     element.innerHTML += selectors;
 
     // set default values for selectors
@@ -480,11 +473,9 @@ var lnrHelper = {
       var default_size = 0;
       if (lnrConstants.sizes.available > 1) {
         default_size = lnrConstants.sizes.available.length === 1 ? lnrConstants.sizes.available[0] : lnrConstants.translate.allSizes.selected;
-        // sizeButton.html(default_size + ' cm - ' + parseInt(default_size + 10) + ' cm <div class="dropdown-caret" style="float: right"></div>');
-         sizeButton.innerHTML = default_size + ' cm - ' + parseInt(default_size + 10) + ' cm <div class="dropdown-caret" style="float: right"></div>';
+        sizeButton.innerHTML = default_size + ' cm - ' + parseInt(default_size + 10) + ' cm <div class="dropdown-caret" style="float: right"></div>';
       } else {
         default_size = lnrConstants.sizes.available[0];
-        // sizeButton.html(default_size + '<div class="dropdown-caret" style="float: right"></div>');
         sizeButton.innerHTML = default_size + '<div class="dropdown-caret" style="float: right"></div>';
       }
     }
