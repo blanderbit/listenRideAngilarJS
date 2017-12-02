@@ -1,6 +1,4 @@
-/* global
-        lnrConstants: '/listnride/js_modules/lnr-shop-integration/scripts/lnr-shop-integration.constants.js'
-        lnrJquery: '/listnride/js_modules/lnr-shop-integration/scripts/lnr-shop-integration.jquery.js'
+/* global lnrConstants: '/listnride/js_modules/lnr-shop-integration/scripts/lnr-shop-integration.constants.js'
 */
 var lnrHelper = {
   /**
@@ -26,7 +24,6 @@ var lnrHelper = {
     // get user id and language
     var user_id = document.getElementById('listnride').dataset.user;
     var user_lang = document.getElementById('listnride').dataset.lang;
-
     if ("de" === user_lang) {
       lnrConstants.translate.allLocations.selected = lnrConstants.translate.allLocations.de;
       lnrConstants.translate.allSizes.selected = lnrConstants.translate.allSizes.de;
@@ -70,9 +67,7 @@ var lnrHelper = {
     
     // get location dropdown element
     var element = document.getElementById(id);
-    // var element = lnrJquery('#' + id);
     // clear element
-    // element.html('');
     element.innerHTML = '';
 
     // list cities in the dropdown menu
@@ -98,11 +93,9 @@ var lnrHelper = {
     var id = 'lnr-size-dropdown';
 
     // get size dropdown element
-    // var element = lnrJquery('#' + id);
     var element = document.getElementById(id);
 
     // clear element
-    // element.html('');
     element.innerHTML = '';
 
     // list cities in the dropdown menu
@@ -127,10 +120,6 @@ var lnrHelper = {
             currentSelector.style[key] = lnrConstants.disabledButtonCss[key];
           }
         }
-        // currentSelector.style["pointer-events"] = lnrConstants.disabledButtonCss["pointer-events"];
-        // currentSelector.style.color = lnrConstants.disabledButtonCss.color;
-        // getComputedStyle(currentSelector)[lnrConstants.disabledButtonCss]; 
-        // lnrJquery('#'+ currentSelectorId).css(lnrConstants.disabledButtonCss);
       }
     });
 
@@ -186,23 +175,6 @@ var lnrHelper = {
     }
   },
   /**
-   * show the bikes for the user
-   * wrapper for fetching bikes after 100ms
-   * @param {callback} callback to be called
-   * @returns {void}
-   */
-  fetchBikes: function (callback) {
-    lnrHelper.postInit();
-    // lnrHelper.postInit();
-    // if (window.lnrJquery) {
-    //   return callback(lnrJquery);
-    // } else {
-    //   window.setTimeout(function () {
-    //     lnrHelper.fetchBikes(callback);
-    //   }, 100);
-    // }
-  },
-  /**
    * show the bikes for the specific city
    * @param {Number} index to be called
    * @returns {void}
@@ -211,7 +183,6 @@ var lnrHelper = {
 
     // location button
     var locationButton = document.getElementById('lnr-location-button');
-    // var locationButton = lnrJquery('#lnr-location-button');
 
     // default user rides for all locations
     var rides = lnrConstants.rides;
@@ -225,7 +196,6 @@ var lnrHelper = {
     else if (index === 0) {
       lnrHelper.renderBikesHTML(rides);
       locationButton.innerHTML = lnrConstants.translate.allLocations.selected + '<div class="dropdown-caret" style="float: right"></div>';
-      // locationButton.html(lnrConstants.translate.allLocations.selected + '<div class="dropdown-caret" style="float: right"></div>');
       return;
     }
 
@@ -245,7 +215,6 @@ var lnrHelper = {
 
       // update the button text
       locationButton.innerHTML = selectedCity + '<div class="dropdown-caret" style="float: right"></div>';
-      // locationButton.html(selectedCity + '<div class="dropdown-caret" style="float: right"></div>');
 
       // render filtered bikes
       lnrHelper.renderBikesHTML(selectedRides);
@@ -259,7 +228,6 @@ var lnrHelper = {
   onSizeSelect: function (index) {
 
     // size button
-    // var sizeButton = lnrJquery('#lnr-size-button');
     var sizeButton = document.getElementById('lnr-size-button');
 
     // default user rides for all sizes
@@ -322,13 +290,11 @@ var lnrHelper = {
     // is_demo_mode flag is provided from template
     // not for end user
     if (is_demo_mode === true) {
-      // lnrConstants.user_id =  lnrJquery('#user_demo_id').val();
       lnrConstants.user_id =  document.getElementById('user_demo_id').value;
-      // lnrConstants.user_lang =lnrJquery('#user_demo_lang').val();
       lnrConstants.user_lang = document.getElementById('user_demo_lang').value;
     } else {
       lnrConstants.user_id = user_id;
-      if (user_lang != 'de' || user_lang != 'nl') {
+      if (user_lang !== 'de' && user_lang !== 'nl') {
         lnrConstants.user_lang = 'en';
       } else {
         lnrConstants.user_lang = user_lang;
@@ -346,7 +312,6 @@ var lnrHelper = {
         var response = JSON.parse(request.responseText);
         // grid for the bikes cards
         document.getElementById('listnride').innerHTML = '';
-        // lnrJquery('#listnride').html('');
         // get cities information from the bikes
         lnrConstants.cities = lnrHelper.getBikeCities(response.rides);
         // get sizes information from the bikes
@@ -376,17 +341,12 @@ var lnrHelper = {
     // create grid for the
     var lnr = document.getElementById('listnride');
     lnr.innerHTML +='<div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid"></div>';
-    // lnrJquery("#listnride").append(
-    //   '<div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid"></div>'
-    // );
 
     // grid selector
     var grid = document.getElementById('lnr-grid');
-    // var grid = lnrJquery("#lnr-grid");
 
     // clear gird template
     grid.innerHTML = '';
-    // grid.html('');
 
     var basicInfo = lnrHelper.getBikesBasicInfo();
     rides.forEach(function (ride) {
@@ -425,36 +385,7 @@ var lnrHelper = {
         '</bike-card>',
         '</div>'
       ].join('');
-      grid.innerHTML += gridHTML;
-     /*
-      grid.append(
-        '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">' +
-        '<bike-card>' +
-        '<md-card class="lnr-bike-card _md">' +
-        '<a target="_blank" class="image-container lnr-links" title="' + ride.description + '" onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')">' +
-        '<img src="' + imageUrl + '"></img>' +
-        '<div class="after">' +
-        '<span class="content"><span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>' +
-        '<button class="md-button">' + basicInfo.buttonText + '</button></span>' +
-        '</div></a>' +
-        '<md-card-title layout="row" class="layout-row">' +
-        '<md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true">' +
-        '<img src="' + svgUrl + '" height="48" width="48"></img></md-icon>' +
-        '<md-card-title-text class="lnr-margin-left layout-align-space-around-start layout-column">' +
-        '<span class="md-subhead">' + brand + ', ' + categoryDesc + '</span>' +
-        '<span>' + basicInfo.sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size + 10) + ' cm</span>' +
-        '</md-card-title-text>' +
-        '<div layout="column" class="layout-align-space-around-center layout-column">' +
-        '<span style="text-align: center">' + basicInfo.dayText + '</span>' +
-        '<span class="md-headline">' + price + '&euro;</span>' +
-        ' </div>' +
-        '</md-card-title>' +
-        '</md-card>' +
-        '</bike-card>' +
-        '</div>'
-      );
-      */
-     
+      grid.innerHTML += gridHTML;     
     });
   },
   /**
@@ -463,14 +394,12 @@ var lnrHelper = {
    * @returns {void}
    */
   renderSelectors: function (shouldRenderLocationSelector) {
-    // var element = lnrJquery('#listnride');
     var element = document.getElementById('listnride');
 
     // HTML for the selectors
     var selectors = lnrHelper.renderSelectorsHTML(shouldRenderLocationSelector);
 
     // clear element HTML
-    // element.html('');
     element.innerHTML = '';
 
     // render selectors HTML
@@ -538,9 +467,8 @@ var lnrHelper = {
   setDefaultSelectorValues: function () {
 
     // location button
-    // var locationButton = lnrJquery('#lnr-location-button');    
     var locationButton = document.getElementById('lnr-location-button');
-    // var sizeButton = lnrJquery('#lnr-size-button');
+    // size button
     var sizeButton = document.getElementById('lnr-size-button');
     // show default location
     if (locationButton) {
