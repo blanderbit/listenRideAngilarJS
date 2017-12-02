@@ -12,6 +12,7 @@ var inject = require('gulp-inject');
 var replace = require('gulp-replace');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglifyjs');
+var purifyCss = require('gulp-purifycss');
 var imagemin = require('gulp-imagemin');
 var stylish = require('jshint-stylish');
 var minifyCss = require('gulp-clean-css');
@@ -22,7 +23,6 @@ var ngAnnotate = require('gulp-ng-annotate');
 var ngConstant = require('gulp-ng-constant');
 var templateCache = require('gulp-angular-templatecache');
 var htmlReplace = require('gulp-html-replace');
-
 var scope;
 var scopeSelector;
 var path = config.path;
@@ -71,7 +71,7 @@ gulp.task('revisions', revisions);
 gulp.task('replace-revisions-index', replaceRevisionsIndex);
 
 // shop integration related tasks
-gulp.task('prefix-lnr-shop-integration', prefixLnrShopIntegration);
+gulp.task('resources-lnr-shop-integration', resourcesLnrShopIntegration);
 gulp.task('minify-lnr-shop-integration', minifyLnrShopIntegration);
 gulp.task('clean-lnr-shop-integration', cleanLnrShopIntegration);
 gulp.task('deploy-lnr-shop-integration', deployLnrShopIntegration);
@@ -413,9 +413,17 @@ function replaceRevisionsIndex() {
  * other option is to used iframe
  * @returns {gulp} for chaining
  */
-function prefixLnrShopIntegration() {
-    return gulp.src(path.lnrShopIntegration.dist.style)
+function resourcesLnrShopIntegration() {
+    return gulp.src(path.lnrShopIntegration.css)
+        // concat lnr and vendor css files 
+        .pipe(concat(path.lnrShopIntegration.dist.css))
+        // remove unused styles from css files
+        .pipe(purifyCss([path.lnrShopIntegration.jsGlob]))
+        // prefix style with #listnride
         .pipe(lnrPrefixCss(path.lnrShopIntegration.prefix))
+        // minify concatinated css
+        .pipe(minifyCss(path.lnrShopIntegration.dist.css))
+        // save to dist folder
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
 }
 /**
@@ -430,24 +438,11 @@ function minifyLnrShopIntegration() {
         
     // minify source for shop integration
     // copy to dist folder of shop integration
-    gulp.src(path.lnrShopIntegration.js)
+    return gulp.src(path.lnrShopIntegration.js)
         .pipe(concat(path.lnrShopIntegration.dist.source))
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root))
         .pipe(uglify(path.lnrShopIntegration.dist.source))
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
-
-    // concat style for shop integration
-    // copy to dist folder of shop integration
-    return gulp.src(path.lnrShopIntegration.css)
-    .pipe(concat(path.lnrShopIntegration.dist.css))
-    .pipe(gulp.dest(path.lnrShopIntegration.dist.root))
-
-    /* 
-    css minification is disabled
-    it was causing issues with mdl lite grid styles
-    .pipe(minifyCss(path.lnrShopIntegration.dist.css))
-    .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
-    */
 }
 /**
  * clean dist folder -- shop integration
@@ -467,7 +462,7 @@ function deployLnrShopIntegration(cb) {
     runSequence(
         'clean-lnr-shop-integration',
         'minify-lnr-shop-integration',
-        'prefix-lnr-shop-integration',
+        'resources-lnr-shop-integration',
         cb
     );
 }
