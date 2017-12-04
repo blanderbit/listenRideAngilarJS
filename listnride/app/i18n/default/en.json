@@ -53,7 +53,7 @@
     "cancel": "Cancel",
     "send": "Send",
     "search": "Search",
-    "search-bikes": "Search your bikes",
+    "search-bikes": "Search your bikes",    
     "from-place": "from",
     "contact": "Contact & Support",
     "show-more": "show more",
@@ -214,7 +214,7 @@
       "vanmoof": {
         "meta-title": "Rent and test the Electrified S E-Bikes in Berlin, Munich and Hamburg",
         "meta-descr": "The perfect city bike - VanMoof"
-      },
+      },    
       "moeve": {
         "meta-title": "Rent and test Moeve bikes in Munich and Amsterdam",
         "meta-descr": "The bike with the unique drive system - Cyfly by Moeve."
@@ -328,10 +328,10 @@
     "add-voucher": "Add Voucher",
     "meta-title": "Profile Settings",
     "meta-description": "Change your profile - und payment settings.",
-    "company-name": "Company name",
-    "company-information": "Company information",
-    "vat": "VAT",
-    "payment-info": "Show current Payment"
+    "company-name":"Company name",
+    "company-information":"Company information",
+    "vat":"VAT",
+    "payment-info":"Show current Payment"
   },
   "verification": {
     "lets-start": "Let's start",
@@ -420,7 +420,7 @@
       "4": "Good",
       "5": "Excellent",
       "rating_text_rider": "Please summarize your rental experience in a few sentences. The lister will do the same",
-      "rating_text_lister": "Please summarize your rental experience in a few sentences. The rider will do the same"
+      "rating_text_lister":   "Please summarize your rental experience in a few sentences. The rider will do the same"
     },
     "write-message": "Write a message...",
     "complete-profile": "Complete your Profile",
@@ -605,7 +605,7 @@
       "description": "Your daily price is your base price for 1 day.",
       "hint-para-1": "The price you charge for your bike is up to you. The price should be based on the bike and equipment. To get an idea of market prices, you can view comparable listings. ",
       "hint-para-2": "A rental period for less than 6 hours equals a half-day rental, 6 to 24 hours a day’s rental.",
-      "hint-para-3": "To encourage longer rentals, some listers set a daily or weekly discount.",
+      "hint-para-3": "To encourage longer rentals, some listers set a daily or weekly discount." ,
       "label": "Pricing",
       "discount": "Discount",
       "discount-description-initial": "With a weekly discount of ",
@@ -634,7 +634,7 @@
       "price_30_days": "30 days",
       "price_30_days_long": "30 days (1 month)",
       "reset-prices": "Reset",
-      "validations": {
+      "validations":{
         "required": {
           "daily_price": "Daily price is required",
           "price": "Price is required"
@@ -693,7 +693,7 @@
       "maxlength": "Works for maximum 99 bikes",
       "required": "Number of bikes is required"
     },
-    "listView": {
+  "listView": {
       "price": "Price (€)"
     }
   },
@@ -784,7 +784,7 @@
     "as-rider": "As Rider",
     "no-rides": "You had no rides yet"
   },
-  "invite-landing": {
+  "invite-landing" : {
     "meta-title": "listnride | 10€ for you!",
     "meta-description": "Give the gift of cycling! When you invite a friend to listnride, they’ll get a 10€ voucher as soon as they join. When they rent a bike or list their own, you’ll get 10€ too!",
     "header": "sent you 10€",
