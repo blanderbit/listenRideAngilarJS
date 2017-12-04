@@ -32,7 +32,6 @@ var determineHostname = function(subdomains, hostname) {
       case "de": domainEnding = ".de"; break;
       case "nl": domainEnding = ".nl"; break;
       case "it": domainEnding = ".it"; break;
-      case "es": domainEnding = ".es"; break;
     }
     if (subdomains[i] === "staging") {
       domainPrefix = "www.staging.";

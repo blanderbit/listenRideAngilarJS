@@ -23,7 +23,7 @@ angular.
 
       var retrieveLocale = function() {
         var defaultLanguage = "en";
-        var availableLanguages = ["de", "en", "nl", "it", "es"];
+        var availableLanguages = ["de", "en", "nl"];
         var retrievedLanguage = $localStorage.selectedLanguage;
     
         if (availableLanguages.indexOf(retrievedLanguage) >= 0) {
