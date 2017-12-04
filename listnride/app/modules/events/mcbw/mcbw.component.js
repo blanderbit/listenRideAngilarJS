@@ -9,8 +9,6 @@ angular.module('mcbw',[]).component('mcbw', {
       $tpl.addPart(ENV.staticTranslation);
       mcbw.bikes1 = [];
       mcbw.bikes2 = [];
-      mcbw.bikes3 = [];
-      mcbw.bikes4 = [];
 
       mcbw.mapOptions = {
         lat: 48.1574300,
@@ -29,12 +27,6 @@ angular.module('mcbw',[]).component('mcbw', {
             }
             else if (bikes[i].id >= 616 && bikes[i].id <= 620) {
               mcbw.bikes2.push(bikes[i]);
-            }
-            else if (bikes[i].id >= 628 && bikes[i].id <= 632) {
-              mcbw.bikes3.push(bikes[i]);
-            }
-            else if (bikes[i].id >= 611 && bikes[i].id <= 615) {
-              mcbw.bikes4.push(bikes[i]);
             }
           }
         },

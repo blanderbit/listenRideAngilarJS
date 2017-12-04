@@ -11,7 +11,7 @@ angular.module('listings').component('listView', {
     view: '<',
     duplicate: '<',
     delete: '<',
-    deactivate: '<',
+    deactivate: '<'
   },
   controller: ['orderByFilter', function (orderBy) {
       var listView = this;

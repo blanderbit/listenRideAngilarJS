@@ -1,6 +1,4 @@
-/* global
-        lnrConstants: '/listnride/js_modules/lnr-shop-integration/scripts/lnr-shop-integration.constants.js'
-        lnrJquery: '/listnride/js_modules/lnr-shop-integration/scripts/lnr-shop-integration.jquery.js'
+/* global lnrConstants: '/listnride/js_modules/lnr-shop-integration/scripts/lnr-shop-integration.constants.js'
 */
 var lnrHelper = {
   /**
@@ -26,7 +24,6 @@ var lnrHelper = {
     // get user id and language
     var user_id = document.getElementById('listnride').dataset.user;
     var user_lang = document.getElementById('listnride').dataset.lang;
-
     if ("de" === user_lang) {
       lnrConstants.translate.allLocations.selected = lnrConstants.translate.allLocations.de;
       lnrConstants.translate.allSizes.selected = lnrConstants.translate.allSizes.de;
@@ -69,10 +66,9 @@ var lnrHelper = {
     var id = 'lnr-location-dropdown';
     
     // get location dropdown element
-    var element = lnrJquery('#' + id);
-
+    var element = document.getElementById(id);
     // clear element
-    element.html('');
+    element.innerHTML = '';
 
     // list cities in the dropdown menu
     lnrConstants.cities.forEach(function (city, index) {
@@ -84,11 +80,12 @@ var lnrHelper = {
       ].join('');
 
       // render element
-      element.append(elementHTML);
+      element.innerHTML += elementHTML;
+      // element.append(elementHTML);
     });
 
     // show the location drop down menu
-    element.toggleClass("show");
+    element.classList.toggle("show");
   },
   openSizeSelector: function () {
 
@@ -96,10 +93,10 @@ var lnrHelper = {
     var id = 'lnr-size-dropdown';
 
     // get size dropdown element
-    var element = lnrJquery('#' + id);
+    var element = document.getElementById(id);
 
     // clear element
-    element.html('');
+    element.innerHTML = '';
 
     // list cities in the dropdown menu
     lnrConstants.sizes.default.forEach(function (size, index) {
@@ -112,17 +109,21 @@ var lnrHelper = {
       ].join('');
 
       // render element
-      element.append(elementHTML);
+      element.innerHTML += elementHTML;
 
       // disable it when size is not available
       if (lnrConstants.sizes.available.includes(size) === false) {
-        var currentSelectorId = '#' + id + '-select-' + index;
-        lnrJquery(currentSelectorId).css(lnrConstants.disabledButtonCss);
+        var currentSelector = document.getElementById(id + '-select-' + index);
+        for (var key in lnrConstants.disabledButtonCss) {
+          if (lnrConstants.disabledButtonCss.hasOwnProperty(key)) {
+            currentSelector.style[key] = lnrConstants.disabledButtonCss[key];
+          }
+        }
       }
     });
 
     // show the size drop down menu
-    element.toggleClass("show");
+    element.classList.toggle("show");
   },
   /**
    * select the category name based on the category id received from server side
@@ -172,21 +173,6 @@ var lnrHelper = {
     }
   },
   /**
-   * show the bikes for the user
-   * wrapper for fetching bikes after 100ms
-   * @param {callback} callback to be called
-   * @returns {void}
-   */
-  fetchBikes: function (callback) {
-    if (window.lnrJquery) {
-      return callback(lnrJquery);
-    } else {
-      window.setTimeout(function () {
-        lnrHelper.fetchBikes(callback);
-      }, 100);
-    }
-  },
-  /**
    * show the bikes for the specific city
    * @param {Number} index to be called
    * @returns {void}
@@ -194,7 +180,7 @@ var lnrHelper = {
   onCitySelect: function (index) {
 
     // location button
-    var locationButton = lnrJquery('#lnr-location-button');
+    var locationButton = document.getElementById('lnr-location-button');
 
     // default user rides for all locations
     var rides = lnrConstants.rides;
@@ -207,7 +193,7 @@ var lnrHelper = {
     // and 'All' is selected
     else if (index === 0) {
       lnrHelper.renderBikesHTML(rides);
-      locationButton.html(lnrConstants.translate.allLocations.selected + '<div class="dropdown-caret" style="float: right"></div>');
+      locationButton.innerHTML = lnrConstants.translate.allLocations.selected + '<div class="dropdown-caret" style="float: right"></div>';
       return;
     }
 
@@ -226,7 +212,7 @@ var lnrHelper = {
       }
 
       // update the button text
-      locationButton.html(selectedCity + '<div class="dropdown-caret" style="float: right"></div>');
+      locationButton.innerHTML = selectedCity + '<div class="dropdown-caret" style="float: right"></div>';
 
       // render filtered bikes
       lnrHelper.renderBikesHTML(selectedRides);
@@ -240,7 +226,7 @@ var lnrHelper = {
   onSizeSelect: function (index) {
 
     // size button
-    var sizeButton = lnrJquery('#lnr-size-button');
+    var sizeButton = document.getElementById('lnr-size-button');
 
     // default user rides for all sizes
     var rides = lnrConstants.rides;
@@ -253,7 +239,8 @@ var lnrHelper = {
     // and 'All' is selected
     else if (index === 0) {
       lnrHelper.renderBikesHTML(rides);
-      sizeButton.html(lnrConstants.translate.allSizes.selected + '<div class="dropdown-caret" style="float: right"></div>');
+      // sizeButton.html(lnrConstants.translate.allSizes.selected + '<div class="dropdown-caret" style="float: right"></div>');
+      sizeButton.innerHTML = lnrConstants.translate.allSizes.selected + '<div class="dropdown-caret" style="float: right"></div>';
       return;
     }
 
@@ -272,10 +259,11 @@ var lnrHelper = {
       }
 
       // update the button text
-      sizeButton.html([
+      var element = [
         index > 0 ? (selectedSize + ' cm - ' + parseInt(selectedSize + 10) + ' cm') : selectedSize,
         '<div class="dropdown-caret" style="float: right"></div>'
-      ].join(''));
+      ].join('');
+      sizeButton.innerHTML = element;
 
       // render filtered bikes
       lnrHelper.renderBikesHTML(selectedRides);
@@ -296,11 +284,11 @@ var lnrHelper = {
     // is_demo_mode flag is provided from template
     // not for end user
     if (is_demo_mode === true) {
-      lnrConstants.user_id = lnrJquery('#user_demo_id').val();
-      lnrConstants.user_lang = lnrJquery('#user_demo_lang').val();
+      lnrConstants.user_id =  document.getElementById('user_demo_id').value;
+      lnrConstants.user_lang = document.getElementById('user_demo_lang').value;
     } else {
       lnrConstants.user_id = user_id;
-      if (user_lang != 'de' || user_lang != 'nl') {
+      if (user_lang !== 'de' && user_lang !== 'nl') {
         lnrConstants.user_lang = 'en';
       } else {
         lnrConstants.user_lang = user_lang;
@@ -309,31 +297,33 @@ var lnrHelper = {
 
     // set the environment: staging or production
     url = (lnrConstants.env === 'staging') ? lnrConstants.staging_users : lnrConstants.production_users;
-
-    // fetch the user and rides info
-    lnrJquery.get(url + lnrConstants.user_id, function (response) {
-      // grid for the bikes cards
-      lnrJquery('#listnride').html('');
-
-      // get cities information from the bikes
-      lnrConstants.cities = lnrHelper.getBikeCities(response.rides);
-
-      // get sizes information from the bikes
-      lnrConstants.sizes.available = lnrHelper.getBikeSizes(response.rides);
-
-      // save rides in lnrConstants
-      lnrConstants.rides = response.rides;
-
-      // render the locations selector
-      // only when user has at least 2  bikes
-      if (lnrConstants.rides && lnrConstants.rides.length > 1) {
-        var shouldRenderLocationSelector = lnrConstants.cities.length > 1;
-        lnrHelper.renderSelectors(shouldRenderLocationSelector);
+    // create new instance of xhr
+    var request = new XMLHttpRequest();
+    request.open('GET', url + lnrConstants.user_id, true);
+    request.onload = function () {
+      if (request.status >= 200 && request.status < 400) {
+        // json response from server 
+        var response = JSON.parse(request.responseText);
+        // grid for the bikes cards
+        document.getElementById('listnride').innerHTML = '';
+        // get cities information from the bikes
+        lnrConstants.cities = lnrHelper.getBikeCities(response.rides);
+        // get sizes information from the bikes
+        lnrConstants.sizes.available = lnrHelper.getBikeSizes(response.rides);
+        // save rides in lnrConstants
+        lnrConstants.rides = response.rides;
+        // render the locations selector
+        // only when user has at least 2  bikes
+        if (lnrConstants.rides && lnrConstants.rides.length > 1) {
+          var shouldRenderLocationSelector = lnrConstants.cities.length > 1;
+          lnrHelper.renderSelectors(shouldRenderLocationSelector);
+        }
+        // render bikes html
+        lnrHelper.renderBikesHTML(lnrConstants.rides);
       }
-
-      // render bikes html
-      lnrHelper.renderBikesHTML(lnrConstants.rides);
-    });
+    };
+    // send reuqest to server  
+    request.send();
   },
   /**
    * HTML of the bikes
@@ -343,15 +333,14 @@ var lnrHelper = {
   renderBikesHTML: function (rides) {
 
     // create grid for the
-    lnrJquery("#listnride").append(
-      '<div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid"></div>'
-    );
+    var lnr = document.getElementById('listnride');
+    lnr.innerHTML +='<div class="mdl-grid mdl-grid--no-spacing" id="lnr-grid"></div>';
 
     // grid selector
-    var grid = lnrJquery("#lnr-grid");
+    var grid = document.getElementById('lnr-grid');
 
     // clear gird template
-    grid.html('');
+    grid.innerHTML = '';
 
     var basicInfo = lnrHelper.getBikesBasicInfo();
     rides.forEach(function (ride) {
@@ -363,32 +352,34 @@ var lnrHelper = {
         imageUrl = ride.image_file_1.image_file_1.small.url,
         svgUrl = lnrConstants.svgUrlRoot + (category + '').slice(0, 1) + '.svg',
         rideDescription = ride.description.slice(0, 150).concat(' ...');
-      grid.append(
-        '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">' +
-        '<bike-card>' +
-        '<md-card class="lnr-bike-card _md">' +
-        '<a target="_blank" class="image-container lnr-links" title="' + ride.description + '" onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')">' +
-        '<img src="' + imageUrl + '"></img>' +
-        '<div class="after">' +
+      
+      var gridHTML = [
+        '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">',
+        '<bike-card>',
+        '<md-card class="lnr-bike-card _md">',
+        '<a target="_blank" class="image-container lnr-links" title="' + ride.description + '" onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')">',
+        '<img src="' + imageUrl + '"></img>',
+        '<div class="after">',
         '<span class="content"><span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>' +
-        '<button class="md-button">' + basicInfo.buttonText + '</button></span>' +
-        '</div></a>' +
-        '<md-card-title layout="row" class="layout-row">' +
-        '<md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true">' +
-        '<img src="' + svgUrl + '" height="48" width="48"></img></md-icon>' +
+        '<button class="md-button">' + basicInfo.buttonText + '</button></span>',
+        '</div></a>',
+        '<md-card-title layout="row" class="layout-row">',
+        '<md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true">',
+        '<img src="' + svgUrl + '" height="48" width="48"></img></md-icon>',
         '<md-card-title-text class="lnr-margin-left layout-align-space-around-start layout-column">' +
-        '<span class="md-subhead">' + brand + ', ' + categoryDesc + '</span>' +
+        '<span class="md-subhead">' + brand + ', ' + categoryDesc + '</span>',
         '<span>' + basicInfo.sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size + 10) + ' cm</span>' +
-        '</md-card-title-text>' +
-        '<div layout="column" class="layout-align-space-around-center layout-column">' +
-        '<span style="text-align: center">' + basicInfo.dayText + '</span>' +
-        '<span class="md-headline">' + price + '&euro;</span>' +
-        ' </div>' +
-        '</md-card-title>' +
-        '</md-card>' +
-        '</bike-card>' +
+        '</md-card-title-text>',
+        '<div layout="column" class="layout-align-space-around-center layout-column">',
+        '<span style="text-align: center">' + basicInfo.dayText + '</span>',
+        '<span class="md-headline">' + price + '&euro;</span>',
+        ' </div>',
+        '</md-card-title>',
+        '</md-card>',
+        '</bike-card>',
         '</div>'
-      );
+      ].join('');
+      grid.innerHTML += gridHTML;     
     });
   },
   /**
@@ -397,16 +388,16 @@ var lnrHelper = {
    * @returns {void}
    */
   renderSelectors: function (shouldRenderLocationSelector) {
-    var element = lnrJquery('#listnride');
+    var element = document.getElementById('listnride');
 
     // HTML for the selectors
     var selectors = lnrHelper.renderSelectorsHTML(shouldRenderLocationSelector);
 
     // clear element HTML
-    element.html('');
+    element.innerHTML = '';
 
     // render selectors HTML
-    element.append(selectors);
+    element.innerHTML += selectors;
 
     // set default values for selectors
     lnrHelper.setDefaultSelectorValues();
@@ -469,20 +460,24 @@ var lnrHelper = {
   setDefaultSelectorValues: function () {
 
     // location button
-    var locationButton = lnrJquery('#lnr-location-button');
-    var sizeButton = lnrJquery('#lnr-size-button');
-
+    var locationButton = document.getElementById('lnr-location-button');
+    // size button
+    var sizeButton = document.getElementById('lnr-size-button');
     // show default location
-    var default_location = lnrConstants.cities.length === 1 ? lnrConstants.cities[0] : lnrConstants.translate.allLocations.selected;
-    locationButton.html(default_location + '<div class="dropdown-caret" style="float: right"></div>');
-        
-    var default_size = 0;
-    if (lnrConstants.sizes.available > 1) {
-      default_size = lnrConstants.sizes.available.length === 1 ? lnrConstants.sizes.available[0] : lnrConstants.translate.allSizes.selected;
-      sizeButton.html(default_size + ' cm - ' + parseInt(default_size + 10) + ' cm <div class="dropdown-caret" style="float: right"></div>');
-    } else {
-      default_size = lnrConstants.sizes.available[0];
-      sizeButton.html(default_size + '<div class="dropdown-caret" style="float: right"></div>');
+    if (locationButton) {
+      var default_location = lnrConstants.cities.length === 1 ? lnrConstants.cities[0] : lnrConstants.translate.allLocations.selected;
+      // locationButton.html(default_location + '<div class="dropdown-caret" style="float: right"></div>');
+      locationButton.innerHTML = default_location + '<div class="dropdown-caret" style="float: right"></div>';
+    }
+    if (sizeButton) {
+      var default_size = 0;
+      if (lnrConstants.sizes.available > 1) {
+        default_size = lnrConstants.sizes.available.length === 1 ? lnrConstants.sizes.available[0] : lnrConstants.translate.allSizes.selected;
+        sizeButton.innerHTML = default_size + ' cm - ' + parseInt(default_size + 10) + ' cm <div class="dropdown-caret" style="float: right"></div>';
+      } else {
+        default_size = lnrConstants.sizes.available[0];
+        sizeButton.innerHTML = default_size + '<div class="dropdown-caret" style="float: right"></div>';
+      }
     }
   },
   /**

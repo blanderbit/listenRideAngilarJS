@@ -3,7 +3,7 @@
 angular.module('listings', []).component('listings', {
   templateUrl: 'app/modules/listings/listings.template.html',
   controllerAs: 'listings',
-  controller: ['$scope',
+  controller: [
     '$mdDialog',
     '$analytics',
     '$timeout',
@@ -15,39 +15,26 @@ angular.module('listings', []).component('listings', {
     '$mdMedia',
     'api',
     'accessControl',
-    function ListingsController($scope, $mdDialog, $analytics, $timeout, $mdToast, $filter, $translate, $state, $localStorage, $mdMedia, api, accessControl) {
+    function ListingsController($mdDialog, $analytics, $timeout, $mdToast, $filter, $translate, $state, $localStorage, $mdMedia, api, accessControl) {
       if (accessControl.requireLogin()) {
         return
       }
       var listings = this;
-
+      
       listings.$onInit = function () {
 
         listings.maxTiles = 12;
         listings.status = '';
         listings.isDuplicating = false;
 
+        if ($localStorage.listView === true) listings.listView = true;
         // fetch all bikes
         listings.get();
 
         listings.helper = {
-          
-          // local method to be used as duplicate dialog controller
-          DuplicateController: function () {
-            var duplicate = this;
-            duplicate.duplicate_number = 1;
-            // cancel the dialog
-            duplicate.cancelDialog = function () {
-              $mdDialog.cancel();
-            };
-            // close the dialog succesfully
-            duplicate.closeDialog = function () {
-              $mdDialog.hide(parseInt(duplicate.duplicate_number));
-            };
-          },
 
           // local method to be called on duplicate success
-          onDuplicateSuccess: function (bike, duplicate_number) {
+          duplicateHelper: function (bike, duplicate_number) {
             api.post('/rides/' + bike.id + '/duplicate', {
               "quantity": duplicate_number
             }).then(function (response) {
@@ -71,9 +58,13 @@ angular.module('listings', []).component('listings', {
 
           // local method containing logic for bike deletion
           deleteHelper: function (id) {
-            api.put("/rides/" + id, { "ride": { "active": "false" } }).then(
+            api.delete("/rides/" + id).then(
               function (response) {
-                listings.bikes = response.data;
+                _.remove(listings.mirror_bikes, function(n) {
+                  return n.id === response.data.id;
+                });
+                listings.bikes = listings.mirror_bikes;
+                if (listings.input) { listings.search() }
                 $mdToast.show(
                   $mdToast.simple()
                     .textContent($translate.instant('toasts.bike-deleted'))
@@ -91,27 +82,47 @@ angular.module('listings', []).component('listings', {
                 );
               }
             );
-          },
-
-          // local method to be used as delete controller
-          DeleteController: function (deleteHelper, bikeId) {
-            var deleteBikeDialog = this;
-            // cancel dialog
-            deleteBikeDialog.hide = function () {
-              $mdDialog.hide();
-            };
-            // delete a bike after confirmation
-            deleteBikeDialog.deleteBike = function () {
-              deleteHelper(bikeId);
-              $mdDialog.hide();
-            }
           }
         };
       };
-      
+
+      // local method to be used as duplicate dialog controller
+      var DuplicateController = function () {
+        var duplicate = this;
+        duplicate.duplicate_number = 1;
+        // cancel the dialog
+        duplicate.cancelDialog = function () {
+          $mdDialog.cancel();
+        };
+        // close the dialog succesfully
+        duplicate.closeDialog = function () {
+          $mdDialog.hide(parseInt(duplicate.duplicate_number));
+        };
+      };
+
+      // local method to be used as delete controller
+      var DeleteController = function (bikeId) {
+        var deleteBikeDialog = this;
+        // cancel dialog
+        deleteBikeDialog.hide = function () {
+          $mdDialog.hide();
+        };
+        // delete a bike after confirmation
+        deleteBikeDialog.deleteBike = function () {
+          listings.helper.deleteHelper(bikeId);
+          $mdDialog.hide();
+        }
+      };
+
       // search functionality in header of My Bikes (List View)
       listings.search = function () {
-        listings.bikes = $filter('filter')(listings.mirror_bikes, { $: listings.input });
+        listings.bikes = $filter('filter')(listings.mirror_bikes, filterFunction, { $: listings.input });
+      };
+
+      var filterFunction = function(bike) {
+        //TODO improve search by reducing extra params from backend
+        var val = listings.input.toLocaleLowerCase();
+        return bike.name.toLocaleLowerCase().indexOf(val) > -1 || bike.city.toLocaleLowerCase().indexOf(val) > -1 || bike.brand.toLocaleLowerCase().indexOf(val) > -1;
       };
 
       // Redirect to bike list
@@ -150,7 +161,7 @@ angular.module('listings', []).component('listings', {
       listings.duplicate = function (bike, event) {
         var duplicateConfig = {
           templateUrl: 'app/modules/listings/views/list-view.duplicate.template.html',
-          controller: listings.helper.DuplicateController,
+          controller: DuplicateController,
           controllerAs: 'duplicate',
           parent: angular.element(document.body),
           targetEvent: event,
@@ -161,7 +172,7 @@ angular.module('listings', []).component('listings', {
           fullscreen: true
         };
         $mdDialog.show(duplicateConfig).then(function (duplicate_number) {
-          listings.helper.onDuplicateSuccess(bike, duplicate_number);
+          listings.helper.duplicateHelper(bike, duplicate_number);
         }, function () {
         });
       };
@@ -170,7 +181,7 @@ angular.module('listings', []).component('listings', {
       // asks for confirmation
       listings.delete = function (id, event) {
         $mdDialog.show({
-          controller: listings.helper.DeleteController,
+          controller: DeleteController,
           controllerAs: 'deleteBikeDialog',
           templateUrl: 'app/modules/shared/listing-card/delete-bike-dialog.template.html',
           parent: angular.element(document.body),
@@ -179,7 +190,6 @@ angular.module('listings', []).component('listings', {
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,
           locals: {
-            deleteHelper: listings.helper.deleteHelper,
             bikeId: id
           }
         });
@@ -207,7 +217,11 @@ angular.module('listings', []).component('listings', {
           function (response) {
             listings.bikes = response.data;
             listings.mirror_bikes = response.data;
-            listings.listView = (listings.bikes.length >= listings.maxTiles) && $mdMedia('gt-sm');
+            if (listings.input) { listings.search() }
+            if (listings.listView === false) {
+              listings.listView = listings.bikes.length >= listings.maxTiles && $mdMedia('gt-sm');
+              $localStorage.listView = listings.listView;
+            }
           },
           function (error) {
           }
@@ -225,6 +239,11 @@ angular.module('listings', []).component('listings', {
         if (event && event.stopPropogation) event.stopPropogation();
         // sref
         $state.go('bike', { bikeId: id });
+      };
+
+      // save view mode in localstorage
+      listings.changeListingMode = function(mode) {
+          $localStorage.listView = mode;
       };
     }
   ]
