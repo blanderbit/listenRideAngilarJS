@@ -560,7 +560,12 @@
       "name": "Name",
       "description": "Beschreibung (min. 100 Zeichen)",
       "min-length-warning": "Minimum 100 Buchstabe",
-      "size": "Fahrergröße"
+      "size": "Fahrergröße",
+      "frame-size": "Frame size",
+      "bicycle-number": "Rad Nr.",
+      "frame-number": "Rahmennummer",
+      "custom-fields": "Additional fields",
+      "details": "Details"
     },
     "accessories": {
       "header": "Welche Zubehör kannst Du zu deinem Rad anbieten?",
