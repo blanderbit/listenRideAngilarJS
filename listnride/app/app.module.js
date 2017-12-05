@@ -113,7 +113,7 @@ angular.module('listnride', [
     });
 
     // use partial loader
-    $translatePartialLoaderProvider.addPart('default');
+    $translatePartialLoaderProvider.addPart(ENV.defaultTranslation);
     $translateProvider.useLoader('$translatePartialLoader', {
       urlTemplate: 'app/i18n/{part}/{lang}.json'
     });
@@ -125,7 +125,7 @@ angular.module('listnride', [
     var retrieveLocale = function () {
       // default and available languages
       var defaultLanguage = "en";
-      var availableLanguages = ["de", "en", "nl", "it"];
+      var availableLanguages = ["de", "en", "nl", "it", "es"];
       // host and domains
       var host = window.location.host;
       var domain = host.split(".");

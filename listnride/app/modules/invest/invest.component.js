@@ -3,11 +3,11 @@
 angular.module('invest',[]).component('invest', {
   templateUrl: 'app/modules/invest/invest.template.html',
   controllerAs: 'invest',
-  controller: ['$translatePartialLoader', '$translate', 'api',
-    function InvestController($tpl, $translate, api) {
+  controller: ['$translatePartialLoader', '$translate', 'api', 'ENV',
+    function InvestController($tpl, $translate, api, ENV) {
       
       var invest = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
       invest.submitted = false;
       invest.submitting = false;
       invest.values = [

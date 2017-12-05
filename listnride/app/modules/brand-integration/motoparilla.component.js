@@ -3,10 +3,10 @@
 angular.module('motoparilla-integration',[]).component('motoparilla', {
   templateUrl: 'app/modules/brand-integration/motoparilla.template.html',
   controllerAs: 'motoparilla',
-  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta',
-    function MotoparillaController($translate, $tpl, api, ngMeta) {
+  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta', 'ENV',
+    function MotoparillaController($translate, $tpl, api, ngMeta, ENV) {
       var motoparilla = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
       ngMeta.setTitle($translate.instant("brand-integration.motoparilla.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.motoparilla.meta-description"));
 

@@ -3,10 +3,10 @@
 angular.module('velosoph',[]).component('velosoph', {
   templateUrl: 'app/modules/events/velosoph/velosoph.template.html',
   controllerAs: 'velosoph',
-  controller: ['api', '$translatePartialLoader',
-    function Velosoph(api, $tpl) {
+  controller: ['api', '$translatePartialLoader', 'ENV',
+    function Velosoph(api, $tpl, ENV) {
       var velosoph = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
       velosoph.bikes = [];
 
       api.get('/rides?family=22').then(
