@@ -314,10 +314,6 @@ angular.module('list', ['ngLocale']).component('list', {
         }
       };
 
-      list.toggleDetails = function () {
-        list.show_custom_fields = list.show_custom_fields !== true;
-      };
-
       // go to next tab
       list.nextTab = function () {
         list.selectedIndex = list.selectedIndex + 1;
