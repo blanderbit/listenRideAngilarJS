@@ -68,12 +68,10 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
 
       // switch url based on language
       footer.switchLanguage = function (locale) {
-        // update the language
-        $translate.use(locale).then(function () {
-          // save in local storage
-          $localStorage.selectedLanguage = locale;
-          footer.switchDomain($localStorage.selectedLanguage);
-        });
+        // save language in local storage
+        // switch to correct language specific domain
+        $localStorage.selectedLanguage = locale;
+        footer.switchDomain($localStorage.selectedLanguage);
       };
 
       footer.onAppClick = function() {

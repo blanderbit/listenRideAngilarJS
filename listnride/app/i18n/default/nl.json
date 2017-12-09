@@ -808,6 +808,16 @@
       "community": "Wordt deel van de community",
       "earn-credit": "Ontvang listnride toegoed"
     },
+    "invite-dialog": {
+      "rider": {
+        "header": "Mooie fiets ervaring gehad?",
+        "subheader": "Zou je ons willen aanbevelen? Je ontvangt €10 tegoed, zodra je uitnodiging wordt aangenomen. Degene die je uitnodigt ontvangt ook €10 tegoed bij het aannemen van je uitnodiging. Een mooie Win-Win!"
+      },
+      "lister": {
+        "header": "Dat verliep gemakkelijk, toch?",
+        "subheader": "Zou je ons aan je vrienden willen aanbevelen? Je ontvangt 10€ tegoed, zodra je uitnodiging wordt aangenomen. Degene die je uitnodigt ontvangt ook €10 tegoed bij het aannemen van je uitnodiging. Een mooie Win-Win!"
+      }
+    },
     "invite-form": {
       "header": "Deel jouw persoonlijke link",
       "subheader": "Stuur deze link aan je vrienden en ontvang 10€ tegoed na een eerste aktiviteit.",

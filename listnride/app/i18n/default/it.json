@@ -844,6 +844,16 @@
       "community": "Aiuta a far crescere la comunità",
       "earn-credit": "Guadagna credito listnride"
     },
+    "invite-dialog": {
+      "rider": {
+        "header": "Ti è piaciuto il viaggio?",
+        "subheader": "Raccomanda ai tuoi amici di elencare! Aggiungiamo € 10 per la sua prima prenotazione! E se il tuo amico ne fa uso, c'è un altro credito di € 10 per te. Un bel Win-Win!"
+      },
+      "lister": {
+        "header": "E 'stato facile, giusto?",
+        "subheader": "ci raccomanderesti ai tuoi amici? Aggiungeremo € 10 per la sua prima prenotazione! E se il tuo amico ne fa uso, c'è un altro credito di 10 € per il tuo prossimo noleggio. Un bel Win-Win!"
+      }
+    },
     "invite-form": {
       "header": "Condividi il tuo link personale",
       "subheader": "Invia questo link ai tuoi amici e potrai attivare il buono. Sarai ricompensato con un credito di 10 € non appena registreranno o noleggeranno una bicicletta.",
