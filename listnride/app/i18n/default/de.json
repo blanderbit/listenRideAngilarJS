@@ -818,6 +818,16 @@
       "copy": "Kopieren",
       "copied": "Kopiert!"
     },
+    "invite-dialog": {
+      "rider": {
+        "header": "Hattest Du eine schöne Fahrt? Teile deine Fahrradleidenschaft!",
+        "subheader": "Empfiehl deinen Freunden listnride! Wir legen 10€ für die erste Buchung dazu! Und wenn das klappt, gibt es auch für dich 10€ Guthaben."
+      },
+      "lister": {
+        "header": "Das war doch einfach, oder?",
+        "subheader": "Magst du deinen Freunden listnride empfehlen? Wir legen 10€ für die erste Buchung dazu! Und wenn das klappt, gibt es auch für dich 10€ Guthaben."
+      }
+    },
     "invitations": {
       "header": "Du hast {{credit}}€ durch deine Freunde erhalten",
       "status": {
