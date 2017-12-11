@@ -40,6 +40,12 @@
       });
 
       $stateProvider.state({
+        name: 'businessSignup',
+        url: '/business-signup',
+        template: '<home></home>'
+      });
+
+      $stateProvider.state({
         name: 'bike',
         url: '/bikes/{bikeId:int}',
         template: '<bike></bike>'
