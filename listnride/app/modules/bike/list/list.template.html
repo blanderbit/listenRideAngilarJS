@@ -776,27 +776,19 @@
             </div>
             <!-- Navigation Buttons -->
             <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
-              <div flex="50" layout="row">
-                <div flex="50">
-                  <md-button class="md-lined"
-                             ng-click="list.previousTab()">
-                    {{ 'list.back' | translate }}
-                  </md-button>
-                </div>
-              </div>
-              <div flex="50">
-                <md-button ng-if="list.isListMode"
-                           class="md-raised md-primary"
-                           ng-disabled="!list.isPricingValid() || list.submitDisabled"
-                           ng-click="list.onFormSubmit()">
-                  {{ 'list.list-bike' | translate }}
-                </md-button>
-              </div>
+              <md-button class="md-lined" ng-click="list.previousTab()">
+                {{ 'list.back' | translate }}
+              </md-button>
+              <md-button ng-if="list.isListMode"
+                         class="md-raised md-primary"
+                         ng-disabled="!list.isPricingValid() || list.submitDisabled"
+                         ng-click="list.onFormSubmit()">
+                {{ 'list.list-bike' | translate }}
+              </md-button>
             </div>
           </md-content>
         </md-tab>
         <!-- end pricing -->
-
       </md-tabs>
     </form>
   </div>
