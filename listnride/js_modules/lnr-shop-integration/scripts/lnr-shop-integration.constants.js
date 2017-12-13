@@ -1,6 +1,6 @@
 var lnrConstants = {
   env: 'production', // options: staging, production
-  
+
   // shop solution for staging and production
   staging_shop_url: "https://listnride-staging.herokuapp.com/v2/shop_solutions",
   production_shop_url: "https://api.listnride.com/v2/shop_solutions",
@@ -17,17 +17,17 @@ var lnrConstants = {
   introText: {
     // english intro text
     en: 'The bikes below are currently for you available to rent. ' +
-    'You can simply click on the bike you&rsquo;d like to rent and book it directly online. ' +
-    'We will have the bike awaiting your pick-up!',
+      'You can simply click on the bike you&rsquo;d like to rent and book it directly online. ' +
+      'We will have the bike awaiting your pick-up!',
     // deutsch intro text
     //
     de: 'Diese Fahrr&auml;der bieten wir aktuell zum Vermieten an. ' +
-    'Durch klicken auf das gew&uuml;nschte Fahrrad k&ouml;nnen Sie einfach das Rad direkt online buchen. ' +
-    'Das Fahrrad ist somit f&uuml;r Sie reserviert',
+      'Durch klicken auf das gew&uuml;nschte Fahrrad k&ouml;nnen Sie einfach das Rad direkt online buchen. ' +
+      'Das Fahrrad ist somit f&uuml;r Sie reserviert',
     // dutch intro text
     nl: 'De onderstaande fietsen bieden wij momenteel te huur aan. ' +
-    'U kunt de fietsen eenvoudig online boeken, door op de gewenst fiets te klikken. ' +
-    'De fiets is na de boeking voor uw gereserveerd. '
+      'U kunt de fietsen eenvoudig online boeken, door op de gewenst fiets te klikken. ' +
+      'De fiets is na de boeking voor uw gereserveerd. '
   },
 
   // translation object
@@ -170,10 +170,16 @@ var lnrConstants = {
   // all sizes of the rides
   sizes: {
     default: [155, 165, 175, 185, 195],
-    available: [], // gets populated from rides api 
+    available: {}, // gets populated from rides api for each user
     unshifts: 0
   },
 
+  // initialize rides, id and language for all users
+  rides: {},
+  user_id: {},
+  user_lang: {},
+
+  // style for disabling a dropdown element
   disabledButtonCss: {
     "pointer-events": "none",
     "color": "#c6c6c6"
