@@ -13,6 +13,8 @@ var lnrHelper = {
     css_lnr.rel = "stylesheet";
     var header = document.getElementsByTagName("head")[0];
     header.appendChild(css_lnr);
+
+    lnrConstants.rides = {};
   },
   /**
    * runs once the document is loaded
@@ -190,7 +192,7 @@ var lnrHelper = {
     var locationButton = document.getElementById(user_id + '-lnr-location-button');
 
     // default user rides for all locations
-    var rides = lnrConstants.rides;
+    var rides = lnrConstants.rides[user_id];
 
     // if there is only single city
     // there is no need for selection
@@ -233,12 +235,13 @@ var lnrHelper = {
    */
   onSizeSelect: function (index, user_id) {
 
+    console.log("user id: ", user_id);
     // size button
     var sizeButtonId = user_id + '-lnr-size-button';
     var sizeButton = document.getElementById(sizeButtonId);
 
     // default user rides for all sizes
-    var rides = lnrConstants.rides;
+    var rides = lnrConstants.rides[user_id];
 
     // if there is only single available size
     // there is no need for selection
@@ -324,15 +327,15 @@ var lnrHelper = {
         // get sizes information from the bikes
         lnrConstants.sizes.available = lnrHelper.getBikeSizes(response.rides);
         // save rides in lnrConstants
-        lnrConstants.rides = response.rides;
+        lnrConstants.rides[user_id] = response.rides;
         // render the locations selector
         // only when user has at least 2  bikes
-        if (lnrConstants.rides && lnrConstants.rides.length > 1) {
+        if (lnrConstants.rides[user_id] && lnrConstants.rides[user_id].length > 1) {
           var shouldRenderLocationSelector = lnrConstants.cities.length > 1;
           lnrHelper.renderSelectors(user_id, shouldRenderLocationSelector);
         }
         // render bikes html
-        lnrHelper.renderBikesHTML(user_id, lnrConstants.rides);
+        lnrHelper.renderBikesHTML(user_id, lnrConstants.rides[user_id]);
       }
     };
     // send request to server
@@ -340,7 +343,7 @@ var lnrHelper = {
   },
   /**
    * HTML of the bikes
-   * @param {String} id user id
+   * @param {String} user_id user id
    * @param {Object} rides bikes of the user. either city specific or all
    * @returns {void}
    */
