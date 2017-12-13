@@ -978,24 +978,24 @@
         }
       });
 
-      $stateProvider.state({
-        name: 'cities-munich',
-        url: '/munich',
-        templateUrl: 'app/modules/static/cities-munich.template.html',
-        controller: 'StaticController',
-        resolve: {
-            data: function ($translate, ngMeta) {
-                $translate(["meta.cities.munich.meta-title", "meta.cities.munich.meta-description"])
-                    .then(function (translations) {
-                        ngMeta.setTitle(translations["meta.cities.munich.meta-title"]);
-                        ngMeta.setTag("description", translations["meta.cities.munich.meta-description"]);
-                    })
-            }
-        },
-        meta: {
-            disableUpdate: true
-        }
-      });
+      // $stateProvider.state({
+      //   name: 'cities-munich',
+      //   url: '/munich',
+      //   templateUrl: 'app/modules/static/cities-munich.template.html',
+      //   controller: 'StaticController',
+      //   resolve: {
+      //       data: function ($translate, ngMeta) {
+      //           $translate(["meta.cities.munich.meta-title", "meta.cities.munich.meta-description"])
+      //               .then(function (translations) {
+      //                   ngMeta.setTitle(translations["meta.cities.munich.meta-title"]);
+      //                   ngMeta.setTag("description", translations["meta.cities.munich.meta-description"]);
+      //               })
+      //       }
+      //   },
+      //   meta: {
+      //       disableUpdate: true
+      //   }
+      // });
 
       $stateProvider.state({
         name: 'cities-amsterdam',
@@ -1079,10 +1079,16 @@
       });
 
       $stateProvider.state({
-        name: 'seo-landing',
-        url: '/{pageTitle: string}',
-        template: '<seo-landing></seo-landing>'
+        name: 'city-landing',
+        url: '/munich',
+        template: '<city-landing></city-landing>'
       });
+
+      // $stateProvider.state({
+      //   name: 'seo-landing',
+      //   url: '/{pageTitle: string}',
+      //   template: '<seo-landing></seo-landing>'
+      // });
 
       $urlRouterProvider.otherwise(function ($injector) {
         var state = $injector.get('$state');

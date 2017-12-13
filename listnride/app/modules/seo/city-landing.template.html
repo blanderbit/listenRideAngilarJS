@@ -1,0 +1,127 @@
+ <md-content class="single-column" ng-hide="cityLanding.loading"> 
+  <div id="hero-shot-small" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/seo/berlin-ebikes.jpg'); background-position: 50% 20%;" layout="row" layout-align="center center">
+    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'seo.header' | translate }} {{ cityLanding.data.city }}</h1>
+    </div>
+  </div>
+  <br>
+  <div class="content section" layout-padding>
+    <div layout-xs="column" layout="row" layout-wrap layout-padding>
+      <bike-card ng-repeat="bike in cityLanding.data.bikes" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+      </bike-card>
+    </div>
+  </div>
+
+  <div class="content section" layout-padding layout>
+    <div flex="50">
+      <p class="md-headline">{{ cityLanding.data.texts.main.title }}</p>
+      <p>{{ cityLanding.data.texts.main.description }}</p>
+    </div>
+    <div flex="50">
+      <p class="md-headline">Rent category bikes in {{ cityLanding.data.city }}</p>
+      <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="2" md-cols-gt-sm="3" md-gutter="16px" md-row-height="1.5:1">
+        <md-grid-tile class="tile tile-berlin">
+          <a ui-sref="cities-berlin" layout-padding layout="column" layout-align="center  center">
+            <h3 class="md-title">{{ 'shared.berlin' | translate }}</h3>
+          </a>
+        </md-grid-tile>
+  
+        <md-grid-tile class="tile tile-munich">
+          <a ui-sref="cities-munich" target="_blank" layout-padding layout="column"   layout-align="center center">
+            <h3 class="md-title">{{ 'shared.munich' | translate }}</h3>
+          </a>
+        </md-grid-tile>
+  
+        <md-grid-tile class="tile tile-amsterdam">
+          <a ui-sref="cities-amsterdam" layout-padding layout="column" layout-align="center   center">
+            <h3 class="md-title">{{ 'shared.amsterdam' | translate }}</h3>
+          </a>
+        </md-grid-tile>
+  
+        <md-grid-tile class="tile tile-vienna">
+          <a ui-sref="cities-vienna" layout-padding layout="column" layout-align="center  center">
+            <h3 class="md-title">{{ 'shared.vienna' | translate }}</h3>
+          </a>
+        </md-grid-tile>
+
+        <md-grid-tile class="tile tile-vienna">
+          <a ui-sref="cities-vienna" layout-padding layout="column" layout-align="center  center">
+            <h3 class="md-title">{{ 'shared.vienna' | translate }}</h3>
+          </a>
+        </md-grid-tile>
+
+        <md-grid-tile class="tile tile-vienna">
+          <a ui-sref="cities-vienna" layout-padding layout="column" layout-align="center  center">
+            <h3 class="md-title">{{ 'shared.vienna' | translate }}</h3>
+          </a>
+        </md-grid-tile>
+      </md-grid-list>
+    </div>
+    <!-- <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline">{{ cityLanding.data.texts.more.title }}</h2>
+      <p class="md-subhead">{{ cityLanding.data.texts.more.description }}</p>
+    </div>
+
+    <div layout-xs="column" layout="row" layout-wrap layout-padding>
+      <bike-card ng-repeat="bike in cityLanding.bikes.more" bike="bike" seo="true" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+      </bike-card>
+    </div> -->
+  </div>
+
+  <div class="content section" layout-padding>
+    <md-divider></md-divider>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline" ng-bind-html="cityLanding.data.texts.selection.title"></h2>
+      <p class="md-body-1">{{ cityLanding.data.texts.selection.description }}</p>
+    </div>
+    <br>
+    <md-divider></md-divider>
+  </div>
+
+  <div class="content section" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline">{{ cityLanding.data.texts.related.title }}</h2>
+      <p class="md-subhead">{{ cityLanding.data.texts.related.title }}</p>
+    </div>
+
+    <div layout-xs="column" layout="row" layout-wrap layout-padding>
+      <bike-card ng-repeat="bike in cityLanding.bikes.related" seo="true" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+      </bike-card>
+    </div>
+  </div>
+
+  <div id="featuredCities" class="content section" layout-align="start center" layout-padding layout-margin>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline">{{ 'seo.cities-title' | translate }}</h2>
+    </div>
+    
+    <md-grid-list layout-padding id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="2" md-cols-gt-sm="4" md-gutter="16px" md-row-height="1.5:1">
+      <md-grid-tile class="tile tile-berlin">
+        <a ui-sref="search({location: 'Berlin'})" layout-padding layout="column" layout-align="center center">
+          <h3 class="md-title">Berlin</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile tile-munich">
+        <a ui-sref="search({location: 'Munich'})" target="_blank" layout-padding layout="column" layout-align="center center">
+          <h3 class="md-title">Munich</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile tile-amsterdam">
+        <a ui-sref="search({location: 'Amsterdam'})" layout-padding layout="column" layout-align="center center">
+          <h3 class="md-title">Amsterdam</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile tile-vienna">
+        <a ui-sref="search({location: 'Vienna'})" layout-padding layout="column" layout-align="center center">
+          <h3 class="md-title">Vienna</h3>
+        </a>
+      </md-grid-tile>
+    </md-grid-list>
+  </div>
+
+  <br><br><br><br>
+  <footer></footer>
+</md-content>
