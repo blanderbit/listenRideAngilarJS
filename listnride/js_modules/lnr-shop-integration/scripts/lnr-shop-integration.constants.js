@@ -36,13 +36,13 @@ var lnrConstants = {
       "en": 'All locations',
       "de": 'Alle Standorte',
       "nl": 'Alle locaties',
-      "selected": ''
+      "selected": {}
     },
     allSizes: {
       "en": 'All sizes',
       "de": 'Alle Gr&ouml;&beta;en',
       "nl": 'Alle maten',
-      "selected": ''
+      "selected": {}
     }
   },
 

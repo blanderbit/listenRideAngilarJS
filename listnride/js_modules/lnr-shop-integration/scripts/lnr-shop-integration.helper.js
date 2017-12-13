@@ -14,7 +14,10 @@ var lnrHelper = {
     var header = document.getElementsByTagName("head")[0];
     header.appendChild(css_lnr);
 
+    // initialize rides, id and language for all users
     lnrConstants.rides = {};
+    lnrConstants.user_id = {};
+    lnrConstants.user_lang = {};
   },
   /**
    * runs once the document is loaded
@@ -31,16 +34,23 @@ var lnrHelper = {
       if (children[loop].dataset.user) {
         var user_id = children[loop].dataset.user;
         var user_lang = children[loop].dataset.lang;
+        var selected_location = '', selected_size = '';
+
         if ("de" === user_lang) {
-          lnrConstants.translate.allLocations.selected = lnrConstants.translate.allLocations.de;
-          lnrConstants.translate.allSizes.selected = lnrConstants.translate.allSizes.de;
+          selected_location = lnrConstants.translate.allLocations.de;
+          selected_size = lnrConstants.translate.allSizes.de;
         } else if ('nl' === user_lang) {
-          lnrConstants.translate.allLocations.selected = lnrConstants.translate.allLocations.nl;
-          lnrConstants.translate.allSizes.selected = lnrConstants.translate.allSizes.nl;
+          selected_location = lnrConstants.translate.allLocations.nl;
+          selected_size = lnrConstants.translate.allSizes.nl;
         } else {
-          lnrConstants.translate.allLocations.selected = lnrConstants.translate.allLocations.en;
-          lnrConstants.translate.allSizes.selected = lnrConstants.translate.allSizes.en;
+          selected_location = lnrConstants.translate.allLocations.en;
+          selected_size = lnrConstants.translate.allSizes.en;
         }
+
+        // update location and size for each user
+        lnrConstants.translate.allLocations.selected[user_id] = selected_location;
+        lnrConstants.translate.allSizes.selected[user_id] = selected_size;
+
         // render the bikes for the user
         lnrHelper.renderBikes(user_id, user_lang, false);
       }
@@ -139,11 +149,11 @@ var lnrHelper = {
    * @param {Number} categoryId id of the category
    * @returns {String} category name
    */
-  categoryFilter: function (categoryId) {
+  categoryFilter: function (user_id, categoryId) {
     // select category based on the user language
     var selectedCategory = "";
-    if ('en' === lnrConstants.user_lang) selectedCategory = lnrConstants.subCategory.en;
-    else if ('nl' === lnrConstants.user_lang) selectedCategory = lnrConstants.subCategory.nl;
+    if ('en' === lnrConstants.user_lang[user_id]) selectedCategory = lnrConstants.subCategory.en;
+    else if ('nl' === lnrConstants.user_lang[user_id]) selectedCategory = lnrConstants.subCategory.nl;
     else selectedCategory = lnrConstants.subCategory.de;
     // select sub category based on the user language
     switch (categoryId) {
@@ -202,7 +212,7 @@ var lnrHelper = {
     // and 'All' is selected
     else if (index === 0) {
       lnrHelper.renderBikesHTML(user_id, rides);
-      locationButton.innerHTML = lnrConstants.translate.allLocations.selected + '<div class="dropdown-caret" style="float: right"></div>';
+      locationButton.innerHTML = lnrConstants.translate.allLocations.selected[user_id] + '<div class="dropdown-caret" style="float: right"></div>';
       return;
     }
 
@@ -234,8 +244,7 @@ var lnrHelper = {
    * @returns {void}
    */
   onSizeSelect: function (index, user_id) {
-
-    console.log("user id: ", user_id);
+    
     // size button
     var sizeButtonId = user_id + '-lnr-size-button';
     var sizeButton = document.getElementById(sizeButtonId);
@@ -251,7 +260,7 @@ var lnrHelper = {
     // and 'All' is selected
     else if (index === 0) {
       lnrHelper.renderBikesHTML(user_id, rides);
-      sizeButton.innerHTML = lnrConstants.translate.allSizes.selected + '<div class="dropdown-caret" style="float: right"></div>';
+      sizeButton.innerHTML = lnrConstants.translate.allSizes.selected[user_id] + '<div class="dropdown-caret" style="float: right"></div>';
       return;
     }
 
@@ -288,14 +297,14 @@ var lnrHelper = {
    */
   getIdAndLanguage: function (user_id, user_lang, is_demo_mode) {
     if (is_demo_mode === true) {
-      lnrConstants.user_id = document.getElementById('user_demo_id').value;
-      lnrConstants.user_lang = document.getElementById('user_demo_lang').value;
+      lnrConstants.user_id[user_id] = document.getElementById('user_demo_id').value;
+      lnrConstants.user_lang[user_id] = document.getElementById('user_demo_lang').value;
     } else {
-      lnrConstants.user_id = user_id;
+      lnrConstants.user_id[user_id] = user_id;
       if (user_lang !== 'de' && user_lang !== 'nl') {
-        lnrConstants.user_lang = 'en';
+        lnrConstants.user_lang[user_id] = 'en';
       } else {
-        lnrConstants.user_lang = user_lang;
+        lnrConstants.user_lang[user_id] = user_lang;
       }
     }
   },
@@ -313,7 +322,7 @@ var lnrHelper = {
     var url = (lnrConstants.env === 'staging') ? lnrConstants.staging_users : lnrConstants.production_users;
     // create new instance of xhr
     var request = new XMLHttpRequest();
-    request.open('GET', url + lnrConstants.user_id, true);
+    request.open('GET', url + lnrConstants.user_id[user_id], true);
     request.onload = function () {
       if (request.status >= 200 && request.status < 400) {
         // json response from server 
@@ -323,9 +332,9 @@ var lnrHelper = {
         element.innerHTML = '';
         element.id = user_id;
         // get cities information from the bikes
-        lnrConstants.cities = lnrHelper.getBikeCities(response.rides);
+        lnrConstants.cities = lnrHelper.getBikeCities(user_id, response.rides);
         // get sizes information from the bikes
-        lnrConstants.sizes.available = lnrHelper.getBikeSizes(response.rides);
+        lnrConstants.sizes.available = lnrHelper.getBikeSizes(user_id, response.rides);
         // save rides in lnrConstants
         lnrConstants.rides[user_id] = response.rides;
         // render the locations selector
@@ -360,17 +369,17 @@ var lnrHelper = {
     // clear gird template
     grid.innerHTML = '';
 
-    var basicInfo = lnrHelper.getBikesBasicInfo();
+    var basicInfo = lnrHelper.getBikesBasicInfo(user_id);
     rides.forEach(function (ride) {
       var brand = ride.brand,
         category = ride.category,
         rideName = ride.name,
-        categoryDesc = lnrHelper.categoryFilter(category),
+        categoryDesc = lnrHelper.categoryFilter(user_id, category),
         price = parseInt(ride.price_from),
         imageUrl = ride.image_file_1.image_file_1.small.url,
         svgUrl = lnrConstants.svgUrlRoot + (category + '').slice(0, 1) + '.svg',
         rideDescription = ride.description.slice(0, 150).concat(' ...');
-      
+
       var gridHTML = [
         '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">',
         '<bike-card>',
@@ -397,20 +406,20 @@ var lnrHelper = {
         '</bike-card>',
         '</div>'
       ].join('');
-      grid.innerHTML += gridHTML;     
+      grid.innerHTML += gridHTML;
     });
   },
   /**
    * renders the location and size selectors
-   * @param{String} id user id
+   * @param{String} user_id user id
    * @param{Boolean} shouldRenderLocationSelector bool based on # of locations
    * @returns {void}
    */
-  renderSelectors: function (id, shouldRenderLocationSelector) {
-    var element = document.getElementById(id);
+  renderSelectors: function (user_id, shouldRenderLocationSelector) {
+    var element = document.getElementById(user_id);
 
     // HTML for the selectors
-    var selectors = lnrHelper.renderSelectorsHTML(id, shouldRenderLocationSelector);
+    var selectors = lnrHelper.renderSelectorsHTML(user_id, shouldRenderLocationSelector);
 
     // clear element HTML
     element.innerHTML = '';
@@ -419,7 +428,7 @@ var lnrHelper = {
     element.innerHTML += selectors;
 
     // set default values for selectors
-    lnrHelper.setDefaultSelectorValues(id);
+    lnrHelper.setDefaultSelectorValues(user_id);
 
     // close location dropdown on window click
     window.onclick = lnrHelper.closeDropDown;
@@ -457,7 +466,7 @@ var lnrHelper = {
       'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button"></button>',
       '<div id="' + id + '-lnr-location-dropdown" class="dropdown-content" style="float: right"></div>',
       '</div>',
-      '</div>',
+      '</div>'
     ].join("");
 
     // close mdl grid
@@ -475,25 +484,25 @@ var lnrHelper = {
   },
 /**
  * set the default values for location and size selectors
- * @param {String} id user id
+ * @param {String} user_id user id
  * @returns {void}
  */
-  setDefaultSelectorValues: function (id) {
+  setDefaultSelectorValues: function (user_id) {
 
     // location button
-    var locationButton = document.getElementById(id + '-lnr-location-button');
+    var locationButton = document.getElementById(user_id + '-lnr-location-button');
     // size button
-    var sizeButton = document.getElementById(id + '-lnr-size-button');
+    var sizeButton = document.getElementById(user_id + '-lnr-size-button');
     // show default location
     if (locationButton) {
-      var default_location = lnrConstants.cities.length === 1 ? lnrConstants.cities[0] : lnrConstants.translate.allLocations.selected;
+      var default_location = lnrConstants.cities.length === 1 ? lnrConstants.cities[0] : lnrConstants.translate.allLocations.selected[user_id];
       // locationButton.html(default_location + '<div class="dropdown-caret" style="float: right"></div>');
       locationButton.innerHTML = default_location + '<div class="dropdown-caret" style="float: right"></div>';
     }
     if (sizeButton) {
       var default_size = 0;
       if (lnrConstants.sizes.available > 1) {
-        default_size = lnrConstants.sizes.available.length === 1 ? lnrConstants.sizes.available[0] : lnrConstants.translate.allSizes.selected;
+        default_size = lnrConstants.sizes.available.length === 1 ? lnrConstants.sizes.available[0] : lnrConstants.translate.allSizes.selected[user_id];
         sizeButton.innerHTML = default_size + ' cm - ' + parseInt(default_size + 10) + ' cm <div class="dropdown-caret" style="float: right"></div>';
       } else {
         default_size = lnrConstants.sizes.available[0];
@@ -504,15 +513,16 @@ var lnrHelper = {
   /**
    * get the misc language dependent bike info
    * includes day text, size text, button text
+   * @param {String} user_id user id
    * @returns {void}
    */
-  getBikesBasicInfo: function () {
+  getBikesBasicInfo: function (user_id) {
     var basicInfo = {};
-    if ('en' === lnrConstants.user_lang) {
+    if ('en' === lnrConstants.user_lang[user_id]) {
       basicInfo.dayText = 'from';
       basicInfo.sizeText = 'For';
       basicInfo.buttonText = 'Rent this Bike';
-    } else if ('nl' === lnrConstants.user_lang) {
+    } else if ('nl' === lnrConstants.user_lang[user_id]) {
       basicInfo.dayText = 'van';
       basicInfo.sizeText = 'Voor';
       basicInfo.buttonText = 'Huur deze fiets';
@@ -569,10 +579,11 @@ var lnrHelper = {
   },
   /**
    * get the unique cities from the user bikes
+   * @param {String} user_id user id
    * @param {Object} rides bikes of the users
    * @returns {Object} cities List of the unique cities
    */
-  getBikeCities: function (rides) {
+  getBikeCities: function (user_id, rides) {
 
     // list of cities for a given user's bikes
     var cities = [];
@@ -587,16 +598,17 @@ var lnrHelper = {
 
     // add option as All in the dropdown menu
     // only when more than 1 cities are present
-    if (cities.length > 1) cities.unshift(lnrConstants.translate.allLocations.selected);
+    if (cities.length > 1) cities.unshift(lnrConstants.translate.allLocations.selected[user_id]);
 
     return cities;
   },
   /**
    * get the unique sizes from the user bikes
+   * @param {String} user_id user id
    * @param {Object} rides bikes of the users
    * @returns {Array} sizes List of the unique sizes
    */
-  getBikeSizes: function (rides) {
+  getBikeSizes: function (user_id, rides) {
 
     // list of sizes for a given user's bikes
     var sizes = [];
@@ -612,10 +624,10 @@ var lnrHelper = {
     // add option as All in the dropdown menu
     // only when more than 1 sizes are present
     if (sizes.length > 1) {
-      sizes.unshift(lnrConstants.translate.allSizes.selected);
+      sizes.unshift(lnrConstants.translate.allSizes.selected[user_id]);
       // add All option only once
       if (lnrConstants.sizes.unshifts < 1) {
-        lnrConstants.sizes.default.unshift(lnrConstants.translate.allSizes.selected);
+        lnrConstants.sizes.default.unshift(lnrConstants.translate.allSizes.selected[user_id]);
         lnrConstants.sizes.unshifts+=1;
       }
     }
