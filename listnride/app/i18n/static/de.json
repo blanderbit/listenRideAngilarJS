@@ -754,6 +754,8 @@
     "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform."
   },
   "seo": {
-    "cities-title": "Du planst zu reisen? Schau dir mehr Städte an:"
+    "cities-title": "Du planst zu reisen? Schau dir mehr Städte an:",
+    "header": "Miete Räder in",
+    "bike-shops-in": "Fahrradläden in"
   }
 }

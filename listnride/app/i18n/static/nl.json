@@ -751,6 +751,8 @@
     "meta-description": "Het privacybeleid van de Bike-Sharing-Community listnride is van toepassing bij het gebruik van het platform."
   },
   "seo": {
-    "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden"
+    "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden",
+    "header": "Rent Bikes in",
+    "bike-shops-in": "Bike Shops in"
   }
 }
