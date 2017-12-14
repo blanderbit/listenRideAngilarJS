@@ -405,7 +405,10 @@
       "frame-size": "Frame size",
       "bicycle-number": "Fiets Nr.",
       "frame-number": "Rasternummer",
-      "details": "Details"
+      "details": "Details",
+      "frame_size": "Frame size",
+      "bicycle_number": "Bicycle number",
+      "frame_number": "Frame number"
     },
     "accessories": {
       "header": "Welke accessoires bied je aan?",

@@ -3,8 +3,8 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$mdDialog', '$mdMedia', '$translate', '$filter', '$state', 'ngMeta', 'price',
-    function BikeController(api, $stateParams, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price) {
+  controller: ['api', '$stateParams', '$localStorage', '$mdDialog', '$mdMedia', '$translate', '$filter', '$state', 'ngMeta', 'price',
+    function BikeController(api, $stateParams, $localStorage, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price) {
       var bike = this;
 
       bike.mapOptions = {
@@ -29,15 +29,14 @@ angular.module('bike',[]).component('bike', {
         function(response) {
           bike.showAll = false;
           bike.data = response.data;
+          bike.owner = bike.data.user.id === $localStorage.userId;
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
           $translate($filter('category')(bike.data.category)).then(
             function (translation) {
               bike.category = translation;
-              console.log(bike.category);
             }
           );
-          console.log(bike.category);
 
           var metaData = {
             name: bike.data.name,
