@@ -55,6 +55,7 @@ angular.module('listnride', [
   'capeArgus',
   'businessCommunity',
   'moeveIntegration',
+  'hamburgTriathlon',
   /* external modules */
   'ngAnimate',
   'ngMaterial',
