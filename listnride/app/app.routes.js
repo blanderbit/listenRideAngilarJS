@@ -959,24 +959,24 @@
         template: '<user></user>'
       });
 
-      $stateProvider.state({
-        name: 'cities-berlin',
-        url: '/berlin',
-        templateUrl: 'app/modules/static/cities-berlin.template.html',
-        controller: 'StaticController',
-        resolve: {
-            data: function ($translate, ngMeta) {
-                $translate(["meta.cities.berlin.meta-title", "meta.cities.berlin.meta-description"])
-                    .then(function (translations) {
-                        ngMeta.setTitle(translations["meta.cities.berlin.meta-title"]);
-                        ngMeta.setTag("description", translations["meta.cities.berlin.meta-description"]);
-                    })
-            }
-        },
-        meta: {
-            disableUpdate: true
-        }
-      });
+      // $stateProvider.state({
+      //   name: 'cities-berlin',
+      //   url: '/berlin',
+      //   templateUrl: 'app/modules/static/cities-berlin.template.html',
+      //   controller: 'StaticController',
+      //   resolve: {
+      //       data: function ($translate, ngMeta) {
+      //           $translate(["meta.cities.berlin.meta-title", "meta.cities.berlin.meta-description"])
+      //               .then(function (translations) {
+      //                   ngMeta.setTitle(translations["meta.cities.berlin.meta-title"]);
+      //                   ngMeta.setTag("description", translations["meta.cities.berlin.meta-description"]);
+      //               })
+      //       }
+      //   },
+      //   meta: {
+      //       disableUpdate: true
+      //   }
+      // });
 
       // $stateProvider.state({
       //   name: 'cities-munich',
@@ -1080,7 +1080,7 @@
 
       $stateProvider.state({
         name: 'city-landing',
-        url: '/munich',
+        url: '/berlin',
         template: '<city-landing></city-landing>'
       });
 
