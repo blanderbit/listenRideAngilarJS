@@ -410,7 +410,10 @@
       "bicycle-number": "Bicycle number",
       "frame-number": "Frame number",
       "custom-fields": "Additional fields",
-      "details": "Details"
+      "details": "Details",
+      "frame_size": "Frame size",
+      "bicycle_number": "Bicycle number",
+      "frame_number": "Frame number"
     },
     "accessories": {
       "header": "¿Qué accesorios tiene tu bici?",

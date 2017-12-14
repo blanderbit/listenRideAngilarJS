@@ -565,7 +565,10 @@
       "bicycle-number": "Rad Nr.",
       "frame-number": "Rahmennummer",
       "custom-fields": "Additional fields",
-      "details": "Details"
+      "details": "Details",
+      "frame_size": "Frame size",
+      "bicycle_number": "Bicycle number",
+      "frame_number": "Frame number"
     },
     "accessories": {
       "header": "Welche Zubehör kannst Du zu deinem Rad anbieten?",
