@@ -450,7 +450,7 @@ var lnrHelper = {
         '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">',
         '<bike-card>',
         '<md-card class="lnr-bike-card _md">',
-        '<a target="_blank" class="image-container lnr-links" title="' + ride.description + '" onclick="lnrHelper.spawnWizard(' + ride.userId + ', ' + ride.id + ')">',
+        '<a target="_blank" class="image-container lnr-links" title="' + ride.description + '" onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')">',
         '<img src="' + imageUrl + '"></img>',
         '<div class="after">',
         '<span class="content"><span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>' +
@@ -640,7 +640,7 @@ var lnrHelper = {
       left: left,
       top: top,
       //window url
-      url: url + '?user_Id=' + userId + '&ride_id=' + bikeId,
+      url: url + '?user_id=' + userId + '&ride_id=' + bikeId,
       // open type
       type: '_blank',
       // window params
