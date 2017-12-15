@@ -167,14 +167,9 @@ var lnrConstants = {
     }
   },
 
-  // all sizes of the rides
-  sizes: {
-    default: [155, 165, 175, 185, 195],
-    available: {}, // gets populated from rides api for each user
-    unshifts: 0
-  },
-
   // initialize rides, id and language for all users
+  defaultRideSizes: [155, 165, 175, 185, 195],
+  sizes: {},
   rides: {},
   userId: {},
   userLang: {},
