@@ -2,8 +2,8 @@ var lnrConstants = {
   env: 'production', // options: staging, production
 
   // shop solution for staging and production
-  staging_shop_url: "https://listnride-staging.herokuapp.com/v2/shop_solutions",
-  production_shop_url: "https://api.listnride.com/v2/shop_solutions",
+  stagingShopUrl: "https://listnride-staging.herokuapp.com/v2/shop_solutions",
+  productionShopUrl: "https://api.listnride.com/v2/shop_solutions",
 
   // users for staging and production
   staging_users: "https://listnride-staging.herokuapp.com/v2/users/",
@@ -176,8 +176,8 @@ var lnrConstants = {
 
   // initialize rides, id and language for all users
   rides: {},
-  user_id: {},
-  user_lang: {},
+  userId: {},
+  userLang: {},
 
   // style for disabling a dropdown element
   disabledButtonCss: {
