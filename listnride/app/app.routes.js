@@ -238,7 +238,7 @@
 
       $stateProvider.state({
         name: 'hamburgTriathlon',
-        url: '/hamburg-triathlon',
+        url: '/triathlon-hamburg',
         template: '<hamburg-triathlon></hamburg-triathlon>',
         resolve: {
           data: function ($translate, ngMeta) {
