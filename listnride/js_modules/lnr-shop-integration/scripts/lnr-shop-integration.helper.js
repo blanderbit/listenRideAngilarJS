@@ -16,20 +16,64 @@ var lnrHelper = {
   },
   /**
    * runs once the document is loaded
-   * sets translations
-   * renders bikes
+   * single user mode
+   * multi user mode
    * @returns {void}
    */
   postInit: function () {
     // get user id and language
-    var parent = document.getElementById('listnride');
-    var children = parent.getElementsByTagName('div');
+    lnrConstants.parentElement = document.getElementById('listnride');
+    // initialize for single and multi user mode
+    lnrConstants.parentElement.dataset.user ? lnrHelper.postInitSingleUser(): lnrHelper.postInitMultiUser();
+  },
+  /**
+   * single user mode
+   * sets translations
+   * renders bikes
+   * @returns {void}
+   */
+  postInitSingleUser: function(){
+    var user_id = lnrConstants.parentElement.dataset.user;
+    var user_lang = lnrConstants.parentElement.dataset.lang;
+    var selected_location = '';
+    var selected_size = '';
+
+    // maintain default version of sizes for each user separately
+    lnrConstants.sizes[user_id] = lnrConstants.sizes.default;
+
+    if ("de" === user_lang) {
+      selected_location = lnrConstants.translate.allLocations.de;
+      selected_size = lnrConstants.translate.allSizes.de;
+    } else if ('nl' === user_lang) {
+      selected_location = lnrConstants.translate.allLocations.nl;
+      selected_size = lnrConstants.translate.allSizes.nl;
+    } else {
+      selected_location = lnrConstants.translate.allLocations.en;
+      selected_size = lnrConstants.translate.allSizes.en;
+    }
+    
+    // update location and size for each user
+    lnrConstants.translate.allLocations.selected[user_id] = selected_location;
+    lnrConstants.translate.allSizes.selected[user_id] = selected_size;
+    // render the bikes for the user
+    lnrConstants.isSingleUserMode = true;
+    lnrHelper.renderBikes(user_id, user_lang, false);
+  },
+  /**
+   * multi user mode
+   * sets translations
+   * renders bikes
+   * @returns {void}
+   */
+  postInitMultiUser: function () {
+    var children = lnrConstants.parentElement.getElementsByTagName('div');
     for (var loop = 0; loop < children.length; loop += 1) {
       // if user has a defined user id field
       if (children[loop].dataset.user) {
         var user_id = children[loop].dataset.user;
         var user_lang = children[loop].dataset.lang;
-        var selected_location = '', selected_size = '';
+        var selected_location = '';
+        var selected_size = '';
 
         // maintain default version of sizes for each user separately
         lnrConstants.sizes[user_id] = lnrConstants.sizes.default;
@@ -49,6 +93,7 @@ var lnrHelper = {
         lnrConstants.translate.allLocations.selected[user_id] = selected_location;
         lnrConstants.translate.allSizes.selected[user_id] = selected_size;
         // render the bikes for the user
+        lnrConstants.isSingleUserMode = false;
         lnrHelper.renderBikes(user_id, user_lang, false);
       }
     }
@@ -101,6 +146,11 @@ var lnrHelper = {
     // show the location drop down menu
     element.classList.toggle("show");
   },
+  /**
+   * open the size dropdown
+   * @param {String} user_id user id
+   * @returns {void}
+   */
   openSizeSelector: function (user_id) {
     // element id
     var id = user_id + '-lnr-size-dropdown';
@@ -189,8 +239,8 @@ var lnrHelper = {
   },
   /**
    * show the bikes for the specific city
-   * @param {String} user_id user id
    * @param {Number} index to be called
+   * @param {String} user_id user id
    * @returns {void}
    */
   onLocationSelect: function (index, user_id) {
@@ -292,7 +342,7 @@ var lnrHelper = {
     is_demo_mode flag is provided from template
     not for end user
    */
-  getIdAndLanguage: function (user_id, user_lang, is_demo_mode) {
+  setIdAndLanguage: function (user_id, user_lang, is_demo_mode) {
     if (is_demo_mode === true) {
       lnrConstants.user_id[user_id] = document.getElementById('user_demo_id').value;
       lnrConstants.user_lang[user_id] = document.getElementById('user_demo_lang').value;
@@ -305,29 +355,45 @@ var lnrHelper = {
       }
     }
   },
+  initUserElement: function (user_id) {
+    // grid for the bikes cards
+    var element;
+    // compatibility mode
+    if (lnrConstants.isSingleUserMode === true) {
+      element = lnrConstants.parentElement;
+      element.innerHTML = '';
+    }
+    // multi user support 
+    else {
+      element = document.querySelector('[data-user="' + user_id + '"]');
+      element.innerHTML = '';
+      element.id = user_id;
+    }
+  },
   /**
    * renders the bikes
    * based on user_id and user_lang
    * @param {Number} user_id id: of the user for which bikes are to be fetched
    * @param {String} user_lang: language of the user. [english, german, dutch]
    * @param {bool} is_demo_mode: user id and language provided from debugging fields
+   * @param {bool} isSingleUserMode: support mode for old customer
    * @returns {void}
    */
   renderBikes: function (user_id, user_lang, is_demo_mode) {
-    lnrHelper.getIdAndLanguage(user_id, user_lang, is_demo_mode);
+    
+    lnrHelper.setIdAndLanguage(user_id, user_lang, is_demo_mode);
     // set the environment: staging or production
     var url = (lnrConstants.env === 'staging') ? lnrConstants.staging_users : lnrConstants.production_users;
     // create new instance of xhr
     var request = new XMLHttpRequest();
-    request.open('GET', url + lnrConstants.user_id[user_id], true);
+    var api_url = url + lnrConstants.user_id[user_id];
+    request.open('GET', api_url, true);
     request.onload = function () {
       if (request.status >= 200 && request.status < 400) {
+        // initialize grid for the bikes cards of the user
+        lnrHelper.initUserElement(user_id);
         // json response from server 
         var response = JSON.parse(request.responseText);
-        // grid for the bikes cards
-        var element = document.querySelector('[data-user="' + user_id + '"]');
-        element.innerHTML = '';
-        element.id = user_id;
         // get cities information from the bikes
         lnrConstants.cities = lnrHelper.getBikeCities(user_id, response.rides);
         // get sizes information from the bikes
@@ -355,19 +421,21 @@ var lnrHelper = {
    */
   renderBikesHTML: function (user_id, rides) {
 
-    // create grid for the
-    var lnr = document.getElementById(user_id);
+    // add bikes grid
+    var lnr = lnrConstants.isSingleUserMode ? lnrConstants.parentElement : document.getElementById(user_id);
     var gridId = user_id + '-lnr-grid';
     lnr.innerHTML += '<div class="mdl-grid mdl-grid--no-spacing" id="' + gridId + '"></div>';
 
-    // grid selector
+    // bikes grid element
     var grid = document.getElementById(gridId);
 
-    // clear gird template
+    // clear bikes grid
     grid.innerHTML = '';
 
     var basicInfo = lnrHelper.getBikesBasicInfo(user_id);
     rides.forEach(function (ride) {
+
+      // properties for grid creation
       var brand = ride.brand,
         category = ride.category,
         rideName = ride.name,
@@ -377,6 +445,7 @@ var lnrHelper = {
         svgUrl = lnrConstants.svgUrlRoot + (category + '').slice(0, 1) + '.svg',
         rideDescription = ride.description.slice(0, 150).concat(' ...');
 
+      // bikes grid html
       var gridHTML = [
         '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">',
         '<bike-card>',
@@ -403,6 +472,8 @@ var lnrHelper = {
         '</bike-card>',
         '</div>'
       ].join('');
+
+      // render bikes grid
       grid.innerHTML += gridHTML;
     });
   },
@@ -413,8 +484,7 @@ var lnrHelper = {
    * @returns {void}
    */
   renderSelectors: function (user_id, shouldRenderLocationSelector) {
-    var element = document.getElementById(user_id);
-
+    var element = lnrConstants.isSingleUserMode ? document.getElementById('listnride') : document.getElementById(user_id);
     // HTML for the selectors
     var selectors = lnrHelper.renderSelectorsHTML(user_id, shouldRenderLocationSelector);
 
@@ -479,11 +549,11 @@ var lnrHelper = {
 
     return selectors;
   },
-/**
- * set the default values for location and size selectors
- * @param {String} user_id user id
- * @returns {void}
- */
+  /**
+    * set the default values for location and size selectors
+    * @param {String} user_id user id
+    * @returns {void}
+  */
   setDefaultSelectorValues: function (user_id) {
 
     // location button

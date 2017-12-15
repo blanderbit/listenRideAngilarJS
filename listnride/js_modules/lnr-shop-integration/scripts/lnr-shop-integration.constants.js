@@ -183,5 +183,8 @@ var lnrConstants = {
   disabledButtonCss: {
     "pointer-events": "none",
     "color": "#c6c6c6"
-  }
+  },
+
+  // compatibility mode for old users
+  isSingleUserMode: false
 };
