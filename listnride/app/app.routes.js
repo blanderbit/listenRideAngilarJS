@@ -237,6 +237,24 @@
       });
 
       $stateProvider.state({
+        name: 'hamburgTriathlon',
+        url: '/triathlon-hamburg',
+        template: '<hamburg-triathlon></hamburg-triathlon>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.hamburg-triathlon.meta-title", "meta.events.hamburg-triathlon.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.events.hamburg-triathlon.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.hamburg-triathlon.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
           name: 'riderman',
           url: '/riderman-rothaus',
           template: '<riderman></riderman>',
