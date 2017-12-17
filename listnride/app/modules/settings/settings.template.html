@@ -16,30 +16,15 @@
               </div>
               <div flex-gt-xs="70" layout="column" layout-margin>
 
-                <img class="lnr-profile-lrg lnr-clickable"
-                     ng-style="{'display': settings.profilePicture ? 'none' : ''}"
-                     ngf-select
-                     name="ProfilePicture"
-                     ng-model="settings.profilePicture"
-                     ngf-accept="'image/*'"
-                     ngf-max-size="20MB"
-                     ngf-min-height="100"
-                     ngf-pattern="'image/*'"
-                     ngf-fix-orientation="true"
-                     ngf-background="settings.user.profile_picture.profile_picture.url || settings.profilePicture || 'app/assets/ui_images/no-image.jpg'"
-                     ngf-as-background="true">
+                <img class="lnr-profile-lrg lnr-clickable" ng-style="{'display': settings.profilePicture ? 'none' : ''}" ngf-select name="ProfilePicture"
+                  ng-model="settings.profilePicture" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100" ngf-pattern="'image/*'"
+                  ngf-fix-orientation="true" ngf-background="settings.user.profile_picture.profile_picture.url || settings.profilePicture || 'app/assets/ui_images/no-image.jpg'"
+                  ngf-as-background="true">
                 </img>
-                <div
-                    ng-style="{'display': settings.profilePicture ? '' : 'none'}"
-                    ngf-drop
-                    ng-model="settings.profilePicture"
-                    ngf-pattern="image/*"
-                    class="cropArea">
-                  <img-crop
-                      ng-style="{'display': settings.profilePicture ? '' : 'none'}"
-                      image="settings.profilePicture  | ngfDataUrl"
-                      result-image="settings.croppedDataUrl"
-                      ng-init="croppedDataUrl=''">
+                <div ng-style="{'display': settings.profilePicture ? '' : 'none'}" ngf-drop ng-model="settings.profilePicture" ngf-pattern="image/*"
+                  class="cropArea">
+                  <img-crop ng-style="{'display': settings.profilePicture ? '' : 'none'}" image="settings.profilePicture  | ngfDataUrl" result-image="settings.croppedDataUrl"
+                    ng-init="croppedDataUrl=''">
                   </img-crop>
                 </div>
               </div>
@@ -85,8 +70,7 @@
               <div flex-gt-xs="70" layout="column" layout-margin>
                 <md-input-container flex>
                   <label>{{ 'forms.password' | translate }}</label>
-                  <input minlength="6" placeholder="***********" name="password" type="password"
-                         ng-model="settings.password"></input>
+                  <input minlength="6" placeholder="***********" name="password" type="password" ng-model="settings.password"></input>
                 </md-input-container>
                 <div ng-messages="settings.form.password.$error" role="alert">
                   <div ng-message="minlength">Password shouldn't be shorter than 6 characters.</div>
@@ -106,17 +90,11 @@
                 <div layout="row" layout-xs="column">
                   <md-input-container flex-gt-xs="45">
                     <label>{{ 'shared.phone-number' | translate }}</label>
-                    <input name="phone_number" 
-                           ng-disabled="true" 
-                           placeholder="+49 175 12345678"
-                           ng-model="settings.user.phone_number_privatized"></input>
+                    <input name="phone_number" ng-disabled="true" placeholder="+49 175 12345678" ng-model="settings.user.phone_number_privatized"></input>
                   </md-input-container>
                   <span hide-xs flex></span>
                   <md-input-container layout="row" flex-gt-xs="45" flex="100">
-                    <md-button flex
-                               ng-if="!settings.sentConfirmationSms" 
-                               class="md-raised md-primary lnr-btn-inline lnr-btn-mobile"
-                               ng-click="settings.changePhoneNumber($event)">
+                    <md-button flex ng-if="!settings.sentConfirmationSms" class="md-raised md-primary lnr-btn-inline lnr-btn-mobile" ng-click="settings.changePhoneNumber($event)">
                       {{ 'forms.update-contact' | translate }}
                     </md-button>
                   </md-input-container>
@@ -134,13 +112,8 @@
               </div>
               <div flex-gt-xs="70" layout-margin>
                 <div layout="row" layout-xs="column">
-                  <autocomplete
-                      autocomplete-id="settings"
-                      layout="column"
-                      location="settings.user.street"
-                      label-id="{{ 'list.location.street-number' | translate }}"
-                      place-changed="settings.fillAddress(place)"
-                      flex-gt-xs="45">
+                  <autocomplete autocomplete-id="settings" layout="column" location="settings.user.street" label-id="{{ 'list.location.street-number' | translate }}"
+                    place-changed="settings.fillAddress(place)" flex-gt-xs="45">
                   </autocomplete>
                   <span hide-xs flex></span>
                   <md-input-container flex-gt-xs="45">
@@ -174,24 +147,16 @@
               <div flex-gt-xs="70" layout="column" layout-margin>
                 <md-input-container flex>
                   <label>{{ 'forms.description' | translate }}</label>
-                  <textarea required md-no-resize name="description" minlength="50" md-maxlength="800"
-                            ng-model="settings.user.description" rows="3"></textarea>
+                  <textarea required md-no-resize name="description" minlength="50" md-maxlength="800" ng-model="settings.user.description"
+                    rows="3"></textarea>
                   <div ng-messages="settings.form.description.$error" role="alert">
                     <div ng-message="minlength">{{ 'forms.description_min_100' | translate }}</div>
                   </div>
                 </md-input-container>
               </div>
             </div>
-            <div class="navigation" 
-                 layout="row" 
-                 layout-align-xs="center stretch" 
-                 layout-align="end center" 
-                 layout-margin 
-                 flex-xs>
-              <md-button flex-xs
-                         class="md-raised md-primary" 
-                         ng-click="settings.updateUser()" 
-                         ng-disabled="!settings.form.$dirty">
+            <div class="navigation" layout="row" layout-align-xs="center stretch" layout-align="end center" layout-margin flex-xs>
+              <md-button flex-xs class="md-raised md-primary" ng-click="settings.updateUser()" ng-disabled="!settings.form.$dirty">
                 {{ 'list.save-changes' | translate }}
               </md-button>
             </div>
@@ -203,8 +168,7 @@
       <!-- account -->
       <md-tab class="account" label="{{ 'settings.account' | translate }}" layout="column">
         <br>
-        <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding
-             layout="column">
+        <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
           <form name="businessForm" ng-submit="settings.updateBusiness(businessForm)" ng-hide="!settings.user.business">
             <div layout="row" layout-xs="column">
               <div flex-gt-xs layout-margin>
@@ -234,11 +198,7 @@
                 </div>
 
                 <div layout="row" layout-align="end">
-                  <md-button
-                      class="md-raised md-primary"
-                      type="submit"
-                      ng-disabled="!businessForm.$valid"
-                  >
+                  <md-button class="md-raised md-primary" type="submit" ng-disabled="!businessForm.$valid">
                     {{ 'shared.update' | translate }}
                   </md-button>
                 </div>
@@ -269,50 +229,33 @@
                 <div flex-gt-xs="70" layout-margin hide-xs>
                   <div layout="row" layout-xs="column">
                     <md-input-container layout="row" flex-gt-xs="45" flex="100">
-                      <md-button flex 
-                                 class="md-raised md-primary lnr-btn-inline" 
-                                 ng-click="settings.currentPaymentMethod()" 
-                                 ng-if="!settings.user.paymentLoading">
+                      <md-button flex class="md-raised md-primary lnr-btn-inline" ng-click="settings.currentPaymentMethod()" ng-if="!settings.user.paymentLoading">
                         {{ 'settings.payment-info' | translate }}
                       </md-button>
-                      <md-button flex
-                                 class="md-raised md-primary lnr-btn-inline" 
-                                 ng-click="settings.currentPaymentMethod()" 
-                                 ng-if="settings.user.paymentLoading" 
-                                 ng-disabled="true">
+                      <md-button flex class="md-raised md-primary lnr-btn-inline" ng-click="settings.currentPaymentMethod()" ng-if="settings.user.paymentLoading"
+                        ng-disabled="true">
                         {{ 'shared.loading' | translate }}
                       </md-button>
                     </md-input-container>
                     <span flex></span>
                     <md-input-container layout="row" flex-gt-xs="45" flex="100">
-                      <md-button flex
-                                 class="md-raised md-primary lnr-btn-inline" 
-                                 ng-click="settings.openPaymentWindow()">
+                      <md-button flex class="md-raised md-primary lnr-btn-inline" ng-click="settings.openPaymentWindow()">
                         {{ 'settings.add-payment-method' | translate }}
                       </md-button>
                     </md-input-container>
                   </div>
                 </div>
                 <div layout="row" layout-align="end" hide-gt-xs>
-                  <md-button flex
-                      class="md-raised md-primary lnr-btn-mobile"
-                      ng-click="settings.currentPaymentMethod()"
-                      ng-if="!settings.user.paymentLoading">
+                  <md-button flex class="md-raised md-primary lnr-btn-mobile" ng-click="settings.currentPaymentMethod()" ng-if="!settings.user.paymentLoading">
                     {{ 'settings.payment-info' | translate }}
                   </md-button>
-                  <md-button flex
-                      class="md-raised md-primary lnr-btn-mobile"
-                      ng-click="settings.currentPaymentMethod()"
-                      ng-if="settings.user.paymentLoading"
-                      ng-disabled="true"
-                  >
+                  <md-button flex class="md-raised md-primary lnr-btn-mobile" ng-click="settings.currentPaymentMethod()" ng-if="settings.user.paymentLoading"
+                    ng-disabled="true">
                     {{ 'shared.loading' | translate }}
                   </md-button>
                 </div>
                 <div layout="row" layout-align="end" hide-gt-xs>
-                  <md-button flex
-                             class="md-raised md-primary lnr-btn-mobile"
-                             ng-click="settings.openPaymentWindow()">
+                  <md-button flex class="md-raised md-primary lnr-btn-mobile" ng-click="settings.openPaymentWindow()">
                     {{ 'settings.add-payment-method' | translate }}
                   </md-button>
                 </div>
@@ -330,12 +273,8 @@
               <div flex-gt-xs="70" layout-margin>
                 <p>{{ 'settings.payout-method-description' | translate }}</p>
                 <p ng-if="!settings.user.current_payout_method">{{ 'settings.no-payout-method' | translate }}</p>
-                <p class="md-body-2"
-                   ng-if="settings.user.current_payout_method && settings.user.current_payout_method.family == 1">{{
-                  'settings.payout-bank' | translate }} {{ settings.user.current_payout_method.details }}</p>
-                <p class="md-body-2"
-                   ng-if="settings.user.current_payout_method && settings.user.current_payout_method.family == 2">{{
-                  'settings.payout-paypal' | translate }} {{ settings.user.current_payout_method.details }}</p>
+                <p class="md-body-2" ng-if="settings.user.current_payout_method && settings.user.current_payout_method.family == 1">{{ 'settings.payout-bank' | translate }} {{ settings.user.current_payout_method.details }}</p>
+                <p class="md-body-2" ng-if="settings.user.current_payout_method && settings.user.current_payout_method.family == 2">{{ 'settings.payout-paypal' | translate }} {{ settings.user.current_payout_method.details }}</p>
                 <br>
                 <div layout="column">
                   <md-radio-group ng-model="settings.payoutMethod.family" layout="row">
@@ -348,14 +287,7 @@
                       <div layout="row" layout-margin>
                         <md-input-container>
                           <label>{{ 'forms.email-address' | translate }}</label>
-                          <input
-                              required
-                              id="form_paypal_email"
-                              name="email"
-                              type="email"
-                              ng-model="settings.payoutMethod.email"
-                              ng-pattern="settings.emailFormat"
-                          ></input>
+                          <input required id="form_paypal_email" name="email" type="email" ng-model="settings.payoutMethod.email" ng-pattern="settings.emailFormat"></input>
                         </md-input-container>
                       </div>
                     </div>
@@ -383,11 +315,7 @@
                       </div>
                     </div>
                     <div layout="row" ng-if="settings.payoutMethod.family" layout-align="end">
-                      <md-button
-                          class="md-raised md-primary"
-                          ng-click="settings.addPayoutMethod(settingsForm)"
-                          ng-disabled="!paypalForm.$valid"
-                      >
+                      <md-button class="md-raised md-primary" ng-click="settings.addPayoutMethod(settingsForm)" ng-disabled="!paypalForm.$valid">
                         {{ 'settings.save-payout-method' | translate }}
                       </md-button>
                     </div>
@@ -416,11 +344,8 @@
                   </md-input-container>
                   <span hide-xs flex></span>
                   <md-input-container layout="row" flex-gt-xs="45" flex="100">
-                    <md-button flex 
-                               ng-disabled="!settings.voucherCode"
-                               class="md-raised md-primary lnr-btn-inline lnr-btn-mobile"
-                               ng-click="settings.addVoucher()">
-                               {{ 'settings.add-voucher' | translate }}
+                    <md-button flex ng-disabled="!settings.voucherCode" class="md-raised md-primary lnr-btn-inline lnr-btn-mobile" ng-click="settings.addVoucher()">
+                      {{ 'settings.add-voucher' | translate }}
                     </md-button>
                   </md-input-container>
                 </div>
@@ -441,16 +366,9 @@
                 </p>
               </div>
             </div>
-            
-            <div class="navigation" 
-                 layout="row" 
-                 layout-align-xs="center stretch" 
-                 layout-align="end center" 
-                 layout-margin 
-                 flex-xs>
-              <md-button flex-xs 
-                         class="md-raised md-primary md-warn" 
-                         ng-click="settings.deleteAccount()">
+
+            <div class="navigation" layout="row" layout-align-xs="center stretch" layout-align="end center" layout-margin flex-xs>
+              <md-button flex-xs class="md-raised md-primary md-warn" ng-click="settings.deleteAccount()">
                 {{'settings.delete-account' | translate }}
               </md-button>
             </div>
@@ -462,83 +380,71 @@
       <!-- hours -->
       <md-tab class="hours" label="{{ 'settings.availability' | translate }}" layout="column">
         <br>
-        <p class="md-body-1">{{ 'settings.availability-description' | translate }}</p>
-        <br>
-        <div class="tab-content" layout="column" layout-align="space-around none">
-          <div layout="row" layout-align="none center" layout-margin>
-            <h3>{{ 'settings.availability' | translate }}</h3>
-            <md-switch
-                ng-model="settings.openingHoursEnabled"
-                ng-change="settings.performOpeningHours(settings.openingHoursEnabled)"
-            ></md-switch>
-            <div ng-style="{'display': settings.completeClosed ? '' : 'none'}">
-              ({{ 'settings.mark-as-closed' | translate }})
+        <div class="tab-content md-padding" layout="column" layout-align="space-between none">
+          <div layout="row" layout-align="start center" layout-margin>
+            <p class="md-body-1">{{ 'settings.availability-description' | translate }}</p>
+          </div>
+          <div layout="row" layout-align="start center" layout-margin>
+            <div flex-gt-xs="10" flex="50">
+              <h3>{{ 'settings.availability' | translate }}</h3>
+            </div>
+            <span flex></span>
+            <div flex-gt-xs="80" flex="50">
+              <div layout="row" layout-align="start center">
+                <md-switch ng-model="settings.openingHoursEnabled" ng-change="settings.performOpeningHours(settings.openingHoursEnabled)">
+                </md-switch>
+                <div ng-style="{'display': settings.completeClosed ? '' : 'none'}">
+                  ({{ 'settings.mark-as-closed' | translate }})
+                </div>
+              </div>
             </div>
           </div>
-
-          <form name="hoursForm" ng-style="{'display': settings.openingHoursEnabled ? '' : 'none'}">
-
+          <div layout="row" layout-align="start center" layout-margin></div>
+          <form style="width:100%" name="hoursForm" ng-style="{'display': settings.openingHoursEnabled ? '' : 'none'}">
             <div ng-repeat="day in settings.weekDays">
-              <div layout="row" layout-wrap ng-class="{'form-error': settings.errorTime[day]}">
-                <div flex="20">
-                  <div layout="row" layout-wrap layout-align="space-between center">
-                    <div flex="50" ng-class="{'text-error': settings.errorTime[day]}">{{ 'shared.' + day | translate
-                      }}
-                    </div>
-                    <div flex="50">
-                      <md-switch
-                          ng-model="settings.enabledTime[day]"
-                          ng-change="settings.performInputDay(day, settings.enabledTime[day])"
-                      >
-                      </md-switch>
-                    </div>
-                  </div>
+              <div layout="row" layout-align="start center" layout-margin ng-class="{'form-error': settings.errorTime[day]}">
+                <div flex-gt-xs="15">
+                  <div ng-class="{'text-error': settings.errorTime[day]}">{{ 'shared.' + day | translate}}</div>
                 </div>
-                <div flex="80">
-                  <div layout="row" layout-wrap>
-                    <div ng-repeat="range in settings.startTime[day] track by $index">
-                      <div flex="33" ng-class="{'disabled': !settings.enabledTime[day]}">
-                        <div layout="row" layout-wrap layout-align="start center">
-                          <div flex="47">
-                            <md-input-container>
-                              <label>{{ 'settings.from' | translate }}</label>
-                              <md-select
-                                  ng-change="settings.getInputDate(day, true, $index)"
-                                  ng-model="settings.startTime[day][$index]"
-                                  placeholder="{{ 'shared.from' | translate }}">
-                                <md-option ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
-                                  {{ ($index + 6) + ":00" }}
-                                </md-option>
-                              </md-select>
-                            </md-input-container>
-                          </div>
-                          <div flex="47">
-                            <md-input-container>
-                              <label>{{ 'settings.to' | translate }}</label>
-                              <md-select
-                                  ng-change="settings.getInputDate(day, false, $index)"
-                                  ng-model="settings.endTime[day][$index]"
-                                  placeholder="{{ 'shared.from' | translate }}">
-                                <md-option ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
-                                  {{ ($index + 6) + ":00" }}
-                                </md-option>
-                              </md-select>
-                            </md-input-container>
-                          </div>
-                          <div flex="5">
-                            <md-button
-                                ng-style="{'display': $index == 0 ? 'none' : ''}"
-                                class="md-icon-button md-warn"
-                                ng-click="settings.removeInputDate(day, $index)">
-                              <md-icon md-font-icon="fa-times" class="fa"></md-icon>
-                            </md-button>
+                <div flex="15">
+                  <md-switch ng-model="settings.enabledTime[day]" ng-change="settings.performInputDay(day, settings.enabledTime[day])">
+                  </md-switch>
+                </div>
+                <div flex="70">
+                  <div layout="row" layout-align="start start">
+                    <div layout="column" layout-wrap>
+                      <div ng-repeat="range in settings.startTime[day] track by $index">
+                        <div flex ng-class="{'disabled': !settings.enabledTime[day]}">
+                          <div layout="row" layout-wrap layout-align="start center">
+                            <div flex="45">
+                              <md-input-container>
+                                <label>{{ 'settings.from' | translate }}</label>
+                                <md-select ng-change="settings.getInputDate(day, true, $index)" ng-model="settings.startTime[day][$index]" placeholder="{{ 'shared.from' | translate }}">
+                                  <md-option ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
+                                    {{ ($index + 6) + ":00" }}
+                                  </md-option>
+                                </md-select>
+                              </md-input-container>
+                            </div>
+                            <div flex="45">
+                              <md-input-container>
+                                <label>{{ 'settings.to' | translate }}</label>
+                                <md-select ng-change="settings.getInputDate(day, false, $index)" ng-model="settings.endTime[day][$index]" placeholder="{{ 'shared.from' | translate }}">
+                                  <md-option ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
+                                    {{ ($index + 6) + ":00" }}
+                                  </md-option>
+                                </md-select>
+                              </md-input-container>
+                            </div>
+                            <div flex="5">
+                              <md-button ng-style="{'display': $index == 0 ? 'none' : ''}" class="md-icon-button md-warn" ng-click="settings.removeInputDate(day, $index)">
+                                <md-icon md-font-icon="fa-times" class="fa"></md-icon>
+                              </md-button>
 
-                            <md-button
-                                ng-style="{'display': $index == 0 ? '' : 'none'}"
-                                class="md-icon-button md-primary"
-                                ng-click="settings.addChild(day)">
-                              <md-icon md-font-icon="fa-plus" class="fa"></md-icon>
-                            </md-button>
+                              <md-button ng-style="{'display': $index == 0 ? '' : 'none'}" class="md-icon-button md-primary" ng-click="settings.addChild(day)">
+                                <md-icon md-font-icon="fa-plus" class="fa"></md-icon>
+                              </md-button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -547,22 +453,18 @@
                 </div>
               </div>
             </div>
-
             <div class="navigation" layout="row" layout-align="end center" layout-margin>
-              <md-button
-                  ng-click="settings.onSubmit()"
-                  class="md-raised md-primary"
-                  ng-disabled="settings.error"
-              >
+              <md-button ng-click="settings.onSubmit()" class="md-raised md-primary" ng-disabled="settings.error">
                 {{ 'list.save-changes' | translate }}
               </md-button>
             </div>
           </form>
         </div>
-      </md-tab>
-      <!-- end hours -->
+  </div>
+  </md-tab>
+  <!-- end hours -->
 
-    </md-tabs>
+  </md-tabs>
   </div>
   <footer></footer>
 </md-content>
