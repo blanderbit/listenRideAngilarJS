@@ -472,7 +472,7 @@
                     <div ng-repeat="range in settings.startTime[day] track by $index">
                       <div flex ng-class="{'disabled': !settings.enabledTime[day]}">
                         <div layout="row" layout-align="start center">
-                          <div flex="30">
+                          <div flex="40">
                             <md-input-container>
                               <label>{{ 'settings.from' | translate }}</label>
                               <md-select ng-change="settings.getInputDate(day, true, $index)" ng-model="settings.startTime[day][$index]" placeholder="{{ 'shared.from' | translate }}">
@@ -482,7 +482,7 @@
                               </md-select>
                             </md-input-container>
                           </div>
-                          <div flex="30">
+                          <div flex="40">
                             <md-input-container>
                               <label>{{ 'settings.to' | translate }}</label>
                               <md-select ng-change="settings.getInputDate(day, false, $index)" ng-model="settings.endTime[day][$index]" placeholder="{{ 'shared.from' | translate }}">
