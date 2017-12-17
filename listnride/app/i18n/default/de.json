@@ -53,7 +53,7 @@
     "send": "Senden",
     "search": "Suche",
     "search-bikes": "Durchsuche deine Räder",
-    "from-place" : "aus",
+    "from-place": "aus",
     "contact": "Kontakt & Hilfe",
     "show-more": "zeig mehr",
     "show-less": "zeige weniger",
@@ -219,8 +219,8 @@
         "meta-descr": "Das Perfekte Rad für die Stadt - VanMoof"
       },
       "moeve": {
-      "meta-title": "Miete und Teste Möve bikes in München und Amsterdam",
-      "meta-descr": "Das Rad mit dem innovativsten Fahrradantrieb - Cyfly by Möve."
+        "meta-title": "Miete und Teste Möve bikes in München und Amsterdam",
+        "meta-descr": "Das Rad mit dem innovativsten Fahrradantrieb - Cyfly by Möve."
       }
     },
     "about-us": {
@@ -285,7 +285,6 @@
     "uniq-phone": "Telefonnummer ist bereits in unserem System registriert.",
     "pending-requests": "Du hast noch eine offene Anfrage für dieses Rad. Beantworte diese (Ablehnen/ Annehmen) bevor du es entfernen kannst.",
     "account-deleted": "Dein Account wurde gelöscht",
-
     "enter-email": "Bitte geben Sie ihre E-Mail-Adresse ein",
     "duplicate-start": "Vervielfältigungsprozess gestartet",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
@@ -293,8 +292,8 @@
   },
   "settings": {
     "settings": "Einstellungen",
-    "invite": "Freunde einladen",
     "profile": "Profil",
+    "invite": "Freunde einladen",
     "account": "Account",
     "delete-account": "Account löschen",
     "delete-account-description": "Hier kannst du dein listnride Account löschen. Dieser Schritt kann nicht rückgängig gemacht werden.",
@@ -349,8 +348,7 @@
     "1": {
       "text1": "Willkommen bei listnride!",
       "text-invited": "Du wurdest von einem Freund eingeladen, dein Account hat daher automatisch einen Gutschein bekommen, der bei der ersten Fahrt eingelöst wird.",
-      "text2": "Herzlich willkommen in unserer Bike-Sharing-Community mit vielen tollen Bikes und begeisterten Fahrradliebhabern aus aller Welt. In unserer Community dreht sich alles darum, sein geliebtes Zweirad mit anderen zu teilen – gegenseitiges Vertrauen und Sicherheit für Dich und die anderen User stehen daher für uns an erster Stelle.",
-      "text3": "Deshalb bitten wir dich, dein Profil in ein paar einfach Schritten zu verifizieren. Umso besser die eingegebenen Informationen sind, umso höher die Chance auf erfolgreiche Vermietungen."
+      "text2": "Herzlich willkommen in unserer Bike-Sharing-Community mit vielen tollen Bikes und begeisterten Fahrradliebhabern aus aller Welt. In unserer Community dreht sich alles darum, sein geliebtes Zweirad mit anderen zu teilen – gegenseitiges Vertrauen und Sicherheit für Dich und die anderen User stehen daher für uns an erster Stelle."
     },
     "2": {
       "title": "Lade ein Profilbild hoch",
@@ -397,13 +395,13 @@
   },
   "user": {
     "verified-through": "Verifiziert durch",
-    "verified": "Verifiziert",
     "own-bikes": "Eigene Räder",
     "ratings": "Bewertungen",
     "meta-title": "{{name}}'s Profil",
     "meta-description": "Rad mieten von {{name}} auf listnride.",
     "availability": "Verfügbarkeiten",
-    "not-available": "Nicht verfügbar"
+    "not-available": "Nicht verfügbar",
+    "verified": "Verifiziert"
   },
   "requests": {
     "booking-overview": "Buchungsübersicht",
@@ -462,20 +460,6 @@
     "9": "Du hast die Anfrage abgebrochen. Bitte schreib dem Verleiher, warum du die Buchung nicht bestätigen konntest.",
     "10": "Die Anfrage wurde abgebrochen."
   },
-  "home": {
-    "landing-section-header": "Das perfekte Rad. Einfach mieten.",
-    "landing-section-subheader": "Miete Dir auf listnride ein Fahrrad, wie Du es magst und gerade brauchst.",
-    "featured-bikes-header": "Fahrradverleih: Die Lieblinge der Community",
-    "featured-bikes-subheader": "Egal ob Rennrad, Mountain Bike, Stadtrad oder E-Bike, du kannst sie alle mieten. Hier sind die aktuellen Favoriten der Community.",
-    "featured-tiles-header": "Lass dich inspirieren",
-    "featured-tiles-subheader": "Wir arbeiten mit interessanten Marken zusammen, schreiben über unsere Erfahrung und fahren mit großartigen Menschen.",
-    "featured-cities-header": "Im Sattel durch den Großstadtdschungel",
-    "featured-cities-subheader": "In immer mehr Metropolen gibt es den Fahrradverleih über listnride. Erste Insider-Tipps hier:",
-    "list-a-bike-header": "Dein Bike ist zu schön, um rumzustehen?",
-    "list-a-bike-subheader": "Liste Dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und kurbel nebenbei Dein Konto an.",
-    "meta-title": "listnride - Die Bike-Sharing-Community",
-    "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie Du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
-  },
   "forms": {
     "first-name": "Vorname",
     "last-name": "Nachname",
@@ -517,6 +501,20 @@
       "min-size-company-name": "Der Firmenname sollte länger als 2 Zeichen sein "
     }
   },
+  "home": {
+    "landing-section-header": "Das perfekte Rad. Einfach mieten.",
+    "landing-section-subheader": "Miete Dir auf listnride ein Fahrrad, wie Du es magst und gerade brauchst.",
+    "featured-bikes-header": "Fahrradverleih: Die Lieblinge der Community",
+    "featured-bikes-subheader": "Egal ob Rennrad, Mountain Bike, Stadtrad oder E-Bike, du kannst sie alle mieten. Hier sind die aktuellen Favoriten der Community.",
+    "featured-tiles-header": "Lass dich inspirieren",
+    "featured-tiles-subheader": "Wir arbeiten mit interessanten Marken zusammen, schreiben über unsere Erfahrung und fahren mit großartigen Menschen.",
+    "featured-cities-header": "Im Sattel durch den Großstadtdschungel",
+    "featured-cities-subheader": "In immer mehr Metropolen gibt es den Fahrradverleih über listnride. Erste Insider-Tipps hier:",
+    "list-a-bike-header": "Dein Bike ist zu schön, um rumzustehen?",
+    "list-a-bike-subheader": "Liste Dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und kurbel nebenbei Dein Konto an.",
+    "meta-title": "listnride - Die Bike-Sharing-Community",
+    "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie Du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
+  },
   "autocomplete": {
     "default-placeholder": "Wo willst Du ein Rad ausleihen?"
   },
@@ -535,7 +533,6 @@
     "log-in-to-request-title": "Einloggen oder Registrieren",
     "log-in-to-request-description": "Logge dich ein um das Rad anzufragen. Falls du noch kein Account hast, registriere dich einfach.",
     "select-timespan": "Wähle zuerst die Mietdauer",
-    "select-timespan-first": "Bevor du anfrägst, bestimme bitte die Zeitspanne. Klicke einfach auf die Tage and wähle Abhol- und Rückgabezeiten im obigen Kalender.",
     "info-subtotal": "Dies ist Tagespreis für die<br>Anzahl der Tage, die du das<br>Fahrrad mieten möchten.",
     "info-discount": "Durchschnittlicher Tagesrabatt<br>pro Tag bei Miete für<br>einen längeren Zeitraum.",
     "info-service-fee": "Die Servicegebühr hilft uns,<br>listnride zu betreiben. Sie enthält <br>die Umsatzsteuer.",
@@ -559,6 +556,24 @@
       "electro": "Elektro",
       "special": "Spezial"
     },
+    "details": {
+      "header": "Wie heißt das Modell, von welcher Marke ist es, für welche Fahrergröße ist es geeignet?",
+      "hint": "Gebe Marke, Name und Beschreibung Deines Rads ein. Der Name sollte das Rad kurz beschreiben und das Model beinhalten. Z.B. Gazelle, Tour Populair, 2013. Wähle dann die passende Fahrergröße.",
+      "label": "Details",
+      "brand": "Marke",
+      "name": "Name",
+      "description": "Beschreibung (min. 100 Zeichen)",
+      "min-length-warning": "Minimum 100 Buchstabe",
+      "size": "Fahrergröße",
+      "frame-size": "Frame size",
+      "bicycle-number": "Rad Nr.",
+      "frame-number": "Rahmennummer",
+      "custom-fields": "Additional fields",
+      "details": "Details",
+      "frame_size": "Frame size",
+      "bicycle_number": "Bicycle number",
+      "frame_number": "Frame number"
+    },
     "accessories": {
       "header": "Welche Zubehör kannst Du zu deinem Rad anbieten?",
       "hint": "Wähle das Zubehör, dass Du zur Verfügung stellen kannst.",
@@ -569,16 +584,6 @@
       "basket": "Korb",
       "trailer": "Anhänger",
       "childseat": "Kindersitz"
-    },
-    "details": {
-      "header": "Wie heißt das Modell, von welcher Marke ist es, für welche Fahrergröße ist es geeignet?",
-      "hint": "Gebe Marke, Name und Beschreibung Deines Rads ein. Der Name sollte das Rad kurz beschreiben und das Model beinhalten. Z.B. Gazelle, Tour Populair, 2013. Wähle dann die passende Fahrergröße.",
-      "label": "Details",
-      "brand": "Marke",
-      "name": "Name",
-      "description": "Beschreibung (min. 100 Zeichen)",
-      "min-length-warning": "Minimum 100 Buchstabe",
-      "size": "Fahrergröße"
     },
     "pictures": {
       "header": "Lade ein paar Fotos hoch",
@@ -605,7 +610,6 @@
       "info-description": "Information zum Mietpreis",
       "header": "Tagespreis",
       "description": "Dein Tagespreis ist dein basis Preis bei 1 Tagesmiete.",
-      "daily-price-description": "Bei Eingabe des Tagespreises schlagen wir<br>dir automatisch ein Rabattschema für<br>längerfristige Vermietungen vor.<br>Du kannst die Preise allerdings<br>auch einzeln anpassen.",
       "hint-para-1": "Über den Preis, den du für dein Rad nimmst, entscheidest du selbst. Der Mietpreis sollte sich nach Rad und Ausstattung richten. Um eine Vorstellung von den Preisen am Markt zu erhalten, schaue Dir vergleichbare Angebote an.",
       "hint-para-2": "Eine Mietdauer unter 6 Stunden ist eine Halbtagesmiete, 6-24 Stunde steht für eine Tagesmiete.",
       "hint-para-3": "Um mehr Langzeitbuchungen zu erhalten, legen manche Vermieter einen Tages- oder Wochenrabatt fest.",
@@ -616,13 +620,13 @@
       "discount-description-ending": " pro Woche.",
       "set_custom_price": "Preise in €",
       "custom-prices": "Individuelle Preise",
+      "half-daily-price": "Halber Tag",
+      "daily-price": "Ganzer Tag",
       "daily-price-placeholder": "Preis in €",
       "daily-discount-placeholder": "Rabatt in %",
       "daily-discount-tooltip": "Rabatt, wenn das Fahrrad für mehr als einen Tag gemietet wird.",
       "weekly-discount-placeholder": "Rabatt in %",
       "weekly-discount-tooltip": "Rabatt, wenn das Fahrrad für eine Woche oder mehr gemietet wird.",
-      "half-daily-price": "Halber Tag",
-      "daily-price": "Ganzer Tag",
       "weekly-price": "Eine Woche",
       "daily-discount": "Tagesrabatt",
       "weekly-discount": "Wochenrabatt",
@@ -820,6 +824,16 @@
       "subheader": "Sende diesen Link an deine Freunde und erhalte 10€ wenn sie ein Fahrrad mieten oder vermieten",
       "copy": "Kopieren",
       "copied": "Kopiert!"
+    },
+    "invite-dialog": {
+      "rider": {
+        "header": "Hattest Du eine schöne Fahrt? Teile deine Fahrradleidenschaft!",
+        "subheader": "Empfiehl deinen Freunden listnride! Wir legen 10€ für die erste Buchung dazu! Und wenn das klappt, gibt es auch für dich 10€ Guthaben."
+      },
+      "lister": {
+        "header": "Das war doch einfach, oder?",
+        "subheader": "Magst du deinen Freunden listnride empfehlen? Wir legen 10€ für die erste Buchung dazu! Und wenn das klappt, gibt es auch für dich 10€ Guthaben."
+      }
     },
     "invitations": {
       "header": "Du hast {{credit}}€ durch deine Freunde erhalten",

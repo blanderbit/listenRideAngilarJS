@@ -3,10 +3,10 @@
 angular.module('coffeespin',[]).component('coffeespin', {
   templateUrl: 'app/modules/events/velothon-bikerental/coffeespin.template.html',
   controllerAs: 'coffeespin',
-  controller: ['api', '$translatePartialLoader',
-    function CoffeespinController(api, $tpl) {
+  controller: ['api', '$translatePartialLoader', 'ENV',
+    function CoffeespinController(api, $tpl, ENV) {
       var coffeespin = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
       coffeespin.bikes = [];
 
       // api.get('/users/1998').then(

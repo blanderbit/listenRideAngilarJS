@@ -752,6 +752,8 @@
     "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform."
   },
   "seo": {
-    "cities-title": "Planning to Travel? Check out more cities:"
+    "cities-title": "Planning to Travel? Check out more cities:",
+    "header": "Rent Bikes in",
+    "bike-shops-in": "Bike Shops in"
   }
 }

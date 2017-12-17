@@ -257,6 +257,10 @@ autocomplete .md-errors-spacer {
   margin-right: 8px;
 }
 
+.lnr-margin-right-double {
+  margin-right: 16px;
+}
+
 .lnr-margin-left {
   margin-left: 8px;
 }
