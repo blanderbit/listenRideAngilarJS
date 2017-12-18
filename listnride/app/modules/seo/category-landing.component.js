@@ -1,26 +1,32 @@
 'use strict';
 
-angular.module('seoLanding',[]).component('seoLanding', {
-  templateUrl: 'app/modules/seo-landing/seo-landing.template.html',
-  controllerAs: 'seoLanding',
+angular.module('categoryLanding',[]).component('categoryLanding', {
+  templateUrl: 'app/modules/seo/category-landing.template.html',
+  controllerAs: 'categoryLanding',
   controller: ['$translate', '$translatePartialLoader', '$stateParams', '$state', '$http', 'api',
-    function SeoLandingController($translate, $tpl, $stateParams, $state, $http, api) {
+    function CategoryLandingController($translate, $tpl, $stateParams, $state, $http, api) {
 
-      var seoLanding = this;
+      var categoryLanding = this;
       $tpl.addPart('static');
-      seoLanding.bikes = {};
-      seoLanding.loading = true;
+      categoryLanding.bikes = {};
+      categoryLanding.loading = true;
 
-      api.get('/seo_pages?url=' + $stateParams.pageTitle).then(
+      // api.get('/seo_pages?url=' + $stateParams.pageTitle).then(
+      api.get('/seo_pages?city=berlin&lang=en').then(
         function (success) {
-          seoLanding.data = success.data;
-          seoLanding.bikes = success.data.bikes
-          seoLanding.loading = false;
+          console.log(success.data);
+          categoryLanding.data = success.data;
+          categoryLanding.location = categoryLanding.data.city;
+          categoryLanding.loading = false;
         },
         function (error) {
           $state.go('404');
         }
       );
+
+      categoryLanding.onSearchClick = function() {
+        $state.go('search', {location: categoryLanding.location});
+      };
 
       function determineParams() {
         switch($stateParams.pageTitle) {
