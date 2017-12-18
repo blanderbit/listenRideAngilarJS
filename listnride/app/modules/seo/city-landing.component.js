@@ -7,7 +7,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
     function cityLandingController($translate, $tpl, $stateParams, $state, $http, api) {
 
       var cityLanding = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
       cityLanding.bikes = {};
       cityLanding.loading = true;
 

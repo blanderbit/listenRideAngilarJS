@@ -7,7 +7,7 @@ angular.module('categoryLanding',[]).component('categoryLanding', {
     function CategoryLandingController($translate, $tpl, $stateParams, $state, $http, api) {
 
       var categoryLanding = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
       categoryLanding.bikes = {};
       categoryLanding.loading = true;
 
