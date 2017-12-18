@@ -11,6 +11,8 @@ angular.module('home',[]).component('home', {
 
       if ($state.current.name === "verify" && authentication.loggedIn()) {
         verification.openDialog(false, false, window.event);
+      } else if ($state.current.name == "businessSignup") {
+        authentication.showSignupDialog(false, false, window.event, true);
       } else if ($state.current.name === "confirm") {
         $mdDialog.show({
           templateUrl: 'app/modules/shared/dialogs/spinner.template.html',

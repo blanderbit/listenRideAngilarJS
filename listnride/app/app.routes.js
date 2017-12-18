@@ -40,6 +40,12 @@
       });
 
       $stateProvider.state({
+        name: 'businessSignup',
+        url: '/business-signup',
+        template: '<home></home>'
+      });
+
+      $stateProvider.state({
         name: 'bike',
         url: '/bikes/{bikeId:int}',
         template: '<bike></bike>'
@@ -222,6 +228,24 @@
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.events.cyclassics-hamburg.meta-title"]);
                 ngMeta.setTag("description", translations["meta.events.cyclassics-hamburg.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'hamburgTriathlon',
+        url: '/triathlon-hamburg',
+        template: '<hamburg-triathlon></hamburg-triathlon>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.hamburg-triathlon.meta-title", "meta.events.hamburg-triathlon.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.events.hamburg-triathlon.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.hamburg-triathlon.meta-description"]);
               })
           }
         },
