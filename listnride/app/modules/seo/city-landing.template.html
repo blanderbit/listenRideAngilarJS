@@ -34,7 +34,7 @@
     <md-divider></md-divider>
   </div>
 
-  <div class="content section" layout-padding layout layout-xs="column">
+  <div class="content section" layout-padding layout layout-xs="column" ng-if="cityLanding.data.texts">
     <div flex="50" flex-xs="100">
       <!-- <div class="lnr-section-title" layout="column" layout-align="center center"> -->
         <!-- <h2 class="md-headline">{{ cityLanding.data.texts.main.title }}</h2> -->
@@ -50,37 +50,83 @@
       <!-- </div> -->
       <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="2" md-cols-gt-xs="2" md-cols-gt-sm="3" md-gutter="16px" md-row-height="1.5:1">
         <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/city.jpg')">
-          <a ui-sref="cities-berlin" layout-padding layout="column" layout-align="center  center">
+          <a ui-sref="search({location: cityLanding.data.city, city: true})" layout-padding layout="column" layout-align="center  center">
             <h3 class="md-title">{{ 'list.category.city' | translate }}</h3>
           </a>
         </md-grid-tile>
   
         <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/race.jpg')">
-          <a ui-sref="cities-munich" target="_blank" layout-padding layout="column"   layout-align="center center">
+          <a ui-sref="search({location: cityLanding.data.city, race: true})" target="_blank" layout-padding layout="column"   layout-align="center center">
             <h3 class="md-title">{{ 'list.category.race' | translate }}</h3>
           </a>
         </md-grid-tile>
   
         <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/all-terrain.jpg')">
-          <a ui-sref="cities-amsterdam" layout-padding layout="column" layout-align="center   center">
+          <a ui-sref="search({location: cityLanding.data.city, allterrain: true})" layout-padding layout="column" layout-align="center   center">
             <h3 class="md-title">{{ 'list.category.all-terrain' | translate }}</h3>
           </a>
         </md-grid-tile>
   
         <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/kids.jpg')">
-          <a ui-sref="cities-vienna" layout-padding layout="column" layout-align="center  center">
+          <a ui-sref="search({location: cityLanding.data.city, kids: true})" layout-padding layout="column" layout-align="center  center">
             <h3 class="md-title">{{ 'list.category.kids' | translate }}</h3>
           </a>
         </md-grid-tile>
 
         <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/electric.jpg')">
-          <a ui-sref="cities-vienna" layout-padding layout="column" layout-align="center  center">
+          <a ui-sref="search({location: cityLanding.data.city, ebikes: true})" layout-padding layout="column" layout-align="center  center">
             <h3 class="md-title">{{ 'list.category.electro' | translate }}</h3>
           </a>
         </md-grid-tile>
 
         <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/special.jpg')">
-          <a ui-sref="cities-vienna" layout-padding layout="column" layout-align="center  center">
+          <a ui-sref="search({location: cityLanding.data.city, special: true})" layout-padding layout="column" layout-align="center  center">
+            <h3 class="md-title">{{ 'list.category.special' | translate }}</h3>
+          </a>
+        </md-grid-tile>
+      </md-grid-list>
+    </div>
+  </div>
+
+  <div class="content section" layout-padding layout ng-if="!cityLanding.data.texts">
+    <div flex="100">
+      <div class="lnr-section-title" layout="column" layout-align="center center">
+        <h2 class="md-headline">Rent category bikes in {{ cityLanding.data.city }}</h2>
+        <br>
+      </div>
+      <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="2" md-cols-gt-xs="2" md-cols-gt-sm="3" md-gutter="16px" md-row-height="1.5:1">
+        <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/city.jpg')">
+          <a ui-sref="search({location: cityLanding.data.city, city: true})" layout-padding layout="column" layout-align="center  center">
+            <h3 class="md-title">{{ 'list.category.city' | translate }}</h3>
+          </a>
+        </md-grid-tile>
+  
+        <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/race.jpg')">
+          <a ui-sref="search({location: cityLanding.data.city, race: true})" target="_blank" layout-padding layout="column"   layout-align="center center">
+            <h3 class="md-title">{{ 'list.category.race' | translate }}</h3>
+          </a>
+        </md-grid-tile>
+  
+        <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/all-terrain.jpg')">
+          <a ui-sref="search({location: cityLanding.data.city, allterrain: true})" layout-padding layout="column" layout-align="center   center">
+            <h3 class="md-title">{{ 'list.category.all-terrain' | translate }}</h3>
+          </a>
+        </md-grid-tile>
+  
+        <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/kids.jpg')">
+          <a ui-sref="search({location: cityLanding.data.city, kids: true})" layout-padding layout="column" layout-align="center  center">
+            <h3 class="md-title">{{ 'list.category.kids' | translate }}</h3>
+          </a>
+        </md-grid-tile>
+
+        <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/electric.jpg')">
+          <a ui-sref="search({location: cityLanding.data.city, ebikes: true})" layout-padding layout="column" layout-align="center  center">
+            <h3 class="md-title">{{ 'list.category.electro' | translate }}</h3>
+          </a>
+        </md-grid-tile>
+
+        <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/special.jpg')">
+          <a ui-sref="search({location: cityLanding.data.city, special: true})" layout-padding layout="column" layout-align="center  center">
             <h3 class="md-title">{{ 'list.category.special' | translate }}</h3>
           </a>
         </md-grid-tile>
@@ -111,7 +157,7 @@
     </md-grid-list>
   </div>
 
-  <div class="content section" layout-padding>
+  <div class="content section" layout-padding ng-if="cityLanding.data.explore">
     <br><br><br><br>
     <md-divider></md-divider>
     <div class="lnr-section-title" layout="column" layout-align="center center">      
