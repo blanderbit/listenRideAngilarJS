@@ -66,10 +66,8 @@ angular.module('votec-integration',[]).component('votec', {
 
           for (var i=0; i<success.data.length; i++) {
             switch (success.data[i].city) {
-              case "Frankfurt am Main": votec.bikes.frankfurt.push(success.data[i]); break;
               case "Heidelberg": votec.bikes.heidelberg.push(success.data[i]); break;
               case "München": votec.bikes.munich.push(success.data[i]); break;
-              case "Stuttgart": votec.bikes.stuttgart.push(success.data[i]); break;
             }
           }
           votec.currentBikes = votec.bikes["munich"];
