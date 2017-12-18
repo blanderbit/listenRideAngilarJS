@@ -3,8 +3,8 @@
 angular.module('categoryLanding',[]).component('categoryLanding', {
   templateUrl: 'app/modules/seo/category-landing.template.html',
   controllerAs: 'categoryLanding',
-  controller: ['$translate', '$translatePartialLoader', '$stateParams', '$state', '$http', 'api',
-    function CategoryLandingController($translate, $tpl, $stateParams, $state, $http, api) {
+  controller: ['$translate', '$translatePartialLoader', '$stateParams', '$state', '$http', 'api', 'ENV',
+    function CategoryLandingController($translate, $tpl, $stateParams, $state, $http, api, ENV) {
 
       var categoryLanding = this;
       $tpl.addPart(ENV.staticTranslation);
