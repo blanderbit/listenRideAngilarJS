@@ -14,13 +14,19 @@ angular.module('cityLanding',[]).component('cityLanding', {
       // api.get('/seo_pages?url=' + $stateParams.pageTitle).then(
       api.get('/seo_pages?city=berlin&lang=en').then(
         function (success) {
+          console.log(success.data);
           cityLanding.data = success.data;
+          cityLanding.location = cityLanding.data.city;
           cityLanding.loading = false;
         },
         function (error) {
           $state.go('404');
         }
       );
+
+      cityLanding.onSearchClick = function() {
+        $state.go('search', {location: cityLanding.location});
+      };
 
       function determineParams() {
         switch($stateParams.pageTitle) {
