@@ -3,9 +3,11 @@
 angular.
   module('listnride').
   factory('api', ['$http', '$localStorage', 'ENV',
-    function($http, $localStorage, ENV, authentication) {
+    function($http, $localStorage, ENV) {
       var apiUrl = ENV.apiEndpoint;
       var webappUrl = ENV.webappUrl;
+      console.log("default translation: ", ENV.defaultTranslation);
+      console.log("static translation: ", ENV.staticTranslation);
       return {
         get: function(url, type) {
           if (typeof type === 'undefined') { type = 'json'; }

@@ -3,10 +3,10 @@
 angular.module('supercrossMunich',[]).component('supercrossMunich', {
     templateUrl: 'app/modules/events/supercross-munich/supercross-munich.template.html',
     controllerAs: 'supercrossMunich',
-    controller: ['NgMap', 'api', '$translate', 'ngMeta', '$translatePartialLoader',
-        function SupercrossMunichController(NgMap, api, $translate, ngMeta, $tpl) {
+    controller: ['NgMap', 'api', '$translate', 'ngMeta', '$translatePartialLoader', 'ENV',
+        function SupercrossMunichController(NgMap, api, $translate, ngMeta, $tpl, ENV) {
             var supercrossMunich = this;
-            $tpl.addPart('static');
+            $tpl.addPart(ENV.staticTranslation);
             ngMeta.setTitle($translate.instant("events.supercross-munich.meta-title"));
             ngMeta.setTag("description", $translate.instant("events.supercross-munich.meta-description"));
 

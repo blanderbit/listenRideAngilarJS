@@ -3,10 +3,10 @@
 angular.module('capeArgus',[]).component('capeArgus', {
     templateUrl: 'app/modules/events/cape-argus/cape-argus.template.html',
     controllerAs: 'capeArgus',
-    controller: ['NgMap', 'api', '$translate', '$translatePartialLoader', 'ngMeta',
-        function CapeArgusController(NgMap, api, $translate, $tpl, ngMeta) {
+    controller: ['NgMap', 'api', '$translate', '$translatePartialLoader', 'ngMeta', 'ENV',
+        function CapeArgusController(NgMap, api, $translate, $tpl, ngMeta, ENV) {
             var capeArgus = this;
-            $tpl.addPart('static');
+            $tpl.addPart(ENV.staticTranslation);
             capeArgus.submitting = false;
             capeArgus.email = "";
             capeArgus.submitted = false;

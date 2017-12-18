@@ -53,7 +53,7 @@ angular.module('list', ['ngLocale']).component('list', {
         } else {
           list.businessUser = false;
         }
-      }
+      };
 
       list.populateNewBikeData = function () {
         api.get('/users/' + $localStorage.userId).then(
@@ -125,6 +125,10 @@ angular.module('list', ['ngLocale']).component('list', {
               }
 
               setBusinessForm();
+
+              if (!_.isEmpty(list.form.frame_size) || !_.isEmpty(list.form.frame_number) || !_.isEmpty(list.form.details)) {
+                list.show_custom_fields = true;
+              }
             }
           },
           function (error) {
@@ -155,6 +159,10 @@ angular.module('list', ['ngLocale']).component('list', {
           "ride[prices]": prices,
           "ride[custom_price]": list.form.custom_price,
           "ride[discounts]": list.form.discounts,
+          "ride[frame_size]": list.form.frame_size,
+          "ride[bicycle_number]": list.form.bicycle_number,
+          "ride[frame_number]": list.form.frame_number,
+          "ride[details]": list.form.details,
           "ride[image_file_1]": (list.form.images[0]) ? list.form.images[0].src : undefined,
           "ride[image_file_2]": (list.form.images[1]) ? list.form.images[1].src : undefined,
           "ride[image_file_3]": (list.form.images[2]) ? list.form.images[2].src : undefined,
@@ -218,6 +226,10 @@ angular.module('list', ['ngLocale']).component('list', {
           "ride[prices]": prices,
           "ride[custom_price]": list.form.custom_price,
           "ride[discounts]": list.form.discounts,
+          "ride[frame_size]": list.form.frame_size,
+          "ride[bicycle_number]": list.form.bicycle_number,
+          "ride[frame_number]": list.form.frame_number,
+          "ride[details]": list.form.details,
           "ride[image_file_1]": (list.form.images[0]) ? list.form.images[0].src : undefined,
           "ride[image_file_2]": (list.form.images[1]) ? list.form.images[1].src : undefined,
           "ride[image_file_3]": (list.form.images[2]) ? list.form.images[2].src : undefined,

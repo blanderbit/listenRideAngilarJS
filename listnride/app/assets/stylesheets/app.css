@@ -157,6 +157,18 @@ button.md-primary.md-cancel-button.md-button.ng-scope.md-default-theme.md-ink-ri
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
 
+md-icon {
+  margin: auto;
+  background-repeat: no-repeat no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 20px;
+  width: 30px;
+  min-height: 20px;
+  min-width: 24px;
+}
+
 /* fix for md-container margin */
 autocomplete {
   margin-bottom: 16px;
@@ -255,6 +267,10 @@ autocomplete .md-errors-spacer {
 
 .lnr-margin-right {
   margin-right: 8px;
+}
+
+.lnr-margin-right-double {
+  margin-right: 16px;
 }
 
 .lnr-margin-left {

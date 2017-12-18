@@ -3,10 +3,10 @@
 angular.module('votec-integration',[]).component('votec', {
   templateUrl: 'app/modules/brand-integration/votec.template.html',
   controllerAs: 'votec',
-  controller: [ '$translate', '$translatePartialLoader', 'api',
-    function VotecController($translate, $tpl, api) {
+  controller: [ '$translate', '$translatePartialLoader', 'api', 'ENV', 
+    function VotecController($translate, $tpl, api, ENV) {
       var votec = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
 
       votec.currentBikes = [];
       $translate(["shared.munich"]).then(

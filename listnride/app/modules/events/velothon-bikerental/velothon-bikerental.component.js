@@ -3,10 +3,10 @@
 angular.module('velothonBikerental',[]).component('velothonBikerental', {
     templateUrl: 'app/modules/events/velothon-bikerental/velothon-bikerental.template.html',
     controllerAs: 'velothonBikerental',
-    controller: ['NgMap', 'api', '$translate', '$translatePartialLoader',
-        function VelothonBikerental(NgMap, api, $translate, $tpl) {
+    controller: ['NgMap', 'api', '$translate', '$translatePartialLoader', 'ENV',
+        function VelothonBikerental(NgMap, api, $translate, $tpl, ENV) {
             var velothonBikerental = this;
-            $tpl.addPart('static');
+            $tpl.addPart(ENV.staticTranslation);
 
             velothonBikerental.sizeOptions = [
                 {value: "", label: "-"},

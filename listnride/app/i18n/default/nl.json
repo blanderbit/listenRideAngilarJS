@@ -4,11 +4,11 @@
     "how-it-works": "Hoe werkt het",
     "list-a-bike": "Fiets verhuren",
     "renting-a-bike": "Fiets huren",
-    "listing-a-bike": "Fiets verhuren",
+    "listing-a-bike": "Fiets plaatsen",
     "trust-and-safety": "Vertrouwen & Zekerheid",
     "journal": "Blog",
-    "later": "Niet nu",
-    "next": "volgende",
+    "later": "Later",
+    "next": "Volgende",
     "requests": "Aanvragen",
     "top-cities": "Favoriete Steden",
     "berlin": "Berlijn",
@@ -28,18 +28,18 @@
     "marl": "Marl",
     "frankfurt": "Frankfurt",
     "per": "per",
-    "hour": "Uur",
-    "hours": "Uren",
-    "half-day": "Halve dag",
-    "day": "Dag",
-    "day-6h": "Dag (> 6u)",
-    "days": "Dagen",
-    "week": "Week",
-    "weeks": "Weken",
+    "hour": "uur",
+    "hours": "uren",
+    "half-day": "halve dag",
+    "day": "dag",
+    "day-6h": "dag (> 6u)",
+    "days": "dagen",
+    "week": "week",
+    "weeks": "weken",
     "discount": "Korting",
-    "discount-day": "XXX",
-    "discount-week": "XXX",
-    "single-day": "XXX",
+    "discount-day": "vanaf 3 dagen",
+    "discount-week": "vanaf 1 week",
+    "single-day": "voor 1 dag",
     "duration": "Duur",
     "subtotal": "Subtotaal",
     "lnr-fee": "Servicekosten",
@@ -59,7 +59,7 @@
     "show-more": "Toon meer",
     "show-less": "Toon minder",
     "phone-number": "Telefoonnummer",
-    "wait": "Je fiets wordt nu online geplaatst, dit kan een moment duren...",
+    "wait": "Je fiets wordt nu online geplaatst, dit kan een moment duren..",
     "lister": "Aanbieder",
     "rider": "Huurder",
     "reviews": "Recensies",
@@ -285,11 +285,7 @@
     "opening-hours-error": "Kan openingstijden niet opslaan.",
     "uniq-phone": "Telefoonnummer is al geregistreerd in ons systeem.",
     "pending-requests": "Het lijkt alsof u een open verzoek voor deze fiets heeft. Voordat u de fiets kunt verwijderen, moet u deze accepteren of annuleren.",
-    "account-deleted":"Uw account is verwijderd",
-    "enter-email": "Vul alstublieft uw e-mailadres in",
-    "duplicate-start": "Duplicatieproces gestart",
-    "duplicate-finish": "Duplication process finished. Copies created successfully",
-    "bike-deleted" : "Fiets succesvol verwijderd"
+    "account-deleted": "Uw account is verwijderd"
   },
   "settings": {
     "settings": "Instellingen",
@@ -349,8 +345,7 @@
     "1": {
       "text1": "Welkom bij listnride!",
       "text-invited": "Aangezien je door een vriend bent uitgenodigd, hebben we voucher van 10€ aan je account toegevoegd. Deze kan je direct bij je eerste fietshuur verzilveren.",
-      "text2": "Hartelijk welkom tot onze Bike-Sharing-Community met veel mooie fietsen en enthousiaste fietsliefhebbers vanuit de hele wereld. Onze community biedt een omgeving waar je jouw geliefde tweewieler zorgenloos aan anderen kan uitlenen – wederzijds vertrouwen en zekerheid voor jou en andere gebruikers staat daarom bij ons op de eerste plaats.",
-      "text3": "We vragen je daarom, je profiel in een paar stappen te voltooien. Hoe beter en volledig je profielbeschrijving, des te groter de kans op aanvragen en successvolle verhuur."
+      "text2": "Hartelijk welkom tot onze Bike-Sharing-Community met veel mooie fietsen en enthousiaste fietsliefhebbers vanuit de hele wereld. Onze community biedt een omgeving waar je jouw geliefde tweewieler zorgenloos aan anderen kan uitlenen – wederzijds vertrouwen en zekerheid voor jou en andere gebruikers staat daarom bij ons op de eerste plaats."
     },
     "2": {
       "title": "Foto toevoegen",
@@ -398,13 +393,13 @@
   },
   "user": {
     "verified-through": "geverifieerd door",
-    "verified": "geverifieerd",
     "own-bikes": "Mijn fietsen",
     "ratings": "Recensies",
     "meta-title": "{{name}}'s profiel",
     "meta-description": "Fiets huren op listnride van {{name}}.",
     "availability": "Openingstijden",
-    "not-available": "Niet Beschikbaar"
+    "not-available": "Niet Beschikbaar",
+    "verified": "geverifieerd"
   },
   "requests": {
     "booking-overview": "Bookingsoverzicht",
@@ -413,8 +408,8 @@
     "price": "Prijs",
     "book": "Boeken",
     "rating": "Recensie",
-    "listChat": "Aanvragen van",
-    "rideChat": "Aanvragen aan",
+    "listChat": "Aanvraag van",
+    "rideChat": "Aanvraag aan",
     "ratings": {
       "title": "Hoe vond je de algehele ervaring?",
       "description": "Vertrouwen en Veiligheid zijn voor ons het belangrijkste. Met een korte recensie help je de gehele community.",
@@ -448,8 +443,8 @@
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} uit {{user.city}} zou graag jouw <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. leg alle verdere details vast via de Chat.",
-    "3": "{{user.first_name}} heeft de boeking bevestigd. Je fiets is nu verhuurd van {{timespan}}! De Contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\n \nNaam: {{user.first_name}} {{user.last_name}} \nNummer: {{user.phone_number}} \nAdres: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
-    "5": "Hartelijk bedankt voor je recensie. De verhuurtransactie is nu afgerond en het Geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons graag een e-mail aan hello@listnride.com",
+    "3": "{{user.first_name}} Je hebt de aanvraag bevestigd. Je fiets is nu verhuurd voor de periode {{timespan}}! De contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\nNaam: {{user.first_name}} {{user.last_name}} \nNummer: {{user.phone_number}} \nAdres: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
+    "5": "Hartelijk bedankt voor het bevestigen van de teruggave van de fiets als ook je recensie. De verhuurtransactie is nu afgerond en het geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons gerust een e-mail aan hello@listnride.com",
     "8": "Je hebt de aanvraag afgewezen. Schrijf de aanvrager kort een berichtje waarom het niet lukt.",
     "9": "helaas heeft {{user.first_name}} de aanvraag niet bevestigd.",
     "10": "Uw verzoek is geannuleerd door systeem."
@@ -462,20 +457,6 @@
     "8": "Helaas heeft de verhuurder je aanvraag afgewezen. Gelukkig zijn er genoeg andere mooie fietsen die je kan aanvragen.",
     "9": "Je hebt de aanvraag afgewezen. Stuur de verhuuder kort een berichtje, waarom je aanvraag niet geboekt hebt.",
     "10": "Het verzoek is geannuleerd."
-  },
-  "home": {
-    "landing-section-header": "De perfekte fiets. Gewoon huren.",
-    "landing-section-subheader": "Huur een fiets via listnride naar eigen smaak en gebruik.",
-    "featured-bikes-header": "Fietsverhuur: De favorieten van onze Community",
-    "featured-bikes-subheader": "of je nu een racefiets, mountainbike, stadsfiets of e-bike wilt, je huurt ze hier. Dit zijn de favorieten van onze Community.",
-    "featured-tiles-header": "Raak geïnspireerd",
-    "featured-tiles-subheader": "We werken samen met innovatieve merken, schrijven over interessante ontwikkelingen en nemen deel aan speciale evenementen",
-    "featured-cities-header": "in het zadel door de Urban jungle",
-    "featured-cities-subheader": " In steeds meer grote Steden vind je huurfietsen via listnride. Onze eerste insider tips vind je hier:",
-    "list-a-bike-header": "Je fiets is te mooi om stil te staan?",
-    "list-a-bike-subheader": "biedt je fiets te huur aan, ontmoet leuke nieuwe mensen en spek je banksaldo.",
-    "meta-title": "listnride - De bike sharing community",
-    "meta-description": "Huur de perfekte fiets van de listnride community. Boek een fiets naar jouw smaak en gebruik online."
   },
   "forms": {
     "first-name": "Voornaam",
@@ -518,6 +499,20 @@
       "min-size-company-name": "Bedrijfsnaam moet langer zijn dan 2 karakters "
     }
   },
+  "home": {
+    "landing-section-header": "De perfekte fiets. Gewoon huren.",
+    "landing-section-subheader": "Huur een fiets via listnride naar eigen smaak en gebruik.",
+    "featured-bikes-header": "Fietsverhuur: De favorieten van onze Community",
+    "featured-bikes-subheader": "of je nu een racefiets, mountainbike, stadsfiets of e-bike wilt, je huurt ze hier. Dit zijn de favorieten van onze Community.",
+    "featured-tiles-header": "Raak geïnspireerd",
+    "featured-tiles-subheader": "We werken samen met innovatieve merken, schrijven over interessante ontwikkelingen en nemen deel aan speciale evenementen",
+    "featured-cities-header": "in het zadel door de Urban jungle",
+    "featured-cities-subheader": " In steeds meer grote Steden vind je huurfietsen via listnride. Onze eerste insider tips vind je hier:",
+    "list-a-bike-header": "Je fiets is te mooi om stil te staan?",
+    "list-a-bike-subheader": "biedt je fiets te huur aan, ontmoet leuke nieuwe mensen en spek je banksaldo.",
+    "meta-title": "listnride - De bike sharing community",
+    "meta-description": "Huur de perfekte fiets van de listnride community. Boek een fiets naar jouw smaak en gebruik online."
+  },
   "autocomplete": {
     "default-placeholder": "Waar wil je een fiets huren?"
   },
@@ -536,7 +531,6 @@
     "log-in-to-request-title": "log-in of meld je aan",
     "log-in-to-request-description": "log-in om de fiets aan te vragen. Indien je je nog niet hebt aangemeld, doe dit dan eerst.",
     "select-timespan": "Kies eerst de huurperiode",
-    "select-timespan-first": "Before you can request, please set the timespan of your rental. Simply click on the days and select pickup and dropoff times in the above calendar.",
     "info-subtotal": "Dit zijn de normale dagelijkse<br>prijslijsten, het aantal dagen dat<br> u de fiets wilt huren.",
     "info-discount": "Gemiddelde dagelijkse korting<br>krijgt u per dag door voor<br>een langere periode te huren.",
     "info-service-fee": "De servicegeld wordt gebruikt<br>voor het aanbieden van listnride.<br>Het is inclusief BTW.",
@@ -549,17 +543,6 @@
     "back": "Terug",
     "next": "Verder",
     "list-bike": "Fiets plaatsen",
-    "accessories": {
-      "header": "Welke accessoires bied je aan?",
-      "hint": "Kies de accessoires die je bij de fiets aanbiedt.",
-      "label": "Accessoires",
-      "lock": "Slot",
-      "helmet": "Helm",
-      "lights": "Licht",
-      "basket": "Mandje",
-      "trailer": "Aanhanger",
-      "childseat": "Kinderzitje"
-    },
     "category": {
       "header": "Wat is de fietscategorie?",
       "hint": "Kies allereerst de categorie van je fiets. Kies daarna de juiste subcategorie.",
@@ -579,7 +562,25 @@
       "name": "Naam",
       "description": "Beschrijving (min. 100 tekens)",
       "min-length-warning": "Minimaal 100 tekens",
-      "size": "Grootte"
+      "size": "Grootte",
+      "frame-size": "Frame size",
+      "bicycle-number": "Fiets Nr.",
+      "frame-number": "Rasternummer",
+      "details": "Details",
+      "frame_size": "Frame size",
+      "bicycle_number": "Bicycle number",
+      "frame_number": "Frame number"
+    },
+    "accessories": {
+      "header": "Welke accessoires bied je aan?",
+      "hint": "Kies de accessoires die je bij de fiets aanbiedt.",
+      "label": "Accessoires",
+      "lock": "Slot",
+      "helmet": "Helm",
+      "lights": "Licht",
+      "basket": "Mandje",
+      "trailer": "Aanhanger",
+      "childseat": "Kinderzitje"
     },
     "pictures": {
       "header": "Kies een aantal mooie foto's van je fiets",
@@ -616,13 +617,13 @@
       "discount-description-ending": " per week.",
       "set_custom_price": "Prijs in €",
       "custom-prices": "Aangepaste prijs",
+      "half-daily-price": "Halve dag",
+      "daily-price": "Hele dag",
       "daily-price-placeholder": "Prijs in €",
       "daily-discount-placeholder": "Korting in %",
       "daily-discount-tooltip": "Korting als de fiets meer dan een dag gehuurd wordt.",
       "weekly-discount-placeholder": "Korting in %",
       "weekly-discount-tooltip": "Korting als de fiets voor een week of langer verhuurd wordt.",
-      "half-daily-price": "Halve dag",
-      "daily-price": "Hele dag",
       "weekly-price": "Een week",
       "daily-discount": "Dag korting",
       "weekly-discount": "Wekelijkse korting",
@@ -637,7 +638,7 @@
       "price_30_days": "30 dagen (1 maand)",
       "price_30_days_long": "30 dagen (1 Monat)",
       "reset-prices": "Zurücksetzen",
-      "validations":{
+      "validations": {
         "required": {
           "daily_price": "Dagprijs is required",
           "price": "Prijs is required"
@@ -686,19 +687,7 @@
   },
   "listings": {
     "my-bikes": "Mijn fietsen",
-    "no-bikes": "Je hebt nog geen fietsen online geplaatst.",
-    "list-a-bike": "Fiets plaatsen",
-    "duplicate": {
-      "duplicate": "Duplicaat",
-      "how_many": "Hoeveel fietsen?",
-      "header": "Dubbele fiets",
-      "number_bikes": "Aantal fietsen",
-      "maxlength": "Werkt voor maximaal 99 fietsen",
-      "required": "Aantal fietsen is verplicht"
-    },
-    "listView": {
-      "price": "Prijs (€)"
-    }
+    "no-bikes": "Je hebt nog geen fietsen online geplaatst."
   },
   "listingCard": {
     "activate-bike": "Activeren",
@@ -707,7 +696,6 @@
     "delete-bike": "verwijderen",
     "cancel": "annuleren",
     "delete": "verwijderen",
-    "duplicate": "Duplicate",
     "dialog-title": "Wil je daadwerkelijk je fiets verwijderen?",
     "dialog-subtitle": "Het wordt onherroepelijk verwijderd van het platform, actieve aanvragen blijven gehandhaafd."
   },
@@ -812,6 +800,16 @@
       "invite-friends": "Vrienden uitnodigen",
       "community": "Wordt deel van de community",
       "earn-credit": "Ontvang listnride toegoed"
+    },
+    "invite-dialog": {
+      "rider": {
+        "header": "Mooie fiets ervaring gehad?",
+        "subheader": "Zou je ons willen aanbevelen? Je ontvangt €10 tegoed, zodra je uitnodiging wordt aangenomen. Degene die je uitnodigt ontvangt ook €10 tegoed bij het aannemen van je uitnodiging. Een mooie Win-Win!"
+      },
+      "lister": {
+        "header": "Dat verliep gemakkelijk, toch?",
+        "subheader": "Zou je ons aan je vrienden willen aanbevelen? Je ontvangt 10€ tegoed, zodra je uitnodiging wordt aangenomen. Degene die je uitnodigt ontvangt ook €10 tegoed bij het aannemen van je uitnodiging. Een mooie Win-Win!"
+      }
     },
     "invite-form": {
       "header": "Deel jouw persoonlijke link",

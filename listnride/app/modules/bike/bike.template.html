@@ -125,6 +125,24 @@
               <p flex="20" class="md-body-2">{{ 'list.category.label' | translate }}</p>
               <p class="md-body-1">{{ bike.data.category | category | translate  }}</p>
             </div>
+            <div layout="row" layout-align="start center">
+              <p flex="20" class="md-body-2">{{ 'list.details.frame_size' | translate }}</p>
+              <p class="md-body-1">{{ bike.data.frame_size }}</p>
+            </div>
+            <div ng-show="bike.owner">
+              <div layout="row" layout-align="start center">
+                <p flex="20" class="md-body-2">{{ 'list.details.bicycle_number' | translate }}</p>
+                <p class="md-body-1">{{ bike.data.bicycle_number}}</p>
+              </div>
+              <div layout="row" layout-align="start center">
+                <p flex="20" class="md-body-2">{{ 'list.details.frame_number' | translate }}</p>
+                <p class="md-body-1">{{ bike.data.frame_number}}</p>
+              </div>
+              <div layout="row" layout-align="start center">
+                <p flex="20" class="md-body-2">{{ 'list.details.details' | translate }}</p>
+                <p class="md-body-1">{{ bike.data.details}}</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -136,7 +154,7 @@
             <a ui-sref="user({userId: bike.data.user.id})">
               <img class="lnr-profile-md lnr-margin-right lnr-clickable" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
             </a>
-            <p ng-if="!bike.data.business" class="md-subhead lnr-margin-left lnr-clickable" flex-offset="2" ui-sref="user({userId: bike.data.user.id})">{{bike.data.user.first_name}} {{bike.data.user.last_name}}</p>
+            <p ng-if="!bike.data.business" class="md-subhead lnr-margin-left lnr-clickable" flex-offset="2" ui-sref="user({userId: bike.data.user.id})">{{bike.data.user.first_name}}</p>
             <p ng-if="bike.data.business" class="md-subhead lnr-margin-left lnr-clickable" flex-offset="2" ui-sref="user({userId: bike.data.user.id})">{{bike.data.business.company_name}}</p>
           </div>
         </div>
