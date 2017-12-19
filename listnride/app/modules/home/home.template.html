@@ -1,13 +1,13 @@
 <md-content class="single-column">
   <div id="landingSection" md-theme="lnr-dark" layout="column" layout-align="center center">
-    <!--div id="homeHeroShot"></div-->
-    <ul class="cb-slideshow">
+    <div id="homeHeroShot"></div>
+    <!-- <ul class="cb-slideshow">
       <li><span></span></li>
       <li><span></span></li>
       <li><span></span></li>
       <li><span></span></li>
       <li><span></span></li>
-    </ul>
+    </ul> -->
 
     <!-- <div class="lnr-badge-container" ng-hide>
       <a href="https://www.seedrs.com/listnride" target="_blank"><img class="lnr-badge" ng-src="app/assets/ui_images/invest/crowdfunding_badge.png"></img></a>
@@ -153,25 +153,25 @@
 
     <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="2" md-cols-gt-sm="4" md-gutter="16px" md-row-height="1.5:1">
       <md-grid-tile class="tile tile-berlin">
-        <a ui-sref="cities-berlin" layout-padding layout="column" layout-align="center center">
+        <a ui-sref="cityLanding({pageTitle: 'berlin'})" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">{{ 'shared.berlin' | translate }}</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-munich">
-        <a ui-sref="cities-munich" target="_blank" layout-padding layout="column" layout-align="center center">
+        <a ui-sref="cityLanding({pageTitle: 'munich'})" target="_blank" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">{{ 'shared.munich' | translate }}</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-amsterdam">
-        <a ui-sref="cities-amsterdam" layout-padding layout="column" layout-align="center center">
+        <a ui-sref="cityLanding({pageTitle: 'amsterdam'})" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">{{ 'shared.amsterdam' | translate }}</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-vienna">
-        <a ui-sref="cities-vienna" layout-padding layout="column" layout-align="center center">
+        <a ui-sref="cityLanding({pageTitle: 'vienna'})" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">{{ 'shared.vienna' | translate }}</h3>
         </a>
       </md-grid-tile>

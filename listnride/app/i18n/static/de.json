@@ -696,10 +696,5 @@
     "description": "Mit den Datenschutzbestimmungen informiert die List and Ride GmbH (im Folgenden „listnride“) Sie über den Umgang mit Ihren personenbezogenen Daten.<br><br><a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Sie können die Datenschutzbestimmungen hier abrufen und ausdrucken.</a>",
     "meta-title": "Datenschutzrichtlinien von listnride",
     "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform."
-  },
-  "seo": {
-    "cities-title": "Du planst zu reisen? Schau dir mehr Städte an:",
-    "header": "Die besten Räder in",
-    "bike-shops-in": "Fahrradläden in"
   }
 }

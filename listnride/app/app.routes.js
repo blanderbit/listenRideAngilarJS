@@ -1021,43 +1021,43 @@
       //   }
       // });
 
-      $stateProvider.state({
-        name: 'cities-amsterdam',
-        url: '/amsterdam',
-        templateUrl: 'app/modules/static/cities-amsterdam.template.html',
-        controller: 'StaticController',
-        resolve: {
-            data: function ($translate, ngMeta) {
-                $translate(["meta.cities.amsterdam.meta-title", "meta.cities.amsterdam.meta-description"])
-                    .then(function (translations) {
-                        ngMeta.setTitle(translations["meta.cities.amsterdam.meta-title"]);
-                        ngMeta.setTag("description", translations["meta.cities.amsterdam.meta-description"]);
-                    })
-            }
-        },
-        meta: {
-            disableUpdate: true
-        }
-      });
+      // $stateProvider.state({
+      //   name: 'cities-amsterdam',
+      //   url: '/amsterdam',
+      //   templateUrl: 'app/modules/static/cities-amsterdam.template.html',
+      //   controller: 'StaticController',
+      //   resolve: {
+      //       data: function ($translate, ngMeta) {
+      //           $translate(["meta.cities.amsterdam.meta-title", "meta.cities.amsterdam.meta-description"])
+      //               .then(function (translations) {
+      //                   ngMeta.setTitle(translations["meta.cities.amsterdam.meta-title"]);
+      //                   ngMeta.setTag("description", translations["meta.cities.amsterdam.meta-description"]);
+      //               })
+      //       }
+      //   },
+      //   meta: {
+      //       disableUpdate: true
+      //   }
+      // });
 
-      $stateProvider.state({
-        name: 'cities-vienna',
-        url: '/vienna',
-        templateUrl: 'app/modules/static/cities-vienna.template.html',
-        controller: 'StaticController',
-        resolve: {
-            data: function ($translate, ngMeta) {
-                $translate(["meta.cities.vienna.meta-title", "meta.cities.vienna.meta-description"])
-                    .then(function (translations) {
-                        ngMeta.setTitle(translations["meta.cities.vienna.meta-title"]);
-                        ngMeta.setTag("description", translations["meta.cities.vienna.meta-description"]);
-                    })
-            }
-        },
-        meta: {
-            disableUpdate: true
-        }
-      });
+      // $stateProvider.state({
+      //   name: 'cities-vienna',
+      //   url: '/vienna',
+      //   templateUrl: 'app/modules/static/cities-vienna.template.html',
+      //   controller: 'StaticController',
+      //   resolve: {
+      //       data: function ($translate, ngMeta) {
+      //           $translate(["meta.cities.vienna.meta-title", "meta.cities.vienna.meta-description"])
+      //               .then(function (translations) {
+      //                   ngMeta.setTitle(translations["meta.cities.vienna.meta-title"]);
+      //                   ngMeta.setTag("description", translations["meta.cities.vienna.meta-description"]);
+      //               })
+      //       }
+      //   },
+      //   meta: {
+      //       disableUpdate: true
+      //   }
+      // });
 
       /* event pages -- end */
 
@@ -1103,8 +1103,8 @@
       });
 
       $stateProvider.state({
-        name: 'city-landing',
-        url: '/berlin',
+        name: 'cityLanding',
+        url: '/{pageTitle: string}',
         template: '<city-landing></city-landing>'
       });
 
