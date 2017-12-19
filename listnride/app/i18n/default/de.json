@@ -865,5 +865,10 @@
     "press": "Presse",
     "jobs": "Jobs",
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=de"
+  },
+  "seo": {
+    "cities-title": "Du planst zu reisen? Schau dir mehr Städte an:",
+    "header": "Die besten Räder in",
+    "bike-shops-in": "Fahrradläden in"
   }
 }
