@@ -3,10 +3,10 @@
 angular.module('riderman',[]).component('riderman', {
     templateUrl: 'app/modules/events/riderman/riderman.template.html',
     controllerAs: 'riderman',
-    controller: ['NgMap', 'api', '$translate','$translatePartialLoader', 'ngMeta',
-    function Riderman(NgMap, api, $translate, $tpl, ngMeta) {
+    controller: ['NgMap', 'api', '$translate','$translatePartialLoader', 'ngMeta', 'ENV',
+    function Riderman(NgMap, api, $translate, $tpl, ngMeta, ENV) {
         var riderman = this;
-        $tpl.addPart('static');
+        $tpl.addPart(ENV.staticTranslation);
         ngMeta.setTitle($translate.instant("events.riderman.meta-title"));
         ngMeta.setTag("description", $translate.instant("events.riderman.meta-description"));
 

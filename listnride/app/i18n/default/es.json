@@ -565,7 +565,15 @@
       "name": "Nombre",
       "description": "Descripción (mín. 100 caracteres)",
       "min-length-warning": "La longitud debe ser de al menos 100 caracteres",
-      "size": "Altura del ciclista"
+      "size": "Altura del ciclista",
+      "frame-size": "Frame size",
+      "bicycle-number": "Bicycle number",
+      "frame-number": "Frame number",
+      "custom-fields": "Additional fields",
+      "details": "Details",
+      "frame_size": "Frame size",
+      "bicycle_number": "Bicycle number",
+      "frame_number": "Frame number"
     },
     "accessories": {
       "header": "¿Qué accesorios tiene tu bici?",
@@ -847,5 +855,10 @@
     "press": "Prensa",
     "jobs": "Empleo",
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
+  },
+  "seo": {
+    "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden",
+    "header": "The best bikes in",
+    "bike-shops-in": "Bike Shops in"
   }
 }

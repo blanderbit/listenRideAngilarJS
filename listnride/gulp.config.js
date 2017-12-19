@@ -64,9 +64,9 @@ module.exports = function () {
                 './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.constants.js',
                 './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.helper.js',
                 './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.js',
-                './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.jquery.js',
                 './js_modules/lnr-shop-integration/scripts/lnr-shop-integration.vendor.js'
             ],
+            jsGlob: './js_modules/lnr-shop-integration/scripts/*.js',
             dist: {
                 root: './js_modules/lnr-shop-integration/dist/',
                 oldJs: './js_modules/lnr-shop-integration/dist/lnr-embed.min.js',
@@ -130,7 +130,9 @@ module.exports = function () {
                     html5Mode: false,
                     apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
                     userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
-                    webappUrl: "http://www.staging.listnride.com"
+                    webappUrl: "http://www.staging.listnride.com",
+                    defaultTranslation: 'default',
+                    staticTranslation: 'default'
                 }
             },
             imageOptions: {
@@ -150,7 +152,9 @@ module.exports = function () {
                     html5Mode: true,
                     apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
                     userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
-                    webappUrl: "http://www.staging.listnride.com"
+                    webappUrl: "http://www.staging.listnride.com",
+                    defaultTranslation: 'default',
+                    staticTranslation: 'static'
                 }
             },        
             imageminOptions: {
@@ -170,7 +174,9 @@ module.exports = function () {
                     html5Mode: true,
                     apiEndpoint: 'https://api.listnride.com/v2',
                     userEndpoint: 'https://api.listnride.com/v2/users/',
-                    webappUrl: "http://www.listnride.com"
+                    webappUrl: "http://www.listnride.com",
+                    defaultTranslation: 'default',
+                    staticTranslation: 'static'
                 }
             },
             imageminOptions: {

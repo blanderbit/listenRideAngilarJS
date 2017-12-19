@@ -40,6 +40,12 @@
       });
 
       $stateProvider.state({
+        name: 'businessSignup',
+        url: '/business-signup',
+        template: '<home></home>'
+      });
+
+      $stateProvider.state({
         name: 'bike',
         url: '/bikes/{bikeId:int}',
         template: '<bike></bike>'
@@ -222,6 +228,24 @@
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.events.cyclassics-hamburg.meta-title"]);
                 ngMeta.setTag("description", translations["meta.events.cyclassics-hamburg.meta-description"]);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'hamburgTriathlon',
+        url: '/triathlon-hamburg',
+        template: '<hamburg-triathlon></hamburg-triathlon>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.hamburg-triathlon.meta-title", "meta.events.hamburg-triathlon.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.events.hamburg-triathlon.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.hamburg-triathlon.meta-description"]);
               })
           }
         },
@@ -959,81 +983,81 @@
         template: '<user></user>'
       });
 
-      $stateProvider.state({
-        name: 'cities-berlin',
-        url: '/berlin',
-        templateUrl: 'app/modules/static/cities-berlin.template.html',
-        controller: 'StaticController',
-        resolve: {
-            data: function ($translate, ngMeta) {
-                $translate(["meta.cities.berlin.meta-title", "meta.cities.berlin.meta-description"])
-                    .then(function (translations) {
-                        ngMeta.setTitle(translations["meta.cities.berlin.meta-title"]);
-                        ngMeta.setTag("description", translations["meta.cities.berlin.meta-description"]);
-                    })
-            }
-        },
-        meta: {
-            disableUpdate: true
-        }
-      });
+      // $stateProvider.state({
+      //   name: 'cities-berlin',
+      //   url: '/berlin',
+      //   templateUrl: 'app/modules/static/cities-berlin.template.html',
+      //   controller: 'StaticController',
+      //   resolve: {
+      //       data: function ($translate, ngMeta) {
+      //           $translate(["meta.cities.berlin.meta-title", "meta.cities.berlin.meta-description"])
+      //               .then(function (translations) {
+      //                   ngMeta.setTitle(translations["meta.cities.berlin.meta-title"]);
+      //                   ngMeta.setTag("description", translations["meta.cities.berlin.meta-description"]);
+      //               })
+      //       }
+      //   },
+      //   meta: {
+      //       disableUpdate: true
+      //   }
+      // });
 
-      $stateProvider.state({
-        name: 'cities-munich',
-        url: '/munich',
-        templateUrl: 'app/modules/static/cities-munich.template.html',
-        controller: 'StaticController',
-        resolve: {
-            data: function ($translate, ngMeta) {
-                $translate(["meta.cities.munich.meta-title", "meta.cities.munich.meta-description"])
-                    .then(function (translations) {
-                        ngMeta.setTitle(translations["meta.cities.munich.meta-title"]);
-                        ngMeta.setTag("description", translations["meta.cities.munich.meta-description"]);
-                    })
-            }
-        },
-        meta: {
-            disableUpdate: true
-        }
-      });
+      // $stateProvider.state({
+      //   name: 'cities-munich',
+      //   url: '/munich',
+      //   templateUrl: 'app/modules/static/cities-munich.template.html',
+      //   controller: 'StaticController',
+      //   resolve: {
+      //       data: function ($translate, ngMeta) {
+      //           $translate(["meta.cities.munich.meta-title", "meta.cities.munich.meta-description"])
+      //               .then(function (translations) {
+      //                   ngMeta.setTitle(translations["meta.cities.munich.meta-title"]);
+      //                   ngMeta.setTag("description", translations["meta.cities.munich.meta-description"]);
+      //               })
+      //       }
+      //   },
+      //   meta: {
+      //       disableUpdate: true
+      //   }
+      // });
 
-      $stateProvider.state({
-        name: 'cities-amsterdam',
-        url: '/amsterdam',
-        templateUrl: 'app/modules/static/cities-amsterdam.template.html',
-        controller: 'StaticController',
-        resolve: {
-            data: function ($translate, ngMeta) {
-                $translate(["meta.cities.amsterdam.meta-title", "meta.cities.amsterdam.meta-description"])
-                    .then(function (translations) {
-                        ngMeta.setTitle(translations["meta.cities.amsterdam.meta-title"]);
-                        ngMeta.setTag("description", translations["meta.cities.amsterdam.meta-description"]);
-                    })
-            }
-        },
-        meta: {
-            disableUpdate: true
-        }
-      });
+      // $stateProvider.state({
+      //   name: 'cities-amsterdam',
+      //   url: '/amsterdam',
+      //   templateUrl: 'app/modules/static/cities-amsterdam.template.html',
+      //   controller: 'StaticController',
+      //   resolve: {
+      //       data: function ($translate, ngMeta) {
+      //           $translate(["meta.cities.amsterdam.meta-title", "meta.cities.amsterdam.meta-description"])
+      //               .then(function (translations) {
+      //                   ngMeta.setTitle(translations["meta.cities.amsterdam.meta-title"]);
+      //                   ngMeta.setTag("description", translations["meta.cities.amsterdam.meta-description"]);
+      //               })
+      //       }
+      //   },
+      //   meta: {
+      //       disableUpdate: true
+      //   }
+      // });
 
-      $stateProvider.state({
-        name: 'cities-vienna',
-        url: '/vienna',
-        templateUrl: 'app/modules/static/cities-vienna.template.html',
-        controller: 'StaticController',
-        resolve: {
-            data: function ($translate, ngMeta) {
-                $translate(["meta.cities.vienna.meta-title", "meta.cities.vienna.meta-description"])
-                    .then(function (translations) {
-                        ngMeta.setTitle(translations["meta.cities.vienna.meta-title"]);
-                        ngMeta.setTag("description", translations["meta.cities.vienna.meta-description"]);
-                    })
-            }
-        },
-        meta: {
-            disableUpdate: true
-        }
-      });
+      // $stateProvider.state({
+      //   name: 'cities-vienna',
+      //   url: '/vienna',
+      //   templateUrl: 'app/modules/static/cities-vienna.template.html',
+      //   controller: 'StaticController',
+      //   resolve: {
+      //       data: function ($translate, ngMeta) {
+      //           $translate(["meta.cities.vienna.meta-title", "meta.cities.vienna.meta-description"])
+      //               .then(function (translations) {
+      //                   ngMeta.setTitle(translations["meta.cities.vienna.meta-title"]);
+      //                   ngMeta.setTag("description", translations["meta.cities.vienna.meta-description"]);
+      //               })
+      //       }
+      //   },
+      //   meta: {
+      //       disableUpdate: true
+      //   }
+      // });
 
       /* event pages -- end */
 
@@ -1079,10 +1103,16 @@
       });
 
       $stateProvider.state({
-        name: 'seo-landing',
+        name: 'cityLanding',
         url: '/{pageTitle: string}',
-        template: '<seo-landing></seo-landing>'
+        template: '<city-landing></city-landing>'
       });
+
+      // $stateProvider.state({
+      //   name: 'seo-landing',
+      //   url: '/{pageTitle: string}',
+      //   template: '<seo-landing></seo-landing>'
+      // });
 
       $urlRouterProvider.otherwise(function ($injector) {
         var state = $injector.get('$state');

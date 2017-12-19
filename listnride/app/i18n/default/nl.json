@@ -52,7 +52,8 @@
     "cancel": "Afbreken",
     "send": "Sturen",
     "search": "Zoeken",
-    "search-bikes": "Zoek je fietsen",
+    "search-all": "Doorzoek alle fietsen",
+    "search-bikes": "Zoek je fietsen",    
     "from-place": "uit",
     "contact": "Contact & Help",
     "show-more": "Toon meer",
@@ -155,6 +156,10 @@
       "cyclassics-hamburg": {
         "meta-title": "Rent a road bike for the Cyclassics Hamburg on listnride",
         "meta-description": "Rent the perfect road bike for the Cyclassics in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
+      },
+      "hamburg-triathlon": {
+        "meta-title": "Rent a road bike for the Hamburg Triathlon on listnride",
+        "meta-description": "Rent the perfect road bike for the Triathlon in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
       },
       "riderman": {
         "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",
@@ -561,7 +566,14 @@
       "name": "Naam",
       "description": "Beschrijving (min. 100 tekens)",
       "min-length-warning": "Minimaal 100 tekens",
-      "size": "Grootte"
+      "size": "Grootte",
+      "frame-size": "Frame size",
+      "bicycle-number": "Fiets Nr.",
+      "frame-number": "Rasternummer",
+      "details": "Details",
+      "frame_size": "Frame size",
+      "bicycle_number": "Bicycle number",
+      "frame_number": "Frame number"
     },
     "accessories": {
       "header": "Welke accessoires bied je aan?",
@@ -806,6 +818,16 @@
       "community": "Wordt deel van de community",
       "earn-credit": "Ontvang listnride toegoed"
     },
+    "invite-dialog": {
+      "rider": {
+        "header": "Mooie fiets ervaring gehad?",
+        "subheader": "Zou je ons willen aanbevelen? Je ontvangt €10 tegoed, zodra je uitnodiging wordt aangenomen. Degene die je uitnodigt ontvangt ook €10 tegoed bij het aannemen van je uitnodiging. Een mooie Win-Win!"
+      },
+      "lister": {
+        "header": "Dat verliep gemakkelijk, toch?",
+        "subheader": "Zou je ons aan je vrienden willen aanbevelen? Je ontvangt 10€ tegoed, zodra je uitnodiging wordt aangenomen. Degene die je uitnodigt ontvangt ook €10 tegoed bij het aannemen van je uitnodiging. Een mooie Win-Win!"
+      }
+    },
     "invite-form": {
       "header": "Deel jouw persoonlijke link",
       "subheader": "Stuur deze link aan je vrienden en ontvang 10€ tegoed na een eerste aktiviteit.",
@@ -841,5 +863,10 @@
     "press": "Pers",
     "jobs": "Werken bij",
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=nl"
+  },
+  "seo": {
+    "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden",
+    "header": "Rent Bikes in",
+    "bike-shops-in": "Bike Shops in"
   }
 }

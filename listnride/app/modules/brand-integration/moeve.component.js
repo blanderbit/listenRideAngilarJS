@@ -3,10 +3,10 @@
 angular.module('moeveIntegration',[]).component('moeve', {
   templateUrl: 'app/modules/brand-integration/moeve.template.html',
   controllerAs: 'moeve',
-  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta',
-    function MoeveController($translate, $tpl, api) {
+  controller: [ '$translate', '$translatePartialLoader', 'api', 'ENV',
+    function MoeveController($translate, $tpl, api, ENV) {
       var moeve = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
 
       moeve.currentBikes = [];
       $translate(["shared.munich"]).then(

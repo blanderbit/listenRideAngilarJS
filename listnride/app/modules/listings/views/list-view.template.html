@@ -66,12 +66,12 @@
               <div style="margin-top: 15px;" flex="10">
                 <img hide-xs ng-src="{{bike.image_file_1.image_file_1.thumb.url}}" class="md-avatar" />
               </div>
-              <div flex="10">{{bike.id}}</div>
+              <div flex="10">{{bike.bicycle_number}}</div>
               <div flex="20"> {{bike.name}}</div>
               <div flex="15"> {{bike.brand}}</div>
               <div flex="15"> {{bike.city}}</div>
               <div flex="15"> {{bike.size}}</div>
-              <div flex="10"> {{bike.prices[0].price | number : 0}}</div>
+              <div flex="10"> {{bike.price_from | number : 0}}</div>
               <md-menu flex md-position-mode="target bottom">
                 <md-button class="md-icon-button md-primary" md-no-ink ng-click="$mdOpenMenu($event)" aria-label="Menu">
                   <md-icon md-svg-icon="app/assets/ui_icons/menu.svg"></md-icon>

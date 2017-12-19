@@ -3,10 +3,10 @@
 angular.module('cyclassicsHamburg',[]).component('cyclassicsHamburg', {
     templateUrl: 'app/modules/events/cyclassics-hamburg/cyclassics-hamburg.template.html',
     controllerAs: 'cyclassicsHamburg',
-    controller: ['NgMap', 'api', '$translate','$translatePartialLoader',
-    function CyclassicsHamburg(NgMap, api, $translate, $tpl) {
+    controller: ['NgMap', 'api', '$translate','$translatePartialLoader', 'ENV',
+    function CyclassicsHamburg(NgMap, api, $translate, $tpl, ENV) {
         var cyclassicsHamburg = this;
-        $tpl.addPart('static');
+        $tpl.addPart(ENV.staticTranslation);
 
         cyclassicsHamburg.sizeOptions = [
             {value: "", label: "-"},

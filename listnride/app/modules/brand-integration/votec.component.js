@@ -3,10 +3,10 @@
 angular.module('votec-integration',[]).component('votec', {
   templateUrl: 'app/modules/brand-integration/votec.template.html',
   controllerAs: 'votec',
-  controller: [ '$translate', '$translatePartialLoader', 'api',
-    function VotecController($translate, $tpl, api) {
+  controller: [ '$translate', '$translatePartialLoader', 'api', 'ENV', 
+    function VotecController($translate, $tpl, api, ENV) {
       var votec = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
 
       votec.currentBikes = [];
       $translate(["shared.munich"]).then(
@@ -66,10 +66,8 @@ angular.module('votec-integration',[]).component('votec', {
 
           for (var i=0; i<success.data.length; i++) {
             switch (success.data[i].city) {
-              case "Frankfurt am Main": votec.bikes.frankfurt.push(success.data[i]); break;
               case "Heidelberg": votec.bikes.heidelberg.push(success.data[i]); break;
               case "München": votec.bikes.munich.push(success.data[i]); break;
-              case "Stuttgart": votec.bikes.stuttgart.push(success.data[i]); break;
             }
           }
           votec.currentBikes = votec.bikes["munich"];

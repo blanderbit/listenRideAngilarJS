@@ -53,6 +53,7 @@
     "cancel": "Cancel",
     "send": "Send",
     "search": "Search",
+    "search-all": "Search all bikes",
     "search-bikes": "Search your bikes",
     "from-place": "from",
     "contact": "Contact & Support",
@@ -156,6 +157,10 @@
       "cyclassics-hamburg": {
         "meta-title": "Rent a road bike for the Cyclassics Hamburg on listnride",
         "meta-description": "Rent the perfect road bike for the Cyclassics in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
+      },
+      "hamburg-triathlon": {
+        "meta-title": "Rent a road bike for the Triathlon Hamburg on listnride",
+        "meta-description": "Rent the perfect road bike for the Triathlon in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
       },
       "riderman": {
         "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",
@@ -565,7 +570,15 @@
       "name": "Name",
       "description": "Description (min. 100 characters)",
       "min-length-warning": "Length should be at least 100 characters",
-      "size": "Rider Height"
+      "size": "Rider Height",
+      "frame-size": "Frame size",
+      "bicycle-number": "Bicycle No.",
+      "frame-number": "Frame number",
+      "custom-fields": "Additional fields",
+      "details": "Details",
+      "frame_size": "Frame size",
+      "bicycle_number": "Bicycle number",
+      "frame_number": "Frame number"
     },
     "accessories": {
       "header": "What accessories does your bike have?",
@@ -818,6 +831,16 @@
       "copy": "Copy",
       "copied": "Copied!"
     },
+    "invite-dialog": {
+      "rider": {
+        "header": "Did you enjoy the ride?",
+        "subheader": "Recommend your friends to listnride! We add € 10 for his first booking! And if your friend makes use of it, there is another €10 credit for you. A nice Win-Win!"
+      },
+      "lister": {
+        "header": "That was easy, right?",
+        "subheader": "Would you recommend us to your friends? We’ll add €10 for his first booking! And if your friend makes use of it, there is another 10€ credit for your next rental. A nice Win-Win!"
+      }
+    },
     "invitations": {
       "header": "Your friends have earned you {{ credit }}€",
       "status": {
@@ -847,5 +870,10 @@
     "press": "Press",
     "jobs": "Jobs",
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
+  },
+  "seo": {
+    "cities-title": "Planning to Travel? Check out more cities:",
+    "header": "The best bikes in",
+    "bike-shops-in": "Bike Shops in"
   }
 }
