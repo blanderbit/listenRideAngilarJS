@@ -53,7 +53,6 @@
     "cancel": "Cancellare",
     "send": "Inviare",
     "search": "Ricerca",
-    "search-all": "Cerca tutte le bici",
     "from-place": "da",
     "contact": "Contatti e Supporto",
     "show-more": "Mostra di più",
@@ -156,10 +155,6 @@
       "cyclassics-hamburg": {
         "meta-title": "Rent a road bike for the Cyclassics Hamburg on listnride",
         "meta-description": "Rent the perfect road bike for the Cyclassics in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
-      },
-      "hamburg-triathlon": {
-        "meta-title": "Rent a road bike for the Hamburg Triathlon on listnride",
-        "meta-description": "Rent the perfect road bike for the Triathlon in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
       },
       "riderman": {
         "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",
@@ -281,7 +276,11 @@
     "opening-hours-error": "Non puoi salvare l'orario di disponibilità.",
     "uniq-phone": "Numero telefonico già registrato nel nostro sistema.",
     "pending-requests": "Sembra che tu abbia una richiesta aperta per questa bicicletta. Prima  di cancellare la bicicletta è necessario accettarla o annullarla",
-    "account-deleted": "Il tuo profilo è stato cancellato"
+    "account-deleted": "Il tuo profilo è stato cancellato",
+    "enter-email": "Per favore inserisci la tua email",
+    "duplicate-start": "Il processo di duplicazione è iniziato",
+    "duplicate-finish": "Duplication process finished. Copies created successfully",
+    "bike-deleted": "Bici cancellata con successo"
   },
   "settings": {
     "settings": "Impostazioni",
@@ -561,15 +560,7 @@
       "name": "Nome",
       "description": "La descrizione (min. di 100 caratteri)",
       "min-length-warning": "La lunghezza deve essere di almeno 100 caratteri.",
-      "size": "Altezza del ciclista",
-      "frame-size": "Frame size",
-      "bicycle-number": "Bicycle number",
-      "frame-number": "Frame number",
-      "custom-fields": "Additional fields",
-      "details": "Details",
-      "frame_size": "Frame size",
-      "bicycle_number": "Bicycle number",
-      "frame_number": "Frame number"
+      "size": "Altezza del ciclista"
     },
     "accessories": {
       "header": "Quali accessori ha la tua bicicletta?",
@@ -688,7 +679,18 @@
   "listings": {
     "my-bikes": "Le mie biciclette",
     "no-bikes": "Non hai ancora registrato nessuna delle tue biciclette",
-    "list-a-bike": "Registra una bicicletta"
+    "list-a-bike": "Registra una bicicletta",
+    "duplicate": {
+      "duplicate": "Duplicare",
+      "how_many": "Quante biciclette?",
+      "header": "Bici duplicata",
+      "number_bikes": "Numero di bici",
+      "maxlength": "Funziona per un massimo di 99 biciclette",
+      "required": "Il numero di biciclette è richiesto"
+    },
+    "listView": {
+      "price": "Prezzo (€)"
+    }
   },
   "listingCard": {
     "activate-bike": "Attivare",
@@ -697,6 +699,7 @@
     "delete-bike": "Elimina",
     "cancel": "Annulla",
     "delete": "Elimina",
+    "duplicate": "Duplicate",
     "dialog-title": "Sei sicuro di voler eliminare la tua bicicletta ?",
     "dialog-subtitle": "La bicicletta verrà rimossa definitivamente dalla piattaforma. Le richieste attuali non saranno influenzate da questo."
   },
@@ -803,16 +806,6 @@
       "invite-friends": "Invita i tuoi amici",
       "community": "Aiuta a far crescere la comunità",
       "earn-credit": "Guadagna credito listnride"
-    },
-    "invite-dialog": {
-      "rider": {
-        "header": "Ti è piaciuto il viaggio?",
-        "subheader": "Raccomanda ai tuoi amici di elencare! Aggiungiamo € 10 per la sua prima prenotazione! E se il tuo amico ne fa uso, c'è un altro credito di € 10 per te. Un bel Win-Win!"
-      },
-      "lister": {
-        "header": "E 'stato facile, giusto?",
-        "subheader": "ci raccomanderesti ai tuoi amici? Aggiungeremo € 10 per la sua prima prenotazione! E se il tuo amico ne fa uso, c'è un altro credito di 10 € per il tuo prossimo noleggio. Un bel Win-Win!"
-      }
     },
     "invite-form": {
       "header": "Condividi il tuo link personale",
