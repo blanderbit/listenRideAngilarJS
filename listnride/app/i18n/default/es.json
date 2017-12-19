@@ -53,12 +53,13 @@
     "cancel": "Cancelar",
     "send": "Enviar ",
     "search": "Buscar",
+    "search-bikes": "Busca bicicletas",
     "from-place": "de",
     "contact": "Contacto y soporte",
     "show-more": "mostrar más ",
     "show-less": "mostrar menos",
     "phone-number": "Número de teléfono",
-    "wait": "Cargando. Esto puede llevar un rato..",
+    "wait": "Cargando. Esto puede tardar un rato...",
     "lister": "Anunciante",
     "rider": "Ciclista",
     "reviews": "Opiniones",
@@ -109,6 +110,161 @@
     "confirmation-text": "¿Estás seguro?",
     "loading": "Cargando"
   },
+  "meta": {
+    "cities": {
+      "berlin": {
+        "meta-title": "Explora Berlín en bici con listnride",
+        "meta-description": "Descubre Berlín en bici. Con listnride, puedes encontrar una bici de alquiler en Berlín que coincida con tus necesidades y estilo."
+      },
+      "munich": {
+        "meta-title": "Explora Múnich en bici con listnride",
+        "meta-description": "Descubre Múnich en bici. Con listnride, puedes encontrar una bici de alquiler en Múnich que coincida con tus necesidades y estilo."
+      },
+      "amsterdam": {
+        "meta-title": "Explora Ámsterdam en bici con listnride",
+        "meta-description": "Descubre Ámsterdam en bici. Con listnride, puedes encontrar una bici de alquiler en Ámsterdam que coincida con tus necesidades y estilo."
+      },
+      "vienna": {
+        "meta-title": "Explora Viena en bici con listnride",
+        "meta-description": "Descubre Viena en bici. Con listnride, puedes encontrar una bici de alquiler en Viena que coincida con tus necesidades y estilo."
+      }
+    },
+    "business-community": {
+      "meta-title": "La comunidad empresarial de listnride",
+      "meta-description": "Únete a la comunidad empresarial de listnride para alquilar bicis"
+    },
+    "events": {
+      "rapha-super-cross": {
+        "meta-title": "Rapha Super Cross: alquila una bici con listnride"
+      },
+      "in-velo-veritas": {
+        "meta-title": "In Velo Veritas - Alquila una bici con listnride",
+        "meta-description": "Alquila la bici vintage de acero perfecta para In Velo Veritas. listnride tiene una selección de bicicletas clásicas en alquiler para este hermoso recorrido por el país vitivinícola austríaco."
+      },
+      "velothon-bikerental": {
+        "meta-title": "Simplemente alquila la bici de carretera perfecta para la Velothon de Berlín",
+        "meta-description": "¡Participa en la Velothon de Berlín 2017! ¡Alquila una bici de carretera en la comunidad para compartir bicis de listnride y únete a la diversión!"
+      },
+      "constance-spin": {
+        "meta-title": "Alquila la bici de carretera perfecta durante Eurobike",
+        "meta-description": "Sal y monta tu bicicleta en Eurobike con listnride y Katusha"
+      },
+      "velosoph": {
+        "meta-title": "Paseo de otoño, una de las rutas favoritas de los ciclistas de la zona por Holledau.",
+        "meta-description": "Una de las rutas favoritas de los ciclistas de la zona a través de Holledau. listnride visita Velosoph, el Cycling Café de Freising."
+      },
+      "cyclassics-hamburg": {
+        "meta-title": "Alquila una bicicleta de carretera en listnride para la Clásica de Hamburgo ",
+        "meta-description": "Alquila con facilidad la bicicleta de carretera perfecta para la Clásica de Hamburgo online y elige entre marcas como Specialized, Ridley, Cervelo y Bianchi."
+      },
+      "riderman": {
+        "meta-title": "Alquila una bici de carretera para la RiderMan de Bad Dürrheim",
+        "meta-description": "Alquila con facilidad la bicicleta de carretera perfecta para la RiderMan de Bad Duerrheim online y elige entre marcas como Siplon, Specialized, Ridley, Cervelo y Bianchi."
+      },
+      "depart": {
+        "meta-title": "Alquila una bici de carretera para la Grand Départ en listnride",
+        "meta-description": "Únete a listnride y a Schicke Mütze para un paseo en bici de carácter social para celebrar la Grand Départ. Alquila una bici de carretera de alta gama en la comunidad  para compartir bicis de listnride."
+      },
+      "supercross-munich": {
+        "meta-title": "Alquila la bici de ciclocross perfecta para la Supercross de Múnich en listnride",
+        "meta-description": "Alquila online la bicicleta de ciclocross perfecta para la Supercross en Múnich. Elige entre marcas como BMC, Votec, Ridley, SRAM, Specialized, Bianchi, Pasculli, Focus y otras."
+      },
+      "cape-argus": {
+        "meta-title": "Alquila una bici de carretera para la Cape Town Cycle Tour en listnride",
+        "meta-description": "Alquila de manera sencilla la bici de carretera perfecta para la Cape Town Cycle Tour online y elige entre marcas como Specialized, Ridley, Cervelo y Bianchi."
+      },
+      "common": {
+        "meta-title": "Alquila una bici en listnride!",
+        "meta-description": "Alquila una bici en listnride!"
+      }
+    },
+    "brand-integration": {
+      "ampler": {
+        "meta-title": "Programa de prueba de bicicleta eléctrica",
+        "meta-descr": "¡Prueba a andar en bici eléctrica hoy! Las bicis con asistencia eléctrica de Ampler están disponibles en listnride. Alquila una en Berlín, Múnich, Hamburgo y Viena."
+      },
+      "brompton": {
+        "meta-title": "Alquila una bici Brompton con listnride",
+        "meta-description": "¡Prueba una bici Brompton hoy mismo! Estas bicis urbanas plegables están disponibles en listnride. Alquílala en Berlín, Múnich, Hamburgo, Düsseldorf o Frankfurt."
+      },
+      "muli": {
+        "meta-title": "Alquila una bicicleta de carga Muli con listnride",
+        "meta-description": "¡Prueba una bicicleta de carga Muli hoy mismo! Estas bicis de carga urbanas están disponibles en listnride. Alquile una en Berlín o Múnich."
+      },
+      "vello": {
+        "meta-title": "Alquila y prueba las bicicletas eléctricas VELLO en Berlín y Múnich",
+        "meta-description": "VELLO BIKE+ La primera bicicleta plegable eléctrica autorecargable. La VELLO BIKE es una bicicleta plegable de alto rendimiento desarrollada para una experiencia de ciclismo urbano perfecta."
+      },
+      "veletage": {
+        "meta-title": "VELETAGE Salón de la cultura ciclista",
+        "meta-descr": "VELETAGE Salón de la cultura ciclista - Bicis de carrera a medida, ropa, juegos de ruedas, accesorios para bicicletas"
+      },
+      "bonvelo": {
+        "meta-title": "Alquila y prueba bicis de una velocidad de Bonvelo en Berlín y Múnich",
+        "meta-description": "\"Bonvelo BLIZZ\", de una sola velocidad/piñón fijo, puede alquilarse y probarse en Berlín con cuatro tamaños de cuadro. ¡Reserva una en listnride hoy mismo!"
+      },
+      "motoparilla": {
+        "meta-title": "Alquila y prueba la  SUV E-Bike Moto Parilla Carbon en Múnich",
+        "meta-description": "La SUV E-Bike Moto Parilla Carbon se puede probar en Múnich. ¡Simplemente reserva online y disfrute del paseo!"
+      },
+      "votec": {
+        "meta-title": "Alquila y prueba las bicicletas más nuevas de Votec",
+        "meta-descr": "VOTEC - Fusión de funcionalidad, diseño y calidad"
+      },
+      "vanmoof": {
+        "meta-title": "Alquila y prueba las bicis eléctricas Electrified S en Berlín, Múnich y Hamburgo",
+        "meta-descr": "La bici urbana perfecta - VanMoof"
+      },
+      "moeve": {
+        "meta-title": "Alquila y prueba las bicicletas Moeve en Berlín y Múnich",
+        "meta-descr": "La bici con un sistema de conducción único: Cyfly de Moeve."
+      }
+    },
+    "about-us": {
+      "meta-title": "listnride: la empresa",
+      "meta-description": "Fundado por entusiastas de la bici para sus hermanos y hermanas en espíritu."
+    },
+    "contact-and-help": {
+      "meta-title": "listnride está aquí para ayudarte",
+      "meta-description": "Contacta con nosotros si tienes preguntas especiales o necesitas ayuda para resolver un problema"
+    },
+    "press": {
+      "meta-title": "listnride  y la prensa",
+      "meta-description": "Nos encanta compartir bicis. Y responderemos a todas tus preguntas de buen grado."
+    },
+    "invest": {
+      "meta-title": "listnride usa crowdfunding. Sé parte de ello e invierte en la comunidad líder en compartir bicis en Europa.",
+      "meta-description": "Visita Seedrs para obtener más información sobre cómo invertir en Listnride."
+    },
+    "terms-and-conditions": {
+      "meta-title": "listnride | Términos y condiciones del sitio web",
+      "meta-description": "Los términos y condiciones de la comunidad para compartir bicis de listnride se aplican al uso de la plataforma en línea."
+    },
+    "trust-and-safety": {
+      "meta-title": "Alquiler de bicicletas seguro: listnride te respalda",
+      "meta-description": "La confianza es la base de una comunidad de intercambio. Promovemos la equidad y la seguridad mediante la verificación de la identidad de nuestros usuarios y ofreciendo una garantía de los anunciantes."
+    },
+    "how-it-works": {
+      "meta-title": "Compartir bicis es más fácil",
+      "meta-description": "Usar listnride es tan fácil como quedar para tomar un café. ¡Pruébalo tú mismo!"
+    },
+    "jobs": {
+      "meta-title": "Trabaja para listnride",
+      "meta-description": "Únete al equipo para compartir bicis de listnride de Berlín o Múnich para crear una comunidad global de ciclismo"
+    },
+    "shop-landing": {
+      "meta-title": "Plugin de la tienda de listnride - Obtén tu alquiler de bicis online",
+      "meta-description": "listnride ahora ofrece un plug-in gratuito para integrar fácilmente un motor de reservas de alquiler de bicis en tu sitio web."
+    },
+    "imprint": {
+      "meta-title": "listnride | Marca",
+      "meta-description": "Alquila la bici perfecta en la comunidad de listnride. Encuentra la que se adapte a tu estilo y necesidades."
+    },
+    "privacy": {
+      "meta-title": "Política de privacidad de listnride",
+      "meta-description": "La política de privacidad de la comunidad para compartir bicis de listnride se aplica al uso de la plataforma online"
+    }
+  },
   "toasts": {
     "update-profile-success": "Tu perfil se ha actualizado con éxito",
     "error": "Se ha producido un error. Asegúrate de que la conexión a Internet funcione y vuelve a intentarlo.",
@@ -125,7 +281,11 @@
     "opening-hours-error": "No se pudo grabar el horario de apertura.",
     "uniq-phone": "Número de teléfono ya registrado en nuestro sistema.",
     "pending-requests": "Parece que tienes una solicitud abierta para esta bicicleta. Antes de poder eliminar la bicicleta, debe aceptarla o cancelarla.",
-    "account-deleted": "Tu cuenta ha sido eliminada"
+    "account-deleted": "Tu cuenta ha sido eliminada",
+    "enter-email": "Introduce tu dirección de correo electrónico",
+    "duplicate-start": "Proceso de duplicación iniciado",
+    "duplicate-finish": "Proceso de duplicación terminado. Copias creadas con éxito",
+    "bike-deleted": "Bici borrada con éxito"
   },
   "settings": {
     "settings": "Configuración",
@@ -532,7 +692,18 @@
   "listings": {
     "my-bikes": "Mis bicicletas",
     "no-bikes": "Todavía no has registrado ninguna de tus rutas",
-    "list-a-bike": "Registrar una bicicleta"
+    "list-a-bike": "Registrar una bicicleta",
+    "duplicate": {
+      "duplicate": "Duplicada",
+      "how_many": "¿Cuántas bicis?",
+      "header": "Bicicleta duplicada",
+      "number_bikes": "Número de bicicletas",
+      "maxlength": "Funciona para un máximo de 99 bicicletas",
+      "required": "Número de bicicletas que se requiere"
+    },
+    "listView": {
+      "price": "Precio (€)"
+    }
   },
   "listingCard": {
     "activate-bike": "Activar",
@@ -541,6 +712,7 @@
     "delete-bike": "Borrar",
     "cancel": "Cancelar",
     "delete": "Borrar",
+    "duplicate": "Duplicada",
     "dialog-title": "¿Seguro que quieres eliminar tu bici?",
     "dialog-subtitle": "La bici se eliminará permanentemente de la plataforma. Las solicitudes actuales no se ven afectadas por esto."
   },
