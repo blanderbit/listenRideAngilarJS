@@ -1103,8 +1103,8 @@
       });
 
       $stateProvider.state({
-        name: 'city-landing',
-        url: '/berlin',
+        name: 'cityLanding',
+        url: '/{pageTitle: string}',
         template: '<city-landing></city-landing>'
       });
 

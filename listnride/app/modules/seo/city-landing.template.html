@@ -38,7 +38,7 @@
     <div flex="50" flex-xs="100">
       <!-- <div class="lnr-section-title" layout="column" layout-align="center center"> -->
         <!-- <h2 class="md-headline">{{ cityLanding.data.texts.main.title }}</h2> -->
-        <h2 class="md-headline">Rent perfect bikes in Berlin</h2>
+        <h2 class="md-headline">Rent perfect bikes in {{ cityLanding.data.city }}</h2>
         <br>
       <!-- </div> -->
       <p class="md-body-1" style="margin: 7px">{{ cityLanding.data.texts.main.description }}</p>
@@ -137,12 +137,12 @@
   <div class="content section" layout="column" layout-align="center center">
     <br><br>
     <md-button ui-sref="search({location: 'Berlin'})" class="md-xlrg md-raised md-primary">
-    Search all Bikes in Berlin
+    Search all Bikes in {{ cityLanding.data.city }}
     </md-button>
   </div>
   
 
-  <div class="content section" layout-padding>
+  <div class="content section" layout-padding ng-if="cityLanding.data.shops.length > 4">
     <br><br><br><br>
     <md-divider></md-divider>
     <div class="lnr-section-title" layout="column" layout-align="center center">
