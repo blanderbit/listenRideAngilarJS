@@ -77,6 +77,33 @@
       "cafes-bars-content": "Si te gusta la comida vegetariana y vegana, te recomendamos que visites <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot </a>en Karmeliterplatz. Si prefieres la cocina austríaca más tradicional, te recomendamos <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta </a>. Pide un Tafelspitz o Wiener Schnitzel tradicionales y disfrútalos al aire libre con vistas a la famosa Ópera de Viena. ¡Será una gran noche para recordar! Para el toque final del día, qué mejor que caminar hacia el Danubio. En el camino encontrarás muchos bares interesantes o puedes sentarte al raso bajo las estrellas junto al río."
     }
   },
+  "business-community": {
+    "meta-title": "La comunidad empresarial de listnride",
+    "meta-description": "Únete a la comunidad empresarial de listnride para alquilar bicis",
+    "title": "La comunidad empresarial de listnride",
+    "subtitle": "Únete a la comunidad empresarial de listnride para alquilar bicis",
+    "description": "Nos gustaría incluirte en nuestras soluciones comerciales de alquiler de bicicletas y hacer que sea lo más fácil posible para ti. Porque nuestra pasión es el ciclismo y nos gustaría ver más en las calles de Europa. ¿No es genial que podamos apoyarnos mutuamente en esta misión?",
+    "feature-1": {
+      "title": "Alquila más bicis a través de listnride!",
+      "description": "Tus clientes pueden seleccionar y reservar su bici de alquiler online en listnride, así como a través de tu página web. listnride se encarga del proceso completo de reserva y pago por ti."
+    },
+    "feature-2": {
+      "title": "Presenta tu tienda online",
+      "description": "Presenta tu tienda online y, de este modo ampliarás tu base de clientes al llegar mejor a la \"generación de internet\" a través de la web y los dispositivos móviles."
+    },
+    "feature-3": {
+      "title": "Benefíciate de nuestro alcance",
+      "description": "Listnride es la comunidad de bicicletas compartidas más grande de Europa y seguimos creciendo. Utiliza este alcance y gana nuevos clientes internacionales."
+    },
+    "text-2": {
+      "title": "Únete a la comunidad empresarial de listnride ",
+      "description": "Regístrate ahora y configura la página de tu propia tienda al instante. O contacta con nosotros personalmente. Martin te ayudará con gusto, contacta con él en: <br><a href=\"mailto:ml@listnride.com\">ml@listnride.com </a>o 0171&nbsp;83 &nbsp;13 &nbsp;348"
+    },
+    "text-3": {
+      "column-1": "listnride ya es la comunidad más grande para compartir bicicletas en Europa y por extensión, especialista en alquiler de bicis privadas y comerciales. Sabemos lo que buscan nuestros clientes y, por lo tanto, podemos dirigirlos a tu página de compras en listnride para que encuentren y reserven tus bicis de alquiler con facilidad.",
+      "column-2": "Creemos que es importante ofrecer a nuestra comunidad orientada a las bicicletas una amplia gama de ellas, desde una bici de cross a una bici de carretera y desde una bici de paseo a una de carga. Junto contigo, no sólo podemos ofrecer a nuestros usuarios la bici de alquiler perfecta para las vacaciones, sino también ayudarles a encontrar una nueva bicicleta (compra)."
+    }
+  },
   "events": {
     "rapha-super-cross": {
       "text": "Rapha Super Cross regresa al Parque Olímpico de Múnich los días 29 y 30 de octubre para la tercera edición de lo que se ha convertido rápidamente en un legendario festival de ciclocross. Si deseas participar pero no tiene la bici correcta, puedes alquilar una a través de listnride. Hay entusiastas de la bicicleta como tú que ofrecen las bicicletas que puedes ver a continuación. Puedes solicitar y reservar los recorridos antes del evento y recoger la bici según lo acordado con el propietario. Los dueños de las bicis también pueden ofrecer en alquiler las bicis que no usen y así ganar algo de dinero mientras conocen a personas interesantes que participan en el evento. ¡Conviértete en parte de nuestra creciente comunidad!"
@@ -85,7 +112,7 @@
       "meta-title": "In Velo Veritas - Alquila una bici con listnride",
       "meta-description": "Alquila la bici vintage de acero perfecta para In Velo Veritas. listnride tiene una selección de bicicletas clásicas en alquiler para este hermoso recorrido por el país vitivinícola austríaco.",
       "title": "In Velo Veritas - El tour en bicicleta vintage que es atemporal",
-      "text": "La legendaria \"In Velo Veritas\" se celebra este año por quinta vez, entre el 10 y el 11 de junio de 2017 en Stockerau. Para aquellos que quieran participar pero necesiten una bicicleta que cumpla con todo lo necesario, recopilamos algunas bicicletas adecuadas de los miembros de nuestra comunidad que te salvarán el día. ¡Basta con que las alquiles! A continuación encontrarás las bicis que ofrecen entusiastas del ciclismo como tú. Si no puedes participar, tienes bicicletas más vintage, o simplemente quieres conocer personas afines, ¡puedes compartir tu bici con otros en nuestra plataforma! ¡Conviértete en parte de nuestra creciente comunidad y gana dinero extra con tu pasión!"
+      "text": "La legendaria \"In Velo Veritas\" se celebra este año por sexta vez, entre el 9 y el 10 de junio de 2018 en Retz. Para aquellos que quieran participar pero necesiten una bicicleta que cumpla con todo lo necesario, recopilamos algunas bicicletas adecuadas de los miembros de nuestra comunidad que te salvarán el día. ¡Basta con que las alquiles! A continuación encontrarás las bicis que ofrecen entusiastas del ciclismo como tú. Si no puedes participar, tienes bicicletas más vintage, o simplemente quieres conocer personas afines, ¡puedes compartir tu bici con otros en nuestra plataforma! ¡Conviértete en parte de nuestra creciente comunidad y gana dinero extra con tu pasión!"
     },
     "velothon-bikerental": {
       "meta-title": "Simplemente alquila la bici de carretera perfecta para la Velothon de Berlín",
@@ -123,8 +150,8 @@
       "meta-title": "Alquila una bicicleta de carretera en listnride para la Clásica de Hamburgo ",
       "meta-description": "Alquile con facilidad la bicicleta de carretera perfecta para la Clásica de Hamburgo online y elige entre marcas como Specialized, Ridley, Cervelo y Bianchi.",
       "title": "Alquila una bicicleta de carretera en listnride para la Clásica de Hamburgo ",
-      "text": "¿Necesitas una bici de carretera para la Cyclassics de Hamburgo? ¡Podemos engancharte! Junto con la comunidad listnride, ofrecemos bicis de carretera que puedes alquilar por el período que quieras. Basta con que elijas una de las bicis de más abajo, la solicites para el período que necesites y la recojas cuando llegue  el momento. Tan fácil como eso. <br><br>¿No puedes participar? Ayuda a alguien que lo necesite. ¡Anuncia tu bici y gana dinero extra!",
-      "description": "Dónde: <b>Hamburgo </b>| qué: <b>carrera de bicis de carretera de 60, 120 o 180 km </b>| cuándo: <b>20.08.2017 </b>"
+      "text": "¿Necesitas una bici de carretera para la Cyclassics de Hamburgo? ¡Podemos engancharte! Junto con la comunidad listnride, ofrecemos bicis de carretera que puedes alquilar por el período que quieras. Basta con que elijas una de las bicis de más abajo, la solicites para el período que necesites y la recojas cuando llegue el momento. Tan fácil como eso. <br><br>Hazte con un descuento de 10€  introduciendo este código de promoción: CYCLASSICS2018 en la configuración de tu cuenta antes de reservar  ¿No puedes participar? Ayuda a alguien que lo necesite. ¡Anuncia tu bici y gana dinero extra!",
+      "description": "Dónde: <b>Hamburgo </b>| qué: <b>carrera de bicis de carretera de 60, 100 o 160 km </b>| cuándo: <b>19.08.2017 </b>"
     },
     "riderman": {
       "meta-title": "Alquila una bici de carretera para la RiderMan de Bad Dürrheim",
@@ -154,8 +181,8 @@
       "subhead-2": "Alquila una bici gratis",
       "text-1": "Concebida como el Airbnb de las bicis, listnride ofrece una alternativa al alquiler de bicis clásico: propietarios particulares, distribuidores o fabricantes ofrecen sus bicis en alquiler en listnride. Turistas, ciudadanos, familias, deportistas y viajeros de negocios alquilan la bici adecuada a su estilo y necesidades.",
       "text-2": "De manera especial para la MCBW, los visitantes pueden alquilar una bici de las marcas <b>Bicicleta plegable Brompton </b>y <b>Bici eléctrica Ampler</b>gratis <b>(código de descuento: LNR2017) </b>durante medio día. listnride persigue la visión de ofrecer a cuantas más personas mejor de cualquier parte del mundo acceso sin complicaciones a bicis de alta calidad y con estilo. Si quieres explorar Múnich, ¡anda en bici con listnride!",
-      "location-description": "Elige una de las cuatro ubicaciones",
-      "location-text": "Las cuatro ubicaciones son <b>① Bicicletas Munix Finest </b>en Wörthstrasse 11, <b>② Velofactum </b>en Schopenhauerstraße 69, <br><b>③ Velocompany </b>en Schleissheimerstrasse 106 y <b>④ listnride </b>en Pündterplatz 1"
+      "location-description": "Elige tu ubicación",
+      "location-text": "Las dos ubicaciones son <b>① Munix Finest Bicycles </b>en Wörthstrasse 11 y <b>② listnride</b> en Pündterplatz 1"
     },
     "cwd": {
       "home": {
@@ -420,6 +447,31 @@
       "faq-answer-5": "La bicicleta se te enviará con un cargador. Basta con que enchufes el conector como lo harías con tu teléfono inteligente, y seis horas después estará completamente cargada.",
       "faq-question-6": "¿Qué obtengo con una Electrified S?",
       "faq-answer-6": "• Una garantía de dos años cubre los defectos de mano de obra y materiales. <br>• Tecla de backup remoto, para bloquear o desbloquear la bici cuando el teléfono inteligente no esté disponible o esté sin batería <br>• Cargador de bici (cargador de 36V, 2A) <br>• Seguimiento antirrobo GSM y Bluetooth  <br>Aplicación de teléfono inteligente para Android e iOS <br>•  Manual de funcionamiento y guía del usuario <br>• Herramienta antirrobo para las tuercas de las ruedas de la bici <br>•  Ruedas de Electrified S de 28 \"x 2,35\". (60-622) <br>• Cable para el bloqueo integrado <br> Herramienta para ajustar la posición del asiento y del manillar"
+    },
+    "moeve": {
+      "description": "La bici con un sistema de conducción único: Cyfly de Moeve.",
+      "subdescription": "Hecha por un equipo de ingenieros con inquietudes",
+      "item1-title": "Cyfly",
+      "item1-description": "Mejor transmisión en los sectores relevantes. La conducción única y el pedaleo potente aseguran una experiencia ciclista única.",
+      "item2-title": "Pintura",
+      "item2-description": "El cuadro tiene dos colores. A mano, el proceso de color fluido y el tema gráfico (plumaje de una gaviota) se difunden en la tecnología del aerógrafo. Una capa en polvo, mate y de alta resistencia sella el cuadro.",
+      "item3-title": "Geometría del cuadro",
+      "item3-description": "Ergonomía perfecta y transmisión de potencia efectiva: la geometría del cuadro se adaptó a Cyfly y al ciclista. Avance rápido combinado con una posición de asiento cómoda.",
+      "choose-location": "Escoge tu ciudad",
+      "find-out-more": "Conoce más sobre Cyfly de Moeve",
+      "order-online": "<a href=\"https://amplerbikes.com/bikes\" target=\"_BLANK\">Compra una de sus bicis online </a>y obtén el reembolso del alquiler. <br>Lee a continuación las preguntas más frecuentes.",
+      "faq-question-1": "¿Qué es Cyfly?",
+      "faq-answer-1": "Cyfly es una transmisión patentada de enlaces múltiples en la que el pedal ya no está conectado directamente al eje, sino que está soportado desde atrás.",
+      "faq-question-2": "¿Es Cyfly lo mismo que un cambio de marchas?",
+      "faq-answer-2": "No. A diferencia de un convertidor de par convencional (engranajes de desmultiplicación y cubos de engranajes), Cyfly es un convertidor de fuerza especial que, a diferencia de los sistemas convencionales, no alarga el recorrido del pedal para aumentar el par. Cyfly se puede combinar con un cambio de marchas convencional para usar una gama más amplia de engranajes.",
+      "faq-question-3": "¿Tengo que acostumbrarme a una nueva técnica para usar Cyfly?",
+      "faq-answer-3": "Nuestra experiencia con hasta ahora más de 1000 conductores de prueba muestra que usted automáticamente y naturalmente se ajusta al nuevo movimiento cuando conduce con Cyfly. Aquí ha probado comenzar los primeros kilómetros con una menor cadencia y en engranajes más pesados.",
+      "faq-question-4": "¿Dónde está conectado Cyfly?",
+      "faq-answer-4": "Cyfly se ubica en la posición de un pedalier convencional. Reemplaza toda la sección frontal del tren de transmisión en una bicicleta convencional. El sistema de accionamiento cyfly incluye bielas, cojinetes y el anillo de cadena pendiente de patente. Todos los componentes se producen utilizando tecnologías de producción muy modernas. Cyfly es 'estado del arte'.",
+      "faq-question-5": "¿Se puede adaptar Cyfly?",
+      "faq-answer-5": "Dado que el sistema de accionamiento Cyfly requiere un cuadro adaptado con precisión, no se puede readaptar con facilidad. Inicialmente, Cyfly solo estará disponible como un componente innovador de bicicletas premium.",
+      "faq-question-6": "¿Cuánto más eficiente es Cyfly?",
+      "faq-answer-6": "Todos aplican la fuerza de manera diferente durante el ciclismo. Por lo tanto, no podemos proporcionar una ganancia objetiva y generalmente aplicable en eficiencia. El valor se calcula en base a los datos con restricciones establecidas, por un lado, y un número significativo de pruebas de campo, por otro lado. La ganancia de eficiencia también fue verificada por un experto externo de un laboratorio de bicicletas en Freiburg, Alemania. Además, el efecto Cyfly fue confirmado por renombrados ciclistas y profesionales del triatlón."
     }
   },
   "about-us": {

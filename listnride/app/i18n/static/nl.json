@@ -77,6 +77,33 @@
       "cafes-bars-content": "Indien je eens wat anders wilt proberen en bijvoorbeeld een goede veganer / vegatarisch restaurant wilt proberen, reserveer dan een tafeltje bij <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> aan het Karmeliterplein. Als je meer van de traditionele oostenrijkse keuken houdt, is <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a> een absolute aanrader. Een heerlijke Tafelspitz of Wiener Schnitzel met blik op de fameuze Wiener Oper. Beter kan het niet, toch? Als laatste stop voor het nuttigen van een afzakker leent zich het gebied rond de Donau zich uitstekend."
     }
   },
+  "business-community": {
+    "meta-title": "De listnride business community",
+    "meta-description": "Doe je voordeel met het zakelijke fietsverhuur via listnride",
+    "title": "De listnride business community",
+    "subtitle": "Doe je voordeel met het zakelijke fietsverhuur via listnride",
+    "description": "Wij willen je graag onze commerciële fietsverhuuroplossingen aanbieden en het je zo gemakkelijk mogelijk maken. Onze passie is fietsen en dus zien we dit graag meer in de straten van Europa. Is het niet geweldig dat we elkaar in deze missie kunnen ondersteunen?",
+    "feature-1": {
+      "title": "Huur meer fietsen via listnride",
+      "description": "Jouw klanten kunnen hun huurfiets online selecteren en boeken, zowel via listnride als op je eigen website. Het volledige boekings- en betalingsproces neemt listnride van je over."
+    },
+    "feature-2": {
+      "title": "Presenteer jouw winkel online",
+      "description": "Presenteer jouw fietsaanbod online en breid zo je klantenbestand uit door de “Internet generatie' beter te bereiken via internet en mobiel."
+    },
+    "feature-3": {
+      "title": "Profiteer van ons bereik",
+      "description": "listnride is Europa's grootste fietsdeelgemeenschap en we blijven groeien. Profiteer van dit bereik en win nieuwe internationale klanten."
+    },
+    "text-2": {
+      "title": "Word lid van de listnride Business Community!",
+      "description": "Meld je nu aan en zet direct uw eigen winkelpagina op. Of neem persoonlijk contact met ons op. Gert-Jan helpt je graag verder, neem contact met hem op via: <a href=\"mailto:gj@listnride.com\">gj@listnride.com</a><br>"
+    },
+    "text-3": {
+      "column-1": "listnride is nu al de grootste community voor het delen van fietsen in Europa en daarmee een specialist voor particuliere en commerciële fietsverhuur. Wij weten waar onze klanten naar op zoek zijn en kunnen ze direct naar je listnride shoppagina leiden en zo gemakkelijk mogelijk je huurfietsen vinden en boeken.",
+      "column-2": "Wij vinden het belangrijk onze fiets-enthousiaste gemeenschap een breed scala aan fietsen aan te bieden, van een crosser tot een racefiets en van een Omafiets tot een bakfiets. Samen met jou kunnen we onze gebruikers niet alleen de perfecte huurfiets voor de vakantie aanbieden, maar ook helpen om een ​​nieuwe (koop) fiets te vinden."
+    }
+  },
   "events": {
     "rapha-super-cross": {
       "text": "De Rapha Super Cross is weer terug in München, voor het derde jaar op rij. Indien je er graag bij wil zijn, maar geen geschickte fiets hebt, kann je via listnride een passende fiets huren. De listnride bike sharing community biedt verschillende cyclocrossfietsen te huur aan. De fietsen kunnen voor het evenement bij de verschillende aanbieders worden aangevraagd en geboekt. De overdracht wordt direct met de verhuurder afgesproken. Indien je een fiets hebt die niet benut wordt, kan je deze gewoon aanbieden om daarmee wat geld te verdienen ein interessante mensen te leren kennen, die aan het evenement deelnemen. Sluit je aan bij de groeiende Community!"
@@ -420,6 +447,31 @@
       "faq-answer-5": "Your bike will ship with a charger. Simply plug in the connector just like you'd plug in your smartphone, and six hours later it will be fully charged.",
       "faq-question-6": "What do I get with an Electrified S?",
       "faq-answer-6": "• A two-year warranty covering defects in workmanship and materials. <br>• Backup remote key, for locking or unlocking your bike when your smartphone is not available or out of battery<br>• Bike Charger (36V, 2A. charger)<br>• GSM and Bluetooth Anti-Theft Tracking<br>• Smartphone App for Android and iOS<br>• Operating Manual and User Guide<br>• Anti-Theft Tool for your bike's wheel nuts <br>• The Electrified S tyres 28\" x 2.35\" tyres. (60-622)<br>• Cable for the integrated lock<br>• Tool for adjusting the seat and handlebar position"
+    },
+    "moeve": {
+      "description": "De fiets met de meest innovatieve fietstransmissie - Cyfly van Möve",
+      "subdescription": "Gemaakt door gepassioneerde ingenieurs",
+      "item1-title": "Cyfly",
+      "item1-description": "Betere transmissie op de belangrijke momenten. Het bijzondere rijgedrag en de krachtige pedalen zorgen voor een unieke fietservaringen",
+      "item2-title": "Lackering",
+      "item2-description": "De frames worden tweekleurig geprimed. Met de hand, worden de vloeiende kleurgradiënt en het grafische element (verenkleed van een zeemeeuw) gespoten in airbrushtechniek. Een poedervormige, matte en zeer sterke toplaag dicht de frames af.",
+      "item3-title": "Framegeometrie",
+      "item3-description": "Perfecte ergonomie en effectieve krachtoverbrenging - De framegeometrie is afgestemd op Cyfly en de berijder. Snel acceleratie gecombineerd met comfortabele zitpositie.",
+      "choose-location": "Wähle deine Stadt",
+      "find-out-more": "Meer te weten komen over Möve",
+      "order-online": "<a href=\"https://www.moeve-bikes.de/cyfly/\" target=\"_blank\">Bestel uw Cyfly online bij Möve</a> en wij betalen de huur voor uw proefrit terug. Bekijk de meestgestelde vragen.",
+      "faq-question-1": "Wat is Cyfly?",
+      "faq-answer-1": "Cyfly is een gepatenteerde multi-link-transmissie waarbij het pedaal niet langer rechtstreeks op de as is aangesloten, maar erachter wordt bevestigd.",
+      "faq-question-2": "Is Cyfly niet hetzelfde als een Versnellingsysteem?",
+      "faq-answer-2": "Nee. Conventionele derailleurs (ketting, naaf of transmissie) verlengen de pedaalslag om de torque te verhogen. Cyfly creëert een nieuw traject, dat zorgt voor een beter overbrengen van de beenkracht. Cyfly kan worden gecombineerd met elke conventionele versnelling aan het achterwiel.",
+      "faq-question-3": "Moet ik wennen aan een nieuwe techniek voor Cyfly?",
+      "faq-answer-3": "Onze ervaring met meer dan 1000 testers laat tot dusver zien dat u zich automatisch en natuurlijk aanpast aan de nieuwe fietsbeweging by het fietsen met Cyfly. Hier is bewezen dat het de eerste paar kilometers met een lagere cadans en in zwaardere versnellingen aan te raden is.",
+      "faq-question-4": "Waar wordt de Cyfly gemonteerd?",
+      "faq-answer-4": "Cyfly zit op de plaats van een gebruikelijke trapas. Het vervangt het gehele trapas van een conventionele fiets. De Cyfly-aandrijving bevat de crank, lagers en het kettingblad waarvoor patent is aangevraagd. Alle componenten worden vervaardigd met behulp van de modernste productietechnologieën. Cyfly is state of the art.",
+      "faq-question-5": "Is het mogelijk om Cyfly achteraf aan te brengen?",
+      "faq-answer-5": "Aangezien de Cyfly-aandrijving een precies aangepast frame vereist, kan deze niet gemakkelijk achteraf worden aangebracht. In het begin zal Cyfly alleen een innovatief onderdeel van premium fietsen zijn.",
+      "faq-question-6": "Hoeveel efficiënter is Cyfly?",
+      "faq-answer-6": "Iedereen brengt zijn of haar kracht anders over bij het fietsen. Daarom is het moeilijk een gemiddelde toename van de efficiëntie objectief te kwantificeren. De waarde wordt enerzijds berekend aan de hand van gegevens met gedefinieerde randvoorwaarden en aan de andere kant uit een aanzienlijk aantal veldproeven. Bovendien werd de toename van de efficiëntie bevestigd door een extern rapport van het fietslaboratorium in Freiburg. Het Cyfly-effect werd ook bevestigd door bekende professionals uit wielrennen en triatlon. Zoals met de meeste nieuwe producten, raden we aan het zelf uit te proberen."
     }
   },
   "about-us": {

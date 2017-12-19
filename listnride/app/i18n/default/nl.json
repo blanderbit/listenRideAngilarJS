@@ -52,6 +52,7 @@
     "cancel": "Afbreken",
     "send": "Sturen",
     "search": "Zoeken",
+    "search-bikes": "Zoek je fietsen",
     "from-place": "uit",
     "contact": "Contact & Help",
     "show-more": "Toon meer",
@@ -108,6 +109,161 @@
     "confirmation-text": "Weet je het zeker?",
     "loading": "Het laden"
   },
+  "meta": {
+    "cities": {
+      "berlin": {
+        "meta-title": "Explore Berlin by bike with listnride",
+        "meta-description": "Discover Berlin by bike. With listnride, you can find a bike for rent in Berlin that matches your needs and your style."
+      },
+      "munich": {
+        "meta-title": "Explore Munich by bike with listnride",
+        "meta-description": "Discover Munich by bike. With listnride, you can find a bike for rent in Munich that matches your needs and your style."
+      },
+      "amsterdam": {
+        "meta-title": "Explore Amsterdam by bike with listnride",
+        "meta-description": "Discover Amsterdam by bike. With listnride, you can find a bike for rent in Amsterdam that matches your needs and your style."
+      },
+      "vienna": {
+        "meta-title": "Explore Vienna by bike with listnride",
+        "meta-description": "Discover Vienna by bike. With listnride, you can find a bike for rent in Vienna that matches your needs and your style."
+      }
+    },
+    "business-community": {
+      "meta-title": "De listnride business community",
+      "meta-description": "Doe je voordeel met het zakelijke fietsverhuur via listnride"
+    },
+    "events": {
+      "rapha-super-cross": {
+        "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
+      },
+      "in-velo-veritas": {
+        "meta-title": "In Velo Veritas - Rent a bike with listnride",
+        "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country."
+      },
+      "velothon-bikerental": {
+        "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
+        "meta-description": "Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!"
+      },
+      "constance-spin": {
+        "meta-title": "Rent the perfect road bike during Eurobike",
+        "meta-description": "Get out and ride your bike at Eurobike with listnride and Katusha"
+      },
+      "velosoph": {
+        "meta-title": "Autumn ride, a local riders' favourite route through Holledau.",
+        "meta-description": "A local riders' favourite route through Holledau. listnride pays a visit to Velosoph, the Cycling Café in Freising."
+      },
+      "cyclassics-hamburg": {
+        "meta-title": "Rent a road bike for the Cyclassics Hamburg on listnride",
+        "meta-description": "Rent the perfect road bike for the Cyclassics in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
+      },
+      "riderman": {
+        "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",
+        "meta-description": "Rent the perfect road bike for the RiderMan in Bad Duerrheim easily online and choose from brands such as Siplon, Specialized, Ridley, Cervelo and Bianchi"
+      },
+      "depart": {
+        "meta-title": "Rent a road bike for the Grand Départ on listnride",
+        "meta-description": "Join listnride and Schicke Mütze for a social road ride in celebration of the Grand Départ. Rent a high-end road bike from the listnride bike-sharing community."
+      },
+      "supercross-munich": {
+        "meta-title": "Rent the perfect cyclocross Bike for the Supercross Munich on listnride",
+        "meta-description": "Rent the perfect cyclocross bike for the Supercross in Munich easily online. Choose from brands such as BMC, Votec, Ridley, SRAM, Specialized, Bianchi, Pasculli, Focus and other brands."
+      },
+      "cape-argus": {
+        "meta-title": "Rent a road bike for the Cape Town Cycle Tour on listnride",
+        "meta-description": "Rent the perfect road bike for the  Cape Town Cycle Tour easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
+      },
+      "common": {
+        "meta-title": "Huur een fiets op de listnride",
+        "meta-description": "Huur een fiets op de listnride"
+      }
+    },
+    "brand-integration": {
+      "ampler": {
+        "meta-title": "E-Bike Test Ride Program",
+        "meta-descr": "Test ride an E-Bike today! Electric assist bikes from Ampler available on listnride. Rent one in Berlin, Munich, Hamburg and Vienna."
+      },
+      "brompton": {
+        "meta-title": "Rent a Brompton bike with listnride",
+        "meta-description": "Test ride a Brompton bike today! These urban folding bikes are available on listnride. Rent one in Berlin, Munich, Hamburg, Düsseldorf or Frankfurt."
+      },
+      "muli": {
+        "meta-title": "Rent a Muli cargo bike with listnride",
+        "meta-description": "Test ride a Muli cargo bike today! These urban cargo bikes are available on listnride. Rent one in Berlin or Munich."
+      },
+      "vello": {
+        "meta-title": "Rent and test VELLO E-Bikes in Berlin & Munich",
+        "meta-description": "VELLO BIKE+ The First Self-Charging Electric Folding Bike. The VELLO BIKE is a high-performance folding bike developed for the perfect urban cycling experience."
+      },
+      "veletage": {
+        "meta-title": "VELETAGE Salon für Radkultur",
+        "meta-descr": "VELETAGE Salon für Radkultur - Custom made racing bikes, clothing, wheelsets, bike fittings"
+      },
+      "bonvelo": {
+        "meta-title": "Rent and Test Bonvelo Singlespeed Bikes in Berlin & Munich",
+        "meta-description": "The singlespeed/fixed-gear \"bonvelo BLIZZ\" is available to rent and test ride in Berlin in four frame sizes. Book one on listnride today!"
+      },
+      "motoparilla": {
+        "meta-title": "Rent and Test the Moto Parilla Carbon SUV E-Bike in Munich",
+        "meta-description": "The Carbon SUV E-Bike from Moto Parilla can be tested in Munich. Simply book online and enjoy the ride!"
+      },
+      "votec": {
+        "meta-title": "Rent and Test the newest Votec Bikes",
+        "meta-descr": "VOTEC - Fusion of Functionality, Design and Quality"
+      },
+      "vanmoof": {
+        "meta-title": "Rent and test the Electrified S E-Bikes in Berlin, Munich and Hamburg",
+        "meta-descr": "The perfect city bike - VanMoof"
+      },
+      "moeve": {
+        "meta-title": "Huur en test een Moeve fiets in München en Amsterdam",
+        "meta-descr": "De fiets met de meest innovatieve fietstransmissie - Cyfly van Möve"
+      }
+    },
+    "about-us": {
+      "meta-title": "listnride - the company",
+      "meta-description": "Founded by bike enthusiasts for their brothers and sisters in spirit."
+    },
+    "contact-and-help": {
+      "meta-title": "listnride is here for you",
+      "meta-description": "Contact us if you have special questions or need help solving a problem"
+    },
+    "press": {
+      "meta-title": "listnride press",
+      "meta-description": "We love bike sharing. And we’ll gladly answer all your questions."
+    },
+    "invest": {
+      "meta-title": "listnride is crowdfunding! Be part of it and invest in Building Europe’s leading bike sharing community.",
+      "meta-description": "Visit Seedrs to learn more about investing in listnride."
+    },
+    "terms-and-conditions": {
+      "meta-title": "listnride | Website Terms & Conditions",
+      "meta-description": "The Terms and Conditions of the Bike-Sharing-Community listnride apply to the use of the online platform."
+    },
+    "trust-and-safety": {
+      "meta-title": "Bike hire made safe – listnride has your back",
+      "meta-description": "Trust is the be-all and end-all in a sharing community. We promote fairness and safety by verifying our users’ identities and offering a lister guarantee."
+    },
+    "how-it-works": {
+      "meta-title": "Bike sharing made easy",
+      "meta-description": "Using listnride is as easy as meeting up for coffee. Try for yourself!"
+    },
+    "jobs": {
+      "meta-title": "Work for listnride",
+      "meta-description": "Join the listnride bike sharing team in Berlin or Munich to build the global biking community"
+    },
+    "shop-landing": {
+      "meta-title": "listnride Shop Plugin - Get your bike rental online",
+      "meta-description": "listnride now offers a free plug-in to easily integrate a bike rental booking engine on your website."
+    },
+    "imprint": {
+      "meta-title": "listnride | Imprint",
+      "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
+    },
+    "privacy": {
+      "meta-title": "Privacy Policy of listnride",
+      "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform."
+    }
+  },
   "toasts": {
     "update-profile-success": "Je profiel is geactualiseerd.",
     "error": "Er is een fout opgetreden. Check of je internetverbinding werkt en probeer het nogmaals.",
@@ -124,7 +280,11 @@
     "opening-hours-error": "Kan openingstijden niet opslaan.",
     "uniq-phone": "Telefoonnummer is al geregistreerd in ons systeem.",
     "pending-requests": "Het lijkt alsof u een open verzoek voor deze fiets heeft. Voordat u de fiets kunt verwijderen, moet u deze accepteren of annuleren.",
-    "account-deleted": "Uw account is verwijderd"
+    "account-deleted": "Uw account is verwijderd",
+    "enter-email": "Vul alstublieft uw e-mailadres in",
+    "duplicate-start": "Duplicatieproces gestart",
+    "duplicate-finish": "Duplication process finished. Copies created successfully",
+    "bike-deleted": "Fiets succesvol verwijderd"
   },
   "settings": {
     "settings": "Instellingen",
@@ -519,7 +679,19 @@
   },
   "listings": {
     "my-bikes": "Mijn fietsen",
-    "no-bikes": "Je hebt nog geen fietsen online geplaatst."
+    "no-bikes": "Je hebt nog geen fietsen online geplaatst.",
+    "list-a-bike": "Fiets plaatsen",
+    "duplicate": {
+      "duplicate": "Duplicaat",
+      "how_many": "Hoeveel fietsen?",
+      "header": "Dubbele fiets",
+      "number_bikes": "Aantal fietsen",
+      "maxlength": "Werkt voor maximaal 99 fietsen",
+      "required": "Aantal fietsen is verplicht"
+    },
+    "listView": {
+      "price": "Prijs (€)"
+    }
   },
   "listingCard": {
     "activate-bike": "Activeren",
@@ -528,6 +700,7 @@
     "delete-bike": "verwijderen",
     "cancel": "annuleren",
     "delete": "verwijderen",
+    "duplicate": "Duplicate",
     "dialog-title": "Wil je daadwerkelijk je fiets verwijderen?",
     "dialog-subtitle": "Het wordt onherroepelijk verwijderd van het platform, actieve aanvragen blijven gehandhaafd."
   },
