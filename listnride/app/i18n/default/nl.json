@@ -412,8 +412,8 @@
     "price": "Prijs",
     "book": "Boeken",
     "rating": "Recensie",
-    "listChat": "Aanvraag van",
-    "rideChat": "Aanvraag aan",
+    "listChat": "Aanvraag van {{user.first_name}}",
+    "rideChat": "Aanvraag aan {{lister.first_name}}",
     "ratings": {
       "title": "Hoe vond je de algehele ervaring?",
       "description": "Vertrouwen en Veiligheid zijn voor ons het belangrijkste. Met een korte recensie help je de gehele community.",

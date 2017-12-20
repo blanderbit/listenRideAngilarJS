@@ -409,8 +409,8 @@
     "price": "Precio",
     "book": "Alquilar",
     "rating": "Valoración",
-    "listChat": "Solicitud de {{user.first_name}}{{user.last_name}}",
-    "rideChat": "Solicitar a {{lister.first_name}}{{lister.last_name}}",
+    "listChat": "Solicitud de {{user.first_name}}",
+    "rideChat": "Solicitar a {{lister.first_name}}",
     "ratings": {
       "title": "¿Qué te pareció la experiencia en general?",
       "description": "La confianza y la seguridad son nuestra principal preocupación. Si escribes una breve reseña, ayudarás a toda la comunidad.",
@@ -693,6 +693,7 @@
     "my-bikes": "Mis bicicletas",
     "no-bikes": "Todavía no has registrado ninguna de tus rutas",
     "list-a-bike": "Registrar una bicicleta",
+    "show-as-list": "Mostrar como lista",
     "duplicate": {
       "duplicate": "Duplicada",
       "how_many": "¿Cuántas bicis?",

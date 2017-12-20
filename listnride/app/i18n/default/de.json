@@ -411,8 +411,8 @@
     "price": "Preis",
     "book": "Buchen",
     "rating": "Bewertung",
-    "listChat": "Anfrage von",
-    "rideChat": "Anfrage an",
+    "listChat": "Anfrage von {{user.first_name}}",
+    "rideChat": "Anfrage an {{lister.first_name}}",
     "ratings": {
       "title": "Wie hat dir die Gesamterfahrung gefallen?",
       "description": "Vertrauen und Sicherheit sind für uns das Wichtigste. Mit einer kurzen Bewertung hilfst du der gesamten Community.",

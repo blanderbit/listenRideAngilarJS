@@ -404,8 +404,8 @@
     "price": "Prezzo",
     "book": "Prenota",
     "rating": "Valutazione",
-    "listChat": "Richiesta di {{user.first_name}} {{user.last_name}}",
-    "rideChat": "Richiesta a {{lister.first_name}} {{lister.last_name}}",
+    "listChat": "Richiesta di {{user.first_name}}",
+    "rideChat": "Richiesta a {{lister.first_name}}",
     "ratings": {
       "title": "Come valuti complessivamente questa esperienza ?",
       "description": "La fiducia e la sicurezza sono la nostra primaria preoccupazione. Scrivendo una breve recensione, aiuterai l'intera comunità.",
