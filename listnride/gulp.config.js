@@ -132,7 +132,7 @@ module.exports = function () {
                     userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com",
                     defaultTranslation: 'default',
-                    staticTranslation: 'default'
+                    staticTranslation: 'static'
                 }
             },
             imageOptions: {
