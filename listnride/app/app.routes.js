@@ -52,6 +52,17 @@
       });
 
       $stateProvider.state({
+        name: 'booking',
+        parent: 'bike',
+        url: '/booking',
+        views: {
+          "booking": {
+            template: '<booking></booking>'
+          }
+        }
+      });
+
+      $stateProvider.state({
         name: 'list-view',
         url: '/list-view',
         template: '<bike-list-view></bike-list-view>'

@@ -34,11 +34,9 @@ angular.module('bike',[]).component('bike', {
           $translate($filter('category')(bike.data.category)).then(
             function (translation) {
               bike.category = translation;
-              console.log(bike.category);
             }
           );
-          console.log(bike.category);
-
+          
           var metaData = {
             name: bike.data.name,
             brand: bike.data.brand,

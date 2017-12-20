@@ -88,6 +88,10 @@ angular.module('bike').component('calendar', {
         dateChange(calendar.startDate, calendar.endDate);
       };
 
+      calendar.onBooking = function(){
+        $state.go('booking');
+      };
+
       calendar.onBikeRequest = function() {
         $mdDialog.hide();
         calendar.requested = true;
