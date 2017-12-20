@@ -11,10 +11,10 @@
         <div layout="column" flex-xs="50">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'shared.top-cities' | translate }}</md-subheader>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="search({ location: 'Berlin' })" >{{ 'shared.berlin' | translate }}</a></md-list-item>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="search({ location: 'Munich' })">{{ 'shared.munich' | translate }}</a></md-list-item>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="search({ location: 'Amsterdam' })">{{ 'shared.amsterdam' | translate }}</a></md-list-item>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="search({ location: 'Vienna' })">{{ 'shared.vienna' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="cityLanding({ pageTitle: 'Berlin' })" >{{ 'shared.berlin' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="cityLanding({ pageTitle: 'Munich' })">{{ 'shared.munich' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="cityLanding({ pageTitle: 'Amsterdam' })">{{ 'shared.amsterdam' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="cityLanding({ pageTitle: 'Vienna' })">{{ 'shared.vienna' | translate }}</a></md-list-item>
           </md-list>
         </div>
 
@@ -48,7 +48,7 @@
               </a>
             </md-list-item>
             <md-list-item class="md-body-1">
-              <a class="lnr-link" ui-sref="shopLanding">
+              <a class="lnr-link" ui-sref="businessCommunity">
                 {{ 'shared.for-shops' | translate }}
               </a>
             </md-list-item>
