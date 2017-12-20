@@ -55,10 +55,11 @@
         name: 'booking',
         parent: 'bike',
         url: '/booking',
-        views: {
-          "booking": {
-            template: '<booking></booking>'
-          }
+        component: 'booking',
+        resolve: {
+          booking: ['BookingService', function (bookingService) {
+            return bookingService;
+          }]
         }
       });
 
