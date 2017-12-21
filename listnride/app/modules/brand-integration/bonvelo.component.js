@@ -3,10 +3,10 @@
 angular.module('bonvelo-integration',[]).component('bonvelo', {
   templateUrl: 'app/modules/brand-integration/bonvelo.template.html',
   controllerAs: 'bonvelo',
-  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta',
-    function BonveloController($translate, $tpl, api, ngMeta) {
+  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta', 'ENV',
+    function BonveloController($translate, $tpl, api, ngMeta, ENV) {
       var bonvelo = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
       ngMeta.setTitle($translate.instant("brand-integration.bonvelo.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.bonvelo.meta-description"));
 

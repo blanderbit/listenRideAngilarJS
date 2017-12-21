@@ -3,10 +3,10 @@
 angular.module('veletage-integration',[]).component('veletage', {
   templateUrl: 'app/modules/brand-integration/veletage.template.html',
   controllerAs: 'veletage',
-  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta',
-    function VeletageController($translate, $tpl, api, ngMeta) {
+  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta', 'ENV',
+    function VeletageController($translate, $tpl, api, ngMeta, ENV) {
       var veletage = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
       ngMeta.setTitle($translate.instant("brand-integration.veletage.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.veletage.meta-descr"));
 

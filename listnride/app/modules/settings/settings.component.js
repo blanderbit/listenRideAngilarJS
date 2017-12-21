@@ -41,9 +41,9 @@ angular.module('settings',[]).component('settings', {
        * $mdDialog has a bug. it doesn't allow render template
        * correctly for component. thats why 
        * inline controller is used instead of controller
-       * @param {userApi} userApi 
-       * @param {$mdDialog} $mdDialog 
-       * @param {verification} verification
+       * @param {userApi} userApi api for users
+       * @param {$mdDialog} $mdDialog material dialog
+       * @param {verification} verification service for verfication
        * @returns {void}
        */
       var ChangeContactController = function(userApi, $mdDialog, verification) {
@@ -123,7 +123,7 @@ angular.module('settings',[]).component('settings', {
       /**
        * converts phone number to private number
        * 1234567890 -> 123****890
-       * @param {string} phone_number 
+       * @param {string} phone_number phone number of the user
        * @returns {void}
        */
       function updatePrivatePhoneNumber(phone_number) {

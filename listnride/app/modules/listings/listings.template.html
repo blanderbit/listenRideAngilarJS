@@ -17,7 +17,7 @@
       <span hide-sm flex></span>
       <div flex="30" ng-if="listings.status !== ''"><h3>Duplication status: {{listings.status}}</h3></div>
       <div layout="row" flex="35" layout-align="end center">
-          <div flex="30"><h3>Show as List</h3></div>
+          <div flex="30"><h3>{{'listings.show-as-list' | translate}}</h3></div>
         <div flex="15"><md-switch ng-model="listings.listView" ng-change="listings.changeListingMode(listings.listView)"></md-switch></div>
         <span hide-sm flex></span>
         <div flex="35">
@@ -71,7 +71,7 @@
           name="bike.name"
           brand="bike.brand"
           category="bike.category"
-          price="bike.prices[0].price"
+          price="bike.price_from"
           image-url=" bike.image_file_1.image_file_1.small.url"
           available="bike.available"
           status="listings.status"

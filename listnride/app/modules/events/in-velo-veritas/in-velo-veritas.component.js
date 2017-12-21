@@ -3,10 +3,10 @@
 angular.module('inVeloVeritas',[]).component('inVeloVeritas', {
   templateUrl: 'app/modules/events/in-velo-veritas/in-velo-veritas.template.html',
   controllerAs: 'inVeloVeritas',
-  controller: ['NgMap', 'api', '$translate', '$translatePartialLoader',
-    function InVeloVeritasController(NgMap, api, $translate, $tpl) {
+  controller: ['NgMap', 'api', '$translate', '$translatePartialLoader', 'ENV',
+    function InVeloVeritasController(NgMap, api, $translate, $tpl, ENV) {
       var inVeloVeritas = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
 
       api.get('/rides?family=4').then(
         function(response) {

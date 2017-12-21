@@ -43,7 +43,7 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
         var url = window.location.host.split('.'), route = window.location.pathname, root = '';
         // using localhost
         if (url.indexOf("localhost") >= 0) {
-          if (language == 'nl' || language == 'de' || language == 'it') {
+          if (language == 'nl' || language == 'de' || language == 'it' || language == 'es') {
             root = ['www.listnride', language].join('.');
             window.location = 'https://' + root + route;
           } else {
@@ -54,7 +54,7 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
         // staging or production
         else {
           url.splice(-1).join('.');
-          if (language == 'nl' || language == 'de' || language == 'it') {
+          if (language == 'nl' || language == 'de' || language == 'it' || language == 'es') {
             url = url.join('.');
             root = [url, language].join('.');
             window.location = 'https://' + root + route;
@@ -68,12 +68,10 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
 
       // switch url based on language
       footer.switchLanguage = function (locale) {
-        // update the language
-        $translate.use(locale).then(function () {
-          // save in local storage
-          $localStorage.selectedLanguage = locale;
-          footer.switchDomain($localStorage.selectedLanguage);
-        });
+        // save language in local storage
+        // switch to correct language specific domain
+        $localStorage.selectedLanguage = locale;
+        footer.switchDomain($localStorage.selectedLanguage);
       };
 
       footer.onAppClick = function() {
@@ -91,6 +89,8 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
           return 'Nederlands';
         } else if (locale === 'it') {
           return 'Italiano';
+        } else if (locale === 'es') {
+          return 'Spanish';
         } else {
           return 'English';
         }
