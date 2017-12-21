@@ -38,14 +38,14 @@
     <div flex="50" flex-xs="100">
       <!-- <div class="lnr-section-title" layout="column" layout-align="center center"> -->
         <!-- <h2 class="md-headline">{{ cityLanding.data.texts.main.title }}</h2> -->
-        <h2 class="md-headline">Rent perfect bikes in {{ cityLanding.data.city }}</h2>
+        <h2 class="md-headline">{{ 'seo.rent-perfect-bikes-in' | translate }} {{ cityLanding.data.city }}</h2>
         <br>
       <!-- </div> -->
       <p class="md-body-1" style="margin: 7px">{{ cityLanding.data.texts.main.description }}</p>
     </div>
     <div flex="50" flex-xs="100">
       <!-- <div class="lnr-section-title" layout="column" layout-align="center center"> -->
-        <h2 class="md-headline">Rent category bikes in {{ cityLanding.data.city }}</h2>
+        <h2 class="md-headline">{{ 'seo.rent-category-bikes-in' | translate }}</h2>
         <br>
       <!-- </div> -->
       <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="2" md-cols-gt-xs="2" md-cols-gt-sm="3" md-gutter="16px" md-row-height="1.5:1">
