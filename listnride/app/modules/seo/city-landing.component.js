@@ -13,12 +13,15 @@ angular.module('cityLanding',[]).component('cityLanding', {
       cityLanding.loading = true;
 
       // api.get('/seo_pages?url=' + $stateParams.pageTitle).then(
-      api.get('/seo_pages?city='+city+'&lang=en').then(
+      api.get('/seo_pages?city='+city+'&lang=' + $translate.preferredLanguage()).then(
         function (success) {
-          console.log(success.data);
-          cityLanding.data = success.data;
-          cityLanding.location = cityLanding.data.city;
-          cityLanding.loading = false;
+          // if (success.data.errors) {
+            // $state.go('404');
+          // } else {
+            cityLanding.data = success.data;
+            cityLanding.location = cityLanding.data.city;
+            cityLanding.loading = false;
+          // }
         },
         function (error) {
           $state.go('404');
