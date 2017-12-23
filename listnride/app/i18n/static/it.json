@@ -605,6 +605,32 @@
       "faq-answer-5": "La tua bicicletta verrà spedita con un carica batterie. Basta collegare il connettore e sei ore dopo sarà completamente carica.",
       "faq-question-6": "Cosa ottengo con una Electrified S ?",
       "faq-answer-6": "• Una garanzia di due anni che copre difetti di manodopera e materiali. <br>• Chiave remota di backup, per bloccare o sbloccare la bicicletta quando lo smartphone non è disponibile o scarico <br>• Caricabatterie per la bicicletta (caricabatterie 36V, 2A) <br>• Monitoraggio antifurto GSM e Bluetooth <br>• App per smartphone per Android e iOS <br>• Manuale operativo e guida per l'utente <br>• Strumento antifurto per i dadi delle ruote della tua bicicletta <br>• Pneumatici Electrified S da 28 \"x 2,35\". (60-622) <br>• Cavo per il lucchetto integrato <br> • Strumento per regolare la posizione del sedile e del manubrio"
+    },
+    "moeve": {
+      "title": "",
+      "description": "Rent and test Moeve bikes in Munich and Amsterdam",
+      "subdescription": "Built by a team of restless engineers",
+      "item1-title": "Cyfly",
+      "item1-description": "Better transmission in the relevant sectors. The unique riding and the powerful pedaling ensure a unique cyclist experience.",
+      "item2-title": "Painting",
+      "item2-description": "The framework has two colors. By hand the flowing color process and the graphic theme (plumage of a seagull) are spreaded in airbrush technology. A powdered, mat and high-resistance layer seals the frame.",
+      "item3-title": "Frame geometry",
+      "item3-description": "Perfect ergonomics and effective power transmission - the frame geometry was tailored to cyfly and the driver. Fast advance combined with comfortable seat position.",
+      "choose-location": "Wähle deine Stadt",
+      "find-out-more": "Learn more about the Cyfly by Moeve",
+      "order-online": "<a href=\"https://www.moeve-bikes.de/cyfly/\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed. See the most frequently asked questions below.",
+      "faq-question-1": "What is Cyfly?",
+      "faq-answer-1": "Cyfly is a patented multi-link transmission in which the pedal is no longer directly connected to the axle, but is supporting from behind.",
+      "faq-question-2": "Is Cyfly the same as a gear shift?",
+      "faq-answer-2": "No. In contrast to a conventional torque converter (dérailleur gears and gear hubs), Cyfly is a special force converter that, unlike conventional systems, does not lengthen the pedal travel to increase the torque. Cyfly can be combined with a conventional gear shift to use a broader range of gears.",
+      "faq-question-3": "Do I have to get used to a new technique in order to use Cyfly?",
+      "faq-answer-3": "Our experience with so far more than 1000 test drivers shows that you automatically and naturally adjust to the new movement when driving with Cyfly. Here it has proven to start the first few kilometers with lower cadence and in heavier gears.",
+      "faq-question-4": "Where is Cyfly attached?",
+      "faq-answer-4": "Cyfly is located in the position of a conventional bottom bracket. It replaces the entire front section of the drive train on a conventional bicycle. The cyfly drive system includes cranks, bearings and the patent-pending chain ring. All components are produced using highly modern production technologies. Cyfly is 'state of the art'.",
+      "faq-question-5": "Can Cyfly be retrofitted?",
+      "faq-answer-5": "Since the Cyfly drive system requires a precisely adapted frame, it cannot be retrofitted readily. Initially Cyfly will only be available as an innovative component of premium bicycles.",
+      "faq-question-6": "How much more efficient is Cyfly?",
+      "faq-answer-6": "Everyone applies force differently while cycling. Therefore we cannot provide an objective, generally applicable gain in efficiency. The value is calculated based on data with established constraints on the one hand and a significant number of field tests on the other hand. The efficiency gain was also verified by an external expert opinion from a bicycle laboratory in Freiburg, Germany. Furthermore, the Cyfly effect was confirmed by renowned bicycle racing and triathlon professionals."
     }
   },
   "about-us": {
