@@ -9,6 +9,7 @@ angular.module('listnride', [
   'bikeCard',
   'user',
   'bike',
+  'booking',
   'requests',
   'message',
   'list',
@@ -78,7 +79,8 @@ angular.module('listnride', [
   'angulartics.google.analytics',
   'angulartics.facebook.pixel',
   '720kb.socialshare',
-  'angularMoment'
+  'angularMoment',
+  'credit-cards'
 ])
 .config(['$translateProvider', '$localStorageProvider', '$translatePartialLoaderProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', '$compileProvider', 'ngMetaProvider', 'ENV', 'socialshareConfProvider',
   function($translateProvider, $localStorageProvider, $translatePartialLoaderProvider, ezfbProvider, $mdAriaProvider, $locationProvider, $compileProvider, ngMetaProvider, ENV, socialshareConfProvider) {

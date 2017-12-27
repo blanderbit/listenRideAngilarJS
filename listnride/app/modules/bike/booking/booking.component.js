@@ -1,13 +1,21 @@
 'use strict'
 
-angular.module('bike').component('booking', {
+// TODO: make it part of bike module. No separate module required
+angular.module('booking', []).component('booking', {
   templateUrl: 'app/modules/bike/booking/booking.template.html',
-  bindings: {
-    booking: '<'
-  },
   controllerAs: 'booking',
-  controller: ['BookingService', function BookingController() {
+  controller: ['authentication', function BookingController(authentication) {
     var booking = this;
-    console.log("booking: ", booking);
+
+    // on lifecycle initialization
+    booking.$onInit = function () {
+      booking.authentication = authentication;
+      booking.showConfirmButton = true;
+    };
+
+    // toggle confirm phone button
+    booking.toggleConfirmButton = function(){
+      booking.showConfirmButton = !booking.showConfirmButton;
+    }
   }]
 });

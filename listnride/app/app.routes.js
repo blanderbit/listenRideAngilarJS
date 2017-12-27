@@ -53,14 +53,8 @@
 
       $stateProvider.state({
         name: 'booking',
-        parent: 'bike',
         url: '/booking',
-        component: 'booking',
-        resolve: {
-          booking: ['BookingService', function (bookingService) {
-            return bookingService;
-          }]
-        }
+        template: '<booking></booking>',
       });
 
       $stateProvider.state({
