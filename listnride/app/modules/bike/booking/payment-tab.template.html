@@ -1,7 +1,6 @@
 <md-tab class="categories" label="Payment" layout="row">
-  <md-content class="md-padding" layout="column">
-    <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
-
+  <md-content style="max-height: 620px;overflow: scroll;" class="md-padding" layout="column">
+    <div class="tab-content" style="min-height: 562px;" layout="row" layout-align="space-between none" layout-padding>
       <div class="lnr-list-form" flex-xs="100" flex-gt-xs="70" layout="column">
         <!-- Cardholder name and Cardnumber -->
         <div class="lnr-input-containers" layout="row">
@@ -47,15 +46,31 @@
         </div>
       </div>
 
-      <!-- Bottom Navigation Buttons -->
+      <!-- vertical divider -->
+      <md-divider hide-xs class="lnr-margin-left lnr-margin-right-double"></md-divider>
 
-      <div class="navigation" layout="row" layout-align="end center" layout-margin>
-        <div ng-style="{'display': signupDialog.business ? 'none' : ''}" layout="column">
-          <md-button class="md-raised md-primary" ng-disabled="!list.isCategoryValid() && list.isListMode" ng-click="list.nextTab()">
-            {{ 'list.next' | translate }}
-          </md-button>
+      <!-- Right Info Column -->
+      <div flex hide-xs>
+        <div class="lnr-list-title">
+          <h3 class="md-subhead">
+            Total
+          </h3>
         </div>
+        <p class="md-body-1">
+          including VAT and Listnride fees
+        </p>
       </div>
     </div>
+    </div>
   </md-content>
+
+  <!-- Bottom Navigation Buttons -->
+  <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
+    <md-button class="md-lined" ng-click="payment.parent.previousTab()">
+      {{ 'list.back' | translate }}
+    </md-button>
+    <md-button class="md-raised md-primary" ng-click="payment.parent.nextTab()">
+      {{ 'list.next' | translate }}
+    </md-button>
+  </div>
 </md-tab>
