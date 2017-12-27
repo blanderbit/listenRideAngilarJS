@@ -1,14 +1,9 @@
 'use strict'
 
 angular.module('booking', [])
-  // personal tab ui component
-  .component('personalTab', {templateUrl: 'app/modules/bike/booking/personal-tab.template.html'})
-  // payment tab ui component
-  .component('paymentTab', {templateUrl: 'app/modules/bike/booking/payment-tab.template.html'})
-  // overview tab ui component
-  .component('overviewTab', {templateUrl: 'app/modules/bike/booking/overview-tab.template.html'})
   // booking component
   .component('booking', {
+    transclude: true,
     templateUrl: 'app/modules/bike/booking/booking.template.html',
     controllerAs: 'booking',
     controller: ['authentication', function BookingController(authentication) {
@@ -25,4 +20,22 @@ angular.module('booking', [])
         booking.showConfirmButton = !booking.showConfirmButton;
       }
     }]
+  })
+  // personal tab ui component
+  .component('personalTab', {
+    templateUrl: 'app/modules/bike/booking/personal-tab.template.html',
+    require: { booking: '^booking' },
+    controllerAs: 'personal'
+  })
+  // payment tab ui component
+  .component('paymentTab', {
+    templateUrl: 'app/modules/bike/booking/payment-tab.template.html',
+    require: { booking: '^booking' },
+    controllerAs: 'payment'
+  })
+  // overview tab ui component
+  .component('overviewTab', {
+    templateUrl: 'app/modules/bike/booking/overview-tab.template.html',
+    require: { booking: '^booking' },
+    controllerAs: 'overview'
   })

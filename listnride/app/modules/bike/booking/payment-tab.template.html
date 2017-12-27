@@ -7,7 +7,7 @@
         <div class="lnr-input-containers" layout="row">
           <md-input-container flex>
             <label>Cardholder Name</label>
-            <input name="cardholder_name" type="text" ng-model="booking.creditCardHolderName" ng-required="true" />
+            <input name="cardholder_name" type="text" ng-model="payment.booking.creditCardHolderName" ng-required="true" />
             <div ng-messages="signupForm.first_name.$error" role="alert">
               <div ng-message="required">{{ 'forms.errors.empty-first-name' | translate }}</div>
               <div ng-message="maxlength">{{ 'forms.errors.max-size-first-name' | translate }}</div>
@@ -15,7 +15,7 @@
           </md-input-container>
           <md-input-container flex>
             <label>Card Number</label>
-            <input name="cardholderNumber" type="text" ng-model="booking.creditCardNumber" cc-number cc-type="cardType" ng-required="true"
+            <input name="cardholderNumber" type="text" ng-model="payment.booking.creditCardNumber" cc-number cc-type="cardType" ng-required="true"
             />
             <div ng-messages="signupForm.last_name.$error" role="alert">
               <div ng-message="required">{{ 'forms.errors.empty-last-name' | translate }}</div>
@@ -28,7 +28,7 @@
           <div flex="50" layout="row" layout-align="space-around center">
             <md-input-container flex>
               <label>Expiry</label>
-              <input name="cardholder_name" type="text" ng-model="booking.creditCardHolderName" ng-required="true" />
+              <input name="cardholder_name" type="text" ng-model="payment.booking.creditCardHolderName" ng-required="true" />
               <div ng-messages="signupForm.first_name.$error" role="alert">
                 <div ng-message="required">{{ 'forms.errors.empty-first-name' | translate }}</div>
                 <div ng-message="maxlength">{{ 'forms.errors.max-size-first-name' | translate }}</div>
@@ -36,7 +36,7 @@
             </md-input-container>
             <md-input-container flex>
               <label>Expiry</label>
-              <input name="cardholderNumber" type="text" ng-model="booking.creditCardNumber" cc-number cc-type="cardType" ng-required="true"
+              <input name="cardholderNumber" type="text" ng-model="payment.booking.creditCardNumber" cc-number cc-type="cardType" ng-required="true"
               />
               <div ng-messages="signupForm.last_name.$error" role="alert">
                 <div ng-message="required">{{ 'forms.errors.empty-last-name' | translate }}</div>

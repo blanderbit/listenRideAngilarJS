@@ -2,16 +2,15 @@
   <md-content class="md-padding" layout="column">
     <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
       <div class="lnr-list-form" flex-xs="100" flex-gt-xs="70" layout="column">
-
         <!-- Facebook -->
         <div class="lnr-input-containers" layout="row">
           <div flex="50" ng-style="{'display': signupDialog.business ? 'none' : ''}" layout="column">
-            <md-button ng-click="booking.authentication.connectFb()" class="md-primary md-lined lnr-btn-fb">
+            <md-button ng-click="personal.booking.authentication.connectFb()" class="md-primary md-lined lnr-btn-fb">
               {{ 'forms.sign-up-with-facebook' | translate }}
             </md-button>
           </div>
           <div flex="50" layout="column">
-            <md-button ng-click="booking.authentication.showLoginDialog()" class="md-raised md-primary">
+            <md-button ng-click="personal.booking.authentication.showLoginDialog()" class="md-raised md-primary">
               Already have an account?
             </md-button>
           </div>
@@ -111,7 +110,7 @@
         </div>
 
         <!-- Phone Number and Send Button -->
-        <div class="lnr-input-containers" layout="row" ng-show="booking.showConfirmButton">
+        <div class="lnr-input-containers" layout="row" ng-show="personal.booking.showConfirmButton">
           <md-input-container flex>
             <label>{{ 'shared.phone-number' | translate }}</label>
             <input international-phone-number ng-model="changeContact.user.new_phone_number" ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/"
@@ -121,14 +120,14 @@
             </div>
           </md-input-container>
           <md-input-container flex>
-            <md-button style="margin: 25px 0px" flex class="md-raised md-primary lnr-btn-inline" ng-click="booking.toggleConfirmButton()">
+            <md-button style="margin: 25px 0px" flex class="md-raised md-primary lnr-btn-inline" ng-click="personal.booking.toggleConfirmButton()">
               <span>Send Code</span>
             </md-button>
           </md-input-container>
         </div>
 
         <!-- Phone Confirmation -->
-        <div class="lnr-confirmation-containers" layout="column" layout-align="center start" ng-hide="booking.showConfirmButton">
+        <div class="lnr-confirmation-containers" layout="column" layout-align="center start" ng-hide="personal.booking.showConfirmButton">
           <div layout="row" class="confirm-label">
             <strong>Confirm {{ 'shared.phone-number' | translate }} *</strong>
           </div>
@@ -153,7 +152,7 @@
             <span flex></span>
             <div layout="row" flex="50" layout-align="start start">
               <md-input-container flex>
-                <md-button style="margin: 0px 0px" flex class="md-lined md-button" ng-click="booking.toggleConfirmButton()">
+                <md-button style="margin: 0px 0px" flex class="md-lined md-button" ng-click="personal.booking.toggleConfirmButton()">
                   <span>Change Phone Number</span>
                 </md-button>
               </md-input-container>
@@ -163,7 +162,7 @@
 
         <!-- Login -->
         <div ng-if="false" class="md-dialog-buttons" layout="row" layout-align="space-between center">
-          <span class="lnr-link" ng-click="booking.a()">
+          <span class="lnr-link" ng-click="personal.booking.a()">
             Already have an account? {{booking.b}}
           </span>
         </div>
