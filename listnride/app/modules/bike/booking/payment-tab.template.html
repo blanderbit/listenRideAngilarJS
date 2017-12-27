@@ -1,0 +1,61 @@
+<md-tab class="categories" label="Payment" layout="row">
+  <md-content class="md-padding" layout="column">
+    <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
+
+      <div class="lnr-list-form" flex-xs="100" flex-gt-xs="70" layout="column">
+        <!-- Cardholder name and Cardnumber -->
+        <div class="lnr-input-containers" layout="row">
+          <md-input-container flex>
+            <label>Cardholder Name</label>
+            <input name="cardholder_name" type="text" ng-model="booking.creditCardHolderName" ng-required="true" />
+            <div ng-messages="signupForm.first_name.$error" role="alert">
+              <div ng-message="required">{{ 'forms.errors.empty-first-name' | translate }}</div>
+              <div ng-message="maxlength">{{ 'forms.errors.max-size-first-name' | translate }}</div>
+            </div>
+          </md-input-container>
+          <md-input-container flex>
+            <label>Card Number</label>
+            <input name="cardholderNumber" type="text" ng-model="booking.creditCardNumber" cc-number cc-type="cardType" ng-required="true"
+            />
+            <div ng-messages="signupForm.last_name.$error" role="alert">
+              <div ng-message="required">{{ 'forms.errors.empty-last-name' | translate }}</div>
+              <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
+            </div>
+          </md-input-container>
+        </div>
+        <!-- Expiry and Code -->
+        <div class="lnr-input-containers" layout="row">
+          <div flex="50" layout="row" layout-align="space-around center">
+            <md-input-container flex>
+              <label>Expiry</label>
+              <input name="cardholder_name" type="text" ng-model="booking.creditCardHolderName" ng-required="true" />
+              <div ng-messages="signupForm.first_name.$error" role="alert">
+                <div ng-message="required">{{ 'forms.errors.empty-first-name' | translate }}</div>
+                <div ng-message="maxlength">{{ 'forms.errors.max-size-first-name' | translate }}</div>
+              </div>
+            </md-input-container>
+            <md-input-container flex>
+              <label>Expiry</label>
+              <input name="cardholderNumber" type="text" ng-model="booking.creditCardNumber" cc-number cc-type="cardType" ng-required="true"
+              />
+              <div ng-messages="signupForm.last_name.$error" role="alert">
+                <div ng-message="required">{{ 'forms.errors.empty-last-name' | translate }}</div>
+                <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
+              </div>
+            </md-input-container>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Navigation Buttons -->
+
+      <div class="navigation" layout="row" layout-align="end center" layout-margin>
+        <div ng-style="{'display': signupDialog.business ? 'none' : ''}" layout="column">
+          <md-button class="md-raised md-primary" ng-disabled="!list.isCategoryValid() && list.isListMode" ng-click="list.nextTab()">
+            {{ 'list.next' | translate }}
+          </md-button>
+        </div>
+      </div>
+    </div>
+  </md-content>
+</md-tab>

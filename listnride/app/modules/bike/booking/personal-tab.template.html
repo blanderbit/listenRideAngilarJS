@@ -1,0 +1,199 @@
+<md-tab class="personal" label="Personal" layout="row">
+  <md-content class="md-padding" layout="column">
+    <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
+      <div class="lnr-list-form" flex-xs="100" flex-gt-xs="70" layout="column">
+
+        <!-- Facebook -->
+        <div class="lnr-input-containers" layout="row">
+          <div flex="50" ng-style="{'display': signupDialog.business ? 'none' : ''}" layout="column">
+            <md-button ng-click="booking.authentication.connectFb()" class="md-primary md-lined lnr-btn-fb">
+              {{ 'forms.sign-up-with-facebook' | translate }}
+            </md-button>
+          </div>
+          <div flex="50" layout="column">
+            <md-button ng-click="booking.authentication.showLoginDialog()" class="md-raised md-primary">
+              Already have an account?
+            </md-button>
+          </div>
+        </div>
+
+        <div class="lnr-middle-divider">
+          {{ 'forms.or' | translate }}
+        </div>
+
+        <!-- Firstname and Lastname -->
+        <div class="lnr-input-containers" layout="row">
+          <md-input-container flex>
+            <label>{{ 'forms.first-name' | translate }}</label>
+            <input name="first_name" ng-model="signupDialog.firstName" required ng-maxlength="20" ng-disabled="signupDialog.businessError">
+            <div ng-messages="signupForm.first_name.$error" role="alert">
+              <div ng-message="required">{{ 'forms.errors.empty-first-name' | translate }}</div>
+              <div ng-message="maxlength">{{ 'forms.errors.max-size-first-name' | translate }}</div>
+            </div>
+          </md-input-container>
+          <md-input-container flex>
+            <label>{{ 'forms.last-name' | translate }}</label>
+            <input name="last_name" ng-model="signupDialog.lastName" required ng-maxlength="30" ng-disabled="signupDialog.businessError">
+            <div ng-messages="signupForm.last_name.$error" role="alert">
+              <div ng-message="required">{{ 'forms.errors.empty-last-name' | translate }}</div>
+              <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
+            </div>
+          </md-input-container>
+        </div>
+
+        <!-- Email and Password -->
+        <div class="lnr-input-containers" layout="row">
+          <md-input-container flex>
+            <label>{{ 'forms.email-address' | translate }}</label>
+            <input name="email" ng-model="signupDialog.email" type="email" required ng-pattern="/(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i"
+              ng-disabled="signupDialog.businessError">
+            <div ng-messages="signupForm.email.$error" role="alert">
+              <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
+              <div ng-message="email">{{ 'forms.errors.valid-email' | translate }}</div>
+              <div ng-message="pattern">{{ 'forms.errors.valid-email' | translate }}</div>
+            </div>
+          </md-input-container>
+          <md-input-container flex>
+            <label>{{ 'forms.password' | translate }}</label>
+            <input name="password" ng-model="signupDialog.password" type="password" required ng-minlength="6" ng-maxlength="30" ng-disabled="signupDialog.businessError">
+            <div ng-messages="signupForm.password.$error" role="alert">
+              <div ng-message="required">{{ 'forms.errors.password-missing' | translate }}</div>
+              <div ng-message="minlength">{{ 'forms.errors.password-length' | translate }}</div>
+              <div ng-message="maxlength">{{ 'forms.errors.password-length' | translate }}</div>
+            </div>
+          </md-input-container>
+        </div>
+
+        <!-- Street and City -->
+        <div class="lnr-input-containers" layout="row">
+          <md-input-container flex>
+            <label>Street & Number</label>
+            <input name="email" ng-model="signupDialog.email" type="email" required ng-pattern="/(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i"
+              ng-disabled="signupDialog.businessError">
+            <div ng-messages="signupForm.email.$error" role="alert">
+              <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
+              <div ng-message="email">{{ 'forms.errors.valid-email' | translate }}</div>
+              <div ng-message="pattern">{{ 'forms.errors.valid-email' | translate }}</div>
+            </div>
+          </md-input-container>
+          <md-input-container flex>
+            <label>City</label>
+            <input name="password" ng-model="signupDialog.password" type="password" required ng-minlength="6" ng-maxlength="30" ng-disabled="signupDialog.businessError">
+            <div ng-messages="signupForm.password.$error" role="alert">
+              <div ng-message="required">{{ 'forms.errors.password-missing' | translate }}</div>
+              <div ng-message="minlength">{{ 'forms.errors.password-length' | translate }}</div>
+              <div ng-message="maxlength">{{ 'forms.errors.password-length' | translate }}</div>
+            </div>
+          </md-input-container>
+        </div>
+
+        <!-- Postal and Country -->
+        <div class="lnr-input-containers" layout="row">
+          <md-input-container flex>
+            <label>Postal Code</label>
+            <input name="email" ng-model="signupDialog.email" type="email" required ng-pattern="/(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i"
+              ng-disabled="signupDialog.businessError">
+            <div ng-messages="signupForm.email.$error" role="alert">
+              <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
+              <div ng-message="email">{{ 'forms.errors.valid-email' | translate }}</div>
+              <div ng-message="pattern">{{ 'forms.errors.valid-email' | translate }}</div>
+            </div>
+          </md-input-container>
+          <md-input-container flex>
+            <label>Country</label>
+            <input name="password" ng-model="signupDialog.password" type="password" required ng-minlength="6" ng-maxlength="30" ng-disabled="signupDialog.businessError">
+            <div ng-messages="signupForm.password.$error" role="alert">
+              <div ng-message="required">{{ 'forms.errors.password-missing' | translate }}</div>
+              <div ng-message="minlength">{{ 'forms.errors.password-length' | translate }}</div>
+              <div ng-message="maxlength">{{ 'forms.errors.password-length' | translate }}</div>
+            </div>
+          </md-input-container>
+        </div>
+
+        <!-- Phone Number and Send Button -->
+        <div class="lnr-input-containers" layout="row" ng-show="booking.showConfirmButton">
+          <md-input-container flex>
+            <label>{{ 'shared.phone-number' | translate }}</label>
+            <input international-phone-number ng-model="changeContact.user.new_phone_number" ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/"
+              name="phone_number" preferred-countries="de, at, nl, fr, lv, es, it, ch, gb" type="text" required>
+            <div ng-messages="contact.phone_number.$error" role="alert">
+              <div ng-message="pattern">{{ 'verification.5.enter-valid-phone-nr' | translate }}</div>
+            </div>
+          </md-input-container>
+          <md-input-container flex>
+            <md-button style="margin: 25px 0px" flex class="md-raised md-primary lnr-btn-inline" ng-click="booking.toggleConfirmButton()">
+              <span>Send Code</span>
+            </md-button>
+          </md-input-container>
+        </div>
+
+        <!-- Phone Confirmation -->
+        <div class="lnr-confirmation-containers" layout="column" layout-align="center start" ng-hide="booking.showConfirmButton">
+          <div layout="row" class="confirm-label">
+            <strong>Confirm {{ 'shared.phone-number' | translate }} *</strong>
+          </div>
+          <div layout="row">
+            <div layout="row" flex="35" layout-align="start start">
+              <md-input-container flex-gt-xs="20">
+                <input ng-model="user.company1">
+              </md-input-container>
+              <span flex></span>
+              <md-input-container flex-gt-xs="20">
+                <input ng-model="user.company2">
+              </md-input-container>
+              <span flex></span>
+              <md-input-container flex-gt-xs="20">
+                <input ng-model="user.company3">
+              </md-input-container>
+              <span flex></span>
+              <md-input-container flex-gt-xs="20">
+                <input ng-model="user.company4">
+              </md-input-container>
+            </div>
+            <span flex></span>
+            <div layout="row" flex="50" layout-align="start start">
+              <md-input-container flex>
+                <md-button style="margin: 0px 0px" flex class="md-lined md-button" ng-click="booking.toggleConfirmButton()">
+                  <span>Change Phone Number</span>
+                </md-button>
+              </md-input-container>
+            </div>
+          </div>
+        </div>
+
+        <!-- Login -->
+        <div ng-if="false" class="md-dialog-buttons" layout="row" layout-align="space-between center">
+          <span class="lnr-link" ng-click="booking.a()">
+            Already have an account? {{booking.b}}
+          </span>
+        </div>
+      </div>
+
+      <!-- vertical divider -->
+      <md-divider hide-xs class="lnr-margin-left lnr-margin-right-double"></md-divider>
+
+      <!-- Right Info Column -->
+
+      <div flex hide-xs>
+        <div class="lnr-list-title">
+          <h3 class="md-subhead">
+            Total
+          </h3>
+        </div>
+        <p class="md-body-1">
+          including VAT and Listnride fees
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom Navigation Buttons -->
+
+    <div class="navigation" layout="row" layout-align="end center" layout-margin>
+      <div ng-style="{'display': signupDialog.business ? 'none' : ''}" layout="column">
+        <md-button class="md-raised md-primary" ng-disabled="!list.isCategoryValid() && list.isListMode" ng-click="list.nextTab()">
+          {{ 'list.next' | translate }}
+        </md-button>
+      </div>
+    </div>
+  </md-content>
+</md-tab>
