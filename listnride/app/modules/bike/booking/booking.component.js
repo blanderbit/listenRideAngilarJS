@@ -14,6 +14,8 @@ angular.module('booking', [])
         booking.authentication = authentication;
         booking.showConfirmButton = true;
         booking.selectedIndex = 0;
+        booking.emailPattern = /(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i;
+        booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
       };
 
       // toggle confirm phone button
