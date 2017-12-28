@@ -8,7 +8,7 @@ angular.module('booking', [])
     controllerAs: 'booking',
     controller: ['authentication', function BookingController(authentication) {
       var booking = this;
-
+      
       // on lifecycle initialization
       booking.$onInit = function () {
         booking.authentication = authentication;

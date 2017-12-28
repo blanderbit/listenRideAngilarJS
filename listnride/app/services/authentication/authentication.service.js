@@ -33,6 +33,65 @@ angular.
         }
       };
 
+      // methods for signup controller
+      // defined outside so that can be used out of sign up controller
+      // used in request booking flow
+       
+      var showSignupError = function() {
+        $mdToast.show(
+          $mdToast.simple()
+          .textContent($translate.instant('toasts.could-not-sign-up'))
+          .hideDelay(4000)
+          .position('top center')
+        );
+      };
+
+      var showProfile = function() {
+        $state.go("user", {userId: $localStorage.userId});
+      };
+
+      var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName, inviteCode) {
+        var invited = !!inviteCode;
+        var user = {
+          "user": {
+            "email": email,
+            "facebook_id": fbId,
+            "facebook_access_token": fbAccessToken,
+            "profile_picture_url": profilePicture,
+            "first_name": firstName,
+            "last_name": lastName,
+            "ref_code": inviteCode,
+            "language": retrieveLocale()
+          }
+        };
+
+        api.post("/users", user).then(function(success) {
+          setCredentials(success.data);
+          verification.openDialog(false, invited, false, showProfile);
+          $analytics.eventTrack('Facebook Sign-Up', {  category: 'Sign Up', label: 'Quick Sign-Up Complete'});
+        }, function(error) {
+          showSignupError();
+        });
+      };
+
+      var connectFb = function(inviteCode) {
+        ezfb.getLoginStatus(function(response) {
+          if (response.status === 'connected') {
+            var accessToken = response.authResponse.accessToken;
+            ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
+              signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name, inviteCode);
+            });
+          } else {
+            ezfb.login(function(response) {
+              var accessToken = response.authResponse.accessToken;
+              ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
+                signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name);
+              });
+            }, {scope: 'email'});
+          }
+        });
+      };
+
       // The Signup Dialog Controller
       var SignupDialogController = function($mdDialog, inviteCode, requesting, business) {
         var signupDialog = this;
@@ -42,38 +101,6 @@ angular.
         signupDialog.businessError = false;
         signupDialog.requesting = requesting;
         var invited = !!inviteCode;
-
-        var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName) {
-          var user = {
-            "user": {
-              "email": email,
-              "facebook_id": fbId,
-              "facebook_access_token": fbAccessToken,
-              "profile_picture_url": profilePicture,
-              "first_name": firstName,
-              "last_name": lastName,
-              "ref_code": inviteCode,
-              "language": retrieveLocale()
-            }
-          };
-
-          api.post("/users", user).then(function(success) {
-            setCredentials(success.data);
-            verification.openDialog(false, invited, false, signupDialog.showProfile);
-            $analytics.eventTrack('Facebook Sign-Up', {  category: 'Sign Up', label: 'Quick Sign-Up Complete'});
-          }, function(error) {
-            showSignupError();
-          });
-        };
-
-        var showSignupError = function() {
-          $mdToast.show(
-            $mdToast.simple()
-            .textContent($translate.instant('toasts.could-not-sign-up'))
-            .hideDelay(4000)
-            .position('top center')
-          );
-        };
 
         signupDialog.hide = function() {
           $mdDialog.hide();
@@ -140,27 +167,9 @@ angular.
           });
         };
 
-        signupDialog.connectFb = function() {
-          ezfb.getLoginStatus(function(response) {
-            if (response.status === 'connected') {
-              var accessToken = response.authResponse.accessToken;
-              ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name);
-              });
-            } else {
-              ezfb.login(function(response) {
-                var accessToken = response.authResponse.accessToken;
-                ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                  signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name);
-                });
-              }, {scope: 'email'});
-            }
-          });
-        };
+        signupDialog.connectFb = connectFb;
 
-        signupDialog.showProfile = function() {
-          $state.go("user", {userId: $localStorage.userId});
-        };
+        signupDialog.showProfile = showProfile;
       };
 
       // The Login Dialog Controller
@@ -362,7 +371,8 @@ angular.
         },
         unreadMessages: function() {
           return $localStorage.unreadMessages
-        }
+        },
+        connectFb: connectFb
       };
     }
   ]);
