@@ -3,10 +3,10 @@
 angular.module('vanmoofIntegration',[]).component('vanmoof', {
   templateUrl: 'app/modules/brand-integration/vanmoof.template.html',
   controllerAs: 'vanmoof',
-  controller: ['$translate', '$translatePartialLoader', 'api',
-    function VanmoofController($translate, $tpl, api) {
+  controller: ['$translate', '$translatePartialLoader', 'api', 'ENV',
+    function VanmoofController($translate, $tpl, api, ENV) {
       var vanmoof = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
 
       vanmoof.currentBikes = [];
       $translate(["shared.berlin"]).then(

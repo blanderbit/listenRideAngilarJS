@@ -56,7 +56,7 @@
       <div class="lnr-section-title" layout="column" layout-align="center center">
         <h2 class="md-headline">{{ 'shared.testimonials-header' | translate }}</h2>
       </div>  
-      <div class="testimonials-container" layout-padding>
+      <div class="testimonials-container" layout-padding ng-if="bonvelo.testimonials.length">
         <slick settings="bonvelo.slickConfig">   
           <div ng-repeat="testimonial in bonvelo.testimonials"
             class="testimonials-slick-slide" layout="column" layout-align="center center">

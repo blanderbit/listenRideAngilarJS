@@ -53,7 +53,8 @@
     "cancel": "Cancel",
     "send": "Send",
     "search": "Search",
-    "search-bikes": "Search your bikes",    
+    "search-all": "Search all bikes",
+    "search-bikes": "Search your bikes",
     "from-place": "from",
     "contact": "Contact & Support",
     "show-more": "show more",
@@ -218,7 +219,7 @@
       "vanmoof": {
         "meta-title": "Rent and test the Electrified S E-Bikes in Berlin, Munich and Hamburg",
         "meta-descr": "The perfect city bike - VanMoof"
-      },    
+      },
       "moeve": {
         "meta-title": "Rent and test Moeve bikes in Munich and Amsterdam",
         "meta-descr": "The bike with the unique drive system - Cyfly by Moeve."
@@ -332,10 +333,10 @@
     "add-voucher": "Add Voucher",
     "meta-title": "Profile Settings",
     "meta-description": "Change your profile - und payment settings.",
-    "company-name":"Company name",
-    "company-information":"Company information",
-    "vat":"VAT",
-    "payment-info":"Show current Payment"
+    "company-name": "Company name",
+    "company-information": "Company information",
+    "vat": "VAT",
+    "payment-info": "Show current Payment"
   },
   "verification": {
     "lets-start": "Let's start",
@@ -413,8 +414,8 @@
     "price": "Price",
     "book": "Book",
     "rating": "Rating",
-    "listChat": "Request by {{user.first_name}} {{user.last_name}}",
-    "rideChat": "Request at {{lister.first_name}} {{lister.last_name}}",
+    "listChat": "Request by {{user.first_name}}",
+    "rideChat": "Request at {{lister.first_name}}",
     "ratings": {
       "title": "How did you like the overall experience?",
       "description": "Trust and Safety are our paramount concern. By writing a short review, you'll help the whole community.",
@@ -424,7 +425,7 @@
       "4": "Good",
       "5": "Excellent",
       "rating_text_rider": "Please summarize your rental experience in a few sentences. The lister will do the same",
-      "rating_text_lister":   "Please summarize your rental experience in a few sentences. The rider will do the same"
+      "rating_text_lister": "Please summarize your rental experience in a few sentences. The rider will do the same"
     },
     "write-message": "Write a message...",
     "complete-profile": "Complete your Profile",
@@ -569,7 +570,15 @@
       "name": "Name",
       "description": "Description (min. 100 characters)",
       "min-length-warning": "Length should be at least 100 characters",
-      "size": "Rider Height"
+      "size": "Rider Height",
+      "frame-size": "Frame size",
+      "bicycle-number": "Bicycle No.",
+      "frame-number": "Frame number",
+      "custom-fields": "Additional fields",
+      "details": "Details",
+      "frame_size": "Frame size",
+      "bicycle_number": "Bicycle number",
+      "frame_number": "Frame number"
     },
     "accessories": {
       "header": "What accessories does your bike have?",
@@ -609,7 +618,7 @@
       "description": "Your daily price is your base price for 1 day.",
       "hint-para-1": "The price you charge for your bike is up to you. The price should be based on the bike and equipment. To get an idea of market prices, you can view comparable listings. ",
       "hint-para-2": "A rental period for less than 6 hours equals a half-day rental, 6 to 24 hours a day’s rental.",
-      "hint-para-3": "To encourage longer rentals, some listers set a daily or weekly discount." ,
+      "hint-para-3": "To encourage longer rentals, some listers set a daily or weekly discount.",
       "label": "Pricing",
       "discount": "Discount",
       "discount-description-initial": "With a weekly discount of ",
@@ -638,7 +647,7 @@
       "price_30_days": "30 days",
       "price_30_days_long": "30 days (1 month)",
       "reset-prices": "Reset",
-      "validations":{
+      "validations": {
         "required": {
           "daily_price": "Daily price is required",
           "price": "Price is required"
@@ -689,6 +698,7 @@
     "my-bikes": "My Bikes",
     "no-bikes": "You haven't listed any of your rides yet.",
     "list-a-bike": "List a Bike",
+    "show-as-list": "Show as List",
     "duplicate": {
       "duplicate": "Duplicate",
       "how_many": "How many bikes?",
@@ -697,7 +707,7 @@
       "maxlength": "Works for maximum 99 bikes",
       "required": "Number of bikes is required"
     },
-  "listView": {
+    "listView": {
       "price": "Price (€)"
     }
   },
@@ -788,7 +798,7 @@
     "as-rider": "As Rider",
     "no-rides": "You had no rides yet"
   },
-  "invite-landing" : {
+  "invite-landing": {
     "meta-title": "listnride | 10€ for you!",
     "meta-description": "Give the gift of cycling! When you invite a friend to listnride, they’ll get a 10€ voucher as soon as they join. When they rent a bike or list their own, you’ll get 10€ too!",
     "header": "sent you 10€",
@@ -822,6 +832,16 @@
       "copy": "Copy",
       "copied": "Copied!"
     },
+    "invite-dialog": {
+      "rider": {
+        "header": "Did you enjoy the ride?",
+        "subheader": "Recommend your friends to listnride! We add € 10 for his first booking! And if your friend makes use of it, there is another €10 credit for you. A nice Win-Win!"
+      },
+      "lister": {
+        "header": "That was easy, right?",
+        "subheader": "Would you recommend us to your friends? We’ll add €10 for his first booking! And if your friend makes use of it, there is another 10€ credit for your next rental. A nice Win-Win!"
+      }
+    },
     "invitations": {
       "header": "Your friends have earned you {{ credit }}€",
       "status": {
@@ -851,5 +871,12 @@
     "press": "Press",
     "jobs": "Jobs",
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
+  },
+  "seo": {
+    "cities-title": "Planning to Travel? Check out more cities:",
+    "header": "Rent the best bikes in",
+    "rent-perfect-bikes-in": "Rent perfect bikes in",
+    "rent-category-bikes-in": "A large choice of rental bikes",
+    "bike-shops-in": "Bike Shops in"
   }
 }

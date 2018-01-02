@@ -2,20 +2,19 @@
   <div class="content" layout="column">
     <div layout="row" layout-xs="column" layout-padding>
 
-      <div layout="column" layout-align="center start" flex="20" flex-sm="20" hide-sm hide-xs>
+      <div layout="column" flex="15" layout-align="center start" hide-sm hide-xs>
         <div>
           <md-icon class="lnr-icn-xlrg md-color-white" md-svg-src="app/assets/ui_icons/lnr_logo_full.svg"></md-icon>
         </div>
       </div>
-
-      <div layout="row" layout-wrap layout-align="space-between start" flex>
+      <div layout="row" flex layout-wrap layout-align="space-around start">
         <div layout="column" flex-xs="50">
           <md-list>
             <md-subheader class="md-no-sticky">{{ 'shared.top-cities' | translate }}</md-subheader>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="search({ location: 'Berlin' })" >{{ 'shared.berlin' | translate }}</a></md-list-item>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="search({ location: 'Munich' })">{{ 'shared.munich' | translate }}</a></md-list-item>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="search({ location: 'Amsterdam' })">{{ 'shared.amsterdam' | translate }}</a></md-list-item>
-            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="search({ location: 'Vienna' })">{{ 'shared.vienna' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="cityLanding({ pageTitle: 'Berlin' })" >{{ 'shared.berlin' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="cityLanding({ pageTitle: 'Munich' })">{{ 'shared.munich' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="cityLanding({ pageTitle: 'Amsterdam' })">{{ 'shared.amsterdam' | translate }}</a></md-list-item>
+            <md-list-item class="md-body-1"><a class="lnr-link" ui-sref="cityLanding({ pageTitle: 'Vienna' })">{{ 'shared.vienna' | translate }}</a></md-list-item>
           </md-list>
         </div>
 
@@ -49,8 +48,8 @@
               </a>
             </md-list-item>
             <md-list-item class="md-body-1">
-              <a class="lnr-link" ui-sref="shopLanding">
-                {{ 'shared.for-shops' | translate }}
+              <a class="lnr-link" ui-sref="businessCommunity">
+                {{ 'shared.for-shops' | translate  }}
               </a>
             </md-list-item>
             <md-list-item class="md-body-1">
@@ -150,6 +149,9 @@
                 </md-menu-item>
                 <md-menu-item>
                   <md-button md-no-ink ng-click="footer.switchLanguage('it')">Italiano</md-button>
+                </md-menu-item>
+                <md-menu-item>
+                  <md-button md-no-ink ng-click="footer.switchLanguage('es')">Spanish</md-button>
                 </md-menu-item>
               </md-menu-content>
             </md-menu>

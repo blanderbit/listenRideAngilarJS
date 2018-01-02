@@ -3,10 +3,10 @@
 angular.module('vello-integration',[]).component('vello', {
   templateUrl: 'app/modules/brand-integration/vello.template.html',
   controllerAs: 'vello',
-  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta',
-    function VelloController($translate, $tpl, api, ngMeta) {
+  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta', 'ENV',
+    function VelloController($translate, $tpl, api, ngMeta, ENV) {
       var vello = this;
-      $tpl.addPart('static');
+      $tpl.addPart(ENV.staticTranslation);
       ngMeta.setTitle($translate.instant("brand-integration.vello.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.vello.meta-descr"));
 

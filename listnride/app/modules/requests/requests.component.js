@@ -392,10 +392,13 @@ angular.module('requests', ['infinite-scroll'])
           };
           var newStatus;
 
+          // rider rating
           if (requests.request.rideChat) {
             data.rating.ride_id = requests.request.ride.id;
             newStatus = 6;
           }
+
+          // lister rating
           else {
             data.rating.user_id = requests.request.user.id;
             newStatus = 5
@@ -413,6 +416,46 @@ angular.module('requests', ['infinite-scroll'])
               api.put("/requests/" + requests.request.id, data).then(
                 function () {
                   reloadRequest(requests.request.id);
+                  /*
+                  Logic to show the Referal Dialog:
+                  1- If newStatus is 5, rating > 3 and isBusiness is false -> show dialog to lister 
+                  2- If newStatus is 6, rating > 3 and isBusiness is false -> show dialog to rider 
+                  */
+                  // rating > 3 and user has no business
+                  if (parseInt(ratingDialog.rating) > 3 && $localStorage.isBusiness === false) {
+                    // show lister dialog
+                    if (parseInt(newStatus) === 5) {
+                      $mdDialog.show({
+                        // template for referral dialog for lister
+                        templateUrl: 'app/modules/referral-link/referral-link.lister.template.html',
+                        parent: angular.element(document.body),
+                        locals: {close: $mdDialog.hide},
+                        controller: angular.noop,
+                        controllerAs: 'mdDialog',
+                        bindToController: true,
+                        targetEvent: event,
+                        openFrom: angular.element(document.body),
+                        closeTo: angular.element(document.body),
+                        fullscreen: true // Only for -xs, -sm breakpoints.
+                      });
+                    }
+                    // show rider dialog
+                    else if (parseInt(newStatus) === 6) {
+                      $mdDialog.show({
+                        // template for referral dialog for rider
+                        templateUrl: 'app/modules/referral-link/referral-link.rider.template.html',
+                        parent: angular.element(document.body),
+                        locals: {close: $mdDialog.hide},
+                        controller: angular.noop,
+                        controllerAs: 'mdDialog',
+                        bindToController: true,
+                        targetEvent: event,
+                        openFrom: angular.element(document.body),
+                        closeTo: angular.element(document.body),
+                        fullscreen: true // Only for -xs, -sm breakpoints.
+                      });
+                    }
+                  }
                 },
                 function () {
                   reloadRequest(requests.request.id);
