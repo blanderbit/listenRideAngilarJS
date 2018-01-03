@@ -77,13 +77,13 @@ angular.module('requests', ['infinite-scroll'])
         requests.loadingList = true;
         api.get('/users/' + $localStorage.userId + '/requests?page=' + requests.currentPage++).then(
           function (success) {
-            var newRequests = success.data;
+            var newRequests = success.data.requests;
             requests.all_requests = requests.all_requests.concat(newRequests);
             requests.requests = angular.copy(requests.all_requests);
             requests.filterBikes(requests.filters.type, false);
             requests.filters.applyFilter(requests.filters.selected);
             requests.loadingList = false;
-            requests.requestsLeft = newRequests.length === 10;
+            requests.requestsLeft = !_.isEmpty(success.data.links.next_rider) || !_.isEmpty(success.data.links.next_lister);
             if (requests.all_requests.length > 0) {
               requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
               requests.loadRequest(requests.selected);
