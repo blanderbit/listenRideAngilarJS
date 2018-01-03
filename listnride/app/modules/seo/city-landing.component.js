@@ -7,12 +7,11 @@ angular.module('cityLanding',[]).component('cityLanding', {
     function cityLandingController($translate, $tpl, $stateParams, $state, $http, api, ENV) {
 
       var cityLanding = this;
-      var city = $stateParams.pageTitle;
+      var city = $stateParams.city;
       $tpl.addPart(ENV.staticTranslation);
       cityLanding.bikes = {};
       cityLanding.loading = true;
 
-      // api.get('/seo_pages?url=' + $stateParams.pageTitle).then(
       api.get('/seo_pages?city='+city+'&lang=' + $translate.preferredLanguage()).then(
         function (success) {
           cityLanding.data = success.data;
