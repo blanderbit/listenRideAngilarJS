@@ -53,6 +53,7 @@
     "cancel": "Cancelar",
     "send": "Enviar ",
     "search": "Buscar",
+    "search-all": "Buscar todas las bicicletas",
     "search-bikes": "Busca bicicletas",
     "from-place": "de",
     "contact": "Contacto y soporte",
@@ -156,6 +157,10 @@
       "cyclassics-hamburg": {
         "meta-title": "Alquila una bicicleta de carretera en listnride para la Clásica de Hamburgo ",
         "meta-description": "Alquila con facilidad la bicicleta de carretera perfecta para la Clásica de Hamburgo online y elige entre marcas como Specialized, Ridley, Cervelo y Bianchi."
+      },
+      "hamburg-triathlon": {
+        "meta-title": "Alquila una bicicleta de carretera en listnride para el Triatlón de Hamburgo ",
+        "meta-description": "Alquila con facilidad la bici de carretera perfecta para el Triatlón de Hamburgo online y elige entre marcas como Specialized, Ridley, Cervelo y Bianchi."
       },
       "riderman": {
         "meta-title": "Alquila una bici de carretera para la RiderMan de Bad Dürrheim",
@@ -566,14 +571,13 @@
       "description": "Descripción (mín. 100 caracteres)",
       "min-length-warning": "La longitud debe ser de al menos 100 caracteres",
       "size": "Altura del ciclista",
-      "frame-size": "Frame size",
-      "bicycle-number": "Bicycle number",
-      "frame-number": "Frame number",
-      "custom-fields": "Additional fields",
-      "details": "Details",
-      "frame_size": "Frame size",
-      "bicycle_number": "Bicycle number",
-      "frame_number": "Frame number"
+      "frame-size": "Tamaño del cuadro",
+      "bicycle-number": "Bicicleta n° ",
+      "frame-number": "Número de cuadro",
+      "custom-fields": "Campos adicionales",
+      "details": "Datos",
+      "frame_size": "Tamaño del cuadro",
+      "bicycle_number": "Número de bicicleta"
     },
     "accessories": {
       "header": "¿Qué accesorios tiene tu bici?",
@@ -827,6 +831,16 @@
       "copy": "Copiar",
       "copied": "¡Copiado!"
     },
+    "invite-dialog": {
+      "rider": {
+        "header": "¿Disfrutaste del paseo?",
+        "subheader": "Recomienda listnride a tus amigos. Añadiremos 10€ a su primer alquiler.  Y si tu amigo lo usa, también te daremos 10€ de crédito para tu siguiente alquiler. Así ganáis todos."
+      },
+      "lister": {
+        "header": "Fue fácil, ¿verdad?",
+        "subheader": "¿Nos recomendarías a tus amigos? Añadiremos 10€ a su primer alquiler.  Y si tu amigo lo usa, también te daremos 10€ de crédito para tu siguiente alquiler. Así ganáis todos."
+      }
+    },
     "invitations": {
       "header": "Tus amigos te han hecho ganar {{ credit }}€",
       "status": {
@@ -858,8 +872,18 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
   "seo": {
-    "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden",
-    "header": "The best bikes in",
-    "bike-shops-in": "Bike Shops in"
+    "cities-title": "Planning to Travel? Check out more cities:",
+    "header": "Rent the best bikes in",
+    "rent-the-best": "Rent the best",
+    "bikes": "bikes",
+    "rent-perfect-bikes-in": "Rent perfect bikes in",
+    "rent-category-bikes-in": "We offer you a large choice of rental bikes",
+    "bike-shops-in": "Tiendas de bicis en",
+    "city": "city bikes",
+    "race": "race bikes",
+    "all-terrain": "all-terrain bikes",
+    "kids": "kids bikes",
+    "electro": "e-bikes",
+    "special": "special bikes"
   }
 }

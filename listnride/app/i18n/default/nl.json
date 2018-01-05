@@ -867,7 +867,17 @@
   },
   "seo": {
     "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden",
-    "header": "Rent Bikes in",
-    "bike-shops-in": "Bike Shops in"
+    "header": "Huur de beste fietsen in",
+    "rent-the-best": "Huur de beste",
+    "bikes": "fietsen",
+    "rent-perfect-bikes-in": "huur perfecte fietsen in",
+    "rent-category-bikes-in": "Een groot aanbod aan huurfietsen",
+    "bike-shops-in": "Bike Shops in",
+    "city": "stad fietsen",
+    "race": "race fietsen",
+    "all-terrain": "all-terrain fietsen",
+    "kids": "kinder fietsen",
+    "electro": "elektrisch fietsen",
+    "special": "speciaal fietsen"
   }
 }

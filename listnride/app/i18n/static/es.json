@@ -68,7 +68,7 @@
       "search-title": "Echa un vistazo a la selección de bicis de alquiler en Vienna",
       "search-subtitle": "Alquila una bici que se ajuste a tu estilo y necesidades",
       "about": "Acerca de Viena",
-      "about-content": "Viena. La ciudad imperial del Danubio, se transforma lentamente en una metrópolis con mentalidad ciclista. En especial en sus propios festivales, como <a href=\"http://www.bikefestival.at\" target=\"_blank\">Argus Bike </a>, Radkult, y en 2016, el <a href=\"http://www.wienerfahrradschau.at\" target=\"_blank\">Wiener Fahrradschau </a>, un spin-off de la Berlin Fahrradschau que se llevó a cabo por primera vez.Al lado de estos eventos, no hay forma de perderse el panorama ciclista local, ya que ha crecido tan rápido como la ciudad misma y recupera las calles.",
+      "about-content": "Viena. La ciudad imperial del Danubio, se transforma lentamente en una metrópolis con mentalidad ciclista. En especial en sus propios festivales, como <a href=\"http://www.bikefestival.at\" target=\"_blank\">Argus Bike </a>, Radkult, y en 2016, el <a href=\"http://www.wienerfahrradschau.at\" target=\"_blank\">Wiener Fahrradschau </a>, un spin-off de la Berlin Fahrradschau que se llevó a cabo por primera vez. Al lado de estos eventos, no hay forma de perderse el panorama ciclista local, ya que ha crecido tan rápido como la ciudad misma y recupera las calles.",
       "bike-routes": "Rutas en bici",
       "bike-shops": "Tiendas de bicis",
       "cafes-bars": "Cafés, bares y restaurantes",
@@ -150,8 +150,15 @@
       "meta-title": "Alquila una bicicleta de carretera en listnride para la Clásica de Hamburgo ",
       "meta-description": "Alquile con facilidad la bicicleta de carretera perfecta para la Clásica de Hamburgo online y elige entre marcas como Specialized, Ridley, Cervelo y Bianchi.",
       "title": "Alquila una bicicleta de carretera en listnride para la Clásica de Hamburgo ",
-      "text": "¿Necesitas una bici de carretera para la Cyclassics de Hamburgo? ¡Podemos engancharte! Junto con la comunidad listnride, ofrecemos bicis de carretera que puedes alquilar por el período que quieras. Basta con que elijas una de las bicis de más abajo, la solicites para el período que necesites y la recojas cuando llegue el momento. Tan fácil como eso. <br><br>Hazte con un descuento de 10€  introduciendo este código de promoción: CYCLASSICS2018 en la configuración de tu cuenta antes de reservar  ¿No puedes participar? Ayuda a alguien que lo necesite. ¡Anuncia tu bici y gana dinero extra!",
-      "description": "Dónde: <b>Hamburgo </b>| qué: <b>carrera de bicis de carretera de 60, 100 o 160 km </b>| cuándo: <b>19.08.2017 </b>"
+      "text": "¿Necesitas una bici de carretera para la Cyclassics de Hamburgo? ¡Podemos engancharte! Junto con la comunidad listnride, ofrecemos bicis de carretera que puedes alquilar por el período que quieras. Basta con que elijas una de las bicis de más abajo, la solicites para el período que necesites y la recojas cuando llegue el momento. Tan fácil como eso. <br><br>Hazte con un descuento de 10€  introduciendo este código de promoción: CYCLASSICS2018 en la configuración de tu cuenta antes de reservar. <br><br>¿No puedes participar? Ayuda a alguien que lo necesite. ¡Anuncia tu bici y gana dinero extra!",
+      "description": "Dónde: <b>Hamburgo </b>| Qué: <b>carrera de bicis de carretera de 60, 100 o 160 km </b>| cuándo: <b>19.08.2017</b>"
+    },
+    "hamburg-triathlon": {
+      "meta-title": "Alquila una bicicleta de carretera en listnride para el Triatlón de Hamburgo ",
+      "meta-description": "Alquila con facilidad la bici de carretera perfecta para el Triatlón de Hamburgo online y elige entre marcas como Specialized, Ridley, Cervelo y Bianchi.",
+      "title": "Alquila una bicicleta de carretera en listnride para el Triatlón de Hamburgo ",
+      "text": "¿Necesitas una bici de carretera para el Triatlón de Hamburgo? ¡Podemos engancharte! Junto con la comunidad listnride, ofrecemos las bicis de carretera ideales. Basta con que elijas una de las bicis de más abajo, la solicites para el período que necesites y la recojas cuando llegue el momento. Tan fácil como eso. <br><br>Asegúrate un descuento de 10 € introduciendo el código de promoción TriathlonHH2018 en la configuración de tu cuenta antes de reservar. <br><br>¿No puedes participar? Ayuda a alguien que lo necesite. ¡Anuncia tu bici y gana dinero extra!",
+      "description": "Dónde: <b>Hamburgo</b> | Qué: <b> Triatlón- Distancia Olímpica y Sprint</b> | Cuándo: <b>14-15 de julio de 2018 </b>"
     },
     "riderman": {
       "meta-title": "Alquila una bici de carretera para la RiderMan de Bad Dürrheim",
@@ -449,7 +456,7 @@
       "faq-answer-6": "• Una garantía de dos años cubre los defectos de mano de obra y materiales. <br>• Tecla de backup remoto, para bloquear o desbloquear la bici cuando el teléfono inteligente no esté disponible o esté sin batería <br>• Cargador de bici (cargador de 36V, 2A) <br>• Seguimiento antirrobo GSM y Bluetooth  <br>Aplicación de teléfono inteligente para Android e iOS <br>•  Manual de funcionamiento y guía del usuario <br>• Herramienta antirrobo para las tuercas de las ruedas de la bici <br>•  Ruedas de Electrified S de 28 \"x 2,35\". (60-622) <br>• Cable para el bloqueo integrado <br> Herramienta para ajustar la posición del asiento y del manillar"
     },
     "moeve": {
-      "description": "La bici con un sistema de conducción único: Cyfly de Moeve.",
+      "description": "Alquila y prueba las bicicletas Moeve en Berlín y Múnich",
       "subdescription": "Hecha por un equipo de ingenieros con inquietudes",
       "item1-title": "Cyfly",
       "item1-description": "Mejor transmisión en los sectores relevantes. La conducción única y el pedaleo potente aseguran una experiencia ciclista única.",

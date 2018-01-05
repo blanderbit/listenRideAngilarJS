@@ -746,7 +746,7 @@
     "title": "Fahrrad vermieten, Konto ankurbeln",
     "subtitle": "Lerne tolle neue Leute kennen und verdiene nebenbei Geld, z.B. für Dein nächstes Traum-Rad.",
     "calculator-section": {
-      "header": "Lass‘ Dein Fahrrad für Dich arbeiten",
+      "header": "Lass Dein Fahrrad für Dich arbeiten",
       "subheader": "Ein paar Klicks und unser Rechenschieber zeigt Dir, wieviel Du mit Fahrradvermietungen über listnride verdienen kannst.",
       "market-price": "Marktwert deines Fahrrads,",
       "days-per-month": "Tage, die es pro Monat vermietet ist",
@@ -869,7 +869,17 @@
   },
   "seo": {
     "cities-title": "Du planst zu reisen? Schau dir mehr Städte an:",
-    "header": "Die besten Räder in",
-    "bike-shops-in": "Fahrradläden in"
+    "header": "Miete die besten Räder in",
+    "rent-the-best": "Miete die besten",
+    "bikes": "Räder",
+    "rent-perfect-bikes-in": "Miete perfekte Räder in",
+    "rent-category-bikes-in": "Eine große Auswahl an Mieträdern",
+    "bike-shops-in": "Fahrradläden in",
+    "city": "Stadträder",
+    "race": "Rennräder",
+    "all-terrain": "All-Terrain Räder",
+    "kids": "Kinderräder",
+    "electro": "E-Bikes",
+    "special": "Spezialräder"
   }
 }
