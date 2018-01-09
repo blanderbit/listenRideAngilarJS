@@ -1,7 +1,7 @@
  <md-content class="single-column" ng-hide="categoryLanding.loading"> 
   <div id="hero-shot-small" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/seo/berlin-ebikes.jpg'); background-position: 50% 20%;" layout="column" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
-      <h1 class="md-display-1">{{ 'seo.header' | translate }} {{ categoryLanding.data.city }}</h1>
+      <h1 class="md-display-1">{{ 'seo.rent-the-best' | translate }} {{ categoryLanding.category | translate }} in {{ categoryLanding.data.city }}</h1>
     </div>
     <form class="lnr-search-bar md-whiteframe-3dp" layout="row" md-theme="default">
       <autocomplete
@@ -38,7 +38,7 @@
     <div flex="50" flex-xs="100">
       <!-- <div class="lnr-section-title" layout="column" layout-align="center center"> -->
         <!-- <h2 class="md-headline">{{ categoryLanding.data.texts.main.title }}</h2> -->
-        <h2 class="md-headline">Rent perfect bikes in Berlin</h2>
+        <h2 class="md-headline">{{ 'seo.rent-the-best' | translate }} {{ categoryLanding.category | translate }} in {{ categoryLanding.data.city }}</h2>
         <br>
       <!-- </div> -->
       <p class="md-body-1" style="margin: 7px">{{ categoryLanding.data.texts.main.description }}</p>
@@ -93,62 +93,6 @@
     <md-button ui-sref="search({location: 'Berlin'})" class="md-xlrg md-raised md-primary">
     Search all Bikes in Berlin
     </md-button>
-  </div>
-  
-
-  <div class="content section" layout-padding>
-    <br><br><br><br>
-    <md-divider></md-divider>
-    <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h2 class="md-headline">{{ 'seo.bike-shops-in' | translate }} {{ categoryLanding.data.city }}</h2>
-    </div>
-    <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="2" md-cols-gt-xs="3" md-cols-gt-sm="{{ categoryLanding.data.shops.length }}" md-gutter="16px" md-row-height="1:1">
-      <md-grid-tile ng-repeat="shop in categoryLanding.data.shops" class="tile" style="background-image: url({{ shop.profile_picture.profile_picture.url }});">
-        <a ui-sref="user({userId: {{ shop.id }}})" target="_blank" layout-padding layout="column" layout-align="center  center">
-          <h3 class="md-title">{{ shop.company_name }}</h3>
-        </a>
-      </md-grid-tile>
-    </md-grid-list>
-  </div>
-
-  <div class="content section" layout-padding>
-    <br><br><br><br>
-    <md-divider></md-divider>
-    <div class="lnr-section-title" layout="column" layout-align="center center">      
-      <h2 class="md-headline">Explore {{ categoryLanding.data.city }}</h2>
-    </div>
-
-    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center" layout-padding>
-      <div layout="column" flex-gt-xs="45">
-        <h3 class="md-subhead">{{ 'cities.berlin.about' | translate }}</h3>
-        <p translate="cities.berlin.about-content"></p>
-        <br>
-        <md-card class="lnr-bike-card">
-          <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-routes.jpg" alt="">
-        </md-card>
-        <br>
-        <h3 class="md-subhead">{{ 'cities.berlin.bike-routes' | translate }}</h3>
-        <p translate="cities.berlin.bike-routes-content"></p>
-      </div>
-      <div layout="row" flex-gt-xs="10" layout-align="center">
-        <md-divider></md-divider>
-      </div>
-      <div layout="column" flex-gt-xs="45">
-        <md-card class="lnr-bike-card">
-          <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-shops.jpg" alt="">
-        </md-card>
-        <br>
-        <h3 class="md-subhead">{{ 'cities.berlin.bike-shops' | translate }}</h3>
-        <p translate="cities.berlin.bike-shops-content"></p>
-        <br>
-        <md-card class="lnr-bike-card">
-          <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-cafes.jpg" alt="">
-        </md-card>
-        <br>
-        <h3 class="md-subhead">{{ 'cities.berlin.cafes-bars' | translate }}</h3>
-        <p translate="cities.berlin.cafes-bars-content"></p>
-      </div>
-    </div>
   </div>
 
   <br><br><br><br>

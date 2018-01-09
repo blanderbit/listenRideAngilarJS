@@ -1103,8 +1103,14 @@
       });
 
       $stateProvider.state({
+        name: 'categoryLanding',
+        url: '/{city: string}/{category: string}',
+        template: '<category-landing></category-landing>'
+      });
+
+      $stateProvider.state({
         name: 'cityLanding',
-        url: '/{pageTitle: string}',
+        url: '/{city: string}',
         template: '<city-landing></city-landing>'
       });
 

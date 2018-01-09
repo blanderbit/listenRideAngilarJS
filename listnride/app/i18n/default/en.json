@@ -875,8 +875,16 @@
   "seo": {
     "cities-title": "Planning to Travel? Check out more cities:",
     "header": "Rent the best bikes in",
+    "rent-the-best": "Rent the best",
+    "bikes": "bikes",
     "rent-perfect-bikes-in": "Rent perfect bikes in",
     "rent-category-bikes-in": "A large choice of rental bikes",
-    "bike-shops-in": "Bike Shops in"
+    "bike-shops-in": "Bike Shops in",
+    "city": "city bikes",
+    "race": "race bikes",
+    "all-terrain": "all terrain bikes",
+    "kids": "kids bikes",
+    "electro": "electric bikes",
+    "special": "special bikes"
   }
 }
