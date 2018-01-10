@@ -12,7 +12,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
       cityLanding.bikes = {};
       cityLanding.loading = true;
 
-      api.get('/seo_pages?city='+city+'&lang=' + $translate.preferredLanguage()).then(
+      api.get('/seo_pages?city='+city+'&lng=' + $translate.preferredLanguage()).then(
         function (success) {
           cityLanding.data = success.data;
           cityLanding.location = cityLanding.data.city;
