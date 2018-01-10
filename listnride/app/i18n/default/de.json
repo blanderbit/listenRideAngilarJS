@@ -53,6 +53,7 @@
     "send": "Senden",
     "search": "Suche",
     "search-all": "Finde alle Räder",
+    "search-all-in": "Finde alle Räder in",
     "search-bikes": "Durchsuche deine Räder",
     "from-place": "aus",
     "contact": "Kontakt & Hilfe",
@@ -95,7 +96,7 @@
     "Oct": "Okt",
     "Nov": "Nov",
     "Dec": "Dez",
-    "testimonials-header": "Was die Leute sagen",
+    "testimonials-header": "Was sagen die Leute?",
     "balance": "Guthaben",
     "tac": "Allgemeinen Geschäftsbedingungen",
     "booking-accept-tac": "Durch Buchen bestätige ich die",
@@ -341,7 +342,7 @@
     "lets-start": "Loslegen",
     "lets-start-description": "Es dauert nur 3 Minuten",
     "verify-profile": "Verifiziere dein Profil",
-    "resend-email": "Email erneut senden",
+    "resend-email": "E-mail erneut senden",
     "public": "Öfftl.",
     "private": "Privat",
     "private-tip": "Diese Informationen sind nicht öffentlich einsehbar",
@@ -374,7 +375,7 @@
       "resend-confirmation-sms": "Erneut schicken",
       "sms-verification-code": "Verifizierungs-Code",
       "sms-verification-code-mobile": "Verifizierungs-Code",
-      "confirm-code": "Code Bestätigen",
+      "confirm-code": "Code bestätigen",
       "confirm-code-mobile": "Bestätigen",
       "phone-nr-verified": "Deine Nummer wurde erfolgreich verifiziert!"
     },
@@ -398,7 +399,7 @@
     "verified-through": "Verifiziert durch",
     "own-bikes": "Eigene Räder",
     "ratings": "Bewertungen",
-    "meta-title": "{{name}}'s Profil",
+    "meta-title": "{{name}}s Profil",
     "meta-description": "Rad mieten von {{name}} auf listnride.",
     "availability": "Verfügbarkeiten",
     "not-available": "Nicht verfügbar",
@@ -429,7 +430,7 @@
     "complete-profile-description": "Um das Rad zu buchen, gebe dein Zahlungsmittel an. Alle Daten werden über eine gesicherte Verbindung übertragen.",
     "no-requests-yet": "Sobald du Anfragen gestellt oder bekommen hast, werden sie hier angezeigt.",
     "filters": {
-      "all-requests": "Alle Anfragen",
+      "all-requests": "Alle anfragen",
       "current-rentals": "Aktuelle Mieten",
       "pending-requests": "Offene Anfragen",
       "upcoming-rentals": "Bevorstehende Miete",
@@ -504,7 +505,7 @@
   },
   "home": {
     "landing-section-header": "Das perfekte Rad. Einfach mieten.",
-    "landing-section-subheader": "Miete Dir auf listnride ein Fahrrad, wie Du es magst und gerade brauchst.",
+    "landing-section-subheader": "Miete dir auf listnride ein Fahrrad, wie du es magst und gerade brauchst.",
     "featured-bikes-header": "Fahrradverleih: Die Lieblinge der Community",
     "featured-bikes-subheader": "Egal ob Rennrad, Mountain Bike, Stadtrad oder E-Bike, du kannst sie alle mieten. Hier sind die aktuellen Favoriten der Community.",
     "featured-tiles-header": "Lass dich inspirieren",
@@ -517,7 +518,7 @@
     "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie Du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
   },
   "autocomplete": {
-    "default-placeholder": "Wo willst Du ein Rad ausleihen?"
+    "default-placeholder": "Wo willst du ein Rad ausleihen?"
   },
   "search": {
     "no-bikes": "Es gibt keine Räder an diesem Ort",
@@ -547,8 +548,8 @@
     "next": "Weiter",
     "list-bike": "Rad einstellen",
     "category": {
-      "header": "Wie ist die Kategorie Deines Rads?",
-      "hint": "Wähle zuerst die Kategorie Deines Rads. Wähle anschließend die passende Unterkategorie.",
+      "header": "Wie ist die Kategorie deines Rads?",
+      "hint": "Wähle zuerst die Kategorie deines Rads. Wähle anschließend die passende Unterkategorie.",
       "label": "Kategorie",
       "city": "Stadt",
       "race": "Straße",
@@ -747,7 +748,7 @@
     "subtitle": "Lerne tolle neue Leute kennen und verdiene nebenbei Geld, z.B. für Dein nächstes Traum-Rad.",
     "calculator-section": {
       "header": "Lass Dein Fahrrad für Dich arbeiten",
-      "subheader": "Ein paar Klicks und unser Rechenschieber zeigt Dir, wieviel Du mit Fahrradvermietungen über listnride verdienen kannst.",
+      "subheader": "Ein paar Klicks und unser Rechenschieber zeigt dir, wieviel du mit Fahrradvermietungen über listnride verdienen kannst.",
       "market-price": "Marktwert deines Fahrrads,",
       "days-per-month": "Tage, die es pro Monat vermietet ist",
       "could-earn": "Du verdienst",

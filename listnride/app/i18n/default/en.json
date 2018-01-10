@@ -54,6 +54,7 @@
     "send": "Send",
     "search": "Search",
     "search-all": "Search all bikes",
+    "search-all-in": "Search all bikes in",
     "search-bikes": "Search your bikes",
     "from-place": "from",
     "contact": "Contact & Support",
@@ -342,7 +343,7 @@
     "lets-start": "Let's start",
     "lets-start-description": "It only takes 3 minutes",
     "verify-profile": "Verify your Profile",
-    "resend-email": "Resend Email",
+    "resend-email": "Resend email",
     "public": "Public",
     "private": "Private",
     "private-tip": "This information will not be open to the public",
@@ -353,7 +354,7 @@
       "text2": "We're a sharing community, so the trust and safety of you and the other users have highest priority. We therefore kindly ask you to verify your profile through a few simple steps. The better the information you enter, the higher are chances that your requests will be accepted and bikes will be requested."
     },
     "2": {
-      "title": "Upload your Profile Picture",
+      "title": "Upload your profile picture",
       "description": "Show other user who is the person behind your profile.",
       "business-description": "Having your logo shown on listnride is a great way to attract more request",
       "business-title": "Upload your Shop Logo"
@@ -372,11 +373,11 @@
       "enter-valid-phone-nr": "Please enter a valid phone number",
       "send-confirmation-sms": "Send Confirmation",
       "send-confirmation-sms-mobile": "Send SMS Code",
-      "resend-confirmation-sms": "Resend Confirmation",
+      "resend-confirmation-sms": "Resend confirmation",
       "resend-confirmation-sms-mobile": "Resend",
       "sms-verification-code": "SMS Verification Code",
       "sms-verification-code-mobile": "Verification Code",
-      "confirm-code": "Confirm Code",
+      "confirm-code": "Confirm code",
       "confirm-code-mobile": "Confirm",
       "phone-nr-verified": "Your number is successfully verified!"
     },
@@ -521,7 +522,7 @@
     "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
   },
   "autocomplete": {
-    "default-placeholder": "Where would you like to rent a bike"
+    "default-placeholder": "Where would you like to rent a bike?"
   },
   "search": {
     "no-bikes": "There are no bikes in this location",
@@ -550,7 +551,7 @@
     "list-your-bike": "List your bike",
     "back": "Back",
     "next": "Next",
-    "list-bike": "List My Bike",
+    "list-bike": "List my bike",
     "category": {
       "header": "What is your bike category?",
       "hint": "First, select the category of your bike. Then select the right subcategory.",
@@ -593,13 +594,13 @@
     },
     "pictures": {
       "header": "Upload some pictures of your bike",
-      "hint": "Now select some nice pictures of your bike. Here are some important photo tips for making your listing look ever better.",
+      "hint": "Now select some nice pictures of your bike. Here are some important photo tips for making your listing look even better.",
       "how-to": "Photo tips for making your listing stand out",
       "label": "Pictures",
       "select-images": "Select images",
       "remove": "Remove",
       "upload-bike-header": "Upload some pictures of your bike",
-      "under-min-size": "Some of your images size is less than allowable minimum 1500x1000:",
+      "under-min-size": "Some of your images size is less than the allowable minimum 1500x1000:",
       "invalid-images": "Invalid images"
     },
     "location": {

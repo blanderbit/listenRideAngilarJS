@@ -53,6 +53,9 @@
     "cancel": "Cancellare",
     "send": "Inviare",
     "search": "Ricerca",
+    "search-all": "Cerca tutte le biciclette",
+    "search-all-in": "Cerca tutte le biciclette a",
+    "search-bikes": "Cerca le biciclette",
     "from-place": "da",
     "contact": "Contatti e Supporto",
     "show-more": "Mostra di più",
@@ -213,6 +216,10 @@
       "vanmoof": {
         "meta-title": "Rent and test the Electrified S E-Bikes in Berlin, Munich and Hamburg",
         "meta-descr": "The perfect city bike - VanMoof"
+      },
+      "moeve": {
+        "meta-title": "Noleggia e prova VELLO E-Bikes a Berlino e a Monaco di Baviera",
+        "meta-descr": "La bicicletta con l'esclusivo sistema di trasmissione - Cyfly di Moeve."
       }
     },
     "about-us": {
@@ -560,7 +567,13 @@
       "name": "Nome",
       "description": "La descrizione (min. di 100 caratteri)",
       "min-length-warning": "La lunghezza deve essere di almeno 100 caratteri.",
-      "size": "Altezza del ciclista"
+      "size": "Altezza del ciclista",
+      "frame-size": "Dimensione telaio",
+      "bicycle-number": "Bicicletta n.",
+      "custom-fields": "Campi aggiuntivi",
+      "details": "Dettagli",
+      "bicycle_number": "Numero di bicicletta",
+      "frame_number": "Numero di telaio"
     },
     "accessories": {
       "header": "Quali accessori ha la tua bicicletta?",
@@ -849,9 +862,9 @@
     "header": "Noleggia le migliori bici a",
     "rent-the-best": "Noleggia le migliori",
     "bikes": "bici",
-    "rent-perfect-bikes-in": "Rent perfect bikes in",
-    "rent-category-bikes-in": "We offer you a large choice of rental bikes",
-    "bike-shops-in": "Bike Shops in",
+    "rent-perfect-bikes-in": "Noleggia la bici perfetta a",
+    "rent-category-bikes-in": " Ti offriamo una ampia scelta di bici a noleggio",
+    "bike-shops-in": "Negozi di bici a",
     "city": "bici città",
     "race": "bici gara",
     "all-terrain": "bici all-terrain",

@@ -447,6 +447,31 @@
       "faq-answer-5": "La tua bicicletta verrà spedita con un carica batterie. Basta collegare il connettore e sei ore dopo sarà completamente carica.",
       "faq-question-6": "Cosa ottengo con una Electrified S ?",
       "faq-answer-6": "• Una garanzia di due anni che copre difetti di manodopera e materiali. <br>• Chiave remota di backup, per bloccare o sbloccare la bicicletta quando lo smartphone non è disponibile o scarico <br>• Caricabatterie per la bicicletta (caricabatterie 36V, 2A) <br>• Monitoraggio antifurto GSM e Bluetooth <br>• App per smartphone per Android e iOS <br>• Manuale operativo e guida per l'utente <br>• Strumento antifurto per i dadi delle ruote della tua bicicletta <br>• Pneumatici Electrified S da 28 \"x 2,35\". (60-622) <br>• Cavo per il lucchetto integrato <br> • Strumento per regolare la posizione del sedile e del manubrio"
+    },
+    "moeve": {
+      "description": "Noleggia e prova VELLO E-Bikes a Berlino e a Monaco di Baviera",
+      "subdescription": "Costruita da una squadra di appassionati ingegneri",
+      "item1-title": "Cyfly",
+      "item1-description": "Migliore trasmissione nei settori pertinenti. La guida unica e la potente pedalata assicurano un'esperienza ciclistica unica.",
+      "item2-title": "La pittura",
+      "item2-description": "La struttura ha due colori. A mano, il processo del colore fluido e il tema grafico (il piumaggio di un gabbiano) si diffondono nella tecnologia dell'aerografo. Uno strato in polvere, opaco e ad alta resistenza sigilla il telaio.",
+      "item3-title": "Geometria del telaio",
+      "item3-description": "Ergonomia perfetta ed efficace trasmissione della potenza: la geometria del telaio è stata adattata a cyfly e al guidatore. Avanzamento rapido combinato con una comoda posizione del sedile.",
+      "choose-location": "Scegli la tua città",
+      "find-out-more": "Scopri di più sul Cyfly di Moeve",
+      "order-online": "<a href=\"https://www.moeve-bikes.de/cyfly/\" target=\"_blank\">Ordina online una delle loro biciclette</a> e ricevi il rimborso del tuo noleggio. Guarda le domande più frequenti qui sotto. ",
+      "faq-question-1": "Cos'è Cyfly?",
+      "faq-answer-1": "Cyfly è una trasmissione multi-link brevettata in cui il pedale non è più direttamente collegato all'asse, ma supportato da dietro.",
+      "faq-question-2": "Cyfly è uguale a un cambio di marcia?",
+      "faq-answer-2": "No. A differenza di un convertitore di coppia convenzionale (ingranaggi del deragliatore e mozzi degli ingranaggi), Cyfly è uno speciale convertitore di forza che, a differenza dei sistemi convenzionali, non allunga la corsa del pedale per aumentare la coppia. Cyfly può essere combinato con un cambio di marcia convenzionale per utilizzare una gamma più ampia di marce.",
+      "faq-question-3": "Devo abituarmi a una nuova tecnica per usare Cyfly?",
+      "faq-answer-3": "La nostra esperienza con oltre 1000 test driver dimostra che automaticamente e naturalmente ci si adegua al nuovo movimento durante la guida con Cyfly. Qui si è provato a iniziare i primi chilometri con cadenza più bassa e con ingranaggi più pesanti.",
+      "faq-question-4": "Dove è collegato Cyfly?",
+      "faq-answer-4": "Cyfly si trova nella posizione di un movimento centrale convenzionale. Sostituisce l'intera sezione anteriore della trasmissione su una bicicletta convenzionale. Il sistema di azionamento cyfly comprende pedivelle, cuscinetti e l'anello della catena in attesa di brevetto. Tutti i componenti sono prodotti utilizzando tecnologie di produzione modernissime. Cyfly è lo stato dell'arte.",
+      "faq-question-5": "Cyfly può essere installato a posteriori?",
+      "faq-answer-5": "Poiché il sistema di azionamento Cyfly richiede un telaio adattato con precisione, non può essere adattato immediatamente. Inizialmente Cyfly sarà disponibile solo come componente innovativo di biciclette premium.",
+      "faq-question-6": "Quanto è più efficiente Cyfly?",
+      "faq-answer-6": "Tutti applicano la forza in modo diverso durante il ciclismo. Pertanto non possiamo fornire un guadagno di efficienza oggettivo, generalmente applicabile. Il valore è calcolato sulla base di dati con vincoli stabiliti da un lato e un numero significativo di test sul campo dall'altro. Il guadagno di efficienza è stato verificato anche da un parere di un esperto esterno di un laboratorio di biciclette a Friburgo, in Germania. Inoltre, l'effetto Cyfly è stato confermato da rinomati professionisti della bicicletta da corsa e del triathlon."
     }
   },
   "about-us": {
