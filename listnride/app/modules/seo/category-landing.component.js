@@ -7,7 +7,7 @@ angular.module('categoryLanding',[]).component('categoryLanding', {
     function CategoryLandingController($translate, $tpl, $stateParams, $state, $http, $filter, api, ENV) {
 
       var categoryLanding = this;
-      var city = $stateParams.city;
+      categoryLanding.city = $stateParams.city;
       var categoryId = $filter('categorySeo')($stateParams.category);
       if (categoryId == "") {
         $state.go('404');
@@ -19,11 +19,11 @@ angular.module('categoryLanding',[]).component('categoryLanding', {
       categoryLanding.category = $filter('category')(categoryId);
       console.log(categoryLanding.category);
 
-      api.get('/seo_pages?city='+city+'&cat='+categoryId+'&lang=' + $translate.preferredLanguage()).then(
+      api.get('/seo_pages?city='+categoryLanding.city+'&cat='+categoryId+'&lng=' + $translate.preferredLanguage()).then(
         function (success) {
           console.log(success.data);
           categoryLanding.data = success.data;
-          categoryLanding.location = categoryLanding.data.city;
+          categoryLanding.location = categoryLanding.city;
           categoryLanding.loading = false;
         },
         function (error) {
