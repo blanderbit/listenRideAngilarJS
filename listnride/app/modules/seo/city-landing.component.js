@@ -7,15 +7,15 @@ angular.module('cityLanding',[]).component('cityLanding', {
     function cityLandingController($translate, $tpl, $stateParams, $state, $http, api, ENV) {
 
       var cityLanding = this;
-      var city = $stateParams.city;
+      cityLanding.city = $stateParams.city;
       $tpl.addPart(ENV.staticTranslation);
       cityLanding.bikes = {};
       cityLanding.loading = true;
 
-      api.get('/seo_pages?city='+city+'&lng=' + $translate.preferredLanguage()).then(
+      api.get('/seo_pages?city='+cityLanding.city+'&lng=' + $translate.preferredLanguage()).then(
         function (success) {
           cityLanding.data = success.data;
-          cityLanding.location = cityLanding.data.city;
+          cityLanding.location = cityLanding.city;
           cityLanding.loading = false;
           // TODO: emporary monkeypatch for backend not returning nil values
           if (cityLanding.data.explore.title.startsWith("Main explore title")) {
