@@ -563,7 +563,15 @@
       "name": "Nome",
       "description": "La descrizione (min. di 100 caratteri)",
       "min-length-warning": "La lunghezza deve essere di almeno 100 caratteri.",
-      "size": "Altezza del ciclista"
+      "size": "Altezza del ciclista",
+      "frame-size": "Frame size",
+      "bicycle-number": "Bicycle No.",
+      "frame-number": "Frame number",
+      "custom-fields": "Additional fields",
+      "notes": "Notes",
+      "frame_size": "Frame size",
+      "bicycle_number": "Bicycle number",
+      "frame_number": "Frame number"
     },
     "accessories": {
       "header": "Quali accessori ha la tua bicicletta?",

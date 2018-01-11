@@ -55,6 +55,10 @@ angular.module('bike',[]).component('bike', {
         }
       );
 
+      bike.showAttribute = function(attr) {
+        return !(attr == 'null' || attr == 'undefined');
+      };
+
       bike.showGalleryDialog = function(event) {
         event.stopPropagation();
         $mdDialog.show({

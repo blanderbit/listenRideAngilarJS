@@ -118,28 +118,28 @@
           </div>
           <div class="lnr-compact-details" layout="column" flex-gt-xs>
             <div layout="row" layout-align="start center">
-              <p flex="20" class="md-body-2">{{ 'list.details.brand' | translate }}</p>
+              <p flex="30" class="md-body-2">{{ 'list.details.brand' | translate }}</p>
               <p class="md-body-1">{{ bike.data.brand }}</p>
             </div>
             <div layout="row" layout-align="start center">
-              <p flex="20" class="md-body-2">{{ 'list.category.label' | translate }}</p>
+              <p flex="30" class="md-body-2">{{ 'list.category.label' | translate }}</p>
               <p class="md-body-1">{{ bike.data.category | category | translate  }}</p>
             </div>
-            <div layout="row" layout-align="start center">
-              <p flex="20" class="md-body-2">{{ 'list.details.frame_size' | translate }}</p>
+            <div layout="row" layout-align="start center" ng-if="bike.showAttribute(bike.data.frame_size)">
+              <p flex="30" class="md-body-2">{{ 'list.details.frame_size' | translate }}</p>
               <p class="md-body-1">{{ bike.data.frame_size }}</p>
             </div>
             <div ng-show="bike.owner">
-              <div layout="row" layout-align="start center">
-                <p flex="20" class="md-body-2">{{ 'list.details.bicycle_number' | translate }}</p>
+              <div layout="row" layout-align="start center" ng-if="bike.showAttribute(bike.data.bicycle_number)">
+                <p flex="30" class="md-body-2">{{ 'list.details.bicycle_number' | translate }}</p>
                 <p class="md-body-1">{{ bike.data.bicycle_number}}</p>
               </div>
-              <div layout="row" layout-align="start center">
-                <p flex="20" class="md-body-2">{{ 'list.details.frame_number' | translate }}</p>
+              <div layout="row" layout-align="start center" ng-if="bike.showAttribute(bike.data.frame_number)">
+                <p flex="30" class="md-body-2">{{ 'list.details.frame_number' | translate }}</p>
                 <p class="md-body-1">{{ bike.data.frame_number}}</p>
               </div>
-              <div layout="row" layout-align="start center">
-                <p flex="20" class="md-body-2">{{ 'list.details.details' | translate }}</p>
+              <div layout="row" layout-align="start center" ng-if="bike.showAttribute(bike.data.details)">
+                <p flex="30" class="md-body-2">{{ 'list.details.notes' | translate }}</p>
                 <p class="md-body-1">{{ bike.data.details}}</p>
               </div>
             </div>
