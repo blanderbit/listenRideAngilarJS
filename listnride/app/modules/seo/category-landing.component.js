@@ -7,7 +7,7 @@ angular.module('categoryLanding',[]).component('categoryLanding', {
     function CategoryLandingController($translate, $tpl, $stateParams, $state, $http, $filter, api, ENV) {
 
       var categoryLanding = this;
-      categoryLanding.city = $stateParams.city;
+      categoryLanding.city = $stateParams.city.charAt(0).toUpperCase() + $stateParams.city.slice(1);
       var categoryId = $filter('categorySeo')($stateParams.category);
       if (categoryId == "") {
         $state.go('404');
