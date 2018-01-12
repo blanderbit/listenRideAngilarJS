@@ -22,14 +22,21 @@ angular.
       };
 
       var retrieveLocale = function() {
-        var defaultLanguage = "en";
+        var language = "en";
         var availableLanguages = ["de", "en", "nl", "it", "es"];
+        var browserLanguage = navigator.language.replace(/-.*$/,"");
         var retrievedLanguage = $localStorage.selectedLanguage;
-    
-        if (availableLanguages.indexOf(retrievedLanguage) >= 0) {
-          return retrievedLanguage;
+
+        if(!_.isEmpty(browserLanguage) && browserLanguage !== 'en' && retrievedLanguage === 'en' || _.isEmpty(retrievedLanguage) ) {
+          language = browserLanguage;
         } else {
-          return defaultLanguage;
+          language = retrievedLanguage;
+        }
+
+        if (availableLanguages.indexOf(language) >= 0) {
+          return language;
+        } else {
+          return 'en';
         }
       };
 
