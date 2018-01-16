@@ -44,8 +44,22 @@
 
     <div flex layout="column" layout-align="center center">
       <form class="lnr-search-bar md-whiteframe-3dp" layout="row" md-theme="default">
-        <autocomplete autocomplete-id="rentingABike" flex="75" layout="column" location="rentingABike.location" placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}" place-changed="rentingABike.placeChanged(place)"></autocomplete>
-        <md-button class="md-raised md-primary" id="submit" flex="25" ng-click="rentingABike.onSearchClick()">{{ 'shared.search' | translate }}</md-button>
+        <autocomplete 
+          autocomplete-id="rentingABike"
+          flex="75"
+          layout="column"
+          location="rentingABike.location"
+          placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"
+          place-changed="rentingABike.placeChanged(place)">
+        </autocomplete>
+        <md-button
+          class="md-raised md-primary"
+          id="submit"
+          flex="25"
+          ng-click="rentingABike.onSearchClick()"
+        >
+          {{ 'shared.search' | translate }}
+        </md-button>
       </form>
     </div>
   </div>

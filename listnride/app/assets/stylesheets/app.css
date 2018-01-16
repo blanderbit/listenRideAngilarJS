@@ -787,6 +787,11 @@ home #landingSection #homeHeroShot {
   border-radius: 0 4px 4px 0;
 }
 
+.lnr-search-bar--fs18 autocomplete,
+.lnr-search-bar--fs18 .md-button {
+  font-size: 18px;
+}
+
 home .section {
   margin-top: 80px;
 }
@@ -944,6 +949,12 @@ md-grid-list md-grid-tile.tile-vienna {
   margin-top: 140px;
 }
 
+@media (max-width:959px) {
+  .lnr-search-bar {
+    width: 90%
+  }
+}
+
 @media (max-width:599px) {
   md-dialog.md-dialog-fullscreen {
     min-height: 100%;
@@ -959,13 +970,18 @@ md-grid-list md-grid-tile.tile-vienna {
     margin-top: 40px;
   }
 
-  .lnr-search-bar {
-    width: 90%
-  }
-
   home .testimonials-text {
     width: 100%;
     font-size: 16px;
+  }
+
+  .lnr-search-bar autocomplete,
+  .lnr-search-bar .md-button {
+    font-size: 12px;
+  }
+
+  .lnr-search-bar .md-button {
+    min-width: 72px;
   }
 }
 
