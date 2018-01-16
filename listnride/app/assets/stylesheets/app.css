@@ -1243,6 +1243,17 @@ user .lnr-user-rating  {
   padding-left: 4px;
 }
 
+@media (max-width: 400px) {
+  .lnr-user__header {
+    display: block;
+  }
+  .lnr-user__info {
+    padding: 0
+  }
+  .lnr-user__verify {
+    margin: 0
+  }
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*  LIST BIKE
