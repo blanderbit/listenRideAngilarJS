@@ -400,6 +400,8 @@
     "ratings": "Puntuaciones",
     "meta-title": "Perfil de {{name}}",
     "meta-description": "Alquilar bicis de {{name}} en listnride.",
+    "company-meta-title": "Company {{company}}",
+    "company-meta-description": "Alquilar bicis de {{company}} en listnride.",
     "availability": "Disponibilidad",
     "not-available": "No disponible",
     "verified": "verificado"

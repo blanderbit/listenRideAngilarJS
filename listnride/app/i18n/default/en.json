@@ -404,6 +404,8 @@
     "ratings": "Ratings",
     "meta-title": "{{name}}'s profile",
     "meta-description": "Rent bikes on listnride from {{name}}.",
+    "company-meta-title": "Company {{company}}",
+    "company-meta-description": "Rent bikes on listnride from {{company}}.",
     "availability": "Availability",
     "not-available": "Not available",
     "verified": "verified"
