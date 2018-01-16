@@ -396,6 +396,8 @@
     "ratings": "Valutazioni",
     "meta-title": "Profilo di {{name}}",
     "meta-description": "Noleggia biciclette su listnride da {{name}}.",
+    "company-meta-title": "Company {{company}}",
+    "company-meta-description": "Noleggia biciclette su listnride da {{company}}.",
     "availability": "Disponibilità",
     "not-available": "Non disponibile",
     "verified": "verificato"

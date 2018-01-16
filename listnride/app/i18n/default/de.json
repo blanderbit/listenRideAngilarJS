@@ -401,6 +401,8 @@
     "ratings": "Bewertungen",
     "meta-title": "{{name}}'s Profil",
     "meta-description": "Rad mieten von {{name}} auf listnride.",
+    "company-meta-title": "Company {{company}}",
+    "company-meta-description": "Rad mieten von {{company}} auf listnride.",
     "availability": "Verfügbarkeiten",
     "not-available": "Nicht verfügbar",
     "verified": "Verifiziert"
