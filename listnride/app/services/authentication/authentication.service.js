@@ -29,12 +29,15 @@ angular.
         var url = window.location.host.split('.');
         var urlLanguage = url[url.length-1]; // Domain name language
 
+        console.log('urlLanguage ' + urlLanguage);
         if (url.indexOf("localhost:8080") < 0 && availableLanguages.indexOf(urlLanguage) >= 0) {
           browserLanguage = urlLanguage;
+          console.log('browserLanguage  changed to' + browserLanguage);
         }
 
         if(!_.isEmpty(browserLanguage) && browserLanguage !== 'en' && retrievedLanguage === 'en' || _.isEmpty(retrievedLanguage) ) {
           language = browserLanguage;
+          console.log('language ' + language);
         } else {
           language = retrievedLanguage;
         }
