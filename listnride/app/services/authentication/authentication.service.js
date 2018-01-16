@@ -22,10 +22,16 @@ angular.
       };
 
       var retrieveLocale = function() {
-        var language = "en";
+        var language = "en"; // Default language
         var availableLanguages = ["de", "en", "nl", "it", "es"];
-        var browserLanguage = navigator.language.replace(/-.*$/,"");
-        var retrievedLanguage = $localStorage.selectedLanguage;
+        var browserLanguage = navigator.language.replace(/-.*$/,""); // Default browser language
+        var retrievedLanguage = $localStorage.selectedLanguage; // Saved language
+        var url = window.location.host.split('.');
+        var urlLanguage = url[url.length-1]; // Domain name language
+
+        if (url.indexOf("localhost:8080") < 0 && availableLanguages.indexOf(urlLanguage) >= 0) {
+          browserLanguage = urlLanguage;
+        }
 
         if(!_.isEmpty(browserLanguage) && browserLanguage !== 'en' && retrievedLanguage === 'en' || _.isEmpty(retrievedLanguage) ) {
           language = browserLanguage;
