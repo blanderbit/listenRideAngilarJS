@@ -4,7 +4,7 @@ angular.module('booking', [])
 // booking component
   .component('booking', {
     transclude: true,
-    templateUrl: 'app/modules/bike/booking/booking.template.html',
+    templateUrl: 'app/modules/booking/booking.template.html',
     controllerAs: 'booking',
     controller: ['authentication', function BookingController(authentication) {
       var booking = this;
@@ -35,21 +35,27 @@ angular.module('booking', [])
       };
     }]
   })
-  // personal tab ui component
-  .component('personalTab', {
-    templateUrl: 'app/modules/bike/booking/personal-tab.template.html',
+  // sign in tab ui component
+  .component('signInTab', {
+    templateUrl: 'app/modules/booking/sign-in-tab.template.html',
     require: {parent: '^booking'},
-    controllerAs: 'personal'
+    controllerAs: 'signIn'
+  })
+  // details tab ui component
+  .component('detailsTab', {
+    templateUrl: 'app/modules/booking/details-tab.template.html',
+    require: {parent: '^booking'},
+    controllerAs: 'details'
   })
   // payment tab ui component
   .component('paymentTab', {
-    templateUrl: 'app/modules/bike/booking/payment-tab.template.html',
+    templateUrl: 'app/modules/booking/payment-tab.template.html',
     require: {parent: '^booking'},
     controllerAs: 'payment'
   })
   // overview tab ui component
   .component('overviewTab', {
-    templateUrl: 'app/modules/bike/booking/overview-tab.template.html',
+    templateUrl: 'app/modules/booking/overview-tab.template.html',
     require: {parent: '^booking'},
     controllerAs: 'overview'
   });

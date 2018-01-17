@@ -104,7 +104,6 @@ md-grid-list md-grid-tile {
 }
 
 .highlight-tile {
-  height: 260px;
   padding: 24px 0;
   border-radius: 4px;
   border: 1px solid rgba(95, 198, 147, 0.25);
@@ -112,6 +111,7 @@ md-grid-list md-grid-tile {
 }
 
 home .highlight-tile {
+  height: 260px;
   padding: 24px 0px;
 }
 
@@ -231,6 +231,10 @@ autocomplete .md-errors-spacer {
   position: relative;
   display: inline-block;
   width:100%;
+}
+
+md-input-container {
+  font-size: 14px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -376,6 +380,14 @@ autocomplete .md-errors-spacer {
 
 .lnr-tab-content-no-scroll {
   position: fixed;
+}
+
+.lnr-progress-tabs {
+  font-size: 18px;
+}
+
+.lnr-progress-tabs md-tab-item {
+  padding: 12px 12px; 
 }
 
 /*-----------------------------------------------------------------------------------*/

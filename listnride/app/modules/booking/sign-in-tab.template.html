@@ -1,0 +1,23 @@
+<md-tab
+  class="categories"
+  label="{{ 'booking.sign-in.tab' | translate }}"
+  layout="row">
+  <md-content style="max-height: 620px;overflow: scroll;" class="md-padding" layout="column">
+    <div class="tab-content" style="min-height: 562px;" layout="row" layout-align="space-between none" layout-padding>
+      <div class="lnr-list-form" layout="column"></div>
+      
+    </div>
+    </div>
+    </div>
+  </md-content>
+
+  <!-- Bottom Navigation Buttons -->
+  <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
+    <md-button class="md-lined" ng-click="overview.parent.previousTab()">
+      {{ 'list.back' | translate }}
+    </md-button>
+    <md-button class="md-raised md-primary">
+      Request Now
+    </md-button>
+  </div>
+</md-tab>

@@ -1,18 +1,16 @@
 <md-tab class="categories"
-        label="Payment"
+        label="{{ 'booking.payment.tab' | translate }}"
         layout="row">
-  <md-content style="max-height: 620px;overflow: scroll;"
-              class="md-padding"
+  <md-content style="max-height: 620px; overflow: scroll;"
               layout="column">
     <div class="tab-content"
          style="min-height: 562px;"
-         layout="row"
          layout-align="space-between none"
          layout-padding>
       <div class="lnr-list-form"
-           flex-xs="100"
-           flex-gt-xs="70"
            layout="column">
+        <p class="md-subhead">Select your Payment Method</p>
+        <p class="md-body-1">We won't charge you until you book the bike later</p>
         <form name="paymentForm" novalidate>
           <!-- Cardholder name and Cardnumber -->
           <div class="lnr-input-containers" layout="row">
@@ -101,20 +99,6 @@
             </div>
           </div>
         </form>
-      </div>
-      <!-- vertical divider -->
-      <md-divider hide-xs class="lnr-margin-left lnr-margin-right-double"></md-divider>
-
-      <!-- Right Info Column -->
-      <div flex hide-xs>
-        <div class="lnr-list-title">
-          <h3 class="md-subhead">
-            Total
-          </h3>
-        </div>
-        <p class="md-body-1">
-          including VAT and Listnride fees
-        </p>
       </div>
     </div>
     </div>
