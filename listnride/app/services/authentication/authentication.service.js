@@ -112,6 +112,7 @@ angular.
         };
 
         signupDialog.signup = function() {
+          debugger
           if (signupDialog.businessError && signupDialog.business) {
             signupDialog.createBusiness();
           } else {
@@ -120,6 +121,7 @@ angular.
         };
 
         signupDialog.createUser = function() {
+          debugger
           var user = {
             'user': {
               'email': signupDialog.email,
@@ -168,8 +170,13 @@ angular.
         };
 
         signupDialog.connectFb = connectFb;
+        signupDialog.signup = signup;
 
         signupDialog.showProfile = showProfile;
+      };
+
+      var test = function() {
+        SignupDialogController.signup()
       };
 
       // The Login Dialog Controller
@@ -372,7 +379,8 @@ angular.
         unreadMessages: function() {
           return $localStorage.unreadMessages
         },
-        connectFb: connectFb
+        connectFb: connectFb,
+        test: test
       };
     }
   ]);
