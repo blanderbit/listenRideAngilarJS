@@ -36,10 +36,10 @@ angular.module('booking', [])
     }]
   })
   // sign-in tab ui component
-  .component('signInTab', {
-    templateUrl: 'app/modules/bike/booking/sign-in-tab.template.html',
+  .component('signupTab', {
+    templateUrl: 'app/modules/bike/booking/signup-tab.template.html',
     require: {parent: '^booking'},
-    controllerAs: 'sign-in'
+    controllerAs: 'signup'
   })
   // personal tab ui component
   .component('personalTab', {
