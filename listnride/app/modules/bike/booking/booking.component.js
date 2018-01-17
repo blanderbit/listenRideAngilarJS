@@ -35,6 +35,12 @@ angular.module('booking', [])
       };
     }]
   })
+  // sign-in tab ui component
+  .component('signInTab', {
+    templateUrl: 'app/modules/bike/booking/sign-in-tab.template.html',
+    require: {parent: '^booking'},
+    controllerAs: 'sign-in'
+  })
   // personal tab ui component
   .component('personalTab', {
     templateUrl: 'app/modules/bike/booking/personal-tab.template.html',
