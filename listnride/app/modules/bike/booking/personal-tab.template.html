@@ -13,26 +13,8 @@
            flex-gt-xs="70"
            layout="column">
 
-        <!-- Facebook -->
-        <div class="lnr-input-containers" layout="row">
-          <div flex="50"
-               ng-style="{'display': signupDialog.business ? 'none' : ''}"
-               layout="column">
-            <md-button ng-click="personal.parent.authentication.connectFb()"
-                       class="md-primary md-lined lnr-btn-fb">
-              {{ 'forms.sign-up-with-facebook' | translate }}
-            </md-button>
-          </div>
-          <div flex="50" layout="column">
-            <md-button ng-click="personal.parent.authentication.showLoginDialog()"
-                       class="md-lined">
-              Already have an account?
-            </md-button>
-          </div>
-        </div>
-        <div class="lnr-middle-divider">
-          {{ 'forms.or' | translate }}
-        </div>
+        <h2>Invoice Address</h2>
+        <p>Here is a subline regarding your contact information.</p>
         <form name="personalForm" novalidate>
           <!-- First name and Last name -->
           <div class="lnr-input-containers" layout="row">
@@ -55,39 +37,6 @@
               <div ng-messages="personalForm.lastName.$error" role="alert">
                 <div ng-message="required">{{ 'forms.errors.empty-last-name' | translate }}</div>
                 <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
-              </div>
-            </md-input-container>
-          </div>
-
-          <!-- Email and Password -->
-          <div class="lnr-input-containers" layout="row">
-            <md-input-container flex>
-              <label>{{ 'forms.email-address' | translate }}</label>
-              <input name="email"
-                     ng-model-options="{debounce: 400}"
-                     ng-model="personal.parent.email"
-                     type="email"
-                     required
-                     ng-pattern="persona.parent.emailPattern"
-                     ng-disabled="signupDialog.businessError">
-              <div ng-messages="personalForm.email.$error" role="alert">
-                <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
-                <div ng-message="email">{{ 'forms.errors.valid-email' | translate }}</div>
-                <div ng-message="pattern">{{ 'forms.errors.valid-email' | translate }}</div>
-              </div>
-            </md-input-container>
-            <md-input-container flex>
-              <label>{{ 'forms.password' | translate }}</label>
-              <input name="password"
-                     ng-model="personal.parent.password"
-                     type="password"
-                     required
-                     ng-minlength="6"
-                     ng-maxlength="30" ng-disabled="signupDialog.businessError">
-              <div ng-messages="personalForm.password.$error" role="alert">
-                <div ng-message="required">{{ 'forms.errors.password-missing' | translate }}</div>
-                <div ng-message="minlength">{{ 'forms.errors.password-length' | translate }}</div>
-                <div ng-message="maxlength">{{ 'forms.errors.password-length' | translate }}</div>
               </div>
             </md-input-container>
           </div>
@@ -150,6 +99,8 @@
             </md-input-container>
           </div>
 
+          <h2>Verification</h2>
+          <p>We'll send you one time sms to your phone.</p>
           <!-- Phone Number and Send Button -->
           <div class="lnr-input-containers"
                layout="row"
@@ -217,33 +168,6 @@
           </div>
         </form>
       </div>
-
-      <!-- vertical divider -->
-      <md-divider hide-xs class="lnr-margin-left lnr-margin-right-double"></md-divider>
-
-      <!-- Right Info Column -->
-      <div flex hide-xs>
-        <div class="lnr-list-title">
-          <h3 class="md-subhead">
-            Total
-          </h3>
-        </div>
-        <p class="md-body-1">
-          including VAT and Listnride fees
-        </p>
-      </div>
     </div>
   </md-content>
-
-  <!-- Bottom Navigation Buttons -->
-  <div class="navigation"
-       layout="row"
-       layout-align="space-between center"
-       layout-margin>
-    <span flex="50"></span>
-    <md-button class="md-raised md-primary"
-               ng-click="personal.parent.nextTab()">
-      {{ 'list.next' | translate }}
-    </md-button>
-  </div>
 </md-tab>
