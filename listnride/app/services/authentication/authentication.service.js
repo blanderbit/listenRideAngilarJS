@@ -92,9 +92,17 @@ angular.
         });
       };
 
+      var signupGlobal = function (inviteCode, requesting, business) {
+        var business = business || false;
+        var obj = {
+          // user fields ? 
+        }
+        SignupDialogController(null,inviteCode,requesting,business,obj);
+      };
+
       // The Signup Dialog Controller
-      var SignupDialogController = function($mdDialog, inviteCode, requesting, business) {
-        var signupDialog = this;
+      var SignupDialogController = function ($mdDialog, inviteCode, requesting, business, signupObj) {
+        var signupDialog = signupObj || this;
 
         signupDialog.signingUp = false;
         signupDialog.business = business;
@@ -112,7 +120,6 @@ angular.
         };
 
         signupDialog.signup = function() {
-          debugger
           if (signupDialog.businessError && signupDialog.business) {
             signupDialog.createBusiness();
           } else {
@@ -121,7 +128,6 @@ angular.
         };
 
         signupDialog.createUser = function() {
-          debugger
           var user = {
             'user': {
               'email': signupDialog.email,
@@ -170,13 +176,7 @@ angular.
         };
 
         signupDialog.connectFb = connectFb;
-        signupDialog.signup = signup;
-
         signupDialog.showProfile = showProfile;
-      };
-
-      var test = function() {
-        SignupDialogController.signup()
       };
 
       // The Login Dialog Controller
@@ -380,7 +380,7 @@ angular.
           return $localStorage.unreadMessages
         },
         connectFb: connectFb,
-        test: test
+        signupGlobal: signupGlobal
       };
     }
   ]);
