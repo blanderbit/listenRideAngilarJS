@@ -19,8 +19,6 @@ angular.module('message',[]).component('message', {
   controller: [ '$translate', '$localStorage', '$mdDialog', '$analytics', 'api',
     function MessageController($translate, $localStorage, $mdDialog, $analytics, api) {
       var message = this;
-      message.time = '';
-
       var time = message.time.toString();
       
       message.localTime = new Date(time).toString();
