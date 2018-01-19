@@ -17,12 +17,11 @@
       <p class="md-subhead">{{ 'home.landing-section-subheader' | translate }}</p>
     </div>
 
-    <form class="lnr-search-bar md-whiteframe-3dp" layout="row" md-theme="default">
+    <form class="lnr-search-bar md-whiteframe-3dp lnr-search-bar--fs18" layout="row" md-theme="default">
       <autocomplete
         autocomplete-id="home"
         flex="75"
         layout="column"
-        style="font-size: 18px"
         location="home.location"
         placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"
         place-changed="home.placeChanged(place)">
@@ -32,7 +31,6 @@
         class="md-raised md-primary"
         id="submit"
         flex="25"
-        style="font-size: 18px"
       >
         {{ 'shared.search' | translate }}
       </md-button>

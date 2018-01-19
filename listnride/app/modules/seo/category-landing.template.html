@@ -3,12 +3,11 @@
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ 'seo.rent-the-best' | translate }} {{ categoryLanding.category | translate }} in {{ categoryLanding.city }}</h1>
     </div>
-    <form class="lnr-search-bar md-whiteframe-3dp" layout="row" md-theme="default">
+    <form class="lnr-search-bar md-whiteframe-3dp lnr-search-bar--fs18" layout="row" md-theme="default">
       <autocomplete
         autocomplete-id="home"
         flex="75"
         layout="column"
-        style="font-size: 18px"
         location="categoryLanding.location"
         placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"
         place-changed="home.placeChanged(place)">
@@ -18,7 +17,7 @@
         class="md-raised md-primary"
         id="submit"
         flex="25"
-        style="font-size: 18px"
+        style="min-width: 114px"
       >
         {{ 'shared.search-all' | translate }}
       </md-button>
