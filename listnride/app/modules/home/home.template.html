@@ -17,12 +17,11 @@
       <p class="md-subhead">{{ 'home.landing-section-subheader' | translate }}</p>
     </div>
 
-    <form class="lnr-search-bar md-whiteframe-3dp" layout="row" md-theme="default">
+    <form class="lnr-search-bar md-whiteframe-3dp lnr-search-bar--fs18" layout="row" md-theme="default">
       <autocomplete
         autocomplete-id="home"
         flex="75"
         layout="column"
-        style="font-size: 18px"
         location="home.location"
         placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"
         place-changed="home.placeChanged(place)">
@@ -32,7 +31,6 @@
         class="md-raised md-primary"
         id="submit"
         flex="25"
-        style="font-size: 18px"
       >
         {{ 'shared.search' | translate }}
       </md-button>
@@ -153,25 +151,25 @@
 
     <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="1" md-cols-gt-xs="2" md-cols-gt-sm="4" md-gutter="16px" md-row-height="1.5:1">
       <md-grid-tile class="tile tile-berlin">
-        <a ui-sref="cityLanding({pageTitle: 'berlin'})" layout-padding layout="column" layout-align="center center">
+        <a ui-sref="cityLanding({city: 'berlin'})" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">{{ 'shared.berlin' | translate }}</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-munich">
-        <a ui-sref="cityLanding({pageTitle: 'munich'})" target="_blank" layout-padding layout="column" layout-align="center center">
+        <a ui-sref="cityLanding({city: 'munich'})" target="_blank" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">{{ 'shared.munich' | translate }}</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-amsterdam">
-        <a ui-sref="cityLanding({pageTitle: 'amsterdam'})" layout-padding layout="column" layout-align="center center">
+        <a ui-sref="cityLanding({city: 'amsterdam'})" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">{{ 'shared.amsterdam' | translate }}</h3>
         </a>
       </md-grid-tile>
 
       <md-grid-tile class="tile tile-vienna">
-        <a ui-sref="cityLanding({pageTitle: 'vienna'})" layout-padding layout="column" layout-align="center center">
+        <a ui-sref="cityLanding({city: 'vienna'})" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">{{ 'shared.vienna' | translate }}</h3>
         </a>
       </md-grid-tile>

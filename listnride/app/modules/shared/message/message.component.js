@@ -13,12 +13,16 @@ angular.module('message',[]).component('message', {
     acceptBooking: '&',
     showRatingDialog: '&',
     request: '<',
-    messageTime: '<'
+    messageTime: '<',
+    time: '<'
   },
   controller: [ '$translate', '$localStorage', '$mdDialog', '$analytics', 'api',
     function MessageController($translate, $localStorage, $mdDialog, $analytics, api) {
       var message = this;
-
+      var time = message.time.toString();
+      
+      message.localTime = new Date(time).toString();
+      
       message.buttonClicked = false;
       
       message.closeDialog = function() {

@@ -53,6 +53,7 @@
     "send": "Sturen",
     "search": "Zoeken",
     "search-all": "Doorzoek alle fietsen",
+    "search-all-in": "Doorzoek alle fietsen in",
     "search-bikes": "Zoek je fietsen",    
     "from-place": "uit",
     "contact": "Contact & Help",
@@ -401,6 +402,8 @@
     "ratings": "Recensies",
     "meta-title": "{{name}}'s profiel",
     "meta-description": "Fiets huren op listnride van {{name}}.",
+    "company-meta-title": "Company {{company}}",
+    "company-meta-description": "Fiets huren op listnride van {{company}}.",
     "availability": "Openingstijden",
     "not-available": "Niet Beschikbaar",
     "verified": "geverifieerd"
@@ -570,7 +573,7 @@
       "frame-size": "Frame size",
       "bicycle-number": "Fiets Nr.",
       "frame-number": "Rasternummer",
-      "details": "Details",
+      "notes": "Notes",
       "frame_size": "Frame size",
       "bicycle_number": "Bicycle number",
       "frame_number": "Frame number"
@@ -868,8 +871,16 @@
   "seo": {
     "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden",
     "header": "Huur de beste fietsen in",
+    "rent-the-best": "Huur de beste",
+    "bikes": "fietsen",
     "rent-perfect-bikes-in": "huur perfecte fietsen in",
     "rent-category-bikes-in": "Een groot aanbod aan huurfietsen",
-    "bike-shops-in": "Bike Shops in"
+    "bike-shops-in": "Bike Shops in",
+    "city": "stad fietsen",
+    "race": "race fietsen",
+    "all-terrain": "all-terrain fietsen",
+    "kids": "kinder fietsen",
+    "electro": "elektrisch fietsen",
+    "special": "speciaal fietsen"
   }
 }

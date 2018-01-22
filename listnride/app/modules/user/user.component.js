@@ -33,12 +33,20 @@ angular.module('user',[]).component('user', {
             }
             user.rating = Math.round(user.rating);
             if (user.openingHoursEnabled) setOpeningHours();
-  
-            $translate(["user.meta-title", "user.meta-description"] , { name: user.user.first_name })
-            .then(function(translations) {
-              ngMeta.setTitle(translations["user.meta-title"]);
-              ngMeta.setTag("description", translations["user.meta-description"]);
-            });
+
+            if (user.user.has_business) {
+              $translate(["user.company-meta-title", "user.company-meta-description"] , { company: user.business.company_name })
+                .then(function(translations) {
+                  ngMeta.setTitle(translations["user.company-meta-title"]);
+                  ngMeta.setTag("description", translations["user.company-meta-description"]);
+                });
+            } else {
+              $translate(["user.meta-title", "user.meta-description"] , { name: user.user.first_name })
+                .then(function(translations) {
+                  ngMeta.setTitle(translations["user.meta-title"]);
+                  ngMeta.setTag("description", translations["user.meta-description"]);
+                });
+            }
           }
         },
         function(error) {

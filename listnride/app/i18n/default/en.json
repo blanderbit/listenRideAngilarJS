@@ -54,6 +54,7 @@
     "send": "Send",
     "search": "Search",
     "search-all": "Search all bikes",
+    "search-all-in": "Search all bikes in",
     "search-bikes": "Search your bikes",
     "from-place": "from",
     "contact": "Contact & Support",
@@ -417,6 +418,8 @@
     "ratings": "Ratings",
     "meta-title": "{{name}}'s profile",
     "meta-description": "Rent bikes on listnride from {{name}}.",
+    "company-meta-title": "Company {{company}}",
+    "company-meta-description": "Rent bikes on listnride from {{company}}.",
     "availability": "Availability",
     "not-available": "Not available",
     "verified": "verified"
@@ -589,7 +592,7 @@
       "bicycle-number": "Bicycle No.",
       "frame-number": "Frame number",
       "custom-fields": "Additional fields",
-      "details": "Details",
+      "notes": "Notes",
       "frame_size": "Frame size",
       "bicycle_number": "Bicycle number",
       "frame_number": "Frame number"
@@ -889,8 +892,16 @@
   "seo": {
     "cities-title": "Planning to Travel? Check out more cities:",
     "header": "Rent the best bikes in",
+    "rent-the-best": "Rent the best",
+    "bikes": "bikes",
     "rent-perfect-bikes-in": "Rent perfect bikes in",
     "rent-category-bikes-in": "A large choice of rental bikes",
-    "bike-shops-in": "Bike Shops in"
+    "bike-shops-in": "Bike Shops in",
+    "city": "city bikes",
+    "race": "race bikes",
+    "all-terrain": "all terrain bikes",
+    "kids": "kids bikes",
+    "electro": "electric bikes",
+    "special": "special bikes"
   }
 }

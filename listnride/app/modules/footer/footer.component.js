@@ -36,7 +36,7 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
         }
       }
 
-      footer.language = getLanguage($translate.use());
+      footer.language = getLanguage($translate.preferredLanguage());
 
       // switch url based on language
       footer.switchDomain = function (language) {

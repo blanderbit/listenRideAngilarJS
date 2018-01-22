@@ -53,6 +53,9 @@
     "cancel": "Cancellare",
     "send": "Inviare",
     "search": "Ricerca",
+    "search-bikes": "Cerca le biciclette",
+    "search-all": "Cerca tutte le biciclette",
+    "search-all-in": "Cerca tutte le biciclette a",
     "from-place": "da",
     "contact": "Contatti e Supporto",
     "show-more": "Mostra di più",
@@ -393,6 +396,8 @@
     "ratings": "Valutazioni",
     "meta-title": "Profilo di {{name}}",
     "meta-description": "Noleggia biciclette su listnride da {{name}}.",
+    "company-meta-title": "Company {{company}}",
+    "company-meta-description": "Noleggia biciclette su listnride da {{company}}.",
     "availability": "Disponibilità",
     "not-available": "Non disponibile",
     "verified": "verificato"
@@ -560,7 +565,15 @@
       "name": "Nome",
       "description": "La descrizione (min. di 100 caratteri)",
       "min-length-warning": "La lunghezza deve essere di almeno 100 caratteri.",
-      "size": "Altezza del ciclista"
+      "size": "Altezza del ciclista",
+      "frame-size": "Frame size",
+      "bicycle-number": "Bicycle No.",
+      "frame-number": "Frame number",
+      "custom-fields": "Additional fields",
+      "notes": "Notes",
+      "frame_size": "Frame size",
+      "bicycle_number": "Bicycle number",
+      "frame_number": "Frame number"
     },
     "accessories": {
       "header": "Quali accessori ha la tua bicicletta?",
@@ -847,8 +860,16 @@
   "seo": {
     "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden",
     "header": "Noleggia le migliori bici a",
-    "rent-perfect-bikes-in": "Rent perfect bikes in",
-    "rent-category-bikes-in": "We offer you a large choice of rental bikes",
-    "bike-shops-in": "Bike Shops in"
+    "rent-the-best": "Noleggia le migliori",
+    "bikes": "bici",
+    "rent-perfect-bikes-in": "Noleggia la bici perfetta a",
+    "rent-category-bikes-in": " Ti offriamo una ampia scelta di bici a noleggio",
+    "bike-shops-in": "Negozi di bici a",
+    "city": "bici città",
+    "race": "bici gara",
+    "all-terrain": "bici all-terrain",
+    "kids": "bici bambini",
+    "electro": "bici elettrica",
+    "special": "bici speciale"
   }
 }

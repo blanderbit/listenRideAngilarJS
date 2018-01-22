@@ -1109,9 +1109,23 @@
       });
 
       $stateProvider.state({
+        name: 'categoryLanding',
+        url: '/{city: string}/{category: string}',
+        template: '<category-landing></category-landing>',
+        meta: {
+          disableUpdate: false,
+          'og:image': 'https://www.listnride.com/app/assets/ui_images/opengraph/landing.jpg'
+        }
+      });
+
+      $stateProvider.state({
         name: 'cityLanding',
-        url: '/{pageTitle: string}',
-        template: '<city-landing></city-landing>'
+        url: '/{city: string}',
+        template: '<city-landing></city-landing>',
+        meta: {
+          disableUpdate: false,
+          'og:image': 'https://www.listnride.com/app/assets/ui_images/opengraph/landing.jpg'
+        }
       });
 
       // $stateProvider.state({

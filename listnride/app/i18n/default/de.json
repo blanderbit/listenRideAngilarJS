@@ -53,6 +53,7 @@
     "send": "Senden",
     "search": "Suche",
     "search-all": "Finde alle Räder",
+    "search-all-in": "Finde alle Räder in",
     "search-bikes": "Durchsuche deine Räder",
     "from-place": "aus",
     "contact": "Kontakt & Hilfe",
@@ -400,6 +401,8 @@
     "ratings": "Bewertungen",
     "meta-title": "{{name}}'s Profil",
     "meta-description": "Rad mieten von {{name}} auf listnride.",
+    "company-meta-title": "Company {{company}}",
+    "company-meta-description": "Rad mieten von {{company}} auf listnride.",
     "availability": "Verfügbarkeiten",
     "not-available": "Nicht verfügbar",
     "verified": "Verifiziert"
@@ -570,7 +573,7 @@
       "bicycle-number": "Rad Nr.",
       "frame-number": "Rahmennummer",
       "custom-fields": "Additional fields",
-      "details": "Details",
+      "notes": "Notes",
       "frame_size": "Frame size",
       "bicycle_number": "Bicycle number",
       "frame_number": "Frame number"
@@ -870,8 +873,16 @@
   "seo": {
     "cities-title": "Du planst zu reisen? Schau dir mehr Städte an:",
     "header": "Miete die besten Räder in",
+    "rent-the-best": "Miete die besten",
+    "bikes": "Räder",
     "rent-perfect-bikes-in": "Miete perfekte Räder in",
     "rent-category-bikes-in": "Eine große Auswahl an Mieträdern",
-    "bike-shops-in": "Fahrradläden in"
+    "bike-shops-in": "Fahrradläden in",
+    "city": "Stadträder",
+    "race": "Rennräder",
+    "all-terrain": "All-Terrain Räder",
+    "kids": "Kinderräder",
+    "electro": "E-Bikes",
+    "special": "Spezialräder"
   }
 }

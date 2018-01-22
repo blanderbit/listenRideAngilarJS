@@ -54,6 +54,8 @@
     "send": "Enviar ",
     "search": "Buscar",
     "search-bikes": "Busca bicicletas",
+    "search-all": "Busca todas las bicis",
+    "search-all-in": "Busca todas las bicis en",
     "from-place": "de",
     "contact": "Contacto y soporte",
     "show-more": "mostrar más ",
@@ -398,6 +400,8 @@
     "ratings": "Puntuaciones",
     "meta-title": "Perfil de {{name}}",
     "meta-description": "Alquilar bicis de {{name}} en listnride.",
+    "company-meta-title": "Company {{company}}",
+    "company-meta-description": "Alquilar bicis de {{company}} en listnride.",
     "availability": "Disponibilidad",
     "not-available": "No disponible",
     "verified": "verificado"
@@ -570,7 +574,7 @@
       "bicycle-number": "Bicycle number",
       "frame-number": "Frame number",
       "custom-fields": "Additional fields",
-      "details": "Details",
+      "notes": "Notes",
       "frame_size": "Frame size",
       "bicycle_number": "Bicycle number",
       "frame_number": "Frame number"
@@ -859,9 +863,17 @@
   },
   "seo": {
     "cities-title": "Planning to Travel? Check out more cities:",
-    "header": "The best bikes in",
+    "header": "Rent the best bikes in",
+    "rent-the-best": "Rent the best",
+    "bikes": "bikes",
     "rent-perfect-bikes-in": "Rent perfect bikes in",
     "rent-category-bikes-in": "We offer you a large choice of rental bikes",
-    "bike-shops-in": "Bike Shops in"
+    "bike-shops-in": "Bike Shops in",
+    "city": "city bikes",
+    "race": "race bikes",
+    "all-terrain": "all-terrain bikes",
+    "kids": "kids bikes",
+    "electro": "e-bikes",
+    "special": "special bikes"
   }
 }
