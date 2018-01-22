@@ -18,8 +18,10 @@
       </md-tabs>
     </div>
     <div flex="30" flex-sm="20" layout-padding layout="column">
-      <div class="highlight-tile" style="margin-top: 96px;">
-        
+      <div class="spacer-xs"></div>
+      <div class="highlight-tile" style="margin: 64px 16px 0 0" layout="column">
+        <receipt start-date="booking.startDate" end-date="booking.endDate" prices="booking.prices" invalid-days="0"></receipt>
+        <md-button class="md-raised md-primary lnr-margin-lrg" ng-click="" flex="90">{{ 'shared.next' | translate }}</md-button>
       </div>
     </div>
   </div>

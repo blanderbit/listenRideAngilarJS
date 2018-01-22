@@ -58,6 +58,7 @@ angular.module('listnride', [
   'moeveIntegration',
   'cityLanding',
   'hamburgTriathlon',
+  'receipt',
   /* external modules */
   'ngAnimate',
   'ngMaterial',

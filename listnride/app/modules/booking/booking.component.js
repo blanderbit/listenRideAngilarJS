@@ -9,6 +9,59 @@ angular.module('booking', [])
     controller: ['authentication', function BookingController(authentication) {
       var booking = this;
 
+      // TODO: Remove hardcorded values for testing receipt module
+      booking.startDate = new Date();
+      booking.endDate = new Date();
+      booking.endDate.setDate(booking.startDate.getDate() + 1);
+
+      booking.prices = [
+        {
+          id: 7921,
+          start_at: 0,
+          price: "20.0"
+        },
+        {
+          id: 7922,
+          start_at: 86400,
+          price: "20.0"
+        },
+        {
+          id: 7923,
+          start_at: 172800,
+          price: "20.0"
+        },
+        {
+          id: 7924,
+          start_at: 259200,
+          price: "20.0"
+        },
+        {
+          id: 7925,
+          start_at: 345600,
+          price: "20.0"
+        },
+        {
+          id: 7926,
+          start_at: 432000,
+          price: "20.0"
+        },
+        {
+          id: 7927,
+          start_at: 518400,
+          price: "10.0"
+        },
+        {
+          id: 7928,
+          start_at: 604800,
+          price: "10.0"
+        },
+        {
+          id: 7929,
+          start_at: 2419200,
+          price: "10.0"
+        }
+      ];
+
       // on lifecycle initialization
       booking.$onInit = function () {
         booking.authentication = authentication;

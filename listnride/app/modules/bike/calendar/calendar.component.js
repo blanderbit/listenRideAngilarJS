@@ -517,6 +517,7 @@ angular.module('bike').component('calendar', {
           calendar.total = 0;
         } else {
           var invalidDays = countInvalidDays(startDate, endDate);
+          console.log(startDate + ", " + endDate);
           calendar.duration = date.duration(startDate, endDate, invalidDays);
           calendar.durationDays = date.durationDays(startDate, endDate);
           var prices = price.calculatePrices(startDate, endDate, calendar.prices);
