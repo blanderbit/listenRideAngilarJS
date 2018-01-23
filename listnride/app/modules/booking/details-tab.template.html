@@ -1,4 +1,4 @@
-<md-tab class="personal"
+<md-tab class="details"
         label="{{ 'booking.details.tab' | translate }}"
         layout="row">
   <div class="spacer-xs"></div>
@@ -10,164 +10,117 @@
          layout-padding>
       <div class="lnr-list-form"
            layout="column">
-        <!-- Facebook -->
-        <div class="lnr-input-containers" layout="row">
-          <div flex="50"
-               ng-style="{'display': signupDialog.business ? 'none' : ''}"
-               layout="column">
-            <md-button ng-click="personal.parent.authentication.connectFb()"
-                       class="md-primary md-lined lnr-btn-fb">
-              {{ 'forms.sign-up-with-facebook' | translate }}
-            </md-button>
-          </div>
-          <div flex="50" layout="column">
-            <md-button ng-click="personal.parent.authentication.showLoginDialog()"
-                       class="md-lined">
-              Already have an account?
-            </md-button>
-          </div>
-        </div>
-        <div class="lnr-middle-divider">
-          {{ 'forms.or' | translate }}
-        </div>
-        <form name="personalForm" novalidate>
+        <form name="detailsForm" novalidate class="md-body-desktop">
           <!-- First name and Last name -->
           <div class="lnr-input-containers" layout="row">
             <md-input-container flex>
               <label>{{ 'forms.first-name' | translate }}</label>
-              <input name="firstName"
-                     ng-model-options="{debounce: 400}"
-                     ng-model="personal.parent.firstName"
-                     required
-                     ng-maxlength="20" ng-disabled="signupDialog.businessError">
-              <div ng-messages="personalForm.firstName.$error" role="alert">
+              <input
+                name="firstName"
+                ng-model="details.parent.user.firstName"
+                ng-disabled="true"
+              >
+              <div ng-messages="detailsForm.firstName.$error" role="alert">
                 <div ng-message="required">{{ 'forms.errors.empty-first-name' | translate }}</div>
                 <div ng-message="maxlength">{{ 'forms.errors.max-size-first-name' | translate }}</div>
               </div>
             </md-input-container>
             <md-input-container flex>
               <label>{{ 'forms.last-name' | translate }}</label>
-              <input name="lastName" ng-model-options="{debounce: 400}" ng-model="personal.parent.lastName" required
-                     ng-maxlength="30" ng-disabled="signupDialog.businessError">
-              <div ng-messages="personalForm.lastName.$error" role="alert">
+              <input
+                name="lastName"
+                ng-model="details.parent.user.lastName"
+                ng-maxlength="30"
+                ng-disabled="true"
+              >
+              <div ng-messages="detailsForm.lastName.$error" role="alert">
                 <div ng-message="required">{{ 'forms.errors.empty-last-name' | translate }}</div>
                 <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
               </div>
             </md-input-container>
           </div>
-
-          <!-- Email and Password -->
           <div class="lnr-input-containers" layout="row">
             <md-input-container flex>
-              <label>{{ 'forms.email-address' | translate }}</label>
-              <input name="email"
-                     ng-model-options="{debounce: 400}"
-                     ng-model="personal.parent.email"
-                     type="email"
-                     required
-                     ng-pattern="persona.parent.emailPattern"
-                     ng-disabled="signupDialog.businessError">
-              <div ng-messages="personalForm.email.$error" role="alert">
-                <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
-                <div ng-message="email">{{ 'forms.errors.valid-email' | translate }}</div>
-                <div ng-message="pattern">{{ 'forms.errors.valid-email' | translate }}</div>
-              </div>
+              <autocomplete
+                md-no-float
+                autocomplete-id="details.parent.user"
+                layout="column"
+                location="details.parent.user.street_number"
+                required
+                required="true"
+                class="md-block"
+                label-id="Street & Number"
+                place-changed="details.parent.fillAddress(place)"
+              >
+              </autocomplete>
             </md-input-container>
-            <md-input-container flex>
-              <label>{{ 'forms.password' | translate }}</label>
-              <input name="password"
-                     ng-model="personal.parent.password"
-                     type="password"
-                     required
-                     ng-minlength="6"
-                     ng-maxlength="30" ng-disabled="signupDialog.businessError">
-              <div ng-messages="personalForm.password.$error" role="alert">
-                <div ng-message="required">{{ 'forms.errors.password-missing' | translate }}</div>
-                <div ng-message="minlength">{{ 'forms.errors.password-length' | translate }}</div>
-                <div ng-message="maxlength">{{ 'forms.errors.password-length' | translate }}</div>
-              </div>
-            </md-input-container>
-          </div>
 
-          <!-- Street and City -->
-          <div class="lnr-input-containers" layout="row">
-            <md-input-container flex>
-              <label>Street & Number</label>
-              <input name="street"
-
-                     ng-model-options="{debounce: 400}"
-
-                     ng-model="personal.parent.street"
-
-                     type="text"
-                     required
-                     ng-disabled="signupDialog.businessError">
-              <div ng-messages="personalForm.street.$error" role="alert">
-                <div ng-message="required">Please provide Street & Number</div>
-              </div>
-            </md-input-container>
             <md-input-container flex>
               <label>City</label>
-              <input name="city"
-                     ng-model-options="{debounce: 400}"
-                     ng-model="personal.parent.city"
-                     type="text"
-                     required
-                     ng-disabled="signupDialog.businessError">
-              <div ng-messages="personalForm.city.$error" role="alert">
-                <div ng-message="required">Please provide city</div>
+              <input
+                required
+                name="city"
+                ng-model="details.parent.user.city"
+              >
+              <div ng-messages="detailsForm.city.$error" role="alert">
+                <div ng-message="required">{{ 'shared.required' | translate }}</div>
               </div>
             </md-input-container>
           </div>
 
-          <!-- Postal and Country -->
           <div class="lnr-input-containers" layout="row">
             <md-input-container flex>
               <label>Postal Code</label>
-              <input name="postal"
-                     ng-model-options="{debounce: 400}"
-                     ng-model="personal.parent.postal"
-                     type="text"
-                     required
-                     ng-disabled="signupDialog.businessError">
-              <div ng-messages="personalForm.postal.$error" role="alert">
-                <div ng-message="required">Please provide Postal Code</div>
+              <input
+                required
+                name="zip"
+                ng-model="details.parent.user.zip"
+              >
+              <div ng-messages="detailsForm.zip.$error" role="alert">
+                <div ng-message="required">{{ 'shared.required' | translate }}</div>
               </div>
             </md-input-container>
+
             <md-input-container flex>
               <label>Country</label>
-              <input name="country"
-                     ng-model-options="{debounce: 400}"
-                     ng-model="personal.parent.country"
-                     type="text"
-                     required>
-              <div ng-messages="personalForm.country.$error" role="alert">
+              <input
+                name="country"
+                ng-model="details.parent.user.country"
+                required
+              >
+              <div ng-messages="detailsForm.country.$error" role="alert">
                 <div ng-message="required">Please provide country</div>
               </div>
             </md-input-container>
           </div>
 
+          <h2>Verification</h2>
+          <p>We'll send you one time sms to your phone.</p>
           <!-- Phone Number and Send Button -->
           <div class="lnr-input-containers"
                layout="row"
-               ng-show="personal.parent.showConfirmButton">
+               ng-show="details.parent.showConfirmButton">
             <md-input-container flex>
               <label>{{ 'shared.phone-number' | translate }}</label>
-              <input international-phone-number
-                     ng-model="personal.parent.new_phone_number"
-                     ng-pattern="personal.parent.phonePattern"
-                     name="phone_number"
-                     preferred-countries="de, at, nl, fr, lv, es, it, ch, gb"
-                     type="text" required>
-              <div ng-messages="personalForm.phone_number.$error" role="alert">
+              <input
+                international-phone-number
+                ng-model="details.parent.phone_number"
+                ng-pattern="details.parent.phonePattern"
+                name="phone_number"
+                preferred-countries="de, at, nl, fr, lv, es, it, ch, gb"
+                required
+              >
+              <div ng-messages="detailsForm.phone_number.$error" role="alert">
                 <div ng-message="pattern">{{ 'verification.5.enter-valid-phone-nr' | translate }}</div>
               </div>
             </md-input-container>
             <md-input-container flex>
-              <md-button flex
-                         style="margin: 25px 0 0"
-                         class="md-raised md-primary lnr-btn-inline"
-                         ng-click="personal.parent.toggleConfirmButton()">
+              <md-button
+                flex
+                style="margin: 25px 0 0"
+                class="md-raised md-primary lnr-btn-inline"
+                ng-click="details.parent.sendSms(detailsForm.phone_number)"
+              >
                 <span>Send Code</span>
               </md-button>
             </md-input-container>
@@ -177,56 +130,41 @@
           <div class="lnr-confirmation-containers"
                layout="column"
                layout-align="center start"
-               ng-hide="personal.parent.showConfirmButton">
+               ng-hide="details.parent.showConfirmButton">
             <div layout="row" class="confirm-label">
-              <strong>Confirm {{ 'shared.phone-number' | translate }} *</strong>
+              <strong>Confirmation code</strong>
             </div>
             <div layout="row">
-              <div layout="row" flex="35" layout-align="start start">
-                <md-input-container flex-gt-xs="20">
-                  <input ng-model="personal.parent.confirm_phone_number_1">
-                </md-input-container>
-                <span flex></span>
-                <md-input-container flex-gt-xs="20">
-                  <input ng-model="personal.parent.confirm_phone_number_2">
-                </md-input-container>
-                <span flex></span>
-                <md-input-container flex-gt-xs="20">
-                  <input ng-model="personal.parent.confirm_phone_number_3">
-                </md-input-container>
-                <span flex></span>
-                <md-input-container flex-gt-xs="20">
-                  <input ng-model="personal.parent.confirm_phone_number_4">
-                </md-input-container>
+              <div layout="row" flex="25" layout-align="start start">
+                <div class="lnr-sms-input">
+                  <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
+                    <input ng-model="details.parent.confirmation[0]" maxlength="1"  ng-change="details.parent.confirmPhone()">
+                  </md-input-container>
+                  <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
+                    <input ng-model="details.parent.confirmation[1]" maxlength="1"  ng-change="details.parent.confirmPhone()">
+                  </md-input-container>
+                  <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
+                    <input ng-model="details.parent.confirmation[2]" maxlength="1"  ng-change="details.parent.confirmPhone()">
+                  </md-input-container>
+                  <md-input-container flex-gt-xs="20" class="lnr-sms-digit">
+                    <input ng-model="details.parent.confirmation[3]" maxlength="1" ng-change="details.parent.confirmPhone()">
+                  </md-input-container>
+                </div>
               </div>
               <span flex></span>
               <div layout="row" flex="50" layout-align="start start">
-                <md-input-container flex>
-                  <md-button flex
-                             style="margin: 0px 0px"
-                             class="md-lined md-button"
-                             ng-click="personal.parent.toggleConfirmButton()">
-                    <span>Change Phone Number</span>
-                  </md-button>
-                </md-input-container>
+                <div ng-show="details.parent.phoneConfirmed === 'progress'" class="text-default">Enter the pin that we just sent to your phone</div>
+                <div ng-show="details.parent.phoneConfirmed === 'success'" class="text-default">Success message</div>
+                <div ng-show="details.parent.phoneConfirmed === 'error'" class="text-error">The code you entered is not correct. Try again or resend the SMS</div>
               </div>
+            </div>
+
+            <div class="sign-up-links" flex layout="row" layout-align="space-between center">
+              <a class="lnr-link" ng-click="details.parent.toggleConfirmButton()">Resend</a>
             </div>
           </div>
         </form>
       </div>
-
     </div>
   </md-content>
-
-  <!-- Bottom Navigation Buttons -->
-  <div class="navigation"
-       layout="row"
-       layout-align="space-between center"
-       layout-margin>
-    <span flex="50"></span>
-    <md-button class="md-raised md-primary"
-               ng-click="personal.parent.nextTab()">
-      {{ 'list.next' | translate }}
-    </md-button>
-  </div>
 </md-tab>

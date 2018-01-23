@@ -1,0 +1,48 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Booking FLOW
+/*-----------------------------------------------------------------------------------*/
+
+.mt0 {
+    margin-top: 0;
+}
+
+.lnr-row-images {
+    flex-direction: row-reverse;
+}
+
+.lnr-row-images__item {
+    margin-right: -16px;
+}
+
+.lnr-row-images img {
+    width: 71px;
+    height: 71px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+}
+
+.lnr-row-images__item:last-child {
+    margin-left: -16px;
+}
+
+.lnr-sms-input {
+    border-width: 1px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: rgba(206,212,216,0.9);
+    height: 40px;
+    padding-left: 8px;
+}
+
+.lnr-sms-input .lnr-sms-digit .md-input {
+    border-width: 0;
+    border-bottom: 1px solid rgba(206,212,216,0.9);
+    height: 35px;
+    border-radius: 0;
+}
+
+.lnr-sms-input md-input-container {
+    margin-bottom: 0;
+}
+
+

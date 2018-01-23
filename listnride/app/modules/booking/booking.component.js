@@ -6,8 +6,13 @@ angular.module('booking', [])
     transclude: true,
     templateUrl: 'app/modules/booking/booking.template.html',
     controllerAs: 'booking',
-    controller: ['authentication', function BookingController(authentication) {
+    controller: ['$localStorage', '$rootScope', '$mdToast', 'authentication', 'api',
+      function BookingController($localStorage, $rootScope, $mdToast, authentication, api) {
       var booking = this;
+
+      booking.user = {};
+      booking.confirmation = '';
+      booking.phoneConfirmed = 'progress';
 
       // TODO: Remove hardcorded values for testing receipt module
       booking.startDate = new Date();
@@ -62,6 +67,14 @@ angular.module('booking', [])
         }
       ];
 
+
+      // set User data if registered
+      if ($localStorage.userId !== 'undefined') {
+        booking.user.firstName = $localStorage.firstName;
+        booking.user.lastName = $localStorage.lastName;
+        booking.user.email = $localStorage.email;
+      }
+
       // on lifecycle initialization
       booking.$onInit = function () {
         booking.authentication = authentication;
@@ -71,6 +84,42 @@ angular.module('booking', [])
         booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
       };
 
+
+
+      // phone confirmation
+      //TODO: move to shared logic
+      booking.sendSms = function (number) {
+        var data = {"phone_number": number.$modelValue};
+        booking.toggleConfirmButton();
+        api.post('/users/' + $localStorage.userId + '/update_phone', data).then(
+          function (success) {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent('An SMS with a confirmation code was sent to you just now.')
+                .hideDelay(4000)
+                .position('top center')
+            );
+          },
+          function (error) {
+          }
+        );
+      };
+
+      booking.confirmPhone = function () {
+        var codeDigits = _.values(booking.confirmation).filter(Number);
+        if (codeDigits.length === 4) {
+          var data = { "confirmation_code": codeDigits.join('') };
+          api.post('/users/' + $localStorage.userId + '/confirm_phone', data).then(
+            function (success) {
+              booking.phoneConfirmed = 'success';
+            },
+            function (error) {
+              booking.phoneConfirmed = 'error';
+            }
+          );
+        }
+      };
+
       // toggle confirm phone button
       booking.toggleConfirmButton = function () {
         booking.showConfirmButton = !booking.showConfirmButton;
@@ -78,7 +127,6 @@ angular.module('booking', [])
 
       // go to next tab
       booking.nextTab = function () {
-        console.log("booking: ", booking);
         booking.selectedIndex = booking.selectedIndex + 1;
       };
 
@@ -86,13 +134,39 @@ angular.module('booking', [])
       booking.previousTab = function () {
         booking.selectedIndex = booking.selectedIndex - 1;
       };
-    }]
+
+        booking.fillAddress = function(place) {
+          //TODO: complete address
+          var components = place.address_components;
+          if (components) {
+            var desiredComponents = {
+              "street_number": "",
+              "route": "",
+              "locality": "",
+              "country": "",
+              "postal_code": ""
+            };
+
+            for (var i = 0; i < components.length; i++) {
+              var type = components[i].types[0];
+              if (type in desiredComponents) {
+                desiredComponents[type] = components[i].long_name;
+              }
+            }
+
+            booking.user.street = desiredComponents.route + " " + desiredComponents.street_number;
+            booking.user.zip = desiredComponents.postal_code;
+            booking.user.city = desiredComponents.locality;
+            booking.user.country = desiredComponents.country;
+          }
+        }
+      }]
   })
-  // sign in tab ui component
-  .component('signInTab', {
-    templateUrl: 'app/modules/booking/sign-in-tab.template.html',
+  // signup tab ui component
+  .component('signupTab', {
+    templateUrl: 'app/modules/booking/signup-tab.template.html',
     require: {parent: '^booking'},
-    controllerAs: 'signIn'
+    controllerAs: 'signup'
   })
   // details tab ui component
   .component('detailsTab', {
