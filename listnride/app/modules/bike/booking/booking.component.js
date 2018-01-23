@@ -6,8 +6,20 @@ angular.module('booking', [])
     transclude: true,
     templateUrl: 'app/modules/bike/booking/booking.template.html',
     controllerAs: 'booking',
-    controller: ['authentication', function BookingController(authentication) {
+    controller: ['$localStorage', '$rootScope', '$mdToast', 'authentication', 'api',
+      function BookingController($localStorage, $rootScope, $mdToast, authentication, api) {
       var booking = this;
+
+      booking.user = {};
+      booking.confirmation = '';
+      booking.phoneConfirmed = 'progress';
+
+      // set User data if registered
+      if ($localStorage.userId !== 'undefined') {
+        booking.user.firstName = $localStorage.firstName;
+        booking.user.lastName = $localStorage.lastName;
+        booking.user.email = $localStorage.email;
+      }
 
       // on lifecycle initialization
       booking.$onInit = function () {
@@ -18,6 +30,40 @@ angular.module('booking', [])
         booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
       };
 
+      // phone confirmation
+      //TODO: move to shared logic
+      booking.sendSms = function (number) {
+        var data = {"phone_number": number.$modelValue};
+        booking.toggleConfirmButton();
+        api.post('/users/' + $localStorage.userId + '/update_phone', data).then(
+          function (success) {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent('An SMS with a confirmation code was sent to you just now.')
+                .hideDelay(4000)
+                .position('top center')
+            );
+          },
+          function (error) {
+          }
+        );
+      };
+
+      booking.confirmPhone = function () {
+        var codeDigits = _.values(booking.confirmation).filter(Number);
+        if (codeDigits.length === 4) {
+          var data = { "confirmation_code": codeDigits.join('') };
+          api.post('/users/' + $localStorage.userId + '/confirm_phone', data).then(
+            function (success) {
+              booking.phoneConfirmed = 'success';
+            },
+            function (error) {
+              booking.phoneConfirmed = 'error';
+            }
+          );
+        }
+      };
+
       // toggle confirm phone button
       booking.toggleConfirmButton = function () {
         booking.showConfirmButton = !booking.showConfirmButton;
@@ -25,7 +71,6 @@ angular.module('booking', [])
 
       // go to next tab
       booking.nextTab = function () {
-        console.log("booking: ", booking);
         booking.selectedIndex = booking.selectedIndex + 1;
       };
 
@@ -33,6 +78,46 @@ angular.module('booking', [])
       booking.previousTab = function () {
         booking.selectedIndex = booking.selectedIndex - 1;
       };
+
+      // go to next tab on user create success
+      $rootScope.$on('user_created', function () {
+        booking.user.firstName = $localStorage.firstName;
+        booking.user.lastName = $localStorage.lastName;
+        booking.selectedIndex = booking.selectedIndex + 1;
+      });
+
+      // go to next tab on user login success
+      $rootScope.$on('user_login', function () {
+        booking.user.firstName = $localStorage.firstName;
+        booking.user.lastName = $localStorage.lastName;
+        booking.selectedIndex = booking.selectedIndex + 1;
+      });
+
+      booking.fillAddress = function(place) {
+        debugger
+        var components = place.address_components;
+        if (components) {
+          var desiredComponents = {
+            "street_number": "",
+            "route": "",
+            "locality": "",
+            "country": "",
+            "postal_code": ""
+          };
+
+          for (var i = 0; i < components.length; i++) {
+            var type = components[i].types[0];
+            if (type in desiredComponents) {
+              desiredComponents[type] = components[i].long_name;
+            }
+          }
+
+          booking.user.street = desiredComponents.route + " " + desiredComponents.street_number;
+          booking.user.zip = desiredComponents.postal_code;
+          booking.user.city = desiredComponents.locality;
+          booking.user.country = desiredComponents.country;
+        }
+      }
     }]
   })
   // sign-in tab ui component
