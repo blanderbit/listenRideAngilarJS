@@ -136,7 +136,6 @@ angular.module('booking', [])
       };
 
         booking.fillAddress = function(place) {
-          debugger
           var components = place.address_components;
           if (components) {
             var desiredComponents = {
