@@ -2,17 +2,19 @@
         label="{{ 'booking.details.tab' | translate }}"
         layout="row">
   <div class="spacer-xs"></div>
-  <md-content style="max-height: 620px; overflow: scroll;"
+  <md-content style="max-height: 620px;"
               layout="column">
-    <div class="tab-content" style="min-height: 562px;"
+    <div class="tab-content" style="min-height: 400px;"
          layout="row"
          layout-align="space-between none"
          layout-padding>
       <div class="lnr-list-form"
            layout="column">
+        <h2 class="md-subhead">Invoice Address</h2>
+        <br>
         <form name="detailsForm" novalidate class="md-body-desktop">
           <!-- First name and Last name -->
-          <div class="lnr-input-containers" layout="row">
+          <div class="lnr-input-containers" layout="row" ng-hide="true">
             <md-input-container flex>
               <label>{{ 'forms.first-name' | translate }}</label>
               <input
@@ -51,6 +53,7 @@
                 class="md-block"
                 label-id="Street & Number"
                 place-changed="details.parent.fillAddress(place)"
+                style="margin-bottom: 0"
               >
               </autocomplete>
             </md-input-container>
@@ -93,8 +96,10 @@
               </div>
             </md-input-container>
           </div>
-
-          <h2>Verification</h2>
+          <br>
+          <md-divider></md-divider>
+          <br>
+          <h2 class="md-subhead">Verification</h2>
           <p>We'll send you one time sms to your phone.</p>
           <!-- Phone Number and Send Button -->
           <div class="lnr-input-containers"

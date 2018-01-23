@@ -2,10 +2,10 @@
         label="{{ 'booking.payment.tab' | translate }}"
         layout="row">
   <div class="spacer-xs"></div>
-  <md-content style="max-height: 620px; overflow: scroll;"
+  <md-content style="max-height: 620px;"
               layout="column">
     <div class="tab-content"
-         style="min-height: 562px;"
+         style="min-height: 450px;"
          layout-align="space-between none"
          layout-padding>
       <div class="lnr-list-form"
@@ -113,19 +113,4 @@
     </div>
     </div>
   </md-content>
-
-  <!-- Bottom Navigation Buttons -->
-  <div class="navigation"
-       layout="row"
-       layout-align="space-between center"
-       layout-margin>
-    <md-button class="md-lined"
-               ng-click="payment.parent.previousTab()">
-      {{ 'list.back' | translate }}
-    </md-button>
-    <md-button class="md-raised md-primary"
-               ng-click="payment.parent.nextTab()">
-      {{ 'list.next' | translate }}
-    </md-button>
-  </div>
 </md-tab>
