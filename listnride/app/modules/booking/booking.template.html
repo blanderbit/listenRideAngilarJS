@@ -1,0 +1,63 @@
+<md-content class="single-column">
+  <div class="content lnr-page-margin" layout="row">
+    <div flex="70" flex-sm="80" layout-padding style="width: 100%">
+      <md-tabs
+        md-no-pagination
+        md-dynamic-height
+        md-no-ink
+        md-no-ink-bars
+        md-selected="booking.selectedIndex"
+      >
+
+        <!-- sign-in data tab -->
+        <signup-tab></signup-tab>
+
+        <!-- details data tab -->
+        <details-tab></details-tab>
+        
+        <!-- payment tab -->
+        <payment-tab></payment-tab>
+        
+        <!-- overview tab -->
+        <overview-tab></overview-tab>
+      
+      </md-tabs>
+    </div>
+    <div flex="30" flex-sm="20" layout-padding layout="column">
+      <div class="spacer-xs"></div>
+      <div class="highlight-tile" style="margin: 64px 16px 0 0" layout="column">
+        <receipt start-date="booking.startDate" end-date="booking.endDate" prices="booking.prices" invalid-days="0"></receipt>
+        <md-button class="md-raised md-primary lnr-margin-lrg" ng-click="" flex="90">{{ 'shared.next' | translate }}</md-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <p class="md-subhead">Pay secure with</p>
+      <img
+        class="md-card-image lnr-request__img-methods"
+        ng-src="app/assets/ui_images/static/lnr_payment_methods.png"
+        alt="list of payment methods"
+        width="369">
+    </div>
+  </div>
+
+  <div class="content" layout-padding>
+    <div class="lnr-section-title mt0" layout="column" layout-align="center center">
+      <p class="md-body-2"><b>Do you have questions about booking a bike?</b><br>
+        Call us +49 (0)30-120870330, Mo-Fr 9-18 pm. <a href="mailto:support@listandride.com">Or write us an email</a>.</p>
+      <div class="lnr-row-images" layout="row" layout-align="center center">
+        <div class="lnr-row-images__item" layout="column" layout-align="center center">
+          <img ng-src="app/assets/ui_images/testmonials/testmonial_lister_2.jpg" alt="Lena">
+          <span>Lena</span>
+        </div>
+        <div class="lnr-row-images__item" layout="column" layout-align="center center">
+          <img ng-src="app/assets/ui_images/testmonials/testmonial_lister_1.jpg" alt="Frank">
+          <span>Frank</span>
+        </div>
+      </div>
+      <p class="md-caption"><b>listnride Support</b></p>
+    </div>
+  </div>
+</md-content>

@@ -270,6 +270,20 @@
       "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform."
     }
   },
+  "booking": {
+    "sign-in": {
+      "tab": "1. Sign In"
+    },
+    "details": {
+      "tab": "2. Personal Details"
+    },
+    "payment": {
+      "tab": "3. Payment Method"
+    },
+    "overview": {
+      "tab": "4. Overview"
+    }
+  },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
     "error": "An error occured. Please make sure your internet connection works and try again.",
