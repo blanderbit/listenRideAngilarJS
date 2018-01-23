@@ -136,6 +136,7 @@ angular.module('booking', [])
       };
 
         booking.fillAddress = function(place) {
+          //TODO: complete address
           var components = place.address_components;
           if (components) {
             var desiredComponents = {

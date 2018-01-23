@@ -41,15 +41,15 @@
           </div>
           <div class="lnr-input-containers" layout="row">
             <md-input-container flex>
-              <label>Street & Number</label>
               <autocomplete
                 md-no-float
                 autocomplete-id="details.parent.user"
                 layout="column"
-                location="details.parent.user.street"
+                location="details.parent.user.street_number"
                 required
                 required="true"
                 class="md-block"
+                label-id="Street & Number"
                 place-changed="details.parent.fillAddress(place)"
               >
               </autocomplete>
