@@ -3,8 +3,8 @@
 angular.
   module('listnride').
   factory('authentication', [
-    'Base64', '$http', '$localStorage', '$mdDialog', '$mdToast', '$window', '$state', '$q', '$translate', '$analytics', 'ezfb', 'api', 'verification', 'sha256',
-    function(Base64, $http, $localStorage, $mdDialog, $mdToast, $window, $state, $q, $translate, $analytics, ezfb, api, verification, sha256){
+    'Base64', '$http', '$localStorage', '$mdDialog', '$rootScope', '$mdToast', '$window', '$state', '$q', '$translate', '$analytics', 'ezfb', 'api', 'verification', 'sha256',
+    function(Base64, $http, $localStorage, $mdDialog, $rootScope, $mdToast, $window, $state, $q, $translate, $analytics, ezfb, api, verification, sha256){
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (response) {
@@ -14,6 +14,7 @@ angular.
         $localStorage.userId = response.id;
         $localStorage.name = response.first_name + " " + response.last_name;
         $localStorage.firstName = response.first_name;
+        $localStorage.lastName = response.last_name;
         $localStorage.profilePicture = response.profile_picture.profile_picture.url;
         $localStorage.unreadMessages = response.unread_messages;
         $localStorage.email = response.email;
@@ -92,12 +93,15 @@ angular.
         });
       };
 
-      var signupGlobal = function (inviteCode, requesting, business) {
-        var business = business || false;
+      var signupGlobal = function (form) {
         var obj = {
-          // user fields ? 
-        }
-        SignupDialogController(null,inviteCode,requesting,business,obj);
+          email: form.email.$modelValue,
+          firstName: form.first_name.$modelValue,
+          lastName: form.last_name.$modelValue,
+          password: form.password.$modelValue
+        };
+
+        SignupDialogController(null, null, null, false, obj);
       };
 
       // The Signup Dialog Controller
@@ -105,6 +109,7 @@ angular.
         var signupDialog = signupObj || this;
 
         signupDialog.signingUp = false;
+        signupDialog.requestSignup = false;
         signupDialog.business = business;
         signupDialog.businessError = false;
         signupDialog.requesting = requesting;
@@ -143,13 +148,18 @@ angular.
 
           api.post('/users', user).then(function(success) {
             setCredentials(success.data);
-            if (signupDialog.business) {
-              signupDialog.createBusiness();
+            //TODO: refactor this logic
+            if (signupDialog.requestSignup) {
+              $rootScope.$broadcast('user_created');
             } else {
-              if (!signupDialog.requesting) {
-                $state.go('home');
+              if (signupDialog.business) {
+                signupDialog.createBusiness();
+              } else {
+                if (!signupDialog.requesting) {
+                  $state.go('home');
+                }
+                verification.openDialog(false, invited);
               }
-              verification.openDialog(false, invited);
             }
           }, function(error) {
             showSignupError();
@@ -177,11 +187,27 @@ angular.
 
         signupDialog.connectFb = connectFb;
         signupDialog.showProfile = showProfile;
+
+        if (signupObj) {
+          signupDialog.requestSignup = true;
+          signupDialog.createUser()
+        }
+      };
+
+      var loginGlobal = function (form) {
+        var obj = {
+          email: form.email.$modelValue,
+          password: form.password.$modelValue
+        };
+
+        LoginDialogController(null, null, sha256, null, obj);
       };
 
       // The Login Dialog Controller
-      var LoginDialogController = function($mdDialog, $mdToast, sha256, ezfb) {
-        var loginDialog = this;
+      var LoginDialogController = function($mdDialog, $mdToast, sha256, ezfb, loginObj) {
+        var loginDialog = loginObj || this;
+
+        loginDialog.requestLogin = false;
 
         var showLoginSuccess = function() {
           $mdDialog.hide();
@@ -233,9 +259,13 @@ angular.
           };
           api.post('/users/login', user).then(function(success) {
             setCredentials(success.data);
-            showLoginSuccess();
-            if (!success.data.has_address || !success.data.confirmed_phone || success.data.status === 0) {
-              verification.openDialog(false);
+            if (loginDialog.requestLogin) {
+              $rootScope.$broadcast('user_login');
+            } else {
+              showLoginSuccess();
+              if (!success.data.has_address || !success.data.confirmed_phone || success.data.status === 0) {
+                verification.openDialog(false);
+              }
             }
           }, function(error) {
             showLoginError();
@@ -284,6 +314,11 @@ angular.
             );
           }
         }
+
+        if (loginObj) {
+          loginDialog.requestLogin = true;
+          loginDialog.login ()
+        }
       };
 
       var showSignupDialog = function(inviteCode, requesting, event, business) {
@@ -300,7 +335,8 @@ angular.
           locals : {
             inviteCode : inviteCode,
             requesting: requesting,
-            business: business
+            business: business,
+            signupObj: null
           }
         })
         .then(function(answer) {
@@ -320,7 +356,10 @@ angular.
           openFrom: angular.element(document.body),
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,
-          fullscreen: true // Changed in CSS to only be for XS sizes
+          fullscreen: true, // Changed in CSS to only be for XS sizes
+          locals : {
+            loginObj: null
+          }
         })
         .then(function(answer) {
           //
@@ -380,7 +419,8 @@ angular.
           return $localStorage.unreadMessages
         },
         connectFb: connectFb,
-        signupGlobal: signupGlobal
+        signupGlobal: signupGlobal,
+        loginGlobal: loginGlobal
       };
     }
   ]);
