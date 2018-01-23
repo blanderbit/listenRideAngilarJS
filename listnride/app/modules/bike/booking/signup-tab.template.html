@@ -14,26 +14,32 @@
            layout="column">
         <h2>New at listnride?</h2>
 
-        <div class="md-dialog-content" layout="column">
-          <div layout="column">
-            <md-button ng-click="signup.parent.authentication.connectFb()" class="md-primary md-lined lnr-btn-fb">
-              Register with Facebook
-            </md-button>
-            <div class="lnr-middle-divider">
-              {{ 'forms.or' | translate }}
-            </div>
-          </div>
-
-          <form ng-cloak name="signupForm" novalidate>
+        <div class="md-dialog-content" layout="column" >
+          <!--signup form-->
+          <form
+            ng-cloak
+            name="signupForm"
+            novalidate
+            ng-submit="signup.parent.authentication.signupGlobal(signupForm)"
+            ng-hide="showLogin"
+          >
             <div class="md-dialog-content" layout="column">
-              <div class="lnr-input-containers" layout="row">
+              <div layout="column">
+                <md-button ng-click="signup.parent.authentication.connectFb()" class="md-primary md-lined lnr-btn-fb">
+                  Register with Facebook
+                </md-button>
+                <div class="lnr-middle-divider">
+                  {{ 'forms.or' | translate }}
+                </div>
+              </div>
+              <div class="lnr-input-containers" layout="row" value="{{$localStorage.firstName}}">
                 <md-input-container flex>
                   <label>{{ 'forms.first-name' | translate }}</label>
                   <input
-                          name="first_name"
-                          ng-model="signupDialog.firstName"
-                          required
-                          ng-maxlength="20"
+                    name="first_name"
+                    ng-model="signupDialog.firstName"
+                    required
+                    ng-maxlength="20"
                   >
                   <div ng-messages="signupForm.first_name.$error" role="alert">
                     <div ng-message="required">{{ 'forms.errors.empty-first-name' | translate }}</div>
@@ -44,10 +50,10 @@
                 <md-input-container flex>
                   <label>{{ 'forms.last-name' | translate }}</label>
                   <input
-                          name="last_name"
-                          ng-model="signupDialog.lastName"
-                          required
-                          ng-maxlength="30"
+                    name="last_name"
+                    ng-model="signupDialog.lastName"
+                    required
+                    ng-maxlength="30"
                   >
                   <div ng-messages="signupForm.last_name.$error" role="alert">
                     <div ng-message="required">{{ 'forms.errors.empty-last-name' | translate }}</div>
@@ -60,11 +66,11 @@
                 <md-input-container flex>
                   <label>{{ 'forms.email-address' | translate }}</label>
                   <input
-                          name="email"
-                          ng-model="signupDialog.email"
-                          type="email"
-                          required
-                          ng-pattern="/(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i"
+                    name="email"
+                    ng-model="signupDialog.email"
+                    type="email"
+                    required
+                    ng-pattern="/(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i"
                   >
                   <div ng-messages="signupForm.email.$error" role="alert">
                     <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
@@ -76,12 +82,12 @@
                 <md-input-container flex>
                   <label>{{ 'forms.password' | translate }}</label>
                   <input
-                          name="password"
-                          ng-model="signupDialog.password"
-                          type="password"
-                          required
-                          ng-minlength="6"
-                          ng-maxlength="30"
+                    name="password"
+                    ng-model="signupDialog.password"
+                    type="password"
+                    required
+                    ng-minlength="6"
+                    ng-maxlength="30"
                   >
                   <div ng-messages="signupForm.password.$error" role="alert">
                     <div ng-message="required">{{ 'forms.errors.password-missing' | translate }}</div>
@@ -102,14 +108,54 @@
                 <md-button
                   type="submit"
                   class="md-primary md-raised"
-                  ng-click="signup.parent.authentication.signupGlobal()"
                 >
-                  <!--signup.parent.authentication.signupDialog.signup(signupForm)-->
                   Register
                 </md-button>
               </div>
               <div class="sign-up-links" flex layout="row" layout-align="space-between center">
-                <a class="lnr-link" ng-click="signupDialog.showLogin()">Already a member?</a>
+                <a class="lnr-link" ng-click="showLogin = true">Already a member?</a>
+              </div>
+            </div>
+          </form>
+
+          <!--login form-->
+
+          <form ng-cloak name="loginForm" novalidate ng-hide="!showLogin" ng-submit="signup.parent.authentication.loginGlobal(loginForm)">
+            <div class="md-dialog-content" layout="column">
+              <md-button class="md-primary md-lined lnr-btn-fb" ng-click="signup.parent.authentication.connectFb()">
+                Login with facebook
+              </md-button>
+              <div class="lnr-middle-divider">
+                {{ 'forms.or' | translate }}
+              </div>
+
+              <md-input-container>
+                <label>{{ 'forms.email-address' | translate }}</label>
+                <input ng-model="loginDialog.email" name="email" required type="email" md-autofocus ng-pattern="/(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i"/>
+                <div ng-messages="loginForm.email.$error" role="alert">
+                  <div ng-message="required">Please enter your email address.</div>
+                  <div ng-message="email">This field must be a valid email address.</div>
+                  <div ng-message="pattern">This field must be a valid email address.</div>
+                </div>
+              </md-input-container>
+
+              <md-input-container>
+                <label>{{ 'forms.password' | translate }}</label>
+                <input type="password" ng-model="loginDialog.password" name="password" required ng-minlength="6" ng-maxlength="30"/>
+                <div ng-messages="loginForm.password.$error" role="alert">
+                  <div ng-message="required">Please enter a password.</div>
+                  <div ng-message="maxlength">Password shouldn't be longer than 30 characters.</div>
+                  <div ng-message="minlength">Password shouldn't be shorter than 6 characters.</div>
+                </div>
+              </md-input-container>
+
+              <div class="md-dialog-buttons" layout="row" layout-align="space-between center">
+                <a class="lnr-link" ng-click="loginDialog.resetPassword()">
+                  {{ 'forms.forgot-password' | translate }}
+                </a>
+                <md-button type="submit" class="md-primary md-raised">
+                  {{ 'forms.log-in' | translate }}
+                </md-button>
               </div>
             </div>
           </form>
@@ -117,4 +163,15 @@
       </div>
     </div>
   </md-content>
+
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <p class="md-subhead">Pay secure with</p>
+      <img
+        class="md-card-image lnr-request__img-methods"
+        ng-src="app/assets/ui_images/static/lnr_payment_methods.png"
+        alt="list of payment methods"
+        width="369">
+    </div>
+  </div>
 </md-tab>
