@@ -6,15 +6,45 @@ angular.module('booking', [])
     transclude: true,
     templateUrl: 'app/modules/booking/booking.template.html',
     controllerAs: 'booking',
-    controller: ['$localStorage', '$rootScope', '$mdToast', 'authentication', 'api',
-      function BookingController($localStorage, $rootScope, $mdToast, authentication, api) {
+    controller: ['$localStorage', '$rootScope', '$scope', '$mdToast', 'authentication', 'api',
+      function BookingController($localStorage, $rootScope, $scope, $mdToast, authentication, api) {
       var booking = this;
+      var btAuthorization = 'sandbox_g42y39zw_348pk9cgf3bgyw2b';
+      var btClient;
 
-      // Braintree Setup Code
+      booking.user = {};
+      booking.confirmation = '';
+      booking.phoneConfirmed = 'progress';
+      booking.nextDisabled = false;
+
+      // TODO: Remove hardcorded values for testing receipt module
+      booking.startDate = new Date();
+      booking.endDate = new Date();
+      booking.endDate.setDate(booking.startDate.getDate() + 1);
+      // END TODO
+
+      // on lifecycle initialization
+      booking.$onInit = function () {
+        booking.authentication = authentication;
+        booking.showConfirmButton = true;
+        booking.selectedIndex = 0;
+        booking.emailPattern = /(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i;
+        booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+      };
+
+      // Braintree Client Setup
       braintree.client.create({
-        authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b'
+        authorization: btAuthorization
       }, function (err, client) {
-        client.request({
+        if (err) {
+          console.log('An error occured initializing Braintree');
+          return;
+        }
+        btClient = client;
+      });
+
+      booking.tokenizeCard = function() {
+        btClient.request({
           endpoint: 'payment_methods/credit_cards',
           method: 'post',
           data: {
@@ -31,16 +61,34 @@ angular.module('booking', [])
           // Send response.creditCards[0].nonce to your server
           console.log(response.creditCards[0]);
         });
-      });
+      };
 
-      booking.user = {};
-      booking.confirmation = '';
-      booking.phoneConfirmed = 'progress';
+      var testFoo = function() {
+        console.log("calling testfoo");
+        booking.selectedIndex = 1;
+      };
 
-      // TODO: Remove hardcorded values for testing receipt module
-      booking.startDate = new Date();
-      booking.endDate = new Date();
-      booking.endDate.setDate(booking.startDate.getDate() + 1);
+      booking.openPaypal = function() {
+        console.log("open paypal");
+        console.log(booking);
+        braintree.paypal.create({
+            client: btClient
+          },
+          function (ppErr, ppInstance) {
+            ppInstance.tokenize({ flow: 'vault' },
+              function (tokenizeErr, payload) {
+                console.log('Paypal Success');
+                console.log(booking.selectedIndex);
+                $scope.$apply(booking.nextTab());
+                console.log(payload.nonce);
+              }
+            );
+          }
+
+        )
+      };
+
+      
 
       booking.prices = [
         {
@@ -97,17 +145,6 @@ angular.module('booking', [])
         booking.user.lastName = $localStorage.lastName;
         booking.user.email = $localStorage.email;
       }
-
-      // on lifecycle initialization
-      booking.$onInit = function () {
-        booking.authentication = authentication;
-        booking.showConfirmButton = true;
-        booking.selectedIndex = 0;
-        booking.emailPattern = /(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i;
-        booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
-      };
-
-
 
       // phone confirmation
       //TODO: move to shared logic

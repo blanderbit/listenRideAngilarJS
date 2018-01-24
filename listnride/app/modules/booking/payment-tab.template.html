@@ -106,7 +106,7 @@
             </form>
           <md-divider></md-divider>
             <md-radio-button value="2" class="md-primary">Paypal</md-radio-button>
-            <md-button class="md-raised md-primary" ng-hide="receipt.paymentMethod != 2">Pay with Paypal</md-button>
+            <md-button class="md-raised md-primary" ng-hide="receipt.paymentMethod != 2" ng-click="payment.parent.openPaypal()">Pay with Paypal</md-button>
           <md-divider></md-divider>
         </md-radio-group>
       </div>

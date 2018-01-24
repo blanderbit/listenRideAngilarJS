@@ -23,9 +23,14 @@
         >
           <div class="md-dialog-content" layout="column">
             <div layout="column">
-              <md-button ng-click="signup.parent.authentication.connectFb()" class="md-primary md-lined lnr-btn-fb" style="margin: 0; padding: 0;">
-                Register with Facebook
-              </md-button>
+              <div layout="row">
+                <md-button ng-click="signup.parent.authentication.connectFb()" class="md-primary md-lined lnr-btn-fb" style="margin: 0; padding: 0;" flex="50">
+                  Register with Facebook
+                </md-button>
+                <div layout flex="50" layout-align="center center">
+                  <a class="lnr-link" ng-click="showLogin = true">Already a member?</a>
+                </div>
+              </div>
               <div class="lnr-middle-divider">
                 {{ 'forms.or' | translate }}
               </div>
@@ -101,8 +106,14 @@
                 {{ 'shared.tac' | translate }}
               </a>
             </p>
-            <div class="sign-up-links" flex layout="row" layout-align="space-between center">
-              <a class="lnr-link" ng-click="showLogin = true">Already a member?</a>
+
+            <div class="md-dialog-buttons" layout="column">
+              <md-button
+                type="submit"
+                class="md-primary md-raised"
+              >
+                Register
+              </md-button>
             </div>
           </div>
         </form>
@@ -111,9 +122,14 @@
 
         <form ng-cloak name="loginForm" novalidate ng-hide="!showLogin" ng-submit="signup.parent.authentication.loginGlobal(loginForm)">
           <div class="md-dialog-content" layout="column">
-            <md-button class="md-primary md-lined lnr-btn-fb" ng-click="signup.parent.authentication.connectFb()">
-              Login with facebook
-            </md-button>
+            <div layout="row">
+              <md-button ng-click="signup.parent.authentication.connectFb()" class="md-primary md-lined lnr-btn-fb" style="margin: 0; padding: 0;" flex="50">
+                Register with Facebook
+              </md-button>
+              <div layout flex="50" layout-align="center center">
+                <a class="lnr-link" ng-click="showLogin = false">No member yet?</a>
+              </div>
+            </div>
             <div class="lnr-middle-divider">
               {{ 'forms.or' | translate }}
             </div>
