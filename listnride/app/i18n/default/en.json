@@ -404,6 +404,8 @@
     "ratings": "Ratings",
     "meta-title": "{{name}}'s profile",
     "meta-description": "Rent bikes on listnride from {{name}}.",
+    "company-meta-title": "Company {{company}}",
+    "company-meta-description": "Rent bikes on listnride from {{company}}.",
     "availability": "Availability",
     "not-available": "Not available",
     "verified": "verified"
@@ -459,7 +461,7 @@
   },
   "rideChat": {
     "1": "You would like to rent the <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> by {{lister.first_name}} {{lister.last_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
-    "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact Details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.phone_number}},<br>Address: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
+    "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.phone_number}},<br>Address: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} has confirmed the return of the ride and gave you a review. Finally, please also rate the ride. This helps our community a lot and completes the rental.",
     "6": "Thanks for rating, the rental was successfully completed.",
     "8": "Unfortunately, the lister could't accept your request. Simply request some other great bikes.",
@@ -516,7 +518,7 @@
     "featured-tiles-subheader": "We partner up with innovative brands, write about interesting developments and take part in special events.",
     "featured-cities-header": "Pedaling through the urban jungle",
     "featured-cities-subheader": "listnride’s bike rental service is becoming available in more and more cities around the world. Check out some insiders’ tips here:",
-    "list-a-bike-header": "Got a nice bike and want people to see it?",
+    "list-a-bike-header": "Got a nice bike and want people to use it?",
     "list-a-bike-subheader": "List your bike for rent, meet fun new people and earn some extra cash.",
     "meta-title": "listnride - The bike sharing community",
     "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
@@ -538,8 +540,8 @@
     "own-bike": "You can't request your own bike",
     "log-in-to-request-title": "Log in or Sign up",
     "log-in-to-request-description": "Log in to request the bike. If you don't have an account yet, feel free to sign up.",
-    "select-timespan": "Choose rental timespan first",
-    "select-timespan-description": "Before you can request, please set the timespan of your rental. Simply click on the days and select pickup and dropoff times in the above calendar.",
+    "select-timespan": "Choose rental time span first",
+    "select-timespan-description": "Before you can request, please set the time span of your rental. Simply click on the days and select pickup and dropoff times in the above calendar.",
     "info-subtotal": "This is the regular daily price<br>times the amount of days you want<br>to rent the bike.",
     "info-discount": "Average daily discount you<br>get per day by renting out<br>for a longer period of time.",
     "info-service-fee": "The service fee is<br>used for providing<br>listnride. It includes VAT.",
@@ -576,7 +578,7 @@
       "bicycle-number": "Bicycle No.",
       "frame-number": "Frame number",
       "custom-fields": "Additional fields",
-      "details": "Details",
+      "notes": "Notes",
       "frame_size": "Frame size",
       "bicycle_number": "Bicycle number",
       "frame_number": "Frame number"

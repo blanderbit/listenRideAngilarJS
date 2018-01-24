@@ -53,7 +53,8 @@
     "cancel": "Cancelar",
     "send": "Enviar ",
     "search": "Buscar",
-    "search-all": "Buscar todas las bicicletas",
+    "search-all": "Busca todas las bicis",
+    "search-all-in": "Busca todas las bicis en",
     "search-bikes": "Busca bicicletas",
     "from-place": "de",
     "contact": "Contacto y soporte",
@@ -403,6 +404,8 @@
     "ratings": "Puntuaciones",
     "meta-title": "Perfil de {{name}}",
     "meta-description": "Alquilar bicis de {{name}} en listnride.",
+    "company-meta-title": "Company {{company}}",
+    "company-meta-description": "Alquilar bicis de {{company}} en listnride.",
     "availability": "Disponibilidad",
     "not-available": "No disponible",
     "verified": "verificado"
@@ -515,7 +518,7 @@
     "featured-tiles-subheader": "Nos asociamos con marcas innovadoras, escribimos sobre novedades interesantes y participamos en eventos especiales.",
     "featured-cities-header": "Pedaleando por la jungla urbana",
     "featured-cities-subheader": "El servicio de alquiler de bicis de listnride está disponible cada vez en más ciudades de todo el mundo. Echa un vistazo a algunos consejos de los expertos aquí:",
-    "list-a-bike-header": "¿Tienes una buena bici y quieres que la gente la vea?",
+    "list-a-bike-header": "¿Está harta tu bici de pasarse el día tirado en un rincón?",
     "list-a-bike-subheader": "Registra tu bici para alquilarla, conoce gente nueva y gana dinero extra.",
     "meta-title": "listnride - La comunidad para compartir bicis",
     "meta-description": "Alquila la bici perfecta en la comunidad de listnride. Encuentra la que se adapte a tu estilo y necesidades."
@@ -575,7 +578,7 @@
       "bicycle-number": "Bicicleta n° ",
       "frame-number": "Número de cuadro",
       "custom-fields": "Campos adicionales",
-      "details": "Datos",
+      "notes": "Notes",
       "frame_size": "Tamaño del cuadro",
       "bicycle_number": "Número de bicicleta"
     },
