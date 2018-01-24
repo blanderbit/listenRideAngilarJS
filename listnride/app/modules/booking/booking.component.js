@@ -10,6 +10,29 @@ angular.module('booking', [])
       function BookingController($localStorage, $rootScope, $mdToast, authentication, api) {
       var booking = this;
 
+      // Braintree Setup Code
+      braintree.client.create({
+        authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b'
+      }, function (err, client) {
+        client.request({
+          endpoint: 'payment_methods/credit_cards',
+          method: 'post',
+          data: {
+            creditCard: {
+              number: '4111111111111111',
+              expirationDate: '10/20',
+              cvv: '123',
+              billingAddress: {
+                postalCode: '12345'
+              }
+            }
+          }
+        }, function (err, response) {
+          // Send response.creditCards[0].nonce to your server
+          console.log(response.creditCards[0]);
+        });
+      });
+
       booking.user = {};
       booking.confirmation = '';
       booking.phoneConfirmed = 'progress';
