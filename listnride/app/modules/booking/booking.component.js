@@ -58,7 +58,6 @@ angular.module('booking', [])
           }
         }, function (err, response) {
           // Send response.creditCards[0].nonce to your server
-          console.log(response.creditCards[0]);
         });
       };
 
@@ -77,7 +76,15 @@ angular.module('booking', [])
         )
       };
 
-      
+      booking.reloadUser = function() {
+        api.get('/users/' + $localStorage.userId).then(
+          function (success) {
+            booking.user = success.data;
+          },
+          function (error) {
+          }
+        );
+      };
 
       booking.prices = [
         {
@@ -129,9 +136,7 @@ angular.module('booking', [])
 
       // set User data if registered
       if ($localStorage.userId !== 'undefined') {
-        booking.user.firstName = $localStorage.firstName;
-        booking.user.lastName = $localStorage.lastName;
-        booking.user.email = $localStorage.email;
+        booking.reloadUser();
       }
 
       // phone confirmation
@@ -183,6 +188,22 @@ angular.module('booking', [])
       booking.previousTab = function () {
         booking.selectedIndex = booking.selectedIndex - 1;
       };
+
+      // go to next tab on user create success
+      $rootScope.$on('user_created', function () {
+        booking.user.firstName = $localStorage.firstName;
+        booking.user.lastName = $localStorage.lastName;
+        booking.selectedIndex = booking.selectedIndex + 1;
+        booking.reloadUser();
+      });
+
+      // go to next tab on user login success
+      $rootScope.$on('user_login', function () {
+        booking.user.firstName = $localStorage.firstName;
+        booking.user.lastName = $localStorage.lastName;
+        booking.selectedIndex = booking.selectedIndex + 1;
+        booking.reloadUser();
+      });
 
       booking.fillAddress = function(place) {
         var components = place.address_components;
