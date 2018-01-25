@@ -2,11 +2,16 @@ angular.module('list').directive('focus', function() {
   return {
     restrict: "A",
     link: function($scope, element) {
-      element.on("input", function(e) {
+      element.on("keydown", function(e) {
         var input = element.find('input');
-        if(input.length == input.attr("maxlength")) {
+        if(input[0].value.length == input.attr("maxlength")) {
           var $nextElement = element.next();
-          if($nextElement.length) {
+          var key = e.keyCode || e.charCode;
+          if (key === 8 || key === 46) {
+            return
+          }
+
+          if ($nextElement.length) {
             $nextElement.find('input').focus();
           }
         }
