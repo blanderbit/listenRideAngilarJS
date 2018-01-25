@@ -23,9 +23,10 @@
       
       </md-tabs>
     </div>
-    <div flex="30" flex-sm="20" layout-padding layout="column">
+
+    <div flex="30" flex-sm="20" layout-padding layout="column" ng-if="booking.selectedIndex > 0">
       <div class="spacer-xs"></div>
-      <div class="animate-if highlight-tile" style="margin: 64px 16px 0 0" layout="column" ng-if="booking.selectedIndex > 0">
+      <div class="animate-if highlight-tile" style="margin: 64px 16px 0 0" layout="column">
         <receipt start-date="booking.startDate" end-date="booking.endDate" prices="booking.prices" invalid-days="0"></receipt>
         <md-button
           class="md-raised md-primary lnr-margin-lrg"
@@ -35,6 +36,16 @@
         >
           {{ 'shared.next' | translate }}
         </md-button>
+      </div>
+      <div layout="row" layout-align="end none">
+        <img
+          class="md-card-image lnr-request__img-methods"
+          ng-src="app/assets/ui_icons/lnr_ico_lock.svg"
+          alt="Secure"
+        >
+        <div style="margin: 0 16px">
+          Secure Shopping
+        </div>
       </div>
     </div>
   </div>
