@@ -27,7 +27,14 @@
       <div class="spacer-xs"></div>
       <div class="animate-if highlight-tile" style="margin: 64px 16px 0 0" layout="column" ng-if="booking.selectedIndex > 0">
         <receipt start-date="booking.startDate" end-date="booking.endDate" prices="booking.prices" invalid-days="0"></receipt>
-        <md-button class="md-raised md-primary lnr-margin-lrg" ng-disabled="booking.nextDisabled" ng-click="booking.nextTab()" flex="90">{{ 'shared.next' | translate }}</md-button>
+        <md-button
+          class="md-raised md-primary lnr-margin-lrg"
+          ng-disabled="booking.nextDisabled"
+          ng-click="booking.nextTab()"
+          flex="90"
+        >
+          {{ 'shared.next' | translate }}
+        </md-button>
       </div>
     </div>
   </div>

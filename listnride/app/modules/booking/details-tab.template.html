@@ -101,6 +101,7 @@
           <br>
           <h2 class="md-subhead">Verification</h2>
           <p>We'll send you one time sms to your phone.</p>
+
           <!-- Phone Number and Send Button -->
           <div class="lnr-input-containers"
                layout="row"
@@ -112,11 +113,14 @@
                 ng-model="details.parent.phone_number"
                 ng-pattern="details.parent.phonePattern"
                 name="phone_number"
+                ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/"
+                ng-required="true"
                 preferred-countries="de, at, nl, fr, lv, es, it, ch, gb"
                 required
               >
               <div ng-messages="detailsForm.phone_number.$error" role="alert">
                 <div ng-message="pattern">{{ 'verification.5.enter-valid-phone-nr' | translate }}</div>
+                <div ng-message="required">{{ 'verification.5.enter-valid-phone-nr' | translate }}</div>
               </div>
             </md-input-container>
             <md-input-container flex>

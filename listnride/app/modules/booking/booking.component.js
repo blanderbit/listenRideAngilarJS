@@ -148,8 +148,9 @@ angular.module('booking', [])
 
       // phone confirmation
       //TODO: move to shared logic
-      booking.sendSms = function (number) {
-        var data = {"phone_number": number.$modelValue};
+      booking.sendSms = function (numberInput) {
+        if (!_.isEmpty(numberInput.$error)) { return }
+        var data = {"phone_number": numberInput.$modelValue};
         booking.toggleConfirmButton();
         api.post('/users/' + $localStorage.userId + '/update_phone', data).then(
           function (success) {
