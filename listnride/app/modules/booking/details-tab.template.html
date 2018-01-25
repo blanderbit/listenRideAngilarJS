@@ -100,7 +100,8 @@
           <md-divider></md-divider>
           <br>
           <h2 class="md-subhead">Verification</h2>
-          <p>We'll send you one time sms to your phone.</p>
+          <p ng-show="details.parent.showConfirmButton">We'll send you one time sms to your phone.</p>
+          <p ng-show="!details.parent.showConfirmButton">Please check your phone.</p>
 
           <!-- Phone Number and Send Button -->
           <div class="lnr-input-containers"
