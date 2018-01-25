@@ -10,7 +10,7 @@
       >
 
         <!-- sign-in data tab -->
-        <signup-tab></signup-tab>
+        <signup-tab ng-if="!booking.authentication.loggedIn()"></signup-tab>
 
         <!-- details data tab -->
         <details-tab></details-tab>
@@ -39,7 +39,7 @@
     </div>
   </div>
 
-  <div class="content" layout-padding>
+  <div class="content" layout-padding ng-if="booking.selectedIndex < 1">
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <p class="md-subhead">Pay secure with</p>
       <div layout="row">
