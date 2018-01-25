@@ -37,7 +37,6 @@ angular.module('booking', [])
         authorization: btAuthorization
       }, function (err, client) {
         if (err) {
-          console.log('An error occured initializing Braintree');
           return;
         }
         btClient = client;
@@ -63,24 +62,14 @@ angular.module('booking', [])
         });
       };
 
-      var testFoo = function() {
-        console.log("calling testfoo");
-        booking.selectedIndex = 1;
-      };
-
       booking.openPaypal = function() {
-        console.log("open paypal");
-        console.log(booking);
         braintree.paypal.create({
             client: btClient
           },
           function (ppErr, ppInstance) {
             ppInstance.tokenize({ flow: 'vault' },
               function (tokenizeErr, payload) {
-                console.log('Paypal Success');
-                console.log(booking.selectedIndex);
                 $scope.$apply(booking.nextTab());
-                console.log(payload.nonce);
               }
             );
           }
@@ -137,7 +126,6 @@ angular.module('booking', [])
           price: "10.0"
         }
       ];
-
 
       // set User data if registered
       if ($localStorage.userId !== 'undefined') {
@@ -196,32 +184,31 @@ angular.module('booking', [])
         booking.selectedIndex = booking.selectedIndex - 1;
       };
 
-        booking.fillAddress = function(place) {
-          //TODO: complete address
-          var components = place.address_components;
-          if (components) {
-            var desiredComponents = {
-              "street_number": "",
-              "route": "",
-              "locality": "",
-              "country": "",
-              "postal_code": ""
-            };
+      booking.fillAddress = function(place) {
+        var components = place.address_components;
+        if (components) {
+          var desiredComponents = {
+            "street_number": "",
+            "route": "",
+            "locality": "",
+            "country": "",
+            "postal_code": ""
+          };
 
-            for (var i = 0; i < components.length; i++) {
-              var type = components[i].types[0];
-              if (type in desiredComponents) {
-                desiredComponents[type] = components[i].long_name;
-              }
+          for (var i = 0; i < components.length; i++) {
+            var type = components[i].types[0];
+            if (type in desiredComponents) {
+              desiredComponents[type] = components[i].long_name;
             }
-
-            booking.user.street = desiredComponents.route + " " + desiredComponents.street_number;
-            booking.user.zip = desiredComponents.postal_code;
-            booking.user.city = desiredComponents.locality;
-            booking.user.country = desiredComponents.country;
           }
+
+          booking.user.street = desiredComponents.route + " " + desiredComponents.street_number;
+          booking.user.zip = desiredComponents.postal_code;
+          booking.user.city = desiredComponents.locality;
+          booking.user.country = desiredComponents.country;
         }
-      }]
+      }
+    }]
   })
   // signup tab ui component
   .component('signupTab', {
