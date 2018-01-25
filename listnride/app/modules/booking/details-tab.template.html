@@ -42,21 +42,19 @@
             </md-input-container>
           </div>
           <div class="lnr-input-containers" layout="row">
-            <md-input-container flex>
+            <div flex>
               <autocomplete
-                md-no-float
-                autocomplete-id="details.parent.user"
+                autocomplete-id="details"
                 layout="column"
-                location="details.parent.user.street_number"
-                required
                 required="true"
-                class="md-block"
-                label-id="Street & Number"
+                name="street"
+                location="details.parent.user.street"
+                label-id="{{ 'list.location.street-number' | translate }}"
                 place-changed="details.parent.fillAddress(place)"
-                style="margin-bottom: 0"
+                error="detailsForm.street.$error"
               >
               </autocomplete>
-            </md-input-container>
+            </div>
 
             <md-input-container flex>
               <label>City</label>
@@ -87,12 +85,12 @@
             <md-input-container flex>
               <label>Country</label>
               <input
+                required
                 name="country"
                 ng-model="details.parent.user.country"
-                required
               >
               <div ng-messages="detailsForm.country.$error" role="alert">
-                <div ng-message="required">Please provide country</div>
+                <div ng-message="required">{{ 'shared.required' | translate }}</div>
               </div>
             </md-input-container>
           </div>
