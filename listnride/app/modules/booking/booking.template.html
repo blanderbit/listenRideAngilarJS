@@ -13,7 +13,7 @@
         <signup-tab ng-if="!booking.authentication.loggedIn()"></signup-tab>
 
         <!-- details data tab -->
-        <details-tab></details-tab>
+        <details-tab ng-if="!booking.user.has_address"></details-tab>
         
         <!-- payment tab -->
         <payment-tab></payment-tab>
