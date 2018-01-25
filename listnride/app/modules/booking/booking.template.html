@@ -24,7 +24,7 @@
       </md-tabs>
     </div>
 
-    <div flex="30" flex-sm="20" layout-padding layout="column" ng-if="booking.selectedIndex > 0">
+    <div flex="30" flex-sm="20" layout-padding layout="column" ng-if="booking.authentication.loggedIn()">
       <div class="spacer-xs"></div>
       <div class="animate-if highlight-tile" style="margin: 64px 16px 0 0" layout="column">
         <receipt start-date="booking.startDate" end-date="booking.endDate" prices="booking.prices" invalid-days="0"></receipt>
@@ -50,7 +50,7 @@
     </div>
   </div>
 
-  <div class="content" layout-padding ng-if="booking.selectedIndex < 1">
+  <div class="content" layout-padding ng-if="!booking.authentication.loggedIn()">
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <p class="md-subhead">Pay secure with</p>
       <div layout="row">
