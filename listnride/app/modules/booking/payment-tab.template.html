@@ -15,12 +15,26 @@
         <div class="spacer-xs"></div>
         <md-radio-group ng-model="receipt.paymentMethod">
           <md-divider></md-divider>
-            <md-radio-button value="1" class="md-primary">Credit Card</md-radio-button>
+            <div layout="row" layout-align="space-between none">
+              <md-radio-button value="1" class="md-primary"> Credit Card</md-radio-button>
+              <div>
+                <img
+                  class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
+                  ng-src="app/assets/ui_icons/lnr_logo_mastercard.svg"
+                  alt="Mastercard"
+                >
+                <img
+                  class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
+                  ng-src="app/assets/ui_icons/lnr_logo_visa.svg"
+                  alt="Visa"
+                >
+              </div>
+            </div>
             <form name="paymentForm" novalidate ng-hide="receipt.paymentMethod != 1">
               <!-- Cardholder name and Cardnumber -->
               <div class="lnr-input-containers" layout="row">
                 <md-input-container flex>
-                  <label>Cardholder Name</label>
+                  <label>Name on Card</label>
                   <input name="cardholderName"
                          ng-model-options='{ debounce: 400 }'
                          type="text"
@@ -105,7 +119,14 @@
               </div>
             </form>
           <md-divider></md-divider>
-            <md-radio-button value="2" class="md-primary">Paypal</md-radio-button>
+            <div layout="row" layout-align="space-between none">
+              <md-radio-button value="2" class="md-primary">Paypal</md-radio-button>
+              <img
+                class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
+                ng-src="app/assets/ui_icons/lnr_logo_paypal.svg"
+                alt="PayPal"
+              >
+            </div>
             <md-button class="md-raised md-primary" ng-hide="receipt.paymentMethod != 2" ng-click="payment.parent.openPaypal()">Pay with Paypal</md-button>
           <md-divider></md-divider>
         </md-radio-group>
