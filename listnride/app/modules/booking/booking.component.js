@@ -48,15 +48,35 @@ angular.module('booking', [])
           method: 'post',
           data: {
             creditCard: {
-              number: '4111111111111111',
-              expirationDate: '10/20',
-              cvv: '123',
-              billingAddress: {
-                postalCode: '12345'
-              }
+              number: booking.creditCardNumber,
+              expirationDate: booking.month_expiry + '/' + booking.year,
+              cvv: booking.securityNumber
             }
           }
         }, function (err, response) {
+          if (!err) {
+            var data = {
+              // "payment_method": {
+              //   "payment_method_nonce": response.creditCards[0].nonce
+              // }
+              "payment_method_nonce": response.creditCards[0].nonce
+            };
+            console.log(data);
+            api.post('/users/' + authentication.userId() + '/payment_methods',
+              {
+                "payment_method_nonce": response.creditCards[0].nonce,
+                "phone_nr": '',
+                "device_data": {}
+              }).then(
+              function (success) {
+                booking.nextTab();
+                console.log(success);
+              },
+              function (error) {
+                console.log(error);
+              }
+            );
+          }
           // Send response.creditCards[0].nonce to your server
         });
       };
@@ -179,8 +199,19 @@ angular.module('booking', [])
         booking.showConfirmButton = !booking.showConfirmButton;
       };
 
+      // controls behavior of "next" button
+      booking.goNext = function () {
+        switch(booking.selectedIndex) {
+          case 0:
+            booking.tokenizeCard(); break;
+          default:
+            booking.nextTab(); break
+        }
+      };
+
       // go to next tab
       booking.nextTab = function () {
+        console.log("gets called");
         booking.selectedIndex = booking.selectedIndex + 1;
       };
 
