@@ -15,7 +15,7 @@ angular.module('booking', [])
       booking.user = {};
       booking.confirmation = '';
       booking.phoneConfirmed = 'progress';
-      booking.nextDisabled = false;
+      booking.selectedIndex = 0;
       booking.steps = {
         'signin': false,
         'details': false,
@@ -32,9 +32,19 @@ angular.module('booking', [])
       booking.$onInit = function () {
         booking.authentication = authentication;
         booking.showConfirmButton = true;
-        booking.selectedIndex = 0;
         booking.emailPattern = /(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i;
         booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+      };
+
+      booking.nextDisabled = function() {
+        //TODO: find way to get Form here
+        switch (booking.selectedIndex) {
+          case 0: return false;
+          case 1: return booking.phoneConfirmed !== 'success';
+          case 2: return true;
+          case 3: return true;
+          // case 3: return !details.detailsForm.$valid;
+        }
       };
 
       // Braintree Client Setup
@@ -77,7 +87,6 @@ angular.module('booking', [])
               }
             );
           }
-
         )
       };
 
@@ -139,10 +148,11 @@ angular.module('booking', [])
         }
       ];
 
-      // set User data if registered
-      if ($localStorage.userId !== 'undefined') {
+      booking.userAuth = function() {
+        booking.steps.signin = true;
+        booking.selectedIndex = booking.selectedIndex + 1;
         booking.reloadUser();
-      }
+      };
 
       // phone confirmation
       //TODO: move to shared logic
@@ -204,11 +214,12 @@ angular.module('booking', [])
         booking.userAuth()
       });
 
-      booking.userAuth = function() {
-        booking.steps.signin = true;
-        booking.selectedIndex = booking.selectedIndex + 1;
-        booking.reloadUser();
-      };
+      angular.element(document).ready(function () {
+        // set User data if registered
+        if ($localStorage.userId !== 'undefined') {
+          booking.userAuth();
+        }
+      });
 
       booking.fillAddress = function(place) {
         var components = place.address_components;

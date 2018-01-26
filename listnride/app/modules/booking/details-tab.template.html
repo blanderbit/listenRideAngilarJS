@@ -146,24 +146,50 @@
               <div layout="row" flex="25" layout-align="start start">
                 <div class="lnr-sms-input">
                   <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
-                    <input ng-model="details.parent.confirmation[0]" maxlength="1"  ng-change="details.parent.confirmPhone()">
+                    <input
+                      ng-model="details.parent.confirmation[0]"
+                      maxlength="1"
+                      required
+                      ng-change="details.parent.confirmPhone()"
+                    >
                   </md-input-container>
                   <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
-                    <input ng-model="details.parent.confirmation[1]" maxlength="1"  ng-change="details.parent.confirmPhone()">
+                    <input
+                      ng-model="details.parent.confirmation[1]"
+                      maxlength="1"
+                      required
+                      ng-change="details.parent.confirmPhone()"
+                    >
                   </md-input-container>
                   <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
-                    <input ng-model="details.parent.confirmation[2]" maxlength="1"  ng-change="details.parent.confirmPhone()">
+                    <input
+                      ng-model="details.parent.confirmation[2]"
+                      maxlength="1"
+                      required
+                      ng-change="details.parent.confirmPhone()"
+                    >
                   </md-input-container>
                   <md-input-container flex-gt-xs="20" class="lnr-sms-digit">
-                    <input ng-model="details.parent.confirmation[3]" maxlength="1" ng-change="details.parent.confirmPhone()">
+                    <input
+                      ng-model="details.parent.confirmation[3]"
+                      maxlength="1"
+                      required
+                      ng-change="details.parent.confirmPhone()"
+                    >
                   </md-input-container>
                 </div>
               </div>
               <span flex></span>
               <div layout="row" flex="50" layout-align="start start">
-                <div ng-show="details.parent.phoneConfirmed === 'progress'" class="text-default">Enter the pin that we just sent to your phone</div>
-                <div ng-show="details.parent.phoneConfirmed === 'success'" class="text-default">Success message</div>
-                <div ng-show="details.parent.phoneConfirmed === 'error'" class="text-error">The code you entered is not correct. Try again or resend the SMS</div>
+                <div ng-show="details.parent.phoneConfirmed === 'progress'" class="text-default">
+                  Enter the pin that we just sent to your phone
+                </div>
+                <div ng-show="details.parent.phoneConfirmed === 'success'" class="text-default">
+                  Success message
+                </div>
+                <div ng-show="details.parent.phoneConfirmed === 'error'" class="text-error">
+                  The code you entered is not correct. Try again or resend the SMS
+                </div>
               </div>
             </div>
 
@@ -171,6 +197,10 @@
               <a class="lnr-link" ng-click="details.parent.toggleConfirmButton()">Resend</a>
             </div>
           </div>
+          <!--FIXME: Delete after testing done-->
+          <!--================================-->
+          <!--<h1>Form valid:{{detailsForm.$valid}}</h1>-->
+          <!--================================-->
         </form>
       </div>
     </div>
