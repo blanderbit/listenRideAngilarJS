@@ -127,7 +127,7 @@ angular.module('listnride', [
     // Retrieves locale from subdomain if valid, otherwise sets the default.
     var retrieveLocale = function () {
       // default and available languages
-      var defaultLanguage = "de";
+      var defaultLanguage = "en";
       var availableLanguages = ["de", "en", "nl", "it", "es"];
       // host and domains
       var host = window.location.host;
