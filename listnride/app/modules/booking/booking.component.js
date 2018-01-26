@@ -6,8 +6,8 @@ angular.module('booking', [])
     transclude: true,
     templateUrl: 'app/modules/booking/booking.template.html',
     controllerAs: 'booking',
-    controller: ['$localStorage', '$rootScope', '$scope', '$mdToast', 'authentication', 'api',
-      function BookingController($localStorage, $rootScope, $scope, $mdToast, authentication, api) {
+    controller: ['$localStorage', '$rootScope', '$scope', '$state', '$mdToast', 'authentication', 'api',
+      function BookingController($localStorage, $rootScope, $scope, $state, $mdToast, authentication, api) {
       var booking = this;
       var btAuthorization = 'sandbox_g42y39zw_348pk9cgf3bgyw2b';
       var btClient;
@@ -21,7 +21,19 @@ angular.module('booking', [])
       booking.startDate = new Date();
       booking.endDate = new Date();
       booking.endDate.setDate(booking.startDate.getDate() + 1);
+      booking.bikeId = 1;
       // END TODO
+
+      // Fetch Bike Information
+      api.get('/rides/' + booking.bikeId).then(
+        function (success) {
+          booking.bike = success.data;
+        },
+        function (error) {
+          console.log('Error retrieving bike');
+          $state.go('home');
+        }
+      );
 
       // on lifecycle initialization
       booking.$onInit = function () {
