@@ -6,8 +6,8 @@ angular.module('booking', [])
     transclude: true,
     templateUrl: 'app/modules/booking/booking.template.html',
     controllerAs: 'booking',
-    controller: ['$localStorage', '$rootScope', '$scope', '$mdToast', 'authentication', 'api',
-      function BookingController($localStorage, $rootScope, $scope, $mdToast, authentication, api) {
+    controller: ['$localStorage', '$rootScope', '$scope', '$state', '$mdToast', 'authentication', 'api',
+      function BookingController($localStorage, $rootScope, $scope, $state, $mdToast, authentication, api) {
       var booking = this;
       var btAuthorization = 'sandbox_g42y39zw_348pk9cgf3bgyw2b';
       var btClient;
@@ -26,7 +26,18 @@ angular.module('booking', [])
       booking.startDate = new Date();
       booking.endDate = new Date();
       booking.endDate.setDate(booking.startDate.getDate() + 1);
+      booking.bikeId = 1;
       // END TODO
+
+      // Fetch Bike Information
+      api.get('/rides/' + booking.bikeId).then(
+        function (success) {
+          booking.bike = success.data;
+        },
+        function (error) {
+          $state.go('home');
+        }
+      );
 
       // on lifecycle initialization
       booking.$onInit = function () {
@@ -63,15 +74,32 @@ angular.module('booking', [])
           method: 'post',
           data: {
             creditCard: {
-              number: '4111111111111111',
-              expirationDate: '10/20',
-              cvv: '123',
-              billingAddress: {
-                postalCode: '12345'
-              }
+              number: booking.creditCardNumber,
+              expirationDate: booking.month_expiry + '/' + booking.year,
+              cvv: booking.securityNumber
             }
           }
         }, function (err, response) {
+          if (!err) {
+            var data = {
+              // "payment_method": {
+              //   "payment_method_nonce": response.creditCards[0].nonce
+              // }
+              "payment_method_nonce": response.creditCards[0].nonce
+            };
+            api.post('/users/' + authentication.userId() + '/payment_methods',
+              {
+                "payment_method_nonce": response.creditCards[0].nonce,
+                "phone_nr": '',
+                "device_data": {}
+              }).then(
+              function (success) {
+                booking.nextTab();
+              },
+              function (error) {
+              }
+            );
+          }
           // Send response.creditCards[0].nonce to your server
         });
       };
@@ -192,6 +220,16 @@ angular.module('booking', [])
       // toggle confirm phone button
       booking.toggleConfirmButton = function () {
         booking.showConfirmButton = !booking.showConfirmButton;
+      };
+
+      // controls behavior of "next" button
+      booking.goNext = function () {
+        switch(booking.selectedIndex) {
+          case 0:
+            booking.tokenizeCard(); break;
+          default:
+            booking.nextTab(); break
+        }
       };
 
       // go to next tab

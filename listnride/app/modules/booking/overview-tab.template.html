@@ -3,9 +3,27 @@
   label="{{ 'booking.overview.tab' | translate }}"
   layout="row">
   <div class="spacer-xs"></div>
-  <md-content style="max-height: 620px;" class="md-padding" layout="column">
-    <div class="tab-content" style="min-height: 450px;" layout="row" layout-align="space-between none" layout-padding>
-      <div class="lnr-list-form" flex-xs="100" flex-gt-xs="70" layout="column"></div>
+  <md-content style="max-height: 620px;" layout="column">
+    <div class="tab-content" style="min-height: 450px;" layout-align="space-between none" layout-padding>
+      <div class="lnr-list-form" layout="column">
+      	<p class="md-subhead">Your bike rental</p>
+      	<div layout="row">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div layout="row" layout-align="space-between none">
+          <div flex="33">
+            <p class="md-subhead">Invoice Address</p>
+          </div>
+          <div flex="33">
+            <p class="md-subhead">Payment</p>
+          </div>
+          <div flex="33">
+            <p class="md-subhead">Redeem Voucher</p>
+          </div>
+        </div>
+      </div>
     </div>
   </md-content>
 </md-tab>

@@ -13,7 +13,7 @@
         <p class="md-subhead">Select your Payment Method</p>
         <p class="md-body-1">Please select your favorite payment method. We only charge you after the lister accepted your request.</p>
         <div class="spacer-xs"></div>
-        <md-radio-group ng-model="receipt.paymentMethod">
+        <md-radio-group ng-model="payment.parent.paymentMethod">
           <md-divider></md-divider>
             <div layout="row" layout-align="space-between none">
               <md-radio-button value="1" class="md-primary"> Credit Card</md-radio-button>
@@ -30,7 +30,7 @@
                 >
               </div>
             </div>
-            <form name="paymentForm" novalidate ng-hide="receipt.paymentMethod != 1">
+            <form name="paymentForm" novalidate ng-hide="payment.parent.paymentMethod != 1">
               <!-- Cardholder name and Cardnumber -->
               <div class="lnr-input-containers" layout="row">
                 <md-input-container flex>
@@ -127,7 +127,7 @@
                 alt="PayPal"
               >
             </div>
-            <md-button class="md-raised md-primary" ng-hide="receipt.paymentMethod != 2" ng-click="payment.parent.openPaypal()">Pay with Paypal</md-button>
+            <md-button class="md-raised md-primary" ng-hide="payment.parent.paymentMethod != 2" ng-click="payment.parent.openPaypal()">Pay with Paypal</md-button>
           <md-divider></md-divider>
         </md-radio-group>
       </div>
