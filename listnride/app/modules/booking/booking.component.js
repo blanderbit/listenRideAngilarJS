@@ -16,6 +16,11 @@ angular.module('booking', [])
       booking.confirmation = '';
       booking.phoneConfirmed = 'progress';
       booking.nextDisabled = false;
+      booking.steps = {
+        'signin': false,
+        'details': false,
+        'payment': false
+      };
 
       // TODO: Remove hardcorded values for testing receipt module
       booking.startDate = new Date();
@@ -191,19 +196,19 @@ angular.module('booking', [])
 
       // go to next tab on user create success
       $rootScope.$on('user_created', function () {
-        booking.user.firstName = $localStorage.firstName;
-        booking.user.lastName = $localStorage.lastName;
-        booking.selectedIndex = booking.selectedIndex + 1;
-        booking.reloadUser();
+        booking.userAuth()
       });
 
       // go to next tab on user login success
       $rootScope.$on('user_login', function () {
-        booking.user.firstName = $localStorage.firstName;
-        booking.user.lastName = $localStorage.lastName;
+        booking.userAuth()
+      });
+
+      booking.userAuth = function() {
+        booking.steps.signin = true;
         booking.selectedIndex = booking.selectedIndex + 1;
         booking.reloadUser();
-      });
+      };
 
       booking.fillAddress = function(place) {
         var components = place.address_components;
