@@ -27,6 +27,7 @@ angular.module('booking', [])
       // Fetch Bike Information
       api.get('/rides/' + booking.bikeId).then(
         function (success) {
+          console.log(success.data);
           booking.bike = success.data;
         },
         function (error) {
