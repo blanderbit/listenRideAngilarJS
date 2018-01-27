@@ -15,7 +15,12 @@ angular.module('booking', [])
       booking.user = {};
       booking.confirmation = '';
       booking.phoneConfirmed = 'progress';
-      booking.nextDisabled = false;
+      booking.selectedIndex = 0;
+      booking.steps = {
+        'signin': false,
+        'details': false,
+        'payment': false
+      };
 
       // TODO: Remove hardcorded values for testing receipt module
       booking.startDate = new Date();
@@ -31,7 +36,6 @@ angular.module('booking', [])
           booking.bike = success.data;
         },
         function (error) {
-          console.log('Error retrieving bike');
           $state.go('home');
         }
       );
@@ -40,9 +44,19 @@ angular.module('booking', [])
       booking.$onInit = function () {
         booking.authentication = authentication;
         booking.showConfirmButton = true;
-        booking.selectedIndex = 0;
         booking.emailPattern = /(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i;
         booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+      };
+
+      booking.nextDisabled = function() {
+        //TODO: find way to get Form here
+        switch (booking.selectedIndex) {
+          case 0: return false;
+          case 1: return booking.phoneConfirmed !== 'success';
+          case 2: return true;
+          case 3: return true;
+          // case 3: return !details.detailsForm.$valid;
+        }
       };
 
       // Braintree Client Setup
@@ -74,7 +88,6 @@ angular.module('booking', [])
               // }
               "payment_method_nonce": response.creditCards[0].nonce
             };
-            console.log(data);
             api.post('/users/' + authentication.userId() + '/payment_methods',
               {
                 "payment_method_nonce": response.creditCards[0].nonce,
@@ -83,10 +96,8 @@ angular.module('booking', [])
               }).then(
               function (success) {
                 booking.nextTab();
-                console.log(success);
               },
               function (error) {
-                console.log(error);
               }
             );
           }
@@ -105,7 +116,6 @@ angular.module('booking', [])
               }
             );
           }
-
         )
       };
 
@@ -167,10 +177,11 @@ angular.module('booking', [])
         }
       ];
 
-      // set User data if registered
-      if ($localStorage.userId !== 'undefined') {
+      booking.userAuth = function() {
+        booking.steps.signin = true;
+        booking.selectedIndex = booking.selectedIndex + 1;
         booking.reloadUser();
-      }
+      };
 
       // phone confirmation
       //TODO: move to shared logic
@@ -224,7 +235,6 @@ angular.module('booking', [])
 
       // go to next tab
       booking.nextTab = function () {
-        console.log("gets called");
         booking.selectedIndex = booking.selectedIndex + 1;
       };
 
@@ -235,18 +245,19 @@ angular.module('booking', [])
 
       // go to next tab on user create success
       $rootScope.$on('user_created', function () {
-        booking.user.firstName = $localStorage.firstName;
-        booking.user.lastName = $localStorage.lastName;
-        booking.selectedIndex = booking.selectedIndex + 1;
-        booking.reloadUser();
+        booking.userAuth()
       });
 
       // go to next tab on user login success
       $rootScope.$on('user_login', function () {
-        booking.user.firstName = $localStorage.firstName;
-        booking.user.lastName = $localStorage.lastName;
-        booking.selectedIndex = booking.selectedIndex + 1;
-        booking.reloadUser();
+        booking.userAuth()
+      });
+
+      angular.element(document).ready(function () {
+        // set User data if registered
+        if ($localStorage.userId !== 'undefined') {
+          booking.userAuth();
+        }
       });
 
       booking.fillAddress = function(place) {

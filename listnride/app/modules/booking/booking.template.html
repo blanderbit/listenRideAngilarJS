@@ -8,9 +8,8 @@
         md-no-ink-bars
         md-selected="booking.selectedIndex"
       >
-
         <!-- sign-in data tab -->
-        <signup-tab ng-if="!booking.authentication.loggedIn()"></signup-tab>
+        <signup-tab ng-if="!booking.authentication.loggedIn() || booking.steps.signin"></signup-tab>
 
         <!-- details data tab -->
         <details-tab ng-if="!booking.user.has_address"></details-tab>
@@ -30,7 +29,7 @@
         <receipt start-date="booking.startDate" end-date="booking.endDate" prices="booking.prices" invalid-days="0"></receipt>
         <md-button
           class="md-raised md-primary lnr-margin-lrg"
-          ng-disabled="booking.nextDisabled"
+          ng-disabled="booking.nextDisabled()"
           ng-click="booking.goNext()"
           flex="90"
         >
