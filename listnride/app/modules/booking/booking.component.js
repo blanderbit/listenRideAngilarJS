@@ -6,8 +6,8 @@ angular.module('booking', [])
     transclude: true,
     templateUrl: 'app/modules/booking/booking.template.html',
     controllerAs: 'booking',
-    controller: ['$localStorage', '$rootScope', '$scope', '$state', '$mdToast', 'authentication', 'api',
-      function BookingController($localStorage, $rootScope, $scope, $state, $mdToast, authentication, api) {
+    controller: ['$localStorage', '$rootScope', '$scope', '$state', '$mdToast', '$timeout', 'authentication', 'api',
+      function BookingController($localStorage, $rootScope, $scope, $state, $mdToast, $timeout, authentication, api) {
       var booking = this;
       var btAuthorization = 'sandbox_g42y39zw_348pk9cgf3bgyw2b';
       var btClient;
@@ -21,6 +21,7 @@ angular.module('booking', [])
         'details': false,
         'payment': false
       };
+      booking.hidden = true;
 
       // TODO: Remove hardcorded values for testing receipt module
       booking.startDate = new Date();
@@ -47,6 +48,17 @@ angular.module('booking', [])
         booking.emailPattern = /(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i;
         booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
       };
+
+      booking.tabLabel = function(tabId) {
+        var tabLabel = "";
+        switch (tabId) {
+          case 0: tabLabel = $translate.instant("booking.sign-in.tab"); break;
+          case 1: tabLabel = $translate.instant("booking.details.tab"); break;
+          case 2: tabLabel = $translate.instant("booking.payment.tab"); break;
+          case 3: tabLabel = $translate.instant("booking.overview.tab"); break;
+          default: 
+        }
+      }
 
       booking.nextDisabled = function() {
         //TODO: find way to get Form here
@@ -123,6 +135,14 @@ angular.module('booking', [])
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             booking.user = success.data;
+            if (booking.user.has_phone_number && booking.user.has_address) {
+              booking.selectedIndex = 2;
+            } else {
+              booking.selectedIndex = 1;
+            }
+            $timeout(function () {
+              booking.hidden = false;
+            }, 500);
           },
           function (error) {
           }
@@ -177,12 +197,6 @@ angular.module('booking', [])
         }
       ];
 
-      booking.userAuth = function() {
-        booking.steps.signin = true;
-        booking.selectedIndex = booking.selectedIndex + 1;
-        booking.reloadUser();
-      };
-
       // phone confirmation
       //TODO: move to shared logic
       booking.sendSms = function (numberInput) {
@@ -226,7 +240,7 @@ angular.module('booking', [])
       // controls behavior of "next" button
       booking.goNext = function () {
         switch(booking.selectedIndex) {
-          case 0:
+          case 2:
             booking.tokenizeCard(); break;
           default:
             booking.nextTab(); break
@@ -243,6 +257,7 @@ angular.module('booking', [])
         booking.selectedIndex = booking.selectedIndex - 1;
       };
 
+      // TODO: This needs to be refactored, rootScopes are very bad practice
       // go to next tab on user create success
       $rootScope.$on('user_created', function () {
         booking.userAuth()
@@ -255,8 +270,11 @@ angular.module('booking', [])
 
       angular.element(document).ready(function () {
         // set User data if registered
-        if ($localStorage.userId !== 'undefined') {
-          booking.userAuth();
+        if (authentication.loggedIn()) {
+          console.log('user already logged in');
+          booking.reloadUser();
+        } else {
+          booking.hidden = false;
         }
       });
 

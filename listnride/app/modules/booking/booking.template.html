@@ -7,12 +7,13 @@
         md-no-ink
         md-no-ink-bars
         md-selected="booking.selectedIndex"
+        ng-hide="booking.hidden"
       >
         <!-- sign-in data tab -->
-        <signup-tab ng-if="!booking.authentication.loggedIn() || booking.steps.signin"></signup-tab>
+        <signup-tab></signup-tab>
 
         <!-- details data tab -->
-        <details-tab ng-if="!booking.user.has_address"></details-tab>
+        <details-tab></details-tab>
         
         <!-- payment tab -->
         <payment-tab></payment-tab>
