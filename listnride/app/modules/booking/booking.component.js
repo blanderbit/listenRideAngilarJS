@@ -6,8 +6,8 @@ angular.module('booking', [])
     transclude: true,
     templateUrl: 'app/modules/booking/booking.template.html',
     controllerAs: 'booking',
-    controller: ['$localStorage', '$rootScope', '$scope', '$state', '$mdToast', '$timeout', 'authentication', 'api',
-      function BookingController($localStorage, $rootScope, $scope, $state, $mdToast, $timeout, authentication, api) {
+    controller: ['$localStorage', '$rootScope', '$scope', '$state', '$mdToast', '$timeout', '$translate', 'authentication', 'api',
+      function BookingController($localStorage, $rootScope, $scope, $state, $mdToast, $timeout, $translate, authentication, api) {
       var booking = this;
       var btAuthorization = 'sandbox_g42y39zw_348pk9cgf3bgyw2b';
       var btClient;
@@ -49,15 +49,8 @@ angular.module('booking', [])
         booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
       };
 
-      booking.tabLabel = function(tabId) {
-        var tabLabel = "";
-        switch (tabId) {
-          case 0: tabLabel = $translate.instant("booking.sign-in.tab"); break;
-          case 1: tabLabel = $translate.instant("booking.details.tab"); break;
-          case 2: tabLabel = $translate.instant("booking.payment.tab"); break;
-          case 3: tabLabel = $translate.instant("booking.overview.tab"); break;
-          default: 
-        }
+      booking.tabCompleted = function(tabId) {
+        if (booking.selectedIndex > tabId) return "✔";
       }
 
       booking.nextDisabled = function() {
