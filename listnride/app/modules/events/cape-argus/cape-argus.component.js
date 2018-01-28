@@ -11,8 +11,12 @@ angular.module('capeArgus',[]).component('capeArgus', {
             capeArgus.email = "";
             capeArgus.submitted = false;
 
-            ngMeta.setTitle($translate.instant("events.cape-argus.meta-title"));
-            ngMeta.setTag("description", $translate.instant("events.cape-argus.meta-description"));
+            $translate(["events.cape-argus.meta-title", "events.cape-argus.meta-description"]).then(
+              function (translations) {
+                ngMeta.setTitle(translations["events.cape-argus.meta-title"]);
+                ngMeta.setTag("description", translations["events.cape-argus.meta-description"]);
+              }
+            );
 
             capeArgus.sizeOptions = [
                 {value: "", label: "-"},
