@@ -30,8 +30,9 @@ angular.module('capeArgus',[]).component('capeArgus', {
                 capeArgus.sizeOptions[0].label = translation;
             });
 
-            api.get('/rides?category=20&location=Capetown&priority=capeArgus&booked_at=2017-06-18').then(
+            api.get('/rides?category=20&location=Capetown&priority=capeArgus&booked_at=2018-03-11').then(
                 function(response) {
+                    console.log(response.data);
                     capeArgus.bikes = response.data;
                 },
                 function(error) {
