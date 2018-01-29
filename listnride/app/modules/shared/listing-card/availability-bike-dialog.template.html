@@ -1,0 +1,46 @@
+<md-dialog>
+
+  <div show-xs>
+    <div class="md-toolbar-tools" layout-align="center center">
+      <md-button class="md-icon-button">
+        <md-icon></md-icon>
+      </md-button>
+      <span flex></span>
+      <h2>{{ 'availability.modal-title' | translate }}</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="availabilityDialog.close()">
+        <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </div>
+
+  <md-dialog-content class="" layout="column">
+    <div class="md-dialog-content" layout="column">
+      <form ng-cloak name="availabilityForm" ng-submit="availabilityDialog.update(availabilityForm)" novalidate>
+        <div class="availability-list">
+          <div layout="row" layout-align="center center" ng-repeat="input in availabilityDialog.inputs track by $index">
+            <div flex="10"></div>
+            <div flex="80">
+              <input-range data="input"></input-range>
+            </div>
+            <div flex="10">
+              <md-button ng-style="{'display': availabilityDialog.inputs.length > 1 ? '' : 'none'}" class="md-icon-button md-warn" ng-click="availabilityDialog.removeInput($index)">
+                <md-icon md-font-icon="fa-times" class="fa"></md-icon>
+              </md-button>
+            </div>
+          </div>
+        </div>
+        <div layout="row" layout-align="center center" layout-margin ng-if="!availabilityDialog.isMaxInputs">
+          <a class="lnr-link" ng-click="availabilityDialog.addInput()">{{ 'availability.add-another-date' | translate }}</a>
+        </div>
+        <div layout="row" layout-align="center center" layout-margin>
+          <md-button type="submit" class="md-accent md-raised md-confirm-button md-primary" ng-click="availabilityDialog.close()">
+            {{ 'availability.submit-btn' | translate }}
+          </md-button>
+        </div>
+      </form>
+    </div>
+  </md-dialog-content>
+
+
+</md-dialog>

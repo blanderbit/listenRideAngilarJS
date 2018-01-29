@@ -58,6 +58,7 @@ angular.module('listnride', [
   'cityLanding',
   'categoryLanding',
   'hamburgTriathlon',
+  'inputRange',
   /* external modules */
   'ngAnimate',
   'ngMaterial',

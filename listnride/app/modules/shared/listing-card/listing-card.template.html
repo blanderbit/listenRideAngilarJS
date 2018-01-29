@@ -28,7 +28,7 @@
       <md-icon md-svg-icon="app/assets/ui_icons/pencil-edit-button.svg"></md-icon>
     </md-button>
 
-    <md-button
+    <!-- <md-button
       md-no-ink
       flex
       class="md-icon-button md-primary"
@@ -46,6 +46,14 @@
       ng-click="listingCard.onActivateClick()"
       ng-if="!listingCard.available">
       <md-icon md-svg-icon="app/assets/ui_icons/visibility-button.svg"></md-icon>
+    </md-button> -->
+
+    <md-button 
+      md-no-ink
+      flex
+      class="md-icon-button md-primary"
+      ng-click="listingCard.changeAvailability(listingCard.bikeId, $event)">
+      <md-icon md-svg-icon="app/assets/ui_icons/lnr_access_time.svg"></md-icon>
     </md-button>
 
     <md-button

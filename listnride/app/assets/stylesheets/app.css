@@ -373,6 +373,26 @@ autocomplete .md-errors-spacer {
   position: fixed;
 }
 
+.lnr-mv8 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.lnr-lh0 {
+  line-height: 0;
+}
+
+.lnr-fs0 {
+  font-size: 0;
+}
+
+.lnr-dash-input-divider {
+  display: inline-block;
+  width: 15px;
+  height: 2px;
+  background: rgba(150, 150, 150, 1.0);
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* SVG
 /*-----------------------------------------------------------------------------------*/

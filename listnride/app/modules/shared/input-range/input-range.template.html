@@ -1,0 +1,11 @@
+<div layout="row" layout-align="center center" class="input-range"> <!-- class="lnr-input-containers" -->
+  <md-input-container flex md-no-float class="lnr-mv8">
+    <input value="{{inputRange.data.startDate | amDateFormat:'DD.MM.YYYY'}}" placeholder="{{ 'availability.start-from' | translate }}" readonly="readonly" ng-click="inputRange.openCalendar($event);">
+    </input>
+  </md-input-container>
+  <span flex="15" align="center" class="lnr-lh0 lnr-fs0"><i class="lnr-dash-input-divider"></i></span>
+  <md-input-container flex md-no-float class="lnr-mv8">
+    <input value="{{inputRange.data.startDate | amAdd : inputRange.data.duration : 'days' | amDateFormat:'DD.MM.YYYY'}}" placeholder="{{ 'availability.end-at' | translate }}" readonly="readonly">
+    </input>
+  </md-input-container>
+</div>
