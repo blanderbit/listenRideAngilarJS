@@ -19,19 +19,23 @@ angular.module('receipt', []).component('receipt', {
       this.$onChanges = function (changes) {
         if (changes.user) {
           receipt.balance = changes.user.currentValue.balance;
-          receipt.total = Math.max(prices.total - changes.user.currentValue.balance, 0);
+          setPrices();
+        }
+        if (changes.prices) {
+          setPrices();
         }
       };
 
-      var prices = price.calculatePrices(receipt.startDate, receipt.endDate, receipt.prices);
+      var setPrices = function() {
+        var prices = price.calculatePrices(receipt.startDate, receipt.endDate, receipt.prices);
+        receipt.duration = date.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
+        receipt.durationDays = date.durationDays(receipt.startDate, receipt.endDate);
+        receipt.subtotal = prices.subtotal;
+        receipt.subtotalDiscounted = prices.subtotalDiscounted
+        receipt.lnrFee = prices.serviceFee;
+        receipt.total = Math.max(prices.total - receipt.balance, 0);
+      };
 
-      receipt.duration = date.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
-      receipt.durationDays = date.durationDays(receipt.startDate, receipt.endDate);
-      receipt.subtotal = prices.subtotal;
-      receipt.subtotalDiscounted = prices.subtotalDiscounted
-      receipt.lnrFee = prices.serviceFee;
-      receipt.balance = receipt.user.balance;
-      receipt.total = prices.total;
     }
   ]
 });

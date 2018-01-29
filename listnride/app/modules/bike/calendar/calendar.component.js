@@ -88,7 +88,7 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.onBooking = function(){
-        $state.go('booking');
+        $state.go('booking', {bikeId: calendar.bikeId, startDate: calendar.startDate, endDate: calendar.endDate});
       };
 
       calendar.onBikeRequest = function() {

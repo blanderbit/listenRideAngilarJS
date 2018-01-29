@@ -7,69 +7,23 @@ angular.module('booking', [])
     templateUrl: 'app/modules/booking/booking.template.html',
     controllerAs: 'booking',
     controller: [
-      '$localStorage', '$rootScope', '$scope', '$state', '$mdToast',
+      '$localStorage', '$rootScope', '$scope', '$state', '$stateParams', '$mdToast',
       '$timeout', '$translate', '$filter', 'authentication',
       'api', 'price', 'voucher',
       function BookingController(
-        $localStorage, $rootScope, $scope, $state, $mdToast, $timeout,
+        $localStorage, $rootScope, $scope, $state, $stateParams, $mdToast, $timeout,
         $translate, $filter, authentication, api, price, voucher) {
         var booking = this;
         var btAuthorization = 'sandbox_g42y39zw_348pk9cgf3bgyw2b';
         var btClient;
+
+        console.log($stateParams.bikeId);
+        console.log($stateParams.startDate);
+        console.log($stateParams.endDate);
   
-        // TODO: Remove hardcorded values for testing receipt module
-        booking.startDate = new Date();
-        booking.endDate = new Date();
-        booking.endDate.setDate(booking.startDate.getDate() + 1);
-        booking.bikeId = 1;
-        booking.prices = [
-          {
-            id: 7921,
-            start_at: 0,
-            price: "20.0"
-          },
-          {
-            id: 7922,
-            start_at: 86400,
-            price: "20.0"
-          },
-          {
-            id: 7923,
-            start_at: 172800,
-            price: "20.0"
-          },
-          {
-            id: 7924,
-            start_at: 259200,
-            price: "20.0"
-          },
-          {
-            id: 7925,
-            start_at: 345600,
-            price: "20.0"
-          },
-          {
-            id: 7926,
-            start_at: 432000,
-            price: "20.0"
-          },
-          {
-            id: 7927,
-            start_at: 518400,
-            price: "10.0"
-          },
-          {
-            id: 7928,
-            start_at: 604800,
-            price: "10.0"
-          },
-          {
-            id: 7929,
-            start_at: 2419200,
-            price: "10.0"
-          }
-        ];
-        // END TODO
+        booking.startDate = new Date($stateParams.startDate);
+        booking.endDate = new Date($stateParams.endDate);
+        booking.bikeId = $stateParams.bikeId;
 
         booking.user = {};
         booking.confirmation = '';
@@ -82,7 +36,6 @@ angular.module('booking', [])
         };
         booking.hidden = true;
         booking.tabsDisabled = false;
-        booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
         booking.voucherCode = "";
   
         // Fetch Bike Information
@@ -92,6 +45,9 @@ angular.module('booking', [])
             booking.bike = success.data;
             booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
             booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
+            booking.prices = booking.bike.prices;
+            console.log(booking.prices);
+            booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
           },
           function (error) {
             $state.go('home');
@@ -122,10 +78,17 @@ angular.module('booking', [])
             case 0: return false;
             case 1: return booking.phoneConfirmed !== 'success';
             case 2: return true;
-            case 3: return true;
+            case 3: return false;
             // case 3: return !details.detailsForm.$valid;
           }
         };
+
+        booking.nextAction = function() {
+          if (booking.selectedIndex == 3) {
+            booking.book();
+          }
+          booking.goNext();
+        }
 
         // Braintree Client Setup
         braintree.client.create({
@@ -273,12 +236,12 @@ angular.module('booking', [])
         // TODO: This needs to be refactored, rootScopes are very bad practice
         // go to next tab on user create success
         $rootScope.$on('user_created', function () {
-          booking.userAuth()
+          booking.reloadUser();
         });
   
         // go to next tab on user login success
         $rootScope.$on('user_login', function () {
-          booking.userAuth()
+          booking.reloadUser();
         });
   
         angular.element(document).ready(function () {
@@ -315,6 +278,65 @@ angular.module('booking', [])
             booking.user.country = desiredComponents.country;
           }
         }
+
+        booking.book = function () {
+          booking.inProcess = true;
+          var startDate = booking.startDate;
+          var endDate = booking.endDate;
+
+          // The local timezone-dependent dates get converted into neutral,
+          // non-timezone utc dates, preserving the actually selected date values
+          var startDate_utc = new Date(
+            Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours())
+          );
+          var endDate_utc = new Date(
+            Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), endDate.getHours())
+          );
+
+          var data = {
+            user_id: $localStorage.userId,
+            ride_id: booking.bikeId,
+            start_date: startDate_utc.toISOString(),
+            end_date: endDate_utc.toISOString()
+          };
+
+          console.log(data);
+
+          api.post('/requests', data).then(
+            function(success) {
+              // calendar.current_request = success.data;
+              // calendar.current_request.glued = true;
+              // calendar.current_request.rideChat = $localStorage.userId == calendar.current_request.user.id;
+              // calendar.current_request.rideChat ? calendar.current_request.chatFlow = "rideChat" : calendar.current_request.chatFlow = "listChat";
+
+              // if (calendar.current_request.rideChat) {
+              //   calendar.current_request.rating = calendar.current_request.lister.rating_lister + calendar.current_request.lister.rating_rider;
+              //   if (calendar.current_request.lister.rating_lister != 0 && calendar.current_request.lister.rating_rider != 0) {
+              //     calendar.current_request.rating = calendar.current_request.rating / 2
+              //   }
+              // }
+              // else {
+              //   calendar.current_request.rating = calendar.current_request.user.rating_lister + calendar.current_request.user.rating_rider;
+              //   if (calendar.current_request.user.rating_lister != 0 && calendar.current_request.user.rating_rider != 0) {
+              //     calendar.current_request.rating = calendar.current_request.rating / 2
+              //   }
+              // }
+              // calendar.current_request.rating = Math.round(calendar.current_request.rating);
+              $state.go('requests', {requestId: success.data.id});
+              $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
+            },
+            function(error) {
+              booking.inProcess = false;
+              $mdToast.show(
+                $mdToast.simple()
+                  // .textContent(error.data.errors[0].detail)
+                  .textContent("There was an error requesting the bike")
+                  .hideDelay(4000)
+                  .position('top center')
+              );
+            }
+          );
+        };
       }
     ]
   })
