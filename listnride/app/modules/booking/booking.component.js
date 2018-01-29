@@ -25,11 +25,6 @@ angular.module('booking', [])
         booking.confirmation = '';
         booking.phoneConfirmed = 'progress';
         booking.selectedIndex = 0;
-        booking.steps = {
-          'signin': false,
-          'details': false,
-          'payment': false
-        };
         booking.hidden = true;
         booking.tabsDisabled = false;
         booking.voucherCode = "";
@@ -70,7 +65,7 @@ angular.module('booking', [])
           switch (booking.selectedIndex) {
             case 0: return false;
             case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
-            case 2: return true;
+            case 2: return !booking.paymentForm.$valid;
             case 3: return false;
             // case 3: return !details.detailsForm.$valid;
           }
@@ -273,7 +268,7 @@ angular.module('booking', [])
             booking.user.city = desiredComponents.locality;
             booking.user.country = desiredComponents.country;
           }
-        }
+        };
 
         booking.book = function () {
           booking.inProcess = true;
