@@ -261,6 +261,11 @@ angular.module('booking', [])
         }
       });
 
+      booking.resendSms = function(place) {
+        booking.toggleConfirmButton();
+        booking.confirmation = {0: '', 1: '', 2: '', 3: ''}
+      };
+
       booking.fillAddress = function(place) {
         var components = place.address_components;
         if (components) {
