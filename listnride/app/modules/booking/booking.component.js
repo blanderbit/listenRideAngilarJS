@@ -178,7 +178,7 @@ angular.module('booking', [])
 
       booking.userAuth = function() {
         booking.steps.signin = true;
-        booking.selectedIndex = booking.selectedIndex + 1;
+        booking.nextTab();
         booking.reloadUser();
       };
 
@@ -254,7 +254,7 @@ angular.module('booking', [])
 
       angular.element(document).ready(function () {
         // set User data if registered
-        if ($localStorage.userId !== 'undefined') {
+        if ($localStorage.userId != null) {
           booking.userAuth();
         }
       });
