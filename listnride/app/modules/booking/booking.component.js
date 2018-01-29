@@ -191,6 +191,7 @@ angular.module('booking', [])
           api.get('/users/' + $localStorage.userId).then(
             function (success) {
               booking.user = success.data;
+              booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
               console.log(booking.user.balance);
               if (booking.user.has_payout_method) {
                 booking.selectedIndex = 3;

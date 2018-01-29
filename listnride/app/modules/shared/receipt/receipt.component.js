@@ -19,7 +19,7 @@ angular.module('receipt', []).component('receipt', {
       this.$onChanges = function (changes) {
         if (changes.user) {
           receipt.balance = changes.user.currentValue.balance;
-          receipt.total = prices.total - changes.user.currentValue.balance;
+          receipt.total = Math.max(prices.total - changes.user.currentValue.balance, 0);
         }
       };
 
