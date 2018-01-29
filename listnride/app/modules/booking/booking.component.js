@@ -67,7 +67,6 @@ angular.module('booking', [])
             case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
             case 2: return !booking.paymentForm.$valid;
             case 3: return false;
-            // case 3: return !details.detailsForm.$valid;
           }
         };
 
@@ -77,10 +76,12 @@ angular.module('booking', [])
         };
 
         booking.nextAction = function() {
-          if (booking.selectedIndex == 3) {
-            booking.book();
+          switch (booking.selectedIndex) {
+            case 0: booking.goNext();
+            case 1: booking.goNext();
+            case 2: booking.saveAddress();
+            case 3: booking.book();
           }
-          booking.goNext();
         };
 
         // Braintree Client Setup
@@ -92,6 +93,30 @@ angular.module('booking', [])
           }
           btClient = client;
         });
+
+        booking.saveAddress = function() {
+          var data = {
+            "user": {
+              "street": booking.user.street,
+              "zip": booking.user.zip,
+              "city": booking.user.city,
+              "country": booking.user.country
+            }
+          };
+          api.put('/users/' + $localStorage.userId, data).then(
+            function (success) {
+              booking.nextTab();
+            },
+            function (error) {
+              $mdToast.show(
+                $mdToast.simple()
+                  .textContent("Address Error message")
+                  .hideDelay(4000)
+                  .position('top center')
+              );
+            }
+          );
+        };
 
         booking.tokenizeCard = function() {
           btClient.request({
