@@ -398,8 +398,8 @@ md-input-container {
   font-size: 14px;
 }
 
-.lnr-progress-tabs md-tabs-wrapper {
-  margin-left: 20px;
+md-tabs-wrapper {
+  margin-left: 20px important!;
 }
 
 /*-----------------------------------------------------------------------------------*/
