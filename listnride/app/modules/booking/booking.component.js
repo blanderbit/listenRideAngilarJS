@@ -48,10 +48,9 @@ angular.module('booking', [])
       };
 
       booking.nextDisabled = function() {
-        //TODO: find way to get Form here
         switch (booking.selectedIndex) {
           case 0: return false;
-          case 1: return booking.phoneConfirmed !== 'success';
+          case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
           case 2: return true;
           case 3: return true;
           // case 3: return !details.detailsForm.$valid;
@@ -122,6 +121,9 @@ angular.module('booking', [])
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             booking.user = success.data;
+            if (booking.user.street != null) {
+              booking.steps.details = true
+            }
           },
           function (error) {
           }

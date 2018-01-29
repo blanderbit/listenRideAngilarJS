@@ -12,7 +12,7 @@
            layout="column">
         <h2 class="md-subhead">Invoice Address</h2>
         <br>
-        <form name="detailsForm" novalidate class="md-body-desktop">
+        <form name="details.parent.detailsForm" novalidate class="md-body-desktop">
           <!-- First name and Last name -->
           <div class="lnr-input-containers" layout="row" ng-hide="true">
             <md-input-container flex>
@@ -22,7 +22,7 @@
                 ng-model="details.parent.user.firstName"
                 ng-disabled="true"
               >
-              <div ng-messages="detailsForm.firstName.$error" role="alert">
+              <div ng-messages="details.parent.detailsForm.firstName.$error" role="alert">
                 <div ng-message="required">{{ 'forms.errors.empty-first-name' | translate }}</div>
                 <div ng-message="maxlength">{{ 'forms.errors.max-size-first-name' | translate }}</div>
               </div>
@@ -35,7 +35,7 @@
                 ng-maxlength="30"
                 ng-disabled="true"
               >
-              <div ng-messages="detailsForm.lastName.$error" role="alert">
+              <div ng-messages="details.parent.detailsForm.lastName.$error" role="alert">
                 <div ng-message="required">{{ 'forms.errors.empty-last-name' | translate }}</div>
                 <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
               </div>
@@ -51,7 +51,7 @@
                 location="details.parent.user.street"
                 label-id="{{ 'list.location.street-number' | translate }}"
                 place-changed="details.parent.fillAddress(place)"
-                error="detailsForm.street.$error"
+                error="details.parent.detailsForm.street.$error"
               >
               </autocomplete>
             </div>
@@ -63,7 +63,7 @@
                 name="city"
                 ng-model="details.parent.user.city"
               >
-              <div ng-messages="detailsForm.city.$error" role="alert">
+              <div ng-messages="details.parent.detailsForm.city.$error" role="alert">
                 <div ng-message="required">{{ 'shared.required' | translate }}</div>
               </div>
             </md-input-container>
@@ -77,7 +77,7 @@
                 name="zip"
                 ng-model="details.parent.user.zip"
               >
-              <div ng-messages="detailsForm.zip.$error" role="alert">
+              <div ng-messages="details.parent.detailsForm.zip.$error" role="alert">
                 <div ng-message="required">{{ 'shared.required' | translate }}</div>
               </div>
             </md-input-container>
@@ -89,7 +89,7 @@
                 name="country"
                 ng-model="details.parent.user.country"
               >
-              <div ng-messages="detailsForm.country.$error" role="alert">
+              <div ng-messages="details.parent.detailsForm.country.$error" role="alert">
                 <div ng-message="required">{{ 'shared.required' | translate }}</div>
               </div>
             </md-input-container>
@@ -117,7 +117,7 @@
                 preferred-countries="de, at, nl, fr, lv, es, it, ch, gb"
                 required
               >
-              <div ng-messages="detailsForm.phone_number.$error" role="alert">
+              <div ng-messages="details.parent.detailsForm.phone_number.$error" role="alert">
                 <div ng-message="pattern">{{ 'verification.5.enter-valid-phone-nr' | translate }}</div>
                 <div ng-message="required">{{ 'verification.5.enter-valid-phone-nr' | translate }}</div>
               </div>
@@ -127,7 +127,7 @@
                 flex
                 style="margin: 25px 0 0"
                 class="md-raised md-primary lnr-btn-inline"
-                ng-click="details.parent.sendSms(detailsForm.phone_number)"
+                ng-click="details.parent.sendSms(details.parent.detailsForm.phone_number)"
               >
                 <span>Send Code</span>
               </md-button>
@@ -194,13 +194,9 @@
             </div>
 
             <div class="sign-up-links" flex layout="row" layout-align="space-between center">
-              <a class="lnr-link" ng-click="details.parent.toggleConfirmButton()">Resend</a>
+              <a class="lnr-link" ng-click="details.parent.resendSms()">Resend</a>
             </div>
           </div>
-          <!--FIXME: Delete after testing done-->
-          <!--================================-->
-          <!--<h1>Form valid:{{detailsForm.$valid}}</h1>-->
-          <!--================================-->
         </form>
       </div>
     </div>
