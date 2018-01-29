@@ -12,7 +12,7 @@
         <signup-tab ng-if="!booking.authentication.loggedIn() || booking.steps.signin"></signup-tab>
 
         <!-- details data tab -->
-        <details-tab ng-if="!booking.user.has_address"></details-tab>
+        <details-tab ng-if="!booking.user.has_address || booking.steps.details"></details-tab>
         
         <!-- payment tab -->
         <payment-tab></payment-tab>
