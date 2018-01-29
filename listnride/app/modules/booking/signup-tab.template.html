@@ -1,6 +1,7 @@
 <md-tab class="personal"
-        label="1. Sign in"
-        layout="row">
+        label="{{ 'booking.sign-in.tab' | translate }} {{ signup.parent.tabCompleted(0) }}"
+        layout="row"
+        ng-disabled="signup.parent.tabsDisabled">
   <div class="spacer-xs"></div>
   <md-content style="max-height: 620px;"
               layout="column">

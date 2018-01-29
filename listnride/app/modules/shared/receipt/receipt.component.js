@@ -6,7 +6,8 @@ angular.module('receipt', []).component('receipt', {
     startDate: '<',
     endDate: '<',
     invalidDays: '<',
-    prices: '<'
+    prices: '<',
+    user: '<'
   },
   controller: [
       'date',
@@ -15,14 +16,26 @@ angular.module('receipt', []).component('receipt', {
     function ReceiptController(date, price, api, authentication, verification, ENV) {
       var receipt = this;
 
-      var prices = price.calculatePrices(receipt.startDate, receipt.endDate, receipt.prices);
+      this.$onChanges = function (changes) {
+        if (changes.user) {
+          receipt.balance = changes.user.currentValue.balance;
+          setPrices();
+        }
+        if (changes.prices) {
+          setPrices();
+        }
+      };
 
-      receipt.duration = date.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
-      receipt.durationDays = date.durationDays(receipt.startDate, receipt.endDate);
-      receipt.subtotal = prices.subtotal;
-      receipt.subtotalDiscounted = prices.subtotalDiscounted
-      receipt.lnrFee = prices.serviceFee;
-      receipt.total = prices.total;
+      var setPrices = function() {
+        var prices = price.calculatePrices(receipt.startDate, receipt.endDate, receipt.prices);
+        receipt.duration = date.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
+        receipt.durationDays = date.durationDays(receipt.startDate, receipt.endDate);
+        receipt.subtotal = prices.subtotal;
+        receipt.subtotalDiscounted = prices.subtotalDiscounted
+        receipt.lnrFee = prices.serviceFee;
+        receipt.total = Math.max(prices.total - receipt.balance, 0);
+      };
+
     }
   ]
 });

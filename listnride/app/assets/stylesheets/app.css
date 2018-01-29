@@ -395,12 +395,11 @@ md-input-container {
 }
 
 .lnr-progress-tabs {
-  font-size: 18px;
-  margin-top: 0;
+  font-size: 14px;
 }
 
-.lnr-progress-tabs md-tab-item {
-  padding: 12px 12px; 
+md-tabs-wrapper {
+  margin-left: 20px important!;
 }
 
 /*-----------------------------------------------------------------------------------*/

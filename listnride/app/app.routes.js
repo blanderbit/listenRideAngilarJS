@@ -53,7 +53,7 @@
 
       $stateProvider.state({
         name: 'booking',
-        url: '/booking',
+        url: '/booking?bikeId&startDate&endDate',
         template: '<booking></booking>',
       });
 

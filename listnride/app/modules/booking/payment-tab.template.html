@@ -1,6 +1,7 @@
 <md-tab class="categories"
-        label="{{ 'booking.payment.tab' | translate }}"
-        layout="row">
+        label="{{ 'booking.payment.tab' | translate }} {{ payment.parent.tabCompleted(2) }}"
+        layout="row"
+        ng-disabled="payment.parent.tabsDisabled">
   <div class="spacer-xs"></div>
   <md-content style="max-height: 620px;"
               layout="column">
@@ -32,8 +33,8 @@
             </div>
             <form name="paymentForm" novalidate ng-hide="payment.parent.paymentMethod != 1">
               <!-- Cardholder name and Cardnumber -->
-              <div class="lnr-input-containers" layout="row">
-                <md-input-container flex>
+              <div class="lnr-input-containers" layout="row" layout-align="space-between none">
+                <md-input-container flex="25">
                   <label>Name on Card</label>
                   <input name="cardholderName"
                          ng-model-options='{ debounce: 400 }'
@@ -46,7 +47,7 @@
                     <div ng-message="required">Please provide valid name</div>
                   </div>
                 </md-input-container>
-                <md-input-container flex>
+                <md-input-container flex="25">
                   <label>Card Number</label>
                   <input name="creditCardNumber"
                          ng-model-options='{ debounce: 400 }'
@@ -64,59 +65,54 @@
                     </div>
                   </div>
                 </md-input-container>
+
+                <md-input-container flex="15">
+                  <label>Exp. month</label>
+                  <input name="monthExpiry"
+                         ng-model-options='{ debounce: 400 }'
+                         ng-model="payment.parent.month_expiry"
+                         type="text"
+                         cc-exp-month
+                         ng-required="true"
+                  />
+                  <div ng-messages="paymentForm.monthExpiry.$error"
+                       ng-show="paymentForm.monthExpiry.$dirty"
+                       role="alert">
+                    <div ng-message="ccExpMonth"> Month not valid</div>
+                    <div ng-message="parse"> Month not valid</div>
+                  </div>
+                </md-input-container>
+                <md-input-container flex="15">
+                  <label>Exp. year</label>
+                  <input name="yearExpiry"
+                         ng-model-options='{ debounce: 400 }'
+                         ng-model="payment.parent.year"
+                         cc-exp-year
+                         ng-required="true"/>
+                  <div ng-messages="paymentForm.yearExpiry.$error"
+                       ng-show="paymentForm.yearExpiry.$dirty"
+                       role="alert">
+                    <div ng-message="ccExpYear">Year not valid</div>
+                    <div ng-message="parse">Year not valid</div>
+                  </div>
+                </md-input-container>
+                <md-input-container flex="15">
+                  <label>CVV Number</label>
+                  <input name="securityNumber"
+                         ng-model-options='{ debounce: 400 }'
+                         ng-model="payment.parent.security_number"
+                         type="text"
+                         cc-cvc
+                         ng-required="true"/>
+                  <div ng-messages="paymentForm.securityNumber.$error"
+                       ng-show="paymentForm.securityNumber.$dirty"
+                       role="alert">
+                    <div ng-message="required">CVC not valid</div>
+                    <div ng-message="ccCvc">CVC not valid</div>
+                  </div>
+                </md-input-container>
               </div>
-              <!-- Expiry and Code -->
-              <div class="lnr-input-containers" layout="row">
-                <div flex="100" layout="row"
-                     layout-align="space-around center"
-                     cc-exp>
-                  <md-input-container flex>
-                    <label>Expiry month</label>
-                    <input name="monthExpiry"
-                           ng-model-options='{ debounce: 400 }'
-                           ng-model="payment.parent.month_expiry"
-                           type="text"
-                           cc-exp-month
-                           ng-required="true"
-                    />
-                    <div ng-messages="paymentForm.monthExpiry.$error"
-                         ng-show="paymentForm.monthExpiry.$dirty"
-                         role="alert">
-                      <div ng-message="ccExpMonth"> Month not valid</div>
-                      <div ng-message="parse"> Month not valid</div>
-                    </div>
-                  </md-input-container>
-                  <md-input-container flex>
-                    <label>Expiry year</label>
-                    <input name="yearExpiry"
-                           ng-model-options='{ debounce: 400 }'
-                           ng-model="payment.parent.year"
-                           cc-exp-year
-                           ng-required="true"/>
-                    <div ng-messages="paymentForm.yearExpiry.$error"
-                         ng-show="paymentForm.yearExpiry.$dirty"
-                         role="alert">
-                      <div ng-message="ccExpYear">Year not valid</div>
-                      <div ng-message="parse">Year not valid</div>
-                    </div>
-                  </md-input-container>
-                  <md-input-container flex>
-                    <label>Security Number</label>
-                    <input name="securityNumber"
-                           ng-model-options='{ debounce: 400 }'
-                           ng-model="payment.parent.security_number"
-                           type="text"
-                           cc-cvc
-                           ng-required="true"/>
-                    <div ng-messages="paymentForm.securityNumber.$error"
-                         ng-show="paymentForm.securityNumber.$dirty"
-                         role="alert">
-                      <div ng-message="required">CVC not valid</div>
-                      <div ng-message="ccCvc">CVC not valid</div>
-                    </div>
-                  </md-input-container>
-                </div>
-              </div>
+              <br>
             </form>
           <md-divider></md-divider>
             <div layout="row" layout-align="space-between none">
