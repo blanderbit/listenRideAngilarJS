@@ -76,11 +76,13 @@ angular.module('booking', [])
         };
 
         booking.nextAction = function() {
+          console.log(booking.selectedIndex);
           switch (booking.selectedIndex) {
-            case 0: booking.goNext();
-            case 1: booking.goNext();
-            case 2: booking.saveAddress();
-            case 3: booking.book();
+            case 0: booking.goNext(); break;
+            case 1: booking.saveAddress(); break;
+            case 2: booking.tokenizeCard(); break;
+            case 3: booking.book(); break;
+            default: booking.goNext(); break;
           }
         };
 
@@ -161,7 +163,20 @@ angular.module('booking', [])
             function (ppErr, ppInstance) {
               ppInstance.tokenize({ flow: 'vault' },
                 function (tokenizeErr, payload) {
-                  $scope.$apply(booking.nextTab());
+                  if (tokenizeErr) {
+                    return;
+                  }
+                  var data = {
+                    "payment_method_nonce": payload.nonce
+                  };
+                  api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
+                    function (success) {
+                      $scope.$apply(booking.nextTab());
+                    },
+                    function (error) {
+                      console.log(error);
+                    }
+                  );
                 }
               );
             }
@@ -172,6 +187,7 @@ angular.module('booking', [])
           api.get('/users/' + $localStorage.userId).then(
             function (success) {
               booking.user = success.data;
+              console.log(booking.user);
               booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
               if (booking.user.has_payout_method) {
                 booking.selectedIndex = 3;
@@ -242,6 +258,7 @@ angular.module('booking', [])
 
         // go to next tab
         booking.nextTab = function () {
+          console.log("gets triggered!");
           booking.selectedIndex = booking.selectedIndex + 1;
         };
 

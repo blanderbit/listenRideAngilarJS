@@ -46,7 +46,7 @@
     <div>{{ receipt.lnrFee | currency:"€":2 }}</div>
   </div>
 
-  <div layout="row" layout-align="space-between center">
+  <div layout="row" layout-align="space-between center" ng-if="receipt.balance > 0">
     <div layout="row">
       {{ 'shared.balance' | translate }}
       <div>
