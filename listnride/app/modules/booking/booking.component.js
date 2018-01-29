@@ -6,11 +6,65 @@ angular.module('booking', [])
     transclude: true,
     templateUrl: 'app/modules/booking/booking.template.html',
     controllerAs: 'booking',
-    controller: ['$localStorage', '$rootScope', '$scope', '$state', '$mdToast', '$timeout', '$translate', 'authentication', 'api',
-      function BookingController($localStorage, $rootScope, $scope, $state, $mdToast, $timeout, $translate, authentication, api) {
+    controller: ['$localStorage', '$rootScope', '$scope', '$state', '$mdToast', '$timeout', '$translate', '$filter', 'authentication', 'api', 'price', 'voucher',
+      function BookingController($localStorage, $rootScope, $scope, $state, $mdToast, $timeout, $translate, $filter, authentication, api, price, voucher) {
       var booking = this;
       var btAuthorization = 'sandbox_g42y39zw_348pk9cgf3bgyw2b';
       var btClient;
+
+      // TODO: Remove hardcorded values for testing receipt module
+      booking.startDate = new Date();
+      booking.endDate = new Date();
+      booking.endDate.setDate(booking.startDate.getDate() + 1);
+      booking.bikeId = 1;
+      booking.prices = [
+        {
+          id: 7921,
+          start_at: 0,
+          price: "20.0"
+        },
+        {
+          id: 7922,
+          start_at: 86400,
+          price: "20.0"
+        },
+        {
+          id: 7923,
+          start_at: 172800,
+          price: "20.0"
+        },
+        {
+          id: 7924,
+          start_at: 259200,
+          price: "20.0"
+        },
+        {
+          id: 7925,
+          start_at: 345600,
+          price: "20.0"
+        },
+        {
+          id: 7926,
+          start_at: 432000,
+          price: "20.0"
+        },
+        {
+          id: 7927,
+          start_at: 518400,
+          price: "10.0"
+        },
+        {
+          id: 7928,
+          start_at: 604800,
+          price: "10.0"
+        },
+        {
+          id: 7929,
+          start_at: 2419200,
+          price: "10.0"
+        }
+      ];
+      // END TODO
 
       booking.user = {};
       booking.confirmation = '';
@@ -22,19 +76,17 @@ angular.module('booking', [])
         'payment': false
       };
       booking.hidden = true;
-
-      // TODO: Remove hardcorded values for testing receipt module
-      booking.startDate = new Date();
-      booking.endDate = new Date();
-      booking.endDate.setDate(booking.startDate.getDate() + 1);
-      booking.bikeId = 1;
-      // END TODO
+      booking.tabsDisabled = false;
+      booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
+      booking.voucherCode = "";
 
       // Fetch Bike Information
       api.get('/rides/' + booking.bikeId).then(
         function (success) {
           console.log(success.data);
           booking.bike = success.data;
+          booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
+          booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
         },
         function (error) {
           $state.go('home');
@@ -50,7 +102,7 @@ angular.module('booking', [])
       };
 
       booking.tabCompleted = function(tabId) {
-        if (booking.selectedIndex > tabId) return "✔";
+        return booking.selectedIndex > tabId ? "✔" : "    ";
       }
 
       booking.nextDisabled = function() {
@@ -128,6 +180,7 @@ angular.module('booking', [])
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             booking.user = success.data;
+            console.log(booking.user.balance);
             if (booking.user.has_phone_number && booking.user.has_address) {
               booking.selectedIndex = 2;
             } else {
@@ -135,60 +188,12 @@ angular.module('booking', [])
             }
             $timeout(function () {
               booking.hidden = false;
-            }, 500);
+            }, 120);
           },
           function (error) {
           }
         );
       };
-
-      booking.prices = [
-        {
-          id: 7921,
-          start_at: 0,
-          price: "20.0"
-        },
-        {
-          id: 7922,
-          start_at: 86400,
-          price: "20.0"
-        },
-        {
-          id: 7923,
-          start_at: 172800,
-          price: "20.0"
-        },
-        {
-          id: 7924,
-          start_at: 259200,
-          price: "20.0"
-        },
-        {
-          id: 7925,
-          start_at: 345600,
-          price: "20.0"
-        },
-        {
-          id: 7926,
-          start_at: 432000,
-          price: "20.0"
-        },
-        {
-          id: 7927,
-          start_at: 518400,
-          price: "10.0"
-        },
-        {
-          id: 7928,
-          start_at: 604800,
-          price: "10.0"
-        },
-        {
-          id: 7929,
-          start_at: 2419200,
-          price: "10.0"
-        }
-      ];
 
       // phone confirmation
       //TODO: move to shared logic

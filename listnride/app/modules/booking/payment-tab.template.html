@@ -1,6 +1,7 @@
 <md-tab class="categories"
-        label="{{ 'booking.payment.tab' | translate }} {{ booking.tabCompleted(2) }}"
-        layout="row">
+        label="{{ 'booking.payment.tab' | translate }} {{ payment.parent.tabCompleted(2) }}"
+        layout="row"
+        ng-disabled="payment.parent.tabsDisabled">
   <div class="spacer-xs"></div>
   <md-content style="max-height: 620px;"
               layout="column">

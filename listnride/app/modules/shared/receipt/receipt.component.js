@@ -6,7 +6,8 @@ angular.module('receipt', []).component('receipt', {
     startDate: '<',
     endDate: '<',
     invalidDays: '<',
-    prices: '<'
+    prices: '<',
+    user: '<'
   },
   controller: [
       'date',
@@ -15,6 +16,13 @@ angular.module('receipt', []).component('receipt', {
     function ReceiptController(date, price, api, authentication, verification, ENV) {
       var receipt = this;
 
+      this.$onChanges = function (changes) {
+        if (changes.user) {
+          receipt.balance = changes.user.currentValue.balance;
+          receipt.total = prices.total - changes.user.currentValue.balance;
+        }
+      };
+
       var prices = price.calculatePrices(receipt.startDate, receipt.endDate, receipt.prices);
 
       receipt.duration = date.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
@@ -22,6 +30,7 @@ angular.module('receipt', []).component('receipt', {
       receipt.subtotal = prices.subtotal;
       receipt.subtotalDiscounted = prices.subtotalDiscounted
       receipt.lnrFee = prices.serviceFee;
+      receipt.balance = receipt.user.balance;
       receipt.total = prices.total;
     }
   ]

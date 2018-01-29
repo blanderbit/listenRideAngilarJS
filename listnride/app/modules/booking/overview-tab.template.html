@@ -1,16 +1,42 @@
 <md-tab
   class="categories"
-  label="{{ 'booking.overview.tab' | translate }} {{ booking.tabCompleted(3) }}"
-  layout="row">
+  label="{{ 'booking.overview.tab' | translate }} {{ overview.parent.tabCompleted(3) }}"
+  layout="row"
+  ng-disabled="overview.parent.tabsDisabled">
   <div class="spacer-xs"></div>
   <md-content style="max-height: 620px;" layout="column">
     <div class="tab-content" style="min-height: 450px;" layout-align="space-between none" layout-padding>
       <div class="lnr-list-form" layout="column">
       	<p class="md-subhead">Your bike rental</p>
-      	<div layout="row">
-          <div><img src="{{booking.bike.image_file_1.image_file_1.small.url}}"></div>
-          <div></div>
-          <div></div>
+        <div class="spacer-xs"></div>
+      	<div layout="row" layout-align="space-between none">
+          <div flex="40">
+            <img flex="100" ng-src="{{ overview.parent.bike.image_file_1.image_file_1.small.url }}" />
+          </div>
+          <div flex="30" layout="column">
+            <p class="md-subhead">{{ overview.parent.bike.brand }}, {{ overview.parent.bikeCategory }}</p>
+            <br>
+            <div layout="row" layout-align="space-between none">
+              <span flex="50" class="md-body-2">From</span>
+              <span flex="50" class="md-body-1">{{ overview.parent.startDate | date }}</span>
+            </div>
+            <div layout="row" layout-align="space-between none">
+              <span flex="50" class="md-body-2">To</span>
+              <span flex="50" class="md-body-1">{{ overview.parent.endDate | date }}</span>
+            </div>
+            <br>
+            <div layout="row" layout-align="space-between none">
+              <span flex="50" class="md-body-2">Size</span>
+              <span flex="50" class="md-body-1">{{ overview.parent.bikeSize }}</span>
+            </div>
+            <div layout="row" layout-align="space-between none">
+              <span flex="50" class="md-body-2">Location</span>
+              <span flex="50" class="md-body-1">{{ overview.parent.bike.city }}</span>
+            </div>
+          </div>
+          <div flex="20">
+            <p class="md-subhead lnr-bold lnr-right">{{ overview.parent.subtotal }} €</p>
+          </div>
         </div>
         <div class="spacer-xs"></div>
         <md-divider></md-divider>
@@ -28,6 +54,17 @@
           </div>
           <div flex="33">
             <p class="md-subhead">Redeem Voucher</p>
+            <div layout="row" layout-xs="column">
+                <md-input-container flex-gt-xs="60">
+                  <label>{{ 'settings.voucher-code' | translate }}</label>
+                  <input ng-model="overview.parent.voucherCode"></input>
+                </md-input-container>
+                <md-input-container layout="row" flex-gt-xs="30" flex="100">
+                <md-button flex ng-disabled="!settings.voucherCode" class="md-raised md-primary lnr-btn-inline lnr-btn-mobile" ng-click="overview.parent.addVoucher()">
+                  Add
+                </md-button>
+              </md-input-container>
+            </div>
           </div>
         </div>
       </div>
