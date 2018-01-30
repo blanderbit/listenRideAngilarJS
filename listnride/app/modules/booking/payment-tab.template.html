@@ -16,9 +16,9 @@
         <div class="spacer-xs"></div>
         <md-radio-group ng-model="payment.parent.paymentMethod">
           <md-divider></md-divider>
-            <div layout="row">
-              <md-radio-button value="1" class="md-primary" flex="80"> Credit Card</md-radio-button>
-              <div flex="20">
+            <div layout="row" class="lnr-payment-tab-button">
+              <md-radio-button value="1" class="md-primary" flex="80">Credit Card</md-radio-button>
+              <div flex="20" layout="row" layout-align="end center">
                 <img
                   class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
                   ng-src="app/assets/ui_icons/lnr_logo_mastercard.svg"
@@ -115,14 +115,15 @@
               <br>
             </form>
           <md-divider></md-divider>
-            <div layout="row" layout-align="space-between none">
+            <div layout="row" layout-align="space-between none" class="lnr-payment-tab-button">
               <md-radio-button value="2" class="md-primary" flex="80">Paypal</md-radio-button>
-              <img
-                class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
-                ng-src="app/assets/ui_icons/lnr_logo_paypal.svg"
-                alt="PayPal"
-                flex="20"
-              >
+              <div flex="20" layout="row" layout-align="end center">
+                <img
+                  class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
+                  ng-src="app/assets/ui_icons/lnr_logo_paypal.svg"
+                  alt="PayPal"
+                >
+              </div>
             </div>
             <md-button class="md-raised md-primary" ng-hide="payment.parent.paymentMethod != 2" ng-click="payment.parent.openPaypal()">Pay with Paypal</md-button>
           <md-divider></md-divider>
