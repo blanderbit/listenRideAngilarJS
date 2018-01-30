@@ -16,8 +16,8 @@
         <div class="spacer-xs"></div>
         <md-radio-group ng-model="payment.parent.paymentMethod">
           <md-divider></md-divider>
-            <div layout="row" class="lnr-payment-tab-button">
-              <md-radio-button value="1" class="md-primary" flex="80">Credit Card</md-radio-button>
+            <div layout="row">
+              <md-radio-button value="1" class="md-primary lnr-payment-tab-button" flex="80">Credit Card</md-radio-button>
               <div flex="20" layout="row" layout-align="end center">
                 <img
                   class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
@@ -65,7 +65,6 @@
                     </div>
                   </div>
                 </md-input-container>
-
                 <md-input-container flex="15">
                   <label>Exp. month</label>
                   <input name="monthExpiry"
@@ -115,8 +114,8 @@
               <br>
             </form>
           <md-divider></md-divider>
-            <div layout="row" layout-align="space-between none" class="lnr-payment-tab-button">
-              <md-radio-button value="2" class="md-primary" flex="80">Paypal</md-radio-button>
+            <div layout="row" layout-align="space-between none">
+              <md-radio-button value="2" class="md-primary lnr-payment-tab-button" flex="80">Paypal</md-radio-button>
               <div flex="20" layout="row" layout-align="end center">
                 <img
                   class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
