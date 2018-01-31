@@ -7,7 +7,7 @@
   <md-content style="max-height: 620px;" layout="column">
     <div class="tab-content" style="min-height: 450px;" layout-align="space-between none" layout-padding>
       <div class="lnr-list-form" layout="column">
-      	<p class="md-subhead">Your bike rental</p>
+      	<p class="md-subhead">{{ 'booking.overview.bike-rental' | translate }}</p>
         <div class="spacer-xs"></div>
       	<div layout="row" layout-align="space-between none">
           <div flex="40">
@@ -17,20 +17,20 @@
             <p class="md-subhead">{{ overview.parent.bike.brand }}, {{ overview.parent.bikeCategory }}</p>
             <br>
             <div layout="row" layout-align="space-between none">
-              <span flex="50" class="md-body-2">From</span>
+              <span flex="50" class="md-body-2">{{ 'settings.from' | translate }}</span>
               <span flex="50" class="md-body-1">{{ overview.parent.startDate | date }}</span>
             </div>
             <div layout="row" layout-align="space-between none">
-              <span flex="50" class="md-body-2">To</span>
+              <span flex="50" class="md-body-2">{{ 'settings.to' | translate }}</span>
               <span flex="50" class="md-body-1">{{ overview.parent.endDate | date }}</span>
             </div>
             <br>
             <div layout="row" layout-align="space-between none">
-              <span flex="50" class="md-body-2">Size</span>
+              <span flex="50" class="md-body-2">{{ 'booking.overview.size' | translate }}</span>
               <span flex="50" class="md-body-1">{{ overview.parent.bikeSize }}</span>
             </div>
             <div layout="row" layout-align="space-between none">
-              <span flex="50" class="md-body-2">Location</span>
+              <span flex="50" class="md-body-2">{{ 'booking.overview.location' | translate }}</span>
               <span flex="50" class="md-body-1">{{ overview.parent.bike.city }}</span>
             </div>
           </div>
@@ -43,26 +43,31 @@
         <div class="spacer-xs"></div>
         <div layout="row" layout-align="space-between none">
           <div flex="33">
-            <p class="md-subhead">Invoice Address</p>
+            <p class="md-subhead">{{ 'booking.overview.invoice-address' | translate }}</p>
             <p class="md-body-2">Frank Erler</p>
             <p class="md-body-1">Hausburgstraße 24<br>10249 Berlin<br>Germany</p>
           </div>
           <div flex="33">
-            <p class="md-subhead">Payment</p>
+            <p class="md-subhead">{{ 'booking.overview.payment' | translate }}</p>
             <p class="md-body-2">Mastercard</p>
             <p class="md-body-1">**** **** **** **31</p>
           </div>
           <div flex="33">
-            <p class="md-subhead">Redeem Voucher</p>
+            <p class="md-subhead">{{ 'booking.overview.redeem-voucher' | translate }}</p>
             <div layout="row" layout-xs="column">
-                <md-input-container flex-gt-xs="60">
-                  <label>{{ 'settings.voucher-code' | translate }}</label>
-                  <input ng-model="overview.parent.voucherCode"></input>
-                </md-input-container>
-                <md-input-container layout="row" flex-gt-xs="30" flex="100">
-                <md-button flex ng-disabled="!overview.parent.voucherCode" class="md-raised md-primary lnr-btn-inline lnr-btn-mobile" ng-click="overview.parent.addVoucher()">
-                  Add
-                </md-button>
+              <md-input-container flex-gt-xs="60">
+                <label>{{ 'settings.voucher-code' | translate }}</label>
+                <input ng-model="overview.parent.voucherCode"></input>
+              </md-input-container>
+              <md-input-container layout="row" flex-gt-xs="30" flex="100">
+              <md-button
+                flex
+                ng-disabled="!overview.parent.voucherCode"
+                class="md-raised md-primary lnr-btn-inline lnr-btn-mobile"
+                ng-click="overview.parent.addVoucher()"
+              >
+                {{ 'booking.overview.add' | translate }}
+              </md-button>
               </md-input-container>
             </div>
           </div>

@@ -44,7 +44,7 @@
           alt="Secure"
         >
         <div style="margin: 0 16px">
-          Secure Shopping
+          {{ 'booking.shopping' | translate }}
         </div>
       </div>
     </div>
@@ -52,7 +52,7 @@
 
   <div class="content" layout-padding ng-if="!booking.authentication.loggedIn()">
     <div class="lnr-section-title" layout="column" layout-align="center center">
-      <p class="md-subhead">Pay secure with</p>
+      <p class="md-subhead">{{ 'booking.pay-secure' | translate }}</p>
       <div layout="row">
         <img
           class="md-card-image lnr-request__img-methods lnr-payment-image"
@@ -75,8 +75,9 @@
 
   <div class="content" layout-padding>
     <div class="lnr-section-title mt0" layout="column" layout-align="center center">
-      <p class="md-body-2"><b>Do you have questions about booking a bike?</b><br>
-        Call us +49 (0)30-120870330, Mo-Fr 9-18 pm. <a href="mailto:support@listandride.com">Or write us an email</a>.</p>
+      <p class="md-body-2">
+        <b>{{ 'booking.footer.questions' | translate }}</b><br>
+        {{ 'booking.footer.call-us' | translate }}<a href="mailto:support@listandride.com">{{ 'booking.footer.email-us' | translate }}</a>.</p>
       <div class="lnr-row-images" layout="row" layout-align="center center">
         <div class="lnr-row-images__item" layout="column" layout-align="center center">
           <img ng-src="app/assets/ui_images/request-flow/lnr_supportThumb_topbias@2x.png" alt="Tobias">
@@ -87,7 +88,7 @@
           <span>Lena</span>
         </div>
       </div>
-      <p class="md-caption"><b>listnride Support</b></p>
+      <p class="md-caption"><b>{{ 'booking.footer.support' | translate }}</b></p>
     </div>
   </div>
   <footer></footer>
