@@ -14,6 +14,7 @@ angular.module('booking', [])
         $localStorage, $rootScope, $scope, $state, $stateParams, $mdToast, $timeout,
         $translate, $filter, authentication, api, price, voucher) {
         var booking = this;
+        //TODO: REMOVE!
         var btAuthorization = 'sandbox_g42y39zw_348pk9cgf3bgyw2b';
         var btClient;
 
@@ -28,6 +29,16 @@ angular.module('booking', [])
         booking.hidden = true;
         booking.tabsDisabled = false;
         booking.voucherCode = "";
+
+        // Get braintree token
+        // api.get('/users/' + authentication.userId() + '/token').then(
+        //   function (success) {
+        //     btClient = success.data.token;
+        //   },
+        //   function (error) {
+        //   }
+        // );
+
 
         // Fetch Bike Information
         api.get('/rides/' + booking.bikeId).then(
@@ -76,7 +87,6 @@ angular.module('booking', [])
         };
 
         booking.nextAction = function() {
-          console.log(booking.selectedIndex);
           switch (booking.selectedIndex) {
             case 0: booking.goNext(); break;
             case 1: booking.saveAddress(); break;
@@ -134,17 +144,10 @@ angular.module('booking', [])
           }, function (err, response) {
             if (!err) {
               var data = {
-                // "payment_method": {
-                //   "payment_method_nonce": response.creditCards[0].nonce
-                // }
-                "payment_method_nonce": response.creditCards[0].nonce
+                "payment_method_nonce": response.creditCards[0].nonce,
+                "last_four": response.creditCards[0].details.lastFour
               };
-              api.post('/users/' + authentication.userId() + '/payment_methods',
-                {
-                  "payment_method_nonce": response.creditCards[0].nonce,
-                  "phone_nr": '',
-                  "device_data": {}
-                }).then(
+              api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
                 function (success) {
                   booking.nextTab();
                 },
@@ -174,7 +177,6 @@ angular.module('booking', [])
                       $scope.$apply(booking.nextTab());
                     },
                     function (error) {
-                      console.log(error);
                     }
                   );
                 }
@@ -187,7 +189,6 @@ angular.module('booking', [])
           api.get('/users/' + $localStorage.userId).then(
             function (success) {
               booking.user = success.data;
-              console.log(booking.user);
               booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
               if (booking.user.has_payout_method) {
                 booking.selectedIndex = 3;
@@ -232,6 +233,7 @@ angular.module('booking', [])
             var data = { "confirmation_code": codeDigits.join('') };
             api.post('/users/' + $localStorage.userId + '/confirm_phone', data).then(
               function (success) {
+                booking.toggleConfirmButton();
                 booking.phoneConfirmed = 'success';
               },
               function (error) {
@@ -258,7 +260,6 @@ angular.module('booking', [])
 
         // go to next tab
         booking.nextTab = function () {
-          console.log("gets triggered!");
           booking.selectedIndex = booking.selectedIndex + 1;
         };
 

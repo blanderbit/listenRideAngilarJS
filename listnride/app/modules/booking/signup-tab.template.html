@@ -12,7 +12,7 @@
            flex-xs="100"
            flex-gt-xs="70"
            layout="column">
-        <h2 class="md-subhead">New at listnride?</h2>
+        <h2 class="md-subhead">{{ 'booking.sign-in.new' | translate }}</h2>
         <br>
         <!--signup form-->
         <form
@@ -26,10 +26,10 @@
             <div layout="column">
               <div layout="row">
                 <md-button ng-click="signup.parent.authentication.connectFb()" class="md-primary md-lined lnr-btn-fb" style="margin: 0; padding: 0;" flex="50">
-                  Register with Facebook
+                  {{ 'booking.sign-in.register-facebook' | translate }}
                 </md-button>
                 <div layout flex="50" layout-align="center center">
-                  <a class="lnr-link" ng-click="showLogin = true">Already a member?</a>
+                  <a class="lnr-link" ng-click="showLogin = true">{{ 'booking.sign-in.already-member' | translate }}</a>
                 </div>
               </div>
               <div class="lnr-middle-divider">
@@ -113,7 +113,7 @@
                 type="submit"
                 class="md-primary md-raised"
               >
-                Register
+                {{ 'booking.sign-in.register' | translate }}
               </md-button>
             </div>
           </div>
@@ -125,10 +125,10 @@
           <div class="md-dialog-content" layout="column">
             <div layout="row">
               <md-button ng-click="signup.parent.authentication.connectFb()" class="md-primary md-lined lnr-btn-fb" style="margin: 0; padding: 0;" flex="50">
-                Register with Facebook
+                {{ 'booking.sign-in.register-facebook' | translate }}
               </md-button>
               <div layout flex="50" layout-align="center center">
-                <a class="lnr-link" ng-click="showLogin = false">No member yet?</a>
+                <a class="lnr-link" ng-click="showLogin = false">{{ 'booking.sign-in.not-member' | translate }}</a>
               </div>
             </div>
             <div class="lnr-middle-divider">
@@ -137,11 +137,18 @@
 
             <md-input-container>
               <label>{{ 'forms.email-address' | translate }}</label>
-              <input ng-model="loginDialog.email" name="email" required type="email" md-autofocus ng-pattern="/(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i"/>
+              <input
+                ng-model="loginDialog.email"
+                name="email"
+                required
+                type="email"
+                md-autofocus
+                ng-pattern="/(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i"
+              />
               <div ng-messages="loginForm.email.$error" role="alert">
-                <div ng-message="required">Please enter your email address.</div>
-                <div ng-message="email">This field must be a valid email address.</div>
-                <div ng-message="pattern">This field must be a valid email address.</div>
+                <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
+                <div ng-message="email">{{ 'forms.errors.valid-email' | translate }}</div>
+                <div ng-message="pattern">{{ 'forms.errors.valid-email' | translate }}</div>
               </div>
             </md-input-container>
 
@@ -149,9 +156,9 @@
               <label>{{ 'forms.password' | translate }}</label>
               <input type="password" ng-model="loginDialog.password" name="password" required ng-minlength="6" ng-maxlength="30"/>
               <div ng-messages="loginForm.password.$error" role="alert">
-                <div ng-message="required">Please enter a password.</div>
-                <div ng-message="maxlength">Password shouldn't be longer than 30 characters.</div>
-                <div ng-message="minlength">Password shouldn't be shorter than 6 characters.</div>
+                <div ng-message="required">{{ 'forms.errors.password-missing' | translate }}</div>
+                <div ng-message="minlength">{{ 'forms.errors.password-length' | translate }}</div>
+                <div ng-message="maxlength">{{ 'forms.errors.password-length' | translate }}</div>
               </div>
             </md-input-container>
 

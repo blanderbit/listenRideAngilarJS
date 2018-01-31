@@ -50,7 +50,18 @@
 }
 
 .lnr-payment-tab-image {
+    height: 20px;
+}
+
+.lnr-payment-tab-button {
     padding: 26px 0;
 }
 
+booking .md-label {
+    color: rgba(85, 85, 85, 1.0);
+}
+
+booking md-radio-button {
+    margin: 0;
+}
 

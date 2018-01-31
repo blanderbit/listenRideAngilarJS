@@ -267,6 +267,65 @@
       "meta-description": "La política de privacidad de la comunidad para compartir bicis de listnride se aplica al uso de la plataforma online"
     }
   },
+  "booking": {
+    "shopping": "Secure Shopping",
+    "pay-secure": "Pay secure with",
+    "footer": {
+      "questions": "Do you have questions about booking a bike?",
+      "call-us": "Call us +49 (0)30-120870330, Mo-Fr 9-18 pm.",
+      "email-us": "Or write us an email",
+      "support": "listnride Support"
+    },
+    "sign-in": {
+      "tab": "1. Sign In",
+      "new": "New at listnride?",
+      "register-facebook": "Register with Facebook",
+      "already-member": "Already a member?",
+      "register": "Register",
+      "not-member": "No member yet?"
+    },
+    "details": {
+      "tab": "2. Personal Details",
+      "invoice-address": "Invoice Address",
+      "verification": "Verification",
+      "send-sms": "We'll send you one time sms to your phone.",
+      "check-phone": "Please check your phone.",
+      "send-code": "Send Code",
+      "comfirm-code": "Confirmation code",
+      "enter-code": "Enter the pin that we just sent to your phone",
+      "success-code": "Success message",
+      "fail-code": "The code you entered is not correct. Try again or resend the SMS",
+      "resend": "Resend"
+    },
+    "payment": {
+      "tab": "3. Payment Method",
+      "select-method": "Select your Payment Method",
+      "subtitle": "Please select your favorite payment method. We only charge you after the lister accepted your request.",
+      "credit-card": "Credit Card",
+      "card-name": "Name on Card",
+      "invalid-name": "Please provide valid name",
+      "card-number": "Card Number",
+      "invalid-card": "Please provide a valid Card Number",
+      "invalid-card-number": "Card Number not valid",
+      "exp-month": "Exp. month",
+      "invalid-month": "Month not valid",
+      "invalid-year": "Year not valid",
+      "exp-year": "Exp. year",
+      "invalid-cvc": "CVC not valid",
+      "cvc": "CVC Number",
+      "pay-paypal": "Pay with Paypal"
+    },
+    "overview": {
+      "tab": "4. Overview",
+      "bike-rental": "Your bike rental",
+      "size": "Size",
+      "location": "Location",
+      "invoice-address": "Invoice Address",
+      "payment": "Payment",
+      "redeem-voucher": "Redeem Voucher",
+      "add": "Add"
+    }
+  },
   "toasts": {
     "update-profile-success": "Tu perfil se ha actualizado con éxito",
     "error": "Se ha producido un error. Asegúrate de que la conexión a Internet funcione y vuelve a intentarlo.",

@@ -11,14 +11,14 @@
          layout-padding>
       <div class="lnr-list-form"
            layout="column">
-        <p class="md-subhead">Select your Payment Method</p>
-        <p class="md-body-1">Please select your favorite payment method. We only charge you after the lister accepted your request.</p>
+        <p class="md-subhead">{{ 'booking.payment.select-method' | translate }}</p>
+        <p class="md-body-1">{{ 'booking.payment.subtitle' | translate }}</p>
         <div class="spacer-xs"></div>
         <md-radio-group ng-model="payment.parent.paymentMethod">
           <md-divider></md-divider>
             <div layout="row">
-              <md-radio-button value="1" class="md-primary" flex="80"> Credit Card</md-radio-button>
-              <div flex="20">
+              <md-radio-button value="1" class="md-primary lnr-payment-tab-button" flex="80">{{ 'booking.payment.credit-card' | translate }}</md-radio-button>
+              <div flex="20" layout="row" layout-align="end center">
                 <img
                   class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
                   ng-src="app/assets/ui_icons/lnr_logo_mastercard.svg"
@@ -35,7 +35,7 @@
               <!-- Cardholder name and Cardnumber -->
               <div class="lnr-input-containers" layout="row" layout-align="space-between none">
                 <md-input-container flex="25">
-                  <label>Name on Card</label>
+                  <label>{{ 'booking.payment.card-name' | translate }}</label>
                   <input name="cardholderName"
                          ng-model-options='{ debounce: 400 }'
                          type="text"
@@ -44,11 +44,11 @@
                   <div ng-messages="payment.parent.paymentForm.cardholderName.$error"
                        ng-show="payment.parent.paymentForm.cardholderName.$dirty"
                        role="alert">
-                    <div ng-message="required">Please provide valid name</div>
+                    <div ng-message="required">{{ 'booking.payment.invalid-name' | translate }}</div>
                   </div>
                 </md-input-container>
                 <md-input-container flex="25">
-                  <label>Card Number</label>
+                  <label>{{ 'booking.payment.card-number' | translate }}</label>
                   <input name="creditCardNumber"
                          ng-model-options='{ debounce: 400 }'
                          type="text"
@@ -60,55 +60,53 @@
                   <div ng-messages="payment.parent.paymentForm.creditCardNumber.$error"
                        ng-show="payment.parent.paymentForm.creditCardNumber.$dirty"
                        role="alert">
-                    <div ng-message="required"> Please provide a valid Card Number</div>
-                    <div ng-message="ccNumber"> {{payment.parent.paymentForm.creditCardNumber.$ccEagerType}} Card Number not valid
-                    </div>
+                    <div ng-message="required">{{ 'booking.payment.invalid-card' | translate }}</div>
+                    <div ng-message="ccNumber">{{payment.parent.paymentForm.creditCardNumber.$ccEagerType}} {{ 'booking.payment.invalid-card-number' | translate }}</div>
                   </div>
                 </md-input-container>
-
                 <md-input-container flex="15">
-                  <label>Exp. month</label>
+                  <label>{{ 'booking.payment.exp-month' | translate }}</label>
                   <input name="monthExpiry"
-                         ng-model-options='{ debounce: 400 }'
-                         ng-model="payment.parent.month_expiry"
-                         type="text"
-                         cc-exp-month
-                         ng-required="true"
+                     ng-model-options='{ debounce: 400 }'
+                     ng-model="payment.parent.month_expiry"
+                     type="text"
+                     cc-exp-month
+                     ng-required="true"
                   />
                   <div ng-messages="payment.parent.paymentForm.monthExpiry.$error"
                        ng-show="payment.parent.paymentForm.monthExpiry.$dirty"
                        role="alert">
-                    <div ng-message="ccExpMonth"> Month not valid</div>
-                    <div ng-message="parse"> Month not valid</div>
+                    <div ng-message="ccExpMonth">{{ 'booking.payment.invalid-month' | translate }}</div>
+                    <div ng-message="parse">{{ 'booking.payment.invalid-month' | translate }}</div>
                   </div>
                 </md-input-container>
                 <md-input-container flex="15">
-                  <label>Exp. year</label>
+                  <label>{{ 'booking.payment.exp-year' | translate }}</label>
                   <input name="yearExpiry"
-                         ng-model-options='{ debounce: 400 }'
-                         ng-model="payment.parent.year"
-                         cc-exp-year
-                         ng-required="true"/>
+                     ng-model-options='{ debounce: 400 }'
+                     ng-model="payment.parent.year"
+                     cc-exp-year
+                     ng-required="true"/>
                   <div ng-messages="payment.parent.paymentForm.yearExpiry.$error"
                        ng-show="payment.parent.paymentForm.yearExpiry.$dirty"
                        role="alert">
-                    <div ng-message="ccExpYear">Year not valid</div>
-                    <div ng-message="parse">Year not valid</div>
+                    <div ng-message="ccExpYear">{{ 'booking.payment.invalid-year' | translate }}</div>
+                    <div ng-message="parse">{{ 'booking.payment.invalid-year' | translate }}</div>
                   </div>
                 </md-input-container>
                 <md-input-container flex="15">
-                  <label>CVV Number</label>
+                  <label>{{ 'booking.payment.cvc' | translate }}</label>
                   <input name="securityNumber"
-                         ng-model-options='{ debounce: 400 }'
-                         ng-model="payment.parent.security_number"
-                         type="text"
-                         cc-cvc
-                         ng-required="true"/>
+                     ng-model-options='{ debounce: 400 }'
+                     ng-model="payment.parent.security_number"
+                     type="text"
+                     cc-cvc
+                     ng-required="true"/>
                   <div ng-messages="payment.parent.paymentForm.securityNumber.$error"
                        ng-show="payment.parent.paymentForm.securityNumber.$dirty"
                        role="alert">
-                    <div ng-message="required">CVC not valid</div>
-                    <div ng-message="ccCvc">CVC not valid</div>
+                    <div ng-message="required">{{ 'booking.payment.cvc' | translate }}</div>
+                    <div ng-message="ccCvc">{{ 'booking.payment.cvc' | translate }}</div>
                   </div>
                 </md-input-container>
               </div>
@@ -116,15 +114,28 @@
             </form>
           <md-divider></md-divider>
             <div layout="row" layout-align="space-between none">
-              <md-radio-button value="2" class="md-primary" flex="80">Paypal</md-radio-button>
-              <img
-                class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
-                ng-src="app/assets/ui_icons/lnr_logo_paypal.svg"
-                alt="PayPal"
-                flex="20"
+              <md-radio-button
+                value="2"
+                class="md-primary lnr-payment-tab-button"
+                flex="80"
               >
+                Paypal
+              </md-radio-button>
+              <div flex="20" layout="row" layout-align="end center">
+                <img
+                  class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
+                  ng-src="app/assets/ui_icons/lnr_logo_paypal.svg"
+                  alt="PayPal"
+                >
+              </div>
             </div>
-            <md-button class="md-raised md-primary" ng-hide="payment.parent.paymentMethod != 2" ng-click="payment.parent.openPaypal()">Pay with Paypal</md-button>
+            <md-button
+              class="md-raised md-primary"
+              ng-hide="payment.parent.paymentMethod != 2"
+              ng-click="payment.parent.openPaypal()"
+            >
+              {{ 'booking.payment.pay-paypal' | translate }}
+            </md-button>
           <md-divider></md-divider>
         </md-radio-group>
       </div>
