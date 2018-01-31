@@ -30,6 +30,16 @@ angular.module('booking', [])
         booking.tabsDisabled = false;
         booking.voucherCode = "";
 
+        // Get braintree token
+        // api.get('/users/' + authentication.userId() + '/token').then(
+        //   function (success) {
+        //     btClient = success.data.token;
+        //   },
+        //   function (error) {
+        //   }
+        // );
+
+
         // Fetch Bike Information
         api.get('/rides/' + booking.bikeId).then(
           function (success) {
