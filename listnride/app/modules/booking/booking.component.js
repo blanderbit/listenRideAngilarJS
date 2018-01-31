@@ -223,6 +223,7 @@ angular.module('booking', [])
             var data = { "confirmation_code": codeDigits.join('') };
             api.post('/users/' + $localStorage.userId + '/confirm_phone', data).then(
               function (success) {
+                booking.toggleConfirmButton();
                 booking.phoneConfirmed = 'success';
               },
               function (error) {

@@ -99,8 +99,9 @@
           <md-divider></md-divider>
           <br>
           <h2 class="md-subhead">{{ 'booking.details.verification' | translate }}</h2>
-          <p ng-show="details.parent.showConfirmButton">{{ 'booking.details.send-sms' | translate }}</p>
-          <p ng-show="!details.parent.showConfirmButton">{{ 'booking.details.check-phone' | translate }}</p>
+          <p ng-show="details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">{{ 'booking.details.send-sms' | translate }}</p>
+          <p ng-show="!details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">{{ 'booking.details.check-phone' | translate }}</p>
+          <p ng-show="details.parent.phoneConfirmed === 'success'">{{ 'booking.details.success-code' | translate }}</p>
 
           <!-- Phone Number and Send Button -->
           <div class="lnr-input-containers"
@@ -129,6 +130,7 @@
                 style="margin: 25px 0 0"
                 class="md-raised md-primary lnr-btn-inline"
                 ng-click="details.parent.sendSms(details.parent.detailsForm.phone_number)"
+                ng-hide="details.parent.phoneConfirmed === 'success'"
               >
                 <span>{{ 'booking.details.send-code' | translate }}</span>
               </md-button>
@@ -143,7 +145,7 @@
             <div layout="row" class="confirm-label">
               <strong>{{ 'booking.details.confirm-code' | translate }}</strong>
             </div>
-            <div layout="row">
+            <div layout="row" layout-align="start center">
               <div layout="row" flex="25" layout-align="start start">
                 <div class="lnr-sms-input">
                   <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
@@ -185,9 +187,9 @@
                 <div ng-show="details.parent.phoneConfirmed === 'progress'" class="text-default">
                   {{ 'booking.details.enter-code' | translate }}
                 </div>
-                <div ng-show="details.parent.phoneConfirmed === 'success'" class="text-default">
-                  {{ 'booking.details.success-code' | translate }}
-                </div>
+                <!--<div ng-show="details.parent.phoneConfirmed === 'success'" class="text-default">-->
+                  <!--{{ 'booking.details.success-code' | translate }}-->
+                <!--</div>-->
                 <div ng-show="details.parent.phoneConfirmed === 'error'" class="text-error">
                   {{ 'booking.details.fail-code' | translate }}
                 </div>

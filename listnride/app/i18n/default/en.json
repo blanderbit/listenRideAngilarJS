@@ -295,9 +295,9 @@
       "send-sms": "We'll send you one time sms to your phone.",
       "check-phone": "Please check your phone.",
       "send-code": "Send Code",
-      "comfirm-code": "Confirmation code",
+      "confirm-code": "Confirmation code",
       "enter-code": "Enter the pin that we just sent to your phone",
-      "success-code": "Success message",
+      "success-code": "Great. You are set.",
       "fail-code": "The code you entered is not correct. Try again or resend the SMS",
       "resend": "Resend"
     },
