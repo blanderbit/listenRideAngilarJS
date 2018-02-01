@@ -62,6 +62,15 @@ angular.module('booking', [])
           booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
         };
 
+        booking.resetPassword = function() {
+          //Set from error if any
+          var form = booking.loginForm;
+          form.email.$touched = true;
+          if (form.email.$modelValue) {
+            authentication.forgetGlobal(form.email.$modelValue)
+          }
+        };
+
         booking.tabCompleted = function(tabId) {
           return booking.selectedIndex > tabId ? "✔" : "    ";
         };

@@ -210,7 +210,17 @@ angular.
       var loginGlobal = function (form) {
         var obj = {
           email: form.email.$modelValue,
-          password: form.password.$modelValue
+          password: form.password.$modelValue,
+          target: 'login'
+        };
+
+        LoginDialogController(null, null, sha256, null, obj);
+      };
+
+      var forgetGlobal = function (email) {
+        var obj = {
+          email: email,
+          target: 'reset'
         };
 
         LoginDialogController(null, null, sha256, null, obj);
@@ -326,11 +336,15 @@ angular.
                 .position('top center')
             );
           }
-        }
+        };
 
         if (loginObj) {
-          loginDialog.requestLogin = true;
-          loginDialog.login ()
+          if (loginDialog.target === 'login') {
+            loginDialog.requestLogin = true;
+            loginDialog.login ()
+          } else if (loginDialog.target === 'reset') {
+            loginDialog.resetPassword()
+          }
         }
       };
 
@@ -433,7 +447,8 @@ angular.
         },
         connectFb: connectFb,
         signupGlobal: signupGlobal,
-        loginGlobal: loginGlobal
+        loginGlobal: loginGlobal,
+        forgetGlobal: forgetGlobal
       };
     }
   ]);
