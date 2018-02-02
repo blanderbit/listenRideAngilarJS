@@ -841,7 +841,9 @@
 				customOpenAnimation: null,
 				customCloseAnimation: null,
 				customArrowPrevSymbol: null,
-				customArrowNextSymbol: null
+				customArrowNextSymbol: null,
+				isWidthStatic: false,
+				showTimeDom: true
 			},opt);
 
 		opt.start = false;
@@ -1285,7 +1287,7 @@
 		}
 
 		function open(animationTime)
-		{
+		{	
 			calcPosition();
 			redrawDatePicker();
 			checkAndSetDefaultValue();
@@ -1347,6 +1349,7 @@
 
 		function updateCalendarWidth()
 		{
+			if (opt.isWidthStatic) return;
 			var gapMargin = box.find('.gap').css('margin-left');
 			if (gapMargin) gapMargin = parseInt(gapMargin);
 			var w1 = box.find('.month1').width();
@@ -1743,7 +1746,7 @@
 
 		function anyReservedDays(day)
 		{
-			var days = $("div.day.toMonth");
+			var days = $(box).find("div.day.toMonth");
 			if (day.length == 0 || days[0].attributes.time.value > day[0].attributes.time.value) return;
 			var lastDay = [days[days.length - 1]];
 			var start = day[0].attributes.time.value;
@@ -1753,8 +1756,9 @@
 			while( i < totalDays )
 			{
 				if ($(day).hasClass('date-reserved')) return markTmpInvalid(day, totalDays - i);
-				var nextDay = parseInt(day[0].attributes.time.value) + 86400000;
-				day = $("div.day[time=" + nextDay + "]");
+				// var nextDay = parseInt(day[0].attributes.time.value) + 86400000;
+				// day = $("div.day[time=" + nextDay + "]");
+				day = $(days).eq(i + 1)
 				i++;
 			}
 		}
@@ -2273,15 +2277,18 @@
 
 			}
 			//+'</div>'
-			html +=	'<div style="clear:both;height:0;font-size:0;"></div>' +
-				'<div class="time">' +
-				'<div class="time1"></div>';
-			if ( ! opt.singleDate ) {
-				html += '<div class="time2"></div>';
+			if (opt.showTimeDom) 
+			{
+				html +=	'<div style="clear:both;height:0;font-size:0;"></div>' +
+					'<div class="time">' +
+					'<div class="time1"></div>';
+				if ( ! opt.singleDate ) {
+					html += '<div class="time2"></div>';
+				}
+				html += '</div>' +
+					'<div style="clear:both;height:0;font-size:0;"></div>' +
+					'</div>';
 			}
-			html += '</div>' +
-				'<div style="clear:both;height:0;font-size:0;"></div>' +
-				'</div>';
 
 			html += '<div class="footer">';
 			if (opt.showShortcuts)
@@ -2473,7 +2480,7 @@
 		}
 
 		function toLocalTimestamp(t)
-		{
+		{	
 			if (moment.isMoment(t)) t = t.toDate().getTime();
 			if (typeof t == 'object' && t.getTime) t = t.getTime();
 			if (typeof t == 'string' && !t.match(/\d{13}/)) t = moment(t,opt.format).toDate().getTime();
