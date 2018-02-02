@@ -92,12 +92,26 @@ angular.
         });
       };
 
+      var loginFb = function(email, facebookId) {
+        var user = {
+          'user': {
+            'email': email,
+            'facebook_id': facebookId
+          }
+        };
+        api.post('/users/login', user).then(function(response) {
+          setCredentials(response.data);
+          $rootScope.$broadcast('user_login');
+        }, function(error) {
+        });
+      };
+
       var connectFb = function(inviteCode, requestFlow) {
         ezfb.getLoginStatus(function(response) {
           if (response.status === 'connected') {
             var accessToken = response.authResponse.accessToken;
             ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-              signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name, inviteCode, requestFlow);
+              loginFb(response.email, response.id);
             });
           } else {
             ezfb.login(function(response) {
@@ -265,7 +279,6 @@ angular.
           api.post('/users/login', user).then(function(response) {
             setCredentials(response.data);
             showLoginSuccess();
-            $rootScope.$broadcast('user_login');
             if (!response.data.has_address || !response.data.confirmed_phone || response.data.status === 0) {
               verification.openDialog(false);
             }
