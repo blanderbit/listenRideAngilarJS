@@ -16,9 +16,15 @@
 
   <md-dialog-content class="" layout="column">
     <div class="md-dialog-content" layout="column">
-      <form ng-cloak name="availabilityForm" ng-submit="availabilityDialog.update(availabilityForm)" novalidate>
+      <div layout="column" layout-align="center center" ng-if="!availabilityDialog.inputs.length">
+        <p>Here you can set availability on current bike</p>
+        <md-button type="submit" class="md-accent md-raised md-confirm-button md-primary" ng-click="availabilityDialog.addInput()">
+          Let's start! 
+        </md-button>
+      </div>
+      <form ng-if="availabilityDialog.inputs.length" ng-cloak name="availabilityForm" ng-submit="availabilityDialog.update(availabilityForm)" novalidate>
         <div class="availability-list">
-          <div layout="row" layout-align="center center" ng-repeat="input in availabilityDialog.inputs track by $index">
+          <div layout="row" layout-align="center center" ng-repeat="input in availabilityDialog.inputs">
             <div flex="10"></div>
             <div flex="80">
               <input-range data="input"></input-range>

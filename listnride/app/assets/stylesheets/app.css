@@ -2078,3 +2078,45 @@ and (max-device-width : 568px) {
 .ng-hide-add, .ng-hide-remove {
   display: block !important;
 }
+
+/*-----------------------------------------------------------------------------------*/
+/*  Material Modifiers
+/*-----------------------------------------------------------------------------------*/
+
+md-input-container.md-icon-right > md-icon.md-icon--btn {
+  display: flex;
+  width: 35px;
+  height: 100%;
+  background: #f2f2f2;
+  border: 1px solid #d3d8dc;
+  padding: 0 6px;
+  border-radius: 0 4px 4px 0;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  daterangepicker custom styles
+/*-----------------------------------------------------------------------------------*/
+
+.date-picker-wrapper--ngDialog {
+  z-index: 100;
+}
+
+.date-picker-wrapper--two-months .month-wrapper {
+  display: flex;
+}
+
+.date-picker-wrapper--two-months .gap {
+  margin: 0;
+  width: 0;
+}
+
+.date-picker-wrapper--two-months .month-wrapper table {
+  flex: 0 0 50%;
+  max-width: 50%;
+  width: 50%;
+}
