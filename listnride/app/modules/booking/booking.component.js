@@ -15,7 +15,6 @@ angular.module('booking', [])
         $translate, $filter, authentication, api, price, voucher) {
         var booking = this;
         //TODO: REMOVE!
-        console.log(ENV.btKey);
         var btAuthorization = ENV.btKey;
         var btClient;
 
@@ -122,6 +121,7 @@ angular.module('booking', [])
         };
 
         booking.tokenizeCard = function() {
+          console.log(booking.securityNumber);
           btClient.request({
             endpoint: 'payment_methods/credit_cards',
             method: 'post',
@@ -143,6 +143,7 @@ angular.module('booking', [])
                   booking.nextTab();
                 },
                 function (error) {
+                  console.log(error);
                 }
               );
             }
@@ -181,7 +182,7 @@ angular.module('booking', [])
             function (success) {
               booking.user = success.data;
               booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
-              if (booking.user.has_payout_method) {
+              if (booking.user.status == 3) {
                 booking.selectedIndex = 3;
               }
               else if (booking.user.has_phone_number && booking.user.has_address) {
@@ -192,6 +193,15 @@ angular.module('booking', [])
               $timeout(function () {
                 booking.hidden = false;
               }, 120);
+              api.get('/users/' + $localStorage.userId + '/current_payment').then(
+                function(response) {
+                  booking.user.current_payment_method = response.data;
+                  console.log(booking.user);
+                },
+                function(error) {
+
+                }
+              );
             },
             function (error) {
             }

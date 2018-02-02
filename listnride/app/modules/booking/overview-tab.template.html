@@ -44,13 +44,13 @@
         <div layout="row" layout-align="space-between none">
           <div flex="33">
             <p class="md-subhead">{{ 'booking.overview.invoice-address' | translate }}</p>
-            <p class="md-body-2">Frank Erler</p>
-            <p class="md-body-1">Hausburgstraße 24<br>10249 Berlin<br>Germany</p>
+            <p class="md-body-2">{{ overview.parent.user.first_name + " " + overview.parent.user.last_name }}</p>
+            <p class="md-body-1">{{ overview.parent.user.street }}<br>{{ overview.parent.user.zip + " " + overview.parent.user.city }}<br>{{ overview.parent.user.country }}</p>
           </div>
           <div flex="33">
             <p class="md-subhead">{{ 'booking.overview.payment' | translate }}</p>
-            <p class="md-body-2">Mastercard</p>
-            <p class="md-body-1">**** **** **** **31</p>
+            <p class="md-body-2">{{ overview.parent.user.current_payment_method.family.split(" ")[0] }}</p>
+            <p class="md-body-1">**** **** **** {{ overview.parent.user.current_payment_method.family.split(" ")[1] }}</p>
           </div>
           <div flex="33">
             <p class="md-subhead">{{ 'booking.overview.redeem-voucher' | translate }}</p>
