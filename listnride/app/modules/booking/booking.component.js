@@ -8,14 +8,15 @@ angular.module('booking', [])
     controllerAs: 'booking',
     controller: [
       '$localStorage', '$rootScope', '$scope', '$state', '$stateParams', '$mdToast',
-      '$timeout', '$translate', '$filter', 'authentication',
+      '$timeout', 'ENV', '$translate', '$filter', 'authentication',
       'api', 'price', 'voucher',
       function BookingController(
-        $localStorage, $rootScope, $scope, $state, $stateParams, $mdToast, $timeout,
+        $localStorage, $rootScope, $scope, $state, $stateParams, $mdToast, $timeout, ENV,
         $translate, $filter, authentication, api, price, voucher) {
         var booking = this;
         //TODO: REMOVE!
-        var btAuthorization = 'sandbox_g42y39zw_348pk9cgf3bgyw2b';
+        console.log(ENV.btKey);
+        var btAuthorization = ENV.btKey;
         var btClient;
 
         booking.startDate = new Date($stateParams.startDate);
@@ -29,16 +30,6 @@ angular.module('booking', [])
         booking.hidden = true;
         booking.tabsDisabled = false;
         booking.voucherCode = "";
-
-        // Get braintree token
-        // api.get('/users/' + authentication.userId() + '/token').then(
-        //   function (success) {
-        //     btClient = success.data.token;
-        //   },
-        //   function (error) {
-        //   }
-        // );
-
 
         // Fetch Bike Information
         api.get('/rides/' + booking.bikeId).then(
