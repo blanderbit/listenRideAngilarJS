@@ -64,7 +64,7 @@ angular.
         $state.go("user", {userId: $localStorage.userId});
       };
 
-      var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName, inviteCode) {
+      var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName, inviteCode, requestFlow) {
         var invited = !!inviteCode;
         var user = {
           "user": {
@@ -81,25 +81,29 @@ angular.
 
         api.post("/users", user).then(function(success) {
           setCredentials(success.data);
-          verification.openDialog(false, invited, false, showProfile);
+          if (requestFlow) {
+            $rootScope.$broadcast('user_created');
+          } else {
+            verification.openDialog(false, invited, false, showProfile)
+          }
           $analytics.eventTrack('Facebook Sign-Up', {  category: 'Sign Up', label: 'Quick Sign-Up Complete'});
         }, function(error) {
           showSignupError();
         });
       };
 
-      var connectFb = function(inviteCode) {
+      var connectFb = function(inviteCode, requestFlow) {
         ezfb.getLoginStatus(function(response) {
           if (response.status === 'connected') {
             var accessToken = response.authResponse.accessToken;
             ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-              signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name, inviteCode);
+              signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name, inviteCode, requestFlow);
             });
           } else {
             ezfb.login(function(response) {
               var accessToken = response.authResponse.accessToken;
               ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name);
+                signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name, false, requestFlow);
               });
             }, {scope: 'email'});
           }
@@ -210,7 +214,17 @@ angular.
       var loginGlobal = function (form) {
         var obj = {
           email: form.email.$modelValue,
-          password: form.password.$modelValue
+          password: form.password.$modelValue,
+          target: 'login'
+        };
+
+        LoginDialogController(null, null, sha256, null, obj);
+      };
+
+      var forgetGlobal = function (email) {
+        var obj = {
+          email: email,
+          target: 'reset'
         };
 
         LoginDialogController(null, null, sha256, null, obj);
@@ -251,6 +265,7 @@ angular.
           api.post('/users/login', user).then(function(response) {
             setCredentials(response.data);
             showLoginSuccess();
+            $rootScope.$broadcast('user_login');
             if (!response.data.has_address || !response.data.confirmed_phone || response.data.status === 0) {
               verification.openDialog(false);
             }
@@ -326,11 +341,15 @@ angular.
                 .position('top center')
             );
           }
-        }
+        };
 
         if (loginObj) {
-          loginDialog.requestLogin = true;
-          loginDialog.login ()
+          if (loginDialog.target === 'login') {
+            loginDialog.requestLogin = true;
+            loginDialog.login ()
+          } else if (loginDialog.target === 'reset') {
+            loginDialog.resetPassword()
+          }
         }
       };
 
@@ -433,7 +452,8 @@ angular.
         },
         connectFb: connectFb,
         signupGlobal: signupGlobal,
-        loginGlobal: loginGlobal
+        loginGlobal: loginGlobal,
+        forgetGlobal: forgetGlobal
       };
     }
   ]);
