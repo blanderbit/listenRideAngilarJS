@@ -833,6 +833,25 @@
       });
 
       $stateProvider.state({
+        name: 'rethink',
+        url: '/rent-rethink-bikes',
+        template: '<rethink></rethink>',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["meta.brand-integration.rethink.meta-title", "meta.brand-integration.rethink.meta-descr"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["meta.brand-integration.rethink.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.brand-integration.rethink.meta-descr"]);
+                        ngMeta.setTag("og:image", "app/assets/ui_images/opengraph/rethink.jpg");
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'votec',
         url: '/rent-votec-bikes',
         template: '<votec></votec>',
