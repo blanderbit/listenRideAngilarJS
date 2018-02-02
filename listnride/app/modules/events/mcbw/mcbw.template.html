@@ -44,7 +44,7 @@
       <md-tab label="②">
         <md-content>
           <div flex-gt-xs layout="row" layout-wrap layout-padding>
-            <bike-card ng-repeat="bike in mcbw.bikes2" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+            <bike-card ng-repeat="bike in mcbw.bikes2" bike="bike" ng-if="bike.city == 'München'" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
           </div>
         </md-content>
       </md-tab>
