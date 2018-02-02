@@ -404,6 +404,8 @@
     "ratings": "Ratings",
     "meta-title": "{{name}}'s profile",
     "meta-description": "Rent bikes on listnride from {{name}}.",
+    "company-meta-title": "Company {{company}}",
+    "company-meta-description": "Rent bikes on listnride from {{company}}.",
     "availability": "Availability",
     "not-available": "Not available",
     "verified": "verified"
@@ -576,7 +578,7 @@
       "bicycle-number": "Bicycle No.",
       "frame-number": "Frame number",
       "custom-fields": "Additional fields",
-      "details": "Details",
+      "notes": "Notes",
       "frame_size": "Frame size",
       "bicycle_number": "Bicycle number",
       "frame_number": "Frame number"
