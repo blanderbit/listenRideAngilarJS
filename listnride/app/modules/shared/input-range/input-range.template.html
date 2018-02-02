@@ -1,5 +1,5 @@
 <div layout="row" layout-align="center center">
-  <md-input-container flex md-no-float class="lnr-mv8 input-range__before">
+  <md-input-container flex md-no-float class="lnr-mv8 input-range__before" ng-class="{'md-input-has-value': inputRange.data.startDate}">
     <input value="{{inputRange.data.startDate | amFromUnix | amDateFormat:'DD.MM.YYYY'}}" placeholder="{{ 'availability.start-from' | translate }}">
     </input>
     <md-icon md-svg-src="app/assets/ui_icons/icn_event_note.svg" class="md-icon--btn"></md-icon>

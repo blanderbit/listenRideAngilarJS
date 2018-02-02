@@ -114,7 +114,7 @@ angular.module('listings', []).component('listings', {
         }
       };
 
-      var AvailabilityController = function (bikeId) {
+      var AvailabilityController = function (bike) {
         var availabilityDialog = this;
         availabilityDialog.inputs = [];
         availabilityDialog.removedInputs = [];
@@ -125,47 +125,39 @@ angular.module('listings', []).component('listings', {
           $mdDialog.hide();
         };
 
-        // @TODO: take availabilities with get response with params maxInputs
-        //
-        // api.get('/rides/' + bikeId + '/availabilities/?items=' + maxInputs).then(
-        //   function (response) {
-        //     availabilityDialog.availabilities = response;
-        //     availabilityDialog._checkMax()
-        //   },
-        //   function (error) {
-        //   }
-        // );
-
-        availabilityDialog._checkMax = function(){
+        availabilityDialog._checkMax = function () {
           availabilityDialog.isMaxInputs = availabilityDialog.inputs.length >= availabilityDialog.maxInputs ? true : false;
         }
 
-        availabilityDialog._markSaved = function() {
-          availabilityDialog.inputs.forEach(function(item, i, arr){
-            arr[i].isSaved = true;
-          });
+        if (bike.availabitilyId) {      
+          api.get('/rides/' + bikeId + '/availabilities/' + availabitilyId).then(
+            function (response) {
+              availabilityDialog.inputs = response;
+              availabilityDialog._checkMax()
+            },
+            function (error) {
+            }
+          );
+        } else {
+          availabilityDialog.inputs = [
+            // TEST DATA
+            {
+              'startDate': 1517242765,
+              'duration': 5
+            },
+            {
+              'startDate': 1617242765,
+              'duration': 10
+            },
+            {
+              'startDate': 1717242765,
+              'duration': 20
+            },
+            {}
+          ];
+          availabilityDialog._checkMax();
         }
         
-        // TEST DATA
-        availabilityDialog.inputs = [
-          {
-            'startDate': '1616883776',
-            'duration': '5'
-          },
-          {
-            'startDate': '1716883776',
-            'duration': '10'
-          },
-          {
-            'startDate': '1816883776',
-            'duration': '20'
-          },
-          {}
-        ];
-        availabilityDialog._checkMax();
-        availabilityDialog._markSaved();
-
-
         availabilityDialog.addInput = function () {
           if (!availabilityDialog.isMaxInputs) {
             availabilityDialog.inputs.push({});
@@ -176,21 +168,27 @@ angular.module('listings', []).component('listings', {
         availabilityDialog.removeInput = function (index) {
           var removedData = availabilityDialog.inputs.splice(index, 1);
           availabilityDialog._checkMax();
-          if (removedData[0].isSaved) {
-            availabilityDialog.removedInputs.push(removedData[0]);
-          }
         }
 
         availabilityDialog.update = function () {
-          // api.put('/rides/' + bikeId + '/availabilities/?items=' + maxInputs).then(
-          //   function (response) {
-          //     availabilityDialog.availabilities = response;
-          //     availabilityDialog._checkMax()
-          //   },
-          //   function (error) {
-          //   }
-          // );
-          availabilityDialog._markSaved();
+          if (bike.availabitilyId) {
+            api.put('/rides/' + bikeId + '/availabilities/' + availabitilyId, availabilityDialog.inputs).then(
+              function (response) {
+                $mdDialog.hide();
+              },
+              function (error) {
+              }
+            );
+          } else {
+            // api.post('/rides/' + bikeId + '/availabilities/' + availabitilyId, availabilityDialog.inputs).then(
+            //   function (response) {
+            //     $mdDialog.hide();
+            //   },
+            //   function (error) {
+            //   }
+            // );
+            $mdDialog.hide();
+          }
         }
       };
 
@@ -275,7 +273,7 @@ angular.module('listings', []).component('listings', {
         });
       };
 
-      listings.changeAvailability = function (id, event) {
+      listings.changeAvailability = function (bike, event) {
         $mdDialog.show({
           controller: AvailabilityController,
           controllerAs: 'availabilityDialog',
@@ -286,8 +284,9 @@ angular.module('listings', []).component('listings', {
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,
           fullscreen: true,
+          escapeToClose: false,
           locals: {
-            bikeId: id
+            bike: bike
           }
         });
       };
