@@ -175,14 +175,15 @@
       "text": "Durante la Berliner Fahrradschau queremos explorar contigo nuestro parque de cross local, el bosque Grunewaldcon inc, reíbles senderos. <br><br>El 5 de marzo, a las 10 en punto, comenzamos a andar en bici desde la entrada principal de la BFS en STATION Berlín. Esta ruta para socializar dura aprox. 3 horas / 50 km en la naturaleza y vuelves con las pilas bien cargadas. Recomendamos encarecidamente una bicicleta CX/Gravel, ropa de abrigo y estar en forma. ¡Es necesario llevar casco! <br><br>En caso de que necesites una bici adecuada o te gustase probar una nueva bici de cross, consulta las fantásticas bicis que ofrece <a href=\"http://www.votec.de\" target=\"_blank\">Votec </a>y nuestra comunidad a continuación. Si deseas unirte, tienes que <a target=\"_blank\" href=\"https://ti.to/listnride/crossride\">registrarte </a>. Como parte del programa BFS, te ofrecemos un ticket con descuento para el espectáculo. Después de registrarte para la ruta CX de listnride, obtienes un código de cupón para la <a target=\"_blank\" href=\"https://berlinerfahrradschau.de/en/tickets/\">compra del ticket</a>."
     },
     "mcbw": {
-      "description": "Explore Munich en bici, ¡anda en bici con listnride!",
-      "subdescription": "En colaboración con Brompton y Ampler alquilamos bicis fantásticas de forma gratuita",
-      "subhead-1": "El nuevo alquiler de bicis",
-      "subhead-2": "Alquila una bici gratis",
-      "text-1": "Concebida como el Airbnb de las bicis, listnride ofrece una alternativa al alquiler de bicis clásico: propietarios particulares, distribuidores o fabricantes ofrecen sus bicis en alquiler en listnride. Turistas, ciudadanos, familias, deportistas y viajeros de negocios alquilan la bici adecuada a su estilo y necesidades.",
-      "text-2": "De manera especial para la MCBW, los visitantes pueden alquilar una bici de las marcas <b>Bicicleta plegable Brompton </b>y <b>Bici eléctrica Ampler</b>gratis <b>(código de descuento: 10FORU) </b>durante medio día. listnride persigue la visión de ofrecer a cuantas más personas mejor de cualquier parte del mundo acceso sin complicaciones a bicis de alta calidad y con estilo. Si quieres explorar Múnich, ¡anda en bici con listnride!",
-      "location-description": "Elige tu ubicación",
-      "location-text": "Las dos ubicaciones son <b>① Munix Finest Bicycles </b>en Wörthstrasse 11 y <b>② listnride</b> en Pündterplatz 1"
+      "title": "",
+      "description": "Explore Munich by bike, go cycling with listnride!",
+      "subdescription": "Together with Munix Finest Bicycles and Ampler we rent out fantastic bikes",
+      "subhead-1": "The new bike rental",
+      "subhead-2": "Rent a bike",
+      "text-1": "Conceived as the Airbnb for bicycles, listnride offers an alternative to the classic bike rental: private owners, dealers or manufacturers offer their bicycles for rent on listnride. Tourists, citizens, families, sportsmen and business travelers rent the right bike for their style and needs.",
+      "text-2": "Especially for the MCBW, visitors can rent a bike of the brands <b>Urban Arrow</b>, <b>I:sy</b>, <b>Stromer</b>, <b>Brompton</b> and <b>Ampler</b> <b>(Voucher Code: 10FORU)</b>. listnride pursues the vision of offering as many people anywhere in the world uncomplicated access to high-quality, stylish bicycles. If you want to explore Munich, go cycling with listnride!",
+      "location-description": "Choose your location",
+      "location-text": "The two locations are <b>① Munix Finest Bicycles</b> in Wörthstraße 11 and <b>② listnride</b> at Pündterplatz 1"
     },
     "cwd": {
       "home": {
