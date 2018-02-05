@@ -330,6 +330,7 @@
     "add-voucher-error": "Purtroppo, il buono in dotazione non è valido.",
     "verification-email-sent": "Un messaggio di posta elettronica, con un link di conferma, è stato inviato al tuo indirizzo email. Questo potrebbe richiedere alcuni minuti, se non hai ricevuto nulla controlla la cartella spam.",
     "could-not-sign-up": "Impossibile registrarsi. Sembra che l'indirizzo email fornito sia già in uso.",
+    "successfully-sign-up": "You have successfully signed up. Welcome!",
     "successfully-logged-in": "Accesso avvenuto. Bentornato!",
     "successfully-logged-out": "Ti sei disconnesso.",
     "could-not-log-in": "Impossibile accedere. Assicurati di essere già iscritto e controlla se le tue credenziali sono valide.",

@@ -337,6 +337,7 @@
     "add-voucher-error": "Der angegebene Gutschein ist leider nicht gültig.",
     "verification-email-sent": "Eine Email mit Bestätigungslink wurde an deine Email-Adresse gesendet. Dies kann ein paar Minuten dauern, falls du nichts findest schau bitte auch in deinem Spam-Ordner nach.",
     "could-not-sign-up": "Registrierung fehlgeschlagen. Die angegebene Email-Adresse ist bereits in Benutzung.",
+    "successfully-sign-up": "You have successfully signed up. Welcome!",
     "successfully-logged-in": "Erfolgreich eingeloggt. Willkommen zurück!",
     "successfully-logged-out": "Du bist ausgeloggt.",
     "could-not-log-in": "Login fehlgeschlagen. Bitte stell sicher dass du bereits registriert bist und deine Anmelde-Daten stimmen.",

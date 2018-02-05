@@ -337,6 +337,7 @@
     "add-voucher-error": "De ingevoerde code is niet geldig.",
     "verification-email-sent": "een email met activeringslink is aan je e-mailadres verstuurd. De ontvangst kan een paar minuten duren, indien je niks in je inbox ziet verschijnen, kijk dan even in je spamfolder.",
     "could-not-sign-up": "Aanmelden mislukt. Het lijkt erop dat het ingegeven emailadres al in gebruik is.",
+    "successfully-sign-up": "You have successfully signed up. Welcome!",
     "successfully-logged-in": "Met succes ingelogd. Welkom terug!",
     "successfully-logged-out": "Je bent uitgelogd.",
     "could-not-log-in": "Inloggen mislukt. Check of je je al hebt geregistreerd en je inloggegevens correct zijn.",

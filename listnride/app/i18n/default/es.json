@@ -334,6 +334,7 @@
     "add-voucher-error": "Por desgracia, el cupón facilitado no es válido.",
     "verification-email-sent": "Se envió un correo electrónico con un enlace de confirmación a tu dirección de correo electrónico. Puede tardar unos minutos, si no has recibido nada, echa un vistazo a la carpeta de spam.",
     "could-not-sign-up": "No ha podido registrarse. Parece que la dirección de correo electrónico ya se está utilizando.",
+    "successfully-sign-up": "You have successfully signed up. Welcome!",
     "successfully-logged-in": "Ha iniciado sesión correctamente. Bienvenido de nuevo.",
     "successfully-logged-out": "Has cerrado la sesión.",
     "could-not-log-in": "No se pudo iniciar sesión. Asegúrate de que te has registrado y que tus credenciales sean válidas.",

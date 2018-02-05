@@ -338,6 +338,7 @@
     "add-voucher-error": "Unfortunately, the supplied voucher is not valid.",
     "verification-email-sent": "An email with a confirmation link was sent to your email address. This may take a few minutes, if you didn't receive anything also have a look in your spam folder.",
     "could-not-sign-up": "Could not sign up. It seems the email address provided is already in use.",
+    "successfully-sign-up": "You have successfully signed up. Welcome!",
     "successfully-logged-in": "Successfully logged in. Welcome back!",
     "successfully-logged-out": "You're logged out.",
     "could-not-log-in": "Could not log in. Please make sure you're signed up already and your credentials are valid.",
