@@ -51,12 +51,40 @@ angular.
       // defined outside so that can be used out of sign up controller
       // used in request booking flow
        
+      var showSignupSuccess = function() {
+        $mdToast.show(
+          $mdToast.simple()
+            .textContent($translate.instant('toasts.successfully-sign-up'))
+            .hideDelay(3000)
+            .position('top center')
+        );
+      };
+
       var showSignupError = function() {
         $mdToast.show(
           $mdToast.simple()
           .textContent($translate.instant('toasts.could-not-sign-up'))
           .hideDelay(4000)
           .position('top center')
+        );
+      };
+
+      var showLoginSuccess = function() {
+        $mdDialog.hide();
+        $mdToast.show(
+          $mdToast.simple()
+            .textContent($translate.instant('toasts.successfully-logged-in'))
+            .hideDelay(3000)
+            .position('top center')
+        );
+      };
+
+      var showLoginError = function() {
+        $mdToast.show(
+          $mdToast.simple()
+            .textContent($translate.instant('toasts.could-not-log-in'))
+            .hideDelay(3000)
+            .position('top center')
         );
       };
 
@@ -182,6 +210,7 @@ angular.
             //TODO: refactor this logic
             if (signupDialog.requestSignup) {
               $rootScope.$broadcast('user_created');
+              // showSignupSuccess();
             } else {
               if (signupDialog.business) {
                 signupDialog.createBusiness();
@@ -249,25 +278,6 @@ angular.
         var loginDialog = loginObj || this;
 
         loginDialog.requestLogin = false;
-
-        var showLoginSuccess = function() {
-          $mdDialog.hide();
-          $mdToast.show(
-            $mdToast.simple()
-            .textContent($translate.instant('toasts.successfully-logged-in'))
-            .hideDelay(3000)
-            .position('top center')
-          );
-        };
-
-        var showLoginError = function() {
-          $mdToast.show(
-            $mdToast.simple()
-            .textContent($translate.instant('toasts.could-not-log-in'))
-            .hideDelay(4000)
-            .position('top center')
-          );
-        };
 
         var loginFb = function(email, facebookId) {
           var user = {
