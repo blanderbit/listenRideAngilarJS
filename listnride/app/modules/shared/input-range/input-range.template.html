@@ -1,13 +1,41 @@
-<div layout="row" layout-align="center center">
-  <md-input-container flex md-no-float class="lnr-mv8 input-range__before" ng-class="{'md-input-has-value': inputRange.data.startDate}">
-    <input value="{{inputRange.data.startDate | amFromUnix | amDateFormat:'DD.MM.YYYY'}}" placeholder="{{ 'availability.start-from' | translate }}">
+<div layout="row" layout-align="center center" layout-wrap>
+  <md-input-container flex-xs="100" flex md-no-float 
+    class="lnr-mv8 js-datapicker"
+    ng-class="{'md-input-has-value': vm.data.startDate}">
+
+    <input
+      type="text"
+      value="{{vm.data.startDate | amFromUnix | amDateFormat:'DD.MM.YYYY'}}"
+      placeholder="{{ 'availability.start-from' | translate }}"
+      readonly
+      style="padding: 0 55px 0 20px;">
     </input>
-    <md-icon md-svg-src="app/assets/ui_icons/icn_event_note.svg" class="md-icon--btn"></md-icon>
+
+    <md-icon
+      md-svg-src="app/assets/ui_icons/icn_event_note.svg"
+      class="md-icon--btn">
+    </md-icon>
   </md-input-container>
-  <span flex="15" align="center" class="lnr-lh0 lnr-fs0" ng-click="inputRange.changeCalendarDates();"><i class="lnr-dash-input-divider"></i></span>
-  <md-input-container flex md-no-float class="lnr-mv8 input-range__end" ng-click="inputRange.openCalendar($event);">
-    <input value="{{inputRange.data.startDate | amFromUnix | amAdd : inputRange.data.duration : 'days' | amDateFormat:'DD.MM.YYYY'}}" placeholder="{{ 'availability.end-at' | translate }}">
+
+  <span hide-xs flex="15" align="center" class="lnr-lh0 lnr-fs0">
+    <i class="lnr-dash-input-divider"></i>
+  </span>
+
+  <md-input-container flex-xs="100" flex md-no-float
+    class="lnr-mv8"
+    ng-click="vm.openCalendar($event);">
+
+    <input
+      type="text"
+      value="{{vm.data.startDate | amFromUnix | amAdd : vm.data.duration : 'days' | amDateFormat:'DD.MM.YYYY'}}"
+      placeholder="{{ 'availability.end-at' | translate }}"
+      readonly
+      style="padding: 0 55px 0 20px;">
     </input>
-    <md-icon md-svg-src="app/assets/ui_icons/icn_event_note.svg" class="md-icon--btn"></md-icon>
+
+    <md-icon
+      md-svg-src="app/assets/ui_icons/icn_event_note.svg"
+      class="md-icon--btn">
+    </md-icon>
   </md-input-container>
 </div>

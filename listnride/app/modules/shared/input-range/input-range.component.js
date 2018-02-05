@@ -7,20 +7,28 @@ angular
       restrict: 'E',
       transclude: true,
       templateUrl: 'app/modules/shared/input-range/input-range.template.html',
-      controllerAs: 'inputRange',
+      controllerAs: 'vm',
       bindToController: {  
         data: '='
       },
       controller: ['$scope', inputRangeController],
       link: function ($scope, element, attrs) {
-        $scope.el = angular.element(element[0]).find('.input-range__before');
+        $scope.el = angular.element(element[0]).find('.js-datapicker');
       }
     }
   });
 
 
 function inputRangeController($scope) {
-  var inputRange = this;
+  var vm = this;
+
+  vm._updateData = _updateData;
+  vm._convertFromUnix = _convertFromUnix;
+  vm.$postLink = postLink;
+  vm.$onDestroy = onDestroy;
+  vm.openCalendar = openCalendar;
+
+  ////////////
 
   /**
   * Function to convert unixtimestamp into Date object
@@ -28,7 +36,7 @@ function inputRangeController($scope) {
   * @param {Number} date unixtimestamp format
   * @return {Object} Moment Object
   */
-  inputRange._convertFromUnix = function (date) {
+  function _convertFromUnix(date) {
     return moment.unix(date);
   }
 
@@ -38,7 +46,7 @@ function inputRangeController($scope) {
   * @param {Object} date1 Date Object with first chosen date
   * @param {Object} date2 Date Object with second chosen date
   */
-  inputRange._updateData = function (date1, date2) {
+  function _updateData(date1, date2) {
     date1 = moment(date1);
     date2 = moment(date2);
 
@@ -49,12 +57,12 @@ function inputRangeController($scope) {
       'duration': Math.abs(duration)
     }
 
-    angular.extend(inputRange.data, newData);
+    angular.extend(vm.data, newData);
     
     $scope.$apply();
   }
   
-  inputRange.$postLink = function () {
+  function postLink() {
     $scope.el.dateRangePicker({
       autoClose: true,
       showTopbar: false,
@@ -62,28 +70,28 @@ function inputRangeController($scope) {
       showTimeDom: false,
       extraClass: 'date-picker-wrapper--ngDialog date-picker-wrapper--two-months'
     }).bind('datepicker-change', function (event, obj) {
-        inputRange._updateData(obj.date1, obj.date2);
+        vm._updateData(obj.date1, obj.date2);
     });
 
-    // save this data, because mdDialog destroys elements before inputRange.$onDestroy
+    // save this data, because mdDialog destroys elements before $onDestroy method
     $scope.el.dataRange = $scope.el.data('dateRangePicker');
 
-    if (inputRange.data.startDate) {
+    if (vm.data.startDate) {
       // set range to datepicker with datepicker special method
       // setDateRange({String}, {String}) 
-      var startDate = inputRange._convertFromUnix(inputRange.data.startDate);
-      var lastDate = startDate.clone().add(inputRange.data.duration, 'd');
+      var startDate = vm._convertFromUnix(vm.data.startDate);
+      var lastDate = startDate.clone().add(vm.data.duration, 'd');
       $scope.el.dataRange
         .setDateRange(startDate._d, lastDate._d, true);
     }
 
   };
 
-  inputRange.$onDestroy = function () {
+  function onDestroy() {
     $scope.el.dataRange.destroy();
   };
 
-  inputRange.openCalendar = function($event) {
+  function openCalendar($event) {
     $event.stopPropagation();
     $scope.el.dataRange.open();
   }

@@ -2106,17 +2106,2173 @@ md-input-container.md-icon-right > md-icon.md-icon--btn {
   z-index: 100;
 }
 
+.date-picker-wrapper--two-months {
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.09),
+  0px 13px 19px 2px rgba(0, 0, 0, 0.06),
+  0px 5px 24px 4px rgba(0, 0, 0, 0.05);
+}
+
 .date-picker-wrapper--two-months .month-wrapper {
   display: flex;
 }
 
 .date-picker-wrapper--two-months .gap {
   margin: 0;
-  width: 0;
+  width: 1%;
 }
 
 .date-picker-wrapper--two-months .month-wrapper table {
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 0 0 49.5%;
+  max-width: 49.5%;
+  width: 49.5%;
+  min-width: 320px;
+}
+
+/*
+// #5FC693: Primary Color
+// #f3f3f3: Preload Color
+// 4px: border radius
+// Added to material
+// md-lined,
+// md-right-arrow,
+// md-color-*
+*/
+
+/*-----------------------------------------------------------------------------------*/
+/* GENERAL
+/*-----------------------------------------------------------------------------------*/
+
+* {
+  outline: 0;
+}
+
+html {
+  min-width: 320px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.34rem 0;
+}
+
+ul, ol {
+  margin: 0;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.content {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* This has to be set for all full-height layouts */
+ui-view {
+  position: relative;
+}
+
+.single-column,
+requests,
+listings,
+search {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+p.md-subhead {
+  margin: 4px 0;
+}
+
+h1.md-subhead {
+  margin: 4px 0;
+}
+
+/*h2.md-subhead {
+  margin: 4px 0;
+}*/
+
+md-select-menu md-content {
+  max-height: 300px;
+}
+
+md-select-menu {
+  max-height: 300px;
+}
+
+h3.md-body-2 {
+  margin: 1em 0;
+}
+
+md-grid-list md-grid-tile {
+  border-radius: 4px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50%;
+  cursor: pointer;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.spacer {
+  height: 40px;
+}
+
+.highlight-tile {
+  height: 260px;
+  padding: 24px 0;
+  border-radius: 4px;
+  border: 1px solid rgba(95, 198, 147, 0.25);
+  background-color: rgba(250,250,250,1);
+}
+
+home .highlight-tile {
+  padding: 24px 0px;
+}
+
+invest .highlight-tile {
+  height: 320px;
+  padding: 4px;
+}
+
+.highlight-tile input {
+  background-color: #FFFFFF;
+}
+
+.highlight-tile md-select {
+  background-color: #FFFFFF;
+}
+
+
+.md-xlrg {
+  padding: 10px 0 !important;
+  min-width: 300px !important;
+  font-size: 16px !important;
+}
+
+md-menu-content {
+  /*max-height: 300px !important;*/
+  max-height: 500px;
+}
+
+md-card md-card-title {
+  padding: 8px;
+}
+
+.lnr-image-card {
+  border-width: 0;
+  margin: 0;
+}
+
+button.md-primary.md-cancel-button.md-button.ng-scope.md-default-theme.md-ink-ripple {
+  background-color: rgb(122, 178, 248);
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* FRAMEWORK
+/*-----------------------------------------------------------------------------------*/
+
+md-icon {
+  margin: auto;
+  background-repeat: no-repeat no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 20px;
+  width: 30px;
+  min-height: 20px;
+  min-width: 24px;
+}
+
+/* fix for md-container margin */
+autocomplete {
+  margin-bottom: 16px;
+}
+
+autocomplete md-input-container {
+  margin-bottom: 0;
+}
+
+autocomplete {
+  position: relative;
+}
+
+autocomplete #autocompleteSearch {
+  width: 100%;
+}
+
+autocomplete .pac-container {
+  left: 0 !important;
+  top: 100% !important;
+}
+
+autocomplete .md-errors-spacer {
+  display: none;
+}
+
+/* mobile typography */
+@media (max-width:599px) {
+  .md-display-1 {
+    font-size: 24px;
+  }
+
+  .md-headline {
+    font-size: 20px;
+  }
+
+  .md-subhead {
+    font-size: 16px;
+  }
+
+  .lnr-page-title {
+    max-width: 90%;
+  }
+
+  input {
+    font-size: 12px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0.08rem 0;
+  }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* LNR CLASSES
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-bold {
+  font-weight: 500 !important;
+}
+
+.lnr-capitalize {
+  text-transform: capitalize;
+}
+
+.lnr-underline {
+  text-decoration: underline;
+}
+
+.lnr-center {
+  text-align: center;
+}
+
+.lnr-light {
+  opacity: 0.5;
+}
+
+.lnr-center-center {
+  text-align: center;
+  vertical-align: center;
+}
+
+.lnr-right {
+  text-align: right;
+}
+
+.lnr-margin {
+  margin: 8px;
+}
+
+.lnr-margin-right {
+  margin-right: 8px;
+}
+
+.lnr-margin-right-double {
+  margin-right: 16px;
+}
+
+.lnr-margin-left {
+  margin-left: 8px;
+}
+
+.lnr-margin-top {
+  margin-top: 8px;
+}
+
+.lnr-margin-bottom {
+  margin-bottom: 8px;
+}
+
+.lnr-margin-lrg {
+  margin: 16px 8px;
+}
+
+.lnr-margin-lrg-top {
+  margin-top: 16px;
+}
+
+.lnr-margin-lrg-bottom {
+  margin-bottom: 16px;
+}
+
+.lnr-no-padding {
+  padding: 0;
+}
+
+.lnr-no-margin {
+  margin: 0;
+}
+
+.lnr-clickable {
+  cursor: pointer;
+}
+
+.lnr-link {
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+}
+
+.lnr-link:hover,
+.lnr-link:active {
+  opacity: 0.65;
+}
+
+.lnr-middle-divider {
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.lnr-middle-divider:before,
+.lnr-middle-divider:after {
+  background-color: rgba(206, 212, 216, 1.0);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
   width: 50%;
+}
+
+.lnr-middle-divider:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.lnr-middle-divider:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.lnr-preload-bg {
+  background-color: #f3f3f3;
+}
+
+.lnr-btn-inline {
+  margin-top: 25px;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.lnr-btn-fb {
+  border-color: #3b5998 !important;
+  background: #3b5998 !important;
+  color: #fff !important;
+}
+
+.lnr-bike-listings {
+  width: 100%;
+}
+
+.lnr-tab-content-no-scroll {
+  position: fixed;
+}
+
+.lnr-mv8 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.lnr-lh0 {
+  line-height: 0;
+}
+
+.lnr-fs0 {
+  font-size: 0;
+}
+
+.lnr-dash-input-divider {
+  display: inline-block;
+  width: 15px;
+  height: 2px;
+  background: rgba(150, 150, 150, 1.0);
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* SVG
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-icn-sm {
+  width: 24px;
+  height: 24px;
+}
+
+.lnr-icn-md {
+  width: 34px;
+  height: 34px;
+}
+
+.lnr-icn-lrg {
+  width: 48px;
+  height: 48px;
+}
+
+.lnr-icn-mlrg {
+  width: 58px;
+  height: 58px;
+}
+
+.lnr-icn-mlrg--medium {
+  width: 80px;
+  height: 60px;
+}
+
+.lnr-icn-mlrg--big {
+  width: 90px;
+  height: 60px;
+}
+
+.lnr-icn-xlrg {
+  width: 120px;
+  height: 120px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* PROFILE PICTURE
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-profile-sm {
+  height: 37px;
+  width: 37px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.lnr-profile-md {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background-color: #f3f3f3;
+  background-position: center;
+  background-size: cover;
+}
+
+.lnr-profile-md-lrg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+.lnr-profile-lrg {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+settings .lnr-profile-lrg {
+  margin: 0;
+  padding: 0;
+}
+
+.cropArea {
+  overflow: hidden;
+  width:300px;
+  height:200px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* NAVBAR
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-header {
+  width: 100%;
+  height: 60px;
+  z-index: 3;
+}
+
+.lnr-header .md-toolbar-tools .lnr-header-logo {
+  padding: 0;
+}
+
+.lnr-header .lnr-header-logo md-icon {
+  width: 95px;
+}
+
+.lnr-header .md-lined {
+  border-color: #ffffff;
+}
+
+.lnr-header .lnr-nav-menu .md-button {
+  margin: 0 12px;
+}
+
+.lnr-header .lnr-nav-menu .md-button:not(.md-lined):not(.md-img) {
+  padding: 12px 0;
+}
+
+.lnr-header .lnr-nav-menu .md-button.md-right-arrow {
+  padding-right: 20px;
+}
+
+.lnr-header .lnr-nav-menu .md-button.md-img {
+  padding: 0;
+}
+
+/* Safari vertical alignment fix */
+.lnr-header .md-toolbar-tools .lnr-header-logo {
+  min-height: 25px;
+}
+
+.md-toolbar-tools .md-button:not(.md-fab) {
+  min-width: 0px;
+}
+
+.md-toolbar-tools a.md-lined.md-button {
+  min-height: 28px !important;
+  line-height: 18px !important;
+}
+
+.notification-bubble {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background-color: #FF0000;
+  border-radius: 9px 9px 9px 9px;
+  top: 0;
+  right: 0;
+  font-size: 11px;
+  font-weight: 800;
+  padding-top: 3px;
+  color: #FFFFFF;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* FOOTER
+/*-----------------------------------------------------------------------------------*/
+
+footer md-list-item,
+footer md-list-item:before {
+  min-height: 24px;
+}
+
+.lnr-btn-ios img {
+  height: auto;
+  width: 154px;
+  padding: 8px;
+}
+
+.lnr-btn-lang {
+  width: 154px;
+  text-align: left;
+  padding-left: 14px;
+}
+
+footer .lnr-link {
+  color: #fff;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* DIALOG MODALS
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-input-containers md-input-container {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.lnr-input-containers md-input-container:first-child {
+  margin-left: 0;
+}
+
+.lnr-input-containers md-input-container:last-child {
+  margin-right: 0;
+}
+
+.md-dialog-buttons .md-button {
+  margin-top: 16px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.md-dialog-content md-input-container label:not(.md-no-float):not(.md-container-ignore),
+.md-dialog-content md-input-container .md-placeholder {
+  white-space: normal;
+}
+
+.lnr-rating-dialog .md-input-messages-animation  {
+  height: 100%;
+}
+
+.lnr-rating-dialog .rating-stars  {
+  min-height: 48px;
+}
+
+.lnr-tel-int .intl-tel-input{
+  width: 100%;
+  float: left;
+  max-height: 250px;
+}
+
+.lnr-tel-int  .intl-tel-input .country-list {
+  max-height: 100px !important;
+}
+
+@media (max-width:599px) {
+ .md-dialog-content {
+    width: 100%;
+    margin: 0 !important;
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* PAGES
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-page-margin {
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.lnr-page-title {
+  text-align: center;
+  max-width: 830px;
+  z-index: 3;
+}
+
+.lnr-section-title {
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 8px;
+}
+
+#hero-shot {
+  height: 42vh;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#hero-shot-large {
+  height: 60vh;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#hero-shot-small {
+  height: 28vh;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* BRAND INTEGRATION
+/*-----------------------------------------------------------------------------------*/
+
+#slideshow {
+  height: 78vh;
+  overflow: visible;
+  position: relative;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* INVITE LANDING
+/*-----------------------------------------------------------------------------------*/
+
+#invite-signup {
+  height: 160px;
+  padding: 24px 0;
+  background-size: cover;
+  background-position: 15% 40%;
+  /*background-image: url(../ui_images/static/lnr_listabike.jpg);*/
+  background-color: #666666;
+}
+
+.highlight-tile button {
+  margin-bottom: -30px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* HOME
+/*-----------------------------------------------------------------------------------*/
+
+home #landingSection {
+  height: 78vh;
+  overflow: visible;
+  position: relative;
+}
+
+.lnr-badge-container {
+  z-index: 3;
+  height: 90%;
+  width: 90%;
+  position: absolute;
+  top: 10%;
+  left: 6%;
+}
+
+.lnr-badge {
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,.09), 0 3px 4px 0 rgba(0,0,0,.06), 0 3px 3px -2px rgba(0,0,0,.05);
+  border-radius: 75px;
+  -ms-transform: rotate(-9deg); /* IE 9 */
+  -webkit-transform: rotate(-9deg); /* Chrome, Safari, Opera */
+  transform: rotate(-9deg);
+}
+
+@media (max-width:599px) {
+  .lnr-badge-container {
+    top: 5%;
+    z-index: 10;
+  }
+  .lnr-badge {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+}
+
+home #landingSection #homeHeroShot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+home #landingSection #homeHeroShot {
+  background-image: url(../ui_images/lnr_hero6.jpg);
+}
+
+.cb-slideshow,
+.cb-slideshow:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.lnr-search-bar {
+  width: 52%;
+  max-width: 720px;
+  margin-bottom: -30px;
+  z-index: 3;
+}
+
+.lnr-search-bar label,
+.lnr-search-bar .md-errors-spacer {
+  display: none;
+}
+
+.lnr-search-bar md-input-container,
+.lnr-search-bar autocomplete {
+  margin: 0;
+}
+
+.lnr-search-bar,
+.lnr-search-bar md-input-container,
+.lnr-search-bar autocomplete {
+  border-radius: 4px 0 0 4px;
+}
+
+.lnr-search-bar input {
+  width: 100%;
+  height: 60px;
+  border-radius: 4px 0 0 4px;
+  background: #fff;
+  border: none;
+  outline: none;
+}
+
+.lnr-search-bar .md-button {
+  margin: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.lnr-search-bar--fs18 autocomplete,
+.lnr-search-bar--fs18 .md-button {
+  font-size: 18px;
+}
+
+home .section {
+  margin-top: 80px;
+}
+
+#listBike {
+  height: 320px;
+  padding: 24px 0;
+  background-size: cover;
+  background-position: 15% 40%;
+  background-image: url(../ui_images/static/lnr_listabike.jpg);
+}
+
+md-grid-list md-grid-tile.tile-munich {
+  background-image: url(../ui_images/cities/lnr_munich.jpg);
+  background-position: 50% 70%;
+}
+
+md-grid-list md-grid-tile.tile-berlin {
+  background-image: url(../ui_images/cities/lnr_berlin.jpg);
+  background-position: 70% 85%;
+}
+
+md-grid-list md-grid-tile.tile-amsterdam {
+  background-image: url(../ui_images/cities/lnr_amsterdam.jpg);
+  background-position: 50% 85%;
+}
+
+md-grid-list md-grid-tile.tile-vienna {
+  background-image: url(../ui_images/cities/lnr_vienna.jpg);
+}
+
+.md-dialog-fullscreen.dialog-bikes,
+.md-dialog-fullscreen.dialog-bikes .dialog-content {
+  overflow: visible !important;
+}
+
+.bikes .slick-dots li.slick-active button:before,
+.bikes .slick-dots li button:hover:before {
+  background-color: #7ab2f8;
+}
+
+.bikes .slick-dots li button:before {
+  content: '';
+  display: block;
+  position: static;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  font-size: 0;
+  background-color: #000;
+
+}
+
+.bikes .arrow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-top: -30px;
+  padding: 30px;
+  cursor: pointer;
+}
+
+.bikes .arrow-prev {
+  right: 100%;
+  padding-right: 0;
+  margin-right: -65px;
+}
+.bikes .arrow-prev:before,
+.bikes .arrow-next:before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.bikes .arrow-prev:before {
+  border-top: 5px solid #fff;
+  border-left: 5px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.bikes .arrow-next {
+  left: 100%;
+  padding-left: 0;
+  margin-left: -65px;
+}
+
+.bikes .arrow-next:before {
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.testimonials-container {
+  margin: auto;
+  width: calc(100% - 50px);
+}
+
+#testimonials img.testimonials-img {
+  width: 75px;
+  height: auto;
+  border-radius: 50%;
+}
+
+#testimonials {
+  margin: 70px auto 25px auto;
+}
+
+.testimonials-text {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.testimonials-slick-slide {
+  display: flex !important;
+}
+
+.testimonial-avatar {
+  margin-left: 10px;
+}
+
+#testimonials .testimonials-prev-arrow {
+  height: 50px;
+  width: 30px;
+  opacity: 0.25;
+}
+
+#featuredTilesGrid {
+  text-align: center;
+}
+
+#featuredTilesGrid .tile {
+  background-color: #7ab2f8;
+}
+
+#featuredTilesGrid .img-container {
+/*  height: 100px;*/
+  width: 130px;
+  height: 130px;
+}
+
+#featuredTilesGrid img {
+  width: 100%;
+}
+
+#featuredTiles {
+  margin-top: 50px;
+}
+
+#featuredTiles h3 {
+  margin-top: 140px;
+}
+
+@media (max-width:959px) {
+  .lnr-search-bar {
+    width: 90%
+  }
+}
+
+@media (max-width:599px) {
+  md-dialog.md-dialog-fullscreen {
+    min-height: 100%;
+    min-width: 100%;
+    border-radius: 0;
+  }
+
+  home #landingSection {
+    height: 60vh;
+  }
+
+  home .section {
+    margin-top: 40px;
+  }
+
+  home .testimonials-text {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .lnr-search-bar autocomplete,
+  .lnr-search-bar .md-button {
+    font-size: 12px;
+  }
+
+  .lnr-search-bar .md-button {
+    min-width: 72px;
+  }
+}
+
+@media (min-width:600px) {
+  md-dialog.md-dialog-fullscreen {
+    min-width: 400px !important;
+    min-height: 0 !important;
+    border-radius: 3px;
+  }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  BIKE CARD & LISTING CARD
+/*-----------------------------------------------------------------------------------*/
+
+bike-card .bg,
+listing-card .bg {
+  width: 100%;
+  position: relative;
+  border-radius: 4px;
+}
+
+bike-card .bg:before,
+listing-card .bg:before {
+    content: "";
+    display: block;
+    padding-top: 66.667%;
+    float: left;
+}
+
+bike-card .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+bike-card .after div {
+  position: relative;
+  top: 35%;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 500;
+  opacity: 1;
+  text-align: center;
+  margin: auto 0;
+}
+
+bike-card md-card.lnr-bike-card,
+listing-card md-card.lnr-bike-card {
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+bike-card md-card img.md-card-image,
+listing-card md-card img.md-card-image {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.lnr-bike-card md-card-title-text span {
+  max-width: 95%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+home #featuredTiles a {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+.lnr-bike-card.lnr-unavailable {
+  background-color: rgb(250, 250, 250);
+  opacity: 0.8;
+}
+
+.lnr-bike-card.lnr-unavailable img {
+  opacity: 0.4;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  COMMENT
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-comment {
+  margin: 8px 0;
+}
+
+.lnr-comment .lnr-comment-name {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.lnr-comment .lnr-comment-content {
+  margin-top: 8px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  BIKE DETAILS
+/*-----------------------------------------------------------------------------------*/
+
+bike #hero-shot {
+  height: 55vh;
+}
+
+bike .lnr-compact-details p {
+  margin: 4px 0;
+}
+
+bike .lnr-compact-details > div:first-child {
+  margin-top: 10px;
+}
+
+bike .lnr-compact-details > div:last-child {
+  margin-bottom: 10px;
+}
+
+bike .date-picker-wrapper {
+  margin-left: -8px;
+}
+
+bike .date-picker-wrapper tr > td:first-child {
+  padding-left: 16px;
+}
+
+bike .date-picker-wrapper tr > td:last-child {
+  padding-right: 16px;
+}
+
+md-dialog md-dialog-content .date-picker-wrapper,
+md-dialog md-dialog-content .date-picker-wrapper.inline-wrapper,
+md-dialog md-dialog-content .month-wrapper {
+  width: 100%;
+}
+
+md-dialog md-dialog-content .date-picker-wrapper .month-wrapper thead {
+  background: #fff;
+  color: rgba(85,85,85,0.75);
+}
+
+@media (max-width:599px) {
+  bike #hero-shot {
+    height: 45vh;
+  }
+
+  .date-picker-wrapper,
+  .date-picker-wrapper.inline-wrapper,
+  .month-wrapper {
+    width: 100%;
+  }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  SEARCH
+/*-----------------------------------------------------------------------------------*/
+
+search ng-map {
+  height: 100% !important;
+}
+
+search h3 {
+  margin: 0 !important;
+}
+
+search .map-column {
+  height: 35%;
+}
+
+search md-input-container,
+search autocomplete {
+  margin-bottom: 0;
+}
+
+search bike-card md-card {
+  margin: 0;
+}
+
+.lnr-filters md-checkbox,
+.lnr-filters md-checkbox .md-label {
+  margin: 0;
+  text-align: center;
+  /* disable text selection on double click */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+.lnr-filters md-checkbox .md-container {
+  display: none;
+}
+
+.lnr-filters md-checkbox.md-checked,
+.lnr-filters md-checkbox.md-checked md-icon svg path,
+.lnr-filters md-checkbox.md-checked md-icon svg rect,
+.lnr-filters md-checkbox.md-checked md-icon svg circle {
+  fill: #5FC693;
+  color: #5FC693;
+}
+
+/* Map bike card hackaround (to be cleaned) */
+ng-map md-card {
+  width: 240px;
+}
+
+ng-map md-card.lnr-bike-card md-icon {
+  display: none;
+}
+
+ng-map md-card.lnr-bike-card md-card-title-text span {
+  max-width: 120px;
+}
+
+.ng-map-info-window > div:first-child div {
+  display: none;
+}
+
+.ng-map-info-window > div:first-child  div:nth-last-child(2),
+.ng-map-info-window > div:first-child  div:nth-last-child(2) div {
+  display: block!important;
+  margin-top: -4px!important;
+  z-index: 2;
+}
+
+.ng-map-info-window > div:last-child {
+  right: 46px!important;
+  top: 18px!important;
+  opacity: 0.3!important;
+  border-radius: 10px;
+}
+
+.ng-map-info-window > div:last-child:hover {
+  opacity: 0.6!important;
+}
+
+@media (min-width:599px) {
+  search .map-column {
+    height: 100%;
+  }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  USER
+/*-----------------------------------------------------------------------------------*/
+
+user .lnr-user-rating  {
+  padding-left: 4px;
+}
+
+@media (max-width: 400px) {
+  .lnr-user__header {
+    display: block;
+  }
+  .lnr-user__info {
+    padding: 0
+  }
+  .lnr-user__verify {
+    margin: 0
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  LIST BIKE
+/*-----------------------------------------------------------------------------------*/
+
+.angular-input-stars {
+  display: inline-block;
+  padding: 0;
+  list-style: none;
+}
+
+.angular-input-stars > li {
+  color: rgba(210,218,218,1.0);
+  font-size: 20px;
+  display: inline-block;
+}
+
+.angular-input-stars > li .active {
+    color: #FEB35B;
+}
+
+rating .angular-input-stars > li {
+  font-size: 14px !important;
+  padding-right: 3px;
+  padding-left: 0;
+  cursor: pointer;
+}
+
+user .angular-input-stars > li {
+  padding-right: 3px;
+}
+
+list md-tabs,
+edit md-tabs {
+  padding: 0 !important;
+  width: 100%;
+}
+
+list .md-tab.md-disabled {
+  opacity: 1;
+}
+
+.lnr-list-title {
+  margin: 8px 0 24px 0;
+}
+
+list md-tabs .lnr-list-form,
+edit md-tabs .lnr-list-form {
+  min-height: 300px;
+}
+
+list md-tabs .img-preview,
+edit md-tabs .img-preview {
+  height: 100px;
+  width: 150px;
+  background-position: center;
+  background-size: cover;
+}
+
+list md-tabs .md-whiteframe-1dp {
+  background-color: white;
+}
+
+list md-icon.accessory-icon,
+edit md-icon.accessory-icon {
+  margin: 0 8px 0 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+list md-icon.accessory-icon.checked svg path,
+list md-icon.accessory-icon.checked svg rect,
+list md-icon.accessory-icon.checked svg circle,
+edit md-icon.accessory-icon.checked svg path,
+edit md-icon.accessory-icon.checked svg rect,
+edit md-icon.accessory-icon.checked svg circle  {
+  fill: #7ab2f8;
+  color: #7ab2f8;
+}
+
+list md-radio-button.main-category .md-container,
+edit md-radio-button.main-category .md-container {
+  display: none;
+}
+
+list md-radio-button.main-category .md-label,
+edit md-radio-button.main-category .md-label {
+  margin-left: 0;
+}
+
+list .accessory-checkbox,
+edit .accessory-checkbox {
+  margin-bottom: 16px;
+}
+
+list .accessory-label,
+edit .accessory-label {
+  cursor: pointer;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  LISTINGS
+/*-----------------------------------------------------------------------------------*/
+
+listings .lnr-bike-listings {
+  min-height: 350px;
+  width: 100%;
+}
+
+.listings-header {
+  background-color: #FFFFFF;
+  min-height: 60px;
+}
+
+.listings-header md-input-container {
+  margin: 0;
+  padding: 0;
+}
+
+.listings-header .content {
+  min-height: 60px;
+}
+
+/* TODO: OPTIMIZE */
+@-moz-document url-prefix() {
+    listings #list-view {
+        margin-left: 6px;
+    }
+}
+
+#deleteBikeDialog .delete-bike-text {
+  padding: 24px;
+}
+
+.lnr-unavailable {
+  color: #adacac
+}
+
+.lnr-unavailable img {
+  opacity: 0.4;
+}
+
+.lnr-listing-list-item {
+  height: 60px;
+  border-bottom: 1px solid #e1e1e1;
+  cursor: default;
+}
+
+.lnr-listing-list-item:hover {
+  background-color: rgba(224, 224, 224, 0.2) !important;
+}
+
+.lnr-listing-list-item .md-button:hover {
+background-color: rgba(238, 238, 238, 0.2) !important;
+}
+
+.lnr-listing-header {
+  background-color: #e1e1e1;
+  min-height: 40px;
+  font-weight: 700;
+  padding: 8px 0 8px 0;
+  line-height: 24px;
+}
+
+.lnr-listing-header .fa {
+  line-height: 24px;
+}
+
+.lnr-listing-header .lnr-header-filter {
+  cursor: pointer;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  CALCULATOR
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-calculator {
+  /* disable text selection on double click */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+.lnr-calculator md-slider-container {
+  position: relative;
+}
+
+.lnr-calculator md-slider-container .lnr-slider-info {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: -8px;
+  max-width: 150px;
+}
+
+@media (max-width:599px) {
+  .lnr-calculator .lnr-money {
+    font-size: 21vw;
+  }
+}
+
+
+@media (max-width:1280px) and (min-width:600px) {
+  .lnr-calculator .lnr-money {
+    font-size: 8.8vw;
+  }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  REQUESTS
+/*-----------------------------------------------------------------------------------*/
+
+/* Add possibility to have centered toasts */
+md-toast.md-center {
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+@media (max-width:959px) {
+  .chat {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 46px 6px 46px 6px;
+    background-color: #fff;
+  }
+}
+
+@media (min-width:960px) {
+  .chat {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 46px 46px 46px 46px;
+    background-color: #fff;
+  }
+}
+
+requests md-input-container  {
+  margin: 0;
+}
+
+.requests-list {
+  min-width: 320px !important;
+  max-width: 450px !important;
+  border-right: 1px solid #efefef;
+}
+
+.requests-list .lnr-center {
+  padding: 0px 12px 0px 12px
+}
+.requests-list md-list-item .md-avatar {
+  width: 50px;
+  height: 50px;
+  padding: 10px 0;
+}
+
+.requests-list md-list-item.md-2-line .md-list-item-text p {
+  color: rgb(132, 140, 146);
+}
+
+.lnr-message-form {
+  background: rgb(236, 236, 236);
+}
+
+.lnr-message-form input {
+  background: #fff;
+}
+
+.lnr-message-form .md-errors-spacer {
+  display: none;
+}
+
+.lnr-message {
+  padding: 4px 4px 2px 4px;
+  border-radius: 4px;
+}
+
+.lnr-message .message-time {
+  text-align: right;
+  font-size: 10px;
+  margin: 2px 2px 2px 2px;
+}
+
+.lnr-message .message-text {
+  margin-bottom: 2px;
+}
+
+message .sent-message {
+  position: relative;
+  color: #fff;
+  background-color: #7ab2f8;
+}
+
+message .received-message {
+  position: relative;
+  background-color: rgb(237, 240, 240);
+}
+
+message .status-message {
+  background-color: rgba(229, 234, 234, 0.16);
+}
+
+.sent-message:after {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-left-color: #7ab2f8;
+  border-width: 6px;
+  margin-top: -6px;
+}
+
+.received-message:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-right-color: rgb(237, 240, 240);
+  border-width: 6px;
+  margin-top: -6px;
+}
+
+button.md-primary.md-confirm-button,
+button.md-primary.md-cancel-button {
+  background-color: #0ECC92 !important;
+}
+
+@media (max-width: 959px) {
+  .message-button {
+    margin: 6px 0 6px 0;
+  }
+  .md-primary {
+    color: rgb(255, 255, 255) !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .message-button {
+    margin: 0 6px 0 6px;
+  }
+  .md-primary {
+    color: rgb(255, 255, 255) !important;
+  }
+}
+
+.request-filter-switch {
+  margin: 16px 0;
+  padding: 0px 8px 0px 8px;
+  text-transform: none;
+  font-weight: 400;
+  min-width: 96px;
+  border: solid #eef1f1 1px;
+}
+
+.request-filter-switch:hover {
+  color: rgb(110, 110, 110) !important;
+  background-color: rgba(158,158,158,0.2) !important;
+}
+
+.request-filter-switch-active {
+  background-color: rgba(158,158,158,0.2) !important;
+}
+
+.request-filter-dropdown {
+  margin: 0 0 16px 0;
+}
+
+.request-filter-dropdown md-select {
+  border-width: 0;
+}
+
+.md-button.left {
+  border-radius: 4px 0 0 4px;
+}
+
+.md-button.middle {
+  border-radius: 0;
+}
+
+.md-button.right {
+  border-radius: 0 4px 4px 0;
+}
+
+.unread-indicator {
+  width: 12px;
+  height: 12px;
+  background-color: rgb(122, 178, 248);
+  border-radius: 6px 6px 6px 6px;
+  margin: auto 0;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  STATIC PAGES
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-faqs div > p:first-child {
+  margin-top: 0;
+}
+
+.faq-answer {
+  margin-top: 0;
+}
+
+.faq-answer p {
+  margin-top: 0;
+}
+
+.faq h3 {
+  margin-bottom: 0;
+}
+
+.faq p {
+  margin-top: 0;
+}
+
+.lnr-garantee  {
+  position: relative;
+}
+
+.lnr-garantee md-icon {
+  position: absolute;
+  padding-left: 16px;
+  right: 0;
+}
+
+@media (max-width:760px) {
+  .lnr-garantee md-icon {
+    position: relative;
+  }
+}
+
+#error404 {
+  text-align: center;
+  min-height: calc(100vh - 413px);
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  EVENT PAGES
+/*-----------------------------------------------------------------------------------*/
+
+rapha-super-cross img.event-logo {
+  width: 250px;
+}
+
+mcbw md-tab-item {
+  font-size: 16px;
+}
+
+mcbw md-pagination-wrapper {
+  width: 300px !important;
+}
+
+.column-image {
+  width: 100%;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  CITY PAGES
+/*-----------------------------------------------------------------------------------*/
+
+md-grid-list a {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+#city-pages md-grid-tile.munich-1 {
+  background-image: url(../ui_images/citypages/munich-rent-city.jpg);
+}
+
+#city-pages md-grid-tile.munich-2 {
+  background-image: url(../ui_images/citypages/munich-rent-ebike.jpg);
+}
+
+#city-pages md-grid-tile.munich-3 {
+  background-image: url(../ui_images/citypages/munich-rent-terrain.jpg);
+}
+
+#city-pages md-grid-tile.berlin-1 {
+  background-image: url(../ui_images/citypages/berlin-rent-city.jpg);
+}
+
+#city-pages md-grid-tile.berlin-2 {
+  background-image: url(../ui_images/citypages/berlin-rent-ebike.jpg);
+}
+
+#city-pages md-grid-tile.berlin-3 {
+  background-image: url(../ui_images/citypages/berlin-rent-road.jpg);
+}
+
+#city-pages md-grid-tile.vienna-1 {
+  background-image: url(../ui_images/citypages/vienna-rent-city.jpg);
+}
+
+#city-pages md-grid-tile.vienna-2 {
+  background-image: url(../ui_images/citypages/vienna-rent-ebike.jpg);
+}
+
+#city-pages md-grid-tile.vienna-3 {
+  background-image: url(../ui_images/citypages/vienna-rent-road.jpg);
+}
+
+#city-pages md-grid-tile.amsterdam-1 {
+  background-image: url(../ui_images/citypages/amsterdam-rent-city.jpg);
+}
+
+#city-pages md-grid-tile.amsterdam-2 {
+  background-image: url(../ui_images/citypages/amsterdam-rent-road.jpg);
+}
+
+#city-pages md-grid-tile.amsterdam-3 {
+  background-image: url(../ui_images/citypages/amsterdam-rent-cargo.jpg);
+}
+
+@media (min-width: 960px) {
+  #jobs-details md-list-item {
+    min-height: 30px;
+    height: 32px;
+  }
+}
+
+#jobs-details h1 {
+  margin: 34px 40px 30px 0px;
+}
+#jobs-details h3 {
+  margin-top: 24px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+#jobs-details md-list {
+   margin-left: -14px;
+}
+#jobs-details .list-align {
+   margin-left: -10px;
+}
+
+.form-error {
+  border: 1px solid rgb(221,44,0);
+  border-radius: 4px;
+}
+.text-error {
+  color: rgb(221,44,0);
+}
+
+md-input-container .md-input.form-input-error {
+  border: 1px solid rgb(221,44,0);
+  border-radius: 4px;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  HOW TO SHOOT BIKE PHOTO
+/*-----------------------------------------------------------------------------------*/
+
+.how-to-shoot-section{
+  text-align: center;
+}
+
+img.how-to-shoot {
+  width: 100%;
+  max-width: 500px;
+}
+
+md-switch.md-default-theme .md-thumb, md-switch.md-checked .md-thumb {
+  background-color: white !important;
+}
+
+md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
+  background-color: #5FC693 !important
+}
+
+.white-space-pre-line {
+  white-space: pre-line;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Invoices
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-billing-page .lnr-billing-table-head md-list-item.md-2-line {
+  background-color: #efefef;
+  min-height: 40px;
+  height: 40px;
+  font-weight: bold;
+  padding-top: 10px;
+  margin-top: 48px;
+}
+
+.lnr-billing-page .repeated-billing-items .md-button {
+  line-height: normal;
+}
+
+.lnr-table-head .flex {
+  text-align: center;
+}
+
+.lnr-no-rental {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.repeated-billing-items h1{
+  border-bottom: 1px solid #e1e1e1;
+  padding: 15px;
+  margin: 0;
+}
+
+.repeated-mobile-items h1{
+  border-bottom: 1px solid #e1e1e1;
+  padding: 15px;
+}
+
+.lnr-mobile-billing {
+  padding-top: 15px;
+}
+
+.lnr-list-button .md-button {
+  min-height: inherit;
+  min-width: inherit;
+  line-height: 17px;
+  color: rgb(95,198,147);
+  padding: unset;
+  margin: unset;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  Invitations
+/*-----------------------------------------------------------------------------------*/
+
+invite #inviteForm .invite-form-container {
+  height: 320px;
+  padding: 24px 0;
+  border-radius: 4px;
+  border: 1px solid rgba(95, 198, 147, 0.25);
+  background-color: rgba(250,250,250,1);
+}
+
+invite .share-icon {
+  cursor: pointer;
+}
+
+invite .voucher-link {
+  margin: initial;
+}
+
+/*.lnr-billing-page .repeated-billing-items .md-button:not([disabled]):hover {*/
+  /*background-color: rgba(229, 234, 236, 0.2);*/
+/*}*/
+
+.lnr-list-button .md-button:not([disabled]):hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.md-button .md-lined:not([disabled]) {
+  color: #FFFFFF !important;
+}
+
+.lnr-csv-button {
+  margin-top: 30px;
+}
+
+.lnr-billing-list-item {
+  height: 50px;
+  border-bottom: 1px solid#efefef;
+  cursor: default;
+}
+
+.lnr-billing-list-item .md-button {
+  cursor: default;
+}
+
+.billing-bike-title span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.billing-bike-title .md-button {
+  width: 95%;
+  text-align: left;
+}
+
+.lnr-green-text span {
+  color: #5fc693;
+}
+
+.lnr-green-text {
+  color: #5fc693;
+}
+
+.lnr-mobile-bike {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.vello-bikes bike-card {
+  padding-bottom: 25px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  SIGN-UP
+/*-----------------------------------------------------------------------------------*/
+
+.sign-up-links {
+  margin-top: 20px;
+}
+
+.sign-up-tip {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  SEO-Landing
+/*-----------------------------------------------------------------------------------*/
+
+seo-landing .lnr-section-title {
+  margin-bottom: 0;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  EVENTS
+/*-----------------------------------------------------------------------------------*/
+
+.constance-spin .lnr-section-title .event-logo {
+  width: 150px;
+  margin-top: 15px;
+}
+
+.velosoph .lnr-section-title .lnr-event-logos {
+  width: 80%;
+  height: 80px;
+}
+
+.velosoph .lnr-event-logos .katusha img {
+  width: 210px;
+}
+
+.velosoph .lnr-event-logos .pasculli img {
+  width: 210px;
+}
+
+.velosoph .lnr-event-logos .wahoo img {
+  width: 130px;
+}
+
+/* iPhone 5*/
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+  .velosoph .lnr-event-logos .katusha img {
+    width: 25vw;
+  }
+
+  .velosoph .lnr-event-logos .pasculli img {
+    width: 25vw;
+  }
+
+  .velosoph .lnr-event-logos .wahoo img {
+    width: 14vw;
+  }
+
+  .lnr-no-events {
+    pointer-events: none;
+  }
+}
+
+/* intl-tel-input -- required for build minification */
+.iti-flag {
+  background-image: url("../ui_images/flags.png") !important;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .iti-flag {
+    background-image: url("../ui_images/flags@2x.png") !important;
+  }
+}
+
+.lnr-check-box {
+  margin-bottom: 0;
+}
+
+.ng-hide-add, .ng-hide-remove {
+  display: block !important;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  Material Modifiers
+/*-----------------------------------------------------------------------------------*/
+
+md-input-container.md-icon-right > md-icon.md-icon--btn {
+  display: flex;
+  width: 35px;
+  height: 100%;
+  background: #f2f2f2;
+  border: 1px solid #d3d8dc;
+  padding: 0 6px;
+  border-radius: 0 4px 4px 0;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  daterangepicker custom styles
+/*-----------------------------------------------------------------------------------*/
+
+.date-picker-wrapper--ngDialog {
+  z-index: 100;
+}
+
+.date-picker-wrapper--two-months {
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.09),
+  0px 13px 19px 2px rgba(0, 0, 0, 0.06),
+  0px 5px 24px 4px rgba(0, 0, 0, 0.05);
+}
+
+.date-picker-wrapper--two-months .month-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.date-picker-wrapper--two-months .gap {
+  margin: 0;
+  width: 1%;
+}
+
+.date-picker-wrapper--two-months .month-wrapper table {
+  flex: 0 0 49.5%;
+  max-width: 49.5%;
+  width: 49.5%;
+  min-width: 320px;
+}
+
+@media (max-width: 599px) {
+
+  .date-picker-wrapper--two-months .gap {
+    display: none;
+  }
+
+  .date-picker-wrapper,
+  .date-picker-wrapper.inline-wrapper,
+  .month-wrapper {
+    max-width: 320px;
+    left: 0!important;
+  }
 }

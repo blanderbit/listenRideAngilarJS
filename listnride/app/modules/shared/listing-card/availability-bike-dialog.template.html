@@ -1,13 +1,9 @@
 <md-dialog>
 
   <div show-xs>
-    <div class="md-toolbar-tools" layout-align="center center">
-      <md-button class="md-icon-button">
-        <md-icon></md-icon>
-      </md-button>
-      <span flex></span>
-      <h2>{{ 'availability.modal-title' | translate }}</h2>
-      <span flex></span>
+    <div class="md-toolbar-tools" layout-align="space-between center">
+      <md-button class="md-icon-button disabled"></md-button>
+      <h2 class="lnr-center">{{ 'availability.modal-title' | translate }}</h2>
       <md-button class="md-icon-button" ng-click="availabilityDialog.close()">
         <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
       </md-button>
@@ -25,7 +21,8 @@
       <form ng-if="availabilityDialog.inputs.length" ng-cloak name="availabilityForm" ng-submit="availabilityDialog.update(availabilityForm)" novalidate>
         <div class="availability-list">
           <div layout="row" layout-align="center center" ng-repeat="input in availabilityDialog.inputs">
-            <div flex="10"></div>
+            <div flex="10">
+            </div>
             <div flex="80">
               <input-range data="input"></input-range>
             </div>
