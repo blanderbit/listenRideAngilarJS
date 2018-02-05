@@ -31,7 +31,7 @@ angular.module('rethinkIntegration',[]).component('rethink', {
         ];
       });
 
-      api.get('/rides?family=17').then(
+      api.get('/rides?family=28').then(
         function (success) {
           rethink.bikes = success.data;
         },
