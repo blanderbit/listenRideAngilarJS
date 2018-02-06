@@ -243,15 +243,12 @@ angular.module('booking', [])
           var codeDigits = _.values(booking.confirmation).filter(Number);
           if (codeDigits.length === 4) {
             var data = { "confirmation_code": codeDigits.join('') };
-            console.log('data', data);
             api.post('/users/' + $localStorage.userId + '/confirm_phone', data).then(
               function (success) {
-                console.log('success', success);
                 booking.toggleConfirmButton();
                 booking.phoneConfirmed = 'success';
               },
               function (error) {
-                console.log('error', error);
                 booking.phoneConfirmed = 'error';
               }
             );
