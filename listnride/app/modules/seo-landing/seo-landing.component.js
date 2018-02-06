@@ -14,7 +14,7 @@ angular.module('seoLanding',[]).component('seoLanding', {
       api.get('/seo_pages?url=' + $stateParams.pageTitle).then(
         function (success) {
           seoLanding.data = success.data;
-          seoLanding.bikes = success.data.bikes
+          seoLanding.bikes = success.data.bikes;
           seoLanding.loading = false;
         },
         function (error) {
