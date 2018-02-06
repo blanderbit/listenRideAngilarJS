@@ -29,6 +29,12 @@ angular.module('booking', [])
         booking.hidden = true;
         booking.tabsDisabled = false;
         booking.voucherCode = "";
+        booking.expiryDate = "";
+
+        var oldExpiryDateLength = 0;
+        var expiryDateLength = 0;
+        var month = 0;
+        var year = 0;
 
         // Fetch Bike Information
         api.get('/rides/' + booking.bikeId).then(
@@ -137,7 +143,7 @@ angular.module('booking', [])
             data: {
               creditCard: {
                 number: booking.creditCardNumber,
-                expirationDate: booking.month_expiry + '/' + booking.year,
+                expirationDate: booking.expiryDate,
                 cvv: booking.securityNumber
               }
             }
@@ -277,6 +283,40 @@ angular.module('booking', [])
         booking.previousTab = function () {
           booking.selectedIndex = booking.selectedIndex - 1;
         };
+
+        booking.updateExpiryDate = function () {
+          expiryDateLength = booking.expiryDate.toString().length;
+          month = booking.expiryDate.toString().split("/")[0];
+          year = booking.expiryDate.toString().split("/")[1];
+          if (expiryDateLength == 1 && oldExpiryDateLength != 2 && parseInt(month) > 1) {
+            console.log("triggah");
+            booking.expiryDate = "0" + booking.expiryDate + "/";
+          }
+          if (expiryDateLength == 2 && oldExpiryDateLength < 2) {
+            booking.expiryDate += "/";
+          }
+          if (oldExpiryDateLength == 4 && expiryDateLength == 3) {
+            booking.expiryDate = month;
+          }
+          oldExpiryDateLength = expiryDateLength;
+        }
+
+        booking.validateExpiryDate = function() {
+          var dateInput = booking.paymentForm.expiryDate;
+          if (expiryDateLength != 5) {
+            dateInput.$setValidity('dateFormat', false);
+          } else {
+            if (year > 18 && year < 25 && month >= 1 && month <= 12) {
+              dateInput.$setValidity('dateFormat', true);
+            }
+            else if (year == 18 && month >= 2 && month <= 12) {
+              dateInput.$setValidity('dateFormat', true);
+            }
+            else {
+              dateInput.$setValidity('dateFormat', false);
+            }
+          }
+        }
 
         // TODO: This needs to be refactored, rootScopes are very bad practice
         // go to next tab on user create success

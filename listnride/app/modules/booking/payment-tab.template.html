@@ -34,7 +34,7 @@
             <form name="payment.parent.paymentForm" novalidate ng-hide="payment.parent.paymentMethod != 1">
               <!-- Cardholder name and Cardnumber -->
               <div class="lnr-input-containers" layout="row" layout-align="space-between none">
-                <md-input-container flex="25">
+                <md-input-container flex="30">
                   <label>{{ 'booking.payment.card-name' | translate }}</label>
                   <input name="cardholderName"
                          ng-model-options='{ debounce: 400 }'
@@ -47,7 +47,7 @@
                     <div ng-message="required">{{ 'booking.payment.invalid-name' | translate }}</div>
                   </div>
                 </md-input-container>
-                <md-input-container flex="25">
+                <md-input-container flex="30">
                   <label>{{ 'booking.payment.card-number' | translate }}</label>
                   <input name="creditCardNumber"
                          ng-model-options='{ debounce: 400 }'
@@ -65,33 +65,22 @@
                   </div>
                 </md-input-container>
                 <md-input-container flex="15">
-                  <label>{{ 'booking.payment.exp-month' | translate }}</label>
-                  <input name="monthExpiry"
-                     ng-model-options='{ debounce: 400 }'
-                     ng-model="payment.parent.month_expiry"
+                  <label>{{ 'booking.payment.exp-date' | translate }}</label>
+                  <input name="expiryDate"
+                     ng-model-options='{ debounce: 50 }'
+                     ng-model="payment.parent.expiryDate"
+                     ng-change="payment.parent.updateExpiryDate()"
+                     ng-blur="payment.parent.validateExpiryDate()"
                      type="text"
-                     cc-exp-month
                      ng-required="true"
+                     placeholder="MM/YY"
                   />
-                  <div ng-messages="payment.parent.paymentForm.monthExpiry.$error"
-                       ng-show="payment.parent.paymentForm.monthExpiry.$dirty"
+                  <div ng-messages="payment.parent.paymentForm.expiryDate.$error"
+                       ng-show="payment.parent.paymentForm.expiryDate.$dirty"
                        role="alert">
-                    <div ng-message="ccExpMonth">{{ 'booking.payment.invalid-month' | translate }}</div>
+                    <div ng-message="required">{{ 'booking.payment.invalid-month' | translate }}</div>
                     <div ng-message="parse">{{ 'booking.payment.invalid-month' | translate }}</div>
-                  </div>
-                </md-input-container>
-                <md-input-container flex="15">
-                  <label>{{ 'booking.payment.exp-year' | translate }}</label>
-                  <input name="yearExpiry"
-                     ng-model-options='{ debounce: 400 }'
-                     ng-model="payment.parent.year"
-                     cc-exp-year
-                     ng-required="true"/>
-                  <div ng-messages="payment.parent.paymentForm.yearExpiry.$error"
-                       ng-show="payment.parent.paymentForm.yearExpiry.$dirty"
-                       role="alert">
-                    <div ng-message="ccExpYear">{{ 'booking.payment.invalid-year' | translate }}</div>
-                    <div ng-message="parse">{{ 'booking.payment.invalid-year' | translate }}</div>
+                    <div ng-message="dateFormat">{{ 'booking.payment.invalid-date' | translate }}</div>
                   </div>
                 </md-input-container>
                 <md-input-container flex="15">

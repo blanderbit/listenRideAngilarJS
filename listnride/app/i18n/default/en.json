@@ -314,7 +314,9 @@
       "exp-month": "Exp. month",
       "invalid-month": "Month not valid",
       "invalid-year": "Year not valid",
+      "invalid-date": "Date not valid",
       "exp-year": "Exp. year",
+      "exp-date": "Exp. date",
       "invalid-cvc": "CVC not valid",
       "cvc": "CVC Number",
       "pay-paypal": "Pay with Paypal"
