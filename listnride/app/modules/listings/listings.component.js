@@ -120,12 +120,15 @@ angular.module('listings', []).component('listings', {
         availabilityDialog.removedInputs = [];
         availabilityDialog.maxInputs = 5;
         availabilityDialog.isMaxInputs = false;
+        availabilityDialog.addInput = addInput;
+        availabilityDialog.removeInput = removeInput;
+        availabilityDialog.update = update;
+        availabilityDialog.close = close;
+        availabilityDialog._checkMax = _checkMax;
 
-        availabilityDialog.close = function() {
-          $mdDialog.hide();
-        };
+        //////////////////
 
-        availabilityDialog._checkMax = function () {
+        function _checkMax() {
           availabilityDialog.isMaxInputs = availabilityDialog.inputs.length >= availabilityDialog.maxInputs ? true : false;
         }
 
@@ -156,21 +159,21 @@ angular.module('listings', []).component('listings', {
             {}
           ];
           availabilityDialog._checkMax();
-        }
+        };
         
-        availabilityDialog.addInput = function () {
+        function addInput() {
           if (!availabilityDialog.isMaxInputs) {
             availabilityDialog.inputs.push({});
             availabilityDialog._checkMax();
           }
-        }
+        };
         
-        availabilityDialog.removeInput = function (index) {
+        function removeInput(index) {
           var removedData = availabilityDialog.inputs.splice(index, 1);
           availabilityDialog._checkMax();
-        }
+        };
 
-        availabilityDialog.update = function () {
+        function update() {
           if (bike.availabitilyId) {
             api.put('/rides/' + bikeId + '/availabilities/' + availabitilyId, availabilityDialog.inputs).then(
               function (response) {
@@ -189,7 +192,12 @@ angular.module('listings', []).component('listings', {
             // );
             $mdDialog.hide();
           }
-        }
+        };
+
+        function close() {
+          $mdDialog.hide();
+        };
+
       };
 
       // search functionality in header of My Bikes (List View)
