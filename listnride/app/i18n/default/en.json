@@ -891,6 +891,7 @@
     "special": "special bikes"
   },
   "availability": {
+    "availability": "availability",
     "modal-title": "When is your bike not available?",
     "start-from": "Starting from",
     "end-at": "Ending at",
