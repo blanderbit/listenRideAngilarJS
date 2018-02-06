@@ -14,7 +14,6 @@ angular.module('booking', [])
         $localStorage, $rootScope, $scope, $state, $stateParams, $mdToast, $timeout, ENV,
         $translate, $filter, authentication, api, price, voucher) {
         var booking = this;
-        //TODO: REMOVE!
         var btAuthorization = ENV.btKey;
         var btClient;
 
@@ -136,7 +135,6 @@ angular.module('booking', [])
         };
 
         booking.tokenizeCard = function() {
-          console.log(booking.securityNumber);
           btClient.request({
             endpoint: 'payment_methods/credit_cards',
             method: 'post',
@@ -158,7 +156,6 @@ angular.module('booking', [])
                   booking.nextTab();
                 },
                 function (error) {
-                  console.log(error);
                 }
               );
             }
@@ -211,7 +208,6 @@ angular.module('booking', [])
               api.get('/users/' + $localStorage.userId + '/current_payment').then(
                 function(response) {
                   booking.user.current_payment_method = response.data;
-                  console.log(booking.user);
                 },
                 function(error) {
 
@@ -226,6 +222,7 @@ angular.module('booking', [])
         // phone confirmation
         //TODO: move to shared logic
         booking.sendSms = function (numberInput) {
+          debugger
           if (!_.isEmpty(numberInput.$error)) { return }
           var data = {"phone_number": numberInput.$modelValue};
           booking.toggleConfirmButton();
@@ -289,7 +286,6 @@ angular.module('booking', [])
           month = booking.expiryDate.toString().split("/")[0];
           year = booking.expiryDate.toString().split("/")[1];
           if (expiryDateLength == 1 && oldExpiryDateLength != 2 && parseInt(month) > 1) {
-            console.log("triggah");
             booking.expiryDate = "0" + booking.expiryDate + "/";
           }
           if (expiryDateLength == 2 && oldExpiryDateLength < 2) {
@@ -299,7 +295,7 @@ angular.module('booking', [])
             booking.expiryDate = month;
           }
           oldExpiryDateLength = expiryDateLength;
-        }
+        };
 
         booking.validateExpiryDate = function() {
           var dateInput = booking.paymentForm.expiryDate;
@@ -316,7 +312,7 @@ angular.module('booking', [])
               dateInput.$setValidity('dateFormat', false);
             }
           }
-        }
+        };
 
         // TODO: This needs to be refactored, rootScopes are very bad practice
         // go to next tab on user create success
@@ -387,24 +383,6 @@ angular.module('booking', [])
 
           api.post('/requests', data).then(
             function(success) {
-              // calendar.current_request = success.data;
-              // calendar.current_request.glued = true;
-              // calendar.current_request.rideChat = $localStorage.userId == calendar.current_request.user.id;
-              // calendar.current_request.rideChat ? calendar.current_request.chatFlow = "rideChat" : calendar.current_request.chatFlow = "listChat";
-
-              // if (calendar.current_request.rideChat) {
-              //   calendar.current_request.rating = calendar.current_request.lister.rating_lister + calendar.current_request.lister.rating_rider;
-              //   if (calendar.current_request.lister.rating_lister != 0 && calendar.current_request.lister.rating_rider != 0) {
-              //     calendar.current_request.rating = calendar.current_request.rating / 2
-              //   }
-              // }
-              // else {
-              //   calendar.current_request.rating = calendar.current_request.user.rating_lister + calendar.current_request.user.rating_rider;
-              //   if (calendar.current_request.user.rating_lister != 0 && calendar.current_request.user.rating_rider != 0) {
-              //     calendar.current_request.rating = calendar.current_request.rating / 2
-              //   }
-              // }
-              // calendar.current_request.rating = Math.round(calendar.current_request.rating);
               $state.go('requests', {requestId: success.data.id});
               $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
             },
