@@ -147,38 +147,50 @@
             </div>
             <div layout="row" layout-align="start center">
               <div class="lnr-sms-input" layout="row" layout-align="center center">
-                <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
+                <md-input-container flex>
                   <input
-                    ng-model="details.parent.confirmation[0]"
-                    maxlength="1"
+                    ng-model="details.parent.confirmation"
+                    ng-required="true"
+                    maxlength="4"
+                    type="number"
                     required
                     ng-change="details.parent.confirmPhone()"
                   >
                 </md-input-container>
-                <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
-                  <input
-                    ng-model="details.parent.confirmation[1]"
-                    maxlength="1"
-                    required
-                    ng-change="details.parent.confirmPhone()"
-                  >
-                </md-input-container>
-                <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
-                  <input
-                    ng-model="details.parent.confirmation[2]"
-                    maxlength="1"
-                    required
-                    ng-change="details.parent.confirmPhone()"
-                  >
-                </md-input-container>
-                <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
-                  <input
-                    ng-model="details.parent.confirmation[3]"
-                    maxlength="1"
-                    required
-                    ng-change="details.parent.confirmPhone()"
-                  >
-                </md-input-container>
+
+                <!--FIXME: fix cool input-->
+                <!--<md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>-->
+                  <!--<input-->
+                    <!--ng-model="details.parent.confirmation[0]"-->
+                    <!--maxlength="1"-->
+                    <!--required-->
+                    <!--ng-change="details.parent.confirmPhone()"-->
+                  <!--&gt;-->
+                <!--</md-input-container>-->
+                <!--<md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>-->
+                  <!--<input-->
+                    <!--ng-model="details.parent.confirmation[1]"-->
+                    <!--maxlength="1"-->
+                    <!--required-->
+                    <!--ng-change="details.parent.confirmPhone()"-->
+                  <!--&gt;-->
+                <!--</md-input-container>-->
+                <!--<md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>-->
+                  <!--<input-->
+                    <!--ng-model="details.parent.confirmation[2]"-->
+                    <!--maxlength="1"-->
+                    <!--required-->
+                    <!--ng-change="details.parent.confirmPhone()"-->
+                  <!--&gt;-->
+                <!--</md-input-container>-->
+                <!--<md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>-->
+                  <!--<input-->
+                    <!--ng-model="details.parent.confirmation[3]"-->
+                    <!--maxlength="1"-->
+                    <!--required-->
+                    <!--ng-change="details.parent.confirmPhone()"-->
+                  <!--&gt;-->
+                <!--</md-input-container>-->
               </div>
               <span flex="5"></span>
               <div layout="row" flex="30" layout-align="start start">
