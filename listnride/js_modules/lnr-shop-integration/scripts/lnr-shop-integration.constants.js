@@ -12,7 +12,7 @@ var lnrConstants = {
   // root url for svg files
   svgUrlRoot: 'https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/biketype_',
 
-  lnrStyles: "https://s3.eu-central-1.amazonaws.com/listnride-cdns/lnr-shop-integration.min.css",
+  lnrStyles: "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.css",
   lnrStylesLocal: "styles/lnr-shop-integration.css",
   introText: {
     // english intro text
