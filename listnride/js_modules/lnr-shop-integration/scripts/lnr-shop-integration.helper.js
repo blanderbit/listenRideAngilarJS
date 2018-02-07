@@ -471,8 +471,6 @@ var lnrHelper = {
         '<button class="md-button">' + basicInfo.buttonText + '</button></span>',
         '</div></a>',
         '<md-card-title layout="row" class="layout-row">',
-        '<md-icon class="lnr-icn-lrg md-color-foreground" aria-hidden="true">',
-        '<img src="' + svgUrl + '" height="48" width="48"></img></md-icon>',
         '<md-card-title-text class="lnr-margin-left layout-align-space-around-start layout-column">' +
         '<span class="md-subhead">' + brand + ', ' + categoryDesc + '</span>',
         '<span>' + basicInfo.sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size + 10) + ' cm</span>' +
