@@ -45,10 +45,36 @@
 
     <h2 class="md-headline lnr-center">{{ 'brand-integration.rethink.test-bike' | translate }}</h2>
 
-    <md-content>
+<!--     <md-content>
       <div flex-gt-xs layout="row" layout-wrap layout-padding layout-align="center center">
         <bike-card ng-repeat="bike in rethink.bikes" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
       </div>
+    </md-content> -->
+
+    <md-content>
+      <md-tabs md-no-pagination md-dynamic-height md-no-ink md-no-ink-bars md-center-tabs="on">
+        <md-tab label="{{ 'shared.munich' | translate }}">
+          <md-content>
+            <div flex-gt-xs layout="row" layout-wrap layout-padding>
+              <bike-card ng-repeat="bike in rethink.bikes.munich" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+            </div>
+          </md-content>
+        </md-tab>
+        <md-tab label="{{ 'shared.hamburg' | translate }}">
+          <md-content>
+            <div flex-gt-xs layout="row" layout-wrap layout-padding>
+              <bike-card ng-repeat="bike in rethink.bikes.hamburg" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+            </div>
+          </md-content>
+        </md-tab>
+        <md-tab style="font-size: 40px" label="Dresden">
+          <md-content>
+            <div flex-gt-xs layout="row" layout-wrap layout-padding>
+              <bike-card ng-repeat="bike in rethink.bikes.dresden" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+            </div>
+          </md-content>
+        </md-tab>
+      </md-tabs>
     </md-content>
 
     <br>

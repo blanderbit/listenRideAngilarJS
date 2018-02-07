@@ -8,7 +8,11 @@ angular.module('rethinkIntegration',[]).component('rethink', {
       var rethink = this;
       $tpl.addPart(ENV.staticTranslation);
 
-      rethink.bikes = [];
+      rethink.bikes = {
+        berlin: [],
+        munich: [],
+        hamburg: []
+      };
 
       rethink.slickConfig = {
         enabled: true,
@@ -31,7 +35,13 @@ angular.module('rethinkIntegration',[]).component('rethink', {
 
       api.get('/rides?family=28').then(
         function (success) {
-          rethink.bikes = success.data;
+          for (var i=0; i<success.data.length; i++) {
+            switch (success.data[i].city) {
+              case "Dresden": rethink.bikes.dresden.push(success.data[i]); break;
+              case "Munich": rethink.bikes.munich.push(success.data[i]); console.log("Munich detect"); break;
+              case "Hamburg": rethink.bikes.hamburg.push(success.data[i]); break;
+            }
+          }
         },
         function (error) {
           console.log('Error fetching Bikes');
