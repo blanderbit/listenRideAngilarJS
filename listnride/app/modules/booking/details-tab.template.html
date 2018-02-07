@@ -95,9 +95,7 @@
               </div>
             </md-input-container>
           </div>
-          <br>
-          <md-divider></md-divider>
-          <br>
+
           <h2 class="md-subhead">{{ 'booking.details.verification' | translate }}</h2>
           <p ng-show="details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">{{ 'booking.details.send-sms' | translate }}</p>
           <p ng-show="!details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">{{ 'booking.details.check-phone' | translate }}</p>
@@ -116,6 +114,7 @@
                 name="phone_number"
                 ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/"
                 ng-required="true"
+                placeholder=" "
                 preferred-countries="de, at, nl, fr, lv, es, it, ch, gb"
                 required
               >

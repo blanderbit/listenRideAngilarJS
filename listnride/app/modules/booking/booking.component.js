@@ -247,8 +247,11 @@ angular.module('booking', [])
               function (success) {
                 booking.toggleConfirmButton();
                 booking.phoneConfirmed = 'success';
+                console.log(success);
+              //  TODO: remove console log
               },
               function (error) {
+                console.log(error);
                 booking.phoneConfirmed = 'error';
               }
             );
