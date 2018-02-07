@@ -3,12 +3,10 @@
 angular.module('rethinkIntegration',[]).component('rethink', {
   templateUrl: 'app/modules/brand-integration/rethink.template.html',
   controllerAs: 'rethink',
-  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta', 'ENV',
-    function RethinkController($translate, $tpl, api, ngMeta, ENV) {
+  controller: [ '$translate', '$translatePartialLoader', 'api', 'ENV',
+    function RethinkController($translate, $tpl, api, ENV) {
       var rethink = this;
       $tpl.addPart(ENV.staticTranslation);
-      ngMeta.setTitle($translate.instant("brand-integration.rethink.meta-title"));
-      ngMeta.setTag("description", $translate.instant("brand-integration.rethink.meta-description"));
 
       rethink.bikes = [];
 
