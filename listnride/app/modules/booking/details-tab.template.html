@@ -104,7 +104,8 @@
           <!-- Phone Number and Send Button -->
           <div class="lnr-input-containers"
                layout="row"
-               ng-show="details.parent.showConfirmButton">
+               ng-show="details.parent.showConfirmButton"
+          >
             <md-input-container flex>
               <label>{{ 'shared.phone-number' | translate }}</label>
               <input
@@ -137,52 +138,50 @@
           </div>
 
           <!-- Phone Confirmation -->
+          <!--TODO: Create directive for it-->
           <div class="lnr-confirmation-containers"
-               layout="column"
-               layout-align="center start"
-               ng-hide="details.parent.showConfirmButton">
+               ng-hide="details.parent.showConfirmButton"
+          >
             <div layout="row" class="confirm-label">
               <strong>{{ 'booking.details.confirm-code' | translate }}</strong>
             </div>
             <div layout="row" layout-align="start center">
-              <div layout="row" flex="25" layout-align="start start">
-                <div class="lnr-sms-input">
-                  <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
-                    <input
-                      ng-model="details.parent.confirmation[0]"
-                      maxlength="1"
-                      required
-                      ng-change="details.parent.confirmPhone()"
-                    >
-                  </md-input-container>
-                  <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
-                    <input
-                      ng-model="details.parent.confirmation[1]"
-                      maxlength="1"
-                      required
-                      ng-change="details.parent.confirmPhone()"
-                    >
-                  </md-input-container>
-                  <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
-                    <input
-                      ng-model="details.parent.confirmation[2]"
-                      maxlength="1"
-                      required
-                      ng-change="details.parent.confirmPhone()"
-                    >
-                  </md-input-container>
-                  <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
-                    <input
-                      ng-model="details.parent.confirmation[3]"
-                      maxlength="1"
-                      required
-                      ng-change="details.parent.confirmPhone()"
-                    >
-                  </md-input-container>
-                </div>
+              <div class="lnr-sms-input" layout="row" layout-align="center center">
+                <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
+                  <input
+                    ng-model="details.parent.confirmation[0]"
+                    maxlength="1"
+                    required
+                    ng-change="details.parent.confirmPhone()"
+                  >
+                </md-input-container>
+                <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
+                  <input
+                    ng-model="details.parent.confirmation[1]"
+                    maxlength="1"
+                    required
+                    ng-change="details.parent.confirmPhone()"
+                  >
+                </md-input-container>
+                <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
+                  <input
+                    ng-model="details.parent.confirmation[2]"
+                    maxlength="1"
+                    required
+                    ng-change="details.parent.confirmPhone()"
+                  >
+                </md-input-container>
+                <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
+                  <input
+                    ng-model="details.parent.confirmation[3]"
+                    maxlength="1"
+                    required
+                    ng-change="details.parent.confirmPhone()"
+                  >
+                </md-input-container>
               </div>
               <span flex="5"></span>
-              <div layout="row" flex="25" layout-align="start start">
+              <div layout="row" flex="30" layout-align="start start">
                 <div ng-show="details.parent.phoneConfirmed === 'progress'" class="text-default">
                   {{ 'booking.details.enter-code' | translate }}
                 </div>
