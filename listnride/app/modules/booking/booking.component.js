@@ -136,7 +136,12 @@ angular.module('booking', [])
         };
 
         booking.tokenizeCard = function() {
-          console.log(booking.securityNumber);
+          $mdToast.show(
+            $mdToast.simple()
+              .textContent('Payment Method gets saved..')
+              .hideDelay(4000)
+              .position('top center')
+          );
           btClient.request({
             endpoint: 'payment_methods/credit_cards',
             method: 'post',
@@ -155,7 +160,8 @@ angular.module('booking', [])
               };
               api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
                 function (success) {
-                  booking.nextTab();
+                  // booking.nextTab();
+                  booking.reloadUser();
                 },
                 function (error) {
                   console.log(error);
