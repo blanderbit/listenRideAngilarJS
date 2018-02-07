@@ -45,7 +45,7 @@ angular.module('user',[]).component('user', {
       function generateMetaDescription(isCompany) {
         var title = isCompany ? "user.company-meta-title" : "user.meta-title";
         var description = isCompany ? "user.company-meta-description" : "user.meta-description";
-        var params = isCompany ? { name: user.user.first_name } : { company: user.business.company_name };
+        var params = isCompany ? { company: user.user.business.company_name } : { name: user.user.first_name };
 
         $translate([title, description] , params)
           .then(function(translations) {
