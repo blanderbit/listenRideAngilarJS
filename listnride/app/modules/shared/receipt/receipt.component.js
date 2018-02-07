@@ -30,6 +30,8 @@ angular.module('receipt', []).component('receipt', {
         var prices = price.calculatePrices(receipt.startDate, receipt.endDate, receipt.prices);
         receipt.duration = date.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
         receipt.durationDays = date.durationDays(receipt.startDate, receipt.endDate);
+        receipt.discount = prices.subtotal - prices.subtotalDiscounted;
+        receipt.discountRelative = receipt.discount / receipt.durationDays;
         receipt.subtotal = prices.subtotal;
         receipt.subtotalDiscounted = prices.subtotalDiscounted
         receipt.lnrFee = prices.serviceFee;
