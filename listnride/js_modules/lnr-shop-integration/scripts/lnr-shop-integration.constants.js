@@ -40,7 +40,7 @@ var lnrConstants = {
     },
     allSizes: {
       "en": 'All sizes',
-      "de": 'Alle Gr&ouml;&beta;en',
+      "de": 'Alle Gr&ouml;&szlig;en',
       "nl": 'Alle maten',
       "selected": {}
     }
