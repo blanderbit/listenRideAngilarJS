@@ -52,6 +52,12 @@
       });
 
       $stateProvider.state({
+        name: 'booking',
+        url: '/booking?bikeId&startDate&endDate',
+        template: '<booking></booking>',
+      });
+
+      $stateProvider.state({
         name: 'list-view',
         url: '/list-view',
         template: '<bike-list-view></bike-list-view>'

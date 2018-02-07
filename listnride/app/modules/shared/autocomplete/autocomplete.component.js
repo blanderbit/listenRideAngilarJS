@@ -9,10 +9,12 @@ angular.module('autocomplete',[]).component('autocomplete', {
     labelId: '@',
     placeholderId: '@',
     required: '@',
+    name: '@',
+    error: '=',
     placeChanged: '&'
   },
-  controller: ['$interval', '$scope', '$timeout',
-    function AutocompleteController($interval, $scope, $timeout) {
+  controller: ['$interval', '$scope',
+    function AutocompleteController($interval, $scope) {
       var autocomplete = this;
 
       var deregisterAutocompleteWatcher = $scope.$watch(
