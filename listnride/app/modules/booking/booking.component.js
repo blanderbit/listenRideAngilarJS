@@ -249,6 +249,7 @@ angular.module('booking', [])
 
         booking.confirmPhone = function () {
           var codeDigits = _.values(booking.confirmation).filter(Number);
+          console.log('length:', codeDigits.length);
           if (codeDigits.length === 4) {
             var data = { "confirmation_code": codeDigits.join('') };
             console.log('data:', data);
