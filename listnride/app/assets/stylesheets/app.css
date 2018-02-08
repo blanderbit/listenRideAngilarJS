@@ -330,6 +330,10 @@ booking md-tabs-wrapper {
   margin: 0;
 }
 
+.lnr-mb-0 {
+  margin-bottom: 0;
+}
+
 .lnr-clickable {
   cursor: pointer;
 }
