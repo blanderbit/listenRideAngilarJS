@@ -37,9 +37,14 @@
         <div
           class="booking__next-step"
           layout="column">
-          <div layout="row" layout-align="space-between center" class="lnr-margin-lrg lnr-mb-0" hide-gt-sm>
+          <div 
+            layout="row"
+            layout-align="space-between center"
+            class="lnr-margin-lrg lnr-mb-0"
+            hide-gt-sm
+            ng-hide="booking.selectedIndex !== 3">
             <h2 class="md-subhead">Total</h2>
-            <span>12$</span>
+            <span>{{ booking.total | currency:"€":2 }}</span>
           </div>
           <md-button
             class="md-raised md-primary lnr-margin-lrg"

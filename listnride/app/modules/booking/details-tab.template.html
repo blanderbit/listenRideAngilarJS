@@ -10,7 +10,8 @@
          layout-align="space-between none"
          layout-padding>
       <div class="lnr-list-form"
-           layout="column">
+           layout="column"
+           flex-xs="100" flex-sm="100">
         <h2 class="md-subhead">{{ 'booking.details.invoice-address' | translate }}</h2>
         <br>
         <form name="details.parent.detailsForm" novalidate class="md-body-desktop">
@@ -42,7 +43,7 @@
               </div>
             </md-input-container>
           </div>
-          <div class="lnr-input-containers" layout="row">
+          <div class="lnr-input-containers" layout="column" layout-gt-sm="row">
             <div flex>
               <autocomplete
                 autocomplete-id="details"
@@ -70,7 +71,7 @@
             </md-input-container>
           </div>
 
-          <div class="lnr-input-containers" layout="row">
+          <div class="lnr-input-containers" layout="column" layout-gt-sm="row">
             <md-input-container flex>
               <label>{{ 'forms.zip' | translate }}</label>
               <input
@@ -103,7 +104,8 @@
 
           <!-- Phone Number and Send Button -->
           <div class="lnr-input-containers"
-               layout="row"
+               layout="column" 
+               layout-gt-xs="row"
                ng-show="details.parent.showConfirmButton"
           >
             <md-input-container flex>
@@ -127,8 +129,7 @@
             <md-input-container flex>
               <md-button
                 flex
-                style="margin: 25px 0 0"
-                class="md-raised md-primary lnr-btn-inline"
+                class="md-raised md-primary lnr-btn-inline details__send-code"
                 ng-click="details.parent.sendSms(details.parent.detailsForm.phone_number)"
                 ng-hide="details.parent.phoneConfirmed === 'success'"
               >
@@ -193,7 +194,7 @@
                 <!--</md-input-container>-->
               </div>
               <span flex="5"></span>
-              <div layout="row" flex="30" layout-align="start start">
+              <div layout="row" flex="30" flex-xs="50" layout-align="start start">
                 <div ng-show="details.parent.phoneConfirmed === 'progress'" class="text-default">
                   {{ 'booking.details.enter-code' | translate }}
                 </div>

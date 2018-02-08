@@ -43,6 +43,7 @@ angular.module('booking', [])
             booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
             booking.prices = booking.bike.prices;
             booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
+            booking.total = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
           },
           function (error) {
             $state.go('home');

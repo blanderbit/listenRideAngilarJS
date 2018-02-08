@@ -33,8 +33,8 @@
             </div>
             <form name="payment.parent.paymentForm" novalidate ng-hide="payment.parent.paymentMethod != 1">
               <!-- Cardholder name and Cardnumber -->
-              <div class="lnr-input-containers" layout="row" layout-align="space-between none">
-                <md-input-container flex="30">
+              <div class="lnr-input-containers" layout="row" layout-align="space-between none" layout-wrap>
+                <md-input-container flex="100" flex-gt-xs="30">
                   <label>{{ 'booking.payment.card-name' | translate }}</label>
                   <input name="cardholderName"
                          ng-model-options='{ debounce: 400 }'
@@ -47,7 +47,7 @@
                     <div ng-message="required">{{ 'booking.payment.invalid-name' | translate }}</div>
                   </div>
                 </md-input-container>
-                <md-input-container flex="30">
+                <md-input-container flex="100" flex-gt-xs="30">
                   <label>{{ 'booking.payment.card-number' | translate }}</label>
                   <input name="creditCardNumber"
                          ng-model-options='{ debounce: 400 }'
@@ -64,7 +64,7 @@
                     <div ng-message="ccNumber">{{payment.parent.paymentForm.creditCardNumber.$ccEagerType}} {{ 'booking.payment.invalid-card-number' | translate }}</div>
                   </div>
                 </md-input-container>
-                <md-input-container flex="15">
+                <md-input-container flex="45" flex-gt-xs="15">
                   <label>{{ 'booking.payment.exp-date' | translate }}</label>
                   <input name="expiryDate"
                      ng-model-options='{ debounce: 50 }'
@@ -83,7 +83,7 @@
                     <div ng-message="dateFormat">{{ 'booking.payment.invalid-date' | translate }}</div>
                   </div>
                 </md-input-container>
-                <md-input-container flex="15">
+                <md-input-container flex="45" flex-gt-xs="15">
                   <label>{{ 'booking.payment.cvc' | translate }}</label>
                   <input name="securityNumber"
                      ng-model-options='{ debounce: 400 }'
