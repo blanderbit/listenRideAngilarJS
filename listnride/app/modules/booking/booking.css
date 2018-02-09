@@ -73,15 +73,14 @@ booking md-radio-button {
     margin: 25px 0 0
 }
 
+.booking__md-content {
+    max-height: 620px;
+}
+
 @media(max-width: 959px) { /* sm */
 
     .lnr-list-form {
         padding: 0;
-    }
-
-    .lnr-list-form md-input-container {
-        margin-right: 0px;
-        margin-left: 0px;
     }
 
     .booking__receipt {
@@ -127,5 +126,10 @@ booking md-radio-button {
         order: -1;
         margin: 0 0 20px;
     }
+
+     .lnr-list-form md-input-container {
+         margin-right: 0px;
+         margin-left: 0px;
+     }
 }
 
