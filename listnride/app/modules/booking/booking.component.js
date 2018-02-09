@@ -22,7 +22,6 @@ angular.module('booking', [])
         booking.bikeId = $stateParams.bikeId;
 
         booking.user = {};
-        booking.confirmation = '';
         booking.phoneConfirmed = 'progress';
         booking.selectedIndex = 0;
         booking.hidden = true;
@@ -87,7 +86,11 @@ angular.module('booking', [])
 
         booking.resendSms = function() {
           booking.toggleConfirmButton();
-          booking.confirmation = {0: '', 1: '', 2: '', 3: ''}
+          booking.phoneConfirmed = 'progress';
+          booking.confirmation_0 = '';
+          booking.confirmation_1 = '';
+          booking.confirmation_2 = '';
+          booking.confirmation_3 = '';
         };
 
         booking.nextAction = function() {
