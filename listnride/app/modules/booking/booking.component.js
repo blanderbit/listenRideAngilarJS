@@ -22,7 +22,6 @@ angular.module('booking', [])
         booking.bikeId = $stateParams.bikeId;
 
         booking.user = {};
-        booking.confirmation = '';
         booking.phoneConfirmed = 'progress';
         booking.selectedIndex = 0;
         booking.hidden = true;
@@ -87,7 +86,11 @@ angular.module('booking', [])
 
         booking.resendSms = function() {
           booking.toggleConfirmButton();
-          booking.confirmation = {0: '', 1: '', 2: '', 3: ''}
+          booking.phoneConfirmed = 'progress';
+          booking.confirmation_0 = '';
+          booking.confirmation_1 = '';
+          booking.confirmation_2 = '';
+          booking.confirmation_3 = '';
         };
 
         booking.nextAction = function() {
@@ -247,28 +250,11 @@ angular.module('booking', [])
           );
         };
 
-        // FIXME with cool input
-        // booking.confirmPhone = function () {
-        //   var codeDigits = _.values(booking.confirmation).filter(Number);
-        //   if (codeDigits.length === 4) {
-        //     var data = { "confirmation_code": codeDigits.join('') };
-        //     console.log(data);
-        //     // TODO: REMOVE console log
-        //     api.post('/users/' + $localStorage.userId + '/confirm_phone', data).then(
-        //       function (success) {
-        //         booking.toggleConfirmButton();
-        //         booking.phoneConfirmed = 'success';
-        //       },
-        //       function (error) {
-        //         booking.phoneConfirmed = 'error';
-        //       }
-        //     );
-        //   }
-        // };
-
         booking.confirmPhone = function () {
-          if (booking.confirmation.toString().length === 4) {
-            var data = { "confirmation_code": booking.confirmation };
+          var form = booking.detailsForm;
+          var codeDigits = form.confirmation_0.$viewValue + form.confirmation_1.$viewValue + form.confirmation_2.$viewValue + form.confirmation_3.$viewValue;
+          if (codeDigits.length === 4) {
+            var data = { "confirmation_code": codeDigits};
             api.post('/users/' + $localStorage.userId + '/confirm_phone', data).then(
               function (success) {
                 booking.toggleConfirmButton();
