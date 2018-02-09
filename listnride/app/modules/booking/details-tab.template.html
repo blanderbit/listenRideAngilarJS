@@ -10,8 +10,8 @@
          layout-padding>
       <div class="lnr-list-form"
            layout="column"
-           flex-xs="100" flex-sm="100">
-        <h2 class="md-subhead">{{ 'booking.details.invoice-address' | translate }}</h2>
+           flex-xs="100">
+        <h2 class="md-title">{{ 'booking.details.invoice-address' | translate }}</h2>
         <br>
         <form name="details.parent.detailsForm" novalidate class="md-body-desktop">
           <!-- First name and Last name -->
@@ -42,7 +42,7 @@
               </div>
             </md-input-container>
           </div>
-          <div class="lnr-input-containers" layout="column" layout-gt-sm="row">
+          <div class="lnr-input-containers" layout="row" layout-xs="column">
             <div flex>
               <autocomplete
                 autocomplete-id="details"
@@ -70,7 +70,7 @@
             </md-input-container>
           </div>
 
-          <div class="lnr-input-containers" layout="column" layout-gt-sm="row">
+          <div class="lnr-input-containers" layout="row" layout-xs="column">
             <md-input-container flex>
               <label>{{ 'forms.zip' | translate }}</label>
               <input

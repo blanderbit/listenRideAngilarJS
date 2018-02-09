@@ -51,7 +51,8 @@
             ng-disabled="booking.nextDisabled()"
             ng-click="booking.nextAction()"
           >
-            {{ 'shared.next' | translate }}
+            <span ng-if="booking.selectedIndex !== 3">{{ 'shared.next' | translate }}</span>
+            <span ng-if="booking.selectedIndex == 3">{{ 'calendar.request-bike' | translate }}</span>
           </md-button>
         </div>
       </div>
