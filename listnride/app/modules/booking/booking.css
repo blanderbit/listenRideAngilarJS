@@ -73,6 +73,10 @@ booking md-radio-button {
     margin: 25px 0 0
 }
 
+.booking__md-content {
+    max-height: 620px;
+}
+
 @media(max-width: 959px) { /* sm */
 
     .lnr-list-form {
