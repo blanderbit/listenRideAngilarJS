@@ -275,7 +275,9 @@
     "sign-in": {
       "tab": "1. Sign In",
       "new": "New at listnride?",
+      "login": "Login at listnride",
       "register-facebook": "Register with Facebook",
+      "login-facebook": "Login with Facebook",
       "already-member": "Already a member?",
       "register": "Register",
       "not-member": "No member yet?"
