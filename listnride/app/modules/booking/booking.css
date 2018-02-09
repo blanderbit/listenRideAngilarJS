@@ -79,11 +79,6 @@ booking md-radio-button {
         padding: 0;
     }
 
-    .lnr-list-form md-input-container {
-        margin-right: 0px;
-        margin-left: 0px;
-    }
-
     .booking__receipt {
         margin: 0;
     }
@@ -127,5 +122,10 @@ booking md-radio-button {
         order: -1;
         margin: 0 0 20px;
     }
+
+     .lnr-list-form md-input-container {
+         margin-right: 0px;
+         margin-left: 0px;
+     }
 }
 

@@ -12,7 +12,7 @@
            flex-xs="100"
            flex-gt-xs="70"
            layout="column">
-        <h2 class="md-subhead">{{ 'booking.sign-in.new' | translate }}</h2>
+        <h2 class="md-title">{{ 'booking.sign-in.new' | translate }}</h2>
         <br>
         <!--signup form-->
         <form
@@ -41,7 +41,7 @@
                 {{ 'forms.or' | translate }}
               </div>
             </div>
-            <div class="lnr-input-containers" layout="column" layout-gt-sm="row" value="{{$localStorage.firstName}}">
+            <div class="lnr-input-containers" layout="row" layout-xs="column" value="{{$localStorage.firstName}}">
               <md-input-container flex>
                 <label>{{ 'forms.first-name' | translate }}</label>
                 <input
@@ -71,7 +71,7 @@
               </md-input-container>
             </div>
 
-            <div class="lnr-input-containers" layout="column" layout-gt-sm="row">
+            <div class="lnr-input-containers" layout="row" layout-xs="column">
               <md-input-container flex>
                 <label>{{ 'forms.email-address' | translate }}</label>
                 <input
@@ -128,11 +128,11 @@
 
         <form ng-cloak name="signup.parent.loginForm" novalidate ng-hide="!showLogin" ng-submit="signup.parent.authentication.loginGlobal(signup.parent.loginForm)">
           <div class="md-dialog-content" layout="column">
-            <div layout="row">
-              <md-button ng-click="signup.parent.authentication.connectFb(false, true)" class="md-primary md-lined lnr-btn-fb" style="margin: 0; padding: 0;" flex="50">
-                {{ 'booking.sign-in.register-facebook' | translate }}
+            <div layout="row" layout-xs="column">
+              <md-button ng-click="signup.parent.authentication.connectFb(false, true)" class="md-primary md-lined lnr-btn-fb" style="margin: 0; padding: 0;" flex="50" flex-xs="100">
+                 {{ 'booking.sign-in.register-facebook' | translate }}
               </md-button>
-              <div layout flex="50" layout-align="center center">
+              <div layout flex="50" flex-xs="100" layout-align="center center" class="booking__already-member">
                 <a class="lnr-link" ng-click="showLogin = false">{{ 'booking.sign-in.not-member' | translate }}</a>
               </div>
             </div>
