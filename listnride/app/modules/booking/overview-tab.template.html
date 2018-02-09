@@ -9,11 +9,11 @@
       <div class="lnr-list-form" layout="column">
       	<p class="md-subhead">{{ 'booking.overview.bike-rental' | translate }}</p>
         <div class="spacer-xs"></div>
-      	<div layout="row" layout-align="space-between none">
-          <div flex="40">
+      	<div layout="row" layout-align="space-between none" layout-wrap>
+          <div flex="40" flex-xs="100">
             <img flex="100" ui-sref="bike({bikeId: overview.parent.bike.id})" target="_blank" ng-src="{{ overview.parent.bike.image_file_1.image_file_1.small.url }}" />
           </div>
-          <div flex="30" layout="column">
+          <div flex="30" flex-xs="60" layout="column">
             <p class="md-subhead" ui-sref="bike({bikeId: overview.parent.bike.id})" target="_blank">{{ overview.parent.bike.brand }}, {{ overview.parent.bikeCategory }}</p>
             <br>
             <div layout="row" layout-align="space-between none">
@@ -41,18 +41,28 @@
         <div class="spacer-xs"></div>
         <md-divider></md-divider>
         <div class="spacer-xs"></div>
-        <div layout="row" layout-align="space-between none">
-          <div flex="33">
+        <div layout="row" layout-xs="column" layout-align="space-between none">
+          <div flex="33" flex-xs="100">
             <p class="md-subhead">{{ 'booking.overview.invoice-address' | translate }}</p>
             <p class="md-body-2">{{ overview.parent.user.first_name + " " + overview.parent.user.last_name }}</p>
             <p class="md-body-1">{{ overview.parent.user.street }}<br>{{ overview.parent.user.zip + " " + overview.parent.user.city }}<br>{{ overview.parent.user.country }}</p>
           </div>
-          <div flex="33">
+          <div ng-hide show-xs>
+            <div class="spacer-xs"></div>
+            <md-divider></md-divider>
+            <div class="spacer-xs"></div>
+          </div>
+          <div flex="33" flex-xs="100">
             <p class="md-subhead">{{ 'booking.overview.payment' | translate }}</p>
             <p class="md-body-2">{{ overview.parent.user.current_payment_method.family.split(" ")[0] }}</p>
             <p class="md-body-1">**** **** **** {{ overview.parent.user.current_payment_method.family.split(" ")[1] }}</p>
           </div>
-          <div flex="33">
+          <div ng-hide show-xs>
+            <div class="spacer-xs"></div>
+            <md-divider></md-divider>
+            <div class="spacer-xs"></div>
+          </div>
+          <div flex="33" flex-xs="100">
             <p class="md-subhead">{{ 'booking.overview.redeem-voucher' | translate }}</p>
             <div layout="row" layout-xs="column">
               <md-input-container flex-gt-xs="60">
@@ -63,7 +73,7 @@
               <md-button
                 flex
                 ng-disabled="!overview.parent.voucherCode"
-                class="md-raised md-primary lnr-btn-inline lnr-btn-mobile"
+                class="md-raised md-primary lnr-btn-inline lnr-btn-mobile booking__voucher-btn"
                 ng-click="overview.parent.addVoucher()"
               >
                 {{ 'booking.overview.add' | translate }}

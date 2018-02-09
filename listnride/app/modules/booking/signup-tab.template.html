@@ -24,11 +24,16 @@
         >
           <div class="md-dialog-content" layout="column">
             <div layout="column">
-              <div layout="row">
-                <md-button ng-click="signup.parent.authentication.connectFb(false, true)" class="md-primary md-lined lnr-btn-fb" style="margin: 0; padding: 0;" flex="50">
+              <div layout="row" layout-xs="column">
+                <md-button 
+                  ng-click="signup.parent.authentication.connectFb(false, true)"
+                  class="md-primary md-lined lnr-btn-fb"
+                  style="margin: 0; padding: 0;"
+                  flex="50"
+                  flex-xs="100">
                   {{ 'booking.sign-in.register-facebook' | translate }}
                 </md-button>
-                <div layout flex="50" layout-align="center center">
+                <div layout flex="50" flex-xs="100" layout-align="center center" class="booking__already-member">
                   <a class="lnr-link" ng-click="showLogin = true">{{ 'booking.sign-in.already-member' | translate }}</a>
                 </div>
               </div>
@@ -36,7 +41,7 @@
                 {{ 'forms.or' | translate }}
               </div>
             </div>
-            <div class="lnr-input-containers" layout="row" value="{{$localStorage.firstName}}">
+            <div class="lnr-input-containers" layout="column" layout-gt-sm="row" value="{{$localStorage.firstName}}">
               <md-input-container flex>
                 <label>{{ 'forms.first-name' | translate }}</label>
                 <input
@@ -66,7 +71,7 @@
               </md-input-container>
             </div>
 
-            <div class="lnr-input-containers" layout="row">
+            <div class="lnr-input-containers" layout="column" layout-gt-sm="row">
               <md-input-container flex>
                 <label>{{ 'forms.email-address' | translate }}</label>
                 <input

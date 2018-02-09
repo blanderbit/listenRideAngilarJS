@@ -1,6 +1,6 @@
 <md-content class="single-column">
-  <div class="content lnr-page-margin" layout="row">
-    <div flex="70" flex-sm="80" layout-padding style="width: 100%">
+  <div class="content lnr-page-margin" layout="column" layout-gt-sm="row">
+    <div flex="100" flex-md="60" flex-gt-md="70" layout-padding>
       <md-tabs
         md-no-pagination
         md-dynamic-height
@@ -24,18 +24,36 @@
       </md-tabs>
     </div>
 
-    <div flex="30" flex-sm="20" layout-padding layout="column" ng-if="booking.authentication.loggedIn()">
+    <div flex="100" flex-md="40" flex-gt-md="30" layout-padding layout="column" ng-if="booking.authentication.loggedIn()">
       <div class="spacer-xs"></div>
-      <div class="animate-if highlight-tile" style="margin: 64px 16px 0 0" layout="column">
-        <receipt start-date="booking.startDate" end-date="booking.endDate" prices="booking.prices" invalid-days="0" user="booking.user"></receipt>
-        <md-button
-          class="md-raised md-primary lnr-margin-lrg"
-          ng-disabled="booking.nextDisabled()"
-          ng-click="booking.nextAction()"
-          flex="90"
-        >
-          {{ 'shared.next' | translate }}
-        </md-button>
+      <div class="animate-if highlight-tile booking__receipt" layout="column">
+        <receipt
+          start-date="booking.startDate"
+          end-date="booking.endDate" 
+          prices="booking.prices" 
+          invalid-days="0" 
+          user="booking.user">
+        </receipt>
+        <div
+          class="booking__next-step"
+          layout="column">
+          <div 
+            layout="row"
+            layout-align="space-between center"
+            class="lnr-margin-lrg lnr-mb-0"
+            hide-gt-sm
+            ng-hide="booking.selectedIndex !== 3">
+            <h2 class="md-subhead">Total</h2>
+            <span>{{ booking.total | currency:"€":2 }}</span>
+          </div>
+          <md-button
+            class="md-raised md-primary lnr-margin-lrg"
+            ng-disabled="booking.nextDisabled()"
+            ng-click="booking.nextAction()"
+          >
+            {{ 'shared.next' | translate }}
+          </md-button>
+        </div>
       </div>
       <div layout="row" layout-align="end none">
         <img
