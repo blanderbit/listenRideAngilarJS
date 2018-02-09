@@ -283,6 +283,7 @@
     "sign-in": {
       "tab": "1. Sign In",
       "new": "New at listnride?",
+      "login": "Login at listnride",
       "register-facebook": "Register with Facebook",
       "already-member": "Already a member?",
       "register": "Register",
