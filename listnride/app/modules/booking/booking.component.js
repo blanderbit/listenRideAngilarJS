@@ -247,11 +247,12 @@ angular.module('booking', [])
           );
         };
 
-        booking.confirmPhone = function (hashInput) {
-          var codeDigits = _.values(hashInput).filter(Number);
-          console.log('confirmation:', hashInput);
+        booking.confirmPhone = function () {
+          var form = booking.detailsForm;
+          var codeDigits = form.confirmation_0.$viewValue + form.confirmation_1.$viewValue + form.confirmation_2.$viewValue + form.confirmation_3.$viewValue;
+          console.log('confirmation:', codeDigits);
           if (codeDigits.length === 4) {
-            var data = { "confirmation_code": codeDigits.join('') };
+            var data = { "confirmation_code": codeDigits};
             console.log('data:', data);
             api.post('/users/' + $localStorage.userId + '/confirm_phone', data).then(
               function (success) {
@@ -264,21 +265,6 @@ angular.module('booking', [])
             );
           }
         };
-        //
-        // booking.confirmPhone = function () {
-        //   if (booking.confirmation.toString().length === 4) {
-        //     var data = { "confirmation_code": booking.confirmation };
-        //     api.post('/users/' + $localStorage.userId + '/confirm_phone', data).then(
-        //       function (success) {
-        //         booking.toggleConfirmButton();
-        //         booking.phoneConfirmed = 'success';
-        //       },
-        //       function (error) {
-        //         booking.phoneConfirmed = 'error';
-        //       }
-        //     );
-        //   }
-        // };
 
         // toggle confirm phone button
         booking.toggleConfirmButton = function () {

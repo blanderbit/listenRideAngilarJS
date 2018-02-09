@@ -148,51 +148,44 @@
             </div>
             <div layout="row" layout-align="start center">
               <div class="lnr-sms-input" layout="row" layout-align="center center">
-                <!--<md-input-container flex>-->
-                  <!--<input-->
-                    <!--ng-model="details.parent.confirmation"-->
-                    <!--ng-required="true"-->
-                    <!--maxlength="4"-->
-                    <!--type="number"-->
-                    <!--required-->
-                    <!--ng-change="details.parent.confirmPhone()"-->
-                  <!--&gt;-->
-                <!--</md-input-container>-->
-
                 <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
                   <input
-                    ng-model="details.parent.confirmation[0]"
+                    ng-model="details.parent.confirmation_0"
                     maxlength="1"
                     required
+                    name="confirmation_0"
                     type="number"
-                    ng-change="details.parent.confirmPhone(details.parent.confirmation)"
+                    ng-change="details.parent.confirmPhone()"
                   >
                 </md-input-container>
                 <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
                   <input
-                    ng-model="details.parent.confirmation[1]"
+                    ng-model="details.parent.confirmation_1"
                     maxlength="1"
                     required
+                    name="confirmation_1"
                     type="number"
-                    ng-change="details.parent.confirmPhone(details.parent.confirmation)"
+                    ng-change="details.parent.confirmPhone()"
                   >
                 </md-input-container>
                 <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
                   <input
-                    ng-model="details.parent.confirmation[2]"
+                    ng-model="details.parent.confirmation_2"
                     maxlength="1"
                     required
+                    name="confirmation_2"
                     type="number"
-                    ng-change="details.parent.confirmPhone(details.parent.confirmation)"
+                    ng-change="details.parent.confirmPhone()"
                   >
                 </md-input-container>
                 <md-input-container flex-gt-xs="20" class="lnr-sms-digit" focus>
                   <input
-                    ng-model="details.parent.confirmation[3]"
+                    ng-model="details.parent.confirmation_3"
                     maxlength="1"
                     required
+                    name="confirmation_3"
                     type="number"
-                    ng-change="details.parent.confirmPhone(details.parent.confirmation)"
+                    ng-change="details.parent.confirmPhone()"
                   >
                 </md-input-container>
               </div>
