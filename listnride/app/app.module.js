@@ -60,6 +60,7 @@ angular.module('listnride', [
   'categoryLanding',
   'hamburgTriathlon',
   'receipt',
+  'rethinkIntegration',
   /* external modules */
   'ngAnimate',
   'ngMaterial',

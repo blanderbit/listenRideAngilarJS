@@ -26,7 +26,7 @@ angular.module('mcbw',[]).component('mcbw', {
         }
       );
 
-      api.get('/rides?family=10').then(
+      api.get('/rides?family=8').then(
         function (success) {
           mcbw.bikes2 = success.data;
         },
