@@ -55,6 +55,7 @@
                          cc-number
                          cc-eager-type
                          ng-required="true"
+                         maxlength="16"
                   />
                   <div ng-messages="payment.parent.paymentForm.creditCardNumber.$error"
                        ng-show="payment.parent.paymentForm.creditCardNumber.$dirty"
@@ -73,6 +74,7 @@
                      type="text"
                      ng-required="true"
                      placeholder="MM/YY"
+                     maxlength="5"
                   />
                   <div ng-messages="payment.parent.paymentForm.expiryDate.$error"
                        ng-show="payment.parent.paymentForm.expiryDate.$dirty"
@@ -88,6 +90,7 @@
                      ng-model-options='{ debounce: 400 }'
                      ng-model="payment.parent.securityNumber"
                      type="text"
+                     maxlength="4"
                      cc-cvc
                      ng-required="true"/>
                   <div ng-messages="payment.parent.paymentForm.securityNumber.$error"
