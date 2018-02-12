@@ -18,6 +18,7 @@ angular.module('receipt', []).component('receipt', {
 
       this.$onChanges = function (changes) {
         if (changes.user) {
+          console.log("User changed");
           receipt.balance = changes.user.currentValue.balance;
           setPrices();
         }
