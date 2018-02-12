@@ -267,6 +267,68 @@
       "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform."
     }
   },
+  "booking": {
+    "shopping": "Secure Shopping",
+    "pay-secure": "Pagamento sicuro con",
+    "footer": {
+      "questions": "Hai domande sul noleggio della bicicletta?",
+      "call-us": "Chaimaci al: +49 (0)30-120870330, Lun-Ven 9-18.",
+      "email-us": "O scrivici un email",
+      "support": "listnride servizio clienti"
+    },
+    "sign-in": {
+      "tab": "1. Accedi",
+      "new": "Nuovo su listnride?",
+      "login": "Registrati con Facebook",
+      "register-facebook": "Registrati con Facebook",
+      "login-facebook": "Registrati con Facebook",
+      "already-member": "Già registrato?",
+      "register": "Registrati",
+      "not-member": "Nuovo su listnride?"
+    },
+    "details": {
+      "tab": "2. Dati personali",
+      "invoice-address": "Il tuo indirizzo di fatturazione",
+      "verification": "Si prega di verificare",
+      "send-sms": "Ti invieremo un SMS sul tuo telefono",
+      "check-phone": "Per favore controlla il tuo telefono",
+      "send-code": "Inviare",
+      "comfirm-code": "PIN di conferma",
+      "enter-code": "Inserisci il PIN che abbiamo appena inviato al tuo telefono",
+      "success-code": "Perfetto, sei pronto.",
+      "fail-code": "Il PIN inserito non è corretto",
+      "resend": "Inviare di nuovo"
+    },
+    "payment": {
+      "tab": "3. Metodi di Pagamento",
+      "select-method": "Seleziona il tuo metodo di pagamento",
+      "subtitle": "Ti addebitiamo il costo solo dopo che il noleggiatore ha accettato la tua richiesta.",
+      "credit-card": "Carta di credito",
+      "card-name": "Nome e Cognome titolare carta",
+      "invalid-name": "Please provide valid name",
+      "card-number": "Numero di carta di credito",
+      "invalid-card": "Please provide a valid Card Number",
+      "invalid-card-number": "Card Number not valid",
+      "exp-month": "Exp. month",
+      "invalid-month": "Month not valid",
+      "invalid-year": "Year not valid",
+      "exp-year": "Exp. year",
+      "exp-date": "Scadenza",
+      "invalid-cvc": "CVC not valid",
+      "cvc": "Numero di sicurezza",
+      "pay-paypal": "Paypal"
+    },
+    "overview": {
+      "tab": "4. Riepilogo",
+      "bike-rental": "La bici selzionata",
+      "size": "Taglia",
+      "location": "Località",
+      "invoice-address": "Indirizzo di fatturazione",
+      "payment": "Pagamento",
+      "redeem-voucher": "Buono sconto",
+      "add": "Add"
+    }
+  },
   "toasts": {
     "update-profile-success": "Il tuo profilo è stato aggiornato con successo.",
     "error": "Si è verificato un errore. Assicurati che la connessione a Internet funzioni e riprova.",
@@ -275,6 +337,7 @@
     "add-voucher-error": "Purtroppo, il buono in dotazione non è valido.",
     "verification-email-sent": "Un messaggio di posta elettronica, con un link di conferma, è stato inviato al tuo indirizzo email. Questo potrebbe richiedere alcuni minuti, se non hai ricevuto nulla controlla la cartella spam.",
     "could-not-sign-up": "Impossibile registrarsi. Sembra che l'indirizzo email fornito sia già in uso.",
+    "successfully-sign-up": "You have successfully signed up. Welcome!",
     "successfully-logged-in": "Accesso avvenuto. Bentornato!",
     "successfully-logged-out": "Ti sei disconnesso.",
     "could-not-log-in": "Impossibile accedere. Assicurati di essere già iscritto e controlla se le tue credenziali sono valide.",

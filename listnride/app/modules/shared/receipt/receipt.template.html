@@ -1,0 +1,73 @@
+<div id="requestOverview" layout="column" layout-align="center stretch" layout-padding>
+  <div layout="row" layout-align="space-between center" ng-if="calendar.bikeFamily != 2">
+    <div layout="row" layout-align="start center">
+      <div>{{ 'shared.duration' | translate }}</div>
+      <div>
+        <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+        <md-tooltip md-direction="right"><span translate="calendar.info"></span></md-tooltip>
+      </div>
+    </div>
+    <div>{{ receipt.duration }}</div>
+  </div>
+
+  <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
+
+  <div layout="row" layout-align="space-between center">
+    <div layout="row" layout-align="start center">
+      <span ng-if="calendar.durationDays">{{ receipt.durationDays }} {{ 'shared.days' | translate }} x {{ receipt.prices[0].price | currency:"€":0 }}</span>
+      <span ng-if="!calendar.durationDays">{{ receipt.durationDays }} {{ 'shared.days' | translate }} x {{ receipt.prices[0].price | currency:"€":0 }}</span>
+      <div>
+        <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+        <md-tooltip md-direction="right"><span translate="calendar.info-subtotal"></span></md-tooltip>
+      </div>
+    </div>
+    <div>{{ receipt.subtotal | currency:"€":2 }}</div>
+  </div>
+
+  <div layout="row" layout-align="space-between center" ng-if="receipt.discount">
+    <div class="lnr-dark-green-text" layout="row" layout-align="start center">
+      {{ 'shared.discount' | translate }} {{receipt.durationDays}} {{ 'shared.days' | translate }} x {{ receipt.discountRelative | currency:"€":2 }}
+      <div>
+        <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+        <md-tooltip md-direction="right"><span translate="calendar.info-discount"></span></md-tooltip>
+      </div>
+    </div>
+    <div class="lnr-dark-green-text">-{{ receipt.discount | currency:"€":2 }}</div>
+  </div>
+
+  <div layout="row" layout-align="space-between center">
+    <div layout="row">
+      {{ 'shared.lnr-fee' | translate }}
+      <div>
+        <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+        <md-tooltip md-direction="right"><span translate="calendar.info-service-fee"></span></md-tooltip>
+      </div>
+    </div>
+    <div>{{ receipt.lnrFee | currency:"€":2 }}</div>
+  </div>
+
+  <div layout="row" layout-align="space-between center" ng-if="receipt.balance > 0">
+    <div layout="row">
+      {{ 'shared.balance' | translate }}
+      <div>
+        <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+        <md-tooltip md-direction="right"><span translate="calendar.info-service-fee"></span></md-tooltip>
+      </div>
+    </div>
+    <div>- {{ receipt.balance | currency:"€":2 }}</div>
+  </div>
+
+  <div layout="row" layout-align="space-between center">
+    <div class="md-body-2">{{ 'shared.total' | translate }}</div>
+    <div class="md-body-2">{{ receipt.total | currency:"€":2 }}</div>
+  </div>
+  <div class="text-error md-caption"
+       ng-if="calendar.bikeFamily != 2 && calendar.isDateInvalid()"
+       layout-padding>
+    {{ 'calendar.invalid-date' | translate }}
+  </div>
+  <div class="text-error md-caption"
+       ng-if="calendar.owner">
+    {{ 'calendar.own-bike' | translate }}
+  </div>
+</div>
