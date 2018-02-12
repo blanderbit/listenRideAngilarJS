@@ -179,7 +179,7 @@ module.exports = function () {
                     webappUrl: "http://www.listnride.com",
                     defaultTranslation: 'default',
                     staticTranslation: 'static',
-                    btKey: ''
+                    btKey: 'production_xwwb75fg_h63v2c4vq6tbjq58'
                 }
             },
             imageminOptions: {
