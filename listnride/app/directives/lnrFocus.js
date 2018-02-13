@@ -31,6 +31,7 @@ angular.module('list').directive('lnrFocus', function() {
           _.forEach(inputs, function(input, idx) {
             input.focus();
             input.value = numbers[idx];
+            $(input).trigger('change');
           });
         }
 
