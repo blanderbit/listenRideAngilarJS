@@ -1,5 +1,5 @@
 // Do not allow to enter more digits than in max length
-angular.module('list').directive('maxLength', function() {
+angular.module('list').directive('lnrMaxLength', function() {
   return {
     restrict: "A",
     link: function($scope, element) {

@@ -1,5 +1,5 @@
 // Add focus for next input
-angular.module('list').directive('focus', function() {
+angular.module('list').directive('lnrFocus', function() {
   return {
     restrict: "A",
     link: function($scope, element) {
