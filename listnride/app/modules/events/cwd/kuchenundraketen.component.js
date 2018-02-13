@@ -19,7 +19,6 @@ angular.module('kuchenundraketen',[]).component('kuchenundraketen', {
           });
         },
         function(error) {
-          console.log("Error retrieving User", error);
         }
       );
 

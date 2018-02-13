@@ -27,7 +27,6 @@ angular.module('vello-integration',[]).component('vello', {
 
         },
         function (error) {
-          console.log('Error fetching Bikes');
         }
       );
     }

@@ -78,7 +78,6 @@ angular.module('ampler-integration',[]).component('ampler', {
           ampler.currentBikes = ampler.bikes["berlin"];
         },
         function (error) {
-          console.log('Error fetching Bikes');
         }
       );
 

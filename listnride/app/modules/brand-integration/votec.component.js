@@ -62,8 +62,6 @@ angular.module('votec-integration',[]).component('votec', {
 
       api.get('/rides?family=26').then(
         function (success) {
-          console.log(success.data);
-
           for (var i=0; i<success.data.length; i++) {
             switch (success.data[i].city) {
               case "Heidelberg": votec.bikes.heidelberg.push(success.data[i]); break;

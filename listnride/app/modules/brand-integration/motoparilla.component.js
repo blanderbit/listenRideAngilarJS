@@ -36,7 +36,6 @@ angular.module('motoparilla-integration',[]).component('motoparilla', {
           motoparilla.bikes = success.data;
         },
         function (error) {
-          console.log('Error fetching Bikes');
         }
       );
     }
