@@ -19,6 +19,23 @@ angular.module('list').directive('focus', function() {
           $prevElement.find('input').focus();
         }
       });
+
+      element.on("paste", function(e) {
+        var inputs = element.parent().find('input');
+        // Get clipboard data for all browsers
+        var clipboardData = e.clipboardData || e.originalEvent.clipboardData || window.clipboardData;
+        var data = clipboardData.getData('text/plain');
+
+        if (!_.isNaN(Number(data))) {
+          var numbers = data.split('');
+          _.forEach(inputs, function(input, idx) {
+            input.focus();
+            input.value = numbers[idx];
+          });
+        }
+
+        e.preventDefault();
+      });
     }
   }
 });
