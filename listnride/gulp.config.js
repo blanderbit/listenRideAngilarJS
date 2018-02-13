@@ -132,7 +132,8 @@ module.exports = function () {
                     userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com",
                     defaultTranslation: 'default',
-                    staticTranslation: 'static'
+                    staticTranslation: 'static',
+                    btKey: 'sandbox_jcmqgjqd_t4ptn54mswxmpnd5'
                 }
             },
             imageOptions: {
@@ -154,7 +155,8 @@ module.exports = function () {
                     userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com",
                     defaultTranslation: 'default',
-                    staticTranslation: 'static'
+                    staticTranslation: 'static',
+                    btKey: 'sandbox_jcmqgjqd_t4ptn54mswxmpnd5'
                 }
             },        
             imageminOptions: {
@@ -176,7 +178,8 @@ module.exports = function () {
                     userEndpoint: 'https://api.listnride.com/v2/users/',
                     webappUrl: "http://www.listnride.com",
                     defaultTranslation: 'default',
-                    staticTranslation: 'static'
+                    staticTranslation: 'static',
+                    btKey: 'production_xwwb75fg_h63v2c4vq6tbjq58'
                 }
             },
             imageminOptions: {

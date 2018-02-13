@@ -224,6 +224,10 @@
       "moeve": {
         "meta-title": "Rent and test Moeve bikes in Munich and Amsterdam",
         "meta-descr": "The bike with the unique drive system - Cyfly by Moeve."
+      },
+      "rethink": {
+        "meta-title": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden",
+        "meta-descr": "Your rethink e-bike. Clear. Robust. Distinct Character."
       }
     },
     "about-us": {
@@ -271,6 +275,69 @@
       "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform."
     }
   },
+  "booking": {
+    "shopping": "Secure Shopping",
+    "pay-secure": "Pay secure with",
+    "footer": {
+      "questions": "Do you have questions about booking a bike?",
+      "call-us": "Call us +49 (0)30-120870330, Mo-Fr 9-18 pm.",
+      "email-us": "Or write us an email",
+      "support": "listnride Support"
+    },
+    "sign-in": {
+      "tab": "1. Sign In",
+      "new": "New at listnride?",
+      "login": "Login at listnride",
+      "register-facebook": "Register with Facebook",
+      "login-facebook": "Login with Facebook",
+      "already-member": "Already a member?",
+      "register": "Register",
+      "not-member": "No member yet?"
+    },
+    "details": {
+      "tab": "2. Personal Details",
+      "invoice-address": "Invoice Address",
+      "verification": "Verification",
+      "send-sms": "We'll send you one time sms to your phone.",
+      "check-phone": "Please check your phone.",
+      "send-code": "Send Code",
+      "confirm-code": "Confirmation code",
+      "enter-code": "Enter the pin that we just sent to your phone",
+      "success-code": "Great. You are set.",
+      "fail-code": "The code you entered is not correct. Try again or resend the SMS",
+      "resend": "Resend"
+    },
+    "payment": {
+      "tab": "3. Payment Method",
+      "select-method": "Select your Payment Method",
+      "subtitle": "Please select your favorite payment method. We only charge you after the lister accepted your request.",
+      "credit-card": "Credit Card",
+      "card-name": "Name on Card",
+      "invalid-name": "Please provide valid name",
+      "card-number": "Card Number",
+      "invalid-card": "Please provide a valid Card Number",
+      "invalid-card-number": "Card Number not valid",
+      "exp-month": "Exp. month",
+      "invalid-month": "Month not valid",
+      "invalid-year": "Year not valid",
+      "invalid-date": "Date not valid",
+      "exp-year": "Exp. year",
+      "exp-date": "Exp. date",
+      "invalid-cvc": "CVC not valid",
+      "cvc": "CVC Number",
+      "pay-paypal": "Pay with Paypal"
+    },
+    "overview": {
+      "tab": "4. Overview",
+      "bike-rental": "Your bike rental",
+      "size": "Size",
+      "location": "Location",
+      "invoice-address": "Invoice Address",
+      "payment": "Payment",
+      "redeem-voucher": "Redeem Voucher",
+      "add": "Add"
+    }
+  },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
     "error": "An error occured. Please make sure your internet connection works and try again.",
@@ -279,6 +346,7 @@
     "add-voucher-error": "Unfortunately, the supplied voucher is not valid.",
     "verification-email-sent": "An email with a confirmation link was sent to your email address. This may take a few minutes, if you didn't receive anything also have a look in your spam folder.",
     "could-not-sign-up": "Could not sign up. It seems the email address provided is already in use.",
+    "successfully-sign-up": "You have successfully signed up. Welcome!",
     "successfully-logged-in": "Successfully logged in. Welcome back!",
     "successfully-logged-out": "You're logged out.",
     "could-not-log-in": "Could not log in. Please make sure you're signed up already and your credentials are valid.",
@@ -504,7 +572,7 @@
       "empty-last-name": "Please enter your last name",
       "empty-first-name": "Please enter your first name",
       "max-size-last-name": "Last name shouldn't exceed 30 characters",
-      "max-size-first-name": "First name shouldn't be longer than 20 characters",
+      "max-size-first-name": "First name shouldn't exceed 20 characters",
       "empty-company-name": "Please enter your company name",
       "min-size-company-name": "Company name should be longer than 2 characters "
     }

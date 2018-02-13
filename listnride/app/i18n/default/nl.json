@@ -223,6 +223,10 @@
       "moeve": {
         "meta-title": "Huur en test een Moeve fiets in München en Amsterdam",
         "meta-descr": "De fiets met de meest innovatieve fietstransmissie - Cyfly van Möve"
+      },
+      "rethink": {
+        "meta-title": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden",
+        "meta-descr": "Your rethink e-bike. Clear. Robust. Distinct Character."
       }
     },
     "about-us": {
@@ -270,6 +274,69 @@
       "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform."
     }
   },
+  "booking": {
+    "shopping": "Secure Shopping",
+    "pay-secure": "Veilig betalen met",
+    "footer": {
+      "questions": "Heb je vragen bij het boeken van een fiets?",
+      "call-us": "Bel ons op +49 (0)30-120870330, Ma-Vrij 9-18u.",
+      "email-us": "Of stuur ons een email",
+      "support": "listnride Support"
+    },
+    "sign-in": {
+      "tab": "1. Aanmelden",
+      "new": "Nieuw bij listnride?",
+      "login": "Login bij listnride",
+      "register-facebook": "Aanmelden met Facebook",
+      "login-facebook": "Login met Facebook",
+      "already-member": "Al geregistreerd?",
+      "register": "Aanmelden",
+      "not-member": "No member yet?"
+    },
+    "details": {
+      "tab": "2. Persoonlijke gegevens",
+      "invoice-address": "Factuuradres",
+      "verification": "Gaarne bevestigen",
+      "send-sms": "We sturen je een SMS aan je mobiele telefoon.",
+      "check-phone": "Controleer je mobiele telefoon.",
+      "send-code": "Versturen",
+      "confirm-code": "Confirmation code",
+      "enter-code": "Voer de PIN in",
+      "success-code": "Perfekt! Je bent er klaar voor.",
+      "fail-code": "Je hebt een onjuiste PIN ingevoerd.",
+      "resend": "Nogmaals versturen"
+    },
+    "payment": {
+      "tab": "3. Betalingsgegevens",
+      "select-method": "Selecteer je betaalmethode",
+      "subtitle": "We incasseren de huur nadat de verhuurder je aanvraag accepteerd",
+      "credit-card": "Kredietkaart",
+      "card-name": "Kaarthouder",
+      "invalid-name": "Please provide valid name",
+      "card-number": "Nummer Kredietkaart",
+      "invalid-card": "Please provide a valid Card Number",
+      "invalid-card-number": "Card Number not valid",
+      "exp-month": "Exp. month",
+      "invalid-month": "Month not valid",
+      "invalid-year": "Year not valid",
+      "invalid-date": "Date not valid",
+      "exp-year": "Exp. year",
+      "exp-date": "Vervaldatum",
+      "invalid-cvc": "CVC not valid",
+      "cvc": "CVC-nummer",
+      "pay-paypal": "Paypal"
+    },
+    "overview": {
+      "tab": "4. Samenvatting",
+      "bike-rental": "Je gekozen fiets",
+      "size": "Grootte",
+      "location": "Locatie",
+      "invoice-address": "Factuuradres",
+      "payment": "Betaling",
+      "redeem-voucher": "Voucher verzilveren",
+      "add": "Add"
+    }
+  },
   "toasts": {
     "update-profile-success": "Je profiel is geactualiseerd.",
     "error": "Er is een fout opgetreden. Check of je internetverbinding werkt en probeer het nogmaals.",
@@ -278,6 +345,7 @@
     "add-voucher-error": "De ingevoerde code is niet geldig.",
     "verification-email-sent": "een email met activeringslink is aan je e-mailadres verstuurd. De ontvangst kan een paar minuten duren, indien je niks in je inbox ziet verschijnen, kijk dan even in je spamfolder.",
     "could-not-sign-up": "Aanmelden mislukt. Het lijkt erop dat het ingegeven emailadres al in gebruik is.",
+    "successfully-sign-up": "You have successfully signed up. Welcome!",
     "successfully-logged-in": "Met succes ingelogd. Welkom terug!",
     "successfully-logged-out": "Je bent uitgelogd.",
     "could-not-log-in": "Inloggen mislukt. Check of je je al hebt geregistreerd en je inloggegevens correct zijn.",

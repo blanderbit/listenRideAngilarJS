@@ -1,0 +1,135 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Booking FLOW
+/*-----------------------------------------------------------------------------------*/
+
+.mt0 {
+    margin-top: 0;
+}
+
+.lnr-row-images {
+    flex-direction: row-reverse;
+}
+
+.lnr-row-images__item {
+    margin-right: -16px;
+}
+
+.lnr-row-images img {
+    width: 71px;
+    height: 71px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+}
+
+.lnr-row-images__item:last-child {
+    margin-left: -16px;
+}
+
+.lnr-sms-input {
+    border-width: 1px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: rgba(206,212,216,0.9);
+    width: 120px;
+    padding-bottom: 3px;
+}
+
+.lnr-sms-input .lnr-sms-digit .md-input {
+    border-width: 0;
+    border-bottom: 1px solid rgba(206,212,216,0.9);
+    height: 35px;
+    border-radius: 0;
+}
+
+.lnr-sms-input md-input-container {
+    margin-bottom: 0;
+}
+
+.lnr-payment-image {
+    margin: 15px;
+}
+
+.lnr-payment-tab-image {
+    height: 20px;
+}
+
+.lnr-payment-tab-button {
+    padding: 26px 0;
+}
+
+booking .md-label {
+    color: rgba(85, 85, 85, 1.0);
+}
+
+booking md-radio-button {
+    margin: 0;
+}
+
+.booking__receipt {
+    margin: 64px 16px 0 0;
+}
+
+.details__send-code {
+    margin: 25px 0 0
+}
+
+.booking__md-content {
+    max-height: 620px;
+}
+
+@media(max-width: 959px) { /* sm */
+
+    .lnr-list-form {
+        padding: 0;
+    }
+
+    .booking__receipt {
+        margin: 0;
+    }
+
+    .booking__next-step {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+
+        padding: 0 16px 20px;
+        background-color: rgba(250, 250, 250, 1);
+    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .details__send-code {
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 599px) {
+    .lnr-list-form md-input-container .md-input-message-animation:not(.ng-animate) {
+        margin-top: 0;
+    }
+
+    .details__send-code {
+        margin-top: 10px;
+    }
+
+    .layout-xs-column > md-divider {
+        border-top-width: 1px;
+    }
+
+    .booking__voucher-btn {
+        margin: 0;
+    }
+
+    .booking__already-member {
+        order: -1;
+        margin: 0 0 20px;
+    }
+
+     .lnr-list-form md-input-container {
+         margin-right: 0px;
+         margin-left: 0px;
+     }
+}
+

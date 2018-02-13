@@ -12,16 +12,14 @@ angular.module('categoryLanding',[]).component('categoryLanding', {
       if (categoryId == "") {
         $state.go('404');
       }
-      console.log("category id is " + categoryId);
+
       $tpl.addPart(ENV.staticTranslation);
       categoryLanding.bikes = {};
       categoryLanding.loading = true;
       categoryLanding.category = $filter('category')(categoryId);
-      console.log(categoryLanding.category);
 
       api.get('/seo_pages?city='+categoryLanding.city+'&cat='+categoryId+'&lng=' + $translate.preferredLanguage()).then(
         function (success) {
-          console.log(success.data);
           categoryLanding.data = success.data;
           categoryLanding.location = categoryLanding.city;
           categoryLanding.loading = false;
