@@ -9,7 +9,7 @@ angular.module('rethinkIntegration',[]).component('rethink', {
       $tpl.addPart(ENV.staticTranslation);
 
       rethink.bikes = {
-        berlin: [],
+        dresden: [],
         munich: [],
         hamburg: []
       };
