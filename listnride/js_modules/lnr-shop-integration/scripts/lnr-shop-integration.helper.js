@@ -1,5 +1,7 @@
 /* global lnrConstants: '/listnride/js_modules/lnr-shop-integration/scripts/lnr-shop-integration.constants.js'
 */
+"use strict";
+
 var lnrHelper = {
   /**
    * after DOM is rendered the first time
@@ -456,7 +458,6 @@ var lnrHelper = {
         categoryDesc = lnrHelper.categoryFilter(userId, category),
         price = parseInt(ride.price_from),
         imageUrl = ride.image_file_1.image_file_1.small.url,
-        svgUrl = lnrConstants.svgUrlRoot + (category + '').slice(0, 1) + '.svg',
         rideDescription = ride.description.slice(0, 150).concat(' ...');
 
       // bikes grid html
@@ -464,16 +465,22 @@ var lnrHelper = {
         '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">',
         '<bike-card>',
         '<md-card class="lnr-bike-card _md">',
-        '<a target="_blank" class="image-container lnr-links" title="' + ride.description + '" onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')">',
+        '<a style="cursor:default" class="image-container lnr-links" title="' + ride.description + '">',
         '<img src="' + imageUrl + '"></img>',
-        '<div class="after">',
-        '<span class="content"><span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>' +
-        '<button class="md-button">' + basicInfo.buttonText + '</button></span>',
-        '</div></a>',
+        // default: info button
+        '<div class="info-button"><span class="info-icon"></span></div>',
+        '<div class="rent-element">',
+        // on hover: info button
+        '<span style="position:absolute"><div class="info-button"><span class="info-icon"></span></div></span>',
+        // on hover: rent button
+        '<span class="content">',
+        // <span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>
+        '<button onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')" class="md-button rent-button">' + basicInfo.buttonText + '</button>',
+        '</span></div></a>',
         '<md-card-title layout="row" class="layout-row">',
-        '<md-card-title-text class="lnr-margin-left layout-align-space-around-start layout-column">' +
+        '<md-card-title-text class="lnr-margin-left layout-align-space-around-start layout-column">',
         '<span class="md-subhead">' + brand + ', ' + categoryDesc + '</span>',
-        '<span>' + basicInfo.sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size + 10) + ' cm</span>' +
+        '<span>' + basicInfo.sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size + 10) + ' cm</span>',
         '</md-card-title-text>',
         '<div layout="column" class="layout-align-space-around-center layout-column">',
         '<span style="text-align: center">' + basicInfo.dayText + '</span>',
@@ -603,15 +610,15 @@ var lnrHelper = {
     if ('en' === lnrConstants.userLang[userId]) {
       basicInfo.dayText = 'from';
       basicInfo.sizeText = 'For';
-      basicInfo.buttonText = 'Rent this Bike';
+      basicInfo.buttonText = 'Rent Now';
     } else if ('nl' === lnrConstants.userLang[userId]) {
       basicInfo.dayText = 'van';
       basicInfo.sizeText = 'Voor';
-      basicInfo.buttonText = 'Huur deze fiets';
+      basicInfo.buttonText = 'Nu huren';
     } else {
       basicInfo.dayText = 'ab';
       basicInfo.sizeText = 'F&uuml;r';
-      basicInfo.buttonText = 'Dieses Rad Mieten';
+      basicInfo.buttonText = 'Jetzt mieten';
     }
     return basicInfo;
   },

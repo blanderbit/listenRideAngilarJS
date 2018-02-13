@@ -1,11 +1,30 @@
 /* Picture Overlay */
 
+.info-icon {
+  background: url(https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/ic_info_white_24px.svg)  no-repeat;
+  display: block;
+  height: 24px;
+  margin: 8px;
+  width: 24px;
+}
+
 .image-container {
     position: relative;
     display: inline-block;
 }
 .image-container img {display: block;}
-.image-container .after {
+
+.image-container .info-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #FFF;
+}
+
+.image-container .rent-element {
     position: absolute;
     top: 0;
     left: 0;
@@ -14,28 +33,26 @@
     display: none;
     color: #FFF;
 }
-.image-container:hover .after {
+.image-container:hover .rent-element {
     display: block;
     background: rgba(0, 0, 0, .4);
 }
-.image-container .after .content {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    max-height: 100%;
-    vertical-align: center;
-    box-sizing: border-box;
-    padding: 5px;
-    overflow-y: auto;
+.image-container .rent-element .content {
+  position: absolute;
+  width: 50%;
+  max-height: 100%;
+  bottom: 40%;
+  left: 30%;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
-.image-container .after .content .biketitle {
+.image-container .rent-element .content .biketitle {
   font-size: 20;
   font-weight: 800;
 }
 
-.image-container .after .zoom {
+.image-container .rent-element .zoom {
     color: #DDD;
     font-size: 48px;
     position: absolute;
@@ -46,7 +63,7 @@
     width: 45px;
     cursor: pointer;
 }
-.image-container .after .zoom:hover {
+.image-container .rent-element .zoom:hover {
     color: #FFF;
 }
 
@@ -86,10 +103,15 @@
   overflow: hidden;
   -webkit-transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  /* */
   color: rgba(255, 255, 255, 0.95);
-  /* */
   border: 1px solid rgb(220, 220, 220);
+}
+
+.rent-button {
+  height: 42.86px;
+  min-width: 152.24px;
+  color: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgb(255, 255, 225);
 }
 
 .mdl-card__media {
