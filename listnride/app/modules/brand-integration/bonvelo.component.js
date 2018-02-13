@@ -46,7 +46,6 @@ angular.module('bonvelo-integration',[]).component('bonvelo', {
           }
         },
         function (error) {
-          console.log('Error fetching Bikes');
         }
       );
     }
