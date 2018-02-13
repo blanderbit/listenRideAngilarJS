@@ -455,6 +455,7 @@ var lnrHelper = {
       var brand = ride.brand,
         category = ride.category,
         rideName = ride.name,
+        rideId = ride.id,
         categoryDesc = lnrHelper.categoryFilter(userId, category),
         price = parseInt(ride.price_from),
         imageUrl = ride.image_file_1.image_file_1.small.url,
@@ -465,18 +466,26 @@ var lnrHelper = {
         '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">',
         '<bike-card>',
         '<md-card class="lnr-bike-card _md">',
-        '<a style="cursor:default" class="image-container lnr-links" title="' + ride.description + '">',
+        '<a style="cursor:default" class="image-container lnr-links">', //  title="' + ride.description + '"
         '<img src="' + imageUrl + '"></img>',
         // default: info button
         '<div class="info-button"><span class="info-icon"></span></div>',
-        '<div class="rent-element">',
+        '<div id="rent-element-default-' + rideId + '" class="rent-element">', // style="display: none;"
         // on hover: info button
-        '<span style="position:absolute"><div class="info-button"><span class="info-icon"></span></div></span>',
+        '<span style="position:absolute">',
+        '<div class="info-button" onclick="lnrHelper.toggleElements(' + rideId +')"><span class="info-icon"></span></div></span>',
         // on hover: rent button
         '<span class="content">',
         // <span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>
         '<button onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')" class="md-button rent-button">' + basicInfo.buttonText + '</button>',
-        '</span></div></a>',
+        '</span></div>',
+        '<div id="rent-element-description-' + rideId + '" class="rent-description" style="display: none">',
+        '<div class="mdl-grid mdl-grid--no-spacing" style="max-height:100%">',
+        '<div class="content mdl-cell mdl-cell--11-col-desktop"><p>' + ride.description + '</p></div>',
+        '<div class="mdl-cell mdl-cell--1-col-desktop">',
+        '<span class="close-icon" onclick="lnrHelper.toggleElements(' + rideId +')"></span>',
+        '</div></div></div>',
+        '</a>',
         '<md-card-title layout="row" class="layout-row">',
         '<md-card-title-text class="lnr-margin-left layout-align-space-around-start layout-column">',
         '<span class="md-subhead">' + brand + ', ' + categoryDesc + '</span>',
@@ -636,6 +645,14 @@ var lnrHelper = {
     var windowObj = lnrHelper.getWindowParams(url, userId, bikeId);
     // open window for selected environment and dimensions
     window.open(windowObj.url, windowObj.type, windowObj.params);
+  },
+  toggleElements: function(rideId){
+    // default and description elements
+    var defaultElem = document.getElementById("rent-element-default-" + rideId);
+    var descriptionElem = document.getElementById("rent-element-description-" + rideId);
+    // toggle display
+    defaultElem.style.display = defaultElem.style.display === 'none' ? '' : 'none';
+    descriptionElem.style.display = defaultElem.style.display === 'none' ? 'block' : 'none';
   },
   /**
    * get window configuration for opening the lnr shop solution
