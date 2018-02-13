@@ -205,7 +205,6 @@ angular.module('booking', [])
           api.get('/users/' + $localStorage.userId).then(
             function (success) {
               booking.user = success.data;
-              console.log(booking.user);
               booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
               if (booking.user.status == 3) {
                 booking.selectedIndex = 3;
@@ -347,6 +346,11 @@ angular.module('booking', [])
           }
         });
 
+        // set properly tab focus after all content is loaded
+        window.onload = function () {
+          booking.onTabChanged();
+        };
+
         booking.fillAddress = function(place) {
           var components = place.address_components;
           if (components) {
@@ -411,6 +415,45 @@ angular.module('booking', [])
             }
           );
         };
+
+        booking.$postLink = function() {
+          booking.$tabs = angular.element('.lnr-progress-tabs');
+        }
+
+        // helper function to calc dom element offset().right
+        booking._elementSize = function(el) {
+          return el.offset().left + el.outerWidth();
+        }
+
+        /**
+         * Scroll to active tab
+         * When tab focus is changed, active tab may be not visible on the screen
+         */
+        booking.onTabChanged = function() {
+          var tabBox = booking.$tabs.find('md-tabs-wrapper');
+          var tabViewWrapper = booking.$tabs.find('md-pagination-wrapper');
+          var activeTab = booking.$tabs.find('md-tab-item').eq(booking.selectedIndex);
+
+          // take current css transform.left 
+          // convert string matrix(1,0,1,123,0,1) to array
+          var currentLeftOffset = tabViewWrapper.css('transform');
+          currentLeftOffset = currentLeftOffset.split(', ');
+          currentLeftOffset = +currentLeftOffset[4];
+
+          if (tabBox.width() + tabBox.offset().left > booking._elementSize(activeTab)) return false;
+
+          var newValue = Math.round(tabBox.width() + tabBox.offset().left - booking._elementSize(activeTab) + currentLeftOffset);
+          
+          // if it's not a last tab - add some pixels to see next tab's label
+          if (booking.selectedIndex !== booking.$tabs.find('md-tab-item').length - 1) {
+            newValue -= 60;
+          }
+
+          tabViewWrapper.css({
+            '-webkit-transform:': 'translate3d(' + newValue + 'px' + ', 0, 0)',
+            'transform': 'translate3d(' + newValue + 'px' + ', 0, 0)'
+          });
+        }
       }
     ]
   })
