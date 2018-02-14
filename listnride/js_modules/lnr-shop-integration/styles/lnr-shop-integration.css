@@ -304,10 +304,7 @@ md-card {
 }
 
 md-card md-card-title {
-  padding-top: 16px;
-  padding-right: 16px;
-  padding-bottom: 16px;
-  padding-left: 16px;
+  padding: 16px;
   display: flex;
   -webkit-box-flex: 1;
   flex-grow: 1;

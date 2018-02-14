@@ -26,7 +26,7 @@ var lnrHelper = {
     // get user id and language
     lnrConstants.parentElement = document.getElementById('listnride');
     // initialize for single and multi user mode
-    lnrConstants.parentElement.dataset.user ? lnrHelper.postInitSingleUser(): lnrHelper.postInitMultiUser();
+    lnrConstants.parentElement.dataset.user ? lnrHelper.postInitSingleUser() : lnrHelper.postInitMultiUser();
   },
   /**
    * single user mode
@@ -34,7 +34,7 @@ var lnrHelper = {
    * renders bikes
    * @returns {void}
    */
-  postInitSingleUser: function(){
+  postInitSingleUser: function () {
     var userId = lnrConstants.parentElement.dataset.user;
     var userLang = lnrConstants.parentElement.dataset.lang;
     var selectedLocation = '';
@@ -59,7 +59,7 @@ var lnrHelper = {
       selectedLocation = lnrConstants.translate.allLocations.en;
       selectedSize = lnrConstants.translate.allSizes.en;
     }
-    
+
     // update location and size for each user
     lnrConstants.translate.allLocations.selected[userId] = selectedLocation;
     lnrConstants.translate.allSizes.selected[userId] = selectedSize;
@@ -91,7 +91,7 @@ var lnrHelper = {
           // unshift count, used to add "All" option
           unshifts: 0
         };
-        
+
         if ("de" === userLang) {
           selectedLocation = lnrConstants.translate.allLocations.de;
           selectedSize = lnrConstants.translate.allSizes.de;
@@ -220,37 +220,62 @@ var lnrHelper = {
     else selectedCategory = lnrConstants.subCategory.de;
     // select sub category based on the user language
     switch (categoryId) {
-      case 10: return selectedCategory["1"]["dutch-bike"];
-      case 11: return selectedCategory["1"]["touring-bike"];
-      case 12: return selectedCategory["1"].fixie;
-      case 13: return selectedCategory["1"]["single-speed"];
+      case 10:
+        return selectedCategory["1"]["dutch-bike"];
+      case 11:
+        return selectedCategory["1"]["touring-bike"];
+      case 12:
+        return selectedCategory["1"].fixie;
+      case 13:
+        return selectedCategory["1"]["single-speed"];
 
-      case 20: return selectedCategory["2"]["road-bike"];
-      case 21: return selectedCategory["2"].triathlon;
-      case 22: return selectedCategory["2"].indoor;
+      case 20:
+        return selectedCategory["2"]["road-bike"];
+      case 21:
+        return selectedCategory["2"].triathlon;
+      case 22:
+        return selectedCategory["2"].indoor;
 
-      case 30: return selectedCategory["3"].tracking;
-      case 31: return selectedCategory["3"].enduro;
-      case 32: return selectedCategory["3"].freeride;
-      case 33: return selectedCategory["3"]["cross-country"];
-      case 34: return selectedCategory["3"].downhill;
-      case 35: return selectedCategory["3"].cyclocross;
+      case 30:
+        return selectedCategory["3"].tracking;
+      case 31:
+        return selectedCategory["3"].enduro;
+      case 32:
+        return selectedCategory["3"].freeride;
+      case 33:
+        return selectedCategory["3"]["cross-country"];
+      case 34:
+        return selectedCategory["3"].downhill;
+      case 35:
+        return selectedCategory["3"].cyclocross;
 
-      case 40: return selectedCategory["4"].city;
-      case 41: return selectedCategory["4"]["all-terrain"];
-      case 42: return selectedCategory["4"].road;
+      case 40:
+        return selectedCategory["4"].city;
+      case 41:
+        return selectedCategory["4"]["all-terrain"];
+      case 42:
+        return selectedCategory["4"].road;
 
-      case 50: return selectedCategory["5"].pedelec;
-      case 51: return selectedCategory["5"]["e-bike"];
+      case 50:
+        return selectedCategory["5"].pedelec;
+      case 51:
+        return selectedCategory["5"]["e-bike"];
 
-      case 60: return selectedCategory["6"]["folding-bike"];
-      case 61: return selectedCategory["6"].tandem;
-      case 62: return selectedCategory["6"].cruiser;
-      case 63: return selectedCategory["6"]["cargo-bike"];
-      case 64: return selectedCategory["6"].recumbent;
-      case 65: return selectedCategory["6"]["mono-bike"];
+      case 60:
+        return selectedCategory["6"]["folding-bike"];
+      case 61:
+        return selectedCategory["6"].tandem;
+      case 62:
+        return selectedCategory["6"].cruiser;
+      case 63:
+        return selectedCategory["6"]["cargo-bike"];
+      case 64:
+        return selectedCategory["6"].recumbent;
+      case 65:
+        return selectedCategory["6"]["mono-bike"];
 
-      default: return "";
+      default:
+        return "";
     }
   },
   /**
@@ -396,7 +421,7 @@ var lnrHelper = {
    * @returns {void}
    */
   renderBikes: function (userId, userLang, is_demo_mode) {
-    
+
     lnrHelper.setIdAndLanguage(userId, userLang, is_demo_mode);
     // set the environment: staging or production
     var url = (lnrConstants.env === 'staging') ? lnrConstants.staging_users : lnrConstants.production_users;
@@ -467,34 +492,48 @@ var lnrHelper = {
         '<bike-card>',
         '<md-card class="lnr-bike-card _md">',
         '<a style="cursor:default" class="image-container lnr-links">', //  title="' + ride.description + '"
-        '<img src="' + imageUrl + '"></img>',
-        // default: info button
-        '<div class="info-button"><span class="info-icon"></span></div>',
-        '<div id="rent-element-default-' + rideId + '" class="rent-element">', // style="display: none;"
-        // on hover: info button
-        '<span style="position:absolute">',
-        '<div class="info-button" onclick="lnrHelper.toggleElements(' + rideId +')"><span class="info-icon"></span></div></span>',
-        // on hover: rent button
-        '<span class="content">',
-        // <span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>
-        '<button onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')" class="md-button rent-button">' + basicInfo.buttonText + '</button>',
-        '</span></div>',
-        '<div id="rent-element-description-' + rideId + '" class="rent-description" style="display: none">',
-        '<div class="mdl-grid mdl-grid--no-spacing" style="max-height:100%">',
-        '<div class="content mdl-cell mdl-cell--11-col-desktop"><p>' + ride.description + '</p></div>',
-        '<div class="mdl-cell mdl-cell--1-col-desktop">',
-        '<span class="close-icon" onclick="lnrHelper.toggleElements(' + rideId +')"></span>',
-        '</div></div></div>',
+            '<img src="' + imageUrl + '"></img>',
+            // default: info button
+            '<div class="info-button"><span class="info-icon"></span></div>',
+            '<div id="rent-element-default-' + rideId + '" class="rent-element">', // style="display: none;"
+            // on hover: info button
+            '<span style="position:absolute">',
+            '<div class="info-button" onclick="lnrHelper.toggleElements(' + rideId + ')"><span class="info-icon"></span></div></span>',
+            // on hover: rent button
+            '<span class="content">',
+            // <span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>
+            '<button onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')" class="md-button rent-button">' + basicInfo.buttonText + '</button>',
+            '</span></div>',
+            '<div id="rent-element-description-' + rideId + '" class="rent-description" style="display: none">',
+            '<div class="mdl-grid mdl-grid--no-spacing" style="max-height:100%">',
+            '<div class="content mdl-cell mdl-cell--11-col-desktop"><p>' + ride.description + '</p></div>',
+            '<div class="mdl-cell mdl-cell--1-col-desktop">',
+            '<span class="close-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></span>',
+            '</div></div></div>',
         '</a>',
-        '<md-card-title layout="row" class="layout-row">',
-        '<md-card-title-text class="lnr-margin-left layout-align-space-around-start layout-column">',
-        '<span class="md-subhead">' + brand + ', ' + categoryDesc + '</span>',
-        '<span>' + basicInfo.sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size + 10) + ' cm</span>',
-        '</md-card-title-text>',
-        '<div layout="column" class="layout-align-space-around-center layout-column">',
-        '<span style="text-align: center">' + basicInfo.dayText + '</span>',
-        '<span class="md-headline">' + price + '&euro;</span>',
-        ' </div>',
+        '<md-card-title layout="column" class="layout-column">',
+            '<div layout="row" class="layout-row" style="margin-bottom: 16px">',
+              '<md-card-title-text class="layout-align-space-around-start layout-column">',
+                  '<span class="md-subhead" style="font-size: 14px">Bike Size</span>',
+                  '<span>' + basicInfo.sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size + 10) + ' cm</span>',
+              '</md-card-title-text>',
+              '<md-card-title-text class="layout-align-space-around-start layout-column">',
+                  '<span class="md-subhead" style="font-size: 14px">Bike Size</span>',
+                  '<span>' + basicInfo.sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size + 10) + ' cm</span>',
+              '</md-card-title-text>',
+              '<md-card-title-text class="layout-align-space-around-start layout-column">',
+         '</md-card-title-text>',
+            '</div>',
+            '<div layout="row" class="layout-row">',
+              '<md-card-title-text class="layout-align-space-around-start layout-column">',
+                  '<span class="md-subhead">' + brand + '</span>',
+                  '<span>'  + categoryDesc + '</span>',
+              '</md-card-title-text>',
+              '<div layout="column" class="layout-align-space-around-center layout-column">',
+                '<span style="text-align: center">' + basicInfo.dayText + '</span>',
+                '<span class="md-headline">' + price + '&euro;</span>',
+              '</div>',
+            '</div>',
         '</md-card-title>',
         '</md-card>',
         '</bike-card>',
@@ -578,10 +617,10 @@ var lnrHelper = {
     return selectors;
   },
   /**
-    * set the default values for location and size selectors
-    * @param {String} userId user id
-    * @returns {void}
-  */
+   * set the default values for location and size selectors
+   * @param {String} userId user id
+   * @returns {void}
+   */
   setDefaultSelectorValues: function (userId) {
 
     // location button
@@ -646,7 +685,7 @@ var lnrHelper = {
     // open window for selected environment and dimensions
     window.open(windowObj.url, windowObj.type, windowObj.params);
   },
-  toggleElements: function(rideId){
+  toggleElements: function (rideId) {
     // default and description elements
     var defaultElem = document.getElementById("rent-element-default-" + rideId);
     var descriptionElem = document.getElementById("rent-element-description-" + rideId);
@@ -717,7 +756,7 @@ var lnrHelper = {
   getBikeSizes: function (userId, rides) {
     // list of sizes for a given user's bikes
     var sizes = [];
-  
+
     // unique sizes for the bikes
     rides.forEach(function (ride) {
       var size = ride.size;
@@ -725,7 +764,7 @@ var lnrHelper = {
         sizes.push(size);
       }
     });
-    
+
     // add option as All in the dropdown menu
     // only when more than 1 sizes are present
     if (sizes.length > 1) {
@@ -739,7 +778,7 @@ var lnrHelper = {
         lnrConstants.sizes[userId].unshifts += 1;
       }
     }
-      
+
     return sizes;
   },
   /**
@@ -747,7 +786,7 @@ var lnrHelper = {
    * @param {String} str string with ** any case **
    * @returns {String} str string as ** Sentence case **
    */
-  toSentenceCase: function(str) {
+  toSentenceCase: function (str) {
     return str.replace(/\w\S*/g, function (txt) {
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
