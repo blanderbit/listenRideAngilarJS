@@ -168,6 +168,7 @@ angular.module('booking', [])
                   booking.reloadUser();
                 },
                 function (error) {
+                  console.log(error);
                 }
               );
             }
