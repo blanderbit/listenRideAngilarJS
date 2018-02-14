@@ -169,6 +169,12 @@ angular.module('booking', [])
                 },
                 function (error) {
                   console.log(error);
+                  $mdToast.show(
+                    $mdToast.simple()
+                    .textContent(error.data.errors[0].detail)
+                    .hideDelay(4000)
+                    .position('top center')
+                  );
                 }
               );
             }
