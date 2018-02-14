@@ -16,20 +16,20 @@
   cursor: pointer;
 }
 .image-container .info-icon {
-  background: url(https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/ic_info_white_24px.svg)  no-repeat;
+  background: url(https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/lnr_shopplugin_info_icon.svg)  no-repeat;
   display: block;
-  height: 24px;
+  height: 32px;
   margin: 8px;
-  width: 24px;
+  width: 32px;
 }
 
 .image-container .close-icon {
   cursor: pointer;
   background: url(https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/ic_close_black_24px.svg)  no-repeat;
   display: block;
-  height: 24px;
+  height: 32px;
   margin: 8px;
-  width: 24px;
+  width: 32px;
 }
 
 /*********  Description Overlay ***********/
@@ -171,7 +171,7 @@ background: white;
   border: 1px solid rgb(220, 220, 220);
 }
 
-.rent-button {  
+.rent-button {
   height: 42.86px;
   min-width: 152.24px;
   color: rgba(255, 255, 255, 0.95);
@@ -235,7 +235,7 @@ a:link, a:visited, a:active, a:hover, a:focus {
 }
 .md-subhead {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.01em;
   line-height: 24px;
   font-family: 'Roboto', sans-serif !important;
@@ -327,7 +327,7 @@ md-card md-card-title md-card-title-text {
 }
 
 md-card md-card-title md-card-title-text .md-subhead {
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 md-card.lnr-bike-card md-card-title-text span {

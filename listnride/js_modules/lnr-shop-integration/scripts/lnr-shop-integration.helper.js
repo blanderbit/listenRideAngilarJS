@@ -484,7 +484,7 @@ var lnrHelper = {
         categoryDesc = lnrHelper.categoryFilter(userId, category),
         price = parseInt(ride.price_from),
         imageUrl = ride.image_file_1.image_file_1.small.url,
-        rideDescription = ride.description.slice(0, 150).concat(' ...');
+        rideDescription = ride.description;
 
       // bikes grid html
       var gridHTML = [
@@ -492,48 +492,42 @@ var lnrHelper = {
         '<bike-card>',
         '<md-card class="lnr-bike-card _md">',
         '<a style="cursor:default" class="image-container lnr-links">', //  title="' + ride.description + '"
-            '<img src="' + imageUrl + '"></img>',
-            // default: info button
-            '<div class="info-button"><span class="info-icon"></span></div>',
-            '<div id="rent-element-default-' + rideId + '" class="rent-element">', // style="display: none;"
-            // on hover: info button
-            '<span style="position:absolute">',
-            '<div class="info-button" onclick="lnrHelper.toggleElements(' + rideId + ')"><span class="info-icon"></span></div></span>',
-            // on hover: rent button
-            '<span class="content">',
-            // <span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>
-            '<button onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')" class="md-button rent-button">' + basicInfo.buttonText + '</button>',
-            '</span></div>',
-            '<div id="rent-element-description-' + rideId + '" class="rent-description" style="display: none">',
-            '<div class="mdl-grid mdl-grid--no-spacing" style="max-height:100%">',
-            '<div class="content mdl-cell mdl-cell--11-col-desktop"><p>' + ride.description + '</p></div>',
-            '<div class="mdl-cell mdl-cell--1-col-desktop">',
-            '<span class="close-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></span>',
-            '</div></div></div>',
+        '<img src="' + imageUrl + '" />',
+        // default: info button
+        '<div class="info-button"><span class="info-icon"></span></div>',
+        '<div id="rent-element-default-' + rideId + '" class="rent-element">', // style="display: none;"
+        // on hover: info button
+        '<span style="position:absolute">',
+        '<div class="info-button" onclick="lnrHelper.toggleElements(' + rideId + ')">',
+        '<span class="info-icon"></span>',
+        '</div>',
+        '</span>',
+        // on hover: rent button
+        '<span class="content">',
+        // <span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>
+        '<button onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')" class="md-button rent-button">' + basicInfo.buttonText + '</button>',
+        '</span>',
+        '</div>',
+        '<div id="rent-element-description-' + rideId + '" class="rent-description" style="display: none">',
+        '<div class="mdl-grid mdl-grid--no-spacing" style="max-height:100%">',
+        '<div class="content mdl-cell mdl-cell--11-col-desktop">',
+        '<p class="md-subhead">' + rideName + '</p>',
+        '<p>' + rideDescription + '</p>',
+        '</div>',
+        '<div class="mdl-cell mdl-cell--1-col-desktop">',
+        '<span class="close-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></span>',
+        '</div>',
+        '</div>', '</div>',
         '</a>',
-        '<md-card-title layout="column" class="layout-column">',
-            '<div layout="row" class="layout-row" style="margin-bottom: 16px">',
-              '<md-card-title-text class="layout-align-space-around-start layout-column">',
-                  '<span class="md-subhead" style="font-size: 14px">Bike Size</span>',
-                  '<span>' + basicInfo.sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size + 10) + ' cm</span>',
-              '</md-card-title-text>',
-              '<md-card-title-text class="layout-align-space-around-start layout-column">',
-                  '<span class="md-subhead" style="font-size: 14px">Bike Size</span>',
-                  '<span>' + basicInfo.sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size + 10) + ' cm</span>',
-              '</md-card-title-text>',
-              '<md-card-title-text class="layout-align-space-around-start layout-column">',
-         '</md-card-title-text>',
-            '</div>',
-            '<div layout="row" class="layout-row">',
-              '<md-card-title-text class="layout-align-space-around-start layout-column">',
-                  '<span class="md-subhead">' + brand + '</span>',
-                  '<span>'  + categoryDesc + '</span>',
-              '</md-card-title-text>',
-              '<div layout="column" class="layout-align-space-around-center layout-column">',
-                '<span style="text-align: center">' + basicInfo.dayText + '</span>',
-                '<span class="md-headline">' + price + '&euro;</span>',
-              '</div>',
-            '</div>',
+        '<md-card-title layout="row" class="layout-row">',
+        '<md-card-title-text class="layout-align-space-around-start layout-column">' +
+        '<span class="md-subhead">' + brand + ', ' + categoryDesc + '</span>',
+        '<span>' + basicInfo.sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size + 10) + ' cm</span>' +
+        '</md-card-title-text>',
+        '<div layout="column" class="layout-align-space-around-center layout-column">',
+        '<span style="text-align: center">' + basicInfo.dayText + '</span>',
+        '<span class="md-headline">' + price + '&euro;</span>',
+        ' </div>',
         '</md-card-title>',
         '</md-card>',
         '</bike-card>',
@@ -575,7 +569,7 @@ var lnrHelper = {
    */
   renderSelectorsHTML: function (id, shouldRenderLocationSelector) {
     // open mdl grid
-    var mdlGridOpen = '<div class="mdl-grid mdl-grid--no-spacing">';
+    var mdlGridOpen = '<div class="mdl-grid mdl-grid--no-spacing" style="margin-top:32px;margin-bottom:32px">';
 
     // render size selector
     var sizeHTML = [
