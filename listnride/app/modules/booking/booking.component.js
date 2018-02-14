@@ -171,7 +171,6 @@ angular.module('booking', [])
               };
               api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
                 function (success) {
-                  // booking.nextTab();
                   booking.reloadUser();
                 },
                 function (error) {
@@ -200,9 +199,16 @@ angular.module('booking', [])
               };
               api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
                 function (success) {
-                  $scope.$apply(booking.nextTab());
+                  booking.reloadUser();
                 },
                 function (error) {
+                  console.log(error);
+                  $mdToast.show(
+                    $mdToast.simple()
+                    .textContent(error.data.errors[0].detail)
+                    .hideDelay(4000)
+                    .position('top center')
+                  );
                 }
               );
             }
@@ -228,6 +234,7 @@ angular.module('booking', [])
               api.get('/users/' + $localStorage.userId + '/current_payment').then(
                 function(response) {
                   booking.user.current_payment_method = response.data;
+                  console.log(booking.user.current_payment_method);
                 },
                 function(error) {
 

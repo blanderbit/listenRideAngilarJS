@@ -56,8 +56,14 @@
           </div>
           <div flex="33" flex-xs="100">
             <p class="md-subhead">{{ 'booking.overview.payment' | translate }}</p>
-            <p class="md-body-2">{{ overview.parent.user.current_payment_method.family.split(" ")[0] }}</p>
-            <p class="md-body-1">**** **** **** {{ overview.parent.user.current_payment_method.family.split(" ")[1] }}</p>
+            <div ng-if="overview.parent.user.current_payment_method.type == 1">
+              <p class="md-body-2">{{ overview.parent.user.current_payment_method.family.split(" ")[0] }}</p>
+              <p class="md-body-1">**** **** **** {{ overview.parent.user.current_payment_method.family.split(" ")[1] }}</p>
+            </div>
+            <div ng-if="overview.parent.user.current_payment_method.type == 2">
+              <p class="md-body-2">Paypal</p>
+              <p class="md-body-1">{{ overview.parent.user.current_payment_method.details }}</p>
+            </div>
           </div>
           <div ng-hide show-xs>
             <div class="spacer-xs"></div>
