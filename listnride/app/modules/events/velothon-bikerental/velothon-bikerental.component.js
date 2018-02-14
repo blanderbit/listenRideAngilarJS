@@ -29,7 +29,6 @@ angular.module('velothonBikerental',[]).component('velothonBikerental', {
                     velothonBikerental.bikes = response.data;
                 },
                 function(error) {
-                    console.log("Error retrieving User", error);
                 }
             );
 

@@ -193,7 +193,6 @@ angular.module('list', ['ngLocale']).component('list', {
                 function (error) {
                   list.submitDisabled = false;
                   loadingDialog.close();
-                  console.log(error);
                 }
               );
             }
