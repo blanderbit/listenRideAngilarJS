@@ -14,7 +14,6 @@ angular.module('depart',[]).component('depart', {
             depart.bikes = response.data;
           },
           function(error) {
-            console.log("Error retrieving User", error);
           }
         );
     }

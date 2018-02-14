@@ -13,7 +13,6 @@ angular.module('inVeloVeritas',[]).component('inVeloVeritas', {
           inVeloVeritas.bikes = response.data;
         },
         function(error) {
-          console.log("Error retrieving User", error);
         }
       );
 

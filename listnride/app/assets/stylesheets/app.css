@@ -264,6 +264,10 @@ booking md-tabs-wrapper {
 /* LNR CLASSES
 /*-----------------------------------------------------------------------------------*/
 
+.lnr-black {
+  color: rgba(85, 85, 85, 1.0);
+}
+
 .lnr-bold {
   font-weight: 500 !important;
 }

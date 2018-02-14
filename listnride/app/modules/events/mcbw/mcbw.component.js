@@ -22,7 +22,6 @@ angular.module('mcbw',[]).component('mcbw', {
           mcbw.bikes1 = success.data.rides;
         },
         function (error) {
-          console.log('Error fetching Bikes');
         }
       );
 
@@ -31,7 +30,6 @@ angular.module('mcbw',[]).component('mcbw', {
           mcbw.bikes2 = success.data;
         },
         function (error) {
-          console.log('Error fetching Bikes');
         }
       );
 

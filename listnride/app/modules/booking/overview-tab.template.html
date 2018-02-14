@@ -12,10 +12,12 @@
         <div class="spacer-xs"></div>
       	<div layout="row" layout-align="space-between none" layout-wrap>
           <div flex="40" flex-xs="100">
-            <img flex="100" ui-sref="bike({bikeId: overview.parent.bike.id})" target="_blank" ng-src="{{ overview.parent.bike.image_file_1.image_file_1.small.url }}" />
+            <a ui-sref="bike({bikeId: overview.parent.bike.id})" target="_blank">
+              <img flex="100" ng-src="{{ overview.parent.bike.image_file_1.image_file_1.small.url }}" />
+            </a>
           </div>
           <div flex="30" flex-xs="60" layout="column">
-            <p class="md-subhead" ui-sref="bike({bikeId: overview.parent.bike.id})" target="_blank">{{ overview.parent.bike.brand }}, {{ overview.parent.bikeCategory }}</p>
+            <a class="md-subhead lnr-black" ui-sref="bike({bikeId: overview.parent.bike.id})" target="_blank">{{ overview.parent.bike.brand }}, {{ overview.parent.bikeCategory }}</a>
             <br>
             <div layout="row" layout-align="space-between none">
               <span flex="50" class="md-body-2">{{ 'settings.from' | translate }}</span>

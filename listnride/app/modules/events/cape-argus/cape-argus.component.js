@@ -36,11 +36,9 @@ angular.module('capeArgus',[]).component('capeArgus', {
 
             api.get('/rides?category=20&location=Capetown&priority=capeArgus&booked_at=2018-03-11').then(
                 function(response) {
-                    console.log(response.data);
                     capeArgus.bikes = response.data;
                 },
                 function(error) {
-                    console.log("Error retrieving User", error);
                 }
             );
 

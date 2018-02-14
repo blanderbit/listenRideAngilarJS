@@ -71,7 +71,6 @@ angular.module('moeveIntegration',[]).component('moeve', {
           moeve.currentBikes = moeve.bikes["munich"];
         },
         function (error) {
-          console.log('Error fetching Bikes');
         }
       );
 

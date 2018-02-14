@@ -9,7 +9,7 @@ angular.module('rethinkIntegration',[]).component('rethink', {
       $tpl.addPart(ENV.staticTranslation);
 
       rethink.bikes = {
-        berlin: [],
+        dresden: [],
         munich: [],
         hamburg: []
       };
@@ -38,7 +38,7 @@ angular.module('rethinkIntegration',[]).component('rethink', {
           for (var i=0; i<success.data.length; i++) {
             switch (success.data[i].city) {
               case "Dresden": rethink.bikes.dresden.push(success.data[i]); break;
-              case "Munich": rethink.bikes.munich.push(success.data[i]); console.log("Munich detect"); break;
+              case "Munich": rethink.bikes.munich.push(success.data[i]); break;
               case "Hamburg": rethink.bikes.hamburg.push(success.data[i]); break;
             }
           }
