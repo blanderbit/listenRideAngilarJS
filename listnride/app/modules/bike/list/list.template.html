@@ -533,7 +533,8 @@
                         <div>
                           <md-icon hide-xs class="lnr-icn-xs md-color-black"
                                    md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
-                          <md-tooltip md-direction="right">{{ 'list.pricing.daily-discount-tooltip' | translate }}
+                          <md-tooltip md-direction="right">
+                            {{ 'list.pricing.daily-discount-tooltip' | translate }}
                           </md-tooltip>
                         </div>
                       </div>
@@ -559,7 +560,9 @@
                         <div>
                           <md-icon hide-xs class="lnr-icn-xs md-color-black"
                                    md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
-                          <md-tooltip md-direction="right">{{ 'list.pricing.weekly-discount-tooltip' | translate }}
+                          <md-tooltip md-direction="right">
+                            {{ 'list.pricing.weekly-discount-tooltip' | translate }}
+                          </md-tooltip>
                         </div>
                       </div>
                       <input type="text"
@@ -576,8 +579,10 @@
                 </div>
                 <div ng-if="!list.businessUser">
                   <!-- description is not shown when custom prices are used.-->
-                  <span class="md-caption"
-                        ng-if="list.form.discounts.weekly && list.form.prices[0].price && !list.show_reset_button">
+                  <span
+                    class="md-caption"
+                    ng-if="list.form.discounts.weekly && list.form.prices[0].price && !list.show_reset_button"
+                  >
                     {{'list.pricing.discount-description-initial' | translate}}
                     {{list.form.discounts.weekly | number:0}}%
                     {{'list.pricing.discount-description-mid' | translate}}
