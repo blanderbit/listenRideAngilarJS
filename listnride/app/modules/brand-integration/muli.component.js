@@ -27,7 +27,6 @@ angular.module('muli-integration',[]).component('muli', {
 
         },
         function (error) {
-          console.log('Error fetching Bikes');
         }
       );
     }

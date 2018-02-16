@@ -12,7 +12,6 @@ angular.module('raphaSuperCross',[]).component('raphaSuperCross', {
           raphaSuperCross.bikes = response.data;
         },
         function(error) {
-          console.log("Error retrieving User", error);
         }
       );
 

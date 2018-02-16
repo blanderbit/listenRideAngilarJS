@@ -34,7 +34,6 @@ angular.module('listingCard',[]).component('listingCard', {
           },
           function(error) {
             listingCard.disableActivate = false;
-            console.log("Error activating bike", error);
           }
         );
       };

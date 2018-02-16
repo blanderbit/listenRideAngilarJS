@@ -179,16 +179,16 @@
     },
     "crossride": {
       "title": "listnride Crossride",
-      "text": "During the Berliner Fahrradschau we want to explore with you our local cross playground, the forest with uncountable awesome trails, the Grunewald.<br><br>On the 5th of March 10am sharp we start rolling from the front gate BFS venue STATION Berlin. The social paced ride lasts for ~3 hours / 50km in the nature and bring you back well charged. We highly recommend a CX/Gravel bike, warm clothes, and a fit body. Helmets are required! <br><br>In case you need a suitable bike or would like to test a new cross bike, check out the great Bikes offered by <a href='http://www.votec.de' target='_blank'>Votec</a> and our community below. If you like to join, you need to <a target='_blank' href='https://ti.to/listnride/crossride'>register</a>. As part of the BFS program we offer you a discounted ticket for the show. After registration for the listnride CX ride, you get a coupon-code for your <a target='_blank' href='https://berlinerfahrradschau.de/en/tickets/'>ticket purchase</a>."
+      "text": "During the Berliner Fahrradschau we want to explore with you our local cross playground, the forest with uncountable awesome trails, the Grunewald.<br><br>On Saturday the 24th of March 10am sharp we start rolling from the front gate BFS venue STATION Berlin. The social paced ride lasts for ~3 hours / 45km in the nature and bring you back well charged. We highly recommend a CX/Gravel bike, warm clothes, and a fit body. Helmets and rsvp are required!<br><br>In case you need a suitable bike or would like to test a new cross bike, check out the great Bikes offered by Votec and our community below. If you like to join, <a href=\"https://ti.to/listnride/listnride-crossride-fahrradschau-berlin/\" target=\"_BLANK\">you need to register here.</a>"
     },
     "mcbw": {
       "title": "",
       "description": "Explore Munich by bike, go cycling with listnride!",
-      "subdescription": "Together with Brompton and Ampler we rent out fantastic bikes for free",
+      "subdescription": "Together with Munix Finest Bicycles and Ampler we rent out fantastic bikes",
       "subhead-1": "The new bike rental",
-      "subhead-2": "Rent a bike for free",
+      "subhead-2": "Rent a bike",
       "text-1": "Conceived as the Airbnb for bicycles, listnride offers an alternative to the classic bike rental: private owners, dealers or manufacturers offer their bicycles for rent on listnride. Tourists, citizens, families, sportsmen and business travelers rent the right bike for their style and needs.",
-      "text-2": "Especially for the MCBW, visitors can rent a bike of the brands <b>Brompton Folding Bike</b> and <b>Ampler E-Bike</b> for free <b>(Voucher Code: LNR2018)</b> for half a day. listnride pursues the vision of offering as many people anywhere in the world uncomplicated access to high-quality, stylish bicycles. If you want to explore Munich, go cycling with listnride!",
+      "text-2": "Especially for the MCBW, visitors can rent a bike of the brands <b>Urban Arrow</b>, <b>I:sy</b>, <b>Stromer</b>, <b>Brompton</b> and <b>Ampler</b> <b>(Voucher Code: 10FORU)</b>. listnride pursues the vision of offering as many people anywhere in the world uncomplicated access to high-quality, stylish bicycles. If you want to explore Munich, go cycling with listnride!",
       "location-description": "Choose your location",
       "location-text": "The two locations are <b>① Munix Finest Bicycles</b> in Wörthstraße 11 and <b>② listnride</b> at Pündterplatz 1"
     },
@@ -335,7 +335,7 @@
       "item3-description": "VELLO bikes are available in 4 different models, with e-drive and without: \"Urbano\", \"Rocky\", \"Speedster\" und \"VELLO BIKE+\". All models offer the best of urban riding, and come with high-end city, trekking, or road bike components.",
       "available-cities": "Available in Berlin and Munich",
       "question": "Questions?",
-      "faq-question": "Learn more about <a href=\"http://vello.bike/index.php\">VELLO bikes</a> and how to buy one or check out their <a href=\"http://vello.bike/index.php/pages/help-faq.html\" target=\"_BLANK\">FAQ</a>."
+      "faq-question": "Learn more about <a href=\"http://vello.bike/index.php\">VELLO bikes</a> and how to buy one or check out their <a href=\"https://www.vello.bike/help-faq-en\" target=\"_BLANK\">FAQ</a>."
     },
     "veletage": {
       "meta-title": "VELETAGE Salon für Radkultur",
@@ -362,7 +362,7 @@
       "item2-description": "Quick and agile handling<br>Durable powder coated finish<br>High quality components<br>Pure riding pleasure",
       "item3-title": "Great Price - Solid Value",
       "item3-description": "Singlespeed bikes starting from 349€<br>High customer satisfaction<br>Personalized service<br>Speedy delivery to Berlin",
-      "test-bike": "Test a bonvelo bike in Berlin",
+      "test-bike": "Test a bonvelo bike in Berlin, Munich or Hamburg",
       "testimonial-1": "Nice, clean design, and arrived neatly pre-assembled. I’m loving the ride.",
       "testimonial-2": "Very friendly customer service, quick processing of the order and super fast response to my questions.",
       "testimonial-3": "Bonvelo is awesome. Everything is right here. Great customer service -- they responded quickly even when I asked a question on Sunday. The delivery time was really fast, and the bike arrived almost fully assembled, with just a couple easy things to finish. The bike looks great, and the price was even better. Will definitely recommend. Cheers from Munich!",
@@ -481,6 +481,27 @@
       "faq-answer-5": "Since the Cyfly drive system requires a precisely adapted frame, it cannot be retrofitted readily. Initially Cyfly will only be available as an innovative component of premium bicycles.",
       "faq-question-6": "How much more efficient is Cyfly?",
       "faq-answer-6": "Everyone applies force differently while cycling. Therefore we cannot provide an objective, generally applicable gain in efficiency. The value is calculated based on data with established constraints on the one hand and a significant number of field tests on the other hand. The efficiency gain was also verified by an external expert opinion from a bicycle laboratory in Freiburg, Germany. Furthermore, the Cyfly effect was confirmed by renowned bicycle racing and triathlon professionals."
+    },
+    "rethink": {
+      "title": "Your rethink e-bike. Clear. Robust. Distinct Character.",
+      "description": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden",
+      "subdescription": "Choose between the City Low, the City High and the Longtail",
+      "bike1-title": "rethink City Low",
+      "bike1-description": "rethink, these are sustainable steel frames with a long service life.",
+      "bike2-title": "rethink City High",
+      "bike2-description": "rethink are sporty chain or easy - hub gears.",
+      "bike3-title": "rethink Longtail",
+      "bike3-description": "rethink that are proven components for careless driving pleasure.",
+      "item1-title": "Perfect fit",
+      "item1-description": "Are you ready for the change to electric transportation? binova provides you with the perfect e-drive for your bicycle, matching almost all common bike types and frames.",
+      "item2-title": "Personalized ",
+      "item2-description": "You are looking for an electric drive unit to use in all circumstances? No matter if cruising through the city, mastering long tours and steep hills.",
+      "item3-title": "Economical ",
+      "item3-description": "You want your bike´s e-drive to last for life? binova guarantees a long life span for your binova flow.",
+      "test-bike": "Test the new rethink models!",
+      "choose-location": "Wähle deine Stadt",
+      "find-out-more": "Learn more about rethink",
+      "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed."
     }
   },
   "about-us": {
@@ -585,6 +606,7 @@
     "title": "Press",
     "header": "Press section",
     "subheader": "Information is ready to be downloaded. listnride is ready to talk.",
+    "comm-and-pr": "Communications and PR",
     "kit": {
       "title": "Press kit",
       "content": "Others call themselves bike rental systems. We are a bike sharing community. Find out more in our press kit, which can be ",

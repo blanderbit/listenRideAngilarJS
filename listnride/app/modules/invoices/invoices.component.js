@@ -26,7 +26,6 @@ angular.module('invoices',[]).component('invoices', {
                 },
                 function(error) {
                     invoices.loadingRequests = false;
-                    console.log("Error retrieving User", error);
                 }
             );
 

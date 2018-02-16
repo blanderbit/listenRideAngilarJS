@@ -99,19 +99,31 @@ md-grid-list md-grid-tile {
             user-select: none;
 }
 
+.spacer-xs {
+  height: 20px;
+}
+
 .spacer {
   height: 40px;
 }
 
 .highlight-tile {
-  height: 260px;
   padding: 24px 0;
   border-radius: 4px;
   border: 1px solid rgba(95, 198, 147, 0.25);
   background-color: rgba(250,250,250,1);
 }
 
+booking .highlight-tile {
+  padding: 8px 0;
+}
+
+booking .highlight-tile button {
+  margin-bottom: 0;
+}
+
 home .highlight-tile {
+  height: 260px;
   padding: 24px 0px;
 }
 
@@ -151,6 +163,13 @@ md-card md-card-title {
 
 button.md-primary.md-cancel-button.md-button.ng-scope.md-default-theme.md-ink-ripple {
   background-color: rgb(122, 178, 248);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -227,10 +246,27 @@ autocomplete .md-errors-spacer {
   }
 }
 
+.intl-tel-input {
+  position: relative;
+  display: inline-block;
+  width:100%;
+}
+
+md-input-container {
+  font-size: 14px;
+}
+
+booking md-tabs-wrapper {
+  pointer-events: none;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* LNR CLASSES
 /*-----------------------------------------------------------------------------------*/
+
+.lnr-black {
+  color: rgba(85, 85, 85, 1.0);
+}
 
 .lnr-bold {
   font-weight: 500 !important;
@@ -303,6 +339,10 @@ autocomplete .md-errors-spacer {
 
 .lnr-no-margin {
   margin: 0;
+}
+
+.lnr-mb-0 {
+  margin-bottom: 0;
 }
 
 .lnr-clickable {
@@ -2533,6 +2573,14 @@ autocomplete .md-errors-spacer {
   background: rgba(150, 150, 150, 1.0);
 }
 
+.lnr-progress-tabs {
+  font-size: 14px;
+}
+
+md-tabs-wrapper {
+  margin-left: 20px important !;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* SVG
 /*-----------------------------------------------------------------------------------*/
@@ -2722,6 +2770,44 @@ footer .lnr-link {
 /*-----------------------------------------------------------------------------------*/
 /* DIALOG MODALS
 /*-----------------------------------------------------------------------------------*/
+
+.lnr-confirmation-containers {
+  margin-top: 2px;
+  margin-bottom: 26px;
+}
+
+.lnr-confirmation-containers .confirm-label{
+  margin-bottom: 4px; 
+  margin-top: 2px;
+}
+.lnr-confirmation-containers md-input-container {
+  margin-left: 4px;
+}
+
+.lnr-confirmation-containers md-input-container:first-child {
+  margin-left: 0;
+}
+
+.lnr-confirmation-containers md-input-container:last-child {
+  margin-right: 0;
+}
+
+
+.lnr-confirmation-containers md-input-container .md-input {
+  order: 2;
+  display: block;
+  margin-top: 0;
+  background: none;
+  padding: 0 8px;
+  border-width: 1px;
+  border-radius: 4px;
+  border-style: solid;
+  line-height: 40px;
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  float: left;
+}
 
 .lnr-input-containers md-input-container {
   margin-right: 4px;
@@ -3967,6 +4053,10 @@ md-grid-list a {
   color: rgb(221,44,0);
 }
 
+.text-default {
+  color: #7ab2f8
+}
+
 md-input-container .md-input.form-input-error {
   border: 1px solid rgb(221,44,0);
   border-radius: 4px;
@@ -4153,6 +4243,24 @@ seo-landing .lnr-section-title {
 }
 
 /*-----------------------------------------------------------------------------------*/
+/*  ANIMATIONS
+/*-----------------------------------------------------------------------------------*/
+
+.animate-if.ng-enter, .animate-if.ng-leave {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+}
+
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+/*-----------------------------------------------------------------------------------*/
 /*  EVENTS
 /*-----------------------------------------------------------------------------------*/
 
@@ -4238,6 +4346,11 @@ md-input-container.md-icon-right > md-icon.md-icon--btn {
   box-sizing: border-box;
 }
 
+.lnr-md-focus-tabs md-pagination-wrapper {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.35, 0, 0.25, 1), left 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1), -webkit-transform 0.5s cubic-bezier(0.35, 0, 0.25, 1), left 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  daterangepicker custom styles
 /*-----------------------------------------------------------------------------------*/
@@ -4283,4 +4396,3 @@ md-input-container.md-icon-right > md-icon.md-icon--btn {
     max-width: 320px;
     left: 0!important;
   }
-}

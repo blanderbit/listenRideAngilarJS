@@ -32,7 +32,6 @@ angular.module('bike').component('calendar', {
       var calendar = this;
       calendar.authentication = authentication;
       calendar.requested = false;
-      console.log(calendar.bikeFamily);
 
       calendar.$onChanges = function (changes) {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
@@ -86,6 +85,11 @@ angular.module('bike').component('calendar', {
         date.setHours(calendar[slotTime], 0, 0, 0);
         calendar[slotDate] = date;
         dateChange(calendar.startDate, calendar.endDate);
+      };
+
+      calendar.onBooking = function(){
+        $mdDialog.hide();
+        $state.go('booking', {bikeId: calendar.bikeId, startDate: calendar.startDate, endDate: calendar.endDate});
       };
 
       calendar.onBikeRequest = function() {

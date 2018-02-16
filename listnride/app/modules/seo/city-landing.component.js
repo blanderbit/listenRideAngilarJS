@@ -29,7 +29,6 @@ angular.module('cityLanding',[]).component('cityLanding', {
           }
           // End
 
-          console.log(cityLanding.data);
         },
         function (error) {
           $state.go('404');

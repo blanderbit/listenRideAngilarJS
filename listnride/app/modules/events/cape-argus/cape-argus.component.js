@@ -11,8 +11,12 @@ angular.module('capeArgus',[]).component('capeArgus', {
             capeArgus.email = "";
             capeArgus.submitted = false;
 
-            ngMeta.setTitle($translate.instant("events.cape-argus.meta-title"));
-            ngMeta.setTag("description", $translate.instant("events.cape-argus.meta-description"));
+            $translate(["events.cape-argus.meta-title", "events.cape-argus.meta-description"]).then(
+              function (translations) {
+                ngMeta.setTitle(translations["events.cape-argus.meta-title"]);
+                ngMeta.setTag("description", translations["events.cape-argus.meta-description"]);
+              }
+            );
 
             capeArgus.sizeOptions = [
                 {value: "", label: "-"},
@@ -30,12 +34,11 @@ angular.module('capeArgus',[]).component('capeArgus', {
                 capeArgus.sizeOptions[0].label = translation;
             });
 
-            api.get('/rides?category=20&location=Capetown&priority=capeArgus&booked_at=2017-06-18').then(
+            api.get('/rides?category=20&location=Capetown&priority=capeArgus&booked_at=2018-03-11').then(
                 function(response) {
                     capeArgus.bikes = response.data;
                 },
                 function(error) {
-                    console.log("Error retrieving User", error);
                 }
             );
 

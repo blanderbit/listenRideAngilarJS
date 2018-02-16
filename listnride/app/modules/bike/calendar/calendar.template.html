@@ -209,8 +209,8 @@
   <md-button
     type="submit"
     class="md-raised md-primary lnr-margin-lrg"
-    ng-click="calendar.onBikeRequest()"
-    ng-if="calendar.authentication.loggedIn() && !calendar.isFormInvalid()"
+    ng-click="calendar.onBooking()"
+    ng-if="!calendar.isFormInvalid()"
     ng-disabled="calendar.owner || calendar.requested"
   >
     {{ 'calendar.request-bike' | translate }}
@@ -219,16 +219,9 @@
     type="submit"
     class="md-raised md-primary lnr-margin-lrg"
     ng-click="calendar.onBikeRequest()"
-    ng-if="calendar.authentication.loggedIn() && calendar.isFormInvalid()"
+    ng-if="calendar.isFormInvalid()"
     ng-disabled="true">
     {{ 'calendar.select-timespan' | translate }}
-  </md-button>
-  <md-button
-    type="submit"
-    class="md-raised md-primary lnr-margin-lrg"
-    ng-click="calendar.promptAuthentication()"
-    ng-if="!calendar.authentication.loggedIn()">
-    {{ 'calendar.request-bike' | translate }}
   </md-button>
   <!-- <p ng-if="!calendar.authentication.loggedIn()" class="md-caption center-text lnr-margin-lrg">{{ 'calendar.to-request-bike-please' | translate }} {{ 'forms.sign-up' | translate }} {{ 'forms.or' | translate }} {{ 'forms.log-in' | translate }}</p> -->
 </div>

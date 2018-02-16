@@ -56,7 +56,7 @@ angular.module('bike',[]).component('bike', {
       );
 
       bike.showAttribute = function(attr) {
-        return !(attr == 'null' || attr == 'undefined');
+        return !(attr === null || attr === 'null' || typeof attr === 'undefined');
       };
 
       bike.showGalleryDialog = function(event) {

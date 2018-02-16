@@ -1,0 +1,116 @@
+<md-content class="single-column">
+  <div class="content lnr-page-margin" layout="column" layout-gt-sm="row">
+    <div flex="100" flex-md="60" flex-gt-md="70" layout-padding>
+      <md-tabs
+        md-no-pagination
+        md-dynamic-height
+        md-no-ink
+        lnr-md-focus-tabs="booking.selectedIndex"
+        md-selected="booking.selectedIndex"
+        ng-hide="booking.hidden"
+        class="lnr-progress-tabs booking"
+        style="overflow: visible;"
+      >
+        <!-- sign-in data tab -->
+        <signup-tab></signup-tab>
+
+        <!-- details data tab -->
+        <details-tab></details-tab>
+
+        <!-- payment tab -->
+        <payment-tab></payment-tab>
+        
+        <!-- overview tab -->
+        <overview-tab></overview-tab>
+      
+      </md-tabs>
+    </div>
+
+    <div flex="100" flex-md="40" flex-gt-md="30" layout-padding layout="column" ng-if="booking.authentication.loggedIn()">
+      <div class="spacer-xs"></div>
+      <div class="animate-if highlight-tile booking__receipt" layout="column">
+        <receipt
+          start-date="booking.startDate"
+          end-date="booking.endDate" 
+          prices="booking.prices" 
+          invalid-days="0" 
+          user="booking.user">
+        </receipt>
+        <div
+          class="booking__next-step"
+          layout="column">
+          <div 
+            layout="row"
+            layout-align="space-between center"
+            class="lnr-margin-lrg lnr-mb-0"
+            hide-gt-sm
+            ng-hide="booking.selectedIndex !== 3">
+            <h2 class="md-subhead">Total</h2>
+            <span>{{ booking.total | currency:"€":2 }}</span>
+          </div>
+          <md-button
+            class="md-raised md-primary lnr-margin-lrg"
+            ng-disabled="booking.nextDisabled()"
+            ng-click="booking.nextAction()"
+          >
+            <span ng-if="booking.selectedIndex !== 3">{{ 'shared.next' | translate }}</span>
+            <span ng-if="booking.selectedIndex == 3">{{ 'calendar.request-bike' | translate }}</span>
+          </md-button>
+        </div>
+      </div>
+      <div layout="row" layout-align="end none">
+        <img
+          class="md-card-image lnr-request__img-methods"
+          ng-src="app/assets/ui_icons/lnr_ico_lock.svg"
+          alt="Secure"
+        >
+        <div style="margin: 0 16px">
+          {{ 'booking.shopping' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content" layout-padding ng-if="!booking.authentication.loggedIn()">
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <p class="md-subhead">{{ 'booking.pay-secure' | translate }}</p>
+      <div layout="row">
+        <img
+          class="md-card-image lnr-request__img-methods lnr-payment-image"
+          ng-src="app/assets/ui_icons/lnr_logo_paypal.svg"
+          alt="Paypal"
+        >
+        <img
+          class="md-card-image lnr-request__img-methods lnr-payment-image"
+          ng-src="app/assets/ui_icons/lnr_logo_mastercard.svg"
+          alt="Mastercard"
+        >
+        <img
+          class="md-card-image lnr-request__img-methods lnr-payment-image"
+          ng-src="app/assets/ui_icons/lnr_logo_visa.svg"
+          alt="Visa"
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="content" layout-padding>
+    <div class="lnr-section-title mt0" layout="column" layout-align="center center">
+      <p class="md-body-2">
+        <b>{{ 'booking.footer.questions' | translate }}</b><br>
+        {{ 'booking.footer.call-us' | translate }}<a href="mailto:support@listandride.com">{{ 'booking.footer.email-us' | translate }}</a>.</p>
+      <div class="lnr-row-images" layout="row" layout-align="center center">
+        <div class="lnr-row-images__item" layout="column" layout-align="center center">
+          <img ng-src="app/assets/ui_images/request-flow/lnr_supportThumb_topbias@2x.png" alt="Tobias">
+          <span>Tobias</span>
+        </div>
+        <div class="lnr-row-images__item" layout="column" layout-align="center center">
+          <img ng-src="app/assets/ui_images/request-flow/lnr_supportThumb_lena@2x.png" alt="Lena">
+          <span>Lena</span>
+        </div>
+      </div>
+      <p class="md-caption"><b>{{ 'booking.footer.support' | translate }}</b></p>
+    </div>
+  </div>
+  <footer></footer>
+</md-content>

@@ -223,6 +223,10 @@
       "moeve": {
         "meta-title": "Miete und Teste Möve bikes in München und Amsterdam",
         "meta-descr": "Das Rad mit dem innovativsten Fahrradantrieb - Cyfly by Möve."
+      },
+      "rethink": {
+        "meta-title": "Miete und Teste rethink E-Bikes in München, Hamburg und Dresden",
+        "meta-descr": "Your rethink E-bike. Clear. Robust. Distinct Character."
       }
     },
     "about-us": {
@@ -270,6 +274,69 @@
       "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform."
     }
   },
+  "booking": {
+    "shopping": "Sicher bezahlen",
+    "pay-secure": "Sicher bezahlen mit",
+    "footer": {
+      "questions": "Du hast Fragen rund ums Mieten von Fahrrädern?",
+      "call-us": "Ruf uns unter +49 (0)30-120870330, Mo-Fr 9-18 Uhr an.",
+      "email-us": "Oder schreib uns eine E-Mail.",
+      "support": "listnride Support"
+    },
+    "sign-in": {
+      "tab": "1. Anmelden",
+      "new": "Neu bei listnride?",
+      "login": "Login bei listnride",
+      "register-facebook": "Mit Facebook registrieren",
+      "login-facebook": "Mit Facebook anmelden",
+      "already-member": "Bereits registriert?",
+      "register": "Registrieren",
+      "not-member": "Neu bei listnride?"
+    },
+    "details": {
+      "tab": "2. Persönliche Daten",
+      "invoice-address": "Rechnungsadresse",
+      "verification": "Verifizieren",
+      "send-sms": "Wir senden dir eine SMS an dein Telefon.",
+      "check-phone": "Bitte prüfe dein Telefon.",
+      "send-code": "Absenden",
+      "confirm-code": "Bestätigungscode",
+      "enter-code": "Gib den Pin ein, den wir dir geschickt haben.",
+      "success-code": "Sehr gut. Dein Account ist verifiziert.",
+      "fail-code": "Der Code ist leider nicht korrekt. ",
+      "resend": "Nochmal senden"
+    },
+    "payment": {
+      "tab": "3. Zahlungsmethode",
+      "select-method": "Wähle deine Zahlungsart aus",
+      "subtitle": "Wir buchen erst Geld ab, wenn deine Anfrage vom Vermieter bestätigt wurde.",
+      "credit-card": "Kreditkarte",
+      "card-name": "Karteninhaber",
+      "invalid-name": "Please provide valid name",
+      "card-number": "Kreditkartennummer",
+      "invalid-card": "Please provide a valid Card Number",
+      "invalid-card-number": "Card Number not valid",
+      "exp-month": "Exp. month",
+      "invalid-month": "Month not valid",
+      "invalid-year": "Year not valid",
+      "invalid-date": "Date not valid",
+      "exp-year": "Exp. year",
+      "exp-date": "Gültig bis",
+      "invalid-cvc": "CVC not valid",
+      "cvc": "Sec. Code",
+      "pay-paypal": "Paypal"
+    },
+    "overview": {
+      "tab": "4. Zusammenfassung",
+      "bike-rental": "Deine Radauswahl",
+      "size": "Größe",
+      "location": "Ort",
+      "invoice-address": "Rechnungsadresse",
+      "payment": "Zahlungsmethode",
+      "redeem-voucher": "Rabattcode einlösen",
+      "add": "Add"
+    }
+  },
   "toasts": {
     "update-profile-success": "Dein Profil wurde erfolgreich aktualisiert.",
     "error": "Es ist ein Fehler aufgetreten. Bitte stell sicher dass deine Internetverbindung funktioniert und versuche es nochmal.",
@@ -278,6 +345,7 @@
     "add-voucher-error": "Der angegebene Gutschein ist leider nicht gültig.",
     "verification-email-sent": "Eine Email mit Bestätigungslink wurde an deine Email-Adresse gesendet. Dies kann ein paar Minuten dauern, falls du nichts findest schau bitte auch in deinem Spam-Ordner nach.",
     "could-not-sign-up": "Registrierung fehlgeschlagen. Die angegebene Email-Adresse ist bereits in Benutzung.",
+    "successfully-sign-up": "You have successfully signed up. Welcome!",
     "successfully-logged-in": "Erfolgreich eingeloggt. Willkommen zurück!",
     "successfully-logged-out": "Du bist ausgeloggt.",
     "could-not-log-in": "Login fehlgeschlagen. Bitte stell sicher dass du bereits registriert bist und deine Anmelde-Daten stimmen.",
@@ -604,7 +672,7 @@
       "header": "Wo kann das Rad abgeholt werden?",
       "hint": "Wo steht Dein Fahrrad? Keine Sorge, der genaue Standort wird erst übermittelt wenn Du eine Buchungsanfrage bestätigt hast.",
       "label": "Standort des Rads",
-      "street-number": "Staße und Hausnr.",
+      "street-number": "Straße und Hausnr.",
       "zip": "PLZ",
       "city": "Stadt",
       "country": "Land"

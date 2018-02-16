@@ -77,36 +77,6 @@
       "cafes-bars-content": "Se vi  piace il cibo vegano e vegetariano, ti consigliamo di visitare <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot </a>presso la Karmeliterplatz. Se preferisci la cucina austriaca più tradizionale, ti consigliamo <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta </a>. Ordinare un tradizionale Tafelspitz o Wiener Schnitzel e godersela all'aperto con la vista sulla celebre Opera di Vienna. Si avrà una grande notte da ricordare! Per finire, è opportuno camminare lungo il Danubio. Sulla strada troverete molti bar interessanti e potrete sedervi all'aperto sotto le stelle lungo il fiume."
     }
   },
-  "business-community": {
-    "meta-title": "La comunità business di listnride",
-    "meta-description": "Diventa parte di listnride per il noleggio online di biciclette",
-    "title": "La comunità business di listnride",
-    "subtitle": "Diventa parte di listnride per il noleggio online di biciclette",
-    "description": "Vorremmo includerti nella nostra piattaforma per il noleggio online di biciclette e renderlo il più semplice possibile per te. Perchè la nostra passione sono le biciclette e vorremmo vederne molte altre sulle strade di tutta Europa. Come sarebbe bello, se potessimo aiutarci l’uno con l’altro in questa missione.",
-    "feature-1": {
-      "title": "Noleggia più biciclette tramite listnride",
-      "description": "I tuoi clienti possono selezionare e prenotare online le loro biciclette a noleggio attraverso il tuo sito web. Listnride si occuperà per te del processo di prenotazione e pagamento."
-    },
-    "feature-2": {
-      "title": "Presenta il tuo negozio online",
-      "description": "Ti diamo l’opportunità di presentare il tuo negozio online e di ampliare la tua base di clienti, quindi di raggiungere online anche la “generazione internet”."
-    },
-    "feature-3": {
-      "title": "Approfitta della nostra espansione",
-      "description": "Listnride è la più grande comunità di bike sharing in Europa, e continuiamo a crescere. Cogli l’opportunità."
-    },
-    "text-2": {
-      "title": "Diventa parte della comunità business di listnride",
-      "description": "Iscriviti ora ed imposta subito la pagina del tuo negozio. Oppure contattaci direttamente. Stefano sarà felice di aiutarti, contattalo a: <a href=\"mailto:sp@listnride.com\">sp@listnride.com</a>"
-    },
-    "text-3": {
-      "column-1": "listnride è già la più grande comunità di bike sharing in Europa, specializzata nel noleggio di biciclette private e commerciali. Ecco perché sappiamo cosa cercano i nostri clienti e li possiamo indirizzare direttamente alla tua pagina listnride online e al tuo negozio nel modo più semplice possibile.",
-      "column-2": "Per noi è importante poter offrire alla nostra comunità di appassionati per il ciclismo una vasta gamma di biciclette, dal crosser, alla bicicletta da strada, da carico, fino alla bicicletta  olandese. Insieme a te, non solo possiamo offrire ai nostri utenti la bicicletta perfetta per le vacanze, ma anche aiutarli a trovare una nuova bici."
-    },
-    "join-now": "Mach mit. Das Plugin ist kostenlos.",
-    "join-now-description": "Willst du mehr erfahren?",
-    "contact-us": "Kontaktiere Uns"
-  },
   "events": {
     "rapha-super-cross": {
       "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
@@ -182,16 +152,16 @@
     },
     "crossride": {
       "title": "listnride Crossride",
-      "text": "During the Berliner Fahrradschau we want to explore with you our local cross playground, the forest with uncountable awesome trails, the Grunewald.<br><br>On the 5th of March 10am sharp we start rolling from the front gate BFS venue STATION Berlin. The social paced ride lasts for ~3 hours / 50km in the nature and bring you back well charged. We highly recommend a CX/Gravel bike, warm clothes, and a fit body. Helmets are required! <br><br>In case you need a suitable bike or would like to test a new cross bike, check out the great Bikes offered by <a href='http://www.votec.de' target='_blank'>Votec</a> and our community below. If you like to join, you need to <a target='_blank' href='https://ti.to/listnride/crossride'>register</a>. As part of the BFS program we offer you a discounted ticket for the show. After registration for the listnride CX ride, you get a coupon-code for your <a target='_blank' href='https://berlinerfahrradschau.de/en/tickets/'>ticket purchase</a>."
+      "text": "During the Berliner Fahrradschau we want to explore with you our local cross playground, the forest with uncountable awesome trails, the Grunewald.<br><br>On Saturday the 24th of March 10am sharp we start rolling from the front gate BFS venue STATION Berlin. The social paced ride lasts for ~3 hours / 45km in the nature and bring you back well charged. We highly recommend a CX/Gravel bike, warm clothes, and a fit body. Helmets and rsvp are required!<br><br>In case you need a suitable bike or would like to test a new cross bike, check out the great Bikes offered by Votec and our community below. If you like to join, <a href=\"https://ti.to/listnride/listnride-crossride-fahrradschau-berlin/\" target=\"_BLANK\">you need to register here.</a>"
     },
     "mcbw": {
       "title": "",
       "description": "Explore Munich by bike, go cycling with listnride!",
-      "subdescription": "Together with Brompton and Ampler we rent out fantastic bikes for free",
+      "subdescription": "Together with Munix Finest Bicycles and Ampler we rent out fantastic bikes",
       "subhead-1": "The new bike rental",
-      "subhead-2": "Rent a bike for free",
+      "subhead-2": "Rent a bike",
       "text-1": "Conceived as the Airbnb for bicycles, listnride offers an alternative to the classic bike rental: private owners, dealers or manufacturers offer their bicycles for rent on listnride. Tourists, citizens, families, sportsmen and business travelers rent the right bike for their style and needs.",
-      "text-2": "Especially for the MCBW, visitors can rent a bike of the brands <b>Brompton Folding Bike</b> and <b>Ampler E-Bike</b> for free <b>(Voucher Code: LNR2018)</b> for half a day. listnride pursues the vision of offering as many people anywhere in the world uncomplicated access to high-quality, stylish bicycles. If you want to explore Munich, go cycling with listnride!",
+      "text-2": "Especially for the MCBW, visitors can rent a bike of the brands <b>Urban Arrow</b>, <b>I:sy</b>, <b>Stromer</b>, <b>Brompton</b> and <b>Ampler</b> <b>(Voucher Code: 10FORU)</b>. listnride pursues the vision of offering as many people anywhere in the world uncomplicated access to high-quality, stylish bicycles. If you want to explore Munich, go cycling with listnride!",
       "location-description": "Choose your location",
       "location-text": "The two locations are <b>① Munix Finest Bicycles</b> in Wörthstraße 11 and <b>② listnride</b> at Pündterplatz 1"
     },
@@ -485,7 +455,7 @@
       "item3-description": "Le biciclette VELLO sono disponibili in 4 diversi modelli, con e-drive e senza: \"Urbano\", \"Rocky\", \"Speedster\" e \"VELLO BIKE +\". Tutti i modelli offrono il meglio della guida urbana e sono dotati di componenti high-end di città, trekking o road bike.",
       "available-cities": "Disponibile a Berlino e a Monaco di Baviera",
       "question": "Domande?",
-      "faq-question": "Per saperne di più sulle <a href=\"http://vello.bike/index.php\">biciclette VELLO </a> e sulle modalità di acquisto controllare le loro <a href=\"http://vello.bike/index.php/pages/help-faq.html\" target=\"_BLANK\">FAQ </a>."
+      "faq-question": "Per saperne di più sulle <a href=\"http://vello.bike/index.php\">biciclette VELLO </a> e sulle modalità di acquisto controllare le loro <a href=\"https://www.vello.bike/help-faq-en\" target=\"_BLANK\">FAQ </a>."
     },
     "veletage": {
       "meta-title": "VELETAGE Salon für Radkultur",
@@ -512,7 +482,7 @@
       "item2-description": "Agile e veloce <br>Verniciatura a polveri resistente e duratura <br>Componenti di alta qualità <br>Puro piacere di guida",
       "item3-title": "Ottimo prezzo - Elevate prestazioni",
       "item3-description": "Le biciclette singlespeed a partire da 349 € <br>Alta soddisfazione del cliente <br>Servizio personalizzato <br>Consegna rapida a Berlino",
-      "test-bike": "Prova una bicicletta bonvelo a Berlino",
+      "test-bike": "Prova una bicicletta bonvelo a Berlino, Amburgo e Monaco di Baviera",
       "testimonial-1": "Design bello e pulito e arriva pre-assemblata.",
       "testimonial-2": "Servizio clienti molto amichevole, elaborazione rapida dell'ordine e risposta super veloce alle mie domande.",
       "testimonial-3": "Bonvelo è impressionante. Tutto è proprio qui. Ottimo servizio clienti - hanno risposto rapidamente anche quando ho fatto una domanda di domenica. Il tempo di consegna è stato davvero veloce e la bicicletta è arrivata quasi completamente assemblata, con solo un paio di cose semplici da finire. La bicicletta sembra eccezionale, e il prezzo era ancora migliore. Ci tornerò sicuramente. Saluti da Monaco!",
@@ -631,6 +601,27 @@
       "faq-answer-5": "Since the Cyfly drive system requires a precisely adapted frame, it cannot be retrofitted readily. Initially Cyfly will only be available as an innovative component of premium bicycles.",
       "faq-question-6": "How much more efficient is Cyfly?",
       "faq-answer-6": "Everyone applies force differently while cycling. Therefore we cannot provide an objective, generally applicable gain in efficiency. The value is calculated based on data with established constraints on the one hand and a significant number of field tests on the other hand. The efficiency gain was also verified by an external expert opinion from a bicycle laboratory in Freiburg, Germany. Furthermore, the Cyfly effect was confirmed by renowned bicycle racing and triathlon professionals."
+    },
+    "rethink": {
+      "title": "Your rethink e-bike. Clear. Robust. Distinct Character.",
+      "description": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden",
+      "subdescription": "Choose between the City Low, the City High and the Longtail",
+      "bike1-title": "rethink City Low",
+      "bike1-description": "rethink, these are sustainable steel frames with a long service life.",
+      "bike2-title": "rethink City High",
+      "bike2-description": "rethink are sporty chain or easy - hub gears.",
+      "bike3-title": "rethink Longtail",
+      "bike3-description": "rethink that are proven components for careless driving pleasure.",
+      "item1-title": "Perfect fit",
+      "item1-description": "Are you ready for the change to electric transportation? binova provides you with the perfect e-drive for your bicycle, matching almost all common bike types and frames.",
+      "item2-title": "Personalized ",
+      "item2-description": "You are looking for an electric drive unit to use in all circumstances? No matter if cruising through the city, mastering long tours and steep hills.",
+      "item3-title": "Economical ",
+      "item3-description": "You want your bike´s e-drive to last for life? binova guarantees a long life span for your binova flow.",
+      "test-bike": "Test the new rethink models!",
+      "choose-location": "Wähle deine Stadt",
+      "find-out-more": "Learn more about rethink",
+      "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed."
     }
   },
   "about-us": {
@@ -735,6 +726,7 @@
     "title": "Stampa",
     "header": "Sezione Stampa",
     "subheader": "Le informazioni sono pronte per essere scaricate. listnride è pronto a parlare.",
+    "comm-and-pr": "Communications and PR",
     "kit": {
       "title": "Kit stampa",
       "content": "Gli altri si chiamano sistemi di noleggio biciclette. Noi siamo una comunità bike sharing. Scopri di più nel nostro kit di stampa, che può essere",

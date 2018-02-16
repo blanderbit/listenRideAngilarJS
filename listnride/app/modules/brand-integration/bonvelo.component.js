@@ -10,7 +10,11 @@ angular.module('bonvelo-integration',[]).component('bonvelo', {
       ngMeta.setTitle($translate.instant("brand-integration.bonvelo.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.bonvelo.meta-description"));
 
-      bonvelo.bikes = [];
+      bonvelo.bikes = {
+        berlin: [],
+        munich: [],
+        hamburg: []
+      };
 
       bonvelo.slickConfig = {
         enabled: true,
@@ -33,10 +37,15 @@ angular.module('bonvelo-integration',[]).component('bonvelo', {
 
       api.get('/rides?family=17').then(
         function (success) {
-          bonvelo.bikes = success.data;
+          for (var i=0; i<success.data.length; i++) {
+            switch (success.data[i].city) {
+              case "Berlin": bonvelo.bikes.berlin.push(success.data[i]); break;
+              case "München": bonvelo.bikes.munich.push(success.data[i]); break;
+              case "Hamburg": bonvelo.bikes.hamburg.push(success.data[i]); break;
+            }
+          }
         },
         function (error) {
-          console.log('Error fetching Bikes');
         }
       );
     }

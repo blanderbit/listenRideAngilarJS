@@ -52,6 +52,12 @@
       });
 
       $stateProvider.state({
+        name: 'booking',
+        url: '/booking?bikeId&startDate&endDate',
+        template: '<booking></booking>',
+      });
+
+      $stateProvider.state({
         name: 'list-view',
         url: '/list-view',
         template: '<bike-list-view></bike-list-view>'
@@ -833,6 +839,25 @@
       });
 
       $stateProvider.state({
+        name: 'rethink',
+        url: '/rent-rethink-bikes',
+        template: '<rethink></rethink>',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["meta.brand-integration.rethink.meta-title", "meta.brand-integration.rethink.meta-descr"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["meta.brand-integration.rethink.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.brand-integration.rethink.meta-descr"]);
+                        ngMeta.setTag("og:image", "app/assets/ui_images/opengraph/rethink.jpg");
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'votec',
         url: '/rent-votec-bikes',
         template: '<votec></votec>',
@@ -1104,7 +1129,7 @@
 
       $stateProvider.state({
         name: 'categoryLanding',
-        url: '/{city: string}/{category: string}',
+        url: '/{city: string}/{category:.*}',
         template: '<category-landing></category-landing>',
         meta: {
           disableUpdate: false,
