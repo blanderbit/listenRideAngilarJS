@@ -3,6 +3,7 @@
   label="{{ 'booking.details.tab' | translate }} {{ details.parent.tabCompleted(1) }}"
   layout="row"
   ng-disabled="details.parent.tabsDisabled"
+  md-on-select="details.parent.onTabChanged()"
 >
   <div class="spacer-xs"></div>
   <md-content layout="column" style="overflow: visible;">

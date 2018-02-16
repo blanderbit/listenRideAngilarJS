@@ -20,8 +20,9 @@ angular.module('message',[]).component('message', {
     function MessageController($translate, $localStorage, $mdDialog, $analytics, api) {
       var message = this;
       var time = message.time.toString();
-      
-      message.localTime = new Date(time).toString();
+
+      // @TODO: if the current date equal today we should use word 'Today' insead of date
+      message.localTime = moment(time).format('DD.MM.YYYY HH:mm');
       
       message.buttonClicked = false;
       

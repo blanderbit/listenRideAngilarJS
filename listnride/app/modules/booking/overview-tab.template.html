@@ -2,7 +2,8 @@
   class="categories"
   label="{{ 'booking.overview.tab' | translate }} {{ overview.parent.tabCompleted(3) }}"
   layout="row"
-  ng-disabled="overview.parent.tabsDisabled">
+  ng-disabled="overview.parent.tabsDisabled"
+  md-on-select="overview.parent.onTabChanged()">
   <div class="spacer-xs"></div>
   <md-content layout="column">
     <div class="tab-content" style="min-height: 450px;" layout-align="space-between none" layout-padding>

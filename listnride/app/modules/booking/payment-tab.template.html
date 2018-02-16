@@ -1,7 +1,8 @@
 <md-tab class="categories"
         label="{{ 'booking.payment.tab' | translate }} {{ payment.parent.tabCompleted(2) }}"
         layout="row"
-        ng-disabled="payment.parent.tabsDisabled">
+        ng-disabled="payment.parent.tabsDisabled"
+        md-on-select="payment.parent.onTabChanged()">
   <div class="spacer-xs"></div>
   <md-content layout="column">
     <div class="tab-content"
