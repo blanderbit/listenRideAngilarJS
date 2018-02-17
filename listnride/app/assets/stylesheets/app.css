@@ -4384,16 +4384,20 @@ md-input-container.md-icon-right > md-icon.md-icon--btn {
   min-width: 320px;
 }
 
-@media (max-width: 599px) {
-
-  .date-picker-wrapper--two-months .gap {
-    display: none;
+@media (max-width: 959px) { /*sm-size*/
+  .date-picker-wrapper.date-picker-wrapper--ngDialog
+   {
+    max-width: 700px;
+    left: 0 !important;
+    right: 0;
+    margin: 0 auto;
   }
+}
 
-  .date-picker-wrapper,
-  .date-picker-wrapper.inline-wrapper,
+@media (max-width: 659px) {
+  .date-picker-wrapper.date-picker-wrapper--ngDialog,
+  .date-picker-wrapper.date-picker-wrapper--ngDialog
   .month-wrapper {
     max-width: 320px;
-    left: 0!important;
   }
 }

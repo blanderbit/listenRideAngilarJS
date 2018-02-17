@@ -68,7 +68,10 @@ function inputRangeController($scope) {
       showTopbar: false,
       isWidthStatic: true,
       showTimeDom: false,
-      extraClass: 'date-picker-wrapper--ngDialog date-picker-wrapper--two-months'
+      stickyMonths: true,
+      singleMonth: 'auto',
+      extraClass: 'date-picker-wrapper--ngDialog date-picker-wrapper--two-months',
+      singleMonthMinWidth: 659
     }).bind('datepicker-change', function (event, obj) {
         vm._updateData(obj.date1, obj.date2);
     });

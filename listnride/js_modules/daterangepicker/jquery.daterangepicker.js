@@ -843,7 +843,8 @@
 				customArrowPrevSymbol: null,
 				customArrowNextSymbol: null,
 				isWidthStatic: false,
-				showTimeDom: true
+				showTimeDom: true,
+				singleMonthMinWidth: 480
 			},opt);
 
 		opt.start = false;
@@ -858,7 +859,7 @@
 		if (opt.isTouchDevice) opt.hoveringTooltip = false;
 
 		//show one month on mobile devices
-		if (opt.singleMonth == 'auto') opt.singleMonth = $(window).width() < 480;
+		if (opt.singleMonth == 'auto') opt.singleMonth = $(window).width() < opt.singleMonthMinWidth;
 		if (opt.singleMonth) opt.stickyMonths = false;
 
 		if (!opt.showTopbar) opt.autoClose = true;
