@@ -2,6 +2,7 @@
 // author : Chunlong Liu
 // license : MIT
 // www.jszen.com
+// Documentation: http://longbill.github.io/jquery-date-range-picker/
 
 (function (factory) {
 	if (typeof define === 'function' && define.amd) {

@@ -114,6 +114,92 @@ angular.module('listings', []).component('listings', {
         }
       };
 
+      var AvailabilityController = function (bike) {
+        var availabilityDialog = this;
+        availabilityDialog.inputs = [];
+        availabilityDialog.removedInputs = [];
+        availabilityDialog.maxInputs = 5;
+        availabilityDialog.isMaxInputs = false;
+        availabilityDialog.addInput = addInput;
+        availabilityDialog.removeInput = removeInput;
+        availabilityDialog.update = update;
+        availabilityDialog.close = close;
+        availabilityDialog._checkMax = _checkMax;
+
+        //////////////////
+
+        function _checkMax() {
+          availabilityDialog.isMaxInputs = availabilityDialog.inputs.length >= availabilityDialog.maxInputs ? true : false;
+        }
+
+        if (bike.availabitilyId) {      
+          api.get('/rides/' + bikeId + '/availabilities/' + availabitilyId).then(
+            function (response) {
+              availabilityDialog.inputs = response;
+              availabilityDialog._checkMax()
+            },
+            function (error) {
+            }
+          );
+        } else {
+          availabilityDialog.inputs = [
+            // TEST DATA
+            {
+              'startDate': 1517242765,
+              'duration': 5
+            },
+            {
+              'startDate': 1617242765,
+              'duration': 10
+            },
+            {
+              'startDate': 1717242765,
+              'duration': 20
+            },
+            {}
+          ];
+          availabilityDialog._checkMax();
+        };
+        
+        function addInput() {
+          if (!availabilityDialog.isMaxInputs) {
+            availabilityDialog.inputs.push({});
+            availabilityDialog._checkMax();
+          }
+        };
+        
+        function removeInput(index) {
+          var removedData = availabilityDialog.inputs.splice(index, 1);
+          availabilityDialog._checkMax();
+        };
+
+        function update() {
+          if (bike.availabitilyId) {
+            api.put('/rides/' + bikeId + '/availabilities/' + availabitilyId, availabilityDialog.inputs).then(
+              function (response) {
+                $mdDialog.hide();
+              },
+              function (error) {
+              }
+            );
+          } else {
+            // api.post('/rides/' + bikeId + '/availabilities/' + availabitilyId, availabilityDialog.inputs).then(
+            //   function (response) {
+            //     $mdDialog.hide();
+            //   },
+            //   function (error) {
+            //   }
+            // );
+            $mdDialog.hide();
+          }
+        };
+
+        function close() {
+          $mdDialog.hide();
+        };
+
+      };
+
       // search functionality in header of My Bikes (List View)
       listings.search = function () {
         listings.bikes = $filter('filter')(listings.mirror_bikes, filterFunction, { $: listings.input });
@@ -191,6 +277,24 @@ angular.module('listings', []).component('listings', {
           clickOutsideToClose: true,
           locals: {
             bikeId: id
+          }
+        });
+      };
+
+      listings.changeAvailability = function (bike, event) {
+        $mdDialog.show({
+          controller: AvailabilityController,
+          controllerAs: 'availabilityDialog',
+          templateUrl: 'app/modules/shared/listing-card/availability-bike-dialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: true,
+          fullscreen: true,
+          escapeToClose: false,
+          locals: {
+            bike: bike
           }
         });
       };

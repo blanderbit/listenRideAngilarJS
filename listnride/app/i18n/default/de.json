@@ -952,5 +952,13 @@
     "kids": "Kinderräder",
     "electro": "E-Bikes",
     "special": "Spezialräder"
+  },
+  "availability": {
+    "availability": "availability",
+    "modal-title": "When is your bike not available?",
+    "start-from": "Starting from",
+    "end-at": "Ending at",
+    "add-another-date": "Add another date",
+    "submit-btn": "Ok"
   }
 }

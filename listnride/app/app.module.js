@@ -59,6 +59,7 @@ angular.module('listnride', [
   'cityLanding',
   'categoryLanding',
   'hamburgTriathlon',
+  'inputRange',
   'receipt',
   'rethinkIntegration',
   /* external modules */
