@@ -11,7 +11,8 @@ var lnrHelper = {
    */
   preInit: function () {
     var cssLnr = document.createElement("LINK");
-    cssLnr.href = lnrConstants.lnrStyles;
+    // href: local, staging, production
+    cssLnr.href = lnrConstants.lnrStyles.staging;
     cssLnr.rel = "stylesheet";
     var header = document.getElementsByTagName("head")[0];
     header.appendChild(cssLnr);
@@ -215,9 +216,9 @@ var lnrHelper = {
   categoryFilter: function (userId, categoryId) {
     // select category based on the user language
     var selectedCategory = "";
-    if ('en' === lnrConstants.userLang[userId]) selectedCategory = lnrConstants.subCategory.en;
-    else if ('nl' === lnrConstants.userLang[userId]) selectedCategory = lnrConstants.subCategory.nl;
-    else selectedCategory = lnrConstants.subCategory.de;
+    if ('en' === lnrConstants.userLang[userId]) { selectedCategory = lnrConstants.subCategory.en; }
+    else if ('nl' === lnrConstants.userLang[userId]) { selectedCategory = lnrConstants.subCategory.nl; }
+    else { selectedCategory = lnrConstants.subCategory.de; }
     // select sub category based on the user language
     switch (categoryId) {
       case 10:
@@ -294,7 +295,7 @@ var lnrHelper = {
 
     // if there is only single city
     // there is no need for selection
-    if (lnrConstants.cities.length === 1) return;
+    if (lnrConstants.cities.length === 1) { return; }
 
     // if there are several language
     // and 'All' is selected
@@ -342,7 +343,7 @@ var lnrHelper = {
 
     // if there is only single available size
     // there is no need for selection
-    if (lnrConstants.sizes[userId].available.length === 1) return;
+    if (lnrConstants.sizes[userId].available.length === 1) { return; }
 
     // if there are several language
     // and 'All' is selected
@@ -424,7 +425,7 @@ var lnrHelper = {
 
     lnrHelper.setIdAndLanguage(userId, userLang, is_demo_mode);
     // set the environment: staging or production
-    var url = (lnrConstants.env === 'staging') ? lnrConstants.staging_users : lnrConstants.production_users;
+    var url = (lnrConstants.env === 'staging') ? lnrConstants.users.staging : lnrConstants.users.production;
     // create new instance of xhr
     var request = new XMLHttpRequest();
     var apiUrl = url + lnrConstants.userId[userId];
@@ -487,6 +488,7 @@ var lnrHelper = {
         rideDescription = ride.description;
 
       // bikes grid html
+      // mdl grid => 12 col (desktop), 8 col (tablet), 4 col (phone) 
       var gridHTML = [
         '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">',
         '<bike-card>',
@@ -497,27 +499,22 @@ var lnrHelper = {
         '<div class="info-button"><span class="info-icon"></span></div>',
         '<div id="rent-element-default-' + rideId + '" class="rent-element">', // style="display: none;"
         // on hover: info button
-        '<span style="position:absolute">',
         '<div class="info-button" onclick="lnrHelper.toggleElements(' + rideId + ')">',
         '<span class="info-icon"></span>',
         '</div>',
-        '</span>',
         // on hover: rent button
         '<span class="content">',
         // <span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>
         '<button onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')" class="md-button rent-button">' + basicInfo.buttonText + '</button>',
         '</span>',
         '</div>',
+        // bike description
         '<div id="rent-element-description-' + rideId + '" class="rent-description" style="display: none">',
-        '<div class="mdl-grid mdl-grid--no-spacing" style="max-height:100%">',
-        '<div class="content mdl-cell mdl-cell--11-col-desktop">',
-        '<p class="md-subhead">' + rideName + '</p>',
+        '<div class="rent-description-content">',
+        '<span class="close-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></span>',
         '<p>' + rideDescription + '</p>',
         '</div>',
-        '<div class="mdl-cell mdl-cell--1-col-desktop">',
-        '<span class="close-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></span>',
         '</div>',
-        '</div>', '</div>',
         '</a>',
         '<md-card-title layout="row" class="layout-row">',
         '<md-card-title-text class="layout-align-space-around-start layout-column">' +
@@ -673,7 +670,7 @@ var lnrHelper = {
    */
   spawnWizard: function (userId, bikeId) {
     // select shop solution based on the environment
-    var url = (lnrConstants.env === 'staging') ? lnrConstants.stagingShopUrl : lnrConstants.productionShopUrl;
+    var url = (lnrConstants.env === 'staging') ? lnrConstants.shopUrl.staging : lnrConstants.shopUrl.production;
     // window dimensions, url, parameter, and open type
     var windowObj = lnrHelper.getWindowParams(url, userId, bikeId);
     // open window for selected environment and dimensions
