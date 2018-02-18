@@ -499,8 +499,8 @@ var lnrHelper = {
         '<div class="info-button"><span class="info-icon"></span></div>',
         '<div id="rent-element-default-' + rideId + '" class="rent-element">', // style="display: none;"
         // on hover: info button
-        '<div class="info-button" onclick="lnrHelper.toggleElements(' + rideId + ')">',
-        '<span class="info-icon"></span>',
+        '<div class="info-button">',
+        '<span class="info-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></span>',
         '</div>',
         // on hover: rent button
         '<span class="content">',
