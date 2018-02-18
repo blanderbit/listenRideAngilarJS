@@ -467,6 +467,7 @@ var lnrHelper = {
     var lnr = lnrConstants.isSingleUserMode ? lnrConstants.parentElement : document.getElementById(userId);
     var gridId = userId + '-lnr-grid';
     lnr.innerHTML += '<div class="mdl-grid mdl-grid--no-spacing" id="' + gridId + '"></div>';
+    lnr.innerHTML += '<div class="lnr-brand"><span>powered by&nbsp;</span><a href="https://www.listnride.com" target="_blank">listnride</a></div>';
 
     // bikes grid element
     var grid = document.getElementById(gridId);
@@ -511,6 +512,7 @@ var lnrHelper = {
         '<div id="rent-element-description-' + rideId + '" class="rent-description" style="display: none">',
         '<div class="rent-description-content">',
         '<span class="close-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></span>',
+        '<div class="md-subhead ride-name">' + rideName + '</div>',
         '<p>' + rideDescription + '</p>',
         '</div>',
         '</div>',
@@ -527,7 +529,7 @@ var lnrHelper = {
         '</md-card-title>',
         '</md-card>',
         '</bike-card>',
-        '</div>'
+        '<div class="lnr-brand">',
       ].join('');
 
       // render bikes grid

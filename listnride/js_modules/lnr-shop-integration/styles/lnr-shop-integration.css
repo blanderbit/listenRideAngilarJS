@@ -1,5 +1,13 @@
 /* Picture Overlay */
 
+.lnr-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 12px 12px 0px -8px;
+}
+
 .image-container {
     position: relative;
     display: inline-block;
@@ -51,8 +59,12 @@
 
 .image-container .rent-description .rent-description-content {
   overflow-y: scroll;
-  max-height: 94%; 
+  max-height: 96%; 
   padding: 12px 48px 0 16px;
+}
+
+.image-container .rent-description .ride-name {
+  margin-bottom: 8px;
 }
 
 .image-container:hover .rent-description {
@@ -239,7 +251,8 @@ div.lnr-intro-text {
   font-family: 'Roboto', sans-serif !important;
 }
 a:link, a:visited, a:active, a:hover, a:focus {
-    color: rgb(95, 198, 147);
+    color: rgb(95, 198, 147) !important;
+    text-decoration: none;
 }
 .md-subhead {
   font-size: 18px;
