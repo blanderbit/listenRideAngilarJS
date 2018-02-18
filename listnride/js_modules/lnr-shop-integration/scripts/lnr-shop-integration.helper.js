@@ -493,18 +493,17 @@ var lnrHelper = {
         '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">',
         '<bike-card>',
         '<md-card class="lnr-bike-card _md">',
-        '<a style="cursor:default" class="image-container lnr-links">', //  title="' + ride.description + '"
+        '<a style="cursor:default" class="image-container lnr-links">',
         '<img src="' + imageUrl + '" />',
         // default: info button
         '<div class="info-button"><span class="info-icon"></span></div>',
-        '<div id="rent-element-default-' + rideId + '" class="rent-element">', // style="display: none;"
+        '<div id="rent-element-default-' + rideId + '" class="rent-element">',
         // on hover: info button
         '<div class="info-button">',
         '<span class="info-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></span>',
         '</div>',
         // on hover: rent button
         '<span class="content">',
-        // <span class="biketitle">' + rideName + '</span><br><br>' + rideDescription + '<br><br>
         '<button onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')" class="md-button rent-button">' + basicInfo.buttonText + '</button>',
         '</span>',
         '</div>',
