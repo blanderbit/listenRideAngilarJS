@@ -13,6 +13,8 @@ function lnrMdFocusTabs($window, $timeout) {
       var newValue;
       var selectedIndex;
 
+      $tabs.addClass('lnr-md-focus-tabs');
+
       // helper function to calc dom element offset().right
       // if element is not defined - returns false;
       function _offsetRight(el) {
@@ -24,14 +26,21 @@ function lnrMdFocusTabs($window, $timeout) {
         changeFocus();
       });
 
-      // This timeout is necessary, because the browser needs a little bit
-      // of time to calculate the offsets and width
-      $window.onload = function () {
-        $timeout(function () {
-          $tabs.addClass('lnr-md-focus-tabs');
-          changeFocus();
-        }, 10, false);
-      } 
+      // Using Observer to check when tabs is fully loaded and we can use their attr
+      var config = { subtree: true, attributes: true, childList: false, characterData: false };
+      var observer = new MutationObserver(function (mutations) {
+        var observerHandle = _.debounce(changeFocus, 100);
+        mutations.forEach(function (mutation) {
+          observerHandle();
+        });
+      });
+      observer.observe(tabViewWrapper[0], config);
+
+      // reset and recalc tabs leftOffset
+      jQuery(window).on('resize', _.debounce(function(){
+        tabViewWrapper.css({'left': 0});
+        changeFocus();
+      }, 150));
 
       /**
        * Scroll to active tab
@@ -39,19 +48,31 @@ function lnrMdFocusTabs($window, $timeout) {
        * @TODO: also add focus if active element's offet().left not on a view
        */
       function changeFocus () {
-        if (!$tabs.find('md-tab-item').length && !$tabs.width()) return;
+        // wait for any tabs
+        if (!$tabs.find('md-tab-item').length) return;
 
         activeTab = $tabs.find('md-tab-item').eq(selectedIndex);
+        // wait until active tab will be selected and appear on the screen 
+        if (!activeTab.outerWidth()) return;
+
         currentLeftOffset = parseInt(tabViewWrapper.css('left'));
+        
+        // check if active tab right and left offset are visible in viewport
+        if (tabBox.width() + tabBox.offset().left < _offsetRight(activeTab)) {
+          newValue = Math.round(tabBox.width() + tabBox.offset().left - _offsetRight(activeTab) + currentLeftOffset);  
+        } else if (activeTab.offset().left < tabBox.offset().left ) {
+          newValue = Math.round(activeTab.offset().left - currentLeftOffset);
+        } else {
+          return false;
+        }
 
-        if (tabBox.width() + tabBox.offset().left >= _offsetRight(activeTab)) return false;
-
-        newValue = Math.round(tabBox.width() + tabBox.offset().left - _offsetRight(activeTab) + currentLeftOffset);
-
-        // if it's not a last tab - add some pixels to see next tab's label
-        if (selectedIndex !== $tabs.find('md-tab-item').length - 1) {
+        // if it's not a first/last tab - add some pixels to see next tab's label
+        if (selectedIndex !== $tabs.find('md-tab-item').length - 1 && selectedIndex !== 0) {
           newValue -= 60;
         }
+
+        // if it's no difference, we should skip dom manipulation
+        if (currentLeftOffset == newValue) return;
 
         // @TODO: find a way to change public properties in mdTabs controller
         // It rewrites transform on offsetLeft change
@@ -61,6 +82,7 @@ function lnrMdFocusTabs($window, $timeout) {
           // '-webkit-transform:': 'translate3d(' + newValue + 'px' + ', 0, 0)',
           // 'transform': 'translate3d(' + newValue + 'px' + ', 0, 0)'
         });
+        observer.disconnect();
       }
     }
   }
