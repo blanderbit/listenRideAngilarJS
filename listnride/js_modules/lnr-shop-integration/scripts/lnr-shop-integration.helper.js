@@ -497,11 +497,11 @@ var lnrHelper = {
         '<a style="cursor:default" class="image-container lnr-links">',
         '<img src="' + imageUrl + '" />',
         // default: info button
-        '<div class="info-button"><span class="info-icon"></span></div>',
+        '<div class="info-button"><button class="info-icon"></button></div>',
         '<div id="rent-element-default-' + rideId + '" class="rent-element">',
         // on hover: info button
         '<div class="info-button">',
-        '<span class="info-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></span>',
+        '<button class="info-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></button>',
         '</div>',
         // on hover: rent button
         '<span class="content">',
