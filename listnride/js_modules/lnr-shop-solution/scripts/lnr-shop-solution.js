@@ -52,8 +52,14 @@ $(document).ready(function () {
             calendar.bikeFamily = bike.family;
             calendar.requests = bike.requests;
             calendar.userId = bike.user.id;
+            
             // remove extra spaces in single word brand names
-            var brandName = bike.brand.split(" ").length > 2 ? bike.brand : bike.brand.replace(/\s/g, '');
+            var brandSplitted = bike.brand.split(" ");
+            var brandName = bike.brand;
+            if (brandSplitted.length < 3 && brandSplitted[1].length === 0) {
+                brandName = brandName.split(" ").length > 3 ? bike.brand : bike.brand.replace(/\s/g, '');
+            }
+
             $('#bike_picture').attr("src", bike.image_file_1.image_file_1.small.url);
             $('.overview_bike').append(brandName + ", " + helper.categoryName(bike.category));
             $('#overview_name').text(bike.name);
