@@ -535,6 +535,15 @@ var lnrHelper = {
       // render bikes grid
       grid.innerHTML += gridHTML;
     });
+
+    // show rent button by default on mobile
+    if ('ontouchstart' in document.documentElement) {
+      var rentElements = document.getElementsByClassName('rent-element');
+      for (var elem = 0; elem < rentElements.length; elem += 1) {
+        rentElements[elem].style.display = 'flex';
+        rentElements[elem].style.background = 'rgba(0, 0, 0, .4)';
+      }
+    }
   },
   /**
    * renders the location and size selectors
