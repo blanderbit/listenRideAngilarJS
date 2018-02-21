@@ -52,8 +52,10 @@ $(document).ready(function () {
             calendar.bikeFamily = bike.family;
             calendar.requests = bike.requests;
             calendar.userId = bike.user.id;
+            // remove extra spaces in single word brand names
+            var brandName = bike.brand.split(" ").length > 2 ? bike.brand : bike.brand.replace(/\s/g, '');
             $('#bike_picture').attr("src", bike.image_file_1.image_file_1.small.url);
-            $('.overview_bike').append(bike.brand + ", " + helper.categoryName(bike.category));
+            $('.overview_bike').append(brandName + ", " + helper.categoryName(bike.category));
             $('#overview_name').text(bike.name);
             $('#overview_lister').text(bike.user.first_name + " " + bike.user.last_name);
             $('#overview_location').text(bike.user.city);
