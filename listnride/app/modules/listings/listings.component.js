@@ -122,6 +122,7 @@ angular.module('listings', []).component('listings', {
         availabilityDialog.removedInputs = [];
         availabilityDialog.maxInputs = 5;
         availabilityDialog.isMaxInputs = false;
+        availabilityDialog.disabledDates = [];
         availabilityDialog.addInput = addInput;
         availabilityDialog.destroyInput = destroyInput;
         availabilityDialog.removeInput = removeInput;
@@ -131,12 +132,11 @@ angular.module('listings', []).component('listings', {
         availabilityDialog.close = close;
         availabilityDialog._checkMax = _checkMax;
         availabilityDialog.setData = setData;
+        availabilityDialog.takeDisabledDates = takeDisabledDates;
 
         availabilityDialog.setData();
 
         //////////////////
-
-        console.log(bike);
 
         function _checkMax() {
           availabilityDialog.isMaxInputs = availabilityDialog.inputs.length >= availabilityDialog.maxInputs ? true : false;
@@ -147,26 +147,38 @@ angular.module('listings', []).component('listings', {
           var testGetData = [
             {
               id: 97,
-              start_date: "2018-02-03T00:00:00.000Z",
-              duration: 20,
+              start_date: "2018-03-01T00:00:00.000Z",
+              duration: 2,
               active: true
             },
             {
               id: 98,
-              start_date: "2018-02-02T00:00:00.000Z",
+              start_date: "2018-03-05T00:00:00.000Z",
               duration: 5,
               active: true
             },
             {
               id: 99,
-              start_date: "2018-02-01T00:00:00.000Z",
-              duration: 2,
+              start_date: "2018-03-20T00:00:00.000Z",
+              duration: 4,
               active: true
             }
           ];
-          console.log()
           availabilityDialog.inputs = response ? response : testGetData; /* bike.availabilities */
           availabilityDialog._checkMax();
+          availabilityDialog.disabledDates = availabilityDialog.takeDisabledDates();
+        }
+
+        function takeDisabledDates() {
+          var disabled = [];
+          _.forEach(availabilityDialog.inputs, function (item) {
+            var dateMoment = moment(new Date(item.start_date).setHours(0, 0, 0, 0));
+            disabled.push({
+              'start_at': dateMoment,
+              'end_at': dateMoment.clone().add(item.duration, 'd')
+            });
+          });
+          return disabled;
         }
         
         function addInput() {

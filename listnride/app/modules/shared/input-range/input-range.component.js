@@ -10,7 +10,8 @@ angular
       controllerAs: 'vm',
       bindToController: {  
         data: '=',
-        dataChanged: '=?'
+        dataChanged: '=?',
+        disabledDates: '<' 
       },
       controller: ['$scope', inputRangeController],
       link: function ($scope, element, attrs) {
@@ -58,7 +59,7 @@ function inputRangeController($scope) {
     $scope.$apply();
   }
   
-  function postLink() {
+  function postLink() {    
     $scope.el.dateRangePicker({
       autoClose: true,
       showTopbar: false,
@@ -67,10 +68,37 @@ function inputRangeController($scope) {
       stickyMonths: true,
       singleMonth: 'auto',
       extraClass: 'date-picker-wrapper--ngDialog date-picker-wrapper--two-months',
-      singleMonthMinWidth: 659
+      singleMonthMinWidth: 659,
+      selectForward: true,
+      startOfWeek: 'monday',
+      showShortcuts: false,
+      beforeShowDay: classifyDate
     }).bind('datepicker-change', function (event, obj) {
         vm._updateData(obj.date1, obj.date2);
     });
+
+    // TODO: make services for this
+    function classifyDate(date) {
+      date.setHours(0, 0, 0, 0);
+      var now = new Date();
+      now.setHours(0, 0, 0, 0);
+      if (date.getTime() < now.getTime()) {
+        return [false, "date-past", ""];
+      } else if (dateClosed(date)) {
+        return [false, "date-closed", ""];
+      } else {
+        return [true, "date-available", ""];
+      }
+    }
+  
+    function dateClosed(date) {
+      date.setHours(0, 0, 0, 0);
+      var result = false;
+      _.forEach(vm.disabledDates, function(slot){
+        result = result || moment(date).isBetween(slot.start_at, slot.end_at, null, '[]') // all inclusive
+      });      
+      return result;
+    }
 
     // save this data, because mdDialog destroys elements before $onDestroy method
     $scope.el.dataRange = $scope.el.data('dateRangePicker');
