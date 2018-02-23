@@ -115,6 +115,7 @@ angular.module('listings', []).component('listings', {
       };
 
       var AvailabilityController = function (bike) {
+
         var availabilityDialog = this;
         availabilityDialog.inputs = [];
         availabilityDialog.removedInputs = [];
@@ -125,6 +126,7 @@ angular.module('listings', []).component('listings', {
         availabilityDialog.update = update;
         availabilityDialog.close = close;
         availabilityDialog._checkMax = _checkMax;
+        availabilityDialog.availabilityAny = !_.isEmpty(bike.availabilities);
 
         //////////////////
 
@@ -132,8 +134,8 @@ angular.module('listings', []).component('listings', {
           availabilityDialog.isMaxInputs = availabilityDialog.inputs.length >= availabilityDialog.maxInputs ? true : false;
         }
 
-        if (bike.availabitilyId) {      
-          api.get('/rides/' + bikeId + '/availabilities/' + availabitilyId).then(
+        if (bike.availabitilyId) {
+          api.get('/rides/' + bike.id + '/availabilities/' + availabitilyId).then(
             function (response) {
               availabilityDialog.inputs = response;
               availabilityDialog._checkMax()
@@ -143,60 +145,97 @@ angular.module('listings', []).component('listings', {
           );
         } else {
           availabilityDialog.inputs = [
-            // TEST DATA
-            {
-              'startDate': 1517242765,
-              'duration': 5
-            },
-            {
-              'startDate': 1617242765,
-              'duration': 10
-            },
-            {
-              'startDate': 1717242765,
-              'duration': 20
-            },
-            {}
           ];
           availabilityDialog._checkMax();
-        };
+        }
         
         function addInput() {
           if (!availabilityDialog.isMaxInputs) {
             availabilityDialog.inputs.push({});
             availabilityDialog._checkMax();
           }
-        };
+        }
         
         function removeInput(index) {
           var removedData = availabilityDialog.inputs.splice(index, 1);
           availabilityDialog._checkMax();
+        }
+
+        var testPostData = {
+          'availabilities': [
+            {
+              'ride_id': bike.id,
+              'start_date': '2015-07-10',
+              'duration': 5
+            },
+            {
+              'ride_id': bike.id,
+              'start_date': '2015-07-10',
+              'duration': 10
+            },
+            {
+              'ride_id': bike.id,
+              'start_date': '2015-07-10',
+              'duration': 20
+            }
+          ]
         };
 
-        function update() {
-          if (bike.availabitilyId) {
-            api.put('/rides/' + bikeId + '/availabilities/' + availabitilyId, availabilityDialog.inputs).then(
-              function (response) {
-                $mdDialog.hide();
-              },
-              function (error) {
-              }
-            );
-          } else {
-            // api.post('/rides/' + bikeId + '/availabilities/' + availabitilyId, availabilityDialog.inputs).then(
-            //   function (response) {
-            //     $mdDialog.hide();
-            //   },
-            //   function (error) {
-            //   }
-            // );
-            $mdDialog.hide();
+        var testPutData = {
+          'availabilities': {
+            '94' : {
+              'ride_id': bike.id,
+              'start_date': '2015-07-10',
+              'duration': 5
+            },
+            '95': {
+              'ride_id': bike.id,
+              'start_date': '2015-07-10',
+              'duration': 10
+            },
+            '96': {
+              'ride_id': bike.id,
+              'start_date': '2015-07-10',
+              'duration': 20
+            }
           }
         };
 
+        function update() {
+          api.put('/rides/' + bike.id + '/availabilities/', testPutData).then(
+            function (response) {
+              $mdDialog.hide();
+            },
+            function (error) {
+            }
+          );
+        }
+
+        function create() {
+          api.post('/rides/' + bike.id + '/availabilities/', testPostData).then(
+            function (response) {
+              $mdDialog.hide();
+            },
+            function (error) {
+
+            }
+          );
+        }
+
+        function destroy(id) {
+          api.delete('/rides/' + bike.id + '/availabilities/' + id).then(
+            function (response) {
+              $mdDialog.hide();
+            },
+            function (error) {
+
+            }
+          );
+        }
+
         function close() {
           $mdDialog.hide();
-        };
+        }
 
       };
 
