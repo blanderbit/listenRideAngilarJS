@@ -1,11 +1,11 @@
 <div layout="row" layout-align="center center" layout-wrap>
   <md-input-container flex-xs="100" flex md-no-float 
     class="lnr-mv8 js-datapicker"
-    ng-class="{'md-input-has-value': vm.data.startDate}">
+    ng-class="{'md-input-has-value': vm.data.start_date}">
 
     <input
       type="text"
-      value="{{vm.data.startDate | amFromUnix | amDateFormat:'DD.MM.YYYY'}}"
+      value="{{vm.data.start_date | amDateFormat:'DD.MM.YYYY'}}"
       placeholder="{{ 'availability.start-from' | translate }}"
       readonly
       style="padding: 0 55px 0 20px;">
@@ -27,7 +27,7 @@
 
     <input
       type="text"
-      value="{{vm.data.startDate | amFromUnix | amAdd : vm.data.duration : 'days' | amDateFormat:'DD.MM.YYYY'}}"
+      value="{{vm.data.start_date | amAdd : vm.data.duration : 'days' | amDateFormat:'DD.MM.YYYY'}}"
       placeholder="{{ 'availability.end-at' | translate }}"
       readonly
       style="padding: 0 55px 0 20px;">

@@ -118,34 +118,54 @@ angular.module('listings', []).component('listings', {
 
         var availabilityDialog = this;
         availabilityDialog.inputs = [];
+        availabilityDialog.isChanged = false;
         availabilityDialog.removedInputs = [];
         availabilityDialog.maxInputs = 5;
         availabilityDialog.isMaxInputs = false;
         availabilityDialog.addInput = addInput;
+        availabilityDialog.destroyInput = destroyInput;
         availabilityDialog.removeInput = removeInput;
+        availabilityDialog.create = create;
         availabilityDialog.update = update;
+        availabilityDialog.destroy = destroy;
         availabilityDialog.close = close;
         availabilityDialog._checkMax = _checkMax;
-        availabilityDialog.availabilityAny = !_.isEmpty(bike.availabilities);
+        availabilityDialog.setData = setData;
+
+        availabilityDialog.setData();
 
         //////////////////
+
+        console.log(bike);
 
         function _checkMax() {
           availabilityDialog.isMaxInputs = availabilityDialog.inputs.length >= availabilityDialog.maxInputs ? true : false;
         }
 
-        if (bike.availabitilyId) {
-          api.get('/rides/' + bike.id + '/availabilities/' + availabitilyId).then(
-            function (response) {
-              availabilityDialog.inputs = response;
-              availabilityDialog._checkMax()
+        function setData(response) {
+
+          var testGetData = [
+            {
+              id: 97,
+              start_date: "2018-02-03T00:00:00.000Z",
+              duration: 20,
+              active: true
             },
-            function (error) {
+            {
+              id: 98,
+              start_date: "2018-02-02T00:00:00.000Z",
+              duration: 5,
+              active: true
+            },
+            {
+              id: 99,
+              start_date: "2018-02-01T00:00:00.000Z",
+              duration: 2,
+              active: true
             }
-          );
-        } else {
-          availabilityDialog.inputs = [
           ];
+          console.log()
+          availabilityDialog.inputs = response ? response : testGetData; /* bike.availabilities */
           availabilityDialog._checkMax();
         }
         
@@ -154,11 +174,20 @@ angular.module('listings', []).component('listings', {
             availabilityDialog.inputs.push({});
             availabilityDialog._checkMax();
           }
+          console.log(availabilityDialog.isChanged);
+        }
+
+        function destroyInput(index){
+          availabilityDialog.inputs.splice(index, 1);
+          availabilityDialog._checkMax();
         }
         
         function removeInput(index) {
-          var removedData = availabilityDialog.inputs.splice(index, 1);
-          availabilityDialog._checkMax();
+          if (availabilityDialog.inputs[index].id) {
+            availabilityDialog.destroy(availabilityDialog.inputs[index].id);
+          } else {
+            destroyInput(index);
+          }          
         }
 
         var testPostData = {
@@ -225,10 +254,11 @@ angular.module('listings', []).component('listings', {
         function destroy(id) {
           api.delete('/rides/' + bike.id + '/availabilities/' + id).then(
             function (response) {
-              $mdDialog.hide();
+              response = JSON.parse(response);  
+              destroyInput(_.findIndex(availabilityDialog.inputs, { 'id': 'response.id' }));
             },
             function (error) {
-
+              // @TODO: show error message
             }
           );
         }
