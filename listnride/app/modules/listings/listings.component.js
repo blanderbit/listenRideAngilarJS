@@ -128,6 +128,7 @@ angular.module('listings', []).component('listings', {
         availabilityDialog.removeInput = removeInput;
         availabilityDialog.create = create;
         availabilityDialog.update = update;
+        availabilityDialog.save = save;
         availabilityDialog.destroy = destroy;
         availabilityDialog.close = close;
         availabilityDialog._checkMax = _checkMax;
@@ -164,7 +165,7 @@ angular.module('listings', []).component('listings', {
               active: true
             }
           ];
-          availabilityDialog.inputs = response ? response : testGetData; /* bike.availabilities */
+          availabilityDialog.inputs = bike.availabilities;
           availabilityDialog._checkMax();
           availabilityDialog.disabledDates = availabilityDialog.takeDisabledDates();
         }
@@ -242,8 +243,13 @@ angular.module('listings', []).component('listings', {
           }
         };
 
+        function save(form) {
+          // TODO: choose between update and create
+          create();
+        }
+
         function update() {
-          api.put('/rides/' + bike.id + '/availabilities/', testPutData).then(
+          api.put('/rides/' + bike.id + '/availabilities/', availabilityDialog.inputs).then(
             function (response) {
               $mdDialog.hide();
             },
@@ -253,9 +259,17 @@ angular.module('listings', []).component('listings', {
         }
 
         function create() {
-          api.post('/rides/' + bike.id + '/availabilities/', testPostData).then(
+          var data = { 'availabilities': availabilityDialog.inputs };
+
+          api.post('/rides/' + bike.id + '/availabilities/', data).then(
             function (response) {
-              $mdDialog.hide();
+              $mdToast.show(
+                $mdToast.simple()
+                  .textContent('Created successfully message')
+                  .hideDelay(4000)
+                  .position('top center')
+              )
+              // $mdDialog.hide();
             },
             function (error) {
 
@@ -266,7 +280,7 @@ angular.module('listings', []).component('listings', {
         function destroy(id) {
           api.delete('/rides/' + bike.id + '/availabilities/' + id).then(
             function (response) {
-              response = JSON.parse(response);  
+              response = JSON.parse(response);
               destroyInput(_.findIndex(availabilityDialog.inputs, { 'id': 'response.id' }));
             },
             function (error) {

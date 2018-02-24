@@ -18,7 +18,7 @@
           Let's start! 
         </md-button>
       </div>
-      <form ng-if="availabilityDialog.inputs.length" ng-cloak name="availabilityForm" ng-submit="availabilityDialog.update(availabilityForm)" novalidate>
+      <form ng-if="availabilityDialog.inputs.length" ng-cloak name="availabilityForm" novalidate>
         <div class="availability__list">
           <div layout="row" layout-align="center center" ng-repeat="input in availabilityDialog.inputs">
             <span ng-show="availabilityDialog.inputs.length > 1" class="lnr-btn-placeholder"></span>
@@ -32,7 +32,7 @@
           <a class="lnr-link" ng-click="availabilityDialog.addInput()">{{ 'availability.add-another-date' | translate }}</a>
         </div>
         <div layout="row" layout-align="center center" layout-margin>
-          <md-button type="submit" class="md-accent md-raised md-confirm-button md-primary" ng-click="availabilityDialog.save()">
+          <md-button type="submit" class="md-accent md-raised md-confirm-button md-primary" ng-click="availabilityDialog.save(availabilityForm)">
             <span ng-hide="availabilityDialog.isChanged">{{ 'availability.submit-btn-save' | translate }}</span>
             <span ng-hide="!availabilityDialog.isChanged">{{ 'availability.submit-btn' | translate }}</span>
           </md-button>
