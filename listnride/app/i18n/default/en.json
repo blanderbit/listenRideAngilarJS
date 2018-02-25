@@ -566,15 +566,25 @@
     "signing-up-accept-tac": "By signing up I accept the",
     "errors": {
       "password-length": "Password should be 6-30 characters",
+      "password-length-xs": "6-30 characters",
       "password-missing": "Please provide a password",
+      "password-missing-xs": "A password",
       "valid-email": "Please enter a valid email address",
+      "valid-email-xs": "Valid email address",
       "empty-email": "Please enter your email address",
+      "empty-email-xs": "Your email address",
       "empty-last-name": "Please enter your last name",
+      "empty-last-name-xs": "Your last name",
       "empty-first-name": "Please enter your first name",
+      "empty-first-name-xs": "Your first name",
       "max-size-last-name": "Last name shouldn't exceed 30 characters",
+      "max-size-last-name-xs": "Exceeds 30 characters",
       "max-size-first-name": "First name shouldn't exceed 20 characters",
+      "max-size-first-name-xs": "Exceeds 20 characters",
       "empty-company-name": "Please enter your company name",
-      "min-size-company-name": "Company name should be longer than 2 characters "
+      "empty-company-name-xs": "Your company name",
+      "min-size-company-name": "Company name should be longer than 2 characters ",
+      "min-size-company-name-xs": "Longer than 2 characters "
     }
   },
   "home": {
