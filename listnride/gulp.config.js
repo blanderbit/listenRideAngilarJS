@@ -1,3 +1,4 @@
+"use strict";
 module.exports = function () {
     var path = {
         index: 'index.html',
@@ -71,11 +72,11 @@ module.exports = function () {
                 root: './js_modules/lnr-shop-integration/dist/',
                 oldJs: './js_modules/lnr-shop-integration/dist/lnr-embed.min.js',
                 oldSource: 'lnr-embed.min.js',
-                js: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.js',
+                js: './js_modules/lnr-shop-integration/dist/lnr-shop-integration_staging.min.js',
                 html: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.html',
-                source: 'lnr-shop-integration.min.js',
-                style: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.css',
-                css: 'lnr-shop-integration.min.css'
+                source: 'lnr-shop-integration_staging.min.js',
+                style: './js_modules/lnr-shop-integration/dist/lnr-shop-integration_staging.min.css',
+                css: 'lnr-shop-integration_staging.min.css'
             },
         },
         lnrShopSolution: {
