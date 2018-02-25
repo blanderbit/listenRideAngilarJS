@@ -184,6 +184,7 @@ background: white;
   font-style: inherit;
   font-variant: inherit;
   font-family: inherit;
+  text-transform: none !important;
   text-decoration: none;
   overflow: hidden;
   -webkit-transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);

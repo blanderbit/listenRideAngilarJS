@@ -12,7 +12,7 @@ var lnrHelper = {
   preInit: function () {
     var cssLnr = document.createElement("LINK");
     // href: local, staging, production
-    cssLnr.href = lnrConstants.lnrStyles.staging;
+    cssLnr.href = lnrConstants.lnrStyles.production + lnrConstants.version;
     cssLnr.rel = "stylesheet";
     var header = document.getElementsByTagName("head")[0];
     header.appendChild(cssLnr);
