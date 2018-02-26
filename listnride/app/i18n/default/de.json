@@ -516,7 +516,7 @@
     "confirm_return": "Rückgabe Bestätigen"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} würde gerne dein <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} für mieten. Sobald du die Anfrage annimmst, wird sie gebucht. Vereinbare alle weiteren Details über den Chat.",
+    "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} würde gerne dein <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} für mieten. Sobald du die Anfrage annimmst, wird sie gebucht. Vereinbare alle weiteren Details über den Chat.",
     "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun Dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via Email zugesendet.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon-Nummer: {{user.phone_number}} <br>Adresse: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
     "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
