@@ -88,8 +88,7 @@ License: MIT
             (function() {
 
               var xhr = new XMLHttpRequest;
-              var cacheInvalidator = Date.parse(new Date());
-              xhr.open("GET", styles[i].src + "?" + cacheInvalidator, true);
+              xhr.open("GET", styles[i].src, true);
               xhr.send(null);
               xhr.onload = function() {
 
@@ -132,8 +131,7 @@ License: MIT
             (function() {
 
               var xhr = new XMLHttpRequest;
-              var cacheInvalidator = Date.parse(new Date());  
-              xhr.open("GET", styles[i].href + "?" + cacheInvalidator, true);
+               xhr.open("GET", styles[i].href, true);
               xhr.send(null);
               xhr.onload = function() {
 

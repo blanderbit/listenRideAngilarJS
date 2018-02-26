@@ -94,7 +94,7 @@ var translationsConfigObject = {
             print: 'Seite Drucken',
             here: 'hier',
             description: 'Beschreibung',
-            rent: 'Miete'
+            rent: 'Miete '
         },
         tabs: {
             tabDuration: '1.&nbsp;Info',
@@ -178,7 +178,7 @@ var translationsConfigObject = {
             hello: 'Hallo',
             print: 'Pagina printen',
             description: 'Beschrijving',
-            rent: "Huur"
+            rent: 'Huur '
         },
         tabs: {
             tabDuration: '1.&nbsp;Info',

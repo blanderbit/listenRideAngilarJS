@@ -257,6 +257,12 @@ booking md-tabs-wrapper {
   pointer-events: none;
 }
 
+md-tooltip .md-content {
+  height: auto !important;
+  line-height: 15px !important;
+  padding: 5px;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* LNR CLASSES
 /*-----------------------------------------------------------------------------------*/

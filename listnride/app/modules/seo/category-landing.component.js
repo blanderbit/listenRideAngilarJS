@@ -18,6 +18,8 @@ angular.module('categoryLanding',[]).component('categoryLanding', {
       categoryLanding.loading = true;
       categoryLanding.category = $filter('category')(categoryId);
 
+      console.log(categoryId);
+      console.log(categoryLanding.city);
       api.get('/seo_pages?city='+categoryLanding.city+'&cat='+categoryId+'&lng=' + $translate.preferredLanguage()).then(
         function (success) {
           categoryLanding.data = success.data;
