@@ -138,6 +138,14 @@ angular.module('listings', []).component('listings', {
 
         //////////////////
 
+        function _getModel(item) {
+          return {
+            'ride_id': bike.id,
+            'start_date': item.start_date,
+            'duration': item.duration
+          }
+        }
+
         function _checkMax() {
           availabilityDialog.isMaxInputs = availabilityDialog.inputs.length >= availabilityDialog.maxInputs ? true : false;
         }
@@ -146,6 +154,19 @@ angular.module('listings', []).component('listings', {
           availabilityDialog.inputs = bike.availabilities || [];
           availabilityDialog._checkMax();
           availabilityDialog.disabledDates = availabilityDialog.takeDisabledDates();
+        }
+
+        function updateData(data, requestName) {
+          if (requestName == 'post') {
+            bike.availabilities = data;
+            availabilityDialog.setData();
+          } else { // put
+            _.forEach(data, function (item) {
+              _.forEach(bike.availabilities, function(bike_item){
+                if (item.id == bike_item.id) return bike_item = item;
+              });
+            });
+          }
         }
 
         $scope.$on('input-range:changed', function (event) {
@@ -204,17 +225,15 @@ angular.module('listings', []).component('listings', {
             };
 
             _.forEach(updatedItems, function(item){
-              updateData['availabilities'][item.id] = {
-                'ride_id': bike.id,
-                'start_date': item.start_date,
-                'duration': item.duration
-              }
+              updateData['availabilities'][item.id] = _getModel(item);
             });
             update(JSON.stringify(updateData));
           } else {
             checkCreated();
           }
-          availabilityDialog.close();
+          
+          availabilityDialog.isChanged = false;
+          successSaving();
         }
 
         function checkCreated() {
@@ -228,11 +247,7 @@ angular.module('listings', []).component('listings', {
             }
 
             _.forEach(newItems, function (item) {
-              newData['availabilities'].push({
-                'ride_id': bike.id,
-                'start_date': item.start_date,
-                'duration': item.duration
-              });
+              newData['availabilities'].push(_getModel(item));
             });
             return create(JSON.stringify(newData));
           }
@@ -241,6 +256,7 @@ angular.module('listings', []).component('listings', {
         function update(data) {
           api.put('/rides/' + bike.id + '/availabilities/', data).then(
             function (response) {
+              updateData(response.data);
               checkCreated();
             },
             function (error) {
@@ -252,8 +268,7 @@ angular.module('listings', []).component('listings', {
         function create(data) {
           api.post('/rides/' + bike.id + '/availabilities/', data).then(
             function (response) {
-              bike.availabilities = response.data;
-              availabilityDialog.setData();
+              updateData(response.data, 'post');
             },
             function (error) {
               // @TODO: error
@@ -264,7 +279,13 @@ angular.module('listings', []).component('listings', {
         function destroy(id) {
           api.delete('/rides/' + bike.id + '/availabilities/' + id).then(
             function (response) {
-              destroyInput(_.findIndex(availabilityDialog.inputs, { 'id': response.id }));
+              destroyInput(_.findIndex(availabilityDialog.inputs, { 'id': response.data.id }));
+              $mdToast.show(
+                $mdToast.simple()
+                  .textContent('Date range was deleted')
+                  .hideDelay(4000)
+                  .position('top center')
+              )
             },
             function (error) {
               // @TODO: show error message
