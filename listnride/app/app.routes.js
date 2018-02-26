@@ -1129,7 +1129,7 @@
 
       $stateProvider.state({
         name: 'categoryLanding',
-        url: '/{city: string}/{category:.*}',
+        url: '/{city}/{category}',
         template: '<category-landing></category-landing>',
         meta: {
           disableUpdate: false,
@@ -1139,7 +1139,7 @@
 
       $stateProvider.state({
         name: 'cityLanding',
-        url: '/{city: string}',
+        url: '/{city}',
         template: '<city-landing></city-landing>',
         meta: {
           disableUpdate: false,

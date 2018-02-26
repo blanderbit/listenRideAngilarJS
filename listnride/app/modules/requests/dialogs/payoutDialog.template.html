@@ -19,7 +19,7 @@
             <div layout="row" layout-margin>
               <md-input-container>
                 <label>{{ 'forms.email-address' | translate }}</label>
-                <input required name="email" ng-model="settings.payoutMethod.email"></input>
+                <input required name="email" ng-model="settings.payoutMethod.email" ng-pattern="settings.emailFormat"></input>
               </md-input-container>
             </div>
           </div>
@@ -47,7 +47,7 @@
             </div>
           </div>
           <div layout="row" ng-if="settings.payoutMethod.family" layout-align="end">
-            <md-button class="md-raised md-primary" ng-click="settings.addPayoutMethod()">{{ 'settings.save-payout-method' | translate }}</md-button>
+            <md-button class="md-raised md-primary" ng-click="settings.addPayoutMethod()" ng-disabled="!paypalForm.$valid">{{ 'settings.save-payout-method' | translate }}</md-button>
           </div>
         </form>
       </div>

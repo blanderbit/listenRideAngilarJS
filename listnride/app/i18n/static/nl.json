@@ -610,7 +610,8 @@
     "kit": {
       "title": "Persmap",
       "content": "Anderen noemen zich fietsverhuursystemen. Wij zijn een Bike-Sharing-Community. Kom meer over ons te weten in onze persmap,",
-      "download": "die u hier kunt bekijken"
+      "download": "die u hier kunt bekijken",
+      "link": "https://goo.gl/forms/JxtwvX16isstcH1U2"
     },
     "contact": {
       "title": "Perscontact",
