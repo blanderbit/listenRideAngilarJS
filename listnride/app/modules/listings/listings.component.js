@@ -114,8 +114,7 @@ angular.module('listings', []).component('listings', {
         }
       };
 
-      var AvailabilityController = function (bike) {
-
+      var AvailabilityController = function (bike, $scope) {
         var availabilityDialog = this;
         availabilityDialog.inputs = [];
         availabilityDialog.isChanged = false;
@@ -143,32 +142,15 @@ angular.module('listings', []).component('listings', {
           availabilityDialog.isMaxInputs = availabilityDialog.inputs.length >= availabilityDialog.maxInputs ? true : false;
         }
 
-        function setData(response) {
-
-          var testGetData = [
-            {
-              id: 97,
-              start_date: "2018-03-01T00:00:00.000Z",
-              duration: 2,
-              active: true
-            },
-            {
-              id: 98,
-              start_date: "2018-03-05T00:00:00.000Z",
-              duration: 5,
-              active: true
-            },
-            {
-              id: 99,
-              start_date: "2018-03-20T00:00:00.000Z",
-              duration: 4,
-              active: true
-            }
-          ];
-          availabilityDialog.inputs = bike.availabilities;
+        function setData() {
+          availabilityDialog.inputs = bike.availabilities || [];
           availabilityDialog._checkMax();
           availabilityDialog.disabledDates = availabilityDialog.takeDisabledDates();
         }
+
+        $scope.$on('input-range:changed', function (event) {
+          availabilityDialog.isChanged = true;
+        });
 
         function takeDisabledDates() {
           var disabled = [];
@@ -187,7 +169,6 @@ angular.module('listings', []).component('listings', {
             availabilityDialog.inputs.push({});
             availabilityDialog._checkMax();
           }
-          console.log(availabilityDialog.isChanged);
         }
 
         function destroyInput(index){
@@ -203,76 +184,79 @@ angular.module('listings', []).component('listings', {
           }          
         }
 
-        var testPostData = {
-          'availabilities': [
-            {
-              'ride_id': bike.id,
-              'start_date': '2015-07-10',
-              'duration': 5
-            },
-            {
-              'ride_id': bike.id,
-              'start_date': '2015-07-10',
-              'duration': 10
-            },
-            {
-              'ride_id': bike.id,
-              'start_date': '2015-07-10',
-              'duration': 20
-            }
-          ]
-        };
-
-        var testPutData = {
-          'availabilities': {
-            '94' : {
-              'ride_id': bike.id,
-              'start_date': '2015-07-10',
-              'duration': 5
-            },
-            '95': {
-              'ride_id': bike.id,
-              'start_date': '2015-07-10',
-              'duration': 10
-            },
-            '96': {
-              'ride_id': bike.id,
-              'start_date': '2015-07-10',
-              'duration': 20
-            }
-          }
-        };
-
-        function save(form) {
-          // TODO: choose between update and create
-          create();
+        function successSaving(){
+          $mdToast.show(
+            $mdToast.simple()
+              .textContent('Saving success')
+              .hideDelay(4000)
+              .position('top center')
+          )
         }
 
-        function update() {
-          api.put('/rides/' + bike.id + '/availabilities/', availabilityDialog.inputs).then(
+        function save(form) {
+          var updatedItems = availabilityDialog.inputs.filter(function(item){
+            return item.hasOwnProperty('id') && item.hasOwnProperty('is_changed');
+          });
+
+          if (updatedItems.length) {
+            var updateData = {
+              'availabilities': {}
+            };
+
+            _.forEach(updatedItems, function(item){
+              updateData['availabilities'][item.id] = {
+                'ride_id': bike.id,
+                'start_date': item.start_date,
+                'duration': item.duration
+              }
+            });
+            update(JSON.stringify(updateData));
+          } else {
+            checkCreated();
+          }
+          availabilityDialog.close();
+        }
+
+        function checkCreated() {
+          var newItems = availabilityDialog.inputs.filter(function (item) {
+            return !item.hasOwnProperty('id') && item.hasOwnProperty('is_changed');
+          });
+
+          if (newItems.length) {
+            var newData = {
+              'availabilities': []
+            }
+
+            _.forEach(newItems, function (item) {
+              newData['availabilities'].push({
+                'ride_id': bike.id,
+                'start_date': item.start_date,
+                'duration': item.duration
+              });
+            });
+            return create(JSON.stringify(newData));
+          }
+        }
+
+        function update(data) {
+          api.put('/rides/' + bike.id + '/availabilities/', data).then(
             function (response) {
-              $mdDialog.hide();
+              checkCreated();
             },
             function (error) {
+              // @TODO: error
             }
           );
         }
 
-        function create() {
-          var data = { 'availabilities': availabilityDialog.inputs };
-
+        function create(data) {
           api.post('/rides/' + bike.id + '/availabilities/', data).then(
             function (response) {
-              $mdToast.show(
-                $mdToast.simple()
-                  .textContent('Created successfully message')
-                  .hideDelay(4000)
-                  .position('top center')
-              )
-              // $mdDialog.hide();
+              bike.availabilities = response.data;
+              availabilityDialog.setData();
             },
             function (error) {
-
+              // @TODO: error
             }
           );
         }
@@ -280,8 +264,7 @@ angular.module('listings', []).component('listings', {
         function destroy(id) {
           api.delete('/rides/' + bike.id + '/availabilities/' + id).then(
             function (response) {
-              response = JSON.parse(response);
-              destroyInput(_.findIndex(availabilityDialog.inputs, { 'id': 'response.id' }));
+              destroyInput(_.findIndex(availabilityDialog.inputs, { 'id': response.id }));
             },
             function (error) {
               // @TODO: show error message

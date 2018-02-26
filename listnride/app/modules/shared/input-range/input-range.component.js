@@ -10,7 +10,6 @@ angular
       controllerAs: 'vm',
       bindToController: {  
         data: '=',
-        dataChanged: '=?',
         disabledDates: '<' 
       },
       controller: ['$scope', inputRangeController],
@@ -21,7 +20,7 @@ angular
   });
 
 
-function inputRangeController($scope) {
+function inputRangeController($scope, $rootScope) {
   var vm = this;
 
   vm._updateData = _updateData;
@@ -52,10 +51,7 @@ function inputRangeController($scope) {
     angular.extend(vm.data, newData);
 
     // inform parent component that state was changed
-    if (vm.dataChanged) {
-      vm.dataChanged = true;
-    }
-    
+    $scope.$emit('input-range:changed');
     $scope.$apply();
   }
   
@@ -63,21 +59,21 @@ function inputRangeController($scope) {
     $scope.el.dateRangePicker({
       autoClose: true,
       showTopbar: false,
-      isWidthStatic: true,
-      showTimeDom: false,
       stickyMonths: true,
       singleMonth: 'auto',
-      extraClass: 'date-picker-wrapper--ngDialog date-picker-wrapper--two-months',
-      singleMonthMinWidth: 659,
       selectForward: true,
       startOfWeek: 'monday',
       showShortcuts: false,
-      beforeShowDay: classifyDate
+      beforeShowDay: classifyDate,
+      lnrIsWidthStatic: true,
+      lnrShowTimeDom: false,
+      lnrSingleMonthMinWidth: 659, // 320px - min-width for 1 calendar part + gap
+      extraClass: 'date-picker-wrapper--ngDialog date-picker-wrapper--two-months'
     }).bind('datepicker-change', function (event, obj) {
         vm._updateData(obj.date1, obj.date2);
     });
 
-    // TODO: make services for this
+    // @TODO: make services for this
     function classifyDate(date) {
       date.setHours(0, 0, 0, 0);
       var now = new Date();
@@ -101,25 +97,25 @@ function inputRangeController($scope) {
     }
 
     // save this data, because mdDialog destroys elements before $onDestroy method
-    $scope.el.dataRange = $scope.el.data('dateRangePicker');
+    $scope.el.dateRange = $scope.el.data('dateRangePicker');
 
     if (vm.data.start_date) {
       // set range to datepicker with datepicker special method
       // setDateRange({String}, {String}) 
       var startDate = moment(vm.data.start_date);
       var lastDate = startDate.clone().add(vm.data.duration, 'd');
-      $scope.el.dataRange
+      $scope.el.dateRange
         .setDateRange(startDate._d, lastDate._d, true);
     }
 
   };
 
   function onDestroy() {
-    $scope.el.dataRange.destroy();
+    $scope.el.dateRange.destroy();
   };
 
   function openCalendar($event) {
     $event.stopPropagation();
-    $scope.el.dataRange.open();
+    $scope.el.dateRange.open();
   }
 }
