@@ -114,89 +114,188 @@ angular.module('listings', []).component('listings', {
         }
       };
 
-      var AvailabilityController = function (bike) {
+      var AvailabilityController = function (bike, $scope) {
         var availabilityDialog = this;
         availabilityDialog.inputs = [];
+        availabilityDialog.isChanged = false;
         availabilityDialog.removedInputs = [];
         availabilityDialog.maxInputs = 5;
         availabilityDialog.isMaxInputs = false;
+        availabilityDialog.disabledDates = [];
         availabilityDialog.addInput = addInput;
+        availabilityDialog.destroyInput = destroyInput;
         availabilityDialog.removeInput = removeInput;
+        availabilityDialog.create = create;
         availabilityDialog.update = update;
+        availabilityDialog.save = save;
+        availabilityDialog.destroy = destroy;
         availabilityDialog.close = close;
         availabilityDialog._checkMax = _checkMax;
+        availabilityDialog.setData = setData;
+        availabilityDialog.takeDisabledDates = takeDisabledDates;
+
+        availabilityDialog.setData();
 
         //////////////////
+
+        function _getModel(item) {
+          return {
+            'ride_id': bike.id,
+            'start_date': item.start_date,
+            'duration': item.duration
+          }
+        }
 
         function _checkMax() {
           availabilityDialog.isMaxInputs = availabilityDialog.inputs.length >= availabilityDialog.maxInputs ? true : false;
         }
 
-        if (bike.availabitilyId) {      
-          api.get('/rides/' + bikeId + '/availabilities/' + availabitilyId).then(
-            function (response) {
-              availabilityDialog.inputs = response;
-              availabilityDialog._checkMax()
-            },
-            function (error) {
-            }
-          );
-        } else {
-          availabilityDialog.inputs = [
-            // TEST DATA
-            {
-              'startDate': 1517242765,
-              'duration': 5
-            },
-            {
-              'startDate': 1617242765,
-              'duration': 10
-            },
-            {
-              'startDate': 1717242765,
-              'duration': 20
-            },
-            {}
-          ];
+        function setData() {
+          availabilityDialog.inputs = bike.availabilities || [];
           availabilityDialog._checkMax();
-        };
+          availabilityDialog.disabledDates = availabilityDialog.takeDisabledDates();
+        }
+
+        function updateData(data, requestName) {
+          if (requestName == 'post') {
+            bike.availabilities = data;
+            availabilityDialog.setData();
+          } else { // put
+            _.forEach(data, function (item) {
+              _.forEach(bike.availabilities, function(bike_item){
+                if (item.id == bike_item.id) return bike_item = item;
+              });
+            });
+          }
+        }
+
+        $scope.$on('input-range:changed', function (event) {
+          availabilityDialog.isChanged = true;
+        });
+
+        function takeDisabledDates() {
+          var disabled = [];
+          _.forEach(availabilityDialog.inputs, function (item) {
+            var dateMoment = moment(new Date(item.start_date).setHours(0, 0, 0, 0));
+            disabled.push({
+              'start_at': dateMoment,
+              'end_at': dateMoment.clone().add(item.duration, 'd')
+            });
+          });
+          return disabled;
+        }
         
         function addInput() {
           if (!availabilityDialog.isMaxInputs) {
             availabilityDialog.inputs.push({});
             availabilityDialog._checkMax();
           }
-        };
+        }
+
+        function destroyInput(index){
+          availabilityDialog.inputs.splice(index, 1);
+          availabilityDialog._checkMax();
+        }
         
         function removeInput(index) {
-          var removedData = availabilityDialog.inputs.splice(index, 1);
-          availabilityDialog._checkMax();
-        };
-
-        function update() {
-          if (bike.availabitilyId) {
-            api.put('/rides/' + bikeId + '/availabilities/' + availabitilyId, availabilityDialog.inputs).then(
-              function (response) {
-                $mdDialog.hide();
-              },
-              function (error) {
-              }
-            );
+          if (availabilityDialog.inputs[index].id) {
+            availabilityDialog.destroy(availabilityDialog.inputs[index].id);
           } else {
-            // api.post('/rides/' + bikeId + '/availabilities/' + availabitilyId, availabilityDialog.inputs).then(
-            //   function (response) {
-            //     $mdDialog.hide();
-            //   },
-            //   function (error) {
-            //   }
-            // );
-            $mdDialog.hide();
+            destroyInput(index);
+          }          
+        }
+
+        function successSaving(){
+          $mdToast.show(
+            $mdToast.simple()
+              .textContent('Saving success')
+              .hideDelay(4000)
+              .position('top center')
+          )
+        }
+
+        function save(form) {
+          var updatedItems = availabilityDialog.inputs.filter(function(item){
+            return item.hasOwnProperty('id') && item.hasOwnProperty('is_changed');
+          });
+
+          if (updatedItems.length) {
+            var updateData = {
+              'availabilities': {}
+            };
+
+            _.forEach(updatedItems, function(item){
+              updateData['availabilities'][item.id] = _getModel(item);
+            });
+            update(JSON.stringify(updateData));
+          } else {
+            checkCreated();
           }
-        };
+          
+          availabilityDialog.isChanged = false;
+          successSaving();
+        }
+
+        function checkCreated() {
+          var newItems = availabilityDialog.inputs.filter(function (item) {
+            return !item.hasOwnProperty('id') && item.hasOwnProperty('is_changed');
+          });
+
+          if (newItems.length) {
+            var newData = {
+              'availabilities': []
+            }
+
+            _.forEach(newItems, function (item) {
+              newData['availabilities'].push(_getModel(item));
+            });
+            return create(JSON.stringify(newData));
+          }
+        }
+
+        function update(data) {
+          api.put('/rides/' + bike.id + '/availabilities/', data).then(
+            function (response) {
+              updateData(response.data);
+              checkCreated();
+            },
+            function (error) {
+              // @TODO: error
+            }
+          );
+        }
+
+        function create(data) {
+          api.post('/rides/' + bike.id + '/availabilities/', data).then(
+            function (response) {
+              updateData(response.data, 'post');
+            },
+            function (error) {
+              // @TODO: error
+            }
+          );
+        }
+
+        function destroy(id) {
+          api.delete('/rides/' + bike.id + '/availabilities/' + id).then(
+            function (response) {
+              destroyInput(_.findIndex(availabilityDialog.inputs, { 'id': response.data.id }));
+              $mdToast.show(
+                $mdToast.simple()
+                  .textContent('Date range was deleted')
+                  .hideDelay(4000)
+                  .position('top center')
+              )
+            },
+            function (error) {
+              // @TODO: show error message
+            }
+          );
+        }
 
         function close() {
           $mdDialog.hide();
-        };
+        }
 
       };
 

@@ -842,9 +842,9 @@
 				customCloseAnimation: null,
 				customArrowPrevSymbol: null,
 				customArrowNextSymbol: null,
-				isWidthStatic: false,
-				showTimeDom: true,
-				singleMonthMinWidth: 480
+				lnrIsWidthStatic: false,
+				lnrShowTimeDom: true,
+				lnrSingleMonthMinWidth: 480
 			},opt);
 
 		opt.start = false;
@@ -859,7 +859,7 @@
 		if (opt.isTouchDevice) opt.hoveringTooltip = false;
 
 		//show one month on mobile devices
-		if (opt.singleMonth == 'auto') opt.singleMonth = $(window).width() < opt.singleMonthMinWidth;
+		if (opt.singleMonth == 'auto') opt.singleMonth = $(window).width() < opt.lnrSingleMonthMinWidth;
 		if (opt.singleMonth) opt.stickyMonths = false;
 
 		if (!opt.showTopbar) opt.autoClose = true;
@@ -1350,7 +1350,7 @@
 
 		function updateCalendarWidth()
 		{
-			if (opt.isWidthStatic) return;
+			if (opt.lnrIsWidthStatic) return;
 			var gapMargin = box.find('.gap').css('margin-left');
 			if (gapMargin) gapMargin = parseInt(gapMargin);
 			var w1 = box.find('.month1').width();
@@ -2278,7 +2278,7 @@
 
 			}
 			//+'</div>'
-			if (opt.showTimeDom) 
+			if (opt.lnrShowTimeDom) 
 			{
 				html +=	'<div style="clear:both;height:0;font-size:0;"></div>' +
 					'<div class="time">' +

@@ -945,6 +945,7 @@
     "start-from": "Starting from",
     "end-at": "Ending at",
     "add-another-date": "Add another date",
-    "submit-btn": "Ok"
+    "submit-btn": "Ok",
+    "submit-btn-save": "Save"
   }
 }
