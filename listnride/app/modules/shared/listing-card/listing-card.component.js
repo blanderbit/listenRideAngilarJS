@@ -22,6 +22,8 @@ angular.module('listingCard',[]).component('listingCard', {
   },
   controller: ['api', function ListingCardController(api) {
       var listingCard = this;
+
+      listingCard.price = Math.ceil(listingCard.price);
       
       // activate a bike
       // implementation is different from parent component
