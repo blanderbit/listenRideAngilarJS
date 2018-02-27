@@ -151,22 +151,28 @@ angular.module('listings', []).component('listings', {
         }
 
         function setData() {
-          availabilityDialog.inputs = bike.availabilities || [];
+          availabilityDialog.inputs = [];
+          for (var id in bike.availabilities) {
+            if (!bike.availabilities.hasOwnProperty(id)) return;
+            availabilityDialog.inputs.push({
+              id: id,
+              'start_date': bike.availabilities[id]['start_date'],
+              'duration': bike.availabilities[id]['duration']
+            })
+          }
           availabilityDialog._checkMax();
           availabilityDialog.disabledDates = availabilityDialog.takeDisabledDates();
         }
 
         function updateData(data, requestName) {
-          if (requestName == 'post') {
-            bike.availabilities = data;
-            availabilityDialog.setData();
-          } else { // put
-            _.forEach(data, function (item) {
-              _.forEach(bike.availabilities, function(bike_item){
-                if (item.id == bike_item.id) return bike_item = item;
-              });
-            });
-          }
+          _.forEach(data, function (item) {
+            if (bike.availabilities[item.id]) {
+              angular.extend(bike.availabilities[item.id], item);
+            } else {
+              bike.availabilities[item.id] = item;
+            }
+          });
+          availabilityDialog.setData();
         }
 
         $scope.$on('input-range:changed', function (event) {
@@ -199,6 +205,7 @@ angular.module('listings', []).component('listings', {
         
         function removeInput(index) {
           if (availabilityDialog.inputs[index].id) {
+            delete bike.availabilities[availabilityDialog.inputs[index].id];
             availabilityDialog.destroy(availabilityDialog.inputs[index].id);
           } else {
             destroyInput(index);
@@ -215,6 +222,8 @@ angular.module('listings', []).component('listings', {
         }
 
         function save(form) {
+          if (!availabilityDialog.isChanged) return availabilityDialog.close();
+
           var updatedItems = availabilityDialog.inputs.filter(function(item){
             return item.hasOwnProperty('id') && item.hasOwnProperty('is_changed');
           });
