@@ -165,8 +165,9 @@ angular.module('listings', []).component('listings', {
         }
 
         function updateData(data, requestName) {
+          if (!bike.hasOwnProperty('availabilies')) bike.availabilities = {};
           _.forEach(data, function (item) {
-            if (bike.availabilities[item.id]) {
+            if (bike.availabilities.hasOwnProperty(item.id)) {
               angular.extend(bike.availabilities[item.id], item);
             } else {
               bike.availabilities[item.id] = item;
