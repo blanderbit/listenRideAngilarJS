@@ -300,8 +300,8 @@ var lnrHelper = {
     // if there are several language
     // and 'All' is selected
     else if (index === 0) {
-      lnrHelper.renderBikesHTML(userId, rides, null);
       locationButton.innerHTML = lnrConstants.translate.allLocations.selected[userId] + '<div class="dropdown-caret" style="float: right"></div>';
+      lnrHelper.renderBikesHTML(userId, rides, null);
       return;
     }
 
@@ -348,8 +348,8 @@ var lnrHelper = {
     // if there are several language
     // and 'All' is selected
     else if (index === 0) {
-      lnrHelper.renderBikesHTML(userId, rides, null);
       sizeButton.innerHTML = lnrConstants.translate.allSizes.selected[userId] + '<div class="dropdown-caret" style="float: right"></div>';
+      lnrHelper.renderBikesHTML(userId, rides, null);
       return;
     }
 
