@@ -270,6 +270,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Pago seguro con",
+    "agree-terms": "With 'Request Bike' you agree to the",
+    "agree-terms-link": "listnride terms",
     "footer": {
       "questions": "¿Tienes preguntas con respecto a la reserva de una bicicleta?",
       "call-us": "Llámanos al +49 (0)30-120870330, lunes a viernes 9-18h.",

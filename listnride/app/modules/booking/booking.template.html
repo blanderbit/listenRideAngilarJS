@@ -37,7 +37,7 @@
           user="booking.user">
         </receipt>
         <div
-          class="booking__next-step"
+          class="booking__next-step lnr-margin-lrg"
           layout="column">
           <div 
             layout="row"
@@ -48,6 +48,12 @@
             <h2 class="md-subhead">Total</h2>
             <span>{{ booking.total | currency:"€":2 }}</span>
           </div>
+          <p 
+            ng-hide="booking.selectedIndex !== 3"
+            class="md-body-1 lnr-margin-lrg lnr-mb-0 lnr-center">
+             {{ 'booking.agree-terms' | translate }}
+            <a ui-sref="terms" target="_blank">{{ 'booking.agree-terms-link' | translate }}</a>
+          </p>
           <md-button
             class="md-raised md-primary lnr-margin-lrg"
             ng-disabled="booking.nextDisabled()"
@@ -58,13 +64,13 @@
           </md-button>
         </div>
       </div>
-      <div layout="row" layout-align="end none">
+      <div layout="row" layout-align="end center" class="lnr-margin-top lnr-no-padding">
         <img
           class="md-card-image lnr-request__img-methods"
           ng-src="app/assets/ui_icons/lnr_ico_lock.svg"
           alt="Secure"
         >
-        <div style="margin: 0 16px">
+        <div style="margin-left: 8px">
           {{ 'booking.shopping' | translate }}
         </div>
       </div>
