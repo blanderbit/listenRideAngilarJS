@@ -27,6 +27,10 @@
     "heidelberg": "Heidelberg",
     "marl": "Marl",
     "frankfurt": "Frankfurt",
+    "usedom": "Usedom",
+    "lanzarote": "Lanzarote",
+    "mallorca": "Mallorca",
+    "sylt": "Sylt",
     "per": "per",
     "hour": "uur",
     "hours": "uren",
@@ -565,15 +569,25 @@
     "signing-up-accept-tac": "Door een account aan te maken accepteer je de",
     "errors": {
       "password-length": "Wachtwoord dient 6-30 karakters lang te zijn",
+      "password-length-xs": "6-30 tekens",
       "password-missing": "Wachtwoord aanmaken",
+      "password-missing-xs": "Wachtwoord aanmaken",
       "valid-email": "Vul een geldig emailadres in",
+      "valid-email-xs": "Ongeldige e-mail",
       "empty-email": "Vul uw emailadres in",
+      "empty-email-xs": "E-mail vereist",
       "empty-last-name": "Vul uw achternaam in",
+      "empty-last-name-xs": "Achternaam verplicht",
       "empty-first-name": "Vul uw voornaam in",
+      "empty-first-name-xs": "Voornaam vereist",
       "max-size-last-name": "Achternaam mag maximaal 30 karakters lang zijn",
+      "max-size-last-name-xs": "Overtreft 30 tekens",
       "max-size-first-name": "Voornaam mag maximaal 20 karakters lang zijn",
+      "max-size-first-name-xs": "Overtreft 20 tekens",
       "empty-company-name": "Vul alstublieft uw bedrijfsnaam in",
-      "min-size-company-name": "Bedrijfsnaam moet langer zijn dan 2 karakters "
+      "empty-company-name-xs": "Bedrijfsnaam vereist",
+      "min-size-company-name": "Bedrijfsnaam moet langer zijn dan 2 karakters ",
+      "min-size-company-name-xs": "Ten minste 3 tekens "
     }
   },
   "home": {

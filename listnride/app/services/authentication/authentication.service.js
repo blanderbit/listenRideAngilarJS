@@ -93,6 +93,7 @@ angular.
       };
 
       var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName, inviteCode, requestFlow) {
+        console.log("SIGNUP GETS CALLED");
         var invited = !!inviteCode;
         var user = {
           "user": {
@@ -121,6 +122,7 @@ angular.
       };
 
       var loginFb = function(email, facebookId) {
+        console.log("LOGIN GETS CALLED");
         var user = {
           'user': {
             'email': email,
@@ -130,6 +132,7 @@ angular.
         api.post('/users/login', user).then(function(response) {
           setCredentials(response.data);
           $rootScope.$broadcast('user_login');
+          showLoginSuccess();
         }, function(error) {
         });
       };
@@ -164,9 +167,9 @@ angular.
       };
 
       // The Signup Dialog Controller
-      var SignupDialogController = function ($mdDialog, inviteCode, requesting, business, signupObj) {
+      var SignupDialogController = function ($mdDialog, $mdMedia, inviteCode, requesting, business, signupObj) {
         var signupDialog = signupObj || this;
-
+        signupDialog.xs = $mdMedia('xs');
         signupDialog.signingUp = false;
         signupDialog.requestSignup = false;
         signupDialog.business = business;

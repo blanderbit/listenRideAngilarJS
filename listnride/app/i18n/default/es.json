@@ -28,6 +28,10 @@
     "heidelberg": "Heidelberg",
     "marl": "Marl",
     "frankfurt": "Fráncfort",
+    "usedom": "Usedom",
+    "lanzarote": "Lanzarote",
+    "mallorca": "Mallorca",
+    "sylt": "Sylt",
     "per": "por",
     "hour": "hora",
     "hours": "horas",
@@ -559,15 +563,25 @@
     "signing-up-accept-tac": "Al suscribirme, acepto la",
     "errors": {
       "password-length": "La contraseña debe tener entre 6 y 30 caracteres",
+      "password-length-xs": "6-30 caracteres",
       "password-missing": "Introduce una contraseña",
+      "password-missing-xs": "Requiere contraseña",
       "valid-email": "Introduce una dirección de correo electrónico válida",
+      "valid-email-xs": "Correo electrónico inválido",
       "empty-email": "Introduce una dirección de correo electrónico",
+      "empty-email-xs": "Correo electrónico requerido",
       "empty-last-name": "Introduce tu apellido",
+      "empty-last-name-xs": "Introduce tu apellido",
       "empty-first-name": "Introduce tu nombre",
+      "empty-first-name-xs": "Introduce tu nombre",
       "max-size-last-name": "El apellido no debe exceder los 30 caracteres",
+      "max-size-last-name-xs": "Supera 30 caracteres",
       "max-size-first-name": "El nombre no debe exceder los 20 caracteres",
+      "max-size-first-name-xs": "Supera 30 caracteres",
       "empty-company-name": "Introduce el nombre de tu empresa",
-      "min-size-company-name": "El nombre de la empresa no debe exceder los 20 caracteres"
+      "empty-company-name-xs": "Empresa requerida",
+      "min-size-company-name": "El nombre de la empresa no debe exceder los 20 caracteres",
+      "min-size-company-name-xs": "Por lo menos 3 caracteres"
     }
   },
   "home": {

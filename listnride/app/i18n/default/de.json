@@ -27,6 +27,10 @@
     "heidelberg": "Heidelberg",
     "marl": "Marl",
     "frankfurt": "Frankfurt",
+    "usedom": "Usedom",
+    "lanzarote": "Lanzarote",
+    "mallorca": "Mallorca",
+    "sylt": "Sylt",
     "per": "pro",
     "hour": "Stunde",
     "hours": "Stunden",
@@ -564,15 +568,25 @@
     "signing-up-accept-tac": "Mit der Registrierung akzeptiere ich die",
     "errors": {
       "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
+      "password-length-xs": "6-30 Zeichen",
       "password-missing": "Bitte gib ein Passwort an",
+      "password-missing-xs": "Passwort erforderlich",
       "valid-email": "Bitte gib eine gültige Email-Adresse an",
+      "valid-email-xs": "Ungültige E-Mail",
       "empty-email": "Bitte gib deine Email-Adresse an",
+      "empty-email-xs": "E-Mail erforderlich",
       "empty-last-name": "Bitte gib deinen Nachnamen an",
+      "empty-last-name-xs": "Nachname erforderlich",
       "empty-first-name": "Bitte gib deinen Vornamen an",
-      "max-size-last-name": "Der Nachname sollte maximal 30 Buchstaben lang sein",
+      "empty-first-name-xs": "Vornamen erforderlich",
+      "max-size-last-name": "Der Nachname sollte maximal 30 Buchstaben lang sein",      
+      "max-size-last-name-xs": "Max 30 Buchstaben",
       "max-size-first-name": "Der Vorname sollte maximal 20 Buchstaben lang sein",
+      "max-size-first-name-xs": "Max 20 Buchstaben",      
       "empty-company-name": "Bitte geben Sie Ihren Firmennamen ein",
-      "min-size-company-name": "Der Firmenname sollte länger als 2 Zeichen sein "
+      "empty-company-name-xs": "Firmenname erforderlich",
+      "min-size-company-name": "Der Firmenname sollte länger als 2 Zeichen sein ",
+      "min-size-company-name-xs": "Mindestens 3 Zeichen "
     }
   },
   "home": {
