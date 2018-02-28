@@ -449,7 +449,7 @@ var lnrHelper = {
           lnrHelper.renderSelectors(userId, shouldRenderLocationSelector);
         }
         // render bikes html
-        lnrHelper.renderBikesHTML(userId, lnrConstants.rides[userId]);
+        lnrHelper.renderBikesHTML(userId, lnrConstants.rides[userId], userLang);
       }
     };
     // send request to server
@@ -461,13 +461,15 @@ var lnrHelper = {
    * @param {Object} rides bikes of the user. either city specific or all
    * @returns {void}
    */
-  renderBikesHTML: function (userId, rides) {
+  renderBikesHTML: function (userId, rides, userLang) {
 
     // add bikes grid
     var lnr = lnrConstants.isSingleUserMode ? lnrConstants.parentElement : document.getElementById(userId);
     var gridId = userId + '-lnr-grid';
     lnr.innerHTML += '<div class="mdl-grid mdl-grid--no-spacing" id="' + gridId + '"></div>';
-    lnr.innerHTML += '<div class="lnr-brand"><span>powered by&nbsp;</span><a href="https://www.listnride.com" target="_blank">listnride</a></div>';
+    // get region specific lnr link
+    var lnrLink = lnrHelper.getLnrLink(userLang);
+    lnr.innerHTML += '<div class="lnr-brand"><span>powered by&nbsp;</span><a href="' + lnrLink + '" target="_blank">listnride</a></div>';
 
     // bikes grid element
     var grid = document.getElementById(gridId);
@@ -670,6 +672,13 @@ var lnrHelper = {
       basicInfo.buttonText = 'Jetzt mieten';
     }
     return basicInfo;
+  },
+  getLnrLink: function (userLang) {
+    if (userLang === 'de') return "https://www.listnride.de";
+    else if (userLang === 'nl') return "https://www.listnride.nl";
+    else if (userLang === 'it') return "https://www.listnride.it";
+    else if (userLang === 'es') return "https://www.listnride.es";
+    else return "https://www.listnride.com";
   },
   /**
    * spawns the shop wizard in a new popup
