@@ -347,6 +347,7 @@ md-card md-card-title {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   flex-direction: row;
+  cursor: default;
 }
 
 md-card md-card-title md-card-title-text {
