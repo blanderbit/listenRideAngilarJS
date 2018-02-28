@@ -77,6 +77,10 @@ booking md-radio-button {
     max-height: 620px;
 }
 
+.booking md-tab-content.md-no-scroll {
+    overflow: visible;
+}
+
 @media(max-width: 959px) { /* sm */
 
     .lnr-list-form {

@@ -17,7 +17,6 @@ angular.module('veletage-integration',[]).component('veletage', {
           veletage.bikes = success.data;
         },
         function (error) {
-          console.log('Error fetching Bikes');
         }
       );
 

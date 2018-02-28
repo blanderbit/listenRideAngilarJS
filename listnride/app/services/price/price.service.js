@@ -54,7 +54,12 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         var base = data.prices[0].price;
         // from 2 to 6 days
         for (var day = 1; day < 6; day += 1) {
-          data.prices[day].price = Math.round((day + 1) * base * ((100 - parseFloat(data.discounts.daily)) / 100));
+          // if daily discount not 0
+          if (data.discounts.daily > 1) {
+            data.prices[day].price = Math.round((day + 1) * base * ((100 - parseFloat(data.discounts.daily)) / 100));
+          } else {
+            data.prices[day].price = Math.round((day + 1) * base);
+          }
         }
         // week price update
         data.prices[6].price = Math.round(7 * base * ((100 - parseFloat(data.discounts.weekly)) / 100));

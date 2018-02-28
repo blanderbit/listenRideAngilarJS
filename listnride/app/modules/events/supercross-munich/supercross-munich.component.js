@@ -20,7 +20,6 @@ angular.module('supercrossMunich',[]).component('supercrossMunich', {
             ];
 
             supercrossMunich.isAvailable = function (bike) {
-                console.log(bike);
             };
 
             $translate('search.all-sizes').then(function (translation) {

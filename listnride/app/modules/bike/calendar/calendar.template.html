@@ -55,16 +55,16 @@
 
 <!--        EVENT CALENDAR FIXED SLOT        -->
 <div layout="column" layout-margin ng-if="calendar.bikeFamily == calendar.event.familyId">
-  <p class="md-headline lnr-center">Supercross Calendar</p>
-  <p class="md-body-1 lnr-center">During the Munich Supercross, you can rent fantastic Cyclocross bikes for free! Just select which day and what time slot you'd like to test them!</p>
+  <p class="md-headline lnr-center">BFS 18 Calendar</p>
+  <p class="md-body-1 lnr-center">During the Berliner Fahrradschau, you can rent fantastic bikes for free! Just select which day and what time slot you'd like to have them!</p>
   <md-input-container class="md-block">
     <label>1. Select the Rental Day</label>
     <md-select ng-model="calendar.day">
-      <md-option value="14">
-        Saturday, 14th of Oct
+      <md-option value="24">
+        Saturday, 24th of Mar
       </md-option>
-      <md-option value="15">
-        Sunday, 15th of Oct
+      <md-option value="25">
+        Sunday, 25th of Mar
       </md-option>
     </md-select>
   </md-input-container>
@@ -210,7 +210,7 @@
     type="submit"
     class="md-raised md-primary lnr-margin-lrg"
     ng-click="calendar.onBooking()"
-    ng-if="calendar.authentication.loggedIn() && !calendar.isFormInvalid()"
+    ng-if="!calendar.isFormInvalid()"
     ng-disabled="calendar.owner || calendar.requested"
   >
     {{ 'calendar.request-bike' | translate }}
@@ -219,16 +219,9 @@
     type="submit"
     class="md-raised md-primary lnr-margin-lrg"
     ng-click="calendar.onBikeRequest()"
-    ng-if="calendar.authentication.loggedIn() && calendar.isFormInvalid()"
+    ng-if="calendar.isFormInvalid()"
     ng-disabled="true">
     {{ 'calendar.select-timespan' | translate }}
-  </md-button>
-  <md-button
-    type="submit"
-    class="md-raised md-primary lnr-margin-lrg"
-    ng-click="calendar.onBooking()"
-    ng-if="!calendar.authentication.loggedIn()">
-    {{ 'calendar.request-bike' | translate }}
   </md-button>
   <!-- <p ng-if="!calendar.authentication.loggedIn()" class="md-caption center-text lnr-margin-lrg">{{ 'calendar.to-request-bike-please' | translate }} {{ 'forms.sign-up' | translate }} {{ 'forms.or' | translate }} {{ 'forms.log-in' | translate }}</p> -->
 </div>

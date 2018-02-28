@@ -16,6 +16,7 @@ angular.module('booking', [])
         var booking = this;
         var btAuthorization = ENV.btKey;
         var btClient;
+        var btPpInstance;
 
         booking.startDate = new Date($stateParams.startDate);
         booking.endDate = new Date($stateParams.endDate);
@@ -112,6 +113,12 @@ angular.module('booking', [])
             return;
           }
           btClient = client;
+          braintree.paypal.create(
+            {client: btClient},
+            function (ppErr, ppInstance) {
+              btPpInstance = ppInstance;
+            }
+          );
         });
 
         booking.saveAddress = function() {
@@ -164,10 +171,16 @@ angular.module('booking', [])
               };
               api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
                 function (success) {
-                  // booking.nextTab();
                   booking.reloadUser();
                 },
                 function (error) {
+                  console.log(error);
+                  $mdToast.show(
+                    $mdToast.simple()
+                    .textContent(error.data.errors[0].detail)
+                    .hideDelay(4000)
+                    .position('top center')
+                  );
                 }
               );
             }
@@ -176,36 +189,36 @@ angular.module('booking', [])
         };
 
         booking.openPaypal = function() {
-          braintree.paypal.create({
-              client: btClient
-            },
-            function (ppErr, ppInstance) {
-              ppInstance.tokenize({ flow: 'vault' },
-                function (tokenizeErr, payload) {
-                  if (tokenizeErr) {
-                    return;
-                  }
-                  var data = {
-                    "payment_method_nonce": payload.nonce
-                  };
-                  api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
-                    function (success) {
-                      $scope.$apply(booking.nextTab());
-                    },
-                    function (error) {
-                    }
+          btPpInstance.tokenize({ flow: 'vault' },
+            function (tokenizeErr, payload) {
+              if (tokenizeErr) {
+                return;
+              }
+              var data = {
+                "payment_method_nonce": payload.nonce
+              };
+              api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
+                function (success) {
+                  booking.reloadUser();
+                },
+                function (error) {
+                  console.log(error);
+                  $mdToast.show(
+                    $mdToast.simple()
+                    .textContent(error.data.errors[0].detail)
+                    .hideDelay(4000)
+                    .position('top center')
                   );
                 }
               );
             }
-          )
+          );
         };
 
         booking.reloadUser = function() {
           api.get('/users/' + $localStorage.userId).then(
             function (success) {
               booking.user = success.data;
-              console.log(booking.user);
               booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
               if (booking.user.status == 3) {
                 booking.selectedIndex = 3;
@@ -221,6 +234,7 @@ angular.module('booking', [])
               api.get('/users/' + $localStorage.userId + '/current_payment').then(
                 function(response) {
                   booking.user.current_payment_method = response.data;
+                  console.log(booking.user.current_payment_method);
                 },
                 function(error) {
 

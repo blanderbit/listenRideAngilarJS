@@ -17,11 +17,11 @@
     "angular-messages": "@>=1.3 <1.6"
   },
   "dependencies": {
-    "@uirouter/angularjs": "^1.0.14",
+    "@uirouter/angularjs": "^1.0.15",
     "angular": "~1.5.5",
     "angular-animate": "~1.5.5",
     "angular-aria": "~1.5.5",
-    "angular-credit-cards": "^3.1.7",
+    "angular-credit-cards": "^3.1.8",
     "angular-easyfb": "~1.5.1",
     "angular-google-maps": "^2.3.4",
     "angular-input-stars": "~1.5.5",
@@ -62,7 +62,7 @@
     "gulp-html-replace": "^1.6.2",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.1.1",
-    "gulp-inject": "^4.3.0",
+    "gulp-inject": "^4.3.1",
     "gulp-jshint": "^2.1.0",
     "gulp-jsonminify": "^1.1.0",
     "gulp-load-plugins": "^1.4.0",

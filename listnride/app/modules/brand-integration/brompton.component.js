@@ -60,7 +60,6 @@ angular.module('brompton-integration',[]).component('brompton', {
           brompton.currentBikes = brompton.bikes["berlin"];
         },
         function (error) {
-          console.log('Error fetching Bikes');
         }
       );
 

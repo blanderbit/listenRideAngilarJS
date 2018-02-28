@@ -604,10 +604,12 @@
     "title": "Press",
     "header": "Pressebereich",
     "subheader": "Infos bereit zum Download. listnride bereit zum Gespräch.",
+    "comm-and-pr": "Kommunikation und PR",
     "kit": {
       "title": "Pressemappe",
       "content": "Andere nennen sich Fahrradverleihsystem. Wir sind eine Bike-Sharing-Community. Erfahren Sie mehr in unserer Pressemappe,",
-      "download": "die wir Ihnen hier bereitgestellt haben"
+      "download": "die wir Ihnen hier bereitgestellt haben",
+      "link": "https://goo.gl/forms/DHe1q9xX8BmCBwmo2"
     },
     "contact": {
       "title": "Pressekontakt",

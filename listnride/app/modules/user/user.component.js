@@ -38,7 +38,6 @@ angular.module('user',[]).component('user', {
           }
         },
         function(error) {
-          console.log("Error retrieving User", error);
         }
       );
 

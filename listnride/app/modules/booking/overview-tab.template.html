@@ -11,10 +11,12 @@
         <div class="spacer-xs"></div>
       	<div layout="row" layout-align="space-between none" layout-wrap>
           <div flex="40" flex-xs="100">
-            <img flex="100" ui-sref="bike({bikeId: overview.parent.bike.id})" target="_blank" ng-src="{{ overview.parent.bike.image_file_1.image_file_1.small.url }}" />
+            <a ui-sref="bike({bikeId: overview.parent.bike.id})" target="_blank">
+              <img flex="100" ng-src="{{ overview.parent.bike.image_file_1.image_file_1.small.url }}" />
+            </a>
           </div>
           <div flex="30" flex-xs="60" layout="column">
-            <p class="md-subhead" ui-sref="bike({bikeId: overview.parent.bike.id})" target="_blank">{{ overview.parent.bike.brand }}, {{ overview.parent.bikeCategory }}</p>
+            <a class="md-subhead lnr-black" ui-sref="bike({bikeId: overview.parent.bike.id})" target="_blank">{{ overview.parent.bike.brand }}, {{ overview.parent.bikeCategory }}</a>
             <br>
             <div layout="row" layout-align="space-between none">
               <span flex="50" class="md-body-2">{{ 'settings.from' | translate }}</span>
@@ -54,8 +56,14 @@
           </div>
           <div flex="33" flex-xs="100">
             <p class="md-subhead">{{ 'booking.overview.payment' | translate }}</p>
-            <p class="md-body-2">{{ overview.parent.user.current_payment_method.family.split(" ")[0] }}</p>
-            <p class="md-body-1">**** **** **** {{ overview.parent.user.current_payment_method.family.split(" ")[1] }}</p>
+            <div ng-if="overview.parent.user.current_payment_method.type == 1">
+              <p class="md-body-2">{{ overview.parent.user.current_payment_method.family.split(" ")[0] }}</p>
+              <p class="md-body-1">**** **** **** {{ overview.parent.user.current_payment_method.family.split(" ")[1] }}</p>
+            </div>
+            <div ng-if="overview.parent.user.current_payment_method.type == 2">
+              <p class="md-body-2">Paypal</p>
+              <p class="md-body-1">{{ overview.parent.user.current_payment_method.details }}</p>
+            </div>
           </div>
           <div ng-hide show-xs>
             <div class="spacer-xs"></div>
