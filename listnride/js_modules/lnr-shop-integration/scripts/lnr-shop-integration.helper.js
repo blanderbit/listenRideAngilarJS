@@ -300,7 +300,7 @@ var lnrHelper = {
     // if there are several language
     // and 'All' is selected
     else if (index === 0) {
-      lnrHelper.renderBikesHTML(userId, rides);
+      lnrHelper.renderBikesHTML(userId, rides, null);
       locationButton.innerHTML = lnrConstants.translate.allLocations.selected[userId] + '<div class="dropdown-caret" style="float: right"></div>';
       return;
     }
@@ -323,7 +323,7 @@ var lnrHelper = {
       locationButton.innerHTML = selectedCity + '<div class="dropdown-caret" style="float: right"></div>';
 
       // render filtered bikes
-      lnrHelper.renderBikesHTML(userId, selectedRides);
+      lnrHelper.renderBikesHTML(userId, selectedRides, null);
     }
   },
   /**
@@ -348,7 +348,7 @@ var lnrHelper = {
     // if there are several language
     // and 'All' is selected
     else if (index === 0) {
-      lnrHelper.renderBikesHTML(userId, rides);
+      lnrHelper.renderBikesHTML(userId, rides, null);
       sizeButton.innerHTML = lnrConstants.translate.allSizes.selected[userId] + '<div class="dropdown-caret" style="float: right"></div>';
       return;
     }
@@ -375,7 +375,7 @@ var lnrHelper = {
       sizeButton.innerHTML = element;
 
       // render filtered bikes
-      lnrHelper.renderBikesHTML(userId, selectedRides);
+      lnrHelper.renderBikesHTML(userId, selectedRides, null);
     }
   },
   /*
@@ -459,18 +459,21 @@ var lnrHelper = {
    * HTML of the bikes
    * @param {String} userId user id
    * @param {Object} rides bikes of the user. either city specific or all
+   * @param {String} userLang language of the user. [english, german, dutch]
+   * @param {Bool} renderBackLink flag should the backlink be re-rendered
    * @returns {void}
    */
   renderBikesHTML: function (userId, rides, userLang) {
-
+    
     // add bikes grid
     var lnr = lnrConstants.isSingleUserMode ? lnrConstants.parentElement : document.getElementById(userId);
     var gridId = userId + '-lnr-grid';
     lnr.innerHTML += '<div class="mdl-grid mdl-grid--no-spacing" id="' + gridId + '"></div>';
     // get region specific lnr link
-    var lnrLink = lnrHelper.getLnrLink(userLang);
-    lnr.innerHTML += '<div class="lnr-brand"><span>powered by&nbsp;</span><a href="' + lnrLink + '" target="_blank">listnride</a></div>';
-
+    if (userLang) {
+      var lnrLink = lnrHelper.getLnrLink(userLang);
+      lnr.innerHTML += '<div class="lnr-brand"><span>powered by&nbsp;</span><a href="' + lnrLink + '" target="_blank">listnride</a></div>';
+    }
     // bikes grid element
     var grid = document.getElementById(gridId);
 
@@ -674,11 +677,11 @@ var lnrHelper = {
     return basicInfo;
   },
   getLnrLink: function (userLang) {
-    if (userLang === 'de') return "https://www.listnride.de";
-    else if (userLang === 'nl') return "https://www.listnride.nl";
-    else if (userLang === 'it') return "https://www.listnride.it";
-    else if (userLang === 'es') return "https://www.listnride.es";
-    else return "https://www.listnride.com";
+    if (userLang === 'de') {return "https://www.listnride.de";}
+    else if (userLang === 'nl') {return "https://www.listnride.nl";}
+    else if (userLang === 'it') {return "https://www.listnride.it";}
+    else if (userLang === 'es') {return "https://www.listnride.es";}
+    else {return "https://www.listnride.com";}
   },
   /**
    * spawns the shop wizard in a new popup
