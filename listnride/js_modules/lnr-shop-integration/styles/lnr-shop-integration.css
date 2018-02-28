@@ -8,6 +8,11 @@
   margin: 12px 12px 0px -8px;
 }
 
+a {
+  color: #fefefe !important ;
+  font-weight: 500
+}
+
 .image-container {
     position: relative;
     display: inline-block;

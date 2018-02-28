@@ -1,7 +1,7 @@
 var lnrConstants = {
   // environments: staging, production
   env: 'production',
-  version: '?1.0',
+  version: '?1.005',
   // shop solution for staging and production
   shopUrl: {
     "staging": "https://listnride-staging.herokuapp.com/v2/shop_solutions",
