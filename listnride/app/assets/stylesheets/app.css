@@ -915,6 +915,25 @@ md-grid-list md-grid-tile.tile-vienna {
   background-image: url(../ui_images/cities/lnr_vienna.jpg);
 }
 
+md-grid-list md-grid-tile.tile-usedom {
+  background-image: url(../ui_images/cities/lnr_usedom.jpg);
+  background-position: 50% 70%;
+}
+
+md-grid-list md-grid-tile.tile-lanzarote {
+  background-image: url(../ui_images/cities/lnr_lanzarote.jpg);
+  background-position: 70% 85%;
+}
+
+md-grid-list md-grid-tile.tile-mallorca {
+  background-image: url(../ui_images/cities/lnr_mallorca.jpg);
+  background-position: 50% 85%;
+}
+
+md-grid-list md-grid-tile.tile-sylt {
+  background-image: url(../ui_images/cities/lnr_sylt.jpg);
+}
+
 .md-dialog-fullscreen.dialog-bikes,
 .md-dialog-fullscreen.dialog-bikes .dialog-content {
   overflow: visible !important;
