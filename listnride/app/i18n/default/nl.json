@@ -302,6 +302,7 @@
     "details": {
       "tab": "2. Persoonlijke gegevens",
       "invoice-address": "Factuuradres",
+      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Gaarne bevestigen",
       "send-sms": "We sturen je een SMS aan je mobiele telefoon.",
       "check-phone": "Controleer je mobiele telefoon.",

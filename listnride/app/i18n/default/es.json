@@ -295,6 +295,7 @@
     "details": {
       "tab": "2. Datos personales",
       "invoice-address": "Tu dirección de facturación",
+      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Verificar",
       "send-sms": "Te enviaremos un SMS a tu teléfono",
       "check-phone": "Comprueba tu teléfono.",

@@ -302,6 +302,7 @@
     "details": {
       "tab": "2. Persönliche Daten",
       "invoice-address": "Rechnungsadresse",
+      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Verifizieren",
       "send-sms": "Wir senden dir eine SMS an dein Telefon.",
       "check-phone": "Bitte prüfe dein Telefon.",

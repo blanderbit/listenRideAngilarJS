@@ -303,6 +303,7 @@
     "details": {
       "tab": "2. Personal Details",
       "invoice-address": "Invoice Address",
+      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Verification",
       "send-sms": "We'll send you one time sms to your phone.",
       "check-phone": "Please check your phone.",

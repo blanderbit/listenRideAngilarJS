@@ -1951,6 +1951,10 @@ md-grid-list a {
   color: #7ab2f8
 }
 
+.text-success {
+  color: rgb(95, 198, 147);
+}
+
 md-input-container .md-input.form-input-error {
   border: 1px solid rgb(221, 44, 0);
   border-radius: 4px;
