@@ -281,6 +281,8 @@
   "booking": {
     "shopping": "Sicher bezahlen",
     "pay-secure": "Sicher bezahlen mit",
+    "agree-terms": "With 'Request Bike' you agree to the",
+    "agree-terms-link": "listnride terms",
     "footer": {
       "questions": "Du hast Fragen rund ums Mieten von Fahrrädern?",
       "call-us": "Ruf uns unter +49 (0)30-120870330, Mo-Fr 9-18 Uhr an.",
@@ -300,6 +302,7 @@
     "details": {
       "tab": "2. Persönliche Daten",
       "invoice-address": "Rechnungsadresse",
+      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Verifizieren",
       "send-sms": "Wir senden dir eine SMS an dein Telefon.",
       "check-phone": "Bitte prüfe dein Telefon.",

@@ -281,6 +281,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Veilig betalen met",
+    "agree-terms": "With 'Request Bike' you agree to the",
+    "agree-terms-link": "listnride terms",
     "footer": {
       "questions": "Heb je vragen bij het boeken van een fiets?",
       "call-us": "Bel ons op +49 (0)30-120870330, Ma-Vrij 9-18u.",
@@ -300,6 +302,7 @@
     "details": {
       "tab": "2. Persoonlijke gegevens",
       "invoice-address": "Factuuradres",
+      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Gaarne bevestigen",
       "send-sms": "We sturen je een SMS aan je mobiele telefoon.",
       "check-phone": "Controleer je mobiele telefoon.",

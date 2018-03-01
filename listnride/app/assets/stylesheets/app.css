@@ -110,7 +110,7 @@ md-grid-list md-grid-tile {
 }
 
 .highlight-tile {
-  height: 260px;
+  /* height: 260px; */
   padding: 24px 0;
   border-radius: 4px;
   border: 1px solid rgba(95, 198, 147, 0.25);
@@ -352,6 +352,10 @@ md-tooltip .md-content {
   margin-bottom: 0;
 }
 
+.lnr-lh-body-2 {
+  line-height: 24px;
+}
+
 .lnr-clickable {
   cursor: pointer;
 }
@@ -450,6 +454,14 @@ md-tooltip .md-content {
 
 .lnr-progress-tabs {
   font-size: 14px;
+}
+
+.lnr-icn-xs {
+  min-width: 14px;
+  width: 14px;
+  margin: 0 8px;
+  height: 20px;
+  min-height: 20px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -1937,6 +1949,10 @@ md-grid-list a {
 
 .text-default {
   color: #7ab2f8
+}
+
+.text-success {
+  color: rgb(95, 198, 147);
 }
 
 md-input-container .md-input.form-input-error {

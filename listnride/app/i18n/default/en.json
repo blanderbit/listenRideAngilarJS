@@ -282,6 +282,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Pay secure with",
+    "agree-terms": "With 'Request Bike' you agree to the",
+    "agree-terms-link": "listnride terms",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
       "call-us": "Call us +49 (0)30-120870330, Mo-Fr 9-18 pm.",
@@ -301,6 +303,7 @@
     "details": {
       "tab": "2. Personal Details",
       "invoice-address": "Invoice Address",
+      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Verification",
       "send-sms": "We'll send you one time sms to your phone.",
       "check-phone": "Please check your phone.",
