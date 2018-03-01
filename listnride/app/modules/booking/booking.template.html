@@ -45,12 +45,12 @@
             class="lnr-margin-lrg lnr-mb-0"
             hide-gt-sm
             ng-hide="booking.selectedIndex !== 3">
-            <h2 class="md-subhead">Total</h2>
-            <span>{{ booking.total | currency:"€":2 }}</span>
+            <span class="md-subhead">{{ 'shared.total' | translate }}</span>
+            <span class="md-subhead">{{ booking.total | currency:"€":2 }}</span>
           </div>
           <p 
             ng-hide="booking.selectedIndex !== 3"
-            class="md-body-1 lnr-margin-lrg lnr-mb-0 lnr-center">
+            class="md-body-1 lnr-margin-lrg lnr-mb-0 lnr-center booking__terms">
              {{ 'booking.agree-terms' | translate }}
             <a ui-sref="terms" target="_blank">{{ 'booking.agree-terms-link' | translate }}</a>
           </p>
