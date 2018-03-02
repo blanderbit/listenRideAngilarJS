@@ -12,7 +12,7 @@ angular
         data: '=',
         disabledDates: '<' 
       },
-      controller: ['$scope', inputRangeController],
+      controller: ['$scope', '$localStorage', inputRangeController],
       link: function ($scope, element, attrs) {
         $scope.el = angular.element(element[0]).find('.js-datapicker');
       }
@@ -20,7 +20,7 @@ angular
   });
 
 
-function inputRangeController($scope, $rootScope) {
+function inputRangeController($scope, $localStorage) {
   var vm = this;
 
   vm._updateData = _updateData;
@@ -30,7 +30,7 @@ function inputRangeController($scope, $rootScope) {
   vm.openCalendar = openCalendar;
 
   ////////////
-
+  
   function updateParent(){
     // inform parent component that state was changed
     $scope.$emit('input-range:changed');
@@ -79,6 +79,7 @@ function inputRangeController($scope, $rootScope) {
       beforeShowDay: classifyDate,
       lnrIsWidthStatic: true,
       lnrShowTimeDom: false,
+      language: $localStorage.selectedLanguage,
       lnrSingleMonthMinWidth: 659, // 320px - min-width for 1 calendar part + gap
       extraClass: 'date-picker-wrapper--ngDialog date-picker-wrapper--two-months'
     }).bind('datepicker-change', function (event, obj) {
