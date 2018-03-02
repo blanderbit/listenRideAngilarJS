@@ -24,11 +24,18 @@ function inputRangeController($scope, $rootScope) {
   var vm = this;
 
   vm._updateData = _updateData;
+  vm._clearData = _clearData;
   vm.$postLink = postLink;
   vm.$onDestroy = onDestroy;
   vm.openCalendar = openCalendar;
 
   ////////////
+
+  function updateParent(){
+    // inform parent component that state was changed
+    $scope.$emit('input-range:changed');
+    $scope.$apply();
+  }
 
   /**
   * Function to update data object
@@ -50,11 +57,16 @@ function inputRangeController($scope, $rootScope) {
 
     angular.extend(vm.data, newData);
 
-    // inform parent component that state was changed
-    $scope.$emit('input-range:changed');
-    $scope.$apply();
+    updateParent();
   }
-  
+
+  function _clearData() {
+    angular.extend(vm.data, {
+      'start_date': null
+    });
+    updateParent();
+  }
+
   function postLink() {    
     $scope.el.dateRangePicker({
       autoClose: true,
@@ -71,9 +83,13 @@ function inputRangeController($scope, $rootScope) {
       extraClass: 'date-picker-wrapper--ngDialog date-picker-wrapper--two-months'
     }).bind('datepicker-change', function (event, obj) {
         vm._updateData(obj.date1, obj.date2);
+    }).bind('datepicker-first-date-selected', function (event, obj) {
+        vm._clearData();
+        changeRange();
+        setFirstDate(obj.date1);        
     });
 
-    // @TODO: make services for this
+    //TODO: make services for this
     function classifyDate(date) {
       date.setHours(0, 0, 0, 0);
       var now = new Date();
@@ -86,28 +102,37 @@ function inputRangeController($scope, $rootScope) {
         return [true, "date-available", ""];
       }
     }
+
+    function setFirstDate(d) {
+      $scope.el.dateRange.setStart(d);
+    }
+
+    function changeRange() {
+      if (vm.data.start_date) {
+        // set range to datepicker with datepicker special method
+        // setDateRange({String}, {String}) 
+        var startDate = moment(vm.data.start_date);
+        var lastDate = startDate.clone().add(vm.data.duration, 'd');
+        $scope.el.dateRange
+          .setDateRange(startDate._d, lastDate._d, true);
+      } else {
+        $scope.el.dateRange.clear();
+      }
+    }
   
     function dateClosed(date) {
       date.setHours(0, 0, 0, 0);
       var result = false;
       _.forEach(vm.disabledDates, function(slot){
         result = result || moment(date).isBetween(slot.start_at, slot.end_at, null, '[]') // all inclusive
-      });      
+      });
       return result;
     }
 
     // save this data, because mdDialog destroys elements before $onDestroy method
     $scope.el.dateRange = $scope.el.data('dateRangePicker');
 
-    if (vm.data.start_date) {
-      // set range to datepicker with datepicker special method
-      // setDateRange({String}, {String}) 
-      var startDate = moment(vm.data.start_date);
-      var lastDate = startDate.clone().add(vm.data.duration, 'd');
-      $scope.el.dateRange
-        .setDateRange(startDate._d, lastDate._d, true);
-    }
-
+    changeRange();
   };
 
   function onDestroy() {
