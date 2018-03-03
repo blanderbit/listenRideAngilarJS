@@ -27,7 +27,11 @@ var lnrHelper = {
     // get user id and language
     lnrConstants.parentElement = document.getElementById('listnride');
     // initialize for single and multi user mode
-    lnrConstants.parentElement.dataset.user ? lnrHelper.postInitSingleUser() : lnrHelper.postInitMultiUser();
+    if (lnrConstants.parentElement.dataset.user) {
+      lnrHelper.postInitSingleUser();
+    } else {
+      lnrHelper.postInitMultiUser();
+    }
   },
   /**
    * single user mode
@@ -756,7 +760,7 @@ var lnrHelper = {
 
     // add option as All in the dropdown menu
     // only when more than 1 cities are present
-    if (cities.length > 1) cities.unshift(lnrConstants.translate.allLocations.selected[userId]);
+    if (cities.length > 1) { cities.unshift(lnrConstants.translate.allLocations.selected[userId]); }
 
     return cities;
   },
