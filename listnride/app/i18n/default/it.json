@@ -28,6 +28,10 @@
     "heidelberg": "Heidelberg",
     "marl": "Marl",
     "frankfurt": "Francoforte",
+    "usedom": "Usedom",
+    "lanzarote": "Lanzarote",
+    "mallorca": "Mallorca",
+    "sylt": "Sylt",
     "per": "per ",
     "hour": "ora",
     "hours": "ore",
@@ -270,6 +274,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Pagamento sicuro con",
+    "agree-terms": "With 'Request Bike' you agree to the",
+    "agree-terms-link": "listnride terms",
     "footer": {
       "questions": "Hai domande sul noleggio della bicicletta?",
       "call-us": "Chaimaci al: +49 (0)30-120870330, Lun-Ven 9-18.",
@@ -289,6 +295,7 @@
     "details": {
       "tab": "2. Dati personali",
       "invoice-address": "Il tuo indirizzo di fatturazione",
+      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Si prega di verificare",
       "send-sms": "Ti invieremo un SMS sul tuo telefono",
       "check-phone": "Per favore controlla il tuo telefono",
@@ -557,15 +564,25 @@
     "signing-up-accept-tac": "Con l'iscrizione accetto ",
     "errors": {
       "password-length": "La password deve essere tra i 6-30 caratteri",
+      "password-length-xs": "6-30 caratteri",
       "password-missing": "Fornire una password",
+      "password-missing-xs": "Password richiesta",
       "valid-email": "Si prega di inserire un indirizzo email valido",
+      "valid-email-xs": "Indirizzo email non valido",
       "empty-email": "Inserisci il tuo indirizzo email",
+      "empty-email-xs": "Email richiesta",
       "empty-last-name": "Inserisci il tuo cognome",
+      "empty-last-name-xs": "Cognome richiesto",      
       "empty-first-name": "Inserisci il tuo nome",
+      "empty-first-name-xs": "Nome richiesto",
       "max-size-last-name": "Il cognome non deve superare i 30 caratteri",
+      "max-size-last-name-xs": "Supera 30 caratteri",
       "max-size-first-name": "Il nome non deve superare i 20 caratteri",
+      "max-size-first-name-xs": "Supera 20 caratteri",
       "empty-company-name": "Inserisci il nome della tua azienda",
-      "min-size-company-name": "Il nome della società dovrebbe essere superiore ai 2 caratteri"
+      "empty-company-name-xs": "Azienda richiesta",
+      "min-size-company-name": "Il nome della società dovrebbe essere superiore ai 2 caratteri",
+      "min-size-company-name-xs": "Altitudine di 3 caratteri"
     }
   },
   "home": {
@@ -938,5 +955,14 @@
     "kids": "bici bambini",
     "electro": "bici elettrica",
     "special": "bici speciale"
+  },
+  "availability": {
+    "availability": "availability",
+    "modal-title": "When is your bike not available?",
+    "start-from": "Starting from",
+    "end-at": "Ending at",
+    "add-another-date": "Add another date",
+    "submit-btn": "Ok",
+    "submit-btn-save": "Save"
   }
 }

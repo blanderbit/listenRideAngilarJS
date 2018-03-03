@@ -146,10 +146,19 @@ angular.module('listnride', [
       // top level domain, will be used in future
       var topLevelDomain = domain[domain.length - 1];
       var retrievedLanguage = "";
-      // select the language
-      // either get from top domain or select the english version
-      if (availableLanguages.indexOf(topLevelDomain) >= 0) retrievedLanguage = topLevelDomain;
-      else retrievedLanguage = defaultLanguage;
+
+      // using localhost
+      if (host.indexOf("localhost") >= 0 || host[0].match('localhost')) {
+        retrievedLanguage = $localStorageProvider.get('selectedLanguage') ? $localStorageProvider.get('selectedLanguage') : defaultLanguage;
+      }
+      // staging or production
+      else {
+        // select the language
+        // either get from top domain or select the english version
+        if (availableLanguages.indexOf(topLevelDomain) >= 0) retrievedLanguage = topLevelDomain;
+        else retrievedLanguage = defaultLanguage;
+      }
+
       return retrievedLanguage;
     };
 

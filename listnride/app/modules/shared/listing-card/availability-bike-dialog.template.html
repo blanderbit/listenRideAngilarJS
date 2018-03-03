@@ -1,0 +1,43 @@
+<md-dialog>
+
+  <div show-xs>
+    <div class="md-toolbar-tools" layout-align="space-between center">
+      <span class="lnr-btn-placeholder"></span>
+      <h2 class="lnr-center">{{ 'availability.modal-title' | translate }}</h2>
+      <md-button class="md-icon-button" ng-click="availabilityDialog.close()">
+        <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </div>
+
+  <md-dialog-content class="" layout="column">
+    <div class="md-dialog-content" layout="column">
+      <div layout="column" layout-align="center center" ng-if="!availabilityDialog.inputs.length">
+        <p>Here you can set availability on current bike</p>
+        <md-button type="submit" class="md-accent md-raised md-confirm-button md-primary" ng-click="availabilityDialog.addInput()">
+          Let's start! 
+        </md-button>
+      </div>
+      <form ng-if="availabilityDialog.inputs.length" ng-cloak name="availabilityForm" novalidate>
+        <div class="availability__list">
+          <div layout="row" layout-align="center center" ng-repeat="input in availabilityDialog.inputs">
+            <span class="lnr-btn-placeholder"></span>
+            <input-range data="input" disabled-dates="availabilityDialog.disabledDates"></input-range>
+            <md-button class="md-icon-button md-warn" ng-click="availabilityDialog.removeInput($index)">
+              <md-icon md-font-icon="fa-times" class="fa fa--lh20"></md-icon>
+            </md-button>
+          </div>
+        </div>
+        <div layout="row" layout-align="center center" layout-margin ng-if="!availabilityDialog.isMaxInputs">
+          <a class="lnr-link" ng-click="availabilityDialog.addInput()">{{ 'availability.add-another-date' | translate }}</a>
+        </div>
+        <div layout="row" layout-align="center center" layout-margin>
+          <md-button type="submit" class="md-accent md-raised md-confirm-button md-primary" ng-click="availabilityDialog.save(availabilityForm)">
+            <span ng-hide="!availabilityDialog.isChanged">{{ 'availability.submit-btn-save' | translate }}</span>
+            <span ng-hide="availabilityDialog.isChanged">{{ 'availability.submit-btn' | translate }}</span>
+          </md-button>
+        </div>
+      </form>
+    </div>
+  </md-dialog-content>
+</md-dialog>
