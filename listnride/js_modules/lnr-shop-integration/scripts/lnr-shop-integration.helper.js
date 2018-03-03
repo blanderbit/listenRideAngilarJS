@@ -510,7 +510,7 @@ var lnrHelper = {
         '</div>',
         // on hover: rent button
         '<span class="content">',
-        '<button onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ')" class="md-button rent-button">' + basicInfo.buttonText + '</button>',
+        '<button onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ', \'' + userLang + '\')" class="md-button rent-button">' + basicInfo.buttonText + '</button>',
         '</span>',
         '</div>',
         // bike description
@@ -688,13 +688,14 @@ var lnrHelper = {
    * based on userId and bikeId
    * @param {Number} userId id who owns the bike
    * @param {Number} bikeId id of the bike requested
+   * @param {String} userLang user browser language
    * @returns {void}
    */
-  spawnWizard: function (userId, bikeId) {
+  spawnWizard: function (userId, bikeId, userLang) {
     // select shop solution based on the environment
-    var url = (lnrConstants.env === 'staging') ? lnrConstants.shopUrl.staging : lnrConstants.shopUrl.production;
+    var url = lnrConstants.env === 'staging' ? lnrConstants.shopUrl.staging[userLang] : lnrConstants.shopUrl.production[userLang];
     // window dimensions, url, parameter, and open type
-    var windowObj = lnrHelper.getWindowParams(url, userId, bikeId);
+    var windowObj = lnrHelper.getWindowParams(url, bikeId);
     // open window for selected environment and dimensions
     window.open(windowObj.url, windowObj.type, windowObj.params);
   },
@@ -710,11 +711,10 @@ var lnrHelper = {
    * get window configuration for opening the lnr shop solution
    * window dimensions, url, opening type, and window parameter
    * @param {String} url id who owns the bike
-   * @param {String} userId id of the bike requested
    * @param {String} bikeId id of the bike requested
    * @returns {Object} window objects
    */
-  getWindowParams: function (url, userId, bikeId) {
+  getWindowParams: function (url, bikeId) {
     // dimensions
     var width = 650,
       height = 700,
@@ -728,7 +728,7 @@ var lnrHelper = {
       left: left,
       top: top,
       //window url
-      url: url + '?user_id=' + userId + '&ride_id=' + bikeId,
+      url: url + '?bikeId=' + bikeId,
       // open type
       type: '_blank',
       // window params
