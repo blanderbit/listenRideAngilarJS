@@ -1,9 +1,8 @@
 'use strict';
 
 angular.module('listnride', [
-  /* internal modules */
-	'header',
-  'footer',
+
+  /* app_lite_start */
   'home',
   'search',
   'bikeCard',
@@ -20,16 +19,22 @@ angular.module('listnride', [
   'rating',
   'settings',
   'invoices',
-  'velothonBikerental',
-  'cyclassicsHamburg',
-  'riderman',
-  'jobs',
   'listingABike',
   'rentingABike',
+  'static',
+  'invite',
+  'listnride.constant',
+  'inviteLanding',
+  'metaTags',
+  'receipt',
+  /* app_lite_end */
+
+  /* app_extras_start */
+  'header',
+  'footer',
   'raphaSuperCross',
   'inVeloVeritas',
   'crossride',
-  'static',
   'ampler-integration',
   'vello-integration',
   'veletage-integration',
@@ -40,17 +45,7 @@ angular.module('listnride', [
   'mcbw',
   'pushnpost',
   'kuchenundraketen',
-  'invite',
-  'listnride.constant',
-  'inviteLanding',
-  'coffeespin',
-  'depart',
-  'invest',
-  'supercrossMunich',
-  'seoLanding',
-  'constanceSpin',
-  'velosoph',
-  'metaTags',
+  'rethinkIntegration',
   'vanmoofIntegration',
   'votec-integration',
   'capeArgus',
@@ -59,10 +54,20 @@ angular.module('listnride', [
   'cityLanding',
   'categoryLanding',
   'hamburgTriathlon',
-  'inputRange',
-  'receipt',
-  'rethinkIntegration',
-  /* external modules */
+  'supercrossMunich',
+  'seoLanding',
+  'constanceSpin',
+  'velosoph',
+  'coffeespin',
+  'depart',
+  'invest',
+  'velothonBikerental',
+  'cyclassicsHamburg',
+  'riderman',
+  'jobs',
+  /* app_extras_end */
+
+  /* external_modules_start */
   'ngAnimate',
   'ngMaterial',
   'ngMessages',
@@ -86,6 +91,7 @@ angular.module('listnride', [
   '720kb.socialshare',
   'angularMoment',
   'credit-cards'
+  /* external_modules_end */
 ])
 .config(['$translateProvider', '$localStorageProvider', '$translatePartialLoaderProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', '$compileProvider', 'ngMetaProvider', 'ENV', 'socialshareConfProvider',
   function($translateProvider, $localStorageProvider, $translatePartialLoaderProvider, ezfbProvider, $mdAriaProvider, $locationProvider, $compileProvider, ngMetaProvider, ENV, socialshareConfProvider) {

@@ -104,6 +104,8 @@ module.exports = function () {
             'dist/app/index.html',
             'dist/app/vendors.min.js',
             'dist/app.min.js',
+            'dist/app-lite.min.js',
+            'dist/app-extras.min.js',
             'dist/modules.tpl.min.js',
             'dist/services.tpl.min.js',
             'dist/vendors.min.js',
