@@ -65,6 +65,7 @@ angular.module('listnride', [
   'kuchenundraketen',
   'supercrossMunich',
   'capeArgus',
+  'inputRange',
   /* app_extras_end */
 
   /* external_modules_start */
