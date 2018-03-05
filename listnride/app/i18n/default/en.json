@@ -366,7 +366,9 @@
     "enter-email": "Please enter your email",
     "duplicate-start": "Duplication process started",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
-    "bike-deleted": "Bike successfully deleted"
+    "bike-deleted": "Bike successfully deleted",
+    "range-success-delete": "Availability range successfully deleted",
+    "availability-success-saved": "Availability successfully saved"
   },
   "settings": {
     "settings": "Settings",
