@@ -133,11 +133,9 @@
           login: ['$state', '$stateParams', 'authentication', function($state, $stateParams, authentication) {
             return authentication.tokenLogin($stateParams.shop_token, $stateParams.email).then(
               function (success) {
-                console.log('success');
                 authentication.setCredentials(success.data);
               },
               function (error) {
-                console.log('error');
               }
             );
           }]
