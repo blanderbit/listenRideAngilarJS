@@ -95,7 +95,7 @@ function inputRangeController($scope, $translate) {
       date.setHours(0, 0, 0, 0);
       var now = new Date();
       now.setHours(0, 0, 0, 0);
-      if (date.getTime() < now.getTime()) {
+      if (date.getTime() <= now.getTime()) {
         return [false, "date-past", ""];
       } else if (dateClosed(date)) {
         return [false, "date-closed", ""];
