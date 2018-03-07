@@ -22,6 +22,7 @@ angular.module('listnride', [
   'listnride.constant',
   'metaTags',
   'receipt',
+  'inputRange',
   /* app_core_end */
 
   /* app_extras_start */

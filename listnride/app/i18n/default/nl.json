@@ -365,7 +365,9 @@
     "enter-email": "Vul alstublieft uw e-mailadres in",
     "duplicate-start": "Duplicatieproces gestart",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
-    "bike-deleted": "Fiets succesvol verwijderd"
+    "bike-deleted": "Fiets succesvol verwijderd",
+    "range-success-delete": "Availability range successfully deleted",
+    "availability-success-saved": "Availability successfully saved"
   },
   "settings": {
     "settings": "Instellingen",
