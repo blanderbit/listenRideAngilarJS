@@ -122,7 +122,11 @@ module.exports = function () {
         watchers: ['lint',
             'clean',
             'scripts'
-        ]
+        ],
+        htmlMinifyOptions: {
+            collapseWhitespace: true,
+            removeComments: true
+        }
     };
     var environments = {
         local: {

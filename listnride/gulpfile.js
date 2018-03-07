@@ -17,6 +17,7 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglifyjs');
 var purifyCss = require('gulp-purifycss');
 var imagemin = require('gulp-imagemin');
+var htmlmin = require('gulp-htmlmin');
 var stylish = require('jshint-stylish');
 var minifyCss = require('gulp-clean-css');
 var runSequence = require('run-sequence');
@@ -48,16 +49,17 @@ gulp.task('copy-index-dist', copyIndexDist);
 gulp.task('copy-index-tmp', copyIndexTmp);
 gulp.task('copy-index-app', copyIndexApp);
 gulp.task('minify-i18n', minifyI18n);
+gulp.task('html-minify', htmlMinify);
 gulp.task('constants', appConstants);
 gulp.task('translation-constants', translationConstants);
 gulp.task('copy-i18n', copyI18n);
 
 // listnride and vendor scripts
-gulp.task('vendors', vendors);
-gulp.task('vendors-production', vendorsProduction);
-gulp.task('vendors-shop-trim', vendorsShopTrim);
-gulp.task('vendors-shop', vendorsShop);
-gulp.task('minify-scripts', minifyScripts);
+gulp.task('scripts', scripts);
+gulp.task('scripts-production', scriptsProduction);
+gulp.task('scripts-shop-trim', scriptsShopTrim);
+gulp.task('scripts-shop', scriptsShop);
+gulp.task('scripts-minify', scriptsMinify);
 gulp.task('base-tag', baseTag);
 
 // images and fonts
@@ -75,8 +77,8 @@ gulp.task('watch', watch);
 
 // append revisions to invalidate cache after deployment
 gulp.task('revisions', revisions);
-gulp.task('replace-revisions-index', replaceRevisionsIndex);
-gulp.task('replace-revisions-index-shop', replaceRevisionsIndexShop);
+gulp.task('revisions-index', revisionsIndex);
+gulp.task('revisions-index-shop', revisionsIndexShop);
 
 // shop integration related tasks
 gulp.task('resources-lnr-shop-integration', resourcesLnrShopIntegration);
@@ -165,13 +167,13 @@ function lint() {
  * @returns {gulp} for chaining
  */
 function injectTemplatesModules() {
-    return gulp.src(path.dist.index)
-        .pipe(inject(gulp.src(path.dist.templatesCache, {
-            read: false
-        }), {
-            relative: true,
-            removeTags: true
-        }))
+    // production
+    gulp.src(path.dist.index)
+        .pipe(inject(gulp.src(path.dist.templatesCache, { read: false }), { relative: true, removeTags: true }))
+        .pipe(gulp.dest(path.dist.root));
+    // shop
+    return gulp.src(path.dist.indexShop)
+        .pipe(inject(gulp.src(path.dist.templatesCache, { read: false }), { relative: true, removeTags: true }))
         .pipe(gulp.dest(path.dist.root));
 }
 /**
@@ -232,7 +234,7 @@ function copyDownloadables() {
  * minify and uglify vendors files
  * @returns {gulp} for chaining
  */
-function vendorsProduction() {
+function scriptsProduction() {
     return gulp.src(path.app.index)
         .pipe(useref())
         .pipe(gulpIf(path.app.js, uglify()))
@@ -245,7 +247,7 @@ function vendorsProduction() {
  * copy index as index-shop
  * @returns {gulp} for chaining
  */
-function vendorsShop() {
+function scriptsShop() {
     return gulp.src(path.app.indexShop)
         .pipe(useref())
         .pipe(gulpIf(path.app.js, uglify()))
@@ -253,8 +255,13 @@ function vendorsShop() {
         .pipe(gulpIf('*.css', minifyCss()))
         .pipe(gulp.dest(path.dist.root));
 }
-function vendorsShopTrim() {
-    return gulp.src(path.dist.appShop)
+function scriptsShopTrim() {
+    // javascript
+    gulp.src(path.dist.appShop)
+        .pipe(remove({ shop: true }))
+        .pipe(gulp.dest(path.dist.root));
+    // html
+    return gulp.src(path.dist.indexShop)
         .pipe(remove({ shop: true }))
         .pipe(gulp.dest(path.dist.root));
 }
@@ -263,29 +270,20 @@ function vendorsShopTrim() {
  * @param {clean~cleanCallback} cb - The callback that handles the response.
  * @returns {gulp} for chaining
  */
-function vendors(cb) {
+function scripts(cb) {
     return runSequence(
-        'vendors-production',
-        'vendors-shop',
-        'vendors-shop-trim',
+        'scripts-production',
+        'scripts-shop',
+        'scripts-shop-trim',
         cb
     );
-}
-/**
- * copy new referenced index file to dist
- * index file with new references to dist folder
- * @returns {gulp} for chaining
- */
-function copyIndexDist() {
-    return gulp.src('./app/index.html')
-        .pipe(gulp.dest(path.dist.root));
 }
 /**
  * concat all development js files - local
  * minify and uglify development files
  * @returns {gulp} for chaining
  */
-function minifyScripts() {
+function scriptsMinify() {
     // production scripts
     gulp.src(path.dist.app)
         .pipe(concat(path.dist.source))
@@ -303,6 +301,25 @@ function minifyScripts() {
     // vendor
     return gulp.src(path.dist.vendors)
         .pipe(uglify(path.dist.sourceVendors))
+        .pipe(gulp.dest(path.dist.root));
+}
+function htmlMinify() {
+    // production
+    gulp.src(path.dist.index)
+    .pipe(htmlmin(path.htmlMinifyOptions))
+    .pipe(gulp.dest(path.dist.root));
+    // shop
+    return gulp.src(path.dist.indexShop)
+    .pipe(htmlmin(path.htmlMinifyOptions))
+    .pipe(gulp.dest(path.dist.root));
+}
+/**
+ * copy new referenced index file to dist
+ * index file with new references to dist folder
+ * @returns {gulp} for chaining
+ */
+function copyIndexDist() {
+    return gulp.src('./app/index.html')
         .pipe(gulp.dest(path.dist.root));
 }
 /**
@@ -460,7 +477,7 @@ function revisions() {
  * replace js files references in index with revisions
  * @returns {gulp} for chaining
  */
-function replaceRevisionsIndex() {
+function revisionsIndex() {
     var manifest = gulp.src(path.dist.manifest);
     return gulp.src(path.dist.index)
         .pipe(revReplace({
@@ -468,8 +485,7 @@ function replaceRevisionsIndex() {
         }))
         .pipe(gulp.dest(path.dist.root));
 }
-
-function replaceRevisionsIndexShop() {
+function revisionsIndexShop() {
     var manifest = gulp.src(path.dist.manifest);
     return gulp.src(path.dist.indexShop)
         .pipe(revReplace({
@@ -619,7 +635,7 @@ function local(cb) {
         'scripts-local',
         'images',
         'watch',
-        cb)
+        cb);
 }
 /**
  * tasks for deployment
@@ -640,17 +656,18 @@ function deploy(cb) {
         'cache-templates-services',
         'images',
         'copy-fonts',
-        'vendors',
-        'scripts-deploy',
+        'scripts',
+        'scripts-minify',
         'inject-templates-modules',
         'copy-index-app',
         'copy-i18n',
         'minify-i18n',
         'changes-in-index',
         'revisions',
-        'replace-revisions-index',
-        'replace-revisions-index-shop',
+        'revisions-index',
+        'revisions-index-shop',
         'base-tag',
+        'html-minify',
         'copy-downloadables',
         'clean-extra',
         'clean-extra-local',
