@@ -80,6 +80,7 @@ and chrome requests it. not for safari and firefox
 app.use('/*', function (req, res) {
   var origin = req.headers.host;
   console.log("origin: ", origin);
+  console.log("params: ", req.params);
   res.sendFile(__dirname.concat('/listnride/dist/index.html'));
 });
 
