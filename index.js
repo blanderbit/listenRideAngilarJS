@@ -76,6 +76,8 @@ that is because 'angular-sanitize.min.js.map' is missing
 and chrome requests it. not for safari and firefox
 */
 app.use('/*', function (req, res) {
+  var origin = req.headers.host;
+  console.log("origin: ", origin);
   res.sendFile(__dirname.concat('/listnride/dist/index.html'));
 });
 
