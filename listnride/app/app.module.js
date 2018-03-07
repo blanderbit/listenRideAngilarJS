@@ -2,9 +2,7 @@
 
 angular.module('listnride', [
 
-  /* app_lite_start */
-  'home',
-  'search',
+  /* app_core_start */
   'bikeCard',
   'user',
   'bike',
@@ -12,30 +10,34 @@ angular.module('listnride', [
   'requests',
   'message',
   'list',
+  'invoices',
   'autocomplete',
   'confirmation',
   'listings',
   'listingCard',
   'rating',
-  'settings',
-  'invoices',
   'listingABike',
   'rentingABike',
   'static',
-  'invite',
   'listnride.constant',
-  'inviteLanding',
   'metaTags',
-  'seoLanding',
   'receipt',
-  /* app_lite_end */
+  'inputRange',
+  /* app_core_end */
 
   /* app_extras_start */
+  //removeIf(shop) 
+  'home',
+  'search',
   'header',
   'footer',
+  'invite',
+  'inviteLanding',
+  'settings',
   'invest',
   'businessCommunity',
   'jobs',
+  'seoLanding',
   'cityLanding',
   'categoryLanding',
   'vello-integration',
@@ -65,7 +67,7 @@ angular.module('listnride', [
   'kuchenundraketen',
   'supercrossMunich',
   'capeArgus',
-  'inputRange',
+  //endRemoveIf(shop)
   /* app_extras_end */
 
   /* external_modules_start */

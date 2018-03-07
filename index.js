@@ -1,3 +1,5 @@
+"use strict";
+
 var helmet = require('helmet');
 var express = require('express');
 var expressEnforcesSSL = require('express-enforces-ssl');
