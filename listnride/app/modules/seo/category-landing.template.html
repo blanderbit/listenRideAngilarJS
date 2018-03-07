@@ -1,5 +1,5 @@
  <md-content class="single-column" ng-hide="categoryLanding.loading"> 
-  <div id="hero-shot-small" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/seo/berlin-ebikes.jpg'); background-position: 50% 20%;" layout="column" layout-align="center center">
+  <div id="hero-shot-small" class="lnr-preload-bg" style="background-image: url('{{ categoryLanding.data.header_image}}'); background-position: 50% 20%;" layout="column" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ 'seo.rent-the-best' | translate }} {{ categoryLanding.category | translate }} in {{ categoryLanding.city }}</h1>
     </div>
@@ -86,7 +86,7 @@
 
         <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/electric.jpg')">
           <a ng-if="categoryLanding.data.categories.electro < 8" ui-sref="search({location: categoryLanding.data.city, ebikes: true})" layout-padding layout="column" layout-align="center  center">
-            <h3 class="md-title">{{ 'list.category.kids' | translate }}</h3>
+            <h3 class="md-title">{{ 'list.category.electro' | translate }}</h3>
           </a>
           <a ng-if="categoryLanding.data.categories.electro >= 8" ui-sref="categoryLanding({city: categoryLanding.data.city, category: 'electric'})" layout-padding layout="column" layout-align="center center">
             <h3 class="md-title">{{ 'list.category.electro' | translate }}</h3>
@@ -95,7 +95,7 @@
 
         <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/special.jpg')">
           <a ng-if="categoryLanding.data.categories.special < 8" ui-sref="search({location: categoryLanding.data.city, special: true})" layout-padding layout="column" layout-align="center  center">
-            <h3 class="md-title">{{ 'list.category.kids' | translate }}</h3>
+            <h3 class="md-title">{{ 'list.category.special' | translate }}</h3>
           </a>
           <a ng-if="categoryLanding.data.categories.special >= 8" ui-sref="categoryLanding({city: categoryLanding.data.city, category: 'special'})" layout-padding layout="column" layout-align="center center">
             <h3 class="md-title">{{ 'list.category.special' | translate }}</h3>
