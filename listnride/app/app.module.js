@@ -2,7 +2,7 @@
 
 angular.module('listnride', [
 
-  /* app_lite_start */
+  /* app_core_start */
   'home',
   'search',
   'bikeCard',
@@ -28,9 +28,10 @@ angular.module('listnride', [
   'metaTags',
   'seoLanding',
   'receipt',
-  /* app_lite_end */
+  /* app_core_end */
 
   /* app_extras_start */
+  //removeIf(shop) 
   'header',
   'footer',
   'invest',
@@ -65,6 +66,7 @@ angular.module('listnride', [
   'kuchenundraketen',
   'supercrossMunich',
   'capeArgus',
+  //endRemoveIf(shop)
   /* app_extras_end */
 
   /* external_modules_start */

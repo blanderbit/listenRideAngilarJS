@@ -12,6 +12,7 @@ var concat = require('gulp-concat');
 var useref = require('gulp-useref');
 var inject = require('gulp-inject');
 var replace = require('gulp-replace');
+var remove = require('gulp-remove-code');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglifyjs');
 var purifyCss = require('gulp-purifycss');
@@ -53,10 +54,10 @@ gulp.task('copy-i18n', copyI18n);
 
 // listnride and vendor scripts
 gulp.task('vendors', vendors);
-gulp.task('vendors-seq-1', vendorsSeq1);
-gulp.task('vendors-seq-2', vendorsSeq2);
-gulp.task('vendors-seq-3', vendorsSeq3);
-gulp.task('scripts-deploy', scriptsDeploy);
+gulp.task('vendors-production', vendorsProduction);
+gulp.task('vendors-shop-trim', vendorsShopTrim);
+gulp.task('vendors-shop', vendorsShop);
+gulp.task('minify-scripts', minifyScripts);
 gulp.task('base-tag', baseTag);
 
 // images and fonts
@@ -75,6 +76,7 @@ gulp.task('watch', watch);
 // append revisions to invalidate cache after deployment
 gulp.task('revisions', revisions);
 gulp.task('replace-revisions-index', replaceRevisionsIndex);
+gulp.task('replace-revisions-index-shop', replaceRevisionsIndexShop);
 
 // shop integration related tasks
 gulp.task('resources-lnr-shop-integration', resourcesLnrShopIntegration);
@@ -230,7 +232,7 @@ function copyDownloadables() {
  * minify and uglify vendors files
  * @returns {gulp} for chaining
  */
-function vendorsSeq1() {
+function vendorsProduction() {
     return gulp.src(path.app.index)
         .pipe(useref())
         .pipe(gulpIf(path.app.js, uglify()))
@@ -243,25 +245,29 @@ function vendorsSeq1() {
  * copy index as index-shop
  * @returns {gulp} for chaining
  */
-function vendorsSeq2() {
-    return gulp.src('./dist/app-core.min.js')
-        .pipe(rename('app-shop.min.js'))
+function vendorsShop() {
+    return gulp.src(path.app.indexShop)
+        .pipe(useref())
+        .pipe(gulpIf(path.app.js, uglify()))
+        .pipe(gulpIf(path.nodeModules, uglify()))
+        .pipe(gulpIf('*.css', minifyCss()))
+        .pipe(gulp.dest(path.dist.root));
+}
+function vendorsShopTrim() {
+    return gulp.src(path.dist.appShop)
+        .pipe(remove({ shop: true }))
         .pipe(gulp.dest(path.dist.root));
 }
 /**
  * reflect changes on dist/index
+ * @param {clean~cleanCallback} cb - The callback that handles the response.
  * @returns {gulp} for chaining
  */
-function vendorsSeq3() {
-    return gulp.src(path.dist.index)
-        .pipe(rename('index-shop.html'))
-        .pipe(gulp.dest(path.dist.root));
-}
-
 function vendors(cb) {
     return runSequence(
-        'vendors-seq-1',
-        'vendors-seq-2',
+        'vendors-production',
+        'vendors-shop',
+        'vendors-shop-trim',
         cb
     );
 }
@@ -279,14 +285,22 @@ function copyIndexDist() {
  * minify and uglify development files
  * @returns {gulp} for chaining
  */
-function scriptsDeploy() {
+function minifyScripts() {
+    // production scripts
     gulp.src(path.dist.app)
         .pipe(concat(path.dist.source))
         .pipe(ngAnnotate())
         .pipe(gulp.dest(path.dist.root))
         .pipe(uglify(path.dist.source))
         .pipe(gulp.dest(path.dist.root));
-
+    // shop scripts
+    gulp.src(path.dist.appShop)
+        .pipe(concat(path.dist.sourceShop))
+        .pipe(ngAnnotate())
+        .pipe(gulp.dest(path.dist.root))
+        .pipe(uglify(path.dist.sourceShop))
+        .pipe(gulp.dest(path.dist.root));
+    // vendor
     return gulp.src(path.dist.vendors)
         .pipe(uglify(path.dist.sourceVendors))
         .pipe(gulp.dest(path.dist.root));
@@ -368,8 +382,8 @@ function imagesSvg() {
 /**
  * clean dist folder
  * before every deployment
- * @returns {gulp} for chaining
  * @param {clean~cleanCallback} cb - The callback that handles the response.
+ * @returns {gulp} for chaining
  */
 function clean(cb) {
     var cleanFiles = [path.dist.root, 'app/app.min.js'];
@@ -439,7 +453,7 @@ function revisions() {
         .pipe(rev())
         .pipe(gulp.dest(path.dist.root))
         .pipe(rev.manifest())
-        .pipe(gulp.dest(path.dist.root))
+        .pipe(gulp.dest(path.dist.root));
 }
 /**
  * replace revision in index file
@@ -449,6 +463,15 @@ function revisions() {
 function replaceRevisionsIndex() {
     var manifest = gulp.src(path.dist.manifest);
     return gulp.src(path.dist.index)
+        .pipe(revReplace({
+            manifest: manifest
+        }))
+        .pipe(gulp.dest(path.dist.root));
+}
+
+function replaceRevisionsIndexShop() {
+    var manifest = gulp.src(path.dist.manifest);
+    return gulp.src(path.dist.indexShop)
         .pipe(revReplace({
             manifest: manifest
         }))
@@ -626,8 +649,8 @@ function deploy(cb) {
         'changes-in-index',
         'revisions',
         'replace-revisions-index',
+        'replace-revisions-index-shop',
         'base-tag',
-        'vendors-seq-3',
         'copy-downloadables',
         'clean-extra',
         'clean-extra-local',
