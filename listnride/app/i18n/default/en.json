@@ -149,7 +149,7 @@
       },
       "velothon-bikerental": {
         "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
-        "meta-description": "Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!"
+        "meta-description": "Take part in the Velothon Berlin 2018! Rent a road bike from the listnride bike sharing community and join in on the fun!"
       },
       "constance-spin": {
         "meta-title": "Rent the perfect road bike during Eurobike",
@@ -286,7 +286,7 @@
     "agree-terms-link": "listnride terms",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
-      "call-us": "Call us +49 (0)30-120870330, Mo-Fr 9-18 pm.",
+      "call-us": "Call us +49 (0)30-120870330, monday to friday 9-18pm. ",
       "email-us": "Or write us an email",
       "support": "listnride Support"
     },
@@ -420,7 +420,7 @@
     "lets-start": "Let's start",
     "lets-start-description": "It only takes 3 minutes",
     "verify-profile": "Verify your Profile",
-    "resend-email": "Resend Email",
+    "resend-email": "Resend email",
     "public": "Public",
     "private": "Private",
     "private-tip": "This information will not be open to the public",
@@ -431,7 +431,7 @@
       "text2": "We're a sharing community, so the trust and safety of you and the other users have highest priority. We therefore kindly ask you to verify your profile through a few simple steps. The better the information you enter, the higher are chances that your requests will be accepted and bikes will be requested."
     },
     "2": {
-      "title": "Upload your Profile Picture",
+      "title": "Upload your profile picture",
       "description": "Show other user who is the person behind your profile.",
       "business-description": "Having your logo shown on listnride is a great way to attract more request",
       "business-title": "Upload your Shop Logo"
@@ -450,11 +450,11 @@
       "enter-valid-phone-nr": "Please enter a valid phone number",
       "send-confirmation-sms": "Send Confirmation",
       "send-confirmation-sms-mobile": "Send SMS Code",
-      "resend-confirmation-sms": "Resend Confirmation",
+      "resend-confirmation-sms": "Resend confirmation",
       "resend-confirmation-sms-mobile": "Resend",
       "sms-verification-code": "SMS Verification Code",
       "sms-verification-code-mobile": "Verification Code",
-      "confirm-code": "Confirm Code",
+      "confirm-code": "Confirm code",
       "confirm-code-mobile": "Confirm",
       "phone-nr-verified": "Your number is successfully verified!"
     },
@@ -538,7 +538,7 @@
   },
   "rideChat": {
     "1": "You would like to rent the <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> by {{lister.first_name}} {{lister.last_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
-    "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact Details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.phone_number}},<br>Address: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
+    "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.phone_number}},<br>Address: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} has confirmed the return of the ride and gave you a review. Finally, please also rate the ride. This helps our community a lot and completes the rental.",
     "6": "Thanks for rating, the rental was successfully completed.",
     "8": "Unfortunately, the lister could't accept your request. Simply request some other great bikes.",
@@ -603,15 +603,15 @@
     "featured-bikes-subheader": "Whether it’s road bikes, mountain bikes, cargo bikes, city bikes or e-bikes, you can rent them all. These are the current favorite rental bikes of the community.",
     "featured-tiles-header": "Get inspired",
     "featured-tiles-subheader": "We partner up with innovative brands, write about interesting developments and take part in special events.",
-    "featured-cities-header": "Pedaling through the urban jungle",
-    "featured-cities-subheader": "listnride’s bike rental service is becoming available in more and more cities around the world. Check out some insiders’ tips here:",
-    "list-a-bike-header": "Got a nice bike and want people to see it?",
+    "featured-cities-header": "With listnride you are never without your perfect bike ",
+    "featured-cities-subheader": "listnride’s bike rental service is becoming available in more cities and holiday regions around Europe. Here are some tips for you: ",
+    "list-a-bike-header": "Got a nice bike and want people to use it?",
     "list-a-bike-subheader": "List your bike for rent, meet fun new people and earn some extra cash.",
     "meta-title": "listnride - The bike sharing community",
     "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
   },
   "autocomplete": {
-    "default-placeholder": "Where would you like to rent a bike"
+    "default-placeholder": "Where would you like to rent a bike?"
   },
   "search": {
     "no-bikes": "There are no bikes in this location",
@@ -627,8 +627,8 @@
     "own-bike": "You can't request your own bike",
     "log-in-to-request-title": "Log in or Sign up",
     "log-in-to-request-description": "Log in to request the bike. If you don't have an account yet, feel free to sign up.",
-    "select-timespan": "Choose rental timespan first",
-    "select-timespan-description": "Before you can request, please set the timespan of your rental. Simply click on the days and select pickup and dropoff times in the above calendar.",
+    "select-timespan": "Choose rental time span first",
+    "select-timespan-description": "Before you can request, please set the time span of your rental. Simply click on the days and select pickup and dropoff times in the above calendar.",
     "info-subtotal": "This is the regular daily price<br>times the amount of days you want<br>to rent the bike.",
     "info-discount": "Average daily discount you<br>get per day by renting out<br>for a longer period of time.",
     "info-service-fee": "The service fee is<br>used for providing<br>listnride. It includes VAT.",
@@ -640,7 +640,7 @@
     "list-your-bike": "List your bike",
     "back": "Back",
     "next": "Next",
-    "list-bike": "List My Bike",
+    "list-bike": "List my bike",
     "category": {
       "header": "What is your bike category?",
       "hint": "First, select the category of your bike. Then select the right subcategory.",
@@ -659,10 +659,10 @@
       "brand": "Brand",
       "name": "Name",
       "description": "Description (min. 100 characters)",
-      "min-length-warning": "Length should be at least 100 characters",
+      "min-length-warning": "At least 100 characters",
       "size": "Rider Height",
       "frame-size": "Frame size",
-      "bicycle-number": "Bicycle No.",
+      "bicycle-number": "Bicycle number",
       "frame-number": "Frame number",
       "custom-fields": "Additional fields",
       "notes": "Notes",
@@ -683,13 +683,13 @@
     },
     "pictures": {
       "header": "Upload some pictures of your bike",
-      "hint": "Now select some nice pictures of your bike. Here are some important photo tips for making your listing look ever better.",
+      "hint": "Now select some nice pictures of your bike. Here are some important photo tips for making your listing look even better.",
       "how-to": "Photo tips for making your listing stand out",
       "label": "Pictures",
       "select-images": "Select images",
       "remove": "Remove",
       "upload-bike-header": "Upload some pictures of your bike",
-      "under-min-size": "Some of your images size is less than allowable minimum 1500x1000:",
+      "under-min-size": "Some of your images size is less than the allowable minimum 1500x1000:",
       "invalid-images": "Invalid images"
     },
     "location": {
@@ -757,7 +757,7 @@
         "indoor": "Indoor"
       },
       "3": {
-        "tracking": "Tracking",
+        "tracking": "Trekking",
         "enduro": "Enduro",
         "freeride": "Freeride",
         "cross-country": "Cross Country",
@@ -963,7 +963,6 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
   "seo": {
-    "cities-title": "Planning to Travel? Check out more cities:",
     "header": "Rent the best bikes in",
     "rent-the-best": "Rent the best",
     "bikes": "bikes",
