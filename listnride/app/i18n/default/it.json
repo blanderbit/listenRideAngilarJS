@@ -274,6 +274,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Pagamento sicuro con",
+    "agree-terms": "With 'Request Bike' you agree to the",
+    "agree-terms-link": "listnride terms",
     "footer": {
       "questions": "Hai domande sul noleggio della bicicletta?",
       "call-us": "Chaimaci al: +49 (0)30-120870330, Lun-Ven 9-18. ",
@@ -292,7 +294,8 @@
     },
     "details": {
       "tab": "2. Dati personali",
-      "invoice-address": "Il tuo indirizzo di fatturazione ",
+      "invoice-address": "Il tuo indirizzo di fatturazione",
+      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Si prega di verificare",
       "send-sms": "Ti invieremo un SMS sul tuo telefono ",
       "check-phone": "Per favore controlla il tuo telefono ",
@@ -352,8 +355,15 @@
     "account-deleted": "Il tuo profilo è stato cancellato",
     "enter-email": "Per favore inserisci la tua email",
     "duplicate-start": "Il processo di duplicazione è iniziato",
+<<<<<<< HEAD
     "duplicate-finish": "Processo di duplicazione è terminato. Copie create con successo",
     "bike-deleted": "Bici cancellata con successo"
+=======
+    "duplicate-finish": "Duplication process finished. Copies created successfully",
+    "bike-deleted": "Bici cancellata con successo",
+    "range-success-delete": "Availability range successfully deleted",
+    "availability-success-saved": "Availability successfully saved"
+>>>>>>> AS-frontend-build-system
   },
   "settings": {
     "settings": "Impostazioni",
@@ -560,15 +570,25 @@
     "signing-up-accept-tac": "Con l'iscrizione accetto ",
     "errors": {
       "password-length": "La password deve essere tra i 6-30 caratteri",
+      "password-length-xs": "6-30 caratteri",
       "password-missing": "Fornire una password",
+      "password-missing-xs": "Password richiesta",
       "valid-email": "Si prega di inserire un indirizzo email valido",
+      "valid-email-xs": "Indirizzo email non valido",
       "empty-email": "Inserisci il tuo indirizzo email",
+      "empty-email-xs": "Email richiesta",
       "empty-last-name": "Inserisci il tuo cognome",
+      "empty-last-name-xs": "Cognome richiesto",      
       "empty-first-name": "Inserisci il tuo nome",
+      "empty-first-name-xs": "Nome richiesto",
       "max-size-last-name": "Il cognome non deve superare i 30 caratteri",
+      "max-size-last-name-xs": "Supera 30 caratteri",
       "max-size-first-name": "Il nome non deve superare i 20 caratteri",
+      "max-size-first-name-xs": "Supera 20 caratteri",
       "empty-company-name": "Inserisci il nome della tua azienda",
-      "min-size-company-name": "Il nome della società dovrebbe essere superiore ai 2 caratteri"
+      "empty-company-name-xs": "Azienda richiesta",
+      "min-size-company-name": "Il nome della società dovrebbe essere superiore ai 2 caratteri",
+      "min-size-company-name-xs": "Altitudine di 3 caratteri"
     }
   },
   "home": {
@@ -943,6 +963,7 @@
     "bikes": "biciclette",
     "rent-perfect-bikes-in": "Noleggia la bicicletta perfetta a",
     "rent-category-bikes-in": " Ti offriamo una ampia scelta di bici a noleggio",
+<<<<<<< HEAD
     "bike-shops-in": "Negozi di biciclette a",
     "city": "Bici da città",
     "race": "Bici da corsa",
@@ -950,5 +971,23 @@
     "kids": "Bici da bambino",
     "electro": "E-bikes",
     "special": "Bici speciali"
+=======
+    "bike-shops-in": "Negozi di bici a",
+    "city": "bici città",
+    "race": "bici gara",
+    "all-terrain": "bici all-terrain",
+    "kids": "bici bambini",
+    "electro": "bici elettrica",
+    "special": "bici speciale"
+  },
+  "availability": {
+    "availability": "availability",
+    "modal-title": "When is your bike not available?",
+    "start-from": "Starting from",
+    "end-at": "Ending at",
+    "add-another-date": "Add another date",
+    "submit-btn": "Ok",
+    "submit-btn-save": "Save"
+>>>>>>> AS-frontend-build-system
   }
 }

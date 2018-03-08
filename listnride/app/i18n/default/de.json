@@ -281,6 +281,8 @@
   "booking": {
     "shopping": "Sicher bezahlen",
     "pay-secure": "Sicher bezahlen mit",
+    "agree-terms": "With 'Request Bike' you agree to the",
+    "agree-terms-link": "listnride terms",
     "footer": {
       "questions": "Du hast Fragen rund ums Mieten von Fahrrädern?",
       "call-us": "Ruf uns unter +49 (0)30-120870330, Mo-Fr 9-18 Uhr an. ",
@@ -300,6 +302,7 @@
     "details": {
       "tab": "2. Persönliche Daten",
       "invoice-address": "Rechnungsadresse",
+      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Verifizieren",
       "send-sms": "Wir senden dir eine SMS an dein Telefon.",
       "check-phone": "Bitte prüfe dein Telefon.",
@@ -362,7 +365,9 @@
     "enter-email": "Bitte gib deine E-Mail-Adresse ein",
     "duplicate-start": "Vervielfältigungsprozess gestartet",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
-    "bike-deleted": "Fahrrad erfolgreich gelöscht"
+    "bike-deleted": "Fahrrad erfolgreich gelöscht",
+    "range-success-delete": "Availability range successfully deleted",
+    "availability-success-saved": "Availability successfully saved"
   },
   "settings": {
     "settings": "Einstellungen",
@@ -566,15 +571,25 @@
     "signing-up-accept-tac": "Mit der Registrierung akzeptiere ich die",
     "errors": {
       "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
+      "password-length-xs": "6-30 Zeichen",
       "password-missing": "Bitte gib ein Passwort an",
-      "valid-email": "Bitte gib eine gültige E-Mail-Adresse an",
-      "empty-email": "Bitte gib deine E-Mail-Adresse an",
+      "password-missing-xs": "Passwort erforderlich",
+      "valid-email": "Bitte gib eine gültige Email-Adresse an",
+      "valid-email-xs": "Ungültige E-Mail",
+      "empty-email": "Bitte gib deine Email-Adresse an",
+      "empty-email-xs": "E-Mail erforderlich",
       "empty-last-name": "Bitte gib deinen Nachnamen an",
+      "empty-last-name-xs": "Nachname erforderlich",
       "empty-first-name": "Bitte gib deinen Vornamen an",
-      "max-size-last-name": "Der Nachname sollte maximal 30 Buchstaben lang sein",
+      "empty-first-name-xs": "Vornamen erforderlich",
+      "max-size-last-name": "Der Nachname sollte maximal 30 Buchstaben lang sein",      
+      "max-size-last-name-xs": "Max 30 Buchstaben",
       "max-size-first-name": "Der Vorname sollte maximal 20 Buchstaben lang sein",
+      "max-size-first-name-xs": "Max 20 Buchstaben",      
       "empty-company-name": "Bitte geben Sie Ihren Firmennamen ein",
-      "min-size-company-name": "Der Firmenname sollte länger als 2 Zeichen sein "
+      "empty-company-name-xs": "Firmenname erforderlich",
+      "min-size-company-name": "Der Firmenname sollte länger als 2 Zeichen sein ",
+      "min-size-company-name-xs": "Mindestens 3 Zeichen "
     }
   },
   "home": {
@@ -955,5 +970,14 @@
     "kids": "Kinderräder",
     "electro": "E-Bikes",
     "special": "Spezialräder"
+  },
+  "availability": {
+    "availability": "availability",
+    "modal-title": "When is your bike not available?",
+    "start-from": "Starting from",
+    "end-at": "Ending at",
+    "add-another-date": "Add another date",
+    "submit-btn": "Ok",
+    "submit-btn-save": "Save"
   }
 }

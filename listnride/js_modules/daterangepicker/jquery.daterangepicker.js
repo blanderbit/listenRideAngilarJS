@@ -841,7 +841,10 @@
 				customOpenAnimation: null,
 				customCloseAnimation: null,
 				customArrowPrevSymbol: null,
-				customArrowNextSymbol: null
+				customArrowNextSymbol: null,
+				lnrIsWidthStatic: false,
+				lnrShowTimeDom: true,
+				lnrSingleMonthMinWidth: 480
 			},opt);
 
 		opt.start = false;
@@ -856,7 +859,7 @@
 		if (opt.isTouchDevice) opt.hoveringTooltip = false;
 
 		//show one month on mobile devices
-		if (opt.singleMonth == 'auto') opt.singleMonth = $(window).width() < 480;
+		if (opt.singleMonth == 'auto') opt.singleMonth = $(window).width() < opt.lnrSingleMonthMinWidth;
 		if (opt.singleMonth) opt.stickyMonths = false;
 
 		if (!opt.showTopbar) opt.autoClose = true;
@@ -1285,7 +1288,7 @@
 		}
 
 		function open(animationTime)
-		{
+		{	
 			calcPosition();
 			redrawDatePicker();
 			checkAndSetDefaultValue();
@@ -1347,12 +1350,13 @@
 
 		function updateCalendarWidth()
 		{
-			// var gapMargin = box.find('.gap').css('margin-left');
-			// if (gapMargin) gapMargin = parseInt(gapMargin);
-			// var w1 = box.find('.month1').width();
-			// var w2 = box.find('.gap').width() + ( gapMargin ? gapMargin*2 : 0 );
-			// var w3 = box.find('.month2').width();
-			// box.find('.month-wrapper').width(w1 + w2 + w3);
+			if (opt.lnrIsWidthStatic) return;
+			var gapMargin = box.find('.gap').css('margin-left');
+			if (gapMargin) gapMargin = parseInt(gapMargin);
+			var w1 = box.find('.month1').width();
+			var w2 = box.find('.gap').width() + ( gapMargin ? gapMargin*2 : 0 );
+			var w3 = box.find('.month2').width();
+			box.find('.month-wrapper').width(w1 + w2 + w3);
 		}
 
 		function renderTime (name, date) {
@@ -1743,7 +1747,7 @@
 
 		function anyReservedDays(day)
 		{
-			var days = $("div.day.toMonth");
+			var days = $(box).find("div.day.toMonth");
 			if (day.length == 0 || days[0].attributes.time.value > day[0].attributes.time.value) return;
 			var lastDay = [days[days.length - 1]];
 			var start = day[0].attributes.time.value;
@@ -1753,8 +1757,9 @@
 			while( i < totalDays )
 			{
 				if ($(day).hasClass('date-reserved')) return markTmpInvalid(day, totalDays - i);
-				var nextDay = parseInt(day[0].attributes.time.value) + 86400000;
-				day = $("div.day[time=" + nextDay + "]");
+				// var nextDay = parseInt(day[0].attributes.time.value) + 86400000;
+				// day = $("div.day[time=" + nextDay + "]");
+				day = $(days).eq(i + 1)
 				i++;
 			}
 		}
@@ -2273,15 +2278,18 @@
 
 			}
 			//+'</div>'
-			html +=	'<div style="clear:both;height:0;font-size:0;"></div>' +
-				'<div class="time">' +
-				'<div class="time1"></div>';
-			if ( ! opt.singleDate ) {
-				html += '<div class="time2"></div>';
+			if (opt.lnrShowTimeDom) 
+			{
+				html +=	'<div style="clear:both;height:0;font-size:0;"></div>' +
+					'<div class="time">' +
+					'<div class="time1"></div>';
+				if ( ! opt.singleDate ) {
+					html += '<div class="time2"></div>';
+				}
+				html += '</div>' +
+					'<div style="clear:both;height:0;font-size:0;"></div>' +
+					'</div>';
 			}
-			html += '</div>' +
-				'<div style="clear:both;height:0;font-size:0;"></div>' +
-				'</div>';
 
 			html += '<div class="footer">';
 			if (opt.showShortcuts)
@@ -2473,7 +2481,7 @@
 		}
 
 		function toLocalTimestamp(t)
-		{
+		{	
 			if (moment.isMoment(t)) t = t.toDate().getTime();
 			if (typeof t == 'object' && t.getTime) t = t.getTime();
 			if (typeof t == 'string' && !t.match(/\d{13}/)) t = moment(t,opt.format).toDate().getTime();

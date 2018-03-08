@@ -54,7 +54,7 @@
 }
 
 .lnr-payment-tab-button {
-    padding: 26px 0;
+    padding: 19px 0;
 }
 
 booking .md-label {
@@ -66,7 +66,7 @@ booking md-radio-button {
 }
 
 .booking__receipt {
-    margin: 64px 16px 0 0;
+    margin-top: 100px;
 }
 
 .details__send-code {
@@ -79,6 +79,10 @@ booking md-radio-button {
 
 .booking md-tab-content.md-no-scroll {
     overflow: visible;
+}
+
+.payment__paypal-btn {
+    margin: 0 32px 19px;
 }
 
 @media(max-width: 959px) { /* sm */
@@ -97,9 +101,15 @@ booking md-radio-button {
         right: 0;
         bottom: 0;
         z-index: 10;
-
-        padding: 0 16px 20px;
+        margin: 0;
+        padding: 0 16px 10px;
         background-color: rgba(250, 250, 250, 1);
+    }
+
+    .booking__terms {
+        order: 2;
+        font-size: 12px;
+        margin: 5px 8px 0;
     }
 }
 

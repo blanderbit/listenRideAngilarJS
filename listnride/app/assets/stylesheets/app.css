@@ -29,7 +29,8 @@ h6 {
   margin: 0.34rem 0;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0;
 }
 
@@ -43,6 +44,7 @@ strong {
 }
 
 /* This has to be set for all full-height layouts */
+
 ui-view {
   position: relative;
 }
@@ -92,11 +94,11 @@ md-grid-list md-grid-tile {
 
 .no-select {
   -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .spacer-xs {
@@ -108,10 +110,11 @@ md-grid-list md-grid-tile {
 }
 
 .highlight-tile {
+  /* height: 260px; */
   padding: 24px 0;
   border-radius: 4px;
   border: 1px solid rgba(95, 198, 147, 0.25);
-  background-color: rgba(250,250,250,1);
+  background-color: rgba(250, 250, 250, 1);
 }
 
 booking .highlight-tile {
@@ -140,15 +143,14 @@ invest .highlight-tile {
   background-color: #FFFFFF;
 }
 
-
 .md-xlrg {
-  padding: 10px 0 !important;
-  min-width: 300px !important;
-  font-size: 16px !important;
+  padding: 10px 0!important;
+  min-width: 300px!important;
+  font-size: 16px!important;
 }
 
 md-menu-content {
-  /*max-height: 300px !important;*/
+  /*max-height: 300px!important;*/
   max-height: 500px;
 }
 
@@ -159,6 +161,10 @@ md-card md-card-title {
 .lnr-image-card {
   border-width: 0;
   margin: 0;
+}
+
+.full-height {
+  height: 100%;
 }
 
 button.md-primary.md-cancel-button.md-button.ng-scope.md-default-theme.md-ink-ripple {
@@ -206,8 +212,8 @@ autocomplete #autocompleteSearch {
 }
 
 autocomplete .pac-container {
-  left: 0 !important;
-  top: 100% !important;
+  left: 0!important;
+  top: 100%!important;
 }
 
 autocomplete .md-errors-spacer {
@@ -219,23 +225,18 @@ autocomplete .md-errors-spacer {
   .md-display-1 {
     font-size: 24px;
   }
-
   .md-headline {
     font-size: 20px;
   }
-
   .md-subhead {
     font-size: 16px;
   }
-
   .lnr-page-title {
     max-width: 90%;
   }
-
   input {
     font-size: 12px;
   }
-
   h1,
   h2,
   h3,
@@ -249,7 +250,7 @@ autocomplete .md-errors-spacer {
 .intl-tel-input {
   position: relative;
   display: inline-block;
-  width:100%;
+  width: 100%;
 }
 
 md-input-container {
@@ -275,7 +276,7 @@ md-tooltip .md-content {
 }
 
 .lnr-bold {
-  font-weight: 500 !important;
+  font-weight: 500!important;
 }
 
 .lnr-capitalize {
@@ -351,6 +352,10 @@ md-tooltip .md-content {
   margin-bottom: 0;
 }
 
+.lnr-lh-body-2 {
+  line-height: 24px;
+}
+
 .lnr-clickable {
   cursor: pointer;
 }
@@ -406,9 +411,9 @@ md-tooltip .md-content {
 }
 
 .lnr-btn-fb {
-  border-color: #3b5998 !important;
-  background: #3b5998 !important;
-  color: #fff !important;
+  border-color: #3b5998!important;
+  background: #3b5998!important;
+  color: #fff!important;
 }
 
 .lnr-bike-listings {
@@ -419,12 +424,44 @@ md-tooltip .md-content {
   position: fixed;
 }
 
+.lnr-mv8 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.lnr-lh0 {
+  line-height: 0;
+}
+
+.lnr-fs0 {
+  font-size: 0;
+}
+
+.lnr-dash-input-divider {
+  display: inline-block;
+  width: 15px;
+  height: 2px;
+  background: rgba(150, 150, 150, 1.0);
+}
+
+.lnr-btn-placeholder {
+  /* md-button proportions */
+  width: 40px;
+  height: 40px;
+  min-width: 0;
+  margin: 0 6px;
+}
+
 .lnr-progress-tabs {
   font-size: 14px;
 }
 
-md-tabs-wrapper {
-  margin-left: 20px important!;
+.lnr-icn-xs {
+  min-width: 14px;
+  width: 14px;
+  margin: 0 8px;
+  height: 20px;
+  min-height: 20px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -516,8 +553,8 @@ settings .lnr-profile-lrg {
 
 .cropArea {
   overflow: hidden;
-  width:300px;
-  height:200px;
+  width: 300px;
+  height: 200px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -568,8 +605,8 @@ settings .lnr-profile-lrg {
 }
 
 .md-toolbar-tools a.md-lined.md-button {
-  min-height: 28px !important;
-  line-height: 18px !important;
+  min-height: 28px!important;
+  line-height: 18px!important;
 }
 
 .notification-bubble {
@@ -622,10 +659,11 @@ footer .lnr-link {
   margin-bottom: 26px;
 }
 
-.lnr-confirmation-containers .confirm-label{
-  margin-bottom: 4px; 
+.lnr-confirmation-containers .confirm-label {
+  margin-bottom: 4px;
   margin-top: 2px;
 }
+
 .lnr-confirmation-containers md-input-container {
   margin-left: 4px;
 }
@@ -637,7 +675,6 @@ footer .lnr-link {
 .lnr-confirmation-containers md-input-container:last-child {
   margin-right: 0;
 }
-
 
 .lnr-confirmation-containers md-input-container .md-input {
   order: 2;
@@ -680,28 +717,28 @@ footer .lnr-link {
   white-space: normal;
 }
 
-.lnr-rating-dialog .md-input-messages-animation  {
+.lnr-rating-dialog .md-input-messages-animation {
   height: 100%;
 }
 
-.lnr-rating-dialog .rating-stars  {
+.lnr-rating-dialog .rating-stars {
   min-height: 48px;
 }
 
-.lnr-tel-int .intl-tel-input{
+.lnr-tel-int .intl-tel-input {
   width: 100%;
   float: left;
   max-height: 250px;
 }
 
-.lnr-tel-int  .intl-tel-input .country-list {
-  max-height: 100px !important;
+.lnr-tel-int .intl-tel-input .country-list {
+  max-height: 100px!important;
 }
 
 @media (max-width:599px) {
- .md-dialog-content {
+  .md-dialog-content {
     width: 100%;
-    margin: 0 !important;
+    margin: 0!important;
   }
 }
 
@@ -936,7 +973,7 @@ md-grid-list md-grid-tile.tile-sylt {
 
 .md-dialog-fullscreen.dialog-bikes,
 .md-dialog-fullscreen.dialog-bikes .dialog-content {
-  overflow: visible !important;
+  overflow: visible!important;
 }
 
 .bikes .slick-dots li.slick-active button:before,
@@ -953,7 +990,6 @@ md-grid-list md-grid-tile.tile-sylt {
   border-radius: 50%;
   font-size: 0;
   background-color: #000;
-
 }
 
 .bikes .arrow {
@@ -972,6 +1008,7 @@ md-grid-list md-grid-tile.tile-sylt {
   padding-right: 0;
   margin-right: -65px;
 }
+
 .bikes .arrow-prev:before,
 .bikes .arrow-next:before {
   content: '';
@@ -1021,7 +1058,7 @@ md-grid-list md-grid-tile.tile-sylt {
 }
 
 .testimonials-slick-slide {
-  display: flex !important;
+  display: flex!important;
 }
 
 .testimonial-avatar {
@@ -1043,7 +1080,7 @@ md-grid-list md-grid-tile.tile-sylt {
 }
 
 #featuredTilesGrid .img-container {
-/*  height: 100px;*/
+  /*  height: 100px;*/
   width: 130px;
   height: 130px;
 }
@@ -1072,25 +1109,20 @@ md-grid-list md-grid-tile.tile-sylt {
     min-width: 100%;
     border-radius: 0;
   }
-
   home #landingSection {
     height: 60vh;
   }
-
   home .section {
     margin-top: 40px;
   }
-
   home .testimonials-text {
     width: 100%;
     font-size: 16px;
   }
-
   .lnr-search-bar autocomplete,
   .lnr-search-bar .md-button {
     font-size: 12px;
   }
-
   .lnr-search-bar .md-button {
     min-width: 72px;
   }
@@ -1098,12 +1130,11 @@ md-grid-list md-grid-tile.tile-sylt {
 
 @media (min-width:600px) {
   md-dialog.md-dialog-fullscreen {
-    min-width: 400px !important;
-    min-height: 0 !important;
+    min-width: 400px!important;
+    min-height: 0!important;
     border-radius: 3px;
   }
 }
-
 
 /*-----------------------------------------------------------------------------------*/
 /*  BIKE CARD & LISTING CARD
@@ -1118,19 +1149,19 @@ listing-card .bg {
 
 bike-card .bg:before,
 listing-card .bg:before {
-    content: "";
-    display: block;
-    padding-top: 66.667%;
-    float: left;
+  content: "";
+  display: block;
+  padding-top: 66.667%;
+  float: left;
 }
 
 bike-card .after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 bike-card .after div {
@@ -1181,7 +1212,6 @@ home #featuredTiles a {
   opacity: 0.4;
 }
 
-
 /*-----------------------------------------------------------------------------------*/
 /*  COMMENT
 /*-----------------------------------------------------------------------------------*/
@@ -1198,7 +1228,6 @@ home #featuredTiles a {
 .lnr-comment .lnr-comment-content {
   margin-top: 8px;
 }
-
 
 /*-----------------------------------------------------------------------------------*/
 /*  BIKE DETAILS
@@ -1240,14 +1269,13 @@ md-dialog md-dialog-content .month-wrapper {
 
 md-dialog md-dialog-content .date-picker-wrapper .month-wrapper thead {
   background: #fff;
-  color: rgba(85,85,85,0.75);
+  color: rgba(85, 85, 85, 0.75);
 }
 
 @media (max-width:599px) {
   bike #hero-shot {
     height: 45vh;
   }
-
   .date-picker-wrapper,
   .date-picker-wrapper.inline-wrapper,
   .month-wrapper {
@@ -1255,17 +1283,16 @@ md-dialog md-dialog-content .date-picker-wrapper .month-wrapper thead {
   }
 }
 
-
 /*-----------------------------------------------------------------------------------*/
 /*  SEARCH
 /*-----------------------------------------------------------------------------------*/
 
 search ng-map {
-  height: 100% !important;
+  height: 100%!important;
 }
 
 search h3 {
-  margin: 0 !important;
+  margin: 0!important;
 }
 
 search .map-column {
@@ -1321,21 +1348,21 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
   display: none;
 }
 
-.ng-map-info-window > div:first-child  div:nth-last-child(2),
-.ng-map-info-window > div:first-child  div:nth-last-child(2) div {
+.ng-map-info-window > div:first-child div:nth-last-child(2),
+.ng-map-info-window > div:first-child div:nth-last-child(2) div {
   display: block!important;
   margin-top: -4px!important;
   z-index: 2;
 }
 
-.ng-map-info-window > div:last-child {
+.ng-map-info-window>div:last-child {
   right: 46px!important;
   top: 18px!important;
   opacity: 0.3!important;
   border-radius: 10px;
 }
 
-.ng-map-info-window > div:last-child:hover {
+.ng-map-info-window>div:last-child:hover {
   opacity: 0.6!important;
 }
 
@@ -1345,12 +1372,11 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
   }
 }
 
-
 /*-----------------------------------------------------------------------------------*/
 /*  USER
 /*-----------------------------------------------------------------------------------*/
 
-user .lnr-user-rating  {
+user .lnr-user-rating {
   padding-left: 4px;
 }
 
@@ -1377,17 +1403,17 @@ user .lnr-user-rating  {
 }
 
 .angular-input-stars > li {
-  color: rgba(210,218,218,1.0);
+  color: rgba(210, 218, 218, 1.0);
   font-size: 20px;
   display: inline-block;
 }
 
 .angular-input-stars > li .active {
-    color: #FEB35B;
+  color: #FEB35B;
 }
 
 rating .angular-input-stars > li {
-  font-size: 14px !important;
+  font-size: 14px!important;
   padding-right: 3px;
   padding-left: 0;
   cursor: pointer;
@@ -1399,7 +1425,7 @@ user .angular-input-stars > li {
 
 list md-tabs,
 edit md-tabs {
-  padding: 0 !important;
+  padding: 0!important;
   width: 100%;
 }
 
@@ -1440,7 +1466,7 @@ list md-icon.accessory-icon.checked svg rect,
 list md-icon.accessory-icon.checked svg circle,
 edit md-icon.accessory-icon.checked svg path,
 edit md-icon.accessory-icon.checked svg rect,
-edit md-icon.accessory-icon.checked svg circle  {
+edit md-icon.accessory-icon.checked svg circle {
   fill: #7ab2f8;
   color: #7ab2f8;
 }
@@ -1490,9 +1516,9 @@ listings .lnr-bike-listings {
 
 /* TODO: OPTIMIZE */
 @-moz-document url-prefix() {
-    listings #list-view {
-        margin-left: 6px;
-    }
+  listings #list-view {
+    margin-left: 6px;
+  }
 }
 
 #deleteBikeDialog .delete-bike-text {
@@ -1514,11 +1540,11 @@ listings .lnr-bike-listings {
 }
 
 .lnr-listing-list-item:hover {
-  background-color: rgba(224, 224, 224, 0.2) !important;
+  background-color: rgba(224, 224, 224, 0.2)!important;
 }
 
 .lnr-listing-list-item .md-button:hover {
-background-color: rgba(238, 238, 238, 0.2) !important;
+  background-color: rgba(238, 238, 238, 0.2)!important;
 }
 
 .lnr-listing-header {
@@ -1567,13 +1593,11 @@ background-color: rgba(238, 238, 238, 0.2) !important;
   }
 }
 
-
 @media (max-width:1280px) and (min-width:600px) {
   .lnr-calculator .lnr-money {
     font-size: 8.8vw;
   }
 }
-
 
 /*-----------------------------------------------------------------------------------*/
 /*  REQUESTS
@@ -1603,19 +1627,20 @@ md-toast.md-center {
   }
 }
 
-requests md-input-container  {
+requests md-input-container {
   margin: 0;
 }
 
 .requests-list {
-  min-width: 320px !important;
-  max-width: 450px !important;
+  min-width: 320px!important;
+  max-width: 450px!important;
   border-right: 1px solid #efefef;
 }
 
 .requests-list .lnr-center {
   padding: 0px 12px 0px 12px
 }
+
 .requests-list md-list-item .md-avatar {
   width: 50px;
   height: 50px;
@@ -1698,7 +1723,7 @@ message .status-message {
 
 button.md-primary.md-confirm-button,
 button.md-primary.md-cancel-button {
-  background-color: #0ECC92 !important;
+  background-color: #0ECC92!important;
 }
 
 @media (max-width: 959px) {
@@ -1706,7 +1731,7 @@ button.md-primary.md-cancel-button {
     margin: 6px 0 6px 0;
   }
   .md-primary {
-    color: rgb(255, 255, 255) !important;
+    color: rgb(255, 255, 255)!important;
   }
 }
 
@@ -1715,7 +1740,7 @@ button.md-primary.md-cancel-button {
     margin: 0 6px 0 6px;
   }
   .md-primary {
-    color: rgb(255, 255, 255) !important;
+    color: rgb(255, 255, 255)!important;
   }
 }
 
@@ -1729,12 +1754,12 @@ button.md-primary.md-cancel-button {
 }
 
 .request-filter-switch:hover {
-  color: rgb(110, 110, 110) !important;
-  background-color: rgba(158,158,158,0.2) !important;
+  color: rgb(110, 110, 110)!important;
+  background-color: rgba(158, 158, 158, 0.2)!important;
 }
 
 .request-filter-switch-active {
-  background-color: rgba(158,158,158,0.2) !important;
+  background-color: rgba(158, 158, 158, 0.2)!important;
 }
 
 .request-filter-dropdown {
@@ -1789,7 +1814,7 @@ button.md-primary.md-cancel-button {
   margin-top: 0;
 }
 
-.lnr-garantee  {
+.lnr-garantee {
   position: relative;
 }
 
@@ -1823,7 +1848,7 @@ mcbw md-tab-item {
 }
 
 mcbw md-pagination-wrapper {
-  width: 300px !important;
+  width: 300px!important;
 }
 
 .column-image {
@@ -1898,32 +1923,40 @@ md-grid-list a {
 #jobs-details h1 {
   margin: 34px 40px 30px 0px;
 }
+
 #jobs-details h3 {
   margin-top: 24px;
   margin-bottom: 0px;
   margin-left: 0px;
 }
+
 #jobs-details md-list {
-   margin-left: -14px;
+  margin-left: -14px;
 }
+
 #jobs-details .list-align {
-   margin-left: -10px;
+  margin-left: -10px;
 }
 
 .form-error {
-  border: 1px solid rgb(221,44,0);
+  border: 1px solid rgb(221, 44, 0);
   border-radius: 4px;
 }
+
 .text-error {
-  color: rgb(221,44,0);
+  color: rgb(221, 44, 0);
 }
 
 .text-default {
   color: #7ab2f8
 }
 
+.text-success {
+  color: rgb(95, 198, 147);
+}
+
 md-input-container .md-input.form-input-error {
-  border: 1px solid rgb(221,44,0);
+  border: 1px solid rgb(221, 44, 0);
   border-radius: 4px;
 }
 
@@ -1936,7 +1969,7 @@ md-input-container .md-input.form-input-error {
 /*  HOW TO SHOOT BIKE PHOTO
 /*-----------------------------------------------------------------------------------*/
 
-.how-to-shoot-section{
+.how-to-shoot-section {
   text-align: center;
 }
 
@@ -1945,18 +1978,19 @@ img.how-to-shoot {
   max-width: 500px;
 }
 
-md-switch.md-default-theme .md-thumb, md-switch.md-checked .md-thumb {
-  background-color: white !important;
+md-switch.md-default-theme .md-thumb,
+md-switch.md-checked .md-thumb {
+  background-color: white!important;
 }
 
-md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
-  background-color: #5FC693 !important
+md-switch.md-default-theme.md-checked .md-bar,
+md-switch.md-checked .md-bar {
+  background-color: #5FC693!important
 }
 
 .white-space-pre-line {
   white-space: pre-line;
 }
-
 
 /*-----------------------------------------------------------------------------------*/
 /*  Invoices
@@ -1984,13 +2018,13 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
   margin-top: 150px;
 }
 
-.repeated-billing-items h1{
+.repeated-billing-items h1 {
   border-bottom: 1px solid #e1e1e1;
   padding: 15px;
   margin: 0;
 }
 
-.repeated-mobile-items h1{
+.repeated-mobile-items h1 {
   border-bottom: 1px solid #e1e1e1;
   padding: 15px;
 }
@@ -2003,7 +2037,7 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
   min-height: inherit;
   min-width: inherit;
   line-height: 17px;
-  color: rgb(95,198,147);
+  color: rgb(95, 198, 147);
   padding: unset;
   margin: unset;
 }
@@ -2013,11 +2047,10 @@ md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
 /*-----------------------------------------------------------------------------------*/
 
 invite #inviteForm .invite-form-container {
-  height: 320px;
   padding: 24px 0;
   border-radius: 4px;
   border: 1px solid rgba(95, 198, 147, 0.25);
-  background-color: rgba(250,250,250,1);
+  background-color: rgba(250, 250, 250, 1);
 }
 
 invite .share-icon {
@@ -2029,7 +2062,7 @@ invite .voucher-link {
 }
 
 /*.lnr-billing-page .repeated-billing-items .md-button:not([disabled]):hover {*/
-  /*background-color: rgba(229, 234, 236, 0.2);*/
+/*background-color: rgba(229, 234, 236, 0.2);*/
 /*}*/
 
 .lnr-list-button .md-button:not([disabled]):hover {
@@ -2038,7 +2071,7 @@ invite .voucher-link {
 }
 
 .md-button .md-lined:not([disabled]) {
-  color: #FFFFFF !important;
+  color: #FFFFFF!important;
 }
 
 .lnr-csv-button {
@@ -2111,18 +2144,19 @@ seo-landing .lnr-section-title {
 /*  ANIMATIONS
 /*-----------------------------------------------------------------------------------*/
 
-.animate-if.ng-enter, .animate-if.ng-leave {
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+.animate-if.ng-enter,
+.animate-if.ng-leave {
+  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
 }
 
 .animate-if.ng-enter,
 .animate-if.ng-leave.ng-leave-active {
-  opacity:0;
+  opacity: 0;
 }
 
 .animate-if.ng-leave,
 .animate-if.ng-enter.ng-enter-active {
-  opacity:1;
+  opacity: 1;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -2153,21 +2187,16 @@ seo-landing .lnr-section-title {
 
 /* iPhone 5*/
 
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .velosoph .lnr-event-logos .katusha img {
     width: 25vw;
   }
-
   .velosoph .lnr-event-logos .pasculli img {
     width: 25vw;
   }
-
   .velosoph .lnr-event-logos .wahoo img {
     width: 14vw;
   }
-
   .lnr-no-events {
     pointer-events: none;
   }
@@ -2175,12 +2204,17 @@ and (max-device-width : 568px) {
 
 /* intl-tel-input -- required for build minification */
 .iti-flag {
-  background-image: url("../ui_images/flags.png") !important;
+  background-image: url("../ui_images/flags.png")!important;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2 / 1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
   .iti-flag {
-    background-image: url("../ui_images/flags@2x.png") !important;
+    background-image: url("../ui_images/flags@2x.png")!important;
   }
 }
 
@@ -2188,6 +2222,88 @@ and (max-device-width : 568px) {
   margin-bottom: 0;
 }
 
-.ng-hide-add, .ng-hide-remove {
-  display: block !important;
+.ng-hide-add,
+.ng-hide-remove {
+  display: block!important;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  Material Modifiers
+/*-----------------------------------------------------------------------------------*/
+
+md-input-container.md-icon-right>md-icon.md-icon--btn {
+  display: flex;
+  width: 35px;
+  height: 100%;
+  background: #f2f2f2;
+  border: 1px solid #d3d8dc;
+  padding: 0 6px;
+  border-radius: 0 4px 4px 0;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+.lnr-md-focus-tabs md-pagination-wrapper {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.35, 0, 0.25, 1), left 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1), -webkit-transform 0.5s cubic-bezier(0.35, 0, 0.25, 1), left 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+}
+
+.md-button:not([disabled]).md-focused.lnr-md-no-focused {
+  background: none;
+}
+
+md-icon[md-font-icon].fa--lh20 {
+  line-height: 20px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  daterangepicker custom styles
+/*-----------------------------------------------------------------------------------*/
+
+.date-picker-wrapper--ngDialog {
+  z-index: 100;
+}
+
+.date-picker-wrapper--two-months {
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.09),
+  0px 13px 19px 2px rgba(0, 0, 0, 0.06),
+  0px 5px 24px 4px rgba(0, 0, 0, 0.05);
+}
+
+.date-picker-wrapper--two-months .month-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.date-picker-wrapper--two-months .gap {
+  margin: 0;
+  width: 1%;
+}
+
+.date-picker-wrapper--two-months .month-wrapper table {
+  flex: 0 0 49.5%;
+  max-width: 49.7%;
+  width: 49.5%;
+  min-width: 320px;
+}
+
+@media (max-width: 959px) { /*sm-size*/
+  .date-picker-wrapper.date-picker-wrapper--ngDialog {
+    max-width: 700px;
+    left: 0!important;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 659px) {
+  .date-picker-wrapper.date-picker-wrapper--ngDialog,
+  .date-picker-wrapper.date-picker-wrapper--ngDialog .month-wrapper {
+    max-width: 320px;
+  }
 }

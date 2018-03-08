@@ -281,6 +281,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Veilig betalen met",
+    "agree-terms": "With 'Request Bike' you agree to the",
+    "agree-terms-link": "listnride terms",
     "footer": {
       "questions": "Heb je vragen bij het boeken van een fiets?",
       "call-us": "Bel ons op +49 (0)30-120870330, Ma-Vrij 9-18u.",
@@ -300,6 +302,7 @@
     "details": {
       "tab": "2. Persoonlijke gegevens",
       "invoice-address": "Factuuradres",
+      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Gaarne bevestigen",
       "send-sms": "We sturen je een SMS aan je mobiele telefoon.",
       "check-phone": "Controleer je mobiele telefoon.",
@@ -362,7 +365,9 @@
     "enter-email": "Vul alstublieft uw e-mailadres in",
     "duplicate-start": "Duplicatieproces gestart",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
-    "bike-deleted": "Fiets succesvol verwijderd"
+    "bike-deleted": "Fiets succesvol verwijderd",
+    "range-success-delete": "Availability range successfully deleted",
+    "availability-success-saved": "Availability successfully saved"
   },
   "settings": {
     "settings": "Instellingen",
@@ -567,15 +572,25 @@
     "signing-up-accept-tac": "Door een account aan te maken accepteer je de",
     "errors": {
       "password-length": "Wachtwoord dient 6-30 karakters lang te zijn",
+      "password-length-xs": "6-30 tekens",
       "password-missing": "Wachtwoord aanmaken",
+      "password-missing-xs": "Wachtwoord aanmaken",
       "valid-email": "Vul een geldig emailadres in",
+      "valid-email-xs": "Ongeldige e-mail",
       "empty-email": "Vul uw emailadres in",
+      "empty-email-xs": "E-mail vereist",
       "empty-last-name": "Vul uw achternaam in",
+      "empty-last-name-xs": "Achternaam verplicht",
       "empty-first-name": "Vul uw voornaam in",
+      "empty-first-name-xs": "Voornaam vereist",
       "max-size-last-name": "Achternaam mag maximaal 30 karakters lang zijn",
+      "max-size-last-name-xs": "Overtreft 30 tekens",
       "max-size-first-name": "Voornaam mag maximaal 20 karakters lang zijn",
+      "max-size-first-name-xs": "Overtreft 20 tekens",
       "empty-company-name": "Vul alstublieft uw bedrijfsnaam in",
-      "min-size-company-name": "Bedrijfsnaam dient meer dan 2 karakters te hebben "
+      "empty-company-name-xs": "Bedrijfsnaam vereist",
+      "min-size-company-name": "Bedrijfsnaam moet langer zijn dan 2 karakters",
+      "min-size-company-name-xs": "Ten minste 3 tekens"
     }
   },
   "home": {
@@ -953,5 +968,14 @@
     "kids": "kinder fietsen",
     "electro": "elektrisch fietsen",
     "special": "speciaal fietsen"
+  },
+  "availability": {
+    "availability": "availability",
+    "modal-title": "When is your bike not available?",
+    "start-from": "Starting from",
+    "end-at": "Ending at",
+    "add-another-date": "Add another date",
+    "submit-btn": "Ok",
+    "submit-btn-save": "Save"
   }
 }
