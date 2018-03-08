@@ -57,9 +57,9 @@
     "cancel": "Cancellare",
     "send": "Inviare",
     "search": "Ricerca",
-    "search-bikes": "Cerca le biciclette",
-    "search-all": "Cerca tutte le biciclette",
-    "search-all-in": "Cerca tutte le biciclette a",
+    "search-all": "Trova tutte le biciclette",
+    "search-all-in": "Trova tutte le biciclette a",
+    "search-bikes": "Trova la tua biciclette",
     "from-place": "da",
     "contact": "Contatti e Supporto",
     "show-more": "Mostra di più",
@@ -119,24 +119,20 @@
   "meta": {
     "cities": {
       "berlin": {
-        "meta-title": "Explore Berlin by bike with listnride",
-        "meta-description": "Discover Berlin by bike. With listnride, you can find a bike for rent in Berlin that matches your needs and your style."
+        "meta-title": "Esplora Berlino in bicicletta con listnride",
+        "meta-description": "Scopri Berlino in bicicletta. Con listnride puoi trovare una bicicletta a Berlino che corrisponde alle tue esigenze e al tuo stile."
       },
       "munich": {
-        "meta-title": "Explore Munich by bike with listnride",
-        "meta-description": "Discover Munich by bike. With listnride, you can find a bike for rent in Munich that matches your needs and your style."
+        "meta-title": "Esplora Monaco di Baviera in bicicletta con listnride",
+        "meta-description": "Scopri Monaco di Baviera in bicicletta. Con listnride puoi trovare la bicicletta che corrisponde alle tue esigenze e al tuo stile."
       },
       "amsterdam": {
-        "meta-title": "Explore Amsterdam by bike with listnride",
-        "meta-description": "Discover Amsterdam by bike. With listnride, you can find a bike for rent in Amsterdam that matches your needs and your style."
+        "meta-title": "Esplora Amsterdam in bicicletta con listnride",
+        "meta-description": "Scopri Amsterdam in bicicletta. Con listnride puoi trovare una bicicletta che corrisponde alle tue esigenze e al tuo stile."
       },
       "vienna": {
-        "meta-title": "Explore Vienna by bike with listnride",
-        "meta-description": "Discover Vienna by bike. With listnride, you can find a bike for rent in Vienna that matches your needs and your style."
-      },
-      "rethink": {
-        "meta-title": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden",
-        "meta-descr": "Your rethink e-bike. Clear. Robust. Distinct Character."
+        "meta-title": "Esplora Vienna in bicicletta con listnride",
+        "meta-description": "Scopri Vienna in bicicletta. Con listnride puoi trovare una bicicletta  che corrisponde alle tue esigenze e al tuo stile."
       }
     },
     "business-community": {
@@ -153,7 +149,7 @@
       },
       "velothon-bikerental": {
         "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
-        "meta-description": "Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!"
+        "meta-description": "Take part in the Velothon Berlin 2018! Rent a road bike from the listnride bike sharing community and join in on the fun!"
       },
       "constance-spin": {
         "meta-title": "Rent the perfect road bike during Eurobike",
@@ -190,85 +186,89 @@
     },
     "brand-integration": {
       "ampler": {
-        "meta-title": "E-Bike Test Ride Program",
-        "meta-descr": "Test ride an E-Bike today! Electric assist bikes from Ampler available on listnride. Rent one in Berlin, Munich, Hamburg and Vienna."
+        "meta-title": "E-Bike Test ",
+        "meta-descr": "Prova a guidare una E-Bike oggi! Bici elettriche a pedalata assistita di Ampler sono disponibili su listnride. Noleggiane una a Berlino, Monaco di Baviera, Amburgo e Vienna."
       },
       "brompton": {
-        "meta-title": "Rent a Brompton bike with listnride",
-        "meta-description": "Test ride a Brompton bike today! These urban folding bikes are available on listnride. Rent one in Berlin, Munich, Hamburg, Düsseldorf or Frankfurt."
+        "meta-title": "Noleggia una bicicletta Brompton con listnride",
+        "meta-description": "Prova una bicicletta Brompton oggi! Queste biciclette pieghevoli urbane sono disponibili su listnride. Noleggiane una a Berlino, Monaco di Baviera, Amburgo, Düsseldorf o a Francoforte."
       },
       "muli": {
-        "meta-title": "Rent a Muli cargo bike with listnride",
-        "meta-description": "Test ride a Muli cargo bike today! These urban cargo bikes are available on listnride. Rent one in Berlin or Munich."
+        "meta-title": "Noleggia una bicicletta da carico Muli con listnride",
+        "meta-description": "Prova a guidare una bicicletta cargo Muli oggi! Queste biciclette urbane da carico sono disponibili su listnride. Noleggiane una a Berlino o a Monaco di Baviera."
       },
       "vello": {
-        "meta-title": "Rent and test VELLO E-Bikes in Berlin & Munich",
-        "meta-description": "VELLO BIKE+ The First Self-Charging Electric Folding Bike. The VELLO BIKE is a high-performance folding bike developed for the perfect urban cycling experience."
+        "meta-title": "Noleggia e testa VELLO E-Bikes a Berlino e a Monaco di Baviera",
+        "meta-description": "VELLO BIKE + La prima bicicletta elettrica auto ricaricabile pieghevole. Il VELLO BIKE è una bicicletta pieghevole ad alte prestazioni sviluppata per una perfetta esperienza di ciclismo urbano."
       },
       "veletage": {
         "meta-title": "VELETAGE Salon für Radkultur",
-        "meta-descr": "VELETAGE Salon für Radkultur - Custom made racing bikes, clothing, wheelsets, bike fittings"
+        "meta-descr": "VELETAGE Salon für Radkultur - Biciclette da corsa su misura, abbigliamento, ruote, accessori per biciclette"
       },
       "bonvelo": {
-        "meta-title": "Rent and Test Bonvelo Singlespeed Bikes in Berlin & Munich",
-        "meta-description": "The singlespeed/fixed-gear \"bonvelo BLIZZ\" is available to rent and test ride in Berlin in four frame sizes. Book one on listnride today!"
+        "meta-title": "Noleggia e prova Bonvelo Singlespeed Bikes a Berlino e a Monaco di Baviera",
+        "meta-description": "La \"bonvelo BLIZZ\" a scatto fisso/singlespeed è disponibile per il noleggio e il test a Berlino in quattro dimensioni. Prenotane una su listnride oggi!"
       },
       "motoparilla": {
-        "meta-title": "Rent and Test the Moto Parilla Carbon SUV E-Bike in Munich",
-        "meta-description": "The Carbon SUV E-Bike from Moto Parilla can be tested in Munich. Simply book online and enjoy the ride!"
+        "meta-title": "Noleggia e prova la Moto Parilla Carbon SUV E-Bike a Monaco di Baviera",
+        "meta-description": "Il Carbon SUV E-Bike di Moto Parilla può essere testato a Monaco di Baviera. Basta prenotarsi online e godersi la corsa!"
       },
       "votec": {
-        "meta-title": "Rent and Test the newest Votec Bikes",
-        "meta-descr": "VOTEC - Fusion of Functionality, Design and Quality"
+        "meta-title": "Noleggia e prova le nuovissime biciclette Votec",
+        "meta-descr": "VOTEC: fusione di funzionalità, design e qualità"
       },
       "vanmoof": {
-        "meta-title": "Rent and test the Electrified S E-Bikes in Berlin, Munich and Hamburg",
-        "meta-descr": "The perfect city bike - VanMoof"
+        "meta-title": "Noleggia e prova le Electrified S a Berlino, Monaco e Amburgo.",
+        "meta-descr": "La bicicletta perfetta per la città - VanMoof"
+      },
+      "moeve": {
+        "meta-title": "Noleggia e prova VELLO E-Bikes a Berlino e a Monaco di Baviera",
+        "meta-descr": "La bicicletta con l'esclusivo sistema di trasmissione - Cyfly di Moeve."
       }
     },
     "about-us": {
-      "meta-title": "listnride - the company",
-      "meta-description": "Founded by bike enthusiasts for their brothers and sisters in spirit."
+      "meta-title": "listnride - l'azienda",
+      "meta-description": "Fondata da appassionati di biciclette per gli amanti delle due ruote"
     },
     "contact-and-help": {
-      "meta-title": "listnride is here for you",
-      "meta-description": "Contact us if you have special questions or need help solving a problem"
+      "meta-title": "listnride è qui per te",
+      "meta-description": "Contattaci se hai domande specifiche o hai bisogno di aiuto per risolvere un problema"
     },
     "press": {
-      "meta-title": "listnride press",
-      "meta-description": "We love bike sharing. And we’ll gladly answer all your questions."
+      "meta-title": "stampa listnride",
+      "meta-description": "Noi amiamo il bike sharing. E risponderemo con piacere a tutte le vostre domande."
     },
     "invest": {
       "meta-title": "listnride is crowdfunding! Be part of it and invest in Building Europe’s leading bike sharing community.",
       "meta-description": "Visit Seedrs to learn more about investing in listnride."
     },
     "terms-and-conditions": {
-      "meta-title": "listnride | Website Terms & Conditions",
-      "meta-description": "The Terms and Conditions of the Bike-Sharing-Community listnride apply to the use of the online platform."
+      "meta-title": "listnride | Termini e condizioni del sito",
+      "meta-description": "I termini e le condizioni della comunità bike sharing di listnride si applicano all'uso della piattaforma online."
     },
     "trust-and-safety": {
-      "meta-title": "Bike hire made safe – listnride has your back",
-      "meta-description": "Trust is the be-all and end-all in a sharing community. We promote fairness and safety by verifying our users’ identities and offering a lister guarantee."
+      "meta-title": "Il Noleggio di biciclette è sicuro - listnride ti tutela",
+      "meta-description": "La fiducia è tutto in una sharing community. Promuoviamo la giustizia e la sicurezza verificando le identità degli utenti e offrendo una garanzia ai noleggiatori."
     },
     "how-it-works": {
-      "meta-title": "Bike sharing made easy",
-      "meta-description": "Using listnride is as easy as meeting up for coffee. Try for yourself!"
+      "meta-title": "Bike sharing in modo semplice",
+      "meta-description": "L'utilizzo di listnride è facile come incontrarsi per un caffè. Provalo!"
     },
     "jobs": {
-      "meta-title": "Work for listnride",
-      "meta-description": "Join the listnride bike sharing team in Berlin or Munich to build the global biking community"
+      "meta-title": "Lavora per listnride",
+      "meta-description": "Unisciti alla squadra bike sharing di listnride a Berlino o a Monaco di Baviera per costruire la comunità globale della bicicletta"
     },
     "shop-landing": {
-      "meta-title": "listnride Shop Plugin - Get your bike rental online",
-      "meta-description": "listnride now offers a free plug-in to easily integrate a bike rental booking engine on your website."
+      "meta-title": "listnride Shop Plugin- Il tuo noleggio online di biciclette ",
+      "meta-description": "listnride offre ora un plug-in gratuito per integrare facilmente una lista prenotazione per il noleggio biciclette sul tuo sito web."
     },
     "imprint": {
-      "meta-title": "listnride | Imprint",
-      "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
+      "meta-title": "listnride | Info",
+      "meta-description": "Noleggia la bicicletta perfetta nella comunità listnride. Trovane una che si adatti al tuo stile e alle tue esigenze."
     },
     "privacy": {
-      "meta-title": "Privacy Policy of listnride",
-      "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform."
+      "meta-title": "Politica sulla privacy di listnride",
+      "meta-description": "La Politica sulla privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online."
     }
   },
   "booking": {
@@ -276,7 +276,7 @@
     "pay-secure": "Pagamento sicuro con",
     "footer": {
       "questions": "Hai domande sul noleggio della bicicletta?",
-      "call-us": "Chaimaci al: +49 (0)30-120870330, Lun-Ven 9-18.",
+      "call-us": "Chaimaci al: +49 (0)30-120870330, Lun-Ven 9-18. ",
       "email-us": "O scrivici un email",
       "support": "listnride servizio clienti"
     },
@@ -292,12 +292,11 @@
     },
     "details": {
       "tab": "2. Dati personali",
-      "invoice-address": "Il tuo indirizzo di fatturazione",
+      "invoice-address": "Il tuo indirizzo di fatturazione ",
       "verification": "Si prega di verificare",
-      "send-sms": "Ti invieremo un SMS sul tuo telefono",
-      "check-phone": "Per favore controlla il tuo telefono",
+      "send-sms": "Ti invieremo un SMS sul tuo telefono ",
+      "check-phone": "Per favore controlla il tuo telefono ",
       "send-code": "Inviare",
-      "comfirm-code": "PIN di conferma",
       "enter-code": "Inserisci il PIN che abbiamo appena inviato al tuo telefono",
       "success-code": "Perfetto, sei pronto.",
       "fail-code": "Il PIN inserito non è corretto",
@@ -318,7 +317,7 @@
       "invalid-year": "Year not valid",
       "exp-year": "Exp. year",
       "exp-date": "Scadenza",
-      "invalid-cvc": "CVC not valid",
+      "invalid-cvc": "CVC non valido",
       "cvc": "Numero di sicurezza",
       "pay-paypal": "Paypal"
     },
@@ -353,7 +352,7 @@
     "account-deleted": "Il tuo profilo è stato cancellato",
     "enter-email": "Per favore inserisci la tua email",
     "duplicate-start": "Il processo di duplicazione è iniziato",
-    "duplicate-finish": "Duplication process finished. Copies created successfully",
+    "duplicate-finish": "Processo di duplicazione è terminato. Copie create con successo",
     "bike-deleted": "Bici cancellata con successo"
   },
   "settings": {
@@ -587,7 +586,7 @@
     "meta-description": "Noleggia la bicicletta perfetta nella comunità listnride. Trovane una che si adatti al tuo stile e alle tue esigenze."
   },
   "autocomplete": {
-    "default-placeholder": "Dove vorresti noleggiare una bicicletta "
+    "default-placeholder": "Dove vorresti noleggiare una bicicletta ?"
   },
   "search": {
     "no-bikes": "Non ci sono biciclette in questa località",
@@ -637,14 +636,14 @@
       "description": "La descrizione (min. di 100 caratteri)",
       "min-length-warning": "La lunghezza deve essere di almeno 100 caratteri.",
       "size": "Altezza del ciclista",
-      "frame-size": "Frame size",
-      "bicycle-number": "Bicycle No.",
-      "frame-number": "Frame number",
-      "custom-fields": "Additional fields",
-      "notes": "Notes",
-      "frame_size": "Frame size",
-      "bicycle_number": "Bicycle number",
-      "frame_number": "Frame number"
+      "frame-size": "Dimensione telaio",
+      "bicycle-number": "Bicicletta n.",
+      "frame-number": "Numero di telaio",
+      "custom-fields": "Campi aggiuntivi",
+      "notes": "Note",
+      "frame_size": "Dimensione telaio",
+      "bicycle_number": "Numero di bicicletta",
+      "frame_number": "Numero di telaio"
     },
     "accessories": {
       "header": "Quali accessori ha la tua bicicletta?",
@@ -771,7 +770,7 @@
       "header": "Bici duplicata",
       "number_bikes": "Numero di bici",
       "maxlength": "Funziona per un massimo di 99 biciclette",
-      "required": "Il numero di biciclette è richiesto"
+      "required": "Numero di biciclette è richiesto"
     },
     "listView": {
       "price": "Prezzo (€)"
@@ -898,6 +897,16 @@
       "copy": "Copia",
       "copied": "Copiato!"
     },
+    "invite-dialog": {
+      "rider": {
+        "header": "Ti sei divertito ?",
+        "subheader": "Raccomanda listnride ai tuoi amici ! Aggiungiamo € 10 per la sua prima prenotazione! E se il tuo amico ne fa uso, c'è un buono di € 10 per te. "
+      },
+      "lister": {
+        "header": "E' stato facile, giusto?",
+        "subheader": "Ci raccomanderesti ai tuoi amici ? Aggiungeremo € 10 per la sua prima prenotazione! E se il tuo amico ne fa uso, c'è un altro credito di 10 € per il tuo prossimo noleggio. "
+      }
+    },
     "invitations": {
       "header": "Hai guadagnato {{credit}} € grazie ai tuoi amici ",
       "status": {
@@ -929,18 +938,17 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
   "seo": {
-    "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden",
     "header": "Noleggia le migliori bici a",
     "rent-the-best": "Noleggia le migliori",
-    "bikes": "bici",
-    "rent-perfect-bikes-in": "Noleggia la bici perfetta a",
+    "bikes": "biciclette",
+    "rent-perfect-bikes-in": "Noleggia la bicicletta perfetta a",
     "rent-category-bikes-in": " Ti offriamo una ampia scelta di bici a noleggio",
-    "bike-shops-in": "Negozi di bici a",
-    "city": "bici città",
-    "race": "bici gara",
-    "all-terrain": "bici all-terrain",
-    "kids": "bici bambini",
-    "electro": "bici elettrica",
-    "special": "bici speciale"
+    "bike-shops-in": "Negozi di biciclette a",
+    "city": "Bici da città",
+    "race": "Bici da corsa",
+    "all-terrain": "Bici all-terrain",
+    "kids": "Bici da bambino",
+    "electro": "E-bikes",
+    "special": "Bici speciali"
   }
 }
