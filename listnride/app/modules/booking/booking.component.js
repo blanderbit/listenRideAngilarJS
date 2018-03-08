@@ -218,14 +218,15 @@ angular.module('booking', [])
             function (success) {
               booking.user = success.data;
               booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
-              if (booking.user.status == 3) {
-                booking.selectedIndex = 3;
-              }
-              else if (booking.user.has_phone_number && booking.user.has_address) {
-                booking.selectedIndex = 2;
-              } else {
-                booking.selectedIndex = 1;
-              }
+              // if (booking.user.status == 3) {
+              //   booking.selectedIndex = 3;
+              // }
+              // else if (booking.user.has_phone_number && booking.user.has_address) {
+              //   booking.selectedIndex = 2;
+              // } else {
+              //   booking.selectedIndex = 1;
+              // }
+              booking.selectedIndex = 0;
               $timeout(function () {
                 booking.hidden = false;
               }, 120);
@@ -448,4 +449,10 @@ angular.module('booking', [])
     templateUrl: 'app/modules/booking/overview-tab.template.html',
     require: {parent: '^booking'},
     controllerAs: 'overview'
+  })
+  // overview tab ui component
+  .component('calendarTab', {
+    templateUrl: 'app/modules/booking/calendar-tab.template.html',
+    require: {parent: '^booking'},
+    controllerAs: 'calendar'
   });

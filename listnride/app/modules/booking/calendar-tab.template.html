@@ -1,0 +1,48 @@
+<md-tab
+  class="categories"
+  label="{{ 'booking.calendar.tab' | translate }} {{ calendar.parent.tabCompleted(3) }}"
+  layout="row"
+  ng-disabled="calendar.parent.tabsDisabled"
+  md-on-select="calendar.parent.onTabChanged()">
+  <div class="spacer-xs"></div>
+  <md-content layout="column">
+    <div class="tab-content" style="min-height: 450px;" layout-align="space-between none" layout-padding>
+      <div class="lnr-list-form" layout="column">
+        <h2 class="md-title lnr-no-margin">{{ 'booking.calendar.bike-rental' | translate }}</h2>
+        <div class="spacer-xs"></div>
+      	<div layout="row" layout-align="space-between none" layout-wrap>
+          <div flex="40" flex-xs="100">
+            <a ui-sref="bike({bikeId: calendar.parent.bike.id})" target="_blank">
+              <img flex="100" ng-src="{{ calendar.parent.bike.image_file_1.image_file_1.small.url }}" />
+            </a>
+          </div>
+          <div flex="30" flex-xs="60" layout="column">
+            <a class="md-title lnr-black" ui-sref="bike({bikeId: calendar.parent.bike.id})" target="_blank">{{ calendar.parent.bike.brand }}, {{ calendar.parent.bikeCategory }}</a>
+            <br>
+            <div layout="row" layout-align="space-between none">
+              <span flex="45" class="md-body-2">{{ 'settings.from' | translate }}</span>
+              <span flex="55" class="md-body-1 lnr-lh-body-2">{{ calendar.parent.startDate | date }}</span>
+            </div>
+            <div layout="row" layout-align="space-between none">
+              <span flex="45" class="md-body-2">{{ 'settings.to' | translate }}</span>
+              <span flex="55" class="md-body-1 lnr-lh-body-2">{{ calendar.parent.endDate | date }}</span>
+            </div>
+            <div layout="row" layout-align="space-between none">
+              <span flex="45" class="md-body-2">{{ 'booking.overview.size' | translate }}</span>
+              <span flex="55" class="md-body-1 lnr-lh-body-2">{{ calendar.parent.bikeSize }}</span>
+            </div>
+            <div layout="row" layout-align="space-between none">
+              <span flex="45" class="md-body-2">{{ 'booking.overview.location' | translate }}</span>
+              <span flex="55" class="md-body-1 lnr-lh-body-2">{{ calendar.parent.bike.city }}</span>
+            </div>
+          </div>
+          <div flex="20">
+            <p class="md-subhead lnr-bold lnr-right" style="margin: 0;">{{ calendar.parent.subtotal }} €</p>
+          </div>
+        </div>
+        <div class="spacer"></div>
+        <md-divider></md-divider>
+      </div>
+    </div>
+  </md-content>
+</md-tab>
