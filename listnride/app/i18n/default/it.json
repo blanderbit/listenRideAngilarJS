@@ -274,6 +274,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Pagamento sicuro con",
+    "agree-terms": "With 'Request Bike' you agree to the",
+    "agree-terms-link": "listnride terms",
     "footer": {
       "questions": "Hai domande sul noleggio della bicicletta?",
       "call-us": "Chaimaci al: +49 (0)30-120870330, Lun-Ven 9-18.",
@@ -293,6 +295,7 @@
     "details": {
       "tab": "2. Dati personali",
       "invoice-address": "Il tuo indirizzo di fatturazione",
+      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Si prega di verificare",
       "send-sms": "Ti invieremo un SMS sul tuo telefono",
       "check-phone": "Per favore controlla il tuo telefono",
@@ -354,7 +357,9 @@
     "enter-email": "Per favore inserisci la tua email",
     "duplicate-start": "Il processo di duplicazione è iniziato",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
-    "bike-deleted": "Bici cancellata con successo"
+    "bike-deleted": "Bici cancellata con successo",
+    "range-success-delete": "Availability range successfully deleted",
+    "availability-success-saved": "Availability successfully saved"
   },
   "settings": {
     "settings": "Impostazioni",
