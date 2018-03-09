@@ -58,7 +58,7 @@
     "search": "Zoeken",
     "search-all": "Doorzoek alle fietsen",
     "search-all-in": "Doorzoek alle fietsen in",
-    "search-bikes": "Zoek je fietsen",    
+    "search-bikes": "Zoek je fietsen",
     "from-place": "uit",
     "contact": "Contact & Help",
     "show-more": "Toon meer",
@@ -148,7 +148,7 @@
       },
       "velothon-bikerental": {
         "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
-        "meta-description": "Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!"
+        "meta-description": "Take part in the Velothon Berlin 2018! Rent a road bike from the listnride bike sharing community and join in on the fun!"
       },
       "constance-spin": {
         "meta-title": "Rent the perfect road bike during Eurobike",
@@ -159,12 +159,12 @@
         "meta-description": "A local riders' favourite route through Holledau. listnride pays a visit to Velosoph, the Cycling Café in Freising."
       },
       "cyclassics-hamburg": {
-        "meta-title": "Rent a road bike for the Cyclassics Hamburg on listnride",
-        "meta-description": "Rent the perfect road bike for the Cyclassics in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
+        "meta-title": "Boek eenvoudig the perfekte racefiets voor de Cyclassics Hamburg",
+        "meta-description": "Huur de perfekte racefiets voor de Cyclassics in Hamburg van merken zoals Specialized, Ridley, Cervelo en Bianchi"
       },
       "hamburg-triathlon": {
-        "meta-title": "Rent a road bike for the Hamburg Triathlon on listnride",
-        "meta-description": "Rent the perfect road bike for the Triathlon in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
+        "meta-title": "Boek eenvoudig the perfekte racefiets voor de Cyclassics Hamburg",
+        "meta-description": "Huur eenvoudig de perfecte racefiets voor de Triathlon in Hamburg en kies uit merken als Specialized, Ridley, Cervelo en Bianchi"
       },
       "riderman": {
         "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",
@@ -193,7 +193,7 @@
         "meta-descr": "Test ride an E-Bike today! Electric assist bikes from Ampler available on listnride. Rent one in Berlin, Munich, Hamburg and Vienna."
       },
       "brompton": {
-        "meta-title": "Rent a Brompton bike with listnride",
+        "meta-title": "Maak een proefrit met de Brompton vouwfiets via listnride",
         "meta-description": "Test ride a Brompton bike today! These urban folding bikes are available on listnride. Rent one in Berlin, Munich, Hamburg, Düsseldorf or Frankfurt."
       },
       "muli": {
@@ -297,7 +297,7 @@
       "login-facebook": "Login met Facebook",
       "already-member": "Al geregistreerd?",
       "register": "Aanmelden",
-      "not-member": "No member yet?"
+      "not-member": "Nog niet aangemeld?"
     },
     "details": {
       "tab": "2. Persoonlijke gegevens",
@@ -565,7 +565,7 @@
     "zip": "Postcode",
     "city": "Plaats",
     "country": "Land",
-    "company-name": "Company name",
+    "company-name": "Bedrijfsnaam",
     "update-contact": "Wijzig mobiele nummer",
     "update-contact-mobile": "Mobiele nummer",
     "company-contact-info": "Vul uw Bedrijfsnaam en naam van de contact persoon in",
@@ -590,7 +590,7 @@
       "empty-company-name": "Vul alstublieft uw bedrijfsnaam in",
       "empty-company-name-xs": "Bedrijfsnaam vereist",
       "min-size-company-name": "Bedrijfsnaam moet langer zijn dan 2 karakters ",
-      "min-size-company-name-xs": "Ten minste 3 tekens "
+      "min-size-company-name-xs": "Ten minste 3 tekens"
     }
   },
   "home": {
@@ -600,8 +600,8 @@
     "featured-bikes-subheader": "of je nu een racefiets, mountainbike, stadsfiets of e-bike wilt, je huurt ze hier. Dit zijn de favorieten van onze Community.",
     "featured-tiles-header": "Raak geïnspireerd",
     "featured-tiles-subheader": "We werken samen met innovatieve merken, schrijven over interessante ontwikkelingen en nemen deel aan speciale evenementen",
-    "featured-cities-header": "in het zadel door de Urban jungle",
-    "featured-cities-subheader": " In steeds meer grote Steden vind je huurfietsen via listnride. Onze eerste insider tips vind je hier:",
+    "featured-cities-header": "Met listnride ben je altijd met de perfecte fiets onderweg",
+    "featured-cities-subheader": "De fietsverhuurservice van listnride is beschikbaar in meer en meer steden en vakantieregio’s in Europa. Hier zijn enkele tips voor je:",
     "list-a-bike-header": "Je fiets is te mooi om stil te staan?",
     "list-a-bike-subheader": "biedt je fiets te huur aan, ontmoet leuke nieuwe mensen en spek je banksaldo.",
     "meta-title": "listnride - De bike sharing community",
@@ -748,11 +748,11 @@
       },
       "2": {
         "road-bike": "Racefiets",
-        "triathlon": "Triathlonfiets",
+        "triathlon": "Triathlon",
         "indoor": "Baanfiets"
       },
       "3": {
-        "tracking": "Tracking",
+        "tracking": "Trekking",
         "enduro": "Enduro",
         "freeride": "Freeride",
         "cross-country": "Cross Country",
@@ -909,6 +909,12 @@
       "community": "Wordt deel van de community",
       "earn-credit": "Ontvang listnride toegoed"
     },
+    "invite-form": {
+      "header": "Deel jouw persoonlijke link",
+      "subheader": "Stuur deze link aan je vrienden en ontvang 10€ tegoed na een eerste aktiviteit.",
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
     "invite-dialog": {
       "rider": {
         "header": "Mooie fiets ervaring gehad?",
@@ -918,12 +924,6 @@
         "header": "Dat verliep gemakkelijk, toch?",
         "subheader": "Zou je ons aan je vrienden willen aanbevelen? Je ontvangt 10€ tegoed, zodra je uitnodiging wordt aangenomen. Degene die je uitnodigt ontvangt ook €10 tegoed bij het aannemen van je uitnodiging. Een mooie Win-Win!"
       }
-    },
-    "invite-form": {
-      "header": "Deel jouw persoonlijke link",
-      "subheader": "Stuur deze link aan je vrienden en ontvang 10€ tegoed na een eerste aktiviteit.",
-      "copy": "Copy",
-      "copied": "Copied!"
     },
     "invitations": {
       "header": "Your friends have earned you {{ credit }}€",
@@ -956,7 +956,6 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=nl"
   },
   "seo": {
-    "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden",
     "header": "Huur de beste fietsen in",
     "rent-the-best": "Huur de beste",
     "bikes": "fietsen",
