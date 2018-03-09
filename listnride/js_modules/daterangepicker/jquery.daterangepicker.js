@@ -1633,7 +1633,7 @@
 			if (opt.start && !opt.end)
 			{
 				var day = $("div.day[time=" + opt.start + "]"); //TODO: Added by DY
-				anyReservedDays(day); //
+				anyReservedDays(day);
 
 				box.find('.day.toMonth.valid').each(function()
 				{
@@ -1749,30 +1749,24 @@
 		{
 			var days = $(box).find("div.day.toMonth");
 			if (day.length == 0 || days[0].attributes.time.value > day[0].attributes.time.value) return;
-			var lastDay = [days[days.length - 1]];
-			var start = day[0].attributes.time.value;
-			var end = lastDay[0].attributes.time.value;
-			var totalDays = Math.abs( daysFrom1970(start) - daysFrom1970(end) );
-			var i = 0;
-			while( i < totalDays )
+			var totalDays = days.length - 1;
+			var currentDay = _.findIndex(days, day[0]);
+			while (currentDay < totalDays )
 			{
-				if ($(day).hasClass('date-reserved')) return markTmpInvalid(day, totalDays - i);
-				// var nextDay = parseInt(day[0].attributes.time.value) + 86400000;
-				// day = $("div.day[time=" + nextDay + "]");
-				day = $(days).eq(i + 1)
-				i++;
+				if ($(day).hasClass('date-reserved')) return markTmpInvalid(totalDays, days, currentDay);
+				day = $(days).eq(currentDay + 1)
+				currentDay++;
 			}
 		}
 
-		function markTmpInvalid(firstDay, totalDays)
+		function markTmpInvalid(totalDays, days, currentDay)
 		{
-			var day = firstDay;
-			var i = 0;
+			var i = currentDay;
 			while( i <= totalDays )
 			{
-				if (!$(day).hasClass('invalid')) $(day).addClass('invalid tmp').removeClass('valid');
-				var nextDay = parseInt(day[0].attributes.time.value) + 86400000;
-				day = $("div.day[time=" + nextDay + "]");
+				if (!$(days).eq(i).hasClass('invalid')) {
+					$(days).eq(i).addClass('invalid tmp').removeClass('valid');
+				}
 				i++;
 			}
 			$("span.next").addClass('disabled');

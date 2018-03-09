@@ -2307,3 +2307,10 @@ md-icon[md-font-icon].fa--lh20 {
     max-width: 320px;
   }
 }
+
+/* input-range */
+@media (max-width: 599px) {
+  input-range {
+    margin-bottom: 15px;
+  }
+}

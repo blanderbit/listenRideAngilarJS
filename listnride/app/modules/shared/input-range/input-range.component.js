@@ -10,7 +10,8 @@ angular
       controllerAs: 'vm',
       bindToController: {  
         data: '=',
-        disabledDates: '<' 
+        disabledDates: '<',
+        requests: '<?'
       },
       controller: ['$scope', '$translate', inputRangeController],
       link: function ($scope, element, attrs) {
@@ -97,6 +98,8 @@ function inputRangeController($scope, $translate) {
       now.setHours(0, 0, 0, 0);
       if (date.getTime() <= now.getTime()) {
         return [false, "date-past", ""];
+      } else if (!!vm.requests && isReserved(date)) {
+        return [false, "date-reserved", ""];
       } else if (dateClosed(date)) {
         return [false, "date-closed", ""];
       } else {
@@ -122,12 +125,31 @@ function inputRangeController($scope, $translate) {
     }
   
     function dateClosed(date) {
+      return bikeNotAvailable(date);
+    }
+
+    function bikeNotAvailable(date) {
       date.setHours(0, 0, 0, 0);
       var result = false;
-      _.forEach(vm.disabledDates, function(slot){
+      _.forEach(vm.disabledDates, function (slot) {
         result = result || moment(date).isBetween(slot.start_at, slot.end_at, null, '[]') // all inclusive
       });
       return result;
+    }
+
+    function isReserved(date) {
+      for (var i = 0; i < vm.requests.length; ++i) {
+        var start = new Date(vm.requests[i].start_date_tz);
+        start.setHours(0, 0, 0, 0);
+        var end = new Date(vm.requests[i].end_date_tz);
+        end.setHours(0, 0, 0, 0);
+
+        if (start.getTime() <= date.getTime()
+          && date.getTime() <= end.getTime()) {
+          return true;
+        }
+      }
+      return false;
     }
 
     // save this data, because mdDialog destroys elements before $onDestroy method
