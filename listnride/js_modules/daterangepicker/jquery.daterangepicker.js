@@ -1759,6 +1759,9 @@
 			}
 		}
 
+		// Temporary disable dates after invalid dates (reserved, unavailable)
+		// Starts when user check first date in a range
+		// When the user finished selection, we should clear our special classes by updateSelectableRange
 		function markTmpInvalid(totalDays, days, currentDay)
 		{
 			var i = currentDay;
