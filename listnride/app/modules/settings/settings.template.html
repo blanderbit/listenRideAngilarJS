@@ -115,7 +115,7 @@
                   <autocomplete
                     autocomplete-id="settings"
                     layout="column"
-                    location="settings.user.street"
+                    location="settings.user.locations.primary.street"
                     label-id="{{ 'list.location.street-number' | translate }}"
                     place-changed="settings.fillAddress(place)"
                     flex-gt-xs="45"
@@ -124,21 +124,82 @@
                   <span hide-xs flex></span>
                   <md-input-container flex-gt-xs="45">
                     <label>{{ 'forms.zip' | translate }}</label>
-                    <input name="zip" ng-model="settings.user.zip"></input>
+                    <input name="zip" ng-model="settings.user.locations.primary.zip"></input>
                   </md-input-container>
                 </div>
                 <div layout="row" layout-xs="column">
                   <md-input-container flex-gt-xs="45">
                     <label>{{ 'forms.city' | translate }}</label>
-                    <input name="city" ng-model="settings.user.city"></input>
+                    <input name="city" ng-model="settings.user.locations.primary.city"></input>
                   </md-input-container>
                   <span hide-xs flex></span>
                   <md-input-container flex-gt-xs="45">
                     <label>{{ 'forms.country' | translate }}</label>
-                    <input name="country" ng-model="settings.user.country"></input>
+                    <input name="country" ng-model="settings.user.locations.primary.country"></input>
                   </md-input-container>
                 </div>
                 <p class="md-body-2">{{'settings.change-address-info' | translate}}</p>
+              </div>
+            </div>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <span class="md-body-2">Invoice address</span>
+              </div>
+              <div flex-gt-xs="70" layout-margin>
+                <div ng-show="settings.user.has_billing">
+                  <div layout="row" layout-xs="column">
+                    <md-input-container flex-gt-xs="45">
+                      <label>{{ 'forms.first-name' | translate }}</label>
+                      <input name="firstName" ng-model="settings.user.first_name"></input>
+                    </md-input-container>
+                    <span hide-xs flex></span>
+                    <md-input-container flex-gt-xs="45">
+                      <label>{{ 'forms.last-name' | translate }}</label>
+                      <input name="lastName" ng-model="settings.user.last_name"></input>
+                    </md-input-container>
+                  </div>
+                  <div layout="row" layout-xs="column">
+                    <md-input-container flex-gt-xs="45">
+                      <label>{{ 'list.location.street-number' | translate }}</label>
+                      <input name="zip" ng-model="settings.user.locations.billing.street" required></input>
+                    </md-input-container>
+                    <span hide-xs flex></span>
+                    <md-input-container flex-gt-xs="45">
+                      <label>{{ 'forms.zip' | translate }}</label>
+                      <input name="zip" ng-model="settings.user.locations.billing.zip" required></input>
+                    </md-input-container>
+                  </div>
+                  <div layout="row" layout-xs="column">
+                    <md-input-container flex-gt-xs="45">
+                      <label>{{ 'forms.city' | translate }}</label>
+                      <input name="city" ng-model="settings.user.locations.billing.city" required></input>
+                    </md-input-container>
+                    <span hide-xs flex></span>
+                    <md-input-container flex-gt-xs="45">
+                      <label>{{ 'forms.country' | translate }}</label>
+                      <input name="country" ng-model="settings.user.locations.billing.country" required></input>
+                    </md-input-container>
+                  </div>
+                  <div layout="row" layout-xs="column">
+                    <md-input-container flex-gt-xs="45">
+                      <label>Name</label>
+                      <input name="name" ng-model="settings.user.locations.billing.name"></input>
+                    </md-input-container>
+                    <span hide-xs flex></span>
+                    <md-input-container flex-gt-xs="45">
+                      <label>VAT</label>
+                      <input name="vat" ng-model="settings.user.locations.billing.vat"></input>
+                    </md-input-container>
+                  </div>
+                </div>
+
+                <span class="lnr-link" ng-hide="settings.user.has_billing" ng-click="settings.toggleBilling(true)">
+                  Add billing address
+                </span>
+                <span class="lnr-link" ng-show="settings.user.has_billing" ng-click="settings.toggleBilling(false)">
+                  Delete billing address
+                </span>
               </div>
             </div>
 
