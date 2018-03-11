@@ -136,6 +136,7 @@ angular.module('listings', []).component('listings', {
         
         if (!bike.hasOwnProperty('availabilities')) bike.availabilities = {};
         availabilityDialog.setData();
+
         //////////////////
 
         $scope.$on('input-range:changed', function (event) {
@@ -211,7 +212,7 @@ angular.module('listings', []).component('listings', {
         function destroyInput(index){
           availabilityDialog.inputs.splice(index, 1);
 
-          if (availabilityDialog.inputs.length <= 1) {
+          if (availabilityDialog.inputs.length < 1) {
             availabilityDialog.isChanged = false;
             availabilityDialog.addInput();
           }
