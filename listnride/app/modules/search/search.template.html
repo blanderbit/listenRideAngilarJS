@@ -78,8 +78,8 @@
       <div id="featuredBikes" layout="row" layout-wrap layout-padding>
         <div ng-repeat="bike in search.bikes | filter:search.sizeFilter | mapCategory:search.categoryFilter" flex="100" flex-gt-sm="50" flex-gt-lg="33">
           <bike-card bike="bike"
-                     ng-mouseover="search.onBikeHover(bike)"
-                     ng-mouseleave="search.onBikeHoverLeave()">
+                     ng-mouseover="search.onBikeHover(bike, true)"
+                     ng-mouseleave="search.onBikeHover(bike, false)">
           </bike-card>
         </div>
       </div>
