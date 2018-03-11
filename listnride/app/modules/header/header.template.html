@@ -5,12 +5,14 @@
       <md-icon class="md-color-white" md-svg-src="app/assets/ui_icons/lnr_logo_bold.svg"></md-icon>
     </md-button>
 
-    <md-input-container>
-      <input name="brand"
-        required
-        ng-model="list.form.brand"
-        maxlength="25">
-    </md-input-container>
+    <autocomplete
+      ng-if="header.showSearch"
+      autocomplete-id="search"
+      layout="column"
+      location="header.location"
+      place-changed="header.search(place)"
+      required="false">
+    </autocomplete>
   
     <span flex></span>
     <div hide show-xs>
@@ -20,8 +22,6 @@
     </div>
 
     <div class="lnr-nav-menu" hide-xs>
-      <md-button class="md-lined" ui-sref="listingABike" md-no-ink>{{ 'shared.list-a-bike' | translate }}</md-button>
-
       <md-menu md-position-mode="target bottom">
         <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">{{ 'shared.learn-more' | translate }}</md-button>
         <md-menu-content width="2">        
@@ -48,6 +48,8 @@
           </md-menu-item> -->
         </md-menu-content>
       </md-menu>
+
+      <md-button class="md-underlined" ui-sref="listingABike" md-no-ink>{{ 'shared.list-a-bike' | translate }}</md-button>
 
       <md-button ng-if="!header.authentication.loggedIn()" md-no-ink ng-click="header.authentication.showSignupDialog()">
         {{ 'forms.sign-up' | translate }}

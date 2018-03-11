@@ -8,7 +8,7 @@ angular.module('autocomplete',[]).component('autocomplete', {
     location: '=',
     labelId: '@',
     placeholderId: '@',
-    required: '@',
+    required: '<',
     name: '@',
     error: '=',
     placeChanged: '&'
