@@ -978,6 +978,7 @@
     "end-at": "Ending at",
     "add-another-date": "Add another date",
     "submit-btn": "Ok",
-    "submit-btn-save": "Save"
+    "submit-btn-save": "Save",
+    "choose-range": "Choose your date range"
   }
 }
