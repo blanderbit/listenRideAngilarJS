@@ -36,6 +36,10 @@ angular.module('search',[]).component('search', {
         {value: 195, label: "195 - 205"}
       ];
 
+      search.date = {
+        
+      }
+
       $translate('search.all-sizes').then(function (translation) {
         search.sizeOptions[0].label = translation;
       });
