@@ -534,8 +534,12 @@ settings .lnr-profile-lrg {
   z-index: 3;
 }
 
-.lnr-header md-input-container {
-    margin: 8px 20px;
+.lnr-header autocomplete {
+  margin: 8px 16px;
+}
+
+.lnr-header label {
+  display: none;
 }
 
 .lnr-header input {
