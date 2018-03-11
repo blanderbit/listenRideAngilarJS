@@ -52,12 +52,11 @@ angular.module('search',[]).component('search', {
         search.map = map;
       });
 
-      search.showBikeWindow = function(evt, bikeId) {
+      search.showBikeWindow = function(event, bikeId) {
         if (search.map) {
           search.selectedBike = search.bikes.find(function(bike) {
             return bike.id === bikeId;
           });
-
           search.map.showInfoWindow('searchMapWindow', this);
         }
       };
@@ -89,6 +88,19 @@ angular.module('search',[]).component('search', {
         if (search.map) {
           search.map.hideInfoWindow('searchMapWindow');
           search.selectedBike = undefined;
+        }
+      };
+
+      search.onBikeHover = function (bike) {
+        if (search.map) {
+          search.selectedBike = bike;
+          search.map.showInfoWindow('searchMapWindow', search.map.markers[bike.id]);
+        }
+      };
+
+      search.onBikeHoverLeave = function () {
+        if (search.map) {
+          search.map.hideInfoWindow('searchMapWindow');
         }
       };
 
