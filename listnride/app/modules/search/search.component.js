@@ -23,7 +23,7 @@ angular.module('search',[]).component('search', {
         search.onBikeHover = onBikeHover;
         
         // properties
-        search.date = {}
+        search.date = {};
         search.sizeFilter = {
           size: $stateParams.size
         };
