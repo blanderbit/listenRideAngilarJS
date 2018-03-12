@@ -37,7 +37,7 @@ var env = environments[argvEnv];
 
 // linter and code checking
 gulp.task('lint', lint);
-
+gulp.task('disable-https', disableHttps);
 // html cache related tasks
 gulp.task('inject-templates-modules', injectTemplatesModules);
 gulp.task('cache-templates-modules', cacheTemplatesModules);
@@ -98,6 +98,13 @@ gulp.task('clean-lnr-shop', cleanLnrShop);
 gulp.task('local', local);
 gulp.task('default', ['local']);
 gulp.task('deploy', deploy);
+
+function disableHttps() {
+    if ('staging' === processEnv || 'production' === processEnv) { return; }
+    return gulp.src(path.middleware.file)
+        .pipe(remove({ middleware: true }))
+        .pipe(gulp.dest(path.middleware.root));
+}
 
 // create two new variables for translation provider
 function translationConstants() {
@@ -671,5 +678,6 @@ function deploy(cb) {
         'copy-downloadables',
         'clean-extra',
         'clean-extra-local',
+        'disable-https',
         cb);
 }
