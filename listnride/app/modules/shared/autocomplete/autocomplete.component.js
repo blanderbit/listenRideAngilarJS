@@ -5,7 +5,7 @@ angular.module('autocomplete',[]).component('autocomplete', {
   controllerAs: 'autocomplete',
   bindings: {
     autocompleteId: '@',
-    location: '=',
+    location: '<',
     labelId: '@',
     placeholderId: '@',
     required: '<',
@@ -16,7 +16,12 @@ angular.module('autocomplete',[]).component('autocomplete', {
   controller: ['$interval', '$scope',
     function AutocompleteController($interval, $scope) {
       var autocomplete = this;
-      console.log(autocomplete.autocompleteId);
+      autocomplete.filled = false;
+      autocomplete.location = "";
+
+      autocomplete.$onChanges = function (changes) {
+        autocomplete.toggleButton();
+      };
 
       var deregisterAutocompleteWatcher = $scope.$watch(
         function () {
@@ -43,6 +48,7 @@ angular.module('autocomplete',[]).component('autocomplete', {
       );
 
       autocomplete.showResults = function() {
+        autocomplete.toggleButton();
         if ($(".pac-container").length > 0) {
           var el = $(".pac-container").detach();
           var acClass = "." + autocomplete.autocompleteId;
@@ -50,17 +56,21 @@ angular.module('autocomplete',[]).component('autocomplete', {
         }
       };
 
-      // TODO: Switch to watcher
-      // var timer = $interval(function() {
-      //   if ($(".pac-container").length > 0) {
-      //     var el = $(".pac-container").detach();
-      //     var acClass = "." + autocomplete.autocompleteId;
-      //     console.log(acClass);
-      //     console.log($(acClass));
-      //     el.appendTo($(acClass));
-      //     $interval.cancel(timer);
-      //   }
-      // }, 100);
+      autocomplete.toggleButton = function() {
+        if (autocomplete.location.length > 0) {
+          autocomplete.filled = true;
+        } else {
+          autocomplete.filled = false;
+        }
+      }
+
+      autocomplete.toggleButton();
+
+
+      autocomplete.clear = function() {
+        autocomplete.location = "";
+        autocomplete.toggleButton();
+      }
     }
   ]
 });

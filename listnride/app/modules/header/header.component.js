@@ -13,30 +13,21 @@ angular.module('header',[]).component('header', {
       header.inviteCode = $stateParams.inviteCode
       // Contains the amount of unread messages to be displayed in the header
       header.unreadMessages = $localStorage.unreadMessages;
-      header.showSearch = false;
-
-      var toggleSearchbar = function(stateName) {
-        if (stateName === "home" || stateName === "search") {
-          header.showSearch = true;
-        } else {
-          header.showSearch = true;
-        }
-      }
-
-      toggleSearchbar($state.current.name);
 
       $transitions.onSuccess({}, function(transition) {
-        toggleSearchbar(transition.to().name);
+        if (transition.to().name === "search") {
+          header.location = $stateParams.location;
+        }
       });
-
-      header.toggleSidebar = function() {
-        $mdSidenav('right').toggle();
-      }
 
       header.search = function(place) {
         var location = place.formatted_address || place.name;
         $state.go('search', {location: location});
       };
+
+      header.toggleSidebar = function() {
+        $mdSidenav('right').toggle();
+      }
       
     }
   ]
