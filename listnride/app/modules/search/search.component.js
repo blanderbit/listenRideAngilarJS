@@ -6,8 +6,8 @@ angular.module('search',[]).component('search', {
   bindings: {
     location: '<'
   },
-  controller: ['$translate', '$stateParams', '$state', 'NgMap', 'ngMeta', 'api', 'bikeOptions',
-    function SearchController($translate, $stateParams, $state, NgMap, ngMeta, api, bikeOptions) {
+  controller: ['$translate', '$stateParams','$state', '$timeout', 'NgMap', 'ngMeta', 'api', 'bikeOptions',
+    function SearchController($translate, $stateParams, $state, $timeout, NgMap, ngMeta, api, bikeOptions) {
       var search = this;
       search.$onInit = function() {
         // methods
@@ -23,7 +23,7 @@ angular.module('search',[]).component('search', {
         search.onBikeHover = onBikeHover;
         
         // properties
-        search.date = {}
+        search.date = {};
         search.sizeFilter = {
           size: $stateParams.size
         };
@@ -45,7 +45,7 @@ angular.module('search',[]).component('search', {
           zoom: 5
         };
         
-        // invocatons
+        // invocations
         setMetaTags(search.location);
         populateBikes(search.location);
         initializeGoogleMap();
@@ -145,7 +145,6 @@ angular.module('search',[]).component('search', {
             var loc = new google.maps.LatLng(search.bikes[i].lat_rnd, search.bikes[i].lng_rnd);
             bounds.extend(loc);
           }
-          console.log(bounds);
           NgMap.getMap({id: "searchMap"}).then(function(map) {
             map.fitBounds(bounds);
             // map.panToBounds(bounds);
@@ -181,10 +180,13 @@ angular.module('search',[]).component('search', {
 
       }
       
-      function initializeGoogleMap () {
-        NgMap.getMap({ id: "searchMap" }).then(function (map) {
-          search.map = map;
-        });
+      function initializeGoogleMap() {
+        // TODO: timeout needs to be replaced with a better solution
+        $timeout(function(){
+          NgMap.getMap({ id: "searchMap" }).then(function (map) {
+            search.map = map;
+          });
+        }, 0);
       }
     }
   ]
