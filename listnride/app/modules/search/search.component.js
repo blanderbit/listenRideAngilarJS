@@ -69,7 +69,7 @@ angular.module('search',[]).component('search', {
           }
         }
       }
-
+        
       function showBikeWindow(evt, bikeId) {
         if (search.map) {
           search.selectedBike = search.bikes.find(function(bike) {
@@ -135,13 +135,6 @@ angular.module('search',[]).component('search', {
         );
       }
 
-      function onMapClick() {
-        if (search.map) {
-          search.map.hideInfoWindow('searchMapWindow');
-          search.selectedBike = undefined;
-        }
-      }
-
       function populateBikes(location) {
         search.bikes = undefined;
 
@@ -175,6 +168,7 @@ angular.module('search',[]).component('search', {
       }
 
       function clearData() {
+
       }
       
       function initializeGoogleMap () {

@@ -24,6 +24,17 @@ angular.module('listnride')
         ];
       },
 
+      sizeOptionsForSearch: function () {
+        return [
+          { value: "", label: "-" },
+          { value: 155, label: "155 - 165" },
+          { value: 165, label: "165 - 175" },
+          { value: 175, label: "175 - 185" },
+          { value: 185, label: "185 - 195" },
+          { value: 195, label: "195 - 205" }
+        ];
+      },
+
       kidsSizeOptions: function () {
         return [
           {value: 85, label: "85 cm - 95 cm"},

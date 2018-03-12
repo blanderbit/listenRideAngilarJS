@@ -174,7 +174,6 @@ angular.module('booking', [])
                   booking.reloadUser();
                 },
                 function (error) {
-                  console.log(error);
                   $mdToast.show(
                     $mdToast.simple()
                     .textContent(error.data.errors[0].detail)
@@ -202,7 +201,6 @@ angular.module('booking', [])
                   booking.reloadUser();
                 },
                 function (error) {
-                  console.log(error);
                   $mdToast.show(
                     $mdToast.simple()
                     .textContent(error.data.errors[0].detail)
@@ -234,7 +232,6 @@ angular.module('booking', [])
               api.get('/users/' + $localStorage.userId + '/current_payment').then(
                 function(response) {
                   booking.user.current_payment_method = response.data;
-                  console.log(booking.user.current_payment_method);
                 },
                 function(error) {
 
