@@ -12,7 +12,8 @@ angular
         data: '=',
         disabledDates: '<',
         requests: '<?',
-        onChange: '<?'
+        onChange: '<?',
+        onClear: '<?'
       },
       controller: ['$scope', '$translate', inputRangeController],
       link: function ($scope, element, attrs) {
@@ -35,12 +36,6 @@ function inputRangeController($scope, $translate) {
   
   ////////////
 
-  function updateParent() {
-    // inform parent component that state was changed
-    if (typeof vm.onChange == 'function') vm.onChange();    
-    $scope.$apply();
-  }
-
   /**
   * Function to update data object
   *
@@ -49,7 +44,8 @@ function inputRangeController($scope, $translate) {
   */
   function _updateData(date1, date2) {
     date1 = moment(date1);
-    date2 = moment(date2);
+    // if user doesn't pick end date - duration will be 0
+    date2 = date2 ? moment(date2) : date1;
 
     var duration = date1.diff(date2, 'days');
     var startDate = duration > 0 ? date2 : date1;
@@ -61,14 +57,18 @@ function inputRangeController($scope, $translate) {
 
     angular.extend(vm.data, newData);
 
-    updateParent();
+    if (typeof vm.onChange == 'function') vm.onChange();
+    $scope.$apply();
   }
 
   function _clearData() {
     angular.extend(vm.data, {
-      'start_date': null
+      'start_date': null,
+      'duration': null
     });
-    updateParent();
+
+    if (typeof vm.onClear == 'function') vm.onClear();
+    $scope.$apply();
   }
 
   function postLink() {
@@ -93,6 +93,12 @@ function inputRangeController($scope, $translate) {
       vm._clearData();
       changeRange();
       setFirstDate(obj.date1);
+    }).bind('datepicker-closed', function (event, obj) {
+      if (obj.date1 && !obj.date2) {
+        setEndDate(new Date(obj.date1));
+        vm._updateData(obj.date1, obj.date2);
+      }
+      
     });
 
     //TODO: make services for this
@@ -113,6 +119,10 @@ function inputRangeController($scope, $translate) {
 
     function setFirstDate(d) {
       $scope.el.dateRange.setStart(d);
+    }
+
+    function setEndDate(d) {
+      $scope.el.dateRange.setEnd(d);
     }
 
     function changeRange() {
