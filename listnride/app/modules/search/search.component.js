@@ -19,11 +19,14 @@ angular.module('search',[]).component('search', {
         search.onCategoryChange = onCategoryChange;
         search.onMapClick = onMapClick;
         search.clearData = clearData;
-        search.onMapClick = onMapClick;
         search.onBikeHover = onBikeHover;
+        search.onDateChange = onDateChange;
         
         // properties
-        search.date = {};
+        search.date = {
+          "start_date": $stateParams.start_date,
+          "duration": $stateParams.duration
+        };
         search.sizeFilter = {
           size: $stateParams.size
         };
@@ -135,6 +138,18 @@ angular.module('search',[]).component('search', {
         );
       }
 
+      function onDateChange() {
+        $state.go(
+          // current state
+          $state.current,
+          // state params
+          search.date,
+          // route options
+          // do not remove inherit prop, else map tiles stop working
+          { notify: false }
+        );
+      }
+
       function populateBikes(location) {
         search.bikes = undefined;
 
@@ -177,7 +192,11 @@ angular.module('search',[]).component('search', {
       }
 
       function clearData() {
-
+        search.date = {
+          start_date: null,
+          duration: null
+        };
+        search.onDateChange();
       }
       
       function initializeGoogleMap() {
