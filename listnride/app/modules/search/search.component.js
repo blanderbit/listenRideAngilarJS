@@ -6,60 +6,49 @@ angular.module('search',[]).component('search', {
   bindings: {
     location: '<'
   },
-  controller: ['$translate', '$http', '$stateParams', '$state', 'NgMap', 'ngMeta', 'api',
-    function SearchController($translate, $http, $stateParams, $state, NgMap, ngMeta, api) {
+  controller: ['$translate', '$http', '$stateParams', '$state', 'NgMap', 'ngMeta', 'api', 'bikeOptions',
+    function SearchController($translate, $http, $stateParams, $state, NgMap, ngMeta, api, bikeOptions) {
       var search = this;
-      search.location = $stateParams.location;
-      search.showBikeWindow = showBikeWindow;
-      search.placeChanged = placeChanged;
-      search.onButtonClick = onButtonClick;
-      search.onSizeChange = onSizeChange;
-      search.onCategoryChange = onCategoryChange;
-      search.onMapClick = onMapClick;
-      search.clearData = clearData;
-      search.date = {}
+      search.$onInit = function() {
+        search.location = $stateParams.location;
+        search.showBikeWindow = showBikeWindow;
+        search.placeChanged = placeChanged;
+        search.onButtonClick = onButtonClick;
+        search.onSizeChange = onSizeChange;
+        search.onCategoryChange = onCategoryChange;
+        search.onMapClick = onMapClick;
+        search.clearData = clearData;
+        search.date = {}
+        search.sizeFilter = {
+          size: $stateParams.size
+        };
+        search.categoryFilter = {
+          allterrain: $stateParams.allterrain === "true",
+          city: $stateParams.city === "true",
+          ebikes: $stateParams.ebikes === "true",
+          kids: $stateParams.kids === "true",
+          race: $stateParams.race === "true",
+          special: $stateParams.special === "true"
+        };
+        search.sizeOptions = bikeOptions.sizeOptionsForSearch();
+        $translate('search.all-sizes').then(function (translation) {
+          search.sizeOptions[0].label = translation;
+        });
 
-      search.sizeFilter = {
-        size: $stateParams.size
-      };
+        search.mapOptions = {
+          lat: 40,
+          lng: -74,
+          zoom: 5
+        };
 
-      search.categoryFilter = {
-        allterrain: $stateParams.allterrain === "true",
-        city: $stateParams.city === "true",
-        ebikes: $stateParams.ebikes === "true",
-        kids: $stateParams.kids === "true",
-        race: $stateParams.race === "true",
-        special: $stateParams.special === "true"
-      };
+        setMetaTags(search.location);
+        populateBikes(search.location);
 
-      search.sizeOptions = [
-        {value: "", label: "-"},
-        {value: 155, label: "155 - 165"},
-        {value: 165, label: "165 - 175"},
-        {value: 175, label: "175 - 185"},
-        {value: 185, label: "185 - 195"},
-        {value: 195, label: "195 - 205"}
-      ];
-
-      $translate('search.all-sizes').then(function (translation) {
-        search.sizeOptions[0].label = translation;
-      });
-
-      search.mapOptions = {
-        lat: 40,
-        lng: -74,
-        zoom: 5
-      };
-
-      setMetaTags(search.location);      
-      populateBikes(search.location);
-
-      NgMap.getMap({id: "searchMap"}).then(function(map) {
-        search.map = map;
-      });
-
-      //////////////
-
+        NgMap.getMap({ id: "searchMap" }).then(function (map) {
+          search.map = map;
+        });
+      }
+        
       function showBikeWindow(evt, bikeId) {
         if (search.map) {
           search.selectedBike = search.bikes.find(function(bike) {
