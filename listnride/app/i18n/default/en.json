@@ -115,7 +115,9 @@
     "confirm": "Confirm",
     "confirmation": "Confirmation",
     "confirmation-text": "Are you sure?",
-    "loading": "Loading"
+    "loading": "Loading",
+    "clear": "Clear",
+    "clear-all": "Clear All"
   },
   "meta": {
     "cities": {
