@@ -7,8 +7,8 @@ var prerender = require('prerender-node');
 var app = express();
 
 // force https redirect for staging and production
-// not used for local host and heroku review apps
-var httpForceRoute = function () {
+// not used for local host and heroku review apps 
+var enableHttps = function () {
   // prerender
   app.use(require('prerender-node').set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
 
@@ -32,7 +32,7 @@ var shouldRedirect = function (host) {
 // not used for local host and heroku review apps
 var redirectToProperDomain = function (req, res, next) {
   var host = req.headers.host;
-  console.log("should redirect: ", shouldRedirect);
+  console.log("should redirect: ", shouldRedirect(host));
   if (shouldRedirect(host)) {
     var correctHostname = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
     var correctOriginalUrl = stripTrailingSlash(req.originalUrl);
@@ -55,6 +55,11 @@ var logger = function (req) {
   console.log("params: ", req.query);
   console.log("is_shop params: ", req.query.is_shop);
 };
+
+// DONOT CHANGE IT. GULP AUTOMATED
+// removeIf(middleware)
+enableHttps();
+// endRemoveIf(middleware)
 
 // get port from env
 app.set('port', (process.env.PORT || 9003));

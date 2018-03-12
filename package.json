@@ -1,6 +1,6 @@
 {
   "name": "listnride-heroku-middleware",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "node js packages, wrapping angular app in Heroku",
   "engines": {
     "node": "8.5.x",
@@ -9,7 +9,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "postinstall": "npm install --production --prefix listnride/ && gulp deploy --gulpfile listnride/gulpfile.js"
+    "postinstall": "npm install --production --prefix listnride/ && gulp deploy disable-https --gulpfile listnride/gulpfile.js && deploy --gulpfile listnride/gulpfile.js"
   },
   "dependencies": {
     "del": "^3.0.0",
