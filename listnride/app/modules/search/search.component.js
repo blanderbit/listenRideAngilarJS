@@ -18,7 +18,7 @@ angular.module('search',[]).component('search', {
         search.onSizeChange = onSizeChange;
         search.onCategoryChange = onCategoryChange;
         search.onMapClick = onMapClick;
-        search.clearData = clearData;
+        search.clearDate = clearDate;
         search.onBikeHover = onBikeHover;
         search.onDateChange = onDateChange;
         
@@ -49,8 +49,8 @@ angular.module('search',[]).component('search', {
         };
         
         // invocations
-        setMetaTags(search.location);
         populateBikes(search.location);
+        setMetaTags(search.location);
         initializeGoogleMap();
       };
       
@@ -191,7 +191,7 @@ angular.module('search',[]).component('search', {
         ngMeta.setTag("description", $translate.instant("search.meta-description", data));
       }
 
-      function clearData() {
+      function clearDate() {
         search.date = {
           start_date: null,
           duration: null

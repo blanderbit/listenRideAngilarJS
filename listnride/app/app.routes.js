@@ -67,6 +67,7 @@
         name: 'search',
         url: '/search/{location}?start_date&duration&size&allterrain&race&city&kids&ebikes&special',
         template: '<search></search>',
+        reloadOnSearch: false,
         params: {
           hideFooter: true,
           start_date: {
