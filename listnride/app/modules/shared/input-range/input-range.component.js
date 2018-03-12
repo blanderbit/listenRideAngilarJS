@@ -101,9 +101,9 @@ function inputRangeController($scope, $translate) {
       now.setHours(0, 0, 0, 0);
       if (date.getTime() <= now.getTime()) {
         return [false, "date-past", ""];
-      } else if (!!vm.requests && isReserved(date)) {
+      } else if (isReserved(date)) {
         return [false, "date-reserved", ""];
-      } else if (dateClosed(date)) {
+      } else if (bikeNotAvailable(date)) {
         return [false, "date-closed", ""];
       } else {
         return [true, "date-available", ""];
@@ -127,10 +127,6 @@ function inputRangeController($scope, $translate) {
       }
     }
 
-    function dateClosed(date) {
-      return bikeNotAvailable(date);
-    }
-
     function bikeNotAvailable(date) {
       date.setHours(0, 0, 0, 0);
       var result = false;
@@ -141,6 +137,7 @@ function inputRangeController($scope, $translate) {
     }
 
     function isReserved(date) {
+      if (!vm.requests) return;
       for (var i = 0; i < vm.requests.length; ++i) {
         var start = new Date(vm.requests[i].start_date_tz);
         start.setHours(0, 0, 0, 0);
