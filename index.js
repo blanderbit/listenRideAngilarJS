@@ -20,16 +20,29 @@ var httpForceRoute = function () {
   app.use(expressEnforcesSSL());
 };
 
+var shouldRedirect = function (host) {
+  return host.includes("listnride.com") ||
+         host.includes("listnride.de")  ||
+         host.includes("listnride.nl")  ||
+         host.includes("listnride.it")  ||
+         host.includes("listnride.es");
+};
+
 // refirect to proper domain on staging and production
 // not used for local host and heroku review apps
 var redirectToProperDomain = function (req, res, next) {
-  var correctHostname = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
-  var correctOriginalUrl = stripTrailingSlash(req.originalUrl);
-  if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
-    next();
+  var host = req.headers.host;
+  console.log("should redirect: ", shouldRedirect);
+  if (shouldRedirect(host)) {
+    var correctHostname = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
+    var correctOriginalUrl = stripTrailingSlash(req.originalUrl);
+    if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
+      next();
+    } else {
+      res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
+    }
   } else {
     next();
-    res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
   }
 };
 
@@ -85,8 +98,7 @@ var retrieveTld = function (hostname) {
 
 // proper redirects
 app.use(function (req, res, next) {
-  // redirectToProperDomain(req, res, next);
-  next();
+  redirectToProperDomain(req, res, next);
 });
 
 // by default serves index.html
