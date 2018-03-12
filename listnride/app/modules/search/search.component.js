@@ -6,8 +6,8 @@ angular.module('search',[]).component('search', {
   bindings: {
     location: '<'
   },
-  controller: ['$translate', '$stateParams', '$state', '$transitions', 'NgMap', 'ngMeta', 'api', 'bikeOptions',
-    function SearchController($translate, $stateParams, $state, $transitions, NgMap, ngMeta, api, bikeOptions) {
+  controller: ['$translate', '$stateParams','$state', '$timeout', 'NgMap', 'ngMeta', 'api', 'bikeOptions',
+    function SearchController($translate, $stateParams, $state, $timeout, NgMap, ngMeta, api, bikeOptions) {
       var search = this;
       search.$onInit = function() {
         // methods
@@ -23,7 +23,7 @@ angular.module('search',[]).component('search', {
         search.onBikeHover = onBikeHover;
         
         // properties
-        search.date = {}
+        search.date = {};
         search.sizeFilter = {
           size: $stateParams.size
         };
@@ -45,14 +45,7 @@ angular.module('search',[]).component('search', {
           zoom: 5
         };
         
-        // invocatons
-
-        $transitions.onSuccess({}, function(transition) {
-          if (transition.from().name !== "search") {
-            //
-          }
-        });
-
+        // invocations
         populateBikes(search.location);
         setMetaTags(search.location);
         initializeGoogleMap();
@@ -187,10 +180,13 @@ angular.module('search',[]).component('search', {
         populateBikes("Berlin");
       }
       
-      function initializeGoogleMap () {
-        NgMap.getMap({ id: "searchMap" }).then(function (map) {
-          search.map = map;
-        });
+      function initializeGoogleMap() {
+        // TODO: timeout needs to be replaced with a better solution
+        $timeout(function(){
+          NgMap.getMap({ id: "searchMap" }).then(function (map) {
+            search.map = map;
+          });
+        }, 0);
       }
     }
   ]
