@@ -130,6 +130,10 @@ home .highlight-tile {
   padding: 24px 0px;
 }
 
+home input {
+  font-size: 16px;
+}
+
 invest .highlight-tile {
   height: 320px;
   padding: 4px;
@@ -564,7 +568,26 @@ settings .lnr-profile-lrg {
 .lnr-header {
   width: 100%;
   height: 60px;
-  z-index: 3;
+  z-index: 4;
+}
+
+.lnr-header autocomplete {
+  margin: 8px 0;
+}
+
+.lnr-header label {
+  display: none;
+}
+
+.lnr-header input {
+  border-color: #EAF3FE !important;
+  color: rgba(85, 85, 85, 1.0);
+  line-height: 20px;
+  /*font-size: 18px;*/
+  background: url('../ui_icons/search.png') no-repeat 95% 50%;
+  background-size: 18px 18px;
+  padding: 0 40px 0 10px;
+  background-color: #EAF3FE;
 }
 
 .lnr-header .md-toolbar-tools .lnr-header-logo {
@@ -596,9 +619,9 @@ settings .lnr-profile-lrg {
 }
 
 /* Safari vertical alignment fix */
-.lnr-header .md-toolbar-tools .lnr-header-logo {
+/*.lnr-header .md-toolbar-tools .lnr-header-logo {
   min-height: 25px;
-}
+}*/
 
 .md-toolbar-tools .md-button:not(.md-fab) {
   min-width: 0px;
