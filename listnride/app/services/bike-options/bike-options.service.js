@@ -16,6 +16,7 @@ angular.module('listnride')
 
       sizeOptions: function () {
         return [
+          {value: 0, label: "Unisize"},
           {value: 155, label: "155 cm - 165 cm"},
           {value: 165, label: "165 cm - 175 cm"},
           {value: 175, label: "175 cm - 185 cm"},
@@ -27,6 +28,7 @@ angular.module('listnride')
       sizeOptionsForSearch: function () {
         return [
           { value: "", label: "-" },
+          { value: 0, label: "Unisize" },
           { value: 155, label: "155 - 165" },
           { value: 165, label: "165 - 175" },
           { value: 175, label: "175 - 185" },
@@ -82,11 +84,11 @@ angular.module('listnride')
           "4": [
             {value: 0, label: "city"},
             {value: 1, label: "all-terrain"},
-            {value: 2, label: "road"},
+            {value: 2, label: "road"}
           ],
           "5": [
             {value: 0, label: "pedelec"},
-            {value: 1, label: "e-bike"},
+            {value: 1, label: "e-bike"}
           ],
           "6": [
             {value: 0, label: "folding-bike"},
@@ -96,7 +98,7 @@ angular.module('listnride')
             {value: 4, label: "recumbent"},
             {value: 5, label: "mono-bike"},
             {value: 6, label: "trailer"}
-          ],
+          ]
         };
       }
     };
