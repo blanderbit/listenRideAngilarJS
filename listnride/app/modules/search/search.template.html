@@ -64,7 +64,10 @@
       </div>
 
       <div layout="row" layout-align="space-between center">
-        <input-range data="search.date" lnr-single-input></input-range>
+        <div class="column">
+          <input-range data="search.date" lnr-single-input></input-range>
+          <div class="lnr-right"><a class="lnr-link" ng-click="search.clearData()">Clear</a></div>
+        </div>
       </div>
     </div>
 

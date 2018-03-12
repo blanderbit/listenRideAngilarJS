@@ -9,10 +9,15 @@ angular.module('search',[]).component('search', {
   controller: ['$translate', '$http', '$stateParams', '$state', 'NgMap', 'ngMeta', 'api',
     function SearchController($translate, $http, $stateParams, $state, NgMap, ngMeta, api) {
       var search = this;
-
       search.location = $stateParams.location;
-
-      setMetaTags(search.location);
+      search.showBikeWindow = showBikeWindow;
+      search.placeChanged = placeChanged;
+      search.onButtonClick = onButtonClick;
+      search.onSizeChange = onSizeChange;
+      search.onCategoryChange = onCategoryChange;
+      search.onMapClick = onMapClick;
+      search.clearData = clearData;
+      search.date = {}
 
       search.sizeFilter = {
         size: $stateParams.size
@@ -36,10 +41,6 @@ angular.module('search',[]).component('search', {
         {value: 195, label: "195 - 205"}
       ];
 
-      search.date = {
-        
-      }
-
       $translate('search.all-sizes').then(function (translation) {
         search.sizeOptions[0].label = translation;
       });
@@ -50,13 +51,16 @@ angular.module('search',[]).component('search', {
         zoom: 5
       };
 
+      setMetaTags(search.location);      
       populateBikes(search.location);
 
       NgMap.getMap({id: "searchMap"}).then(function(map) {
         search.map = map;
       });
 
-      search.showBikeWindow = function(evt, bikeId) {
+      //////////////
+
+      function showBikeWindow(evt, bikeId) {
         if (search.map) {
           search.selectedBike = search.bikes.find(function(bike) {
             return bike.id === bikeId;
@@ -66,7 +70,7 @@ angular.module('search',[]).component('search', {
         }
       };
 
-      search.placeChanged = function(place) {
+      function placeChanged(place) {
         var location = place.formatted_address || place.name;
         $state.go('.', {location: location}, {notify: false});
         search.location = location;
@@ -74,22 +78,22 @@ angular.module('search',[]).component('search', {
         populateBikes(location);
       };
 
-      search.onButtonClick = function() {
+      function onButtonClick() {
         $state.go('.', {location: search.location}, {notify: false});
         populateBikes(search.location);
       };
 
-      search.onSizeChange = function() {
+      function onSizeChange() {
         $state.go('.', {size: search.sizeFilter.size}, {notify: false});
       };
 
-      search.onCategoryChange = function(category) {
+      function onCategoryChange(category) {
         var categoryMap = {};
         categoryMap[category] = search.categoryFilter[category];
         $state.go('.', categoryMap, {notify: false});
       };
 
-      search.onMapClick = function(event) {
+      function onMapClick(event) {
         if (search.map) {
           search.map.hideInfoWindow('searchMapWindow');
           search.selectedBike = undefined;
@@ -127,6 +131,10 @@ angular.module('search',[]).component('search', {
         );
         ngMeta.setTitle($translate.instant("search.meta-title", data));
         ngMeta.setTag("description", $translate.instant("search.meta-description", data));
+      }
+
+      function clearData() {
+
       }
 
     }
