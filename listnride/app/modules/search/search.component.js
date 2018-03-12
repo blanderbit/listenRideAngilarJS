@@ -46,8 +46,8 @@ angular.module('search',[]).component('search', {
         };
         
         // invocations
-        setMetaTags(search.location);
         populateBikes(search.location);
+        setMetaTags(search.location);
         initializeGoogleMap();
       };
       
@@ -177,7 +177,7 @@ angular.module('search',[]).component('search', {
       }
 
       function clearData() {
-
+        populateBikes("Berlin");
       }
       
       function initializeGoogleMap() {

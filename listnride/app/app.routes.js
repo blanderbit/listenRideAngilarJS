@@ -67,6 +67,7 @@
         name: 'search',
         url: '/search/{location}?size&allterrain&race&city&kids&ebikes&special',
         template: '<search></search>',
+        reloadOnSearch: false,
         params: {
           hideFooter: true,
           size: {

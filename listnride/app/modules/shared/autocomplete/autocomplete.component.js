@@ -70,6 +70,7 @@ angular.module('autocomplete',[]).component('autocomplete', {
       autocomplete.clear = function() {
         autocomplete.location = "";
         autocomplete.toggleButton();
+        angular.element('autocompleteSearch').focus();
       }
     }
   ]

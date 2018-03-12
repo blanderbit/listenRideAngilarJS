@@ -593,7 +593,7 @@ settings .lnr-profile-lrg {
   color: rgba(85, 85, 85, 1.0);
   line-height: 20px;
   /*font-size: 18px;*/
-  background: url('../ui_icons/search.png') no-repeat 5% 50%;
+  background: url('../ui_icons/search.png') no-repeat 3% 50%;
   background-size: 18px 18px;
   padding: 0 30px 0 40px;
   background-color: #EAF3FE;
@@ -846,7 +846,7 @@ footer .lnr-link {
 /*-----------------------------------------------------------------------------------*/
 
 home #landingSection {
-  height: 78vh;
+  height: 65vh;
   overflow: visible;
   position: relative;
 }
@@ -1382,8 +1382,8 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
 
 .ng-map-info-window > div:first-child div:nth-last-child(2),
 .ng-map-info-window > div:first-child div:nth-last-child(2) div {
-  display: block!important;
-  margin-top: -4px!important;
+  display: block !important;
+  margin-top: -4px !important;
   z-index: 2;
 }
 
