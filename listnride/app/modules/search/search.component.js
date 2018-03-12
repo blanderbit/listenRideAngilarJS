@@ -6,8 +6,8 @@ angular.module('search',[]).component('search', {
   bindings: {
     location: '<'
   },
-  controller: ['$translate', '$stateParams', '$state', 'NgMap', 'ngMeta', 'api', 'bikeOptions',
-    function SearchController($translate, $stateParams, $state, NgMap, ngMeta, api, bikeOptions) {
+  controller: ['$translate', '$stateParams', '$state', '$transitions', 'NgMap', 'ngMeta', 'api', 'bikeOptions',
+    function SearchController($translate, $stateParams, $state, $transitions, NgMap, ngMeta, api, bikeOptions) {
       var search = this;
       search.$onInit = function() {
         // methods
@@ -46,8 +46,15 @@ angular.module('search',[]).component('search', {
         };
         
         // invocatons
-        setMetaTags(search.location);
+
+        $transitions.onSuccess({}, function(transition) {
+          if (transition.from().name !== "search") {
+            //
+          }
+        });
+
         populateBikes(search.location);
+        setMetaTags(search.location);
         initializeGoogleMap();
       };
       
@@ -145,7 +152,6 @@ angular.module('search',[]).component('search', {
             var loc = new google.maps.LatLng(search.bikes[i].lat_rnd, search.bikes[i].lng_rnd);
             bounds.extend(loc);
           }
-          console.log(bounds);
           NgMap.getMap({id: "searchMap"}).then(function(map) {
             map.fitBounds(bounds);
             // map.panToBounds(bounds);
@@ -178,7 +184,7 @@ angular.module('search',[]).component('search', {
       }
 
       function clearData() {
-
+        populateBikes("Berlin");
       }
       
       function initializeGoogleMap () {

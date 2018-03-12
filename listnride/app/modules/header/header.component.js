@@ -18,11 +18,14 @@ angular.module('header',[]).component('header', {
         if (transition.to().name === "search") {
           header.location = $stateParams.location;
         }
+        else if (transition.to().name === "home") {
+          header.location = "";
+        }
       });
 
       header.search = function(place) {
         var location = place.formatted_address || place.name;
-        $state.go('search', {location: location});
+        $state.go('search', {location: location}, {reload: false});
       };
 
       header.toggleSidebar = function() {
