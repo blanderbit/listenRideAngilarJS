@@ -42,14 +42,9 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
       footer.switchDomain = function (language) {
         var url = window.location.host.split('.'), route = window.location.pathname, root = '';
         // using localhost
-        if (url.indexOf("localhost") >= 0) {
-          if (language == 'nl' || language == 'de' || language == 'it' || language == 'es') {
-            root = ['www.listnride', language].join('.');
-            window.location = 'https://' + root + route;
-          } else {
-            root = "https://www.listnride.com";
-            window.location = root + route;
-          }
+        if (url.indexOf("localhost") >= 0 || url[0].match('localhost')) {
+          $scope.$emit('$translatePartialLoaderStructureChanged');
+          $window.location.reload();
         }
         // staging or production
         else {

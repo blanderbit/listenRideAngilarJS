@@ -6,53 +6,71 @@ angular.module('search',[]).component('search', {
   bindings: {
     location: '<'
   },
-  controller: ['$translate', '$http', '$stateParams', '$state', 'NgMap', 'ngMeta', 'api',
-    function SearchController($translate, $http, $stateParams, $state, NgMap, ngMeta, api) {
+  controller: ['$translate', '$stateParams', '$state', 'NgMap', 'ngMeta', 'api', 'bikeOptions',
+    function SearchController($translate, $stateParams, $state, NgMap, ngMeta, api, bikeOptions) {
       var search = this;
-
-      search.location = $stateParams.location;
-
-      setMetaTags(search.location);
-
-      search.sizeFilter = {
-        size: $stateParams.size
+      search.$onInit = function() {
+        // methods
+        search.location = $stateParams.location;
+        search.showBikeWindow = showBikeWindow;
+        search.placeChanged = placeChanged;
+        search.onButtonClick = onButtonClick;
+        search.onSizeChange = onSizeChange;
+        search.onCategoryChange = onCategoryChange;
+        search.onMapClick = onMapClick;
+        search.clearData = clearData;
+        search.onMapClick = onMapClick;
+        search.onBikeHover = onBikeHover;
+        
+        // properties
+        search.date = {}
+        search.sizeFilter = {
+          size: $stateParams.size
+        };
+        search.categoryFilter = {
+          allterrain: $stateParams.allterrain === "true",
+          city: $stateParams.city === "true",
+          ebikes: $stateParams.ebikes === "true",
+          kids: $stateParams.kids === "true",
+          race: $stateParams.race === "true",
+          special: $stateParams.special === "true"
+        };
+        search.sizeOptions = bikeOptions.sizeOptionsForSearch();
+        $translate('search.all-sizes').then(function (translation) {
+          search.sizeOptions[0].label = translation;
+        });
+        search.mapOptions = {
+          lat: 40,
+          lng: -74,
+          zoom: 5
+        };
+        
+        // invocatons
+        setMetaTags(search.location);
+        populateBikes(search.location);
+        initializeGoogleMap();
       };
+      
+      function onMapClick () {
+        if (search.map) {
+          search.map.hideInfoWindow('searchMapWindow');
+          search.selectedBike = undefined;
+        }
+      }
 
-      search.categoryFilter = {
-        allterrain: $stateParams.allterrain === "true",
-        city: $stateParams.city === "true",
-        ebikes: $stateParams.ebikes === "true",
-        kids: $stateParams.kids === "true",
-        race: $stateParams.race === "true",
-        special: $stateParams.special === "true"
-      };
-
-      search.sizeOptions = [
-        {value: "", label: "-"},
-        {value: 155, label: "155 - 165"},
-        {value: 165, label: "165 - 175"},
-        {value: 175, label: "175 - 185"},
-        {value: 185, label: "185 - 195"},
-        {value: 195, label: "195 - 205"}
-      ];
-
-      $translate('search.all-sizes').then(function (translation) {
-        search.sizeOptions[0].label = translation;
-      });
-
-      search.mapOptions = {
-        lat: 40,
-        lng: -74,
-        zoom: 4
-      };
-
-      populateBikes(search.location);
-
-      NgMap.getMap({id: "searchMap"}).then(function(map) {
-        search.map = map;
-      });
-
-      search.showBikeWindow = function(evt, bikeId) {
+      // show bike card in maps on card hover
+      function onBikeHover (bike, toShow) {
+        if (search.map) {
+          search.selectedBike = bike;
+          if (toShow === true) {
+            search.map.showInfoWindow('searchMapWindow', search.map.markers[bike.id]);
+          } else if (toShow === false) {
+            search.map.hideInfoWindow('searchMapWindow');
+          }
+        }
+      }
+        
+      function showBikeWindow(evt, bikeId) {
         if (search.map) {
           search.selectedBike = search.bikes.find(function(bike) {
             return bike.id === bikeId;
@@ -60,37 +78,62 @@ angular.module('search',[]).component('search', {
 
           search.map.showInfoWindow('searchMapWindow', this);
         }
-      };
+      }
 
-      search.placeChanged = function(place) {
+      function placeChanged(place) {
         var location = place.formatted_address || place.name;
-        $state.go('.', {location: location}, {notify: false});
+        $state.go(
+          // current state
+          $state.current,
+          // state params
+          { location: location },
+          // route options
+          // do not remove inherit prop, else map tiles stop working
+          { notify: false }
+        );
         search.location = location;
         setMetaTags(location);
         populateBikes(location);
-      };
+      }
 
-      search.onButtonClick = function() {
-        $state.go('.', {location: search.location}, {notify: false});
+      function onButtonClick() {
+        $state.go(
+          // current state
+          $state.current,
+          // state params
+          { location: search.location },
+          // route options
+          // do not remove inherit prop, else map tiles stop working
+          { notify: false }
+        );
         populateBikes(search.location);
-      };
+      }
 
-      search.onSizeChange = function() {
-        $state.go('.', {size: search.sizeFilter.size}, {notify: false});
-      };
+      function onSizeChange() {
+        $state.go(
+          // current state
+          $state.current,
+          // state params
+          { size: search.sizeFilter.size },
+          // route options
+          // do not remove inherit prop, else map tiles stop working
+          { notify: false }
+        );
+      }
 
-      search.onCategoryChange = function(category) {
+      function onCategoryChange(category) {
         var categoryMap = {};
         categoryMap[category] = search.categoryFilter[category];
-        $state.go('.', categoryMap, {notify: false});
-      };
-
-      search.onMapClick = function(event) {
-        if (search.map) {
-          search.map.hideInfoWindow('searchMapWindow');
-          search.selectedBike = undefined;
-        }
-      };
+        $state.go(
+          // current state
+          $state.current,
+          // state params
+          categoryMap,
+          // route options
+          // do not remove inherit prop, else map tiles stop working
+          { notify: false }
+        );
+      }
 
       function populateBikes(location) {
         search.bikes = undefined;
@@ -125,7 +168,6 @@ angular.module('search',[]).component('search', {
         var data = {
           location: location
         };
-        console.log($translate.instant("search.meta-title", data));
         $translate("search.meta-title", data).then(
           function (translation) {
             ngMeta.setTitle(translation);
@@ -135,6 +177,15 @@ angular.module('search',[]).component('search', {
         ngMeta.setTag("description", $translate.instant("search.meta-description", data));
       }
 
+      function clearData() {
+
+      }
+      
+      function initializeGoogleMap () {
+        NgMap.getMap({ id: "searchMap" }).then(function (map) {
+          search.map = map;
+        });
+      }
     }
   ]
 });

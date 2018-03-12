@@ -283,6 +283,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Pay secure with",
+    "agree-terms": "With 'Request Bike' you agree to the",
+    "agree-terms-link": "listnride terms",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
       "call-us": "Call us +49 (0)30-120870330, monday to friday 9-18pm. ",
@@ -302,6 +304,7 @@
     "details": {
       "tab": "2. Personal Details",
       "invoice-address": "Invoice Address",
+      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Verification",
       "send-sms": "We'll send you one time sms to your phone.",
       "check-phone": "Please check your phone.",
@@ -364,7 +367,9 @@
     "enter-email": "Please enter your email",
     "duplicate-start": "Duplication process started",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
-    "bike-deleted": "Bike successfully deleted"
+    "bike-deleted": "Bike successfully deleted",
+    "range-success-delete": "Availability range successfully deleted",
+    "availability-success-saved": "Availability successfully saved"
   },
   "settings": {
     "settings": "Settings",
@@ -571,15 +576,25 @@
     "signing-up-accept-tac": "By signing up I accept the",
     "errors": {
       "password-length": "Password should be 6-30 characters",
+      "password-length-xs": "6-30 characters",
       "password-missing": "Please provide a password",
+      "password-missing-xs": "Password required",
       "valid-email": "Please enter a valid email address",
+      "valid-email-xs": "Invalid email",
       "empty-email": "Please enter your email address",
+      "empty-email-xs": "Email required",
       "empty-last-name": "Please enter your last name",
+      "empty-last-name-xs": "Last name required",
       "empty-first-name": "Please enter your first name",
+      "empty-first-name-xs": "First name required",
       "max-size-last-name": "Last name shouldn't exceed 30 characters",
+      "max-size-last-name-xs": "Exceeds 30 characters",
       "max-size-first-name": "First name shouldn't exceed 20 characters",
+      "max-size-first-name-xs": "Exceeds 20 characters",
       "empty-company-name": "Please enter your company name",
-      "min-size-company-name": "Company name should be longer than 2 characters "
+      "empty-company-name-xs": "Company name required",
+      "min-size-company-name": "Company name should be longer than 2 characters ",
+      "min-size-company-name-xs": "Alteast 3 characters "
     }
   },
   "home": {
@@ -961,5 +976,15 @@
     "kids": "kids bikes",
     "electro": "electric bikes",
     "special": "special bikes"
+  },
+  "availability": {
+    "availability": "Availability",
+    "modal-title": "When is your bike not available?",
+    "start-from": "Starting from",
+    "end-at": "Ending at",
+    "add-another-date": "Add another date",
+    "submit-btn": "Ok",
+    "submit-btn-save": "Save",
+    "choose-range": "Choose your date range"
   }
 }

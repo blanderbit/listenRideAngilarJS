@@ -17,7 +17,8 @@ angular.module('listingCard',[]).component('listingCard', {
     duplicate: '<',
     delete: '<',
     edit: '<',
-    view: '<'
+    view: '<',
+    changeAvailability: '<'
   },
   controller: ['api', function ListingCardController(api) {
       var listingCard = this;
@@ -25,7 +26,7 @@ angular.module('listingCard',[]).component('listingCard', {
       listingCard.price = Math.ceil(listingCard.price);
       
       // activate a bike
-      // implementation is different from parent compoenent
+      // implementation is different from parent component
       listingCard.onActivateClick = function() {
         listingCard.disableActivate = true;
         api.put("/rides/" + listingCard.bikeId, {"ride": {"available": "true"}}).then(
@@ -40,7 +41,7 @@ angular.module('listingCard',[]).component('listingCard', {
       };
 
       // deactivate a bike
-      // implementation is different from parent compoenent
+      // implementation is different from parent component
       listingCard.deactivate = function() {
         listingCard.disableDeactivate = true;
         api.put("/rides/" + listingCard.bikeId, {"ride": {"available": "false"}}).then(
