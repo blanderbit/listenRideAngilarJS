@@ -84,7 +84,7 @@ angular.module('listnride', [
   'angulartics.facebook.pixel',
   '720kb.socialshare',
   'angularMoment',
-  'credit-cards'
+  'credit-cards',
 ])
 .config(['$translateProvider', '$localStorageProvider', '$translatePartialLoaderProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', '$compileProvider', 'ngMetaProvider', 'ENV', 'socialshareConfProvider',
   function($translateProvider, $localStorageProvider, $translatePartialLoaderProvider, ezfbProvider, $mdAriaProvider, $locationProvider, $compileProvider, ngMetaProvider, ENV, socialshareConfProvider) {

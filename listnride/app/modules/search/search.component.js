@@ -43,7 +43,7 @@ angular.module('search',[]).component('search', {
       search.mapOptions = {
         lat: 40,
         lng: -74,
-        zoom: 5
+        zoom: 4
       };
 
       populateBikes(search.location);
@@ -97,15 +97,25 @@ angular.module('search',[]).component('search', {
 
         api.get("/rides?location=" + location).then(function(response) {
           search.bikes = response.data;
+          var bounds = new google.maps.LatLngBounds();
+          for (var i = 0; i < search.bikes.length; i++) {
+            var loc = new google.maps.LatLng(search.bikes[i].lat_rnd, search.bikes[i].lng_rnd);
+            bounds.extend(loc);
+          }
+          console.log(bounds);
+          NgMap.getMap({id: "searchMap"}).then(function(map) {
+            map.fitBounds(bounds);
+            // map.panToBounds(bounds);
+          });
 
           if (search.bikes.length > 0) {
             search.mapOptions.lat = search.bikes[0].lat_rnd;
             search.mapOptions.lng = search.bikes[0].lng_rnd;
-            search.mapOptions.zoom = 10;
+            // search.mapOptions.zoom = 11;
           } else {
             search.mapOptions.lat = 51.1657;
             search.mapOptions.lng = 10.4515;
-            search.mapOptions.zoom = 4;
+            // search.mapOptions.zoom = 4;
           }
         }, function(error) {
         });

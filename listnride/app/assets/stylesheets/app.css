@@ -534,6 +534,15 @@ settings .lnr-profile-lrg {
   z-index: 4;
 }
 
+.lnr-clear-input {
+  vertical-align: middle;
+  margin: auto 0 auto -24px;
+  background-image: url('../ui_icons/cancel.png');
+  background-size: 16px 16px;
+  width: 16px;
+  height: 16px;
+}
+
 .lnr-header autocomplete {
   margin: 8px 0;
 }
@@ -547,9 +556,9 @@ settings .lnr-profile-lrg {
   color: rgba(85, 85, 85, 1.0);
   line-height: 20px;
   /*font-size: 18px;*/
-  background: url('../ui_icons/search.png') no-repeat 95% 50%;
+  background: url('../ui_icons/search.png') no-repeat 5% 50%;
   background-size: 18px 18px;
-  padding: 0 40px 0 10px;
+  padding: 0 30px 0 40px;
   background-color: #EAF3FE;
 }
 

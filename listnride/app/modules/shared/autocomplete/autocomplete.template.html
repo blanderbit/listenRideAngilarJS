@@ -1,22 +1,32 @@
 <md-input-container>
   <label>{{ autocomplete.labelId }}</label>
-  <input ng-if="autocomplete.required" ng-attr-id="{{autocomplete.autocompleteId}}"
-    required
-    ng-model="autocomplete.location"
-    ng-change="autocomplete.showResults()"
-    placeholder="{{ autocomplete.placeholderId }}"
-    class="autocompleteSearch"
-    type="text"
-    name="{{ autocomplete.name }}"
-  />
-  <input ng-if="!autocomplete.required" ng-attr-id="{{autocomplete.autocompleteId}}"
-    ng-model="autocomplete.location"
-    ng-change="autocomplete.showResults()"
-    placeholder="{{ autocomplete.placeholderId }}"
-    class="autocompleteSearch"
-    type="text"
-    name="{{ autocomplete.name }}"
-  />
+  <div layout flex>
+    <input ng-if="autocomplete.required" ng-attr-id="{{autocomplete.autocompleteId}}"
+      required
+      ng-model="autocomplete.location"
+      ng-change="autocomplete.showResults()"
+      placeholder="{{ autocomplete.placeholderId }}"
+      class="autocompleteSearch"
+      type="text"
+      name="{{ autocomplete.name }}"
+      flex-order="1"
+    />
+    <input ng-if="!autocomplete.required" ng-attr-id="{{autocomplete.autocompleteId}}"
+      ng-model="autocomplete.location"
+      ng-change="autocomplete.showResults()"
+      placeholder="{{ autocomplete.placeholderId }}"
+      class="autocompleteSearch"
+      type="text"
+      name="{{ autocomplete.name }}"
+      flex-order="1"
+    />
+    <div
+      flex-order="2"
+      class="lnr-clear-input"
+      ng-hide="!autocomplete.filled"
+      ng-click="autocomplete.clear()">
+    </div>
+  </div>
   <div ng-messages="autocomplete.error" role="alert">
     <div ng-message="required">{{ 'shared.required' | translate }}</div>
   </div>
