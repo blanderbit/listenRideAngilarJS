@@ -11,7 +11,8 @@ angular
       bindToController: {
         data: '=',
         disabledDates: '<',
-        requests: '<?'
+        requests: '<?',
+        onChange: '<?'
       },
       controller: ['$scope', '$translate', inputRangeController],
       link: function ($scope, element, attrs) {
@@ -31,12 +32,12 @@ function inputRangeController($scope, $translate) {
   vm.$onDestroy = onDestroy;
   vm.openCalendar = openCalendar;
   vm.isSingle = false;
-
+  
   ////////////
 
   function updateParent() {
     // inform parent component that state was changed
-    $scope.$emit('input-range:changed');
+    if (typeof vm.onChange == 'function') vm.onChange();    
     $scope.$apply();
   }
 
