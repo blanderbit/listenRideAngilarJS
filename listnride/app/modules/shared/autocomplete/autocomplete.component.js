@@ -16,6 +16,7 @@ angular.module('autocomplete',[]).component('autocomplete', {
   controller: ['$interval', '$scope',
     function AutocompleteController($interval, $scope) {
       var autocomplete = this;
+      console.log(autocomplete.autocompleteId);
 
       var deregisterAutocompleteWatcher = $scope.$watch(
         function () {
@@ -28,6 +29,7 @@ angular.module('autocomplete',[]).component('autocomplete', {
             var autocompleteObject = new google.maps.places.Autocomplete(
               document.getElementById(autocomplete.autocompleteId), {types: ['geocode']});
 
+            autocompleteObject.inputId = autocomplete.autocompleteId;
             autocompleteObject.addListener('place_changed', function() {
               $scope.$apply(function() {
                 var response = autocompleteObject.getPlace();
@@ -40,14 +42,25 @@ angular.module('autocomplete',[]).component('autocomplete', {
         }
       );
 
-      // TODO: Switch to watcher
-      var timer = $interval(function() {
+      autocomplete.showResults = function() {
         if ($(".pac-container").length > 0) {
           var el = $(".pac-container").detach();
-          el.appendTo("autocomplete");
-          $interval.cancel(timer);
+          var acClass = "." + autocomplete.autocompleteId;
+          el.appendTo($(acClass));
         }
-      }, 100);
+      };
+
+      // TODO: Switch to watcher
+      // var timer = $interval(function() {
+      //   if ($(".pac-container").length > 0) {
+      //     var el = $(".pac-container").detach();
+      //     var acClass = "." + autocomplete.autocompleteId;
+      //     console.log(acClass);
+      //     console.log($(acClass));
+      //     el.appendTo($(acClass));
+      //     $interval.cancel(timer);
+      //   }
+      // }, 100);
     }
   ]
 });

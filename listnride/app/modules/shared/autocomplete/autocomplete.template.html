@@ -3,13 +3,15 @@
   <input ng-if="autocomplete.required" ng-attr-id="{{autocomplete.autocompleteId}}"
     required
     ng-model="autocomplete.location"
+    ng-change="autocomplete.showResults()"
     placeholder="{{ autocomplete.placeholderId }}"
     class="autocompleteSearch"
     type="text"
     name="{{ autocomplete.name }}"
   />
-  <input ng-if="!autocomplete.required" ng-attr-id="autocomplete.autocompleteId"
+  <input ng-if="!autocomplete.required" ng-attr-id="{{autocomplete.autocompleteId}}"
     ng-model="autocomplete.location"
+    ng-change="autocomplete.showResults()"
     placeholder="{{ autocomplete.placeholderId }}"
     class="autocompleteSearch"
     type="text"
