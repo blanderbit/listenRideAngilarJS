@@ -113,7 +113,9 @@
     "confirm": "Bestätigen",
     "confirmation": "Bestätigung",
     "confirmation-text": "Bist du sicher?",
-    "loading": "Laden"
+    "loading": "Laden",
+    "clear": "Clear",
+    "clear-all": "Clear All"
   },
   "meta": {
     "cities": {
