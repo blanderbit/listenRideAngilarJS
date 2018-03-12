@@ -1,14 +1,14 @@
 <div flex layout="row" layout-xs="column" layout-fill>
 
-  <div flex-xs="100" flex-gt-xs="60" flex-order-xs="2" layout="column">
+  <div flex-xs="100" flex-gt-xs="70" flex-order-xs="2" layout="column">
     <div layout="column" layout-padding>
 
       <form layout="row">
-        <autocomplete autocomplete-id="search" flex flex-gt-xs="70" layout="column" location="search.location" label-id="City" placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}" place-changed="search.placeChanged(place)"></autocomplete>
+        <!-- <autocomplete autocomplete-id="search" flex flex-gt-xs="70" layout="column" location="search.location" label-id="City" placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}" place-changed="search.placeChanged(place)"></autocomplete>
 
         <md-input-container layout="row" hide-xs flex="30">
           <md-button flex class="md-raised md-primary lnr-btn-inline" id="submit" ng-click="search.onButtonClick()">{{ 'shared.search' | translate }}</md-button>
-        </md-input-container>
+        </md-input-container> -->
 
         <!-- Duplicated size filter for mobile (needs a better solution) -->
         <md-input-container layout="column" hide-gt-xs class="lnr-margin-left" flex="30">
@@ -59,10 +59,9 @@
               <md-option ng-repeat="option in search.sizeOptions" value="{{option.value}}">
                 {{option.label}}
               </md-option>
-            </md-select>
+            </md-select> 
         </md-input-container>
       </div>
-
       <div layout="row" layout-align="space-between center">
         <div class="column">
           <input-range data="search.date" lnr-single-input></input-range>
@@ -74,27 +73,39 @@
     <md-divider></md-divider>
 
     <md-content flex layout="column">
+
+      <!-- city name for shown bikes -->
       <div id="search-header" layout-padding>
         <h1 class="md-headline" layout-padding>{{ 'search.bikes-in' | translate }} {{search.location}}</h1>
       </div>
 
+      <!-- no bikes found placeholder -->
       <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout="row" layout-align="center center" layout-padding>
         <span>{{ 'search.no-bikes' | translate }}</span>
       </div>
 
+      <!-- bikes grid -->
+      <!-- mobile:        1 bike each row -->
+      <!-- tablet:        2 bikes each row -->
+      <!-- desktop:       3 bikes each row -->
+      <!-- larger screen: 4 bikes each row -->
       <div id="featuredBikes" layout="row" layout-wrap layout-padding>
-        <div ng-repeat="bike in search.bikes | filter:search.sizeFilter | mapCategory:search.categoryFilter" flex="100" flex-gt-sm="50" flex-gt-lg="33">
-          <bike-card bike="bike"></bike-card>
+        <div ng-repeat="bike in search.bikes | filter:search.sizeFilter | mapCategory:search.categoryFilter" flex-xs="100" flex-sm="50" flex-gt-sm="33" flex-gt-lg="25">
+          <bike-card bike="bike"
+                     ng-mouseover="search.onBikeHover(bike, true)"
+                     ng-mouseleave="search.onBikeHover(bike, false)">
+          </bike-card>
         </div>
       </div>
 
+      <!-- busy loader until bikes api resolves -->
       <div ng-show="search.bikes === undefined" flex layout="column" layout-align="center center">
         <md-progress-circular md-mode="indeterminate"></md-progress-circular>
       </div>
     </md-content>
   </div>
 
-  <div flex-xs="35" flex-gt-xs="40" flex-order-xs="1" layout="column" class="map-column lnr-preload-bg" hide-xs>
+  <div flex flex-order-xs="1" layout="column" class="map-column lnr-preload-bg" hide-xs>
     <ng-map ng-if="search.bikes !== undefined"
       id="searchMap"
       default-style="false"
@@ -102,7 +113,10 @@
       zoom="{{search.mapOptions.zoom}}"
       on-click="search.onMapClick(event)">
 
-      <marker ng-repeat="bike in search.bikes | filter:search.sizeFilter | mapCategory:search.categoryFilter" id="bike.id" position="{{bike.lat_rnd}},{{bike.lng_rnd}}" on-click="search.showBikeWindow(event, bike.id)">
+      <marker ng-repeat="bike in search.bikes | filter:search.sizeFilter | mapCategory:search.categoryFilter" 
+              id="{{bike.id}}" 
+              position="{{bike.lat_rnd}},{{bike.lng_rnd}}" 
+              on-click="search.showBikeWindow(event, bike.id)">
       </marker>
 
       <info-window id="searchMapWindow" close-box-margin="0">
