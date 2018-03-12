@@ -1382,8 +1382,8 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
 
 .ng-map-info-window > div:first-child div:nth-last-child(2),
 .ng-map-info-window > div:first-child div:nth-last-child(2) div {
-  display: block!important;
-  margin-top: -4px!important;
+  display: block !important;
+  margin-top: -4px !important;
   z-index: 2;
 }
 
