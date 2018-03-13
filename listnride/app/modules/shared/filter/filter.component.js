@@ -13,13 +13,14 @@ angular.module('filter',[]).component('filter', {
     '$translate',
     '$state',
     'bikeOptions',
-    function FilterController($translate, $state, bikeOptions) {
+    'filterFilter',
+    function FilterController($translate, $state, bikeOptions, filterFilter) {
       var filter = this;
 
       filter.brands = ["All Brands"];
       filter.currentSize = filter.initialValues.size;
       filter.currentBrand = filter.brands[0];
-      initializeSearchFilter();
+      initializeSizeFilter();
 
       // Wait for bikes to be actually provided
       filter.$onChanges = function (changes) {
@@ -27,8 +28,25 @@ angular.module('filter',[]).component('filter', {
           console.log("gets called");
           filter.bikes = filter.initialBikes;
           initializeBrandFilter();
+          applyFilters();
         }
       };
+
+      filter.onBrandChange = function() {
+        filter.updateState({ brand: filter.currentBrand });
+        applyFilters();
+      };
+
+      filter.onSizeChange = function() {
+        filter.updateState({ size: filter.currentSize });
+        applyFilters();
+      }
+
+      filter.clearFilters = function() {
+        filter.currentSize = filter.sizes[0];
+        filter.currentBrand = filter.brands[0];
+        applyFilters();
+      }
 
       function initializeBrandFilter () {
         // Populate brand filter with all available brands
@@ -44,23 +62,22 @@ angular.module('filter',[]).component('filter', {
         }
       }
 
-      function initializeSearchFilter () {
+      function initializeSizeFilter () {
         filter.sizes = bikeOptions.sizeOptionsForSearch();
         $translate('search.all-sizes').then(function (translation) {
-          filter.sizes[0].label = translation;
+          filter.sizes[0] = translation;
         });
       }
 
-      filter.onBrandChange = function() {
-        
-      };
-
-      filter.onSizeChange = function() {
-        console.log("gets called");
-        filter.updateState({ size: filter.size });
-        // filter.bikes = 
-        filter.bikes = [filter.initialBikes[0], filter.initialBikes[1]];
-        console.log(filter.bikes);
+      function applyFilters () {
+        var filteredBikes = filter.initialBikes;
+        if (filter.currentBrand != filter.brands[0]) {
+          filteredBikes = filterFilter(filteredBikes, filter.currentBrand);
+        }
+        if (filter.currentSize != filter.sizes[0]) {
+          filteredBikes = filterFilter(filteredBikes, filter.currentSize);
+        }
+        filter.bikes = filteredBikes;
       }
     }
   ]
