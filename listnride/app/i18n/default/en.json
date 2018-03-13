@@ -621,7 +621,8 @@
     "all-sizes": "All Sizes",
     "bikes-in": "Bikes in",
     "meta-title": "Rent the perfect bike in {{location}}.",
-    "meta-description": "listnride offers a wide variety of perfekt bikes for rent in {{location}}."
+    "meta-description": "listnride offers a wide variety of perfekt bikes for rent in {{location}}.",
+    "number-of-bikes": "Number of bikes"
   },
   "calendar": {
     "invalid-date": "Dates are invalid",

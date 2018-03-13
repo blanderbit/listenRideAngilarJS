@@ -618,7 +618,8 @@
     "all-sizes": "Alle Maten",
     "bikes-in": "fietsen in",
     "meta-title": "Huur de perfekte fiets in {{location}}.",
-    "meta-description": "listnride biedt een grote veelvoud aan perfekte huurfietsen in {{location}}."
+    "meta-description": "listnride biedt een grote veelvoud aan perfekte huurfietsen in {{location}}.",
+    "number-of-bikes": "Number of bikes"
   },
   "calendar": {
     "invalid-date": "Ingevulde Datums zijn niet correct",
