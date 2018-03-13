@@ -1329,6 +1329,10 @@ md-dialog md-dialog-content .date-picker-wrapper .month-wrapper thead {
 /*  SEARCH
 /*-----------------------------------------------------------------------------------*/
 
+.lnr-filter-container {
+  overflow: scroll;
+}
+
 search ng-map {
   height: 100%!important;
 }

@@ -1,0 +1,16 @@
+<div layout="row" class="lnr-filter-container" layout-margin>
+	<md-button class="md-lined">Timespan</md-button>
+	<md-select class="lnr-margin-left" ng-model="filter.currentSize" ng-change="filter.onSizeChange()">
+    <md-option ng-repeat="option in filter.sizes" value="{{option.value}}">
+      {{option.label}}
+    </md-option>
+  </md-select>
+	<md-button class="md-lined">Nr Bikes</md-button>
+	<md-select class="lnr-margin-left" ng-model="filter.currentBrand" ng-change="filter.onBrandChange()">
+    <md-option ng-repeat="option in filter.brands" value="{{option}}">
+      {{option}}
+    </md-option>
+  </md-select>
+  <span flex></span>
+  <md-button ng-click="filter.clearFilters()" class="md-warn">Clear Filters</md-button>
+</div>

@@ -21,16 +21,18 @@ angular.module('search',[]).component('search', {
         search.clearDate = clearDate;
         search.onBikeHover = onBikeHover;
         search.onDateChange = onDateChange;
+        search.filteredBikes = [];
+        search.initialValues = {
+          amount: '',
+          size: '',
+          categories: {},
+          brand: ''
+        }
         
-        // properties
-        search.date = {
-          "start_date": $stateParams.start_date,
-          "duration": $stateParams.duration
-        };
-        search.sizeFilter = {
-          size: $stateParams.size
-        };
-        search.categoryFilter = {
+        // get intial filter values from url
+        search.initialValues.size = $stateParams.size;
+        search.initialValues.brand = $stateParams.brand;
+        search.initialValues.categories = {
           allterrain: $stateParams.allterrain === "true",
           city: $stateParams.city === "true",
           ebikes: $stateParams.ebikes === "true",
@@ -38,10 +40,13 @@ angular.module('search',[]).component('search', {
           race: $stateParams.race === "true",
           special: $stateParams.special === "true"
         };
-        search.sizeOptions = bikeOptions.sizeOptionsForSearch();
-        $translate('search.all-sizes').then(function (translation) {
-          search.sizeOptions[0].label = translation;
-        });
+
+        // properties
+        search.date = {
+          "start_date": $stateParams.start_date,
+          "duration": $stateParams.duration
+        };
+
         search.mapOptions = {
           lat: 40,
           lng: -74,
@@ -54,6 +59,14 @@ angular.module('search',[]).component('search', {
         setMetaTags(search.location);
         initializeGoogleMap();
       };
+
+      search.updateState = function(params) {
+        $state.go(
+          $state.current,
+          params,
+          { notify: false }
+        );
+      }
       
       function onMapClick () {
         if (search.map) {
