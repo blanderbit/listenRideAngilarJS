@@ -67,6 +67,7 @@
           <input-range
             data="search.date"
             lnr-single-input
+            clear-calendar-data="search.isClearDataRange"
             on-change="search.onDateChange">
           </input-range>
           <div class="lnr-right"><a class="lnr-link" ng-click="search.clearDate()">{{ 'shared.clear' | translate }}</a></div>

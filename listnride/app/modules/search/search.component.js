@@ -47,6 +47,7 @@ angular.module('search',[]).component('search', {
           lng: -74,
           zoom: 5
         };
+        search.isClearDataRange = false;
         
         // invocations
         populateBikes(search.location);
@@ -148,12 +149,19 @@ angular.module('search',[]).component('search', {
           // do not remove inherit prop, else map tiles stop working
           { notify: false }
         );
+        populateBikes(search.location);
       }
 
       function populateBikes(location) {
         search.bikes = undefined;
+        var urlRequest = "/rides?location=" + location;
+        
+        if (search.date && search.date.start_date) {
+          urlRequest += "&start_date=" + search.date.start_date;
+          urlRequest += "&duration=" + search.date.duration;
+        }
 
-        api.get("/rides?location=" + location).then(function(response) {
+        api.get(urlRequest).then(function(response) {
           search.bikes = response.data;
           var bounds = new google.maps.LatLngBounds();
           for (var i = 0; i < search.bikes.length; i++) {
@@ -193,9 +201,10 @@ angular.module('search',[]).component('search', {
 
       function clearDate() {
         search.date = {
-          start_date: null,
-          duration: null
-        };
+          'start_date' : null,
+          'duration' : null
+        }
+        search.isClearDataRange = true;
         search.onDateChange();
       }
       
