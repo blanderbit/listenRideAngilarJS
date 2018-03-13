@@ -28,7 +28,6 @@ angular.module('listnride')
       sizeOptionsForSearch: function () {
         return [
           { value: "", label: "-" },
-          { value: 0, label: "Unisize" },
           { value: 155, label: "155 - 165" },
           { value: 165, label: "165 - 175" },
           { value: 175, label: "175 - 185" },
