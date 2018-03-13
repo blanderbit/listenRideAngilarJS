@@ -162,14 +162,11 @@ angular.module('search',[]).component('search', {
         }
 
         api.get(urlRequest).then(function(response) {
-          search.bikes = response.data;
-          var bounds = new google.maps.LatLngBounds();
-          for (var i = 0; i < search.bikes.length; i++) {
-            var loc = new google.maps.LatLng(search.bikes[i].lat_rnd, search.bikes[i].lng_rnd);
-            bounds.extend(loc);
-          }
+          search.bikes = response.data.bikes;
+          search.locationBounds = response.data.location.geometry.viewport;
+
           NgMap.getMap({id: "searchMap"}).then(function(map) {
-            map.fitBounds(bounds);
+            map.fitBounds(correctBounds());
             // map.panToBounds(bounds);
           });
 
@@ -184,6 +181,23 @@ angular.module('search',[]).component('search', {
           }
         }, function(error) {
         });
+      }
+
+      function correctBounds() {
+        var bounds = new google.maps.LatLngBounds();
+        if (!_.isEmpty(search.locationBounds)) {
+          bounds = extendBounds(bounds, search.locationBounds.northeast.lat, search.locationBounds.northeast.lng);
+          bounds = extendBounds(bounds, search.locationBounds.southwest.lat, search.locationBounds.southwest.lng);
+        }
+
+        for (var i = 0; i < 3; i++) { bounds = extendBounds(bounds, search.bikes[i].lat_rnd, search.bikes[i].lng_rnd) }
+        return bounds
+      }
+
+      function extendBounds(bounds, lat, lng) {
+        var loc = new google.maps.LatLng(lat, lng);
+        bounds.extend(loc);
+        return bounds
       }
 
       function setMetaTags(location) {
