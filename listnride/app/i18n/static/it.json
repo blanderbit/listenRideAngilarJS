@@ -115,7 +115,7 @@
       "text": "The legendary “In Velo Veritas” happens this year the 5th time at the 10th/11th June 2017 in Stockerau. For those, who want to participate but need a guideline-matching bicycle, we collected some suiting bikes of our community-members to save your day. Just rent it! Bike enthusiasts like you are offering the different bikes below. If you can’t participate, have more vintage bicycles, or just want want to meet like-minded people, you can share your bike on our platform with others! Become a part of our growing community and make some extra money with your passion!"
     },
     "velothon-bikerental": {
-      "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
+      "meta-title": "Simply rent the perfect road bike for the Velothon Berlin ",
       "meta-description": "Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!",
       "title": "Simply rent the perfect road bike for the Velothon Berlin",
       "text": "We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that. <br><br> You can’t participate? Help out someone in need. <a href=\"/#/listing-a-bike\">List your bike</a> and make some extra pocket money!",
@@ -151,7 +151,7 @@
       "meta-description": "Rent the perfect road bike for the Cyclassics in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi",
       "title": "Rent a road bike for the Cyclassics Hamburg on listnride",
       "text": "You need a road bike for the Cyclassics in Hamburg? We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.<br><br>You can’t participate? Help out someone in need. List your bike and make some extra pocket money!",
-      "description": "where: <b>Hamburg</b>  |  what: <b>roadbike race 60, 120 or 180km</b>  |  when: <b>19.08.2018</b>"
+      "description": "where: <b>Hamburg</b>  |  what: <b>roadbike race 60, 120 or 180km</b>  |  when: <b>19.08.2018</b>"
     },
     "riderman": {
       "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",
@@ -327,7 +327,7 @@
       "item3-description": "Le biciclette VELLO sono disponibili in 4 diversi modelli, con e-drive e senza: \"Urbano\", \"Rocky\", \"Speedster\" e \"VELLO BIKE +\". Tutti i modelli offrono il meglio della guida urbana e sono dotati di componenti high-end di città, trekking o road bike.",
       "available-cities": "Disponibile a Berlino e a Monaco di Baviera",
       "question": "Domande?",
-      "faq-question": "Per saperne di più sulle <a href=\"http://vello.bike/index.php\">biciclette VELLO </a> e sulle modalità di acquisto controllare le loro <a href=\"http://vello.bike/index.php/pages/help-faq.html\" target=\"_BLANK\">FAQ </a>."
+      "faq-question": "Per saperne di più sulle <a href=\"http://vello.bike/index.php\">biciclette VELLO </a> e sulle modalità di acquisto controllare le loro <a href=\"https://www.vello.bike/help-faq-en\" target=\"_BLANK\">FAQ </a>."
     },
     "veletage": {
       "meta-title": "VELETAGE Salon für Radkultur",
@@ -354,7 +354,7 @@
       "item2-description": "Agile e veloce <br>Verniciatura a polveri resistente e duratura <br>Componenti di alta qualità <br>Puro piacere di guida",
       "item3-title": "Ottimo prezzo - Elevate prestazioni",
       "item3-description": "Le biciclette singlespeed a partire da 349 € <br>Alta soddisfazione del cliente <br>Servizio personalizzato <br>Consegna rapida a Berlino",
-      "test-bike": "Prova una bicicletta bonvelo a Berlino",
+      "test-bike": "Prova una bicicletta bonvelo a Berlino, Amburgo e Monaco di Baviera",
       "testimonial-1": "Design bello e pulito e arriva pre-assemblata.",
       "testimonial-2": "Servizio clienti molto amichevole, elaborazione rapida dell'ordine e risposta super veloce alle mie domande.",
       "testimonial-3": "Bonvelo è impressionante. Tutto è proprio qui. Ottimo servizio clienti - hanno risposto rapidamente anche quando ho fatto una domanda di domenica. Il tempo di consegna è stato davvero veloce e la bicicletta è arrivata quasi completamente assemblata, con solo un paio di cose semplici da finire. La bicicletta sembra eccezionale, e il prezzo era ancora migliore. Ci tornerò sicuramente. Saluti da Monaco!",
@@ -449,29 +449,50 @@
       "faq-answer-6": "• Una garanzia di due anni che copre difetti di manodopera e materiali. <br>• Chiave remota di backup, per bloccare o sbloccare la bicicletta quando lo smartphone non è disponibile o scarico <br>• Caricabatterie per la bicicletta (caricabatterie 36V, 2A) <br>• Monitoraggio antifurto GSM e Bluetooth <br>• App per smartphone per Android e iOS <br>• Manuale operativo e guida per l'utente <br>• Strumento antifurto per i dadi delle ruote della tua bicicletta <br>• Pneumatici Electrified S da 28 \"x 2,35\". (60-622) <br>• Cavo per il lucchetto integrato <br> • Strumento per regolare la posizione del sedile e del manubrio"
     },
     "moeve": {
-      "description": "Noleggia e prova VELLO E-Bikes a Berlino e a Monaco di Baviera",
-      "subdescription": "Costruita da una squadra di appassionati ingegneri",
+      "description": "Rent and test Moeve bikes in Munich and Amsterdam",
+      "subdescription": "Built by a team of restless engineers",
       "item1-title": "Cyfly",
-      "item1-description": "Migliore trasmissione nei settori pertinenti. La guida unica e la potente pedalata assicurano un'esperienza ciclistica unica.",
-      "item2-title": "La pittura",
-      "item2-description": "La struttura ha due colori. A mano, il processo del colore fluido e il tema grafico (il piumaggio di un gabbiano) si diffondono nella tecnologia dell'aerografo. Uno strato in polvere, opaco e ad alta resistenza sigilla il telaio.",
-      "item3-title": "Geometria del telaio",
-      "item3-description": "Ergonomia perfetta ed efficace trasmissione della potenza: la geometria del telaio è stata adattata a cyfly e al guidatore. Avanzamento rapido combinato con una comoda posizione del sedile.",
-      "choose-location": "Scegli la tua città",
-      "find-out-more": "Scopri di più sul Cyfly di Moeve",
-      "order-online": "<a href=\"https://www.moeve-bikes.de/cyfly/\" target=\"_blank\">Ordina online una delle loro biciclette</a> e ricevi il rimborso del tuo noleggio. Guarda le domande più frequenti qui sotto. ",
-      "faq-question-1": "Cos'è Cyfly?",
-      "faq-answer-1": "Cyfly è una trasmissione multi-link brevettata in cui il pedale non è più direttamente collegato all'asse, ma supportato da dietro.",
-      "faq-question-2": "Cyfly è uguale a un cambio di marcia?",
-      "faq-answer-2": "No. A differenza di un convertitore di coppia convenzionale (ingranaggi del deragliatore e mozzi degli ingranaggi), Cyfly è uno speciale convertitore di forza che, a differenza dei sistemi convenzionali, non allunga la corsa del pedale per aumentare la coppia. Cyfly può essere combinato con un cambio di marcia convenzionale per utilizzare una gamma più ampia di marce.",
-      "faq-question-3": "Devo abituarmi a una nuova tecnica per usare Cyfly?",
-      "faq-answer-3": "La nostra esperienza con oltre 1000 test driver dimostra che automaticamente e naturalmente ci si adegua al nuovo movimento durante la guida con Cyfly. Qui si è provato a iniziare i primi chilometri con cadenza più bassa e con ingranaggi più pesanti.",
-      "faq-question-4": "Dove è collegato Cyfly?",
-      "faq-answer-4": "Cyfly si trova nella posizione di un movimento centrale convenzionale. Sostituisce l'intera sezione anteriore della trasmissione su una bicicletta convenzionale. Il sistema di azionamento cyfly comprende pedivelle, cuscinetti e l'anello della catena in attesa di brevetto. Tutti i componenti sono prodotti utilizzando tecnologie di produzione modernissime. Cyfly è lo stato dell'arte.",
-      "faq-question-5": "Cyfly può essere installato a posteriori?",
-      "faq-answer-5": "Poiché il sistema di azionamento Cyfly richiede un telaio adattato con precisione, non può essere adattato immediatamente. Inizialmente Cyfly sarà disponibile solo come componente innovativo di biciclette premium.",
-      "faq-question-6": "Quanto è più efficiente Cyfly?",
-      "faq-answer-6": "Tutti applicano la forza in modo diverso durante il ciclismo. Pertanto non possiamo fornire un guadagno di efficienza oggettivo, generalmente applicabile. Il valore è calcolato sulla base di dati con vincoli stabiliti da un lato e un numero significativo di test sul campo dall'altro. Il guadagno di efficienza è stato verificato anche da un parere di un esperto esterno di un laboratorio di biciclette a Friburgo, in Germania. Inoltre, l'effetto Cyfly è stato confermato da rinomati professionisti della bicicletta da corsa e del triathlon."
+      "item1-description": "Better transmission in the relevant sectors. The unique riding and the powerful pedaling ensure a unique cyclist experience.",
+      "item2-title": "Painting",
+      "item2-description": "The framework has two colors. By hand the flowing color process and the graphic theme (plumage of a seagull) are spreaded in airbrush technology. A powdered, mat and high-resistance layer seals the frame.",
+      "item3-title": "Frame geometry",
+      "item3-description": "Perfect ergonomics and effective power transmission - the frame geometry was tailored to cyfly and the driver. Fast advance combined with comfortable seat position.",
+      "choose-location": "Wähle deine Stadt",
+      "find-out-more": "Learn more about the Cyfly by Moeve",
+      "order-online": "<a href=\"https://www.moeve-bikes.de/cyfly/\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed. See the most frequently asked questions below.",
+      "faq-question-1": "What is Cyfly?",
+      "faq-answer-1": "Cyfly is a patented multi-link transmission in which the pedal is no longer directly connected to the axle, but is supporting from behind.",
+      "faq-question-2": "Is Cyfly the same as a gear shift?",
+      "faq-answer-2": "No. In contrast to a conventional torque converter (dérailleur gears and gear hubs), Cyfly is a special force converter that, unlike conventional systems, does not lengthen the pedal travel to increase the torque. Cyfly can be combined with a conventional gear shift to use a broader range of gears.",
+      "faq-question-3": "Do I have to get used to a new technique in order to use Cyfly?",
+      "faq-answer-3": "Our experience with so far more than 1000 test drivers shows that you automatically and naturally adjust to the new movement when driving with Cyfly. Here it has proven to start the first few kilometers with lower cadence and in heavier gears.",
+      "faq-question-4": "Where is Cyfly attached?",
+      "faq-answer-4": "Cyfly is located in the position of a conventional bottom bracket. It replaces the entire front section of the drive train on a conventional bicycle. The cyfly drive system includes cranks, bearings and the patent-pending chain ring. All components are produced using highly modern production technologies. Cyfly is 'state of the art'.",
+      "faq-question-5": "Can Cyfly be retrofitted?",
+      "faq-answer-5": "Since the Cyfly drive system requires a precisely adapted frame, it cannot be retrofitted readily. Initially Cyfly will only be available as an innovative component of premium bicycles.",
+      "faq-question-6": "How much more efficient is Cyfly?",
+      "faq-answer-6": "Everyone applies force differently while cycling. Therefore we cannot provide an objective, generally applicable gain in efficiency. The value is calculated based on data with established constraints on the one hand and a significant number of field tests on the other hand. The efficiency gain was also verified by an external expert opinion from a bicycle laboratory in Freiburg, Germany. Furthermore, the Cyfly effect was confirmed by renowned bicycle racing and triathlon professionals."
+    },
+    "rethink": {
+      "title": "Your rethink e-bike. Clear. Robust. Distinct Character.",
+      "description": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden",
+      "subdescription": "Choose between the City Low, the City High and the Longtail",
+      "bike1-title": "rethink City Low",
+      "bike1-description": "rethink, these are sustainable steel frames with a long service life.",
+      "bike2-title": "rethink City High",
+      "bike2-description": "rethink are sporty chain or easy - hub gears.",
+      "bike3-title": "rethink Longtail",
+      "bike3-description": "rethink that are proven components for careless driving pleasure.",
+      "item1-title": "Perfect fit",
+      "item1-description": "Are you ready for the change to electric transportation? binova provides you with the perfect e-drive for your bicycle, matching almost all common bike types and frames.",
+      "item2-title": "Personalized ",
+      "item2-description": "You are looking for an electric drive unit to use in all circumstances? No matter if cruising through the city, mastering long tours and steep hills.",
+      "item3-title": "Economical ",
+      "item3-description": "You want your bike´s e-drive to last for life? binova guarantees a long life span for your binova flow.",
+      "test-bike": "Test the new rethink models!",
+      "choose-location": "Wähle deine Stadt",
+      "find-out-more": "Learn more about rethink",
+      "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed."
     }
   },
   "about-us": {
@@ -576,10 +597,12 @@
     "title": "Stampa",
     "header": "Sezione Stampa",
     "subheader": "Le informazioni sono pronte per essere scaricate. listnride è pronto a parlare.",
+    "comm-and-pr": "Communications and PR",
     "kit": {
       "title": "Kit stampa",
       "content": "Gli altri si chiamano sistemi di noleggio biciclette. Noi siamo una comunità bike sharing. Scopri di più nel nostro kit di stampa, che può essere",
-      "download": "trovato qui"
+      "download": "trovato qui",
+      "link": "https://goo.gl/forms/JxtwvX16isstcH1U2"
     },
     "contact": {
       "title": "Contatto stampa",
@@ -587,6 +610,34 @@
     },
     "meta-title": "stampa listnride",
     "meta-description": "Noi amiamo il bike sharing. E risponderemo con piacere a tutte le vostre domande."
+  },
+  "invest": {
+    "meta-title": "listnride is crowdfunding! Be part of it and invest in Building Europe’s leading bike sharing community.",
+    "meta-description": "Visit Seedrs to learn more about investing in listnride.",
+    "description": "listnride is crowdfunding! Be part of it and invest in building Europe’s leading bike sharing community.",
+    "subdescription": "Learn more about listnride in our <a href=\"http://cdn.listnride.com/en/Seedrs_listnride+Investor+Presentation.pdf\" target=\"_blank\">investor presentation</a> and why it is worth to invest.",
+    "subsubdescription": "Soon, a crowdfunding campaign will start on <a href=\"https://seedrs.com\" target=\"_blank\">Seedrs</a>, Europe's largest equity crowdfunding platform. As an early adopter, business partner or friend, we're giving you first access, before we launch to the public. Tell us your level of interest and preregister without obligation.",
+    "learn-more": "Crowdfunding FAQ",
+    "known-from": "listnride in the news",
+    "investment": "Investment",
+    "submit": "Pre-register",
+    "form-feedback": "Thank you! You've successfully shared your level of interest with us.",
+    "faq-question-1": "WHY DOES LISTNRIDE START A CROWDFUNDING CAMPAIGN?",
+    "faq-answer-1": "We are a young company with a well developed product, a growing community of tenants and bicycle owners. To drive further growth, we offer the community and the public the opportunity to invest in our company alongside our current investors. With these additional resources, we will make further improvements to our product as well as continue to grow geographically and so grow the community, resulting in greater choice for riders and greater demand for listers.",
+    "faq-question-2": "HOW CAN I INVEST IN LISTNRIDE?",
+    "faq-answer-2": "We are working with Seedrs, the leading Crowdfunding platform from the United Kingdom to run our Crowdfunding campaign. To invest, simply create an account at <a href=\"https://seedrs.com\" target=\"_blank\">www.seedrs.com</a> and follow the instructions.",
+    "faq-question-3": "ARE THERE ANY RISKS INVOLVED?",
+    "faq-answer-3": "Investing in startups involves risks, including loss of capital, illiquidity, lack of dividends and dilution, and it should be done only as part of a diversified portfolio. If you would like to read more Seedrs has a more detailed explanation about these <a href=\"https://www.seedrs.com/risk_warning\" target=\"_blank\">risks here</a>.",
+    "faq-question-4": "WHAT IS THE MINIMUM INVESTMENT AMOUNT?",
+    "faq-answer-4": "Because we want to involve as many people as possible, we keep the minimum investment amount low, around €10 (exact amount depends on exchange rates). We are happy to receive any amount!",
+    "faq-question-5": "WHAT HAS LISTNRIDE ACCOMPLISHED SO FAR?",
+    "faq-answer-5": "Since our official start in September 2016, launching a fully functional web platform: listnride has grown to be the largest community bike-sharing platform in the German speaking market (DE, AT, CH), with over 1.100 bikes listed and 1.600 registered users. listnride has already over 100 bike shops integrated and 5 innovative bike brands up and running with test ride programs. We have built up a strong presence in Berlin, Munich, Vienna, Amsterdam and Mallorca and are expanding into other large cities like Hamburg, Zurich and Düsseldorf.",
+    "faq-question-6": "HOW CAN I MAKE MONEY WITH MY INVESTMENT?",
+    "faq-answer-6": "To make a profit on your investment, you will generally need to sell your shares for more than the amount you invested. In a best case scenario, the value of your shares will rise in line with the growth of business you invested in, and you will be able to see your shares when the business floats on a stock exchange or is bought by another company (i.e. an exit event). More info <a href=\"https://www.seedrs.com/learn/help/how-do-i-make-a-profit-from-my-investment\" target=\"_blank\">here</a>",
+    "faq-question-7": "WHAT IS THE MONEY RAISED USED FOR?",
+    "faq-answer-7": "We will use your invested money for two primary purposes: To finance our growth and win new users, especially in our existing markets / cities. Our community, with higher user numbers, can offer riders a wider choice, and provide higher demand to listers, making the service more appealing overall. To improve our platform steadily through new features that make the rental experience as easy and efficient as possible. Integrating an insurance product and new mobile apps are the biggest milestones set.",
+    "faq-question-8": "FURTHER QUESTIONS?",
+    "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
   },
   "terms-and-conditions": {
     "title": "Termini e Condizioni",
@@ -713,5 +764,8 @@
     "description": "List e Ride GmbH (di seguito \"listnride\") ti informa nei Regolamenti di Protezione dei Dati sulla gestione dei tuoi dati personali. <br><br><a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Qui puoi visualizzare e scaricare le norme sulla protezione dei dati. </a>",
     "meta-title": "Politica sulla privacy di listnride",
     "meta-description": "La Politica sulla privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online."
+  },
+  "seo": {
+    "cities-title": "Planning to Travel? Check out more cities:"
   }
 }

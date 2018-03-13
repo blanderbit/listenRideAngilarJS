@@ -68,7 +68,7 @@
       "search-title": "Echa un vistazo a la selección de bicis de alquiler en Vienna",
       "search-subtitle": "Alquila una bici que se ajuste a tu estilo y necesidades",
       "about": "Acerca de Viena",
-      "about-content": "Viena. La ciudad imperial del Danubio, se transforma lentamente en una metrópolis con mentalidad ciclista. En especial en sus propios festivales, como <a href=\"http://www.bikefestival.at\" target=\"_blank\">Argus Bike </a>, Radkult, y en 2016, el <a href=\"http://www.wienerfahrradschau.at\" target=\"_blank\">Wiener Fahrradschau </a>, un spin-off de la Berlin Fahrradschau que se llevó a cabo por primera vez. Al lado de estos eventos, no hay forma de perderse el panorama ciclista local, ya que ha crecido tan rápido como la ciudad misma y recupera las calles.",
+      "about-content": "Viena. La ciudad imperial del Danubio, se transforma lentamente en una metrópolis con mentalidad ciclista. En especial en sus propios festivales, como <a href=\"http://www.bikefestival.at\" target=\"_blank\">Argus Bike </a>, Radkult, y en 2016, el <a href=\"http://www.wienerfahrradschau.at\" target=\"_blank\">Wiener Fahrradschau </a>, un spin-off de la Berlin Fahrradschau que se llevó a cabo por primera vez.Al lado de estos eventos, no hay forma de perderse el panorama ciclista local, ya que ha crecido tan rápido como la ciudad misma y recupera las calles.",
       "bike-routes": "Rutas en bici",
       "bike-shops": "Tiendas de bicis",
       "cafes-bars": "Cafés, bares y restaurantes",
@@ -97,7 +97,7 @@
     },
     "text-2": {
       "title": "Únete a la comunidad empresarial de listnride ",
-      "description": "Regístrate ahora y configura la página de tu propia tienda al instante. O contacta con nosotros personalmente. Martin te ayudará con gusto, contacta con él en: <br><a href=\"mailto:ml@listnride.com\">ml@listnride.com </a>o +49 171&nbsp;83 &nbsp;13 &nbsp;348"
+      "description": "Regístrate ahora y configura la página de tu propia tienda al instante. O contacta con nosotros personalmente. Martin te ayudará con gusto, contacta con él en: <br><a href=\"mailto:ml@listnride.com\">ml@listnride.com </a>o 0171&nbsp;83 &nbsp;13 &nbsp;348"
     },
     "text-3": {
       "column-1": "listnride ya es la comunidad más grande para compartir bicicletas en Europa y por extensión, especialista en alquiler de bicis privadas y comerciales. Sabemos lo que buscan nuestros clientes y, por lo tanto, podemos dirigirlos a tu página de compras en listnride para que encuentren y reserven tus bicis de alquiler con facilidad.",
@@ -178,18 +178,18 @@
       "subdescription": "No dudes en reservar una gran bici en nuestra comunidad para compartir bicicletas."
     },
     "crossride": {
-      "title": "Carrera de listnride",
-      "text": "Durante la Berliner Fahrradschau queremos explorar contigo nuestro parque de cross local, el bosque Grunewaldcon inc, reíbles senderos. <br><br>El 5 de marzo, a las 10 en punto, comenzamos a andar en bici desde la entrada principal de la BFS en STATION Berlín. Esta ruta para socializar dura aprox. 3 horas / 50 km en la naturaleza y vuelves con las pilas bien cargadas. Recomendamos encarecidamente una bicicleta CX/Gravel, ropa de abrigo y estar en forma. ¡Es necesario llevar casco! <br><br>En caso de que necesites una bici adecuada o te gustase probar una nueva bici de cross, consulta las fantásticas bicis que ofrece <a href=\"http://www.votec.de\" target=\"_blank\">Votec </a>y nuestra comunidad a continuación. Si deseas unirte, tienes que <a target=\"_blank\" href=\"https://ti.to/listnride/crossride\">registrarte </a>. Como parte del programa BFS, te ofrecemos un ticket con descuento para el espectáculo. Después de registrarte para la ruta CX de listnride, obtienes un código de cupón para la <a target=\"_blank\" href=\"https://berlinerfahrradschau.de/en/tickets/\">compra del ticket</a>."
+      "title": "listnride Crossride",
+      "text": "During the Berliner Fahrradschau we want to explore with you our local cross playground, the forest with uncountable awesome trails, the Grunewald.<br><br>On Saturday the 24th of March 10am sharp we start rolling from the front gate BFS venue STATION Berlin. The social paced ride lasts for ~3 hours / 45km in the nature and bring you back well charged. We highly recommend a CX/Gravel bike, warm clothes, and a fit body. Helmets and rsvp are required!<br><br>In case you need a suitable bike or would like to test a new cross bike, check out the great Bikes offered by Votec and our community below. If you like to join, <a href=\"https://ti.to/listnride/listnride-crossride-fahrradschau-berlin/\" target=\"_BLANK\">you need to register here.</a>"
     },
     "mcbw": {
-      "description": "Explore Munich en bici, ¡anda en bici con listnride!",
-      "subdescription": "En colaboración con Brompton y Ampler alquilamos bicis fantásticas de forma gratuita",
-      "subhead-1": "El nuevo alquiler de bicis",
-      "subhead-2": "Alquila una bici gratis",
-      "text-1": "Concebida como el Airbnb de las bicis, listnride ofrece una alternativa al alquiler de bicis clásico: propietarios particulares, distribuidores o fabricantes ofrecen sus bicis en alquiler en listnride. Turistas, ciudadanos, familias, deportistas y viajeros de negocios alquilan la bici adecuada a su estilo y necesidades.",
-      "text-2": "De manera especial para la MCBW, los visitantes pueden alquilar una bici de las marcas <b>Bicicleta plegable Brompton </b>y <b>Bici eléctrica Ampler</b>gratis <b>(código de descuento: LNR2017) </b>durante medio día. listnride persigue la visión de ofrecer a cuantas más personas mejor de cualquier parte del mundo acceso sin complicaciones a bicis de alta calidad y con estilo. Si quieres explorar Múnich, ¡anda en bici con listnride!",
-      "location-description": "Elige tu ubicación",
-      "location-text": "Las dos ubicaciones son <b>① Munix Finest Bicycles </b>en Wörthstrasse 11 y <b>② listnride</b> en Pündterplatz 1"
+      "description": "Explore Munich by bike, go cycling with listnride!",
+      "subdescription": "Together with Munix Finest Bicycles and Ampler we rent out fantastic bikes",
+      "subhead-1": "The new bike rental",
+      "subhead-2": "Rent a bike",
+      "text-1": "Conceived as the Airbnb for bicycles, listnride offers an alternative to the classic bike rental: private owners, dealers or manufacturers offer their bicycles for rent on listnride. Tourists, citizens, families, sportsmen and business travelers rent the right bike for their style and needs.",
+      "text-2": "Especially for the MCBW, visitors can rent a bike of the brands <b>Urban Arrow</b>, <b>I:sy</b>, <b>Stromer</b>, <b>Brompton</b> and <b>Ampler</b> <b>(Voucher Code: 10FORU)</b>. listnride pursues the vision of offering as many people anywhere in the world uncomplicated access to high-quality, stylish bicycles. If you want to explore Munich, go cycling with listnride!",
+      "location-description": "Choose your location",
+      "location-text": "The two locations are <b>① Munix Finest Bicycles</b> in Wörthstraße 11 and <b>② listnride</b> at Pündterplatz 1"
     },
     "cwd": {
       "home": {
@@ -201,7 +201,7 @@
         "kr-description": "En colaboración con Schickemütze, organizamos una ruta en grupo que te llevará de la ciudad al campo, muy bonito, donde una de las paradas más destacadas será una estación de lanzamiento de cohetes abandonada. Disponemos de bicis de Cervélo y Ridley en alquiler.",
         "title2": "Tenemos bicis perfectas para probar, de Ampler y Cervélo",
         "subtitle2": "Si deseas probar la bici un minuto o una hora, basta con que reserves de forma gratuita",
-        "ampler": "La start-up de Estonia proporcionará bicis eléctricas innovadoras y urbanas para probar. Elige entre Hawk, la dinámica de una sola velocidad y Bilberry, la cómoda bicicleta urbana y conozca las bicis eléctrica a un nivel completamente nuevo.",
+        "ampler": "La start-up de Estonia proporcionará bicis eléctricas innovadoras y urbanas para probar. Elige entre Hawk, la dinámica de una sola velocidad o Bilberry, la cómoda bicicleta urbana y conozca las bicis eléctrica a un nivel completamente nuevo.",
         "cervelo": "El fabricante canadiense de bicis de carretera Cervélo llevará los últimos modelos al Cycling World, que podrás probar durante uno de los paseos en bici de carácter social durante el fin de semana.",
         "our-bikes": "Ver todas nuestras bicis"
       },
@@ -334,7 +334,7 @@
       "item3-description": "Las bicicletas VELLO están disponibles en 4 modelos diferentes, con motor eléctrico y sin él: \"Urbano\", \"Rocky\", \"Speedster\" y \"VELLO BIKE+\". Todos los modelos ofrecen lo mejor de la conducción urbana y vienen con componentes de gama alta para ciudad, trekking o bicicleta de carretera.",
       "available-cities": "Disponible en Berlín y Múnich",
       "question": "¿Preguntas?",
-      "faq-question": "Obtén más información sobre <a href=\"http://vello.bike/index.php\"> las bicis VELLO </a>y  cómo comprar una o consulta las <a href=\"http://vello.bike/index.php/pages/help-faq.html\" target=\"_BLANK\">Preguntas frecuentes</a>"
+      "faq-question": "Obtén más información sobre <a href=\"http://vello.bike/index.php\"> las bicis VELLO </a>y  cómo comprar una o consulta las <a href=\"https://www.vello.bike/help-faq-en\" target=\"_BLANK\">Preguntas frecuentes</a>"
     },
     "veletage": {
       "meta-title": "VELETAGE Salón de la cultura ciclista",
@@ -361,7 +361,7 @@
       "item2-description": "Manejo rápido y ágil <br>Acabado  duradero con recubrimiento en polvo  <br>Componentes de alta calidad <br>Puro placer de andar en bici",
       "item3-title": "Precio formidable - valor sólido",
       "item3-description": "Bicis de una sola velocidad desde 349 € <br>Alta satisfacción del cliente <br>Servicio personalizado <br>Entrega rápida en Berlín",
-      "test-bike": "Prueba una bici bonvelo en Berlín",
+      "test-bike": "Prueba una bici bonvelo en Berlín, Hamburgo o Múnich",
       "testimonial-1": "Diseño agradable y  de líneas limpias, y premontado con esmero. Estoy disfrutando del paseo.",
       "testimonial-2": "Servicio al cliente muy afable, procesamiento rápido del pedido y respuesta súper rápida a mis preguntas.",
       "testimonial-3": "Bonvelo es increíble. Aquí encuentras de todo. Excelente servicio al cliente: respondieron rápidamente incluso cuando hice una pregunta el domingo. El tiempo de entrega fue realmente rápido, y la bici llegó casi completamente montada, con sólo un par de cosas fáciles de terminar. La bici se ve muy bien, y el precio fue incluso mejor. Sin duda, lo recomendaré. ¡Saludos desde Múnich!",
@@ -479,6 +479,27 @@
       "faq-answer-5": "Dado que el sistema de accionamiento Cyfly requiere un cuadro adaptado con precisión, no se puede readaptar con facilidad. Inicialmente, Cyfly solo estará disponible como un componente innovador de bicicletas premium.",
       "faq-question-6": "¿Cuánto más eficiente es Cyfly?",
       "faq-answer-6": "Todos aplican la fuerza de manera diferente durante el ciclismo. Por lo tanto, no podemos proporcionar una ganancia objetiva y generalmente aplicable en eficiencia. El valor se calcula en base a los datos con restricciones establecidas, por un lado, y un número significativo de pruebas de campo, por otro lado. La ganancia de eficiencia también fue verificada por un experto externo de un laboratorio de bicicletas en Freiburg, Alemania. Además, el efecto Cyfly fue confirmado por renombrados ciclistas y profesionales del triatlón."
+    },
+    "rethink": {
+      "title": "Your rethink e-bike. Clear. Robust. Distinct Character.",
+      "description": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden",
+      "subdescription": "Choose between the City Low, the City High and the Longtail",
+      "bike1-title": "rethink City Low",
+      "bike1-description": "rethink, these are sustainable steel frames with a long service life.",
+      "bike2-title": "rethink City High",
+      "bike2-description": "rethink are sporty chain or easy - hub gears.",
+      "bike3-title": "rethink Longtail",
+      "bike3-description": "rethink that are proven components for careless driving pleasure.",
+      "item1-title": "Perfect fit",
+      "item1-description": "Are you ready for the change to electric transportation? binova provides you with the perfect e-drive for your bicycle, matching almost all common bike types and frames.",
+      "item2-title": "Personalized ",
+      "item2-description": "You are looking for an electric drive unit to use in all circumstances? No matter if cruising through the city, mastering long tours and steep hills.",
+      "item3-title": "Economical ",
+      "item3-description": "You want your bike´s e-drive to last for life? binova guarantees a long life span for your binova flow.",
+      "test-bike": "Test the new rethink models!",
+      "choose-location": "Wähle deine Stadt",
+      "find-out-more": "Learn more about rethink",
+      "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed."
     }
   },
   "about-us": {
@@ -508,7 +529,7 @@
         "question-1": "¿Qué debo hacer para alquilar mi bici con tranquilidad?",
         "answer-1": "Una vez que recibas una solicitud de alquiler, puedes comunicarte con quien la solicita a través de la práctica opción del chat. Así te harás una buena idea de quién es la persona y por qué desea alquilarla. La plataforma de listnride ofrece la verificación del usuario para minimizar el riesgo de fraude. Si deseas una mayor tranquilidad, puedes pedirle al arrendatario que traiga una identificación para una verificación posterior y/o una fianza de seguridad cuando recoja la bici. Ten en cuenta que todo el mundo quiere pasar un buen rato y disfrutar del paseo, y por lo tanto, tendrán cuidado con la bici que les alquilaste.",
         "question-2": "¿Cómo puedo estar seguro de que el ciclista me devolverá la bici?",
-        "answer-2": "Hacemos el máximo esfuerzo en crear un mercado basado en la confianza y el respeto. Por ello solicitamos que nuestros usuarios verifiquen su identidad antes de alquilar la bici de alguien u ofrecer su propia bici en alquiler. La verificación se realiza a través de un número de teléfono móvil, facebook o correo electrónico y datos de pago. Si sigues sin estar seguro, puedes pedirle al usuario que te entregue una copia de su DNI y/o que deje una fianza. En ese caso, asegúrate de avisar al usuario con antelación antes de que confirme y pague el alquiler. El usuario puede llegar tarde, si no conoce bien la zona y, por lo tanto, no es capaz de encontrar el camino de vuelta tan fácilmente. Intenta ponerte en contacto con dicha persona a través del teléfono, mensaje de texto o del chat de la aplicación para averiguar el motivo de la demora. Si esto no funciona, informa de la situación a través de nuestro sitio web haciendo clic en \"Contacto y soporte\". Nos comunicaremos con el usuario y resolveremos el problema para asegurarnos de que se te devuelva la bici.",
+        "answer-2": "Hacemos  el máximo esfuerzo en crear un mercado basado en la confianza y el respeto. Por ello solicitamos que nuestros usuarios verifiquen su identidad antes de alquilar la bici de alguien u ofrecer su propia bici en alquiler. La verificación se realiza a través de un número de teléfono móvil, facebook o correo electrónico y datos de pago. Si sigues sin estar seguro, puedes pedirle al usuario que te entregue una copia de su DNI y/o que deje una fianza. En ese caso, asegúrate de avisar al usuario con antelación antes de que confirme y pague el alquiler. El usuario puede llegar tarde, si no conoce bien la zona y, por lo tanto, no es capaz de encontrar el camino de vuelta tan fácilmente. Intenta ponerte en contacto con dicha persona a través del teléfono, mensaje de texto o del chat de la aplicación para averiguar el motivo de la demora. Si esto no funciona, informa de la situación a través de nuestro sitio web haciendo clic en \"Contacto y soporte\". Nos comunicaremos con el usuario y resolveremos el problema para asegurarnos de que se te devuelva la bici.",
         "question-3": "¿Qué pasa si roban mi bici o le pasa algo?",
         "answer-3": "Los robos de bicis ocurren. Sin embargo, es menos probable que roben la bicicleta si está cerrada correctamente y/o guardada en un sitio cerrado. Ayuda a evitar el robo proporcionando un candado con tu bici. En caso de que algo salga mal, el ciclista será responsable de todos los costes derivados de cualquier daño y/o robo. Si te robaran y/o dañaran la bici durante el período de alquiler, el usuario y tú tendréis que comunicaros con nosotros a través de nuestro sitio web haciendo clic en \"Contacto\". Una vez hayamos aclarado la situación, contactaremos contigo para resolver el problema. ¡Si la robaron y el ciclista no puede pagar los daños, la garantía de listnride se asegurará de cubrir todo! Sin embargo, si  robaron la bicicleta mientras no estaba alquilada mediante listnride, no podremos ayudarte a resolver el problema. En este caso, deberás resolver el problema directamente con el usuario.",
         "question-4": "¿Qué sucede si el ciclista u otra persona se lesiona y/o se daña una propiedad durante el período de alquiler? ",
@@ -583,10 +604,12 @@
     "title": "Prensa",
     "header": "Sección de prensa",
     "subheader": "La información está lista para descargarse. Listnride está listo para hablar.",
+    "comm-and-pr": "Comunicación y PR",
     "kit": {
       "title": "Dossier de prensa",
       "content": "Otros se consideran sistemas de alquiler de bicicletas. Somos una comunidad para compartir bicicletas. Obtén más información en nuestro dossier de prensa, que puede ",
-      "download": "encontrarse aquí"
+      "download": "encontrarse aquí",
+      "link": "https://goo.gl/forms/JxtwvX16isstcH1U2"
     },
     "contact": {
       "title": "Contacto con la prensa",
@@ -646,7 +669,7 @@
     "verification": {
       "title": "La verificación crea confianza",
       "content": "En teoría, conocemos a todo el mundo por una separación entre 3,5 a 6,6 grados. Pero, ¿realmente te fiarías de eso cuando alquilas la bici a alguien? Proporciona datos personales en tu perfil para aumentar tu credibilidad al comunicarte con un anunciante o un usuario sobre el alquiler de bicis. Hay varias maneras de verificar la identidad de una persona en listnride:",
-      "list-1": "Verificación de identificación: conecta tu perfil de listnride con tu página de Facebook y guarda los datos de tu tarjeta de crédito. Asegúrate de que recibes los correos electrónicos.",
+      "list-1": "Verificación de identificación: conecta tu perfil  de listnride con tu página de Facebook y guarda los datos de tu tarjeta de crédito. Asegúrate de que recibes los correos electrónicos.",
       "list-2": "Número de teléfono: le enviamos tu número de teléfono verificado a tu anunciante/ ciclista tan pronto como se acepte una solicitud de reserva.",
       "list-3": "Valoraciones: tu perfil recoge las valoraciones enviadas por tus ciclistas y anunciantes  tras el alquiler de la bici, lo que te permite crear una buena reputación."
     }
@@ -748,5 +771,8 @@
     "description": "List and Ride GmbH (en adelante, \"listnride\") te informa en las Normas de protección de datos sobre cómo se manejan tus datos personales. <br><br><a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Aquí puedes ver y descargar las normas de protección de datos. </a>",
     "meta-title": "Política de privacidad de listnride",
     "meta-description": "La política de privacidad de la comunidad para compartir bicis de listnride se aplica al uso de la plataforma online"
+  },
+  "seo": {
+    "cities-title": "Planning to Travel? Check out more cities:"
   }
 }

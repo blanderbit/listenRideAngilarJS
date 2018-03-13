@@ -28,6 +28,10 @@
     "heidelberg": "Heidelberg",
     "marl": "Marl",
     "frankfurt": "Francoforte",
+    "usedom": "Usedom",
+    "lanzarote": "Lanzarote",
+    "mallorca": "Mallorca",
+    "sylt": "Sylt",
     "per": "per ",
     "hour": "ora",
     "hours": "ore",
@@ -145,7 +149,7 @@
       },
       "velothon-bikerental": {
         "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
-        "meta-description": "Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!"
+        "meta-description": "Take part in the Velothon Berlin 2018! Rent a road bike from the listnride bike sharing community and join in on the fun!"
       },
       "constance-spin": {
         "meta-title": "Rent the perfect road bike during Eurobike",
@@ -199,23 +203,23 @@
       },
       "veletage": {
         "meta-title": "VELETAGE Salon für Radkultur",
-        "meta-descr": "VELETAGE Salon für Radkultur - Custom made racing bikes, clothing, wheelsets, bike fittings"
+        "meta-descr": "VELETAGE Salon für Radkultur - Biciclette da corsa su misura, abbigliamento, ruote, accessori per biciclette"
       },
       "bonvelo": {
-        "meta-title": "Rent and Test Bonvelo Singlespeed Bikes in Berlin & Munich",
-        "meta-description": "The singlespeed/fixed-gear \"bonvelo BLIZZ\" is available to rent and test ride in Berlin in four frame sizes. Book one on listnride today!"
+        "meta-title": "Noleggia e prova Bonvelo Singlespeed Bikes a Berlino e a Monaco di Baviera",
+        "meta-description": "La \"bonvelo BLIZZ\" a scatto fisso/singlespeed è disponibile per il noleggio e il test a Berlino in quattro dimensioni. Prenotane una su listnride oggi!"
       },
       "motoparilla": {
-        "meta-title": "Rent and Test the Moto Parilla Carbon SUV E-Bike in Munich",
-        "meta-description": "The Carbon SUV E-Bike from Moto Parilla can be tested in Munich. Simply book online and enjoy the ride!"
+        "meta-title": "Noleggia e prova la Moto Parilla Carbon SUV E-Bike a Monaco di Baviera",
+        "meta-description": "Il Carbon SUV E-Bike di Moto Parilla può essere testato a Monaco di Baviera. Basta prenotarsi online e godersi la corsa!"
       },
       "votec": {
-        "meta-title": "Rent and Test the newest Votec Bikes",
-        "meta-descr": "VOTEC - Fusion of Functionality, Design and Quality"
+        "meta-title": "Noleggia e prova le nuovissime biciclette Votec",
+        "meta-descr": "VOTEC: fusione di funzionalità, design e qualità"
       },
       "vanmoof": {
-        "meta-title": "Rent and test the Electrified S E-Bikes in Berlin, Munich and Hamburg",
-        "meta-descr": "The perfect city bike - VanMoof"
+        "meta-title": "Noleggia e prova le Electrified S a Berlino, Monaco e Amburgo.",
+        "meta-descr": "La bicicletta perfetta per la città - VanMoof"
       },
       "moeve": {
         "meta-title": "Noleggia e prova VELLO E-Bikes a Berlino e a Monaco di Baviera",
@@ -223,23 +227,23 @@
       }
     },
     "about-us": {
-      "meta-title": "listnride - the company",
-      "meta-description": "Founded by bike enthusiasts for their brothers and sisters in spirit."
+      "meta-title": "listnride - l'azienda",
+      "meta-description": "Fondata da appassionati di biciclette per gli amanti delle due ruote"
     },
     "contact-and-help": {
-      "meta-title": "listnride is here for you",
-      "meta-description": "Contact us if you have special questions or need help solving a problem"
+      "meta-title": "listnride è qui per te",
+      "meta-description": "Contattaci se hai domande specifiche o hai bisogno di aiuto per risolvere un problema"
     },
     "press": {
-      "meta-title": "listnride press",
-      "meta-description": "We love bike sharing. And we’ll gladly answer all your questions."
+      "meta-title": "stampa listnride",
+      "meta-description": "Noi amiamo il bike sharing. E risponderemo con piacere a tutte le vostre domande."
     },
     "invest": {
       "meta-title": "listnride is crowdfunding! Be part of it and invest in Building Europe’s leading bike sharing community.",
       "meta-description": "Visit Seedrs to learn more about investing in listnride."
     },
     "terms-and-conditions": {
-      "meta-title": "listnride | Website Terms & Conditions",
+      "meta-title": "listnride | Termini e condizioni del sito",
       "meta-description": "I termini e le condizioni della comunità bike sharing di listnride si applicano all'uso della piattaforma online."
     },
     "trust-and-safety": {
@@ -267,6 +271,70 @@
       "meta-description": "La Politica sulla privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online."
     }
   },
+  "booking": {
+    "shopping": "Secure Shopping",
+    "pay-secure": "Pagamento sicuro con",
+    "agree-terms": "With 'Request Bike' you agree to the",
+    "agree-terms-link": "listnride terms",
+    "footer": {
+      "questions": "Hai domande sul noleggio della bicicletta?",
+      "call-us": "Chaimaci al: +49 (0)30-120870330, Lun-Ven 9-18. ",
+      "email-us": "O scrivici un email",
+      "support": "listnride servizio clienti"
+    },
+    "sign-in": {
+      "tab": "1. Accedi",
+      "new": "Nuovo su listnride?",
+      "login": "Registrati con Facebook",
+      "register-facebook": "Registrati con Facebook",
+      "login-facebook": "Registrati con Facebook",
+      "already-member": "Già registrato?",
+      "register": "Registrati",
+      "not-member": "Nuovo su listnride?"
+    },
+    "details": {
+      "tab": "2. Dati personali",
+      "invoice-address": "Il tuo indirizzo di fatturazione ",
+      "subtitle": "Here is a subline regarding your contact information.",
+      "verification": "Si prega di verificare",
+      "send-sms": "Ti invieremo un SMS sul tuo telefono ",
+      "check-phone": "Per favore controlla il tuo telefono ",
+      "send-code": "Inviare",
+      "enter-code": "Inserisci il PIN che abbiamo appena inviato al tuo telefono",
+      "success-code": "Perfetto, sei pronto.",
+      "fail-code": "Il PIN inserito non è corretto",
+      "resend": "Inviare di nuovo"
+    },
+    "payment": {
+      "tab": "3. Metodi di Pagamento",
+      "select-method": "Seleziona il tuo metodo di pagamento",
+      "subtitle": "Ti addebitiamo il costo solo dopo che il noleggiatore ha accettato la tua richiesta.",
+      "credit-card": "Carta di credito",
+      "card-name": "Nome e Cognome titolare carta",
+      "invalid-name": "Please provide valid name",
+      "card-number": "Numero di carta di credito",
+      "invalid-card": "Please provide a valid Card Number",
+      "invalid-card-number": "Card Number not valid",
+      "exp-month": "Exp. month",
+      "invalid-month": "Month not valid",
+      "invalid-year": "Year not valid",
+      "exp-year": "Exp. year",
+      "exp-date": "Scadenza",
+      "invalid-cvc": "CVC non valido",
+      "cvc": "Numero di sicurezza",
+      "pay-paypal": "Paypal"
+    },
+    "overview": {
+      "tab": "4. Riepilogo",
+      "bike-rental": "La bici selzionata",
+      "size": "Taglia",
+      "location": "Località",
+      "invoice-address": "Indirizzo di fatturazione",
+      "payment": "Pagamento",
+      "redeem-voucher": "Buono sconto",
+      "add": "Add"
+    }
+  },
   "toasts": {
     "update-profile-success": "Il tuo profilo è stato aggiornato con successo.",
     "error": "Si è verificato un errore. Assicurati che la connessione a Internet funzioni e riprova.",
@@ -275,6 +343,7 @@
     "add-voucher-error": "Purtroppo, il buono in dotazione non è valido.",
     "verification-email-sent": "Un messaggio di posta elettronica, con un link di conferma, è stato inviato al tuo indirizzo email. Questo potrebbe richiedere alcuni minuti, se non hai ricevuto nulla controlla la cartella spam.",
     "could-not-sign-up": "Impossibile registrarsi. Sembra che l'indirizzo email fornito sia già in uso.",
+    "successfully-sign-up": "You have successfully signed up. Welcome!",
     "successfully-logged-in": "Accesso avvenuto. Bentornato!",
     "successfully-logged-out": "Ti sei disconnesso.",
     "could-not-log-in": "Impossibile accedere. Assicurati di essere già iscritto e controlla se le tue credenziali sono valide.",
@@ -287,7 +356,9 @@
     "enter-email": "Per favore inserisci la tua email",
     "duplicate-start": "Il processo di duplicazione è iniziato",
     "duplicate-finish": "Processo di duplicazione è terminato. Copie create con successo",
-    "bike-deleted": "Bici cancellata con successo"
+    "bike-deleted": "Bici cancellata con successo",
+    "range-success-delete": "Periodo di disponibilità eliminato con successo",
+    "availability-success-saved": "Disponibilità salvata con successo"
   },
   "settings": {
     "settings": "Impostazioni",
@@ -295,7 +366,7 @@
     "invite": "Invita i tuoi amici",
     "account": "Conto",
     "delete-account": "Eliminare il conto",
-    "delete-account-description": "Qui puoi cancellare il tuo profilo listnride. Non è possibile annullare questo passaggio.",
+    "delete-account-description": "Qui puoi cancellare il tuo conto. Non è possibile annullare questo passaggio.",
     "delete-account-sure": "Sei sicuro?",
     "delete-account-sure-description": "Non è possibile annullare questo passaggio",
     "delete-account-yes": "Si, elimina",
@@ -448,7 +519,7 @@
     "confirm_return": "Conferma ritorno"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} di {{user.city}} vorrebbe noleggiare la tua <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> dal {{timespan}}. Accetto ulteriori dettagli utilizzando la chat.",
+    "1": "{{user.first_name}} {{user.last_name}} di {{user.city}} vorrebbe noleggiare la tua <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> dal {{timespan}}. Accetto ulteriori dettagli utilizzando la chat.",
     "3": "{{user.zip}} Hai accettato la richiesta. La bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I recapiti sono i seguenti, li abbiamo inviati via e-mail. <br><br>Nome:\n{{user.first_name}} {{user.last_name}}<br>Telefono: {{user.phone_number}} <br>Indirizzo: {{user.street}}, {{user.city}}, {{user.country}}",
     "5": "Grazie per aver confermato il recupero della tua bicicletta e della tua valutazione su {{user.first_name}}. Il noleggio è riuscito e i soldi verranno trasferiti al conto bancario fornito durante i prossimi 7 giorni lavorativi. <br><br>In caso di ulteriori domande o commenti, scrivi a <a mailto:=\"hello@listnride.com\">ciao @ listnride.com </a>",
     "8": "Hai respinto la richiesta. Prego scrivi al noleggiante perché non puoi noleggiare la bicicletta.",
@@ -494,15 +565,25 @@
     "signing-up-accept-tac": "Con l'iscrizione accetto ",
     "errors": {
       "password-length": "La password deve essere tra i 6-30 caratteri",
+      "password-length-xs": "6-30 caratteri",
       "password-missing": "Fornire una password",
+      "password-missing-xs": "Password richiesta",
       "valid-email": "Si prega di inserire un indirizzo email valido",
+      "valid-email-xs": "Indirizzo email non valido",
       "empty-email": "Inserisci il tuo indirizzo email",
+      "empty-email-xs": "Email richiesta",
       "empty-last-name": "Inserisci il tuo cognome",
+      "empty-last-name-xs": "Cognome richiesto",
       "empty-first-name": "Inserisci il tuo nome",
+      "empty-first-name-xs": "Nome richiesto",
       "max-size-last-name": "Il cognome non deve superare i 30 caratteri",
+      "max-size-last-name-xs": "Supera 30 caratteri",
       "max-size-first-name": "Il nome non deve superare i 20 caratteri",
+      "max-size-first-name-xs": "Supera 20 caratteri",
       "empty-company-name": "Inserisci il nome della tua azienda",
-      "min-size-company-name": "Il nome della società dovrebbe essere superiore ai 2 caratteri"
+      "empty-company-name-xs": "Azienda richiesta",
+      "min-size-company-name": "Il nome della società dovrebbe essere superiore ai 2 caratteri",
+      "min-size-company-name-xs": "Altitudine di 3 caratteri"
     }
   },
   "home": {
@@ -514,7 +595,7 @@
     "featured-tiles-subheader": "Siamo partner con marchi innovativi, scriviamo su interessanti sviluppi e partecipiamo a eventi speciali.",
     "featured-cities-header": "Pedalando attraverso la giungla urbana",
     "featured-cities-subheader": "Il servizio di noleggio biciclette di listnride sta diventando disponibile sempre in più città in tutto il mondo. Scopri qui alcuni suggerimenti:",
-    "list-a-bike-header": "Hai una bella bicicletta e vuoi che la gente la provi ?",
+    "list-a-bike-header": "Hai una bella bicicletta e vuoi che la gente la veda?",
     "list-a-bike-subheader": "Inserisci la tua bicicletta per il noleggio, incontra nuove persone divertenti e guadagna qualche soldo extra.",
     "meta-title": "listnride - La bike sharing community",
     "meta-description": "Noleggia la bicicletta perfetta nella comunità listnride. Trovane una che si adatti al tuo stile e alle tue esigenze."
@@ -592,7 +673,7 @@
     },
     "pictures": {
       "header": "Carica alcune foto della tua bicicletta",
-      "hint": "Ora seleziona alcune belle foto della tua bicicletta. Ecco alcuni suggerimenti utili per rendere migliore il tuo annuncio.",
+      "hint": "Ora seleziona alcune belle foto della tua bicicletta. Ecco alcuni suggerimenti utili per rendere il tuo annuncio sempre migliore.",
       "how-to": "Suggerimenti per le foto per mettere il tuo annuncio in evidenza",
       "label": "Immagini",
       "select-images": "Seleziona le immagini",
@@ -872,7 +953,6 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
   "seo": {
-    "cities-title": "Pianificare il viaggio? Controlla più città:",
     "header": "Noleggia le migliori bici a",
     "rent-the-best": "Noleggia le migliori",
     "bikes": "biciclette",
@@ -885,5 +965,15 @@
     "kids": "Bici da bambino",
     "electro": "E-bikes",
     "special": "Bici speciali"
+  },
+  "availability": {
+    "availability": "Disponibilità",
+    "modal-title": "Quando non è disponibile la tua bicicletta?",
+    "start-from": "A partire da ",
+    "end-at": "Fino a ",
+    "add-another-date": "Aggiungi un'altra data",
+    "submit-btn": "Ok",
+    "submit-btn-save": "Salva",
+    "choose-range": "Scegli il tuo periodo "
   }
 }

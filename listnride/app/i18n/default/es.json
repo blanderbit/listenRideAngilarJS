@@ -28,6 +28,10 @@
     "heidelberg": "Heidelberg",
     "marl": "Marl",
     "frankfurt": "Fráncfort",
+    "usedom": "Usedom",
+    "lanzarote": "Lanzarote",
+    "mallorca": "Mallorca",
+    "sylt": "Sylt",
     "per": "por",
     "hour": "hora",
     "hours": "horas",
@@ -271,6 +275,71 @@
       "meta-description": "La política de privacidad de la comunidad para compartir bicis de listnride se aplica al uso de la plataforma online"
     }
   },
+  "booking": {
+    "shopping": "Secure Shopping",
+    "pay-secure": "Pago seguro con",
+    "agree-terms": "With 'Request Bike' you agree to the",
+    "agree-terms-link": "listnride terms",
+    "footer": {
+      "questions": "¿Tienes preguntas con respecto a la reserva de una bicicleta?",
+      "call-us": "Llámanos al +49 (0)30-120870330, lunes a viernes 9-18h. ",
+      "email-us": "O escríbenos un correo electrónico",
+      "support": "Equipo de soporte de listnride"
+    },
+    "sign-in": {
+      "tab": "1. Inicio de sesión",
+      "new": "¿Nuevo a listnride?",
+      "login": "Login at listnride",
+      "register-facebook": "Registrar con Facebook",
+      "login-facebook": "Iniciar sesión con Facebook",
+      "already-member": "¿Ya estás registrado?",
+      "register": "Registrar",
+      "not-member": "¿Nuevo a listnride?"
+    },
+    "details": {
+      "tab": "2. Datos personales",
+      "invoice-address": "Tu dirección de facturación",
+      "subtitle": "Here is a subline regarding your contact information.",
+      "verification": "Verificar",
+      "send-sms": "Te enviaremos un SMS a tu teléfono",
+      "check-phone": "Comprueba tu teléfono.",
+      "send-code": "Enviar",
+      "confirm-code": "Verificación",
+      "enter-code": "Introduce el PIN que acabamos de enviar a tu teléfono",
+      "success-code": "Estupendo. Estás listo.",
+      "fail-code": "El PIN que has introducido no es correcto",
+      "resend": "Reenviar"
+    },
+    "payment": {
+      "tab": "3. Formas de pago",
+      "select-method": "Selecciona tu forma de pago",
+      "subtitle": "Sólo te cobraremos después de que el anunciante de la bici haya aceptado tu solicitud.",
+      "credit-card": "Tarjeta de crédito",
+      "card-name": "Nombre en la tarjeta",
+      "invalid-name": "Please provide valid name",
+      "card-number": "Número de tarjeta de crédito",
+      "invalid-card": "Please provide a valid Card Number",
+      "invalid-card-number": "Card Number not valid",
+      "exp-month": "Exp. month",
+      "invalid-month": "Month not valid",
+      "invalid-year": "Year not valid",
+      "exp-year": "Exp. year",
+      "exp-date": "Expira",
+      "invalid-cvc": "CVC not valid",
+      "cvc": "CVC",
+      "pay-paypal": "Paypal"
+    },
+    "overview": {
+      "tab": "4. Resumen",
+      "bike-rental": "Tu selección de bicicleta",
+      "size": "Tamaño",
+      "location": "Ubicación",
+      "invoice-address": "Dirección de facturación",
+      "payment": "Pagamento",
+      "redeem-voucher": "Canjear vale",
+      "add": "Add"
+    }
+  },
   "toasts": {
     "update-profile-success": "Tu perfil se ha actualizado con éxito",
     "error": "Se ha producido un error. Asegúrate de que la conexión a Internet funcione y vuelve a intentarlo.",
@@ -279,6 +348,7 @@
     "add-voucher-error": "Por desgracia, el cupón facilitado no es válido.",
     "verification-email-sent": "Se envió un correo electrónico con un enlace de confirmación a tu dirección de correo electrónico. Puede tardar unos minutos, si no has recibido nada, echa un vistazo a la carpeta de spam.",
     "could-not-sign-up": "No ha podido registrarse. Parece que la dirección de correo electrónico ya se está utilizando.",
+    "successfully-sign-up": "You have successfully signed up. Welcome!",
     "successfully-logged-in": "Ha iniciado sesión correctamente. Bienvenido de nuevo.",
     "successfully-logged-out": "Has cerrado la sesión.",
     "could-not-log-in": "No se pudo iniciar sesión. Asegúrate de que te has registrado y que tus credenciales sean válidas.",
@@ -291,7 +361,9 @@
     "enter-email": "Introduce tu dirección de correo electrónico",
     "duplicate-start": "Proceso de duplicación iniciado",
     "duplicate-finish": "Proceso de duplicación terminado. Copias creadas con éxito",
-    "bike-deleted": "Bici borrada con éxito"
+    "bike-deleted": "Bici borrada con éxito",
+    "range-success-delete": "Fecha de disponibilidad borrado",
+    "availability-success-saved": "Availability successfully saved"
   },
   "settings": {
     "settings": "Configuración",
@@ -452,7 +524,7 @@
     "confirm_return": "Confirmar devolución"
   },
   "listChat": {
-    "1": "A {{user.first_name}}{{user.last_name}}de {{user.city}}le gustaría alquilar tu <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a>desde {{timespan}}. Concreta más detalles usando el chat.",
+    "1": "A {{user.first_name}}{{user.last_name}} de {{user.city}} le gustaría alquilar tu <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> desde {{timespan}}. Concreta más detalles usando el chat.",
     "3": "Has aceptado la solicitud. La bici ahora está reservada y la alquilarás desde {{timespan}}. Los datos de contacto son los siguientes, también te los hemos enviado por correo electrónico <br><br>Nombre: {{user.first_name}}{{user.last_name}}<br>Teléfono: {{user.phone_number}}<br>Dirección: {{user.street}}, <lh9lh> {{user.city}}, {{user.country}}",
     "5": "Gracias por confirmar que has recuperado tu bici y por valorar a{{user.first_name}}. El alquiler se realizó correctamente y en los próximos 7 días hábiles se transferirá el dinero a la cuenta bancaria que proporcionaste. <br><br>En caso de que tengas alguna otra pregunta o comentario, nos encantaría recibirlos en <a mailto:=\"hello@listnride.com\">hello@listnride.com </a>",
     "8": "Rechazó la solicitud. Dígale al ciclista por qué no puede alquilarle la bici.",
@@ -498,15 +570,25 @@
     "signing-up-accept-tac": "Al suscribirme, acepto la",
     "errors": {
       "password-length": "La contraseña debe tener entre 6 y 30 caracteres",
+      "password-length-xs": "6-30 caracteres",
       "password-missing": "Introduce una contraseña",
+      "password-missing-xs": "Requiere contraseña",
       "valid-email": "Introduce una dirección de correo electrónico válida",
+      "valid-email-xs": "Correo electrónico inválido",
       "empty-email": "Introduce una dirección de correo electrónico",
+      "empty-email-xs": "Correo electrónico requerido",
       "empty-last-name": "Introduce tu apellido",
+      "empty-last-name-xs": "Introduce tu apellido",
       "empty-first-name": "Introduce tu nombre",
+      "empty-first-name-xs": "Introduce tu nombre",
       "max-size-last-name": "El apellido no debe exceder los 30 caracteres",
+      "max-size-last-name-xs": "Supera 30 caracteres",
       "max-size-first-name": "El nombre no debe exceder los 20 caracteres",
+      "max-size-first-name-xs": "Supera 30 caracteres",
       "empty-company-name": "Introduce el nombre de tu empresa",
-      "min-size-company-name": "El nombre de la empresa no debe exceder los 20 caracteres"
+      "empty-company-name-xs": "Empresa requerida",
+      "min-size-company-name": "El nombre de la empresa no debe exceder los 20 caracteres",
+      "min-size-company-name-xs": "Por lo menos 3 caracteres"
     }
   },
   "home": {
@@ -518,7 +600,7 @@
     "featured-tiles-subheader": "Nos asociamos con marcas innovadoras, escribimos sobre novedades interesantes y participamos en eventos especiales.",
     "featured-cities-header": "Pedaleando por la jungla urbana",
     "featured-cities-subheader": "El servicio de alquiler de bicis de listnride está disponible cada vez en más ciudades de todo el mundo. Echa un vistazo a algunos consejos de los expertos aquí:",
-    "list-a-bike-header": "¿Está harta tu bici de pasarse el día tirado en un rincón?",
+    "list-a-bike-header": "¿Tienes una buena bici y quieres que la gente la vea?",
     "list-a-bike-subheader": "Registra tu bici para alquilarla, conoce gente nueva y gana dinero extra.",
     "meta-title": "listnride - La comunidad para compartir bicis",
     "meta-description": "Alquila la bici perfecta en la comunidad de listnride. Encuentra la que se adapte a tu estilo y necesidades."
@@ -875,7 +957,6 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
   "seo": {
-    "cities-title": "Planning to Travel? Check out more cities:",
     "header": "Rent the best bikes in",
     "rent-the-best": "Rent the best",
     "bikes": "bikes",
@@ -888,5 +969,15 @@
     "kids": "kids bikes",
     "electro": "e-bikes",
     "special": "special bikes"
+  },
+  "availability": {
+    "availability": "Disponibilidad",
+    "modal-title": "When is your bike not available?",
+    "start-from": "Starting from",
+    "end-at": "Hasta",
+    "add-another-date": "Añadir otra fecha",
+    "submit-btn": "Ok",
+    "submit-btn-save": "Guardar",
+    "choose-range": "Elige tu intervalo de fechas"
   }
 }

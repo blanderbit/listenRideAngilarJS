@@ -28,6 +28,10 @@
     "heidelberg": "Heidelberg",
     "marl": "Marl",
     "frankfurt": "Frankfurt",
+    "usedom": "Usedom",
+    "lanzarote": "Lanzarote",
+    "mallorca": "Mallorca",
+    "sylt": "Sylt",
     "per": "per",
     "hour": "hour",
     "hours": "hours",
@@ -145,7 +149,7 @@
       },
       "velothon-bikerental": {
         "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
-        "meta-description": "Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!"
+        "meta-description": "Take part in the Velothon Berlin 2018! Rent a road bike from the listnride bike sharing community and join in on the fun!"
       },
       "constance-spin": {
         "meta-title": "Rent the perfect road bike during Eurobike",
@@ -224,6 +228,10 @@
       "moeve": {
         "meta-title": "Rent and test Moeve bikes in Munich and Amsterdam",
         "meta-descr": "The bike with the unique drive system - Cyfly by Moeve."
+      },
+      "rethink": {
+        "meta-title": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden",
+        "meta-descr": "Your rethink e-bike. Clear. Robust. Distinct Character."
       }
     },
     "about-us": {
@@ -271,6 +279,72 @@
       "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform."
     }
   },
+  "booking": {
+    "shopping": "Secure Shopping",
+    "pay-secure": "Pay secure with",
+    "agree-terms": "With 'Request Bike' you agree to the",
+    "agree-terms-link": "listnride terms",
+    "footer": {
+      "questions": "Do you have questions about booking a bike?",
+      "call-us": "Call us +49 (0)30-120870330, monday to friday 9-18pm. ",
+      "email-us": "Or write us an email",
+      "support": "listnride Support"
+    },
+    "sign-in": {
+      "tab": "1. Sign In",
+      "new": "New at listnride?",
+      "login": "Login at listnride",
+      "register-facebook": "Register with Facebook",
+      "login-facebook": "Login with Facebook",
+      "already-member": "Already a member?",
+      "register": "Register",
+      "not-member": "No member yet?"
+    },
+    "details": {
+      "tab": "2. Personal Details",
+      "invoice-address": "Invoice Address",
+      "subtitle": "Here is a subline regarding your contact information.",
+      "verification": "Verification",
+      "send-sms": "We'll send you one time sms to your phone.",
+      "check-phone": "Please check your phone.",
+      "send-code": "Send Code",
+      "confirm-code": "Confirmation code",
+      "enter-code": "Enter the pin that we just sent to your phone",
+      "success-code": "Great. You are set.",
+      "fail-code": "The code you entered is not correct. Try again or resend the SMS",
+      "resend": "Resend"
+    },
+    "payment": {
+      "tab": "3. Payment Method",
+      "select-method": "Select your Payment Method",
+      "subtitle": "Please select your favorite payment method. We only charge you after the lister accepted your request.",
+      "credit-card": "Credit Card",
+      "card-name": "Name on Card",
+      "invalid-name": "Please provide valid name",
+      "card-number": "Card Number",
+      "invalid-card": "Please provide a valid Card Number",
+      "invalid-card-number": "Card Number not valid",
+      "exp-month": "Exp. month",
+      "invalid-month": "Month not valid",
+      "invalid-year": "Year not valid",
+      "invalid-date": "Date not valid",
+      "exp-year": "Exp. year",
+      "exp-date": "Exp. date",
+      "invalid-cvc": "CVC not valid",
+      "cvc": "CVC Number",
+      "pay-paypal": "Pay with Paypal"
+    },
+    "overview": {
+      "tab": "4. Overview",
+      "bike-rental": "Your bike rental",
+      "size": "Size",
+      "location": "Location",
+      "invoice-address": "Invoice Address",
+      "payment": "Payment",
+      "redeem-voucher": "Redeem Voucher",
+      "add": "Add"
+    }
+  },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
     "error": "An error occured. Please make sure your internet connection works and try again.",
@@ -279,6 +353,7 @@
     "add-voucher-error": "Unfortunately, the supplied voucher is not valid.",
     "verification-email-sent": "An email with a confirmation link was sent to your email address. This may take a few minutes, if you didn't receive anything also have a look in your spam folder.",
     "could-not-sign-up": "Could not sign up. It seems the email address provided is already in use.",
+    "successfully-sign-up": "You have successfully signed up. Welcome!",
     "successfully-logged-in": "Successfully logged in. Welcome back!",
     "successfully-logged-out": "You're logged out.",
     "could-not-log-in": "Could not log in. Please make sure you're signed up already and your credentials are valid.",
@@ -291,7 +366,9 @@
     "enter-email": "Please enter your email",
     "duplicate-start": "Duplication process started",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
-    "bike-deleted": "Bike successfully deleted"
+    "bike-deleted": "Bike successfully deleted",
+    "range-success-delete": "Availability range successfully deleted",
+    "availability-success-saved": "Availability successfully saved"
   },
   "settings": {
     "settings": "Settings",
@@ -452,7 +529,7 @@
     "confirm_return": "Confirm Return"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{timespan}}. Agree on further details using the chat.",
+    "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{timespan}}. Agree on further details using the chat.",
     "3": "You've accepted the request. The bike is now booked and you'll rent it out from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Phone: {{user.phone_number}} <br>Address: {{user.street}}, {{user.zip}} {{user.city}}, {{user.country}}",
     "5": "Thanks for confirming retrieval of your bike and rating {{user.first_name}}. The rental was successful and the money will get transferred to the bank account you provided during the next 7 working days.<br><br>In case of any further questions or feedback, we’d love to receive them under <a mailto:\"hello@listnride.com\">hello@listnride.com</a>",
     "8": "You rejected the request. Please tell the rider why you can't rent him the bike.",
@@ -498,15 +575,25 @@
     "signing-up-accept-tac": "By signing up I accept the",
     "errors": {
       "password-length": "Password should be 6-30 characters",
+      "password-length-xs": "6-30 characters",
       "password-missing": "Please provide a password",
+      "password-missing-xs": "Password required",
       "valid-email": "Please enter a valid email address",
+      "valid-email-xs": "Invalid email",
       "empty-email": "Please enter your email address",
+      "empty-email-xs": "Email required",
       "empty-last-name": "Please enter your last name",
+      "empty-last-name-xs": "Last name required",
       "empty-first-name": "Please enter your first name",
+      "empty-first-name-xs": "First name required",
       "max-size-last-name": "Last name shouldn't exceed 30 characters",
-      "max-size-first-name": "First name shouldn't be longer than 20 characters",
+      "max-size-last-name-xs": "Exceeds 30 characters",
+      "max-size-first-name": "First name shouldn't exceed 20 characters",
+      "max-size-first-name-xs": "Exceeds 20 characters",
       "empty-company-name": "Please enter your company name",
-      "min-size-company-name": "Company name should be longer than 2 characters "
+      "empty-company-name-xs": "Company name required",
+      "min-size-company-name": "Company name should be longer than 2 characters ",
+      "min-size-company-name-xs": "Alteast 3 characters "
     }
   },
   "home": {
@@ -516,8 +603,8 @@
     "featured-bikes-subheader": "Whether it’s road bikes, mountain bikes, cargo bikes, city bikes or e-bikes, you can rent them all. These are the current favorite rental bikes of the community.",
     "featured-tiles-header": "Get inspired",
     "featured-tiles-subheader": "We partner up with innovative brands, write about interesting developments and take part in special events.",
-    "featured-cities-header": "Pedaling through the urban jungle",
-    "featured-cities-subheader": "listnride’s bike rental service is becoming available in more and more cities around the world. Check out some insiders’ tips here:",
+    "featured-cities-header": "With listnride you are never without your perfect bike ",
+    "featured-cities-subheader": "listnride’s bike rental service is becoming available in more cities and holiday regions around Europe. Here are some tips for you: ",
     "list-a-bike-header": "Got a nice bike and want people to use it?",
     "list-a-bike-subheader": "List your bike for rent, meet fun new people and earn some extra cash.",
     "meta-title": "listnride - The bike sharing community",
@@ -572,10 +659,10 @@
       "brand": "Brand",
       "name": "Name",
       "description": "Description (min. 100 characters)",
-      "min-length-warning": "Length should be at least 100 characters",
+      "min-length-warning": "At least 100 characters",
       "size": "Rider Height",
       "frame-size": "Frame size",
-      "bicycle-number": "Bicycle No.",
+      "bicycle-number": "Bicycle number",
       "frame-number": "Frame number",
       "custom-fields": "Additional fields",
       "notes": "Notes",
@@ -670,7 +757,7 @@
         "indoor": "Indoor"
       },
       "3": {
-        "tracking": "Tracking",
+        "tracking": "Trekking",
         "enduro": "Enduro",
         "freeride": "Freeride",
         "cross-country": "Cross Country",
@@ -876,7 +963,6 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
   "seo": {
-    "cities-title": "Planning to Travel? Check out more cities:",
     "header": "Rent the best bikes in",
     "rent-the-best": "Rent the best",
     "bikes": "bikes",
@@ -889,5 +975,15 @@
     "kids": "kids bikes",
     "electro": "electric bikes",
     "special": "special bikes"
+  },
+  "availability": {
+    "availability": "Availability",
+    "modal-title": "When is your bike not available?",
+    "start-from": "Starting from",
+    "end-at": "Ending at",
+    "add-another-date": "Add another date",
+    "submit-btn": "Ok",
+    "submit-btn-save": "Save",
+    "choose-range": "Choose your date range"
   }
 }
