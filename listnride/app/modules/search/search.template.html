@@ -1,27 +1,10 @@
 <div flex layout="row" layout-xs="column" layout-fill>
 
   <div flex-xs="100" flex-gt-xs="70" flex-order-xs="2" layout="column">
-    <div layout="column" layout-padding>
+    <div layout="column">
+      <filter bikes="search.bikes" filtered-bikes="search.filteredBikes" initial-values="search.initialValues"></filter>
 
-      <form layout="row">
-        <!-- <autocomplete autocomplete-id="search" flex flex-gt-xs="70" layout="column" location="search.location" label-id="City" placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}" place-changed="search.placeChanged(place)"></autocomplete>
-
-        <md-input-container layout="row" hide-xs flex="30">
-          <md-button flex class="md-raised md-primary lnr-btn-inline" id="submit" ng-click="search.onButtonClick()">{{ 'shared.search' | translate }}</md-button>
-        </md-input-container> -->
-
-        <!-- Duplicated size filter for mobile (needs a better solution) -->
-        <md-input-container layout="column" hide-gt-xs class="lnr-margin-left" flex="30">
-          <label>Size</label>
-            <md-select flex ng-model="search.sizeFilter.size" ng-change="search.onSizeChange()">
-              <md-option ng-repeat="option in search.sizeOptions" value="{{option.value}}">
-                {{option.label}}
-              </md-option>
-            </md-select>
-        </md-input-container>
-      </form>
-
-      <div layout="row" layout-align="space-between center">  
+<!--       <div layout="row" layout-align="space-between center">  
         <md-input-container class="lnr-filters" flex flex-gt-xs="70" layout="column">
           <div><label>Type</label></div>
           <div flex layout="row" layout-align="space-between center">
@@ -61,8 +44,8 @@
               </md-option>
             </md-select> 
         </md-input-container>
-      </div>
-      <div layout="row" layout-align="space-between center">
+      </div> -->
+      <!-- <div layout="row" layout-align="space-between center">
         <div class="column">
           <input-range
             data="search.date"
@@ -71,7 +54,7 @@
           </input-range>
           <div class="lnr-right"><a class="lnr-link" ng-click="search.clearDate()">{{ 'shared.clear' | translate }}</a></div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <md-divider></md-divider>
