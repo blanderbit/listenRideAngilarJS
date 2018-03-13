@@ -611,7 +611,8 @@
     "all-sizes": "Tutte le misure",
     "bikes-in": "Biciclette a",
     "meta-title": "Noleggia la bicicletta perfetta a {{location}}.",
-    "meta-description": "listnride offre un'ampia varietà di biciclette eccellenti per il noleggio a {{location}}."
+    "meta-description": "listnride offre un'ampia varietà di biciclette eccellenti per il noleggio a {{location}}.",
+    "number-of-bikes": "Number of bikes"
   },
   "calendar": {
     "invalid-date": "Le date non sono valide",

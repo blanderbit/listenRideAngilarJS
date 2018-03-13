@@ -8,6 +8,16 @@
 // md-color-*
 */
 
+/**
+ * CONTENTS
+ *
+ * GENERAL..............Common styles
+ * FRAMEWORK............Something we do with default material styles
+ * LNR_CLASSES..........Our custom atomic styles
+ * SVG..................Set proportions to svg
+ *
+ */
+
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL
 /*-----------------------------------------------------------------------------------*/
@@ -272,7 +282,7 @@ md-tooltip .md-content {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/* LNR CLASSES
+/* LNR_CLASSES
 /*-----------------------------------------------------------------------------------*/
 
 .lnr-black {
@@ -2341,6 +2351,12 @@ md-icon[md-font-icon].fa--lh20 {
 }
 
 /* input-range */
+
+.availability__list input-range md-input-container {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
 @media (max-width: 599px) {
   input-range {
     margin-bottom: 15px;

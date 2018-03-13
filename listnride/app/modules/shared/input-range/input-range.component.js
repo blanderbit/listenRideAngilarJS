@@ -14,7 +14,7 @@ angular
         requests: '<?',
         onChange: '<?',
         onClear: '<?',
-        clearCalendarData: '='
+        clearCalendarData: '=?'
       },
       controller: ['$scope', '$translate', inputRangeController],
       link: function ($scope, element, attrs) {

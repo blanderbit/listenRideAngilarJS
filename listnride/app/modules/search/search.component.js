@@ -200,6 +200,7 @@ angular.module('search',[]).component('search', {
       }
 
       function clearDate() {
+        if (!search.date.start_date) return;
         search.date = {
           'start_date' : null,
           'duration' : null

@@ -617,7 +617,8 @@
     "all-sizes": "Alle Größen",
     "bikes-in": "Fahrräder in",
     "meta-title": "Miete das perfekte Rad in {{location}}.",
-    "meta-description": "listnride bietet viele verschiedene Räder in {{location}} zur Miete an."
+    "meta-description": "listnride bietet viele verschiedene Räder in {{location}} zur Miete an.",
+    "number-of-bikes": "Number of bikes"
   },
   "calendar": {
     "invalid-date": "Datums angabe nicht Korrekt",
