@@ -37,11 +37,11 @@ var env = environments[argvEnv];
 
 // linter and code checking
 gulp.task('lint', lint);
-gulp.task('disable-https', disableHttps);
+
 // html cache related tasks
-gulp.task('inject-templates-modules', injectTemplatesModules);
-gulp.task('cache-templates-modules', cacheTemplatesModules);
-gulp.task('cache-templates-services', cacheTemplatesServices);
+gulp.task('inject-templates', injectTemplates);
+gulp.task('cache-module-templates', cacheModuleTemplates);
+gulp.task('cache-service-templates', cacheServiceTemplates);
 
 // translations, fonts and app constant
 gulp.task('copy-downloadables', copyDownloadables);
@@ -95,18 +95,15 @@ gulp.task('deploy-lnr-shop-solution', deployLnrShopSolution);
 gulp.task('clean-lnr-shop', cleanLnrShop);
 
 // gulp major tasks
-gulp.task('local', local);
+gulp.task('disable-https', disableHttps);
 gulp.task('default', ['local']);
 gulp.task('deploy', deploy);
+gulp.task('local', local);
 
-function disableHttps() {
-    if ('staging' === processEnv || 'production' === processEnv) { return; }
-    return gulp.src(path.middleware.file)
-        .pipe(remove({ middleware: true }))
-        .pipe(gulp.dest(path.middleware.root));
-}
-
-// create two new variables for translation provider
+/**
+ * create two new variables for translation provider
+ * @returns {gulp} for chaining
+ */
 function translationConstants() {
     return ngConstant({
             wrap: false,
@@ -117,7 +114,6 @@ function translationConstants() {
         .pipe(rename(path.app.constant))
         .pipe(gulp.dest(path.app.root));
 }
-
 /**
  * helper method for lnrPrefixCss
  */
@@ -173,7 +169,7 @@ function lint() {
  * modules.tpl.min.js and services.tpl.min.js reference in index
  * @returns {gulp} for chaining
  */
-function injectTemplatesModules() {
+function injectTemplates() {
     // production
     gulp.src(path.dist.index)
         .pipe(inject(gulp.src(path.dist.templatesCache, { read: false }), { relative: true, removeTags: true }))
@@ -185,10 +181,10 @@ function injectTemplatesModules() {
 }
 /**
  * create templates.js file to serve all html files
- * js cache of html from module/ folder
+ * js cache of html from module folder
  * @returns {gulp} for chaining
  */
-function cacheTemplatesModules() {
+function cacheModuleTemplates() {
     return gulp.src(path.app.templates)
         .pipe(templateCache('modules.tpl.min.js', {
             root: 'app/modules/',
@@ -201,7 +197,7 @@ function cacheTemplatesModules() {
  * js cache of html from services folder
  * @returns {gulp} for chaining
  */
-function cacheTemplatesServices() {
+function cacheServiceTemplates() {
     return gulp.src(path.app.serviceTemplate)
         .pipe(templateCache('services.tpl.min.js', {
             root: 'app/services/',
@@ -273,19 +269,6 @@ function scriptsShopTrim() {
         .pipe(gulp.dest(path.dist.root));
 }
 /**
- * reflect changes on dist/index
- * @param {clean~cleanCallback} cb - The callback that handles the response.
- * @returns {gulp} for chaining
- */
-function scripts(cb) {
-    return runSequence(
-        'scripts-production',
-        'scripts-shop',
-        'scripts-shop-trim',
-        cb
-    );
-}
-/**
  * concat all development js files - local
  * minify and uglify development files
  * @returns {gulp} for chaining
@@ -309,6 +292,19 @@ function scriptsMinify() {
     return gulp.src(path.dist.vendors)
         .pipe(uglify(path.dist.sourceVendors))
         .pipe(gulp.dest(path.dist.root));
+}
+/**
+ * reflect changes on dist/index
+ * @param {clean~cleanCallback} cb - The callback that handles the response.
+ * @returns {gulp} for chaining
+ */
+function scripts(cb) {
+    return runSequence(
+        'scripts-production',
+        'scripts-shop',
+        'scripts-shop-trim',
+        cb
+    );
 }
 function htmlMinify() {
     // production
@@ -340,6 +336,18 @@ function baseTag() {
             'base': path.app.base
         }))
         .pipe(gulp.dest(path.dist.root));
+}
+/**
+ * disable https for local and review apps 
+ * @returns {gulp} for chaining
+ */
+function disableHttps() {
+    // do not disable https for staging and production
+    if ('staging' === processEnv || 'production' === processEnv) { return; }
+    // remove enableHttps method from middleware
+    return gulp.src(path.middleware.file)
+        .pipe(remove({ middleware: true }))
+        .pipe(gulp.dest(path.middleware.root));
 }
 /**
  * copy i18n translations to dist folder
@@ -387,7 +395,7 @@ function imagesPng() {
             progressive: true,
             plugins: [imagemin.optipng(env.imageOptions)]
         }))
-        .pipe(gulp.dest(path.dist.images))
+        .pipe(gulp.dest(path.dist.images));
 }
 /**
  * optimize svg images
@@ -401,7 +409,7 @@ function imagesSvg() {
             interlaced: true,
             plugins: [imagemin.svgo()]
         }))
-        .pipe(gulp.dest(path.dist.icons))
+        .pipe(gulp.dest(path.dist.icons));
 }
 /**
  * clean dist folder
@@ -659,13 +667,13 @@ function deploy(cb) {
         'clean',
         'constants',
         'copy-index-tmp',
-        'cache-templates-modules',
-        'cache-templates-services',
+        'cache-module-templates',
+        'cache-service-templates',
         'images',
         'copy-fonts',
         'scripts',
         'scripts-minify',
-        'inject-templates-modules',
+        'inject-templates',
         'copy-index-app',
         'copy-i18n',
         'minify-i18n',
@@ -680,4 +688,4 @@ function deploy(cb) {
         'clean-extra-local',
         'disable-https',
         cb);
-}
+}   
