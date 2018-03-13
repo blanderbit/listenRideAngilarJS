@@ -162,7 +162,7 @@ angular.module('search',[]).component('search', {
         }
 
         api.get(urlRequest).then(function(response) {
-          search.bikes = response.data;
+          search.bikes = response.data.bikes;
           search.locationBounds = response.data.location.geometry.viewport;
 
           NgMap.getMap({id: "searchMap"}).then(function(map) {
