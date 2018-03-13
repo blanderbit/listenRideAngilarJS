@@ -21,6 +21,7 @@ angular.module('search',[]).component('search', {
         search.clearDate = clearDate;
         search.onBikeHover = onBikeHover;
         search.onDateChange = onDateChange;
+        search.filteredBikes = [];
         search.initialValues = {
           amount: '',
           size: '',

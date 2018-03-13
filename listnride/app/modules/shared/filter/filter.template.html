@@ -1,7 +1,7 @@
 <div layout="row" class="lnr-filter-container" layout-margin>
 	<md-button class="md-lined">Timespan</md-button>
-	<md-select class="lnr-margin-left" ng-model="filter.size" ng-change="filter.onSizeChange()">
-    <md-option ng-repeat="option in filter.sizeOptions" value="{{option.value}}">
+	<md-select class="lnr-margin-left" ng-model="filter.currentSize" ng-change="filter.onSizeChange()">
+    <md-option ng-repeat="option in filter.sizes" value="{{option.value}}">
       {{option.label}}
     </md-option>
   </md-select>
