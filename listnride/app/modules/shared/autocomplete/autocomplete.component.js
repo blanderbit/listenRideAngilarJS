@@ -13,8 +13,8 @@ angular.module('autocomplete',[]).component('autocomplete', {
     error: '=',
     placeChanged: '&'
   },
-  controller: ['$interval', '$scope',
-    function AutocompleteController($interval, $scope) {
+  controller: ['$interval', '$scope', '$window',
+    function AutocompleteController($interval, $scope, $window) {
       var autocomplete = this;
       autocomplete.filled = false;
       autocomplete.location = "";
@@ -71,6 +71,7 @@ angular.module('autocomplete',[]).component('autocomplete', {
         autocomplete.location = "";
         autocomplete.toggleButton();
         angular.element('autocompleteSearch').focus();
+        $window.document.getElementById(autocomplete.autocompleteId).focus();
       }
     }
   ]
