@@ -5,6 +5,9 @@
       {{option.label}}
     </md-option>
   </md-select>
+  <!-- <md-menu md-position-mode="target bottom”>
+    <md-button class="md-lined" ng-click="$mdOpenMenu($event)">{{ 'search.number-of-bikes' | translate }}</md-button>
+  </md-menu> -->
 	<md-button class="md-lined">Nr Bikes</md-button>
 	<md-select class="lnr-margin-left" ng-model="filter.currentBrand" ng-change="filter.onBrandChange()">
     <md-option ng-repeat="option in filter.brands" value="{{option}}">
