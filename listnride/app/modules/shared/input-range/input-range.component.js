@@ -13,7 +13,8 @@ angular
         disabledDates: '<',
         requests: '<?',
         onChange: '<?',
-        onClear: '<?'
+        onClear: '<?',
+        clearCalendarData: '='
       },
       controller: ['$scope', '$translate', inputRangeController],
       link: function ($scope, element, attrs) {
@@ -27,13 +28,21 @@ angular
 function inputRangeController($scope, $translate) {
   var vm = this;
 
-  vm._updateData = _updateData;
-  vm._clearData = _clearData;
+  vm.updateData = updateData;
+  vm.clearData = clearData;
   vm.$postLink = postLink;
   vm.$onDestroy = onDestroy;
   vm.openCalendar = openCalendar;
+  vm.clearCalendar = clearCalendar;
   vm.isSingle = false;
   
+  // TODO: should find a method to call directive methods at outside
+  // TODO: replace watch with angualr component way
+  $scope.$watch('vm.clearCalendarData', function (newVal, oldVal) {
+    if (vm.clearCalendarData) vm.clearCalendar();
+    vm.clearCalendarData = false;
+  }, false);
+
   ////////////
 
   /**
@@ -42,7 +51,7 @@ function inputRangeController($scope, $translate) {
   * @param {Object} date1 Date Object with first chosen date
   * @param {Object} date2 Date Object with second chosen date
   */
-  function _updateData(date1, date2) {
+  function updateData(date1, date2) {
     date1 = moment(date1);
     // if user doesn't pick end date - duration will be 0
     date2 = date2 ? moment(date2) : date1;
@@ -59,9 +68,10 @@ function inputRangeController($scope, $translate) {
 
     if (typeof vm.onChange == 'function') vm.onChange();
     $scope.$apply();
-  }
+  };
 
-  function _clearData() {
+  function clearData() {
+    vm.clearCalendar();
     angular.extend(vm.data, {
       'start_date': null,
       'duration': null
@@ -69,7 +79,7 @@ function inputRangeController($scope, $translate) {
 
     if (typeof vm.onClear == 'function') vm.onClear();
     $scope.$apply();
-  }
+  };
 
   function postLink() {
     vm.isSingle = $scope.isSingle;
@@ -88,17 +98,15 @@ function inputRangeController($scope, $translate) {
       lnrSingleMonthMinWidth: 659, // 320px - min-width for 1 calendar part + gap
       extraClass: 'date-picker-wrapper--ngDialog date-picker-wrapper--two-months'
     }).bind('datepicker-change', function (event, obj) {
-      vm._updateData(obj.date1, obj.date2);
+      vm.updateData(obj.date1, obj.date2);
     }).bind('datepicker-first-date-selected', function (event, obj) {
-      vm._clearData();
-      changeRange();
+      vm.clearData();
       setFirstDate(obj.date1);
     }).bind('datepicker-closed', function (event, obj) {
       if (obj.date1 && !obj.date2) {
         setEndDate(new Date(obj.date1));
-        vm._updateData(obj.date1, obj.date2);
+        vm.updateData(obj.date1, obj.date2);
       }
-      
     });
 
     //TODO: make services for this
@@ -134,7 +142,7 @@ function inputRangeController($scope, $translate) {
         $scope.el.dateRange
           .setDateRange(startDate._d, lastDate._d, true);
       } else {
-        $scope.el.dateRange.clear();
+        vm.clearCalendar();
       }
     }
 
@@ -169,6 +177,10 @@ function inputRangeController($scope, $translate) {
     changeRange();
   };
 
+  function clearCalendar() {
+    $scope.el.dateRange.clear();
+  }
+
   function onDestroy() {
     $scope.el.dateRange.destroy();
   };
@@ -176,5 +188,5 @@ function inputRangeController($scope, $translate) {
   function openCalendar($event) {
     $event.stopPropagation();
     $scope.el.dateRange.open();
-  }
+  };
 }
