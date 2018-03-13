@@ -64,8 +64,12 @@
       </div>
       <div layout="row" layout-align="space-between center">
         <div class="column">
-          <input-range data="search.date" lnr-single-input></input-range>
-          <div class="lnr-right"><a class="lnr-link" ng-click="search.clearData()">Clear</a></div>
+          <input-range
+            data="search.date"
+            lnr-single-input
+            on-change="search.onDateChange">
+          </input-range>
+          <div class="lnr-right"><a class="lnr-link" ng-click="search.clearDate()">{{ 'shared.clear' | translate }}</a></div>
         </div>
       </div>
     </div>
