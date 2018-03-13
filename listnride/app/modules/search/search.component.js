@@ -47,6 +47,7 @@ angular.module('search',[]).component('search', {
           lng: -74,
           zoom: 5
         };
+        search.isClearDataRange = false;
         
         // invocations
         populateBikes(search.location);
@@ -193,9 +194,10 @@ angular.module('search',[]).component('search', {
 
       function clearDate() {
         search.date = {
-          start_date: null,
-          duration: null
-        };
+          'start_date' : null,
+          'duration' : null
+        }
+        search.isClearDataRange = true;
         search.onDateChange();
       }
       
