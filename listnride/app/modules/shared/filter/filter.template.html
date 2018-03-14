@@ -1,11 +1,11 @@
 <div layout="row" class="lnr-filter-container" layout-margin>
-	<md-button class="md-lined">Timespan</md-button>
+  <md-button class="md-lined">Timespan</md-button>
   <md-menu md-position-mode="target bottom">
     <md-button class="md-lined lnr-no-margin" ng-click="$mdOpenMenu($event)">{{ 'search.number-of-bikes' | translate }}</md-button>
     <md-menu-content width="4">
-       <div class="lnr-padding">
-         <bike-count-filter></bike-count-filter>
-       </div>
+      <div class="lnr-padding">
+        <bike-count-filter></bike-count-filter>
+      </div>
     </md-menu-content>
   </md-menu>
 	<md-select class="lnr-margin-left" ng-model="filter.currentBrand" ng-change="filter.onBrandChange()">
