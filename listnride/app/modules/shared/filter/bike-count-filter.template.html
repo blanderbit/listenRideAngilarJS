@@ -14,9 +14,9 @@
 
 <md-select
   md-container-class="lnr-select-in-modal"
-  ng-model="bikeCount.parent.currentSize"
-  ng-change="bikeCount.parent.onSizeChange()">
-  <md-option ng-repeat="option in bikeCount.parent.sizes" value="{{option.value}}">
+  ng-model="bikeCountFilter.parent.currentSize"
+  ng-change="bikeCountFilter.parent.onSizeChange()">
+  <md-option ng-repeat="option in bikeCountFilter.parent.sizes" value="{{option.value}}">
     {{option.label}}
   </md-option>
 </md-select>
