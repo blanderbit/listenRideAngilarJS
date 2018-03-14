@@ -10,6 +10,7 @@ angular.module('bikeSorter', [])
     },
     controller: ['orderByFilter', function BikeSorter(orderBy) {
       var bikeSorter = this;
+      bikeSorter.locationBreakpoints = [0.05, 0.1, 0.5];
 
       function deg2rad(deg) {
         return deg * (Math.PI / 180);
@@ -36,10 +37,21 @@ angular.module('bikeSorter', [])
             bikeSorter.bikes[index].latLngDiff = d;
           }
         }
-        bikeSorter.bikes = orderBy(bikeSorter.bikes, 'latLngDiff', false);
-        console.log("loc sorted bikes: ", bikeSorter.bikes);
-      };
 
+        bikeSorter.bikes = orderBy(bikeSorter.bikes, 'latLngDiff', false);
+        // console.log(bikeSorter.bikes);
+        var filterBikes = [];
+
+        for (var brk in bikeSorter.locationBreakpoints) {
+          var filterBikesBrk = [];
+          for (var bike in bikeSorter.bikes) {
+            if (bikeSorter.bikes[bike].latLngDiff < bikeSorter.locationBreakpoints[brk]) {
+              filterBikesBrk.push(bikeSorter.bikes.splice(bike, 1));
+            }
+          }
+          filterBikes.push(filterBikesBrk);
+        }
+      };
       bikeSorter.priceSorter = function (ascending) {
         bikeSorter.bikes = orderBy(bikeSorter.bikes, 'price_from', ascending);
       };
