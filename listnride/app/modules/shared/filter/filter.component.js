@@ -44,7 +44,6 @@ angular.module('filter',[])
         }
 
         filter.clearFilters = function() {
-          filter.currentSize = bikeOptions.sizeOptionsForSearch()[0];
           filter.currentBrand = filter.brands[0];
           applyFilters();
         }
