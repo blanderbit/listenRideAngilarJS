@@ -27,7 +27,7 @@ angular.module('search',[]).component('search', {
           size: '',
           categories: {},
           brand: ''
-        }
+        };
         
         // get intial filter values from url
         search.initialValues.size = $stateParams.size;
@@ -175,7 +175,14 @@ angular.module('search',[]).component('search', {
         }
 
         api.get(urlRequest).then(function(response) {
+
           search.bikes = response.data.bikes;
+          search.categorizedFilteredBikes = [];
+
+          search.titles = [];
+
+          search.categorizedFilteredBikes.push(search.bikes);
+          console.log(search.categorizedFilteredBikes);
           search.latLng = response.data.location.geometry.location;
           search.locationBounds = response.data.location.geometry.viewport;
 
