@@ -1,0 +1,22 @@
+<div class="row lnr-center" layout-align="center center">
+  <md-button md-ink-ripple md-prevent-menu-close="md-prevent-menu-close" class="md-icon-button md-warn" ng-click="settings.removeBike()">
+    <md-icon md-font-icon="fa-times" class="fa fa--lh20"></md-icon>
+  </md-button>
+  <span>1 Bike</span>
+  <md-button md-ink-ripple md-prevent-menu-close="md-prevent-menu-close" class="md-icon-button" ng-click="settings.addBike()">
+    <md-icon md-font-icon="fa-plus" class="fa fa--lh20"></md-icon>
+  </md-button>
+</div>
+
+<div class="spacer-xs"></div>
+<md-divider></md-divider>
+<div class="spacer-xs"></div>
+
+<md-select
+  md-container-class="lnr-select-in-modal"
+  ng-model="bikeCount.parent.currentSize"
+  ng-change="bikeCount.parent.onSizeChange()">
+  <md-option ng-repeat="option in bikeCount.parent.sizes" value="{{option.value}}">
+    {{option.label}}
+  </md-option>
+</md-select>
