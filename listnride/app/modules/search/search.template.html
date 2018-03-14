@@ -11,9 +11,9 @@
 
       <!-- city name for shown bikes -->
       <div layout="row" flex="500">
-        <div flex="30" id="search-header" layout-padding>
+        <!-- <div flex="30" id="search-header" layout-padding>
           <h1 class="md-headline" layout-padding>{{ 'search.bikes-in' | translate }} {{search.location | titlecase}}</h1>
-        </div>
+        </div> -->
         <span flex></span>
         <div flex="30">
           <bike-sorter bikes="search.filteredBikes" categorized-bikes="search.categorizedFilteredBikes" titles="search.titles" location="search.latLng"></bike-sorter>
@@ -39,7 +39,7 @@
       <cardgrid
         ng-repeat="filterBikes in search.categorizedFilteredBikes" 
         bikes="filterBikes.bikes"
-        title="filterBikes.title"
+        title="{{filterBikes.title}}"
         on-bike-hover="search.onBikeHover">
       </cardgrid>
       <!-- busy loader until bikes api resolves -->

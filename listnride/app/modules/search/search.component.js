@@ -181,7 +181,10 @@ angular.module('search',[]).component('search', {
 
           search.titles = [];
 
-          search.categorizedFilteredBikes.push(search.bikes);
+          search.categorizedFilteredBikes.push({
+            title: "All Bikes",
+            bikes: search.bikes
+          });
           console.log(search.categorizedFilteredBikes);
           search.latLng = response.data.location.geometry.location;
           search.locationBounds = response.data.location.geometry.viewport;
