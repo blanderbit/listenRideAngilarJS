@@ -43,11 +43,11 @@ angular.module('filter',[])
           applyFilters();
         }
 
-      filter.clearFilters = function() {
-        filter.currentSize = bikeOptions.sizeOptionsForSearch()[0];
-        filter.currentBrand = filter.brands[0];
-        applyFilters();
-      }
+        filter.clearFilters = function() {
+          filter.currentSize = bikeOptions.sizeOptionsForSearch()[0];
+          filter.currentBrand = filter.brands[0];
+          applyFilters();
+        }
 
         function initializeBrandFilter () {
           // Populate brand filter with all available brands
@@ -63,28 +63,34 @@ angular.module('filter',[])
           }
         }
 
-      function initializeSizeFilter () {
-        filter.sizes = bikeOptions.sizeOptionsForSearch();
-        $translate('search.all-sizes').then(function (translation) {
-          filter.sizes[0].label = translation;
-        });
-      }
-
-      function applyFilters () {
-        var filteredBikes = filter.initialBikes;
-        if (filter.currentBrand != filter.brands[0]) {
-          filteredBikes = filterFilter(filteredBikes, filter.currentBrand);
+        function initializeSizeFilter () {
+          filter.sizes = bikeOptions.sizeOptionsForSearch();
+          $translate('search.all-sizes').then(function (translation) {
+            filter.sizes[0].label = translation;
+          });
         }
-
+  
         function applyFilters () {
           var filteredBikes = filter.initialBikes;
-          if (filter.currentBrand != filter.brands[0]) {
-            filteredBikes = filterFilter(filteredBikes, filter.currentBrand);
-          }
-          if (filter.currentSize != filter.sizes[0]) {
-            filteredBikes = filterFilter(filteredBikes, filter.currentSize);
-          }
+          filteredBikes = filterBrands(filteredBikes);
+          filteredBikes = filterSizes(filteredBikes);
           filter.bikes = filteredBikes;
+        }
+
+        function filterBrands (bikes) {
+          if (filter.currentBrand != filter.brands[0]) {
+            return filterFilter(bikes, filter.currentBrand);
+          } else {
+            return bikes;
+          }
+        }
+  
+        function filterSizes (bikes) {
+          if (filter.currentSize != filter.sizes[0]) {
+            return filterFilter(bikes, filter.currentSize);
+          } else {
+            return bikes;
+          }
         }
       }
     ]
