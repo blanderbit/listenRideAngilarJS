@@ -3,18 +3,6 @@
   <div flex-xs="100" flex-gt-xs="70" flex-order-xs="2" layout="column">
     <div layout="column">
       <filter bikes="search.filteredBikes" initial-bikes="search.bikes" initial-values="search.initialValues" update-state="search.updateState"></filter>
-
-      <!-- <div layout=“row” layout-align="start start">
-        <div class="column lnr-mv8">
-          <input-range
-            data="search.date"
-            lnr-single-input
-            clear-calendar-data="search.isClearDataRange"
-            on-change="search.onDateChange">
-          </input-range>
-          <div class="lnr-right"><a class="lnr-link" ng-click="search.clearDate()">{{ 'shared.clear' | translate }}</a></div>
-        </div>
-      </div> -->
     </div>
 
     <md-divider></md-divider>
@@ -22,8 +10,14 @@
     <md-content flex layout="column">
 
       <!-- city name for shown bikes -->
-      <div id="search-header" layout-padding>
-        <h1 class="md-headline" layout-padding>{{ 'search.bikes-in' | translate }} {{search.location}}</h1>
+      <div layout="row" flex="100">
+        <div flex="30" id="search-header" layout-padding>
+          <h1 class="md-headline" layout-padding>{{ 'search.bikes-in' | translate }} {{search.location | titlecase}}</h1>
+        </div>
+        <span flex></span>
+        <div flex="30">
+          <bike-sorter bikes="search.filteredBikes" location="search.latLng"></bike-sorter>
+        </div>
       </div>
 
       <!-- no bikes found placeholder -->

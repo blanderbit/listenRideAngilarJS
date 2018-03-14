@@ -176,6 +176,7 @@ angular.module('search',[]).component('search', {
 
         api.get(urlRequest).then(function(response) {
           search.bikes = response.data.bikes;
+          search.latLng = response.data.location.geometry.location;
           search.locationBounds = response.data.location.geometry.viewport;
 
           NgMap.getMap({id: "searchMap"}).then(function(map) {
