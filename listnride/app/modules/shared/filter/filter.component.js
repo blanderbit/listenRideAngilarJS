@@ -71,13 +71,25 @@ angular.module('filter',[]).component('filter', {
 
       function applyFilters () {
         var filteredBikes = filter.initialBikes;
-        if (filter.currentBrand != filter.brands[0]) {
-          filteredBikes = filterFilter(filteredBikes, filter.currentBrand);
-        }
-        if (filter.currentSize != filter.sizes[0]) {
-          filteredBikes = filterFilter(filteredBikes, filter.currentSize);
-        }
+        filteredBikes = filterBrands(filteredBikes);
+        filteredBikes = filterSizes(filteredBikes);
         filter.bikes = filteredBikes;
+      }
+
+      function filterBrands (bikes) {
+        if (filter.currentBrand != filter.brands[0]) {
+          return filterFilter(bikes, filter.currentBrand);
+        } else {
+          return bikes;
+        }
+      }
+
+      function filterSizes (bikes) {
+        if (filter.currentSize != filter.sizes[0]) {
+          return filterFilter(bikes, filter.currentSize);
+        } else {
+          return bikes;
+        }
       }
     }
   ]
