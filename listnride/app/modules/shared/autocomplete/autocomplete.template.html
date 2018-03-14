@@ -1,4 +1,4 @@
-<md-input-container ng-if="autocomplete.labelId !== ''">
+<md-input-container ng-if="autocomplete.labelId !== ''" ng-hide="autocomplete.hideInput()">
   <label>{{ autocomplete.labelId }}</label>
   <div layout flex>
     <input ng-if="autocomplete.required" ng-attr-id="{{autocomplete.autocompleteId}}"

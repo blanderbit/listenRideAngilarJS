@@ -1,7 +1,7 @@
 <md-toolbar class="lnr-header md-accent" layout="row" layout-align="left center">
 
   <div class="md-toolbar-tools">
-    <md-button class="lnr-header-logo" ui-sref="home" md-no-ink hide-xs>
+    <md-button class="lnr-header-logo" ui-sref="home" md-no-ink ng-hide="!header.hideLogo()">
       <md-icon class="md-color-white" md-svg-src="app/assets/ui_icons/lnr_logo_bold.svg"></md-icon>
     </md-button>
     <div style="width: 30px;" hide-xs></div>
@@ -15,12 +15,24 @@
       required="false"
       placeholder-id="Search for e.g. Berlin, Munich"
       flex="25"
-      flex-xs="80">
+      flex-xs="80"
+      ng-hide="header.hideSearch()">
     </autocomplete>
   
     <span flex></span>
+
+    <div hide show-xs ng-if="header.hideSearch()">
+      <md-button ng-click="header.toggleSearch()" md-no-ink class="mobile">
+        <md-icon class="lnr-icn-sms md-color-white" md-svg-src="app/assets/ui_icons/search.svg"></md-icon>
+      </md-button>
+    </div>
+    <div hide show-xs ng-if="!header.hideSearch()">
+      <md-button ng-click="header.toggleSearch()" md-no-ink class="mobile">
+        <md-icon class="lnr-icn-sm md-color-white" md-svg-src="app/assets/ui_icons/icn_close_24.svg"></md-icon>
+      </md-button>
+    </div>
     <div hide show-xs>
-      <md-button ng-click="header.toggleSidebar()" md-no-ink>
+      <md-button ng-click="header.toggleSidebar()" md-no-ink class="mobile">
         <md-icon class="lnr-icn-sm md-color-white" md-svg-src="app/assets/ui_icons/icn_menu.svg"></md-icon>
       </md-button>
     </div>

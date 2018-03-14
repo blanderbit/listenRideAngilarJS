@@ -53,6 +53,10 @@ strong {
   margin: 0 auto;
 }
 
+.mobile {
+  padding: 0 !important;
+}
+
 /* This has to be set for all full-height layouts */
 
 ui-view {
@@ -497,6 +501,11 @@ md-tooltip .md-content {
 .lnr-icn-sm {
   width: 24px;
   height: 24px;
+}
+
+.lnr-icn-sms {
+  width: 18px;
+  height: 18px;
 }
 
 .lnr-icn-md {

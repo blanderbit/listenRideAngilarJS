@@ -69,6 +69,7 @@ angular.module('listnride', [
   'capeArgus',
   'filter',
   'bikeSorter',
+  'cardgrid',
   //endRemoveIf(shop)
   /* app_extras_end */
 
