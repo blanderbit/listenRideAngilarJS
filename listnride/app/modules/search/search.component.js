@@ -24,13 +24,14 @@ angular.module('search',[]).component('search', {
         search.filteredBikes = [];
         search.initialValues = {
           amount: '',
-          size: '',
+          // default size is null, because we can't use -1, it's unisize
+          sizes: [],
           categories: {},
           brand: ''
         }
         
-        // get intial filter values from url
-        search.initialValues.size = $stateParams.size;
+        // get initial filter values from url
+        search.initialValues.sizes = $stateParams.sizes.split(',');
         search.initialValues.brand = $stateParams.brand;
         search.initialValues.categories = {
           allterrain: $stateParams.allterrain === "true",
@@ -131,7 +132,7 @@ angular.module('search',[]).component('search', {
           // current state
           $state.current,
           // state params
-          { size: search.sizeFilter.size },
+          { sizes: search.sizeFilter.sizes },
           // route options
           // do not remove inherit prop, else map tiles stop working
           { notify: false }

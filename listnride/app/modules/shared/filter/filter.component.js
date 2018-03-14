@@ -18,15 +18,19 @@ angular.module('filter',[])
       function FilterController($translate, $state, bikeOptions, filterFilter) {
         var filter = this;
 
+        // methods
+        filter.increaseBikesCount = increaseBikesCount;
+        filter.decreaseBikesCount = decreaseBikesCount;
+
+        // variables
         filter.brands = ["All Brands"];
-        filter.currentSize = filter.initialValues.size;
+        filter.currentSizes = filter.initialValues.sizes.slice();
         filter.currentBrand = filter.brands[0];
         initializeSizeFilter();
 
         // Wait for bikes to be actually provided
         filter.$onChanges = function (changes) {
           if (filter.initialBikes != undefined) {
-            console.log("gets called");
             filter.bikes = filter.initialBikes;
             initializeBrandFilter();
             applyFilters();
@@ -39,11 +43,14 @@ angular.module('filter',[])
         };
 
         filter.onSizeChange = function() {
-          filter.updateState({ size: filter.currentSize });
+          filter.updateState({ sizes: filter.currentSizes.join(',') });
           applyFilters();
         }
 
         filter.clearFilters = function() {
+          // TODO: YB for each clear sizes
+          // filter.currentSizes = bikeOptions.sizeOptionsForSearch()[0];
+
           filter.currentBrand = filter.brands[0];
           applyFilters();
         }
@@ -63,6 +70,8 @@ angular.module('filter',[])
         }
 
         function initializeSizeFilter () {
+          if (filter.currentSizes[0] === '') filter.currentSizes[0] = '-1';
+          if (!filter.currentSizes.length) filter.increaseBikesCount();
           filter.sizes = bikeOptions.sizeOptionsForSearch();
           $translate('search.all-sizes').then(function (translation) {
             filter.sizes[0].label = translation;
@@ -86,11 +95,23 @@ angular.module('filter',[])
         }
   
         function filterSizes (bikes) {
+          // TODO: filter by sizes array
           if (filter.currentSize != filter.sizes[0]) {
             return filterFilter(bikes, filter.currentSize);
           } else {
             return bikes;
           }
+        }
+
+        function increaseBikesCount() {
+          filter.currentSizes.push(-1);
+          filter.updateState({ sizes: filter.currentSizes.join(',') });
+        }
+
+        function decreaseBikesCount(){
+          if (filter.currentSizes.length <= 1) return;
+          filter.currentSizes.pop();
+          filter.updateState({ sizes: filter.currentSizes.join(',') });
         }
       }
     ]
