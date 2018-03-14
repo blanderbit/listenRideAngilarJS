@@ -11,6 +11,7 @@ angular.module('autocomplete',[]).component('autocomplete', {
     required: '<',
     name: '@',
     error: '=',
+    hideInput: '<',
     placeChanged: '&'
   },
   controller: ['$interval', '$scope', '$window',
