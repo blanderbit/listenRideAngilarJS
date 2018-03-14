@@ -65,7 +65,7 @@
 
       $stateProvider.state({
         name: 'search',
-        url: '/search/{location}?start_date&duration&size&allterrain&race&city&kids&ebikes&special&brand',
+        url: '/search/{location}?start_date&duration&sizes&allterrain&race&city&kids&ebikes&special&brand',
         template: '<search></search>',
         reloadOnSearch: false,
         params: {
@@ -82,7 +82,7 @@
             value: "",
             squash: true
           },
-          size: {
+          sizes: {
             value: "",
             squash: true
           },

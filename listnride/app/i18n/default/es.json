@@ -617,7 +617,10 @@
     "bikes-in": "Bicis disponibles",
     "meta-title": "Alquila la bici perfecta en{{location}} ",
     "meta-description": "listnride ofrece una amplia variedad de bicis perfectas en {{location}}",
-    "number-of-bikes": "Number of bikes"
+    "number-of-bikes": "Number of bikes",
+    "bike": "Bike",
+    "bikes": "Bikes",
+    "pick-body-size": "Pick a body size"
   },
   "calendar": {
     "invalid-date": "Las fechas no son válidas",
