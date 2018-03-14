@@ -68,6 +68,7 @@ angular.module('listnride', [
   'supercrossMunich',
   'capeArgus',
   'filter',
+  'cardgrid',
   //endRemoveIf(shop)
   /* app_extras_end */
 

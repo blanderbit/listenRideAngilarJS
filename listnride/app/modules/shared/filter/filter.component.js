@@ -50,8 +50,8 @@ angular.module('filter',[])
 
         function initializeBrandFilter () {
           // Populate brand filter with all available brands
-          for (var i=0; i<filter.initialBikes.length; i++) {
-            var currentBrand = filter.initialBikes[i].brand;
+          for (var i=0; i<filter.bikes.length; i++) {
+            var currentBrand = filter.bikes[i].brand;
             if (!filter.brands.includes(currentBrand)) {
               filter.brands.push(currentBrand);
             }
@@ -74,6 +74,7 @@ angular.module('filter',[])
           filteredBikes = filterBrands(filteredBikes);
           filteredBikes = filterSizes(filteredBikes);
           filter.bikes = filteredBikes;
+          initializeBrandFilter();
         }
 
         function filterBrands (bikes) {
