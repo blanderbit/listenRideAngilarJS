@@ -26,7 +26,6 @@ angular.module('filter',[])
         // Wait for bikes to be actually provided
         filter.$onChanges = function (changes) {
           if (filter.initialBikes != undefined) {
-            console.log("gets called");
             filter.bikes = filter.initialBikes;
             initializeBrandFilter();
             applyFilters();
@@ -41,13 +40,17 @@ angular.module('filter',[])
         filter.onSizeChange = function() {
           filter.updateState({ size: filter.currentSize });
           applyFilters();
-        }
+        };
 
         filter.clearFilters = function() {
           filter.currentSize = bikeOptions.sizeOptionsForSearch()[0];
           filter.currentBrand = filter.brands[0];
           applyFilters();
-        }
+        };
+
+        filter.onCategoryChange = function() {
+          applyFilters();
+        };
 
         function initializeBrandFilter () {
           // Populate brand filter with all available brands
@@ -74,6 +77,7 @@ angular.module('filter',[])
           var filteredBikes = filter.initialBikes;
           filteredBikes = filterBrands(filteredBikes);
           filteredBikes = filterSizes(filteredBikes);
+          filteredBikes = filterCategories(filteredBikes);
           filter.bikes = filteredBikes;
         }
 
@@ -92,6 +96,73 @@ angular.module('filter',[])
             return bikes;
           }
         }
+
+        function filterCategories (bikes) {
+          if (!_.isEmpty(filter.selected)) {
+            return arrayFilter(bikes);
+          } else {
+            return bikes;
+          }
+        }
+
+        //----- Category filter -----
+
+        filter.categories = [
+          {id: 10, name: 'Dutch bike'},
+          {id: 11, name: 'Touring bike'},
+          {id: 12, name: 'Fixie'},
+          {id: 13, name: 'Single Speed'}
+        ];
+
+        filter.selected = [];
+
+        var categoriesLength = filter.categories.length;
+
+        filter.toggle = function (item, list) {
+          var idx = list.indexOf(item);
+          if (idx > -1) {
+            list.splice(idx, 1);
+          }
+          else {
+            list.push(item);
+          }
+
+          filter.onCategoryChange()
+        };
+
+        filter.exists = function (item, list) {
+          return list.indexOf(item) > -1;
+        };
+
+        filter.isIndeterminate = function() {
+          return (filter.selected.length !== 0 &&
+            filter.selected.length !== categoriesLength);
+        };
+
+        filter.isChecked = function() {
+          return filter.selected.length === categoriesLength;
+        };
+
+        filter.toggleAll = function() {
+          if (filter.selected.length === categoriesLength) {
+            filter.selected = [];
+          } else if (filter.selected.length === 0 || filter.selected.length > 0) {
+            filter.selected = [];
+            for (var i = 0; i < filter.categories.length; i++) {
+              filter.selected.push(filter.categories[i].id);
+            }
+          }
+
+          filter.onCategoryChange()
+        };
+        
+        function arrayFilter(bikes) {
+          return _.filter(bikes, function(o) {
+            return _.includes(filter.selected, o.category);
+          })
+        }
+
+        //----- end -----
       }
     ]
   })
@@ -106,4 +177,4 @@ angular.module('filter',[])
     templateUrl: 'app/modules/shared/filter/category-filter.template.html',
     require: { parent: '^filter' },
     controllerAs: 'categoryFilter'
-  })
+  });
