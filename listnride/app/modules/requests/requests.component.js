@@ -307,6 +307,7 @@ angular.module('requests', ['infinite-scroll'])
             "request_id": requests.request.id,
             "sender": $localStorage.userId,
             "content": requests.message,
+            "created_at": new Date(),
             "created_at_readable": current_date,
             "is_read": false
           };

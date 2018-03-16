@@ -113,7 +113,9 @@
     "confirm": "Bevestigen",
     "confirmation": "Bevestiging",
     "confirmation-text": "Weet je het zeker?",
-    "loading": "Het laden"
+    "loading": "Het laden",
+    "today": "Today",
+    "yesterday": "Yesterday"
   },
   "meta": {
     "cities": {
