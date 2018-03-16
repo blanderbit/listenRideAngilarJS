@@ -114,7 +114,9 @@
     "confirm": "Confermare",
     "confirmation": "Conferma",
     "confirmation-text": "Sei sicuro?",
-    "loading": "Caricamento"
+    "loading": "Caricamento",
+    "today": "Today",
+    "yesterday": "Yesterday"
   },
   "meta": {
     "cities": {

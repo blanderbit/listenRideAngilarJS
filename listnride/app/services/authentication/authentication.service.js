@@ -163,13 +163,15 @@ angular.
           password: form.password.$modelValue
         };
 
+        // manually set all variables to null
+        // $mdDialog, inviteCode, requesting, business
+        // TODO: Create service for sign up
         SignupDialogController(null, null, null, false, obj);
       };
 
       // The Signup Dialog Controller
-      var SignupDialogController = function ($mdDialog, $mdMedia, inviteCode, requesting, business, signupObj) {
+      var SignupDialogController = function ($mdDialog, inviteCode, requesting, business, signupObj) {
         var signupDialog = signupObj || this;
-        signupDialog.xs = $mdMedia('xs');
         signupDialog.signingUp = false;
         signupDialog.requestSignup = false;
         signupDialog.business = business;
