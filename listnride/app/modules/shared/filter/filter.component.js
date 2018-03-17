@@ -227,15 +227,14 @@ angular.module('filter',[])
           if (categoryChosen(categoryId)) {
             filter.selected = _.difference(filter.selected, categorySubs(categoryId))
           } else if (filter.selected.length === 0 || filter.selected.length > 0) {
-            filter.selected = _.uniq(filter.selected.concat(categorySubs(categoryId)))
+            filter.selected = _.union(filter.selected, categorySubs(categoryId));
+            filter.openSubs = _.union(filter.openSubs, [categoryId])
           }
           filter.onCategoryChange()
         };
 
         filter.showSubs = function(categoryId) {
-          return filter.isChecked(categoryId) ||
-            filter.openSubs.includes(categoryId)
-          //categoryIntersection(categoryId).length > 0
+          return filter.openSubs.includes(categoryId)
         };
 
         function categoryIntersection(categoryId) {
