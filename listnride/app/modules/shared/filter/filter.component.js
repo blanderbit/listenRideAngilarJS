@@ -199,6 +199,7 @@ angular.module('filter',[])
         ];
 
         filter.selected = [];
+        filter.openSubs = [];
 
         filter.toggle = function (item, list) {
           var idx = list.indexOf(item);
@@ -232,7 +233,9 @@ angular.module('filter',[])
         };
 
         filter.showSubs = function(categoryId) {
-          return filter.isChecked(categoryId) || categoryIntersection(categoryId).length > 0
+          return filter.isChecked(categoryId) ||
+            filter.openSubs.includes(categoryId)
+          //categoryIntersection(categoryId).length > 0
         };
 
         function categoryIntersection(categoryId) {

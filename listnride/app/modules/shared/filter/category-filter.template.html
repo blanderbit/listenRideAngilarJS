@@ -1,16 +1,24 @@
 <div layout="column" ng-repeat="category in categoryFilter.parent.categories" style="width: 376px">
   <div layout="row" layout-align="space-between start">
-    <md-checkbox
-      aria-label="{{category.name}}"
-      ng-checked="categoryFilter.parent.isChecked(category.catId)"
-      md-indeterminate="categoryFilter.parent.isIndeterminate(category.catId)"
-      ng-click="categoryFilter.parent.toggleAll(category.catId)"
-      md-prevent-menu-close
-      flex-90
-    >
-      <span ng-if="categoryFilter.parent.isChecked(category.catId)">Un-</span>Select {{category.name}} All
-    </md-checkbox>
+    <div layout="row" layout-align="space-between start">
+      <md-checkbox
+        aria-label="{{category.name}}"
+        ng-checked="categoryFilter.parent.isChecked(category.catId)"
+        md-indeterminate="categoryFilter.parent.isIndeterminate(category.catId)"
+        ng-click="categoryFilter.parent.toggleAll(category.catId)"
+        md-prevent-menu-close
+        flex-15
+      >
+      </md-checkbox>
 
+      <div
+        flex-85
+        ng-click="categoryFilter.parent.toggle(category.catId, categoryFilter.parent.openSubs)"
+        md-prevent-menu-close
+      >
+        <span ng-if="categoryFilter.parent.isChecked(category.catId)" >Un-</span>Select {{category.name}} All
+      </div>
+    </div>
     <div flex-10>
       <md-icon
         md-svg-src="app/assets/ui_icons/{{category.iconFileName}}"
