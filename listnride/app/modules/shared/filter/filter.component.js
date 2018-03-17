@@ -108,15 +108,69 @@ angular.module('filter',[])
         //----- Category filter -----
 
         filter.categories = [
-          {id: 10, name: 'Dutch bike'},
-          {id: 11, name: 'Touring bike'},
-          {id: 12, name: 'Fixie'},
-          {id: 13, name: 'Single Speed'}
+          {
+            catId: 10,
+            name: 'City',
+            subcategories: [
+              {id: 10, name: 'Dutch bike'},
+              {id: 11, name: 'Touring bike'},
+              {id: 12, name: 'Fixie'},
+              {id: 13, name: 'Single Speed'}
+            ]
+          },
+          {
+            catId: 20,
+            name: 'Race',
+            subcategories: [
+              {id: 20, name: 'Road bike'},
+              {id: 21, name: 'Triathlon'},
+              {id: 22, name: 'Indoor'}
+            ]
+          },
+          {
+            catId: 30,
+            name: 'All terrain',
+            subcategories: [
+              {id: 30, name: 'Tracking'},
+              {id: 31, name: 'Enduro'},
+              {id: 32, name: 'Freeride'},
+              {id: 33, name: 'Cross Country'},
+              {id: 34, name: 'Downhill'},
+              {id: 35, name: 'Cyclocross'}
+            ]
+          },
+          {
+            catId: 40,
+            name: 'Children',
+            subcategories: [
+              {id: 40, name: 'City'},
+              {id: 41, name: 'All Terrain'},
+              {id: 42, name: 'Road'}
+            ]
+          },
+          {
+            catId: 50,
+            name: 'Electric',
+            subcategories: [
+              {id: 50, name: 'Pedelec'},
+              {id: 51, name: 'E-bike'}
+            ]
+          },
+          {
+            catId: 60,
+            name: 'Special',
+            subcategories: [
+              {id: 60, name: 'Folding bike'},
+              {id: 61, name: 'Tandem'},
+              {id: 62, name: 'Cruiser'},
+              {id: 63, name: 'Cargo bike'},
+              {id: 64, name: 'Recumbent'},
+              {id: 65, name: 'Mono bike'}
+            ]
+          }
         ];
 
         filter.selected = [];
-
-        var categoriesLength = filter.categories.length;
 
         filter.toggle = function (item, list) {
           var idx = list.indexOf(item);
@@ -134,28 +188,37 @@ angular.module('filter',[])
           return list.indexOf(item) > -1;
         };
 
-        filter.isIndeterminate = function() {
-          return (filter.selected.length !== 0 &&
-            filter.selected.length !== categoriesLength);
+        filter.isIndeterminate = function(categoryId) {
+          return (filter.selected.length !== 0 && !categoryChosen(categoryId));
         };
 
-        filter.isChecked = function() {
-          return filter.selected.length === categoriesLength;
+        filter.isChecked = function(categoryId) {
+          return categoryChosen(categoryId);
         };
 
-        filter.toggleAll = function() {
-          if (filter.selected.length === categoriesLength) {
-            filter.selected = [];
+        filter.toggleAll = function(categoryId) {
+          var subcategories = _.map(categorySubs(categoryId), 'id');
+          if (categoryChosen(categoryId)) {
+            filter.selected = _.difference(filter.selected, subcategories)
           } else if (filter.selected.length === 0 || filter.selected.length > 0) {
-            filter.selected = [];
-            for (var i = 0; i < filter.categories.length; i++) {
-              filter.selected.push(filter.categories[i].id);
-            }
+            filter.selected = _.uniq(filter.selected.concat(subcategories))
           }
 
           filter.onCategoryChange()
         };
-        
+
+        function categoryChosen(categoryId) {
+          var subcategoryIds = _.map(categorySubs(categoryId), 'id').sort();
+          var intersection = _.intersection(filter.selected, subcategoryIds).sort();
+          return _.isEqual(intersection, subcategoryIds)
+        }
+
+        function categorySubs(id) {
+          return _.find(filter.categories, function(category) {
+            return category.catId === id;
+          }).subcategories
+        }
+
         function arrayFilter(bikes) {
           return _.filter(bikes, function(o) {
             return _.includes(filter.selected, o.category);

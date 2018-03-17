@@ -1,22 +1,22 @@
-<div layout="row" layout-wrap flex>
+<div layout="row" layout-wrap flex ng-repeat="category in categoryFilter.parent.categories">
   <div flex-xs flex="50">
     <md-checkbox
-      aria-label="City"
-      ng-checked="categoryFilter.parent.isChecked()"
-      md-indeterminate="categoryFilter.parent.isIndeterminate()"
-      ng-click="categoryFilter.parent.toggleAll()"
+      aria-label="{{category.name}}"
+      ng-checked="categoryFilter.parent.isChecked(category.catId)"
+      md-indeterminate="categoryFilter.parent.isIndeterminate(category.catId)"
+      ng-click="categoryFilter.parent.toggleAll(category.catId)"
       md-prevent-menu-close
     >
-      <span ng-if="categoryFilter.parent.isChecked()">Un-</span>Select City All
+      <span ng-if="categoryFilter.parent.isChecked(category.catId)">Un-</span>Select {{category.name}} All
     </md-checkbox>
   </div>
-  <div class="demo-select-all-checkboxes" flex="100" ng-repeat="category in categoryFilter.parent.categories">
+  <div class="demo-select-all-checkboxes" flex="100" ng-repeat="subcategory in category.subcategories">
     <md-checkbox
-      ng-checked="categoryFilter.parent.exists(category.id, categoryFilter.parent.selected)"
-      ng-click="categoryFilter.parent.toggle(category.id, categoryFilter.parent.selected)"
+      ng-checked="categoryFilter.parent.exists(subcategory.id, categoryFilter.parent.selected)"
+      ng-click="categoryFilter.parent.toggle(subcategory.id, categoryFilter.parent.selected)"
       md-prevent-menu-close
     >
-      {{ category.name }}
+      {{ subcategory.name }}
     </md-checkbox>
   </div>
 </div>
