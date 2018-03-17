@@ -111,6 +111,7 @@ angular.module('filter',[])
           {
             catId: 10,
             name: 'City',
+            iconFileName: "biketype_1.svg",
             subcategories: [
               {id: 10, name: 'Dutch bike'},
               {id: 11, name: 'Touring bike'},
@@ -121,6 +122,7 @@ angular.module('filter',[])
           {
             catId: 20,
             name: 'Race',
+            iconFileName: "biketype_2.svg",
             subcategories: [
               {id: 20, name: 'Road bike'},
               {id: 21, name: 'Triathlon'},
@@ -130,6 +132,7 @@ angular.module('filter',[])
           {
             catId: 30,
             name: 'All terrain',
+            iconFileName: "biketype_3.svg",
             subcategories: [
               {id: 30, name: 'Tracking'},
               {id: 31, name: 'Enduro'},
@@ -142,6 +145,7 @@ angular.module('filter',[])
           {
             catId: 40,
             name: 'Children',
+            iconFileName: "biketype_4.svg",
             subcategories: [
               {id: 40, name: 'City'},
               {id: 41, name: 'All Terrain'},
@@ -151,6 +155,7 @@ angular.module('filter',[])
           {
             catId: 50,
             name: 'Electric',
+            iconFileName: "biketype_5.svg",
             subcategories: [
               {id: 50, name: 'Pedelec'},
               {id: 51, name: 'E-bike'}
@@ -159,6 +164,7 @@ angular.module('filter',[])
           {
             catId: 60,
             name: 'Special',
+            iconFileName: "biketype_6.svg",
             subcategories: [
               {id: 60, name: 'Folding bike'},
               {id: 61, name: 'Tandem'},
@@ -176,11 +182,9 @@ angular.module('filter',[])
           var idx = list.indexOf(item);
           if (idx > -1) {
             list.splice(idx, 1);
-          }
-          else {
+          } else {
             list.push(item);
           }
-
           filter.onCategoryChange()
         };
 
@@ -197,26 +201,30 @@ angular.module('filter',[])
         };
 
         filter.toggleAll = function(categoryId) {
-          var subcategories = _.map(categorySubs(categoryId), 'id');
           if (categoryChosen(categoryId)) {
-            filter.selected = _.difference(filter.selected, subcategories)
+            filter.selected = _.difference(filter.selected, categorySubs(categoryId))
           } else if (filter.selected.length === 0 || filter.selected.length > 0) {
-            filter.selected = _.uniq(filter.selected.concat(subcategories))
+            filter.selected = _.uniq(filter.selected.concat(categorySubs(categoryId)))
           }
-
           filter.onCategoryChange()
         };
 
+        filter.showSubs = function(categoryId) {
+          return filter.isChecked(categoryId) || categoryIntersection(categoryId).length > 0
+        };
+
+        function categoryIntersection(categoryId) {
+          return _.intersection(filter.selected, categorySubs(categoryId)).sort()
+        }
+
         function categoryChosen(categoryId) {
-          var subcategoryIds = _.map(categorySubs(categoryId), 'id').sort();
-          var intersection = _.intersection(filter.selected, subcategoryIds).sort();
-          return _.isEqual(intersection, subcategoryIds)
+          return _.isEqual(categoryIntersection(categoryId), categorySubs(categoryId))
         }
 
         function categorySubs(id) {
-          return _.find(filter.categories, function(category) {
+          return _.map(_.find(filter.categories, function(category) {
             return category.catId === id;
-          }).subcategories
+          }).subcategories, 'id').sort()
         }
 
         function arrayFilter(bikes) {
