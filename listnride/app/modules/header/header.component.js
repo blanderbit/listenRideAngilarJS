@@ -3,9 +3,10 @@
 angular.module('header',[]).component('header', {
   templateUrl: 'app/modules/header/header.template.html',
   controllerAs: 'header',
-  controller: ['$transitions', '$state', '$mdSidenav', '$localStorage', '$stateParams', 'api', 'authentication', 'verification',
-    function HeaderController($transitions, $state, $mdSidenav, $localStorage, $stateParams, api, authentication, verification) {
+  controller: ['$transitions', '$state', '$mdSidenav', '$mdMedia', '$localStorage', '$stateParams', 'api', 'authentication', 'verification',
+    function HeaderController($transitions, $state, $mdSidenav, $mdMedia, $localStorage, $stateParams, api, authentication, verification) {
       var header = this;
+      var mobileSearch = false;
       header.authentication = authentication;
       header.verification = verification;
       header.name = $localStorage.name;
@@ -30,6 +31,26 @@ angular.module('header',[]).component('header', {
 
       header.toggleSidebar = function() {
         $mdSidenav('right').toggle();
+      }
+
+      header.toggleSearch = function() {
+        mobileSearch = !mobileSearch;
+      }
+
+      header.hideSearch = function() {
+        if ($mdMedia('xs')) {
+          return !mobileSearch;
+        } else {
+          return false;
+        }
+      }
+
+      header.hideLogo = function() {
+        if ($mdMedia('xs')) {
+          return !mobileSearch;
+        } else {
+          return true;
+        }
       }
       
     }

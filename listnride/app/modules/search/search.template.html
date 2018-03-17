@@ -3,18 +3,6 @@
   <div flex-xs="100" flex-gt-xs="70" flex-order-xs="2" layout="column">
     <div layout="column">
       <filter bikes="search.filteredBikes" initial-bikes="search.bikes" initial-values="search.initialValues" update-state="search.updateState"></filter>
-
-      <!-- <div layout=“row” layout-align="start start">
-        <div class="column lnr-mv8">
-          <input-range
-            data="search.date"
-            lnr-single-input
-            clear-calendar-data="search.isClearDataRange"
-            on-change="search.onDateChange">
-          </input-range>
-          <div class="lnr-right"><a class="lnr-link" ng-click="search.clearDate()">{{ 'shared.clear' | translate }}</a></div>
-        </div>
-      </div> -->
     </div>
 
     <md-divider></md-divider>
@@ -22,9 +10,9 @@
     <md-content flex layout="column">
 
       <!-- city name for shown bikes -->
-      <div id="search-header" layout-padding>
+      <!-- <div id="search-header" layout-padding>
         <h1 class="md-headline" layout-padding>{{ 'search.bikes-in' | translate }} {{search.location}}</h1>
-      </div>
+      </div> -->
 
       <!-- no bikes found placeholder -->
       <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout="row" layout-align="center center" layout-padding>
@@ -36,14 +24,11 @@
       <!-- tablet:        2 bikes each row -->
       <!-- desktop:       3 bikes each row -->
       <!-- larger screen: 4 bikes each row -->
-      <div id="featuredBikes" layout="row" layout-wrap layout-padding>
-        <div ng-repeat="bike in search.filteredBikes" flex-xs="100" flex-sm="50" flex-gt-sm="33" flex-gt-lg="25">
-          <bike-card bike="bike"
-                     ng-mouseover="search.onBikeHover(bike, true)"
-                     ng-mouseleave="search.onBikeHover(bike, false)">
-          </bike-card>
-        </div>
-      </div>
+      <cardgrid 
+        bikes="search.filteredBikes"
+        title="Bikes in {{search.location}}"
+        on-bike-hover="search.onBikeHover">
+      </cardgrid>
 
       <!-- busy loader until bikes api resolves -->
       <div ng-show="search.bikes === undefined" flex layout="column" layout-align="center center">
