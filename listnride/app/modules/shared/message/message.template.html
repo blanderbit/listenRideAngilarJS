@@ -4,7 +4,7 @@
        flex-sm="30" 
        flex-xs="60" 
        layout-margin>
-    <p class="message-time">{{message.messageTime}}</p>
+     <p class="message-time">{{message.localTime}}</p>
     <p class="message-text">{{message.content}}</p>
   </div>
 </div>
@@ -15,7 +15,7 @@
        flex-sm="30" 
        flex-xs="60" 
        layout-margin>
-    <p class="message-time">{{message.messageTime}}</p>
+     <p class="message-time">{{message.localTime}}</p>
     <p class="message-text">{{message.content}}</p>
   </div>
 </div>
@@ -64,11 +64,13 @@
       flex-xs="60" 
       layout="column" 
       layout-margin>
-    <p class="message-time">{{message.messageTime}}</p>
+     <p class="message-time">{{message.localTime}}</p>
     <p 
-      class="lnr-center" 
+      class="lnr-center"
       translate="{{message.request.chatFlow}}.{{message.status}}" 
-      translate-values="message.request">
+      translate-values="message.request"
+      ng-click="message.closeDialog()"
+      style="pointer-events: none;">
     </p>
 
     <div ng-if="!message.request.rideChat && message.status == 1">

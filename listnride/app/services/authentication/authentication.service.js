@@ -3,8 +3,8 @@
 angular.
   module('listnride').
   factory('authentication', [
-    'Base64', '$http', '$localStorage', '$mdDialog', '$mdToast', '$window', '$state', '$q', '$translate', '$analytics', 'ezfb', 'api', 'verification', 'sha256',
-    function(Base64, $http, $localStorage, $mdDialog, $mdToast, $window, $state, $q, $translate, $analytics, ezfb, api, verification, sha256){
+    'Base64', '$http', '$localStorage', '$mdDialog', '$rootScope', '$mdToast', '$window', '$state', '$q', '$translate', '$analytics', 'ezfb', 'api', 'verification', 'sha256',
+    function(Base64, $http, $localStorage, $mdDialog, $rootScope, $mdToast, $window, $state, $q, $translate, $analytics, ezfb, api, verification, sha256){
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (response) {
@@ -14,6 +14,7 @@ angular.
         $localStorage.userId = response.id;
         $localStorage.name = response.first_name + " " + response.last_name;
         $localStorage.firstName = response.first_name;
+        $localStorage.lastName = response.last_name;
         $localStorage.profilePicture = response.profile_picture.profile_picture.url;
         $localStorage.unreadMessages = response.unread_messages;
         $localStorage.email = response.email;
@@ -22,58 +23,161 @@ angular.
       };
 
       var retrieveLocale = function() {
-        var defaultLanguage = "en";
+        var language = "en"; // Default language
         var availableLanguages = ["de", "en", "nl", "it", "es"];
-        var retrievedLanguage = $localStorage.selectedLanguage;
-    
-        if (availableLanguages.indexOf(retrievedLanguage) >= 0) {
-          return retrievedLanguage;
+        var browserLanguage = navigator.language.replace(/-.*$/,""); // Default browser language
+        var retrievedLanguage = $localStorage.selectedLanguage; // Saved language
+        var url = window.location.host.split('.');
+        var urlLanguage = url[url.length-1]; // Domain name language
+
+        if (url.indexOf("localhost:8080") < 0 && availableLanguages.indexOf(urlLanguage) >= 0) {
+          browserLanguage = urlLanguage;
+        }
+
+        if(!_.isEmpty(browserLanguage) && browserLanguage !== 'en' && retrievedLanguage === 'en' || _.isEmpty(retrievedLanguage) ) {
+          language = browserLanguage;
         } else {
-          return defaultLanguage;
+          language = retrievedLanguage;
+        }
+
+        if (availableLanguages.indexOf(language) >= 0) {
+          return language;
+        } else {
+          return 'en';
         }
       };
 
-      // The Signup Dialog Controller
-      var SignupDialogController = function($mdDialog, inviteCode, requesting, business) {
-        var signupDialog = this;
+      // methods for signup controller
+      // defined outside so that can be used out of sign up controller
+      // used in request booking flow
+       
+      var showSignupSuccess = function() {
+        $mdToast.show(
+          $mdToast.simple()
+            .textContent($translate.instant('toasts.successfully-sign-up'))
+            .hideDelay(3000)
+            .position('top center')
+        );
+      };
 
+      var showSignupError = function() {
+        $mdToast.show(
+          $mdToast.simple()
+          .textContent($translate.instant('toasts.could-not-sign-up'))
+          .hideDelay(4000)
+          .position('top center')
+        );
+      };
+
+      var showLoginSuccess = function() {
+        $mdDialog.hide();
+        $mdToast.show(
+          $mdToast.simple()
+            .textContent($translate.instant('toasts.successfully-logged-in'))
+            .hideDelay(3000)
+            .position('top center')
+        );
+      };
+
+      var showLoginError = function() {
+        $mdToast.show(
+          $mdToast.simple()
+            .textContent($translate.instant('toasts.could-not-log-in'))
+            .hideDelay(3000)
+            .position('top center')
+        );
+      };
+
+      var showProfile = function() {
+        $state.go("user", {userId: $localStorage.userId});
+      };
+
+      var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName, inviteCode, requestFlow) {
+        console.log("SIGNUP GETS CALLED");
+        var invited = !!inviteCode;
+        var user = {
+          "user": {
+            "email": email,
+            "facebook_id": fbId,
+            "facebook_access_token": fbAccessToken,
+            "profile_picture_url": profilePicture,
+            "first_name": firstName,
+            "last_name": lastName,
+            "ref_code": inviteCode,
+            "language": retrieveLocale()
+          }
+        };
+
+        api.post("/users", user).then(function(success) {
+          setCredentials(success.data);
+          if (requestFlow) {
+            $rootScope.$broadcast('user_created');
+          } else {
+            verification.openDialog(false, invited, false, showProfile)
+          }
+          $analytics.eventTrack('Facebook Sign-Up', {  category: 'Sign Up', label: 'Quick Sign-Up Complete'});
+        }, function(error) {
+          showSignupError();
+        });
+      };
+
+      var loginFb = function(email, facebookId) {
+        console.log("LOGIN GETS CALLED");
+        var user = {
+          'user': {
+            'email': email,
+            'facebook_id': facebookId
+          }
+        };
+        api.post('/users/login', user).then(function(response) {
+          setCredentials(response.data);
+          $rootScope.$broadcast('user_login');
+          showLoginSuccess();
+        }, function(error) {
+        });
+      };
+
+      var connectFb = function(inviteCode, requestFlow) {
+        ezfb.getLoginStatus(function(response) {
+          if (response.status === 'connected') {
+            var accessToken = response.authResponse.accessToken;
+            ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
+              loginFb(response.email, response.id);
+            });
+          } else {
+            ezfb.login(function(response) {
+              var accessToken = response.authResponse.accessToken;
+              ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
+                signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name, false, requestFlow);
+              });
+            }, {scope: 'email'});
+          }
+        });
+      };
+
+      var signupGlobal = function (form) {
+        var obj = {
+          email: form.email.$modelValue,
+          firstName: form.first_name.$modelValue,
+          lastName: form.last_name.$modelValue,
+          password: form.password.$modelValue
+        };
+
+        // manually set all variables to null
+        // $mdDialog, inviteCode, requesting, business
+        // TODO: Create service for sign up
+        SignupDialogController(null, null, null, false, obj);
+      };
+
+      // The Signup Dialog Controller
+      var SignupDialogController = function ($mdDialog, inviteCode, requesting, business, signupObj) {
+        var signupDialog = signupObj || this;
         signupDialog.signingUp = false;
+        signupDialog.requestSignup = false;
         signupDialog.business = business;
         signupDialog.businessError = false;
         signupDialog.requesting = requesting;
         var invited = !!inviteCode;
-
-        var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName) {
-          var user = {
-            "user": {
-              "email": email,
-              "facebook_id": fbId,
-              "facebook_access_token": fbAccessToken,
-              "profile_picture_url": profilePicture,
-              "first_name": firstName,
-              "last_name": lastName,
-              "ref_code": inviteCode,
-              "language": retrieveLocale()
-            }
-          };
-
-          api.post("/users", user).then(function(success) {
-            setCredentials(success.data);
-            verification.openDialog(false, invited, false, signupDialog.showProfile);
-            $analytics.eventTrack('Facebook Sign-Up', {  category: 'Sign Up', label: 'Quick Sign-Up Complete'});
-          }, function(error) {
-            showSignupError();
-          });
-        };
-
-        var showSignupError = function() {
-          $mdToast.show(
-            $mdToast.simple()
-            .textContent($translate.instant('toasts.could-not-sign-up'))
-            .hideDelay(4000)
-            .position('top center')
-          );
-        };
 
         signupDialog.hide = function() {
           $mdDialog.hide();
@@ -108,13 +212,19 @@ angular.
 
           api.post('/users', user).then(function(success) {
             setCredentials(success.data);
-            if (signupDialog.business) {
-              signupDialog.createBusiness();
+            //TODO: refactor this logic
+            if (signupDialog.requestSignup) {
+              $rootScope.$broadcast('user_created');
+              // showSignupSuccess();
             } else {
-              if (!signupDialog.requesting) {
-                $state.go('home');
+              if (signupDialog.business) {
+                signupDialog.createBusiness();
+              } else {
+                if (!signupDialog.requesting) {
+                  $state.go('home');
+                }
+                verification.openDialog(false, invited);
               }
-              verification.openDialog(false, invited);
             }
           }, function(error) {
             showSignupError();
@@ -140,51 +250,39 @@ angular.
           });
         };
 
-        signupDialog.connectFb = function() {
-          ezfb.getLoginStatus(function(response) {
-            if (response.status === 'connected') {
-              var accessToken = response.authResponse.accessToken;
-              ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name);
-              });
-            } else {
-              ezfb.login(function(response) {
-                var accessToken = response.authResponse.accessToken;
-                ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                  signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name);
-                });
-              }, {scope: 'email'});
-            }
-          });
+        signupDialog.connectFb = connectFb;
+        signupDialog.showProfile = showProfile;
+
+        if (signupObj) {
+          signupDialog.requestSignup = true;
+          signupDialog.createUser()
+        }
+      };
+
+      var loginGlobal = function (form) {
+        var obj = {
+          email: form.email.$modelValue,
+          password: form.password.$modelValue,
+          target: 'login'
         };
 
-        signupDialog.showProfile = function() {
-          $state.go("user", {userId: $localStorage.userId});
+        LoginDialogController(null, null, sha256, null, obj);
+      };
+
+      var forgetGlobal = function (email) {
+        var obj = {
+          email: email,
+          target: 'reset'
         };
+
+        LoginDialogController(null, null, sha256, null, obj);
       };
 
       // The Login Dialog Controller
-      var LoginDialogController = function($mdDialog, $mdToast, sha256, ezfb) {
-        var loginDialog = this;
+      var LoginDialogController = function($mdDialog, $mdToast, sha256, ezfb, loginObj) {
+        var loginDialog = loginObj || this;
 
-        var showLoginSuccess = function() {
-          $mdDialog.hide();
-          $mdToast.show(
-            $mdToast.simple()
-            .textContent($translate.instant('toasts.successfully-logged-in'))
-            .hideDelay(3000)
-            .position('top center')
-          );
-        };
-
-        var showLoginError = function() {
-          $mdToast.show(
-            $mdToast.simple()
-            .textContent($translate.instant('toasts.could-not-log-in'))
-            .hideDelay(4000)
-            .position('top center')
-          );
-        };
+        loginDialog.requestLogin = false;
 
         var loginFb = function(email, facebookId) {
           var user = {
@@ -217,9 +315,13 @@ angular.
           };
           api.post('/users/login', user).then(function(success) {
             setCredentials(success.data);
-            showLoginSuccess();
-            if (!success.data.has_address || !success.data.confirmed_phone || success.data.status === 0) {
-              verification.openDialog(false);
+            if (loginDialog.requestLogin) {
+              $rootScope.$broadcast('user_login');
+            } else {
+              showLoginSuccess();
+              if (!success.data.has_address || !success.data.confirmed_phone || success.data.status === 0) {
+                verification.openDialog(false);
+              }
             }
           }, function(error) {
             showLoginError();
@@ -267,6 +369,15 @@ angular.
                 .position('top center')
             );
           }
+        };
+
+        if (loginObj) {
+          if (loginDialog.target === 'login') {
+            loginDialog.requestLogin = true;
+            loginDialog.login ()
+          } else if (loginDialog.target === 'reset') {
+            loginDialog.resetPassword()
+          }
         }
       };
 
@@ -284,7 +395,8 @@ angular.
           locals : {
             inviteCode : inviteCode,
             requesting: requesting,
-            business: business
+            business: business,
+            signupObj: null
           }
         })
         .then(function(answer) {
@@ -304,7 +416,10 @@ angular.
           openFrom: angular.element(document.body),
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,
-          fullscreen: true // Changed in CSS to only be for XS sizes
+          fullscreen: true, // Changed in CSS to only be for XS sizes
+          locals : {
+            loginObj: null
+          }
         })
         .then(function(answer) {
           //
@@ -362,7 +477,11 @@ angular.
         },
         unreadMessages: function() {
           return $localStorage.unreadMessages
-        }
+        },
+        connectFb: connectFb,
+        signupGlobal: signupGlobal,
+        loginGlobal: loginGlobal,
+        forgetGlobal: forgetGlobal
       };
     }
   ]);

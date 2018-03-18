@@ -52,6 +52,12 @@
       });
 
       $stateProvider.state({
+        name: 'booking',
+        url: '/booking?bikeId&startDate&endDate',
+        template: '<booking></booking>',
+      });
+
+      $stateProvider.state({
         name: 'list-view',
         url: '/list-view',
         template: '<bike-list-view></bike-list-view>'
@@ -127,11 +133,9 @@
           login: ['$state', '$stateParams', 'authentication', function($state, $stateParams, authentication) {
             return authentication.tokenLogin($stateParams.shop_token, $stateParams.email).then(
               function (success) {
-                console.log('success');
                 authentication.setCredentials(success.data);
               },
               function (error) {
-                console.log('error');
               }
             );
           }]
@@ -833,6 +837,25 @@
       });
 
       $stateProvider.state({
+        name: 'rethink',
+        url: '/rent-rethink-bikes',
+        template: '<rethink></rethink>',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["meta.brand-integration.rethink.meta-title", "meta.brand-integration.rethink.meta-descr"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["meta.brand-integration.rethink.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.brand-integration.rethink.meta-descr"]);
+                        ngMeta.setTag("og:image", "app/assets/ui_images/opengraph/rethink.jpg");
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'votec',
         url: '/rent-votec-bikes',
         template: '<votec></votec>',
@@ -1103,9 +1126,23 @@
       });
 
       $stateProvider.state({
+        name: 'categoryLanding',
+        url: '/{city}/{category}',
+        template: '<category-landing></category-landing>',
+        meta: {
+          disableUpdate: false,
+          'og:image': 'https://www.listnride.com/app/assets/ui_images/opengraph/landing.jpg'
+        }
+      });
+
+      $stateProvider.state({
         name: 'cityLanding',
-        url: '/{pageTitle: string}',
-        template: '<city-landing></city-landing>'
+        url: '/{city}',
+        template: '<city-landing></city-landing>',
+        meta: {
+          disableUpdate: false,
+          'og:image': 'https://www.listnride.com/app/assets/ui_images/opengraph/landing.jpg'
+        }
       });
 
       // $stateProvider.state({

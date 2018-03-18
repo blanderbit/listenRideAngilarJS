@@ -1,11 +1,117 @@
 /* Picture Overlay */
 
+.lnr-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 12px 12px 0px -8px;
+}
+
+a {
+  color: #fefefe !important ;
+  font-weight: 500
+}
+
 .image-container {
     position: relative;
     display: inline-block;
 }
 .image-container img {display: block;}
-.image-container .after {
+.image-container .info-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #FFF;
+  cursor: default;
+}
+.image-container .info-icon {
+  background: url(https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/lnr_shopplugin_info_icon.svg)  no-repeat;
+  position: absolute;
+  display: block;
+  height: 32px;
+  margin: 12px 8px 12px 12px;
+  width: 32px;
+  right: 0;
+  cursor: pointer;
+  border: transparent;
+}
+
+.image-container .close-icon {
+  cursor: pointer;
+  background: url(https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/ic_close_black_24px.svg)  no-repeat;
+  display: block;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  right: 16px;
+}
+
+/*********  Description Overlay ***********/
+
+.image-container .rent-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: #fff;
+  color:rgb(83, 83, 83);
+}
+
+.image-container:hover .rent-description {
+  display: block;
+  background: #fff;
+}
+
+.image-container .rent-description .content {
+  padding: 16px;
+  max-height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.image-container .rent-description .content .biketitle {
+font-size: 20;
+font-weight: 800;
+}
+
+.image-container .rent-description .rent-description-content {
+  overflow-y: auto;
+  max-height: 96%; 
+  padding: 12px 48px 0 16px;
+}
+
+.image-container .rent-description .ride-name {
+  margin-bottom: 8px;
+}
+
+.rent-element-desc {
+background: white;
+}
+
+.image-container .rent-description .zoom {
+  color: #DDD;
+  font-size: 48px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -30px 0 0 -19px;
+  height: 50px;
+  width: 45px;
+  cursor: pointer;
+}
+.image-container .rent-description .zoom:hover {
+  color: #FFF;
+}
+
+/*********  Default Overlay ***********/
+
+.image-container .rent-element {
     position: absolute;
     top: 0;
     left: 0;
@@ -14,28 +120,29 @@
     display: none;
     color: #FFF;
 }
-.image-container:hover .after {
-    display: block;
+.image-container:hover .rent-element {
+    display: flex;
     background: rgba(0, 0, 0, .4);
 }
-.image-container .after .content {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    max-height: 100%;
-    vertical-align: center;
-    box-sizing: border-box;
-    padding: 5px;
-    overflow-y: auto;
+
+.image-container .rent-element .content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.image-container .after .content .biketitle {
+.image-container .rent-element .content .biketitle {
   font-size: 20;
   font-weight: 800;
 }
 
-.image-container .after .zoom {
+.rent-element-desc {
+  background: rgba(0, 0, 0, .4);
+
+}
+
+.image-container .rent-element .zoom {
     color: #DDD;
     font-size: 48px;
     position: absolute;
@@ -46,7 +153,7 @@
     width: 45px;
     cursor: pointer;
 }
-.image-container .after .zoom:hover {
+.image-container .rent-element .zoom:hover {
     color: #FFF;
 }
 
@@ -82,15 +189,27 @@
   font-style: inherit;
   font-variant: inherit;
   font-family: inherit;
+  text-transform: none !important;
   text-decoration: none;
   overflow: hidden;
   -webkit-transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  /* */
   color: rgba(255, 255, 255, 0.95);
-  /* */
   border: 1px solid rgb(220, 220, 220);
 }
+
+.rent-button {
+  height: 42px;
+  min-width: 148px;
+  color: rgba(255, 255, 255, 0.95);
+  border: 2px solid #ffffff
+}
+
+.rent-button:hover {
+  color:rgb(83, 83, 83);
+  background-color:#fff;
+}
+
 
 .mdl-card__media {
   background-color: #fff !important
@@ -145,11 +264,12 @@ div.lnr-intro-text {
   font-family: 'Roboto', sans-serif !important;
 }
 a:link, a:visited, a:active, a:hover, a:focus {
-    color: rgb(95, 198, 147);
+    color: rgb(95, 198, 147) !important;
+    text-decoration: none;
 }
 .md-subhead {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.01em;
   line-height: 24px;
   font-family: 'Roboto', sans-serif !important;
@@ -218,10 +338,7 @@ md-card {
 }
 
 md-card md-card-title {
-  padding-top: 16px;
-  padding-right: 16px;
-  padding-bottom: 16px;
-  padding-left: 16px;
+  padding: 16px;
   display: flex;
   -webkit-box-flex: 1;
   flex-grow: 1;
@@ -230,6 +347,7 @@ md-card md-card-title {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   flex-direction: row;
+  cursor: default;
 }
 
 md-card md-card-title md-card-title-text {
@@ -381,7 +499,7 @@ md-icon svg {
   max-width: 172px;
   min-width: 154px;
   font-weight: 400;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 @media (max-width: 680px) {

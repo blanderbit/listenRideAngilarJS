@@ -44,7 +44,8 @@
                  duplicate="listings.duplicate"
                  delete="listings.delete"
                  deactivate="listings.deactivate"
-                 is-duplicating="listings.isDuplicating">
+                 is-duplicating="listings.isDuplicating"
+                 change-availability="listings.changeAvailability">
       </list-view>
     </div>
     <div ng-if="listings.bikes !== undefined && listings.bikes.length == 0"  class="lnr-no-rental">
@@ -79,10 +80,11 @@
           view="listings.view"
           duplicate="listings.duplicate"
           delete="listings.delete"
-          is-duplicating="listings.isDuplicating">
+          is-duplicating="listings.isDuplicating"
+          change-availability="listings.changeAvailability">
         </listing-card>
       </div>
     </div>
+    <footer></footer>
   </md-content>
-
 </md-content>

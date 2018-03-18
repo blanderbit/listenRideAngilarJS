@@ -13,12 +13,33 @@ angular.module('message',[]).component('message', {
     acceptBooking: '&',
     showRatingDialog: '&',
     request: '<',
-    messageTime: '<'
+    messageTime: '<',
+    time: '<'
   },
   controller: [ '$translate', '$localStorage', '$mdDialog', '$analytics', 'api',
     function MessageController($translate, $localStorage, $mdDialog, $analytics, api) {
       var message = this;
+      var time = message.time.toString();
+      var messageDate = moment(message.time);
+      var todayDate = moment(new Date());
+      // var yesterdayDate = moment(new Date()).add(-1, 'days');
 
+      if (messageDate.diff(todayDate, 'days') === 0){
+        $translate(["shared.today"]).then(
+          function (translations) {
+            message.localTime = translations["shared.today"] + ', ' + messageDate.format('HH:mm');
+          }
+        );
+      } else if (messageDate.diff(todayDate, 'days') === -1){
+        $translate(["shared.yesterday"]).then(
+          function (translations) {
+            message.localTime = translations["shared.yesterday"] + ', ' + messageDate.format('HH:mm');
+          }
+        );
+      } else {
+        message.localTime = messageDate.format('DD.MM.YYYY HH:mm');
+      }      
+      
       message.buttonClicked = false;
       
       message.closeDialog = function() {

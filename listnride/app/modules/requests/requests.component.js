@@ -77,13 +77,13 @@ angular.module('requests', ['infinite-scroll'])
         requests.loadingList = true;
         api.get('/users/' + $localStorage.userId + '/requests?page=' + requests.currentPage++).then(
           function (success) {
-            var newRequests = success.data;
+            var newRequests = success.data.requests;
             requests.all_requests = requests.all_requests.concat(newRequests);
             requests.requests = angular.copy(requests.all_requests);
             requests.filterBikes(requests.filters.type, false);
             requests.filters.applyFilter(requests.filters.selected);
             requests.loadingList = false;
-            requests.requestsLeft = newRequests.length === 10;
+            requests.requestsLeft = !_.isEmpty(success.data.links.next_rider) || !_.isEmpty(success.data.links.next_lister);
             if (requests.all_requests.length > 0) {
               requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
               requests.loadRequest(requests.selected);
@@ -307,6 +307,7 @@ angular.module('requests', ['infinite-scroll'])
             "request_id": requests.request.id,
             "sender": $localStorage.userId,
             "content": requests.message,
+            "created_at": new Date(),
             "created_at_readable": current_date,
             "is_read": false
           };
@@ -337,6 +338,7 @@ angular.module('requests', ['infinite-scroll'])
         var payoutDialog = this;
 
         payoutDialog.user = user;
+        payoutDialog.emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         payoutDialog.addPayoutMethod = function () {
           var data = {

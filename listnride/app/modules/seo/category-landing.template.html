@@ -1,14 +1,13 @@
  <md-content class="single-column" ng-hide="categoryLanding.loading"> 
-  <div id="hero-shot-small" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/seo/berlin-ebikes.jpg'); background-position: 50% 20%;" layout="column" layout-align="center center">
+  <div id="hero-shot-small" class="lnr-preload-bg" style="background-image: url('{{ categoryLanding.data.header_image}}'); background-position: 50% 20%;" layout="column" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
-      <h1 class="md-display-1">{{ 'seo.header' | translate }} {{ categoryLanding.data.city }}</h1>
+      <h1 class="md-display-1">{{ 'seo.rent-the-best' | translate }} {{ categoryLanding.category | translate }} in {{ categoryLanding.city }}</h1>
     </div>
-    <form class="lnr-search-bar md-whiteframe-3dp" layout="row" md-theme="default">
+    <form class="lnr-search-bar md-whiteframe-3dp lnr-search-bar--fs18" layout="row" md-theme="default">
       <autocomplete
         autocomplete-id="home"
         flex="75"
         layout="column"
-        style="font-size: 18px"
         location="categoryLanding.location"
         placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"
         place-changed="home.placeChanged(place)">
@@ -18,7 +17,7 @@
         class="md-raised md-primary"
         id="submit"
         flex="25"
-        style="font-size: 18px"
+        style="min-width: 114px"
       >
         {{ 'shared.search-all' | translate }}
       </md-button>
@@ -38,49 +37,67 @@
     <div flex="50" flex-xs="100">
       <!-- <div class="lnr-section-title" layout="column" layout-align="center center"> -->
         <!-- <h2 class="md-headline">{{ categoryLanding.data.texts.main.title }}</h2> -->
-        <h2 class="md-headline">Rent perfect bikes in Berlin</h2>
+        <h2 class="md-headline">{{ 'seo.rent-the-best' | translate }} {{ categoryLanding.category | translate }} in {{ categoryLanding.city }}</h2>
         <br>
       <!-- </div> -->
       <p class="md-body-1" style="margin: 7px">{{ categoryLanding.data.texts.main.description }}</p>
     </div>
     <div flex="50" flex-xs="100">
       <!-- <div class="lnr-section-title" layout="column" layout-align="center center"> -->
-        <h2 class="md-headline">Rent category bikes in {{ categoryLanding.data.city }}</h2>
+        <h2 class="md-headline">{{ 'seo.rent-category-bikes-in' | translate }}</h2>
         <br>
       <!-- </div> -->
       <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="2" md-cols-gt-xs="2" md-cols-gt-sm="3" md-gutter="16px" md-row-height="1.5:1">
         <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/city.jpg')">
-          <a ui-sref="cities-berlin" layout-padding layout="column" layout-align="center  center">
+          <a ng-if="categoryLanding.data.categories.city < 8" ui-sref="search({location: categoryLanding.data.city, city: true})" target="_blank" layout-padding layout="column" layout-align="center center">
+            <h3 class="md-title">{{ 'list.category.city' | translate }}</h3>
+          </a>
+          <a ng-if="categoryLanding.data.categories.city >= 8" ui-sref="categoryLanding({city: categoryLanding.data.city, category: 'city'})" layout-padding layout="column" layout-align="center center">
             <h3 class="md-title">{{ 'list.category.city' | translate }}</h3>
           </a>
         </md-grid-tile>
   
         <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/race.jpg')">
-          <a ui-sref="cities-munich" target="_blank" layout-padding layout="column"   layout-align="center center">
+          <a ng-if="categoryLanding.data.categories.race < 8" ui-sref="search({location: categoryLanding.data.city, race: true})" target="_blank" layout-padding layout="column" layout-align="center center">
+            <h3 class="md-title">{{ 'list.category.race' | translate }}</h3>
+          </a>
+          <a ng-if="categoryLanding.data.categories.race >= 8" ui-sref="categoryLanding({city: categoryLanding.data.city, category: 'race'})" layout-padding layout="column" layout-align="center center">
             <h3 class="md-title">{{ 'list.category.race' | translate }}</h3>
           </a>
         </md-grid-tile>
   
         <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/all-terrain.jpg')">
-          <a ui-sref="cities-amsterdam" layout-padding layout="column" layout-align="center   center">
+          <a ng-if="categoryLanding.data.categories.all_terrain < 8" ui-sref="search({location: categoryLanding.data.city, allterrain: true})" layout-padding layout="column" target="_blank" layout-align="center center">
+            <h3 class="md-title">{{ 'list.category.all-terrain' | translate }}</h3>
+          </a>
+          <a ng-if="categoryLanding.data.categories.all_terrain >= 8" ui-sref="categoryLanding({city: categoryLanding.data.city, category: 'all-terrain'})" layout-padding layout="column" layout-align="center center">
             <h3 class="md-title">{{ 'list.category.all-terrain' | translate }}</h3>
           </a>
         </md-grid-tile>
   
         <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/kids.jpg')">
-          <a ui-sref="cities-vienna" layout-padding layout="column" layout-align="center  center">
+          <a ng-if="categoryLanding.data.categories.kids < 8" ui-sref="search({location: categoryLanding.data.city, kids: true})" layout-padding layout="column" layout-align="center  center">
+            <h3 class="md-title">{{ 'list.category.kids' | translate }}</h3>
+          </a>
+          <a ng-if="categoryLanding.data.categories.kids >= 8" ui-sref="categoryLanding({city: categoryLanding.data.city, category: 'kids'})" layout-padding layout="column" layout-align="center center">
             <h3 class="md-title">{{ 'list.category.kids' | translate }}</h3>
           </a>
         </md-grid-tile>
 
         <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/electric.jpg')">
-          <a ui-sref="cities-vienna" layout-padding layout="column" layout-align="center  center">
+          <a ng-if="categoryLanding.data.categories.electro < 8" ui-sref="search({location: categoryLanding.data.city, ebikes: true})" layout-padding layout="column" layout-align="center  center">
+            <h3 class="md-title">{{ 'list.category.electro' | translate }}</h3>
+          </a>
+          <a ng-if="categoryLanding.data.categories.electro >= 8" ui-sref="categoryLanding({city: categoryLanding.data.city, category: 'electric'})" layout-padding layout="column" layout-align="center center">
             <h3 class="md-title">{{ 'list.category.electro' | translate }}</h3>
           </a>
         </md-grid-tile>
 
         <md-grid-tile class="tile" style="background-image: url('app/assets/ui_images/seo/special.jpg')">
-          <a ui-sref="cities-vienna" layout-padding layout="column" layout-align="center  center">
+          <a ng-if="categoryLanding.data.categories.special < 8" ui-sref="search({location: categoryLanding.data.city, special: true})" layout-padding layout="column" layout-align="center  center">
+            <h3 class="md-title">{{ 'list.category.special' | translate }}</h3>
+          </a>
+          <a ng-if="categoryLanding.data.categories.special >= 8" ui-sref="categoryLanding({city: categoryLanding.data.city, category: 'special'})" layout-padding layout="column" layout-align="center center">
             <h3 class="md-title">{{ 'list.category.special' | translate }}</h3>
           </a>
         </md-grid-tile>
@@ -90,65 +107,9 @@
 
   <div class="content section" layout="column" layout-align="center center">
     <br><br>
-    <md-button ui-sref="search({location: 'Berlin'})" class="md-xlrg md-raised md-primary">
-    Search all Bikes in Berlin
+    <md-button ui-sref="search({location: categoryLanding.city})" class="md-xlrg md-raised md-primary">
+    {{ 'shared.search-all-in' | translate }} {{ categoryLanding.city }}
     </md-button>
-  </div>
-  
-
-  <div class="content section" layout-padding>
-    <br><br><br><br>
-    <md-divider></md-divider>
-    <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h2 class="md-headline">{{ 'seo.bike-shops-in' | translate }} {{ categoryLanding.data.city }}</h2>
-    </div>
-    <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="2" md-cols-gt-xs="3" md-cols-gt-sm="{{ categoryLanding.data.shops.length }}" md-gutter="16px" md-row-height="1:1">
-      <md-grid-tile ng-repeat="shop in categoryLanding.data.shops" class="tile" style="background-image: url({{ shop.profile_picture.profile_picture.url }});">
-        <a ui-sref="user({userId: {{ shop.id }}})" target="_blank" layout-padding layout="column" layout-align="center  center">
-          <h3 class="md-title">{{ shop.company_name }}</h3>
-        </a>
-      </md-grid-tile>
-    </md-grid-list>
-  </div>
-
-  <div class="content section" layout-padding>
-    <br><br><br><br>
-    <md-divider></md-divider>
-    <div class="lnr-section-title" layout="column" layout-align="center center">      
-      <h2 class="md-headline">Explore {{ categoryLanding.data.city }}</h2>
-    </div>
-
-    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center" layout-padding>
-      <div layout="column" flex-gt-xs="45">
-        <h3 class="md-subhead">{{ 'cities.berlin.about' | translate }}</h3>
-        <p translate="cities.berlin.about-content"></p>
-        <br>
-        <md-card class="lnr-bike-card">
-          <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-routes.jpg" alt="">
-        </md-card>
-        <br>
-        <h3 class="md-subhead">{{ 'cities.berlin.bike-routes' | translate }}</h3>
-        <p translate="cities.berlin.bike-routes-content"></p>
-      </div>
-      <div layout="row" flex-gt-xs="10" layout-align="center">
-        <md-divider></md-divider>
-      </div>
-      <div layout="column" flex-gt-xs="45">
-        <md-card class="lnr-bike-card">
-          <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-shops.jpg" alt="">
-        </md-card>
-        <br>
-        <h3 class="md-subhead">{{ 'cities.berlin.bike-shops' | translate }}</h3>
-        <p translate="cities.berlin.bike-shops-content"></p>
-        <br>
-        <md-card class="lnr-bike-card">
-          <img class="md-card-image" src="app/assets/ui_images/citypages/berlin-cafes.jpg" alt="">
-        </md-card>
-        <br>
-        <h3 class="md-subhead">{{ 'cities.berlin.cafes-bars' | translate }}</h3>
-        <p translate="cities.berlin.cafes-bars-content"></p>
-      </div>
-    </div>
   </div>
 
   <br><br><br><br>

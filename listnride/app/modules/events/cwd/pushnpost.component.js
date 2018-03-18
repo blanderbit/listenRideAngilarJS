@@ -19,7 +19,6 @@ angular.module('pushnpost',[]).component('pushnpost', {
           });
         },
         function(error) {
-          console.log("Error retrieving User", error);
         }
       );
 

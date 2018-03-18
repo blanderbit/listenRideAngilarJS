@@ -20,11 +20,12 @@ angular.module('settings',[]).component('settings', {
     '$timeout',
     '$mdDialog',
     'authentication',
+    'voucher',
     function SettingsController(
       $localStorage, $window, $mdToast,
       $translate, api, accessControl, sha256, Base64,
       Upload, loadingDialog, ENV, ngMeta,
-      userApi, $timeout, $mdDialog, authentication
+      userApi, $timeout, $mdDialog, authentication, voucher
       ) {
       if (accessControl.requireLogin()) {
         return;
@@ -459,33 +460,8 @@ angular.module('settings',[]).component('settings', {
       };
 
       settings.addVoucher = function () {
-        var data = {
-          "voucher": {
-            "code": settings.voucherCode
-          }
-        };
-
-        api.post('/vouchers', data).then(
-          function (success) {
-            settings.user.balance = parseInt(settings.user.balance) + parseInt(success.data.value);
-            settings.voucherCode = "";
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.add-voucher-success'))
-              .hideDelay(4000)
-              .position('top center')
-            );
-          },
-          function (error) {
-            settings.voucherCode = "";
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.add-voucher-error'))
-              .hideDelay(4000)
-              .position('top center')
-            );
-          }
-        );
+        voucher.addVoucher(settings.voucherCode);
+        settings.voucherCode = "";
       };
 
       settings.deleteAccount = function(event) {

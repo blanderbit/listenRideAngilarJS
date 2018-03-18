@@ -7,18 +7,28 @@ angular.module('cityLanding',[]).component('cityLanding', {
     function cityLandingController($translate, $tpl, $stateParams, $state, $http, api, ENV) {
 
       var cityLanding = this;
-      var city = $stateParams.pageTitle;
+      cityLanding.city = $stateParams.city.charAt(0).toUpperCase() + $stateParams.city.slice(1);
       $tpl.addPart(ENV.staticTranslation);
       cityLanding.bikes = {};
       cityLanding.loading = true;
 
-      // api.get('/seo_pages?url=' + $stateParams.pageTitle).then(
-      api.get('/seo_pages?city='+city+'&lang=en').then(
+      api.get('/seo_pages?city='+cityLanding.city+'&lng=' + $translate.preferredLanguage()).then(
         function (success) {
-          console.log(success.data);
           cityLanding.data = success.data;
-          cityLanding.location = cityLanding.data.city;
+          cityLanding.location = cityLanding.city;
           cityLanding.loading = false;
+          // TODO: emporary monkeypatch for backend not returning nil values
+          if (cityLanding.data.explore.title.startsWith("Main explore title")) {
+            cityLanding.data.explore = null;
+          }
+          if (cityLanding.data.texts.main.title.startsWith("Example main title")) {
+            cityLanding.data.texts = null;
+          }
+          if (cityLanding.data.header_image == "example") {
+            cityLanding.data.header_image = "app/assets/ui_images/static/lnr_trust_and_safety.jpg";
+          }
+          // End
+
         },
         function (error) {
           $state.go('404');

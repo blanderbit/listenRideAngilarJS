@@ -108,7 +108,6 @@ angular.module('search',[]).component('search', {
             search.mapOptions.zoom = 4;
           }
         }, function(error) {
-          console.log("Error retrieving bikes");
         });
       }
 

@@ -296,7 +296,7 @@
     },
     "details": {
       "tab": "2. Dati personali",
-      "invoice-address": "Il tuo indirizzo di fatturazione ",
+      "invoice-address": "Il tuo indirizzo di fatturazione",
       "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Si prega di verificare",
       "send-sms": "Ti invieremo un SMS sul tuo telefono ",
@@ -976,6 +976,6 @@
     "add-another-date": "Aggiungi un'altra data",
     "submit-btn": "Ok",
     "submit-btn-save": "Salva",
-    "choose-range": "Scegli il tuo periodo "
+    "choose-range": "Scegli il tuo periodo"
   }
 }

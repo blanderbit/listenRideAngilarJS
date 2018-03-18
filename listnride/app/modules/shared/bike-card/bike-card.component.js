@@ -13,8 +13,7 @@ angular.module('bikeCard',[]).component('bikeCard', {
     function BikeCardController($mdMedia) {
       var bikeCard = this;
       bikeCard.showIcon = !bikeCard.seo && bikeCard.bike.category;
-      console.log(bikeCard.seo);
-      bikeCard.from = parseInt(bikeCard.bike.price_from);
+      bikeCard.from = Math.ceil(bikeCard.bike.price_from);
       bikeCard.isPhoneScreen = $mdMedia('xs');
     }
   ]

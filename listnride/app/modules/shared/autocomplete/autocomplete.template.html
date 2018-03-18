@@ -1,8 +1,30 @@
-<md-input-container>
+<md-input-container ng-if="autocomplete.labelId !== ''">
   <label>{{ autocomplete.labelId }}</label>
   <input ng-attr-id="{{autocomplete.autocompleteId}}"
-    ng-required="autocomplete.required"
+    required="autocomplete.required"
     ng-model="autocomplete.location"
     placeholder="{{ autocomplete.placeholderId }}"
-    class="autocompleteSearch" type="text"/>
+    class="autocompleteSearch"
+    type="text"
+    name="{{ autocomplete.name }}"
+  />
+  <div ng-messages="autocomplete.error" role="alert">
+    <div ng-message="required">{{ 'shared.required' | translate }}</div>
+  </div>
+</md-input-container>
+
+<!--TODO: Fix label-->
+
+<md-input-container ng-if="autocomplete.labelId == ''" md-no-float flex>
+  <input ng-attr-id="{{autocomplete.autocompleteId}}"
+    required="autocomplete.required"
+    ng-model="autocomplete.location"
+    placeholder="{{ autocomplete.placeholderId }}"
+    class="autocompleteSearch"
+    type="text"
+    name="{{ autocomplete.name }}"
+  />
+  <div ng-messages="autocomplete.error" role="alert">
+    <div ng-message="required">{{ 'shared.required' | translate }}</div>
+  </div>
 </md-input-container>

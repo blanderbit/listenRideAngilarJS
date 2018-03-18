@@ -60,7 +60,6 @@ angular.module('moeveIntegration',[]).component('moeve', {
 
       api.get('/rides?family=25').then(
         function (success) {
-          console.log(success.data);
 
           for (var i=0; i<success.data.length; i++) {
             switch (success.data[i].city) {
@@ -71,7 +70,6 @@ angular.module('moeveIntegration',[]).component('moeve', {
           moeve.currentBikes = moeve.bikes["munich"];
         },
         function (error) {
-          console.log('Error fetching Bikes');
         }
       );
 

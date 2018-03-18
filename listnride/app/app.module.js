@@ -1,63 +1,76 @@
 'use strict';
 
 angular.module('listnride', [
-  /* internal modules */
-	'header',
-  'footer',
-  'home',
-  'search',
+
+  /* app_core_start */
   'bikeCard',
   'user',
   'bike',
+  'booking',
   'requests',
   'message',
   'list',
+  'invoices',
   'autocomplete',
   'confirmation',
   'listings',
   'listingCard',
   'rating',
-  'settings',
-  'invoices',
-  'velothonBikerental',
-  'cyclassicsHamburg',
-  'riderman',
-  'jobs',
   'listingABike',
   'rentingABike',
-  'raphaSuperCross',
-  'inVeloVeritas',
-  'crossride',
   'static',
-  'ampler-integration',
+  'listnride.constant',
+  'metaTags',
+  'receipt',
+  'inputRange',
+  /* app_core_end */
+
+  /* app_extras_start */
+  //removeIf(shop) 
+  'home',
+  'search',
+  'header',
+  'footer',
+  'invite',
+  'inviteLanding',
+  'settings',
+  'invest',
+  'businessCommunity',
+  'jobs',
+  'seoLanding',
+  'cityLanding',
+  'categoryLanding',
   'vello-integration',
   'veletage-integration',
   'brompton-integration',
   'bonvelo-integration',
   'motoparilla-integration',
+  'vanmoofIntegration',
+  'moeveIntegration',
+  'rethinkIntegration',
+  'ampler-integration',
   'muli-integration',
-  'mcbw',
-  'pushnpost',
-  'kuchenundraketen',
-  'invite',
-  'listnride.constant',
-  'inviteLanding',
+  'votec-integration',
+  'crossride',
+  'inVeloVeritas',
+  'velothonBikerental',
   'coffeespin',
+  'cyclassicsHamburg',
+  'riderman',
   'depart',
-  'invest',
-  'supercrossMunich',
-  'seoLanding',
+  'mcbw',
+  'raphaSuperCross',
   'constanceSpin',
   'velosoph',
-  'metaTags',
-  'vanmoofIntegration',
-  'votec-integration',
-  'capeArgus',
-  'businessCommunity',
-  'moeveIntegration',
-  'cityLanding',
   'hamburgTriathlon',
-  /* external modules */
+  'pushnpost',
+  'kuchenundraketen',
+  'supercrossMunich',
+  'capeArgus',
+  //endRemoveIf(shop)
+  /* app_extras_end */
+
+  /* external_modules_start */
   'ngAnimate',
   'ngMaterial',
   'ngMessages',
@@ -79,7 +92,9 @@ angular.module('listnride', [
   'angulartics.google.analytics',
   'angulartics.facebook.pixel',
   '720kb.socialshare',
-  'angularMoment'
+  'angularMoment',
+  'credit-cards'
+  /* external_modules_end */
 ])
 .config(['$translateProvider', '$localStorageProvider', '$translatePartialLoaderProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', '$compileProvider', 'ngMetaProvider', 'ENV', 'socialshareConfProvider',
   function($translateProvider, $localStorageProvider, $translatePartialLoaderProvider, ezfbProvider, $mdAriaProvider, $locationProvider, $compileProvider, ngMetaProvider, ENV, socialshareConfProvider) {
@@ -134,10 +149,19 @@ angular.module('listnride', [
       // top level domain, will be used in future
       var topLevelDomain = domain[domain.length - 1];
       var retrievedLanguage = "";
-      // select the language
-      // either get from top domain or select the english version
-      if (availableLanguages.indexOf(topLevelDomain) >= 0) retrievedLanguage = topLevelDomain;
-      else retrievedLanguage = defaultLanguage;
+
+      // using localhost
+      if (host.indexOf("localhost") >= 0 || host[0].match('localhost')) {
+        retrievedLanguage = $localStorageProvider.get('selectedLanguage') ? $localStorageProvider.get('selectedLanguage') : defaultLanguage;
+      }
+      // staging or production
+      else {
+        // select the language
+        // either get from top domain or select the english version
+        if (availableLanguages.indexOf(topLevelDomain) >= 0) retrievedLanguage = topLevelDomain;
+        else retrievedLanguage = defaultLanguage;
+      }
+
       return retrievedLanguage;
     };
 

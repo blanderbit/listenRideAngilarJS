@@ -841,7 +841,10 @@
 				customOpenAnimation: null,
 				customCloseAnimation: null,
 				customArrowPrevSymbol: null,
-				customArrowNextSymbol: null
+				customArrowNextSymbol: null,
+				lnrIsWidthStatic: false,
+				lnrShowTimeDom: true,
+				lnrSingleMonthMinWidth: 480
 			},opt);
 
 		opt.start = false;
@@ -856,7 +859,7 @@
 		if (opt.isTouchDevice) opt.hoveringTooltip = false;
 
 		//show one month on mobile devices
-		if (opt.singleMonth == 'auto') opt.singleMonth = $(window).width() < 480;
+		if (opt.singleMonth == 'auto') opt.singleMonth = $(window).width() < opt.lnrSingleMonthMinWidth;
 		if (opt.singleMonth) opt.stickyMonths = false;
 
 		if (!opt.showTopbar) opt.autoClose = true;
@@ -1285,7 +1288,7 @@
 		}
 
 		function open(animationTime)
-		{
+		{	
 			calcPosition();
 			redrawDatePicker();
 			checkAndSetDefaultValue();
@@ -1347,6 +1350,7 @@
 
 		function updateCalendarWidth()
 		{
+			if (opt.lnrIsWidthStatic) return;
 			var gapMargin = box.find('.gap').css('margin-left');
 			if (gapMargin) gapMargin = parseInt(gapMargin);
 			var w1 = box.find('.month1').width();
@@ -1629,7 +1633,7 @@
 			if (opt.start && !opt.end)
 			{
 				var day = $("div.day[time=" + opt.start + "]"); //TODO: Added by DY
-				anyReservedDays(day); //
+				anyReservedDays(day);
 
 				box.find('.day.toMonth.valid').each(function()
 				{
@@ -1743,31 +1747,29 @@
 
 		function anyReservedDays(day)
 		{
-			var days = $("div.day.toMonth");
+			var days = $(box).find("div.day.toMonth");
 			if (day.length == 0 || days[0].attributes.time.value > day[0].attributes.time.value) return;
-			var lastDay = [days[days.length - 1]];
-			var start = day[0].attributes.time.value;
-			var end = lastDay[0].attributes.time.value;
-			var totalDays = Math.abs( daysFrom1970(start) - daysFrom1970(end) );
-			var i = 0;
-			while( i < totalDays )
+			var totalDays = days.length - 1;
+			var currentDay = _.findIndex(days, day[0]);
+			while (currentDay < totalDays )
 			{
-				if ($(day).hasClass('date-reserved')) return markTmpInvalid(day, totalDays - i);
-				var nextDay = parseInt(day[0].attributes.time.value) + 86400000;
-				day = $("div.day[time=" + nextDay + "]");
-				i++;
+				if ($(day).hasClass('date-reserved')) return markTmpInvalid(totalDays, days, currentDay);
+				day = $(days).eq(currentDay + 1)
+				currentDay++;
 			}
 		}
 
-		function markTmpInvalid(firstDay, totalDays)
+		// Temporary disable dates after invalid dates (reserved, unavailable)
+		// Starts when user check first date in a range
+		// When the user finished selection, we should clear our special classes by updateSelectableRange
+		function markTmpInvalid(totalDays, days, currentDay)
 		{
-			var day = firstDay;
-			var i = 0;
+			var i = currentDay;
 			while( i <= totalDays )
 			{
-				if (!$(day).hasClass('invalid')) $(day).addClass('invalid tmp').removeClass('valid');
-				var nextDay = parseInt(day[0].attributes.time.value) + 86400000;
-				day = $("div.day[time=" + nextDay + "]");
+				if (!$(days).eq(i).hasClass('invalid')) {
+					$(days).eq(i).addClass('invalid tmp').removeClass('valid');
+				}
 				i++;
 			}
 			$("span.next").addClass('disabled');
@@ -2273,15 +2275,18 @@
 
 			}
 			//+'</div>'
-			html +=	'<div style="clear:both;height:0;font-size:0;"></div>' +
-				'<div class="time">' +
-				'<div class="time1"></div>';
-			if ( ! opt.singleDate ) {
-				html += '<div class="time2"></div>';
+			if (opt.lnrShowTimeDom) 
+			{
+				html +=	'<div style="clear:both;height:0;font-size:0;"></div>' +
+					'<div class="time">' +
+					'<div class="time1"></div>';
+				if ( ! opt.singleDate ) {
+					html += '<div class="time2"></div>';
+				}
+				html += '</div>' +
+					'<div style="clear:both;height:0;font-size:0;"></div>' +
+					'</div>';
 			}
-			html += '</div>' +
-				'<div style="clear:both;height:0;font-size:0;"></div>' +
-				'</div>';
 
 			html += '<div class="footer">';
 			if (opt.showShortcuts)
@@ -2473,7 +2478,7 @@
 		}
 
 		function toLocalTimestamp(t)
-		{
+		{	
 			if (moment.isMoment(t)) t = t.toDate().getTime();
 			if (typeof t == 'object' && t.getTime) t = t.getTime();
 			if (typeof t == 'string' && !t.match(/\d{13}/)) t = moment(t,opt.format).toDate().getTime();

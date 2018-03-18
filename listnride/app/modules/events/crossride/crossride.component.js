@@ -7,12 +7,11 @@ angular.module('crossride',[]).component('crossride', {
     function CrossrideController(api, $tpl, ENV) {
       var crossride = this;
       $tpl.addPart(ENV.staticTranslation);
-      api.get('/rides?family=9').then(
+      api.get('/rides?family=29').then(
         function(response) {
           crossride.bikes = response.data;
         },
         function(error) {
-          console.log("Error retrieving User", error);
         }
       );
     }

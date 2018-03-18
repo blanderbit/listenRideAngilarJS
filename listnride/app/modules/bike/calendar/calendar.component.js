@@ -5,6 +5,7 @@ angular.module('bike').component('calendar', {
   bindings: {
     bikeId: '<',
     bikeFamily: '<',
+    bikeAvailabilities: '<',
     userId: '<',
     priceHalfDay: '<',
     priceDay: '<',
@@ -32,7 +33,6 @@ angular.module('bike').component('calendar', {
       var calendar = this;
       calendar.authentication = authentication;
       calendar.requested = false;
-      console.log(calendar.bikeFamily);
 
       calendar.$onChanges = function (changes) {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
@@ -88,6 +88,11 @@ angular.module('bike').component('calendar', {
         dateChange(calendar.startDate, calendar.endDate);
       };
 
+      calendar.onBooking = function(){
+        $mdDialog.hide();
+        $state.go('booking', {bikeId: calendar.bikeId, startDate: calendar.startDate, endDate: calendar.endDate});
+      };
+
       calendar.onBikeRequest = function() {
         $mdDialog.hide();
         calendar.requested = true;
@@ -132,26 +137,32 @@ angular.module('bike').component('calendar', {
       calendar.event.pickupSlotId;
       calendar.event.returnSlotId;
 
-      calendar.event.familyId = 24;
+      calendar.event.familyId = 29;
 
       var slotDuration = 1;
-      var eventYear = 2017;
-      var eventMonth = 9;   // Months start at 0, so February = 1
+      var eventYear = 2018;
+      var eventMonth = 2;   // Months start at 0, so February = 1
 
 
       // Calendar Slots are currently set for Supercross Munich
       calendar.event.slots = [
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 14, month: eventMonth, year: eventYear, text: "09:00 - 11:00", hour: 9},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 14, month: eventMonth, year: eventYear, text: "11:00 - 13:00", hour: 11},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 14, month: eventMonth, year: eventYear, text: "13:00 - 15:00", hour: 13},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 14, month: eventMonth, year: eventYear, text: "15:00 - 17:00", hour: 15},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 14, month: eventMonth, year: eventYear, text: "17:00 - 18:00", hour: 17},
-        {overnight: false, reserved: false, pickupEnabled: false, returnDisabled: true, day: 14, month: eventMonth, year: eventYear, text: "18:00", hour: 18},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 15, month: eventMonth, year: eventYear, text: "09:00 - 11:00", hour: 9},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 15, month: eventMonth, year: eventYear, text: "11:00 - 13:00", hour: 11},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 15, month: eventMonth, year: eventYear, text: "13:00 - 15:00", hour: 13},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 15, month: eventMonth, year: eventYear, text: "15:00 - 17:00", hour: 15},
-        {overnight: false, reserved: false, pickupEnabled: false, returnDisabled: true, day: 15, month: eventMonth, year: eventYear, text: "17:00", hour: 17}
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "10:00 - 11:00", hour: 10},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "11:00 - 12:00", hour: 11},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "12:00 - 13:00", hour: 12},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "13:00 - 14:00", hour: 13},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "14:00 - 15:00", hour: 14},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "15:00 - 16:00", hour: 15},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "16:00 - 17:00", hour: 16},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "17:00 - 18:00", hour: 17},
+        {overnight: false, reserved: false, pickupEnabled: false, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "18:00 - 19:00", hour: 18},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "10:00 - 11:00", hour: 10},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "11:00 - 12:00", hour: 11},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "12:00 - 13:00", hour: 12},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "13:00 - 14:00", hour: 13},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "14:00 - 15:00", hour: 14},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "15:00 - 16:00", hour: 15},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "16:00 - 17:00", hour: 16},
+        {overnight: false, reserved: false, pickupEnabled: false, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "17:00 - 18:00", hour: 17},
       ];
 
       calendar.event.changePickupSlot = function() {
@@ -467,8 +478,21 @@ angular.module('bike').component('calendar', {
       function dateClosed(date) {
         if (openingHoursAvailable()) {
           return _.isEmpty(calendar.bikeOwner.opening_hours.hours[getWeekDay(date)]);
+        } else if (!_.isEmpty(calendar.bikeAvailabilities)) {
+          return bikeNotAvailable(date);
         }
         return false
+      }
+
+      function bikeNotAvailable(date) {
+        var result = false;
+        _.forEach(calendar.bikeAvailabilities, function(slot) {
+          var start_at = moment(slot.start_date).subtract(1, 'd');
+          var end_at = moment(slot.start_date).add(slot.duration, 'd');
+          if (result) return result;
+          result = result || moment(date).isBetween(start_at, end_at, null, '[]') // all inclusive
+        });
+        return result
       }
 
       function openingHoursAvailable() {

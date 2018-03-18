@@ -6,7 +6,7 @@
 
 .lnr-verification-modal .verif-desktop {
     min-height: 470px;
-    min-width: 726px;
+    max-width: 726px;
 }
 
 .lnr-verification-modal .label {

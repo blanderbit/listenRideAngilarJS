@@ -1,3 +1,4 @@
+"use strict";
 module.exports = function () {
     var path = {
         index: 'index.html',
@@ -8,6 +9,7 @@ module.exports = function () {
             base: '<base href="/">',
             constant: 'app.constants.js',
             index: './index.html',
+            indexShop: './index-shop.html',
             templates: './app/modules/**/*.html',
             serviceTemplate: './app/services/**/*.html',
             js: ['./app/*.js', './app/**/*.js', '!**/*test.js'],
@@ -31,8 +33,10 @@ module.exports = function () {
         dist: {
             root: './dist/',
             app: './dist/app.min.js',
+            appShop: './dist/app-shop.min.js',
             vendors: './dist/vendors.min.js',
             index: './dist/index.html',
+            indexShop: './dist/index-shop.html',
             templatesCache: './dist/**/*.tpl.min.js',
             images: './dist/app/assets/ui_images',
             icons: './dist/app/assets/ui_icons',
@@ -40,6 +44,7 @@ module.exports = function () {
             fonts: './dist/app/assets/fonts/',
             js: './dist/*.min.js',
             source: 'app.min.js',
+            sourceShop: 'app-shop.min.js',
             sourceVendors: 'vendors.min.js',
             css: './dist/**/.min.css',
             i18n: './dist/app/i18n',
@@ -71,11 +76,11 @@ module.exports = function () {
                 root: './js_modules/lnr-shop-integration/dist/',
                 oldJs: './js_modules/lnr-shop-integration/dist/lnr-embed.min.js',
                 oldSource: 'lnr-embed.min.js',
-                js: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.js',
+                js: './js_modules/lnr-shop-integration/dist/lnr-shop-integration_staging.min.js',
                 html: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.html',
-                source: 'lnr-shop-integration.min.js',
-                style: './js_modules/lnr-shop-integration/dist/lnr-shop-integration.min.css',
-                css: 'lnr-shop-integration.min.css'
+                source: 'lnr-shop-integration_staging.min.js',
+                style: './js_modules/lnr-shop-integration/dist/lnr-shop-integration_staging.min.css',
+                css: 'lnr-shop-integration_staging.min.css'
             },
         },
         lnrShopSolution: {
@@ -103,6 +108,7 @@ module.exports = function () {
             'dist/app/index.html',
             'dist/app/vendors.min.js',
             'dist/app.min.js',
+            'dist/app-shop.min.js',
             'dist/modules.tpl.min.js',
             'dist/services.tpl.min.js',
             'dist/vendors.min.js',
@@ -116,7 +122,15 @@ module.exports = function () {
         watchers: ['lint',
             'clean',
             'scripts'
-        ]
+        ],
+        htmlMinifyOptions: {
+            collapseWhitespace: true,
+            removeComments: true
+        },
+        middleware: {
+            file: '../index.js',
+            root: "../",
+        }
     };
     var environments = {
         local: {
@@ -132,7 +146,8 @@ module.exports = function () {
                     userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com",
                     defaultTranslation: 'default',
-                    staticTranslation: 'static'
+                    staticTranslation: 'static',
+                    btKey: 'sandbox_jcmqgjqd_t4ptn54mswxmpnd5'
                 }
             },
             imageOptions: {
@@ -154,7 +169,8 @@ module.exports = function () {
                     userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com",
                     defaultTranslation: 'default',
-                    staticTranslation: 'static'
+                    staticTranslation: 'static',
+                    btKey: 'sandbox_jcmqgjqd_t4ptn54mswxmpnd5'
                 }
             },        
             imageminOptions: {
@@ -176,7 +192,8 @@ module.exports = function () {
                     userEndpoint: 'https://api.listnride.com/v2/users/',
                     webappUrl: "http://www.listnride.com",
                     defaultTranslation: 'default',
-                    staticTranslation: 'static'
+                    staticTranslation: 'static',
+                    btKey: 'production_xwwb75fg_h63v2c4vq6tbjq58'
                 }
             },
             imageminOptions: {

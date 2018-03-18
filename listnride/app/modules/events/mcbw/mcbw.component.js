@@ -17,21 +17,19 @@ angular.module('mcbw',[]).component('mcbw', {
         radius: 500
       };
 
-      api.get('/rides?family=10').then(
+      api.get('/users/1886').then(
         function (success) {
-          var bikes = success.data;
-
-          for (var i=0; i<bikes.length; i++) {
-            if (bikes[i].id >= 621 && bikes[i].id <= 627) {
-              mcbw.bikes1.push(bikes[i]);
-            }
-            else if (bikes[i].id >= 616 && bikes[i].id <= 620) {
-              mcbw.bikes2.push(bikes[i]);
-            }
-          }
+          mcbw.bikes1 = success.data.rides;
         },
         function (error) {
-          console.log('Error fetching Bikes');
+        }
+      );
+
+      api.get('/rides?family=8').then(
+        function (success) {
+          mcbw.bikes2 = success.data;
+        },
+        function (error) {
         }
       );
 

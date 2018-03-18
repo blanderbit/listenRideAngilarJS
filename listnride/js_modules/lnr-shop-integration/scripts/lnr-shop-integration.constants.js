@@ -1,19 +1,37 @@
 var lnrConstants = {
-  env: 'production', // options: staging, production
-
+  // environments: staging, production
+  env: 'staging',
+  version: '?1.007',
   // shop solution for staging and production
-  stagingShopUrl: "https://listnride-staging.herokuapp.com/v2/shop_solutions",
-  productionShopUrl: "https://api.listnride.com/v2/shop_solutions",
-
+  shopUrl: {
+    "staging": {
+      "en": "https://www.staging.listnride.com/booking",
+      "de": "https://www.staging.listnride.de/booking",
+      "nl": "https://www.staging.listnride.nl/booking",
+      "es": "https://www.staging.listnride.es/booking",
+      "it": "https://www.staging.listnride.it/booking"
+    },
+    "production": {
+      "en": "https://www.listnride.com/booking",
+      "de": "https://www.listnride.de/booking",
+      "nl": "https://www.listnride.nl/booking",
+      "es": "https://www.listnride.es/booking",
+      "it": "https://www.listnride.it/booking"
+    }
+  },
   // users for staging and production
-  staging_users: "https://listnride-staging.herokuapp.com/v2/users/",
-  production_users: "https://api.listnride.com/v2/users/",
-
+  users: {
+    "staging": "https://listnride-staging.herokuapp.com/v2/users/",
+    "production": "https://api.listnride.com/v2/users/"
+  },
   // root url for svg files
   svgUrlRoot: 'https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/biketype_',
-
-  lnrStyles: "https://s3.eu-central-1.amazonaws.com/listnride-cdns/lnr-shop-integration.min.css",
-  lnrStylesLocal: "styles/lnr-shop-integration.css",
+  // local, staging and production styles
+  lnrStyles: {
+    "local": "styles/lnr-shop-integration.css",
+    "staging": "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration_staging.min.css",
+    "production": "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.css"
+  },
   introText: {
     // english intro text
     en: 'The bikes below are currently for you available to rent. ' +
@@ -29,7 +47,6 @@ var lnrConstants = {
       'U kunt de fietsen eenvoudig online boeken, door op de gewenst fiets te klikken. ' +
       'De fiets is na de boeking voor uw gereserveerd. '
   },
-
   // translation object
   translate: {
     allLocations: {
@@ -40,12 +57,11 @@ var lnrConstants = {
     },
     allSizes: {
       "en": 'All sizes',
-      "de": 'Alle Gr&ouml;&beta;en',
+      "de": 'Alle Gr&ouml;&szlig;en',
       "nl": 'Alle maten',
       "selected": {}
     }
   },
-
   // map of the categories for en, de and nl languages
   subCategory: {
     // subcategory - english
@@ -166,20 +182,17 @@ var lnrConstants = {
       }
     }
   },
-
   // initialize rides, id and language for all users
   defaultRideSizes: [155, 165, 175, 185, 195],
   sizes: {},
   rides: {},
   userId: {},
   userLang: {},
-
   // style for disabling a dropdown element
   disabledButtonCss: {
     "pointer-events": "none",
     "color": "#c6c6c6"
   },
-
   // compatibility mode for old users
   isSingleUserMode: false
 };

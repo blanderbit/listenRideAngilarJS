@@ -33,18 +33,25 @@ angular.module('user',[]).component('user', {
             }
             user.rating = Math.round(user.rating);
             if (user.openingHoursEnabled) setOpeningHours();
-  
-            $translate(["user.meta-title", "user.meta-description"] , { name: user.user.first_name })
-            .then(function(translations) {
-              ngMeta.setTitle(translations["user.meta-title"]);
-              ngMeta.setTag("description", translations["user.meta-description"]);
-            });
+
+            generateMetaDescription(user.user.has_business);
           }
         },
         function(error) {
-          console.log("Error retrieving User", error);
         }
       );
+
+      function generateMetaDescription(isCompany) {
+        var title = isCompany ? "user.company-meta-title" : "user.meta-title";
+        var description = isCompany ? "user.company-meta-description" : "user.meta-description";
+        var params = isCompany ? { company: user.user.business.company_name } : { name: user.user.first_name };
+
+        $translate([title, description] , params)
+          .then(function(translations) {
+            ngMeta.setTitle(translations[title]);
+            ngMeta.setTag("description", translations[description]);
+          });
+      }
 
       function setOpeningHours() {
         if (!user.anyHours) return;
