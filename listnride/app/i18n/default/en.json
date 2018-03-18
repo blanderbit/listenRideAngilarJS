@@ -115,7 +115,9 @@
     "confirm": "Confirm",
     "confirmation": "Confirmation",
     "confirmation-text": "Are you sure?",
-    "loading": "Loading"
+    "loading": "Loading",
+    "today": "Today",
+    "yesterday": "Yesterday"
   },
   "meta": {
     "cities": {
@@ -283,6 +285,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Pay secure with",
+    "agree-terms": "With 'Request Bike' you agree to the",
+    "agree-terms-link": "listnride terms",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
       "call-us": "Call us +49 (0)30-120870330, monday to friday 9-18pm. ",
@@ -302,6 +306,7 @@
     "details": {
       "tab": "2. Personal Details",
       "invoice-address": "Invoice Address",
+      "subtitle": "",
       "verification": "Verification",
       "send-sms": "We'll send you one time sms to your phone.",
       "check-phone": "Please check your phone.",
@@ -360,18 +365,20 @@
     "opening-hours-error": "Could not save opening hours.",
     "uniq-phone": "Phone number already registered in our system.",
     "pending-requests": "Looks like you have an open request for this bike. Before you can delete the bike you need to accept or cancel it.",
-    "account-deleted": "Your account has been deleted",
+    "account-deleted": "Your account has been canceled",
     "enter-email": "Please enter your email",
     "duplicate-start": "Duplication process started",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
-    "bike-deleted": "Bike successfully deleted"
+    "bike-deleted": "Bike successfully deleted",
+    "range-success-delete": "Availability range successfully deleted",
+    "availability-success-saved": "Availability successfully saved"
   },
   "settings": {
     "settings": "Settings",
     "profile": "Profile",
     "invite": "Invite Friends",
     "account": "Account",
-    "delete-account": "Delete Account",
+    "delete-account": "Cancel Account",
     "delete-account-description": "Here you can delete your listnride account. This step can not be undone.",
     "delete-account-sure": "Are you really sure?",
     "delete-account-sure-description": "This step can not be undone.",
@@ -491,7 +498,7 @@
     "book": "Book",
     "rating": "Rating",
     "listChat": "Request by {{user.first_name}}",
-    "rideChat": "Request at {{lister.first_name}}",
+    "rideChat": "Request to {{lister.first_name}}",
     "ratings": {
       "title": "How did you like the overall experience?",
       "description": "Trust and Safety are our paramount concern. By writing a short review, you'll help the whole community.",
@@ -533,7 +540,7 @@
     "10": "Your request was cancelled by system"
   },
   "rideChat": {
-    "1": "You would like to rent the <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> by {{lister.first_name}} {{lister.last_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
+    "1": "You would like to rent the <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{lister.first_name}} {{lister.last_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
     "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.phone_number}},<br>Address: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} has confirmed the return of the ride and gave you a review. Finally, please also rate the ride. This helps our community a lot and completes the rental.",
     "6": "Thanks for rating, the rental was successfully completed.",
@@ -571,15 +578,25 @@
     "signing-up-accept-tac": "By signing up I accept the",
     "errors": {
       "password-length": "Password should be 6-30 characters",
+      "password-length-xs": "6-30 characters",
       "password-missing": "Please provide a password",
+      "password-missing-xs": "Password required",
       "valid-email": "Please enter a valid email address",
+      "valid-email-xs": "Invalid email",
       "empty-email": "Please enter your email address",
+      "empty-email-xs": "Email required",
       "empty-last-name": "Please enter your last name",
+      "empty-last-name-xs": "Last name required",
       "empty-first-name": "Please enter your first name",
+      "empty-first-name-xs": "First name required",
       "max-size-last-name": "Last name shouldn't exceed 30 characters",
+      "max-size-last-name-xs": "Exceeds 30 characters",
       "max-size-first-name": "First name shouldn't exceed 20 characters",
+      "max-size-first-name-xs": "Exceeds 20 characters",
       "empty-company-name": "Please enter your company name",
-      "min-size-company-name": "Company name should be longer than 2 characters "
+      "empty-company-name-xs": "Company name required",
+      "min-size-company-name": "Company name should be longer than 2 characters ",
+      "min-size-company-name-xs": "Alteast 3 characters "
     }
   },
   "home": {
@@ -870,8 +887,8 @@
     "download-csv": "Download CSV",
     "download-pdf": "Download PDF",
     "no-rentals": "You had no rentals yet",
-    "as-lister": "As Lister",
-    "as-rider": "As Rider",
+    "as-lister": "As lister",
+    "as-rider": "As rider",
     "no-rides": "You had no rides yet"
   },
   "invite-landing": {
@@ -961,5 +978,15 @@
     "kids": "kids bikes",
     "electro": "electric bikes",
     "special": "special bikes"
+  },
+  "availability": {
+    "availability": "Availability",
+    "modal-title": "When is your bike not available?",
+    "start-from": "Starting from",
+    "end-at": "Ending at",
+    "add-another-date": "Add another date",
+    "submit-btn": "Ok",
+    "submit-btn-save": "Save",
+    "choose-range": "Choose your date range"
   }
 }

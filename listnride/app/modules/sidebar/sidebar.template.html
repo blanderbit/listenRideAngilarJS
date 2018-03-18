@@ -1,9 +1,17 @@
-<md-sidenav class="md-sidenav-right" md-disable-scroll-target="body" md-component-id="right" layout="column" layout-align="center none" md-theme="lnr-dark">
-  <md-content layout="column">
+<md-sidenav class="md-sidenav-right" md-disable-scroll-target="body" md-component-id="right" layout="column" layout-align="center none"
+  md-theme="lnr-dark">
+  <md-content layout="column" layout-align="start stretch" class="full-height">
+    <div layout="row" layout-margin layout-align="start start">
+        <md-button class="md-icon-button" ng-click="sidebar.toggle()">
+            <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+    </div>
+    <div layout="column" layout-align="center center" class="full-height">
       <div layout="row" layout-margin layout-align="center center">
-        <a ui-sref="user({userId: sidebar.userId})" ng-click="sidebar.toggle()" ng-if="sidebar.authentication.loggedIn()"><img class="lnr-profile-md" ng-src="{{sidebar.authentication.profilePicture()}}"></a>
+        <a ui-sref="user({userId: sidebar.userId})" ng-click="sidebar.toggle()" ng-if="sidebar.authentication.loggedIn()">
+          <img class="lnr-profile-md" ng-src="{{sidebar.authentication.profilePicture()}}">
+        </a>
       </div>
-
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="requests" ng-click="sidebar.toggle()">{{ 'shared.requests' | translate }}</md-button>
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="listings" ng-click="sidebar.toggle()">{{ 'listings.my-bikes' | translate }}</md-button>
       <md-button ng-if="!sidebar.authentication.loggedIn()" ng-click="sidebar.toggle(); sidebar.authentication.showSignupDialog()">{{ 'forms.sign-up' | translate }}</md-button>
@@ -18,5 +26,6 @@
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="invoices" ng-click="sidebar.toggle();">{{ 'invoices.billing' | translate }}</md-button>
       <md-divider ng-if="sidebar.authentication.loggedIn()"></md-divider>
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="home" ng-click="sidebar.toggle(); sidebar.authentication.logout()">{{ 'forms.log-out' | translate }}</md-button>
-    </md-content>
+    </div>
+  </md-content>
 </md-sidenav>

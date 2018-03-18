@@ -5,10 +5,10 @@
         md-no-pagination
         md-dynamic-height
         md-no-ink
+        lnr-md-focus-tabs="booking.selectedIndex"
         md-selected="booking.selectedIndex"
         ng-hide="booking.hidden"
         class="lnr-progress-tabs booking"
-        style="overflow: visible;"
       >
         <!-- sign-in data tab -->
         <signup-tab></signup-tab>
@@ -36,7 +36,7 @@
           user="booking.user">
         </receipt>
         <div
-          class="booking__next-step"
+          class="booking__next-step lnr-margin-lrg"
           layout="column">
           <div 
             layout="row"
@@ -44,9 +44,15 @@
             class="lnr-margin-lrg lnr-mb-0"
             hide-gt-sm
             ng-hide="booking.selectedIndex !== 3">
-            <h2 class="md-subhead">Total</h2>
-            <span>{{ booking.total | currency:"€":2 }}</span>
+            <span class="md-subhead">{{ 'shared.total' | translate }}</span>
+            <span class="md-subhead">{{ booking.total | currency:"€":2 }}</span>
           </div>
+          <p 
+            ng-hide="booking.selectedIndex !== 3"
+            class="md-body-1 lnr-margin-lrg lnr-mb-0 lnr-center booking__terms">
+             {{ 'booking.agree-terms' | translate }}
+            <a ui-sref="terms" target="_blank">{{ 'booking.agree-terms-link' | translate }}</a>
+          </p>
           <md-button
             class="md-raised md-primary lnr-margin-lrg"
             ng-disabled="booking.nextDisabled()"
@@ -57,13 +63,13 @@
           </md-button>
         </div>
       </div>
-      <div layout="row" layout-align="end none">
+      <div layout="row" layout-align="end center" class="lnr-margin-top lnr-no-padding">
         <img
           class="md-card-image lnr-request__img-methods"
           ng-src="app/assets/ui_icons/lnr_ico_lock.svg"
           alt="Secure"
         >
-        <div style="margin: 0 16px">
+        <div style="margin-left: 8px">
           {{ 'booking.shopping' | translate }}
         </div>
       </div>
@@ -97,7 +103,7 @@
     <div class="lnr-section-title mt0" layout="column" layout-align="center center">
       <p class="md-body-2">
         <b>{{ 'booking.footer.questions' | translate }}</b><br>
-        {{ 'booking.footer.call-us' | translate }}<a href="mailto:support@listandride.com">{{ 'booking.footer.email-us' | translate }}</a>.</p>
+        {{ 'booking.footer.call-us' | translate }}<a href="mailto:contact@listandride.com">{{ 'booking.footer.email-us' | translate }}</a>.</p>
       <div class="lnr-row-images" layout="row" layout-align="center center">
         <div class="lnr-row-images__item" layout="column" layout-align="center center">
           <img ng-src="app/assets/ui_images/request-flow/lnr_supportThumb_topbias@2x.png" alt="Tobias">

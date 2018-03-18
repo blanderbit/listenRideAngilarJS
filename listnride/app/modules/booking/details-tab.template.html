@@ -3,6 +3,7 @@
   label="{{ 'booking.details.tab' | translate }} {{ details.parent.tabCompleted(1) }}"
   layout="row"
   ng-disabled="details.parent.tabsDisabled"
+  md-on-select="details.parent.onTabChanged()"
 >
   <div class="spacer-xs"></div>
   <md-content layout="column" style="overflow: visible;">
@@ -12,9 +13,10 @@
          layout-padding>
       <div class="lnr-list-form"
            layout="column"
-           flex-xs="100">
+           flex="100">
         <h2 class="md-title">{{ 'booking.details.invoice-address' | translate }}</h2>
-        <br>
+        <p class="md-body-1">{{ 'booking.details.subtitle' | translate }}</p>
+        <div class="spacer-xs"></div>
         <form name="details.parent.detailsForm" novalidate class="md-body-desktop">
           <!-- First name and Last name -->
           <div class="lnr-input-containers" layout="row" ng-hide="true">
@@ -98,11 +100,13 @@
             </md-input-container>
           </div>
 
-          <h2 class="md-subhead">{{ 'booking.details.verification' | translate }}</h2>
-          <p ng-show="details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">{{ 'booking.details.send-sms' | translate }}</p>
-          <p ng-show="!details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">{{ 'booking.details.check-phone' | translate }}</p>
-          <p ng-show="details.parent.phoneConfirmed === 'success'">{{ 'booking.details.success-code' | translate }}</p>
+          <div class="spacer-xs"></div>
+          <h3 class="md-title">{{ 'booking.details.verification' | translate }}</h3>
+          <p class="lnr-no-margin" ng-show="details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">{{ 'booking.details.send-sms' | translate }}</p>
+          <p class="lnr-no-margin" ng-show="!details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">{{ 'booking.details.check-phone' | translate }}</p>
+          <p class="lnr-no-margin text-success" ng-show="details.parent.phoneConfirmed === 'success'">{{ 'booking.details.success-code' | translate }}</p>
 
+          <div class="spacer-xs"></div>
           <!-- Phone Number and Send Button -->
           <div class="lnr-input-containers"
                layout="column" 
@@ -196,8 +200,7 @@
                   >
                 </md-input-container>
               </div>
-              <span flex="5"></span>
-              <div layout="row" flex="30" flex-xs="50" layout-align="start start">
+              <div layout="row" flex="30" flex-xs="50" layout-align="start start" class="lnr-margin-left">
                 <div ng-show="details.parent.phoneConfirmed === 'progress'" class="text-default">
                   {{ 'booking.details.enter-code' | translate }}
                 </div>
@@ -207,7 +210,7 @@
               </div>
             </div>
 
-            <div class="sign-up-links" flex layout="row" layout-align="space-between center">
+            <div class="lnr-margin-top" flex layout="row" layout-align="space-between center">
               <a class="lnr-link" ng-click="details.parent.resendSms()">{{ 'booking.details.resend' | translate }}</a>
             </div>
           </div>

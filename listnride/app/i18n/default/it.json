@@ -115,7 +115,9 @@
     "confirm": "Confermare",
     "confirmation": "Conferma",
     "confirmation-text": "Sei sicuro?",
-    "loading": "Caricamento"
+    "loading": "Caricamento",
+    "today": "Oggi",
+    "yesterday": "Ieri"
   },
   "meta": {
     "cities": {
@@ -275,6 +277,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Pagamento sicuro con",
+    "agree-terms": "Con \"Richiedi la bicicletta\" accetti i",
+    "agree-terms-link": " termini listnride",
     "footer": {
       "questions": "Hai domande sul noleggio della bicicletta?",
       "call-us": "Chaimaci al: +49 (0)30-120870330, Lun-Ven 9-18. ",
@@ -293,7 +297,8 @@
     },
     "details": {
       "tab": "2. Dati personali",
-      "invoice-address": "Il tuo indirizzo di fatturazione ",
+      "invoice-address": "Il tuo indirizzo di fatturazione",
+      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Si prega di verificare",
       "send-sms": "Ti invieremo un SMS sul tuo telefono ",
       "check-phone": "Per favore controlla il tuo telefono ",
@@ -330,7 +335,7 @@
       "invoice-address": "Indirizzo di fatturazione",
       "payment": "Pagamento",
       "redeem-voucher": "Buono sconto",
-      "add": "Add"
+      "add": "Ok"
     }
   },
   "toasts": {
@@ -354,7 +359,9 @@
     "enter-email": "Per favore inserisci la tua email",
     "duplicate-start": "Il processo di duplicazione è iniziato",
     "duplicate-finish": "Processo di duplicazione è terminato. Copie create con successo",
-    "bike-deleted": "Bici cancellata con successo"
+    "bike-deleted": "Bici cancellata con successo",
+    "range-success-delete": "Periodo di disponibilità eliminato con successo",
+    "availability-success-saved": "Disponibilità salvata con successo"
   },
   "settings": {
     "settings": "Impostazioni",
@@ -561,15 +568,25 @@
     "signing-up-accept-tac": "Con l'iscrizione accetto ",
     "errors": {
       "password-length": "La password deve essere tra i 6-30 caratteri",
+      "password-length-xs": "6-30 caratteri",
       "password-missing": "Fornire una password",
+      "password-missing-xs": "Password richiesta",
       "valid-email": "Si prega di inserire un indirizzo email valido",
+      "valid-email-xs": "Indirizzo email non valido",
       "empty-email": "Inserisci il tuo indirizzo email",
+      "empty-email-xs": "Email richiesta",
       "empty-last-name": "Inserisci il tuo cognome",
+      "empty-last-name-xs": "Cognome richiesto",
       "empty-first-name": "Inserisci il tuo nome",
+      "empty-first-name-xs": "Nome richiesto",
       "max-size-last-name": "Il cognome non deve superare i 30 caratteri",
+      "max-size-last-name-xs": "Supera 30 caratteri",
       "max-size-first-name": "Il nome non deve superare i 20 caratteri",
+      "max-size-first-name-xs": "Supera 20 caratteri",
       "empty-company-name": "Inserisci il nome della tua azienda",
-      "min-size-company-name": "Il nome della società dovrebbe essere superiore ai 2 caratteri"
+      "empty-company-name-xs": "Azienda richiesta",
+      "min-size-company-name": "Il nome della società dovrebbe essere superiore ai 2 caratteri",
+      "min-size-company-name-xs": "Altitudine di 3 caratteri"
     }
   },
   "home": {
@@ -951,5 +968,15 @@
     "kids": "Bici da bambino",
     "electro": "E-bikes",
     "special": "Bici speciali"
+  },
+  "availability": {
+    "availability": "Disponibilità",
+    "modal-title": "Quando non è disponibile la tua bicicletta?",
+    "start-from": "A partire da ",
+    "end-at": "Fino a ",
+    "add-another-date": "Aggiungi un'altra data",
+    "submit-btn": "Ok",
+    "submit-btn-save": "Salva",
+    "choose-range": "Scegli il tuo periodo"
   }
 }

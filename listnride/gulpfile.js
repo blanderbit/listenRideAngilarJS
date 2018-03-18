@@ -1,3 +1,5 @@
+"use strict";
+
 var del = require('del');
 var gulp = require('gulp');
 var config = require('./gulp.config.js')();
@@ -10,10 +12,12 @@ var concat = require('gulp-concat');
 var useref = require('gulp-useref');
 var inject = require('gulp-inject');
 var replace = require('gulp-replace');
+var remove = require('gulp-remove-code');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglifyjs');
 var purifyCss = require('gulp-purifycss');
 var imagemin = require('gulp-imagemin');
+var htmlmin = require('gulp-htmlmin');
 var stylish = require('jshint-stylish');
 var minifyCss = require('gulp-clean-css');
 var runSequence = require('run-sequence');
@@ -35,9 +39,9 @@ var env = environments[argvEnv];
 gulp.task('lint', lint);
 
 // html cache related tasks
-gulp.task('inject-templates-modules', injectTemplatesModules);
-gulp.task('cache-templates-modules', cacheTemplatesModules);
-gulp.task('cache-templates-services', cacheTemplatesServices);
+gulp.task('inject-templates', injectTemplates);
+gulp.task('cache-module-templates', cacheModuleTemplates);
+gulp.task('cache-service-templates', cacheServiceTemplates);
 
 // translations, fonts and app constant
 gulp.task('copy-downloadables', copyDownloadables);
@@ -45,13 +49,17 @@ gulp.task('copy-index-dist', copyIndexDist);
 gulp.task('copy-index-tmp', copyIndexTmp);
 gulp.task('copy-index-app', copyIndexApp);
 gulp.task('minify-i18n', minifyI18n);
+gulp.task('html-minify', htmlMinify);
 gulp.task('constants', appConstants);
 gulp.task('translation-constants', translationConstants);
 gulp.task('copy-i18n', copyI18n);
 
 // listnride and vendor scripts
-gulp.task('vendors', vendors);
-gulp.task('scripts-deploy', scriptsDeploy);
+gulp.task('scripts', scripts);
+gulp.task('scripts-production', scriptsProduction);
+gulp.task('scripts-shop-trim', scriptsShopTrim);
+gulp.task('scripts-shop', scriptsShop);
+gulp.task('scripts-minify', scriptsMinify);
 gulp.task('base-tag', baseTag);
 
 // images and fonts
@@ -62,14 +70,15 @@ gulp.task('images', ['images-png', 'images-svg']);
 
 // remove the caches, clean extra folders after running scripts
 gulp.task('clean', clean);
-gulp.task('clean-extras', cleanExtras);
-gulp.task('clean-extras-local', cleanExtrasLocal);
+gulp.task('clean-extra', cleanExtras);
+gulp.task('clean-extra-local', cleanExtrasLocal);
 gulp.task('changes-in-index', changesInIndex);
 gulp.task('watch', watch);
 
 // append revisions to invalidate cache after deployment
 gulp.task('revisions', revisions);
-gulp.task('replace-revisions-index', replaceRevisionsIndex);
+gulp.task('revisions-index', revisionsIndex);
+gulp.task('revisions-index-shop', revisionsIndexShop);
 
 // shop integration related tasks
 gulp.task('resources-lnr-shop-integration', resourcesLnrShopIntegration);
@@ -86,35 +95,38 @@ gulp.task('deploy-lnr-shop-solution', deployLnrShopSolution);
 gulp.task('clean-lnr-shop', cleanLnrShop);
 
 // gulp major tasks
-gulp.task('local', local);
+gulp.task('disable-https', disableHttps);
 gulp.task('default', ['local']);
 gulp.task('deploy', deploy);
+gulp.task('local', local);
 
-// create two new variables for translation provider
+/**
+ * create two new variables for translation provider
+ * @returns {gulp} for chaining
+ */
 function translationConstants() {
     return ngConstant({
-        wrap: false,
-        constants: env.constants,
-        name: env.context.name + '.constant',
-        stream: true,
-    })
+            wrap: false,
+            constants: env.constants,
+            name: env.context.name + '.constant',
+            stream: true,
+        })
         .pipe(rename(path.app.constant))
         .pipe(gulp.dest(path.app.root));
 }
-
 /**
  * helper method for lnrPrefixCss
  */
-scope = postcss(function(css) {
-	css.walkRules(function(rule) {
-		rule.selectors = rule.selectors.map(function(selector) {
-			if (selector.trim().toLowerCase() === 'body') {
-				return scopeSelector;
-			} else {
-				return scopeSelector + ' ' + selector;
-			}
-		});
-	});
+scope = postcss(function (css) {
+    css.walkRules(function (rule) {
+        rule.selectors = rule.selectors.map(function (selector) {
+            if (selector.trim().toLowerCase() === 'body') {
+                return scopeSelector;
+            } else {
+                return scopeSelector + ' ' + selector;
+            }
+        });
+    });
 });
 /**
  * prefixes the styles with
@@ -123,25 +135,25 @@ scope = postcss(function(css) {
  * @returns {callback} callback 
  */
 function lnrPrefixCss(scopeSelectorOption) {
-	scopeSelector = scopeSelectorOption;
-	return es.map(function(file, callback) {
-		if (file.isNull()) {
-			return callback(null, file);
-		}
-		if (file.isBuffer()) {
-			file.contents = new Buffer(scope.process(file.contents).css);
-		}
-		if (file.isStream()) {
-			var through = es.through();
-			var wait = es.wait(function(err, contents) {
-				through.write(scope.process(contents).css);
-				through.end();
-			});
-			file.contents.pipe(wait);
-			file.contents = through;
-		}
-		return callback(null, file);
-	});
+    scopeSelector = scopeSelectorOption;
+    return es.map(function (file, callback) {
+        if (file.isNull()) {
+            return callback(null, file);
+        }
+        if (file.isBuffer()) {
+            file.contents = new Buffer(scope.process(file.contents).css);
+        }
+        if (file.isStream()) {
+            var through = es.through();
+            var wait = es.wait(function (err, contents) {
+                through.write(scope.process(contents).css);
+                through.end();
+            });
+            file.contents.pipe(wait);
+            file.contents = through;
+        }
+        return callback(null, file);
+    });
 }
 /**
  * eslint through all js files
@@ -157,22 +169,22 @@ function lint() {
  * modules.tpl.min.js and services.tpl.min.js reference in index
  * @returns {gulp} for chaining
  */
-function injectTemplatesModules() {
-    return gulp.src(path.dist.index)
-        .pipe(inject(gulp.src(path.dist.templatesCache, {
-            read: false
-        }), {
-            relative: true,
-            removeTags: true
-        }))
+function injectTemplates() {
+    // production
+    gulp.src(path.dist.index)
+        .pipe(inject(gulp.src(path.dist.templatesCache, { read: false }), { relative: true, removeTags: true }))
+        .pipe(gulp.dest(path.dist.root));
+    // shop
+    return gulp.src(path.dist.indexShop)
+        .pipe(inject(gulp.src(path.dist.templatesCache, { read: false }), { relative: true, removeTags: true }))
         .pipe(gulp.dest(path.dist.root));
 }
 /**
  * create templates.js file to serve all html files
- * js cache of html from module/ folder
+ * js cache of html from module folder
  * @returns {gulp} for chaining
  */
-function cacheTemplatesModules() {
+function cacheModuleTemplates() {
     return gulp.src(path.app.templates)
         .pipe(templateCache('modules.tpl.min.js', {
             root: 'app/modules/',
@@ -185,7 +197,7 @@ function cacheTemplatesModules() {
  * js cache of html from services folder
  * @returns {gulp} for chaining
  */
-function cacheTemplatesServices() {
+function cacheServiceTemplates() {
     return gulp.src(path.app.serviceTemplate)
         .pipe(templateCache('services.tpl.min.js', {
             root: 'app/services/',
@@ -225,7 +237,7 @@ function copyDownloadables() {
  * minify and uglify vendors files
  * @returns {gulp} for chaining
  */
-function vendors() {
+function scriptsProduction() {
     return gulp.src(path.app.index)
         .pipe(useref())
         .pipe(gulpIf(path.app.js, uglify()))
@@ -234,12 +246,26 @@ function vendors() {
         .pipe(gulp.dest(path.dist.root));
 }
 /**
- * copy new referenced index file to dist
- * index file with new references to dist folder
+ * copy app-core as app-shop
+ * copy index as index-shop
  * @returns {gulp} for chaining
  */
-function copyIndexDist() {
-    return gulp.src('./app/index.html')
+function scriptsShop() {
+    return gulp.src(path.app.indexShop)
+        .pipe(useref())
+        .pipe(gulpIf(path.app.js, uglify()))
+        .pipe(gulpIf(path.nodeModules, uglify()))
+        .pipe(gulpIf('*.css', minifyCss()))
+        .pipe(gulp.dest(path.dist.root));
+}
+function scriptsShopTrim() {
+    // javascript
+    gulp.src(path.dist.appShop)
+        .pipe(remove({ shop: true }))
+        .pipe(gulp.dest(path.dist.root));
+    // html
+    return gulp.src(path.dist.indexShop)
+        .pipe(remove({ shop: true }))
         .pipe(gulp.dest(path.dist.root));
 }
 /**
@@ -247,16 +273,56 @@ function copyIndexDist() {
  * minify and uglify development files
  * @returns {gulp} for chaining
  */
-function scriptsDeploy() {
+function scriptsMinify() {
+    // production scripts
     gulp.src(path.dist.app)
         .pipe(concat(path.dist.source))
         .pipe(ngAnnotate())
         .pipe(gulp.dest(path.dist.root))
         .pipe(uglify(path.dist.source))
         .pipe(gulp.dest(path.dist.root));
-
+    // shop scripts
+    gulp.src(path.dist.appShop)
+        .pipe(concat(path.dist.sourceShop))
+        .pipe(ngAnnotate())
+        .pipe(gulp.dest(path.dist.root))
+        .pipe(uglify(path.dist.sourceShop))
+        .pipe(gulp.dest(path.dist.root));
+    // vendor
     return gulp.src(path.dist.vendors)
         .pipe(uglify(path.dist.sourceVendors))
+        .pipe(gulp.dest(path.dist.root));
+}
+/**
+ * reflect changes on dist/index
+ * @param {clean~cleanCallback} cb - The callback that handles the response.
+ * @returns {gulp} for chaining
+ */
+function scripts(cb) {
+    return runSequence(
+        'scripts-production',
+        'scripts-shop',
+        'scripts-shop-trim',
+        cb
+    );
+}
+function htmlMinify() {
+    // production
+    gulp.src(path.dist.index)
+    .pipe(htmlmin(path.htmlMinifyOptions))
+    .pipe(gulp.dest(path.dist.root));
+    // shop
+    return gulp.src(path.dist.indexShop)
+    .pipe(htmlmin(path.htmlMinifyOptions))
+    .pipe(gulp.dest(path.dist.root));
+}
+/**
+ * copy new referenced index file to dist
+ * index file with new references to dist folder
+ * @returns {gulp} for chaining
+ */
+function copyIndexDist() {
+    return gulp.src('./app/index.html')
         .pipe(gulp.dest(path.dist.root));
 }
 /**
@@ -270,6 +336,18 @@ function baseTag() {
             'base': path.app.base
         }))
         .pipe(gulp.dest(path.dist.root));
+}
+/**
+ * disable https for local and review apps 
+ * @returns {gulp} for chaining
+ */
+function disableHttps() {
+    // do not disable https for staging and production
+    if ('staging' === processEnv || 'production' === processEnv) { return; }
+    // remove enableHttps method from middleware
+    return gulp.src(path.middleware.file)
+        .pipe(remove({ middleware: true }))
+        .pipe(gulp.dest(path.middleware.root));
 }
 /**
  * copy i18n translations to dist folder
@@ -317,7 +395,7 @@ function imagesPng() {
             progressive: true,
             plugins: [imagemin.optipng(env.imageOptions)]
         }))
-        .pipe(gulp.dest(path.dist.images))
+        .pipe(gulp.dest(path.dist.images));
 }
 /**
  * optimize svg images
@@ -331,13 +409,13 @@ function imagesSvg() {
             interlaced: true,
             plugins: [imagemin.svgo()]
         }))
-        .pipe(gulp.dest(path.dist.icons))
+        .pipe(gulp.dest(path.dist.icons));
 }
 /**
  * clean dist folder
  * before every deployment
- * @returns {gulp} for chaining
  * @param {clean~cleanCallback} cb - The callback that handles the response.
+ * @returns {gulp} for chaining
  */
 function clean(cb) {
     var cleanFiles = [path.dist.root, 'app/app.min.js'];
@@ -407,17 +485,27 @@ function revisions() {
         .pipe(rev())
         .pipe(gulp.dest(path.dist.root))
         .pipe(rev.manifest())
-        .pipe(gulp.dest(path.dist.root))
+        .pipe(gulp.dest(path.dist.root));
 }
 /**
  * replace revision in index file
  * replace js files references in index with revisions
  * @returns {gulp} for chaining
  */
-function replaceRevisionsIndex() {
+function revisionsIndex() {
     var manifest = gulp.src(path.dist.manifest);
     return gulp.src(path.dist.index)
-        .pipe(revReplace({manifest: manifest}))
+        .pipe(revReplace({
+            manifest: manifest
+        }))
+        .pipe(gulp.dest(path.dist.root));
+}
+function revisionsIndexShop() {
+    var manifest = gulp.src(path.dist.manifest);
+    return gulp.src(path.dist.indexShop)
+        .pipe(revReplace({
+            manifest: manifest
+        }))
         .pipe(gulp.dest(path.dist.root));
 }
 /**
@@ -448,7 +536,7 @@ function minifyLnrShopIntegration() {
     // copy template to dist folder
     gulp.src(path.lnrShopIntegration.html)
         .pipe(gulp.dest(path.lnrShopIntegration.dist.root));
-        
+
     // minify source for shop integration
     // copy to dist folder of shop integration
     return gulp.src(path.lnrShopIntegration.js)
@@ -494,10 +582,10 @@ function resourcesLnrShopSolution() {
  * @returns {gulp} chaining
  */
 function concatLnrShopSolution() {
-   return gulp.src(path.lnrShopSolution.html)
+    return gulp.src(path.lnrShopSolution.html)
         .pipe(useref())
         .pipe(gulpIf(path.lnrShopSolution.source, uglify()))
-        .pipe(gulpIf(path.lnrShopSolution.style, minifyCss()))        
+        .pipe(gulpIf(path.lnrShopSolution.style, minifyCss()))
         .pipe(gulp.dest(path.lnrShopSolution.dist.root));
 }
 /**
@@ -562,7 +650,7 @@ function local(cb) {
         'scripts-local',
         'images',
         'watch',
-        cb)
+        cb);
 }
 /**
  * tasks for deployment
@@ -579,22 +667,25 @@ function deploy(cb) {
         'clean',
         'constants',
         'copy-index-tmp',
-        'cache-templates-modules',
-        'cache-templates-services',
+        'cache-module-templates',
+        'cache-service-templates',
         'images',
         'copy-fonts',
-        'vendors',
-        'scripts-deploy',
-        'inject-templates-modules',
+        'scripts',
+        'scripts-minify',
+        'inject-templates',
         'copy-index-app',
         'copy-i18n',
         'minify-i18n',
         'changes-in-index',
         'revisions',
-        'replace-revisions-index',
+        'revisions-index',
+        'revisions-index-shop',
         'base-tag',
+        'html-minify',
         'copy-downloadables',
-        'clean-extras',
-        'clean-extras-local',
+        'clean-extra',
+        'clean-extra-local',
+        'disable-https',
         cb);
-}
+}   

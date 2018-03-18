@@ -1,25 +1,26 @@
 <md-tab class="categories"
         label="{{ 'booking.payment.tab' | translate }} {{ payment.parent.tabCompleted(2) }}"
         layout="row"
-        ng-disabled="payment.parent.tabsDisabled">
+        ng-disabled="payment.parent.tabsDisabled"
+        md-on-select="payment.parent.onTabChanged()">
   <div class="spacer-xs"></div>
   <md-content layout="column">
     <div class="tab-content"
-         style="min-height: 450px;"
+         style="min-height: 250px;"
          layout-align="space-between none"
          layout-padding>
       <div class="lnr-list-form"
            layout="column">
-        <p class="md-title">{{ 'booking.payment.select-method' | translate }}</p>
+        <h3 class="md-title">{{ 'booking.payment.select-method' | translate }}</h2>
         <p class="md-body-1">{{ 'booking.payment.subtitle' | translate }}</p>
         <div class="spacer-xs"></div>
         <md-radio-group ng-model="payment.parent.paymentMethod">
           <md-divider></md-divider>
             <div layout="row">
-              <md-radio-button value="1" class="md-primary lnr-payment-tab-button" flex="80">{{ 'booking.payment.credit-card' | translate }}</md-radio-button>
+              <md-radio-button value="1" class="md-primary md-title lnr-payment-tab-button" flex="80">{{ 'booking.payment.credit-card' | translate }}</md-radio-button>
               <div flex="20" layout="row" layout-align="end center">
                 <img
-                  class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
+                  class="md-card-image lnr-request__img-methods lnr-payment-tab-image lnr-margin-right-double"
                   ng-src="app/assets/ui_icons/lnr_logo_mastercard.svg"
                   alt="Mastercard"
                 >
@@ -92,7 +93,8 @@
                      type="text"
                      maxlength="4"
                      cc-cvc
-                     ng-required="true"/>
+                     ng-required="true"
+                     class="lnr-center"/>
                   <div ng-messages="payment.parent.paymentForm.securityNumber.$error"
                        ng-show="payment.parent.paymentForm.securityNumber.$dirty"
                        role="alert">
@@ -107,7 +109,7 @@
             <div layout="row" layout-align="space-between none">
               <md-radio-button
                 value="2"
-                class="md-primary lnr-payment-tab-button"
+                class="md-primary md-title lnr-payment-tab-button"
                 flex="80"
               >
                 Paypal
@@ -121,7 +123,7 @@
               </div>
             </div>
             <md-button
-              class="md-raised md-primary"
+              class="md-raised md-primary payment__paypal-btn"
               ng-hide="payment.parent.paymentMethod != 2"
               ng-click="payment.parent.openPaypal()"
             >

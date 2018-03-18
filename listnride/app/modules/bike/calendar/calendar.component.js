@@ -5,6 +5,7 @@ angular.module('bike').component('calendar', {
   bindings: {
     bikeId: '<',
     bikeFamily: '<',
+    bikeAvailabilities: '<',
     userId: '<',
     priceHalfDay: '<',
     priceDay: '<',
@@ -477,8 +478,21 @@ angular.module('bike').component('calendar', {
       function dateClosed(date) {
         if (openingHoursAvailable()) {
           return _.isEmpty(calendar.bikeOwner.opening_hours.hours[getWeekDay(date)]);
+        } else if (!_.isEmpty(calendar.bikeAvailabilities)) {
+          return bikeNotAvailable(date);
         }
         return false
+      }
+
+      function bikeNotAvailable(date) {
+        var result = false;
+        _.forEach(calendar.bikeAvailabilities, function(slot) {
+          var start_at = moment(slot.start_date).subtract(1, 'd');
+          var end_at = moment(slot.start_date).add(slot.duration, 'd');
+          if (result) return result;
+          result = result || moment(date).isBetween(start_at, end_at, null, '[]') // all inclusive
+        });
+        return result
       }
 
       function openingHoursAvailable() {
