@@ -114,8 +114,8 @@
     "confirmation": "Bevestiging",
     "confirmation-text": "Weet je het zeker?",
     "loading": "Het laden",
-    "today": "Today",
-    "yesterday": "Yesterday"
+    "today": "Vandaag",
+    "yesterday": "Gisteren"
   },
   "meta": {
     "cities": {
@@ -283,8 +283,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Veilig betalen met",
-    "agree-terms": "With 'Request Bike' you agree to the",
-    "agree-terms-link": "listnride terms",
+    "agree-terms": "Met 'Fiets aanvragen' gaat u akkoord met de",
+    "agree-terms-link": "algemene voorwaarden van listnride",
     "footer": {
       "questions": "Heb je vragen bij het boeken van een fiets?",
       "call-us": "Bel ons op +49 (0)30-120870330, Ma-Vrij 9-18u.",
@@ -343,7 +343,7 @@
       "invoice-address": "Factuuradres",
       "payment": "Betaling",
       "redeem-voucher": "Voucher verzilveren",
-      "add": "Add"
+      "add": "Voeg toe"
     }
   },
   "toasts": {
@@ -591,7 +591,7 @@
       "max-size-first-name-xs": "Overtreft 20 tekens",
       "empty-company-name": "Vul alstublieft uw bedrijfsnaam in",
       "empty-company-name-xs": "Bedrijfsnaam vereist",
-      "min-size-company-name": "Bedrijfsnaam moet langer zijn dan 2 karakters ",
+      "min-size-company-name": "Bedrijfsnaam dient meer dan 2 karakters te hebben ",
       "min-size-company-name-xs": "Ten minste 3 tekens"
     }
   },
