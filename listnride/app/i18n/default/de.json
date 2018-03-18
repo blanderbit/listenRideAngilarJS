@@ -113,7 +113,9 @@
     "confirm": "Bestätigen",
     "confirmation": "Bestätigung",
     "confirmation-text": "Bist du sicher?",
-    "loading": "Laden"
+    "loading": "Laden",
+    "today": "Heute",
+    "yesterday": "Gestern"
   },
   "meta": {
     "cities": {
@@ -281,8 +283,8 @@
   "booking": {
     "shopping": "Sicher bezahlen",
     "pay-secure": "Sicher bezahlen mit",
-    "agree-terms": "With 'Request Bike' you agree to the",
-    "agree-terms-link": "listnride terms",
+    "agree-terms": "Mit \"Rad anfragen\" stimmst du zu:",
+    "agree-terms-link": "listnride AGBs",
     "footer": {
       "questions": "Du hast Fragen rund ums Mieten von Fahrrädern?",
       "call-us": "Ruf uns unter +49 (0)30-120870330, Mo-Fr 9-18 Uhr an. ",
@@ -302,7 +304,6 @@
     "details": {
       "tab": "2. Persönliche Daten",
       "invoice-address": "Rechnungsadresse",
-      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Verifizieren",
       "send-sms": "Wir senden dir eine SMS an dein Telefon.",
       "check-phone": "Bitte prüfe dein Telefon.",
@@ -341,7 +342,7 @@
       "invoice-address": "Rechnungsadresse",
       "payment": "Zahlungsmethode",
       "redeem-voucher": "Rabattcode einlösen",
-      "add": "Add"
+      "add": "Ok"
     }
   },
   "toasts": {
@@ -361,7 +362,7 @@
     "opening-hours-error": "Die Öffnungszeiten konnten nicht gespeichert werden.",
     "uniq-phone": "Telefonnummer ist bereits in unserem System registriert.",
     "pending-requests": "Du hast noch eine offene Anfrage für dieses Rad. Beantworte diese (Ablehnen/ Annehmen) bevor du es entfernen kannst.",
-    "account-deleted": "Dein Account wurde gelöscht",
+    "account-deleted": "Dein Konto wurde gekündigt",
     "enter-email": "Bitte gib deine E-Mail-Adresse ein",
     "duplicate-start": "Vervielfältigungsprozess gestartet",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
@@ -373,9 +374,9 @@
     "settings": "Einstellungen",
     "profile": "Profil",
     "invite": "Freunde einladen",
-    "account": "Account",
-    "delete-account": "Account löschen",
-    "delete-account-description": "Hier kannst du dein listnride Account löschen. Dieser Schritt kann nicht rückgängig gemacht werden.",
+    "account": "Konto",
+    "delete-account": "Konto kündigen",
+    "delete-account-description": "Hier kannst du dein listnride-Konto kündigen. Dieser Schritt kann nicht rückgängig gemacht werden.",
     "delete-account-sure": "Bist du dir wirklich sicher?",
     "delete-account-sure-description": "Dieser Schritt kann leider nicht rückgängig gemacht werden.",
     "delete-account-yes": "Ja, löschen",
@@ -383,8 +384,8 @@
     "availability": "Verfügbarkeit",
     "availability-description": "Du kannst deine Verfügbarkeitszeiten für den Radverleih einstellen",
     "business": "Fahrradgeschäft",
-    "from": "From",
-    "to": "To",
+    "from": "Von",
+    "to": "Bis",
     "mark-as-closed": "Marked all days as closed",
     "change-address-info": "Wenn Sie Ihre Adresse aktualisieren, wird die Adresse Ihrer Fahrräder nicht aktualisiert.",
     "payment-method": "Zahlungsart",
@@ -525,7 +526,7 @@
     "confirm_return": "Rückgabe bestätigen"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} würde gerne dein <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} für mieten. Sobald du die Anfrage annimmst, wird sie gebucht. Vereinbare alle weiteren Details über den Chat.",
+    "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} würde gerne dein <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Sobald du die Anfrage annimmst, wird sie gebucht. Vereinbare alle weiteren Details über den Chat.",
     "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon-Nummer: {{user.phone_number}} <br>Adresse: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
     "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
@@ -533,7 +534,7 @@
     "10": "Ihre Anfrage wurde vom System abgebrochen."
   },
   "rideChat": {
-    "1": "Du würdest gerne {{lister.first_name}} {{lister.last_name}}'s <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, ist das Rad gebucht.",
+    "1": "Du würdest gerne {{lister.first_name}} {{lister.last_name}}s <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, ist das Rad gebucht.",
     "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.phone_number}}<br>Adresse: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} hat die Rückgabe des Rades bestätigt und dich bewertet.<br>Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",
     "6": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
@@ -631,7 +632,7 @@
   },
   "list": {
     "edit-bike": "Rad bearbeiten",
-    "save-changes": "Änderungen Speichern",
+    "save-changes": "Änderungen speichern",
     "list-your-bike": "Rad einstellen",
     "back": "Zurück",
     "next": "Weiter",
@@ -667,7 +668,7 @@
     },
     "accessories": {
       "header": "Welche Zubehör kannst Du zu deinem Rad anbieten?",
-      "hint": "Wähle das Zubehör, dass Du zur Verfügung stellen kannst.",
+      "hint": "Wähle das Zubehör, das du zur Verfügung stellen kannst.",
       "label": "Zubehör",
       "lock": "Schloss",
       "helmet": "Helm",
@@ -678,10 +679,10 @@
     },
     "pictures": {
       "header": "Lade ein paar Fotos hoch",
-      "hint": "Wähle nun ein paar schöne Fotos Deines Rads. Hier sind einige Tipps, wie du deine eigenen Fotos aufnehmen solltest.",
-      "how-to": "Fototipps, wie sich dein Angebot abhebt",
+      "hint": "Wähle nun ein paar schöne Fotos deines Rads. Hier sind einige Tipps, wie du deine eigenen Fotos aufnehmen solltest.",
+      "how-to": "Fototipps, damit sich dein Angebot abhebt",
       "label": "Fotos",
-      "select-images": "Fotos Wählen",
+      "select-images": "Fotos wählen",
       "remove": "Löschen",
       "upload-bike-header": "Lade ein paar Fotos hoch",
       "under-min-size": "Einige Bilder haben eine kleinere Abmessung kleiner als 1500x1000:",

@@ -114,7 +114,9 @@
     "confirm": "Confirm",
     "confirmation": "Confirmation",
     "confirmation-text": "Are you sure?",
-    "loading": "Loading"
+    "loading": "Loading",
+    "today": "Today",
+    "yesterday": "Yesterday"
   },
   "meta": {
     "cities": {
@@ -303,7 +305,7 @@
     "details": {
       "tab": "2. Personal Details",
       "invoice-address": "Invoice Address",
-      "subtitle": "Here is a subline regarding your contact information.",
+      "subtitle": "",
       "verification": "Verification",
       "send-sms": "We'll send you one time sms to your phone.",
       "check-phone": "Please check your phone.",
@@ -362,7 +364,7 @@
     "opening-hours-error": "Could not save opening hours.",
     "uniq-phone": "Phone number already registered in our system.",
     "pending-requests": "Looks like you have an open request for this bike. Before you can delete the bike you need to accept or cancel it.",
-    "account-deleted": "Your account has been deleted",
+    "account-deleted": "Your account has been canceled",
     "enter-email": "Please enter your email",
     "duplicate-start": "Duplication process started",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
@@ -375,7 +377,7 @@
     "profile": "Profile",
     "invite": "Invite Friends",
     "account": "Account",
-    "delete-account": "Delete Account",
+    "delete-account": "Cancel Account",
     "delete-account-description": "Here you can delete your listnride account. This step can not be undone.",
     "delete-account-sure": "Are you really sure?",
     "delete-account-sure-description": "This step can not be undone.",
@@ -495,7 +497,7 @@
     "book": "Book",
     "rating": "Rating",
     "listChat": "Request by {{user.first_name}}",
-    "rideChat": "Request at {{lister.first_name}}",
+    "rideChat": "Request to {{lister.first_name}}",
     "ratings": {
       "title": "How did you like the overall experience?",
       "description": "Trust and Safety are our paramount concern. By writing a short review, you'll help the whole community.",
@@ -537,7 +539,7 @@
     "10": "Your request was cancelled by system"
   },
   "rideChat": {
-    "1": "You would like to rent the <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> by {{lister.first_name}} {{lister.last_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
+    "1": "You would like to rent the <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{lister.first_name}} {{lister.last_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
     "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.phone_number}},<br>Address: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} has confirmed the return of the ride and gave you a review. Finally, please also rate the ride. This helps our community a lot and completes the rental.",
     "6": "Thanks for rating, the rental was successfully completed.",
@@ -884,8 +886,8 @@
     "download-csv": "Download CSV",
     "download-pdf": "Download PDF",
     "no-rentals": "You had no rentals yet",
-    "as-lister": "As Lister",
-    "as-rider": "As Rider",
+    "as-lister": "As lister",
+    "as-rider": "As rider",
     "no-rides": "You had no rides yet"
   },
   "invite-landing": {

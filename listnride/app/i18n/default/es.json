@@ -114,7 +114,9 @@
     "confirm": "Confirmar",
     "confirmation": "Confirmación",
     "confirmation-text": "¿Estás seguro?",
-    "loading": "Cargando"
+    "loading": "Cargando",
+    "today": "Today",
+    "yesterday": "Yesterday"
   },
   "meta": {
     "cities": {
@@ -278,8 +280,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Pago seguro con",
-    "agree-terms": "With 'Request Bike' you agree to the",
-    "agree-terms-link": "listnride terms",
+    "agree-terms": "Con \"Request Bike\" aceptas los",
+    "agree-terms-link": "términos de listnride",
     "footer": {
       "questions": "¿Tienes preguntas con respecto a la reserva de una bicicleta?",
       "call-us": "Llámanos al +49 (0)30-120870330, lunes a viernes 9-18h. ",
@@ -337,7 +339,7 @@
       "invoice-address": "Dirección de facturación",
       "payment": "Pagamento",
       "redeem-voucher": "Canjear vale",
-      "add": "Add"
+      "add": "OK"
     }
   },
   "toasts": {

@@ -232,8 +232,8 @@
     }
   },
   "how-to-shoot-bike-photo": {
-    "header": "Foto Tipps",
-    "title": "Ein paar Foto Tipps für ein attraktives Inserat",
+    "header": "Tipps für gute Fotos",
+    "title": "Ein paar Foto-Tipps für ein attraktives Inserat",
     "subtitle": "Das erste, was sich potentielle Mieter ansehen, wenn sie ein Mietrad auf listnride suchen, sind die Fotos im Überblick der Angebote. Leihräder mit guten Fotos bekommen mehr Interesse und werden öfter gebucht. ",
     "headline-1": "Beleuchtung",
     "content-1": "Nutze natürliches Licht und mach deine Fotos draußen im Tageslicht oder innen in der Nähe eines Fensters oder einer weißen Wand. Licht am Morgen oder später am Nachmittag sorgt für die besten  Ergebnisse.",
@@ -558,14 +558,14 @@
         "question-16": "Was tun, wenn der angefragte Zeitraum für mich ungünstig ist?",
         "answer-16": "Passt der angefragte Mietzeitraum bei Dir nicht, könntest Du entweder jemanden bitten, ob er für Dich das Mietrad und die Schlüssel übergeben kann, oder, falls das nicht möglich ist, die Anfrage einfach ablehnen. Wir würden uns freuen, wenn Du kurz begründest, warum die Anfrage abgelehnt werden muss. ",
         "question-17": "Wie kontaktiere ich den Rider sobald das Mietrad bestätigt wurde?",
-        "answer-17": "Hierfür kannst Du wieder den In-App-Chat verwenden, den Du auch schon für die Klärung der Mietanfrage genutzt hast. Geh einfach auf „Anfragen an mich“ im Menü Deines Accounts und klick auf das entsprechende Mietrad. In der Bestätigungsmail zum Verleih findest Du alle Angaben über den Mieter – einschließlich seiner Handynummer. ",
+        "answer-17": "Hierfür kannst du wieder den In-App-Chat verwenden, den du auch schon für die Klärung der Mietanfrage genutzt hast. Geh einfach auf „Anfragen an mich“ im Menü deines Accounts und klick auf das entsprechende Mietrad. In der Bestätigungsmail zum Verleih findest du alle Angaben über den Mieter – einschließlich seiner Handynummer. ",
         "question-18": "Wie erhalte ich Bewertungen für meine Listung?",
         "answer-18": "Nach Rückgabe des Fahrrads wird der Rider gebeten, Dich als Lister und Dein Mietrad zu bewerten. Sobald eine Bewertung abgegeben wurde, wird bei Deinem Mietrad ein Bewertungsscore angezeigt. Um gute Bewertungen zu erhalten, empfehlen wir Dir, das Mietrad und den jeweiligen Zustand wahrheitsgemäß zu beschreiben. "
       },
       "rider-faq": {
         "title": "FAQ Mieter",
         "question-1": "Wie leihe ich mir ein Fahrrad aus?",
-        "answer-1": "Bevor Du Dir ein Fahrrad ausleihen kannst, musst Du Dich zunächst registrieren. Klick dazu einfach auf „Registrieren“ und mach alle erforderlichen Angaben. Sobald Du registriert bist, kannst Du Dich mit Deiner E-Mail-Adresse und Deinem Passwort anmelden. Such Dir ein Fahrrad aus, das Dir gefällt und Deine Anforderungen erfüllt, und wähle ein Startdatum, eine Abholzeit, ein Enddatum und eine Rückgabezeit, und klick dann auf „Mietrad anfragen“. Wurde Deine Anfrage angenommen, kannst Du über die Schaltfläche „Anfrage bestätigen“ fest zusagen und die Zahlung durchführen. Sobald der Zahlungsvorgang erfolgreich abgeschlossen wurde, erhältst Du eine Bestätigung mit allen Einzelheiten zum Verleih.",
+        "answer-1": "Bevor du dir ein Fahrrad ausleihen kannst, musst du dich zunächst registrieren. Klick dazu einfach auf „Registrieren“ und mach alle erforderlichen Angaben. Sobald du registriert bist, kannst du dich mit deiner E-Mail-Adresse und deinem Passwort anmelden. Such dir ein Fahrrad aus, das dir gefällt und deine Anforderungen erfüllt, und wähle ein Startdatum, eine Abholzeit, ein Enddatum und eine Rückgabezeit, und klick dann auf „Mietrad anfragen“. Wurde deine Anfrage angenommen, kannst du über die Schaltfläche „Anfrage bestätigen“ fest zusagen und die Zahlung durchführen. Sobald der Zahlungsvorgang erfolgreich abgeschlossen wurde, erhältst du eine Bestätigung mit allen Einzelheiten zum Verleih.",
         "question-2": "Wie storniere ich eine Anfrage?",
         "answer-2": "In der Statusanzeige für Deine Anfrage kannst Du die Anfrage vor Durchführung der Zahlung jederzeit stornieren. Klick dazu im Anfragefenster auf „Anfrage stornieren“. ",
         "question-3": "Kann ich mehr als eine Anfrage gleichzeitig senden?",

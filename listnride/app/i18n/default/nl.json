@@ -113,7 +113,9 @@
     "confirm": "Bevestigen",
     "confirmation": "Bevestiging",
     "confirmation-text": "Weet je het zeker?",
-    "loading": "Het laden"
+    "loading": "Het laden",
+    "today": "Vandaag",
+    "yesterday": "Gisteren"
   },
   "meta": {
     "cities": {
@@ -281,8 +283,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Veilig betalen met",
-    "agree-terms": "With 'Request Bike' you agree to the",
-    "agree-terms-link": "listnride terms",
+    "agree-terms": "Met 'Fiets aanvragen' gaat u akkoord met de",
+    "agree-terms-link": "algemene voorwaarden van listnride",
     "footer": {
       "questions": "Heb je vragen bij het boeken van een fiets?",
       "call-us": "Bel ons op +49 (0)30-120870330, Ma-Vrij 9-18u.",
@@ -341,7 +343,7 @@
       "invoice-address": "Factuuradres",
       "payment": "Betaling",
       "redeem-voucher": "Voucher verzilveren",
-      "add": "Add"
+      "add": "Voeg toe"
     }
   },
   "toasts": {

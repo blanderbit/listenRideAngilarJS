@@ -114,7 +114,9 @@
     "confirm": "Confermare",
     "confirmation": "Conferma",
     "confirmation-text": "Sei sicuro?",
-    "loading": "Caricamento"
+    "loading": "Caricamento",
+    "today": "Oggi",
+    "yesterday": "Ieri"
   },
   "meta": {
     "cities": {
@@ -274,8 +276,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Pagamento sicuro con",
-    "agree-terms": "With 'Request Bike' you agree to the",
-    "agree-terms-link": "listnride terms",
+    "agree-terms": "Con \"Richiedi la bicicletta\" accetti i",
+    "agree-terms-link": " termini listnride",
     "footer": {
       "questions": "Hai domande sul noleggio della bicicletta?",
       "call-us": "Chaimaci al: +49 (0)30-120870330, Lun-Ven 9-18. ",
@@ -332,7 +334,7 @@
       "invoice-address": "Indirizzo di fatturazione",
       "payment": "Pagamento",
       "redeem-voucher": "Buono sconto",
-      "add": "Add"
+      "add": "Ok"
     }
   },
   "toasts": {
