@@ -117,7 +117,9 @@
     "confirmation-text": "Sei sicuro?",
     "loading": "Caricamento",
     "clear": "Clear",
-    "clear-all": "Clear All"
+    "clear-all": "Clear All",
+    "today": "Oggi",
+    "yesterday": "Ieri"
   },
   "meta": {
     "cities": {
@@ -277,8 +279,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Pagamento sicuro con",
-    "agree-terms": "With 'Request Bike' you agree to the",
-    "agree-terms-link": "listnride terms",
+    "agree-terms": "Con \"Richiedi la bicicletta\" accetti i",
+    "agree-terms-link": " termini listnride",
     "footer": {
       "questions": "Hai domande sul noleggio della bicicletta?",
       "call-us": "Chaimaci al: +49 (0)30-120870330, Lun-Ven 9-18. ",
@@ -335,7 +337,7 @@
       "invoice-address": "Indirizzo di fatturazione",
       "payment": "Pagamento",
       "redeem-voucher": "Buono sconto",
-      "add": "Add"
+      "add": "Ok"
     }
   },
   "toasts": {
@@ -360,8 +362,8 @@
     "duplicate-start": "Il processo di duplicazione è iniziato",
     "duplicate-finish": "Processo di duplicazione è terminato. Copie create con successo",
     "bike-deleted": "Bici cancellata con successo",
-    "range-success-delete": "Availability range successfully deleted",
-    "availability-success-saved": "Availability successfully saved"
+    "range-success-delete": "Periodo di disponibilità eliminato con successo",
+    "availability-success-saved": "Disponibilità salvata con successo"
   },
   "settings": {
     "settings": "Impostazioni",
@@ -576,7 +578,7 @@
       "empty-email": "Inserisci il tuo indirizzo email",
       "empty-email-xs": "Email richiesta",
       "empty-last-name": "Inserisci il tuo cognome",
-      "empty-last-name-xs": "Cognome richiesto",      
+      "empty-last-name-xs": "Cognome richiesto",
       "empty-first-name": "Inserisci il tuo nome",
       "empty-first-name-xs": "Nome richiesto",
       "max-size-last-name": "Il cognome non deve superare i 30 caratteri",
@@ -974,13 +976,13 @@
     "special": "Bici speciali"
   },
   "availability": {
-    "availability": "availability",
-    "modal-title": "When is your bike not available?",
-    "start-from": "Starting from",
-    "end-at": "Ending at",
-    "add-another-date": "Add another date",
+    "availability": "Disponibilità",
+    "modal-title": "Quando non è disponibile la tua bicicletta?",
+    "start-from": "A partire da ",
+    "end-at": "Fino a ",
+    "add-another-date": "Aggiungi un'altra data",
     "submit-btn": "Ok",
-    "submit-btn-save": "Save",
-    "choose-range": "Choose your date range"
+    "submit-btn-save": "Salva",
+    "choose-range": "Scegli il tuo periodo"
   }
 }
