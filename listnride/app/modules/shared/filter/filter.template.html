@@ -5,7 +5,7 @@
       class="md-lined lnr-no-margin"
       ng-click="$mdOpenMenu($event)"
     >
-      <span ng-if="!filter.currentSizes.length || filter.currentSizes[0] == -1">
+      <span ng-if="filter.currentSizes.length <= 1 && filter.currentSizes[0] == -1">
         {{ 'search.number-of-bikes' | translate }}
       </span>
       <span ng-if="filter.currentSizes.length == 1 && filter.currentSizes[0] != -1">
@@ -22,14 +22,14 @@
     </md-menu-content>
   </md-menu>
 
-  <md-menu md-position-mode="target bottom">
+  <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
     <md-button
       class="md-lined lnr-no-margin"
       ng-click="$mdOpenMenu($event)"
     >
       Category
     </md-button>
-    <md-menu-content width="4">
+    <md-menu-content width="5">
       <div class="lnr-padding">
         <category-filter></category-filter>
       </div>

@@ -1,11 +1,17 @@
-<div layout="column" ng-repeat="category in categoryFilter.parent.categories" style="width: 376px">
-  <div layout="row" layout-align="space-between start">
+<div class="filter__category" layout="column" ng-repeat="category in categoryFilter.parent.categories track by $index">
+  <div
+    ng-click="categoryFilter.parent.toggle(category.catId, categoryFilter.parent.openSubs)"
+    md-prevent-menu-close
+    class="lnr-padding-top-double"
+    layout="row"
+    layout-align="space-between start"
+  >
     <div layout="row" layout-align="space-between start">
       <md-checkbox
         aria-label="{{category.name}}"
         ng-checked="categoryFilter.parent.isChecked(category.catId)"
         md-indeterminate="categoryFilter.parent.isIndeterminate(category.catId)"
-        ng-click="categoryFilter.parent.toggleAll(category.catId)"
+        ng-click="categoryFilter.parent.toggleAll($event, category.catId)"
         md-prevent-menu-close
         flex-15
       >
@@ -13,7 +19,6 @@
 
       <div
         flex-85
-        ng-click="categoryFilter.parent.toggle(category.catId, categoryFilter.parent.openSubs)"
         md-prevent-menu-close
       >
         <span ng-if="categoryFilter.parent.isChecked(category.catId)" >Un-</span>Select {{category.name}}
@@ -28,8 +33,8 @@
     </div>
   </div>
 
-  <div layout="row" layout-wrap flex ng-show="categoryFilter.parent.showSubs(category.catId)">
-    <div style="padding-left: 30px" flex="33" ng-repeat="subcategory in category.subcategories">
+  <div layout="row" layout-wrap flex ng-show="categoryFilter.parent.showSubs(category.catId)" layout-align="flex-start center" class="lnr-margin-left">
+    <div flex="33" ng-repeat="subcategory in category.subcategories" class="lnr-padding-left-double">
       <md-checkbox
         ng-checked="categoryFilter.parent.exists(subcategory.id, categoryFilter.parent.selected)"
         ng-click="categoryFilter.parent.toggle(subcategory.id, categoryFilter.parent.selected)"
@@ -40,7 +45,5 @@
     </div>
   </div>
 
-  <br>
-  <md-divider></md-divider>
-  <br>
+  <md-divider ng-if="$index !== categoryFilter.parent.categories.length - 1 "></md-divider>
 </div>
