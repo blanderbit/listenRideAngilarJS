@@ -6,8 +6,8 @@ angular.module('search',[]).component('search', {
   bindings: {
     location: '<'
   },
-  controller: ['$translate', '$stateParams','$state', '$timeout', 'NgMap', 'ngMeta', 'api', 'bikeOptions',
-    function SearchController($translate, $stateParams, $state, $timeout, NgMap, ngMeta, api, bikeOptions) {
+  controller: ['$translate', '$stateParams','$state', '$timeout', 'NgMap', 'ngMeta', 'api',
+    function SearchController($translate, $stateParams, $state, $timeout, NgMap, ngMeta, api) {
       var search = this;
       search.$onInit = function() {
         // methods
