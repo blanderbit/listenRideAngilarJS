@@ -1403,10 +1403,6 @@ ng-map md-card {
   width: 240px;
 }
 
-ng-map md-card.lnr-bike-card md-icon {
-  display: none;
-}
-
 ng-map md-card.lnr-bike-card md-card-title-text span {
   max-width: 120px;
 }
