@@ -5,7 +5,18 @@ var middleware = {
   express: require('express'),
   expressEnforcesSSL: require('express-enforces-ssl')
 };
+/*
+ * file and dirertory for index and index-shop template files
+ */
+var staticServe = {
+  "dir": "/listnride/dist", 
+  "prod": { "file": "index.html", "dir": "/listnride/dist" },
+  "shop": { "file": "index-shop.html", "dir": "/listnride/dist" },
+};
+
+// express app & servings
 middleware.app =  middleware.express();
+staticServe.options = { index: staticServe.prod.file };
 
 var retrieveTld = function (hostname) {
   return hostname.replace(/^(.*?)\listnride/, "");
@@ -69,7 +80,7 @@ var enableHttps = function () {
  * should not redirect for local host and heroku review apps
  */
 var redirectToProperDomain = function (req, res, next) {
-  console.log("should redirect: ", shouldRedirect(req.headers.host));
+  // console.log("should redirect: ", shouldRedirect(req.headers.host));
   if (shouldRedirect(req.headers.host)) {
     var host = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
     var url = stripTrailingSlash(req.originalUrl);
@@ -85,11 +96,18 @@ var redirectToProperDomain = function (req, res, next) {
  * no functional use, only for debugging
  */
 var logger = function (req) {
-  var origin = req.headers.host;
-  console.log("req obj: ", req);
-  console.log("origin: ", origin);
-  console.log("params: ", req.query);
-  console.log("is_shop params: ", req.query.is_shop);
+  console.log("origin: ", req.headers.host);
+  console.log("query: ", req.query);
+  console.log("params: ", req.params);
+  console.log("shop param: ", req.query.shop);
+  console.log("bike param: ", req.query.bikeId);
+  console.log("subdomain: ", req.subdomains);
+  console.log("hostname: ", req.hostname);
+  console.log("base url: ", req.baseUrl);
+  console.log("original url: ", req.originalUrl);
+  console.log("path: ", req.path);
+  console.log("full url: ", req.protocol + '://' + req.get('host') + req.originalUrl);
+  console.log();
 };
 
 /* enable_https_start */
@@ -98,31 +116,26 @@ enableHttps();
 // endRemoveIf(middleware)
 /* enable_https_end */
 
-// get port from env
-middleware.app.set('port', (process.env.PORT || 9003));
-// proper redirects
+/*
+ * proper redirects
+ * app.get and app.use --> https://goo.gl/gUZ764
+ */
 middleware.app.use(function (req, res, next) {
+  logger(req);
   redirectToProperDomain(req, res, next);
 });
-
-// by default serves index.html
-// http://expressjs.com/en/4x/api.html#express.static
-middleware.app.use(middleware.express.static(__dirname.concat('/listnride/dist'), {
-  index: 'index.html'
-}));
-
 /*
-removing this will disable serving urls from browser
-
-it will only be called when there is some url
-otherwise app.use(express.static ...) will be called
-
-sometimes it will get called even on root in case of chrome
-that is because 'angular-sanitize.min.js.map' is missing
-and chrome requests it. not for safari and firefox
-*/
-middleware.app.use('/*', function (req, res) {
-  res.sendFile(__dirname.concat('/listnride/dist/index.html'));
-});
-
+ * by default serves index.html
+ * http://expressjs.com/en/4x/api.html#express.static
+ */
+middleware.app.use(middleware.express.static(
+  // directory
+  __dirname.concat(staticServe.dir), 
+  // options
+  staticServe.options)
+);
+/*
+ * start middleware
+ */
+middleware.app.set('port', (process.env.PORT || 9003));
 middleware.app.listen(middleware.app.get('port'));
