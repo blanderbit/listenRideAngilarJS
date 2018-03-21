@@ -96,26 +96,30 @@ var redirectToProperDomain = function (req, res, next) {
  * no functional use, only for debugging
  */
 var logger = function (req) {
-  if (req.originalUrl.includes("app-shop")) {
-    var origin = req.headers.host;
-    console.log("\norigin: ", origin);
-    console.log("query: ", req.query);
-    console.log("params: ", req.params);
-    console.log("shop param: ", req.query.shop);
-    console.log("bike param: ", req.query.bikeId);
-    console.log("original url: ", req.originalUrl);
-  }
+  console.log("origin: ", req.headers.host);
+  console.log("query: ", req.query);
+  console.log("params: ", req.params);
+  console.log("shop param: ", req.query.shop);
+  console.log("bike param: ", req.query.bikeId);
+  console.log("subdomain: ", req.subdomains);
+  console.log("hostname: ", req.hostname);
+  console.log("base url: ", req.baseUrl);
+  console.log("original url: ", req.originalUrl);
+  console.log("path: ", req.path);
+  console.log();
 };
 /* enable_https_start */
 // removeIf(middleware)
-enableHttps();
+// enableHttps();
 // endRemoveIf(middleware)
 /* enable_https_end */
 
 /*
  * proper redirects
+ * app.get and app.use --> https://goo.gl/gUZ764
  */
 middleware.app.use(function (req, res, next) {
+  logger(req);
   redirectToProperDomain(req, res, next);
 });
 /*
