@@ -135,6 +135,19 @@ middleware.app.use(middleware.express.static(
   staticServe.options)
 );
 /*
+removing this will disable serving urls from browser
+
+it will only be called when there is some url
+otherwise app.use(express.static ...) will be called
+
+sometimes it will get called even on root in case of chrome
+that is because 'angular-sanitize.min.js.map' is missing
+and chrome requests it. not for safari and firefox
+*/
+middleware.app.use('/*', function (req, res) {
+  res.sendFile(__dirname.concat('/listnride/dist/index.html'));
+});
+/*
  * start middleware
  */
 middleware.app.set('port', (process.env.PORT || 9003));
