@@ -156,7 +156,8 @@ angular.module('filter',[])
           return categoryChosen(categoryId);
         };
 
-        filter.toggleAll = function(categoryId) {
+        filter.toggleAll = function($event, categoryId) {
+          $event.stopPropagation();
           if (categoryChosen(categoryId)) {
             filter.selected = _.difference(filter.selected, categorySubs(categoryId))
           } else if (filter.selected.length === 0 || filter.selected.length > 0) {

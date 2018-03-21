@@ -28,11 +28,11 @@ angular.module('listnride')
       sizeOptionsForSearch: function () {
         return [
           { value: -1, label: "-" },
-          { value: 155, label: "155 - 165" },
-          { value: 165, label: "165 - 175" },
-          { value: 175, label: "175 - 185" },
-          { value: 185, label: "185 - 195" },
-          { value: 195, label: "195 - 205" }
+          { value: 155, label: "155 cm - 165 cm" },
+          { value: 165, label: "165 cm - 175 cm" },
+          { value: 175, label: "175 cm - 185 cm" },
+          { value: 185, label: "185 cm - 195 cm" },
+          { value: 195, label: "195 cm - 205 cm" }
         ];
       },
 
