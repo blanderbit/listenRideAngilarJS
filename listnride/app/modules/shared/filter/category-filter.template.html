@@ -10,18 +10,18 @@
       <md-checkbox
         aria-label="{{category.name}}"
         ng-checked="categoryFilter.parent.isChecked(category.catId)"
-        md-indeterminate="categoryFilter.parent.isIndeterminate(category.catId)"
         ng-click="categoryFilter.parent.toggleAll($event, category.catId)"
         md-prevent-menu-close
         flex-15
       >
       </md-checkbox>
+      <!--md-indeterminate="categoryFilter.parent.isIndeterminate(category.catId)"-->
 
       <div
         flex-85
         md-prevent-menu-close
       >
-        <span ng-if="categoryFilter.parent.isChecked(category.catId)" >Un-</span>Select {{category.name}}
+        {{category.name}}
       </div>
     </div>
     <div flex-10>
