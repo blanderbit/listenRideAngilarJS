@@ -48,17 +48,24 @@ angular.module('filter',[])
         };
 
         filter.clearFilters = function() {
-          // TODO: YB for each clear sizes
-          // filter.currentSizes = bikeOptions.sizeOptionsForSearch()[0];
+          filter.currentSizes = [];
           filter.selected = [];
           filter.openSubs = [];
           filter.currentBrand = filter.brands[0];
+          clearState();
           applyFilters();
         };
 
         filter.onCategoryChange = function() {
           applyFilters();
         };
+
+        function clearState() {
+          filter.updateState({
+            brand: '',
+            sizes: ''
+          });
+        }
 
         function initializeBrandFilter () {
           // Populate brand filter with all available brands
@@ -119,13 +126,13 @@ angular.module('filter',[])
 
         function increaseBikesCount() {
           filter.currentSizes.push(-1);
-          filter.updateState({ sizes: filter.currentSizes.join(',') });
+          onSizeChange();
         }
 
         function decreaseBikesCount(){
           if (filter.currentSizes.length <= 1) return;
           filter.currentSizes.pop();
-          filter.updateState({ sizes: filter.currentSizes.join(',') });
+          onSizeChange();
         }
 
         //----- Category filter -----
