@@ -2,25 +2,26 @@
 
 angular
   .module('list')
-  .directive('lnrDataPicker', function() {
+  .directive('lnrDatePicker', function() {
     return {
       restrict: "A",
-      controller: ['$scope', '$translate', lnrDataPickerController],
+      controller: ['$scope', '$translate', lnrDatePickerController],
       bindToController: {
         data: '=',
         disabledDates: '<',
         requests: '<?',
-        onChange: '<?',
-        onClear: '<?',
+        dateOnChange: '<?',
+        dateOnClear: '<?',
         clearCalendarData: '=?'
       },
       link: function ($scope, element, attrs) {
         $scope.el = angular.element(element[0]).find('.js-datapicker');
+        if (!$scope.el.length) $scope.el = angular.element(element[0]);
       }
     }
   });
 
-function lnrDataPickerController($scope, $translate) {
+function lnrDatePickerController($scope, $translate) {
   var vm = this;
 
   vm.$onInit = function() {
@@ -35,7 +36,9 @@ function lnrDataPickerController($scope, $translate) {
 
   // TODO: should find a method to call directive methods at outside
   // TODO: replace watch with angualr component way
-  $scope.$watch('vm.clearCalendarData', function (newVal, oldVal) {
+  $scope.$watch(function(scope){
+    return(vm.clearCalendarData);
+  }, function (newVal, oldVal) {
     if (vm.clearCalendarData) vm.clearCalendar();
     vm.clearCalendarData = false;
   }, false);
@@ -55,7 +58,7 @@ function lnrDataPickerController($scope, $translate) {
 
     angular.extend(vm.data, newData);
 
-    if (typeof vm.onChange == 'function') vm.onChange();
+    if (typeof vm.dateOnChange == 'function') vm.dateOnChange();
     $scope.$apply();
   };
 
@@ -66,7 +69,7 @@ function lnrDataPickerController($scope, $translate) {
       'duration': null
     });
 
-    if (typeof vm.onClear == 'function') vm.onClear();
+    if (typeof vm.dateOnClear == 'function') vm.dateOnClear();
     $scope.$apply();
   };
 

@@ -8,7 +8,8 @@ angular.module('filter',[])
       updateState: '<',
       initialValues: '<',
       initialBikes: '<',
-      bikes: '='
+      bikes: '=',
+      populateBikes: '<'
     },
     controller: [
       '$translate',
@@ -20,6 +21,7 @@ angular.module('filter',[])
 
         filter.$onInit = function () {
           // methods
+          filter.onDateChange = onDateChange;
           filter.onBrandChange = onBrandChange;
           filter.onSizeChange = onSizeChange;
           filter.clearFilters = clearFilters;
@@ -34,6 +36,8 @@ angular.module('filter',[])
           filter.showSubs = showSubs;
 
           // variables
+          filter.isClearDataRange = false;
+          filter.currentDate = filter.initialValues.date;
           // sizes
           filter.currentSizes = filter.initialValues.sizes.slice();
           initializeSizeFilter();
@@ -60,6 +64,12 @@ angular.module('filter',[])
           applyFilters();
         };
 
+        function onDateChange() {
+          filter.updateState({ start_date: filter.currentDate.start_date, duration: filter.currentDate.duration});
+          applyFilters();
+          filter.populateBikes();
+        };
+
         function onSizeChange() {
           filter.updateState({ sizes: filter.currentSizes.join(',') });
           applyFilters();
@@ -70,6 +80,7 @@ angular.module('filter',[])
           filter.selected = [];
           filter.openSubs = [];
           filter.currentBrand = filter.brands[0];
+          clearDate();
           clearState();
           applyFilters();
         };
@@ -81,7 +92,9 @@ angular.module('filter',[])
         function clearState() {
           filter.updateState({
             brand: '',
-            sizes: ''
+            sizes: '',
+            start_date: '',
+            duration: ''
           });
         }
 
@@ -151,6 +164,16 @@ angular.module('filter',[])
           if (filter.currentSizes.length <= 1) return;
           filter.currentSizes.pop();
           filter.onSizeChange();
+        }
+
+        function clearDate() {
+          filter.isClearDataRange = true;
+          if (!filter.currentDate.start_date) return;
+          filter.currentDate = {
+            'start_date': null,
+            'duration': null
+          }
+          filter.populateBikes();
         }
 
         //----- Category filter -----
