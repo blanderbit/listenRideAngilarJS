@@ -1,10 +1,10 @@
 {
   "name": "listnride-heroku-middleware",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "node js packages, wrapping angular app in Heroku",
   "engines": {
-    "node": "8.5.x",
-    "npm": "5.3.x"
+    "node": "8.9.x",
+    "npm": "5.5.x"
   },
   "main": "index.js",
   "scripts": {

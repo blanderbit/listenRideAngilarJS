@@ -126,6 +126,10 @@ module.exports = function () {
         htmlMinifyOptions: {
             collapseWhitespace: true,
             removeComments: true
+        },
+        middleware: {
+            file: '../index.js',
+            root: "../",
         }
     };
     var environments = {

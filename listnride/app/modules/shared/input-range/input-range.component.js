@@ -2,19 +2,21 @@
 
 angular
   .module('inputRange', [])
-  .directive('inputRange', function(){
+  .directive('inputRange', function() {
     return {
       restrict: 'E',
       transclude: true,
       templateUrl: 'app/modules/shared/input-range/input-range.template.html',
       controllerAs: 'vm',
-      bindToController: {  
+      bindToController: {
         data: '=',
-        disabledDates: '<' 
+        disabledDates: '<',
+        requests: '<?'
       },
       controller: ['$scope', '$translate', inputRangeController],
       link: function ($scope, element, attrs) {
         $scope.el = angular.element(element[0]).find('.js-datapicker');
+        $scope.isSingle = attrs.hasOwnProperty('lnrSingleInput');
       }
     }
   });
@@ -28,10 +30,11 @@ function inputRangeController($scope, $translate) {
   vm.$postLink = postLink;
   vm.$onDestroy = onDestroy;
   vm.openCalendar = openCalendar;
+  vm.isSingle = false;
 
   ////////////
-  
-  function updateParent(){
+
+  function updateParent() {
     // inform parent component that state was changed
     $scope.$emit('input-range:changed');
     $scope.$apply();
@@ -67,7 +70,8 @@ function inputRangeController($scope, $translate) {
     updateParent();
   }
 
-  function postLink() {    
+  function postLink() {
+    vm.isSingle = $scope.isSingle;
     $scope.el.dateRangePicker({
       autoClose: true,
       showTopbar: false,
@@ -83,11 +87,11 @@ function inputRangeController($scope, $translate) {
       lnrSingleMonthMinWidth: 659, // 320px - min-width for 1 calendar part + gap
       extraClass: 'date-picker-wrapper--ngDialog date-picker-wrapper--two-months'
     }).bind('datepicker-change', function (event, obj) {
-        vm._updateData(obj.date1, obj.date2);
+      vm._updateData(obj.date1, obj.date2);
     }).bind('datepicker-first-date-selected', function (event, obj) {
-        vm._clearData();
-        changeRange();
-        setFirstDate(obj.date1);        
+      vm._clearData();
+      changeRange();
+      setFirstDate(obj.date1);
     });
 
     //TODO: make services for this
@@ -97,7 +101,9 @@ function inputRangeController($scope, $translate) {
       now.setHours(0, 0, 0, 0);
       if (date.getTime() <= now.getTime()) {
         return [false, "date-past", ""];
-      } else if (dateClosed(date)) {
+      } else if (isReserved(date)) {
+        return [false, "date-reserved", ""];
+      } else if (bikeNotAvailable(date)) {
         return [false, "date-closed", ""];
       } else {
         return [true, "date-available", ""];
@@ -120,14 +126,30 @@ function inputRangeController($scope, $translate) {
         $scope.el.dateRange.clear();
       }
     }
-  
-    function dateClosed(date) {
+
+    function bikeNotAvailable(date) {
       date.setHours(0, 0, 0, 0);
       var result = false;
-      _.forEach(vm.disabledDates, function(slot){
+      _.forEach(vm.disabledDates, function (slot) {
         result = result || moment(date).isBetween(slot.start_at, slot.end_at, null, '[]') // all inclusive
       });
       return result;
+    }
+
+    function isReserved(date) {
+      if (!vm.requests) return;
+      for (var i = 0; i < vm.requests.length; ++i) {
+        var start = new Date(vm.requests[i].start_date_tz);
+        start.setHours(0, 0, 0, 0);
+        var end = new Date(vm.requests[i].end_date_tz);
+        end.setHours(0, 0, 0, 0);
+
+        if (start.getTime() <= date.getTime()
+          && date.getTime() <= end.getTime()) {
+          return true;
+        }
+      }
+      return false;
     }
 
     // save this data, because mdDialog destroys elements before $onDestroy method

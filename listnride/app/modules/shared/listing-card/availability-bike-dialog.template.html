@@ -16,10 +16,14 @@
         <div class="availability__list">
           <div layout="row" layout-align="center center" ng-repeat="input in availabilityDialog.inputs">
             <span class="lnr-btn-placeholder"></span>
-            <input-range data="input" disabled-dates="availabilityDialog.disabledDates"></input-range>
-            <md-button class="md-icon-button md-warn" ng-click="availabilityDialog.removeInput($index)">
+            <input-range data="input" disabled-dates="availabilityDialog.disabledDates" requests="availabilityDialog.requests"></input-range>
+            <md-button
+              ng-if="availabilityDialog.inputs.length > 1 || availabilityDialog.inputs.length === 1 && input.start_date" 
+              class="md-icon-button md-warn" 
+              ng-click="availabilityDialog.removeInput($index)">
               <md-icon md-font-icon="fa-times" class="fa fa--lh20"></md-icon>
             </md-button>
+            <span ng-if="availabilityDialog.inputs.length === 1 && !input.start_date" class="lnr-btn-placeholder"></span>
           </div>
         </div>
         <div layout="row" layout-align="center center" layout-margin ng-if="!availabilityDialog.isMaxInputs">

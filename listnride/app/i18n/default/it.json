@@ -114,7 +114,9 @@
     "confirm": "Confermare",
     "confirmation": "Conferma",
     "confirmation-text": "Sei sicuro?",
-    "loading": "Caricamento"
+    "loading": "Caricamento",
+    "today": "Oggi",
+    "yesterday": "Ieri"
   },
   "meta": {
     "cities": {
@@ -274,8 +276,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Pagamento sicuro con",
-    "agree-terms": "With 'Request Bike' you agree to the",
-    "agree-terms-link": "listnride terms",
+    "agree-terms": "Con \"Richiedi la bicicletta\" accetti i",
+    "agree-terms-link": " termini listnride",
     "footer": {
       "questions": "Hai domande sul noleggio della bicicletta?",
       "call-us": "Chaimaci al: +49 (0)30-120870330, Lun-Ven 9-18. ",
@@ -332,7 +334,7 @@
       "invoice-address": "Indirizzo di fatturazione",
       "payment": "Pagamento",
       "redeem-voucher": "Buono sconto",
-      "add": "Add"
+      "add": "Ok"
     }
   },
   "toasts": {
@@ -355,15 +357,10 @@
     "account-deleted": "Il tuo profilo è stato cancellato",
     "enter-email": "Per favore inserisci la tua email",
     "duplicate-start": "Il processo di duplicazione è iniziato",
-<<<<<<< HEAD
     "duplicate-finish": "Processo di duplicazione è terminato. Copie create con successo",
-    "bike-deleted": "Bici cancellata con successo"
-=======
-    "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Bici cancellata con successo",
-    "range-success-delete": "Availability range successfully deleted",
-    "availability-success-saved": "Availability successfully saved"
->>>>>>> AS-frontend-build-system
+    "range-success-delete": "Periodo di disponibilità eliminato con successo",
+    "availability-success-saved": "Disponibilità salvata con successo"
   },
   "settings": {
     "settings": "Impostazioni",
@@ -578,7 +575,7 @@
       "empty-email": "Inserisci il tuo indirizzo email",
       "empty-email-xs": "Email richiesta",
       "empty-last-name": "Inserisci il tuo cognome",
-      "empty-last-name-xs": "Cognome richiesto",      
+      "empty-last-name-xs": "Cognome richiesto",
       "empty-first-name": "Inserisci il tuo nome",
       "empty-first-name-xs": "Nome richiesto",
       "max-size-last-name": "Il cognome non deve superare i 30 caratteri",
@@ -963,7 +960,6 @@
     "bikes": "biciclette",
     "rent-perfect-bikes-in": "Noleggia la bicicletta perfetta a",
     "rent-category-bikes-in": " Ti offriamo una ampia scelta di bici a noleggio",
-<<<<<<< HEAD
     "bike-shops-in": "Negozi di biciclette a",
     "city": "Bici da città",
     "race": "Bici da corsa",
@@ -971,14 +967,6 @@
     "kids": "Bici da bambino",
     "electro": "E-bikes",
     "special": "Bici speciali"
-=======
-    "bike-shops-in": "Negozi di bici a",
-    "city": "bici città",
-    "race": "bici gara",
-    "all-terrain": "bici all-terrain",
-    "kids": "bici bambini",
-    "electro": "bici elettrica",
-    "special": "bici speciale"
   },
   "availability": {
     "availability": "availability",
@@ -988,6 +976,15 @@
     "add-another-date": "Add another date",
     "submit-btn": "Ok",
     "submit-btn-save": "Save"
->>>>>>> AS-frontend-build-system
+  },
+  "availability": {
+    "availability": "Disponibilità",
+    "modal-title": "Quando non è disponibile la tua bicicletta?",
+    "start-from": "A partire da ",
+    "end-at": "Fino a ",
+    "add-another-date": "Aggiungi un'altra data",
+    "submit-btn": "Ok",
+    "submit-btn-save": "Salva",
+    "choose-range": "Scegli il tuo periodo"
   }
 }

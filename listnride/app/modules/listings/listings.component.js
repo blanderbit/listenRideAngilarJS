@@ -20,7 +20,7 @@ angular.module('listings', []).component('listings', {
         return
       }
       var listings = this;
-      
+
       listings.$onInit = function () {
 
         listings.maxTiles = 12;
@@ -133,9 +133,11 @@ angular.module('listings', []).component('listings', {
         availabilityDialog._checkMax = _checkMax;
         availabilityDialog.setData = setData;
         availabilityDialog.takeDisabledDates = takeDisabledDates;
-        
+        availabilityDialog.requests = bike.requests;
+
         if (!bike.hasOwnProperty('availabilities')) bike.availabilities = {};
         availabilityDialog.setData();
+
         //////////////////
 
         $scope.$on('input-range:changed', function (event) {
@@ -200,7 +202,7 @@ angular.module('listings', []).component('listings', {
           });
           return disabled;
         }
-        
+
         function addInput() {
           if (!availabilityDialog.isMaxInputs) {
             availabilityDialog.inputs.push({});
@@ -208,26 +210,26 @@ angular.module('listings', []).component('listings', {
           }
         }
 
-        function destroyInput(index){
+        function destroyInput(index) {
           availabilityDialog.inputs.splice(index, 1);
 
-          if (availabilityDialog.inputs.length <= 1) {
+          if (availabilityDialog.inputs.length < 1) {
             availabilityDialog.isChanged = false;
             availabilityDialog.addInput();
           }
           availabilityDialog.disabledDates = availabilityDialog.takeDisabledDates();
         }
-        
+
         function removeInput(index) {
           // if input has 'id' it was saved, so we should call api to destroy it
           if (availabilityDialog.inputs[index].id) {
             availabilityDialog.destroy(availabilityDialog.inputs[index].id);
           } else {
             destroyInput(index);
-          }          
+          }
         }
 
-        function showSuccessSavedMsg(){
+        function showSuccessSavedMsg() {
           $mdToast.show(
             $mdToast.simple()
               .textContent($translate.instant('toasts.availability-success-saved'))
@@ -242,7 +244,7 @@ angular.module('listings', []).component('listings', {
         }
 
         function checkUpdated() {
-          var updateData = {'availabilities': {}};
+          var updateData = { 'availabilities': {} };
           var updatedItems = availabilityDialog.inputs.filter(function (item) {
             return item.hasOwnProperty('id') && item.hasOwnProperty('is_changed');
           });
@@ -258,7 +260,7 @@ angular.module('listings', []).component('listings', {
         }
 
         function checkCreated() {
-          var newData = {'availabilities': []};
+          var newData = { 'availabilities': [] };
           var newItems = availabilityDialog.inputs.filter(function (item) {
             return !item.hasOwnProperty('id') && item.hasOwnProperty('is_changed');
           });
@@ -476,7 +478,7 @@ angular.module('listings', []).component('listings', {
 
       // save view mode in localstorage
       listings.changeListingMode = function(mode) {
-          $localStorage.listView = mode;
+        $localStorage.listView = mode;
       };
     }
   ]

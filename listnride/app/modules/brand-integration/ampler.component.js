@@ -71,6 +71,7 @@ angular.module('ampler-integration',[]).component('ampler', {
               case "München": ampler.bikes.munich.push(success.data[i]); break;
               case "Hamburg": ampler.bikes.hamburg.push(success.data[i]); break;
               case "Wien": ampler.bikes.vienna.push(success.data[i]); break;
+              case "Winterthur": ampler.bikes.zurich.push(success.data[i]); break; // Winterthur >> Zurich
               case "Zürich": ampler.bikes.zurich.push(success.data[i]); break;
               case "Frankfurt am Main": ampler.bikes.frankfurt.push(success.data[i]); break;
             }

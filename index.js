@@ -1,40 +1,49 @@
 "use strict";
 
-var helmet = require('helmet');
-var express = require('express');
-var expressEnforcesSSL = require('express-enforces-ssl');
-var prerender = require('prerender-node');
-var app = express();
-var logger = function (req, res, next) {
-  next();
+var middleware = {
+  helmet: require('helmet'),
+  express: require('express'),
+  expressEnforcesSSL: require('express-enforces-ssl')
+};
+/*
+ * file and dirertory for index and index-shop template files
+ */
+var staticServe = {
+  "dir": "/listnride/dist", 
+  "prod": { "file": "index.html", "dir": "/listnride/dist" },
+  "shop": { "file": "index-shop.html", "dir": "/listnride/dist" }
 };
 
-// prerender
-app.use(require('prerender-node').set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
+// express app & servings
+middleware.app =  middleware.express();
 
-// setting proper http headers
-app.use(helmet());
+// by default serve production environment
+staticServe.options = { index: staticServe.shop.file };
 
-// redirect to https
-app.enable('trust proxy');
-app.use(expressEnforcesSSL());
+var retrieveTld = function (hostname) {
+  return hostname.replace(/^(.*?)\listnride/, "");
+};
 
-// get port from env
-app.set('port', (process.env.PORT || 9003));
-
-// see all transactions through server
-app.use(logger);
-
-var determineHostname = function(subdomains, hostname) {
+var determineHostname = function (subdomains, hostname) {
   var domainPrefix = "www.";
   var domainEnding = retrieveTld(hostname);
   for (var i = 0; i < subdomains.length; i++) {
     switch (subdomains[i]) {
-      case "en": domainEnding = ".com"; break;
-      case "de": domainEnding = ".de"; break;
-      case "nl": domainEnding = ".nl"; break;
-      case "it": domainEnding = ".it"; break;
-      case "es": domainEnding = ".es"; break;
+      case "en":
+        domainEnding = ".com";
+        break;
+      case "de":
+        domainEnding = ".de";
+        break;
+      case "nl":
+        domainEnding = ".nl";
+        break;
+      case "it":
+        domainEnding = ".it";
+        break;
+      case "es":
+        domainEnding = ".es";
+        break;
     }
     if (subdomains[i] === "staging") {
       domainPrefix = "www.staging.";
@@ -42,44 +51,121 @@ var determineHostname = function(subdomains, hostname) {
   }
   return domainPrefix + "listnride" + domainEnding;
 };
-
-var stripTrailingSlash = function(url) {
-  // return url.replace(/\/+$/, "");
+var stripTrailingSlash = function (url) {
   return url;
 };
-
-var retrieveTld = function(hostname) {
-  return hostname.replace(/^(.*?)\listnride/, "");
+/*
+ * returns boolean for either redirection should be used or not
+ * redirection is only used for production and staging
+ */
+var shouldRedirect = function (host) {
+  return host.includes("listnride.com") ||
+         host.includes("listnride.de")  ||
+         host.includes("listnride.nl")  ||
+         host.includes("listnride.it")  ||
+         host.includes("listnride.es");
 };
-
-// proper redirects
-app.use(function(req, res, next) {
-  var correctHostname = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
-  var correctOriginalUrl = stripTrailingSlash(req.originalUrl);
-  if (req.hostname === correctHostname && req.originalUrl === correctOriginalUrl) {
-    next();
-  } else {
-    res.redirect(301, "https://" + correctHostname + correctOriginalUrl);
+/*
+ * force https redirect for staging and production
+ * not used for local host and heroku review apps
+ */
+var enableHttps = function () {
+  // prerender
+  middleware.app.use(require('prerender-node').set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
+  // setting proper http headers
+  middleware.app.use(middleware.helmet());
+  // redirect to https
+  middleware.app.enable('trust proxy');
+  middleware.app.use(middleware.expressEnforcesSSL());
+};
+/*
+ * refirect to proper domain on staging and production
+ * should not redirect for local host and heroku review apps
+ */
+var redirectToProperDomain = function (req, res, next) {
+  // console.log("should redirect: ", shouldRedirect(req.headers.host));
+  if (shouldRedirect(req.headers.host)) {
+    var host = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
+    var url = stripTrailingSlash(req.originalUrl);
+    if (req.hostname !== host || req.originalUrl !== url) {
+      res.redirect(301, "https://" + host + url);
+      return;
+    }
   }
-});
-
-// by default serves index.html
-// http://expressjs.com/en/4x/api.html#express.static
-app.use(express.static(__dirname.concat('/listnride/dist'), {index: 'index.html'}));
+  next();
+};
+/*
+ * log the request
+ * no functional use, only for debugging
+ */
+var logger = function (req) {
+  console.log("full url: ", req.protocol + '://' + req.get('host') + req.originalUrl);
+};
+/*
+ * 
+ */
+var isShopEnvironment = function (req) {
+  // get the full url
+  var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+  
+  // excluded folders (local folders)
+  var foldersToExclude = ["app/assets/", ".png", ".jpg", ".min.js", ".json"];
+  var includesAssets = fullUrl.includes(foldersToExclude[0]) || fullUrl.includes(foldersToExclude[1]) || fullUrl.includes(foldersToExclude[2]);
+  var includesJs = fullUrl.includes(foldersToExclude[3]) || fullUrl.includes(foldersToExclude[4]);
+  
+  // if url contains any of the local static files
+  if (includesAssets || includesJs) { return undefined; }
+  
+  // if url contains shop param
+  else if (req.query.shop >= 0 && fullUrl.includes("/booking")) { return true; }
+  
+  // by default
+  return false;
+};
+/* enable_https_start */
+enableHttps();
+/* enable_https_end */
 
 /*
-removing this will disable serving urls from browser
+ * proper redirects
+ * app.get and app.use --> https://goo.gl/gUZ764
+ */
+middleware.app.use(function (req, res, next) {
+  redirectToProperDomain(req, res, next);
+});
+/*
+ * intercept each call and check environment
+ */
+middleware.app.use('/*', function (req, res, next) {
+  // is shop flag
+  var isShopEnv = isShopEnvironment(req);
+  
+  // serve build based on environment 
+  if (isShopEnv === true) {
+    console.log("shop env");
+    staticServe.options.index = staticServe.shop.file;
+  } else if (isShopEnv === false) {
+    console.log("prod env");
+    staticServe.options.index = staticServe.prod.file;
+  }
 
-it will only be called when there is some url
-otherwise app.use(express.static ...) will be called
-
-sometimes it will get called even on root in case of chrome
-that is because 'angular-sanitize.min.js.map' is missing
-and chrome requests it. not for safari and firefox
+  // propagate
+  next();
+});
+/*
+ * by default serves index.html
+ * http://expressjs.com/en/4x/api.html#express.static
+ */
+middleware.app.use(middleware.express.static(__dirname.concat(staticServe.dir), staticServe.options));
+/* 
+  intercept each request
+  log the request props
 */
-app.use('/*', function (req, res) {
-  res.sendFile(__dirname.concat('/listnride/dist/index.html'));
+middleware.app.use('/*', function (req, res) {
+  res.sendFile(__dirname.concat(staticServe.dir, "/", staticServe.options.index));
 });
-
-app.listen(app.get('port'), function () {
-});
+/*
+ * start middleware
+ */
+middleware.app.set('port', (process.env.PORT || 9003));
+middleware.app.listen(middleware.app.get('port'));
