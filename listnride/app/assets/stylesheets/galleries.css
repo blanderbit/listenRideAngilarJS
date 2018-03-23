@@ -94,7 +94,7 @@ ampler .cb-slideshow li:nth-child(2) span {
 }
 
 ampler .cb-slideshow li:nth-child(3) span { 
-  background-image: url(../ui_images/brand-integration/ampler_hero3.jpg);
+  background-image: url(../ui_images/brand-integration/ampler_hero1.jpg);
   -webkit-animation-delay: 10s;
   -moz-animation-delay: 10s;
   -o-animation-delay: 10s; 
@@ -102,7 +102,7 @@ ampler .cb-slideshow li:nth-child(3) span {
 }
 
 ampler .cb-slideshow li:nth-child(4) span { 
-  background-image: url(../ui_images/brand-integration/ampler_hero2.jpg);
+  background-image: url(../ui_images/brand-integration/ampler_hero3.jpg);
   -webkit-animation-delay: 15s;
   -moz-animation-delay: 15s;
   -o-animation-delay: 15s; 
