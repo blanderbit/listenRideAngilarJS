@@ -17,6 +17,7 @@
           <div layout="row" layout-align="center center" ng-repeat="input in availabilityDialog.inputs">
             <span class="lnr-btn-placeholder"></span>
             <input-range
+              lnr-data-picker
               data="input"
               disabled-dates="availabilityDialog.disabledDates"
               requests="availabilityDialog.requests"
