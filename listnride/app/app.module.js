@@ -67,6 +67,8 @@ angular.module('listnride', [
   'kuchenundraketen',
   'supercrossMunich',
   'capeArgus',
+  'filter',
+  'cardgrid',
   //endRemoveIf(shop)
   /* app_extras_end */
 

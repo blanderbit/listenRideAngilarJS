@@ -31,6 +31,7 @@
     "lanzarote": "Lanzarote",
     "mallorca": "Mallorca",
     "sylt": "Sylt",
+    "stuttgart": "Stuttgart",
     "per": "pro",
     "hour": "Stunde",
     "hours": "Stunden",
@@ -114,6 +115,8 @@
     "confirmation": "Bestätigung",
     "confirmation-text": "Bist du sicher?",
     "loading": "Laden",
+    "clear": "Clear",
+    "clear-all": "Clear All",
     "today": "Heute",
     "yesterday": "Gestern"
   },
@@ -616,7 +619,11 @@
     "all-sizes": "Alle Größen",
     "bikes-in": "Fahrräder in",
     "meta-title": "Miete das perfekte Rad in {{location}}.",
-    "meta-description": "listnride bietet viele verschiedene Räder in {{location}} zur Miete an."
+    "meta-description": "listnride bietet viele verschiedene Räder in {{location}} zur Miete an.",
+    "number-of-bikes": "Number of bikes",
+    "bike": "Bike",
+    "bikes": "Bikes",
+    "pick-body-size": "Pick a body size"
   },
   "calendar": {
     "invalid-date": "Datums angabe nicht Korrekt",

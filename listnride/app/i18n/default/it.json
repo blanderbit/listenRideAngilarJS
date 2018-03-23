@@ -32,6 +32,7 @@
     "lanzarote": "Lanzarote",
     "mallorca": "Mallorca",
     "sylt": "Sylt",
+    "stuttgart": "Stuttgart",
     "per": "per ",
     "hour": "ora",
     "hours": "ore",
@@ -115,6 +116,8 @@
     "confirmation": "Conferma",
     "confirmation-text": "Sei sicuro?",
     "loading": "Caricamento",
+    "clear": "Clear",
+    "clear-all": "Clear All",
     "today": "Oggi",
     "yesterday": "Ieri"
   },
@@ -610,7 +613,11 @@
     "all-sizes": "Tutte le misure",
     "bikes-in": "Biciclette a",
     "meta-title": "Noleggia la bicicletta perfetta a {{location}}.",
-    "meta-description": "listnride offre un'ampia varietà di biciclette eccellenti per il noleggio a {{location}}."
+    "meta-description": "listnride offre un'ampia varietà di biciclette eccellenti per il noleggio a {{location}}.",
+    "number-of-bikes": "Number of bikes",
+    "bike": "Bike",
+    "bikes": "Bikes",
+    "pick-body-size": "Pick a body size"
   },
   "calendar": {
     "invalid-date": "Le date non sono valide",
