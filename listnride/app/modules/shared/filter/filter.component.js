@@ -18,16 +18,34 @@ angular.module('filter',[])
       function FilterController($translate, $state, bikeOptions, filterFilter) {
         var filter = this;
 
-        // methods
-        filter.increaseBikesCount = increaseBikesCount;
-        filter.decreaseBikesCount = decreaseBikesCount;
+        filter.$onInit = function () {
+          // methods
+          filter.onBrandChange = onBrandChange;
+          filter.onSizeChange = onSizeChange;
+          filter.clearFilters = clearFilters;
+          filter.onCategoryChange = onCategoryChange;
+          filter.increaseBikesCount = increaseBikesCount;
+          filter.decreaseBikesCount = decreaseBikesCount;
+          filter.toggle = toggle;
+          filter.exists = exists;
+          filter.isIndeterminate = isIndeterminate;
+          filter.isChecked = isChecked;
+          filter.toggleAll = toggleAll;
+          filter.showSubs = showSubs;
 
-        // variables
-        filter.brands = ["All Brands"];
-        filter.currentSizes = filter.initialValues.sizes.slice();
-        filter.currentBrand = filter.brands[0];
-        initializeSizeFilter();
-
+          // variables
+          // sizes
+          filter.currentSizes = filter.initialValues.sizes.slice();
+          initializeSizeFilter();
+          // brand
+          filter.brands = ["All Brands"];
+          filter.currentBrand = filter.brands[0];
+          // categories
+          filter.categories = bikeOptions.allCategoriesOptions();
+          filter.selected = [];
+          filter.openSubs = [];
+          
+        }
         // Wait for bikes to be actually provided
         filter.$onChanges = function (changes) {
           if (filter.initialBikes != undefined) {
@@ -37,18 +55,18 @@ angular.module('filter',[])
           }
         };
 
-        filter.onBrandChange = function() {
+        function onBrandChange() {
           filter.updateState({ brand: filter.currentBrand });
           applyFilters();
         };
 
-        filter.onSizeChange = function() {
+        function onSizeChange() {
           filter.updateState({ sizes: filter.currentSizes.join(',') });
           applyFilters();
         };
 
-        filter.clearFilters = function() {
-          filter.currentSizes = [];
+        function clearFilters() {
+          filter.currentSizes = [-1];
           filter.selected = [];
           filter.openSubs = [];
           filter.currentBrand = filter.brands[0];
@@ -56,7 +74,7 @@ angular.module('filter',[])
           applyFilters();
         };
 
-        filter.onCategoryChange = function() {
+        function onCategoryChange() {
           applyFilters();
         };
 
@@ -67,7 +85,7 @@ angular.module('filter',[])
           });
         }
 
-        function initializeBrandFilter () {
+        function initializeBrandFilter() {
           // Populate brand filter with all available brands
           for (var i=0; i<filter.bikes.length; i++) {
             var currentBrand = filter.bikes[i].brand;
@@ -81,7 +99,7 @@ angular.module('filter',[])
           }
         }
 
-        function initializeSizeFilter () {
+        function initializeSizeFilter() {
           if (filter.currentSizes[0] === '') filter.currentSizes[0] = '-1';
           if (!filter.currentSizes.length) filter.increaseBikesCount();
           filter.sizes = bikeOptions.sizeOptionsForSearch();
@@ -90,7 +108,7 @@ angular.module('filter',[])
           });
         }
   
-        function applyFilters () {
+        function applyFilters() {
           var filteredBikes = filter.initialBikes;
           filteredBikes = filterBrands(filteredBikes);
           filteredBikes = filterSizes(filteredBikes);
@@ -99,7 +117,7 @@ angular.module('filter',[])
           initializeBrandFilter();
         }
 
-        function filterBrands (bikes) {
+        function filterBrands(bikes) {
           if (filter.currentBrand != filter.brands[0]) {
             return filterFilter(bikes, filter.currentBrand);
           } else {
@@ -107,7 +125,7 @@ angular.module('filter',[])
           }
         }
   
-        function filterSizes (bikes) {
+        function filterSizes(bikes) {
           // TODO: filter by sizes array
           if (filter.currentSize != filter.sizes[0]) {
             return filterFilter(bikes, filter.currentSize);
@@ -126,22 +144,18 @@ angular.module('filter',[])
 
         function increaseBikesCount() {
           filter.currentSizes.push(-1);
-          onSizeChange();
+          filter.onSizeChange();
         }
 
         function decreaseBikesCount(){
           if (filter.currentSizes.length <= 1) return;
           filter.currentSizes.pop();
-          onSizeChange();
+          filter.onSizeChange();
         }
 
         //----- Category filter -----
 
-        filter.categories = bikeOptions.allCategoriesOptions();
-        filter.selected = [];
-        filter.openSubs = [];
-
-        filter.toggle = function (item, list) {
+        function toggle(item, list) {
           var idx = list.indexOf(item);
           if (idx > -1) {
             list.splice(idx, 1);
@@ -151,19 +165,19 @@ angular.module('filter',[])
           filter.onCategoryChange()
         };
 
-        filter.exists = function (item, list) {
+        function exists(item, list) {
           return list.indexOf(item) > -1;
         };
 
-        filter.isIndeterminate = function(categoryId) {
+        function isIndeterminate(categoryId) {
           return (filter.selected.length !== 0 && !categoryChosen(categoryId));
         };
 
-        filter.isChecked = function(categoryId) {
+        function isChecked(categoryId) {
           return categoryChosen(categoryId);
         };
 
-        filter.toggleAll = function($event, categoryId) {
+        function toggleAll($event, categoryId) {
           $event.stopPropagation();
           if (categoryChosen(categoryId)) {
             filter.selected = _.difference(filter.selected, categorySubs(categoryId))
@@ -174,7 +188,7 @@ angular.module('filter',[])
           filter.onCategoryChange()
         };
 
-        filter.showSubs = function(categoryId) {
+        function showSubs(categoryId) {
           return filter.openSubs.includes(categoryId)
         };
 
