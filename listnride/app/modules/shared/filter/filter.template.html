@@ -1,11 +1,14 @@
 <div layout="row" class="lnr-filter-container" layout-margin>
-  <md-button class="md-lined">Timespan</md-button>
+  <md-button class="md-lined" lnr-date-picker data="filter.currentDate" date-on-change="filter.onDateChange" clear-calendar-data="filter.isClearDataRange">
+    <span ng-if="!filter.currentDate.start_date">Timespan</span>
+    <span ng-if="filter.currentDate.start_date">{{filter.initialValues.date.start_date}}</span>
+  </md-button>
   <md-menu md-position-mode="target bottom">
     <md-button
       class="md-lined lnr-no-margin"
       ng-click="$mdOpenMenu($event)"
     >
-      <span ng-if="filter.currentSizes.length <= 1 && filter.currentSizes[0] == -1">
+      <span ng-if="filter.currentSizes.length < 1 || filter.currentSizes.length <= 1 && filter.currentSizes[0] == -1">
         {{ 'search.number-of-bikes' | translate }}
       </span>
       <span ng-if="filter.currentSizes.length == 1 && filter.currentSizes[0] != -1">
