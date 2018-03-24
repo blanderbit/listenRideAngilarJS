@@ -5,11 +5,25 @@ var middleware = {
   express: require('express'),
   expressEnforcesSSL: require('express-enforces-ssl')
 };
+/*
+ * file and dirertory for index and index-shop template files
+ */
+var staticServe = {
+  "dir": "/listnride/dist", 
+  "prod": { "file": "index.html", "dir": "/listnride/dist" },
+  "shop": { "file": "index-shop.html", "dir": "/listnride/dist" }
+};
+
+// express app & servings
 middleware.app =  middleware.express();
+
+// by default serve production environment
+staticServe.options = { index: staticServe.shop.file };
 
 var retrieveTld = function (hostname) {
   return hostname.replace(/^(.*?)\listnride/, "");
 };
+
 var determineHostname = function (subdomains, hostname) {
   var domainPrefix = "www.";
   var domainEnding = retrieveTld(hostname);
@@ -69,7 +83,7 @@ var enableHttps = function () {
  * should not redirect for local host and heroku review apps
  */
 var redirectToProperDomain = function (req, res, next) {
-  console.log("should redirect: ", shouldRedirect(req.headers.host));
+  // console.log("should redirect: ", shouldRedirect(req.headers.host));
   if (shouldRedirect(req.headers.host)) {
     var host = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
     var url = stripTrailingSlash(req.originalUrl);
@@ -85,44 +99,73 @@ var redirectToProperDomain = function (req, res, next) {
  * no functional use, only for debugging
  */
 var logger = function (req) {
-  var origin = req.headers.host;
-  console.log("req obj: ", req);
-  console.log("origin: ", origin);
-  console.log("params: ", req.query);
-  console.log("is_shop params: ", req.query.is_shop);
+  console.log("full url: ", req.protocol + '://' + req.get('host') + req.originalUrl);
 };
-
+/*
+ * 
+ */
+var isShopEnvironment = function (req) {
+  // get the full url
+  var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+  
+  // excluded folders (local folders)
+  var foldersToExclude = ["app/assets/", ".png", ".jpg", ".min.js", ".json"];
+  var includesAssets = fullUrl.includes(foldersToExclude[0]) || fullUrl.includes(foldersToExclude[1]) || fullUrl.includes(foldersToExclude[2]);
+  var includesJs = fullUrl.includes(foldersToExclude[3]) || fullUrl.includes(foldersToExclude[4]);
+  
+  // if url contains any of the local static files
+  if (includesAssets || includesJs) { return undefined; }
+  
+  // if url contains shop param
+  else if (req.query.shop >= 0 && fullUrl.includes("/booking")) { return true; }
+  
+  // by default
+  return false;
+};
 /* enable_https_start */
-// removeIf(middleware)
 enableHttps();
-// endRemoveIf(middleware)
 /* enable_https_end */
 
-// get port from env
-middleware.app.set('port', (process.env.PORT || 9003));
-// proper redirects
+/*
+ * proper redirects
+ * app.get and app.use --> https://goo.gl/gUZ764
+ */
 middleware.app.use(function (req, res, next) {
   redirectToProperDomain(req, res, next);
 });
-
-// by default serves index.html
-// http://expressjs.com/en/4x/api.html#express.static
-middleware.app.use(middleware.express.static(__dirname.concat('/listnride/dist'), {
-  index: 'index.html'
-}));
-
 /*
-removing this will disable serving urls from browser
+ * intercept each call and check environment
+ */
+middleware.app.use('/*', function (req, res, next) {
+  // is shop flag
+  var isShopEnv = isShopEnvironment(req);
+  
+  // serve build based on environment 
+  if (isShopEnv === true) {
+    console.log("shop env");
+    staticServe.options.index = staticServe.shop.file;
+  } else if (isShopEnv === false) {
+    console.log("prod env");
+    staticServe.options.index = staticServe.prod.file;
+  }
 
-it will only be called when there is some url
-otherwise app.use(express.static ...) will be called
-
-sometimes it will get called even on root in case of chrome
-that is because 'angular-sanitize.min.js.map' is missing
-and chrome requests it. not for safari and firefox
+  // propagate
+  next();
+});
+/*
+ * by default serves index.html
+ * http://expressjs.com/en/4x/api.html#express.static
+ */
+middleware.app.use(middleware.express.static(__dirname.concat(staticServe.dir), staticServe.options));
+/* 
+  intercept each request
+  log the request props
 */
 middleware.app.use('/*', function (req, res) {
-  res.sendFile(__dirname.concat('/listnride/dist/index.html'));
+  res.sendFile(__dirname.concat(staticServe.dir, "/", staticServe.options.index));
 });
-
+/*
+ * start middleware
+ */
+middleware.app.set('port', (process.env.PORT || 9003));
 middleware.app.listen(middleware.app.get('port'));
