@@ -1,5 +1,15 @@
 'use strict';
 
+
+/*
+Structure of bike search component:
+
+Search
+      |__Filter
+      |__Cardgrid
+                 |__Sorter   
+*/
+
 angular.module('search',[]).component('search', {
   templateUrl: 'app/modules/search/search.template.html',
   controllerAs: 'search',

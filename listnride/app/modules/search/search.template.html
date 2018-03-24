@@ -8,35 +8,21 @@
     <md-divider></md-divider>
 
     <md-content flex layout="column">
-
-      <!-- city name for shown bikes -->
-      <!-- <div layout="row" flex="500">
-        <span flex></span>
-        <div flex="30">
-          <bike-sorter bikes="search.filteredBikes" categorized-bikes="search.categorizedFilteredBikes" titles="search.titles" location="search.latLng"></bike-sorter>
-        </div>
-      </div> -->
-
       <!-- no bikes found placeholder -->
       <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout="row" layout-align="center center" layout-padding>
         <span>{{ 'search.no-bikes' | translate }}</span>
       </div>
-
-      <!-- bikes grid -->
-      <!-- mobile:        1 bike each row -->
-      <!-- tablet:        2 bikes each row -->
-      <!-- desktop:       3 bikes each row -->
-      <!-- larger screen: 4 bikes each row -->
       <cardgrid
-               uncategorized-bikes="search.bikes"
-               categorized-bikes="search.categorizedFilteredBikes"
-               titles="search.titles"
-               location="search.latLng"
-               ng-repeat="filterBikes in search.categorizedFilteredBikes" 
-               card-index="$index"
-               bikes="filterBikes.bikes"
+               ng-repeat="filterBikes in search.categorizedFilteredBikes"
+               on-bike-hover="search.onBikeHover"
                title="{{filterBikes.title}}"
-               on-bike-hover="search.onBikeHover">
+               
+               categorized-bikes="search.categorizedFilteredBikes"
+               uncategorized-bikes="search.bikes"
+               bikes="filterBikes.bikes"
+               location="search.latLng"
+               titles="search.titles"
+               card-index="$index">
       </cardgrid>
       <!-- busy loader until bikes api resolves -->
       <div ng-show="search.bikes === undefined" flex layout="column" layout-align="center center">

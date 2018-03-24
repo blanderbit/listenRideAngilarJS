@@ -60,8 +60,8 @@ angular.module('bikeSorter', [])
        */
       breakpoints: {
         location: [0.25, 0.5, 1.0, 9999],
-        price: [10, 30, 50, 100, 1000],
-        inversePrice: [1000, 100, 50, 30, 10],
+        price: [30, 60, 150, 250, 500, 1000],
+        inversePrice: [1000, 500, 250, 150, 60, 30],
         lister: [2, 3, 4, 5, 10, 100]
       },
       /*
@@ -107,14 +107,13 @@ angular.module('bikeSorter', [])
       getPriceTitles: function (ascending) {
         var length = bikeSorterService.breakpoints.price.length,
           titles = [];
-        var bounds = ["Less than ", "More than "];
         var breakpoints = ascending ? bikeSorterService.breakpoints.price : bikeSorterService.breakpoints.inversePrice;
         breakpoints.forEach(function (breakpoint, index) {
-          if (index < length - 1) {
-            titles.push(bounds[0] + breakpoint + " €");
+          if (index < length) {
+            titles.push("Less than " + breakpoint + " €");
           }
         });
-        titles.push(bounds[1] + (breakpoints[length - 2]) + " €");
+        console.log("titles: ", titles, "ascending: ", ascending);
         return titles;
       },
       /*
@@ -250,18 +249,19 @@ angular.module('bikeSorter', [])
       },
       /*
        * remove categories with no bikes
+       * its a 2 for-loop process
+       * single for can't be used as splice changes the index by removing element
        */
       purgeBikes: function (bikes, titles) {
-        for (var index in bikes) {
-          if (bikes[index].bikes.length === 0) {
-            // remove element if it contains no bikes
-            bikes.splice(index, 1);
-            titles.splice(index, 1);
-            if (parseInt(index) === bikes.length) {
-              titles.pop();
-              bikes.pop();
-            }
-          }
+        var indices = [];
+        // get indices of element to be removed
+        for (var index in titles) {
+          if (bikes[index].bikes.length === 0) { indices.push(index); }
+        }
+        // reverse loop to avoid splice issues with index
+        for (var spliceIndex = indices.length -1; spliceIndex >= 0; spliceIndex-=1){
+          bikes.splice(indices[spliceIndex], 1);
+          titles.splice(indices[spliceIndex], 1);
         }
         return [bikes, titles];
       }
