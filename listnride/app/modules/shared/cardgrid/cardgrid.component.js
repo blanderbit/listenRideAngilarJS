@@ -5,13 +5,17 @@ angular.module('cardgrid', []).component('cardgrid', {
   bindings: {
     title: '@',
     bikes: '<',
-    onBikeHover: '<'
+    cardIndex: '<',
+    uncategorizedBikes: '<',
+    location: '<',
+    onBikeHover: '<',
+    categorizedBikes: '=',
+    titles: '=',
   },
   controller: [
       '$translate',
     function ReceiptController($translate) {
       var cardgrid = this;
-
     }
   ]
 });
