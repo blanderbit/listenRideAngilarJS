@@ -148,6 +148,9 @@ module.exports = function () {
                     defaultTranslation: 'default',
                     staticTranslation: 'static',
                     btKey: 'sandbox_jcmqgjqd_t4ptn54mswxmpnd5'
+                    // FOR TESTING ONLY. DO NOT REMOVE!
+                    // apiEndpoint: 'http://localhost:3000/v2',
+                    // userEndpoint: 'http://localhost:3000/v2/users/',
                 }
             },
             imageOptions: {

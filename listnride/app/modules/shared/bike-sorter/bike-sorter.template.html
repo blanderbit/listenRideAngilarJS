@@ -2,7 +2,7 @@
   <md-button md-no-ink ng-click="$mdOpenMenu($event)">Sort</md-button>
   <md-menu-content width="2">
     <md-menu-item>
-      <md-button>Closest to Location</md-button>
+      <md-button ng-click="bikeSorter.locationSorter()">Closest to Location</md-button>
     </md-menu-item>
     <md-menu-item>
       <md-button ng-click="bikeSorter.priceSorter(true)">Highest Price</md-button>
@@ -11,7 +11,7 @@
       <md-button ng-click="bikeSorter.priceSorter(false)">Lowest Price</md-button>
     </md-menu-item>
     <md-menu-item>
-      <md-button ng-click="bikeSorter.locationSorter()">Location with multiple bikes</md-button>
+      <md-button>Location with multiple bikes</md-button>
     </md-menu-item>
   </md-menu-content>
 </md-menu>

@@ -1,22 +1,32 @@
 <div class="row lnr-center" layout-align="center center">
-  <md-button md-ink-ripple md-prevent-menu-close="md-prevent-menu-close" class="md-icon-button md-warn" ng-click="settings.removeBike()">
-    <md-icon md-font-icon="fa-times" class="fa fa--lh20"></md-icon>
+  <md-button ng-disabled="bikeCountFilter.parent.currentSizes.length <= 1" md-prevent-menu-close class="md-icon-button md-warn lnr-md-no-focused" ng-click="bikeCountFilter.parent.decreaseBikesCount()">
+    <md-icon md-font-icon="fa-minus" class="fa fa--lh20"></md-icon>
   </md-button>
-  <span>1 Bike</span>
-  <md-button md-ink-ripple md-prevent-menu-close="md-prevent-menu-close" class="md-icon-button" ng-click="settings.addBike()">
+  <span 
+    ng-if="bikeCountFilter.parent.currentSizes.length == 1">
+    {{bikeCountFilter.parent.currentSizes.length}} {{'search.bike' | translate}}
+  </span>
+  <span ng-if="bikeCountFilter.parent.currentSizes.length > 1">
+    {{bikeCountFilter.parent.currentSizes.length}} {{'search.bikes' | translate}}
+  </span>
+  <md-button md-prevent-menu-close class="md-icon-button md-primary" ng-click="bikeCountFilter.parent.increaseBikesCount()">
     <md-icon md-font-icon="fa-plus" class="fa fa--lh20"></md-icon>
   </md-button>
 </div>
 
-<div class="spacer-xs"></div>
 <md-divider></md-divider>
-<div class="spacer-xs"></div>
-
-<md-select
-  md-container-class="lnr-select-in-modal"
-  ng-model="bikeCountFilter.parent.currentSize"
-  ng-change="bikeCountFilter.parent.onSizeChange()">
-  <md-option ng-repeat="option in bikeCountFilter.parent.sizes" value="{{option.value}}">
-    {{option.label}}
-  </md-option>
-</md-select>
+<p class="lnr-center">{{'search.pick-body-size' | translate}}</p>
+<div class="filter__select-list">
+  <div ng-repeat="item in bikeCountFilter.parent.currentSizes track by $index">
+    <md-select
+      ng-model="bikeCountFilter.parent.currentSizes[$index]"
+      md-container-class="lnr-select-in-modal"
+      ng-change="bikeCountFilter.parent.onSizeChange()">
+      <md-option
+        ng-repeat="option in bikeCountFilter.parent.sizes" 
+        value="{{option.value}}">
+        {{option.label}}
+      </md-option>
+    </md-select>
+  </div>
+</div>

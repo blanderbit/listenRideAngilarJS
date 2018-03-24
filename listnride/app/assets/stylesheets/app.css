@@ -169,7 +169,7 @@ invest .highlight-tile {
 
 md-menu-content {
   /*max-height: 300px!important;*/
-  max-height: 500px;
+  max-height: 500px; /*TODO: find for WHAT*/
 }
 
 md-card md-card-title {
@@ -362,8 +362,20 @@ md-tooltip .md-content {
   padding: 8px;
 }
 
+.lnr-padding-left {
+  padding-left: 8px;
+}
+
+.lnr-padding-left-double {
+  padding-left: 16px;
+}
+
 .lnr-lrg-padding {
   padding: 16px;
+}
+
+.lnr-padding-top-double {
+  padding-top: 16px;
 }
 
 .lnr-no-padding {
@@ -2381,5 +2393,27 @@ md-icon[md-font-icon].fa--lh20 {
 @media (max-width: 599px) {
   input-range {
     margin-bottom: 15px;
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  FILTER
+/*-----------------------------------------------------------------------------------*/
+
+.filter__select-list md-select {
+  margin: 10px 0;
+}
+
+.filter__category {
+  width: 400px;
+}
+
+@media (max-width: 599px) {
+  .filter__category {
+    width: 100%;
+  }
+
+  md-menu-content {
+    max-height: auto;
   }
 }

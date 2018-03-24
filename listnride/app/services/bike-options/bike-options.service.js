@@ -27,12 +27,12 @@ angular.module('listnride')
 
       sizeOptionsForSearch: function () {
         return [
-          { value: "", label: "-" },
-          { value: 155, label: "155 - 165" },
-          { value: 165, label: "165 - 175" },
-          { value: 175, label: "175 - 185" },
-          { value: 185, label: "185 - 195" },
-          { value: 195, label: "195 - 205" }
+          { value: -1, label: "-" },
+          { value: 155, label: "155 cm - 165 cm" },
+          { value: 165, label: "165 cm - 175 cm" },
+          { value: 175, label: "175 cm - 185 cm" },
+          { value: 185, label: "185 cm - 195 cm" },
+          { value: 195, label: "195 cm - 205 cm" }
         ];
       },
 
@@ -57,6 +57,77 @@ angular.module('listnride')
           {value: 5, label: "electro", iconFileName: "biketype_5.svg"},
           {value: 6, label: "special", iconFileName: "biketype_6.svg"}
         ];
+      },
+
+      allCategoriesOptions: function () {
+        return [
+          {
+            catId: 10,
+            name: 'City',
+            iconFileName: "biketype_1.svg",
+            subcategories: [
+              {id: 10, name: 'Dutch bike'},
+              {id: 11, name: 'Touring bike'},
+              {id: 12, name: 'Fixie'},
+              {id: 13, name: 'Single Speed'}
+            ]
+          },
+          {
+            catId: 20,
+            name: 'Race',
+            iconFileName: "biketype_2.svg",
+            subcategories: [
+              {id: 20, name: 'Road bike'},
+              {id: 21, name: 'Triathlon'},
+              {id: 22, name: 'Indoor'}
+            ]
+          },
+          {
+            catId: 30,
+            name: 'All terrain',
+            iconFileName: "biketype_3.svg",
+            subcategories: [
+              {id: 30, name: 'Tracking'},
+              {id: 31, name: 'Enduro'},
+              {id: 32, name: 'Freeride'},
+              {id: 33, name: 'Cross Country'},
+              {id: 34, name: 'Downhill'},
+              {id: 35, name: 'Cyclocross'}
+            ]
+          },
+          {
+            catId: 40,
+            name: 'Children',
+            iconFileName: "biketype_4.svg",
+            subcategories: [
+              {id: 40, name: 'City'},
+              {id: 41, name: 'All Terrain'},
+              {id: 42, name: 'Road'}
+            ]
+          },
+          {
+            catId: 50,
+            name: 'Electric',
+            iconFileName: "biketype_5.svg",
+            subcategories: [
+              {id: 50, name: 'Pedelec'},
+              {id: 51, name: 'E-bike'}
+            ]
+          },
+          {
+            catId: 60,
+            name: 'Special',
+            iconFileName: "biketype_6.svg",
+            subcategories: [
+              {id: 60, name: 'Folding bike'},
+              {id: 61, name: 'Tandem'},
+              {id: 62, name: 'Cruiser'},
+              {id: 63, name: 'Cargo bike'},
+              {id: 64, name: 'Recumbent'},
+              {id: 65, name: 'Mono bike'}
+            ]
+          }
+        ]
       },
 
       subcategoryOptions: function () {

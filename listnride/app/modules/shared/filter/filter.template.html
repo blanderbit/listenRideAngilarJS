@@ -1,18 +1,55 @@
 <div layout="row" class="lnr-filter-container" layout-margin>
   <md-button class="md-lined">Timespan</md-button>
   <md-menu md-position-mode="target bottom">
-    <md-button class="md-lined lnr-no-margin" ng-click="$mdOpenMenu($event)">{{ 'search.number-of-bikes' | translate }}</md-button>
+    <md-button
+      class="md-lined lnr-no-margin"
+      ng-click="$mdOpenMenu($event)"
+    >
+      <span ng-if="filter.currentSizes.length <= 1 && filter.currentSizes[0] == -1">
+        {{ 'search.number-of-bikes' | translate }}
+      </span>
+      <span ng-if="filter.currentSizes.length == 1 && filter.currentSizes[0] != -1">
+        {{filter.currentSizes.length}} {{'search.bike' | translate}}
+      </span>
+      <span ng-if="filter.currentSizes.length > 1">
+        {{filter.currentSizes.length}} {{'search.bikes' | translate}}
+      </span>
+    </md-button>
     <md-menu-content width="4">
       <div class="lnr-padding">
         <bike-count-filter></bike-count-filter>
       </div>
     </md-menu-content>
   </md-menu>
-	<md-select class="lnr-margin-left" ng-model="filter.currentBrand" ng-change="filter.onBrandChange()">
+
+  <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
+    <md-button
+      class="md-lined lnr-no-margin"
+      ng-click="$mdOpenMenu($event)"
+    >
+      Category
+    </md-button>
+    <md-menu-content width="5">
+      <div class="lnr-padding">
+        <category-filter></category-filter>
+      </div>
+    </md-menu-content>
+  </md-menu>
+
+  <md-select
+    class="lnr-margin-left"
+    ng-model="filter.currentBrand"
+    ng-change="filter.onBrandChange()"
+  >
     <md-option ng-repeat="option in filter.brands" value="{{option}}">
       {{option}}
     </md-option>
   </md-select>
   <span flex></span>
-  <md-button ng-click="filter.clearFilters()" class="md-warn">Clear Filters</md-button>
+  <md-button
+    ng-click="filter.clearFilters()"
+    class="md-warn"
+  >
+    Clear Filters
+  </md-button>
 </div>
