@@ -12,34 +12,53 @@ angular.module('bikeSorter', [])
     },
     controller: ['orderByFilter', 'bikeSorterService', function BikeSorter(orderBy, bikeSorterService) {
       var bikeSorter = this;
-
-      // breakpoints for location
-      var locationBkpt = [0.25, 0.5, 1.0, 999];
-      // breakpoints for price
-
       /*
        * sort bike w.r.t their distance from user location
-       * categorize the bikes based on breakpoints
+       * categorize the bikes based on location breakpoints
        */
       bikeSorter.locationSorter = function () {
         // generate titles for location based sorting
-        var titles = bikeSorterService.getLocationTitles(locationBkpt);
+        var titles = bikeSorterService.getLocationTitles();
         // sort, populate and purge bikes
         var bikes = bikeSorterService.sortLocationBikes(bikeSorter.bikes, bikeSorter.location, orderBy);
-        bikes = bikeSorterService.populateLocationBikes(locationBkpt, bikes, titles);
-        bikes = bikeSorterService.purgeLocationBikes(bikes);
+        bikes = bikeSorterService.populateLocationBikes(bikes, titles);
+        var response = bikeSorterService.purgeBikes(bikes, titles);
+        bikes = response[0];
+        titles = response[1];
         // update models
         bikeSorter.titles = titles;
         bikeSorter.categorizedBikes = bikes;
       };
-
+      /*
+       * sort bike w.r.t their prices
+       * categorize the bikes based on price breakpoints
+       */
       bikeSorter.priceSorter = function (ascending) {
-        bikeSorter.bikes = orderBy(bikeSorter.bikes, 'price_from', ascending);
+        // generate titles for price based sorting
+        var titles = bikeSorterService.getPriceTitles(ascending);
+        // sort, populate and purge bikes
+        var bikes = bikeSorterService.sortPriceBikes(bikeSorter.bikes, orderBy, ascending);
+        bikes = bikeSorterService.populatePriceBikes(bikes, titles);
+        var response = bikeSorterService.purgeBikes(bikes, titles);
+        bikes = response[0];
+        titles = response[1];
+        // update models
+        bikeSorter.titles = titles;
+        bikeSorter.categorizedBikes = bikes;
       };
     }],
   })
   .factory('bikeSorterService', [function () {
     var bikeSorterService = {
+
+      /*
+       * breakpoints for location
+       * breakpoints for price
+       */
+      breakpoints: {
+        location: [0.25, 0.5, 1.0, 9999],
+        price: [10, 30, 50, 100, 9999]
+      },
       // conversion from degree two radian
       convertDegree2Radian: function (deg) {
         return deg * (Math.PI / 180);
@@ -58,7 +77,17 @@ angular.module('bikeSorter', [])
         var d = R * c; // Distance in km
         return d;
       },
-
+      getLocationTitles: function () {
+        var length = bikeSorterService.breakpoints.location.length;
+        var titles = [];
+        bikeSorterService.breakpoints.location.forEach(function (breakpoint, index) {
+          if (index < length - 1) {
+            titles.push("Less than " + (breakpoint * 1000) + " m");
+          }
+        });
+        titles.push("More than " + (bikeSorterService.breakpoints.location[length - 2] * 1000) + " m");
+        return titles;
+      },
       sortLocationBikes: function (bikes, location, orderBy) {
         for (var index in bikes) {
           if (Object.prototype.hasOwnProperty.call(bikes, index)) {
@@ -74,48 +103,81 @@ angular.module('bikeSorter', [])
         bikes = orderBy(bikes, 'latLngDiff', false);
         return bikes;
       },
-      getLocationTitles: function (locationBkpt) {
-        var breakpointsLength = locationBkpt.length;
-        var titles = [];
-        locationBkpt.forEach(function (breakpoint, index) {
-          if (index < breakpointsLength - 1) {
-            titles.push("Less than " + (breakpoint * 1000) + " m");
+      sortPriceBikes: function (bikes, orderBy, ascending) {
+        return orderBy(bikes, 'price_from', ascending);
+      },
+      getPriceTitles: function (breakpoints, ascending) {
+        var length = bikeSorterService.breakpoints.price.length,
+          titles = [];
+        var bound = ascending ? ["Less than ", "More than "] : ["More than ", "Less than "];
+        var correctedBreakpoints = ascending ? bikeSorterService.breakpoints.price.reverse() : bikeSorterService.breakpoints.price;
+        correctedBreakpoints.forEach(function (breakpoint, index) {
+          if (index < length - 1) {
+            titles.push(bound[0] + breakpoint + " €");
           }
         });
-        titles.push("More than " + (locationBkpt[breakpointsLength - 2] * 1000) + " m");
+        titles.push(bound[1] + (correctedBreakpoints[length - 2]) + " €");
         return titles;
       },
-      populateLocationBikes: function (locationBkpt, bikes, titles) {
-        var newCatBikes = [];
-        for (var breakpoint in locationBkpt) {
-          if (Object.prototype.hasOwnProperty.call(locationBkpt, breakpoint)) {
-            newCatBikes.push({
+      populateLocationBikes: function (bikes, titles) {
+        var categorizedBikes = [];
+        for (var breakpoint in bikeSorterService.breakpoints.location) {
+          if (Object.prototype.hasOwnProperty.call(bikeSorterService.breakpoints.location, breakpoint)) {
+            categorizedBikes.push({
               title: titles[breakpoint],
               bikes: []
             });
           }
         }
-
-        // populate categorized bikes
+        // populate location based categorized bikes
         for (var bike in bikes) {
           if (Object.prototype.hasOwnProperty.call(bikes, bike)) {
-            for (breakpoint in locationBkpt) {
-              if (bikes[bike].latLngDiff < locationBkpt[breakpoint]) {
-                newCatBikes[breakpoint].bikes.push(bikes[bike]);
+            for (breakpoint in bikeSorterService.breakpoints.location) {
+              if (bikes[bike].latLngDiff < bikeSorterService.breakpoints.location[breakpoint]) {
+                categorizedBikes[breakpoint].bikes.push(bikes[bike]);
                 break;
               }
             }
           }
         }
-        return newCatBikes;
+        return categorizedBikes;
       },
-      purgeLocationBikes: function (bikes) {
-        for (var bikeCat in bikes) {
-          if (bikes[bikeCat].bikes.length === 0) {
-            bikes.splice(bikeCat, 1);
+      populatePriceBikes: function (bikes, titles) {
+        var categorizedBikes = [];
+        for (var breakpoint in bikeSorterService.breakpoints.price) {
+          if (Object.prototype.hasOwnProperty.call(bikeSorterService.breakpoints.price, breakpoint)) {
+            categorizedBikes.push({
+              title: titles[breakpoint],
+              bikes: []
+            });
           }
         }
-        return bikes;
+        // populate price based categorized bikes
+        for (var bike in bikes) {
+          if (Object.prototype.hasOwnProperty.call(bikes, bike)) {
+            for (breakpoint in bikeSorterService.breakpoints.price) {
+              if (bikes[bike].price_from < bikeSorterService.breakpoints.price[breakpoint]) {
+                categorizedBikes[breakpoint].bikes.push(bikes[bike]);
+                break;
+              }
+            }
+          }
+        }
+        return categorizedBikes;
+      },
+      purgeBikes: function (bikes, titles) {
+        for (var index in bikes) {
+          if (bikes[index].bikes.length === 0) {
+            // remove element if it contains no bikes
+            bikes.splice(index, 1);
+            titles.splice(index, 1);
+            if (parseInt(index) === bikes.length) {
+              titles.pop();
+              bikes.pop();
+            }
+          }
+        }
+        return [bikes, titles];
       }
     };
     return bikeSorterService;
