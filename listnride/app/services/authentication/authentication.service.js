@@ -156,6 +156,10 @@ angular.
       };
 
       var signupGlobal = function (form) {
+        // TODO: REPLACE THIS MONKEY PATCH WITH PROPER BACKEND-SIDE TEMPORARY PASSWORDS
+        if (!form.password.$modelValue) {
+          form.password.$modelValue = "123456";
+        }
         var obj = {
           email: form.email.$modelValue,
           firstName: form.first_name.$modelValue,
