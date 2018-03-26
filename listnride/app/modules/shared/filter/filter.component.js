@@ -49,7 +49,7 @@ angular.module('filter',[])
           filter.selected = filter.initialValues.categories.slice().map(Number);
           filter.openSubs = [];
         };
-
+        
         // Wait for bikes to be actually provided
         filter.$onChanges = function (changes) {
           if (filter.initialBikes != undefined) {
@@ -140,9 +140,10 @@ angular.module('filter',[])
         }
   
         function filterSizes(bikes) {
-          // TODO: filter by sizes array
-          if (filter.currentSize != filter.sizes[0]) {
-            return filterFilter(bikes, filter.currentSize);
+          if (!_.isEmpty(filter.currentSizes)) {
+            var selectedSizes = _.uniq(filter.currentSizes);
+            selectedSizes = selectedSizes.map(Number);
+            return arrayFilter(bikes, selectedSizes, 'size');
           } else {
             return bikes;
           }
@@ -150,7 +151,7 @@ angular.module('filter',[])
 
         function filterCategories (bikes) {
           if (!_.isEmpty(filter.selected)) {
-            return arrayFilter(bikes);
+            return arrayFilter(bikes, filter.selected, 'category');
           } else {
             return bikes;
           }
@@ -230,9 +231,9 @@ angular.module('filter',[])
           }).subcategories, 'id').sort()
         }
 
-        function arrayFilter(bikes) {
+        function arrayFilter(bikes, selectedItems, filterBy) {
           return _.filter(bikes, function(o) {
-            return _.includes(filter.selected, o.category);
+            return _.includes(selectedItems, o[filterBy]);
           })
         }
 

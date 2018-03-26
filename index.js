@@ -83,7 +83,6 @@ var enableHttps = function () {
  * should not redirect for local host and heroku review apps
  */
 var redirectToProperDomain = function (req, res, next) {
-  // console.log("should redirect: ", shouldRedirect(req.headers.host));
   if (shouldRedirect(req.headers.host)) {
     var host = stripTrailingSlash(determineHostname(req.subdomains, req.hostname));
     var url = stripTrailingSlash(req.originalUrl);
@@ -123,7 +122,9 @@ var isShopEnvironment = function (req) {
   return false;
 };
 /* enable_https_start */
+//removeIf(middleware)
 enableHttps();
+//endRemoveIf(middleware)
 /* enable_https_end */
 
 /*
@@ -142,10 +143,8 @@ middleware.app.use('/*', function (req, res, next) {
   
   // serve build based on environment 
   if (isShopEnv === true) {
-    console.log("shop env");
     staticServe.options.index = staticServe.shop.file;
   } else if (isShopEnv === false) {
-    console.log("prod env");
     staticServe.options.index = staticServe.prod.file;
   }
 
