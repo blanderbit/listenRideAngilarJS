@@ -46,10 +46,10 @@ angular.module('filter',[])
           filter.currentBrand = filter.brands[0];
           // categories
           filter.categories = bikeOptions.allCategoriesOptions();
-          filter.selected = [];
+          filter.selected = filter.initialValues.categories.slice().map(Number);
           filter.openSubs = [];
-          
-        }
+        };
+
         // Wait for bikes to be actually provided
         filter.$onChanges = function (changes) {
           if (filter.initialBikes != undefined) {
@@ -65,7 +65,7 @@ angular.module('filter',[])
         };
 
         function onDateChange() {
-          filter.updateState({ start_date: filter.currentDate.start_date, duration: filter.currentDate.duration});
+          filter.updateState({ start_date: filter.currentDate.start_date, duration: filter.currentDate.duration });
           applyFilters();
           filter.populateBikes();
         };
@@ -86,6 +86,7 @@ angular.module('filter',[])
         };
 
         function onCategoryChange() {
+          filter.updateState({ categories: filter.selected.join(',') });
           applyFilters();
         };
 
