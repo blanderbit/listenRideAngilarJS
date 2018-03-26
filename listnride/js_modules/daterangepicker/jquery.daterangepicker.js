@@ -2132,7 +2132,12 @@
 			var afterAnim = function()
 			{
 				$(self).data('date-picker-opened',false);
-				$(self).trigger('datepicker-closed', {relatedTarget: box});
+				$(self).trigger('datepicker-closed', {
+					// YB add start and end date to know with what options picker was closed
+					relatedTarget: box,
+					'date1': opt.start,
+					'date2': opt.end
+				});
 			};
 			if (opt.customCloseAnimation)
 			{

@@ -5,17 +5,24 @@ angular.module('autocomplete',[]).component('autocomplete', {
   controllerAs: 'autocomplete',
   bindings: {
     autocompleteId: '@',
-    location: '=',
+    location: '<',
     labelId: '@',
     placeholderId: '@',
-    required: '@',
+    required: '<',
     name: '@',
     error: '=',
+    hideInput: '<',
     placeChanged: '&'
   },
-  controller: ['$interval', '$scope',
-    function AutocompleteController($interval, $scope) {
+  controller: ['$interval', '$scope', '$window',
+    function AutocompleteController($interval, $scope, $window) {
       var autocomplete = this;
+      autocomplete.filled = false;
+      autocomplete.location = "";
+
+      autocomplete.$onChanges = function (changes) {
+        autocomplete.toggleButton();
+      };
 
       var deregisterAutocompleteWatcher = $scope.$watch(
         function () {
@@ -28,6 +35,7 @@ angular.module('autocomplete',[]).component('autocomplete', {
             var autocompleteObject = new google.maps.places.Autocomplete(
               document.getElementById(autocomplete.autocompleteId), {types: ['geocode']});
 
+            autocompleteObject.inputId = autocomplete.autocompleteId;
             autocompleteObject.addListener('place_changed', function() {
               $scope.$apply(function() {
                 var response = autocompleteObject.getPlace();
@@ -40,14 +48,32 @@ angular.module('autocomplete',[]).component('autocomplete', {
         }
       );
 
-      // TODO: Switch to watcher
-      var timer = $interval(function() {
+      autocomplete.showResults = function() {
+        autocomplete.toggleButton();
         if ($(".pac-container").length > 0) {
           var el = $(".pac-container").detach();
-          el.appendTo("autocomplete");
-          $interval.cancel(timer);
+          var acClass = "." + autocomplete.autocompleteId;
+          el.appendTo($(acClass));
         }
-      }, 100);
+      };
+
+      autocomplete.toggleButton = function() {
+        if (autocomplete.location.length > 0) {
+          autocomplete.filled = true;
+        } else {
+          autocomplete.filled = false;
+        }
+      }
+
+      autocomplete.toggleButton();
+
+
+      autocomplete.clear = function() {
+        autocomplete.location = "";
+        autocomplete.toggleButton();
+        angular.element('autocompleteSearch').focus();
+        $window.document.getElementById(autocomplete.autocompleteId).focus();
+      }
     }
   ]
 });

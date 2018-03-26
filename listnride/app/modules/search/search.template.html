@@ -1,93 +1,37 @@
 <div flex layout="row" layout-xs="column" layout-fill>
 
-  <div flex-xs="100" flex-gt-xs="60" flex-order-xs="2" layout="column">
-    <div layout="column" layout-padding>
-
-      <form layout="row">
-        <autocomplete autocomplete-id="search" flex flex-gt-xs="70" layout="column" location="search.location" label-id="City" placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}" place-changed="search.placeChanged(place)"></autocomplete>
-
-        <md-input-container layout="row" hide-xs flex="30">
-          <md-button flex class="md-raised md-primary lnr-btn-inline" id="submit" ng-click="search.onButtonClick()">{{ 'shared.search' | translate }}</md-button>
-        </md-input-container>
-
-        <!-- Duplicated size filter for mobile (needs a better solution) -->
-        <md-input-container layout="column" hide-gt-xs class="lnr-margin-left" flex="30">
-          <label>Size</label>
-            <md-select flex ng-model="search.sizeFilter.size" ng-change="search.onSizeChange()">
-              <md-option ng-repeat="option in search.sizeOptions" value="{{option.value}}">
-                {{option.label}}
-              </md-option>
-            </md-select>
-        </md-input-container>
-      </form>
-
-      <div layout="row" layout-align="space-between center">  
-        <md-input-container class="lnr-filters" flex flex-gt-xs="70" layout="column">
-          <div><label>Type</label></div>
-          <div flex layout="row" layout-align="space-between center">
-            <md-checkbox ng-model="search.categoryFilter.allterrain" ng-change="search.onCategoryChange('allterrain')">
-              <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_3.svg"></md-icon>
-              Terrain
-            </md-checkbox>
-            <md-checkbox ng-model="search.categoryFilter.city" ng-change="search.onCategoryChange('city')">
-              <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_1.svg"></md-icon>
-              City
-            </md-checkbox>
-            <md-checkbox ng-model="search.categoryFilter.race" ng-change="search.onCategoryChange('race')">
-              <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_2.svg"></md-icon>
-              Race
-            </md-checkbox>
-            <md-checkbox ng-model="search.categoryFilter.special" ng-change="search.onCategoryChange('special')">
-              <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_6.svg"></md-icon>
-              Special
-            </md-checkbox>
-            <md-checkbox ng-model="search.categoryFilter.ebikes" ng-change="search.onCategoryChange('ebikes')">
-              <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_5.svg"></md-icon>
-              Ebike
-            </md-checkbox>
-            <md-checkbox ng-model="search.categoryFilter.kids" ng-change="search.onCategoryChange('kids')">
-              <md-icon class="lnr-icn-md" md-svg-src="app/assets/ui_icons/biketype_4.svg"></md-icon>
-              Kids
-            </md-checkbox>
-          </div>
-        </md-input-container>
-
-
-        <md-input-container layout="column" hide-xs flex="30">
-          <label class="lnr-margin-left">Size</label>
-            <md-select class="lnr-margin-left" ng-model="search.sizeFilter.size" ng-change="search.onSizeChange()">
-              <md-option ng-repeat="option in search.sizeOptions" value="{{option.value}}">
-                {{option.label}}
-              </md-option>
-            </md-select>
-        </md-input-container>
-      </div>
+  <div flex-xs="100" flex-gt-xs="70" flex-order-xs="2" layout="column">
+    <div layout="column">
+      <filter bikes="search.filteredBikes" initial-bikes="search.bikes" initial-values="search.initialValues" update-state="search.updateState" populate-bikes="search.populateBikes"></filter>
     </div>
 
     <md-divider></md-divider>
 
     <md-content flex layout="column">
-      <div id="search-header" layout-padding>
-        <h1 class="md-headline" layout-padding>{{ 'search.bikes-in' | translate }} {{search.location}}</h1>
-      </div>
-
+      <!-- no bikes found placeholder -->
       <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout="row" layout-align="center center" layout-padding>
         <span>{{ 'search.no-bikes' | translate }}</span>
       </div>
-
-      <div id="featuredBikes" layout="row" layout-wrap layout-padding>
-        <div ng-repeat="bike in search.bikes | filter:search.sizeFilter | mapCategory:search.categoryFilter" flex="100" flex-gt-sm="50" flex-gt-lg="33">
-          <bike-card bike="bike"></bike-card>
-        </div>
-      </div>
-
+      <cardgrid
+               ng-repeat="filterBikes in search.categorizedFilteredBikes"
+               on-bike-hover="search.onBikeHover"
+               title="{{filterBikes.title}}"
+               
+               categorized-bikes="search.categorizedFilteredBikes"
+               uncategorized-bikes="search.bikes"
+               bikes="filterBikes.bikes"
+               location="search.latLng"
+               titles="search.titles"
+               card-index="$index">
+      </cardgrid>
+      <!-- busy loader until bikes api resolves -->
       <div ng-show="search.bikes === undefined" flex layout="column" layout-align="center center">
         <md-progress-circular md-mode="indeterminate"></md-progress-circular>
       </div>
     </md-content>
   </div>
 
-  <div flex-xs="35" flex-gt-xs="40" flex-order-xs="1" layout="column" class="map-column lnr-preload-bg" hide-xs>
+  <div flex flex-order-xs="1" layout="column" class="map-column lnr-preload-bg" hide-xs>
     <ng-map ng-if="search.bikes !== undefined"
       id="searchMap"
       default-style="false"
@@ -95,7 +39,10 @@
       zoom="{{search.mapOptions.zoom}}"
       on-click="search.onMapClick(event)">
 
-      <marker ng-repeat="bike in search.bikes | filter:search.sizeFilter | mapCategory:search.categoryFilter" id="bike.id" position="{{bike.lat_rnd}},{{bike.lng_rnd}}" on-click="search.showBikeWindow(event, bike.id)">
+      <marker ng-repeat="bike in search.filteredBikes" 
+              id="{{bike.id}}" 
+              position="{{bike.lat_rnd}},{{bike.lng_rnd}}" 
+              on-click="search.showBikeWindow(event, bike.id)">
       </marker>
 
       <info-window id="searchMapWindow" close-box-margin="0">

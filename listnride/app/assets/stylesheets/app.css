@@ -8,6 +8,16 @@
 // md-color-*
 */
 
+/**
+ * CONTENTS
+ *
+ * GENERAL..............Common styles
+ * FRAMEWORK............Something we do with default material styles
+ * LNR_CLASSES..........Our custom atomic styles
+ * SVG..................Set proportions to svg
+ *
+ */
+
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL
 /*-----------------------------------------------------------------------------------*/
@@ -41,6 +51,10 @@ strong {
 .content {
   max-width: 1040px;
   margin: 0 auto;
+}
+
+.mobile {
+  padding: 0 !important;
 }
 
 /* This has to be set for all full-height layouts */
@@ -130,6 +144,10 @@ home .highlight-tile {
   padding: 24px 0px;
 }
 
+home input {
+  font-size: 16px;
+}
+
 invest .highlight-tile {
   height: 320px;
   padding: 4px;
@@ -151,7 +169,7 @@ invest .highlight-tile {
 
 md-menu-content {
   /*max-height: 300px!important;*/
-  max-height: 500px;
+  max-height: 500px; /*TODO: find for WHAT*/
 }
 
 md-card md-card-title {
@@ -268,7 +286,7 @@ md-tooltip .md-content {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/* LNR CLASSES
+/* LNR_CLASSES
 /*-----------------------------------------------------------------------------------*/
 
 .lnr-black {
@@ -338,6 +356,26 @@ md-tooltip .md-content {
 
 .lnr-margin-lrg-bottom {
   margin-bottom: 16px;
+}
+
+.lnr-padding {
+  padding: 8px;
+}
+
+.lnr-padding-left {
+  padding-left: 8px;
+}
+
+.lnr-padding-left-double {
+  padding-left: 16px;
+}
+
+.lnr-lrg-padding {
+  padding: 16px;
+}
+
+.lnr-padding-top-double {
+  padding-top: 16px;
 }
 
 .lnr-no-padding {
@@ -464,6 +502,10 @@ md-tooltip .md-content {
   min-height: 20px;
 }
 
+.lnr-select-in-modal {
+  z-index: 100;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* SVG
 /*-----------------------------------------------------------------------------------*/
@@ -471,6 +513,11 @@ md-tooltip .md-content {
 .lnr-icn-sm {
   width: 24px;
   height: 24px;
+}
+
+.lnr-icn-sms {
+  width: 18px;
+  height: 18px;
 }
 
 .lnr-icn-md {
@@ -564,7 +611,35 @@ settings .lnr-profile-lrg {
 .lnr-header {
   width: 100%;
   height: 60px;
-  z-index: 3;
+  z-index: 4;
+}
+
+.lnr-clear-input {
+  vertical-align: middle;
+  margin: auto 0 auto -24px;
+  background-image: url('../ui_icons/cancel.png');
+  background-size: 16px 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.lnr-header autocomplete {
+  margin: 8px 0;
+}
+
+.lnr-header label {
+  display: none;
+}
+
+.lnr-header input {
+  border-color: #EAF3FE !important;
+  color: rgba(85, 85, 85, 1.0);
+  line-height: 20px;
+  /*font-size: 18px;*/
+  background: url('../ui_icons/search.png') no-repeat 3% 50%;
+  background-size: 18px 18px;
+  padding: 0 30px 0 40px;
+  background-color: #EAF3FE;
 }
 
 .lnr-header .md-toolbar-tools .lnr-header-logo {
@@ -596,9 +671,9 @@ settings .lnr-profile-lrg {
 }
 
 /* Safari vertical alignment fix */
-.lnr-header .md-toolbar-tools .lnr-header-logo {
+/*.lnr-header .md-toolbar-tools .lnr-header-logo {
   min-height: 25px;
-}
+}*/
 
 .md-toolbar-tools .md-button:not(.md-fab) {
   min-width: 0px;
@@ -814,7 +889,7 @@ footer .lnr-link {
 /*-----------------------------------------------------------------------------------*/
 
 home #landingSection {
-  height: 78vh;
+  height: 65vh;
   overflow: visible;
   position: relative;
 }
@@ -1287,6 +1362,10 @@ md-dialog md-dialog-content .date-picker-wrapper .month-wrapper thead {
 /*  SEARCH
 /*-----------------------------------------------------------------------------------*/
 
+.lnr-filter-container {
+  overflow: scroll;
+}
+
 search ng-map {
   height: 100%!important;
 }
@@ -1336,10 +1415,6 @@ ng-map md-card {
   width: 240px;
 }
 
-ng-map md-card.lnr-bike-card md-icon {
-  display: none;
-}
-
 ng-map md-card.lnr-bike-card md-card-title-text span {
   max-width: 120px;
 }
@@ -1350,8 +1425,8 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
 
 .ng-map-info-window > div:first-child div:nth-last-child(2),
 .ng-map-info-window > div:first-child div:nth-last-child(2) div {
-  display: block!important;
-  margin-top: -4px!important;
+  display: block !important;
+  margin-top: -4px !important;
   z-index: 2;
 }
 
@@ -1372,6 +1447,10 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
   }
 }
 
+bike-sorter button {
+  min-width: 60px !important; 
+  text-align: left !important;
+}
 /*-----------------------------------------------------------------------------------*/
 /*  USER
 /*-----------------------------------------------------------------------------------*/
@@ -2309,8 +2388,36 @@ md-icon[md-font-icon].fa--lh20 {
 }
 
 /* input-range */
+
+.availability__list input-range md-input-container {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
 @media (max-width: 599px) {
   input-range {
     margin-bottom: 15px;
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  FILTER
+/*-----------------------------------------------------------------------------------*/
+
+.filter__select-list md-select {
+  margin: 10px 0;
+}
+
+.filter__category {
+  width: 400px;
+}
+
+@media (max-width: 599px) {
+  .filter__category {
+    width: 100%;
+  }
+
+  md-menu-content {
+    max-height: auto;
   }
 }
