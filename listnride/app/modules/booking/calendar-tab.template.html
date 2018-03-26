@@ -35,8 +35,8 @@
         <br>
         <h2 class="md-title lnr-no-margin">{{ 'booking.calendar.choose-duration' | translate }}</h2>
         <br>
-        <div layout="row" layout-align="start center">
-          <md-input-container>
+        <div layout="row" layout-align="start center" flex layout-xs="column">
+          <md-input-container flex-xs="100">
             <label>Date Range</label>
             <input-range
               lnr-date-picker
@@ -49,7 +49,7 @@
             </input-range>
           </md-input-container>
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <div id="timeRange" layout="row" layout-align="start center" ng-if="calendar.parent.startDate" flex="40">
+          <div id="timeRange" layout="row" layout-align="start center" ng-if="calendar.parent.startDate" flex="40" flex-xs="100">
             <md-input-container flex>
               <label>{{ 'booking.calendar.pickup-time' | translate }}</label>
               <md-select ng-disabled="calendar.parent.startDate == undefined" ng-change="calendar.parent.onTimeChange('start')" ng-model="calendar.parent.startTime" placeholder="{{ 'shared.from' | translate }}">
