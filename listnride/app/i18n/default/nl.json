@@ -31,7 +31,6 @@
     "lanzarote": "Lanzarote",
     "mallorca": "Mallorca",
     "sylt": "Sylt",
-    "stuttgart": "Stuttgart",
     "per": "per",
     "hour": "uur",
     "hours": "uren",
@@ -371,8 +370,8 @@
     "duplicate-start": "Duplicatieproces gestart",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Fiets succesvol verwijderd",
-    "range-success-delete": "Availability range successfully deleted",
-    "availability-success-saved": "Availability successfully saved"
+    "range-success-delete": "Periode succesvol verwijderd",
+    "availability-success-saved": "Wijziging succesvol opgeslagen"
   },
   "settings": {
     "settings": "Instellingen",
@@ -979,13 +978,13 @@
     "special": "speciaal fietsen"
   },
   "availability": {
-    "availability": "availability",
-    "modal-title": "When is your bike not available?",
-    "start-from": "Starting from",
-    "end-at": "Ending at",
-    "add-another-date": "Add another date",
+    "availability": "Openingstijden",
+    "modal-title": "Wanneer is je fiets niet beschikbaar?",
+    "start-from": "Beginnend vanaf",
+    "end-at": "Eindigend op",
+    "add-another-date": "Voeg een andere datum toe",
     "submit-btn": "Ok",
-    "submit-btn-save": "Save",
+    "submit-btn-save": "Opslaan",
     "choose-range": "Choose your date range"
   }
 }
