@@ -12,22 +12,14 @@
         <p class="md-body-1">{{ 'booking.calendar.intro-description' | translate }}</p>
         <div class="spacer-xs"></div>
       	<div layout="row" layout-align="space-between none" layout-wrap>
-          <div flex="40" flex-xs="100">
+          <div flex="25" flex-xs="100">
             <a ui-sref="bike({bikeId: calendar.parent.bike.id})" target="_blank">
               <img flex="100" ng-src="{{ calendar.parent.bike.image_file_1.image_file_1.small.url }}" />
             </a>
           </div>
-          <div flex="30" flex-xs="60" layout="column">
-            <a class="md-title lnr-black" ui-sref="bike({bikeId: calendar.parent.bike.id})" target="_blank">{{ calendar.parent.bike.brand }}, {{ calendar.parent.bikeCategory }}</a>
+          <div flex="70" flex-xs="60" layout="column">
+            <a class="md-subhead lnr-black" ui-sref="bike({bikeId: calendar.parent.bike.id})" target="_blank">{{ calendar.parent.bike.brand }}, {{ calendar.parent.bikeCategory }}</a>
             <br>
-            <div layout="row" layout-align="space-between none">
-              <span flex="45" class="md-body-2">{{ 'settings.from' | translate }}</span>
-              <span flex="55" class="md-body-1 lnr-lh-body-2">{{ calendar.parent.startDate | date }}</span>
-            </div>
-            <div layout="row" layout-align="space-between none">
-              <span flex="45" class="md-body-2">{{ 'settings.to' | translate }}</span>
-              <span flex="55" class="md-body-1 lnr-lh-body-2">{{ calendar.parent.endDate | date }}</span>
-            </div>
             <div layout="row" layout-align="space-between none">
               <span flex="45" class="md-body-2">{{ 'booking.overview.size' | translate }}</span>
               <span flex="55" class="md-body-1 lnr-lh-body-2">{{ calendar.parent.bikeSize }}</span>
@@ -36,9 +28,6 @@
               <span flex="45" class="md-body-2">{{ 'booking.overview.location' | translate }}</span>
               <span flex="55" class="md-body-1 lnr-lh-body-2">{{ calendar.parent.bike.city }}</span>
             </div>
-          </div>
-          <div flex="20">
-            <p class="md-subhead lnr-bold lnr-right" style="margin: 0;">{{ calendar.parent.subtotal }} €</p>
           </div>
         </div>
         <div class="spacer"></div>
@@ -57,9 +46,9 @@
           >
           </input-range>
         </div>
-        <div id="timeRange" layout="row" layout-align="start center" layout-padding ng-if="calendar.parent.startDate">
+        <div id="timeRange" layout="row" layout-align="start center" ng-if="calendar.parent.startDate">
           <md-input-container flex>
-            <label>{{ 'shared.from' | translate }} {{ calendar.startDate | date }}</label>
+            <label>{{ 'booking.calendar.pickup-time' | translate }}</label>
             <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')" ng-model="calendar.startTime" placeholder="{{ 'shared.from' | translate }}">
               <md-option
                 ng-disabled="!calendar.isOptionEnabled($index, calendar.startDate)"
@@ -72,7 +61,7 @@
           </md-input-container>
 
           <md-input-container flex>
-            <label>{{ 'shared.to' | translate }}  {{ calendar.endDate | date }}</label>
+            <label>{{ 'booking.calendar.return-time' | translate }}</label>
             <md-select
               ng-disabled="calendar.endDate === undefined"
               ng-change="calendar.onTimeChange('end')"

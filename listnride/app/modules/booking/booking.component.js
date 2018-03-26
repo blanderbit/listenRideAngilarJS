@@ -96,11 +96,20 @@ angular.module('booking', [])
         };
 
         booking.nextDisabled = function() {
-          switch (booking.selectedIndex) {
-            case 0: return false;
-            case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
-            case 2: return !booking.paymentForm.$valid;
-            case 3: return false;
+          if (!booking.shopBooking) {
+            switch (booking.selectedIndex) {
+              case 0: return false;
+              case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
+              case 2: return !booking.paymentForm.$valid;
+              case 3: return false;
+            }
+          } else {
+            switch (booking.selectedIndex) {
+              case 0: return booking.startDate && booking.endDate;
+              case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
+              case 2: return !booking.paymentForm.$valid;
+              case 3: return false;
+            }
           }
         };
 
