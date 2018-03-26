@@ -36,47 +36,51 @@
         <h2 class="md-title lnr-no-margin">{{ 'booking.calendar.choose-duration' | translate }}</h2>
         <br>
         <div layout="row" layout-align="start center">
-          <input-range
-            lnr-date-picker
-            lnr-single-input
-            data="calendar.parent.dateRange"
-            disabled-dates="calendar.parent.bike.availabilities"
-            requests="calendar.parent.bike.requests"
-            date-on-change="calendar.parent.updateDate"
-          >
-          </input-range>
-        </div>
-        <div id="timeRange" layout="row" layout-align="start center" ng-if="calendar.parent.startDate">
-          <md-input-container flex>
-            <label>{{ 'booking.calendar.pickup-time' | translate }}</label>
-            <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')" ng-model="calendar.startTime" placeholder="{{ 'shared.from' | translate }}">
-              <md-option
-                ng-disabled="!calendar.isOptionEnabled($index, calendar.startDate)"
-                ng-repeat="i in [].constructor(17) track by $index"
-                value="{{$index + 6}}"
-              >
-                {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.startDate) }}
-              </md-option>
-            </md-select>
-          </md-input-container>
-
-          <md-input-container flex>
-            <label>{{ 'booking.calendar.return-time' | translate }}</label>
-            <md-select
-              ng-disabled="calendar.endDate === undefined"
-              ng-change="calendar.onTimeChange('end')"
-              ng-model="calendar.endTime"
-              placeholder="{{ 'shared.to' | translate }}"
+          <md-input-container>
+            <label>Date Range</label>
+            <input-range
+              lnr-date-picker
+              lnr-single-input
+              data="calendar.parent.dateRange"
+              disabled-dates="calendar.parent.bike.availabilities"
+              requests="calendar.parent.bike.requests"
+              date-on-change="calendar.parent.updateDate"
             >
-              <md-option
-                ng-disabled="!calendar.isOptionEnabled($index, calendar.endDate)"
+            </input-range>
+          </md-input-container>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <div id="timeRange" layout="row" layout-align="start center" ng-if="calendar.parent.startDate" flex="40">
+            <md-input-container flex>
+              <label>{{ 'booking.calendar.pickup-time' | translate }}</label>
+              <md-select ng-disabled="calendar.parent.startDate == undefined" ng-change="calendar.parent.onTimeChange('start')" ng-model="calendar.parent.startTime" placeholder="{{ 'shared.from' | translate }}">
+                <md-option
+                ng-disabled="!calendar.parent.isOptionEnabled($index, calendar.parent.startDate)"
                 ng-repeat="i in [].constructor(17) track by $index"
                 value="{{$index + 6}}"
+                >
+                  {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.startDate) }}
+                </md-option>
+              </md-select>
+            </md-input-container>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <md-input-container flex>
+              <label>{{ 'booking.calendar.return-time' | translate }}</label>
+              <md-select
+                ng-disabled="calendar.parent.endDate === undefined"
+                ng-change="calendar.parent.onTimeChange('end')"
+                ng-model="calendar.parent.endTime"
+                placeholder="{{ 'shared.to' | translate }}"
               >
-                {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.endDate)}}
-              </md-option>
-            </md-select>
-          </md-input-container>
+                <md-option
+                  ng-disabled="!calendar.parent.isOptionEnabled($index, calendar.parent.endDate)"
+                  ng-repeat="i in [].constructor(17) track by $index"
+                  value="{{$index + 6}}"
+                >
+                  {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.endDate)}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+          </div>
         </div>
       </div>
     </div>

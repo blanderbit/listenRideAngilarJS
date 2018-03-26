@@ -86,6 +86,30 @@ angular.module('booking', [])
           // TODO: REMOVE REDUNDANT PRICE CALUCLATION CODE
         }
 
+        booking.isOptionEnabled = function($index, date) {
+          if (date === undefined) { return true }
+  
+          var isDateToday = moment().startOf('day').isSame(moment(date).startOf('day'));
+          // Date today chosen
+          if (isDateToday) { return $index + 6 >= moment().hour() + 1; }
+          // if (!openingHoursAvailable()) { return true }
+          // var weekDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(date)];
+          // if (weekDay !== null) {
+          //   var workingHours = openHours(weekDay);
+          //   return workingHours.includes($index + 6);
+          // }
+          return true;
+        };
+
+        booking.onTimeChange = function(slot) {
+          var slotDate = slot + "Date";
+          var slotTime = slot + "Time";
+          var date = new Date(booking[slotDate]);
+          date.setHours(booking[slotTime], 0, 0, 0);
+          booking[slotDate] = date;
+          // dateChange(booking.startDate, booking.endDate);
+        };
+
         booking.tabCompleted = function(tabId) {
           return booking.selectedIndex > tabId ? "✔" : "    ";
         };
@@ -106,13 +130,17 @@ angular.module('booking', [])
             }
           } else {
             switch (booking.selectedIndex) {
-              case 0: return booking.startDate && booking.endDate;
+              case 0: return !validDates();
               case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
               case 2: return !booking.paymentForm.$valid;
               case 3: return false;
             }
           }
         };
+
+        function validDates() {
+          return true;
+        }
 
         booking.resendSms = function() {
           booking.toggleConfirmButton();
