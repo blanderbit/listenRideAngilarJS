@@ -19,19 +19,25 @@ angular.module('receipt', []).component('receipt', {
       this.$onChanges = function (changes) {
         if (changes.user) {
           receipt.balance = changes.user.currentValue.balance;
-          if (receipt.prices) {
-            setPrices();
-          }
         }
-        if (changes.prices) {
-          if (receipt.prices) {
-            setPrices();
-          }
-        }
+        updatePrices();
       };
 
-      var setPrices = function() {
+      function updatePrices() {
+        console.log("updating prices");
+        if (receipt.prices && (receipt.startDate != "Invalid Date" && receipt.endDate != "Invalid Date")) {
+          console.log("really updating prices");
+          setPrices();
+        } else {
+          setDefaultPrices();
+        }
+      }
+
+      function setPrices() {
         var prices = price.calculatePrices(receipt.startDate, receipt.endDate, receipt.prices);
+        console.log(receipt.startDate);
+        console.log(receipt.endDate);
+        console.log(prices);
         receipt.duration = date.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
         receipt.durationDays = date.durationDays(receipt.startDate, receipt.endDate);
         receipt.discount = prices.subtotal - prices.subtotalDiscounted;
@@ -40,10 +46,6 @@ angular.module('receipt', []).component('receipt', {
         receipt.subtotalDiscounted = prices.subtotalDiscounted
         receipt.lnrFee = prices.serviceFee;
         receipt.total = Math.max(prices.total - receipt.balance, 0);
-        console.log(receipt.startDate);
-        if (receipt.startDate == "Invalid Date" || receipt.endDate == "Invalid Date") {
-          setDefaultPrices();
-        }
       };
 
       function setDefaultPrices() {

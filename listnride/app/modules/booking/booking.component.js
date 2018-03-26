@@ -72,15 +72,18 @@ angular.module('booking', [])
 
         booking.updateDate = function() {
           console.log(booking.dateRange);
+          console.log(Date.now());
           if (booking.dateRange.start_date && booking.dateRange.duration) {
-            booking.startDate = booking.dateRange.start_date;
-            var endDate = new Date();
-            endDate.setDate(booking.dateRange.start_date + booking.dateRange.duration);
-            booking.endDate = endDate;
+            var startDate = new Date(booking.dateRange.start_date);
+            booking.startDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), 0, 0, 0);
+            booking.endDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + booking.dateRange.duration, 0, 0, 0);
+            // booking.endDate = moment(booking.startDate).add(booking.dateRange.duration, 'days');
+            console.log("date updated now");
+
+            // booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
+            // booking.total = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
           }
           // TODO: REMOVE REDUNDANT PRICE CALUCLATION CODE
-          // booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
-          // booking.total = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
         }
 
         booking.tabCompleted = function(tabId) {
