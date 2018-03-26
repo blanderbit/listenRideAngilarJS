@@ -33,29 +33,22 @@ angular.module('search',[]).component('search', {
         search.initialValues = {
           amount: '',
           sizes: [],
-          categories: {},
+          categories: [],
           brand: '',
           date: {
             "start_date": '',
             "duration": ''
           }
-        }
+        };
         
         // get initial filter values from url
         search.initialValues.sizes = $stateParams.sizes.split(',');
         search.initialValues.brand = $stateParams.brand;
-        search.initialValues.categories = {
-          allterrain: $stateParams.allterrain === "true",
-          city: $stateParams.city === "true",
-          ebikes: $stateParams.ebikes === "true",
-          kids: $stateParams.kids === "true",
-          race: $stateParams.race === "true",
-          special: $stateParams.special === "true"
-        };
+        search.initialValues.categories = $stateParams.categories.split(',');
         search.initialValues.date = {
           "start_date": $stateParams.start_date,
           "duration": $stateParams.duration
-        }
+        };
 
         search.mapOptions = {
           lat: 40,
