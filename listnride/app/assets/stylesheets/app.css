@@ -1447,7 +1447,7 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
   }
 }
 
-bike-sorter, button {
+bike-sorter button {
   min-width: 60px !important; 
   text-align: left !important;
 }
