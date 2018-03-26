@@ -36,7 +36,14 @@
         <h2 class="md-title lnr-no-margin">{{ 'booking.calendar.choose-duration' | translate }}</h2>
         <br>
         <div layout="row" layout-align="start center">
-            <input-range data="calendar.parent.dateRange" on-change="calendar.parent.updateDate()"></input-range>
+            <md-button
+              data="calendar.parent.dateRange"
+              lnr-date-picker
+              date-on-change="calendar.parent.updateDate()"
+              requests="booking.bike.requests"
+              disabled-dates="booking.bike.availabilities">
+            </md-button>
+            <!-- <input-range data="calendar.parent.dateRange" on-change="calendar.parent.updateDate()"></input-range> -->
         </div>
         <div id="timeRange" layout="row" layout-align="start center" ng-if="calendar.parent.startDate">
           <md-input-container flex>
