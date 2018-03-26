@@ -296,7 +296,7 @@
     },
     "details": {
       "tab": "2. Dati personali",
-      "invoice-address": "Il tuo indirizzo di fatturazione",
+      "invoice-address": "Il tuo indirizzo di fatturazione ",
       "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Si prega di verificare",
       "send-sms": "Ti invieremo un SMS sul tuo telefono ",
@@ -368,7 +368,7 @@
     "invite": "Invita i tuoi amici",
     "account": "Conto",
     "delete-account": "Eliminare il conto",
-    "delete-account-description": "Qui puoi cancellare il tuo conto. Non è possibile annullare questo passaggio.",
+    "delete-account-description": "Qui puoi cancellare il tuo profilo. Non è possibile annullare questo passaggio.",
     "delete-account-sure": "Sei sicuro?",
     "delete-account-sure-description": "Non è possibile annullare questo passaggio",
     "delete-account-yes": "Si, elimina",
