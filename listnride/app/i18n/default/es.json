@@ -115,8 +115,8 @@
     "confirmation": "Confirmación",
     "confirmation-text": "¿Estás seguro?",
     "loading": "Cargando",
-    "today": "Today",
-    "yesterday": "Yesterday"
+    "today": "Hoy",
+    "yesterday": "Ayer"
   },
   "meta": {
     "cities": {
@@ -291,7 +291,7 @@
     "sign-in": {
       "tab": "1. Inicio de sesión",
       "new": "¿Nuevo a listnride?",
-      "login": "Login at listnride",
+      "login": "Iniciar sesión a listnride",
       "register-facebook": "Registrar con Facebook",
       "login-facebook": "Iniciar sesión con Facebook",
       "already-member": "¿Ya estás registrado?",
@@ -365,7 +365,7 @@
     "duplicate-finish": "Proceso de duplicación terminado. Copias creadas con éxito",
     "bike-deleted": "Bici borrada con éxito",
     "range-success-delete": "Fecha de disponibilidad borrado",
-    "availability-success-saved": "Availability successfully saved"
+    "availability-success-saved": "Disponibilidad guardada"
   },
   "settings": {
     "settings": "Configuración",
@@ -974,8 +974,8 @@
   },
   "availability": {
     "availability": "Disponibilidad",
-    "modal-title": "When is your bike not available?",
-    "start-from": "Starting from",
+    "modal-title": "¿Cuándo no está disponible tu bicicleta?",
+    "start-from": "Desde",
     "end-at": "Hasta",
     "add-another-date": "Añadir otra fecha",
     "submit-btn": "Ok",
