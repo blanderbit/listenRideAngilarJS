@@ -140,9 +140,7 @@ angular.module('filter',[])
         function filterSizes(bikes) {
           if (!_.isEmpty(filter.currentSizes)) {
             var selectedSizes = _.uniq(filter.currentSizes);
-            selectedSizes = selectedSizes.map(function (item) {
-              return Number.parseInt(item);
-            });
+            selectedSizes = selectedSizes.map(Number);
             return arrayFilter(bikes, selectedSizes, 'size');
           } else {
             return bikes;
