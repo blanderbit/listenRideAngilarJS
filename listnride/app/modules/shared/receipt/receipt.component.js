@@ -40,7 +40,20 @@ angular.module('receipt', []).component('receipt', {
         receipt.subtotalDiscounted = prices.subtotalDiscounted
         receipt.lnrFee = prices.serviceFee;
         receipt.total = Math.max(prices.total - receipt.balance, 0);
+        console.log(receipt.startDate);
+        if (receipt.startDate == "Invalid Date" || receipt.endDate == "Invalid Date") {
+          setDefaultPrices();
+        }
       };
+
+      function setDefaultPrices() {
+        receipt.durationDays = "0";
+        receipt.subtotalDiscounted = "0";
+        receipt.duration = " --- ";
+        receipt.subtotal = 0;
+        receipt.lnrFee = 0;
+        receipt.total = 0;
+      }
 
     }
   ]

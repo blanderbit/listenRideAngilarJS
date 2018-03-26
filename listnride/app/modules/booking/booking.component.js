@@ -43,7 +43,7 @@ angular.module('booking', [])
             booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
             booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
             booking.prices = booking.bike.prices;
-            console.log(booking.prices);
+            console.log(booking.bike);
             booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
             booking.total = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
           },
@@ -95,11 +95,20 @@ angular.module('booking', [])
         };
 
         booking.nextDisabled = function() {
-          switch (booking.selectedIndex) {
-            case 0: return false;
-            case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
-            case 2: return !booking.paymentForm.$valid;
-            case 3: return false;
+          if (!booking.shopBooking) {
+            switch (booking.selectedIndex) {
+              case 0: return false;
+              case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
+              case 2: return !booking.paymentForm.$valid;
+              case 3: return false;
+            }
+          } else {
+            switch (booking.selectedIndex) {
+              case 0: return booking.startDate && booking.endDate;
+              case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
+              case 2: return !booking.paymentForm.$valid;
+              case 3: return false;
+            }
           }
         };
 

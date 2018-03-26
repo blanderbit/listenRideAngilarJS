@@ -353,6 +353,8 @@
       "tab": "1. Duration",
       "bike-rental": "Your bike rental",
       "choose-duration": "Choose your rental duration",
+      "pickup-time": "Pickup time",
+      "return-time": "Return time",
       "intro-description": "Your booking gets safely processed by listnride, Europe's biggest bike sharing community."
     }
   },
