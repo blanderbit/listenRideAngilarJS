@@ -350,6 +350,7 @@
       "add": "Add"
     },
     "calendar": {
+      "tab": "1. Duration",
       "bike-rental": "Your bike rental",
       "choose-duration": "Choose your rental duration",
       "intro-description": "Your booking gets safely processed by listnride, Europe's biggest bike sharing community."

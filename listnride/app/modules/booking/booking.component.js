@@ -29,6 +29,7 @@ angular.module('booking', [])
         booking.tabsDisabled = false;
         booking.voucherCode = "";
         booking.expiryDate = "";
+        booking.shopBooking = $stateParams.shop;
 
         var oldExpiryDateLength = 0;
         var expiryDateLength = 0;
