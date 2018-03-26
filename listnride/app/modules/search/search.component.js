@@ -1,5 +1,15 @@
 'use strict';
 
+
+/*
+Structure of bike search component:
+
+Search
+      |__Filter
+      |__Cardgrid
+                 |__Sorter   
+*/
+
 angular.module('search',[]).component('search', {
   templateUrl: 'app/modules/search/search.template.html',
   controllerAs: 'search',
@@ -15,19 +25,20 @@ angular.module('search',[]).component('search', {
         search.showBikeWindow = showBikeWindow;
         search.placeChanged = placeChanged;
         search.onButtonClick = onButtonClick;
-        search.onSizeChange = onSizeChange;
         search.onCategoryChange = onCategoryChange;
         search.onMapClick = onMapClick;
-        search.clearDate = clearDate;
         search.onBikeHover = onBikeHover;
-        search.onDateChange = onDateChange;
+        search.populateBikes = populateBikes;
         search.filteredBikes = [];
         search.initialValues = {
           amount: '',
-          // default size is null, because we can't use -1, it's unisize
           sizes: [],
           categories: {},
-          brand: ''
+          brand: '',
+          date: {
+            "start_date": '',
+            "duration": ''
+          }
         }
         
         // get initial filter values from url
@@ -41,19 +52,16 @@ angular.module('search',[]).component('search', {
           race: $stateParams.race === "true",
           special: $stateParams.special === "true"
         };
-
-        // properties
-        search.date = {
+        search.initialValues.date = {
           "start_date": $stateParams.start_date,
           "duration": $stateParams.duration
-        };
+        }
 
         search.mapOptions = {
           lat: 40,
           lng: -74,
           zoom: 5
         };
-        search.isClearDataRange = false;
         
         // invocations
         populateBikes(search.location);
@@ -127,18 +135,6 @@ angular.module('search',[]).component('search', {
         populateBikes(search.location);
       }
 
-      function onSizeChange() {
-        $state.go(
-          // current state
-          $state.current,
-          // state params
-          { sizes: search.sizeFilter.sizes },
-          // route options
-          // do not remove inherit prop, else map tiles stop working
-          { notify: false }
-        );
-      }
-
       function onCategoryChange(category) {
         var categoryMap = {};
         categoryMap[category] = search.categoryFilter[category];
@@ -153,21 +149,10 @@ angular.module('search',[]).component('search', {
         );
       }
 
-      function onDateChange() {
-        $state.go(
-          // current state
-          $state.current,
-          // state params
-          search.date,
-          // route options
-          // do not remove inherit prop, else map tiles stop working
-          { notify: false }
-        );
-        populateBikes(search.location);
-      }
-
       function populateBikes(location) {
         search.bikes = undefined;
+        location = location ? location : $stateParams.location;
+
         var urlRequest = "/rides?location=" + location;
         
         if (search.date && search.date.start_date) {
@@ -177,6 +162,13 @@ angular.module('search',[]).component('search', {
 
         api.get(urlRequest).then(function(response) {
           search.bikes = response.data.bikes;
+          search.categorizedFilteredBikes = [];
+          search.titles = [];
+          search.categorizedFilteredBikes.push({
+            title: "All Bikes",
+            bikes: search.bikes
+          });
+          search.latLng = response.data.location.geometry.location;
           search.locationBounds = response.data.location.geometry.viewport;
 
           NgMap.getMap({id: "searchMap"}).then(function(map) {
@@ -225,16 +217,6 @@ angular.module('search',[]).component('search', {
         );
         ngMeta.setTitle($translate.instant("search.meta-title", data));
         ngMeta.setTag("description", $translate.instant("search.meta-description", data));
-      }
-
-      function clearDate() {
-        if (!search.date.start_date) return;
-        search.date = {
-          'start_date' : null,
-          'duration' : null
-        }
-        search.isClearDataRange = true;
-        search.onDateChange();
       }
       
       function initializeGoogleMap() {

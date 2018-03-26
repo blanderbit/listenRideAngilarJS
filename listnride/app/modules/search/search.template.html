@@ -2,34 +2,28 @@
 
   <div flex-xs="100" flex-gt-xs="70" flex-order-xs="2" layout="column">
     <div layout="column">
-      <filter bikes="search.filteredBikes" initial-bikes="search.bikes" initial-values="search.initialValues" update-state="search.updateState"></filter>
+      <filter bikes="search.filteredBikes" initial-bikes="search.bikes" initial-values="search.initialValues" update-state="search.updateState" populate-bikes="search.populateBikes"></filter>
     </div>
 
     <md-divider></md-divider>
 
     <md-content flex layout="column">
-
-      <!-- city name for shown bikes -->
-      <!-- <div id="search-header" layout-padding>
-        <h1 class="md-headline" layout-padding>{{ 'search.bikes-in' | translate }} {{search.location}}</h1>
-      </div> -->
-
       <!-- no bikes found placeholder -->
       <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout="row" layout-align="center center" layout-padding>
         <span>{{ 'search.no-bikes' | translate }}</span>
       </div>
-
-      <!-- bikes grid -->
-      <!-- mobile:        1 bike each row -->
-      <!-- tablet:        2 bikes each row -->
-      <!-- desktop:       3 bikes each row -->
-      <!-- larger screen: 4 bikes each row -->
-      <cardgrid 
-        bikes="search.filteredBikes"
-        title="Bikes in {{search.location}}"
-        on-bike-hover="search.onBikeHover">
+      <cardgrid
+               ng-repeat="filterBikes in search.categorizedFilteredBikes"
+               on-bike-hover="search.onBikeHover"
+               title="{{filterBikes.title}}"
+               
+               categorized-bikes="search.categorizedFilteredBikes"
+               uncategorized-bikes="search.bikes"
+               bikes="filterBikes.bikes"
+               location="search.latLng"
+               titles="search.titles"
+               card-index="$index">
       </cardgrid>
-
       <!-- busy loader until bikes api resolves -->
       <div ng-show="search.bikes === undefined" flex layout="column" layout-align="center center">
         <md-progress-circular md-mode="indeterminate"></md-progress-circular>
