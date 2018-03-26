@@ -43,7 +43,8 @@ angular.module('booking', [])
             booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
             booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
             booking.prices = booking.bike.prices;
-            console.log(booking.bike);
+            booking.requests = booking.bike.requests;
+            booking.availabilities = booking.bike.availabilities;
             booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
             booking.total = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
           },
