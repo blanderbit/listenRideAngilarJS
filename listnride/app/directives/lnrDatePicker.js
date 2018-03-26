@@ -141,7 +141,8 @@ function lnrDatePickerController($scope, $translate) {
       date.setHours(0, 0, 0, 0);
       var result = false;
       _.forEach(vm.disabledDates, function (slot) {
-        result = result || moment(date).isBetween(slot.start_at, slot.end_at, null, '[]') // all inclusive
+        var end_at = slot.hasOwnProperty('end_at') ? slot.end_at : moment(slot.start_date).add(slot.duration, 'd');
+        result = result || moment(date).isBetween(slot.start_at, end_at, null, '[]') // all inclusive
       });
       return result;
     }
