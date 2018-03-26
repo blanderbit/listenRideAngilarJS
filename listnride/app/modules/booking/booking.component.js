@@ -71,7 +71,7 @@ angular.module('booking', [])
         booking.dateRange = {};
 
         booking.updateDate = function() {
-          // console.log(booking.dateRange);
+          console.log(booking.dateRange);
           if (booking.dateRange.start_date && booking.dateRange.duration) {
             booking.startDate = booking.dateRange.start_date;
             var endDate = new Date();
