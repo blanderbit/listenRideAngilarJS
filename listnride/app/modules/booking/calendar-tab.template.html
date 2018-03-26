@@ -44,7 +44,7 @@
         <md-divider></md-divider>
         <div layout="row" layout-align="center center">
             <span class="lnr-btn-placeholder"></span>
-            <input-range data="input" disabled-dates="availabilityDialog.disabledDates"></input-range>
+            <input-range data="calendar.parent.dateRange" on-change="calendar.parent.updateDate()"></input-range>
         </div>
       </div>
     </div>
