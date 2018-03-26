@@ -42,6 +42,7 @@ angular.module('booking', [])
             booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
             booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
             booking.prices = booking.bike.prices;
+            console.log(booking.prices);
             booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
             booking.total = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
           },
@@ -70,7 +71,7 @@ angular.module('booking', [])
         booking.dateRange = {};
 
         booking.updateDate = function() {
-          console.log(booking.dateRange);
+          // console.log(booking.dateRange);
           if (booking.dateRange.start_date && booking.dateRange.duration) {
             booking.startDate = booking.dateRange.start_date;
             var endDate = new Date();

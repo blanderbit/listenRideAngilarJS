@@ -348,6 +348,11 @@
       "payment": "Payment",
       "redeem-voucher": "Redeem Voucher",
       "add": "Add"
+    },
+    "calendar": {
+      "bike-rental": "Your bike rental",
+      "choose-duration": "Choose your rental duration",
+      "intro-description": "Your booking gets safely processed by listnride, Europe's biggest bike sharing community."
     }
   },
   "toasts": {

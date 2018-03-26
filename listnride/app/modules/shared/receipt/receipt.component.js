@@ -19,10 +19,14 @@ angular.module('receipt', []).component('receipt', {
       this.$onChanges = function (changes) {
         if (changes.user) {
           receipt.balance = changes.user.currentValue.balance;
-          setPrices();
+          if (receipt.prices) {
+            setPrices();
+          }
         }
         if (changes.prices) {
-          setPrices();
+          if (receipt.prices) {
+            setPrices();
+          }
         }
       };
 
