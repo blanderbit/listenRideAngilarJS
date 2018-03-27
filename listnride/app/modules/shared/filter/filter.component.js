@@ -47,7 +47,7 @@ angular.module('filter',[])
           filter.currentBrand = filter.brands[0];
           // categories
           filter.categories = bikeOptions.allCategoriesOptions();
-          filter.selected = filter.initialValues.categories.slice().map(Number);
+          filter.currentCategories = filter.initialValues.categories.filter(Boolean).slice().map(Number);
           filter.openSubs = [];
         };
         
@@ -78,7 +78,7 @@ angular.module('filter',[])
 
         function clearFilters() {
           filter.currentSizes = [-1];
-          filter.selected = [];
+          filter.currentCategories = [];
           filter.openSubs = [];
           filter.currentBrand = filter.brands[0];
           clearDate();
@@ -87,7 +87,7 @@ angular.module('filter',[])
         };
 
         function onCategoryChange() {
-          filter.updateState({ categories: filter.selected.join(',') });
+          filter.updateState({ categories: filter.currentCategories.join(',') });
           applyFilters();
         };
 
@@ -155,8 +155,8 @@ angular.module('filter',[])
         }
 
         function filterCategories (bikes) {
-          if (!_.isEmpty(filter.selected)) {
-            return arrayFilter(bikes, filter.selected, 'category');
+          if (!_.isEmpty(filter.currentCategories)) {
+            return arrayFilter(bikes, filter.currentCategories, 'category');
           } else {
             return bikes;
           }
@@ -200,7 +200,7 @@ angular.module('filter',[])
         };
 
         function isIndeterminate(categoryId) {
-          return (filter.selected.length !== 0 && !categoryChosen(categoryId));
+          return (filter.currentCategories.length !== 0 && !categoryChosen(categoryId));
         };
 
         function isChecked(categoryId) {
@@ -210,9 +210,9 @@ angular.module('filter',[])
         function toggleAll($event, categoryId) {
           $event.stopPropagation();
           if (categoryChosen(categoryId)) {
-            filter.selected = _.difference(filter.selected, categorySubs(categoryId))
-          } else if (filter.selected.length === 0 || filter.selected.length > 0) {
-            filter.selected = _.union(filter.selected, categorySubs(categoryId));
+            filter.currentCategories = _.difference(filter.currentCategories, categorySubs(categoryId))
+          } else if (filter.currentCategories.length === 0 || filter.currentCategories.length > 0) {
+            filter.currentCategories = _.union(filter.currentCategories, categorySubs(categoryId));
             filter.openSubs = _.union(filter.openSubs, [categoryId])
           }
           filter.onCategoryChange()
@@ -223,7 +223,7 @@ angular.module('filter',[])
         };
 
         function categoryIntersection(categoryId) {
-          return _.intersection(filter.selected, categorySubs(categoryId)).sort()
+          return _.intersection(filter.currentCategories, categorySubs(categoryId)).sort()
         }
 
         function categoryChosen(categoryId) {
