@@ -154,10 +154,9 @@ angular.module('search',[]).component('search', {
         location = location ? location : $stateParams.location;
 
         var urlRequest = "/rides?location=" + location;
-        
-        if (search.date && search.date.start_date) {
-          urlRequest += "&start_date=" + search.date.start_date;
-          urlRequest += "&duration=" + search.date.duration;
+        if (search.initialValues.date && search.initialValues.date.start_date) {
+          urlRequest += "&start_date=" + search.initialValues.date.start_date;
+          urlRequest += "&duration=" + search.initialValues.date.duration;
         }
 
         api.get(urlRequest).then(function(response) {
