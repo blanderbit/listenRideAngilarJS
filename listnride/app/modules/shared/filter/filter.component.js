@@ -129,10 +129,12 @@ angular.module('filter',[])
           filteredBikes = filterSizes(filteredBikes);
           filteredBikes = filterCategories(filteredBikes);
           filter.bikes = filteredBikes;
-          filter.categorizedBikes = [{
-            title: "All Bikes",
-            bikes: filter.bikes
-          }];
+
+          // filter.categorizedBikes = [{
+          //   title: "All Bikes",
+          //   bikes: filter.bikes
+          // }];
+          
           initializeBrandFilter();
         }
 
