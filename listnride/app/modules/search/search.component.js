@@ -166,6 +166,7 @@ angular.module('search',[]).component('search', {
 
           NgMap.getMap({id: "searchMap"}).then(function(map) {
             map.fitBounds(correctBounds());
+            map.setZoom(map.getZoom() + 1);
             // map.panToBounds(bounds);
           });
 
