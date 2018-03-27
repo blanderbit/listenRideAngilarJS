@@ -37,8 +37,8 @@
   <div layout="row" layout-wrap flex ng-show="categoryFilter.parent.showSubs(category.catId)" layout-align="flex-start center" class="lnr-margin-left">
     <div flex="33" ng-repeat="subcategory in category.subcategories" class="lnr-padding-left-double">
       <md-checkbox
-        ng-checked="categoryFilter.parent.exists(subcategory.id, categoryFilter.parent.selected)"
-        ng-click="categoryFilter.parent.toggle(subcategory.id, categoryFilter.parent.selected)"
+        ng-checked="categoryFilter.parent.exists(subcategory.id, categoryFilter.parent.currentCategories)"
+        ng-click="categoryFilter.parent.toggle(subcategory.id, categoryFilter.parent.currentCategories)"
         md-prevent-menu-close
       >
         {{ subcategory.name }}

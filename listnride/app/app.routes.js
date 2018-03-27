@@ -87,7 +87,7 @@
             squash: true
           },
           categories: {
-            value: '',
+            value: "",
             squash: true
           }
         }
