@@ -2,7 +2,7 @@
   <div
     ng-click="categoryFilter.parent.toggle(category.catId, categoryFilter.parent.openSubs)"
     md-prevent-menu-close
-    class="lnr-padding-top-double"
+    class="lnr-padding-top-double lnr-clickable"
     layout="row"
     layout-align="space-between start"
   >
@@ -20,7 +20,6 @@
       <div
         flex-85
         md-prevent-menu-close
-        class="lnr-clickable"
       >
         {{category.name}}
       </div>
