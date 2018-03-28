@@ -47,7 +47,7 @@ angular.module('filter',[])
           filter.currentBrand = filter.brands[0];
           // categories
           filter.categories = bikeOptions.allCategoriesOptions();
-          filter.currentCategories = []; //filter.initialValues.categories.filter(Boolean).slice().map(Number);
+          filter.currentCategories = filter.initialValues.categories.filter(Boolean).slice().map(Number);
           filter.openSubs = [];
         };
         
