@@ -154,12 +154,12 @@ angular.module('search',[]).component('search', {
 
         api.get(urlRequest).then(function(response) {
           search.bikes = response.data.bikes;
-          search.categorizedFilteredBikes = [];
-          search.titles = [];
-          search.categorizedFilteredBikes.push({
+          search.categorizedFilteredBikes = [{
             title: "All Bikes",
             bikes: search.bikes
-          });
+          }];
+          console.log("cat bikes: ", search.categorizedFilteredBikes);
+          search.titles = [];
           search.latLng = response.data.location.geometry.location;
           search.locationBounds = response.data.location.geometry.viewport;
 
