@@ -130,10 +130,10 @@ angular.module('filter',[])
           filteredBikes = filterCategories(filteredBikes);
           filter.bikes = filteredBikes;
 
-          // filter.categorizedBikes = [{
-          //   title: "All Bikes",
-          //   bikes: filter.bikes
-          // }];
+          filter.categorizedBikes = [{
+            title: "All Bikes",
+            bikes: filter.bikes
+          }];
           
           initializeBrandFilter();
         }
@@ -147,10 +147,8 @@ angular.module('filter',[])
         }
   
         function filterSizes(bikes) {
-          if (!_.isEmpty(filter.currentSizes)) {
-            var selectedSizes = _.uniq(filter.currentSizes);
-            selectedSizes = selectedSizes.map(Number);
-            return arrayFilter(bikes, selectedSizes, 'size');
+          if (filter.currentSize != filter.sizes[0]) {
+            return filterFilter(bikes, filter.currentSize);
           } else {
             return bikes;
           }
