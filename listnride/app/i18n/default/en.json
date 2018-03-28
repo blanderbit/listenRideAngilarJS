@@ -32,6 +32,7 @@
     "lanzarote": "Lanzarote",
     "mallorca": "Mallorca",
     "sylt": "Sylt",
+    "stuttgart": "Stuttgart",
     "per": "per",
     "hour": "hour",
     "hours": "hours",
@@ -115,6 +116,8 @@
     "confirmation": "Confirmation",
     "confirmation-text": "Are you sure?",
     "loading": "Loading",
+    "clear": "Clear",
+    "clear-all": "Clear All",
     "today": "Today",
     "yesterday": "Yesterday"
   },
@@ -345,6 +348,14 @@
       "payment": "Payment",
       "redeem-voucher": "Redeem Voucher",
       "add": "Add"
+    },
+    "calendar": {
+      "tab": "1. Duration",
+      "bike-rental": "Your bike rental",
+      "choose-duration": "Choose your rental duration",
+      "pickup-time": "Pickup time",
+      "return-time": "Return time",
+      "intro-description": "Your booking gets safely processed by listnride, Europe's biggest bike sharing community."
     }
   },
   "toasts": {
@@ -364,7 +375,7 @@
     "opening-hours-error": "Could not save opening hours.",
     "uniq-phone": "Phone number already registered in our system.",
     "pending-requests": "Looks like you have an open request for this bike. Before you can delete the bike you need to accept or cancel it.",
-    "account-deleted": "Your account has been canceled",
+    "account-deleted": "Your account has been deactivated",
     "enter-email": "Please enter your email",
     "duplicate-start": "Duplication process started",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
@@ -377,7 +388,7 @@
     "profile": "Profile",
     "invite": "Invite Friends",
     "account": "Account",
-    "delete-account": "Cancel Account",
+    "delete-account": "Deactivate Account",
     "delete-account-description": "Here you can dactivate your listnride account. This step can not be undone.",
     "delete-account-sure": "Are you really sure?",
     "delete-account-sure-description": "This step can not be undone.",
@@ -620,7 +631,11 @@
     "all-sizes": "All Sizes",
     "bikes-in": "Bikes in",
     "meta-title": "Rent the perfect bike in {{location}}.",
-    "meta-description": "listnride offers a wide variety of perfekt bikes for rent in {{location}}."
+    "meta-description": "listnride offers a wide variety of perfekt bikes for rent in {{location}}.",
+    "number-of-bikes": "Number of bikes",
+    "bike": "Bike",
+    "bikes": "Bikes",
+    "pick-body-size": "Pick a body size"
   },
   "calendar": {
     "invalid-date": "Dates are invalid",
