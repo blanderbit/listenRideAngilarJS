@@ -2,12 +2,6 @@
   <div layout="row" layout-align="space-between center">
       <p class="md-subhead">{{cardgrid.title}}</p>
       <span flex></span>
-      <bike-sorter ng-if="cardgrid.cardIndex == 0"
-                   bikes="cardgrid.uncategorizedBikes" 
-                   categorized-bikes="cardgrid.categorizedBikes" 
-                   titles="cardgrid.titles"
-                   location="cardgrid.location">
-      </bike-sorter>
   </div>
   <md-divider></md-divider>
   <div id="featuredBikes" layout="row" layout-wrap layout-padding style="margin: 0; padding: 0">

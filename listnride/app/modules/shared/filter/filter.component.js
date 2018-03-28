@@ -147,8 +147,11 @@ angular.module('filter',[])
         }
   
         function filterSizes(bikes) {
-          if (filter.currentSize != filter.sizes[0]) {
-            return filterFilter(bikes, filter.currentSize);
+          // TODO: find clear solution for this
+          if (!_.isEmpty(filter.currentSizes) && filter.currentSizes.indexOf("-1") == -1 && filter.currentSizes.indexOf(-1) == -1) {
+            var selectedSizes = _.uniq(filter.currentSizes);
+            selectedSizes = selectedSizes.map(Number);
+            return arrayFilter(bikes, selectedSizes, 'size');
           } else {
             return bikes;
           }
