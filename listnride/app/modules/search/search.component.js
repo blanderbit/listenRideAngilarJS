@@ -115,6 +115,7 @@ angular.module('search',[]).component('search', {
         populateBikes(location);
       }
 
+      // TODO: rename this function. Not clear name.
       function onButtonClick() {
         $state.go(
           // current state
