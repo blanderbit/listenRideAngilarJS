@@ -8,6 +8,16 @@
 // md-color-*
 */
 
+/**
+ * CONTENTS
+ *
+ * GENERAL..............Common styles
+ * FRAMEWORK............Something we do with default material styles
+ * LNR_CLASSES..........Our custom atomic styles
+ * SVG..................Set proportions to svg
+ *
+ */
+
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL
 /*-----------------------------------------------------------------------------------*/
@@ -41,6 +51,10 @@ strong {
 .content {
   max-width: 1040px;
   margin: 0 auto;
+}
+
+.mobile {
+  padding: 0 !important;
 }
 
 /* This has to be set for all full-height layouts */
@@ -110,7 +124,7 @@ md-grid-list md-grid-tile {
 }
 
 .highlight-tile {
-  height: 260px;
+  /* height: 260px; */
   padding: 24px 0;
   border-radius: 4px;
   border: 1px solid rgba(95, 198, 147, 0.25);
@@ -128,6 +142,10 @@ booking .highlight-tile button {
 home .highlight-tile {
   height: 260px;
   padding: 24px 0px;
+}
+
+home input {
+  font-size: 16px;
 }
 
 invest .highlight-tile {
@@ -151,7 +169,7 @@ invest .highlight-tile {
 
 md-menu-content {
   /*max-height: 300px!important;*/
-  max-height: 500px;
+  max-height: 500px; /*TODO: find for WHAT*/
 }
 
 md-card md-card-title {
@@ -161,6 +179,10 @@ md-card md-card-title {
 .lnr-image-card {
   border-width: 0;
   margin: 0;
+}
+
+.full-height {
+  height: 100%;
 }
 
 button.md-primary.md-cancel-button.md-button.ng-scope.md-default-theme.md-ink-ripple {
@@ -264,7 +286,7 @@ md-tooltip .md-content {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/* LNR CLASSES
+/* LNR_CLASSES
 /*-----------------------------------------------------------------------------------*/
 
 .lnr-black {
@@ -336,6 +358,26 @@ md-tooltip .md-content {
   margin-bottom: 16px;
 }
 
+.lnr-padding {
+  padding: 8px;
+}
+
+.lnr-padding-left {
+  padding-left: 8px;
+}
+
+.lnr-padding-left-double {
+  padding-left: 16px;
+}
+
+.lnr-lrg-padding {
+  padding: 16px;
+}
+
+.lnr-padding-top-double {
+  padding-top: 16px;
+}
+
 .lnr-no-padding {
   padding: 0;
 }
@@ -346,6 +388,10 @@ md-tooltip .md-content {
 
 .lnr-mb-0 {
   margin-bottom: 0;
+}
+
+.lnr-lh-body-2 {
+  line-height: 24px;
 }
 
 .lnr-clickable {
@@ -448,6 +494,18 @@ md-tooltip .md-content {
   font-size: 14px;
 }
 
+.lnr-icn-xs {
+  min-width: 14px;
+  width: 14px;
+  margin: 0 8px;
+  height: 20px;
+  min-height: 20px;
+}
+
+.lnr-select-in-modal {
+  z-index: 100;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* SVG
 /*-----------------------------------------------------------------------------------*/
@@ -455,6 +513,11 @@ md-tooltip .md-content {
 .lnr-icn-sm {
   width: 24px;
   height: 24px;
+}
+
+.lnr-icn-sms {
+  width: 18px;
+  height: 18px;
 }
 
 .lnr-icn-md {
@@ -548,7 +611,35 @@ settings .lnr-profile-lrg {
 .lnr-header {
   width: 100%;
   height: 60px;
-  z-index: 3;
+  z-index: 4;
+}
+
+.lnr-clear-input {
+  vertical-align: middle;
+  margin: auto 0 auto -24px;
+  background-image: url('../ui_icons/cancel.png');
+  background-size: 16px 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.lnr-header autocomplete {
+  margin: 8px 0;
+}
+
+.lnr-header label {
+  display: none;
+}
+
+.lnr-header input {
+  border-color: #EAF3FE !important;
+  color: rgba(85, 85, 85, 1.0);
+  line-height: 20px;
+  /*font-size: 18px;*/
+  background: url('../ui_icons/search.png') no-repeat 3% 50%;
+  background-size: 18px 18px;
+  padding: 0 30px 0 40px;
+  background-color: #EAF3FE;
 }
 
 .lnr-header .md-toolbar-tools .lnr-header-logo {
@@ -580,9 +671,9 @@ settings .lnr-profile-lrg {
 }
 
 /* Safari vertical alignment fix */
-.lnr-header .md-toolbar-tools .lnr-header-logo {
+/*.lnr-header .md-toolbar-tools .lnr-header-logo {
   min-height: 25px;
-}
+}*/
 
 .md-toolbar-tools .md-button:not(.md-fab) {
   min-width: 0px;
@@ -798,7 +889,7 @@ footer .lnr-link {
 /*-----------------------------------------------------------------------------------*/
 
 home #landingSection {
-  height: 78vh;
+  height: 65vh;
   overflow: visible;
   position: relative;
 }
@@ -934,6 +1025,25 @@ md-grid-list md-grid-tile.tile-amsterdam {
 
 md-grid-list md-grid-tile.tile-vienna {
   background-image: url(../ui_images/cities/lnr_vienna.jpg);
+}
+
+md-grid-list md-grid-tile.tile-usedom {
+  background-image: url(../ui_images/cities/lnr_usedom.jpg);
+  background-position: 50% 70%;
+}
+
+md-grid-list md-grid-tile.tile-lanzarote {
+  background-image: url(../ui_images/cities/lnr_lanzarote.jpg);
+  background-position: 70% 85%;
+}
+
+md-grid-list md-grid-tile.tile-mallorca {
+  background-image: url(../ui_images/cities/lnr_mallorca.jpg);
+  background-position: 50% 85%;
+}
+
+md-grid-list md-grid-tile.tile-sylt {
+  background-image: url(../ui_images/cities/lnr_sylt.jpg);
 }
 
 .md-dialog-fullscreen.dialog-bikes,
@@ -1252,6 +1362,10 @@ md-dialog md-dialog-content .date-picker-wrapper .month-wrapper thead {
 /*  SEARCH
 /*-----------------------------------------------------------------------------------*/
 
+.lnr-filter-container {
+  overflow: scroll;
+}
+
 search ng-map {
   height: 100%!important;
 }
@@ -1301,10 +1415,6 @@ ng-map md-card {
   width: 240px;
 }
 
-ng-map md-card.lnr-bike-card md-icon {
-  display: none;
-}
-
 ng-map md-card.lnr-bike-card md-card-title-text span {
   max-width: 120px;
 }
@@ -1315,8 +1425,8 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
 
 .ng-map-info-window > div:first-child div:nth-last-child(2),
 .ng-map-info-window > div:first-child div:nth-last-child(2) div {
-  display: block!important;
-  margin-top: -4px!important;
+  display: block !important;
+  margin-top: -4px !important;
   z-index: 2;
 }
 
@@ -1337,6 +1447,10 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
   }
 }
 
+bike-sorter button {
+  min-width: 60px !important; 
+  text-align: left !important;
+}
 /*-----------------------------------------------------------------------------------*/
 /*  USER
 /*-----------------------------------------------------------------------------------*/
@@ -1916,6 +2030,10 @@ md-grid-list a {
   color: #7ab2f8
 }
 
+.text-success {
+  color: rgb(95, 198, 147);
+}
+
 md-input-container .md-input.form-input-error {
   border: 1px solid rgb(221, 44, 0);
   border-radius: 4px;
@@ -2008,7 +2126,6 @@ md-switch.md-checked .md-bar {
 /*-----------------------------------------------------------------------------------*/
 
 invite #inviteForm .invite-form-container {
-  height: 320px;
   padding: 24px 0;
   border-radius: 4px;
   border: 1px solid rgba(95, 198, 147, 0.25);
@@ -2213,6 +2330,14 @@ md-input-container.md-icon-right>md-icon.md-icon--btn {
   transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1), -webkit-transform 0.5s cubic-bezier(0.35, 0, 0.25, 1), left 0.5s cubic-bezier(0.35, 0, 0.25, 1);
 }
 
+.md-button:not([disabled]).md-focused.lnr-md-no-focused {
+  background: none;
+}
+
+md-icon[md-font-icon].fa--lh20 {
+  line-height: 20px;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  daterangepicker custom styles
 /*-----------------------------------------------------------------------------------*/
@@ -2259,5 +2384,40 @@ md-input-container.md-icon-right>md-icon.md-icon--btn {
   .date-picker-wrapper.date-picker-wrapper--ngDialog,
   .date-picker-wrapper.date-picker-wrapper--ngDialog .month-wrapper {
     max-width: 320px;
+  }
+}
+
+/* input-range */
+
+.availability__list input-range md-input-container {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 599px) {
+  input-range {
+    margin-bottom: 15px;
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  FILTER
+/*-----------------------------------------------------------------------------------*/
+
+.filter__select-list md-select {
+  margin: 10px 0;
+}
+
+.filter__category {
+  width: 400px;
+}
+
+@media (max-width: 599px) {
+  .filter__category {
+    width: 100%;
+  }
+
+  md-menu-content {
+    max-height: auto;
   }
 }

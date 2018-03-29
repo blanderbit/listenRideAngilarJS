@@ -19,7 +19,8 @@
 
     <form class="lnr-search-bar md-whiteframe-3dp lnr-search-bar--fs18" layout="row" md-theme="default">
       <autocomplete
-        autocomplete-id="home"
+        autocomplete-id="home-search"
+        class="home-search"
         flex="75"
         layout="column"
         location="home.location"
@@ -171,6 +172,29 @@
       <md-grid-tile class="tile tile-vienna">
         <a ui-sref="cityLanding({city: 'vienna'})" layout-padding layout="column" layout-align="center center">
           <h3 class="md-title">{{ 'shared.vienna' | translate }}</h3>
+        </a>
+      </md-grid-tile>
+      <md-grid-tile class="tile tile-usedom">
+        <a ui-sref="cityLanding({city: 'usedom'})" layout-padding layout="column" layout-align="center center">
+          <h3 class="md-title">{{ 'shared.usedom' | translate }}</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile tile-lanzarote">
+        <a ui-sref="cityLanding({city: 'lanzarote'})" target="_blank" layout-padding layout="column" layout-align="center center">
+          <h3 class="md-title">{{ 'shared.lanzarote' | translate }}</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile tile-mallorca">
+        <a ui-sref="cityLanding({city: 'mallorca'})" layout-padding layout="column" layout-align="center center">
+          <h3 class="md-title">{{ 'shared.mallorca' | translate }}</h3>
+        </a>
+      </md-grid-tile>
+
+      <md-grid-tile class="tile tile-sylt">
+        <a ui-sref="cityLanding({city: 'sylt'})" layout-padding layout="column" layout-align="center center">
+          <h3 class="md-title">{{ 'shared.sylt' | translate }}</h3>
         </a>
       </md-grid-tile>
     </md-grid-list>

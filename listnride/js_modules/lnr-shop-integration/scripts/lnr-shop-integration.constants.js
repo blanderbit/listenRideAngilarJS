@@ -1,11 +1,23 @@
 var lnrConstants = {
   // environments: staging, production
-  env: 'production',
-  version: '?1.0',
+  env: 'staging',
+  version: '?1.007',
   // shop solution for staging and production
   shopUrl: {
-    "staging": "https://listnride-staging.herokuapp.com/v2/shop_solutions",
-    "production": "https://api.listnride.com/v2/shop_solutions"
+    "staging": {
+      "en": "https://www.staging.listnride.com/booking",
+      "de": "https://www.staging.listnride.de/booking",
+      "nl": "https://www.staging.listnride.nl/booking",
+      "es": "https://www.staging.listnride.es/booking",
+      "it": "https://www.staging.listnride.it/booking"
+    },
+    "production": {
+      "en": "https://www.listnride.com/booking",
+      "de": "https://www.listnride.de/booking",
+      "nl": "https://www.listnride.nl/booking",
+      "es": "https://www.listnride.es/booking",
+      "it": "https://www.listnride.it/booking"
+    }
   },
   // users for staging and production
   users: {

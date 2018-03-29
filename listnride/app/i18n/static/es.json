@@ -150,8 +150,15 @@
       "meta-title": "Alquila una bicicleta de carretera en listnride para la Clásica de Hamburgo ",
       "meta-description": "Alquile con facilidad la bicicleta de carretera perfecta para la Clásica de Hamburgo online y elige entre marcas como Specialized, Ridley, Cervelo y Bianchi.",
       "title": "Alquila una bicicleta de carretera en listnride para la Clásica de Hamburgo ",
-      "text": "¿Necesitas una bici de carretera para la Cyclassics de Hamburgo? ¡Podemos engancharte! Junto con la comunidad listnride, ofrecemos bicis de carretera que puedes alquilar por el período que quieras. Basta con que elijas una de las bicis de más abajo, la solicites para el período que necesites y la recojas cuando llegue el momento. Tan fácil como eso. <br><br>Hazte con un descuento de 10€  introduciendo este código de promoción: CYCLASSICS2018 en la configuración de tu cuenta antes de reservar  ¿No puedes participar? Ayuda a alguien que lo necesite. ¡Anuncia tu bici y gana dinero extra!",
-      "description": "Dónde: <b>Hamburgo </b>| qué: <b>carrera de bicis de carretera de 60, 100 o 160 km </b>| cuándo: <b>19.08.2017 </b>"
+      "text": "¿Necesitas una bici de carretera para la Cyclassics de Hamburgo? ¡Podemos engancharte! Junto con la comunidad listnride, ofrecemos bicis de carretera que puedes alquilar por el período que quieras. Basta con que elijas una de las bicis de más abajo, la solicites para el período que necesites y la recojas cuando llegue el momento. Tan fácil como eso. <br><br>Hazte con un descuento de 10€  introduciendo este código de promoción: CYCLASSICS2018 en la configuración de tu cuenta antes de reservar. <br><br>¿No puedes participar? Ayuda a alguien que lo necesite. ¡Anuncia tu bici y gana dinero extra!",
+      "description": "Dónde: <b>Hamburgo </b>| Qué: <b>carrera de bicis de carretera de 60, 100 o 160 km </b>| cuándo: <b>19.08.2017</b>"
+    },
+    "hamburg-triathlon": {
+      "meta-title": "Alquila una bicicleta de carretera en listnride para el Triatlón de Hamburgo ",
+      "meta-description": "Alquila con facilidad la bici de carretera perfecta para el Triatlón de Hamburgo online y elige entre marcas como Specialized, Ridley, Cervelo y Bianchi.",
+      "title": "Alquila una bicicleta de carretera en listnride para el Triatlón de Hamburgo ",
+      "text": "¿Necesitas una bici de carretera para el Triatlón de Hamburgo? ¡Podemos engancharte! Junto con la comunidad listnride, ofrecemos las bicis de carretera ideales. Basta con que elijas una de las bicis de más abajo, la solicites para el período que necesites y la recojas cuando llegue el momento. Tan fácil como eso. <br><br>Asegúrate un descuento de 10 € introduciendo el código de promoción TriathlonHH2018 en la configuración de tu cuenta antes de reservar. <br><br>¿No puedes participar? Ayuda a alguien que lo necesite. ¡Anuncia tu bici y gana dinero extra!",
+      "description": "Dónde: <b>Hamburgo</b> | Qué: <b> Triatlón- Distancia Olímpica y Sprint</b> | Cuándo: <b>14-15 de julio de 2018 </b>"
     },
     "riderman": {
       "meta-title": "Alquila una bici de carretera para la RiderMan de Bad Dürrheim",
@@ -175,7 +182,6 @@
       "text": "During the Berliner Fahrradschau we want to explore with you our local cross playground, the forest with uncountable awesome trails, the Grunewald.<br><br>On Saturday the 24th of March 10am sharp we start rolling from the front gate BFS venue STATION Berlin. The social paced ride lasts for ~3 hours / 45km in the nature and bring you back well charged. We highly recommend a CX/Gravel bike, warm clothes, and a fit body. Helmets and rsvp are required!<br><br>In case you need a suitable bike or would like to test a new cross bike, check out the great Bikes offered by Votec and our community below. If you like to join, <a href=\"https://ti.to/listnride/listnride-crossride-fahrradschau-berlin/\" target=\"_BLANK\">you need to register here.</a>"
     },
     "mcbw": {
-      "title": "",
       "description": "Explore Munich by bike, go cycling with listnride!",
       "subdescription": "Together with Munix Finest Bicycles and Ampler we rent out fantastic bikes",
       "subhead-1": "The new bike rental",
@@ -226,7 +232,7 @@
     }
   },
   "how-to-shoot-bike-photo": {
-    "header": "Consejos sobre las fotos",
+    "header": "Consejos sobre tomar fotos",
     "title": "Un par de consejos fotográficos para hacer que tu anuncio destaque",
     "subtitle": "Lo primero que observan los posibles usuarios cuando piensan en alquilar una bici en listnride son las fotos de la vista general. Los anuncios de bicis con buenas fotos captarán más interés y más alquileres.",
     "headline-1": "Iluminación",
@@ -450,7 +456,6 @@
       "faq-answer-6": "• Una garantía de dos años cubre los defectos de mano de obra y materiales. <br>• Tecla de backup remoto, para bloquear o desbloquear la bici cuando el teléfono inteligente no esté disponible o esté sin batería <br>• Cargador de bici (cargador de 36V, 2A) <br>• Seguimiento antirrobo GSM y Bluetooth  <br>Aplicación de teléfono inteligente para Android e iOS <br>•  Manual de funcionamiento y guía del usuario <br>• Herramienta antirrobo para las tuercas de las ruedas de la bici <br>•  Ruedas de Electrified S de 28 \"x 2,35\". (60-622) <br>• Cable para el bloqueo integrado <br> Herramienta para ajustar la posición del asiento y del manillar"
     },
     "moeve": {
-      "title": "",
       "description": "Alquila y prueba las bicicletas Moeve en Berlín y Múnich",
       "subdescription": "Hecha por un equipo de ingenieros con inquietudes",
       "item1-title": "Cyfly",
@@ -766,5 +771,8 @@
     "description": "List and Ride GmbH (en adelante, \"listnride\") te informa en las Normas de protección de datos sobre cómo se manejan tus datos personales. <br><br><a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Aquí puedes ver y descargar las normas de protección de datos. </a>",
     "meta-title": "Política de privacidad de listnride",
     "meta-description": "La política de privacidad de la comunidad para compartir bicis de listnride se aplica al uso de la plataforma online"
+  },
+  "seo": {
+    "cities-title": "Planning to Travel? Check out more cities:"
   }
 }

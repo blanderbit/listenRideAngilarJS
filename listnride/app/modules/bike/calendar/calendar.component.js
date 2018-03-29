@@ -489,8 +489,8 @@ angular.module('bike').component('calendar', {
         _.forEach(calendar.bikeAvailabilities, function(slot) {
           var start_at = moment(slot.start_date).subtract(1, 'd');
           var end_at = moment(slot.start_date).add(slot.duration, 'd');
-          result = moment(date).isBetween(start_at, end_at);
-          if (result) { return result }
+          if (result) return result;
+          result = result || moment(date).isBetween(start_at, end_at, null, '[]') // all inclusive
         });
         return result
       }

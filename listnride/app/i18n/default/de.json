@@ -1,6 +1,6 @@
 {
   "shared": {
-    "learn-more": "Mehr Erfahren",
+    "learn-more": "Mehr erfahren",
     "how-it-works": "Wie funktioniert's",
     "list-a-bike": "Rad vermieten",
     "renting-a-bike": "Rad ausleihen",
@@ -27,6 +27,11 @@
     "heidelberg": "Heidelberg",
     "marl": "Marl",
     "frankfurt": "Frankfurt",
+    "usedom": "Usedom",
+    "lanzarote": "Lanzarote",
+    "mallorca": "Mallorca",
+    "sylt": "Sylt",
+    "stuttgart": "Stuttgart",
     "per": "pro",
     "hour": "Stunde",
     "hours": "Stunden",
@@ -96,7 +101,7 @@
     "Oct": "Okt",
     "Nov": "Nov",
     "Dec": "Dez",
-    "testimonials-header": "Was die Leute sagen",
+    "testimonials-header": "Was sagen die Leute?",
     "balance": "Guthaben",
     "tac": "Allgemeinen Geschäftsbedingungen",
     "booking-accept-tac": "Durch Buchen bestätige ich die",
@@ -109,7 +114,11 @@
     "confirm": "Bestätigen",
     "confirmation": "Bestätigung",
     "confirmation-text": "Bist du sicher?",
-    "loading": "Laden"
+    "loading": "Laden",
+    "clear": "Clear",
+    "clear-all": "Clear All",
+    "today": "Heute",
+    "yesterday": "Gestern"
   },
   "meta": {
     "cities": {
@@ -143,7 +152,7 @@
         "meta-description": "Miete dir ein klassisches Stahl Rennrad für die Ausfahrt durch eines der schönsten Weinanbaugebiete Österreichs."
       },
       "velothon-bikerental": {
-        "meta-title": "Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
+        "meta-title": "Miete dir einfach das perfekte Rennrad für die Velothon Berlin",
         "meta-description": "Das Rennrad Event des Jahres in Berlin! Nimm teil und miete dir das passende Rennrad!"
       },
       "constance-spin": {
@@ -167,7 +176,7 @@
         "meta-description": "Fahre die RiderMan Bad Dürrheim auf dem Rennrad deiner Träume! Wähle  Specialized, Ridley, Cervelo, Bianchi, sowie Simplon und miete es ganz bequem und einfach von Zuhause. "
       },
       "depart": {
-        "meta-title": "Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
+        "meta-title": "Miete dir einfach das perfekte Rennrad für die Velothon Berlin",
         "meta-description": "Radel mit listnride und Schicke Mütze  zum Grand Depart und miete dir hochwertige Rennräder aus der Community"
       },
       "supercross-munich": {
@@ -197,7 +206,7 @@
         "meta-description": "Teste noch heute ein Muli Lastenrad! Die Lastenräder stehen zum Testen in Berlin und München zur Verfügung"
       },
       "vello": {
-        "meta-title": "Miete und Teste VELLO E-Bikes in Berlin & München",
+        "meta-title": "Miete und teste VELLO E-Bikes in Berlin & München",
         "meta-description": "VELLO BIKE Das erste selbstladende Elektro-Faltrad. Das VELLO BIKE ist ein leistungsstarkes Faltrad, entwickelt für das perfekte Fahrgefühl in der Stadt. "
       },
       "veletage": {
@@ -205,23 +214,23 @@
         "meta-descr": "VELETAGE Salon für Radkultur - Exklusive Rennräder, Radbekleidung, Individuelle Laufräder, Bike Fitting"
       },
       "bonvelo": {
-        "meta-title": "Miete und Teste Bonvelo Singlespeed Bikes in Berlin & München",
+        "meta-title": "Miete und teste Bonvelo Singlespeed Bikes in Berlin & München",
         "meta-description": "Das Singlespeed/Fixie-Bike \"BLIZZ\" ist in vier unterschiedlichen Rahmengrößen zum Test in Berlin verfügbar "
       },
       "motoparilla": {
-        "meta-title": "Miete und Teste das Moto Parilla Carbon SUV E-Bike in München",
+        "meta-title": "Miete und teste das Moto Parilla Carbon SUV E-Bike in München",
         "meta-description": "Das Carbon SUV E-Bike von Moto Parilla steht zum ausführlichen testen in München bereit. Einfach unkompliziert und einfach online Wunschtermin reservieren und los gehts!"
       },
       "votec": {
-        "meta-title": "Miete und Teste die neusten Votec Bikes",
+        "meta-title": "Miete und teste die neusten Votec Bikes",
         "meta-descr": "VOTEC – Fusion aus Funktion, Design und Qualität"
       },
       "vanmoof": {
-        "meta-title": "Miete und Teste die Electrified S E-Bikes in Berlin, München und Hamburg",
+        "meta-title": "Miete und teste die Electrified S E-Bikes in Berlin, München und Hamburg",
         "meta-descr": "Das Perfekte Rad für die Stadt - VanMoof"
       },
       "moeve": {
-        "meta-title": "Miete und Teste Möve bikes in München und Amsterdam",
+        "meta-title": "Miete und teste Möve bikes in München und Amsterdam",
         "meta-descr": "Das Rad mit dem innovativsten Fahrradantrieb - Cyfly by Möve."
       },
       "rethink": {
@@ -267,7 +276,7 @@
     },
     "imprint": {
       "meta-title": "listnride Impressum",
-      "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie Du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
+      "meta-description": "Miete dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
     },
     "privacy": {
       "meta-title": "Datenschutzrichtlinien von listnride",
@@ -277,9 +286,11 @@
   "booking": {
     "shopping": "Sicher bezahlen",
     "pay-secure": "Sicher bezahlen mit",
+    "agree-terms": "Mit \"Rad anfragen\" stimmst du zu:",
+    "agree-terms-link": "listnride AGBs",
     "footer": {
       "questions": "Du hast Fragen rund ums Mieten von Fahrrädern?",
-      "call-us": "Ruf uns unter +49 (0)30-120870330, Mo-Fr 9-18 Uhr an.",
+      "call-us": "Ruf uns unter +49 (0)30-120870330, Mo-Fr 9-18 Uhr an. ",
       "email-us": "Oder schreib uns eine E-Mail.",
       "support": "listnride Support"
     },
@@ -301,7 +312,7 @@
       "check-phone": "Bitte prüfe dein Telefon.",
       "send-code": "Absenden",
       "confirm-code": "Bestätigungscode",
-      "enter-code": "Gib den Pin ein, den wir dir geschickt haben.",
+      "enter-code": "Gib die Pin ein, die wir dir geschickt haben.",
       "success-code": "Sehr gut. Dein Account ist verifiziert.",
       "fail-code": "Der Code ist leider nicht korrekt. ",
       "resend": "Nochmal senden"
@@ -334,7 +345,7 @@
       "invoice-address": "Rechnungsadresse",
       "payment": "Zahlungsmethode",
       "redeem-voucher": "Rabattcode einlösen",
-      "add": "Add"
+      "add": "Ok"
     }
   },
   "toasts": {
@@ -343,39 +354,41 @@
     "add-payout-success": "Deine Auszahlungsmethode wurde erfolgreich hinzugefügt.",
     "add-voucher-success": "Glückwunsch, der Gutschein wurde deinem Konto hinzugefügt.",
     "add-voucher-error": "Der angegebene Gutschein ist leider nicht gültig.",
-    "verification-email-sent": "Eine Email mit Bestätigungslink wurde an deine Email-Adresse gesendet. Dies kann ein paar Minuten dauern, falls du nichts findest schau bitte auch in deinem Spam-Ordner nach.",
-    "could-not-sign-up": "Registrierung fehlgeschlagen. Die angegebene Email-Adresse ist bereits in Benutzung.",
+    "verification-email-sent": "Eine E-Mail mit Bestätigungslink wurde an deine E-Mail-Adresse gesendet. Dies kann ein paar Minuten dauern, falls du nichts findest, schau bitte auch in deinem Spam-Ordner nach.",
+    "could-not-sign-up": "Registrierung fehlgeschlagen. Die angegebene E-Mail-Adresse ist bereits in Benutzung.",
     "successfully-sign-up": "You have successfully signed up. Welcome!",
     "successfully-logged-in": "Erfolgreich eingeloggt. Willkommen zurück!",
     "successfully-logged-out": "Du bist ausgeloggt.",
-    "could-not-log-in": "Login fehlgeschlagen. Bitte stell sicher dass du bereits registriert bist und deine Anmelde-Daten stimmen.",
-    "reset-password-success": "Wir haben dir soeben ein neues Passwort via Email geschickt. Es sollte in den nächsten Minuten eintreffen.",
+    "could-not-log-in": "Login fehlgeschlagen. Bitte stell sicher, dass du bereits registriert bist und deine Anmelde-Daten stimmen.",
+    "reset-password-success": "Wir haben dir soeben ein neues Passwort via E-Mail geschickt. Es sollte in den nächsten Minuten eintreffen.",
     "opening-hours-success": "Öffnungszeiten erfolgreich geändert.",
     "opening-hours-error": "Die Öffnungszeiten konnten nicht gespeichert werden.",
     "uniq-phone": "Telefonnummer ist bereits in unserem System registriert.",
     "pending-requests": "Du hast noch eine offene Anfrage für dieses Rad. Beantworte diese (Ablehnen/ Annehmen) bevor du es entfernen kannst.",
-    "account-deleted": "Dein Account wurde gelöscht",
-    "enter-email": "Bitte geben Sie ihre E-Mail-Adresse ein",
+    "account-deleted": "Dein Konto wurde deaktiviert",
+    "enter-email": "Bitte gib deine E-Mail-Adresse ein",
     "duplicate-start": "Vervielfältigungsprozess gestartet",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
-    "bike-deleted": "Fahrrad erfolgreich gelöscht"
+    "bike-deleted": "Fahrrad erfolgreich gelöscht",
+    "range-success-delete": "Verfügbarkeit erfolgreich gelöscht",
+    "availability-success-saved": "Availability successfully saved"
   },
   "settings": {
     "settings": "Einstellungen",
     "profile": "Profil",
     "invite": "Freunde einladen",
-    "account": "Account",
-    "delete-account": "Account löschen",
-    "delete-account-description": "Hier kannst du dein listnride Account löschen. Dieser Schritt kann nicht rückgängig gemacht werden.",
+    "account": "Konto",
+    "delete-account": "Konto deaktivieren",
+    "delete-account-description": "Hier kannst du dein listnride-Konto deaktivieren. Dieser Schritt kann nicht rückgängig gemacht werden.",
     "delete-account-sure": "Bist du dir wirklich sicher?",
     "delete-account-sure-description": "Dieser Schritt kann leider nicht rückgängig gemacht werden.",
-    "delete-account-yes": "Ja, löschen",
+    "delete-account-yes": "Ja, deaktivieren",
     "delete-account-no": "Nein",
     "availability": "Verfügbarkeit",
     "availability-description": "Du kannst deine Verfügbarkeitszeiten für den Radverleih einstellen",
     "business": "Fahrradgeschäft",
-    "from": "From",
-    "to": "To",
+    "from": "Von",
+    "to": "Bis",
     "mark-as-closed": "Marked all days as closed",
     "change-address-info": "Wenn Sie Ihre Adresse aktualisieren, wird die Adresse Ihrer Fahrräder nicht aktualisiert.",
     "payment-method": "Zahlungsart",
@@ -386,13 +399,13 @@
     "add-payment-method": "Zahlungsmittel hinzufügen",
     "vouchers": "Gutscheine",
     "payment-credit-card": "Dein aktuelles Zahlungsmittel ist eine Kreditkarte ",
-    "payment-paypal": "Dein aktuelles Zahlungsmittel ist ein Paypal-Konto mit der Email-Adresse",
+    "payment-paypal": "Dein aktuelles Zahlungsmittel ist ein Paypal-Konto mit der E-Mail-Adresse",
     "no-payment-method": "Du hast bisher kein Zahlungsmittel angegeben.",
     "no-payout-method": "Du hast bisher keine Auszahlungsmethode angegeben.",
     "paypal": "Paypal",
     "bank-account": "Bankkonto",
-    "enter-paypal-info": "Bitte gebe die Email-Adresse deines Paypalkontos ein",
-    "enter-bank-info": "Bitte gebe Vor- und Nachname des Kontoinhabers, sowie IBAN und BIC an",
+    "enter-paypal-info": "Bitte gib die Email-Adresse deines Paypalkontos ein",
+    "enter-bank-info": "Bitte gib Vor- und Nachname des Kontoinhabers, sowie IBAN und BIC an",
     "save-payout-method": "Auszahlungsmethode speichern",
     "payout-paypal": "Deine Auszahlungsmethode ist ein Paypal-Konto mit der Email-Adresse",
     "payout-bank": "Deine Auszahlungsmethode ist ein Bank-Konto und endet auf",
@@ -410,7 +423,7 @@
     "lets-start": "Loslegen",
     "lets-start-description": "Es dauert nur 3 Minuten",
     "verify-profile": "Verifiziere dein Profil",
-    "resend-email": "Email erneut senden",
+    "resend-email": "E-Mail erneut senden",
     "public": "Öfftl.",
     "private": "Privat",
     "private-tip": "Diese Informationen sind nicht öffentlich einsehbar",
@@ -431,8 +444,8 @@
       "label": "Beschreibung (min. 50 Buchstaben)"
     },
     "4": {
-      "description": "Bestätige Deine E-Mail-Adresse, indem Du auf den Link in der Bestätigungsmail klickst, die wir Dir nach der Registrierung schicken. Falls Du sie nicht mehr findest, kannst Du die Mail erneut anfordern. Erscheint sie nicht sofort in Deinem Postfach, warte bitte noch ein paar Minuten oder überprüfe deinen Spam-Ordner.",
-      "email-verified": "Email-Adresse erfolgreich verifiziert"
+      "description": "Bestätige deine E-Mail-Adresse, indem du auf den Link in der Bestätigungsmail klickst, die wir dir nach der Registrierung schicken. Falls du sie nicht mehr findest, kannst du die Mail erneut anfordern. Erscheint sie nicht sofort in deinem Postfach, warte bitte noch ein paar Minuten oder überprüfe deinen Spam-Ordner.",
+      "email-verified": "E-Mail-Adresse erfolgreich verifiziert"
     },
     "5": {
       "title": "Was ist deine Nummer",
@@ -443,7 +456,7 @@
       "resend-confirmation-sms": "Erneut schicken",
       "sms-verification-code": "Verifizierungs-Code",
       "sms-verification-code-mobile": "Verifizierungs-Code",
-      "confirm-code": "Code Bestätigen",
+      "confirm-code": "Code bestätigen",
       "confirm-code-mobile": "Bestätigen",
       "phone-nr-verified": "Deine Nummer wurde erfolgreich verifiziert!"
     },
@@ -455,7 +468,7 @@
     }
   },
   "bike": {
-    "rent-bike": "Fahrrad Mieten",
+    "rent-bike": "Fahrrad mieten",
     "view-pictures": "Bilder ansehen",
     "meta-title": "{{name}} - {{category}} von {{brand}} in {{location}} mieten.",
     "meta-description": "{{description}}",
@@ -467,7 +480,7 @@
     "verified-through": "Verifiziert durch",
     "own-bikes": "Eigene Räder",
     "ratings": "Bewertungen",
-    "meta-title": "{{name}}'s Profil",
+    "meta-title": "{{name}}s Profil",
     "meta-description": "Rad mieten von {{name}} auf listnride.",
     "company-meta-title": "Company {{company}}",
     "company-meta-description": "Rad mieten von {{company}} auf listnride.",
@@ -497,10 +510,10 @@
     },
     "write-message": "Schreibe eine Nachricht...",
     "complete-profile": "Vervollständige dein Profil",
-    "complete-profile-description": "Um das Rad zu buchen, gebe dein Zahlungsmittel an. Alle Daten werden über eine gesicherte Verbindung übertragen.",
+    "complete-profile-description": "Um das Rad zu buchen, gib dein Zahlungsmittel an. Alle Daten werden über eine gesicherte Verbindung übertragen.",
     "no-requests-yet": "Sobald du Anfragen gestellt oder bekommen hast, werden sie hier angezeigt.",
     "filters": {
-      "all-requests": "Alle Anfragen",
+      "all-requests": "Alle anfragen",
       "current-rentals": "Aktuelle Mieten",
       "pending-requests": "Offene Anfragen",
       "upcoming-rentals": "Bevorstehende Miete",
@@ -513,29 +526,29 @@
     "reject": "Ablehnen",
     "rate": "Bewerten",
     "confirm": "Bestätigen",
-    "confirm_return": "Rückgabe Bestätigen"
+    "confirm_return": "Rückgabe bestätigen"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} würde gerne dein <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} für mieten. Sobald du die Anfrage annimmst, wird sie gebucht. Vereinbare alle weiteren Details über den Chat.",
-    "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun Dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via Email zugesendet.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon-Nummer: {{user.phone_number}} <br>Adresse: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
-    "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
+    "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} würde gerne dein <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Sobald du die Anfrage annimmst, wird sie gebucht. Vereinbare alle weiteren Details über den Chat.",
+    "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon-Nummer: {{user.phone_number}} <br>Adresse: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
+    "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
     "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
-    "9": "Leider hat {{user.first_name}} die Anfrage nicht bestätigt.",
+    "9": "Leider hat {{user.first_name}} die Anfrage nicht bestätigt.",
     "10": "Ihre Anfrage wurde vom System abgebrochen."
   },
   "rideChat": {
-    "1": "Du würdest gerne {{lister.first_name}} {{lister.last_name}}'s <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, ist das Rad gebucht.",
-    "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via Email zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.phone_number}}<br>Adresse: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
-    "5": "{{lister.first_name}} hat die Rückgabe des Rades bestätigt und dich bewertet.<br>Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",
-    "6": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
-    "8": "Leider hat der Verleiher die Anfrage abgelehnt. Frage einfach ein paar andere schöne Räder an.",
-    "9": "Du hast die Anfrage abgebrochen. Bitte schreib dem Verleiher, warum du die Buchung nicht bestätigen konntest.",
+    "1": "Du würdest gerne {{lister.first_name}} {{lister.last_name}}s <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, ist das Rad gebucht.",
+    "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.phone_number}}<br>Adresse: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
+    "5": "{{lister.first_name}} hat die Rückgabe des Rades bestätigt und dich bewertet.<br>Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",
+    "6": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
+    "8": "Leider hat der Verleiher die Anfrage abgelehnt. Frage einfach ein paar andere schöne Räder an.",
+    "9": "Du hast die Anfrage abgebrochen. Bitte schreib dem Verleiher, warum du die Buchung nicht bestätigen konntest.",
     "10": "Die Anfrage wurde abgebrochen."
   },
   "forms": {
     "first-name": "Vorname",
     "last-name": "Nachname",
-    "email-address": "Email-Adresse",
+    "email-address": "E-Mail-Adresse",
     "password": "Passwort",
     "forgot-password": "Passwort vergessen?",
     "or": "oder",
@@ -543,7 +556,7 @@
     "log-out": "Log-Out",
     "sign-up": "Registrieren",
     "sign-up-to-book": "Registrieren, um das Rad zu leihen",
-    "sign-up-with-facebook": "Mit facebook registrieren",
+    "sign-up-with-facebook": "Mit Facebook registrieren",
     "member-already": "Bereits registriert?",
     "business": "Fahrradgeschäft?",
     "description": "Beschreibung",
@@ -562,40 +575,54 @@
     "signing-up-accept-tac": "Mit der Registrierung akzeptiere ich die",
     "errors": {
       "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
+      "password-length-xs": "6-30 Zeichen",
       "password-missing": "Bitte gib ein Passwort an",
-      "valid-email": "Bitte gib eine gültige Email-Adresse an",
-      "empty-email": "Bitte gib deine Email-Adresse an",
+      "password-missing-xs": "Passwort erforderlich",
+      "valid-email": "Bitte gib eine gültige E-Mail-Adresse an",
+      "valid-email-xs": "Ungültige E-Mail",
+      "empty-email": "Bitte gib deine E-Mail-Adresse an",
+      "empty-email-xs": "E-Mail erforderlich",
       "empty-last-name": "Bitte gib deinen Nachnamen an",
+      "empty-last-name-xs": "Nachname erforderlich",
       "empty-first-name": "Bitte gib deinen Vornamen an",
+      "empty-first-name-xs": "Vornamen erforderlich",
       "max-size-last-name": "Der Nachname sollte maximal 30 Buchstaben lang sein",
+      "max-size-last-name-xs": "Max 30 Buchstaben",
       "max-size-first-name": "Der Vorname sollte maximal 20 Buchstaben lang sein",
+      "max-size-first-name-xs": "Max 20 Buchstaben",
       "empty-company-name": "Bitte geben Sie Ihren Firmennamen ein",
-      "min-size-company-name": "Der Firmenname sollte länger als 2 Zeichen sein "
+      "empty-company-name-xs": "Firmenname erforderlich",
+      "min-size-company-name": "Der Firmenname sollte länger als 2 Zeichen sein ",
+      "min-size-company-name-xs": "Mindestens 3 Zeichen "
     }
   },
   "home": {
     "landing-section-header": "Das perfekte Rad. Einfach mieten.",
-    "landing-section-subheader": "Miete Dir auf listnride ein Fahrrad, wie Du es magst und gerade brauchst.",
+    "landing-section-subheader": "Miete dir auf listnride ein Fahrrad, wie du es magst und gerade brauchst.",
     "featured-bikes-header": "Fahrradverleih: Die Lieblinge der Community",
     "featured-bikes-subheader": "Egal ob Rennrad, Mountain Bike, Stadtrad oder E-Bike, du kannst sie alle mieten. Hier sind die aktuellen Favoriten der Community.",
     "featured-tiles-header": "Lass dich inspirieren",
     "featured-tiles-subheader": "Wir arbeiten mit interessanten Marken zusammen, schreiben über unsere Erfahrung und fahren mit großartigen Menschen.",
-    "featured-cities-header": "Im Sattel durch den Großstadtdschungel",
-    "featured-cities-subheader": "In immer mehr Metropolen gibt es den Fahrradverleih über listnride. Erste Insider-Tipps hier:",
+    "featured-cities-header": "Mit listnride bist du nie ohne dein perfektes Rad",
+    "featured-cities-subheader": "In immer mehr Metropolen und Urlaubsregionen in Europa gibt es den listnride Fahrradverleih. Hier einige unserer Tipps für dich: ",
     "list-a-bike-header": "Dein Bike ist zu schön, um rumzustehen?",
-    "list-a-bike-subheader": "Liste Dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und kurbel nebenbei Dein Konto an.",
+    "list-a-bike-subheader": "Liste dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und verdien dir was dazu.",
     "meta-title": "listnride - Die Bike-Sharing-Community",
-    "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie Du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
+    "meta-description": "Miete dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach deinem Stil und Einsatzzweck."
   },
   "autocomplete": {
-    "default-placeholder": "Wo willst Du ein Rad ausleihen?"
+    "default-placeholder": "Wo willst du ein Rad ausleihen?"
   },
   "search": {
     "no-bikes": "Es gibt keine Räder an diesem Ort",
     "all-sizes": "Alle Größen",
     "bikes-in": "Fahrräder in",
     "meta-title": "Miete das perfekte Rad in {{location}}.",
-    "meta-description": "listnride bietet viele verschiedene Räder in {{location}} zur Miete an."
+    "meta-description": "listnride bietet viele verschiedene Räder in {{location}} zur Miete an.",
+    "number-of-bikes": "Number of bikes",
+    "bike": "Bike",
+    "bikes": "Bikes",
+    "pick-body-size": "Pick a body size"
   },
   "calendar": {
     "invalid-date": "Datums angabe nicht Korrekt",
@@ -605,21 +632,21 @@
     "log-in-to-request-title": "Einloggen oder Registrieren",
     "log-in-to-request-description": "Logge dich ein um das Rad anzufragen. Falls du noch kein Account hast, registriere dich einfach.",
     "select-timespan": "Wähle zuerst die Mietdauer",
-    "info-subtotal": "Dies ist Tagespreis für die<br>Anzahl der Tage, die du das<br>Fahrrad mieten möchten.",
+    "info-subtotal": "Dies ist der Tagespreis für die<br>Anzahl der Tage, die du das<br>Fahrrad mieten möchten.",
     "info-discount": "Durchschnittlicher Tagesrabatt<br>pro Tag bei Miete für<br>einen längeren Zeitraum.",
     "info-service-fee": "Die Servicegebühr hilft uns,<br>listnride zu betreiben. Sie enthält <br>die Umsatzsteuer.",
     "info": "Im Kalender oben zuerst auf den Tag klicken,<br>an dem du das Fahrrad mieten möchtest,<br>und dann auf den Tag, an dem<br>du es zurückgeben magst."
   },
   "list": {
     "edit-bike": "Rad bearbeiten",
-    "save-changes": "Änderungen Speichern",
+    "save-changes": "Änderungen speichern",
     "list-your-bike": "Rad einstellen",
     "back": "Zurück",
     "next": "Weiter",
     "list-bike": "Rad einstellen",
     "category": {
-      "header": "Wie ist die Kategorie Deines Rads?",
-      "hint": "Wähle zuerst die Kategorie Deines Rads. Wähle anschließend die passende Unterkategorie.",
+      "header": "Wie ist die Kategorie deines Rads?",
+      "hint": "Wähle zuerst die Kategorie deines Rads. Wähle anschließend die passende Unterkategorie.",
       "label": "Kategorie",
       "city": "Stadt",
       "race": "Straße",
@@ -630,15 +657,15 @@
     },
     "details": {
       "header": "Wie heißt das Modell, von welcher Marke ist es, für welche Fahrergröße ist es geeignet?",
-      "hint": "Gebe Marke, Name und Beschreibung Deines Rads ein. Der Name sollte das Rad kurz beschreiben und das Model beinhalten. Z.B. Gazelle, Tour Populair, 2013. Wähle dann die passende Fahrergröße.",
+      "hint": "Gib Marke, Name und Beschreibung deines Rads ein. Der Name sollte das Rad kurz beschreiben und das Model beinhalten. Z.B. Gazelle, Tour Populair, 2013. Wähle dann die passende Fahrergröße.",
       "label": "Details",
       "brand": "Marke",
       "name": "Name",
       "description": "Beschreibung (min. 100 Zeichen)",
-      "min-length-warning": "Minimum 100 Buchstabe",
+      "min-length-warning": "Minimum 100 Buchstaben",
       "size": "Fahrergröße",
       "frame-size": "Frame size",
-      "bicycle-number": "Rad Nr.",
+      "bicycle-number": "Rad-Nr.",
       "frame-number": "Rahmennummer",
       "custom-fields": "Additional fields",
       "notes": "Notes",
@@ -648,7 +675,7 @@
     },
     "accessories": {
       "header": "Welche Zubehör kannst Du zu deinem Rad anbieten?",
-      "hint": "Wähle das Zubehör, dass Du zur Verfügung stellen kannst.",
+      "hint": "Wähle das Zubehör, das du zur Verfügung stellen kannst.",
       "label": "Zubehör",
       "lock": "Schloss",
       "helmet": "Helm",
@@ -659,10 +686,10 @@
     },
     "pictures": {
       "header": "Lade ein paar Fotos hoch",
-      "hint": "Wähle nun ein paar schöne Fotos Deines Rads. Hier sind einige Tipps, wie du deine eigenen Fotos aufnehmen solltest.",
-      "how-to": "Fototipps, wie sich dein Angebot abhebt",
+      "hint": "Wähle nun ein paar schöne Fotos deines Rads. Hier sind einige Tipps, wie du deine eigenen Fotos aufnehmen solltest.",
+      "how-to": "Fototipps, damit sich dein Angebot abhebt",
       "label": "Fotos",
-      "select-images": "Fotos Wählen",
+      "select-images": "Fotos wählen",
       "remove": "Löschen",
       "upload-bike-header": "Lade ein paar Fotos hoch",
       "under-min-size": "Einige Bilder haben eine kleinere Abmessung kleiner als 1500x1000:",
@@ -678,10 +705,10 @@
       "country": "Land"
     },
     "pricing": {
-      "info": "Dein Tagespreis ist dein basis Preis bei 1 Tagesmiete.",
+      "info": "Dein Tagespreis ist dein Basispreis bei einer Tagesmiete.",
       "info-description": "Information zum Mietpreis",
       "header": "Tagespreis",
-      "description": "Dein Tagespreis ist dein basis Preis bei 1 Tagesmiete.",
+      "description": "Dein Tagespreis ist dein Basispreis bei einer Tagesmiete.",
       "hint-para-1": "Über den Preis, den du für dein Rad nimmst, entscheidest du selbst. Der Mietpreis sollte sich nach Rad und Ausstattung richten. Um eine Vorstellung von den Preisen am Markt zu erhalten, schaue Dir vergleichbare Angebote an.",
       "hint-para-2": "Eine Mietdauer unter 6 Stunden ist eine Halbtagesmiete, 6-24 Stunde steht für eine Tagesmiete.",
       "hint-para-3": "Um mehr Langzeitbuchungen zu erhalten, legen manche Vermieter einen Tages- oder Wochenrabatt fest.",
@@ -715,8 +742,8 @@
       "reset-prices": "Zurücksetzen",
       "validations": {
         "required": {
-          "daily_price": "Tagespreis is required",
-          "price": "preis is required"
+          "daily_price": "Bitte Tagespreis eintragen",
+          "price": "Preis ist erforderlich"
         }
       }
     },
@@ -733,7 +760,7 @@
         "indoor": "Bahnrad"
       },
       "3": {
-        "tracking": "Tracking",
+        "tracking": "Trekking",
         "enduro": "Enduro",
         "freeride": "Freeride",
         "cross-country": "Cross Country",
@@ -817,8 +844,8 @@
     "title": "Fahrrad vermieten, Konto ankurbeln",
     "subtitle": "Lerne tolle neue Leute kennen und verdiene nebenbei Geld, z.B. für Dein nächstes Traum-Rad.",
     "calculator-section": {
-      "header": "Lass‘ Dein Fahrrad für Dich arbeiten",
-      "subheader": "Ein paar Klicks und unser Rechenschieber zeigt Dir, wieviel Du mit Fahrradvermietungen über listnride verdienen kannst.",
+      "header": "Lass Dein Fahrrad für Dich arbeiten",
+      "subheader": "Ein paar Klicks und unser Rechenschieber zeigt dir, wieviel du mit Fahrradvermietungen über listnride verdienen kannst.",
       "market-price": "Marktwert deines Fahrrads,",
       "days-per-month": "Tage, die es pro Monat vermietet ist",
       "could-earn": "Du verdienst",
@@ -939,7 +966,6 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=de"
   },
   "seo": {
-    "cities-title": "Du planst zu reisen? Schau dir mehr Städte an:",
     "header": "Miete die besten Räder in",
     "rent-the-best": "Miete die besten",
     "bikes": "Räder",
@@ -954,12 +980,13 @@
     "special": "Spezialräder"
   },
   "availability": {
-    "availability": "availability",
-    "modal-title": "When is your bike not available?",
-    "start-from": "Starting from",
-    "end-at": "Ending at",
-    "add-another-date": "Add another date",
+    "availability": "Verfügbarkeit",
+    "modal-title": "Wann ist Dein Rad nicht verfügbar?",
+    "start-from": "Von",
+    "end-at": "Bis",
+    "add-another-date": "Weiteres Datum",
     "submit-btn": "Ok",
-    "submit-btn-save": "Save"
+    "submit-btn-save": "Speichern",
+    "choose-range": "Wähle deinen Zeitraum"
   }
 }

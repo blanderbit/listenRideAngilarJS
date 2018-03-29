@@ -9,10 +9,12 @@
         md-selected="booking.selectedIndex"
         ng-hide="booking.hidden"
         class="lnr-progress-tabs booking"
-        style="overflow: visible;"
       >
         <!-- sign-in data tab -->
-        <signup-tab></signup-tab>
+        <calendar-tab ng-if="booking.shopBooking"></calendar-tab>
+
+        <!-- sign-in data tab -->
+        <signup-tab ng-if="!booking.shopBooking"></signup-tab>
 
         <!-- details data tab -->
         <details-tab></details-tab>
@@ -26,7 +28,7 @@
       </md-tabs>
     </div>
 
-    <div flex="100" flex-md="40" flex-gt-md="30" layout-padding layout="column" ng-if="booking.authentication.loggedIn()">
+    <div flex="100" flex-md="40" flex-gt-md="30" layout-padding layout="column" ng-if="booking.authentication.loggedIn() || booking.shopBooking">
       <div class="spacer-xs"></div>
       <div class="animate-if highlight-tile booking__receipt" layout="column">
         <receipt
@@ -37,7 +39,7 @@
           user="booking.user">
         </receipt>
         <div
-          class="booking__next-step"
+          class="booking__next-step lnr-margin-lrg"
           layout="column">
           <div 
             layout="row"
@@ -45,9 +47,15 @@
             class="lnr-margin-lrg lnr-mb-0"
             hide-gt-sm
             ng-hide="booking.selectedIndex !== 3">
-            <h2 class="md-subhead">Total</h2>
-            <span>{{ booking.total | currency:"€":2 }}</span>
+            <span class="md-subhead">{{ 'shared.total' | translate }}</span>
+            <span class="md-subhead">{{ booking.total | currency:"€":2 }}</span>
           </div>
+          <p 
+            ng-hide="booking.selectedIndex !== 3"
+            class="md-body-1 lnr-margin-lrg lnr-mb-0 lnr-center booking__terms">
+             {{ 'booking.agree-terms' | translate }}
+            <a ui-sref="terms" target="_blank">{{ 'booking.agree-terms-link' | translate }}</a>
+          </p>
           <md-button
             class="md-raised md-primary lnr-margin-lrg"
             ng-disabled="booking.nextDisabled()"
@@ -58,13 +66,13 @@
           </md-button>
         </div>
       </div>
-      <div layout="row" layout-align="end none">
+      <div layout="row" layout-align="end center" class="lnr-margin-top lnr-no-padding">
         <img
           class="md-card-image lnr-request__img-methods"
           ng-src="app/assets/ui_icons/lnr_ico_lock.svg"
           alt="Secure"
         >
-        <div style="margin: 0 16px">
+        <div style="margin-left: 8px">
           {{ 'booking.shopping' | translate }}
         </div>
       </div>

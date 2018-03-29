@@ -20,9 +20,25 @@ angular.module('message',[]).component('message', {
     function MessageController($translate, $localStorage, $mdDialog, $analytics, api) {
       var message = this;
       var time = message.time.toString();
+      var messageDate = moment(message.time);
+      var todayDate = moment(new Date());
+      // var yesterdayDate = moment(new Date()).add(-1, 'days');
 
-      // @TODO: if the current date equal today we should use word 'Today' insead of date
-      message.localTime = moment(time).format('DD.MM.YYYY HH:mm');
+      if (messageDate.diff(todayDate, 'days') === 0){
+        $translate(["shared.today"]).then(
+          function (translations) {
+            message.localTime = translations["shared.today"] + ', ' + messageDate.format('HH:mm');
+          }
+        );
+      } else if (messageDate.diff(todayDate, 'days') === -1){
+        $translate(["shared.yesterday"]).then(
+          function (translations) {
+            message.localTime = translations["shared.yesterday"] + ', ' + messageDate.format('HH:mm');
+          }
+        );
+      } else {
+        message.localTime = messageDate.format('DD.MM.YYYY HH:mm');
+      }      
       
       message.buttonClicked = false;
       

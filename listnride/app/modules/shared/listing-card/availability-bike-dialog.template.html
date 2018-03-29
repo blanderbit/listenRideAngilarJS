@@ -12,20 +12,25 @@
 
   <md-dialog-content class="" layout="column">
     <div class="md-dialog-content" layout="column">
-      <div layout="column" layout-align="center center" ng-if="!availabilityDialog.inputs.length">
-        <p>Here you can set availability on current bike</p>
-        <md-button type="submit" class="md-accent md-raised md-confirm-button md-primary" ng-click="availabilityDialog.addInput()">
-          Let's start! 
-        </md-button>
-      </div>
-      <form ng-if="availabilityDialog.inputs.length" ng-cloak name="availabilityForm" novalidate>
+      <form ng-cloak name="availabilityForm" novalidate>
         <div class="availability__list">
           <div layout="row" layout-align="center center" ng-repeat="input in availabilityDialog.inputs">
             <span class="lnr-btn-placeholder"></span>
-            <input-range data="input" disabled-dates="availabilityDialog.disabledDates"></input-range>
-            <md-button class="md-icon-button md-warn" ng-click="availabilityDialog.removeInput($index)">
-              <md-icon md-font-icon="fa-times" class="fa"></md-icon>
+            <input-range
+              lnr-date-picker
+              data="input"
+              disabled-dates="availabilityDialog.disabledDates"
+              requests="availabilityDialog.requests"
+              date-on-change="availabilityDialog.changeDate"
+              date-on-clear="availabilityDialog.changeDate">
+            </input-range>
+            <md-button
+              ng-if="availabilityDialog.inputs.length > 1 || availabilityDialog.inputs.length === 1 && input.start_date"
+              class="md-icon-button md-warn"
+              ng-click="availabilityDialog.removeInput($index)">
+              <md-icon md-font-icon="fa-times" class="fa fa--lh20"></md-icon>
             </md-button>
+            <span ng-if="availabilityDialog.inputs.length === 1 && !input.start_date" class="lnr-btn-placeholder"></span>
           </div>
         </div>
         <div layout="row" layout-align="center center" layout-margin ng-if="!availabilityDialog.isMaxInputs">

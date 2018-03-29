@@ -93,6 +93,7 @@ angular.
       };
 
       var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName, inviteCode, requestFlow) {
+        console.log("SIGNUP GETS CALLED");
         var invited = !!inviteCode;
         var user = {
           "user": {
@@ -121,6 +122,7 @@ angular.
       };
 
       var loginFb = function(email, facebookId) {
+        console.log("LOGIN GETS CALLED");
         var user = {
           'user': {
             'email': email,
@@ -130,6 +132,7 @@ angular.
         api.post('/users/login', user).then(function(response) {
           setCredentials(response.data);
           $rootScope.$broadcast('user_login');
+          showLoginSuccess();
         }, function(error) {
         });
       };
@@ -153,6 +156,10 @@ angular.
       };
 
       var signupGlobal = function (form) {
+        // TODO: REPLACE THIS MONKEY PATCH WITH PROPER BACKEND-SIDE TEMPORARY PASSWORDS
+        if (!form.password.$modelValue) {
+          form.password.$modelValue = "123456";
+        }
         var obj = {
           email: form.email.$modelValue,
           firstName: form.first_name.$modelValue,
@@ -160,13 +167,15 @@ angular.
           password: form.password.$modelValue
         };
 
+        // manually set all variables to null
+        // $mdDialog, inviteCode, requesting, business
+        // TODO: Create service for sign up
         SignupDialogController(null, null, null, false, obj);
       };
 
       // The Signup Dialog Controller
       var SignupDialogController = function ($mdDialog, inviteCode, requesting, business, signupObj) {
         var signupDialog = signupObj || this;
-
         signupDialog.signingUp = false;
         signupDialog.requestSignup = false;
         signupDialog.business = business;

@@ -16,7 +16,10 @@ angular.module('moeveIntegration',[]).component('moeve', {
       );
       moeve.bikes = {
         munich: [],
-        amsterdam: []
+        amsterdam: [],
+        frankfurt: [],
+        stuttgart: [],
+        vienna: []
       };
       moeve.slickConfig = {
         enabled: true,
@@ -60,12 +63,14 @@ angular.module('moeveIntegration',[]).component('moeve', {
 
       api.get('/rides?family=25').then(
         function (success) {
-          console.log(success.data);
 
           for (var i=0; i<success.data.length; i++) {
             switch (success.data[i].city) {
               case "Munich": moeve.bikes.munich.push(success.data[i]); break;
               case "Amsterdam": moeve.bikes.amsterdam.push(success.data[i]); break;
+              case "Stuttgart": moeve.bikes.stuttgart.push(success.data[i]); break;
+              case "Frankfurt am Main": moeve.bikes.frankfurt.push(success.data[i]); break;
+              case "Wien": moeve.bikes.vienna.push(success.data[i]); break;
             }
           }
           moeve.currentBikes = moeve.bikes["munich"];

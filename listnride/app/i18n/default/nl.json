@@ -27,6 +27,11 @@
     "heidelberg": "Heidelberg",
     "marl": "Marl",
     "frankfurt": "Frankfurt",
+    "usedom": "Usedom",
+    "lanzarote": "Lanzarote",
+    "mallorca": "Mallorca",
+    "sylt": "Sylt",
+    "stuttgart": "Stuttgart",
     "per": "per",
     "hour": "uur",
     "hours": "uren",
@@ -54,7 +59,7 @@
     "search": "Zoeken",
     "search-all": "Doorzoek alle fietsen",
     "search-all-in": "Doorzoek alle fietsen in",
-    "search-bikes": "Zoek je fietsen",    
+    "search-bikes": "Zoek je fietsen",
     "from-place": "uit",
     "contact": "Contact & Help",
     "show-more": "Toon meer",
@@ -109,7 +114,11 @@
     "confirm": "Bevestigen",
     "confirmation": "Bevestiging",
     "confirmation-text": "Weet je het zeker?",
-    "loading": "Het laden"
+    "loading": "Het laden",
+    "clear": "Clear",
+    "clear-all": "Clear All",
+    "today": "Vandaag",
+    "yesterday": "Gisteren"
   },
   "meta": {
     "cities": {
@@ -144,7 +153,7 @@
       },
       "velothon-bikerental": {
         "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
-        "meta-description": "Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!"
+        "meta-description": "Take part in the Velothon Berlin 2018! Rent a road bike from the listnride bike sharing community and join in on the fun!"
       },
       "constance-spin": {
         "meta-title": "Rent the perfect road bike during Eurobike",
@@ -155,12 +164,12 @@
         "meta-description": "A local riders' favourite route through Holledau. listnride pays a visit to Velosoph, the Cycling Café in Freising."
       },
       "cyclassics-hamburg": {
-        "meta-title": "Rent a road bike for the Cyclassics Hamburg on listnride",
-        "meta-description": "Rent the perfect road bike for the Cyclassics in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
+        "meta-title": "Boek eenvoudig the perfekte racefiets voor de Cyclassics Hamburg",
+        "meta-description": "Huur de perfekte racefiets voor de Cyclassics in Hamburg van merken zoals Specialized, Ridley, Cervelo en Bianchi"
       },
       "hamburg-triathlon": {
-        "meta-title": "Rent a road bike for the Hamburg Triathlon on listnride",
-        "meta-description": "Rent the perfect road bike for the Triathlon in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
+        "meta-title": "Boek eenvoudig the perfekte racefiets voor de Cyclassics Hamburg",
+        "meta-description": "Huur eenvoudig de perfecte racefiets voor de Triathlon in Hamburg en kies uit merken als Specialized, Ridley, Cervelo en Bianchi"
       },
       "riderman": {
         "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",
@@ -189,7 +198,7 @@
         "meta-descr": "Test ride an E-Bike today! Electric assist bikes from Ampler available on listnride. Rent one in Berlin, Munich, Hamburg and Vienna."
       },
       "brompton": {
-        "meta-title": "Rent a Brompton bike with listnride",
+        "meta-title": "Maak een proefrit met de Brompton vouwfiets via listnride",
         "meta-description": "Test ride a Brompton bike today! These urban folding bikes are available on listnride. Rent one in Berlin, Munich, Hamburg, Düsseldorf or Frankfurt."
       },
       "muli": {
@@ -277,6 +286,8 @@
   "booking": {
     "shopping": "Secure Shopping",
     "pay-secure": "Veilig betalen met",
+    "agree-terms": "Met 'Fiets aanvragen' gaat u akkoord met de",
+    "agree-terms-link": "algemene voorwaarden van listnride",
     "footer": {
       "questions": "Heb je vragen bij het boeken van een fiets?",
       "call-us": "Bel ons op +49 (0)30-120870330, Ma-Vrij 9-18u.",
@@ -291,11 +302,12 @@
       "login-facebook": "Login met Facebook",
       "already-member": "Al geregistreerd?",
       "register": "Aanmelden",
-      "not-member": "No member yet?"
+      "not-member": "Nog niet aangemeld?"
     },
     "details": {
       "tab": "2. Persoonlijke gegevens",
       "invoice-address": "Factuuradres",
+      "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Gaarne bevestigen",
       "send-sms": "We sturen je een SMS aan je mobiele telefoon.",
       "check-phone": "Controleer je mobiele telefoon.",
@@ -334,7 +346,7 @@
       "invoice-address": "Factuuradres",
       "payment": "Betaling",
       "redeem-voucher": "Voucher verzilveren",
-      "add": "Add"
+      "add": "Voeg toe"
     }
   },
   "toasts": {
@@ -354,23 +366,25 @@
     "opening-hours-error": "Kan openingstijden niet opslaan.",
     "uniq-phone": "Telefoonnummer is al geregistreerd in ons systeem.",
     "pending-requests": "Het lijkt alsof u een open verzoek voor deze fiets heeft. Voordat u de fiets kunt verwijderen, moet u deze accepteren of annuleren.",
-    "account-deleted": "Uw account is verwijderd",
+    "account-deleted": "Uw account is gedeactiveerd",
     "enter-email": "Vul alstublieft uw e-mailadres in",
     "duplicate-start": "Duplicatieproces gestart",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
-    "bike-deleted": "Fiets succesvol verwijderd"
+    "bike-deleted": "Fiets succesvol verwijderd",
+    "range-success-delete": "Periode succesvol verwijderd",
+    "availability-success-saved": "Wijziging succesvol opgeslagen"
   },
   "settings": {
     "settings": "Instellingen",
     "profile": "Profiel",
     "invite": "Vrienden uitnodigen",
     "account": "Account",
-    "delete-account": "Verwijder Account",
-    "delete-account-description": "Hier kan je jouw listnride account verwijderen. Deze stap kan niet worden teruggedraaid.",
-    "delete-account-sure": "Weet je het echt zeker?",
-    "delete-account-sure-description": "Deze stap kan niet worden ongedaan gemaakt.",
-    "delete-account-yes": "Yes, delete",
-    "delete-account-no": "No",
+    "delete-account": "account deactiveren",
+    "delete-account-description": "Hier kunt u uw listnride-account deactiveren. Deze stap kan niet ongedaan worden gemaakt.",
+    "delete-account-sure": "Weet je het zeker?",
+    "delete-account-sure-description": "Deze stap kan niet ongedaan worden gemaakt.",
+    "delete-account-yes": "Ja, deactiveren",
+    "delete-account-no": "Nee",
     "availability": "Openingstijden",
     "availability-description": "U kunt uw beschikbaarheidstijden instellen voor het huren van fietsen.",
     "business": "Fietswinkel",
@@ -556,22 +570,32 @@
     "zip": "Postcode",
     "city": "Plaats",
     "country": "Land",
-    "company-name": "Company name",
+    "company-name": "Bedrijfsnaam",
     "update-contact": "Wijzig mobiele nummer",
     "update-contact-mobile": "Mobiele nummer",
     "company-contact-info": "Vul uw Bedrijfsnaam en naam van de contact persoon in",
     "signing-up-accept-tac": "Door een account aan te maken accepteer je de",
     "errors": {
       "password-length": "Wachtwoord dient 6-30 karakters lang te zijn",
+      "password-length-xs": "6-30 tekens",
       "password-missing": "Wachtwoord aanmaken",
+      "password-missing-xs": "Wachtwoord aanmaken",
       "valid-email": "Vul een geldig emailadres in",
+      "valid-email-xs": "Ongeldige e-mail",
       "empty-email": "Vul uw emailadres in",
+      "empty-email-xs": "E-mail vereist",
       "empty-last-name": "Vul uw achternaam in",
+      "empty-last-name-xs": "Achternaam verplicht",
       "empty-first-name": "Vul uw voornaam in",
+      "empty-first-name-xs": "Voornaam vereist",
       "max-size-last-name": "Achternaam mag maximaal 30 karakters lang zijn",
+      "max-size-last-name-xs": "Overtreft 30 tekens",
       "max-size-first-name": "Voornaam mag maximaal 20 karakters lang zijn",
+      "max-size-first-name-xs": "Overtreft 20 tekens",
       "empty-company-name": "Vul alstublieft uw bedrijfsnaam in",
-      "min-size-company-name": "Bedrijfsnaam moet langer zijn dan 2 karakters "
+      "empty-company-name-xs": "Bedrijfsnaam vereist",
+      "min-size-company-name": "Bedrijfsnaam dient meer dan 2 karakters te hebben",
+      "min-size-company-name-xs": "Ten minste 3 tekens"
     }
   },
   "home": {
@@ -581,8 +605,8 @@
     "featured-bikes-subheader": "of je nu een racefiets, mountainbike, stadsfiets of e-bike wilt, je huurt ze hier. Dit zijn de favorieten van onze Community.",
     "featured-tiles-header": "Raak geïnspireerd",
     "featured-tiles-subheader": "We werken samen met innovatieve merken, schrijven over interessante ontwikkelingen en nemen deel aan speciale evenementen",
-    "featured-cities-header": "in het zadel door de Urban jungle",
-    "featured-cities-subheader": " In steeds meer grote Steden vind je huurfietsen via listnride. Onze eerste insider tips vind je hier:",
+    "featured-cities-header": "Met listnride ben je altijd met de perfecte fiets onderweg",
+    "featured-cities-subheader": "De fietsverhuurservice van listnride is beschikbaar in meer en meer steden en vakantieregio’s in Europa. Hier zijn enkele tips voor je:",
     "list-a-bike-header": "Je fiets is te mooi om stil te staan?",
     "list-a-bike-subheader": "biedt je fiets te huur aan, ontmoet leuke nieuwe mensen en spek je banksaldo.",
     "meta-title": "listnride - De bike sharing community",
@@ -596,7 +620,11 @@
     "all-sizes": "Alle Maten",
     "bikes-in": "fietsen in",
     "meta-title": "Huur de perfekte fiets in {{location}}.",
-    "meta-description": "listnride biedt een grote veelvoud aan perfekte huurfietsen in {{location}}."
+    "meta-description": "listnride biedt een grote veelvoud aan perfekte huurfietsen in {{location}}.",
+    "number-of-bikes": "Number of bikes",
+    "bike": "Bike",
+    "bikes": "Bikes",
+    "pick-body-size": "Pick a body size"
   },
   "calendar": {
     "invalid-date": "Ingevulde Datums zijn niet correct",
@@ -729,11 +757,11 @@
       },
       "2": {
         "road-bike": "Racefiets",
-        "triathlon": "Triathlonfiets",
+        "triathlon": "Triathlon",
         "indoor": "Baanfiets"
       },
       "3": {
-        "tracking": "Tracking",
+        "tracking": "Trekking",
         "enduro": "Enduro",
         "freeride": "Freeride",
         "cross-country": "Cross Country",
@@ -890,6 +918,12 @@
       "community": "Wordt deel van de community",
       "earn-credit": "Ontvang listnride toegoed"
     },
+    "invite-form": {
+      "header": "Deel jouw persoonlijke link",
+      "subheader": "Stuur deze link aan je vrienden en ontvang 10€ tegoed na een eerste aktiviteit.",
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
     "invite-dialog": {
       "rider": {
         "header": "Mooie fiets ervaring gehad?",
@@ -899,12 +933,6 @@
         "header": "Dat verliep gemakkelijk, toch?",
         "subheader": "Zou je ons aan je vrienden willen aanbevelen? Je ontvangt 10€ tegoed, zodra je uitnodiging wordt aangenomen. Degene die je uitnodigt ontvangt ook €10 tegoed bij het aannemen van je uitnodiging. Een mooie Win-Win!"
       }
-    },
-    "invite-form": {
-      "header": "Deel jouw persoonlijke link",
-      "subheader": "Stuur deze link aan je vrienden en ontvang 10€ tegoed na een eerste aktiviteit.",
-      "copy": "Copy",
-      "copied": "Copied!"
     },
     "invitations": {
       "header": "Your friends have earned you {{ credit }}€",
@@ -937,7 +965,6 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=nl"
   },
   "seo": {
-    "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden",
     "header": "Huur de beste fietsen in",
     "rent-the-best": "Huur de beste",
     "bikes": "fietsen",
@@ -952,12 +979,13 @@
     "special": "speciaal fietsen"
   },
   "availability": {
-    "availability": "availability",
-    "modal-title": "When is your bike not available?",
-    "start-from": "Starting from",
-    "end-at": "Ending at",
-    "add-another-date": "Add another date",
+    "availability": "Openingstijden",
+    "modal-title": "Wanneer is je fiets niet beschikbaar?",
+    "start-from": "Beginnend vanaf",
+    "end-at": "Eindigend op",
+    "add-another-date": "Voeg een andere datum toe",
     "submit-btn": "Ok",
-    "submit-btn-save": "Save"
+    "submit-btn-save": "Opslaan",
+    "choose-range": "Choose your date range"
   }
 }
