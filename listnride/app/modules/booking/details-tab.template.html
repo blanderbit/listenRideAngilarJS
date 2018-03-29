@@ -19,37 +19,59 @@
         <div class="spacer-xs"></div>
         <form name="details.parent.detailsForm" novalidate class="md-body-desktop">
           <!-- First name and Last name -->
-          <div class="lnr-input-containers" layout="row" ng-hide="true">
-            <md-input-container flex>
+          <div class="lnr-input-containers" layout="row" flex="100" ng-if="details.parent.shopBooking">
+            <md-input-container flex="25">
               <label>{{ 'forms.first-name' | translate }}</label>
               <input
-                name="firstName"
+                name="first_name"
                 ng-model="details.parent.user.firstName"
-                ng-disabled="true"
+                required
               >
               <div ng-messages="details.parent.detailsForm.firstName.$error" role="alert">
-                <div ng-message="required">{{ 'forms.errors.empty-first-name' | translate }}</div>
-                <div ng-message="maxlength">{{ 'forms.errors.max-size-first-name' | translate }}</div>
+              <div ng-message="required">{{ 'forms.errors.empty-first-name' | translate }}</div>
+              <div ng-message="maxlength">{{ 'forms.errors.max-size-first-name' | translate }}</div>
               </div>
             </md-input-container>
-            <md-input-container flex>
+            <md-input-container flex="25">
               <label>{{ 'forms.last-name' | translate }}</label>
               <input
-                name="lastName"
+                name="last_name"
                 ng-model="details.parent.user.lastName"
                 ng-maxlength="30"
-                ng-disabled="true"
+                required
               >
               <div ng-messages="details.parent.detailsForm.lastName.$error" role="alert">
                 <div ng-message="required">{{ 'forms.errors.empty-last-name' | translate }}</div>
                 <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
               </div>
             </md-input-container>
+            <md-input-container flex="50">
+              <label>{{ 'forms.email-address' | translate }}</label>
+              <input
+                name="email"
+                ng-model="details.parent.user.email"
+                ng-maxlength="30"
+                required
+              >
+              <div ng-messages="details.parent.detailsForm.email.$error" role="alert">
+                <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
+                <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
+              </div>
+            </md-input-container>
+            <md-input-container flex="50" hide>
+              <label>{{ 'forms.password' | translate }}</label>
+              <input
+                name="password"
+                ng-model="details.parent.user.password"
+                value="123456"
+              >
+            </md-input-container>
           </div>
           <div class="lnr-input-containers" layout="row" layout-xs="column">
             <div flex>
               <autocomplete
-                autocomplete-id="details"
+                autocomplete-id="details-address"
+                class="details-address"
                 layout="column"
                 required="true"
                 name="street"
@@ -109,9 +131,9 @@
           <div class="spacer-xs"></div>
           <!-- Phone Number and Send Button -->
           <div class="lnr-input-containers"
-               layout="column" 
-               layout-gt-xs="row"
-               ng-show="details.parent.showConfirmButton"
+            layout="column" 
+            layout-gt-xs="row"
+            ng-show="details.parent.showConfirmButton"
           >
             <md-input-container flex>
               <label>{{ 'shared.phone-number' | translate }}</label>
@@ -137,7 +159,7 @@
               <md-button
                 flex
                 class="md-raised md-primary lnr-btn-inline details__send-code"
-                ng-click="details.parent.sendSms(details.parent.detailsForm.phone_number)"
+                ng-click="details.parent.prepareUser()"
                 ng-hide="details.parent.phoneConfirmed === 'success'"
               >
                 <span>{{ 'booking.details.send-code' | translate }}</span>

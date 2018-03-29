@@ -32,6 +32,7 @@
     "lanzarote": "Lanzarote",
     "mallorca": "Mallorca",
     "sylt": "Sylt",
+    "stuttgart": "Stuttgart",
     "per": "per ",
     "hour": "ora",
     "hours": "ore",
@@ -356,7 +357,7 @@
     "opening-hours-error": "Non puoi salvare l'orario di disponibilità.",
     "uniq-phone": "Numero telefonico già registrato nel nostro sistema.",
     "pending-requests": "Sembra che tu abbia una richiesta aperta per questa bicicletta. Prima  di cancellare la bicicletta è necessario accettarla o annullarla",
-    "account-deleted": "Il tuo profilo è stato cancellato",
+    "account-deleted": "Il tuo profilo è stato disattivo",
     "enter-email": "Per favore inserisci la tua email",
     "duplicate-start": "Il processo di duplicazione è iniziato",
     "duplicate-finish": "Processo di duplicazione è terminato. Copie create con successo",
@@ -368,8 +369,8 @@
     "settings": "Impostazioni",
     "profile": "Profilo",
     "invite": "Invita i tuoi amici",
-    "account": "Conto",
-    "delete-account": "Eliminare il conto",
+    "account": "Profilo",
+    "delete-account": "Eliminare profilo",
     "delete-account-description": "Qui puoi cancellare il tuo profilo. Non è possibile annullare questo passaggio.",
     "delete-account-sure": "Sei sicuro?",
     "delete-account-sure-description": "Non è possibile annullare questo passaggio",
@@ -973,6 +974,15 @@
     "kids": "Bici da bambino",
     "electro": "E-bikes",
     "special": "Bici speciali"
+  },
+  "availability": {
+    "availability": "availability",
+    "modal-title": "When is your bike not available?",
+    "start-from": "Starting from",
+    "end-at": "Ending at",
+    "add-another-date": "Add another date",
+    "submit-btn": "Ok",
+    "submit-btn-save": "Save"
   },
   "availability": {
     "availability": "Disponibilità",
