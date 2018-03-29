@@ -33,29 +33,22 @@ angular.module('search',[]).component('search', {
         search.initialValues = {
           amount: '',
           sizes: [],
-          categories: {},
+          categories: [],
           brand: '',
           date: {
             "start_date": '',
             "duration": ''
           }
-        }
+        };
         
         // get initial filter values from url
         search.initialValues.sizes = $stateParams.sizes.split(',');
         search.initialValues.brand = $stateParams.brand;
-        search.initialValues.categories = {
-          allterrain: $stateParams.allterrain === "true",
-          city: $stateParams.city === "true",
-          ebikes: $stateParams.ebikes === "true",
-          kids: $stateParams.kids === "true",
-          race: $stateParams.race === "true",
-          special: $stateParams.special === "true"
-        };
+        search.initialValues.categories = $stateParams.categories.split(',');
         search.initialValues.date = {
           "start_date": $stateParams.start_date,
           "duration": $stateParams.duration
-        }
+        };
 
         search.mapOptions = {
           lat: 40,
@@ -122,6 +115,7 @@ angular.module('search',[]).component('search', {
         populateBikes(location);
       }
 
+      // TODO: rename this function. Not clear name.
       function onButtonClick() {
         $state.go(
           // current state
@@ -161,17 +155,17 @@ angular.module('search',[]).component('search', {
 
         api.get(urlRequest).then(function(response) {
           search.bikes = response.data.bikes;
-          search.categorizedFilteredBikes = [];
-          search.titles = [];
-          search.categorizedFilteredBikes.push({
+          search.categorizedFilteredBikes = [{
             title: "All Bikes",
             bikes: search.bikes
-          });
+          }];
+          search.titles = [];
           search.latLng = response.data.location.geometry.location;
           search.locationBounds = response.data.location.geometry.viewport;
 
           NgMap.getMap({id: "searchMap"}).then(function(map) {
             map.fitBounds(correctBounds());
+            map.setZoom(map.getZoom() + 1);
             // map.panToBounds(bounds);
           });
 

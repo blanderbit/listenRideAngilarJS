@@ -9,7 +9,8 @@ angular.module('filter',[])
       initialValues: '<',
       initialBikes: '<',
       bikes: '=',
-      populateBikes: '<'
+      populateBikes: '<',
+      categorizedBikes: '='
     },
     controller: [
       '$translate',
@@ -46,10 +47,10 @@ angular.module('filter',[])
           filter.currentBrand = filter.brands[0];
           // categories
           filter.categories = bikeOptions.allCategoriesOptions();
-          filter.selected = [];
+          filter.currentCategories = filter.initialValues.categories.filter(Boolean).slice().map(Number);
           filter.openSubs = [];
-          
-        }
+        };
+        
         // Wait for bikes to be actually provided
         filter.$onChanges = function (changes) {
           if (filter.initialBikes != undefined) {
@@ -65,7 +66,7 @@ angular.module('filter',[])
         };
 
         function onDateChange() {
-          filter.updateState({ start_date: filter.currentDate.start_date, duration: filter.currentDate.duration});
+          filter.updateState({ start_date: filter.currentDate.start_date, duration: filter.currentDate.duration });
           applyFilters();
           filter.populateBikes();
         };
@@ -77,7 +78,7 @@ angular.module('filter',[])
 
         function clearFilters() {
           filter.currentSizes = [-1];
-          filter.selected = [];
+          filter.currentCategories = [];
           filter.openSubs = [];
           filter.currentBrand = filter.brands[0];
           clearDate();
@@ -86,6 +87,7 @@ angular.module('filter',[])
         };
 
         function onCategoryChange() {
+          filter.updateState({ categories: filter.currentCategories.join(',') });
           applyFilters();
         };
 
@@ -127,6 +129,12 @@ angular.module('filter',[])
           filteredBikes = filterSizes(filteredBikes);
           filteredBikes = filterCategories(filteredBikes);
           filter.bikes = filteredBikes;
+
+          filter.categorizedBikes = [{
+            title: "All Bikes",
+            bikes: filter.bikes
+          }];
+          
           initializeBrandFilter();
         }
 
@@ -139,17 +147,19 @@ angular.module('filter',[])
         }
   
         function filterSizes(bikes) {
-          // TODO: filter by sizes array
-          if (filter.currentSize != filter.sizes[0]) {
-            return filterFilter(bikes, filter.currentSize);
+          // TODO: find clear solution for this
+          if (!_.isEmpty(filter.currentSizes) && filter.currentSizes.indexOf("-1") == -1 && filter.currentSizes.indexOf(-1) == -1) {
+            var selectedSizes = _.uniq(filter.currentSizes);
+            selectedSizes = selectedSizes.map(Number);
+            return arrayFilter(bikes, selectedSizes, 'size');
           } else {
             return bikes;
           }
         }
 
         function filterCategories (bikes) {
-          if (!_.isEmpty(filter.selected)) {
-            return arrayFilter(bikes);
+          if (!_.isEmpty(filter.currentCategories)) {
+            return arrayFilter(bikes, filter.currentCategories, 'category');
           } else {
             return bikes;
           }
@@ -193,7 +203,7 @@ angular.module('filter',[])
         };
 
         function isIndeterminate(categoryId) {
-          return (filter.selected.length !== 0 && !categoryChosen(categoryId));
+          return (filter.currentCategories.length !== 0 && !categoryChosen(categoryId));
         };
 
         function isChecked(categoryId) {
@@ -203,9 +213,9 @@ angular.module('filter',[])
         function toggleAll($event, categoryId) {
           $event.stopPropagation();
           if (categoryChosen(categoryId)) {
-            filter.selected = _.difference(filter.selected, categorySubs(categoryId))
-          } else if (filter.selected.length === 0 || filter.selected.length > 0) {
-            filter.selected = _.union(filter.selected, categorySubs(categoryId));
+            filter.currentCategories = _.difference(filter.currentCategories, categorySubs(categoryId))
+          } else if (filter.currentCategories.length === 0 || filter.currentCategories.length > 0) {
+            filter.currentCategories = _.union(filter.currentCategories, categorySubs(categoryId));
             filter.openSubs = _.union(filter.openSubs, [categoryId])
           }
           filter.onCategoryChange()
@@ -216,7 +226,7 @@ angular.module('filter',[])
         };
 
         function categoryIntersection(categoryId) {
-          return _.intersection(filter.selected, categorySubs(categoryId)).sort()
+          return _.intersection(filter.currentCategories, categorySubs(categoryId)).sort()
         }
 
         function categoryChosen(categoryId) {
@@ -229,9 +239,9 @@ angular.module('filter',[])
           }).subcategories, 'id').sort()
         }
 
-        function arrayFilter(bikes) {
+        function arrayFilter(bikes, selectedItems, filterBy) {
           return _.filter(bikes, function(o) {
-            return _.includes(filter.selected, o.category);
+            return _.includes(selectedItems, o[filterBy]);
           })
         }
 
