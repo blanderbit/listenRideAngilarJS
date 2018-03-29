@@ -12,15 +12,20 @@ angular.module('header',[]).component('header', {
       header.name = $localStorage.name;
       header.userId = $localStorage.userId;
       header.inviteCode = $stateParams.inviteCode
+      header.showSearch = false;
       // Contains the amount of unread messages to be displayed in the header
       header.unreadMessages = $localStorage.unreadMessages;
 
       $transitions.onSuccess({}, function(transition) {
         if (transition.to().name === "search") {
           header.location = $stateParams.location;
+          header.showSearch = true;
         }
         else if (transition.to().name === "home") {
           header.location = "";
+          header.showSearch = false;
+        } else {
+          header.showSearch = true;
         }
       });
 
