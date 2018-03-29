@@ -582,9 +582,9 @@
       "valid-email-xs": "Ungültige E-Mail",
       "empty-email": "Bitte gib deine E-Mail-Adresse an",
       "empty-email-xs": "E-Mail erforderlich",
-      "empty-last-name": "Bitte gib deinen Nachnamen an",
+      "empty-last-name": "Gib deinen Nachnamen an",
       "empty-last-name-xs": "Nachname erforderlich",
-      "empty-first-name": "Bitte gib deinen Vornamen an",
+      "empty-first-name": "Gib deinen Vornamen an",
       "empty-first-name-xs": "Vornamen erforderlich",
       "max-size-last-name": "Der Nachname sollte maximal 30 Buchstaben lang sein",
       "max-size-last-name-xs": "Max 30 Buchstaben",
@@ -692,7 +692,7 @@
       "select-images": "Fotos wählen",
       "remove": "Löschen",
       "upload-bike-header": "Lade ein paar Fotos hoch",
-      "under-min-size": "Einige Bilder haben eine kleinere Abmessung kleiner als 1500x1000:",
+      "under-min-size": "Einige Bilder sind kleiner als 1500x1000:",
       "invalid-images": "Bildgröße unzureichend"
     },
     "location": {
