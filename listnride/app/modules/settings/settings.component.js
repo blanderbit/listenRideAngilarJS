@@ -596,7 +596,7 @@ angular.module('settings',[]).component('settings', {
               .position('top center')
             );
             settings.user = success.data;
-            settings.user.has_billing = !!response.data.locations.billing;
+            settings.user.has_billing = !!success.data.locations.billing;
             $localStorage.profilePicture = success.data.profile_picture.profile_picture.url;
             settings.profilePicture = false;
             var encoded = Base64.encode(success.data.email + ":" + success.data.password_hashed);
