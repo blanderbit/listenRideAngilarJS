@@ -168,8 +168,8 @@ invest .highlight-tile {
 }
 
 md-menu-content {
-  /*max-height: 300px!important;*/
-  max-height: 500px; /*TODO: find for WHAT*/
+  max-height: 300px!important;
+  /*max-height: 500px; !*TODO: find for WHAT*!*/
 }
 
 md-card md-card-title {
