@@ -16,6 +16,14 @@ angular.module('header',[]).component('header', {
       // Contains the amount of unread messages to be displayed in the header
       header.unreadMessages = $localStorage.unreadMessages;
 
+      header.$onInit = function(){
+        if ($state.current.name === 'home') {
+          header.showSearch = false;
+        } else {
+          header.showSearch = true;
+        }
+      }
+
       $transitions.onSuccess({}, function(transition) {
         if (transition.to().name === "search") {
           header.location = $stateParams.location;
