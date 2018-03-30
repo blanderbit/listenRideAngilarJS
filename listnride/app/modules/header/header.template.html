@@ -22,12 +22,12 @@
   
     <span flex></span>
 
-    <div hide show-xs ng-if="header.hideSearch()">
+    <div hide show-xs ng-if="header.hideSearch() && header.showSearch">
       <md-button ng-click="header.toggleSearch()" md-no-ink class="mobile">
         <md-icon class="lnr-icn-sms md-color-white" md-svg-src="app/assets/ui_icons/search.svg"></md-icon>
       </md-button>
     </div>
-    <div hide show-xs ng-if="!header.hideSearch()">
+    <div hide show-xs ng-if="!header.hideSearch() && header.showSearch">
       <md-button ng-click="header.toggleSearch()" md-no-ink class="mobile">
         <md-icon class="lnr-icn-sm md-color-white" md-svg-src="app/assets/ui_icons/icn_close_24.svg"></md-icon>
       </md-button>
