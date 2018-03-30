@@ -117,6 +117,8 @@
     "confirmation": "Conferma",
     "confirmation-text": "Sei sicuro?",
     "loading": "Caricamento",
+    "clear": "Clear",
+    "clear-all": "Clear All",
     "today": "Oggi",
     "yesterday": "Ieri"
   },
@@ -298,7 +300,7 @@
     },
     "details": {
       "tab": "2. Dati personali",
-      "invoice-address": "Il tuo indirizzo di fatturazione",
+      "invoice-address": "Il tuo indirizzo di fatturazione ",
       "subtitle": "Here is a subline regarding your contact information.",
       "verification": "Si prega di verificare",
       "send-sms": "Ti invieremo un SMS sul tuo telefono ",
@@ -356,7 +358,7 @@
     "opening-hours-error": "Non puoi salvare l'orario di disponibilità.",
     "uniq-phone": "Numero telefonico già registrato nel nostro sistema.",
     "pending-requests": "Sembra che tu abbia una richiesta aperta per questa bicicletta. Prima  di cancellare la bicicletta è necessario accettarla o annullarla",
-    "account-deleted": "Il tuo profilo è stato cancellato",
+    "account-deleted": "Il tuo profilo è stato disattivo",
     "enter-email": "Per favore inserisci la tua email",
     "duplicate-start": "Il processo di duplicazione è iniziato",
     "duplicate-finish": "Processo di duplicazione è terminato. Copie create con successo",
@@ -368,9 +370,9 @@
     "settings": "Impostazioni",
     "profile": "Profilo",
     "invite": "Invita i tuoi amici",
-    "account": "Conto",
-    "delete-account": "Eliminare il conto",
-    "delete-account-description": "Qui puoi cancellare il tuo conto. Non è possibile annullare questo passaggio.",
+    "account": "Profilo",
+    "delete-account": "Eliminare profilo",
+    "delete-account-description": "Qui puoi cancellare il tuo profilo. Non è possibile annullare questo passaggio.",
     "delete-account-sure": "Sei sicuro?",
     "delete-account-sure-description": "Non è possibile annullare questo passaggio",
     "delete-account-yes": "Si, elimina",
@@ -612,7 +614,11 @@
     "all-sizes": "Tutte le misure",
     "bikes-in": "Biciclette a",
     "meta-title": "Noleggia la bicicletta perfetta a {{location}}.",
-    "meta-description": "listnride offre un'ampia varietà di biciclette eccellenti per il noleggio a {{location}}."
+    "meta-description": "listnride offre un'ampia varietà di biciclette eccellenti per il noleggio a {{location}}.",
+    "number-of-bikes": "Number of bikes",
+    "bike": "Bike",
+    "bikes": "Bikes",
+    "pick-body-size": "Pick a body size"
   },
   "calendar": {
     "invalid-date": "Le date non sono valide",
@@ -969,6 +975,15 @@
     "kids": "Bici da bambino",
     "electro": "E-bikes",
     "special": "Bici speciali"
+  },
+  "availability": {
+    "availability": "availability",
+    "modal-title": "When is your bike not available?",
+    "start-from": "Starting from",
+    "end-at": "Ending at",
+    "add-another-date": "Add another date",
+    "submit-btn": "Ok",
+    "submit-btn-save": "Save"
   },
   "availability": {
     "availability": "Disponibilità",

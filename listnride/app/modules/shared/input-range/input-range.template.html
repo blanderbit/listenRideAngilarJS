@@ -2,7 +2,7 @@
   <md-input-container
     flex-xs="100"
     flex md-no-float
-    class="lnr-mv8 js-datapicker"
+    class="lnr-no-margin js-datapicker"
     ng-class="{'md-input-has-value': vm.data.start_date}">
 
     <input
@@ -19,7 +19,7 @@
       value="{{vm.data.start_date | amDateFormat:'DD.MM.YYYY' | addText:' - '}}{{vm.data.start_date | amAdd : vm.data.duration : 'days' | amDateFormat:'DD.MM.YYYY'}}"
       placeholder="{{ 'availability.choose-range' | translate }}"
       readonly
-      style="padding: 0 55px 0 20px; min-width: 235px">
+      style="padding: 0 55px 0 20px; min-width: 235px; color: rgba(85, 85, 85, 1.0) !important;">
     </input>
 
     <md-icon 
@@ -42,7 +42,7 @@
     flex-xs="100"
     flex
     md-no-float
-    class="lnr-mv8"
+    class="lnr-no-margin"
     ng-click="vm.openCalendar($event);">
 
     <input

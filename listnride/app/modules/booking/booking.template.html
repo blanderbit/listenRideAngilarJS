@@ -11,7 +11,10 @@
         class="lnr-progress-tabs booking"
       >
         <!-- sign-in data tab -->
-        <signup-tab></signup-tab>
+        <calendar-tab ng-if="booking.shopBooking"></calendar-tab>
+
+        <!-- sign-in data tab -->
+        <signup-tab ng-if="!booking.shopBooking"></signup-tab>
 
         <!-- details data tab -->
         <details-tab></details-tab>
@@ -25,7 +28,7 @@
       </md-tabs>
     </div>
 
-    <div flex="100" flex-md="40" flex-gt-md="30" layout-padding layout="column" ng-if="booking.authentication.loggedIn()">
+    <div flex="100" flex-md="40" flex-gt-md="30" layout-padding layout="column" ng-if="booking.authentication.loggedIn() || booking.shopBooking">
       <div class="spacer-xs"></div>
       <div class="animate-if highlight-tile booking__receipt" layout="column">
         <receipt

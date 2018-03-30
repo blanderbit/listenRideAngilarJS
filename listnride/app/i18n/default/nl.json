@@ -116,6 +116,8 @@
     "confirmation": "Bevestiging",
     "confirmation-text": "Weet je het zeker?",
     "loading": "Het laden",
+    "clear": "Clear",
+    "clear-all": "Clear All",
     "today": "Vandaag",
     "yesterday": "Gisteren"
   },
@@ -365,25 +367,25 @@
     "opening-hours-error": "Kan openingstijden niet opslaan.",
     "uniq-phone": "Telefoonnummer is al geregistreerd in ons systeem.",
     "pending-requests": "Het lijkt alsof u een open verzoek voor deze fiets heeft. Voordat u de fiets kunt verwijderen, moet u deze accepteren of annuleren.",
-    "account-deleted": "Uw account is verwijderd",
+    "account-deleted": "Uw account is gedeactiveerd",
     "enter-email": "Vul alstublieft uw e-mailadres in",
     "duplicate-start": "Duplicatieproces gestart",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Fiets succesvol verwijderd",
-    "range-success-delete": "Availability range successfully deleted",
-    "availability-success-saved": "Availability successfully saved"
+    "range-success-delete": "Periode succesvol verwijderd",
+    "availability-success-saved": "Wijziging succesvol opgeslagen"
   },
   "settings": {
     "settings": "Instellingen",
     "profile": "Profiel",
     "invite": "Vrienden uitnodigen",
     "account": "Account",
-    "delete-account": "Verwijder Account",
-    "delete-account-description": "Hier kan je jouw listnride account verwijderen. Deze stap kan niet worden teruggedraaid.",
-    "delete-account-sure": "Weet je het echt zeker?",
-    "delete-account-sure-description": "Deze stap kan niet worden ongedaan gemaakt.",
-    "delete-account-yes": "Yes, delete",
-    "delete-account-no": "No",
+    "delete-account": "account deactiveren",
+    "delete-account-description": "Hier kunt u uw listnride-account deactiveren. Deze stap kan niet ongedaan worden gemaakt.",
+    "delete-account-sure": "Weet je het zeker?",
+    "delete-account-sure-description": "Deze stap kan niet ongedaan worden gemaakt.",
+    "delete-account-yes": "Ja, deactiveren",
+    "delete-account-no": "Nee",
     "availability": "Openingstijden",
     "availability-description": "U kunt uw beschikbaarheidstijden instellen voor het huren van fietsen.",
     "business": "Fietswinkel",
@@ -593,7 +595,7 @@
       "max-size-first-name-xs": "Overtreft 20 tekens",
       "empty-company-name": "Vul alstublieft uw bedrijfsnaam in",
       "empty-company-name-xs": "Bedrijfsnaam vereist",
-      "min-size-company-name": "Bedrijfsnaam dient meer dan 2 karakters te hebben ",
+      "min-size-company-name": "Bedrijfsnaam dient meer dan 2 karakters te hebben",
       "min-size-company-name-xs": "Ten minste 3 tekens"
     }
   },
@@ -619,7 +621,11 @@
     "all-sizes": "Alle Maten",
     "bikes-in": "fietsen in",
     "meta-title": "Huur de perfekte fiets in {{location}}.",
-    "meta-description": "listnride biedt een grote veelvoud aan perfekte huurfietsen in {{location}}."
+    "meta-description": "listnride biedt een grote veelvoud aan perfekte huurfietsen in {{location}}.",
+    "number-of-bikes": "Number of bikes",
+    "bike": "Bike",
+    "bikes": "Bikes",
+    "pick-body-size": "Pick a body size"
   },
   "calendar": {
     "invalid-date": "Ingevulde Datums zijn niet correct",
@@ -974,13 +980,13 @@
     "special": "speciaal fietsen"
   },
   "availability": {
-    "availability": "availability",
-    "modal-title": "When is your bike not available?",
-    "start-from": "Starting from",
-    "end-at": "Ending at",
-    "add-another-date": "Add another date",
+    "availability": "Openingstijden",
+    "modal-title": "Wanneer is je fiets niet beschikbaar?",
+    "start-from": "Beginnend vanaf",
+    "end-at": "Eindigend op",
+    "add-another-date": "Voeg een andere datum toe",
     "submit-btn": "Ok",
-    "submit-btn-save": "Save",
+    "submit-btn-save": "Opslaan",
     "choose-range": "Choose your date range"
   }
 }

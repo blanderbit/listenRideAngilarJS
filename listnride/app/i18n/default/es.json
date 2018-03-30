@@ -117,8 +117,10 @@
     "confirmation": "Confirmación",
     "confirmation-text": "¿Estás seguro?",
     "loading": "Cargando",
-    "today": "Today",
-    "yesterday": "Yesterday"
+    "clear": "Clear",
+    "clear-all": "Clear All",
+    "today": "Hoy",
+    "yesterday": "Ayer"
   },
   "meta": {
     "cities": {
@@ -293,7 +295,7 @@
     "sign-in": {
       "tab": "1. Inicio de sesión",
       "new": "¿Nuevo a listnride?",
-      "login": "Login at listnride",
+      "login": "Iniciar sesión a listnride",
       "register-facebook": "Registrar con Facebook",
       "login-facebook": "Iniciar sesión con Facebook",
       "already-member": "¿Ya estás registrado?",
@@ -361,24 +363,24 @@
     "opening-hours-error": "No se pudo grabar el horario de apertura.",
     "uniq-phone": "Número de teléfono ya registrado en nuestro sistema.",
     "pending-requests": "Parece que tienes una solicitud abierta para esta bicicleta. Antes de poder eliminar la bicicleta, debe aceptarla o cancelarla.",
-    "account-deleted": "Tu cuenta ha sido eliminada",
+    "account-deleted": "Tu cuenta ha sido desactivada",
     "enter-email": "Introduce tu dirección de correo electrónico",
     "duplicate-start": "Proceso de duplicación iniciado",
     "duplicate-finish": "Proceso de duplicación terminado. Copias creadas con éxito",
     "bike-deleted": "Bici borrada con éxito",
     "range-success-delete": "Fecha de disponibilidad borrado",
-    "availability-success-saved": "Availability successfully saved"
+    "availability-success-saved": "Disponibilidad guardada"
   },
   "settings": {
     "settings": "Configuración",
     "profile": "Perfil",
     "invite": "Invitar a amigos",
     "account": "Cuenta",
-    "delete-account": "Eliminar cuenta",
-    "delete-account-description": "Aquí puede eliminar su cuenta de listnride. Esta acción no se puede deshacer.",
+    "delete-account": "Desactivar cuenta",
+    "delete-account-description": "Aquí puedes desactivar tu cuenta de listnride. Esta acción no se puede deshacer.",
     "delete-account-sure": "¿Estás totalmente seguro?",
     "delete-account-sure-description": "Esta acción no se puede deshacer.",
-    "delete-account-yes": "Sí, borrar",
+    "delete-account-yes": "Sí, desactivar",
     "delete-account-no": "No",
     "availability": "Disponibilidad",
     "availability-description": "Puedes establecer tus horas de disponibilidad para alquilar bicicletas.",
@@ -617,7 +619,11 @@
     "all-sizes": "Todos los tamaños",
     "bikes-in": "Bicis disponibles",
     "meta-title": "Alquila la bici perfecta en{{location}} ",
-    "meta-description": "listnride ofrece una amplia variedad de bicis perfectas en {{location}}"
+    "meta-description": "listnride ofrece una amplia variedad de bicis perfectas en {{location}}",
+    "number-of-bikes": "Number of bikes",
+    "bike": "Bike",
+    "bikes": "Bikes",
+    "pick-body-size": "Pick a body size"
   },
   "calendar": {
     "invalid-date": "Las fechas no son válidas",
@@ -976,8 +982,8 @@
   },
   "availability": {
     "availability": "Disponibilidad",
-    "modal-title": "When is your bike not available?",
-    "start-from": "Starting from",
+    "modal-title": "¿Cuándo no está disponible tu bicicleta?",
+    "start-from": "Desde",
     "end-at": "Hasta",
     "add-another-date": "Añadir otra fecha",
     "submit-btn": "Ok",

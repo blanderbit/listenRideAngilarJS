@@ -116,6 +116,8 @@
     "confirmation": "Bestätigung",
     "confirmation-text": "Bist du sicher?",
     "loading": "Laden",
+    "clear": "Clear",
+    "clear-all": "Clear All",
     "today": "Heute",
     "yesterday": "Gestern"
   },
@@ -151,7 +153,7 @@
         "meta-description": "Miete dir ein klassisches Stahl Rennrad für die Ausfahrt durch eines der schönsten Weinanbaugebiete Österreichs."
       },
       "velothon-bikerental": {
-        "meta-title": "Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
+        "meta-title": "Miete dir einfach das perfekte Rennrad für die Velothon Berlin",
         "meta-description": "Das Rennrad Event des Jahres in Berlin! Nimm teil und miete dir das passende Rennrad!"
       },
       "constance-spin": {
@@ -175,7 +177,7 @@
         "meta-description": "Fahre die RiderMan Bad Dürrheim auf dem Rennrad deiner Träume! Wähle  Specialized, Ridley, Cervelo, Bianchi, sowie Simplon und miete es ganz bequem und einfach von Zuhause. "
       },
       "depart": {
-        "meta-title": "Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
+        "meta-title": "Miete dir einfach das perfekte Rennrad für die Velothon Berlin",
         "meta-description": "Radel mit listnride und Schicke Mütze  zum Grand Depart und miete dir hochwertige Rennräder aus der Community"
       },
       "supercross-munich": {
@@ -306,7 +308,6 @@
     "details": {
       "tab": "2. Persönliche Daten",
       "invoice-address": "Rechnungsadresse",
-      "subtitle": "",
       "verification": "Verifizieren",
       "send-sms": "Wir senden dir eine SMS an dein Telefon.",
       "check-phone": "Bitte prüfe dein Telefon.",
@@ -365,7 +366,7 @@
     "opening-hours-error": "Die Öffnungszeiten konnten nicht gespeichert werden.",
     "uniq-phone": "Telefonnummer ist bereits in unserem System registriert.",
     "pending-requests": "Du hast noch eine offene Anfrage für dieses Rad. Beantworte diese (Ablehnen/ Annehmen) bevor du es entfernen kannst.",
-    "account-deleted": "Dein Konto wurde gekündigt",
+    "account-deleted": "Dein Konto wurde deaktiviert",
     "enter-email": "Bitte gib deine E-Mail-Adresse ein",
     "duplicate-start": "Vervielfältigungsprozess gestartet",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
@@ -378,11 +379,11 @@
     "profile": "Profil",
     "invite": "Freunde einladen",
     "account": "Konto",
-    "delete-account": "Konto kündigen",
-    "delete-account-description": "Hier kannst du dein listnride-Konto kündigen. Dieser Schritt kann nicht rückgängig gemacht werden.",
+    "delete-account": "Konto deaktivieren",
+    "delete-account-description": "Hier kannst du dein listnride-Konto deaktivieren. Dieser Schritt kann nicht rückgängig gemacht werden.",
     "delete-account-sure": "Bist du dir wirklich sicher?",
     "delete-account-sure-description": "Dieser Schritt kann leider nicht rückgängig gemacht werden.",
-    "delete-account-yes": "Ja, löschen",
+    "delete-account-yes": "Ja, deaktivieren",
     "delete-account-no": "Nein",
     "availability": "Verfügbarkeit",
     "availability-description": "Du kannst deine Verfügbarkeitszeiten für den Radverleih einstellen",
@@ -618,7 +619,11 @@
     "all-sizes": "Alle Größen",
     "bikes-in": "Fahrräder in",
     "meta-title": "Miete das perfekte Rad in {{location}}.",
-    "meta-description": "listnride bietet viele verschiedene Räder in {{location}} zur Miete an."
+    "meta-description": "listnride bietet viele verschiedene Räder in {{location}} zur Miete an.",
+    "number-of-bikes": "Number of bikes",
+    "bike": "Bike",
+    "bikes": "Bikes",
+    "pick-body-size": "Pick a body size"
   },
   "calendar": {
     "invalid-date": "Datums angabe nicht Korrekt",
@@ -701,10 +706,10 @@
       "country": "Land"
     },
     "pricing": {
-      "info": "Dein Tagespreis ist dein basis Preis bei 1 Tagesmiete.",
+      "info": "Dein Tagespreis ist dein Basispreis bei einer Tagesmiete.",
       "info-description": "Information zum Mietpreis",
       "header": "Tagespreis",
-      "description": "Dein Tagespreis ist dein basis Preis bei 1 Tagesmiete.",
+      "description": "Dein Tagespreis ist dein Basispreis bei einer Tagesmiete.",
       "hint-para-1": "Über den Preis, den du für dein Rad nimmst, entscheidest du selbst. Der Mietpreis sollte sich nach Rad und Ausstattung richten. Um eine Vorstellung von den Preisen am Markt zu erhalten, schaue Dir vergleichbare Angebote an.",
       "hint-para-2": "Eine Mietdauer unter 6 Stunden ist eine Halbtagesmiete, 6-24 Stunde steht für eine Tagesmiete.",
       "hint-para-3": "Um mehr Langzeitbuchungen zu erhalten, legen manche Vermieter einen Tages- oder Wochenrabatt fest.",
@@ -738,8 +743,8 @@
       "reset-prices": "Zurücksetzen",
       "validations": {
         "required": {
-          "daily_price": "Tagespreis is required",
-          "price": "preis is required"
+          "daily_price": "Bitte Tagespreis eintragen",
+          "price": "Preis ist erforderlich"
         }
       }
     },

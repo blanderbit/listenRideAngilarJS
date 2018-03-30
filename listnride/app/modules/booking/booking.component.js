@@ -29,6 +29,7 @@ angular.module('booking', [])
         booking.tabsDisabled = false;
         booking.voucherCode = "";
         booking.expiryDate = "";
+        booking.shopBooking = $stateParams.shop;
 
         var oldExpiryDateLength = 0;
         var expiryDateLength = 0;
@@ -67,6 +68,44 @@ angular.module('booking', [])
           }
         };
 
+        booking.dateRange = {};
+
+        booking.updateDate = function() {
+          if (booking.dateRange.start_date) {
+            var startDate = new Date(booking.dateRange.start_date);
+            booking.startDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), 10, 0, 0);
+            booking.endDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + booking.dateRange.duration, 18, 0, 0);
+            booking.startTime = 10;
+            booking.endTime = 18;
+            booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
+          }
+          // TODO: REMOVE REDUNDANT PRICE CALUCLATION CODE
+        }
+
+        booking.isOptionEnabled = function($index, date) {
+          if (date === undefined) { return true }
+  
+          var isDateToday = moment().startOf('day').isSame(moment(date).startOf('day'));
+          // Date today chosen
+          if (isDateToday) { return $index + 6 >= moment().hour() + 1; }
+          // if (!openingHoursAvailable()) { return true }
+          // var weekDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(date)];
+          // if (weekDay !== null) {
+          //   var workingHours = openHours(weekDay);
+          //   return workingHours.includes($index + 6);
+          // }
+          return true;
+        };
+
+        booking.onTimeChange = function(slot) {
+          var slotDate = slot + "Date";
+          var slotTime = slot + "Time";
+          var date = new Date(booking[slotDate]);
+          date.setHours(booking[slotTime], 0, 0, 0);
+          booking[slotDate] = date;
+          // dateChange(booking.startDate, booking.endDate);
+        };
+
         booking.tabCompleted = function(tabId) {
           return booking.selectedIndex > tabId ? "✔" : "    ";
         };
@@ -78,13 +117,26 @@ angular.module('booking', [])
         };
 
         booking.nextDisabled = function() {
-          switch (booking.selectedIndex) {
-            case 0: return false;
-            case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
-            case 2: return !booking.paymentForm.$valid;
-            case 3: return false;
+          if (!booking.shopBooking) {
+            switch (booking.selectedIndex) {
+              case 0: return false;
+              case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
+              case 2: return !booking.paymentForm.$valid;
+              case 3: return false;
+            }
+          } else {
+            switch (booking.selectedIndex) {
+              case 0: return !validDates();
+              case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
+              case 2: return !booking.paymentForm.$valid;
+              case 3: return false;
+            }
           }
         };
+
+        function validDates() {
+          return true;
+        }
 
         booking.resendSms = function() {
           booking.toggleConfirmButton();
@@ -97,7 +149,12 @@ angular.module('booking', [])
 
         booking.nextAction = function() {
           switch (booking.selectedIndex) {
-            case 0: booking.goNext(); break;
+            case 0: 
+              if (booking.shopBooking) {
+                setFirstTab(); break;
+              } else {
+                booking.goNext(); break;
+              }
             case 1: booking.saveAddress(); break;
             case 2: booking.tokenizeCard(); break;
             case 3: booking.book(); break;
@@ -217,14 +274,10 @@ angular.module('booking', [])
           api.get('/users/' + $localStorage.userId).then(
             function (success) {
               booking.user = success.data;
+              console.log(booking.user);
               booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
-              if (booking.user.status == 3) {
-                booking.selectedIndex = 3;
-              }
-              else if (booking.user.has_phone_number && booking.user.has_address) {
-                booking.selectedIndex = 2;
-              } else {
-                booking.selectedIndex = 1;
+              if (!booking.shopBooking) {
+                setFirstTab();
               }
               $timeout(function () {
                 booking.hidden = false;
@@ -242,6 +295,25 @@ angular.module('booking', [])
             }
           );
         };
+
+        function setFirstTab() {
+          if (booking.user.status == 3) {
+            booking.selectedIndex = 3;
+          }
+          else if (booking.user.has_phone_number && booking.user.has_address) {
+            booking.selectedIndex = 2;
+          } else {
+            booking.selectedIndex = 1;
+          }
+        }
+
+        booking.prepareUser = function() {
+          if (booking.shopBooking && !booking.authentication.loggedIn()) {
+            booking.authentication.signupGlobal(booking.detailsForm);
+          } else {
+            booking.sendSms(booking.detailsForm.phone_number);
+          }
+        }
 
         // phone confirmation
         //TODO: move to shared logic
@@ -288,6 +360,10 @@ angular.module('booking', [])
         // controls behavior of "next" button
         booking.goNext = function () {
           switch(booking.selectedIndex) {
+            case 0:
+              if (booking.shopBooking) {
+                setFirstTab();
+              }
             case 2:
               booking.tokenizeCard(); break;
             default:
@@ -297,6 +373,7 @@ angular.module('booking', [])
 
         // go to next tab
         booking.nextTab = function () {
+          console.log("gets called");
           booking.selectedIndex = booking.selectedIndex + 1;
         };
 
@@ -341,6 +418,9 @@ angular.module('booking', [])
         // TODO: This needs to be refactored, rootScopes are very bad practice
         // go to next tab on user create success
         $rootScope.$on('user_created', function () {
+          if (booking.shopBooking) {
+            booking.sendSms(booking.detailsForm.phone_number);
+          }
           booking.reloadUser();
         });
 
@@ -448,4 +528,10 @@ angular.module('booking', [])
     templateUrl: 'app/modules/booking/overview-tab.template.html',
     require: {parent: '^booking'},
     controllerAs: 'overview'
+  })
+  // overview tab ui component
+  .component('calendarTab', {
+    templateUrl: 'app/modules/booking/calendar-tab.template.html',
+    require: {parent: '^booking'},
+    controllerAs: 'calendar'
   });
