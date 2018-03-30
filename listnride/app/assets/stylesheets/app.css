@@ -168,8 +168,8 @@ invest .highlight-tile {
 }
 
 md-menu-content {
-  /*max-height: 300px!important;*/
-  max-height: 500px; /*TODO: find for WHAT*/
+  max-height: 300px!important;
+  /*max-height: 500px; !*TODO: find for WHAT*!*/
 }
 
 md-card md-card-title {
@@ -504,6 +504,11 @@ md-tooltip .md-content {
 
 .lnr-select-in-modal {
   z-index: 100;
+}
+
+.lnr-md-right-arrow:after {
+  padding-right: 8px;
+  padding-top: 1px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -1448,8 +1453,9 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
 }
 
 bike-sorter button {
-  min-width: 60px !important; 
+  min-width: 80px !important;
   text-align: left !important;
+  padding: 0 15px !important;
 }
 /*-----------------------------------------------------------------------------------*/
 /*  USER

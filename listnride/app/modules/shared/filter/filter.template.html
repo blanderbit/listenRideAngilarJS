@@ -1,4 +1,4 @@
-<div layout="row" class="lnr-filter-container" layout-margin>
+<div layout="row" layout-margin>
   <md-button class="md-lined" lnr-date-picker data="filter.currentDate" date-on-change="filter.onDateChange" clear-calendar-data="filter.isClearDataRange">
     <span ng-if="!filter.currentDate.start_date">Timespan</span>
     <span ng-if="filter.currentDate.start_date">{{filter.initialValues.date.start_date}}</span>

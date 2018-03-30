@@ -14,30 +14,31 @@
       place-changed="header.search(place)"
       required="false"
       placeholder-id="Search for e.g. Berlin, Munich"
-      flex="25"
+      flex="40"
       flex-xs="80"
+      ng-if="header.showSearch"
       ng-hide="header.hideSearch()">
     </autocomplete>
   
     <span flex></span>
 
-    <div hide show-xs ng-if="header.hideSearch()">
+    <div hide-gt-xs ng-if="header.hideSearch()">
       <md-button ng-click="header.toggleSearch()" md-no-ink class="mobile">
         <md-icon class="lnr-icn-sms md-color-white" md-svg-src="app/assets/ui_icons/search.svg"></md-icon>
       </md-button>
     </div>
-    <div hide show-xs ng-if="!header.hideSearch()">
+    <div hide-gt-xs ng-if="!header.hideSearch()">
       <md-button ng-click="header.toggleSearch()" md-no-ink class="mobile">
         <md-icon class="lnr-icn-sm md-color-white" md-svg-src="app/assets/ui_icons/icn_close_24.svg"></md-icon>
       </md-button>
     </div>
-    <div hide show-xs>
+    <div hide-gt-sm>
       <md-button ng-click="header.toggleSidebar()" md-no-ink class="mobile">
         <md-icon class="lnr-icn-sm md-color-white" md-svg-src="app/assets/ui_icons/icn_menu.svg"></md-icon>
       </md-button>
     </div>
 
-    <div class="lnr-nav-menu" hide-xs>
+    <div class="lnr-nav-menu" hide show-gt-sm>
       <md-menu md-position-mode="target bottom">
         <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">{{ 'shared.learn-more' | translate }}</md-button>
         <md-menu-content width="2">        

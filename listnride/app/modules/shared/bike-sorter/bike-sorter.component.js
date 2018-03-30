@@ -158,20 +158,24 @@ angular.module('bikeSorter', [])
        * categorize bikes w.r.t price in descending order
        */
       descendingPriceCategorizer: function (bikes, categorizedBikes) {
+        // get the breakpoints for price
         var breakpoints = bikeSorterService.breakpoints.inversePrice;
         for (var bike in bikes) {
           if (Object.prototype.hasOwnProperty.call(bikes, bike)) {
             for (var breakpoint in breakpoints) {
               breakpoint = parseInt(breakpoint);
-
+              // get daily price of the bike
               var price = bikes[bike].price_from,
+              // boundaries of the price breakpoints
                 currentBreakpointPrice = breakpoints[breakpoint],
                 nextBreakpointPrice = breakpoints[breakpoint + 1];
-
+              // price should be in range of the breakpoint
               if (nextBreakpointPrice && price < currentBreakpointPrice && price > nextBreakpointPrice) {
                 categorizedBikes[breakpoint].bikes.push(bikes[bike]);
                 break;
-              } else if (nextBreakpointPrice === undefined && price < currentBreakpointPrice) {
+              }
+              // except when the breakpoint is the lowest price
+              else if (nextBreakpointPrice === undefined && price < currentBreakpointPrice) {
                 categorizedBikes[breakpoint].bikes.push(bikes[bike]);
                 break;
               }
@@ -188,7 +192,9 @@ angular.module('bikeSorter', [])
         for (var bike in bikes) {
           if (Object.prototype.hasOwnProperty.call(bikes, bike)) {
             for (var breakpoint in breakpoints) {
+              // get daily price of the bike
               var price = bikes[bike].price_from;
+              // price should be in less than breakpoint
               if (price < breakpoints[breakpoint]) {
                 categorizedBikes[breakpoint].bikes.push(bikes[bike]);
                 break;
@@ -204,6 +210,7 @@ angular.module('bikeSorter', [])
       populateLocationBikes: function (bikes, titles) {
         var breakpoints = bikeSorterService.breakpoints.location;
         var categorizedBikes = [];
+        // create a data structure of the bikes with titles
         for (var breakpoint in breakpoints) {
           if (Object.prototype.hasOwnProperty.call(breakpoints, breakpoint)) {
             categorizedBikes.push({
