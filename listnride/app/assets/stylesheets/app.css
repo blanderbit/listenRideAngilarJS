@@ -506,6 +506,11 @@ md-tooltip .md-content {
   z-index: 100;
 }
 
+.lnr-md-right-arrow:after {
+  padding-right: 8px;
+  padding-top: 1px;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* SVG
 /*-----------------------------------------------------------------------------------*/
@@ -1448,8 +1453,9 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
 }
 
 bike-sorter button {
-  min-width: 60px !important; 
+  min-width: 80px !important;
   text-align: left !important;
+  padding: 0 15px !important;
 }
 /*-----------------------------------------------------------------------------------*/
 /*  USER
