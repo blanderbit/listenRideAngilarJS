@@ -636,7 +636,12 @@
     "number-of-bikes": "Number of bikes",
     "bike": "Bike",
     "bikes": "Bikes",
-    "pick-body-size": "Pick a body size"
+    "pick-body-size": "Pick a body size",
+    "timespan": "Timespan",
+    "category": "Category",
+    "clear-filters": "Clear filters",
+    "all-brands": "All brands",
+    "all-bikes": "All bikes"
   },
   "calendar": {
     "invalid-date": "Dates are invalid",
