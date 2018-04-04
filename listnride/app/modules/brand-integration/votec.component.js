@@ -62,12 +62,12 @@ angular.module('votec-integration',[]).component('votec', {
 
       api.get('/rides?family=26').then(
         function (success) {
-          for (var i=0; i<success.data.length; i++) {
-            switch (success.data[i].city) {
-              case "Berlin": votec.bikes.berlin.push(success.data[i]); break;
-              case "Freiburg im Breisgau": votec.bikes.freiburg.push(success.data[i]); break;
-              case "Heidelberg": votec.bikes.heidelberg.push(success.data[i]); break;
-              case "München": votec.bikes.munich.push(success.data[i]); break;
+          for (var i=0; i<success.data.bikes.length; i++) {
+            switch (success.data.bikes[i].city) {
+              case "Berlin": votec.bikes.berlin.push(success.data.bikes[i]); break;
+              case "Freiburg im Breisgau": votec.bikes.freiburg.push(success.data.bikes[i]); break;
+              case "Heidelberg": votec.bikes.heidelberg.push(success.data.bikes[i]); break;
+              case "München": votec.bikes.munich.push(success.data.bikes[i]); break;
             }
           }
           votec.currentBikes = votec.bikes["munich"];

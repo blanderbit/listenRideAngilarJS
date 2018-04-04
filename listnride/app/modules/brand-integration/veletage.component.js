@@ -14,7 +14,7 @@ angular.module('veletage-integration',[]).component('veletage', {
 
       api.get('/rides?family=16').then(
         function (success) {
-          veletage.bikes = success.data;
+          veletage.bikes = success.data.bikes;
         },
         function (error) {
         }

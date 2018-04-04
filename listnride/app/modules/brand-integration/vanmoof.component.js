@@ -32,11 +32,11 @@ angular.module('vanmoofIntegration',[]).component('vanmoof', {
 
       api.get('/rides?family=27').then(
         function (success) {
-          for (var i=0; i<success.data.length; i++) {
-            switch (success.data[i].city) {
-              case "Berlin": vanmoof.bikes.berlin.push(success.data[i]); break;
-              case "München": vanmoof.bikes.munich.push(success.data[i]); break;
-              case "Hamburg": vanmoof.bikes.hamburg.push(success.data[i]); break;
+          for (var i=0; i<success.data.bikes.length; i++) {
+            switch (success.data.bikes[i].city) {
+              case "Berlin": vanmoof.bikes.berlin.push(success.data.bikes[i]); break;
+              case "München": vanmoof.bikes.munich.push(success.data.bikes[i]); break;
+              case "Hamburg": vanmoof.bikes.hamburg.push(success.data.bikes[i]); break;
             }
           }
           vanmoof.currentBikes = vanmoof.bikes["berlin"];
