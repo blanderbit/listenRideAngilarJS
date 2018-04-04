@@ -64,16 +64,16 @@ angular.module('ampler-integration',[]).component('ampler', {
 
       api.get('/rides?family=8').then(
         function (success) {
-
-          for (var i=0; i<success.data.length; i++) {
-            switch (success.data[i].city) {
-              case "Berlin": ampler.bikes.berlin.push(success.data[i]); break;
-              case "München": ampler.bikes.munich.push(success.data[i]); break;
-              case "Hamburg": ampler.bikes.hamburg.push(success.data[i]); break;
-              case "Wien": ampler.bikes.vienna.push(success.data[i]); break;
-              case "Winterthur": ampler.bikes.zurich.push(success.data[i]); break; // Winterthur >> Zurich
-              case "Zürich": ampler.bikes.zurich.push(success.data[i]); break;
-              case "Frankfurt am Main": ampler.bikes.frankfurt.push(success.data[i]); break;
+          console.log(success);
+          for (var i=0; i<success.data.bikes.length; i++) {
+            switch (success.data.bikes[i].city) {
+              case "Berlin": ampler.bikes.berlin.push(success.data.bikes[i]); break;
+              case "München": ampler.bikes.munich.push(success.data.bikes[i]); break;
+              case "Hamburg": ampler.bikes.hamburg.push(success.data.bikes[i]); break;
+              case "Wien": ampler.bikes.vienna.push(success.data.bikes[i]); break;
+              case "Winterthur": ampler.bikes.zurich.push(success.data.bikes[i]); break; // Winterthur >> Zurich
+              case "Zürich": ampler.bikes.zurich.push(success.data.bikes[i]); break;
+              case "Frankfurt am Main": ampler.bikes.frankfurt.push(success.data.bikes[i]); break;
             }
           }
           ampler.currentBikes = ampler.bikes["berlin"];
