@@ -20,7 +20,9 @@ angular.module('ampler-integration',[]).component('ampler', {
         hamburg: [],
         vienna: [],
         zurich: [],
-        frankfurt: []
+        frankfurt: [],
+        amsterdam: [],
+        dusseldorf: []
       };
       ampler.slickConfig = {
         enabled: true,
@@ -74,8 +76,11 @@ angular.module('ampler-integration',[]).component('ampler', {
               case "Winterthur": ampler.bikes.zurich.push(success.data.bikes[i]); break; // Winterthur >> Zurich
               case "Zürich": ampler.bikes.zurich.push(success.data.bikes[i]); break;
               case "Frankfurt am Main": ampler.bikes.frankfurt.push(success.data.bikes[i]); break;
+              case "Amsterdam": ampler.bikes.amsterdam.push(success.data.bikes[i]); break;
+              case "Düsseldorf": ampler.bikes.dusseldorf.push(success.data.bikes[i]); break;
             }
           }
+          console.log(ampler.bikes);
           ampler.currentBikes = ampler.bikes["berlin"];
         },
         function (error) {
