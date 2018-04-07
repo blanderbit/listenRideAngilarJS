@@ -1,0 +1,58 @@
+<div layout="row" layout-margin>
+  <md-button class="md-lined" lnr-date-picker data="filter.currentDate" date-on-change="filter.onDateChange" clear-calendar-data="filter.isClearDataRange">
+    <span ng-if="!filter.currentDate.start_date">{{ 'search.timespan' | translate }}</span>
+    <span ng-if="filter.currentDate.start_date">{{filter.initialValues.date.start_date}}</span>
+  </md-button>
+  <md-menu md-position-mode="target bottom">
+    <md-button
+      class="md-lined lnr-no-margin"
+      ng-click="$mdOpenMenu($event)"
+    >
+      <span ng-if="filter.currentSizes.length < 1 || filter.currentSizes.length <= 1 && filter.currentSizes[0] == -1">
+        {{ 'search.number-of-bikes' | translate }}
+      </span>
+      <span ng-if="filter.currentSizes.length == 1 && filter.currentSizes[0] != -1">
+        {{filter.currentSizes.length}} {{'search.bike' | translate}}
+      </span>
+      <span ng-if="filter.currentSizes.length > 1">
+        {{filter.currentSizes.length}} {{'search.bikes' | translate}}
+      </span>
+    </md-button>
+    <md-menu-content width="4">
+      <div class="lnr-padding">
+        <bike-count-filter></bike-count-filter>
+      </div>
+    </md-menu-content>
+  </md-menu>
+
+  <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
+    <md-button
+      class="md-lined lnr-no-margin"
+      ng-click="$mdOpenMenu($event)"
+    >
+      {{ 'search.category' | translate }}
+    </md-button>
+    <md-menu-content width="5">
+      <div class="lnr-padding">
+        <category-filter></category-filter>
+      </div>
+    </md-menu-content>
+  </md-menu>
+
+  <md-select
+    class="lnr-margin-left"
+    ng-model="filter.currentBrand"
+    ng-change="filter.onBrandChange()"
+  >
+    <md-option ng-repeat="option in filter.brands" value="{{option}}">
+      {{option}}
+    </md-option>
+  </md-select>
+  <span flex></span>
+  <md-button
+    ng-click="filter.clearFilters()"
+    class="md-warn"
+  >
+    {{ 'search.clear-filters' | translate }}
+  </md-button>
+</div>

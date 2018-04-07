@@ -53,7 +53,7 @@
 
       $stateProvider.state({
         name: 'booking',
-        url: '/booking?bikeId&startDate&endDate',
+        url: '/booking?bikeId&startDate&endDate&shop',
         template: '<booking></booking>',
       });
 
@@ -65,36 +65,29 @@
 
       $stateProvider.state({
         name: 'search',
-        url: '/search/{location}?size&allterrain&race&city&kids&ebikes&special',
+        url: '/search/{location}?start_date&duration&sizes&categories',
         template: '<search></search>',
+        reloadOnSearch: false,
         params: {
           hideFooter: true,
-          size: {
+          brand: {
             value: "",
             squash: true
           },
-          allterrain: {
-            value: "false",
+          start_date: {
+            value: "",
             squash: true
           },
-          race: {
-            value: "false",
+          duration: {
+            value: "",
             squash: true
           },
-          city: {
-            value: "false",
+          sizes: {
+            value: "",
             squash: true
           },
-          kids: {
-            value: "false",
-            squash: true
-          },
-          ebikes: {
-            value: "false",
-            squash: true
-          },
-          special: {
-            value: "false",
+          categories: {
+            value: "",
             squash: true
           }
         }
@@ -1006,82 +999,6 @@
         template: '<user></user>'
       });
 
-      // $stateProvider.state({
-      //   name: 'cities-berlin',
-      //   url: '/berlin',
-      //   templateUrl: 'app/modules/static/cities-berlin.template.html',
-      //   controller: 'StaticController',
-      //   resolve: {
-      //       data: function ($translate, ngMeta) {
-      //           $translate(["meta.cities.berlin.meta-title", "meta.cities.berlin.meta-description"])
-      //               .then(function (translations) {
-      //                   ngMeta.setTitle(translations["meta.cities.berlin.meta-title"]);
-      //                   ngMeta.setTag("description", translations["meta.cities.berlin.meta-description"]);
-      //               })
-      //       }
-      //   },
-      //   meta: {
-      //       disableUpdate: true
-      //   }
-      // });
-
-      // $stateProvider.state({
-      //   name: 'cities-munich',
-      //   url: '/munich',
-      //   templateUrl: 'app/modules/static/cities-munich.template.html',
-      //   controller: 'StaticController',
-      //   resolve: {
-      //       data: function ($translate, ngMeta) {
-      //           $translate(["meta.cities.munich.meta-title", "meta.cities.munich.meta-description"])
-      //               .then(function (translations) {
-      //                   ngMeta.setTitle(translations["meta.cities.munich.meta-title"]);
-      //                   ngMeta.setTag("description", translations["meta.cities.munich.meta-description"]);
-      //               })
-      //       }
-      //   },
-      //   meta: {
-      //       disableUpdate: true
-      //   }
-      // });
-
-      // $stateProvider.state({
-      //   name: 'cities-amsterdam',
-      //   url: '/amsterdam',
-      //   templateUrl: 'app/modules/static/cities-amsterdam.template.html',
-      //   controller: 'StaticController',
-      //   resolve: {
-      //       data: function ($translate, ngMeta) {
-      //           $translate(["meta.cities.amsterdam.meta-title", "meta.cities.amsterdam.meta-description"])
-      //               .then(function (translations) {
-      //                   ngMeta.setTitle(translations["meta.cities.amsterdam.meta-title"]);
-      //                   ngMeta.setTag("description", translations["meta.cities.amsterdam.meta-description"]);
-      //               })
-      //       }
-      //   },
-      //   meta: {
-      //       disableUpdate: true
-      //   }
-      // });
-
-      // $stateProvider.state({
-      //   name: 'cities-vienna',
-      //   url: '/vienna',
-      //   templateUrl: 'app/modules/static/cities-vienna.template.html',
-      //   controller: 'StaticController',
-      //   resolve: {
-      //       data: function ($translate, ngMeta) {
-      //           $translate(["meta.cities.vienna.meta-title", "meta.cities.vienna.meta-description"])
-      //               .then(function (translations) {
-      //                   ngMeta.setTitle(translations["meta.cities.vienna.meta-title"]);
-      //                   ngMeta.setTag("description", translations["meta.cities.vienna.meta-description"]);
-      //               })
-      //       }
-      //   },
-      //   meta: {
-      //       disableUpdate: true
-      //   }
-      // });
-
       /* event pages -- end */
 
       $stateProvider.state({
@@ -1144,12 +1061,6 @@
           'og:image': 'https://www.listnride.com/app/assets/ui_images/opengraph/landing.jpg'
         }
       });
-
-      // $stateProvider.state({
-      //   name: 'seo-landing',
-      //   url: '/{pageTitle: string}',
-      //   template: '<seo-landing></seo-landing>'
-      // });
 
       $urlRouterProvider.otherwise(function ($injector) {
         var state = $injector.get('$state');

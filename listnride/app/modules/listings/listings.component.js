@@ -134,16 +134,17 @@ angular.module('listings', []).component('listings', {
         availabilityDialog.setData = setData;
         availabilityDialog.takeDisabledDates = takeDisabledDates;
         availabilityDialog.requests = bike.requests;
+        availabilityDialog.changeDate = changeDate;
 
         if (!bike.hasOwnProperty('availabilities')) bike.availabilities = {};
         availabilityDialog.setData();
 
         //////////////////
 
-        $scope.$on('input-range:changed', function (event) {
+        function changeDate() {
           availabilityDialog.isChanged = true;
           availabilityDialog.disabledDates = availabilityDialog.takeDisabledDates();
-        });
+        }
 
         function _getModel(item) {
           return {

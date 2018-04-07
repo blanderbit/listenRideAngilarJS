@@ -26,12 +26,14 @@
     "paderborn": "Paderborn",
     "utting": "Utting",
     "heidelberg": "Heidelberg",
+    "milan": "Milan",
     "marl": "Marl",
     "frankfurt": "Francoforte",
     "usedom": "Usedom",
     "lanzarote": "Lanzarote",
     "mallorca": "Mallorca",
     "sylt": "Sylt",
+    "stuttgart": "Stuttgart",
     "per": "per ",
     "hour": "ora",
     "hours": "ore",
@@ -115,6 +117,8 @@
     "confirmation": "Conferma",
     "confirmation-text": "Sei sicuro?",
     "loading": "Caricamento",
+    "clear": "Clear",
+    "clear-all": "Clear All",
     "today": "Oggi",
     "yesterday": "Ieri"
   },
@@ -976,6 +980,15 @@
     "kids": "Bici da bambino",
     "electro": "E-bikes",
     "special": "Bici speciali"
+  },
+  "availability": {
+    "availability": "availability",
+    "modal-title": "When is your bike not available?",
+    "start-from": "Starting from",
+    "end-at": "Ending at",
+    "add-another-date": "Add another date",
+    "submit-btn": "Ok",
+    "submit-btn-save": "Save"
   },
   "availability": {
     "availability": "Disponibilità",
