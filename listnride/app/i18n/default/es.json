@@ -14,6 +14,7 @@
     "top-cities": "Ciudades principales",
     "berlin": "Berlín",
     "dortmund": "Dortmund",
+    "milan": "Milan",
     "munich": "Múnich",
     "amsterdam": "Ámsterdam",
     "vienna": "Viena",
@@ -196,7 +197,7 @@
     "brand-integration": {
       "ampler": {
         "meta-title": "Programa de prueba de bicicleta eléctrica",
-        "meta-descr": "¡Prueba a andar en bici eléctrica hoy! Las bicis con asistencia eléctrica de Ampler están disponibles en listnride. Alquila una en Berlín, Múnich, Hamburgo y Viena."
+        "meta-descr": "Pruebe montar una e-bike hoy! Las ebikes de Ampler están disponibles en listnride. Alquile uno en Amsterdam, Berlín, Düsseldorf, Munich o Zurich."
       },
       "brompton": {
         "meta-title": "Alquila una bici Brompton con listnride",
@@ -619,10 +620,15 @@
     "bikes-in": "Bicis disponibles",
     "meta-title": "Alquila la bici perfecta en{{location}} ",
     "meta-description": "listnride ofrece una amplia variedad de bicis perfectas en {{location}}",
-    "number-of-bikes": "Number of bikes",
-    "bike": "Bike",
-    "bikes": "Bikes",
-    "pick-body-size": "Pick a body size"
+    "number-of-bikes": "Número de bicicletas",
+    "bike": "Bici",
+    "bikes": "Bicicletas",
+    "pick-body-size": "Tamaño",
+    "timespan": "Espacio de tiempo",
+    "category": "Tipo de bicicleta",
+    "clear-filters": "Borrar filtros",
+    "all-brands": "Todas las marcas",
+    "all-bikes": "Todas las bicicletas"
   },
   "calendar": {
     "invalid-date": "Las fechas no son válidas",

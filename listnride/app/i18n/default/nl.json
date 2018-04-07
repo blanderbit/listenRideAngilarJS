@@ -13,6 +13,7 @@
     "top-cities": "Favoriete Steden",
     "berlin": "Berlijn",
     "dortmund": "Dortmund",
+    "milan": "Milan",
     "munich": "München",
     "amsterdam": "Amsterdam",
     "vienna": "Wenen",
@@ -195,7 +196,7 @@
     "brand-integration": {
       "ampler": {
         "meta-title": "E-Bike Test Ride Program",
-        "meta-descr": "Test ride an E-Bike today! Electric assist bikes from Ampler available on listnride. Rent one in Berlin, Munich, Hamburg and Vienna."
+        "meta-descr": "Test een elektrische fiets vandaag! De elektrische fietsen van Ampler zijn nu direkt beschikbaar op listnride. Huur er één in Amsterdam, Berlijn, Düsseldorf, München of Zürich."
       },
       "brompton": {
         "meta-title": "Maak een proefrit met de Brompton vouwfiets via listnride",
@@ -621,10 +622,15 @@
     "bikes-in": "fietsen in",
     "meta-title": "Huur de perfekte fiets in {{location}}.",
     "meta-description": "listnride biedt een grote veelvoud aan perfekte huurfietsen in {{location}}.",
-    "number-of-bikes": "Number of bikes",
-    "bike": "Bike",
-    "bikes": "Bikes",
-    "pick-body-size": "Pick a body size"
+    "number-of-bikes": "Aantal fietsen",
+    "bike": "Fiets",
+    "bikes": "Fietsen",
+    "pick-body-size": "Grootte",
+    "timespan": "Periode",
+    "category": "Type fiets",
+    "clear-filters": "Filters wissen",
+    "all-brands": "Alle merken",
+    "all-bikes": "Alle fietsen"
   },
   "calendar": {
     "invalid-date": "Ingevulde Datums zijn niet correct",

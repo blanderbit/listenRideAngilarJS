@@ -189,7 +189,7 @@
     "brand-integration": {
       "ampler": {
         "meta-title": "E-Bike Test ",
-        "meta-descr": "Prova a guidare una E-Bike oggi! Bici elettriche a pedalata assistita di Ampler sono disponibili su listnride. Noleggiane una a Berlino, Monaco di Baviera, Amburgo e Vienna."
+        "meta-descr": "Prova a guidare una e-bike oggi! Le ebikes di Ampler sono disponibili su listnride. Noleggia uno a Amsterdam, Berlino, Düsseldorf, Monaco o Zurigo."
       },
       "brompton": {
         "meta-title": "Noleggia una bicicletta Brompton con listnride",
@@ -367,11 +367,11 @@
     "profile": "Profilo",
     "invite": "Invita i tuoi amici",
     "account": "Profilo",
-    "delete-account": "Eliminare profilo",
-    "delete-account-description": "Qui puoi cancellare il tuo profilo. Non è possibile annullare questo passaggio.",
+    "delete-account": " Disattivare profilo",
+    "delete-account-description": "Qui puoi disattivare il tuo profilo. Non è possibile annullare questo passaggio.",
     "delete-account-sure": "Sei sicuro?",
     "delete-account-sure-description": "Non è possibile annullare questo passaggio",
-    "delete-account-yes": "Si, elimina",
+    "delete-account-yes": "Si, disattiva",
     "delete-account-no": "No",
     "availability": "Disponibilità",
     "availability-description": "È possibile impostare la disponibilità per il noleggio delle biciclette.",
@@ -610,7 +610,16 @@
     "all-sizes": "Tutte le misure",
     "bikes-in": "Biciclette a",
     "meta-title": "Noleggia la bicicletta perfetta a {{location}}.",
-    "meta-description": "listnride offre un'ampia varietà di biciclette eccellenti per il noleggio a {{location}}."
+    "meta-description": "listnride offre un'ampia varietà di biciclette eccellenti per il noleggio a {{location}}.",
+    "number-of-bikes": "Numero di bici",
+    "bike": "Bicicletta",
+    "bikes": "Biciclette",
+    "pick-body-size": "Taglia",
+    "timespan": "Arco di tempo",
+    "category": "Tipo di bici",
+    "clear-filters": "Cancella i filtri",
+    "all-brands": "Tutte le marche",
+    "all-bikes": "Tutte le bici"
   },
   "calendar": {
     "invalid-date": "Le date non sono valide",
