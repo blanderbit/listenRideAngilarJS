@@ -35,11 +35,11 @@ angular.module('rethinkIntegration',[]).component('rethink', {
 
       api.get('/rides?family=28').then(
         function (success) {
-          for (var i=0; i<success.data.length; i++) {
-            switch (success.data[i].city) {
-              case "Dresden": rethink.bikes.dresden.push(success.data[i]); break;
-              case "Munich": rethink.bikes.munich.push(success.data[i]); break;
-              case "Hamburg": rethink.bikes.hamburg.push(success.data[i]); break;
+          for (var i=0; i<success.data.bikes.length; i++) {
+            switch (success.data.bikes[i].city) {
+              case "Dresden": rethink.bikes.dresden.push(success.data.bikes[i]); break;
+              case "Munich": rethink.bikes.munich.push(success.data.bikes[i]); break;
+              case "Hamburg": rethink.bikes.hamburg.push(success.data.bikes[i]); break;
             }
           }
         },

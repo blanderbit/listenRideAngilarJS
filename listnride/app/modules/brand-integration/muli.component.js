@@ -18,10 +18,10 @@ angular.module('muli-integration',[]).component('muli', {
       api.get('/rides?family=14').then(
         function (success) {
 
-          for (var i=0; i<success.data.length; i++) {
-            switch (success.data[i].city) {
-              case "Berlin": muli.bikes.berlin.push(success.data[i]); break;
-              case "München": muli.bikes.munich.push(success.data[i]); break;
+          for (var i=0; i<success.data.bikes.length; i++) {
+            switch (success.data.bikes[i].city) {
+              case "Berlin": muli.bikes.berlin.push(success.data.bikes[i]); break;
+              case "München": muli.bikes.munich.push(success.data.bikes[i]); break;
             }
           }
 

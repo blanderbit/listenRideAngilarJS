@@ -37,11 +37,11 @@ angular.module('bonvelo-integration',[]).component('bonvelo', {
 
       api.get('/rides?family=17').then(
         function (success) {
-          for (var i=0; i<success.data.length; i++) {
-            switch (success.data[i].city) {
-              case "Berlin": bonvelo.bikes.berlin.push(success.data[i]); break;
-              case "München": bonvelo.bikes.munich.push(success.data[i]); break;
-              case "Hamburg": bonvelo.bikes.hamburg.push(success.data[i]); break;
+          for (var i=0; i<success.data.bikes.length; i++) {
+            switch (success.data.bikes[i].city) {
+              case "Berlin": bonvelo.bikes.berlin.push(success.data.bikes[i]); break;
+              case "München": bonvelo.bikes.munich.push(success.data.bikes[i]); break;
+              case "Hamburg": bonvelo.bikes.hamburg.push(success.data.bikes[i]); break;
             }
           }
         },
