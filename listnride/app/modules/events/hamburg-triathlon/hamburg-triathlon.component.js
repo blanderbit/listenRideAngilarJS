@@ -24,10 +24,10 @@ angular.module('hamburgTriathlon',[]).component('hamburgTriathlon', {
         $translate('search.all-sizes').then(function (translation) {
             hamburgTriathlon.sizeOptions[0].label = translation;
         });
-
-        api.get('/rides?category=20&location=Hamburg&booked_at=2018-07-14').then(
+        // TODO: Readd &booked_at=2018-07-14 when API is fixed
+        api.get('/rides?category=20&location=Hamburg').then(
             function(response) {
-                hamburgTriathlon.bikes = response.data;
+                hamburgTriathlon.bikes = response.data.bikes;
             },
             function(error) {
             }
