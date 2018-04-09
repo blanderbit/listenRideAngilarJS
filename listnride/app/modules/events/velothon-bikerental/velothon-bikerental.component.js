@@ -26,7 +26,7 @@ angular.module('velothonBikerental',[]).component('velothonBikerental', {
 
             api.get('/rides?category=20&location=Berlin&priority=velothon&booked_at=2018-05-13').then(
                 function(response) {
-                    velothonBikerental.bikes = response.data;
+                    velothonBikerental.bikes = response.data.bikes;
                 },
                 function(error) {
                 }
