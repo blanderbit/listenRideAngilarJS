@@ -43,7 +43,7 @@ angular.module('filter',[])
           filter.currentSizes = filter.initialValues.sizes.slice();
           initializeSizeFilter();
           // brand
-          filter.brands = ["All Brands"];
+          filter.brands = [$translate.instant("search.all-brands")];
           filter.currentBrand = filter.brands[0];
           // categories
           filter.categories = bikeOptions.allCategoriesOptions();
@@ -131,7 +131,7 @@ angular.module('filter',[])
           filter.bikes = filteredBikes;
 
           filter.categorizedBikes = [{
-            title: "All Bikes",
+            title: $translate.instant("search.all-bikes"),
             bikes: filter.bikes
           }];
           

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('listnride')
-  .factory('bikeOptions', [function () {
+  .factory('bikeOptions', ['$translate', function ($translate) {
     return {
       accessoryOptions: function () {
         return [
@@ -63,68 +63,68 @@ angular.module('listnride')
         return [
           {
             catId: 10,
-            name: 'City',
+            name: $translate.instant("list.category.city"),
             iconFileName: "biketype_1.svg",
             subcategories: [
-              {id: 10, name: 'Dutch bike'},
-              {id: 11, name: 'Touring bike'},
-              {id: 12, name: 'Fixie'},
-              {id: 13, name: 'Single Speed'}
+              { id: 10, name: $translate.instant("list.subcategory.1.dutch-bike")},
+              { id: 11, name: $translate.instant("list.subcategory.1.touring-bike")},
+              { id: 12, name: $translate.instant("list.subcategory.1.fixie")},
+              { id: 13, name: $translate.instant("list.subcategory.1.single-speed")}
             ]
           },
           {
             catId: 20,
-            name: 'Race',
+            name: $translate.instant("list.category.race"),
             iconFileName: "biketype_2.svg",
             subcategories: [
-              {id: 20, name: 'Road bike'},
-              {id: 21, name: 'Triathlon'},
-              {id: 22, name: 'Indoor'}
+              { id: 20, name: $translate.instant("list.subcategory.2.road-bike") },
+              { id: 21, name: $translate.instant("list.subcategory.2.triathlon") },
+              { id: 22, name: $translate.instant("list.subcategory.2.indoor") }
             ]
           },
           {
             catId: 30,
-            name: 'All terrain',
+            name: $translate.instant("list.category.all-terrain"),
             iconFileName: "biketype_3.svg",
             subcategories: [
-              {id: 30, name: 'Tracking'},
-              {id: 31, name: 'Enduro'},
-              {id: 32, name: 'Freeride'},
-              {id: 33, name: 'Cross Country'},
-              {id: 34, name: 'Downhill'},
-              {id: 35, name: 'Cyclocross'}
+              { id: 30, name: $translate.instant("list.subcategory.3.tracking") },
+              { id: 31, name: $translate.instant("list.subcategory.3.enduro") },
+              { id: 32, name: $translate.instant("list.subcategory.3.freeride") },
+              { id: 33, name: $translate.instant("list.subcategory.3.cross-country") },
+              { id: 34, name: $translate.instant("list.subcategory.3.downhill") },
+              { id: 35, name: $translate.instant("list.subcategory.3.cyclocross") }
             ]
           },
           {
             catId: 40,
-            name: 'Children',
+            name: $translate.instant("list.category.kids"),
             iconFileName: "biketype_4.svg",
             subcategories: [
-              {id: 40, name: 'City'},
-              {id: 41, name: 'All Terrain'},
-              {id: 42, name: 'Road'}
+              { id: 40, name: $translate.instant("list.subcategory.4.city") },
+              { id: 41, name: $translate.instant("list.subcategory.4.all-terrain") },
+              { id: 42, name: $translate.instant("list.subcategory.4.road") }
             ]
           },
           {
             catId: 50,
-            name: 'Electric',
+            name: $translate.instant("list.category.electro"),
             iconFileName: "biketype_5.svg",
             subcategories: [
-              {id: 50, name: 'Pedelec'},
-              {id: 51, name: 'E-bike'}
+              { id: 50, name: $translate.instant("list.subcategory.5.pedelec") },
+              { id: 51, name: $translate.instant("list.subcategory.5.e-bike") }
             ]
           },
           {
             catId: 60,
-            name: 'Special',
+            name: $translate.instant("list.category.special"),
             iconFileName: "biketype_6.svg",
             subcategories: [
-              {id: 60, name: 'Folding bike'},
-              {id: 61, name: 'Tandem'},
-              {id: 62, name: 'Cruiser'},
-              {id: 63, name: 'Cargo bike'},
-              {id: 64, name: 'Recumbent'},
-              {id: 65, name: 'Mono bike'}
+              { id: 60, name: $translate.instant("list.subcategory.6.folding-bike") },
+              { id: 61, name: $translate.instant("list.subcategory.6.tandem") },
+              { id: 62, name: $translate.instant("list.subcategory.6.cruiser") },
+              { id: 63, name: $translate.instant("list.subcategory.6.cargo-bike") },
+              { id: 64, name: $translate.instant("list.subcategory.6.recumbent") },
+              { id: 65, name: $translate.instant("list.subcategory.6.mono-bike") }
             ]
           }
         ]

@@ -196,7 +196,7 @@
     "brand-integration": {
       "ampler": {
         "meta-title": "E Bike Test Programm",
-        "meta-descr": "Teste noch heute ein Ampler Bikes E-Bike! Die Elektrofahrräder stehen zum Testen in Berlin, München, Hamburg, Zürich und Wien zur Verfügung."
+        "meta-descr": "Teste noch heute ein Ampler E-bike! Die Elektrofahrräder stehen jetzt zum Testen in Amsterdam Berlin, Düsseldorf, München und Zürich für dich bereit."
       },
       "brompton": {
         "meta-title": "Miete das Brompton Faltrad mit listnride",
@@ -308,6 +308,7 @@
     "details": {
       "tab": "2. Persönliche Daten",
       "invoice-address": "Rechnungsadresse",
+      "subtitle": "Bitte gib Deine Rechnungsadresse ein, um ein Fahrrad anzufragen.",
       "verification": "Verifizieren",
       "send-sms": "Wir senden dir eine SMS an dein Telefon.",
       "check-phone": "Bitte prüfe dein Telefon.",
@@ -583,9 +584,9 @@
       "valid-email-xs": "Ungültige E-Mail",
       "empty-email": "Bitte gib deine E-Mail-Adresse an",
       "empty-email-xs": "E-Mail erforderlich",
-      "empty-last-name": "Bitte gib deinen Nachnamen an",
+      "empty-last-name": "Gib deinen Nachnamen an",
       "empty-last-name-xs": "Nachname erforderlich",
-      "empty-first-name": "Bitte gib deinen Vornamen an",
+      "empty-first-name": "Gib deinen Vornamen an",
       "empty-first-name-xs": "Vornamen erforderlich",
       "max-size-last-name": "Der Nachname sollte maximal 30 Buchstaben lang sein",
       "max-size-last-name-xs": "Max 30 Buchstaben",
@@ -620,10 +621,15 @@
     "bikes-in": "Fahrräder in",
     "meta-title": "Miete das perfekte Rad in {{location}}.",
     "meta-description": "listnride bietet viele verschiedene Räder in {{location}} zur Miete an.",
-    "number-of-bikes": "Number of bikes",
-    "bike": "Bike",
-    "bikes": "Bikes",
-    "pick-body-size": "Pick a body size"
+    "number-of-bikes": "Anzahl der Fahrräder",
+    "bike": "Fahrrad",
+    "bikes": "Fahrräder",
+    "pick-body-size": "Größe",
+    "timespan": "Zeitspanne",
+    "category": "Fahrradtype",
+    "clear-filters": "Filter löschen",
+    "all-brands": "Alle Marken",
+    "all-bikes": "Alle Fahrräder"
   },
   "calendar": {
     "invalid-date": "Datums angabe nicht Korrekt",
@@ -693,7 +699,7 @@
       "select-images": "Fotos wählen",
       "remove": "Löschen",
       "upload-bike-header": "Lade ein paar Fotos hoch",
-      "under-min-size": "Einige Bilder haben eine kleinere Abmessung kleiner als 1500x1000:",
+      "under-min-size": "Einige Bilder sind kleiner als 1500x1000:",
       "invalid-images": "Bildgröße unzureichend"
     },
     "location": {
