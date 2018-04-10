@@ -52,7 +52,7 @@
         infinite-scroll-container="'#list-wrapper'"
         infinite-scroll-listen-for-event='requests.nextPage()'
       >
-        <div ng-repeat="request in requests.requests track by $index" >
+        <div ng-repeat="request in requests.requests | orderBy:'-start_date' track by request.id" >
           <md-divider md-insets></md-divider>
           <md-list-item class="requests-list-item md-2-line"
                         ng-class="{'request-filter-switch-active':requests.selected === request.id}"

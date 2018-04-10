@@ -5,7 +5,7 @@
   </div>
   <md-divider></md-divider>
   <div id="featuredBikes" layout="row" layout-wrap layout-padding style="margin: 0; padding: 0">
-  	<div ng-repeat="bike in cardgrid.bikes"
+  	<div ng-repeat="bike in cardgrid.bikes track by bike.id"
       flex-xs="100"
       flex-sm="50"
       flex-gt-sm="33"
