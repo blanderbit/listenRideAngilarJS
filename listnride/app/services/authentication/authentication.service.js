@@ -140,12 +140,14 @@ angular.
       var connectFb = function(inviteCode, requestFlow) {
         ezfb.getLoginStatus(function(response) {
           if (response.status === 'connected') {
+            $analytics.eventTrack('load', {category: 'Request Bike', label: 'Sign In Facebook'});
             var accessToken = response.authResponse.accessToken;
             ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
               loginFb(response.email, response.id);
             });
           } else {
             ezfb.login(function(response) {
+              $analytics.eventTrack('click', {category: 'Request Bike', label: 'Register Facebook'});
               var accessToken = response.authResponse.accessToken;
               ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
                 signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name, false, requestFlow);
@@ -166,6 +168,8 @@ angular.
           lastName: form.last_name.$modelValue,
           password: form.password.$modelValue
         };
+
+        $analytics.eventTrack('click', {category: 'Request Bike', label: 'Register'});
 
         // manually set all variables to null
         // $mdDialog, inviteCode, requesting, business
@@ -270,6 +274,7 @@ angular.
           target: 'login'
         };
 
+        $analytics.eventTrack('click', {category: 'Request Bike', label: 'Sign In'});
         LoginDialogController(null, null, sha256, null, obj);
       };
 
