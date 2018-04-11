@@ -10,7 +10,7 @@ angular.module('inVeloVeritas',[]).component('inVeloVeritas', {
 
       api.get('/rides?family=4').then(
         function(response) {
-          inVeloVeritas.bikes = response.data;
+          inVeloVeritas.bikes = response.data.bikes;
         },
         function(error) {
         }
