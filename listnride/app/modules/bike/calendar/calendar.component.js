@@ -141,28 +141,27 @@ angular.module('bike').component('calendar', {
 
       var slotDuration = 1;
       var eventYear = 2018;
-      var eventMonth = 2;   // Months start at 0, so February = 1
+      var eventMonth = 3;   // Months start at 0, so February = 1
 
 
       // Calendar Slots are currently set for Supercross Munich
       calendar.event.slots = [
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "10:00 - 11:00", hour: 10},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "11:00 - 12:00", hour: 11},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "12:00 - 13:00", hour: 12},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "13:00 - 14:00", hour: 13},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "14:00 - 15:00", hour: 14},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "15:00 - 16:00", hour: 15},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "16:00 - 17:00", hour: 16},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "17:00 - 18:00", hour: 17},
-        {overnight: false, reserved: false, pickupEnabled: false, returnDisabled: true, day: 24, month: eventMonth, year: eventYear, text: "18:00 - 19:00", hour: 18},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "10:00 - 11:00", hour: 10},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "11:00 - 12:00", hour: 11},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "12:00 - 13:00", hour: 12},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "13:00 - 14:00", hour: 13},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "14:00 - 15:00", hour: 14},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "15:00 - 16:00", hour: 15},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "16:00 - 17:00", hour: 16},
-        {overnight: false, reserved: false, pickupEnabled: false, returnDisabled: true, day: 25, month: eventMonth, year: eventYear, text: "17:00 - 18:00", hour: 17},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 14, month: eventMonth, year: eventYear, text: "10:00 - 11:00", hour: 10},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 14, month: eventMonth, year: eventYear, text: "11:00 - 12:00", hour: 11},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 14, month: eventMonth, year: eventYear, text: "12:00 - 13:00", hour: 12},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 14, month: eventMonth, year: eventYear, text: "13:00 - 14:00", hour: 13},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 14, month: eventMonth, year: eventYear, text: "14:00 - 15:00", hour: 14},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 14, month: eventMonth, year: eventYear, text: "15:00 - 16:00", hour: 15},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 14, month: eventMonth, year: eventYear, text: "16:00 - 17:00", hour: 16},
+        {overnight: false, reserved: false, pickupEnabled: false, returnDisabled: true, day: 14, month: eventMonth, year: eventYear, text: "17:00 - 18:00", hour: 17},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 15, month: eventMonth, year: eventYear, text: "10:00 - 11:00", hour: 10},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 15, month: eventMonth, year: eventYear, text: "11:00 - 12:00", hour: 11},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 15, month: eventMonth, year: eventYear, text: "12:00 - 13:00", hour: 12},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 15, month: eventMonth, year: eventYear, text: "13:00 - 14:00", hour: 13},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 15, month: eventMonth, year: eventYear, text: "14:00 - 15:00", hour: 14},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 15, month: eventMonth, year: eventYear, text: "15:00 - 16:00", hour: 15},
+        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 15, month: eventMonth, year: eventYear, text: "16:00 - 17:00", hour: 16},
+        {overnight: false, reserved: false, pickupEnabled: false, returnDisabled: true, day: 15, month: eventMonth, year: eventYear, text: "17:00 - 18:00", hour: 17},
       ];
 
       calendar.event.changePickupSlot = function() {
