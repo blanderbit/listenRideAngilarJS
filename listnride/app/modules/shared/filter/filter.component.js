@@ -46,7 +46,10 @@ angular.module('filter',[])
           filter.brands = [$translate.instant("search.all-brands")];
           filter.currentBrand = filter.brands[0];
           // categories
-          filter.categories = bikeOptions.allCategoriesOptions();
+          filter.categories = [];
+          bikeOptions.allCategoriesOptions().then(function (resolve) {
+            filter.categories = resolve;
+          });
           filter.currentCategories = filter.initialValues.categories.filter(Boolean).slice().map(Number);
           filter.openSubs = [];
         };
