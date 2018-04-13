@@ -354,7 +354,8 @@
                         ng-style="{'background-image': 'url(' + img.url + ')'}">
                     </div>
                     <md-button class="md-lined md-warn"
-                               ng-click="list.removeImage($index)">
+                               ng-click="list.removeImage($index, img)">
+                      {{ console.log(img) }}
                       {{ 'list.pictures.remove' | translate}}
                     </md-button>
                   </div>
