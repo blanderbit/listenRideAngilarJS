@@ -27,6 +27,7 @@ angular.module('brompton-integration',[]).component('brompton', {
         mailand: [],
         marl: [],
         munich: [],
+        nuremberg: [],
         paderborn: [],
         tubingen: [],
         ulm: [],
@@ -55,6 +56,7 @@ angular.module('brompton-integration',[]).component('brompton', {
               case "Marl": brompton.bikes.marl.push(success.data.bikes[i]); break;
               case "Mailand": brompton.bikes.mailand.push(success.data.bikes[i]); break;
               case "München": brompton.bikes.munich.push(success.data.bikes[i]); break;
+              case "Nürnberg": brompton.bikes.nuremberg.push(success.data.bikes[i]); break;
               case "Paderborn": brompton.bikes.paderborn.push(success.data.bikes[i]); break;
               case "Tübingen": brompton.bikes.tubingen.push(success.data.bikes[i]); break;
               case "Ulm": brompton.bikes.ulm.push(success.data.bikes[i]); break;
