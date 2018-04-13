@@ -3,13 +3,17 @@
 angular.module('inviteLanding',[]).component('inviteLanding', {
   templateUrl: 'app/modules/invite-landing/invite-landing.template.html',
   controllerAs: 'inviteLanding',
-  controller: [ '$stateParams', '$state', '$translate', 'authentication', 'api',
-    function InviteLandingController($stateParams, $state, $translate, authentication, api, referrer) {
+  controller: ['$stateParams', '$state', '$translate', 'authentication', 'api', 'ngMeta',
+    function InviteLandingController($stateParams, $state, $translate, authentication, api, ngMeta) {
       var inviteLanding = this;
 
       inviteLanding.hidden = true;
       inviteLanding.authentication = authentication;
       inviteLanding.inviteCode = $stateParams.inviteCode;
+
+      ngMeta.setTitle($translate.instant("invite-landing.meta-title"));
+      ngMeta.setTag("description", $translate.instant("invite-landing.meta-description"));
+      ngMeta.setTag("og:image", '//listnride.com/app/assets/ui_images/lnr_invite_landing.jpg');
 
       api.get('/referrals/' + inviteLanding.inviteCode).then(
         function (success) {
