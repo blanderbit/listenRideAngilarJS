@@ -36,7 +36,6 @@ angular.module('list', ['ngLocale']).component('list', {
 
       list.form = {images: []};
       list.selectedIndex = 0;
-      list.removedImages = [];
       list.sizeOptions = bikeOptions.sizeOptions();
       list.kidsSizeOptions = bikeOptions.kidsSizeOptions();
       list.categoryOptions = bikeOptions.categoryOptions();
@@ -207,51 +206,35 @@ angular.module('list', ['ngLocale']).component('list', {
       list.submitEditedRide = function () {
         var prices = price.inverseTransformPrices(list.form.prices);
         var ride = {
-          "ride" : {
-            "name": list.form.name,
-            "brand": list.form.brand,
-            "description": list.form.description,
-            "size": list.form.size,
-            "category": list.form.mainCategory.concat(list.form.subCategory),
-            "has_lock": list.form.has_lock || false,
-            "has_helmet": list.form.has_helmet || false,
-            "has_lights": list.form.has_lights || false,
-            "has_basket": list.form.has_basket || false,
-            "has_trailer": list.form.has_trailer || false,
-            "has_childseat": list.form.has_childseat || false,
-            "user_id": $localStorage.userId,
-            "street": list.form.street,
-            "city": list.form.city,
-            "zip": list.form.zip,
-            "country": list.form.country,
-            "prices": prices,
-            "custom_price": list.form.custom_price,
-            "discounts": list.form.discounts,
-            "frame_size": list.form.frame_size,
-            "bicycle_number": list.form.bicycle_number,
-            "frame_number": list.form.frame_number,
-            "details": list.form.details
-          }
+          "ride[name]": list.form.name,
+          "ride[brand]": list.form.brand,
+          "ride[description]": list.form.description,
+          "ride[size]": list.form.size,
+          "ride[category]": list.form.mainCategory.concat(list.form.subCategory),
+          "ride[has_lock]": list.form.has_lock || false,
+          "ride[has_helmet]": list.form.has_helmet || false,
+          "ride[has_lights]": list.form.has_lights || false,
+          "ride[has_basket]": list.form.has_basket || false,
+          "ride[has_trailer]": list.form.has_trailer || false,
+          "ride[has_childseat]": list.form.has_childseat || false,
+          "ride[user_id]": $localStorage.userId,
+          "ride[street]": list.form.street,
+          "ride[city]": list.form.city,
+          "ride[zip]": list.form.zip,
+          "ride[country]": list.form.country,
+          "ride[prices]": prices,
+          "ride[custom_price]": list.form.custom_price,
+          "ride[discounts]": list.form.discounts,
+          "ride[frame_size]": list.form.frame_size,
+          "ride[bicycle_number]": list.form.bicycle_number,
+          "ride[frame_number]": list.form.frame_number,
+          "ride[details]": list.form.details,
+          "ride[image_file_1]": (list.form.images[0]) ? list.form.images[0].src : undefined,
+          "ride[image_file_2]": (list.form.images[1]) ? list.form.images[1].src : undefined,
+          "ride[image_file_3]": (list.form.images[2]) ? list.form.images[2].src : undefined,
+          "ride[image_file_4]": (list.form.images[3]) ? list.form.images[3].src : undefined,
+          "ride[image_file_5]": (list.form.images[4]) ? list.form.images[4].src : undefined
         };
-
-        // TODO: Refactor images logic backend & fronted
-        _.forEach(list.removedImages, function(image_idx) {
-          ride['ride']['remove_image_file_' + (image_idx + 1)] = true
-        });
-
-        // FIXME: HOTFIX, optimise long term
-        _.forEach(list.form.images, function(image) {
-          if(_.isEmpty(image.url)){ AddNewImage(image) }
-        });
-
-        function AddNewImage(image) {
-          _.forEach([1,2,3,4,5], function(id) {
-            if(_.values(list.form['image_file_' + id])[0].url == null){
-              ride['ride']['image_file_' + id] = image.src;
-              return false;
-            }
-          });
-        }
 
         Upload.upload({
           method: 'PUT',
@@ -264,6 +247,7 @@ angular.module('list', ['ngLocale']).component('list', {
           function (response) {
             loadingDialog.close();
             $state.go("listings");
+            $state.go("bike", {bikeId: response.data.id});
           },
           function (error) {
             list.submitDisabled = false;
@@ -355,7 +339,6 @@ angular.module('list', ['ngLocale']).component('list', {
 
       // remove image of the bike
       list.removeImage = function (index) {
-        list.removedImages.push(index);
         list.form.images.splice(index, 1);
       };
 
