@@ -642,7 +642,7 @@
     "select-timespan-description": "Antes de poder solicitar una bici debes establecer la duración del alquiler. Basta con hacer clic en los días y seleccionar las horas de recogida y entrega en el calendario anterior.",
     "info-subtotal": "Este es el precio habitual diario<br>veces la cantidad de días que quieras<br>alquilar la bici.",
     "info-discount": "Descuento medio diario que <br>obtienes por día al alquilar <br>por un período de tiempo más largo.",
-    "info-service-fee": "La cuota de servicio es<br>utilizada para proporcionar<br>a listnride. Incluye el IVA,",
+    "info-service-fee": "La cuota de servicio es<br>utilizada para proporcionar<br>a listnride. Incluye el IVA.",
     "info": "En el calendario anterior, haz clic primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla."
   },
   "list": {
