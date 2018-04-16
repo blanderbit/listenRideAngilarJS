@@ -61,7 +61,8 @@ angular.module('bike').component('calendar', {
               showShortcuts: false,
               showTopbar: false,
               singleMonth: true,
-              startOfWeek: 'monday'
+              startOfWeek: 'monday',
+              language: $translate.preferredLanguage(),
             }).bind('datepicker-change', function (event, obj) {
               var start = obj.date1;
               start.setHours(calendar.startTime, 0, 0, 0);
