@@ -17,6 +17,7 @@ angular.module('brompton-integration',[]).component('brompton', {
         }
       );
       brompton.bikes = {
+        amsterdam: [],
         berlin: [],
         dortmund: [],
         dusseldorf: [],
@@ -46,6 +47,7 @@ angular.module('brompton-integration',[]).component('brompton', {
         function (success) {
           for (var i=0; i<success.data.bikes.length; i++) {
             switch (success.data.bikes[i].city) {
+              case "Amsterdam": brompton.bikes.amsterdam.push(success.data.bikes[i]); break;
               case "Berlin": brompton.bikes.berlin.push(success.data.bikes[i]); break;
               case "Dortmund": brompton.bikes.dortmund.push(success.data.bikes[i]); break;
               case "Düsseldorf": brompton.bikes.dusseldorf.push(success.data.bikes[i]); break;
