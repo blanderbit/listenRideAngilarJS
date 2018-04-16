@@ -11,9 +11,12 @@ angular.module('inviteLanding',[]).component('inviteLanding', {
       inviteLanding.authentication = authentication;
       inviteLanding.inviteCode = $stateParams.inviteCode;
 
-      ngMeta.setTitle($translate.instant("invite-landing.meta-title"));
-      ngMeta.setTag("description", $translate.instant("invite-landing.meta-description"));
-      ngMeta.setTag("og:image", '//listnride.com/app/assets/ui_images/lnr_invite_landing.jpg');
+      $translate(["invite-landing.meta-title", "invite-landing.meta-description"])
+      .then(function (translations) {
+        ngMeta.setTitle(translations["invite-landing.meta-title"]);
+        ngMeta.setTag("description", translations["invite-landing.meta-description"]);
+        ngMeta.setTag("og:image", 'https://listnride.com/app/assets/ui_images/lnr_invite_landing.jpg');
+      });
 
       api.get('/referrals/' + inviteLanding.inviteCode).then(
         function (success) {
