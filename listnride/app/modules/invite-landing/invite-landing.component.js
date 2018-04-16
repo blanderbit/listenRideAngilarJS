@@ -15,7 +15,7 @@ angular.module('inviteLanding',[]).component('inviteLanding', {
       .then(function (translations) {
         ngMeta.setTitle(translations["invite-landing.meta-title"]);
         ngMeta.setTag("description", translations["invite-landing.meta-description"]);
-        ngMeta.setTag("og:image", 'https://listnride.com/app/assets/ui_images/lnr_invite_landing.jpg');
+        ngMeta.setTag("og:image", 'https://www.listnride.com/app/assets/ui_images/lnr_invite_landing.jpg');
       });
 
       api.get('/referrals/' + inviteLanding.inviteCode).then(
