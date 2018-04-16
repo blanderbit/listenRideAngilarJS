@@ -37,6 +37,7 @@ angular.module('list', ['ngLocale']).component('list', {
       list.form = {images: []};
       list.selectedIndex = 0;
       list.removedImages = [];
+      list.startImage = 1;
       list.sizeOptions = bikeOptions.sizeOptions();
       list.kidsSizeOptions = bikeOptions.kidsSizeOptions();
       list.categoryOptions = bikeOptions.categoryOptions();
@@ -235,8 +236,8 @@ angular.module('list', ['ngLocale']).component('list', {
         };
 
         // TODO: Refactor images logic backend & fronted
-        _.forEach(list.removedImages, function(image_idx) {
-          ride['ride']['remove_image_file_' + (image_idx + 1)] = true
+        _.forEach(list.removedImages, function(image_name) {
+          ride['ride']['remove_' + image_name] = true
         });
 
         // FIXME: HOTFIX, optimise long term
@@ -245,9 +246,10 @@ angular.module('list', ['ngLocale']).component('list', {
         });
 
         function AddNewImage(image) {
-          _.forEach([1,2,3,4,5], function(id) {
+          _.forEach(_.range(list.startImage,6), function(id) {
             if(_.values(list.form['image_file_' + id])[0].url == null){
               ride['ride']['image_file_' + id] = image.src;
+              list.startImage = id + 1;
               return false;
             }
           });
@@ -354,8 +356,8 @@ angular.module('list', ['ngLocale']).component('list', {
       };
 
       // remove image of the bike
-      list.removeImage = function (index) {
-        list.removedImages.push(index);
+      list.removeImage = function (index, img) {
+        list.removedImages = _.union(list.removedImages, Object.keys(img.src));
         list.form.images.splice(index, 1);
       };
 
