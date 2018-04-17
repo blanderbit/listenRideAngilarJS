@@ -274,10 +274,12 @@ angular.module('booking', [])
         booking.reloadUser = function() {
           api.get('/users/' + $localStorage.userId).then(
             function (success) {
+              var oldUser = booking.user;
               booking.user = success.data;
-              console.log(booking.user);
+              booking.user.firstName = success.data.first_name;
+              booking.user.lastName = success.data.last_name;
               booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
-              if (!booking.shopBooking) {
+              if (!booking.shopBooking || oldUser != {}) {
                 setFirstTab();
               }
               $timeout(function () {
@@ -434,13 +436,16 @@ angular.module('booking', [])
         $rootScope.$on('user_created', function () {
           if (booking.shopBooking) {
             booking.sendSms(booking.detailsForm.phone_number);
+          } else {
+            booking.reloadUser();
           }
-          booking.reloadUser();
         });
 
         // go to next tab on user login success
         $rootScope.$on('user_login', function () {
-          booking.reloadUser();
+          if (!booking.shopBooking) {
+            booking.reloadUser();
+          }
         });
 
         angular.element(document).ready(function () {
