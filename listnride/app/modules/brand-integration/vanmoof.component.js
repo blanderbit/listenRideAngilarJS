@@ -32,6 +32,7 @@ angular.module('vanmoofIntegration',[]).component('vanmoof', {
 
       api.get('/rides?family=27').then(
         function (success) {
+          console.log(success);
           for (var i=0; i<success.data.bikes.length; i++) {
             switch (success.data.bikes[i].city) {
               case "Berlin": vanmoof.bikes.berlin.push(success.data.bikes[i]); break;
