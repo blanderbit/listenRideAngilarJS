@@ -206,7 +206,8 @@ angular.module('filter',[])
         };
 
         function isIndeterminate(categoryId) {
-          return (filter.currentCategories.length !== 0 && !categoryChosen(categoryId));
+          var intersection = _.intersection(categorySubs(categoryId), filter.currentCategories).length;
+          return (intersection > 0 && intersection !== categorySubs(categoryId).length);
         };
 
         function isChecked(categoryId) {
