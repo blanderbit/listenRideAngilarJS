@@ -144,7 +144,7 @@
 
             <div layout="row" layout-xs="column">
               <div flex-gt-xs layout-margin>
-                <span class="md-body-2">Invoice address</span>
+                <span class="md-body-2">{{'settings.invoice-address' | translate}}</span>
               </div>
               <div flex-gt-xs="70" layout-margin>
                 <div ng-if="settings.user.has_billing">
@@ -183,22 +183,22 @@
                   </div>
                   <div layout="row" layout-xs="column">
                     <md-input-container flex-gt-xs="45">
-                      <label>Name</label>
+                      <label>{{'settings.invoice-name' | translate}}</label>
                       <input name="billingName" ng-model="settings.user.locations.billing.name"></input>
                     </md-input-container>
                     <span hide-xs flex></span>
                     <md-input-container flex-gt-xs="45">
-                      <label>VAT</label>
+                      <label>{{'settings.vat' | translate}}</label>
                       <input name="billingVat" ng-model="settings.user.locations.billing.vat"></input>
                     </md-input-container>
                   </div>
                 </div>
 
-                <span class="lnr-link lnr-green-text" ng-hide="settings.user.has_billing" ng-click="settings.toggleBilling(true)">
-                  Add invoice address
+                <span class="lnr-link lnr-green-text" ng-if="!settings.user.has_billing" ng-click="settings.toggleBilling(true)">
+                  {{'settings.add-invoice-address' | translate}}
                 </span>
-                <span class="lnr-link lnr-green-text" ng-show="settings.user.has_billing" ng-click="settings.toggleBilling(false)">
-                  Delete invoice address
+                <span class="lnr-link lnr-green-text" ng-if="settings.user.has_billing" ng-click="settings.toggleBilling(false)">
+                  {{'settings.delete-invoice-address' | translate}}
                 </span>
               </div>
             </div>

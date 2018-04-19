@@ -427,7 +427,11 @@
     "company-name": "Company name",
     "company-information": "Company information",
     "vat": "VAT",
-    "payment-info": "Show current Payment"
+    "payment-info": "Show current Payment",
+    "add-invoice-address": "Add Invoice address",
+    "delete-invoice-address": "Delete Invoice address",
+    "invoice-address": "Invoice address",
+    "invoice-name": "Name"
   },
   "verification": {
     "lets-start": "Let's start",

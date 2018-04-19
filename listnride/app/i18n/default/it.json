@@ -409,7 +409,11 @@
     "company-name": "Nome dell'azienda",
     "company-information": "Informazioni aziendali",
     "vat": "I.V.A.",
-    "payment-info": "Mostra il metodo di pagamento corrente"
+    "payment-info": "Mostra il metodo di pagamento corrente",
+    "add-invoice-address": "Add Invoice address",
+    "delete-invoice-address": "Delete Invoice address",
+    "invoice-address": "Invoice address",
+    "invoice-name": "Name"
   },
   "verification": {
     "lets-start": "Iniziamo",
