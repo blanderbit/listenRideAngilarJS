@@ -147,58 +147,58 @@
                 <span class="md-body-2">Invoice address</span>
               </div>
               <div flex-gt-xs="70" layout-margin>
-                <div ng-show="settings.user.has_billing">
+                <div ng-if="settings.user.has_billing">
                   <div layout="row" layout-xs="column">
                     <md-input-container flex-gt-xs="45">
                       <label>{{ 'forms.first-name' | translate }}</label>
-                      <input name="firstName" ng-model="settings.user.first_name"></input>
+                      <input name="firstName" ng-model="settings.user.locations.billing.first_name"></input>
                     </md-input-container>
                     <span hide-xs flex></span>
                     <md-input-container flex-gt-xs="45">
                       <label>{{ 'forms.last-name' | translate }}</label>
-                      <input name="lastName" ng-model="settings.user.last_name"></input>
+                      <input name="lastName" ng-model="settings.user.locations.billing.last_name"></input>
                     </md-input-container>
                   </div>
                   <div layout="row" layout-xs="column">
                     <md-input-container flex-gt-xs="45">
                       <label>{{ 'list.location.street-number' | translate }}</label>
-                      <input name="zip" ng-model="settings.user.locations.billing.street" required></input>
+                      <input name="billingStreet" ng-model="settings.user.locations.billing.street" required></input>
                     </md-input-container>
                     <span hide-xs flex></span>
                     <md-input-container flex-gt-xs="45">
                       <label>{{ 'forms.zip' | translate }}</label>
-                      <input name="zip" ng-model="settings.user.locations.billing.zip" required></input>
+                      <input name="billingZip" ng-model="settings.user.locations.billing.zip" required></input>
                     </md-input-container>
                   </div>
                   <div layout="row" layout-xs="column">
                     <md-input-container flex-gt-xs="45">
                       <label>{{ 'forms.city' | translate }}</label>
-                      <input name="city" ng-model="settings.user.locations.billing.city" required></input>
+                      <input name="billingCity" ng-model="settings.user.locations.billing.city" required></input>
                     </md-input-container>
                     <span hide-xs flex></span>
                     <md-input-container flex-gt-xs="45">
                       <label>{{ 'forms.country' | translate }}</label>
-                      <input name="country" ng-model="settings.user.locations.billing.country" required></input>
+                      <input name="billingCountry" ng-model="settings.user.locations.billing.country" required></input>
                     </md-input-container>
                   </div>
                   <div layout="row" layout-xs="column">
                     <md-input-container flex-gt-xs="45">
                       <label>Name</label>
-                      <input name="name" ng-model="settings.user.locations.billing.name"></input>
+                      <input name="billingName" ng-model="settings.user.locations.billing.name"></input>
                     </md-input-container>
                     <span hide-xs flex></span>
                     <md-input-container flex-gt-xs="45">
                       <label>VAT</label>
-                      <input name="vat" ng-model="settings.user.locations.billing.vat"></input>
+                      <input name="billingVat" ng-model="settings.user.locations.billing.vat"></input>
                     </md-input-container>
                   </div>
                 </div>
 
-                <span class="lnr-link" ng-hide="settings.user.has_billing" ng-click="settings.toggleBilling(true)">
-                  Add billing address
+                <span class="lnr-link lnr-green-text" ng-hide="settings.user.has_billing" ng-click="settings.toggleBilling(true)">
+                  Add invoice address
                 </span>
-                <span class="lnr-link" ng-show="settings.user.has_billing" ng-click="settings.toggleBilling(false)">
-                  Delete billing address
+                <span class="lnr-link lnr-green-text" ng-show="settings.user.has_billing" ng-click="settings.toggleBilling(false)">
+                  Delete invoice address
                 </span>
               </div>
             </div>
@@ -229,8 +229,20 @@
                 </md-input-container>
               </div>
             </div>
-            <div class="navigation" layout="row" layout-align-xs="center stretch" layout-align="end center" layout-margin flex-xs>
-              <md-button flex-xs class="md-raised md-primary" ng-click="settings.updateUser()" ng-disabled="!settings.form.$dirty">
+            <div
+              class="navigation"
+              layout="row"
+              layout-align-xs="center stretch"
+              layout-align="end center"
+              layout-margin
+              flex-xs
+            >
+              <md-button
+                flex-xs
+                class="md-raised md-primary"
+                ng-click="settings.updateUser(settings.form)"
+                ng-disabled="!settings.form.$valid || !settings.form.$dirty"
+              >
                 {{ 'list.save-changes' | translate }}
               </md-button>
             </div>

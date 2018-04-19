@@ -138,7 +138,17 @@ angular.module('settings',[]).component('settings', {
 
       settings.toggleBilling = function (bool) {
         settings.user.has_billing = bool;
-        if (bool) return;
+        if (bool) {
+          settings.user.locations['billing'] = {
+            first_name: settings.user.first_name,
+            last_name: settings.user.last_name
+          };
+
+          return
+        }
+
+        if (_.isEmpty(settings.user.locations.billing)) return;
+
         if (settings.user.locations.billing.id) {
           removeBilling(settings.user.locations.billing.id)
         } else {
@@ -161,6 +171,8 @@ angular.module('settings',[]).component('settings', {
         var billing = settings.user.locations.billing;
 
         billing.id = '';
+        billing.first_name = '';
+        billing.last_name = '';
         billing.street = '';
         billing.zip = '';
         billing.city = '';
@@ -553,6 +565,8 @@ angular.module('settings',[]).component('settings', {
 
         var user_billing_location = {
           "id": billing.id,
+          "first_name": billing.first_name,
+          "last_name": billing.last_name,
           "street": billing.street,
           "zip": billing.zip,
           "city": billing.city,
