@@ -15,6 +15,7 @@ angular.module('receipt', []).component('receipt', {
       'ENV',
     function ReceiptController(date, price, api, authentication, verification, ENV) {
       var receipt = this;
+      receipt.balance = 0;
 
       this.$onChanges = function (changes) {
         if (changes.user) {
@@ -24,9 +25,7 @@ angular.module('receipt', []).component('receipt', {
       };
 
       function updatePrices() {
-        console.log("updating prices");
         if (receipt.prices && (receipt.startDate != "Invalid Date" && receipt.endDate != "Invalid Date")) {
-          console.log("really updating prices");
           setPrices();
         } else {
           setDefaultPrices();
@@ -45,7 +44,11 @@ angular.module('receipt', []).component('receipt', {
         receipt.subtotal = prices.subtotal;
         receipt.subtotalDiscounted = prices.subtotalDiscounted
         receipt.lnrFee = prices.serviceFee;
+        console.log(prices.total);
+        console.log(receipt.balance);
         receipt.total = Math.max(prices.total - receipt.balance, 0);
+        console.log(Math.max(prices.total - receipt.balance, 0));
+        console.log(receipt.total);
       };
 
       function setDefaultPrices() {

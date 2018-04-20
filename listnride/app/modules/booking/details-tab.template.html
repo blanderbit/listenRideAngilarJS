@@ -20,32 +20,34 @@
         <form name="details.parent.detailsForm" novalidate class="md-body-desktop">
           <!-- First name and Last name -->
           <div class="lnr-input-containers" layout="row" flex="100" ng-if="details.parent.shopBooking">
-            <md-input-container flex="25">
+            <md-input-container flex="50">
               <label>{{ 'forms.first-name' | translate }}</label>
               <input
                 name="first_name"
                 ng-model="details.parent.user.firstName"
                 required
+                ng-disabled="details.parent.phoneConfirmed === 'success'"
               >
               <div ng-messages="details.parent.detailsForm.firstName.$error" role="alert">
               <div ng-message="required">{{ 'forms.errors.empty-first-name' | translate }}</div>
               <div ng-message="maxlength">{{ 'forms.errors.max-size-first-name' | translate }}</div>
               </div>
             </md-input-container>
-            <md-input-container flex="25">
+            <md-input-container flex="50">
               <label>{{ 'forms.last-name' | translate }}</label>
               <input
                 name="last_name"
                 ng-model="details.parent.user.lastName"
                 ng-maxlength="30"
                 required
+                ng-disabled="details.parent.phoneConfirmed === 'success'"
               >
               <div ng-messages="details.parent.detailsForm.lastName.$error" role="alert">
                 <div ng-message="required">{{ 'forms.errors.empty-last-name' | translate }}</div>
                 <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
               </div>
             </md-input-container>
-            <md-input-container flex="50">
+            <!-- <md-input-container flex="50">
               <label>{{ 'forms.email-address' | translate }}</label>
               <input
                 name="email"
@@ -57,13 +59,14 @@
                 <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
                 <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
               </div>
-            </md-input-container>
+            </md-input-container> -->
             <md-input-container flex="50" hide>
               <label>{{ 'forms.password' | translate }}</label>
               <input
                 name="password"
                 ng-model="details.parent.user.password"
                 value="123456"
+                ng-disabled="details.parent.phoneConfirmed === 'success'"
               >
             </md-input-container>
           </div>
@@ -74,6 +77,7 @@
                 class="details-address"
                 layout="column"
                 required="true"
+                ng-disabled="details.parent.phoneConfirmed === 'success'"
                 name="street"
                 location="details.parent.user.street"
                 label-id="{{ 'list.location.street-number' | translate }}"
@@ -88,6 +92,7 @@
               <input
                 required
                 name="city"
+                ng-disabled="details.parent.phoneConfirmed === 'success'"
                 ng-model="details.parent.user.city"
               >
               <div ng-messages="details.parent.detailsForm.city.$error" role="alert">
@@ -102,6 +107,7 @@
               <input
                 required
                 name="zip"
+                ng-disabled="details.parent.phoneConfirmed === 'success'"
                 ng-model="details.parent.user.zip"
               >
               <div ng-messages="details.parent.detailsForm.zip.$error" role="alert">
@@ -114,6 +120,7 @@
               <input
                 required
                 name="country"
+                ng-disabled="details.parent.phoneConfirmed === 'success'"
                 ng-model="details.parent.user.country"
               >
               <div ng-messages="details.parent.detailsForm.country.$error" role="alert">
@@ -131,11 +138,26 @@
           <div class="spacer-xs"></div>
           <!-- Phone Number and Send Button -->
           <div class="lnr-input-containers"
-            layout="column" 
+            layout="column"
+            flex="100"
             layout-gt-xs="row"
             ng-show="details.parent.showConfirmButton"
           >
-            <md-input-container flex>
+            <md-input-container flex="40" ng-if="details.parent.shopBooking">
+              <label>{{ 'forms.email-address' | translate }}</label>
+              <input
+                name="email"
+                ng-model="details.parent.user.email"
+                ng-maxlength="30"
+                ng-disabled="details.parent.phoneConfirmed === 'success'"
+                required
+              >
+              <div ng-messages="details.parent.detailsForm.email.$error" role="alert">
+                <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
+                <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
+              </div>
+            </md-input-container>
+            <md-input-container flex="40">
               <label>{{ 'shared.phone-number' | translate }}</label>
               <input
                 international-phone-number
@@ -155,12 +177,12 @@
                 <div ng-message="internationalPhoneNumber">{{ 'verification.5.enter-valid-phone-nr' | translate }}</div>
               </div>
             </md-input-container>
-            <md-input-container flex>
+            <md-input-container flex="20">
               <md-button
-                flex
                 class="md-raised md-primary lnr-btn-inline details__send-code"
                 ng-click="details.parent.prepareUser()"
                 ng-hide="details.parent.phoneConfirmed === 'success'"
+                flex="100"
               >
                 <span>{{ 'booking.details.send-code' | translate }}</span>
               </md-button>
