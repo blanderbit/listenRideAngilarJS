@@ -2,8 +2,8 @@ angular.module('infinite-scroll', [])
   .value('THROTTLE_MILLISECONDS', 400)
   .directive('infiniteScroll', [
     '$rootScope', '$window', '$interval', 'THROTTLE_MILLISECONDS',
-    ($rootScope, $window, $interval, THROTTLE_MILLISECONDS) =>
-      ({
+    function ($rootScope, $window, $interval, THROTTLE_MILLISECONDS) {
+      return {
         scope: {
           infiniteScroll: '&',
           infiniteScrollContainer: '=',
@@ -260,6 +260,6 @@ angular.module('infinite-scroll', [])
           checkInterval = $interval(intervalCheck);
           return checkInterval;
         },
-      }),
-
+      }
+    }
   ]);

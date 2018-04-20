@@ -143,8 +143,8 @@ module.exports = function () {
                     name: 'listnride',
                     html5Mode: false,
                     //TODO: remove review app links
-                    apiEndpoint: 'https://listnride-staging-pr-215.herokuapp.com/v2',
-                    userEndpoint: 'https://listnride-staging-pr-215.herokuapp.com/v2/users/',
+                    apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
+                    userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com",
                     defaultTranslation: 'default',
                     staticTranslation: 'static',
