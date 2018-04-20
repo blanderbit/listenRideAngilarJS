@@ -51,6 +51,7 @@ angular.module('search',[]).component('search', {
           "duration": $stateParams.duration
         };
 
+        search.limit = 15;
         search.mapOptions = {
           lat: 40,
           lng: -74,
@@ -221,6 +222,13 @@ angular.module('search',[]).component('search', {
           });
         }, 0);
       }
+
+      function addMoreItemsLimit() {
+        if (search.limit < search.bikes.length) {
+          search.limit += 15;
+        }
+      }
+      
     }
   ]
 });
