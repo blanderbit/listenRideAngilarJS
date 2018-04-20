@@ -13,20 +13,20 @@ angular.module('infinite-scroll', [])
           infiniteScrollListenForEvent: '@',
         },
 
-        link(scope, elem, attrs) {
-          const windowElement = angular.element($window);
+        link: function (scope, elem, attrs) {
+          var windowElement = angular.element($window);
 
-          let scrollDistance = null;
-          let scrollEnabled = null;
-          let checkWhenEnabled = null;
-          let container = null;
-          let immediateCheck = true;
-          let useDocumentBottom = false;
-          let unregisterEventListener = null;
-          let checkInterval = false;
+          var scrollDistance = null;
+          var scrollEnabled = null;
+          var checkWhenEnabled = null;
+          var container = null;
+          var immediateCheck = true;
+          var useDocumentBottom = false;
+          var unregisterEventListener = null;
+          var checkInterval = false;
 
           function height(element) {
-            const el = element[0] || element;
+            var el = element[0] || element;
 
             if (isNaN(el.offsetHeight)) {
               return el.document.documentElement.clientHeight;
@@ -35,7 +35,7 @@ angular.module('infinite-scroll', [])
           }
 
           function pageYOffset(element) {
-            const el = element[0] || element;
+            var el = element[0] || element;
 
             if (isNaN(window.pageYOffset)) {
               return el.document.documentElement.scrollTop;
@@ -57,14 +57,14 @@ angular.module('infinite-scroll', [])
           // with a boolean that is set to true when the function is
           // called in order to throttle the function call.
           function defaultHandler() {
-            let containerBottom;
-            let elementBottom;
+            var containerBottom;
+            var elementBottom;
             if (container === windowElement) {
               containerBottom = height(container) + pageYOffset(container[0].document.documentElement);
               elementBottom = offsetTop(elem) + height(elem);
             } else {
               containerBottom = height(container);
-              let containerTopOffset = 0;
+              var containerTopOffset = 0;
               if (offsetTop(container) !== undefined) {
                 containerTopOffset = offsetTop(container);
               }
@@ -75,8 +75,8 @@ angular.module('infinite-scroll', [])
               elementBottom = height((elem[0].ownerDocument || elem[0].document).documentElement);
             }
 
-            const remaining = elementBottom - containerBottom;
-            const shouldScroll = remaining <= (height(container) * scrollDistance) + 1;
+            var remaining = elementBottom - containerBottom;
+            var shouldScroll = remaining <= (height(container) * scrollDistance) + 1;
 
             if (shouldScroll) {
               checkWhenEnabled = true;
@@ -101,8 +101,8 @@ angular.module('infinite-scroll', [])
           // handler being called after the `wait` period elapses.
           // A slimmed down version of underscore's implementation.
           function throttle(func, wait) {
-            let timeout = null;
-            let previous = 0;
+            var timeout = null;
+            var previous = 0;
 
             function later() {
               previous = new Date().getTime();
@@ -112,8 +112,8 @@ angular.module('infinite-scroll', [])
             }
 
             function throttled() {
-              const now = new Date().getTime();
-              const remaining = wait - (now - previous);
+              var now = new Date().getTime();
+              var remaining = wait - (now - previous);
               if (remaining <= 0) {
                 $interval.cancel(timeout);
                 timeout = null;
@@ -127,7 +127,7 @@ angular.module('infinite-scroll', [])
             return throttled;
           }
 
-          const handler = (THROTTLE_MILLISECONDS != null) ?
+          var handler = (THROTTLE_MILLISECONDS != null) ?
             throttle(defaultHandler, THROTTLE_MILLISECONDS) :
             defaultHandler;
 
@@ -216,7 +216,7 @@ angular.module('infinite-scroll', [])
               return;
             }
 
-            let newerContainer;
+            var newerContainer;
 
             if (newContainer.nodeType && newContainer.nodeType === 1) {
               newerContainer = angular.element(newContainer);
