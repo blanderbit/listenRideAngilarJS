@@ -13,7 +13,7 @@
     infinite-scroll="cardgrid.addMoreItemsLimit()"
     infinite-scroll-distance="2"
     infinite-scroll-container="'.scroll-parent'"
-    >
+  >
     <div ng-repeat="bike in cardgrid.bikes  | limitTo:cardgrid.limit track by bike.id"
       flex-xs="100"
       flex-sm="50"

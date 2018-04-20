@@ -420,7 +420,11 @@
     "company-name": "Unternehmensname",
     "company-information": "Unternehmensinformationen",
     "vat": "VAT",
-    "payment-info": "Aktuelle Zahlungsmethode anzeigen"
+    "payment-info": "Aktuelle Zahlungsmethode anzeigen",
+    "add-invoice-address": "Add Invoice address",
+    "delete-invoice-address": "Delete Invoice address",
+    "invoice-address": "Invoice address",
+    "invoice-name": "Name"
   },
   "verification": {
     "lets-start": "Loslegen",
