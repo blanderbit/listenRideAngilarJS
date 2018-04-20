@@ -7,8 +7,6 @@ angular.module('cardgrid', []).component('cardgrid', {
     title: '@',
     bikes: '<',
     onBikeHover: '<',
-    addMoreItemsLimit: '<',
-    limit: '<',
 
     // passed to bike sorter component
     cardIndex: '<',
