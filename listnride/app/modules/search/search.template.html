@@ -20,7 +20,7 @@
 
     <md-divider></md-divider>
 
-    <md-content flex layout="column" class="scroll-parent">
+    <md-content flex layout="column">
       <!-- no bikes found placeholder -->
       <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout="row" layout-align="center center" layout-padding>
         <span>{{ 'search.no-bikes' | translate }}</span>
@@ -29,8 +29,6 @@
                ng-repeat="filterBikes in search.categorizedFilteredBikes"
                on-bike-hover="search.onBikeHover"
                title="{{filterBikes.title}}"
-               limit="search.limit"
-               add-more-items-limit="search.addMoreItemsLimit"
                
                categorized-bikes="search.categorizedFilteredBikes"
                uncategorized-bikes="search.filteredBikes"
@@ -54,7 +52,7 @@
       zoom="{{search.mapOptions.zoom}}"
       on-click="search.onMapClick(event)">
 
-      <marker ng-repeat="bike in search.filteredBikes | limitTo:search.limit track by bike.id" 
+      <marker ng-repeat="bike in search.filteredBikes" 
               id="{{bike.id}}" 
               position="{{bike.lat_rnd}},{{bike.lng_rnd}}" 
               on-click="search.showBikeWindow(event, bike.id)">
