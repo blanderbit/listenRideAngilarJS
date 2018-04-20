@@ -1,5 +1,3 @@
-// https://github.com/sroze/ngInfiniteScroll/tree/master/src
-
 angular.module('infinite-scroll', [])
   .value('THROTTLE_MILLISECONDS', 400)
   .directive('infiniteScroll', [
