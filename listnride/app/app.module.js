@@ -10,6 +10,7 @@ angular.module('listnride', [
   'requests',
   'message',
   'list',
+  'infinite-scroll',
   'invoices',
   'autocomplete',
   'confirmation',
