@@ -189,9 +189,17 @@ angular.module('search',[]).component('search', {
         if (!_.isEmpty(search.locationBounds)) {
           bounds = extendBounds(bounds, search.locationBounds.northeast.lat, search.locationBounds.northeast.lng);
           bounds = extendBounds(bounds, search.locationBounds.southwest.lat, search.locationBounds.southwest.lng);
+          bounds = extendBounds(bounds, search.latLng.lat, search.latLng.lng);
         }
 
-        for (var i = 0; i < 3; i++) { bounds = extendBounds(bounds, search.bikes[i].lat_rnd, search.bikes[i].lng_rnd) }
+        var i = 0;
+        _.forEach(search.bikes, function(bike) {
+          if (bike.priority == true) return;
+          bounds = extendBounds(bounds, bike.lat_rnd, bike.lng_rnd);
+          i++;
+          if (i > 3) return false;
+        });
+
         return bounds
       }
 
