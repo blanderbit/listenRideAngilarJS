@@ -421,7 +421,11 @@
     "company-name": "Bedrijfsnaam",
     "company-information": "Bedrijfsgegevens",
     "vat": "VAT",
-    "payment-info": "Aktuele betaalmethode tonen"
+    "payment-info": "Aktuele betaalmethode tonen",
+    "add-invoice-address": "Add Invoice address",
+    "delete-invoice-address": "Delete Invoice address",
+    "invoice-address": "Invoice address",
+    "invoice-name": "Name"
   },
   "verification": {
     "lets-start": "Aan de slag",

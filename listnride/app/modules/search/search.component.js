@@ -29,6 +29,7 @@ angular.module('search',[]).component('search', {
         search.onMapClick = onMapClick;
         search.onBikeHover = onBikeHover;
         search.populateBikes = populateBikes;
+        search.addMoreItemsLimit = addMoreItemsLimit;
         search.filteredBikes = [];
         search.initialValues = {
           amount: '',
@@ -50,6 +51,7 @@ angular.module('search',[]).component('search', {
           "duration": $stateParams.duration
         };
 
+        search.limit = 15;
         search.mapOptions = {
           lat: 40,
           lng: -74,
@@ -187,9 +189,17 @@ angular.module('search',[]).component('search', {
         if (!_.isEmpty(search.locationBounds)) {
           bounds = extendBounds(bounds, search.locationBounds.northeast.lat, search.locationBounds.northeast.lng);
           bounds = extendBounds(bounds, search.locationBounds.southwest.lat, search.locationBounds.southwest.lng);
+          bounds = extendBounds(bounds, search.latLng.lat, search.latLng.lng);
         }
 
-        for (var i = 0; i < 3; i++) { bounds = extendBounds(bounds, search.bikes[i].lat_rnd, search.bikes[i].lng_rnd) }
+        var i = 0;
+        _.forEach(search.bikes, function(bike) {
+          if (bike.priority == true) return;
+          bounds = extendBounds(bounds, bike.lat_rnd, bike.lng_rnd);
+          i++;
+          if (i > 3) return false;
+        });
+
         return bounds
       }
 
@@ -220,6 +230,13 @@ angular.module('search',[]).component('search', {
           });
         }, 0);
       }
+
+      function addMoreItemsLimit() {
+        if (search.limit < search.bikes.length) {
+          search.limit += 15;
+        }
+      }
+      
     }
   ]
 });

@@ -18,9 +18,13 @@ angular.module('booking', [])
         var btClient;
         var btPpInstance;
 
-        booking.startDate = new Date($stateParams.startDate);
-        booking.endDate = new Date($stateParams.endDate);
         booking.bikeId = $stateParams.bikeId;
+        booking.shopBooking = $stateParams.shop;
+
+        // if (!booking.shopBooking) {
+          booking.startDate = new Date($stateParams.startDate);
+          booking.endDate = new Date($stateParams.endDate);
+        // }
 
         booking.user = {};
         booking.phoneConfirmed = 'progress';
@@ -29,7 +33,6 @@ angular.module('booking', [])
         booking.tabsDisabled = false;
         booking.voucherCode = "";
         booking.expiryDate = "";
-        booking.shopBooking = $stateParams.shop;
 
         var oldExpiryDateLength = 0;
         var expiryDateLength = 0;
@@ -78,6 +81,10 @@ angular.module('booking', [])
             booking.startTime = 10;
             booking.endTime = 18;
             booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
+            booking.total = booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
+            console.log("date updated");
+            console.log(booking.startDate);
+            console.log(booking.subtotal);
           }
           // TODO: REMOVE REDUNDANT PRICE CALUCLATION CODE
         }
@@ -136,7 +143,8 @@ angular.module('booking', [])
         };
 
         function validDates() {
-          return true;
+          console.log(booking.endDate);
+          return booking.endDate != "Invalid Date";
         }
 
         booking.resendSms = function() {
@@ -279,7 +287,7 @@ angular.module('booking', [])
               booking.user.firstName = success.data.first_name;
               booking.user.lastName = success.data.last_name;
               booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
-              if (!booking.shopBooking || oldUser != {}) {
+              if (!booking.shopBooking || Object.keys(oldUser).length > 0) {
                 setFirstTab();
               }
               $timeout(function () {
