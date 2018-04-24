@@ -18,9 +18,13 @@ angular.module('booking', [])
         var btClient;
         var btPpInstance;
 
-        booking.startDate = new Date($stateParams.startDate);
-        booking.endDate = new Date($stateParams.endDate);
         booking.bikeId = $stateParams.bikeId;
+        booking.shopBooking = $stateParams.shop;
+
+        // if (!booking.shopBooking) {
+          booking.startDate = new Date($stateParams.startDate);
+          booking.endDate = new Date($stateParams.endDate);
+        // }
 
         booking.user = {};
         booking.phoneConfirmed = 'progress';
@@ -29,7 +33,6 @@ angular.module('booking', [])
         booking.tabsDisabled = false;
         booking.voucherCode = "";
         booking.expiryDate = "";
-        booking.shopBooking = $stateParams.shop;
 
         var oldExpiryDateLength = 0;
         var expiryDateLength = 0;
@@ -140,7 +143,8 @@ angular.module('booking', [])
         };
 
         function validDates() {
-          return true;
+          console.log(booking.endDate);
+          return booking.endDate != "Invalid Date";
         }
 
         booking.resendSms = function() {
