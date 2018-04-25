@@ -87,6 +87,7 @@ function lnrDatePickerController($scope, $translate) {
       lnrShowTimeDom: false,
       language: $translate.preferredLanguage(),
       lnrSingleMonthMinWidth: 659, // 320px - min-width for 1 calendar part + gap
+      lnrJumpToSelected: false,
       extraClass: 'date-picker-wrapper--ngDialog date-picker-wrapper--two-months'
     }).bind('datepicker-change', function (event, obj) {
       vm.updateData(obj.date1, obj.date2);

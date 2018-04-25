@@ -844,7 +844,8 @@
 				customArrowNextSymbol: null,
 				lnrIsWidthStatic: false,
 				lnrShowTimeDom: true,
-				lnrSingleMonthMinWidth: 480
+				lnrSingleMonthMinWidth: 480,
+				lnrJumpToSelected: true
 			},opt);
 
 		opt.start = false;
@@ -1650,7 +1651,7 @@
 
 
 		function dayHovering(day)
-		{
+		{	
 			var hoverTime = parseInt(day.attr('time'));
 			var tooltip = '';
 
@@ -1989,11 +1990,19 @@
 				renderTime('time1', date1);
 
 			}
-			showMonth(date1,'month1');
-			if (opt.singleMonth !== true) {
-				var date2 = nextMonth(date1);
-				showMonth(date2, 'month2');
+			if (opt.lnrJumpToSelected) {
+				showMonth(date1, 'month1');
+				if (opt.singleMonth !== true) {
+					var date2 = nextMonth(date1);
+					showMonth(date2, 'month2');
+				}
+			} else {
+				// redraw without month changes
+				redrawDatePicker();
+				updateSelectableRange();
+				bindDayEvents();
 			}
+
 			showGap();
 			showSelectedInfo();
 			autoclose();
