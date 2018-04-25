@@ -110,6 +110,10 @@ angular.module('booking', [])
           var date = new Date(booking[slotDate]);
           date.setHours(booking[slotTime], 0, 0, 0);
           booking[slotDate] = date;
+          if (!validDates()) {
+            booking.startDate = "Invalid Date";
+            booking.endDate = "Invalid Date";
+          }
           // dateChange(booking.startDate, booking.endDate);
         };
 
@@ -143,8 +147,7 @@ angular.module('booking', [])
         };
 
         function validDates() {
-          console.log(booking.endDate);
-          return booking.endDate != "Invalid Date";
+          return booking.endDate != "Invalid Date" && booking.startDate.getTime() < booking.endDate.getTime();
         }
 
         booking.resendSms = function() {
