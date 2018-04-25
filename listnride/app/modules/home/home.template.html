@@ -22,6 +22,7 @@
         autocomplete-id="home-search"
         class="home-search"
         flex="75"
+        flex-xs="85"
         layout="column"
         location="home.location"
         placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"
@@ -32,8 +33,10 @@
         class="md-raised md-primary"
         id="submit"
         flex="25"
+        flex-xs="15"
       >
-        {{ 'shared.search' | translate }}
+        <span hide-xs>{{ 'shared.search' | translate }}</span>
+        <span hide-gt-xs show-xs><md-icon class="lnr-icn-sms md-color-white" md-svg-src="app/assets/ui_icons/search.svg"></md-icon></span>
       </md-button>
     </form>
   </div>
