@@ -66,7 +66,6 @@ angular.module('ampler-integration',[]).component('ampler', {
 
       api.get('/rides?family=8').then(
         function (success) {
-          console.log(success);
           for (var i=0; i<success.data.bikes.length; i++) {
             switch (success.data.bikes[i].city) {
               case "Berlin": ampler.bikes.berlin.push(success.data.bikes[i]); break;

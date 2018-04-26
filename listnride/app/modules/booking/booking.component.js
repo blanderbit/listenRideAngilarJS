@@ -79,9 +79,6 @@ angular.module('booking', [])
             booking.endTime = 18;
             booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
             booking.total = booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
-            console.log("date updated");
-            console.log(booking.startDate);
-            console.log(booking.subtotal);
           }
           // TODO: REMOVE REDUNDANT PRICE CALUCLATION CODE
         }
