@@ -16,6 +16,7 @@
     "dortmund": "Dortmund",
     "milan": "Milan",
     "munich": "Munich",
+    "nuremberg": "Nuremberg",
     "amsterdam": "Amsterdam",
     "vienna": "Vienna",
     "hamburg": "Hamburg",
@@ -89,7 +90,7 @@
     "Sat": "Sat",
     "Sun": "Sun",
     "join": "Join",
-    "voucher": "voucher",
+    "voucher": "Voucher",
     "download": "Download",
     "Jan": "Jan",
     "Feb": "Feb",
@@ -381,7 +382,7 @@
     "duplicate-start": "Duplication process started",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Bike successfully deleted",
-    "range-success-delete": "Availability range successfully deleted",
+    "range-success-delete": "Unvailability range successfully deleted",
     "availability-success-saved": "Availability successfully saved"
   },
   "settings": {
@@ -428,7 +429,11 @@
     "company-name": "Company name",
     "company-information": "Company information",
     "vat": "VAT",
-    "payment-info": "Show current Payment"
+    "payment-info": "Show current Payment",
+    "add-invoice-address": "Add Invoice address",
+    "delete-invoice-address": "Delete Invoice address",
+    "invoice-address": "Invoice address",
+    "invoice-name": "Company name"
   },
   "verification": {
     "lets-start": "Let's start",
@@ -495,7 +500,7 @@
     "ratings": "Ratings",
     "meta-title": "{{name}}'s profile",
     "meta-description": "Rent bikes on listnride from {{name}}.",
-    "company-meta-title": "Company {{company}}",
+    "company-meta-title": "{{company}}",
     "company-meta-description": "Rent bikes on listnride from {{company}}.",
     "availability": "Availability",
     "not-available": "Not available",
@@ -551,7 +556,7 @@
     "10": "Your request was cancelled by system"
   },
   "rideChat": {
-    "1": "You would like to rent the <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{lister.first_name}} {{lister.last_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
+    "1": "You would like to rent the <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{lister.business_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
     "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.phone_number}},<br>Address: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} has confirmed the return of the ride and gave you a review. Finally, please also rate the ride. This helps our community a lot and completes the rental.",
     "6": "Thanks for rating, the rental was successfully completed.",

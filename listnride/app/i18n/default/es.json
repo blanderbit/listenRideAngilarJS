@@ -16,6 +16,7 @@
     "dortmund": "Dortmund",
     "milan": "Milan",
     "munich": "Múnich",
+    "nuremberg": "Nuremberg",
     "amsterdam": "Ámsterdam",
     "vienna": "Viena",
     "hamburg": "Hamburgo",
@@ -344,6 +345,14 @@
       "payment": "Pagamento",
       "redeem-voucher": "Canjear vale",
       "add": "OK"
+    },
+    "calendar": {
+      "tab": "1. Período",
+      "bike-rental": "Tu renta de bici",
+      "choose-duration": "Elige el periodo de alquiler",
+      "pickup-time": "Hora de recogida",
+      "return-time": "Hora de devolución",
+      "intro-description": "Tu reserva será procesada de forma segura por listnride, la comunidad de ciclistas más grande de Europa."
     }
   },
   "toasts": {
@@ -368,7 +377,7 @@
     "duplicate-start": "Proceso de duplicación iniciado",
     "duplicate-finish": "Proceso de duplicación terminado. Copias creadas con éxito",
     "bike-deleted": "Bici borrada con éxito",
-    "range-success-delete": "Fecha de disponibilidad borrado",
+    "range-success-delete": "Fecha borrado",
     "availability-success-saved": "Disponibilidad guardada"
   },
   "settings": {
@@ -415,7 +424,11 @@
     "company-name": "Nombre de la empresa",
     "company-information": "Información de la empresa",
     "vat": "IVA",
-    "payment-info": "Mostrar pago actual"
+    "payment-info": "Mostrar pago actual",
+    "add-invoice-address": "Añadir dirección de factura",
+    "delete-invoice-address": "Eliminar la dirección de facturación",
+    "invoice-address": "Dirección de factura",
+    "invoice-name": "Empresa"
   },
   "verification": {
     "lets-start": "Empecemos",
@@ -482,7 +495,7 @@
     "ratings": "Puntuaciones",
     "meta-title": "Perfil de {{name}}",
     "meta-description": "Alquilar bicis de {{name}} en listnride.",
-    "company-meta-title": "Company {{company}}",
+    "company-meta-title": "{{company}}",
     "company-meta-description": "Alquilar bicis de {{company}} en listnride.",
     "availability": "Disponibilidad",
     "not-available": "No disponible",
@@ -538,7 +551,7 @@
     "10": "Tu solicitud fue cancelada por el sistema"
   },
   "rideChat": {
-    "1": "Te gustaría alquilar <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a>de{{lister.first_name}}{{lister.last_name}}desde {{timespan}}. Acuerda más detalles con el anunciante. La bici queda reservada tan pronto como dicha persona acepte tu pedido. ",
+    "1": "Te gustaría alquilar <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> de {{lister.business_name}} desde {{timespan}}. Acuerda más detalles con el anunciante. La bici queda reservada tan pronto como dicha persona acepte tu pedido. ",
     "3": "Enhorabuena, {{lister.first_name}}ha aceptado tu solicitud, por lo que la bici se ha reservado correctamente. Queda con el anunciante como se acordó y recoge la bici. Los datos de contacto son los siguientes, también los hemos enviado a tu correo electrónico <br><br>Nombre:. {{lister.first_name}}{{lister.last_name}}, <br>Teléfono: {{lister.phone_number}}, <br>Dirección: {{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}}ha confirmado que ha terminado el paseo en bici y ha hecho una valoración sobre ti. Por útimo, califica el paseo. Esto ayuda mucho a nuestra comunidad y concluye el alquiler.",
     "6": "Gracias por la valoración, el alquiler se realizó con éxito.",
@@ -604,9 +617,9 @@
     "featured-bikes-subheader": "Ya sean bicis de carretera, de montaña, de carga, de ciudad o eléctricas, puedes alquilarlas todas. Estas son las bicis de alquiler favoritas de la comunidad.",
     "featured-tiles-header": "Inspírate",
     "featured-tiles-subheader": "Nos asociamos con marcas innovadoras, escribimos sobre novedades interesantes y participamos en eventos especiales.",
-    "featured-cities-header": "Pedaleando por la jungla urbana",
+    "featured-cities-header": "Siempre con tu bici perfecta",
     "featured-cities-subheader": "El servicio de alquiler de bicis de listnride está disponible cada vez en más ciudades de todo el mundo. Echa un vistazo a algunos consejos de los expertos aquí:",
-    "list-a-bike-header": "¿Tienes una buena bici y quieres que la gente la vea?",
+    "list-a-bike-header": "¿Tienes una buena bici y quieres que la gente la use?",
     "list-a-bike-subheader": "Registra tu bici para alquilarla, conoce gente nueva y gana dinero extra.",
     "meta-title": "listnride - La comunidad para compartir bicis",
     "meta-description": "Alquila la bici perfecta en la comunidad de listnride. Encuentra la que se adapte a tu estilo y necesidades."
@@ -641,7 +654,7 @@
     "select-timespan-description": "Antes de poder solicitar una bici debes establecer la duración del alquiler. Basta con hacer clic en los días y seleccionar las horas de recogida y entrega en el calendario anterior.",
     "info-subtotal": "Este es el precio habitual diario<br>veces la cantidad de días que quieras<br>alquilar la bici.",
     "info-discount": "Descuento medio diario que <br>obtienes por día al alquilar <br>por un período de tiempo más largo.",
-    "info-service-fee": "La cuota de servicio es<br>utilizada para proporcionar<br>a listnride. Incluye el IVA,",
+    "info-service-fee": "La cuota de servicio es<br>utilizada para proporcionar<br>a listnride. Incluye el IVA.",
     "info": "En el calendario anterior, haz clic primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla."
   },
   "list": {
