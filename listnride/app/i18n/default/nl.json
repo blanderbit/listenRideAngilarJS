@@ -15,7 +15,7 @@
     "dortmund": "Dortmund",
     "milan": "Milan",
     "munich": "München",
-    "nuremberg": "Nuremberg",
+    "nuremberg": "Neurenberg",
     "amsterdam": "Amsterdam",
     "vienna": "Wenen",
     "hamburg": "Hamburg",
@@ -27,7 +27,6 @@
     "paderborn": "Paderborn",
     "utting": "Utting",
     "heidelberg": "Heidelberg",
-    "milan": "Milan",
     "marl": "Marl",
     "frankfurt": "Frankfurt",
     "usedom": "Usedom",
@@ -350,6 +349,14 @@
       "payment": "Betaling",
       "redeem-voucher": "Voucher verzilveren",
       "add": "Voeg toe"
+    },
+    "calendar": {
+      "tab": "1. Periode",
+      "bike-rental": "Je fietshuur",
+      "choose-duration": "Kies de huurperiode",
+      "pickup-time": "Ophaal tijd",
+      "return-time": "Tijd van terruggave",
+      "intro-description": "Uw boeking wordt veilig verwerkt door listnride, de grootste community voor het delen van fietsen in Europa."
     }
   },
   "toasts": {
@@ -422,10 +429,10 @@
     "company-information": "Bedrijfsgegevens",
     "vat": "VAT",
     "payment-info": "Aktuele betaalmethode tonen",
-    "add-invoice-address": "Add Invoice address",
-    "delete-invoice-address": "Delete Invoice address",
-    "invoice-address": "Invoice address",
-    "invoice-name": "Name"
+    "add-invoice-address": "factuuradres toevoegen",
+    "delete-invoice-address": "Factuuradres verwijderen",
+    "invoice-address": "Factuuradres",
+    "invoice-name": "Bedrijfsnaam"
   },
   "verification": {
     "lets-start": "Aan de slag",
@@ -491,7 +498,7 @@
     "ratings": "Recensies",
     "meta-title": "{{name}}'s profiel",
     "meta-description": "Fiets huren op listnride van {{name}}.",
-    "company-meta-title": "Company {{company}}",
+    "company-meta-title": "{{company}}",
     "company-meta-description": "Fiets huren op listnride van {{company}}.",
     "availability": "Openingstijden",
     "not-available": "Niet Beschikbaar",

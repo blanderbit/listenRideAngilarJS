@@ -15,7 +15,7 @@
     "berlin": "Berlino",
     "dortmund": "Dortmund",
     "munich": "Monaco di Baviera",
-    "nuremberg": "Nuremberg",
+    "nuremberg": "Norimberga",
     "amsterdam": "Amsterdam",
     "vienna": "Vienna",
     "hamburg": "Amburgo",
@@ -27,14 +27,12 @@
     "paderborn": "Paderborn",
     "utting": "Utting",
     "heidelberg": "Heidelberg",
-    "milan": "Milan",
     "marl": "Marl",
     "frankfurt": "Francoforte",
     "usedom": "Usedom",
     "lanzarote": "Lanzarote",
     "mallorca": "Mallorca",
     "sylt": "Sylt",
-    "stuttgart": "Stuttgart",
     "per": "per ",
     "hour": "ora",
     "hours": "ore",
@@ -118,8 +116,6 @@
     "confirmation": "Conferma",
     "confirmation-text": "Sei sicuro?",
     "loading": "Caricamento",
-    "clear": "Clear",
-    "clear-all": "Clear All",
     "today": "Oggi",
     "yesterday": "Ieri"
   },
@@ -340,6 +336,14 @@
       "payment": "Pagamento",
       "redeem-voucher": "Buono sconto",
       "add": "Ok"
+    },
+    "calendar": {
+      "tab": "Durata",
+      "bike-rental": "La bici selezionata",
+      "choose-duration": "Scegli la durata del tuo noleggio",
+      "pickup-time": "Orario di ritiro",
+      "return-time": "Orario di consegna",
+      "intro-description": "La tua prenotazione viene elaborata in sicurezza da listnride, la più grande bike sharing d'Europa"
     }
   },
   "toasts": {
@@ -364,7 +368,7 @@
     "duplicate-start": "Il processo di duplicazione è iniziato",
     "duplicate-finish": "Processo di duplicazione è terminato. Copie create con successo",
     "bike-deleted": "Bici cancellata con successo",
-    "range-success-delete": "Periodo di disponibilità eliminato con successo",
+    "range-success-delete": "Periodo eliminato con successo",
     "availability-success-saved": "Disponibilità salvata con successo"
   },
   "settings": {
@@ -412,10 +416,10 @@
     "company-information": "Informazioni aziendali",
     "vat": "I.V.A.",
     "payment-info": "Mostra il metodo di pagamento corrente",
-    "add-invoice-address": "Add Invoice address",
-    "delete-invoice-address": "Delete Invoice address",
-    "invoice-address": "Invoice address",
-    "invoice-name": "Name"
+    "add-invoice-address": "Aggiungi indirizzo di fatturazione",
+    "delete-invoice-address": "Elimina indirizzo di fatturazione",
+    "invoice-address": "Indirizzo di fatturazione",
+    "invoice-name": "Nome dell'azienda"
   },
   "verification": {
     "lets-start": "Iniziamo",
@@ -482,7 +486,7 @@
     "ratings": "Valutazioni",
     "meta-title": "Profilo di {{name}}",
     "meta-description": "Noleggia biciclette su listnride da {{name}}.",
-    "company-meta-title": "Company {{company}}",
+    "company-meta-title": "{{company}}",
     "company-meta-description": "Noleggia biciclette su listnride da {{company}}.",
     "availability": "Disponibilità",
     "not-available": "Non disponibile",
@@ -604,7 +608,7 @@
     "featured-bikes-subheader": "Sia che si tratti di biciclette da strada, mountain bike, biciclette da città o e-bike, è possibile noleggiarle tutte. Queste sono le biciclette a noleggio preferite della comunità.",
     "featured-tiles-header": "Lasciati ispirare",
     "featured-tiles-subheader": "Siamo partner con marchi innovativi, scriviamo su interessanti sviluppi e partecipiamo a eventi speciali.",
-    "featured-cities-header": "Pedalando attraverso la giungla urbana",
+    "featured-cities-header": "Con listnride ovunque in Europa con la tua bici perfetta",
     "featured-cities-subheader": "Il servizio di noleggio biciclette di listnride sta diventando disponibile sempre in più città in tutto il mondo. Scopri qui alcuni suggerimenti:",
     "list-a-bike-header": "Hai una bella bicicletta e vuoi che la gente la veda?",
     "list-a-bike-subheader": "Inserisci la tua bicicletta per il noleggio, incontra nuove persone divertenti e guadagna qualche soldo extra.",
@@ -985,15 +989,6 @@
     "kids": "Bici da bambino",
     "electro": "E-bikes",
     "special": "Bici speciali"
-  },
-  "availability": {
-    "availability": "availability",
-    "modal-title": "When is your bike not available?",
-    "start-from": "Starting from",
-    "end-at": "Ending at",
-    "add-another-date": "Add another date",
-    "submit-btn": "Ok",
-    "submit-btn-save": "Save"
   },
   "availability": {
     "availability": "Disponibilità",

@@ -345,6 +345,14 @@
       "payment": "Pagamento",
       "redeem-voucher": "Canjear vale",
       "add": "OK"
+    },
+    "calendar": {
+      "tab": "1. Período",
+      "bike-rental": "Tu renta de bici",
+      "choose-duration": "Elige el periodo de alquiler",
+      "pickup-time": "Hora de recogida",
+      "return-time": "Hora de devolución",
+      "intro-description": "Tu reserva será procesada de forma segura por listnride, la comunidad de ciclistas más grande de Europa."
     }
   },
   "toasts": {
@@ -369,7 +377,7 @@
     "duplicate-start": "Proceso de duplicación iniciado",
     "duplicate-finish": "Proceso de duplicación terminado. Copias creadas con éxito",
     "bike-deleted": "Bici borrada con éxito",
-    "range-success-delete": "Fecha de disponibilidad borrado",
+    "range-success-delete": "Fecha borrado",
     "availability-success-saved": "Disponibilidad guardada"
   },
   "settings": {
@@ -417,10 +425,10 @@
     "company-information": "Información de la empresa",
     "vat": "IVA",
     "payment-info": "Mostrar pago actual",
-    "add-invoice-address": "Add Invoice address",
-    "delete-invoice-address": "Delete Invoice address",
-    "invoice-address": "Invoice address",
-    "invoice-name": "Name"
+    "add-invoice-address": "Añadir dirección de factura",
+    "delete-invoice-address": "Eliminar la dirección de facturación",
+    "invoice-address": "Dirección de factura",
+    "invoice-name": "Empresa"
   },
   "verification": {
     "lets-start": "Empecemos",
@@ -487,7 +495,7 @@
     "ratings": "Puntuaciones",
     "meta-title": "Perfil de {{name}}",
     "meta-description": "Alquilar bicis de {{name}} en listnride.",
-    "company-meta-title": "Company {{company}}",
+    "company-meta-title": "{{company}}",
     "company-meta-description": "Alquilar bicis de {{company}} en listnride.",
     "availability": "Disponibilidad",
     "not-available": "No disponible",
@@ -609,9 +617,9 @@
     "featured-bikes-subheader": "Ya sean bicis de carretera, de montaña, de carga, de ciudad o eléctricas, puedes alquilarlas todas. Estas son las bicis de alquiler favoritas de la comunidad.",
     "featured-tiles-header": "Inspírate",
     "featured-tiles-subheader": "Nos asociamos con marcas innovadoras, escribimos sobre novedades interesantes y participamos en eventos especiales.",
-    "featured-cities-header": "Pedaleando por la jungla urbana",
+    "featured-cities-header": "Siempre con tu bici perfecta",
     "featured-cities-subheader": "El servicio de alquiler de bicis de listnride está disponible cada vez en más ciudades de todo el mundo. Echa un vistazo a algunos consejos de los expertos aquí:",
-    "list-a-bike-header": "¿Tienes una buena bici y quieres que la gente la vea?",
+    "list-a-bike-header": "¿Tienes una buena bici y quieres que la gente la use?",
     "list-a-bike-subheader": "Registra tu bici para alquilarla, conoce gente nueva y gana dinero extra.",
     "meta-title": "listnride - La comunidad para compartir bicis",
     "meta-description": "Alquila la bici perfecta en la comunidad de listnride. Encuentra la que se adapte a tu estilo y necesidades."

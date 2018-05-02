@@ -382,7 +382,7 @@
     "duplicate-start": "Duplication process started",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Bike successfully deleted",
-    "range-success-delete": "Availability range successfully deleted",
+    "range-success-delete": "Unvailability range successfully deleted",
     "availability-success-saved": "Availability successfully saved"
   },
   "settings": {
@@ -433,7 +433,7 @@
     "add-invoice-address": "Add Invoice address",
     "delete-invoice-address": "Delete Invoice address",
     "invoice-address": "Invoice address",
-    "invoice-name": "Name"
+    "invoice-name": "Company name"
   },
   "verification": {
     "lets-start": "Let's start",
@@ -500,7 +500,7 @@
     "ratings": "Ratings",
     "meta-title": "{{name}}'s profile",
     "meta-description": "Rent bikes on listnride from {{name}}.",
-    "company-meta-title": "Company {{company}}",
+    "company-meta-title": "{{company}}",
     "company-meta-description": "Rent bikes on listnride from {{company}}.",
     "availability": "Availability",
     "not-available": "Not available",
