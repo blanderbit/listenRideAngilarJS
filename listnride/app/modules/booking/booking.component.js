@@ -188,15 +188,18 @@ angular.module('booking', [])
         });
 
         booking.saveAddress = function() {
-          var data = {
-            "user": {
-              "street": booking.user.street,
-              "zip": booking.user.zip,
-              "city": booking.user.city,
-              "country": booking.user.country
+          var address = {
+            'locations': {
+              '0': {
+                "street": booking.user.street,
+                "zip": booking.user.zip,
+                "city": booking.user.city,
+                "country": booking.user.country,
+                "primary": true
+              }
             }
           };
-          api.put('/users/' + $localStorage.userId, data).then(
+          api.put('/users/' + $localStorage.userId, address).then(
             function (success) {
               booking.nextTab();
             },
