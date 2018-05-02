@@ -82,9 +82,6 @@ angular.module('booking', [])
             booking.endTime = 18;
             booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
             booking.total = booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
-            console.log("date updated");
-            console.log(booking.startDate);
-            console.log(booking.subtotal);
           }
           // TODO: REMOVE REDUNDANT PRICE CALUCLATION CODE
         }
@@ -191,15 +188,18 @@ angular.module('booking', [])
         });
 
         booking.saveAddress = function() {
-          var data = {
-            "user": {
-              "street": booking.user.street,
-              "zip": booking.user.zip,
-              "city": booking.user.city,
-              "country": booking.user.country
+          var address = {
+            'locations': {
+              '0': {
+                "street": booking.user.street,
+                "zip": booking.user.zip,
+                "city": booking.user.city,
+                "country": booking.user.country,
+                "primary": true
+              }
             }
           };
-          api.put('/users/' + $localStorage.userId, data).then(
+          api.put('/users/' + $localStorage.userId, address).then(
             function (success) {
               booking.nextTab();
             },

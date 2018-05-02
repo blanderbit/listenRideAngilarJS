@@ -15,7 +15,7 @@
     "dortmund": "Dortmund",
     "milan": "Milan",
     "munich": "München",
-    "nuremberg": "Nuremberg",
+    "nuremberg": "Nürnberg",
     "amsterdam": "Amsterdam",
     "vienna": "Wien",
     "hamburg": "Hamburg",
@@ -293,7 +293,7 @@
     "footer": {
       "questions": "Du hast Fragen rund ums Mieten von Fahrrädern?",
       "call-us": "Ruf uns unter +49 (0)30-120870330, Mo-Fr 9-18 Uhr an. ",
-      "email-us": "Oder schreib uns eine E-Mail.",
+      "email-us": "Oder schreib uns eine E-Mail",
       "support": "listnride Support"
     },
     "sign-in": {
@@ -349,6 +349,14 @@
       "payment": "Zahlungsmethode",
       "redeem-voucher": "Rabattcode einlösen",
       "add": "Ok"
+    },
+    "calendar": {
+      "tab": "1. Dauer",
+      "bike-rental": "Deine Buchung",
+      "choose-duration": "Wähle die Buchungsdauer",
+      "pickup-time": "Abholzeit",
+      "return-time": "Rückgabezeit",
+      "intro-description": "Deine Buchung wird von listnride, Europas größter Bike-Sharing-Community, sicher bearbeitet."
     }
   },
   "toasts": {
@@ -373,7 +381,7 @@
     "duplicate-start": "Vervielfältigungsprozess gestartet",
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Fahrrad erfolgreich gelöscht",
-    "range-success-delete": "Verfügbarkeit erfolgreich gelöscht",
+    "range-success-delete": "Zeitraum erfolgreich gelöscht",
     "availability-success-saved": "Availability successfully saved"
   },
   "settings": {
@@ -421,10 +429,10 @@
     "company-information": "Unternehmensinformationen",
     "vat": "VAT",
     "payment-info": "Aktuelle Zahlungsmethode anzeigen",
-    "add-invoice-address": "Add Invoice address",
-    "delete-invoice-address": "Delete Invoice address",
-    "invoice-address": "Invoice address",
-    "invoice-name": "Name"
+    "add-invoice-address": "Rechnungsadresse hinzufügen",
+    "delete-invoice-address": "Rechnungsadresse löschen",
+    "invoice-address": "Rechnungsadresse",
+    "invoice-name": "Unternehmensname"
   },
   "verification": {
     "lets-start": "Loslegen",
@@ -489,7 +497,7 @@
     "ratings": "Bewertungen",
     "meta-title": "{{name}}s Profil",
     "meta-description": "Rad mieten von {{name}} auf listnride.",
-    "company-meta-title": "Company {{company}}",
+    "company-meta-title": "{{company}}",
     "company-meta-description": "Rad mieten von {{company}} auf listnride.",
     "availability": "Verfügbarkeiten",
     "not-available": "Nicht verfügbar",
@@ -520,7 +528,7 @@
     "complete-profile-description": "Um das Rad zu buchen, gib dein Zahlungsmittel an. Alle Daten werden über eine gesicherte Verbindung übertragen.",
     "no-requests-yet": "Sobald du Anfragen gestellt oder bekommen hast, werden sie hier angezeigt.",
     "filters": {
-      "all-requests": "Alle anfragen",
+      "all-requests": "Alle Anfragen",
       "current-rentals": "Aktuelle Mieten",
       "pending-requests": "Offene Anfragen",
       "upcoming-rentals": "Bevorstehende Miete",
@@ -544,7 +552,7 @@
     "10": "Ihre Anfrage wurde vom System abgebrochen."
   },
   "rideChat": {
-    "1": "Du würdest gerne {{lister.first_name}} {{lister.last_name}}s <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, ist das Rad gebucht.",
+    "1": "Du würdest gerne {{lister.business_name}} <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, ist das Rad gebucht.",
     "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.phone_number}}<br>Adresse: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} hat die Rückgabe des Rades bestätigt und dich bewertet.<br>Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",
     "6": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
@@ -612,7 +620,7 @@
     "featured-tiles-subheader": "Wir arbeiten mit interessanten Marken zusammen, schreiben über unsere Erfahrung und fahren mit großartigen Menschen.",
     "featured-cities-header": "Mit listnride bist du nie ohne dein perfektes Rad",
     "featured-cities-subheader": "In immer mehr Metropolen und Urlaubsregionen in Europa gibt es den listnride Fahrradverleih. Hier einige unserer Tipps für dich: ",
-    "list-a-bike-header": "Dein Bike ist zu schön, um rumzustehen?",
+    "list-a-bike-header": "Dein Bike ist zu schön um rumzustehen?",
     "list-a-bike-subheader": "Liste dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und verdien dir was dazu.",
     "meta-title": "listnride - Die Bike-Sharing-Community",
     "meta-description": "Miete dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach deinem Stil und Einsatzzweck."
@@ -631,13 +639,13 @@
     "bikes": "Fahrräder",
     "pick-body-size": "Größe",
     "timespan": "Zeitspanne",
-    "category": "Fahrradtype",
+    "category": "Fahrradtyp",
     "clear-filters": "Filter löschen",
     "all-brands": "Alle Marken",
     "all-bikes": "Alle Fahrräder"
   },
   "calendar": {
-    "invalid-date": "Datums angabe nicht Korrekt",
+    "invalid-date": "Datumsangabe nicht korrekt",
     "request-bike": "Rad anfragen",
     "to-request-bike-please": "um ein Rad anzufragen bitte",
     "own-bike": "Du kannst nicht dein Rad anfragen",
@@ -842,7 +850,7 @@
       "easy-content": "Finde und buche Dein Leihfahrrad bevor Du auf Reisen gehst – oder einfach von unterwegs im Netz mit unserer mobilen Webseite."
     },
     "search-section": {
-      "header": "Wo soll’s hingehen?",
+      "header": "Wo solls hingehen?",
       "subheader": "Bike-Sharing per listnride erreicht immer mehr Orte."
     },
     "testmonials-section": {
