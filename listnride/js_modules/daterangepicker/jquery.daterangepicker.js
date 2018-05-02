@@ -2,6 +2,7 @@
 // author : Chunlong Liu
 // license : MIT
 // www.jszen.com
+// Documentation: http://longbill.github.io/jquery-date-range-picker/
 
 (function (factory) {
 	if (typeof define === 'function' && define.amd) {
@@ -842,10 +843,12 @@
 				customCloseAnimation: null,
 				customArrowPrevSymbol: null,
 				customArrowNextSymbol: null,
+
 				lnrIsWidthStatic: false,
 				lnrShowTimeDom: true,
 				lnrSingleMonthMinWidth: 480,
-				lnrJumpToSelected: true
+				lnrJumpToSelected: true,
+				lnrContainer: ''
 			},opt);
 
 		opt.start = false;
@@ -859,8 +862,11 @@
 		//if it is a touch device, hide hovering tooltip
 		if (opt.isTouchDevice) opt.hoveringTooltip = false;
 
-		//show one month on mobile devices
-		if (opt.singleMonth == 'auto') opt.singleMonth = $(window).width() < opt.lnrSingleMonthMinWidth;
+		// show one month on mobile devices
+		if (opt.singleMonth == 'auto') {
+			var windowContainer = !opt.lnrContainer ? opt.lnrContainer : window;
+			opt.singleMonth = $(windowContainer).width() < opt.lnrSingleMonthMinWidth;
+		}
 		if (opt.singleMonth) opt.stickyMonths = false;
 
 		if (!opt.showTopbar) opt.autoClose = true;
@@ -1246,17 +1252,31 @@
 		}
 
 
-		function calcPosition()
-		{
+		function calcPosition() {
+			var offset = $(self).offset();
+
+			function getSelfOffsetTop(isRelative){
+				var isRelative = isRelative ? isRelative : false;
+				var topOffset = 0;
+
+				if (isRelative) {
+					var containerOffset = $(opt.container).offset();
+					topOffset = offset.top - containerOffset.top + $(self).outerHeight() + 4;
+				} else {
+					topOffset = offset.top + $(self).outerHeight() + parseInt($('body').css('border-top') || 0, 10);
+				}
+
+				return topOffset;
+			}
+
 			if (!opt.inline)
 			{
-				var offset = $(self).offset();
 				if ($(opt.container).css('position') == 'relative')
 				{
 					var containerOffset = $(opt.container).offset();
 					box.css(
 						{
-							top: offset.top - containerOffset.top + $(self).outerHeight() + 4,
+							top: getSelfOffsetTop(true),
 							left: offset.left - containerOffset.left
 						});
 				}
@@ -1266,7 +1286,7 @@
 					{
 						box.css(
 							{
-								top: offset.top+$(self).outerHeight() + parseInt($('body').css('border-top') || 0,10 ),
+								top: getSelfOffsetTop(),
 								left: offset.left
 							});
 					}
@@ -1274,7 +1294,7 @@
 					{
 						box.css(
 							{
-								top: offset.top+$(self).outerHeight() + parseInt($('body').css('border-top') || 0,10 ),
+								top: getSelfOffsetTop(),
 								left: offset.left + $(self).width() - box.width() - 16
 							});
 					}
