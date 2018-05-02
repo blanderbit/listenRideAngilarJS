@@ -354,7 +354,7 @@
                         ng-style="{'background-image': 'url(' + img.url + ')'}">
                     </div>
                     <md-button class="md-lined md-warn"
-                               ng-click="list.removeImage($index)">
+                               ng-click="list.removeImage($index, img)">
                       {{ 'list.pictures.remove' | translate}}
                     </md-button>
                   </div>
@@ -444,7 +444,8 @@
                   </h3>
                 </div>
 
-                <autocomplete autocomplete-id="list"
+                <autocomplete autocomplete-id="list-search"
+                              class="list-search"
                               layout="column"
                               location="list.form.street"
                               label-id="{{ 'list.location.street-number' | translate }}"

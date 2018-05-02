@@ -58,12 +58,8 @@ angular.module('autocomplete',[]).component('autocomplete', {
       };
 
       autocomplete.toggleButton = function() {
-        if (autocomplete.location.length > 0) {
-          autocomplete.filled = true;
-        } else {
-          autocomplete.filled = false;
-        }
-      }
+        autocomplete.filled = autocomplete.location.length > 0;
+      };
 
       autocomplete.toggleButton();
 

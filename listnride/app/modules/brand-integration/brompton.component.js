@@ -17,6 +17,7 @@ angular.module('brompton-integration',[]).component('brompton', {
         }
       );
       brompton.bikes = {
+        amsterdam: [],
         berlin: [],
         dortmund: [],
         dusseldorf: [],
@@ -27,6 +28,7 @@ angular.module('brompton-integration',[]).component('brompton', {
         mailand: [],
         marl: [],
         munich: [],
+        nuremberg: [],
         paderborn: [],
         tubingen: [],
         ulm: [],
@@ -43,22 +45,24 @@ angular.module('brompton-integration',[]).component('brompton', {
       // Family ID for Brompton Brand Bikes is 13
       api.get('/rides?family=13').then(
         function (success) {
-          for (var i=0; i<success.data.length; i++) {
-            switch (success.data[i].city) {
-              case "Berlin": brompton.bikes.berlin.push(success.data[i]); break;
-              case "Dortmund": brompton.bikes.dortmund.push(success.data[i]); break;
-              case "Düsseldorf": brompton.bikes.dusseldorf.push(success.data[i]); break;
-              case "Frankfurt": brompton.bikes.frankfurt.push(success.data[i]); break;
-              case "Freiburg": brompton.bikes.freiburg.push(success.data[i]); break;
-              case "Heidelberg": brompton.bikes.heidelberg.push(success.data[i]); break;
-              case "Hamburg": brompton.bikes.hamburg.push(success.data[i]); break;
-              case "Marl": brompton.bikes.marl.push(success.data[i]); break;
-              case "Mailand": brompton.bikes.mailand.push(success.data[i]); break;
-              case "München": brompton.bikes.munich.push(success.data[i]); break;
-              case "Paderborn": brompton.bikes.paderborn.push(success.data[i]); break;
-              case "Tübingen": brompton.bikes.tubingen.push(success.data[i]); break;
-              case "Ulm": brompton.bikes.ulm.push(success.data[i]); break;
-              case "Utting": brompton.bikes.utting.push(success.data[i]); break;
+          for (var i=0; i<success.data.bikes.length; i++) {
+            switch (success.data.bikes[i].city) {
+              case "Amsterdam": brompton.bikes.amsterdam.push(success.data.bikes[i]); break;
+              case "Berlin": brompton.bikes.berlin.push(success.data.bikes[i]); break;
+              case "Dortmund": brompton.bikes.dortmund.push(success.data.bikes[i]); break;
+              case "Düsseldorf": brompton.bikes.dusseldorf.push(success.data.bikes[i]); break;
+              case "Frankfurt": brompton.bikes.frankfurt.push(success.data.bikes[i]); break;
+              case "Freiburg": brompton.bikes.freiburg.push(success.data.bikes[i]); break;
+              case "Heidelberg": brompton.bikes.heidelberg.push(success.data.bikes[i]); break;
+              case "Hamburg": brompton.bikes.hamburg.push(success.data.bikes[i]); break;
+              case "Marl": brompton.bikes.marl.push(success.data.bikes[i]); break;
+              case "Mailand": brompton.bikes.mailand.push(success.data.bikes[i]); break;
+              case "München": brompton.bikes.munich.push(success.data.bikes[i]); break;
+              case "Nürnberg": brompton.bikes.nuremberg.push(success.data.bikes[i]); break;
+              case "Paderborn": brompton.bikes.paderborn.push(success.data.bikes[i]); break;
+              case "Tübingen": brompton.bikes.tubingen.push(success.data.bikes[i]); break;
+              case "Ulm": brompton.bikes.ulm.push(success.data.bikes[i]); break;
+              case "Utting": brompton.bikes.utting.push(success.data.bikes[i]); break;
             }
           }
           brompton.currentBikes = brompton.bikes["berlin"];

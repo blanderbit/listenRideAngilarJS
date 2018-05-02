@@ -110,8 +110,10 @@ angular.module('settings',[]).component('settings', {
         settings.business = {};
         settings.user.business = false;
         settings.user.paymentLoading = false;
+        settings.user.has_billing = false;
         userApi.getUserData().then(function (response) {
           settings.user = response.data;
+          settings.user.has_billing = !!response.data.locations.billing;
           settings.current_payment = response.data.status === 3;
           updatePrivatePhoneNumber(response.data.phone_number);
           settings.loaded = true;
@@ -133,6 +135,54 @@ angular.module('settings',[]).component('settings', {
         var length = phone_number.length - initials.length - endings.length + 1;
         settings.user.phone_number_privatized = "+" + initials.concat(Array(length).join('*')).concat(endings);
       }
+
+      settings.toggleBilling = function (bool) {
+        settings.user.has_billing = bool;
+        if (bool) {
+          settings.user.locations['billing'] = {
+            first_name: settings.user.first_name,
+            last_name: settings.user.last_name
+          };
+
+          return
+        }
+
+        if (_.isEmpty(settings.user.locations.billing)) return;
+
+        if (settings.user.locations.billing.id) {
+          removeBilling(settings.user.locations.billing.id)
+        } else {
+          cleanBillingInputs()
+        }
+      };
+
+      function removeBilling(id) {
+        api.delete("/users/" + settings.user.id + "/locations/" + id).then(
+          function (response) {
+            cleanBillingInputs()
+          },
+          function (error) {
+
+          }
+        )
+      }
+
+      function cleanBillingInputs() {
+        var billing = settings.user.locations.billing;
+
+        billing.id = '';
+        billing.first_name = '';
+        billing.last_name = '';
+        billing.street = '';
+        billing.zip = '';
+        billing.city = '';
+        billing.country = '';
+        billing.name = '';
+        billing.vat = '';
+
+        settings.user.has_billing = false;
+      }
+
 
       function getBusinessData() {
         api.get('/businesses/' + settings.user.business.id).then(
@@ -413,10 +463,10 @@ angular.module('settings',[]).component('settings', {
             }
           }
 
-          settings.user.street = desiredComponents.route + " " + desiredComponents.street_number;
-          settings.user.zip = desiredComponents.postal_code;
-          settings.user.city = desiredComponents.locality;
-          settings.user.country = desiredComponents.country;
+          settings.user.locations.primary.street = desiredComponents.route + " " + desiredComponents.street_number;
+          settings.user.locations.primary.zip = desiredComponents.postal_code;
+          settings.user.locations.primary.city = desiredComponents.locality;
+          settings.user.locations.primary.country = desiredComponents.country;
         }
       };
 
@@ -493,28 +543,60 @@ angular.module('settings',[]).component('settings', {
         
           }
         );
+      };
+
+      function prepareData() {
+        var primary = settings.user.locations.primary;
+        var billing = settings.user.locations.billing;
+
+        var user_data = {
+          "description": settings.user.description,
+          "profile_picture": Upload.dataUrltoBlob(settings.croppedDataUrl, _.isEmpty(settings.profilePicture) ? '' : settings.profilePicture.name)
+        };
+
+        var user_primary_location = {
+          "id": primary.id,
+          "street": primary.street,
+          "zip": primary.zip,
+          "city": primary.city,
+          "country": primary.country,
+          "primary": true
+        };
+
+        var user_billing_location = {
+          "id": billing.id,
+          "first_name": billing.first_name,
+          "last_name": billing.last_name,
+          "street": billing.street,
+          "zip": billing.zip,
+          "city": billing.city,
+          "country": billing.country,
+          "name": billing.name || '',
+          "vat": billing.vat || '',
+          "primary": false
+        };
+
+        var locations = [user_primary_location];
+
+        if (settings.user.has_billing) { locations = [user_primary_location, user_billing_location] }
+
+        if (settings.password && settings.password.length >= 6) {
+          user_data.password_hashed = sha256.encrypt(settings.password);
+        }
+
+        return {
+          'user': settings.compactObject(user_data),
+          'locations': locations
+        }
       }
 
       settings.updateUser = function () {
-        var data = {
-          "description": settings.user.description,
-          "profile_picture": Upload.dataUrltoBlob(settings.croppedDataUrl, _.isEmpty(settings.profilePicture) ? '' : settings.profilePicture.name),
-          "street": settings.user.street,
-          "zip": settings.user.zip,
-          "city": settings.user.city,
-          "country": settings.user.country
-        };
-
-        if (settings.password && settings.password.length >= 6) {
-          data.password_hashed = sha256.encrypt(settings.password);
-        }
-
         loadingDialog.open();
 
         Upload.upload({
           method: 'PUT',
           url: api.getApiUrl() + '/users/' + $localStorage.userId,
-          data: {'user': settings.compactObject(data)},
+          data: prepareData() ,
           headers: {
             'Authorization': $localStorage.auth
           }
@@ -528,6 +610,7 @@ angular.module('settings',[]).component('settings', {
               .position('top center')
             );
             settings.user = success.data;
+            settings.user.has_billing = !!success.data.locations.billing;
             $localStorage.profilePicture = success.data.profile_picture.profile_picture.url;
             settings.profilePicture = false;
             var encoded = Base64.encode(success.data.email + ":" + success.data.password_hashed);

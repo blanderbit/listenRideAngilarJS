@@ -10,6 +10,7 @@
       <md-checkbox
         aria-label="{{category.name}}"
         ng-checked="categoryFilter.parent.isChecked(category.catId)"
+        md-indeterminate="categoryFilter.parent.isIndeterminate(category.catId)"
         ng-click="categoryFilter.parent.toggleAll($event, category.catId)"
         md-prevent-menu-close
         flex-15

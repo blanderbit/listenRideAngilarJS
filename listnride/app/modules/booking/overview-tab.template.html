@@ -37,7 +37,7 @@
             </div>
           </div>
           <div flex="20">
-            <p class="md-subhead lnr-bold lnr-right" style="margin: 0;">{{ overview.parent.subtotal }} €</p>
+            <p class="md-subhead lnr-bold lnr-right" style="margin: 0;">{{ overview.parent.subtotal | currency:"€":2 }}</p>
           </div>
         </div>
         <div class="spacer"></div>
@@ -46,9 +46,23 @@
         <div layout="row" layout-xs="column" layout-align="space-between none">
           <div flex="33" flex-xs="100">
             <p class="md-title">{{ 'booking.overview.invoice-address' | translate }}</p>
-            <p class="md-body-1">
-              <span class="lnr-bold">{{ overview.parent.user.first_name + " " + overview.parent.user.last_name }}</span><br>
+            <p class="md-body-1" ng-if="!overview.parent.user.locations.billing">
+              <span class="lnr-bold">
+                {{ overview.parent.user.first_name + " " + overview.parent.user.last_name }}
+              </span><br>
               {{ overview.parent.user.street }}<br>{{ overview.parent.user.zip + " " + overview.parent.user.city }}<br>{{ overview.parent.user.country }}
+            </p>
+            <p class="md-body-1" ng-if="overview.parent.user.locations.billing">
+              <span class="lnr-bold" ng-if="!overview.parent.user.locations.billing.name">
+                {{ overview.parent.user.locations.billing.first_name + " " + overview.parent.user.locations.billing.last_name }}
+              </span>
+              <span class="lnr-bold" ng-if="overview.parent.user.locations.billing.name">
+                {{ overview.parent.user.locations.billing.name }}
+              </span>
+              <br>
+              {{ overview.parent.user.locations.billing.street }}<br>
+              {{ overview.parent.user.locations.billing.zip + " " + overview.parent.user.locations.billing.city }}<br>
+              {{ overview.parent.user.locations.billing.country }}
             </p>
           </div>
           <div ng-hide show-xs>

@@ -18,10 +18,10 @@ angular.module('vello-integration',[]).component('vello', {
       api.get('/rides?family=15').then(
         function (success) {
 
-          for (var i=0; i<success.data.length; i++) {
-            switch (success.data[i].city) {
-              case "Berlin": vello.bikes.berlin.push(success.data[i]); break;
-              case "München": vello.bikes.munich.push(success.data[i]); break;
+          for (var i=0; i<success.data.bikes.length; i++) {
+            switch (success.data.bikes[i].city) {
+              case "Berlin": vello.bikes.berlin.push(success.data.bikes[i]); break;
+              case "München": vello.bikes.munich.push(success.data.bikes[i]); break;
             }
           }
 
