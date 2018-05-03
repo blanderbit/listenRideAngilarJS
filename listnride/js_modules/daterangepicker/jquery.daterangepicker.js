@@ -848,7 +848,8 @@
 				lnrShowTimeDom: true,
 				lnrSingleMonthMinWidth: 480,
 				lnrJumpToSelected: true,
-				lnrContainer: ''
+				lnrContainer: '',
+				lnrScrollWindow: '',
 			},opt);
 
 		opt.start = false;
@@ -864,7 +865,7 @@
 
 		// show one month on mobile devices
 		if (opt.singleMonth == 'auto') {
-			var windowContainer = !opt.lnrContainer ? opt.lnrContainer : window;
+			var windowContainer = opt.lnrContainer ? opt.lnrContainer : window;
 			opt.singleMonth = $(windowContainer).width() < opt.lnrSingleMonthMinWidth;
 		}
 		if (opt.singleMonth) opt.stickyMonths = false;
@@ -1309,7 +1310,7 @@
 		}
 
 		function open(animationTime)
-		{	
+		{
 			calcPosition();
 			redrawDatePicker();
 			checkAndSetDefaultValue();
@@ -1671,7 +1672,7 @@
 
 
 		function dayHovering(day)
-		{	
+		{
 			var hoverTime = parseInt(day.attr('time'));
 			var tooltip = '';
 
@@ -2309,7 +2310,7 @@
 
 			}
 			//+'</div>'
-			if (opt.lnrShowTimeDom) 
+			if (opt.lnrShowTimeDom)
 			{
 				html +=	'<div style="clear:both;height:0;font-size:0;"></div>' +
 					'<div class="time">' +
@@ -2512,7 +2513,7 @@
 		}
 
 		function toLocalTimestamp(t)
-		{	
+		{
 			if (moment.isMoment(t)) t = t.toDate().getTime();
 			if (typeof t == 'object' && t.getTime) t = t.getTime();
 			if (typeof t == 'string' && !t.match(/\d{13}/)) t = moment(t,opt.format).toDate().getTime();
