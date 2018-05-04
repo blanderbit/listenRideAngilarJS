@@ -786,7 +786,7 @@
 				format: 'YYYY-MM-DD',
 				separator: ' to ',
 				language: 'auto',
-				startOfWeek: 'sunday',// or monday
+				startOfWeek: 'sunday', // or monday
 				getValue: function()
 				{
 					return $(this).val();
@@ -808,9 +808,9 @@
 				showShortcuts: false,
 				shortcuts:
 				{
-					//'prev-days': [1,3,5,7],
+					// 'prev-days': [1,3,5,7],
 					// 'next-days': [3,5,7],
-					//'prev' : ['week','month','year'],
+					// 'prev' : ['week','month','year'],
 					// 'next' : ['week','month','year']
 				},
 				customShortcuts : [],
@@ -1260,6 +1260,8 @@
 				var isRelative = isRelative ? isRelative : false;
 				var topOffset = 0;
 
+				// TODO: Add logic for smart date-picker position, it date-picker parent has relative position
+				// Author: Yuriy Byts
 				if (isRelative) {
 					var containerOffset = $(opt.container).offset();
 					var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
