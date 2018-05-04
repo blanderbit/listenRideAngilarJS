@@ -1,6 +1,6 @@
-<md-content class="single-column">
+<md-content class="single-column booking__body">
   <div class="content lnr-page-margin" layout="column" layout-gt-sm="row">
-    <div flex="100" flex-md="60" flex-gt-md="70" layout-padding>
+    <div flex="100" flex-md="60" flex-gt-md="70" layout-padding class="booking__daterange-focus">
       <md-tabs
         md-no-pagination
         md-dynamic-height
@@ -21,10 +21,10 @@
 
         <!-- payment tab -->
         <payment-tab></payment-tab>
-        
+
         <!-- overview tab -->
         <overview-tab></overview-tab>
-      
+
       </md-tabs>
     </div>
 
@@ -33,15 +33,15 @@
       <div class="animate-if highlight-tile booking__receipt" layout="column">
         <receipt
           start-date="booking.startDate"
-          end-date="booking.endDate" 
-          prices="booking.prices" 
-          invalid-days="0" 
+          end-date="booking.endDate"
+          prices="booking.prices"
+          invalid-days="0"
           user="booking.user">
         </receipt>
         <div
           class="booking__next-step lnr-margin-lrg"
           layout="column">
-          <div 
+          <div
             layout="row"
             layout-align="space-between center"
             class="lnr-margin-lrg lnr-mb-0"
@@ -50,7 +50,7 @@
             <span class="md-subhead">{{ 'shared.total' | translate }}</span>
             <span class="md-subhead">{{ booking.total | currency:"€":2 }}</span>
           </div>
-          <p 
+          <p
             ng-hide="booking.selectedIndex !== 3"
             class="md-body-1 lnr-margin-lrg lnr-mb-0 lnr-center booking__terms">
              {{ 'booking.agree-terms' | translate }}

@@ -2354,6 +2354,7 @@ md-icon[md-font-icon].fa--lh20 {
 
 .date-picker-wrapper--ngDialog {
   z-index: 100;
+  padding: 0;
 }
 
 .date-picker-wrapper--two-months {
