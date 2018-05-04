@@ -12,7 +12,9 @@ angular
         requests: '<?',
         dateOnChange: '<?',
         dateOnClear: '<?',
-        clearCalendarData: '=?'
+        clearCalendarData: '=?',
+        dateContainer: '<?',
+        dateScrollContainer: '<?'
       },
       link: function ($scope, element, attrs) {
         $scope.el = angular.element(element[0]).find('.js-datapicker');
@@ -83,11 +85,16 @@ function lnrDatePickerController($scope, $translate) {
       startOfWeek: 'monday',
       showShortcuts: false,
       beforeShowDay: classifyDate,
+      language: $translate.preferredLanguage(),
+      container: vm.dateContainer || 'body',
+
       lnrIsWidthStatic: true,
       lnrShowTimeDom: false,
-      language: $translate.preferredLanguage(),
       lnrSingleMonthMinWidth: 659, // 320px - min-width for 1 calendar part + gap
       lnrJumpToSelected: false,
+      lnrContainer: vm.dateContainer || '',
+      lnrScrollWindow: vm.dateScrollContainer || '',
+
       extraClass: 'date-picker-wrapper--ngDialog date-picker-wrapper--two-months'
     }).bind('datepicker-change', function (event, obj) {
       vm.updateData(obj.date1, obj.date2);
@@ -128,7 +135,7 @@ function lnrDatePickerController($scope, $translate) {
     function changeRange() {
       if (vm.data.start_date) {
         // set range to datepicker with datepicker special method
-        // setDateRange({String}, {String}) 
+        // setDateRange({String}, {String})
         var startDate = moment(vm.data.start_date);
         var lastDate = startDate.clone().add(vm.data.duration, 'd');
         $scope.el.dateRange
@@ -166,6 +173,9 @@ function lnrDatePickerController($scope, $translate) {
 
     // save this data, because mdDialog destroys elements before $onDestroy method
     $scope.el.dateRange = $scope.el.data('dateRangePicker');
+
+    // add relative position to custom container if it was set
+    if (vm.dateContainer) $(vm.dateContainer).css('position', 'relative');
 
     changeRange();
   };
