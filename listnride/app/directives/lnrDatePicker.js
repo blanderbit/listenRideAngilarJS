@@ -13,7 +13,8 @@ angular
         dateOnChange: '<?',
         dateOnClear: '<?',
         clearCalendarData: '=?',
-        dateContainer: '<?'
+        dateContainer: '<?',
+        dateScrollContainer: '<?'
       },
       link: function ($scope, element, attrs) {
         $scope.el = angular.element(element[0]).find('.js-datapicker');
@@ -86,12 +87,13 @@ function lnrDatePickerController($scope, $translate) {
       beforeShowDay: classifyDate,
       language: $translate.preferredLanguage(),
       container: vm.dateContainer || 'body',
-      
+
       lnrIsWidthStatic: true,
       lnrShowTimeDom: false,
       lnrSingleMonthMinWidth: 659, // 320px - min-width for 1 calendar part + gap
       lnrJumpToSelected: false,
       lnrContainer: vm.dateContainer || '',
+      lnrScrollWindow: vm.dateScrollContainer || '',
 
       extraClass: 'date-picker-wrapper--ngDialog date-picker-wrapper--two-months'
     }).bind('datepicker-change', function (event, obj) {
@@ -133,7 +135,7 @@ function lnrDatePickerController($scope, $translate) {
     function changeRange() {
       if (vm.data.start_date) {
         // set range to datepicker with datepicker special method
-        // setDateRange({String}, {String}) 
+        // setDateRange({String}, {String})
         var startDate = moment(vm.data.start_date);
         var lastDate = startDate.clone().add(vm.data.duration, 'd');
         $scope.el.dateRange

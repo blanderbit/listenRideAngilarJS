@@ -1262,7 +1262,17 @@
 
 				if (isRelative) {
 					var containerOffset = $(opt.container).offset();
+					var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+					var selfPosTop = $(self).offset().top + $(self).height();
+					// date-picker height. it's constant, because we can't ask calendar height before opening
+					var PICKER_HEIGHT = 330;
+
 					topOffset = offset.top - containerOffset.top + $(self).outerHeight() + 4;
+					// show on top if it's enough space on there
+					if (h - selfPosTop < PICKER_HEIGHT && $(self).offset().top >= PICKER_HEIGHT) {
+						topOffset -= PICKER_HEIGHT + $(self).height();
+					}
+
 				} else {
 					topOffset = offset.top + $(self).outerHeight() + parseInt($('body').css('border-top') || 0, 10);
 				}
@@ -1314,19 +1324,18 @@
 			calcPosition();
 			redrawDatePicker();
 			checkAndSetDefaultValue();
-			if (opt.customOpenAnimation)
-			{
+
+			if (opt.customOpenAnimation) {
 				opt.customOpenAnimation.call(box.get(0), function()
 				{
 					$(self).trigger('datepicker-opened', {relatedTarget: box});
 				});
-			}
-			else
-			{
+			} else {
 				box.slideDown(animationTime, function(){
 					$(self).trigger('datepicker-opened', {relatedTarget: box});
 				});
 			}
+
 			$(self).trigger('datepicker-open', {relatedTarget: box});
 			showGap();
 			updateCalendarWidth();
