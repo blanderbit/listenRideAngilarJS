@@ -15,7 +15,7 @@
     "dortmund": "Dortmund",
     "milan": "Milan",
     "munich": "München",
-    "nuremberg": "Nuremberg",
+    "nuremberg": "Neurenberg",
     "amsterdam": "Amsterdam",
     "vienna": "Wenen",
     "hamburg": "Hamburg",
@@ -27,7 +27,6 @@
     "paderborn": "Paderborn",
     "utting": "Utting",
     "heidelberg": "Heidelberg",
-    "milan": "Milan",
     "marl": "Marl",
     "frankfurt": "Frankfurt",
     "usedom": "Usedom",
@@ -350,6 +349,14 @@
       "payment": "Betaling",
       "redeem-voucher": "Voucher verzilveren",
       "add": "Voeg toe"
+    },
+    "calendar": {
+      "tab": "1. Periode",
+      "bike-rental": "Je fietshuur",
+      "choose-duration": "Kies de huurperiode",
+      "pickup-time": "Ophaal tijd",
+      "return-time": "Tijd van terruggave",
+      "intro-description": "Uw boeking wordt veilig verwerkt door listnride, de grootste community voor het delen van fietsen in Europa."
     }
   },
   "toasts": {
@@ -421,7 +428,11 @@
     "company-name": "Bedrijfsnaam",
     "company-information": "Bedrijfsgegevens",
     "vat": "VAT",
-    "payment-info": "Aktuele betaalmethode tonen"
+    "payment-info": "Aktuele betaalmethode tonen",
+    "add-invoice-address": "factuuradres toevoegen",
+    "delete-invoice-address": "Factuuradres verwijderen",
+    "invoice-address": "Factuuradres",
+    "invoice-name": "Bedrijfsnaam"
   },
   "verification": {
     "lets-start": "Aan de slag",
@@ -487,7 +498,7 @@
     "ratings": "Recensies",
     "meta-title": "{{name}}'s profiel",
     "meta-description": "Fiets huren op listnride van {{name}}.",
-    "company-meta-title": "Company {{company}}",
+    "company-meta-title": "{{company}}",
     "company-meta-description": "Fiets huren op listnride van {{company}}.",
     "availability": "Openingstijden",
     "not-available": "Niet Beschikbaar",
@@ -542,7 +553,7 @@
     "10": "Uw verzoek is geannuleerd door systeem."
   },
   "rideChat": {
-    "1": "Je zou graag {{lister.first_name}} {{lister.last_name}}'s <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. Spreek de verdere details met de verhuurder af. Zodra je aanvraag wordt aangenomen, is de boeking rond.",
+    "1": "Je zou graag {{lister.business_name}} <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. Spreek de verdere details met de verhuurder af. Zodra je aanvraag wordt aangenomen, is de boeking rond.",
     "3": "Gefeliciteerd, {{lister.first_name}} heeft je aanvraag geaccepteerd, je boeking is hiermee bevestigd. De contactgegevens zijn de volgende, alle details worden je ook per email toegestuurd.<br><br>Naam: {{lister.first_name}} {{lister.last_name}}<br>Nummer: {{lister.phone_number}}<br>Adres: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} heeft de teruggave van de fiets bevestigd. Tenslotte vragen wij je een recensie van de ervaring achter te laten. Dit helpt onze community zeer en rondt tevens de transactie af.",
     "6": "Bedankt voor je recensie. De verhuur is succesvol verlopen.",
