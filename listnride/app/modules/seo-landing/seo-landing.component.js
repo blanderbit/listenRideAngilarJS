@@ -11,7 +11,7 @@ angular.module('seoLanding',[]).component('seoLanding', {
       seoLanding.bikes = {};
       seoLanding.loading = true;
 
-      api.get('/seo_pages?url=' + $stateParams.pageTitle).then(
+      api.get('/seo_page?url=' + $stateParams.pageTitle).then(
         function (success) {
           seoLanding.data = success.data;
           seoLanding.bikes = success.data.bikes;
