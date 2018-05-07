@@ -76,7 +76,7 @@ function lnrDatePickerController($scope, $translate) {
   };
 
   function postLink(){
-    var activeClass = 'datepicker-opened';
+    var active = 'js-datepicker-opened';
     $scope.el.dateRangePicker({
       autoClose: true,
       showTopbar: false,
@@ -98,7 +98,7 @@ function lnrDatePickerController($scope, $translate) {
 
       extraClass: 'date-picker-wrapper--ngDialog date-picker-wrapper--two-months'
     }).bind('datepicker-opened', function () {
-      $scope.el.addClass(activeClass);
+      $scope.el.addClass(active);
     }).bind('datepicker-change', function (event, obj) {
         vm.updateData(obj.date1, obj.date2);
     }).bind('datepicker-first-date-selected', function (event, obj) {
@@ -109,7 +109,7 @@ function lnrDatePickerController($scope, $translate) {
         setEndDate(new Date(obj.date1));
         vm.updateData(obj.date1, obj.date2);
       }
-      $scope.el.removeClass(activeClass);
+      $scope.el.removeClass(active);
     });
 
     //TODO: make services for this

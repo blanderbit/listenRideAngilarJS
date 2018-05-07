@@ -57,6 +57,7 @@ angular.module('filter',[])
 
         // Wait for bikes to be actually provided
         filter.$onChanges = function (changes) {
+          // TODO: initializeBrandFilter inited one time here and one time in applyFilters. Remove unnecessary init @moritz
           if (filter.initialBikes != undefined) {
             filter.bikes = filter.initialBikes;
             initializeBrandFilter();
@@ -196,7 +197,7 @@ angular.module('filter',[])
 
         // tricky function to initialize date-picker close, when we click ng-menu
         function closeDateRange() {
-          var datePickerTrigger = angular.element('.datepicker-opened');
+          var datePickerTrigger = angular.element('.js-datepicker-opened');
           if (!!datePickerTrigger.length) {
             datePickerTrigger.click();
           }
