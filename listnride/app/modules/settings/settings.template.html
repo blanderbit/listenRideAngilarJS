@@ -115,6 +115,7 @@
                   <autocomplete
                     autocomplete-id="settings"
                     layout="column"
+                    required="true"
                     location="settings.user.locations.primary.street"
                     label-id="{{ 'list.location.street-number' | translate }}"
                     place-changed="settings.fillAddress(place)"
@@ -124,18 +125,18 @@
                   <span hide-xs flex></span>
                   <md-input-container flex-gt-xs="45">
                     <label>{{ 'forms.zip' | translate }}</label>
-                    <input name="zip" ng-model="settings.user.locations.primary.zip"></input>
+                    <input name="zip" ng-model="settings.user.locations.primary.zip" required></input>
                   </md-input-container>
                 </div>
                 <div layout="row" layout-xs="column">
                   <md-input-container flex-gt-xs="45">
                     <label>{{ 'forms.city' | translate }}</label>
-                    <input name="city" ng-model="settings.user.locations.primary.city"></input>
+                    <input name="city" ng-model="settings.user.locations.primary.city" required></input>
                   </md-input-container>
                   <span hide-xs flex></span>
                   <md-input-container flex-gt-xs="45">
                     <label>{{ 'forms.country' | translate }}</label>
-                    <input name="country" ng-model="settings.user.locations.primary.country"></input>
+                    <input name="country" ng-model="settings.user.locations.primary.country" required></input>
                   </md-input-container>
                 </div>
                 <p class="md-body-2">{{'settings.change-address-info' | translate}}</p>

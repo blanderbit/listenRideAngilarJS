@@ -113,13 +113,13 @@ angular.module('settings',[]).component('settings', {
         settings.user.has_billing = false;
         userApi.getUserData().then(function (response) {
           settings.user = response.data;
-          settings.user.has_billing = !!response.data.locations.billing;
           settings.current_payment = response.data.status === 3;
-          updatePrivatePhoneNumber(response.data.phone_number);
           settings.loaded = true;
           settings.openingHoursEnabled = settings.user.opening_hours ? settings.user.opening_hours.enabled : false;
           $timeout(setInitFormState.bind(this), 0);
           if (!_.isEmpty(settings.user.business)) { getBusinessData() }
+          if (!!response.data.locations) { settings.user.has_billing = !!response.data.locations.billing }
+          if (!!response.data.phone_number) { updatePrivatePhoneNumber(response.data.phone_number) }
         });
       }
 
@@ -138,12 +138,13 @@ angular.module('settings',[]).component('settings', {
 
       settings.toggleBilling = function (bool) {
         settings.user.has_billing = bool;
+        if (!settings.user.locations) { settings.user['locations'] = {} }
+
         if (bool) {
           settings.user.locations['billing'] = {
             first_name: settings.user.first_name,
             last_name: settings.user.last_name
           };
-
           return
         }
 
