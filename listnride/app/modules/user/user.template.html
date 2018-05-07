@@ -1,5 +1,5 @@
 <md-progress-linear class="md-accent" ng-if="!user.loaded" md-mode="query"></md-progress-linear>
-<md-content class="lnr-user single-column" ng-if="user.loaded">
+<md-content class="lnr-user single-column lnr-footer-bottom" ng-if="user.loaded">
   <div class="content">
 
     <div class="lnr-margin-lrg" layout-xs="column" layout="row" layout-padding>
@@ -9,7 +9,7 @@
           <h1 ng-if="!user.user.business" class="md-headline">{{user.user.first_name}}</h1>
           <h1 ng-if="user.user.business" class="md-headline">{{user.user.business.company_name}}</h1>
           <input-stars class="lnr-user-rating rating" max="5" ng-model="user.rating" readonly></input-stars>
-          <span class="md-body-1">{{user.user.city}}, {{user.user.country}}</span>
+          <span ng-if="user.user.city && user.user.country" class="md-body-1">{{user.user.city}}, {{user.user.country}}</span>
         </div>
       </div>
 
@@ -18,9 +18,9 @@
       <div class="lnr-user__verify" flex-gt-xs="30" flex-offset="5" layout="column" layout-align="center start" layout-padding>
         <h3 class="md-subhead">{{ 'user.verified-through' | translate }}</h3>
         <span class="md-body-1">
-          <md-icon class="lnr-icn-sm lnr-margin-right" 
+          <md-icon class="lnr-icn-sm lnr-margin-right"
           md-svg-src="app/assets/ui_icons/icn_verified.svg"
-          ng-class="user.user.confirmed_phone ? 'md-color-primary' : 'md-color-disabled'"></md-icon> 
+          ng-class="user.user.confirmed_phone ? 'md-color-primary' : 'md-color-disabled'"></md-icon>
           <md-tooltip ng-if="user.user.confirmed_phone" md-direction="left">{{ 'user.verified' | translate }}</md-tooltip>
           {{ 'shared.phone-number' | translate }}
         </span>
@@ -88,7 +88,7 @@
       <!-- end availability -->
 
       <!-- listings -->
-      <div layout="row" layout-xs="column">
+      <div layout="row" layout-xs="column" ng-if="user.user.rides.length !== 0">
         <div flex-gt-xs="25">
           <h3 class="md-body-2">{{ 'user.own-bikes' | translate }}</h3>
         </div>
@@ -99,7 +99,7 @@
       <!-- end listings -->
 
       <!-- reviews -->
-      <div layout="row" layout-xs="column">
+      <div layout="row" layout-xs="column" ng-if="user.user.ratings.length !==0">
         <div flex-gt-xs="25">
           <h3 class="md-body-2">{{ 'user.ratings' | translate }}</h3>
         </div>
