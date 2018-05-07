@@ -476,7 +476,7 @@ angular.module('bike').component('calendar', {
       }
 
       function dateClosed(date) {
-        if (openingHoursAvailable()) {
+        if (openingHoursAvailable() && _.isEmpty(calendar.bikeAvailabilities)) {
           return _.isEmpty(calendar.bikeOwner.opening_hours.hours[getWeekDay(date)]);
         } else if (!_.isEmpty(calendar.bikeAvailabilities)) {
           return bikeNotAvailable(date);
