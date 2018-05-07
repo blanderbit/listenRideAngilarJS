@@ -35,6 +35,7 @@ angular.module('filter',[])
           filter.isChecked = isChecked;
           filter.toggleAll = toggleAll;
           filter.showSubs = showSubs;
+          filter.closeDateRange = closeDateRange;
 
           // variables
           filter.isClearDataRange = false;
@@ -53,7 +54,7 @@ angular.module('filter',[])
           filter.currentCategories = filter.initialValues.categories.filter(Boolean).slice().map(Number);
           filter.openSubs = [];
         };
-        
+
         // Wait for bikes to be actually provided
         filter.$onChanges = function (changes) {
           if (filter.initialBikes != undefined) {
@@ -99,7 +100,8 @@ angular.module('filter',[])
             brand: '',
             sizes: '',
             start_date: '',
-            duration: ''
+            duration: '',
+            categories: ''
           });
         }
 
@@ -125,8 +127,11 @@ angular.module('filter',[])
             filter.sizes[0].label = translation;
           });
         }
-  
+
         function applyFilters() {
+          // wait for bikes in $onChanges
+          if (!filter.initialBikes) return;
+
           var filteredBikes = filter.initialBikes;
           filteredBikes = filterBrands(filteredBikes);
           filteredBikes = filterSizes(filteredBikes);
@@ -137,7 +142,7 @@ angular.module('filter',[])
             title: $translate.instant("search.all-bikes"),
             bikes: filter.bikes
           }];
-          
+
           initializeBrandFilter();
         }
 
@@ -148,7 +153,7 @@ angular.module('filter',[])
             return bikes;
           }
         }
-  
+
         function filterSizes(bikes) {
           // TODO: find clear solution for this
           if (!_.isEmpty(filter.currentSizes) && filter.currentSizes.indexOf("-1") == -1 && filter.currentSizes.indexOf(-1) == -1) {
@@ -187,6 +192,14 @@ angular.module('filter',[])
             'duration': null
           }
           filter.populateBikes();
+        }
+
+        // tricky function to initialize date-picker close, when we click ng-menu
+        function closeDateRange() {
+          var datePickerTrigger = angular.element('.datepicker-opened');
+          if (!!datePickerTrigger.length) {
+            datePickerTrigger.click();
+          }
         }
 
         //----- Category filter -----

@@ -7,7 +7,7 @@ Structure of bike search component:
 Search
       |__Filter
       |__Cardgrid
-                 |__Sorter   
+                 |__Sorter
 */
 
 angular.module('search',[]).component('search', {
@@ -41,7 +41,7 @@ angular.module('search',[]).component('search', {
             "duration": ''
           }
         };
-        
+
         // get initial filter values from url
         search.initialValues.sizes = $stateParams.sizes.split(',');
         search.initialValues.brand = $stateParams.brand;
@@ -57,7 +57,7 @@ angular.module('search',[]).component('search', {
           lng: -74,
           zoom: 5
         };
-        
+
         // invocations
         populateBikes(search.location);
         setMetaTags(search.location);
@@ -71,7 +71,7 @@ angular.module('search',[]).component('search', {
           { notify: false }
         );
       }
-      
+
       function onMapClick () {
         if (search.map) {
           search.map.hideInfoWindow('searchMapWindow');
@@ -90,7 +90,7 @@ angular.module('search',[]).component('search', {
           }
         }
       }
-        
+
       function showBikeWindow(evt, bikeId) {
         if (search.map) {
           search.selectedBike = search.bikes.find(function(bike) {
@@ -221,7 +221,7 @@ angular.module('search',[]).component('search', {
         ngMeta.setTitle($translate.instant("search.meta-title", data));
         ngMeta.setTag("description", $translate.instant("search.meta-description", data));
       }
-      
+
       function initializeGoogleMap() {
         // TODO: timeout needs to be replaced with a better solution
         $timeout(function(){
@@ -232,11 +232,10 @@ angular.module('search',[]).component('search', {
       }
 
       function addMoreItemsLimit() {
-        if (search.limit < search.bikes.length) {
-          search.limit += 15;
-        }
+        if (!search.bikes) return;
+        if (search.limit < search.bikes.length) search.limit += 15;
       }
-      
+
     }
   ]
 });
