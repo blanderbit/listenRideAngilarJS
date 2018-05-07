@@ -76,6 +76,7 @@ function lnrDatePickerController($scope, $translate) {
   };
 
   function postLink(){
+    var active = 'js-datepicker-opened';
     $scope.el.dateRangePicker({
       autoClose: true,
       showTopbar: false,
@@ -96,8 +97,10 @@ function lnrDatePickerController($scope, $translate) {
       lnrScrollWindow: vm.dateScrollContainer || '',
 
       extraClass: 'date-picker-wrapper--ngDialog date-picker-wrapper--two-months'
+    }).bind('datepicker-opened', function () {
+      $scope.el.addClass(active);
     }).bind('datepicker-change', function (event, obj) {
-      vm.updateData(obj.date1, obj.date2);
+        vm.updateData(obj.date1, obj.date2);
     }).bind('datepicker-first-date-selected', function (event, obj) {
       vm.clearData();
       setFirstDate(obj.date1);
@@ -106,6 +109,7 @@ function lnrDatePickerController($scope, $translate) {
         setEndDate(new Date(obj.date1));
         vm.updateData(obj.date1, obj.date2);
       }
+      $scope.el.removeClass(active);
     });
 
     //TODO: make services for this
@@ -170,6 +174,11 @@ function lnrDatePickerController($scope, $translate) {
       }
       return false;
     }
+
+    // add close event, if we click on trigger object when calendar is open
+    $scope.el.on('click', function (e) {
+      if ($(this).hasClass(activeClass)) $scope.el.dateRange.close();
+    });
 
     // save this data, because mdDialog destroys elements before $onDestroy method
     $scope.el.dateRange = $scope.el.data('dateRangePicker');
