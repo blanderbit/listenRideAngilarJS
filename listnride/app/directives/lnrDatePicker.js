@@ -177,7 +177,7 @@ function lnrDatePickerController($scope, $translate) {
 
     // add close event, if we click on trigger object when calendar is open
     $scope.el.on('click', function (e) {
-      if ($(this).hasClass(activeClass)) $scope.el.dateRange.close();
+      if ($(this).hasClass(active)) $scope.el.dateRange.close();
     });
 
     // save this data, because mdDialog destroys elements before $onDestroy method
