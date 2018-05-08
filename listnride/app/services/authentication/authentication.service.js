@@ -205,6 +205,7 @@ angular.
         };
 
         signupDialog.createUser = function() {
+          console.log(retrieveLocale());
           var user = {
             'user': {
               'email': signupDialog.email,
