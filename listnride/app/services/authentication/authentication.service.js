@@ -23,27 +23,40 @@ angular.
       };
 
       var retrieveLocale = function() {
-        var language = "en"; // Default language
+        // var language = "en"; // Default language
+        // var availableLanguages = ["de", "en", "nl", "it", "es"];
+        // var browserLanguage = navigator.language.replace(/-.*$/,""); // Default browser language
+        // var retrievedLanguage = $localStorage.selectedLanguage; // Saved language
+        // var url = window.location.host.split('.');
+        // var urlLanguage = url[url.length-1]; // Domain name language
+
+        // if (url.indexOf("localhost:8080") < 0 && availableLanguages.indexOf(urlLanguage) >= 0) {
+        //   browserLanguage = urlLanguage;
+        // }
+
+        // if(!_.isEmpty(browserLanguage) && browserLanguage !== 'en' && retrievedLanguage === 'en' || _.isEmpty(retrievedLanguage) ) {
+        //   language = browserLanguage;
+        // } else {
+        //   language = retrievedLanguage;
+        // }
+
+        // if (availableLanguages.indexOf(language) >= 0) {
+        //   return language;
+        // } else {
+        //   return 'en';
+        // }
+
+        // Set default language to english
+        var language = "en";
+        // Define all available languages
         var availableLanguages = ["de", "en", "nl", "it", "es"];
-        var browserLanguage = navigator.language.replace(/-.*$/,""); // Default browser language
-        var retrievedLanguage = $localStorage.selectedLanguage; // Saved language
         var url = window.location.host.split('.');
-        var urlLanguage = url[url.length-1]; // Domain name language
+        // Language based on tld
+        var urlLanguage = url[url.length-1];
 
+        // If we're outside localhost, use tld-language (if part of available languages)
         if (url.indexOf("localhost:8080") < 0 && availableLanguages.indexOf(urlLanguage) >= 0) {
-          browserLanguage = urlLanguage;
-        }
-
-        if(!_.isEmpty(browserLanguage) && browserLanguage !== 'en' && retrievedLanguage === 'en' || _.isEmpty(retrievedLanguage) ) {
-          language = browserLanguage;
-        } else {
-          language = retrievedLanguage;
-        }
-
-        if (availableLanguages.indexOf(language) >= 0) {
-          return language;
-        } else {
-          return 'en';
+          language = urlLanguage;
         }
       };
 
