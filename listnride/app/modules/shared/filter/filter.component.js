@@ -10,7 +10,8 @@ angular.module('filter',[])
       initialBikes: '<',
       bikes: '=',
       populateBikes: '<',
-      categorizedBikes: '='
+      categorizedBikes: '=',
+      limit: '='
     },
     controller: [
       '$translate',
@@ -57,7 +58,8 @@ angular.module('filter',[])
 
         // Wait for bikes to be actually provided
         filter.$onChanges = function (changes) {
-          // TODO: initializeBrandFilter inited one time here and one time in applyFilters. Remove unnecessary init @moritz
+          // TODO: initializeBrandFilter inited one time here and one time in applyFilters.
+          // Remove unnecessary init @moritz
           if (filter.initialBikes != undefined) {
             filter.bikes = filter.initialBikes;
             initializeBrandFilter();
@@ -71,9 +73,12 @@ angular.module('filter',[])
         };
 
         function onDateChange() {
-          filter.updateState({ start_date: filter.currentDate.start_date, duration: filter.currentDate.duration });
-          applyFilters();
-          filter.populateBikes();
+          filter.updateState({
+            start_date: filter.currentDate.start_date,
+            duration: filter.currentDate.duration
+          }, function() {
+            filter.populateBikes();
+          });
         };
 
         function onSizeChange() {
@@ -82,13 +87,15 @@ angular.module('filter',[])
         };
 
         function clearFilters() {
-          filter.currentSizes = [-1];
-          filter.currentCategories = [];
-          filter.openSubs = [];
-          filter.currentBrand = filter.brands[0];
-          clearDate();
-          clearState();
-          applyFilters();
+          clearState(function(){
+            filter.currentSizes = [-1];
+            filter.currentCategories = [];
+            filter.openSubs = [];
+            filter.currentBrand = filter.brands[0];
+            filter.limit = 15;
+            clearDate();
+            applyFilters();
+          });
         };
 
         function onCategoryChange() {
@@ -96,14 +103,14 @@ angular.module('filter',[])
           applyFilters();
         };
 
-        function clearState() {
+        function clearState(cb) {
           filter.updateState({
             brand: '',
             sizes: '',
             start_date: '',
             duration: '',
             categories: ''
-          });
+          }, cb);
         }
 
         function initializeBrandFilter() {
@@ -130,10 +137,7 @@ angular.module('filter',[])
         }
 
         function applyFilters() {
-          // wait for bikes in $onChanges
-          if (!filter.initialBikes) return;
-
-          var filteredBikes = filter.initialBikes;
+          var filteredBikes = filter.initialBikes.slice();
           filteredBikes = filterBrands(filteredBikes);
           filteredBikes = filterSizes(filteredBikes);
           filteredBikes = filterCategories(filteredBikes);

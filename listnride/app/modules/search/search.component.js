@@ -61,15 +61,16 @@ angular.module('search',[]).component('search', {
         // invocations
         populateBikes(search.location);
         setMetaTags(search.location);
-        initializeGoogleMap();
       };
 
-      search.updateState = function(params) {
+      search.updateState = function(params, cb) {
         $state.go(
           $state.current,
           params,
           { notify: false }
-        );
+        ).then(function(){
+          if (typeof cb === "function") cb();
+        });
       }
 
       function onMapClick () {
@@ -145,14 +146,16 @@ angular.module('search',[]).component('search', {
         );
       }
 
-      function populateBikes(location) {
+      function populateBikes(location, cb) {
         search.bikes = undefined;
         location = location ? location : $stateParams.location;
 
         var urlRequest = "/rides?location=" + location;
-        if (search.initialValues.date && search.initialValues.date.start_date) {
-          urlRequest += "&start_date=" + search.initialValues.date.start_date;
-          urlRequest += "&duration=" + search.initialValues.date.duration;
+
+        // if date param exist in url, add this to url request
+        if ($stateParams.start_date && $stateParams.duration) {
+          urlRequest += "&start_date=" + $stateParams.start_date;
+          urlRequest += "&duration=" + $stateParams.duration;
         }
 
         api.get(urlRequest).then(function(response) {
@@ -165,6 +168,7 @@ angular.module('search',[]).component('search', {
           search.latLng = response.data.location.geometry.location;
           search.locationBounds = response.data.location.geometry.viewport;
 
+          initializeGoogleMap();
           NgMap.getMap({id: "searchMap"}).then(function(map) {
             map.fitBounds(correctBounds());
             map.setZoom(map.getZoom() + 1);
@@ -180,6 +184,8 @@ angular.module('search',[]).component('search', {
             search.mapOptions.lng = 10.4515;
             // search.mapOptions.zoom = 4;
           }
+
+          if (typeof cb === "function") cb(search.bikes);
         }, function(error) {
         });
       }
@@ -223,7 +229,7 @@ angular.module('search',[]).component('search', {
       }
 
       function initializeGoogleMap() {
-        // TODO: timeout needs to be replaced with a better solution
+        // TODO: timeout needs to be replaced with a better solution with Markers
         $timeout(function(){
           NgMap.getMap({ id: "searchMap" }).then(function (map) {
             search.map = map;
