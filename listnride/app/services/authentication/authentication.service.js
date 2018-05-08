@@ -58,6 +58,8 @@ angular.
         if (url.indexOf("localhost:8080") < 0 && availableLanguages.indexOf(urlLanguage) >= 0) {
           language = urlLanguage;
         }
+
+        return language;
       };
 
       // methods for signup controller
