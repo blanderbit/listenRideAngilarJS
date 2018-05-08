@@ -6,7 +6,7 @@
   <md-menu md-position-mode="target bottom">
     <md-button
       class="md-lined lnr-no-margin"
-      ng-click="$mdOpenMenu($event)"
+      ng-click="$mdOpenMenu($event); filter.closeDateRange()"
     >
       <span ng-if="filter.currentSizes.length < 1 || filter.currentSizes.length <= 1 && filter.currentSizes[0] == -1">
         {{ 'search.number-of-bikes' | translate }}
@@ -28,7 +28,7 @@
   <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
     <md-button
       class="md-lined lnr-no-margin"
-      ng-click="$mdOpenMenu($event)"
+      ng-click="$mdOpenMenu($event); filter.closeDateRange()"
     >
       {{ 'search.category' | translate }}
     </md-button>

@@ -96,11 +96,14 @@ angular.
 
         var uploadAddress = function() {
           var address = {
-            "user": {
-              "street": verificationDialog.newUser.street, 
-              "zip": verificationDialog.newUser.zip,
-              "city": verificationDialog.newUser.city,
-              "country": verificationDialog.newUser.country
+            'locations': {
+              '0': {
+                "street": verificationDialog.newUser.street,
+                "zip": verificationDialog.newUser.zip,
+                "city": verificationDialog.newUser.city,
+                "country": verificationDialog.newUser.country,
+                "primary": true
+              }
             }
           };
 

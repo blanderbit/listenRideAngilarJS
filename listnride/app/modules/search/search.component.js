@@ -7,7 +7,7 @@ Structure of bike search component:
 Search
       |__Filter
       |__Cardgrid
-                 |__Sorter   
+                 |__Sorter
 */
 
 angular.module('search',[]).component('search', {
@@ -29,6 +29,7 @@ angular.module('search',[]).component('search', {
         search.onMapClick = onMapClick;
         search.onBikeHover = onBikeHover;
         search.populateBikes = populateBikes;
+        search.addMoreItemsLimit = addMoreItemsLimit;
         search.filteredBikes = [];
         search.initialValues = {
           amount: '',
@@ -40,7 +41,7 @@ angular.module('search',[]).component('search', {
             "duration": ''
           }
         };
-        
+
         // get initial filter values from url
         search.initialValues.sizes = $stateParams.sizes.split(',');
         search.initialValues.brand = $stateParams.brand;
@@ -50,26 +51,28 @@ angular.module('search',[]).component('search', {
           "duration": $stateParams.duration
         };
 
+        search.limit = 15;
         search.mapOptions = {
           lat: 40,
           lng: -74,
           zoom: 5
         };
-        
+
         // invocations
         populateBikes(search.location);
         setMetaTags(search.location);
-        initializeGoogleMap();
       };
 
-      search.updateState = function(params) {
+      search.updateState = function(params, cb) {
         $state.go(
           $state.current,
           params,
           { notify: false }
-        );
+        ).then(function(){
+          if (typeof cb === "function") cb();
+        });
       }
-      
+
       function onMapClick () {
         if (search.map) {
           search.map.hideInfoWindow('searchMapWindow');
@@ -88,7 +91,7 @@ angular.module('search',[]).component('search', {
           }
         }
       }
-        
+
       function showBikeWindow(evt, bikeId) {
         if (search.map) {
           search.selectedBike = search.bikes.find(function(bike) {
@@ -143,14 +146,16 @@ angular.module('search',[]).component('search', {
         );
       }
 
-      function populateBikes(location) {
+      function populateBikes(location, cb) {
         search.bikes = undefined;
         location = location ? location : $stateParams.location;
 
         var urlRequest = "/rides?location=" + location;
-        if (search.initialValues.date && search.initialValues.date.start_date) {
-          urlRequest += "&start_date=" + search.initialValues.date.start_date;
-          urlRequest += "&duration=" + search.initialValues.date.duration;
+
+        // if date param exist in url, add this to url request
+        if ($stateParams.start_date && $stateParams.duration) {
+          urlRequest += "&start_date=" + $stateParams.start_date;
+          urlRequest += "&duration=" + $stateParams.duration;
         }
 
         api.get(urlRequest).then(function(response) {
@@ -163,6 +168,7 @@ angular.module('search',[]).component('search', {
           search.latLng = response.data.location.geometry.location;
           search.locationBounds = response.data.location.geometry.viewport;
 
+          initializeGoogleMap();
           NgMap.getMap({id: "searchMap"}).then(function(map) {
             map.fitBounds(correctBounds());
             map.setZoom(map.getZoom() + 1);
@@ -178,6 +184,8 @@ angular.module('search',[]).component('search', {
             search.mapOptions.lng = 10.4515;
             // search.mapOptions.zoom = 4;
           }
+
+          if (typeof cb === "function") cb(search.bikes);
         }, function(error) {
         });
       }
@@ -187,9 +195,17 @@ angular.module('search',[]).component('search', {
         if (!_.isEmpty(search.locationBounds)) {
           bounds = extendBounds(bounds, search.locationBounds.northeast.lat, search.locationBounds.northeast.lng);
           bounds = extendBounds(bounds, search.locationBounds.southwest.lat, search.locationBounds.southwest.lng);
+          bounds = extendBounds(bounds, search.latLng.lat, search.latLng.lng);
         }
 
-        for (var i = 0; i < 3; i++) { bounds = extendBounds(bounds, search.bikes[i].lat_rnd, search.bikes[i].lng_rnd) }
+        var i = 0;
+        _.forEach(search.bikes, function(bike) {
+          if (bike.priority == true) return;
+          bounds = extendBounds(bounds, bike.lat_rnd, bike.lng_rnd);
+          i++;
+          if (i > 3) return false;
+        });
+
         return bounds
       }
 
@@ -211,15 +227,21 @@ angular.module('search',[]).component('search', {
         ngMeta.setTitle($translate.instant("search.meta-title", data));
         ngMeta.setTag("description", $translate.instant("search.meta-description", data));
       }
-      
+
       function initializeGoogleMap() {
-        // TODO: timeout needs to be replaced with a better solution
+        // TODO: timeout needs to be replaced with a better solution with Markers
         $timeout(function(){
           NgMap.getMap({ id: "searchMap" }).then(function (map) {
             search.map = map;
           });
         }, 0);
       }
+
+      function addMoreItemsLimit() {
+        if (!search.bikes) return;
+        if (search.limit < search.bikes.length) search.limit += 15;
+      }
+
     }
   ]
 });

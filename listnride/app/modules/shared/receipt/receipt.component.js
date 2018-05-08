@@ -19,7 +19,9 @@ angular.module('receipt', []).component('receipt', {
 
       this.$onChanges = function (changes) {
         if (changes.user) {
-          receipt.balance = changes.user.currentValue.balance;
+          if (changes.user.currentValue.balance != undefined) {
+            receipt.balance = changes.user.currentValue.balance;
+          }
         }
         updatePrices();
       };
@@ -34,21 +36,14 @@ angular.module('receipt', []).component('receipt', {
 
       function setPrices() {
         var prices = price.calculatePrices(receipt.startDate, receipt.endDate, receipt.prices);
-        console.log(receipt.startDate);
-        console.log(receipt.endDate);
-        console.log(prices);
         receipt.duration = date.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
         receipt.durationDays = date.durationDays(receipt.startDate, receipt.endDate);
         receipt.discount = prices.subtotal - prices.subtotalDiscounted;
         receipt.discountRelative = receipt.discount / receipt.durationDays;
         receipt.subtotal = prices.subtotal;
-        receipt.subtotalDiscounted = prices.subtotalDiscounted
+        receipt.subtotalDiscounted = prices.subtotalDiscounted;
         receipt.lnrFee = prices.serviceFee;
-        console.log(prices.total);
-        console.log(receipt.balance);
         receipt.total = Math.max(prices.total - receipt.balance, 0);
-        console.log(Math.max(prices.total - receipt.balance, 0));
-        console.log(receipt.total);
       };
 
       function setDefaultPrices() {

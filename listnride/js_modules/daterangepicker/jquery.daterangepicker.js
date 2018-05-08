@@ -2,6 +2,7 @@
 // author : Chunlong Liu
 // license : MIT
 // www.jszen.com
+// Documentation: http://longbill.github.io/jquery-date-range-picker/
 
 (function (factory) {
 	if (typeof define === 'function' && define.amd) {
@@ -785,7 +786,7 @@
 				format: 'YYYY-MM-DD',
 				separator: ' to ',
 				language: 'auto',
-				startOfWeek: 'sunday',// or monday
+				startOfWeek: 'sunday', // or monday
 				getValue: function()
 				{
 					return $(this).val();
@@ -807,9 +808,9 @@
 				showShortcuts: false,
 				shortcuts:
 				{
-					//'prev-days': [1,3,5,7],
+					// 'prev-days': [1,3,5,7],
 					// 'next-days': [3,5,7],
-					//'prev' : ['week','month','year'],
+					// 'prev' : ['week','month','year'],
 					// 'next' : ['week','month','year']
 				},
 				customShortcuts : [],
@@ -842,9 +843,13 @@
 				customCloseAnimation: null,
 				customArrowPrevSymbol: null,
 				customArrowNextSymbol: null,
+
 				lnrIsWidthStatic: false,
 				lnrShowTimeDom: true,
-				lnrSingleMonthMinWidth: 480
+				lnrSingleMonthMinWidth: 480,
+				lnrJumpToSelected: true,
+				lnrContainer: '',
+				lnrScrollWindow: '',
 			},opt);
 
 		opt.start = false;
@@ -858,8 +863,11 @@
 		//if it is a touch device, hide hovering tooltip
 		if (opt.isTouchDevice) opt.hoveringTooltip = false;
 
-		//show one month on mobile devices
-		if (opt.singleMonth == 'auto') opt.singleMonth = $(window).width() < opt.lnrSingleMonthMinWidth;
+		// show one month on mobile devices
+		if (opt.singleMonth == 'auto') {
+			var windowContainer = opt.lnrContainer ? opt.lnrContainer : window;
+			opt.singleMonth = $(windowContainer).width() < opt.lnrSingleMonthMinWidth;
+		}
 		if (opt.singleMonth) opt.stickyMonths = false;
 
 		if (!opt.showTopbar) opt.autoClose = true;
@@ -1245,17 +1253,43 @@
 		}
 
 
-		function calcPosition()
-		{
+		function calcPosition() {
+			var offset = $(self).offset();
+
+			function getSelfOffsetTop(isRelative){
+				var isRelative = isRelative ? isRelative : false;
+				var topOffset = 0;
+
+				// TODO: Add logic for smart date-picker position, it date-picker parent has relative position
+				// Author: Yuriy Byts
+				if (isRelative) {
+					var containerOffset = $(opt.container).offset();
+					var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+					var selfPosTop = $(self).offset().top + $(self).height();
+					// date-picker height. it's constant, because we can't ask calendar height before opening
+					var PICKER_HEIGHT = 330;
+
+					topOffset = offset.top - containerOffset.top + $(self).outerHeight() + 4;
+					// show on top if it's enough space on there
+					if (h - selfPosTop < PICKER_HEIGHT && $(self).offset().top >= PICKER_HEIGHT) {
+						topOffset -= PICKER_HEIGHT + $(self).height();
+					}
+
+				} else {
+					topOffset = offset.top + $(self).outerHeight() + parseInt($('body').css('border-top') || 0, 10);
+				}
+
+				return topOffset;
+			}
+
 			if (!opt.inline)
 			{
-				var offset = $(self).offset();
 				if ($(opt.container).css('position') == 'relative')
 				{
 					var containerOffset = $(opt.container).offset();
 					box.css(
 						{
-							top: offset.top - containerOffset.top + $(self).outerHeight() + 4,
+							top: getSelfOffsetTop(true),
 							left: offset.left - containerOffset.left
 						});
 				}
@@ -1265,7 +1299,7 @@
 					{
 						box.css(
 							{
-								top: offset.top+$(self).outerHeight() + parseInt($('body').css('border-top') || 0,10 ),
+								top: getSelfOffsetTop(),
 								left: offset.left
 							});
 					}
@@ -1273,7 +1307,7 @@
 					{
 						box.css(
 							{
-								top: offset.top+$(self).outerHeight() + parseInt($('body').css('border-top') || 0,10 ),
+								top: getSelfOffsetTop(),
 								left: offset.left + $(self).width() - box.width() - 16
 							});
 					}
@@ -1288,23 +1322,22 @@
 		}
 
 		function open(animationTime)
-		{	
+		{
 			calcPosition();
 			redrawDatePicker();
 			checkAndSetDefaultValue();
-			if (opt.customOpenAnimation)
-			{
+
+			if (opt.customOpenAnimation) {
 				opt.customOpenAnimation.call(box.get(0), function()
 				{
 					$(self).trigger('datepicker-opened', {relatedTarget: box});
 				});
-			}
-			else
-			{
+			} else {
 				box.slideDown(animationTime, function(){
 					$(self).trigger('datepicker-opened', {relatedTarget: box});
 				});
 			}
+
 			$(self).trigger('datepicker-open', {relatedTarget: box});
 			showGap();
 			updateCalendarWidth();
@@ -1989,11 +2022,19 @@
 				renderTime('time1', date1);
 
 			}
-			showMonth(date1,'month1');
-			if (opt.singleMonth !== true) {
-				var date2 = nextMonth(date1);
-				showMonth(date2, 'month2');
+			if (opt.lnrJumpToSelected) {
+				showMonth(date1, 'month1');
+				if (opt.singleMonth !== true) {
+					var date2 = nextMonth(date1);
+					showMonth(date2, 'month2');
+				}
+			} else {
+				// redraw without month changes
+				redrawDatePicker();
+				updateSelectableRange();
+				bindDayEvents();
 			}
+
 			showGap();
 			showSelectedInfo();
 			autoclose();
@@ -2280,7 +2321,7 @@
 
 			}
 			//+'</div>'
-			if (opt.lnrShowTimeDom) 
+			if (opt.lnrShowTimeDom)
 			{
 				html +=	'<div style="clear:both;height:0;font-size:0;"></div>' +
 					'<div class="time">' +
@@ -2483,7 +2524,7 @@
 		}
 
 		function toLocalTimestamp(t)
-		{	
+		{
 			if (moment.isMoment(t)) t = t.toDate().getTime();
 			if (typeof t == 'object' && t.getTime) t = t.getTime();
 			if (typeof t == 'string' && !t.match(/\d{13}/)) t = moment(t,opt.format).toDate().getTime();

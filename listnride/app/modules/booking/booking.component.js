@@ -18,9 +18,13 @@ angular.module('booking', [])
         var btClient;
         var btPpInstance;
 
-        booking.startDate = new Date($stateParams.startDate);
-        booking.endDate = new Date($stateParams.endDate);
         booking.bikeId = $stateParams.bikeId;
+        booking.shopBooking = $stateParams.shop;
+
+        // if (!booking.shopBooking) {
+          booking.startDate = new Date($stateParams.startDate);
+          booking.endDate = new Date($stateParams.endDate);
+        // }
 
         booking.user = {};
         booking.phoneConfirmed = 'progress';
@@ -29,7 +33,6 @@ angular.module('booking', [])
         booking.tabsDisabled = false;
         booking.voucherCode = "";
         booking.expiryDate = "";
-        booking.shopBooking = $stateParams.shop;
 
         var oldExpiryDateLength = 0;
         var expiryDateLength = 0;
@@ -79,9 +82,6 @@ angular.module('booking', [])
             booking.endTime = 18;
             booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
             booking.total = booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
-            console.log("date updated");
-            console.log(booking.startDate);
-            console.log(booking.subtotal);
           }
           // TODO: REMOVE REDUNDANT PRICE CALUCLATION CODE
         }
@@ -107,6 +107,10 @@ angular.module('booking', [])
           var date = new Date(booking[slotDate]);
           date.setHours(booking[slotTime], 0, 0, 0);
           booking[slotDate] = date;
+          if (!validDates()) {
+            booking.startDate = "Invalid Date";
+            booking.endDate = "Invalid Date";
+          }
           // dateChange(booking.startDate, booking.endDate);
         };
 
@@ -140,7 +144,7 @@ angular.module('booking', [])
         };
 
         function validDates() {
-          return true;
+          return booking.endDate != "Invalid Date" && booking.startDate.getTime() < booking.endDate.getTime();
         }
 
         booking.resendSms = function() {
@@ -184,15 +188,18 @@ angular.module('booking', [])
         });
 
         booking.saveAddress = function() {
-          var data = {
-            "user": {
-              "street": booking.user.street,
-              "zip": booking.user.zip,
-              "city": booking.user.city,
-              "country": booking.user.country
+          var address = {
+            'locations': {
+              '0': {
+                "street": booking.user.street,
+                "zip": booking.user.zip,
+                "city": booking.user.city,
+                "country": booking.user.country,
+                "primary": true
+              }
             }
           };
-          api.put('/users/' + $localStorage.userId, data).then(
+          api.put('/users/' + $localStorage.userId, address).then(
             function (success) {
               booking.nextTab();
             },

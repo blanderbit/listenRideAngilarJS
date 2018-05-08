@@ -37,7 +37,7 @@
         <br>
         <div layout="row" layout-align="start center" flex layout-xs="column">
           <md-input-container flex-xs="100">
-            <label>Date Range</label>
+            <label>{{ 'shared.duration' | translate }}</label>
             <input-range
               lnr-date-picker
               lnr-single-input
@@ -45,6 +45,8 @@
               disabled-dates="calendar.parent.bike.availabilities"
               requests="calendar.parent.bike.requests"
               date-on-change="calendar.parent.updateDate"
+              date-container="'.booking__daterange-focus'"
+              date-scroll-container="'.booking__body'"
             >
             </input-range>
           </md-input-container>
