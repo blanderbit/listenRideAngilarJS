@@ -660,7 +660,8 @@
     "info-subtotal": "This is the regular daily price<br>times the amount of days you want<br>to rent the bike.",
     "info-discount": "Average daily discount you<br>get per day by renting out<br>for a longer period of time.",
     "info-service-fee": "The service fee is<br>used for providing<br>listnride. It includes VAT.",
-    "info": "In the calendar above click first<br>on the day you wish to rent<br>out the bike, and second on<br>the day you want to return it."
+    "info": "In the calendar above click first<br>on the day you wish to rent<br>out the bike, and second on<br>the day you want to return it.",
+    "info-without-calendar": "In the calendar above click first<br>on the day you wish to rent<br>out the bike, and second on<br>the day you want to return it."
   },
   "list": {
     "edit-bike": "Edit Bike",

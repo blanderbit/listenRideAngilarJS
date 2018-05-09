@@ -7,7 +7,8 @@ angular.module('receipt', []).component('receipt', {
     endDate: '<',
     invalidDays: '<',
     prices: '<',
-    user: '<'
+    user: '<',
+    withoutCalendar: '<?'
   },
   controller: [
       'date',
