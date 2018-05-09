@@ -1015,6 +1015,12 @@ home .section {
   margin-top: 80px;
 }
 
+.highlight-section {
+  margin-top: 80px;
+  background-color: rgb(122, 178, 248);
+  height: 250px;
+}
+
 #listBike {
   height: 320px;
   padding: 24px 0;
@@ -2441,4 +2447,66 @@ md-icon[md-font-icon].fa--lh20 {
   md-menu-content {
     max-height: auto;
   }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  NEWSLETTER
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-form {
+  width: 100%;
+}
+
+.lnr-form input {
+  background-color: #FFFFFF;
+  color: #333333;
+  border-radius: 4px;
+  border-width: 0;
+  height: 40px;
+  padding: 0 5px;
+  width: 70%;
+}
+
+.lnr-form .submit-button {
+  background-color: #FFFFFF;
+  color: rgb(72, 190, 132);
+  font-weight: 600;
+  margin: 0 8px;
+  width: 20%;
+}
+
+#email-form {
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+@media (max-width:599px) {
+  .lnr-form input {
+    width: 100%;
+  }
+  .lnr-form .submit-button {
+    margin: 10px 0;
+    width: 100%;
+  }     
+}
+
+.lnr-form .w-hidden {
+  display: none;
+}
+
+.lnr-meta {
+  color: #FFFFFF;
+}
+
+.w-form-done {
+  display: none;
+  padding: 20px;
+  text-align: center;
+  background-color: #dddddd;
+}
+.w-form-fail {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffdede;
 }
