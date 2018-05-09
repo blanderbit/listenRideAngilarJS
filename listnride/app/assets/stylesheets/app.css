@@ -2433,6 +2433,16 @@ md-icon[md-font-icon].fa--lh20 {
   width: 400px;
 }
 
+.md-button.md-menu__close-btn {
+  padding: 0 5px;
+  margin: 0;
+  height: auto;
+  min-height: auto;
+  text-align: right;
+  cursor: pointer;
+  font-size: 18px;
+}
+
 @media (max-width: 599px) {
   .filter__category {
     width: 100%;
