@@ -629,7 +629,7 @@
     "default-placeholder": "Wo willst du ein Rad ausleihen?"
   },
   "search": {
-    "no-bikes": "Leider sind an diesem Ort noch keine Räder vorhanden. Aber wir wachsen schnell, vielleicht gibt es bald schon welche! Wenn du magst, kannst du auch <a href=\\\"/listing-a-bike\\\">dein eigenes Rad einstellen</a> oder alternativ nach einer anderen Stadt oder Adresse in der Nähe suchen.",
+    "no-bikes": "Leider sind an diesem Ort noch keine Räder vorhanden. Aber wir wachsen schnell, vielleicht gibt es bald schon welche! Wenn du magst, kannst du auch <a href=\"/listing-a-bike\">dein eigenes Rad einstellen</a> oder alternativ nach einer anderen Stadt oder Adresse in der Nähe suchen.",
     "all-sizes": "Alle Größen",
     "bikes-in": "Fahrräder in",
     "meta-title": "Miete das perfekte Rad in {{location}}.",
