@@ -4,7 +4,8 @@
       <span>{{ 'shared.duration' | translate }}</span>
       <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
       <md-tooltip md-direction="right">
-        <span translate="calendar.info"></span>
+        <span ng-if="!receipt.withoutCalendar" translate="calendar.info"></span>
+        <span ng-if="receipt.withoutCalendar" translate="calendar.info"></span>
       </md-tooltip>
     </div>
     <span>{{ receipt.duration }}</span>

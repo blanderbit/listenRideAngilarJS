@@ -646,7 +646,8 @@
     "info-subtotal": "Questo è il prezzo giornaliero regolare<br>per il numero di giorni che desideri<br>noleggiare la bicicletta.",
     "info-discount": "Lo sconto giornaliero medio<br>che ottieni al giorno noleggiando<br>per un periodo di tempo più lungo.",
     "info-service-fee": "La tassa è <br>data dal servizio offerto da<br>listnride. Comprende l'IVA.",
-    "info": "Nel calendario precedente fare clic prima sul<br>giorno in cui vuoi noleggiare <br>la bicicletta, e in secondo luogo sul<br>giorno in cui desideri restituirla."
+    "info": "Nel calendario precedente fare clic prima sul<br>giorno in cui vuoi noleggiare <br>la bicicletta, e in secondo luogo sul<br>giorno in cui desideri restituirla.",
+    "info-without-calendar": "Nel calendario precedente fare clic prima sul<br>giorno in cui vuoi noleggiare <br>la bicicletta, e in secondo luogo sul<br>giorno in cui desideri restituirla."
   },
   "list": {
     "edit-bike": "Modifica la bicicletta",
