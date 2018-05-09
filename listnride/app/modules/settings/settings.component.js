@@ -549,6 +549,7 @@ angular.module('settings',[]).component('settings', {
       function prepareData() {
         var primary = settings.user.locations.primary;
         var billing = settings.user.locations.billing;
+        var user_billing_location = {};
 
         var user_data = {
           "description": settings.user.description,
@@ -564,18 +565,20 @@ angular.module('settings',[]).component('settings', {
           "primary": true
         };
 
-        var user_billing_location = {
-          "id": billing.id,
-          "first_name": billing.first_name,
-          "last_name": billing.last_name,
-          "street": billing.street,
-          "zip": billing.zip,
-          "city": billing.city,
-          "country": billing.country,
-          "name": billing.name || '',
-          "vat": billing.vat || '',
-          "primary": false
-        };
+        if (settings.user.has_billing) {
+          user_billing_location = {
+            "id": billing.id,
+            "first_name": billing.first_name,
+            "last_name": billing.last_name,
+            "street": billing.street,
+            "zip": billing.zip,
+            "city": billing.city,
+            "country": billing.country,
+            "name": billing.name || '',
+            "vat": billing.vat || '',
+            "primary": false
+          };
+        }
 
         var locations = [user_primary_location];
 
