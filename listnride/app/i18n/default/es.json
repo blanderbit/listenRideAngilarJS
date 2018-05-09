@@ -235,6 +235,9 @@
       "moeve": {
         "meta-title": "Alquila y prueba las bicicletas Moeve en Berlín y Múnich",
         "meta-descr": "La bici con un sistema de conducción único: Cyfly de Moeve."
+      },
+      "rethink": {
+        "meta-title": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden"
       }
     },
     "about-us": {
@@ -306,7 +309,7 @@
     "details": {
       "tab": "2. Datos personales",
       "invoice-address": "Tu dirección de facturación",
-      "subtitle": "Here is a subline regarding your contact information.",
+      "subtitle": "Introduce tu dirección de facturación para solicitar una bicicleta",
       "verification": "Verificar",
       "send-sms": "Te enviaremos un SMS a tu teléfono",
       "check-phone": "Comprueba tu teléfono.",
@@ -326,10 +329,11 @@
       "invalid-name": "Please provide valid name",
       "card-number": "Número de tarjeta de crédito",
       "invalid-card": "Please provide a valid Card Number",
-      "invalid-card-number": "Card Number not valid",
+      "invalid-card-number": "número de la tarjeta inválido",
       "exp-month": "Exp. month",
       "invalid-month": "Month not valid",
       "invalid-year": "Year not valid",
+      "invalid-date": "Fecha inválida",
       "exp-year": "Exp. year",
       "exp-date": "Expira",
       "invalid-cvc": "CVC not valid",
