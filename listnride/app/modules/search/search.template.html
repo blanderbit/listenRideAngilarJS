@@ -27,18 +27,17 @@
         <span>{{ 'search.no-bikes' | translate }}</span>
       </div>
       <cardgrid
-               ng-repeat="filterBikes in search.categorizedFilteredBikes"
-               on-bike-hover="search.onBikeHover"
-               title="{{filterBikes.title}}"
-               limit="search.limit"
-               add-more-items-limit="search.addMoreItemsLimit"
-
-               categorized-bikes="search.categorizedFilteredBikes"
-               uncategorized-bikes="search.filteredBikes"
-               bikes="filterBikes.bikes"
-               location="search.latLng"
-               titles="search.titles"
-               card-index="$index">
+        ng-repeat="filterBikes in search.categorizedFilteredBikes"
+        on-bike-hover="search.onBikeHover"
+        title="{{filterBikes.title}}"
+        limit="search.limit"
+        add-more-items-limit="search.addMoreItemsLimit"
+        categorized-bikes="search.categorizedFilteredBikes"
+        uncategorized-bikes="search.filteredBikes"
+        bikes="filterBikes.bikes"
+        location="search.latLng"
+        titles="search.titles"
+        card-index="$index">
       </cardgrid>
       <!-- busy loader until bikes api resolves -->
       <div ng-show="search.bikes === undefined" flex layout="column" layout-align="center center">
