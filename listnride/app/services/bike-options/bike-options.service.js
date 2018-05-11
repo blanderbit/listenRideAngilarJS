@@ -48,169 +48,135 @@ angular.module('listnride')
         ];
       },
 
-      categoryOptions: function () {
-        return [
-          {value: 1, label: "city", iconFileName: "biketype_1.svg"},
-          {value: 2, label: "race", iconFileName: "biketype_2.svg"},
-          {value: 3, label: "all terrain", iconFileName: "biketype_3.svg"},
-          {value: 4, label: "kids", iconFileName: "biketype_4.svg"},
-          {value: 5, label: "electro", iconFileName: "biketype_5.svg"},
-          {value: 6, label: "special", iconFileName: "biketype_6.svg"}
-        ];
-      },
-
       allCategoriesOptions: function () {
         // Translate allCategoriesOptions fields (categories, subcategories)
         var categoriesTranslationKeys = [
-          "list.category.city",
+          "list.category.urban",
+          "list.subcategory.1.city-bike",
           "list.subcategory.1.dutch-bike",
-          "list.subcategory.1.touring-bike",
-          "list.subcategory.1.fixie",
           "list.subcategory.1.single-speed",
 
-          "list.category.race",
-          "list.subcategory.2.road-bike",
-          "list.subcategory.2.triathlon",
-          "list.subcategory.2.indoor",
+          "list.category.e-bike",
+          "list.subcategory.2.e-city-bike",
+          "list.subcategory.2.e-touring-bike",
+          "list.subcategory.2.e-cargo-bike",
+          "list.subcategory.2.e-mountain-bike",
+          "list.subcategory.2.e-road-bike",
+          "list.subcategory.2.e-folding-bike",
+          "list.subcategory.2.e-scooter",
+
+          "list.category.road",
+          "list.subcategory.3.road-bike",
+          "list.subcategory.3.triathlon-bike",
+          "list.subcategory.3.touring-bike",
+          "list.subcategory.3.fixed-gear-bike",
 
           "list.category.all-terrain",
-          "list.subcategory.3.tracking",
-          "list.subcategory.3.enduro",
-          "list.subcategory.3.freeride",
-          "list.subcategory.3.cross-country",
-          "list.subcategory.3.downhill",
-          "list.subcategory.3.cyclocross",
+          "list.subcategory.4.mtb-hardtail",
+          "list.subcategory.4.mtb-fullsuspension",
+          "list.subcategory.4.cyclocross-bike",
+          "list.subcategory.4.gravel-bike",
+
+          "list.category.transport",
+          "list.subcategory.5.cargo-bike",
+          "list.subcategory.5.bike-trailer",
+          "list.subcategory.5.bike-child-seat",
+          "list.subcategory.5.bike-car-rack",
+          "list.subcategory.5.bike-travel-bag",
 
           "list.category.kids",
-          "list.subcategory.4.city",
-          "list.subcategory.4.all-terrain",
-          "list.subcategory.4.road",
-
-          "list.category.electro",
-          "list.subcategory.5.pedelec",
-          "list.subcategory.5.e-bike",
+          "list.subcategory.6.city-bike",
+          "list.subcategory.6.all-terrain-bike",
+          "list.subcategory.6.road-bike",
+          "list.subcategory.6.bogie-wheel",
 
           "list.category.special",
           "list.subcategory.6.folding-bike",
-          "list.subcategory.6.tandem",
-          "list.subcategory.6.cruiser",
-          "list.subcategory.6.cargo-bike",
-          "list.subcategory.6.recumbent",
-          "list.subcategory.6.mono-bike",
+          "list.subcategory.6.recumbent-bike",
+          "list.subcategory.6.tandem-bike",
+          "list.subcategory.6.longtail-bike",
+          "list.subcategory.6.scooter"
         ];
 
         return $translate(categoriesTranslationKeys).then(function (translations) {
           return [
             {
               catId: 10,
-              name: translations["list.category.city"],
+              name: translations["list.category.urban"],
               iconFileName: "biketype_1.svg",
               subcategories: [
-                { id: 10, name: translations["list.subcategory.1.dutch-bike"] },
-                { id: 11, name: translations["list.subcategory.1.touring-bike"] },
-                { id: 12, name: translations["list.subcategory.1.fixie"] },
-                { id: 13, name: translations["list.subcategory.1.single-speed"] }
+                { id: 10, name: translations["list.subcategory.1.city-bike"] },
+                { id: 11, name: translations["list.subcategory.1.dutch-bike"] },
+                { id: 12, name: translations["list.subcategory.1.single-speed"] }
               ]
-            },
-            {
+            }, {
               catId: 20,
-              name: translations["list.category.race"],
+              name: translations["list.category.e-bike"],
               iconFileName: "biketype_2.svg",
               subcategories: [
-                { id: 20, name: translations["list.subcategory.2.road-bike"] },
-                { id: 21, name: translations["list.subcategory.2.triathlon"] },
-                { id: 22, name: translations["list.subcategory.2.indoor"] }
+                { id: 20, name: translations["list.subcategory.2.e-city-bike"] },
+                { id: 21, name: translations["list.subcategory.2.e-touring-bike"] },
+                { id: 22, name: translations["list.subcategory.2.e-cargo-bike"] },
+                { id: 23, name: translations["list.subcategory.2.e-mountain-bike"] },
+                { id: 24, name: translations["list.subcategory.2.e-road-bike"] },
+                { id: 25, name: translations["list.subcategory.2.e-folding-bike"] },
+                { id: 26, name: translations["list.subcategory.2.e-scooter"] }
               ]
-            },
-            {
+            }, {
               catId: 30,
-              name: translations["list.category.all-terrain"],
+              name: translations["list.category.road"],
               iconFileName: "biketype_3.svg",
               subcategories: [
-                { id: 30, name: translations["list.subcategory.3.tracking"] },
-                { id: 31, name: translations["list.subcategory.3.enduro"] },
-                { id: 32, name: translations["list.subcategory.3.freeride"] },
-                { id: 33, name: translations["list.subcategory.3.cross-country"] },
-                { id: 34, name: translations["list.subcategory.3.downhill"] },
-                { id: 35, name: translations["list.subcategory.3.cyclocross"] }
+                { id: 30, name: translations["list.subcategory.3.road-bike"] },
+                { id: 31, name: translations["list.subcategory.3.triathlon-bike"] },
+                { id: 32, name: translations["list.subcategory.3.touring-bike"] },
+                { id: 33, name: translations["list.subcategory.3.fixed-gear-bike"] }
               ]
-            },
-            {
+            }, {
               catId: 40,
-              name: translations["list.category.kids"],
+              name: translations["list.category.all-terrain"],
               iconFileName: "biketype_4.svg",
               subcategories: [
-                { id: 40, name: translations["list.subcategory.4.city"] },
-                { id: 41, name: translations["list.subcategory.4.all-terrain"] },
-                { id: 42, name: translations["list.subcategory.4.road"] }
+                { id: 40, name: translations["list.subcategory.4.mtb-hardtail"] },
+                { id: 41, name: translations["list.subcategory.4.mtb-fullsuspension"] },
+                { id: 42, name: translations["list.subcategory.4.cyclocross-bike"] },
+                { id: 43, name: translations["list.subcategory.4.gravel-bike"] }
               ]
-            },
-            {
+            }, {
               catId: 50,
-              name: translations["list.category.electro"],
+              name: translations["list.category.transport"],
               iconFileName: "biketype_5.svg",
               subcategories: [
-                { id: 50, name: translations["list.subcategory.5.pedelec"] },
-                { id: 51, name: translations["list.subcategory.5.e-bike"] }
+                { id: 50, name: translations["list.subcategory.5.cargo-bike"] },
+                { id: 51, name: translations["list.subcategory.5.bike-trailer"] },
+                { id: 52, name: translations["list.subcategory.5.bike-child-seat"] },
+                { id: 53, name: translations["list.subcategory.5.bike-car-rack"] },
+                { id: 54, name: translations["list.subcategory.5.bike-travel-bag"] }
               ]
-            },
-            {
+            }, {
               catId: 60,
+              name: translations["list.category.kids"],
+              iconFileName: "biketype_6.svg",
+              subcategories: [
+                { id: 60, name: translations["list.subcategory.6.city-bike"] },
+                { id: 61, name: translations["list.subcategory.6.all-terrain-bike"] },
+                { id: 62, name: translations["list.subcategory.6.road-bike"] },
+                { id: 63, name: translations["list.subcategory.6.bogie-wheel"] }
+              ]
+            }, {
+              catId: 70,
               name: translations["list.category.special"],
               iconFileName: "biketype_6.svg",
               subcategories: [
-                { id: 60, name: translations["list.subcategory.6.folding-bike"] },
-                { id: 61, name: translations["list.subcategory.6.tandem"] },
-                { id: 62, name: translations["list.subcategory.6.cruiser"] },
-                { id: 63, name: translations["list.subcategory.6.cargo-bike"] },
-                { id: 64, name: translations["list.subcategory.6.recumbent"] },
-                { id: 65, name: translations["list.subcategory.6.mono-bike"] }
+                { id: 70, name: translations["list.subcategory.6.folding-bike"] },
+                { id: 71, name: translations["list.subcategory.6.recumbent-bike"] },
+                { id: 72, name: translations["list.subcategory.6.tandem-bike"] },
+                { id: 73, name: translations["list.subcategory.6.longtail-bike"] },
+                { id: 74, name: translations["list.subcategory.6.scooter"] }
               ]
             }
           ];
         });
-      },
-
-      subcategoryOptions: function () {
-        return {
-          "1": [
-            {value: 0, label: "dutch-bike"},
-            {value: 1, label: "touring-bike"},
-            {value: 2, label: "fixie"},
-            {value: 3, label: "single-speed"}
-          ],
-          "2": [
-            {value: 0, label: "road-bike"},
-            {value: 1, label: "triathlon"},
-            {value: 2, label: "indoor"}
-          ],
-          "3": [
-            {value: 0, label: "tracking"},
-            {value: 1, label: "enduro"},
-            {value: 2, label: "freeride"},
-            {value: 3, label: "cross-country"},
-            {value: 4, label: "downhill"},
-            {value: 5, label: "cyclocross"}
-          ],
-          "4": [
-            {value: 0, label: "city"},
-            {value: 1, label: "all-terrain"},
-            {value: 2, label: "road"}
-          ],
-          "5": [
-            {value: 0, label: "pedelec"},
-            {value: 1, label: "e-bike"}
-          ],
-          "6": [
-            {value: 0, label: "folding-bike"},
-            {value: 1, label: "tandem"},
-            {value: 2, label: "cruiser"},
-            {value: 3, label: "cargo-bike"},
-            {value: 4, label: "recumbent"},
-            {value: 5, label: "mono-bike"},
-            {value: 6, label: "trailer"}
-          ]
-        };
       }
     };
   }]);
