@@ -40,12 +40,13 @@ angular.module('list', ['ngLocale']).component('list', {
       list.startImage = 1;
       list.sizeOptions = bikeOptions.sizeOptions();
       list.kidsSizeOptions = bikeOptions.kidsSizeOptions();
-      list.categoryOptions = bikeOptions.categoryOptions();
-      list.subcategoryOptions = bikeOptions.subcategoryOptions();
       list.accessoryOptions = bikeOptions.accessoryOptions();
       list.validateObj = {height: {min: 1000}, width: {min: 1500}, duration: {max: '5m'}};
       list.invalidFiles = {};
       list.businessUser = false;
+      bikeOptions.allCategoriesOptions().then(function (resolve) {
+        list.categoryOptions = resolve;
+      });
 
       var setBusinessForm = function() {
         if (authentication.isBusiness) {
@@ -55,6 +56,21 @@ angular.module('list', ['ngLocale']).component('list', {
         } else {
           list.businessUser = false;
         }
+      };
+
+      function subcategoryParent(subId) {
+        return _.find(list.categoryOptions, function(category) {
+          return _.find(category.subcategories, function(subcategory) {
+            return subcategory.id === subId
+          })
+        });
+      }
+
+      list.subcategoriesList = function (categoryId) {
+        if (!categoryId) return;
+        return _.find(list.categoryOptions, function(category) {
+          return category.catId === parseInt(categoryId);
+        }).subcategories.sort()
       };
 
       list.populateNewBikeData = function () {
@@ -108,8 +124,8 @@ angular.module('list', ['ngLocale']).component('list', {
               data.images = images;
               var prices = price.transformPrices(data.prices, data.discounts);
               data.size = parseInt(data.size);
-              data.mainCategory = (data.category + "").charAt(0);
-              data.subCategory = (data.category + "").charAt(1);
+              data.mainCategory = subcategoryParent(data.category).catId;
+              data.subCategory = data.category;
 
               // form data for edit bikes
               list.form = data;
@@ -146,7 +162,7 @@ angular.module('list', ['ngLocale']).component('list', {
           "ride[brand]": list.form.brand,
           "ride[description]": list.form.description,
           "ride[size]": list.form.size,
-          "ride[category]": list.form.mainCategory.concat(list.form.subCategory),
+          "ride[category]": list.form.subCategory,
           "ride[has_lock]": list.form.has_lock || false,
           "ride[has_helmet]": list.form.has_helmet || false,
           "ride[has_lights]": list.form.has_lights || false,
@@ -213,7 +229,7 @@ angular.module('list', ['ngLocale']).component('list', {
             "brand": list.form.brand,
             "description": list.form.description,
             "size": list.form.size,
-            "category": list.form.mainCategory.concat(list.form.subCategory),
+            "category": list.form.subCategory,
             "has_lock": list.form.has_lock || false,
             "has_helmet": list.form.has_helmet || false,
             "has_lights": list.form.has_lights || false,
@@ -363,8 +379,7 @@ angular.module('list', ['ngLocale']).component('list', {
 
       // check the categories
       list.isCategoryValid = function () {
-        return list.form.mainCategory !== undefined &&
-          list.form.subCategory !== undefined;
+        return list.form.subCategory !== undefined;
       };
 
       // check bikes details
@@ -406,7 +421,7 @@ angular.module('list', ['ngLocale']).component('list', {
       };
 
       list.categoryChange = function (oldCategory) {
-        if (parseInt(list.form.mainCategory) === 4 || parseInt(oldCategory) === 4) {
+        if (parseInt(list.form.mainCategory) === 40 || parseInt(oldCategory) === 40) {
           list.form.size = undefined;
         }
       };
