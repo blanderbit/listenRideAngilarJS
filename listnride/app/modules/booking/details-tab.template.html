@@ -71,8 +71,21 @@
             </md-input-container>
           </div>
           <div class="lnr-input-containers" layout="row" layout-xs="column">
-            <div flex>
-              <autocomplete
+            <!-- <div flex> -->
+              <md-input-container flex>
+                <label>{{ 'list.location.street-number' | translate }}</label>   
+                  <input
+                    required
+                    name="street"
+                    ng-disabled="details.parent.phoneConfirmed === 'success'"
+                    ng-model="details.parent.user.street"
+                    layout="column"
+                  >
+                <div ng-messages="details.parent.detailsForm.city.$error" role="alert">
+                  <div ng-message="required">{{ 'shared.required' | translate }}</div>
+                </div>
+              </md-input-container>
+              <!-- <autocomplete
                 autocomplete-id="details-address"
                 class="details-address"
                 layout="column"
@@ -84,8 +97,8 @@
                 place-changed="details.parent.fillAddress(place)"
                 error="details.parent.detailsForm.street.$error"
               >
-              </autocomplete>
-            </div>
+              </autocomplete> -->
+            <!-- </div> -->
 
             <md-input-container flex>
               <label>{{ 'forms.city' | translate }}</label>

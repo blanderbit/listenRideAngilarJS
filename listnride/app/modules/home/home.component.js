@@ -106,6 +106,10 @@ angular.module('home',[]).component('home', {
       home.onSearchClick = function() {
         $state.go('search', {location: home.location});
       };
+
+      home.newsletterSubmit = function() {
+        console.log("lol");
+      }  
     }
   ]
 });

@@ -51,7 +51,7 @@
     "slick-carousel": "^1.6.0"
   },
   "devDependencies": {
-    "angular-mocks": "^1.6.10",
+    "angular-mocks": "^1.7.0",
     "del": "^2.2.2",
     "event-stream": "^3.3.4",
     "gulp": "^3.9.1",

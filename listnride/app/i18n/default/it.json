@@ -227,6 +227,9 @@
       "moeve": {
         "meta-title": "Noleggia e prova VELLO E-Bikes a Berlino e a Monaco di Baviera",
         "meta-descr": "La bicicletta con l'esclusivo sistema di trasmissione - Cyfly di Moeve."
+      },
+      "rethink": {
+        "meta-title": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden"
       }
     },
     "about-us": {
@@ -298,7 +301,7 @@
     "details": {
       "tab": "2. Dati personali",
       "invoice-address": "Il tuo indirizzo di fatturazione ",
-      "subtitle": "Here is a subline regarding your contact information.",
+      "subtitle": "Si prega di inserire l'indirizzo di fatturazione per richiedere la bicicletta",
       "verification": "Si prega di verificare",
       "send-sms": "Ti invieremo un SMS sul tuo telefono ",
       "check-phone": "Per favore controlla il tuo telefono ",
@@ -314,13 +317,14 @@
       "subtitle": "Ti addebitiamo il costo solo dopo che il noleggiatore ha accettato la tua richiesta.",
       "credit-card": "Carta di credito",
       "card-name": "Nome e Cognome titolare carta",
-      "invalid-name": "Please provide valid name",
+      "invalid-name": "Si prega di fornire un nome valido",
       "card-number": "Numero di carta di credito",
       "invalid-card": "Please provide a valid Card Number",
-      "invalid-card-number": "Card Number not valid",
+      "invalid-card-number": "Numero della carta non valido",
       "exp-month": "Exp. month",
       "invalid-month": "Month not valid",
       "invalid-year": "Year not valid",
+      "invalid-date": "Data non valida",
       "exp-year": "Exp. year",
       "exp-date": "Scadenza",
       "invalid-cvc": "CVC non valido",
@@ -616,6 +620,8 @@
     "featured-cities-subheader": "Il servizio di noleggio biciclette di listnride sta diventando disponibile sempre in più città in tutto il mondo. Scopri qui alcuni suggerimenti:",
     "list-a-bike-header": "Hai una bella bicicletta e vuoi che la gente la veda?",
     "list-a-bike-subheader": "Inserisci la tua bicicletta per il noleggio, incontra nuove persone divertenti e guadagna qualche soldo extra.",
+    "newsletter-header": "Subscribe to our newsletter and stay in the loop",
+    "newsletter-subheader": "Receive our handcrafted email about new bikes, tours and discounts for your rides.",
     "meta-title": "listnride - La bike sharing community",
     "meta-description": "Noleggia la bicicletta perfetta nella comunità listnride. Trovane una che si adatti al tuo stile e alle tue esigenze."
   },
