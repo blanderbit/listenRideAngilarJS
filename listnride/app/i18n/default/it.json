@@ -339,7 +339,9 @@
       "invoice-address": "Indirizzo di fatturazione",
       "payment": "Pagamento",
       "redeem-voucher": "Buono sconto",
-      "add": "Ok"
+      "add": "Ok",
+      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
       "tab": "Durata",

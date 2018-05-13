@@ -33,6 +33,7 @@ angular.module('booking', [])
         booking.tabsDisabled = false;
         booking.voucherCode = "";
         booking.expiryDate = "";
+        booking.booked = false;
 
         var oldExpiryDateLength = 0;
         var expiryDateLength = 0;
@@ -160,6 +161,7 @@ angular.module('booking', [])
           switch (booking.selectedIndex) {
             case 0: 
               if (booking.shopBooking) {
+                booking.selectedIndex = 1;
                 setFirstTab(); break;
               } else {
                 booking.goNext(); break;
@@ -290,9 +292,10 @@ angular.module('booking', [])
               booking.user.firstName = success.data.first_name;
               booking.user.lastName = success.data.last_name;
               booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
-              if (!booking.shopBooking || Object.keys(oldUser).length > 0) {
+              // if (!booking.shopBooking || Object.keys(oldUser).length > 0) {
+                // console.log("setting firs tab");
                 setFirstTab();
-              }
+              // }
               $timeout(function () {
                 booking.hidden = false;
               }, 120);
@@ -311,16 +314,18 @@ angular.module('booking', [])
         };
 
         function setFirstTab() {
-          if (booking.user.status == 3) {
-            booking.selectedIndex = 3;
-            trackTabLoad();
-          }
-          else if (booking.user.has_phone_number && booking.user.has_address) {
-            booking.selectedIndex = 2;
-            trackTabLoad();
-          } else {
-            booking.selectedIndex = 1;
-            trackTabLoad();
+          if (!booking.shopBooking || booking.selectedIndex > 0) {
+            if (booking.user.status == 3) {
+              booking.selectedIndex = 3;
+              trackTabLoad();
+            }
+            else if (booking.user.has_phone_number && booking.user.has_address) {
+              booking.selectedIndex = 2;
+              trackTabLoad();
+            } else {
+              booking.selectedIndex = 1;
+              trackTabLoad();
+            }
           }
         }
 
@@ -454,9 +459,7 @@ angular.module('booking', [])
 
         // go to next tab on user login success
         $rootScope.$on('user_login', function () {
-          if (!booking.shopBooking) {
-            booking.reloadUser();
-          }
+          booking.reloadUser();
         });
 
         angular.element(document).ready(function () {
@@ -518,8 +521,11 @@ angular.module('booking', [])
 
           api.post('/requests', data).then(
             function(success) {
-              $state.go('requests', {requestId: success.data.id});
               $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
+              if (!booking.shopBooking) {
+                $state.go('requests', {requestId: success.data.id});
+              }
+              booking.booked = true;
             },
             function(error) {
               booking.inProcess = false;

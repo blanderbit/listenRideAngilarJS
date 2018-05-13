@@ -28,7 +28,7 @@
       </md-tabs>
     </div>
 
-    <div flex="100" flex-md="40" flex-gt-md="30" layout-padding layout="column" ng-if="booking.authentication.loggedIn() || booking.shopBooking">
+    <div flex="100" flex-md="40" flex-gt-md="30" layout-padding layout="column" ng-if="booking.authentication.loggedIn() || booking.shopBooking" ng-hide="booking.booked">
       <div class="spacer-xs"></div>
       <div class="animate-if highlight-tile booking__receipt" layout="column">
         <receipt

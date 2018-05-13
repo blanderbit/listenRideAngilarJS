@@ -349,7 +349,9 @@
       "invoice-address": "Invoice Address",
       "payment": "Payment",
       "redeem-voucher": "Redeem Voucher",
-      "add": "Add"
+      "add": "Add",
+      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
       "tab": "1. Duration",

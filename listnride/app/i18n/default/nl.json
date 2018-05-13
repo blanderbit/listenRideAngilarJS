@@ -348,7 +348,9 @@
       "invoice-address": "Factuuradres",
       "payment": "Betaling",
       "redeem-voucher": "Voucher verzilveren",
-      "add": "Voeg toe"
+      "add": "Voeg toe",
+      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
       "tab": "1. Periode",

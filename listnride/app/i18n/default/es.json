@@ -348,7 +348,9 @@
       "invoice-address": "Dirección de facturación",
       "payment": "Pagamento",
       "redeem-voucher": "Canjear vale",
-      "add": "OK"
+      "add": "OK",
+      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
       "tab": "1. Período",

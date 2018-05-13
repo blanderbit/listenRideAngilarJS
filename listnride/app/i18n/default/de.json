@@ -348,7 +348,9 @@
       "invoice-address": "Rechnungsadresse",
       "payment": "Zahlungsmethode",
       "redeem-voucher": "Rabattcode einlösen",
-      "add": "Ok"
+      "add": "Ok",
+      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
       "tab": "1. Dauer",

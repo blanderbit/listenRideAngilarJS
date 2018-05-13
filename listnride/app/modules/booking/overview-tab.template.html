@@ -7,7 +7,7 @@
   <div class="spacer-xs"></div>
   <md-content layout="column">
     <div class="tab-content" style="min-height: 450px;" layout-align="space-between none" layout-padding>
-      <div class="lnr-list-form" layout="column">
+      <div class="lnr-list-form" ng-hide="overview.parent.booked" layout="column">
         <h2 class="md-title lnr-no-margin">{{ 'booking.overview.bike-rental' | translate }}</h2>
         <div class="spacer-xs"></div>
       	<div layout="row" layout-align="space-between none" layout-wrap>
@@ -108,6 +108,18 @@
               </md-button>
               </md-input-container>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lnr-list-form" ng-hide="!overview.parent.booked">
+        <div ng-hide="!overview.parent.booked" layout-align="center center" flex>
+          <br><br><br><br>
+          <h2 class="md-headline lnr-center lnr-green-text">{{ 'booking.overview.success-header' | translate }}</h2>
+          <p class="md-subhead lnr-center">{{ 'booking.overview.success-subheader' | translate }}</p>
+          <br><br>
+          <div layout="row" layout-align="center center">
+            <md-button class="md-raised md-primary md-lrg" onClick="window.close()">Close</md-button>
           </div>
         </div>
       </div>
