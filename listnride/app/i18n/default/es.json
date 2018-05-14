@@ -348,7 +348,9 @@
       "invoice-address": "Dirección de facturación",
       "payment": "Pagamento",
       "redeem-voucher": "Canjear vale",
-      "add": "OK"
+      "add": "OK",
+      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
       "tab": "1. Período",
@@ -581,6 +583,10 @@
     "description_min_100": "La descripción debe ser mín. 100 caracteres",
     "address": "Dirección",
     "profile-picture": "Foto de perfil",
+    "profile-picture-info": "Please download only valid picture format (jpg, jpeg, png). Maximum picture size is 20mb. Minimum picture dimension(width x height) is 100px x 100px",
+    "profile-picture-pattern-error": "Your picture format is wrong",
+    "profile-picture-size-error": "Your picture size is more than maximum size",
+    "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "General",
     "street": "Calle y número",
     "zip": "Código postal",
@@ -661,7 +667,8 @@
     "info-subtotal": "Este es el precio habitual diario<br>veces la cantidad de días que quieras<br>alquilar la bici.",
     "info-discount": "Descuento medio diario que <br>obtienes por día al alquilar <br>por un período de tiempo más largo.",
     "info-service-fee": "La cuota de servicio es<br>utilizada para proporcionar<br>a listnride. Incluye el IVA.",
-    "info": "En el calendario anterior, haz clic primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla."
+    "info": "En el calendario anterior, haz clic primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla.",
+    "info-without-calendar": "En el calendario anterior, haz clic primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla."
   },
   "list": {
     "edit-bike": "Editar bici",

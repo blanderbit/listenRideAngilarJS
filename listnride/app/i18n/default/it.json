@@ -339,7 +339,9 @@
       "invoice-address": "Indirizzo di fatturazione",
       "payment": "Pagamento",
       "redeem-voucher": "Buono sconto",
-      "add": "Ok"
+      "add": "Ok",
+      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
       "tab": "Durata",
@@ -572,6 +574,10 @@
     "description_min_100": "La descrizione deve essere min. di 100 caratteri.",
     "address": "Indirizzo",
     "profile-picture": "Immagine del profilo",
+    "profile-picture-info": "Please download only valid picture format (jpg, jpeg, png). Maximum picture size is 20mb. Minimum picture dimension(width x height) is 100px x 100px",
+    "profile-picture-pattern-error": "Your picture format is wrong",
+    "profile-picture-size-error": "Your picture size is more than maximum size",
+    "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "Informazioni generali",
     "street": "via e numero",
     "zip": "Cap",
@@ -652,7 +658,8 @@
     "info-subtotal": "Questo è il prezzo giornaliero regolare<br>per il numero di giorni che desideri<br>noleggiare la bicicletta.",
     "info-discount": "Lo sconto giornaliero medio<br>che ottieni al giorno noleggiando<br>per un periodo di tempo più lungo.",
     "info-service-fee": "La tassa è <br>data dal servizio offerto da<br>listnride. Comprende l'IVA.",
-    "info": "Nel calendario precedente fare clic prima sul<br>giorno in cui vuoi noleggiare <br>la bicicletta, e in secondo luogo sul<br>giorno in cui desideri restituirla."
+    "info": "Nel calendario precedente fare clic prima sul<br>giorno in cui vuoi noleggiare <br>la bicicletta, e in secondo luogo sul<br>giorno in cui desideri restituirla.",
+    "info-without-calendar": "Nel calendario precedente fare clic prima sul<br>giorno in cui vuoi noleggiare <br>la bicicletta, e in secondo luogo sul<br>giorno in cui desideri restituirla."
   },
   "list": {
     "edit-bike": "Modifica la bicicletta",

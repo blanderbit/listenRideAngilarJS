@@ -284,7 +284,7 @@ angular.
       var LoginDialogController = function($mdDialog, $mdToast, sha256, ezfb, loginObj) {
         var loginDialog = loginObj || this;
 
-        loginDialog.requestLogin = false;
+        loginDialog.requestLogin = true;
 
         var loginFb = function(email, facebookId) {
           var user = {
@@ -317,10 +317,10 @@ angular.
           };
           api.post('/users/login', user).then(function(success) {
             setCredentials(success.data);
+            showLoginSuccess();
             if (loginDialog.requestLogin) {
               $rootScope.$broadcast('user_login');
             } else {
-              showLoginSuccess();
               if (!success.data.has_address || !success.data.confirmed_phone || success.data.status === 0) {
                 verification.openDialog(false);
               }

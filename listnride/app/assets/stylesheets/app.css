@@ -1,6 +1,7 @@
 /*
 // #5FC693: Primary Color
 // #f3f3f3: Preload Color
+// #DD2C00: Error color
 // 4px: border radius
 // Added to material
 // md-lined,
@@ -15,6 +16,7 @@
  * FRAMEWORK............Something we do with default material styles
  * LNR_CLASSES..........Our custom atomic styles
  * SVG..................Set proportions to svg
+ * LNR_ERRORS...........Validation errors
  *
  */
 
@@ -606,6 +608,7 @@ md-tooltip .md-content {
   -moz-border-radius: 50%;
   background-position: center;
   background-size: cover;
+  border: 1px solid transparent;
 }
 
 settings .lnr-profile-lrg {
@@ -2043,12 +2046,12 @@ md-grid-list a {
 }
 
 .form-error {
-  border: 1px solid rgb(221, 44, 0);
+  border: 1px solid #DD2C00;
   border-radius: 4px;
 }
 
 .text-error {
-  color: rgb(221, 44, 0);
+  color: #DD2C00;
 }
 
 .text-default {
@@ -2060,7 +2063,7 @@ md-grid-list a {
 }
 
 md-input-container .md-input.form-input-error {
-  border: 1px solid rgb(221, 44, 0);
+  border: 1px solid #DD2C00;
   border-radius: 4px;
 }
 
@@ -2165,10 +2168,6 @@ invite .voucher-link {
   margin: initial;
 }
 
-/*.lnr-billing-page .repeated-billing-items .md-button:not([disabled]):hover {*/
-/*background-color: rgba(229, 234, 236, 0.2);*/
-/*}*/
-
 .lnr-list-button .md-button:not([disabled]):hover {
   background-color: transparent;
   cursor: pointer;
@@ -2204,11 +2203,8 @@ invite .voucher-link {
   text-align: left;
 }
 
+.lnr-green-text,
 .lnr-green-text span {
-  color: #5fc693;
-}
-
-.lnr-green-text {
   color: #5fc693;
 }
 
@@ -2439,6 +2435,16 @@ md-icon[md-font-icon].fa--lh20 {
   width: 400px;
 }
 
+.md-button.md-menu__close-btn {
+  padding: 0 5px;
+  margin: 0;
+  height: auto;
+  min-height: auto;
+  text-align: right;
+  cursor: pointer;
+  font-size: 18px;
+}
+
 @media (max-width: 599px) {
   .filter__category {
     width: 100%;
@@ -2447,6 +2453,29 @@ md-icon[md-font-icon].fa--lh20 {
   md-menu-content {
     max-height: auto;
   }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* LNR_ERRORS
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-error {
+  display: none;
+}
+
+.lnr-text-error {
+  color: #DD2C00;
+}
+
+.lnr-profile-lrg.ng-invalid {
+  border-color: #DD2C00;
+}
+
+.ng-invalid-pattern ~ .lnr-error--pattern,
+.ng-invalid-max-size ~ .lnr-error--max-size,
+.ng-invalid-min-height ~.lnr-error--dimension,
+.ng-invalid-min-width ~.lnr-error--dimension {
+  display: block;
 }
 
 /*-----------------------------------------------------------------------------------*/

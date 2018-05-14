@@ -349,7 +349,9 @@
       "invoice-address": "Invoice Address",
       "payment": "Payment",
       "redeem-voucher": "Redeem Voucher",
-      "add": "Add"
+      "add": "Add",
+      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-subheader": "We've sent you a confirmation email. Feel free to book more bikes, afterwards."
     },
     "calendar": {
       "tab": "1. Duration",
@@ -582,6 +584,10 @@
     "description_min_100": "Description should be min. 100 characters",
     "address": "Address",
     "profile-picture": "Profile Picture",
+    "profile-picture-info": "Please upload only valid picture format (jpg, jpeg, png). Maximum picture size is 20mb. Minimum picture dimension(width x height) is 100px x 100px",
+    "profile-picture-pattern-error": "Your picture format is wrong",
+    "profile-picture-size-error": "Your picture size is more than maximum size",
+    "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "General",
     "street": "Street and Number",
     "zip": "Zip Code",
@@ -662,7 +668,8 @@
     "info-subtotal": "This is the regular daily price<br>times the amount of days you want<br>to rent the bike.",
     "info-discount": "Average daily discount you<br>get per day by renting out<br>for a longer period of time.",
     "info-service-fee": "The service fee is<br>used for providing<br>listnride. It includes VAT.",
-    "info": "In the calendar above click first<br>on the day you wish to rent<br>out the bike, and second on<br>the day you want to return it."
+    "info": "In the calendar above click first<br>on the day you wish to rent<br>out the bike, and second on<br>the day you want to return it.",
+    "info-without-calendar": "In the calendar above click first<br>on the day you wish to rent<br>out the bike, and second on<br>the day you want to return it."
   },
   "list": {
     "edit-bike": "Edit Bike",

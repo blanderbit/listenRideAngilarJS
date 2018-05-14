@@ -18,7 +18,8 @@
     </div>
 
     <form class="lnr-search-bar md-whiteframe-3dp lnr-search-bar--fs18" layout="row" md-theme="default">
-      <!-- <autocomplete
+      <!-- search input with autocomplete -->
+      <autocomplete
         autocomplete-id="home-search"
         class="home-search"
         flex="75"
@@ -27,8 +28,9 @@
         location="home.location"
         placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"
         place-changed="home.placeChanged(place)">
-      </autocomplete> -->
-      <input ng-model="home.location" class="home-search" style="padding: 0 10px" placeholder="{{ 'autocomplete.default-placeholder' | translate }}">
+      </autocomplete>
+      <!-- search input without autocomplete -->
+      <!-- <input ng-model="home.location" class="home-search" style="padding: 0 10px" placeholder="{{ 'autocomplete.default-placeholder' | translate }}"> -->
       <md-button
         ng-click="home.onSearchClick()"
         class="md-raised md-primary"
