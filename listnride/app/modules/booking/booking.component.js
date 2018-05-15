@@ -34,6 +34,7 @@ angular.module('booking', [])
         booking.voucherCode = "";
         booking.expiryDate = "";
         booking.booked = false;
+        booking.processing = false;
 
         var oldExpiryDateLength = 0;
         var expiryDateLength = 0;
@@ -130,7 +131,7 @@ angular.module('booking', [])
           if (!booking.shopBooking) {
             switch (booking.selectedIndex) {
               case 0: return false;
-              case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
+              case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid && !booking.processing);
               case 2: return !booking.paymentForm.$valid;
               case 3: return false;
             }
@@ -190,6 +191,7 @@ angular.module('booking', [])
         });
 
         booking.saveAddress = function() {
+          booking.processing = true;
           var address = {
             'locations': {
               '0': {
@@ -203,9 +205,11 @@ angular.module('booking', [])
           };
           api.put('/users/' + $localStorage.userId, address).then(
             function (success) {
+              booking.processing = false;
               booking.nextTab();
             },
             function (error) {
+              booking.processing = false;
               $mdToast.show(
                 $mdToast.simple()
                   .textContent("Address Error message")
