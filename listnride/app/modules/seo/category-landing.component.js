@@ -11,7 +11,7 @@ angular.module('categoryLanding', []).component('categoryLanding', {
         $tpl.addPart(ENV.staticTranslation);
 
         // capitalize city name in URL
-        categoryLanding.city = capitalize($stateParams.city);
+        categoryLanding.city = $stateParams.city;
 
         // take category number from category (only english) name in URL
         var categoryId = $filter('categorySeo')($stateParams.category);
@@ -45,13 +45,7 @@ angular.module('categoryLanding', []).component('categoryLanding', {
         $state.go('search', {
           location: categoryLanding.location
         });
-      };
-
-      // function to capitalize a String
-      function capitalize(string) {
-        return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
       }
-
     }
   ]
 });
