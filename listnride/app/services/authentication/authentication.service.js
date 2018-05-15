@@ -85,7 +85,6 @@ angular.
       };
 
       var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName, inviteCode, requestFlow) {
-        console.log("SIGNUP GETS CALLED");
         var invited = !!inviteCode;
         var user = {
           "user": {
@@ -197,7 +196,6 @@ angular.
         };
 
         signupDialog.createUser = function() {
-          console.log(retrieveLocale());
           var user = {
             'user': {
               'email': signupDialog.email,
