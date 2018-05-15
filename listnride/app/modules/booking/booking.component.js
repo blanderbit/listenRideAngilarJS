@@ -516,7 +516,8 @@ angular.module('booking', [])
             user_id: $localStorage.userId,
             ride_id: booking.bikeId,
             start_date: startDate_utc.toISOString(),
-            end_date: endDate_utc.toISOString()
+            end_date: endDate_utc.toISOString(),
+            instant: booking.shopBooking,
           };
 
 
