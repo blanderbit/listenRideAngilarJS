@@ -406,6 +406,7 @@ angular.module('booking', [])
         };
 
         function trackTabLoad() {
+          $("#scroll-body").scrollTop(0);
           switch (booking.selectedIndex) {
             case 0: $analytics.eventTrack('load', {category: 'Request Bike', label: 'Sign Up Tab'}); break;
             case 1: $analytics.eventTrack('load', {category: 'Request Bike', label: 'Details Tab'}); break;
