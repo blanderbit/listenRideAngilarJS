@@ -91,11 +91,11 @@ angular.module('listnride')
           "list.subcategory.6.bogie-wheel",
 
           "list.category.special",
-          "list.subcategory.6.folding-bike",
-          "list.subcategory.6.recumbent-bike",
-          "list.subcategory.6.tandem-bike",
-          "list.subcategory.6.longtail-bike",
-          "list.subcategory.6.scooter"
+          "list.subcategory.7.folding-bike",
+          "list.subcategory.7.recumbent-bike",
+          "list.subcategory.7.tandem-bike",
+          "list.subcategory.7.longtail-bike",
+          "list.subcategory.7.scooter"
         ];
 
         return $translate(categoriesTranslationKeys).then(function (translations) {
@@ -166,13 +166,13 @@ angular.module('listnride')
             }, {
               catId: 70,
               name: translations["list.category.special"],
-              iconFileName: "biketype_6.svg",
+              iconFileName: "biketype_7.svg",
               subcategories: [
-                { id: 70, name: translations["list.subcategory.6.folding-bike"] },
-                { id: 71, name: translations["list.subcategory.6.recumbent-bike"] },
-                { id: 72, name: translations["list.subcategory.6.tandem-bike"] },
-                { id: 73, name: translations["list.subcategory.6.longtail-bike"] },
-                { id: 74, name: translations["list.subcategory.6.scooter"] }
+                { id: 70, name: translations["list.subcategory.7.folding-bike"] },
+                { id: 71, name: translations["list.subcategory.7.recumbent-bike"] },
+                { id: 72, name: translations["list.subcategory.7.tandem-bike"] },
+                { id: 73, name: translations["list.subcategory.7.longtail-bike"] },
+                { id: 74, name: translations["list.subcategory.7.scooter"] }
               ]
             }
           ];
