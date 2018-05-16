@@ -674,7 +674,11 @@
       "all-terrain": "Gelände",
       "kids": "Kinder",
       "electro": "Elektro",
-      "special": "Spezial"
+      "special": "Spezial",
+      "urban": "Urban",
+      "e-bike": "E-Bike",
+      "road": "Road",
+      "transport": "Transport"
     },
     "details": {
       "header": "Wie heißt das Modell, von welcher Marke ist es, für welche Fahrergröße ist es geeignet?",

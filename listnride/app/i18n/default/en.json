@@ -679,7 +679,11 @@
       "all-terrain": "All terrain",
       "kids": "Kids",
       "electro": "Electro",
-      "special": "Special"
+      "special": "Special",
+      "urban": "Urban",
+      "e-bike": "E-Bike",
+      "road": "Road",
+      "transport": "Transport"
     },
     "details": {
       "header": "What is your bike name, size & brand?",

@@ -665,7 +665,11 @@
       "all-terrain": "Ogni tipo di terreno",
       "kids": "Bambini",
       "electro": "Elettrica",
-      "special": "Speciale"
+      "special": "Speciale",
+      "urban": "Urban",
+      "e-bike": "E-Bike",
+      "road": "Road",
+      "transport": "Transport"
     },
     "details": {
       "header": "Qual è il nome, dimensione e marca della tua bicicletta?",

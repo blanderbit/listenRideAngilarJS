@@ -675,7 +675,11 @@
       "all-terrain": "All-Terrain",
       "kids": "Kinder",
       "electro": "Elektrisch",
-      "special": "Speciaal"
+      "special": "Speciaal",
+      "urban": "Urban",
+      "e-bike": "E-Bike",
+      "road": "Road",
+      "transport": "Transport"
     },
     "details": {
       "header": "Welke naam geef je jouw fiets en welk Merk en grootte is het?",
