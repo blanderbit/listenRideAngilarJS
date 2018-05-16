@@ -85,7 +85,6 @@ angular.
       };
 
       var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName, inviteCode, requestFlow) {
-        console.log("SIGNUP GETS CALLED");
         var invited = !!inviteCode;
         var user = {
           "user": {
@@ -104,17 +103,17 @@ angular.
           setCredentials(success.data);
           if (requestFlow) {
             $rootScope.$broadcast('user_created');
+            $analytics.eventTrack('click', {  category: 'Facebook Sign Up', label: 'Request Flow'});
           } else {
-            verification.openDialog(false, invited, false, showProfile)
+            verification.openDialog(false, invited, false, showProfile);
+            $analytics.eventTrack('click', {  category: 'Facebook Sign Up', label: 'Standard Flow'});
           }
-          $analytics.eventTrack('Facebook Sign-Up', {  category: 'Sign Up', label: 'Quick Sign-Up Complete'});
         }, function(error) {
           showSignupError();
         });
       };
 
       var loginFb = function(email, facebookId) {
-        console.log("LOGIN GETS CALLED");
         var user = {
           'user': {
             'email': email,
@@ -132,13 +131,22 @@ angular.
       var connectFb = function(inviteCode, requestFlow) {
         ezfb.getLoginStatus(function(response) {
           if (response.status === 'connected') {
-            $analytics.eventTrack('load', {category: 'Request Bike', label: 'Sign In Facebook'});
+            if (requestFlow) {
+              $analytics.eventTrack('click', {category: 'Facebook Login', label: 'Request Flow'});
+            } else {
+              $analytics.eventTrack('click', {category: 'Facebook Login', label: 'Standard Flow'});
+            }
             var accessToken = response.authResponse.accessToken;
             ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
               loginFb(response.email, response.id);
             });
           } else {
             ezfb.login(function(response) {
+              if (requestFlow) {
+                $analytics.eventTrack('click', {category: 'Facebook Signup', label: 'Request Flow'});
+              } else {
+                $analytics.eventTrack('click', {category: 'Facebook Signup', label: 'Standard Flow'});
+              }
               $analytics.eventTrack('click', {category: 'Request Bike', label: 'Register Facebook'});
               var accessToken = response.authResponse.accessToken;
               ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
@@ -197,7 +205,6 @@ angular.
         };
 
         signupDialog.createUser = function() {
-          console.log(retrieveLocale());
           var user = {
             'user': {
               'email': signupDialog.email,
@@ -216,8 +223,9 @@ angular.
             //TODO: refactor this logic
             if (signupDialog.requestSignup) {
               $rootScope.$broadcast('user_created');
-              // showSignupSuccess();
+              $analytics.eventTrack('click', {category: 'Email Signup', label: 'Request Flow'});
             } else {
+              $analytics.eventTrack('click', {category: 'Email Signup', label: 'Standard Flow'});
               if (signupDialog.business) {
                 signupDialog.createBusiness();
               } else {
@@ -243,7 +251,6 @@ angular.
           api.post('/businesses', business).then(function(success) {
             $state.go('home');
             verification.openDialog(false, invited, false, signupDialog.showProfile);
-            $analytics.eventTrack('Non-FB Sign-Up', {  category: 'Sign Up', label: 'Quick Sign-Up Complete'});
           }, function(error) {
             signupDialog.businessError = true;
             signupDialog.signingUp = false;
@@ -266,7 +273,6 @@ angular.
           password: form.password.$modelValue,
           target: 'login'
         };
-
         $analytics.eventTrack('click', {category: 'Request Bike', label: 'Sign In'});
         LoginDialogController(null, null, sha256, null, obj);
       };
@@ -319,8 +325,10 @@ angular.
             setCredentials(success.data);
             showLoginSuccess();
             if (loginDialog.requestLogin) {
+              $analytics.eventTrack('click', {category: 'Email Login', label: 'Request Flow'});
               $rootScope.$broadcast('user_login');
             } else {
+              $analytics.eventTrack('click', {category: 'Email Signup', label: 'Standard Flow'});
               if (!success.data.has_address || !success.data.confirmed_phone || success.data.status === 0) {
                 verification.openDialog(false);
               }
