@@ -23,8 +23,9 @@
 
     <md-content flex layout="column" class="scroll-parent">
       <!-- no bikes found placeholder -->
-      <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout="row" layout-align="center center" layout-padding>
-        <span>{{ 'search.no-bikes' | translate }}</span>
+      <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout="column" flex="100" layout-align="center center" layout-padding>
+        <div layout="row"><h2 class="md-headline no-margin">Hey,</h2></div>
+        <div layout="row" layout-align="center center"><p flex="80" class="md-subhead lnr-center" translate="search.no-bikes"></p></div>
       </div>
       <cardgrid
         ng-repeat="filterBikes in search.categorizedFilteredBikes"
@@ -37,7 +38,8 @@
         bikes="filterBikes.bikes"
         location="search.latLng"
         titles="search.titles"
-        card-index="$index">
+        card-index="$index"
+        ng-hide="search.bikes !== undefined && search.bikes.length == 0">
       </cardgrid>
       <!-- busy loader until bikes api resolves -->
       <div ng-show="search.bikes === undefined" flex layout="column" layout-align="center center">
