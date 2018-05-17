@@ -6,12 +6,13 @@ angular.
     return function(category) {
       switch(category) {
         // english
-        case 'city': return 1;
-        case 'race': return 2;
-        case 'all-terrain': return 3;
-        case 'kids': return 4;
-        case 'electric': return 5;
-        case 'special': return 6;
+        case 'urban': return 1;
+        case 'e-bike': return 2;
+        case 'road': return 3;
+        case 'all-terrain': return 4;
+        case 'transport': return 5;
+        case 'kids': return 6;
+        case 'special': return 7;
 
         default: return "";
       }
