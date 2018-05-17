@@ -108,8 +108,7 @@ angular.module('home',[]).component('home', {
       };
 
       home.newsletterSubmit = function() {
-        console.log("lol");
-      }  
+      }
     }
   ]
 });
