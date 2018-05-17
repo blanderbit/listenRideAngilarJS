@@ -90,7 +90,7 @@ angular.module('booking', [])
 
         booking.isOptionEnabled = function($index, date) {
           if (date === undefined) { return true }
-  
+
           var isDateToday = moment().startOf('day').isSame(moment(date).startOf('day'));
           // Date today chosen
           if (isDateToday) { return $index + 6 >= moment().hour() + 1; }
@@ -160,7 +160,7 @@ angular.module('booking', [])
 
         booking.nextAction = function() {
           switch (booking.selectedIndex) {
-            case 0: 
+            case 0:
               if (booking.shopBooking) {
                 booking.selectedIndex = 1;
                 setFirstTab(); break;
@@ -227,7 +227,7 @@ angular.module('booking', [])
               .hideDelay(4000)
               .position('top center')
           );
-          
+
           btClient.request({
             endpoint: 'payment_methods/credit_cards',
             method: 'post',
@@ -297,7 +297,6 @@ angular.module('booking', [])
               booking.user.lastName = success.data.last_name;
               booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
               // if (!booking.shopBooking || Object.keys(oldUser).length > 0) {
-                // console.log("setting firs tab");
                 setFirstTab();
               // }
               $timeout(function () {

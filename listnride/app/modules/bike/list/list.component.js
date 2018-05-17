@@ -40,12 +40,13 @@ angular.module('list', ['ngLocale']).component('list', {
       list.startImage = 1;
       list.sizeOptions = bikeOptions.sizeOptions();
       list.kidsSizeOptions = bikeOptions.kidsSizeOptions();
-      list.categoryOptions = bikeOptions.categoryOptions();
-      list.subcategoryOptions = bikeOptions.subcategoryOptions();
       list.accessoryOptions = bikeOptions.accessoryOptions();
       list.validateObj = {height: {min: 1000}, width: {min: 1500}, duration: {max: '5m'}};
       list.invalidFiles = {};
       list.businessUser = false;
+      bikeOptions.allCategoriesOptions().then(function (resolve) {
+        list.categoryOptions = resolve;
+      });
 
       var setBusinessForm = function() {
         if (authentication.isBusiness) {
@@ -55,6 +56,21 @@ angular.module('list', ['ngLocale']).component('list', {
         } else {
           list.businessUser = false;
         }
+      };
+
+      function subcategoryParent(subId) {
+        return _.find(list.categoryOptions, function(category) {
+          return _.find(category.subcategories, function(subcategory) {
+            return subcategory.id === subId
+          })
+        });
+      }
+
+      list.subcategoriesList = function (categoryId) {
+        if (!categoryId) return;
+        return _.find(list.categoryOptions, function(category) {
+          return category.catId === parseInt(categoryId);
+        }).subcategories.sort()
       };
 
       list.populateNewBikeData = function () {
@@ -108,8 +124,8 @@ angular.module('list', ['ngLocale']).component('list', {
               data.images = images;
               var prices = price.transformPrices(data.prices, data.discounts);
               data.size = parseInt(data.size);
-              data.mainCategory = (data.category + "").charAt(0);
-              data.subCategory = (data.category + "").charAt(1);
+              data.mainCategory = subcategoryParent(data.category).catId;
+              data.subCategory = data.category;
 
               // form data for edit bikes
               list.form = data;
@@ -142,34 +158,37 @@ angular.module('list', ['ngLocale']).component('list', {
       list.submitNewRide = function () {
         var prices = price.inverseTransformPrices(list.form.prices, list.isListMode);
         var ride = {
-          "ride[name]": list.form.name,
-          "ride[brand]": list.form.brand,
-          "ride[description]": list.form.description,
-          "ride[size]": list.form.size,
-          "ride[category]": list.form.mainCategory.concat(list.form.subCategory),
-          "ride[has_lock]": list.form.has_lock || false,
-          "ride[has_helmet]": list.form.has_helmet || false,
-          "ride[has_lights]": list.form.has_lights || false,
-          "ride[has_basket]": list.form.has_basket || false,
-          "ride[has_trailer]": list.form.has_trailer || false,
-          "ride[has_childseat]": list.form.has_childseat || false,
-          "ride[user_id]": $localStorage.userId,
-          "ride[street]": list.form.street,
-          "ride[city]": list.form.city,
-          "ride[zip]": list.form.zip,
-          "ride[country]": list.form.country,
-          "ride[prices]": prices,
-          "ride[custom_price]": list.form.custom_price,
-          "ride[discounts]": list.form.discounts,
-          "ride[frame_size]": list.form.frame_size,
-          "ride[bicycle_number]": list.form.bicycle_number,
-          "ride[frame_number]": list.form.frame_number,
-          "ride[details]": list.form.details,
-          "ride[image_file_1]": (list.form.images[0]) ? list.form.images[0].src : undefined,
-          "ride[image_file_2]": (list.form.images[1]) ? list.form.images[1].src : undefined,
-          "ride[image_file_3]": (list.form.images[2]) ? list.form.images[2].src : undefined,
-          "ride[image_file_4]": (list.form.images[3]) ? list.form.images[3].src : undefined,
-          "ride[image_file_5]": (list.form.images[4]) ? list.form.images[4].src : undefined
+          "ride" : {
+            "name": list.form.name,
+            "brand": list.form.brand,
+            "description": list.form.description,
+            "size": list.form.size,
+            "category": list.form.subCategory,
+            "has_lock": !!list.form.has_lock,
+            "has_helmet": !!list.form.has_helmet,
+            "has_lights": !!list.form.has_lights,
+            "has_basket": !!list.form.has_basket,
+            "has_trailer": !!list.form.has_trailer,
+            "has_childseat": !!list.form.has_childseat,
+            "user_id]": $localStorage.userId,
+            "street": list.form.street,
+            "city": list.form.city,
+            "zip": list.form.zip,
+            "country": list.form.country,
+            "prices": prices,
+            "custom_price": list.form.custom_price,
+            "discounts": list.form.discounts,
+            "frame_size": list.form.frame_size,
+            "bicycle_number": list.form.bicycle_number,
+            "frame_number": list.form.frame_number,
+            "details": list.form.details,
+            "image_file_1": (list.form.images[0]) ? list.form.images[0].src : undefined,
+            "image_file_2": (list.form.images[1]) ? list.form.images[1].src : undefined,
+            "image_file_3": (list.form.images[2]) ? list.form.images[2].src : undefined,
+            "image_file_4": (list.form.images[3]) ? list.form.images[3].src : undefined,
+            "image_file_5": (list.form.images[4]) ? list.form.images[4].src : undefined,
+            'is_equipment': _.includes([51, 52, 53, 54], list.form.subCategory)
+          }
         };
 
         api.get('/users/' + $localStorage.userId).then(
@@ -213,7 +232,7 @@ angular.module('list', ['ngLocale']).component('list', {
             "brand": list.form.brand,
             "description": list.form.description,
             "size": list.form.size,
-            "category": list.form.mainCategory.concat(list.form.subCategory),
+            "category": list.form.subCategory,
             "has_lock": list.form.has_lock || false,
             "has_helmet": list.form.has_helmet || false,
             "has_lights": list.form.has_lights || false,
@@ -231,7 +250,8 @@ angular.module('list', ['ngLocale']).component('list', {
             "frame_size": list.form.frame_size,
             "bicycle_number": list.form.bicycle_number,
             "frame_number": list.form.frame_number,
-            "details": list.form.details
+            "details": list.form.details,
+            "is_equipment": _.includes([51, 52, 53, 54], list.form.subCategory)
           }
         };
 
@@ -363,8 +383,7 @@ angular.module('list', ['ngLocale']).component('list', {
 
       // check the categories
       list.isCategoryValid = function () {
-        return list.form.mainCategory !== undefined &&
-          list.form.subCategory !== undefined;
+        return list.form.subCategory !== undefined;
       };
 
       // check bikes details
@@ -406,7 +425,7 @@ angular.module('list', ['ngLocale']).component('list', {
       };
 
       list.categoryChange = function (oldCategory) {
-        if (parseInt(list.form.mainCategory) === 4 || parseInt(oldCategory) === 4) {
+        if (parseInt(list.form.mainCategory) === 40 || parseInt(oldCategory) === 40) {
           list.form.size = undefined;
         }
       };

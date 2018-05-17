@@ -79,7 +79,6 @@ angular.module('ampler-integration',[]).component('ampler', {
               case "Düsseldorf": ampler.bikes.dusseldorf.push(success.data.bikes[i]); break;
             }
           }
-          console.log(ampler.bikes);
           ampler.currentBikes = ampler.bikes["berlin"];
         },
         function (error) {
