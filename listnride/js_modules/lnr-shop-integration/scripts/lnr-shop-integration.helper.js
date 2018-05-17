@@ -732,7 +732,7 @@ var lnrHelper = {
       left: left,
       top: top,
       //window url
-      url: url + '?bikeId=' + bikeId,
+      url: url + '?bikeId=' + bikeId + "&shop=1",
       // open type
       type: '_blank',
       // window params

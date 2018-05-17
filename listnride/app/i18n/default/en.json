@@ -349,7 +349,9 @@
       "invoice-address": "Invoice Address",
       "payment": "Payment",
       "redeem-voucher": "Redeem Voucher",
-      "add": "Add"
+      "add": "Add",
+      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-subheader": "We've sent you a confirmation email. Feel free to book more bikes, afterwards."
     },
     "calendar": {
       "tab": "1. Duration",
@@ -582,6 +584,10 @@
     "description_min_100": "Description should be min. 100 characters",
     "address": "Address",
     "profile-picture": "Profile Picture",
+    "profile-picture-info": "Please upload only valid picture format (jpg, jpeg, png). Maximum picture size is 20mb. Minimum picture dimension(width x height) is 100px x 100px",
+    "profile-picture-pattern-error": "Your picture format is wrong",
+    "profile-picture-size-error": "Your picture size is more than maximum size",
+    "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "General",
     "street": "Street and Number",
     "zip": "Zip Code",
@@ -626,6 +632,8 @@
     "featured-cities-subheader": "listnride’s bike rental service is becoming available in more cities and holiday regions around Europe. Here are some tips for you: ",
     "list-a-bike-header": "Got a nice bike and want people to use it?",
     "list-a-bike-subheader": "List your bike for rent, meet fun new people and earn some extra cash.",
+    "newsletter-header": "Subscribe to our newsletter and stay in the loop",
+    "newsletter-subheader": "Receive our handcrafted email about new bikes, tours and discounts for your rides.",
     "meta-title": "listnride - The bike sharing community",
     "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
   },
@@ -633,7 +641,7 @@
     "default-placeholder": "Where would you like to rent a bike?"
   },
   "search": {
-    "no-bikes": "There are no bikes in this location",
+    "no-bikes": "There are unfortunately no bikes in this location yet. As we're growing fast, probably soon there will be! If you'd like to, you can <a href=\"/listing-a-bike\">list a bike yourself</a></a> or alternatively try searching for another city or specific location nearby.",
     "all-sizes": "All Sizes",
     "bikes-in": "Bikes in",
     "meta-title": "Rent the perfect bike in {{location}}.",

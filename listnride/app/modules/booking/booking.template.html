@@ -1,5 +1,5 @@
-<md-content class="single-column booking__body">
-  <div class="content lnr-page-margin" layout="column" layout-gt-sm="row">
+<md-content id="scroll-body" class="single-column booking__body">
+  <div class="content" layout="column" layout-gt-sm="row">
     <div flex="100" flex-md="60" flex-gt-md="70" layout-padding class="booking__daterange-focus">
       <md-tabs
         md-no-pagination
@@ -28,7 +28,7 @@
       </md-tabs>
     </div>
 
-    <div flex="100" flex-md="40" flex-gt-md="30" layout-padding layout="column" ng-if="booking.authentication.loggedIn() || booking.shopBooking">
+    <div flex="100" flex-md="40" flex-gt-md="30" layout-padding layout="column" ng-if="booking.authentication.loggedIn() || booking.shopBooking" ng-hide="booking.booked">
       <div class="spacer-xs"></div>
       <div class="animate-if highlight-tile booking__receipt" layout="column">
         <receipt
@@ -107,7 +107,7 @@
     <div class="lnr-section-title mt0" layout="column" layout-align="center center">
       <p class="md-body-2">
         <b>{{ 'booking.footer.questions' | translate }}</b><br>
-        {{ 'booking.footer.call-us' | translate }}<a href="mailto:contact@listandride.com">{{ 'booking.footer.email-us' | translate }}</a>.</p>
+        {{ 'booking.footer.call-us' | translate }}<a href="mailto:contact@listnride.com">{{ 'booking.footer.email-us' | translate }}</a>.</p>
       <div class="lnr-row-images" layout="row" layout-align="center center">
         <div class="lnr-row-images__item" layout="column" layout-align="center center">
           <img ng-src="app/assets/ui_images/request-flow/lnr_supportThumb_topbias@2x.png" alt="Tobias">

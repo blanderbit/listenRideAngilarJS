@@ -33,6 +33,8 @@ angular.module('booking', [])
         booking.tabsDisabled = false;
         booking.voucherCode = "";
         booking.expiryDate = "";
+        booking.booked = false;
+        booking.processing = false;
 
         var oldExpiryDateLength = 0;
         var expiryDateLength = 0;
@@ -129,7 +131,7 @@ angular.module('booking', [])
           if (!booking.shopBooking) {
             switch (booking.selectedIndex) {
               case 0: return false;
-              case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
+              case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid && !booking.processing);
               case 2: return !booking.paymentForm.$valid;
               case 3: return false;
             }
@@ -160,6 +162,7 @@ angular.module('booking', [])
           switch (booking.selectedIndex) {
             case 0: 
               if (booking.shopBooking) {
+                booking.selectedIndex = 1;
                 setFirstTab(); break;
               } else {
                 booking.goNext(); break;
@@ -188,6 +191,7 @@ angular.module('booking', [])
         });
 
         booking.saveAddress = function() {
+          booking.processing = true;
           var address = {
             'locations': {
               '0': {
@@ -201,9 +205,11 @@ angular.module('booking', [])
           };
           api.put('/users/' + $localStorage.userId, address).then(
             function (success) {
+              booking.processing = false;
               booking.nextTab();
             },
             function (error) {
+              booking.processing = false;
               $mdToast.show(
                 $mdToast.simple()
                   .textContent("Address Error message")
@@ -290,9 +296,10 @@ angular.module('booking', [])
               booking.user.firstName = success.data.first_name;
               booking.user.lastName = success.data.last_name;
               booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
-              if (!booking.shopBooking || Object.keys(oldUser).length > 0) {
+              // if (!booking.shopBooking || Object.keys(oldUser).length > 0) {
+                // console.log("setting firs tab");
                 setFirstTab();
-              }
+              // }
               $timeout(function () {
                 booking.hidden = false;
               }, 120);
@@ -311,16 +318,18 @@ angular.module('booking', [])
         };
 
         function setFirstTab() {
-          if (booking.user.status == 3) {
-            booking.selectedIndex = 3;
-            trackTabLoad();
-          }
-          else if (booking.user.has_phone_number && booking.user.has_address) {
-            booking.selectedIndex = 2;
-            trackTabLoad();
-          } else {
-            booking.selectedIndex = 1;
-            trackTabLoad();
+          if (!booking.shopBooking || booking.selectedIndex > 0) {
+            if (booking.user.status == 3) {
+              booking.selectedIndex = 3;
+              trackTabLoad();
+            }
+            else if (booking.user.has_phone_number && booking.user.has_address) {
+              booking.selectedIndex = 2;
+              trackTabLoad();
+            } else {
+              booking.selectedIndex = 1;
+              trackTabLoad();
+            }
           }
         }
 
@@ -401,6 +410,7 @@ angular.module('booking', [])
         };
 
         function trackTabLoad() {
+          $("#scroll-body").scrollTop(0);
           switch (booking.selectedIndex) {
             case 0: $analytics.eventTrack('load', {category: 'Request Bike', label: 'Sign Up Tab'}); break;
             case 1: $analytics.eventTrack('load', {category: 'Request Bike', label: 'Details Tab'}); break;
@@ -454,9 +464,7 @@ angular.module('booking', [])
 
         // go to next tab on user login success
         $rootScope.$on('user_login', function () {
-          if (!booking.shopBooking) {
-            booking.reloadUser();
-          }
+          booking.reloadUser();
         });
 
         angular.element(document).ready(function () {
@@ -512,14 +520,18 @@ angular.module('booking', [])
             user_id: $localStorage.userId,
             ride_id: booking.bikeId,
             start_date: startDate_utc.toISOString(),
-            end_date: endDate_utc.toISOString()
+            end_date: endDate_utc.toISOString(),
+            instant: booking.shopBooking,
           };
 
 
           api.post('/requests', data).then(
             function(success) {
-              $state.go('requests', {requestId: success.data.id});
               $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
+              if (!booking.shopBooking) {
+                $state.go('requests', {requestId: success.data.id});
+              }
+              booking.booked = true;
             },
             function(error) {
               booking.inProcess = false;

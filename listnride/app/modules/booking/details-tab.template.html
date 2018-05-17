@@ -14,7 +14,10 @@
       <div class="lnr-list-form"
            layout="column"
            flex="100">
-        <h2 class="md-title">{{ 'booking.details.invoice-address' | translate }}</h2>
+        <div layout="row" layout-align="space-between center">
+          <h2 class="md-title">{{ 'booking.details.invoice-address' | translate }}</h2>
+          <a class="lnr-link" ng-click="details.parent.authentication.showLoginDialog()">Do you have a listnride Account?</a>
+        </div>
         <p class="md-body-1">{{ 'booking.details.subtitle' | translate }}</p>
         <div class="spacer-xs"></div>
         <form name="details.parent.detailsForm" novalidate class="md-body-desktop">
@@ -71,6 +74,22 @@
             </md-input-container>
           </div>
           <div class="lnr-input-containers" layout="row" layout-xs="column">
+            <!-- Street form without autocomplete -->
+            <!-- <md-input-container flex>
+                <label>{{ 'list.location.street-number' | translate }}</label>   
+                  <input
+                    required
+                    name="street"
+                    ng-disabled="details.parent.phoneConfirmed === 'success'"
+                    ng-model="details.parent.user.street"
+                    layout="column"
+                  >
+                <div ng-messages="details.parent.detailsForm.city.$error" role="alert">
+                  <div ng-message="required">{{ 'shared.required' | translate }}</div>
+                </div>
+              </md-input-container> -->
+              
+            <!-- Street form with autocomplete -->
             <div flex>
               <autocomplete
                 autocomplete-id="details-address"
