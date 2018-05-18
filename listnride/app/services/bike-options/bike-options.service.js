@@ -48,9 +48,9 @@ angular.module('listnride')
         ];
       },
 
-      allCategoriesOptions: function () {
-        // Translate allCategoriesOptions fields (categories, subcategories)
-        var categoriesTranslationKeys = [
+      // All categories and subcategories keys
+      categoriesTranslationKeys: function () {
+        return [
           "list.category.urban",
           "list.subcategory.1.city-bike",
           "list.subcategory.1.dutch-bike",
@@ -97,8 +97,10 @@ angular.module('listnride')
           "list.subcategory.7.longtail-bike",
           "list.subcategory.7.scooter"
         ];
+      },
 
-        return $translate(categoriesTranslationKeys).then(function (translations) {
+      allCategoriesOptions: function () {
+        return $translate(this.categoriesTranslationKeys()).then(function (translations) {
           return [
             {
               catId: 10,
@@ -174,6 +176,54 @@ angular.module('listnride')
                 { id: 73, name: translations["list.subcategory.7.longtail-bike"] },
                 { id: 74, name: translations["list.subcategory.7.scooter"] }
               ]
+            }
+          ];
+        });
+      },
+
+      // TODO: remove urlOld, when @alexander will know about keywords
+      allCategoriesOptionsSeo: function () {
+        return $translate(this.categoriesTranslationKeys()).then(function (translations) {
+          return [
+            {
+              urlOld: 'city',
+              url: 'urban',
+              name: translations["list.category.urban"],
+              imgFilePath: "app/assets/ui_images/seo/city.jpg",
+              subcategories: '10,11,12'
+            }, {
+              urlOld: 'electric',
+              url: 'e-bike',
+              name: translations["list.category.e-bike"],
+              imgFilePath: "app/assets/ui_images/seo/electric.jpg",
+              subcategories: '20,21,22,23,24,25,26'
+            }, {
+              urlOld: 'race',
+              url: 'road',
+              name: translations["list.category.road"],
+              imgFilePath: "app/assets/ui_images/seo/race.jpg",
+              subcategories: '30,31,32,33'
+            }, {
+              url: 'all-terrain',
+              name: translations["list.category.all-terrain"],
+              imgFilePath: "app/assets/ui_images/seo/all-terrain.jpg",
+              subcategories: '40,41,42,43'
+            }, {
+              url: 'transport',
+              name: translations["list.category.transport"],
+              // TODO: Add image for transport
+              imgFilePath: "",
+              subcategories: '50,51,52,53,54'
+            }, {
+              url: 'kids',
+              name: translations["list.category.kids"],
+              imgFilePath: "app/assets/ui_images/seo/kids.jpg",
+              subcategories: '60,61,62,63'
+            }, {
+              url: 'special',
+              name: translations["list.category.special"],
+              imgFilePath: "app/assets/ui_images/seo/special.jpg",
+              subcategories: '70,71,72,73,74'
             }
           ];
         });
