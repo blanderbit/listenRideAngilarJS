@@ -3,14 +3,25 @@
 angular.module('cityLanding',[]).component('cityLanding', {
   templateUrl: 'app/modules/seo/city-landing.template.html',
   controllerAs: 'cityLanding',
-  controller: ['$translate', '$translatePartialLoader', '$stateParams', '$state', '$http', 'api', 'ENV',
-    function cityLandingController($translate, $tpl, $stateParams, $state, $http, api, ENV) {
+  controller: ['$translate', '$translatePartialLoader', '$stateParams', '$state', '$http', 'api', 'ENV', 'bikeOptions',
+    function cityLandingController($translate, $tpl, $stateParams, $state, $http, api, ENV, bikeOptions) {
 
       var cityLanding = this;
       cityLanding.city = $stateParams.city.charAt(0).toUpperCase() + $stateParams.city.slice(1);
       $tpl.addPart(ENV.staticTranslation);
       cityLanding.bikes = {};
       cityLanding.loading = true;
+
+      bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
+        // without transport category
+        cityLanding.categories = resolve.filter(function (item) {
+          return item.name !== 'Transport';
+        });
+        // parse url names to data names (change '-' to '_')
+        _.forEach(cityLanding.categories, function (item) {
+          item.dataName = item.url.replace(/-/i, '_')
+        });
+      });
 
       api.get('/seo_page?city='+cityLanding.city+'&lng=' + $translate.preferredLanguage()).then(
         function (success) {
