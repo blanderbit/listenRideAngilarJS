@@ -476,10 +476,50 @@ angular.module('list', ['ngLocale'])
     ]
   })
   // category tab
-  .component('categoryTab', {
-    templateUrl: 'app/modules/bike/list/category-tab.template.html',
+  .component('categoriesListTab', {
+    templateUrl: 'app/modules/bike/list/categories-list-tab.template.html',
     require: {
       parent: '^list'
     },
-    controllerAs: 'category'
+    controllerAs: 'categoriesTab'
+  })
+  // details tab
+  .component('detailsListTab', {
+    templateUrl: 'app/modules/bike/list/details-list-tab.template.html',
+    require: {
+      parent: '^list'
+    },
+    controllerAs: 'detailsTab'
+  })
+  // accessories tab
+  .component('accessoriesListTab', {
+    templateUrl: 'app/modules/bike/list/accessories-list-tab.template.html',
+    require: {
+      parent: '^list'
+    },
+    controllerAs: 'accessoriesTab'
+  })
+  // pictures tab
+  .component('picturesListTab', {
+    templateUrl: 'app/modules/bike/list/pictures-list-tab.template.html',
+    require: {
+      parent: '^list'
+    },
+    controllerAs: 'picturesTab'
+  })
+  // location tab
+  .component('locationListTab', {
+    templateUrl: 'app/modules/bike/list/location-list-tab.template.html',
+    require: {
+      parent: '^list'
+    },
+    controllerAs: 'locationTab'
+  })
+  // pricing tab
+  .component('pricingListTab', {
+    templateUrl: 'app/modules/bike/list/pricing-list-tab.template.html',
+    require: {
+      parent: '^list'
+    },
+    controllerAs: 'pricingTab'
   });
