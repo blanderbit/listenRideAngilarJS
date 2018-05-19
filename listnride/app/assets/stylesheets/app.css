@@ -59,6 +59,17 @@ strong {
   padding: 0 !important;
 }
 
+.lnr-watermark {
+  text-align: center;
+  width:100%;
+  position:absolute;
+  top: 15px;
+  z-index: 999;
+  font-size: 20px;
+  color: #FFFFFF;
+  pointer-events: none;
+}
+
 /* This has to be set for all full-height layouts */
 
 ui-view {
