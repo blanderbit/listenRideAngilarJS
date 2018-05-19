@@ -1,5 +1,5 @@
 <md-tab
-  ng-disabled="category.parent.isListMode"
+  ng-disabled="categoriesTab.parent.isListMode"
   class="categories"
   label="{{ 'list.category.label' | translate }}"
   layout="row"
@@ -14,20 +14,20 @@
         </div>
         <div layout="row" layout-align="space-between start">
           <md-radio-group
-            ng-model="category.parent.form.mainCategory" flex="50" layout="column"
-            ng-change="category.parent.categoryChange(category.parent.form.mainCategory)">
+            ng-model="categoriesTab.parent.form.mainCategory" flex="50" layout="column"
+            ng-change="categoriesTab.parent.categoryChange(categoriesTab.parent.form.mainCategory)">
             <md-radio-button
               class="main-category"
-              ng-repeat="category in category.parent.categoryOptions" value="{{ category.catId }}">
+              ng-repeat="category in categoriesTab.parent.categoryOptions" value="{{ category.catId }}">
               <md-icon class="lnr-icn-sm md-color-foreground accessory-icon" md-svg-src="app/assets/ui_icons/{{ category.iconFileName }}"
-                ng-class="category.parent.form.mainCategory == category.catId ? 'checked' : 'unchecked'"></md-icon>
+                ng-class="categoriesTab.parent.form.mainCategory == category.catId ? 'checked' : 'unchecked'"></md-icon>
               {{ category.name }}
             </md-radio-button>
           </md-radio-group>
 
-          <md-radio-group ng-model="category.parent.form.subCategory" flex layout="column">
+          <md-radio-group ng-model="categoriesTab.parent.form.subCategory" flex layout="column">
             <md-radio-button
-              ng-repeat="subcategory in category.parent.subcategoriesList(category.parent.form.mainCategory)"
+              ng-repeat="subcategory in categoriesTab.parent.subcategoriesList(categoriesTab.parent.form.mainCategory)"
               value="{{subcategory.id}}">
               {{ subcategory.name }}
             </md-radio-button>
@@ -50,8 +50,8 @@
     <div class="navigation" layout="row" layout-align="end center" layout-margin>
       <md-button
         class="md-raised md-primary"
-        ng-disabled="!category.parent.isCategoryValid() && category.parent.isListMode"
-        ng-click="category.parent.nextTab()">
+        ng-disabled="!categoriesTab.parent.isCategoryValid() && categoriesTab.parent.isListMode"
+        ng-click="categoriesTab.parent.nextTab()">
         {{ 'list.next' | translate }}
       </md-button>
     </div>
