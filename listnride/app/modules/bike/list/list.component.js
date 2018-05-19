@@ -36,7 +36,7 @@ angular.module('list', ['ngLocale'])
 
         var list = this;
 
-        list.form = {images: []};
+        list.form = {images: [], bikeValue: 1000};
         list.selectedIndex = 0;
         list.removedImages = [];
         list.startImage = 1;
@@ -49,6 +49,9 @@ angular.module('list', ['ngLocale'])
         bikeOptions.allCategoriesOptions().then(function (resolve) {
           list.categoryOptions = resolve;
         });
+        list.insuranceFeeDefault = 1;
+        list.currencySign = '€';
+        list.bikeValueOptions = [1000,2000,3000,4000,5000];
 
         var setBusinessForm = function() {
           if (authentication.isBusiness) {
@@ -514,6 +517,13 @@ angular.module('list', ['ngLocale'])
       parent: '^list'
     },
     controllerAs: 'locationTab'
+  })
+  .component('insuranceListTab', {
+    templateUrl: 'app/modules/bike/list/insurance-list-tab.template.html',
+    require: {
+      parent: '^list'
+    },
+    controllerAs: 'insuranceTab'
   })
   // pricing tab
   .component('pricingListTab', {
