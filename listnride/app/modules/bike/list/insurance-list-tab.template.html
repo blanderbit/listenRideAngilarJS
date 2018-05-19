@@ -9,30 +9,27 @@
       <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
         <div class="lnr-list-title">
           <h3 class="md-subhead">
-            {{ 'list.category.header' | translate }}
+            {{ 'list.insurance.header' | translate }}
           </h3>
         </div>
-        <div layout="row" layout-align="space-between start">
-          <md-radio-group
-            ng-model="insuranceTab.parent.form.mainCategory" flex="50" layout="column"
-            ng-change="insuranceTab.parent.categoryChange(insuranceTab.parent.form.mainCategory)">
-            <md-radio-button
-              class="main-category"
-              ng-repeat="category in insuranceTab.parent.categoryOptions" value="{{ category.catId }}">
-              <md-icon class="lnr-icn-sm md-color-foreground accessory-icon" md-svg-src="app/assets/ui_icons/{{ category.iconFileName }}"
-                ng-class="insuranceTab.parent.form.mainCategory == category.catId ? 'checked' : 'unchecked'"></md-icon>
-              {{ category.name }}
-            </md-radio-button>
-          </md-radio-group>
+        <md-select
+          ng-model="insuranceTab.parent.form.bikeValue"
+          ng-change="insuranceTab.parent.bikeValueChange(insuranceTab.parent.form.bikeValue)">
+            <md-option
+              ng-repeat="option in insuranceTab.parent.bikeValueOptions"
+              value="{{option}}">
+              <!-- selected="{{ option === insuranceTab.parent.form.bikeValue ? 'selected' : '' }}"> -->
+              {{ 'list.insurance.up-to-value' | translate }}
+              {{ option }}
+              {{ insuranceTab.parent.currencySign }}
+            </md-option>
+        </md-select>
 
-          <md-radio-group ng-model="insuranceTab.parent.form.subCategory" flex layout="column">
-            <md-radio-button
-              ng-repeat="subcategory in insuranceTab.parent.subcategoriesList(insuranceTab.parent.form.mainCategory)"
-              value="{{subcategory.id}}">
-              {{ subcategory.name }}
-            </md-radio-button>
-          </md-radio-group>
-        </div>
+        <p
+          class="md-body-1"
+          translate="list.insurance.tip"
+          translate-values="{fee: insuranceTab.parent.insuranceFeeDefault + insuranceTab.parent.currencySign}">
+        </p>
       </div>
 
       <md-divider hide-xs class="lnr-margin-left lnr-margin-right-double"></md-divider>
@@ -40,13 +37,16 @@
       <div flex="50" hide-xs>
         <div class="lnr-list-title">
           <h3 class="md-subhead">
-            Info
+            {{ 'list.insurance.info' | translate }}
           </h3>
         </div>
-        <p class="md-body-1">{{ 'list.category.hint' | translate }}</p>
+        <p class="md-body-1">{{ 'list.insurance.hint-part-1' | translate }}</p>
+        <p class="md-body-1">{{ 'list.insurance.hint-part-2' | translate }}</p>
+        <a ui-sref="help" target="_blank">{{ 'list.insurance.hint-link-label' | translate }}</a>
       </div>
     </div>
 
+    <!-- TODO: Add check when one of insurance were checked -->
     <div class="navigation" layout="row" layout-align="end center" layout-margin>
       <md-button
         class="md-raised md-primary"
@@ -55,5 +55,6 @@
         {{ 'list.next' | translate }}
       </md-button>
     </div>
+
   </md-content>
 </md-tab>

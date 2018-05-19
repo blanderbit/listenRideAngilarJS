@@ -674,6 +674,7 @@
     "back": "Terug",
     "next": "Verder",
     "list-bike": "Fiets plaatsen",
+    "info": "info",
     "category": {
       "header": "Wat is de fietscategorie?",
       "hint": "Kies allereerst de categorie van je fiets. Kies daarna de juiste subcategorie.",
@@ -782,7 +783,14 @@
       }
     },
     "insurance": {
-      "label": "Insurance"
+      "label": "Insurance",
+      "info": "Information about insurance",
+      "hint-part-1": "Your bike insured when ever somebody is renting it. In order to provide you the right protection its nessasary that we know the right value of your bike.",
+      "hint-part-2": "Please note that you have to provide proof the value of the bike in case of a claim",
+      "hint-link-label": "Learn more about insurance",
+      "header": "Please tell us the value of your bike",
+      "tip": "Additional fee for the rider is {{fee}} per day",
+      "up-to-value": "Up to {{price}}"
     },
     "subcategory": {
       "1": {

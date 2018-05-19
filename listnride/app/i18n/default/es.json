@@ -677,6 +677,7 @@
     "back": "Anterior",
     "next": "Siguiente",
     "list-bike": "Registrar mi bici",
+    "info": "info",
     "category": {
       "header": "¿Cuál es la categoría de tu bici?",
       "hint": "Primero, selecciona la categoría de tu bici. Luego selecciona la subcategoría correcta.",
@@ -784,7 +785,14 @@
       }
     },
     "insurance": {
-      "label": "Insurance"
+      "label": "Insurance",
+      "info": "Information about insurance",
+      "hint-part-1": "Your bike insured when ever somebody is renting it. In order to provide you the right protection its nessasary that we know the right value of your bike.",
+      "hint-part-2": "Please note that you have to provide proof the value of the bike in case of a claim",
+      "hint-link-label": "Learn more about insurance",
+      "header": "Please tell us the value of your bike",
+      "tip": "Additional fee for the rider is {{fee}} per day",
+      "up-to-value": "Up to {{value}}"
     },
     "subcategory": {
       "1": {
