@@ -1,0 +1,59 @@
+<md-tab
+  ng-disabled="insuranceTab.parent.isListMode"
+  class="insurance-tab"
+  label="{{ 'list.insurance.label' | translate }}"
+  layout="row"
+>
+  <md-content class="md-padding" layout="column">
+    <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
+      <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
+        <div class="lnr-list-title">
+          <h3 class="md-subhead">
+            {{ 'list.category.header' | translate }}
+          </h3>
+        </div>
+        <div layout="row" layout-align="space-between start">
+          <md-radio-group
+            ng-model="insuranceTab.parent.form.mainCategory" flex="50" layout="column"
+            ng-change="insuranceTab.parent.categoryChange(insuranceTab.parent.form.mainCategory)">
+            <md-radio-button
+              class="main-category"
+              ng-repeat="category in insuranceTab.parent.categoryOptions" value="{{ category.catId }}">
+              <md-icon class="lnr-icn-sm md-color-foreground accessory-icon" md-svg-src="app/assets/ui_icons/{{ category.iconFileName }}"
+                ng-class="insuranceTab.parent.form.mainCategory == category.catId ? 'checked' : 'unchecked'"></md-icon>
+              {{ category.name }}
+            </md-radio-button>
+          </md-radio-group>
+
+          <md-radio-group ng-model="insuranceTab.parent.form.subCategory" flex layout="column">
+            <md-radio-button
+              ng-repeat="subcategory in insuranceTab.parent.subcategoriesList(insuranceTab.parent.form.mainCategory)"
+              value="{{subcategory.id}}">
+              {{ subcategory.name }}
+            </md-radio-button>
+          </md-radio-group>
+        </div>
+      </div>
+
+      <md-divider hide-xs class="lnr-margin-left lnr-margin-right-double"></md-divider>
+
+      <div flex="50" hide-xs>
+        <div class="lnr-list-title">
+          <h3 class="md-subhead">
+            Info
+          </h3>
+        </div>
+        <p class="md-body-1">{{ 'list.category.hint' | translate }}</p>
+      </div>
+    </div>
+
+    <div class="navigation" layout="row" layout-align="end center" layout-margin>
+      <md-button
+        class="md-raised md-primary"
+        ng-disabled="!insuranceTab.parent.isCategoryValid() && insuranceTab.parent.isListMode"
+        ng-click="insuranceTab.parent.nextTab()">
+        {{ 'list.next' | translate }}
+      </md-button>
+    </div>
+  </md-content>
+</md-tab>

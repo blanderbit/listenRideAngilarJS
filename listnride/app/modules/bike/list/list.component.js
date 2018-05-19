@@ -515,6 +515,13 @@ angular.module('list', ['ngLocale'])
     },
     controllerAs: 'locationTab'
   })
+  .component('insuranceListTab', {
+    templateUrl: 'app/modules/bike/list/insurance-list-tab.template.html',
+    require: {
+      parent: '^list'
+    },
+    controllerAs: 'insuranceTab'
+  })
   // pricing tab
   .component('pricingListTab', {
     templateUrl: 'app/modules/bike/list/pricing-list-tab.template.html',

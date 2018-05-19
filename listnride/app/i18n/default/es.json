@@ -783,6 +783,9 @@
         }
       }
     },
+    "insurance": {
+      "label": "Insurance"
+    },
     "subcategory": {
       "1": {
         "dutch-bike": "Bicicleta holandesa",
