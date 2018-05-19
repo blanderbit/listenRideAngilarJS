@@ -59,6 +59,55 @@ strong {
   padding: 0 !important;
 }
 
+/* ONLY WATERMARK STUFF */
+
+.lnr-watermark {
+  text-align: center;
+  width:100%;
+  position:absolute;
+  top: 15px;
+  z-index: 999;
+  font-size: 20px;
+  color: #FFFFFF;
+  pointer-events: none;
+  -webkit-animation: flickerAnimation .5s infinite, rotation 2s ease-in-out infinite;
+  -moz-animation: flickerAnimation .5s infinite, rotation 2s ease-in-out infinite;
+  -o-animation: flickerAnimation .5s infinite, rotation 2s ease-in-out infinite;
+  animation:  flickerAnimation .5s infinite, rotation 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes rotation {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(2160deg);
+  }
+}
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+/* END WATERMARK STUFF */
+
 /* This has to be set for all full-height layouts */
 
 ui-view {

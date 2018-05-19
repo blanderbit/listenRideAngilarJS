@@ -16,7 +16,7 @@
            flex="100">
         <div layout="row" layout-align="space-between center">
           <h2 class="md-title">{{ 'booking.details.invoice-address' | translate }}</h2>
-          <a class="lnr-link" ng-click="details.parent.authentication.showLoginDialog()">Do you have a listnride Account?</a>
+          <a class="lnr-link" ng-click="details.parent.authentication.showLoginDialog()" ng-if="details.parent.shopBooking">Do you have a listnride Account?</a>
         </div>
         <p class="md-body-1">{{ 'booking.details.subtitle' | translate }}</p>
         <div class="spacer-xs"></div>
