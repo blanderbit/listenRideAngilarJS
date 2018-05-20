@@ -1,0 +1,60 @@
+<md-tab
+  ng-disabled="insuranceTab.parent.isListMode"
+  class="insurance-tab"
+  label="{{ 'list.insurance.label' | translate }}"
+  layout="row"
+>
+  <md-content class="md-padding" layout="column">
+    <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
+      <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
+        <div class="lnr-list-title">
+          <h3 class="md-subhead">
+            {{ 'list.insurance.header' | translate }}
+          </h3>
+        </div>
+        <md-select
+          placeholder="{{ 'list.insurance.select-value' | translate }}"
+          ng-model="insuranceTab.parent.form.coverage_total">
+            <md-option
+              ng-repeat="option in insuranceTab.parent.coverageOptions"
+              value="{{option}}">
+              {{ 'list.insurance.up-to-value' | translate }}
+              {{ option }}
+              {{ insuranceTab.parent.currencySign }}
+            </md-option>
+        </md-select>
+
+        <p
+          ng-if="insuranceTab.parent.form.coverage_total"
+          class="md-body-1"
+          translate="list.insurance.tip"
+          translate-values="{fee: insuranceTab.parent.form.coverage_total / 1000 + insuranceTab.parent.currencySign}">
+        </p>
+      </div>
+
+      <md-divider hide-xs class="lnr-margin-left lnr-margin-right-double"></md-divider>
+
+      <div flex="50" hide-xs>
+        <div class="lnr-list-title">
+          <h3 class="md-subhead">
+            {{ 'list.insurance.info' | translate }}
+          </h3>
+        </div>
+        <p class="md-body-1">{{ 'list.insurance.hint-part-1' | translate }}</p>
+        <p class="md-body-1">{{ 'list.insurance.hint-part-2' | translate }}</p>
+        <a ui-sref="help" target="_blank">{{ 'list.insurance.hint-link-label' | translate }}</a>
+      </div>
+    </div>
+
+    <!-- TODO: Add check when one of insurance were checked -->
+    <div class="navigation" layout="row" layout-align="end center" layout-margin>
+      <md-button
+        class="md-raised md-primary"
+        ng-disabled="!insuranceTab.parent.form.bikeValue && insuranceTab.parent.isListMode"
+        ng-click="insuranceTab.parent.nextTab()">
+        {{ 'list.next' | translate }}
+      </md-button>
+    </div>
+
+  </md-content>
+</md-tab>
