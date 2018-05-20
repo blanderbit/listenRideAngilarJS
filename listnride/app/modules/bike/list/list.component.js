@@ -49,7 +49,6 @@ angular.module('list', ['ngLocale'])
         bikeOptions.allCategoriesOptions().then(function (resolve) {
           list.categoryOptions = resolve;
         });
-        list.currencySign = '€';
         list.coverageOptions = [1000, 2000, 3000, 4000, 5000];
 
         var setBusinessForm = function() {

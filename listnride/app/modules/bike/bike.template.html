@@ -1,4 +1,4 @@
-<md-content class="single-column"> 
+<md-content class="single-column">
   <div
     id="hero-shot"
     class="lnr-preload-bg"
@@ -165,7 +165,7 @@
         </div>
 
         <md-divider class="lnr-no-padding lnr-margin-lrg" ng-if="bike.data.ratings.length > 0"></md-divider>
-        
+
         <!-- reviews -->
         <div layout="row" layout-xs="column" ng-if="bike.data.ratings.length > 0">
           <div flex-gt-xs="25">
@@ -198,10 +198,11 @@
           requests="bike.data.requests"
           user-id="bike.data.user.id"
           bike-availabilities="bike.data.availabilities"
+          coverage-total="bike.data.coverage_total"
         ></calendar>
       </div>
     </div>
-   
+
   </div>
 
   <ng-map

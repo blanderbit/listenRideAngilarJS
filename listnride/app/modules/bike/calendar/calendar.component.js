@@ -11,7 +11,8 @@ angular.module('bike').component('calendar', {
     priceDay: '<',
     priceWeek: '<',
     prices: '<',
-    requests: '<'
+    requests: '<',
+    coverageTotal: '<'
   },
   controller: ['$scope',
       '$localStorage',
@@ -184,7 +185,7 @@ angular.module('bike').component('calendar', {
         var slot = calendar.event.slots[calendar.event.pickupSlotId];
         calendar.startDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
 
-        // Presets returnSlot to be (slotDuration) after pickupSlot 
+        // Presets returnSlot to be (slotDuration) after pickupSlot
         calendar.event.returnSlotId = parseInt(calendar.event.pickupSlotId) + slotDuration;
         calendar.event.changeReturnSlot();
         dateChange(calendar.startDate, calendar.endDate);
@@ -196,7 +197,7 @@ angular.module('bike').component('calendar', {
         if (slot.overnight) {
           calendar.endDate = new Date(eventYear, eventMonth, slot.day + 1, slot.hour, 0, 0, 0);
         } else {
-          calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);  
+          calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
         }
 
         dateChange(calendar.startDate, calendar.endDate);
@@ -540,7 +541,7 @@ angular.module('bike').component('calendar', {
           var invalidDays = countInvalidDays(startDate, endDate);
           calendar.duration = date.duration(startDate, endDate, invalidDays);
           calendar.durationDays = date.durationDays(startDate, endDate);
-          var prices = price.calculatePrices(startDate, endDate, calendar.prices);
+          var prices = price.calculatePrices(startDate, endDate, calendar.prices, calendar.coverage);
           calendar.subtotal = prices.subtotal;
           calendar.discount = prices.subtotal - prices.subtotalDiscounted;
           calendar.discountRelative = calendar.discount / calendar.durationDays;

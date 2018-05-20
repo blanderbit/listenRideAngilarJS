@@ -40,6 +40,13 @@
     <div>{{ receipt.lnrFee | currency:"€":2 }}</div>
   </div>
 
+  <div layout="row" layout-align="space-between center" ng-if="receipt.isPremiumCoverage">
+    <div layout="row" layout-align="start center">
+      {{ 'booking.overview.premium-insurance' | translate }}
+    </div>
+    <div>{{ receipt.premiumCoverage | currency:"€":2 }}</div>
+  </div>
+
   <div layout="row" layout-align="space-between center" ng-if="receipt.balance > 0">
     <div layout="row" layout-align="start center">
       {{ 'shared.voucher' | translate }}
