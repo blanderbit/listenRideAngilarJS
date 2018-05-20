@@ -49,7 +49,6 @@ angular.module('list', ['ngLocale'])
         list.selectedCategory = {};
         bikeOptions.allCategoriesOptions().then(function (resolve) {
           list.categoryOptions = resolve;
-          console.log(list.categoryOptions);
         });
         list.coverageOptions = [1000, 2000, 3000, 4000, 5000];
 
