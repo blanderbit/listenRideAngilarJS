@@ -51,7 +51,6 @@ angular.module('list', ['ngLocale'])
           list.categoryOptions = resolve;
           console.log(list.categoryOptions);
         });
-        list.currencySign = '€';
         list.coverageOptions = [1000, 2000, 3000, 4000, 5000];
 
         var equipmentCategories = [51, 52, 53, 54];

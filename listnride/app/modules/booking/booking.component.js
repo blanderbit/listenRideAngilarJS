@@ -21,10 +21,8 @@ angular.module('booking', [])
         booking.bikeId = $stateParams.bikeId;
         booking.shopBooking = $stateParams.shop;
 
-        // if (!booking.shopBooking) {
-          booking.startDate = new Date($stateParams.startDate);
-          booking.endDate = new Date($stateParams.endDate);
-        // }
+        booking.startDate = new Date($stateParams.startDate);
+        booking.endDate = new Date($stateParams.endDate);
 
         booking.user = {};
         booking.phoneConfirmed = 'progress';
@@ -35,6 +33,7 @@ angular.module('booking', [])
         booking.expiryDate = "";
         booking.booked = false;
         booking.processing = false;
+        booking.isPremium = false;
 
         var oldExpiryDateLength = 0;
         var expiryDateLength = 0;
@@ -45,6 +44,8 @@ angular.module('booking', [])
         api.get('/rides/' + booking.bikeId).then(
           function (success) {
             booking.bike = success.data;
+            // TODO: remove default
+            booking.coverageTotal = booking.bike.coverage_total || 1000;
             booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
             booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
             booking.prices = booking.bike.prices;
@@ -521,6 +522,9 @@ angular.module('booking', [])
             start_date: startDate_utc.toISOString(),
             end_date: endDate_utc.toISOString(),
             instant: booking.shopBooking,
+            insurance: {
+              premium: booking.isPremium
+            }
           };
 
 

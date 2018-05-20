@@ -51,7 +51,7 @@
           <span flex></span>
           <span class="md-subhead">3,00€ p.d.</span>
         </div>
-        <md-switch ng-model="data.cb1" aria-label="Switch 1">
+        <md-switch ng-model="overview.parent.isPremium" aria-label="Switch 1">
           {{ 'booking.overview.premium-insurance-subtitle' | translate }}
         </md-switch>
         <span class="md-body-2">{{ 'booking.overview.thats-included' | translate }}</span>
@@ -161,7 +161,7 @@
 
       <div class="lnr-list-form" ng-hide="!overview.parent.booked">
         <div ng-hide="!overview.parent.booked" layout-align="center center" flex>
-          <br><br><br><br> 
+          <br><br><br><br>
           <h2 class="md-headline lnr-center lnr-green-text">{{ 'booking.overview.success-header' | translate }}</h2>
           <p class="md-subhead lnr-center">{{ 'booking.overview.success-subheader' | translate }}</p>
           <br><br>

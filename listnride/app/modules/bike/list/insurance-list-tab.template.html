@@ -19,8 +19,7 @@
               ng-repeat="option in insuranceTab.parent.coverageOptions"
               value="{{option}}">
               {{ 'list.insurance.up-to-value' | translate }}
-              {{ option }}
-              {{ insuranceTab.parent.currencySign }}
+              {{ option | currency:"€":2 }}
             </md-option>
         </md-select>
 
@@ -28,7 +27,7 @@
           ng-if="insuranceTab.parent.form.coverage_total"
           class="md-body-1"
           translate="list.insurance.tip"
-          translate-values="{fee: insuranceTab.parent.form.coverage_total / 1000 + insuranceTab.parent.currencySign}">
+          translate-values="{fee: insuranceTab.parent.form.coverage_total / 1000 + '€'}">
         </p>
       </div>
 
@@ -42,7 +41,7 @@
         </div>
         <p class="md-body-1">{{ 'list.insurance.hint-part-1' | translate }}</p>
         <p class="md-body-1">{{ 'list.insurance.hint-part-2' | translate }}</p>
-        <a ui-sref="help" target="_blank">{{ 'list.insurance.hint-link-label' | translate }}</a>
+        <a ui-sref="insurance" target="_blank">{{ 'list.insurance.hint-link-label' | translate }}</a>
       </div>
     </div>
 
