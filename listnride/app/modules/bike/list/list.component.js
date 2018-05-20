@@ -46,10 +46,14 @@ angular.module('list', ['ngLocale'])
         list.validateObj = {height: {min: 1000}, width: {min: 1500}, duration: {max: '5m'}};
         list.invalidFiles = {};
         list.businessUser = false;
+        list.selectedCategory = {};
         bikeOptions.allCategoriesOptions().then(function (resolve) {
           list.categoryOptions = resolve;
+          console.log(list.categoryOptions);
         });
         list.coverageOptions = [1000, 2000, 3000, 4000, 5000];
+
+        var equipmentCategories = [51, 52, 53, 54];
 
         var setBusinessForm = function() {
           if (authentication.isBusiness) {
@@ -130,6 +134,8 @@ angular.module('list', ['ngLocale'])
                 data.mainCategory = subcategoryParent(data.category).catId;
                 data.subCategory = data.category;
 
+                list.selectedCategory = subcategoryParent(data.category);
+
                 // form data for edit bikes
                 list.form = data;
                 list.form.prices = prices;
@@ -190,7 +196,7 @@ angular.module('list', ['ngLocale'])
               "image_file_3": (list.form.images[2]) ? list.form.images[2].src : undefined,
               "image_file_4": (list.form.images[3]) ? list.form.images[3].src : undefined,
               "image_file_5": (list.form.images[4]) ? list.form.images[4].src : undefined,
-              "is_equipment": _.includes([51, 52, 53, 54], list.form.subCategory),
+              "is_equipment": _.includes(equipmentCategories, list.form.subCategory),
               "coverage_total": list.form.coverage_total
             }
           };
@@ -366,6 +372,10 @@ angular.module('list', ['ngLocale'])
           list.selectedIndex = list.selectedIndex - 1;
         };
 
+        list.showAccessories = function () {
+          return list.form.subCategory && !_.includes(equipmentCategories, list.form.subCategory)
+        }
+
         // add image of the bike
         list.addImage = function (files) {
           if (files && files.length)
@@ -471,6 +481,10 @@ angular.module('list', ['ngLocale'])
             list.isLocationValid() &&
             list.isPricingValid();
         };
+
+        list.changeCategory = function() {
+          list.form.subCategory = undefined;
+        }
 
         // populate data for list or edit bike
         if (list.isListMode) list.populateNewBikeData();
