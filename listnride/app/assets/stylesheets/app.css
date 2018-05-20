@@ -70,6 +70,9 @@ strong {
   font-size: 20px;
   color: #FFFFFF;
   pointer-events: none;
+}
+
+.lnr-watermark-animation {
   -webkit-animation: flickerAnimation .5s infinite, rotation 2s ease-in-out infinite;
   -moz-animation: flickerAnimation .5s infinite, rotation 2s ease-in-out infinite;
   -o-animation: flickerAnimation .5s infinite, rotation 2s ease-in-out infinite;
@@ -1006,7 +1009,7 @@ home #landingSection #homeHeroShot {
 }
 
 home #landingSection #homeHeroShot {
-  background-image: url(../ui_images/lnr_hero6.jpg);
+  background-image: url(../ui_images/lnr_hero6_dark.jpg);
 }
 
 .cb-slideshow,

@@ -46,8 +46,10 @@ angular.module('list', ['ngLocale'])
         list.validateObj = {height: {min: 1000}, width: {min: 1500}, duration: {max: '5m'}};
         list.invalidFiles = {};
         list.businessUser = false;
+        list.selectedCategory = {};
         bikeOptions.allCategoriesOptions().then(function (resolve) {
           list.categoryOptions = resolve;
+          console.log(list.categoryOptions);
         });
 
         var setBusinessForm = function() {
@@ -468,6 +470,10 @@ angular.module('list', ['ngLocale'])
             list.isLocationValid() &&
             list.isPricingValid();
         };
+
+        list.changeCategory = function() {
+          console.log(list.selectedCategory);
+        }
 
         // populate data for list or edit bike
         if (list.isListMode) list.populateNewBikeData();
