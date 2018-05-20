@@ -790,7 +790,8 @@
       "hint-link-label": "Learn more about insurance",
       "header": "Please tell us the value of your bike",
       "tip": "Additional fee for the rider is {{fee}} per day",
-      "up-to-value": "Up to {{price}}"
+      "up-to-value": "Up to {{price}}",
+      "select-value": "Please select your bike value"
     },
     "subcategory": {
       "1": {

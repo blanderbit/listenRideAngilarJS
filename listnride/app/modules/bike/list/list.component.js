@@ -36,7 +36,7 @@ angular.module('list', ['ngLocale'])
 
         var list = this;
 
-        list.form = {images: [], bikeValue: 1000};
+        list.form = {images: [], coverage_total: ''};
         list.selectedIndex = 0;
         list.removedImages = [];
         list.startImage = 1;
@@ -49,9 +49,8 @@ angular.module('list', ['ngLocale'])
         bikeOptions.allCategoriesOptions().then(function (resolve) {
           list.categoryOptions = resolve;
         });
-        list.insuranceFeeDefault = 1;
         list.currencySign = '€';
-        list.bikeValueOptions = [1000,2000,3000,4000,5000];
+        list.coverageOptions = [1000, 2000, 3000, 4000, 5000];
 
         var setBusinessForm = function() {
           if (authentication.isBusiness) {
@@ -192,7 +191,8 @@ angular.module('list', ['ngLocale'])
               "image_file_3": (list.form.images[2]) ? list.form.images[2].src : undefined,
               "image_file_4": (list.form.images[3]) ? list.form.images[3].src : undefined,
               "image_file_5": (list.form.images[4]) ? list.form.images[4].src : undefined,
-              'is_equipment': _.includes([51, 52, 53, 54], list.form.subCategory)
+              "is_equipment": _.includes([51, 52, 53, 54], list.form.subCategory),
+              "coverage_total": list.form.coverage_total
             }
           };
 
@@ -256,7 +256,8 @@ angular.module('list', ['ngLocale'])
               "bicycle_number": list.form.bicycle_number,
               "frame_number": list.form.frame_number,
               "details": list.form.details,
-              "is_equipment": _.includes([51, 52, 53, 54], list.form.subCategory)
+              "is_equipment": _.includes([51, 52, 53, 54], list.form.subCategory),
+              "coverage_total": list.form.coverage_total
             }
           };
 
