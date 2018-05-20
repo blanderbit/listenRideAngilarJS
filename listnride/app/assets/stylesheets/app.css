@@ -70,6 +70,9 @@ strong {
   font-size: 20px;
   color: #FFFFFF;
   pointer-events: none;
+}
+
+.lnr-watermark-animation {
   -webkit-animation: flickerAnimation .5s infinite, rotation 2s ease-in-out infinite;
   -moz-animation: flickerAnimation .5s infinite, rotation 2s ease-in-out infinite;
   -o-animation: flickerAnimation .5s infinite, rotation 2s ease-in-out infinite;
@@ -1623,8 +1626,20 @@ list md-icon.accessory-icon.checked svg circle,
 edit md-icon.accessory-icon.checked svg path,
 edit md-icon.accessory-icon.checked svg rect,
 edit md-icon.accessory-icon.checked svg circle {
-  fill: #7ab2f8;
-  color: #7ab2f8;
+  fill: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.accessory-label.checked {
+  color: #FFFFFF;
+}
+
+.accessory-checkbox.checked {
+  background-color: rgb(122, 178, 248);
+}
+
+.accessory-checkbox.unchecked {
+  background-color: rgb(255, 255, 255);
 }
 
 list md-radio-button.main-category .md-container,
@@ -1639,7 +1654,10 @@ edit md-radio-button.main-category .md-label {
 
 list .accessory-checkbox,
 edit .accessory-checkbox {
-  margin-bottom: 16px;
+  margin: 0 10px 16px 0;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 list .accessory-label,
