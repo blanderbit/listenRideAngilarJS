@@ -6,7 +6,7 @@
 >
   <md-content class="md-padding" layout="column">
     <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
-      <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
+      <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column" flex="100">
         <div class="lnr-list-title">
           <h3 class="md-subhead">
             {{ 'list.category.header' | translate }}
@@ -30,12 +30,12 @@
           </md-select>
         </md-input-container>
 
-        <div class="lnr-list-title" ng-show="categoriesTab.parent.form.subCategory">
+        <div class="lnr-list-title" ng-show="categoriesTab.parent.showAccessories()">
           <h3 class="md-subhead">
             {{ 'list.accessories.header' | translate }}
           </h3>
         </div>
-        <div layout="row" flex layout-wrap ng-show="categoriesTab.parent.form.subCategory">
+        <div layout="row" flex layout-wrap ng-show="categoriesTab.parent.showAccessories()">
           <div ng-class="categoriesTab.parent.form[acc.model] ? 'checked' : 'unchecked'" ng-repeat="acc in categoriesTab.parent.accessoryOptions" flex="30" flex-xs="45" class="accessory-checkbox" layout="row" layout-align="start center" ng-click="categoriesTab.parent.onAccessoryClick(acc.model)">
             <md-icon ng-class="categoriesTab.parent.form[acc.model] ? 'checked' : 'unchecked'" class="lnr-icn-md md-color-foreground accessory-icon"
               md-svg-src="app/assets/ui_icons/{{acc.iconFileName}}"></md-icon>
@@ -44,6 +44,8 @@
             </div>
           </div>
         </div>
+
+        <div style="color: #FFFFFF; pointer-events: none;">{{ 'list.category.hint' | translate }}</div>
 
       </div>
 
