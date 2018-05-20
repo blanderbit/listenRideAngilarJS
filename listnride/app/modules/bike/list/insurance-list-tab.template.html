@@ -13,12 +13,11 @@
           </h3>
         </div>
         <md-select
-          ng-model="insuranceTab.parent.form.bikeValue"
-          ng-change="insuranceTab.parent.bikeValueChange(insuranceTab.parent.form.bikeValue)">
+          placeholder="{{ 'list.insurance.select-value' | translate }}"
+          ng-model="insuranceTab.parent.form.coverage_total">
             <md-option
-              ng-repeat="option in insuranceTab.parent.bikeValueOptions"
+              ng-repeat="option in insuranceTab.parent.coverageOptions"
               value="{{option}}">
-              <!-- selected="{{ option === insuranceTab.parent.form.bikeValue ? 'selected' : '' }}"> -->
               {{ 'list.insurance.up-to-value' | translate }}
               {{ option }}
               {{ insuranceTab.parent.currencySign }}
@@ -26,9 +25,10 @@
         </md-select>
 
         <p
+          ng-if="insuranceTab.parent.form.coverage_total"
           class="md-body-1"
           translate="list.insurance.tip"
-          translate-values="{fee: insuranceTab.parent.insuranceFeeDefault + insuranceTab.parent.currencySign}">
+          translate-values="{fee: insuranceTab.parent.form.coverage_total / 1000 + insuranceTab.parent.currencySign}">
         </p>
       </div>
 
@@ -50,7 +50,7 @@
     <div class="navigation" layout="row" layout-align="end center" layout-margin>
       <md-button
         class="md-raised md-primary"
-        ng-disabled="!insuranceTab.parent.isCategoryValid() && insuranceTab.parent.isListMode"
+        ng-disabled="!insuranceTab.parent.form.bikeValue && insuranceTab.parent.isListMode"
         ng-click="insuranceTab.parent.nextTab()">
         {{ 'list.next' | translate }}
       </md-button>
