@@ -476,7 +476,7 @@ angular.module('list', ['ngLocale'])
         };
 
         list.changeCategory = function() {
-          console.log(list.selectedCategory);
+          list.form.subCategory = undefined;
         }
 
         // populate data for list or edit bike
