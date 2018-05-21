@@ -26,9 +26,10 @@ angular.module('list', ['ngLocale'])
       'accessControl',
       'loadingDialog',
       'price',
+      'countryCodeTranslator',
       function ListController($mdDialog, $localStorage, $stateParams, $state,
                               $scope, $analytics, Upload, bikeOptions, api, authentication,
-                              $timeout, verification, accessControl, loadingDialog, price) {
+                              $timeout, verification, accessControl, loadingDialog, price, countryCodeTranslator) {
 
         if (accessControl.requireLogin()) {
           return;
@@ -37,7 +38,7 @@ angular.module('list', ['ngLocale'])
         var list = this;
 
         list.form = {images: [], coverage_total: ''};
-        list.selectedIndex = 0;
+        list.selectedIndex = 3;
         list.removedImages = [];
         list.startImage = 1;
         list.sizeOptions = bikeOptions.sizeOptions();
@@ -53,6 +54,7 @@ angular.module('list', ['ngLocale'])
         list.coverageOptions = [1000, 2000, 3000, 4000, 5000];
 
         var equipmentCategories = [51, 52, 53, 54];
+        var insuranceCountries = ['DE', 'AT'];
 
         var setBusinessForm = function() {
           if (authentication.isBusiness) {
@@ -329,6 +331,14 @@ angular.module('list', ['ngLocale'])
           }
         };
 
+        list.insuranceAllowed = function () {
+          if (insuranceCountries.indexOf(countryCodeTranslator.countryCodeFor(list.form.country)) > -1) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+
         list.resetCustomPrices = function () {
           // hide reset button
           // enable discount field
@@ -445,6 +455,7 @@ angular.module('list', ['ngLocale'])
         };
 
         list.fillAddress = function (place) {
+          console.log(place);
           var components = place.address_components;
           if (components) {
             var desiredComponents = {
