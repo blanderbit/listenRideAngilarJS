@@ -21,6 +21,10 @@ angular.module('bike',[]).component('bike', {
         return !!($mdMedia('xs') || $mdMedia('sm'));
       };
 
+      bike.heroshot = function () {
+        return bike.mobileCalendar() ? bike.data.image_file_1.image_file_1.small.url : bike.data.image_file_1.image_file_1.large.url;
+      }
+
       // TODO: move all api calls in service
       // it is really difficult to test api calls from controller.
       // controller should only be used for data binding and 
