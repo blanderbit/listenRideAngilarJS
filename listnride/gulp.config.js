@@ -176,7 +176,7 @@ module.exports = function () {
                     staticTranslation: 'static',
                     btKey: 'sandbox_jcmqgjqd_t4ptn54mswxmpnd5'
                 }
-            },        
+            },
             imageminOptions: {
                 optimizationLevel: 7,
                 bitDepthReduction: true,

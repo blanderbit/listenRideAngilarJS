@@ -184,7 +184,7 @@ angular.module('list', ['ngLocale'])
               "has_basket": !!list.form.has_basket,
               "has_trailer": !!list.form.has_trailer,
               "has_childseat": !!list.form.has_childseat,
-              "user_id]": $localStorage.userId,
+              "user_id": $localStorage.userId,
               "street": list.form.street,
               "city": list.form.city,
               "zip": list.form.zip,
@@ -267,11 +267,11 @@ angular.module('list', ['ngLocale'])
               "frame_number": list.form.frame_number,
               "details": list.form.details,
               "is_equipment": _.includes([51, 52, 53, 54], list.form.subCategory),
-              "coverage_total": list.form.coverage_total
+              "coverage_total": +list.form.coverage_total
             }
           };
 
-          // TODO: Refactor images logic backend & fronted
+          // TODO: Refactor images logic backend & frontend
           _.forEach(list.removedImages, function(image_name) {
             ride['ride']['remove_' + image_name] = true
           });
@@ -359,7 +359,6 @@ angular.module('list', ['ngLocale'])
 
         // enable custom discounts fields
         list.enableDiscounts = function () {
-
           list.form.custom_price = false;
           list.discountFieldEditable = true;
         };
@@ -459,7 +458,6 @@ angular.module('list', ['ngLocale'])
         };
 
         list.fillAddress = function (place) {
-          console.log(place);
           var components = place.address_components;
           if (components) {
             var desiredComponents = {
