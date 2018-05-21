@@ -35,11 +35,10 @@ angular.module('listnride').factory('price', ['$translate', 'date',
 
         // Calculate Coverage Fee
         result.premiumCoverage = result.premiumCoverage * days;
-        result.coverageFee = result.premiumCoverage + (result.coverageTotal / 1000 * days)
 
         // Service Fee is 12,5% and includes 0,19% MwSt
-        result.serviceFee = (result.subtotalDiscounted * 0.125) * 1.19;
-        result.total = result.subtotalDiscounted + result.serviceFee + result.coverageFee;
+        result.serviceFee = (result.subtotalDiscounted * 0.125) * 1.19 + (result.coverageTotal / 1000 * days)
+        result.total = result.subtotalDiscounted + result.serviceFee + result.premiumCoverage;
         return result;
       },
 
