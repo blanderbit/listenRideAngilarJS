@@ -75,7 +75,7 @@ angular.module('list', ['ngLocale'])
         }
 
         list.tabCompleted = function(tabId) {
-          return list.selectedIndex > tabId ? "✔" : "    ";
+          return (list.selectedIndex > tabId && list.isListMode) ? "✔" : "    ";
         };
 
         list.subcategoriesList = function (categoryId) {
