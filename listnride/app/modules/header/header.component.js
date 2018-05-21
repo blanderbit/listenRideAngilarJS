@@ -15,7 +15,7 @@ angular.module('header',[]).component('header', {
       header.showSearch = false;
       // Contains the amount of unread messages to be displayed in the header
       header.unreadMessages = $localStorage.unreadMessages;
-      header.isStaging = ENV.apiEndpoint === "https://listnride-staging.herokuapp.com/v2";
+      header.isStaging = ENV.apiEndpoint !== "https://api.listnride.com/v2";
 
       header.$onInit = function(){
         if ($state.current.name === 'home') {
