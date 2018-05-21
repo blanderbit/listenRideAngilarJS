@@ -1018,6 +1018,12 @@ home #landingSection #homeHeroShot {
   background-image: url(../ui_images/lnr_hero6.jpg);
 }
 
+@media (max-width:599px) {
+  home #landingSection #homeHeroShot {
+    background-image: url(../ui_images/lnr_hero6_small.jpg);
+  }
+}
+
 .cb-slideshow,
 .cb-slideshow:after {
   position: absolute;
