@@ -38,7 +38,7 @@ angular.module('list', ['ngLocale'])
         var list = this;
 
         list.form = {images: [], coverage_total: ''};
-        list.selectedIndex = 3;
+        list.selectedIndex = 0;
         list.removedImages = [];
         list.startImage = 1;
         list.sizeOptions = bikeOptions.sizeOptions();
@@ -73,6 +73,10 @@ angular.module('list', ['ngLocale'])
             })
           });
         }
+
+        list.tabCompleted = function(tabId) {
+          return list.selectedIndex > tabId ? "✔" : "    ";
+        };
 
         list.subcategoriesList = function (categoryId) {
           if (!categoryId) return;
@@ -517,14 +521,6 @@ angular.module('list', ['ngLocale'])
       parent: '^list'
     },
     controllerAs: 'detailsTab'
-  })
-  // accessories tab
-  .component('accessoriesListTab', {
-    templateUrl: 'app/modules/bike/list/accessories-list-tab.template.html',
-    require: {
-      parent: '^list'
-    },
-    controllerAs: 'accessoriesTab'
   })
   // pictures tab
   .component('picturesListTab', {

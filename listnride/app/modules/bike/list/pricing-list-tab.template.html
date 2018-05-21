@@ -1,4 +1,4 @@
-<md-tab ng-disabled="pricingTab.parent.isListMode" class="pricing" label="{{ 'list.pricing.label' | translate }}" layout="row">
+<md-tab ng-disabled="pricingTab.parent.isListMode" class="pricing" label="{{ 'list.pricing.label' | translate }} {{ categoriesTab.parent.tabCompleted(5) }}" layout="row">
   <md-content class="md-padding" layout="column">
     <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
       <!-- form for the price -->

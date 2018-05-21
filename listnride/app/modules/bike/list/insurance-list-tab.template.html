@@ -1,7 +1,7 @@
 <md-tab
   ng-disabled="insuranceTab.parent.isListMode"
   class="insurance-tab"
-  label="{{ 'list.insurance.label' | translate }}"
+  label="{{ 'list.insurance.label' | translate }} {{ insuranceTab.parent.tabCompleted(4) }}"
   layout="row"
 >
   <md-content class="md-padding" layout="column">

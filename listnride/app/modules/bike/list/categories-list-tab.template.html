@@ -1,7 +1,7 @@
 <md-tab
   ng-disabled="categoriesTab.parent.isListMode"
   class="categories"
-  label="{{ 'list.category.label' | translate }}"
+  label="{{ 'list.category.label' | translate }} {{ categoriesTab.parent.tabCompleted(0) }}"
   layout="row"
 >
   <md-content class="md-padding" layout="column">
