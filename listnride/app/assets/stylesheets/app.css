@@ -63,13 +63,19 @@ strong {
 
 .lnr-watermark {
   text-align: center;
-  width:100%;
   position:absolute;
-  top: 15px;
+  bottom: 10px;
+  left: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #D6233DEE;
   z-index: 999;
-  font-size: 20px;
+  font-size: 12px;
   color: #FFFFFF;
   pointer-events: none;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
 }
 
 .lnr-watermark-animation {

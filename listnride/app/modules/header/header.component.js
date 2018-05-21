@@ -3,8 +3,8 @@
 angular.module('header',[]).component('header', {
   templateUrl: 'app/modules/header/header.template.html',
   controllerAs: 'header',
-  controller: ['$transitions', '$state', '$mdSidenav', '$mdMedia', '$localStorage', '$stateParams', 'api', 'authentication', 'verification',
-    function HeaderController($transitions, $state, $mdSidenav, $mdMedia, $localStorage, $stateParams, api, authentication, verification) {
+  controller: ['$transitions', '$state', '$mdSidenav', '$mdMedia', '$localStorage', '$stateParams', 'api', 'authentication', 'verification', 'ENV',
+    function HeaderController($transitions, $state, $mdSidenav, $mdMedia, $localStorage, $stateParams, api, authentication, verification, ENV) {
       var header = this;
       var mobileSearch = false;
       header.authentication = authentication;
@@ -15,6 +15,7 @@ angular.module('header',[]).component('header', {
       header.showSearch = false;
       // Contains the amount of unread messages to be displayed in the header
       header.unreadMessages = $localStorage.unreadMessages;
+      header.isStaging = ENV.apiEndpoint === "https://listnride-staging.herokuapp.com/v2";
 
       header.$onInit = function(){
         if ($state.current.name === 'home') {
