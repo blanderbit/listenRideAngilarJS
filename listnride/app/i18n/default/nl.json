@@ -800,7 +800,8 @@
       "header": "Please tell us the value of your bike",
       "tip": "Additional fee for the rider is {{fee}} per day",
       "up-to-value": "Up to {{price}}",
-      "select-value": "Please select your bike value"
+      "select-value": "Please select your bike value",
+      "no-insurance": "Sorry, your country doesn't support an insurance. Only for Germany and Austria."
     },
     "subcategory": {
       "1": {
