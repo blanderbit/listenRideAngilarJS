@@ -53,7 +53,7 @@ angular.module('booking', [])
             booking.prices = booking.bike.prices;
             booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
             booking.total = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
-            booking.bikeLocation = ''
+            booking.bikeLocation = success.data.country;
           },
           function (error) {
             $state.go('home');

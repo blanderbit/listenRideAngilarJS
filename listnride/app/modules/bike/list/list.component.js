@@ -263,7 +263,7 @@ angular.module('list', ['ngLocale'])
               "frame_number": list.form.frame_number,
               "details": list.form.details,
               "is_equipment": _.includes([51, 52, 53, 54], list.form.subCategory),
-              "coverage_total": list.form.coverage_total
+              "coverage_total": +list.form.coverage_total
             }
           };
 
