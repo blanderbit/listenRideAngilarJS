@@ -37,7 +37,7 @@ angular.module('list', ['ngLocale'])
         var list = this;
 
         list.form = {images: [], coverage_total: ''};
-        list.selectedIndex = 0;
+        list.selectedIndex = 3;
         list.removedImages = [];
         list.startImage = 1;
         list.sizeOptions = bikeOptions.sizeOptions();
@@ -445,6 +445,7 @@ angular.module('list', ['ngLocale'])
         };
 
         list.fillAddress = function (place) {
+          console.log(place);
           var components = place.address_components;
           if (components) {
             var desiredComponents = {
