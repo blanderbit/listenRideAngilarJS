@@ -9,10 +9,10 @@ angular.module('booking', [])
     controller: [
       '$localStorage', '$rootScope', '$scope', '$state', '$stateParams', '$mdToast',
       '$timeout', '$analytics', 'ENV', '$translate', '$filter', 'authentication',
-      'api', 'price', 'voucher',
+      'api', 'price', 'voucher', 'countryCodeTranslator',
       function BookingController(
         $localStorage, $rootScope, $scope, $state, $stateParams, $mdToast, $timeout, $analytics,
-        ENV, $translate, $filter, authentication, api, price, voucher) {
+        ENV, $translate, $filter, authentication, api, price, voucher, countryCodeTranslator) {
         var booking = this;
         var btAuthorization = ENV.btKey;
         var btClient;
@@ -34,6 +34,8 @@ angular.module('booking', [])
         booking.booked = false;
         booking.processing = false;
         booking.isPremium = false;
+        booking.bikeLocation = "";
+        booking.insuranceCountries = ['DE', 'AT'];
 
         var oldExpiryDateLength = 0;
         var expiryDateLength = 0;
@@ -51,11 +53,20 @@ angular.module('booking', [])
             booking.prices = booking.bike.prices;
             booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
             booking.total = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
+            booking.bikeLocation = ''
           },
           function (error) {
             $state.go('home');
           }
         );
+
+        booking.insuranceAllowed = function () {
+          if (booking.insuranceCountries.indexOf(countryCodeTranslator.countryCodeFor(booking.bikeLocation)) > -1) {
+            return true;
+          } else {
+            return false;
+          }
+        }
 
         // on lifecycle initialization
         booking.$onInit = function () {
@@ -86,7 +97,7 @@ angular.module('booking', [])
             booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
             booking.total = booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
           }
-          // TODO: REMOVE REDUNDANT PRICE CALUCLATION CODE
+          // TODO: REMOVE REDUNDANT PRICE CALCULATION CODE
         }
 
         booking.isOptionEnabled = function($index, date) {

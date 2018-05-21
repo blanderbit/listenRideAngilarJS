@@ -6,7 +6,8 @@
 >
   <md-content class="md-padding" layout="column">
     <div class="tab-content" layout="row" layout-align="space-between none" layout-padding>
-      <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column">
+
+      <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column" ng-if="insuranceTab.parent.insuranceAllowed()">
         <div class="lnr-list-title">
           <h3 class="md-subhead">
             {{ 'list.insurance.header' | translate }}
@@ -31,6 +32,10 @@
         </p>
       </div>
 
+      <div class="lnr-list-form" flex-xs="100" flex-gt-xs="50" layout="column" ng-if="!insuranceTab.parent.insuranceAllowed()">
+        <p>{{ 'list.insurance.no-insurance' | translate }}</p>
+      </div>
+
       <md-divider hide-xs class="lnr-margin-left lnr-margin-right-double"></md-divider>
 
       <div flex="50" hide-xs>
@@ -45,7 +50,6 @@
       </div>
     </div>
 
-    <!-- TODO: Add check when one of insurance were checked -->
     <div class="navigation" layout="row" layout-align="end center" layout-margin>
       <md-button
         class="md-raised md-primary"

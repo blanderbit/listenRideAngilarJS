@@ -355,7 +355,6 @@ angular.module('list', ['ngLocale'])
 
         // enable custom discounts fields
         list.enableDiscounts = function () {
-
           list.form.custom_price = false;
           list.discountFieldEditable = true;
         };
@@ -455,7 +454,6 @@ angular.module('list', ['ngLocale'])
         };
 
         list.fillAddress = function (place) {
-          console.log(place);
           var components = place.address_components;
           if (components) {
             var desiredComponents = {
