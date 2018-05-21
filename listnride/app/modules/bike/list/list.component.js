@@ -178,7 +178,7 @@ angular.module('list', ['ngLocale'])
               "has_basket": !!list.form.has_basket,
               "has_trailer": !!list.form.has_trailer,
               "has_childseat": !!list.form.has_childseat,
-              "user_id]": $localStorage.userId,
+              "user_id": $localStorage.userId,
               "street": list.form.street,
               "city": list.form.city,
               "zip": list.form.zip,
@@ -265,7 +265,7 @@ angular.module('list', ['ngLocale'])
             }
           };
 
-          // TODO: Refactor images logic backend & fronted
+          // TODO: Refactor images logic backend & frontend
           _.forEach(list.removedImages, function(image_name) {
             ride['ride']['remove_' + image_name] = true
           });
