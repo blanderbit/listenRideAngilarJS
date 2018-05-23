@@ -72,7 +72,7 @@
                   md-no-ink
                   class="md-primary lnr-green-text"
                   ng-click="invoices.getCsv('lister')"
-                  ng-style="{'display': invoices.ridesAsListerAny && !invoices.loadingRequests ? '' : 'none'}"
+                  ng-style="{'display': invoices.ridesAsListerAny ? '' : 'none'}"
           >
             {{ 'invoices.download-csv'  | translate }}
           </md-button>
@@ -159,7 +159,7 @@
                   md-no-ink
                   class="md-primary"
                   ng-click="invoices.getCsv('rider')"
-                  ng-style="{'display': invoices.ridesAsRiderAny && !invoices.loadingRequests ? '' : 'none'}"
+                  ng-style="{'display': invoices.ridesAsRiderAny ? '' : 'none'}"
           >
             {{ 'invoices.download-csv' | translate }}
           </md-button>
