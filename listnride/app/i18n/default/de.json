@@ -283,7 +283,9 @@
     },
     "privacy": {
       "meta-title": "Datenschutzrichtlinien von listnride",
-      "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform."
+      "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform.",
+      "use-opt-in": "Um dir mit listnride einen perfekten Service zu bieten, setzen wir Cookies gemäß unserer Cookie-Richtlinie ein.",
+      "use-opt-in-button": "Hab ich verstanden."
     }
   },
   "booking": {
