@@ -27,7 +27,7 @@ angular.module('listnride', [
   /* app_core_end */
 
   /* app_extras_start */
-  //removeIf(shop) 
+  //removeIf(shop)
   'home',
   'search',
   'header',
@@ -71,6 +71,7 @@ angular.module('listnride', [
   'filter',
   'bikeSorter',
   'cardgrid',
+  'privacyBar',
   //endRemoveIf(shop)
   /* app_extras_end */
 
@@ -141,7 +142,7 @@ angular.module('listnride', [
 
     // use cached translation
     $translateProvider.useLoaderCache(true);
-    
+
     // Retrieves locale from subdomain if valid, otherwise sets the default.
     var retrieveLocale = function () {
       // default and available languages

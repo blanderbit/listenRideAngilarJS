@@ -2516,7 +2516,7 @@ md-icon[md-font-icon].fa--lh20 {
   .lnr-form .submit-button {
     margin: 10px 0;
     width: 100%;
-  }     
+  }
 }
 
 .lnr-form .w-hidden {
@@ -2538,4 +2538,32 @@ md-icon[md-font-icon].fa--lh20 {
   margin-top: 10px;
   padding: 10px;
   background-color: #ffdede;
+}
+
+.privacy-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  background: #5fc692;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  word-break: break-all;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+.privacy-bar .md-caption {
+  margin: 0;
+  line-height: 1.1;
+}
+
+.md-button.lnr-privacy-btn {
+  font-size: 12px;
+  line-height: 1;
+  min-height: auto;
+  min-width: auto;
+  padding: 4px 15px;
+  font-weight: 400;
 }
