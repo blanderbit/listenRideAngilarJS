@@ -765,7 +765,9 @@
     "berlin-court-of-registry": "Berlin Court of Registry (Charlottenburg)",
     "vat-id": "VAT ID",
     "meta-title": "listnride | Imprint",
-    "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
+    "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs.",
+    "regulation": "Online dispute resolution pursuant to Article 14 (1) of the ODR Regulation (Online Dispute Resolution)",
+    "online-dispute": "The EU commission provides an online dispute resolution platform (OS platform). You can find it here:"
   },
   "privacy": {
     "title": "Privacy",
