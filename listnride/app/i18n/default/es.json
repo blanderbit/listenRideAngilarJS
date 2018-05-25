@@ -599,10 +599,8 @@
     "update-contact": "Cambiar número de teléfono",
     "update-contact-mobile": "Número de teléfono",
     "company-contact-info": "Completa el formulario con la información de contacto de la empresa.",
-    "signing-up-accept-tac-1": "He leído y acepto los ",
-    "signing-up-accept-tac-2": "  y acepto la recolección, tratamiento y uso de mis datos personales establecidos por la ",
-    "signing-up-accept-newsletter-1": "Deseo recibir información sobre nuevas bicicletas, tours y cupones de descuento. Acepto las condiciones establecidas en la ",
-    "signing-up-accept-newsletter-2": " de listnride. Puedo revocar mi consentimiento en cualquier momento",
+    "signing-up-accept-tac": "He leído y acepto los <a style=\"pointer-events: auto;\" href=\"/#/terms\">Términos y Condiciones</a> y acepto la recolección, tratamiento y uso de mis datos personales establecidos por la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a>.",
+    "signing-up-accept-newsletter": "Deseo recibir información sobre nuevas bicicletas, tours y cupones de descuento. Acepto las condiciones establecidas en la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride. Puedo revocar mi consentimiento en cualquier momento.",
     "privacy-policy": "Se aplica la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride.",
     "errors": {
       "password-length": "La contraseña debe tener entre 6 y 30 caracteres",
