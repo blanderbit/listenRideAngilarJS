@@ -177,7 +177,7 @@ angular.
         signupDialog.business = business;
         signupDialog.businessError = false;
         signupDialog.requesting = requesting;
-        signupDialog.newsletter = true;
+        signupDialog.newsletter = false;
         var invited = !!inviteCode;
 
         signupDialog.hide = function() {
