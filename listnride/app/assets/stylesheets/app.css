@@ -2566,8 +2566,6 @@ md-icon[md-font-icon].fa--lh20 {
   color: #fff;
   text-align: center;
   padding: 8px;
-  word-break: break-all;
-  word-wrap: break-word;
   box-sizing: border-box;
 }
 
