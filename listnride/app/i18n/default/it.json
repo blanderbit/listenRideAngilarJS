@@ -594,6 +594,7 @@
     "signing-up-accept-tac-2": " e accetto la raccolta, l'elaborazione e l'utilizzo dei miei dati personali come descritto nell'informativa ",
     "signing-up-accept-newsletter-1": "Desidero ricevere la newsletter via e-mail di listnride sulle nuove biciclette, tours e vouchers. Si applica ",
     "signing-up-accept-newsletter-2": " di listnride. Posso revocare il mio consenso in qualsiasi momento",
+    "privacy-policy": "Si applica <a style=\"pointer-events: auto;\" href=\"/#/privacy\">l'Informativa sulla Privacy</a> di listnride..",
     "errors": {
       "password-length": "La password deve essere tra i 6-30 caratteri",
       "password-length-xs": "6-30 caratteri",
