@@ -765,12 +765,14 @@
     "berlin-court-of-registry": "Berlin Court of Registry (Charlottenburg)",
     "vat-id": "VAT ID",
     "meta-title": "listnride | Imprint",
-    "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
+    "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs.",
+    "regulation": "Online dispute resolution pursuant to Article 14 (1) of the ODR Regulation (Online Dispute Resolution)",
+    "online-dispute": "The EU commission provides an online dispute resolution platform (OS platform). You can find it here:"
   },
   "privacy": {
-    "title": "Privacy",
-    "subtitle": "Data Protection Regulations",
-    "description": "List and Ride GmbH (hereinafter “listnride”) informs you in the Data Protection Regulations about how your personal data are handled.<br><br><a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">You can view and download the data protection regulations here.</a>",
+    "title": "List and Ride Privacy Policy",
+    "subtitle": "Effective Date: May 24, 2018",
+    "description": "List and Ride commits to strong and transparent privacy practices. Our Privacy Policy describes the user information that we gather through our services. How we use and disclose these information. The steps we take to protect such information. The choices we offer, including how to access, update, and remove personal data.<br>Here you can download and read our <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Privacy Policy</a>.<br><br>Please contact us if you have any questions or comments about our privacy practices or this Privacy Policy. You can reach us at <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> online.",
     "meta-title": "Privacy Policy of listnride",
     "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform."
   },

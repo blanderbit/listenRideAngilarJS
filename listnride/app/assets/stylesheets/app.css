@@ -198,6 +198,11 @@ input::-webkit-inner-spin-button {
   margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
+.md-raised[disabled] {
+  color: #FFFFFF !important;
+  cursor: pointer !important;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
@@ -450,10 +455,21 @@ md-tooltip .md-content {
   margin-bottom: 0;
 }
 
+/* TODO: remove important */
 .lnr-btn-fb {
   border-color: #3b5998!important;
   background: #3b5998!important;
   color: #fff!important;
+}
+
+.lnr-btn-fb[disabled] {
+  border-color: rgba(206, 212, 216, 0.9) !important;
+  background: rgba(206, 212, 216, 0.9)!important;
+}
+
+.md-button.md-raised[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .lnr-bike-listings {
@@ -2516,7 +2532,7 @@ md-icon[md-font-icon].fa--lh20 {
   .lnr-form .submit-button {
     margin: 10px 0;
     width: 100%;
-  }     
+  }
 }
 
 .lnr-form .w-hidden {
@@ -2538,4 +2554,30 @@ md-icon[md-font-icon].fa--lh20 {
   margin-top: 10px;
   padding: 10px;
   background-color: #ffdede;
+}
+
+.privacy-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  background: #5fc692;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.privacy-bar .md-caption {
+  margin: 0;
+  line-height: 1.1;
+}
+
+.md-button.lnr-privacy-btn {
+  font-size: 12px;
+  line-height: 1;
+  min-height: auto;
+  min-width: auto;
+  padding: 4px 15px;
+  font-weight: 400;
 }

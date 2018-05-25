@@ -1,4 +1,4 @@
-<md-content class="single-column"> 
+<md-content class="single-column">
   <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/static/lnr_imprint.jpg')" layout="row" layout-align="center center">
 <!--     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ 'imprint.title' | translate }}</h1>
@@ -11,8 +11,8 @@
       <!-- <h2 class="md-subhead">{{ 'imprint.contact.title' | translate }}</h2> -->
     </div>
 
-    <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center center" layout-padding>
-      <div layout="column" layout-margin>
+    <div class="md-body-1" layout="row" layout-xs="column" layout-align-xs="center left" layout-padding>
+      <div layout="column" layout-margin flex-xs="100">
         <span><strong>List and Ride GmbH</strong></span>
         <p>
           Steinstraße 17<br>
@@ -25,10 +25,20 @@
           {{ 'imprint.telephone' | translate }}: +49 (0)30-120870330
         </p>
         <p>
-          {{ 'imprint.managing-director' | translate }}: Johannes Stuhler<br>
+          {{ 'imprint.managing-director' | translate }}:<br> Johannes Stuhler, Gert-Jan van Wijk<br>
+          <br>
           {{ 'imprint.commercial-register-number' | translate }}: HRB 161394 B<br>
           {{ 'imprint.berlin-court-of-registry' | translate }}<br>
           {{ 'imprint.vat-id' | translate }}: DE 296 394 699
+        </p>
+      </div>
+      <div layout="column" layout-margin flex-xs="100" flex-gt-xs="50">
+        <p class="md-body-2">
+          {{ 'imprint.regulation' | translate }}
+        </p>
+        <p class="md-body-1">
+          {{ 'imprint.online-dispute' | translate }}
+          <a href="http://ec.europa.eu/consumers/odr" target="_blank" follow="nofollow">http://ec.europa.eu/consumers/odr</a>
         </p>
       </div>
     </div>

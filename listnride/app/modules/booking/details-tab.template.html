@@ -16,7 +16,7 @@
            flex="100">
         <div layout="row" layout-align="space-between center">
           <h2 class="md-title">{{ 'booking.details.invoice-address' | translate }}</h2>
-          <a class="lnr-link" ng-click="details.parent.authentication.showLoginDialog()">Do you have a listnride Account?</a>
+          <!-- <a class="lnr-link" ng-click="details.parent.authentication.showLoginDialog()">Do you have a listnride Account?</a> -->
         </div>
         <p class="md-body-1">{{ 'booking.details.subtitle' | translate }}</p>
         <div class="spacer-xs"></div>
@@ -76,7 +76,7 @@
           <div class="lnr-input-containers" layout="row" layout-xs="column">
             <!-- Street form without autocomplete -->
             <!-- <md-input-container flex>
-                <label>{{ 'list.location.street-number' | translate }}</label>   
+                <label>{{ 'list.location.street-number' | translate }}</label>
                   <input
                     required
                     name="street"
@@ -88,7 +88,7 @@
                   <div ng-message="required">{{ 'shared.required' | translate }}</div>
                 </div>
               </md-input-container> -->
-              
+
             <!-- Street form with autocomplete -->
             <div flex>
               <autocomplete
@@ -273,6 +273,7 @@
               <a class="lnr-link" ng-click="details.parent.resendSms()">{{ 'booking.details.resend' | translate }}</a>
             </div>
           </div>
+          <p class="md-caption" data-ng-bind-html="'forms.privacy-policy' | translate"></p>
         </form>
       </div>
     </div>

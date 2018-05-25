@@ -105,7 +105,8 @@
     "Dec": "Dez",
     "testimonials-header": "Was sagen die Leute?",
     "balance": "Guthaben",
-    "tac": "Allgemeinen Geschäftsbedingungen",
+    "tac": "Nutzungsbedingungen",
+    "privacy-policy": "Datenschutzerklärung",
     "booking-accept-tac": "Durch Buchen bestätige ich die",
     "already-booked": "Bereits Gebucht",
     "for-shops": "Für Fahrradläden",
@@ -282,7 +283,9 @@
     },
     "privacy": {
       "meta-title": "Datenschutzrichtlinien von listnride",
-      "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform."
+      "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform.",
+      "use-opt-in": "Um dir mit listnride einen perfekten Service zu bieten, setzen wir Cookies gemäß unserer Cookie-Richtlinie ein.",
+      "use-opt-in-button": "Hab ich verstanden."
     }
   },
   "booking": {
@@ -593,7 +596,9 @@
     "update-contact": "Handynummer ändern",
     "update-contact-mobile": "Handynummer",
     "company-contact-info": "Bitte trage die Daten der Kontaktperson des Unternehmens ein.",
-    "signing-up-accept-tac": "Mit der Registrierung akzeptiere ich die",
+    "signing-up-accept-tac": "Ich stimme hiermit den <a style=\"pointer-events: auto;\" href=\"/#/terms\">Nutzungsbedingungen</a> zu und willige in die Erhebung, Verarbeitung und Nutzung meiner personenbezogenen Daten ein, wie in der <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> näher beschrieben.",
+    "signing-up-accept-newsletter": "Ich möchte den E-Mail-Newsletter von listnride mit handverlesenen Themen über neue Räder, Touren und Gutscheine erhalten. Es gilt die <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> von listnride. Ich kann meine Einwilligung jederzeit widerrufen.",
+    "privacy-policy": "Es gilt die <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> von listnride.",
     "errors": {
       "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
       "password-length-xs": "6-30 Zeichen",

@@ -104,7 +104,8 @@
     "Dec": "Dic",
     "testimonials-header": "Che cosa dicono le persone?",
     "balance": "Saldo",
-    "tac": "Termini e Condizioni",
+    "tac": "condizioni d'uso",
+    "privacy-policy": "sulla privacy",
     "booking-accept-tac": "Con la prenotazione accetto il",
     "already-booked": "Già prenotato",
     "for-shops": "Per i  negozi di biciclette",
@@ -274,7 +275,9 @@
     },
     "privacy": {
       "meta-title": "Politica sulla privacy di listnride",
-      "meta-description": "La Politica sulla privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online."
+      "meta-description": "La Politica sulla privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online.",
+      "use-opt-in": "Per offrirti con listnride un servizio perfetto, utilizziamo dei Cookies conformemente alla nostra Normativa sui Cookies.",
+      "use-opt-in-button": "Ho capito."
     }
   },
   "booking": {
@@ -587,7 +590,9 @@
     "update-contact": "Aggiorna contatto",
     "update-contact-mobile": "Contatto",
     "company-contact-info": "Si prega di compilare il modulo con le informazioni relative alla persona di contatto dell'azienda.",
-    "signing-up-accept-tac": "Con l'iscrizione accetto ",
+    "signing-up-accept-tac": "Desidero ricevere la newsletter via e-mail di listnride sulle nuove biciclette, tours e vouchers. Si applica <a style=\"pointer-events: auto;\" href=\"/#/privacy\">l'Informativa sulla Privacy</a> di listnride. Posso revocare il mio consenso in qualsiasi momento.",
+    "signing-up-accept-newsletter": "Accetto le <a style=\"pointer-events: auto;\" href=\"/#/terms\">Condizioni d'uso</a> e accetto la raccolta, l'elaborazione e l'utilizzo dei miei dati personali come descritto nell'<a style=\"pointer-events: auto;\" href=\"/#/privacy\">Informativa sulla Privacy</a>.",
+    "privacy-policy": "Si applica <a style=\"pointer-events: auto;\" href=\"/#/privacy\">l'Informativa sulla Privacy</a> di listnride.",
     "errors": {
       "password-length": "La password deve essere tra i 6-30 caratteri",
       "password-length-xs": "6-30 caratteri",
