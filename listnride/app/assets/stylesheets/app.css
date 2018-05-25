@@ -468,6 +468,11 @@ md-tooltip .md-content {
   color: rgba(225, 230, 230, 1.0)!important;
 }
 
+.md-button.md-raised[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .lnr-bike-listings {
   width: 100%;
 }
