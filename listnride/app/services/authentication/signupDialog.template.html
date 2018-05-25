@@ -25,7 +25,11 @@
 
         <md-input-container ng-style="{'display': signupDialog.business ? '' : 'none'}">
           <label ng-class="{'text-error': signupDialog.businessError}">{{ 'forms.company-name' | translate }}</label>
-          <input name="company_name" ng-model="signupDialog.companyName" ng-minlength="2" ng-class="{'input-invalid': signupDialog.businessError}"
+          <input
+            name="company_name"
+            ng-model="signupDialog.companyName"
+            ng-minlength="2"
+            ng-class="{'input-invalid': signupDialog.businessError}"
             ng-required='signupDialog.business'>
           <div ng-messages="signupForm.company_name.$error" role="alert">
             <div ng-message="required">{{ 'forms.errors.empty-company-name' | translate }}</div>
@@ -36,7 +40,12 @@
         <div class="lnr-input-containers" layout="row">
           <md-input-container flex>
             <label>{{ 'forms.first-name' | translate }}</label>
-            <input name="first_name" ng-model="signupDialog.firstName" required ng-maxlength="20" ng-disabled="signupDialog.businessError">
+            <input
+              name="first_name"
+              ng-model="signupDialog.firstName"
+              required
+              ng-maxlength="20"
+              ng-disabled="signupDialog.businessError">
             <div ng-messages="signupForm.first_name.$error" role="alert">
               <div ng-message="required" ng-if="!signupDialog.xs">{{ 'forms.errors.empty-first-name' | translate }}</div>
               <div ng-message="maxlength" ng-if="!signupDialog.xs">{{ 'forms.errors.max-size-first-name' | translate }}</div>
@@ -47,7 +56,12 @@
 
           <md-input-container flex>
             <label>{{ 'forms.last-name' | translate }}</label>
-            <input name="last_name" ng-model="signupDialog.lastName" required ng-maxlength="30" ng-disabled="signupDialog.businessError">
+            <input
+              name="last_name"
+              ng-model="signupDialog.lastName"
+              required
+              ng-maxlength="30"
+              ng-disabled="signupDialog.businessError">
             <div ng-messages="signupForm.last_name.$error" role="alert">
               <div ng-message="required" ng-if="!signupDialog.xs">{{ 'forms.errors.empty-last-name' | translate }}</div>
               <div ng-message="maxlength" ng-if="!signupDialog.xs">{{ 'forms.errors.max-size-last-name' | translate }}</div>
