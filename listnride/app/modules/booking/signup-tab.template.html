@@ -110,17 +110,18 @@
               </md-input-container>
             </div>
 
-            <md-checkbox ng-model="signup.parent.terms" aria-label="terms">
-              {{ 'forms.signing-up-accept-tac-1' | translate }}
-              <a ui-sref="terms" target="_BLANK"> {{ 'shared.tac' | translate }}</a>
-              {{ 'forms.signing-up-accept-tac-2' | translate }}
-              <a ui-sref="terms" target="_BLANK"> {{ 'shared.privacy-policy' | translate }}</a>
+            <md-checkbox
+              ng-model="signup.parent.terms"
+              aria-label="terms"
+            >
+              <div data-ng-bind-html="'forms.signing-up-accept-tac' | translate"></div>
             </md-checkbox>
 
-            <md-checkbox ng-model="signup.parent.newsletter" aria-label="newsletter">
-              {{ 'forms.signing-up-accept-newsletter-1' | translate }}
-              <a ui-sref="privacy" target="_BLANK"> {{ 'shared.privacy-policy' | translate }}</a>
-              {{ 'forms.signing-up-accept-newsletter-2' | translate }}
+            <md-checkbox
+              ng-model="signup.parent.newsletter"
+              aria-label="newsletter"
+            >
+              <div data-ng-bind-html="'forms.signing-up-accept-newsletter' | translate"></div>
             </md-checkbox>
 
             <div class="md-dialog-buttons" layout="column">
