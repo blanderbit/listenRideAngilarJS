@@ -450,10 +450,17 @@ md-tooltip .md-content {
   margin-bottom: 0;
 }
 
+/* TODO: remove important */
 .lnr-btn-fb {
   border-color: #3b5998!important;
   background: #3b5998!important;
   color: #fff!important;
+}
+
+.lnr-btn-fb[disabled] {
+  border-color: rgba(206, 212, 216, 0.9) !important;
+  background: rgba(206, 212, 216, 0.9)!important;
+  color: rgba(225, 230, 230, 1.0)!important;
 }
 
 .lnr-bike-listings {
