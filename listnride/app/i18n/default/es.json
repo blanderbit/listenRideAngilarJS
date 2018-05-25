@@ -603,6 +603,7 @@
     "signing-up-accept-tac-2": "  y acepto la recolección, tratamiento y uso de mis datos personales establecidos por la ",
     "signing-up-accept-newsletter-1": "Deseo recibir información sobre nuevas bicicletas, tours y cupones de descuento. Acepto las condiciones establecidas en la ",
     "signing-up-accept-newsletter-2": " de listnride. Puedo revocar mi consentimiento en cualquier momento",
+    "privacy-policy": "Se aplica la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride.",
     "errors": {
       "password-length": "La contraseña debe tener entre 6 y 30 caracteres",
       "password-length-xs": "6-30 caracteres",
