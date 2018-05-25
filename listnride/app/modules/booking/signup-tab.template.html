@@ -106,17 +106,24 @@
               </md-input-container>
             </div>
 
-            <p class="md-body-1">
-              {{ 'forms.signing-up-accept-tac' | translate }}
-              <a ui-sref="terms" target="_BLANK">
-                {{ 'shared.tac' | translate }}
-              </a>
-            </p>
+            <md-checkbox ng-model="signupDialog.terms" aria-label="terms">
+              {{ 'forms.signing-up-accept-tac-1' | translate }}
+              <a ui-sref="terms" target="_BLANK"> {{ 'shared.tac' | translate }}</a>
+              {{ 'forms.signing-up-accept-tac-2' | translate }}
+              <a ui-sref="terms" target="_BLANK"> {{ 'shared.privacy-policy' | translate }}</a>
+            </md-checkbox>
+
+            <md-checkbox ng-model="signupDialog.newsletter" aria-label="newsletter">
+              {{ 'forms.signing-up-accept-newsletter-1' | translate }}
+              <a ui-sref="privacy" target="_BLANK"> {{ 'shared.privacy-policy' | translate }}</a>
+              {{ 'forms.signing-up-accept-newsletter-2' | translate }}
+            </md-checkbox>
 
             <div class="md-dialog-buttons" layout="column">
               <md-button
                 type="submit"
                 class="md-primary md-raised"
+                ng-disabled="!signupDialog.terms"
               >
                 {{ 'booking.sign-in.register' | translate }}
               </md-button>
