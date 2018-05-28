@@ -147,6 +147,7 @@
   <script src="app/modules/footer/footer.component.js"></script>
   <script src="app/modules/header/header.component.js"></script>
   <script src="app/modules/sidebar/sidebar.component.js"></script>
+  <script src="app/modules/privacy-bar/privacy-bar.component.js"></script>
   <!-- extra modules -->
   <script src="app/modules/invest/invest.component.js"></script>
   <script src="app/modules/business-community/business-community.component.js"></script>
@@ -261,6 +262,7 @@
   <header></header>
   <sidebar layout="row" header="header"></sidebar>
   <ui-view flex="auto"></ui-view>
+  <privacy-bar></privacy-bar>
   <!--<footer></footer>-->
 </body>
 <script>
@@ -276,5 +278,7 @@
     m.parentNode.insertBefore(a, m)
   })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
   ga('create', 'UA-61041935-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
 </script>
 </html>
