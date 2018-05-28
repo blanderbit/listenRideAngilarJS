@@ -596,8 +596,8 @@
     "update-contact": "Handynummer ändern",
     "update-contact-mobile": "Handynummer",
     "company-contact-info": "Bitte trage die Daten der Kontaktperson des Unternehmens ein.",
-    "signing-up-accept-tac": "Ich stimme hiermit den <a style=\"pointer-events: auto;\" href=\"/#/terms\">Nutzungsbedingungen</a> zu und willige in die Erhebung, Verarbeitung und Nutzung meiner personenbezogenen Daten ein, wie in der <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> näher beschrieben.",
-    "signing-up-accept-newsletter": "Ich möchte den E-Mail-Newsletter von listnride mit handverlesenen Themen über neue Räder, Touren und Gutscheine erhalten. Es gilt die <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> von listnride. Ich kann meine Einwilligung jederzeit widerrufen.",
+    "signing-up-accept-tac": "Ich stimme hiermit den <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Nutzungsbedingungen</a> zu und willige in die Erhebung, Verarbeitung und Nutzung meiner personenbezogenen Daten ein, wie in der <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> näher beschrieben.",
+    "signing-up-accept-newsletter": "Ich möchte den E-Mail-Newsletter von listnride mit handverlesenen Themen über neue Räder, Touren und Gutscheine erhalten. Es gilt die <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> von listnride. Ich kann meine Einwilligung jederzeit widerrufen.",
     "privacy-policy": "Es gilt die <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> von listnride.",
     "errors": {
       "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
