@@ -24,6 +24,7 @@ angular.module('listnride', [
   'metaTags',
   'receipt',
   'inputRange',
+  'addressInput',
   /* app_core_end */
 
   /* app_extras_start */

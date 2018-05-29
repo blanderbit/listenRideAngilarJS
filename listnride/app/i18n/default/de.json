@@ -589,6 +589,7 @@
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "Allgemein",
     "street": "Straße und Hausnr.",
+    "streetnumber": "Hausnr.",
     "zip": "PLZ",
     "city": "Stadt",
     "country": "Land",

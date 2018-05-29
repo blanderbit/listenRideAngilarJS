@@ -1,0 +1,57 @@
+<form
+  ng-form
+  name="addressInput.addressForm"
+  layout="column"
+  class="md-body-1"
+  ng-class="verificationDialog.mobileScreen ? '' : 'md-body-desktop'">
+  <div layout="row" layout-xs="column" flex="50">
+    <!-- <md-input-container flex-gt-xs="45">
+      <label>{{ 'list.location.street-number' | translate }}</label>
+      <input name="street" ng-model="settings.user.locations.primary.street" required></input>
+    </md-input-container> -->
+    <autocomplete
+      autocomplete-id="address-input"
+      class="address-input"
+      layout="column"
+      required="true"
+      location="addressInput.street"
+      label-id="{{ 'forms.street' | translate }}"
+      place-changed="addressInput.updateAddress(place)"
+      flex-gt-xs="70">
+    </autocomplete>
+    <span hide-xs flex></span>
+    <md-input-container flex-gt-xs="25">
+      <label>{{ 'forms.streetnumber' | translate }}</label>
+      <input name="street-number" ng-model="addressInput.streetNumber" required></input>
+      <div ng-messages="addressInput.addressForm.streetNumber.$error" role="alert">
+        <div ng-message="required">{{ 'shared.required' | translate }}</div>
+      </div>
+    </md-input-container>
+    </div>
+    <div layout="row" layout-xs="column" flex="50">
+      <md-input-container flex-gt-xs="20">
+        <label>{{ 'forms.zip' | translate }}</label>
+        <input name="zip" ng-model="addressInput.zip" required></input>
+        <div ng-messages="addressInput.addressForm.zip.$error" role="alert">
+          <div ng-message="required">{{ 'shared.required' | translate }}</div>
+        </div>
+      </md-input-container>
+      <span hide-xs flex></span>
+      <md-input-container flex-gt-xs="35">
+        <label>{{ 'forms.city' | translate }}</label>
+        <input name="city" ng-model="addressInput.city" required></input>
+        <div ng-messages="addressInput.addressForm.city.$error" role="alert">
+          <div ng-message="required">{{ 'shared.required' | translate }}</div>
+        </div>
+      </md-input-container>
+      <span hide-xs flex></span>
+      <md-input-container flex-gt-xs="35">
+        <label>{{ 'forms.country' | translate }}</label>
+        <input name="country" ng-model="addressInput.country" required></input>
+        <div ng-messages="addressInput.addressForm.country.$error" role="alert">
+          <div ng-message="required">{{ 'shared.required' | translate }}</div>
+        </div>
+      </md-input-container>
+    </div>
+  </div>
+</form>
