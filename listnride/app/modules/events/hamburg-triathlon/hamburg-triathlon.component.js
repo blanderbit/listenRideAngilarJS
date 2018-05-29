@@ -25,7 +25,7 @@ angular.module('hamburgTriathlon',[]).component('hamburgTriathlon', {
             hamburgTriathlon.sizeOptions[0].label = translation;
         });
         // TODO: Readd &booked_at=2018-07-14 when API is fixed
-        api.get('/rides?category=20&location=Hamburg').then(
+        api.get('/rides?category=20&location=Hamburg&booked_at=2018-07-14').then(
             function(response) {
                 hamburgTriathlon.bikes = response.data.bikes;
             },
