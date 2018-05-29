@@ -85,7 +85,6 @@ angular.module('requests', ['infinite-scroll'])
         // methods
         requests.nextPage = nextPage;
         requests.loadRequest = loadRequest;
-        requests.profilePicture = profilePicture;
         requests.reloadRequest = reloadRequest;
         requests.updateStatus = updateStatus;
         requests.acceptBooking = acceptBooking;
@@ -107,8 +106,9 @@ angular.module('requests', ['infinite-scroll'])
 
       function nextPage() {
         requests.loadingList = true;
-        api.get('/users/' + $localStorage.userId + '/requests?page=' + requests.currentPage++).then(
+        api.get('/users/' + $localStorage.userId + '/requests').then(
           function (success) {
+            console.log(success);
             var newRequests = success.data.requests;
             requests.all_requests = requests.all_requests.concat(newRequests);
             requests.requests = angular.copy(requests.all_requests);
@@ -176,14 +176,6 @@ angular.module('requests', ['infinite-scroll'])
           if (showDialog) showChatDialog();
         } else {
           requests.showChat = true;
-        }
-      };
-
-      function profilePicture(request) {
-        if ($localStorage.userId == request.user.id) {
-          return request.ride.image_file_1.image_file_1.thumb.url;
-        } else {
-          return request.user.profile_picture.profile_picture.url;
         }
       };
 
