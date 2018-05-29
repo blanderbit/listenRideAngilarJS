@@ -98,23 +98,52 @@ angular.module('requests', ['infinite-scroll'])
         requests.filterExpiredRequests = filterExpiredRequests;
 
         // invocates
+        getRequests();
       }
 
       requests.$onDestroy = function () {
         $interval.cancel(poller);
       };
 
-      function nextPage() {
+      function getRequests () {
+        requests.loadingList = true;
+        api.get('/users/' + $localStorage.userId + '/requests/').then(
+          function (success) {
+            requests.all_requests = success.data.requests;
+            requests.requests = angular.copy(requests.all_requests);
+            console.log(success.data.requests);
+
+            requests.filterBikes(requests.filters.type, false);
+            requests.filters.applyFilter(requests.filters.selected);
+
+            // TODO: Change logic to show Load_next button
+            // requests.requestsLeft = !_.isEmpty(success.data.links.next_rider) || !_.isEmpty(success.data.links.next_lister);
+
+            // Open request on first load
+            if (requests.all_requests.length > 0) {
+              requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
+              requests.loadRequest(requests.selected);
+            }
+
+            requests.loadingList = false;
+          },
+          function (error) {
+            requests.loadingList = false;
+          }
+        );
+      }
+
+      function nextPage () {
         requests.loadingList = true;
         api.get('/users/' + $localStorage.userId + '/requests').then(
           function (success) {
-            console.log(success);
             var newRequests = success.data.requests;
             requests.all_requests = requests.all_requests.concat(newRequests);
             requests.requests = angular.copy(requests.all_requests);
             requests.filterBikes(requests.filters.type, false);
             requests.filters.applyFilter(requests.filters.selected);
             requests.loadingList = false;
+
             requests.requestsLeft = !_.isEmpty(success.data.links.next_rider) || !_.isEmpty(success.data.links.next_lister);
             if (requests.all_requests.length > 0) {
               requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
