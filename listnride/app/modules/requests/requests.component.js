@@ -182,16 +182,14 @@ angular.module('requests', ['infinite-scroll'])
         requests.request = {};
         // Load the new request and activate the poller
         reloadRequest(requestId);
-        var last_message = requests.requests[index] ? requests.requests[index].last_message: null;
+        var last_message = requests.requests[index] ? requests.requests[index].message : null;
         if (!!last_message && !last_message.is_read && last_message.receiver === parseInt($localStorage.userId)) {
           api.post('/requests/' + requestId + '/messages/mark_as_read', { "user_id": $localStorage.userId }).then(
             function (success) {
-            // if (index) {
-              requests.requests[index].last_message.is_read = true;
+              last_message.is_read = true;
               if ($localStorage.unreadMessages > 0) {
                 $localStorage.unreadMessages -= 1;
               }
-            // }
             }
           );
         }
