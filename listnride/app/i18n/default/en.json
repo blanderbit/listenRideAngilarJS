@@ -554,7 +554,7 @@
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{timespan}}. Agree on further details using the chat.",
-    "3": "You've accepted the request. The bike is now booked and you'll rent it out from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Phone: {{user.phone_number}} <br>Address: {{user.street}}, {{user.zip}} {{user.city}}, {{user.country}}",
+    "3": "You've accepted the request. The bike is now booked and you'll rent it out from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Phone: {{user.pretty_phone_number}} <br>Address: {{user.street}}, {{user.zip}} {{user.city}}, {{user.country}}",
     "5": "Thanks for confirming retrieval of your bike and rating {{user.first_name}}. The rental was successful and the money will get transferred to the bank account you provided during the next 7 working days.<br><br>In case of any further questions or feedback, we’d love to receive them under <a mailto:\"hello@listnride.com\">hello@listnride.com</a>",
     "8": "You rejected the request. Please tell the rider why you can't rent him the bike.",
     "9": "Unfortunately {{user.first_name}} didn't confirm the request",
@@ -562,7 +562,7 @@
   },
   "rideChat": {
     "1": "You would like to rent the <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{lister.business_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
-    "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.phone_number}},<br>Address: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
+    "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.pretty_phone_number}},<br>Address: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} has confirmed the return of the ride and gave you a review. Finally, please also rate the ride. This helps our community a lot and completes the rental.",
     "6": "Thanks for rating, the rental was successfully completed.",
     "8": "Unfortunately, the lister could't accept your request. Simply request some other great bikes.",
@@ -693,7 +693,11 @@
       "all-terrain": "All terrain",
       "kids": "Kids",
       "electro": "Electro",
-      "special": "Special"
+      "special": "Special",
+      "urban": "Urban",
+      "e-bike": "E-Bike",
+      "road": "Road",
+      "transport": "Transport"
     },
     "details": {
       "header": "What is your bike name, size & brand?",
@@ -792,12 +796,20 @@
         "dutch-bike": "Dutch Bike",
         "touring-bike": "Touring Bike",
         "fixie": "Fixie",
-        "single-speed": "Single Speed"
+        "single-speed": "Single Speed",
+        "city-bike": "City Bike"
       },
       "2": {
         "road-bike": "Road Bike",
         "triathlon": "Triathlon",
-        "indoor": "Indoor"
+        "indoor": "Indoor",
+        "e-city-bike": "E-City Bike",
+        "e-touring-bike": "E-Touring Bike",
+        "e-cargo-bike": "E-Cargo Bike",
+        "e-mountain-bike": "E-Mountain Bike",
+        "e-road-bike": "E-Road Bike",
+        "e-folding-bike": "E-Folding Bike",
+        "e-scooter": "E-Scooter"
       },
       "3": {
         "tracking": "Trekking",
@@ -805,16 +817,29 @@
         "freeride": "Freeride",
         "cross-country": "Cross Country",
         "downhill": "Downhill",
-        "cyclocross": "Cyclocross"
+        "cyclocross": "Cyclocross",
+        "road-bike": "Road Bike",
+        "triathlon-bike": "Triathlon Bike",
+        "touring-bike": "Touring Bike",
+        "fixed-gear-bike": "Fixed Gear Bike"
       },
       "4": {
         "city": "City",
         "all-terrain": "All Terrain",
-        "road": "Road"
+        "road": "Road",
+        "mtb-hardtail": "MTB Hardtail",
+        "mtb-fullsuspension": "MTB Fullsuspension",
+        "cyclocross-bike": "Cyclocross Bike",
+        "gravel-bike": "Gravel Bike"
       },
       "5": {
         "pedelec": "Pedelec",
-        "e-bike": "E-Bike"
+        "e-bike": "E-Bike",
+        "cargo-bike": "Cargo Bike",
+        "bike-trailer": "Bike Trailer",
+        "bike-child-seat": "Bike Child Seat",
+        "bike-car-rack": "Bike Car Rack",
+        "bike-travel-bag": "Bike Travel Bag"
       },
       "6": {
         "folding-bike": "Folding Bike",
@@ -823,7 +848,18 @@
         "cargo-bike": "Cargo Bike",
         "recumbent": "Recumbent",
         "mono-bike": "Mono Bike",
-        "trailer": "Trailer"
+        "trailer": "Trailer",
+        "city-bike": "City Bike",
+        "all-terrain-bike": "All Terrain Bike",
+        "road-bike": "Road Bike",
+        "bogie-wheel": "Bogie Wheel"
+      },
+      "7": {
+        "folding-bike": "Folding Bike",
+        "recumbent-bike": "Recumbent Bike",
+        "tandem-bike": "Tandem Bike",
+        "longtail-bike": "Longtail Bike",
+        "scooter": "Scooter"
       }
     }
   },

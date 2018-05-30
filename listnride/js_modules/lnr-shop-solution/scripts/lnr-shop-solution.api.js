@@ -54,8 +54,6 @@ var api = {
                 url: apiUrl + "/users/login",
                 data: data,
                 success: function (response) {
-                    console.log("Login Successful");
-                    console.log(response);
                     helper.storeLogin(response.email);
                     var encoded = api.base64Encode(response.email + ":" + response.password_hashed);
                     user.auth = 'Basic ' + encoded;

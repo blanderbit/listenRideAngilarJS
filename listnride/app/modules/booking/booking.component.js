@@ -34,6 +34,7 @@ angular.module('booking', [])
         booking.voucherCode = "";
         booking.expiryDate = "";
         booking.booked = false;
+        booking.processing = false;
 
         var oldExpiryDateLength = 0;
         var expiryDateLength = 0;
@@ -89,7 +90,7 @@ angular.module('booking', [])
 
         booking.isOptionEnabled = function($index, date) {
           if (date === undefined) { return true }
-  
+
           var isDateToday = moment().startOf('day').isSame(moment(date).startOf('day'));
           // Date today chosen
           if (isDateToday) { return $index + 6 >= moment().hour() + 1; }
@@ -130,7 +131,7 @@ angular.module('booking', [])
           if (!booking.shopBooking) {
             switch (booking.selectedIndex) {
               case 0: return false;
-              case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
+              case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid && !booking.processing);
               case 2: return !booking.paymentForm.$valid;
               case 3: return false;
             }
@@ -159,7 +160,7 @@ angular.module('booking', [])
 
         booking.nextAction = function() {
           switch (booking.selectedIndex) {
-            case 0: 
+            case 0:
               if (booking.shopBooking) {
                 booking.selectedIndex = 1;
                 setFirstTab(); break;
@@ -190,6 +191,7 @@ angular.module('booking', [])
         });
 
         booking.saveAddress = function() {
+          booking.processing = true;
           var address = {
             'locations': {
               '0': {
@@ -203,9 +205,11 @@ angular.module('booking', [])
           };
           api.put('/users/' + $localStorage.userId, address).then(
             function (success) {
+              booking.processing = false;
               booking.nextTab();
             },
             function (error) {
+              booking.processing = false;
               $mdToast.show(
                 $mdToast.simple()
                   .textContent("Address Error message")
@@ -223,7 +227,7 @@ angular.module('booking', [])
               .hideDelay(4000)
               .position('top center')
           );
-          
+
           btClient.request({
             endpoint: 'payment_methods/credit_cards',
             method: 'post',
@@ -293,7 +297,6 @@ angular.module('booking', [])
               booking.user.lastName = success.data.last_name;
               booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
               // if (!booking.shopBooking || Object.keys(oldUser).length > 0) {
-                // console.log("setting firs tab");
                 setFirstTab();
               // }
               $timeout(function () {
@@ -406,6 +409,7 @@ angular.module('booking', [])
         };
 
         function trackTabLoad() {
+          $("#scroll-body").scrollTop(0);
           switch (booking.selectedIndex) {
             case 0: $analytics.eventTrack('load', {category: 'Request Bike', label: 'Sign Up Tab'}); break;
             case 1: $analytics.eventTrack('load', {category: 'Request Bike', label: 'Details Tab'}); break;
@@ -515,7 +519,8 @@ angular.module('booking', [])
             user_id: $localStorage.userId,
             ride_id: booking.bikeId,
             start_date: startDate_utc.toISOString(),
-            end_date: endDate_utc.toISOString()
+            end_date: endDate_utc.toISOString(),
+            instant: booking.shopBooking,
           };
 
 

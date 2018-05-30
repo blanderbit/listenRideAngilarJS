@@ -51,9 +51,15 @@ angular.module('invoices',[]).component('invoices', {
         };
 
         invoices.getPdf = function(id, target) {
+          invoices.loadingRequests = true;
           var fileName = 'Invoice ' + id + ' ' + moment().format('MMMM Do YYYY') + '.pdf';
-          api.get('/users/' + $localStorage.userId + '/invoices/' + id + '?target=' + target, 'blob').then(function (result) {
-            downloadAttachment(fileName, result.data, 'application/pdf')
+          api.get('/users/' + $localStorage.userId + '/invoices/' + id + '?target=' + target, 'blob').then(
+          function (result) {
+            downloadAttachment(fileName, result.data, 'application/pdf');
+            invoices.loadingRequests = false;
+          },
+          function(error) {
+            invoices.loadingRequests = false;
           });
         };
 

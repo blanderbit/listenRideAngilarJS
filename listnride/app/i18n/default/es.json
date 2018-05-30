@@ -553,7 +553,7 @@
   },
   "listChat": {
     "1": "A {{user.first_name}}{{user.last_name}} de {{user.city}} le gustaría alquilar tu <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> desde {{timespan}}. Concreta más detalles usando el chat.",
-    "3": "Has aceptado la solicitud. La bici ahora está reservada y la alquilarás desde {{timespan}}. Los datos de contacto son los siguientes, también te los hemos enviado por correo electrónico <br><br>Nombre: {{user.first_name}}{{user.last_name}}<br>Teléfono: {{user.phone_number}}<br>Dirección: {{user.street}}, <lh9lh> {{user.city}}, {{user.country}}",
+    "3": "Has aceptado la solicitud. La bici ahora está reservada y la alquilarás desde {{timespan}}. Los datos de contacto son los siguientes, también te los hemos enviado por correo electrónico <br><br>Nombre: {{user.first_name}}{{user.last_name}}<br>Teléfono: {{user.pretty_phone_number}}<br>Dirección: {{user.street}}, <lh9lh> {{user.city}}, {{user.country}}",
     "5": "Gracias por confirmar que has recuperado tu bici y por valorar a{{user.first_name}}. El alquiler se realizó correctamente y en los próximos 7 días hábiles se transferirá el dinero a la cuenta bancaria que proporcionaste. <br><br>En caso de que tengas alguna otra pregunta o comentario, nos encantaría recibirlos en <a mailto:=\"hello@listnride.com\">hello@listnride.com </a>",
     "8": "Rechazó la solicitud. Dígale al ciclista por qué no puede alquilarle la bici.",
     "9": "Lamentablemente, {{user.first_name}}no confirmó la solicitud",
@@ -561,7 +561,7 @@
   },
   "rideChat": {
     "1": "Te gustaría alquilar <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> de {{lister.business_name}} desde {{timespan}}. Acuerda más detalles con el anunciante. La bici queda reservada tan pronto como dicha persona acepte tu pedido. ",
-    "3": "Enhorabuena, {{lister.first_name}}ha aceptado tu solicitud, por lo que la bici se ha reservado correctamente. Queda con el anunciante como se acordó y recoge la bici. Los datos de contacto son los siguientes, también los hemos enviado a tu correo electrónico <br><br>Nombre:. {{lister.first_name}}{{lister.last_name}}, <br>Teléfono: {{lister.phone_number}}, <br>Dirección: {{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}",
+    "3": "Enhorabuena, {{lister.first_name}}ha aceptado tu solicitud, por lo que la bici se ha reservado correctamente. Queda con el anunciante como se acordó y recoge la bici. Los datos de contacto son los siguientes, también los hemos enviado a tu correo electrónico <br><br>Nombre:. {{lister.first_name}}{{lister.last_name}}, <br>Teléfono: {{lister.pretty_phone_number}}, <br>Dirección: {{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}}ha confirmado que ha terminado el paseo en bici y ha hecho una valoración sobre ti. Por útimo, califica el paseo. Esto ayuda mucho a nuestra comunidad y concluye el alquiler.",
     "6": "Gracias por la valoración, el alquiler se realizó con éxito.",
     "8": "Lamentablemente, el anunciante no pudo aceptar tu solicitud, pero puedes solicitar otras bicis estupendas.",
@@ -691,7 +691,11 @@
       "all-terrain": "Montaña",
       "kids": "Infantil",
       "electro": "Eléctricas",
-      "special": "Especial"
+      "special": "Especial",
+      "urban": "Urban",
+      "e-bike": "E-Bike",
+      "road": "Road",
+      "transport": "Transport"
     },
     "details": {
       "header": "¿Cuál es el nombre, tamaño y marca de tu bici?",
@@ -789,12 +793,20 @@
         "dutch-bike": "Bicicleta holandesa",
         "touring-bike": "Bicicleta de rutas",
         "fixie": "Bici de piñón fijo",
-        "single-speed": "Bici de una velocidad"
+        "single-speed": "Bici de una velocidad",
+        "city-bike": "City Bike"
       },
       "2": {
         "road-bike": "Bici de carretera",
         "triathlon": "Triatlón",
-        "indoor": "Bicicleta de pista"
+        "indoor": "Bicicleta de pista",
+        "e-city-bike": "E-City Bike",
+        "e-touring-bike": "E-Touring Bike",
+        "e-cargo-bike": "E-Cargo Bike",
+        "e-mountain-bike": "E-Mountain Bike",
+        "e-road-bike": "E-Road Bike",
+        "e-folding-bike": "E-Folding Bike",
+        "e-scooter": "E-Scooter"
       },
       "3": {
         "tracking": "Tracking",
@@ -802,16 +814,29 @@
         "freeride": "Freeride",
         "cross-country": "Cross Country",
         "downhill": "Descenso",
-        "cyclocross": "Ciclocross"
+        "cyclocross": "Ciclocross",
+        "road-bike": "Road Bike",
+        "triathlon-bike": "Triathlon Bike",
+        "touring-bike": "Touring Bike",
+        "fixed-gear-bike": "Fixed Gear Bike"
       },
       "4": {
         "city": "Ciudad",
         "all-terrain": "Todoterreno",
-        "road": "De carretera"
+        "road": "De carretera",
+        "mtb-hardtail": "MTB Hardtail",
+        "mtb-fullsuspension": "MTB Fullsuspension",
+        "cyclocross-bike": "Cyclocross Bike",
+        "gravel-bike": "Gravel Bike"
       },
       "5": {
         "pedelec": "Pedelec",
-        "e-bike": "Bici eléctrica"
+        "e-bike": "Bici eléctrica",
+        "cargo-bike": "Cargo Bike",
+        "bike-trailer": "Bike Trailer",
+        "bike-child-seat": "Bike Child Seat",
+        "bike-car-rack": "Bike Car Rack",
+        "bike-travel-bag": "Bike Travel Bag"
       },
       "6": {
         "folding-bike": "Bici plegable",
@@ -820,7 +845,18 @@
         "cargo-bike": "Bici de carga",
         "recumbent": "Bici reclinada",
         "mono-bike": "Monociclo",
-        "trailer": "Remolque de bicicleta"
+        "trailer": "Remolque de bicicleta",
+        "city-bike": "City Bike",
+        "all-terrain-bike": "All Terrain Bike",
+        "road-bike": "Road Bike",
+        "bogie-wheel": "Bogie Wheel"
+      },
+      "7": {
+        "folding-bike": "Folding Bike",
+        "recumbent-bike": "Recumbent Bike",
+        "tandem-bike": "Tandem Bike",
+        "longtail-bike": "Longtail Bike",
+        "scooter": "Scooter"
       }
     }
   },
