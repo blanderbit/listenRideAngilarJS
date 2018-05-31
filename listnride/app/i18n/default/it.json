@@ -715,7 +715,8 @@
       "lights": "Luci",
       "basket": "Cestino",
       "trailer": "Rimorchio",
-      "childseat": "Seggiolino per bambini"
+      "childseat": "Seggiolino per bambini",
+      "gps": "GPS"
     },
     "pictures": {
       "header": "Carica alcune foto della tua bicicletta",

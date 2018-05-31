@@ -723,7 +723,8 @@
       "lights": "Luces",
       "basket": "Cesta",
       "trailer": "Remolque",
-      "childseat": "Asiento para niños"
+      "childseat": "Asiento para niños",
+      "gps": "GPS"
     },
     "pictures": {
       "header": "Sube algunas fotos de tu bici",
