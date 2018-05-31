@@ -725,7 +725,8 @@
       "lights": "Lights",
       "basket": "Basket",
       "trailer": "Trailer",
-      "childseat": "Childseat"
+      "childseat": "Childseat",
+      "gps": "GPS"
     },
     "pictures": {
       "header": "Upload some pictures of your bike",

@@ -721,7 +721,8 @@
       "lights": "Licht",
       "basket": "Korb",
       "trailer": "Anhänger",
-      "childseat": "Kindersitz"
+      "childseat": "Kindersitz",
+      "gps": "GPS"
     },
     "pictures": {
       "header": "Lade ein paar Fotos hoch",

@@ -721,7 +721,8 @@
       "lights": "Licht",
       "basket": "Mandje",
       "trailer": "Aanhanger",
-      "childseat": "Kinderzitje"
+      "childseat": "Kinderzitje",
+      "gps": "GPS"
     },
     "pictures": {
       "header": "Kies een aantal mooie foto's van je fiets",
