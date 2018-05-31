@@ -173,7 +173,7 @@ angular.module('list', ['ngLocale']).component('list', {
               "childseat": !!list.form.childseat,
               "gps": !!list.form.gps
             },
-            "user_id]": $localStorage.userId,
+            "user_id": $localStorage.userId,
             "street": list.form.street,
             "city": list.form.city,
             "zip": list.form.zip,

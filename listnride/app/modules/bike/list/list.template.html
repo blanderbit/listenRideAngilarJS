@@ -284,7 +284,7 @@
                      class="accessory-checkbox"
                      layout="row"
                      layout-align="start center">
-                  <md-icon ng-class="list.form[acc.model] ? 'checked' : 'unchecked'"
+                  <md-icon ng-class="list.form.accessories[acc.model] == 'true' ? 'checked' : 'unchecked'"
                            class="lnr-icn-sm md-color-foreground accessory-icon"
                            md-svg-src="app/assets/ui_icons/{{acc.iconFileName}}"
                            ng-click="list.onAccessoryClick(acc.model)"></md-icon>
