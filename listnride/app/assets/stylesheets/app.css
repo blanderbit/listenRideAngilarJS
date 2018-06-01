@@ -1690,6 +1690,11 @@ listings .lnr-bike-listings {
   line-height: 24px;
 }
 
+.fa.material-icons {
+  font-family: 'FontAwesome'!important;
+  font-size: 14px!important;
+}
+
 .lnr-listing-header .lnr-header-filter {
   cursor: pointer;
 }
