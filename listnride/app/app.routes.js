@@ -107,7 +107,8 @@
 
       $stateProvider.state({
         name: 'requests',
-        url: '/requests/{requestId:int}',
+        url: '/requests/?requestId',
+        reloadOnSearch: false,
         params: {
           hideFooter: true,
           requestId: {
@@ -177,7 +178,7 @@
         }
       });
 
-      /* event pages -- start */ 
+      /* event pages -- start */
 
       $stateProvider.state({
         name: 'raphaSuperCross',

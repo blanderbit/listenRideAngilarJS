@@ -18,55 +18,76 @@
       </md-button>
     </div>
 
-    <form name="listBike"
-          layout="column"
-          layout-align="start center"
-          layout-padding>
-      <md-tabs md-no-pagination
-               md-dynamic-height
-               md-no-ink
-               md-no-ink-bars
-               md-selected="list.selectedIndex"
-               md-center-tabs="on">
-
+    <form
+      name="listBike"
+      layout="column"
+      layout-align="start center"
+      layout-padding
+    >
+      <md-tabs
+        md-no-pagination
+        md-dynamic-height
+        md-no-ink
+        md-no-ink-bars
+        md-selected="list.selectedIndex"
+        md-center-tabs="on"
+      >
         <!-- categories -->
-        <md-tab ng-disabled="list.isListMode"
-                class="categories"
-                label="{{ 'list.category.label' | translate }}"
-                layout="row">
+        <md-tab
+          ng-disabled="list.isListMode"
+          class="categories"
+          label="{{ 'list.category.label' | translate }}"
+          layout="row"
+        >
           <md-content class="md-padding" layout="column">
-            <div class="tab-content"
-                 layout="row"
-                 layout-align="space-between none"
-                 layout-padding>
-              <div class="lnr-list-form"
-                   flex-xs="100"
-                   flex-gt-xs="50"
-                   layout="column">
+            <div
+              class="tab-content"
+              layout="row"
+              layout-align="space-between none"
+              layout-padding
+            >
+              <div
+                class="lnr-list-form"
+                flex-xs="100"
+                flex-gt-xs="50"
+                layout="column"
+              >
                 <div class="lnr-list-title">
                   <h3 class="md-subhead">
                     {{ 'list.category.header' | translate }}
                   </h3>
                 </div>
                 <div layout="row" layout-align="space-between start">
-                  <md-radio-group ng-model="list.form.mainCategory" flex="50" layout="column"
-                                  ng-change="list.categoryChange({{list.form.mainCategory}})">
-                    <md-radio-button class="main-category"
-                                     ng-repeat="cat in list.categoryOptions"
-                                     value="{{cat.value}}">
-                      <md-icon class="lnr-icn-sm md-color-foreground accessory-icon"
-                               md-svg-src="app/assets/ui_icons/{{cat.iconFileName}}"
-                               ng-class="list.form.mainCategory == cat.value ? 'checked' : 'unchecked'"></md-icon>
-                      {{ 'list.category.' + cat.label.replace(' ', '-') | translate }}
+                  <md-radio-group
+                    ng-model="list.form.mainCategory"
+                    flex="50"
+                    layout="column"
+                    ng-change="list.categoryChange(list.form.mainCategory)"
+                  >
+                    <md-radio-button
+                      class="main-category"
+                      ng-repeat="category in list.categoryOptions"
+                      value="{{ category.catId }}"
+                    >
+                      <md-icon
+                        class="lnr-icn-sm md-color-foreground accessory-icon"
+                        md-svg-src="app/assets/ui_icons/{{ category.iconFileName }}"
+                        ng-class="list.form.mainCategory == category.catId ? 'checked' : 'unchecked'"
+                      ></md-icon>
+                      {{ category.name }}
                     </md-radio-button>
                   </md-radio-group>
 
-                  <md-radio-group ng-model="list.form.subCategory"
-                                  flex
-                                  layout="column">
-                    <md-radio-button ng-repeat="subcat in list.subcategoryOptions[list.form.mainCategory]"
-                                     value="{{subcat.value}}">
-                      {{ 'list.subcategory.' + list.form.mainCategory + '.' + subcat.label | translate }}
+                  <md-radio-group
+                    ng-model="list.form.subCategory"
+                    flex
+                    layout="column"
+                  >
+                    <md-radio-button
+                      ng-repeat="subcategory in list.subcategoriesList(list.form.mainCategory)"
+                      value="{{subcategory.id}}"
+                    >
+                      {{ subcategory.name }}
                     </md-radio-button>
                   </md-radio-group>
                 </div>
@@ -263,7 +284,7 @@
                      class="accessory-checkbox"
                      layout="row"
                      layout-align="start center">
-                  <md-icon ng-class="list.form[acc.model] ? 'checked' : 'unchecked'"
+                  <md-icon ng-class="list.form.accessories[acc.model] == 'true' ? 'checked' : 'unchecked'"
                            class="lnr-icn-sm md-color-foreground accessory-icon"
                            md-svg-src="app/assets/ui_icons/{{acc.iconFileName}}"
                            ng-click="list.onAccessoryClick(acc.model)"></md-icon>

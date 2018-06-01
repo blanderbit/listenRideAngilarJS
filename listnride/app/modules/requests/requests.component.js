@@ -26,56 +26,112 @@ angular.module('requests', ['infinite-scroll'])
       $timeout, $location, $anchorScroll,
       $state, $stateParams, $translate, $mdToast, $analytics, date,
       accessControl) {
-      if (accessControl.requireLogin()) {
-        return;
-      } 
 
       var requests = this;
-      requests.selected = 0;
+      // user should be logged in
+      if (accessControl.requireLogin()) return;
+
+      // TODO: remove poller
       var poller;
-      requests.filters = {
-        options: [
-          'requests.filters.all-requests',
-          'requests.filters.current-rentals',
-          'requests.filters.pending-requests',
-          'requests.filters.upcoming-rentals',
-          'requests.filters.past-rentals',
-          'requests.filters.expired-requests'
-        ],
-        selected: 0,
-        type: 'all',
-        applyFilter: function (selected) {
-          requests.filters.selected = parseInt(selected);
-          // all requests for selected tab (rider or lister)
-          switch (requests.filters.selected) {
-            case 0: requests.filterBikes(); break;
-            case 1: requests.filterCurrentRentals(); break;
-            case 2: requests.filterPendingRequests(); break;
-            case 3: requests.filterUpcomingRentals(); break;
-            case 4: requests.filterPastRentals(); break;
-            case 5: requests.filterExpiredRequests(); break;
+
+      requests.$onInit = function () {
+        // variables
+        requests.selected = 0;
+        requests.filters = {
+          options: [
+            'requests.filters.all-requests',
+            'requests.filters.current-rentals',
+            'requests.filters.pending-requests',
+            'requests.filters.upcoming-rentals',
+            'requests.filters.past-rentals',
+            'requests.filters.expired-requests'
+          ],
+          selected: 0,
+          type: 'all',
+          applyFilter: function (selected) {
+            requests.filters.selected = parseInt(selected);
+            // all requests for selected tab (rider or lister)
+            switch (requests.filters.selected) {
+              case 0: requests.filterBikes(); break;
+              case 1: requests.filterCurrentRentals(); break;
+              case 2: requests.filterPendingRequests(); break;
+              case 3: requests.filterUpcomingRentals(); break;
+              case 4: requests.filterPastRentals(); break;
+              case 5: requests.filterExpiredRequests(); break;
+            }
           }
+        };
+        requests.requests = [];
+        requests.all_requests = [];
+        requests.request = {};
+        requests.message = "";
+        requests.showChat = false;
+        requests.$mdMedia = $mdMedia;
+        requests.request.glued = false;
+        requests.loadingList = true;
+        requests.loadingChat = false;
+        requests.request.rideChat;
+        requests.request.chatFlow;
+        requests.userId = $localStorage.userId;
+        requests.currentPage = 1;
+        requests.requestsLeft = false;
+        requests.is_rider = function (request) {
+          return request.user.id === $localStorage.userId
         }
+        requests.is_lister = function (request) {
+          return request.user.id !== $localStorage.userId
+        }
+
+        // methods
+        // requests.nextPage = nextPage;
+        requests.loadRequest = loadRequest;
+        requests.reloadRequest = reloadRequest;
+        requests.updateStatus = updateStatus;
+        requests.acceptBooking = acceptBooking;
+        requests.showRatingDialog = showRatingDialog;
+        requests.sendMessage = sendMessage;
+        requests.filterBikes = filterBikes;
+        requests.filterCurrentRentals = filterCurrentRentals;
+        requests.filterPendingRequests = filterPendingRequests;
+        requests.filterUpcomingRentals = filterUpcomingRentals;
+        requests.filterPastRentals = filterPastRentals;
+        requests.filterExpiredRequests = filterExpiredRequests;
+
+        // invocates
+        getRequests();
+      }
+
+      requests.$onDestroy = function () {
+        $interval.cancel(poller);
       };
 
-      requests.requests = [];
-      requests.all_requests = [];
-      requests.request = {};
-      requests.message = "";
-      requests.showChat = false;
-      requests.$mdMedia = $mdMedia;
-      requests.request.glued = false;
-      requests.loadingList = true;
-      requests.loadingChat = false;
-      requests.request.rideChat;
-      requests.request.chatFlow;
-      requests.userId = $localStorage.userId;
-      requests.currentPage = 1;
-      requests.requestsLeft = false;
-
-      requests.nextPage = function() {
+      function getRequests () {
         requests.loadingList = true;
-        api.get('/users/' + $localStorage.userId + '/requests?page=' + requests.currentPage++).then(
+        api.get('/users/' + $localStorage.userId + '/requests/').then(
+          function (success) {
+            requests.all_requests = success.data.requests;
+            requests.requests = angular.copy(requests.all_requests);
+
+            requests.filterBikes(requests.filters.type, false);
+            requests.filters.applyFilter(requests.filters.selected);
+
+            // Open request on first load
+            if (requests.all_requests.length > 0) {
+              requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
+              requests.loadRequest(requests.selected);
+            }
+
+            requests.loadingList = false;
+          },
+          function (error) {
+            requests.loadingList = false;
+          }
+        );
+      }
+
+      function nextPage () {
+        requests.loadingList = true;
+        api.get('/users/' + $localStorage.userId + '/requests').then(
           function (success) {
             var newRequests = success.data.requests;
             requests.all_requests = requests.all_requests.concat(newRequests);
@@ -83,6 +139,7 @@ angular.module('requests', ['infinite-scroll'])
             requests.filterBikes(requests.filters.type, false);
             requests.filters.applyFilter(requests.filters.selected);
             requests.loadingList = false;
+
             requests.requestsLeft = !_.isEmpty(success.data.links.next_rider) || !_.isEmpty(success.data.links.next_lister);
             if (requests.all_requests.length > 0) {
               requests.selected = $stateParams.requestId ? $stateParams.requestId : requests.requests[0].id;
@@ -95,21 +152,13 @@ angular.module('requests', ['infinite-scroll'])
         );
       };
 
-      var hideDialog = function () {
-        // For small screens, show Chat Dialog again
-        if ($mdMedia('xs')) {
-          showChatDialog();
-        } else {
-          $mdDialog.hide();
-        }
-      };
       /**
-       * called whenever user: 
+       * called whenever user:
        *    1- changes the switch (All, Lister, Rider)
        *    2- changes filter (all, current, pending, upcoming, past, expired)
        * @returns {void}
        */
-      var selectDefaultRequest = function () {
+      function selectDefaultRequest () {
         $timeout(function () {
           if (requests.requests.length > 0) {
             requests.selected = requests.requests[0].id;
@@ -119,9 +168,13 @@ angular.module('requests', ['infinite-scroll'])
       };
 
       // Handles initial request loading
-      requests.loadRequest = function (requestId, showDialog, index) {
+      function loadRequest (requestId, showDialog, index) {
         requests.selected = requestId;
-        $state.go(".", { requestId: requestId }, { notify: false });
+        $state.go($state.current, {
+          requestId: requestId
+        }, {
+          notify: false
+        });
         requests.loadingChat = true;
         // Cancel the poller
         $interval.cancel(poller);
@@ -129,16 +182,14 @@ angular.module('requests', ['infinite-scroll'])
         requests.request = {};
         // Load the new request and activate the poller
         reloadRequest(requestId);
-        var last_message = requests.requests[index] ? requests.requests[index].last_message: null;
+        var last_message = requests.requests[index] ? requests.requests[index].message : null;
         if (!!last_message && !last_message.is_read && last_message.receiver === parseInt($localStorage.userId)) {
           api.post('/requests/' + requestId + '/messages/mark_as_read', { "user_id": $localStorage.userId }).then(
             function (success) {
-            // if (index) {
-              requests.requests[index].last_message.is_read = true;
+              last_message.is_read = true;
               if ($localStorage.unreadMessages > 0) {
                 $localStorage.unreadMessages -= 1;
               }
-            // }
             }
           );
         }
@@ -155,15 +206,7 @@ angular.module('requests', ['infinite-scroll'])
         }
       };
 
-      requests.profilePicture = function (request) {
-        if ($localStorage.userId == request.user.id) {
-          return request.ride.image_file_1.image_file_1.thumb.url;
-        } else {
-          return request.user.profile_picture.profile_picture.url;
-        }
-      };
-
-      var reloadRequest = function (requestId) {
+      function reloadRequest (requestId) {
         api.get('/requests/' + requestId).then(
           function (success) {
             // On initial load
@@ -201,7 +244,7 @@ angular.module('requests', ['infinite-scroll'])
         );
       };
 
-      var updateStatus = function (statusId, paymentWarning) {
+      function updateStatus (statusId, paymentWarning) {
         var data = {
           "request": {
             "status": statusId
@@ -231,7 +274,7 @@ angular.module('requests', ['infinite-scroll'])
       };
 
       // This function handles request accept and all validations
-      requests.acceptBooking = function() {
+      function acceptBooking () {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             if (success.data.current_payout_method) {
@@ -250,56 +293,8 @@ angular.module('requests', ['infinite-scroll'])
         );
       };
 
-      var showPayoutDialog = function(user, event) {
-        $mdDialog.show({
-          locals: {user: user},
-          controller: PayoutDialogController,
-          controllerAs: 'settings',
-          templateUrl: 'app/modules/requests/dialogs/payoutDialog.template.html',
-          parent: angular.element(document.body),
-          targetEvent: event,
-          openFrom: angular.element(document.body),
-          closeTo: angular.element(document.body),
-          clickOutsideToClose: false,
-          fullscreen: true // Only for -xs, -sm breakpoints.
-        });
-      };
-
-      var showChatDialog = function (event) {
-        $mdDialog.show({
-          controller: ChatDialogController,
-          controllerAs: 'chatDialog',
-          templateUrl: 'app/modules/requests/chatDialog.template.html',
-          parent: angular.element(document.body),
-          targetEvent: event,
-          openFrom: angular.element(document.body),
-          closeTo: angular.element(document.body),
-          clickOutsideToClose: false,
-          fullscreen: true // Only for -xs, -sm breakpoints.
-        });
-      };
-
-      requests.showRatingDialog = function (event) {
-        $mdDialog.show({
-          controller: RatingDialogController,
-          controllerAs: 'ratingDialog',
-          templateUrl: 'app/modules/requests/ratingDialog.template.html',
-          parent: angular.element(document.body),
-          targetEvent: event,
-          openFrom: angular.element(document.body),
-          closeTo: angular.element(document.body),
-          clickOutsideToClose: false,
-          fullscreen: true // Only for -xs, -sm breakpoints.
-        });
-      };
-
-      // Fires if scope gets destroyed and cancels poller
-      requests.$onDestroy = function () {
-        $interval.cancel(poller);
-      };
-
       // Sends a new message by directly appending it locally and posting it to the API
-      requests.sendMessage = function () {
+      function sendMessage () {
         requests.request.glued = true
         // add property created_at_readable using current time
         // used in message timestamp
@@ -327,16 +322,26 @@ angular.module('requests', ['infinite-scroll'])
         requests.message = "";
       };
 
-      var ChatDialogController = function () {
-        var chatDialog = this;
-        chatDialog.requests = requests;
-        chatDialog.hide = function () {
-          $mdDialog.hide();
-        };
+
+      // DIALOGS
+      // Payout Dialog
+      function showPayoutDialog(user, event) {
+        $mdDialog.show({
+          locals: {user: user},
+          controller: PayoutDialogController,
+          controllerAs: 'settings',
+          templateUrl: 'app/modules/requests/dialogs/payoutDialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: false,
+          fullscreen: true // Only for -xs, -sm breakpoints.
+        });
       };
 
       // TODO: this code is appearing twice, here and in the settings Controller (settings.component.rb)
-      var PayoutDialogController = function(user) {
+      function PayoutDialogController(user) {
         var payoutDialog = this;
 
         payoutDialog.user = user;
@@ -346,16 +351,16 @@ angular.module('requests', ['infinite-scroll'])
           var data = {
             "payment_method": payoutDialog.payoutMethod
           };
-  
+
           data.payment_method.user_id = $localStorage.userId;
-  
+
           if (payoutDialog.payoutMethod.family == 1) {
             data.payment_method.email = "";
           } else {
             data.payment_method.iban = "";
             data.payment_method.bic = "";
           }
-  
+
           api.post('/users/' + $localStorage.userId + '/payment_methods', data).then(
             function (success) {
               $mdToast.show(
@@ -380,7 +385,45 @@ angular.module('requests', ['infinite-scroll'])
         };
       };
 
-      var RatingDialogController = function () {
+      // Chat Dialog
+      function showChatDialog (event) {
+        $mdDialog.show({
+          controller: ChatDialogController,
+          controllerAs: 'chatDialog',
+          templateUrl: 'app/modules/requests/chatDialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: false,
+          fullscreen: true // Only for -xs, -sm breakpoints.
+        });
+      };
+
+      function ChatDialogController() {
+        var chatDialog = this;
+        chatDialog.requests = requests;
+        chatDialog.hide = function () {
+          $mdDialog.hide();
+        };
+      };
+
+      // Rating Dialog
+      function showRatingDialog (event) {
+        $mdDialog.show({
+          controller: RatingDialogController,
+          controllerAs: 'ratingDialog',
+          templateUrl: 'app/modules/requests/ratingDialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: false,
+          fullscreen: true // Only for -xs, -sm breakpoints.
+        });
+      };
+
+      function RatingDialogController () {
         var ratingDialog = this;
 
         ratingDialog.rating = 5;
@@ -422,8 +465,8 @@ angular.module('requests', ['infinite-scroll'])
                   reloadRequest(requests.request.id);
                   /*
                   Logic to show the Referal Dialog:
-                  1- If newStatus is 5, rating > 3 and isBusiness is false -> show dialog to lister 
-                  2- If newStatus is 6, rating > 3 and isBusiness is false -> show dialog to rider 
+                  1- If newStatus is 5, rating > 3 and isBusiness is false -> show dialog to lister
+                  2- If newStatus is 6, rating > 3 and isBusiness is false -> show dialog to rider
                   */
                   // rating > 3 and user has no business
                   if (parseInt(ratingDialog.rating) > 3 && $localStorage.isBusiness === false) {
@@ -474,12 +517,15 @@ angular.module('requests', ['infinite-scroll'])
         ratingDialog.hide = hideDialog;
       };
 
-      requests.is_rider = function (request) {
-        return request.user.id === $localStorage.userId
-      }
-      requests.is_lister = function (request) {
-        return request.user.id !== $localStorage.userId
-      }
+      function hideDialog() {
+        // For small screens, show Chat Dialog again
+        if ($mdMedia('xs')) {
+          showChatDialog();
+        } else {
+          $mdDialog.hide();
+        }
+      };
+
       /**
         * filter lister/rider requests from all requests
         * DOM filtering is avoid b/c of performance overhead
@@ -487,10 +533,8 @@ angular.module('requests', ['infinite-scroll'])
         * @param {string} reset_filter returns requests based on provided filter
         @returns {void}
         */
-      requests.filterBikes = function (type, reset_filter) {
-        if (type) {
-          requests.filters.type = type
-        }
+      function filterBikes (type, reset_filter) {
+        requests.filters.type = type ? type : 'all';
 
         if (requests.filters.type === 'all') {
           requests.requests = angular.copy(requests.all_requests);
@@ -502,6 +546,7 @@ angular.module('requests', ['infinite-scroll'])
           });
           if (reset_filter === true) requests.filters.selected = 0
         }
+
         if (reset_filter === true) selectDefaultRequest();
       };
 
@@ -509,9 +554,9 @@ angular.module('requests', ['infinite-scroll'])
        * All rentals which are currently rented out.
        * Within Request Start Date and End Date.
        * @return {requests} current rentals
-       * @param {string} request type of request (as a lister or as a rider) 
+       * @param {string} request type of request (as a lister or as a rider)
        */
-      requests.filterCurrentRentals = function () {
+      function filterCurrentRentals () {
         // filter for lister or rider
         requests.filterBikes();
         // filter for pending requests
@@ -524,13 +569,13 @@ angular.module('requests', ['infinite-scroll'])
       };
 
       /**
-       * It is a request sent by rider, but not yet accepted by the lister. 
+       * It is a request sent by rider, but not yet accepted by the lister.
        * The pending request moves to Upcoming Rentals as soon as the lister
        * accepted and the rider accepted and paid
        * @return {requests} pending requests
        * @param {string} request type of request (as a lister or as a rider)
        */
-      requests.filterPendingRequests = function () {
+      function filterPendingRequests () {
         // filter for lister or rider
         requests.filterBikes();
         // filter for pending requests
@@ -541,13 +586,13 @@ angular.module('requests', ['infinite-scroll'])
       };
 
       /**
-       * It is a request sent by rider, but not yet accepted by the lister. 
+       * It is a request sent by rider, but not yet accepted by the lister.
        * The pending request moves to Upcoming Rentals as soon as the lister
        * accepted and the rider accepted and paid
        * @return {requests} upcoming rentals
        * @param {string} request type of request (as a lister or as a rider)
        */
-      requests.filterUpcomingRentals = function () {
+      function filterUpcomingRentals () {
         // filter for lister or rider
         requests.filterBikes();
         // filter for pending requests
@@ -565,7 +610,7 @@ angular.module('requests', ['infinite-scroll'])
        * @return {requests} past rentals
        * @param {string} request type of request (as a lister or as a rider)
        */
-      requests.filterPastRentals = function () {
+      function filterPastRentals () {
         // filter for lister or rider
         requests.filterBikes();
         // filter for pending requests
@@ -583,7 +628,7 @@ angular.module('requests', ['infinite-scroll'])
        * @return {requests} expired requests
        * @param {string} request type of request (as a lister or as a rider)
        */
-      requests.filterExpiredRequests = function () {
+      function filterExpiredRequests () {
         // filter for lister or rider
         requests.filterBikes();
         // filter for pending requests

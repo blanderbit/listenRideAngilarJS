@@ -550,7 +550,7 @@
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} würde gerne dein <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Sobald du die Anfrage annimmst, wird sie gebucht. Vereinbare alle weiteren Details über den Chat.",
-    "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon-Nummer: {{user.phone_number}} <br>Adresse: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
+    "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon-Nummer: {{user.pretty_phone_number}} <br>Adresse: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
     "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
     "9": "Leider hat {{user.first_name}} die Anfrage nicht bestätigt.",
@@ -558,7 +558,7 @@
   },
   "rideChat": {
     "1": "Du würdest gerne {{lister.business_name}} <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, ist das Rad gebucht.",
-    "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.phone_number}}<br>Adresse: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
+    "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.pretty_phone_number}}<br>Adresse: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} hat die Rückgabe des Rades bestätigt und dich bewertet.<br>Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",
     "6": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
     "8": "Leider hat der Verleiher die Anfrage abgelehnt. Frage einfach ein paar andere schöne Räder an.",
@@ -688,7 +688,11 @@
       "all-terrain": "Gelände",
       "kids": "Kinder",
       "electro": "Elektro",
-      "special": "Spezial"
+      "special": "Spezial",
+      "urban": "Urban",
+      "e-bike": "E-Bike",
+      "road": "Road",
+      "transport": "Transport"
     },
     "details": {
       "header": "Wie heißt das Modell, von welcher Marke ist es, für welche Fahrergröße ist es geeignet?",
@@ -717,7 +721,8 @@
       "lights": "Licht",
       "basket": "Korb",
       "trailer": "Anhänger",
-      "childseat": "Kindersitz"
+      "childseat": "Kindersitz",
+      "gps": "GPS"
     },
     "pictures": {
       "header": "Lade ein paar Fotos hoch",
@@ -787,12 +792,20 @@
         "dutch-bike": "Hollandrad",
         "touring-bike": "Touringrad",
         "fixie": "Fixie",
-        "single-speed": "Single Speed"
+        "single-speed": "Single Speed",
+        "city-bike": "City Bike"
       },
       "2": {
         "road-bike": "Rennrad",
         "triathlon": "Triathlonrad",
-        "indoor": "Bahnrad"
+        "indoor": "Bahnrad",
+        "e-city-bike": "E-City Bike",
+        "e-touring-bike": "E-Touring Bike",
+        "e-cargo-bike": "E-Cargo Bike",
+        "e-mountain-bike": "E-Mountain Bike",
+        "e-road-bike": "E-Road Bike",
+        "e-folding-bike": "E-Folding Bike",
+        "e-scooter": "E-Scooter"
       },
       "3": {
         "tracking": "Trekking",
@@ -800,16 +813,29 @@
         "freeride": "Freeride",
         "cross-country": "Cross Country",
         "downhill": "Downhill",
-        "cyclocross": "Cyclocross"
+        "cyclocross": "Cyclocross",
+        "road-bike": "Road Bike",
+        "triathlon-bike": "Triathlon Bike",
+        "touring-bike": "Touring Bike",
+        "fixed-gear-bike": "Fixed Gear Bike"
       },
       "4": {
         "city": "Stadt",
         "all-terrain": "Gelände",
-        "road": "Strasse"
+        "road": "Strasse",
+        "mtb-hardtail": "MTB Hardtail",
+        "mtb-fullsuspension": "MTB Fullsuspension",
+        "cyclocross-bike": "Cyclocross Bike",
+        "gravel-bike": "Gravel Bike"
       },
       "5": {
         "pedelec": "Pedelec",
-        "e-bike": "E-Bike"
+        "e-bike": "E-Bike",
+        "cargo-bike": "Cargo Bike",
+        "bike-trailer": "Bike Trailer",
+        "bike-child-seat": "Bike Child Seat",
+        "bike-car-rack": "Bike Car Rack",
+        "bike-travel-bag": "Bike Travel Bag"
       },
       "6": {
         "folding-bike": "Faltrad",
@@ -818,7 +844,18 @@
         "cargo-bike": "Lastenrad",
         "recumbent": "Liegerad",
         "mono-bike": "Einrad",
-        "trailer": "Anhänger"
+        "trailer": "Anhänger",
+        "city-bike": "City Bike",
+        "all-terrain-bike": "All Terrain Bike",
+        "road-bike": "Road Bike",
+        "bogie-wheel": "Bogie Wheel"
+      },
+      "7": {
+        "folding-bike": "Folding Bike",
+        "recumbent-bike": "Recumbent Bike",
+        "tandem-bike": "Tandem Bike",
+        "longtail-bike": "Longtail Bike",
+        "scooter": "Scooter"
       }
     }
   },

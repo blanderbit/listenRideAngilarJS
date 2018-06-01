@@ -113,7 +113,6 @@ angular.module('bikeSorter', [])
             titles.push("Less than " + breakpoint + " €");
           }
         });
-        console.log("titles: ", titles, "ascending: ", ascending);
         return titles;
       },
       /*
