@@ -34,7 +34,7 @@ angular.module('list', ['ngLocale']).component('list', {
 
       var list = this;
 
-      list.form = {images: []};
+      list.form = {images: [], accessories:{}};
       list.selectedIndex = 0;
       list.removedImages = [];
       list.startImage = 1;
@@ -165,13 +165,13 @@ angular.module('list', ['ngLocale']).component('list', {
             "size": list.form.size,
             "category": list.form.subCategory,
             "accessories": {
-              "lock": !!list.form.lock,
-              "helmet": !!list.form.helmet,
-              "lights": !!list.form.lights,
-              "basket": !!list.form.basket,
-              "trailer": !!list.form.trailer,
-              "childseat": !!list.form.childseat,
-              "gps": !!list.form.gps
+              "lock": list.form.accessories.lock,
+              "helmet": list.form.accessories.helmet,
+              "lights": list.form.accessories.lights,
+              "basket": list.form.accessories.basket,
+              "trailer": list.form.accessories.trailer,
+              "childseat": list.form.accessories.childseat,
+              "gps": list.form.accessories.gps
             },
             "user_id": $localStorage.userId,
             "street": list.form.street,
@@ -237,13 +237,13 @@ angular.module('list', ['ngLocale']).component('list', {
             "size": list.form.size,
             "category": list.form.subCategory,
             "accessories" : {
-              "lock": list.form.lock || false,
-              "helmet": list.form.helmet || false,
-              "lights": list.form.lights || false,
-              "basket": list.form.basket || false,
-              "trailer": list.form.trailer || false,
-              "childseat": list.form.childseat || false,
-              "gps": list.form.gps || false
+              "lock": list.form.accessories.lock || 'false',
+              "helmet": list.form.accessories.helmet || 'false',
+              "lights": list.form.accessories.lights || 'false',
+              "basket": list.form.accessories.basket || 'false',
+              "trailer": list.form.accessories.trailer || 'false',
+              "childseat": list.form.accessories.childseat || 'false',
+              "gps": list.form.accessories.gps || 'false'
             },
             "user_id": $localStorage.userId,
             "street": list.form.street,
@@ -462,7 +462,11 @@ angular.module('list', ['ngLocale']).component('list', {
       };
 
       list.onAccessoryClick = function (accessory) {
-        list.form[accessory] = !list.form[accessory];
+        if (list.form.accessories[accessory]) {
+          list.form.accessories[accessory] = list.form.accessories[accessory] == 'true' ? 'false' : 'true';
+        } else {
+          list.form.accessories[accessory] = 'true';
+        }
       };
 
       list.isFormValid = function () {
