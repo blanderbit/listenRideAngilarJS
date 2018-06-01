@@ -184,7 +184,7 @@ angular.module('bike').component('calendar', {
         var slot = calendar.event.slots[calendar.event.pickupSlotId];
         calendar.startDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
 
-        // Presets returnSlot to be (slotDuration) after pickupSlot 
+        // Presets returnSlot to be (slotDuration) after pickupSlot
         calendar.event.returnSlotId = parseInt(calendar.event.pickupSlotId) + slotDuration;
         calendar.event.changeReturnSlot();
         dateChange(calendar.startDate, calendar.endDate);
@@ -196,7 +196,7 @@ angular.module('bike').component('calendar', {
         if (slot.overnight) {
           calendar.endDate = new Date(eventYear, eventMonth, slot.day + 1, slot.hour, 0, 0, 0);
         } else {
-          calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);  
+          calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
         }
 
         dateChange(calendar.startDate, calendar.endDate);
@@ -476,12 +476,19 @@ angular.module('bike').component('calendar', {
       }
 
       function dateClosed(date) {
-        if (openingHoursAvailable() && _.isEmpty(calendar.bikeAvailabilities)) {
-          return _.isEmpty(calendar.bikeOwner.opening_hours.hours[getWeekDay(date)]);
-        } else if (!_.isEmpty(calendar.bikeAvailabilities)) {
-          return bikeNotAvailable(date);
+        var isDateClose = false;
+
+        // check if opening hours exist
+        if (openingHoursAvailable()) {
+          isDateClose = isDateClose || _.isEmpty(calendar.bikeOwner.opening_hours.hours[getWeekDay(date)]);
         }
-        return false
+
+        // check if availabilities exist and concat with previous results
+        if (!_.isEmpty(calendar.bikeAvailabilities)) {
+          isDateClose = isDateClose || bikeNotAvailable(date);
+        }
+
+        return isDateClose;
       }
 
       function bikeNotAvailable(date) {
