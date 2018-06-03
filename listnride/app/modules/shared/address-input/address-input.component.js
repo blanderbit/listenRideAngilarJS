@@ -42,6 +42,8 @@ angular.module('addressInput',[]).component('addressInput', {
           addressInput.addressForm.$setTouched();
           addressInput.addressForm.$validate();
 
+          addressInput.addressFor.triggerHandler('submit');
+
           // addressInput.addressForm.$setSubmitted();
         }
       }
