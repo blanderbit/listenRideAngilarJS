@@ -110,19 +110,29 @@
               </md-input-container>
             </div>
 
-            <md-checkbox
-              ng-model="signup.parent.terms"
-              aria-label="terms"
-            >
-              <div data-ng-bind-html="'forms.signing-up-accept-tac' | translate"></div>
-            </md-checkbox>
+            <div flex layout="row" layout-wrap>
+              <div flex="5">
+                <md-checkbox
+                  ng-model="signup.parent.terms"
+                  aria-label="terms"
+                >
+                </md-checkbox>
+              </div>
+              <div flex="95">
+                <div data-ng-bind-html="'forms.signing-up-accept-tac' | translate"></div>
+              </div>
 
-            <md-checkbox
-              ng-model="signup.parent.newsletter"
-              aria-label="newsletter"
-            >
-              <div data-ng-bind-html="'forms.signing-up-accept-newsletter' | translate"></div>
-            </md-checkbox>
+              <div flex="5">
+                <md-checkbox
+                  ng-model="signup.parent.newsletter"
+                  aria-label="newsletter"
+                >
+                </md-checkbox>
+              </div>
+              <div flex="95">
+                <div data-ng-bind-html="'forms.signing-up-accept-newsletter' | translate"></div>
+              </div>
+            </div>
 
             <div class="md-dialog-buttons" layout="column">
               <md-tooltip ng-if="!signup.parent.terms">Please agree to our terms of use and privacy policy.
