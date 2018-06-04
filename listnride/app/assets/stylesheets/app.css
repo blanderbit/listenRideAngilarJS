@@ -87,10 +87,6 @@ h1.md-subhead {
   margin: 4px 0;
 }
 
-/*h2.md-subhead {
-  margin: 4px 0;
-}*/
-
 md-select-menu md-content {
   max-height: 300px;
 }
@@ -131,7 +127,6 @@ md-grid-list md-grid-tile {
 }
 
 .highlight-tile {
-  /* height: 260px; */
   padding: 24px 0;
   border-radius: 4px;
   border: 1px solid rgba(95, 198, 147, 0.25);
@@ -176,7 +171,6 @@ invest .highlight-tile {
 
 md-menu-content {
   max-height: 300px!important;
-  /*max-height: 500px; !*TODO: find for WHAT*!*/
 }
 
 md-card md-card-title {
