@@ -285,7 +285,7 @@
     "privacy": {
       "meta-title": "Privacy Policy of listnride",
       "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform.",
-      "use-opt-in": "To provide you with the perfect service with listnride, we use cookies in accordance with our Cookie Policy.",
+      "use-opt-in": "To provide you with the perfect service with listnride, we use cookies in accordance with our <a target=\"_blank\" href=\"/#/privacy\">Cookie Policy</a>.",
       "use-opt-in-button": "I got that."
     }
   },

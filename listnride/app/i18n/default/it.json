@@ -276,7 +276,7 @@
     "privacy": {
       "meta-title": "Politica sulla privacy di listnride",
       "meta-description": "La Politica sulla privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online.",
-      "use-opt-in": "Per offrirti con listnride un servizio perfetto, utilizziamo dei Cookies conformemente alla nostra Normativa sui Cookies.",
+      "use-opt-in": "Per offrirti con listnride un servizio perfetto, utilizziamo dei Cookies conformemente alla nostra <a target=\"_blank\" href=\"/#/privacy\">Normativa sui Cookies</a>.",
       "use-opt-in-button": "Ho capito."
     }
   },
