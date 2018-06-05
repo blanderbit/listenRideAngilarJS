@@ -26,7 +26,7 @@ angular.module('cyclassicsHamburg',[]).component('cyclassicsHamburg', {
         });
 
         // TODO: readd &booked_at=2018-08-20 when API is fixed
-        api.get('/rides?category=20&location=Hamburg&booked_at=2018-08-20').then(
+        api.get('/rides?category=30&location=Hamburg&booked_at=2018-08-20').then(
             function(response) {
                 cyclassicsHamburg.bikes = response.data.bikes;
             },
