@@ -106,7 +106,8 @@
     "Dec": "Dic",
     "testimonials-header": "¿Qué opina la gente?",
     "balance": "Saldo",
-    "tac": "Términos y condiciones",
+    "tac": "términos y condiciones",
+    "privacy-policy": "política de privacidad",
     "booking-accept-tac": "Al reservar, acepto ",
     "already-booked": "Ya alquilada",
     "for-shops": "Para tiendas de bicis",
@@ -282,7 +283,9 @@
     },
     "privacy": {
       "meta-title": "Política de privacidad de listnride",
-      "meta-description": "La política de privacidad de la comunidad para compartir bicis de listnride se aplica al uso de la plataforma online"
+      "meta-description": "La política de privacidad de la comunidad para compartir bicis de listnride se aplica al uso de la plataforma online",
+      "use-opt-in": "Para ofrecerte el servicio perfecto con listnride, utilizamos cookies de acuerdo con nuestra Política de Cookies.",
+      "use-opt-in-button": "OK."
     }
   },
   "booking": {
@@ -559,7 +562,7 @@
   },
   "listChat": {
     "1": "A {{user.first_name}}{{user.last_name}} de {{user.city}} le gustaría alquilar tu <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> desde {{timespan}}. Concreta más detalles usando el chat.",
-    "3": "Has aceptado la solicitud. La bici ahora está reservada y la alquilarás desde {{timespan}}. Los datos de contacto son los siguientes, también te los hemos enviado por correo electrónico <br><br>Nombre: {{user.first_name}}{{user.last_name}}<br>Teléfono: {{user.phone_number}}<br>Dirección: {{user.street}}, <lh9lh> {{user.city}}, {{user.country}}",
+    "3": "Has aceptado la solicitud. La bici ahora está reservada y la alquilarás desde {{timespan}}. Los datos de contacto son los siguientes, también te los hemos enviado por correo electrónico <br><br>Nombre: {{user.first_name}}{{user.last_name}}<br>Teléfono: {{user.pretty_phone_number}}<br>Dirección: {{user.street}}, <lh9lh> {{user.city}}, {{user.country}}",
     "5": "Gracias por confirmar que has recuperado tu bici y por valorar a{{user.first_name}}. El alquiler se realizó correctamente y en los próximos 7 días hábiles se transferirá el dinero a la cuenta bancaria que proporcionaste. <br><br>En caso de que tengas alguna otra pregunta o comentario, nos encantaría recibirlos en <a mailto:=\"hello@listnride.com\">hello@listnride.com </a>",
     "8": "Rechazó la solicitud. Dígale al ciclista por qué no puede alquilarle la bici.",
     "9": "Lamentablemente, {{user.first_name}}no confirmó la solicitud",
@@ -567,7 +570,7 @@
   },
   "rideChat": {
     "1": "Te gustaría alquilar <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> de {{lister.business_name}} desde {{timespan}}. Acuerda más detalles con el anunciante. La bici queda reservada tan pronto como dicha persona acepte tu pedido. ",
-    "3": "Enhorabuena, {{lister.first_name}}ha aceptado tu solicitud, por lo que la bici se ha reservado correctamente. Queda con el anunciante como se acordó y recoge la bici. Los datos de contacto son los siguientes, también los hemos enviado a tu correo electrónico <br><br>Nombre:. {{lister.first_name}}{{lister.last_name}}, <br>Teléfono: {{lister.phone_number}}, <br>Dirección: {{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}",
+    "3": "Enhorabuena, {{lister.first_name}}ha aceptado tu solicitud, por lo que la bici se ha reservado correctamente. Queda con el anunciante como se acordó y recoge la bici. Los datos de contacto son los siguientes, también los hemos enviado a tu correo electrónico <br><br>Nombre:. {{lister.first_name}}{{lister.last_name}}, <br>Teléfono: {{lister.pretty_phone_number}}, <br>Dirección: {{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}}ha confirmado que ha terminado el paseo en bici y ha hecho una valoración sobre ti. Por útimo, califica el paseo. Esto ayuda mucho a nuestra comunidad y concluye el alquiler.",
     "6": "Gracias por la valoración, el alquiler se realizó con éxito.",
     "8": "Lamentablemente, el anunciante no pudo aceptar tu solicitud, pero puedes solicitar otras bicis estupendas.",
@@ -605,7 +608,9 @@
     "update-contact": "Cambiar número de teléfono",
     "update-contact-mobile": "Número de teléfono",
     "company-contact-info": "Completa el formulario con la información de contacto de la empresa.",
-    "signing-up-accept-tac": "Al suscribirme, acepto la",
+    "signing-up-accept-tac": "He leído y acepto los <a style=\"pointer-events: auto;\" href=\"/#/terms\">Términos y Condiciones</a> y acepto la recolección, tratamiento y uso de mis datos personales establecidos por la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a>.",
+    "signing-up-accept-newsletter": "Deseo recibir información sobre nuevas bicicletas, tours y cupones de descuento. Acepto las condiciones establecidas en la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride. Puedo revocar mi consentimiento en cualquier momento.",
+    "privacy-policy": "Se aplica la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride.",
     "errors": {
       "password-length": "La contraseña debe tener entre 6 y 30 caracteres",
       "password-length-xs": "6-30 caracteres",

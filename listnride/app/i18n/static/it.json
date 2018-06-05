@@ -756,12 +756,14 @@
     "berlin-court-of-registry": "Berlin Court of Registry (Charlottenburg)",
     "vat-id": "Partita Iva",
     "meta-title": "listnride | Info",
-    "meta-description": "Noleggia la tua bicicletta perfetta nella comunità listnride. Trovane una che si adatti al tuo stile e alle tue esigenze."
+    "meta-description": "Noleggia la tua bicicletta perfetta nella comunità listnride. Trovane una che si adatti al tuo stile e alle tue esigenze.",
+    "regulation": "Online dispute resolution pursuant to Article 14 (1) of the ODR Regulation (Online Dispute Resolution)",
+    "online-dispute": "La Commissione Europea offre una piattaforma online (OS platform) per la risoluzione di dispute online. La puoi trovare qui:"
   },
   "privacy": {
-    "title": "Privacy",
-    "subtitle": "Norme sulla protezione dei dati",
-    "description": "List e Ride GmbH (di seguito \"listnride\") ti informa nei Regolamenti di Protezione dei Dati sulla gestione dei tuoi dati personali. <br><br><a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Qui puoi visualizzare e scaricare le norme sulla protezione dei dati. </a>",
+    "title": "List and Ride Informativa sulla Privacy",
+    "subtitle": "Data di entrata in vigore: 24 Maggio 2018",
+    "description": "List and Ride si impegna a rispettare le norme sulla privacy in maniera trasparente. La nostra Informativa sulla privacy descrive le informazioni sull'utente che raccogliamo attraverso i nostri Servizi. Come utilizziamo e divulghiamo queste informazioni. Le misure che adottiamo per proteggere tali informazioni. Le scelte che offriamo, tra cui come accedere, aggiornare e rimuovere i dati personali.<br>Si prega di scaricare la nostra <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Informativa sulla privacy</a> e di leggerla attentamente.<br><br>Contattateci per qualsiasi domanda o commento sulle nostre pratiche sulla privacy o sulla presente Informativa sulla privacy. Potete contattarci online all'indirizzo: <a href=\"mailto: privacy@listnride.com\">privacy@listnride.com</a>.",
     "meta-title": "Politica sulla privacy di listnride",
     "meta-description": "La Politica sulla privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online."
   },

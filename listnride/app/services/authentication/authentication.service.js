@@ -185,6 +185,7 @@ angular.
         signupDialog.business = business;
         signupDialog.businessError = false;
         signupDialog.requesting = requesting;
+        signupDialog.newsletter = false;
         var invited = !!inviteCode;
 
         signupDialog.hide = function() {
@@ -213,6 +214,9 @@ angular.
               'last_name': signupDialog.lastName,
               'ref_code': inviteCode,
               'language': retrieveLocale()
+            },
+            'notification_preference' : {
+              'newsletter': signupDialog.newsletter
             }
           };
 

@@ -25,14 +25,18 @@
           <div class="md-dialog-content" layout="column">
             <div layout="column">
               <div layout="row" layout-xs="column">
-                <md-button 
-                  ng-click="signup.parent.authentication.connectFb(false, true)"
-                  class="md-primary md-lined lnr-btn-fb"
-                  style="margin: 0; padding: 0;"
-                  flex="50"
-                  flex-xs="100">
-                  {{ 'booking.sign-in.register-facebook' | translate }}
-                </md-button>
+                <div flex="50" flex-xs="100" layout="column">
+                  <md-tooltip ng-if="!signup.parent.terms">Please agree to our terms of use and privacy policy.
+                  </md-tooltip>
+                  <md-button 
+                    ng-click="signup.parent.authentication.connectFb(false, true)"
+                    class="md-primary md-lined md-raised lnr-btn-fb"
+                    ng-disabled="!signup.parent.terms"
+                    style="margin: 0; padding: 0;"
+                  >
+                    {{ 'booking.sign-in.register-facebook' | translate }}
+                  </md-button>
+                </div>
                 <div layout flex="50" flex-xs="100" layout-align="center center" class="booking__already-member" hide-xs>
                   <a class="lnr-link" ng-click="showLogin = true">{{ 'booking.sign-in.already-member' | translate }}</a>
                 </div>
@@ -106,17 +110,27 @@
               </md-input-container>
             </div>
 
-            <p class="md-body-1">
-              {{ 'forms.signing-up-accept-tac' | translate }}
-              <a ui-sref="terms" target="_BLANK">
-                {{ 'shared.tac' | translate }}
-              </a>
-            </p>
+            <md-checkbox
+              ng-model="signup.parent.terms"
+              aria-label="terms"
+            >
+              <div data-ng-bind-html="'forms.signing-up-accept-tac' | translate"></div>
+            </md-checkbox>
+
+            <md-checkbox
+              ng-model="signup.parent.newsletter"
+              aria-label="newsletter"
+            >
+              <div data-ng-bind-html="'forms.signing-up-accept-newsletter' | translate"></div>
+            </md-checkbox>
 
             <div class="md-dialog-buttons" layout="column">
+              <md-tooltip ng-if="!signup.parent.terms">Please agree to our terms of use and privacy policy.
+                </md-tooltip>
               <md-button
                 type="submit"
                 class="md-primary md-raised"
+                ng-disabled="!signup.parent.terms"
               >
                 {{ 'booking.sign-in.register' | translate }}
               </md-button>

@@ -763,12 +763,14 @@
     "berlin-court-of-registry": "Tribunal del registro de Berlín (Charlottenburg)",
     "vat-id": " Número de identificación a efectos de IVA",
     "meta-title": "listnride | Marca",
-    "meta-description": "Alquila la bici perfecta en la comunidad de listnride. Encuentra la que se adapte a tu estilo y necesidades."
+    "meta-description": "Alquila la bici perfecta en la comunidad de listnride. Encuentra la que se adapte a tu estilo y necesidades.",
+    "regulation": "Resolución de litigios en línea de conformidad con el artículo 14, apartado 1, del Reglamento ODR (Online Dispute Resolution)",
+    "online-dispute": "La Comisión Europea proporciona una plataforma de resolución de litigios en línea (plataforma OS). Puedes encontrarla aquí:"
   },
   "privacy": {
-    "title": "Privacidad",
-    "subtitle": "Normativa sobre protección de datos",
-    "description": "List and Ride GmbH (en adelante, \"listnride\") te informa en las Normas de protección de datos sobre cómo se manejan tus datos personales. <br><br><a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Aquí puedes ver y descargar las normas de protección de datos. </a>",
+    "title": "List and Ride Política de Privacidad",
+    "subtitle": "Fecha de entrada en vigor: 24 de mayo de 2018",
+    "description": "List and Ride se compromete a mantener prácticas de privacidad. Nuestra política de privacidad describe como cuidamos y protegemos la información que almacenamos del usuario mediante el uso de la plataforma. Menciona cómo acceder a dicha información, cómo actualizarla y como remover datos personales.<br>Descarga nuestra <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Política de privacidad</a> para leer su contenido al detalle.<br><br>Ante cualquier duda o consulta puedes contactarnos enviándonos un correo a <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a>.",
     "meta-title": "Política de privacidad de listnride",
     "meta-description": "La política de privacidad de la comunidad para compartir bicis de listnride se aplica al uso de la plataforma online"
   },

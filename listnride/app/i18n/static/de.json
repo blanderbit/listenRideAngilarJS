@@ -762,12 +762,14 @@
     "berlin-court-of-registry": "Amtsgericht Berlin (Charlottenburg)",
     "vat-id": "USt-ID-Nr.",
     "meta-title": "listnride Impressum",
-    "meta-description": "Miete dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach deinem Stil und Einsatzzweck."
+    "meta-description": "Miete dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach deinem Stil und Einsatzzweck.",
+    "regulation": "Online-Streitbeilegung gemäß Artikel 14 Absatz 1 der ODR-Verordnung (Online Dispute Resolution)",
+    "online-dispute": "Die EU-Kommission stellt eine Online-Streitbeilegungsplattform (OS-Plattform) zur Verfügung. Du findest sie hier:"
   },
   "privacy": {
-    "title": "Datenschutz",
-    "subtitle": "Datenschutzrichtlinien",
-    "description": "Mit den Datenschutzbestimmungen informiert die List and Ride GmbH (im Folgenden „listnride“) Sie über den Umgang mit Ihren personenbezogenen Daten.<br><br><a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Sie können die Datenschutzbestimmungen hier abrufen und ausdrucken.</a>",
+    "title": "List and Ride Datenschutzerklärung",
+    "subtitle": "Datum des Inkrafttretens: 24. Mai 2018",
+    "description": "List and Ride verpflichtet sich zu starkem und transparentem Datenschutz. Unsere Datenschutzerklärung beschreibt, welche Nutzerinformationen wir über unseren Service erfassen. Wie wir diese Informationen verarbeiten und gegebenenfalls weitergeben. Die Maßnahmen, die wir ergreifen, um diese Informationen zu schützen. Die Möglichkeiten auf Zugriff, Aktualisierung und Entfernung personenbezogener Daten, falls erforderlich.<br>Hier können Sie unsere <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Datenschutzerklärung</a> zur Einsicht herunter laden.<br><br>Wenn du Fragen oder Anmerkungen zu unseren Datenschutzpraktiken oder dieser Datenschutzerklärung hast, kannst du uns unter <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> erreichen.",
     "meta-title": "Datenschutzrichtlinien von listnride",
     "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform."
   },
