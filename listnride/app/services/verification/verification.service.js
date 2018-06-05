@@ -250,6 +250,7 @@ angular.
         };
 
         verificationDialog.fillAddress = function(place) {
+          console.log(place);
           var components = place.address_components;
           if (components) {
             var desiredComponents = {
@@ -271,6 +272,7 @@ angular.
             verificationDialog.newUser.zip = desiredComponents.postal_code;
             verificationDialog.newUser.city = desiredComponents.locality;
             verificationDialog.newUser.country = desiredComponents.country;
+            verificationDialog.newUser.streetNumber = desiredComponents.street_number;
           }
         }
       };
