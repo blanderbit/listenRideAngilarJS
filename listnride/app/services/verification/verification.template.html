@@ -236,16 +236,30 @@
               class="md-body-1"
               ng-class="verificationDialog.mobileScreen ? '' : 'md-body-desktop'"
             >
-              <autocomplete
-                autocomplete-id="verificationDialog"
-                layout="column"
-                location="verificationDialog.newUser.street"
-                required="true"
-                class="md-block"
-                label-id=""
-                placeholder-id="{{ 'list.location.street-number' | translate }}"
-                place-changed="verificationDialog.fillAddress(place)">
-              </autocomplete>
+              <div layout="row" class="lnr-input-containers">
+                <autocomplete
+                  flex
+                  autocomplete-id="verificationDialog"
+                  layout="column"
+                  location="verificationDialog.newUser.street"
+                  required="true"
+                  class="md-block"
+                  label-id=""
+                  placeholder-id="{{ 'list.location.street-number' | translate }}"
+                  place-changed="verificationDialog.fillAddress(place)">
+                </autocomplete>
+                <md-input-container md-no-float flex="25">
+                  <input
+                    required
+                    name="street-number"
+                    ng-model="verificationDialog.newUser.streetNumber"
+                    placeholder="{{ 'forms.streetnumber' | translate }}"
+                  >
+                  <div ng-messages="verificationDialog.addressForm.streetNumber.$error" role="alert">
+                    <div ng-message="required">{{ 'shared.required' | translate }}</div>
+                  </div>
+                </md-input-container>
+              </div>
 
               <div class="lnr-input-containers" layout="row" hide-xs>
                 <md-input-container md-no-float flex>
