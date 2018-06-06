@@ -284,7 +284,7 @@
     "privacy": {
       "meta-title": "Política de privacidad de listnride",
       "meta-description": "La política de privacidad de la comunidad para compartir bicis de listnride se aplica al uso de la plataforma online",
-      "use-opt-in": "Para ofrecerte el servicio perfecto con listnride, utilizamos cookies de acuerdo con nuestra Política de Cookies.",
+      "use-opt-in": "Para ofrecerte el servicio perfecto con listnride, utilizamos cookies de acuerdo con nuestra <a target=\"_blank\" href=\"/#/privacy\">Política de Cookies</a>.",
       "use-opt-in-button": "OK."
     }
   },
@@ -580,6 +580,8 @@
     "sign-up": "Registrarse ",
     "sign-up-to-book": "Regístrate para reservar la bici",
     "sign-up-with-facebook": "Registrarse con facebook",
+    "sign-up-divider-text": "accept our terms and conditions",
+    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
     "member-already": "¿Ya estás registrado?",
     "business": "¿Tienda de bicis?",
     "description": "Descripción",

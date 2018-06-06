@@ -285,7 +285,7 @@
     "privacy": {
       "meta-title": "Privacy Policy of listnride",
       "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform.",
-      "use-opt-in": "To provide you with the perfect service with listnride, we use cookies in accordance with our Cookie Policy.",
+      "use-opt-in": "To provide you with the perfect service with listnride, we use cookies in accordance with our <a target=\"_blank\" href=\"/#/privacy\">Cookie Policy</a>.",
       "use-opt-in-button": "I got that."
     }
   },
@@ -582,6 +582,8 @@
     "sign-up": "Sign Up",
     "sign-up-to-book": "Sign up to book the bike",
     "sign-up-with-facebook": "Sign Up with facebook",
+    "sign-up-divider-text": "accept our terms and conditions",
+    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
     "member-already": "Already signed up?",
     "business": "Bikeshop?",
     "description": "Description",

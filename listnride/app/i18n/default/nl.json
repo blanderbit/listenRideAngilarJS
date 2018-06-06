@@ -284,7 +284,7 @@
     "privacy": {
       "meta-title": "Privacy Policy of listnride",
       "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform.",
-      "use-opt-in": "To provide you with the perfect service with listnride, we use cookies in accordance with our Cookie Policy.",
+      "use-opt-in": "To provide you with the perfect service with listnride, we use cookies in accordance with our <a target=\"_blank\" href=\"/#/privacy\">Cookie Policy</a>.",
       "use-opt-in-button": "I got that."
     }
   },
@@ -578,6 +578,8 @@
     "sign-up": "Aanmelden",
     "sign-up-to-book": "Meld je aan om de fiets te huren.",
     "sign-up-with-facebook": "Met facebook aanmelden",
+    "sign-up-divider-text": "accept our terms and conditions",
+    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
     "member-already": "Al geregistreerd?",
     "business": "Zakelijke gebruiker?",
     "description": "Beschrijving",
