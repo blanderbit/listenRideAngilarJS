@@ -466,8 +466,7 @@ md-tooltip .md-content {
 }
 
 .lnr-btn-fb[disabled] {
-  border-color: rgba(206, 212, 216, 0.9) !important;
-  background: rgba(206, 212, 216, 0.9)!important;
+  opacity: 0.5;
 }
 
 .md-button.md-raised[disabled] {
