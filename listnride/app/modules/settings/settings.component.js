@@ -40,7 +40,7 @@ angular.module('settings',[]).component('settings', {
       /**
        * controller for change contact info
        * $mdDialog has a bug. it doesn't allow render template
-       * correctly for component. thats why 
+       * correctly for component. thats why
        * inline controller is used instead of controller
        * @param {userApi} userApi api for users
        * @param {$mdDialog} $mdDialog material dialog
@@ -49,9 +49,9 @@ angular.module('settings',[]).component('settings', {
        */
       var ChangeContactController = function(userApi, $mdDialog, verification) {
         var changeContact = this;
-        
+
         changeContact.sentConfirmationSms = false;
-                
+
         changeContact.confirmPhone = function () {
           verification.confirmPhone(changeContact.user.confirmation_code).then(function () {
             $mdDialog.hide({
@@ -67,7 +67,7 @@ angular.module('settings',[]).component('settings', {
             changeContact.changeContact.sentConfirmationSms = false;
           });
         };
-        
+
         // cancel the modal
         changeContact.closeDialog = $mdDialog.cancel;
 
@@ -79,11 +79,12 @@ angular.module('settings',[]).component('settings', {
           });
         };
 
-        changeContact.onInit(); 
+        changeContact.onInit();
       };
-  
+
       settings.$onInit = initSettings;
       function initSettings() {
+        // variables
         settings.user = {};
         settings.croppedDataUrl = false;
         settings.loaded = false;
@@ -121,6 +122,12 @@ angular.module('settings',[]).component('settings', {
           if (!!response.data.locations) { settings.user.has_billing = !!response.data.locations.billing }
           if (!!response.data.phone_number) { updatePrivatePhoneNumber(response.data.phone_number) }
         });
+
+        // methods
+        settings.changePassword = changePassword;
+        settings.changePhoneNumber = changePhoneNumber;
+
+        // invocations
       }
 
       /**
@@ -541,7 +548,7 @@ angular.module('settings',[]).component('settings', {
             );
           },
           function() {
-        
+
           }
         );
       };
@@ -693,8 +700,8 @@ angular.module('settings',[]).component('settings', {
           }
         );
       };
-      
-      settings.changePhoneNumber = function (event) {
+
+      function changePhoneNumber (event) {
         $mdDialog.show({
           templateUrl: 'app/modules/settings/change-contact.template.html',
           controller: ChangeContactController,
@@ -713,6 +720,10 @@ angular.module('settings',[]).component('settings', {
           updatePrivatePhoneNumber(success.phone_number);
         });
       };
+
+      function changePassword () {
+        // TODO: show modal ?
+      }
 
       function addChild(day) {
         if (settings.startTime[day]) {

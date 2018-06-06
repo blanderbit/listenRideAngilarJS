@@ -72,11 +72,19 @@
               <div flex-gt-xs layout-margin>
                 <div class="md-body-2">{{ 'forms.password' | translate }}</div>
               </div>
-              <div flex-gt-xs="70" layout="column" layout-margin>
-                <md-input-container flex>
-                  <label>{{ 'forms.password' | translate }}</label>
-                  <input minlength="6" placeholder="***********" name="password" type="password" ng-model="settings.password"></input>
-                </md-input-container>
+              <div flex-gt-xs="70" layout-margin>
+                <div layout="row" layout-xs="column">
+                  <md-input-container flex-gt-xs="45">
+                    <label>{{ 'forms.password' | translate }}</label>
+                    <input minlength="6" placeholder="***********" name="password" type="password" ng-model="settings.password"></input>
+                  </md-input-container>
+                  <span hide-xs flex></span>
+                  <md-input-container layout="row" flex-gt-xs="45" flex="100">
+                    <md-button flex class="md-raised md-primary lnr-btn-inline lnr-btn-mobile" ng-click="settings.changePassword($event)">
+                      {{ 'forms.update-password' | translate }}
+                    </md-button>
+                  </md-input-container>
+                </div>
                 <div ng-messages="settings.form.password.$error" role="alert">
                   <div ng-message="minlength">Password shouldn't be shorter than 6 characters.</div>
                 </div>

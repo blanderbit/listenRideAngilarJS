@@ -571,6 +571,7 @@
     "last-name": "Achternaam",
     "email-address": "Emailadres",
     "password": "Wachtwoord",
+    "update-password": "Change Password",
     "forgot-password": "Wachtwoord vergeten?",
     "or": "of",
     "log-in": "Inloggen",

@@ -575,6 +575,7 @@
     "last-name": "Last Name",
     "email-address": "Email Address",
     "password": "Password",
+    "update-password": "Change Password",
     "forgot-password": "Forgot Password?",
     "or": "or",
     "log-in": "Log In",

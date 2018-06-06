@@ -573,6 +573,7 @@
     "last-name": "Apellido",
     "email-address": "Correo electrónico",
     "password": "Contraseña",
+    "update-password": "Change Password",
     "forgot-password": "¿Olvidaste la contraseña?",
     "or": "o",
     "log-in": "Iniciar sesión",

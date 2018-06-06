@@ -570,6 +570,7 @@
     "last-name": "Nachname",
     "email-address": "E-Mail-Adresse",
     "password": "Passwort",
+    "update-password": "Change Password",
     "forgot-password": "Passwort vergessen?",
     "or": "oder",
     "log-in": "Log-In",

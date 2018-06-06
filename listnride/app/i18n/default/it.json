@@ -564,6 +564,7 @@
     "last-name": "Cognome",
     "email-address": "Indirizzo Email",
     "password": "Password",
+    "update-password": "Change Password",
     "forgot-password": "Hai dimenticato la password ?",
     "or": "o",
     "log-in": "Accedi",
