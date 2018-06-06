@@ -586,7 +586,7 @@
     "description_min_100": "La descripción debe ser mín. 100 caracteres",
     "address": "Dirección",
     "profile-picture": "Foto de perfil",
-    "profile-picture-info": "Please download only valid picture format (jpg, jpeg, png). Maximum picture size is 20mb. Minimum picture dimension(width x height) is 100px x 100px",
+    "profile-picture-info": "Autorizo el uso de mi imagen de perfil.<br>Al subir mi imagen a la plataforma acepto que listnride almacene mi imagen de perfil como está descrito en la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a>. Puedo borrar mi foto de perfil en cualquier momento.<br><br>Por favor sube un archivo con formato válido (jpg,jpeg,png).Peso máximo: 20mb. Tamaño mínimo de la imagen: 100px de ancho por 100px de alto.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "Your picture size is more than maximum size",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",

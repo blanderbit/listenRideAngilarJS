@@ -179,18 +179,25 @@ var lnrHelper = {
 
     // clear element
     element.innerHTML = '';
-    // list cities in the dropdown menu
+    // list sizes in the dropdown menu
     lnrConstants.sizes[userId].default.forEach(function (size, index) {
       // either show size or show "All Sizes"
       var condition = index === 0 && lnrConstants.sizes[userId].available.length > 0;
       // id for each of the size options
       var selectorId = id + '-select-' + index;
+      // set readable string
+      if (size > 0) {
+        var readableSize = size + ' cm - ' + parseInt(size + 10) + ' cm';
+      } else {
+        var readableSize = 'Unisize';
+      }
+      
       // HTML of the element
       var elementHTML = [
         '<div class="lnr-date-selector" ',
         'onclick="lnrHelper.onSizeSelect(' + index + ', ' + userId + ')" ',
         'id="' + selectorId + '" ',
-        condition ? '<span>' + size + '</span></div>' : '<span>' + size + ' cm - ' + parseInt(size + 10) + ' cm </span></div>'
+        '<span>' + readableSize + '</span></div>'
       ].join('');
 
       // render element
@@ -497,6 +504,12 @@ var lnrHelper = {
         imageUrl = ride.image_file_1.image_file_1.small.url,
         rideDescription = ride.description;
 
+      if (ride.size === 0) {
+        var readableSize = 'Unisize';
+      } else {
+        var readableSize = basicInfo.sizeText + ' ' + ride.size + ' cm - ' + parseInt(ride.size + 10) + ' cm';
+      }
+
       // bikes grid html
       // mdl grid => 12 col (desktop), 8 col (tablet), 4 col (phone) 
       var gridHTML = [
@@ -529,7 +542,7 @@ var lnrHelper = {
         '<md-card-title layout="row" class="layout-row">',
         '<md-card-title-text class="layout-align-space-around-start layout-column">' +
         '<span class="md-subhead">' + brand + ', ' + categoryDesc + '</span>',
-        '<span>' + basicInfo.sizeText + ' ' + ride.size + ' - ' + parseInt(ride.size + 10) + ' cm</span>' +
+        '<span>' + readableSize + '</span>' +
         '</md-card-title-text>',
         '<div layout="column" class="layout-align-space-around-center layout-column">',
         '<span style="text-align: center">' + basicInfo.dayText + '</span>',
