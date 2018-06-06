@@ -98,10 +98,10 @@ angular.
           var address = {
             'locations': {
               '0': {
-                "street": verificationDialog.newUser.street,
-                "zip": verificationDialog.newUser.zip,
-                "city": verificationDialog.newUser.city,
-                "country": verificationDialog.newUser.country,
+                "street": verificationDialog.address.street + ' ' + verificationDialog.address.streetNumber,
+                "zip": verificationDialog.address.zip,
+                "city": verificationDialog.address.city,
+                "country": verificationDialog.address.country,
                 "primary": true
               }
             }
@@ -116,11 +116,17 @@ angular.
                     .hideDelay(4000)
                     .position('top center')
                 );
-
+                verificationDialog.hide();
               }
             },
             function (error) {
-
+              $mdToast.show(
+                  $mdToast.simple()
+                    .textContent('The address could not be saved')
+                    .hideDelay(4000)
+                    .position('top center')
+              );
+              verificationDialog.hide();
             }
           );
         };
@@ -188,30 +194,6 @@ angular.
           confirmPhone(verificationDialog.newUser.confirmation_code);
         };
 
-        verificationDialog.uploadAddress = function() {
-          var data = {
-            "user": {
-              "street": verificationDialog.newUser.street,
-              "zip": verificationDialog.newUser.zip,
-              "city": verificationDialog.newUser.city,
-              "country": verificationDialog.newUser.country
-            }
-          };
-          api.put('/users/' + $localStorage.userId, data).then(
-            function (success) {
-              $mdToast.show(
-                $mdToast.simple()
-                .textContent('You\'ve successfully verified your profile, thank you!')
-                .hideDelay(5000)
-                .position('top center')
-              );
-            },
-            function (error) {
-              console.log("error updating address");
-            }
-          );
-        };
-
         verificationDialog.next = function() {
           switch (verificationDialog.activeTab) {
             case 1: verificationDialog.selectedIndex += 1; break;
@@ -224,6 +206,10 @@ angular.
           }
         };
 
+        verificationDialog.isAddressValid = function() {
+          return verificationDialog.validAddress;
+        }
+
         verificationDialog.nextDisabled = function() {
           switch (verificationDialog.activeTab) {
             case 1: return false;
@@ -231,7 +217,7 @@ angular.
             case 3: return !verificationDialog.descriptionForm.$valid;
             case 4: return verificationDialog.user.status == 0
             case 5: return !verificationDialog.user.confirmed_phone;
-            case 6: return !verificationDialog.addressForm.$valid;
+            case 6: return !verificationDialog.isAddressValid();
             case 7: return !verificationDialog.companyForm.$valid;
           }
         };
@@ -239,9 +225,6 @@ angular.
         var showUploadCompany = function() {
           if (verificationDialog.business) {
             verificationDialog.selectedIndex += 1
-          } else {
-            if (callback) { callback() }
-            $mdDialog.hide();
           }
         };
 
@@ -249,32 +232,6 @@ angular.
           $mdDialog.hide();
         };
 
-        verificationDialog.fillAddress = function(place) {
-          console.log(place);
-          var components = place.address_components;
-          if (components) {
-            var desiredComponents = {
-              "street_number": "",
-              "route": "",
-              "locality": "",
-              "country": "",
-              "postal_code": ""
-            };
-
-            for (var i = 0; i < components.length; i++) {
-              var type = components[i].types[0];
-              if (type in desiredComponents) {
-                desiredComponents[type] = components[i].long_name;
-              }
-            }
-
-            verificationDialog.newUser.street = desiredComponents.route + " " + desiredComponents.street_number;
-            verificationDialog.newUser.zip = desiredComponents.postal_code;
-            verificationDialog.newUser.city = desiredComponents.locality;
-            verificationDialog.newUser.country = desiredComponents.country;
-            verificationDialog.newUser.streetNumber = desiredComponents.street_number;
-          }
-        }
       };
 
       var openDialog = function(lister, invited, event, callback) {

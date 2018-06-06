@@ -131,14 +131,14 @@ angular.module('booking', [])
           if (!booking.shopBooking) {
             switch (booking.selectedIndex) {
               case 0: return false;
-              case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid && !booking.processing);
+              case 1: return !(booking.phoneConfirmed === 'success' && booking.validAddress && booking.verificationForm.$valid && !booking.processing);
               case 2: return !booking.paymentForm.$valid;
               case 3: return false;
             }
           } else {
             switch (booking.selectedIndex) {
               case 0: return !validDates();
-              case 1: return !(booking.phoneConfirmed === 'success' && booking.detailsForm.$valid);
+              case 1: return !(booking.phoneConfirmed === 'success' && booking.validAddress && booking.detailsForm.$valid && booking.verificationForm.$valid);
               case 2: return !booking.paymentForm.$valid;
               case 3: return false;
             }
@@ -195,10 +195,10 @@ angular.module('booking', [])
           var address = {
             'locations': {
               '0': {
-                "street": booking.user.street,
-                "zip": booking.user.zip,
-                "city": booking.user.city,
-                "country": booking.user.country,
+                "street": booking.address.street + " " + booking.address.streetNumber,
+                "zip": booking.address.zip,
+                "city": booking.address.city,
+                "country": booking.address.country,
                 "primary": true
               }
             }
@@ -333,10 +333,16 @@ angular.module('booking', [])
         }
 
         booking.prepareUser = function() {
+          var user = {
+            email: booking.user.email,
+            firstName: booking.user.firstName,
+            lastName: booking.user.lastName
+          }
+          console.log(user);
           if (booking.shopBooking && !booking.authentication.loggedIn()) {
-            booking.authentication.signupGlobal(booking.detailsForm);
+            booking.authentication.signupGlobal(user);
           } else {
-            booking.sendSms(booking.detailsForm.phone_number);
+            booking.sendSms(booking.verificationForm.phone_number);
           }
         }
 
@@ -361,7 +367,7 @@ angular.module('booking', [])
         };
 
         booking.confirmPhone = function () {
-          var form = booking.detailsForm;
+          var form = booking.verificationForm;
           var codeDigits = form.confirmation_0.$viewValue + form.confirmation_1.$viewValue + form.confirmation_2.$viewValue + form.confirmation_3.$viewValue;
           if (codeDigits.length === 4) {
             var data = { "confirmation_code": codeDigits};
@@ -455,7 +461,7 @@ angular.module('booking', [])
         // go to next tab on user create success
         $rootScope.$on('user_created', function () {
           if (booking.shopBooking) {
-            booking.sendSms(booking.detailsForm.phone_number);
+            booking.sendSms(booking.verificationForm.phone_number);
           } else {
             booking.reloadUser();
           }
