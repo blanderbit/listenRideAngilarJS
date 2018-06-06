@@ -102,7 +102,7 @@
 
         <div class="md-dialog-buttons" layout="column">
           <div layout="column">
-            <md-tooltip ng-if="!signupDialog.terms" md-direction="top">Please agree to our terms of use and privacy policy above.</md-tooltip>
+            <md-tooltip ng-if="!signupDialog.terms" md-direction="top">{{ 'forms.agree-terms-and-policy' | translate }}</md-tooltip>
             <md-button type="submit" class="md-accent md-raised" ng-disabled="signupDialog.signingUp || !signupDialog.terms">
               {{ 'forms.sign-up' | translate }}
             </md-button>
@@ -113,7 +113,7 @@
             </div>
 
             <div layout="column">
-              <md-tooltip ng-if="!signupDialog.terms" md-direction="top">Please agree to our terms of use and privacy policy above.</md-tooltip>
+              <md-tooltip ng-if="!signupDialog.terms" md-direction="top">{{ 'forms.agree-terms-and-policy' | translate }}</md-tooltip>
               <md-button
                 style="margin-top: 0"
                 ng-click="signupDialog.connectFb()"
@@ -125,7 +125,7 @@
           </div>
         </div>
 
-        <div class="lnr-middle-divider" style="margin: 12px">accept our terms and conditions</div>
+        <div class="lnr-middle-divider" style="margin: 12px">{{ 'forms.sign-up-divider-text' | translate }}</div>
 
         <div flex layout="row" layout-wrap style="max-width: 544px; font-size:12px">
           <div flex="5">
