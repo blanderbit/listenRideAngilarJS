@@ -6,7 +6,7 @@
     <form class="lnr-search-bar md-whiteframe-3dp lnr-search-bar--fs18" layout="row" md-theme="default">
       <autocomplete
         autocomplete-id="home"
-        flex="75"
+        flex="auto"
         layout="column"
         location="cityLanding.location"
         placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"
@@ -16,7 +16,7 @@
         ng-click="cityLanding.onSearchClick()"
         class="md-raised md-primary"
         id="submit"
-        flex="25"
+        flex="40"
         style="min-width: 114px"
       >
         {{ 'shared.search-all' | translate }}
