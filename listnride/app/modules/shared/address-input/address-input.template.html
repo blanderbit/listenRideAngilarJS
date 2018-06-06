@@ -1,5 +1,4 @@
 <form
-  ng-form
   name="addressInput.addressForm"
   layout="column"
   class="md-body-1"
@@ -22,35 +21,23 @@
     <span hide-xs flex></span>
     <md-input-container flex-gt-xs="25">
       <label>{{ 'forms.streetnumber' | translate }}</label>
-      <input name="street-number" ng-model="addressInput.streetNumber" required></input>
-      <div ng-messages="addressInput.addressForm.streetNumber.$error" role="alert">
-        <div ng-message="required">{{ 'shared.required' | translate }}</div>
-      </div>
+      <input name="streetNumber" ng-model="addressInput.streetNumber" required></input>
     </md-input-container>
     </div>
     <div layout="row" layout-xs="column" flex="50">
       <md-input-container flex-gt-xs="20">
         <label>{{ 'forms.zip' | translate }}</label>
         <input name="zip" ng-model="addressInput.zip" required></input>
-        <div ng-messages="addressInput.addressForm.zip.$error" role="alert">
-          <div ng-message="required">{{ 'shared.required' | translate }}</div>
-        </div>
       </md-input-container>
       <span hide-xs flex></span>
       <md-input-container flex-gt-xs="35">
         <label>{{ 'forms.city' | translate }}</label>
         <input name="city" ng-model="addressInput.city" required></input>
-        <div ng-messages="addressInput.addressForm.city.$error" role="alert">
-          <div ng-message="required">{{ 'shared.required' | translate }}</div>
-        </div>
       </md-input-container>
       <span hide-xs flex></span>
       <md-input-container flex-gt-xs="35">
         <label>{{ 'forms.country' | translate }}</label>
         <input name="country" ng-model="addressInput.country" required></input>
-        <div ng-messages="addressInput.addressForm.country.$error" role="alert">
-          <div ng-message="required">{{ 'shared.required' | translate }}</div>
-        </div>
       </md-input-container>
     </div>
   </div>

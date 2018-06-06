@@ -9,9 +9,12 @@ angular.module('addressInput',[]).component('addressInput', {
     home: '<',
     seo: '<'
   },
-  controller: ['$mdMedia',
-    function AddressInputController($mdMedia) {
+  controller: ['$mdMedia', '$scope',
+    function AddressInputController($mdMedia, $scope) {
       var addressInput = this;
+
+      addressInput.foo = "bla";
+      addressInput.addressForm = {};
       
       addressInput.updateAddress = function(place) {
         var components = place.address_components;
@@ -37,14 +40,7 @@ angular.module('addressInput',[]).component('addressInput', {
           addressInput.city = desiredComponents.locality;
           addressInput.country = desiredComponents.country;
 
-          console.log(addressInput.addressForm);
-          console.log(addressInput.addressForm.zip);
-          addressInput.addressForm.$setTouched();
-          addressInput.addressForm.$validate();
-
-          addressInput.addressFor.triggerHandler('submit');
-
-          // addressInput.addressForm.$setSubmitted();
+          addressInput.addressForm.$setSubmitted();
         }
       }
     }

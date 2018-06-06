@@ -117,19 +117,20 @@
               </div>
               <div flex-gt-xs="70" layout-margin>
                 <div layout="row" layout-xs="column">
-                  <!-- <md-input-container flex-gt-xs="45">
+                  <md-input-container flex-gt-xs="45">
                     <label>{{ 'list.location.street-number' | translate }}</label>
                     <input name="street" ng-model="settings.user.locations.primary.street" required></input>
-                  </md-input-container> -->
-                  <autocomplete
-                    autocomplete-id="settings"
-                    layout="column"
-                    required="true"
-                    location="settings.user.locations.primary.street"
-                    label-id="{{ 'list.location.street-number' | translate }}"
-                    place-changed="settings.fillAddress(place)"
-                    flex-gt-xs="45">
-                  </autocomplete>
+                  </md-input-container>
+                  <!--<autocomplete-->
+                    <!--autocomplete-id="settings"-->
+                    <!--layout="column"-->
+                    <!--required="true"-->
+                    <!--location="settings.user.locations.primary.street"-->
+                    <!--label-id="{{ 'list.location.street-number' | translate }}"-->
+                    <!--place-changed="settings.fillAddress(place)"-->
+                    <!--flex-gt-xs="45"-->
+                  <!--&gt;-->
+                  <!--</autocomplete>-->
                   <span hide-xs flex></span>
                   <md-input-container flex-gt-xs="45">
                     <label>{{ 'forms.zip' | translate }}</label>
@@ -150,8 +151,6 @@
                 <p class="md-body-2">{{'settings.change-address-info' | translate}}</p>
               </div>
             </div>
-
-            <address-input></address-input>
 
             <div layout="row" layout-xs="column">
               <div flex-gt-xs layout-margin>
