@@ -127,7 +127,7 @@
 
         <div class="lnr-middle-divider" style="margin: 12px">accept our terms and conditions</div>
 
-        <div flex layout="row" layout-wrap style="max-width: 544px; font-size:12px">
+        <div flex layout="row" layout-align="space-around start" style="max-width: 544px; font-size:12px">
           <div flex="5">
             <md-checkbox
               ng-model="signupDialog.terms"
@@ -136,10 +136,11 @@
             >
             </md-checkbox>
           </div>
-          <div flex="95">
+          <div flex="90">
             <div data-ng-bind-html="'forms.signing-up-accept-tac' | translate"></div>
           </div>
-
+        </div>
+        <div flex layout="row" layout-align="space-around start" style="max-width: 544px; font-size:12px">
           <div flex="5">
             <md-checkbox
               ng-model="signupDialog.newsletter"
@@ -148,7 +149,7 @@
             >
             </md-checkbox>
           </div>
-          <div flex="95">
+          <div flex="90">
             <div data-ng-bind-html="'forms.signing-up-accept-newsletter' | translate"></div>
           </div>
         </div>
