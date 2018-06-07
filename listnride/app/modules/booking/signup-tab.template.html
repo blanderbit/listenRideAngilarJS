@@ -19,7 +19,7 @@
           ng-cloak
           name="signupForm"
           novalidate
-          ng-submit="signup.parent.authentication.signupGlobal(signupForm)"
+          ng-submit="signup.parent.emailSignup()"
           ng-hide="showLogin"
         >
           <div class="md-dialog-content" layout="column">
@@ -50,7 +50,7 @@
                 <label>{{ 'forms.first-name' | translate }}</label>
                 <input
                   name="first_name"
-                  ng-model="signupDialog.firstName"
+                  ng-model="signup.parent.user.firstName"
                   required
                   ng-maxlength="20"
                 >
@@ -64,7 +64,7 @@
                 <label>{{ 'forms.last-name' | translate }}</label>
                 <input
                   name="last_name"
-                  ng-model="signupDialog.lastName"
+                  ng-model="signup.parent.user.lastName"
                   required
                   ng-maxlength="30"
                 >
@@ -80,7 +80,7 @@
                 <label>{{ 'forms.email-address' | translate }}</label>
                 <input
                   name="email"
-                  ng-model="signupDialog.email"
+                  ng-model="signup.parent.user.email"
                   type="email"
                   required
                   ng-pattern="/(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i"
@@ -96,7 +96,7 @@
                 <label>{{ 'forms.password' | translate }}</label>
                 <input
                   name="password"
-                  ng-model="signupDialog.password"
+                  ng-model="signup.parent.user.password"
                   type="password"
                   required
                   ng-minlength="6"

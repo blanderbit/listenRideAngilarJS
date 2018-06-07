@@ -332,6 +332,16 @@ angular.module('booking', [])
           }
         }
 
+        booking.emailSignup = function () {
+          var user = {
+            email: booking.user.email,
+            firstName: booking.user.firstName,
+            lastName: booking.user.lastName,
+            password: booking.user.password
+          }
+          booking.authentication.signupGlobal(user);
+        };
+
         booking.prepareUser = function() {
           var user = {
             email: booking.user.email,
