@@ -647,11 +647,10 @@
     "faq-answer-8": "Esperamos tu interés y preguntas adicionales. Puedes contactar con nosotros en contact@listnride.com y nos pondremos en contacto contigo lo antes posible."
   },
   "terms-and-conditions": {
-    "title": "Términos y condiciones",
-    "header": "Términos y condiciones generales de empresa para la plataforma online de listnride",
-    "download": "Descargar aquí",
-    "description": "<a href=\"http://cdn.listnride.com/en/tacs.pdf\" target=\"_blank\">Puedes ver y descargar los términos y condiciones aquí.",
-    "subtitle": "List and Ride GmbH (en adelante, \"listnride\") organiza acuerdos de alquiler de bicicletas y otros equipos deportivos y de ocio a través del sitio web www.listnride.com (en adelante, \"Sitio web\"). Los siguientes \"Términos y condiciones generales de uso\" (en adelante, \"Términos de uso\") de la Sección I formarán parte del acuerdo celebrado entre el usuario y listnride con respecto al acuerdo de servicios. Cualquier acuerdo de alquiler del artículo usado (en lo sucesivo, \"Contrato de alquiler\") realizado a través del sitio web deberá cumplir con los  \"Términos y condiciones generales de alquiler\" (en adelante, \"Términos de alquiler\") especificados en la Sección II."
+    "title": "Terms and conditions",
+    "header": "List and Ride Términos y Condiciones generales de negocio",
+    "subheader": "Última actualización: Junio 8, 2018",
+    "subtitle": "Por favor lea con atención los Términos y Condiciones dado que contienen información importante sobre tus derechos legales, recursos y obligaciones. Al acceder o utilizar listnride platform reconoces haber leído, comprendido y aceptado dichas Condiciones.<br><br>Puedes descargar y leer el documento completo de nuestros <a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Términos y Condiciones</a><br><br>¡Muchas gracias por utilizar listnride!"
   },
   "trust-and-safety": {
     "title": "Confianza y seguridad",
