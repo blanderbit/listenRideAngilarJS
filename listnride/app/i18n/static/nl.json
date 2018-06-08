@@ -1,4 +1,4 @@
-{
+#{
   "cities": {
     "shared": {
       "rent-city": "Huur een stadsfiets",
@@ -648,10 +648,9 @@
   },
   "terms-and-conditions": {
     "title": "Terms and conditions",
-    "header": "Algemene voorwaarden van het Online-Platform listnride",
-    "download": "Hier te downloaden",
-    "description": "<a href=\"http://cdn.listnride.com/de/tacs.pdf\" target=\"_blank\">Je kan hier algemene voorwaarden inzien en downloaden.",
-    "subtitle": "De List and Ride GmbH (in het vervolg „listnride“) bemmidelt via de website www.listnride.com (in het vervolg „Website“) huurcontracten voor fietsen en andere sport- en vrijetijdsuitrusting. De onderstaande algemene gebruiksvoorwaarden (in het vervolg „gebruiksvoorwaarden“) in paragraaf I zijn onderdeel van de overeenkomst die tussen de gebruiker en listnride middels de bemiddelingsverrichting tot stand komt. Indien er via de website een overeenkomst tot het huren van een gebruiksvoorwerp (in het vervolg „huurovereenkomst“) is gesloten, komt deze volgens de in paragraaf II genoemde algemene huurvoorwaarden (in het vervolg „huurvoorwaarden“) tot stand."
+    "header": "List and Ride Algemene Voorwaarden",
+    "subheader": "Laatst bijgewerkt: 8 juni 2018",
+    "subtitle": "Lees de Algemene Voorwaarden aandachtig door, omdat deze belangrijke informatie bevatten over uw contractuele rechten en verplichtingen. Door gebruik te maken van het listnride platform gaat u akkoord met deze voorwaarden.<br><br>Hier kunt u de <a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Algemene Voorwaarden</a> downloaden.<br><br>Bedankt voor het gebruikmaken van listnride!"
   },
   "trust-and-safety": {
     "title": "Vertrouwen & Zekerheid",
