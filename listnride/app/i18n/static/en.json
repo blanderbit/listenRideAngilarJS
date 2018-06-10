@@ -650,10 +650,9 @@
   },
   "terms-and-conditions": {
     "title": "Terms and conditions",
-    "header": "General Terms and Conditions of Business for the listnride Online Platform",
-    "download": "Download here",
-    "description": "<a href=\"http://cdn.listnride.com/en/tacs.pdf\" target=\"_blank\">You can view and download the TaCs here.",
-    "subtitle": "List and Ride GmbH (hereinafter “listnride”) arranges rental agreements for bicycles and other sport and leisure equipment via the website www.listnride.com (hereinafter “Website”). The following General Terms and Conditions of Use (hereinafter “Terms of Use”) in Section I shall form part of the agreement concluded between the user and listnride in respect of the arrangement service. Any agreement for rental of the used item (hereinafter “Rental Agreement”) concluded via the Website shall comply with the General Terms and Conditions of Rental (hereinafter “Rental Terms”) specified in Section II."
+    "header": "List and Ride General Terms and Conditions of Business",
+    "subheader": "Last Updated: June 8, 2018",
+    "subtitle": "Please read these Terms carefully as they contain important information about your legal rights, remedies and obligations. By using the listnride platform, you agree to comply with these Terms.<br><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Here you can download</a> and read our General Terms and Conditions of Business.<br><br>Thank you for using listnride!"
   },
   "trust-and-safety": {
     "title": "Trust & Safety",
@@ -772,7 +771,7 @@
   "privacy": {
     "title": "List and Ride Privacy Policy",
     "subtitle": "Effective Date: May 24, 2018",
-    "description": "List and Ride commits to strong and transparent privacy practices. Our Privacy Policy describes the user information that we gather through our services. How we use and disclose these information. The steps we take to protect such information. The choices we offer, including how to access, update, and remove personal data.<br>Here you can download and read our <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Privacy Policy</a>.<br><br>Please contact us if you have any questions or comments about our privacy practices or this Privacy Policy. You can reach us at <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> online.",
+    "description": "List and Ride commits to strong and transparent privacy practices. Our Privacy Policy describes the user information that we gather through our services. How we use and disclose these information. The steps we take to protect such information. The choices we offer, including how to access, update, and remove personal data.<br>Here you can download and read our <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Privacy Policy</a>.<br><br>Please contact us if you have any questions or comments about our privacy practices or this Privacy Policy. You can reach us at <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> online.",
     "meta-title": "Privacy Policy of listnride",
     "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform."
   },

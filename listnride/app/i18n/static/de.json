@@ -647,10 +647,9 @@
   },
   "terms-and-conditions": {
     "title": "Terms and conditions",
-    "header": "Allgemeine Geschäftsbedingungen für die Online-Plattform listnride",
-    "download": "Hier zum download",
-    "description": "<a href=\"http://cdn.listnride.com/de/tacs.pdf\" target=\"_blank\">Sie können die AGBs hier anschauen und herunterladen.",
-    "subtitle": "Die List and Ride GmbH (im Folgenden „listnride“) vermittelt über die Webseite www.listnride.com (im Folgenden „Webseite“) Mietverträge über Fahrräder und andere Sport- und Freizeitausrüstung. Die nachfolgenden Allgemeinen Nutzungsbedingungen (im Folgenden „Nutzungsbedingungen“) im Abschnitt I. werden Bestandteil des Vertrages der zwischen dem Nutzer und listnride über die Vermittlungsleistung zustande kommt. Wird über die Webseite ein Vertrag über die Anmietung des Gebrauchsgegenstandes (im Folgenden „Mietvertrag“) geschlossen, kommt dieser zu den im Abschnitt II. genannten Allgemeinen Mietbedingungen (im Folgenden „Mietbedingungen“) zustande."
+    "header": "List and Ride Allgemeine Geschäftsbedingungen",
+    "subheader": "Letzte Aktualisierung: 8. Juni 2018",
+    "subtitle": "Bitte lies die Allgemeinen Geschäftsbedingungen sorgfältig durch, da sie wichtige Informationen zu deinen vertraglichen Rechten und Pflichten enthalten. Durch die Nutzung der listnride-Plattform stimmst du diesen Bedingungen zu.<br><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/de/listnride_terms_2018.pdf\" target=\"_BLANK\">Hier kannst du die Allgemeinen Geschäftsbedingungen</a> zur Einsicht herunter laden.<br><br>Vielen Dank, dass du listnride nutzt!"
   },
   "trust-and-safety": {
     "title": "Vertrauen & Sicherheit",
