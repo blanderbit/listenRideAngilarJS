@@ -477,12 +477,19 @@ angular.module('bike').component('calendar', {
       }
 
       function dateClosed(date) {
-        if (openingHoursAvailable() && _.isEmpty(calendar.bikeAvailabilities)) {
-          return _.isEmpty(calendar.bikeOwner.opening_hours.hours[getWeekDay(date)]);
-        } else if (!_.isEmpty(calendar.bikeAvailabilities)) {
-          return bikeNotAvailable(date);
+        var isDateClose = false;
+
+        // check if opening hours exist
+        if (openingHoursAvailable()) {
+          isDateClose = isDateClose || _.isEmpty(calendar.bikeOwner.opening_hours.hours[getWeekDay(date)]);
         }
-        return false
+
+        // check if availabilities exist and concat with previous results
+        if (!_.isEmpty(calendar.bikeAvailabilities)) {
+          isDateClose = isDateClose || bikeNotAvailable(date);
+        }
+
+        return isDateClose;
       }
 
       function bikeNotAvailable(date) {

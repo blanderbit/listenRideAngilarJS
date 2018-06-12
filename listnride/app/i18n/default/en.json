@@ -285,7 +285,7 @@
     "privacy": {
       "meta-title": "Privacy Policy of listnride",
       "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform.",
-      "use-opt-in": "To provide you with the perfect service with listnride, we use cookies in accordance with our Cookie Policy.",
+      "use-opt-in": "To provide you with the perfect service with listnride, we use cookies in accordance with our <a target=\"_blank\" href=\"/#/privacy\">Cookie Policy</a>.",
       "use-opt-in-button": "I got that."
     }
   },
@@ -404,6 +404,7 @@
     "profile": "Profile",
     "invite": "Invite Friends",
     "account": "Account",
+    "contact-to-update": "To change your name or email address please contact us at <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>",
     "delete-account": "Deactivate Account",
     "delete-account-description": "Here you can dactivate your listnride account. This step can not be undone.",
     "delete-account-sure": "Are you really sure?",
@@ -590,18 +591,21 @@
     "sign-up": "Sign Up",
     "sign-up-to-book": "Sign up to book the bike",
     "sign-up-with-facebook": "Sign Up with facebook",
+    "sign-up-divider-text": "accept our terms and conditions",
+    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
     "member-already": "Already signed up?",
     "business": "Bikeshop?",
     "description": "Description",
     "description_min_100": "Description should be min. 100 characters",
     "address": "Address",
     "profile-picture": "Profile Picture",
-    "profile-picture-info": "Please upload only valid picture format (jpg, jpeg, png). Maximum picture size is 20mb. Minimum picture dimension(width x height) is 100px x 100px",
+    "profile-picture-info": "Consent for the use of the profile picture <br> By uploading my profile picture, I agree that listnride saves the profile picture as described in more detail in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>. I can delete my profile picture at any time. <br><br> Please upload only valid picture formats (jpg, jpeg, png). Maximum picture size is 20mb. Minimum picture dimension (width x height) is 100px x 100px",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "Your picture size is more than maximum size",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "General",
-    "street": "Street and Number",
+    "street": "Street",
+    "streetnumber": "Number",
     "zip": "Zip Code",
     "city": "City",
     "country": "Country",
@@ -609,8 +613,8 @@
     "update-contact": "Change Phone number",
     "update-contact-mobile": "Phone number",
     "company-contact-info": "Please fill form with company contact person information.",
-    "signing-up-accept-tac": "I hereby agree to the <a style=\"pointer-events: auto;\" href=\"/#/terms\">Terms of Use</a> and agree to the collection, processing and use of my personal data as further described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>.",
-    "signing-up-accept-newsletter": "I would like to receive the listnride e-mail newsletter with interesting content on Cycling, Community updates and exclusive benefits. The <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>  of listnride applies. I can revoke my consent at any time.",
+    "signing-up-accept-tac": "I hereby agree to the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Terms of Use</a> and agree to the collection, processing and use of my personal data as further described in the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>.",
+    "signing-up-accept-newsletter": "I would like to receive the listnride e-mail newsletter with interesting content on Cycling, Community updates and exclusive benefits. The <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>  of listnride applies. I can revoke my consent at any time.",
     "privacy-policy": "The <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy </a> of listnride applies.",
     "errors": {
       "password-length": "Password should be 6-30 characters",
@@ -735,7 +739,8 @@
       "lights": "Lights",
       "basket": "Basket",
       "trailer": "Trailer",
-      "childseat": "Childseat"
+      "childseat": "Childseat",
+      "gps": "GPS"
     },
     "pictures": {
       "header": "Upload some pictures of your bike",

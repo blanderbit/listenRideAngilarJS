@@ -41,7 +41,7 @@
     "international-phone-number": "0.0.11",
     "intl-tel-input": "^11.1.3",
     "jquery": "^3.1.1",
-    "moment": "^2.22.1",
+    "moment": "^2.22.2",
     "ng-file-upload": "^12.2.12",
     "ng-img-crop": "^0.2.0",
     "ng-infinite-scroll": "^1.3.0",

@@ -2,6 +2,7 @@
 // #5FC693: Primary Color
 // #f3f3f3: Preload Color
 // #DD2C00: Error color
+// #7ab2f8: Blue color
 // 4px: border radius
 // Added to material
 // md-lined,
@@ -145,10 +146,6 @@ h1.md-subhead {
   margin: 4px 0;
 }
 
-/*h2.md-subhead {
-  margin: 4px 0;
-}*/
-
 md-select-menu md-content {
   max-height: 300px;
 }
@@ -189,7 +186,6 @@ md-grid-list md-grid-tile {
 }
 
 .highlight-tile {
-  /* height: 260px; */
   padding: 24px 0;
   border-radius: 4px;
   border: 1px solid rgba(95, 198, 147, 0.25);
@@ -234,7 +230,6 @@ invest .highlight-tile {
 
 md-menu-content {
   max-height: 300px!important;
-  /*max-height: 500px; !*TODO: find for WHAT*!*/
 }
 
 md-card md-card-title {
@@ -529,8 +524,7 @@ md-tooltip .md-content {
 }
 
 .lnr-btn-fb[disabled] {
-  border-color: rgba(206, 212, 216, 0.9) !important;
-  background: rgba(206, 212, 216, 0.9)!important;
+  opacity: 0.5;
 }
 
 .md-button.md-raised[disabled] {
@@ -1769,6 +1763,11 @@ listings .lnr-bike-listings {
   line-height: 24px;
 }
 
+.fa.material-icons {
+  font-family: 'FontAwesome'!important;
+  font-size: 14px!important;
+}
+
 .lnr-listing-header .lnr-header-filter {
   cursor: pointer;
 }
@@ -2659,6 +2658,16 @@ md-icon[md-font-icon].fa--lh20 {
 .privacy-bar .md-caption {
   margin: 0;
   line-height: 1.1;
+}
+
+.privacy-bar a {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: color .3s;
+}
+
+.privacy-bar a:hover {
+  color: #000;;
 }
 
 .md-button.lnr-privacy-btn {

@@ -284,7 +284,7 @@
     "privacy": {
       "meta-title": "Política de privacidad de listnride",
       "meta-description": "La política de privacidad de la comunidad para compartir bicis de listnride se aplica al uso de la plataforma online",
-      "use-opt-in": "Para ofrecerte el servicio perfecto con listnride, utilizamos cookies de acuerdo con nuestra Política de Cookies.",
+      "use-opt-in": "Para ofrecerte el servicio perfecto con listnride, utilizamos cookies de acuerdo con nuestra <a target=\"_blank\" href=\"/#/privacy\">Política de Cookies</a>.",
       "use-opt-in-button": "OK."
     }
   },
@@ -589,13 +589,15 @@
     "sign-up": "Registrarse ",
     "sign-up-to-book": "Regístrate para reservar la bici",
     "sign-up-with-facebook": "Registrarse con facebook",
+    "sign-up-divider-text": "accept our terms and conditions",
+    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
     "member-already": "¿Ya estás registrado?",
     "business": "¿Tienda de bicis?",
     "description": "Descripción",
     "description_min_100": "La descripción debe ser mín. 100 caracteres",
     "address": "Dirección",
     "profile-picture": "Foto de perfil",
-    "profile-picture-info": "Please download only valid picture format (jpg, jpeg, png). Maximum picture size is 20mb. Minimum picture dimension(width x height) is 100px x 100px",
+    "profile-picture-info": "Autorizo el uso de mi imagen de perfil.<br>Al subir mi imagen a la plataforma acepto que listnride almacene mi imagen de perfil como está descrito en la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a>. Puedo borrar mi foto de perfil en cualquier momento.<br><br>Por favor sube un archivo con formato válido (jpg,jpeg,png).Peso máximo: 20mb. Tamaño mínimo de la imagen: 100px de ancho por 100px de alto.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "Your picture size is more than maximum size",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
@@ -608,8 +610,8 @@
     "update-contact": "Cambiar número de teléfono",
     "update-contact-mobile": "Número de teléfono",
     "company-contact-info": "Completa el formulario con la información de contacto de la empresa.",
-    "signing-up-accept-tac": "He leído y acepto los <a style=\"pointer-events: auto;\" href=\"/#/terms\">Términos y Condiciones</a> y acepto la recolección, tratamiento y uso de mis datos personales establecidos por la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a>.",
-    "signing-up-accept-newsletter": "Deseo recibir información sobre nuevas bicicletas, tours y cupones de descuento. Acepto las condiciones establecidas en la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride. Puedo revocar mi consentimiento en cualquier momento.",
+    "signing-up-accept-tac": "He leído y acepto los <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Términos y Condiciones</a> y acepto la recolección, tratamiento y uso de mis datos personales establecidos por la <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a>.",
+    "signing-up-accept-newsletter": "Deseo recibir información sobre nuevas bicicletas, tours y cupones de descuento. Acepto las condiciones establecidas en la <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride. Puedo revocar mi consentimiento en cualquier momento.",
     "privacy-policy": "Se aplica la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride.",
     "errors": {
       "password-length": "La contraseña debe tener entre 6 y 30 caracteres",
@@ -733,7 +735,8 @@
       "lights": "Luces",
       "basket": "Cesta",
       "trailer": "Remolque",
-      "childseat": "Asiento para niños"
+      "childseat": "Asiento para niños",
+      "gps": "GPS"
     },
     "pictures": {
       "header": "Sube algunas fotos de tu bici",

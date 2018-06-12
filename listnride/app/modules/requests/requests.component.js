@@ -83,7 +83,7 @@ angular.module('requests', ['infinite-scroll'])
         }
 
         // methods
-        requests.nextPage = nextPage;
+        // requests.nextPage = nextPage;
         requests.loadRequest = loadRequest;
         requests.reloadRequest = reloadRequest;
         requests.updateStatus = updateStatus;
@@ -111,13 +111,9 @@ angular.module('requests', ['infinite-scroll'])
           function (success) {
             requests.all_requests = success.data.requests;
             requests.requests = angular.copy(requests.all_requests);
-            console.log(success.data.requests);
 
             requests.filterBikes(requests.filters.type, false);
             requests.filters.applyFilter(requests.filters.selected);
-
-            // TODO: Change logic to show Load_next button
-            // requests.requestsLeft = !_.isEmpty(success.data.links.next_rider) || !_.isEmpty(success.data.links.next_lister);
 
             // Open request on first load
             if (requests.all_requests.length > 0) {
@@ -174,7 +170,11 @@ angular.module('requests', ['infinite-scroll'])
       // Handles initial request loading
       function loadRequest (requestId, showDialog, index) {
         requests.selected = requestId;
-        $state.go(".", { requestId: requestId }, { notify: false });
+        $state.go($state.current, {
+          requestId: requestId
+        }, {
+          notify: false
+        });
         requests.loadingChat = true;
         // Cancel the poller
         $interval.cancel(poller);
@@ -534,9 +534,7 @@ angular.module('requests', ['infinite-scroll'])
         @returns {void}
         */
       function filterBikes (type, reset_filter) {
-        if (type) {
-          requests.filters.type = type
-        }
+        requests.filters.type = type ? type : 'all';
 
         if (requests.filters.type === 'all') {
           requests.requests = angular.copy(requests.all_requests);
@@ -548,6 +546,7 @@ angular.module('requests', ['infinite-scroll'])
           });
           if (reset_filter === true) requests.filters.selected = 0
         }
+
         if (reset_filter === true) selectDefaultRequest();
       };
 

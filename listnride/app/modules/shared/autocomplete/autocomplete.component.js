@@ -5,7 +5,7 @@ angular.module('autocomplete',[]).component('autocomplete', {
   controllerAs: 'autocomplete',
   bindings: {
     autocompleteId: '@',
-    location: '<',
+    location: '=',
     labelId: '@',
     placeholderId: '@',
     required: '<',
@@ -33,16 +33,13 @@ angular.module('autocomplete',[]).component('autocomplete', {
             deregisterAutocompleteWatcher();
 
             var autocompleteObject = new google.maps.places.Autocomplete(
-              document.getElementById(autocomplete.autocompleteId), {types: ['geocode']});
+              document.getElementById(autocomplete.autocompleteId), {types: ['geocode']}
+            );
 
             autocompleteObject.inputId = autocomplete.autocompleteId;
             autocompleteObject.addListener('place_changed', function() {
-              $scope.$apply(function() {
-                var response = autocompleteObject.getPlace();
-                if (autocomplete.placeChanged !== undefined) {
-                  autocomplete.placeChanged({place: response});
-                }
-              });
+              var response = autocompleteObject.getPlace();
+              autocomplete.placeChanged({place: response});
             });
           }
         }
