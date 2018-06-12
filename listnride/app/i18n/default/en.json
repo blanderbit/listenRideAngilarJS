@@ -284,7 +284,7 @@
     },
     "privacy": {
       "meta-title": "Privacy Policy of listnride",
-      "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform.",
+      "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride applies to the use of the online platform.",
       "use-opt-in": "To provide you with the perfect service with listnride, we use cookies in accordance with our <a target=\"_blank\" href=\"/#/privacy\">Cookie Policy</a>.",
       "use-opt-in-button": "I got that."
     }
@@ -472,7 +472,7 @@
     "5": {
       "title": "What is your phone number",
       "description": "Verify your phone number, this allows SMS notifications for your requests. Simply enter your number and click 'Send Confirmation'. You'll receive a code via SMS that you can then enter below.",
-      "enter-valid-phone-nr": "Please enter a valid phone number",
+      "enter-valid-phone-nr": "Enter a valid phone number",
       "send-confirmation-sms": "Send Confirmation",
       "send-confirmation-sms-mobile": "Send SMS Code",
       "resend-confirmation-sms": "Resend confirmation",
@@ -581,7 +581,7 @@
     "log-out": "Log Out",
     "sign-up": "Sign Up",
     "sign-up-to-book": "Sign up to book the bike",
-    "sign-up-with-facebook": "Sign Up with facebook",
+    "sign-up-with-facebook": "Sign Up with Facebook",
     "sign-up-divider-text": "accept our terms and conditions",
     "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
     "member-already": "Already signed up?",
@@ -693,7 +693,7 @@
       "label": "Category",
       "city": "City",
       "race": "Race",
-      "all-terrain": "All terrain",
+      "all-terrain": "All Terrain",
       "kids": "Kids",
       "electro": "Electro",
       "special": "Special",
@@ -800,7 +800,7 @@
         "dutch-bike": "Dutch Bike",
         "touring-bike": "Touring Bike",
         "fixie": "Fixie",
-        "single-speed": "Single Speed",
+        "single-speed": "Single Speed Bike",
         "city-bike": "City Bike"
       },
       "2": {
@@ -874,7 +874,7 @@
     "show-as-list": "Show as List",
     "duplicate": {
       "duplicate": "Duplicate",
-      "how_many": "How many bikes?",
+      "how_many": "How many additional bikes?",
       "header": "Duplicate Bike",
       "number_bikes": "Number of bikes",
       "maxlength": "Works for maximum 99 bikes",
