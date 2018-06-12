@@ -1,6 +1,5 @@
 'use strict';
 
-<<<<<<< HEAD
 angular.module('list', ['ngLocale'])
   // list form
   .component('list', {
@@ -34,63 +33,6 @@ angular.module('list', ['ngLocale'])
 
         if (accessControl.requireLogin()) {
           return;
-=======
-angular.module('list', ['ngLocale']).component('list', {
-  templateUrl: 'app/modules/bike/list/list.template.html',
-  bindings: {
-    heading: "<",
-    isListMode: "<",
-    discountFieldEditable: "<"
-  },
-  controllerAs: 'list',
-  controller: [
-    '$mdDialog',
-    '$localStorage',
-    '$stateParams',
-    '$state',
-    '$scope',
-    '$analytics',
-    'Upload',
-    'bikeOptions',
-    'api',
-    'authentication',
-    '$timeout',
-    'verification',
-    'accessControl',
-    'loadingDialog',
-    'price',
-    function ListController($mdDialog, $localStorage, $stateParams, $state,
-                            $scope, $analytics, Upload, bikeOptions, api, authentication,
-                            $timeout, verification, accessControl, loadingDialog, price) {
-
-      if (accessControl.requireLogin()) {
-        return;
-      }
-
-      var list = this;
-
-      list.form = {images: [], accessories:{}};
-      list.selectedIndex = 0;
-      list.removedImages = [];
-      list.startImage = 1;
-      list.sizeOptions = bikeOptions.sizeOptions();
-      list.kidsSizeOptions = bikeOptions.kidsSizeOptions();
-      list.accessoryOptions = bikeOptions.accessoryOptions();
-      list.validateObj = {height: {min: 1000}, width: {min: 1500}, duration: {max: '5m'}};
-      list.invalidFiles = {};
-      list.businessUser = false;
-      bikeOptions.allCategoriesOptions().then(function (resolve) {
-        list.categoryOptions = resolve;
-      });
-
-      var setBusinessForm = function() {
-        if (authentication.isBusiness) {
-          list.businessUser = true;
-          list.form.custom_price = true;
-          list.show_custom_price = true;
-        } else {
-          list.businessUser = false;
->>>>>>> master
         }
 
         var list = this;
@@ -348,8 +290,6 @@ angular.module('list', ['ngLocale']).component('list', {
               }
             });
           }
-<<<<<<< HEAD
-
           Upload.upload({
             method: 'PUT',
             url: api.getApiUrl() + '/rides/' + $stateParams.bikeId,
@@ -377,48 +317,6 @@ angular.module('list', ['ngLocale']).component('list', {
             list.submitNewRide();
           } else {
             list.submitEditedRide();
-=======
-        );
-      };
-
-      // form submission for new ride
-      list.submitNewRide = function () {
-        var prices = price.inverseTransformPrices(list.form.prices, list.isListMode);
-        var ride = {
-          "ride" : {
-            "name": list.form.name,
-            "brand": list.form.brand,
-            "description": list.form.description,
-            "size": list.form.size,
-            "category": list.form.subCategory,
-            "accessories": {
-              "lock": list.form.accessories.lock,
-              "helmet": list.form.accessories.helmet,
-              "lights": list.form.accessories.lights,
-              "basket": list.form.accessories.basket,
-              "trailer": list.form.accessories.trailer,
-              "childseat": list.form.accessories.childseat,
-              "gps": list.form.accessories.gps
-            },
-            "user_id": $localStorage.userId,
-            "street": list.form.street,
-            "city": list.form.city,
-            "zip": list.form.zip,
-            "country": list.form.country,
-            "prices": prices,
-            "custom_price": list.form.custom_price,
-            "discounts": list.form.discounts,
-            "frame_size": list.form.frame_size,
-            "bicycle_number": list.form.bicycle_number,
-            "frame_number": list.form.frame_number,
-            "details": list.form.details,
-            "image_file_1": (list.form.images[0]) ? list.form.images[0].src : undefined,
-            "image_file_2": (list.form.images[1]) ? list.form.images[1].src : undefined,
-            "image_file_3": (list.form.images[2]) ? list.form.images[2].src : undefined,
-            "image_file_4": (list.form.images[3]) ? list.form.images[3].src : undefined,
-            "image_file_5": (list.form.images[4]) ? list.form.images[4].src : undefined,
-            'is_equipment': _.includes([51, 52, 53, 54], list.form.subCategory)
->>>>>>> master
           }
         };
 
@@ -434,7 +332,6 @@ angular.module('list', ['ngLocale']).component('list', {
               list.form.prices = price.setCustomPrices(list.form);
             }
           }
-<<<<<<< HEAD
         };
 
         list.insuranceAllowed = function () {
@@ -473,43 +370,6 @@ angular.module('list', ['ngLocale']).component('list', {
           } else if (list.form.custom_price === false) {
             list.show_custom_price = false;
             list.discountFieldEditable = true;
-=======
-        );
-      };
-
-      // form submission for existing ride
-      list.submitEditedRide = function () {
-        var prices = price.inverseTransformPrices(list.form.prices);
-        var ride = {
-          "ride" : {
-            "name": list.form.name,
-            "brand": list.form.brand,
-            "description": list.form.description,
-            "size": list.form.size,
-            "category": list.form.subCategory,
-            "accessories" : {
-              "lock": list.form.accessories.lock || 'false',
-              "helmet": list.form.accessories.helmet || 'false',
-              "lights": list.form.accessories.lights || 'false',
-              "basket": list.form.accessories.basket || 'false',
-              "trailer": list.form.accessories.trailer || 'false',
-              "childseat": list.form.accessories.childseat || 'false',
-              "gps": list.form.accessories.gps || 'false'
-            },
-            "user_id": $localStorage.userId,
-            "street": list.form.street,
-            "city": list.form.city,
-            "zip": list.form.zip,
-            "country": list.form.country,
-            "prices": prices,
-            "custom_price": list.form.custom_price,
-            "discounts": list.form.discounts,
-            "frame_size": list.form.frame_size,
-            "bicycle_number": list.form.bicycle_number,
-            "frame_number": list.form.frame_number,
-            "details": list.form.details,
-            "is_equipment": _.includes([51, 52, 53, 54], list.form.subCategory)
->>>>>>> master
           }
         };
 
@@ -636,8 +496,6 @@ angular.module('list', ['ngLocale']).component('list', {
         list.changeCategory = function() {
           list.form.subCategory = undefined;
         }
-<<<<<<< HEAD
-
         // populate data for list or edit bike
         if (list.isListMode) list.populateNewBikeData();
         else list.populateExistingBikeData();
@@ -691,29 +549,3 @@ angular.module('list', ['ngLocale']).component('list', {
     },
     controllerAs: 'pricingTab'
   });
-=======
-      };
-
-      list.onAccessoryClick = function (accessory) {
-        if (list.form.accessories[accessory]) {
-          list.form.accessories[accessory] = list.form.accessories[accessory] == 'true' ? 'false' : 'true';
-        } else {
-          list.form.accessories[accessory] = 'true';
-        }
-      };
-
-      list.isFormValid = function () {
-        return list.isCategoryValid() &&
-          list.isDetailsValid() &&
-          list.isPictureValid() &&
-          list.isLocationValid() &&
-          list.isPricingValid();
-      };
-
-      // populate data for list or edit bike
-      if (list.isListMode) list.populateNewBikeData();
-      else list.populateExistingBikeData();
-    }
-  ]
-});
->>>>>>> master
