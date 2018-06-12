@@ -648,9 +648,8 @@
   },
   "terms-and-conditions": {
     "title": "Terms and conditions",
-    "header": "List and Ride Algemene Voorwaarden",
-    "subheader": "Laatst bijgewerkt: 8 juni 2018",
-    "subtitle": "Lees de Algemene Voorwaarden aandachtig door, omdat deze belangrijke informatie bevatten over uw contractuele rechten en verplichtingen. Door gebruik te maken van het listnride platform gaat u akkoord met deze voorwaarden.<br><br>Hier kunt u de <a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Algemene Voorwaarden</a> downloaden.<br><br>Bedankt voor het gebruikmaken van listnride!"
+    "header": "Algemene voorwaarden van het Online-Platform listnride",
+    "subtitle": "De List and Ride GmbH (in het vervolg „listnride“) bemmidelt via de website www.listnride.com (in het vervolg „Website“) huurcontracten voor fietsen en andere sport- en vrijetijdsuitrusting. De onderstaande algemene gebruiksvoorwaarden (in het vervolg „gebruiksvoorwaarden“) in paragraaf I zijn onderdeel van de overeenkomst die tussen de gebruiker en listnride middels de bemiddelingsverrichting tot stand komt. Indien er via de website een overeenkomst tot het huren van een gebruiksvoorwerp (in het vervolg „huurovereenkomst“) is gesloten, komt deze volgens de in paragraaf II genoemde algemene huurvoorwaarden (in het vervolg „huurvoorwaarden“) tot stand."
   },
   "trust-and-safety": {
     "title": "Vertrouwen & Zekerheid",
@@ -761,14 +760,12 @@
     "berlin-court-of-registry": "Kantongerecht Berlijn (Charlottenburg)",
     "vat-id": "BTW-Nr.",
     "meta-title": "listnride Impressum",
-    "meta-description": "Huur de perfecte fiets van de listnride community. Huur een fiets die past bij jouw stijl en behoeften.",
-    "regulation": "Onlinegeschillenbeslechting overeenkomstig artikel 14, lid 1, van de ODR-verordening (Online Dispute Resolution)",
-    "online-dispute": "De EU-commissie biedt een online platform voor geschillenbeslechting (OS platform). U kunt het hier vinden:"
+    "meta-description": "Huur de perfecte fiets van de listnride community. Huur een fiets die past bij jouw stijl en behoeften."
   },
   "privacy": {
-    "title": "List and Ride Privacybeleid",
-    "subtitle": "Effectieve datum: Mei 24, 2018",
-    "description": "List and Ride hecht grote waarde aan een krachtig en transparant privacybeleid. Dit privacybeleid beschrijft het beleid van List and Ride GmbH met betrekking tot het verzamelen, gebruiken, opslaan, delen en beschermen van uw persoonsgegevens en de mogelijkheden die wij bieden, waaronder het openen, bewerken en verwijderen van uw persoonsgegevens en de maatregelen die we nemen om dergelijke informatie te beschermen.<br>Download ons <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Privacybeleid</a> en lees deze zorgvuldig door.<br><br>Neem contact met ons op als u vragen of opmerkingen hebt over de handhaving de privacybeleid of ons privacybeleid in algemene zin. U kunt ons bereiken op <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> online.",
+    "title": "Privacy",
+    "subtitle": "Privacybeleid ",
+    "description": "Met het privacybeleid informeert List and Ride GmbH (in het vervolg „listnride“) je over het beleid ten aanzien van de omgang met uw persoonlijke gegevens. <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">U kunt hier het privacybeleid inzien en uitprinten.</a>",
     "meta-title": "Privacybeleid van listnride",
     "meta-description": "Het privacybeleid van de Bike-Sharing-Community listnride is van toepassing bij het gebruik van het platform."
   },
