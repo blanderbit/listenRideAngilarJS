@@ -13,7 +13,7 @@
     "top-cities": "Favoriete Steden",
     "berlin": "Berlijn",
     "dortmund": "Dortmund",
-    "milan": "Milan",
+    "milan": "Milaan",
     "munich": "München",
     "nuremberg": "Neurenberg",
     "amsterdam": "Amsterdam",
@@ -283,7 +283,7 @@
     },
     "privacy": {
       "meta-title": "Privacy Policy of listnride",
-      "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform.",
+      "meta-description": "Het privacybeleid van de Bike Sharing-Community listnride is van toepassing op het gebruik van het online platform.",
       "use-opt-in": "Om u met listnride een optimale service te bieden, gebruiken wij cookies in conform ons Cookie-beleid.",
       "use-opt-in-button": "Ik heb het begrepen."
     }
@@ -577,7 +577,7 @@
     "log-out": "Uitloggen",
     "sign-up": "Aanmelden",
     "sign-up-to-book": "Meld je aan om de fiets te huren.",
-    "sign-up-with-facebook": "Met facebook aanmelden",
+    "sign-up-with-facebook": "Met Facebook aanmelden",
     "sign-up-divider-text": "accept our terms and conditions",
     "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
     "member-already": "Al geregistreerd?",
