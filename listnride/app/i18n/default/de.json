@@ -394,6 +394,7 @@
     "profile": "Profil",
     "invite": "Freunde einladen",
     "account": "Konto",
+    "contact-to-update": "To change your name or email address please contact us at <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>",
     "delete-account": "Konto deaktivieren",
     "delete-account-description": "Hier kannst du dein listnride-Konto deaktivieren. Dieser Schritt kann nicht rückgängig gemacht werden.",
     "delete-account-sure": "Bist du dir wirklich sicher?",
