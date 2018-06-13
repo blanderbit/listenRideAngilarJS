@@ -687,7 +687,8 @@
     "info-discount": "Average daily discount you<br>get per day by renting out<br>for a longer period of time.",
     "info-service-fee": "The service fee is<br>used for providing<br>listnride. It includes VAT.",
     "info": "In the calendar above click first<br>on the day you wish to rent<br>out the bike, and second on<br>the day you want to return it.",
-    "info-without-calendar": "In the calendar above click first<br>on the day you wish to rent<br>out the bike, and second on<br>the day you want to return it."
+    "info-without-calendar": "In the calendar above click first<br>on the day you wish to rent<br>out the bike, and second on<br>the day you want to return it.",
+    "basic-insurance-included": "Basic insurance is included"
   },
   "list": {
     "edit-bike": "Edit Bike",
