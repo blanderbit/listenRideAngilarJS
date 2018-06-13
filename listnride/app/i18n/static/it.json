@@ -640,11 +640,10 @@
     "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
   },
   "terms-and-conditions": {
-    "title": "Termini e Condizioni",
-    "header": "Condizioni generali per la piattaforma online listnride",
-    "download": "Scarica qui",
-    "description": "<a href=\"http://cdn.listnride.com/en/tacs.pdf\" target=\"_blank\">Qui puoi visualizzare e scaricare le condizioni generali",
-    "subtitle": "List and Ride GmbH (di seguito \"listnride\") organizza contratti di locazione per biciclette e altre attrezzature per lo sport e il tempo libero attraverso il sito www.listnride.com (di seguito \"Sito web\"). I seguenti Termini e Condizioni Generali di Utilizzo (di seguito \"Termini di Utilizzo\") nella Sezione I rientreranno nell'accordo concluso tra l'utente e listnride nel rispetto del servizio di disposizione. Qualsiasi accordo per il noleggio dell'oggetto utilizzato (di seguito \"contratto di noleggio\") concluso tramite il sito web deve essere conforme alle condizioni generali di noleggio (di seguito \"termini di noleggio\") specificati nella sezione II."
+    "title": "Terms and conditions",
+    "header": "List and Ride Termini e Condizioni generali di contratto",
+    "subheader": "Ultimo aggiornamento: 8 giugno 2018",
+    "subtitle": "Si prega di leggere attentamente i presenti Termini in quanto contengono informazioni importanti sui vostri diritti, rimedi e obblighi legali. Utilizzando la piattaforma listnride, accetti di rispettare i presenti Termini.<br><br>Qui puoi scaricare e leggere le nostre <a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Condizioni generali di contratto.</a><br><br>Grazie per aver utilizzato listnride!"
   },
   "trust-and-safety": {
     "title": "Fiducia e Sicurezza",
@@ -763,7 +762,7 @@
   "privacy": {
     "title": "List and Ride Informativa sulla Privacy",
     "subtitle": "Data di entrata in vigore: 24 Maggio 2018",
-    "description": "List and Ride si impegna a rispettare le norme sulla privacy in maniera trasparente. La nostra Informativa sulla privacy descrive le informazioni sull'utente che raccogliamo attraverso i nostri Servizi. Come utilizziamo e divulghiamo queste informazioni. Le misure che adottiamo per proteggere tali informazioni. Le scelte che offriamo, tra cui come accedere, aggiornare e rimuovere i dati personali.<br>Si prega di scaricare la nostra <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Informativa sulla privacy</a> e di leggerla attentamente.<br><br>Contattateci per qualsiasi domanda o commento sulle nostre pratiche sulla privacy o sulla presente Informativa sulla privacy. Potete contattarci online all'indirizzo: <a href=\"mailto: privacy@listnride.com\">privacy@listnride.com</a>.",
+    "description": "List and Ride si impegna a rispettare le norme sulla privacy in maniera trasparente. La nostra Informativa sulla privacy descrive le informazioni sull'utente che raccogliamo attraverso i nostri Servizi. Come utilizziamo e divulghiamo queste informazioni. Le misure che adottiamo per proteggere tali informazioni. Le scelte che offriamo, tra cui come accedere, aggiornare e rimuovere i dati personali.<br>Si prega di scaricare la nostra <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Informativa sulla privacy</a> e di leggerla attentamente.<br><br>Contattateci per qualsiasi domanda o commento sulle nostre pratiche sulla privacy o sulla presente Informativa sulla privacy. Potete contattarci online all'indirizzo: <a href=\"mailto: privacy@listnride.com\">privacy@listnride.com</a>.",
     "meta-title": "Politica sulla privacy di listnride",
     "meta-description": "La Politica sulla privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online."
   },
