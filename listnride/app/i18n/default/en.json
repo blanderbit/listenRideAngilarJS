@@ -606,7 +606,7 @@
     "company-contact-info": "Please fill form with company contact person information.",
     "signing-up-accept-tac": "I hereby agree to the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Terms of Use</a> and agree to the collection, processing and use of my personal data as further described in the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>.",
     "signing-up-accept-newsletter": "I would like to receive the listnride e-mail newsletter with interesting content on Cycling, Community updates and exclusive benefits. The <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>  of listnride applies. I can revoke my consent at any time.",
-    "privacy-policy": "The <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy </a> of listnride applies.",
+    "privacy-policy": "The <a style=\"pointer-events: auto;\" href=\"/privacy\" target=\"_BLANK\">Privacy Policy </a> of listnride applies.",
     "errors": {
       "password-length": "Password should be 6-30 characters",
       "password-length-xs": "6-30 characters",
