@@ -596,7 +596,7 @@
     "company-contact-info": "Si prega di compilare il modulo con le informazioni relative alla persona di contatto dell'azienda.",
     "signing-up-accept-tac": "Desidero ricevere la newsletter via e-mail di listnride sulle nuove biciclette, tours e vouchers. Si applica <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">l'Informativa sulla Privacy</a> di listnride. Posso revocare il mio consenso in qualsiasi momento.",
     "signing-up-accept-newsletter": "Accetto le <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Condizioni d'uso</a> e accetto la raccolta, l'elaborazione e l'utilizzo dei miei dati personali come descritto nell'<a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Informativa sulla Privacy</a>.",
-    "privacy-policy": "Si applica <a style=\"pointer-events: auto;\" href=\"/#/privacy\">l'Informativa sulla Privacy</a> di listnride.",
+    "privacy-policy": "Si applica <a style=\"pointer-events: auto;\" href=\"/privacy\" target=\"_BLANK\">l'Informativa sulla Privacy</a> di listnride.",
     "errors": {
       "password-length": "La password deve essere tra i 6-30 caratteri",
       "password-length-xs": "6-30 caratteri",
