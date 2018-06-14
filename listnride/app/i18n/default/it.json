@@ -709,7 +709,8 @@
       "notes": "Note",
       "frame_size": "Dimensione telaio",
       "bicycle_number": "Numero di bicicletta",
-      "frame_number": "Numero di telaio"
+      "frame_number": "Numero di telaio",
+      "details": "Details"
     },
     "accessories": {
       "header": "Quali accessori ha la tua bicicletta?",

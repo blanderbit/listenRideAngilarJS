@@ -284,7 +284,7 @@
     "privacy": {
       "meta-title": "Privacy Policy of listnride",
       "meta-description": "Het privacybeleid van de Bike Sharing-Community listnride is van toepassing op het gebruik van het online platform.",
-      "use-opt-in": "Om u met listnride een optimale service te bieden, gebruiken wij cookies in conform ons Cookie-beleid.",
+      "use-opt-in": "Om u met listnride een optimale service te bieden, gebruiken wij cookies in conform ons <a target=\"_blank\" href=\"/#/privacy\">Cookie-beleid</a>.",
       "use-opt-in-button": "Ik heb het begrepen."
     }
   },
@@ -714,7 +714,8 @@
       "notes": "Notes",
       "frame_size": "Frame hoogte",
       "bicycle_number": "Bicycle number",
-      "frame_number": "Frame number"
+      "frame_number": "Frame number",
+      "details": "Details"
     },
     "accessories": {
       "header": "Welke accessoires bied je aan?",

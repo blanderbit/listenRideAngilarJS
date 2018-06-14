@@ -716,7 +716,8 @@
       "custom-fields": "Campos adicionales",
       "notes": "Notes",
       "frame_size": "Tamaño del cuadro",
-      "bicycle_number": "Número de bicicleta"
+      "bicycle_number": "Número de bicicleta",
+      "details": "Details"
     },
     "accessories": {
       "header": "¿Qué accesorios tiene tu bici?",
