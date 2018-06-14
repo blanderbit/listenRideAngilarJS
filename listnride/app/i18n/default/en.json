@@ -719,7 +719,8 @@
       "notes": "Notes",
       "frame_size": "Frame size",
       "bicycle_number": "Bicycle number",
-      "frame_number": "Frame number"
+      "frame_number": "Frame number",
+      "details": "Details"
     },
     "accessories": {
       "header": "What accessories does your bike have?",

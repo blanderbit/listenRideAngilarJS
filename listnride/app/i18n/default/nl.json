@@ -714,7 +714,8 @@
       "notes": "Notes",
       "frame_size": "Frame hoogte",
       "bicycle_number": "Bicycle number",
-      "frame_number": "Frame number"
+      "frame_number": "Frame number",
+      "details": "Details"
     },
     "accessories": {
       "header": "Welke accessoires bied je aan?",
