@@ -535,7 +535,7 @@
         "question-3": "What happens if my bike gets stolen or damaged?",
         "answer-3": "Bike theft does happen. However, the bike is less likely to get stolen if it is properly locked and/or stored indoors. Help prevent theft by providing a secure lock with your bike. In case something does go wrong, the rider will be held responsible for all costs arising from any damage and/or theft. If your bike was stolen and/or damaged during the rental period, you and the rider need to contact us through our website by clicking on “Contact us.” Once we’ve clarified the situation, we will contact you to resolve the issue. If it was stolen and the rider can’t pay the damages, the listnride guarantee will make sure everything is covered! If the bike was stolen while it wasn’t rented out through listnride, however, we cannot help solve the problem. In this case you need to resolve the issue directly with the rider.",
         "question-4": "What happens if the rider or someone else gets injured and/or property gets damaged during the rental period?",
-        "answer-4": "Make sure that your bike is in good condition when you hand it over. This is beneficial to both parties: The rider will have a great time, and you’ll receive a positive rating after the bike has been returned. When booking a bike through listnride, the renter agrees to the applicable terms and conditions. These terms and conditions offer you protection against liability for any injury to the renter and/or damage to their or someone else’s property. As the lister, you are never responsible if the renter gets injured during a ride.",
+        "answer-4": "Make sure that your bike is in good condition when you hand it over. This is beneficial to both parties: The rider will have a great time, and you’ll receive a positive rating after the bike has been returned. When booking a bike through listnride, the renter agrees to the applicable Terms and Conditions. These Terms and Conditions offer you protection against liability for any injury to the renter and/or damage to their or someone else’s property. As the lister, you are never responsible if the renter gets injured during a ride.",
         "question-5": "What happens if the rider doesn’t show up as agreed to pick up my bike?",
         "answer-5": "Sometimes the rider might have difficulty getting to the agreed location. A bit of flexibility on your part is essential. However, if things are taking too long and you’ve tried contacting the rider – either through the listnride in-app chat or directly by telephone – but he/she is not responding, please cancel the rental by sending the rider a message in the chat thread and describing the reason for the cancellation.",
         "question-6": "How do I offer my bike for rent?",
@@ -649,9 +649,9 @@
     "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
   },
   "terms-and-conditions": {
-    "title": "Terms and conditions",
+    "title": "Terms and Conditions",
     "header": "List and Ride General Terms and Conditions of Business",
-    "subheader": "Last Updated: June 8, 2018",
+    "subheader": "Last Updated: June 8 , 2018",
     "subtitle": "Please read these Terms carefully as they contain important information about your legal rights, remedies and obligations. By using the listnride platform, you agree to comply with these Terms.<br><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Here you can download</a> and read our General Terms and Conditions of Business.<br><br>Thank you for using listnride!"
   },
   "trust-and-safety": {
@@ -748,7 +748,7 @@
     },
     "feature-3": {
       "title": "Focus on your business",
-      "description": "The listnride terms and conditions cover all important details of a rental agreement. Here it is outlined that the moment the bike is handed over to the rider, all liability and responsibility are with him or her. So, no more paperwork needed. Furthermore, you’ll have a clear dashboard with the necessary overviews on your open requests, rentals, invoices and revenues made. Just by logging in to your account."
+      "description": "The listnride Terms and Conditions cover all important details of a rental agreement. Here it is outlined that the moment the bike is handed over to the rider, all liability and responsibility are with him or her. So, no more paperwork needed. Furthermore, you’ll have a clear dashboard with the necessary overviews on your open requests, rentals, invoices and revenues made. Just by logging in to your account."
     },
     "join-now": "Join us now, it is free",
     "join-now-description": "Interested to learn more and get started?",
@@ -773,7 +773,7 @@
     "subtitle": "Effective Date: May 24, 2018",
     "description": "List and Ride commits to strong and transparent privacy practices. Our Privacy Policy describes the user information that we gather through our services. How we use and disclose these information. The steps we take to protect such information. The choices we offer, including how to access, update, and remove personal data.<br>Here you can download and read our <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Privacy Policy</a>.<br><br>Please contact us if you have any questions or comments about our privacy practices or this Privacy Policy. You can reach us at <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> online.",
     "meta-title": "Privacy Policy of listnride",
-    "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride applies to the use of the online platform."
+    "meta-description": "The Privacy Policy of the bike sharing community listnride applies to the use of the online platform."
   },
   "seo": {
     "cities-title": "Planning to Travel? Check out more cities:"
