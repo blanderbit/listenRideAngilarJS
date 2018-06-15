@@ -3,6 +3,7 @@
     <div class="md-dialog-content" layout="column" ng-style="{'display': verificationDialog.loaded ? '' : 'none'}">
       <md-tabs
         class="content"
+        layout="column"
         md-dynamic-height
         md-no-pagination
         md-no-ink
@@ -99,6 +100,8 @@
                 </div>
               </form>
               <br>
+              <p data-ng-bind-html="'forms.profile-picture-info' | translate"></p>
+              <p class="md-caption" data-ng-bind-html="'forms.profile-picture-info-policy' | translate"></p>
             </div>
           </div>
         </md-tab>
@@ -229,8 +232,9 @@
                 {{ 'verification.private' | translate }}
               </div>
             </div>
-
-            <address-input address="verificationDialog.address" valid-address="verificationDialog.validAddress"></address-input>
+            <div layout="row" layout-align="center center">
+              <address-input flex flex-gt-xs="80" address="verificationDialog.address" valid-address="verificationDialog.validAddress"></address-input>
+            </div>
 
           </div>
         </md-tab>

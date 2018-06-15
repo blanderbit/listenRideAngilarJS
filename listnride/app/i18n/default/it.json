@@ -14,6 +14,7 @@
     "top-cities": "Le principali città",
     "berlin": "Berlino",
     "dortmund": "Dortmund",
+    "milan": "Milano",
     "munich": "Monaco di Baviera",
     "nuremberg": "Norimberga",
     "amsterdam": "Amsterdam",
@@ -385,6 +386,7 @@
     "profile": "Profilo",
     "invite": "Invita i tuoi amici",
     "account": "Profilo",
+    "contact-to-update": "To change your name or email address please contact us at <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>",
     "delete-account": " Disattivare profilo",
     "delete-account-description": "Qui puoi disattivare il tuo profilo. Non è possibile annullare questo passaggio.",
     "delete-account-sure": "Sei sicuro?",
@@ -579,7 +581,8 @@
     "description_min_100": "La descrizione deve essere min. di 100 caratteri.",
     "address": "Indirizzo",
     "profile-picture": "Immagine del profilo",
-    "profile-picture-info": "Consento all'utilizzo dell'immagine del profilo.<br>Caricando la foto del mio profilo, accetto che listnride salvi la foto del profilo come descritto più dettagliatamente <a style=\"pointer-events: auto;\" href=\"/#/privacy\">nell'Informativa sulla Privacy</a>. Posso cancellare in qualsiasi momento l'immagine del mio profilo.<br><br>Si prega di caricare solo formati di immagine validi (jpg, jpeg, png). La dimensione massima dell'immagine è 20 mb. La dimensione minima dell'immagine (larghezza x altezza) è 100px x 100px.",
+    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
+    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "Your picture size is more than maximum size",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
@@ -706,7 +709,8 @@
       "notes": "Note",
       "frame_size": "Dimensione telaio",
       "bicycle_number": "Numero di bicicletta",
-      "frame_number": "Numero di telaio"
+      "frame_number": "Numero di telaio",
+      "details": "Details"
     },
     "accessories": {
       "header": "Quali accessori ha la tua bicicletta?",
@@ -773,8 +777,8 @@
       "price_7_days": "7 giorni (1 settimana)",
       "price_8_days": "da 8 giorni in poi",
       "price_8_days_long": "da 8 giorni in poi (al giorno)",
-      "price_30_days": "30 giorni",
-      "price_30_days_long": "30 giorni (1 mese)",
+      "price_30_days": "28 giorni",
+      "price_30_days_long": "28 giorni (1 mese)",
       "reset-prices": "Azzerare",
       "validations": {
         "required": {

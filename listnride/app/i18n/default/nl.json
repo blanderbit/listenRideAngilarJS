@@ -13,7 +13,7 @@
     "top-cities": "Favoriete Steden",
     "berlin": "Berlijn",
     "dortmund": "Dortmund",
-    "milan": "Milan",
+    "milan": "Milaan",
     "munich": "München",
     "nuremberg": "Neurenberg",
     "amsterdam": "Amsterdam",
@@ -283,8 +283,8 @@
     },
     "privacy": {
       "meta-title": "Privacy Policy of listnride",
-      "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform.",
-      "use-opt-in": "Om u met listnride een optimale service te bieden, gebruiken wij cookies in conform ons Cookie-beleid.",
+      "meta-description": "Het privacybeleid van de Bike Sharing-Community listnride is van toepassing op het gebruik van het online platform.",
+      "use-opt-in": "Om u met listnride een optimale service te bieden, gebruiken wij cookies in conform ons <a target=\"_blank\" href=\"/#/privacy\">Cookie-beleid</a>.",
       "use-opt-in-button": "Ik heb het begrepen."
     }
   },
@@ -394,6 +394,7 @@
     "profile": "Profiel",
     "invite": "Vrienden uitnodigen",
     "account": "Account",
+    "contact-to-update": "To change your name or email address please contact us at <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>",
     "delete-account": "account deactiveren",
     "delete-account-description": "Hier kunt u uw listnride-account deactiveren. Deze stap kan niet ongedaan worden gemaakt.",
     "delete-account-sure": "Weet je het zeker?",
@@ -577,7 +578,7 @@
     "log-out": "Uitloggen",
     "sign-up": "Aanmelden",
     "sign-up-to-book": "Meld je aan om de fiets te huren.",
-    "sign-up-with-facebook": "Met facebook aanmelden",
+    "sign-up-with-facebook": "Met Facebook aanmelden",
     "sign-up-divider-text": "accept our terms and conditions",
     "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
     "member-already": "Al geregistreerd?",
@@ -586,7 +587,8 @@
     "description_min_100": "Beschrijvingstekst moet min. 100 tekens lang zijn",
     "address": "Adres",
     "profile-picture": "Profielfoto",
-    "profile-picture-info": "Toestemming voor het gebruik van de profielfoto<br>Door mijn profielfoto te uploaden, ga ik ermee akkoord dat listnride de profielfoto opslaat zoals gedetailleerder beschreven in het <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacybeleid</a>. Ik kan mijn profielfoto te allen tijde verwijderen.<br><br>Gelieve alleen de juiste beeldformaten te uploaden (jpg, jpeg, png). De maximale beeldgrootte is 20mb. Minimale beeldafmeting (breedte x hoogte) is 100px x 100px",
+    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
+    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "Your picture size is more than maximum size",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
@@ -712,7 +714,8 @@
       "notes": "Notes",
       "frame_size": "Frame hoogte",
       "bicycle_number": "Bicycle number",
-      "frame_number": "Frame number"
+      "frame_number": "Frame number",
+      "details": "Details"
     },
     "accessories": {
       "header": "Welke accessoires bied je aan?",
@@ -779,8 +782,8 @@
       "price_7_days": "7 dagen (1 week)",
       "price_8_days": "vanaf 8 dagen",
       "price_8_days_long": "vanaf 8 dagen (elke dag)",
-      "price_30_days": "30 dagen (1 maand)",
-      "price_30_days_long": "30 dagen (1 Monat)",
+      "price_30_days": "28 dagen (1 maand)",
+      "price_30_days_long": "28 dagen (1 Monat)",
       "reset-prices": "Zurücksetzen",
       "validations": {
         "required": {

@@ -13,7 +13,7 @@
     "top-cities": "Beliebte Städte",
     "berlin": "Berlin",
     "dortmund": "Dortmund",
-    "milan": "Milan",
+    "milan": "Mailand",
     "munich": "München",
     "nuremberg": "Nürnberg",
     "amsterdam": "Amsterdam",
@@ -282,8 +282,8 @@
       "meta-description": "Miete dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
     },
     "privacy": {
-      "meta-title": "Datenschutzrichtlinien von listnride",
-      "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform.",
+      "meta-title": "Datenschutzerklärung von listnride",
+      "meta-description": "Die Datenschutzerklärung der Bike-Sharing-Community listnride bezieht sich auf die Nutzung der Onlineplattform.",
       "use-opt-in": "Um dir mit listnride einen perfekten Service zu bieten, setzen wir Cookies gemäß unserer <a target=\"_blank\" href=\"/#/privacy\">Cookie-Richtlinie ein</a>.",
       "use-opt-in-button": "Hab ich verstanden."
     }
@@ -394,6 +394,7 @@
     "profile": "Profil",
     "invite": "Freunde einladen",
     "account": "Konto",
+    "contact-to-update": "To change your name or email address please contact us at <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>",
     "delete-account": "Konto deaktivieren",
     "delete-account-description": "Hier kannst du dein listnride-Konto deaktivieren. Dieser Schritt kann nicht rückgängig gemacht werden.",
     "delete-account-sure": "Bist du dir wirklich sicher?",
@@ -470,7 +471,7 @@
     "5": {
       "title": "Was ist deine Nummer",
       "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst.",
-      "enter-valid-phone-nr": "Bitte gib eine valide Telefonnummer an",
+      "enter-valid-phone-nr": "Gib eine gültige Telefonnr. an",
       "send-confirmation-sms": "Bestätigungs-SMS schicken",
       "send-confirmation-sms-mobile": "Code schicken",
       "resend-confirmation-sms": "Erneut schicken",
@@ -585,7 +586,8 @@
     "description_min_100": "Beschreibung sollte min. 100 Buchstaben lang sein",
     "address": "Adresse",
     "profile-picture": "Profilbild",
-    "profile-picture-info": "Einwilligung zur Verwendung des Profilbildes<br>Mit dem Upload meines Profilbilds erkläre ich mich damit einverstanden, dass listnride das Profilbild speichert, wie in der <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> näher beschrieben. Ich kann mein Profilbild jederzeit löschen.<br><br>Bitte nur gültige Bildformate (jpg, jpeg, png) hochladen. Die maximale Bildgröße beträgt 20 MB. Die minimale Bildgröße (Breite x Höhe) ist 100px x 100px.",
+    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
+    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "Your picture size is more than maximum size",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
@@ -638,7 +640,6 @@
     "list-a-bike-subheader": "Liste dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und verdien dir was dazu.",
     "newsletter-header": "Erhalte unseren Newsletter und bleib informiert",
     "newsletter-subheader": "Erhalte unseren handgefertigten Newsletter über neue Räder, Touren und Gutscheine für deine Fahrten.",
-    "newsletter-footer": "Du kannst dich jederzeit wieder abmelden.",
     "meta-title": "listnride - Die Bike-Sharing-Community",
     "meta-description": "Miete dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach deinem Stil und Einsatzzweck."
   },
@@ -665,7 +666,7 @@
     "invalid-date": "Datumsangabe nicht korrekt",
     "request-bike": "Rad anfragen",
     "to-request-bike-please": "um ein Rad anzufragen bitte",
-    "own-bike": "Du kannst nicht dein Rad anfragen",
+    "own-bike": "Du kannst nicht dein eigenes Rad anfragen",
     "log-in-to-request-title": "Einloggen oder Registrieren",
     "log-in-to-request-description": "Logge dich ein um das Rad anzufragen. Falls du noch kein Account hast, registriere dich einfach.",
     "select-timespan": "Wähle zuerst die Mietdauer",
@@ -713,7 +714,8 @@
       "notes": "Notes",
       "frame_size": "Rahmengröße",
       "bicycle_number": "Bicycle number",
-      "frame_number": "Frame number"
+      "frame_number": "Frame number",
+      "details": "Details"
     },
     "accessories": {
       "header": "Welche Zubehör kannst Du zu deinem Rad anbieten?",
@@ -780,8 +782,8 @@
       "price_7_days": "7 Tage (1 Woche)",
       "price_8_days": "ab 8 Tage",
       "price_8_days_long": "ab 8 Tage (pro Tag)",
-      "price_30_days": "30 Tage",
-      "price_30_days_long": "30 Tage (1 Monat)",
+      "price_30_days": "28 Tage",
+      "price_30_days_long": "28 Tage (1 Monat)",
       "reset-prices": "Zurücksetzen",
       "validations": {
         "required": {
@@ -795,7 +797,7 @@
         "dutch-bike": "Hollandrad",
         "touring-bike": "Touringrad",
         "fixie": "Fixie",
-        "single-speed": "Single Speed",
+        "single-speed": "Single Speed-Rad",
         "city-bike": "City Bike"
       },
       "2": {
@@ -869,8 +871,8 @@
     "show-as-list": "Als Liste anzeigen",
     "duplicate": {
       "duplicate": "Duplikat",
-      "how_many": "Wie viele Fahrräder?",
-      "header": "Doppeltes Fahrrad",
+      "how_many": "Wie viele zusätzliche Fahrräder?",
+      "header": "Dupliziere Fahrrad",
       "number_bikes": "Anzahl der Fahrräder",
       "maxlength": "Arbeitet für maximal 99 Fahrräder",
       "required": "Anzahl der Fahrräder ist erforderlich"
