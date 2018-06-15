@@ -770,7 +770,9 @@
     "subtitle": "Datum des Inkrafttretens: 24. Mai 2018",
     "description": "List and Ride verpflichtet sich zu starkem und transparentem Datenschutz. Unsere Datenschutzerklärung beschreibt, welche Nutzerinformationen wir über unseren Service erfassen. Wie wir diese Informationen verarbeiten und gegebenenfalls weitergeben. Die Maßnahmen, die wir ergreifen, um diese Informationen zu schützen. Die Möglichkeiten auf Zugriff, Aktualisierung und Entfernung personenbezogener Daten, falls erforderlich.<br>Hier kannst du unsere <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Datenschutzerklärung</a> zur Einsicht herunter laden.<br><br>Wenn du Fragen oder Anmerkungen zu unseren Datenschutzpraktiken oder dieser Datenschutzerklärung hast, kannst du uns unter <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> erreichen.",
     "meta-title": "Datenschutzerklärung von listnride",
-    "meta-description": "Die Datenschutzerklärung der Bike-Sharing-Community listnride bezieht sich auf die Nutzung der Onlineplattform."
+    "meta-description": "Die Datenschutzerklärung der Bike-Sharing-Community listnride bezieht sich auf die Nutzung der Onlineplattform.",
+    "ga-opt-out": "Google Analytics für diese Webseite deaktivieren",
+    "ga-opted-out": "Google Analytics ist deaktiviert."
   },
   "seo": {
     "cities-title": "Du planst zu reisen? Schau dir mehr Städte an:"
