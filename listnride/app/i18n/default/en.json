@@ -106,8 +106,8 @@
     "Dec": "Dec",
     "testimonials-header": "What are people saying?",
     "balance": "Balance",
-    "tac": "terms of use",
-    "privacy-policy": "privacy policy",
+    "tac": "Terms and Conditions",
+    "privacy-policy": "Privacy Policy",
     "booking-accept-tac": "By booking I accept the",
     "already-booked": "Already Booked",
     "for-shops": "For Bikeshops",
@@ -293,7 +293,7 @@
     "shopping": "Secure Shopping",
     "pay-secure": "Pay secure with",
     "agree-terms": "With 'Request Bike' you agree to the",
-    "agree-terms-link": "listnride terms",
+    "agree-terms-link": "listnride Terms",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
       "call-us": "Call us +49 (0)30-120870330, monday to friday 9-18pm. ",
@@ -353,7 +353,7 @@
       "payment": "Payment",
       "redeem-voucher": "Redeem Voucher",
       "add": "Add",
-      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-header": "Congratulations, you have just requested a bike!",
       "success-subheader": "We've sent you a confirmation email. Feel free to book more bikes, afterwards."
     },
     "calendar": {
@@ -582,16 +582,15 @@
     "sign-up": "Sign Up",
     "sign-up-to-book": "Sign up to book the bike",
     "sign-up-with-facebook": "Sign Up with Facebook",
-    "sign-up-divider-text": "accept our terms and conditions",
-    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
+    "sign-up-divider-text": "accept our Terms and Conditions",
+    "agree-terms-and-policy": "Please agree to our Terms and Conditions and Privacy Policy above.",
     "member-already": "Already signed up?",
     "business": "Bikeshop?",
     "description": "Description",
     "description_min_100": "Description should be min. 100 characters",
     "address": "Address",
     "profile-picture": "Profile Picture",
-    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
-    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
+    "profile-picture-info": "Consent for the use of the profile picture <br> By uploading my profile picture, I agree that listnride saves the profile picture as described in more detail in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>. I can delete my profile picture at any time. <br><br> Please upload only valid picture formats (jpg, jpeg, png). Maximum picture size is 20mb. Minimum picture dimension (width x height) is 100px x 100px",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "Your picture size is more than maximum size",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
@@ -605,9 +604,9 @@
     "update-contact": "Change Phone number",
     "update-contact-mobile": "Phone number",
     "company-contact-info": "Please fill form with company contact person information.",
-    "signing-up-accept-tac": "I hereby agree to the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Terms of Use</a> and agree to the collection, processing and use of my personal data as further described in the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>.",
-    "signing-up-accept-newsletter": "I would like to receive the listnride e-mail newsletter with interesting content on Cycling, Community updates and exclusive benefits. The <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>  of listnride applies. I can revoke my consent at any time.",
-    "privacy-policy": "The <a style=\"pointer-events: auto;\" href=\"/privacy\" target=\"_BLANK\">Privacy Policy </a> of listnride applies.",
+    "signing-up-accept-tac": "I hereby agree to the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Terms and Conditions</a> and agree to the collection, processing and use of my personal data as further described in the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>.",
+    "signing-up-accept-newsletter": "I would like to receive the listnride e-mail newsletter with interesting content on cycling, community updates and exclusive benefits. The <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>  of listnride applies. I can revoke my consent at any time.",
+    "privacy-policy": "The <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy </a> of listnride applies.",
     "errors": {
       "password-length": "Password should be 6-30 characters",
       "password-length-xs": "6-30 characters",
@@ -719,8 +718,7 @@
       "notes": "Notes",
       "frame_size": "Frame size",
       "bicycle_number": "Bicycle number",
-      "frame_number": "Frame number",
-      "details": "Details"
+      "frame_number": "Frame number"
     },
     "accessories": {
       "header": "What accessories does your bike have?",
@@ -787,8 +785,8 @@
       "price_7_days": "7 days (1 week)",
       "price_8_days": "8 days onwards",
       "price_8_days_long": "8 days onwards (per day)",
-      "price_30_days": "28 days",
-      "price_30_days_long": "28 days (1 month)",
+      "price_30_days": "30 days",
+      "price_30_days_long": "30 days (1 month)",
       "reset-prices": "Reset",
       "validations": {
         "required": {
