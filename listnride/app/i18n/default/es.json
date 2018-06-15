@@ -784,8 +784,8 @@
       "price_7_days": "7 días (1 semana)",
       "price_8_days": "de 8 días en adelante",
       "price_8_days_long": "de 8 días en adelante (por día)",
-      "price_30_days": "30 días ",
-      "price_30_days_long": "30 días (1 mes)",
+      "price_30_days": "28 días ",
+      "price_30_days_long": "28 días (1 mes)",
       "reset-prices": "Reajustar",
       "validations": {
         "required": {

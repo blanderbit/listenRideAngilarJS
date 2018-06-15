@@ -782,8 +782,8 @@
       "price_7_days": "7 dagen (1 week)",
       "price_8_days": "vanaf 8 dagen",
       "price_8_days_long": "vanaf 8 dagen (elke dag)",
-      "price_30_days": "30 dagen (1 maand)",
-      "price_30_days_long": "30 dagen (1 Monat)",
+      "price_30_days": "28 dagen (1 maand)",
+      "price_30_days_long": "28 dagen (1 Monat)",
       "reset-prices": "Zurücksetzen",
       "validations": {
         "required": {

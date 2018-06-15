@@ -787,8 +787,8 @@
       "price_7_days": "7 days (1 week)",
       "price_8_days": "8 days onwards",
       "price_8_days_long": "8 days onwards (per day)",
-      "price_30_days": "30 days",
-      "price_30_days_long": "30 days (1 month)",
+      "price_30_days": "28 days",
+      "price_30_days_long": "28 days (1 month)",
       "reset-prices": "Reset",
       "validations": {
         "required": {
