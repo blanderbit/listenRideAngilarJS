@@ -97,7 +97,7 @@
     },
     "text-2": {
       "title": "Werde auch Du Teil der listnride Business Community",
-      "description": "Registriere dich jetzt und richte sofort deine eigene Shop Seite ein. Oder kontaktiere uns persönlich. Gerne hilft dir Martin weiter, kontaktiere ihn via<br><a href=\"mailto:ml@listnride.com\">ml@listnride.com</a> oder 0171&nbsp;83&nbsp;13&nbsp;348"
+      "description": "Registriere dich jetzt und richte sofort deine eigene Shop Seite ein. Oder kontaktiere uns persönlich. Gerne hilft dir Tobi weiter, kontaktiere ihn via<br><a href=\"mailto:ml@listnride.com\">tk@listnride.com</a> "
     },
     "text-3": {
       "column-1": "listnride ist bereits jetzt schon Europas größte Bikesharing Community und so Spezialist für den privaten und gewerblichen Fahrradverleih.  Deshalb wissen wir wonach unsere KundInnen suchen und können sie direkt auf deine listnride Shop Seite leiten und ihnen den Weg in deinen Laden so einfach wie möglich machen.",
@@ -151,7 +151,7 @@
       "meta-description": "Fahre die Cyclassics Hamburg auf dem Rennrad deiner Träume! Wähle  Specialized, Ridley, Cervelo, Bianchi, sowie Simplon und miete es ganz bequem und einfach von Zuhause.",
       "title": "Miete dir einfach das perfekte Rennrad für den Cyclassics Hamburg",
       "text": "Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist. <br><br> Du kannst leider nicht bei den Cyclassics teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und vermiete dein Rad.",
-      "description": "wo: <b>Hamburg</b>  |  was: <b>Jedermannrennen 60, 120 or 180km</b>  |  wann: <b>20.08.2017</b>"
+      "description": "wo: <b>Hamburg</b>  |  was: <b>Jedermannrennen 60, 120 or 180km</b>  |  wann: <b>19.08.2017</b>"
     },
     "hamburg-triathlon": {
       "meta-title": "Miete dir einfach das perfekte Rennrad für den Triathlon Hamburg",
@@ -646,11 +646,10 @@
     "faq-answer-8": "Wir freuen uns über dein Interesse. Wenn du weitere Fragen hast, kontaktiere uns einfach unter <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a> und wir werden uns schnellstmöglich melden."
   },
   "terms-and-conditions": {
-    "title": "Terms and conditions",
-    "header": "Allgemeine Geschäftsbedingungen für die Online-Plattform listnride",
-    "download": "Hier zum download",
-    "description": "<a href=\"http://cdn.listnride.com/de/tacs.pdf\" target=\"_blank\">Sie können die AGBs hier anschauen und herunterladen.",
-    "subtitle": "Die List and Ride GmbH (im Folgenden „listnride“) vermittelt über die Webseite www.listnride.com (im Folgenden „Webseite“) Mietverträge über Fahrräder und andere Sport- und Freizeitausrüstung. Die nachfolgenden Allgemeinen Nutzungsbedingungen (im Folgenden „Nutzungsbedingungen“) im Abschnitt I. werden Bestandteil des Vertrages der zwischen dem Nutzer und listnride über die Vermittlungsleistung zustande kommt. Wird über die Webseite ein Vertrag über die Anmietung des Gebrauchsgegenstandes (im Folgenden „Mietvertrag“) geschlossen, kommt dieser zu den im Abschnitt II. genannten Allgemeinen Mietbedingungen (im Folgenden „Mietbedingungen“) zustande."
+    "title": "Nutzungsbedingungen",
+    "header": "List and Ride Allgemeine Geschäftsbedingungen",
+    "subheader": "Letzte Aktualisierung: 8. Juni 2018",
+    "subtitle": "Bitte lies die Allgemeinen Geschäftsbedingungen sorgfältig durch, da sie wichtige Informationen zu deinen vertraglichen Rechten und Pflichten enthalten. Durch die Nutzung der listnride-Plattform stimmst du diesen Bedingungen zu.<br><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/de/listnride_terms_2018.pdf\" target=\"_BLANK\">Hier kannst du die Allgemeinen Geschäftsbedingungen</a> zur Einsicht herunter laden.<br><br>Vielen Dank, dass du listnride nutzt!"
   },
   "trust-and-safety": {
     "title": "Vertrauen & Sicherheit",
@@ -659,7 +658,7 @@
     "guarantee-icon": "garantie_de",
     "guarantee": {
       "title": "Die Vermieter-Garantie von listnride",
-      "content": "listnride ist eine Community von Fahrradliebhabern. Aber hey, manchmal geht auch bei den Sorgsamsten was daneben. Deshalb haben wir die Vermieter-Garantie in petto: Wird Dein Fahrrad während der Mietzeit beschädigt oder gestohlen und kann Dein Mieter den Schaden nicht ersetzen, bietet sie Schutz bis zu einer Höhe von 5.000 EUR. Die Zahlungen unterliegen bestimmten Bedingungen, Einschränkungen und Ausnahmen. Bitte lese für weitere Details unsere <a class='lnr-link' ui-sref='terms'>Nutzungs- und Mietbedingungen</a>."
+      "content": "listnride ist eine Community von Fahrradliebhabern. Aber hey, manchmal geht auch bei den Sorgsamsten was daneben. Deshalb haben wir die Vermieter-Garantie in petto: Wird dein Fahrrad während der Mietzeit beschädigt oder gestohlen und kann dein Mieter den Schaden nicht ersetzen, bietet sie Schutz bis zu einer Höhe von 5.000 EUR. Die Zahlungen unterliegen bestimmten Bedingungen, Einschränkungen und Ausnahmen. Bitte lies für weitere Details unsere <a class=\"lnr-link\" ui-sref=\"terms\">Nutzungs- und Mietbedingungen</a>."
     },
     "responsibility": {
       "title": "Verantwortungsvoller Umgang mit Deinen Daten",
@@ -746,7 +745,7 @@
     },
     "feature-3": {
       "title": "Mehr Zeit für dein Geschäft",
-      "description": "Mit unserem System übernehmen wir alle wichtigen Aspekte der Vermietung für dich. Vorbei ist die Zeit in der du dich mit Papierkram herumschlagen musst. Wir kümmern uns um die Bezahlung, die Verwaltug der Räder und die Rechnungslegung. Zu dem bieten wir dir ein übersichtliches Dashboard, über das du beqeum die Übersicht behältst."
+      "description": "Die listnride Nutzungsbedingungen enthalten alle wichtigen Details eines Mietvertrages. Hier wird erklärt, dass in dem Moment, in dem das Fahrrad an den Fahrer übergeben wird, jegliche Haftung und Verantwortung bei ihm liegt. Also, kein Papierkram mehr nötig. Darüber hinaus verfügst du über ein übersichtliches Dashboard mit den notwendigen Übersichten über deine offenen Anfragen, Mieten, Rechnungen und getätigten Einnahmen. Melde dich einfach in deinem Konto an."
     },
     "join-now": "Mach mit. Das Plugin ist kostenlos.",
     "join-now-description": "Willst du mehr erfahren?",
@@ -769,9 +768,11 @@
   "privacy": {
     "title": "List and Ride Datenschutzerklärung",
     "subtitle": "Datum des Inkrafttretens: 24. Mai 2018",
-    "description": "List and Ride verpflichtet sich zu starkem und transparentem Datenschutz. Unsere Datenschutzerklärung beschreibt, welche Nutzerinformationen wir über unseren Service erfassen. Wie wir diese Informationen verarbeiten und gegebenenfalls weitergeben. Die Maßnahmen, die wir ergreifen, um diese Informationen zu schützen. Die Möglichkeiten auf Zugriff, Aktualisierung und Entfernung personenbezogener Daten, falls erforderlich.<br>Hier können Sie unsere <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Datenschutzerklärung</a> zur Einsicht herunter laden.<br><br>Wenn du Fragen oder Anmerkungen zu unseren Datenschutzpraktiken oder dieser Datenschutzerklärung hast, kannst du uns unter <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> erreichen.",
-    "meta-title": "Datenschutzrichtlinien von listnride",
-    "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform."
+    "description": "List and Ride verpflichtet sich zu starkem und transparentem Datenschutz. Unsere Datenschutzerklärung beschreibt, welche Nutzerinformationen wir über unseren Service erfassen. Wie wir diese Informationen verarbeiten und gegebenenfalls weitergeben. Die Maßnahmen, die wir ergreifen, um diese Informationen zu schützen. Die Möglichkeiten auf Zugriff, Aktualisierung und Entfernung personenbezogener Daten, falls erforderlich.<br>Hier kannst du unsere <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Datenschutzerklärung</a> zur Einsicht herunter laden.<br><br>Wenn du Fragen oder Anmerkungen zu unseren Datenschutzpraktiken oder dieser Datenschutzerklärung hast, kannst du uns unter <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> erreichen.",
+    "meta-title": "Datenschutzerklärung von listnride",
+    "meta-description": "Die Datenschutzerklärung der Bike-Sharing-Community listnride bezieht sich auf die Nutzung der Onlineplattform.",
+    "ga-opt-out": "Google Analytics für diese Webseite deaktivieren",
+    "ga-opted-out": "Google Analytics ist deaktiviert."
   },
   "seo": {
     "cities-title": "Du planst zu reisen? Schau dir mehr Städte an:"

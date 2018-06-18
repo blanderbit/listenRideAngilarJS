@@ -526,7 +526,7 @@
         "question-3": "Cosa succede se la mia bicicletta viene rubata o danneggiata?",
         "answer-3": "Il furto della bicicletta può accadere. Tuttavia, la bicicletta è meno probabile che venga rubata se è correttamente bloccata e / o  riposta in casa. Aiuta a prevenire il furto fornendo una serratura sicura con la tua bicicletta. Nel caso in cui qualcosa va storto, il noleggiante sarà responsabile di tutti i costi derivanti da eventuali danni e / o furti. Se la tua bicicletta è stata rubata e / o danneggiata durante il periodo di noleggio, dovresti contattarci tramite il nostro sito web facendo clic su \"Contattaci\". Una volta chiarita la situazione, ti contatteremo per risolvere il problema. Se è stata rubata e il noleggiante non può pagare i danni, la garanzia listnride assicurerà che tutto sia coperto! Se la bicicletta è stata rubata mentre non è stata noleggiata tramite listnride, tuttavia non possiamo aiutare a risolvere il problema. In questo caso è necessario risolvere il problema direttamente con il noleggiante.",
         "question-4": "Cosa succede se il noleggiante o qualcun altro viene ferito e / o il mezzo viene danneggiato durante il periodo di noleggio?",
-        "answer-4": "Assicurati che la tua bicicletta sia in buone condizioni quando la consegni. Ciò è vantaggioso per entrambe le parti: il noleggiante avrà una bella esperienza e riceverai un punteggio positivo dopo che la bicicletta sarà stata restituita. Quando si prenota una bicicletta attraverso la lista, il noleggiatore accetta i termini e le condizioni applicabili. Questi termini e condizioni offrono protezione contro la responsabilità per eventuali lesioni del noleggiante e / o danni ai loro mezzi o di qualcun altro. Come noleggiatore, non sarai mai responsabile se il noleggiante viene ferito durante un giro.",
+        "answer-4": "Assicurati che la tua bicicletta sia in buone condizioni quando la consegni. Ciò è vantaggioso per entrambe le parti: il noleggiante avrà una bella esperienza e riceverai un valutazione positiva dopo che la bicicletta sarà stata restituita. Quando si prenota una bicicletta attraverso la lista, il noleggiante accetta i termini e le condizioni applicabili. Questi Termini e Condizioni offrono protezione contro la responsabilità per eventuali lesioni del noleggiante e / o danni ai loro mezzi o di qualcun altro. Come noleggiatore, non sarai mai responsabile se il noleggiante viene ferito durante un giro.",
         "question-5": "Cosa succede se il noleggiante non si presenta come concordato a ritirare la mia bicicletta ?",
         "answer-5": "A volte il noleggiante potrebbe avere difficoltà a raggiungere la località concordata. Un po' di flessibilità da parte tua è essenziale. Tuttavia, se le cose stanno prendendo troppo tempo e hai provato a contattarlo - sia tramite la chat in diretta o direttamente per telefono - ma non risponde, ti preghiamo di annullare il noleggio inviando al noleggiante un messaggio chat e descrivere il motivo della cancellazione.",
         "question-6": "Come posso offrire la mia bicicletta per il noleggio ?",
@@ -640,11 +640,10 @@
     "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
   },
   "terms-and-conditions": {
-    "title": "Termini e Condizioni",
-    "header": "Condizioni generali per la piattaforma online listnride",
-    "download": "Scarica qui",
-    "description": "<a href=\"http://cdn.listnride.com/en/tacs.pdf\" target=\"_blank\">Qui puoi visualizzare e scaricare le condizioni generali",
-    "subtitle": "List and Ride GmbH (di seguito \"listnride\") organizza contratti di locazione per biciclette e altre attrezzature per lo sport e il tempo libero attraverso il sito www.listnride.com (di seguito \"Sito web\"). I seguenti Termini e Condizioni Generali di Utilizzo (di seguito \"Termini di Utilizzo\") nella Sezione I rientreranno nell'accordo concluso tra l'utente e listnride nel rispetto del servizio di disposizione. Qualsiasi accordo per il noleggio dell'oggetto utilizzato (di seguito \"contratto di noleggio\") concluso tramite il sito web deve essere conforme alle condizioni generali di noleggio (di seguito \"termini di noleggio\") specificati nella sezione II."
+    "title": "Termini e Condizioni ",
+    "header": "List and Ride Termini e Condizioni generali di contratto",
+    "subheader": "Ultimo aggiornamento: 8 giugno 2018",
+    "subtitle": "Si prega di leggere attentamente i presenti Termini in quanto contengono informazioni importanti sui vostri diritti, rimedi e obblighi legali. Utilizzando la piattaforma listnride, accetti di rispettare i presenti Termini.<br><br>Qui puoi scaricare e leggere i nostri <a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\"> Termini e Condizioni generali di contratto.</a><br><br>Grazie per aver utilizzato listnride!"
   },
   "trust-and-safety": {
     "title": "Fiducia e Sicurezza",
@@ -653,7 +652,7 @@
     "guarantee-icon": "garantie_it",
     "guarantee": {
       "title": "La garanzia dei noleggiatori di listnride",
-      "content": "Listnride è una comunità di appassionati per la bicicletta. Ma ehi, a volte le cose vanno male, non importa quanto stai attento. Per questo motivo abbiamo la nostra garanzia per i noleggiatori: Se la tua bicicletta viene danneggiata o rubata durante il noleggio e il noleggiante non può pagare il rimborso, la garanzia garantisce una copertura fino a 5.000 euro. I pagamenti sono soggetti a determinate condizioni, limitazioni ed eccezioni. Per ulteriori informazioni, fai riferimento ai nostri termini e condizioni per il noleggio <a class=\"lnr-link\" ui-sref=\"terms\"></a>."
+      "content": "Listnride è una comunità di appassionati per la bicicletta. Ma ehi, a volte le cose vanno male, non importa quanto stai attento. Per questo motivo abbiamo la nostra garanzia per i noleggiatori: Se la tua bicicletta viene danneggiata o rubata durante il noleggio e il noleggiante non può pagare il rimborso, la garanzia garantisce una copertura fino a 5.000 euro. I pagamenti sono soggetti a determinate condizioni, limitazioni ed eccezioni. Per ulteriori informazioni, fai riferimento ai nostri Termini e Condizioni per il noleggio <a class=\"lnr-link\" ui-sref=\"terms\"></a>."
     },
     "responsibility": {
       "title": "Trattiamo i tuoi dati in modo responsabile",
@@ -740,7 +739,7 @@
     },
     "feature-3": {
       "title": "Concentrati sul tuo business",
-      "description": "I termini e le condizioni listnride coprono tutti i dettagli importanti di un contratto di noleggio. Qui è indicato che nel momento in cui la bicicletta viene consegnata al noleggiante, tutte le responsabilità ricadono su di lui. Quindi, non occorrono più documenti cartacei. Inoltre, avrai una tabella riassuntiva con tutte le vostre richieste aperte, noleggi, fatture e ricavi. Solo accedendo al tuo profilo."
+      "description": "I Termini e Condizioni di listnride coprono tutti i dettagli importanti di un contratto di noleggio. Qui è indicato che nel momento in cui la bicicletta viene consegnata al noleggiante, tutte le responsabilità ricadono su di lui. Quindi, non occorrono più documenti cartacei. Inoltre, avrai una tabella riassuntiva con tutte le vostre richieste aperte, noleggi, fatture e ricavi. Solo accedendo al tuo profilo."
     },
     "join-now": "Unisciti a noi, è gratuito",
     "join-now-description": "Interessato a saperne di più e ad iniziare?",
@@ -763,9 +762,9 @@
   "privacy": {
     "title": "List and Ride Informativa sulla Privacy",
     "subtitle": "Data di entrata in vigore: 24 Maggio 2018",
-    "description": "List and Ride si impegna a rispettare le norme sulla privacy in maniera trasparente. La nostra Informativa sulla privacy descrive le informazioni sull'utente che raccogliamo attraverso i nostri Servizi. Come utilizziamo e divulghiamo queste informazioni. Le misure che adottiamo per proteggere tali informazioni. Le scelte che offriamo, tra cui come accedere, aggiornare e rimuovere i dati personali.<br>Si prega di scaricare la nostra <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Informativa sulla privacy</a> e di leggerla attentamente.<br><br>Contattateci per qualsiasi domanda o commento sulle nostre pratiche sulla privacy o sulla presente Informativa sulla privacy. Potete contattarci online all'indirizzo: <a href=\"mailto: privacy@listnride.com\">privacy@listnride.com</a>.",
-    "meta-title": "Politica sulla privacy di listnride",
-    "meta-description": "La Politica sulla privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online."
+    "description": "List and Ride si impegna a rispettare le norme sulla privacy in maniera trasparente. La nostra Informativa sulla Privacy descrive le informazioni sull'utente che raccogliamo attraverso i nostri Servizi. Come utilizziamo e divulghiamo queste informazioni. Le misure che adottiamo per proteggere tali informazioni. Le scelte che offriamo, tra cui come accedere, aggiornare e rimuovere i dati personali.<br>Si prega di scaricare la nostra <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Informativa sulla Privacy</a> e di leggerla attentamente.<br><br>Contattateci per qualsiasi domanda o commento sulle nostre pratiche sulla privacy o sulla presente Informativa sulla Privacy. Potete contattarci online all'indirizzo: <a href=\"mailto: privacy@listnride.com\">privacy@listnride.com</a>.",
+    "meta-title": "Informativa sulla Privacy di listnride",
+    "meta-description": "L'Informativa sulla Privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online."
   },
   "seo": {
     "cities-title": "Planning to Travel? Check out more cities:"

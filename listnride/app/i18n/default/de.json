@@ -13,7 +13,7 @@
     "top-cities": "Beliebte Städte",
     "berlin": "Berlin",
     "dortmund": "Dortmund",
-    "milan": "Milan",
+    "milan": "Mailand",
     "munich": "München",
     "nuremberg": "Nürnberg",
     "amsterdam": "Amsterdam",
@@ -258,8 +258,8 @@
       "meta-description": "Besuche Seedrs und erfahre wie du in listnride investieren kannst."
     },
     "terms-and-conditions": {
-      "meta-title": "listnride | Website Terms & Conditions",
-      "meta-description": "The Terms and Conditions of the Bike-Sharing-Community listnride apply to the use of the online platform."
+      "meta-title": "listnride | Website Nutzungsbedingungen",
+      "meta-description": "Die Nutzungsbedingungen der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Online-Plattform."
     },
     "trust-and-safety": {
       "meta-title": "Sichere Fahrradvermietung – listnride gibt Dir Rückendeckung",
@@ -282,8 +282,8 @@
       "meta-description": "Miete dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
     },
     "privacy": {
-      "meta-title": "Datenschutzrichtlinien von listnride",
-      "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform.",
+      "meta-title": "Datenschutzerklärung von listnride",
+      "meta-description": "Die Datenschutzerklärung der Bike-Sharing-Community listnride bezieht sich auf die Nutzung der Onlineplattform.",
       "use-opt-in": "Um dir mit listnride einen perfekten Service zu bieten, setzen wir Cookies gemäß unserer <a target=\"_blank\" href=\"/#/privacy\">Cookie-Richtlinie ein</a>.",
       "use-opt-in-button": "Hab ich verstanden."
     }
@@ -352,7 +352,7 @@
       "payment": "Zahlungsmethode",
       "redeem-voucher": "Rabattcode einlösen",
       "add": "Ok",
-      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-header": "Glückwunsch, du hast gerade ein Rad angefragt!",
       "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
@@ -470,7 +470,7 @@
     "5": {
       "title": "Was ist deine Nummer",
       "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst.",
-      "enter-valid-phone-nr": "Bitte gib eine valide Telefonnummer an",
+      "enter-valid-phone-nr": "Gib eine gültige Telefonnr. an",
       "send-confirmation-sms": "Bestätigungs-SMS schicken",
       "send-confirmation-sms-mobile": "Code schicken",
       "resend-confirmation-sms": "Erneut schicken",
@@ -578,8 +578,8 @@
     "sign-up": "Registrieren",
     "sign-up-to-book": "Registrieren, um das Rad zu leihen",
     "sign-up-with-facebook": "Mit Facebook registrieren",
-    "sign-up-divider-text": "accept our terms and conditions",
-    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
+    "sign-up-divider-text": "akzeptiere unsere Nutzungsbedingungen",
+    "agree-terms-and-policy": "Bitte stimme unseren Nutzungsbedingungen und unserer Datenschutzerklärung zu.",
     "member-already": "Bereits registriert?",
     "business": "Fahrradgeschäft?",
     "description": "Beschreibung",
@@ -600,8 +600,8 @@
     "update-contact": "Handynummer ändern",
     "update-contact-mobile": "Handynummer",
     "company-contact-info": "Bitte trage die Daten der Kontaktperson des Unternehmens ein.",
-    "signing-up-accept-tac": "Ich stimme hiermit den <a style=\"pointer-events: auto;\" href=\"/#/terms\">Nutzungsbedingungen</a> zu und willige in die Erhebung, Verarbeitung und Nutzung meiner personenbezogenen Daten ein, wie in der <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> näher beschrieben.",
-    "signing-up-accept-newsletter": "Ich möchte den E-Mail-Newsletter von listnride mit handverlesenen Themen über neue Räder, Touren und Gutscheine erhalten. Es gilt die <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> von listnride. Ich kann meine Einwilligung jederzeit widerrufen.",
+    "signing-up-accept-tac": "Ich stimme hiermit den <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Nutzungsbedingungen</a> zu und willige in die Erhebung, Verarbeitung und Nutzung meiner personenbezogenen Daten ein, wie in der <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> näher beschrieben.",
+    "signing-up-accept-newsletter": "Ich möchte den E-Mail-Newsletter von listnride mit handverlesenen Themen über neue Räder, Touren und Gutscheine erhalten. Es gilt die <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> von listnride. Ich kann meine Einwilligung jederzeit widerrufen.",
     "privacy-policy": "Es gilt die <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> von listnride.",
     "errors": {
       "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
@@ -639,7 +639,6 @@
     "list-a-bike-subheader": "Liste dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und verdien dir was dazu.",
     "newsletter-header": "Erhalte unseren Newsletter und bleib informiert",
     "newsletter-subheader": "Erhalte unseren handgefertigten Newsletter über neue Räder, Touren und Gutscheine für deine Fahrten.",
-    "newsletter-footer": "Du kannst dich jederzeit wieder abmelden.",
     "meta-title": "listnride - Die Bike-Sharing-Community",
     "meta-description": "Miete dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach deinem Stil und Einsatzzweck."
   },
@@ -666,7 +665,7 @@
     "invalid-date": "Datumsangabe nicht korrekt",
     "request-bike": "Rad anfragen",
     "to-request-bike-please": "um ein Rad anzufragen bitte",
-    "own-bike": "Du kannst nicht dein Rad anfragen",
+    "own-bike": "Du kannst nicht dein eigenes Rad anfragen",
     "log-in-to-request-title": "Einloggen oder Registrieren",
     "log-in-to-request-description": "Logge dich ein um das Rad anzufragen. Falls du noch kein Account hast, registriere dich einfach.",
     "select-timespan": "Wähle zuerst die Mietdauer",
@@ -796,7 +795,7 @@
         "dutch-bike": "Hollandrad",
         "touring-bike": "Touringrad",
         "fixie": "Fixie",
-        "single-speed": "Single Speed",
+        "single-speed": "Single Speed-Rad",
         "city-bike": "City Bike"
       },
       "2": {
@@ -870,8 +869,8 @@
     "show-as-list": "Als Liste anzeigen",
     "duplicate": {
       "duplicate": "Duplikat",
-      "how_many": "Wie viele Fahrräder?",
-      "header": "Doppeltes Fahrrad",
+      "how_many": "Wie viele zusätzliche Fahrräder?",
+      "header": "Dupliziere Fahrrad",
       "number_bikes": "Anzahl der Fahrräder",
       "maxlength": "Arbeitet für maximal 99 Fahrräder",
       "required": "Anzahl der Fahrräder ist erforderlich"

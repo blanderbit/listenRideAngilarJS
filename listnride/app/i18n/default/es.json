@@ -14,7 +14,7 @@
     "top-cities": "Ciudades principales",
     "berlin": "Berlín",
     "dortmund": "Dortmund",
-    "milan": "Milan",
+    "milan": "Milán",
     "munich": "Múnich",
     "nuremberg": "Nuremberg",
     "amsterdam": "Ámsterdam",
@@ -107,7 +107,7 @@
     "testimonials-header": "¿Qué opina la gente?",
     "balance": "Saldo",
     "tac": "términos y condiciones",
-    "privacy-policy": "política de privacidad",
+    "privacy-policy": "Política de Privacidad",
     "booking-accept-tac": "Al reservar, acepto ",
     "already-booked": "Ya alquilada",
     "for-shops": "Para tiendas de bicis",
@@ -283,7 +283,7 @@
     },
     "privacy": {
       "meta-title": "Política de privacidad de listnride",
-      "meta-description": "La política de privacidad de la comunidad para compartir bicis de listnride se aplica al uso de la plataforma online",
+      "meta-description": "La Política de Privacidad de la comunidad para compartir bicis de  listnride se aplica al uso de la plataforma online",
       "use-opt-in": "Para ofrecerte el servicio perfecto con listnride, utilizamos cookies de acuerdo con nuestra <a target=\"_blank\" href=\"/#/privacy\">Política de Cookies</a>.",
       "use-opt-in-button": "OK."
     }
@@ -352,7 +352,7 @@
       "payment": "Pagamento",
       "redeem-voucher": "Canjear vale",
       "add": "OK",
-      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-header": "¡Enhorabuena, acabas de solicitar una bicicleta!",
       "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
@@ -581,8 +581,8 @@
     "sign-up": "Registrarse ",
     "sign-up-to-book": "Regístrate para reservar la bici",
     "sign-up-with-facebook": "Registrarse con facebook",
-    "sign-up-divider-text": "accept our terms and conditions",
-    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
+    "sign-up-divider-text": "Acepta nuestros términos y condiciones",
+    "agree-terms-and-policy": "Por favor, acepte nuestros Términos y Condiciones y Política de Privacidad.",
     "member-already": "¿Ya estás registrado?",
     "business": "¿Tienda de bicis?",
     "description": "Descripción",
@@ -602,8 +602,8 @@
     "update-contact": "Cambiar número de teléfono",
     "update-contact-mobile": "Número de teléfono",
     "company-contact-info": "Completa el formulario con la información de contacto de la empresa.",
-    "signing-up-accept-tac": "He leído y acepto los <a style=\"pointer-events: auto;\" href=\"/#/terms\">Términos y Condiciones</a> y acepto la recolección, tratamiento y uso de mis datos personales establecidos por la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a>.",
-    "signing-up-accept-newsletter": "Deseo recibir información sobre nuevas bicicletas, tours y cupones de descuento. Acepto las condiciones establecidas en la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride. Puedo revocar mi consentimiento en cualquier momento.",
+    "signing-up-accept-tac": "He leído y acepto los <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Términos y Condiciones</a> y acepto la recolección, tratamiento y uso de mis datos personales establecidos por la <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a>.",
+    "signing-up-accept-newsletter": "Deseo recibir información sobre nuevas bicicletas, tours y cupones de descuento. Acepto las condiciones establecidas en la <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride. Puedo revocar mi consentimiento en cualquier momento.",
     "privacy-policy": "Se aplica la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride.",
     "errors": {
       "password-length": "La contraseña debe tener entre 6 y 30 caracteres",

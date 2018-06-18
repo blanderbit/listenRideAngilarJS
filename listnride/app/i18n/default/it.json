@@ -14,6 +14,7 @@
     "top-cities": "Le principali città",
     "berlin": "Berlino",
     "dortmund": "Dortmund",
+    "milan": "Milano",
     "munich": "Monaco di Baviera",
     "nuremberg": "Norimberga",
     "amsterdam": "Amsterdam",
@@ -104,8 +105,8 @@
     "Dec": "Dic",
     "testimonials-header": "Che cosa dicono le persone?",
     "balance": "Saldo",
-    "tac": "condizioni d'uso",
-    "privacy-policy": "sulla privacy",
+    "tac": "Termini e Condizioni ",
+    "privacy-policy": "Informativa sulla Privacy",
     "booking-accept-tac": "Con la prenotazione accetto il",
     "already-booked": "Già prenotato",
     "for-shops": "Per i  negozi di biciclette",
@@ -251,7 +252,7 @@
     },
     "terms-and-conditions": {
       "meta-title": "listnride | Termini e condizioni del sito",
-      "meta-description": "I termini e le condizioni della comunità bike sharing di listnride si applicano all'uso della piattaforma online."
+      "meta-description": "I Termini e Condizioni della comunità bike sharing di listnride si applicano all'uso della piattaforma online."
     },
     "trust-and-safety": {
       "meta-title": "Il Noleggio di biciclette è sicuro - listnride ti tutela",
@@ -274,8 +275,8 @@
       "meta-description": "Noleggia la bicicletta perfetta nella comunità listnride. Trovane una che si adatti al tuo stile e alle tue esigenze."
     },
     "privacy": {
-      "meta-title": "Politica sulla privacy di listnride",
-      "meta-description": "La Politica sulla privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online.",
+      "meta-title": "Informativa sulla Privacy di listnride",
+      "meta-description": "La Politica sulla Privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online.",
       "use-opt-in": "Per offrirti con listnride un servizio perfetto, utilizziamo dei Cookies conformemente alla nostra <a target=\"_blank\" href=\"/#/privacy\">Normativa sui Cookies</a>.",
       "use-opt-in-button": "Ho capito."
     }
@@ -343,7 +344,7 @@
       "payment": "Pagamento",
       "redeem-voucher": "Buono sconto",
       "add": "Ok",
-      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-header": "Congratulazioni, hai appena richiesto una bici!",
       "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
@@ -572,8 +573,8 @@
     "sign-up": "Iscriviti",
     "sign-up-to-book": "Iscriviti per prenotare la bicicletta ",
     "sign-up-with-facebook": "Iscriviti tramite facebook",
-    "sign-up-divider-text": "accept our terms and conditions",
-    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
+    "sign-up-divider-text": "Accetta i nostri Termini e Condizioni ",
+    "agree-terms-and-policy": "Si prega di accettare i nostri Termini e Condizioni e l'Informativa sulla Privacy. ",
     "member-already": "Sei già iscritto?",
     "business": "Negozio di biciclette?",
     "description": "Descrizione",
@@ -593,8 +594,8 @@
     "update-contact": "Aggiorna contatto",
     "update-contact-mobile": "Contatto",
     "company-contact-info": "Si prega di compilare il modulo con le informazioni relative alla persona di contatto dell'azienda.",
-    "signing-up-accept-tac": "Desidero ricevere la newsletter via e-mail di listnride sulle nuove biciclette, tours e vouchers. Si applica <a style=\"pointer-events: auto;\" href=\"/#/privacy\">l'Informativa sulla Privacy</a> di listnride. Posso revocare il mio consenso in qualsiasi momento.",
-    "signing-up-accept-newsletter": "Accetto le <a style=\"pointer-events: auto;\" href=\"/#/terms\">Condizioni d'uso</a> e accetto la raccolta, l'elaborazione e l'utilizzo dei miei dati personali come descritto nell'<a style=\"pointer-events: auto;\" href=\"/#/privacy\">Informativa sulla Privacy</a>.",
+    "signing-up-accept-tac": "Accetto i <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Termini e Condizioni </a>e acconsento alla raccolta, all'elaborazione e all'utilizzo dei miei dati personali come ulteriormente descritto nella <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\"> Informativa sulla Privacy </a>.",
+    "signing-up-accept-newsletter": "Desidero ricevere la newsletter via e-mail di listnride con contenuti interessanti su nuove bici, tour e sconti esclusivi. Si applica l' <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\"> Informativa sulla privacy </a>di listnride. Posso revocare il mio consenso in qualsiasi momento.",
     "privacy-policy": "Si applica <a style=\"pointer-events: auto;\" href=\"/#/privacy\">l'Informativa sulla Privacy</a> di listnride.",
     "errors": {
       "password-length": "La password deve essere tra i 6-30 caratteri",

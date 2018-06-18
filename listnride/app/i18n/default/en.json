@@ -106,8 +106,8 @@
     "Dec": "Dec",
     "testimonials-header": "What are people saying?",
     "balance": "Balance",
-    "tac": "terms of use",
-    "privacy-policy": "privacy policy",
+    "tac": "Terms and Conditions",
+    "privacy-policy": "Privacy Policy",
     "booking-accept-tac": "By booking I accept the",
     "already-booked": "Already Booked",
     "for-shops": "For Bikeshops",
@@ -284,7 +284,7 @@
     },
     "privacy": {
       "meta-title": "Privacy Policy of listnride",
-      "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform.",
+      "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride applies to the use of the online platform.",
       "use-opt-in": "To provide you with the perfect service with listnride, we use cookies in accordance with our <a target=\"_blank\" href=\"/#/privacy\">Cookie Policy</a>.",
       "use-opt-in-button": "I got that."
     }
@@ -293,7 +293,7 @@
     "shopping": "Secure Shopping",
     "pay-secure": "Pay secure with",
     "agree-terms": "With 'Request Bike' you agree to the",
-    "agree-terms-link": "listnride terms",
+    "agree-terms-link": "listnride Terms",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
       "call-us": "Call us +49 (0)30-120870330, monday to friday 9-18pm. ",
@@ -353,7 +353,7 @@
       "payment": "Payment",
       "redeem-voucher": "Redeem Voucher",
       "add": "Add",
-      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-header": "Congratulations, you have just requested a bike!",
       "success-subheader": "We've sent you a confirmation email. Feel free to book more bikes, afterwards."
     },
     "calendar": {
@@ -472,7 +472,7 @@
     "5": {
       "title": "What is your phone number",
       "description": "Verify your phone number, this allows SMS notifications for your requests. Simply enter your number and click 'Send Confirmation'. You'll receive a code via SMS that you can then enter below.",
-      "enter-valid-phone-nr": "Please enter a valid phone number",
+      "enter-valid-phone-nr": "Enter a valid phone number",
       "send-confirmation-sms": "Send Confirmation",
       "send-confirmation-sms-mobile": "Send SMS Code",
       "resend-confirmation-sms": "Resend confirmation",
@@ -582,9 +582,9 @@
     "log-out": "Log Out",
     "sign-up": "Sign Up",
     "sign-up-to-book": "Sign up to book the bike",
-    "sign-up-with-facebook": "Sign Up with facebook",
-    "sign-up-divider-text": "accept our terms and conditions",
-    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
+    "sign-up-with-facebook": "Sign Up with Facebook",
+    "sign-up-divider-text": "accept our Terms and Conditions",
+    "agree-terms-and-policy": "Please agree to our Terms and Conditions and Privacy Policy above.",
     "member-already": "Already signed up?",
     "business": "Bikeshop?",
     "description": "Description",
@@ -605,8 +605,8 @@
     "update-contact": "Change Phone number",
     "update-contact-mobile": "Phone number",
     "company-contact-info": "Please fill form with company contact person information.",
-    "signing-up-accept-tac": "I hereby agree to the <a style=\"pointer-events: auto;\" href=\"/#/terms\">Terms of Use</a> and agree to the collection, processing and use of my personal data as further described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>.",
-    "signing-up-accept-newsletter": "I would like to receive the listnride e-mail newsletter with interesting content on Cycling, Community updates and exclusive benefits. The <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>  of listnride applies. I can revoke my consent at any time.",
+    "signing-up-accept-tac": "I hereby agree to the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Terms and Conditions</a> and agree to the collection, processing and use of my personal data as further described in the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>.",
+    "signing-up-accept-newsletter": "I would like to receive the listnride e-mail newsletter with interesting content on cycling, community updates and exclusive benefits. The <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>  of listnride applies. I can revoke my consent at any time.",
     "privacy-policy": "The <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy </a> of listnride applies.",
     "errors": {
       "password-length": "Password should be 6-30 characters",
@@ -694,7 +694,7 @@
       "label": "Category",
       "city": "City",
       "race": "Race",
-      "all-terrain": "All terrain",
+      "all-terrain": "All Terrain",
       "kids": "Kids",
       "electro": "Electro",
       "special": "Special",
@@ -801,7 +801,7 @@
         "dutch-bike": "Dutch Bike",
         "touring-bike": "Touring Bike",
         "fixie": "Fixie",
-        "single-speed": "Single Speed",
+        "single-speed": "Single Speed Bike",
         "city-bike": "City Bike"
       },
       "2": {
@@ -875,7 +875,7 @@
     "show-as-list": "Show as List",
     "duplicate": {
       "duplicate": "Duplicate",
-      "how_many": "How many bikes?",
+      "how_many": "How many additional bikes?",
       "header": "Duplicate Bike",
       "number_bikes": "Number of bikes",
       "maxlength": "Works for maximum 99 bikes",

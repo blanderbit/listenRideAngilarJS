@@ -3,6 +3,7 @@
     <div class="md-dialog-content" layout="column" ng-style="{'display': verificationDialog.loaded ? '' : 'none'}">
       <md-tabs
         class="content"
+        layout="column"
         md-dynamic-height
         md-no-pagination
         md-no-ink
@@ -99,6 +100,8 @@
                 </div>
               </form>
               <br>
+              <p data-ng-bind-html="'forms.profile-picture-info' | translate"></p>
+              <p class="md-caption" data-ng-bind-html="'forms.profile-picture-info-policy' | translate"></p>
             </div>
           </div>
         </md-tab>
@@ -229,100 +232,10 @@
                 {{ 'verification.private' | translate }}
               </div>
             </div>
+            <div layout="row" layout-align="center center">
+              <address-input flex flex-gt-xs="80" address="verificationDialog.address" valid-address="verificationDialog.validAddress"></address-input>
+            </div>
 
-            <form
-              name="verificationDialog.addressForm"
-              layout="column"
-              class="md-body-1"
-              ng-class="verificationDialog.mobileScreen ? '' : 'md-body-desktop'"
-            >
-              <div layout="row" class="lnr-input-containers">
-                <autocomplete
-                  flex
-                  autocomplete-id="verificationDialog"
-                  layout="column"
-                  location="verificationDialog.newUser.street"
-                  required="true"
-                  class="md-block"
-                  label-id=""
-                  placeholder-id="{{ 'list.location.street-number' | translate }}"
-                  place-changed="verificationDialog.fillAddress(place)">
-                </autocomplete>
-                <md-input-container md-no-float flex="25">
-                  <input
-                    required
-                    name="street-number"
-                    ng-model="verificationDialog.newUser.streetNumber"
-                    placeholder="{{ 'forms.streetnumber' | translate }}"
-                  >
-                  <div ng-messages="verificationDialog.addressForm.streetNumber.$error" role="alert">
-                    <div ng-message="required">{{ 'shared.required' | translate }}</div>
-                  </div>
-                </md-input-container>
-              </div>
-
-              <div class="lnr-input-containers" layout="row" hide-xs>
-                <md-input-container md-no-float flex>
-                  <input
-                    required
-                    name="zip"
-                    ng-model="verificationDialog.newUser.zip"
-                    placeholder="{{ 'list.location.zip' | translate }}"
-                  >
-                  <div ng-messages="verificationDialog.addressForm.zip.$error" role="alert">
-                    <div ng-message="required">{{ 'shared.required' | translate }}</div>
-                  </div>
-                </md-input-container>
-
-                <md-input-container md-no-float flex>
-                  <input
-                    required
-                    name="city"
-                    ng-model="verificationDialog.newUser.city"
-                    placeholder="{{ 'list.location.city' | translate }}"
-                  >
-                  <div ng-messages="verificationDialog.addressForm.city.$error" role="alert">
-                    <div ng-message="required">{{ 'shared.required' | translate }}</div>
-                  </div>
-                </md-input-container>
-              </div>
-
-              <md-input-container md-no-float hide show-xs>
-                <input
-                  required
-                  name="zip"
-                  ng-model="verificationDialog.newUser.zip"
-                  placeholder="{{ 'list.location.zip' | translate }}"
-                >
-                <div ng-messages="verificationDialog.addressForm.zip.$error" role="alert">
-                  <div ng-message="required">{{ 'shared.required' | translate }}</div>
-                </div>
-              </md-input-container>
-
-              <md-input-container md-no-float hide show-xs>
-                <input
-                  required
-                  name="city"
-                  ng-model="verificationDialog.newUser.city"
-                  placeholder="{{ 'list.location.city' | translate }}"
-                >
-                <div ng-messages="verificationDialog.addressForm.city.$error" role="alert">
-                  <div ng-message="required">{{ 'shared.required' | translate }}</div>
-                </div>
-              </md-input-container>
-
-              <md-input-container md-no-float class="md-block">
-                <input
-                  required
-                  name="country"
-                  ng-model="verificationDialog.newUser.country"
-                  placeholder="{{ 'list.location.country' | translate }}"
-                >
-                <div ng-messages="verificationDialog.addressForm.country.$error" role="alert">
-                  <div ng-message="required">{{ 'shared.required' | translate }}</div>
-                </div>
-              </md-input-container>
-            </form>
           </div>
         </md-tab>
 
