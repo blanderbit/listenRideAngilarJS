@@ -380,8 +380,8 @@ angular.module('booking', [])
           var form = booking.verificationForm;
           var codeDigits = form.confirmation_0.$viewValue + form.confirmation_1.$viewValue + form.confirmation_2.$viewValue + form.confirmation_3.$viewValue;
           if (codeDigits.length === 4) {
-            var data = { "confirmation_code": codeDigits};
-            api.post('/users/' + $localStorage.userId + '/confirm_phone', data).then(
+            var data = { "phone_confirmation_code": codeDigits};
+            api.post('/confirm_phone', data).then(
               function (success) {
                 booking.toggleConfirmButton();
                 booking.phoneConfirmed = 'success';
