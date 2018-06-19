@@ -34,30 +34,33 @@
 
     <h2 class="md-headline lnr-center">{{ 'brand-integration.cocomat.test-bike' | translate }}</h2>
 
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <md-menu md-position-mode="target bottom">
+        <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">
+          <h1 class="md-right-arrow md-headline">&nbsp;&nbsp;{{ cocomat.currentCity }}</h1>
+        </md-button>
+        <md-menu-content width="3">        
+          <md-menu-item>
+            <md-button md-no-ink ng-click="cocomat.showBikesIn('athina')"><h1 class="md-subhead">Athina</h1></md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button md-no-ink ng-click="cocomat.showBikesIn('alimos')"><h1 class="md-subhead">Alimos</h1></md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button md-no-ink ng-click="cocomat.showBikesIn('kifisia')"><h1 class="md-subhead">Kifisia</h1></md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button md-no-ink ng-click="cocomat.showBikesIn('pireas')"><h1 class="md-subhead">Pireas</h1></md-button>
+          </md-menu-item>
+        </md-menu-content>
+      </md-menu>
+      <h2 class="md-subhead">{{ 'brand-integration.shared.choose-location' | translate }}</h2>
+    </div>
+
     <md-content>
-      <md-tabs md-no-pagination md-dynamic-height md-no-ink md-no-ink-bars md-center-tabs="on">
-        <md-tab label="{{ 'shared.munich' | translate }}">
-          <md-content>
-            <div flex-gt-xs layout="row" layout-wrap layout-padding>
-              <bike-card ng-repeat="bike in cocomat.bikes.munich" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
-            </div>
-          </md-content>
-        </md-tab>
-        <md-tab label="{{ 'shared.hamburg' | translate }}">
-          <md-content>
-            <div flex-gt-xs layout="row" layout-wrap layout-padding>
-              <bike-card ng-repeat="bike in cocomat.bikes.hamburg" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
-            </div>
-          </md-content>
-        </md-tab>
-        <md-tab style="font-size: 40px" label="Dresden">
-          <md-content>
-            <div flex-gt-xs layout="row" layout-wrap layout-padding>
-              <bike-card ng-repeat="bike in cocomat.bikes.dresden" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
-            </div>
-          </md-content>
-        </md-tab>
-      </md-tabs>
+      <div flex-gt-xs layout="row" layout-wrap layout-padding layout-align="center center">
+        <bike-card ng-repeat="bike in cocomat.currentBikes" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+      </div>
     </md-content>
 
     <br>

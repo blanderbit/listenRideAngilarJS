@@ -8,19 +8,22 @@ angular.module('cocomatIntegration',[]).component('cocomat', {
       var cocomat = this;
       $tpl.addPart(ENV.staticTranslation);
 
+      cocomat.currentBikes = [];
       cocomat.bikes = {
-        dresden: [],
-        munich: [],
-        hamburg: []
+        athina: [],
+        alimos: [],
+        kifisia: [],
+        pireas: []
       };
 
       api.get('/rides?family=31').then(
         function (success) {
           for (var i=0; i<success.data.bikes.length; i++) {
             switch (success.data.bikes[i].city) {
-              case "Dresden": cocomat.bikes.dresden.push(success.data.bikes[i]); break;
-              case "Munich": cocomat.bikes.munich.push(success.data.bikes[i]); break;
-              case "Hamburg": cocomat.bikes.hamburg.push(success.data.bikes[i]); break;
+              case "Athina": cocomat.bikes.athina.push(success.data.bikes[i]); break;
+              case "Alimos": cocomat.bikes.alimos.push(success.data.bikes[i]); break;
+              case "Kifisia": cocomat.bikes.kifisia.push(success.data.bikes[i]); break;
+              case "Kifisia": cocomat.bikes.kifisia.push(success.data.bikes[i]); break;
             }
           }
         },
