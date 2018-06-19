@@ -23,7 +23,15 @@ angular.module('home',[]).component('home', {
           clickOutsideToClose: false,
           escapeToClose: false
         });
-        api.get('/users/' + $stateParams.userId + '/confirm/' + $stateParams.confirmationCode).then(
+
+        var data = {
+          confirmation: {
+            user_id: $stateParams.userId,
+            email_confirmation_token: $stateParams.confirmationCode
+          }
+        };
+
+        api.post('/confirm_email', data).then(
           function (success) {
             $mdDialog.show(
               $mdDialog.alert()
@@ -38,27 +46,14 @@ angular.module('home',[]).component('home', {
           function (error) {
             $mdDialog.show(
               $mdDialog.alert()
-                .parent(angular.element(document.body))
                 .clickOutsideToClose(true)
-                .title('Confirmation successful')
-                .textContent('Great, you\'ve successfully confirmed your email address!')
-                .ariaLabel('Confirmation Successful')
+                .title('Confirmation was not successful')
+                .textContent('The confirmation code seems to be wrong, please reach out to our customer support.')
                 .ok('Ok')
             );
-            // $mdDialog.show(
-            //   $mdDialog.alert()
-            //     .clickOutsideToClose(true)
-            //     .title('Confirmation was not successful')
-            //     .textContent('The confirmation code seems to be wrong, please reach out to our customer support.')
-            //     .ok('Ok')
-            //     // .targetEvent(ev)
-            // );
           }
         );
       }
-
-      // ngMeta.setTitle($translate.instant("home.meta-title"));
-      // ngMeta.setTag("description", $translate.instant("home.meta-description"));
 
       api.get("/featured").then(function(response) {
         home.featuredBikes = response.data.slice(0,6);
