@@ -43,6 +43,7 @@
               lnr-single-input
               data="calendar.parent.dateRange"
               disabled-dates="calendar.parent.bike.availabilities"
+              opening-hours="calendar.parent.openingHours"
               requests="calendar.parent.bike.requests"
               date-on-change="calendar.parent.updateDate"
               date-container="'.booking__daterange-focus'"
@@ -56,7 +57,7 @@
               <label>{{ 'booking.calendar.pickup-time' | translate }}</label>
               <md-select ng-disabled="calendar.parent.startDate == undefined" ng-change="calendar.parent.onTimeChange('start')" ng-model="calendar.parent.startTime" placeholder="{{ 'shared.from' | translate }}">
                 <md-option
-                ng-disabled="!calendar.parent.isOptionEnabled($index, calendar.parent.startDate)"
+                ng-disabled="!calendar.parent.calendarHelper.isTimeAvailable($index, calendar.parent.openingHours, calendar.parent.startDate)"
                 ng-repeat="i in [].constructor(17) track by $index"
                 value="{{$index + 6}}"
                 >
@@ -74,7 +75,7 @@
                 placeholder="{{ 'shared.to' | translate }}"
               >
                 <md-option
-                  ng-disabled="!calendar.parent.isOptionEnabled($index, calendar.parent.endDate)"
+                  ng-disabled="!calendar.parent.calendarHelper.isTimeAvailable($index, calendar.parent.openingHours, calendar.parent.endDate)"
                   ng-repeat="i in [].constructor(17) track by $index"
                   value="{{$index + 6}}"
                 >
