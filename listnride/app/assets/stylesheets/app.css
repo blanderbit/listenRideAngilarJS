@@ -1206,7 +1206,6 @@ md-grid-list md-grid-tile.tile-sylt {
 }
 
 #featuredTilesGrid .img-container {
-  /*  height: 100px;*/
   width: 130px;
   height: 130px;
 }
@@ -1217,6 +1216,7 @@ md-grid-list md-grid-tile.tile-sylt {
 
 #featuredTiles {
   margin-top: 50px;
+  overflow: hidden;
 }
 
 #featuredTiles h3 {
