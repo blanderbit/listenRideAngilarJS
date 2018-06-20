@@ -161,7 +161,7 @@ angular.
         };
 
         verificationDialog.resendEmail = function() {
-          api.post('/users/' + $localStorage.userId + '/resend_confirmation_mail').then(
+          api.post('/send_confirmation_email').then(
             function (success) {
               $mdToast.show(
                 $mdToast.simple()
@@ -208,7 +208,7 @@ angular.
 
         verificationDialog.isAddressValid = function() {
           return verificationDialog.validAddress;
-        }
+        };
 
         verificationDialog.nextDisabled = function() {
           switch (verificationDialog.activeTab) {
@@ -282,13 +282,13 @@ angular.
         return deferred.promise;
       };
 
-      var confirmPhone = function (model) {
+      var confirmPhone = function (code) {
         // payload
-        var data = { "confirmation_code": model };
+        var data = { "phone_confirmation_code": code };
         // promise
         var deferred = $q.defer();
         // api call
-        api.post('/users/' + $localStorage.userId + '/confirm_phone', data).then(
+        api.post('/confirm_phone', data).then(
           // resolve api: success
           function (success) {
             $mdToast.show(
