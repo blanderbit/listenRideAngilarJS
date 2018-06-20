@@ -9,38 +9,48 @@ angular.module('cocomatIntegration',[]).component('cocomat', {
       $tpl.addPart(ENV.staticTranslation);
 
       cocomat.currentBikes = [];
+      // TODO: UGLY! YUCK!
       cocomat.shops = {
         6059: {
+          id: "6059",
           name: "Coco-Mat Hotel Kolonaki",
           bikes: []
         },
         6061: {
+          id: "6061",
           name: "Hotel Coco-mat Nafsika",
           bikes: []
         },
         6063: {
+          id: "6063",
           name: "Coco-mat Alimo",
           bikes: []
         },
         6064: {
+          id: "6064",
           name: "Coco-mat Store Kalamaki",
           bikes: []
         },
         6065: {
+          id: "6065",
           name: "Coco-mat Store Voula",
           bikes: []
         },
         6066: {
+          id: "6066",
           name: "Coco-mat Store - Zea's Marina",
           bikes: []
         }
       };
+      cocomat.currentShop = cocomat.shops[6059];
 
       api.get('/rides?family=32').then(
         function (success) {
           for (var i=0; i<success.data.bikes.length; i++) {
-            cocomat.shops[success.data.bikes[i].user_id].bikes.push(success.data.bikes[i]);
+            var bike = success.data.bikes[i];
+            cocomat.shops[bike.user_id].bikes.push(bike);
           }
+          cocomat.currentBikes = cocomat.currentShop.bikes;
         },
         function (error) {
           console.log('Error fetching Bikes');
@@ -48,9 +58,9 @@ angular.module('cocomatIntegration',[]).component('cocomat', {
       );
 
       cocomat.showBikesIn = function(shopId) {
-        console.log(shopId);
-        // cocomat.currentCity = cocomat.shops[shopId].name;
-        // cocomat.currentBikes = cocomat.shops[shopId].bikes;
+        cocomat.currentShop = cocomat.shops[shopId];
+        cocomat.currentBikes = cocomat.currentShop.bikes;
+        console.log(cocomat.currentBikes);
       }
     }
 

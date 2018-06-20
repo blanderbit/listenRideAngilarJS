@@ -32,20 +32,20 @@
     <md-divider></md-divider>
     <br>
 
-    <h2 class="md-headline lnr-center">{{ 'brand-integration.cocomat.test-bike' | translate }}</h2>
+    <!-- <h2 class="md-headline lnr-center">{{ 'brand-integration.cocomat.test-bike' | translate }}</h2> -->
 
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <md-menu md-position-mode="target bottom">
         <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">
-          <h1 class="md-right-arrow md-headline">&nbsp;&nbsp;{{ cocomat.currentCity }}</h1>
+          <h1 class="md-right-arrow md-headline">&nbsp;&nbsp;{{ cocomat.currentShop.name }}</h1>
         </md-button>
         <md-menu-content width="3">        
           <md-menu-item ng-repeat="shop in cocomat.shops">
-            <md-button md-no-ink ng-click="cocomat.showBikesIn(shop)"><h1 class="md-subhead">{{ shop.name }}</h1></md-button>
+            <md-button md-no-ink ng-click="cocomat.showBikesIn(shop.id)"><h1 class="md-subhead">{{ shop.name }}</h1></md-button>
           </md-menu-item>
         </md-menu-content>
       </md-menu>
-      <h2 class="md-subhead">{{ 'brand-integration.shared.choose-location' | translate }}</h2>
+      <!-- <h2 class="md-subhead">{{ 'brand-integration.shared.choose-location' | translate }}</h2> -->
     </div>
 
     <md-content>
@@ -60,7 +60,7 @@
 
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <h1 class="md-headline">{{ 'brand-integration.cocomat.find-out-more' | translate }}</h1>
-      <h2 class="md-subhead" translate="{{ 'brand-integration.cocomat.order-online' | translate }}"></h2>
+      <!-- <h2 class="md-subhead" translate="{{ 'brand-integration.cocomat.order-online' | translate }}"></h2> -->
     </div>
 
     <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
