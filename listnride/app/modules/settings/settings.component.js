@@ -62,6 +62,7 @@ angular.module('settings',[]).component('settings', {
           settings.loaded = true;
           settings.openingHoursEnabled = settings.user.opening_hours ? settings.user.opening_hours.enabled : false;
           $timeout(setInitFormState.bind(this), 0);
+          // TODO: remove this request it should be on the first request
           if (!_.isEmpty(settings.user.business)) {
             getBusinessData()
           }
@@ -148,6 +149,17 @@ angular.module('settings',[]).component('settings', {
 
         changeContact.onInit();
       };
+
+       var ChangePasswordController = function ($mdDialog) {
+         var changePassword = this;
+
+         // cancel the modal
+         changePassword.closeDialog = $mdDialog.cancel;
+
+         changePassword.update = function() {
+
+         };
+       };
 
       /**
        * converts phone number to private number
@@ -362,8 +374,23 @@ angular.module('settings',[]).component('settings', {
         });
       };
 
-      function changePassword () {
-        // TODO: show modal ?
+      function changePassword (event) {
+        $mdDialog.show({
+          templateUrl: 'app/modules/settings/change-password.template.html',
+          controller: ChangePasswordController,
+          controllerAs: 'changePassword',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: true,
+          escapeToClose: true,
+          fullscreen: true
+        }).then(function (success) {
+          // update model with new number
+          // settings.user.phone_number = success.phone_number;
+          // show success toast
+        });
       }
 
       // ===================
