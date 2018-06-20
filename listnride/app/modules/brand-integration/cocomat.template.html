@@ -40,17 +40,8 @@
           <h1 class="md-right-arrow md-headline">&nbsp;&nbsp;{{ cocomat.currentCity }}</h1>
         </md-button>
         <md-menu-content width="3">        
-          <md-menu-item>
-            <md-button md-no-ink ng-click="cocomat.showBikesIn('athina')"><h1 class="md-subhead">Athina</h1></md-button>
-          </md-menu-item>
-          <md-menu-item>
-            <md-button md-no-ink ng-click="cocomat.showBikesIn('alimos')"><h1 class="md-subhead">Alimos</h1></md-button>
-          </md-menu-item>
-          <md-menu-item>
-            <md-button md-no-ink ng-click="cocomat.showBikesIn('kifisia')"><h1 class="md-subhead">Kifisia</h1></md-button>
-          </md-menu-item>
-          <md-menu-item>
-            <md-button md-no-ink ng-click="cocomat.showBikesIn('pireas')"><h1 class="md-subhead">Pireas</h1></md-button>
+          <md-menu-item ng-repeat="shop in cocomat.shops">
+            <md-button md-no-ink ng-click="cocomat.showBikesIn(shop)"><h1 class="md-subhead">{{ shop.name }}</h1></md-button>
           </md-menu-item>
         </md-menu-content>
       </md-menu>
