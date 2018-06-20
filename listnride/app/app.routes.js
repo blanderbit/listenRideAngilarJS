@@ -995,6 +995,24 @@
       });
 
       $stateProvider.state({
+        name: 'cocomat',
+        url: '/rent-cocomat-bikes',
+        template: '<cocomat></cocomat>',
+        resolve: {
+            data: function ($translate, ngMeta) {
+                $translate(["meta.brand-integration.cocomat.meta-title", "meta.brand-integration.cocomat.meta-descr"])
+                    .then(function (translations) {
+                        ngMeta.setTitle(translations["meta.brand-integration.cocomat.meta-title"]);
+                        ngMeta.setTag("description", translations["meta.brand-integration.cocomat.meta-descr"]);
+                    })
+            }
+        },
+        meta: {
+            disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'factoryberlin',
         url: '/factoryberlin',
         template: '<user></user>'
