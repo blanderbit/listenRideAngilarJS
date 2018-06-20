@@ -9,10 +9,10 @@ angular.module('booking', [])
     controller: [
       '$localStorage', '$rootScope', '$scope', '$state', '$stateParams', '$mdToast',
       '$timeout', '$analytics', 'ENV', '$translate', '$filter', 'authentication',
-      'api', 'price', 'voucher',
+      'api', 'price', 'voucher', 'calendarHelper',
       function BookingController(
         $localStorage, $rootScope, $scope, $state, $stateParams, $mdToast, $timeout, $analytics,
-        ENV, $translate, $filter, authentication, api, price, voucher) {
+        ENV, $translate, $filter, authentication, api, price, voucher, calendarHelper) {
         var booking = this;
         var btAuthorization = ENV.btKey;
         var btClient;
@@ -41,10 +41,23 @@ angular.module('booking', [])
         var month = 0;
         var year = 0;
 
+        var getLister = function() {
+          api.get('/users/' + booking.bike.user.id).then(
+            function (success) {
+              booking.openingHours = success.data.opening_hours;
+            },
+            function (error) {
+              // Treat opening hours as if non existing
+              booking.openingHours = [];
+            }
+          );
+        }
+
         // Fetch Bike Information
         api.get('/rides/' + booking.bikeId).then(
           function (success) {
             booking.bike = success.data;
+            getLister();
             booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
             booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
             booking.prices = booking.bike.prices;
@@ -58,6 +71,7 @@ angular.module('booking', [])
 
         // on lifecycle initialization
         booking.$onInit = function () {
+          booking.calendarHelper = calendarHelper;
           booking.authentication = authentication;
           booking.showConfirmButton = true;
           booking.emailPattern = /(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i;
@@ -87,21 +101,6 @@ angular.module('booking', [])
           }
           // TODO: REMOVE REDUNDANT PRICE CALUCLATION CODE
         }
-
-        booking.isOptionEnabled = function($index, date) {
-          if (date === undefined) { return true }
-
-          var isDateToday = moment().startOf('day').isSame(moment(date).startOf('day'));
-          // Date today chosen
-          if (isDateToday) { return $index + 6 >= moment().hour() + 1; }
-          // if (!openingHoursAvailable()) { return true }
-          // var weekDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(date)];
-          // if (weekDay !== null) {
-          //   var workingHours = openHours(weekDay);
-          //   return workingHours.includes($index + 6);
-          // }
-          return true;
-        };
 
         booking.onTimeChange = function(slot) {
           var slotDate = slot + "Date";
@@ -380,8 +379,8 @@ angular.module('booking', [])
           var form = booking.verificationForm;
           var codeDigits = form.confirmation_0.$viewValue + form.confirmation_1.$viewValue + form.confirmation_2.$viewValue + form.confirmation_3.$viewValue;
           if (codeDigits.length === 4) {
-            var data = { "confirmation_code": codeDigits};
-            api.post('/users/' + $localStorage.userId + '/confirm_phone', data).then(
+            var data = { "phone_confirmation_code": codeDigits};
+            api.post('/confirm_phone', data).then(
               function (success) {
                 booking.toggleConfirmButton();
                 booking.phoneConfirmed = 'success';

@@ -368,6 +368,10 @@ md-tooltip .md-content {
   margin-bottom: 16px;
 }
 
+.lnr-mb-20 {
+  margin-bottom: 20px;
+}
+
 .lnr-padding {
   padding: 8px;
 }
@@ -465,8 +469,9 @@ md-tooltip .md-content {
   color: #fff!important;
 }
 
-.lnr-btn-fb[disabled] {
-  opacity: 0.5;
+.signup__form .md-button.md-raised[disabled] {
+  color: rgba(255, 255, 255, 0.95);
+  background-color: rgb(122, 178, 248);
 }
 
 .md-button.md-raised[disabled] {
@@ -485,6 +490,11 @@ md-tooltip .md-content {
 .lnr-mv8 {
   margin-top: 8px;
   margin-bottom: 8px;
+}
+
+.lnr-mv-12 {
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .lnr-lh0 {
@@ -583,6 +593,11 @@ md-tooltip .md-content {
 .lnr-icn-xlrg {
   width: 120px;
   height: 120px;
+}
+
+.lnr-icn-xlrg--medium {
+  width: 160px;
+  height: 160px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -893,6 +908,11 @@ footer .lnr-link {
   background-position: 50% 50%;
 }
 
+cocomat #hero-shot {
+  height: 78vh;
+  background-image: url(../ui_images/brand-integration/cocomat/hero_1.jpg);
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* BRAND INTEGRATION
 /*-----------------------------------------------------------------------------------*/
@@ -919,6 +939,8 @@ footer .lnr-link {
 .highlight-tile button {
   margin-bottom: -30px;
 }
+
+
 
 /*-----------------------------------------------------------------------------------*/
 /* HOME
@@ -1197,7 +1219,6 @@ md-grid-list md-grid-tile.tile-sylt {
 }
 
 #featuredTilesGrid .img-container {
-  /*  height: 100px;*/
   width: 130px;
   height: 130px;
 }
@@ -1208,6 +1229,7 @@ md-grid-list md-grid-tile.tile-sylt {
 
 #featuredTiles {
   margin-top: 50px;
+  overflow: hidden;
 }
 
 #featuredTiles h3 {

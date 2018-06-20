@@ -239,6 +239,10 @@
       "rethink": {
         "meta-title": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden",
         "meta-descr": "Your rethink e-bike. Clear. Robust. Distinct Character."
+      },
+      "cocomat": {
+        "meta-title": "Rent Coco-Mat bikes | listnride",
+        "meta-descr": "Rent and test Coco-Mat bikes in Athens, Greece and visit the historical center and the Athenian sea side."
       }
     },
     "about-us": {
@@ -259,7 +263,7 @@
     },
     "terms-and-conditions": {
       "meta-title": "listnride | Website Terms & Conditions",
-      "meta-description": "The Terms and Conditions of the Bike-Sharing-Community listnride apply to the use of the online platform."
+      "meta-description": "Het privacybeleid van de Bike Sharing-Community listnride is van toepassing op het gebruik van het online platform."
     },
     "trust-and-safety": {
       "meta-title": "Bike hire made safe – listnride has your back",
@@ -282,9 +286,9 @@
       "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
     },
     "privacy": {
-      "meta-title": "Privacy Policy of listnride",
+      "meta-title": "Privacybeleid van listnride",
       "meta-description": "Het privacybeleid van de Bike Sharing-Community listnride is van toepassing op het gebruik van het online platform.",
-      "use-opt-in": "Om u met listnride een optimale service te bieden, gebruiken wij cookies in conform ons <a target=\"_blank\" href=\"/#/privacy\">Cookie-beleid</a>.",
+      "use-opt-in": "Om u met listnride een optimale service te bieden, gebruiken wij cookies in conform ons Cookie-beleid.",
       "use-opt-in-button": "Ik heb het begrepen."
     }
   },
@@ -352,7 +356,7 @@
       "payment": "Betaling",
       "redeem-voucher": "Voucher verzilveren",
       "add": "Voeg toe",
-      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-header": "Gefeliciteerd, de boekingsaanvraag is verstuurd!",
       "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
@@ -394,7 +398,6 @@
     "profile": "Profiel",
     "invite": "Vrienden uitnodigen",
     "account": "Account",
-    "contact-to-update": "To change your name or email address please contact us at <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>",
     "delete-account": "account deactiveren",
     "delete-account-description": "Hier kunt u uw listnride-account deactiveren. Deze stap kan niet ongedaan worden gemaakt.",
     "delete-account-sure": "Weet je het zeker?",
@@ -579,18 +582,17 @@
     "sign-up": "Aanmelden",
     "sign-up-to-book": "Meld je aan om de fiets te huren.",
     "sign-up-with-facebook": "Met Facebook aanmelden",
-    "sign-up-divider-text": "accept our terms and conditions",
-    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
+    "sign-up-divider-text": "accepteer onze Algemene voorwaarden",
+    "agree-terms-and-policy": "Ga akkoord met onze algemene voorwaarden en ons privacybeleid hierboven.",
     "member-already": "Al geregistreerd?",
     "business": "Zakelijke gebruiker?",
     "description": "Beschrijving",
     "description_min_100": "Beschrijvingstekst moet min. 100 tekens lang zijn",
     "address": "Adres",
     "profile-picture": "Profielfoto",
-    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
-    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
+    "profile-picture-info": "Toestemming voor het gebruik van de profielfoto<br>Door mijn profielfoto te uploaden, ga ik ermee akkoord dat listnride de profielfoto opslaat zoals gedetailleerder beschreven in het <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacybeleid</a>. Ik kan mijn profielfoto te allen tijde verwijderen.<br><br>Gelieve alleen de juiste beeldformaten te uploaden (jpg, jpeg, png). De maximale beeldgrootte is 20mb. Minimale beeldafmeting (breedte x hoogte) is 100px x 100px",
     "profile-picture-pattern-error": "Your picture format is wrong",
-    "profile-picture-size-error": "Your picture size is more than maximum size",
+    "profile-picture-size-error": "Je fotoformaat is meer dan de toegestane maximale grootte",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "Algemeen",
     "street": "Straat en huisnr.",
@@ -603,7 +605,7 @@
     "company-contact-info": "Vul uw Bedrijfsnaam en naam van de contact persoon in",
     "signing-up-accept-tac": "Ik ga hierbij akkoord met de <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Gebruiksvoorwaarden</a> en ga akkoord met het verzamelen, verwerken en gebruiken van mijn persoonsgegevens zoals verder beschreven in het <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacybeleid</a>.",
     "signing-up-accept-newsletter": "Ik wil graag de listnride e-mailnieuwsbrief ontvangen met interessante informatie over fietsen, community updates en exclusieve aanbiedingen. Het <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacybeleid</a> van listnride is van toepassing. Ik kan mijn toestemming te allen tijde intrekken.",
-    "privacy-policy": "Het <a style=\"pointer-events: auto;\" href=\"/privacy\" target=\"_BLANK\"> van listnride is van toepassing.",
+    "privacy-policy": "Het <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacybeleid</a> van listnride is van toepassing.",
     "errors": {
       "password-length": "Wachtwoord dient 6-30 karakters lang te zijn",
       "password-length-xs": "6-30 tekens",
@@ -714,8 +716,7 @@
       "notes": "Notes",
       "frame_size": "Frame hoogte",
       "bicycle_number": "Bicycle number",
-      "frame_number": "Frame number",
-      "details": "Details"
+      "frame_number": "Frame number"
     },
     "accessories": {
       "header": "Welke accessoires bied je aan?",
@@ -782,8 +783,8 @@
       "price_7_days": "7 dagen (1 week)",
       "price_8_days": "vanaf 8 dagen",
       "price_8_days_long": "vanaf 8 dagen (elke dag)",
-      "price_30_days": "28 dagen (1 maand)",
-      "price_30_days_long": "28 dagen (1 Monat)",
+      "price_30_days": "30 dagen (1 maand)",
+      "price_30_days_long": "30 dagen (1 Monat)",
       "reset-prices": "Zurücksetzen",
       "validations": {
         "required": {

@@ -5,9 +5,10 @@ angular
   .directive('lnrDatePicker', function() {
     return {
       restrict: "A",
-      controller: ['$scope', '$translate', lnrDatePickerController],
+      controller: ['$scope', '$translate', 'calendarHelper', lnrDatePickerController],
       bindToController: {
         data: '=',
+        openingHours: '<?',
         disabledDates: '<',
         requests: '<?',
         dateOnChange: '<?',
@@ -23,7 +24,7 @@ angular
     }
   });
 
-function lnrDatePickerController($scope, $translate) {
+function lnrDatePickerController($scope, $translate, calendarHelper) {
   var vm = this;
 
   vm.$onInit = function() {
@@ -121,7 +122,7 @@ function lnrDatePickerController($scope, $translate) {
         return [false, "date-past", ""];
       } else if (isReserved(date)) {
         return [false, "date-reserved", ""];
-      } else if (bikeNotAvailable(date)) {
+      } else if (bikeNotAvailable(date) || calendarHelper.isDayAvailable(vm.openingHours, date)) {
         return [false, "date-closed", ""];
       } else {
         return [true, "date-available", ""];

@@ -41,7 +41,7 @@
     "half-day": "medio día",
     "day": "día",
     "day-6h": "día (> 6h)",
-    "days": "días",
+    "days": "día(s)",
     "week": "semana",
     "weeks": "semanas",
     "discount": "descuento",
@@ -107,7 +107,7 @@
     "testimonials-header": "¿Qué opina la gente?",
     "balance": "Saldo",
     "tac": "términos y condiciones",
-    "privacy-policy": "política de privacidad",
+    "privacy-policy": "Política de Privacidad",
     "booking-accept-tac": "Al reservar, acepto ",
     "already-booked": "Ya alquilada",
     "for-shops": "Para tiendas de bicis",
@@ -239,6 +239,10 @@
       },
       "rethink": {
         "meta-title": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden"
+      },
+      "cocomat": {
+        "meta-title": "Rent Coco-Mat bikes | listnride",
+        "meta-descr": "Rent and test Coco-Mat bikes in Athens, Greece and visit the historical center and the Athenian sea side."
       }
     },
     "about-us": {
@@ -283,7 +287,7 @@
     },
     "privacy": {
       "meta-title": "Política de privacidad de listnride",
-      "meta-description": "La política de privacidad de la comunidad para compartir bicis de listnride se aplica al uso de la plataforma online",
+      "meta-description": "La Política de Privacidad de la comunidad para compartir bicis de  listnride se aplica al uso de la plataforma online",
       "use-opt-in": "Para ofrecerte el servicio perfecto con listnride, utilizamos cookies de acuerdo con nuestra <a target=\"_blank\" href=\"/#/privacy\">Política de Cookies</a>.",
       "use-opt-in-button": "OK."
     }
@@ -352,7 +356,7 @@
       "payment": "Pagamento",
       "redeem-voucher": "Canjear vale",
       "add": "OK",
-      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-header": "¡Enhorabuena, acabas de solicitar una bicicleta!",
       "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
@@ -394,7 +398,6 @@
     "profile": "Perfil",
     "invite": "Invitar a amigos",
     "account": "Cuenta",
-    "contact-to-update": "To change your name or email address please contact us at <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>",
     "delete-account": "Desactivar cuenta",
     "delete-account-description": "Aquí puedes desactivar tu cuenta de listnride. Esta acción no se puede deshacer.",
     "delete-account-sure": "¿Estás totalmente seguro?",
@@ -581,16 +584,15 @@
     "sign-up": "Registrarse ",
     "sign-up-to-book": "Regístrate para reservar la bici",
     "sign-up-with-facebook": "Registrarse con facebook",
-    "sign-up-divider-text": "accept our terms and conditions",
-    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
+    "sign-up-divider-text": "Acepta nuestros términos y condiciones",
+    "agree-terms-and-policy": "Por favor, acepte nuestros Términos y Condiciones y Política de Privacidad.",
     "member-already": "¿Ya estás registrado?",
     "business": "¿Tienda de bicis?",
     "description": "Descripción",
     "description_min_100": "La descripción debe ser mín. 100 caracteres",
     "address": "Dirección",
     "profile-picture": "Foto de perfil",
-    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
-    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
+    "profile-picture-info": "Autorizo el uso de mi imagen de perfil.<br>Al subir mi imagen a la plataforma acepto que listnride almacene mi imagen de perfil como está descrito en la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a>. Puedo borrar mi foto de perfil en cualquier momento.<br><br>Por favor sube un archivo con formato válido (jpg,jpeg,png).Peso máximo: 20mb. Tamaño mínimo de la imagen: 100px de ancho por 100px de alto.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "Your picture size is more than maximum size",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
@@ -605,7 +607,7 @@
     "company-contact-info": "Completa el formulario con la información de contacto de la empresa.",
     "signing-up-accept-tac": "He leído y acepto los <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Términos y Condiciones</a> y acepto la recolección, tratamiento y uso de mis datos personales establecidos por la <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a>.",
     "signing-up-accept-newsletter": "Deseo recibir información sobre nuevas bicicletas, tours y cupones de descuento. Acepto las condiciones establecidas en la <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride. Puedo revocar mi consentimiento en cualquier momento.",
-    "privacy-policy": "Se aplica la <a style=\"pointer-events: auto;\" href=\"/privacy\" target=\"_BLANK\">Política de Privacidad</a> de listnride.",
+    "privacy-policy": "Se aplica la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride.",
     "errors": {
       "password-length": "La contraseña debe tener entre 6 y 30 caracteres",
       "password-length-xs": "6-30 caracteres",
@@ -716,8 +718,7 @@
       "custom-fields": "Campos adicionales",
       "notes": "Notes",
       "frame_size": "Tamaño del cuadro",
-      "bicycle_number": "Número de bicicleta",
-      "details": "Details"
+      "bicycle_number": "Número de bicicleta"
     },
     "accessories": {
       "header": "¿Qué accesorios tiene tu bici?",
@@ -784,8 +785,8 @@
       "price_7_days": "7 días (1 semana)",
       "price_8_days": "de 8 días en adelante",
       "price_8_days_long": "de 8 días en adelante (por día)",
-      "price_30_days": "28 días ",
-      "price_30_days_long": "28 días (1 mes)",
+      "price_30_days": "30 días ",
+      "price_30_days_long": "30 días (1 mes)",
       "reset-prices": "Reajustar",
       "validations": {
         "required": {

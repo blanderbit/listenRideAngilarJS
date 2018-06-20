@@ -16,12 +16,24 @@
               </div>
               <div flex-gt-xs="70" layout="column" layout-margin>
                 <div class="lnr-profile-figure">
-                  <img class="lnr-profile-lrg lnr-clickable" ng-style="{'display': settings.profilePicture ? 'none' : ''}" ngf-select name="ProfilePicture"
-                    ng-model="settings.profilePicture" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100" ngf-pattern="image/png,image/jpg,image/jpeg"
-                    ngf-fix-orientation="true" ngf-background="settings.user.profile_picture.profile_picture.url || settings.profilePicture || 'app/assets/ui_images/no-image.jpg'"
+                  <img class="lnr-profile-lrg lnr-clickable"
+                    ng-style="{'display': settings.profilePicture ? 'none' : ''}"
+                    ngf-select name="ProfilePicture"
+                    ng-model="settings.profilePicture"
+                    ngf-accept="'image/*'"
+                    ngf-max-size="20MB"
+                    ngf-min-height="100"
+                    ngf-pattern="image/png,image/jpg,image/jpeg"
+                    ngf-fix-orientation="true"
+                    ngf-background="settings.user.profile_picture.profile_picture.url || settings.profilePicture || 'app/assets/ui_images/no-image.jpg'"
                     ngf-as-background="true"/>
                 </div>
-                <div ng-style="{'display': settings.profilePicture ? '' : 'none'}" ngf-drop ng-model="settings.profilePicture" ngf-max-size="20MB" ngf-min-height="100" ngf-pattern="image/png,image/jpg,image/jpeg"
+                <div
+                  ng-style="{'display': settings.profilePicture ? '' : 'none'}"
+                  ngf-drop ng-model="settings.profilePicture"
+                  ngf-max-size="20MB"
+                  ngf-min-height="100"
+                  ngf-pattern="image/png,image/jpg,image/jpeg"
                   class="cropArea">
                   <img-crop ng-style="{'display': settings.profilePicture ? '' : 'none'}" image="settings.profilePicture  | ngfDataUrl" result-image="settings.croppedDataUrl"
                     ng-init="croppedDataUrl=''">
