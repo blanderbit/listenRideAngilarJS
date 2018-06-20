@@ -469,8 +469,9 @@ md-tooltip .md-content {
   color: #fff!important;
 }
 
-.lnr-btn-fb[disabled] {
-  opacity: 0.5;
+.signup__form .md-button.md-raised[disabled] {
+  color: rgba(255, 255, 255, 0.95);
+  background-color: rgb(122, 178, 248);
 }
 
 .md-button.md-raised[disabled] {
