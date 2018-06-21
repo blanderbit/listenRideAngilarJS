@@ -241,8 +241,8 @@
         "meta-descr": "Your rethink E-bike. Clear. Robust. Distinct Character."
       },
       "cocomat": {
-        "meta-title": "Rent Coco-Mat bikes | listnride",
-        "meta-descr": "Rent and test Coco-Mat bikes in Athens, Greece and visit the historical center and the Athenian sea side."
+        "meta-title": "Rent COCO-MAT.bike | listnride",
+        "meta-descr": "Rent and test COCO-Mat bikes in Athens, Greece and visit the historical center and the Athenian sea side."
       }
     },
     "about-us": {
@@ -590,8 +590,9 @@
     "address": "Adresse",
     "profile-picture": "Profilbild",
     "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
-    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.","profile-picture-pattern-error": "Your picture format is wrong",
-    "profile-picture-size-error": "Your picture size is more than maximum size",
+    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
+    "profile-picture-pattern-error": "Your picture format is wrong",
+    "profile-picture-size-error": "Die Größe des Bildes überschreitet die maximal erlaubte Bildgröße",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "Allgemein",
     "street": "Straße und Hausnr.",
@@ -797,9 +798,9 @@
       "1": {
         "dutch-bike": "Hollandrad",
         "touring-bike": "Touringrad",
-        "fixie": "Fixie",
+        "fixie": "Fixed Gear-Rad",
         "single-speed": "Single Speed-Rad",
-        "city-bike": "City Bike"
+        "city-bike": "Stadtrad"
       },
       "2": {
         "road-bike": "Rennrad",
