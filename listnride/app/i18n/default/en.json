@@ -242,8 +242,8 @@
         "meta-descr": "Your rethink e-bike. Clear. Robust. Distinct Character."
       },
       "cocomat": {
-        "meta-title": "Rent Coco-Mat bikes | listnride",
-        "meta-descr": "Rent and test Coco-Mat bikes in Athens, Greece and visit the historical center and the Athenian sea side."
+        "meta-title": "Rent COCO-MAT.bike | listnride",
+        "meta-descr": "Rent and test COCO-MAT bikes in Athens, Greece and visit the historical center and the Athenian sea side."
       }
     },
     "about-us": {
@@ -595,8 +595,9 @@
     "address": "Address",
     "profile-picture": "Profile Picture",
     "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
-    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.","profile-picture-pattern-error": "Your picture format is wrong",
-    "profile-picture-size-error": "Your picture size is more than maximum size",
+    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
+    "profile-picture-pattern-error": "Your picture format is wrong",
+    "profile-picture-size-error": "Your picture size is more than the allowed maximum size",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "General",
     "street": "Street",
@@ -803,7 +804,7 @@
       "1": {
         "dutch-bike": "Dutch Bike",
         "touring-bike": "Touring Bike",
-        "fixie": "Fixie",
+        "fixie": "Fixed Gear Bike",
         "single-speed": "Single Speed Bike",
         "city-bike": "City Bike"
       },
