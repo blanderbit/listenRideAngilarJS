@@ -388,7 +388,8 @@
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Bike successfully deleted",
     "range-success-delete": "Unvailability range successfully deleted",
-    "availability-success-saved": "Availability successfully saved"
+    "availability-success-saved": "Availability successfully saved",
+    "update-password-error": "Could not change password. Please be sure that the old password is right"
   },
   "settings": {
     "settings": "Settings",
@@ -580,6 +581,7 @@
     "old-password": "Old Password",
     "new-password": "New Password",
     "save-new-password": "Save new password",
+    "password-error-length": "Password should be min. 6 characters",
     "or": "or",
     "log-in": "Log In",
     "log-out": "Log Out",

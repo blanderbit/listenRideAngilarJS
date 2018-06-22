@@ -387,7 +387,8 @@
     "duplicate-finish": "Proceso de duplicación terminado. Copias creadas con éxito",
     "bike-deleted": "Bici borrada con éxito",
     "range-success-delete": "Fecha borrado",
-    "availability-success-saved": "Disponibilidad guardada"
+    "availability-success-saved": "Disponibilidad guardada",
+    "update-password-error": "Could not change password. Please be sure that the old password is right"
   },
   "settings": {
     "settings": "Configuración",
@@ -578,6 +579,7 @@
     "old-password": "Old Password",
     "new-password": "New Password",
     "save-new-password": "Save new password",
+    "password-error-length": "Password should be min. 6 characters",
     "or": "o",
     "log-in": "Iniciar sesión",
     "log-out": "Cerrar sesión",

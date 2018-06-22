@@ -387,7 +387,8 @@
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Fiets succesvol verwijderd",
     "range-success-delete": "Periode succesvol verwijderd",
-    "availability-success-saved": "Wijziging succesvol opgeslagen"
+    "availability-success-saved": "Wijziging succesvol opgeslagen",
+    "update-password-error": "Could not change password. Please be sure that the old password is right"
   },
   "settings": {
     "settings": "Instellingen",
@@ -576,6 +577,7 @@
     "old-password": "Old Password",
     "new-password": "New Password",
     "save-new-password": "Save new password",
+    "password-error-length": "Password should be min. 6 characters",
     "or": "of",
     "log-in": "Inloggen",
     "log-out": "Uitloggen",

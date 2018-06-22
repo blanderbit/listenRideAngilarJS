@@ -157,6 +157,33 @@ angular.module('settings',[]).component('settings', {
          changePassword.closeDialog = $mdDialog.cancel;
 
          changePassword.update = function() {
+           var new_password_hashed = sha256.encrypt(changePassword.user.new_password);
+           var user = {
+             'user': {
+               'email': $localStorage.email,
+               'old_password': sha256.encrypt(changePassword.user.old_password),
+               'new_password': new_password_hashed
+             }
+           };
+
+           api.put('/users/' + $localStorage.userId + '/update_password/', user).then(function (success) {
+             settings.password = changePassword.user.new_password;
+             // update auth
+             $localStorage.auth = 'Basic ' + authentication.encodeAuth($localStorage.email, new_password_hashed);
+             $mdToast.show(
+               $mdToast.simple()
+               .textContent($translate.instant('toasts.update-profile-success'))
+               .hideDelay(4000)
+               .position('top center')
+             );
+           }, function (error) {
+             $mdToast.show(
+               $mdToast.simple()
+               .textContent($translate.instant('toasts.update-password-error'))
+               .hideDelay(4000)
+               .position('top center')
+             );
+           });
 
          };
        };
