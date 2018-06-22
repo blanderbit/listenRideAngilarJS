@@ -165,10 +165,10 @@ angular.module('search',[]).component('search', {
             bikes: search.bikes
           }];
           search.titles = [];
-          // search.latLng = response.data.location.geometry.location; GOOGLE
-          search.latLng = response.data.location.point.coordinates;
-          // search.locationBounds = response.data.location.geometry.viewport; GOOGLE
-          search.locationBounds = response.data.location.bbox;
+          search.latLng = response.data.location.geometry.location;
+          // search.latLng = response.data.location.point.coordinates; BING
+          search.locationBounds = response.data.location.geometry.viewport;
+          // search.locationBounds = response.data.location.bbox; BING
 
           initializeGoogleMap();
           NgMap.getMap({id: "searchMap"}).then(function(map) {
@@ -195,12 +195,12 @@ angular.module('search',[]).component('search', {
       function correctBounds() {
         var bounds = new google.maps.LatLngBounds();
         if (!_.isEmpty(search.locationBounds)) {
-          bounds = extendBounds(bounds, search.locationBounds[0], search.locationBounds[1]);
-          bounds = extendBounds(bounds, search.locationBounds[2], search.locationBounds[3]);
-          // bounds = extendBounds(bounds, search.locationBounds.northeast.lat, search.locationBounds.northeast.lng); GOOGLE
-          // bounds = extendBounds(bounds, search.locationBounds.southwest.lat, search.locationBounds.southwest.lng); GOOGLE
-          // bounds = extendBounds(bounds, search.latLng.lat, search.latLng.lng); GOOGLE
-          bounds = extendBounds(bounds, search.latLng[0], search.latLng[1]);
+          // bounds = extendBounds(bounds, search.locationBounds[0], search.locationBounds[1]); BING
+          // bounds = extendBounds(bounds, search.locationBounds[2], search.locationBounds[3]); BING
+          bounds = extendBounds(bounds, search.locationBounds.northeast.lat, search.locationBounds.northeast.lng);
+          bounds = extendBounds(bounds, search.locationBounds.southwest.lat, search.locationBounds.southwest.lng);
+          bounds = extendBounds(bounds, search.latLng.lat, search.latLng.lng);
+          // bounds = extendBounds(bounds, search.latLng[0], search.latLng[1]); BING
         }
 
         var i = 0;
