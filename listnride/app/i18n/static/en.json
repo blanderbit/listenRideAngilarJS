@@ -77,6 +77,7 @@
       "cafes-bars-content": "If you like vegan and vegetarian food, we recommend a visit at <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> at the Karmeliterplatz. If you prefer the more traditional Austrian kitchen, we highly recommend <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>. Order a traditional Tafelspitz or Wiener Schnitzel and enjoy it outside with the view on the famous Vienna Opera. You’ll have a great night to remember! For finishing touch of the day, it makes sense to walk towards the Danube. On the way you’ll find plenty of interesting bars or just sit outside under the stars at the river."
     }
   },
+  "insurance.main.title": "Insurance Page",
   "business-community": {
     "meta-title": "The listnride business community",
     "meta-description": "Join the listnride business community for bike rental",
@@ -502,6 +503,31 @@
       "choose-location": "Wähle deine Stadt",
       "find-out-more": "Learn more about rethink",
       "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed."
+    },
+    "cocomat": {
+      "title": "Your rethink e-bike. Clear. Robust. Distinct Character.",
+      "description": "Rent and test our wooden bikes in Athens, Greece and visit the historical center and the Athenian sea side",
+      "subdescription": "Cycle with Penelope and Odysseus: 2 or 7 speed or e-bike, and carry the imprint of nature in the urban landscape",
+      "feature1-title": "Handmade in Greece",
+      "feature1-description": "Made with love<br>Under the sun<br>Natural materials",
+      "feature2-title": "I am wooden",
+      "feature2-description": "Sustainable materials<br>Fair production process<br>A life long lasting product",
+      "feature3-title": "Innovative design",
+      "feature3-description": "Unique cycling experience<br>Comfortable riding position<br>Customize it to your needs",
+      "test-bike": "Test the new cocomat models!",
+      "choose-location": "Choose your location",
+      "find-out-more": "Learn more about COCO-MAT.bike",
+      "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed.",
+      "faq-question-1": "Do you offer warranty?",
+      "faq-answer-1": "COCO-Mat.bike offers: Three years warrantee for defective wooden or metal compartments that may have appeared during to manufacturing process. One year for bike compartments.This warranty is valid from the date of purchase, is offered only to the original owner, and it is not transferable. Proof of purchase is required.",
+      "faq-question-2": "How can I repair a wooden bike?",
+      "faq-answer-2": "All the bike parts can be repaired by any bike expert, except for the wooden frame which needs to be repaired by a carpenter according to COCO-MAT.bike's instructions.",
+      "faq-question-3": "Is the wooden saddle comfortable?",
+      "faq-answer-3": "Our saddle is designed following all the anatomical specifications required. For a more comfortable ride you can use our removable saddle lining made by cocofine.",
+      "faq-question-4": "Is it completely made out of wood?",
+      "faq-answer-4": "Our bike is manufactured from natural solid wood of American Ash (Fraxinus americana). The timber derives from forests of legal logging and the cutting takes place, abiding by the legislation and international specifications of timber-cutting. The timber is a hygroscopic material (m. during its life time never stops to absorb and to remove humidity). It is completely made out of wood and 100% handcrafted in Greece!",
+      "faq-question-5": "How many bike models do you provide?",
+      "faq-answer-5": "Discover our bike collection. Choose yours!<br>Main collection:<br>Odysseus 2 speed (28'')<br>Odysseus 7 speed (28'')<br>E-Odysseus (28'')<br>Penelope 2 speed (26'')<br>Penelope 7 speed (26'')<br>E-Penelope (26'')<br><br>Kid collection:<br>Telemachus (20'')<br>Telegonus (16'')<br>Argos (12'')"
     }
   },
   "about-us": {
@@ -770,6 +796,7 @@
   },
   "privacy": {
     "title": "List and Ride Privacy Policy",
+    "ga-opt-out": "Click here to deactivate Google Analytics tracking",
     "subtitle": "Effective Date: May 24, 2018",
     "description": "List and Ride commits to strong and transparent privacy practices. Our Privacy Policy describes the user information that we gather through our services. How we use and disclose these information. The steps we take to protect such information. The choices we offer, including how to access, update, and remove personal data.<br>Here you can download and read our <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Privacy Policy</a>.<br><br>Please contact us if you have any questions or comments about our privacy practices or this Privacy Policy. You can reach us at <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> online.",
     "meta-title": "Privacy Policy of listnride",

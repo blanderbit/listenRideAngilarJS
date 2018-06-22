@@ -493,6 +493,31 @@
       "choose-location": "Wähle deine Stadt",
       "find-out-more": "Learn more about rethink",
       "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed."
+    },
+    "cocomat": {
+      "title": "Your rethink e-bike. Clear. Robust. Distinct Character.",
+      "description": "Rent and test our wooden bikes in Athens, Greece and visit the historical center and the Athenian sea side",
+      "subdescription": "Cycle with Penelope and Odysseus: 2 or 7 speed or e-bike, and carry the imprint of nature in the urban landscape",
+      "feature1-title": "Handmade in Greece",
+      "feature1-description": "Made with love<br>Under the sun<br>Natural materials",
+      "feature2-title": "I am wooden",
+      "feature2-description": "Sustainable materials<br>Fair production process<br>A life long lasting product",
+      "feature3-title": "Innovative design",
+      "feature3-description": "Unique cycling experience<br>Comfortable riding position<br>Customize it to your needs",
+      "test-bike": "Test the new cocomat models!",
+      "choose-location": "Choose your location",
+      "find-out-more": "Learn more about cocomat",
+      "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed.",
+      "faq-question-1": "Do you offer warranty?",
+      "faq-answer-1": "Coco-Mat bike offers: Three years for defective wooden or metal compartments that may have appeared during to manufacturing process. One year for bike compartments.This warranty is valid from the date of purchase, is offered only to the original owner, and it is not transferable. Proof of purchase is required.",
+      "faq-question-2": "How can I repair a wooden bike?",
+      "faq-answer-2": "All the bike parts can be repaired by any bike expert, except for the wooden frame which needs to be repaired by a carpenter according to Coco-Mat bike's instructions.",
+      "faq-question-3": "Is the wooden saddle comfortable?",
+      "faq-answer-3": "Our saddle is designed following all the anatomical specifications required. For a more comfortable ride you can use our removable saddle lining made by cocofine.",
+      "faq-question-4": "Is it completely made out of wood?",
+      "faq-answer-4": "Our bike is manufactured from natural solid wood of American Ash (Fraxinus americana). The timber derives from forests of legal logging and the cutting takes place, abiding by the legislation and international specifications of timber-cutting. The timber is a hygroscopic material (m. during its life time never stops to absorb and to remove humidity). It is completely made out of wood and 100% handcrafted in Greece!",
+      "faq-question-5": "How many bike models do you provide?",
+      "faq-answer-5": "Discover our bike collection. Choose yours!<br>Main collection:<br>Odysseus 2 speed (28'')<br>Odysseus 7 speed (28'')<br>E-Odysseus (28'')<br>Penelope 2 speed (26'')<br>Penelope 7 speed (26'')<br>E-Penelope (26'')<br><br>Kid collection:<br>Telemachus (20'')<br>Telegonus (16'')<br>Argos (12'')"
     }
   },
   "about-us": {

@@ -239,6 +239,10 @@
       "rethink": {
         "meta-title": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden",
         "meta-descr": "Your rethink e-bike. Clear. Robust. Distinct Character."
+      },
+      "cocomat": {
+        "meta-title": "Rent Coco-Mat bikes | listnride",
+        "meta-descr": "Rent and testour wooden bikes in Athens, Greece and visit the historical center and the Athenian sea side."
       }
     },
     "about-us": {
@@ -592,9 +596,10 @@
     "description_min_100": "Beschrijvingstekst moet min. 100 tekens lang zijn",
     "address": "Adres",
     "profile-picture": "Profielfoto",
-    "profile-picture-info": "Toestemming voor het gebruik van de profielfoto<br>Door mijn profielfoto te uploaden, ga ik ermee akkoord dat listnride de profielfoto opslaat zoals gedetailleerder beschreven in het <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacybeleid</a>. Ik kan mijn profielfoto te allen tijde verwijderen.<br><br>Gelieve alleen de juiste beeldformaten te uploaden (jpg, jpeg, png). De maximale beeldgrootte is 20mb. Minimale beeldafmeting (breedte x hoogte) is 100px x 100px",
+    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
+    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
     "profile-picture-pattern-error": "Your picture format is wrong",
-    "profile-picture-size-error": "Your picture size is more than maximum size",
+    "profile-picture-size-error": "Je fotoformaat is meer dan de toegestane maximale grootte",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "Algemeen",
     "street": "Straat en huisnr.",
@@ -693,13 +698,13 @@
       "label": "Categorie",
       "city": "Stad",
       "race": "Race",
-      "all-terrain": "All-Terrain",
-      "kids": "Kinder",
+      "all-terrain": "All-terrain",
+      "kids": "Kids",
       "electro": "Elektrisch",
-      "special": "Speciaal",
+      "special": "Uniek",
       "urban": "Urban",
-      "e-bike": "E-Bike",
-      "road": "Road",
+      "e-bike": "Elektrische fiets",
+      "road": "Race & Touring",
       "transport": "Transport"
     },
     "details": {
@@ -797,23 +802,23 @@
     },
     "subcategory": {
       "1": {
-        "dutch-bike": "Stadsfiets",
+        "dutch-bike": "Omafiets",
         "touring-bike": "Touringfiets",
         "fixie": "Fixie",
-        "single-speed": "Single Speed",
-        "city-bike": "City Bike"
+        "single-speed": "Single Speed Fiets",
+        "city-bike": "Stadsfiets"
       },
       "2": {
         "road-bike": "Racefiets",
         "triathlon": "Triathlon",
         "indoor": "Baanfiets",
-        "e-city-bike": "E-City Bike",
-        "e-touring-bike": "E-Touring Bike",
-        "e-cargo-bike": "E-Cargo Bike",
-        "e-mountain-bike": "E-Mountain Bike",
-        "e-road-bike": "E-Road Bike",
-        "e-folding-bike": "E-Folding Bike",
-        "e-scooter": "E-Scooter"
+        "e-city-bike": "E-stadsfiets",
+        "e-touring-bike": "E-Touring Fiets",
+        "e-cargo-bike": "E-Bakfiets",
+        "e-mountain-bike": "E-mountainbike",
+        "e-road-bike": "E-racefiets",
+        "e-folding-bike": "E-vouwfiets",
+        "e-scooter": "E-Step"
       },
       "3": {
         "tracking": "Trekking",
@@ -822,10 +827,10 @@
         "cross-country": "Cross Country",
         "downhill": "Downhill",
         "cyclocross": "Cyclocross",
-        "road-bike": "Road Bike",
-        "triathlon-bike": "Triathlon Bike",
-        "touring-bike": "Touring Bike",
-        "fixed-gear-bike": "Fixed Gear Bike"
+        "road-bike": "Racefiets",
+        "triathlon-bike": "Triatlonfiets",
+        "touring-bike": "Touringfiets",
+        "fixed-gear-bike": "Baanfiets"
       },
       "4": {
         "city": "Stad",
@@ -833,17 +838,17 @@
         "road": "race",
         "mtb-hardtail": "MTB Hardtail",
         "mtb-fullsuspension": "MTB Fullsuspension",
-        "cyclocross-bike": "Cyclocross Bike",
+        "cyclocross-bike": "Cyclocrossfiets",
         "gravel-bike": "Gravel Bike"
       },
       "5": {
         "pedelec": "Speed Pedelec",
         "e-bike": "Elektrische fiets",
-        "cargo-bike": "Cargo Bike",
-        "bike-trailer": "Bike Trailer",
-        "bike-child-seat": "Bike Child Seat",
-        "bike-car-rack": "Bike Car Rack",
-        "bike-travel-bag": "Bike Travel Bag"
+        "cargo-bike": "Bakfiets",
+        "bike-trailer": "Fietsaanhanger",
+        "bike-child-seat": "kinderzitje",
+        "bike-car-rack": "Fietsendragers",
+        "bike-travel-bag": "Fietskoffer"
       },
       "6": {
         "folding-bike": "vouwfiets",
@@ -853,17 +858,17 @@
         "recumbent": "Ligfiets",
         "mono-bike": "Eenwieler",
         "trailer": "Aanhangwagen",
-        "city-bike": "City Bike",
-        "all-terrain-bike": "All Terrain Bike",
-        "road-bike": "Road Bike",
-        "bogie-wheel": "Bogie Wheel"
+        "city-bike": "Stadsfiets",
+        "all-terrain-bike": "ATB-fiets",
+        "road-bike": "Racefiets",
+        "bogie-wheel": "Monofiets"
       },
       "7": {
-        "folding-bike": "Folding Bike",
-        "recumbent-bike": "Recumbent Bike",
-        "tandem-bike": "Tandem Bike",
-        "longtail-bike": "Longtail Bike",
-        "scooter": "Scooter"
+        "folding-bike": "vouwfiets",
+        "recumbent-bike": "Ligfiets",
+        "tandem-bike": "Tandemfiets",
+        "longtail-bike": "Longtail-fiets",
+        "scooter": "Step"
       }
     }
   },

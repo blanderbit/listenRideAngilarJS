@@ -141,7 +141,13 @@ angular.module('settings',[]).component('settings', {
 
         changeContact.onInit = function () {
           userApi.getUserData().then(function (response) {
-            var phone_number = response.data.phone_number ? angular.copy('+' + response.data.phone_number) : null;
+            var phone_number = null;
+            if (response.data.phone_number) {
+              phone_number = angular.copy('+' + response.data.phone_number)
+            } else if (response.data.unconfirmed_phone) {
+              phone_number = angular.copy('+' + response.data.unconfirmed_phone)
+            }
+
             changeContact.user = response.data;
             changeContact.user.new_phone_number = phone_number;
           });

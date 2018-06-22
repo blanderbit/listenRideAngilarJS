@@ -34,7 +34,7 @@
       "search-title": "Schaue Dir das Radangebot in München an",
       "search-subtitle": "Buch dir ein Leihrad für deinen Stil und Zweck",
       "about": "Über München",
-      "about-content": "München auf dem Rad ist einzigartig. Die Fahrradfreundliche Infrastruktur und abwechslungsreiche Natur, sei es in der Stadt oder etwas außerhalb, laden förmlich zu Erkundungstouren auf dem Zweirad ein. Die süddeutsche Metropole bietet eine Vielzahl von Routen für verschiedene Bedürfnisse.",
+      "about-content": "München auf dem Rad ist einzigartig. Die fahrradfreundliche Infrastruktur und abwechslungsreiche Natur, sei es in der Stadt oder etwas außerhalb, laden förmlich zu Erkundungstouren auf dem Zweirad ein. Die süddeutsche Metropole bietet eine Vielzahl von Routen für verschiedene Bedürfnisse.",
       "bike-routes": "Fahrradrouten",
       "bike-shops": "Fahrradläden",
       "cafes-bars": "Essen, Trinken, Café",
@@ -499,6 +499,31 @@
       "choose-location": "Wähle deine Stadt",
       "find-out-more": "Erfahre mehr über rethink",
       "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Bestelle eines der Räder online</a> und bekomme eine Tagesmiete erstattet."
+    },
+    "cocomat": {
+      "title": "Your rethink e-bike. Clear. Robust. Distinct Character.",
+      "description": "Mieten und testen Sie COCO-Mat Fahrräder in Athen, Griechenland und besuchen Sie das historische Zentrum und das Athener Meer.",
+      "subdescription": "Cycle with Penelope and Odysseus: 2 or 7 speed or e-bike, and carry the imprint of nature in the urban landscape",
+      "feature1-title": "Handmade in Greece",
+      "feature1-description": "Made with love<br>Under the sun<br>Natural materials",
+      "feature2-title": "I am wooden",
+      "feature2-description": "Sustainable materials<br>Fair production process<br>A life long lasting product",
+      "feature3-title": "Innovative design",
+      "feature3-description": "Unique cycling experience<br>Comfortable riding position<br>Customize it to your needs",
+      "test-bike": "Test the new cocomat models!",
+      "choose-location": "Choose your location",
+      "find-out-more": "Erfahren Sie mehr über COCO-MAT.bike",
+      "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed.",
+      "faq-question-1": "Do you offer warranty?",
+      "faq-answer-1": "COCO-Mat.bike bietet: Drei Jahre Herstellergarantie für defekte Holz- oder Metallfächer, die während des Herstellungsprozesses entstanden sind. Diese Garantie gilt ab Kaufdatum, wird nur dem ursprünglichen Besitzer angeboten und ist nicht übertragbar. Ein Kaufnachweis ist erforderlich.",
+      "faq-question-2": "How can I repair a wooden bike?",
+      "faq-answer-2": "Alle Fahrradteile können von jedem Fachmann repariert werden, mit Ausnahme des Holzrahmens, der von einem Schreiner nach den Anweisungen von COCO-Mat. bike repariert werden muss.",
+      "faq-question-3": "Is the wooden saddle comfortable?",
+      "faq-answer-3": "Our saddle is designed following all the anatomical specifications required. For a more comfortable ride you can use our removable saddle lining made by cocofine.",
+      "faq-question-4": "Is it completely made out of wood?",
+      "faq-answer-4": "Our bike is manufactured from natural solid wood of American Ash (Fraxinus americana). The timber derives from forests of legal logging and the cutting takes place, abiding by the legislation and international specifications of timber-cutting. The timber is a hygroscopic material (m. during its life time never stops to absorb and to remove humidity). It is completely made out of wood and 100% handcrafted in Greece!",
+      "faq-question-5": "How many bike models do you provide?",
+      "faq-answer-5": "Discover our bike collection. Choose yours!<br>Main collection:<br>Odysseus 2 speed (28'')<br>Odysseus 7 speed (28'')<br>E-Odysseus (28'')<br>Penelope 2 speed (26'')<br>Penelope 7 speed (26'')<br>E-Penelope (26'')<br><br>Kid collection:<br>Telemachus (20'')<br>Telegonus (16'')<br>Argos (12'')"
     }
   },
   "about-us": {
@@ -767,12 +792,11 @@
   },
   "privacy": {
     "title": "List and Ride Datenschutzerklärung",
+    "ga-opt-out": "Hier klicken, um Google Analytics Tracking zu deaktivieren",
     "subtitle": "Datum des Inkrafttretens: 24. Mai 2018",
     "description": "List and Ride verpflichtet sich zu starkem und transparentem Datenschutz. Unsere Datenschutzerklärung beschreibt, welche Nutzerinformationen wir über unseren Service erfassen. Wie wir diese Informationen verarbeiten und gegebenenfalls weitergeben. Die Maßnahmen, die wir ergreifen, um diese Informationen zu schützen. Die Möglichkeiten auf Zugriff, Aktualisierung und Entfernung personenbezogener Daten, falls erforderlich.<br>Hier kannst du unsere <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Datenschutzerklärung</a> zur Einsicht herunter laden.<br><br>Wenn du Fragen oder Anmerkungen zu unseren Datenschutzpraktiken oder dieser Datenschutzerklärung hast, kannst du uns unter <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> erreichen.",
     "meta-title": "Datenschutzerklärung von listnride",
-    "meta-description": "Die Datenschutzerklärung der Bike-Sharing-Community listnride bezieht sich auf die Nutzung der Onlineplattform.",
-    "ga-opt-out": "Google Analytics für diese Webseite deaktivieren",
-    "ga-opted-out": "Google Analytics ist deaktiviert."
+    "meta-description": "Die Datenschutzerklärung der Bike-Sharing-Community listnride bezieht sich auf die Nutzung der Onlineplattform."
   },
   "seo": {
     "cities-title": "Du planst zu reisen? Schau dir mehr Städte an:"
