@@ -85,14 +85,20 @@
               <div flex-gt-xs layout-margin>
                 <div class="md-body-2">{{ 'forms.password' | translate }}</div>
               </div>
-              <div flex-gt-xs="70" layout="column" layout-margin>
-                <md-input-container flex>
-                  <label>{{ 'forms.password' | translate }}</label>
-                  <input minlength="6" placeholder="***********" name="password" type="password" ng-model="settings.password"></input>
-                </md-input-container>
-                <div ng-messages="settings.form.password.$error" role="alert">
-                  <div ng-message="minlength">Password shouldn't be shorter than 6 characters.</div>
+              <div flex-gt-xs="70" layout-margin>
+                <div layout="row" layout-xs="column" ng-if="!settings.user.facebook_id">
+                  <md-input-container flex-gt-xs="45">
+                    <label>{{ 'forms.password' | translate }}</label>
+                    <input ng-disabled="true" placeholder="***********" name="password" type="password" ng-model="settings.password"></input>
+                  </md-input-container>
+                  <span hide-xs flex></span>
+                  <md-input-container layout="row" flex-gt-xs="45" flex="100">
+                    <md-button flex class="md-raised md-primary lnr-btn-inline lnr-btn-mobile" ng-click="settings.changePassword($event)">
+                      {{ 'forms.update-password' | translate }}
+                    </md-button>
+                  </md-input-container>
                 </div>
+                <p class="md-body-1" ng-if="settings.user.facebook_id">{{ 'forms.logged-in-via-facebook' | translate }}</p>
               </div>
             </div>
 
@@ -280,7 +286,7 @@
       <md-tab class="account" label="{{ 'settings.account' | translate }}" layout="column">
         <br>
         <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
-          <form name="businessForm" ng-submit="settings.updateBusiness(businessForm)" ng-hide="!settings.user.business">
+          <form name="businessForm" ng-submit="settings.updateBusiness(businessForm)" ng-if="settings.user.business">
             <div layout="row" layout-xs="column">
               <div flex-gt-xs layout-margin>
                 <div class="md-body-2">{{ 'settings.company-information' | translate }}</div>
@@ -627,7 +633,7 @@
           </form>
         </div>
       </md-tab>
-  <!-- end hours -->
+      <!-- end hours -->
     </md-tabs>
   </div>
   <footer></footer>
