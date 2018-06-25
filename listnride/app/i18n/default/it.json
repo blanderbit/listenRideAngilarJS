@@ -607,6 +607,7 @@
     "signing-up-accept-tac": "Accetto i <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Termini e Condizioni </a>e acconsento alla raccolta, all'elaborazione e all'utilizzo dei miei dati personali come ulteriormente descritto nella <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\"> Informativa sulla Privacy </a>.",
     "signing-up-accept-newsletter": "Desidero ricevere la newsletter via e-mail di listnride con contenuti interessanti su nuove bici, tour e sconti esclusivi. Si applica l' <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\"> Informativa sulla privacy </a>di listnride. Posso revocare il mio consenso in qualsiasi momento.",
     "privacy-policy": "Si applica <a style=\"pointer-events: auto;\" href=\"/#/privacy\">l'Informativa sulla Privacy</a> di listnride.",
+    "logged-in-via-facebook": "You logged in via facebook",
     "errors": {
       "password-length": "La password deve essere tra i 6-30 caratteri",
       "password-length-xs": "6-30 caratteri",

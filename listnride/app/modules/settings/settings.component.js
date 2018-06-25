@@ -352,6 +352,7 @@ angular.module('settings',[]).component('settings', {
               .position('top center')
             );
             settings.user = success.data;
+            if (success.data.phone_number) updatePrivatePhoneNumber(success.data.phone_number);
             settings.user.has_billing = !!success.data.locations.billing;
             $localStorage.profilePicture = success.data.profile_picture.profile_picture.url;
             settings.profilePicture = false;
