@@ -384,7 +384,7 @@
     "bike-deleted": "Bici cancellata con successo",
     "range-success-delete": "Periodo eliminato con successo",
     "availability-success-saved": "Disponibilità salvata con successo",
-    "update-password-error": "Could not change password. Please be sure that the old password is right"
+    "incorrect-old-password": "Could not change password. Please be sure that the old password is right"
   },
   "settings": {
     "settings": "Impostazioni",

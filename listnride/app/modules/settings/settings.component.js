@@ -94,6 +94,7 @@ angular.module('settings',[]).component('settings', {
         settings.addVoucher = addVoucher;
         settings.updateUser = updateUser;
         settings.compactObject = compactObject;
+        settings.showResponseMessage = showResponseMessage;
 
         // invocations
       }
@@ -176,19 +177,11 @@ angular.module('settings',[]).component('settings', {
              settings.password = changePassword.user.new_password;
              // update auth
              $localStorage.auth = 'Basic ' + authentication.encodeAuth($localStorage.email, new_password_hashed);
-             $mdToast.show(
-               $mdToast.simple()
-               .textContent($translate.instant('toasts.update-profile-success'))
-               .hideDelay(4000)
-               .position('top center')
-             );
+             settings.showResponseMessage('update-profile-success', 'toasts');
+             changePassword.closeDialog();
            }, function (error) {
-             $mdToast.show(
-               $mdToast.simple()
-               .textContent($translate.instant('toasts.update-password-error'))
-               .hideDelay(4000)
-               .position('top center')
-             );
+             // message: toasts.incorrect-old-password
+             settings.showResponseMessage(error.data.errors[0].detail, 'toasts');
            });
 
          };
@@ -376,6 +369,19 @@ angular.module('settings',[]).component('settings', {
           }
         );
       };
+
+      // TODO: replace to service
+      function showResponseMessage(message, path) {
+        // lowercase and replace all spaces in string to dash sign and concat with path
+        // Incorrect Old Password, toast -> toast.incorrect-old-password
+        var translateMessage = path + '.' + message.toLowerCase().replace(/\s/g, '-');
+        $mdToast.show(
+          $mdToast.simple()
+          .textContent($translate.instant(translateMessage))
+          .hideDelay(4000)
+          .position('top center')
+        );
+      }
 
       function compactObject (o) {
         var clone = _.clone(o);
