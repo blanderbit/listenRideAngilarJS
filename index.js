@@ -93,6 +93,7 @@ var redirectToProperDomain = function (req, res, next) {
   }
   next();
 };
+
 /*
  * log the request
  * no functional use, only for debugging
@@ -134,6 +135,16 @@ enableHttps();
 middleware.app.use(function (req, res, next) {
   redirectToProperDomain(req, res, next);
 });
+
+/*
+ * redirect to new brandpage urls 
+ * (from /rent-ampler-bikes to /brands/ampler)
+ */
+middleware.app.use('/rent-\*-bikes', function (req, res, next) {
+  var brandName = req.path.split('-')[1];
+  res.redirect(301, "/brands/" + brandName);
+});
+
 /*
  * intercept each call and check environment
  */
