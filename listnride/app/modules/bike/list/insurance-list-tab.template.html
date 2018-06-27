@@ -20,7 +20,7 @@
               ng-repeat="option in insuranceTab.parent.coverageOptions"
               value="{{option}}">
               {{ 'list.insurance.up-to-value' | translate }}
-              {{ option | currency:"€":2 }}
+              {{ option | currency:"€":0 }}
             </md-option>
         </md-select>
 
