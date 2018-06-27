@@ -391,7 +391,8 @@
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Fiets succesvol verwijderd",
     "range-success-delete": "Periode succesvol verwijderd",
-    "availability-success-saved": "Wijziging succesvol opgeslagen"
+    "availability-success-saved": "Wijziging succesvol opgeslagen",
+    "bike-edit-successful": ""
   },
   "settings": {
     "settings": "Instellingen",

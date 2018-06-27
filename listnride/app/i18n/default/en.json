@@ -392,7 +392,8 @@
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Bike successfully deleted",
     "range-success-delete": "Unvailability range successfully deleted",
-    "availability-success-saved": "Availability successfully saved"
+    "availability-success-saved": "Availability successfully saved",
+    "bike-edit-successful": "Bike successfully edited"
   },
   "settings": {
     "settings": "Settings",

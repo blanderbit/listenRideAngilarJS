@@ -391,7 +391,8 @@
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Fahrrad erfolgreich gelöscht",
     "range-success-delete": "Zeitraum erfolgreich gelöscht",
-    "availability-success-saved": "Availability successfully saved"
+    "availability-success-saved": "Availability successfully saved",
+    "bike-edit-successful": "Rad erfolgreich bearbeitet"
   },
   "settings": {
     "settings": "Einstellungen",

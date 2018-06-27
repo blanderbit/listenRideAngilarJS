@@ -383,7 +383,8 @@
     "duplicate-finish": "Processo di duplicazione è terminato. Copie create con successo",
     "bike-deleted": "Bici cancellata con successo",
     "range-success-delete": "Periodo eliminato con successo",
-    "availability-success-saved": "Disponibilità salvata con successo"
+    "availability-success-saved": "Disponibilità salvata con successo",
+    "bike-edit-successful": ""
   },
   "settings": {
     "settings": "Impostazioni",

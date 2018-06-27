@@ -391,7 +391,8 @@
     "duplicate-finish": "Proceso de duplicación terminado. Copias creadas con éxito",
     "bike-deleted": "Bici borrada con éxito",
     "range-success-delete": "Fecha borrado",
-    "availability-success-saved": "Disponibilidad guardada"
+    "availability-success-saved": "Disponibilidad guardada",
+    "bike-edit-successful": "Bike successfully edited"
   },
   "settings": {
     "settings": "Configuración",
