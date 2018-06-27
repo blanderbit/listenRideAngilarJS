@@ -513,6 +513,46 @@ rethink .cb-slideshow li:nth-child(4) span {
 }
 
 /*---------------------------------------------------------*/
+/* COCOMAT
+/*---------------------------------------------------------*/ 
+
+cocomat .cb-slideshow li span { 
+  -webkit-animation: quattroAnimation 20s linear infinite 0s;
+  -moz-animation: quattroAnimation 20s linear infinite 0s;
+  -o-animation: quattroAnimation 20s linear infinite 0s;
+  animation: quattroAnimation 20s linear infinite 0s; 
+}
+
+cocomat .cb-slideshow li:nth-child(1) span { 
+  background-image: url(../ui_images/brand-integration/cocomat/hero-1.jpg); 
+}
+
+cocomat .cb-slideshow li:nth-child(2) span { 
+  background-image: url(../ui_images/brand-integration/cocomat/hero-2.jpg);
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  -o-animation-delay: 5s; 
+  animation-delay: 5s;
+}
+
+cocomat .cb-slideshow li:nth-child(3) span { 
+  background-image: url(../ui_images/brand-integration/cocomat/hero-1.jpg);
+  -webkit-animation-delay: 10s;
+  -moz-animation-delay: 10s;
+  -o-animation-delay: 10s; 
+  animation-delay: 10s;
+}
+
+cocomat .cb-slideshow li:nth-child(4) span { 
+  background-image: url(../ui_images/brand-integration/cocomat/hero-3.jpg);
+  -webkit-animation-delay: 15s;
+  -moz-animation-delay: 15s;
+  -o-animation-delay: 15s; 
+  animation-delay: 15s;
+}
+
+
+/*---------------------------------------------------------*/
 /* KEYFRAMES (specifying animation behavior)
 /*---------------------------------------------------------*/ 
 

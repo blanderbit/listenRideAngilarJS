@@ -13,32 +13,32 @@ angular.module('cocomatIntegration',[]).component('cocomat', {
       cocomat.shops = {
         6059: {
           id: "6059",
-          name: "Coco-Mat Hotel Kolonaki",
+          name: "COCO-MAT Hotel Athens",
           bikes: []
         },
         6061: {
           id: "6061",
-          name: "Hotel Coco-mat Nafsika",
+          name: "COCO-MAT Hotel Nafsika",
           bikes: []
         },
         6063: {
           id: "6063",
-          name: "Coco-mat Alimo",
+          name: "COCO-MAT Store Alimos",
           bikes: []
         },
         6064: {
           id: "6064",
-          name: "Coco-mat Store Kalamaki",
+          name: "COCO-MAT Store Kalamaki",
           bikes: []
         },
         6065: {
           id: "6065",
-          name: "Coco-mat Store Voula",
+          name: "COCO-MAT Store Voula",
           bikes: []
         },
         6066: {
           id: "6066",
-          name: "Coco-mat Store - Zea's Marina",
+          name: "COCO-MAT Store - Zea's Marine",
           bikes: []
         }
       };
