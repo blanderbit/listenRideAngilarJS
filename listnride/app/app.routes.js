@@ -906,7 +906,7 @@
 
       $stateProvider.state({
         name: 'ampler',
-        url: '/rent-ampler-bikes',
+        url: '/brands/ampler',
         template: '<ampler></ampler>',
         resolve: {
             data: function ($translate, ngMeta) {
@@ -925,7 +925,7 @@
 
       $stateProvider.state({
         name: 'vanmoof',
-        url: '/rent-vanmoof-bikes',
+        url: '/brands/vanmoof',
         template: '<vanmoof></vanmoof>',
         resolve: {
             data: function ($translate, ngMeta) {
@@ -945,7 +945,7 @@
 
       $stateProvider.state({
         name: 'moeve',
-        url: '/rent-moeve-bikes',
+        url: '/brands/moeve',
         template: '<moeve></moeve>',
         resolve: {
             data: function ($translate, ngMeta) {
@@ -965,7 +965,7 @@
 
       $stateProvider.state({
         name: 'rethink',
-        url: '/rent-rethink-bikes',
+        url: '/brands/rethink',
         template: '<rethink></rethink>',
         resolve: {
             data: function ($translate, ngMeta) {
@@ -985,7 +985,7 @@
 
       $stateProvider.state({
         name: 'votec',
-        url: '/rent-votec-bikes',
+        url: '/brands/votec',
         template: '<votec></votec>',
         resolve: {
             data: function ($translate, ngMeta) {
@@ -1004,7 +1004,7 @@
 
       $stateProvider.state({
         name: 'vello',
-        url: '/rent-vello-bikes',
+        url: '/brands/vello',
         template: '<vello></vello>',
         resolve: {
           data: function ($translate, ngMeta) {
@@ -1042,7 +1042,7 @@
 
       $stateProvider.state({
         name: 'bonvelo',
-        url: '/rent-bonvelo-bikes',
+        url: '/brands/bonvelo',
         template: '<bonvelo></bonvelo>',
         resolve: {
           data: function ($translate, ngMeta) {
@@ -1061,7 +1061,7 @@
 
       $stateProvider.state({
         name: 'motoparilla',
-        url: '/rent-motoparilla-bikes',
+        url: '/brands/motoparilla',
         template: '<motoparilla></motoparilla>',
         resolve: {
           data: function ($translate, ngMeta) {
@@ -1078,29 +1078,9 @@
         }
       });
 
-      // TODO: The following state is redundant and only a hotfix for a wrong PR email
-      $stateProvider.state({
-        name: 'ampler2',
-        url: '/rent-ampler-bike',
-        template: '<ampler></ampler>',
-        resolve: {
-            data: function ($translate, ngMeta) {
-                $translate(["meta.brand-integration.ampler.meta-title", "meta.brand-integration.ampler.meta-descr"])
-                    .then(function (translations) {
-                        ngMeta.setTitle(translations["meta.brand-integration.ampler.meta-title"]);
-                        ngMeta.setTag("description", translations["meta.brand-integration.ampler.meta-descr"]);
-                        ngMeta.setTag("noindex", false);
-                    })
-            }
-        },
-        meta: {
-            disableUpdate: true
-        }
-      });
-
       $stateProvider.state({
         name: 'brompton',
-        url: '/rent-brompton-bikes',
+        url: '/brands/brompton',
         template: '<brompton></brompton>',
         resolve: {
             data: function ($translate, ngMeta) {
@@ -1119,7 +1099,7 @@
 
       $stateProvider.state({
         name: 'muli',
-        url: '/rent-muli-bikes',
+        url: '/brands/muli',
         template: '<muli></muli>',
         resolve: {
             data: function ($translate, ngMeta) {
@@ -1138,7 +1118,7 @@
 
       $stateProvider.state({
         name: 'cocomat',
-        url: '/rent-cocomat-bikes',
+        url: '/brands/cocomat',
         template: '<cocomat></cocomat>',
         resolve: {
             data: function ($translate, ngMeta) {
