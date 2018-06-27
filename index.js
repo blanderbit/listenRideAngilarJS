@@ -141,7 +141,7 @@ middleware.app.use(function (req, res, next) {
  * (from /rent-ampler-bikes to /brands/ampler)
  */
 middleware.app.use('/rent-\*-bikes', function (req, res, next) {
-  var brandName = req.path.split('-')[1];
+  var brandName = req.route.path.split('-')[1];
   res.redirect(301, "/brands/" + brandName);
 });
 
