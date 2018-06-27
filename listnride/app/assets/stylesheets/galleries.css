@@ -536,7 +536,7 @@ cocomat .cb-slideshow li:nth-child(2) span {
 }
 
 cocomat .cb-slideshow li:nth-child(3) span { 
-  background-image: url(../ui_images/brand-integration/cocomat/hero-1.jpg);
+  background-image: url(../ui_images/brand-integration/cocomat/hero-3.jpg);
   -webkit-animation-delay: 10s;
   -moz-animation-delay: 10s;
   -o-animation-delay: 10s; 
@@ -544,7 +544,7 @@ cocomat .cb-slideshow li:nth-child(3) span {
 }
 
 cocomat .cb-slideshow li:nth-child(4) span { 
-  background-image: url(../ui_images/brand-integration/cocomat/hero-3.jpg);
+  background-image: url(../ui_images/brand-integration/cocomat/hero-4.jpg);
   -webkit-animation-delay: 15s;
   -moz-animation-delay: 15s;
   -o-animation-delay: 15s; 
