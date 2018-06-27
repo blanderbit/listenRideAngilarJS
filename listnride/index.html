@@ -15,6 +15,7 @@
   <meta property="og:image:height" content="534" />
   <meta property="og:description" content="{{ngMeta.description}}" />
   <meta property="og:type" content="website" />
+  <meta name="robots" content="noindex" ng-if="ngMeta['noindex']" />
   <link rel="alternate" href="https://www.listnride.com{{location.path()}}" hreflang="x-default" />
   <link rel="alternate" href="https://www.listnride.de{{location.path()}}" hreflang="de" />
   <link rel="alternate" href="https://www.listnride.nl{{location.path()}}" hreflang="nl" />
@@ -294,6 +295,5 @@
   })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
   ga('create', 'UA-61041935-1', 'auto');
   ga('set', 'anonymizeIp', true);
-  ga('send', 'pageview');
 </script>
 </html>
