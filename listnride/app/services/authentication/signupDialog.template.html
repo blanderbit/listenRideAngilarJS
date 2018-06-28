@@ -143,7 +143,7 @@
             </md-checkbox>
           </div>
           <div flex="90">
-            <div data-ng-bind-html="'forms.signing-up-accept-tac' | translate"></div>
+            <div ng-click="signupDialog.blankLinksTrigger($event)" data-ng-bind-html="'forms.signing-up-accept-tac' | translate"></div>
           </div>
         </div>
         <div flex layout="row" layout-align="space-around start" class="lnr-mb-20" style="max-width: 544px; font-size:12px">
@@ -156,7 +156,7 @@
             </md-checkbox>
           </div>
           <div flex="90">
-            <div data-ng-bind-html="'forms.signing-up-accept-newsletter' | translate"></div>
+            <div ng-click="signupDialog.blankLinksTrigger($event)" data-ng-bind-html="'forms.signing-up-accept-newsletter' | translate"></div>
           </div>
         </div>
 

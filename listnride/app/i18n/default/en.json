@@ -297,7 +297,8 @@
     "shopping": "Secure Shopping",
     "pay-secure": "Pay secure with",
     "agree-terms": "With 'Request Bike' you agree to the",
-    "agree-terms-link": "listnride Terms",
+    "agree-terms-link": "listnride Terms and Conditions",
+    "and-agree-privacy": "and to the <a target=\"_blank\" href=\"/#/privacy\">listnride Privacy Policy</a>.",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
       "call-us": "Call us +49 (0)30-120870330, monday to friday 9-18pm. ",
