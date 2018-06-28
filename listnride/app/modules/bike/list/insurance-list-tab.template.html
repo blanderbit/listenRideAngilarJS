@@ -20,7 +20,7 @@
               ng-repeat="option in insuranceTab.parent.coverageOptions"
               value="{{option}}">
               {{ 'list.insurance.up-to-value' | translate }}
-              {{ option | currency:"€":2 }}
+              {{ option | currency:"€":0 }}
             </md-option>
         </md-select>
 
@@ -53,7 +53,7 @@
     <div class="navigation" layout="row" layout-align="end center" layout-margin>
       <md-button
         class="md-raised md-primary"
-        ng-disabled="!insuranceTab.parent.form.coverage_total && insuranceTab.parent.isListMode"
+        ng-disabled="!insuranceTab.parent.form.coverage_total && insuranceTab.parent.insuranceAllowed() && insuranceTab.parent.isListMode"
         ng-click="insuranceTab.parent.nextTab()">
         {{ 'list.next' | translate }}
       </md-button>
