@@ -5,23 +5,24 @@ angular.module('listnride')
     return {
       accessoryOptions: function () {
         return [
-          {model: "has_lock", label: "lock", iconFileName: "accessoire_lock.svg"},
-          {model: "has_helmet", label: "helmet", iconFileName: "accessoire_helmet.svg"},
-          {model: "has_lights", label: "lights", iconFileName: "accessoire_lights.svg"},
-          {model: "has_basket", label: "basket", iconFileName: "accessoire_basket.svg"},
-          {model: "has_trailer", label: "trailer", iconFileName: "accessoire_trailer.svg"},
-          {model: "has_childseat", label: "childseat", iconFileName: "accessoire_childseat.svg"}
+          { model: "lock", label: "lock", iconFileName: "accessoire_lock.svg" },
+          { model: "helmet", label: "helmet", iconFileName: "accessoire_helmet.svg" },
+          { model: "lights", label: "lights", iconFileName: "accessoire_lights.svg" },
+          { model: "basket", label: "basket", iconFileName: "accessoire_basket.svg" },
+          { model: "trailer", label: "trailer", iconFileName: "accessoire_trailer.svg"} ,
+          { model: "childseat", label: "childseat", iconFileName: "accessoire_childseat.svg" },
+          { model: "gps", label: "gps", iconFileName: "accessoire_gps.svg" }
         ]
       },
 
       sizeOptions: function () {
         return [
-          {value: 0, label: "Unisize"},
-          {value: 155, label: "155 cm - 165 cm"},
-          {value: 165, label: "165 cm - 175 cm"},
-          {value: 175, label: "175 cm - 185 cm"},
-          {value: 185, label: "185 cm - 195 cm"},
-          {value: 195, label: "195 cm - 205 cm"}
+          { value: 0, label: "Unisize" },
+          { value: 155, label: "155 cm - 165 cm" },
+          { value: 165, label: "165 cm - 175 cm" },
+          { value: 175, label: "175 cm - 185 cm" },
+          { value: 185, label: "185 cm - 195 cm" },
+          { value: 195, label: "195 cm - 205 cm" }
         ];
       },
 
@@ -38,13 +39,13 @@ angular.module('listnride')
 
       kidsSizeOptions: function () {
         return [
-          {value: 85, label: "85 cm - 95 cm"},
-          {value: 95, label: "95 cm - 105 cm"},
-          {value: 105, label: "105 cm - 115 cm"},
-          {value: 115, label: "115 cm - 125 cm"},
-          {value: 125, label: "125 cm - 135 cm"},
-          {value: 135, label: "135 cm - 145 cm"},
-          {value: 145, label: "145 cm - 155 cm"}
+          { value: 85, label: "85 cm - 95 cm" },
+          { value: 95, label: "95 cm - 105 cm" },
+          { value: 105, label: "105 cm - 115 cm" },
+          { value: 115, label: "115 cm - 125 cm" },
+          { value: 125, label: "125 cm - 135 cm" },
+          { value: 135, label: "135 cm - 145 cm" },
+          { value: 145, label: "145 cm - 155 cm" }
         ];
       },
 

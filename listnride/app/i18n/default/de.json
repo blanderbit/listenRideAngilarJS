@@ -105,7 +105,8 @@
     "Dec": "Dez",
     "testimonials-header": "Was sagen die Leute?",
     "balance": "Guthaben",
-    "tac": "Allgemeinen Geschäftsbedingungen",
+    "tac": "Nutzungsbedingungen",
+    "privacy-policy": "Datenschutzerklärung",
     "booking-accept-tac": "Durch Buchen bestätige ich die",
     "already-booked": "Bereits Gebucht",
     "for-shops": "Für Fahrradläden",
@@ -282,7 +283,9 @@
     },
     "privacy": {
       "meta-title": "Datenschutzrichtlinien von listnride",
-      "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform."
+      "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform.",
+      "use-opt-in": "Um dir mit listnride einen perfekten Service zu bieten, setzen wir Cookies gemäß unserer <a target=\"_blank\" href=\"/#/privacy\">Cookie-Richtlinie ein</a>.",
+      "use-opt-in-button": "Hab ich verstanden."
     }
   },
   "booking": {
@@ -556,7 +559,7 @@
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} würde gerne dein <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Sobald du die Anfrage annimmst, wird sie gebucht. Vereinbare alle weiteren Details über den Chat.",
-    "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon-Nummer: {{user.phone_number}} <br>Adresse: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
+    "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon-Nummer: {{user.pretty_phone_number}} <br>Adresse: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
     "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
     "9": "Leider hat {{user.first_name}} die Anfrage nicht bestätigt.",
@@ -564,7 +567,7 @@
   },
   "rideChat": {
     "1": "Du würdest gerne {{lister.business_name}} <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, ist das Rad gebucht.",
-    "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.phone_number}}<br>Adresse: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
+    "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.pretty_phone_number}}<br>Adresse: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} hat die Rückgabe des Rades bestätigt und dich bewertet.<br>Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",
     "6": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
     "8": "Leider hat der Verleiher die Anfrage abgelehnt. Frage einfach ein paar andere schöne Räder an.",
@@ -583,18 +586,21 @@
     "sign-up": "Registrieren",
     "sign-up-to-book": "Registrieren, um das Rad zu leihen",
     "sign-up-with-facebook": "Mit Facebook registrieren",
+    "sign-up-divider-text": "accept our terms and conditions",
+    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
     "member-already": "Bereits registriert?",
     "business": "Fahrradgeschäft?",
     "description": "Beschreibung",
     "description_min_100": "Beschreibung sollte min. 100 Buchstaben lang sein",
     "address": "Adresse",
     "profile-picture": "Profilbild",
-    "profile-picture-info": "Please download only valid picture format (jpg, jpeg, png). Maximum picture size is 20mb. Minimum picture dimension(width x height) is 100px x 100px",
+    "profile-picture-info": "Einwilligung zur Verwendung des Profilbildes<br>Mit dem Upload meines Profilbilds erkläre ich mich damit einverstanden, dass listnride das Profilbild speichert, wie in der <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> näher beschrieben. Ich kann mein Profilbild jederzeit löschen.<br><br>Bitte nur gültige Bildformate (jpg, jpeg, png) hochladen. Die maximale Bildgröße beträgt 20 MB. Die minimale Bildgröße (Breite x Höhe) ist 100px x 100px.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "Your picture size is more than maximum size",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "Allgemein",
     "street": "Straße und Hausnr.",
+    "streetnumber": "Hausnr.",
     "zip": "PLZ",
     "city": "Stadt",
     "country": "Land",
@@ -602,7 +608,9 @@
     "update-contact": "Handynummer ändern",
     "update-contact-mobile": "Handynummer",
     "company-contact-info": "Bitte trage die Daten der Kontaktperson des Unternehmens ein.",
-    "signing-up-accept-tac": "Mit der Registrierung akzeptiere ich die",
+    "signing-up-accept-tac": "Ich stimme hiermit den <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Nutzungsbedingungen</a> zu und willige in die Erhebung, Verarbeitung und Nutzung meiner personenbezogenen Daten ein, wie in der <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> näher beschrieben.",
+    "signing-up-accept-newsletter": "Ich möchte den E-Mail-Newsletter von listnride mit handverlesenen Themen über neue Räder, Touren und Gutscheine erhalten. Es gilt die <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> von listnride. Ich kann meine Einwilligung jederzeit widerrufen.",
+    "privacy-policy": "Es gilt die <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> von listnride.",
     "errors": {
       "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
       "password-length-xs": "6-30 Zeichen",
@@ -726,7 +734,8 @@
       "lights": "Licht",
       "basket": "Korb",
       "trailer": "Anhänger",
-      "childseat": "Kindersitz"
+      "childseat": "Kindersitz",
+      "gps": "GPS"
     },
     "pictures": {
       "header": "Lade ein paar Fotos hoch",

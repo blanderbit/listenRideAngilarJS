@@ -290,7 +290,6 @@ angular.module('list', ['ngLocale'])
               }
             });
           }
-
           Upload.upload({
             method: 'PUT',
             url: api.getApiUrl() + '/rides/' + $stateParams.bikeId,
@@ -497,7 +496,6 @@ angular.module('list', ['ngLocale'])
         list.changeCategory = function() {
           list.form.subCategory = undefined;
         }
-
         // populate data for list or edit bike
         if (list.isListMode) list.populateNewBikeData();
         else list.populateExistingBikeData();

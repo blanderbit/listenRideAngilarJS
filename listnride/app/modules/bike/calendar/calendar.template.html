@@ -55,16 +55,16 @@
 
 <!--        EVENT CALENDAR FIXED SLOT        -->
 <div layout="column" layout-margin ng-if="calendar.bikeFamily == calendar.event.familyId">
-  <p class="md-headline lnr-center">Velo Berlin Calendar</p>
-  <p class="md-body-1 lnr-center">During the Velo Berlin, you can rent fantastic bikes for free! Just select which day and what time slot you'd like to have them!</p>
+  <p class="md-headline lnr-center">Velo Hamburg Calendar</p>
+  <p class="md-body-1 lnr-center">During the Velo Hamburg, you can rent fantastic bikes for free! Just select which day and what time slot you'd like to have them!</p>
   <md-input-container class="md-block">
     <label>1. Select the Rental Day</label>
     <md-select ng-model="calendar.day">
-      <md-option value="14">
-        Saturday, 14th of Apr
+      <md-option value="26">
+        Saturday, 26th of May
       </md-option>
-      <md-option value="15">
-        Sunday, 15th of Apr
+      <md-option value="27">
+        Sunday, 27th of May
       </md-option>
     </md-select>
   </md-input-container>
@@ -223,5 +223,12 @@
     ng-disabled="true">
     {{ 'calendar.select-timespan' | translate }}
   </md-button>
+  <div layout-padding layout="row">
+    <md-icon md-svg-src="app/assets/ui_icons/icn_safe.svg" class="lnr-icn-lrg"></md-icon>
+    <div layout="column">
+      <span class="md-body-1">{{ 'calendar.basic-insurance-included' | translate }}</span>
+      <a class="lnr-link" ui-sref="trustAndSafety" target="_BLANK">{{ 'shared.learn-more' | translate }}</a>
+    </div>
+  </div>
   <!-- <p ng-if="!calendar.authentication.loggedIn()" class="md-caption center-text lnr-margin-lrg">{{ 'calendar.to-request-bike-please' | translate }} {{ 'forms.sign-up' | translate }} {{ 'forms.or' | translate }} {{ 'forms.log-in' | translate }}</p> -->
 </div>

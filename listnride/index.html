@@ -116,6 +116,7 @@
   <script src="app/modules/shared/receipt/receipt.component.js"></script>
   <script src="app/modules/shared/input-range/input-range.component.js"></script>
   <script src="app/modules/shared/credit-cards/angular-credit-cards.js"></script>
+  <script src="app/modules/shared/address-input/address-input.component.js"></script>
   <!-- core services -->
   <script src="app/services/base64/base64.service.js"></script>
   <script src="app/services/authentication/authentication.service.js"></script>
@@ -149,6 +150,7 @@
   <script src="app/modules/footer/footer.component.js"></script>
   <script src="app/modules/header/header.component.js"></script>
   <script src="app/modules/sidebar/sidebar.component.js"></script>
+  <script src="app/modules/privacy-bar/privacy-bar.component.js"></script>
   <!-- extra modules -->
   <script src="app/modules/invest/invest.component.js"></script>
   <script src="app/modules/business-community/business-community.component.js"></script>
@@ -216,7 +218,7 @@
         }
       ],
       "url": "https://www.listnride.com",
-      "logo": "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/14657519_1883887185177339_3365828092985602698_n.png?oh=9ad272284dcab01378bd3cc6b08c0c8f&oe=5AA59707",
+      "logo": "http://cdn.listnride.com/assets/listnride-logo-blue.jpg",
       "sameAs": [
         "https://www.facebook.com/listnride",
         "https://instagram.com/listnride"
@@ -263,9 +265,7 @@
   <header></header>
   <sidebar layout="row" header="header"></sidebar>
   <ui-view flex="auto"></ui-view>
-  <!-- START FUN -->
-  <!-- <div id="stage"></div> -->
-  <!-- END FUN -->
+  <privacy-bar></privacy-bar>
   <!--<footer></footer>-->
 </body>
 <script>
@@ -281,5 +281,7 @@
     m.parentNode.insertBefore(a, m)
   })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
   ga('create', 'UA-61041935-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
 </script>
 </html>

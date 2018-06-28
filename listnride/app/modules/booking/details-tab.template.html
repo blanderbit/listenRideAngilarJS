@@ -50,19 +50,6 @@
                 <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
               </div>
             </md-input-container>
-            <!-- <md-input-container flex="50">
-              <label>{{ 'forms.email-address' | translate }}</label>
-              <input
-                name="email"
-                ng-model="details.parent.user.email"
-                ng-maxlength="30"
-                required
-              >
-              <div ng-messages="details.parent.detailsForm.email.$error" role="alert">
-                <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
-                <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
-              </div>
-            </md-input-container> -->
             <md-input-container flex="50" hide>
               <label>{{ 'forms.password' | translate }}</label>
               <input
@@ -73,81 +60,12 @@
               >
             </md-input-container>
           </div>
-          <div class="lnr-input-containers" layout="row" layout-xs="column">
-            <!-- Street form without autocomplete -->
-            <!-- <md-input-container flex>
-                <label>{{ 'list.location.street-number' | translate }}</label>   
-                  <input
-                    required
-                    name="street"
-                    ng-disabled="details.parent.phoneConfirmed === 'success'"
-                    ng-model="details.parent.user.street"
-                    layout="column"
-                  >
-                <div ng-messages="details.parent.detailsForm.city.$error" role="alert">
-                  <div ng-message="required">{{ 'shared.required' | translate }}</div>
-                </div>
-              </md-input-container> -->
-              
-            <!-- Street form with autocomplete -->
-            <div flex>
-              <autocomplete
-                autocomplete-id="details-address"
-                class="details-address"
-                layout="column"
-                required="true"
-                ng-disabled="details.parent.phoneConfirmed === 'success'"
-                name="street"
-                location="details.parent.user.street"
-                label-id="{{ 'list.location.street-number' | translate }}"
-                place-changed="details.parent.fillAddress(place)"
-                error="details.parent.detailsForm.street.$error"
-              >
-              </autocomplete>
-            </div>
+        </form>
+        <div class="lnr-input-containers">
+          <address-input address="details.parent.address" valid-address="details.parent.validAddress"></address-input>
+        </div>
 
-            <md-input-container flex>
-              <label>{{ 'forms.city' | translate }}</label>
-              <input
-                required
-                name="city"
-                ng-disabled="details.parent.phoneConfirmed === 'success'"
-                ng-model="details.parent.user.city"
-              >
-              <div ng-messages="details.parent.detailsForm.city.$error" role="alert">
-                <div ng-message="required">{{ 'shared.required' | translate }}</div>
-              </div>
-            </md-input-container>
-          </div>
-
-          <div class="lnr-input-containers" layout="row" layout-xs="column">
-            <md-input-container flex>
-              <label>{{ 'forms.zip' | translate }}</label>
-              <input
-                required
-                name="zip"
-                ng-disabled="details.parent.phoneConfirmed === 'success'"
-                ng-model="details.parent.user.zip"
-              >
-              <div ng-messages="details.parent.detailsForm.zip.$error" role="alert">
-                <div ng-message="required">{{ 'shared.required' | translate }}</div>
-              </div>
-            </md-input-container>
-
-            <md-input-container flex>
-              <label>{{ 'forms.country' | translate }}</label>
-              <input
-                required
-                name="country"
-                ng-disabled="details.parent.phoneConfirmed === 'success'"
-                ng-model="details.parent.user.country"
-              >
-              <div ng-messages="details.parent.detailsForm.country.$error" role="alert">
-                <div ng-message="required">{{ 'shared.required' | translate }}</div>
-              </div>
-            </md-input-container>
-          </div>
-
+        <form name="details.parent.verificationForm" novalidate class="md-body-desktop">
           <div class="spacer-xs"></div>
           <h3 class="md-title">{{ 'booking.details.verification' | translate }}</h3>
           <p class="lnr-no-margin" ng-show="details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">{{ 'booking.details.send-sms' | translate }}</p>
@@ -171,7 +89,7 @@
                 ng-disabled="details.parent.phoneConfirmed === 'success'"
                 required
               >
-              <div ng-messages="details.parent.detailsForm.email.$error" role="alert">
+              <div ng-messages="details.parent.verificationForm.email.$error" role="alert">
                 <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
                 <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
               </div>
@@ -190,7 +108,7 @@
                 required
                 ng-disabled="details.parent.phoneConfirmed === 'success'"
               >
-              <div ng-messages="details.parent.detailsForm.phone_number.$error" role="alert">
+              <div ng-messages="details.parent.verificationForm.phone_number.$error" role="alert">
                 <div ng-message="pattern">{{ 'verification.5.enter-valid-phone-nr' | translate }}</div>
                 <div ng-message="required">{{ 'verification.5.enter-valid-phone-nr' | translate }}</div>
                 <div ng-message="internationalPhoneNumber">{{ 'verification.5.enter-valid-phone-nr' | translate }}</div>
@@ -273,6 +191,7 @@
               <a class="lnr-link" ng-click="details.parent.resendSms()">{{ 'booking.details.resend' | translate }}</a>
             </div>
           </div>
+          <p class="md-caption" data-ng-bind-html="'forms.privacy-policy' | translate"></p>
         </form>
       </div>
     </div>

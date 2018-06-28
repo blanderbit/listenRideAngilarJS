@@ -105,7 +105,8 @@
     "Dec": "Dec",
     "testimonials-header": "Wat zeggen onze gebruikers?",
     "balance": "Saldo",
-    "tac": "algemene voorwaarden",
+    "tac": "gebruiksvoorwaarden",
+    "privacy-policy": "privacybeleid",
     "booking-accept-tac": "Bij het bevestigen van de boeking accepteer ik de",
     "already-booked": "al geboekt",
     "for-shops": "For Bikeshops",
@@ -282,7 +283,9 @@
     },
     "privacy": {
       "meta-title": "Privacy Policy of listnride",
-      "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform."
+      "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform.",
+      "use-opt-in": "Om u met listnride een optimale service te bieden, gebruiken wij cookies in conform ons Cookie-beleid.",
+      "use-opt-in-button": "Ik heb het begrepen."
     }
   },
   "booking": {
@@ -557,7 +560,7 @@
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} uit {{user.city}} zou graag jouw <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. leg alle verdere details vast via de Chat.",
-    "3": "{{user.first_name}} Je hebt de aanvraag bevestigd. Je fiets is nu verhuurd voor de periode {{timespan}}! De contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\nNaam: {{user.first_name}} {{user.last_name}} \nNummer: {{user.phone_number}} \nAdres: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
+    "3": "{{user.first_name}} Je hebt de aanvraag bevestigd. Je fiets is nu verhuurd voor de periode {{timespan}}! De contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\nNaam: {{user.first_name}} {{user.last_name}} \nNummer: {{user.pretty_phone_number}} \nAdres: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
     "5": "Hartelijk bedankt voor het bevestigen van de teruggave van de fiets als ook je recensie. De verhuurtransactie is nu afgerond en het geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons gerust een e-mail aan hello@listnride.com",
     "8": "Je hebt de aanvraag afgewezen. Schrijf de aanvrager kort een berichtje waarom het niet lukt.",
     "9": "helaas heeft {{user.first_name}} de aanvraag niet bevestigd.",
@@ -565,7 +568,7 @@
   },
   "rideChat": {
     "1": "Je zou graag {{lister.business_name}} <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. Spreek de verdere details met de verhuurder af. Zodra je aanvraag wordt aangenomen, is de boeking rond.",
-    "3": "Gefeliciteerd, {{lister.first_name}} heeft je aanvraag geaccepteerd, je boeking is hiermee bevestigd. De contactgegevens zijn de volgende, alle details worden je ook per email toegestuurd.<br><br>Naam: {{lister.first_name}} {{lister.last_name}}<br>Nummer: {{lister.phone_number}}<br>Adres: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
+    "3": "Gefeliciteerd, {{lister.first_name}} heeft je aanvraag geaccepteerd, je boeking is hiermee bevestigd. De contactgegevens zijn de volgende, alle details worden je ook per email toegestuurd.<br><br>Naam: {{lister.first_name}} {{lister.last_name}}<br>Nummer: {{lister.pretty_phone_number}}<br>Adres: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} heeft de teruggave van de fiets bevestigd. Tenslotte vragen wij je een recensie van de ervaring achter te laten. Dit helpt onze community zeer en rondt tevens de transactie af.",
     "6": "Bedankt voor je recensie. De verhuur is succesvol verlopen.",
     "8": "Helaas heeft de verhuurder je aanvraag afgewezen. Gelukkig zijn er genoeg andere mooie fietsen die je kan aanvragen.",
@@ -584,13 +587,15 @@
     "sign-up": "Aanmelden",
     "sign-up-to-book": "Meld je aan om de fiets te huren.",
     "sign-up-with-facebook": "Met facebook aanmelden",
+    "sign-up-divider-text": "accept our terms and conditions",
+    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
     "member-already": "Al geregistreerd?",
     "business": "Zakelijke gebruiker?",
     "description": "Beschrijving",
     "description_min_100": "Beschrijvingstekst moet min. 100 tekens lang zijn",
     "address": "Adres",
     "profile-picture": "Profielfoto",
-    "profile-picture-info": "Please download only valid picture format (jpg, jpeg, png). Maximum picture size is 20mb. Minimum picture dimension(width x height) is 100px x 100px",
+    "profile-picture-info": "Toestemming voor het gebruik van de profielfoto<br>Door mijn profielfoto te uploaden, ga ik ermee akkoord dat listnride de profielfoto opslaat zoals gedetailleerder beschreven in het <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacybeleid</a>. Ik kan mijn profielfoto te allen tijde verwijderen.<br><br>Gelieve alleen de juiste beeldformaten te uploaden (jpg, jpeg, png). De maximale beeldgrootte is 20mb. Minimale beeldafmeting (breedte x hoogte) is 100px x 100px",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "Your picture size is more than maximum size",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
@@ -603,7 +608,9 @@
     "update-contact": "Wijzig mobiele nummer",
     "update-contact-mobile": "Mobiele nummer",
     "company-contact-info": "Vul uw Bedrijfsnaam en naam van de contact persoon in",
-    "signing-up-accept-tac": "Door een account aan te maken accepteer je de",
+    "signing-up-accept-tac": "Ik ga hierbij akkoord met de <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Gebruiksvoorwaarden</a> en ga akkoord met het verzamelen, verwerken en gebruiken van mijn persoonsgegevens zoals verder beschreven in het <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacybeleid</a>.",
+    "signing-up-accept-newsletter": "Ik wil graag de listnride e-mailnieuwsbrief ontvangen met interessante informatie over fietsen, community updates en exclusieve aanbiedingen. Het <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacybeleid</a> van listnride is van toepassing. Ik kan mijn toestemming te allen tijde intrekken.",
+    "privacy-policy": "Het <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacybeleid</a> van listnride is van toepassing.",
     "errors": {
       "password-length": "Wachtwoord dient 6-30 karakters lang te zijn",
       "password-length-xs": "6-30 tekens",
@@ -726,7 +733,8 @@
       "lights": "Licht",
       "basket": "Mandje",
       "trailer": "Aanhanger",
-      "childseat": "Kinderzitje"
+      "childseat": "Kinderzitje",
+      "gps": "GPS"
     },
     "pictures": {
       "header": "Kies een aantal mooie foto's van je fiets",

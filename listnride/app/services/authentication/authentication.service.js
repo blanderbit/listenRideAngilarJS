@@ -132,7 +132,7 @@ angular.
         ezfb.getLoginStatus(function(response) {
           if (response.status === 'connected') {
             if (requestFlow) {
-              $analytics.eventTrack('click', {category: 'Login', label: 'Facebook  Request Flow'});
+              $analytics.eventTrack('click', {category: 'Login', label: 'Facebook Request Flow'});
             } else {
               $analytics.eventTrack('click', {category: 'Login', label: 'Facebook Standard Flow'});
             }
@@ -157,16 +157,16 @@ angular.
         });
       };
 
-      var signupGlobal = function (form) {
+      var signupGlobal = function (user) {
         // TODO: REPLACE THIS MONKEY PATCH WITH PROPER BACKEND-SIDE TEMPORARY PASSWORDS
-        if (!form.password.$modelValue) {
-          form.password.$modelValue = "123456";
+        if (!user.password) {
+          user.password = "sdf138FH";
         }
         var obj = {
-          email: form.email.$modelValue,
-          firstName: form.first_name.$modelValue,
-          lastName: form.last_name.$modelValue,
-          password: form.password.$modelValue
+          email: user.email,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          password: user.password
         };
 
         $analytics.eventTrack('click', {category: 'Request Bike', label: 'Register'});
@@ -185,6 +185,7 @@ angular.
         signupDialog.business = business;
         signupDialog.businessError = false;
         signupDialog.requesting = requesting;
+        signupDialog.newsletter = false;
         var invited = !!inviteCode;
 
         signupDialog.hide = function() {
@@ -213,6 +214,9 @@ angular.
               'last_name': signupDialog.lastName,
               'ref_code': inviteCode,
               'language': retrieveLocale()
+            },
+            'notification_preference' : {
+              'newsletter': signupDialog.newsletter
             }
           };
 
