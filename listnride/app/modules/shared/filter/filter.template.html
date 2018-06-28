@@ -1,6 +1,6 @@
 <div layout="row" layout-margin>
   <md-button
-    class="md-lined"
+    class="md-lined lnr__filter-btn"
     ng-class="filter.currentDate.start_date ? 'filter__selected': ''"
     lnr-date-picker
     data="filter.currentDate"
@@ -12,8 +12,8 @@
   </md-button>
   <md-menu md-position-mode="target bottom">
     <md-button
-      class="md-lined lnr-no-margin"
-      ng-class="filter.currentSizes.length >= 1 && filter.currentSizes[0] != -1 ? 'filter__selected': ''"
+      class="md-lined lnr-no-margin lnr__filter-btn"
+      ng-class="filter.currentSizes.length >= 1 && filter.currentSizes[0] != -1 || filter.currentSizes.length > 1 ? 'filter__selected': ''"
       ng-click="$mdOpenMenu($event); filter.closeDateRange()"
     >
       <span>
@@ -35,7 +35,7 @@
 
   <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
     <md-button
-      class="md-lined lnr-no-margin"
+      class="md-lined lnr-no-margin lnr__filter-btn"
       ng-class="filter.currentCategories.length >= 1 ? 'filter__selected': ''"
       ng-click="$mdOpenMenu($event); filter.closeDateRange()"
     >

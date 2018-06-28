@@ -658,6 +658,7 @@
     "default-placeholder": "Waar wil je een fiets huren?"
   },
   "search": {
+    "bikes-found": "Bikes found:",
     "no-bikes": "Er zijn nog geen fietsen op deze locatie",
     "all-sizes": "Alle Maten",
     "bikes-in": "fietsen in",

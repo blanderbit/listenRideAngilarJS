@@ -125,6 +125,23 @@ angular.module('filter',[])
           if (filter.brands.includes(filter.initialValues.brand)) {
             filter.currentBrand = filter.initialValues.brand;
           }
+
+          // sord brands
+          var defaultBrand = filter.brands.shift();
+          filter.brands.sort(alphabetical);
+          filter.brands.unshift(defaultBrand);
+        }
+
+        function alphabetical(a, b) {
+          var A = a.toLowerCase();
+          var B = b.toLowerCase();
+          if (A < B) {
+            return -1;
+          } else if (A > B) {
+            return 1;
+          } else {
+            return 0;
+          }
         }
 
         function initializeSizeFilter() {

@@ -663,6 +663,7 @@
     "default-placeholder": "Where would you like to rent a bike?"
   },
   "search": {
+    "bikes-found": "Bikes found:",
     "no-bikes": "There are unfortunately no bikes in this location yet. As we're growing fast, probably soon there will be! If you'd like to, you can <a href=\"/listing-a-bike\">list a bike yourself</a></a> or alternatively try searching for another city or specific location nearby.",
     "all-sizes": "All Sizes",
     "bikes-in": "Bikes in",

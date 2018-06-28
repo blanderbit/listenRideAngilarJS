@@ -2476,6 +2476,12 @@ md-icon[md-font-icon].fa--lh20 {
   max-height: none!important;
 }
 
+.lnr__filter-btn {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 400;
+}
+
 .filter__select-list md-select {
   margin: 10px 0;
 }
