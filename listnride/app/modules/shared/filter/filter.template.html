@@ -13,7 +13,7 @@
   <md-menu md-position-mode="target bottom">
     <md-button
       class="md-lined lnr-no-margin"
-      ng-class="filter.currentSizes.length >= 1 ? 'filter__selected': ''"
+      ng-class="filter.currentSizes.length >= 1 && filter.currentSizes[0] != -1 ? 'filter__selected': ''"
       ng-click="$mdOpenMenu($event); filter.closeDateRange()"
     >
       <span>
@@ -41,7 +41,7 @@
     >
       {{ 'search.category' | translate }}
     </md-button>
-    <md-menu-content width="5">
+    <md-menu-content width="5" class="lnr-100mh">
       <div class="lnr-padding">
         <div class="lnr-right">
           <md-button show-xs hide-gt-xs class="md-icon-button md-warn md-menu__close-btn lnr-md-no-focused">

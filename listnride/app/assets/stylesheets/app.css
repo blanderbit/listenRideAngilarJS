@@ -2472,6 +2472,10 @@ md-icon[md-font-icon].fa--lh20 {
 /*  FILTER
 /*-----------------------------------------------------------------------------------*/
 
+.lnr-100mh {
+  max-height: none!important;
+}
+
 .filter__select-list md-select {
   margin: 10px 0;
 }
