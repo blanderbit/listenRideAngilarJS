@@ -18,6 +18,7 @@
  * LNR_CLASSES..........Our custom atomic styles
  * SVG..................Set proportions to svg
  * LNR_ERRORS...........Validation errors
+ * MEDIA_STYLES.........media for all breakpoints
  *
  */
 
@@ -301,33 +302,6 @@ autocomplete .pac-container {
 
 autocomplete .md-errors-spacer {
   display: none;
-}
-
-/* mobile typography */
-@media (max-width:599px) {
-  .md-display-1 {
-    font-size: 24px;
-  }
-  .md-headline {
-    font-size: 20px;
-  }
-  .md-subhead {
-    font-size: 16px;
-  }
-  .lnr-page-title {
-    max-width: 90%;
-  }
-  input {
-    font-size: 12px;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0.08rem 0;
-  }
 }
 
 .intl-tel-input {
@@ -904,13 +878,6 @@ footer .lnr-link {
   max-height: 100px!important;
 }
 
-@media (max-width:599px) {
-  .md-dialog-content {
-    width: 100%;
-    margin: 0!important;
-  }
-}
-
 /*-----------------------------------------------------------------------------------*/
 /* PAGES
 /*-----------------------------------------------------------------------------------*/
@@ -1007,18 +974,6 @@ home #landingSection {
   transform: rotate(-9deg);
 }
 
-@media (max-width:599px) {
-  .lnr-badge-container {
-    top: 5%;
-    z-index: 10;
-  }
-  .lnr-badge {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-  }
-}
-
 home #landingSection #homeHeroShot {
   position: absolute;
   top: 0;
@@ -1034,12 +989,6 @@ home #landingSection #homeHeroShot {
 
 home #landingSection #homeHeroShot {
   background-image: url(../ui_images/lnr_hero6.jpg);
-}
-
-@media (max-width:599px) {
-  home #landingSection #homeHeroShot {
-    background-image: url(../ui_images/lnr_hero6_small.jpg);
-  }
 }
 
 .cb-slideshow,
@@ -1284,27 +1233,6 @@ md-grid-list md-grid-tile.tile-sylt {
   }
 }
 
-@media (max-width:599px) {
-  md-dialog.md-dialog-fullscreen {
-    min-height: 100%;
-    min-width: 100%;
-    border-radius: 0;
-  }
-  home #landingSection {
-    height: 60vh;
-  }
-  home .section {
-    margin-top: 40px;
-  }
-  home .testimonials-text {
-    width: 100%;
-    font-size: 16px;
-  }
-  .lnr-search-bar .md-button {
-    min-width: 50px;
-  }
-}
-
 @media (max-width: 400px) {
   .lnr-search-bar autocomplete input,
   .lnr-search-bar .md-button {
@@ -1454,17 +1382,6 @@ md-dialog md-dialog-content .month-wrapper {
 md-dialog md-dialog-content .date-picker-wrapper .month-wrapper thead {
   background: #fff;
   color: rgba(85, 85, 85, 0.75);
-}
-
-@media (max-width:599px) {
-  bike #hero-shot {
-    height: 45vh;
-  }
-  .date-picker-wrapper,
-  .date-picker-wrapper.inline-wrapper,
-  .month-wrapper {
-    width: 100%;
-  }
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -1794,12 +1711,6 @@ listings .lnr-bike-listings {
   top: 0;
   margin-top: -8px;
   max-width: 150px;
-}
-
-@media (max-width:599px) {
-  .lnr-calculator .lnr-money {
-    font-size: 21vw;
-  }
 }
 
 @media (max-width:1280px) and (min-width:600px) {
@@ -2520,12 +2431,6 @@ md-icon[md-font-icon].fa--lh20 {
   margin-bottom: 8px;
 }
 
-@media (max-width: 599px) {
-  input-range {
-    margin-bottom: 15px;
-  }
-}
-
 /*-----------------------------------------------------------------------------------*/
 /*  FILTER
 /*-----------------------------------------------------------------------------------*/
@@ -2546,16 +2451,6 @@ md-icon[md-font-icon].fa--lh20 {
   text-align: right;
   cursor: pointer;
   font-size: 18px;
-}
-
-@media (max-width: 599px) {
-  .filter__category {
-    width: 100%;
-  }
-
-  md-menu-content {
-    max-height: auto;
-  }
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -2610,16 +2505,6 @@ md-icon[md-font-icon].fa--lh20 {
 #email-form {
   margin-bottom: 20px;
   color: #FFFFFF;
-}
-
-@media (max-width:599px) {
-  .lnr-form input {
-    width: 100%;
-  }
-  .lnr-form .submit-button {
-    margin: 10px 0;
-    width: 100%;
-  }
 }
 
 .lnr-form .w-hidden {
@@ -2677,4 +2562,127 @@ md-icon[md-font-icon].fa--lh20 {
   min-width: auto;
   padding: 4px 15px;
   font-weight: 400;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  MEDIA
+/*-----------------------------------------------------------------------------------*/
+
+
+@media (max-width:599px) { /* XS-BREAKPOINT */
+
+  input-range {
+    margin-bottom: 15px;
+  }
+
+  .filter__category {
+    width: 100%;
+  }
+
+  md-menu-content {
+    max-height: auto;
+  }
+
+  .lnr-form input {
+    width: 100%;
+  }
+
+  .lnr-form .submit-button {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .md-dialog-content {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .lnr-calculator .lnr-money {
+    font-size: 21vw;
+  }
+
+  bike #hero-shot {
+    height: 45vh;
+  }
+
+  .date-picker-wrapper,
+  .date-picker-wrapper.inline-wrapper,
+  .month-wrapper {
+    width: 100%;
+  }
+
+  md-dialog.md-dialog-fullscreen {
+    min-height: 100%;
+    min-width: 100%;
+    border-radius: 0;
+  }
+
+  .lnr-search-bar .md-button {
+    min-width: 50px;
+  }
+
+  .lnr-badge-container {
+    top: 5%;
+    z-index: 10;
+  }
+
+  .lnr-badge {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+
+  list md-tabs .lnr-list-form,
+  edit md-tabs .lnr-list-form {
+    min-height: auto;
+  }
+
+  /* HOME PAGE */
+  home #landingSection {
+    height: 60vh;
+  }
+
+  home .section {
+    margin-top: 40px;
+  }
+
+  home .testimonials-text {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  home #landingSection #homeHeroShot {
+    background-image: url(../ui_images/lnr_hero6_small.jpg);
+  }
+
+  /* TYPOGRAPHY */
+  .md-display-1 {
+    font-size: 24px;
+  }
+  .md-headline {
+    font-size: 20px;
+  }
+  .md-subhead {
+    font-size: 16px;
+  }
+  .lnr-page-title {
+    max-width: 90%;
+  }
+  input {
+    font-size: 12px;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    margin: 0.08rem 0;
+  }
+
+  /* ATOMIC STYLES */
+
+  .lnr-xs-p0 {
+    padding: 0;
+  }
+
+  .lnr-xs-w100 {
+    width: 100%;
+  }
+
 }
