@@ -335,7 +335,7 @@ angular.module('list', ['ngLocale'])
         };
 
         list.insuranceAllowed = function () {
-          if (insuranceCountries.indexOf(countryCodeTranslator.countryCodeFor(list.form.country)) > -1) {
+          if (list.form.country && insuranceCountries.indexOf(countryCodeTranslator.countryCodeFor(list.form.country)) > -1) {
             return true;
           } else {
             return false;
