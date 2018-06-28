@@ -1,22 +1,30 @@
 <div layout="row" layout-margin>
-  <!--<md-button class="md-lined" lnr-date-picker data="filter.currentDate" date-on-change="filter.onDateChange" clear-calendar-data="filter.isClearDataRange">-->
-    <!--<span ng-if="!filter.currentDate.start_date">{{ 'search.timespan' | translate }}</span>-->
-    <!--<span ng-if="filter.currentDate.start_date">{{filter.initialValues.date.start_date}}</span>-->
-  <!--</md-button>-->
+  <md-button
+    class="md-lined"
+    ng-class="filter.currentDate.start_date ? 'filter__selected': ''"
+    lnr-date-picker
+    data="filter.currentDate"
+    date-on-change="filter.onDateChange"
+    clear-calendar-data="filter.isClearDataRange"
+  >
+    <span>{{ 'search.timespan' | translate }}</span>
+    <!-- <span ng-if="filter.currentDate.start_date">{{filter.initialValues.date.start_date}}</span> -->
+  </md-button>
   <md-menu md-position-mode="target bottom">
     <md-button
       class="md-lined lnr-no-margin"
+      ng-class="filter.currentSizes.length >= 1 ? 'filter__selected': ''"
       ng-click="$mdOpenMenu($event); filter.closeDateRange()"
     >
-      <span ng-if="filter.currentSizes.length < 1 || filter.currentSizes.length <= 1 && filter.currentSizes[0] == -1">
+      <span>
         {{ 'search.number-of-bikes' | translate }}
       </span>
-      <span ng-if="filter.currentSizes.length == 1 && filter.currentSizes[0] != -1">
+      <!-- <span ng-if="filter.currentSizes.length == 1 && filter.currentSizes[0] != -1">
         {{filter.currentSizes.length}} {{'search.bike' | translate}}
       </span>
-      <span ng-if="filter.currentSizes.length > 1">
+      <span ng-if="">
         {{filter.currentSizes.length}} {{'search.bikes' | translate}}
-      </span>
+      </span> -->
     </md-button>
     <md-menu-content width="4">
       <div class="lnr-padding">
@@ -28,6 +36,7 @@
   <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
     <md-button
       class="md-lined lnr-no-margin"
+      ng-class="filter.currentCategories.length >= 1 ? 'filter__selected': ''"
       ng-click="$mdOpenMenu($event); filter.closeDateRange()"
     >
       {{ 'search.category' | translate }}
@@ -46,6 +55,7 @@
 
   <md-select
     class="lnr-margin-left"
+    ng-class="filter.currentBrand != filter.brands[0] ? 'filter__selected': ''"
     ng-model="filter.currentBrand"
     ng-change="filter.onBrandChange()"
   >
