@@ -393,7 +393,8 @@
     "bike-deleted": "Fahrrad erfolgreich gelöscht",
     "range-success-delete": "Zeitraum erfolgreich gelöscht",
     "availability-success-saved": "Availability successfully saved",
-    "incorrect-old-password": "Could not change password. Please be sure that the old password is right"
+    "incorrect-old-password": "Could not change password. Please be sure that the old password is right",
+    "bike-edit-successful": "Rad erfolgreich bearbeitet"
   },
   "settings": {
     "settings": "Einstellungen",

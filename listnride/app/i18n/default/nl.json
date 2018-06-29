@@ -393,7 +393,8 @@
     "bike-deleted": "Fiets succesvol verwijderd",
     "range-success-delete": "Periode succesvol verwijderd",
     "availability-success-saved": "Wijziging succesvol opgeslagen",
-    "incorrect-old-password": "Could not change password. Please be sure that the old password is right"
+    "incorrect-old-password": "Could not change password. Please be sure that the old password is right",
+    "bike-edit-successful": ""
   },
   "settings": {
     "settings": "Instellingen",

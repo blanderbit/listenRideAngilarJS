@@ -394,7 +394,8 @@
     "bike-deleted": "Bike successfully deleted",
     "range-success-delete": "Unvailability range successfully deleted",
     "availability-success-saved": "Availability successfully saved",
-    "incorrect-old-password": "Could not change password. Please be sure that the old password is right"
+    "incorrect-old-password": "Could not change password. Please be sure that the old password is right",
+    "bike-edit-successful": "Bike successfully edited"
   },
   "settings": {
     "settings": "Settings",
