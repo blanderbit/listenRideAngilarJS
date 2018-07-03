@@ -192,14 +192,6 @@ angular.
         signupDialog.newsletter = false;
         var invited = !!inviteCode;
 
-        // add close modal event on link click with _blank attr in  signup dialog
-        signupDialog.blankLinksTrigger = function($event){
-          if ($event.target.hasAttribute("target")) {
-            $mdDialog.hide();
-          }
-          return;
-        }
-
         signupDialog.hide = function() {
           $mdDialog.hide();
         };
