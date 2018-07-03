@@ -223,7 +223,7 @@
     ng-disabled="true">
     {{ 'calendar.select-timespan' | translate }}
   </md-button>
-  <div layout-padding layout="row">
+  <div layout-padding layout="row" ng-if="calendar.insuranceCountry()">
     <md-icon md-svg-src="app/assets/ui_icons/icn_safe.svg" class="lnr-icn-lrg"></md-icon>
     <div layout="column">
       <span class="md-body-1">{{ 'calendar.basic-insurance-included' | translate }}</span>

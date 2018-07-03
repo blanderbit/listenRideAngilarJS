@@ -12,7 +12,8 @@ angular.module('bike').component('calendar', {
     priceWeek: '<',
     prices: '<',
     requests: '<',
-    coverageTotal: '<'
+    coverageTotal: '<',
+    countryCode: '<'
   },
   controller: ['$scope',
       '$localStorage',
@@ -254,6 +255,10 @@ angular.module('bike').component('calendar', {
           // User did not enter any payment method yet
           showPaymentDialog();
         }
+      };
+
+      calendar.insuranceCountry = function () {
+        !_.includes(["DE", "AT"], calendar.countryCode);
       };
 
       var showBookingDialog = function (event) {
