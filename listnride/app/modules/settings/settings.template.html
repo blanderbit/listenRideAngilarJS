@@ -86,7 +86,7 @@
                 <div class="md-body-2">{{ 'forms.password' | translate }}</div>
               </div>
               <div flex-gt-xs="70" layout-margin>
-                <div layout="row" layout-xs="column" ng-if="!settings.user.facebook_id">
+                <div layout="row" layout-xs="column">
                   <md-input-container flex-gt-xs="45">
                     <label>{{ 'forms.password' | translate }}</label>
                     <input ng-disabled="true" placeholder="***********" name="password" type="password" ng-model="settings.password"></input>
@@ -98,7 +98,6 @@
                     </md-button>
                   </md-input-container>
                 </div>
-                <p class="md-body-1" ng-if="settings.user.facebook_id">{{ 'forms.logged-in-via-facebook' | translate }}</p>
               </div>
             </div>
 
