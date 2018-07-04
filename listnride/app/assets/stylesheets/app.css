@@ -178,6 +178,10 @@ md-grid-list md-grid-tile {
   user-select: none;
 }
 
+.spacer-horizontal__xs {
+  width: 8px;
+}
+
 .spacer-xs {
   height: 20px;
 }
@@ -603,6 +607,11 @@ md-tooltip .md-content {
 .lnr-icn-sms {
   width: 18px;
   height: 18px;
+}
+
+.lnr-icn-smd {
+  width: 30px;
+  height: 30px;
 }
 
 .lnr-icn-md {
