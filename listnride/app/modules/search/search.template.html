@@ -56,7 +56,7 @@
       zoom="{{search.mapOptions.zoom}}"
       on-click="search.onMapClick(event)">
 
-      <marker ng-repeat="bike in search.filteredBikes | limitTo:search.limit track by bike.id"
+      <marker ng-repeat="bike in search.filteredBikes track by bike.id"
               id="{{bike.id}}"
               position="{{bike.lat_rnd}},{{bike.lng_rnd}}"
               on-click="search.showBikeWindow(event, bike.id)">

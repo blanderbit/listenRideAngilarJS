@@ -15,6 +15,7 @@
   <meta property="og:image:height" content="534" />
   <meta property="og:description" content="{{ngMeta.description}}" />
   <meta property="og:type" content="website" />
+  <meta name="robots" content="noindex" ng-if="ngMeta['noindex']" />
   <link rel="alternate" href="https://www.listnride.com{{location.path()}}" hreflang="x-default" />
   <link rel="alternate" href="https://www.listnride.de{{location.path()}}" hreflang="de" />
   <link rel="alternate" href="https://www.listnride.nl{{location.path()}}" hreflang="nl" />
@@ -131,6 +132,7 @@
   <script src="app/services/price/price.service.js"></script>
   <script src="app/services/voucher/voucher.service.js"></script>
   <script src="app/services/country-code-translator/country-code-translator.service.js"></script>
+  <script src="app/services/calendar-helper/calendar-helper.service.js"></script>
   <!-- core filters -->
   <script src="app/filters/category.filter.js"></script>
   <script src="app/filters/category-seo.filter.js"></script>
@@ -174,6 +176,7 @@
   <script src="app/modules/brand-integration/ampler.component.js"></script>
   <script src="app/modules/brand-integration/muli.component.js"></script>
   <script src="app/modules/brand-integration/votec.component.js"></script>
+  <script src="app/modules/brand-integration/cocomat.component.js"></script>
   <!-- events -->
   <script src="app/modules/events/crossride/crossride.component.js"></script>
   <script src="app/modules/events/in-velo-veritas/in-velo-veritas.component.js"></script>
@@ -260,6 +263,9 @@
   </noscript>
   <!-- DO NOT MODIFY -->
   <!-- End Facebook Pixel Code -->
+  <!-- Crisp Chat Integration -->
+  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="d77eb9c0-eeb6-4985-a6e5-51f56c51616e";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+  <!-- End Crisp Chat Integration -->
 </head>
 <body layout="column">
   <header></header>
@@ -268,6 +274,18 @@
   <privacy-bar></privacy-bar>
   <!--<footer></footer>-->
 </body>
+<!-- Analytics Opt-Out Script -->
+<script type="text/javascript">// <![CDATA[
+  var gaProperty = 'UA-61041935-1';
+  var disableStr = 'ga-disable-' + gaProperty;
+  if (document.cookie.indexOf(disableStr + '=true') > -1) {
+    window[disableStr] = true;
+  } 
+  function gaOptout() {
+    document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+    window[disableStr] = true;
+  }
+</script>
 <script>
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
@@ -282,6 +300,5 @@
   })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
   ga('create', 'UA-61041935-1', 'auto');
   ga('set', 'anonymizeIp', true);
-  ga('send', 'pageview');
 </script>
 </html>

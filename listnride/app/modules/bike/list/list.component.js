@@ -439,6 +439,7 @@ angular.module('list', ['ngLocale'])
           for (var loop = 0; loop < list.form.prices.length; loop += 1) {
             if (list.form.prices[loop].price === undefined) return false;
           }
+<<<<<<< HEAD
           return true;
         };
 
@@ -447,6 +448,22 @@ angular.module('list', ['ngLocale'])
           // from day 2 to day 7
           for (var day = 1; day < 7; day += 1) {
               // if ()
+=======
+        }).then(
+          function (response) {
+            loadingDialog.close();
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.bike-edit-successful'))
+                .hideDelay(4000)
+                .position('top center')
+            );
+            $state.go("listings");
+          },
+          function (error) {
+            list.submitDisabled = false;
+            loadingDialog.close();
+>>>>>>> dev
           }
         };
 

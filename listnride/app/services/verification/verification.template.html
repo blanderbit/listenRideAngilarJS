@@ -3,6 +3,7 @@
     <div class="md-dialog-content" layout="column" ng-style="{'display': verificationDialog.loaded ? '' : 'none'}">
       <md-tabs
         class="content"
+        layout="column"
         md-dynamic-height
         md-no-pagination
         md-no-ink
@@ -71,8 +72,10 @@
                         ngf-select
                         name="uncropedProfilePicture"
                         ng-model="verificationDialog.profilePicture"
-                        accept="image/*"
-                        ngf-pattern="'image/*'"
+                        ngf-accept="'image/*'"
+                        ngf-max-size="20MB"
+                        ngf-min-height="100"
+                        ngf-pattern="image/png,image/jpg,image/jpeg"
                         ngf-fix-orientation="true"
                         ngf-background="verificationDialog.profilePicture || 'app/assets/ui_icons/lnr_verification_add_image.svg'"
                         ngf-validate="verificationDialog.validateObj"
@@ -83,7 +86,9 @@
                         ng-style="{'display': verificationDialog.profilePicture ? '' : 'none'}"
                         ngf-drop
                         ng-model="verificationDialog.profilePicture"
-                        ngf-pattern="image/*"
+                        ngf-max-size="20MB"
+                        ngf-min-height="100"
+                        ngf-pattern="image/png,image/jpg,image/jpeg"
                         class="cropArea"
                 >
                   <img-crop
@@ -94,11 +99,13 @@
                   </img-crop>
                 </div>
 
-                <div ng-if="verificationDialog.invalidFiles.$error !== undefined" class="text-error" layout="column">
-                  <p>Image file, more than 20 mb</p>
-                </div>
+                <p class="lnr-text-error md-caption lnr-error lnr-error--dimension">{{'forms.profile-picture-dimension-error' | translate}}</p>
+                <p class="lnr-text-error md-caption lnr-error lnr-error--max-size">{{'forms.profile-picture-size-error' | translate}}</p>
+                <p class="lnr-text-error md-caption lnr-error lnr-error--pattern">{{'forms.profile-picture-pattern-error' | translate}}</p>
               </form>
               <br>
+              <p data-ng-bind-html="'forms.profile-picture-info' | translate"></p>
+              <p class="md-caption" data-ng-bind-html="'forms.profile-picture-info-policy' | translate"></p>
             </div>
           </div>
         </md-tab>
@@ -229,8 +236,9 @@
                 {{ 'verification.private' | translate }}
               </div>
             </div>
-
-            <address-input address="verificationDialog.address" valid-address="verificationDialog.validAddress"></address-input>
+            <div layout="row" layout-align="center center">
+              <address-input flex flex-gt-xs="80" address="verificationDialog.address" valid-address="verificationDialog.validAddress"></address-input>
+            </div>
 
           </div>
         </md-tab>

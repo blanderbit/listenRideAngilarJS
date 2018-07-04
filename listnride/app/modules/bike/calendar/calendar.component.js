@@ -29,10 +29,12 @@ angular.module('bike').component('calendar', {
       'authentication',
       'verification',
       'ENV',
+      'calendarHelper',
     function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, $mdToast,
-                                $mdMedia, $window, $analytics, date, price, api, authentication, verification, ENV) {
+                                $mdMedia, $window, $analytics, date, price, api, authentication, verification, ENV, calendarHelper) {
       var calendar = this;
       calendar.authentication = authentication;
+      calendar.calendarHelper = calendarHelper;
       calendar.requested = false;
 
       calendar.$onChanges = function (changes) {

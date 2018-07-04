@@ -53,6 +53,7 @@ angular.module('listnride', [
   'ampler-integration',
   'muli-integration',
   'votec-integration',
+  'cocomatIntegration',
   'crossride',
   'inVeloVeritas',
   'velothonBikerental',
