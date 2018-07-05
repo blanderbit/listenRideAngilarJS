@@ -121,6 +121,7 @@
     "today": "Oggi",
     "yesterday": "Ieri"
   },
+  "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
       "berlin": {
@@ -585,7 +586,7 @@
     "sign-up-to-book": "Iscriviti per prenotare la bicicletta ",
     "sign-up-with-facebook": "Iscriviti tramite facebook",
     "sign-up-divider-text": "Accetta i nostri Termini e Condizioni ",
-    "agree-terms-and-policy": "Si prega di accettare i nostri Termini e Condizioni e l'Informativa sulla Privacy. ",
+    "agree-terms-and-policy": "Accetta i nostri Termini e Condizioni e l'Informativa sulla Privacy",
     "member-already": "Sei già iscritto?",
     "business": "Negozio di biciclette?",
     "description": "Descrizione",

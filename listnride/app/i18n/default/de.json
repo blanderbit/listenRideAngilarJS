@@ -123,6 +123,7 @@
     "today": "Heute",
     "yesterday": "Gestern"
   },
+  "coco-mat.bike": "Coco-mat-Räder",
   "meta": {
     "cities": {
       "berlin": {
@@ -242,7 +243,7 @@
       },
       "cocomat": {
         "meta-title": "Rent COCO-MAT.bike | listnride",
-        "meta-descr": "Mieten und testen Sie unsere Holzfahrräder in Athen, Griechenland und besuchen Sie das historische Zentrum und das Athener Meer."
+        "meta-descr": "Miete Coco-Mat-Räder in Athen und entdecke historische Stätten, Athens Innenstadt sowie die pulsierende Seepromenade"
       }
     },
     "about-us": {
@@ -266,8 +267,8 @@
       "meta-description": "Die Nutzungsbedingungen der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Online-Plattform."
     },
     "trust-and-safety": {
-      "meta-title": "Sichere Fahrradvermietung – listnride gibt Dir Rückendeckung",
-      "meta-description": "Vertrauen ist in einer Sharing-Community das A und O. Wir unterstützten Fairness und Sicherheit durch Verifizierung und unsere Vermieter-Garantie."
+      "meta-title": "Sichere Fahrradvermietung – Dank Versicherung",
+      "meta-description": "Vertrauen ist das A und O einer Sharing-Community. Wir unterstützten Fairness und Sicherheit durch Verifizierung und Versicherung bei jeder Miete."
     },
     "how-it-works": {
       "meta-title": "Unkompliziertes Bike-Sharing",
@@ -590,7 +591,7 @@
     "sign-up-to-book": "Registrieren, um das Rad zu leihen",
     "sign-up-with-facebook": "Mit Facebook registrieren",
     "sign-up-divider-text": "akzeptiere unsere Nutzungsbedingungen",
-    "agree-terms-and-policy": "Bitte stimme unseren Nutzungsbedingungen und unserer Datenschutzerklärung zu.",
+    "agree-terms-and-policy": "Stimme Nutzungsbedingungen & Datenschutzerklärung zu",
     "member-already": "Bereits registriert?",
     "business": "Fahrradgeschäft?",
     "description": "Beschreibung",
@@ -697,7 +698,7 @@
     "next": "Weiter",
     "list-bike": "Rad einstellen",
     "category": {
-      "header": "Wie ist die Kategorie deines Rads?",
+      "header": "In welche Kategorie passt dein Rad?",
       "hint": "Wähle zuerst die Kategorie deines Rads. Wähle anschließend die passende Unterkategorie.",
       "label": "Kategorie",
       "city": "Stadt",
@@ -774,7 +775,7 @@
       "discount-description-initial": "Bei einem Wochenrabatt von ",
       "discount-description-mid": " erhältst Du ",
       "discount-description-ending": " pro Woche.",
-      "set_custom_price": "Preise in €",
+      "set_custom_price": "Preis in €",
       "custom-prices": "Individuelle Preise",
       "half-daily-price": "Halber Tag",
       "daily-price": "Ganzer Tag",
@@ -808,21 +809,21 @@
       "1": {
         "dutch-bike": "Hollandrad",
         "touring-bike": "Touringrad",
-        "fixie": "Fixed Gear-Rad",
-        "single-speed": "Single Speed-Rad",
+        "fixie": "Fixed-Gear-Rad",
+        "single-speed": "Single-Speed-Rad",
         "city-bike": "Stadtrad"
       },
       "2": {
         "road-bike": "Rennrad",
         "triathlon": "Triathlonrad",
         "indoor": "Bahnrad",
-        "e-city-bike": "E-City Bike",
-        "e-touring-bike": "E-Touring Bike",
-        "e-cargo-bike": "E-Cargo Bike",
-        "e-mountain-bike": "E-Mountain Bike",
-        "e-road-bike": "E-Road Bike",
-        "e-folding-bike": "E-Folding Bike",
-        "e-scooter": "E-Scooter"
+        "e-city-bike": "E-City-Rad",
+        "e-touring-bike": "E-Touringrad",
+        "e-cargo-bike": "E-Cargo-Rad",
+        "e-mountain-bike": "E-Mountainbike",
+        "e-road-bike": "E-Rennrad",
+        "e-folding-bike": "E-Faltrad",
+        "e-scooter": "E-Roller"
       },
       "3": {
         "tracking": "Trekking",
@@ -831,10 +832,10 @@
         "cross-country": "Cross Country",
         "downhill": "Downhill",
         "cyclocross": "Cyclocross",
-        "road-bike": "Road Bike",
-        "triathlon-bike": "Triathlon Bike",
-        "touring-bike": "Touring Bike",
-        "fixed-gear-bike": "Fixed Gear Bike"
+        "road-bike": "Rennrad",
+        "triathlon-bike": "Triathlonrad",
+        "touring-bike": "Touringrad",
+        "fixed-gear-bike": "Fixed-Gear-Rad"
       },
       "4": {
         "city": "Stadt",
@@ -842,17 +843,17 @@
         "road": "Strasse",
         "mtb-hardtail": "MTB Hardtail",
         "mtb-fullsuspension": "MTB Fullsuspension",
-        "cyclocross-bike": "Cyclocross Bike",
-        "gravel-bike": "Gravel Bike"
+        "cyclocross-bike": "Cyclocross-Rad",
+        "gravel-bike": "Gravel-Rad"
       },
       "5": {
         "pedelec": "Pedelec",
         "e-bike": "E-Bike",
-        "cargo-bike": "Cargo Bike",
-        "bike-trailer": "Bike Trailer",
-        "bike-child-seat": "Bike Child Seat",
-        "bike-car-rack": "Bike Car Rack",
-        "bike-travel-bag": "Bike Travel Bag"
+        "cargo-bike": "Lastenrad",
+        "bike-trailer": "Fahrradanhänger",
+        "bike-child-seat": "Kinderfahrradsitz",
+        "bike-car-rack": "Fahrradträger Auto",
+        "bike-travel-bag": "Fahrrad-Transporttasche"
       },
       "6": {
         "folding-bike": "Faltrad",
@@ -862,17 +863,17 @@
         "recumbent": "Liegerad",
         "mono-bike": "Einrad",
         "trailer": "Anhänger",
-        "city-bike": "City Bike",
-        "all-terrain-bike": "All Terrain Bike",
-        "road-bike": "Road Bike",
-        "bogie-wheel": "Bogie Wheel"
+        "city-bike": "Stadtrad",
+        "all-terrain-bike": "Mountainbike",
+        "road-bike": "Rennrad",
+        "bogie-wheel": "Laufrad"
       },
       "7": {
-        "folding-bike": "Folding Bike",
-        "recumbent-bike": "Recumbent Bike",
-        "tandem-bike": "Tandem Bike",
-        "longtail-bike": "Longtail Bike",
-        "scooter": "Scooter"
+        "folding-bike": "Faltrad",
+        "recumbent-bike": "Liegerad",
+        "tandem-bike": "Tandem",
+        "longtail-bike": "Longtail-Rad",
+        "scooter": "Roller"
       }
     }
   },
@@ -935,7 +936,7 @@
     "calculator-section": {
       "header": "Lass Dein Fahrrad für Dich arbeiten",
       "subheader": "Ein paar Klicks und unser Rechenschieber zeigt dir, wieviel du mit Fahrradvermietungen über listnride verdienen kannst.",
-      "market-price": "Marktwert deines Fahrrads,",
+      "market-price": "Marktwert deines Fahrrads",
       "days-per-month": "Tage, die es pro Monat vermietet ist",
       "could-earn": "Du verdienst",
       "per-year": "pro Jahr"
@@ -948,7 +949,7 @@
       "control-title": "Du behältst die Kontrolle.",
       "control-content": "Du bestimmst die individuelle Tages- oder Wochenrate. Dir steht es komplett frei, Anfragen anzunehmen oder auch ganz einfach abzulehnen, wenn Du Dein Fahrrad nicht verleihen willst.",
       "covered-title": "Du bist abgesichert.",
-      "covered-content": "Im Schadensfall oder bei Diebstahl stehen wir Dir zur Seite. Und wenn nötig, bist Du mit der listnride-Vermieter-Garantie in Höhe von 5.000 EUR abgesichert.",
+      "covered-content": "Im Schadensfall hilft Dir unsere Versicherung weiter. Mit \n<a href=\\“http://www.hepster.com\\”target=\\“_blank\\“>hepster</a>\n und der \n<a href=\\“http://www.gothaer.de\\”target=\\“_blank\\“>Gothaer-Gruppe</a>\n haben wir zwei starke Partner an unserer Seite.",
       "help-title": "Wir lassen Dich nicht alleine.",
       "help-content": "Solltest Du mit einem Rider (Mieter) ein Problem nicht direkt lösen können, sind wir für Dich da – um Dich zu unterstützen oder die Angelegenheit komplett zu übernehmen."
     },
