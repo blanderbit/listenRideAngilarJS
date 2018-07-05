@@ -285,7 +285,8 @@ angular.module('list', ['ngLocale'])
 
           function AddNewImage(image) {
             _.forEach(_.range(list.startImage,6), function(id) {
-              if(_.values(list.form['image_file_' + id])[0].url == null){
+              if(_.values(list.form['image_file_' + id])[0].url == null || ride['ride']['remove_image_file_' + id]){
+                ride['ride']['remove_image_file_' + id] = false;
                 ride['ride']['image_file_' + id] = image.src;
                 list.startImage = id + 1;
                 return false;

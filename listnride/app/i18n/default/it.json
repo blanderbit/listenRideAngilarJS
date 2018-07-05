@@ -662,6 +662,7 @@
     "default-placeholder": "Dove vorresti noleggiare una bicicletta ?"
   },
   "search": {
+    "bikes-found": "Bikes found:",
     "no-bikes": "Non ci sono biciclette in questa località",
     "all-sizes": "Tutte le misure",
     "bikes-in": "Biciclette a",
