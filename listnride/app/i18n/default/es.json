@@ -14,7 +14,7 @@
     "top-cities": "Ciudades principales",
     "berlin": "Berlín",
     "dortmund": "Dortmund",
-    "milan": "Milan",
+    "milan": "Milán",
     "munich": "Múnich",
     "nuremberg": "Nuremberg",
     "amsterdam": "Ámsterdam",
@@ -41,7 +41,7 @@
     "half-day": "medio día",
     "day": "día",
     "day-6h": "día (> 6h)",
-    "days": "días",
+    "days": "día(s)",
     "week": "semana",
     "weeks": "semanas",
     "discount": "descuento",
@@ -107,7 +107,7 @@
     "testimonials-header": "¿Qué opina la gente?",
     "balance": "Saldo",
     "tac": "términos y condiciones",
-    "privacy-policy": "política de privacidad",
+    "privacy-policy": "Política de Privacidad",
     "booking-accept-tac": "Al reservar, acepto ",
     "already-booked": "Ya alquilada",
     "for-shops": "Para tiendas de bicis",
@@ -239,6 +239,10 @@
       },
       "rethink": {
         "meta-title": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden"
+      },
+      "cocomat": {
+        "meta-title": "Rent Coco-Mat bikes | listnride",
+        "meta-descr": "Rent and test our wooden bikes in Athens, Greece and visit the historical center and the Athenian sea side."
       }
     },
     "about-us": {
@@ -283,7 +287,7 @@
     },
     "privacy": {
       "meta-title": "Política de privacidad de listnride",
-      "meta-description": "La política de privacidad de la comunidad para compartir bicis de listnride se aplica al uso de la plataforma online",
+      "meta-description": "La Política de Privacidad de la comunidad para compartir bicis de  listnride se aplica al uso de la plataforma online",
       "use-opt-in": "Para ofrecerte el servicio perfecto con listnride, utilizamos cookies de acuerdo con nuestra <a target=\"_blank\" href=\"/#/privacy\">Política de Cookies</a>.",
       "use-opt-in-button": "OK."
     }
@@ -293,6 +297,7 @@
     "pay-secure": "Pago seguro con",
     "agree-terms": "Con \"Request Bike\" aceptas los",
     "agree-terms-link": "términos de listnride",
+    "and-agree-privacy": "and to the <a target=\"_blank\" href=\"/#/privacy\">listnride Privacy Policy</a>.",
     "footer": {
       "questions": "¿Tienes preguntas con respecto a la reserva de una bicicleta?",
       "call-us": "Llámanos al +49 (0)30-120870330, lunes a viernes 9-18h. ",
@@ -361,7 +366,7 @@
       "payment": "Pagamento",
       "redeem-voucher": "Canjear vale",
       "add": "OK",
-      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-header": "¡Enhorabuena, acabas de solicitar una bicicleta!",
       "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
@@ -396,7 +401,9 @@
     "duplicate-finish": "Proceso de duplicación terminado. Copias creadas con éxito",
     "bike-deleted": "Bici borrada con éxito",
     "range-success-delete": "Fecha borrado",
-    "availability-success-saved": "Disponibilidad guardada"
+    "availability-success-saved": "Disponibilidad guardada",
+    "incorrect-old-password": "Could not change password. Please be sure that the old password is right",
+    "bike-edit-successful": "Bike successfully edited"
   },
   "settings": {
     "settings": "Configuración",
@@ -582,24 +589,30 @@
     "last-name": "Apellido",
     "email-address": "Correo electrónico",
     "password": "Contraseña",
+    "update-password": "Change Password",
     "forgot-password": "¿Olvidaste la contraseña?",
+    "old-password": "Old Password",
+    "new-password": "New Password",
+    "save-new-password": "Save new password",
+    "password-error-length": "Password should be min. 6 characters",
     "or": "o",
     "log-in": "Iniciar sesión",
     "log-out": "Cerrar sesión",
     "sign-up": "Registrarse ",
     "sign-up-to-book": "Regístrate para reservar la bici",
     "sign-up-with-facebook": "Registrarse con facebook",
-    "sign-up-divider-text": "accept our terms and conditions",
-    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
+    "sign-up-divider-text": "Acepta nuestros términos y condiciones",
+    "agree-terms-and-policy": "Por favor, acepte nuestros Términos y Condiciones y Política de Privacidad.",
     "member-already": "¿Ya estás registrado?",
     "business": "¿Tienda de bicis?",
     "description": "Descripción",
     "description_min_100": "La descripción debe ser mín. 100 caracteres",
     "address": "Dirección",
     "profile-picture": "Foto de perfil",
-    "profile-picture-info": "Autorizo el uso de mi imagen de perfil.<br>Al subir mi imagen a la plataforma acepto que listnride almacene mi imagen de perfil como está descrito en la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a>. Puedo borrar mi foto de perfil en cualquier momento.<br><br>Por favor sube un archivo con formato válido (jpg,jpeg,png).Peso máximo: 20mb. Tamaño mínimo de la imagen: 100px de ancho por 100px de alto.",
+    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
+    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
     "profile-picture-pattern-error": "Your picture format is wrong",
-    "profile-picture-size-error": "Your picture size is more than maximum size",
+    "profile-picture-size-error": "El tamaño de la imagen es superior al tamaño máximo permitido",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "General",
     "street": "Calle y número",
@@ -613,6 +626,7 @@
     "signing-up-accept-tac": "He leído y acepto los <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Términos y Condiciones</a> y acepto la recolección, tratamiento y uso de mis datos personales establecidos por la <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a>.",
     "signing-up-accept-newsletter": "Deseo recibir información sobre nuevas bicicletas, tours y cupones de descuento. Acepto las condiciones establecidas en la <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride. Puedo revocar mi consentimiento en cualquier momento.",
     "privacy-policy": "Se aplica la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride.",
+    "logged-in-via-facebook": "You logged in via facebook",
     "errors": {
       "password-length": "La contraseña debe tener entre 6 y 30 caracteres",
       "password-length-xs": "6-30 caracteres",

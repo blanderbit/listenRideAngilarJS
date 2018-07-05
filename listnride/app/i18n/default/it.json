@@ -14,6 +14,7 @@
     "top-cities": "Le principali città",
     "berlin": "Berlino",
     "dortmund": "Dortmund",
+    "milan": "Milano",
     "munich": "Monaco di Baviera",
     "nuremberg": "Norimberga",
     "amsterdam": "Amsterdam",
@@ -104,8 +105,8 @@
     "Dec": "Dic",
     "testimonials-header": "Che cosa dicono le persone?",
     "balance": "Saldo",
-    "tac": "condizioni d'uso",
-    "privacy-policy": "sulla privacy",
+    "tac": "Termini e Condizioni ",
+    "privacy-policy": "Informativa sulla Privacy",
     "booking-accept-tac": "Con la prenotazione accetto il",
     "already-booked": "Già prenotato",
     "for-shops": "Per i  negozi di biciclette",
@@ -231,6 +232,10 @@
       },
       "rethink": {
         "meta-title": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden"
+      },
+      "cocomat": {
+        "meta-title": "Rent Coco-Mat bikes | listnride",
+        "meta-descr": "Rent and test Coco-Mat bikes in Athens, Greece and visit the historical center and the Athenian sea side."
       }
     },
     "about-us": {
@@ -251,7 +256,7 @@
     },
     "terms-and-conditions": {
       "meta-title": "listnride | Termini e condizioni del sito",
-      "meta-description": "I termini e le condizioni della comunità bike sharing di listnride si applicano all'uso della piattaforma online."
+      "meta-description": "I Termini e Condizioni della comunità bike sharing di listnride si applicano all'uso della piattaforma online."
     },
     "trust-and-safety": {
       "meta-title": "Il Noleggio di biciclette è sicuro - listnride ti tutela",
@@ -274,8 +279,8 @@
       "meta-description": "Noleggia la bicicletta perfetta nella comunità listnride. Trovane una che si adatti al tuo stile e alle tue esigenze."
     },
     "privacy": {
-      "meta-title": "Politica sulla privacy di listnride",
-      "meta-description": "La Politica sulla privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online.",
+      "meta-title": "Informativa sulla Privacy di listnride",
+      "meta-description": "La Politica sulla Privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online.",
       "use-opt-in": "Per offrirti con listnride un servizio perfetto, utilizziamo dei Cookies conformemente alla nostra <a target=\"_blank\" href=\"/#/privacy\">Normativa sui Cookies</a>.",
       "use-opt-in-button": "Ho capito."
     }
@@ -285,6 +290,7 @@
     "pay-secure": "Pagamento sicuro con",
     "agree-terms": "Con \"Richiedi la bicicletta\" accetti i",
     "agree-terms-link": " termini listnride",
+    "and-agree-privacy": "and to the <a target=\"_blank\" href=\"/#/privacy\">listnride Privacy Policy</a>.",
     "footer": {
       "questions": "Hai domande sul noleggio della bicicletta?",
       "call-us": "Chaimaci al: +49 (0)30-120870330, Lun-Ven 9-18. ",
@@ -352,7 +358,7 @@
       "payment": "Pagamento",
       "redeem-voucher": "Buono sconto",
       "add": "Ok",
-      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-header": "Congratulazioni, hai appena richiesto una bici!",
       "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
@@ -387,7 +393,9 @@
     "duplicate-finish": "Processo di duplicazione è terminato. Copie create con successo",
     "bike-deleted": "Bici cancellata con successo",
     "range-success-delete": "Periodo eliminato con successo",
-    "availability-success-saved": "Disponibilità salvata con successo"
+    "availability-success-saved": "Disponibilità salvata con successo",
+    "incorrect-old-password": "Could not change password. Please be sure that the old password is right",
+    "bike-edit-successful": ""
   },
   "settings": {
     "settings": "Impostazioni",
@@ -573,24 +581,30 @@
     "last-name": "Cognome",
     "email-address": "Indirizzo Email",
     "password": "Password",
+    "update-password": "Change Password",
     "forgot-password": "Hai dimenticato la password ?",
+    "old-password": "Old Password",
+    "new-password": "New Password",
+    "save-new-password": "Save new password",
+    "password-error-length": "Password should be min. 6 characters",
     "or": "o",
     "log-in": "Accedi",
     "log-out": "Disconnettersi",
     "sign-up": "Iscriviti",
     "sign-up-to-book": "Iscriviti per prenotare la bicicletta ",
     "sign-up-with-facebook": "Iscriviti tramite facebook",
-    "sign-up-divider-text": "accept our terms and conditions",
-    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
+    "sign-up-divider-text": "Accetta i nostri Termini e Condizioni ",
+    "agree-terms-and-policy": "Si prega di accettare i nostri Termini e Condizioni e l'Informativa sulla Privacy. ",
     "member-already": "Sei già iscritto?",
     "business": "Negozio di biciclette?",
     "description": "Descrizione",
     "description_min_100": "La descrizione deve essere min. di 100 caratteri.",
     "address": "Indirizzo",
     "profile-picture": "Immagine del profilo",
-    "profile-picture-info": "Consento all'utilizzo dell'immagine del profilo.<br>Caricando la foto del mio profilo, accetto che listnride salvi la foto del profilo come descritto più dettagliatamente <a style=\"pointer-events: auto;\" href=\"/#/privacy\">nell'Informativa sulla Privacy</a>. Posso cancellare in qualsiasi momento l'immagine del mio profilo.<br><br>Si prega di caricare solo formati di immagine validi (jpg, jpeg, png). La dimensione massima dell'immagine è 20 mb. La dimensione minima dell'immagine (larghezza x altezza) è 100px x 100px.",
+    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
+    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
     "profile-picture-pattern-error": "Your picture format is wrong",
-    "profile-picture-size-error": "Your picture size is more than maximum size",
+    "profile-picture-size-error": "La dimensione dell'immagine è superiore alla dimensione massima consentita",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "Informazioni generali",
     "street": "via e numero",
@@ -601,9 +615,10 @@
     "update-contact": "Aggiorna contatto",
     "update-contact-mobile": "Contatto",
     "company-contact-info": "Si prega di compilare il modulo con le informazioni relative alla persona di contatto dell'azienda.",
-    "signing-up-accept-tac": "Desidero ricevere la newsletter via e-mail di listnride sulle nuove biciclette, tours e vouchers. Si applica <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">l'Informativa sulla Privacy</a> di listnride. Posso revocare il mio consenso in qualsiasi momento.",
-    "signing-up-accept-newsletter": "Accetto le <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Condizioni d'uso</a> e accetto la raccolta, l'elaborazione e l'utilizzo dei miei dati personali come descritto nell'<a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Informativa sulla Privacy</a>.",
+    "signing-up-accept-tac": "Accetto i <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Termini e Condizioni </a>e acconsento alla raccolta, all'elaborazione e all'utilizzo dei miei dati personali come ulteriormente descritto nella <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\"> Informativa sulla Privacy </a>.",
+    "signing-up-accept-newsletter": "Desidero ricevere la newsletter via e-mail di listnride con contenuti interessanti su nuove bici, tour e sconti esclusivi. Si applica l' <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\"> Informativa sulla privacy </a>di listnride. Posso revocare il mio consenso in qualsiasi momento.",
     "privacy-policy": "Si applica <a style=\"pointer-events: auto;\" href=\"/#/privacy\">l'Informativa sulla Privacy</a> di listnride.",
+    "logged-in-via-facebook": "You logged in via facebook",
     "errors": {
       "password-length": "La password deve essere tra i 6-30 caratteri",
       "password-length-xs": "6-30 caratteri",
@@ -696,9 +711,9 @@
       "electro": "Elettrica",
       "special": "Speciale",
       "urban": "Urban",
-      "e-bike": "E-Bike",
-      "road": "Road",
-      "transport": "Transport"
+      "e-bike": "Bici Elettrica",
+      "road": "Strada",
+      "transport": "Per il Trasporto"
     },
     "details": {
       "header": "Qual è il nome, dimensione e marca della tua bicicletta?",
@@ -811,19 +826,19 @@
         "touring-bike": "Bicicletta turistica",
         "fixie": "A scatto fisso",
         "single-speed": "Single Speed",
-        "city-bike": "City Bike"
+        "city-bike": "Bici da Città"
       },
       "2": {
         "road-bike": "Bicicletta da strada",
         "triathlon": "Triathlon",
         "indoor": "Indoor",
-        "e-city-bike": "E-City Bike",
-        "e-touring-bike": "E-Touring Bike",
-        "e-cargo-bike": "E-Cargo Bike",
+        "e-city-bike": "Bici da Città Elettrica",
+        "e-touring-bike": "Bici da Turismo Elettrica",
+        "e-cargo-bike": "Bici da Carico Elettrica",
         "e-mountain-bike": "E-Mountain Bike",
-        "e-road-bike": "E-Road Bike",
-        "e-folding-bike": "E-Folding Bike",
-        "e-scooter": "E-Scooter"
+        "e-road-bike": "Bici da Corsa Elettrica",
+        "e-folding-bike": "Bici Pieghevole Elettrica",
+        "e-scooter": "Roller Elettrico"
       },
       "3": {
         "tracking": "Tracking",
@@ -832,10 +847,10 @@
         "cross-country": "Cross Country",
         "downhill": "Downhill",
         "cyclocross": "Ciclocross",
-        "road-bike": "Road Bike",
-        "triathlon-bike": "Triathlon Bike",
-        "touring-bike": "Touring Bike",
-        "fixed-gear-bike": "Fixed Gear Bike"
+        "road-bike": "Bici da Corsa",
+        "triathlon-bike": "Bici da Triathlon",
+        "touring-bike": "Bici da Turismo",
+        "fixed-gear-bike": "Bici a Scatto Fisso"
       },
       "4": {
         "city": "Da città",
@@ -843,17 +858,17 @@
         "road": "Da strada",
         "mtb-hardtail": "MTB Hardtail",
         "mtb-fullsuspension": "MTB Fullsuspension",
-        "cyclocross-bike": "Cyclocross Bike",
+        "cyclocross-bike": "Bici da Ciclocross",
         "gravel-bike": "Gravel Bike"
       },
       "5": {
         "pedelec": "Bicicletta a pedalata assistita",
         "e-bike": "Bicicletta elettrica",
-        "cargo-bike": "Cargo Bike",
-        "bike-trailer": "Bike Trailer",
-        "bike-child-seat": "Bike Child Seat",
-        "bike-car-rack": "Bike Car Rack",
-        "bike-travel-bag": "Bike Travel Bag"
+        "cargo-bike": "Bici da Carico",
+        "bike-trailer": "Rimorchio per Bici",
+        "bike-child-seat": "Seggiolino per Bambini",
+        "bike-car-rack": "Porta Bici per Auto",
+        "bike-travel-bag": "Borsa da Viaggio per Bici"
       },
       "6": {
         "folding-bike": "Bicicletta pieghevole",
@@ -863,17 +878,17 @@
         "recumbent": "Bicicletta reclinata",
         "mono-bike": "Mono Bike",
         "trailer": "Rimorchio",
-        "city-bike": "City Bike",
-        "all-terrain-bike": "All Terrain Bike",
-        "road-bike": "Road Bike",
-        "bogie-wheel": "Bogie Wheel"
+        "city-bike": "Bici da Città",
+        "all-terrain-bike": "Mountain Bike",
+        "road-bike": "Bici da Corsa",
+        "bogie-wheel": "Bici senza Pedali"
       },
       "7": {
-        "folding-bike": "Folding Bike",
-        "recumbent-bike": "Recumbent Bike",
-        "tandem-bike": "Tandem Bike",
-        "longtail-bike": "Longtail Bike",
-        "scooter": "Scooter"
+        "folding-bike": "Bici Pieghevoli",
+        "recumbent-bike": "Bici Reclinate",
+        "tandem-bike": "Tandem ",
+        "longtail-bike": "Bici Longtail ",
+        "scooter": "Rooler"
       }
     }
   },

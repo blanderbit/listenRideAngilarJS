@@ -130,7 +130,7 @@ angular.module('listnride').factory('price', ['$translate', 'date',
       // client to server transformation
       inverseTransformPrices: function (transformedPrices, isListMode) {
         var prices = [];
-        var start_at_seconds = [0, 86400, 172800, 259200, 345600, 432000, 518400, 604800, 691200, 2419200];
+        var start_at_seconds = [0, 86400, 172800, 259200, 345600, 432000, 518400, 604800, 2419200];
 
         // no change to daily price
         prices[0] = {
@@ -166,30 +166,28 @@ angular.module('listnride').factory('price', ['$translate', 'date',
           // daily and weekly price updates
           for (var day = 1; day < 7; day += 1) {
             prices[day] = {
-              id: transformedPrices[day].id || 0,
+              id: transformedPrices[day].id,
               price: (transformedPrices[day].price / (day + 1)),
-              start_at: transformedPrices[day].start_at || start_at_seconds[7]
+              start_at: transformedPrices[day].start_at
             };
           }
 
           // additional day price update
           prices.push({
-            id: transformedPrices[7].id || 0,
+            id: transformedPrices[7].id,
             price: (transformedPrices[7].price),
-            start_at: transformedPrices[7].start_at || 0
+            start_at: transformedPrices[7].start_at
           });
 
           // month price update
           prices.push({
-            id: transformedPrices[8].id || 0,
+            id: transformedPrices[8].id,
             price: (transformedPrices[8].price / 28),
-            start_at: transformedPrices[8].start_at || 0
+            start_at: transformedPrices[8].start_at
           });
         }
-
         return prices;
       }
     };
-
   }
 ]);

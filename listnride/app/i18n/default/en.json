@@ -41,7 +41,7 @@
     "half-day": "half day",
     "day": "day",
     "day-6h": "day (> 6h)",
-    "days": "days",
+    "days": "day(s)",
     "week": "week",
     "weeks": "weeks",
     "discount": "discount",
@@ -106,8 +106,8 @@
     "Dec": "Dec",
     "testimonials-header": "What are people saying?",
     "balance": "Balance",
-    "tac": "terms of use",
-    "privacy-policy": "privacy policy",
+    "tac": "Terms and Conditions",
+    "privacy-policy": "Privacy Policy",
     "booking-accept-tac": "By booking I accept the",
     "already-booked": "Already Booked",
     "for-shops": "For Bikeshops",
@@ -240,6 +240,10 @@
       "rethink": {
         "meta-title": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden",
         "meta-descr": "Your rethink e-bike. Clear. Robust. Distinct Character."
+      },
+      "cocomat": {
+        "meta-title": "Rent COCO-MAT.bike | listnride",
+        "meta-descr": "Rent and test our wooden bikes in Athens, Greece and visit the historical center and the Athenian sea side."
       }
     },
     "about-us": {
@@ -284,7 +288,7 @@
     },
     "privacy": {
       "meta-title": "Privacy Policy of listnride",
-      "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride apply to the use of the online platform.",
+      "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride applies to the use of the online platform.",
       "use-opt-in": "To provide you with the perfect service with listnride, we use cookies in accordance with our <a target=\"_blank\" href=\"/#/privacy\">Cookie Policy</a>.",
       "use-opt-in-button": "I got that."
     }
@@ -293,7 +297,8 @@
     "shopping": "Secure Shopping",
     "pay-secure": "Pay secure with",
     "agree-terms": "With 'Request Bike' you agree to the",
-    "agree-terms-link": "listnride terms",
+    "agree-terms-link": "listnride Terms and Conditions",
+    "and-agree-privacy": "and to the <a target=\"_blank\" href=\"/#/privacy\">listnride Privacy Policy</a>.",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
       "call-us": "Call us +49 (0)30-120870330, monday to friday 9-18pm. ",
@@ -362,7 +367,7 @@
       "payment": "Payment",
       "redeem-voucher": "Redeem Voucher",
       "add": "Add",
-      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-header": "Congratulations, you have just requested a bike!",
       "success-subheader": "We've sent you a confirmation email. Feel free to book more bikes, afterwards."
     },
     "calendar": {
@@ -397,7 +402,9 @@
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Bike successfully deleted",
     "range-success-delete": "Unvailability range successfully deleted",
-    "availability-success-saved": "Availability successfully saved"
+    "availability-success-saved": "Availability successfully saved",
+    "incorrect-old-password": "Could not change password. Please be sure that the old password is right",
+    "bike-edit-successful": "Bike successfully edited"
   },
   "settings": {
     "settings": "Settings",
@@ -481,7 +488,7 @@
     "5": {
       "title": "What is your phone number",
       "description": "Verify your phone number, this allows SMS notifications for your requests. Simply enter your number and click 'Send Confirmation'. You'll receive a code via SMS that you can then enter below.",
-      "enter-valid-phone-nr": "Please enter a valid phone number",
+      "enter-valid-phone-nr": "Enter a valid phone number",
       "send-confirmation-sms": "Send Confirmation",
       "send-confirmation-sms-mobile": "Send SMS Code",
       "resend-confirmation-sms": "Resend confirmation",
@@ -584,24 +591,30 @@
     "last-name": "Last Name",
     "email-address": "Email Address",
     "password": "Password",
+    "update-password": "Change Password",
     "forgot-password": "Forgot Password?",
+    "old-password": "Old Password",
+    "new-password": "New Password",
+    "save-new-password": "Save new password",
+    "password-error-length": "Password should be min. 6 characters",
     "or": "or",
     "log-in": "Log In",
     "log-out": "Log Out",
     "sign-up": "Sign Up",
     "sign-up-to-book": "Sign up to book the bike",
-    "sign-up-with-facebook": "Sign Up with facebook",
-    "sign-up-divider-text": "accept our terms and conditions",
-    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
+    "sign-up-with-facebook": "Sign Up with Facebook",
+    "sign-up-divider-text": "accept our Terms and Conditions",
+    "agree-terms-and-policy": "Please agree to our Terms and Conditions and Privacy Policy above.",
     "member-already": "Already signed up?",
     "business": "Bikeshop?",
     "description": "Description",
     "description_min_100": "Description should be min. 100 characters",
     "address": "Address",
     "profile-picture": "Profile Picture",
-    "profile-picture-info": "Consent for the use of the profile picture <br> By uploading my profile picture, I agree that listnride saves the profile picture as described in more detail in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>. I can delete my profile picture at any time. <br><br> Please upload only valid picture formats (jpg, jpeg, png). Maximum picture size is 20mb. Minimum picture dimension (width x height) is 100px x 100px",
+    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
+    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
     "profile-picture-pattern-error": "Your picture format is wrong",
-    "profile-picture-size-error": "Your picture size is more than maximum size",
+    "profile-picture-size-error": "Your picture size is more than the allowed maximum size",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "General",
     "street": "Street",
@@ -613,9 +626,10 @@
     "update-contact": "Change Phone number",
     "update-contact-mobile": "Phone number",
     "company-contact-info": "Please fill form with company contact person information.",
-    "signing-up-accept-tac": "I hereby agree to the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Terms of Use</a> and agree to the collection, processing and use of my personal data as further described in the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>.",
-    "signing-up-accept-newsletter": "I would like to receive the listnride e-mail newsletter with interesting content on Cycling, Community updates and exclusive benefits. The <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>  of listnride applies. I can revoke my consent at any time.",
+    "signing-up-accept-tac": "I hereby agree to the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Terms and Conditions</a> and agree to the collection, processing and use of my personal data as further described in the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>.",
+    "signing-up-accept-newsletter": "I would like to receive the listnride e-mail newsletter with interesting content on cycling, community updates and exclusive benefits. The <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>  of listnride applies. I can revoke my consent at any time.",
     "privacy-policy": "The <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy </a> of listnride applies.",
+    "logged-in-via-facebook": "You logged in via facebook",
     "errors": {
       "password-length": "Password should be 6-30 characters",
       "password-length-xs": "6-30 characters",
@@ -704,7 +718,7 @@
       "label": "Category",
       "city": "City",
       "race": "Race",
-      "all-terrain": "All terrain",
+      "all-terrain": "All Terrain",
       "kids": "Kids",
       "electro": "Electro",
       "special": "Special",
@@ -809,21 +823,21 @@
     "insurance": {
       "label": "Insurance",
       "info": "Information about insurance",
-      "hint-part-1": "Your bike (located in Germany or Austria) is automatically insured whenever somebody is renting it. In order to provide you with the right protection, we need to know the value of your bike. ",
+      "hint-part-1": "Your bike insured when ever somebody is renting it. In order to provide you the right protection its nessasary that we know the right value of your bike.",
       "hint-part-2": "Please note that you have to provide proof the value of the bike in case of a claim",
       "hint-link-label": "Learn more about insurance",
       "header": "Please tell us the value of your bike",
       "tip": "Additional fee for the rider is {{fee}} per day",
       "up-to-value": "Up to {{value}}",
       "select-value": "Please select your bike value",
-      "no-insurance": "Sorry, contracting an insurance is not supported yet for your location. At the moment only bikes located in Germany and Austria are supported."
+      "no-insurance": "Sorry, your country doesn't support an insurance. Only for Germany and Austria."
     },
     "subcategory": {
       "1": {
         "dutch-bike": "Dutch Bike",
         "touring-bike": "Touring Bike",
-        "fixie": "Fixie",
-        "single-speed": "Single Speed",
+        "fixie": "Fixed Gear Bike",
+        "single-speed": "Single Speed Bike",
         "city-bike": "City Bike"
       },
       "2": {
@@ -897,7 +911,7 @@
     "show-as-list": "Show as List",
     "duplicate": {
       "duplicate": "Duplicate",
-      "how_many": "How many bikes?",
+      "how_many": "How many additional bikes?",
       "header": "Duplicate Bike",
       "number_bikes": "Number of bikes",
       "maxlength": "Works for maximum 99 bikes",

@@ -97,7 +97,7 @@
     },
     "text-2": {
       "title": "Únete a la comunidad empresarial de listnride ",
-      "description": "Regístrate ahora y configura la página de tu propia tienda al instante. O contacta con nosotros personalmente. Martin te ayudará con gusto, contacta con él en: <br><a href=\"mailto:ml@listnride.com\">ml@listnride.com </a>o 0171&nbsp;83 &nbsp;13 &nbsp;348"
+      "description": "Regístrate ahora y configura la página de tu propia tienda al instante. O contacta con nosotros personalmente. Santi te ayudará con gusto, contacta con él en: <br><a href=\"mailto:ml@listnride.com\">so@listnride.com </a>"
     },
     "text-3": {
       "column-1": "listnride ya es la comunidad más grande para compartir bicicletas en Europa y por extensión, especialista en alquiler de bicis privadas y comerciales. Sabemos lo que buscan nuestros clientes y, por lo tanto, podemos dirigirlos a tu página de compras en listnride para que encuentren y reserven tus bicis de alquiler con facilidad.",
@@ -500,6 +500,31 @@
       "choose-location": "Wähle deine Stadt",
       "find-out-more": "Learn more about rethink",
       "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed."
+    },
+    "cocomat": {
+      "title": "Your rethink e-bike. Clear. Robust. Distinct Character.",
+      "description": "Rent and test Coco-Mat bikes in Athens, Greece and visit the historical center and the Athenian sea side",
+      "subdescription": "Cycle with Penelope and Odysseus: 2 or 7 speed or e-bike, and carry the imprint of nature in the urban landscape",
+      "feature1-title": "Handmade in Greece",
+      "feature1-description": "Made with love<br>Under the sun<br>Natural materials",
+      "feature2-title": "I am wooden",
+      "feature2-description": "Sustainable materials<br>Fair production process<br>A life long lasting product",
+      "feature3-title": "Innovative design",
+      "feature3-description": "Unique cycling experience<br>Comfortable riding position<br>Customize it to your needs",
+      "test-bike": "Test the new cocomat models!",
+      "choose-location": "Choose your location",
+      "find-out-more": "Learn more about cocomat",
+      "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed.",
+      "faq-question-1": "Do you offer warranty?",
+      "faq-answer-1": "Coco-Mat bike offers: Three years for defective wooden or metal compartments that may have appeared during to manufacturing process. One year for bike compartments.This warranty is valid from the date of purchase, is offered only to the original owner, and it is not transferable. Proof of purchase is required.",
+      "faq-question-2": "How can I repair a wooden bike?",
+      "faq-answer-2": "All the bike parts can be repaired by any bike expert, except for the wooden frame which needs to be repaired by a carpenter according to Coco-Mat bike's instructions.",
+      "faq-question-3": "Is the wooden saddle comfortable?",
+      "faq-answer-3": "Our saddle is designed following all the anatomical specifications required. For a more comfortable ride you can use our removable saddle lining made by cocofine.",
+      "faq-question-4": "Is it completely made out of wood?",
+      "faq-answer-4": "Our bike is manufactured from natural solid wood of American Ash (Fraxinus americana). The timber derives from forests of legal logging and the cutting takes place, abiding by the legislation and international specifications of timber-cutting. The timber is a hygroscopic material (m. during its life time never stops to absorb and to remove humidity). It is completely made out of wood and 100% handcrafted in Greece!",
+      "faq-question-5": "How many bike models do you provide?",
+      "faq-answer-5": "Discover our bike collection. Choose yours!<br>Main collection:<br>Odysseus 2 speed (28'')<br>Odysseus 7 speed (28'')<br>E-Odysseus (28'')<br>Penelope 2 speed (26'')<br>Penelope 7 speed (26'')<br>E-Penelope (26'')<br><br>Kid collection:<br>Telemachus (20'')<br>Telegonus (16'')<br>Argos (12'')"
     }
   },
   "about-us": {
@@ -647,11 +672,10 @@
     "faq-answer-8": "Esperamos tu interés y preguntas adicionales. Puedes contactar con nosotros en contact@listnride.com y nos pondremos en contacto contigo lo antes posible."
   },
   "terms-and-conditions": {
-    "title": "Términos y condiciones",
-    "header": "Términos y condiciones generales de empresa para la plataforma online de listnride",
-    "download": "Descargar aquí",
-    "description": "<a href=\"http://cdn.listnride.com/en/tacs.pdf\" target=\"_blank\">Puedes ver y descargar los términos y condiciones aquí.",
-    "subtitle": "List and Ride GmbH (en adelante, \"listnride\") organiza acuerdos de alquiler de bicicletas y otros equipos deportivos y de ocio a través del sitio web www.listnride.com (en adelante, \"Sitio web\"). Los siguientes \"Términos y condiciones generales de uso\" (en adelante, \"Términos de uso\") de la Sección I formarán parte del acuerdo celebrado entre el usuario y listnride con respecto al acuerdo de servicios. Cualquier acuerdo de alquiler del artículo usado (en lo sucesivo, \"Contrato de alquiler\") realizado a través del sitio web deberá cumplir con los  \"Términos y condiciones generales de alquiler\" (en adelante, \"Términos de alquiler\") especificados en la Sección II."
+    "title": "Terms and conditions",
+    "header": "List and Ride Términos y Condiciones generales de negocio",
+    "subheader": "Última actualización: Junio 8, 2018",
+    "subtitle": "Por favor lea con atención los Términos y Condiciones dado que contienen información importante sobre tus derechos legales, recursos y obligaciones. Al acceder o utilizar listnride platform reconoces haber leído, comprendido y aceptado dichas Condiciones.<br><br>Puedes descargar y leer el documento completo de nuestros <a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Términos y Condiciones</a><br><br>¡Muchas gracias por utilizar listnride!"
   },
   "trust-and-safety": {
     "title": "Confianza y seguridad",
@@ -770,7 +794,7 @@
   "privacy": {
     "title": "List and Ride Política de Privacidad",
     "subtitle": "Fecha de entrada en vigor: 24 de mayo de 2018",
-    "description": "List and Ride se compromete a mantener prácticas de privacidad. Nuestra política de privacidad describe como cuidamos y protegemos la información que almacenamos del usuario mediante el uso de la plataforma. Menciona cómo acceder a dicha información, cómo actualizarla y como remover datos personales.<br>Descarga nuestra <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Política de privacidad</a> para leer su contenido al detalle.<br><br>Ante cualquier duda o consulta puedes contactarnos enviándonos un correo a <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a>.",
+    "description": "List and Ride se compromete a mantener prácticas de privacidad. Nuestra política de privacidad describe como cuidamos y protegemos la información que almacenamos del usuario mediante el uso de la plataforma. Menciona cómo acceder a dicha información, cómo actualizarla y como remover datos personales.<br>Descarga nuestra <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Política de privacidad</a> para leer su contenido al detalle.<br><br>Ante cualquier duda o consulta puedes contactarnos enviándonos un correo a <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a>.",
     "meta-title": "Política de privacidad de listnride",
     "meta-description": "La política de privacidad de la comunidad para compartir bicis de listnride se aplica al uso de la plataforma online"
   },

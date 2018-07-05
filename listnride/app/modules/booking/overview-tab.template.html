@@ -48,37 +48,39 @@
           <!-- START PREMIUM INSURANCE -->
           <div class="premium-insurance" ng-if="overview.parent.insuranceAllowed()">
             <div layout="row">
-              <h2 class="md-title lnr-no-margin">{{ 'booking.overview.premium-insurance-title' | translate }}</h2>
+              <md-switch ng-model="overview.parent.isPremium" aria-label="Switch 1" class="lnr-no-margin">
+                <h2 class="md-title lnr-no-margin">{{ 'booking.overview.premium-insurance-title' | translate }}</h2>
+              </md-switch>
+              <div class="spacer-horizontal__xs"></div>
+              <md-icon md-svg-src="app/assets/ui_icons/icn_insurance.svg" class="lnr-icn-smd"></md-icon>
               <span flex></span>
               <span class="md-subhead">3,00€ p.d.</span>
             </div>
-  
-            <md-switch ng-model="overview.parent.isPremium" aria-label="Switch 1">
-              {{ 'booking.overview.premium-insurance-subtitle' | translate }}
-            </md-switch>
-  
+
+            <!-- <p class="lnr-no-margin">{{ 'booking.overview.premium-insurance-subtitle' | translate }}</p> -->
+            <br>
             <span class="md-body-2">{{ 'booking.overview.thats-included' | translate }}</span>
             <div layout="row">
-              <div layout="column" layout-margin>
-                <div>
-                  <md-icon style="margin-left: 0 !important" md-svg-src="app/assets/ui_icons/icn_checkmark.svg" class="lnr-icn-sm"></md-icon>
+              <div layout="column" layout-margin style="margin-left: 0">
+                <div class="lnr-no-margin__left">
+                  <md-icon md-svg-src="app/assets/ui_icons/icn_checkmark.svg" class="lnr-icn-sm"></md-icon>&nbsp;&nbsp;&nbsp;
                   <span>{{ 'booking.overview.premium-feature-1' | translate }}</span>
                 </div>
-                <div>
+                <div class="lnr-no-margin__left">
                   <md-icon md-svg-src="app/assets/ui_icons/icn_checkmark.svg" class="lnr-icn-sm"></md-icon>&nbsp;&nbsp;&nbsp;
                   <span>{{ 'booking.overview.premium-feature-2' | translate }}</span>
                 </div>
-                <div>
+                <div class="lnr-no-margin__left">
                   <md-icon md-svg-src="app/assets/ui_icons/icn_checkmark.svg" class="lnr-icn-sm"></md-icon>&nbsp;&nbsp;&nbsp;
                   <span>{{ 'booking.overview.premium-feature-3' | translate }}</span>
                 </div>
               </div>
               <div layout="column" layout-margin>
-                <div>
+                <div class="lnr-no-margin__left">
                   <md-icon md-svg-src="app/assets/ui_icons/icn_checkmark.svg" class="lnr-icn-sm"></md-icon>&nbsp;&nbsp;&nbsp;
                   <span>{{ 'booking.overview.premium-feature-4' | translate }}</span>
                 </div>
-                <div>
+                <div class="lnr-no-margin__left">
                   <md-icon md-svg-src="app/assets/ui_icons/icn_checkmark.svg" class="lnr-icn-sm"></md-icon>&nbsp;&nbsp;&nbsp;
                   <span>{{ 'booking.overview.premium-feature-5' | translate }}</span>
                 </div>
@@ -91,7 +93,6 @@
             <md-divider></md-divider>
           </div>
           <!-- END PREMIUM INSURANCE -->
-  
           <div layout="row" layout-xs="column" layout-align="space-between none">
             <div flex="33" flex-xs="100">
               <p class="md-title">{{ 'booking.overview.invoice-address' | translate }}</p>
@@ -163,7 +164,11 @@
   
         <div class="lnr-list-form" ng-hide="!overview.parent.booked">
           <div ng-hide="!overview.parent.booked" layout-align="center center" flex>
+<<<<<<< HEAD
             <br><br><br><br>
+=======
+            <br><br><br><br> 
+>>>>>>> dev
             <h2 class="md-headline lnr-center lnr-green-text">{{ 'booking.overview.success-header' | translate }}</h2>
             <p class="md-subhead lnr-center">{{ 'booking.overview.success-subheader' | translate }}</p>
             <br><br>

@@ -13,7 +13,7 @@
     "top-cities": "Beliebte Städte",
     "berlin": "Berlin",
     "dortmund": "Dortmund",
-    "milan": "Milan",
+    "milan": "Mailand",
     "munich": "München",
     "nuremberg": "Nürnberg",
     "amsterdam": "Amsterdam",
@@ -40,7 +40,7 @@
     "half-day": "Halbtag",
     "day": "Tag",
     "day-6h": "Tag (> 6h)",
-    "days": "Tage",
+    "days": "Tag(e)",
     "week": "Woche",
     "weeks": "Wochen",
     "discount": "Rabatt",
@@ -239,6 +239,10 @@
       "rethink": {
         "meta-title": "Miete und teste rethink E-Bikes in München, Hamburg und Dresden",
         "meta-descr": "Your rethink E-bike. Clear. Robust. Distinct Character."
+      },
+      "cocomat": {
+        "meta-title": "Rent COCO-MAT.bike | listnride",
+        "meta-descr": "Mieten und testen Sie unsere Holzfahrräder in Athen, Griechenland und besuchen Sie das historische Zentrum und das Athener Meer."
       }
     },
     "about-us": {
@@ -258,8 +262,8 @@
       "meta-description": "Besuche Seedrs und erfahre wie du in listnride investieren kannst."
     },
     "terms-and-conditions": {
-      "meta-title": "listnride | Website Terms & Conditions",
-      "meta-description": "The Terms and Conditions of the Bike-Sharing-Community listnride apply to the use of the online platform."
+      "meta-title": "listnride | Website Nutzungsbedingungen",
+      "meta-description": "Die Nutzungsbedingungen der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Online-Plattform."
     },
     "trust-and-safety": {
       "meta-title": "Sichere Fahrradvermietung – listnride gibt Dir Rückendeckung",
@@ -282,8 +286,8 @@
       "meta-description": "Miete dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
     },
     "privacy": {
-      "meta-title": "Datenschutzrichtlinien von listnride",
-      "meta-description": "Die Datenschutzrichtlinien der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Onlineplattform.",
+      "meta-title": "Datenschutzerklärung von listnride",
+      "meta-description": "Die Datenschutzerklärung der Bike-Sharing-Community listnride bezieht sich auf die Nutzung der Onlineplattform.",
       "use-opt-in": "Um dir mit listnride einen perfekten Service zu bieten, setzen wir Cookies gemäß unserer <a target=\"_blank\" href=\"/#/privacy\">Cookie-Richtlinie ein</a>.",
       "use-opt-in-button": "Hab ich verstanden."
     }
@@ -293,6 +297,7 @@
     "pay-secure": "Sicher bezahlen mit",
     "agree-terms": "Mit \"Rad anfragen\" stimmst du zu:",
     "agree-terms-link": "listnride AGBs",
+    "and-agree-privacy": "and to the <a target=\"_blank\" href=\"/#/privacy\">listnride Privacy Policy</a>.",
     "footer": {
       "questions": "Du hast Fragen rund ums Mieten von Fahrrädern?",
       "call-us": "Ruf uns unter +49 (0)30-120870330, Mo-Fr 9-18 Uhr an. ",
@@ -361,7 +366,7 @@
       "payment": "Zahlungsmethode",
       "redeem-voucher": "Rabattcode einlösen",
       "add": "Ok",
-      "success-header": "Congratulations, you're bike is successfully booked",
+      "success-header": "Glückwunsch, du hast gerade ein Rad angefragt!",
       "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
@@ -396,7 +401,9 @@
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Fahrrad erfolgreich gelöscht",
     "range-success-delete": "Zeitraum erfolgreich gelöscht",
-    "availability-success-saved": "Availability successfully saved"
+    "availability-success-saved": "Availability successfully saved",
+    "incorrect-old-password": "Could not change password. Please be sure that the old password is right",
+    "bike-edit-successful": "Rad erfolgreich bearbeitet"
   },
   "settings": {
     "settings": "Einstellungen",
@@ -479,7 +486,7 @@
     "5": {
       "title": "Was ist deine Nummer",
       "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst.",
-      "enter-valid-phone-nr": "Bitte gib eine valide Telefonnummer an",
+      "enter-valid-phone-nr": "Gib eine gültige Telefonnr. an",
       "send-confirmation-sms": "Bestätigungs-SMS schicken",
       "send-confirmation-sms-mobile": "Code schicken",
       "resend-confirmation-sms": "Erneut schicken",
@@ -579,24 +586,30 @@
     "last-name": "Nachname",
     "email-address": "E-Mail-Adresse",
     "password": "Passwort",
+    "update-password": "Change Password",
     "forgot-password": "Passwort vergessen?",
+    "old-password": "Old Password",
+    "new-password": "New Password",
+    "save-new-password": "Save new password",
+    "password-error-length": "Password should be min. 6 characters",
     "or": "oder",
     "log-in": "Log-In",
     "log-out": "Log-Out",
     "sign-up": "Registrieren",
     "sign-up-to-book": "Registrieren, um das Rad zu leihen",
     "sign-up-with-facebook": "Mit Facebook registrieren",
-    "sign-up-divider-text": "accept our terms and conditions",
-    "agree-terms-and-policy": "Please agree to our terms of use and privacy policy above.",
+    "sign-up-divider-text": "akzeptiere unsere Nutzungsbedingungen",
+    "agree-terms-and-policy": "Bitte stimme unseren Nutzungsbedingungen und unserer Datenschutzerklärung zu.",
     "member-already": "Bereits registriert?",
     "business": "Fahrradgeschäft?",
     "description": "Beschreibung",
     "description_min_100": "Beschreibung sollte min. 100 Buchstaben lang sein",
     "address": "Adresse",
     "profile-picture": "Profilbild",
-    "profile-picture-info": "Einwilligung zur Verwendung des Profilbildes<br>Mit dem Upload meines Profilbilds erkläre ich mich damit einverstanden, dass listnride das Profilbild speichert, wie in der <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> näher beschrieben. Ich kann mein Profilbild jederzeit löschen.<br><br>Bitte nur gültige Bildformate (jpg, jpeg, png) hochladen. Die maximale Bildgröße beträgt 20 MB. Die minimale Bildgröße (Breite x Höhe) ist 100px x 100px.",
+    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
+    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
     "profile-picture-pattern-error": "Your picture format is wrong",
-    "profile-picture-size-error": "Your picture size is more than maximum size",
+    "profile-picture-size-error": "Die Größe des Bildes überschreitet die maximal erlaubte Bildgröße",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "Allgemein",
     "street": "Straße und Hausnr.",
@@ -611,6 +624,7 @@
     "signing-up-accept-tac": "Ich stimme hiermit den <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Nutzungsbedingungen</a> zu und willige in die Erhebung, Verarbeitung und Nutzung meiner personenbezogenen Daten ein, wie in der <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> näher beschrieben.",
     "signing-up-accept-newsletter": "Ich möchte den E-Mail-Newsletter von listnride mit handverlesenen Themen über neue Räder, Touren und Gutscheine erhalten. Es gilt die <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> von listnride. Ich kann meine Einwilligung jederzeit widerrufen.",
     "privacy-policy": "Es gilt die <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> von listnride.",
+    "logged-in-via-facebook": "You logged in via facebook",
     "errors": {
       "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
       "password-length-xs": "6-30 Zeichen",
@@ -647,7 +661,6 @@
     "list-a-bike-subheader": "Liste dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und verdien dir was dazu.",
     "newsletter-header": "Erhalte unseren Newsletter und bleib informiert",
     "newsletter-subheader": "Erhalte unseren handgefertigten Newsletter über neue Räder, Touren und Gutscheine für deine Fahrten.",
-    "newsletter-footer": "Du kannst dich jederzeit wieder abmelden.",
     "meta-title": "listnride - Die Bike-Sharing-Community",
     "meta-description": "Miete dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach deinem Stil und Einsatzzweck."
   },
@@ -674,7 +687,7 @@
     "invalid-date": "Datumsangabe nicht korrekt",
     "request-bike": "Rad anfragen",
     "to-request-bike-please": "um ein Rad anzufragen bitte",
-    "own-bike": "Du kannst nicht dein Rad anfragen",
+    "own-bike": "Du kannst nicht dein eigenes Rad anfragen",
     "log-in-to-request-title": "Einloggen oder Registrieren",
     "log-in-to-request-description": "Logge dich ein um das Rad anzufragen. Falls du noch kein Account hast, registriere dich einfach.",
     "select-timespan": "Wähle zuerst die Mietdauer",
@@ -816,9 +829,9 @@
       "1": {
         "dutch-bike": "Hollandrad",
         "touring-bike": "Touringrad",
-        "fixie": "Fixie",
-        "single-speed": "Single Speed",
-        "city-bike": "City Bike"
+        "fixie": "Fixed Gear-Rad",
+        "single-speed": "Single Speed-Rad",
+        "city-bike": "Stadtrad"
       },
       "2": {
         "road-bike": "Rennrad",
@@ -891,8 +904,8 @@
     "show-as-list": "Als Liste anzeigen",
     "duplicate": {
       "duplicate": "Duplikat",
-      "how_many": "Wie viele Fahrräder?",
-      "header": "Doppeltes Fahrrad",
+      "how_many": "Wie viele zusätzliche Fahrräder?",
+      "header": "Dupliziere Fahrrad",
       "number_bikes": "Anzahl der Fahrräder",
       "maxlength": "Arbeitet für maximal 99 Fahrräder",
       "required": "Anzahl der Fahrräder ist erforderlich"
