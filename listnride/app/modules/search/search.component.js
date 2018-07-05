@@ -30,7 +30,9 @@ angular.module('search',[]).component('search', {
         search.onBikeHover = onBikeHover;
         search.populateBikes = populateBikes;
         search.addMoreItemsLimit = addMoreItemsLimit;
+        search.onDateChange = onDateChange;
         search.filteredBikes = [];
+        search.filteredDateBikes = [];
         search.initialValues = {
           amount: '',
           sizes: [],
@@ -146,50 +148,89 @@ angular.module('search',[]).component('search', {
         );
       }
 
-      function populateBikes(location, cb) {
+      function populateBikes(location) {
         search.bikes = undefined;
         location = location ? location : $stateParams.location;
 
         var urlRequest = "/rides?location=" + location;
 
-        // if date param exist in url, add this to url request
-        if ($stateParams.start_date && $stateParams.duration) {
-          urlRequest += "&start_date=" + $stateParams.start_date;
-          urlRequest += "&duration=" + $stateParams.duration;
-        }
-
         api.get(urlRequest).then(function(response) {
-          search.bikes = response.data.bikes;
-          search.categorizedFilteredBikes = [{
-            title: "All Bikes",
-            bikes: search.bikes
-          }];
-          search.titles = [];
-          search.latLng = response.data.location.geometry.location;
-          // search.latLng = response.data.location.point.coordinates; BING
-          search.locationBounds = response.data.location.geometry.viewport;
-          // search.locationBounds = response.data.location.bbox; BING
-
-          initializeGoogleMap();
-          NgMap.getMap({id: "searchMap"}).then(function(map) {
-            map.fitBounds(correctBounds());
-            map.setZoom(map.getZoom() + 1);
-            // map.panToBounds(bounds);
-          });
-
-          if (search.bikes.length > 0) {
-            search.mapOptions.lat = search.bikes[0].lat_rnd;
-            search.mapOptions.lng = search.bikes[0].lng_rnd;
-            // search.mapOptions.zoom = 11;
-          } else {
-            search.mapOptions.lat = 51.1657;
-            search.mapOptions.lng = 10.4515;
-            // search.mapOptions.zoom = 4;
+          setParamsFromResponse(response);
+          return getUnavailableBikes();
+        }).then(function(results) {
+          if (!!results) {
+            search.unavailableIds = results.data.ids;
+            setUnavailableBikes();
           }
-
-          if (typeof cb === "function") cb(search.bikes);
-        }, function(error) {
+        },
+        function (error) {
+          // Error callback called
         });
+      }
+
+      function getUnavailableBikes() {
+        var urlRequest = "start_date=" + $stateParams.start_date;
+        urlRequest += "&duration=" + $stateParams.duration;
+
+        if (!$stateParams.start_date && !$stateParams.duration) {
+          return false;
+        } else {
+          return api.get('/rides/unavailable?' + urlRequest);
+        }
+      }
+
+      function setParamsFromResponse(response) {
+        search.bikes = response.data.bikes;
+        search.filteredDateBikes = search.bikes.slice();
+        search.categorizedFilteredBikes = [{
+          title: "All Bikes",
+          bikes: search.bikes
+        }];
+        search.titles = [];
+
+        search.latLng = response.data.location.geometry.location;
+        // search.latLng = response.data.location.point.coordinates; BING
+        search.locationBounds = response.data.location.geometry.viewport;
+        // search.locationBounds = response.data.location.bbox; BING
+
+        initializeGoogleMap();
+        NgMap.getMap({
+          id: "searchMap"
+        }).then(function (map) {
+          map.fitBounds(correctBounds());
+          map.setZoom(map.getZoom() + 1);
+          // map.panToBounds(bounds);
+        });
+
+        if (search.bikes.length > 0) {
+          search.mapOptions.lat = search.bikes[0].lat_rnd;
+          search.mapOptions.lng = search.bikes[0].lng_rnd;
+          // search.mapOptions.zoom = 11;
+        } else {
+          search.mapOptions.lat = 51.1657;
+          search.mapOptions.lng = 10.4515;
+          // search.mapOptions.zoom = 4;
+        }
+      }
+
+      function onDateChange() {
+        getUnavailableBikes().then(function(results){
+          search.unavailableIds = results.data.ids;
+          setUnavailableBikes();
+        });
+      }
+
+      function setUnavailableBikes() {
+        search.filteredDateBikes = search.bikes.slice();
+
+        search.unavailableIds = search.unavailableIds.map(Number);
+        search.unavailableBikes = _.remove(search.filteredDateBikes, function (bike) {
+          return _.includes(search.unavailableIds, bike.id);
+        });
+        search.categorizedFilteredBikes = [{
+          title: "All Bikes",
+          bikes: search.filteredDateBikes
+        }];
       }
 
       function correctBounds() {
