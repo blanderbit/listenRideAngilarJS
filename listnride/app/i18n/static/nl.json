@@ -157,7 +157,7 @@
       "meta-title": "Boek eenvoudig the perfekte racefiets voor de Cyclassics Hamburg",
       "meta-description": "Huur eenvoudig de perfecte racefiets voor de Triathlon Hamburg en kies uit merken zoals Felt, Ridley, Cervelo en Bianchi",
       "title": "Boek eenvoudig de perfekte racefiets voor de Cyclassics Hamburg",
-      "text": "Heb je een racefiets nodig voor de Triahlon in Hamburg? We helpen je! Samen met de listnride gemeenschap bieden wij geschikte racefietsen die u gemakkelijk kunt huren zolang u wilt. Kies gewoon een van de onderstaande fietsen, vraag deze aan voor de gewenste periode en haal hem op wanneer het zover is. Eenvoudig als dat. <br><br>U kunt niet deelnemen? Help dan iemand in nood. Plaats je fiets online en verdien wat extra zakgeld!",
+      "text": "You need a road bike for the Triahlon in Hamburg? We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.<br><br>Secure a €10,- discount by entering this promo code: TriathlonHH2018 in your account settings before booking!<br><br>You can’t participate? Help out someone in need. List your bike and make some extra pocket money!",
       "description": "where: <b>Hamburg</b>  |  what: <b>Triahtlon- Sprint & Olympic Distance</b>  |  when: <b>14-15 July 2018</b>"
     },
     "riderman": {
@@ -515,7 +515,7 @@
       "choose-location": "Choose your location",
       "find-out-more": "Learn more about cocomat",
       "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed.",
-      "faq-question-1": "Does Coco-Mat bikes offer a warranty after the purchase of a bike?",
+      "faq-question-1": "Do you offer warranty?",
       "faq-answer-1": "Coco-Mat bike offers: Three years for defective wooden or metal compartments that may have appeared during to manufacturing process. One year for bike compartments.This warranty is valid from the date of purchase, is offered only to the original owner, and it is not transferable. Proof of purchase is required.",
       "faq-question-2": "How can I repair a wooden bike?",
       "faq-answer-2": "All the bike parts can be repaired by any bike expert, except for the wooden frame which needs to be repaired by a carpenter according to Coco-Mat bike's instructions.",
@@ -674,7 +674,7 @@
   "terms-and-conditions": {
     "title": "Terms and conditions",
     "header": "Algemene voorwaarden van het Online-Platform listnride",
-    "subtitle": "List and Ride GmbH (in het vervolg „listnride“) bemmidelt via de website www.listnride.com (in het vervolg „Website“) in verhuurtransacties voor fietsen. De onderstaande algemene voorwaarden (in het vervolg „gebruiksvoorwaarden“) in paragraaf I zijn onderdeel van de overeenkomst die tussen de gebruiker en listnride middels de bemiddeling tot stand komt. Indien er via de website een overeenkomst tot het huren van een gebruiksvoorwerp (in het vervolg „huurovereenkomst“) is gesloten, komt deze volgens de in paragraaf II genoemde algemene huurvoorwaarden (in het vervolg „huurvoorwaarden“) tot stand."
+    "subtitle": "De List and Ride GmbH (in het vervolg „listnride“) bemmidelt via de website www.listnride.com (in het vervolg „Website“) huurcontracten voor fietsen en andere sport- en vrijetijdsuitrusting. De onderstaande algemene gebruiksvoorwaarden (in het vervolg „gebruiksvoorwaarden“) in paragraaf I zijn onderdeel van de overeenkomst die tussen de gebruiker en listnride middels de bemiddelingsverrichting tot stand komt. Indien er via de website een overeenkomst tot het huren van een gebruiksvoorwerp (in het vervolg „huurovereenkomst“) is gesloten, komt deze volgens de in paragraaf II genoemde algemene huurvoorwaarden (in het vervolg „huurvoorwaarden“) tot stand."
   },
   "trust-and-safety": {
     "title": "Vertrouwen & Zekerheid",
@@ -789,9 +789,8 @@
   },
   "privacy": {
     "title": "Privacybeleid van listnride",
-    "ga-opt-out": "Klik hier om Google Analytics-tracking te deactiveren",
     "subtitle": "Privacybeleid ",
-    "description": "Met het privacybeleid informeert List and Ride GmbH (in het vervolg „listnride“) je over het beleid ten aanzien van de omgang met persoonsgegevens. <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">U kunt hier het privacybeleid inzien en uitprinten.</a>",
+    "description": "Met het privacybeleid informeert List and Ride GmbH (in het vervolg „listnride“) je over het beleid ten aanzien van de omgang met uw persoonlijke gegevens. <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">U kunt hier het privacybeleid inzien en uitprinten.</a>",
     "meta-title": "Privacybeleid van listnride",
     "meta-description": "Het privacybeleid van de Bike-Sharing-Community listnride is van toepassing bij het gebruik van het platform."
   },
