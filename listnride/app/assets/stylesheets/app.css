@@ -336,6 +336,10 @@ md-tooltip .md-content {
   margin: 8px;
 }
 
+.lnr-m0 {
+  margin: 0;
+}
+
 .lnr-margin-right {
   margin-right: 8px;
 }
@@ -402,6 +406,10 @@ md-tooltip .md-content {
 
 .lnr-mb-0 {
   margin-bottom: 0;
+}
+
+.lnr-mt-0 {
+  margin-top: 0;
 }
 
 .lnr-lh-body-2 {
@@ -906,11 +914,6 @@ footer .lnr-link {
   height: 28vh;
   background-size: cover;
   background-position: 50% 50%;
-}
-
-cocomat #hero-shot {
-  height: 78vh;
-  background-image: url(../ui_images/brand-integration/cocomat/hero_1.jpg);
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -2473,12 +2476,32 @@ md-icon[md-font-icon].fa--lh20 {
 /*  FILTER
 /*-----------------------------------------------------------------------------------*/
 
+.lnr-100mh {
+  max-height: none!important;
+}
+
+.lnr__filter-btn {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 400;
+}
+
 .filter__select-list md-select {
   margin: 10px 0;
 }
 
 .filter__category {
   width: 400px;
+}
+
+.lnr-filter-container filter .filter__selected {
+  border-color: #7ab2f8;
+  color: #7ab2f8;
+}
+
+md-select.filter__selected:not([disabled]):focus .md-select-value,
+md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-icon {
+  color: #7ab2f8;
 }
 
 .md-button.md-menu__close-btn {

@@ -42,8 +42,8 @@
                 <p class="lnr-text-error md-caption lnr-error lnr-error--dimension">{{'forms.profile-picture-dimension-error' | translate}}</p>
                 <p class="lnr-text-error md-caption lnr-error lnr-error--max-size">{{'forms.profile-picture-size-error' | translate}}</p>
                 <p class="lnr-text-error md-caption lnr-error lnr-error--pattern">{{'forms.profile-picture-pattern-error' | translate}}</p>
-                <p data-ng-bind-html="'forms.profile-picture-info' | translate"></p>
-                <p class="md-caption" data-ng-bind-html="'forms.profile-picture-info-policy' | translate"></p>
+                <p class="lnr-mb-0" data-ng-bind-html="'forms.profile-picture-info' | translate"></p>
+                <p class="md-caption lnr-mt-0" data-ng-bind-html="'forms.profile-picture-info-policy' | translate"></p>
               </div>
             </div>
 
@@ -85,13 +85,18 @@
               <div flex-gt-xs layout-margin>
                 <div class="md-body-2">{{ 'forms.password' | translate }}</div>
               </div>
-              <div flex-gt-xs="70" layout="column" layout-margin>
-                <md-input-container flex>
-                  <label>{{ 'forms.password' | translate }}</label>
-                  <input minlength="6" placeholder="***********" name="password" type="password" ng-model="settings.password"></input>
-                </md-input-container>
-                <div ng-messages="settings.form.password.$error" role="alert">
-                  <div ng-message="minlength">Password shouldn't be shorter than 6 characters.</div>
+              <div flex-gt-xs="70" layout-margin>
+                <div layout="row" layout-xs="column">
+                  <md-input-container flex-gt-xs="45">
+                    <label>{{ 'forms.password' | translate }}</label>
+                    <input ng-disabled="true" placeholder="***********" name="password" type="password" ng-model="settings.password"></input>
+                  </md-input-container>
+                  <span hide-xs flex></span>
+                  <md-input-container layout="row" flex-gt-xs="45" flex="100">
+                    <md-button flex class="md-raised md-primary lnr-btn-inline lnr-btn-mobile" ng-click="settings.changePassword($event)">
+                      {{ 'forms.update-password' | translate }}
+                    </md-button>
+                  </md-input-container>
                 </div>
               </div>
             </div>
@@ -280,7 +285,7 @@
       <md-tab class="account" label="{{ 'settings.account' | translate }}" layout="column">
         <br>
         <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
-          <form name="businessForm" ng-submit="settings.updateBusiness(businessForm)" ng-hide="!settings.user.business">
+          <form name="businessForm" ng-submit="settings.updateBusiness(businessForm)" ng-if="settings.user.business">
             <div layout="row" layout-xs="column">
               <div flex-gt-xs layout-margin>
                 <div class="md-body-2">{{ 'settings.company-information' | translate }}</div>
@@ -627,7 +632,7 @@
           </form>
         </div>
       </md-tab>
-  <!-- end hours -->
+      <!-- end hours -->
     </md-tabs>
   </div>
   <footer></footer>

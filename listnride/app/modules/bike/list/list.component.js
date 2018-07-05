@@ -10,6 +10,8 @@ angular.module('list', ['ngLocale']).component('list', {
   controllerAs: 'list',
   controller: [
     '$mdDialog',
+    '$mdToast',
+    '$translate',
     '$localStorage',
     '$stateParams',
     '$state',
@@ -24,7 +26,7 @@ angular.module('list', ['ngLocale']).component('list', {
     'accessControl',
     'loadingDialog',
     'price',
-    function ListController($mdDialog, $localStorage, $stateParams, $state,
+    function ListController($mdDialog, $mdToast, $translate, $localStorage, $stateParams, $state,
                             $scope, $analytics, Upload, bikeOptions, api, authentication,
                             $timeout, verification, accessControl, loadingDialog, price) {
 
@@ -273,7 +275,8 @@ angular.module('list', ['ngLocale']).component('list', {
 
         function AddNewImage(image) {
           _.forEach(_.range(list.startImage,6), function(id) {
-            if(_.values(list.form['image_file_' + id])[0].url == null){
+            if(_.values(list.form['image_file_' + id])[0].url == null || ride['ride']['remove_image_file_' + id]){
+              ride['ride']['remove_image_file_' + id] = false;
               ride['ride']['image_file_' + id] = image.src;
               list.startImage = id + 1;
               return false;
@@ -291,6 +294,12 @@ angular.module('list', ['ngLocale']).component('list', {
         }).then(
           function (response) {
             loadingDialog.close();
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.bike-edit-successful'))
+                .hideDelay(4000)
+                .position('top center')
+            );
             $state.go("listings");
           },
           function (error) {

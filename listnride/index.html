@@ -15,6 +15,7 @@
   <meta property="og:image:height" content="534" />
   <meta property="og:description" content="{{ngMeta.description}}" />
   <meta property="og:type" content="website" />
+  <meta name="robots" content="noindex" ng-if="ngMeta['noindex']" />
   <link rel="alternate" href="https://www.listnride.com{{location.path()}}" hreflang="x-default" />
   <link rel="alternate" href="https://www.listnride.de{{location.path()}}" hreflang="de" />
   <link rel="alternate" href="https://www.listnride.nl{{location.path()}}" hreflang="nl" />
@@ -260,6 +261,9 @@
   </noscript>
   <!-- DO NOT MODIFY -->
   <!-- End Facebook Pixel Code -->
+  <!-- Crisp Chat Integration -->
+  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="d77eb9c0-eeb6-4985-a6e5-51f56c51616e";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+  <!-- End Crisp Chat Integration -->
 </head>
 <body layout="column">
   <header></header>
@@ -294,6 +298,5 @@
   })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
   ga('create', 'UA-61041935-1', 'auto');
   ga('set', 'anonymizeIp', true);
-  ga('send', 'pageview');
 </script>
 </html>
