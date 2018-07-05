@@ -661,6 +661,7 @@
     "default-placeholder": "¿Dónde te gustaría alquilar una bici?"
   },
   "search": {
+    "bikes-found": "Bikes found:",
     "no-bikes": "No hay bicis en esta ubicación",
     "all-sizes": "Todos los tamaños",
     "bikes-in": "Bicis disponibles",

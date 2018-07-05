@@ -4,10 +4,11 @@
     <div layout="row" class="lnr-filter-container">
       <filter categorized-bikes="search.categorizedFilteredBikes"
               bikes="search.filteredBikes"
-              initial-bikes="search.bikes"
+              initial-bikes="search.filteredDateBikes"
               initial-values="search.initialValues"
               update-state="search.updateState"
               populate-bikes="search.populateBikes"
+              date-change="search.onDateChange"
               limit="search.limit">
       </filter>
       <bike-sorter
