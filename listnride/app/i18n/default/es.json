@@ -124,6 +124,7 @@
     "today": "Hoy",
     "yesterday": "Ayer"
   },
+  "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
       "berlin": {
@@ -585,7 +586,7 @@
     "sign-up-to-book": "Regístrate para reservar la bici",
     "sign-up-with-facebook": "Registrarse con facebook",
     "sign-up-divider-text": "Acepta nuestros términos y condiciones",
-    "agree-terms-and-policy": "Por favor, acepte nuestros Términos y Condiciones y Política de Privacidad.",
+    "agree-terms-and-policy": "Acepta los Términos y la Política de Privacidad",
     "member-already": "¿Ya estás registrado?",
     "business": "¿Tienda de bicis?",
     "description": "Descripción",
@@ -695,14 +696,14 @@
       "label": "Categoría",
       "city": "Ciudad",
       "race": "Carretera",
-      "all-terrain": "Montaña",
+      "all-terrain": "Todo terreno",
       "kids": "Infantil",
       "electro": "Eléctricas",
       "special": "Especial",
       "urban": "Urban",
       "e-bike": "E-Bike",
-      "road": "Road",
-      "transport": "Transport"
+      "road": "Carretera",
+      "transport": "Transporte"
     },
     "details": {
       "header": "¿Cuál es el nombre, tamaño y marca de tu bici?",
@@ -801,20 +802,20 @@
         "dutch-bike": "Bicicleta holandesa",
         "touring-bike": "Bicicleta de rutas",
         "fixie": "Bici de piñón fijo",
-        "single-speed": "Bici de una velocidad",
-        "city-bike": "City Bike"
+        "single-speed": "Bici monomarcha",
+        "city-bike": "Bicicletas urbanas "
       },
       "2": {
         "road-bike": "Bici de carretera",
         "triathlon": "Triatlón",
         "indoor": "Bicicleta de pista",
-        "e-city-bike": "E-City Bike",
-        "e-touring-bike": "E-Touring Bike",
-        "e-cargo-bike": "E-Cargo Bike",
-        "e-mountain-bike": "E-Mountain Bike",
+        "e-city-bike": "Bici eléctrica urbana",
+        "e-touring-bike": "Bici eléctrica de turismo",
+        "e-cargo-bike": "Bici de carga eléctrica",
+        "e-mountain-bike": "Bici eléctrica de montaña",
         "e-road-bike": "E-Road Bike",
-        "e-folding-bike": "E-Folding Bike",
-        "e-scooter": "E-Scooter"
+        "e-folding-bike": "Bici eléctrica plegable",
+        "e-scooter": "Scooter eléctrico"
       },
       "3": {
         "tracking": "Tracking",
@@ -823,10 +824,10 @@
         "cross-country": "Cross Country",
         "downhill": "Descenso",
         "cyclocross": "Ciclocross",
-        "road-bike": "Road Bike",
-        "triathlon-bike": "Triathlon Bike",
-        "touring-bike": "Touring Bike",
-        "fixed-gear-bike": "Fixed Gear Bike"
+        "road-bike": "Bicicleta de carretera",
+        "triathlon-bike": "Bicicleta de triatlón ",
+        "touring-bike": "Bicicleta de turismo ",
+        "fixed-gear-bike": "Bicicleta de piñón fijo"
       },
       "4": {
         "city": "Ciudad",
@@ -834,17 +835,17 @@
         "road": "De carretera",
         "mtb-hardtail": "MTB Hardtail",
         "mtb-fullsuspension": "MTB Fullsuspension",
-        "cyclocross-bike": "Cyclocross Bike",
-        "gravel-bike": "Gravel Bike"
+        "cyclocross-bike": "Bicicleta de ciclocross ",
+        "gravel-bike": "Bicicleta de gravel"
       },
       "5": {
         "pedelec": "Pedelec",
         "e-bike": "Bici eléctrica",
-        "cargo-bike": "Cargo Bike",
-        "bike-trailer": "Bike Trailer",
-        "bike-child-seat": "Bike Child Seat",
-        "bike-car-rack": "Bike Car Rack",
-        "bike-travel-bag": "Bike Travel Bag"
+        "cargo-bike": "Bicicleta de carga",
+        "bike-trailer": "Remolque para bicicleta",
+        "bike-child-seat": "Asiento para niños",
+        "bike-car-rack": "Portabicicletas para el coche",
+        "bike-travel-bag": "Alforjas "
       },
       "6": {
         "folding-bike": "Bici plegable",
@@ -854,16 +855,16 @@
         "recumbent": "Bici reclinada",
         "mono-bike": "Monociclo",
         "trailer": "Remolque de bicicleta",
-        "city-bike": "City Bike",
-        "all-terrain-bike": "All Terrain Bike",
-        "road-bike": "Road Bike",
-        "bogie-wheel": "Bogie Wheel"
+        "city-bike": "Bicicleta urbana",
+        "all-terrain-bike": "Bicicleta todo terreno",
+        "road-bike": "Bicicleta de carretera",
+        "bogie-wheel": "Bicicleta sin pedales"
       },
       "7": {
-        "folding-bike": "Folding Bike",
-        "recumbent-bike": "Recumbent Bike",
-        "tandem-bike": "Tandem Bike",
-        "longtail-bike": "Longtail Bike",
+        "folding-bike": "Bicicleta plegable",
+        "recumbent-bike": "Bicicleta reclinada",
+        "tandem-bike": "Tandem ",
+        "longtail-bike": "Bicicleta Longtail ",
         "scooter": "Scooter"
       }
     }

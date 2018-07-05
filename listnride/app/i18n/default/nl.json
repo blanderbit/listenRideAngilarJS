@@ -123,6 +123,7 @@
     "today": "Vandaag",
     "yesterday": "Gisteren"
   },
+  "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
       "berlin": {
@@ -650,7 +651,7 @@
     "default-placeholder": "Waar wil je een fiets huren?"
   },
   "search": {
-    "no-bikes": "Er zijn nog geen fietsen op deze locatie",
+    "no-bikes": "Er zijn nog geen fietsen op deze locatie, stuur ons een mailtje op contact@listnride.com en wij gaan direct voor je opzoek! ",
     "all-sizes": "Alle Maten",
     "bikes-in": "fietsen in",
     "meta-title": "Huur de perfekte fiets in {{location}}.",
