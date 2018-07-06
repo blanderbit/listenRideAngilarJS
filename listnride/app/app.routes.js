@@ -3,7 +3,7 @@
  *
  * IMPORTANT! When adding new routes make sure to set the "noindex"
  * meta tag to false to let search engines index our page.
- * Depening if a resolve is needed or not, do it like in the 
+ * Depening if a resolve is needed or not, do it like in the
  * home state (with resolve) or in the user state (without resolve)
  */
 
@@ -1228,6 +1228,25 @@
           disableUpdate: false,
           'og:image': 'https://www.listnride.com/app/assets/ui_images/opengraph/landing.jpg',
           'noindex': false
+        }
+      });
+
+      $stateProvider.state({
+        name: 'insurance',
+        url: '/insurance',
+        template: '<insurance></insurance>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["insurance.meta-title", "insurance.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["insurance.meta-title"]);
+                ngMeta.setTag("description", translations["insurance.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
         }
       });
 
