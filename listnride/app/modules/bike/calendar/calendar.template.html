@@ -223,5 +223,12 @@
     ng-disabled="true">
     {{ 'calendar.select-timespan' | translate }}
   </md-button>
+  <div layout-padding layout="row" ng-if="calendar.insuranceCountry()">
+    <md-icon md-svg-src="app/assets/ui_icons/icn_insurance.svg" class="lnr-icn-md lnr-no-margin"></md-icon>
+    <div layout="column">
+      <span class="md-body-1">{{ 'calendar.basic-insurance-included' | translate }}</span>
+      <a class="lnr-link" ui-sref="trustAndSafety" target="_BLANK">{{ 'shared.learn-more' | translate }}</a>
+    </div>
+  </div>
   <!-- <p ng-if="!calendar.authentication.loggedIn()" class="md-caption center-text lnr-margin-lrg">{{ 'calendar.to-request-bike-please' | translate }} {{ 'forms.sign-up' | translate }} {{ 'forms.or' | translate }} {{ 'forms.log-in' | translate }}</p> -->
 </div>

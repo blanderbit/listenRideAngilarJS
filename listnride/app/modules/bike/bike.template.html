@@ -1,8 +1,16 @@
-<md-content class="single-column"> 
-  <div
+<md-content class="single-column">
+  <!-- <div
     id="hero-shot"
     class="lnr-preload-bg"
     style="{{'background-image: url(' + bike.data.image_file_1.image_file_1.large.url + ')'}};"
+    layout="row"
+    layout-align="start end"
+    ng-click="bike.showGalleryDialog($event)"
+  > -->
+  <div
+    id="hero-shot"
+    class="lnr-preload-bg"
+    style="{{'background-image: url(' + bike.heroshot() + ')'}};"
     layout="row"
     layout-align="start end"
     ng-click="bike.showGalleryDialog($event)"
@@ -168,7 +176,7 @@
         </div>
 
         <md-divider class="lnr-no-padding lnr-margin-lrg" ng-if="bike.data.ratings.length > 0"></md-divider>
-        
+
         <!-- reviews -->
         <div layout="row" layout-xs="column" ng-if="bike.data.ratings.length > 0">
           <div flex-gt-xs="25">
@@ -201,10 +209,12 @@
           requests="bike.data.requests"
           user-id="bike.data.user.id"
           bike-availabilities="bike.data.availabilities"
+          coverage-total="bike.data.coverage_total"
+          country-code="bike.data.country_code"
         ></calendar>
       </div>
     </div>
-   
+
   </div>
 
   <ng-map

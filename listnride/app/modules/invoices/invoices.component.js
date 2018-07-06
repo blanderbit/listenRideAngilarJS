@@ -41,7 +41,7 @@ angular.module('invoices',[]).component('invoices', {
 
         invoices.getCsv = function (target) {
           var fileName = 'Billings as ' + target + ' ' + moment().format('MMMM Do YYYY') + '.csv';
-            api.get('/users/' + $localStorage.userId + "/transaction_csv?target=" + target, 'blob').then(
+            api.get('/users/' + $localStorage.userId + "/transactions?target=" + target, 'blob').then(
               function(response) {
                 downloadAttachment(fileName, response.data, 'application/csv');
               },
