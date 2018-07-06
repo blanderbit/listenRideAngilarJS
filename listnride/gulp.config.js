@@ -142,16 +142,16 @@ module.exports = function () {
                 ENV: {
                     name: 'listnride',
                     html5Mode: false,
-                    //TODO: remove review app links
-                    apiEndpoint: 'https://listnride-staging-pr-1.herokuapp.com/v2',
-                    userEndpoint: 'https://listnride-staging-pr-1.herokuapp.com/v2/users/',
+                    // FOR TESTING ONLY. DO NOT REMOVE!
+                    // apiEndpoint: 'http://localhost:3000/v2',
+                    // userEndpoint: 'http://localhost:3000/v2/users/',
+                    apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
+                    userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com",
                     defaultTranslation: 'default',
                     staticTranslation: 'static',
                     btKey: 'sandbox_jcmqgjqd_t4ptn54mswxmpnd5'
-                    // FOR TESTING ONLY. DO NOT REMOVE!
-                    // apiEndpoint: 'http://localhost:3000/v2',
-                    // userEndpoint: 'http://localhost:3000/v2/users/',
+
                 }
             },
             imageOptions: {
@@ -171,8 +171,8 @@ module.exports = function () {
                     html5Mode: true,
                     //apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
                     //userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
-                    apiEndpoint: 'https://listnride-staging-pr-1.herokuapp.com/v2',
-                    userEndpoint: 'https://listnride-staging-pr-1.herokuapp.com/v2/users/',
+                    apiEndpoint: 'https://listnride-staging.herokuapp.com/v2',
+                    userEndpoint: 'https://listnride-staging.herokuapp.com/v2/users/',
                     webappUrl: "http://www.staging.listnride.com",
                     defaultTranslation: 'default',
                     staticTranslation: 'static',
