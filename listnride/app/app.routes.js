@@ -1234,7 +1234,8 @@
       $stateProvider.state({
         name: 'insurance',
         url: '/insurance',
-        template: '<insurance></insurance>',
+        templateUrl: 'app/modules/static/insurance.template.html',
+        controller: 'StaticController',
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["insurance.meta-title", "insurance.meta-description"])
