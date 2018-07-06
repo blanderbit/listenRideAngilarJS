@@ -11,7 +11,8 @@ angular.module('filter',[])
       bikes: '=',
       populateBikes: '<',
       categorizedBikes: '=',
-      limit: '='
+      limit: '=',
+      dateChange: '<'
     },
     controller: [
       '$translate',
@@ -20,6 +21,10 @@ angular.module('filter',[])
       'filterFilter',
       function FilterController($translate, $state, bikeOptions, filterFilter) {
         var filter = this;
+
+        // brand
+        filter.brands = [$translate.instant("search.all-brands")];
+        filter.currentBrand = filter.brands[0];
 
         filter.$onInit = function () {
           // methods
@@ -44,9 +49,7 @@ angular.module('filter',[])
           // sizes
           filter.currentSizes = filter.initialValues.sizes.slice();
           initializeSizeFilter();
-          // brand
-          filter.brands = [$translate.instant("search.all-brands")];
-          filter.currentBrand = filter.brands[0];
+
           // categories
           filter.categories = [];
           bikeOptions.allCategoriesOptions().then(function (resolve) {
@@ -77,7 +80,7 @@ angular.module('filter',[])
             start_date: filter.currentDate.start_date,
             duration: filter.currentDate.duration
           }, function() {
-            filter.populateBikes();
+            filter.dateChange();
           });
         };
 
@@ -124,6 +127,23 @@ angular.module('filter',[])
           // If filtered brand doesn't exist, switch to default
           if (filter.brands.includes(filter.initialValues.brand)) {
             filter.currentBrand = filter.initialValues.brand;
+          }
+
+          // sord brands
+          var defaultBrand = filter.brands.shift();
+          filter.brands.sort(alphabetical);
+          filter.brands.unshift(defaultBrand);
+        }
+
+        function alphabetical(a, b) {
+          var A = a.toLowerCase();
+          var B = b.toLowerCase();
+          if (A < B) {
+            return -1;
+          } else if (A > B) {
+            return 1;
+          } else {
+            return 0;
           }
         }
 

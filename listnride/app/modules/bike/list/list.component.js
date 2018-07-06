@@ -10,6 +10,8 @@ angular.module('list', ['ngLocale']).component('list', {
   controllerAs: 'list',
   controller: [
     '$mdDialog',
+    '$mdToast',
+    '$translate',
     '$localStorage',
     '$stateParams',
     '$state',
@@ -24,7 +26,7 @@ angular.module('list', ['ngLocale']).component('list', {
     'accessControl',
     'loadingDialog',
     'price',
-    function ListController($mdDialog, $localStorage, $stateParams, $state,
+    function ListController($mdDialog, $mdToast, $translate, $localStorage, $stateParams, $state,
                             $scope, $analytics, Upload, bikeOptions, api, authentication,
                             $timeout, verification, accessControl, loadingDialog, price) {
 
@@ -292,6 +294,12 @@ angular.module('list', ['ngLocale']).component('list', {
         }).then(
           function (response) {
             loadingDialog.close();
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.bike-edit-successful'))
+                .hideDelay(4000)
+                .position('top center')
+            );
             $state.go("listings");
           },
           function (error) {

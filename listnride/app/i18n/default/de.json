@@ -297,6 +297,7 @@
     "pay-secure": "Sicher bezahlen mit",
     "agree-terms": "Mit \"Rad anfragen\" stimmst du zu:",
     "agree-terms-link": "listnride AGBs",
+    "and-agree-privacy": "and to the <a target=\"_blank\" href=\"/#/privacy\">listnride Privacy Policy</a>.",
     "footer": {
       "questions": "Du hast Fragen rund ums Mieten von Fahrrädern?",
       "call-us": "Ruf uns unter +49 (0)30-120870330, Mo-Fr 9-18 Uhr an. ",
@@ -391,7 +392,9 @@
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Fahrrad erfolgreich gelöscht",
     "range-success-delete": "Zeitraum erfolgreich gelöscht",
-    "availability-success-saved": "Availability successfully saved"
+    "availability-success-saved": "Availability successfully saved",
+    "incorrect-old-password": "Could not change password. Please be sure that the old password is right",
+    "bike-edit-successful": "Rad erfolgreich bearbeitet"
   },
   "settings": {
     "settings": "Einstellungen",
@@ -574,7 +577,12 @@
     "last-name": "Nachname",
     "email-address": "E-Mail-Adresse",
     "password": "Passwort",
+    "update-password": "Change Password",
     "forgot-password": "Passwort vergessen?",
+    "old-password": "Old Password",
+    "new-password": "New Password",
+    "save-new-password": "Save new password",
+    "password-error-length": "Password should be min. 6 characters",
     "or": "oder",
     "log-in": "Log-In",
     "log-out": "Log-Out",
@@ -607,6 +615,7 @@
     "signing-up-accept-tac": "Ich stimme hiermit den <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Nutzungsbedingungen</a> zu und willige in die Erhebung, Verarbeitung und Nutzung meiner personenbezogenen Daten ein, wie in der <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> näher beschrieben.",
     "signing-up-accept-newsletter": "Ich möchte den E-Mail-Newsletter von listnride mit handverlesenen Themen über neue Räder, Touren und Gutscheine erhalten. Es gilt die <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> von listnride. Ich kann meine Einwilligung jederzeit widerrufen.",
     "privacy-policy": "Es gilt die <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Datenschutzerklärung</a> von listnride.",
+    "logged-in-via-facebook": "You logged in via facebook",
     "errors": {
       "password-length": "Das Passwort sollte zw. 6-30 Zeichen lang sein",
       "password-length-xs": "6-30 Zeichen",
@@ -650,6 +659,7 @@
     "default-placeholder": "Wo willst du ein Rad ausleihen?"
   },
   "search": {
+    "bikes-found": "Bikes found:",
     "no-bikes": "Leider sind an diesem Ort noch keine Räder vorhanden. Aber wir wachsen schnell, vielleicht gibt es bald schon welche! Wenn du magst, kannst du auch <a href=\"/listing-a-bike\">dein eigenes Rad einstellen</a> oder alternativ nach einer anderen Stadt oder Adresse in der Nähe suchen.",
     "all-sizes": "Alle Größen",
     "bikes-in": "Fahrräder in",

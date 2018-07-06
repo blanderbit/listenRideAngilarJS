@@ -1,11 +1,26 @@
 <div layout="row" layout-margin>
-  <md-button class="md-lined" lnr-date-picker data="filter.currentDate" date-on-change="filter.onDateChange" clear-calendar-data="filter.isClearDataRange">
+  <md-button
+    class="md-lined lnr__filter-btn"
+    ng-class="filter.currentDate.start_date ? 'filter__selected': ''"
+    lnr-date-picker
+    data="filter.currentDate"
+    date-on-change="filter.onDateChange"
+    clear-calendar-data="filter.isClearDataRange"
+  >
     <span ng-if="!filter.currentDate.start_date">{{ 'search.timespan' | translate }}</span>
-    <span ng-if="filter.currentDate.start_date">{{filter.initialValues.date.start_date}}</span>
+    <span ng-if="filter.currentDate.start_date && filter.currentDate.duration <= 0">
+      {{ filter.initialValues.date.start_date | amDateFormat:'DD MMMM' }}
+    </span>
+    <span ng-if="filter.currentDate.start_date && filter.currentDate.duration > 0">
+      {{ filter.initialValues.date.start_date | amDateFormat:'DD MMMM' | addText:' - '}}
+      {{ filter.initialValues.date.start_date | amAdd : filter.currentDate.duration : 'days' | amDateFormat:'DD MMMM'}}
+    </span>
+
   </md-button>
   <md-menu md-position-mode="target bottom">
     <md-button
-      class="md-lined lnr-no-margin"
+      class="md-lined lnr-no-margin lnr__filter-btn"
+      ng-class="filter.currentSizes.length >= 1 && filter.currentSizes[0] != -1 || filter.currentSizes.length > 1 ? 'filter__selected': ''"
       ng-click="$mdOpenMenu($event); filter.closeDateRange()"
     >
       <span ng-if="filter.currentSizes.length < 1 || filter.currentSizes.length <= 1 && filter.currentSizes[0] == -1">
@@ -27,12 +42,13 @@
 
   <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
     <md-button
-      class="md-lined lnr-no-margin"
+      class="md-lined lnr-no-margin lnr__filter-btn"
+      ng-class="filter.currentCategories.length >= 1 ? 'filter__selected': ''"
       ng-click="$mdOpenMenu($event); filter.closeDateRange()"
     >
       {{ 'search.category' | translate }}
     </md-button>
-    <md-menu-content width="5">
+    <md-menu-content width="5" class="lnr-100mh">
       <div class="lnr-padding">
         <div class="lnr-right">
           <md-button show-xs hide-gt-xs class="md-icon-button md-warn md-menu__close-btn lnr-md-no-focused">
@@ -46,6 +62,7 @@
 
   <md-select
     class="lnr-margin-left"
+    ng-class="filter.currentBrand != filter.brands[0] ? 'filter__selected': ''"
     ng-model="filter.currentBrand"
     ng-change="filter.onBrandChange()"
   >

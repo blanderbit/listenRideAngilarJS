@@ -6,10 +6,14 @@ angular.
     'Base64', '$http', '$localStorage', '$mdDialog', '$rootScope', '$mdToast', '$window', '$state', '$q', '$translate', '$analytics', 'ezfb', 'api', 'verification', 'sha256',
     function(Base64, $http, $localStorage, $mdDialog, $rootScope, $mdToast, $window, $state, $q, $translate, $analytics, ezfb, api, verification, sha256){
 
+      var encodeAuth = function (email, password_hashed) {
+        return Base64.encode(email + ":" + password_hashed);
+      }
+
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (response) {
-        var encoded = Base64.encode(response.email + ":" + response.password_hashed);
-        // Sets the Basic Auth String for the Authorization Header 
+        var encoded = encodeAuth(response.email, response.password_hashed);
+        // Sets the Basic Auth String for the Authorization Header
         $localStorage.auth = 'Basic ' + encoded;
         $localStorage.userId = response.id;
         $localStorage.name = response.first_name + " " + response.last_name;
@@ -42,7 +46,7 @@ angular.
       // methods for signup controller
       // defined outside so that can be used out of sign up controller
       // used in request booking flow
-       
+
       var showSignupSuccess = function() {
         $mdToast.show(
           $mdToast.simple()
@@ -480,6 +484,7 @@ angular.
         logout: logout,
         tokenLogin: tokenLogin,
         setCredentials: setCredentials,
+        encodeAuth: encodeAuth,
         profilePicture: function() {
           return $localStorage.profilePicture
         },

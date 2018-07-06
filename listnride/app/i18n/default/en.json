@@ -297,7 +297,8 @@
     "shopping": "Secure Shopping",
     "pay-secure": "Pay secure with",
     "agree-terms": "With 'Request Bike' you agree to the",
-    "agree-terms-link": "listnride Terms",
+    "agree-terms-link": "listnride Terms and Conditions",
+    "and-agree-privacy": "and to the <a target=\"_blank\" href=\"/#/privacy\">listnride Privacy Policy</a>.",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
       "call-us": "Call us +49 (0)30-120870330, monday to friday 9-18pm. ",
@@ -392,7 +393,9 @@
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Bike successfully deleted",
     "range-success-delete": "Unvailability range successfully deleted",
-    "availability-success-saved": "Availability successfully saved"
+    "availability-success-saved": "Availability successfully saved",
+    "incorrect-old-password": "Could not change password. Please be sure that the old password is right",
+    "bike-edit-successful": "Bike successfully edited"
   },
   "settings": {
     "settings": "Settings",
@@ -579,7 +582,12 @@
     "last-name": "Last Name",
     "email-address": "Email Address",
     "password": "Password",
+    "update-password": "Change Password",
     "forgot-password": "Forgot Password?",
+    "old-password": "Old Password",
+    "new-password": "New Password",
+    "save-new-password": "Save new password",
+    "password-error-length": "Password should be min. 6 characters",
     "or": "or",
     "log-in": "Log In",
     "log-out": "Log Out",
@@ -612,6 +620,7 @@
     "signing-up-accept-tac": "I hereby agree to the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Terms and Conditions</a> and agree to the collection, processing and use of my personal data as further described in the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>.",
     "signing-up-accept-newsletter": "I would like to receive the listnride e-mail newsletter with interesting content on cycling, community updates and exclusive benefits. The <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>  of listnride applies. I can revoke my consent at any time.",
     "privacy-policy": "The <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy </a> of listnride applies.",
+    "logged-in-via-facebook": "You logged in via facebook",
     "errors": {
       "password-length": "Password should be 6-30 characters",
       "password-length-xs": "6-30 characters",
@@ -655,6 +664,7 @@
     "default-placeholder": "Where would you like to rent a bike?"
   },
   "search": {
+    "bikes-found": "Bikes found:",
     "no-bikes": "There are unfortunately no bikes in this location yet. As we're growing fast, probably soon there will be! If you'd like to, you can <a href=\"/listing-a-bike\">list a bike yourself</a></a> or alternatively try searching for another city or specific location nearby.",
     "all-sizes": "All Sizes",
     "bikes-in": "Bikes in",
