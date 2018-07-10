@@ -3,6 +3,7 @@
 // #f3f3f3: Preload Color
 // #DD2C00: Error color
 // #7ab2f8: Blue color
+// #eaeeee: Gray color
 // 4px: border radius
 // Added to material
 // md-lined,
@@ -608,6 +609,10 @@ md-tooltip .md-content {
 
 .lnr-footer-bottom .content {
   width: 100%;
+}
+
+.lnr-bg-gray {
+  background-color: #eaeeee;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -2714,6 +2719,11 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
 .insurance__tabs .tab-content {
   margin-top: 40px;
+}
+
+.lnr-image-row img {
+  max-width: 200px;
+  padding: 15px;
 }
 
 /*-----------------------------------------------------------------------------------*/

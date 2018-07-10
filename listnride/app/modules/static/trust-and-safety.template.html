@@ -7,7 +7,6 @@
 
   <div class="content" layout-padding>
     <div class="lnr-section-title lnr-garantee" layout="column" layout-align="center center">
-      <!-- <md-icon class="lnr-icn-xlrg" md-svg-src="app/assets/ui_icons/{{ 'trust-and-safety.guarantee-icon' | translate }}.svg"></md-icon> -->
       <h2 class="md-headline">{{ 'trust-and-safety.header' | translate }}</h2>
       <p class="md-subhead">{{ 'trust-and-safety.subheader' | translate }}</p>
       <p class="md-body-1">{{ 'trust-and-safety.description' | translate }}</p>
@@ -41,8 +40,105 @@
         <a class="lnr-link" ui-sref="help">{{ 'shared.learn-more' | translate }}</a></p>
       </div>
     </div>
+  </div>
 
+  <div class="lnr-bg-gray">
+    <div class="content insurance__top" layout-padding-gt-sm>
+      <div layout="column" layout-gt-sm="row" layout-padding-gt-sm>
+        <div flex="35" class="lnr-sm-content-double-padding">
+          <div layout="column">
+            <h1 class="md-headline lnr-sm-text-center">
+              {{ 'trust-and-safety.main.header' | translate }}
+            </h1>
+          </div>
+          <div class="md-body-1 lnr-sm-text-center" layout="column">
+            <p translate="trust-and-safety.main.description"></p>
+            <a ui-sref="insurance" target="_blank">{{ 'shared.learn-more' | translate }}</a>
+          </div>
+        </div>
+        <div flex="65" flex-order="-1" flex-order-gt-sm="1">
+          <div id="hero-shot" class="lnr-preload-bg insurance__top-img" style="background-image: url('app/assets/ui_images/static/lnr-landing-insurance.jpg')" layout="row"
+            layout-align="center center">
+            <div class="insurance__gothaer">
+              <span class="md-body-1">{{ 'insurance.logo.description' | translate }}</span>
+              <img ng-src="app/assets/ui_images/static/lnr-insurance-gothaer-blue@2x.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <div class="md-headline" translate="trust-and-safety.outro.description"></div>
+    </div>
+    <p class="lnr-center md-subhead">{{ 'shared.press.title' | translate }}</p>
+    <div class="lnr-image-row" layout="row" layout-xs="column" layout-align="center center" layout-wrap="wrap">
+      <img src="app/assets/ui_images/static/tv_partners/001.png" alt="partner-logo-1">
+      <img src="app/assets/ui_images/static/tv_partners/002.png" alt="partner-logo-2">
+      <img src="app/assets/ui_images/static/tv_partners/003.svg" alt="partner-logo-3">
+      <img src="app/assets/ui_images/static/tv_partners/004.png" alt="partner-logo-4">
+      <img src="app/assets/ui_images/static/tv_partners/005.png" alt="partner-logo-5">
+    </div>
+  </div>
+
+  <div class="lnr-bg-gray">
+    <div class="content" layout-padding>
+      <div layout="column" layout-gt-xs="row" class="md-subhead" layout-padding>
+        <div layout="column" flex-gt-xs="45" class="lnr-center">
+          <h3 class="md-headline">
+            {{ 'shared.find-your-bike.main.header' | translate }}
+          </h3>
+          <p class="md-subhead">
+            {{ 'shared.find-your-bike.main.subheader' | translate }}
+          </p>
+          <md-button
+            ui-sref="search({location: 'Berlin'})"
+            class="md-raised md-primary md-lrg">
+            {{ 'shared.find-you-bike.main.button' | translate }}
+          </md-button>
+        </div>
+        <div layout="row" flex-gt-xs="10" layout-align="center">
+          <md-divider></md-divider>
+        </div>
+        <div layout="column" flex-gt-xs="45" class="lnr-center">
+          <h3 class="md-headline">
+            {{ 'shared.rent-your-bike.main.header' | translate }}
+          </h3>
+          <p class="md-subhead">
+            {{ 'shared.rent-your-bike.main.subheader' | translate }}
+          </p>
+          <md-button
+            ui-sref="listingABike"
+            class="md-raised md-primary md-lrg">
+            {{ 'list.list-your-bike' | translate }}
+          </md-button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content" layout-padding>
+    <div class="lnr-section-title mt0" layout="column" layout-align="center center">
+      <p class="md-body-2">
+        <b>{{ 'booking.footer.questions' | translate }}</b>
+        <br> {{ 'booking.footer.call-us' | translate }}
+        <a href="mailto:contact@listnride.com">{{ 'booking.footer.email-us' | translate }}</a>.</p>
+      <div class="lnr-row-images" layout="row" layout-align="center center">
+        <div class="lnr-row-images__item" layout="column" layout-align="center center">
+          <img ng-src="app/assets/ui_images/request-flow/lnr_supportThumb_topbias@2x.png" alt="Tobias">
+          <span>Tobias</span>
+        </div>
+        <div class="lnr-row-images__item" layout="column" layout-align="center center">
+          <img ng-src="app/assets/ui_images/request-flow/lnr_supportThumb_lena@2x.png" alt="Lena">
+          <span>Lena</span>
+        </div>
+      </div>
+      <p class="md-caption">
+        <b>{{ 'booking.footer.support' | translate }}</b>
+      </p>
+    </div>
   </div>
 
   <footer></footer>
