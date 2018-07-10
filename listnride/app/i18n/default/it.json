@@ -290,7 +290,6 @@
     "pay-secure": "Pagamento sicuro con",
     "agree-terms": "Con \"Richiedi la bicicletta\" accetti i",
     "agree-terms-link": " termini listnride",
-    "and-agree-privacy": "and to the <a target=\"_blank\" href=\"/#/privacy\">listnride Privacy Policy</a>.",
     "footer": {
       "questions": "Hai domande sul noleggio della bicicletta?",
       "call-us": "Chaimaci al: +49 (0)30-120870330, Lun-Ven 9-18. ",
@@ -393,9 +392,7 @@
     "duplicate-finish": "Processo di duplicazione è terminato. Copie create con successo",
     "bike-deleted": "Bici cancellata con successo",
     "range-success-delete": "Periodo eliminato con successo",
-    "availability-success-saved": "Disponibilità salvata con successo",
-    "incorrect-old-password": "Could not change password. Please be sure that the old password is right",
-    "bike-edit-successful": ""
+    "availability-success-saved": "Disponibilità salvata con successo"
   },
   "settings": {
     "settings": "Impostazioni",
@@ -581,12 +578,7 @@
     "last-name": "Cognome",
     "email-address": "Indirizzo Email",
     "password": "Password",
-    "update-password": "Change Password",
     "forgot-password": "Hai dimenticato la password ?",
-    "old-password": "Old Password",
-    "new-password": "New Password",
-    "save-new-password": "Save new password",
-    "password-error-length": "Password should be min. 6 characters",
     "or": "o",
     "log-in": "Accedi",
     "log-out": "Disconnettersi",
@@ -618,7 +610,6 @@
     "signing-up-accept-tac": "Accetto i <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Termini e Condizioni </a>e acconsento alla raccolta, all'elaborazione e all'utilizzo dei miei dati personali come ulteriormente descritto nella <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\"> Informativa sulla Privacy </a>.",
     "signing-up-accept-newsletter": "Desidero ricevere la newsletter via e-mail di listnride con contenuti interessanti su nuove bici, tour e sconti esclusivi. Si applica l' <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\"> Informativa sulla privacy </a>di listnride. Posso revocare il mio consenso in qualsiasi momento.",
     "privacy-policy": "Si applica <a style=\"pointer-events: auto;\" href=\"/#/privacy\">l'Informativa sulla Privacy</a> di listnride.",
-    "logged-in-via-facebook": "You logged in via facebook",
     "errors": {
       "password-length": "La password deve essere tra i 6-30 caratteri",
       "password-length-xs": "6-30 caratteri",
@@ -662,7 +653,6 @@
     "default-placeholder": "Dove vorresti noleggiare una bicicletta ?"
   },
   "search": {
-    "bikes-found": "Bikes found:",
     "no-bikes": "Non ci sono biciclette in questa località",
     "all-sizes": "Tutte le misure",
     "bikes-in": "Biciclette a",
