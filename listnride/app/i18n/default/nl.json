@@ -298,7 +298,6 @@
     "pay-secure": "Veilig betalen met",
     "agree-terms": "Met 'Fiets aanvragen' gaat u akkoord met de",
     "agree-terms-link": "algemene voorwaarden van listnride",
-    "and-agree-privacy": "and to the <a target=\"_blank\" href=\"/#/privacy\">listnride Privacy Policy</a>.",
     "footer": {
       "questions": "Heb je vragen bij het boeken van een fiets?",
       "call-us": "Bel ons op +49 (0)30-120870330, Ma-Vrij 9-18u.",
@@ -393,9 +392,7 @@
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Fiets succesvol verwijderd",
     "range-success-delete": "Periode succesvol verwijderd",
-    "availability-success-saved": "Wijziging succesvol opgeslagen",
-    "incorrect-old-password": "Could not change password. Please be sure that the old password is right",
-    "bike-edit-successful": ""
+    "availability-success-saved": "Wijziging succesvol opgeslagen"
   },
   "settings": {
     "settings": "Instellingen",
@@ -579,12 +576,7 @@
     "last-name": "Achternaam",
     "email-address": "Emailadres",
     "password": "Wachtwoord",
-    "update-password": "Change Password",
     "forgot-password": "Wachtwoord vergeten?",
-    "old-password": "Old Password",
-    "new-password": "New Password",
-    "save-new-password": "Save new password",
-    "password-error-length": "Password should be min. 6 characters",
     "or": "of",
     "log-in": "Inloggen",
     "log-out": "Uitloggen",
@@ -616,7 +608,6 @@
     "signing-up-accept-tac": "Ik ga hierbij akkoord met de <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Gebruiksvoorwaarden</a> en ga akkoord met het verzamelen, verwerken en gebruiken van mijn persoonsgegevens zoals verder beschreven in het <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacybeleid</a>.",
     "signing-up-accept-newsletter": "Ik wil graag de listnride e-mailnieuwsbrief ontvangen met interessante informatie over fietsen, community updates en exclusieve aanbiedingen. Het <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacybeleid</a> van listnride is van toepassing. Ik kan mijn toestemming te allen tijde intrekken.",
     "privacy-policy": "Het <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacybeleid</a> van listnride is van toepassing.",
-    "logged-in-via-facebook": "You logged in via facebook",
     "errors": {
       "password-length": "Wachtwoord dient 6-30 karakters lang te zijn",
       "password-length-xs": "6-30 tekens",
@@ -660,7 +651,6 @@
     "default-placeholder": "Waar wil je een fiets huren?"
   },
   "search": {
-    "bikes-found": "Bikes found:",
     "no-bikes": "Er zijn nog geen fietsen op deze locatie, stuur ons een mailtje op contact@listnride.com en wij gaan direct voor je opzoek! ",
     "all-sizes": "Alle Maten",
     "bikes-in": "fietsen in",
