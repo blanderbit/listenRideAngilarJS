@@ -5,27 +5,17 @@
       <div flex="35" class="lnr-sm-content-double-padding">
         <div layout="column">
           <h1 class="md-headline lnr-sm-text-center">
-            <!-- {{ 'insurance.main.title' | translate }} -->
-            Unsere Versicherung schützt Dich. Egal ob Vermieter oder Mieter.
+            {{ 'insurance.main.title' | translate }}
           </h1>
         </div>
 
-        <div class="md-body-1" layout="column">
-          <!-- <p translate="insurance.main.description"></p> -->
-          <p>Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben.
-            Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es
-            beschädigt zu Dir zurückkommt?</p>
-          <p>Alle listnride-Vermietungen in Deutschland und Österreich sind versichert.
-            Und unser Partner hepster steht Dir zur Seite. Telefonisch. Via E-Mail.
-            Einfach. Unbürokratisch.</p>
-        </div>
+        <div class="md-body-1" layout="column" translate="insurance.main.description"></div>
       </div>
       <div flex="65" flex-order="-1" flex-order-gt-sm="1">
         <div id="hero-shot" class="lnr-preload-bg insurance__top-img" style="background-image: url('app/assets/ui_images/static/lnr-landing-insurance.jpg')" layout="row"
           layout-align="center center">
           <div class="insurance__gothaer">
-            <!-- <span class="md-body-1">{{ 'insurance.logo.description' | translate }}</span> -->
-            <span class="md-body-1">Unser Versicherungspartner</span>
+            <span class="md-body-1">{{ 'insurance.logo.description' | translate }}</span>
             <img ng-src="app/assets/ui_images/static/lnr-insurance-gothaer-blue@2x.png" alt="">
           </div>
         </div>
@@ -35,54 +25,30 @@
 
   <div class="content" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
-      <!-- <h2 class="md-headline lnr-sm-text-center">{{ 'insurance.facts.title' | translate }}</h2> -->
-      <h2 class="md-headline lnr-sm-text-center">Das solltest Du wissen!</h2>
+      <h2 class="md-headline lnr-sm-text-center">{{ 'insurance.facts.title' | translate }}</h2>
     </div>
     <div layout="column" layout-gt-xs="row"  layout-align="center none">
       <div class="insurance__table">
         <div class="insurance__thead">
-          <!-- {{ 'insurance.facts.basic_insurance_title' | translate }} -->
           <md-icon md-svg-src="app/assets/ui_icons/icn_insurance-white.svg" class="lnr-icn-mlrg lnr-no-margin"></md-icon>
-          <p class="md-subhead">Basic Versicherung</p>
+          <p class="md-subhead">{{ 'insurance.facts.basic_insurance_title' | translate }}</p>
         </div>
-        <!-- <ul class="insurance__list" translate="insurance.facts.basic_insurance_description"></ul> -->
-        <ul class="insurance__list">
-          <li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung</li>
-          <li>Schutz gegen Vandalismus</li>
-          <li>Schutz von Elektronik oder Akku bei Pedelecs</li>
-          <li>Selbstbeteiligung bis zu 250€</li>
-        </ul>
+        <div translate="insurance.facts.basic_insurance_description"></div>
         <div class="insurance__tfoot">
-          <!-- {{ 'insurance.facts.basic_insurance_price' | translate }} -->
-          <!-- {{ 'insurance.facts.basic_insurance_price_descr' | translate }} -->
-          <p class="md-headline">Beinhaltet</p>
-          <p class="md-body-1">in jeder Vermietung in Deutschland &amp; Österreich</p>
+          <p class="md-headline">{{ 'insurance.facts.basic_insurance_price' | translate }}</p>
+          <p class="md-body-1">{{ 'insurance.facts.basic_insurance_price_descr' | translate }}</p>
         </div>
       </div>
       <div class="insurance__table">
         <div class="insurance__thead">
           <!-- {{ 'insurance.facts.premium_insurance_title' | translate }} -->
           <md-icon md-svg-src="app/assets/ui_icons/icn_insurance-white.svg" class="lnr-icn-mlrg lnr-no-margin"></md-icon>
-          <p class="md-subhead">Premium Versicherung</p>
+          <p class="md-subhead">{{ 'insurance.facts.premium_insurance_title' | translate }}</p>
         </div>
-        <!-- <ul class="insurance__list" translate="insurance.facts.premium_insurance_description"></ul> -->
-        <ul class="insurance__list">
-          <li>Schutz bei unbeabsichtigter
-          Eigen- und Fremdbeschädigung</li>
-          <li>Schutz gegen Vandalismus</li>
-          <li>Schutz von Elektronik oder Akku bei Pedelecs</li>
-          <li>Keine Eigenbeteiligung</li>
-          <li>Diebstahlschutz</li>
-          <li>24/7 Notfallnummer bei Diebstahl oder
-          Beschädigung</li>
-          <li>Rücktransport nach Diebstahl oder Beschädigung</li>
-          <li>Ersatzrad nach Diebstahl oder Beschädigung </li>
-        </ul>
+        <div translate="insurance.facts.premium_insurance_description"></div>
         <div class="insurance__tfoot">
-          <!-- {{ 'insurance.facts.premium_insurance_price' | translate }} -->
-          <!-- {{ 'insurance.facts.premium_insurance_price_descr' | translate }} -->
-          <p class="md-headline">3€</p>
-          <p class="md-body-1">pro Tag</p>
+          <p class="md-headline">{{ 'insurance.facts.premium_insurance_price' | translate }}</p>
+          <p class="md-body-1">{{ 'insurance.facts.premium_insurance_price_descr' | translate }}</p>
         </div>
       </div>
     </div>
@@ -90,8 +56,7 @@
 
   <div class="content insurance__tabs" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
-      <!-- <h2 class="md-headline lnr-sm-text-center">{{ 'insurance.faqs.title' | translate }}</h2> -->
-      <h2 class="md-headline lnr-sm-text-center">Noch Fragen? Hier findest du Antworten!</h2>
+      <h2 class="md-headline lnr-sm-text-center">{{ 'insurance.faqs.title' | translate }}</h2>
     </div>
     <md-tabs
       flex
@@ -104,12 +69,7 @@
     <md-tab class="" label="Für Vermieter">
       <div class="tab-content md-padding" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
         <div flex="45">
-          <p class="md-body-1 lnr-no-margin">
-            Als Lister auf listnride möchtest Du natürlich sicher gehen, dass Du und Dein Rad gegen alle Eventualitäten abgesichert
-            sind. Deshalb ist jede Vermietung, die Du über listnride tätigst ab sofort automatisch versichert. Mieter, die Dein Rad Anfragen,
-            können das Premium Paket optional buchen, um zusätzliche Services und Garantien zu bekommen. Dieser Service ist für Dich
-            als Vermieter kostenlos.
-          </p>
+          <p class="md-body-1 lnr-no-margin" translate="insurance.faqs.description.lister"></p>
         </div>
         <div flex="5"></div>
         <div flex="45">
@@ -126,9 +86,7 @@
     <md-tab class="" label="Für Mieter">
       <div class="tab-content md-padding" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
         <div flex="45">
-          <p class="md-body-1 lnr-no-margin">
-            {{ 'insurance.faqs.description.rider' | translate }}
-          </p>
+          <p class="md-body-1 lnr-no-margin" translate="insurance.faqs.description.rider"></p>
         </div>
         <div flex="5"></div>
         <div flex="45">
@@ -153,9 +111,7 @@
     <md-tab class="" label="{{'insurance.faqs.all_docs' | translate}}">
       <div class="tab-content md-padding" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
         <div flex="45">
-          <p class="md-body-1 lnr-no-margin">
-            {{ 'insurance.faqs.description.docs' | translate }}
-          </p>
+          <p class="md-body-1 lnr-no-margin" translate="insurance.faqs.description.docs"></p>
         </div>
         <div flex="5"></div>
         <div flex="45">
