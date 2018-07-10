@@ -2683,6 +2683,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 .insurance__table ul {
   padding: 30px 16px;
   list-style: none;
+  text-align: center;
 }
 
 .insurance__table ul > li {

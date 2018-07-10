@@ -4,9 +4,7 @@
     <div layout="column" layout-gt-sm="row" layout-padding-gt-sm>
       <div flex="35" class="lnr-sm-content-double-padding">
         <div layout="column">
-          <h1 class="md-headline lnr-sm-text-center">
-            {{ 'insurance.main.title' | translate }}
-          </h1>
+          <h1 class="md-headline lnr-sm-text-center" translate="insurance.main.title"></h1>
         </div>
 
         <div class="md-body-1" layout="column" translate="insurance.main.description"></div>
@@ -15,7 +13,7 @@
         <div id="hero-shot" class="lnr-preload-bg insurance__top-img" style="background-image: url('app/assets/ui_images/static/lnr-landing-insurance.jpg')" layout="row"
           layout-align="center center">
           <div class="insurance__gothaer">
-            <span class="md-body-1">{{ 'insurance.logo.description' | translate }}</span>
+            <span class="md-body-1">{{ 'insurance.main.logo-description' | translate }}</span>
             <img ng-src="app/assets/ui_images/static/lnr-insurance-gothaer-blue@2x.png" alt="">
           </div>
         </div>
@@ -31,24 +29,24 @@
       <div class="insurance__table">
         <div class="insurance__thead">
           <md-icon md-svg-src="app/assets/ui_icons/icn_insurance-white.svg" class="lnr-icn-mlrg lnr-no-margin"></md-icon>
-          <p class="md-subhead">{{ 'insurance.facts.basic_insurance_title' | translate }}</p>
+          <p class="md-subhead">{{ 'insurance.facts.basic-insurance.title' | translate }}</p>
         </div>
-        <div translate="insurance.facts.basic_insurance_description"></div>
+        <div translate="insurance.facts.basic-insurance.description"></div>
         <div class="insurance__tfoot">
-          <p class="md-headline">{{ 'insurance.facts.basic_insurance_price' | translate }}</p>
-          <p class="md-body-1">{{ 'insurance.facts.basic_insurance_price_descr' | translate }}</p>
+          <p class="md-headline">{{ 'insurance.facts.basic-insurance.price' | translate }}</p>
+          <p class="md-body-1">{{ 'insurance.facts.basic-insurance.price_descr' | translate }}</p>
         </div>
       </div>
       <div class="insurance__table">
         <div class="insurance__thead">
           <!-- {{ 'insurance.facts.premium_insurance_title' | translate }} -->
           <md-icon md-svg-src="app/assets/ui_icons/icn_insurance-white.svg" class="lnr-icn-mlrg lnr-no-margin"></md-icon>
-          <p class="md-subhead">{{ 'insurance.facts.premium_insurance_title' | translate }}</p>
+          <p class="md-subhead">{{ 'insurance.facts.premium-insurance.title' | translate }}</p>
         </div>
-        <div translate="insurance.facts.premium_insurance_description"></div>
+        <div translate="insurance.facts.premium-insurance.description"></div>
         <div class="insurance__tfoot">
-          <p class="md-headline">{{ 'insurance.facts.premium_insurance_price' | translate }}</p>
-          <p class="md-body-1">{{ 'insurance.facts.premium_insurance_price_descr' | translate }}</p>
+          <p class="md-headline">{{ 'insurance.facts.premium-insurance.price' | translate }}</p>
+          <p class="md-body-1">{{ 'insurance.facts.premium-insurance.price_descr' | translate }}</p>
         </div>
       </div>
     </div>
@@ -66,61 +64,61 @@
       md-center-tabs="on"
     >
     <!-- FIRST_TAB LISTER -->
-    <md-tab class="" label="Für Vermieter">
+    <md-tab label="{{'insurance.faqs.lister.tabname' | translate}}">
       <div class="tab-content md-padding" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
         <div flex="45">
-          <p class="md-body-1 lnr-no-margin" translate="insurance.faqs.description.lister"></p>
+          <p class="md-body-1 lnr-no-margin" translate="insurance.faqs.description-lister"></p>
         </div>
         <div flex="5"></div>
         <div flex="45">
-          <h3 class="md-subhead lnr-clickable" ng-click="lister1=!lister1">{{ 'insurance.faqs.lister.question_1' | translate }}</h3>
-          <div ng-show="lister1"><p class="md-body-1">{{ 'insurance.faqs.lister.answer_1' | translate }}</p></div>
-          <h3 class="md-subhead lnr-clickable" ng-click="lister2=!lister2">{{ 'insurance.faqs.lister.question_2' | translate }}</h3>
-          <div ng-show="lister2"><p class="md-body-1">{{ 'insurance.faqs.lister.answer_2' | translate }}</p></div>
-          <h3 class="md-subhead lnr-clickable" ng-click="lister3=!lister3">{{ 'insurance.faqs.lister.question_3' | translate }}</h3>
-          <div ng-show="lister3"><p class="md-body-1">{{ 'insurance.faqs.lister.answer_3' | translate }}</p></div>
+          <h3 class="md-subhead lnr-clickable" ng-click="lister1=!lister1">{{ 'insurance.faqs.lister.question-1' | translate }}</h3>
+          <div ng-show="lister1"><p class="md-body-1">{{ 'insurance.faqs.lister.answer-1' | translate }}</p></div>
+          <h3 class="md-subhead lnr-clickable" ng-click="lister2=!lister2">{{ 'insurance.faqs.lister.question-2' | translate }}</h3>
+          <div ng-show="lister2"><p class="md-body-1">{{ 'insurance.faqs.lister.answer-2' | translate }}</p></div>
+          <h3 class="md-subhead lnr-clickable" ng-click="lister3=!lister3">{{ 'insurance.faqs.lister.question-3' | translate }}</h3>
+          <div ng-show="lister3"><p class="md-body-1">{{ 'insurance.faqs.lister.answer-3' | translate }}</p></div>
         </div>
       </div>
     </md-tab>
     <!-- SECOND_TAB RIDER -->
-    <md-tab class="" label="Für Mieter">
+    <md-tab label="{{'insurance.faqs.rider.tabname' | translate}}">
       <div class="tab-content md-padding" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
         <div flex="45">
-          <p class="md-body-1 lnr-no-margin" translate="insurance.faqs.description.rider"></p>
+          <p class="md-body-1 lnr-no-margin" translate="insurance.faqs.description-rider"></p>
         </div>
         <div flex="5"></div>
         <div flex="45">
-          <h3 class="md-subhead lnr-clickable" ng-click="rider1=!rider1">{{ 'insurance.faqs.rider.question_1' | translate }}</h3>
-          <div ng-show="rider1"><p class="md-body-1">{{ 'insurance.faqs.rider.answer_1' | translate }}</p></div>
-          <h3 class="md-subhead lnr-clickable" ng-click="rider2=!rider2">{{ 'insurance.faqs.rider.question_2' | translate }}</h3>
-          <div ng-show="rider2"><p class="md-body-1">{{ 'insurance.faqs.rider.answer_2' | translate }}</p></div>
-          <h3 class="md-subhead lnr-clickable" ng-click="rider3=!rider3">{{ 'insurance.faqs.rider.question_3' | translate }}</h3>
-          <div ng-show="rider3"><p class="md-body-1">{{ 'insurance.faqs.rider.answer_3' | translate }}</p></div>
-          <h3 class="md-subhead lnr-clickable" ng-click="rider4=!rider4">{{ 'insurance.faqs.rider.question_4' | translate }}</h3>
-          <div ng-show="rider4"><p class="md-body-1">{{ 'insurance.faqs.rider.answer_4' | translate }}</p></div>
-          <h3 class="md-subhead lnr-clickable" ng-click="rider5=!rider5">{{ 'insurance.faqs.rider.question_5' | translate }}</h3>
-          <div ng-show="rider5"><p class="md-body-1">{{ 'insurance.faqs.rider.answer_5' | translate }}</p></div>
-          <h3 class="md-subhead lnr-clickable" ng-click="rider6=!rider6">{{ 'insurance.faqs.rider.question_6' | translate }}</h3>
-          <div ng-show="rider6"><p class="md-body-1">{{ 'insurance.faqs.rider.answer_6' | translate }}</p></div>
-          <h3 class="md-subhead lnr-clickable" ng-click="rider7=!rider7">{{ 'insurance.faqs.rider.question_7' | translate }}</h3>
-          <div ng-show="rider7"><p class="md-body-1">{{ 'insurance.faqs.rider.answer_7' | translate }}</p></div>
+          <h3 class="md-subhead lnr-clickable" ng-click="rider1=!rider1">{{ 'insurance.faqs.rider.question-1' | translate }}</h3>
+          <div ng-show="rider1"><p class="md-body-1">{{ 'insurance.faqs.rider.answer-1' | translate }}</p></div>
+          <h3 class="md-subhead lnr-clickable" ng-click="rider2=!rider2">{{ 'insurance.faqs.rider.question-2' | translate }}</h3>
+          <div ng-show="rider2"><p class="md-body-1">{{ 'insurance.faqs.rider.answer-2' | translate }}</p></div>
+          <h3 class="md-subhead lnr-clickable" ng-click="rider3=!rider3">{{ 'insurance.faqs.rider.question-3' | translate }}</h3>
+          <div ng-show="rider3"><p class="md-body-1">{{ 'insurance.faqs.rider.answer-3' | translate }}</p></div>
+          <h3 class="md-subhead lnr-clickable" ng-click="rider4=!rider4">{{ 'insurance.faqs.rider.question-4' | translate }}</h3>
+          <div ng-show="rider4"><p class="md-body-1">{{ 'insurance.faqs.rider.answer-4' | translate }}</p></div>
+          <h3 class="md-subhead lnr-clickable" ng-click="rider5=!rider5">{{ 'insurance.faqs.rider.question-5' | translate }}</h3>
+          <div ng-show="rider5"><p class="md-body-1">{{ 'insurance.faqs.rider.answer-5' | translate }}</p></div>
+          <h3 class="md-subhead lnr-clickable" ng-click="rider6=!rider6">{{ 'insurance.faqs.rider.question-6' | translate }}</h3>
+          <div ng-show="rider6"><p class="md-body-1">{{ 'insurance.faqs.rider.answer-6' | translate }}</p></div>
+          <h3 class="md-subhead lnr-clickable" ng-click="rider7=!rider7">{{ 'insurance.faqs.rider.question-7' | translate }}</h3>
+          <div ng-show="rider7"><p class="md-body-1">{{ 'insurance.faqs.rider.answer-7' | translate }}</p></div>
         </div>
       </div>
     </md-tab>
     <!-- THIRD_TAB FAQ -->
-    <md-tab class="" label="{{'insurance.faqs.all_docs' | translate}}">
+    <md-tab label="{{'insurance.faqs.docs.tabname' | translate}}">
       <div class="tab-content md-padding" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
         <div flex="45">
-          <p class="md-body-1 lnr-no-margin" translate="insurance.faqs.description.docs"></p>
+          <p class="md-body-1 lnr-no-margin" translate="insurance.faqs.all-docs"></p>
         </div>
         <div flex="5"></div>
         <div flex="45">
-          <h3 class="md-subhead lnr-clickable" ng-click="docs1=!docs1">{{ 'insurance.faqs.docs.question_1' | translate }}</h3>
-          <div ng-show="docs1"><p class="md-body-1">{{ 'insurance.faqs.docs.answer_1' | translate }}</p></div>
-          <h3 class="md-subhead lnr-clickable" ng-click="docs2=!docs2">{{ 'insurance.faqs.docs.question_2' | translate }}</h3>
-          <div ng-show="docs2"><p class="md-body-1">{{ 'insurance.faqs.docs.answer_2' | translate }}</p></div>
-          <h3 class="md-subhead lnr-clickable" ng-click="docs3=!docs3">{{ 'insurance.faqs.docs.question_3' | translate }}</h3>
-          <div ng-show="docs3"><p class="md-body-1">{{ 'insurance.faqs.docs.answer_3' | translate }}</p></div>
+          <h3 class="md-subhead lnr-clickable" ng-click="docs1=!docs1">{{ 'insurance.faqs.docs.question-1' | translate }}</h3>
+          <div ng-show="docs1"><p class="md-body-1">{{ 'insurance.faqs.docs.answer-1' | translate }}</p></div>
+          <h3 class="md-subhead lnr-clickable" ng-click="docs2=!docs2">{{ 'insurance.faqs.docs.question-2' | translate }}</h3>
+          <div ng-show="docs2"><p class="md-body-1">{{ 'insurance.faqs.docs.answer-2' | translate }}</p></div>
+          <h3 class="md-subhead lnr-clickable" ng-click="docs3=!docs3">{{ 'insurance.faqs.docs.question-3' | translate }}</h3>
+          <div ng-show="docs3"><p class="md-body-1">{{ 'insurance.faqs.docs.answer-3' | translate }}</p></div>
         </div>
       </div>
     </md-tab>
