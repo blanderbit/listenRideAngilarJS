@@ -35,6 +35,7 @@ angular.module('booking', [])
         booking.processing = false;
         booking.isPremium = false;
         booking.bikeLocation = "";
+        booking.user.balance = 0;
         booking.insuranceCountries = ['DE', 'AT'];
 
         var oldExpiryDateLength = 0;
@@ -64,9 +65,8 @@ angular.module('booking', [])
             booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
             booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
             booking.prices = booking.bike.prices;
-            booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
-            booking.total = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
             booking.bikeLocation = success.data.country;
+            updatePrices();
           },
           function (error) {
             $state.go('home');
@@ -112,7 +112,7 @@ angular.module('booking', [])
             booking.total = booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
           }
           // TODO: REMOVE REDUNDANT PRICE CALCULATION CODE
-        }
+        };
 
         booking.onTimeChange = function(slot) {
           var slotDate = slot + "Date";
@@ -159,6 +159,19 @@ angular.module('booking', [])
         function validDates() {
           return booking.endDate != "Invalid Date" && booking.startDate.getTime() < booking.endDate.getTime();
         }
+
+        function updatePrices() {
+          var prices = price.calculatePrices(booking.startDate, booking.endDate, booking.prices, booking.coverageTotal, booking.isPremium);
+          booking.subtotal = prices.subtotal;
+          booking.subtotalDiscounted = prices.subtotalDiscounted;
+          booking.lnrFee = prices.serviceFee;
+          booking.premiumCoverage = prices.premiumCoverage;
+          booking.total = Math.max(prices.total - booking.user.balance, 0);
+        }
+
+        booking.premiumChange =function() {
+          updatePrices()
+        };
 
         booking.resendSms = function() {
           booking.toggleConfirmButton();
@@ -310,6 +323,7 @@ angular.module('booking', [])
               // if (!booking.shopBooking || Object.keys(oldUser).length > 0) {
                 setFirstTab();
               // }
+              updatePrices();
               $timeout(function () {
                 booking.hidden = false;
               }, 120);
