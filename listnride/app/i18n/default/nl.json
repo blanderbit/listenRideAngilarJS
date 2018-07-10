@@ -123,7 +123,6 @@
     "today": "Vandaag",
     "yesterday": "Gisteren"
   },
-  "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
       "berlin": {
@@ -354,6 +353,15 @@
       "size": "Grootte",
       "location": "Locatie",
       "invoice-address": "Factuuradres",
+      "premium-insurance": "Premium insurance",
+      "premium-insurance-title": "Premium Insurance Protection",
+      "premium-insurance-subtitle": "Pick our premium insurance for your ride to be on the safe side",
+      "thats-included": "On top of basic insurance, this is additionally included",
+      "premium-feature-1": "Protection also against theft",
+      "premium-feature-2": "Replacement bike after damage, accident or tievery",
+      "premium-feature-3": "Return transport of the bike after accident or damage",
+      "premium-feature-4": "No Retention fee",
+      "premium-feature-5": "24h emergency phone number",
       "payment": "Betaling",
       "redeem-voucher": "Voucher verzilveren",
       "add": "Voeg toe",
@@ -652,6 +660,8 @@
   },
   "search": {
     "no-bikes": "Er zijn nog geen fietsen op deze locatie, stuur ons een mailtje op contact@listnride.com en wij gaan direct voor je opzoek! ",
+    "bikes-found": "Bikes found:",
+    "no-bikes": "Er zijn nog geen fietsen op deze locatie",
     "all-sizes": "Alle Maten",
     "bikes-in": "fietsen in",
     "meta-title": "Huur de perfekte fiets in {{location}}.",
@@ -687,6 +697,7 @@
     "back": "Terug",
     "next": "Verder",
     "list-bike": "Fiets plaatsen",
+    "info": "info",
     "category": {
       "header": "Wat is de fietscategorie?",
       "hint": "Kies allereerst de categorie van je fiets. Kies daarna de juiste subcategorie.",
@@ -794,6 +805,18 @@
           "price": "Prijs is required"
         }
       }
+    },
+    "insurance": {
+      "label": "Insurance",
+      "info": "Information about insurance",
+      "hint-part-1": "Your bike insured when ever somebody is renting it. In order to provide you the right protection its nessasary that we know the right value of your bike.",
+      "hint-part-2": "Please note that you have to provide proof the value of the bike in case of a claim",
+      "hint-link-label": "Learn more about insurance",
+      "header": "Please tell us the value of your bike",
+      "tip": "Additional fee for the rider is {{fee}} per day",
+      "up-to-value": "Up to {{price}}",
+      "select-value": "Please select your bike value",
+      "no-insurance": "Sorry, your country doesn't support an insurance. Only for Germany and Austria."
     },
     "subcategory": {
       "1": {

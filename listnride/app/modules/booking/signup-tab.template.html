@@ -169,32 +169,34 @@
               {{ 'forms.or' | translate }}
             </div>
 
-            <md-input-container>
-              <label>{{ 'forms.email-address' | translate }}</label>
-              <input
-                ng-model="loginDialog.email"
-                name="email"
-                required
-                type="email"
-                md-autofocus
-                ng-pattern="/(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i"
-              />
-              <div ng-messages="signup.parent.loginForm.email.$error" role="alert">
-                <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
-                <div ng-message="email">{{ 'forms.errors.valid-email' | translate }}</div>
-                <div ng-message="pattern">{{ 'forms.errors.valid-email' | translate }}</div>
-              </div>
-            </md-input-container>
-
-            <md-input-container>
-              <label>{{ 'forms.password' | translate }}</label>
-              <input type="password" ng-model="loginDialog.password" name="password" required ng-minlength="6" ng-maxlength="30"/>
-              <div ng-messages="signup.parent.loginForm.password.$error" role="alert">
-                <div ng-message="required">{{ 'forms.errors.password-missing' | translate }}</div>
-                <div ng-message="minlength">{{ 'forms.errors.password-length' | translate }}</div>
-                <div ng-message="maxlength">{{ 'forms.errors.password-length' | translate }}</div>
-              </div>
-            </md-input-container>
+            <div class="lnr-input-containers" layout="row" layout-xs="column">
+              <md-input-container flex>
+                <label>{{ 'forms.email-address' | translate }}</label>
+                <input
+                  ng-model="loginDialog.email"
+                  name="email"
+                  required
+                  type="email"
+                  md-autofocus
+                  ng-pattern="/(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i"
+                />
+                <div ng-messages="signup.parent.loginForm.email.$error" role="alert">
+                  <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
+                  <div ng-message="email">{{ 'forms.errors.valid-email' | translate }}</div>
+                  <div ng-message="pattern">{{ 'forms.errors.valid-email' | translate }}</div>
+                </div>
+              </md-input-container>
+  
+              <md-input-container flex>
+                <label>{{ 'forms.password' | translate }}</label>
+                <input type="password" ng-model="loginDialog.password" name="password" required ng-minlength="6" ng-maxlength="30"/>
+                <div ng-messages="signup.parent.loginForm.password.$error" role="alert">
+                  <div ng-message="required">{{ 'forms.errors.password-missing' | translate }}</div>
+                  <div ng-message="minlength">{{ 'forms.errors.password-length' | translate }}</div>
+                  <div ng-message="maxlength">{{ 'forms.errors.password-length' | translate }}</div>
+                </div>
+              </md-input-container>
+            </div>
 
             <div class="md-dialog-buttons" layout="row" layout-xs="column" layout-align="space-between center" layout-align-xs="center stretch">
               <a layout flex-xs="50" class="lnr-link" ng-click="signup.parent.resetPassword()">

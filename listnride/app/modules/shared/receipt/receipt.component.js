@@ -8,13 +8,14 @@ angular.module('receipt', []).component('receipt', {
     invalidDays: '<',
     prices: '<',
     user: '<',
-    withoutCalendar: '<?'
+    withoutCalendar: '<?',
+    coverageTotal: '<?',
+    isPremiumCoverage: '<?'
   },
   controller: [
       'date',
       'price',
-      'ENV',
-    function ReceiptController(date, price, api, authentication, verification, ENV) {
+    function ReceiptController(date, price) {
       var receipt = this;
       receipt.balance = 0;
 
@@ -36,7 +37,7 @@ angular.module('receipt', []).component('receipt', {
       }
 
       function setPrices() {
-        var prices = price.calculatePrices(receipt.startDate, receipt.endDate, receipt.prices);
+        var prices = price.calculatePrices(receipt.startDate, receipt.endDate, receipt.prices, receipt.coverageTotal, receipt.isPremiumCoverage);
         receipt.duration = date.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
         receipt.durationDays = date.durationDays(receipt.startDate, receipt.endDate);
         receipt.discount = prices.subtotal - prices.subtotalDiscounted;
@@ -44,6 +45,7 @@ angular.module('receipt', []).component('receipt', {
         receipt.subtotal = prices.subtotal;
         receipt.subtotalDiscounted = prices.subtotalDiscounted;
         receipt.lnrFee = prices.serviceFee;
+        receipt.premiumCoverage = prices.premiumCoverage;
         receipt.total = Math.max(prices.total - receipt.balance, 0);
       };
 

@@ -11,7 +11,9 @@ angular.module('bike').component('calendar', {
     priceDay: '<',
     priceWeek: '<',
     prices: '<',
-    requests: '<'
+    requests: '<',
+    coverageTotal: '<',
+    countryCode: '<'
   },
   controller: ['$scope',
       '$localStorage',
@@ -254,6 +256,14 @@ angular.module('bike').component('calendar', {
         } else {
           // User did not enter any payment method yet
           showPaymentDialog();
+        }
+      };
+
+      calendar.insuranceCountry = function () {
+        if (!!calendar.countryCode) {
+          return _.includes(["DE", "AT"], calendar.countryCode)
+        } else {
+          return false
         }
       };
 
@@ -539,6 +549,7 @@ angular.module('bike').component('calendar', {
         calendar.datesValid = false;
       }
 
+      // TODO: Replace custom receipt with modular receipt component in calendar template
       function dateChange(startDate, endDate) {
         if (calendar.isDateInvalid()) {
           calendar.duration = date.duration(undefined, undefined, 0);
@@ -549,7 +560,7 @@ angular.module('bike').component('calendar', {
           var invalidDays = countInvalidDays(startDate, endDate);
           calendar.duration = date.duration(startDate, endDate, invalidDays);
           calendar.durationDays = date.durationDays(startDate, endDate);
-          var prices = price.calculatePrices(startDate, endDate, calendar.prices);
+          var prices = price.calculatePrices(startDate, endDate, calendar.prices, calendar.coverageTotal);
           calendar.subtotal = prices.subtotal;
           calendar.discount = prices.subtotal - prices.subtotalDiscounted;
           calendar.discountRelative = calendar.discount / calendar.durationDays;
