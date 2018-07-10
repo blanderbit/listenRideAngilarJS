@@ -48,7 +48,7 @@
           <!-- START PREMIUM INSURANCE -->
           <div class="premium-insurance" ng-if="overview.parent.insuranceAllowed()">
             <div layout="row">
-              <md-switch ng-model="overview.parent.isPremium" aria-label="Switch 1" class="lnr-no-margin">
+              <md-switch ng-model="overview.parent.isPremium" ng-change="overview.parent.premiumChange()" aria-label="Switch 1" class="lnr-no-margin">
                 <h2 class="md-title lnr-no-margin">{{ 'booking.overview.premium-insurance-title' | translate }}</h2>
               </md-switch>
               <div class="spacer-horizontal__xs"></div>
@@ -164,11 +164,7 @@
   
         <div class="lnr-list-form" ng-hide="!overview.parent.booked">
           <div ng-hide="!overview.parent.booked" layout-align="center center" flex>
-<<<<<<< HEAD
             <br><br><br><br>
-=======
-            <br><br><br><br> 
->>>>>>> dev
             <h2 class="md-headline lnr-center lnr-green-text">{{ 'booking.overview.success-header' | translate }}</h2>
             <p class="md-subhead lnr-center">{{ 'booking.overview.success-subheader' | translate }}</p>
             <br><br>

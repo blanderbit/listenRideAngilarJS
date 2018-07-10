@@ -15,8 +15,7 @@ angular.module('receipt', []).component('receipt', {
   controller: [
       'date',
       'price',
-      'ENV',
-    function ReceiptController(date, price, api, authentication, verification, ENV) {
+    function ReceiptController(date, price) {
       var receipt = this;
       receipt.balance = 0;
 
