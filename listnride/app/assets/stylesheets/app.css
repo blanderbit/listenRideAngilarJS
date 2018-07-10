@@ -2675,17 +2675,17 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   flex-direction: column;
 }
 
-.insurance__list {
+.insurance__table ul {
   padding: 30px 16px;
   list-style: none;
 }
 
-.insurance__list > li {
+.insurance__table ul > li {
   border-bottom: 1px solid #e1e1e1;
   padding: 16px;
 }
 
-.insurance__list > li:last-child {
+.insurance__table ul >li:last-child {
   border-bottom: none;
 }
 

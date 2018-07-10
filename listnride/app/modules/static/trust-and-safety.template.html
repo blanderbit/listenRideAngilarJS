@@ -1,5 +1,5 @@
- <md-content class="single-column"> 
-  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/static/lnr_trust_and_safety.jpg')" layout="row" layout-align="center center">
+ <md-content class="single-column">
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/static/lnr_trust_and_safety_2.jpg')" layout="row" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ 'trust-and-safety.title' | translate }}</h1>
     </div>
@@ -7,39 +7,43 @@
 
   <div class="content" layout-padding>
     <div class="lnr-section-title lnr-garantee" layout="column" layout-align="center center">
-      <md-icon class="lnr-icn-xlrg" md-svg-src="app/assets/ui_icons/{{ 'trust-and-safety.guarantee-icon' | translate }}.svg"></md-icon>
+      <!-- <md-icon class="lnr-icn-xlrg" md-svg-src="app/assets/ui_icons/{{ 'trust-and-safety.guarantee-icon' | translate }}.svg"></md-icon> -->
       <h2 class="md-headline">{{ 'trust-and-safety.header' | translate }}</h2>
       <p class="md-subhead">{{ 'trust-and-safety.subheader' | translate }}</p>
+      <p class="md-body-1">{{ 'trust-and-safety.description' | translate }}</p>
     </div>
 
-    <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
-      <div flex-gt-sm="45" layout="column" layout-margin>
-        <h3  class="md-subhead">{{ 'trust-and-safety.guarantee.title' | translate }}</h3>
-        <p translate="{{ 'trust-and-safety.guarantee.content' | translate }}" translate-compile></p>
-
-        <h3 class="md-subhead lnr-margin-lrg-top">{{ 'trust-and-safety.responsibility.title' | translate }}</h3>
-        <p>{{ 'trust-and-safety.responsibility.content' | translate }}</p>
+    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
+      <div flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_safe.svg"></md-icon>
+        <h3 class="md-subhead lnr-center">{{ 'list-a-bike.info-section.precautions-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'list-a-bike.info-section.precautions-content' | translate }}</p>
       </div>
 
-      <div flex-gt-sm="45" flex-gt-sm-offset="5" layout="column" layout-margin>
-        <h3 class="md-subhead">{{ 'trust-and-safety.verification.title' | translate }}</h3>
-        <p>{{ 'trust-and-safety.verification.content' | translate }}</p>
-        <div layout="row">
-          <md-icon flex-gt-sm="15" class="lnr-icn-lrg md-color-primary lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_id.svg"></md-icon>
-          <div flex-gt-sm="85">{{ 'trust-and-safety.verification.list-1' | translate }}</div>
-        </div>
+      <div flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_control.svg"></md-icon>
+        <h3 class="md-subhead lnr-center">{{ 'list-a-bike.info-section.control-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'list-a-bike.info-section.control-content' | translate }}
+        </p>
+      </div>
 
-        <div layout="row">
-          <md-icon flex-gt-sm="15" class="lnr-icn-lrg md-color-primary lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_phone.svg"></md-icon>
-          <div flex-gt-sm="85">{{ 'trust-and-safety.verification.list-2' | translate }}</div>
-        </div>
+      <div flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_covered.svg"></md-icon>
+         <h3 class="md-subhead lnr-center">{{ 'list-a-bike.info-section.covered-title' | translate }}</h3>
+         <p class="lnr-center">{{ 'list-a-bike.info-section.covered-content' | translate }}
+         <a class="lnr-link" ui-sref="terms">{{ 'shared.learn-more' | translate }}</a></p>
+     </div>
 
-        <div layout="row">
-          <md-icon flex-gt-sm="15" class="lnr-icn-lrg md-color-primary lnr-margin-right" md-svg-src="app/assets/ui_icons/icn_rating.svg"></md-icon>
-          <div flex-gt-sm="85">{{ 'trust-and-safety.verification.list-3' | translate }}</div>
-        </div>
+      <div flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_notalone.svg"></md-icon>
+        <h3 class="md-subhead lnr-center">{{ 'list-a-bike.info-section.help-title' | translate }}</h3>
+        <p class="lnr-center">{{ 'list-a-bike.info-section.help-content' | translate }}
+        <a class="lnr-link" ui-sref="help">{{ 'shared.learn-more' | translate }}</a></p>
       </div>
     </div>
+
+
   </div>
+
   <footer></footer>
 </md-content>
