@@ -79,15 +79,15 @@
   },
   "insurance": {
     "main": {
-      "title": "Unsere Versicherung schützt Dich. <\n<br>\nEgal ob Vermieter oder Mieter.",
+      "title": "Unsere Versicherung schützt Dich.\n<br>\nEgal ob Vermieter oder Mieter.",
       "description": "Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben. Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es beschädigt zu Dir zurück kommt?`<br0>`Alle <i1>lisntride</i> Vermietungen in Deutschland und Österreich sind versichert. Unser Partner <a href=\"www.hepster.com\" target=\"_blank\">hepster</a> ist für Dich da. Telefonisch. Via E-Mail. Einfach. Unbürokratisch.",
-      "logo-description": "In Kooperation mit <a href\"www.hepster.com\" target=\"_blank\">hepster</a0>."
+      "logo-description": "In Kooperation mit <a href\"www.hepster.com\" target=\"_blank\">hepster</a>."
     },
     "facts": {
       "title": "Das solltest Du wissen!",
       "basic-insurance": {
         "title": "Basis Versicherung",
-        "description": "<ul> <li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung <li>Schutz gegen Vandalismus <li>Schutz von Elektronik und Akku bei Pedelecs <li>Selbstbeteiligung bis zu 250€</ul>",
+        "description": "<ul><li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung</li><li>Schutz gegen Vandalismus</li><li>Schutz von Elektronik und Akku bei Pedelecs</li><li>Selbstbeteiligung bis zu 250€</li></ul>"
       },
       "premium-insurance": {
         "title": "Premium Versicherung",
@@ -96,7 +96,7 @@
     },
     "faqs": {
       "title": "Noch Fragen? Hier findest du Antworten!",
-      "description-lister": "Als Vermieter auf <li>listnride</li> möchtest Du natürlich sicher gehen, dass Du und Dein Rad gegen alle Eventualitäten abgesichert sind. Deshalb ist jede Vermietung, die Du über <li>listnride</li> tätigst ab sofort automatisch versichert. Mieter, die Dein Rad Anfragen, können das Premium Paket optional buchen, um zusätzliche Services und Garantien zu bekommen. Dieser Service ist für Dich als Vermieter kostenlos. Solltest Du weitere Fragen haben, kontaktiere uns rund um die Uhr via <a href=\"mailto:contact@listnride.com?subject= Versicherungsfragen\">E-Mail</a>.",
+      "description-lister": "Als Vermieter auf <li>listnride</li> möchtest Du natürlich sicher gehen, dass Du und Dein Rad gegen alle Eventualitäten abgesichert sind. Deshalb ist jede Vermietung, die Du über <li>listnride</li> tätigst ab sofort automatisch versichert. Mieter, die Dein Rad Anfragen, können das Premium Paket optional buchen, um zusätzliche Services und Garantien zu bekommen. Dieser Service ist für Dich als Vermieter kostenlos. Solltest Du weitere Fragen haben, kontaktiere uns rund um die Uhr via <a href=\"mailto:contact@listnride.com?subject= Versicherungsfragen\">E-Mail</a>.",
       "description-rider": "Wir bieten zwei Versicherungspakete für jedes Rad das Du über <i>lisntride</i> mietest: Die <b>Basisversicherung</b> ist in jeder Vermietung inkludiert, die <b>Premium Versicherung</b> ist optional und erweitert der Versicherungsschutz um zusätzliche Leistungen.<br>Dein Rad und Du sind immer optimal geschützt und Deiner Fahrt steht nichts mehr im weg!",
       "all-docs": "Hier kannst Du den detaillierten <a href=\"INSERT LINK HERE\" target\"_blank\">Versicherungsvertrag</a> ansehen",
       "lister": {
@@ -109,7 +109,7 @@
       },
       "rider": {
         "question-1": "Wieviel kostet die Basisversicherung?",
-        "answer-1": "Die Kosten für die Basisversicherung betragen lediglich 0,1% des Versicherungswerts des von Dir gebuchten Rades.<br> Wenn ein Rad also bis 1.000€ Versicherungssumme vom Vermieter angegeben ist, dann zahlst Du genau 1€ (einen Euro) je Miettag zusätzlich.",
+        "answer-1": "Die Kosten für die Basisversicherung betragen lediglich 0,1% des Versicherungswerts des von Dir gebuchten Rades.<br>Wenn ein Rad also bis 1.000€ Versicherungssumme vom Vermieter angegeben ist, dann zahlst Du genau 1€ (einen Euro) je Miettag zusätzlich.",
         "question-2": "Wieviel kostet die Premium Versicherung?",
         "answer-2": "Drei Euro pro Tag zusätzlich zum Mietpreis und den <i>lisntride</i>-<a href=\"https://www.listnride.com/terms%5C\" target=\"_blank\">Gebühren</a>.",
         "question-3": "Was deckt die Basisversicherung ab?",
