@@ -87,6 +87,33 @@
     </div>
   </div>
 
+  <div class="lnr-bg-gray section">
+    <div class="content insurance__top" layout-padding-gt-sm>
+      <div layout="column" layout-gt-sm="row" layout-padding-gt-sm>
+        <div flex="35" class="lnr-sm-content-double-padding">
+          <div layout="column">
+            <h1 class="md-headline lnr-sm-text-center">
+              {{ 'trust-and-safety.main.header' | translate }}
+            </h1>
+          </div>
+          <div class="md-body-1 lnr-sm-text-center" layout="column">
+            <p translate="trust-and-safety.main.description"></p>
+            <a ui-sref="insurance" target="_blank">{{ 'shared.learn-more' | translate }}</a>
+          </div>
+        </div>
+        <div flex="65" flex-order="-1" flex-order-gt-sm="1">
+          <div id="hero-shot" class="lnr-preload-bg insurance__top-img" style="background-image: url('app/assets/ui_images/static/lnr-landing-insurance.jpg')" layout="row"
+            layout-align="center center">
+            <div class="insurance__gothaer">
+              <span class="md-body-1">{{ 'insurance.logo.description' | translate }}</span>
+              <img ng-src="app/assets/ui_images/static/lnr-insurance-gothaer-blue@2x.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- START FEATURED TILES -->
 
   <div id="featuredTiles" class="content section" layout-align="start center">

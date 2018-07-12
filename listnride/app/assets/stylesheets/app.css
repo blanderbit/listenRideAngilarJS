@@ -408,6 +408,10 @@ md-tooltip .md-content {
   margin-top: 8px;
 }
 
+.lnr-margin-top-double {
+  margin-top: 16px;
+}
+
 .lnr-margin-bottom {
   margin-bottom: 8px;
 }
@@ -446,6 +450,14 @@ md-tooltip .md-content {
 
 .lnr-padding-right-double {
   padding-right: 16px;
+}
+
+.lnr-padding-top {
+  padding-top: 8px;
+}
+
+.lnr-padding-top-double {
+  padding-top: 16px;
 }
 
 .lnr-lrg-padding {
