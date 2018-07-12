@@ -2650,8 +2650,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
 #hero-shot.insurance__top-img {
   position: relative;
-  height: 100%;
-  min-height: 300px;
+  height: 385px;
 }
 
 .insurance__gothaer {
@@ -2731,6 +2730,32 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   padding: 15px;
 }
 
+.lnr-arrow-left {
+  display: flex;
+  -webkit-box: flex;
+  align-items: top;
+}
+
+.lnr-arrow-left:before {
+  content: '';
+  background-image: url(../ui_icons/triangle.svg);
+  background-repeat: no-repeat;
+  margin-top: 6px;
+  margin-right: 15px;
+  flex: 0 0 10px;
+  height: 15px;
+  vertical-align: middle;
+}
+
+.accordion__tab--opened.lnr-arrow-left:before {
+  transform: rotate(90deg);
+}
+
+.accordion__text {
+  padding-left: 25px;
+}
+
+
 /*-----------------------------------------------------------------------------------*/
 /*  MEDIA
 /*-----------------------------------------------------------------------------------*/
@@ -2739,6 +2764,14 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   .layout-padding-gt-sm,
   .layout-padding-gt-sm > * {
     padding: 8px;
+  }
+
+  .lnr-padding-top-gt-sm {
+    padding-top: 8px;
+  }
+
+  .lnr-double-padding-top-gt-sm {
+    padding-top: 16px;
   }
 }
 
