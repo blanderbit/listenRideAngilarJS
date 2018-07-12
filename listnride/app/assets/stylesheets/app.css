@@ -440,6 +440,14 @@ md-tooltip .md-content {
   padding-left: 16px;
 }
 
+.lnr-padding-right {
+  padding-right: 8px;
+}
+
+.lnr-padding-right-double {
+  padding-right: 16px;
+}
+
 .lnr-lrg-padding {
   padding: 16px;
 }
@@ -2790,6 +2798,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
     text-align: center;
   }
 
+  .lnr-sm-fs14 {
+    font-size: 14px;
+  }
+
   /* INSURANCE */
 
   .insurance__top {
@@ -2927,6 +2939,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .lnr-xs-w100 {
     width: 100%;
+  }
+
+  .lnr-xs-m0 {
+    margin: 0;
   }
 
   /* INSURANCE */
