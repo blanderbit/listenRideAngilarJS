@@ -2878,7 +2878,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   list md-tabs .lnr-list-form,
   edit md-tabs .lnr-list-form {
-    min-height: auto;
+    min-height: 0;
   }
 
   /* HOME PAGE */
