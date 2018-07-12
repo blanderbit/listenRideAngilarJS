@@ -325,6 +325,10 @@ md-input-container {
   font-size: 14px;
 }
 
+md-tabs-wrapper {
+  min-height: 50px; /* fix for Samsung phone */
+}
+
 booking md-tabs-wrapper {
   pointer-events: none;
 }
