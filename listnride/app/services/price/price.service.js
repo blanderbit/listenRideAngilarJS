@@ -11,7 +11,7 @@ angular.module('listnride').factory('price', ['$translate', 'date',
           subtotal: 0,
           subtotalDiscounted: 0,
           serviceFee: 0,
-          coverageTotal: coverageTotal || 1000, // [1000,2000,3000,4000,5000]
+          coverageTotal: coverageTotal || 0, // [0,1000,2000,3000,4000,5000]
           premiumCoverage: isPremiumCoverage ? 3 : 0, // premium Coverage price is static 3 euro
           total: 0
         };
