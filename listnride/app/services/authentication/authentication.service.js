@@ -240,7 +240,8 @@ angular.
                 if (!signupDialog.requesting) {
                   $state.go('home');
                 }
-                verification.openDialog(false, invited);
+                signupDialog.hide();
+                // verification.openDialog(false, invited);
               }
             }
           }, function(error) {
