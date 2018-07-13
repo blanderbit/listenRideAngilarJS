@@ -325,6 +325,10 @@ md-input-container {
   font-size: 14px;
 }
 
+md-tabs-wrapper {
+  min-height: 50px; /* fix for Samsung phone */
+}
+
 booking md-tabs-wrapper {
   pointer-events: none;
 }
@@ -404,6 +408,10 @@ md-tooltip .md-content {
   margin-top: 8px;
 }
 
+.lnr-margin-top-double {
+  margin-top: 16px;
+}
+
 .lnr-margin-bottom {
   margin-bottom: 8px;
 }
@@ -434,6 +442,22 @@ md-tooltip .md-content {
 
 .lnr-padding-left-double {
   padding-left: 16px;
+}
+
+.lnr-padding-right {
+  padding-right: 8px;
+}
+
+.lnr-padding-right-double {
+  padding-right: 16px;
+}
+
+.lnr-padding-top {
+  padding-top: 8px;
+}
+
+.lnr-padding-top-double {
+  padding-top: 16px;
 }
 
 .lnr-lrg-padding {
@@ -2646,8 +2670,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
 #hero-shot.insurance__top-img {
   position: relative;
-  height: 100%;
-  min-height: 300px;
+  height: 385px;
 }
 
 .insurance__gothaer {
@@ -2727,6 +2750,32 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   padding: 15px;
 }
 
+.lnr-arrow-left {
+  display: flex;
+  -webkit-box: flex;
+  align-items: top;
+}
+
+.lnr-arrow-left:before {
+  content: '';
+  background-image: url(../ui_icons/triangle.svg);
+  background-repeat: no-repeat;
+  margin-top: 6px;
+  margin-right: 15px;
+  flex: 0 0 10px;
+  height: 15px;
+  vertical-align: middle;
+}
+
+.accordion__tab--opened.lnr-arrow-left:before {
+  transform: rotate(90deg);
+}
+
+.accordion__text {
+  padding-left: 25px;
+}
+
+
 /*-----------------------------------------------------------------------------------*/
 /*  MEDIA
 /*-----------------------------------------------------------------------------------*/
@@ -2735,6 +2784,14 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   .layout-padding-gt-sm,
   .layout-padding-gt-sm > * {
     padding: 8px;
+  }
+
+  .lnr-padding-top-gt-sm {
+    padding-top: 8px;
+  }
+
+  .lnr-double-padding-top-gt-sm {
+    padding-top: 16px;
   }
 }
 
@@ -2751,6 +2808,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .lnr-sm-text-center {
     text-align: center;
+  }
+
+  .lnr-sm-fs14 {
+    font-size: 14px;
   }
 
   /* INSURANCE */
@@ -2841,7 +2902,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   list md-tabs .lnr-list-form,
   edit md-tabs .lnr-list-form {
-    min-height: auto;
+    min-height: 0;
   }
 
   /* HOME PAGE */
@@ -2890,6 +2951,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .lnr-xs-w100 {
     width: 100%;
+  }
+
+  .lnr-xs-m0 {
+    margin: 0;
   }
 
   /* INSURANCE */
