@@ -354,6 +354,15 @@
       "size": "Größe",
       "location": "Ort",
       "invoice-address": "Rechnungsadresse",
+      "premium-insurance": "Premium insurance",
+      "premium-insurance-title": "Premium Insurance Protection",
+      "premium-insurance-subtitle": "Pick our premium insurance for your ride to be on the safe side",
+      "thats-included": "On top of basic insurance, this is additionally included",
+      "premium-feature-1": "Protection also against theft",
+      "premium-feature-2": "Replacement bike after damage, accident or tievery",
+      "premium-feature-3": "Return transport of the bike after accident or damage",
+      "premium-feature-4": "No Retention fee",
+      "premium-feature-5": "24h emergency phone number",
       "payment": "Zahlungsmethode",
       "redeem-voucher": "Rabattcode einlösen",
       "add": "Ok",
@@ -907,7 +916,8 @@
       "price-title": "Super Preis.",
       "price-content": "Bei uns vermieten Privatpersonen genauso wie der professionelle Händler und Fahrradverleih. Dein Vorteil: Das perfekte Fahrrad zu einem fairen Preis-Leistungs-Verhältnis.",
       "easy-title": "Super einfach.",
-      "easy-content": "Finde und buche Dein Leihfahrrad bevor Du auf Reisen gehst – oder einfach von unterwegs im Netz mit unserer mobilen Webseite."
+      "easy-content": "Finde und buche Dein Leihfahrrad bevor Du auf Reisen gehst – oder einfach von unterwegs im Netz mit unserer mobilen Webseite.",
+      "covered-content": "Mietest Du ein Fahrrad in Deutschland oder Österreich, ist eine Versicherung in der Miete inkludiert. Mit <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> und der <a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer-Gruppe</a> haben wir zwei starke Partner an unserer Seite um Dir zu helfen, falls nötig."
     },
     "search-section": {
       "header": "Wo solls hingehen?",
