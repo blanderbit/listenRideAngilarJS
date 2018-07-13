@@ -698,6 +698,7 @@
   },
   "calendar": {
     "invalid-date": "Dates are invalid",
+    "basic-insurance-included": "Basis-Versicherung inklusive",
     "request-bike": "Request Bike",
     "to-request-bike-please": "to request a bike please",
     "own-bike": "You can't request your own bike",
@@ -1079,6 +1080,7 @@
   },
   "footer": {
     "language": "Language",
+    "insurance-partner": "Versicherungspartner",
     "company": "Company",
     "legal": "Legal",
     "terms-and-conditions": "Terms",
