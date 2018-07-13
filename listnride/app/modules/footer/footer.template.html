@@ -129,6 +129,10 @@
                 {{ 'shared.trust-and-safety' | translate }}
               </a>
             </md-list-item>
+            <md-list-item class="md-body-1">
+              <a class="lnr-link" ui-sref="insurance">
+                {{ 'shared.insurance' | translate }}
+              </a>
           </md-list>
         </div>
 
@@ -160,6 +164,10 @@
               <a href="https://itunes.apple.com/de/app/list-n-ride/id992114091?l" target="_blank">
                 <img src="app/assets/ui_images/app_store.png">
               </a>
+            </div>
+            <div id="insurance" class="lnr-link lnr-btn-ios" ng-hide="false">
+              <md-subheader class="md-no-sticky">{{ 'footer.insurance-partner' | translate }}</md-subheader>
+              &nbsp;&nbsp;<img ng-src="app/assets/ui_images/static/lnr-insurance-gothaer-white.png" flex="60">
             </div>
           </md-list>
         </div>
