@@ -724,27 +724,6 @@
     "header": "Algemene voorwaarden van het Online-Platform listnride",
     "subtitle": "List and Ride GmbH (in het vervolg „listnride“) bemmidelt via de website www.listnride.com (in het vervolg „Website“) in verhuurtransacties voor fietsen. De onderstaande algemene voorwaarden (in het vervolg „gebruiksvoorwaarden“) in paragraaf I zijn onderdeel van de overeenkomst die tussen de gebruiker en listnride middels de bemiddeling tot stand komt. Indien er via de website een overeenkomst tot het huren van een gebruiksvoorwerp (in het vervolg „huurovereenkomst“) is gesloten, komt deze volgens de in paragraaf II genoemde algemene huurvoorwaarden (in het vervolg „huurvoorwaarden“) tot stand."
   },
-  "trust-and-safety": {
-    "title": "Vertrouwen & Zekerheid",
-    "header": "Zorgenloos rondfietsen",
-    "subheader": "Via listnride een fiets huren is veilig en simpel.",
-    "guarantee-icon": "garantie_de",
-    "guarantee": {
-      "title": "De listnride garantie voor verhuurders",
-      "content": "listnride is een community van enthousiaste fietsliefhebbers. Toch kan er soms iets misgaan, hoe voorzichtig je ook bent. Daarom biedt listnride een verhuurdersgarantie. Als je fiets tijdens de verhuur via listnride beschadigt of wordt gestolen en de huurder kan je de schade niet vergoeden, dan is deze tot een hoogte van 5.000 EUR afgedekt. Uiteraard zijn hier bepaalde voorwaarden, beperkingen en uitzonderingen van kracht. Lees hierover meer in onze <a class='lnr-link' ui-sref='terms'>Algemene Gebruikers Voorwaarden</a>."
-    },
-    "responsibility": {
-      "title": "Wij behandelen je gegevens met zorg.",
-      "content": "In jouw openbare profiel wordt jouw adres of de standplaats van jouw fiets niet getoond. Je naw-gegevens worden pas doorgegeven als een boeking is bevestigd."
-    },
-    "verification": {
-      "title": "Verificatie schept vertrouwen",
-      "content": "Theoretisch gezien ben je slechts via 4 tot 6 “vrienden van vrienden” verwijderd van iedereen op deze planeet. Echter wil je daar werkelijk op vertrouwen als je je fiets verhuurd? Koppel je persoonlijke gegevens aan je profiel, dat schept vertrouwen voor beide partijen. listnride geeft je de volgende verificatie mogelijkheden:",
-      "list-1": "ID-Verifizierung: ID-verificatie: koppel je facebookpagina aan je profiel en of zorg ervoor dat je correct e-mailadres gebruikt.",
-      "list-2": "Telefoonnummer : we verifiëren je telefoonnummer, delen deze echter alleen met de huurder / verhuurder zodra van beide kanten een boeking is bevestigd.",
-      "list-3": "Recensies: De recensies van je huurder / verhuurder zijn op je profielpagina zichtbaar. Zo kun je een goede reputatie opbouwen."
-    }
-  },
   "how-it-works": {
     "meta-title": "Bike sharing super eenvoudig gemaakt",
     "meta-description": "Bij listnride is je fiets(ver-)huren zo eenvoudig als afspreken voor een kopje koffie. Probeer het zelf!",

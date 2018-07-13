@@ -725,27 +725,6 @@
     "subheader": "Última actualización: Junio 8, 2018",
     "subtitle": "Por favor lea con atención los Términos y Condiciones dado que contienen información importante sobre tus derechos legales, recursos y obligaciones. Al acceder o utilizar listnride platform reconoces haber leído, comprendido y aceptado dichas Condiciones.<br><br>Puedes descargar y leer el documento completo de nuestros <a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Términos y Condiciones</a><br><br>¡Muchas gracias por utilizar listnride!"
   },
-  "trust-and-safety": {
-    "title": "Confianza y seguridad",
-    "header": "Andar en bici sin preocupaciones",
-    "subheader": "Gracias a listnride, alquilar una bici es además de seguro, fácil.",
-    "guarantee-icon": "garantie_en",
-    "guarantee": {
-      "title": "Garantía de los anunciantes de listnride",
-      "content": "Listnride es una comunidad de entusiastas de la bici. Pero en fin, a veces las cosas salen mal independientemente de lo cuidadoso que seas. Por ello tenemos preparada una garantía para el anunciante: si tu bicicleta sufre daños o la roban durante el alquiler y el ciclista no puede pagar una compensación, la garantía garantiza una cobertura de hasta 5.000€ .Los pagos están sujetos a ciertas condiciones, limitaciones y excepciones. Para obtener más información, consulta nuestros <a class=\"lnr-link\" ui-sref=\"terms\">Términos y condiciones de alquiler </a>."
-    },
-    "responsibility": {
-      "title": "Tratamos tus datos de manera responsable",
-      "content": "La dirección o ubicación exacta de tu bici no aparece en tu perfil público. Esta información sólo se transmite al ciclista con quien se comparte una vez que se confirme la reserva."
-    },
-    "verification": {
-      "title": "La verificación crea confianza",
-      "content": "En teoría, conocemos a todo el mundo por una separación entre 3,5 a 6,6 grados. Pero, ¿realmente te fiarías de eso cuando alquilas la bici a alguien? Proporciona datos personales en tu perfil para aumentar tu credibilidad al comunicarte con un anunciante o un usuario sobre el alquiler de bicis. Hay varias maneras de verificar la identidad de una persona en listnride:",
-      "list-1": "Verificación de identificación: conecta tu perfil  de listnride con tu página de Facebook y guarda los datos de tu tarjeta de crédito. Asegúrate de que recibes los correos electrónicos.",
-      "list-2": "Número de teléfono: le enviamos tu número de teléfono verificado a tu anunciante/ ciclista tan pronto como se acepte una solicitud de reserva.",
-      "list-3": "Valoraciones: tu perfil recoge las valoraciones enviadas por tus ciclistas y anunciantes  tras el alquiler de la bici, lo que te permite crear una buena reputación."
-    }
-  },
   "how-it-works": {
     "meta-title": "Compartir bicis es más fácil",
     "meta-description": "Usar listnride es tan fácil como quedar para tomar un café. ¡Pruébalo tú mismo!",

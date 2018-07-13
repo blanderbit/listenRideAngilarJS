@@ -77,11 +77,6 @@
       "cafes-bars-content": "If you like vegan and vegetarian food, we recommend a visit at <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> at the Karmeliterplatz. If you prefer the more traditional Austrian kitchen, we highly recommend <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>. Order a traditional Tafelspitz or Wiener Schnitzel and enjoy it outside with the view on the famous Vienna Opera. You’ll have a great night to remember! For finishing touch of the day, it makes sense to walk towards the Danube. On the way you’ll find plenty of interesting bars or just sit outside under the stars at the river."
     }
   },
-  "home": {
-    "insurance": {
-      "header": "insert text here"
-    }
-  },
   "insurance": {
     "main": {
       "title": "Unsere Versicherung schützt Dich.\n<br>\nEgal ob Vermieter oder Mieter.",
@@ -733,24 +728,34 @@
     "subtitle": "Please read these Terms carefully as they contain important information about your legal rights, remedies and obligations. By using the listnride platform, you agree to comply with these Terms.<br><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Here you can download</a> and read our General Terms and Conditions of Business.<br><br>Thank you for using listnride!"
   },
   "trust-and-safety": {
-    "title": "Trust & Safety",
-    "header": "Carefree biking",
-    "subheader": "Thanks to listnride, renting a bike is as safe as it is easy.",
-    "guarantee-icon": "garantie_en",
-    "guarantee": {
-      "title": "listnride’s lister guarantee",
-      "content": "Listnride is a community of bike enthusiasts. But hey, sometimes things go wrong no matter how careful you are. That’s why we have our lister guarantee at the ready: If your bike gets damaged or stolen during the bike hire and the rider cannot pay compensation, the guarantee ensures coverage of up to EUR 5,000. The payments are subject to certain conditions, limitations and exceptions. For more information, please refer to our <a class='lnr-link' ui-sref='terms'>Rental Terms and Conditions</a>."
+    "meta-description": "",
+    "title": "",
+    "description": "",
+    "header": "",
+    "subheader": "",
+    "cover": {
+      "logo": "",
+      "header": "",
+      "description": ""
     },
-    "responsibility": {
-      "title": "We treat your data responsibly",
-      "content": "The exact address or location of your bike does not appear on your public profile. This data is only passed on to the sharing partner once a booking is confirmed."
+    "control": {
+      "logo": "",
+      "header": "",
+      "description": ""
     },
-    "verification": {
-      "title": "Verification creates trust",
-      "content": "Theoretically, everyone knows everyone else by 3.5 to 6.6 degrees of separation. But would you really want to rely on that when renting out your bike to someone? Provide personal details in your profile to increase your trustworthiness when communicating with a lister or rider regarding the bike hire. There are several ways you can verify a person’s identity on listnride:",
-      "list-1": "ID Verification: Connect your listnride profile with your facebook page and store your credit card details. Make sure you can receive e-mails.",
-      "list-2": "Phone number: We pass on your verified phone number to your lister/rider as soon as a booking request is accepted.",
-      "list-3": "Ratings: Your profile features the ratings submitted by your riders and listers after the bike hire. This allows you to build up a good reputation."
+    "safe": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "alone": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "main": {
+      "header": "",
+      "description": ""
     }
   },
   "how-it-works": {
@@ -856,8 +861,5 @@
   },
   "seo": {
     "cities-title": "Planning to Travel? Check out more cities:"
-  },
-  "trust-and-safety.cover.logo": "Insert Logo Here",
-  "_trust-and-safety.cover.logo.comment": "Insert logo here",
-  "trust-and-safety.cover.header": "Du bist abgesichert"
+  }
 }
