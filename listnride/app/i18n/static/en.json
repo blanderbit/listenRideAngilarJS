@@ -77,11 +77,22 @@
       "cafes-bars-content": "If you like vegan and vegetarian food, we recommend a visit at <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> at the Karmeliterplatz. If you prefer the more traditional Austrian kitchen, we highly recommend <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>. Order a traditional Tafelspitz or Wiener Schnitzel and enjoy it outside with the view on the famous Vienna Opera. You’ll have a great night to remember! For finishing touch of the day, it makes sense to walk towards the Danube. On the way you’ll find plenty of interesting bars or just sit outside under the stars at the river."
     }
   },
+  "home": {
+    "insurance": {
+      "header": "Versicherungsschutz für jede Vermietung auf listnride."
+    }
+  },
   "insurance": {
     "main": {
       "title": "Unsere Versicherung schützt Dich.\n<br>\nEgal ob Vermieter oder Mieter.",
       "description": "Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben. Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es beschädigt zu Dir zurück kommt?\nAlle lisntride Vermietungen in Deutschland und Österreich sind versichert. Unser Partner hepster ist für Dich da. Telefonisch. Via E-Mail. Einfach. Unbürokratisch.",
       "logo-description": "Unser Versicherungspartner"
+    },
+    "meta": {
+      "title": "Insurance",
+      "_title.comment": "Insurance",
+      "description": "Jeder Miete in Deutschland oder Österreich über listnride ist automatisch versichert. ",
+      "_description.comment": "Versicherung mit jeder listnride Miete"
     },
     "facts": {
       "title": "Das solltest Du wissen!",
@@ -95,7 +106,7 @@
         "title": "Premium Versicherung",
         "price": "3€",
         "price-description": "pro Tag",
-        "description": "<ul><li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung\n <li>Schutz gegen Vandalismus\n <li>Schutz von Elektronik und Akku bei Pedelecs\n <li>Diebstahlschutz\n <li>24/7 Notfallnummer bei Diebstahl oder Beschädigung\n <li>Rücktransport nach Diebstahl oder Beschädigung\n <li>Ersatzrad nach Diebstahl oder Beschädigung\n <li>die Premium Versicherung hat keine Eigenbeteiligung</ul>"
+        "description": "<ul>\n <li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung\n <li>Schutz gegen Vandalismus\n <li>Schutz von Elektronik und Akku bei Pedelecs\n <li>Diebstahlschutz\n <li>24/7 Notfallnummer bei Diebstahl oder Beschädigung\n <li>Rücktransport nach Diebstahl oder Beschädigung\n <li>Ersatzrad nach Diebstahl oder Beschädigung\n <li>die Premium Versicherung hat keine Eigenbeteiligung</ul>"
       }
     },
     "faqs": {
@@ -740,7 +751,7 @@
   "trust-and-safety": {
     "meta-description": "Vertrauen ist das A und O einer Sharing-Community. Wir unterstützten Fairness und Sicherheit durch Verifizierung und Versicherung bei jeder Miete.",
     "title": "Vertrauen & Sicherheit",
-    "description": "<i>listnride</i>\n ist eine Community aus Veloliebhabern und Fahrradenthusiasten. Leute wie Du und ich. Deswegen wollen wir Dir Ärger vom Leib und den Fahrspaß hoch halten.",
+    "description": "listnride ist eine Community aus Veloliebhabern und Fahrradenthusiasten. Leute wie Du und ich. Deswegen wollen wir Dir Ärger vom Leib und den Fahrspaß hoch halten.",
     "header": "Sorgenfrei in die Pedale treten",
     "subheader": "Wir handeln in Deinem Sinne",
     "cover": {
@@ -872,7 +883,12 @@
   "seo": {
     "cities-title": "Planning to Travel? Check out more cities:"
   },
-  "trust-and-safety.outro.description": "<i0>listnride</i0> ist Europas größte Bike-Sharing-Plattform.<br1>Wir bieten Veloisten einfachen Zugang zu hochwertigen Rädern.<br2>Jederzeit das perfekte Rad. Einfach online verfügbar.",
+  "trust-and-safety.outro.description": "listnride ist Europas größte Bike-Sharing-Plattform.\n<br1>Wir bieten Veloisten einfachen Zugang zu hochwertigen Rädern.\n<br2>Jederzeit das perfekte Rad. Einfach online verfügbar.",
+  "shared.find-your-bike.main.header": "Finde Dein perfektes Rad",
+  "shared.find-your-bike.main.subheader": "Du planst Deinen nächsten Trip?",
+  "shared.rent-your-bike.main.header": "Vermiete Dein perfektes Rad",
+  "shared.rent-your-bike.main.subheader": "Triff Gleichgesinnte. Verdiene etwas dazu.",
+  "shared.rent-your-bike.main.button": "Liste Dein Rad",
   "rent-a-bike.info-section.covered-title": "Super sorgenfrei.",
   "shared.insurance.homepage.title": "Versicherungsschutz für jede Vermietung auf <i>listnride</i>.",
   "shared.insurance.homepage.description": "Egal ob minimalistisches Fixie oder High-End Triathlonrad: Jede listnride-Vermietung in Deutschland oder Österreich ist versichert! Einfach. Unbürokratisch. Jederzeit."
