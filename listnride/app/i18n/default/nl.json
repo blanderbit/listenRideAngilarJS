@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "basic-fee": "Service Fee includes Basic Insurance",
     "how-it-works": "Hoe werkt het",
     "list-a-bike": "Fiets verhuren",
     "renting-a-bike": "Fiets huren",
@@ -121,22 +122,7 @@
     "clear": "Clear",
     "clear-all": "Clear All",
     "today": "Vandaag",
-    "yesterday": "Gisteren",
-    "press": {
-      "title": "",
-      "logo-1": "",
-      "logo-2": "",
-      "logo-3": "",
-      "logo-4": ""
-    },
-    "find-your-bike": {
-      "header": "",
-      "subheader": "",
-      "button": ""
-    },
-    "rent-your-bike": {
-      "header": ""
-    }
+    "yesterday": "Gisteren"
   },
   "coco-mat.bike": "Coco-mat bikes",
   "meta": {

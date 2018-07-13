@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "basic-fee": "Service Fee includes Basic Insurance",
     "how-it-works": "Wie funktioniert's",
     "list-a-bike": "Rad vermieten",
     "renting-a-bike": "Rad ausleihen",
@@ -9,6 +10,7 @@
     "journal": "Blog",
     "later": "Später",
     "next": "Weiter",
+    "previous": "Früher",
     "requests": "Anfragen",
     "top-cities": "Beliebte Städte",
     "berlin": "Berlin",
@@ -113,7 +115,7 @@
     "contact-us": "Bitte kontaktiere uns via ",
     "required": "Dies ist erforderlich",
     "update": "Aktualisiert",
-    "load-more": "Load more",
+    "load-more": "Mehr laden",
     "confirm": "Bestätigen",
     "confirmation": "Bestätigung",
     "confirmation-text": "Bist du sicher?",
@@ -123,19 +125,19 @@
     "today": "Heute",
     "yesterday": "Gestern",
     "press": {
-      "title": "",
-      "logo-1": "",
-      "logo-2": "",
-      "logo-3": "",
-      "logo-4": ""
+      "title": "In den Medien:",
+      "logo-1": "Insert Logo here",
+      "logo-2": "Insert Logo here",
+      "logo-3": "Insert Logo here",
+      "logo-4": "Insert Logo here"
     },
     "find-your-bike": {
-      "header": "",
-      "subheader": "",
-      "button": ""
+      "header": "Finde Dein perfektes Rad",
+      "subheader": "Du planst Deinen nächsten Trip?",
+      "button": "Finde Dein Rad"
     },
     "rent-your-bike": {
-      "header": ""
+      "header": "Liste Dein Rad"
     }
   },
   "coco-mat.bike": "Coco-mat-Räder",
@@ -282,7 +284,7 @@
       "meta-description": "Die Nutzungsbedingungen der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Online-Plattform."
     },
     "trust-and-safety": {
-      "meta-title": "Sichere Fahrradvermietung – Dank Versicherung",
+      "meta-title": "Fahrrad ausleihen mit Versicherung",
       "meta-description": "Vertrauen ist das A und O einer Sharing-Community. Wir unterstützten Fairness und Sicherheit durch Verifizierung und Versicherung bei jeder Miete."
     },
     "how-it-works": {
@@ -390,7 +392,7 @@
       "choose-duration": "Wähle die Buchungsdauer",
       "pickup-time": "Abholzeit",
       "return-time": "Rückgabezeit",
-      "intro-description": "Deine Buchung wird von listnride, Europas größter Bike-Sharing-Community, sicher bearbeitet."
+      "intro-description": "Deine Buchung wird von <i>listnride</i>, Europas größter Bike-Sharing-Community, sicher bearbeitet."
     }
   },
   "toasts": {
@@ -423,6 +425,7 @@
     "profile": "Profil",
     "invite": "Freunde einladen",
     "account": "Konto",
+    "contact-to-update": "Um Deinen Namen oder Deine E-Mail Adresse zu ändern, schreib und einfach eine E-Mail an: contact@listnride.com",
     "delete-account": "Konto deaktivieren",
     "delete-account-description": "Hier kannst du dein listnride-Konto deaktivieren. Dieser Schritt kann nicht rückgängig gemacht werden.",
     "delete-account-sure": "Bist du dir wirklich sicher?",
@@ -503,6 +506,7 @@
       "send-confirmation-sms": "Bestätigungs-SMS schicken",
       "send-confirmation-sms-mobile": "Code schicken",
       "resend-confirmation-sms": "Erneut schicken",
+      "resend-confirmation-sms-mobile": "Erneut senden",
       "sms-verification-code": "Verifizierungs-Code",
       "sms-verification-code-mobile": "Verifizierungs-Code",
       "confirm-code": "Code bestätigen",
@@ -519,6 +523,7 @@
   "bike": {
     "rent-bike": "Fahrrad mieten",
     "view-pictures": "Bilder ansehen",
+    "for": "für",
     "meta-title": "{{name}} - {{category}} von {{brand}} in {{location}} mieten.",
     "meta-description": "{{description}}",
     "per-day": "1 Tag",
@@ -559,6 +564,7 @@
     },
     "write-message": "Schreibe eine Nachricht...",
     "complete-profile": "Vervollständige dein Profil",
+    "add-payment": "Zahlungsmethode",
     "complete-profile-description": "Um das Rad zu buchen, gib dein Zahlungsmittel an. Alle Daten werden über eine gesicherte Verbindung übertragen.",
     "no-requests-yet": "Sobald du Anfragen gestellt oder bekommen hast, werden sie hier angezeigt.",
     "filters": {
@@ -698,6 +704,7 @@
     "log-in-to-request-title": "Einloggen oder Registrieren",
     "log-in-to-request-description": "Logge dich ein um das Rad anzufragen. Falls du noch kein Account hast, registriere dich einfach.",
     "select-timespan": "Wähle zuerst die Mietdauer",
+    "select-timespan-description": "Bevor Du eine Anfrage stellen kannst, lege bitte die Zeitspanne für die Miete fest. Klicke einfach auf die Tage und wähle Abhol- und Rückgabezeiten im Kalender.",
     "info-subtotal": "Dies ist der Tagespreis für die<br>Anzahl der Tage, die du das<br>Fahrrad mieten möchten.",
     "info-discount": "Durchschnittlicher Tagesrabatt<br>pro Tag bei Miete für<br>einen längeren Zeitraum.",
     "info-service-fee": "Die Servicegebühr hilft uns,<br>listnride zu betreiben. Sie enthält <br>die Umsatzsteuer.",
@@ -943,7 +950,8 @@
       "price-title": "Super Preis.",
       "price-content": "Bei uns vermieten Privatpersonen genauso wie der professionelle Händler und Fahrradverleih. Dein Vorteil: Das perfekte Fahrrad zu einem fairen Preis-Leistungs-Verhältnis.",
       "easy-title": "Super einfach.",
-      "easy-content": "Finde und buche Dein Leihfahrrad bevor Du auf Reisen gehst – oder einfach von unterwegs im Netz mit unserer mobilen Webseite."
+      "easy-content": "Finde und buche Dein Leihfahrrad bevor Du auf Reisen gehst – oder einfach von unterwegs im Netz mit unserer mobilen Webseite.",
+      "covered-content": "Mietest Du ein Fahrrad in Deutschland oder Österreich, ist eine Versicherung in der Miete inkludiert. Mit \n<a href=\\“http://www.hepster.com\\”target=\\“_blank\\“>hepster</a>\n und der \n<a href=\\“http://www.gothaer.de\\”target=\\“_blank\\“>Gothaer-Gruppe</a>\n haben wir zwei starke Partner an unserer Seite, die Dir im Fall der Fälle helfen.\nshared.learn-more\n<a href=\\“www.listnride.de/insurance\\”target=\\“_blank\\“>Mehr erfahren</a>\n"
     },
     "search-section": {
       "header": "Wo solls hingehen?",

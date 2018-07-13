@@ -91,7 +91,7 @@
       },
       "premium-insurance": {
         "title": "Premium Versicherung",
-        "description": "<ul>\n <li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung\n <li>Schutz gegen Vandalismus\n <li>Schutz von Elektronik und Akku bei Pedelecs\n <li>Diebstahlschutz\n <li>24/7 Notfallnummer bei Diebstahl oder Beschädigung\n <li>Rücktransport nach Diebstahl oder Beschädigung\n <li>Ersatzrad nach Diebstahl oder Beschädigung\n <li>die Premium Versicherung hat keine Eigenbeteiligung</ul>"
+        "description": "<ul><li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung\n <li>Schutz gegen Vandalismus\n <li>Schutz von Elektronik und Akku bei Pedelecs\n <li>Diebstahlschutz\n <li>24/7 Notfallnummer bei Diebstahl oder Beschädigung\n <li>Rücktransport nach Diebstahl oder Beschädigung\n <li>Ersatzrad nach Diebstahl oder Beschädigung\n <li>die Premium Versicherung hat keine Eigenbeteiligung</ul>"
       }
     },
     "faqs": {
@@ -514,7 +514,7 @@
       "item2-description": "The framework has two colors. By hand the flowing color process and the graphic theme (plumage of a seagull) are spreaded in airbrush technology. A powdered, mat and high-resistance layer seals the frame.",
       "item3-title": "Frame geometry",
       "item3-description": "Perfect ergonomics and effective power transmission - the frame geometry was tailored to cyfly and the driver. Fast advance combined with comfortable seat position.",
-      "choose-location": "Wähle deine Stadt",
+      "choose-location": "Choose your city",
       "find-out-more": "Learn more about the Cyfly by Moeve",
       "order-online": "<a href=\"https://www.moeve-bikes.de/cyfly/\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed. See the most frequently asked questions below.",
       "faq-question-1": "What is Cyfly?",
@@ -728,34 +728,34 @@
     "subtitle": "Please read these Terms carefully as they contain important information about your legal rights, remedies and obligations. By using the listnride platform, you agree to comply with these Terms.<br><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Here you can download</a> and read our General Terms and Conditions of Business.<br><br>Thank you for using listnride!"
   },
   "trust-and-safety": {
-    "meta-description": "",
-    "title": "",
-    "description": "",
-    "header": "",
-    "subheader": "",
+    "meta-description": "Vertrauen ist das A und O einer Sharing-Community. Wir unterstützten Fairness und Sicherheit durch Verifizierung und Versicherung bei jeder Miete.",
+    "title": "Fahrrad ausleihen auf <i>listnride</i> – sicher und unkompliziert",
+    "description": "<i>listnride</i>\n ist eine Community aus Veloliebhabern und Fahrradenthusiasten. Leute wie Du und ich. Deswegen wollen wir Dir Ärger vom Leib und den Fahrspaß hoch halten.",
+    "header": "Sorgenfrei in die Pedale treten",
+    "subheader": "Wir handeln in Deinem Sinne",
     "cover": {
-      "logo": "",
-      "header": "",
-      "description": ""
+      "logo": "insert logo here",
+      "header": "Schäden sind kein Ruin",
+      "description": "Manchmal läuft eben doch was schief. Wird Dein Fahrrad während der Vermietung beschädigt, springen unsere Versicherungspartner ein. Rad und Mieter sind auf der sicheren Seite."
     },
     "control": {
-      "logo": "",
-      "header": "",
-      "description": ""
+      "logo": "insert logo here",
+      "header": "Deine Daten in guten Händen",
+      "description": "Deine Adresse und der Standort Deines Fahrrades sind nicht im öffentlichen Profil. Sie können nicht eingesehen werden. Erst zur Vermietung bekommen beide Seiten die Kontaktdaten."
     },
     "safe": {
-      "logo": "",
-      "header": "",
-      "description": ""
+      "logo": "insert logo here",
+      "header": "Zeig‘ Dich – wenn Du willst",
+      "description": "Verknüpfe Dein Profil mit Facebook zeig Dich der \n<i>listnride</i>\n-Community. Mieter wissen so, von wem sie leihen. Vermieter wissen sofort, wer fahren möchte."
     },
     "alone": {
-      "logo": "",
-      "header": "",
-      "description": ""
+      "logo": "insert logo here",
+      "header": "Sterne weisen den Weg",
+      "description": "Nach der Miete bewerten Beide Einander mit Sternen. So stärken wir das Vertrauen in die Community und halten die Qualität hoch – damit Du überall hochwertige Räder mieten und vermieten kannst."
     },
     "main": {
-      "header": "",
-      "description": ""
+      "header": "Die <i>listnride</i> Versicherung",
+      "description": "Mietest Du ein Fahrrad in Deutschland oder Österreich, ist eine Basis-Versicherung bereits in der Miete inkludiert. Mit \n<a href=\\“http://www.hepster.com\\”target=\\“_blank\\“>hepster</a>\n und der \n<a href=\\“http://http://www.gothaer.de\\”target=\\“_blank\\“>Gothaer Gruppe</a>\n haben wir zwei starke Partner an unserer Seite, die Dir im Fall der Fälle helfen.\n<p>\nWähle bei der Buchung Deines Rades einfach das für Dich passende Versicherungspaket und schon kann es losgehen.\n"
     }
   },
   "how-it-works": {
@@ -861,5 +861,9 @@
   },
   "seo": {
     "cities-title": "Planning to Travel? Check out more cities:"
-  }
+  },
+  "trust-and-safety.outro.description": "<i0>listnride</i0> ist Europas größte Bike-Sharing-Plattform.<br1>Wir bieten Veloisten einfachen Zugang zu hochwertigen Rädern.<br2>Jederzeit das perfekte Rad. Einfach online verfügbar.",
+  "rent-a-bike.info-section.covered-title": "Super sorgenfrei.",
+  "shared.insurance.homepage.title": "Versicherungsschutz für jede Vermietung auf <i>listnride</i>.",
+  "shared.insurance.homepage.description": "Egal ob minimalistisches Fixie oder High-End Triathlonrad: Jede listnride-Vermietung in Deutschland oder Österreich ist versichert! Einfach. Unbürokratisch. Jederzeit."
 }
