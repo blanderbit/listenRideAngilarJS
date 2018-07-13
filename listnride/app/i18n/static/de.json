@@ -345,15 +345,15 @@
       "find-out-more": "Erfahre mehr über Brompton",
       "find-out-more-ext": "Erfahre mehr über Brompton unter <a href=\"http://de.brompton.com\" target=\"_blank\">www.brompton.com</a>",
       "faq-question-1": "Welche Lenkertypen gibt es?",
-      "faq-answer-1": "Drei verschiede Typen:<br>M-Typ – Klassische Form, aufrechte Fahrposition<br>H-Typ – Für große Fahrer und alle, die gerne aufrecht fahren<br>S-Typ Gerade Form, sportliche Fahrposition",
+      "faq-answer-1": "Drei verschiede Typen:<br>M-Typ – Klassische Form, aufrechte Fahrposition<br>H-Typ – Für große Fahrer und alle, die gerne aufrecht fahren<br>S-Typ Gerade Form, sportliche Fahrposition",
       "faq-question-2": "Wie erkenne ich, um welches Modell es sich handelt?",
       "faq-answer-2": "Brompton-Fahrräder haben immer eine Kennzeichnung (z. B. H6LD). Die einzelnen Zeichen stehen für:<br>Lenkertyp: klassisch (M) / aufrecht (H) / sportlich (S)<br>Gangschaltung:</br>1-Gang/ 2-Gang / 3-Gang / 6-Gang<br>Gepäckträger: Schutzbleche, ohne Gepäckträger (L) / Gepäckträger und Schutzbleche (R)<br>Licht: mit Nabendynamo (D) / Batterie-Licht Set (-)",
       "faq-question-3": "Wie sind die Fahreigenschaften des Bromptons?",
-      "faq-answer-3": "Durch die kleinen Räder kann das Brompton schnell beschleunigen und ist auch durch seinen kurzen Radstand sehr wendig – ideal für das ständige Halten und Anfahren im Stadtverkehr. Das Federungssystem sorgt für bequemes Fahren – auch über größere Distanzen.",
-      "faq-question-4": "Wie kann ich das Gepäcksystem nutzen?",
-      "faq-answer-4": "Das einzigartige Brompton-Gepäcktaschen-System macht das Rad noch alltagstauglicher. Die Taschen sind in vielen verschiedenen Designs, Materialien und Größen erhältlich – passend für jede Situation. Und da sie nicht am Lenker, sondern mit Hilfe eines Klick-Systems direkt am Rahmen befestigt werden, beeinträchtigen sie weder Lenkbarkeit noch Stabilität <a href=\"http://de.brompton.com/Luggage\" target=\"_blank\">(Video)</a>",
+      "faq-answer-3": "Durch die kleinen Räder kann das Brompton schnell beschleunigen und ist auch durch seinen kurzen Radstand sehr wendig – ideal für das ständige Halten und Anfahren im Stadtverkehr. Das Federungssystem sorgt für bequemes Fahren – auch über größere Distanzen.",
+      "faq-question-4": "Wie kann ich das Gepäcksystem nutzen?",
+      "faq-answer-4": "Das einzigartige Brompton-Gepäcktaschen-System macht das Rad noch alltagstauglicher. Die Taschen sind in vielen verschiedenen Designs, Materialien und Größen erhältlich – passend für jede Situation. Und da sie nicht am Lenker, sondern mit Hilfe eines Klick-Systems direkt am Rahmen befestigt werden, beeinträchtigen sie weder Lenkbarkeit noch Stabilität <a href=\"http://de.brompton.com/Luggage\" target=\"_blank\">(Video)</a>",
       "faq-question-5": "Welche Schaltungsvarianten gibt es?",
-      "faq-answer-5": "Es gibt vier Übersetzungsoptionen (1-Gang, 2-Gang, 3-Gang und 6-Gang). Vom Anfänger bis zum geübten Bergfahrer – für jeden findet sich die geeignete Schaltung.",
+      "faq-answer-5": "Es gibt vier Übersetzungsoptionen (1-Gang, 2-Gang, 3-Gang und 6-Gang). Vom Anfänger bis zum geübten Bergfahrer – für jeden findet sich die geeignete Schaltung.",
       "faq-question-6": "Wie funktioniert der Faltmechanismus?",
       "faq-answer-6": "Das Brompton hat 3 Faltachsen, eine für die beiden Räder und noch eine für das Steuerrohr. Sie sind durch einfach zu bedienende Drehverschlüsse gesichert. Dabei liegt nach dem Falten die Kette und Gangschaltung im Inneren, sodass sie nicht in Berührung mit Kleidung und Gepäck kommen können. <a href=\"http://de.brompton.com/The-Bike/How-it-works\" target=\"_blank\">(Video)</a>"
     },
@@ -594,7 +594,7 @@
     "meta-title": "listnride ist für dich da",
     "meta-description": "Kontaktiere uns, wenn Du spezielle Fragen oder Probleme hast.",
     "faq-section": {
-      "header": "Wir sind für Dich da!",
+      "header": "Wir sind für Dich da!",
       "subheader": "Die häufigsten Fragen unserer Lister und Rider.",
       "lister-faq": {
         "title": "FAQ Vermieter",
@@ -662,8 +662,8 @@
       }
     },
     "contact-section": {
-      "header": "Keine Antwort für Dich dabei?",
-      "subheader": "Kontaktiere uns zu speziellen Fragen oder falls Unstimmigkeiten beim Bike-Sharing über listnride auftauchen:",
+      "header": "Keine Antwort für Dich dabei?",
+      "subheader": "Kontaktiere uns zu speziellen Fragen oder falls Unstimmigkeiten beim Bike-Sharing über listnride auftauchen:",
       "title": "Unsere FAQs haben nicht die richtige Antwort für Dich parat? Dann wähle:",
       "list-1": "Ich möchte eine verdächtige Anfrage melden",
       "list-2": "Ich möchte eine verdächtige Listung melden",
@@ -724,6 +724,37 @@
     "subheader": "Letzte Aktualisierung: 8. Juni 2018",
     "subtitle": "Bitte lies die Allgemeinen Geschäftsbedingungen sorgfältig durch, da sie wichtige Informationen zu deinen vertraglichen Rechten und Pflichten enthalten. Durch die Nutzung der listnride-Plattform stimmst du diesen Bedingungen zu.<br><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/de/listnride_terms_2018.pdf\" target=\"_BLANK\">Hier kannst du die Allgemeinen Geschäftsbedingungen</a> zur Einsicht herunter laden.<br><br>Vielen Dank, dass du listnride nutzt!"
   },
+  "trust-and-safety": {
+    "meta-description": "",
+    "title": "",
+    "description": "",
+    "header": "",
+    "subheader": "",
+    "cover": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "control": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "safe": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "alone": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "main": {
+      "header": "",
+      "description": ""
+    }
+  },
   "how-it-works": {
     "meta-title": "Unkompliziertes Bike-Sharing",
     "meta-description": "listnride ist so simpel wie eine Verabredung zum Kaffee. Probier’s aus!",
@@ -735,11 +766,11 @@
       "step-1-title": "Rad vermieten",
       "step-1-content": "Unter Angabe von Details, Fotos, Preis und Ort des Rads",
       "step-2-title": "Anfrage erhalten",
-      "step-2-content": "Für ein bestimmtes Datum und Uhrzeit",
+      "step-2-content": "Für ein bestimmtes Datum und Uhrzeit",
       "step-3-title": "Anfrage annehmen",
       "step-3-content": "Oder Alternativvorschlag machen",
       "step-4-title": "Fahrer treffen",
-      "step-4-content": "Fahrradübergabe, Plaudern und Insider- Tipps geben",
+      "step-4-content": "Fahrradübergabe, Plaudern und Insider- Tipps geben",
       "step-5-title": "Bezahlung erhalten",
       "step-5-content": "Geld wird auf deinem Konto gut geschrieben"
     },
@@ -754,7 +785,7 @@
       "step-4-title": "Los geht's!",
       "step-4-content": "Genieße deine Fahrt!",
       "step-5-title": "Rückgabe",
-      "step-5-content": "Rad zum vereinbarten Zeitpunkt und Ort zurückbringen"
+      "step-5-content": "Rad zum vereinbarten Zeitpunkt und Ort zurückbringen"
     },
     "handover-section": {
       "header": "Persönliche oder flexible Bike-Übergabe",

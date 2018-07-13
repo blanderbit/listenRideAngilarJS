@@ -718,6 +718,37 @@
     "subheader": "Ultimo aggiornamento: 8 giugno 2018",
     "subtitle": "Si prega di leggere attentamente i presenti Termini in quanto contengono informazioni importanti sui vostri diritti, rimedi e obblighi legali. Utilizzando la piattaforma listnride, accetti di rispettare i presenti Termini.<br><br>Qui puoi scaricare e leggere i nostri <a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\"> Termini e Condizioni generali di contratto.</a><br><br>Grazie per aver utilizzato listnride!"
   },
+  "trust-and-safety": {
+    "meta-description": "",
+    "title": "",
+    "description": "",
+    "header": "",
+    "subheader": "",
+    "cover": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "control": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "safe": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "alone": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "main": {
+      "header": "",
+      "description": ""
+    }
+  },
   "how-it-works": {
     "meta-title": "Un facilissimo Bike sharing",
     "meta-description": "L'utilizzo di listnride è facile come incontrarsi per un caffè. Provalo!",

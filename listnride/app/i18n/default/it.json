@@ -119,7 +119,22 @@
     "confirmation-text": "Sei sicuro?",
     "loading": "Caricamento",
     "today": "Oggi",
-    "yesterday": "Ieri"
+    "yesterday": "Ieri",
+    "press": {
+      "title": "",
+      "logo-1": "",
+      "logo-2": "",
+      "logo-3": "",
+      "logo-4": ""
+    },
+    "find-your-bike": {
+      "header": "",
+      "subheader": "",
+      "button": ""
+    },
+    "rent-your-bike": {
+      "header": ""
+    }
   },
   "coco-mat.bike": "Coco-mat bikes",
   "meta": {

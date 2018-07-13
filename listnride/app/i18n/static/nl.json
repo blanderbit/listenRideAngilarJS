@@ -724,6 +724,37 @@
     "header": "Algemene voorwaarden van het Online-Platform listnride",
     "subtitle": "List and Ride GmbH (in het vervolg „listnride“) bemmidelt via de website www.listnride.com (in het vervolg „Website“) in verhuurtransacties voor fietsen. De onderstaande algemene voorwaarden (in het vervolg „gebruiksvoorwaarden“) in paragraaf I zijn onderdeel van de overeenkomst die tussen de gebruiker en listnride middels de bemiddeling tot stand komt. Indien er via de website een overeenkomst tot het huren van een gebruiksvoorwerp (in het vervolg „huurovereenkomst“) is gesloten, komt deze volgens de in paragraaf II genoemde algemene huurvoorwaarden (in het vervolg „huurvoorwaarden“) tot stand."
   },
+  "trust-and-safety": {
+    "meta-description": "",
+    "title": "",
+    "description": "",
+    "header": "",
+    "subheader": "",
+    "cover": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "control": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "safe": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "alone": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "main": {
+      "header": "",
+      "description": ""
+    }
+  },
   "how-it-works": {
     "meta-title": "Bike sharing super eenvoudig gemaakt",
     "meta-description": "Bij listnride is je fiets(ver-)huren zo eenvoudig als afspreken voor een kopje koffie. Probeer het zelf!",

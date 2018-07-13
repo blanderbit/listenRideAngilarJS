@@ -725,6 +725,37 @@
     "subheader": "Última actualización: Junio 8, 2018",
     "subtitle": "Por favor lea con atención los Términos y Condiciones dado que contienen información importante sobre tus derechos legales, recursos y obligaciones. Al acceder o utilizar listnride platform reconoces haber leído, comprendido y aceptado dichas Condiciones.<br><br>Puedes descargar y leer el documento completo de nuestros <a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Términos y Condiciones</a><br><br>¡Muchas gracias por utilizar listnride!"
   },
+  "trust-and-safety": {
+    "meta-description": "",
+    "title": "",
+    "description": "",
+    "header": "",
+    "subheader": "",
+    "cover": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "control": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "safe": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "alone": {
+      "logo": "",
+      "header": "",
+      "description": ""
+    },
+    "main": {
+      "header": "",
+      "description": ""
+    }
+  },
   "how-it-works": {
     "meta-title": "Compartir bicis es más fácil",
     "meta-description": "Usar listnride es tan fácil como quedar para tomar un café. ¡Pruébalo tú mismo!",

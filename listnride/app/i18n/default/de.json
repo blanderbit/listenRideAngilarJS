@@ -121,7 +121,22 @@
     "clear": "Clear",
     "clear-all": "Clear All",
     "today": "Heute",
-    "yesterday": "Gestern"
+    "yesterday": "Gestern",
+    "press": {
+      "title": "",
+      "logo-1": "",
+      "logo-2": "",
+      "logo-3": "",
+      "logo-4": ""
+    },
+    "find-your-bike": {
+      "header": "",
+      "subheader": "",
+      "button": ""
+    },
+    "rent-your-bike": {
+      "header": ""
+    }
   },
   "coco-mat.bike": "Coco-mat-Räder",
   "meta": {
