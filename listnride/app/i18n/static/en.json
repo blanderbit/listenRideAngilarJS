@@ -161,6 +161,7 @@
       "column-2": "We believe it is important to offer our bicycle minded community a wide range of bicycles, from a crosser to a road bike and from a touring bike to a cargo bike. Together with you, we can not only offer our users the perfect rental bike for the holiday, but also help to find a new bike (purchase)."
     }
   },
+  "insurance.logo.description": "In Kooperation mit hepster",
   "events": {
     "rapha-super-cross": {
       "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
@@ -738,7 +739,7 @@
   },
   "trust-and-safety": {
     "meta-description": "Vertrauen ist das A und O einer Sharing-Community. Wir unterstützten Fairness und Sicherheit durch Verifizierung und Versicherung bei jeder Miete.",
-    "title": "Fahrrad ausleihen auf listnride – sicher und unkompliziert",
+    "title": "Vertrauen & Sicherheit",
     "description": "<i>listnride</i>\n ist eine Community aus Veloliebhabern und Fahrradenthusiasten. Leute wie Du und ich. Deswegen wollen wir Dir Ärger vom Leib und den Fahrspaß hoch halten.",
     "header": "Sorgenfrei in die Pedale treten",
     "subheader": "Wir handeln in Deinem Sinne",
@@ -763,7 +764,7 @@
       "description": "Nach der Miete bewerten Beide Einander mit Sternen. So stärken wir das Vertrauen in die Community und halten die Qualität hoch – damit Du überall hochwertige Räder mieten und vermieten kannst."
     },
     "main": {
-      "header": "Die <i>listnride</i> Versicherung",
+      "header": "Die listnride Versicherung",
       "description": "Mietest Du ein Fahrrad in Deutschland oder Österreich, ist eine Basis-Versicherung bereits in der Miete inkludiert. Mit \n<a href=\\“http://www.hepster.com\\”target=\\“_blank\\“>hepster</a>\n und der \n<a href=\\“http://http://www.gothaer.de\\”target=\\“_blank\\“>Gothaer Gruppe</a>\n haben wir zwei starke Partner an unserer Seite, die Dir im Fall der Fälle helfen.\n<p>\nWähle bei der Buchung Deines Rades einfach das für Dich passende Versicherungspaket und schon kann es losgehen.\n"
     }
   },

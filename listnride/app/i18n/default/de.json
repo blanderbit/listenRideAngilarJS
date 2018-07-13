@@ -698,6 +698,7 @@
   },
   "calendar": {
     "invalid-date": "Datumsangabe nicht korrekt",
+    "basic-insurance-included": "Basis-Versicherung inklusive",
     "request-bike": "Rad anfragen",
     "to-request-bike-please": "um ein Rad anzufragen bitte",
     "own-bike": "Du kannst nicht dein eigenes Rad anfragen",
@@ -1079,6 +1080,7 @@
   },
   "footer": {
     "language": "Sprache",
+    "insurance-partner": "Versicherungspartner",
     "company": "Company",
     "legal": "Rechtliches",
     "terms-and-conditions": "AGB",
