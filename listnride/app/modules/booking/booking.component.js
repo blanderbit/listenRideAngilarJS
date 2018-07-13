@@ -25,6 +25,7 @@ angular.module('booking', [])
         booking.endDate = new Date($stateParams.endDate);
 
         booking.user = {};
+        booking.bike = {};
         booking.phoneConfirmed = 'progress';
         booking.selectedIndex = 0;
         booking.hidden = true;
@@ -34,7 +35,7 @@ angular.module('booking', [])
         booking.booked = false;
         booking.processing = false;
         booking.isPremium = false;
-        booking.bikeLocation = "";
+        booking.bike.country_code = "";
         booking.user.balance = 0;
         booking.insuranceCountries = ['DE', 'AT'];
 
@@ -53,19 +54,17 @@ angular.module('booking', [])
               booking.openingHours = [];
             }
           );
-        }
+        };
 
         // Fetch Bike Information
         api.get('/rides/' + booking.bikeId).then(
           function (success) {
             booking.bike = success.data;
-            // TODO: remove default
-            booking.coverageTotal = booking.bike.coverage_total || 1000;
+            booking.coverageTotal = booking.bike.coverage_total || 0;
             getLister();
             booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
             booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
             booking.prices = booking.bike.prices;
-            booking.bikeLocation = success.data.country;
             updatePrices();
           },
           function (error) {
@@ -74,12 +73,8 @@ angular.module('booking', [])
         );
 
         booking.insuranceAllowed = function () {
-          if (booking.insuranceCountries.indexOf(countryCodeTranslator.countryCodeFor(booking.bikeLocation)) > -1) {
-            return true;
-          } else {
-            return false;
-          }
-        }
+          return _.includes(["DE", "AT"], booking.bike.country_code);
+        };
 
         // on lifecycle initialization
         booking.$onInit = function () {
