@@ -719,24 +719,34 @@
     "subtitle": "Si prega di leggere attentamente i presenti Termini in quanto contengono informazioni importanti sui vostri diritti, rimedi e obblighi legali. Utilizzando la piattaforma listnride, accetti di rispettare i presenti Termini.<br><br>Qui puoi scaricare e leggere i nostri <a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\"> Termini e Condizioni generali di contratto.</a><br><br>Grazie per aver utilizzato listnride!"
   },
   "trust-and-safety": {
-    "title": "Fiducia e Sicurezza",
-    "header": "Pedalare senza preoccupazioni",
-    "subheader": "Grazie a listnride, noleggiare una bicicletta è facile e sicuro.",
-    "guarantee-icon": "garantie_it",
-    "guarantee": {
-      "title": "La garanzia dei noleggiatori di listnride",
-      "content": "Listnride è una comunità di appassionati per la bicicletta. Ma ehi, a volte le cose vanno male, non importa quanto stai attento. Per questo motivo abbiamo la nostra garanzia per i noleggiatori: Se la tua bicicletta viene danneggiata o rubata durante il noleggio e il noleggiante non può pagare il rimborso, la garanzia garantisce una copertura fino a 5.000 euro. I pagamenti sono soggetti a determinate condizioni, limitazioni ed eccezioni. Per ulteriori informazioni, fai riferimento ai nostri Termini e Condizioni per il noleggio <a class=\"lnr-link\" ui-sref=\"terms\"></a>."
+    "meta-description": "",
+    "title": "",
+    "description": "",
+    "header": "",
+    "subheader": "",
+    "cover": {
+      "logo": "",
+      "header": "",
+      "description": "",
     },
-    "responsibility": {
-      "title": "Trattiamo i tuoi dati in modo responsabile",
-      "content": "L'indirizzo o la posizione della tua bicicletta non compare nel tuo profilo pubblico. Questi dati vengono trasmessi al partner del noleggio solo una volta confermata la prenotazione."
+    "control": {
+      "logo": "",
+      "header": "",
+      "description": "",
     },
-    "verification": {
-      "title": "La verifica crea fiducia",
-      "content": "Fornisci i tuoi dati personali nel tuo profilo per aumentare la tua fiducia quando comunichi con un noleggiatore o con un noleggiante. Ci sono diversi modi per verificare l'identità di una persona in listnride:",
-      "list-1": "Verifica dell'identità: connetti il tuo profilo di listnride alla tua pagina facebook e memorizza i dettagli della tua carta di credito. Assicurati di ricevere e-mail.",
-      "list-2": "Numero di telefono: Trasmettiamo il tuo numero di telefono verificato al tuo noleggiatore/noleggiante non appena è stata accettata la richiesta di prenotazione.",
-      "list-3": "Recensioni: Il tuo profilo contiene le valutazioni presentate dai tuoi noleggiatori/noleggianti dopo il noleggio. Questo ti permette di costruire una buona reputazione."
+    "safe": {
+      "logo": "",
+      "header": "",
+      "description": "",
+    },
+    "alone": {
+      "logo": "",
+      "header": "",
+      "description": "",
+    },
+    "main": {
+      "header": "",
+      "description": ""
     }
   },
   "how-it-works": {
