@@ -59,8 +59,7 @@ angular.module('booking', [])
         api.get('/rides/' + booking.bikeId).then(
           function (success) {
             booking.bike = success.data;
-            // TODO: remove default
-            booking.coverageTotal = booking.bike.coverage_total || 1000;
+            booking.coverageTotal = booking.bike.coverage_total || 0;
             getLister();
             booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
             booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
