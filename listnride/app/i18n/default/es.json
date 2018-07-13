@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Saber más",
+    "basic-fee": "Service Fee includes Basic Insurance",
     "how-it-works": "Cómo funciona",
     "list-a-bike": "Registrar una bici",
     "renting-a-bike": "Alquilar una bici",
@@ -122,22 +123,7 @@
     "clear": "Clear",
     "clear-all": "Clear All",
     "today": "Hoy",
-    "yesterday": "Ayer",
-    "press": {
-      "title": "",
-      "logo-1": "",
-      "logo-2": "",
-      "logo-3": "",
-      "logo-4": ""
-    },
-    "find-your-bike": {
-      "header": "",
-      "subheader": "",
-      "button": ""
-    },
-    "rent-your-bike": {
-      "header": ""
-    }
+    "yesterday": "Ayer"
   },
   "coco-mat.bike": "Coco-mat bikes",
   "meta": {

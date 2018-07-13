@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "basic-fee": "Service Fee includes Basic Insurance",
     "how-it-works": "How it works",
     "list-a-bike": "List a Bike",
     "renting-a-bike": "Renting a Bike",
@@ -124,19 +125,19 @@
     "today": "Today",
     "yesterday": "Yesterday",
     "press": {
-      "title": "",
-      "logo-1": "",
-      "logo-2": "",
-      "logo-3": "",
-      "logo-4": ""
+      "title": "In den Medien:",
+      "logo-1": "Insert Logo here",
+      "logo-2": "Insert Logo here",
+      "logo-3": "Insert Logo here",
+      "logo-4": "Insert Logo here"
     },
     "find-your-bike": {
-      "header": "",
-      "subheader": "",
-      "button": ""
+      "header": "Finde Dein perfektes Rad",
+      "subheader": "Du planst Deinen nächsten Trip?",
+      "button": "Finde Dein Rad"
     },
     "rent-your-bike": {
-      "header": ""
+      "header": "Liste Dein Rad"
     }
   },
   "coco-mat.bike": "Coco-mat bikes",
@@ -283,8 +284,8 @@
       "meta-description": "The Terms and Conditions of the Bike-Sharing-Community listnride apply to the use of the online platform."
     },
     "trust-and-safety": {
-      "meta-title": "Bike hire made safe – listnride has your back",
-      "meta-description": "Trust is the be-all and end-all in a sharing community. We promote fairness and safety by verifying our users’ identities and offering a lister guarantee."
+      "meta-title": "Fahrrad ausleihen mit Versicherung",
+      "meta-description": "Vertrauen ist das A und O einer Sharing-Community. Wir unterstützten Fairness und Sicherheit durch Verifizierung und Versicherung bei jeder Miete."
     },
     "how-it-works": {
       "meta-title": "Bike sharing made easy",
@@ -391,7 +392,7 @@
       "choose-duration": "Choose your rental duration",
       "pickup-time": "Pickup time",
       "return-time": "Return time",
-      "intro-description": "Your booking gets safely processed by listnride, Europe's biggest bike sharing community."
+      "intro-description": "Your booking gets safely processed by <i>listnride</i>, Europe's biggest bike sharing community."
     }
   },
   "toasts": {
@@ -424,7 +425,7 @@
     "profile": "Profile",
     "invite": "Invite Friends",
     "account": "Account",
-    "contact-to-update": "To change your name or email address please contact us at <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>",
+    "contact-to-update": "To change your name or email address please contact us\nvia e-mail at: contact@listnride.com",
     "delete-account": "Deactivate Account",
     "delete-account-description": "Here you can dactivate your listnride account. This step can not be undone.",
     "delete-account-sure": "Are you really sure?",
@@ -949,7 +950,8 @@
       "price-title": "Super price.",
       "price-content": "The bikes listed on our platform are rented out by private owners as well as specialist dealers and rental services. What’s in it for you: the perfect bike at good value for money.",
       "easy-title": "Super easy.",
-      "easy-content": "Find and book your rental bike before going on a trip or simply on the go by using our mobile website."
+      "easy-content": "Find and book your rental bike before going on a trip or simply on the go by using our mobile website.",
+      "covered-content": "Mietest Du ein Fahrrad in Deutschland oder Österreich, ist eine Versicherung in der Miete inkludiert. Mit \n<a href=\\“http://www.hepster.com\\”target=\\“_blank\\“>hepster</a>\n und der \n<a href=\\“http://www.gothaer.de\\”target=\\“_blank\\“>Gothaer-Gruppe</a>\n haben wir zwei starke Partner an unserer Seite, die Dir im Fall der Fälle helfen.\nshared.learn-more\n<a href=\\“www.listnride.de/insurance\\”target=\\“_blank\\“>Mehr erfahren</a>\n"
     },
     "search-section": {
       "header": "Where would you like to go?",

@@ -1,12 +1,12 @@
 {
   "cities": {
     "shared": {
-      "rent-city": "Miete dir ein Stadtrad",
-      "rent-ebike": "Miete dir ein E-bike",
-      "rent-terrain": "Miete dir ein Mountainbike",
-      "rent-road": "Miete dir ein Rennrad",
-      "rent-folding": "Miete dir ein Faltrad",
-      "rent-cargo": "Miete dir ein Lastenrad"
+      "rent-city": "Miete Dir ein Stadtrad",
+      "rent-ebike": "Miete Dir ein E-bike",
+      "rent-terrain": "Miete Dir ein Mountainbike",
+      "rent-road": "Miete Dir ein Rennrad",
+      "rent-folding": "Miete Dir ein Faltrad",
+      "rent-cargo": "Miete Dir ein Lastenrad"
     },
     "berlin": {
       "meta-title": "Entdecke Berlin auf dem Fahrrad mit listnride",
@@ -47,9 +47,9 @@
       "meta-description": "Erkunde Amsterdam auf dem Fahrrad. Wähle aus einer Vielzahl von Fahrrädern und miete das optimale Zweirad für deine Fahrradtour!",
       "title": "Amsterdam",
       "subtitle": "Entdecke Amsterdam auf dem Fahrrad mit listnride",
-      "description": "Miete dir ein Rad und erkunde die Haupstadt der Niederlande auf eigene Faust",
+      "description": "Miete Dir ein Rad und erkunde die Hauptstadt der Niederlande auf eigene Faust",
       "search-title": "Schaue Dir das Radangebot in Amsterdam an",
-      "search-subtitle": "Buch dir ein LeihRad zu deinem Stil und Zweck.",
+      "search-subtitle": "Buch Dir ein Rad für Deinen Style und Deine Bedürfnisse.",
       "about": "Über Amsterdam",
       "about-content": "Europas Hauptstadt der Fahrräder zieht jeden Radler in den Bann. Mit breiten Radwegen und fahrradfreundlichen Ampelphasen, gleitet man ohne Stress durch die Stadt. Die Locals benutzen für nahezu alles ihr Rad, von daher kann es auch mal vorkommen das man an einer Kreuzung auf wartende Mitradler trifft, egal bei welchem Wetter. Die Amsterdamer Fahrradkultur ist ein bunter Mix aus Hollandrädern, Lastenrädern und sportlichen Straßenrädern.",
       "bike-routes": "Fahrradrouten",
@@ -91,7 +91,7 @@
       },
       "premium-insurance": {
         "title": "Premium Versicherung",
-        "description": "<ul>\n <li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung\n <li>Schutz gegen Vandalismus\n <li>Schutz von Elektronik und Akku bei Pedelecs\n <li>Diebstahlschutz\n <li>24/7 Notfallnummer bei Diebstahl oder Beschädigung\n <li>Rücktransport nach Diebstahl oder Beschädigung\n <li>Ersatzrad nach Diebstahl oder Beschädigung\n <li>die Premium Versicherung hat keine Eigenbeteiligung</ul>"
+        "description": "<ul><li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung\n <li>Schutz gegen Vandalismus\n <li>Schutz von Elektronik und Akku bei Pedelecs\n <li>Diebstahlschutz\n <li>24/7 Notfallnummer bei Diebstahl oder Beschädigung\n <li>Rücktransport nach Diebstahl oder Beschädigung\n <li>Ersatzrad nach Diebstahl oder Beschädigung\n <li>die Premium Versicherung hat keine Eigenbeteiligung</ul>"
       }
     },
     "faqs": {
@@ -163,7 +163,7 @@
       "text": "Die legendäre Vintage-Rennrad Tour findet nun zum 5. Mal statt. Am 10. und 11. Juni 2017 versammeln sich Fahrradliebhaber in Stockeraus (Österreich) um dort gemeinsam die Touren zu bestreiten. Für alle die gerne teilnehmen würden, allerdings kein zugelassenes Rennrad besitzen, haben wir passende Vintage-Räder von unserer Community zusammengestellt. Alle unten aufgeführten Räder entsprechen dem Reglement und du kannst sie einfach über listnride mieten. Falls du nicht teilnehmen kannst, vielleicht sogar mehrer Rennräder hast oder einfach einem gleichgesinnten Fahrrad-Enthusiasten aushelfen möchtest: Mach mit und verleihe dein Fahrrad an Gleichgesinnte über listnride."
     },
     "velothon-bikerental": {
-      "meta-title": "Miete dir einfach das perfekte Rennrad für die Velothon Berlin",
+      "meta-title": "Miete Dir das perfekte Rennrad für den Velothon Berlin",
       "meta-description": "Das Rennrad Event des Jahres in Berlin! Nimm teil und miete dir das passende Rennrad!",
       "title": "Miete dir einfach das perfekte Rennrad für die Velothon Berlin",
       "text": "Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist. <br><br> Du kannst leider nicht am Velothon teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und <a href=\"/#/listing-a-bike\">vermiete dein Rad</a>.<br><br>",
@@ -345,15 +345,15 @@
       "find-out-more": "Erfahre mehr über Brompton",
       "find-out-more-ext": "Erfahre mehr über Brompton unter <a href=\"http://de.brompton.com\" target=\"_blank\">www.brompton.com</a>",
       "faq-question-1": "Welche Lenkertypen gibt es?",
-      "faq-answer-1": "Drei verschiede Typen:<br>M-Typ – Klassische Form, aufrechte Fahrposition<br>H-Typ – Für große Fahrer und alle, die gerne aufrecht fahren<br>S-Typ Gerade Form, sportliche Fahrposition",
+      "faq-answer-1": "Drei verschiede Typen:<br>M-Typ – Klassische Form, aufrechte Fahrposition<br>H-Typ – Für große Fahrer und alle, die gerne aufrecht fahren<br>S-Typ Gerade Form, sportliche Fahrposition",
       "faq-question-2": "Wie erkenne ich, um welches Modell es sich handelt?",
       "faq-answer-2": "Brompton-Fahrräder haben immer eine Kennzeichnung (z. B. H6LD). Die einzelnen Zeichen stehen für:<br>Lenkertyp: klassisch (M) / aufrecht (H) / sportlich (S)<br>Gangschaltung:</br>1-Gang/ 2-Gang / 3-Gang / 6-Gang<br>Gepäckträger: Schutzbleche, ohne Gepäckträger (L) / Gepäckträger und Schutzbleche (R)<br>Licht: mit Nabendynamo (D) / Batterie-Licht Set (-)",
       "faq-question-3": "Wie sind die Fahreigenschaften des Bromptons?",
-      "faq-answer-3": "Durch die kleinen Räder kann das Brompton schnell beschleunigen und ist auch durch seinen kurzen Radstand sehr wendig – ideal für das ständige Halten und Anfahren im Stadtverkehr. Das Federungssystem sorgt für bequemes Fahren – auch über größere Distanzen.",
-      "faq-question-4": "Wie kann ich das Gepäcksystem nutzen?",
-      "faq-answer-4": "Das einzigartige Brompton-Gepäcktaschen-System macht das Rad noch alltagstauglicher. Die Taschen sind in vielen verschiedenen Designs, Materialien und Größen erhältlich – passend für jede Situation. Und da sie nicht am Lenker, sondern mit Hilfe eines Klick-Systems direkt am Rahmen befestigt werden, beeinträchtigen sie weder Lenkbarkeit noch Stabilität <a href=\"http://de.brompton.com/Luggage\" target=\"_blank\">(Video)</a>",
+      "faq-answer-3": "Durch die kleinen Räder kann das Brompton schnell beschleunigen und ist auch durch seinen kurzen Radstand sehr wendig – ideal für das ständige Halten und Anfahren im Stadtverkehr. Das Federungssystem sorgt für bequemes Fahren – auch über größere Distanzen.",
+      "faq-question-4": "Wie kann ich das Gepäcksystem nutzen?",
+      "faq-answer-4": "Das einzigartige Brompton-Gepäcktaschen-System macht das Rad noch alltagstauglicher. Die Taschen sind in vielen verschiedenen Designs, Materialien und Größen erhältlich – passend für jede Situation. Und da sie nicht am Lenker, sondern mit Hilfe eines Klick-Systems direkt am Rahmen befestigt werden, beeinträchtigen sie weder Lenkbarkeit noch Stabilität <a href=\"http://de.brompton.com/Luggage\" target=\"_blank\">(Video)</a>",
       "faq-question-5": "Welche Schaltungsvarianten gibt es?",
-      "faq-answer-5": "Es gibt vier Übersetzungsoptionen (1-Gang, 2-Gang, 3-Gang und 6-Gang). Vom Anfänger bis zum geübten Bergfahrer – für jeden findet sich die geeignete Schaltung.",
+      "faq-answer-5": "Es gibt vier Übersetzungsoptionen (1-Gang, 2-Gang, 3-Gang und 6-Gang). Vom Anfänger bis zum geübten Bergfahrer – für jeden findet sich die geeignete Schaltung.",
       "faq-question-6": "Wie funktioniert der Faltmechanismus?",
       "faq-answer-6": "Das Brompton hat 3 Faltachsen, eine für die beiden Räder und noch eine für das Steuerrohr. Sie sind durch einfach zu bedienende Drehverschlüsse gesichert. Dabei liegt nach dem Falten die Kette und Gangschaltung im Inneren, sodass sie nicht in Berührung mit Kleidung und Gepäck kommen können. <a href=\"http://de.brompton.com/The-Bike/How-it-works\" target=\"_blank\">(Video)</a>"
     },
@@ -512,6 +512,7 @@
       "item2-description": "Die Rahmen werden zweifarbig grundiert, von Hand werden der fliessende Farbverlauf und das grafische Thema (Gefieder Einer Möwe) in Airbrush-technik aufgesprüht. Eine gepulverte, matte und hochfeste Deckschicht versiegelt die Rahmen.",
       "item3-title": "Rahmengeometrie",
       "item3-description": "Perfekte Ergonomie und effektive Kraftübertragung – Die Rahmengeometrie wurde auf Cyfly und den Fahrer / Die Fahrerin zugeschnitten. Schnelles Vorankommen kombiniert mit komfortabler Sitzposition.",
+      "choose-location": "Wähle deine Stadt",
       "find-out-more": "Erfahre mehr über das Cyfly von Möve",
       "order-online": "<a href=\"https://www.moeve-bikes.de/cyfly/\" target=\"_blank\">Bestelle dein Cyfly von Möve online</a> und wir erstatten dir die Miete für deine Testfahrt. Wirf auch einen Blick auf die häufigsten Fragen.",
       "faq-question-1": "Was ist Cyfly?",
@@ -594,7 +595,7 @@
     "meta-title": "listnride ist für dich da",
     "meta-description": "Kontaktiere uns, wenn Du spezielle Fragen oder Probleme hast.",
     "faq-section": {
-      "header": "Wir sind für Dich da!",
+      "header": "Wir sind für Dich da!",
       "subheader": "Die häufigsten Fragen unserer Lister und Rider.",
       "lister-faq": {
         "title": "FAQ Vermieter",
@@ -662,8 +663,8 @@
       }
     },
     "contact-section": {
-      "header": "Keine Antwort für Dich dabei?",
-      "subheader": "Kontaktiere uns zu speziellen Fragen oder falls Unstimmigkeiten beim Bike-Sharing über listnride auftauchen:",
+      "header": "Keine Antwort für Dich dabei?",
+      "subheader": "Kontaktiere uns zu speziellen Fragen oder falls Unstimmigkeiten beim Bike-Sharing über listnride auftauchen:",
       "title": "Unsere FAQs haben nicht die richtige Antwort für Dich parat? Dann wähle:",
       "list-1": "Ich möchte eine verdächtige Anfrage melden",
       "list-2": "Ich möchte eine verdächtige Listung melden",
@@ -725,34 +726,34 @@
     "subtitle": "Bitte lies die Allgemeinen Geschäftsbedingungen sorgfältig durch, da sie wichtige Informationen zu deinen vertraglichen Rechten und Pflichten enthalten. Durch die Nutzung der listnride-Plattform stimmst du diesen Bedingungen zu.<br><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/de/listnride_terms_2018.pdf\" target=\"_BLANK\">Hier kannst du die Allgemeinen Geschäftsbedingungen</a> zur Einsicht herunter laden.<br><br>Vielen Dank, dass du listnride nutzt!"
   },
   "trust-and-safety": {
-    "meta-description": "",
-    "title": "",
-    "description": "",
-    "header": "",
-    "subheader": "",
+    "meta-description": "Vertrauen ist das A und O einer Sharing-Community. Wir unterstützten Fairness und Sicherheit durch Verifizierung und Versicherung bei jeder Miete.",
+    "title": "Fahrrad ausleihen auf <i>listnride</i> – sicher und unkompliziert",
+    "description": "<i>listnride</i>\n ist eine Community aus Veloliebhabern und Fahrradenthusiasten. Leute wie Du und ich. Deswegen wollen wir Dir Ärger vom Leib und den Fahrspaß hoch halten.",
+    "header": "Sorgenfrei in die Pedale treten",
+    "subheader": "Wir handeln in Deinem Sinne",
     "cover": {
-      "logo": "",
-      "header": "",
-      "description": ""
+      "logo": "insert logo here",
+      "header": "Schäden sind kein Ruin",
+      "description": "Manchmal läuft eben doch was schief. Wird Dein Fahrrad während der Vermietung beschädigt, springen unsere Versicherungspartner ein. Rad und Mieter sind auf der sicheren Seite."
     },
     "control": {
-      "logo": "",
-      "header": "",
-      "description": ""
+      "logo": "insert logo here",
+      "header": "Deine Daten in guten Händen",
+      "description": "Deine Adresse und der Standort Deines Fahrrades sind nicht im öffentlichen Profil. Sie können nicht eingesehen werden. Erst zur Vermietung bekommen beide Seiten die Kontaktdaten."
     },
     "safe": {
-      "logo": "",
-      "header": "",
-      "description": ""
+      "logo": "insert logo here",
+      "header": "Zeig‘ Dich – wenn Du willst",
+      "description": "Verknüpfe Dein Profil mit Facebook zeig Dich der \n<i>listnride</i>\n-Community. Mieter wissen so, von wem sie leihen. Vermieter wissen sofort, wer fahren möchte."
     },
     "alone": {
-      "logo": "",
-      "header": "",
-      "description": ""
+      "logo": "insert logo here",
+      "header": "Sterne weisen den Weg",
+      "description": "Nach der Miete bewerten Beide Einander mit Sternen. So stärken wir das Vertrauen in die Community und halten die Qualität hoch – damit Du überall hochwertige Räder mieten und vermieten kannst."
     },
     "main": {
-      "header": "",
-      "description": ""
+      "header": "Die <i>listnride</i> Versicherung",
+      "description": "Mietest Du ein Fahrrad in Deutschland oder Österreich, ist eine Basis-Versicherung bereits in der Miete inkludiert. Mit \n<a href=\\“http://www.hepster.com\\”target=\\“_blank\\“>hepster</a>\n und der \n<a href=\\“http://http://www.gothaer.de\\”target=\\“_blank\\“>Gothaer Gruppe</a>\n haben wir zwei starke Partner an unserer Seite, die Dir im Fall der Fälle helfen.\n<p>\nWähle bei der Buchung Deines Rades einfach das für Dich passende Versicherungspaket und schon kann es losgehen.\n"
     }
   },
   "how-it-works": {
@@ -766,11 +767,11 @@
       "step-1-title": "Rad vermieten",
       "step-1-content": "Unter Angabe von Details, Fotos, Preis und Ort des Rads",
       "step-2-title": "Anfrage erhalten",
-      "step-2-content": "Für ein bestimmtes Datum und Uhrzeit",
+      "step-2-content": "Für ein bestimmtes Datum und Uhrzeit",
       "step-3-title": "Anfrage annehmen",
       "step-3-content": "Oder Alternativvorschlag machen",
       "step-4-title": "Fahrer treffen",
-      "step-4-content": "Fahrradübergabe, Plaudern und Insider- Tipps geben",
+      "step-4-content": "Fahrradübergabe, Plaudern und Insider- Tipps geben",
       "step-5-title": "Bezahlung erhalten",
       "step-5-content": "Geld wird auf deinem Konto gut geschrieben"
     },
@@ -785,7 +786,7 @@
       "step-4-title": "Los geht's!",
       "step-4-content": "Genieße deine Fahrt!",
       "step-5-title": "Rückgabe",
-      "step-5-content": "Rad zum vereinbarten Zeitpunkt und Ort zurückbringen"
+      "step-5-content": "Rad zum vereinbarten Zeitpunkt und Ort zurückbringen"
     },
     "handover-section": {
       "header": "Persönliche oder flexible Bike-Übergabe",
@@ -858,5 +859,9 @@
   },
   "seo": {
     "cities-title": "Du planst zu reisen? Schau dir mehr Städte an:"
-  }
+  },
+  "trust-and-safety.outro.description": "<i0>listnride</i0> ist Europas größte Bike-Sharing-Plattform.\n<br1>Wir bieten Veloisten einfachen Zugang zu hochwertigen Rädern.\n<br2>Jederzeit das perfekte Rad. Einfach online verfügbar.",
+  "rent-a-bike.info-section.covered-title": "Super sorgenfrei.",
+  "shared.insurance.homepage.title": "Versicherungsschutz für jede Vermietung auf <i>listnride</i>.",
+  "shared.insurance.homepage.description": "Egal ob minimalistisches Fixie oder High-End Triathlonrad: Jede listnride-Vermietung in Deutschland oder Österreich ist versichert! Einfach. Unbürokratisch. Jederzeit."
 }
