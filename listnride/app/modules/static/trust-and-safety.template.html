@@ -42,12 +42,13 @@
     </div>
   </div>
 
-  <div class="lnr-bg-gray">
-    <div class="content insurance__top" layout-padding-gt-sm>
-      <div layout="column" layout-gt-sm="row" layout-padding-gt-sm>
-        <div flex="35" class="lnr-sm-content-double-padding">
-          <div layout="column">
-            <h1 class="md-headline lnr-sm-text-center">
+  <div class="lnr-bg-gray section">
+    <div class="content insurance__top">
+      <div layout="column" layout-gt-sm="row" class="insurance-banner">
+        <div flex="35" class="insurance-banner__text">
+          <div layout="column" layout-align-xs="center center" layout-align-sm="center center">
+            <md-icon md-svg-src="app/assets/ui_icons/icn_insurance-gray.svg" class="lnr-icn-mlrg lnr-no-margin"></md-icon>
+            <h1 class="md-headline lnr-sm-text-center lnr-margin-top-double">
               {{ 'trust-and-safety.main.header' | translate }}
             </h1>
           </div>
@@ -57,7 +58,7 @@
           </div>
         </div>
         <div flex="65" flex-order="-1" flex-order-gt-sm="1">
-          <div id="hero-shot" class="lnr-preload-bg insurance__top-img" style="background-image: url('app/assets/ui_images/static/lnr-landing-insurance.jpg')" layout="row"
+          <div class="lnr-preload-bg insurance-banner__img" style="background-image: url('app/assets/ui_images/static/lnr-landing-insurance.jpg')" layout="row"
             layout-align="center center">
             <div class="insurance__gothaer">
               <span class="md-body-1">{{ 'insurance.logo.description' | translate }}</span>
