@@ -663,6 +663,9 @@
   },
   "home": {
     "landing-section-header": "Das perfekte Rad. Einfach mieten.",
+    "insurance": {
+      "description": "Egal ob minimalistisches Fixie oder High-End Triathlonrad: Jede listnride-Vermietung in Deutschland oder Österreich ist versichert! Einfach. Unbürokratisch. Jederzeit."
+    },
     "landing-section-subheader": "Miete dir auf listnride ein Fahrrad wie du es magst und gerade brauchst.",
     "featured-bikes-header": "Fahrradverleih: Die Lieblinge der Community",
     "featured-bikes-subheader": "Egal ob Rennrad, Mountain Bike, Stadtrad oder E-Bike, du kannst sie alle mieten. Hier sind die aktuellen Favoriten der Community.",
@@ -984,7 +987,7 @@
       "control-title": "Du behältst die Kontrolle.",
       "control-content": "Du bestimmst die individuelle Tages- oder Wochenrate. Dir steht es komplett frei, Anfragen anzunehmen oder auch ganz einfach abzulehnen, wenn Du Dein Fahrrad nicht verleihen willst.",
       "covered-title": "Du bist abgesichert.",
-      "covered-content": "Im Schadensfall hilft Dir unsere Versicherung weiter. Mit \n<a href=\\“http://www.hepster.com\\”target=\\“_blank\\“>hepster</a>\n und der \n<a href=\\“http://www.gothaer.de\\”target=\\“_blank\\“>Gothaer-Gruppe</a>\n haben wir zwei starke Partner an unserer Seite.",
+      "covered-content": "Im Schadensfall hilft Dir unsere Versicherung weiter. Mit \nhepster und der Gothaer-Gruppe haben wir zwei starke Partner an unserer Seite.",
       "help-title": "Wir lassen Dich nicht alleine.",
       "help-content": "Solltest Du mit einem Rider (Mieter) ein Problem nicht direkt lösen können, sind wir für Dich da – um Dich zu unterstützen oder die Angelegenheit komplett zu übernehmen."
     },

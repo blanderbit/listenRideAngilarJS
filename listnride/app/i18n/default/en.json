@@ -663,6 +663,9 @@
   },
   "home": {
     "landing-section-header": "The perfect bike. Simply rent it.",
+    "insurance": {
+      "description": "Egal ob minimalistisches Fixie oder High-End Triathlonrad: Jede listnride-Vermietung in Deutschland oder Österreich ist versichert! Einfach. Unbürokratisch. Jederzeit."
+    },
     "landing-section-subheader": "Join listnride and find the bike that is right for you.",
     "featured-bikes-header": "Bike Rental: Our Community’s Favorites",
     "featured-bikes-subheader": "Whether it’s road bikes, mountain bikes, cargo bikes, city bikes or e-bikes, you can rent them all. These are the current favorite rental bikes of the community.",
