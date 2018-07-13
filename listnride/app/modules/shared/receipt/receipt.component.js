@@ -10,6 +10,7 @@ angular.module('receipt', []).component('receipt', {
     user: '<',
     withoutCalendar: '<?',
     coverageTotal: '<?',
+    countryCode: '<?',
     isPremiumCoverage: '<?'
   },
   controller: [
@@ -20,7 +21,6 @@ angular.module('receipt', []).component('receipt', {
       receipt.balance = 0;
 
       this.$onChanges = function (changes) {
-        console.log(changes);
         if (changes.user) {
           if (changes.user.currentValue.balance != undefined) {
             receipt.balance = changes.user.currentValue.balance;
@@ -59,6 +59,9 @@ angular.module('receipt', []).component('receipt', {
         receipt.total = 0;
       }
 
+      receipt.insuranceCountry = function () {
+        return _.includes(["DE", "AT"], receipt.countryCode);
+      }
     }
   ]
 });

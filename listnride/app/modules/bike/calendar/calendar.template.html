@@ -182,7 +182,8 @@
 
     <div layout="row" layout-align="space-between center">
       <div layout="row">
-        {{ 'shared.lnr-fee' | translate }}
+        <div ng-if="!calendar.insuranceCountry()">{{ 'shared.lnr-fee' | translate }}</div>
+        <div ng-if="calendar.insuranceCountry()">{{ 'shared.basic-fee' | translate }}</div>
         <div>
           <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
           <md-tooltip md-direction="right"><span translate="calendar.info-service-fee"></span></md-tooltip>
