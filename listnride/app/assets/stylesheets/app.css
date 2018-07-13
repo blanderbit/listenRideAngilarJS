@@ -2775,6 +2775,26 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   padding-left: 25px;
 }
 
+.insurance-banner {
+  position: relative;
+  padding: 0 16px;
+}
+
+.insurance-banner__text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  align-self: center;
+}
+
+.insurance-banner__img {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  MEDIA
@@ -2818,6 +2838,14 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .insurance__top {
     margin-bottom: 0;
+  }
+
+  .insurance-banner {
+    padding: 0;
+  }
+
+  .insurance-banner__img {
+    margin-bottom: 70px;
   }
 
   #hero-shot.insurance__top-img {
