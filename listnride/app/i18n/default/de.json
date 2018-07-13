@@ -762,16 +762,16 @@
       "country": "Land"
     },
     "insurance": {
-      "label": "Insurance",
-      "info": "Information about insurance",
-      "hint-part-1": "Your bike insured when ever somebody is renting it. In order to provide you the right protection its nessasary that we know the right value of your bike.",
-      "hint-part-2": "Please note that you have to provide proof the value of the bike in case of a claim",
-      "hint-link-label": "Learn more about insurance",
-      "header": "Please tell us the value of your bike",
-      "tip": "Additional fee for the rider is {{fee}} per day",
-      "up-to-value": "Up to {{value}}",
-      "select-value": "Please select your bike value",
-      "no-insurance": "Sorry, your country doesn't support an insurance. Only for Germany and Austria."
+      "label": "Versicherung",
+      "info": "Information zur Versicherung",
+      "hint-part-1": "Dein Rad ist versichert, wann immer es gemietet wird. Um Dir den richtigen Versicherungswert gewähren zu können, müssen wir den Wert deines Rades wissen.",
+      "hint-part-2": "Please note that your have to provide proof of your bike's value in case of any claim ",
+      "hint-link-label": "Erfahre mehr zur Versicherung",
+      "header": "Wie hoch ist der Wert Deines Rades",
+      "tip": "Die zusätzliche Versicherungsgebühr für Mieter pro Tag beträgt {{fee}}",
+      "up-to-value": "Bis zu {{value}}",
+      "select-value": "Bitte wähle den Wert Deines Rades",
+      "no-insurance": "Oooops, Dein Land ist noch nicht von der Versicherung abgedeckt. Bisher gibt es die Versicherung nur in Deutschland und Österreich."
     },
     "pricing": {
       "info": "Dein Tagespreis ist dein Basispreis bei einer Tagesmiete.",
@@ -928,8 +928,7 @@
       "price-title": "Super Preis.",
       "price-content": "Bei uns vermieten Privatpersonen genauso wie der professionelle Händler und Fahrradverleih. Dein Vorteil: Das perfekte Fahrrad zu einem fairen Preis-Leistungs-Verhältnis.",
       "easy-title": "Super einfach.",
-      "easy-content": "Finde und buche Dein Leihfahrrad bevor Du auf Reisen gehst – oder einfach von unterwegs im Netz mit unserer mobilen Webseite.",
-      "covered-content": "Mietest Du ein Fahrrad in Deutschland oder Österreich, ist eine Versicherung in der Miete inkludiert. Mit <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> und der <a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer-Gruppe</a> haben wir zwei starke Partner an unserer Seite um Dir zu helfen, falls nötig."
+      "easy-content": "Finde und buche Dein Leihfahrrad bevor Du auf Reisen gehst – oder einfach von unterwegs im Netz mit unserer mobilen Webseite."
     },
     "search-section": {
       "header": "Wo solls hingehen?",

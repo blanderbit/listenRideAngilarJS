@@ -122,7 +122,22 @@
     "clear": "Clear",
     "clear-all": "Clear All",
     "today": "Today",
-    "yesterday": "Yesterday"
+    "yesterday": "Yesterday",
+    "press": {
+      "title": "",
+      "logo-1": "",
+      "logo-2": "",
+      "logo-3": "",
+      "logo-4": ""
+    },
+    "find-your-bike": {
+      "header": "",
+      "subheader": "",
+      "button": ""
+    },
+    "rent-your-bike": {
+      "header": ""
+    }
   },
   "coco-mat.bike": "Coco-mat bikes",
   "meta": {
@@ -770,14 +785,14 @@
     "insurance": {
       "label": "Insurance",
       "info": "Information about insurance",
-      "hint-part-1": "Your bike insured when ever somebody is renting it. In order to provide you the right protection its nessasary that we know the right value of your bike.",
-      "hint-part-2": "Please note that you have to provide proof the value of the bike in case of a claim",
+      "hint-part-1": "Your bike is insured whenever it is rented. In order to provide you with the right protection it's neccessary that we know the value of your bike.",
+      "hint-part-2": "Please note that your have to provide proof of your bike's value in case of any claim ",
       "hint-link-label": "Learn more about insurance",
       "header": "Please tell us the value of your bike",
       "tip": "Additional fee for the rider is {{fee}} per day",
       "up-to-value": "Up to {{value}}",
       "select-value": "Please select your bike value",
-      "no-insurance": "Sorry, your country doesn't support an insurance. Only for Germany and Austria."
+      "no-insurance": "Sorry, your country is not yet covered by insurance.\nInsurance only applies to rentals in Germany and Austria."
     },
     "pricing": {
       "info": "Your daily price is your base price for 1 day.",
@@ -934,8 +949,7 @@
       "price-title": "Super price.",
       "price-content": "The bikes listed on our platform are rented out by private owners as well as specialist dealers and rental services. What’s in it for you: the perfect bike at good value for money.",
       "easy-title": "Super easy.",
-      "easy-content": "Find and book your rental bike before going on a trip or simply on the go by using our mobile website.",
-      "covered-content": "Mietest Du ein Fahrrad in Deutschland oder Österreich, ist eine Versicherung in der Miete inkludiert. Mit \n<a href=\\“http://www.hepster.com\\”target=\\“_blank\\“>hepster</a>\n und der \n<a href=\\“http://www.gothaer.de\\”target=\\“_blank\\“>Gothaer-Gruppe</a>\n haben wir zwei starke Partner an unserer Seite um Dir zu helfen, falls nötig.\n"
+      "easy-content": "Find and book your rental bike before going on a trip or simply on the go by using our mobile website."
     },
     "search-section": {
       "header": "Where would you like to go?",
