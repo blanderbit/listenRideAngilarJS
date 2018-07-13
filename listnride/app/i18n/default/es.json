@@ -618,7 +618,7 @@
     "address": "Dirección",
     "profile-picture": "Foto de perfil",
     "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
-    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
+    "profile-picture-info-policy": "Al subir una imagen, acepto que listnride la guarde tal y como se describe en la sección <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Política de privacidad </a>. Puedo borrarlo en cualquier momento.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "El tamaño de la imagen es superior al tamaño máximo permitido",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
