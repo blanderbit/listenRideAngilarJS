@@ -80,8 +80,7 @@
   "insurance": {
     "main": {
       "title": "Unsere Versicherung schützt Dich.\n<br>\nEgal ob Vermieter oder Mieter.",
-      "description": "Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben. Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es beschädigt zu Dir zurück kommt?`<br0>`Alle <i1>lisntride</i> Vermietungen in Deutschland und Österreich sind versichert. Unser Partner <a href=\"www.hepster.com\" target=\"_blank\">hepster</a> ist für Dich da. Telefonisch. Via E-Mail. Einfach. Unbürokratisch.",
-      "logo-description": "In Kooperation mit <a href\"www.hepster.com\" target=\"_blank\">hepster</a>."
+      "description": "Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben. Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es beschädigt zu Dir zurück kommt?`<br0>`Alle <i1>lisntride</i> Vermietungen in Deutschland und Österreich sind versichert. Unser Partner <a href=\"www.hepster.com\" target=\"_blank\">hepster</a> ist für Dich da. Telefonisch. Via E-Mail. Einfach. Unbürokratisch."
     },
     "facts": {
       "title": "Das solltest Du wissen!",
@@ -102,7 +101,7 @@
       "lister": {
         "question-1": "Wieviel kostet mich die Versicherung?",
         "answer-1": "Nichts! Da die Versicherung nur von Mietern abgeschlossen wird, fallen für Vermieter keine zusätzlichen Kosten an. Unser Dankeschön an Dich.<br>Bedenke dass Dein Fahrrad somit für Mieter teurer wird. Die Kosten für die Basisversicherung betragen 0,1% des Versicherungswerts Deines Rades.Wenn Du Dein Rad also bis 1.000€ versichern lässt, dann zahlen Mieter eine Euro je Miettag zusätzlich. Bis 5.000€ Versicherungswert sind es also fünf Euro zusätzlich je Miettag.",
-        "question-2": "Wie hoch versichert  <i>listnride</i> mein Rad maximal?",
+        "question-2": "Wie hoch versichert  listnride mein Rad maximal?",
         "answer-2": "Jedes Fahrrad ist automatisch bis 1.000€ versichert und kann von Dir bis maximal 5.000€ versichert werden . Die tatsächliche Auszahlungssumme bei Verlust orientiert sich am tatsächlichen Kaufpreis und Zeitwert. Sie wird von der <a href=\"https://www.gothaer.de/\" target=\"_blank\">Gothaer Versicherung</a> individuell für Deinen Fall bestimmt.Bedenke bitte bei der Festlegung des Versicherungswerts, dass Mieter sehr wohl eine Versicherungsgebühr zahlen, deren Höhe sich an Deinem gewählten Versicherungswert orientiert. Das heißt, je höher Du das Rad versicherst, desto höher fällt die Versicherungsgebühr für die Mieter aus.",
         "question-3": "Was muss ich machen, wenn es zum Versicherungsfall kommt?",
         "answer-3": "Solltest Du einmal in die Situation kommen, dass Dein Rad während einer Vermietung beschädigt oder gestohlen wird, nimm bitte direkt Kontakt mit \n<a href=\"www.hepster.com\" target=\"_blank\">hepster</a> \nauf:\n<ul> \n<li>\n<a href=\"mailto:schaden@hepster.com?subject=SUBJECT\">schaden@hepster.com</a>\n<li> 0381 - 20 38 88 801</ul>\n<br>\nDie Mitarbeiter von hepster werden Deine Anfrage zügig und kompetent beantworten."
