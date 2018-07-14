@@ -639,6 +639,11 @@ md-tooltip .md-content {
   background-color: #eaeeee;
 }
 
+.lnr-sc {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* SVG
 /*-----------------------------------------------------------------------------------*/
@@ -2747,7 +2752,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
 .lnr-image-row img {
   max-width: 200px;
-  padding: 15px;
+  padding: 8px;
 }
 
 .lnr-arrow-left {
@@ -2797,7 +2802,12 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
 .insurance-banner {
   position: relative;
-  padding: 0 16px;
+  padding: 0 8px;
+}
+
+.insurance-banner > div {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .insurance-banner__text {
@@ -2863,6 +2873,11 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
     padding: 0;
   }
 
+  .insurance-banner > div {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .insurance-banner__img {
     margin-bottom: 70px;
   }
@@ -2881,6 +2896,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   .insurance__table {
     width: auto;
     max-width: 380px;
+  }
+
+  .insurance-banner .insurance-banner__text {
+    padding: 30px 16px 60px;
   }
 }
 
@@ -3002,6 +3021,14 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .lnr-xs-m0 {
     margin: 0;
+  }
+
+  .lnr-sc-w-divider > :last-child {
+    border-top: 1px solid #fff;
+  }
+
+  .lnr-sc-w-divider md-divider {
+    display: none;
   }
 
   /* INSURANCE */

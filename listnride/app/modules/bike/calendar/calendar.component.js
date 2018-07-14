@@ -260,11 +260,7 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.insuranceCountry = function () {
-        if (!!calendar.countryCode) {
-          return _.includes(["DE", "AT"], calendar.countryCode)
-        } else {
-          return false
-        }
+        if (!!calendar.countryCode) { return _.includes(["DE", "AT"], calendar.countryCode) }
       };
 
       var showBookingDialog = function (event) {
