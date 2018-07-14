@@ -9,7 +9,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
 
       cityLanding.$onInit = function() {
         $tpl.addPart(ENV.staticTranslation);
-        cityLanding.city = $stateParams.city;
+        cityLanding.city = _.capitalize($stateParams.city);
         cityLanding.bikes = {};
         cityLanding.loading = true;
         cityLanding.categories = [];
