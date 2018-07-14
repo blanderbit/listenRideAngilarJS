@@ -140,6 +140,16 @@
       "header": "Liste Dein Rad"
     }
   },
+  "insurance": {
+    "facts": {
+      "basic-insurance": {
+        "price_descr": "in jeder Vermietung in Deutschland &amp; Österreich"
+      },
+      "premium-insurance": {
+        "price_descr": "pro Tag"
+      }
+    }
+  },
   "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
