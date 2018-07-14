@@ -85,7 +85,7 @@
   "insurance": {
     "main": {
       "title": "Unsere Versicherung schützt Dich.\n<br>\nEgal ob Vermieter oder Mieter.",
-      "description": "Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben. Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es beschädigt zu Dir zurück kommt?\nAlle lisntride Vermietungen in Deutschland und Österreich sind versichert. Unser Partner hepster ist für Dich da. Telefonisch. Via E-Mail. Einfach. Unbürokratisch.",
+      "description": "Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben. Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es beschädigt zu Dir zurück kommt?\n\nAlle lisntride Vermietungen in Deutschland und Österreich sind versichert. Unser Partner hepster ist für Dich da. Telefonisch. Via E-Mail. Einfach. Unbürokratisch.",
       "logo-description": "Unser Versicherungspartner"
     },
     "meta": {
@@ -106,7 +106,7 @@
         "title": "Premium Versicherung",
         "price": "3€",
         "price-description": "pro Tag",
-        "description": "<ul>\n <li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung\n <li>Schutz gegen Vandalismus\n <li>Schutz von Elektronik und Akku bei Pedelecs\n <li>Diebstahlschutz\n <li>24/7 Notfallnummer bei Diebstahl oder Beschädigung\n <li>Rücktransport nach Diebstahl oder Beschädigung\n <li>Ersatzrad nach Diebstahl oder Beschädigung\n <li>die Premium Versicherung hat keine Eigenbeteiligung</ul>"
+        "description": "<ul><li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung</li><li>Schutz gegen Vandalismus</li><li>Schutz von Elektronik und Akku bei Pedelecs</li><li>Diebstahlschutz</li><li>24/7 Notfallnummer bei Diebstahl oder Beschädigung</li><li>Rücktransport nach Diebstahl oder Beschädigung</li><li>Ersatzrad nach Diebstahl oder Beschädigung</li><li>die Premium Versicherung hat keine Eigenbeteiligung</li>\n</ul>"
       }
     },
     "faqs": {
