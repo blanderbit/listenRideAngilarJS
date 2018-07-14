@@ -14,13 +14,13 @@
 
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
       <div flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_safe.svg"></md-icon>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_control.svg"></md-icon>
         <h3 class="md-subhead lnr-center">{{ 'list-a-bike.info-section.precautions-title' | translate }}</h3>
         <p class="lnr-center">{{ 'list-a-bike.info-section.precautions-content' | translate }}</p>
       </div>
 
       <div flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_control.svg"></md-icon>
+        <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_safe.svg"></md-icon>
         <h3 class="md-subhead lnr-center">{{ 'list-a-bike.info-section.control-title' | translate }}</h3>
         <p class="lnr-center">{{ 'list-a-bike.info-section.control-content' | translate }}
         </p>
@@ -41,6 +41,8 @@
       </div>
     </div>
   </div>
+
+  <div class="lnr-middle-divider"></div>
 
   <div class="lnr-bg-gray section">
     <div class="content insurance__top">
@@ -70,55 +72,65 @@
     </div>
   </div>
 
+  <div hide-gt-sm class="lnr-middle-divider"></div>
+
   <div class="content" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <div class="md-headline" translate="trust-and-safety.outro.description"></div>
     </div>
     <p class="lnr-center md-subhead">{{ 'shared.press.title' | translate }}</p>
-    <div class="lnr-image-row" layout="row" layout-xs="column" layout-align="center center" layout-wrap="wrap">
-      <img src="app/assets/ui_images/static/tv_partners/001.png" alt="partner-logo-1">
+    <div class="lnr-image-row" layout="row" layout-xs="column" layout-align="space-between center" layout-wrap="wrap">
       <img src="app/assets/ui_images/static/tv_partners/002.png" alt="partner-logo-2">
-      <img src="app/assets/ui_images/static/tv_partners/003.svg" alt="partner-logo-3">
-      <img src="app/assets/ui_images/static/tv_partners/004.png" alt="partner-logo-4">
       <img src="app/assets/ui_images/static/tv_partners/005.png" alt="partner-logo-5">
+      <img src="app/assets/ui_images/static/tv_partners/001.png" alt="partner-logo-1">
+      <img src="app/assets/ui_images/static/tv_partners/004.png" alt="partner-logo-4">
+      <img src="app/assets/ui_images/static/tv_partners/003.svg" alt="partner-logo-3">
     </div>
   </div>
 
+  <div class="lnr-middle-divider"></div>
+
   <div class="lnr-bg-gray">
-    <div class="content" layout-padding>
-      <div layout="column" layout-gt-xs="row" class="md-subhead" layout-padding>
-        <div layout="column" flex-gt-xs="45" class="lnr-center">
+    <div class="content">
+      <div layout="column" layout-gt-xs="row" class="md-subhead lnr-sc-w-divider">
+        <div layout="column" flex-gt-xs="45" class="lnr-center lnr-sc">
           <h3 class="md-headline">
             {{ 'shared.find-your-bike.main.header' | translate }}
           </h3>
           <p class="md-subhead">
             {{ 'shared.find-your-bike.main.subheader' | translate }}
           </p>
-          <md-button
-            ui-sref="search({location: 'Berlin'})"
-            class="md-raised md-primary md-lrg">
-            {{ 'shared.find-you-bike.main.button' | translate }}
-          </md-button>
+          <div class="lnr-padding-top-double" style="margin-top: auto;">
+            <md-button
+              ui-sref="search({location: 'Berlin'})"
+              class="md-raised md-primary md-lrg">
+              {{ 'shared.find-you-bike.main.button' | translate }}
+            </md-button>
+          </div>
         </div>
         <div layout="row" flex-gt-xs="10" layout-align="center">
-          <md-divider></md-divider>
+          <md-divider style="border-color: #fff;"></md-divider>
         </div>
-        <div layout="column" flex-gt-xs="45" class="lnr-center">
+        <div layout="column" flex-gt-xs="45" class="lnr-center lnr-sc">
           <h3 class="md-headline">
             {{ 'shared.rent-your-bike.main.header' | translate }}
           </h3>
           <p class="md-subhead">
             {{ 'shared.rent-your-bike.main.subheader' | translate }}
           </p>
-          <md-button
-            ui-sref="listingABike"
-            class="md-raised md-primary md-lrg">
-            {{ 'list.list-your-bike' | translate }}
-          </md-button>
+          <div class="lnr-padding-top-double" style="margin-top: auto;">
+            <md-button
+              ui-sref="listingABike"
+              class="md-raised md-primary md-lrg">
+              {{ 'list.list-your-bike' | translate }}
+            </md-button>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="lnr-middle-divider"></div>
 
   <div class="content" layout-padding>
     <div class="lnr-section-title mt0" layout="column" layout-align="center center">
@@ -141,6 +153,8 @@
       </p>
     </div>
   </div>
+
+  <div class="lnr-middle-divider"></div>
 
   <footer></footer>
 </md-content>
