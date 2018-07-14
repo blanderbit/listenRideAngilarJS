@@ -77,38 +77,58 @@
       "cafes-bars-content": "If you like vegan and vegetarian food, we recommend a visit at <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> at the Karmeliterplatz. If you prefer the more traditional Austrian kitchen, we highly recommend <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>. Order a traditional Tafelspitz or Wiener Schnitzel and enjoy it outside with the view on the famous Vienna Opera. You’ll have a great night to remember! For finishing touch of the day, it makes sense to walk towards the Danube. On the way you’ll find plenty of interesting bars or just sit outside under the stars at the river."
     }
   },
+  "home": {
+    "insurance": {
+      "header": "Versicherungsschutz für jede Vermietung auf listnride."
+    }
+  },
   "insurance": {
     "main": {
       "title": "Unsere Versicherung schützt Dich.\n<br>\nEgal ob Vermieter oder Mieter.",
-      "description": "Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben. Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es beschädigt zu Dir zurück kommt?\n<br0>\nAlle <i1>lisntride</i> Vermietungen in Deutschland und Österreich sind versichert. Unser Partner hepster ist für Dich da. Telefonisch. Via E-Mail. Einfach. Unbürokratisch.",
-      "logo-description": "In Kooperation mit \n<a href=\\“https://www.hepster.com\\”target=\\“_blank\\“>hepster</a>\n"
+      "description": "Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben. Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es beschädigt zu Dir zurück kommt?\nAlle lisntride Vermietungen in Deutschland und Österreich sind versichert. Unser Partner hepster ist für Dich da. Telefonisch. Via E-Mail. Einfach. Unbürokratisch.",
+      "logo-description": "Unser Versicherungspartner"
+    },
+    "meta": {
+      "title": "Insurance",
+      "_title.comment": "Insurance",
+      "description": "Jeder Miete in Deutschland oder Österreich über listnride ist automatisch versichert. ",
+      "_description.comment": "Versicherung mit jeder listnride Miete"
     },
     "facts": {
       "title": "Das solltest Du wissen!",
       "basic-insurance": {
+        "price": "Enthalten",
+        "price-description": "In jeder Vermietung in Deutschland und Österreich",
         "title": "-Basis Versicherung",
         "description": "<ul>\n<li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung</li>\n<li>Schutz gegen Vandalismus</li>\n<li>Schutz von Elektronik und Akku bei Pedelecs</li>\n<li>Selbstbeteiligung bis zu 250€</li>\n</ul>"
       },
       "premium-insurance": {
         "title": "Premium Versicherung",
-        "description": "<ul><li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung\n <li>Schutz gegen Vandalismus\n <li>Schutz von Elektronik und Akku bei Pedelecs\n <li>Diebstahlschutz\n <li>24/7 Notfallnummer bei Diebstahl oder Beschädigung\n <li>Rücktransport nach Diebstahl oder Beschädigung\n <li>Ersatzrad nach Diebstahl oder Beschädigung\n <li>die Premium Versicherung hat keine Eigenbeteiligung</ul>"
+        "price": "3€",
+        "price-description": "pro Tag",
+        "description": "<ul>\n <li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung\n <li>Schutz gegen Vandalismus\n <li>Schutz von Elektronik und Akku bei Pedelecs\n <li>Diebstahlschutz\n <li>24/7 Notfallnummer bei Diebstahl oder Beschädigung\n <li>Rücktransport nach Diebstahl oder Beschädigung\n <li>Ersatzrad nach Diebstahl oder Beschädigung\n <li>die Premium Versicherung hat keine Eigenbeteiligung</ul>"
       }
     },
     "faqs": {
       "title": "Noch Fragen? Hier findest du Antworten!",
-      "description-lister": "Als Vermieter auf <i>listnride</i> möchtest Du natürlich sicher gehen, dass Du und Dein Rad gegen alle Eventualitäten abgesichert seid. Deshalb ist jede Vermietung in Deutschland und Österreich, die Du über  <li>listnride</li>  tätigst ab sofort automatisch versichert. Mieter, die Dein Rad anfragen, können optional das Premium-Paket buchen, um zusätzliche Services und Garantien zu bekommen. Dieser Service ist für Dich als Vermieter kostenlos.\n<p>\nSolltest Du weitere Fragen haben, kontaktiere uns rund um die Uhr via <a href='\"mailto:contact@listnride.com?subject=Versicherungsfragen“'>href=\"mailto:contact@listnride.com?subject=Versicherungsfragen“>E-Mail</a>",
+      "docs": {
+        "tabname": "Alle Dokumente"
+      },
+      "description-lister": "Als Vermieter auf <i0>listnride</i0> möchtest Du natürlich sicher gehen, dass Du und Dein Rad gegen alle Eventualitäten abgesichert seid. Deshalb ist jede Vermietung in Deutschland und Österreich, die Du über  listnride tätigst ab sofort automatisch versichert. Mieter, die Dein Rad anfragen, können optional das Premium-Paket buchen, um zusätzliche Services und Garantien zu bekommen. Dieser Service ist für Dich als Vermieter kostenlos.<p1>Solltest Du weitere Fragen haben, kontaktiere uns rund um die Uhr via <a href=\"mailto:contact@listnride.com?subject=Versicherungsfragen“>E-Mail</a>.",
       "description-rider": "Wir bieten zwei Versicherungspakete für jedes Rad das Du über <i>lisntride</i> mietest: Die <b>Basisversicherung</b> ist in jeder Vermietung inkludiert, die <b>Premium Versicherung</b> ist optional und erweitert der Versicherungsschutz um zusätzliche Leistungen.<br>Dein Rad und Du sind immer optimal geschützt und Deiner Fahrt steht nichts mehr im weg!",
       "all-docs": "Hier kannst Du den detaillierten <a href=\"INSERT LINK HERE\" target\"_blank\">Versicherungsvertrag</a> ansehen",
       "lister": {
         "question-1": "Wieviel kostet mich die Versicherung?",
+        "tabname": "Für Vermieter",
         "answer-1": "Nichts! Da die Versicherung nur von Mietern abgeschlossen wird, fallen für Vermieter keine zusätzlichen Kosten an. Unser Dankeschön an Dich.<br>Bedenke dass Dein Fahrrad somit für Mieter teurer wird. Die Kosten für die Basisversicherung betragen 0,1% des Versicherungswerts Deines Rades.Wenn Du Dein Rad also bis 1.000€ versichern lässt, dann zahlen Mieter eine Euro je Miettag zusätzlich. Bis 5.000€ Versicherungswert sind es also fünf Euro zusätzlich je Miettag.",
-        "question-2": "Wie hoch versichert  <i>listnride</i> mein Rad maximal?",
+        "question-2": "Wie hoch versichert  listnride mein Rad maximal?",
         "answer-2": "Jedes Fahrrad ist automatisch bis 1.000€ versichert und kann von Dir bis maximal 5.000€ versichert werden . Die tatsächliche Auszahlungssumme bei Verlust orientiert sich am tatsächlichen Kaufpreis und Zeitwert. Sie wird von der <a href=\"https://www.gothaer.de/\" target=\"_blank\">Gothaer Versicherung</a> individuell für Deinen Fall bestimmt.Bedenke bitte bei der Festlegung des Versicherungswerts, dass Mieter sehr wohl eine Versicherungsgebühr zahlen, deren Höhe sich an Deinem gewählten Versicherungswert orientiert. Das heißt, je höher Du das Rad versicherst, desto höher fällt die Versicherungsgebühr für die Mieter aus.",
         "question-3": "Was muss ich machen, wenn es zum Versicherungsfall kommt?",
         "answer-3": "Solltest Du einmal in die Situation kommen, dass Dein Rad während einer Vermietung beschädigt oder gestohlen wird, nimm bitte direkt Kontakt mit \n<a href=\"www.hepster.com\" target=\"_blank\">hepster</a> \nauf:\n<ul> \n<li>\n<a href=\"mailto:schaden@hepster.com?subject=SUBJECT\">schaden@hepster.com</a>\n<li> 0381 - 20 38 88 801</ul>\n<br>\nDie Mitarbeiter von hepster werden Deine Anfrage zügig und kompetent beantworten."
       },
       "rider": {
         "question-1": "Wieviel kostet die Basisversicherung?",
+        "tabname": "Für Mieter",
         "answer-1": "Die Kosten für die Basisversicherung betragen lediglich 0,1% des Versicherungswerts des von Dir gebuchten Rades.<br>Wenn ein Rad also bis 1.000€ Versicherungssumme vom Vermieter angegeben ist, dann zahlst Du genau 1€ (einen Euro) je Miettag zusätzlich.",
         "question-2": "Wieviel kostet die Premium Versicherung?",
         "answer-2": "Drei Euro pro Tag zusätzlich zum Mietpreis und den <i>lisntride</i>-<a href=\"https://www.listnride.com/terms%5C\" target=\"_blank\">Gebühren</a>.",
@@ -152,6 +172,7 @@
       "column-2": "We believe it is important to offer our bicycle minded community a wide range of bicycles, from a crosser to a road bike and from a touring bike to a cargo bike. Together with you, we can not only offer our users the perfect rental bike for the holiday, but also help to find a new bike (purchase)."
     }
   },
+  "insurance.logo.description": "In Kooperation mit hepster",
   "events": {
     "rapha-super-cross": {
       "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
@@ -729,8 +750,8 @@
   },
   "trust-and-safety": {
     "meta-description": "Vertrauen ist das A und O einer Sharing-Community. Wir unterstützten Fairness und Sicherheit durch Verifizierung und Versicherung bei jeder Miete.",
-    "title": "Fahrrad ausleihen auf <i>listnride</i> – sicher und unkompliziert",
-    "description": "<i>listnride</i>\n ist eine Community aus Veloliebhabern und Fahrradenthusiasten. Leute wie Du und ich. Deswegen wollen wir Dir Ärger vom Leib und den Fahrspaß hoch halten.",
+    "title": "Vertrauen & Sicherheit",
+    "description": "listnride ist eine Community aus Veloliebhabern und Fahrradenthusiasten. Leute wie Du und ich. Deswegen wollen wir Dir Ärger vom Leib und den Fahrspaß hoch halten.",
     "header": "Sorgenfrei in die Pedale treten",
     "subheader": "Wir handeln in Deinem Sinne",
     "cover": {
@@ -754,7 +775,7 @@
       "description": "Nach der Miete bewerten Beide Einander mit Sternen. So stärken wir das Vertrauen in die Community und halten die Qualität hoch – damit Du überall hochwertige Räder mieten und vermieten kannst."
     },
     "main": {
-      "header": "Die <i>listnride</i> Versicherung",
+      "header": "Die listnride Versicherung",
       "description": "Mietest Du ein Fahrrad in Deutschland oder Österreich, ist eine Basis-Versicherung bereits in der Miete inkludiert. Mit \n<a href=\\“http://www.hepster.com\\”target=\\“_blank\\“>hepster</a>\n und der \n<a href=\\“http://http://www.gothaer.de\\”target=\\“_blank\\“>Gothaer Gruppe</a>\n haben wir zwei starke Partner an unserer Seite, die Dir im Fall der Fälle helfen.\n<p>\nWähle bei der Buchung Deines Rades einfach das für Dich passende Versicherungspaket und schon kann es losgehen.\n"
     }
   },
@@ -862,7 +883,12 @@
   "seo": {
     "cities-title": "Planning to Travel? Check out more cities:"
   },
-  "trust-and-safety.outro.description": "<i0>listnride</i0> ist Europas größte Bike-Sharing-Plattform.<br1>Wir bieten Veloisten einfachen Zugang zu hochwertigen Rädern.<br2>Jederzeit das perfekte Rad. Einfach online verfügbar.",
+  "trust-and-safety.outro.description": "listnride ist Europas größte Bike-Sharing-Plattform.\n<br1>Wir bieten Veloisten einfachen Zugang zu hochwertigen Rädern.\n<br2>Jederzeit das perfekte Rad. Einfach online verfügbar.",
+  "shared.find-your-bike.main.header": "Finde Dein perfektes Rad",
+  "shared.find-your-bike.main.subheader": "Du planst Deinen nächsten Trip?",
+  "shared.rent-your-bike.main.header": "Vermiete Dein perfektes Rad",
+  "shared.rent-your-bike.main.subheader": "Triff Gleichgesinnte. Verdiene etwas dazu.",
+  "shared.rent-your-bike.main.button": "Liste Dein Rad",
   "rent-a-bike.info-section.covered-title": "Super sorgenfrei.",
   "shared.insurance.homepage.title": "Versicherungsschutz für jede Vermietung auf <i>listnride</i>.",
   "shared.insurance.homepage.description": "Egal ob minimalistisches Fixie oder High-End Triathlonrad: Jede listnride-Vermietung in Deutschland oder Österreich ist versichert! Einfach. Unbürokratisch. Jederzeit."
