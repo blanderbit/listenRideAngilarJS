@@ -2752,7 +2752,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
 .lnr-image-row img {
   max-width: 200px;
-  padding: 15px;
+  padding: 8px;
 }
 
 .lnr-arrow-left {
