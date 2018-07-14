@@ -20,7 +20,7 @@
       </md-option>
     </md-select>
   </md-input-container>
-  
+
   <md-input-container class="md-block">
     <label>2. Select pickup time</label>
     <md-select ng-model="calendar.event.pickupSlotId" ng-change="calendar.event.changePickupSlot()">
@@ -32,7 +32,7 @@
       <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.reserved" ng-if="calendar.day == slot.day && slot.pickupEnabled" value="{{$index}}">
         {{slot.text}}
       </md-option>
-    
+
     </md-select>
   </md-input-container>
 
@@ -47,7 +47,7 @@
       <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.returnDisabled" ng-if="calendar.day == slot.day" value="{{$index}}">
         {{slot.text}}
       </md-option>
-    
+
     </md-select>
   </md-input-container>
 </div> -->
@@ -68,7 +68,7 @@
       </md-option>
     </md-select>
   </md-input-container>
-  
+
   <md-input-container class="md-block">
     <label>2. Select Rental Slot</label>
     <md-select ng-model="calendar.event.pickupSlotId" ng-change="calendar.event.changePickupSlot()">
@@ -80,7 +80,7 @@
       <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.reserved" ng-if="calendar.day == slot.day && slot.pickupEnabled" value="{{$index}}">
         {{slot.text}}
       </md-option>
-    
+
     </md-select>
   </md-input-container>
 
@@ -95,7 +95,7 @@
       <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.returnDisabled" ng-if="calendar.day == slot.day" value="{{$index}}">
         {{slot.text}}
       </md-option>
-    
+
     </md-select>
   </md-input-container>
 </div>
@@ -182,8 +182,8 @@
 
     <div layout="row" layout-align="space-between center">
       <div layout="row">
-        <div ng-if="!calendar.insuranceCountry()">{{ 'shared.lnr-fee' | translate }}</div>
-        <div ng-if="calendar.insuranceCountry()">{{ 'shared.basic-fee' | translate }}</div>
+        <div style="width:170px;" ng-if="!calendar.insuranceCountry()">{{ 'shared.lnr-fee' | translate }}</div>
+        <div style="width:170px;" ng-if="calendar.insuranceCountry()">{{ 'shared.basic-fee' | translate }}</div>
         <div>
           <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
           <md-tooltip md-direction="right"><span translate="calendar.info-service-fee"></span></md-tooltip>
