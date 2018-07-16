@@ -1,7 +1,7 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
-    "basic-fee": "Service Fee includes Basic Insurance",
+    "basic-fee": "Die Servicegebühr beinhaltet die Basis-Versicherung",
     "how-it-works": "Wie funktioniert's",
     "list-a-bike": "Rad vermieten",
     "renting-a-bike": "Rad ausleihen",
@@ -143,12 +143,14 @@
   "insurance": {
     "facts": {
       "basic-insurance": {
-        "price_descr": "in jeder Vermietung in Deutschland &amp; Österreich"
+        "price-description": "in jeder Vermietung in Deutschland und Österreich"
       },
       "premium-insurance": {
-        "price_descr": "pro Tag"
+        "price_description": "pro Tag"
       }
-    }
+    },
+    "meta-title": "Versicherung für jede Miete in Deutschland und Österreich.",
+    "meta-description": "Jeder Miete in Deutschland oder Österreich über listnride ist automatisch versichert."
   },
   "coco-mat.bike": "Coco-mat-Räder",
   "meta": {
@@ -384,7 +386,7 @@
       "premium-insurance": "Premium insurance",
       "premium-insurance-title": "Premium Insurance Protection",
       "premium-insurance-subtitle": "Pick our premium insurance for your ride to be on the safe side",
-      "thats-included": "On top of basic insurance, this is additionally included",
+      "thats-included": "Diese ist, neben der Basis-Versicherung, ebenfalls enthalten",
       "premium-feature-1": "Protection also against theft",
       "premium-feature-2": "Replacement bike after damage, accident or tievery",
       "premium-feature-3": "Return transport of the bike after accident or damage",

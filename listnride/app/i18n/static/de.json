@@ -77,15 +77,25 @@
       "cafes-bars-content": "Wer schon immer mal veganes Essen ausprobieren wollte oder Veganer ist, der sollte das <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest Bistrot</a> am Karmeliterplatz ausprobieren. Neben veganem Essen gibt es auch vegetarische Alternativen. Oder doch traditionell Österreichische Küche? Genieß einen Tafelspitz oder Wiener Schnitzel bei <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>, direkt gegenüber den Wiener Oper, besser geht nicht, oder? Möchte man den Abend mit einem Drink ausklingen lassen, eignet sich der Weg vom Karmeliterplatz Richtung Donau um in die ein oder andere Bar reinzuschnuppern. An der Donau kann man unter freiem Himmel den Abend ausklingen lassen."
     }
   },
+  "_insurance": {
+    "facts": {
+      "basic-insurance": {
+        "price-description": "In jeder Vermietung in Deutschland und Österreich"
+      }
+    }
+  },
   "home": {
     "insurance": {
-      "header": "Versicherungsschutz für jede Vermietung auf listnride."
+      "header": "Versicherungsschutz für jede Vermietung auf listnride"
     }
+  },
+  "shared": {
+    "insurance": "Versicherung"
   },
   "insurance": {
     "main": {
       "title": "Unsere Versicherung schützt Dich.\n<br>\nEgal ob Vermieter oder Mieter.",
-      "description": "Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben. Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es beschädigt zu Dir zurück kommt?\n\nAlle lisntride Vermietungen in Deutschland und Österreich sind versichert. Unser Partner hepster ist für Dich da. Telefonisch. Via E-Mail. Einfach. Unbürokratisch.",
+      "description": "Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben. Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es beschädigt zu Dir zurück kommt?\n<br>\nAlle lisntride Vermietungen in Deutschland und Österreich sind versichert. Unser Partner hepster ist für Dich da. Telefonisch. Via E-Mail. Einfach. Unbürokratisch.",
       "logo-description": "Unser Versicherungspartner"
     },
     "meta": {
@@ -98,7 +108,6 @@
       "title": "Das solltest Du wissen!",
       "basic-insurance": {
         "price": "Enthalten",
-        "price-description": "In jeder Vermietung in Deutschland und Österreich",
         "title": "Basis-Versicherung",
         "description": "<ul><li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung</li>\n<li>Schutz gegen Vandalismus</li>\n<li>Schutz von Elektronik und Akku bei Pedelecs</li>\n<li>Selbstbeteiligung bis zu 250€</li>\n</ul>"
       },
@@ -740,6 +749,7 @@
     "faq-question-8": "WEITERE FRAGEN?",
     "faq-answer-8": "Wir freuen uns über dein Interesse. Wenn du weitere Fragen hast, kontaktiere uns einfach unter <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a> und wir werden uns schnellstmöglich melden."
   },
+  "insurance.faqs.description.lister": "Als Vermieter auf <li>listnride</li> möchtest Du natürlich sicher gehen, dass Du und Dein Rad gegen alle Eventualitäten abgesichert sind. Deshalb ist jede Vermietung, die Du über <li>listnride</li> tätigst ab sofort automatisch versichert. Mieter, die Dein Rad Anfragen, können das Premium Paket optional buchen, um zusätzliche Services und Garantien zu bekommen. Dieser Service ist für Dich als Vermieter kostenlos. Solltest Du weitere Fragen haben, kontaktiere uns rund um die Uhr via E-Mail.",
   "terms-and-conditions": {
     "title": "Nutzungsbedingungen",
     "header": "List and Ride Allgemeine Geschäftsbedingungen",
@@ -884,6 +894,8 @@
   "trust-and-safety.outro.description": "listnride ist Europas größte Bike-Sharing-Plattform.\n<br1>Wir bieten Veloisten einfachen Zugang zu hochwertigen Rädern.\n<br2>Jederzeit das perfekte Rad. Einfach online verfügbar.",
   "shared.find-your-bike.main.header": "Finde Dein perfektes Rad",
   "shared.find-your-bike.main.subheader": "Du planst Deinen nächsten Trip?",
+  "shared.find-you-bike.main.button": "Finde Dein Rad",
+  "_shared.find-you-bike.main.button.comment": "Button",
   "shared.rent-your-bike.main.header": "Vermiete Dein perfektes Rad",
   "shared.rent-your-bike.main.subheader": "Triff Gleichgesinnte. Verdiene etwas dazu.",
   "shared.rent-your-bike.main.button": "Liste Dein Rad",

@@ -143,12 +143,14 @@
   "insurance": {
     "facts": {
       "basic-insurance": {
-        "price_descr": "in jeder Vermietung in Deutschland &amp; Österreich"
+        "price-description": "included in every rental in Germany and Austria"
       },
       "premium-insurance": {
-        "price_descr": "pro Tag"
+        "price_description": "per Day"
       }
-    }
+    },
+    "meta-title": "Insurance for every rental in Germany and Austria",
+    "meta-description": "Every rental in Germany and Austria through listnride is automatically insured."
   },
   "coco-mat.bike": "Coco-mat bikes",
   "meta": {
