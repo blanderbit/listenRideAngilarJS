@@ -68,6 +68,13 @@ angular.module('message',[]).component('message', {
         // return message.status != null && message.status != 7 && (!message.request.rideChat && message.status != 6);
       };
 
+      message.showReturn = function () {
+        return !message.request.rideChat &&
+          message.status === 3 &&
+          message.request.returnable &&
+          moment().diff(message.request.start_date) > 0
+      };
+
       // TODO: Unfortunately doublecoded in message.component and requests.component
       message.updateStatus = function(statusId) {
         message.buttonClicked = true;
