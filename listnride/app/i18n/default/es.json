@@ -125,6 +125,16 @@
     "today": "Hoy",
     "yesterday": "Ayer"
   },
+  "insurance": {
+    "facts": {
+      "basic-insurance": {
+        "price-description": "incluido en cada alquiler en Alemania y Austria"
+      },
+      "premium-insurance": {
+        "price_description": "por día"
+      }
+    }
+  },
   "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {

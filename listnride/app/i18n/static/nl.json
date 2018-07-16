@@ -151,6 +151,7 @@
       "column-2": "Wij vinden het belangrijk onze fiets-enthousiaste gemeenschap een breed scala aan fietsen aan te bieden, van een crosser tot een racefiets en van een Omafiets tot een bakfiets. Samen met jou kunnen we onze gebruikers niet alleen de perfecte huurfiets voor de vakantie aanbieden, maar ook helpen om een ​​nieuwe (koop) fiets te vinden."
     }
   },
+  "insurance.logo.description": "In samenwerking met hepster",
   "events": {
     "rapha-super-cross": {
       "text": "De Rapha Super Cross is weer terug in München, voor het derde jaar op rij. Indien je er graag bij wil zijn, maar geen geschickte fiets hebt, kann je via listnride een passende fiets huren. De listnride bike sharing community biedt verschillende cyclocrossfietsen te huur aan. De fietsen kunnen voor het evenement bij de verschillende aanbieders worden aangevraagd en geboekt. De overdracht wordt direct met de verhuurder afgesproken. Indien je een fiets hebt die niet benut wordt, kan je deze gewoon aanbieden om daarmee wat geld te verdienen ein interessante mensen te leren kennen, die aan het evenement deelnemen. Sluit je aan bij de groeiende Community!"
@@ -823,5 +824,7 @@
   },
   "seo": {
     "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden"
-  }
+  },
+  "shared.find-you-bike.main.button": "Fiets vinden",
+  "_shared.find-you-bike.main.button.comment": "Button"
 }

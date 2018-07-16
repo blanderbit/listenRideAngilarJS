@@ -77,15 +77,25 @@
       "cafes-bars-content": "If you like vegan and vegetarian food, we recommend a visit at <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> at the Karmeliterplatz. If you prefer the more traditional Austrian kitchen, we highly recommend <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>. Order a traditional Tafelspitz or Wiener Schnitzel and enjoy it outside with the view on the famous Vienna Opera. You’ll have a great night to remember! For finishing touch of the day, it makes sense to walk towards the Danube. On the way you’ll find plenty of interesting bars or just sit outside under the stars at the river."
     }
   },
+  "_insurance": {
+    "facts": {
+      "basic-insurance": {
+        "price-description": "In jeder Vermietung in Deutschland und Österreich"
+      }
+    }
+  },
   "home": {
     "insurance": {
       "header": "Versicherungsschutz für jede Vermietung auf listnride."
     }
   },
+  "shared": {
+    "insurance": "Insurance"
+  },
   "insurance": {
     "main": {
       "title": "Unsere Versicherung schützt Dich.\n<br>\nEgal ob Vermieter oder Mieter.",
-      "description": "Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben. Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es beschädigt zu Dir zurück kommt?\n\nAlle lisntride Vermietungen in Deutschland und Österreich sind versichert. Unser Partner hepster ist für Dich da. Telefonisch. Via E-Mail. Einfach. Unbürokratisch.",
+      "description": "Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben. Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es beschädigt zu Dir zurück kommt?\n<br>\nAlle lisntride Vermietungen in Deutschland und Österreich sind versichert. Unser Partner hepster ist für Dich da. Telefonisch. Via E-Mail. Einfach. Unbürokratisch.",
       "logo-description": "Unser Versicherungspartner"
     },
     "meta": {
@@ -98,7 +108,6 @@
       "title": "Das solltest Du wissen!",
       "basic-insurance": {
         "price": "Enthalten",
-        "price-description": "In jeder Vermietung in Deutschland und Österreich",
         "title": "Basis Versicherung",
         "description": "<ul>\n<li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung</li>\n<li>Schutz gegen Vandalismus</li>\n<li>Schutz von Elektronik und Akku bei Pedelecs</li>\n<li>Selbstbeteiligung bis zu 250€</li>\n</ul>"
       },
@@ -172,7 +181,7 @@
       "column-2": "We believe it is important to offer our bicycle minded community a wide range of bicycles, from a crosser to a road bike and from a touring bike to a cargo bike. Together with you, we can not only offer our users the perfect rental bike for the holiday, but also help to find a new bike (purchase)."
     }
   },
-  "insurance.logo.description": "In Kooperation mit hepster",
+  "insurance.logo.description": "In cooperation with hepster",
   "events": {
     "rapha-super-cross": {
       "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
@@ -742,6 +751,7 @@
     "faq-question-8": "FURTHER QUESTIONS?",
     "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
   },
+  "insurance.faqs.description.lister": "Als Vermieter auf \n<li>listnride</li>\n möchtest Du natürlich sicher gehen, dass Du und Dein Rad gegen alle Eventualitäten abgesichert sind. Deshalb ist jede Vermietung, die Du über \n<li>listnride</li>\n tätigst ab sofort automatisch versichert. Mieter, die Dein Rad Anfragen, können das Premium Paket optional buchen, um zusätzliche Services und Garantien zu bekommen. Dieser Service ist für Dich als Vermieter kostenlos. Solltest Du weitere Fragen haben, kontaktiere uns rund um die Uhr via E-Mail.",
   "terms-and-conditions": {
     "title": "Terms and Conditions",
     "header": "List and Ride General Terms and Conditions of Business",
@@ -886,6 +896,8 @@
   "trust-and-safety.outro.description": "listnride ist Europas größte Bike-Sharing-Plattform.\n<br1>Wir bieten Veloisten einfachen Zugang zu hochwertigen Rädern.\n<br2>Jederzeit das perfekte Rad. Einfach online verfügbar.",
   "shared.find-your-bike.main.header": "Finde Dein perfektes Rad",
   "shared.find-your-bike.main.subheader": "Du planst Deinen nächsten Trip?",
+  "shared.find-you-bike.main.button": "Find your bike",
+  "_shared.find-you-bike.main.button.comment": "Button",
   "shared.rent-your-bike.main.header": "Vermiete Dein perfektes Rad",
   "shared.rent-your-bike.main.subheader": "Triff Gleichgesinnte. Verdiene etwas dazu.",
   "shared.rent-your-bike.main.button": "Liste Dein Rad",

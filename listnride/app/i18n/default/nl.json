@@ -124,6 +124,16 @@
     "today": "Vandaag",
     "yesterday": "Gisteren"
   },
+  "insurance": {
+    "facts": {
+      "basic-insurance": {
+        "price-description": "inbegrepen in elke verhuur in Duitsland en Oostenrijk"
+      },
+      "premium-insurance": {
+        "price_description": "pro dag"
+      }
+    }
+  },
   "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
