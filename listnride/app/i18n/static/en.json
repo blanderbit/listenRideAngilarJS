@@ -99,7 +99,7 @@
       "basic-insurance": {
         "price": "Enthalten",
         "price-description": "In jeder Vermietung in Deutschland und Österreich",
-        "title": "-Basis Versicherung",
+        "title": "Basis Versicherung",
         "description": "<ul>\n<li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung</li>\n<li>Schutz gegen Vandalismus</li>\n<li>Schutz von Elektronik und Akku bei Pedelecs</li>\n<li>Selbstbeteiligung bis zu 250€</li>\n</ul>"
       },
       "premium-insurance": {
