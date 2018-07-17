@@ -4,195 +4,259 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
 <url>
   <loc>https://www.listnride.de/</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/listing-a-bike</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/how-it-works</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/renting-a-bike</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/trust-and-safety</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/help</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/rent-ampler-bikes</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/rent-muli-bikes</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/rent-brompton-bikes</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/herbstausfahrt</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/rent-bonvelo-bikes</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/ebike-verleih-berlin</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/rennrad-verleih-berlin</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/ebike-verleih-muenchen</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/rennrad-verleih-muenchen</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/ebike-verleih-hamburg</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/rennrad-verleih-hamburg</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/ebike-verleih-wien</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/rennrad-verleih-wien</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/mountainbike-verleih-wien</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/rennrad-verleih-mallorca</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.de/mountainbike-verleih-mallorca</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.de/berlin</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.de/munich</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.de/amsterdam</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.de/vienna</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://www.listnride.de/search/Berlin</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <loc>https://www.listnride.de/mallorca</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://www.listnride.de/search/Munich</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <loc>https://www.listnride.de/lanzarothe</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://www.listnride.de/search/Amsterdam</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <loc>https://www.listnride.de/sylt</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://www.listnride.de/search/Vienna</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <loc>https://www.listnride.de/usedom</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://www.listnride.de/bikeshop</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <loc>https://www.listnride.de/listing-a-bike</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://www.listnride.de/about</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <loc>https://www.listnride.de/how-it-works</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://www.listnride.de/press</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <loc>https://www.listnride.de/renting-a-bike</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://www.listnride.de/jobs</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <loc>https://www.listnride.de/trust-and-safety</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://www.listnride.de/invite-friends</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <loc>https://www.listnride.de/help</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.de/terms</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.de/privacy</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.de/imprint</loc>
-  <lastmod>2017-09-01T14:30:54+00:00</lastmod>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
+<url>
+  <loc>https://www.listnride.de/about</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/press</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/jobs</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/invite-friends</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+
+
+<url>
+  <loc>https://www.listnride.de/brands/ampler</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/brands/vanmoof</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/brands/ampler</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/brands/moeve</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/brands/rethink</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/brands/votec</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/brands/vello</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/brands/bonvelo</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/brands/motoparilla</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/brands/brompton</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/brands/muli</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/brands/cocomat</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+
+
+<url>
+  <loc>https://www.listnride.de/rapha-super-cross</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/in-velo-veritas</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/cyclassics-hamburg</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/triathlon-hamburg</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/riderman-rothaus</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/velothon-bikerental</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/capeargus</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/supercross-munich</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/grand-depart</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/velothon-coffeespin</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/constance-spin</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/herbstausfahrt</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/berliner-fahrradschau</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/mcbw</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/cyclingworld</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/pushnpost</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://www.listnride.de/kuchenundraketen</loc>
+  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+
 </urlset>
