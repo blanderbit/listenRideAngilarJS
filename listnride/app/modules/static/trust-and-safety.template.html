@@ -44,19 +44,20 @@
 
   <div class="lnr-middle-divider"></div>
 
+  <!-- BANNER -->
   <div class="lnr-bg-gray section">
     <div class="content insurance__top">
       <div layout="column" layout-gt-sm="row" class="insurance-banner">
         <div flex="35" class="insurance-banner__text">
           <div layout="column" layout-align-xs="center center" layout-align-sm="center center">
             <md-icon md-svg-src="app/assets/ui_icons/icn_insurance-gray.svg" class="lnr-icn-mlrg lnr-no-margin"></md-icon>
-            <h1 class="md-headline lnr-sm-text-center lnr-margin-top-double">
+            <h2 class="md-headline lnr-sm-text-center lnr-margin-top-double">
               {{ 'trust-and-safety.main.header' | translate }}
-            </h1>
+            </h2>
           </div>
           <div class="md-body-1 lnr-sm-text-center" layout="column">
             <p translate="trust-and-safety.main.description"></p>
-            <a ui-sref="insurance" target="_blank">{{ 'shared.learn-more' | translate }}</a>
+            <div><a ui-sref="insurance">{{ 'shared.learn-more' | translate }}</a></div>
           </div>
         </div>
         <div flex="65" flex-order="-1" flex-order-gt-sm="1">
@@ -71,14 +72,15 @@
       </div>
     </div>
   </div>
+  <!-- END BANNER -->
 
   <div hide-gt-sm class="lnr-middle-divider"></div>
 
   <div class="content" layout-padding>
-    <div class="lnr-section-title" layout="column" layout-align="center center">
+    <div class="lnr-section-title lnr-section-title--full" layout="column" layout-align="center center">
       <div class="md-headline" translate="trust-and-safety.outro.description"></div>
     </div>
-    <p class="lnr-center md-subhead">{{ 'shared.press.title' | translate }}</p>
+    <p class="lnr-center md-subhead" style="margin-top: 80px;">{{ 'shared.press.title' | translate }}</p>
     <div class="lnr-image-row" layout="row" layout-xs="column" layout-align="space-between center" layout-wrap="wrap">
       <div layout="row" layout-align="none center">
         <img src="app/assets/ui_images/static/tv_partners/002.png" alt="partner-logo-2">
