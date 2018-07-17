@@ -129,9 +129,6 @@
     "facts": {
       "basic-insurance": {
         "price-description": "incluido en cada alquiler en Alemania y Austria"
-      },
-      "premium-insurance": {
-        "price_description": "por día"
       }
     }
   },
@@ -278,8 +275,7 @@
       "meta-description": "Los términos y condiciones de la comunidad para compartir bicis de listnride se aplican al uso de la plataforma en línea."
     },
     "trust-and-safety": {
-      "meta-title": "Alquiler de bicicletas seguro: listnride te respalda",
-      "meta-description": "La confianza es la base de una comunidad de intercambio. Promovemos la equidad y la seguridad mediante la verificación de la identidad de nuestros usuarios y ofreciendo una garantía de los anunciantes."
+      "meta-title": "Alquiler de bicicletas seguro: listnride te respalda"
     },
     "how-it-works": {
       "meta-title": "Compartir bicis es más fácil",
@@ -700,8 +696,8 @@
     "info-subtotal": "Este es el precio habitual diario<br>veces la cantidad de días que quieras<br>alquilar la bici.",
     "info-discount": "Descuento medio diario que <br>obtienes por día al alquilar <br>por un período de tiempo más largo.",
     "info-service-fee": "La cuota de servicio es<br>utilizada para proporcionar<br>a listnride. Incluye el IVA.",
-    "info": "En el calendario anterior, haz clic primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla.",
-    "info-without-calendar": "En el calendario anterior, haz clic primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla."
+    "info": "En el calendario anterior, selecciona primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla.",
+    "info-without-calendar": "En el calendario anterior, selecciona primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla."
   },
   "list": {
     "edit-bike": "Editar bici",
@@ -941,7 +937,8 @@
       "price-title": "Súper precio",
       "price-content": "Las bicis que figuran en nuestra plataforma las alquilan propietarios particulares, distribuidores especializados y servicios de alquiler. ¿Qué encontrarás aquí? La bicicleta perfecta a buen precio.",
       "easy-title": "Súper fácil.",
-      "easy-content": "Encuentra y reserva tu bici de alquiler antes de irte de viaje o sobre la marcha usando nuestro sitio web móvil."
+      "easy-content": "Encuentra y reserva tu bici de alquiler antes de irte de viaje o sobre la marcha usando nuestro sitio web móvil.",
+      "covered-content": "Si alquila una bicicleta en Alemania o Austria, el seguro está incluido en el alquiler. Con\n<a href = \\\"http: //www.hepster.com \\\"target = \\\"_blank \\\" >hepster </a>\ny el\n<a href = \\\"http: //www.gothaer.de\" target = \\\"_blank \\\" >Grupo de Gothaer </a>\ntenemos dos socios fuertes a nuestro lado para ayudarlo en caso de emergencia."
     },
     "search-section": {
       "header": "¿Dónde te gustaría ir?",

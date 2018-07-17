@@ -125,33 +125,31 @@
     "today": "Today",
     "yesterday": "Yesterday",
     "press": {
-      "title": "In den Medien:",
+      "title": "Known from TV & Print",
       "logo-1": "Insert Logo here",
       "logo-2": "Insert Logo here",
       "logo-3": "Insert Logo here",
       "logo-4": "Insert Logo here"
     },
     "find-your-bike": {
-      "header": "Finde Dein perfektes Rad",
-      "subheader": "Du planst Deinen nächsten Trip?",
-      "button": "Finde Dein Rad"
+      "header": "Find your perfect bike",
+      "subheader": "Planning your next trip?",
+      "button": "Find your bike"
     },
     "rent-your-bike": {
-      "header": "Liste Dein Rad"
+      "header": "Rent your bike"
     }
   },
   "insurance": {
     "facts": {
       "basic-insurance": {
         "price-description": "included in every rental in Germany and Austria"
-      },
-      "premium-insurance": {
-        "price_description": "per Day"
       }
     },
     "meta-title": "Insurance for every rental in Germany and Austria",
     "meta-description": "Every rental in Germany and Austria through listnride is automatically insured."
   },
+  "forms.update-password": "Update password",
   "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
@@ -296,8 +294,7 @@
       "meta-description": "The Terms and Conditions of the Bike-Sharing-Community listnride apply to the use of the online platform."
     },
     "trust-and-safety": {
-      "meta-title": "Fahrrad ausleihen mit Versicherung",
-      "meta-description": "Vertrauen ist das A und O einer Sharing-Community. Wir unterstützten Fairness und Sicherheit durch Verifizierung und Versicherung bei jeder Miete."
+      "meta-title": "Bicycle rental with insurance"
     },
     "how-it-works": {
       "meta-title": "Bike sharing made easy",
@@ -676,7 +673,7 @@
   "home": {
     "landing-section-header": "The perfect bike. Simply rent it.",
     "insurance": {
-      "description": "Egal ob minimalistisches Fixie oder High-End Triathlonrad: Jede listnride-Vermietung in Deutschland oder Österreich ist versichert! Einfach. Unbürokratisch. Jederzeit."
+      "description": "No matter if minimalistic fixie or high-end triathlon bike: Every listnride rental in Germany or Austria is insured! Simple. Unbureaucratically. Anytime."
     },
     "landing-section-subheader": "Join listnride and find the bike that is right for you.",
     "featured-bikes-header": "Bike Rental: Our Community’s Favorites",
@@ -724,8 +721,8 @@
     "info-subtotal": "This is the regular daily price<br>times the amount of days you want<br>to rent the bike.",
     "info-discount": "Average daily discount you<br>get per day by renting out<br>for a longer period of time.",
     "info-service-fee": "The service fee is<br>used for providing<br>listnride. It includes VAT.",
-    "info": "In the calendar above click first<br>on the day you wish to rent<br>out the bike, and second on<br>the day you want to return it.",
-    "info-without-calendar": "In the calendar above click first<br>on the day you wish to rent<br>out the bike, and second on<br>the day you want to return it."
+    "info": "In the calendar, select first<br> the day you wish to rent<br>out the bike, and second <br>the day you want to return it.",
+    "info-without-calendar": "In the calendar, select first<br0> the day you wish to rent<br1>out the bike, and second <br2>the day you want to return it."
   },
   "list": {
     "edit-bike": "Edit Bike",
@@ -802,14 +799,14 @@
     "insurance": {
       "label": "Insurance",
       "info": "Information about insurance",
-      "hint-part-1": "Your bike is insured whenever it is rented. In order to provide you with the right protection it's neccessary that we know the value of your bike.",
+      "hint-part-1": "Your bike is insured whenever it is rented. In order to provide you with the right protection it's neccessary that you enter the value of your bike.",
       "hint-part-2": "Please note that your have to provide proof of your bike's value in case of any claim ",
       "hint-link-label": "Learn more about insurance",
       "header": "Please tell us the value of your bike",
       "tip": "Additional fee for the rider is {{fee}} per day",
       "up-to-value": "Up to {{value}}",
       "select-value": "Please select your bike value",
-      "no-insurance": "Sorry, your country is not yet covered by insurance.\nInsurance only applies to rentals in Germany and Austria."
+      "no-insurance": "Sorry, your country is not yet covered by our insurance.\nTheiInsurance only applies to rentals in Germany and Austria."
     },
     "pricing": {
       "info": "Your daily price is your base price for 1 day.",
@@ -967,7 +964,7 @@
       "price-content": "The bikes listed on our platform are rented out by private owners as well as specialist dealers and rental services. What’s in it for you: the perfect bike at good value for money.",
       "easy-title": "Super easy.",
       "easy-content": "Find and book your rental bike before going on a trip or simply on the go by using our mobile website.",
-      "covered-content": "Mietest Du ein Fahrrad in Deutschland oder Österreich, ist eine Versicherung in der Miete inkludiert. Mit \n<a href=\\“http://www.hepster.com\\”target=\\“_blank\\“>hepster</a>\n und der \n<a href=\\“http://www.gothaer.de\\”target=\\“_blank\\“>Gothaer-Gruppe</a>\n haben wir zwei starke Partner an unserer Seite, die Dir im Fall der Fälle helfen.\nshared.learn-more\n<a href=\\“www.listnride.de/insurance\\”target=\\“_blank\\“>Mehr erfahren</a>\n"
+      "covered-content": "If you rent a bike in Germany or Austria, insurance is included in the rent. With \n<a href=\\\"http://www.hepster.com\\\"target=\\\"_blank\\\">hepster</a>\nand the \n<a href=\\\"http://www.gothaer.de\\\"target=\\\"_blank\\ \">Gothaer Group</a> \nwe have two strong partners at our side to help you in case of emergency."
     },
     "search-section": {
       "header": "Where would you like to go?",
@@ -998,8 +995,8 @@
       "precautions-content": "You want to rent out your bike – but not to just anybody. That’s why we verify the identity of all our users for you. And our user ratings help you find out whether they play fair in the bike sharing scene.",
       "control-title": "You stay in control.",
       "control-content": "You decide the daily or weekly rate for your bike(s). It’s completely up to you whether you want to accept a rental request or simply reject it because you can’t or don’t want to lend someone your bike at the moment.",
-      "covered-title": "We’ve got you covered.",
-      "covered-content": "In case of damage or theft, we’re right there by your side. And, if necessary, the listnride lister guarantee worth EUR 5,000 has got you covered.",
+      "covered-title": "You're covered.",
+      "covered-content": "In case of damage and or theft, our insurance will help you. With \n<a href=\\\"http://www.hepster.com\\\"target=\\\"_blank\\\">hepster</a>\n and the \n<a href=\\\"http://www.gothaer.de\\\"target=\\\"_blank\\\">Gothaer Group</a>\n we have two strong partners at our side.",
       "help-title": "We’re there to help.",
       "help-content": "If you and a renter (rider) encounter a problem and can’t find a solution, we’re there for you – to support you or even resolve the entire issue."
     },

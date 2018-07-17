@@ -125,7 +125,7 @@
     "today": "Heute",
     "yesterday": "Gestern",
     "press": {
-      "title": "In den Medien:",
+      "title": "Bekannt aus Zeitung und TV",
       "logo-1": "Insert Logo here",
       "logo-2": "Insert Logo here",
       "logo-3": "Insert Logo here",
@@ -144,9 +144,6 @@
     "facts": {
       "basic-insurance": {
         "price-description": "in jeder Vermietung in Deutschland und Österreich"
-      },
-      "premium-insurance": {
-        "price_description": "pro Tag"
       }
     },
     "meta-title": "Versicherung für jede Miete in Deutschland und Österreich.",
@@ -296,8 +293,7 @@
       "meta-description": "Die Nutzungsbedingungen der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Online-Plattform."
     },
     "trust-and-safety": {
-      "meta-title": "Fahrrad ausleihen mit Versicherung",
-      "meta-description": "Vertrauen ist das A und O einer Sharing-Community. Wir unterstützten Fairness und Sicherheit durch Verifizierung und Versicherung bei jeder Miete."
+      "meta-title": "Fahrrad ausleihen mit Versicherung"
     },
     "how-it-works": {
       "meta-title": "Unkompliziertes Bike-Sharing",
@@ -313,7 +309,7 @@
     },
     "imprint": {
       "meta-title": "listnride Impressum",
-      "meta-description": "Miete dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
+      "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
     },
     "privacy": {
       "meta-title": "Datenschutzerklärung von listnride",
@@ -690,7 +686,7 @@
     "newsletter-header": "Erhalte unseren Newsletter und bleib informiert",
     "newsletter-subheader": "Erhalte unseren handgefertigten Newsletter über neue Räder, Touren und Gutscheine für deine Fahrten.",
     "meta-title": "listnride - Die Bike-Sharing-Community",
-    "meta-description": "Miete dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach deinem Stil und Einsatzzweck."
+    "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach deinem Stil und Einsatzzweck."
   },
   "autocomplete": {
     "default-placeholder": "Wo willst du ein Rad ausleihen?"
@@ -724,8 +720,8 @@
     "info-subtotal": "Dies ist der Tagespreis für die<br>Anzahl der Tage, die du das<br>Fahrrad mieten möchten.",
     "info-discount": "Durchschnittlicher Tagesrabatt<br>pro Tag bei Miete für<br>einen längeren Zeitraum.",
     "info-service-fee": "Die Servicegebühr hilft uns,<br>listnride zu betreiben. Sie enthält <br>die Umsatzsteuer.",
-    "info": "Im Kalender oben zuerst auf den Tag klicken,<br>an dem du das Fahrrad mieten möchtest,<br>und dann auf den Tag, an dem<br>du es zurückgeben magst.",
-    "info-without-calendar": "Im Kalender oben zuerst auf den Tag klicken,<br>an dem du das Fahrrad mieten möchtest,<br>und dann auf den Tag, an dem<br>du es zurückgeben magst."
+    "info": "Im Kalender erst den Tag auswählen,<br>an dem du das Fahrrad mieten möchtest,<br>und dann den Tag, an dem<br>du es zurückgeben magst.",
+    "info-without-calendar": "Im Kalender erst den Tag auswählen,<br0>an dem du das Fahrrad mieten möchtest,<br1>und dann den Tag, an dem<br2>du es zurückgeben magst."
   },
   "list": {
     "edit-bike": "Rad bearbeiten",
@@ -899,7 +895,7 @@
         "pedelec": "Pedelec",
         "e-bike": "E-Bike",
         "cargo-bike": "Lastenrad",
-        "bike-trailer": "Fahrradanhänger",
+        "bike-trailer": "Radanhänger",
         "bike-child-seat": "Kinderfahrradsitz",
         "bike-car-rack": "Fahrradträger Auto",
         "bike-travel-bag": "Fahrrad-Transporttasche"
@@ -967,7 +963,7 @@
       "price-content": "Bei uns vermieten Privatpersonen genauso wie der professionelle Händler und Fahrradverleih. Dein Vorteil: Das perfekte Fahrrad zu einem fairen Preis-Leistungs-Verhältnis.",
       "easy-title": "Super einfach.",
       "easy-content": "Finde und buche Dein Leihfahrrad bevor Du auf Reisen gehst – oder einfach von unterwegs im Netz mit unserer mobilen Webseite.",
-      "covered-content": "Mietest Du ein Fahrrad in Deutschland oder Österreich, ist eine Versicherung in der Miete inkludiert. Mit \n<a href=\\“http://www.hepster.com\\”target=\\“_blank\\“>hepster</a>\n und der \n<a href=\\“http://www.gothaer.de\\”target=\\“_blank\\“>Gothaer-Gruppe</a>\n haben wir zwei starke Partner an unserer Seite, die Dir im Fall der Fälle helfen.\nshared.learn-more\n<a href=\\“www.listnride.de/insurance\\”target=\\“_blank\\“>Mehr erfahren</a>\n"
+      "covered-content": "Mietest Du ein Fahrrad in Deutschland oder Österreich, ist eine Versicherung in der Miete inkludiert. Mit \n<a href=\\“http://www.hepster.com\\”target=\\“_blank\\“>hepster</a>\n und der <a href=\\“http://www.gothaer.de\\”target=\\“_blank\\“>Gothaer-Gruppe</a>\n haben wir zwei starke Partner an unserer Seite, die Dir im Fall der Fälle helfen.\nshared.learn-more<a href=\\“www.listnride.de/insurance\\”target=\\“_blank\\“>Mehr erfahren</a>"
     },
     "search-section": {
       "header": "Wo solls hingehen?",
@@ -999,7 +995,7 @@
       "control-title": "Du behältst die Kontrolle.",
       "control-content": "Du bestimmst die individuelle Tages- oder Wochenrate. Dir steht es komplett frei, Anfragen anzunehmen oder auch ganz einfach abzulehnen, wenn Du Dein Fahrrad nicht verleihen willst.",
       "covered-title": "Du bist abgesichert.",
-      "covered-content": "Im Schadensfall hilft Dir unsere Versicherung weiter. Mit \nhepster und der Gothaer-Gruppe haben wir zwei starke Partner an unserer Seite.",
+      "covered-content": "Im Schadensfall und Diebstahl wird Dir unsere Versicherung helfen. Mit\n<a href=\\\"http://www.hepster.com\\\"target=\\\"_blank\\\">hepster</a>\n und der\n<a href=\\\"http://www.gothaer.de\\\"target=\\\"_blank\\\">Gothaer Gruppe</a>\n haben wir zwei starke Partner an unserer Seite.",
       "help-title": "Wir lassen Dich nicht alleine.",
       "help-content": "Solltest Du mit einem Rider (Mieter) ein Problem nicht direkt lösen können, sind wir für Dich da – um Dich zu unterstützen oder die Angelegenheit komplett zu übernehmen."
     },
