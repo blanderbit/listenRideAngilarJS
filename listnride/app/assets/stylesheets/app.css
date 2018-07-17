@@ -277,6 +277,10 @@ input::-webkit-inner-spin-button {
 /* FRAMEWORK
 /*-----------------------------------------------------------------------------------*/
 
+.md-headline {
+  line-height: 38px;
+}
+
 md-icon {
   margin: auto;
   background-repeat: no-repeat no-repeat;
@@ -979,6 +983,10 @@ footer .lnr-link {
   max-width: 800px;
   margin: 20px auto;
   padding: 0 8px;
+}
+
+.lnr-section-title--full {
+  max-width: none;
 }
 
 #hero-shot {
@@ -2670,6 +2678,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 /* INSURANCE */
 
 .insurance__top {
+  margin-top: 40px;
   margin-bottom: 100px;
 }
 
@@ -2696,6 +2705,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   margin: auto;
   max-width: 100%;
   height: 61px;
+  margin-top: 10px;
 }
 
 .insurance__table {
@@ -2760,8 +2770,13 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   display: -webkit-flex;
   display: flex;
   align-items: top;
-  padding: 10px 0;
+  padding: 10px 0 14px;
   border-bottom: 1px solid #e1e1e1;
+}
+
+.lnr-arrow-left:first-child {
+  padding-top: 0;
+  margin-top: 0;
 }
 
 .lnr-arrow-left + div {
@@ -2798,16 +2813,21 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 .accordion__text {
   padding-left: 25px;
   margin-top: 0;
+  padding-bottom: 10px;
+}
+
+.accordion__text ul {
+  padding-left: 1px;
+  list-style-position: inside;
 }
 
 .insurance-banner {
   position: relative;
-  padding: 0 8px;
 }
 
 .insurance-banner > div {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .insurance-banner__text {
@@ -2900,6 +2920,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .insurance-banner .insurance-banner__text {
     padding: 30px 16px 60px;
+  }
+
+  .lnr-image-row img {
+    margin-bottom: 30px;
   }
 }
 

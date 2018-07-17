@@ -136,8 +136,8 @@
           </md-list>
         </div>
 
-        <div layout="column">
-          <md-list>
+        <div layout="row" layout-gt-sm="column" flex-xs="100">
+          <md-list flex-xs="50">
             <md-subheader class="md-no-sticky">{{ 'footer.language' | translate }}</md-subheader>
             <md-menu md-position-mode="target bottom">
               <md-button class="lnr-btn-lang md-lined md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">{{ footer.language }}</md-button>
@@ -159,13 +159,14 @@
                 </md-menu-item>
               </md-menu-content>
             </md-menu>
-
+          </md-list>
+          <md-list flex-xs="50">
             <div id="iOSApp" class="lnr-link lnr-btn-ios" ng-hide="true">
               <a href="https://itunes.apple.com/de/app/list-n-ride/id992114091?l" target="_blank">
                 <img src="app/assets/ui_images/app_store.png">
               </a>
             </div>
-            <div id="insurance" class="lnr-link lnr-btn-ios" ng-hide="false">
+            <div id="insurance" class="lnr-btn-ios" ng-hide="false">
               <md-subheader class="md-no-sticky">{{ 'footer.insurance-partner' | translate }}</md-subheader>
               &nbsp;&nbsp;<img ng-src="app/assets/ui_images/static/lnr-insurance-gothaer-white.png" flex="60">
             </div>
