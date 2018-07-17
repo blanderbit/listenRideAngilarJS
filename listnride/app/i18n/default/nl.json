@@ -122,17 +122,26 @@
     "clear": "Clear",
     "clear-all": "Clear All",
     "today": "Vandaag",
-    "yesterday": "Gisteren"
+    "yesterday": "Gisteren",
+    "press": {
+      "title": "Bekend van TV en print"
+    },
+    "find-your-bike": {
+      "header": "Vind de perfecte fiets",
+      "subheader": "Plan je je volgende trip?",
+      "button": "Fiets vinden"
+    },
+    "rent-your-bike": {
+      "header": "Verhuur je fiets!"
+    }
   },
   "insurance": {
     "facts": {
       "basic-insurance": {
         "price-description": "inbegrepen in elke verhuur in Duitsland en Oostenrijk"
-      },
-      "premium-insurance": {
-        "price_description": "pro dag"
       }
-    }
+    },
+    "meta-description": "Elke fietshuur in Duitsland en Oostenrijk zijn automatisch via listnride verzekerd. "
   },
   "coco-mat.bike": "Coco-mat bikes",
   "meta": {
@@ -278,8 +287,7 @@
       "meta-description": "Het privacybeleid van de Bike Sharing-Community listnride is van toepassing op het gebruik van het online platform."
     },
     "trust-and-safety": {
-      "meta-title": "Bike hire made safe – listnride has your back",
-      "meta-description": "Trust is the be-all and end-all in a sharing community. We promote fairness and safety by verifying our users’ identities and offering a lister guarantee."
+      "meta-title": "Fietsverhuur met verzekering"
     },
     "how-it-works": {
       "meta-title": "Bike sharing made easy",
@@ -604,7 +612,7 @@
     "sign-up-to-book": "Meld je aan om de fiets te huren.",
     "sign-up-with-facebook": "Met Facebook aanmelden",
     "sign-up-divider-text": "accepteer onze Algemene voorwaarden",
-    "agree-terms-and-policy": "Ga akkoord met onze algemene voorwaarden en ons privacybeleid hierboven.",
+    "agree-terms-and-policy": "Ga akkoord met de alg. voorwaarden en het privacybeleid.",
     "member-already": "Al geregistreerd?",
     "business": "Zakelijke gebruiker?",
     "description": "Beschrijving",
@@ -612,7 +620,7 @@
     "address": "Adres",
     "profile-picture": "Profielfoto",
     "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
-    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
+    "profile-picture-info-policy": "Door een profielfoto te uploaden, ga ik ermee akkoord dat listnride de afbeelding opslaat zoals beschreven in het <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacybeleid </a>. Ik kan de foto op elk moment verwijderen.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "Je fotoformaat is meer dan de toegestane maximale grootte",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
@@ -653,6 +661,9 @@
   },
   "home": {
     "landing-section-header": "De perfekte fiets. Gewoon huren.",
+    "insurance": {
+      "description": "Of het nu minimalistische fixie of high-end triathlonfiets is: Elke listnride verhuur in Duitsland of Oostenrijk is verzekerd! Eenvoudig. Onbureaukratisch. Te allen tijde."
+    },
     "landing-section-subheader": "Huur een fiets via listnride naar eigen smaak en gebruik.",
     "featured-bikes-header": "Fietsverhuur: De favorieten van onze Community",
     "featured-bikes-subheader": "of je nu een racefiets, mountainbike, stadsfiets of e-bike wilt, je huurt ze hier. Dit zijn de favorieten van onze Community.",
@@ -773,16 +784,16 @@
       "country": "Land"
     },
     "insurance": {
-      "label": "Insurance",
-      "info": "Information about insurance",
-      "hint-part-1": "Your bike insured when ever somebody is renting it. In order to provide you the right protection its nessasary that we know the right value of your bike.",
-      "hint-part-2": "Please note that you have to provide proof the value of the bike in case of a claim",
-      "hint-link-label": "Learn more about insurance",
-      "header": "Please tell us the value of your bike",
-      "tip": "Additional fee for the rider is {{fee}} per day",
-      "up-to-value": "Up to {{value}}",
-      "select-value": "Please select your bike value",
-      "no-insurance": "Sorry, your country doesn't support an insurance. Only for Germany and Austria."
+      "label": "Verzekering",
+      "info": "Informatie over verzekering",
+      "hint-part-1": "Uw fiets is verzekerd wanneer hij wordt gehuurd. Om u de juiste bescherming te bieden, is het noodzakelijk dat je de waarde van je fiets vastlegd.",
+      "hint-part-2": "Houd er rekening mee dat je een bewijs moet kunnen overleggen van de waarde van je fiets in het geval van een claim",
+      "hint-link-label": "Meer informatie over verzekeringen",
+      "header": "Wat is de actuele waarde van uw fiets?",
+      "tip": "Extra premie voor de huuder is {{fee}}per dag",
+      "up-to-value": "Tot {{value}}",
+      "select-value": "Selecteer uw de waarde van uw fiets",
+      "no-insurance": "Sorry, de verzekering wordt nog niet in je land aangeboden.\nDe verzekering is alleen van toepassing op verhuur in Duitsland en Oostenrijk."
     },
     "pricing": {
       "info": "Je dagprijs is je basis prijs bij 1 dag huur.",
@@ -865,7 +876,7 @@
         "road": "race",
         "mtb-hardtail": "MTB Hardtail",
         "mtb-fullsuspension": "MTB Fullsuspension",
-        "cyclocross-bike": "Cyclocrossfiets",
+        "cyclocross-bike": "CX-fiets",
         "gravel-bike": "Gravel Bike"
       },
       "5": {
@@ -939,7 +950,8 @@
       "price-title": "Super Prijs.",
       "price-content": "Op listnride verhuren particulieren als ook zakelijke aanbieders, zoals fietswinkels, hun fietsen. Jouw voordeel: De perfecte fiets voor een faire prijs.",
       "easy-title": "Super eenvoudig.",
-      "easy-content": "Zoek en boek een mooie huurfiets, vóórdat je op vakantie gaat, of simple onderweg: online met onze mobile website"
+      "easy-content": "Zoek en boek een mooie huurfiets, vóórdat je op vakantie gaat, of simple onderweg: online met onze mobile website",
+      "covered-content": "Als u een fiets huurt in Duitsland of Oostenrijk, is de verzekering inbegrepen in de huurprijs. Met \n<a href=\\\"http://www.hepster.com\\\"target=\\\"_blank\\\">hepster</a> \nen de \n<a href=\\\"http://www.gothaer.de\\\"target=\\\"_blank\\ \">Gothaer Group</a> \nhebben wij twee sterke partners aan onze zijde om u te helpen in noodgevallen."
     },
     "search-section": {
       "header": "Waar gaan we heen?",
@@ -971,7 +983,7 @@
       "control-title": "Jij behoudt de controle.",
       "control-content": "Jij bepaalt de huurprijs voor het verhuren van je fiets. Daarnaast beslis je zelf of je de huuraanvragen accepteert of juist afwijst (bijv. omdat je fiets op dat moment niet beschikbaar is).",
       "covered-title": "Je bent verzekerd.",
-      "covered-content": "In geval van schade of diefstal helpen wij je. En als het nodig mocht zijn, ben je met de verhuurdersgarantie van listnride tot € 5.000,- verzekerd.",
+      "covered-content": "In geval van schade of diefstal kunt u een beroep doen op onze verzekering. Met <a href=\\\"http://www.hepster.com\\\"target=\\\"_blank\\\">hepster</a> en de <a href=\\\"http://www.gothaer.de\\\"target=\\\"_blank\\\">Gothaer Group</a> hebben we twee sterke partners aan onze zijde.",
       "help-title": "Wij laten je niet alleen.",
       "help-content": "Indien je een bepaald probleem niet met een huurder direct kan oplossen, zijn wij er ook voor jou om je te ondersteunen of het probleem zelfs voor je op te lossen"
     },
@@ -1065,6 +1077,7 @@
   },
   "footer": {
     "language": "Taal",
+    "insurance-partner": "Verzekeringspartner",
     "company": "Bedrijf",
     "legal": "Colofon",
     "terms-and-conditions": "Algemene voorwaarden",

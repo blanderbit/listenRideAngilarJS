@@ -77,9 +77,17 @@
       "cafes-bars-content": "Se ti piace il cibo vegano e vegetariano, ti consigliamo di visitare <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot </a>presso la Karmeliterplatz. Se preferisci la cucina austriaca più tradizionale, ti consigliamo <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta </a>. Ordina un tradizionale Tafelspitz o Wiener Schnitzel e goditela all'aperto con la vista sulla celebre Opera di Vienna. Sarà una serata fantastica da ricordare! Per finire in bellezza, una bella passeggiata lungo il Danubio. Sulla strada troverai molti bar interessanti e potrai sederti all'aperto sotto le stelle lungo il fiume."
     }
   },
+  "shared": {
+    "find-your-bike": {
+      "main": {
+        "button": "Trova la tua bici",
+        "_button.comment": "Button"
+      }
+    }
+  },
   "insurance": {
     "main": {
-      "title": "Unsere Versicherung schützt Dich.\n<br>\nEgal ob Vermieter oder Mieter.",
+      "title": "La nostra assicurazione ti protegge.\n<br>\nNon importa se lister o pilota.",
       "description": "Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben. Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es beschädigt zu Dir zurück kommt?`<br0>`Alle <i1>lisntride</i> Vermietungen in Deutschland und Österreich sind versichert. Unser Partner <a href=\"www.hepster.com\" target=\"_blank\">hepster</a> ist für Dich da. Telefonisch. Via E-Mail. Einfach. Unbürokratisch."
     },
     "facts": {
@@ -326,7 +334,7 @@
     "brompton": {
       "meta-title": "Noleggia una bicicletta Brompton con listnride",
       "meta-description": "Prova una bicicletta Brompton oggi! Queste biciclette pieghevoli urbane sono disponibili su listnride. Noleggiane una a Berlino, Monaco di Baviera, Amburgo, Düsseldorf o a Francoforte.",
-      "title": "#FAHRMALBROMPTON",
+      "title": "#RIDEBROMPTON",
       "description": "Noleggia una Brompton e prova le sue eccellenti caratteristiche di guida e utilizzo",
       "subdescription": "Vivi la città in un modo nuovo - con una bicicletta perfetta.",
       "item1-title": "Semplice e gratuita da trasportare",
@@ -821,7 +829,5 @@
   },
   "seo": {
     "cities-title": "Planning to Travel? Check out more cities:"
-  },
-  "shared.find-you-bike.main.button": "Trova la tua bici",
-  "_shared.find-you-bike.main.button.comment": "Button"
+  }
 }

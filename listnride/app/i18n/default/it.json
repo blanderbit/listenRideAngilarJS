@@ -120,15 +120,15 @@
     "confirmation-text": "Sei sicuro?",
     "loading": "Caricamento",
     "today": "Oggi",
-    "yesterday": "Ieri"
+    "yesterday": "Ieri",
+    "find-your-bike": {
+      "button": "Trova la tua bici"
+    }
   },
   "insurance": {
     "facts": {
       "basic-insurance": {
         "price-description": "incluso in ogni noleggio in Germania e Austria"
-      },
-      "premium-insurance": {
-        "price_description": "al giorno"
       }
     }
   },
@@ -271,8 +271,7 @@
       "meta-description": "I Termini e Condizioni della comunità bike sharing di listnride si applicano all'uso della piattaforma online."
     },
     "trust-and-safety": {
-      "meta-title": "Il Noleggio di biciclette è sicuro - listnride ti tutela",
-      "meta-description": "La fiducia è tutto in una sharing community. Promuoviamo la giustizia e la sicurezza verificando le identità degli utenti e offrendo una garanzia ai noleggiatori."
+      "meta-title": "Il Noleggio di biciclette è sicuro - listnride ti tutela"
     },
     "how-it-works": {
       "meta-title": "Bike sharing in modo semplice",
