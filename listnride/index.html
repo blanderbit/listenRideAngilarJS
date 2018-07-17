@@ -15,7 +15,7 @@
   <meta property="og:image:height" content="534" />
   <meta property="og:description" content="{{ngMeta.description}}" />
   <meta property="og:type" content="website" />
-  <meta name="robots" content="noindex" ng-if="ngMeta['noindex']" />
+  <meta lnr-meta-robots ng-if="ngMeta['noindex']"></meta>
   <link rel="alternate" href="https://www.listnride.com{{location.path()}}" hreflang="x-default" />
   <link rel="alternate" href="https://www.listnride.de{{location.path()}}" hreflang="de" />
   <link rel="alternate" href="https://www.listnride.nl{{location.path()}}" hreflang="nl" />
@@ -145,6 +145,7 @@
   <script src="app/directives/lnrMdMenuFullscreen.js"></script>
   <script src="app/directives/lnrDatePicker.js"></script>
   <script src="app/directives/ng-infinite-scroll.js"></script>
+  <script src="app/directives/lnrMetaRobots.js"></script>
   <!--removeIf(shop)-->
   <!-- header and footer -->
   <script src="app/modules/footer/footer.component.js"></script>
