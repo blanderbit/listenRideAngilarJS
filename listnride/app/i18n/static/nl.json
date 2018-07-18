@@ -77,30 +77,6 @@
       "cafes-bars-content": "Indien je eens wat anders wilt proberen en bijvoorbeeld een goede veganer / vegatarisch restaurant wilt proberen, reserveer dan een tafeltje bij <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> aan het Karmeliterplein. Als je meer van de traditionele oostenrijkse keuken houdt, is <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a> een absolute aanrader. Een heerlijke Tafelspitz of Wiener Schnitzel met blik op de fameuze Wiener Oper. Beter kan het niet, toch? Als laatste stop voor het nuttigen van een afzakker leent zich het gebied rond de Donau zich uitstekend."
     }
   },
-  "shared": {
-    "find-your-bike": {
-      "main": {
-        "button": "Fiets vinden",
-        "_button.comment": "Button"
-      }
-    },
-    "insurance": "Verzekering",
-    "rent-your-bike": {
-      "subheader": "Ontmoet gelijkgestemden. Verdien geld."
-    }
-  },
-  "_insurance": {
-    "facts": {
-      "basic-insurance": {
-        "price-description": "inbegrepen bij elke verhuur in Duitsland en Oostenrijk"
-      }
-    }
-  },
-  "home": {
-    "insurance": {
-      "header": "Verzekering voor je fietshuur op listnride"
-    }
-  },
   "insurance": {
     "main": {
       "title": "Onze verzekering beschermt je.\n<br> \nVerhuurder of huurder.",
@@ -192,7 +168,6 @@
       "column-2": "Wij vinden het belangrijk onze fiets-enthousiaste gemeenschap een breed scala aan fietsen aan te bieden, van een crosser tot een racefiets en van een Omafiets tot een bakfiets. Samen met jou kunnen we onze gebruikers niet alleen de perfecte huurfiets voor de vakantie aanbieden, maar ook helpen om een ​​nieuwe (koop) fiets te vinden."
     }
   },
-  "insurance.logo.description": "In samenwerking met hepster",
   "events": {
     "rapha-super-cross": {
       "text": "De Rapha Super Cross is weer terug in München, voor het derde jaar op rij. Indien je er graag bij wil zijn, maar geen geschickte fiets hebt, kann je via listnride een passende fiets huren. De listnride bike sharing community biedt verschillende cyclocrossfietsen te huur aan. De fietsen kunnen voor het evenement bij de verschillende aanbieders worden aangevraagd en geboekt. De overdracht wordt direct met de verhuurder afgesproken. Indien je een fiets hebt die niet benut wordt, kan je deze gewoon aanbieden om daarmee wat geld te verdienen ein interessante mensen te leren kennen, die aan het evenement deelnemen. Sluit je aan bij de groeiende Community!"
@@ -894,9 +869,5 @@
   },
   "seo": {
     "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden"
-  },
-  "shared.rent-your-bike.main.button": "Plaats je fiets online!",
-  "rent-a-bike.info-section.covered-title": "Super zorgeloos.",
-  "shared.insurance.homepage.title": "Verzekering voor je fietshuur op <i>listnride</i>.",
-  "shared.insurance.homepage.description": "Of het nu minimalistische fixie of high-end triatlonfiets is: Iedere listnride verhuur in Duitsland of Oostenrijk is verzekerd! Eenvoudig. Niet-bureaucratisch. Te allen tijde."
+  }
 }

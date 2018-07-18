@@ -77,36 +77,6 @@
       "cafes-bars-content": "Wer schon immer mal veganes Essen ausprobieren wollte oder Veganer ist, der sollte das <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest Bistrot</a> am Karmeliterplatz ausprobieren. Neben veganem Essen gibt es auch vegetarische Alternativen. Oder doch traditionell Österreichische Küche? Genieß einen Tafelspitz oder Wiener Schnitzel bei <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>, direkt gegenüber den Wiener Oper, besser geht nicht, oder? Möchte man den Abend mit einem Drink ausklingen lassen, eignet sich der Weg vom Karmeliterplatz Richtung Donau um in die ein oder andere Bar reinzuschnuppern. An der Donau kann man unter freiem Himmel den Abend ausklingen lassen."
     }
   },
-  "shared": {
-    "find-your-bike": {
-      "main": {
-        "button": "Finde Dein Rad",
-        "_button.comment": "Button"
-      }
-    },
-    "insurance": "Versicherung",
-    "rent-your-bike": {
-      "subheader": "Triff Gleichgesinnte. Verdiene Dir etwas dazu.",
-      "button": "Vermiete Dein Rad"
-    },
-    "find-you-bike": {
-      "main": {
-        "button": "Finde Dein Rad"
-      }
-    }
-  },
-  "_insurance": {
-    "facts": {
-      "basic-insurance": {
-        "price-description": "In jeder Vermietung in Deutschland und Österreich"
-      }
-    }
-  },
-  "home": {
-    "insurance": {
-      "header": "Versicherungsschutz für jede Vermietung auf listnride"
-    }
-  },
   "insurance": {
     "main": {
       "title": "Unsere Versicherung schützt Dich.\n<br>\nEgal ob Vermieter oder Mieter.",
@@ -198,7 +168,6 @@
       "column-2": "Uns ist wichtig, dass wir unserer fahrradbegeisterten Community ein breites Angebot an Fahrrädern anbieten können, dies reicht vom Crosser, übers Rennrad zum Hollandrad und Cargo-Bike. Mit dir zusammen können wir unseren Usern nicht nur das perfekte Leihrad für den Urlaub bieten, sondern ihnen auch bei Suche nach einem neuen, eigenen Fahrrad helfen."
     }
   },
-  "insurance.logo.description": "In Kooperation mit hepster",
   "events": {
     "rapha-super-cross": {
       "text": "Der Rapha Super Cross ist wieder zurück in München, zum dritten Mal. Wenn du gerne dabei sein möchtest aber kein geeignetes Rad hast, kannst du über listnride ein Rad mieten. Die listnride bike sharing community bietet verschiedene Crossräder zum Verleih an. Die Räder können vor der Veranstaltung bei den einzelnen Anbietern angefragt und gebucht werden. Die Übergabe wird direkt mit dem Vermieter vereinbart. Zusätzlich verfügbare Räder können auch noch zur Vermietung angeboten werden, um damit etwas zu verdienen und interessante Leute zu treffen, welche an der Veranstaltung teilnehmen. Werde Teil der wachsenden Community!"
@@ -906,14 +875,5 @@
   },
   "seo": {
     "cities-title": "Du planst zu reisen? Schau dir mehr Städte an:"
-  },
-  "trust-and-safety.outro.description": "<i>listnride</i> ist Europas größte Bike-Sharing-Plattform.\n<br>\nWir bieten Veloisten einfachen Zugang zu hochwertigen Rädern.\n<br>\nJederzeit das perfekte Rad. Einfach online verfügbar.",
-  "shared.find-your-bike.main.header": "Finde Dein perfektes Rad",
-  "shared.find-your-bike.main.subheader": "Du planst Deinen nächsten Trip?",
-  "shared.rent-your-bike.main.header": "Vermiete Dein perfektes Rad",
-  "shared.rent-your-bike.main.subheader": "Triff Gleichgesinnte. Verdiene etwas dazu.",
-  "shared.rent-your-bike.main.button": "Liste Dein Rad",
-  "rent-a-bike.info-section.covered-title": "Super sorgenfrei.",
-  "shared.insurance.homepage.title": "Versicherungsschutz für die Radvermietung auf <i>listnride</i>.",
-  "shared.insurance.homepage.description": "Egal ob minimalistisches Fixie oder High-End Triathlonrad: Jede listnride-Vermietung in Deutschland oder Österreich ist versichert! Einfach. Unbürokratisch. Jederzeit."
+  }
 }
