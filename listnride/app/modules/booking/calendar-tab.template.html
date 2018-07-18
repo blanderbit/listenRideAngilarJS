@@ -39,6 +39,7 @@
           <md-input-container flex-xs="100">
             <label>{{ 'shared.duration' | translate }}</label>
             <input-range
+              ng-if="calendar.parent.isOpeningHoursLoad"
               lnr-date-picker
               lnr-single-input
               data="calendar.parent.dateRange"
