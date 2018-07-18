@@ -1078,10 +1078,6 @@ home #landingSection #homeHeroShot {
   background-position: center center;
 }
 
-home #landingSection #homeHeroShot {
-  background-image: url(../ui_images/lnr_hero6.jpg);
-}
-
 .cb-slideshow,
 .cb-slideshow:after {
   position: absolute;

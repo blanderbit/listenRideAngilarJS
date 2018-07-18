@@ -9,6 +9,7 @@ angular.module('home',[]).component('home', {
                             verification, authentication, api, ngMeta) {
       var home = this;
 
+      // Trigger verification or authentication dialogs if requested
       if ($state.current.name === "verify" && authentication.loggedIn()) {
         verification.openDialog(false, false, window.event);
       } else if ($state.current.name == "businessSignup") {
@@ -64,6 +65,13 @@ angular.module('home',[]).component('home', {
           }
         );
       }
+
+      // Pick a random hero shot and select
+      function pickRandomHeroshot() {
+        var heroShotId = Math.floor(Math.random() * Math.floor(4)) + 1
+        home.heroShotUrl = "app/assets/ui_images/hero/lnr_hero_" + heroShotId + ".jpg";
+      }
+      pickRandomHeroshot();
 
       api.get("/featured").then(function(response) {
         home.featuredBikes = response.data.slice(0,6);
