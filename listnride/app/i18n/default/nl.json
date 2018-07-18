@@ -129,7 +129,7 @@
     "find-your-bike": {
       "header": "Vind de perfecte fiets",
       "subheader": "Plan je je volgende trip?",
-      "button": "Fiets vinden"
+      "button": "Fiets zoeken"
     },
     "rent-your-bike": {
       "header": "Verhuur je fiets!"
@@ -138,7 +138,7 @@
   "insurance": {
     "facts": {
       "basic-insurance": {
-        "price-description": "inbegrepen in elke verhuur in Duitsland en Oostenrijk"
+        "price-description": "inbegrepen bij elke verhuur in Duitsland en Oostenrijk"
       }
     },
     "meta-description": "Elke fietshuur in Duitsland en Oostenrijk zijn automatisch via listnride verzekerd. "

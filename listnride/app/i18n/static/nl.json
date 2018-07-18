@@ -84,14 +84,27 @@
         "_button.comment": "Button"
       }
     },
+    "insurance": "Verzekering",
     "rent-your-bike": {
       "subheader": "Ontmoet gelijkgestemden. Verdien geld."
+    }
+  },
+  "_insurance": {
+    "facts": {
+      "basic-insurance": {
+        "price-description": "inbegrepen bij elke verhuur in Duitsland en Oostenrijk"
+      }
+    }
+  },
+  "home": {
+    "insurance": {
+      "header": "Verzekering voor je fietshuur op listnride"
     }
   },
   "insurance": {
     "main": {
       "title": "Onze verzekering beschermt je.\n<br> \nVerhuurder of huurder.",
-      "description": "Jouw speciale fiets verhuren betekent vertrouwen hebben. Wat als het wordt gestolen tijdens het uitlenen? Wat als het beschadigd terugkomt?<p>Alle <i>lijstnride</i> huurfietsen in Duitsland en Oostenrijk zijn verzekerd. Onze partner <a href=\\\"www.hepster.com\\\"target=\\\"_blank\\\">hepster</a> staat voor u klaar. Per telefoon. Per e-mail. Eenvoudig. Niet-bureaucratisch.",
+      "description": "Jouw speciale fiets verhuren betekent vertrouwen hebben. Wat als het wordt gestolen tijdens het uitlenen? Wat als het beschadigd terugkomt?<p>Alle <i>listnride</i> huurfietsen in Duitsland en Oostenrijk zijn verzekerd. Onze partner <a href=\\\"www.hepster.com\\\"target=\\\"_blank\\\">hepster</a> staat voor u klaar. Per telefoon. Per e-mail. Eenvoudig. Niet-bureaucratisch.",
       "logo-description": "Onze verzekeringspartner"
     },
     "meta": {
@@ -103,12 +116,15 @@
     "facts": {
       "title": "Wat je hoort te weten!",
       "basic-insurance": {
+        "price": "Inbegrepen",
         "title": "Basisverzekering",
-        "description": "<ul>\n<li>bescherming bij onopzettelijke zelf- en externe schade\n<li>bescherming tegen vandalisme\n<li>bescherming van elektronica en batterij voor elektrische fietsen\n<li>eigen risiko 250 €\n</ul>"
+        "description": "<ul>\n<li>Bescherming bij onopzettelijke zelf- en extern veroorzaakte schade\n<li>Bescherming tegen vandalisme\n<li>Bescherming van elektronica en batterij voor elektrische fietsen\n<li>Eigen risiko 250 €\n</ul>"
       },
       "premium-insurance": {
         "title": "Premium Verzekering",
-        "description": "<ul>\n<li>bescherming bij onopzettelijke zelf- en externe schade\n<li>bescherming tegen vandalisme\n<li>Bescherming van elektronica en batterij voor elektrische fietsen\n<li>Diefstalbescherming\n<li>24/7 alarmnummer in geval van pech, diefstal of schade\n<li>Retourtransport na diefstal of schade\n<li>Vervangende fiets bij diefstal of schade\n<li>Geen eigen risiko\n</ul>"
+        "price": "€3 ",
+        "price-description": "per dag",
+        "description": "<ul>\n<li>Bescherming bij onopzettelijke zelf- en extern veroorzaakte schade\n<li>Bescherming tegen vandalisme\n<li>Bescherming van elektronica en batterij voor elektrische fietsen\n<li>Diefstalbescherming\n<li>24/7 alarmnummer in geval van pech, diefstal of schade\n<li>Retourtransport na diefstal of schade\n<li>Vervangende fiets bij diefstal of schade\n<li>Geen eigen risiko\n</ul>"
       }
     },
     "faqs": {
@@ -116,6 +132,7 @@
       "lister": {
         "description": "Als verhuurder op <li>listnride</li> wil je er zeker van zijn dat jij en je fiets beschermd zijn tegen alle denkbare risico's. Daarom is elke fietverhuur in Duitsland en Oostenrijk die u bij <li>listnride</li> huurt vanaf nu automatisch verzekerd. Huurders die uw fiets aanvragen kunnen optioneel een Premium Pakket boeken voor extra dekking en vrijwaringen. Deze service is gratis voor u als verhuurder. <p>Heeft u nog vragen? Neem dan contact met ons op via E-Mail.",
         "question-1": "Hoeveel kost de verzekering mij?",
+        "tabname": "Voor verhuurders",
         "answer-1": "Niets! <br0>Omdat de verzekering alleen door huurders wordt afgesloten, zijn er geen extra kosten voor verhuurders.Bedenk wel dat je fietshuur hoger uitvalt voor huurders. De kosten van de basisverzekering bedragen 0,1% van de verzekeringswaarde van uw fiets. <p1> Als u uw fiets tot €1.000 verzekerd heeft, betalen huurders een extra Euro per huurdag. Bij een verzekeringswaarde van maximaal € 5.000,- betekent dit een toeslag van € 5,- per huurdag.",
         "question-2": "Wat is de maximale verzekeringsdekking voor mijn fiets?",
         "answer-2": "Elke fiets is automatisch verzekerd tot 1.000 € en de dekking kan door u worden verhoogd tot een maximum van 5.000 €.\n<br>\nDe hoogte van de uitbetaling in geval van schade is gebaseerd op de daadwerkelijke waarde van de fiets. Deze waarde wordt bepaald door de\n<a href = \\ \"https: //www.gothaer.de/ \\\" target = \\ \"_blank \\\" >Gothaer-verzekering </a>\n op individuele basis.\n<br>\nOnthoud bij het bepalen van de verzekeringswaarde dat huurders een verzekeringspremie betalen, waarvan het bedrag afhangt van de door u gekozen verzekeringswaarde. Dit betekent; hoe hoger u de fiets verzekert, hoe hoger de verzekeringspremie voor de huurder.",
@@ -125,19 +142,23 @@
       "rider": {
         "description": "Wij bieden twee verzekeringspakketten aan voor elke fiets die je huurt via<i0>lisntride</i0>: De <b1>De Basisverzekering</b1> is inbegrepen in elke fietshuur in Duitsland en Oostenrijk, de <b2>Premium verzekering</b2> is optioneel en breidt de verzekering uit met extra dekking.<br3>Jij en Jouw fiets zijn altijd optimaal verzekerd en dus staat niets jouw rit meer in de weg!",
         "question-1": "Hoeveel kost de basisverzekering mij?",
+        "tabname": "Voor huurders",
         "answer-1": "De kosten van de basisverzekering bedragen slechts 0,1% van de verzekeringswaarde van de fiets die u hebt geboekt.\n<br>\nAls een fiets tot 1.000 € verzekerd is, betaalt u precies één euro per huurdag voor de basisverzekering.",
         "question-2": "Hoeveel kost de Premiumverzekering mij?",
         "answer-2": "Drie euro per dag in aanvulling op de huur en de\n<i>lisntride </i>\n - <a href = \\ \"https: //www.listnride.com/terms%5C \\\" target = \\ \"_blank \\\" >servicekosten </a>.",
         "question-3": "Welke dekking biedt de Basisverzekering?",
         "answer-3": "<ul>\n<li>Bescherming bij onopzettelijke zelf- en extern veroorzaakte schade\n<li>Bescherming tegen vandalisme\n<li>Bescherming van elektronica en batterij voor elektrische fietsen\n<li>Eigen risiko 250 €\n</ul>",
         "question-4": "Welke dekking biedt de Premiumverzekering?",
-        "answer-4": "<ul>\n<li>bescherming bij onopzettelijke zelf- en externe schade\n<li>bescherming tegen vandalisme\n<li>Bescherming van elektronica en batterij voor elektrische fietsen\n<li>Diefstalbescherming\n<li>24/7 alarmnummer in geval van pech, diefstal of schade\n<li>Retourtransport na diefstal of schade\n<li>Vervangende fiets bij diefstal of schade\n<li>Geen eigen risiko\n</ul>",
+        "answer-4": "<ul>\n<li>Bescherming bij onopzettelijke zelf- en extern veroorzaakte schade\n<li>Bescherming tegen vandalisme\n<li>Bescherming van elektronica en batterij voor elektrische fietsen\n<li>Diefstalbescherming\n<li>24/7 alarmnummer in geval van pech, diefstal of schade\n<li>Retourtransport na diefstal of schade\n<li>Vervangende fiets bij diefstal of schade\n<li>Geen eigen risiko\n</ul>",
         "question-5": "Is er een eigen risiko in geval van schade? Hoe hoog is die?",
         "answer-5": "Het eigen risiko bedraagt maximaal 250 € voor de basisverzekering.\n<br>\nDe premiumverzekering heeft geen eigen risiko.",
         "question-6": "Hoe beëindig ik de verzekering nadat mijn fietshuur eindigt?",
         "answer-6": "Bij elke bevestigde fietshuur ontvangt u een individueel verzekeringscertificaat. Deze is\n<b>alleen </b>\ngeldig voor de desbetreffende boeking en voor de\n<b>tijdsperiode </b>\n door jou geselecteerd. De verzekering eindigt automatisch.\n<p>\nU kunt het certificaat rechtstreeks downloaden en per e-mail ontvangen. U hoeft verder niets te doen.",
         "question-7": "Met wie kan ik contact opnemen als ik mijn verzekering in aanspraak neem?",
         "answer-7": "hNatuurlijk hopen we dat dit nooit zal gebeuren!\n<br>\n De verzekering wordt aangeboden door onze online verzekeringspartner\n<a href = \\ \"www.hepster.com \\\" target = \\ \"_ blank \\\">hepster </a>\n en is gedekt door\n<a href = \\ \"https: //www.gothaer.de/ \\\" target = \\ \"_blank \\\" >Gothaer-verzekering </a>\nAangezien u zelf de polishouder van de hepster bent, is het het beste om rechtstreeks contact op te nemen met hepster:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nhepster zal je snel en vakkundig te woord staan."
+      },
+      "docs": {
+        "tabname": "Algemene verzekeringsvoorwaarden"
       },
       "description-lister": "Als verhuurder op <li>listnride</li> wil je er zeker van zijn dat jij en je fiets beschermd zijn tegen alle denkbare risico's. Daarom is elke fietverhuur in Duitsland en Oostenrijk die u bij <li>listnride</li> huurt vanaf nu automatisch verzekerd. Huurders die uw fiets aanvragen kunnen optioneel een Premium Pakket boeken voor extra dekking en vrijwaringen. Deze service is gratis voor u als verhuurder. <p>Heeft u nog vragen? Neem dan contact met ons op via <a3>E-Mail</a3>.",
       "description-rider": "Wij bieden twee verzekeringspakketten aan voor elke fiets die je huurt via<i0>lisntride</i0>: De <b1>De Basisverzekering</b1> is inbegrepen in elke fietshuur in Duitsland en Oostenrijk, de <b2>Premium verzekering</b2> is optioneel en breidt de verzekering uit met extra dekking.<br3>Jij en Jouw fiets zijn altijd optimaal verzekerd en dus staat niets jouw rit meer in de weg!",
