@@ -3,10 +3,11 @@
 angular.module('home',[]).component('home', {
   templateUrl: 'app/modules/home/home.template.html',
   controllerAs: 'home',
-  controller: [ '$state', '$stateParams', '$translate', '$localStorage',
+  controller: [ '$state', '$stateParams', '$translate', '$localStorage', '$mdMedia',
     '$mdDialog', 'verification', 'authentication', 'api', 'ngMeta', 'loadingDialog',
-    function HomeController($state, $stateParams, $translate, $localStorage, $mdDialog,
-                            verification, authentication, api, ngMeta) {
+    function HomeController($state, $stateParams, $translate, $localStorage, $mdMedia,
+      $mdDialog, verification, authentication, api, ngMeta) {
+
       var home = this;
 
       // Trigger verification or authentication dialogs if requested
@@ -68,8 +69,11 @@ angular.module('home',[]).component('home', {
 
       // Pick a random hero shot and select
       function pickRandomHeroshot() {
-        var heroShotId = Math.floor(Math.random() * Math.floor(4)) + 1
-        home.heroShotUrl = "app/assets/ui_images/hero/lnr_hero_" + heroShotId + ".jpg";
+        var isMobile = !!($mdMedia('xs') || $mdMedia('sm'))
+        var heroShotId = Math.floor(Math.random() * Math.floor(4)) + 1;
+        var pictureName = isMobile ? "lnr_hero_small_" : "lnr_hero_";
+        
+        home.heroShotUrl = "app/assets/ui_images/hero/" + pictureName + heroShotId + ".jpg";
       }
       pickRandomHeroshot();
 
