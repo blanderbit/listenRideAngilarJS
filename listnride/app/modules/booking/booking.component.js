@@ -39,8 +39,6 @@ angular.module('booking', [])
         booking.user.balance = 0;
         booking.insuranceCountries = ['DE', 'AT'];
 
-        booking.isOpeningHoursLoad = false;
-
         var oldExpiryDateLength = 0;
         var expiryDateLength = 0;
         var month = 0;
@@ -50,12 +48,10 @@ angular.module('booking', [])
           api.get('/users/' + booking.bike.user.id).then(
             function (success) {
               booking.openingHours = success.data.opening_hours;
-              booking.isOpeningHoursLoad = true;
             },
             function (error) {
               // Treat opening hours as if non existing
               booking.openingHours = [];
-              booking.isOpeningHoursLoad = true;
             }
           );
         };
