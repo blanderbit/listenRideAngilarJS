@@ -83,6 +83,12 @@
         "button": "Trova la tua bici",
         "_button.comment": "Button"
       }
+    },
+    "insurance": "Assicurazione"
+  },
+  "home": {
+    "insurance": {
+      "header": "Copertura assicurativa per ogni noleggio su listnride"
     }
   },
   "insurance": {

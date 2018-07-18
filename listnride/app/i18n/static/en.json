@@ -104,7 +104,7 @@
   },
   "home": {
     "insurance": {
-      "header": "Insurance cover for every rental on listnride."
+      "header": "Insurance cover for every rental on listnride"
     }
   },
   "insurance": {
@@ -124,7 +124,7 @@
       "basic-insurance": {
         "price": "Enthalten",
         "title": "Basic Insurance",
-        "description": "<ul>\n <li>protection in case of unintentional self- and external damage\n <li>protection against vandalism\n <li>protection of electronics and battery for pedelecs\n <li>retention fee up to 250€\n</ul>"
+        "description": "<ul>\n <li>Protection in case of unintentional self- and external caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee up to 250€\n</ul>"
       },
       "premium-insurance": {
         "title": "Premium Insurance",
@@ -155,7 +155,7 @@
         "question-3": "What does the Basic Insurance cover?",
         "answer-3": "<ul>\n <li>Protection in case of unintentional self- and external caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee up to 250€\n</ul>",
         "question-4": "What does Premium Insurance cover?",
-        "answer-4": "<ul>\n <li>protection in case of unintentional self- and external damage\n <li>protection against vandalism\n <li>protection of electronics and battery for pedelecs\n <li>theft protection\n <li>24/7 emergency number in case of theft or damage\n <li>Return transport after theft or damage\n <li>Bike replacement after theft or damage\n <li>No retention fee\n</ul>",
+        "answer-4": "<ul>\n <li>protection in case of unintentional self- and external damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Theft protection\n <li>24/7 emergency number in case of theft or damage\n <li>Return transport after theft or damage\n <li>Bike replacement after theft or damage\n <li>No retention fee\n</ul>",
         "question-5": "Is there a retention fee in case of damage? How high is it?\n",
         "answer-5": "The deterrent fee is up to 250€ for the Basic Insurance.\n<br>\nThe Premium Insurance has no deterrent fee.",
         "question-6": "How do I end the insurance after my bike rental ends?",
@@ -166,7 +166,7 @@
       "docs": {
         "tabname": "Alle Dokumente"
       },
-      "description-lister": "As a lister on <li>listnride</li>\n you want to be sure that you and your bike are protected against all risk. That's why every rental in Germany and Austria, through <li>listnride</li>\n, is automatically insured with immediate effect. Riders who request your bike can optionally book the premium package to get additional services and coverage. This service is free for you as a Lister.\n<p>\nIf you have further questions, contact us around the clock via <a3>E-Mail</a3>.",
+      "description-lister": "As a lister on listnride you want to be sure that you and your bike are protected against all risk. That's why every rental in Germany and Austria, through listnride is automatically insured with immediate effect. Riders who request your bike can optionally book the premium package to get additional services and coverage. This service is free for you as a Lister.\n<p>\nIf you have further questions, contact us around the clock via <a3>E-Mail</a3>.",
       "description-rider": "We offer two insurance packages for each bike you rent in Germany and Austria via <i0>lisntride</i0>: The <b1>Basic insurance</b1> is included in every rental, the <b2>Premium insurance</b2> is optional and extends the insurance cover with extra benefits.<br3>You and your bike are always optimally protected and there is nothing more in the way for you to ride!",
       "all-docs": "Here you can see the Insurance Terms and Conditions\n<a href=\\\"INSERT LINK HERE\\\"target=\\\"_blank\\\">Terms and Conditions Insurance </a0>"
     }
