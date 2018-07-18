@@ -118,7 +118,7 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
       date.setHours(0, 0, 0, 0);
       var now = new Date();
       now.setHours(0, 0, 0, 0);
-      if (date.getTime() <= now.getTime()) {
+      if (date.getTime() < now.getTime()) {
         return [false, "date-past", ""];
       } else if (isReserved(date)) {
         return [false, "date-reserved", ""];
@@ -154,6 +154,9 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
       date.setHours(0, 0, 0, 0);
       var result = false;
       _.forEach(vm.disabledDates, function (slot) {
+        if (!slot.start_at) {
+          slot.start_at = moment(new Date(slot.start_date).setHours(0, 0, 0, 0));
+        }
         var end_at = slot.hasOwnProperty('end_at') ? slot.end_at : moment(slot.start_date).add(slot.duration, 'd');
         result = result || moment(date).isBetween(slot.start_at, end_at, null, '[]') // all inclusive
       });
