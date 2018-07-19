@@ -130,7 +130,9 @@
       "basic-insurance": {
         "price-description": "incluido en cada alquiler en Alemania y Austria"
       }
-    }
+    },
+    "meta-title": "Seguro para cada alquiler en Alemania y Austria",
+    "meta-description": "Todos los alquileres a través de listnride en Alemania y Austria  están asegurados automáticamente."
   },
   "coco-mat.bike": "Coco-mat bikes",
   "meta": {
@@ -651,6 +653,10 @@
   },
   "home": {
     "landing-section-header": "La bici perfecta. Simplemente alquílala.",
+    "insurance": {
+      "description": "No importa si se trata de una bicicleta urbana, ebike o de alta gama: ¡todos los alquileres de listnride en Alemania o Austria están asegurados! Sencillo. Sin burocracia. En cualquier momento.",
+      "header": "Cobertura de seguro por cada alquiler en listnride"
+    },
     "landing-section-subheader": " Únete a listnride y encuentra la bici adecuada para ti.",
     "featured-bikes-header": "Alquiler de bicis: las favoritas de nuestra comunidad",
     "featured-bikes-subheader": "Ya sean bicis de carretera, de montaña, de carga, de ciudad o eléctricas, puedes alquilarlas todas. Estas son las bicis de alquiler favoritas de la comunidad.",
@@ -771,16 +777,16 @@
       "country": "País"
     },
     "insurance": {
-      "label": "Insurance",
-      "info": "Information about insurance",
-      "hint-part-1": "Your bike insured when ever somebody is renting it. In order to provide you the right protection its nessasary that we know the right value of your bike.",
-      "hint-part-2": "Please note that you have to provide proof the value of the bike in case of a claim",
-      "hint-link-label": "Learn more about insurance",
-      "header": "Please tell us the value of your bike",
-      "tip": "Additional fee for the rider is {{fee}} per day",
-      "up-to-value": "Up to {{value}}",
-      "select-value": "Please select your bike value",
-      "no-insurance": "Sorry, your country doesn't support an insurance. Only for Germany and Austria."
+      "label": "Seguro",
+      "info": "Información sobre el seguro",
+      "hint-part-1": "Su bicicleta está asegurada cada vez que se alquila. Para proporcionarle la protección adecuada, es necesario que ingrese el valor de su bicicleta.",
+      "hint-part-2": "Tenga en cuenta que debe proporcionar una prueba del valor de su bicicleta en caso de cualquier reclamo",
+      "hint-link-label": "Conozca más sobre el seguro",
+      "header": "Cuéntanos el valor de tu bicicleta",
+      "tip": "El costo adicional para el usuario es de {{fee}}por día",
+      "up-to-value": "Hasta {{value}}",
+      "select-value": "Por favor seleccione el valor de su bicicleta",
+      "no-insurance": "Lo sentimos, su país aún no está cubierto por nuestro seguro.\nEl seguro solo se aplica para alquileres en Alemania y Austria."
     },
     "pricing": {
       "info": "Tu precio diario es el precio base para 1 día.",

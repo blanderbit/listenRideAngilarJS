@@ -121,7 +121,16 @@
     "loading": "Caricamento",
     "today": "Oggi",
     "yesterday": "Ieri",
+    "press": {
+      "title": "Conosciuto da TV e stampa",
+      "logo-1": "inserisci il logo qui",
+      "logo-2": "inserisci il logo qui",
+      "logo-3": "inserisci il logo qui",
+      "logo-4": "inserisci il logo qui"
+    },
     "find-your-bike": {
+      "header": "Trova la bicicletta perfetta per te",
+      "subheader": "Stai pianificando il tuo prossimo viaggio?",
       "button": "Trova la tua bici"
     }
   },
@@ -130,7 +139,9 @@
       "basic-insurance": {
         "price-description": "incluso in ogni noleggio in Germania e Austria"
       }
-    }
+    },
+    "meta-title": "Assicurazione per ogni noleggio in Germania e Austria",
+    "meta-description": "Ogni noleggio in Germania e Austria tramite listnride  è automaticamente assicurato"
   },
   "coco-mat.bike": "Coco-mat bikes",
   "meta": {
@@ -356,9 +367,9 @@
       "size": "Taglia",
       "location": "Località",
       "invoice-address": "Indirizzo di fatturazione",
-      "premium-insurance": "Premium insurance",
-      "premium-insurance-title": "Premium Insurance Protection",
-      "premium-insurance-subtitle": "Pick our premium insurance for your ride to be on the safe side",
+      "premium-insurance": "Assicurazione Premium",
+      "premium-insurance-title": "Protezione assicurativa Premium",
+      "premium-insurance-subtitle": "Scegli la nostra assicurazione premium per la tua sicurezza",
       "thats-included": "On top of basic insurance, this is additionally included",
       "premium-feature-1": "Protection also against theft",
       "premium-feature-2": "Replacement bike after damage, accident or tievery",
@@ -646,6 +657,10 @@
   },
   "home": {
     "landing-section-header": "La bicicletta perfetta. Noleggiala subito.",
+    "insurance": {
+      "description": "Non importa se una fixie minimalista o la bici da triathlon di fascia alta: ogni noleggio in Germania o in Austria è assicurato! Semplice. In ogni momento.",
+      "header": "Copertura assicurativa per ogni noleggio su listnride"
+    },
     "landing-section-subheader": "Unisciti a listnride e trova la bicicletta giusta per te.",
     "featured-bikes-header": "Noleggio bicicletta: Le preferite dalla nostra comunità",
     "featured-bikes-subheader": "Sia che si tratti di biciclette da strada, mountain bike, biciclette da città o e-bike, è possibile noleggiarle tutte. Queste sono le biciclette a noleggio preferite della comunità.",
@@ -681,6 +696,7 @@
   },
   "calendar": {
     "invalid-date": "Le date non sono valide",
+    "basic-insurance-included": "Assicurazione base inclusa",
     "request-bike": "Richiedi la bicicletta",
     "to-request-bike-please": "per richiedere una bicicletta per favore",
     "own-bike": "Non è possibile richiedere la propria bicicletta",
@@ -767,16 +783,16 @@
       "country": "Nazione"
     },
     "insurance": {
-      "label": "Insurance",
-      "info": "Information about insurance",
-      "hint-part-1": "Your bike insured when ever somebody is renting it. In order to provide you the right protection its nessasary that we know the right value of your bike.",
-      "hint-part-2": "Please note that you have to provide proof the value of the bike in case of a claim",
-      "hint-link-label": "Learn more about insurance",
-      "header": "Please tell us the value of your bike",
-      "tip": "Additional fee for the rider is {{fee}} per day",
-      "up-to-value": "Up to {{value}}",
-      "select-value": "Please select your bike value",
-      "no-insurance": "Sorry, your country doesn't support an insurance. Only for Germany and Austria."
+      "label": "Assicurazione",
+      "info": "Informazioni sull'assicurazione",
+      "hint-part-1": "La tua bicicletta è assicurata ogni volta che viene noleggiata. Per offrirti la protezione giusta è necessario che tu inserisca il valore della tua bicicletta.",
+      "hint-part-2": "Si prega di notare che è necessario fornire la prova del valore della propria bicicletta in caso di reclami",
+      "hint-link-label": "Ulteriori informazioni sull'assicurazione",
+      "header": "Per favore comunicaci il valore della tua bici",
+      "tip": "Il costo aggiuntivo per il ciclista è {{fee}}al giorno",
+      "up-to-value": "Fino a {{value}}",
+      "select-value": "Per favore comunicaci il valore della tua bici",
+      "no-insurance": "Siamo spiacenti, il tuo paese non è ancora coperto dalla nostra assicurazione.\nL' assicurazione si applica solo per i noleggi in Germania e Austria."
     },
     "pricing": {
       "info": "Il tuo prezzo giornaliero è il prezzo base per 1 giorno.",
@@ -933,7 +949,8 @@
       "price-title": "Super prezzo",
       "price-content": "Le biciclette registrate sulla nostra piattaforma sono noleggiate da proprietari privati, ma anche da rivenditori specializzati e servizi di noleggio. Cosa c'è per te: la bicicletta perfetta con un'ottimo rapporto qualità / prezzo.",
       "easy-title": "Super semplice",
-      "easy-content": "Trova e prenota la tua bicicletta a noleggio prima di metterti in viaggio o semplicemente in viaggio utilizzando il nostro sito web mobile."
+      "easy-content": "Trova e prenota la tua bicicletta a noleggio prima di metterti in viaggio o semplicemente in viaggio utilizzando il nostro sito web mobile.",
+      "covered-content": "In caso di danni e / o furto, la nostra assicurazione ti aiuterà. Con\n<a href = \\ \"http: //www.hepster.com \\\" target = \\ \"_blank \\\" >hepster </a>\n e il\n<a href = \\ \"http: //www.gothaer.de \\\" target = \\ \"_blank \\\" >Gruppo Gothaer </a>\n abbiamo due partner forti al nostro fianco, per aiutarti in caso di emergenza."
     },
     "search-section": {
       "header": "Dove vorresti noleggiare una bicicletta ?",

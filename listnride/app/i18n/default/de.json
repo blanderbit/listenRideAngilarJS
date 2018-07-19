@@ -137,7 +137,8 @@
       "button": "Finde Dein Rad"
     },
     "rent-your-bike": {
-      "header": "Liste Dein Rad"
+      "header": "Liste Dein Rad",
+      "subheader": "Triff Gleichgesinnte. Verdiene Dir etwas dazu."
     }
   },
   "insurance": {
@@ -672,7 +673,8 @@
   "home": {
     "landing-section-header": "Das perfekte Rad. Einfach mieten.",
     "insurance": {
-      "description": "Egal ob minimalistisches Fixie oder High-End Triathlonrad: Jede listnride-Vermietung in Deutschland oder Österreich ist versichert! Einfach. Unbürokratisch. Jederzeit."
+      "description": "Egal ob minimalistisches Fixie oder High-End Triathlonrad: Jede listnride-Vermietung in Deutschland oder Österreich ist versichert! Einfach. Unbürokratisch. Jederzeit.",
+      "header": "Versicherungsschutz für jede Vermietung auf listnride"
     },
     "landing-section-subheader": "Miete dir auf listnride ein Fahrrad wie du es magst und gerade brauchst.",
     "featured-bikes-header": "Fahrradverleih: Die Lieblinge der Community",

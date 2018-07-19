@@ -79,49 +79,66 @@
   },
   "insurance": {
     "main": {
-      "title": "Unsere Versicherung schützt Dich.\n<br>\nEgal ob Vermieter oder Mieter.",
-      "description": "Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben. Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es beschädigt zu Dir zurück kommt?`<br0>`Alle <i1>lisntride</i> Vermietungen in Deutschland und Österreich sind versichert. Unser Partner <a href=\"www.hepster.com\" target=\"_blank\">hepster</a> ist für Dich da. Telefonisch. Via E-Mail. Einfach. Unbürokratisch."
+      "title": "Nuestro seguro lo protege.\n<br>\nNo importa si es lister o usuario.",
+      "description": "Alquilar tu propia bicicleta implica tener confianza en quien la va a utilizar. ¿Qué pasa si se la roban durante el alquiler? ¿Qué pasa si te la vuelve dañada?\n<p>Todos\n<i>los alquileres de listnride </i>\nen Alemania y Austria están asegurados. Y nuestro socio\n<a href = \\ \"www.hepster.com \\\" target = \\ \"_ blank \\\">hepster </a>\nte ayudará cuando necesites ayuda. Puedes contactarlos por teléfono o por correo electrónico. Sencillo. Sin burocracia.",
+      "logo-description": "Socio de seguros"
+    },
+    "meta": {
+      "title": "Seguro",
+      "_title.comment": "Insurance",
+      "description": "\nCada alquiler en Alemania o Austria está asegurado automáticamente a través de listnride",
+      "_description.comment": "Versicherung mit jeder listnride Miete"
     },
     "facts": {
-      "title": "Das solltest Du wissen!",
+      "title": "¡Lo que deberías saber!",
       "basic-insurance": {
-        "title": "Basis Versicherung",
-        "description": "<ul><li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung</li><li>Schutz gegen Vandalismus</li><li>Schutz von Elektronik und Akku bei Pedelecs</li><li>Selbstbeteiligung bis zu 250€</li></ul>"
+        "price": "Contenido",
+        "title": "Seguro básico",
+        "description": "<ul>\n<li>Protección en caso de daños causados involuntariamente por sí mismo o por causas externas\n<li>Protección contra vandalismo\n<li>Protección de componentes electrónicos y batería para pedelecs\n<li>Tarifa de retención de hasta 250€\n</ul>"
       },
       "premium-insurance": {
-        "title": "Premium Versicherung",
+        "title": "Seguro premium",
+        "price": "3 €",
+        "price-description": "al día",
         "description": "<ul><li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung <li>Schutz gegen Vandalismus <li>Schutz von Elektronik und Akku bei Pedelecs <li>Diebstahlschutz <li>24/7 Notfallnummer bei Diebstahl oder Beschädigung <li>Rücktransport nach Diebstahl oder Beschädigung <li>Ersatzrad nach Diebstahl oder Beschädigung <li>die Premium Versicherung hat keine Eigenbeteiligung</ul>"
       }
     },
     "faqs": {
-      "title": "Noch Fragen? Hier findest du Antworten!",
-      "description-lister": "Als Vermieter auf <li>listnride</li> möchtest Du natürlich sicher gehen, dass Du und Dein Rad gegen alle Eventualitäten abgesichert sind. Deshalb ist jede Vermietung, die Du über <li>listnride</li> tätigst ab sofort automatisch versichert. Mieter, die Dein Rad Anfragen, können das Premium Paket optional buchen, um zusätzliche Services und Garantien zu bekommen. Dieser Service ist für Dich als Vermieter kostenlos. Solltest Du weitere Fragen haben, kontaktiere uns rund um die Uhr via <a href=\"mailto:contact@listnride.com?subject= Versicherungsfragen\">E-Mail</a>.",
-      "description-rider": "Wir bieten zwei Versicherungspakete für jedes Rad das Du über <i>lisntride</i> mietest: Die <b>Basisversicherung</b> ist in jeder Vermietung inkludiert, die <b>Premium Versicherung</b> ist optional und erweitert der Versicherungsschutz um zusätzliche Leistungen.<br>Dein Rad und Du sind immer optimal geschützt und Deiner Fahrt steht nichts mehr im weg!",
-      "all-docs": "Hier kannst Du den detaillierten <a href=\"INSERT LINK HERE\" target\"_blank\">Versicherungsvertrag</a> ansehen",
+      "title": "¿Tienes más preguntas? ¡Aquí encontrarás todas las respuestas!",
       "lister": {
-        "question-1": "Wieviel kostet mich die Versicherung?",
-        "answer-1": "Nichts! Da die Versicherung nur von Mietern abgeschlossen wird, fallen für Vermieter keine zusätzlichen Kosten an. Unser Dankeschön an Dich.<br>Bedenke dass Dein Fahrrad somit für Mieter teurer wird. Die Kosten für die Basisversicherung betragen 0,1% des Versicherungswerts Deines Rades.Wenn Du Dein Rad also bis 1.000€ versichern lässt, dann zahlen Mieter eine Euro je Miettag zusätzlich. Bis 5.000€ Versicherungswert sind es also fünf Euro zusätzlich je Miettag.",
+        "description": "Como lister en <li>listnride </li>\ndesea asegurarse de que usted y su bicicleta estén protegidos contra cualquier eventualidad. Es por eso que cada alquiler en Alemania y Austria, a través de <li>listnride </li>\n, se asegura automáticamente con efecto inmediato. Los usuarios que soliciten su bicicleta pueden optar por reservar el paquete premium para obtener servicios y garantías adicionales. Este servicio es gratuito para usted como Lister.\n<p>\nSi tiene más preguntas, comuníquese con nosotros las 24 horas por correo electrónico.",
+        "question-1": "¿Cuánto cuesta el seguro?",
+        "tabname": "Para el lister",
+        "answer-1": "¡Nada! <br0>Como el seguro solo lo compran los usuarios, no hay costos adicionales para usted como lister. Sin embargo, tenga en cuenta que su precio de alquiler diario será un poco más caro para los usuarios. El costo del seguro básico es del 0,1% del valor del seguro de tu bicicleta. <p1>Si tienes tu bicicleta asegurada hasta 1,000 €, los usuarios pagarán un euro adicional por día de alquiler. Con un valor total de seguro de hasta € 5,000, hay un adicional de €5 por día de alquiler.",
         "question-2": "Wie hoch versichert  listnride mein Rad maximal?",
-        "answer-2": "Jedes Fahrrad ist automatisch bis 1.000€ versichert und kann von Dir bis maximal 5.000€ versichert werden . Die tatsächliche Auszahlungssumme bei Verlust orientiert sich am tatsächlichen Kaufpreis und Zeitwert. Sie wird von der <a href=\"https://www.gothaer.de/\" target=\"_blank\">Gothaer Versicherung</a> individuell für Deinen Fall bestimmt.Bedenke bitte bei der Festlegung des Versicherungswerts, dass Mieter sehr wohl eine Versicherungsgebühr zahlen, deren Höhe sich an Deinem gewählten Versicherungswert orientiert. Das heißt, je höher Du das Rad versicherst, desto höher fällt die Versicherungsgebühr für die Mieter aus.",
-        "question-3": "Was muss ich machen, wenn es zum Versicherungsfall kommt?",
-        "answer-3": "Solltest Du einmal in die Situation kommen, dass Dein Rad während einer Vermietung beschädigt oder gestohlen wird, nimm bitte direkt Kontakt mit \n<a href=\"www.hepster.com\" target=\"_blank\">hepster</a> \nauf:\n<ul> \n<li>\n<a href=\"mailto:schaden@hepster.com?subject=SUBJECT\">schaden@hepster.com</a>\n<li> 0381 - 20 38 88 801</ul>\n<br>\nDie Mitarbeiter von hepster werden Deine Anfrage zügig und kompetent beantworten."
+        "answer-2": "Cada bicicleta está asegurada automáticamente hasta 1.000€ y puede ser asegurada por usted hasta un máximo de 5.000€.\n<br>\nEl pago en caso de pérdida o daño se basa en el valor real de la bicicleta. El precio está determinado individualmente caso por caso, por el\n<a href = \\ \"https: //www.gothaer.de/ \\\" target = \\ \"_blank \\\" >Seguro de Gothaer </a>.\n<br>\nRecuerde que al determinar el valor del seguro, serán los usuarios los que pagarán el precio por la tarifa del seguro. Es decir cuanto más asegurada este su bicicleta mayor será el costo del seguro para los usuarios. ",
+        "question-3": "¿Qué tengo que hacer si ocurre un reclamo de seguro?",
+        "answer-3": "Si alguna vez se encuentra en una situación en la que su bicicleta se daña o es robada durante el alquiler, póngase en contacto con\n<a href = \\ \"[www.hepster.com \\\" target = \\ \"_ blank \\\">hepster </a>\n directamente:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nEl personal de Hepster responderá a su solicitud de manera rápida y eficaz ."
       },
       "rider": {
-        "question-1": "Wieviel kostet die Basisversicherung?",
-        "answer-1": "Die Kosten für die Basisversicherung betragen lediglich 0,1% des Versicherungswerts des von Dir gebuchten Rades.<br>Wenn ein Rad also bis 1.000€ Versicherungssumme vom Vermieter angegeben ist, dann zahlst Du genau 1€ (einen Euro) je Miettag zusätzlich.",
-        "question-2": "Wieviel kostet die Premium Versicherung?",
-        "answer-2": "Drei Euro pro Tag zusätzlich zum Mietpreis und den <i>lisntride</i>-<a href=\"https://www.listnride.com/terms%5C\" target=\"_blank\">Gebühren</a>.",
-        "question-3": "Was deckt die Basisversicherung ab?",
-        "answer-3": "<ul><li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung <li>Schutz gegen Vandalismus <li>Schutz von Elektronik und Akku bei Pedelecs <li>Selbstbeteiligung bis zu 250€</ul>",
-        "question-4": "Was deckt die Premium Versicherung ab?",
-        "answer-4": "<ul> <li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung <li>Schutz gegen Vandalismus <li>Schutz von Elektronik und Akku bei Pedelecs <li>Diebstahlschutz <li>24/7 Notfallnummer bei Diebstahl oder Beschädigung <li>Rücktransport nach Diebstahl oder Beschädigung <li>Ersatzrad nach Diebstahl oder Beschädigung <li>die Premium Versicherung hat keine Eigenbeteiligung</ul>",
-        "question-5": "Gibt es eine Eigenbeteiligung im Schadensfall? Wie hoch ist diese?",
-        "answer-5": "Die Eigenbeteiligung beträgt bis zu 250€ für die Basisversicherung.<br>Die Premium Versicherung hat keine Eigenbeteiligung.",
-        "question-6": "Wie beende ich die Versicherung nachdem meine Radmiete endet?",
-        "answer-6": "Mit jeder bestätigten Fahrradvermietung bekommst Du ein individuelles Versicherungszertifikat. Es ist <b>ausschließlich</b>für diese Buchung und für den von Dir <b>gewählten Zeitraum</b>gültig und endet automatisch.Das Zertifikat kannst Du direkt herunterladen und bekommst es via E-Mail zugesandt. Du musst nichts weiter machen.",
-        "question-7": "An wen wende ich mich, wenn ich meine Versicherung in Anspruch nehmen muss?",
-        "answer-7": "Natürlich hoffen wir, dass das nicht passieren wird! <br>Die Versicherung wird von unserem Online Versicherungs-Partner <a href=\"www.hepster.com\" target=\"_blank\">hepster</a> angeboten und durch die <a href=\"https://www.gothaer.de/\" target=\"_blank\">Gothaer Versicherung</a> abgedeckt. Da Du selbst der Versicherungsnehmer von hepster bist, wendest Du Dich im Schadensfall am besten direkt an hepster:<ul> <li><a href=\"mailto:schaden@hepster.com?subject= Schaden nach listnride-Miete\">schaden@hepster.com</a> <li> 0381 - 20 38 88 801</ul><br>Die Mitarbeiter von hepster werden Deine Anfrage zügig und kompetent beantworten."
-      }
+        "description": "Ofrecemos dos paquetes de seguros por cada bicicleta que alquila a través de\n<i>listnride </i>\n: El\n<b>seguro básico </b>\nestá incluido en cada alquiler, y el\n<b>seguro premium </b>\nque es opcional y extiende la cobertura del seguro por beneficios adicionales.\n<br>\nSu bicicleta y usted estarán siempre protegidos. ¡Puedes comenzar a pedalear con la conciencia tranquila!",
+        "question-1": "¿Cuánto cuesta el seguro básico?",
+        "tabname": "Para el usuario",
+        "answer-1": "El costo del seguro básico es solo el 0.1% del valor del seguro de la bicicleta que ha reservado.\n<br>\nSi una bicicleta está asegurada hasta 1,000 €, entonces usted paga exactamente un euro por día de alquiler para el seguro básico.",
+        "question-2": "¿Cuánto cuesta el seguro premium?",
+        "answer-2": "Tres euros por día, además de la renta y el\n<i>listnride </i>\n - <a href = \\ \"https: //www.listnride.com/terms%5C \\\" target = \\ \"_blank \\\" >tarifas </a>.",
+        "question-3": "¿Qué cubre el seguro básico?",
+        "answer-3": "<ul>\n<li>Protección en caso de daños causados involuntariamente por sí mismo o por causas externas\n<li>Protección contra vandalismo\n<li>Protección de componentes electrónicos y batería para pedelecs\n<li>Tarifa de retención de hasta 250€\n</ul>",
+        "question-4": "¿Qué cubre el seguro premium?",
+        "answer-4": "<ul>\n<li>protección en caso de daños causados involuntariamente por sí mismo o por causas externas\n<li>Protección contra el vandalismo\n<li>Protección de componentes electrónicos y batería para pedelecs\n<li>Protección contra robo\n<li>Número de emergencia 24/7 en caso de robo o daño\n<li>Devolver transporte después de robo o daño\n<li>Reemplazo de bicicletas después de robo o daño\n<li>Sin tarifa de retención\n</ul>",
+        "question-5": "¿Hay una tarifa de retención en caso de daño? ¿De cuanto es?",
+        "answer-5": "La tarifa de retención es de hasta 250 € para el seguro básico.\n<br>\nEl seguro premium no tiene tarifa de retención.",
+        "question-6": "¿Cómo finalizo el seguro después de que termina el alquiler de mi bicicleta?",
+        "answer-6": "Con cada alquiler de bicicletas, recibirá un certificado de seguro individual. Esto es\n<b>solo </b>\nválido para la reserva específica y para el\n<b>período de tiempo </b>\n seleccionado por ti, termina automáticamente al finalizar el alquiler de la bicicleta.\n<p>\nTe enviaremos el certificado por correo electrónico o puedes descargarlo de nuestro sitio si lo deseas. ",
+        "question-7": "¿A quién debo contactar si necesito reclamar mi seguro?",
+        "answer-7": "Por supuesto, ¡esperamos que esto nunca suceda!\n<br>\n El seguro es ofrecido por nuestro socio de seguros en línea\n<a href = \\ \"www.hepster.com \\\" target = \\ \"_ blank \\\">hepster </a>\n y cubierto por\n<a href = \\ \"https: //www.gothaer.de/ \\\" target = \\ \"_blank \\\" > Gothaer Insurance </a>\nDado que usted es el titular de la póliza de Hepster, lo mejor es ponerse en contacto con Hepster:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nEl personal de Hepster lo apoyará rápida y eficazmente."
+      },
+      "docs": {
+        "tabname": "Todos los documentos"
+      },
+      "description-lister": "Como lister en <li>listnride </li>\ndesea asegurarse de que usted y su bicicleta estén protegidos contra cualquier eventualidad. Es por eso que cada alquiler en Alemania y Austria, realizado a través de <li>listnride </li>\n, se asegura automáticamente con efecto inmediato. Los usuarios que soliciten su bicicleta pueden optar por reservar el paquete premium para obtener servicios y garantías adicionales. Este servicio es gratuito para usted como Lister.\n<p>\nSi tiene más preguntas, comuníquese con nosotros las 24 horas por correo electrónico.",
+      "description-rider": "Ofrecemos dos paquetes de seguros para cada bicicleta que se alquila en Alemania y Austria a través de <i0>listnride </i0>: El <b1>seguro básico </b1>se incluye en cada alquiler, el <b2>seguro premium </b2>es opcional y extiende la cobertura del seguro con beneficios adicionales. <br3>¡Usted y su bicicleta están siempre protegidos,  ya no hay nada más en el camino que le impida disfrutar el paseo!",
+      "all-docs": "Aquí puede ver los términos y condiciones del seguro\n<a href = \\ \"INSERTAR ENLACE AQUÍ \\\" objetivo = \\ \"_ blank \\\">Términos y condiciones Seguro </a0>"
     }
   },
   "business-community": {
