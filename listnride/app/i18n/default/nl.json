@@ -133,7 +133,7 @@
     },
     "rent-your-bike": {
       "header": "Verhuur je fiets!",
-      "subheader": "Ontmoet gelijkgestemden. Verdien geld."
+      "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
   "insurance": {
@@ -664,7 +664,8 @@
     "landing-section-header": "De perfekte fiets. Gewoon huren.",
     "insurance": {
       "description": "Of het nu minimalistische fixie of high-end triathlonfiets is: Elke listnride verhuur in Duitsland of Oostenrijk is verzekerd! Eenvoudig. Onbureaukratisch. Te allen tijde.",
-      "header": "Verzekering voor je fietshuur op listnride"
+      "header": "Verzekering voor je fietshuur op listnride",
+      "logo-description": "In samenwerking met hepster"
     },
     "landing-section-subheader": "Huur een fiets via listnride naar eigen smaak en gebruik.",
     "featured-bikes-header": "Fietsverhuur: De favorieten van onze Community",
@@ -685,6 +686,7 @@
   },
   "search": {
     "no-bikes": "Er zijn nog geen fietsen op deze locatie, stuur ons een mailtje op contact@listnride.com en wij gaan direct voor je opzoek! ",
+    "bikes-found": "bikes found:",
     "all-sizes": "Alle Maten",
     "bikes-in": "fietsen in",
     "meta-title": "Huur de perfekte fiets in {{location}}.",

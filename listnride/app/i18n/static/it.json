@@ -80,7 +80,7 @@
   "insurance": {
     "main": {
       "title": "La nostra assicurazione ti protegge.\n<br>\nNon importa se lister o pilota.",
-      "description": "Noleggiare una bici speciale significa avere fiducia. Cosa succede se viene rubata durante il noleggio ? Cosa succede se ritorna danneggiata ? Tutti listnride \ni noleggi in Germania e Austria sono assicurati. E il nostro partner\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\nti aiuterà quando hai bisogno di aiuto. Per telefono. Per e-mail.",
+      "description": "Noleggiare una bici speciale significa avere fiducia. Cosa succede se viene rubata durante il noleggio ? Cosa succede se ritorna danneggiata ? Tutti i noleggi listnride in Germania e Austria sono assicurati. E il nostro partner\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\nti aiuterà quando hai bisogno di aiuto. Per telefono. Per e-mail.",
       "logo-description": "Il nostro partner assicurativo"
     },
     "meta": {
@@ -100,7 +100,7 @@
         "title": "Assicurazione",
         "price": "3 €",
         "price-description": "Al giorno",
-        "description": "<ul><li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung <li>Schutz gegen Vandalismus <li>Schutz von Elektronik und Akku bei Pedelecs <li>Diebstahlschutz <li>24/7 Notfallnummer bei Diebstahl oder Beschädigung <li>Rücktransport nach Diebstahl oder Beschädigung <li>Ersatzrad nach Diebstahl oder Beschädigung <li>die Premium Versicherung hat keine Eigenbeteiligung</ul>"
+        "description": "<ul>\n<li>Protezione in caso di danno involontario di sé e esterno\n<li>Protezione contro il vandalismo\n<li>Protezione per elettronica e batteria per pedelec\n<li>Protezione contro il furto\n<li>Numero di emergenza 24 ore su 24, 7 giorni su 7 in caso di furto o danneggiamento\n<li>Trasporto dopo il furto o il danneggiamento\n<li>Sostituzione bici dopo il furto o danni\n<li>Nessuna franchigia\n</ul>"
       }
     },
     "faqs": {
@@ -110,7 +110,7 @@
         "question-1": "Quanto costa l'assicurazione?",
         "tabname": "Per il noleggiatore",
         "answer-1": "Niente! <br0>Poiché l'assicurazione è acquistata solo dai noleggianti, non ci sono costi aggiuntivi per te come noleggiatore. Tuttavia, rendersi conto che il prezzo di noleggio giornaliero sarà un po 'più costoso per i noleggianti. Il costo dell'assicurazione di base è pari allo 0,1% del valore assicurativo della tua bicicletta. <p1>Se la tua bicicletta è assicurata fino a 1.000 €, i noleggianti pagano un euro aggiuntivo per ogni giorno di noleggio. Con un valore assicurativo fino a € 5.000, c'è un ulteriore 5€ per giorno di noleggio.",
-        "question-2": "Wie hoch versichert  listnride mein Rad maximal?",
+        "question-2": "Qual è la massima copertura assicurativa di listnride per la mia bici?",
         "answer-2": "Ogni bici è automaticamente assicurata fino a 1.000 € e può essere assicurata da voi fino ad un massimo di 5.000 €.\n<br>\nIl pagamento effettivo in caso di perdita o danno si basa sul valore effettivo della bici. È determinato dal\n<a href=\"https://www.gothaer.de\" target=\"_blank\">Assicurazione Gothaer</a>\n individualmente caso per caso.\n<br>\nSi prega di ricordare quando si determina il valore dell'assicurazione che i noleggianti pagano per la quota di assicurazione, il cui importo dipende dal valore di assicurazione scelto. Questo significa; più alto si assicura la bici, maggiore sarà la quota di assicurazione per il noleggiante.",
         "question-3": "Cosa devo fare se si verifica un sinistro?",
         "answer-3": "Se ti trovi in una situazione in cui la tua bici è stata danneggiata o rubata durante un noleggio, per favore contatta\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n direttamente:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nlo staff di hepster risponderà alla tua richiesta in modo rapido e competente."
@@ -765,7 +765,7 @@
       "description": "Se noleggi una bicicletta in Germania o in Austria, nel canone di noleggio è inclusa un'assicurazione di base. Con\n<a href=\"http: //www.hepster.com\" target=\"_blank\" >hepster </a>\ne il\n<a href=\"http://www.gothaer.de\" target=\"_blank\">Gruppo Gothaer </a>\nabbiamo due partner forti dalla nostra parte per aiutarti quando necessario.\n<p>\nBasta scegliere il pacchetto assicurativo giusto per te quando prenoti la tua bici."
     },
     "outro": {
-      "description": "<i>listnride </i>è la piattaforma di condivisione di biciclette più grande d'Europa.\n<br>\nOffriamo ai ciclisti un facile accesso a biciclette di alta qualità.\n<br>\nLa bici perfetta in ogni momento. Semplicemente disponibile online."
+      "description": "listnride è la più grande piattaforma di bike sharing d'Europa. Offriamo ai ciclisti un facile accesso a bici di alta qualità. Ovunque la bici perfetta. Semplicemente disponibile online."
     }
   },
   "how-it-works": {

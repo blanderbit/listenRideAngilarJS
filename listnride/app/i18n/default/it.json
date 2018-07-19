@@ -132,6 +132,10 @@
       "header": "Trova la bicicletta perfetta per te",
       "subheader": "Stai pianificando il tuo prossimo viaggio?",
       "button": "Trova la tua bici"
+    },
+    "rent-your-bike": {
+      "header": "Noleggia la tua bici",
+      "subheader": "Incontra persone che condividono la tua stessa passione. Guadagna qualcosa in più"
     }
   },
   "insurance": {
@@ -658,8 +662,9 @@
   "home": {
     "landing-section-header": "La bicicletta perfetta. Noleggiala subito.",
     "insurance": {
-      "description": "Non importa se una fixie minimalista o la bici da triathlon di fascia alta: ogni noleggio in Germania o in Austria è assicurato! Semplice. In ogni momento.",
-      "header": "Copertura assicurativa per ogni noleggio su listnride"
+      "description": "Non importa se una fixie o una bici da triathlon di alta gamma: ogni noleggio in Germania o in Austria è assicurato! Semplice. In ogni momento.",
+      "header": "Copertura assicurativa per ogni noleggio su listnride",
+      "logo-description": "In collaborazione con hepster"
     },
     "landing-section-subheader": "Unisciti a listnride e trova la bicicletta giusta per te.",
     "featured-bikes-header": "Noleggio bicicletta: Le preferite dalla nostra comunità",
@@ -680,6 +685,7 @@
   },
   "search": {
     "no-bikes": "Non ci sono biciclette in questa località",
+    "bikes-found": "bikes found:",
     "all-sizes": "Tutte le misure",
     "bikes-in": "Biciclette a",
     "meta-title": "Noleggia la bicicletta perfetta a {{location}}.",
@@ -707,8 +713,8 @@
     "info-subtotal": "Questo è il prezzo giornaliero regolare<br>per il numero di giorni che desideri<br>noleggiare la bicicletta.",
     "info-discount": "Lo sconto giornaliero medio<br>che ottieni al giorno noleggiando<br>per un periodo di tempo più lungo.",
     "info-service-fee": "La tassa è <br>data dal servizio offerto da<br>listnride. Comprende l'IVA.",
-    "info": "Nel calendario precedente fare clic prima sul<br>giorno in cui vuoi noleggiare <br>la bicicletta, e in secondo luogo sul<br>giorno in cui desideri restituirla.",
-    "info-without-calendar": "Nel calendario precedente fare clic prima sul<br>giorno in cui vuoi noleggiare <br>la bicicletta, e in secondo luogo sul<br>giorno in cui desideri restituirla."
+    "info": "Nel calendario seleziona prima<br>il giorno in cui desideri noleggiare <br>la bici, e poi<br>il giorno in cui desideri restituirla.",
+    "info-without-calendar": "Nel calendario, seleziona prima <br0>il giorno in cui desideri noleggiare <br1>la bici e poi <br2>il giorno in cui desideri restituirla."
   },
   "list": {
     "edit-bike": "Modifica la bicicletta",
