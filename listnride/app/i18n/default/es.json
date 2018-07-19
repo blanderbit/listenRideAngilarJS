@@ -676,6 +676,7 @@
   },
   "search": {
     "no-bikes": "No hay bicis en esta ubicación",
+    "bikes-found": "bikes found:",
     "all-sizes": "Todos los tamaños",
     "bikes-in": "Bicis disponibles",
     "meta-title": "Alquila la bici perfecta en{{location}} ",
