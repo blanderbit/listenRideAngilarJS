@@ -51,7 +51,10 @@
       </div>
     </div>
 
-    <div class="navigation" layout="row" layout-align="end center" layout-margin>
+    <div class="navigation" layout="row" layout-align="space-between center" layout-margin>
+      <md-button class="md-lined" ng-click="insuranceTab.parent.previousTab()">
+        {{ 'list.back' | translate }}
+      </md-button>
       <md-button
         class="md-raised md-primary"
         ng-disabled="!insuranceTab.parent.form.coverage_total && insuranceTab.parent.insuranceAllowed() && insuranceTab.parent.isListMode"
