@@ -772,6 +772,9 @@
     "main": {
       "header": "The listnride insurance",
       "description": "If you rent a bicycle in Germany or Austria, a basic insurance is included in the rent. With \n<a href=\\\"http://www.hepster.com\\\"target=\\\"_blank\\\">hepster</a> \nand the \n<a href\\=\"http://http://www.gothaer.de\\\"target=\\\"_blank\\\">Gothaer Group</a> \nwe have two strong partners on our side to help you when needed.\n<p>\nJust choose the right insurance package for you when booking your bike and off you go."
+    },
+    "outro": {
+      "description": "listnride ist Europas größte Bike-Sharing-Plattform. Wir bieten Veloisten einfachen Zugang zu hochwertigen Rädern. Jederzeit das perfekte Rad. Einfach online verfügbar."
     }
   },
   "how-it-works": {

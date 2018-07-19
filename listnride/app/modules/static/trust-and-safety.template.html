@@ -29,7 +29,7 @@
       <div flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
         <md-icon class="lnr-icn-mlrg md-color-primary" md-svg-src="app/assets/ui_icons/icn_covered.svg"></md-icon>
          <h3 class="md-subhead lnr-center">{{ 'list-a-bike.info-section.covered-title' | translate }}</h3>
-         <p class="lnr-center">{{ 'list-a-bike.info-section.covered-content' | translate }}
+         <p class="lnr-center" translate="list-a-bike.info-section.covered-content">
          <a class="lnr-link" ui-sref="terms">{{ 'shared.learn-more' | translate }}</a></p>
      </div>
 
@@ -64,7 +64,7 @@
           <div class="lnr-preload-bg insurance-banner__img" style="background-image: url('app/assets/ui_images/static/lnr-landing-insurance.jpg')" layout="row"
             layout-align="center center">
             <div class="insurance__gothaer">
-              <span class="md-body-1">{{ 'insurance.logo.description' | translate }}</span>
+              <span class="md-body-1">{{ 'home.insurance.logo-description' | translate }}</span>
               <img ng-src="app/assets/ui_images/static/lnr-insurance-gothaer-blue@2x.png" alt="">
             </div>
           </div>
@@ -99,16 +99,16 @@
       <div layout="column" layout-gt-xs="row" class="md-subhead lnr-sc-w-divider">
         <div layout="column" flex-gt-xs="45" class="lnr-center lnr-sc">
           <h3 class="md-headline">
-            {{ 'shared.find-your-bike.main.header' | translate }}
+            {{ 'shared.find-your-bike.header' | translate }}
           </h3>
           <p class="md-subhead">
-            {{ 'shared.find-your-bike.main.subheader' | translate }}
+            {{ 'shared.find-your-bike.subheader' | translate }}
           </p>
           <div class="lnr-padding-top-double" style="margin-top: auto;">
             <md-button
               ui-sref="search({location: 'Berlin'})"
               class="md-raised md-primary md-lrg">
-              {{ 'shared.find-you-bike.main.button' | translate }}
+              {{ 'shared.find-your-bike.button' | translate }}
             </md-button>
           </div>
         </div>
@@ -117,10 +117,10 @@
         </div>
         <div layout="column" flex-gt-xs="45" class="lnr-center lnr-sc">
           <h3 class="md-headline">
-            {{ 'shared.rent-your-bike.main.header' | translate }}
+            {{ 'shared.rent-your-bike.header' | translate }}
           </h3>
           <p class="md-subhead">
-            {{ 'shared.rent-your-bike.main.subheader' | translate }}
+            {{ 'shared.rent-your-bike.subheader' | translate }}
           </p>
           <div class="lnr-padding-top-double" style="margin-top: auto;">
             <md-button

@@ -137,7 +137,8 @@
       "button": "Find your bike"
     },
     "rent-your-bike": {
-      "header": "Rent your bike"
+      "header": "Rent your bike",
+      "subheader": "Triff Gleichgesinnte. Verdiene etwas dazu."
     }
   },
   "insurance": {
@@ -673,7 +674,9 @@
   "home": {
     "landing-section-header": "The perfect bike. Simply rent it.",
     "insurance": {
-      "description": "No matter if minimalistic fixie or high-end triathlon bike: Every listnride rental in Germany or Austria is insured! Simple. Unbureaucratically. Anytime."
+      "description": "No matter if minimalistic fixie or high-end triathlon bike: Every listnride rental in Germany or Austria is insured! Simple. Unbureaucratically. Anytime.",
+      "header": "Versicherungsschutz für jede Vermietung auf listnride.",
+      "logo-description": "In Kooperation mit hepster"
     },
     "landing-section-subheader": "Join listnride and find the bike that is right for you.",
     "featured-bikes-header": "Bike Rental: Our Community’s Favorites",
@@ -1093,6 +1096,7 @@
   "footer": {
     "language": "Language",
     "insurance-partner": "Insurance Partner",
+    "insurance": "Insurance",
     "company": "Company",
     "legal": "Legal",
     "terms-and-conditions": "Terms",
