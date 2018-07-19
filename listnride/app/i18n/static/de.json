@@ -770,6 +770,9 @@
     "main": {
       "header": "Die listnride Versicherung",
       "description": "Huur je een fiets in Duitsland of Oostenrijk, dan is er reeds een basisverzekering bij de huurprijs inbegrepen. Met <a href=\\\"http://www.hepster.com\\\"target=\\\"_blank\\\">hepster</a> en de <a href=\\\"http://http://www.gothaer.de\\\"target=\\\"_blank\\\">Gothaer Group</a> hebben we twee sterke partners aan onze zijde om u te helpen in geval van nood.<p> Kies het juiste verzekeringspakket voor u bij het boeken van uw fiets en geniet van je toertocht."
+    },
+    "outro": {
+      "description": "<i>listnride</i> ist Europas größte Bike-Sharing-Plattform.\n<br>\nWir bieten Veloisten einfachen Zugang zu hochwertigen Rädern.\n<br>\nJederzeit das perfekte Rad. Einfach online verfügbar."
     }
   },
   "how-it-works": {

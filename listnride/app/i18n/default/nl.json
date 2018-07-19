@@ -132,7 +132,8 @@
       "button": "Fiets zoeken"
     },
     "rent-your-bike": {
-      "header": "Verhuur je fiets!"
+      "header": "Verhuur je fiets!",
+      "subheader": "Ontmoet gelijkgestemden. Verdien geld."
     }
   },
   "insurance": {
@@ -662,7 +663,8 @@
   "home": {
     "landing-section-header": "De perfekte fiets. Gewoon huren.",
     "insurance": {
-      "description": "Of het nu minimalistische fixie of high-end triathlonfiets is: Elke listnride verhuur in Duitsland of Oostenrijk is verzekerd! Eenvoudig. Onbureaukratisch. Te allen tijde."
+      "description": "Of het nu minimalistische fixie of high-end triathlonfiets is: Elke listnride verhuur in Duitsland of Oostenrijk is verzekerd! Eenvoudig. Onbureaukratisch. Te allen tijde.",
+      "header": "Verzekering voor je fietshuur op listnride"
     },
     "landing-section-subheader": "Huur een fiets via listnride naar eigen smaak en gebruik.",
     "featured-bikes-header": "Fietsverhuur: De favorieten van onze Community",
