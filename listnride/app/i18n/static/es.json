@@ -80,7 +80,7 @@
   "insurance": {
     "main": {
       "title": "Nuestro seguro lo protege.\n<br>\nNo importa si es lister o usuario.",
-      "description": "Alquilar tu propia bicicleta implica tener confianza en quien la va a utilizar. ¿Qué pasa si se la roban durante el alquiler? ¿Qué pasa si te la vuelve dañada?\n<p>Todos\n<i>los alquileres de listnride </i>\nen Alemania y Austria están asegurados. Y nuestro socio\n<a href = \\ \"www.hepster.com \\\" target = \\ \"_ blank \\\">hepster </a>\nte ayudará cuando necesites ayuda. Puedes contactarlos por teléfono o por correo electrónico. Sencillo. Sin burocracia.",
+      "description": "Alquilar tu propia bicicleta implica tener confianza en quien la va a utilizar. ¿Qué pasa si se la roban durante el alquiler? ¿Qué pasa si te la vuelve dañada? Todos los alquileres de listnride \nen Alemania y Austria están asegurados. Y nuestro socio\n<a href=\"www.hepster.com\" target=\"_blank\">hepster</a>\nte ayudará cuando necesites ayuda. Puedes contactarlos por teléfono o por correo electrónico. Sencillo. Sin burocracia.",
       "logo-description": "Socio de seguros"
     },
     "meta": {
@@ -111,9 +111,9 @@
         "tabname": "Para el lister",
         "answer-1": "¡Nada! <br0>Como el seguro solo lo compran los usuarios, no hay costos adicionales para usted como lister. Sin embargo, tenga en cuenta que su precio de alquiler diario será un poco más caro para los usuarios. El costo del seguro básico es del 0,1% del valor del seguro de tu bicicleta. <p1>Si tienes tu bicicleta asegurada hasta 1,000 €, los usuarios pagarán un euro adicional por día de alquiler. Con un valor total de seguro de hasta € 5,000, hay un adicional de €5 por día de alquiler.",
         "question-2": "Wie hoch versichert  listnride mein Rad maximal?",
-        "answer-2": "Cada bicicleta está asegurada automáticamente hasta 1.000€ y puede ser asegurada por usted hasta un máximo de 5.000€.\n<br>\nEl pago en caso de pérdida o daño se basa en el valor real de la bicicleta. El precio está determinado individualmente caso por caso, por el\n<a href = \\ \"https: //www.gothaer.de/ \\\" target = \\ \"_blank \\\" >Seguro de Gothaer </a>.\n<br>\nRecuerde que al determinar el valor del seguro, serán los usuarios los que pagarán el precio por la tarifa del seguro. Es decir cuanto más asegurada este su bicicleta mayor será el costo del seguro para los usuarios. ",
+        "answer-2": "Cada bicicleta está asegurada automáticamente hasta 1.000€ y puede ser asegurada por usted hasta un máximo de 5.000€.\n<br>\nEl pago en caso de pérdida o daño se basa en el valor real de la bicicleta. El precio está determinado individualmente caso por caso, por el\n<a href=\"https://www.gothaer.de\" target=\"_blank\" >Seguro de Gothaer</a>.\n<br>\nRecuerde que al determinar el valor del seguro, serán los usuarios los que pagarán el precio por la tarifa del seguro. Es decir cuanto más asegurada este su bicicleta mayor será el costo del seguro para los usuarios. ",
         "question-3": "¿Qué tengo que hacer si ocurre un reclamo de seguro?",
-        "answer-3": "Si alguna vez se encuentra en una situación en la que su bicicleta se daña o es robada durante el alquiler, póngase en contacto con\n<a href = \\ \"[www.hepster.com \\\" target = \\ \"_ blank \\\">hepster </a>\n directamente:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nEl personal de Hepster responderá a su solicitud de manera rápida y eficaz ."
+        "answer-3": "Si alguna vez se encuentra en una situación en la que su bicicleta se daña o es robada durante el alquiler, póngase en contacto con\n<a href=\"www.hepster.com\" target=\"_blank\">hepster</a>\n directamente:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nEl personal de Hepster responderá a su solicitud de manera rápida y eficaz ."
       },
       "rider": {
         "description": "Ofrecemos dos paquetes de seguros por cada bicicleta que alquila a través de\n<i>listnride </i>\n: El\n<b>seguro básico </b>\nestá incluido en cada alquiler, y el\n<b>seguro premium </b>\nque es opcional y extiende la cobertura del seguro por beneficios adicionales.\n<br>\nSu bicicleta y usted estarán siempre protegidos. ¡Puedes comenzar a pedalear con la conciencia tranquila!",
@@ -121,7 +121,7 @@
         "tabname": "Para el usuario",
         "answer-1": "El costo del seguro básico es solo el 0.1% del valor del seguro de la bicicleta que ha reservado.\n<br>\nSi una bicicleta está asegurada hasta 1,000 €, entonces usted paga exactamente un euro por día de alquiler para el seguro básico.",
         "question-2": "¿Cuánto cuesta el seguro premium?",
-        "answer-2": "Tres euros por día, además de la renta y el\n<i>listnride </i>\n - <a href = \\ \"https: //www.listnride.com/terms%5C \\\" target = \\ \"_blank \\\" >tarifas </a>.",
+        "answer-2": "Tres euros por día, además de la renta y el\n<i>listnride </i>\n - <a href=\"https: //www.listnride.com/terms\" target=\"_blank\" >tarifas</a>.",
         "question-3": "¿Qué cubre el seguro básico?",
         "answer-3": "<ul>\n<li>Protección en caso de daños causados involuntariamente por sí mismo o por causas externas\n<li>Protección contra vandalismo\n<li>Protección de componentes electrónicos y batería para pedelecs\n<li>Tarifa de retención de hasta 250€\n</ul>",
         "question-4": "¿Qué cubre el seguro premium?",
@@ -131,7 +131,7 @@
         "question-6": "¿Cómo finalizo el seguro después de que termina el alquiler de mi bicicleta?",
         "answer-6": "Con cada alquiler de bicicletas, recibirá un certificado de seguro individual. Esto es\n<b>solo </b>\nválido para la reserva específica y para el\n<b>período de tiempo </b>\n seleccionado por ti, termina automáticamente al finalizar el alquiler de la bicicleta.\n<p>\nTe enviaremos el certificado por correo electrónico o puedes descargarlo de nuestro sitio si lo deseas. ",
         "question-7": "¿A quién debo contactar si necesito reclamar mi seguro?",
-        "answer-7": "Por supuesto, ¡esperamos que esto nunca suceda!\n<br>\n El seguro es ofrecido por nuestro socio de seguros en línea\n<a href = \\ \"www.hepster.com \\\" target = \\ \"_ blank \\\">hepster </a>\n y cubierto por\n<a href = \\ \"https: //www.gothaer.de/ \\\" target = \\ \"_blank \\\" > Gothaer Insurance </a>\nDado que usted es el titular de la póliza de Hepster, lo mejor es ponerse en contacto con Hepster:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nEl personal de Hepster lo apoyará rápida y eficazmente."
+        "answer-7": "Por supuesto, ¡esperamos que esto nunca suceda!\n<br>\n El seguro es ofrecido por nuestro socio de seguros en línea\n<a href=\"www.hepster.com\" target=\"_ blank\">hepster </a>\n y cubierto por\n<a href=\"https: //www.gothaer.de\" target=\"_blank\" > Gothaer Insurance </a>\nDado que usted es el titular de la póliza de Hepster, lo mejor es ponerse en contacto con Hepster:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nEl personal de Hepster lo apoyará rápida y eficazmente."
       },
       "docs": {
         "tabname": "Todos los documentos"
