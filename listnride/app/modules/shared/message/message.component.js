@@ -16,8 +16,8 @@ angular.module('message',[]).component('message', {
     messageTime: '<',
     time: '<'
   },
-  controller: [ '$translate', '$localStorage', '$mdDialog', '$analytics', 'api',
-    function MessageController($translate, $localStorage, $mdDialog, $analytics, api) {
+  controller: [ '$translate', '$localStorage', '$mdDialog', '$analytics', 'api', 'ENV',
+    function MessageController($translate, $localStorage, $mdDialog, $analytics, api, ENV) {
       var message = this;
       var time = message.time.toString();
       var messageDate = moment(message.time);
@@ -41,6 +41,27 @@ angular.module('message',[]).component('message', {
       }      
       
       message.buttonClicked = false;
+      var insuranceEndpoint = "/users/" + $localStorage.userId + "/insurances/" + message.request.insurance.id + "?item_id=";
+      message.bikeInsuranceUrl = ENV.apiEndpoint + insuranceEndpoint + message.request.insurance.items_uid.thing;
+      message.bikeAssistInsuranceUrl = ENV.apiEndpoint + insuranceEndpoint + message.request.insurance.items_uid.person;
+
+      message.downloadDocument = function (certificateId) {
+        console.log(insuranceEndpoint + "\"" + certificateId + "\"");
+        api.get(insuranceEndpoint + certificateId, 'blob').then(
+          function (success) {
+            var a = document.createElement('a');
+            var file = new Blob([success.data], {type: 'application/pdf'});
+            var fileURL = window.URL.createObjectURL(file);
+            a.href = fileURL;
+            a.download = "Insurance Certificate " + certificateId + ".pdf";
+            a.target = "_BLANK";
+            a.click();
+          },
+          function (error) {
+            console.log("error happened");
+          }
+        );
+      };
       
       message.closeDialog = function() {
         $mdDialog.hide();
