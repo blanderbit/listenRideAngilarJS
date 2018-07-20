@@ -77,6 +77,7 @@ angular.module('list', ['ngLocale'])
         }
 
         list.tabCompleted = function(tabId) {
+          console.log(list.form);
           return (list.selectedIndex > tabId && list.isListMode) ? "✔" : "    ";
         };
 
@@ -180,12 +181,14 @@ angular.module('list', ['ngLocale'])
               "description": list.form.description,
               "size": list.form.size,
               "category": list.form.subCategory,
-              "has_lock": !!list.form.has_lock,
-              "has_helmet": !!list.form.has_helmet,
-              "has_lights": !!list.form.has_lights,
-              "has_basket": !!list.form.has_basket,
-              "has_trailer": !!list.form.has_trailer,
-              "has_childseat": !!list.form.has_childseat,
+              "accessories": {
+                "lock": !!list.form.lock,
+                "helmet": !!list.form.helmet,
+                "lights": !!list.form.lights,
+                "basket": !!list.form.basket,
+                "trailer": !!list.form.trailer,
+                "childseat": !!list.form.childseat
+              },
               "user_id": $localStorage.userId,
               "street": list.form.street,
               "city": list.form.city,
@@ -215,6 +218,7 @@ angular.module('list', ['ngLocale'])
                 verification.openDialog(false);
                 list.submitDisabled = false;
               } else {
+                console.log(ride);
                 Upload.upload({
                   method: 'POST',
                   url: api.getApiUrl() + '/rides',
@@ -250,12 +254,14 @@ angular.module('list', ['ngLocale'])
               "description": list.form.description,
               "size": list.form.size,
               "category": list.form.subCategory,
-              "has_lock": list.form.has_lock || false,
-              "has_helmet": list.form.has_helmet || false,
-              "has_lights": list.form.has_lights || false,
-              "has_basket": list.form.has_basket || false,
-              "has_trailer": list.form.has_trailer || false,
-              "has_childseat": list.form.has_childseat || false,
+              "accessories": {
+                "lock": !!list.form.lock,
+                "helmet": !!list.form.helmet,
+                "lights": !!list.form.lights,
+                "basket": !!list.form.basket,
+                "trailer": !!list.form.trailer,
+                "childseat": !!list.form.childseat
+              },
               "user_id": $localStorage.userId,
               "street": list.form.street,
               "city": list.form.city,
@@ -293,6 +299,7 @@ angular.module('list', ['ngLocale'])
               }
             });
           }
+          console.log(ride);
           Upload.upload({
             method: 'PUT',
             url: api.getApiUrl() + '/rides/' + $stateParams.bikeId,
