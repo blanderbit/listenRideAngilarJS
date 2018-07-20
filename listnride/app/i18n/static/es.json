@@ -138,7 +138,7 @@
       },
       "description-lister": "Como lister en <li>listnride </li>\ndesea asegurarse de que usted y su bicicleta estén protegidos contra cualquier eventualidad. Es por eso que cada alquiler en Alemania y Austria, realizado a través de <li>listnride </li>\n, se asegura automáticamente con efecto inmediato. Los usuarios que soliciten su bicicleta pueden optar por reservar el paquete premium para obtener servicios y garantías adicionales. Este servicio es gratuito para usted como Lister.\n<p>\nSi tiene más preguntas, comuníquese con nosotros las 24 horas por correo electrónico.",
       "description-rider": "Ofrecemos dos paquetes de seguros para cada bicicleta que se alquila en Alemania y Austria a través de <i0>listnride </i0>: El <b1>seguro básico </b1>se incluye en cada alquiler, el <b2>seguro premium </b2>es opcional y extiende la cobertura del seguro con beneficios adicionales. <br3>¡Usted y su bicicleta están siempre protegidos,  ya no hay nada más en el camino que le impida disfrutar el paseo!",
-      "all-docs": "Aquí puede ver los términos y condiciones del seguro\n<a href = \\ \"INSERTAR ENLACE AQUÍ \\\" objetivo = \\ \"_ blank \\\">Términos y condiciones Seguro </a0>"
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Términos y condiciones del segura \"Bike\" </a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Términos y condiciones del segura \"Bike Assist\"</a>"
     }
   },
   "business-community": {
@@ -740,6 +740,11 @@
     "header": "List and Ride Términos y Condiciones generales de negocio",
     "subheader": "Última actualización: Junio 8, 2018",
     "subtitle": "Por favor lea con atención los Términos y Condiciones dado que contienen información importante sobre tus derechos legales, recursos y obligaciones. Al acceder o utilizar listnride platform reconoces haber leído, comprendido y aceptado dichas Condiciones.<br><br>Puedes descargar y leer el documento completo de nuestros <a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Términos y Condiciones</a><br><br>¡Muchas gracias por utilizar listnride!"
+  },
+  "trust-and-safety": {
+    "outro": {
+      "description": "<i>listnride</i> es la comunidad de bicicletas compartidas más grande de Europa. Ofrecemos a los entusiastas del ciclismo un fácil acceso a bicicletas de alta calidad. ¡Encuentra la bicicleta perfecta para ti! Haz tu reserva online ahora. "
+    }
   },
   "how-it-works": {
     "meta-title": "Compartir bicis es más fácil",

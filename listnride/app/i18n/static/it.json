@@ -138,7 +138,7 @@
       },
       "description-lister": "Come Noleggiatore su listnride vuoi essere sicuro che tu e la tua bicicletta siete protetti da tutti i rischi. Ecco perché ogni noleggio in Germania e Austria, tramite listnride, viene automaticamente assicurato con effetto immediato. Opzionalmente i ciclisti che richiedono la bicicletta possono prenotare il pacchetto premium per ottenere servizi e copertura aggiuntivi. Questo servizio è gratuito per te come Noleggiatore.\n<p>\nSe hai ulteriori domande, contattaci 24 ore su 24 tramite <a3>E-Mail </a3>.",
       "description-rider": "Offriamo due pacchetti assicurativi per ogni bici noleggiata in Germania e in Austria tramite <i0>listnride </i0>: l' <b1>Assicurazione di base </b1>è incluso nel noleggio, l' <b2>assicurazione Premium </b2>è opzionale e estende la copertura assicurativa con ulteriori vantaggi. <br3>Tu e la tua bici siete sempre protetti in modo ottimale e non vi è nulla di più nel vostro modo di guidare!",
-      "all-docs": "Qui puoi vedere i Termini e le Condizioni dell'assicurazione\n<a href = \\ \"INSERISCI LINK QUI \\\" target = \\ \"_ blank \\\">Termini e Condizioni Assicurazione </a0>"
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Termini e condizioni assicurazione \"Bike\"</a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Termini e condizioni assicurazione \"Bike Assist\"</a>"
     }
   },
   "business-community": {
@@ -765,7 +765,7 @@
       "description": "Se noleggi una bicicletta in Germania o in Austria, nel canone di noleggio è inclusa un'assicurazione di base. Con\n<a href=\"http: //www.hepster.com\" target=\"_blank\" >hepster </a>\ne il\n<a href=\"http://www.gothaer.de\" target=\"_blank\">Gruppo Gothaer </a>\nabbiamo due partner forti dalla nostra parte per aiutarti quando necessario.\n<p>\nBasta scegliere il pacchetto assicurativo giusto per te quando prenoti la tua bici."
     },
     "outro": {
-      "description": "listnride è la più grande piattaforma di bike sharing d'Europa. Offriamo ai ciclisti un facile accesso a bici di alta qualità. Ovunque la bici perfetta. Semplicemente disponibile online."
+      "description": "<i>listnride</i> è la più grande piattaforma di bike sharing d'Europa. Offriamo ai ciclisti un facile accesso a bici di alta qualità. Ovunque la bici perfetta. Semplicemente disponibile online."
     }
   },
   "how-it-works": {
