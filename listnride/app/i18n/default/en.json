@@ -591,7 +591,11 @@
     "reject": "Reject",
     "rate": "Rate",
     "confirm": "Confirm",
-    "confirm_return": "Confirm Return"
+    "confirm_return": "Confirm Return",
+    "documents-title": "Insurance Certificates",
+    "documents-description": "Here you can download your insurance certificates, we've also sent them to you by mail.",
+    "insurance-bike": "Bike Insurance Certificate",
+    "insurance-bike-assist": "Bike Assist Insurance Certificate"
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{timespan}}. Agree on further details using the chat.",

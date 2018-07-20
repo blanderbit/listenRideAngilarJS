@@ -72,6 +72,18 @@
       ng-click="message.closeDialog()"
       style="pointer-events: none;">
     </p>
+    <!-- Insurance Certificates Download -->
+    <div ng-if="message.request.rideChat && message.status == 3">
+      <md-divider></md-divider>
+      <p   
+        class="lnr-center">
+        <b>{{ 'message.documents-title' | translate }}</b>
+        <br>{{ 'message.documents-description' | translate }}<br>
+        <br><a ng-click="message.downloadDocument(message.request.insurance.items_uid.thing)" target="_BLANK" class="lnr-link">{{ 'message.insurance-bike' | translate }}</a>
+        <br><a ng-click="message.downloadDocument(message.request.insurance.items_uid.person)" target="_BLANK" class="lnr-link">{{ 'message.insurance-bike-assist' | translate }}</a>
+      </p>
+    </div>
+    <!-- END -->
 
     <div ng-if="!message.request.rideChat && message.status == 1">
       <div layout-gt-sm="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
