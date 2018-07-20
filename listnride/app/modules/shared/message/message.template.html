@@ -73,14 +73,18 @@
       style="pointer-events: none;">
     </p>
     <!-- Insurance Certificates Download -->
-    <div ng-if="message.request.rideChat && message.status == 3">
+    <div ng-if="message.request.rideChat && message.status == 3 && message.request.insurance.items_uid">
       <md-divider></md-divider>
       <p   
         class="lnr-center">
         <b>{{ 'message.documents-title' | translate }}</b>
         <br>{{ 'message.documents-description' | translate }}<br>
-        <br><a ng-click="message.downloadDocument(message.request.insurance.items_uid.thing)" target="_BLANK" class="lnr-link">{{ 'message.insurance-bike' | translate }}</a>
-        <br><a ng-click="message.downloadDocument(message.request.insurance.items_uid.person)" target="_BLANK" class="lnr-link">{{ 'message.insurance-bike-assist' | translate }}</a>
+        <div ng-if="message.request.insurance.items_uid.thing" class="lnr-center">
+          <br><a ng-click="message.downloadDocument(message.request.insurance.items_uid.thing)" target="_BLANK" class="lnr-link">{{ 'message.insurance-bike' | translate }}</a>
+        </div>
+        <div ng-if="message.request.insurance.items_uid.person" class="lnr-center">
+          <br><a ng-click="message.downloadDocument(message.request.insurance.items_uid.person)" target="_BLANK" class="lnr-link">{{ 'message.insurance-bike-assist' | translate }}</a>
+        </div>
       </p>
     </div>
     <!-- END -->
