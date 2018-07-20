@@ -123,7 +123,19 @@
     "clear": "Clear",
     "clear-all": "Clear All",
     "today": "Hoy",
-    "yesterday": "Ayer"
+    "yesterday": "Ayer",
+    "press": {
+      "title": "Medios de comunicación"
+    },
+    "find-your-bike": {
+      "header": "Encuentra tu bicicleta perfecta",
+      "subheader": "¿Estás planeando tu próximo viaje?",
+      "button": "Encuentra tu bici"
+    },
+    "rent-your-bike": {
+      "header": "Alquila tu bicicleta",
+      "subheader": "Conoce a personas con tus mismas pasiones y gana dinero extra"
+    }
   },
   "insurance": {
     "facts": {

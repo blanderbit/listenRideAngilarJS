@@ -125,7 +125,7 @@
     "today": "Today",
     "yesterday": "Yesterday",
     "press": {
-      "title": "Known from TV & Print",
+      "title": "Media",
       "logo-1": "Insert Logo here",
       "logo-2": "Insert Logo here",
       "logo-3": "Insert Logo here",
@@ -675,8 +675,8 @@
     "landing-section-header": "The perfect bike. Simply rent it.",
     "insurance": {
       "description": "No matter if minimalistic fixie or high-end triathlon bike: Every listnride rental in Germany or Austria is insured! Simple. Unbureaucratically. Anytime.",
-      "header": "Versicherungsschutz für jede Vermietung auf listnride.",
-      "logo-description": "In Kooperation mit hepster"
+      "header": "Insurance for every rental on listnride",
+      "logo-description": "In cooperation with hepster and"
     },
     "landing-section-subheader": "Join listnride and find the bike that is right for you.",
     "featured-bikes-header": "Bike Rental: Our Community’s Favorites",

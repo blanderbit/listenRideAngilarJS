@@ -124,7 +124,7 @@
     "today": "Vandaag",
     "yesterday": "Gisteren",
     "press": {
-      "title": "Bekend van TV en print"
+      "title": "Media"
     },
     "find-your-bike": {
       "header": "Vind de perfecte fiets",
@@ -142,6 +142,7 @@
         "price-description": "inbegrepen bij elke verhuur in Duitsland en Oostenrijk"
       }
     },
+    "meta-title": "Fietsverzekering voor elke verhuur in Duitsland en Oostenrijk",
     "meta-description": "Elke fietshuur in Duitsland en Oostenrijk zijn automatisch via listnride verzekerd. "
   },
   "coco-mat.bike": "Coco-mat bikes",
@@ -665,7 +666,7 @@
     "insurance": {
       "description": "Of het nu minimalistische fixie of high-end triathlonfiets is: Elke listnride verhuur in Duitsland of Oostenrijk is verzekerd! Eenvoudig. Onbureaukratisch. Te allen tijde.",
       "header": "Verzekering voor je fietshuur op listnride",
-      "logo-description": "In samenwerking met hepster"
+      "logo-description": "In samenwerking met hepster en"
     },
     "landing-section-subheader": "Huur een fiets via listnride naar eigen smaak en gebruik.",
     "featured-bikes-header": "Fietsverhuur: De favorieten van onze Community",

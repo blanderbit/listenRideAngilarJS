@@ -79,8 +79,8 @@
   },
   "insurance": {
     "main": {
-      "title": "Our insurance protects you.\n<br>\nNo matter if lister or rider.",
-      "description": "Renting your special bike means having confidence. What if it gets stolen during lending? What if it comes back to you damaged? All listnride rentals in Germany and Austria are insured. And our partner <a href=\"www.hepster.com\" target=\"_blank\">hepster</a> will help you when you need help. By phone. By e-mail. Simple. Unbureaucratic.",
+      "title": "Optimal insurance for you.\n<br>\nBoth for listers and riders.",
+      "description": "Renting your special bike means having confidence. What if it gets stolen during lending? What if it comes back to you damaged? All listnride rentals in Germany and Austria are insured. And our partner <a href=\"www.hepster.com\" target=\"_blank\">hepster</a> will be there for you when you need help. By phone. By e-mail. Simple. Unbureaucratic.",
       "logo-description": "Our insurance partner"
     },
     "meta": {
@@ -92,7 +92,7 @@
     "facts": {
       "title": "What you should know!",
       "basic-insurance": {
-        "price": "Enthalten",
+        "price": "Included",
         "title": "Basic Insurance",
         "description": "<ul>\n <li>Protection in case of unintentional self- and external caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee up to 250€\n</ul>"
       },
@@ -106,9 +106,9 @@
     "faqs": {
       "title": "More questions? Here you will find answers!",
       "lister": {
-        "description": "As a lister on <li>listnride</li>\n you want to be sure that you and your bike are protected against all eventualities. That's why every rental in Germany and Austria, through <li>listnride</li>\n, is automatically insured with immediate effect. Riders who request your bike can optionally book the premium package to get additional services and guarantees. This service is free for you as a Lister.\n<p>\nIf you have further questions, contact us around the clock via mail.",
+        "description": "As a lister on listnride you want to be sure that you and your bike are protected against all eventualities. That's why every rental in Germany and Austria, through listnride, is automatically insured with immediate effect. Riders who request your bike can optionally book the premium package to get additional services and guarantees. This service is free for you as a Lister.\n<p>\nIf you have further questions, contact us around the clock via mail.",
         "question-1": "How much does the insurance cost?",
-        "tabname": "Für Vermieter",
+        "tabname": "For Rider",
         "answer-1": "Nothing!<br0>Since the insurance is only purchased by tenants, there are no additional costs for you as lister. However, do realise that your daily rental price will be a bit more expensive for tenants. The cost of the basic insurance is 0.1% of the insurance value of your bike.<p1>If you have your bike insured up to 1,000€, then tenants pay an additional Euro per rental day. With an insurance value of up to €5,000, there is an additional €5 per rental day.",
         "question-2": "What is the maximum listnride insurance coverage for my bike?",
         "answer-2": "Every bike is automatically insured up to 1.000 € and can be insured by you up to a maximum of 5.000 €. \n<br>\nThe actual payout in case of loss or damage is based on the actual value of the bike. It is determined by the \n<a href=\"https://www.gothaer.de\" target=\"_blank\">Gothaer Insurance</a>\n individually case by case.\n<br>\nPlease remember when determining the insurance value that tenants pay for the insurance fee, the amount of which depends on your chosen insurance value. This means; the higher you insure the bike, the higher the insurance fee for the Rider will be.",
@@ -118,7 +118,7 @@
       "rider": {
         "description": "We offer two insurance packages for each bike you rent via \n<i>lisntride</i>\n: The \n<b>Basic Insurance</b> \nis included in every rental, the \n<b>Premium Insurance</b>\n is optional and extends the insurance cover by additional benefits.\n<br> \nYour bike and you are always optimally protected. You can start cycling with a clear conscience!",
         "question-1": "How much does Basic Insurance cost?",
-        "tabname": "Für Mieter",
+        "tabname": "For Rider",
         "answer-1": "The cost of the Basic Insurance is only 0.1% of the insurance value of the bike you have booked.\n<br>\nIf a bike is insured up to 1.000 €, then you pay exactly one Euro per rental day for the Basic Insurance.",
         "question-2": "How much does Premium Insurance cost?",
         "answer-2": "Three Euros per day in addition to the rent and the \n<i>lisntride</i>\n - <a href=\"https://www.listnride.com/terms\" \"target=\"_blank\">fees</a> .",
@@ -134,11 +134,11 @@
         "answer-7": "Of course we hope that this will never happen!\n<br>\n The insurance is offered by our online insurance partner \n<a href=\"www.hepster.com\" target=\"_blank\">hepster</a>\n and covered by \n<a href=\"https://www.gothaer.de\" target=\"_blank\">Gothaer Insurance</a>\nSince you yourself are the policyholder of hepster, it is best to contact hepster:\n<ul>\n <li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n <li>+49 381 - 20 38 88 801\n</ul>\n<br>\nhepster staff will support you quickly and competently."
       },
       "docs": {
-        "tabname": "Alle Dokumente"
+        "tabname": "Insurance Documents"
       },
       "description-lister": "As a lister on listnride you want to be sure that you and your bike are protected against all risk. That's why every rental in Germany and Austria, through listnride is automatically insured with immediate effect. Riders who request your bike can optionally book the premium package to get additional services and coverage. This service is free for you as a Lister.\n<p>\nIf you have further questions, contact us around the clock via <a3>E-Mail</a3>.",
       "description-rider": "We offer two insurance packages for each bike you rent in Germany and Austria via <i0>lisntride</i0>: The <b1>Basic insurance</b1> is included in every rental, the <b2>Premium insurance</b2> is optional and extends the insurance cover with extra benefits.<br3>You and your bike are always optimally protected and there is nothing more in the way for you to ride!",
-      "all-docs": "Here you can see the Insurance Terms and Conditions\n<a href=\\\"INSERT LINK HERE\\\"target=\\\"_blank\\\">Terms and Conditions Insurance </a0>"
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Bike Insurance Terms and Conditions </a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Bike Assist Insurance Terms and Conditions</a>"
     }
   },
   "business-community": {
@@ -774,7 +774,7 @@
       "description": "If you rent a bicycle in Germany or Austria, a basic insurance is included in the rent. With \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> \nand the \n<a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer Group</a> \nwe have two strong partners on our side to help you when needed.\n<p>\nJust choose the right insurance package for you when booking your bike and off you go."
     },
     "outro": {
-      "description": "listnride is Europe's largest bike-sharing community. We offer cycling enthusiasts easy access to high quality bikes. Always the perfect bike! simply book online."
+      "description": "<i>listnride</i> is Europe's largest bike-sharing community. We offer cycling enthusiasts easy access to high quality bikes. Always the perfect bike! simply book online."
     }
   },
   "how-it-works": {
