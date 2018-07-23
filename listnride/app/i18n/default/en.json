@@ -384,12 +384,12 @@
       "premium-insurance": "Premium insurance",
       "premium-insurance-title": "Premium Insurance Protection",
       "premium-insurance-subtitle": "Pick our premium insurance for your ride to be on the safe side",
-      "thats-included": "On top of basic insurance, this is additionally included",
-      "premium-feature-1": "Protection also against theft",
-      "premium-feature-2": "Replacement bike after damage, accident or tievery",
+      "thats-included": "On top of basic insurance, these features are additionally included",
+      "premium-feature-1": "Theft protection",
+      "premium-feature-2": "Replacement bike after accident or damage",
       "premium-feature-3": "Return transport of the bike after accident or damage",
       "premium-feature-4": "No Retention fee",
-      "premium-feature-5": "24h emergency phone number",
+      "premium-feature-5": "24/7 emergency phone number",
       "payment": "Payment",
       "redeem-voucher": "Redeem Voucher",
       "add": "Add",
@@ -591,11 +591,7 @@
     "reject": "Reject",
     "rate": "Rate",
     "confirm": "Confirm",
-    "confirm_return": "Confirm Return",
-    "documents-title": "Insurance Certificates",
-    "documents-description": "Here you can download your insurance certificates, we've also sent them to you by mail.",
-    "insurance-bike": "Bike Insurance Certificate",
-    "insurance-bike-assist": "Bike Assist Insurance Certificate"
+    "confirm_return": "Confirm Return"
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{timespan}}. Agree on further details using the chat.",
@@ -718,7 +714,7 @@
   },
   "calendar": {
     "invalid-date": "Dates are invalid",
-    "basic-insurance-included": "Basis-Versicherung inklusive",
+    "basic-insurance-included": "Basic insurance included",
     "request-bike": "Request Bike",
     "to-request-bike-please": "to request a bike please",
     "own-bike": "You can't request your own bike",
