@@ -22,6 +22,7 @@ angular.module('message',[]).component('message', {
       var time = message.time.toString();
       var messageDate = moment(message.time);
       var todayDate = moment(new Date());
+      var hasInsurance = !!message.request.insurance;
       // var yesterdayDate = moment(new Date()).add(-1, 'days');
 
       if (messageDate.diff(todayDate, 'days') === 0){
@@ -38,15 +39,18 @@ angular.module('message',[]).component('message', {
         );
       } else {
         message.localTime = messageDate.format('DD.MM.YYYY HH:mm');
-      }      
-      
+      }
+
       message.buttonClicked = false;
-      var insuranceEndpoint = "/users/" + $localStorage.userId + "/insurances/" + message.request.insurance.id + "?item_id=";
-      message.bikeInsuranceUrl = ENV.apiEndpoint + insuranceEndpoint + message.request.insurance.items_uid.thing;
-      message.bikeAssistInsuranceUrl = ENV.apiEndpoint + insuranceEndpoint + message.request.insurance.items_uid.person;
+
+      // check if current bike has insurance
+      if (hasInsurance) {
+        var insuranceEndpoint = "/users/" + $localStorage.userId + "/insurances/" + message.request.insurance.id + "?item_id=";
+        message.bikeInsuranceUrl = ENV.apiEndpoint + insuranceEndpoint + message.request.insurance.items_uid.thing;
+        message.bikeAssistInsuranceUrl = ENV.apiEndpoint + insuranceEndpoint + message.request.insurance.items_uid.person;
+      }
 
       message.downloadDocument = function (certificateId) {
-        console.log(insuranceEndpoint + "\"" + certificateId + "\"");
         api.get(insuranceEndpoint + certificateId, 'blob').then(
           function (success) {
             var a = document.createElement('a');
@@ -62,7 +66,7 @@ angular.module('message',[]).component('message', {
           }
         );
       };
-      
+
       message.closeDialog = function() {
         $mdDialog.hide();
       };
