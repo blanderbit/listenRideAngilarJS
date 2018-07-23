@@ -480,7 +480,7 @@ md-tooltip .md-content {
   margin: 0;
 }
 
-.lnr-no-margin__left {
+.lnr-ml-0 {
   margin-left: 0;
 }
 
@@ -1409,6 +1409,16 @@ home #featuredTiles a {
 
 .lnr-bike-card.lnr-unavailable img {
   opacity: 0.4;
+}
+
+.bike__prices-item {
+  height: 100%;
+}
+
+.bike__prices-item > .md-caption {
+  margin-top: auto;
+  padding-top: 5px;
+  text-align: center;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -2672,6 +2682,19 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 }
 
 /* INSURANCE */
+
+.premium-insurance__adv {
+  align-items: center;
+}
+
+.premium-insurance__adv md-icon {
+  flex: 0 0 24px;
+  margin-right: 10px;
+}
+
+.premium-insurance__adv span {
+  flex: 1;
+}
 
 .insurance__top {
   margin-top: 40px;
