@@ -1411,6 +1411,16 @@ home #featuredTiles a {
   opacity: 0.4;
 }
 
+.bike__prices-item {
+  height: 100%;
+}
+
+.bike__prices-item > .md-caption {
+  margin-top: auto;
+  padding-top: 5px;
+  text-align: center;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  COMMENT
 /*-----------------------------------------------------------------------------------*/
