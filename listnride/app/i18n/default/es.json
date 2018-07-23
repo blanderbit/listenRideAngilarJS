@@ -1,7 +1,7 @@
 {
   "shared": {
     "learn-more": "Saber más",
-    "basic-fee": "Service Fee includes Basic Insurance",
+    "basic-fee": "El costo del servicio incluye seguro básico",
     "how-it-works": "Cómo funciona",
     "list-a-bike": "Registrar una bici",
     "renting-a-bike": "Alquilar una bici",
@@ -337,7 +337,7 @@
     },
     "details": {
       "tab": "2. Datos personales",
-      "invoice-address": "Tu dirección de facturación",
+      "invoice-address": "Dirección de facturación",
       "subtitle": "Introduce tu dirección de facturación para solicitar una bicicleta",
       "verification": "Verificar",
       "send-sms": "Te enviaremos un SMS a tu teléfono",
@@ -374,17 +374,17 @@
       "bike-rental": "Tu selección de bicicleta",
       "size": "Tamaño",
       "location": "Ubicación",
-      "invoice-address": "Dirección de facturación",
+      "invoice-address": "Dirección",
       "premium-insurance": "Premium insurance",
-      "premium-insurance-title": "Premium Insurance Protection",
+      "premium-insurance-title": "Protección de seguro premium",
       "premium-insurance-subtitle": "Pick our premium insurance for your ride to be on the safe side",
-      "thats-included": "On top of basic insurance, this is additionally included",
-      "premium-feature-1": "Protection also against theft",
-      "premium-feature-2": "Replacement bike after damage, accident or tievery",
-      "premium-feature-3": "Return transport of the bike after accident or damage",
-      "premium-feature-4": "No Retention fee",
-      "premium-feature-5": "24h emergency phone number",
-      "payment": "Pagamento",
+      "thats-included": "Además del seguro básico, esto también se incluye",
+      "premium-feature-1": "Protección contra robos",
+      "premium-feature-2": "Bicicleta de repuesto después de daños, accidentes o robos",
+      "premium-feature-3": "Transporte de la bicicleta después de un accidente o daño",
+      "premium-feature-4": "Sin tarifa de retención",
+      "premium-feature-5": "24h número de teléfono de emergencia",
+      "payment": "Método de pago",
       "redeem-voucher": "Canjear vale",
       "add": "OK",
       "success-header": "¡Enhorabuena, acabas de solicitar una bicicleta!",
@@ -667,7 +667,8 @@
     "landing-section-header": "La bici perfecta. Simplemente alquílala.",
     "insurance": {
       "description": "No importa si se trata de una bicicleta urbana, ebike o de alta gama: ¡todos los alquileres de listnride en Alemania o Austria están asegurados! Sencillo. Sin burocracia. En cualquier momento.",
-      "header": "Cobertura de seguro por cada alquiler en listnride"
+      "header": "Cobertura de seguro por cada alquiler en listnride",
+      "logo-description": "En cooperación con Hepster y"
     },
     "landing-section-subheader": " Únete a listnride y encuentra la bici adecuada para ti.",
     "featured-bikes-header": "Alquiler de bicis: las favoritas de nuestra comunidad",
@@ -705,6 +706,7 @@
   },
   "calendar": {
     "invalid-date": "Las fechas no son válidas",
+    "basic-insurance-included": "Seguro básico incluido",
     "request-bike": "Solicitar bici",
     "to-request-bike-please": "para solicitar una bici",
     "own-bike": "No puedes solicitar tu propia bici",
@@ -796,7 +798,7 @@
       "hint-part-2": "Tenga en cuenta que debe proporcionar una prueba del valor de su bicicleta en caso de cualquier reclamo",
       "hint-link-label": "Conozca más sobre el seguro",
       "header": "Cuéntanos el valor de tu bicicleta",
-      "tip": "El costo adicional para el usuario es de {{fee}}por día",
+      "tip": "El costo adicional para el usuario es de {{fee}} por día",
       "up-to-value": "Hasta {{value}}",
       "select-value": "Por favor seleccione el valor de su bicicleta",
       "no-insurance": "Lo sentimos, su país aún no está cubierto por nuestro seguro.\nEl seguro solo se aplica para alquileres en Alemania y Austria."
@@ -1098,7 +1100,7 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
   "seo": {
-    "header": "Rent the best bikes in",
+    "header": "Alquile las mejores bicicletas en",
     "rent-the-best": "Rent the best",
     "bikes": "bikes",
     "rent-perfect-bikes-in": "Rent perfect bikes in",
