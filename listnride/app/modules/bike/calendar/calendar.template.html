@@ -182,11 +182,19 @@
 
     <div layout="row" layout-align="space-between center">
       <div layout="row">
-        <div style="width:170px;" ng-if="!calendar.insuranceCountry()">{{ 'shared.lnr-fee' | translate }}</div>
-        <div style="width:170px;" ng-if="calendar.insuranceCountry()">{{ 'shared.basic-fee' | translate }}</div>
-        <div>
-          <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
-          <md-tooltip md-direction="right"><span translate="calendar.info-service-fee"></span></md-tooltip>
+        <div layout="row" style="width:170px;" ng-if="!calendar.insuranceCountry()">
+          {{ 'shared.lnr-fee' | translate }}
+          <div>
+            <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+            <md-tooltip md-direction="right"><span translate="calendar.info-service-fee"></span></md-tooltip>
+          </div>
+        </div>
+        <div layout="row" style="width:170px;" ng-if="calendar.insuranceCountry()">
+          {{ 'shared.basic-fee' | translate }}
+          <div>
+            <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+            <md-tooltip md-direction="right"><span translate="calendar.info-service-fee"></span></md-tooltip>
+          </div>
         </div>
       </div>
       <div>{{ calendar.lnrFee | currency:"€":2 }}</div>
