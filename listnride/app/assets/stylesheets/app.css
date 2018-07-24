@@ -2906,6 +2906,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .insurance__top {
     margin-bottom: 0;
+    margin-top: 0;
   }
 
   .insurance-banner {
@@ -3081,10 +3082,23 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
     max-width: 100%;
   }
 
+  .footer__partners {
+    margin-left: 16px;
+  }
+
+  .footer__partners > img {
+    margin-top: 8px;
+    padding: 0;
+  }
+
 }
 
 @media (max-width: 400px) {
   .privacy-bar {
     flex-direction: column;
+  }
+
+  footer .lnr-btn-lang {
+    width: 95%;
   }
 }
