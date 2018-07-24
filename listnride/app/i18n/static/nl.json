@@ -121,7 +121,7 @@
         "tabname": "Voor huurders",
         "answer-1": "De kosten van de basisverzekering bedragen slechts 0,1% van de verzekeringswaarde van de fiets die u hebt geboekt.\n<br>\nAls een fiets tot 1.000 € verzekerd is, betaalt u precies één euro per huurdag voor de basisverzekering.",
         "question-2": "Hoeveel kost de Premiumverzekering mij?",
-        "answer-2": "Drie euro per dag in aanvulling op de huur en de\n<i>lisntride </i>\n - <a href=\"https://www.listnride.nl/terms\" target=\"_blank\">servicekosten </a>.",
+        "answer-2": "Drie euro per dag in aanvulling op de huur en de\n<i>listnride </i>\n - <a href=\"https://www.listnride.nl/terms\" target=\"_blank\">servicekosten </a>.",
         "question-3": "Welke dekking biedt de Basisverzekering?",
         "answer-3": "<ul>\n<li>Bescherming bij onopzettelijke zelf- en extern veroorzaakte schade\n<li>Bescherming tegen vandalisme\n<li>Bescherming van elektronica en batterij voor elektrische fietsen\n<li>Eigen risiko 250 €\n</ul>",
         "question-4": "Welke dekking biedt de Premiumverzekering?",
@@ -743,12 +743,13 @@
   "trust-and-safety": {
     "meta-description": "Vertrouwen is essentieel voor onze deelgemeenschap. We streven naar een eerlijk en veilig ecosysteem door middel van verificatie en verzekering voor elke verhuurtransactie.",
     "title": "Vertrouwen & Zekerheid",
-    "description": "<i>listnride </i>is een community van fietsliefhebbers. Mensen zoals jij en ik. Mensen zoals u en ik. Daarom willen we de moeilijkheden bij je uit de buurt houden, zodat je je enkel en alleen kan genieten van het fietsen.",
-    "header": "Fietsen zonder zorgen",
+    "description": "listnride is een community van fietsliefhebbers. Mensen zoals jij en ik. Mensen zoals u en ik. Daarom willen we de moeilijkheden bij je uit de buurt houden, zodat je je enkel en alleen kan genieten van het fietsen.",
+    "header": "Ontspannen fietsen ",
     "subheader": "Wij handelen in uw belang",
     "cover": {
       "logo": "insert logo here",
-      "header": "Schaden kunnen gemakkelijk worden verholpen"
+      "header": "Schaden kunnen gemakkelijk worden verholpen",
+      "description": "Soms gaat het toch mis. Indien je fiets beschadigd raakt tijdens de huurperiode, komen onze verzekeringspartners in actie. De fiets en huurder zijn dus aan de zekere kant."
     },
     "control": {
       "logo": "hier logo invoegen",

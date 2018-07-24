@@ -108,7 +108,7 @@
       "lister": {
         "description": "As a lister on listnride you want to be sure that you and your bike are protected against all eventualities. That's why every rental in Germany and Austria, through listnride, is automatically insured with immediate effect. Riders who request your bike can optionally book the premium package to get additional services and guarantees. This service is free for you as a Lister.\n<p>\nIf you have further questions, contact us around the clock via mail.",
         "question-1": "How much does the insurance cost?",
-        "tabname": "For Rider",
+        "tabname": "For Lister",
         "answer-1": "Nothing!<br0>Since the insurance is only purchased by tenants, there are no additional costs for you as lister. However, do realise that your daily rental price will be a bit more expensive for tenants. The cost of the basic insurance is 0.1% of the insurance value of your bike.<p1>If you have your bike insured up to 1,000€, then tenants pay an additional Euro per rental day. With an insurance value of up to €5,000, there is an additional €5 per rental day.",
         "question-2": "What is the maximum listnride insurance coverage for my bike?",
         "answer-2": "Every bike is automatically insured up to 1.000 € and can be insured by you up to a maximum of 5.000 €. \n<br>\nThe actual payout in case of loss or damage is based on the actual value of the bike. It is determined by the \n<a href=\"https://www.gothaer.de\" target=\"_blank\">Gothaer Insurance</a>\n individually case by case.\n<br>\nPlease remember when determining the insurance value that tenants pay for the insurance fee, the amount of which depends on your chosen insurance value. This means; the higher you insure the bike, the higher the insurance fee for the Rider will be.",
@@ -121,7 +121,7 @@
         "tabname": "For Rider",
         "answer-1": "The cost of the Basic Insurance is only 0.1% of the insurance value of the bike you have booked.\n<br>\nIf a bike is insured up to 1.000 €, then you pay exactly one Euro per rental day for the Basic Insurance.",
         "question-2": "How much does Premium Insurance cost?",
-        "answer-2": "Three Euros per day in addition to the rent and the \n<i>lisntride</i>\n - <a href=\"https://www.listnride.com/terms\" \"target=\"_blank\">fees</a> .",
+        "answer-2": "Three Euros per day in addition to the rent and the \n<i>listnride</i>\n - <a href=\"https://www.listnride.com/terms\" \"target=\"_blank\">fees</a> .",
         "question-3": "What does the Basic Insurance cover?",
         "answer-3": "<ul>\n <li>Protection in case of unintentional self- and external caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee up to 250€\n</ul>",
         "question-4": "What does Premium Insurance cover?",
@@ -746,7 +746,7 @@
   "trust-and-safety": {
     "meta-description": "Trust is the be-all and end-all of a sharing community. We support fairness and security through verification and insurance for every rental.",
     "title": "Trust & Safety",
-    "description": "<i>listnride</i> is a community of bike lovers and bicycle enthusiasts. People like you and me. That's why we want to keep the trouble away from you, so you can focus on enjoying your ride.",
+    "description": "listnride is a community of bike lovers and bicycle enthusiasts. People like you and me. That's why we want to keep the trouble away from you, so you can focus on enjoying your ride.",
     "header": "Pedalling without worries",
     "subheader": "We act in your best interest",
     "cover": {
