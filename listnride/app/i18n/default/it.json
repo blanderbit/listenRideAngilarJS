@@ -74,7 +74,7 @@
     "reviews": "Recensioni",
     "for": "per",
     "per-day": "al giorno",
-    "pd": "p.g.",
+    "pd": "p.g",
     "Monday": "Lunedì",
     "Tuesday": "Martedì",
     "Wednesday": "Mercoledì",
@@ -122,7 +122,7 @@
     "today": "Oggi",
     "yesterday": "Ieri",
     "press": {
-      "title": "Conosciuto da TV e stampa",
+      "title": "Media",
       "logo-1": "inserisci il logo qui",
       "logo-2": "inserisci il logo qui",
       "logo-3": "inserisci il logo qui",
@@ -580,11 +580,7 @@
     "reject": "Rifiuta",
     "rate": "Voto",
     "confirm": "Confermare",
-    "confirm_return": "Conferma ritorno",
-    "documents-title": "Certificati di assicurazione",
-    "documents-description": "Qui puoi scaricare i certificati di assicurazione. Questi documenti ti sono stati inviati anche via email.",
-    "insurance-bike": "Certificato di assicurazione bici",
-    "insurance-bike-assist": "Certificato di assicurazione Bike Assist"
+    "confirm_return": "Conferma ritorno"
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} di {{user.city}} vorrebbe noleggiare la tua <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> dal {{timespan}}. Accetto ulteriori dettagli utilizzando la chat.",
@@ -630,7 +626,6 @@
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "Informazioni generali",
     "street": "via e numero",
-    "streetnumber": "Numero",
     "zip": "Cap",
     "city": "Città",
     "country": "Nazione",
@@ -707,7 +702,6 @@
   },
   "calendar": {
     "invalid-date": "Le date non sono valide",
-    "info-service-fee-insurance": "Aiutaci a gestire <i>listnride </i>e ad offrire un servizio di noleggio bici sicuro. Include assicurazione di base, costi di servizio e IVA.",
     "basic-insurance-included": "Assicurazione base inclusa",
     "request-bike": "Richiedi la bicicletta",
     "to-request-bike-please": "per richiedere una bicicletta per favore",
