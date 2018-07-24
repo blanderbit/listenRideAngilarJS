@@ -321,6 +321,7 @@
   },
   "booking": {
     "shopping": "Sicher bezahlen",
+    "and-agree-privacy": "und unseren Datenschutzbestimmungen",
     "pay-secure": "Sicher bezahlen mit",
     "agree-terms": "Mit \"Rad anfragen\" stimmst du zu:",
     "agree-terms-link": "listnride AGBs",
@@ -401,7 +402,7 @@
       "choose-duration": "Wähle die Buchungsdauer",
       "pickup-time": "Abholzeit",
       "return-time": "Rückgabezeit",
-      "intro-description": "Deine Buchung wird von <i>listnride</i>, Europas größter Bike-Sharing-Community, sicher bearbeitet."
+      "intro-description": "Deine Buchung wird von listnride, Europas größter Bike-Sharing-Community, sicher bearbeitet."
     }
   },
   "toasts": {
