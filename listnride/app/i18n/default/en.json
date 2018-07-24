@@ -125,7 +125,7 @@
     "today": "Today",
     "yesterday": "Yesterday",
     "press": {
-      "title": "Media",
+      "title": "Known from TV & Print",
       "logo-1": "Insert Logo here",
       "logo-2": "Insert Logo here",
       "logo-3": "Insert Logo here",
@@ -542,7 +542,7 @@
   },
   "user": {
     "verified-through": "Verified through",
-    "own-bikes": "Own Bikes",
+    "own-bikes": "Rental Bikes",
     "ratings": "Ratings",
     "meta-title": "{{name}}'s profile",
     "meta-description": "Rent bikes on listnride from {{name}}.",
@@ -593,7 +593,7 @@
     "confirm": "Confirm",
     "confirm_return": "Confirm Return",
     "documents-title": "Insurance Certificates",
-    "documents-description": "Here you can download your insurance certificates, we've also sent them to you by mail.",
+    "documents-description": "Here you can download your insurance certificates. These documents have also been sent to you by email.",
     "insurance-bike": "Bike Insurance Certificate",
     "insurance-bike-assist": "Bike Assist Insurance Certificate"
   },
@@ -700,7 +700,7 @@
     "default-placeholder": "Where would you like to rent a bike?"
   },
   "search": {
-    "no-bikes": "There are unfortunately no bikes in this location yet. As we're growing fast, probably soon there will be! If you'd like to, you can <a href=\"/listing-a-bike\">list a bike yourself</a></a> or alternatively try searching for another city or specific location nearby.",
+    "no-bikes": "There are unfortunately no bikes in this location yet. As we're growing fast, probably soon there will be! If you'd like to, you can <a href=\"/listing-a-bike\">list a bike yourself</a> or alternatively try searching for another city or specific location nearby.",
     "bikes-found": "bikes found:",
     "all-sizes": "All Sizes",
     "bikes-in": "Bikes in",
@@ -718,6 +718,7 @@
   },
   "calendar": {
     "invalid-date": "Dates are invalid",
+    "info-service-fee-insurance": "Helps us to operate listnride and offer a secure bike rental service. Includes Basic Insurance, service fees and VAT.",
     "basic-insurance-included": "Basic insurance included",
     "request-bike": "Request Bike",
     "to-request-bike-please": "to request a bike please",
@@ -1100,7 +1101,7 @@
   },
   "footer": {
     "language": "Language",
-    "insurance-partner": "Insurance Partner",
+    "insurance-partner": "Insurance Partners",
     "insurance": "Insurance",
     "company": "Company",
     "legal": "Legal",
