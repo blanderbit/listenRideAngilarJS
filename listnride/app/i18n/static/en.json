@@ -93,7 +93,7 @@
       "premium-insurance": {
         "title": "Premium Insurance",
         "price": "3€",
-        "price-description": "pro Tag",
+        "price-description": "per day",
         "description": "<ul>\n <li>Protection in case of unintentional self- and external damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Theft protection\n <li>24/7 emergency number in case of theft or damage\n <li>Return transport after theft or damage\n <li>Bike replacement after theft or damage\n <li>No retention fee\n</ul>"
       }
     },
@@ -107,7 +107,7 @@
         "question-2": "What is the maximum listnride insurance coverage for my bike?",
         "answer-2": "Every bike is automatically insured up to 1,000€ and can be insured by you up to a maximum of 5,000€. \n<br>\nThe actual payout in case of loss or damage is based on the actual value of the bike. It is determined by the \n<a href=\"https://www.gothaer.de\" target=\"_blank\">Gothaer Insurance</a>\n individually case by case.\n<br>\nPlease remember when determining the insurance value that riders pay for the insurance fee, the amount of which depends on your chosen insurance value. This means; the higher you insure the bike, the higher the insurance fee for the Rider will be.",
         "question-3": "What do I have to do if an insurance claim occurs?",
-        "answer-3": "Should you ever find yourself in a situation where your bike is damaged or stolen during a rental, please contact\n<a href=\"www.hepster.com\" target=\"_blank\">hepster</a>\n directly:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n <li>+49 381 - 20 38 88 801\n</ul>\n<br> \nhepster staff will answer your request quickly and competently."
+        "answer-3": "Should you ever find yourself in a situation where your bike is damaged or stolen during a rental, please contact\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n directly:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n <li>+49 381 - 20 38 88 801\n</ul>\n<br> \nhepster staff will answer your request quickly and competently."
       },
       "rider": {
         "description": "We offer two insurance packages for each bike you rent via lisntride: The \n<b>Basic Insurance</b> \nis included in every rental, the \n<b>Premium Insurance</b>\n is optional and extends the insurance cover by additional benefits.\n<br> \nYour bike and you are always optimally protected. You can start cycling with a clear conscience!",
@@ -125,7 +125,7 @@
         "question-6": "How do I end the insurance after my bike rental ends?",
         "answer-6": "With every bike rental you will receive an individual insurance certificate. This is \n<b>only</b> \nvalid for the specific booking and for the \n<b>time period</b>\n selected by you. It ends automatically.\n<p>\nYou can download the certificate directly and will receive it by e-mail. You don't have to do anything.",
         "question-7": "Whom do I contact if I need to claim my insurance?",
-        "answer-7": "Of course we hope that this will never happen!\n<br>\n The insurance is offered by our online insurance partner \n<a href=\"www.hepster.com\" target=\"_blank\">hepster</a>\n and covered by \n<a href=\"www.gothaer.de\" target=\"https://www.gothaer.de/\">Gothaer Insurance</a>\nSince you yourself are the policyholder of hepster, it is best to contact hepster:\n<ul>\n <li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n <li>+49 381 - 20 38 88 801\n</ul>\n<br>\nhepster staff will support you quickly and competently."
+        "answer-7": "Of course we hope that this will never happen!\n<br>\n The insurance is offered by our online insurance partner \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n and covered by \n<a href=\"http://www.gothaer.de\" target=\"https://www.gothaer.de/\">Gothaer Insurance</a>\nSince you yourself are the policyholder of hepster, it is best to contact hepster:\n<ul>\n <li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n <li>+49 381 - 20 38 88 801\n</ul>\n<br>\nhepster staff will support you quickly and competently."
       },
       "docs": {
         "tabname": "Insurance Documents"
@@ -735,7 +735,7 @@
     "title": "Terms and Conditions",
     "header": "List and Ride General Terms and Conditions of Business",
     "subheader": "Last Updated: June 8 , 2018",
-    "subtitle": "Please read these Terms carefully as they contain important information about your legal rights, remedies and obligations. By using the listnride platform, you agree to comply with these Terms.<br><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Here you can download</a> and read our General Terms and Conditions of Business.<br><br>Thank you for using listnride!"
+    "subtitle": "Please read these Terms carefully as they contain important information about your legal rights, remedies and obligations. By using the listnride platform, you agree to comply with these Terms.\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Here you can download</a> and read our General Terms and Conditions of Business.\n<br>\nThank you for using listnride!"
   },
   "trust-and-safety": {
     "meta-description": "Trust is the be-all and end-all of a sharing community. We support fairness and security through verification and insurance for every rental.",
@@ -868,7 +868,7 @@
     "title": "List and Ride Privacy Policy",
     "ga-opt-out": "Click here to deactivate Google Analytics tracking",
     "subtitle": "Effective Date: May 24, 2018",
-    "description": "List and Ride commits to strong and transparent privacy practices. Our Privacy Policy describes the user information that we gather through our services. How we use and disclose these information. The steps we take to protect such information. The choices we offer, including how to access, update, and remove personal data.<br>Here you can download and read our <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Privacy Policy</a>.<br><br>Please contact us if you have any questions or comments about our privacy practices or this Privacy Policy. You can reach us at <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> online.",
+    "description": "List and Ride commits to strong and transparent privacy practices. Our Privacy Policy describes the user information that we gather through our services. How we use and disclose these information. The steps we take to protect such information. The choices we offer, including how to access, update, and remove personal data.\n<br>\nHere you can download and read our <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Privacy Policy</a>.\n<br>Please contact us if you have any questions or comments about our privacy practices or this Privacy Policy. You can reach us at <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> online.",
     "meta-title": "Privacy Policy of listnride",
     "meta-description": "The Privacy Policy of the bike sharing community listnride applies to the use of the online platform."
   },
