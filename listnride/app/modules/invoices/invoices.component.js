@@ -65,11 +65,13 @@ angular.module('invoices',[]).component('invoices', {
 
         function downloadAttachment(fileName, data, type) {
           var a = document.createElement('a');
+          document.body.appendChild(a);
           var file = new Blob([data], {type: type});
           var fileURL = window.URL.createObjectURL(file);
           a.href = fileURL;
           a.download = fileName;
           a.click();
+          document.body.removeChild(a);
         }
 
         invoices.ridesAny = function(target) {
