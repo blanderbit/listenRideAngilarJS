@@ -125,7 +125,7 @@
     "today": "Heute",
     "yesterday": "Gestern",
     "press": {
-      "title": "Bekannt aus Zeitung und TV",
+      "title": "Media",
       "logo-1": "Insert Logo here",
       "logo-2": "Insert Logo here",
       "logo-3": "Insert Logo here",
@@ -590,11 +590,7 @@
     "reject": "Ablehnen",
     "rate": "Bewerten",
     "confirm": "Bestätigen",
-    "confirm_return": "Rückgabe bestätigen",
-    "documents-title": "Versicherungszertifikate",
-    "documents-description": "Hier kannst Du Deine Versicherungszertifikate herunterladen. Diese Dokumente wurden dir auch per E-Mail zugesandt.",
-    "insurance-bike": "Fahrradversicherungszertifikat",
-    "insurance-bike-assist": "Bike Assist Versicherungsschein"
+    "confirm_return": "Rückgabe bestätigen"
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} würde gerne dein <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Sobald du die Anfrage annimmst, wird sie gebucht. Vereinbare alle weiteren Details über den Chat.",
@@ -717,7 +713,6 @@
   },
   "calendar": {
     "invalid-date": "Datumsangabe nicht korrekt",
-    "info-service-fee-insurance": "Hilft uns, <i>listnride</i> zu betreiben und einen sicheren Fahrradverleih anzubieten. Inklusive Basis-Versicherung, Gebühren und MwSt.",
     "basic-insurance-included": "Basis-Versicherung inklusive",
     "request-bike": "Rad anfragen",
     "to-request-bike-please": "um ein Rad anzufragen bitte",

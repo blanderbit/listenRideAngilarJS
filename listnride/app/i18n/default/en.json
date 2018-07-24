@@ -125,7 +125,7 @@
     "today": "Today",
     "yesterday": "Yesterday",
     "press": {
-      "title": "Known from TV & Print",
+      "title": "Media",
       "logo-1": "Insert Logo here",
       "logo-2": "Insert Logo here",
       "logo-3": "Insert Logo here",
@@ -593,7 +593,7 @@
     "confirm": "Confirm",
     "confirm_return": "Confirm Return",
     "documents-title": "Insurance Certificates",
-    "documents-description": "Here you can download your insurance certificates. These documents have also been sent to you by email.",
+    "documents-description": "Here you can download your insurance certificates, we've also sent them to you by mail.",
     "insurance-bike": "Bike Insurance Certificate",
     "insurance-bike-assist": "Bike Assist Insurance Certificate"
   },
@@ -718,7 +718,6 @@
   },
   "calendar": {
     "invalid-date": "Dates are invalid",
-    "info-service-fee-insurance": "Helps us to operate <i>listnride</i> and offer a secure bike rental service. Includes Basic Insurance, service fees and VAT.",
     "basic-insurance-included": "Basic insurance included",
     "request-bike": "Request Bike",
     "to-request-bike-please": "to request a bike please",

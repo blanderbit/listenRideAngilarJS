@@ -80,7 +80,7 @@
   "insurance": {
     "main": {
       "title": "Nuestro seguro lo protege.\n<br>\nNo importa si es lister o usuario.",
-      "description": "Alquilar tu propia bicicleta implica tener confianza en quien la va a utilizar. ¿Qué pasa si se la roban durante el alquiler? ¿Qué pasa si te la vuelve dañada? Todos los alquileres de listnride \nen Alemania y Austria están asegurados. Y nuestro socio\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> te ayudará cuando necesites ayuda. Puedes contactarlos por teléfono o por correo electrónico. Sencillo. Sin burocracia.",
+      "description": "Alquilar tu propia bicicleta implica tener confianza en quien la va a utilizar. ¿Qué pasa si se la roban durante el alquiler? ¿Qué pasa si te la vuelve dañada? Todos los alquileres de listnride \nen Alemania y Austria están asegurados. Y nuestro socio\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\nte ayudará cuando necesites ayuda. Puedes contactarlos por teléfono o por correo electrónico. Sencillo. Sin burocracia.",
       "logo-description": "Socio de seguros"
     },
     "meta": {
@@ -106,7 +106,7 @@
     "faqs": {
       "title": "¿Tienes más preguntas? ¡Aquí encontrarás todas las respuestas!",
       "lister": {
-        "description": "Como lister en <li>listnride </li>\ndesea asegurarse de que usted y su bicicleta estén protegidos contra cualquier eventualidad. Es por eso que cada alquiler en Alemania y Austria, a través de <li>listnride </li>, se asegura automáticamente con efecto inmediato. Los usuarios que soliciten su bicicleta pueden optar por reservar el paquete premium para obtener servicios y garantías adicionales. Este servicio es gratuito para usted como Lister.\n<p>\nSi tiene más preguntas, comuníquese con nosotros las 24 horas por correo electrónico.",
+        "description": "Como lister en <li>listnride </li>\ndesea asegurarse de que usted y su bicicleta estén protegidos contra cualquier eventualidad. Es por eso que cada alquiler en Alemania y Austria, a través de <li>listnride </li>\n, se asegura automáticamente con efecto inmediato. Los usuarios que soliciten su bicicleta pueden optar por reservar el paquete premium para obtener servicios y garantías adicionales. Este servicio es gratuito para usted como Lister.\n<p>\nSi tiene más preguntas, comuníquese con nosotros las 24 horas por correo electrónico.",
         "question-1": "¿Cuánto cuesta el seguro?",
         "tabname": "Para el lister",
         "answer-1": "¡Nada! <br0>Como el seguro solo lo compran los usuarios, no hay costos adicionales para usted como lister. Sin embargo, tenga en cuenta que su precio de alquiler diario será un poco más caro para los usuarios. El costo del seguro básico es del 0,1% del valor del seguro de tu bicicleta. <p1>Si tienes tu bicicleta asegurada hasta 1.000 €, los usuarios pagarán un euro adicional por día de alquiler. Con un valor total de seguro de hasta € 5.000, hay un adicional de €5 por día de alquiler.",
@@ -743,9 +743,9 @@
   },
   "trust-and-safety": {
     "title": "Confianza y seguridad",
-    "description": "listnride es una comunidad de amantes de la bicicleta y entusiastas de la bicicleta. Gente como tú y como yo. Es por eso que queremos que no tengas problemas, para que puedas concentrarte en disfrutar del viaje.",
-    "header": "Pedaleando sin preocupaciones",
-    "subheader": "Actuamos en tu mejor interés",
+    "description": "<i>listnride </i>es una comunidad de amantes de la bicicleta y entusiastas de la bicicleta. Gente como tú y como yo. Es por eso que queremos que no tengas problemas, para que puedas concentrarte en disfrutar del viaje.",
+    "header": "trust-and-safety.subheader\n",
+    "subheader": "Actuamos en su mejor interés",
     "main": {
       "header": "El seguro de listnride",
       "description": "Si alquila una bicicleta en Alemania o Austria, se incluye un seguro básico en el alquiler. Con\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\ny el\n<a href=\"http://www.gothaer.de\" target=\"_blank\">Grupo de Gothaer </a>\ntenemos dos socios fuertes de nuestro lado para ayudarlo cuando sea necesario.\n<p>\nSimplemente elija el paquete de seguro adecuado para usted cuando reserve su bicicleta y listo."
