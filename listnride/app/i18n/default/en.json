@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "basic-fee": "Service Fee includes Basic Insurance",
     "how-it-works": "How it works",
     "list-a-bike": "List a Bike",
     "renting-a-bike": "Renting a Bike",
@@ -122,8 +123,35 @@
     "clear": "Clear",
     "clear-all": "Clear All",
     "today": "Today",
-    "yesterday": "Yesterday"
+    "yesterday": "Yesterday",
+    "press": {
+      "title": "Known from TV & Print",
+      "logo-1": "Insert Logo here",
+      "logo-2": "Insert Logo here",
+      "logo-3": "Insert Logo here",
+      "logo-4": "Insert Logo here"
+    },
+    "find-your-bike": {
+      "header": "Find your perfect bike",
+      "subheader": "Planning your next trip?",
+      "button": "Find your bike"
+    },
+    "rent-your-bike": {
+      "header": "Rent your bike",
+      "subheader": "Meet like-minded and make some pocket money"
+    }
   },
+  "insurance": {
+    "facts": {
+      "basic-insurance": {
+        "price-description": "included in every rental in Germany and Austria"
+      }
+    },
+    "meta-title": "Insurance for every rental in Germany and Austria",
+    "meta-description": "Every rental in Germany and Austria through listnride is automatically insured."
+  },
+  "forms.update-password": "Update password",
+  "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
       "berlin": {
@@ -267,8 +295,7 @@
       "meta-description": "The Terms and Conditions of the Bike-Sharing-Community listnride apply to the use of the online platform."
     },
     "trust-and-safety": {
-      "meta-title": "Bike hire made safe – listnride has your back",
-      "meta-description": "Trust is the be-all and end-all in a sharing community. We promote fairness and safety by verifying our users’ identities and offering a lister guarantee."
+      "meta-title": "Bicycle rental with insurance"
     },
     "how-it-works": {
       "meta-title": "Bike sharing made easy",
@@ -295,10 +322,10 @@
   },
   "booking": {
     "shopping": "Secure Shopping",
+    "and-agree-privacy": "and our data protection regulations",
     "pay-secure": "Pay secure with",
     "agree-terms": "With 'Request Bike' you agree to the",
-    "agree-terms-link": "listnride Terms and Conditions",
-    "and-agree-privacy": "and to the <a target=\"_blank\" href=\"/#/privacy\">listnride Privacy Policy</a>.",
+    "agree-terms-link": "listnride Terms",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
       "call-us": "Call us +49 (0)30-120870330, monday to friday 9-18pm. ",
@@ -355,6 +382,15 @@
       "size": "Size",
       "location": "Location",
       "invoice-address": "Invoice Address",
+      "premium-insurance": "Premium insurance",
+      "premium-insurance-title": "Premium Insurance Protection",
+      "premium-insurance-subtitle": "Pick our premium insurance for your ride to be on the safe side",
+      "thats-included": "On top of basic insurance, these features are additionally included",
+      "premium-feature-1": "Theft protection",
+      "premium-feature-2": "Replacement bike after accident or damage",
+      "premium-feature-3": "Return transport of the bike after accident or damage",
+      "premium-feature-4": "No Retention fee",
+      "premium-feature-5": "24/7 emergency phone number",
       "payment": "Payment",
       "redeem-voucher": "Redeem Voucher",
       "add": "Add",
@@ -393,16 +429,14 @@
     "duplicate-finish": "Duplication process finished. Copies created successfully",
     "bike-deleted": "Bike successfully deleted",
     "range-success-delete": "Unvailability range successfully deleted",
-    "availability-success-saved": "Availability successfully saved",
-    "incorrect-old-password": "Could not change password. Please be sure that the old password is right",
-    "bike-edit-successful": "Bike successfully edited"
+    "availability-success-saved": "Availability successfully saved"
   },
   "settings": {
     "settings": "Settings",
     "profile": "Profile",
     "invite": "Invite Friends",
     "account": "Account",
-    "contact-to-update": "To change your name or email address please contact us at <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>",
+    "contact-to-update": "To change your name or email address please contact us\nvia e-mail at: contact@listnride.com",
     "delete-account": "Deactivate Account",
     "delete-account-description": "Here you can dactivate your listnride account. This step can not be undone.",
     "delete-account-sure": "Are you really sure?",
@@ -509,7 +543,7 @@
   },
   "user": {
     "verified-through": "Verified through",
-    "own-bikes": "Own Bikes",
+    "own-bikes": "Rental Bikes",
     "ratings": "Ratings",
     "meta-title": "{{name}}'s profile",
     "meta-description": "Rent bikes on listnride from {{name}}.",
@@ -558,7 +592,11 @@
     "reject": "Reject",
     "rate": "Rate",
     "confirm": "Confirm",
-    "confirm_return": "Confirm Return"
+    "confirm_return": "Confirm Return",
+    "documents-title": "Insurance Certificates",
+    "documents-description": "Here you can download your insurance certificates. These documents have also been sent to you by email.",
+    "insurance-bike": "Bike Insurance Certificate",
+    "insurance-bike-assist": "Bike Assist Insurance Certificate"
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{timespan}}. Agree on further details using the chat.",
@@ -582,20 +620,15 @@
     "last-name": "Last Name",
     "email-address": "Email Address",
     "password": "Password",
-    "update-password": "Change Password",
     "forgot-password": "Forgot Password?",
-    "old-password": "Old Password",
-    "new-password": "New Password",
-    "save-new-password": "Save new password",
-    "password-error-length": "Password should be min. 6 characters",
     "or": "or",
     "log-in": "Log In",
     "log-out": "Log Out",
     "sign-up": "Sign Up",
     "sign-up-to-book": "Sign up to book the bike",
     "sign-up-with-facebook": "Sign Up with Facebook",
-    "sign-up-divider-text": "accept our Terms and Conditions",
-    "agree-terms-and-policy": "Please agree to our Terms and Conditions and Privacy Policy above.",
+    "sign-up-divider-text": "Accept our Terms and Conditions",
+    "agree-terms-and-policy": "Agree to our Terms and Conditions and Privacy Policy",
     "member-already": "Already signed up?",
     "business": "Bikeshop?",
     "description": "Description",
@@ -620,7 +653,6 @@
     "signing-up-accept-tac": "I hereby agree to the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Terms and Conditions</a> and agree to the collection, processing and use of my personal data as further described in the <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>.",
     "signing-up-accept-newsletter": "I would like to receive the listnride e-mail newsletter with interesting content on cycling, community updates and exclusive benefits. The <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy</a>  of listnride applies. I can revoke my consent at any time.",
     "privacy-policy": "The <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Privacy Policy </a> of listnride applies.",
-    "logged-in-via-facebook": "You logged in via facebook",
     "errors": {
       "password-length": "Password should be 6-30 characters",
       "password-length-xs": "6-30 characters",
@@ -646,6 +678,11 @@
   },
   "home": {
     "landing-section-header": "The perfect bike. Simply rent it.",
+    "insurance": {
+      "description": "No matter if minimalistic fixie or high-end triathlon bike: Every listnride rental in Germany or Austria is insured! Simple. Unbureaucratically. Anytime.",
+      "header": "Insurance for every rental on listnride",
+      "logo-description": "In cooperation with hepster and"
+    },
     "landing-section-subheader": "Join listnride and find the bike that is right for you.",
     "featured-bikes-header": "Bike Rental: Our Community’s Favorites",
     "featured-bikes-subheader": "Whether it’s road bikes, mountain bikes, cargo bikes, city bikes or e-bikes, you can rent them all. These are the current favorite rental bikes of the community.",
@@ -664,8 +701,8 @@
     "default-placeholder": "Where would you like to rent a bike?"
   },
   "search": {
-    "bikes-found": "Bikes found:",
-    "no-bikes": "There are unfortunately no bikes in this location yet. As we're growing fast, probably soon there will be! If you'd like to, you can <a href=\"/listing-a-bike\">list a bike yourself</a></a> or alternatively try searching for another city or specific location nearby.",
+    "no-bikes": "There are unfortunately no bikes in this location yet. As we're growing fast, probably soon there will be! If you'd like to, you can <a href=\"/listing-a-bike\">list a bike yourself</a> or alternatively try searching for another city or specific location nearby.",
+    "bikes-found": "bikes found:",
     "all-sizes": "All Sizes",
     "bikes-in": "Bikes in",
     "meta-title": "Rent the perfect bike in {{location}}.",
@@ -682,6 +719,8 @@
   },
   "calendar": {
     "invalid-date": "Dates are invalid",
+    "info-service-fee-insurance": "Helps us to operate listnride and offer a secure bike rental service. Includes Basic Insurance, service fees and VAT.",
+    "basic-insurance-included": "Basic insurance included",
     "request-bike": "Request Bike",
     "to-request-bike-please": "to request a bike please",
     "own-bike": "You can't request your own bike",
@@ -692,8 +731,8 @@
     "info-subtotal": "This is the regular daily price<br>times the amount of days you want<br>to rent the bike.",
     "info-discount": "Average daily discount you<br>get per day by renting out<br>for a longer period of time.",
     "info-service-fee": "The service fee is<br>used for providing<br>listnride. It includes VAT.",
-    "info": "In the calendar above click first<br>on the day you wish to rent<br>out the bike, and second on<br>the day you want to return it.",
-    "info-without-calendar": "In the calendar above click first<br>on the day you wish to rent<br>out the bike, and second on<br>the day you want to return it."
+    "info": "In the calendar, select first<br> the day you wish to rent<br>out the bike, and second <br>the day you want to return it.",
+    "info-without-calendar": "In the calendar, select first<br0> the day you wish to rent<br1>out the bike, and second <br2>the day you want to return it."
   },
   "list": {
     "edit-bike": "Edit Bike",
@@ -766,6 +805,18 @@
       "zip": "Zip Code",
       "city": "City",
       "country": "Country"
+    },
+    "insurance": {
+      "label": "Insurance",
+      "info": "Information about insurance",
+      "hint-part-1": "Your bike is insured whenever it is rented. In order to provide you with the right protection it's neccessary that you enter the value of your bike.",
+      "hint-part-2": "Please note that your have to provide proof of your bike's value in case of any claim ",
+      "hint-link-label": "Learn more about insurance",
+      "header": "Please tell us the value of your bike",
+      "tip": "Additional fee for the rider is {{fee}} per day",
+      "up-to-value": "Up to {{value}}",
+      "select-value": "Please select your bike value",
+      "no-insurance": "Sorry, your country is not yet covered by our insurance.\nTheiInsurance only applies to rentals in Germany and Austria."
     },
     "pricing": {
       "info": "Your daily price is your base price for 1 day.",
@@ -922,7 +973,8 @@
       "price-title": "Super price.",
       "price-content": "The bikes listed on our platform are rented out by private owners as well as specialist dealers and rental services. What’s in it for you: the perfect bike at good value for money.",
       "easy-title": "Super easy.",
-      "easy-content": "Find and book your rental bike before going on a trip or simply on the go by using our mobile website."
+      "easy-content": "Find and book your rental bike before going on a trip or simply on the go by using our mobile website.",
+      "covered-content": "If you rent a bike in Germany or Austria, insurance is included in the rent. With \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\nand the \n<a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer Group</a> \nwe have two strong partners at our side to help you in case of emergency."
     },
     "search-section": {
       "header": "Where would you like to go?",
@@ -953,8 +1005,8 @@
       "precautions-content": "You want to rent out your bike – but not to just anybody. That’s why we verify the identity of all our users for you. And our user ratings help you find out whether they play fair in the bike sharing scene.",
       "control-title": "You stay in control.",
       "control-content": "You decide the daily or weekly rate for your bike(s). It’s completely up to you whether you want to accept a rental request or simply reject it because you can’t or don’t want to lend someone your bike at the moment.",
-      "covered-title": "We’ve got you covered.",
-      "covered-content": "In case of damage or theft, we’re right there by your side. And, if necessary, the listnride lister guarantee worth EUR 5,000 has got you covered.",
+      "covered-title": "You're covered.",
+      "covered-content": "In case of damage and/or theft, our insurance will help you. With \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n and the \n<a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer Group</a>\n we have two strong partners at our side.",
       "help-title": "We’re there to help.",
       "help-content": "If you and a renter (rider) encounter a problem and can’t find a solution, we’re there for you – to support you or even resolve the entire issue."
     },
@@ -1050,6 +1102,8 @@
   },
   "footer": {
     "language": "Language",
+    "insurance-partner": "Insurance Partners",
+    "insurance": "Insurance",
     "company": "Company",
     "legal": "Legal",
     "terms-and-conditions": "Terms",

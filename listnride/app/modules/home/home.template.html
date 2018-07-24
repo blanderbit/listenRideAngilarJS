@@ -1,6 +1,6 @@
 <md-content class="single-column">
   <div id="landingSection" md-theme="lnr-dark" layout="column" layout-align="center center">
-    <div id="homeHeroShot"></div>
+    <div id="homeHeroShot" style="background-image: url({{home.heroShotUrl}})"></div>
     <!-- <ul class="cb-slideshow">
       <li><span></span></li>
       <li><span></span></li>
@@ -73,9 +73,7 @@
           layout-align="center center"
         >
           <div layout="column" layout-align="center center" class="testimonial-avatar">
-            <a
-                ui-sref="user({userId: testimonial.userId})"
-            >
+            <a ui-sref="#">
               <img class="testimonials-img" ng-src="{{ testimonial.userImagePath}}">
             </a>
           </div>
@@ -84,6 +82,34 @@
           </div>
         </div>
       </slick>
+    </div>
+  </div>
+
+  <div class="lnr-bg-gray section">
+    <div class="content insurance__top">
+      <div layout="column" layout-gt-sm="row" class="insurance-banner">
+        <div flex="35" class="insurance-banner__text">
+          <div layout="column" layout-align-xs="center center" layout-align-sm="center center">
+            <md-icon md-svg-src="app/assets/ui_icons/icn_insurance-gray.svg" class="lnr-icn-mlrg lnr-no-margin"></md-icon>
+            <h2 class="md-headline lnr-sm-text-center lnr-margin-top-double">
+              {{ 'home.insurance.header' | translate }}
+            </h2>
+          </div>
+          <div class="md-body-1 lnr-sm-text-center" layout="column">
+            <p translate="home.insurance.description"></p>
+            <div><a ui-sref="insurance">{{ 'shared.learn-more' | translate }}</a></div>
+          </div>
+        </div>
+        <div flex="65" flex-order="-1" flex-order-gt-sm="1">
+          <div class="lnr-preload-bg insurance-banner__img" style="background-image: url('app/assets/ui_images/static/lnr-landing-insurance.jpg')" layout="row"
+            layout-align="center center">
+            <div class="insurance__gothaer">
+              <span class="md-body-1">{{ 'home.insurance.logo-description' | translate }}</span>
+              <img ng-src="app/assets/ui_images/static/lnr-insurance-gothaer-blue@2x.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

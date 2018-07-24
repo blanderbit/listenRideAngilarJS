@@ -77,7 +77,64 @@
       "cafes-bars-content": "If you like vegan and vegetarian food, we recommend a visit at <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> at the Karmeliterplatz. If you prefer the more traditional Austrian kitchen, we highly recommend <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>. Order a traditional Tafelspitz or Wiener Schnitzel and enjoy it outside with the view on the famous Vienna Opera. You’ll have a great night to remember! For finishing touch of the day, it makes sense to walk towards the Danube. On the way you’ll find plenty of interesting bars or just sit outside under the stars at the river."
     }
   },
-  "insurance.main.title": "Insurance Page",
+  "insurance": {
+    "main": {
+      "title": "Optimal insurance for you.\n<br>\nBoth for listers and riders.",
+      "description": "Renting your special bike means having confidence. What if it gets stolen during lending? What if it comes back to you damaged? All listnride rentals in Germany and Austria are insured. And our partner <a href=\"www.hepster.com\" target=\"_blank\">hepster</a> will be there for you when you need help. By phone. By e-mail. Simple. Unbureaucratic.",
+      "logo-description": "Our insurance partner"
+    },
+    "facts": {
+      "title": "What you should know!",
+      "basic-insurance": {
+        "price": "Included",
+        "title": "Basic Insurance",
+        "description": "<ul>\n <li>Protection in case of unintentional selfinflicted or third party caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee up to 250€\n</ul>"
+      },
+      "premium-insurance": {
+        "title": "Premium Insurance",
+        "price": "3€",
+        "price-description": "pro Tag",
+        "description": "<ul>\n <li>Protection in case of unintentional self- and external damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Theft protection\n <li>24/7 emergency number in case of theft or damage\n <li>Return transport after theft or damage\n <li>Bike replacement after theft or damage\n <li>No retention fee\n</ul>"
+      }
+    },
+    "faqs": {
+      "title": "More questions? Here you will find answers!",
+      "lister": {
+        "description": "As a lister on listnride you want to be sure that you and your bike are protected against all eventualities. That's why every rental in Germany and Austria, through listnride, is automatically insured with immediate effect. Riders who request your bike can optionally book the premium package to get additional services and guarantees. This service is free for you as a Lister.\n<p>\nIf you have further questions, contact us around the clock via mail.",
+        "question-1": "How much does the insurance cost?",
+        "tabname": "For Lister",
+        "answer-1": "Nothing! Since the insurance is only purchased by riders, there are no additional costs for you as lister. However, do realise that your daily rental price will be a bit more expensive for riders. The cost of the basic insurance is 0.1% of the insurance value of your bike. If you have your bike insured up to 1,000€, then riders pay an additional Euro per rental day. With an insurance value of up to 5,000€, there is an additional 5€ per rental day.",
+        "question-2": "What is the maximum listnride insurance coverage for my bike?",
+        "answer-2": "Every bike is automatically insured up to 1,000€ and can be insured by you up to a maximum of 5,000€. \n<br>\nThe actual payout in case of loss or damage is based on the actual value of the bike. It is determined by the \n<a href=\"https://www.gothaer.de\" target=\"_blank\">Gothaer Insurance</a>\n individually case by case.\n<br>\nPlease remember when determining the insurance value that riders pay for the insurance fee, the amount of which depends on your chosen insurance value. This means; the higher you insure the bike, the higher the insurance fee for the Rider will be.",
+        "question-3": "What do I have to do if an insurance claim occurs?",
+        "answer-3": "Should you ever find yourself in a situation where your bike is damaged or stolen during a rental, please contact\n<a href=\"www.hepster.com\" target=\"_blank\">hepster</a>\n directly:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n <li>+49 381 - 20 38 88 801\n</ul>\n<br> \nhepster staff will answer your request quickly and competently."
+      },
+      "rider": {
+        "description": "We offer two insurance packages for each bike you rent via lisntride: The \n<b>Basic Insurance</b> \nis included in every rental, the \n<b>Premium Insurance</b>\n is optional and extends the insurance cover by additional benefits.\n<br> \nYour bike and you are always optimally protected. You can start cycling with a clear conscience!",
+        "question-1": "How much does Basic Insurance cost?",
+        "tabname": "For Rider",
+        "answer-1": "The cost of the Basic Insurance is only 0.1% of the insurance value of the bike you have booked.\n<br>\nIf a bike is insured up to 1.000 €, then you pay exactly one Euro per rental day for the Basic Insurance.",
+        "question-2": "How much does Premium Insurance cost?",
+        "answer-2": "Three Euros per day in addition to the rent and the listnride-<a href=\"https://www.listnride.com/terms\" target=\"_blank\">fees</a>.",
+        "question-3": "What does the Basic Insurance cover?",
+        "answer-3": "<ul>\n <li>Protection in case of unintentional selfinflicted or third party caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee up to 250€\n</ul>",
+        "question-4": "What does Premium Insurance cover?",
+        "answer-4": "<ul>\n <li>protection in case of unintentional self- and external damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Theft protection\n <li>24/7 emergency number in case of theft or damage\n <li>Return transport after theft or damage\n <li>Bike replacement after theft or damage\n <li>No retention fee\n</ul>",
+        "question-5": "Is there a retention fee in case of damage? How high is it?\n",
+        "answer-5": "The deterrent fee is up to 250€ for the Basic Insurance.\n<br>\nThe Premium Insurance has no deterrent fee.",
+        "question-6": "How do I end the insurance after my bike rental ends?",
+        "answer-6": "With every bike rental you will receive an individual insurance certificate. This is \n<b>only</b> \nvalid for the specific booking and for the \n<b>time period</b>\n selected by you. It ends automatically.\n<p>\nYou can download the certificate directly and will receive it by e-mail. You don't have to do anything.",
+        "question-7": "Whom do I contact if I need to claim my insurance?",
+        "answer-7": "Of course we hope that this will never happen!\n<br>\n The insurance is offered by our online insurance partner \n<a href=\"www.hepster.com\" target=\"_blank\">hepster</a>\n and covered by \n<a href=\"www.gothaer.de\" target=\"https://www.gothaer.de/\">Gothaer Insurance</a>\nSince you yourself are the policyholder of hepster, it is best to contact hepster:\n<ul>\n <li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n <li>+49 381 - 20 38 88 801\n</ul>\n<br>\nhepster staff will support you quickly and competently."
+      },
+      "docs": {
+        "tabname": "Insurance Documents"
+      },
+      "description-lister": "As a lister on listnride you want to be sure that you and your bike are protected against all risk. That's why every rental in Germany and Austria, through listnride is automatically insured with immediate effect. Riders who request your bike can optionally book the premium package to get additional services and coverage. This service is free for you as a Lister.\n<p>\nIf you have further questions, contact us around the clock via <a3>E-Mail</a3>.",
+      "description-rider": "We offer two insurance packages for each bike you rent in Germany and Austria via lisntride: The <b1>Basic insurance</b1> is included in every rental, the <b2>Premium insurance</b2> is optional and extends the insurance cover with extra benefits.<br3>You and your bike are always optimally protected and there is nothing more in the way for you to ride!",
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Bike Insurance Terms and Conditions </a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Bike Assist Insurance Terms and Conditions</a>"
+    }
+  },
   "business-community": {
     "meta-title": "The listnride business community",
     "meta-description": "Join the listnride business community for bike rental",
@@ -119,7 +176,7 @@
       "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
       "meta-description": "Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!",
       "title": "Simply rent the perfect road bike for the Velothon Berlin",
-      "text": "We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.  <br><br> You can’t participate? Help out someone in need. <a href=\"/#/listing-a-bike\">List your bike</a> and make some extra pocket money!",
+      "text": "We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br>\nYou can’t participate? Help out someone in need. <a href=\"/#/listing-a-bike\">List your bike</a> and make some extra pocket money!",
       "coffeespin": {
         "meta-title": "listnride at the Velothon Berlin",
         "title": "Get ready for the Velothon!",
@@ -287,7 +344,7 @@
     "brompton": {
       "meta-title": "Rent a Brompton bike with listnride",
       "meta-description": "Test ride a Brompton bike today! These urban folding bikes are available on listnride. Rent one in Berlin, Munich, Hamburg, Düsseldorf or Frankfurt.",
-      "title": "#FAHRMALBROMPTON",
+      "title": "#RIDEBROMPTON",
       "description": "Rent a Brompton and test its excellent riding and folding characteristics.",
       "subdescription": "Experience cities in a different way - with a bike perfect for the city.",
       "item1-title": "Free of charge to bring along",
@@ -467,7 +524,7 @@
       "item2-description": "The framework has two colors. By hand the flowing color process and the graphic theme (plumage of a seagull) are spreaded in airbrush technology. A powdered, mat and high-resistance layer seals the frame.",
       "item3-title": "Frame geometry",
       "item3-description": "Perfect ergonomics and effective power transmission - the frame geometry was tailored to cyfly and the driver. Fast advance combined with comfortable seat position.",
-      "choose-location": "Wähle deine Stadt",
+      "choose-location": "Choose your city",
       "find-out-more": "Learn more about the Cyfly by Moeve",
       "order-online": "<a href=\"https://www.moeve-bikes.de/cyfly/\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed. See the most frequently asked questions below.",
       "faq-question-1": "What is Cyfly?",
@@ -518,7 +575,7 @@
       "choose-location": "Choose your location",
       "find-out-more": "Learn more about COCO-MAT.bike",
       "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed.",
-      "faq-question-1": "Do you offer warranty?",
+      "faq-question-1": "Does Coco-Mat bikes offer a warranty after the purchase of a bike?",
       "faq-answer-1": "COCO-Mat.bike offers: Three years warrantee for defective wooden or metal compartments that may have appeared during to manufacturing process. One year for bike compartments.This warranty is valid from the date of purchase, is offered only to the original owner, and it is not transferable. Proof of purchase is required.",
       "faq-question-2": "How can I repair a wooden bike?",
       "faq-answer-2": "All the bike parts can be repaired by any bike expert, except for the wooden frame which needs to be repaired by a carpenter according to COCO-MAT.bike's instructions.",
@@ -658,7 +715,7 @@
     "submit": "Pre-register",
     "form-feedback": "Thank you! You've successfully shared your level of interest with us.",
     "faq-question-1": "WHY DOES LISTNRIDE START A CROWDFUNDING CAMPAIGN?",
-    "faq-answer-1": "We are a young company with a well developed product, a growing community of tenants and bicycle owners. To drive further growth, we offer the community and the public the opportunity to invest in our company alongside our current investors. With these additional resources, we will make further improvements to our product as well as continue to grow geographically and so grow the community, resulting in greater choice for riders and greater demand for listers.",
+    "faq-answer-1": "We are a young company with a well developed product, a growing community of riders and bicycle owners. To drive further growth, we offer the community and the public the opportunity to invest in our company alongside our current investors. With these additional resources, we will make further improvements to our product as well as continue to grow geographically and so grow the community, resulting in greater choice for riders and greater demand for listers.",
     "faq-question-2": "HOW CAN I INVEST IN LISTNRIDE?",
     "faq-answer-2": "We are working with Seedrs, the leading Crowdfunding platform from the United Kingdom to run our Crowdfunding campaign. To invest, simply create an account at <a href=\"https://seedrs.com\" target=\"_blank\">www.seedrs.com</a> and follow the instructions.",
     "faq-question-3": "ARE THERE ANY RISKS INVOLVED?",
@@ -681,24 +738,37 @@
     "subtitle": "Please read these Terms carefully as they contain important information about your legal rights, remedies and obligations. By using the listnride platform, you agree to comply with these Terms.<br><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Here you can download</a> and read our General Terms and Conditions of Business.<br><br>Thank you for using listnride!"
   },
   "trust-and-safety": {
+    "meta-description": "Trust is the be-all and end-all of a sharing community. We support fairness and security through verification and insurance for every rental.",
     "title": "Trust & Safety",
-    "header": "Carefree biking",
-    "subheader": "Thanks to listnride, renting a bike is as safe as it is easy.",
-    "guarantee-icon": "garantie_en",
-    "guarantee": {
-      "title": "listnride’s lister guarantee",
-      "content": "Listnride is a community of bike enthusiasts. But hey, sometimes things go wrong no matter how careful you are. That’s why we have our lister guarantee at the ready: If your bike gets damaged or stolen during the bike hire and the rider cannot pay compensation, the guarantee ensures coverage of up to EUR 5,000. The payments are subject to certain conditions, limitations and exceptions. For more information, please refer to our <a class='lnr-link' ui-sref='terms'>Rental Terms and Conditions</a>."
+    "description": "listnride is a community of bike lovers and bicycle enthusiasts. People like you and me. That's why we want to keep the trouble away from you, so you can focus on enjoying your ride.",
+    "header": "Pedalling without worries",
+    "subheader": "We act in your best interest",
+    "cover": {
+      "logo": "insert logo here",
+      "header": "Damages can easily be overcome",
+      "description": "Sometimes things do go wrong. If your bike is damaged during rental, our insurance partners will step in. Both, bike and Rider are on the safe side."
     },
-    "responsibility": {
-      "title": "We treat your data responsibly",
-      "content": "The exact address or location of your bike does not appear on your public profile. This data is only passed on to the sharing partner once a booking is confirmed."
+    "control": {
+      "logo": "insert logo here",
+      "header": "Your data in good hands",
+      "description": "Your address and the location of your bike are not publicly visible. Only after a booking is confirmed, contact details of both sides are shared."
     },
-    "verification": {
-      "title": "Verification creates trust",
-      "content": "Theoretically, everyone knows everyone else by 3.5 to 6.6 degrees of separation. But would you really want to rely on that when renting out your bike to someone? Provide personal details in your profile to increase your trustworthiness when communicating with a lister or rider regarding the bike hire. There are several ways you can verify a person’s identity on listnride:",
-      "list-1": "ID Verification: Connect your listnride profile with your facebook page and store your credit card details. Make sure you can receive e-mails.",
-      "list-2": "Phone number: We pass on your verified phone number to your lister/rider as soon as a booking request is accepted.",
-      "list-3": "Ratings: Your profile features the ratings submitted by your riders and listers after the bike hire. This allows you to build up a good reputation."
+    "safe": {
+      "logo": "insert logo here",
+      "header": "Present yourself - if you like",
+      "description": "Link your profile to your Facebook ID and pressent yourself to the <i>listnride</i> community. Riders know from whom they rent. Listers know immediately who wants to rent."
+    },
+    "alone": {
+      "logo": "insert logo here",
+      "header": "Stars point out the way",
+      "description": "After a rental both sides can rate each other for the quality and service. This way we strengthen the confidence in the community and keep the quality high.  So you can be sure can find and rent high-quality bikes everywhere."
+    },
+    "main": {
+      "header": "The listnride insurance",
+      "description": "If you rent a bicycle in Germany or Austria, a basic insurance is included in the rent. With \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> \nand the \n<a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer Group</a> \nwe have two strong partners on our side to help you when needed.\n<p>\nJust choose the right insurance package for you when booking your bike and off you go."
+    },
+    "outro": {
+      "description": "listnride is Europe's largest bike-sharing community. We offer cycling enthusiasts easy access to high quality bikes. Always the perfect bike! simply book online."
     }
   },
   "how-it-works": {

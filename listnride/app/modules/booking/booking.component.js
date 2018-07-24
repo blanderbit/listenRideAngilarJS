@@ -9,10 +9,10 @@ angular.module('booking', [])
     controller: [
       '$localStorage', '$rootScope', '$scope', '$state', '$stateParams', '$mdToast',
       '$timeout', '$analytics', 'ENV', '$translate', '$filter', 'authentication',
-      'api', 'price', 'voucher', 'calendarHelper',
+      'api', 'price', 'voucher', 'countryCodeTranslator', 'calendarHelper',
       function BookingController(
         $localStorage, $rootScope, $scope, $state, $stateParams, $mdToast, $timeout, $analytics,
-        ENV, $translate, $filter, authentication, api, price, voucher, calendarHelper) {
+        ENV, $translate, $filter, authentication, api, price, voucher, countryCodeTranslator, calendarHelper) {
         var booking = this;
         var btAuthorization = ENV.btKey;
         var btClient;
@@ -21,12 +21,11 @@ angular.module('booking', [])
         booking.bikeId = $stateParams.bikeId;
         booking.shopBooking = $stateParams.shop;
 
-        // if (!booking.shopBooking) {
-          booking.startDate = new Date($stateParams.startDate);
-          booking.endDate = new Date($stateParams.endDate);
-        // }
+        booking.startDate = new Date($stateParams.startDate);
+        booking.endDate = new Date($stateParams.endDate);
 
         booking.user = {};
+        booking.bike = {};
         booking.phoneConfirmed = 'progress';
         booking.selectedIndex = 0;
         booking.hidden = true;
@@ -35,6 +34,10 @@ angular.module('booking', [])
         booking.expiryDate = "";
         booking.booked = false;
         booking.processing = false;
+        booking.isPremium = false;
+        booking.bike.country_code = "";
+        booking.user.balance = 0;
+        booking.insuranceCountries = ['DE', 'AT'];
         booking.isOpeningHoursLoaded = false;
 
         var oldExpiryDateLength = 0;
@@ -54,23 +57,27 @@ angular.module('booking', [])
               booking.isOpeningHoursLoaded = true;
             }
           );
-        }
+        };
 
         // Fetch Bike Information
         api.get('/rides/' + booking.bikeId).then(
           function (success) {
             booking.bike = success.data;
+            booking.coverageTotal = booking.bike.coverage_total || 0;
             getLister();
             booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
             booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
             booking.prices = booking.bike.prices;
-            booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
-            booking.total = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
+            updatePrices();
           },
           function (error) {
             $state.go('home');
           }
         );
+
+        booking.insuranceAllowed = function () {
+          return _.includes(["DE", "AT"], booking.bike.country_code);
+        };
 
         // on lifecycle initialization
         booking.$onInit = function () {
@@ -102,8 +109,8 @@ angular.module('booking', [])
             booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
             booking.total = booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
           }
-          // TODO: REMOVE REDUNDANT PRICE CALUCLATION CODE
-        }
+          // TODO: REMOVE REDUNDANT PRICE CALCULATION CODE
+        };
 
         booking.onTimeChange = function(slot) {
           var slotDate = slot + "Date";
@@ -150,6 +157,19 @@ angular.module('booking', [])
         function validDates() {
           return booking.endDate != "Invalid Date" && booking.startDate.getTime() < booking.endDate.getTime();
         }
+
+        function updatePrices() {
+          var prices = price.calculatePrices(booking.startDate, booking.endDate, booking.prices, booking.coverageTotal, booking.isPremium);
+          booking.subtotal = prices.subtotal;
+          booking.subtotalDiscounted = prices.subtotalDiscounted;
+          booking.lnrFee = prices.serviceFee;
+          booking.premiumCoverage = prices.premiumCoverage;
+          booking.total = Math.max(prices.total - booking.user.balance, 0);
+        }
+
+        booking.premiumChange =function() {
+          updatePrices()
+        };
 
         booking.resendSms = function() {
           booking.toggleConfirmButton();
@@ -301,6 +321,7 @@ angular.module('booking', [])
               // if (!booking.shopBooking || Object.keys(oldUser).length > 0) {
                 setFirstTab();
               // }
+              updatePrices();
               $timeout(function () {
                 booking.hidden = false;
               }, 120);
@@ -539,6 +560,9 @@ angular.module('booking', [])
             start_date: startDate_utc.toISOString(),
             end_date: endDate_utc.toISOString(),
             instant: booking.shopBooking,
+            insurance: {
+              premium: booking.isPremium
+            }
           };
 
 

@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
+    "basic-fee": "Service Fee includes Basic Insurance",
     "how-it-works": "Come funziona",
     "list-a-bike": "Registra una bicicletta",
     "renting-a-bike": "Noleggiare una bicicletta",
@@ -73,7 +74,7 @@
     "reviews": "Recensioni",
     "for": "per",
     "per-day": "al giorno",
-    "pd": "p.g",
+    "pd": "p.g.",
     "Monday": "Lunedì",
     "Tuesday": "Martedì",
     "Wednesday": "Mercoledì",
@@ -119,8 +120,34 @@
     "confirmation-text": "Sei sicuro?",
     "loading": "Caricamento",
     "today": "Oggi",
-    "yesterday": "Ieri"
+    "yesterday": "Ieri",
+    "press": {
+      "title": "Conosciuto da TV e stampa",
+      "logo-1": "inserisci il logo qui",
+      "logo-2": "inserisci il logo qui",
+      "logo-3": "inserisci il logo qui",
+      "logo-4": "inserisci il logo qui"
+    },
+    "find-your-bike": {
+      "header": "Trova la bicicletta perfetta per te",
+      "subheader": "Stai pianificando il tuo prossimo viaggio?",
+      "button": "Trova la tua bici"
+    },
+    "rent-your-bike": {
+      "header": "Noleggia la tua bici",
+      "subheader": "Incontra persone che condividono la tua stessa passione. Guadagna qualcosa in più"
+    }
   },
+  "insurance": {
+    "facts": {
+      "basic-insurance": {
+        "price-description": "incluso in ogni noleggio in Germania e Austria"
+      }
+    },
+    "meta-title": "Assicurazione per ogni noleggio in Germania e Austria",
+    "meta-description": "Ogni noleggio in Germania e Austria tramite listnride  è automaticamente assicurato"
+  },
+  "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
       "berlin": {
@@ -259,8 +286,7 @@
       "meta-description": "I Termini e Condizioni della comunità bike sharing di listnride si applicano all'uso della piattaforma online."
     },
     "trust-and-safety": {
-      "meta-title": "Il Noleggio di biciclette è sicuro - listnride ti tutela",
-      "meta-description": "La fiducia è tutto in una sharing community. Promuoviamo la giustizia e la sicurezza verificando le identità degli utenti e offrendo una garanzia ai noleggiatori."
+      "meta-title": "Il Noleggio di biciclette è sicuro - listnride ti tutela"
     },
     "how-it-works": {
       "meta-title": "Bike sharing in modo semplice",
@@ -287,10 +313,10 @@
   },
   "booking": {
     "shopping": "Secure Shopping",
+    "and-agree-privacy": "e le nostre norme sulla protezione dati",
     "pay-secure": "Pagamento sicuro con",
     "agree-terms": "Con \"Richiedi la bicicletta\" accetti i",
     "agree-terms-link": " termini listnride",
-    "and-agree-privacy": "and to the <a target=\"_blank\" href=\"/#/privacy\">listnride Privacy Policy</a>.",
     "footer": {
       "questions": "Hai domande sul noleggio della bicicletta?",
       "call-us": "Chaimaci al: +49 (0)30-120870330, Lun-Ven 9-18. ",
@@ -346,6 +372,15 @@
       "size": "Taglia",
       "location": "Località",
       "invoice-address": "Indirizzo di fatturazione",
+      "premium-insurance": "Assicurazione Premium",
+      "premium-insurance-title": "Protezione assicurativa Premium",
+      "premium-insurance-subtitle": "Scegli la nostra assicurazione premium per la tua sicurezza",
+      "thats-included": "Anche questo è incluso oltre all'assicurazione di base.",
+      "premium-feature-1": "Protezione anche contro il furto",
+      "premium-feature-2": "Sostituzione bici dopo danni, incidenti o furti",
+      "premium-feature-3": "Trasporto della bici dopo un incidente o un danno",
+      "premium-feature-4": "Nessuna tassa di mantenimento",
+      "premium-feature-5": "Numero di telefono di emergenza 24 ore ",
       "payment": "Pagamento",
       "redeem-voucher": "Buono sconto",
       "add": "Ok",
@@ -384,9 +419,7 @@
     "duplicate-finish": "Processo di duplicazione è terminato. Copie create con successo",
     "bike-deleted": "Bici cancellata con successo",
     "range-success-delete": "Periodo eliminato con successo",
-    "availability-success-saved": "Disponibilità salvata con successo",
-    "incorrect-old-password": "Could not change password. Please be sure that the old password is right",
-    "bike-edit-successful": ""
+    "availability-success-saved": "Disponibilità salvata con successo"
   },
   "settings": {
     "settings": "Impostazioni",
@@ -499,7 +532,7 @@
   },
   "user": {
     "verified-through": "Verificato tramite",
-    "own-bikes": "Le proprie biciclette",
+    "own-bikes": "Noleggio biciclette",
     "ratings": "Valutazioni",
     "meta-title": "Profilo di {{name}}",
     "meta-description": "Noleggia biciclette su listnride da {{name}}.",
@@ -548,7 +581,11 @@
     "reject": "Rifiuta",
     "rate": "Voto",
     "confirm": "Confermare",
-    "confirm_return": "Conferma ritorno"
+    "confirm_return": "Conferma ritorno",
+    "documents-title": "Certificati di assicurazione",
+    "documents-description": "Qui puoi scaricare i certificati di assicurazione. Questi documenti ti sono stati inviati anche via email.",
+    "insurance-bike": "Certificato di assicurazione bici",
+    "insurance-bike-assist": "Certificato di assicurazione Bike Assist"
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} di {{user.city}} vorrebbe noleggiare la tua <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> dal {{timespan}}. Accetto ulteriori dettagli utilizzando la chat.",
@@ -572,12 +609,7 @@
     "last-name": "Cognome",
     "email-address": "Indirizzo Email",
     "password": "Password",
-    "update-password": "Change Password",
     "forgot-password": "Hai dimenticato la password ?",
-    "old-password": "Old Password",
-    "new-password": "New Password",
-    "save-new-password": "Save new password",
-    "password-error-length": "Password should be min. 6 characters",
     "or": "o",
     "log-in": "Accedi",
     "log-out": "Disconnettersi",
@@ -585,7 +617,7 @@
     "sign-up-to-book": "Iscriviti per prenotare la bicicletta ",
     "sign-up-with-facebook": "Iscriviti tramite facebook",
     "sign-up-divider-text": "Accetta i nostri Termini e Condizioni ",
-    "agree-terms-and-policy": "Si prega di accettare i nostri Termini e Condizioni e l'Informativa sulla Privacy. ",
+    "agree-terms-and-policy": "Accetta i nostri Termini e Condizioni e l'Informativa sulla Privacy",
     "member-already": "Sei già iscritto?",
     "business": "Negozio di biciclette?",
     "description": "Descrizione",
@@ -593,12 +625,13 @@
     "address": "Indirizzo",
     "profile-picture": "Immagine del profilo",
     "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
-    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
+    "profile-picture-info-policy": "Caricando un'immagine, accosento che listnride salvi l'immagine come descritto nelle <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Norme sulla Privacy</a>. Posso cancellarla in qualsiasi momento.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "La dimensione dell'immagine è superiore alla dimensione massima consentita",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "Informazioni generali",
     "street": "via e numero",
+    "streetnumber": "Numero",
     "zip": "Cap",
     "city": "Città",
     "country": "Nazione",
@@ -609,7 +642,6 @@
     "signing-up-accept-tac": "Accetto i <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Termini e Condizioni </a>e acconsento alla raccolta, all'elaborazione e all'utilizzo dei miei dati personali come ulteriormente descritto nella <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\"> Informativa sulla Privacy </a>.",
     "signing-up-accept-newsletter": "Desidero ricevere la newsletter via e-mail di listnride con contenuti interessanti su nuove bici, tour e sconti esclusivi. Si applica l' <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\"> Informativa sulla privacy </a>di listnride. Posso revocare il mio consenso in qualsiasi momento.",
     "privacy-policy": "Si applica <a style=\"pointer-events: auto;\" href=\"/#/privacy\">l'Informativa sulla Privacy</a> di listnride.",
-    "logged-in-via-facebook": "You logged in via facebook",
     "errors": {
       "password-length": "La password deve essere tra i 6-30 caratteri",
       "password-length-xs": "6-30 caratteri",
@@ -635,6 +667,11 @@
   },
   "home": {
     "landing-section-header": "La bicicletta perfetta. Noleggiala subito.",
+    "insurance": {
+      "description": "Non importa se una fixie o una bici da triathlon di alta gamma: ogni noleggio in Germania o in Austria è assicurato! Semplice. In ogni momento.",
+      "header": "Copertura assicurativa per ogni noleggio su listnride",
+      "logo-description": "In collaborazione con hepster"
+    },
     "landing-section-subheader": "Unisciti a listnride e trova la bicicletta giusta per te.",
     "featured-bikes-header": "Noleggio bicicletta: Le preferite dalla nostra comunità",
     "featured-bikes-subheader": "Sia che si tratti di biciclette da strada, mountain bike, biciclette da città o e-bike, è possibile noleggiarle tutte. Queste sono le biciclette a noleggio preferite della comunità.",
@@ -653,8 +690,8 @@
     "default-placeholder": "Dove vorresti noleggiare una bicicletta ?"
   },
   "search": {
-    "bikes-found": "Bikes found:",
     "no-bikes": "Non ci sono biciclette in questa località",
+    "bikes-found": "bikes found:",
     "all-sizes": "Tutte le misure",
     "bikes-in": "Biciclette a",
     "meta-title": "Noleggia la bicicletta perfetta a {{location}}.",
@@ -671,6 +708,8 @@
   },
   "calendar": {
     "invalid-date": "Le date non sono valide",
+    "info-service-fee-insurance": "Aiutaci a gestire listnride e ad offrire un servizio di noleggio bici sicuro. Include assicurazione di base, costi di servizio e IVA.",
+    "basic-insurance-included": "Assicurazione base inclusa",
     "request-bike": "Richiedi la bicicletta",
     "to-request-bike-please": "per richiedere una bicicletta per favore",
     "own-bike": "Non è possibile richiedere la propria bicicletta",
@@ -681,8 +720,8 @@
     "info-subtotal": "Questo è il prezzo giornaliero regolare<br>per il numero di giorni che desideri<br>noleggiare la bicicletta.",
     "info-discount": "Lo sconto giornaliero medio<br>che ottieni al giorno noleggiando<br>per un periodo di tempo più lungo.",
     "info-service-fee": "La tassa è <br>data dal servizio offerto da<br>listnride. Comprende l'IVA.",
-    "info": "Nel calendario precedente fare clic prima sul<br>giorno in cui vuoi noleggiare <br>la bicicletta, e in secondo luogo sul<br>giorno in cui desideri restituirla.",
-    "info-without-calendar": "Nel calendario precedente fare clic prima sul<br>giorno in cui vuoi noleggiare <br>la bicicletta, e in secondo luogo sul<br>giorno in cui desideri restituirla."
+    "info": "Nel calendario seleziona prima<br>il giorno in cui desideri noleggiare <br>la bici, e poi<br>il giorno in cui desideri restituirla.",
+    "info-without-calendar": "Nel calendario, seleziona prima <br0>il giorno in cui desideri noleggiare <br1>la bici e poi <br2>il giorno in cui desideri restituirla."
   },
   "list": {
     "edit-bike": "Modifica la bicicletta",
@@ -755,6 +794,18 @@
       "zip": "Cap",
       "city": "Città",
       "country": "Nazione"
+    },
+    "insurance": {
+      "label": "Assicurazione",
+      "info": "Informazioni sull'assicurazione",
+      "hint-part-1": "La tua bicicletta è assicurata ogni volta che viene noleggiata. Per offrirti la protezione giusta è necessario che tu inserisca il valore della tua bicicletta.",
+      "hint-part-2": "Si prega di notare che è necessario fornire la prova del valore della propria bicicletta in caso di reclami",
+      "hint-link-label": "Ulteriori informazioni sull'assicurazione",
+      "header": "Per favore comunicaci il valore della tua bici",
+      "tip": "Il costo aggiuntivo per il ciclista è {{fee}} al giorno",
+      "up-to-value": "Fino a {{value}}",
+      "select-value": "Per favore comunicaci il valore della tua bici",
+      "no-insurance": "Siamo spiacenti, il tuo paese non è ancora coperto dalla nostra assicurazione.\nL' assicurazione si applica solo per i noleggi in Germania e Austria."
     },
     "pricing": {
       "info": "Il tuo prezzo giornaliero è il prezzo base per 1 giorno.",
@@ -911,7 +962,8 @@
       "price-title": "Super prezzo",
       "price-content": "Le biciclette registrate sulla nostra piattaforma sono noleggiate da proprietari privati, ma anche da rivenditori specializzati e servizi di noleggio. Cosa c'è per te: la bicicletta perfetta con un'ottimo rapporto qualità / prezzo.",
       "easy-title": "Super semplice",
-      "easy-content": "Trova e prenota la tua bicicletta a noleggio prima di metterti in viaggio o semplicemente in viaggio utilizzando il nostro sito web mobile."
+      "easy-content": "Trova e prenota la tua bicicletta a noleggio prima di metterti in viaggio o semplicemente in viaggio utilizzando il nostro sito web mobile.",
+      "covered-content": "In caso di danni e / o furto, la nostra assicurazione ti aiuterà. Con\n<a href=\"http: //www.hepster.com\" target=\"_blank\" >hepster </a>\n e il\n<a href=\"http: //www.gothaer.de\" target=\"_blank\" >Gruppo Gothaer </a>\n abbiamo due partner forti al nostro fianco, per aiutarti in caso di emergenza."
     },
     "search-section": {
       "header": "Dove vorresti noleggiare una bicicletta ?",
@@ -1039,6 +1091,8 @@
   },
   "footer": {
     "language": "Lingua",
+    "insurance-partner": "Partner assicurativo",
+    "insurance": "Assicurazione",
     "company": "Società",
     "legal": "Note legali",
     "terms-and-conditions": "Termini",
@@ -1050,7 +1104,7 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
   "seo": {
-    "header": "Noleggia le migliori bici a",
+    "header": "Noleggia le migliori bici ad",
     "rent-the-best": "Noleggia le migliori",
     "bikes": "biciclette",
     "rent-perfect-bikes-in": "Noleggia la bicicletta perfetta a",

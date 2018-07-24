@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Saber más",
+    "basic-fee": "El costo del servicio incluye seguro básico",
     "how-it-works": "Cómo funciona",
     "list-a-bike": "Registrar una bici",
     "renting-a-bike": "Alquilar una bici",
@@ -74,7 +75,7 @@
     "reviews": "Opiniones",
     "for": "para",
     "per-day": "por día",
-    "pd": "por día",
+    "pd": "p.d.",
     "Monday": "Lunes",
     "Tuesday": "Martes",
     "Wednesday": "Miércoles",
@@ -122,8 +123,30 @@
     "clear": "Clear",
     "clear-all": "Clear All",
     "today": "Hoy",
-    "yesterday": "Ayer"
+    "yesterday": "Ayer",
+    "press": {
+      "title": "Conocido de TV & Print"
+    },
+    "find-your-bike": {
+      "header": "Encuentra tu bicicleta perfecta",
+      "subheader": "¿Estás planeando tu próximo viaje?",
+      "button": "Encuentra tu bici"
+    },
+    "rent-your-bike": {
+      "header": "Alquila tu bicicleta",
+      "subheader": "Conoce a personas con tus mismas pasiones y gana dinero extra"
+    }
   },
+  "insurance": {
+    "facts": {
+      "basic-insurance": {
+        "price-description": "incluido en cada alquiler en Alemania y Austria"
+      }
+    },
+    "meta-title": "Seguro para cada alquiler en Alemania y Austria",
+    "meta-description": "Todos los alquileres a través de listnride en Alemania y Austria  están asegurados automáticamente."
+  },
+  "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
       "berlin": {
@@ -266,8 +289,7 @@
       "meta-description": "Los términos y condiciones de la comunidad para compartir bicis de listnride se aplican al uso de la plataforma en línea."
     },
     "trust-and-safety": {
-      "meta-title": "Alquiler de bicicletas seguro: listnride te respalda",
-      "meta-description": "La confianza es la base de una comunidad de intercambio. Promovemos la equidad y la seguridad mediante la verificación de la identidad de nuestros usuarios y ofreciendo una garantía de los anunciantes."
+      "meta-title": "Alquiler de bicicletas seguro: listnride te respalda"
     },
     "how-it-works": {
       "meta-title": "Compartir bicis es más fácil",
@@ -294,10 +316,10 @@
   },
   "booking": {
     "shopping": "Secure Shopping",
+    "and-agree-privacy": "y nuestra politica de protección datos",
     "pay-secure": "Pago seguro con",
     "agree-terms": "Con \"Request Bike\" aceptas los",
     "agree-terms-link": "términos de listnride",
-    "and-agree-privacy": "and to the <a target=\"_blank\" href=\"/#/privacy\">listnride Privacy Policy</a>.",
     "footer": {
       "questions": "¿Tienes preguntas con respecto a la reserva de una bicicleta?",
       "call-us": "Llámanos al +49 (0)30-120870330, lunes a viernes 9-18h. ",
@@ -316,7 +338,7 @@
     },
     "details": {
       "tab": "2. Datos personales",
-      "invoice-address": "Tu dirección de facturación",
+      "invoice-address": "Dirección de facturación",
       "subtitle": "Introduce tu dirección de facturación para solicitar una bicicleta",
       "verification": "Verificar",
       "send-sms": "Te enviaremos un SMS a tu teléfono",
@@ -353,8 +375,17 @@
       "bike-rental": "Tu selección de bicicleta",
       "size": "Tamaño",
       "location": "Ubicación",
-      "invoice-address": "Dirección de facturación",
-      "payment": "Pagamento",
+      "invoice-address": "Dirección",
+      "premium-insurance": "Premium insurance",
+      "premium-insurance-title": "Protección de seguro premium",
+      "premium-insurance-subtitle": "Pick our premium insurance for your ride to be on the safe side",
+      "thats-included": "Además del seguro básico, esto también se incluye",
+      "premium-feature-1": "Protección contra robos",
+      "premium-feature-2": "Bicicleta de repuesto después de daños, accidentes o robos",
+      "premium-feature-3": "Transporte de la bicicleta después de un accidente o daño",
+      "premium-feature-4": "Sin tarifa de retención",
+      "premium-feature-5": "24h número de teléfono de emergencia",
+      "payment": "Método de pago",
       "redeem-voucher": "Canjear vale",
       "add": "OK",
       "success-header": "¡Enhorabuena, acabas de solicitar una bicicleta!",
@@ -392,9 +423,7 @@
     "duplicate-finish": "Proceso de duplicación terminado. Copias creadas con éxito",
     "bike-deleted": "Bici borrada con éxito",
     "range-success-delete": "Fecha borrado",
-    "availability-success-saved": "Disponibilidad guardada",
-    "incorrect-old-password": "Could not change password. Please be sure that the old password is right",
-    "bike-edit-successful": "Bike successfully edited"
+    "availability-success-saved": "Disponibilidad guardada"
   },
   "settings": {
     "settings": "Configuración",
@@ -507,7 +536,7 @@
   },
   "user": {
     "verified-through": "Verificado",
-    "own-bikes": "Bicis propias",
+    "own-bikes": "Bicicletas de alquiler",
     "ratings": "Puntuaciones",
     "meta-title": "Perfil de {{name}}",
     "meta-description": "Alquilar bicis de {{name}} en listnride.",
@@ -556,7 +585,11 @@
     "reject": "Rechazar",
     "rate": "Tarifa",
     "confirm": "Confirmar",
-    "confirm_return": "Confirmar devolución"
+    "confirm_return": "Confirmar devolución",
+    "documents-title": "Certificados de seguro",
+    "documents-description": "Aquí puede descargar sus certificados de seguro. Estos documentos también han sido enviados por correo electrónico.",
+    "insurance-bike": "Certificado de seguro de la bicicleta",
+    "insurance-bike-assist": "Certificado de seguro para la asistencia de la bicicleta"
   },
   "listChat": {
     "1": "A {{user.first_name}}{{user.last_name}} de {{user.city}} le gustaría alquilar tu <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> desde {{timespan}}. Concreta más detalles usando el chat.",
@@ -580,12 +613,7 @@
     "last-name": "Apellido",
     "email-address": "Correo electrónico",
     "password": "Contraseña",
-    "update-password": "Change Password",
     "forgot-password": "¿Olvidaste la contraseña?",
-    "old-password": "Old Password",
-    "new-password": "New Password",
-    "save-new-password": "Save new password",
-    "password-error-length": "Password should be min. 6 characters",
     "or": "o",
     "log-in": "Iniciar sesión",
     "log-out": "Cerrar sesión",
@@ -593,7 +621,7 @@
     "sign-up-to-book": "Regístrate para reservar la bici",
     "sign-up-with-facebook": "Registrarse con facebook",
     "sign-up-divider-text": "Acepta nuestros términos y condiciones",
-    "agree-terms-and-policy": "Por favor, acepte nuestros Términos y Condiciones y Política de Privacidad.",
+    "agree-terms-and-policy": "Acepta los Términos y la Política de Privacidad",
     "member-already": "¿Ya estás registrado?",
     "business": "¿Tienda de bicis?",
     "description": "Descripción",
@@ -601,12 +629,13 @@
     "address": "Dirección",
     "profile-picture": "Foto de perfil",
     "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
-    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
+    "profile-picture-info-policy": "Al subir una imagen, acepto que listnride la guarde tal y como se describe en la sección <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Política de privacidad </a>. Puedo borrarlo en cualquier momento.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "El tamaño de la imagen es superior al tamaño máximo permitido",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "General",
     "street": "Calle y número",
+    "streetnumber": "Número",
     "zip": "Código postal",
     "city": "Ciudad",
     "country": "País",
@@ -617,7 +646,6 @@
     "signing-up-accept-tac": "He leído y acepto los <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Términos y Condiciones</a> y acepto la recolección, tratamiento y uso de mis datos personales establecidos por la <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a>.",
     "signing-up-accept-newsletter": "Deseo recibir información sobre nuevas bicicletas, tours y cupones de descuento. Acepto las condiciones establecidas en la <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride. Puedo revocar mi consentimiento en cualquier momento.",
     "privacy-policy": "Se aplica la <a style=\"pointer-events: auto;\" href=\"/#/privacy\">Política de Privacidad</a> de listnride.",
-    "logged-in-via-facebook": "You logged in via facebook",
     "errors": {
       "password-length": "La contraseña debe tener entre 6 y 30 caracteres",
       "password-length-xs": "6-30 caracteres",
@@ -643,6 +671,11 @@
   },
   "home": {
     "landing-section-header": "La bici perfecta. Simplemente alquílala.",
+    "insurance": {
+      "description": "No importa si se trata de una bicicleta urbana, ebike o de alta gama: ¡todos los alquileres de listnride en Alemania o Austria están asegurados! Sencillo. Sin burocracia. En cualquier momento.",
+      "header": "Cobertura de seguro por cada alquiler en listnride",
+      "logo-description": "En cooperación con Hepster y"
+    },
     "landing-section-subheader": " Únete a listnride y encuentra la bici adecuada para ti.",
     "featured-bikes-header": "Alquiler de bicis: las favoritas de nuestra comunidad",
     "featured-bikes-subheader": "Ya sean bicis de carretera, de montaña, de carga, de ciudad o eléctricas, puedes alquilarlas todas. Estas son las bicis de alquiler favoritas de la comunidad.",
@@ -661,8 +694,8 @@
     "default-placeholder": "¿Dónde te gustaría alquilar una bici?"
   },
   "search": {
-    "bikes-found": "Bikes found:",
     "no-bikes": "No hay bicis en esta ubicación",
+    "bikes-found": "bikes found:",
     "all-sizes": "Todos los tamaños",
     "bikes-in": "Bicis disponibles",
     "meta-title": "Alquila la bici perfecta en{{location}} ",
@@ -679,6 +712,8 @@
   },
   "calendar": {
     "invalid-date": "Las fechas no son válidas",
+    "info-service-fee-insurance": "Nos ayuda a operar listnride y ofrecer un servicio seguro de alquiler de bicicletas. Incluye seguro básico, tarifas de servicio e IVA.",
+    "basic-insurance-included": "Seguro básico incluido",
     "request-bike": "Solicitar bici",
     "to-request-bike-please": "para solicitar una bici",
     "own-bike": "No puedes solicitar tu propia bici",
@@ -689,8 +724,8 @@
     "info-subtotal": "Este es el precio habitual diario<br>veces la cantidad de días que quieras<br>alquilar la bici.",
     "info-discount": "Descuento medio diario que <br>obtienes por día al alquilar <br>por un período de tiempo más largo.",
     "info-service-fee": "La cuota de servicio es<br>utilizada para proporcionar<br>a listnride. Incluye el IVA.",
-    "info": "En el calendario anterior, haz clic primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla.",
-    "info-without-calendar": "En el calendario anterior, haz clic primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla."
+    "info": "En el calendario anterior, selecciona primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla.",
+    "info-without-calendar": "En el calendario anterior, selecciona primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla."
   },
   "list": {
     "edit-bike": "Editar bici",
@@ -705,14 +740,14 @@
       "label": "Categoría",
       "city": "Ciudad",
       "race": "Carretera",
-      "all-terrain": "Montaña",
+      "all-terrain": "Todo terreno",
       "kids": "Infantil",
       "electro": "Eléctricas",
       "special": "Especial",
       "urban": "Urban",
       "e-bike": "E-Bike",
-      "road": "Road",
-      "transport": "Transport"
+      "road": "Carretera",
+      "transport": "Transporte"
     },
     "details": {
       "header": "¿Cuál es el nombre, tamaño y marca de tu bici?",
@@ -763,6 +798,18 @@
       "city": "Ciudad",
       "country": "País"
     },
+    "insurance": {
+      "label": "Seguro",
+      "info": "Información sobre el seguro",
+      "hint-part-1": "Su bicicleta está asegurada cada vez que se alquila. Para proporcionarle la protección adecuada, es necesario que ingrese el valor de su bicicleta.",
+      "hint-part-2": "Tenga en cuenta que debe proporcionar una prueba del valor de su bicicleta en caso de cualquier reclamo",
+      "hint-link-label": "Conozca más sobre el seguro",
+      "header": "Cuéntanos el valor de tu bicicleta",
+      "tip": "El costo adicional para el usuario es de {{fee}} por día",
+      "up-to-value": "Hasta {{value}}",
+      "select-value": "Por favor seleccione el valor de su bicicleta",
+      "no-insurance": "Lo sentimos, su país aún no está cubierto por nuestro seguro.\nEl seguro solo se aplica para alquileres en Alemania y Austria."
+    },
     "pricing": {
       "info": "Tu precio diario es el precio base para 1 día.",
       "info-description": "Información sobre el precio del alquiler",
@@ -811,20 +858,20 @@
         "dutch-bike": "Bicicleta holandesa",
         "touring-bike": "Bicicleta de rutas",
         "fixie": "Bici de piñón fijo",
-        "single-speed": "Bici de una velocidad",
-        "city-bike": "City Bike"
+        "single-speed": "Bici monomarcha",
+        "city-bike": "Bicicletas urbanas "
       },
       "2": {
         "road-bike": "Bici de carretera",
         "triathlon": "Triatlón",
         "indoor": "Bicicleta de pista",
-        "e-city-bike": "E-City Bike",
-        "e-touring-bike": "E-Touring Bike",
-        "e-cargo-bike": "E-Cargo Bike",
-        "e-mountain-bike": "E-Mountain Bike",
+        "e-city-bike": "Bici eléctrica urbana",
+        "e-touring-bike": "Bici eléctrica de turismo",
+        "e-cargo-bike": "Bici de carga eléctrica",
+        "e-mountain-bike": "Bici eléctrica de montaña",
         "e-road-bike": "E-Road Bike",
-        "e-folding-bike": "E-Folding Bike",
-        "e-scooter": "E-Scooter"
+        "e-folding-bike": "Bici eléctrica plegable",
+        "e-scooter": "Scooter eléctrico"
       },
       "3": {
         "tracking": "Tracking",
@@ -833,10 +880,10 @@
         "cross-country": "Cross Country",
         "downhill": "Descenso",
         "cyclocross": "Ciclocross",
-        "road-bike": "Road Bike",
-        "triathlon-bike": "Triathlon Bike",
-        "touring-bike": "Touring Bike",
-        "fixed-gear-bike": "Fixed Gear Bike"
+        "road-bike": "Bicicleta de carretera",
+        "triathlon-bike": "Bicicleta de triatlón ",
+        "touring-bike": "Bicicleta de turismo ",
+        "fixed-gear-bike": "Bicicleta de piñón fijo"
       },
       "4": {
         "city": "Ciudad",
@@ -844,17 +891,17 @@
         "road": "De carretera",
         "mtb-hardtail": "MTB Hardtail",
         "mtb-fullsuspension": "MTB Fullsuspension",
-        "cyclocross-bike": "Cyclocross Bike",
-        "gravel-bike": "Gravel Bike"
+        "cyclocross-bike": "Bicicleta de ciclocross ",
+        "gravel-bike": "Bicicleta de gravel"
       },
       "5": {
         "pedelec": "Pedelec",
         "e-bike": "Bici eléctrica",
-        "cargo-bike": "Cargo Bike",
-        "bike-trailer": "Bike Trailer",
-        "bike-child-seat": "Bike Child Seat",
-        "bike-car-rack": "Bike Car Rack",
-        "bike-travel-bag": "Bike Travel Bag"
+        "cargo-bike": "Bicicleta de carga",
+        "bike-trailer": "Remolque para bicicleta",
+        "bike-child-seat": "Asiento para niños",
+        "bike-car-rack": "Portabicicletas para el coche",
+        "bike-travel-bag": "Alforjas "
       },
       "6": {
         "folding-bike": "Bici plegable",
@@ -864,16 +911,16 @@
         "recumbent": "Bici reclinada",
         "mono-bike": "Monociclo",
         "trailer": "Remolque de bicicleta",
-        "city-bike": "City Bike",
-        "all-terrain-bike": "All Terrain Bike",
-        "road-bike": "Road Bike",
-        "bogie-wheel": "Bogie Wheel"
+        "city-bike": "Bicicleta urbana",
+        "all-terrain-bike": "Bicicleta todo terreno",
+        "road-bike": "Bicicleta de carretera",
+        "bogie-wheel": "Bicicleta sin pedales"
       },
       "7": {
-        "folding-bike": "Folding Bike",
-        "recumbent-bike": "Recumbent Bike",
-        "tandem-bike": "Tandem Bike",
-        "longtail-bike": "Longtail Bike",
+        "folding-bike": "Bicicleta plegable",
+        "recumbent-bike": "Bicicleta reclinada",
+        "tandem-bike": "Tandem ",
+        "longtail-bike": "Bicicleta Longtail ",
         "scooter": "Scooter"
       }
     }
@@ -918,7 +965,8 @@
       "price-title": "Súper precio",
       "price-content": "Las bicis que figuran en nuestra plataforma las alquilan propietarios particulares, distribuidores especializados y servicios de alquiler. ¿Qué encontrarás aquí? La bicicleta perfecta a buen precio.",
       "easy-title": "Súper fácil.",
-      "easy-content": "Encuentra y reserva tu bici de alquiler antes de irte de viaje o sobre la marcha usando nuestro sitio web móvil."
+      "easy-content": "Encuentra y reserva tu bici de alquiler antes de irte de viaje o sobre la marcha usando nuestro sitio web móvil.",
+      "covered-content": "Si alquila una bicicleta en Alemania o Austria, el seguro está incluido en el alquiler. Con\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\ny el\n<a href=\"http: //www.gothaer.de\" target=\"_blank\" >Grupo de Gothaer </a>\ntenemos dos socios fuertes a nuestro lado para ayudarlo en caso de emergencia."
     },
     "search-section": {
       "header": "¿Dónde te gustaría ir?",
@@ -1046,6 +1094,8 @@
   },
   "footer": {
     "language": "Idioma",
+    "insurance-partner": "Socio de seguros",
+    "insurance": "Seguro",
     "company": "Empresa",
     "legal": "Políticas",
     "terms-and-conditions": "Condiciones",
@@ -1057,7 +1107,7 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
   "seo": {
-    "header": "Rent the best bikes in",
+    "header": "Alquile las mejores bicicletas en",
     "rent-the-best": "Rent the best",
     "bikes": "bikes",
     "rent-perfect-bikes-in": "Rent perfect bikes in",

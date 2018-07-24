@@ -60,7 +60,8 @@
         <span class="md-body-1 lnr-dark-green-text">-{{ bookingDialog.calendar.discount | currency: '€' }}</span>
       </div>
       <div layout="row" layout-align="space-between center">
-        <span class="md-body-2">{{ 'shared.lnr-fee' | translate }}</span>
+        <div ng-if="!calendar.insuranceCountry()">{{ 'shared.lnr-fee' | translate }}</div>
+        <div ng-if="calendar.insuranceCountry()">{{ 'shared.basic-fee' | translate }}</div>
         <span class="md-body-1">{{ bookingDialog.calendar.lnrFee | currency: '€' }}</span>
       </div>
       <div layout="row" layout-align="space-between center" ng-if="bookingDialog.balance">

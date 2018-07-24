@@ -16,12 +16,13 @@ angular.module('message',[]).component('message', {
     messageTime: '<',
     time: '<'
   },
-  controller: [ '$translate', '$localStorage', '$mdDialog', '$analytics', 'api',
-    function MessageController($translate, $localStorage, $mdDialog, $analytics, api) {
+  controller: [ '$translate', '$localStorage', '$mdDialog', '$analytics', 'api', 'ENV',
+    function MessageController($translate, $localStorage, $mdDialog, $analytics, api, ENV) {
       var message = this;
       var time = message.time.toString();
       var messageDate = moment(message.time);
       var todayDate = moment(new Date());
+      var hasInsurance = !!message.request.insurance;
       // var yesterdayDate = moment(new Date()).add(-1, 'days');
 
       if (messageDate.diff(todayDate, 'days') === 0){
@@ -38,10 +39,33 @@ angular.module('message',[]).component('message', {
         );
       } else {
         message.localTime = messageDate.format('DD.MM.YYYY HH:mm');
-      }      
-      
+      }
+
       message.buttonClicked = false;
-      
+
+      // check if current bike has insurance
+      if (hasInsurance) {
+        var insuranceEndpoint = "/users/" + $localStorage.userId + "/insurances/" + message.request.insurance.id + "?item_id=";
+        message.bikeInsuranceUrl = ENV.apiEndpoint + insuranceEndpoint + message.request.insurance.items_uid.thing;
+        message.bikeAssistInsuranceUrl = ENV.apiEndpoint + insuranceEndpoint + message.request.insurance.items_uid.person;
+      }
+
+      message.downloadDocument = function (certificateId) {
+        api.get(insuranceEndpoint + certificateId, 'blob').then(
+          function (success) {
+            var name = message.request.insurance.items_uid.thing == certificateId ? "Bike" : "Bike Assist";
+            var file = new Blob([success.data], {type: 'application/pdf'});
+            var link = document.createElement('a');
+            link.href = window.URL.createObjectURL(file);
+            link.download="Certificate " + name + " Insurance " + message.request.id + ".pdf";
+            link.click();
+          },
+          function (error) {
+            console.log("error happened");
+          }
+        );
+      };
+
       message.closeDialog = function() {
         $mdDialog.hide();
       };
@@ -66,6 +90,13 @@ angular.module('message',[]).component('message', {
           return message.status != null && message.status != 7 && message.status != 6 && message.status != 2 && message.status != 4;
         }
         // return message.status != null && message.status != 7 && (!message.request.rideChat && message.status != 6);
+      };
+
+      message.showReturn = function () {
+        return !message.request.rideChat &&
+          message.status === 3 &&
+          message.request.returnable &&
+          moment().diff(message.request.start_date) > 0
       };
 
       // TODO: Unfortunately doublecoded in message.component and requests.component

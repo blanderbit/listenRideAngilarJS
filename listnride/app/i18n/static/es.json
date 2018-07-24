@@ -77,6 +77,64 @@
       "cafes-bars-content": "Si te gusta la comida vegetariana y vegana, te recomendamos que visites <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot </a>en Karmeliterplatz. Si prefieres la cocina austríaca más tradicional, te recomendamos <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta </a>. Pide un Tafelspitz o Wiener Schnitzel tradicionales y disfrútalos al aire libre con vistas a la famosa Ópera de Viena. ¡Será una gran noche para recordar! Para el toque final del día, qué mejor que caminar hacia el Danubio. En el camino encontrarás muchos bares interesantes o puedes sentarte al raso bajo las estrellas junto al río."
     }
   },
+  "insurance": {
+    "main": {
+      "title": "Nuestro seguro lo protege.\n<br>\nNo importa si es lister o usuario.",
+      "description": "Alquilar tu propia bicicleta implica tener confianza en quien la va a utilizar. ¿Qué pasa si se la roban durante el alquiler? ¿Qué pasa si te la vuelve dañada? Todos los alquileres de listnride \nen Alemania y Austria están asegurados. Y nuestro socio\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> te ayudará cuando necesites ayuda. Puedes contactarlos por teléfono o por correo electrónico. Sencillo. Sin burocracia.",
+      "logo-description": "Socio de seguros"
+    },
+    "facts": {
+      "title": "¡Lo que deberías saber!",
+      "basic-insurance": {
+        "price": "Contenido",
+        "title": "Seguro básico",
+        "description": "<ul>\n<li>Protección en caso de daños causados involuntariamente por sí mismo o por causas externas\n<li>Protección contra vandalismo\n<li>Protección de componentes electrónicos y batería para pedelecs\n<li>Tarifa de retención de hasta 250€\n</ul>"
+      },
+      "premium-insurance": {
+        "title": "Seguro premium",
+        "price": "3 €",
+        "price-description": "al día",
+        "description": "<ul>\n<li>Protección en caso de daños causados involuntariamente por sí mismo o por causas externas\n<li>Protección contra el vandalismo\n<li>Protección de componentes electrónicos y batería para pedelecs\n<li>Protección contra robo\n<li>Número de emergencia 24/7 en caso de robo o daño\n<li>Devolver transporte después de robo o daño\n<li>Reemplazo de bicicletas después de robo o daño\n<li>Sin tarifa de retención\n</ul>"
+      }
+    },
+    "faqs": {
+      "title": "¿Tienes más preguntas? ¡Aquí encontrarás todas las respuestas!",
+      "lister": {
+        "description": "Como lister en listnride desea asegurarse de que usted y su bicicleta estén protegidos contra cualquier eventualidad. Es por eso que cada alquiler en Alemania y Austria, a través de listnride, se asegura automáticamente con efecto inmediato. Los usuarios que soliciten su bicicleta pueden optar por reservar el paquete premium para obtener servicios y garantías adicionales. Este servicio es gratuito para usted como Lister.\n<p>\nSi tiene más preguntas, comuníquese con nosotros las 24 horas por correo electrónico.",
+        "question-1": "¿Cuánto cuesta el seguro?",
+        "tabname": "Para el lister",
+        "answer-1": "¡Nada! Como el seguro solo lo compran los usuarios, no hay costos adicionales para usted como lister. Sin embargo, tenga en cuenta que su precio de alquiler diario será un poco más caro para los usuarios. El costo del seguro básico es del 0,1% del valor del seguro de tu bicicleta. Si tienes tu bicicleta asegurada hasta 1.000€, los usuarios pagarán un euro adicional por día de alquiler. Con un valor total de seguro de hasta 5.000€, hay un adicional de 5€ por día de alquiler.",
+        "question-2": "¿Cuál es la cobertura de seguro máxima de mi bicicleta?",
+        "answer-2": "Cada bicicleta está asegurada automáticamente hasta 1.000€ y puede ser asegurada por usted hasta un máximo de 5.000€.\n<br>\nEl pago en caso de pérdida o daño se basa en el valor real de la bicicleta. El precio está determinado individualmente caso por caso, por el\n<a href=\"https://www.gothaer.de\" target=\"_blank\" >Seguro de Gothaer</a>.\n<br>\nRecuerde que al determinar el valor del seguro, serán los usuarios los que pagarán el precio por la tarifa del seguro. Es decir cuanto más asegurada este su bicicleta mayor será el costo del seguro para los usuarios. ",
+        "question-3": "¿Qué tengo que hacer si ocurre un reclamo de seguro?",
+        "answer-3": "Si alguna vez se encuentra en una situación en la que su bicicleta se daña o es robada durante el alquiler, póngase en contacto con\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n directamente:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nEl personal de Hepster responderá a su solicitud de manera rápida y eficaz ."
+      },
+      "rider": {
+        "description": "Ofrecemos dos paquetes de seguros por cada bicicleta que alquila a través de listnride: El\n<b>seguro básico </b>\nestá incluido en cada alquiler, y el\n<b>seguro premium </b>\nque es opcional y extiende la cobertura del seguro por beneficios adicionales.\n<br>\nSu bicicleta y usted estarán siempre protegidos. ¡Puedes comenzar a pedalear con la conciencia tranquila!",
+        "question-1": "¿Cuánto cuesta el seguro básico?",
+        "tabname": "Para el usuario",
+        "answer-1": "El costo del seguro básico es solo el 0,1% del valor del seguro de la bicicleta que ha reservado.\n<br>\nSi una bicicleta está asegurada hasta 1.000 €, entonces usted paga exactamente un euro por día de alquiler para el seguro básico.",
+        "question-2": "¿Cuánto cuesta el seguro premium?",
+        "answer-2": "Tres euros por día, además de la renta y el listnride-<a href=\"https://www.listnride.es/terms\" target=\"_blank\">tarifas</a>",
+        "question-3": "¿Qué cubre el seguro básico?",
+        "answer-3": "<ul>\n<li>Protección en caso de daños causados involuntariamente por sí mismo o por causas externas\n<li>Protección contra vandalismo\n<li>Protección de componentes electrónicos y batería para pedelecs\n<li>Tarifa de retención de hasta 250€\n</ul>",
+        "question-4": "¿Qué cubre el seguro premium?",
+        "answer-4": "<ul>\n<li>Protección en caso de daños causados involuntariamente por sí mismo o por causas externas\n<li>Protección contra el vandalismo\n<li>Protección de componentes electrónicos y batería para pedelecs\n<li>Protección contra robo\n<li>Número de emergencia 24/7 en caso de robo o daño\n<li>Devolver transporte después de robo o daño\n<li>Reemplazo de bicicletas después de robo o daño\n<li>Sin tarifa de retención\n</ul>",
+        "question-5": "¿Hay una tarifa de retención en caso de daño? ¿De cuanto es?",
+        "answer-5": "La tarifa de retención es de hasta 250 € para el seguro básico.\n<br>\nEl seguro premium no tiene tarifa de retención.",
+        "question-6": "¿Cómo finalizo el seguro después de que termina el alquiler de mi bicicleta?",
+        "answer-6": "Con cada alquiler de bicicletas, recibirá un certificado de seguro individual. Esto es\n<b>solo </b>\nválido para la reserva específica y para el\n<b>período de tiempo</b>\n seleccionado por ti, termina automáticamente al finalizar el alquiler de la bicicleta.\n<p>\nTe enviaremos el certificado por correo electrónico o puedes descargarlo de nuestro sitio si lo deseas. ",
+        "question-7": "¿A quién debo contactar si necesito reclamar mi seguro?",
+        "answer-7": "Por supuesto, ¡esperamos que esto nunca suceda!\n<br>\n El seguro es ofrecido por nuestro socio de seguros en línea\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\n y cubierto por\n<a href=\"www.gothaer.de\" target=\"https://www.gothaer.de/\">Gothaer Seguro</a> \ndado que usted es el titular de la póliza de Hepster, lo mejor es ponerse en contacto con Hepster:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nEl personal de Hepster lo apoyará rápida y eficazmente."
+      },
+      "docs": {
+        "tabname": "Todos los documentos"
+      },
+      "description-lister": "Como lister en listnride desea asegurarse de que usted y su bicicleta estén protegidos contra cualquier eventualidad. Es por eso que cada alquiler en Alemania y Austria, realizado a través de listnride, se asegura automáticamente con efecto inmediato. Los usuarios que soliciten su bicicleta pueden optar por reservar el paquete premium para obtener servicios y garantías adicionales. Este servicio es gratuito para usted como Lister.\n<p>\nSi tiene más preguntas, comuníquese con nosotros las 24 horas por <a3>correo electrónico</a3>.",
+      "description-rider": "Ofrecemos dos paquetes de seguros para cada bicicleta que se alquila en Alemania y Austria a través de listnride: El <b1>seguro básico </b1>se incluye en cada alquiler, el <b2>seguro premium </b2>es opcional y extiende la cobertura del seguro con beneficios adicionales. <br3>¡Usted y su bicicleta están siempre protegidos,  ya no hay nada más en el camino que le impida disfrutar el paseo!",
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Términos y condiciones del segura \"Bike\" </a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Términos y condiciones del segura \"Bike Assist\"</a>"
+    }
+  },
   "business-community": {
     "meta-title": "La comunidad empresarial de listnride",
     "meta-description": "Únete a la comunidad empresarial de listnride para alquilar bicis",
@@ -118,7 +176,7 @@
       "meta-title": "Simplemente alquila la bici de carretera perfecta para la Velothon de Berlín",
       "meta-description": "¡Participa en la Velothon de Berlín 2017! ¡Alquila una bici de carretera en la comunidad para compartir bicis de listnride y únete a la diversión!",
       "title": "Simplemente alquila la bici de carretera perfecta para la Velothon de Berlín",
-      "text": "¡Podemos hacer que te enganches! Junto con la comunidad listnride, ofrecemos bicis de carretera adecuadas que puedes alquilar fácilmente el tiempo que quieras. Elige una de las bicicletas siguientes, solicítala para el período requerido y recógela cuando llegue el momento. Tan fácil como eso. <br><br>¿No puedes participar? Ayuda a alguien que lo necesite <a href=\"/#/listing-a-bike\">Anuncia tu bici</a>y gana dinero extra. <br><br>Junto a las bicis que puedes alquilar a continuación, te invitamos a dar un paseo el día anterior para socializar y aclimatarnos. Únete a nosotros,  el ritmo será llevadero y te invitamos a comer después. <a href=\"http://en.listnride.com/velothon-coffeespin\">Más información e inscripción </a>.",
+      "text": "¡Podemos hacer que te enganches! Junto con la comunidad listnride, ofrecemos bicis de carretera adecuadas que puedes alquilar fácilmente el tiempo que quieras. Elige una de las bicicletas siguientes, solicítala para el período requerido y recógela cuando llegue el momento. Tan fácil como eso.\n<br>\n¿No puedes participar? Ayuda a alguien que lo necesite <a href=\"/#/listing-a-bike\">Anuncia tu bici</a>y gana dinero extra.\nJunto a las bicis que puedes alquilar a continuación, te invitamos a dar un paseo el día anterior para socializar y aclimatarnos. Únete a nosotros,  el ritmo será llevadero y te invitamos a comer después. <a href=\"http://en.listnride.com/velothon-coffeespin\">Más información e inscripción </a>.",
       "coffeespin": {
         "meta-title": "listnride en la Velothon Berlin",
         "title": "¡Prepárate para la Velothon!",
@@ -285,7 +343,7 @@
     "brompton": {
       "meta-title": "Alquila una bici Brompton con listnride",
       "meta-description": "¡Prueba una bici Brompton hoy mismo! Estas bicis urbanas plegables están disponibles en listnride. Alquílala en Berlín, Múnich, Hamburgo, Düsseldorf o Frankfurt.",
-      "title": "#FAHRMALBROMPTON",
+      "title": "#RIDEBROMPTON",
       "description": "Alquila una Brompton y prueba sus excelentes características de paseo y plegado.",
       "subdescription": "Experimenta las ciudades de una forma diferente, con una bici perfecta para la ciudad.",
       "item1-title": "Gratis para llevar",
@@ -515,7 +573,7 @@
       "choose-location": "Choose your location",
       "find-out-more": "Learn more about cocomat",
       "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed.",
-      "faq-question-1": "Do you offer warranty?",
+      "faq-question-1": "Does Coco-Mat bikes offer a warranty after the purchase of a bike?",
       "faq-answer-1": "Coco-Mat bike offers: Three years for defective wooden or metal compartments that may have appeared during to manufacturing process. One year for bike compartments.This warranty is valid from the date of purchase, is offered only to the original owner, and it is not transferable. Proof of purchase is required.",
       "faq-question-2": "How can I repair a wooden bike?",
       "faq-answer-2": "All the bike parts can be repaired by any bike expert, except for the wooden frame which needs to be repaired by a carpenter according to Coco-Mat bike's instructions.",
@@ -678,24 +736,37 @@
     "subtitle": "Por favor lea con atención los Términos y Condiciones dado que contienen información importante sobre tus derechos legales, recursos y obligaciones. Al acceder o utilizar listnride platform reconoces haber leído, comprendido y aceptado dichas Condiciones.<br><br>Puedes descargar y leer el documento completo de nuestros <a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Términos y Condiciones</a><br><br>¡Muchas gracias por utilizar listnride!"
   },
   "trust-and-safety": {
+    "meta-description": "La confianza es el principio y el fin de una comunidad de intercambio. Apoyamos la equidad y la seguridad a través de la verificación y el seguro en cada alquiler.",
     "title": "Confianza y seguridad",
-    "header": "Andar en bici sin preocupaciones",
-    "subheader": "Gracias a listnride, alquilar una bici es además de seguro, fácil.",
-    "guarantee-icon": "garantie_en",
-    "guarantee": {
-      "title": "Garantía de los anunciantes de listnride",
-      "content": "Listnride es una comunidad de entusiastas de la bici. Pero en fin, a veces las cosas salen mal independientemente de lo cuidadoso que seas. Por ello tenemos preparada una garantía para el anunciante: si tu bicicleta sufre daños o la roban durante el alquiler y el ciclista no puede pagar una compensación, la garantía garantiza una cobertura de hasta 5.000€ .Los pagos están sujetos a ciertas condiciones, limitaciones y excepciones. Para obtener más información, consulta nuestros <a class=\"lnr-link\" ui-sref=\"terms\">Términos y condiciones de alquiler </a>."
+    "description": "listnride es una comunidad de amantes y entusiastas de la bicicleta. Gente como tú y como yo. Es por eso que queremos que no tengas problemas, para que puedas concentrarte en disfrutar del viaje.",
+    "header": "Pedaleando sin preocupaciones",
+    "subheader": "Actuamos en tu mejor interés",
+    "cover": {
+      "logo": "insertar logo aquí",
+      "header": "Los daños pueden repararse fácilmente",
+      "description": "Algunas veces las cosas pueden salir mal. Si su bicicleta se daña durante el alquiler, nuestros socios de seguros intervendrán de inmediato. Tanto la bicicleta como Rider están en el lado seguro."
     },
-    "responsibility": {
-      "title": "Tratamos tus datos de manera responsable",
-      "content": "La dirección o ubicación exacta de tu bici no aparece en tu perfil público. Esta información sólo se transmite al ciclista con quien se comparte una vez que se confirme la reserva."
+    "control": {
+      "logo": "insertar logo aquí",
+      "header": "Tus datos en buenas manos",
+      "description": "Su dirección y la ubicación de su bicicleta no son públicamente visibles. Solo después de confirmada la reserva, se comparten los datos de contacto de ambas partes."
     },
-    "verification": {
-      "title": "La verificación crea confianza",
-      "content": "En teoría, conocemos a todo el mundo por una separación entre 3,5 a 6,6 grados. Pero, ¿realmente te fiarías de eso cuando alquilas la bici a alguien? Proporciona datos personales en tu perfil para aumentar tu credibilidad al comunicarte con un anunciante o un usuario sobre el alquiler de bicis. Hay varias maneras de verificar la identidad de una persona en listnride:",
-      "list-1": "Verificación de identificación: conecta tu perfil  de listnride con tu página de Facebook y guarda los datos de tu tarjeta de crédito. Asegúrate de que recibes los correos electrónicos.",
-      "list-2": "Número de teléfono: le enviamos tu número de teléfono verificado a tu anunciante/ ciclista tan pronto como se acepte una solicitud de reserva.",
-      "list-3": "Valoraciones: tu perfil recoge las valoraciones enviadas por tus ciclistas y anunciantes  tras el alquiler de la bici, lo que te permite crear una buena reputación."
+    "safe": {
+      "logo": "insertar logo aquí",
+      "header": "Preséntate - si quieres",
+      "description": "Vincula tu perfil a tu cuenta de Facebook y preséntate a la comunidad <i>listnride </i>. Los riders saben a quién alquilan.  Y los listers sabe de inmediato quién desea alquilar sus bicicletas."
+    },
+    "alone": {
+      "logo": "insertar logo aquí",
+      "header": "Las estrellas señalan el camino",
+      "description": "Después de un alquiler, ambos lados pueden calificarse por la calidad y el servicio. De esta manera fortalecemos la confianza en la comunidad y mantenemos la calidad alta. Así que puede estar seguro de que puede encontrar y alquilar bicicletas de alta calidad en todas partes."
+    },
+    "main": {
+      "header": "El seguro de listnride",
+      "description": "Si alquila una bicicleta en Alemania o Austria, se incluye un seguro básico en el alquiler. Con\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\ny el\n<a href=\"http://www.gothaer.de\" target=\"_blank\">Grupo de Gothaer </a>\ntenemos dos socios fuertes de nuestro lado para ayudarlo cuando sea necesario.\n<p>\nSimplemente elija el paquete de seguro adecuado para usted cuando reserve su bicicleta y listo."
+    },
+    "outro": {
+      "description": "listnride es la comunidad de bicicletas compartidas más grande de Europa. Ofrecemos a los entusiastas del ciclismo un fácil acceso a bicicletas de alta calidad. ¡Encuentra la bicicleta perfecta para ti! Haz tu reserva online ahora. "
     }
   },
   "how-it-works": {
@@ -793,6 +864,7 @@
   },
   "privacy": {
     "title": "List and Ride Política de Privacidad",
+    "ga-opt-out": "Haga clic aquí para desactivar el seguimiento de Google Analytics",
     "subtitle": "Fecha de entrada en vigor: 24 de mayo de 2018",
     "description": "List and Ride se compromete a mantener prácticas de privacidad. Nuestra política de privacidad describe como cuidamos y protegemos la información que almacenamos del usuario mediante el uso de la plataforma. Menciona cómo acceder a dicha información, cómo actualizarla y como remover datos personales.<br>Descarga nuestra <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Política de privacidad</a> para leer su contenido al detalle.<br><br>Ante cualquier duda o consulta puedes contactarnos enviándonos un correo a <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a>.",
     "meta-title": "Política de privacidad de listnride",

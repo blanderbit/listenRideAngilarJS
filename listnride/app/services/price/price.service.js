@@ -6,18 +6,25 @@ angular.module('listnride').factory('price', ['$translate', 'date',
       // Calculates the prices for the calendar and booking overview
       // Note that this is just a preview-calculation, the actual data
       // gets calculated in the backend.
-      calculatePrices: function(startDate, endDate, prices) {
+      calculatePrices: function (startDate, endDate, prices, coverageTotal, isPremiumCoverage) {
         var result = {
           subtotal: 0,
           subtotalDiscounted: 0,
           serviceFee: 0,
+          coverageTotal: coverageTotal || 0, // [0,1000,2000,3000,4000,5000]
+          premiumCoverage: isPremiumCoverage ? 3 : 0, // premium Coverage price is static 3 euro
           total: 0
         };
         if (startDate !== undefined && endDate !== undefined) {
           var days = date.durationDays(startDate, endDate);
         }
+        // Check if days are valid
         if (days <= 0) return result;
+
+        // Subtotal here is only to show the price without all Fee and discounts
         result.subtotal = days * prices[0].price;
+
+        // Calc days with daily discount
         if (days < 8) {
           result.subtotalDiscounted = prices[days - 1].price * days;
         } else if (days <= 28) {
@@ -25,9 +32,13 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         } else {
           result.subtotalDiscounted = prices[8].price * days;
         }
+
+        // Calculate Coverage Fee
+        result.premiumCoverage = result.premiumCoverage * days;
+
         // Service Fee is 12,5% and includes 0,19% MwSt
-        result.serviceFee = (result.subtotalDiscounted * 0.125) * 1.19;
-        result.total = result.subtotalDiscounted + result.serviceFee;
+        result.serviceFee = (result.subtotalDiscounted * 0.125) * 1.19 + (result.coverageTotal / 1000 * days);
+        result.total = result.subtotalDiscounted + result.serviceFee + result.premiumCoverage;
         return result;
       },
 

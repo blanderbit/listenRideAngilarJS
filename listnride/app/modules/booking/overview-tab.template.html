@@ -44,6 +44,57 @@
           <div class="spacer"></div>
           <md-divider></md-divider>
           <div class="spacer-xs"></div>
+
+          <!-- START PREMIUM INSURANCE -->
+          <div class="premium-insurance" ng-if="overview.parent.insuranceAllowed()">
+            <div layout="row" layout-align="none center">
+              <md-switch ng-model="overview.parent.isPremium" ng-change="overview.parent.premiumChange()" aria-label="Switch 1" class="lnr-no-margin">
+              </md-switch>
+              <h2 class="md-title lnr-no-margin lnr-padding-left lnr-padding-right lnr-sm-fs14">{{ 'booking.overview.premium-insurance-title' | translate }}</h2>
+              <md-icon hide-xs md-svg-src="app/assets/ui_icons/icn_insurance.svg" class="lnr-icn-smd"></md-icon>
+              <div class="spacer-horizontal__xs"></div>
+              <span flex></span>
+              <span
+                class="md-subhead"
+                style="min-width: 85px;text-align: right;">3,00€ {{ 'shared.pd' | translate }}
+              </span>
+            </div>
+            <!-- <p class="lnr-no-margin">{{ 'booking.overview.premium-insurance-subtitle' | translate }}</p> -->
+            <br>
+            <span class="md-body-2">{{ 'booking.overview.thats-included' | translate }}</span>
+            <div layout="row" layout-xs="column">
+              <div layout="column" layout-margin style="margin-left: 0">
+                <div layout="row" class="lnr-ml-0 premium-insurance__adv">
+                  <md-icon md-svg-src="app/assets/ui_icons/icn_checkmark.svg" class="lnr-icn-sm"></md-icon>
+                  <span>{{ 'booking.overview.premium-feature-1' | translate }}</span>
+                </div>
+                <div layout="row" class="lnr-ml-0 premium-insurance__adv">
+                  <md-icon md-svg-src="app/assets/ui_icons/icn_checkmark.svg" class="lnr-icn-sm"></md-icon>
+                  <span>{{ 'booking.overview.premium-feature-2' | translate }}</span>
+                </div>
+                <div layout="row" class="lnr-ml-0 premium-insurance__adv">
+                  <md-icon md-svg-src="app/assets/ui_icons/icn_checkmark.svg" class="lnr-icn-sm"></md-icon>
+                  <span>{{ 'booking.overview.premium-feature-3' | translate }}</span>
+                </div>
+              </div>
+              <div layout="column" layout-margin class="lnr-xs-m0">
+                <div layout="row" class="lnr-ml-0 premium-insurance__adv">
+                  <md-icon md-svg-src="app/assets/ui_icons/icn_checkmark.svg" class="lnr-icn-sm"></md-icon>
+                  <span>{{ 'booking.overview.premium-feature-4' | translate }}</span>
+                </div>
+                <div layout="row" class="lnr-ml-0 premium-insurance__adv">
+                  <md-icon md-svg-src="app/assets/ui_icons/icn_checkmark.svg" class="lnr-icn-sm"></md-icon>
+                  <span>{{ 'booking.overview.premium-feature-5' | translate }}</span>
+                </div>
+              </div>
+            </div>
+            <br>
+            <a class="lnr-link" ui-sref="insurance">{{ 'shared.learn-more' | translate }}</a>
+
+            <div class="spacer"></div>
+            <md-divider></md-divider>
+          </div>
+          <!-- END PREMIUM INSURANCE -->
           <div layout="row" layout-xs="column" layout-align="space-between none">
             <div flex="33" flex-xs="100">
               <p class="md-title">{{ 'booking.overview.invoice-address' | translate }}</p>
@@ -112,10 +163,10 @@
             </div>
           </div>
         </div>
-  
+
         <div class="lnr-list-form" ng-hide="!overview.parent.booked">
           <div ng-hide="!overview.parent.booked" layout-align="center center" flex>
-            <br><br><br><br> 
+            <br><br><br><br>
             <h2 class="md-headline lnr-center lnr-green-text">{{ 'booking.overview.success-header' | translate }}</h2>
             <p class="md-subhead lnr-center">{{ 'booking.overview.success-subheader' | translate }}</p>
             <br><br>
