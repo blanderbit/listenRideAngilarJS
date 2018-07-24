@@ -125,19 +125,19 @@
     "today": "Heute",
     "yesterday": "Gestern",
     "press": {
-      "title": "Media",
+      "title": "Bekannt aus Zeitung und TV",
       "logo-1": "Insert Logo here",
       "logo-2": "Insert Logo here",
       "logo-3": "Insert Logo here",
       "logo-4": "Insert Logo here"
     },
     "find-your-bike": {
-      "header": "Finde Dein perfektes Rad",
+      "header": "Finde dein perfektes Rad",
       "subheader": "Du planst Deinen nächsten Trip?",
-      "button": "Finde Dein Rad"
+      "button": "Finde dein Rad"
     },
     "rent-your-bike": {
-      "header": "Liste Dein Rad",
+      "header": "Liste dein Rad",
       "subheader": "Triff Gleichgesinnte. Verdiene Dir etwas dazu."
     }
   },
@@ -279,7 +279,7 @@
     },
     "contact-and-help": {
       "meta-title": "listnride ist für dich da",
-      "meta-description": "Kontaktiere uns, wenn Du spezielle Fragen oder Probleme hast."
+      "meta-description": "Kontaktiere uns, wenn du spezielle Fragen oder Probleme hast."
     },
     "press": {
       "meta-title": "listnride Pressebereich",
@@ -510,7 +510,7 @@
     },
     "5": {
       "title": "Was ist deine Nummer",
-      "description": "Bestätige Deine Telefonnummer, damit Du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den Du unten eingeben kannst.",
+      "description": "Bestätige Deine Telefonnummer, damit du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den du unten eingeben kannst.",
       "enter-valid-phone-nr": "Gib eine gültige Telefonnr. an",
       "send-confirmation-sms": "Bestätigungs-SMS schicken",
       "send-confirmation-sms-mobile": "Code schicken",
@@ -541,7 +541,7 @@
   },
   "user": {
     "verified-through": "Verifiziert durch",
-    "own-bikes": "Eigene Räder",
+    "own-bikes": "Leihfahrräder",
     "ratings": "Bewertungen",
     "meta-title": "{{name}}s Profil",
     "meta-description": "Rad mieten von {{name}} auf listnride.",
@@ -590,7 +590,11 @@
     "reject": "Ablehnen",
     "rate": "Bewerten",
     "confirm": "Bestätigen",
-    "confirm_return": "Rückgabe bestätigen"
+    "confirm_return": "Rückgabe bestätigen",
+    "documents-title": "Versicherungszertifikate",
+    "documents-description": "Hier kannst du Deine Versicherungszertifikate herunterladen. Diese Dokumente wurden dir auch per E-Mail zugesandt.",
+    "insurance-bike": "Fahrradversicherungszertifikat",
+    "insurance-bike-assist": "Bike Assist Versicherungsschein"
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} würde gerne dein <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Sobald du die Anfrage annimmst, wird sie gebucht. Vereinbare alle weiteren Details über den Chat.",
@@ -713,6 +717,7 @@
   },
   "calendar": {
     "invalid-date": "Datumsangabe nicht korrekt",
+    "info-service-fee-insurance": "Hilft uns, listnride zu betreiben und einen sicheren Fahrradverleih anzubieten. Inklusive Basis-Versicherung, Gebühren und MwSt.",
     "basic-insurance-included": "Basis-Versicherung inklusive",
     "request-bike": "Rad anfragen",
     "to-request-bike-please": "um ein Rad anzufragen bitte",
@@ -720,7 +725,7 @@
     "log-in-to-request-title": "Einloggen oder Registrieren",
     "log-in-to-request-description": "Logge dich ein um das Rad anzufragen. Falls du noch kein Account hast, registriere dich einfach.",
     "select-timespan": "Wähle zuerst die Mietdauer",
-    "select-timespan-description": "Bevor Du eine Anfrage stellen kannst, lege bitte die Zeitspanne für die Miete fest. Klicke einfach auf die Tage und wähle Abhol- und Rückgabezeiten im Kalender.",
+    "select-timespan-description": "Bevor du eine Anfrage stellen kannst, lege bitte die Zeitspanne für die Miete fest. Klicke einfach auf die Tage und wähle Abhol- und Rückgabezeiten im Kalender.",
     "info-subtotal": "Dies ist der Tagespreis für die<br>Anzahl der Tage, die du das<br>Fahrrad mieten möchten.",
     "info-discount": "Durchschnittlicher Tagesrabatt<br>pro Tag bei Miete für<br>einen längeren Zeitraum.",
     "info-service-fee": "Die Servicegebühr hilft uns,<br>listnride zu betreiben. Sie enthält <br>die Umsatzsteuer.",
@@ -768,7 +773,7 @@
       "frame_number": "Frame number"
     },
     "accessories": {
-      "header": "Welche Zubehör kannst Du zu deinem Rad anbieten?",
+      "header": "Welche Zubehör kannst du zu deinem Rad anbieten?",
       "hint": "Wähle das Zubehör, das du zur Verfügung stellen kannst.",
       "label": "Zubehör",
       "lock": "Schloss",
@@ -792,7 +797,7 @@
     },
     "location": {
       "header": "Wo kann das Rad abgeholt werden?",
-      "hint": "Wo steht Dein Fahrrad? Keine Sorge, der genaue Standort wird erst übermittelt wenn Du eine Buchungsanfrage bestätigt hast.",
+      "hint": "Wo steht dein Fahrrad? Keine Sorge, der genaue Standort wird erst übermittelt wenn du eine Buchungsanfrage bestätigt hast.",
       "label": "Standort des Rads",
       "street-number": "Straße und Hausnr.",
       "zip": "PLZ",
@@ -809,7 +814,7 @@
       "tip": "Die zusätzliche Versicherungsgebühr für Mieter pro Tag beträgt {{fee}}",
       "up-to-value": "Bis zu {{value}}",
       "select-value": "Bitte wähle den Wert Deines Rades",
-      "no-insurance": "Oooops, Dein Land ist noch nicht von der Versicherung abgedeckt. Bisher gibt es die Versicherung nur in Deutschland und Österreich."
+      "no-insurance": "Oooops, dein Land ist noch nicht von der Versicherung abgedeckt. Bisher gibt es die Versicherung nur in Deutschland und Österreich."
     },
     "pricing": {
       "info": "Dein Tagespreis ist dein Basispreis bei einer Tagesmiete.",
@@ -822,7 +827,7 @@
       "label": "Preis",
       "discount": "Rabatt",
       "discount-description-initial": "Bei einem Wochenrabatt von ",
-      "discount-description-mid": " erhältst Du ",
+      "discount-description-mid": " erhältst du ",
       "discount-description-ending": " pro Woche.",
       "set_custom_price": "Preis in €",
       "custom-prices": "Individuelle Preise",
@@ -959,15 +964,15 @@
     "meta-description": "Grandiose Auswahl. Top Preis-Leistungsverhältnis. Einfach online.",
     "title": "Fahrrad mieten. Nicht irgendeins. Sondern eins als wär’s genau Deins.",
     "info-section": {
-      "header": "Miete Dein perfektes Rad",
-      "subheader": "Für Deinen Stil, für Deinen Zweck. Von Leuten wie Du und ich.",
+      "header": "Miete dein perfektes Rad",
+      "subheader": "Für Deinen Stil, für Deinen Zweck. Von Leuten wie du und ich.",
       "choice-title": "Super Auswahl.",
       "choice-content": "Die Fahrräder auf listnride sind so vielfältig wie unsere User. Vom Edel-Rennrad über schicke Urban Bikes bis hin zu Lastenrädern und Kinderanhängern ist alles vertreten. Miete das passende Fahrrad für Deinen Stil und Zweck.",
       "price-title": "Super Preis.",
       "price-content": "Bei uns vermieten Privatpersonen genauso wie der professionelle Händler und Fahrradverleih. Dein Vorteil: Das perfekte Fahrrad zu einem fairen Preis-Leistungs-Verhältnis.",
       "easy-title": "Super einfach.",
-      "easy-content": "Finde und buche Dein Leihfahrrad bevor Du auf Reisen gehst – oder einfach von unterwegs im Netz mit unserer mobilen Webseite.",
-      "covered-content": "Mietest Du ein Fahrrad in Deutschland oder Österreich, ist eine Versicherung in der Miete inkludiert. Mit \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n und der <a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer-Gruppe</a>\n haben wir zwei starke Partner an unserer Seite, die Dir im Fall der Fälle helfen."
+      "easy-content": "Finde und buche dein Leihfahrrad bevor du auf Reisen gehst – oder einfach von unterwegs im Netz mit unserer mobilen Webseite.",
+      "covered-content": "Mietest du ein Fahrrad in Deutschland oder Österreich, ist eine Versicherung in der Miete inkludiert. Mit \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n und der <a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer-Gruppe</a>\n haben wir zwei starke Partner an unserer Seite, die Dir im Fall der Fälle helfen."
     },
     "search-section": {
       "header": "Wo solls hingehen?",
@@ -979,12 +984,12 @@
     }
   },
   "list-a-bike": {
-    "meta-title": "Vermiete Dein Fahrrad!",
-    "meta-description": "Lerne tolle neue Leute kennen und kurble nebenbei Dein Konto an.",
+    "meta-title": "Vermiete dein Fahrrad!",
+    "meta-description": "Lerne tolle neue Leute kennen und kurble nebenbei dein Konto an.",
     "title": "Fahrrad vermieten, Konto ankurbeln",
-    "subtitle": "Lerne tolle neue Leute kennen und verdiene nebenbei Geld, z.B. für Dein nächstes Traum-Rad.",
+    "subtitle": "Lerne tolle neue Leute kennen und verdiene nebenbei Geld, z.B. für dein nächstes Traum-Rad.",
     "calculator-section": {
-      "header": "Lass Dein Fahrrad für Dich arbeiten",
+      "header": "Lass dein Fahrrad für Dich arbeiten",
       "subheader": "Ein paar Klicks und unser Rechenschieber zeigt dir, wieviel du mit Fahrradvermietungen über listnride verdienen kannst.",
       "market-price": "Marktwert deines Fahrrads",
       "days-per-month": "Tage, die es pro Monat vermietet ist",
@@ -995,18 +1000,18 @@
       "header": "Safety first!",
       "subheader": "listnride gibt Dir Rückendeckung.",
       "precautions-title": "Wir sorgen vor.",
-      "precautions-content": "Du willst Dein geliebtes Fahrrad verleihen – aber nicht irgendjemandem. Deshalb verifizieren wir alle User für Dich. Und über die User-Ratings erfährst Du mehr über ihr Fairplay im Bike Sharing.",
+      "precautions-content": "Du willst dein geliebtes Fahrrad verleihen – aber nicht irgendjemandem. Deshalb verifizieren wir alle User für Dich. Und über die User-Ratings erfährst du mehr über ihr Fairplay im Bike Sharing.",
       "control-title": "Du behältst die Kontrolle.",
-      "control-content": "Du bestimmst die individuelle Tages- oder Wochenrate. Dir steht es komplett frei, Anfragen anzunehmen oder auch ganz einfach abzulehnen, wenn Du Dein Fahrrad nicht verleihen willst.",
+      "control-content": "Du bestimmst die individuelle Tages- oder Wochenrate. Dir steht es komplett frei, Anfragen anzunehmen oder auch ganz einfach abzulehnen, wenn du dein Fahrrad nicht verleihen willst.",
       "covered-title": "Du bist abgesichert.",
       "covered-content": "Im Schadensfall und Diebstahl wird Dir unsere Versicherung helfen. Mit\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n und der\n<a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer Gruppe</a>\n haben wir zwei starke Partner an unserer Seite.",
       "help-title": "Wir lassen Dich nicht alleine.",
-      "help-content": "Solltest Du mit einem Rider (Mieter) ein Problem nicht direkt lösen können, sind wir für Dich da – um Dich zu unterstützen oder die Angelegenheit komplett zu übernehmen."
+      "help-content": "Solltest du mit einem Rider (Mieter) ein Problem nicht direkt lösen können, sind wir für Dich da – um Dich zu unterstützen oder die Angelegenheit komplett zu übernehmen."
     },
     "list-section": {
-      "header": "Bereit, Dein Fahrrad zu vermieten?",
+      "header": "Bereit, dein Fahrrad zu vermieten?",
       "subheader": "Lerne tolle neue Leute kennen und verdiene nebenbei Geld.",
-      "sign-up": "Melde dich an, um Dein Rad zu inserieren!"
+      "sign-up": "Melde dich an, um dein Rad zu inserieren!"
     },
     "testmonials-section": {
       "header": "Fahrradvermietung: Was sagen die Lister über uns?",
@@ -1067,7 +1072,7 @@
     },
     "invite-dialog": {
       "rider": {
-        "header": "Hattest Du eine schöne Fahrt? Teile deine Fahrradleidenschaft!",
+        "header": "Hattest du eine schöne Fahrt? Teile deine Fahrradleidenschaft!",
         "subheader": "Empfiehl deinen Freunden listnride! Wir legen 10€ für die erste Buchung dazu! Und wenn das klappt, gibt es auch für dich 10€ Guthaben."
       },
       "lister": {
@@ -1123,7 +1128,7 @@
   },
   "availability": {
     "availability": "Verfügbarkeit",
-    "modal-title": "Wann ist Dein Rad nicht verfügbar?",
+    "modal-title": "Wann ist dein Rad nicht verfügbar?",
     "start-from": "Von",
     "end-at": "Bis",
     "add-another-date": "Weiteres Datum",

@@ -83,12 +83,6 @@
       "description": "Jouw speciale fiets verhuren betekent vertrouwen hebben. Wat als het wordt gestolen tijdens het uitlenen? Wat als het beschadigd terugkomt? Alle listnride huurfietsen in Duitsland en Oostenrijk zijn verzekerd. Onze partner <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> staat voor u klaar. Per telefoon. Per e-mail. Eenvoudig. Niet-bureaucratisch.",
       "logo-description": "Onze verzekeringspartner"
     },
-    "meta": {
-      "title": "Verzekering",
-      "_title.comment": "Insurance",
-      "description": "Elke fietshuur in Duitsland en Oostenrijk zijn automatisch via listnride verzekerd. ",
-      "_description.comment": "Versicherung mit jeder listnride Miete"
-    },
     "facts": {
       "title": "Wat je hoort te weten!",
       "basic-insurance": {
@@ -106,22 +100,22 @@
     "faqs": {
       "title": "Meer vragen? Hier vindt u antwoorden!",
       "lister": {
-        "description": "Als verhuurder op listnride wil je er zeker van zijn dat jij en je fiets beschermd zijn tegen alle denkbare risico's. Daarom is elke fietverhuur in Duitsland en Oostenrijk die u bij listnride huurt vanaf nu automatisch verzekerd. Huurders die uw fiets aanvragen kunnen optioneel een Premium Pakket boeken voor extra dekking en vrijwaringen. Deze service is gratis voor u als verhuurder. <p>Heeft u nog vragen? Neem dan contact met ons op via E-Mail.",
+        "description": "Als verhuurder op listnride wil je er zeker van zijn dat jij en je fiets beschermd zijn tegen alle denkbare risico's. Daarom is elke fietverhuur in Duitsland en Oostenrijk die u bij listnride huurt vanaf nu automatisch verzekerd. Huurders die uw fiets aanvragen kunnen optioneel een Premium Pakket boeken voor extra dekking en vrijwaringen. Deze service is gratis voor u als verhuurder.\n<p>\nHeeft u nog vragen? Neem dan contact met ons op via E-Mail.",
         "question-1": "Hoeveel kost de verzekering mij?",
         "tabname": "Voor verhuurders",
-        "answer-1": "Niets! <br0>Omdat de verzekering alleen door huurders wordt afgesloten, zijn er geen extra kosten voor verhuurders.Bedenk wel dat je fietshuur hoger uitvalt voor huurders. De kosten van de basisverzekering bedragen 0,1% van de verzekeringswaarde van uw fiets. <p1> Als u uw fiets tot €1.000 verzekerd heeft, betalen huurders een extra Euro per huurdag. Bij een verzekeringswaarde van maximaal € 5.000,- betekent dit een toeslag van € 5,- per huurdag.",
+        "answer-1": "Niets! Omdat de verzekering alleen door huurders wordt afgesloten, zijn er geen extra kosten voor verhuurders.Bedenk wel dat je fietshuur hoger uitvalt voor huurders. De kosten van de basisverzekering bedragen 0,1% van de verzekeringswaarde van uw fiets.  Als u uw fiets tot 1.000€ verzekerd heeft, betalen huurders een extra Euro per huurdag. Bij een verzekeringswaarde van maximaal 5.000€ betekent dit een toeslag van 5€ per huurdag.",
         "question-2": "Wat is de maximale verzekeringsdekking voor mijn fiets?",
-        "answer-2": "Elke fiets is automatisch verzekerd tot 1.000 € en de dekking kan door u worden verhoogd tot een maximum van 5.000 €.\n<br>\nDe hoogte van de uitbetaling in geval van schade is gebaseerd op de daadwerkelijke waarde van de fiets. Deze waarde wordt bepaald door de\n<a href=\"https://www.gothaer.de\" target=\"_blank\" >Gothaer-verzekering</a>\n op individuele basis.\n<br>\nOnthoud bij het bepalen van de verzekeringswaarde dat huurders een verzekeringspremie betalen, waarvan het bedrag afhangt van de door u gekozen verzekeringswaarde. Dit betekent; hoe hoger u de fiets verzekert, hoe hoger de verzekeringspremie voor de huurder.",
+        "answer-2": "Elke fiets is automatisch verzekerd tot 1.000€ en de dekking kan door u worden verhoogd tot een maximum van 5.000€.\n<br>\nDe hoogte van de uitbetaling in geval van schade is gebaseerd op de daadwerkelijke waarde van de fiets. Deze waarde wordt bepaald door de\n<a href=\"https://www.gothaer.de\" target=\"_blank\">Gothaer-verzekering</a>\n op individuele basis.\n<br>\nOnthoud bij het bepalen van de verzekeringswaarde dat huurders een verzekeringspremie betalen, waarvan het bedrag afhangt van de door u gekozen verzekeringswaarde. Dit betekent; hoe hoger u de fiets verzekert, hoe hoger de verzekeringspremie voor de huurder.",
         "question-3": "Wat moet ik doen als een verzekeringsclaim is?",
         "answer-3": "Mocht u zich ooit in een situatie bevinden waarin uw fiets tijdens een huurperiode is beschadigd of gestolen, neem dan contact op met\n<a href=\"www.hepster.com\" target=\"_blank\">hepster </a>\n direct:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nhet personeel van de staf zal uw verzoek snel en vakkundig beantwoorden."
       },
       "rider": {
-        "description": "Wij bieden twee verzekeringspakketten aan voor elke fiets die je huurt via<i0>lisntride</i0>: De <b1>De Basisverzekering</b1> is inbegrepen in elke fietshuur in Duitsland en Oostenrijk, de <b2>Premium verzekering</b2> is optioneel en breidt de verzekering uit met extra dekking.<br3>Jij en Jouw fiets zijn altijd optimaal verzekerd en dus staat niets jouw rit meer in de weg!",
+        "description": "Wij bieden twee verzekeringspakketten aan voor elke fiets die je huurt via lisntride: De \n<b>De Basisverzekering</b> \nis inbegrepen in elke fietshuur in Duitsland en Oostenrijk, de \n<b>Premium verzekering</b>\n is optioneel en breidt de verzekering uit met extra dekking.\n<br>\nJij en Jouw fiets zijn altijd optimaal verzekerd en dus staat niets jouw rit meer in de weg!",
         "question-1": "Hoeveel kost de basisverzekering mij?",
         "tabname": "Voor huurders",
         "answer-1": "De kosten van de basisverzekering bedragen slechts 0,1% van de verzekeringswaarde van de fiets die u hebt geboekt.\n<br>\nAls een fiets tot 1.000 € verzekerd is, betaalt u precies één euro per huurdag voor de basisverzekering.",
         "question-2": "Hoeveel kost de Premiumverzekering mij?",
-        "answer-2": "Drie euro per dag in aanvulling op de huur en de\n<i>lisntride </i>\n - <a href=\"https://www.listnride.nl/terms\" target=\"_blank\">servicekosten </a>.",
+        "answer-2": "Drie euro per dag in aanvulling op de huur en de listnride <a href=\"https://www.listnride.nl/terms\" target=\"https://www.listnride.nl/terms\">fees</a>.",
         "question-3": "Welke dekking biedt de Basisverzekering?",
         "answer-3": "<ul>\n<li>Bescherming bij onopzettelijke zelf- en extern veroorzaakte schade\n<li>Bescherming tegen vandalisme\n<li>Bescherming van elektronica en batterij voor elektrische fietsen\n<li>Eigen risiko 250 €\n</ul>",
         "question-4": "Welke dekking biedt de Premiumverzekering?",
@@ -131,13 +125,13 @@
         "question-6": "Hoe beëindig ik de verzekering nadat mijn fietshuur eindigt?",
         "answer-6": "Bij elke bevestigde fietshuur ontvangt u een individueel verzekeringscertificaat. Deze is\n<b>alleen </b>\ngeldig voor de desbetreffende boeking en voor de\n<b>tijdsperiode </b>\n door jou geselecteerd. De verzekering eindigt automatisch.\n<p>\nU kunt het certificaat rechtstreeks downloaden en per e-mail ontvangen. U hoeft verder niets te doen.",
         "question-7": "Met wie kan ik contact opnemen als ik mijn verzekering in aanspraak neem?",
-        "answer-7": "Natuurlijk hopen we dat dit nooit zal gebeuren!\n<br>\n De verzekering wordt aangeboden door onze online verzekeringspartner\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\n en is gedekt door\n<a href=\"https://www.gothaer.de\" target=\"_blank\">Gothaer-verzekering </a>\nAangezien u zelf de polishouder van de hepster bent, is het het beste om rechtstreeks contact op te nemen met hepster:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nhepster zal je snel en vakkundig te woord staan."
+        "answer-7": "Natuurlijk hopen we dat dit nooit zal gebeuren!\n<br>\n De verzekering wordt aangeboden door onze online verzekeringspartner\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\n en is gedekt door\n<a href=\"www.gothaer.de\" target=\"https://www.gothaer.de/\">Gothaer-verzekering</a> \nAangezien u zelf de polishouder van de hepster bent, is het het beste om rechtstreeks contact op te nemen met hepster:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nhepster zal je snel en vakkundig te woord staan."
       },
       "docs": {
         "tabname": "Verzekeringsvoorwaarden"
       },
       "description-lister": "Als verhuurder op listnride wil je er zeker van zijn dat jij en je fiets beschermd zijn tegen alle denkbare risico's. Daarom is elke fietverhuur in Duitsland en Oostenrijk die u bij listnride huurt vanaf nu automatisch verzekerd. Huurders die uw fiets aanvragen kunnen optioneel een Premium Pakket boeken voor extra dekking en vrijwaringen. Deze service is gratis voor u als verhuurder. <p>Heeft u nog vragen? Neem dan contact met ons op via <a3>E-Mail</a3>.",
-      "description-rider": "Wij bieden twee verzekeringspakketten aan voor elke fiets die je huurt via<i0>lisntride</i0>: De <b1>De Basisverzekering</b1> is inbegrepen in elke fietshuur in Duitsland en Oostenrijk, de <b2>Premium verzekering</b2> is optioneel en breidt de verzekering uit met extra dekking.<br3>Jij en Jouw fiets zijn altijd optimaal verzekerd en dus staat niets jouw rit meer in de weg!",
+      "description-rider": "Wij bieden twee verzekeringspakketten aan voor elke fiets die je huurt via lisntride: De <b1>De Basisverzekering</b1> is inbegrepen in elke fietshuur in Duitsland en Oostenrijk, de <b2>Premium verzekering</b2> is optioneel en breidt de verzekering uit met extra dekking.<br3>Jij en Jouw fiets zijn altijd optimaal verzekerd en dus staat niets jouw rit meer in de weg!",
       "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Algemene fietsverzekeringsvoorwaarden</a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Algemene voorwaaarden Fiets-assist</a>"
     }
   },
@@ -182,7 +176,7 @@
       "meta-title": "Boek eenvoudig the perfekte racefiets voor de Velothon in Berlijn",
       "meta-description": "Neem deel aan de Velothon Berlin 2017! Huur een racefiets via de listnride community en geniet van de wielerkoers!",
       "title": "Boek eenvoudig the perfekte racefiets voor de Velothon Berlijn",
-      "text": "We helpen je! Samen met de listnride community bieden we vele racefietsen, waarbij er zeker enige zijn die voldoen aan je wensen. Je kan die eenvoudig zo lang als je die nodig hebt huren. Je hoeft slechts één van de onderstaande fietsen te kiezen, aan te vragen voor de gewenste periode en ophalen wanneer de huur start. Zo simpel is het. <br><br> Kan je niet deelnemen? Help iemand in nood, en <a href=\"/#/listing-a-bike\">plaats je fiets</a> en verdien zo wat extra zakgeld!",
+      "text": "We helpen je! Samen met de listnride community bieden we vele racefietsen, waarbij er zeker enige zijn die voldoen aan je wensen. Je kan die eenvoudig zo lang als je die nodig hebt huren. Je hoeft slechts één van de onderstaande fietsen te kiezen, aan te vragen voor de gewenste periode en ophalen wanneer de huur start. Zo simpel is het.\n<br>\nKan je niet deelnemen? Help iemand in nood, en <a href=\"/#/listing-a-bike\">plaats je fiets</a> en verdien zo wat extra zakgeld!",
       "coffeespin": {
         "meta-title": "listnride at the Velothon Berlin",
         "title": "Get ready for the Velothon!",
@@ -719,7 +713,7 @@
     "submit": "Aanmelden",
     "form-feedback": "Thank you! You've successfully shared your level of interest with us.",
     "faq-question-1": "WHY DOES LISTNRIDE START A CROWDFUNDING CAMPAIGN?",
-    "faq-answer-1": "We are a young company with a well developed product, a growing community of tenants and bicycle owners. To drive further growth, we offer the community and the public the opportunity to invest in our company alongside our current investors. With these additional resources, we will make further improvements to our product as well as continue to grow geographically and so grow the community, resulting in greater choice for riders and greater demand for listers.",
+    "faq-answer-1": "We are a young company with a well developed product, a growing community of riders and bicycle owners. To drive further growth, we offer the community and the public the opportunity to invest in our company alongside our current investors. With these additional resources, we will make further improvements to our product as well as continue to grow geographically and so grow the community, resulting in greater choice for riders and greater demand for listers.",
     "faq-question-2": "HOW CAN I INVEST IN LISTNRIDE?",
     "faq-answer-2": "We are working with Seedrs, the leading Crowdfunding platform from the United Kingdom to run our Crowdfunding campaign. To invest, simply create an account at <a href=\"https://seedrs.com\" target=\"_blank\">www.seedrs.com</a> and follow the instructions.",
     "faq-question-3": "ARE THERE ANY RISKS INVOLVED?",
@@ -743,12 +737,13 @@
   "trust-and-safety": {
     "meta-description": "Vertrouwen is essentieel voor onze deelgemeenschap. We streven naar een eerlijk en veilig ecosysteem door middel van verificatie en verzekering voor elke verhuurtransactie.",
     "title": "Vertrouwen & Zekerheid",
-    "description": "<i>listnride </i>is een community van fietsliefhebbers. Mensen zoals jij en ik. Mensen zoals u en ik. Daarom willen we de moeilijkheden bij je uit de buurt houden, zodat je je enkel en alleen kan genieten van het fietsen.",
-    "header": "Fietsen zonder zorgen",
+    "description": "listnride is een community van fietsliefhebbers. Mensen zoals jij en ik. Mensen zoals u en ik. Daarom willen we de moeilijkheden bij je uit de buurt houden, zodat je je enkel en alleen kan genieten van het fietsen.",
+    "header": "Ontspannen fietsen ",
     "subheader": "Wij handelen in uw belang",
     "cover": {
       "logo": "insert logo here",
-      "header": "Schaden kunnen gemakkelijk worden verholpen"
+      "header": "Schaden kunnen gemakkelijk worden verholpen",
+      "description": "Soms gaat het toch mis. Indien je fiets beschadigd raakt tijdens de huurperiode, komen onze verzekeringspartners in actie. De fiets en huurder zijn dus aan de zekere kant."
     },
     "control": {
       "logo": "hier logo invoegen",
@@ -769,7 +764,7 @@
       "description": "Huur je een fiets in Duitsland of Oostenrijk, dan is er reeds een basisverzekering bij de huurprijs inbegrepen. Met <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> en de <a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer Group</a> hebben we twee sterke partners aan onze zijde om u te helpen in geval dat er iets mis gaat.<p> Kies het juiste verzekeringspakket voor u bij het boeken van uw fiets en geniet van je toertocht."
     },
     "outro": {
-      "description": "<i>listnride</i> is Europa's grootste platform voor het delen van fietsen. Wij bieden fietsliefhebbers eenvoudig toegang tot hoogwaardige fietsen. Altijd de perfecte fiets! Gewoon online beschikbaar."
+      "description": "listnride is Europa's grootste platform voor het delen van fietsen. Wij bieden fietsliefhebbers eenvoudig toegang tot hoogwaardige fietsen. Altijd de perfecte fiets! Gewoon online beschikbaar."
     }
   },
   "how-it-works": {
