@@ -53,15 +53,14 @@ angular.module('message',[]).component('message', {
       message.downloadDocument = function (certificateId) {
         api.get(insuranceEndpoint + certificateId, 'blob').then(
           function (success) {
-            var a = document.createElement('a');
+            var name = message.request.insurance.items_uid.thing == certificateId ? "Bike" : "Bike Assist";
             var file = new Blob([success.data], {type: 'application/pdf'});
-            var fileURL = window.URL.createObjectURL(file);
-            a.href = fileURL;
-            a.download = "Insurance Certificate " + certificateId + ".pdf";
-            a.target = "_BLANK";
-            a.click();
+            var link = document.createElement('a');
+            link.href = window.URL.createObjectURL(file);
+            link.download="Certificate " + name + " Insurance " + message.request.id + ".pdf";
+            link.click();
           },
-          function (error) {
+          function (error) {
             console.log("error happened");
           }
         );
