@@ -54,11 +54,10 @@ angular.module('message',[]).component('message', {
         api.get(insuranceEndpoint + certificateId, 'blob').then(
           function (success) {
             var name = message.request.insurance.items_uid.thing == certificateId ? "Bike" : "Bike Assist";
-            name += " " + message.request.id;
             var file = new Blob([success.data], {type: 'application/pdf'});
             var link = document.createElement('a');
             link.href = window.URL.createObjectURL(file);
-            link.download="Insurance Certificate " + name + ".pdf";
+            link.download="Certificate " + name + " Insurance " + message.request.id + ".pdf";
             link.click();
           },
           function (error) {
