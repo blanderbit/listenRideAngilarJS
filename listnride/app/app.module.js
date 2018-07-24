@@ -25,6 +25,7 @@ angular.module('listnride', [
   'receipt',
   'inputRange',
   'addressInput',
+  'lnrMetaRobots',
   /* app_core_end */
 
   /* app_extras_start */
