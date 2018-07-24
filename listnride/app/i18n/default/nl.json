@@ -310,7 +310,7 @@
     "privacy": {
       "meta-title": "Privacybeleid van listnride",
       "meta-description": "Het privacybeleid van de Bike Sharing-Community listnride is van toepassing op het gebruik van het online platform.",
-      "use-opt-in": "Om u met listnride een optimale service te bieden, gebruiken wij cookies in conform ons Cookie-beleid.",
+      "use-opt-in": "Om u met listnride een optimale service te bieden, gebruiken wij cookies in conform ons <a target=\"_blank\" href=\"/#/privacy\">Cookie-beleid</a>.",
       "use-opt-in-button": "Ik heb het begrepen."
     }
   },
@@ -591,7 +591,7 @@
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} uit {{user.city}} zou graag jouw <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. leg alle verdere details vast via de Chat.",
-    "3": "{{user.first_name}} Je hebt de aanvraag bevestigd. Je fiets is nu verhuurd voor de periode {{timespan}}! De contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\nNaam: {{user.first_name}} {{user.last_name}} \nNummer: {{user.pretty_phone_number}} \nAdres: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
+    "3": "Je hebt de aanvraag bevestigd. Je fiets is nu verhuurd voor de periode {{timespan}}! De contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\n<br>\nNaam: {{user.first_name}} {{user.last_name}} \n<br>Nummer: {{user.pretty_phone_number}} \n<br>Adres: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
     "5": "Hartelijk bedankt voor het bevestigen van de teruggave van de fiets als ook je recensie. De verhuurtransactie is nu afgerond en het geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons gerust een e-mail aan hello@listnride.com",
     "8": "Je hebt de aanvraag afgewezen. Schrijf de aanvrager kort een berichtje waarom het niet lukt.",
     "9": "helaas heeft {{user.first_name}} de aanvraag niet bevestigd.",
@@ -669,7 +669,7 @@
   "home": {
     "landing-section-header": "De perfekte fiets. Gewoon huren.",
     "insurance": {
-      "description": "Of het nu minimalistische fixie of high-end triathlonfiets is: Elke listnride verhuur in Duitsland of Oostenrijk is verzekerd! Eenvoudig. Onbureaukratisch. Te allen tijde.",
+      "description": "Of het nu een minimalistische fixie of een high-end triathlonfiets is: Elke listnride verhuur in Duitsland of Oostenrijk is verzekerd! Eenvoudig. Flexible. Altijd.",
       "header": "Verzekering voor je fietshuur op listnride",
       "logo-description": "In samenwerking met hepster en"
     },
@@ -691,7 +691,7 @@
     "default-placeholder": "Waar wil je een fiets huren?"
   },
   "search": {
-    "no-bikes": "Er zijn nog geen fietsen op deze locatie, stuur ons een mailtje op contact@listnride.com en wij gaan direct voor je opzoek! ",
+    "no-bikes": "Er zijn helaas nog geen fietsen op deze locatie. Omdat we snel groeien, zal dat waarschijnlijk snel gebeuren! Als je wilt, kun je <a href=\"/listing-a-bike\">zelf een fiets een lijst laten maken </a>of zoek je naar een andere stad of specifieke locatie in de buurt.",
     "bikes-found": "bikes found:",
     "all-sizes": "Alle Maten",
     "bikes-in": "fietsen in",
@@ -721,7 +721,7 @@
     "info-discount": "Gemiddelde dagelijkse korting<br>krijgt u per dag door voor<br>een langere periode te huren.",
     "info-service-fee": "De servicegeld wordt gebruikt<br>voor het aanbieden van listnride.<br>Het is inclusief BTW.",
     "info": "Klik eerst in de bovenstaande<br> kalender op de dag waarop u de fiets<br>wilt huren en op de tweede<br>dag dat u het wenst te retourneren.",
-    "info-without-calendar": "Klik eerst in de bovenstaande<br> kalender op de dag waarop u de fiets<br>wilt huren en op de tweede<br>dag dat u het wenst te retourneren."
+    "info-without-calendar": "Klik eerst in de bovenstaande kalender op de dag waarop u de fietswilt huren en op de tweededag dat u het wenst te retourneren."
   },
   "list": {
     "edit-bike": "Fiets bewerken",
