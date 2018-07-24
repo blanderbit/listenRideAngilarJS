@@ -75,7 +75,7 @@
     "reviews": "Opiniones",
     "for": "para",
     "per-day": "por día",
-    "pd": "por día",
+    "pd": "p.d.",
     "Monday": "Lunes",
     "Tuesday": "Martes",
     "Wednesday": "Miércoles",
@@ -125,7 +125,7 @@
     "today": "Hoy",
     "yesterday": "Ayer",
     "press": {
-      "title": "Medios de comunicación"
+      "title": "Conocido de TV & Print"
     },
     "find-your-bike": {
       "header": "Encuentra tu bicicleta perfecta",
@@ -584,7 +584,11 @@
     "reject": "Rechazar",
     "rate": "Tarifa",
     "confirm": "Confirmar",
-    "confirm_return": "Confirmar devolución"
+    "confirm_return": "Confirmar devolución",
+    "documents-title": "Certificados de seguro",
+    "documents-description": "Aquí puede descargar sus certificados de seguro. Estos documentos también han sido enviados por correo electrónico.",
+    "insurance-bike": "Certificado de seguro de la bicicleta",
+    "insurance-bike-assist": "Certificado de seguro para la asistencia de la bicicleta"
   },
   "listChat": {
     "1": "A {{user.first_name}}{{user.last_name}} de {{user.city}} le gustaría alquilar tu <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> desde {{timespan}}. Concreta más detalles usando el chat.",
@@ -630,6 +634,7 @@
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "General",
     "street": "Calle y número",
+    "streetnumber": "Número",
     "zip": "Código postal",
     "city": "Ciudad",
     "country": "País",
@@ -706,6 +711,7 @@
   },
   "calendar": {
     "invalid-date": "Las fechas no son válidas",
+    "info-service-fee-insurance": "Nos ayuda a operar <i>listnride </i>y ofrecer un servicio seguro de alquiler de bicicletas. Incluye seguro básico, tarifas de servicio e IVA.",
     "basic-insurance-included": "Seguro básico incluido",
     "request-bike": "Solicitar bici",
     "to-request-bike-please": "para solicitar una bici",

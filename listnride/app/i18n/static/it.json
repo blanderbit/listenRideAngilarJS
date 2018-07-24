@@ -121,7 +121,7 @@
         "tabname": "Per il noleggiante",
         "answer-1": "Il costo dell'assicurazione di base è pari solo allo 0,1% del valore assicurativo della bicicletta che hai prenotato.\n<br>\nSe una bici è assicurata fino a 1.000 €, allora si paga esattamente un euro per ogni giorno di noleggio per l'assicurazione di base.",
         "question-2": "Quanto costa l'assicurazione Premium?",
-        "answer-2": "Tre euro al giorno oltre al noleggio e al costo del servizio listnride\n<i>lisntride</i>\n - <a href = \"https://www.listnride.com/terms\" \"target =\" _ blank \">commissioni</a>.",
+        "answer-2": "Tre euro al giorno oltre al noleggio e al costo del servizio listnride\n<i>listnride</i>\n - <a href = \"https://www.listnride.com/terms\" \"target =\" _ blank \">commissioni</a>.",
         "question-3": "Cosa copre l'assicurazione di base?",
         "answer-3": "<ul>\n<li>Protezione in caso di danno involontario causato dall'auto e dall'esterno\n<li>Protezione contro il vandalismo\n<li>Protezione per elettronica e batteria per pedelec\n<li>Franchigia fino a 250 €\n</ul>",
         "question-4": "Cosa copre la copertura assicurativa Premium?",
@@ -737,7 +737,7 @@
   "trust-and-safety": {
     "meta-description": "La fiducia è fondamentale in comunità sharing. Supportiamo l'equità e la sicurezza attraverso la verifica e l'assicurazione per ogni noleggio.",
     "title": "Fiducia e Sicurezza",
-    "description": "<i>listnride </i>è una comunità di amanti e appassionati per la bicicletta. Persone come te e me. Ecco perché vogliamo tenere il problema lontano da te, così puoi concentrarti a goderti il viaggio.",
+    "description": "listnride è una comunità di amanti e appassionati per la bicicletta. Persone come te e me. Ecco perché vogliamo tenere il problema lontano da te, così puoi concentrarti a goderti il viaggio.",
     "header": "Pedalare senza preoccupazioni",
     "subheader": "Agiamo nel tuo miglior interesse",
     "cover": {

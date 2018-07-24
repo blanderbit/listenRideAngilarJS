@@ -124,7 +124,7 @@
     "today": "Vandaag",
     "yesterday": "Gisteren",
     "press": {
-      "title": "Media"
+      "title": "Bekend van TV & Print"
     },
     "find-your-bike": {
       "header": "Vind de perfecte fiets",
@@ -582,7 +582,11 @@
     "reject": "afwijzen",
     "rate": "Beoordelen",
     "confirm": "Bevestigen",
-    "confirm_return": "Bevestig teruggave"
+    "confirm_return": "Bevestig teruggave",
+    "documents-title": "Verzekeringscertificaten",
+    "documents-description": "Hier kan je jouw verzekeringscertificaten downloaden. Deze zijn ook per E-mail aan je verstuurd.",
+    "insurance-bike": "Fietsverzekeringscertificaat",
+    "insurance-bike-assist": "Bike Assist-verzekeringscertificaat"
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} uit {{user.city}} zou graag jouw <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. leg alle verdere details vast via de Chat.",
@@ -704,6 +708,7 @@
   },
   "calendar": {
     "invalid-date": "Ingevulde Datums zijn niet correct",
+    "info-service-fee-insurance": "Helpt ons om <i>listnride </i>te gebruiken en een beveiligde fietsverhuurservice aan te bieden. Omvat basisverzekering, servicekosten en btw.",
     "basic-insurance-included": "Inclusief basisverzekering ",
     "request-bike": "Fiets aanvragen",
     "to-request-bike-please": "om een fiets aan te vragen, eerst",
