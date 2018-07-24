@@ -60,7 +60,7 @@ angular.module('message',[]).component('message', {
             link.download="Certificate " + name + " Insurance " + message.request.id + ".pdf";
             link.click();
           },
-          function (error) {
+          function (error) {
             console.log("error happened");
           }
         );

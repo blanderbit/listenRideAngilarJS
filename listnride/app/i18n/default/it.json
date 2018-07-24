@@ -74,7 +74,7 @@
     "reviews": "Recensioni",
     "for": "per",
     "per-day": "al giorno",
-    "pd": "p.g",
+    "pd": "p.g.",
     "Monday": "Lunedì",
     "Tuesday": "Martedì",
     "Wednesday": "Mercoledì",
@@ -122,7 +122,7 @@
     "today": "Oggi",
     "yesterday": "Ieri",
     "press": {
-      "title": "Media",
+      "title": "Conosciuto da TV e stampa",
       "logo-1": "inserisci il logo qui",
       "logo-2": "inserisci il logo qui",
       "logo-3": "inserisci il logo qui",
@@ -313,6 +313,7 @@
   },
   "booking": {
     "shopping": "Secure Shopping",
+    "and-agree-privacy": "e le nostre norme sulla protezione dati",
     "pay-secure": "Pagamento sicuro con",
     "agree-terms": "Con \"Richiedi la bicicletta\" accetti i",
     "agree-terms-link": " termini listnride",
@@ -531,7 +532,7 @@
   },
   "user": {
     "verified-through": "Verificato tramite",
-    "own-bikes": "Le proprie biciclette",
+    "own-bikes": "Noleggio biciclette",
     "ratings": "Valutazioni",
     "meta-title": "Profilo di {{name}}",
     "meta-description": "Noleggia biciclette su listnride da {{name}}.",
@@ -580,7 +581,11 @@
     "reject": "Rifiuta",
     "rate": "Voto",
     "confirm": "Confermare",
-    "confirm_return": "Conferma ritorno"
+    "confirm_return": "Conferma ritorno",
+    "documents-title": "Certificati di assicurazione",
+    "documents-description": "Qui puoi scaricare i certificati di assicurazione. Questi documenti ti sono stati inviati anche via email.",
+    "insurance-bike": "Certificato di assicurazione bici",
+    "insurance-bike-assist": "Certificato di assicurazione Bike Assist"
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} di {{user.city}} vorrebbe noleggiare la tua <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> dal {{timespan}}. Accetto ulteriori dettagli utilizzando la chat.",
@@ -626,6 +631,7 @@
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "Informazioni generali",
     "street": "via e numero",
+    "streetnumber": "Numero",
     "zip": "Cap",
     "city": "Città",
     "country": "Nazione",
@@ -702,6 +708,7 @@
   },
   "calendar": {
     "invalid-date": "Le date non sono valide",
+    "info-service-fee-insurance": "Aiutaci a gestire listnride e ad offrire un servizio di noleggio bici sicuro. Include assicurazione di base, costi di servizio e IVA.",
     "basic-insurance-included": "Assicurazione base inclusa",
     "request-bike": "Richiedi la bicicletta",
     "to-request-bike-please": "per richiedere una bicicletta per favore",
