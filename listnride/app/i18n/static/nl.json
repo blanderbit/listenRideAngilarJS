@@ -80,7 +80,7 @@
   "insurance": {
     "main": {
       "title": "Onze verzekering beschermt je.\n<br> \nVerhuurder of huurder.",
-      "description": "Jouw speciale fiets verhuren betekent vertrouwen hebben. Wat als het wordt gestolen tijdens het uitlenen? Wat als het beschadigd terugkomt? Alle listnride huurfietsen in Duitsland en Oostenrijk zijn verzekerd. Onze partner <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> staat voor u klaar. Per telefoon. Per e-mail. Eenvoudig. Niet-bureaucratisch.",
+      "description": "Jouw speciale fiets verhuren betekent vertrouwen hebben. Wat als het wordt gestolen tijdens het uitlenen? Wat als het beschadigd terugkomt? Alle listnride huurfietsen in Duitsland en Oostenrijk zijn verzekerd. Onze partner Hepster staat voor u klaar. Per telefoon. Per e-mail. Eenvoudig. Niet-bureaucratisch.",
       "logo-description": "Onze verzekeringspartner"
     },
     "facts": {
@@ -107,7 +107,7 @@
         "question-2": "Wat is de maximale verzekeringsdekking voor mijn fiets?",
         "answer-2": "Elke fiets is automatisch verzekerd tot 1.000€ en de dekking kan door u worden verhoogd tot een maximum van 5.000€.\n<br>\nDe hoogte van de uitbetaling in geval van schade is gebaseerd op de daadwerkelijke waarde van de fiets. Deze waarde wordt bepaald door de\n<a href=\"https://www.gothaer.de\" target=\"_blank\">Gothaer-verzekering</a>\n op individuele basis.\n<br>\nOnthoud bij het bepalen van de verzekeringswaarde dat huurders een verzekeringspremie betalen, waarvan het bedrag afhangt van de door u gekozen verzekeringswaarde. Dit betekent; hoe hoger u de fiets verzekert, hoe hoger de verzekeringspremie voor de huurder.",
         "question-3": "Wat moet ik doen als een verzekeringsclaim is?",
-        "answer-3": "Mocht u zich ooit in een situatie bevinden waarin uw fiets tijdens een huurperiode is beschadigd of gestolen, neem dan contact op met\n<a href=\"www.hepster.com\" target=\"_blank\">hepster </a>\n direct:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nhet personeel van de staf zal uw verzoek snel en vakkundig beantwoorden."
+        "answer-3": "Mocht u zich ooit in een situatie bevinden waarin uw fiets tijdens een huurperiode is beschadigd of gestolen, neem dan contact op met\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\n direct:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nhet personeel van de staf zal uw verzoek snel en vakkundig beantwoorden."
       },
       "rider": {
         "description": "Wij bieden twee verzekeringspakketten aan voor elke fiets die je huurt via lisntride: De \n<b>De Basisverzekering</b> \nis inbegrepen in elke fietshuur in Duitsland en Oostenrijk, de \n<b>Premium verzekering</b>\n is optioneel en breidt de verzekering uit met extra dekking.\n<br>\nJij en Jouw fiets zijn altijd optimaal verzekerd en dus staat niets jouw rit meer in de weg!",
@@ -732,7 +732,7 @@
   "terms-and-conditions": {
     "title": "Terms and conditions",
     "header": "Algemene voorwaarden van het Online-Platform listnride",
-    "subtitle": "List and Ride GmbH (in het vervolg „listnride“) bemmidelt via de website www.listnride.com (in het vervolg „Website“) in verhuurtransacties voor fietsen. De onderstaande algemene voorwaarden (in het vervolg „gebruiksvoorwaarden“) in paragraaf I zijn onderdeel van de overeenkomst die tussen de gebruiker en listnride middels de bemiddeling tot stand komt. Indien er via de website een overeenkomst tot het huren van een gebruiksvoorwerp (in het vervolg „huurovereenkomst“) is gesloten, komt deze volgens de in paragraaf II genoemde algemene huurvoorwaarden (in het vervolg „huurvoorwaarden“) tot stand."
+    "subtitle": "Lees deze voorwaarden zorgvuldig door, want deze bevatten belangrijke informatie over uw wettelijke rechten, rechtsmiddelen en verplichtingen. Door het listnride platform te gebruiken, gaat u ermee akkoord om te voldoen aan deze voorwaarden.\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Hier kunt u </a>downloaden en onze algemene voorwaarden lezen.\n<br>\nBedankt voor het gebruik van listnride!"
   },
   "trust-and-safety": {
     "meta-description": "Vertrouwen is essentieel voor onze deelgemeenschap. We streven naar een eerlijk en veilig ecosysteem door middel van verificatie en verzekering voor elke verhuurtransactie.",
@@ -861,7 +861,7 @@
     "title": "Privacybeleid van listnride",
     "ga-opt-out": "Klik hier om Google Analytics-tracking te deactiveren",
     "subtitle": "Privacybeleid ",
-    "description": "Met het privacybeleid informeert List and Ride GmbH (in het vervolg „listnride“) je over het beleid ten aanzien van de omgang met persoonsgegevens. <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">U kunt hier het privacybeleid inzien en uitprinten.</a>",
+    "description": "List and Ride committeert zich aan sterke en transparante privacypraktijken. Ons Privacybeleid beschrijft de gebruikersinformatie die we verzamelen via onze diensten. Hoe we deze informatie gebruiken en openbaar maken. De stappen die we nemen om dergelijke informatie te beschermen. De keuzes bieden wij, met inbegrip van het verkrijgen van toegang, bijwerken en verwijderen van persoonsgegevens. \n<br>Hier kunt u downloaden en lezen onze <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Privacybeleid </a>.\n<br>Neem contact met ons op als u vragen hebt of opmerkingen over onze privacypraktijken of dit privacybeleid. U kunt ons online bereiken op <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a>.",
     "meta-title": "Privacybeleid van listnride",
     "meta-description": "Het privacybeleid van de Bike-Sharing-Community listnride is van toepassing bij het gebruik van het platform."
   },
