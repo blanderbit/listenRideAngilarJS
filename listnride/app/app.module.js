@@ -71,6 +71,8 @@ angular.module('listnride', [
   'kuchenundraketen',
   'supercrossMunich',
   'capeArgus',
+  'torosDelGravel',
+  'eroicaGaiole',
   'filter',
   'bikeSorter',
   'cardgrid',
