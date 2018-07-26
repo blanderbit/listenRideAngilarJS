@@ -100,7 +100,8 @@ angular.module('filter',[])
 
         function clearFilters() {
           clearState(function(){
-            filter.currentSizes = [-1];
+            // filter.currentSizes = [-1];
+            filter.currentSize = filter.sizes[0].value;
             filter.currentCategories = [];
             filter.openSubs = [];
             filter.currentBrand = filter.brands[0];
