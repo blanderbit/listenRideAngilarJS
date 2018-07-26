@@ -1,7 +1,7 @@
 {
   "shared": {
     "learn-more": "Learn More",
-    "basic-fee": "Service Fee includes Basic Insurance",
+    "basic-fee": "Service Fee including Basic Insurance",
     "how-it-works": "How it works",
     "list-a-bike": "List a Bike",
     "renting-a-bike": "Renting a Bike",
@@ -719,7 +719,7 @@
   },
   "calendar": {
     "invalid-date": "Dates are invalid",
-    "info-service-fee-insurance": "Helps us to operate listnride and offer a secure bike rental service. Includes Basic Insurance, service fees and VAT.",
+    "info-service-fee-insurance": "Helps us to operate listnride and to offer a secure bike rental service.",
     "basic-insurance-included": "Basic insurance included",
     "request-bike": "Request Bike",
     "to-request-bike-please": "to request a bike please",
@@ -728,11 +728,11 @@
     "log-in-to-request-description": "Log in to request the bike. If you don't have an account yet, feel free to sign up.",
     "select-timespan": "Choose rental time span first",
     "select-timespan-description": "Before you can request, please set the time span of your rental. Simply click on the days and select pickup and dropoff times in the above calendar.",
-    "info-subtotal": "This is the regular daily price<br>times the amount of days you want<br>to rent the bike.",
+    "info-subtotal": "This is the regular daily price<br>times the amount of rental days<br>.",
     "info-discount": "Average daily discount you<br>get per day by renting out<br>for a longer period of time.",
     "info-service-fee": "The service fee is<br>used for providing<br>listnride. It includes VAT.",
     "info": "In the calendar, select first<br> the day you wish to rent<br>out the bike, and second <br>the day you want to return it.",
-    "info-without-calendar": "In the calendar, select first the day you wish to rent out the bike, and second the day you want to return it."
+    "info-without-calendar": "In the calendar, select first the start date of your rental then the return date.  Secondly select start time and end time."
   },
   "list": {
     "edit-bike": "Edit Bike",
@@ -783,7 +783,7 @@
       "lights": "Lights",
       "basket": "Basket",
       "trailer": "Trailer",
-      "childseat": "Childseat",
+      "childseat": "Child seat",
       "gps": "GPS"
     },
     "pictures": {

@@ -150,6 +150,7 @@
     "meta-title": "Versicherung für jede Miete in Deutschland und Österreich.",
     "meta-description": "Jeder Miete in Deutschland oder Österreich über listnride ist automatisch versichert."
   },
+  "forms.update-password": "Kennwort aktualisieren",
   "coco-mat.bike": "Coco-mat-Räder",
   "meta": {
     "cities": {
@@ -310,7 +311,7 @@
     },
     "imprint": {
       "meta-title": "listnride Impressum",
-      "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
+      "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach deinem Stil und Einsatzzweck."
     },
     "privacy": {
       "meta-title": "Datenschutzerklärung von listnride",
@@ -384,7 +385,7 @@
       "premium-insurance": "Premium-Versicherung",
       "premium-insurance-title": "Abdeckung der Premium-Versicherung",
       "premium-insurance-subtitle": "Wähle unsere Premium-Versicherung für Deine Miete und fahre sorgenfrei",
-      "thats-included": "Zusätzlich zur Basis-Versicherung enthalten",
+      "thats-included": "Zusätzlich zur Basis-Versicherung ist dies enthalten:",
       "premium-feature-1": "Diebstahlschutz",
       "premium-feature-2": "Ersatzrad nach Diebstahl oder Beschädigung",
       "premium-feature-3": "Rücktransport nach Diebstahl oder Beschädigung",
@@ -593,7 +594,7 @@
     "confirm": "Bestätigen",
     "confirm_return": "Rückgabe bestätigen",
     "documents-title": "Versicherungszertifikate",
-    "documents-description": "Hier kannst du Deine Versicherungszertifikate herunterladen. Diese Dokumente wurden dir auch per E-Mail zugesandt.",
+    "documents-description": "Hier kannst du deine Versicherungszertifikate herunterladen. Diese Dokumente wurden dir auch per E-Mail zugesandt.",
     "insurance-bike": "Fahrradversicherungszertifikat",
     "insurance-bike-assist": "Bike Assist Versicherungsschein"
   },
@@ -718,7 +719,7 @@
   },
   "calendar": {
     "invalid-date": "Datumsangabe nicht korrekt",
-    "info-service-fee-insurance": "Hilft uns, listnride zu betreiben und einen sicheren Fahrradverleih anzubieten. Inklusive Basis-Versicherung, Gebühren und MwSt.",
+    "info-service-fee-insurance": "Hilft uns, listnride zu betreiben und einen sicheren Fahrradverleih anzubieten.",
     "basic-insurance-included": "Basis-Versicherung inklusive",
     "request-bike": "Rad anfragen",
     "to-request-bike-please": "um ein Rad anzufragen bitte",
