@@ -27,6 +27,7 @@ angular.module('eroicaGaiole',[]).component('eroicaGaiole', {
         // TODO: add booked_at filter
         api.get('/users/6352').then(
             function(response) {
+                console.log(response);
                 eroicaGaiole.bikes = response.data.rides;
             },
             function(error) {
