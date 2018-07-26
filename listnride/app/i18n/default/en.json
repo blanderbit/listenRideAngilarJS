@@ -1,7 +1,7 @@
 {
   "shared": {
     "learn-more": "Learn More",
-    "basic-fee": "Service Fee includes Basic Insurance",
+    "basic-fee": "Service Fee including Basic Insurance",
     "how-it-works": "How it works",
     "list-a-bike": "List a Bike",
     "renting-a-bike": "Renting a Bike",
@@ -150,8 +150,6 @@
     "meta-title": "Insurance for every rental in Germany and Austria",
     "meta-description": "Every rental in Germany and Austria through listnride is automatically insured."
   },
-  "forms.update-password": "Update password",
-  "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
       "berlin": {
@@ -600,7 +598,7 @@
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{timespan}}. Agree on further details using the chat.",
-    "3": "You've accepted the request. The bike is now booked and you'll rent it out from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Phone: {{user.pretty_phone_number}} <br>Address: {{user.street}}, {{user.zip}} {{user.city}}, {{user.country}}",
+    "3": "You've accepted the request. The bike is now booked and you'll rent it out from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.\n<br>\nName: {{user.first_name}} {{user.last_name}}\n<br>\nPhone: {{user.pretty_phone_number}}\n<br>Address: {{user.street}}, {{user.zip}} {{user.city}}, {{user.country}}",
     "5": "Thanks for confirming retrieval of your bike and rating {{user.first_name}}. The rental was successful and the money will get transferred to the bank account you provided during the next 7 working days.<br><br>In case of any further questions or feedback, we’d love to receive them under <a mailto:\"hello@listnride.com\">hello@listnride.com</a>",
     "8": "You rejected the request. Please tell the rider why you can't rent him the bike.",
     "9": "Unfortunately {{user.first_name}} didn't confirm the request",
@@ -719,7 +717,7 @@
   },
   "calendar": {
     "invalid-date": "Dates are invalid",
-    "info-service-fee-insurance": "Helps us to operate listnride and offer a secure bike rental service. Includes Basic Insurance, service fees and VAT.",
+    "info-service-fee-insurance": "Helps us to operate listnride and to offer a secure bike rental service.",
     "basic-insurance-included": "Basic insurance included",
     "request-bike": "Request Bike",
     "to-request-bike-please": "to request a bike please",
@@ -728,11 +726,11 @@
     "log-in-to-request-description": "Log in to request the bike. If you don't have an account yet, feel free to sign up.",
     "select-timespan": "Choose rental time span first",
     "select-timespan-description": "Before you can request, please set the time span of your rental. Simply click on the days and select pickup and dropoff times in the above calendar.",
-    "info-subtotal": "This is the regular daily price<br>times the amount of days you want<br>to rent the bike.",
+    "info-subtotal": "This is the regular daily price<br>times the amount of rental days<br>.",
     "info-discount": "Average daily discount you<br>get per day by renting out<br>for a longer period of time.",
     "info-service-fee": "The service fee is<br>used for providing<br>listnride. It includes VAT.",
     "info": "In the calendar, select first<br> the day you wish to rent<br>out the bike, and second <br>the day you want to return it.",
-    "info-without-calendar": "In the calendar, select first<br0> the day you wish to rent<br1>out the bike, and second <br2>the day you want to return it."
+    "info-without-calendar": "In the calendar, select first the start date of your rental then the return date.  Secondly select start time and end time."
   },
   "list": {
     "edit-bike": "Edit Bike",
@@ -783,7 +781,7 @@
       "lights": "Lights",
       "basket": "Basket",
       "trailer": "Trailer",
-      "childseat": "Childseat",
+      "childseat": "Child seat",
       "gps": "GPS"
     },
     "pictures": {

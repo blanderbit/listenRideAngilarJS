@@ -147,7 +147,6 @@
     "meta-title": "Assicurazione per ogni noleggio in Germania e Austria",
     "meta-description": "Ogni noleggio in Germania e Austria tramite listnride  è automaticamente assicurato"
   },
-  "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
       "berlin": {
@@ -708,7 +707,7 @@
   },
   "calendar": {
     "invalid-date": "Le date non sono valide",
-    "info-service-fee-insurance": "Aiutaci a gestire listnride e ad offrire un servizio di noleggio bici sicuro. Include assicurazione di base, costi di servizio e IVA.",
+    "info-service-fee-insurance": "Aiutaci a gestire listnride e ad offrire un servizio di noleggio bici sicuro.",
     "basic-insurance-included": "Assicurazione base inclusa",
     "request-bike": "Richiedi la bicicletta",
     "to-request-bike-please": "per richiedere una bicicletta per favore",
