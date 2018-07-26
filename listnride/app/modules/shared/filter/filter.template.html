@@ -20,9 +20,9 @@
 
   <md-select
     class="lnr-margin-left"
-    ng-class="filter.currentBrand != filter.brands[0] ? 'filter__selected': ''"
     ng-model="filter.currentSize"
-    ng-change="filter.onSizeChange2()"
+    ng-class="filter.currentSize != filter.sizes[0].value ? 'filter__selected': ''"
+    ng-change="filter.onSimpleSizeChange()"
   >
     <md-option ng-repeat="option in filter.sizes" value="{{option.value}}">
       {{option.label}}
