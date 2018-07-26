@@ -24,7 +24,7 @@ angular.module('eroicaGaiole',[]).component('eroicaGaiole', {
         $translate('search.all-sizes').then(function (translation) {
             eroicaGaiole.sizeOptions[0].label = translation;
         });
-        // TODO: add booked_at filter
+        // TODO: add booked_at filter for 
         api.get('/users/6352').then(
             function(response) {
                 console.log(response);
