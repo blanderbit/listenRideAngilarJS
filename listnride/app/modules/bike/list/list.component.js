@@ -77,7 +77,6 @@ angular.module('list', ['ngLocale'])
         }
 
         list.tabCompleted = function(tabId) {
-          console.log(list.form);
           return (list.selectedIndex > tabId && list.isListMode) ? "✔" : "    ";
         };
 
@@ -147,6 +146,14 @@ angular.module('list', ['ngLocale'])
                 // form data for edit bikes
                 list.form = data;
                 list.form.prices = prices;
+
+                _.forEach(data.accessories, function(value, key) {
+                  data.accessories[key] = value === "true";
+                });
+
+                // list.form.push(data.accessories);
+                list.form = _.merge(list.form, data.accessories);
+                console.log(list.form);
 
                 // if custom price is enabled
                 if (list.form.custom_price && !list.businessUser) {

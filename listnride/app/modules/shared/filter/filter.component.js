@@ -48,7 +48,9 @@ angular.module('filter',[])
           filter.currentDate = filter.initialValues.date;
           // sizes
           filter.currentSizes = filter.initialValues.sizes.slice();
+          filter.currentSize = filter.initialValues.sizes[0];
           initializeSizeFilter();
+          initializeSimpleSizeFilter();
 
           // categories
           filter.categories = [];
@@ -154,6 +156,13 @@ angular.module('filter',[])
           $translate('search.all-sizes').then(function (translation) {
             filter.sizes[0].label = translation;
           });
+        }
+
+        function initializeSimpleSizeFilter() {
+          console.log(filter.currentSize);
+          console.log(filter.sizes);
+          if (filter.currentSize === '') filter.currentSize = filter.sizes[0];
+          console.log(filter.currentSize);
         }
 
         function applyFilters() {
