@@ -25,7 +25,7 @@ angular.module('torosDelGravel',[]).component('torosDelGravel', {
             torosDelGravel.sizeOptions[0].label = translation;
         });
         // TODO: Readd &booked_at=2018-07-14 when API is fixed
-        api.get('/rides?category=42,43&location=Hamburg&booked_at=2018-07-14').then(
+        api.get('/rides?category=42,43&location=Mallorca&booked_at=2018-10-13').then(
             function(response) {
                 torosDelGravel.bikes = response.data.bikes;
             },
