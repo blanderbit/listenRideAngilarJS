@@ -146,6 +146,7 @@
     "meta-title": "Seguro para cada alquiler en Alemania y Austria",
     "meta-description": "Todos los alquileres a través de listnride en Alemania y Austria  están asegurados automáticamente."
   },
+  "forms.update-password": "Actualizar contraseña",
   "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
@@ -712,7 +713,7 @@
   },
   "calendar": {
     "invalid-date": "Las fechas no son válidas",
-    "info-service-fee-insurance": "Nos ayuda a operar listnride y ofrecer un servicio seguro de alquiler de bicicletas. Incluye seguro básico, tarifas de servicio e IVA.",
+    "info-service-fee-insurance": "Nos ayuda a operar listnride y ofrecer un servicio seguro de alquiler de bicicletas.",
     "basic-insurance-included": "Seguro básico incluido",
     "request-bike": "Solicitar bici",
     "to-request-bike-please": "para solicitar una bici",
@@ -736,7 +737,7 @@
     "list-bike": "Registrar mi bici",
     "category": {
       "header": "¿Cuál es la categoría de tu bici?",
-      "hint": "Primero, selecciona la categoría de tu bici. Luego selecciona la subcategoría correcta.",
+      "hint": "Primero, selecciona la categoría de tu bici. Luego selecciona la subcategoría correspondiente.",
       "label": "Categoría",
       "city": "Ciudad",
       "race": "Carretera",
@@ -818,7 +819,7 @@
       "hint-para-1": "El precio que cobres por tu bici depende de ti y debe basarse en la bici y el equipamiento que tenga. Para tener una idea de los precios de mercado, puedes ver publicaciones de venta comparativas.",
       "hint-para-2": "Un período de alquiler de menos de 6 horas equivale a un alquiler de medio día, y de 6 a 24 horas a un día de alquiler.",
       "hint-para-3": "Para fomentar alquileres más largos, algunos anunciantes establecen un descuento diario o semanal.",
-      "label": "Fijación de precios",
+      "label": "Precio",
       "discount": "Descuento",
       "discount-description-initial": "Con un descuento semanal de ",
       "discount-description-mid": "conseguirás",
@@ -858,8 +859,8 @@
         "dutch-bike": "Bicicleta holandesa",
         "touring-bike": "Bicicleta de rutas",
         "fixie": "Bici de piñón fijo",
-        "single-speed": "Bici monomarcha",
-        "city-bike": "Bicicletas urbanas "
+        "single-speed": "Bicicleta monomarcha",
+        "city-bike": "Bicicleta urbana"
       },
       "2": {
         "road-bike": "Bici de carretera",
@@ -869,7 +870,7 @@
         "e-touring-bike": "Bici eléctrica de turismo",
         "e-cargo-bike": "Bici de carga eléctrica",
         "e-mountain-bike": "Bici eléctrica de montaña",
-        "e-road-bike": "E-Road Bike",
+        "e-road-bike": "Bici eléctrica de carretera",
         "e-folding-bike": "Bici eléctrica plegable",
         "e-scooter": "Scooter eléctrico"
       },
