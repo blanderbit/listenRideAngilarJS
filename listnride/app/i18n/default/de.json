@@ -150,8 +150,6 @@
     "meta-title": "Versicherung für jede Miete in Deutschland und Österreich.",
     "meta-description": "Jeder Miete in Deutschland oder Österreich über listnride ist automatisch versichert."
   },
-  "forms.update-password": "Kennwort aktualisieren",
-  "coco-mat.bike": "Coco-mat-Räder",
   "meta": {
     "cities": {
       "berlin": {
@@ -178,6 +176,10 @@
     "events": {
       "rapha-super-cross": {
         "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
+      },
+      "eroica-gaiole": {
+        "meta-title": "Eroica vintage road bike cycling event",
+        "meta-description": "Rent your vintage road bike for Eroica on listnride"
       },
       "in-velo-veritas": {
         "meta-title": "Klassikerausfahrt: In Velo Veritas mit listnride",
@@ -729,8 +731,8 @@
     "select-timespan": "Wähle zuerst die Mietdauer",
     "select-timespan-description": "Bevor du eine Anfrage stellen kannst, lege bitte die Zeitspanne für die Miete fest. Klicke einfach auf die Tage und wähle Abhol- und Rückgabezeiten im Kalender.",
     "info-subtotal": "Dies ist der Tagespreis für die<br>Anzahl der Tage, die du das<br>Fahrrad mieten möchten.",
-    "info-discount": "Durchschnittlicher Tagesrabatt<br>pro Tag bei Miete für<br>einen längeren Zeitraum.",
-    "info-service-fee": "Die Servicegebühr hilft uns,<br>listnride zu betreiben. Sie enthält <br>die Umsatzsteuer.",
+    "info-discount": "Durchschnittlicher Tagesrabatt<br>pro Tag bei Miete über<br>einen längeren Zeitraum.",
+    "info-service-fee": "Die Servicegebühr hilft uns,<br>listnride zu betreiben. Sie enthält <br>die Mehrwertsteuer.",
     "info": "Im Kalender erst den Tag auswählen,<br>an dem du das Fahrrad mieten möchtest,<br>und dann den Tag, an dem<br>du es zurückgeben magst.",
     "info-without-calendar": "Im Kalender erst den Tag auswählen,<br0>an dem du das Fahrrad mieten möchtest,<br1>und dann den Tag, an dem<br2>du es zurückgeben magst."
   },

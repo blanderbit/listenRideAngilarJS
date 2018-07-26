@@ -150,8 +150,6 @@
     "meta-title": "Insurance for every rental in Germany and Austria",
     "meta-description": "Every rental in Germany and Austria through listnride is automatically insured."
   },
-  "forms.update-password": "Update password",
-  "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
       "berlin": {
@@ -178,6 +176,14 @@
     "events": {
       "rapha-super-cross": {
         "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
+      },
+      "eroica-gaiole": {
+        "meta-title": "Eroica vintage road bike cycling event",
+        "meta-description": "Rent your vintage road bike for Eroica on listnride"
+      },
+      "toros-del-gravel": {
+        "meta-title": "meta title",
+        "meta-description": "meta description"
       },
       "in-velo-veritas": {
         "meta-title": "In Velo Veritas - Rent a bike with listnride",

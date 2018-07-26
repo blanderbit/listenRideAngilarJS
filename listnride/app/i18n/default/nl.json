@@ -145,8 +145,6 @@
     "meta-title": "Fietsverzekering voor elke verhuur in Duitsland en Oostenrijk",
     "meta-description": "Elke fietshuur in Duitsland en Oostenrijk zijn automatisch via listnride verzekerd. "
   },
-  "forms.update-password": "password-update",
-  "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
       "berlin": {
@@ -173,6 +171,10 @@
     "events": {
       "rapha-super-cross": {
         "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
+      },
+      "eroica-gaiole": {
+        "meta-title": "Eroica vintage road bike cycling event",
+        "meta-description": "Rent your vintage road bike for Eroica on listnride"
       },
       "in-velo-veritas": {
         "meta-title": "In Velo Veritas - Rent a bike with listnride",
