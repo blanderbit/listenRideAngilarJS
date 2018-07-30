@@ -191,7 +191,7 @@ var lnrHelper = {
       } else {
         var readableSize = 'Unisize';
       }
-      
+
       // HTML of the element
       var elementHTML = [
         '<div class="lnr-date-selector" ',
@@ -227,68 +227,11 @@ var lnrHelper = {
   categoryFilter: function (userId, categoryId) {
     // select category based on the user language
     var selectedCategory = "";
-    if ('en' === lnrConstants.userLang[userId]) { selectedCategory = lnrConstants.subCategory.en; }
-    else if ('nl' === lnrConstants.userLang[userId]) { selectedCategory = lnrConstants.subCategory.nl; }
-    else { selectedCategory = lnrConstants.subCategory.de; }
+    var userLang = lnrConstants.userLang[userId];
+    categoryId = categoryId.toString();
+
     // select sub category based on the user language
-    switch (categoryId) {
-      case 10:
-        return selectedCategory["1"]["dutch-bike"];
-      case 11:
-        return selectedCategory["1"]["touring-bike"];
-      case 12:
-        return selectedCategory["1"].fixie;
-      case 13:
-        return selectedCategory["1"]["single-speed"];
-
-      case 20:
-        return selectedCategory["2"]["road-bike"];
-      case 21:
-        return selectedCategory["2"].triathlon;
-      case 22:
-        return selectedCategory["2"].indoor;
-
-      case 30:
-        return selectedCategory["3"].tracking;
-      case 31:
-        return selectedCategory["3"].enduro;
-      case 32:
-        return selectedCategory["3"].freeride;
-      case 33:
-        return selectedCategory["3"]["cross-country"];
-      case 34:
-        return selectedCategory["3"].downhill;
-      case 35:
-        return selectedCategory["3"].cyclocross;
-
-      case 40:
-        return selectedCategory["4"].city;
-      case 41:
-        return selectedCategory["4"]["all-terrain"];
-      case 42:
-        return selectedCategory["4"].road;
-
-      case 50:
-        return selectedCategory["5"].pedelec;
-      case 51:
-        return selectedCategory["5"]["e-bike"];
-
-      case 60:
-        return selectedCategory["6"]["folding-bike"];
-      case 61:
-        return selectedCategory["6"].tandem;
-      case 62:
-        return selectedCategory["6"].cruiser;
-      case 63:
-        return selectedCategory["6"]["cargo-bike"];
-      case 64:
-        return selectedCategory["6"].recumbent;
-      case 65:
-        return selectedCategory["6"]["mono-bike"];
-
-      default:
-        return "";
-    }
+    return lnrConstants.subCategory[userLang][categoryId[0]][categoryId[1]];
   },
   /**
    * show the bikes for the specific city
@@ -416,7 +359,7 @@ var lnrHelper = {
       element = lnrConstants.parentElement;
       element.innerHTML = '';
     }
-    // multi user support 
+    // multi user support
     else {
       element = document.querySelector('[data-user="' + userId + '"]');
       element.innerHTML = '';
@@ -445,7 +388,7 @@ var lnrHelper = {
       if (request.status >= 200 && request.status < 400) {
         // initialize grid for the bikes cards of the user
         lnrHelper.initUserElement(userId);
-        // json response from server 
+        // json response from server
         var response = JSON.parse(request.responseText);
         // get cities information from the bikes
         lnrConstants.cities = lnrHelper.getBikeCities(userId, response.rides);
@@ -475,7 +418,7 @@ var lnrHelper = {
    * @returns {void}
    */
   renderBikesHTML: function (userId, rides, userLang) {
-    
+
     // add bikes grid
     var lnr = lnrConstants.isSingleUserMode ? lnrConstants.parentElement : document.getElementById(userId);
     var gridId = userId + '-lnr-grid';
@@ -511,7 +454,7 @@ var lnrHelper = {
       }
 
       // bikes grid html
-      // mdl grid => 12 col (desktop), 8 col (tablet), 4 col (phone) 
+      // mdl grid => 12 col (desktop), 8 col (tablet), 4 col (phone)
       var gridHTML = [
         '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">',
         '<bike-card>',

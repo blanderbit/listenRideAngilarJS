@@ -66,120 +66,219 @@ var lnrConstants = {
   subCategory: {
     // subcategory - english
     en: {
-      "1": {
-        "dutch-bike": "Dutch Bike",
-        "touring-bike": "Touring Bike",
-        "fixie": "Fixie",
-        "single-speed": "Single Speed"
-      },
-      "2": {
-        "road-bike": "Road Bike",
-        "triathlon": "Triathlon",
-        "indoor": "Indoor"
-      },
-      "3": {
-        "tracking": "Tracking",
-        "enduro": "Enduro",
-        "freeride": "Freeride",
-        "cross-country": "Cross Country",
-        "downhill": "Downhill",
-        "cyclocross": "Cyclocross"
-      },
-      "4": {
-        "city": "City",
-        "all-terrain": "All Terrain",
-        "road": "Road"
-      },
-      "5": {
-        "pedelec": "Pedelec",
-        "e-bike": "E-Bike"
-      },
-      "6": {
-        "folding-bike": "Folding Bike",
-        "tandem": "Tandem",
-        "cruiser": "Cruiser",
-        "cargo-bike": "Cargo Bike",
-        "recumbent": "Recumbent",
-        "mono-bike": "Mono Bike"
-      }
+      "1": [
+        "Dutch Bike",
+        "Touring Bike",
+        "Fixed Gear Bike",
+        "Single Speed Bike",
+        "City Bike"
+      ],
+      "2": [
+        "Road Bike",
+        "Triathlon",
+        "Indoor",
+        "E-City Bike",
+        "E-Touring Bike",
+        "E-Cargo Bike",
+        "E-Mountain Bike",
+        "E-Road Bike",
+        "E-Folding Bike",
+        "E-Scooter"
+      ],
+      "3": [
+        "Trekking",
+        "Enduro",
+        "Freeride",
+        "Cross Country",
+        "Downhill",
+        "Cyclocross",
+        "Road Bike",
+        "Triathlon Bike",
+        "Touring Bike",
+        "Fixed Gear Bike"
+      ],
+      "4": [
+        "City",
+        "All Terrain",
+        "Road",
+        "MTB Hardtail",
+        "MTB Fullsuspension",
+        "Cyclocross Bike",
+        "Gravel Bike"
+      ],
+      "5": [
+        "Pedelec",
+        "E-Bike",
+        "Cargo Bike",
+        "Bike Trailer",
+        "Bike Child Seat",
+        "Bike Car Rack",
+        "Bike Travel Bag"
+      ],
+      "6": [
+        "Folding Bike",
+        "Tandem",
+        "Cruiser",
+        "Cargo Bike",
+        "Recumbent",
+        "Mono Bike",
+        "Trailer",
+        "City Bike",
+        "All Terrain Bike",
+        "Road Bike",
+        "Bogie Wheel"
+      ],
+      "7": [
+        "Folding Bike",
+        "Recumbent Bike",
+        "Tandem Bike",
+        "Longtail Bike",
+        "Scooter"
+      ]
     },
     // subcategory - german
     de: {
-      "1": {
-        "dutch-bike": "Hollandrad",
-        "touring-bike": "Touringrad",
-        "fixie": "Fixie",
-        "single-speed": "Single Speed"
-      },
-      "2": {
-        "road-bike": "Rennrad",
-        "triathlon": "Triathlonrad",
-        "indoor": "Bahnrad"
-      },
-      "3": {
-        "tracking": "Tracking",
-        "enduro": "Enduro",
-        "freeride": "Freeride",
-        "cross-country": "Cross Country",
-        "downhill": "Downhill",
-        "cyclocross": "Cyclocross"
-      },
-      "4": {
-        "city": "Stadt",
-        "all-terrain": "Gelände",
-        "road": "Strasse"
-      },
-      "5": {
-        "pedelec": "Pedelec",
-        "e-bike": "E-Bike"
-      },
-      "6": {
-        "folding-bike": "Faltrad",
-        "tandem": "Tandem",
-        "cruiser": "Cruiser",
-        "cargo-bike": "Lastenrad",
-        "recumbent": "Liegerad",
-        "mono-bike": "Einrad"
-      }
+      "1": [
+        "Hollandrad",
+        "Touringrad",
+        "Fixed-Gear-Rad",
+        "Single-Speed-Rad",
+        "Stadtrad"
+      ],
+      "2": [
+        "Rennrad",
+        "Triathlonrad",
+        "Bahnrad",
+        "E-City-Rad",
+        "E-Touringrad",
+        "E-Cargo-Rad",
+        "E-Mountainbike",
+        "E-Rennrad",
+        "E-Faltrad",
+        "E-Roller"
+      ],
+      "3": [
+        "Trekking",
+        "Enduro",
+        "Freeride",
+        "Cross Country",
+        "Downhill",
+        "Cyclocross",
+        "Rennrad",
+        "Triathlonrad",
+        "Touringrad",
+        "Fixed-Gear-Rad"
+      ],
+      "4": [
+        "Stadt",
+        "Gelände",
+        "Strasse",
+        "MTB Hardtail",
+        "MTB Fullsuspension",
+        "Cyclocross-Rad",
+        "Gravel-Rad"
+      ],
+      "5": [
+        "Pedelec",
+        "E-Bike",
+        "Lastenrad",
+        "Radanhänger",
+        "Kinderfahrradsitz",
+        "Fahrradträger Auto",
+        "Fahrrad-Transporttasche"
+      ],
+      "6": [
+        "Faltrad",
+        "Tandem",
+        "Cruiser",
+        "Lastenrad",
+        "Liegerad",
+        "Einrad",
+        "Anhänger",
+        "Stadtrad",
+        "Mountainbike",
+        "Rennrad",
+        "Laufrad"
+      ],
+      "7": [
+        "Faltrad",
+        "Liegerad",
+        "Tandem",
+        "Longtail-Rad",
+        "Roller"
+      ]
     },
     // subcategory - dutch
     nl: {
-      "1": {
-        "dutch-bike": "Stadsfiets",
-        "touring-bike": "Touringfiets",
-        "fixie": "Fixie",
-        "single-speed": "Single Speed"
-      },
-      "2": {
-        "road-bike": "Racefiets",
-        "triathlon": "Triathlonfiets",
-        "indoor": "Baanfiets"
-      },
-      "3": {
-        "tracking": "Tracking",
-        "enduro": "Enduro",
-        "freeride": "Freeride",
-        "cross-country": "Cross Country",
-        "downhill": "Downhill",
-        "cyclocross": "Cyclocross"
-      },
-      "4": {
-        "city": "Stad",
-        "all-terrain": "All-terrain",
-        "road": "race"
-      },
-      "5": {
-        "pedelec": "Speed Pedelec",
-        "e-bike": "Elektrische fiets"
-      },
-      "6": {
-        "folding-bike": "vouwfiets",
-        "tandem": "Tandem",
-        "cruiser": "Cruiser",
-        "cargo-bike": "transportfiets",
-        "recumbent": "Ligfiets",
-        "mono-bike": "Eenwieler"
-      }
+      "1": [
+        "Omafiets",
+        "Touringfiets",
+        "Fixie",
+        "Single Speed Fiets",
+        "Stadsfiets"
+      ],
+      "2": [
+        "Racefiets",
+        "Triathlon",
+        "Baanfiets",
+        "E-stadsfiets",
+        "E-Touring Fiets",
+        "E-Bakfiets",
+        "E-mountainbike",
+        "E-racefiets",
+        "E-vouwfiets",
+        "E-Step"
+      ],
+      "3": [
+        "Trekking",
+        "Enduro",
+        "Freeride",
+        "Cross Country",
+        "Downhill",
+        "Cyclocross",
+        "Racefiets",
+        "Triatlonfiets",
+        "Touringfiets",
+        "Baanfiets"
+      ],
+      "4": [
+        "Stad",
+        "All-terrain",
+        "race",
+        "MTB Hardtail",
+        "MTB Fullsuspension",
+        "CX-fiets",
+        "Gravel Bike"
+      ],
+      "5": [
+        "Speed Pedelec",
+        "Elektrische fiets",
+        "Bakfiets",
+        "Fietsaanhanger",
+        "kinderzitje",
+        "Fietsendragers",
+        "Fietskoffer"
+      ],
+      "6": [
+        "vouwfiets",
+        "Tandem",
+        "Cruiser",
+        "transportfiets",
+        "Ligfiets",
+        "Eenwieler",
+        "Aanhangwagen",
+        "Stadsfiets",
+        "ATB-fiets",
+        "Racefiets",
+        "Monofiets"
+      ],
+      "7": [
+        "vouwfiets",
+        "Ligfiets",
+        "Tandemfiets",
+        "Longtail-fiets",
+        "Step"
+      ]
     }
   },
   // initialize rides, id and language for all users
