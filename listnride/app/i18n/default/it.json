@@ -592,6 +592,7 @@
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} di {{user.city}} vorrebbe noleggiare la tua <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> dal {{timespan}}. Accetto ulteriori dettagli utilizzando la chat.",
+    "11": "Your request was manually cancelled",
     "3": "{{user.zip}} Hai accettato la richiesta. La bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I recapiti sono i seguenti, li abbiamo inviati via e-mail. <br><br>Nome:\n{{user.first_name}} {{user.last_name}}<br>Telefono: {{user.pretty_phone_number}} <br>Indirizzo: {{user.street}}, {{user.city}}, {{user.country}}",
     "5": "Grazie per aver confermato il recupero della tua bicicletta e della tua valutazione su {{user.first_name}}. Il noleggio è riuscito e i soldi verranno trasferiti al conto bancario fornito durante i prossimi 7 giorni lavorativi. <br><br>In caso di ulteriori domande o commenti, scrivi a <a mailto:=\"hello@listnride.com\">ciao @ listnride.com </a>",
     "8": "Hai respinto la richiesta. Prego scrivi al noleggiante perché non puoi noleggiare la bicicletta.",
@@ -600,6 +601,7 @@
   },
   "rideChat": {
     "1": "Vorresti noleggiare la <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> di {{lister.business_name}} dal {{timespan}}. Acconsento a fornire al noleggiatore ulteriori dettagli. Non appena accetta la tua richiesta, la bicicletta sarà prenotata.",
+    "11": "The request got cancelled.",
     "3": "Congratulazioni, {{lister.first_name}} ha accettato la tua richiesta, quindi la bicicletta è stata prenotata con successo. Come d'accordo incontra il noleggiatore e ritira la bicicletta. I recapiti sono i seguenti, li abbiamo mandati via e-mail. <br><br>Nome: {{lister.first_name}} {{lister.last_name}}, <br>Telefono: {{lister.pretty_phone_number}}, <br>Indirizzo: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} ha confermato il ritorno del mezzo e ti ha fatto una recensione. Infine, ti preghiamo di valutare l'esperienza. Questo aiuta molto la nostra comunità e completa il noleggio.",
     "6": "Grazie per la valutazione, il noleggio è stato completato con successo.",
@@ -672,7 +674,7 @@
     "landing-section-header": "La bicicletta perfetta. Noleggiala subito.",
     "insurance": {
       "description": "Non importa se una fixie o una bici da triathlon di alta gamma: ogni noleggio in Germania o in Austria è assicurato! Semplice. In ogni momento.",
-      "header": "Copertura assicurativa per ogni noleggio su listnride",
+      "header": "Copertura assicurativa per il tuo noleggio su listnride",
       "logo-description": "In collaborazione con hepster"
     },
     "landing-section-subheader": "Unisciti a listnride e trova la bicicletta giusta per te.",
@@ -694,7 +696,7 @@
   },
   "search": {
     "no-bikes": "Non ci sono biciclette in questa località",
-    "bikes-found": "bikes found:",
+    "bikes-found": "bici trovate",
     "all-sizes": "Tutte le misure",
     "bikes-in": "Biciclette a",
     "meta-title": "Noleggia la bicicletta perfetta a {{location}}.",
