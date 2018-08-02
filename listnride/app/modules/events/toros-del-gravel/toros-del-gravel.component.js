@@ -3,10 +3,12 @@
 angular.module('torosDelGravel',[]).component('torosDelGravel', {
     templateUrl: 'app/modules/events/toros-del-gravel/toros-del-gravel.template.html',
     controllerAs: 'torosDelGravel',
-    controller: ['NgMap', 'api', '$translate','$translatePartialLoader',
-    function TorosDelGravelController(NgMap, api, $translate, $tpl) {
+    controller: ['NgMap', 'api', '$translate', 'ngMeta','$translatePartialLoader',
+    function TorosDelGravelController(NgMap, api, ngMeta, $translate, $tpl) {
         var torosDelGravel = this;
         $tpl.addPart('static');
+          ngMeta.setTitle($translate.instant("events.toros-del-gravel.meta-title"));
+          ngMeta.setTag("description", $translate.instant("events.toros-del-gravel.meta-description"));
 
         torosDelGravel.sizeOptions = [
             {value: "", label: "-"},
