@@ -25,7 +25,7 @@ angular.module('cyclassicsHamburg',[]).component('cyclassicsHamburg', {
             cyclassicsHamburg.sizeOptions[0].label = translation;
         });
 
-        api.get('/rides?category=30&location=Hamburg&booked_at=2018-08-19').then(
+        api.get('/rides?category=30&location=Hamburg&priority=cyclassics-hamburg&booked_at=2018-08-19').then(
             function(response) {
                 console.log(response);
                 cyclassicsHamburg.bikes = response.data.bikes;
