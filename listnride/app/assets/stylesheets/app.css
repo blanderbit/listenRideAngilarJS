@@ -1673,7 +1673,9 @@ list md-icon.accessory-icon.checked svg rect,
 list md-icon.accessory-icon.checked svg circle,
 edit md-icon.accessory-icon.checked svg path,
 edit md-icon.accessory-icon.checked svg rect,
-edit md-icon.accessory-icon.checked svg circle {
+edit md-icon.accessory-icon.checked svg circle,
+list md-icon.accessory-icon.checked svg polygon,
+edit md-icon.accessory-icon.checked svg polygon {
   fill: #FFFFFF;
   color: #FFFFFF;
 }
