@@ -340,6 +340,44 @@
       });
 
       $stateProvider.state({
+        name: 'torosDelGravel',
+        url: '/toros-del-gravel',
+        template: '<toros-del-gravel></toros-del-gravel>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.toros-del-gravel.meta-title", "meta.events.toros-del-gravel.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.events.toros-del-gravel.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.toros-del-gravel.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'eroicaGaiole',
+        url: '/eroica-gaiole',
+        template: '<eroica-gaiole></eroica-gaiole>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.eroica-gaiole.meta-title", "meta.events.eroica-gaiole.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.events.eroica-gaiole.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.eroica-gaiole.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
           name: 'riderman',
           url: '/riderman-rothaus',
           template: '<riderman></riderman>',

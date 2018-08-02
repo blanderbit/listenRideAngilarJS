@@ -75,8 +75,8 @@
           <div flex-gt-xs="25">
             <h3 class="md-body-2">{{ 'forms.description' | translate }}</h3>
           </div>
-          <div flex-gt-xs>
-            <p class="md-body-1 white-space-pre-line">{{ bike.data.description }}</p>
+          <div flex-gt-xs="75">
+            <p class="md-body-1 white-space-pre-line break-word">{{ bike.data.description }}</p>
           </div>
         </div>
 
@@ -156,7 +156,7 @@
               </div>
               <div layout="row" layout-align="start center" ng-if="bike.showAttribute(bike.data.details)">
                 <p flex="30" class="md-body-2">{{ 'list.details.notes' | translate }}</p>
-                <p class="md-body-1">{{ bike.data.details}}</p>
+                <p flex="70" class="md-body-1" style="word-break: break-word;">{{ bike.data.details}}</p>
               </div>
             </div>
           </div>

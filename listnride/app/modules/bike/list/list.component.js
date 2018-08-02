@@ -39,7 +39,28 @@ angular.module('list', ['ngLocale'])
 
         var list = this;
 
-        list.form = {images: [], coverage_total: 0};
+        // add default params
+        list.form = {
+          name: '',
+          brand: '',
+          description: '',
+          size: '',
+          category: '',
+          street: '',
+          city: '',
+          zip: '',
+          country: '',
+          custom_price: '',
+          discounts: '',
+          frame_size: '',
+          bicycle_number: '',
+          frame_number: '',
+          details: '',
+          accessories: {},
+          images: [],
+          coverage_total: 0
+        };
+
         list.selectedIndex = 0;
         list.removedImages = [];
         list.startImage = 1;
@@ -77,7 +98,6 @@ angular.module('list', ['ngLocale'])
         }
 
         list.tabCompleted = function(tabId) {
-          console.log(list.form);
           return (list.selectedIndex > tabId && list.isListMode) ? "✔" : "    ";
         };
 
@@ -147,6 +167,13 @@ angular.module('list', ['ngLocale'])
                 // form data for edit bikes
                 list.form = data;
                 list.form.prices = prices;
+
+                _.forEach(data.accessories, function(value, key) {
+                  data.accessories[key] = value === "true";
+                });
+
+                // list.form.push(data.accessories);
+                list.form = _.merge(list.form, data.accessories);
 
                 // if custom price is enabled
                 if (list.form.custom_price && !list.businessUser) {
@@ -218,7 +245,6 @@ angular.module('list', ['ngLocale'])
                 verification.openDialog(false);
                 list.submitDisabled = false;
               } else {
-                console.log(ride);
                 Upload.upload({
                   method: 'POST',
                   url: api.getApiUrl() + '/rides',

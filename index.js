@@ -71,7 +71,12 @@ var shouldRedirect = function (host) {
  */
 var enableHttps = function () {
   // prerender
-  middleware.app.use(require('prerender-node').set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
+  var prerender = require('prerender-node').set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw');
+  prerender.crawlerUserAgents.push('googlebot');
+  prerender.crawlerUserAgents.push('bingbot');
+  prerender.crawlerUserAgents.push('yandex');
+  middleware.app.use(prerender);
+  // middleware.app.use(require('prerender-node').set('prerenderToken', 'W8S4Xn73eAaf8GssvVEw'));
   // setting proper http headers
   middleware.app.use(middleware.helmet());
   // redirect to https

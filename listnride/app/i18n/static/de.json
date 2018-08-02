@@ -105,7 +105,7 @@
         "tabname": "Für Vermieter",
         "answer-1": "Nichts! Da die Versicherung nur von Mietern abgeschlossen wird, fallen für Vermieter keine zusätzlichen Kosten an. \nBedenke aber, dass dein Fahrrad somit für Mieter ein Wenig teurer wird. Die Kosten für die Basisversicherung betragen 0,1% des Versicherungswerts deines Rades. \nWenn du dein Rad also bis 1.000€ versichern lässt, dann zahlen Mieter eine Euro je Miettag zusätzlich. Bis 5.000€ Versicherungswert sind es also fünf Euro zusätzlich je Miettag.",
         "question-2": "Wie hoch versichert listnride mein Rad maximal?",
-        "answer-2": "Jedes Fahrrad ist automatisch bis 1.000€ versichert und kann von Dir bis maximal 5.000€ versichert werden . \n<br>\nDie tatsächliche Auszahlungssumme bei Verlust orientiert sich am tatsächlichen Kaufpreis und Zeitwert. Sie wird von der \n<a href=\"https://www.gothaer.de\" target=\"_blank\">Gothaer Versicherung</a> individuell für Deinen Fall bestimmt.\n<br>\nBedenke bitte bei der Festlegung des Versicherungswerts, dass Mieter sehr wohl eine Versicherungsgebühr zahlen, deren Höhe sich an Deinem gewählten Versicherungswert orientiert. Das heißt, je höher du das Rad versicherst, desto höher fällt die Versicherungsgebühr für die Mieter aus.",
+        "answer-2": "Jedes Fahrrad ist automatisch bis 1.000€ versichert und kann von Dir bis maximal 5.000€ versichert werden . \n<br>\nDie tatsächliche Auszahlungssumme bei Verlust orientiert sich am tatsächlichen Kaufpreis und Zeitwert. Sie wird von der \n<a href=\"https://www.gothaer.de\" target=\"_blank\">Gothaer Versicherung</a> individuell für Deinen Fall bestimmt.\n<br>\nBedenke bitte bei der Festlegung des Versicherungswerts, dass Mieter sehr wohl eine Versicherungsgebühr zahlen, deren Höhe sich an deinem gewählten Versicherungswert orientiert. Das heißt, je höher du das Rad versicherst, desto höher fällt die Versicherungsgebühr für die Mieter aus.",
         "question-3": "Was muss ich machen, wenn es zum Versicherungsfall kommt?",
         "answer-3": "Solltest du einmal in die Situation kommen, dass dein Rad während einer Vermietung beschädigt oder gestohlen wird, nimm bitte direkt Kontakt mit \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\nauf:\n<ul> \n<li><a href=\"mailto:schaden@hepster.com?subject=Schaden nach listnride-Miete\">schaden@hepster.com</a>\n<li>0381 - 20 38 88 801\n</ul>\n<br>\nDie Mitarbeiter von hepster werden deine Anfrage zügig und kompetent beantworten."
       },
@@ -165,6 +165,16 @@
   "events": {
     "rapha-super-cross": {
       "text": "Der Rapha Super Cross ist wieder zurück in München, zum dritten Mal. Wenn du gerne dabei sein möchtest aber kein geeignetes Rad hast, kannst du über listnride ein Rad mieten. Die listnride bike sharing community bietet verschiedene Crossräder zum Verleih an. Die Räder können vor der Veranstaltung bei den einzelnen Anbietern angefragt und gebucht werden. Die Übergabe wird direkt mit dem Vermieter vereinbart. Zusätzlich verfügbare Räder können auch noch zur Vermietung angeboten werden, um damit etwas zu verdienen und interessante Leute zu treffen, welche an der Veranstaltung teilnehmen. Werde Teil der wachsenden Community!"
+    },
+    "toros-del-gravel": {
+      "title": "Mieten Sie ein Kiesfahrrad für Toros del Gravel",
+      "description": "Was: <b>Toros del Gravel </b>| wann: <b>13. Oktober </b>| Wo: <b>Sineu - Mallorca </b>",
+      "text": "Toros de Gravel wird die erste Kiesveranstaltung sein, die jemals auf Mallorca stattfand. Entworfen, um eine herausfordernde aber entspannte Fahrt zu sein, wird die Route wenig bekannte Ecken der Insel mit Checkpoints und Rennsegmenten erkunden, bevor sie im Sineu Velodrom für eine große After-Race-Party endet. Geeignete Gravelbikes können direkt hier gemietet werden."
+    },
+    "eroica-gaiole": {
+      "title": "Miete dein Vintage-Rennrad für die Eroica",
+      "description": "wo: <b>Gaiole in Chianti, Toskana </b>| was: <b> L' Eroica,  Historisches Radrennen mit Vintage-Rennrädern </b>>| wann: <b>7.10.2018 </b>",
+      "text": "Die Eroica ist ein weltbekanntes Radsportereignis. Mit Routen entlang unbefestigter Strassen, auf historischen Stahlrennrädern, in Vintage-Bekleidung, errniert die Eroica and das Radfahren der Vergangenheit.\nSuchst du ein Eroica-Rennrad? Zusammen mit der listnride-Community stellen wir hier passenden Rennräder zur Verfügung.\nWähle einfach das für dich passende Rennrad, gib den gwünschten Zeitraum ein und schick die Anfrage ab."
     },
     "in-velo-veritas": {
       "meta-title": "Klassikerausfahrt: In Velo Veritas mit listnride",
@@ -626,7 +636,7 @@
         "question-8": "Was muss ich zahlen, um mein Fahrrad zum Verleih anzubieten?",
         "answer-8": "Ein Mietrad über listnride anzubieten ist kostenlos. Erst, wenn es tatsächlich zu einer Buchung kommt, erhalten wir eine Provision auf den Gesamtmietpreis in Höhe von 7,5 %. Ein Beispiel: Verleihst du dein Mietrad für 5 Tage zu einem Preis von 20 € pro Tag, beträgt der Gesamtpreis 100 €. Wir zahlen Dir in diesem Beispiel dann 92,50 €. Hier sind dann auch bereits alle Kosten abgezogen, die bei Kreditkartenzahlung durch Transaktionsgebühren entstehen. ",
         "question-9": "Wie erhalte ich mein Geld für das Mietrad?",
-        "answer-9": "Die Zahlung des Gesamtmietpreises abzüglich der listnride-Provision in Höhe von 7,5 % erfolgt innerhalb von 5 Werktagen nach Ende des Mietzeitraums. Die Zahlung wird entweder über PayPal oder per Banküberweisung durchgeführt. Unter „Profil bearbeiten“ in Deinem Account kannst du Deine Kontodaten eingeben bzw. ändern. ",
+        "answer-9": "Die Zahlung des Gesamtmietpreises abzüglich der listnride-Provision in Höhe von 7,5 % erfolgt innerhalb von 5 Werktagen nach Ende des Mietzeitraums. Die Zahlung wird entweder über PayPal oder per Banküberweisung durchgeführt. Unter „Profil bearbeiten“ in deinem Account kannst du Deine Kontodaten eingeben bzw. ändern. ",
         "question-10": "Kann ich mein Mietrad auch an anderen Standorten anbieten, die nicht auf der Webseite aufgeführt sind?",
         "answer-10": "Ja, listnride ist eine internationale Plattform, auf der Mieträder an jedem Standort weltweit gelistet werden können. ",
         "question-11": "Wie kann ich eine Listung vorübergehend aussetzen oder ein Mietrad deaktivieren?",
@@ -636,7 +646,7 @@
         "question-13": "Wie lösche ich mein Mietrad?",
         "answer-13": "Willst du ein bestimmtes Mietrad nicht mehr anbieten, kannst du es unter „Angebotene Mieträder“ im Menü Deines Accounts löschen. In der iPhone-App wischt du dazu einfach nach links über das Mietrad, das du löschen möchtest und klickst auf „Löschen“. Auf der Webseite klickst du einfach auf „Mietrad löschen“. Nach einigen Sekunden erhältst du die Bestätigung „Mietrad erfolgreich gelöscht“. ",
         "question-14": "Wie verleihe ich über listnride ein Fahrrad?",
-        "answer-14": "Wenn du eine Anfrage für eines Deiner Mieträder erhalten hast, geh einfach in die App oder auf die Webseite und melde Dich mit Deinem Account an. In der Accountübersicht klickst du oben rechts und gehst dann auf „Anfrage an mich“ im Menü Deines Accounts. Hier findest du die Anfrage, die du erhalten hast. Klick auf die Anfrage und antworte dem Interessenten und nehm die Anfrage entweder an oder lehn sie ab. Gleichzeitig kannst du auch mit dem Interessenten chatten, um alle Details zu klären. Wenn du die Anfrage annimmst, muss der Interessent seine Anfrage noch bestätigen und per Vorkasse bezahlen. Sobald er bestätigt und die Zahlung getätigt hat, erhältst du per E-Mail eine Benachrichtigung und der Status in Deinem Account wird aktualisiert. ",
+        "answer-14": "Wenn du eine Anfrage für eines Deiner Mieträder erhalten hast, geh einfach in die App oder auf die Webseite und melde Dich mit deinem Account an. In der Accountübersicht klickst du oben rechts und gehst dann auf „Anfrage an mich“ im Menü Deines Accounts. Hier findest du die Anfrage, die du erhalten hast. Klick auf die Anfrage und antworte dem Interessenten und nehm die Anfrage entweder an oder lehn sie ab. Gleichzeitig kannst du auch mit dem Interessenten chatten, um alle Details zu klären. Wenn du die Anfrage annimmst, muss der Interessent seine Anfrage noch bestätigen und per Vorkasse bezahlen. Sobald er bestätigt und die Zahlung getätigt hat, erhältst du per E-Mail eine Benachrichtigung und der Status in deinem Account wird aktualisiert. ",
         "question-15": "Was tun, wenn der ursprünglich angefragte Zeitraum nicht mit dem tatsächlichen Zeitraum übereinstimmt?",
         "answer-15": "Wenn sich der Mietzeitraum im Laufe Deiner Kommunikation mit dem Interessenten geändert hat, solltest du ihn darum bitten, Dir eine neue Anfrage mit den korrekten Datum und der richtigen Uhrzeit zu senden, damit die listnride-Garantie für den Verleih gilt. ",
         "question-16": "Was tun, wenn der angefragte Zeitraum für mich ungünstig ist?",
@@ -740,11 +750,11 @@
     "title": "Vertrauen & Sicherheit",
     "description": "listnride ist eine Community aus Veloliebhabern und Fahrradenthusiasten. Leute wie du und ich. Deswegen wollen wir Dir Ärger vom Leib und den Fahrspaß hoch halten.",
     "header": "Sorgenfrei in die Pedale treten",
-    "subheader": "Wir handeln in Deinem Sinne",
+    "subheader": "Wir handeln in deinem Sinne",
     "cover": {
       "logo": "insert logo here",
       "header": "Schäden sind kein Ruin",
-      "description": "Soms gaat het toch mis. Indien je fiets beschadigd raakt tijdens de huurperiode, komen onze verzekeringspartners in actie. De fiets en huurder zijn dus aan de zekere kant."
+      "description": "Wir werden euer investiertes Geld für zwei primäre Zwecke einsetzen: Um unser Wachstum zu finanzieren und neue Nutzer, vornehmlich in den vorhandenen Märkten, zu gewinnen. Unsere Community kann mit höheren Nutzerzahlen den Mietern eine größere Auswahl, und Vermietern eine höhere Nachfrage bieten, was den Service für alle attraktiver macht. Um unsere Plattform stetig durch neue Funktionen zu verbessern die das Miet-Erlebnis so einfach und effizient wie möglich macht. Intergration einer Versicherung und neue mobile Apps sind dabei die größten Milestones."
     },
     "control": {
       "logo": "hier logo einfügen",

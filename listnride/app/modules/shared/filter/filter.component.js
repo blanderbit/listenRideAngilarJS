@@ -30,7 +30,8 @@ angular.module('filter',[])
           // methods
           filter.onDateChange = onDateChange;
           filter.onBrandChange = onBrandChange;
-          filter.onSizeChange = onSizeChange;
+          // filter.onSizeChange = onSizeChange;
+          filter.onSimpleSizeChange = onSimpleSizeChange;
           filter.clearFilters = clearFilters;
           filter.onCategoryChange = onCategoryChange;
           filter.increaseBikesCount = increaseBikesCount;
@@ -47,8 +48,10 @@ angular.module('filter',[])
           filter.isClearDataRange = false;
           filter.currentDate = filter.initialValues.date;
           // sizes
-          filter.currentSizes = filter.initialValues.sizes.slice();
-          initializeSizeFilter();
+          // filter.currentSizes = filter.initialValues.sizes.slice();
+          filter.currentSize = filter.initialValues.sizes[0];
+          // initializeSizeFilter();
+          initializeSimpleSizeFilter();
 
           // categories
           filter.categories = [];
@@ -58,6 +61,7 @@ angular.module('filter',[])
           filter.currentCategories = filter.initialValues.categories.filter(Boolean).slice().map(Number);
           filter.openSubs = [];
         };
+
 
         // Wait for bikes to be actually provided
         filter.$onChanges = function (changes) {
@@ -84,14 +88,20 @@ angular.module('filter',[])
           });
         };
 
-        function onSizeChange() {
-          filter.updateState({ sizes: filter.currentSizes.join(',') });
+        // function onSizeChange() {
+        //   filter.updateState({ sizes: filter.currentSizes.join(',') });
+        //   applyFilters();
+        // };
+
+        function onSimpleSizeChange() {
+          filter.updateState({ sizes: filter.currentSize });
           applyFilters();
         };
 
         function clearFilters() {
           clearState(function(){
-            filter.currentSizes = [-1];
+            // filter.currentSizes = [-1];
+            filter.currentSize = filter.sizes[0].value;
             filter.currentCategories = [];
             filter.openSubs = [];
             filter.currentBrand = filter.brands[0];
@@ -147,19 +157,28 @@ angular.module('filter',[])
           }
         }
 
-        function initializeSizeFilter() {
-          if (filter.currentSizes[0] === '') filter.currentSizes[0] = '-1';
-          if (!filter.currentSizes.length) filter.increaseBikesCount();
+        // function initializeSizeFilter() {
+        //   if (filter.currentSizes[0] === '') filter.currentSizes[0] = '-1';
+        //   if (!filter.currentSizes.length) filter.increaseBikesCount();
+        //   filter.sizes = bikeOptions.sizeOptionsForSearch();
+        //   $translate('search.all-sizes').then(function (translation) {
+        //     filter.sizes[0].label = translation;
+        //   });
+        // }
+
+        function initializeSimpleSizeFilter() {
           filter.sizes = bikeOptions.sizeOptionsForSearch();
           $translate('search.all-sizes').then(function (translation) {
             filter.sizes[0].label = translation;
           });
+          if (filter.currentSize === '') filter.currentSize = filter.sizes[0].value;
         }
 
         function applyFilters() {
           var filteredBikes = filter.initialBikes.slice();
           filteredBikes = filterBrands(filteredBikes);
-          filteredBikes = filterSizes(filteredBikes);
+          // filteredBikes = filterSizes(filteredBikes);
+          filteredBikes = filterSize(filteredBikes);
           filteredBikes = filterCategories(filteredBikes);
           filter.bikes = filteredBikes;
 
@@ -179,12 +198,20 @@ angular.module('filter',[])
           }
         }
 
-        function filterSizes(bikes) {
-          // TODO: find clear solution for this
-          if (!_.isEmpty(filter.currentSizes) && filter.currentSizes.indexOf("-1") == -1 && filter.currentSizes.indexOf(-1) == -1) {
-            var selectedSizes = _.uniq(filter.currentSizes);
-            selectedSizes = selectedSizes.map(Number);
-            return arrayFilter(bikes, selectedSizes, 'size');
+        // function filterSizes(bikes) {
+        //   // TODO: find clear solution for this
+        //   if (!_.isEmpty(filter.currentSizes) && filter.currentSizes.indexOf("-1") == -1 && filter.currentSizes.indexOf(-1) == -1) {
+        //     var selectedSizes = _.uniq(filter.currentSizes);
+        //     selectedSizes = selectedSizes.map(Number);
+        //     return arrayFilter(bikes, selectedSizes, 'size');
+        //   } else {
+        //     return bikes;
+        //   }
+        // }
+
+        function filterSize(bikes) {
+          if (filter.sizes && filter.currentSize != filter.sizes[0].value) {
+            return filterFilter(bikes, filter.currentSize);
           } else {
             return bikes;
           }

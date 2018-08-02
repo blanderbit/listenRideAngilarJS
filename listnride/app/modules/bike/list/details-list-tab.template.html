@@ -63,7 +63,13 @@
 
           <md-input-container>
             <label>{{ 'list.details.label' | translate }}</label>
-            <textarea md-no-resize md-maxlength="800" name="details" ng-model="detailsTab.parent.form.details" rows="2"></textarea>
+            <textarea
+              md-no-resize
+              md-detect-hidden
+              md-maxlength="800"
+              name="details"
+              ng-model="detailsTab.parent.form.details"
+              rows="2"></textarea>
           </md-input-container>
         </div>
       </div>

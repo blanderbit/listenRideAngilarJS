@@ -1,7 +1,7 @@
 {
   "shared": {
     "learn-more": "Meer info",
-    "basic-fee": "Servicekosten zijn inclusief basisverzekering",
+    "basic-fee": "Servicekosten inclusief basisverzekering",
     "how-it-works": "Hoe werkt het",
     "list-a-bike": "Fiets verhuren",
     "renting-a-bike": "Fiets huren",
@@ -145,7 +145,6 @@
     "meta-title": "Fietsverzekering voor elke verhuur in Duitsland en Oostenrijk",
     "meta-description": "Elke fietshuur in Duitsland en Oostenrijk zijn automatisch via listnride verzekerd. "
   },
-  "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
       "berlin": {
@@ -172,6 +171,14 @@
     "events": {
       "rapha-super-cross": {
         "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
+      },
+      "eroica-gaiole": {
+        "meta-title": "Eroica vintage wielerevenement",
+        "meta-description": "Huur je vintage racefiets voor de Eroica on listnride"
+      },
+      "toros-del-gravel": {
+        "meta-title": "Huur de perfecte fiets voor Toros del Gravel",
+        "meta-description": "Op de lijst vindt u een selectie van gravel en mountainbikes die u kunt huren voor dit speciale gravelevenement in Sineu op Mallorca."
       },
       "in-velo-veritas": {
         "meta-title": "In Velo Veritas - Rent a bike with listnride",
@@ -379,12 +386,12 @@
       "premium-insurance": "Premium insurance",
       "premium-insurance-title": "Premium verzekering ",
       "premium-insurance-subtitle": "Pick our premium insurance for your ride to be on the safe side",
-      "thats-included": "Naast de basisverzekering is het onderstaande extra inbegrepen",
-      "premium-feature-1": "Bescherming ook tegen diefstal",
+      "thats-included": "Naast de basisverzekering is het onderstaande mede inbegrepen",
+      "premium-feature-1": "Diefstal bescherming",
       "premium-feature-2": "Vervangende fiets na schade, ongeval of diefstal",
-      "premium-feature-3": "Retourtransport van de fiets na een ongeval of schade",
+      "premium-feature-3": "Retourtransport van de huurfiets na een ongeval of schade",
       "premium-feature-4": "Geen eigen risiko",
-      "premium-feature-5": "24/7 hotline ",
+      "premium-feature-5": "24/7 noodnummer",
       "payment": "Betaling",
       "redeem-voucher": "Voucher verzilveren",
       "add": "Voeg toe",
@@ -591,6 +598,7 @@
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} uit {{user.city}} zou graag jouw <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. leg alle verdere details vast via de Chat.",
+    "11": "De boeking is geannuleerd",
     "3": "Je hebt de aanvraag bevestigd. Je fiets is nu verhuurd voor de periode {{timespan}}! De contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\n<br>\nNaam: {{user.first_name}} {{user.last_name}} \n<br>Nummer: {{user.pretty_phone_number}} \n<br>Adres: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
     "5": "Hartelijk bedankt voor het bevestigen van de teruggave van de fiets als ook je recensie. De verhuurtransactie is nu afgerond en het geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons gerust een e-mail aan hello@listnride.com",
     "8": "Je hebt de aanvraag afgewezen. Schrijf de aanvrager kort een berichtje waarom het niet lukt.",
@@ -599,6 +607,7 @@
   },
   "rideChat": {
     "1": "Je zou graag {{lister.business_name}} <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. Spreek de verdere details met de verhuurder af. Zodra je aanvraag wordt aangenomen, is de boeking rond.",
+    "11": "De boeking van je huurfiets is geannuleerd.",
     "3": "Gefeliciteerd, {{lister.first_name}} heeft je aanvraag geaccepteerd, je boeking is hiermee bevestigd. De contactgegevens zijn de volgende, alle details worden je ook per email toegestuurd.<br><br>Naam: {{lister.first_name}} {{lister.last_name}}<br>Nummer: {{lister.pretty_phone_number}}<br>Adres: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} heeft de teruggave van de fiets bevestigd. Tenslotte vragen wij je een recensie van de ervaring achter te laten. Dit helpt onze community zeer en rondt tevens de transactie af.",
     "6": "Bedankt voor je recensie. De verhuur is succesvol verlopen.",
@@ -610,6 +619,9 @@
     "first-name": "Voornaam",
     "last-name": "Achternaam",
     "email-address": "Emailadres",
+    "update-password": "Update Password",
+    "old-password": "Old Password",
+    "new-password": "New Password",
     "password": "Wachtwoord",
     "forgot-password": "Wachtwoord vergeten?",
     "or": "of",
@@ -626,7 +638,7 @@
     "description_min_100": "Beschrijvingstekst moet min. 100 tekens lang zijn",
     "address": "Adres",
     "profile-picture": "Profielfoto",
-    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
+    "profile-picture-info": "Upload alleen bestanden in formats als jpg, jpeg, png. Maximale grootte is 20 MB. Minimale dimensie is 100 px x 100 px.",
     "profile-picture-info-policy": "Door een profielfoto te uploaden, ga ik ermee akkoord dat listnride de afbeelding opslaat zoals beschreven in het <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacybeleid </a>. Ik kan de foto op elk moment verwijderen.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "Je fotoformaat is meer dan de toegestane maximale grootte",
@@ -692,7 +704,7 @@
   },
   "search": {
     "no-bikes": "Er zijn helaas nog geen fietsen op deze locatie. Omdat we snel groeien, zal dat waarschijnlijk snel gebeuren! Als je wilt, kun je <a href=\"/listing-a-bike\">zelf een fiets een lijst laten maken </a>of zoek je naar een andere stad of specifieke locatie in de buurt.",
-    "bikes-found": "bikes found:",
+    "bikes-found": "aantal fietsen",
     "all-sizes": "Alle Maten",
     "bikes-in": "fietsen in",
     "meta-title": "Huur de perfekte fiets in {{location}}.",
@@ -709,7 +721,7 @@
   },
   "calendar": {
     "invalid-date": "Ingevulde Datums zijn niet correct",
-    "info-service-fee-insurance": "Helpt ons om listnride te gebruiken en een beveiligde fietsverhuurservice aan te bieden. Omvat basisverzekering, servicekosten en btw.",
+    "info-service-fee-insurance": "Helpt ons om listnride te gebruiken en een beveiligde fietsverhuurservice aan te bieden.",
     "basic-insurance-included": "Inclusief basisverzekering ",
     "request-bike": "Fiets aanvragen",
     "to-request-bike-please": "om een fiets aan te vragen, eerst",
@@ -721,7 +733,7 @@
     "info-discount": "Gemiddelde dagelijkse korting<br>krijgt u per dag door voor<br>een langere periode te huren.",
     "info-service-fee": "De servicegeld wordt gebruikt<br>voor het aanbieden van listnride.<br>Het is inclusief BTW.",
     "info": "Klik eerst in de bovenstaande<br> kalender op de dag waarop u de fiets<br>wilt huren en op de tweede<br>dag dat u het wenst te retourneren.",
-    "info-without-calendar": "Klik eerst in de bovenstaande kalender op de dag waarop u de fietswilt huren en op de tweededag dat u het wenst te retourneren."
+    "info-without-calendar": "Klik eerst de dag aan waarop u de fiets wilt huren en dan op de dag dat u het wenst te retourneren. Selecteer vervolgens de starttijd en eindtijd."
   },
   "list": {
     "edit-bike": "Fiets bewerken",
@@ -731,7 +743,7 @@
     "next": "Verder",
     "list-bike": "Fiets plaatsen",
     "category": {
-      "header": "Wat is de fietscategorie?",
+      "header": "Welke type fiets heb je?",
       "hint": "Kies allereerst de categorie van je fiets. Kies daarna de juiste subcategorie.",
       "label": "Categorie",
       "city": "Stad",

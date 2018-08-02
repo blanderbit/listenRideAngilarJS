@@ -150,7 +150,6 @@
     "meta-title": "Versicherung für jede Miete in Deutschland und Österreich.",
     "meta-description": "Jeder Miete in Deutschland oder Österreich über listnride ist automatisch versichert."
   },
-  "coco-mat.bike": "Coco-mat-Räder",
   "meta": {
     "cities": {
       "berlin": {
@@ -177,6 +176,10 @@
     "events": {
       "rapha-super-cross": {
         "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
+      },
+      "eroica-gaiole": {
+        "meta-title": "L' Eroica, Historisches Radrennen mit Vintage-Rennrädern",
+        "meta-description": "Miete dein Vintage-Rennrad für die Eroica"
       },
       "in-velo-veritas": {
         "meta-title": "Klassikerausfahrt: In Velo Veritas mit listnride",
@@ -310,7 +313,7 @@
     },
     "imprint": {
       "meta-title": "listnride Impressum",
-      "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach Deinem Stil und Einsatzzweck."
+      "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach deinem Stil und Einsatzzweck."
     },
     "privacy": {
       "meta-title": "Datenschutzerklärung von listnride",
@@ -384,7 +387,7 @@
       "premium-insurance": "Premium-Versicherung",
       "premium-insurance-title": "Abdeckung der Premium-Versicherung",
       "premium-insurance-subtitle": "Wähle unsere Premium-Versicherung für Deine Miete und fahre sorgenfrei",
-      "thats-included": "Zusätzlich zur Basis-Versicherung enthalten",
+      "thats-included": "Zusätzlich zur Basis-Versicherung ist dies enthalten:",
       "premium-feature-1": "Diebstahlschutz",
       "premium-feature-2": "Ersatzrad nach Diebstahl oder Beschädigung",
       "premium-feature-3": "Rücktransport nach Diebstahl oder Beschädigung",
@@ -593,12 +596,13 @@
     "confirm": "Bestätigen",
     "confirm_return": "Rückgabe bestätigen",
     "documents-title": "Versicherungszertifikate",
-    "documents-description": "Hier kannst du Deine Versicherungszertifikate herunterladen. Diese Dokumente wurden dir auch per E-Mail zugesandt.",
+    "documents-description": "Hier kannst du deine Versicherungszertifikate herunterladen. Diese Dokumente wurden dir auch per E-Mail zugesandt.",
     "insurance-bike": "Fahrradversicherungszertifikat",
     "insurance-bike-assist": "Bike Assist Versicherungsschein"
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} würde gerne dein <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Sobald du die Anfrage annimmst, wird sie gebucht. Vereinbare alle weiteren Details über den Chat.",
+    "11": "Your request was manually cancelled",
     "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon-Nummer: {{user.pretty_phone_number}} <br>Adresse: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
     "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
@@ -607,6 +611,7 @@
   },
   "rideChat": {
     "1": "Du würdest gerne {{lister.business_name}} <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, ist das Rad gebucht.",
+    "11": "The request got cancelled.",
     "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.pretty_phone_number}}<br>Adresse: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} hat die Rückgabe des Rades bestätigt und dich bewertet.<br>Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",
     "6": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
@@ -618,6 +623,9 @@
     "first-name": "Vorname",
     "last-name": "Nachname",
     "email-address": "E-Mail-Adresse",
+    "update-password": "Update Password",
+    "old-password": "Old Password",
+    "new-password": "New Password",
     "password": "Passwort",
     "forgot-password": "Passwort vergessen?",
     "or": "oder",
@@ -634,7 +642,7 @@
     "description_min_100": "Beschreibung sollte min. 100 Buchstaben lang sein",
     "address": "Adresse",
     "profile-picture": "Profilbild",
-    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
+    "profile-picture-info": "Bitte nur diese Formate hochladen: jpg, jpeg, png. Maximale Größe ist 20mb. Minimale Dimension ist 100px x 100px.",
     "profile-picture-info-policy": "Durch das Hochladen eines Bildes stimme ich zu, dass listnride das Bild wie in der <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Datenschutzerklärung </a>beschrieben speichert. Ich kann es jederzeit löschen.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "Die Größe des Bildes überschreitet die maximal erlaubte Bildgröße",
@@ -679,7 +687,7 @@
     "landing-section-header": "Das perfekte Rad. Einfach mieten.",
     "insurance": {
       "description": "Egal ob minimalistisches Fixie oder High-End Triathlonrad: Jede listnride-Vermietung in Deutschland oder Österreich ist versichert! Einfach. Unbürokratisch. Jederzeit.",
-      "header": "Versicherungsschutz für jede Vermietung auf listnride",
+      "header": "Versicherungsschutz für deine Vermietung auf listnride",
       "logo-description": "In Kooperation mit hepster und"
     },
     "landing-section-subheader": "Miete dir auf listnride ein Fahrrad wie du es magst und gerade brauchst.",
@@ -718,7 +726,7 @@
   },
   "calendar": {
     "invalid-date": "Datumsangabe nicht korrekt",
-    "info-service-fee-insurance": "Hilft uns, listnride zu betreiben und einen sicheren Fahrradverleih anzubieten. Inklusive Basis-Versicherung, Gebühren und MwSt.",
+    "info-service-fee-insurance": "Hilft uns, listnride zu betreiben und einen sicheren Fahrradverleih anzubieten.",
     "basic-insurance-included": "Basis-Versicherung inklusive",
     "request-bike": "Rad anfragen",
     "to-request-bike-please": "um ein Rad anzufragen bitte",
@@ -728,8 +736,8 @@
     "select-timespan": "Wähle zuerst die Mietdauer",
     "select-timespan-description": "Bevor du eine Anfrage stellen kannst, lege bitte die Zeitspanne für die Miete fest. Klicke einfach auf die Tage und wähle Abhol- und Rückgabezeiten im Kalender.",
     "info-subtotal": "Dies ist der Tagespreis für die<br>Anzahl der Tage, die du das<br>Fahrrad mieten möchten.",
-    "info-discount": "Durchschnittlicher Tagesrabatt<br>pro Tag bei Miete für<br>einen längeren Zeitraum.",
-    "info-service-fee": "Die Servicegebühr hilft uns,<br>listnride zu betreiben. Sie enthält <br>die Umsatzsteuer.",
+    "info-discount": "Durchschnittlicher Tagesrabatt<br>pro Tag bei Miete über<br>einen längeren Zeitraum.",
+    "info-service-fee": "Die Servicegebühr hilft uns,<br>listnride zu betreiben. Sie enthält <br>die Mehrwertsteuer.",
     "info": "Im Kalender erst den Tag auswählen,<br>an dem du das Fahrrad mieten möchtest,<br>und dann den Tag, an dem<br>du es zurückgeben magst.",
     "info-without-calendar": "Im Kalender erst den Tag auswählen,<br0>an dem du das Fahrrad mieten möchtest,<br1>und dann den Tag, an dem<br2>du es zurückgeben magst."
   },

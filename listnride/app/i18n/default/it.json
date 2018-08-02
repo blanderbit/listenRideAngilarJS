@@ -147,7 +147,6 @@
     "meta-title": "Assicurazione per ogni noleggio in Germania e Austria",
     "meta-description": "Ogni noleggio in Germania e Austria tramite listnride  è automaticamente assicurato"
   },
-  "coco-mat.bike": "Coco-mat bikes",
   "meta": {
     "cities": {
       "berlin": {
@@ -174,6 +173,14 @@
     "events": {
       "rapha-super-cross": {
         "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
+      },
+      "eroica-gaiole": {
+        "meta-title": "L' Eroica, manifetazione cicloturistica con bici da corsa d'epoca",
+        "meta-description": "Noleggia la tua bici da corsa vintage per l'Eroica"
+      },
+      "toros-del-gravel": {
+        "meta-title": "Noleggia la bici perfetta per Toros del Gravel",
+        "meta-description": "Su listnride troverai una selezione di Gravel e Mtb da noleggiare per questo speciale evento Gravel a Sineu a Maiorca."
       },
       "in-velo-veritas": {
         "meta-title": "In Velo Veritas - Rent a bike with listnride",
@@ -589,6 +596,7 @@
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} di {{user.city}} vorrebbe noleggiare la tua <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> dal {{timespan}}. Accetto ulteriori dettagli utilizzando la chat.",
+    "11": "La prenotazione è stata cancellata.",
     "3": "{{user.zip}} Hai accettato la richiesta. La bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I recapiti sono i seguenti, li abbiamo inviati via e-mail. <br><br>Nome:\n{{user.first_name}} {{user.last_name}}<br>Telefono: {{user.pretty_phone_number}} <br>Indirizzo: {{user.street}}, {{user.city}}, {{user.country}}",
     "5": "Grazie per aver confermato il recupero della tua bicicletta e della tua valutazione su {{user.first_name}}. Il noleggio è riuscito e i soldi verranno trasferiti al conto bancario fornito durante i prossimi 7 giorni lavorativi. <br><br>In caso di ulteriori domande o commenti, scrivi a <a mailto:=\"hello@listnride.com\">ciao @ listnride.com </a>",
     "8": "Hai respinto la richiesta. Prego scrivi al noleggiante perché non puoi noleggiare la bicicletta.",
@@ -597,6 +605,7 @@
   },
   "rideChat": {
     "1": "Vorresti noleggiare la <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> di {{lister.business_name}} dal {{timespan}}. Acconsento a fornire al noleggiatore ulteriori dettagli. Non appena accetta la tua richiesta, la bicicletta sarà prenotata.",
+    "11": "La prenotazione della tua bicicletta a noleggio è stata annullata.",
     "3": "Congratulazioni, {{lister.first_name}} ha accettato la tua richiesta, quindi la bicicletta è stata prenotata con successo. Come d'accordo incontra il noleggiatore e ritira la bicicletta. I recapiti sono i seguenti, li abbiamo mandati via e-mail. <br><br>Nome: {{lister.first_name}} {{lister.last_name}}, <br>Telefono: {{lister.pretty_phone_number}}, <br>Indirizzo: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} ha confermato il ritorno del mezzo e ti ha fatto una recensione. Infine, ti preghiamo di valutare l'esperienza. Questo aiuta molto la nostra comunità e completa il noleggio.",
     "6": "Grazie per la valutazione, il noleggio è stato completato con successo.",
@@ -608,6 +617,9 @@
     "first-name": "Nome",
     "last-name": "Cognome",
     "email-address": "Indirizzo Email",
+    "update-password": "Update Password",
+    "old-password": "Old Password",
+    "new-password": "New Password",
     "password": "Password",
     "forgot-password": "Hai dimenticato la password ?",
     "or": "o",
@@ -624,7 +636,7 @@
     "description_min_100": "La descrizione deve essere min. di 100 caratteri.",
     "address": "Indirizzo",
     "profile-picture": "Immagine del profilo",
-    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
+    "profile-picture-info": "Si prega di caricare solo i formati come jpg, jpeg, png. La dimensione massima è 20mb. La dimensione minima è 100 px x 100 px.",
     "profile-picture-info-policy": "Caricando un'immagine, accosento che listnride salvi l'immagine come descritto nelle <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Norme sulla Privacy</a>. Posso cancellarla in qualsiasi momento.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "La dimensione dell'immagine è superiore alla dimensione massima consentita",
@@ -669,7 +681,7 @@
     "landing-section-header": "La bicicletta perfetta. Noleggiala subito.",
     "insurance": {
       "description": "Non importa se una fixie o una bici da triathlon di alta gamma: ogni noleggio in Germania o in Austria è assicurato! Semplice. In ogni momento.",
-      "header": "Copertura assicurativa per ogni noleggio su listnride",
+      "header": "Copertura assicurativa per il tuo noleggio su listnride",
       "logo-description": "In collaborazione con hepster"
     },
     "landing-section-subheader": "Unisciti a listnride e trova la bicicletta giusta per te.",
@@ -691,7 +703,7 @@
   },
   "search": {
     "no-bikes": "Non ci sono biciclette in questa località",
-    "bikes-found": "bikes found:",
+    "bikes-found": "bici trovate",
     "all-sizes": "Tutte le misure",
     "bikes-in": "Biciclette a",
     "meta-title": "Noleggia la bicicletta perfetta a {{location}}.",
@@ -708,7 +720,7 @@
   },
   "calendar": {
     "invalid-date": "Le date non sono valide",
-    "info-service-fee-insurance": "Aiutaci a gestire listnride e ad offrire un servizio di noleggio bici sicuro. Include assicurazione di base, costi di servizio e IVA.",
+    "info-service-fee-insurance": "Aiutaci a gestire listnride e ad offrire un servizio di noleggio bici sicuro.",
     "basic-insurance-included": "Assicurazione base inclusa",
     "request-bike": "Richiedi la bicicletta",
     "to-request-bike-please": "per richiedere una bicicletta per favore",

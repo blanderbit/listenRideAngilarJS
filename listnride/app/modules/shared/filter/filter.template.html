@@ -17,7 +17,19 @@
     </span>
 
   </md-button>
-  <md-menu md-position-mode="target bottom">
+
+  <md-select
+    class="lnr-margin-left"
+    ng-model="filter.currentSize"
+    ng-class="filter.currentSize != filter.sizes[0].value ? 'filter__selected': ''"
+    ng-change="filter.onSimpleSizeChange()"
+  >
+    <md-option ng-repeat="option in filter.sizes" value="{{option.value}}">
+      {{option.label}}
+    </md-option>
+  </md-select>
+
+  <!-- <md-menu md-position-mode="target bottom">
     <md-button
       class="md-lined lnr-no-margin lnr__filter-btn"
       ng-class="filter.currentSizes.length >= 1 && filter.currentSizes[0] != -1 || filter.currentSizes.length > 1 ? 'filter__selected': ''"
@@ -38,7 +50,7 @@
         <bike-count-filter></bike-count-filter>
       </div>
     </md-menu-content>
-  </md-menu>
+  </md-menu> -->
 
   <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
     <md-button
