@@ -57,13 +57,13 @@
           </md-list-item>
         </div>
       </md-list>
-      
+
       <!-- table -->
       <md-list>
         <md-list-item id="$index" class="lnr-listing-list-item" ng-click="listView.view(bike.id, $event)" ng-repeat="bike in listView.bikes">
           <div layout="column" flex="100">
-            <div layout="row" ng-class="{'lnr-unavailable': !bike.available}" layout-align="start center">
-              <div style="margin-top: 15px;" flex="10">
+            <div layout="row" class="break-word" ng-class="{'lnr-unavailable': !bike.available}" layout-align="start center">
+              <div flex="10">
                 <img hide-xs ng-src="{{bike.image_file_1.image_file_1.thumb.url}}" class="md-avatar" />
               </div>
               <div flex="10">{{bike.bicycle_number}}</div>

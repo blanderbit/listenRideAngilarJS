@@ -337,6 +337,10 @@ booking md-tabs-wrapper {
   pointer-events: none;
 }
 
+.booking__body md-tabs {
+  overflow: visible;
+}
+
 md-tooltip .md-content {
   height: auto !important;
   line-height: 15px !important;
@@ -1755,6 +1759,14 @@ listings .lnr-bike-listings {
   height: 60px;
   border-bottom: 1px solid #e1e1e1;
   cursor: default;
+}
+
+.lnr-listing-list-item .md-list-item-inner {
+  line-height: 1;
+}
+
+.break-word {
+  word-wrap: break-word;
 }
 
 .lnr-listing-list-item:hover {
