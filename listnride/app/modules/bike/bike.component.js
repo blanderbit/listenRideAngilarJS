@@ -22,12 +22,12 @@ angular.module('bike',[]).component('bike', {
       };
 
       bike.heroshot = function () {
-        return bike.mobileCalendar() ? bike.data.image_file_1.image_file_1.small.url : bike.data.image_file_1.image_file_1.large.url;
+        if (bike.data) return bike.mobileCalendar() ? bike.data.image_file_1.image_file_1.small.url : bike.data.image_file_1.image_file_1.large.url;
       }
 
       // TODO: move all api calls in service
       // it is really difficult to test api calls from controller.
-      // controller should only be used for data binding and 
+      // controller should only be used for data binding and
       // not for logic and api calls
       api.get('/rides/' + $stateParams.bikeId).then(
         function(response) {
@@ -60,7 +60,7 @@ angular.module('bike',[]).component('bike', {
       );
 
       bike.showAttribute = function(attr) {
-        return !(attr === null || attr === 'null' || typeof attr === 'undefined');
+        return !(attr == false || attr === null || attr === 'null' || typeof attr === 'undefined');
       };
 
       bike.showGalleryDialog = function(event) {
