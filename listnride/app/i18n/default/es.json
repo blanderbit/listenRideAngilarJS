@@ -596,7 +596,7 @@
   },
   "listChat": {
     "1": "A {{user.first_name}}{{user.last_name}} de {{user.city}} le gustaría alquilar tu <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> desde {{timespan}}. Concreta más detalles usando el chat.",
-    "11": "Your request was manually cancelled",
+    "11": "Su solicitud fue cancelada.",
     "3": "Has aceptado la solicitud. La bici ahora está reservada y la alquilarás desde {{timespan}}. Los datos de contacto son los siguientes, también te los hemos enviado por correo electrónico <br><br>Nombre: {{user.first_name}}{{user.last_name}}<br>Teléfono: {{user.pretty_phone_number}}<br>Dirección: {{user.street}}, <lh9lh> {{user.city}}, {{user.country}}",
     "5": "Gracias por confirmar que has recuperado tu bici y por valorar a{{user.first_name}}. El alquiler se realizó correctamente y en los próximos 7 días hábiles se transferirá el dinero a la cuenta bancaria que proporcionaste. <br><br>En caso de que tengas alguna otra pregunta o comentario, nos encantaría recibirlos en <a mailto:=\"hello@listnride.com\">hello@listnride.com </a>",
     "8": "Rechazó la solicitud. Dígale al ciclista por qué no puede alquilarle la bici.",
@@ -605,7 +605,7 @@
   },
   "rideChat": {
     "1": "Te gustaría alquilar <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> de {{lister.business_name}} desde {{timespan}}. Acuerda más detalles con el anunciante. La bici queda reservada tan pronto como dicha persona acepte tu pedido. ",
-    "11": "The request got cancelled.",
+    "11": "La reserva de su bicicleta fue cancelada.",
     "3": "Enhorabuena, {{lister.first_name}}ha aceptado tu solicitud, por lo que la bici se ha reservado correctamente. Queda con el anunciante como se acordó y recoge la bici. Los datos de contacto son los siguientes, también los hemos enviado a tu correo electrónico <br><br>Nombre:. {{lister.first_name}}{{lister.last_name}}, <br>Teléfono: {{lister.pretty_phone_number}}, <br>Dirección: {{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}}ha confirmado que ha terminado el paseo en bici y ha hecho una valoración sobre ti. Por útimo, califica el paseo. Esto ayuda mucho a nuestra comunidad y concluye el alquiler.",
     "6": "Gracias por la valoración, el alquiler se realizó con éxito.",
@@ -1118,8 +1118,8 @@
     "header": "Alquile las mejores bicicletas en",
     "rent-the-best": "Rent the best",
     "bikes": "bikes",
-    "rent-perfect-bikes-in": "Rent perfect bikes in",
-    "rent-category-bikes-in": "We offer you a large choice of rental bikes",
+    "rent-perfect-bikes-in": "Alquile la bici perfecta en ",
+    "rent-category-bikes-in": "Le ofrecemos una gran variedad de bicicletas de alquiler",
     "bike-shops-in": "Tiendas de bicis en",
     "city": "city bikes",
     "race": "race bikes",
