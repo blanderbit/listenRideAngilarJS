@@ -27,7 +27,7 @@ angular.module('bike',[]).component('bike', {
 
       // TODO: move all api calls in service
       // it is really difficult to test api calls from controller.
-      // controller should only be used for data binding and 
+      // controller should only be used for data binding and
       // not for logic and api calls
       api.get('/rides/' + $stateParams.bikeId).then(
         function(response) {
@@ -60,7 +60,7 @@ angular.module('bike',[]).component('bike', {
       );
 
       bike.showAttribute = function(attr) {
-        return !(attr === null || attr === 'null' || typeof attr === 'undefined');
+        return !(attr == false || attr === null || attr === 'null' || typeof attr === 'undefined');
       };
 
       bike.showGalleryDialog = function(event) {
