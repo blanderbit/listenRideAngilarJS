@@ -8,6 +8,8 @@ angular.module('eroicaGaiole',[]).component('eroicaGaiole', {
         var eroicaGaiole = this;
         $tpl.addPart('static');
 
+        eroicaGaiole.bikes = [];
+
         eroicaGaiole.sizeOptions = [
             {value: "", label: "-"},
             {value: 155, label: "155 - 165 cm"},
@@ -27,8 +29,9 @@ angular.module('eroicaGaiole',[]).component('eroicaGaiole', {
         // TODO: add booked_at filter for 
         api.get('/users/6352').then(
             function(response) {
-                console.log(response);
-                eroicaGaiole.bikes = response.data.rides;
+                _.each(response.data.rides, function(value) {
+                    if (value.brand != "FOCUS") eroicaGaiole.bikes.push(value);
+                });
             },
             function(error) {
             }
