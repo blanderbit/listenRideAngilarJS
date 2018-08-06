@@ -19,6 +19,7 @@ angular.module('listnride', [
   'rating',
   'listingABike',
   'rentingABike',
+  'multiBooking',
   'static',
   'listnride.constant',
   'metaTags',
