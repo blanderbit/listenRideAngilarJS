@@ -181,8 +181,8 @@
         "meta-title": "Eroica classic road bike event",
         "meta-description": "Rent your vintage road bike for Eroica on listnride"
       },
-      "toros-del-gravel": {
-        "meta-title": "Rent the perfect bike for Toros del Gravel",
+      "toros-de-gravel": {
+        "meta-title": "Rent the perfect bike for Toros de Gravel",
         "meta-description": "On listnride you'll find a selection of gravel and mountainbikes for you to rent for this special gravel event in Sineu on Majorca. "
       },
       "in-velo-veritas": {
@@ -725,7 +725,7 @@
     "timespan": "Timespan",
     "category": "Bike Type",
     "clear-filters": "Clear filters",
-    "all-brands": "All brands",
+    "all-brands": "All Brands",
     "all-bikes": "All bikes"
   },
   "calendar": {
