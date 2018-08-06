@@ -54,17 +54,24 @@ angular.module('message',[]).component('message', {
         api.get(insuranceEndpoint + certificateId, 'blob').then(
           function (success) {
             var name = message.request.insurance.items_uid.thing == certificateId ? "Bike" : "Bike Assist";
-            var file = new Blob([success.data], {type: 'application/pdf'});
-            var link = document.createElement('a');
-            link.href = window.URL.createObjectURL(file);
-            link.download="Certificate " + name + " Insurance " + message.request.id + ".pdf";
-            link.click();
+            var fileName ="Certificate " + name + " Insurance " + message.request.id + ".pdf";
+            downloadAttachment(fileName, success.data, 'application/pdf');
           },
           function (error) {
-            console.log("error happened");
           }
         );
       };
+
+      function downloadAttachment(fileName, data, type) {
+        var a = document.createElement('a');
+        document.body.appendChild(a);
+        var file = new Blob([data], {type: type});
+        var fileURL = window.URL.createObjectURL(file);
+        a.href = fileURL;
+        a.download = fileName;
+        a.click();
+        document.body.removeChild(a);
+      }
 
       message.closeDialog = function() {
         $mdDialog.hide();
