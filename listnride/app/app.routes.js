@@ -340,15 +340,15 @@
       });
 
       $stateProvider.state({
-        name: 'torosDelGravel',
-        url: '/toros-del-gravel',
-        template: '<toros-del-gravel></toros-del-gravel>',
+        name: 'torosDeGravel',
+        url: '/toros-de-gravel',
+        template: '<toros-de-gravel></toros-de-gravel>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["meta.events.toros-del-gravel.meta-title", "meta.events.toros-del-gravel.meta-description"])
+            $translate(["meta.events.toros-de-gravel.meta-title", "meta.events.toros-de-gravel.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.toros-del-gravel.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.toros-del-gravel.meta-description"]);
+                ngMeta.setTitle(translations["meta.events.toros-de-gravel.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.toros-de-gravel.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
           }
