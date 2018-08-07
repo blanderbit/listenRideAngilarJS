@@ -2872,6 +2872,14 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   margin-bottom: 0;
 }
 
+.multi-booking__filter-text {
+  overflow: hidden;
+  width: 100%;
+  display: inline-block;
+  line-height: 14px;
+  text-overflow: ellipsis;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  MEDIA
 /*-----------------------------------------------------------------------------------*/

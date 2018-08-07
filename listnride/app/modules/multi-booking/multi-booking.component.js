@@ -10,26 +10,40 @@ angular.module('multiBooking', []).component('multiBooking', {
       multiBooking.$onInit = function () {
         // methods
         multiBooking.send = send;
+        multiBooking.closeDateRange = closeDateRange;
 
         // variables
         multiBooking.form = {
           location: $stateParams.location ? $stateParams.location : '',
           start_date: '',
-          duration: 0
+          duration: 0,
+          categories: [],
+          accessories: []
         };
       }
 
       ///////////
 
-      function send() {
-        api.post('/multi-booking/' + multiBooking.form.data).then(
-          function (success) {
+      // tricky function to initialize date-picker close, when we click ng-menu
+      function closeDateRange() {
+        var datePickerTrigger = angular.element('.js-datepicker-opened');
+        if (!!datePickerTrigger.length) {
+          datePickerTrigger.click();
+        }
+      }
 
-          },
-          function (error) {
+      function send($event) {
+        $event.preventDefault();
+        console.log('seve');
+        console.log(multiBooking.form);
+        // api.post('/multi-booking/' + multiBooking.form.data).then(
+        //   function (success) {
 
-          }
-        );
+        //   },
+        //   function (error) {
+
+        //   }
+        // );
       }
     }
   ]

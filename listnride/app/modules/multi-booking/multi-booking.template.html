@@ -32,6 +32,7 @@
     <form
       name="listBike"
       class="lnr-form-multi-booking"
+      ng-submit="multiBooking.send()"
       layout-padding
     >
 
@@ -44,7 +45,30 @@
           </md-input-container>
           <md-input-container>
             <label>{{ 'multi-booking.what-bike-kind' | translate }}</label>
-            <!-- INSERT BIKE CATEGORY SELECT -->
+            <div>
+              <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
+                <md-button
+                  class="md-lined lnr-no-margin lnr__filter-btn md-right-arrow"
+                  ng-click="$mdOpenMenu($event); multiBooking.closeDateRange()"
+                  style="width: 100%;text-align: left;"
+                >
+                  <span class="multi-booking__filter-text">
+                    {{ 'search.category' | translate }}
+                  </span>
+                </md-button>
+                <md-menu-content width="5" class="lnr-100mh">
+                  <div class="lnr-padding">
+                    <div class="lnr-right">
+                      <md-button show-xs hide-gt-xs class="md-icon-button md-warn md-menu__close-btn lnr-md-no-focused">
+                        <md-icon md-font-icon="fa-times" class="fa"></md-icon>
+                      </md-button>
+                    </div>
+                    <category-filter current-categories="multiBooking.form.categories">
+                    </category-filter>
+                  </div>
+                </md-menu-content>
+              </md-menu>
+            </div>
         </div>
         <div flex="100" flex-gt-sm="50" class="booking__daterange-focus">
           <div class="lnr-margin-lrg-bottom" layout="column" layout-gt-sm="row">
@@ -73,7 +97,28 @@
           </div>
           <md-input-container>
             <label>{{ 'multi-booking.do-you-need-accessories' | translate }}</label>
-            <!-- INSERT BIKE ACCESSORIES SELECT -->
+            <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
+                <md-button
+                  class="md-lined lnr-no-margin lnr__filter-btn md-right-arrow"
+                  ng-click="$mdOpenMenu($event); multiBooking.closeDateRange()"
+                  style="width: 100%;text-align: left;"
+                >
+                  <span class="multi-booking__filter-text">
+                    Accessories
+                  </span>
+                </md-button>
+                <md-menu-content width="5" class="lnr-100mh">
+                  <div class="lnr-padding">
+                    <div class="lnr-right">
+                      <md-button show-xs hide-gt-xs class="md-icon-button md-warn md-menu__close-btn lnr-md-no-focused">
+                        <md-icon md-font-icon="fa-times" class="fa"></md-icon>
+                      </md-button>
+                    </div>
+                    <accessories-filter current-accessories="multiBooking.form.accessories">
+                    </accessories-filter>
+                  </div>
+                </md-menu-content>
+              </md-menu>
           </md-input-container>
         </div>
       </div>
@@ -125,9 +170,9 @@
 
       <div class="lnr-no-padding lnr-sm-text-center lnr-right">
         <md-button
-        type="submit"
-        class="md-raised md-primary md-lrg">
-          {{ 'shared.send' | translate }}
+          type="submit"
+          class="md-raised md-primary md-lrg">
+            {{ 'shared.send' | translate }}
         </md-button>
       </div>
 

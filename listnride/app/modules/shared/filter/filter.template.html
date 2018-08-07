@@ -67,7 +67,11 @@
             <md-icon md-font-icon="fa-times" class="fa"></md-icon>
           </md-button>
         </div>
-        <category-filter></category-filter>
+        <category-filter
+          on-filter-change="filter.onCategoryChange"
+          current-categories="filter.currentCategories"
+        >
+        </category-filter>
       </div>
     </md-menu-content>
   </md-menu>
