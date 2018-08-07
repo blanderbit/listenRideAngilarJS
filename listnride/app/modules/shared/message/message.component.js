@@ -25,13 +25,13 @@ angular.module('message',[]).component('message', {
       var hasInsurance = !!message.request.insurance;
       // var yesterdayDate = moment(new Date()).add(-1, 'days');
 
-      if ((messageDate.diff(todayDate, 'days') === 0) && messageDate.date() === todayDate.date()){
+      if (messageDate.format('LL') === todayDate.format('LL')){
         $translate(["shared.today"]).then(
           function (translations) {
             message.localTime = translations["shared.today"] + ', ' + messageDate.format('HH:mm');
           }
         );
-      } else if ((messageDate.diff(todayDate, 'days') === -1) && messageDate.date() === (todayDate.date() - 1)){
+      } else if (messageDate.add(1, 'days').format('LL') === todayDate.format('LL')){
         $translate(["shared.yesterday"]).then(
           function (translations) {
             message.localTime = translations["shared.yesterday"] + ', ' + messageDate.format('HH:mm');
