@@ -32,10 +32,7 @@ angular.module('multiBooking', []).component('multiBooking', {
         }
       }
 
-      function send($event) {
-        $event.preventDefault();
-        console.log('seve');
-        console.log(multiBooking.form);
+      function send() {
         // api.post('/multi-booking/' + multiBooking.form.data).then(
         //   function (success) {
 
