@@ -1,29 +1,21 @@
-<div layout-margin>
-  <div layout="row" layout-align="space-between center">
-      <!-- <p class="md-subhead">{{cardgrid.title}}</p> -->
-      <p class="md-subhead">{{'search.bikes-found' | translate}} {{cardgrid.bikes.length}}</p>
-      <span flex></span>
-  </div>
-  <md-divider></md-divider>
-  <div
-    id="featuredBikes"
-    layout="row"
-    layout-wrap
-    layout-padding
-    style="margin: 0; padding: 0"
-    infinite-scroll="cardgrid.addMoreItemsLimit()"
-    infinite-scroll-distance="2"
-    infinite-scroll-container="'.scroll-parent'"
+<div
+  id="featuredBikes"
+  layout="row"
+  layout-wrap
+  layout-padding
+  style="margin: 0; padding: 0"
+  infinite-scroll="cardgrid.addMoreItemsLimit()"
+  infinite-scroll-distance="2"
+  infinite-scroll-container="'.scroll-parent'"
   >
-    <div ng-repeat="bike in cardgrid.bikes  | limitTo:cardgrid.limit track by bike.id"
-      flex-xs="100"
-      flex-sm="50"
-      flex-gt-sm="33"
-      flex-gt-lg="25">
-  	  <bike-card bike="bike"
-  	    ng-mouseover="cardgrid.onBikeHover(bike, true)"
-  	    ng-mouseleave="cardgrid.onBikeHover(bike, false)">
-  	  </bike-card>
-  	</div>
+  <div ng-repeat="bike in cardgrid.bikes  | limitTo:cardgrid.limit track by bike.id"
+    flex-xs="100"
+    flex-sm="50"
+    flex-gt-sm="33"
+    flex-gt-lg="25">
+    <bike-card bike="bike"
+      ng-mouseover="cardgrid.onBikeHover(bike, true)"
+      ng-mouseleave="cardgrid.onBikeHover(bike, false)">
+    </bike-card>
   </div>
 </div>

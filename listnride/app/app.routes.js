@@ -1289,6 +1289,31 @@
         }
       });
 
+      $stateProvider.state({
+        name: 'multiBooking',
+        url: '/multi-booking?location',
+        template: '<multi-booking></multi-booking>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["multi-booking.meta-title", "multi-booking.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["multi-booking.meta-title"]);
+                ngMeta.setTag("description", translations["multi-booking.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        },
+        params: {
+          location: {
+            value: "",
+            squash: true
+          }
+        }
+      });
+
       $urlRouterProvider.otherwise(function ($injector) {
         var state = $injector.get('$state');
         state.go('404');
