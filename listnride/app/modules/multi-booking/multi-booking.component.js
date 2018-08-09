@@ -3,8 +3,8 @@
 angular.module('multiBooking', []).component('multiBooking', {
   templateUrl: 'app/modules/multi-booking/multi-booking.template.html',
   controllerAs: 'multiBooking',
-  controller: ['$stateParams',
-    function multiBookingController($stateParams) {
+  controller: ['$stateParams', '$translate', '$mdToast', 'api',
+    function multiBookingController($stateParams, $translate, $mdToast, api) {
       var multiBooking = this;
 
       multiBooking.$onInit = function () {
@@ -13,6 +13,7 @@ angular.module('multiBooking', []).component('multiBooking', {
         multiBooking.closeDateRange = closeDateRange;
 
         // variables
+        multiBooking.success_request = false;
         multiBooking.bike_sizes_ungrouped = [];
         multiBooking.form = {
           city: $stateParams.location ? $stateParams.location : '',
@@ -55,14 +56,20 @@ angular.module('multiBooking', []).component('multiBooking', {
 
       function send() {
         beforeSend();
-        // api.post('/multi-booking/' + multiBooking.form.data).then(
-        //   function (success) {
 
-        //   },
-        //   function (error) {
-
-        //   }
-        // );
+        api.post('/multi_booking', multiBooking.form).then(
+          function (success) {
+            multiBooking.success_request = true;
+          },
+          function (error) {
+            $mdToast.show(
+              $mdToast.simple()
+              .textContent($translate.instant('share.errors.' + error.status))
+              .hideDelay(4000)
+              .position('top center')
+            );
+          }
+        );
       }
     }
   ]

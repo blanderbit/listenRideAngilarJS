@@ -34,6 +34,7 @@
       class="lnr-form-multi-booking"
       ng-submit="multiBooking.send()"
       layout-padding
+      ng-if="!multiBooking.success_request"
     >
 
       <p class="md-subhead lnr-sm-text-center">{{ 'multi-booking.your-booking-details' | translate }}</p>
@@ -192,6 +193,16 @@
 
     </form>
 
+    <div class="lnr-center" layout-padding ng-if="multiBooking.success_request">
+      <div class="lnr-margin-lrg"></div>
+      <md-icon md-svg-src="app/assets/ui_icons/icn_checkmark.svg" class="lnr-icn-mlrg--medium"></md-icon>
+      <p class="md-headline lnr-no-margin">{{ 'multi-booking.thanks-for-request' | translate }}</p>
+      <p class="md-subhead">{{ 'multi-booking.we-will-back-shortly' | translate }}</p>
+      <a class="md-button md-raised md-primary md-lrg" ui-sref="search({location: multiBooking.form.city})">
+        {{ 'multi-booking.take-back-to-search' | translate }}
+      </a>
+      <div class="lnr-margin-lrg"></div>
+    </div>
   </div>
 
   <div class="lnr-margin-lrg"></div>
