@@ -136,6 +136,28 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "multi-booking": {
+    "meta-title": "Groepsboeking",
+    "meta-description": "Boek uw fietsen met ons groepsboekingsformulier",
+    "title": "Groepsboekingen",
+    "header": "We helpen u graag met uw groepsboeking",
+    "subheader": "Geen gedoe meer, laat ons je helpen om je voor te bereiden op je volgende fietsvakantie. Geef ons jouw voorkeuren door en wij doen de rest, zodat je maximaal van het fietsen kunt genieten.",
+    "how-to": {
+      "step-1-title": "Zoeken & vinden",
+      "step-1-content": "Bereid jezelf voor op de reis, bespaar kostbare tijd om maximaal te genieten van de tijd op uw bestemming. Gemakkelijk en transparant, wanneer dan ook. ",
+      "step-2-title": "Definieren & aanvragen",
+      "step-2-content": "Vertel ons welke fietsen u wilt huren en wij doen de rest. Geef ons de details door en we nemen contact met u op!",
+      "step-3-title": "Selecteer & boek online",
+      "step-3-content": "Koppel je profiel aan Facebookprofiel en presenteer jezelf aan de community. Fietsers weten van wie ze huren. Verhuurders weten meteen wie er wil boeken."
+    },
+    "your-booking-details": "Uw boekingsgegevens",
+    "what-bike-kind": "Wat voor soort fiets?",
+    "where-to-rent": "Waar wil je huren?",
+    "rental-period": "Huurperiode",
+    "how-many-bikes": "Hoeveel fietsen?",
+    "do-you-need-accessories": "Welke accessoires heb je nodig?",
+    "your-contact-details": "Je contactgegevens"
+  },
   "insurance": {
     "facts": {
       "basic-insurance": {
@@ -617,6 +639,10 @@
   },
   "forms": {
     "first-name": "Voornaam",
+    "your-name": "Je naam",
+    "your-email-address": "Emailadres",
+    "your-phone-number": "Mobiele nummer",
+    "comments": "Opmerkingen",
     "last-name": "Achternaam",
     "email-address": "Emailadres",
     "update-password": "Update Password",
@@ -704,7 +730,8 @@
   },
   "search": {
     "no-bikes": "Er zijn helaas nog geen fietsen op deze locatie. Omdat we snel groeien, zal dat waarschijnlijk snel gebeuren! Als je wilt, kun je <a href=\"/listing-a-bike\">zelf een fiets een lijst laten maken </a>of zoek je naar een andere stad of specifieke locatie in de buurt.",
-    "bikes-found": "aantal fietsen",
+    "book-multiple-bikes": "Boek meerdere fietsen",
+    "bikes-found": "Aantal fietsen:",
     "all-sizes": "Alle Maten",
     "bikes-in": "fietsen in",
     "meta-title": "Huur de perfekte fiets in {{location}}.",
@@ -852,8 +879,8 @@
       "price_7_days": "7 dagen (1 week)",
       "price_8_days": "vanaf 8 dagen",
       "price_8_days_long": "vanaf 8 dagen (elke dag)",
-      "price_30_days": "30 dagen (1 maand)",
-      "price_30_days_long": "30 dagen (1 Monat)",
+      "price_30_days": "28 dagen",
+      "price_30_days_long": "28 dagen (1 Monaat)",
       "reset-prices": "Zurücksetzen",
       "validations": {
         "required": {

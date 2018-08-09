@@ -141,6 +141,28 @@
       "subheader": "Triff Gleichgesinnte. Verdiene Dir etwas dazu."
     }
   },
+  "multi-booking": {
+    "meta-title": "Gruppenbuchung",
+    "meta-description": "Buche deine Räder über unser Gruppenbuchungsformular",
+    "title": "Gruppenbuchungen",
+    "header": "Wir helfen dir gern mit deiner Gruppenbuchung",
+    "subheader": "Wir übernehmen für dich die Buchung für deinen nächsten Radel-Urlaub. Sag uns einfach, was du dir vorstellst. Wir machen den Rest. Damit du dich einfach nur auf deinen Trip freuen kannst.",
+    "how-to": {
+      "step-1-title": "Suchen & finden",
+      "step-1-content": "Spar dir die Zeit der Recherche und freu dich schon mal auf deine Reise! Easy, transparent, jederzeit.",
+      "step-2-title": "Bestimmen & anfragen",
+      "step-2-content": "Lass uns wissen, welche Fahrräder du ausleihen möchtest. Wir kümmern uns um den Rest. Sag uns einfach deine Anforderungen, und wir werden uns mit mehr Info bei dir melden.",
+      "step-3-title": "Wählen Sie und buchen Sie online",
+      "step-3-content": "Verknüpfe dein Profil mit deinem Facebookprofil, zeig dich der Community. Mieter wissen so, von wem sie leihen. Vermieter wissen sofort, wer fahren möchte."
+    },
+    "your-booking-details": "Deine Buchungsdetails",
+    "what-bike-kind": "Welcher Fahrradtyp?",
+    "where-to-rent": "Wo willst du Räder ausleihen?",
+    "rental-period": "Buchungszeitraum",
+    "how-many-bikes": "Wieviele Räder?",
+    "do-you-need-accessories": "Brauchst du Zubehör?",
+    "your-contact-details": "Deine Kontaktdaten"
+  },
   "insurance": {
     "facts": {
       "basic-insurance": {
@@ -625,6 +647,10 @@
   },
   "forms": {
     "first-name": "Vorname",
+    "your-name": "Dein Name",
+    "your-email-address": "Deine E-Mail-Adresse",
+    "your-phone-number": "Deine Telefonnummer",
+    "comments": "Kommentare",
     "last-name": "Nachname",
     "email-address": "E-Mail-Adresse",
     "update-password": "Update Password",
@@ -713,7 +739,8 @@
   },
   "search": {
     "no-bikes": "Leider sind an diesem Ort noch keine Räder vorhanden. Aber wir wachsen schnell, vielleicht gibt es bald schon welche! Wenn du magst, kannst du auch <a href=\"/listing-a-bike\">dein eigenes Rad einstellen</a> oder alternativ nach einer anderen Stadt oder Adresse in der Nähe suchen.",
-    "bikes-found": "gefundene Räder:",
+    "book-multiple-bikes": "Mehrere Räder anfragen",
+    "bikes-found": "Gefundene Räder:",
     "all-sizes": "Alle Größen",
     "bikes-in": "Fahrräder in",
     "meta-title": "Miete das perfekte Rad in {{location}}.",
@@ -862,8 +889,8 @@
       "price_7_days": "7 Tage (1 Woche)",
       "price_8_days": "ab 8 Tage",
       "price_8_days_long": "ab 8 Tage (pro Tag)",
-      "price_30_days": "30 Tage",
-      "price_30_days_long": "30 Tage (1 Monat)",
+      "price_30_days": "28 Tage",
+      "price_30_days_long": "28 Tage (1 Monat)",
       "reset-prices": "Zurücksetzen",
       "validations": {
         "required": {

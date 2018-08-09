@@ -1,6 +1,15 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "errors": {
+      "email-required": "Please enter your email address, email is required",
+      "email-not-valid": "Please, enter a valid email address",
+      "phone-not-valid": "Please, enter a valid phone number",
+      "phone-required": "Please enter your phone number, this field is required",
+      "404": "Page doesn't exist",
+      "422": "Unprocessable entity",
+      "500": "Internal server error"
+    },
     "basic-fee": "Service Fee including Basic Insurance",
     "how-it-works": "How it works",
     "list-a-bike": "List a Bike",
@@ -142,26 +151,30 @@
     }
   },
   "multi-booking": {
-    "meta-title": "Multi Booking",
-    "meta-description": "Book your bikes by our multi-booking form",
-    "title": "Group Bookings",
+    "meta-title": "Group booking",
+    "meta-description": "Book your bikes with our group booking form",
+    "title": "Group bookings",
     "header": "We are happy to help you with your group booking",
-    "subheader": "No more hassle, let us support you to set you for your next cycling trip. Provide us with your preferences and we'll do the rest, so you can enjoy maximum time enjoying the ride.",
+    "subheader": "No more hassle, let us help you to get organized for your next cycling trip. Provide us with your preferences and we'll do the rest, so you can spend maximum time enjoying the ride.",
     "how-to": {
-      "step-1-title": "Search & Find",
-      "step-1-content": "Prepare yourself prior to your travels, save precious time to maximally enjoy the ride at your destination. Easy and transparent, any day any time. ",
+      "step-1-title": "Search & find",
+      "step-1-content": "Save precious time to maximally enjoy the ride at your destination. Easy and transparent, any day any time. ",
       "step-2-title": "Define & Request",
       "step-2-content": "Tell us what bicycles you would like to rent and we will do the rest. Just provide us the details and we'll get back to you!",
-      "step-3-title": "Select & Book online",
-      "step-3-content": "Verknüpfe Dein Profil mit Facebook zeig Dich der Community. Mieter wissen so, von wem sie leihen. Vermieter wissen sofort, wer fahren möchte."
+      "step-3-title": "Select & book online",
+      "step-3-content": "Link your profile to Facebook and present yourself to the community. Riders know from whom they borrow. Listers know immediately who wants to ride."
     },
     "your-booking-details": "Your booking details",
     "what-bike-kind": "What kind of bike?",
     "where-to-rent": "Where do you want to rent?",
-    "rental-period": "Rental Period",
+    "rental-period": "Rental period",
     "how-many-bikes": "How many bikes?",
     "do-you-need-accessories": "Do you need accessories?",
-    "your-contact-details": "Your contact details"
+    "your-contact-details": "Your contact details",
+    "thanks-for-request": "Thanks for your request",
+    "we-will-back-shortly": "We will get back to you shortly",
+    "take-back-to-search": "Take me back to my search",
+    "accessories": "Accessories"
   },
   "insurance": {
     "facts": {
@@ -739,7 +752,8 @@
   },
   "search": {
     "no-bikes": "There are unfortunately no bikes in this location yet. As we're growing fast, probably soon there will be! If you'd like to, you can <a href=\"/listing-a-bike\">list a bike yourself</a> or alternatively try searching for another city or specific location nearby.",
-    "bikes-found": "bikes found:",
+    "book-multiple-bikes": "Book Multiple Bikes",
+    "bikes-found": "Bikes found:",
     "all-sizes": "All Sizes",
     "bikes-in": "Bikes in",
     "meta-title": "Rent the perfect bike in {{location}}.",
@@ -748,7 +762,7 @@
     "bike": "Bike",
     "bikes": "Bikes",
     "pick-body-size": "Size",
-    "timespan": "Timespan",
+    "timespan": "Time span",
     "category": "Bike Type",
     "clear-filters": "Clear filters",
     "all-brands": "All Brands",
@@ -888,8 +902,8 @@
       "price_7_days": "7 days (1 week)",
       "price_8_days": "8 days onwards",
       "price_8_days_long": "8 days onwards (per day)",
-      "price_30_days": "30 days",
-      "price_30_days_long": "30 days (1 month)",
+      "price_30_days": "28 days",
+      "price_30_days_long": "28 days (1 month)",
       "reset-prices": "Reset",
       "validations": {
         "required": {
