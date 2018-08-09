@@ -12,7 +12,8 @@ angular.module('muli-integration',[]).component('muli', {
       $tpl.addPart(ENV.staticTranslation);
       muli.bikes = {
         berlin: [],
-        munich: []
+        munich: [],
+        pfaffstatten: []
       };
 
       api.get('/rides?family=14').then(
@@ -22,6 +23,7 @@ angular.module('muli-integration',[]).component('muli', {
             switch (success.data.bikes[i].city) {
               case "Berlin": muli.bikes.berlin.push(success.data.bikes[i]); break;
               case "München": muli.bikes.munich.push(success.data.bikes[i]); break;
+              case "Pfaffstätten": muli.bikes.pfaffstatten.push(success.data.bikes[i]); break;
             }
           }
 
