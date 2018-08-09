@@ -198,7 +198,9 @@ angular.module('filter',[])
 
         function filterSize(bikes) {
           if (filter.sizes && filter.currentSize != filter.sizes[0].value) {
-            return filterFilter(bikes, filter.currentSize);
+            return _.filter(bikes, function(o){
+              return o.size == filter.currentSize;
+            });
           } else {
             return bikes;
           }

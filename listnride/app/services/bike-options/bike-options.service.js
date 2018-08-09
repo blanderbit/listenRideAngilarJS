@@ -44,6 +44,7 @@ angular.module('listnride')
       sizeOptionsForSearch: function () {
         return [
           { value: -1, label: "-" },
+          { value: 0, label: "Unisize" },
           { value: 155, label: "155 cm - 165 cm" },
           { value: 165, label: "165 cm - 175 cm" },
           { value: 175, label: "175 cm - 185 cm" },
