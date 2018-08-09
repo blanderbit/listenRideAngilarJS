@@ -2519,24 +2519,6 @@ md-icon[md-font-icon].fa--lh20 {
   min-width: 320px;
 }
 
-@media (max-width: 959px) { /*sm-size*/
-  .date-picker-wrapper.date-picker-wrapper--ngDialog {
-    max-width: 700px;
-    left: 0!important;
-    right: 0;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 659px) {
-  .date-picker-wrapper.date-picker-wrapper--ngDialog,
-  .date-picker-wrapper.date-picker-wrapper--ngDialog .month-wrapper {
-    max-width: 320px;
-  }
-}
-
-/* input-range */
-
 .availability__list input-range md-input-container {
   margin-top: 8px;
   margin-bottom: 8px;
@@ -2879,6 +2861,44 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 }
 
 /*-----------------------------------------------------------------------------------*/
+/*  Filters
+/*-----------------------------------------------------------------------------------*/
+
+.filter-column__item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #d3d8dc;
+}
+
+.filter-column__item:first-child {
+  margin-top: 15px;
+}
+
+.filter-column__item:last-child {
+  margin-bottom: 0;
+  border-bottom-width: 0;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  MULTI BOOKING
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-form-multi-booking md-input-container {
+  width: 100%;
+}
+
+.lnr-form-multi-booking md-input-container:last-child {
+  margin-bottom: 0;
+}
+
+.multi-booking__filter-text {
+  overflow: hidden;
+  width: 100%;
+  display: inline-block;
+  line-height: 14px;
+  text-overflow: ellipsis;
+}
+
+/*-----------------------------------------------------------------------------------*/
 /*  MEDIA
 /*-----------------------------------------------------------------------------------*/
 
@@ -2894,6 +2914,14 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .lnr-double-padding-top-gt-sm {
     padding-top: 16px;
+  }
+
+  .lnr-gt-sm-padding-left {
+    padding-left: 8px;
+  }
+
+  .lnr-gt-sm-padding-right {
+    padding-right: 8px;
   }
 }
 
@@ -2914,6 +2942,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .lnr-sm-fs14 {
     font-size: 14px;
+  }
+
+  .lnr-sm-margin-bottom {
+    margin-bottom: 8px;
   }
 
   /* INSURANCE */
@@ -2958,6 +2990,28 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .lnr-image-row img {
     margin-bottom: 30px;
+  }
+
+  /* DATE PICKER */
+
+  .date-picker-wrapper.date-picker-wrapper--ngDialog {
+    max-width: 700px;
+    left: 0 !important;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  /* Multi Booking */
+
+  .multi-booking .date-picker-wrapper--ngDialog {
+    right: auto;
+  }
+}
+
+@media (max-width: 659px) { /* two month width  */
+  .date-picker-wrapper.date-picker-wrapper--ngDialog,
+  .date-picker-wrapper.date-picker-wrapper--ngDialog .month-wrapper {
+    max-width: 320px;
   }
 }
 
@@ -3103,6 +3157,12 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   .footer__partners > img {
     margin-top: 8px;
     padding: 0;
+  }
+
+  /* Multi Booking */
+
+  .multi-booking .date-picker-wrapper--ngDialog {
+    right: 0;
   }
 
 }

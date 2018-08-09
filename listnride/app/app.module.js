@@ -19,6 +19,7 @@ angular.module('listnride', [
   'rating',
   'listingABike',
   'rentingABike',
+  'multiBooking',
   'static',
   'listnride.constant',
   'metaTags',
@@ -26,6 +27,9 @@ angular.module('listnride', [
   'inputRange',
   'addressInput',
   'lnrMetaRobots',
+  'categoryFilter',
+  'bikeCountFilter',
+  'accessoriesFilter',
   /* app_core_end */
 
   /* app_extras_start */

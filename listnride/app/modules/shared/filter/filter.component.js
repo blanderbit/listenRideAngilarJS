@@ -34,14 +34,6 @@ angular.module('filter',[])
           filter.onSimpleSizeChange = onSimpleSizeChange;
           filter.clearFilters = clearFilters;
           filter.onCategoryChange = onCategoryChange;
-          filter.increaseBikesCount = increaseBikesCount;
-          filter.decreaseBikesCount = decreaseBikesCount;
-          filter.toggle = toggle;
-          filter.exists = exists;
-          filter.isIndeterminate = isIndeterminate;
-          filter.isChecked = isChecked;
-          filter.toggleAll = toggleAll;
-          filter.showSubs = showSubs;
           filter.closeDateRange = closeDateRange;
 
           // variables
@@ -53,13 +45,8 @@ angular.module('filter',[])
           // initializeSizeFilter();
           initializeSimpleSizeFilter();
 
-          // categories
-          filter.categories = [];
-          bikeOptions.allCategoriesOptions().then(function (resolve) {
-            filter.categories = resolve;
-          });
+
           filter.currentCategories = filter.initialValues.categories.filter(Boolean).slice().map(Number);
-          filter.openSubs = [];
         };
 
 
@@ -211,7 +198,9 @@ angular.module('filter',[])
 
         function filterSize(bikes) {
           if (filter.sizes && filter.currentSize != filter.sizes[0].value) {
-            return filterFilter(bikes, filter.currentSize);
+            return _.filter(bikes, function(o){
+              return o.size == filter.currentSize;
+            });
           } else {
             return bikes;
           }
@@ -223,17 +212,6 @@ angular.module('filter',[])
           } else {
             return bikes;
           }
-        }
-
-        function increaseBikesCount() {
-          filter.currentSizes.push(-1);
-          filter.onSizeChange();
-        }
-
-        function decreaseBikesCount(){
-          if (filter.currentSizes.length <= 1) return;
-          filter.currentSizes.pop();
-          filter.onSizeChange();
         }
 
         function clearDate() {
@@ -254,79 +232,12 @@ angular.module('filter',[])
           }
         }
 
-        //----- Category filter -----
-
-        function toggle(item, list) {
-          var idx = list.indexOf(item);
-          if (idx > -1) {
-            list.splice(idx, 1);
-          } else {
-            list.push(item);
-          }
-          filter.onCategoryChange()
-        };
-
-        function exists(item, list) {
-          return list.indexOf(item) > -1;
-        };
-
-        function isIndeterminate(categoryId) {
-          var intersection = _.intersection(categorySubs(categoryId), filter.currentCategories).length;
-          return (intersection > 0 && intersection !== categorySubs(categoryId).length);
-        };
-
-        function isChecked(categoryId) {
-          return categoryChosen(categoryId);
-        };
-
-        function toggleAll($event, categoryId) {
-          $event.stopPropagation();
-          if (categoryChosen(categoryId)) {
-            filter.currentCategories = _.difference(filter.currentCategories, categorySubs(categoryId))
-          } else if (filter.currentCategories.length === 0 || filter.currentCategories.length > 0) {
-            filter.currentCategories = _.union(filter.currentCategories, categorySubs(categoryId));
-            filter.openSubs = _.union(filter.openSubs, [categoryId])
-          }
-          filter.onCategoryChange()
-        };
-
-        function showSubs(categoryId) {
-          return filter.openSubs.includes(categoryId)
-        };
-
-        function categoryIntersection(categoryId) {
-          return _.intersection(filter.currentCategories, categorySubs(categoryId)).sort()
-        }
-
-        function categoryChosen(categoryId) {
-          return _.isEqual(categoryIntersection(categoryId), categorySubs(categoryId))
-        }
-
-        function categorySubs(id) {
-          return _.map(_.find(filter.categories, function(category) {
-            return category.catId === id;
-          }).subcategories, 'id').sort()
-        }
-
         function arrayFilter(bikes, selectedItems, filterBy) {
-          return _.filter(bikes, function(o) {
+          return _.filter(bikes, function (o) {
             return _.includes(selectedItems, o[filterBy]);
           })
         }
 
-        //----- end -----
       }
     ]
-  })
-  // size filter
-  .component('bikeCountFilter', {
-    templateUrl: 'app/modules/shared/filter/bike-count-filter.template.html',
-    require: { parent: '^filter' },
-    controllerAs: 'bikeCountFilter'
-  })
-  // category filter
-  .component('categoryFilter', {
-    templateUrl: 'app/modules/shared/filter/category-filter.template.html',
-    require: { parent: '^filter' },
-    controllerAs: 'categoryFilter'
   });
