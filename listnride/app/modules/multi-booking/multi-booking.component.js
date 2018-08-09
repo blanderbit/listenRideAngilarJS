@@ -64,7 +64,7 @@ angular.module('multiBooking', []).component('multiBooking', {
           function (error) {
             $mdToast.show(
               $mdToast.simple()
-              .textContent($translate.instant('share.errors.' + error.status))
+              .textContent($translate.instant('shared.errors.' + error.status))
               .hideDelay(4000)
               .position('top center')
             );
