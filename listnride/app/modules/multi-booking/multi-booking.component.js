@@ -3,8 +3,8 @@
 angular.module('multiBooking', []).component('multiBooking', {
   templateUrl: 'app/modules/multi-booking/multi-booking.template.html',
   controllerAs: 'multiBooking',
-  controller: ['$stateParams', '$state', '$translate', 'api', 'ngMeta',
-    function multiBookingController($stateParams, $state, $translate, api, ngMeta) {
+  controller: ['$stateParams',
+    function multiBookingController($stateParams) {
       var multiBooking = this;
 
       multiBooking.$onInit = function () {
@@ -13,12 +13,18 @@ angular.module('multiBooking', []).component('multiBooking', {
         multiBooking.closeDateRange = closeDateRange;
 
         // variables
+        multiBooking.bike_sizes_ungrouped = [];
         multiBooking.form = {
-          location: $stateParams.location ? $stateParams.location : '',
+          city: $stateParams.location ? $stateParams.location : '',
           start_date: '',
           duration: 0,
-          categories: [],
-          accessories: []
+          bike_sizes: [],
+          category_ids: [],
+          accessories: [],
+          name: '',
+          email: '',
+          phone_number: '',
+          notes: ''
         };
       }
 
@@ -32,7 +38,23 @@ angular.module('multiBooking', []).component('multiBooking', {
         }
       }
 
+      function groupBikeSizes() {
+        multiBooking.form.bike_sizes.length = 0; // clear array of bike_sizes
+        _.forOwn(_.countBy(multiBooking.bike_sizes_ungrouped), function (value, key) {
+          multiBooking.form.bike_sizes.push({
+            'size': +key,
+            'count': value
+          });
+        });
+
+      }
+
+      function beforeSend() {
+        groupBikeSizes();
+      }
+
       function send() {
+        beforeSend();
         // api.post('/multi-booking/' + multiBooking.form.data).then(
         //   function (success) {
 

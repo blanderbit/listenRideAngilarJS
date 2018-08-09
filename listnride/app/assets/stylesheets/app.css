@@ -2861,6 +2861,24 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 }
 
 /*-----------------------------------------------------------------------------------*/
+/*  Filters
+/*-----------------------------------------------------------------------------------*/
+
+.filter-column__item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #d3d8dc;
+}
+
+.filter-column__item:first-child {
+  margin-top: 15px;
+}
+
+.filter-column__item:last-child {
+  margin-bottom: 0;
+  border-bottom-width: 0;
+}
+
+/*-----------------------------------------------------------------------------------*/
 /*  MULTI BOOKING
 /*-----------------------------------------------------------------------------------*/
 

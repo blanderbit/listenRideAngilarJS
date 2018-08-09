@@ -34,8 +34,6 @@ angular.module('filter',[])
           filter.onSimpleSizeChange = onSimpleSizeChange;
           filter.clearFilters = clearFilters;
           filter.onCategoryChange = onCategoryChange;
-          filter.increaseBikesCount = increaseBikesCount;
-          filter.decreaseBikesCount = decreaseBikesCount;
           filter.closeDateRange = closeDateRange;
 
           // variables
@@ -214,17 +212,6 @@ angular.module('filter',[])
           }
         }
 
-        function increaseBikesCount() {
-          filter.currentSizes.push(-1);
-          filter.onSizeChange();
-        }
-
-        function decreaseBikesCount(){
-          if (filter.currentSizes.length <= 1) return;
-          filter.currentSizes.pop();
-          filter.onSizeChange();
-        }
-
         function clearDate() {
           filter.isClearDataRange = true;
           if (!filter.currentDate.start_date) return;
@@ -251,10 +238,4 @@ angular.module('filter',[])
 
       }
     ]
-  })
-  // size filter
-  .component('bikeCountFilter', {
-    templateUrl: 'app/modules/shared/filter/bike-count-filter.template.html',
-    require: { parent: '^filter' },
-    controllerAs: 'bikeCountFilter'
   });
