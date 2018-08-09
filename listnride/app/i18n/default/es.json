@@ -125,7 +125,11 @@
     "today": "Hoy",
     "yesterday": "Ayer",
     "press": {
-      "title": "Conocido de TV & Print"
+      "title": "Conocido de TV & Print",
+      "logo-1": "Insertar logo aquí",
+      "logo-2": "Insertar logo aquí",
+      "logo-3": "Insertar logo aquí",
+      "logo-4": "Insertar logo aquí"
     },
     "find-your-bike": {
       "header": "Encuentra tu bicicleta perfecta",
@@ -136,6 +140,28 @@
       "header": "Alquila tu bicicleta",
       "subheader": "Conoce a personas con tus mismas pasiones y gana dinero extra"
     }
+  },
+  "multi-booking": {
+    "meta-title": "Alquileres grupales",
+    "meta-description": "Alquile sus bicicletas con nuestro formulario de reserva grupal",
+    "title": "Alquileres grupales",
+    "header": "Estamos felices de ayudarte con tu reserva grupal",
+    "subheader": "No más perdida de tiempo, permítanos ayudarlo a organizar su próximo viaje en bicicleta. Indíquenos sus preferencias y nosotros haremos el resto. Su única preocupación es disfrutar del viaje",
+    "how-to": {
+      "step-1-title": "Busca y encuentra",
+      "step-1-content": "Ahorre tiempo para disfrutar al máximo del viaje. Alquile sus bicicletas de manera fácil y transparente.",
+      "step-2-title": "Seleccione y solicite ",
+      "step-2-content": "Cuéntanos qué bicicletas te gustaría alquilar y nosotros haremos el resto. Solo envíenos los detalles y nosotros lo contactaremos nuevamente con una propuesta.  ",
+      "step-3-title": "Seleccione y reserve en línea",
+      "step-3-content": "Vincula tu perfil a tu cuenta de Facebook y preséntate a la comunidad de Listnride. Los riders sabrán a quién le alquilan. Y los listers quién desea alquilar sus bicicletas."
+    },
+    "your-booking-details": "Sus detalles de reserva",
+    "what-bike-kind": "¿Qué tipo de bicicleta?",
+    "where-to-rent": "¿Dónde quieres realizar el alquiler?",
+    "rental-period": "Período de alquiler",
+    "how-many-bikes": "¿Cuántas bicicletas?",
+    "do-you-need-accessories": "¿Necesitas accesorios?",
+    "your-contact-details": "Tus detalles de contacto"
   },
   "insurance": {
     "facts": {
@@ -619,6 +645,10 @@
   },
   "forms": {
     "first-name": "Nombre",
+    "your-name": "Nombre",
+    "your-email-address": "Correo electrónico",
+    "your-phone-number": "Número de teléfono",
+    "comments": "Comentarios",
     "last-name": "Apellido",
     "email-address": "Correo electrónico",
     "update-password": "Update Password",
@@ -707,7 +737,8 @@
   },
   "search": {
     "no-bikes": "No hay bicis en esta ubicación",
-    "bikes-found": "bicicletas encontradas:\n",
+    "book-multiple-bikes": "Reserve múltiples bicicletas",
+    "bikes-found": "Bicicletas encontradas:",
     "all-sizes": "Todos los tamaños",
     "bikes-in": "Bicis disponibles",
     "meta-title": "Alquila la bici perfecta en{{location}} ",
@@ -855,8 +886,8 @@
       "price_7_days": "7 días (1 semana)",
       "price_8_days": "de 8 días en adelante",
       "price_8_days_long": "de 8 días en adelante (por día)",
-      "price_30_days": "30 días ",
-      "price_30_days_long": "30 días (1 mes)",
+      "price_30_days": "28 días ",
+      "price_30_days_long": "28 días (1 mes)",
       "reset-prices": "Reajustar",
       "validations": {
         "required": {
