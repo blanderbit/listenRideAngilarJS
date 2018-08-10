@@ -74,6 +74,10 @@
         <bike-card ng-repeat="bike in leaos.currentShop.bikes" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
       </div>
     </md-content>
+
+    <div ng-if="!leaos.currentShop.bikes.length">
+      <p class="md-subhead lnr-center">{{'brand-integration.shared.no-bikes-found'}}</p>
+    </div>
     <!-- END BRAND BIKES -->
 
     <md-divider class="lnr-margin-lrg"></md-divider>

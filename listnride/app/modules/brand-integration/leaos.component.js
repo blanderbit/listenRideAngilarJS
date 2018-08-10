@@ -52,7 +52,6 @@ angular.module('leaosIntegration', []).component('leaos', {
         // GROUPED BIKES
         // TODO: Move to Admin panel
         leaos.cities = {};
-        // set default shop
 
         // invocations
         leaos.splitFaq();
@@ -65,11 +64,7 @@ angular.module('leaosIntegration', []).component('leaos', {
           var col2 = [];
 
         for (var i = 0; i < leaos.faqs.length; i++) {
-          if ((i + 2) % 2) {
-            col1.push(leaos.faqs[i]);
-          } else {
-            col2.push(leaos.faqs[i]);
-          }
+          ((i + 2) % 2) ? col1.push(leaos.faqs[i]): col2.push(leaos.faqs[i]);
         }
 
         return leaos.faqs = [col1, col2];
