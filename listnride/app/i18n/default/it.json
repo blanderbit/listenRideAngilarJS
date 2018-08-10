@@ -147,6 +147,12 @@
       "subheader": "Incontra persone che condividono la tua stessa passione. Guadagna qualcosa in più"
     }
   },
+  "brand-integration": {
+    "leaos": {
+      "subdescription-not-used": "Design. Arte. Passione.",
+      "subdescription-not-use": "Design. Arte. Passione."
+    }
+  },
   "multi-booking": {
     "meta-title": "Prenotazione multipla",
     "meta-description": "Prenota le tue bici con il nostro modulo di prenotazione multipla",
@@ -158,8 +164,8 @@
       "step-1-content": "Preparati prima dei tuoi viaggi, risparmia tempo prezioso per goderti al massimo il tuo tour. Facile e trasparente, ogni giorno in qualsiasi momento.",
       "step-2-title": "Definisci e richiedi",
       "step-2-content": "Facci sapere quali biciclette vorresti affittare e noi faremo il resto. Forniscici i dettagli e ti risponderemo!",
-      "step-3-title": "Seleziona e prenota online",
-      "step-3-content": "Collega il tuo profilo a Facebook e mostrati alla community. I riders sanno da chi prendono noleggiano. I listers sanno immediatamente chi vuole noleggiare la loro bici."
+      "step-3-title": "Accetta l'offerta e prenota online",
+      "step-3-content": "Ti invieremo un preventivo e un link dove potrai prenotare online o fornirci una conferma scritta per la tua prenotazione. In quest'ultimo caso, ti verrà inviata una fattura che deve essere pagata per finalizzare la prenotazione."
     },
     "your-booking-details": "I dettagli della tua prenotazione",
     "what-bike-kind": "Che tipo di bici?",
@@ -262,6 +268,10 @@
       "ampler": {
         "meta-title": "E-Bike Test ",
         "meta-descr": "Prova a guidare una e-bike oggi! Le ebikes di Ampler sono disponibili su listnride. Noleggia uno a Amsterdam, Berlino, Düsseldorf, Monaco o Zurigo."
+      },
+      "leaos": {
+        "meta-title": "Noleggia e prova le E-Bikes Leaos a Monaco di Baviera, Dusseldorf e Bolzano",
+        "meta-descr": "Ebike  design - Leaos"
       },
       "brompton": {
         "meta-title": "Noleggia una bicicletta Brompton con listnride",

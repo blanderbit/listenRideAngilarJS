@@ -150,6 +150,12 @@
       "subheader": "Conoce a personas con tus mismas pasiones y gana dinero extra"
     }
   },
+  "brand-integration": {
+    "leaos": {
+      "subdescription-not-used": "Diseño. Arte. Pasión.",
+      "subdescription-not-use": "Diseño. Arte. Pasión."
+    }
+  },
   "multi-booking": {
     "meta-title": "Alquileres grupales",
     "meta-description": "Alquile sus bicicletas con nuestro formulario de reserva grupal",
@@ -162,7 +168,7 @@
       "step-2-title": "Seleccione y solicite ",
       "step-2-content": "Cuéntanos qué bicicletas te gustaría alquilar y nosotros haremos el resto. Solo envíenos los detalles y nosotros lo contactaremos nuevamente con una propuesta.  ",
       "step-3-title": "Seleccione y reserve en línea",
-      "step-3-content": "Vincula tu perfil a tu cuenta de Facebook y preséntate a la comunidad de Listnride. Los riders sabrán a quién le alquilan. Y los listers quién desea alquilar sus bicicletas."
+      "step-3-content": "Vincula tu perfil a tu cuenta de Facebook y preséntate a la comunidad de Listnride. Los usuarios sabrán a quién le alquilan. Y los listers quién desea alquilar sus bicicletas."
     },
     "your-booking-details": "Sus detalles de reserva",
     "what-bike-kind": "¿Qué tipo de bicicleta?",
@@ -269,6 +275,10 @@
       "ampler": {
         "meta-title": "Programa de prueba de bicicleta eléctrica",
         "meta-descr": "Pruebe montar una e-bike hoy! Las ebikes de Ampler están disponibles en listnride. Alquile uno en Amsterdam, Berlín, Düsseldorf, Munich o Zurich."
+      },
+      "leaos": {
+        "meta-title": "Alquile y pruebe las Leaos E-Bikes en Munich, Dusseldorf y Bolzano",
+        "meta-descr": "El diseño Ebike - Leaos"
       },
       "brompton": {
         "meta-title": "Alquila una bici Brompton con listnride",
