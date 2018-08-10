@@ -1,6 +1,15 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "errors": {
+      "email-required": "Vul een geldig emailadres in",
+      "email-not-valid": "Vul een geldig emailadres in",
+      "phone-not-valid": "Voer alstublieft een geldig telefoonnummer in",
+      "phone-required": "Voer je telefoonnummer in. ",
+      "404": "Pagina bestaat niet",
+      "422": "Verkeerd dataformaat ingevoerd",
+      "500": "Interne Server Fout"
+    },
     "basic-fee": "Servicekosten inclusief basisverzekering",
     "how-it-works": "Hoe werkt het",
     "list-a-bike": "Fiets verhuren",
@@ -144,9 +153,9 @@
     "subheader": "Geen gedoe meer, laat ons je helpen om je voor te bereiden op je volgende fietsvakantie. Geef ons jouw voorkeuren door en wij doen de rest, zodat je maximaal van het fietsen kunt genieten.",
     "how-to": {
       "step-1-title": "Zoeken & vinden",
-      "step-1-content": "Bereid jezelf voor op de reis, bespaar kostbare tijd om maximaal te genieten van de tijd op uw bestemming. Gemakkelijk en transparant, wanneer dan ook. ",
+      "step-1-content": "Bereid jezelf voor op de reis, bespaar kostbare tijd en geniet maximaal van de tijd op je vakantiebestemming. Gemakkelijk en transparent, dag en nacht. ",
       "step-2-title": "Definieren & aanvragen",
-      "step-2-content": "Vertel ons welke fietsen u wilt huren en wij doen de rest. Geef ons de details door en we nemen contact met u op!",
+      "step-2-content": "Vertel ons welke fietsen je wilt huren en wij doen de rest. Geef ons de details door en we nemen contact je op!",
       "step-3-title": "Selecteer & boek online",
       "step-3-content": "Koppel je profiel aan Facebookprofiel en presenteer jezelf aan de community. Fietsers weten van wie ze huren. Verhuurders weten meteen wie er wil boeken."
     },
@@ -156,7 +165,11 @@
     "rental-period": "Huurperiode",
     "how-many-bikes": "Hoeveel fietsen?",
     "do-you-need-accessories": "Welke accessoires heb je nodig?",
-    "your-contact-details": "Je contactgegevens"
+    "your-contact-details": "Je contactgegevens",
+    "thanks-for-request": "Bedankt voor je fietsverhuuraanvraag",
+    "we-will-back-shortly": "We komen spoedig bi je terug",
+    "take-back-to-search": "Breng me terug naar mijn zoekopdracht",
+    "accessories": "Accessoires"
   },
   "insurance": {
     "facts": {

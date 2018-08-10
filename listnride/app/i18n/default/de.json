@@ -1,6 +1,15 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "errors": {
+      "email-required": "Bitte gib Deine E-Mail-Adresse ein, die E-Mailadresse ist erforderlich",
+      "email-not-valid": "Bitte gib eine gültige E-Mail-Adresse ein",
+      "phone-not-valid": "Bitte gib eine gültige Telefonnummer ein",
+      "phone-required": "Bitte gib die Telefonnummer ein, diese wird benötigt",
+      "404": "Seite existiert nicht",
+      "422": "falsche Datenformat eingegeben.",
+      "500": "Interner Server Fehler"
+    },
     "basic-fee": "Die Servicegebühr beinhaltet die Basis-Versicherung",
     "how-it-works": "Wie funktioniert's",
     "list-a-bike": "Rad vermieten",
@@ -161,7 +170,11 @@
     "rental-period": "Buchungszeitraum",
     "how-many-bikes": "Wieviele Räder?",
     "do-you-need-accessories": "Brauchst du Zubehör?",
-    "your-contact-details": "Deine Kontaktdaten"
+    "your-contact-details": "Deine Kontaktdaten",
+    "thanks-for-request": "Danke für die Radverleih-Anfrage",
+    "we-will-back-shortly": "Wir kommen bald auf dich zurück",
+    "take-back-to-search": "Bring mich zurück zu meiner Suche",
+    "accessories": "Zubehör"
   },
   "insurance": {
     "facts": {
