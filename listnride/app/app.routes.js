@@ -1174,6 +1174,25 @@
       });
 
       $stateProvider.state({
+        name: 'leaos',
+        url: '/brands/leaos',
+        template: '<leaos></leaos>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brand-integration.leaos.meta-title", "meta.brand-integration.leaos.meta-descr"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brand-integration.leaos.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brand-integration.leaos.meta-descr"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'factoryberlin',
         url: '/factoryberlin',
         template: '<user></user>',
