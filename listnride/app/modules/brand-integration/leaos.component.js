@@ -3,8 +3,8 @@
 angular.module('leaosIntegration', []).component('leaos', {
   templateUrl: 'app/modules/brand-integration/leaos.template.html',
   controllerAs: 'leaos',
-  controller: ['$translatePartialLoader', 'api', 'ENV', 'ngMeta',
-    function LeaosController($tpl, api, ENV, ngMeta) {
+  controller: ['$translate', '$mdToast', '$translatePartialLoader', 'api', 'ENV', 'ngMeta',
+    function LeaosController($translate, $mdToast, $tpl, api, ENV, ngMeta) {
       var leaos = this;
       $tpl.addPart(ENV.staticTranslation);
       // Open Graph Image
@@ -103,7 +103,12 @@ angular.module('leaosIntegration', []).component('leaos', {
             });
           },
           function (error) {
-            // TODO: Show message 'NO BIKES FOUND'
+            $mdToast.show(
+              $mdToast.simple()
+              .textContent($translate.instant('shared.errors.' + error.status))
+              .hideDelay(4000)
+              .position('top center')
+            );
           }
         );
       }
