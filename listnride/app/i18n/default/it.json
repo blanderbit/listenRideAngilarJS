@@ -147,6 +147,12 @@
       "subheader": "Incontra persone che condividono la tua stessa passione. Guadagna qualcosa in più"
     }
   },
+  "brand-integration": {
+    "leaos": {
+      "subdescription-not-used": "Design. Arte. Passione.",
+      "subdescription-not-use": "Design. Arte. Passione."
+    }
+  },
   "multi-booking": {
     "meta-title": "Prenotazione multipla",
     "meta-description": "Prenota le tue bici con il nostro modulo di prenotazione multipla",
@@ -262,6 +268,10 @@
       "ampler": {
         "meta-title": "E-Bike Test ",
         "meta-descr": "Prova a guidare una e-bike oggi! Le ebikes di Ampler sono disponibili su listnride. Noleggia uno a Amsterdam, Berlino, Düsseldorf, Monaco o Zurigo."
+      },
+      "leaos": {
+        "meta-title": "Noleggia e prova le E-Bikes Leaos a Monaco di Baviera, Dusseldorf e Bolzano",
+        "meta-descr": "Ebike  design - Leaos"
       },
       "brompton": {
         "meta-title": "Noleggia una bicicletta Brompton con listnride",

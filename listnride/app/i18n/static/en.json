@@ -318,6 +318,28 @@
       "choose-location": "Choose a location",
       "faq": "The frequently asked questions"
     },
+    "leaos": {
+      "description": "The Design Ebike - Leaos",
+      "subdescription": "Design. Art. Passion.",
+      "feature1-title": "Italian Design",
+      "feature1-description": "Pure Elegance \nCompletely New Driving Experience\nPerfect Symbiosis of Motor and Rider\n100% Made in Italy",
+      "feature2-title": "Joyride",
+      "feature2-description": "Upright or sportive riding position \nFrictionless Gear Hub \nDigital Display \nfrom 14kg",
+      "feature3-title": "Electric Assist",
+      "feature3-description": "250 Wh, 14kg (Pressed)\n14 Ah, 500 Wh, 22kg (Pure)\nIntegrated solar pannels (optional)\nremovable, speed charger",
+      "test-bike": "Rent and test the Leaos Bikes in Munich, Bolzano and Dusseldorf",
+      "find-out-more": "Learn more about LEAOS bikes",
+      "faq-question-1": "Do I need a licence plate and insurance for my LEAOS bike?",
+      "faq-answer-1": "Pursuant to EU law, the 25-km/h version does not require a license plate or insurance. There is also a 45-km/h version, which is classified as a moped and thus requires a licence plate and insurance.",
+      "faq-question-2": "How much maintenance do LEAOS bikes require?",
+      "faq-answer-2": "LEAOS bikes are very low maintenance since the drive components are protected from the weather. Every 2–3 months, the chain should be oiled. The tyre pressure should be checked regularly. The brakes must be checked regularly for wear and tear to the brake pads.",
+      "faq-question-3": "Are there different frame sizes?",
+      "faq-answer-3": "We offer frame sizes ranging from 155 cm to 190 cm. As a result of the bike’s special geometric shape, the saddle shifts back as it is raised. The various stems for the handlebars can also be matched to size.",
+      "faq-question-4": "Can the LEAOS bikes be fittet with childseats?",
+      "faq-answer-4": "Yes. Please note that a child seat must be mounted on a rack, which must be ordered with the bike.",
+      "faq-question-5": "Do LEAOS bikes have suspension systems?",
+      "faq-answer-5": "LEAOS bike are cushioned by their special balloon tires. According to tests, the spring action of these tyres is better than a conventional trekking- or city-bikes fork-suspension and offers low rolling resistance."
+    },
     "ampler": {
       "meta-title": "E-Bike Test Ride Program",
       "meta-descr": "Test ride an e-bike today! The ebikes from Ampler are available on listnride. Rent one in Amsterdam, Berlin, Düsseldorf,  Munich or Zurich.",
