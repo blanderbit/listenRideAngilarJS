@@ -7,7 +7,7 @@
       "phone-not-valid": "Please, enter a valid phone number",
       "phone-required": "Please enter your phone number, this field is required",
       "404": "Page doesn't exist",
-      "422": "Unprocessable entity",
+      "422": "Wrong data format entered",
       "500": "Internal server error"
     },
     "basic-fee": "Service Fee including Basic Insurance",
@@ -171,7 +171,7 @@
     "how-many-bikes": "How many bikes?",
     "do-you-need-accessories": "Do you need accessories?",
     "your-contact-details": "Your contact details",
-    "thanks-for-request": "Thanks for your request",
+    "thanks-for-request": "Thanks for your bike rental request",
     "we-will-back-shortly": "We will get back to you shortly",
     "take-back-to-search": "Take me back to my search",
     "accessories": "Accessories"

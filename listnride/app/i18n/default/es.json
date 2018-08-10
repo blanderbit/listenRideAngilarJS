@@ -1,6 +1,15 @@
 {
   "shared": {
     "learn-more": "Saber más",
+    "errors": {
+      "email-required": "Introduce una dirección de correo electrónico válida",
+      "email-not-valid": "Por favor, introduce una dirección de correo electrónico válida",
+      "phone-not-valid": "Por favor ingrese un número de teléfono válido",
+      "phone-required": "Por favor ingrese su número de teléfono, este campo es obligatorio",
+      "404": "La página no existe",
+      "422": "El formato de los datos ingresados es incorrecto",
+      "500": "Error interno del servidor"
+    },
     "basic-fee": "El costo del servicio incluye seguro básico",
     "how-it-works": "Cómo funciona",
     "list-a-bike": "Registrar una bici",
@@ -161,7 +170,11 @@
     "rental-period": "Período de alquiler",
     "how-many-bikes": "¿Cuántas bicicletas?",
     "do-you-need-accessories": "¿Necesitas accesorios?",
-    "your-contact-details": "Tus detalles de contacto"
+    "your-contact-details": "Tus detalles de contacto",
+    "thanks-for-request": "Gracias por su solicitud de alquiler de bicicletas",
+    "we-will-back-shortly": "Nos pondremos en contacto con usted en breve",
+    "take-back-to-search": "Llévame de regreso a mi búsqueda",
+    "accessories": "Accesorios"
   },
   "insurance": {
     "facts": {
@@ -477,21 +490,21 @@
     "mark-as-closed": "Marcados todos los días como cerrados",
     "change-address-info": "La actualización de tu dirección no actualiza la dirección de tus bicicletas.",
     "payment-method": "Método de pago",
-    "payout-method": "Método de pago",
-    "add-payout-method": "Añadir un método de pago",
+    "payout-method": "Método de cobro",
+    "add-payout-method": "Añadir un método de cobro",
     "payment-method-description": "Tu método de pago se usa para pagar los alquileres. Puede ser una tarjeta de crédito o una cuenta de PayPal.",
-    "payout-method-description": "Tu método de pago es donde te enviamos los ingresos por alquiler. Por lo tanto, debes añadirlo por último al aceptar una solicitud como anunciante",
+    "payout-method-description": "Tu método de cobro es donde te enviamos los ingresos por alquiler. Por lo tanto, debes añadirlo para que podamos pagarte.",
     "add-payment-method": "Añadir un método de pago",
     "vouchers": "Cupones",
     "payment-credit-card": "Tu método de pago actual es una tarjeta de crédito",
     "payment-paypal": "Tu método de pago actual es una cuenta de PayPal con una dirección de correo electrónico",
     "no-payment-method": "No has introducido ningún método de pago hasta el momento.",
-    "no-payout-method": "No has introducido ningún método de pago hasta el momento.",
+    "no-payout-method": "No has introducido ningún método de cobro hasta el momento.",
     "paypal": "Paypal",
     "bank-account": "Cuenta bancaria",
     "enter-paypal-info": "Introduce la dirección de correo electrónico de tu cuenta de PayPal",
     "enter-bank-info": "Introduce el nombre y apellido del titular de la cuenta, así como IBAN y BIC",
-    "save-payout-method": "Guardar método de pago",
+    "save-payout-method": "Guardar método de cobro",
     "payout-paypal": "Tu método de pago es una cuenta de Paypal con una dirección de email",
     "payout-bank": "Tu método de pago es una cuenta bancaria que termina en",
     "voucher-code": "Código del cupón",
