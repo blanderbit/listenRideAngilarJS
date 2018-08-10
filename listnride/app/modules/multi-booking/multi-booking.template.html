@@ -91,8 +91,11 @@
                 <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
                   <md-button class="md-lined lnr-no-margin lnr__filter-btn md-right-arrow" ng-click="$mdOpenMenu($event); multiBooking.closeDateRange()"
                     style="width: 100%;text-align: left;">
-                    <span class="multi-booking__filter-text">
-                      {{ 'search.category' | translate }}
+                    <span class="multi-booking__filter-text" ng-if="multiBooking.bike_sizes_ungrouped.length == 1">
+                      1 {{'search.bike' | translate}}
+                    </span>
+                    <span class="multi-booking__filter-text" ng-if="multiBooking.bike_sizes_ungrouped.length > 1">
+                      {{multiBooking.bike_sizes_ungrouped.length}} {{'search.bikes' | translate}}
                     </span>
                   </md-button>
                   <md-menu-content width="5" class="lnr-100mh">
