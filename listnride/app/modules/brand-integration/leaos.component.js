@@ -16,7 +16,7 @@ angular.module('leaosIntegration', []).component('leaos', {
         leaos.getBikes = getBikes;
 
         // VARIABLES
-        leaos.familyId = 8;
+        leaos.familyId = 29;
 
         // hero slider
         leaos.cbSlider = [
@@ -51,25 +51,8 @@ angular.module('leaosIntegration', []).component('leaos', {
 
         // GROUPED BIKES
         // TODO: Move to Admin panel
-        leaos.shops = {
-          'munich': {
-            cityLangKey: 'shared.munich',
-            bikes: [],
-            bikeIds: [9329, 9328]
-          },
-          'bolzano': {
-            cityLangKey: 'shared.bolzano',
-            bikes: [],
-            bikeIds: [9323, 9322]
-          },
-          'dusseldorf': {
-            cityLangKey: 'shared.dusseldorf',
-            bikes: [],
-            bikeIds: [9446, 9447]
-          }
-        };
+        leaos.cities = {};
         // set default shop
-        leaos.currentShop = leaos.shops['munich'];
 
         // invocations
         leaos.splitFaq();
@@ -92,15 +75,23 @@ angular.module('leaosIntegration', []).component('leaos', {
         return leaos.faqs = [col1, col2];
       }
 
+      function transformToKeys(str){
+        return str.replace(/\s+/g, '_').toLowerCase();;
+      }
+
       function getBikes() {
         api.get('/rides?family=' + leaos.familyId).then(
           function (success) {
-            // TODO: move this Logic to Admin Panel
             _.forEach(success.data.bikes, function(bike){
-              _.forEach(leaos.shops, function(shop){
-                if (_.includes(shop.bikeIds, bike.id)) shop.bikes.push(bike);
-              });
+              if (!leaos.cities.hasOwnProperty(bike.city)){
+                leaos.cities[bike.city] = {
+                  bikes:[]
+                };
+              }
+              leaos.cities[bike.city].bikes.push(bike);
+              leaos.cities[bike.city].cityName = transformToKeys(bike.city);
             });
+            leaos.currentShop = leaos.cities[Object.keys(leaos.cities)[0]];
           },
           function (error) {
             $mdToast.show(
