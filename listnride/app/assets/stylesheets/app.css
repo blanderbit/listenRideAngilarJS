@@ -1192,6 +1192,22 @@ md-grid-list md-grid-tile.tile-sylt {
   background-image: url(../ui_images/cities/lnr_sylt.jpg);
 }
 
+md-grid-list md-grid-tile.tile-toscana {
+  background-image: url(../ui_images/cities/lnr_toscana.jpg);
+}
+
+md-grid-list md-grid-tile.tile-sicily {
+  background-image: url(../ui_images/cities/lnr_sicily.jpg);
+}
+
+md-grid-list md-grid-tile.tile-sardinia {
+  background-image: url(../ui_images/cities/lnr_sardinia.jpg);
+}
+
+md-grid-list md-grid-tile.tile-lake-garda {
+  background-image: url(../ui_images/cities/lnr_lake-garda.jpg);
+}
+
 .md-dialog-fullscreen.dialog-bikes,
 .md-dialog-fullscreen.dialog-bikes .dialog-content {
   overflow: visible!important;
