@@ -9,8 +9,8 @@
     "errors": {
       "email-required": "Introduce una dirección de correo electrónico válida",
       "email-not-valid": "Por favor, introduce una dirección de correo electrónico válida",
-      "phone-not-valid": "Por favor ingrese un número de teléfono válido",
-      "phone-required": "Por favor ingrese su número de teléfono, este campo es obligatorio",
+      "phone-not-valid": "Por favor ingresa un número de teléfono válido",
+      "phone-required": "Por favor ingresa tu número de teléfono, este campo es obligatorio",
       "404": "La página no existe",
       "422": "El formato de los datos ingresados es incorrecto",
       "500": "Error interno del servidor"
@@ -163,27 +163,27 @@
   },
   "multi-booking": {
     "meta-title": "Alquileres grupales",
-    "meta-description": "Alquile sus bicicletas con nuestro formulario de reserva grupal",
+    "meta-description": "Alquila tus bicicletas con nuestro formulario de reserva grupal",
     "title": "Alquileres grupales",
     "header": "Estamos felices de ayudarte con tu reserva grupal",
-    "subheader": "No más perdida de tiempo, permítanos ayudarlo a organizar su próximo viaje en bicicleta. Indíquenos sus preferencias y nosotros haremos el resto. Su única preocupación es disfrutar del viaje",
+    "subheader": "¡No pierdas más tiempo! Déjanos ayudarte a organizar tu próximo viaje en bicicleta. Indícanos tus preferencias y nosotros haremos el resto. Tu única preocupación es disfrutar del viaje",
     "how-to": {
-      "step-1-title": "Busca y encuentra",
-      "step-1-content": "Ahorre tiempo para disfrutar al máximo del viaje. Alquile sus bicicletas de manera fácil y transparente.",
-      "step-2-title": "Seleccione y solicite ",
-      "step-2-content": "Cuéntanos qué bicicletas te gustaría alquilar y nosotros haremos el resto. Solo envíenos los detalles y nosotros lo contactaremos nuevamente con una propuesta.  ",
-      "step-3-title": "Seleccione y reserve en línea",
-      "step-3-content": "Vincula tu perfil a tu cuenta de Facebook y preséntate a la comunidad de Listnride. Los usuarios sabrán a quién le alquilan. Y los listers quién desea alquilar sus bicicletas."
+      "step-1-title": "¿Qué tipo de bici quieres?",
+      "step-1-content": "Cuéntanos qué bicicletas te gustaría alquilar y nosotros nos ocupamos del resto. Solo envíanos los detalles y nosotros te contactaremos nuevamente con una propuesta. ",
+      "step-2-title": "Reserva en línea",
+      "step-2-content": "Te enviaremos un enlace para que puedas reservar en línea y un presupuesto para nos puede dar una confirmación por escrito de tu reserva. En este caso se te enviará una factura que deberá pagarse para finalizar la reserva.",
+      "step-3-title": "Disfruta del paseo",
+      "step-3-content": "Cuéntanos qué bicicletas te gustaría alquilar y nosotros nos ocupamos del resto. Solo envíanos los detalles y nosotros te contactaremos nuevamente con una propuesta. "
     },
-    "your-booking-details": "Sus detalles de reserva",
+    "your-booking-details": "Detalles de reserva",
     "what-bike-kind": "¿Qué tipo de bicicleta?",
     "where-to-rent": "¿Dónde quieres realizar el alquiler?",
     "rental-period": "Período de alquiler",
     "how-many-bikes": "¿Cuántas bicicletas?",
     "do-you-need-accessories": "¿Necesitas accesorios?",
-    "your-contact-details": "Tus detalles de contacto",
-    "thanks-for-request": "Gracias por su solicitud de alquiler de bicicletas",
-    "we-will-back-shortly": "Nos pondremos en contacto con usted en breve",
+    "your-contact-details": "Detalles de contacto",
+    "thanks-for-request": "Gracias por tu solicitud ",
+    "we-will-back-shortly": "Nos pondremos en contacto contigo a la brevedad",
     "take-back-to-search": "Llévame de regreso a mi búsqueda",
     "accessories": "Accesorios"
   },
@@ -765,7 +765,7 @@
   },
   "search": {
     "no-bikes": "No hay bicis en esta ubicación",
-    "book-multiple-bikes": "Reserve múltiples bicicletas",
+    "book-multiple-bikes": "Reserva múltiples bicicletas",
     "bikes-found": "Bicicletas encontradas:",
     "all-sizes": "Todos los tamaños",
     "bikes-in": "Bicis disponibles",
@@ -1178,7 +1178,7 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
   "seo": {
-    "header-1": "Alquile las mejores bicicletas en",
+    "header": "Alquile las mejores bicicletas en",
     "rent-the-best": "Rent the best",
     "bikes": "bikes",
     "rent-perfect-bikes-in": "Alquile la bici perfecta en ",
