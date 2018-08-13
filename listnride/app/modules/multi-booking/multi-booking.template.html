@@ -52,8 +52,11 @@
                 ng-click="$mdOpenMenu($event); multiBooking.closeDateRange()"
                 style="width: 100%;text-align: left;"
               >
-                <span class="multi-booking__filter-text">
-                  {{ 'search.category' | translate }}
+                <span class="multi-booking__filter-text" ng-if="!multiBooking.form.category_ids.length">
+                  {{ 'shared.please-select' | translate }}
+                </span>
+                <span class="multi-booking__filter-text" ng-if="multiBooking.form.category_ids.length">
+                  {{multiBooking.showSelectedValuesCategories()}}
                 </span>
               </md-button>
               <md-menu-content width="5" class="lnr-100mh">
@@ -121,8 +124,11 @@
                   ng-click="$mdOpenMenu($event); multiBooking.closeDateRange()"
                   style="width: 100%;text-align: left;"
                 >
-                  <span class="multi-booking__filter-text">
-                    {{ 'multi-booking.accessories' | translate }}
+                  <span class="multi-booking__filter-text" ng-if="!multiBooking.form.accessories.length">
+                    {{ 'multi-booking.no-accessories' | translate }}
+                  </span>
+                  <span class="multi-booking__filter-text" ng-if="multiBooking.form.accessories.length">
+                    {{multiBooking.showSelectedValuesAccessories()}}
                   </span>
                 </md-button>
                 <md-menu-content width="5" class="lnr-100mh">
@@ -168,7 +174,15 @@
           </md-input-container>
           <md-input-container> <!-- PHONE -->
             <label>{{ 'forms.your-phone-number' | translate }}</label>
-            <input ng-model="multiBooking.form.phone_number" name="phone_number" required type="tel"/>
+            <input
+              international-phone-number
+              ng-model="multiBooking.form.phone_number"
+              name="phone_number"
+              required
+              type="tel"
+              ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/"
+              preferred-countries="de, at, nl, fr, lv, es, it, ch, gb"
+            />
             <div ng-messages="multiBooking.form.phone_number.$error" role="alert">
               <div ng-message="required">{{ 'shared.errors.phone-required' | translate }}</div>
             </div>

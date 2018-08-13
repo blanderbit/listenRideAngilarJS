@@ -29,23 +29,23 @@ angular.module('leaosIntegration', []).component('leaos', {
         leaos.faqs = [
           {
             question: 'brand-integration.leaos.faq-question-1',
-            answer: 'brand-integration.leaos.faq-question-1',
+            answer: 'brand-integration.leaos.faq-answer-1',
           },
           {
             question: 'brand-integration.leaos.faq-question-2',
-            answer: 'brand-integration.leaos.faq-question-2',
+            answer: 'brand-integration.leaos.faq-answer-2',
           },
           {
             question: 'brand-integration.leaos.faq-question-3',
-            answer: 'brand-integration.leaos.faq-question-3',
+            answer: 'brand-integration.leaos.faq-answer-3',
           },
           {
             question: 'brand-integration.leaos.faq-question-4',
-            answer: 'brand-integration.leaos.faq-question-4',
+            answer: 'brand-integration.leaos.faq-answer-4',
           },
           {
             question: 'brand-integration.leaos.faq-question-5',
-            answer: 'brand-integration.leaos.faq-question-5',
+            answer: 'brand-integration.leaos.faq-answer-5',
           }
         ];
 
