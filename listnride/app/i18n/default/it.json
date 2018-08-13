@@ -1,6 +1,11 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
+    "bolzano": "Bolzano",
+    "lake-garda": "Lake Garda",
+    "sardinia": "Sardinia",
+    "sicily": "Sicily",
+    "toscana": "Tuscany",
     "errors": {
       "email-required": "Si prega di inserire un indirizzo email valido",
       "email-not-valid": "Si prega di inserire un indirizzo email valido",
@@ -1166,7 +1171,7 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
   "seo": {
-    "header": "Noleggia le migliori bici ad",
+    "header-1": "Noleggia le migliori bici ad",
     "rent-the-best": "Noleggia le migliori",
     "bikes": "biciclette",
     "rent-perfect-bikes-in": "Noleggia la bicicletta perfetta a",

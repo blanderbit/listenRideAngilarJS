@@ -1,6 +1,11 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "bolzano": "Bozen",
+    "lake-garda": "Gardasee",
+    "sardinia": "Sardinien",
+    "sicily": "Sizilien",
+    "toscana": "Toskana",
     "errors": {
       "email-required": "Bitte gib Deine E-Mail-Adresse ein, die E-Mailadresse ist erforderlich",
       "email-not-valid": "Bitte gib eine gültige E-Mail-Adresse ein",
@@ -150,6 +155,12 @@
       "subheader": "Triff Gleichgesinnte. Verdiene Dir etwas dazu."
     }
   },
+  "brand-integration": {
+    "leaos": {
+      "subdescription-not-used": "Design. Kunst. Leidenschaft.",
+      "subdescription-not-use": "Design. Kunst. Leidenschaft."
+    }
+  },
   "multi-booking": {
     "meta-title": "Gruppenbuchung",
     "meta-description": "Buche deine Räder über unser Gruppenbuchungsformular",
@@ -269,6 +280,10 @@
       "ampler": {
         "meta-title": "E Bike Test Programm",
         "meta-descr": "Teste noch heute ein Ampler E-bike! Die Elektrofahrräder stehen jetzt zum Testen in Amsterdam Berlin, Düsseldorf, München und Zürich für dich bereit."
+      },
+      "leaos": {
+        "meta-title": "Mieten und testen Sie die Leaos E-Bikes in München, Düsseldorf und Bozen",
+        "meta-descr": "Das Design Ebike - Leaos"
       },
       "brompton": {
         "meta-title": "Miete das Brompton Faltrad mit listnride",
@@ -1166,7 +1181,7 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=de"
   },
   "seo": {
-    "header": "Miete die besten Räder in",
+    "header-1": "Miete die besten Räder in",
     "rent-the-best": "Miete die besten",
     "bikes": "Räder",
     "rent-perfect-bikes-in": "Miete perfekte Räder in",
