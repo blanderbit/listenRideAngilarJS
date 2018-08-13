@@ -316,18 +316,19 @@
   "brand-integration": {
     "shared": {
       "choose-location": "Choose a location",
+      "no-bikes-found": "Oops... there are unfortunately no bikes listed yet in this location.",
       "faq": "The frequently asked questions"
     },
     "leaos": {
       "description": "The Design Ebike - Leaos",
       "subdescription": "Design. Art. Passion.",
       "feature1-title": "Italian Design",
-      "feature1-description": "Pure Elegance \nCompletely New Driving Experience\nPerfect Symbiosis of Motor and Rider\n100% Made in Italy",
+      "feature1-description": "Pure Elegance.\nCompletely New Driving Experience.\nPerfect Symbiosis of Motor and Rider.\n100% made in Italy.",
       "feature2-title": "Joyride",
-      "feature2-description": "Upright or sportive riding position \nFrictionless Gear Hub \nDigital Display \nfrom 14kg",
+      "feature2-description": "Upright or sportive riding position. \nFrictionless Gear Hub. \nDigital Display. \nFrom 14kg.",
       "feature3-title": "Electric Assist",
-      "feature3-description": "250 Wh, 14kg (Pressed)\n14 Ah, 500 Wh, 22kg (Pure)\nIntegrated solar pannels (optional)\nremovable, speed charger",
-      "test-bike": "Rent and test the Leaos Bikes in Munich, Bolzano and Dusseldorf",
+      "feature3-description": "250 Wh, 14kg (Pressed). \n14 Ah, 500 Wh, 22kg (Pure). \nIntegrated solar pannels (optional). \nRemovable, speed charger.",
+      "test-bike": "Rent and test the Leaos bikes in Munich, Bolzano and Dusseldorf",
       "find-out-more": "Learn more about LEAOS bikes",
       "faq-question-1": "Do I need a licence plate and insurance for my LEAOS bike?",
       "faq-answer-1": "Pursuant to EU law, the 25-km/h version does not require a license plate or insurance. There is also a 45-km/h version, which is classified as a moped and thus requires a licence plate and insurance.",

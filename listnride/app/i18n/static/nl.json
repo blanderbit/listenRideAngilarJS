@@ -315,6 +315,7 @@
   "brand-integration": {
     "shared": {
       "choose-location": "Choose a location",
+      "no-bikes-found": "Oops..Er zijn helaas nog geen fietsen op deze locatie.",
       "faq": "The frequently asked questions"
     },
     "ampler": {
