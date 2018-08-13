@@ -2,10 +2,11 @@
   "shared": {
     "learn-more": "Per saperne di più",
     "bolzano": "Bolzano",
-    "lake-garda": "Lake Garda",
-    "sardinia": "Sardinia",
-    "sicily": "Sicily",
-    "toscana": "Tuscany",
+    "lake-garda": "Lago di Garda",
+    "sardinia": "Sardegna",
+    "sicily": "Sicilia",
+    "toscana": "Toscana",
+    "please-select": "Per favore seleziona",
     "errors": {
       "email-required": "Si prega di inserire un indirizzo email valido",
       "email-not-valid": "Si prega di inserire un indirizzo email valido",
@@ -160,6 +161,7 @@
   },
   "multi-booking": {
     "meta-title": "Prenotazione multipla",
+    "no-accessories": "Senza Accessori",
     "meta-description": "Prenota le tue bici con il nostro modulo di prenotazione multipla",
     "title": "Prenotazioni di gruppo",
     "header": "Siamo felici di aiutarti con la tua prenotazione di gruppo",
