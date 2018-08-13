@@ -150,6 +150,12 @@
       "subheader": "Meet like-minded and make some pocket money"
     }
   },
+  "brand-integration": {
+    "leaos": {
+      "subdescription-not-used": "Design. Art. Passion.",
+      "subdescription-not-use": "Design. Art. Passion."
+    }
+  },
   "multi-booking": {
     "meta-title": "Group booking",
     "meta-description": "Book your bikes with our group booking form",
@@ -269,6 +275,10 @@
       "ampler": {
         "meta-title": "E-Bike Test Ride Program",
         "meta-descr": "Test ride an e-bike today! The ebikes from Ampler are available on listnride. Rent one in Amsterdam, Berlin, Düsseldorf,  Munich or Zurich."
+      },
+      "leaos": {
+        "meta-title": "Rent and test the Leaos E-Bikes in Munich, Dusseldorf and Bolzano",
+        "meta-descr": "The Design Ebike - Leaos"
       },
       "brompton": {
         "meta-title": "Rent a Brompton bike with listnride",

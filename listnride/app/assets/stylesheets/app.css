@@ -652,6 +652,14 @@ md-tooltip .md-content {
   padding-bottom: 40px;
 }
 
+.lnr-object-fit-cover {
+  object-fit: cover;
+}
+
+.lnr-object-fit-contain {
+  object-fit: contain;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* SVG
 /*-----------------------------------------------------------------------------------*/
@@ -1190,6 +1198,22 @@ md-grid-list md-grid-tile.tile-mallorca {
 
 md-grid-list md-grid-tile.tile-sylt {
   background-image: url(../ui_images/cities/lnr_sylt.jpg);
+}
+
+md-grid-list md-grid-tile.tile-toscana {
+  background-image: url(../ui_images/cities/lnr_toscana.jpg);
+}
+
+md-grid-list md-grid-tile.tile-sicily {
+  background-image: url(../ui_images/cities/lnr_sicily.jpg);
+}
+
+md-grid-list md-grid-tile.tile-sardinia {
+  background-image: url(../ui_images/cities/lnr_sardinia.jpg);
+}
+
+md-grid-list md-grid-tile.tile-lake-garda {
+  background-image: url(../ui_images/cities/lnr_lake-garda.jpg);
 }
 
 .md-dialog-fullscreen.dialog-bikes,
@@ -2923,6 +2947,9 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   .lnr-gt-sm-padding-right {
     padding-right: 8px;
   }
+  .lnr-gt-sm-center {
+    text-align: center
+  }
 }
 
 @media (max-width: 959px) { /* SM-BREAKPOINT */
@@ -2946,6 +2973,17 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .lnr-sm-margin-bottom {
     margin-bottom: 8px;
+  }
+
+  .lnr-sm-center {
+    text-align: center
+  }
+
+  .lnr-sm-no-vertical-space {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   /* INSURANCE */

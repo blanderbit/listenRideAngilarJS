@@ -317,6 +317,28 @@
       "choose-location": "Elige una ubicación",
       "faq": "Las preguntas frecuentes"
     },
+    "leaos": {
+      "description": "El diseño Ebike - Leaos",
+      "subdescription": "Diseño. Arte. Pasión.",
+      "feature1-title": "Diseño italiano",
+      "feature1-description": "Elegancia pura\nExperiencia de conducción completamente nueva\nPerfecta simbiosis entre el motor y el ciclista\n100% Hecho en Italia",
+      "feature2-title": "Joyride",
+      "feature2-description": "Posición de conducción erguida o deportiva\nHub de engranaje sin fricción\nPantalla digital\ndesde 14kg",
+      "feature3-title": "Asistencia eléctrica",
+      "feature3-description": "250 Wh, 14kg (Presionado)\n14 Ah, 500 Wh, 22 kg (Puro)\nPaneles solares integrados (opcional)\nextraíble, cargador veloz",
+      "test-bike": "Alquile y pruebe las Leaos E-Bikes en Munich, Dusseldorf y Bolzano",
+      "find-out-more": "Conozca más sobre las bicicletas LEAOS",
+      "faq-question-1": "¿Necesito una matrícula y un seguro para mi bicicleta LEAOS?",
+      "faq-answer-1": "En conformidad con la legislación de la UE, la versión de 25 km/h no requiere una matrícula o seguro. También hay una versión de 45 km/h, que se clasifica como ciclomotor y por lo tanto si requiere una matrícula y seguro.",
+      "faq-question-2": "¿Cuánto mantenimiento requieren las bicicletas LEAOS?",
+      "faq-answer-2": "Las bicicletas LEAOS no requieren de mucho mantenimiento ya que los componentes del disco están protegidos del clima. Cada 2-3 meses, la cadena debe ser engrasada. La presión de los neumáticos debe verificarse regularmente. Los frenos se deben revisar regularmente para controlar el desgaste de las pastillas de freno.",
+      "faq-question-3": "¿Hay cuadros de diferente tamaño?",
+      "faq-answer-3": "Ofrecemos tamaños de cuadros que van desde 155 cm a 190 cm. Como resultado de la forma geométrica especial de la bicicleta, la silla se desplaza hacia atrás a medida que se eleva. Los diversos stems para el manillar también se pueden adaptar al tamaño.",
+      "faq-question-4": "¿Pueden las bicicletas LEAOS estar equipadas con asientos para niños?",
+      "faq-answer-4": "Sí. Tenga en cuenta que un asiento para niños debe montarse en un soporte, que debe solicitarse con la bicicleta.",
+      "faq-question-5": "¿Las bicicletas LEAOS tienen sistema de suspensión?",
+      "faq-answer-5": "La bicicleta LEAOS cuentan con neumáticos especiales que ayudan tener un viaje placentero. De acuerdo con las pruebas, la acción de resorte de estos neumáticos es mejor que una suspensión de horquillas convencional de trekking o city-bikes y ofrece baja resistencia a la rodadura."
+    },
     "ampler": {
       "meta-title": "Programa de prueba de bicicleta eléctrica",
       "meta-descr": "Pruebe montar una e-bike hoy! Las ebikes de Ampler están disponibles en listnride. Alquile uno en Amsterdam, Berlín, Düsseldorf, Munich o Zurich.",
