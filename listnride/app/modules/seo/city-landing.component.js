@@ -17,7 +17,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
         bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
           // without transport category
           cityLanding.categories = resolve.filter(function (item) {
-            return item.name !== 'Transport';
+            return item.url !== 'transport';
           });
           // parse url names to data names (change '-' to '_')
           _.forEach(cityLanding.categories, function (item) {
