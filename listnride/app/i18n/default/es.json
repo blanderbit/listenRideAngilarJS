@@ -1,6 +1,21 @@
 {
   "shared": {
     "learn-more": "Saber más",
+    "bolzano": "Bolzano",
+    "lake-garda": "Lake Garda",
+    "sardinia": "Sardinia",
+    "sicily": "Sicily",
+    "toscana": "Tuscany",
+    "please-select": "Por favor selecciona",
+    "errors": {
+      "email-required": "Introduce una dirección de correo electrónico válida",
+      "email-not-valid": "Por favor, introduce una dirección de correo electrónico válida",
+      "phone-not-valid": "Por favor ingresa un número de teléfono válido",
+      "phone-required": "Por favor ingresa tu número de teléfono, este campo es obligatorio",
+      "404": "La página no existe",
+      "422": "El formato de los datos ingresados es incorrecto",
+      "500": "Error interno del servidor"
+    },
     "basic-fee": "El costo del servicio incluye seguro básico",
     "how-it-works": "Cómo funciona",
     "list-a-bike": "Registrar una bici",
@@ -125,7 +140,11 @@
     "today": "Hoy",
     "yesterday": "Ayer",
     "press": {
-      "title": "Conocido de TV & Print"
+      "title": "Conocido de TV & Print",
+      "logo-1": "Insertar logo aquí",
+      "logo-2": "Insertar logo aquí",
+      "logo-3": "Insertar logo aquí",
+      "logo-4": "Insertar logo aquí"
     },
     "find-your-bike": {
       "header": "Encuentra tu bicicleta perfecta",
@@ -136,6 +155,39 @@
       "header": "Alquila tu bicicleta",
       "subheader": "Conoce a personas con tus mismas pasiones y gana dinero extra"
     }
+  },
+  "brand-integration": {
+    "leaos": {
+      "subdescription-not-used": "Diseño. Arte. Pasión.",
+      "subdescription-not-use": "Diseño. Arte. Pasión."
+    }
+  },
+  "multi-booking": {
+    "meta-title": "Alquileres grupales",
+    "no-accessories": "Sin accesorios",
+    "meta-description": "Alquila tus bicicletas con nuestro formulario de reserva grupal",
+    "title": "Alquileres grupales",
+    "header": "Estamos felices de ayudarte con tu reserva grupal",
+    "subheader": "¡No pierdas más tiempo! Déjanos ayudarte a organizar tu próximo viaje en bicicleta. Indícanos tus preferencias y nosotros haremos el resto. Tu única preocupación es disfrutar del viaje",
+    "how-to": {
+      "step-1-title": "¿Qué tipo de bici quieres?",
+      "step-1-content": "Cuéntanos qué bicicletas te gustaría alquilar y nosotros nos ocupamos del resto. ",
+      "step-2-title": "Reserva en línea",
+      "step-2-content": "Te enviaremos un enlace con una propuesta de alquiler para que puedas reservar en línea de manera fácil, rápida y segura. ",
+      "step-3-title": "Disfruta del paseo",
+      "step-3-content": "Descubre y explora nuevos lugares andando en bicicleta. "
+    },
+    "your-booking-details": "Detalles de reserva",
+    "what-bike-kind": "¿Qué tipo de bicicleta?",
+    "where-to-rent": "¿Dónde quieres realizar el alquiler?",
+    "rental-period": "Período de alquiler",
+    "how-many-bikes": "¿Cuántas bicicletas?",
+    "do-you-need-accessories": "¿Necesitas accesorios?",
+    "your-contact-details": "Detalles de contacto",
+    "thanks-for-request": "Gracias por tu solicitud ",
+    "we-will-back-shortly": "Nos pondremos en contacto contigo a la brevedad",
+    "take-back-to-search": "Llévame de regreso a mi búsqueda",
+    "accessories": "Accesorios"
   },
   "insurance": {
     "facts": {
@@ -177,9 +229,9 @@
         "meta-title": "Eroica vintage road bike cycling event",
         "meta-description": "Rent your vintage road bike for Eroica on listnride"
       },
-      "toros-del-gravel": {
-        "meta-title": "Alquila una bicicleta gravel para Toros de Gravel",
-        "meta-description": "En listnride encontrarás una selección de bicicletas de gravel y MTB para alquilar en este especial evento de gravel en Sineu, Mallorca."
+      "toros-de-gravel": {
+        "meta-title": "Alquila una bicicleta de gravel para Toros de Gravel",
+        "meta-description": "En listnride encontrarás una selección de bicicletas de gravel y MTB para alquilar en este evento especial de gravel en Sineu, Mallorca."
       },
       "in-velo-veritas": {
         "meta-title": "In Velo Veritas - Alquila una bici con listnride",
@@ -230,6 +282,10 @@
       "ampler": {
         "meta-title": "Programa de prueba de bicicleta eléctrica",
         "meta-descr": "Pruebe montar una e-bike hoy! Las ebikes de Ampler están disponibles en listnride. Alquile uno en Amsterdam, Berlín, Düsseldorf, Munich o Zurich."
+      },
+      "leaos": {
+        "meta-title": "Alquila y prueba las Leaos E-Bikes en Munich, Dusseldorf y Bolzano",
+        "meta-descr": "El diseño Ebike - Leaos"
       },
       "brompton": {
         "meta-title": "Alquila una bici Brompton con listnride",
@@ -451,21 +507,21 @@
     "mark-as-closed": "Marcados todos los días como cerrados",
     "change-address-info": "La actualización de tu dirección no actualiza la dirección de tus bicicletas.",
     "payment-method": "Método de pago",
-    "payout-method": "Método de pago",
-    "add-payout-method": "Añadir un método de pago",
+    "payout-method": "Método de cobro",
+    "add-payout-method": "Añadir un método de cobro",
     "payment-method-description": "Tu método de pago se usa para pagar los alquileres. Puede ser una tarjeta de crédito o una cuenta de PayPal.",
-    "payout-method-description": "Tu método de pago es donde te enviamos los ingresos por alquiler. Por lo tanto, debes añadirlo por último al aceptar una solicitud como anunciante",
+    "payout-method-description": "Tu método de cobro es donde te enviamos los ingresos por alquiler. Por lo tanto, debes añadirlo para que podamos pagarte.",
     "add-payment-method": "Añadir un método de pago",
     "vouchers": "Cupones",
     "payment-credit-card": "Tu método de pago actual es una tarjeta de crédito",
     "payment-paypal": "Tu método de pago actual es una cuenta de PayPal con una dirección de correo electrónico",
     "no-payment-method": "No has introducido ningún método de pago hasta el momento.",
-    "no-payout-method": "No has introducido ningún método de pago hasta el momento.",
+    "no-payout-method": "No has introducido ningún método de cobro hasta el momento.",
     "paypal": "Paypal",
     "bank-account": "Cuenta bancaria",
     "enter-paypal-info": "Introduce la dirección de correo electrónico de tu cuenta de PayPal",
     "enter-bank-info": "Introduce el nombre y apellido del titular de la cuenta, así como IBAN y BIC",
-    "save-payout-method": "Guardar método de pago",
+    "save-payout-method": "Guardar método de cobro",
     "payout-paypal": "Tu método de pago es una cuenta de Paypal con una dirección de email",
     "payout-bank": "Tu método de pago es una cuenta bancaria que termina en",
     "voucher-code": "Código del cupón",
@@ -619,6 +675,10 @@
   },
   "forms": {
     "first-name": "Nombre",
+    "your-name": "Nombre",
+    "your-email-address": "Correo electrónico",
+    "your-phone-number": "Número de teléfono",
+    "comments": "Comentarios",
     "last-name": "Apellido",
     "email-address": "Correo electrónico",
     "update-password": "Update Password",
@@ -707,7 +767,8 @@
   },
   "search": {
     "no-bikes": "No hay bicis en esta ubicación",
-    "bikes-found": "bicicletas encontradas:\n",
+    "book-multiple-bikes": "Reserva múltiples bicicletas",
+    "bikes-found": "Bicicletas encontradas:",
     "all-sizes": "Todos los tamaños",
     "bikes-in": "Bicis disponibles",
     "meta-title": "Alquila la bici perfecta en{{location}} ",
@@ -855,8 +916,8 @@
       "price_7_days": "7 días (1 semana)",
       "price_8_days": "de 8 días en adelante",
       "price_8_days_long": "de 8 días en adelante (por día)",
-      "price_30_days": "30 días ",
-      "price_30_days_long": "30 días (1 mes)",
+      "price_30_days": "28 días ",
+      "price_30_days_long": "28 días (1 mes)",
       "reset-prices": "Reajustar",
       "validations": {
         "required": {

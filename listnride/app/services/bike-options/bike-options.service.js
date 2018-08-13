@@ -3,16 +3,31 @@
 angular.module('listnride')
   .factory('bikeOptions', ['$translate', function ($translate) {
     return {
-      accessoryOptions: function () {
+      // All accessories keys
+      accessoriesTranslationKeys: function () {
         return [
-          { model: "lock", label: "lock", iconFileName: "accessoire_lock.svg" },
-          { model: "helmet", label: "helmet", iconFileName: "accessoire_helmet.svg" },
-          { model: "lights", label: "lights", iconFileName: "accessoire_lights.svg" },
-          { model: "basket", label: "basket", iconFileName: "accessoire_basket.svg" },
-          { model: "trailer", label: "trailer", iconFileName: "accessoire_trailer.svg"} ,
-          { model: "childseat", label: "childseat", iconFileName: "accessoire_childseat.svg" },
-          { model: "gps", label: "gps", iconFileName: "accessoire_gps.svg" }
-        ]
+          "list.accessories.lock",
+          "list.accessories.helmet",
+          "list.accessories.lights",
+          "list.accessories.basket",
+          "list.accessories.trailer",
+          "list.accessories.childseat",
+          "list.accessories.gps"
+        ];
+      },
+
+      accessoryOptions: function () {
+        return $translate(this.accessoriesTranslationKeys()).then(function (translations) {
+          return [
+            { model: "lock", label: "lock", iconFileName: "accessoire_lock.svg", name: translations["list.accessories.lock"] },
+            { model: "helmet", label: "helmet", iconFileName: "accessoire_helmet.svg", name: translations["list.accessories.helmet"] },
+            { model: "lights", label: "lights", iconFileName: "accessoire_lights.svg", name: translations["list.accessories.lights"] },
+            { model: "basket", label: "basket", iconFileName: "accessoire_basket.svg", name: translations["list.accessories.basket"] },
+            { model: "trailer", label: "trailer", iconFileName: "accessoire_trailer.svg", name: translations["list.accessories.trailer"]} ,
+            { model: "childseat", label: "childseat", iconFileName: "accessoire_childseat.svg", name: translations["list.accessories.childseat"] },
+            { model: "gps", label: "gps", iconFileName: "accessoire_gps.svg", name: translations["list.accessories.gps"] }
+          ];
+        })
       },
 
       sizeOptions: function () {
@@ -29,6 +44,7 @@ angular.module('listnride')
       sizeOptionsForSearch: function () {
         return [
           { value: -1, label: "-" },
+          { value: 0, label: "Unisize" },
           { value: 155, label: "155 cm - 165 cm" },
           { value: 165, label: "165 cm - 175 cm" },
           { value: 175, label: "175 cm - 185 cm" },

@@ -24,24 +24,39 @@
 
     <md-content flex layout="column" class="scroll-parent">
       <!-- no bikes found placeholder -->
-      <div ng-if="search.bikes !== undefined && search.bikes.length == 0" layout="column" flex="100" layout-align="center center" layout-padding>
+      <div ng-if="search.bikes !== undefined && search.bikes.length === 0" layout="column" flex="100" layout-align="center center" layout-padding>
         <div layout="row"><h2 class="md-headline no-margin">Hey,</h2></div>
         <div layout="row" layout-align="center center"><p flex="80" class="md-subhead lnr-center" translate="search.no-bikes"></p></div>
       </div>
-      <cardgrid
-        ng-repeat="filterBikes in search.categorizedFilteredBikes"
-        on-bike-hover="search.onBikeHover"
-        title="{{filterBikes.title}}"
-        limit="search.limit"
-        add-more-items-limit="search.addMoreItemsLimit"
-        categorized-bikes="search.categorizedFilteredBikes"
-        uncategorized-bikes="search.filteredBikes"
-        bikes="filterBikes.bikes"
-        location="search.latLng"
-        titles="search.titles"
-        card-index="$index"
-        ng-hide="search.bikes !== undefined && search.bikes.length == 0">
-      </cardgrid>
+
+      <div layout-margin>
+        <div class="lnr-mt-0" layout="row" layout-align="space-between center">
+          <!-- <p class="md-subhead">{{filterBikes.title}}</p> -->
+          <p class="md-subhead">{{'search.bikes-found' | translate}} {{search.categorizedFilteredBikes[0].bikes.length}}</p>
+          <div>
+            <a ui-sref="multiBooking({location: search.location})">{{'search.book-multiple-bikes' | translate}}</a>
+          </div>
+        </div>
+
+        <md-divider></md-divider>
+
+        <cardgrid
+          ng-repeat="filterBikes in search.categorizedFilteredBikes"
+          on-bike-hover="search.onBikeHover"
+          title="{{filterBikes.title}}"
+          limit="search.limit"
+          add-more-items-limit="search.addMoreItemsLimit"
+          categorized-bikes="search.categorizedFilteredBikes"
+          uncategorized-bikes="search.filteredBikes"
+          bikes="filterBikes.bikes"
+          location="search.latLng"
+          titles="search.titles"
+          card-index="$index"
+          ng-hide="search.bikes !== undefined && search.bikes.length === 0"
+          class="lnr-no-margin">
+        </cardgrid>
+      </div>
+
       <!-- busy loader until bikes api resolves -->
       <div ng-show="search.bikes === undefined" flex layout="column" layout-align="center center">
         <md-progress-circular md-mode="indeterminate"></md-progress-circular>

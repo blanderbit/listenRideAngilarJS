@@ -1,6 +1,21 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "bolzano": "Bozen",
+    "lake-garda": "Gardasee",
+    "sardinia": "Sardinien",
+    "sicily": "Sizilien",
+    "toscana": "Toskana",
+    "please-select": "Bitte Auswählen",
+    "errors": {
+      "email-required": "Bitte gib Deine E-Mail-Adresse ein, die E-Mailadresse ist erforderlich",
+      "email-not-valid": "Bitte gib eine gültige E-Mail-Adresse ein",
+      "phone-not-valid": "Bitte gib eine gültige Telefonnummer ein",
+      "phone-required": "Bitte gib die Telefonnummer ein, diese wird benötigt",
+      "404": "Seite existiert nicht",
+      "422": "falsche Datenformat eingegeben.",
+      "500": "Interner Server Fehler"
+    },
     "basic-fee": "Die Servicegebühr beinhaltet die Basis-Versicherung",
     "how-it-works": "Wie funktioniert's",
     "list-a-bike": "Rad vermieten",
@@ -141,6 +156,39 @@
       "subheader": "Triff Gleichgesinnte. Verdiene Dir etwas dazu."
     }
   },
+  "brand-integration": {
+    "leaos": {
+      "subdescription-not-used": "Design. Kunst. Leidenschaft.",
+      "subdescription-not-use": "Design. Kunst. Leidenschaft."
+    }
+  },
+  "multi-booking": {
+    "meta-title": "Gruppenbuchung",
+    "no-accessories": "Kein Zubehör",
+    "meta-description": "Buche deine Räder über unser Gruppenbuchungsformular",
+    "title": "Gruppenbuchungen",
+    "header": "Wir helfen dir gern mit deiner Gruppenbuchung",
+    "subheader": "Wir übernehmen für dich die Buchung für deinen nächsten Radel-Urlaub. Sag uns einfach, was du dir vorstellst. Wir machen den Rest. Damit du dich einfach nur auf deinen Trip freuen kannst.",
+    "how-to": {
+      "step-1-title": "Suchen & finden",
+      "step-1-content": "Spar dir die Zeit der Recherche und freu dich schon mal auf deine Reise! Easy, transparent, jederzeit.",
+      "step-2-title": "Bestimmen & anfragen",
+      "step-2-content": "Lass uns wissen, welche Fahrräder du ausleihen möchtest. Wir kümmern uns um den Rest. Sag uns einfach deine Anforderungen, und wir werden uns mit mehr Info bei dir melden.",
+      "step-3-title": "Angebot annehmen & online buchen",
+      "step-3-content": "Wir senden dir ein Angebot mit einem Link, über den du online buchen kannst oder du gibst uns eine schriftliche Bestätigung deiner Buchung. Im letztgenannten Fall wird eine Rechnung ausgestellt, die Du zur Vervollständigung der Buchung überweisen musst.  "
+    },
+    "your-booking-details": "Deine Buchungsdetails",
+    "what-bike-kind": "Welcher Fahrradtyp?",
+    "where-to-rent": "Wo willst du Räder ausleihen?",
+    "rental-period": "Buchungszeitraum",
+    "how-many-bikes": "Wieviele Räder?",
+    "do-you-need-accessories": "Brauchst du Zubehör?",
+    "your-contact-details": "Deine Kontaktdaten",
+    "thanks-for-request": "Danke für die Radverleih-Anfrage",
+    "we-will-back-shortly": "Wir kommen bald auf dich zurück",
+    "take-back-to-search": "Bring mich zurück zu meiner Suche",
+    "accessories": "Zubehör"
+  },
   "insurance": {
     "facts": {
       "basic-insurance": {
@@ -181,9 +229,9 @@
         "meta-title": "L' Eroica, Historisches Radrennen mit Vintage-Rennrädern",
         "meta-description": "Miete dein Vintage-Rennrad für die Eroica"
       },
-      "toros-del-gravel": {
-        "meta-title": "Miet das perfekte Fahrrad für Toros del Gravel",
-        "meta-description": "Auf listnride findest du eine Auswahl an Gravel- und Mountainbikes, die du für dieses besondere Gravel-Event in Sineu auf Mallorca ausleihen kannst."
+      "toros-de-gravel": {
+        "meta-title": "Miet das perfekte Fahrrad für den Toros de Gravel",
+        "meta-description": "Auf listnride findest du Gravel- und Mountainbikes, die du für das Event in Sineu, Mallorca ausleihen kannst."
       },
       "in-velo-veritas": {
         "meta-title": "Klassikerausfahrt: In Velo Veritas mit listnride",
@@ -234,6 +282,10 @@
       "ampler": {
         "meta-title": "E Bike Test Programm",
         "meta-descr": "Teste noch heute ein Ampler E-bike! Die Elektrofahrräder stehen jetzt zum Testen in Amsterdam Berlin, Düsseldorf, München und Zürich für dich bereit."
+      },
+      "leaos": {
+        "meta-title": "Mieten und testen Sie die Leaos E-Bikes in München, Düsseldorf und Bozen",
+        "meta-descr": "Das Design Ebike - Leaos"
       },
       "brompton": {
         "meta-title": "Miete das Brompton Faltrad mit listnride",
@@ -625,6 +677,10 @@
   },
   "forms": {
     "first-name": "Vorname",
+    "your-name": "Dein Name",
+    "your-email-address": "Deine E-Mail-Adresse",
+    "your-phone-number": "Deine Telefonnummer",
+    "comments": "Kommentare",
     "last-name": "Nachname",
     "email-address": "E-Mail-Adresse",
     "update-password": "Update Password",
@@ -713,7 +769,8 @@
   },
   "search": {
     "no-bikes": "Leider sind an diesem Ort noch keine Räder vorhanden. Aber wir wachsen schnell, vielleicht gibt es bald schon welche! Wenn du magst, kannst du auch <a href=\"/listing-a-bike\">dein eigenes Rad einstellen</a> oder alternativ nach einer anderen Stadt oder Adresse in der Nähe suchen.",
-    "bikes-found": "gefundene Räder:",
+    "book-multiple-bikes": "Mehrere Räder anfragen",
+    "bikes-found": "Gefundene Räder:",
     "all-sizes": "Alle Größen",
     "bikes-in": "Fahrräder in",
     "meta-title": "Miete das perfekte Rad in {{location}}.",
@@ -862,8 +919,8 @@
       "price_7_days": "7 Tage (1 Woche)",
       "price_8_days": "ab 8 Tage",
       "price_8_days_long": "ab 8 Tage (pro Tag)",
-      "price_30_days": "30 Tage",
-      "price_30_days_long": "30 Tage (1 Monat)",
+      "price_30_days": "28 Tage",
+      "price_30_days_long": "28 Tage (1 Monat)",
       "reset-prices": "Zurücksetzen",
       "validations": {
         "required": {

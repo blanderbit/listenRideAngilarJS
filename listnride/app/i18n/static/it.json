@@ -79,7 +79,7 @@
   },
   "insurance": {
     "main": {
-      "title": "La nostra assicurazione ti protegge.\n<br>\nNon importa se sei noleggiatore o noleggiante",
+      "title": "La nostra assicurazione ti protegge.\nNon importa se sei noleggiatore o noleggiante",
       "description": "Noleggiare una bici speciale significa avere fiducia. Cosa succede se viene rubata durante il noleggio ? Cosa succede se ritorna danneggiata ? Tutti i noleggi listnride in Germania e Austria sono assicurati. E il nostro partner <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> ti aiuterà quando hai bisogno di aiuto. Per telefono. Per e-mail.",
       "logo-description": "Il nostro partner assicurativo"
     },
@@ -166,9 +166,9 @@
     "rapha-super-cross": {
       "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
     },
-    "toros-del-gravel": {
-      "title": "Noleggia una bici Gravel per il Toros del Gravel",
-      "description": "che cosa: <b>Toros del Gravel </b>| quando: <b>13 ottobre </b>| dove: <b>Sineu - Maiorca </b>",
+    "toros-de-gravel": {
+      "title": "Noleggia una bici Gravel per il Toros de Gravel",
+      "description": "che cosa: <b>Toros de Gravel </b>| quando: <b>13 ottobre </b>| dove: <b>Sineu - Maiorca </b>",
       "text": "Toros de Gravel sarà il primo evento Gravel mai tenuto a Maiorca. Progettato per essere un giro impegnativo ma rilassato, il percorso esplorerà angoli poco conosciuti dell'isola con checkpoint e segmenti di gara prima di finire al velodromo di Sineu per la festa. Biciclette Gravel  che puoi noleggiare direttamente qui, cliccando su una delle bici e richiedendola."
     },
     "eroica-gaiole": {
@@ -309,6 +309,28 @@
     "shared": {
       "choose-location": "Scegli una località",
       "faq": "Le domande frequenti"
+    },
+    "leaos": {
+      "description": "Ebike  design - Leaos",
+      "subdescription": "Design. Arte. Passione.",
+      "feature1-title": "Design italiano",
+      "feature1-description": "Pura eleganza. \nEsperienza di guida completamente nuova. \nSimbiosi perfetta di motore e pilota. \n100% Made in Italy.",
+      "feature2-title": "La gioia di guidare",
+      "feature2-description": "Posizione di guida verticale o sportiva.\nSistema del cambio senza attrito.\nDisplay digitale.\nDa 14kg.",
+      "feature3-title": "Supporto elettrico",
+      "feature3-description": "Brose Motor per una guida fluida.\nCon componenti completamente integrati.\nCompresa la trasmissione Gates Carbon.\nQualcosa di veramente speciale!",
+      "test-bike": "Noleggia e prova le E-Bikes Leaos a Monaco di Baviera, Dusseldorf e Bolzano",
+      "find-out-more": "Ulteriori informazioni sulle E-bike Leaos",
+      "faq-question-1": "Ho bisogno di una targa e di un'assicurazione per la mia bici LEAOS?",
+      "faq-answer-1": "Ai sensi della normativa UE, la versione da 25 km / h non richiede una targa o un'assicurazione. C'è anche una versione di 45 km / h, che è classificata come un ciclomotore e richiede quindi una targa e un'assicurazione.",
+      "faq-question-2": "Quanta manutenzione richiedono le bici LEAOS?",
+      "faq-answer-2": "Le biciclette LEAOS hanno una manutenzione molto bassa poiché i componenti della trasmissione sono protetti dalle intemperie. Ogni 2-3 mesi, la catena dovrebbe essere oliata. La pressione dei pneumatici dovrebbe essere controllata regolarmente. I freni devono essere controllati regolarmente per l'usura delle pastiglie dei freni.",
+      "faq-question-3": "Ci sono diverse dimensioni del telaio?",
+      "faq-answer-3": "Offriamo telai che vanno da 155 cm a 190 cm. Come risultato della speciale forma geometrica della bici, la sella si sposta indietro mentre viene sollevata. I vari cambi per il manubrio possono anche essere abbinati alle dimensioni.",
+      "faq-question-4": "Le bici LEAOS possono essere montate con seggiolini per bambini?",
+      "faq-answer-4": "Sì. Si prega di notare che un seggiolino per bambini deve essere montato su un rack, che deve essere ordinato con la bicicletta.",
+      "faq-question-5": "Le bici LEAOS hanno sistemi di sospensione?",
+      "faq-answer-5": "Le bici LEAOS sono ammortizzate dalle loro speciali gomme a palloncino. Secondo i test, l'azione della molla di questi pneumatici è migliore di una sospensione a forcella convenzionale per bici da trekking o da città e offre una bassa resistenza al rotolamento."
     },
     "ampler": {
       "meta-title": "E-Bike Test Ride Programma",

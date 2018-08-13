@@ -79,7 +79,7 @@
   },
   "insurance": {
     "main": {
-      "title": "Onze verzekering beschermt je.\n<br> \nVerhuurder of huurder.",
+      "title": "Onze verzekering beschermt je.\nVerhuurder of huurder.",
       "description": "Jouw speciale fiets verhuren betekent vertrouwen hebben. Wat als het wordt gestolen tijdens het uitlenen? Wat als het beschadigd terugkomt? Alle listnride huurfietsen in Duitsland en Oostenrijk zijn verzekerd. Onze partner <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> staat voor u klaar. Per telefoon. Per e-mail. Eenvoudig. Niet-bureaucratisch.",
       "logo-description": "Onze verzekeringspartner"
     },
@@ -166,9 +166,9 @@
     "rapha-super-cross": {
       "text": "De Rapha Super Cross is weer terug in München, voor het derde jaar op rij. Indien je er graag bij wil zijn, maar geen geschickte fiets hebt, kann je via listnride een passende fiets huren. De listnride bike sharing community biedt verschillende cyclocrossfietsen te huur aan. De fietsen kunnen voor het evenement bij de verschillende aanbieders worden aangevraagd en geboekt. De overdracht wordt direct met de verhuurder afgesproken. Indien je een fiets hebt die niet benut wordt, kan je deze gewoon aanbieden om daarmee wat geld te verdienen ein interessante mensen te leren kennen, die aan het evenement deelnemen. Sluit je aan bij de groeiende Community!"
     },
-    "toros-del-gravel": {
-      "title": "Huur een gravelbike voor Toros del Gravel",
-      "description": "wat: <b>Toros del Gravel </b>| wanneer: <b>13 oktober </b>| waar <b>Sineu - Mallorca </b>",
+    "toros-de-gravel": {
+      "title": "Huur een gravelbike voor Toros de Gravel",
+      "description": "wat: <b>Toros de Gravel </b>| wanneer: <b>13 oktober </b>| waar <b>Sineu - Mallorca </b>",
       "text": "Toros de Gravel is het eerste gravel evenement ooit gehouden op Mallorca.  Deze uitdagende, maar ontspannen route verkennen kleine onbekende uithoeken van het eiland met checkpoints en racesegmenten voordat je bij het Sineu-velodroom eindigt voor een rocking after party.  Geschikte gravel bikes kunt u hier direct huren, door op de fiets te klikken en deze aan te vragen."
     },
     "eroica-gaiole": {
@@ -315,7 +315,30 @@
   "brand-integration": {
     "shared": {
       "choose-location": "Choose a location",
+      "no-bikes-found": "Oops..Er zijn helaas nog geen fietsen op deze locatie.",
       "faq": "The frequently asked questions"
+    },
+    "leaos": {
+      "description": "De Design Ebike - Leaos",
+      "subdescription": "Design. Kunst. Passie.",
+      "feature1-title": "Italiaans design",
+      "feature1-description": "Pure Elegance.\nCompleet nieuwe rijervaring.\nPerfecte symbiose van techniek en mens.\n100% gemaakt in Italië.",
+      "feature2-title": "Rijplezier",
+      "feature2-description": "Rechte of sportieve fietspositie.\nWrijvingsloze Naafversnelling.\nDigitaal Display.\nVanaf 14kg.",
+      "feature3-title": "Elektrische ondersteuning",
+      "feature3-description": "Brose Motor voor soepel rijden.\nMet volledig geïntegreerde componenten.\nInclusief Gates Carbon riem.\nLets heel bijzonders!.",
+      "test-bike": "Huur en test de Leaos E-bikes in München, Düsseldorf en Bolzano",
+      "find-out-more": "Meer informatie over LEAOS-fietsen",
+      "faq-question-1": "Heb ik een kenteken en verzekering nodig voor mijn LEAOS-fiets?",
+      "faq-answer-1": "Op grond van EU-wetgeving is voor de 25-km / h-versie geen kenteken of verzekering vereist. Er is ook een versie van 45 km / h, die is geclassificeerd als een bromfiets en dus een kenteken en verzekering vereist.",
+      "faq-question-2": "Hoeveel onderhoud hebben LEAOS-fietsen nodig?",
+      "faq-answer-2": "LEAOS-fietsen zijn zeer onderhoudsarm omdat de aandrijfcomponenten beschermd zijn tegen weersinvloeden. Elke 2-3 maanden moet de ketting worden geolied. De bandenspanning moet regelmatig worden gecontroleerd. De remmen moeten regelmatig worden gecontroleerd op slijtage aan de remblokken.",
+      "faq-question-3": "Zijn er verschillende framematen?",
+      "faq-answer-3": "Wij bieden 1 framemaat die een lichaamsgrootte bediend variërend van 155 cm tot 190 cm. Als gevolg van de speciale geometrische vorm van de fiets, schuift het zadel terug als het omhoog wordt gebracht. De verschillende stuurpennen kunnen ook op maat worden gemaakt.",
+      "faq-question-4": "Kunnen de LEAOS-fietsen worden uitgerust met kinderzitjes?",
+      "faq-answer-4": "Ja. Houd er rekening mee dat een kinderzitje op een rek moet worden gemonteerd, dat apart bij de fiets moet worden besteld.",
+      "faq-question-5": "Hebben LEAOS-fietsen vering?",
+      "faq-answer-5": "De LEAOS-fiets wordt geveerd door hun speciale ballonbanden. Volgens tests is de veerwerking van deze banden beter dan een conventionele trekking- of stadsfiets vorkvering en biedt deze een lagere rolweerstand."
     },
     "ampler": {
       "meta-title": "E-Bike Proefrit Programma",

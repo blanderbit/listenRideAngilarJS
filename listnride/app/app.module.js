@@ -19,6 +19,7 @@ angular.module('listnride', [
   'rating',
   'listingABike',
   'rentingABike',
+  'multiBooking',
   'static',
   'listnride.constant',
   'metaTags',
@@ -26,6 +27,9 @@ angular.module('listnride', [
   'inputRange',
   'addressInput',
   'lnrMetaRobots',
+  'categoryFilter',
+  'bikeCountFilter',
+  'accessoriesFilter',
   /* app_core_end */
 
   /* app_extras_start */
@@ -55,6 +59,7 @@ angular.module('listnride', [
   'muli-integration',
   'votec-integration',
   'cocomatIntegration',
+  'leaosIntegration',
   'crossride',
   'inVeloVeritas',
   'velothonBikerental',
@@ -71,7 +76,7 @@ angular.module('listnride', [
   'kuchenundraketen',
   'supercrossMunich',
   'capeArgus',
-  'torosDelGravel',
+  'torosDeGravel',
   'eroicaGaiole',
   'filter',
   'bikeSorter',

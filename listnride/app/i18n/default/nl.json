@@ -1,6 +1,21 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "bolzano": "Bolzano",
+    "lake-garda": "Gardameer",
+    "sardinia": "Sardinië",
+    "sicily": "Sicilië",
+    "toscana": "Toscane",
+    "please-select": "Ajb. selecteren",
+    "errors": {
+      "email-required": "Vul een geldig emailadres in",
+      "email-not-valid": "Vul een geldig emailadres in",
+      "phone-not-valid": "Voer alstublieft een geldig telefoonnummer in",
+      "phone-required": "Voer je telefoonnummer in. ",
+      "404": "Pagina bestaat niet",
+      "422": "Verkeerd dataformaat ingevoerd",
+      "500": "Interne Server Fout"
+    },
     "basic-fee": "Servicekosten inclusief basisverzekering",
     "how-it-works": "Hoe werkt het",
     "list-a-bike": "Fiets verhuren",
@@ -136,6 +151,39 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "brand-integration": {
+    "leaos": {
+      "subdescription-not-used": "Design. Kunst. Passie.",
+      "subdescription-not-use": "Design. Kunst. Passie."
+    }
+  },
+  "multi-booking": {
+    "meta-title": "Groepsboeking",
+    "no-accessories": "Geen accessoires",
+    "meta-description": "Boek uw fietsen met ons groepsboekingsformulier",
+    "title": "Groepsboekingen",
+    "header": "We helpen u graag met uw groepsboeking",
+    "subheader": "Geen gedoe meer, laat ons je helpen om je voor te bereiden op je volgende fietsvakantie. Geef ons jouw voorkeuren door en wij doen de rest, zodat je maximaal van het fietsen kunt genieten.",
+    "how-to": {
+      "step-1-title": "Zoeken & vinden",
+      "step-1-content": "Bereid jezelf voor op de reis, bespaar kostbare tijd en geniet maximaal van de tijd op je vakantiebestemming. Gemakkelijk en transparent, dag en nacht. ",
+      "step-2-title": "Definieren & aanvragen",
+      "step-2-content": "Vertel ons welke fietsen je wilt huren en wij doen de rest. Geef ons de details door en we nemen contact met je op!",
+      "step-3-title": "Offerte accepteren & online boeken",
+      "step-3-content": "Wij sturen je een offerte met een link waar je online kunt boeken of een schriftelijke bevestiging van je boeking kunt geven. In het laatste geval ontvang je een rekening die je kunt overmaken om de boeking af te ronden.  "
+    },
+    "your-booking-details": "Uw boekingsgegevens",
+    "what-bike-kind": "Wat voor soort fiets?",
+    "where-to-rent": "Waar wil je huren?",
+    "rental-period": "Huurperiode",
+    "how-many-bikes": "Hoeveel fietsen?",
+    "do-you-need-accessories": "Welke accessoires heb je nodig?",
+    "your-contact-details": "Je contactgegevens",
+    "thanks-for-request": "Bedankt voor je fietsverhuuraanvraag",
+    "we-will-back-shortly": "We komen spoedig bi je terug",
+    "take-back-to-search": "Breng me terug naar mijn zoekopdracht",
+    "accessories": "Accessoires"
+  },
   "insurance": {
     "facts": {
       "basic-insurance": {
@@ -176,8 +224,8 @@
         "meta-title": "Eroica vintage wielertocht",
         "meta-description": "Huur een vintage racefiets voor de Eroica on listnride"
       },
-      "toros-del-gravel": {
-        "meta-title": "Huur de perfecte fiets voor Toros del Gravel",
+      "toros-de-gravel": {
+        "meta-title": "Huur de perfecte fiets voor Toros de Gravel",
         "meta-description": "Op listnride vind je een selectie van gravel- en mountainbikes te huur voor dit speciale gravel evenement in Sineu, Mallorca."
       },
       "in-velo-veritas": {
@@ -229,6 +277,10 @@
       "ampler": {
         "meta-title": "E-Bike Test Ride Program",
         "meta-descr": "Test een elektrische fiets vandaag! De elektrische fietsen van Ampler zijn nu direkt beschikbaar op listnride. Huur er één in Amsterdam, Berlijn, Düsseldorf, München of Zürich."
+      },
+      "leaos": {
+        "meta-title": "Huur en test de Leaos E-bikes in München, Düsseldorf en Bolzano",
+        "meta-descr": "De Design Ebike - Leaos"
       },
       "brompton": {
         "meta-title": "Maak een proefrit met de Brompton vouwfiets via listnride",
@@ -617,6 +669,10 @@
   },
   "forms": {
     "first-name": "Voornaam",
+    "your-name": "Je naam",
+    "your-email-address": "Emailadres",
+    "your-phone-number": "Mobiele nummer",
+    "comments": "Opmerkingen",
     "last-name": "Achternaam",
     "email-address": "Emailadres",
     "update-password": "Update Password",
@@ -704,7 +760,8 @@
   },
   "search": {
     "no-bikes": "Er zijn helaas nog geen fietsen op deze locatie. Omdat we snel groeien, zal dat waarschijnlijk snel gebeuren! Als je wilt, kun je <a href=\"/listing-a-bike\">zelf een fiets een lijst laten maken </a>of zoek je naar een andere stad of specifieke locatie in de buurt.",
-    "bikes-found": "aantal fietsen",
+    "book-multiple-bikes": "Boek meerdere fietsen",
+    "bikes-found": "Aantal fietsen:",
     "all-sizes": "Alle Maten",
     "bikes-in": "fietsen in",
     "meta-title": "Huur de perfekte fiets in {{location}}.",
@@ -852,8 +909,8 @@
       "price_7_days": "7 dagen (1 week)",
       "price_8_days": "vanaf 8 dagen",
       "price_8_days_long": "vanaf 8 dagen (elke dag)",
-      "price_30_days": "30 dagen (1 maand)",
-      "price_30_days_long": "30 dagen (1 Monat)",
+      "price_30_days": "28 dagen",
+      "price_30_days_long": "28 dagen (1 Monaat)",
       "reset-prices": "Zurücksetzen",
       "validations": {
         "required": {

@@ -79,7 +79,7 @@
   },
   "insurance": {
     "main": {
-      "title": "Nuestro seguro lo protege.\n<br>\nNo importa si es lister o usuario.",
+      "title": "Nuestro seguro lo protege.\nNo importa si es lister o usuario.",
       "description": "Alquilar tu propia bicicleta implica tener confianza en quien la va a utilizar. ¿Qué pasa si se la roban durante el alquiler? ¿Qué pasa si te la vuelve dañada? Todos los alquileres de listnride \nen Alemania y Austria están asegurados. Y nuestro socio\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> te ayudará cuando necesites ayuda. Puedes contactarlos por teléfono o por correo electrónico. Sencillo. Sin burocracia.",
       "logo-description": "Socio de seguros"
     },
@@ -155,7 +155,7 @@
     },
     "text-2": {
       "title": "Únete a la comunidad empresarial de listnride ",
-      "description": "Regístrate ahora y configura la página de tu propia tienda al instante. O contacta con nosotros personalmente. Santi te ayudará con gusto, contacta con él en: <br><a href=\"mailto:ml@listnride.com\">so@listnride.com </a>"
+      "description": "Regístrate ahora y configura la página de tu propia tienda al instante. O contacta con nosotros personalmente. Santi te ayudará con gusto, contacta con él en: <br><a href=\"mailto:so@listnride.com\">so@listnride.com </a>"
     },
     "text-3": {
       "column-1": "listnride ya es la comunidad más grande para compartir bicicletas en Europa y por extensión, especialista en alquiler de bicis privadas y comerciales. Sabemos lo que buscan nuestros clientes y, por lo tanto, podemos dirigirlos a tu página de compras en listnride para que encuentren y reserven tus bicis de alquiler con facilidad.",
@@ -166,10 +166,10 @@
     "rapha-super-cross": {
       "text": "Rapha Super Cross regresa al Parque Olímpico de Múnich los días 29 y 30 de octubre para la tercera edición de lo que se ha convertido rápidamente en un legendario festival de ciclocross. Si deseas participar pero no tiene la bici correcta, puedes alquilar una a través de listnride. Hay entusiastas de la bicicleta como tú que ofrecen las bicicletas que puedes ver a continuación. Puedes solicitar y reservar los recorridos antes del evento y recoger la bici según lo acordado con el propietario. Los dueños de las bicis también pueden ofrecer en alquiler las bicis que no usen y así ganar algo de dinero mientras conocen a personas interesantes que participan en el evento. ¡Conviértete en parte de nuestra creciente comunidad!"
     },
-    "toros-del-gravel": {
-      "title": "Alquila una bicicleta gravel para Toros de Gravel",
-      "description": "¿Qué?: <b>Toros del Gravel </b>| ¿Cuándo?: <b>13 de octubre </b>| ¿Dónde?: <b>Sineu - Mallorca </b>",
-      "text": "Toros de Gravel será el primer evento de gravel que se haya celebrado en Mallorca. Diseñado para ser un viaje desafiante pero relajado, la ruta explorará rincones poco conocidos de la isla con puestos de control y segmentos de carreras antes de terminar en el velódromo de Sineu para una fiesta posterior. Puedes alquilas tu bicicleta de gravel directamente aquí, haciendo clic en la bicicleta y solicitándola para las fechas correspondientes. "
+    "toros-de-gravel": {
+      "title": "Alquila una bicicleta de gravel para Toros de Gravel",
+      "description": "¿Qué?: <b>Toros de Gravel </b>| ¿Cuándo?: <b>13 de octubre </b>| ¿Dónde?: <b>Sineu - Mallorca </b>",
+      "text": "Toros de Gravel será el primer evento de gravel que se haya celebrado en Mallorca. Diseñado para ser un paseo desafiante pero relajado, la ruta explorará rincones poco conocidos de la isla con puestos de control y segmentos de carreras para terminar en el velódromo de Sineu (hay after party). Puedes alquilas tu bicicleta de gravel aquí mismo, haciendo clic en la bicicleta y solicitándola para las fechas correspondientes. "
     },
     "eroica-gaiole": {
       "title": "Rent your vintage road bike for Eroica on listnride",
@@ -316,6 +316,28 @@
     "shared": {
       "choose-location": "Elige una ubicación",
       "faq": "Las preguntas frecuentes"
+    },
+    "leaos": {
+      "description": "Diseño en estado puro Ebike - Leaos",
+      "subdescription": "Diseño. Arte. Pasión.",
+      "feature1-title": "Diseño italiano",
+      "feature1-description": "Elegancia pura. Experiencia de conducción completamente nueva. 100% hecho en Italia. \nPerfecta simbiosis entre la bicicleta y el ciclista. \n",
+      "feature2-title": "De fácil andar",
+      "feature2-description": "Posición de conducción erguida o deportiva. Hub de engranaje sin fricción.Pantalla digital.Peso desde 14kg.",
+      "feature3-title": "Asistencia eléctrica",
+      "feature3-description": "Brose Motor para una conducción suave.Con componentes completamente integrados. Gates Carbon Drive incluidos. ¡Algo realmente especial!",
+      "test-bike": "Alquila y prueba las Leaos E-Bikes en Munich, Dusseldorf y Bolzano",
+      "find-out-more": "Conoce más sobre las bicicletas LEAOS",
+      "faq-question-1": "¿Necesito una matrícula y un seguro para mi bicicleta LEAOS?",
+      "faq-answer-1": "En conformidad con la legislación de la UE, la versión de 25 km/h no requiere una matrícula o seguro. También hay una versión de 45 km/h, que se clasifica como ciclomotor y por lo tanto si requiere una matrícula y seguro.",
+      "faq-question-2": "¿Cuánto mantenimiento requieren las bicicletas LEAOS?",
+      "faq-answer-2": "Las bicicletas LEAOS no requieren de mucho mantenimiento ya que los componentes del disco están protegidos del clima. Cada 2-3 meses, la cadena debe ser engrasada. La presión de los neumáticos debe verificarse regularmente. Los frenos se deben revisar regularmente para controlar el desgaste de las pastillas de freno.",
+      "faq-question-3": "¿Hay cuadros de diferente tamaño?",
+      "faq-answer-3": "Ofrecemos tamaños de cuadros que van desde 155 cm a 190 cm. Como resultado de la forma geométrica especial de la bicicleta, la silla se desplaza hacia atrás a medida que se eleva. Los diversos stems para el manillar también se pueden adaptar al tamaño.",
+      "faq-question-4": "¿Pueden las bicicletas LEAOS estar equipadas con asientos para niños?",
+      "faq-answer-4": "Sí. Tenga en cuenta que un asiento para niños debe montarse en un soporte, que debe solicitarse con la bicicleta.",
+      "faq-question-5": "¿Las bicicletas LEAOS tienen sistema de suspensión?",
+      "faq-answer-5": "La bicicleta LEAOS cuentan con neumáticos especiales que ayudan tener un viaje placentero. De acuerdo con las pruebas, la acción de resorte de estos neumáticos es mejor que una suspensión de horquillas convencional de trekking o city-bikes y ofrece baja resistencia a la rodadura."
     },
     "ampler": {
       "meta-title": "Programa de prueba de bicicleta eléctrica",

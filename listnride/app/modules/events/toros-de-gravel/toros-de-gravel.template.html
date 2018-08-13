@@ -1,13 +1,13 @@
 <md-content class="single-column">
-  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/events/toros-del-gravel_hero.jpg'); background-position: 0 60%" layout="row" layout-align="center center">
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/events/toros-de-gravel_hero.jpg'); background-position: 0 60%" layout="row" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center"></div>
   </div>
   <div class="content" layout="column" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
 
-      <h1 class="md-headline">{{ 'events.toros-del-gravel.title' | translate }}</h1>
-      <p class="md-body-1" translate="events.toros-del-gravel.description"></p>
-      <div class="md-body-1"><p translate="events.toros-del-gravel.text"></p>
+      <h1 class="md-headline">{{ 'events.toros-de-gravel.title' | translate }}</h1>
+      <p class="md-body-1" translate="events.toros-de-gravel.description"></p>
+      <div class="md-body-1"><p translate="events.toros-de-gravel.text"></p>
       </div>
     </div>
 
@@ -18,14 +18,14 @@
         <md-input-container layout="column" flex="30" style="padding-bottom: 0">
           <label>{{ 'list.details.size' | translate }}</label>
           <md-select flex ng-model="filterSize" placeholder="{{ 'list.details.size' | translate }}">
-            <md-option ng-repeat="option in torosDelGravel.sizeOptions" value="{{option.value}}">
+            <md-option ng-repeat="option in torosDeGravel.sizeOptions" value="{{option.value}}">
               {{option.label}}
             </md-option>
           </md-select>
         </md-input-container>
       </div>
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in torosDelGravel.bikes | filter : {size : filterSize}" bike="bike" booked="bike.booked" flex="100" flex-gt-xs="50" flex-gt-sm="33">
+        <bike-card ng-repeat="bike in torosDeGravel.bikes | filter : {size : filterSize}" bike="bike" booked="bike.booked" flex="100" flex-gt-xs="50" flex-gt-sm="33">
         </bike-card>
       </div>
     </div>

@@ -79,7 +79,7 @@
   },
   "insurance": {
     "main": {
-      "title": "Unsere Versicherung schützt Dich.\n<br>\nEgal ob Vermieter oder Mieter.",
+      "title": "Unsere Versicherung schützt Dich.\nEgal ob Vermieter oder Mieter.",
       "description": "Dein besonderes Rad auszuleihen, heißt Vertrauen zu haben. Was, wenn es während der Ausleihe gestohlen wird? Was, wenn es beschädigt zu Dir zurück kommt?\nAlle listnride Vermietungen in Deutschland und Österreich sind versichert. Unser Partner \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> ist für Dich da. Telefonisch. Via E-Mail. Einfach. Unbürokratisch.",
       "logo-description": "Unser Versicherungspartner"
     },
@@ -155,7 +155,7 @@
     },
     "text-2": {
       "title": "Werde auch du Teil der listnride Business Community",
-      "description": "Registriere dich jetzt und richte sofort deine eigene Shop Seite ein. Oder kontaktiere uns persönlich. Gerne hilft dir Tobi weiter, kontaktiere ihn via<br><a href=\"mailto:ml@listnride.com\">tk@listnride.com</a> "
+      "description": "Registriere dich jetzt und richte sofort deine eigene Shop Seite ein. Oder kontaktiere uns persönlich. Gerne hilft dir Tobi weiter, kontaktiere ihn via<br><a href=\"mailto:tk@listnride.com\">tk@listnride.com</a> "
     },
     "text-3": {
       "column-1": "listnride ist bereits jetzt schon Europas größte Bikesharing Community und so Spezialist für den privaten und gewerblichen Fahrradverleih.  Deshalb wissen wir wonach unsere KundInnen suchen und können sie direkt auf deine listnride Shop Seite leiten und ihnen den Weg in deinen Laden so einfach wie möglich machen.",
@@ -166,10 +166,10 @@
     "rapha-super-cross": {
       "text": "Der Rapha Super Cross ist wieder zurück in München, zum dritten Mal. Wenn du gerne dabei sein möchtest aber kein geeignetes Rad hast, kannst du über listnride ein Rad mieten. Die listnride bike sharing community bietet verschiedene Crossräder zum Verleih an. Die Räder können vor der Veranstaltung bei den einzelnen Anbietern angefragt und gebucht werden. Die Übergabe wird direkt mit dem Vermieter vereinbart. Zusätzlich verfügbare Räder können auch noch zur Vermietung angeboten werden, um damit etwas zu verdienen und interessante Leute zu treffen, welche an der Veranstaltung teilnehmen. Werde Teil der wachsenden Community!"
     },
-    "toros-del-gravel": {
-      "title": "Miet ein Gravelbike für Toros del Gravel",
-      "description": "Was: <b>Toros del Gravel </b>| wann: <b>13. Oktober </b>| Wo: <b>Sineu - Mallorca </b>",
-      "text": "Toros de Gravel ist die erste Gravelveranstaltung auf Mallorca.  Diese herausfordernde, aber entspannte Route erkundet kleine, unbekannte Ecken der Insel mit Checkpoints und Race-Segmenten, bevor sie in Sineu's Velodrom endet, wo die Party im Anschluss rockt.  Passende Gravelbikes kannst Du hier direkt ausleihen, indem Du auf das Bike klickst und es anfragst."
+    "toros-de-gravel": {
+      "title": "Miet ein Gravelbike für Toros de Gravel",
+      "description": "Was: <b>Toros de Gravel </b>| wann: <b>13. Oktober </b>| Wo: <b>Sineu - Mallorca </b>",
+      "text": "Toros de Gravel ist die erste Gravelveranstaltung auf Mallorca.  Diese herausfordernde aber entspannte Route erkundet kleine, unbekannte Ecken der Insel mit Checkpoints und Race-Segmenten, bevor sie in Sineus Velodrom endet, wo die Party im Anschluss rockt.  Passende Gravelbikes kannst du hier direkt ausleihen, indem du auf das Bike klickst und es anfragst."
     },
     "eroica-gaiole": {
       "title": "Miete dein Vintage-Rennrad für die Eroica",
@@ -315,7 +315,30 @@
   "brand-integration": {
     "shared": {
       "choose-location": "Wähle eine Stadt",
+      "no-bikes-found": "Ups .., hier werden leider noch keine Fahrräder angeboten.",
       "faq": "Die häufigsten Fragen"
+    },
+    "leaos": {
+      "description": "Das Design Ebike - Leaos",
+      "subdescription": "Design. Kunst. Leidenschaft.",
+      "feature1-title": "Italienisches Design",
+      "feature1-description": "Pure Eleganz. \nVöllig neue Fahrerfahrung. \nPerfekte Symbiose von Motor und Fahrer. \n100% made in Italy.",
+      "feature2-title": "Fahrfreude",
+      "feature2-description": "Aufrechte oder sportliche Fahrposition. \nReibungslose Zahnradnabe. \nDigitaler Bildschirm. \nAb 14kg. ",
+      "feature3-title": "Elektrische Unterstützung",
+      "feature3-description": "Brose Motor für sanftes Fahren.\nMit voll integrierten Motor-Komponenten.\nGates Carbon-Riemen.\nEtwas wirklich Besonderes!",
+      "test-bike": "Miete und teste die Leaos Bikes in München, Bozen und Düsseldorf",
+      "find-out-more": "Erfahre mehr über LEAOS Bikes",
+      "faq-question-1": "Benötige ich ein Kfz-Kennzeichen und eine Versicherung für mein LEAOS Fahrrad?",
+      "faq-answer-1": "Nach EU-Recht benötigt die 25-km/h-Version weder Kennzeichen noch Versicherung. Es gibt auch eine 45-km/h-Version, die als Moped klassifiziert ist und daher ein Nummernschild und eine Versicherung benötigt.",
+      "faq-question-2": "Wie viel Wartung benötigen LEAOS Bikes?",
+      "faq-answer-2": "LEAOS Bikes sind sehr wartungsarm, da die Antriebskomponenten vor Witterungseinflüssen geschützt sind. Alle 2-3 Monate sollte die Kette geölt werden. Der Reifendruck sollte regelmäßig überprüft werden. Die Bremsen müssen regelmäßig auf Verschleiß der Bremsbeläge überprüft werden.",
+      "faq-question-3": "Gibt es unterschiedliche Rahmengrößen?",
+      "faq-answer-3": "Leaos bietet Rahmengrößen für Fahrer von 155cm bis 190cm Körpergröße an. Durch die besondere geometrische Form der Fahrräder wird der Sattel beim Anheben zurückgeschoben. Die verschiedenen Vorbauten für den Lenker können an die Größe angepasst werden.",
+      "faq-question-4": "Können die LEAOS Fahrräder mit Kindersitzen ausgestattet werden?",
+      "faq-answer-4": "Ja. Bitte beachte, dass ein Kindersitz auf einem Gepäckträger montiert wird, der mit dem Fahrrad bestellt werden muss.",
+      "faq-question-5": "Haben LEAOS Bikes Federungssysteme?",
+      "faq-answer-5": "LEAOS Bikes sind mit speziellen Ballonreifen gepolstert. Tests zufolge ist die Federwirkung dieser Reifen besser als bei einer herkömmlichen Trekking- oder City-Bike-Federgabel und bietet geringen Rollwiderstand."
     },
     "ampler": {
       "meta-title": "E Bike Test Programm",

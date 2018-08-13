@@ -66,7 +66,9 @@ angular.module('list', ['ngLocale'])
         list.startImage = 1;
         list.sizeOptions = bikeOptions.sizeOptions();
         list.kidsSizeOptions = bikeOptions.kidsSizeOptions();
-        list.accessoryOptions = bikeOptions.accessoryOptions();
+        bikeOptions.accessoryOptions().then(function (resolve) {
+          list.accessoryOptions = resolve;
+        });
         list.validateObj = {height: {min: 1000}, width: {min: 1500}, duration: {max: '5m'}};
         list.invalidFiles = {};
         list.businessUser = false;

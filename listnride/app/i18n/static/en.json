@@ -79,7 +79,7 @@
   },
   "insurance": {
     "main": {
-      "title": "Optimal insurance for you.\n<br>\nBoth for listers and riders.",
+      "title": "Our insurance protects you. No matter if lister or rider.",
       "description": "Renting your special bike means having confidence. What if it gets stolen during lending? What if it comes back to you damaged? All listnride rentals in Germany and Austria are insured. And our partner <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> will be there for you when you need help. By phone. By e-mail. Simple. Straight forward.",
       "logo-description": "Our insurance partner"
     },
@@ -120,7 +120,7 @@
         "answer-3": "<ul>\n <li>Protection in case of unintentional selfinflicted or third party caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee up to 250€\n</ul>",
         "question-4": "What does Premium Insurance cover?",
         "answer-4": "<ul>\n <li>protection in case of unintentional self- and external damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Theft protection\n <li>24/7 emergency number in case of theft or damage\n <li>Return transport after theft or damage\n <li>Bike replacement after theft or damage\n <li>No retention fee\n</ul>",
-        "question-5": "Is there a retention fee in case of damage? How high is it?\n",
+        "question-5": "Is there a retention fee in case of damage? How high is it?",
         "answer-5": "The deterrent fee is up to 250€ for the Basic Insurance.\n<br>\nThe Premium Insurance has no deterrent fee.",
         "question-6": "How do I end the insurance after my bike rental ends?",
         "answer-6": "With every bike rental you will receive an individual insurance certificate. This is \n<b>only</b> \nvalid for the specific booking and for the \n<b>time period</b>\n selected by you. It ends automatically.\n<p>\nYou can download the certificate directly and will receive it by e-mail. You don't have to do anything.",
@@ -155,7 +155,7 @@
     },
     "text-2": {
       "title": "Join the listnride Business Community!",
-      "description": "Register now and set up your own shop page instantly. Or contact us personally. We will be happy to help, contact us at: <br><a href=\"mailto:ml@listnride.com\">contact@listnride.com</a> "
+      "description": "Register now and set up your own shop page instantly. Or contact us personally. We will be happy to help, contact us at: <br><a href=\"mailto:contact@listnride.com\">contact@listnride.com</a> "
     },
     "text-3": {
       "column-1": "listnride is already the largest community for bicycle sharing in Europe and with that a specialist for private and commercial bike rental. We know what our customers are looking for and so can direct them to your listnride shop page to easily find and book your rental bikes.",
@@ -166,9 +166,9 @@
     "rapha-super-cross": {
       "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
     },
-    "toros-del-gravel": {
-      "title": "Rent a gravel bike for Toros del Gravel",
-      "description": "what: <b>Toros del Gravel</b> | when: <b>October 13th</b> | where: <b>Sineu - Majorca</b>",
+    "toros-de-gravel": {
+      "title": "Rent a gravel bike for Toros de Gravel",
+      "description": "what: <b>Toros de Gravel</b> | when: <b>October 13th</b> | where: <b>Sineu - Majorca</b>",
       "text": "Toros de Gravel will be the first gravel event ever held on Mallorca.  Designed to be a challenging but laid back ride, the route will explore little known corners of the island with checkpoints and racing segments before finishing at the Sineu velodrome for a rocking after party.  Suitable gravel bikes you can rent directly here, by clicking on the bike and requesting it."
     },
     "eroica-gaiole": {
@@ -316,7 +316,30 @@
   "brand-integration": {
     "shared": {
       "choose-location": "Choose a location",
+      "no-bikes-found": "Oops... there are unfortunately no bikes listed yet in this location.",
       "faq": "The frequently asked questions"
+    },
+    "leaos": {
+      "description": "The Design Ebike - Leaos",
+      "subdescription": "Design. Art. Passion.",
+      "feature1-title": "Italian Design",
+      "feature1-description": "Pure Elegance.\nCompletely New Driving Experience.\nPerfect Symbiosis of Motor and Rider.\n100% made in Italy.",
+      "feature2-title": "Joyride",
+      "feature2-description": "Upright or sportive riding position. \nFrictionless Gear Hub. \nDigital Display. \nFrom 14kg.",
+      "feature3-title": "Electric Assist",
+      "feature3-description": "Brose Motor for smooth riding.\nWith fully integrated components. \nIncluding Gates Carbon drive.\nSomething truly special!",
+      "test-bike": "Rent and test the Leaos bikes in Munich, Bolzano and Dusseldorf",
+      "find-out-more": "Learn more about LEAOS bikes",
+      "faq-question-1": "Do I need a licence plate and insurance for my LEAOS bike?",
+      "faq-answer-1": "Pursuant to EU law, the 25-km/h version does not require a license plate or insurance. There is also a 45-km/h version, which is classified as a moped and thus requires a licence plate and insurance.",
+      "faq-question-2": "How much maintenance do LEAOS bikes require?",
+      "faq-answer-2": "LEAOS bikes are very low maintenance since the drive components are protected from the weather. Every 2–3 months, the chain should be oiled. The tyre pressure should be checked regularly. The brakes must be checked regularly for wear and tear to the brake pads.",
+      "faq-question-3": "Are there different frame sizes?",
+      "faq-answer-3": "We offer 1 frame size suitable for people between 155 cm to 190 cm. As a result of the bike’s special geometric shape, the saddle shifts back as it is raised. The various stems for the handlebars can also be matched to size.",
+      "faq-question-4": "Can the LEAOS bikes be fittet with childseats?",
+      "faq-answer-4": "Yes. Please note that a child seat must be mounted on a rack, which must be ordered separately with the bike.",
+      "faq-question-5": "Do LEAOS bikes have suspension systems?",
+      "faq-answer-5": "LEAOS bike are cushioned by their special balloon tires. According to tests, the spring action of these tyres is better than a conventional trekking- or city-bikes fork-suspension and offers low rolling resistance."
     },
     "ampler": {
       "meta-title": "E-Bike Test Ride Program",

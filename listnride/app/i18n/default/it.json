@@ -1,6 +1,21 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
+    "bolzano": "Bolzano",
+    "lake-garda": "Lago di Garda",
+    "sardinia": "Sardegna",
+    "sicily": "Sicilia",
+    "toscana": "Toscana",
+    "please-select": "Per favore seleziona",
+    "errors": {
+      "email-required": "Si prega di inserire un indirizzo email valido",
+      "email-not-valid": "Si prega di inserire un indirizzo email valido",
+      "phone-not-valid": "Si prega di inserire un numero di telefono valido",
+      "phone-required": "Per favore inserisci il tuo numero di telefono, questo campo è obbligatorio",
+      "404": "La pagina non esiste",
+      "422": "Entità non processabile",
+      "500": "Errore interno del server"
+    },
     "basic-fee": "Service Fee includes Basic Insurance",
     "how-it-works": "Come funziona",
     "list-a-bike": "Registra una bicicletta",
@@ -138,6 +153,39 @@
       "subheader": "Incontra persone che condividono la tua stessa passione. Guadagna qualcosa in più"
     }
   },
+  "brand-integration": {
+    "leaos": {
+      "subdescription-not-used": "Design. Arte. Passione.",
+      "subdescription-not-use": "Design. Arte. Passione."
+    }
+  },
+  "multi-booking": {
+    "meta-title": "Prenotazione multipla",
+    "no-accessories": "Senza Accessori",
+    "meta-description": "Prenota le tue bici con il nostro modulo di prenotazione multipla",
+    "title": "Prenotazioni di gruppo",
+    "header": "Siamo felici di aiutarti con la tua prenotazione di gruppo",
+    "subheader": "Niente più problemi, lascia che ti supportiamo nel preparare il tuo prossimo viaggio in bicicletta. Forniscici le tue preferenze e noi faremo il resto, così potrai semplicemente goderti il viaggio.",
+    "how-to": {
+      "step-1-title": "Cerca e trova",
+      "step-1-content": "Preparati prima dei tuoi viaggi, risparmia tempo prezioso per goderti al massimo il tuo tour. Facile e trasparente, ogni giorno in qualsiasi momento.",
+      "step-2-title": "Definisci e richiedi",
+      "step-2-content": "Facci sapere quali biciclette vorresti affittare e noi faremo il resto. Forniscici i dettagli e ti risponderemo!",
+      "step-3-title": "Accetta l'offerta e prenota online",
+      "step-3-content": "Ti invieremo un preventivo e un link dove potrai prenotare online o fornirci una conferma scritta per la tua prenotazione. In quest'ultimo caso, ti verrà inviata una fattura che deve essere pagata per finalizzare la prenotazione."
+    },
+    "your-booking-details": "I dettagli della tua prenotazione",
+    "what-bike-kind": "Che tipo di bici?",
+    "where-to-rent": "Dove vuoi noleggiare le bici?",
+    "rental-period": "Periodo di noleggio",
+    "how-many-bikes": "Quante biciclette?",
+    "do-you-need-accessories": "Hai bisogno di accessori?",
+    "your-contact-details": "Le tue informazioni di contatto",
+    "thanks-for-request": "Grazie per la sua richiesta",
+    "we-will-back-shortly": "Ti risponderemo al più presto",
+    "take-back-to-search": "Torna alla sezione ricerca",
+    "accessories": "Accessori"
+  },
   "insurance": {
     "facts": {
       "basic-insurance": {
@@ -178,8 +226,8 @@
         "meta-title": "L' Eroica, manifetazione cicloturistica con bici da corsa d'epoca",
         "meta-description": "Noleggia la tua bici da corsa vintage per l'Eroica"
       },
-      "toros-del-gravel": {
-        "meta-title": "Noleggia la bici perfetta per Toros del Gravel",
+      "toros-de-gravel": {
+        "meta-title": "Noleggia la bici perfetta per Toros de Gravel",
         "meta-description": "Su listnride troverai una selezione di Gravel e Mtb da noleggiare per questo speciale evento Gravel a Sineu a Maiorca."
       },
       "in-velo-veritas": {
@@ -227,6 +275,10 @@
       "ampler": {
         "meta-title": "E-Bike Test ",
         "meta-descr": "Prova a guidare una e-bike oggi! Le ebikes di Ampler sono disponibili su listnride. Noleggia uno a Amsterdam, Berlino, Düsseldorf, Monaco o Zurigo."
+      },
+      "leaos": {
+        "meta-title": "Noleggia e prova le E-Bikes Leaos a Monaco di Baviera, Dusseldorf e Bolzano",
+        "meta-descr": "Ebike  design - Leaos"
       },
       "brompton": {
         "meta-title": "Noleggia una bicicletta Brompton con listnride",
@@ -615,6 +667,10 @@
   },
   "forms": {
     "first-name": "Nome",
+    "your-name": "Il tuo nome",
+    "your-email-address": "Il tuo indirizzo email",
+    "your-phone-number": "Il tuo numero di telefono",
+    "comments": "Commenti",
     "last-name": "Cognome",
     "email-address": "Indirizzo Email",
     "update-password": "Update Password",
@@ -703,7 +759,8 @@
   },
   "search": {
     "no-bikes": "Non ci sono biciclette in questa località",
-    "bikes-found": "bici trovate",
+    "book-multiple-bikes": "Prenota più biciclette",
+    "bikes-found": "Bici trovate:",
     "all-sizes": "Tutte le misure",
     "bikes-in": "Biciclette a",
     "meta-title": "Noleggia la bicicletta perfetta a {{location}}.",
@@ -852,8 +909,8 @@
       "price_7_days": "7 giorni (1 settimana)",
       "price_8_days": "da 8 giorni in poi",
       "price_8_days_long": "da 8 giorni in poi (al giorno)",
-      "price_30_days": "30 giorni",
-      "price_30_days_long": "30 giorni (1 mese)",
+      "price_30_days": "28 giorni",
+      "price_30_days_long": "28 giorni (1 mese)",
       "reset-prices": "Azzerare",
       "validations": {
         "required": {
