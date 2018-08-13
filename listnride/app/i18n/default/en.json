@@ -6,6 +6,7 @@
     "sardinia": "Sardinia",
     "sicily": "Sicily",
     "toscana": "Tuscany",
+    "please-select": "Please Select",
     "errors": {
       "email-required": "Please enter your email address, email is required",
       "email-not-valid": "Please, enter a valid email address",
@@ -163,6 +164,7 @@
   },
   "multi-booking": {
     "meta-title": "Group booking",
+    "no-accessories": "No accessories",
     "meta-description": "Book your bikes with our group booking form",
     "title": "Group bookings",
     "header": "We are happy to help you with your group booking",

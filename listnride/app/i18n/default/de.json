@@ -6,6 +6,7 @@
     "sardinia": "Sardinien",
     "sicily": "Sizilien",
     "toscana": "Toskana",
+    "please-select": "Bitte Auswählen",
     "errors": {
       "email-required": "Bitte gib Deine E-Mail-Adresse ein, die E-Mailadresse ist erforderlich",
       "email-not-valid": "Bitte gib eine gültige E-Mail-Adresse ein",
@@ -163,6 +164,7 @@
   },
   "multi-booking": {
     "meta-title": "Gruppenbuchung",
+    "no-accessories": "Kein Zubehör",
     "meta-description": "Buche deine Räder über unser Gruppenbuchungsformular",
     "title": "Gruppenbuchungen",
     "header": "Wir helfen dir gern mit deiner Gruppenbuchung",

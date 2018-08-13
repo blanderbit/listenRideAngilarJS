@@ -6,6 +6,7 @@
     "sardinia": "Sardinië",
     "sicily": "Sicilië",
     "toscana": "Toscane",
+    "please-select": "Ajb. selecteren",
     "errors": {
       "email-required": "Vul een geldig emailadres in",
       "email-not-valid": "Vul een geldig emailadres in",
@@ -158,6 +159,7 @@
   },
   "multi-booking": {
     "meta-title": "Groepsboeking",
+    "no-accessories": "Geen accessoires",
     "meta-description": "Boek uw fietsen met ons groepsboekingsformulier",
     "title": "Groepsboekingen",
     "header": "We helpen u graag met uw groepsboeking",

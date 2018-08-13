@@ -6,6 +6,7 @@
     "sardinia": "Sardinia",
     "sicily": "Sicily",
     "toscana": "Tuscany",
+    "please-select": "Por favor selecciona",
     "errors": {
       "email-required": "Introduce una dirección de correo electrónico válida",
       "email-not-valid": "Por favor, introduce una dirección de correo electrónico válida",
@@ -163,17 +164,18 @@
   },
   "multi-booking": {
     "meta-title": "Alquileres grupales",
+    "no-accessories": "Sin accesorios",
     "meta-description": "Alquila tus bicicletas con nuestro formulario de reserva grupal",
     "title": "Alquileres grupales",
     "header": "Estamos felices de ayudarte con tu reserva grupal",
     "subheader": "¡No pierdas más tiempo! Déjanos ayudarte a organizar tu próximo viaje en bicicleta. Indícanos tus preferencias y nosotros haremos el resto. Tu única preocupación es disfrutar del viaje",
     "how-to": {
       "step-1-title": "¿Qué tipo de bici quieres?",
-      "step-1-content": "Cuéntanos qué bicicletas te gustaría alquilar y nosotros nos ocupamos del resto. Solo envíanos los detalles y nosotros te contactaremos nuevamente con una propuesta. ",
+      "step-1-content": "Cuéntanos qué bicicletas te gustaría alquilar y nosotros nos ocupamos del resto. ",
       "step-2-title": "Reserva en línea",
-      "step-2-content": "Te enviaremos un enlace para que puedas reservar en línea y un presupuesto para nos puede dar una confirmación por escrito de tu reserva. En este caso se te enviará una factura que deberá pagarse para finalizar la reserva.",
+      "step-2-content": "Te enviaremos un enlace para que puedas reservar en línea y un presupuesto para nos puede dar una confirmación por escrito de tu reserva. ",
       "step-3-title": "Disfruta del paseo",
-      "step-3-content": "Cuéntanos qué bicicletas te gustaría alquilar y nosotros nos ocupamos del resto. Solo envíanos los detalles y nosotros te contactaremos nuevamente con una propuesta. "
+      "step-3-content": "Tu bicic"
     },
     "your-booking-details": "Detalles de reserva",
     "what-bike-kind": "¿Qué tipo de bicicleta?",
