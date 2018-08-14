@@ -76,11 +76,10 @@
           <!-- Phone Number and Send Button -->
           <div class="lnr-input-containers"
             layout="column"
-            flex="100"
             layout-gt-xs="row"
             ng-show="details.parent.showConfirmButton"
           >
-            <md-input-container flex="40" ng-if="details.parent.shopBooking">
+            <md-input-container flex-gt-xs="60" ng-if="details.parent.shopBooking">
               <label>{{ 'forms.email-address' | translate }}</label>
               <input
                 name="email"
@@ -94,7 +93,7 @@
                 <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
               </div>
             </md-input-container>
-            <md-input-container flex="40">
+            <md-input-container flex-gt-xs="60">
               <label>{{ 'shared.phone-number' | translate }}</label>
               <input
                 international-phone-number
@@ -114,7 +113,7 @@
                 <div ng-message="internationalPhoneNumber">{{ 'verification.5.enter-valid-phone-nr' | translate }}</div>
               </div>
             </md-input-container>
-            <md-input-container flex="20">
+            <md-input-container flex-gt-xs="20">
               <md-button
                 class="md-raised md-primary lnr-btn-inline details__send-code"
                 ng-click="details.parent.prepareUser()"
