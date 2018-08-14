@@ -228,8 +228,6 @@ var lnrHelper = {
     // select category based on the user language
     var selectedCategory = "";
     var userLang = lnrConstants.userLang[userId];
-    categoryId = categoryId.toString();
-
     // select sub category based on the user language
     return lnrConstants.subCategory[userLang][categoryId]
   },
