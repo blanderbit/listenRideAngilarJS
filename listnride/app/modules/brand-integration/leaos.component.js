@@ -16,7 +16,7 @@ angular.module('leaosIntegration', []).component('leaos', {
         leaos.getBikes = getBikes;
 
         // VARIABLES
-        leaos.familyId = 29;
+        leaos.familyId = 33;
 
         // hero slider
         leaos.cbSlider = [
