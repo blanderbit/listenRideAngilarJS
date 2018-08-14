@@ -231,7 +231,7 @@ var lnrHelper = {
     categoryId = categoryId.toString();
 
     // select sub category based on the user language
-    return lnrConstants.subCategory[userLang][categoryId[0]][categoryId[1]];
+    return lnrConstants.subCategory[userLang][categoryId]
   },
   /**
    * show the bikes for the specific city
@@ -602,15 +602,17 @@ var lnrHelper = {
     }
     if (sizeButton) {
       var defaultSize = 0;
-      if (lnrConstants.sizes[userId].available > 1) {
-        var selectedSize = lnrConstants.sizes[userId].available[0];
-        var allSize = lnrConstants.translate.allSizes.selected[userId];
-        defaultSize = lnrConstants.sizes[userId].available.length === 1 ? selectedSize : allSize;
-        sizeButton.innerHTML = defaultSize + ' cm - ' + parseInt(defaultSize + 10) + ' cm <div class="dropdown-caret" style="float: right"></div>';
-      } else {
+      if (lnrConstants.sizes[userId].available.length > 1) {
+        // select All bikes
         defaultSize = lnrConstants.sizes[userId].available[0];
-        sizeButton.innerHTML = defaultSize + '<div class="dropdown-caret" style="float: right"></div>';
+      } else {
+        // select first available size
+        defaultSize = lnrConstants.sizes[userId].available[0];
+        // if this first available size is '0' translate it to 'Unisize'
+        // else add range and cm
+        defaultSize = defaultSize === 0 ? 'Unisize' : defaultSize + ' cm - ' + parseInt(defaultSize + 10) + ' cm';
       }
+      sizeButton.innerHTML = defaultSize + '<div class="dropdown-caret" style="float: right"></div>';
     }
   },
   /**
