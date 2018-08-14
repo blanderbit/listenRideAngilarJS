@@ -2,10 +2,10 @@
   "shared": {
     "learn-more": "Saber más",
     "bolzano": "Bolzano",
-    "lake-garda": "Lake Garda",
-    "sardinia": "Sardinia",
-    "sicily": "Sicily",
-    "toscana": "Tuscany",
+    "lake-garda": "Lago de Garda",
+    "sardinia": "Cerdeña",
+    "sicily": "Sicilia",
+    "tuscany": "Tuscany",
     "please-select": "Por favor selecciona",
     "errors": {
       "email-required": "Introduce una dirección de correo electrónico válida",
@@ -767,7 +767,7 @@
   },
   "search": {
     "no-bikes": "No hay bicis en esta ubicación",
-    "book-multiple-bikes": "Reserva múltiples bicicletas",
+    "book-multiple-bikes": "Alquileres grupales",
     "bikes-found": "Bicicletas encontradas:",
     "all-sizes": "Todos los tamaños",
     "bikes-in": "Bicis disponibles",

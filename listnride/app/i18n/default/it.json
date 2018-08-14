@@ -5,7 +5,7 @@
     "lake-garda": "Lago di Garda",
     "sardinia": "Sardegna",
     "sicily": "Sicilia",
-    "toscana": "Toscana",
+    "tuscany": "Toscana",
     "please-select": "Per favore seleziona",
     "errors": {
       "email-required": "Si prega di inserire un indirizzo email valido",
@@ -759,7 +759,7 @@
   },
   "search": {
     "no-bikes": "Non ci sono biciclette in questa località",
-    "book-multiple-bikes": "Prenota più biciclette",
+    "book-multiple-bikes": "Prenotazioni di gruppo",
     "bikes-found": "Bici trovate:",
     "all-sizes": "Tutte le misure",
     "bikes-in": "Biciclette a",
@@ -812,7 +812,7 @@
       "urban": "Urban",
       "e-bike": "Bici Elettrica",
       "road": "Strada",
-      "transport": "Per il Trasporto"
+      "transport": "Per il trasporto"
     },
     "details": {
       "header": "Qual è il nome, dimensione e marca della tua bicicletta?",
