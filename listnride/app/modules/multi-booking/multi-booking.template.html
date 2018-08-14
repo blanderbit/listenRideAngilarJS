@@ -1,0 +1,256 @@
+<md-content class="single-column multi-booking">
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/opengraph/lnr_multi_booking.jpg'); background-position: 50% 15%;"
+    layout="row" layout-align="center center">
+    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'multi-booking.title' | translate }}</h1>
+    </div>
+  </div>
+
+  <div class="content" layout-padding>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline">{{ 'multi-booking.header' | translate }}</h2>
+      <p class="md-subhead">{{ 'multi-booking.subheader' | translate }}</p>
+    </div>
+
+    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <p class="md-subhead lnr-center">1. {{ 'multi-booking.how-to.step-1-title' | translate }}</p>
+        <p class="lnr-center">{{ 'multi-booking.how-to.step-1-content' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
+        <p class="md-subhead lnr-center">2. {{ 'multi-booking.how-to.step-2-title' | translate }}</p>
+        <p class="lnr-center">{{ 'multi-booking.how-to.step-2-content' | translate }}</p>
+      </div>
+
+      <div flex-gt-xs="33" layout="column" layout-wrap layout-align="none center" layout-margin>
+        <p class="md-subhead lnr-center">3. {{ 'multi-booking.how-to.step-3-title' | translate }}</p>
+        <p class="lnr-center">{{ 'multi-booking.how-to.step-3-content' | translate }}</p>
+      </div>
+    </div>
+
+    <form
+      name="multiBookingForm"
+      class="lnr-form-multi-booking"
+      ng-submit="multiBooking.send()"
+      layout-padding
+      ng-if="!multiBooking.success_request"
+    >
+
+      <p class="md-subhead lnr-sm-text-center">{{ 'multi-booking.your-booking-details' | translate }}</p>
+      <div class="lnr-no-padding" layout="column" layout-gt-sm="row" layout-padding>
+        <div flex="100" flex-gt-sm="50">
+          <md-input-container> <!-- CITY -->
+            <label>{{ 'multi-booking.where-to-rent' | translate }}</label>
+            <input ng-model="multiBooking.form.city" name="city" required type="text" />
+          </md-input-container>
+          <md-input-container> <!-- CATEGORY-FILTER -->
+            <label>{{ 'multi-booking.what-bike-kind' | translate }}</label>
+            <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
+              <md-button
+                class="md-lined lnr-no-margin lnr__filter-btn md-right-arrow"
+                ng-click="$mdOpenMenu($event); multiBooking.closeDateRange()"
+                style="width: 100%;text-align: left;"
+              >
+                <span class="multi-booking__filter-text" ng-if="!multiBooking.form.category_ids.length">
+                  {{ 'shared.please-select' | translate }}
+                </span>
+                <span class="multi-booking__filter-text" ng-if="multiBooking.form.category_ids.length">
+                  {{multiBooking.showSelectedValuesCategories()}}
+                </span>
+              </md-button>
+              <md-menu-content width="5" class="lnr-100mh">
+                <div class="lnr-padding">
+                  <div class="lnr-right">
+                    <md-button show-xs hide-gt-xs class="md-icon-button md-warn md-menu__close-btn lnr-md-no-focused">
+                      <md-icon md-font-icon="fa-times" class="fa"></md-icon>
+                    </md-button>
+                  </div>
+                  <category-filter current-categories="multiBooking.form.category_ids">
+                  </category-filter>
+                </div>
+              </md-menu-content>
+            </md-menu>
+          </md-input-container>
+        </div>
+        <div flex="100" flex-gt-sm="50" class="booking__daterange-focus">
+          <div class="lnr-margin-lrg-bottom" layout="column" layout-gt-sm="row">
+            <div flex="50" class="lnr-sm-margin-bottom lnr-gt-sm-padding-right">
+              <md-input-container> <!-- DATE-FILTER -->
+                <label>{{ 'multi-booking.rental-period' | translate }} *</label>
+                <input-range
+                  lnr-date-picker
+                  lnr-single-input
+                  data="multiBooking.form"
+                  date-on-change="multiBooking.updateDate"
+                  date-container="'.booking__daterange-focus'"
+                >
+                </input-range>
+              </md-input-container>
+            </div>
+            <div flex="50" class="lnr-gt-sm-padding-left">
+              <md-input-container> <!-- BIKE-COUNT-FILTER -->
+                <label>{{ 'multi-booking.how-many-bikes' | translate }} *</label>
+                <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
+                  <md-button class="md-lined lnr-no-margin lnr__filter-btn md-right-arrow" ng-click="$mdOpenMenu($event); multiBooking.closeDateRange()"
+                    style="width: 100%;text-align: left;">
+                    <span class="multi-booking__filter-text" ng-if="multiBooking.bike_sizes_ungrouped.length == 1">
+                      1 {{'search.bike' | translate}}
+                    </span>
+                    <span class="multi-booking__filter-text" ng-if="multiBooking.bike_sizes_ungrouped.length > 1">
+                      {{multiBooking.bike_sizes_ungrouped.length}} {{'search.bikes' | translate}}
+                    </span>
+                  </md-button>
+                  <md-menu-content width="5" class="lnr-100mh">
+                    <div class="lnr-padding">
+                      <div class="lnr-right">
+                        <md-button show-xs hide-gt-xs class="md-icon-button md-warn md-menu__close-btn lnr-md-no-focused">
+                          <md-icon md-font-icon="fa-times" class="fa"></md-icon>
+                        </md-button>
+                      </div>
+                      <bike-count-filter current-values="multiBooking.bike_sizes_ungrouped">
+                      </bike-count-filter>
+                    </div>
+                  </md-menu-content>
+                </md-menu>
+              </md-input-container>
+            </div>
+          </div>
+          <md-input-container> <!-- ACCESSORIES-FILTER -->
+            <label>{{ 'multi-booking.do-you-need-accessories' | translate }}</label>
+            <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
+                <md-button
+                  class="md-lined lnr-no-margin lnr__filter-btn md-right-arrow"
+                  ng-click="$mdOpenMenu($event); multiBooking.closeDateRange()"
+                  style="width: 100%;text-align: left;"
+                >
+                  <span class="multi-booking__filter-text" ng-if="!multiBooking.form.accessories.length">
+                    {{ 'multi-booking.no-accessories' | translate }}
+                  </span>
+                  <span class="multi-booking__filter-text" ng-if="multiBooking.form.accessories.length">
+                    {{multiBooking.showSelectedValuesAccessories()}}
+                  </span>
+                </md-button>
+                <md-menu-content width="5" class="lnr-100mh">
+                  <div class="lnr-padding">
+                    <div class="lnr-right">
+                      <md-button show-xs hide-gt-xs class="md-icon-button md-warn md-menu__close-btn lnr-md-no-focused">
+                        <md-icon md-font-icon="fa-times" class="fa"></md-icon>
+                      </md-button>
+                    </div>
+                    <accessories-filter current-accessories="multiBooking.form.accessories">
+                    </accessories-filter>
+                  </div>
+                </md-menu-content>
+            </md-menu>
+          </md-input-container>
+        </div>
+      </div>
+
+      <div class="lnr-margin-lrg"></div>
+
+      <!-- contact details -->
+      <p class="md-subhead lnr-sm-text-center">{{ 'multi-booking.your-contact-details' | translate }}</p>
+      <div class="lnr-no-padding" layout="column" layout-gt-xs="row" layout-padding>
+        <div flex="100" flex-gt-sm="50">
+          <md-input-container> <!-- NAME -->
+            <label>{{ 'forms.your-name' | translate }}</label>
+            <input ng-model="multiBooking.form.name" name="name" required type="text" />
+          </md-input-container>
+          <md-input-container> <!-- EMAIL -->
+            <label>{{ 'forms.your-email-address' | translate }}</label>
+            <input
+              ng-model="multiBooking.form.email"
+              name="email"
+              required
+              type="email"
+              ng-pattern="/(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i"
+            />
+            <div ng-messages="multiBooking.form.email.$error" role="alert">
+              <div ng-message="required">{{ 'shared.errors.email-required' | translate }}</div>
+              <div ng-message="email">{{ 'shared.errors.email-not-valid' | translate }}</div>
+              <div ng-message="pattern">{{ 'shared.errors.email-not-valid' | translate }}</div>
+            </div>
+          </md-input-container>
+          <md-input-container> <!-- PHONE -->
+            <label>{{ 'forms.your-phone-number' | translate }}</label>
+            <input
+              international-phone-number
+              ng-model="multiBooking.form.phone_number"
+              name="phone_number"
+              required
+              type="tel"
+              ng-pattern="/^\+(?:[0-9] ?){6,14}[0-9]$/"
+              preferred-countries="de, at, nl, fr, lv, es, it, ch, gb"
+            />
+            <div ng-messages="multiBooking.form.phone_number.$error" role="alert">
+              <div ng-message="required">{{ 'shared.errors.phone-required' | translate }}</div>
+            </div>
+          </md-input-container>
+        </div>
+        <div flex="100" flex-gt-sm="50">
+          <div class="lnr-no-padding" layout-padding>
+            <md-input-container class="lnr-no-padding"> <!-- NOTES -->
+              <label>{{ 'forms.comments' | translate }}</label>
+              <textarea
+                md-no-resize
+                name="notes"
+                ng-model="multiBooking.form.notes"
+                rows="5"
+              >
+              </textarea>
+            </md-input-container>
+          </div>
+        </div>
+      </div>
+
+      <div class="lnr-margin-lrg"></div>
+
+      <div class="lnr-no-padding lnr-sm-text-center lnr-right">
+        <md-button
+          type="submit"
+          class="md-raised md-primary md-lrg"
+          ng-disabled="!multiBookingForm.$valid || !multiBookingForm.$dirty || !multiBooking.form.start_date">
+            {{ 'shared.send' | translate }}
+        </md-button>
+      </div>
+    </form>
+
+    <div class="lnr-center" layout-padding ng-if="multiBooking.success_request">
+      <div class="lnr-margin-lrg"></div>
+      <md-icon md-svg-src="app/assets/ui_icons/icn_checkmark.svg" class="lnr-icn-mlrg--medium"></md-icon>
+      <p class="md-headline lnr-no-margin">{{ 'multi-booking.thanks-for-request' | translate }}</p>
+      <p class="md-subhead">{{ 'multi-booking.we-will-back-shortly' | translate }}</p>
+      <a class="md-button md-raised md-primary md-lrg" ui-sref="search({location: multiBooking.form.city})">
+        {{ 'multi-booking.take-back-to-search' | translate }}
+      </a>
+      <div class="lnr-margin-lrg"></div>
+    </div>
+  </div>
+
+  <div class="lnr-margin-lrg"></div>
+
+  <div class="content" layout-padding>
+    <div class="lnr-section-title mt0" layout="column" layout-align="center center">
+      <p class="md-body-2">
+        {{ 'booking.footer.call-us' | translate }}<br>
+        <a href="mailto:contact@listnride.com">{{ 'booking.footer.email-us' | translate }}</a>.</p>
+      <div class="lnr-row-images" layout="row" layout-align="center center">
+        <div class="lnr-row-images__item" layout="column" layout-align="center center">
+          <img ng-src="app/assets/ui_images/request-flow/lnr_supportThumb_topbias@2x.png" alt="Tobias">
+          <span>Tobias</span>
+        </div>
+        <div class="lnr-row-images__item" layout="column" layout-align="center center">
+          <img ng-src="app/assets/ui_images/request-flow/lnr_supportThumb_patrick@2x.png" alt="Lena">
+          <span>Patrick</span>
+        </div>
+      </div>
+      <p class="md-caption">
+        <b>{{ 'booking.footer.support' | translate }}</b>
+      </p>
+    </div>
+  </div>
+
+
+  <footer></footer>
+</md-content>

@@ -340,15 +340,15 @@
       });
 
       $stateProvider.state({
-        name: 'torosDelGravel',
-        url: '/toros-del-gravel',
-        template: '<toros-del-gravel></toros-del-gravel>',
+        name: 'torosDeGravel',
+        url: '/toros-de-gravel',
+        template: '<toros-de-gravel></toros-de-gravel>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["meta.events.toros-del-gravel.meta-title", "meta.events.toros-del-gravel.meta-description"])
+            $translate(["meta.events.toros-de-gravel.meta-title", "meta.events.toros-de-gravel.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.toros-del-gravel.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.toros-del-gravel.meta-description"]);
+                ngMeta.setTitle(translations["meta.events.toros-de-gravel.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.toros-de-gravel.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
           }
@@ -1174,6 +1174,25 @@
       });
 
       $stateProvider.state({
+        name: 'leaos',
+        url: '/brands/leaos',
+        template: '<leaos></leaos>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brand-integration.leaos.meta-title", "meta.brand-integration.leaos.meta-descr"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brand-integration.leaos.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brand-integration.leaos.meta-descr"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'factoryberlin',
         url: '/factoryberlin',
         template: '<user></user>',
@@ -1286,6 +1305,31 @@
         },
         meta: {
           disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'multiBooking',
+        url: '/multi-booking?location',
+        template: '<multi-booking></multi-booking>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["multi-booking.meta-title", "multi-booking.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["multi-booking.meta-title"]);
+                ngMeta.setTag("description", translations["multi-booking.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        },
+        params: {
+          location: {
+            value: "",
+            squash: true
+          }
         }
       });
 

@@ -1,6 +1,21 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "bolzano": "Bolzano",
+    "lake-garda": "Gardameer",
+    "sardinia": "Sardinië",
+    "sicily": "Sicilië",
+    "tuscany": "Toscane",
+    "please-select": "Ajb. selecteren",
+    "errors": {
+      "email-required": "Vul een geldig emailadres in",
+      "email-not-valid": "Vul een geldig emailadres in",
+      "phone-not-valid": "Voer alstublieft een geldig telefoonnummer in",
+      "phone-required": "Voer je telefoonnummer in. ",
+      "404": "Pagina bestaat niet",
+      "422": "Verkeerd dataformaat ingevoerd",
+      "500": "Interne Server Fout"
+    },
     "basic-fee": "Servicekosten inclusief basisverzekering",
     "how-it-works": "Hoe werkt het",
     "list-a-bike": "Fiets verhuren",
@@ -136,6 +151,39 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "brand-integration": {
+    "leaos": {
+      "subdescription-not-used": "Design. Art. Passion.",
+      "subdescription-not-use": "Design. Art. Passion."
+    }
+  },
+  "multi-booking": {
+    "meta-title": "Groepsboeking",
+    "no-accessories": "Geen accessoires",
+    "meta-description": "Boek uw fietsen met ons groepsboekingsformulier",
+    "title": "Groepsboekingen",
+    "header": "We helpen u graag met uw groepsboeking",
+    "subheader": "Geen gedoe meer, laat ons je helpen om je voor te bereiden op je volgende fietsvakantie. Geef ons jouw voorkeuren door en wij doen de rest, zodat je maximaal van het fietsen kunt genieten.",
+    "how-to": {
+      "step-1-title": "Zoeken & vinden",
+      "step-1-content": "Bereid jezelf voor op de reis, bespaar kostbare tijd en geniet maximaal van de tijd op je vakantiebestemming. Gemakkelijk en transparent, dag en nacht. ",
+      "step-2-title": "Definieren & aanvragen",
+      "step-2-content": "Vertel ons welke fietsen je wilt huren en wij doen de rest. Geef ons de details door en we nemen contact met je op!",
+      "step-3-title": "Offerte accepteren & online boeken",
+      "step-3-content": "Wij sturen je een offerte met een link waar je online kunt boeken of een schriftelijke bevestiging van je boeking kunt geven. In het laatste geval ontvang je een rekening die je kunt overmaken om de boeking af te ronden.  "
+    },
+    "your-booking-details": "Uw boekingsgegevens",
+    "what-bike-kind": "Wat voor soort fiets?",
+    "where-to-rent": "Waar wil je huren?",
+    "rental-period": "Huurperiode",
+    "how-many-bikes": "Hoeveel fietsen?",
+    "do-you-need-accessories": "Welke accessoires heb je nodig?",
+    "your-contact-details": "Je contactgegevens",
+    "thanks-for-request": "Bedankt voor je fietsverhuuraanvraag",
+    "we-will-back-shortly": "We komen spoedig bi je terug",
+    "take-back-to-search": "Breng me terug naar mijn zoekopdracht",
+    "accessories": "Accessoires"
+  },
   "insurance": {
     "facts": {
       "basic-insurance": {
@@ -173,8 +221,12 @@
         "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
       },
       "eroica-gaiole": {
-        "meta-title": "Eroica vintage road bike cycling event",
-        "meta-description": "Rent your vintage road bike for Eroica on listnride"
+        "meta-title": "Eroica vintage wielertocht",
+        "meta-description": "Huur een vintage racefiets voor de Eroica on listnride"
+      },
+      "toros-de-gravel": {
+        "meta-title": "Huur de perfecte fiets voor Toros de Gravel",
+        "meta-description": "Op listnride vind je een selectie van gravel- en mountainbikes te huur voor dit speciale gravel evenement in Sineu, Mallorca."
       },
       "in-velo-veritas": {
         "meta-title": "In Velo Veritas - Rent a bike with listnride",
@@ -225,6 +277,10 @@
       "ampler": {
         "meta-title": "E-Bike Test Ride Program",
         "meta-descr": "Test een elektrische fiets vandaag! De elektrische fietsen van Ampler zijn nu direkt beschikbaar op listnride. Huur er één in Amsterdam, Berlijn, Düsseldorf, München of Zürich."
+      },
+      "leaos": {
+        "meta-title": "Huur en test de Leaos E-bikes in München, Düsseldorf en Bolzano",
+        "meta-descr": "De Design Ebike - Leaos"
       },
       "brompton": {
         "meta-title": "Maak een proefrit met de Brompton vouwfiets via listnride",
@@ -382,12 +438,12 @@
       "premium-insurance": "Premium insurance",
       "premium-insurance-title": "Premium verzekering ",
       "premium-insurance-subtitle": "Pick our premium insurance for your ride to be on the safe side",
-      "thats-included": "Naast de basisverzekering is het onderstaande extra inbegrepen",
-      "premium-feature-1": "Bescherming ook tegen diefstal",
+      "thats-included": "Naast de basisverzekering is het onderstaande mede inbegrepen",
+      "premium-feature-1": "Diefstal bescherming",
       "premium-feature-2": "Vervangende fiets na schade, ongeval of diefstal",
-      "premium-feature-3": "Retourtransport van de fiets na een ongeval of schade",
+      "premium-feature-3": "Retourtransport van de huurfiets na een ongeval of schade",
       "premium-feature-4": "Geen eigen risiko",
-      "premium-feature-5": "24/7 hotline ",
+      "premium-feature-5": "24/7 noodnummer",
       "payment": "Betaling",
       "redeem-voucher": "Voucher verzilveren",
       "add": "Voeg toe",
@@ -594,6 +650,7 @@
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} uit {{user.city}} zou graag jouw <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. leg alle verdere details vast via de Chat.",
+    "11": "De boeking is geannuleerd",
     "3": "Je hebt de aanvraag bevestigd. Je fiets is nu verhuurd voor de periode {{timespan}}! De contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\n<br>\nNaam: {{user.first_name}} {{user.last_name}} \n<br>Nummer: {{user.pretty_phone_number}} \n<br>Adres: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
     "5": "Hartelijk bedankt voor het bevestigen van de teruggave van de fiets als ook je recensie. De verhuurtransactie is nu afgerond en het geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons gerust een e-mail aan hello@listnride.com",
     "8": "Je hebt de aanvraag afgewezen. Schrijf de aanvrager kort een berichtje waarom het niet lukt.",
@@ -602,6 +659,7 @@
   },
   "rideChat": {
     "1": "Je zou graag {{lister.business_name}} <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. Spreek de verdere details met de verhuurder af. Zodra je aanvraag wordt aangenomen, is de boeking rond.",
+    "11": "De boeking van je huurfiets is geannuleerd.",
     "3": "Gefeliciteerd, {{lister.first_name}} heeft je aanvraag geaccepteerd, je boeking is hiermee bevestigd. De contactgegevens zijn de volgende, alle details worden je ook per email toegestuurd.<br><br>Naam: {{lister.first_name}} {{lister.last_name}}<br>Nummer: {{lister.pretty_phone_number}}<br>Adres: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} heeft de teruggave van de fiets bevestigd. Tenslotte vragen wij je een recensie van de ervaring achter te laten. Dit helpt onze community zeer en rondt tevens de transactie af.",
     "6": "Bedankt voor je recensie. De verhuur is succesvol verlopen.",
@@ -611,8 +669,15 @@
   },
   "forms": {
     "first-name": "Voornaam",
+    "your-name": "Je naam",
+    "your-email-address": "Emailadres",
+    "your-phone-number": "Mobiele nummer",
+    "comments": "Opmerkingen",
     "last-name": "Achternaam",
     "email-address": "Emailadres",
+    "update-password": "Update Password",
+    "old-password": "Old Password",
+    "new-password": "New Password",
     "password": "Wachtwoord",
     "forgot-password": "Wachtwoord vergeten?",
     "or": "of",
@@ -629,7 +694,7 @@
     "description_min_100": "Beschrijvingstekst moet min. 100 tekens lang zijn",
     "address": "Adres",
     "profile-picture": "Profielfoto",
-    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
+    "profile-picture-info": "Upload alleen bestanden in formats als jpg, jpeg, png. Maximale grootte is 20 MB. Minimale dimensie is 100 px x 100 px.",
     "profile-picture-info-policy": "Door een profielfoto te uploaden, ga ik ermee akkoord dat listnride de afbeelding opslaat zoals beschreven in het <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacybeleid </a>. Ik kan de foto op elk moment verwijderen.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "Je fotoformaat is meer dan de toegestane maximale grootte",
@@ -679,8 +744,8 @@
     "landing-section-subheader": "Huur een fiets via listnride naar eigen smaak en gebruik.",
     "featured-bikes-header": "Fietsverhuur: De favorieten van onze Community",
     "featured-bikes-subheader": "of je nu een racefiets, mountainbike, stadsfiets of e-bike wilt, je huurt ze hier. Dit zijn de favorieten van onze Community.",
-    "featured-tiles-header": "Raak geïnspireerd",
-    "featured-tiles-subheader": "We werken samen met innovatieve merken, schrijven over interessante ontwikkelingen en nemen deel aan speciale evenementen",
+    "featured-tiles-header": "Maak een Testrit",
+    "featured-tiles-subheader": "We werken samen met innovatieve fietsmerken, die hun nieuwste modellen aanbieden om te testen.  De fietsen zijn op verschillende locaties exclusief te testen of te huur. Perfect voor een gefundeerde aankoopbeslissing. ",
     "featured-cities-header": "Met listnride ben je altijd met de perfecte fiets onderweg",
     "featured-cities-subheader": "De fietsverhuurservice van listnride is beschikbaar in meer en meer steden en vakantieregio’s in Europa. Hier zijn enkele tips voor je:",
     "list-a-bike-header": "Je fiets is te mooi om stil te staan?",
@@ -695,7 +760,8 @@
   },
   "search": {
     "no-bikes": "Er zijn helaas nog geen fietsen op deze locatie. Omdat we snel groeien, zal dat waarschijnlijk snel gebeuren! Als je wilt, kun je <a href=\"/listing-a-bike\">zelf een fiets een lijst laten maken </a>of zoek je naar een andere stad of specifieke locatie in de buurt.",
-    "bikes-found": "bikes found:",
+    "book-multiple-bikes": "Groepsboekingen",
+    "bikes-found": "Aantal fietsen:",
     "all-sizes": "Alle Maten",
     "bikes-in": "fietsen in",
     "meta-title": "Huur de perfekte fiets in {{location}}.",
@@ -734,7 +800,7 @@
     "next": "Verder",
     "list-bike": "Fiets plaatsen",
     "category": {
-      "header": "Wat is de fietscategorie?",
+      "header": "Welke type fiets heb je?",
       "hint": "Kies allereerst de categorie van je fiets. Kies daarna de juiste subcategorie.",
       "label": "Categorie",
       "city": "Stad",
@@ -843,8 +909,8 @@
       "price_7_days": "7 dagen (1 week)",
       "price_8_days": "vanaf 8 dagen",
       "price_8_days_long": "vanaf 8 dagen (elke dag)",
-      "price_30_days": "30 dagen (1 maand)",
-      "price_30_days_long": "30 dagen (1 Monat)",
+      "price_30_days": "28 dagen",
+      "price_30_days_long": "28 dagen (1 Monaat)",
       "reset-prices": "Zurücksetzen",
       "validations": {
         "required": {
@@ -1126,6 +1192,6 @@
     "add-another-date": "Voeg een andere datum toe",
     "submit-btn": "Ok",
     "submit-btn-save": "Opslaan",
-    "choose-range": "Choose your date range"
+    "choose-range": "Kies de periode"
   }
 }

@@ -60,7 +60,6 @@ angular.module('cocomatIntegration',[]).component('cocomat', {
       cocomat.showBikesIn = function(shopId) {
         cocomat.currentShop = cocomat.shops[shopId];
         cocomat.currentBikes = cocomat.currentShop.bikes;
-        console.log(cocomat.currentBikes);
       }
     }
 

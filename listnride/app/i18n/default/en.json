@@ -1,6 +1,21 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "bolzano": "Bolzano",
+    "lake-garda": "Lake Garda",
+    "sardinia": "Sardinia",
+    "sicily": "Sicily",
+    "tuscany": "Tuscany",
+    "please-select": "Please select",
+    "errors": {
+      "email-required": "Please enter your email address, email is required",
+      "email-not-valid": "Please, enter a valid email address",
+      "phone-not-valid": "Please, enter a valid phone number",
+      "phone-required": "Please enter your phone number, this field is required",
+      "404": "Page doesn't exist",
+      "422": "Wrong data format entered",
+      "500": "Internal server error"
+    },
     "basic-fee": "Service Fee including Basic Insurance",
     "how-it-works": "How it works",
     "list-a-bike": "List a Bike",
@@ -141,6 +156,39 @@
       "subheader": "Meet like-minded and make some pocket money"
     }
   },
+  "brand-integration": {
+    "leaos": {
+      "subdescription-not-used": "Design. Art. Passion.",
+      "subdescription-not-use": "Design. Art. Passion."
+    }
+  },
+  "multi-booking": {
+    "meta-title": "Group booking",
+    "no-accessories": "No accessories",
+    "meta-description": "Book your bikes with our group booking form",
+    "title": "Group bookings",
+    "header": "We are happy to help you with your group booking",
+    "subheader": "No more hassle, let us help you to get organized for your next cycling trip. Provide us with your preferences and we'll do the rest, so you can spend maximum time enjoying the ride.",
+    "how-to": {
+      "step-1-title": "Search & find",
+      "step-1-content": "Save precious time to maximally enjoy the ride at your destination. Easy and transparent, any day any time. ",
+      "step-2-title": "Define & request",
+      "step-2-content": "Tell us what bicycles you would like to rent and we will do the rest. Just provide us the details and we'll get back to you!",
+      "step-3-title": "Accept offer & book online",
+      "step-3-content": "We will send you a quote and a link where you can either book online or you give us a written confirmation for your booking. in the latter case, you will be send invoice that needs to be paid to finalize the booking.  "
+    },
+    "your-booking-details": "Your booking details",
+    "what-bike-kind": "What kind of bike?",
+    "where-to-rent": "Where do you want to rent?",
+    "rental-period": "Rental period",
+    "how-many-bikes": "How many bikes?",
+    "do-you-need-accessories": "Do you need accessories?",
+    "your-contact-details": "Your contact details",
+    "thanks-for-request": "Thanks for your bike rental request",
+    "we-will-back-shortly": "We will get back to you shortly",
+    "take-back-to-search": "Take me back to my search",
+    "accessories": "Accessories"
+  },
   "insurance": {
     "facts": {
       "basic-insurance": {
@@ -178,12 +226,12 @@
         "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
       },
       "eroica-gaiole": {
-        "meta-title": "Eroica vintage road bike cycling event",
+        "meta-title": "Eroica classic road bike event",
         "meta-description": "Rent your vintage road bike for Eroica on listnride"
       },
-      "toros-del-gravel": {
-        "meta-title": "meta title",
-        "meta-description": "meta description"
+      "toros-de-gravel": {
+        "meta-title": "Rent the perfect bike for Toros de Gravel",
+        "meta-description": "On listnride you'll find a selection of gravel and mountainbikes for you to rent for this special gravel event in Sineu on Majorca. "
       },
       "in-velo-veritas": {
         "meta-title": "In Velo Veritas - Rent a bike with listnride",
@@ -234,6 +282,10 @@
       "ampler": {
         "meta-title": "E-Bike Test Ride Program",
         "meta-descr": "Test ride an e-bike today! The ebikes from Ampler are available on listnride. Rent one in Amsterdam, Berlin, Düsseldorf,  Munich or Zurich."
+      },
+      "leaos": {
+        "meta-title": "Rent and test the Leaos E-Bikes in Munich, Dusseldorf and Bolzano",
+        "meta-descr": "The Design Ebike - Leaos"
       },
       "brompton": {
         "meta-title": "Rent a Brompton bike with listnride",
@@ -606,6 +658,7 @@
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{timespan}}. Agree on further details using the chat.",
+    "11": "The booking was cancelled. ",
     "3": "You've accepted the request. The bike is now booked and you'll rent it out from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.\n<br>\nName: {{user.first_name}} {{user.last_name}}\n<br>\nPhone: {{user.pretty_phone_number}}\n<br>Address: {{user.street}}, {{user.zip}} {{user.city}}, {{user.country}}",
     "5": "Thanks for confirming retrieval of your bike and rating {{user.first_name}}. The rental was successful and the money will get transferred to the bank account you provided during the next 7 working days.<br><br>In case of any further questions or feedback, we’d love to receive them under <a mailto:\"hello@listnride.com\">hello@listnride.com</a>",
     "8": "You rejected the request. Please tell the rider why you can't rent him the bike.",
@@ -614,6 +667,7 @@
   },
   "rideChat": {
     "1": "You would like to rent the <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{lister.business_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
+    "11": "The booking of your rental bike was cancelled.",
     "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.pretty_phone_number}},<br>Address: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
     "5": "{{lister.first_name}} has confirmed the return of the ride and gave you a review. Finally, please also rate the ride. This helps our community a lot and completes the rental.",
     "6": "Thanks for rating, the rental was successfully completed.",
@@ -623,8 +677,15 @@
   },
   "forms": {
     "first-name": "First Name",
+    "your-name": "Your name",
+    "your-email-address": "Your email address",
+    "your-phone-number": "Your phone number",
+    "comments": "Comments",
     "last-name": "Last Name",
     "email-address": "Email Address",
+    "update-password": "Update Password",
+    "old-password": "Old Password",
+    "new-password": "New Password",
     "password": "Password",
     "forgot-password": "Forgot Password?",
     "or": "or",
@@ -686,14 +747,14 @@
     "landing-section-header": "The perfect bike. Simply rent it.",
     "insurance": {
       "description": "No matter if minimalistic fixie or high-end triathlon bike: Every listnride rental in Germany or Austria is insured! Simple. Unbureaucratically. Anytime.",
-      "header": "Insurance for every rental on listnride",
+      "header": "Insurance for your rental on listnride",
       "logo-description": "In cooperation with hepster and"
     },
     "landing-section-subheader": "Join listnride and find the bike that is right for you.",
     "featured-bikes-header": "Bike Rental: Our Community’s Favorites",
     "featured-bikes-subheader": "Whether it’s road bikes, mountain bikes, cargo bikes, city bikes or e-bikes, you can rent them all. These are the current favorite rental bikes of the community.",
-    "featured-tiles-header": "Get inspired",
-    "featured-tiles-subheader": "We partner up with innovative brands, write about interesting developments and take part in special events.",
+    "featured-tiles-header": "Test & Ride",
+    "featured-tiles-subheader": "We are partnering with innovative bike brands, which offer their latest models for testing.  The bikes can be tested or rented exclusively at various locations. Perfect for a well-considered buying decision. ",
     "featured-cities-header": "With listnride you are never without your perfect bike ",
     "featured-cities-subheader": "listnride’s bike rental service is becoming available in more cities and holiday regions around Europe. Here are some tips for you: ",
     "list-a-bike-header": "Got a nice bike and want people to use it?",
@@ -708,8 +769,9 @@
   },
   "search": {
     "no-bikes": "There are unfortunately no bikes in this location yet. As we're growing fast, probably soon there will be! If you'd like to, you can <a href=\"/listing-a-bike\">list a bike yourself</a> or alternatively try searching for another city or specific location nearby.",
-    "bikes-found": "bikes found:",
-    "all-sizes": "All Sizes",
+    "book-multiple-bikes": "Group bookings",
+    "bikes-found": "Bikes found:",
+    "all-sizes": "All sizes",
     "bikes-in": "Bikes in",
     "meta-title": "Rent the perfect bike in {{location}}.",
     "meta-description": "listnride offers a wide variety of perfekt bikes for rent in {{location}}.",
@@ -717,10 +779,10 @@
     "bike": "Bike",
     "bikes": "Bikes",
     "pick-body-size": "Size",
-    "timespan": "Timespan",
-    "category": "Bike Type",
+    "timespan": "Time span",
+    "category": "Bike type",
     "clear-filters": "Clear filters",
-    "all-brands": "All brands",
+    "all-brands": "All Brands",
     "all-bikes": "All bikes"
   },
   "calendar": {
@@ -857,8 +919,8 @@
       "price_7_days": "7 days (1 week)",
       "price_8_days": "8 days onwards",
       "price_8_days_long": "8 days onwards (per day)",
-      "price_30_days": "30 days",
-      "price_30_days_long": "30 days (1 month)",
+      "price_30_days": "28 days",
+      "price_30_days_long": "28 days (1 month)",
       "reset-prices": "Reset",
       "validations": {
         "required": {
@@ -1122,6 +1184,7 @@
   },
   "seo": {
     "header": "Rent the best bikes in",
+    "header-2": "Rent the best bikes on",
     "rent-the-best": "Rent the best",
     "bikes": "bikes",
     "rent-perfect-bikes-in": "Rent perfect bikes in",

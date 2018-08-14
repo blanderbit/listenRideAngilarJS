@@ -25,13 +25,13 @@ angular.module('message',[]).component('message', {
       var hasInsurance = !!message.request.insurance;
       // var yesterdayDate = moment(new Date()).add(-1, 'days');
 
-      if (messageDate.diff(todayDate, 'days') === 0){
+      if (messageDate.format('LL') === todayDate.format('LL')){
         $translate(["shared.today"]).then(
           function (translations) {
             message.localTime = translations["shared.today"] + ', ' + messageDate.format('HH:mm');
           }
         );
-      } else if (messageDate.diff(todayDate, 'days') === -1){
+      } else if (messageDate.add(1, 'days').format('LL') === todayDate.format('LL')){
         $translate(["shared.yesterday"]).then(
           function (translations) {
             message.localTime = translations["shared.yesterday"] + ', ' + messageDate.format('HH:mm');
@@ -54,17 +54,24 @@ angular.module('message',[]).component('message', {
         api.get(insuranceEndpoint + certificateId, 'blob').then(
           function (success) {
             var name = message.request.insurance.items_uid.thing == certificateId ? "Bike" : "Bike Assist";
-            var file = new Blob([success.data], {type: 'application/pdf'});
-            var link = document.createElement('a');
-            link.href = window.URL.createObjectURL(file);
-            link.download="Certificate " + name + " Insurance " + message.request.id + ".pdf";
-            link.click();
+            var fileName ="Certificate " + name + " Insurance " + message.request.id + ".pdf";
+            downloadAttachment(fileName, success.data, 'application/pdf');
           },
           function (error) {
-            console.log("error happened");
           }
         );
       };
+
+      function downloadAttachment(fileName, data, type) {
+        var a = document.createElement('a');
+        document.body.appendChild(a);
+        var file = new Blob([data], {type: type});
+        var fileURL = window.URL.createObjectURL(file);
+        a.href = fileURL;
+        a.download = fileName;
+        a.click();
+        document.body.removeChild(a);
+      }
 
       message.closeDialog = function() {
         $mdDialog.hide();
