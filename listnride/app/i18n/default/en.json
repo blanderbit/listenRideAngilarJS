@@ -5,8 +5,8 @@
     "lake-garda": "Lake Garda",
     "sardinia": "Sardinia",
     "sicily": "Sicily",
-    "toscana": "Tuscany",
-    "please-select": "Please Select",
+    "tuscany": "Tuscany",
+    "please-select": "Please select",
     "errors": {
       "email-required": "Please enter your email address, email is required",
       "email-not-valid": "Please, enter a valid email address",
@@ -172,9 +172,9 @@
     "how-to": {
       "step-1-title": "Search & find",
       "step-1-content": "Save precious time to maximally enjoy the ride at your destination. Easy and transparent, any day any time. ",
-      "step-2-title": "Define & Request",
+      "step-2-title": "Define & request",
       "step-2-content": "Tell us what bicycles you would like to rent and we will do the rest. Just provide us the details and we'll get back to you!",
-      "step-3-title": "Accept Offer & book online",
+      "step-3-title": "Accept offer & book online",
       "step-3-content": "We will send you a quote and a link where you can either book online or you give us a written confirmation for your booking. in the latter case, you will be send invoice that needs to be paid to finalize the booking.  "
     },
     "your-booking-details": "Your booking details",
@@ -769,7 +769,7 @@
   },
   "search": {
     "no-bikes": "There are unfortunately no bikes in this location yet. As we're growing fast, probably soon there will be! If you'd like to, you can <a href=\"/listing-a-bike\">list a bike yourself</a> or alternatively try searching for another city or specific location nearby.",
-    "book-multiple-bikes": "Book Multiple Bikes",
+    "book-multiple-bikes": "Group bookings",
     "bikes-found": "Bikes found:",
     "all-sizes": "All sizes",
     "bikes-in": "Bikes in",
