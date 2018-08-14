@@ -5,7 +5,7 @@
     "lake-garda": "Gardameer",
     "sardinia": "Sardinië",
     "sicily": "Sicilië",
-    "toscana": "Toscane",
+    "tuscany": "Toscane",
     "please-select": "Ajb. selecteren",
     "errors": {
       "email-required": "Vul een geldig emailadres in",
@@ -760,7 +760,7 @@
   },
   "search": {
     "no-bikes": "Er zijn helaas nog geen fietsen op deze locatie. Omdat we snel groeien, zal dat waarschijnlijk snel gebeuren! Als je wilt, kun je <a href=\"/listing-a-bike\">zelf een fiets een lijst laten maken </a>of zoek je naar een andere stad of specifieke locatie in de buurt.",
-    "book-multiple-bikes": "Boek meerdere fietsen",
+    "book-multiple-bikes": "Groepsboekingen",
     "bikes-found": "Aantal fietsen:",
     "all-sizes": "Alle Maten",
     "bikes-in": "fietsen in",
@@ -1192,6 +1192,6 @@
     "add-another-date": "Voeg een andere datum toe",
     "submit-btn": "Ok",
     "submit-btn-save": "Opslaan",
-    "choose-range": "Choose your date range"
+    "choose-range": "Kies de periode"
   }
 }
