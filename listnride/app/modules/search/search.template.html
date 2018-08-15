@@ -87,14 +87,8 @@
       zoom="{{search.mapOptions.zoom}}"
       on-click="search.onMapClick(event)"
     >
-      <marker
-        ng-repeat="bike in search.filteredBikes track by bike.id"
-        id="{{bike.id}}"
-        position="{{bike.lat_rnd}},{{bike.lng_rnd}}"
-        on-click="search.showBikeWindow(event, bike.id)">
-      </marker>
 
-      <info-window id="searchMapWindow" close-box-margin="0">
+      <info-window id="searchMapWindow">
         <div ng-non-bindable="">
           <bike-card bike="search.selectedBike"></bike-card>
         </div>
