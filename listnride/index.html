@@ -276,6 +276,29 @@
   <!-- End Crisp Chat Integration -->
 </head>
 <body layout="column">
+<!--[if !IE]>
+    <table id="ie-warning" class="lnr-IE-warning-overlay">
+      <tr>
+        <td>
+          <div class="lnr-IE-warning-content">
+            <button class="lnr-IE-close-button" type="button" onclick="document.getElementById('ie-warning').style.display = 'none';">×</button>
+            <img class="lnr-icn-mlrg" src="app/assets/ui_images/ie/ie_logo.png" />
+             <h2 class="md-headline lnr-margin-top-double">You are using Internet Explorer.<br>Unfortunately we are not.
+            </h2>
+            <p class="lnr-padding-top-double">We recommend to use following browser</p>
+            <div>
+              <a href="https://www.google.com/intl/ru_ALL/chrome/" target="_blank">
+                <img class="lnr-icn-mlrg lnr-margin-right-double" src="app/assets/ui_images/ie/chrome_logo.png" />
+              </a>
+              <a href="https://www.mozilla.org/ru/firefox/new/" target="_blank">
+                <img class="lnr-icn-mlrg" src="app/assets/ui_images/ie/firefox_logo.png" />
+              </a>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  <![endif]-->
   <header></header>
   <sidebar layout="row" header="header"></sidebar>
   <ui-view flex="auto"></ui-view>
