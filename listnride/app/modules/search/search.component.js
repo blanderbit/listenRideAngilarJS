@@ -200,16 +200,17 @@ angular.module('search',[]).component('search', {
       // ============================
 
       // show bike card in maps on card hover
-      function onBikeHover (bike, toShow) {
-        if (search.map) {
-          search.selectedBike = bike;
-          if (toShow) {
-            search.map.showInfoWindow('searchMapWindow', search.mapMarkers[bike.id]);
-          } else {
-            search.map.hideInfoWindow('searchMapWindow');
-          }
-        }
-      }
+      // TODO: Commented due to clusters logic
+      // function onBikeHover (bike, toShow) {
+      //   if (search.map) {
+      //     search.selectedBike = bike;
+      //     if (toShow) {
+      //       search.map.showInfoWindow('searchMapWindow', search.mapMarkers[bike.id]);
+      //     } else {
+      //       search.map.hideInfoWindow('searchMapWindow');
+      //     }
+      //   }
+      // }
 
       function initializeGoogleMap() {
         $timeout(function(){
