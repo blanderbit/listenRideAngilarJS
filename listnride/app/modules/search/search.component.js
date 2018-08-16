@@ -27,7 +27,7 @@ angular.module('search',[]).component('search', {
         search.onButtonClick = onButtonClick;
         search.onCategoryChange = onCategoryChange;
         search.onMapClick = onMapClick;
-        // search.onBikeHover = onBikeHover;
+        search.onBikeHover = onBikeHover;
         search.populateBikes = populateBikes;
         search.addMoreItemsLimit = addMoreItemsLimit;
         search.onDateChange = onDateChange;
@@ -203,17 +203,18 @@ angular.module('search',[]).component('search', {
       // ============================
 
       // show bike card in maps on card hover
-      // TODO: Commented due to clusters logic
-      // function onBikeHover (bike, toShow) {
-      //   if (search.map) {
-      //     search.selectedBike = bike;
-      //     if (toShow) {
-      //       search.map.showInfoWindow('searchMapWindow', search.mapMarkers[bike.id]);
-      //     } else {
-      //       search.map.hideInfoWindow('searchMapWindow');
-      //     }
-      //   }
-      // }
+      function onBikeHover (bike, toShow) {
+        //TODO: fix on hover
+        // if (search.map) {
+        //   search.selectedBike = bike;
+        //   if (toShow) {
+        //     var marker = _.find(search.clusterer.getMarkers(), ['id', bike.id]);
+        //     google.maps.event.trigger( marker, 'click' );
+        //   } else {
+        //     search.map.hideInfoWindow('searchMapWindow');
+        //   }
+        // }
+      }
 
       function initializeGoogleMap() {
         $timeout(function(){
@@ -260,7 +261,8 @@ angular.module('search',[]).component('search', {
         search.mapMarkers = markers;
 
         var mcOptions = { imagePath: 'https://cdn.rawgit.com/googlemaps/js-marker-clusterer/gh-pages/images/m' };
-        return new MarkerClusterer(map, markers, mcOptions);
+        search.clusterer = new MarkerClusterer(map, markers, mcOptions);
+        return search.clusterer
       }
 
       function createMarkerForBike(bike, map) {

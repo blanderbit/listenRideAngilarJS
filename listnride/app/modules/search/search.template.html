@@ -58,6 +58,7 @@
           ng-repeat="filterBikes in search.categorizedFilteredBikes"
           title="{{filterBikes.title}}"
           limit="search.limit"
+          on-bike-hover="search.onBikeHover"
           add-more-items-limit="search.addMoreItemsLimit"
           categorized-bikes="search.categorizedFilteredBikes"
           uncategorized-bikes="search.filteredBikes"
@@ -68,7 +69,6 @@
           ng-hide="search.bikes !== undefined && search.bikes.length === 0"
           class="lnr-no-margin">
         </cardgrid>
-        <!--on-bike-hover="search.onBikeHover"-->
       </div>
 
       <!-- busy loader until bikes api resolves -->
