@@ -1,338 +1,339 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="listnride">
-  <head>
-    <title ng-bind="ngMeta.title"></title>
-    <!-- build:base -->
-    <!-- endbuild -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="{{ngMeta.description}}">
-    <meta name="prerender-status-code" content="{{ngMeta['prerender-status-code']}}" />
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <meta name="fragment" content="!">
-    <meta property="og:image" content="{{ngMeta['og:image']}}" />
-    <meta property="og:image:width" content="800" />
-    <meta property="og:image:height" content="534" />
-    <meta property="og:description" content="{{ngMeta.description}}" />
-    <meta property="og:type" content="website" />
-    <meta lnr-meta-robots ng-if="ngMeta['noindex']"></meta>
-    <link rel="alternate" href="https://www.listnride.com{{location.path()}}" hreflang="x-default" />
-    <link rel="alternate" href="https://www.listnride.de{{location.path()}}" hreflang="de" />
-    <link rel="alternate" href="https://www.listnride.nl{{location.path()}}" hreflang="nl" />
-    <link rel="alternate" href="https://www.listnride.it{{location.path()}}" hreflang="it" />
-    <link rel="icon" type="image/png" href="app/assets/ui_images/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="app/assets/ui_images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="app/assets/ui_images/favicon-96x96.png" sizes="96x96">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
-    <!-- STYLE LIBRARIES -->
-    <!-- build:css app/assets/stylesheet/style.min.css -->
-    <link rel="stylesheet" href="js_modules/angular-material-minimal/angular-material.min.css" />
-    <link rel="stylesheet" href="js_modules/daterangepicker/daterangepicker.css" />
-    <link rel="stylesheet" href="app/assets/stylesheets/app.css" />
-    <link rel="stylesheet" href="app/assets/stylesheets/galleries.css" />
-    <link rel="stylesheet" href="app/services/verification/verification.css" />
-    <link rel="stylesheet" href="app/modules/booking/booking.css" />
-    <link rel="stylesheet" href="app/modules/bike/list/list.css" />
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick-theme.css">
-    <link rel="stylesheet" href="node_modules/ng-img-crop/compile/minified/ng-img-crop.css">
-    <link rel="stylesheet" href="node_modules/intl-tel-input/build/css/intlTelInput.css">
-    <!-- endbuild -->
-    <!-- CDN LIBRARIES -->
-    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAmpmoaBw_AXiw02-iPPYcX3j9kj0MvM0g"></script>
-    <script src="https://js.braintreegateway.com/web/3.28.0/js/client.min.js"></script>
-    <script src="https://js.braintreegateway.com/web/3.28.0/js/paypal.js"></script>
-    <!-- LNR LIBRARIES -->
-    <!-- build:js vendors.min.js -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/lodash/lodash.js"></script>
-    <script src="node_modules/angular/angular.min.js" type="text/javascript"></script>
-    <script src="node_modules/angular-animate/angular-animate.min.js" type="text/javascript"></script>
-    <script src="node_modules/angular-translate/dist/angular-translate.min.js"></script>
-    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
-    <script src="node_modules/angular-messages/angular-messages.min.js"></script>
-    <script src="node_modules/angular-aria/angular-aria.min.js" type="text/javascript"></script>
-    <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
-    <script src="node_modules/ng-file-upload/dist/ng-file-upload.js"></script>
-    <script src="node_modules/ng-img-crop/compile/minified/ng-img-crop.js"></script>
-    <script src="node_modules/ng-infinite-scroll/build/ng-infinite-scroll.js"></script>
-    <script src="app/i18n/angular-locale_de.js"></script>
-    <script src="node_modules/angular-input-stars/angular-input-stars.js"></script>
-    <script src="js_modules/angular-material-minimal/angular-material.min.js" type="text/javascript"></script>
-    <script src="node_modules/angular-translate/dist/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
-    <script src="node_modules/angular-translate-loader-partial/angular-translate-loader-partial.min.js"></script>
-    <script src="node_modules/ngstorage/ngStorage.min.js"></script>
-    <script src="node_modules/angular-easyfb/build/angular-easyfb.min.js"></script>
-    <script src="node_modules/ngmap/build/scripts/ng-map.min.js"></script>
-    <script src="node_modules/angularjs-scroll-glue/src/scrollglue.js"></script>
-    <script src="node_modules/moment/min/moment.min.js"></script>
-    <script src="node_modules/angular-moment/angular-moment.js"></script>
-    <script src="js_modules/ng-meta/ngMeta.js"></script>
-    <script src="js_modules/daterangepicker/jquery.daterangepicker.js"></script>
-    <script src="node_modules/slick-carousel/slick/slick.js"></script>
-    <script src="node_modules/angular-slick-carousel/dist/angular-slick.min.js"></script>
-    <script src="node_modules/angulartics/dist/angulartics.min.js"></script>
-    <script src="node_modules/angulartics-google-analytics/dist/angulartics-ga.min.js"></script>
-    <script src="node_modules/angular-socialshare/dist/angular-socialshare.min.js"></script>
-    <script src="node_modules/angulartics-facebook-pixel/dist/angulartics-facebook-pixel.min.js"></script>
-    <script src="node_modules/intl-tel-input/build/js/intlTelInput.js"></script>
-    <script src="node_modules/intl-tel-input/build/js/utils.js"></script>
-    <script src="node_modules/international-phone-number/releases/international-phone-number.js"></script>
-    <!-- endbuild -->
-    <!-- build:js app.min.js -->
-    <!-- core -->
-    <script src="app/app.module.js"></script>
-    <script src="app/app.routes.js"></script>
-    <script src="app/app.theme.js"></script>
-    <script src="app/app.constants.js"></script>
-    <!-- core modules -->
-    <script src="app/modules/invite/invite.component.js"></script>
-    <script src="app/modules/referral-link/referral-link.component.js"></script>
-    <script src="app/modules/invite-landing/invite-landing.component.js"></script>
-    <script src="app/modules/bike/bike.component.js"></script>
-    <script src="app/modules/bike/bike.service.js"></script>
-    <script src="app/modules/bike/calendar/calendar.component.js"></script>
-    <script src="app/modules/booking/booking.component.js"></script>
-    <script src="app/modules/home/home.component.js"></script>
-    <script src="app/modules/bike/list/list.component.js"></script>
-    <script src="app/modules/listing-a-bike/listing-a-bike.component.js"></script>
-    <script src="app/modules/listings/listings.component.js"></script>
-    <script src="app/modules/renting-a-bike/renting-a-bike.component.js"></script>
-    <script src="app/modules/requests/requests.component.js"></script>
-    <script src="app/modules/search/search.component.js"></script>
-    <script src="app/modules/settings/settings.component.js"></script>
-    <script src="app/modules/listings/views/list-view.component.js"></script>
-    <script src="app/modules/static/static.component.js"></script>
-    <script src="app/modules/user/user.component.js"></script>
-    <script src="app/modules/invoices/invoices.component.js"></script>
-    <script src="app/modules/meta-tags/meta-tags.component.js"></script>
-    <script src="app/modules/seo-landing/seo-landing.component.js"></script>
-    <script src="app/modules/shared/autocomplete/autocomplete.component.js"></script>
-    <script src="app/modules/shared/bike-card/bike-card.component.js"></script>
-    <script src="app/modules/shared/listing-card/listing-card.component.js"></script>
-    <script src="app/modules/shared/message/message.component.js"></script>
-    <script src="app/modules/shared/rating/rating.component.js"></script>
-    <script src="app/modules/shared/confirmation/confirmation.component.js"></script>
-    <script src="app/modules/shared/receipt/receipt.component.js"></script>
-    <script src="app/modules/shared/input-range/input-range.component.js"></script>
-    <script src="app/modules/shared/credit-cards/angular-credit-cards.js"></script>
-    <script src="app/modules/shared/address-input/address-input.component.js"></script>
-    <script src="app/modules/multi-booking/multi-booking.component.js"></script>
-    <script src="app/modules/shared/filter/bike-count-filter.component.js"></script>
-    <script src="app/modules/shared/filter/category-filter.component.js"></script>
-    <script src="app/modules/shared/filter/accessories-filter.component.js"></script>
-    <!-- core services -->
-    <script src="app/services/base64/base64.service.js"></script>
-    <script src="app/services/authentication/authentication.service.js"></script>
-    <script src="app/services/sha256/sha256.service.js"></script>
-    <script src="app/services/api/api.service.js"></script>
-    <script src="app/services/date/date.service.js"></script>
-    <script src="app/services/verification/verification.service.js"></script>
-    <script src="app/services/bike-options/bike-options.service.js"></script>
-    <script src="app/services/access-control/access-control.service.js"></script>
-    <script src="app/services/loading-dialog/loading-dialog.service.js"></script>
-    <script src="app/services/user-api/user-api.service.js"></script>
-    <script src="app/services/price/price.service.js"></script>
-    <script src="app/services/voucher/voucher.service.js"></script>
-    <script src="app/services/country-code-translator/country-code-translator.service.js"></script>
-    <script src="app/services/calendar-helper/calendar-helper.service.js"></script>
-    <!-- core filters -->
-    <script src="app/filters/category.filter.js"></script>
-    <script src="app/filters/category-seo.filter.js"></script>
-    <script src="app/filters/map-category.filter.js"></script>
-    <script src="app/filters/title-case.filter.js"></script>
-    <script src="app/filters/add-text.filter.js"></script>
-    <!-- core directives -->
-    <script src="app/directives/showAsInteger.js"></script>
-    <script src="app/directives/lnrFocus.js"></script>
-    <script src="app/directives/lnrMaxLength.js"></script>
-    <script src="app/directives/lnrMdFocusTabs.js"></script>
-    <script src="app/directives/lnrMdMenuFullscreen.js"></script>
-    <script src="app/directives/lnrDatePicker.js"></script>
-    <script src="app/directives/ng-infinite-scroll.js"></script>
-    <script src="app/directives/lnrMetaRobots.js"></script>
-    <!--removeIf(shop)-->
-    <!-- header and footer -->
-    <script src="app/modules/footer/footer.component.js"></script>
-    <script src="app/modules/header/header.component.js"></script>
-    <script src="app/modules/sidebar/sidebar.component.js"></script>
-    <script src="app/modules/privacy-bar/privacy-bar.component.js"></script>
-    <!-- extra modules -->
-    <script src="app/modules/invest/invest.component.js"></script>
-    <script src="app/modules/business-community/business-community.component.js"></script>
-    <script src="app/modules/jobs/jobs.controller.js"></script>
-    <script src="app/modules/jobs/jobs.service.js"></script>
-    <script src="app/modules/seo/city-landing.component.js"></script>
-    <script src="app/modules/seo/category-landing.component.js"></script>
-    <script src="app/modules/shared/filter/filter.component.js"></script>
-    <script src="app/modules/shared/bike-sorter/bike-sorter.component.js"></script>
-    <script src="app/modules/shared/cardgrid/cardgrid.component.js"></script>
-    <!-- brand integration -->
-    <script src="app/modules/brand-integration/ampler.component.js"></script>
-    <script src="app/modules/brand-integration/vello.component.js"></script>
-    <script src="app/modules/brand-integration/veletage.component.js"></script>
-    <script src="app/modules/brand-integration/brompton.component.js"></script>
-    <script src="app/modules/brand-integration/bonvelo.component.js"></script>
-    <script src="app/modules/brand-integration/motoparilla.component.js"></script>
-    <script src="app/modules/brand-integration/vanmoof.component.js"></script>
-    <script src="app/modules/brand-integration/moeve.component.js"></script>
-    <script src="app/modules/brand-integration/rethink.component.js"></script>
-    <script src="app/modules/brand-integration/ampler.component.js"></script>
-    <script src="app/modules/brand-integration/muli.component.js"></script>
-    <script src="app/modules/brand-integration/votec.component.js"></script>
-    <script src="app/modules/brand-integration/cocomat.component.js"></script>
-    <script src="app/modules/brand-integration/leaos.component.js"></script>
-    <!-- events -->
-    <script src="app/modules/events/crossride/crossride.component.js"></script>
-    <script src="app/modules/events/in-velo-veritas/in-velo-veritas.component.js"></script>
-    <script src="app/modules/events/velothon-bikerental/velothon-bikerental.component.js"></script>
-    <script src="app/modules/events/velothon-bikerental/coffeespin.component.js"></script>
-    <script src="app/modules/events/cyclassics-hamburg/cyclassics-hamburg.component.js"></script>
-    <script src="app/modules/events/riderman/riderman.component.js"></script>
-    <script src="app/modules/events/depart/depart.component.js"></script>
-    <script src="app/modules/events/mcbw/mcbw.component.js"></script>
-    <script src="app/modules/events/rapha-super-cross/rapha-super-cross.component.js"></script>
-    <script src="app/modules/events/constance-spin/constance-spin.component.js"></script>
-    <script src="app/modules/events/velosoph/velosoph.component.js"></script>
-    <script src="app/modules/events/hamburg-triathlon/hamburg-triathlon.component.js"></script>
-    <script src="app/modules/events/cwd/pushnpost.component.js"></script>
-    <script src="app/modules/events/cwd/kuchenundraketen.component.js"></script>
-    <script src="app/modules/events/supercross-munich/supercross-munich.component.js"></script>
-    <script src="app/modules/events/cape-argus/cape-argus.component.js"></script>
-    <script src="app/modules/events/toros-de-gravel/toros-de-gravel.component.js"></script>
-    <script src="app/modules/events/eroica-gaiole/eroica-gaiole.component.js"></script>
-    <!--endRemoveIf(shop)-->
-    <!-- endbuild -->
-    <!-- inject:js -->
-    <!-- endinject -->
-    <!-- ORG SCHEMA -->
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "listnride",
-        "legalName": "List and Ride GmbH",
-        "description": "The perfect bike. Simply rent it. Join listnride and find the bike that is right for you.",
-        "foundingDate": "2016",
-        "founders": [{
-            "@type": "Person",
-            "name": "Gert-Jan van Wijk"
-          },
-          {
-            "@type": "Person",
-            "name": "Johannes Stuhler"
-          },
-          {
-            "@type": "Person",
-            "name": "Moritz Hofmann"
-          }
-        ],
-        "url": "https://www.listnride.com",
-        "logo": "http://cdn.listnride.com/assets/listnride-logo-blue.jpg",
-        "sameAs": [
-          "https://www.facebook.com/listnride",
-          "https://instagram.com/listnride"
-        ],
-        "contactPoint": [{
-          "@type": "ContactPoint",
-          "contactType": "customer service",
-          "url": "https://www.listnride.com/help"
-        }]
-      }
-    </script>
-    <!-- end organizational schema.org -->
-    <!-- Facebook Pixel Code -->
-    <script>
-      ! function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod ?
-            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-      }(window,
-        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1723921121217779'); // Insert your pixel ID here.
-      // fbq('track', 'PageView');
-    </script>
-    <noscript>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1723921121217779&ev=PageView&noscript=1"
-      />
-    </noscript>
-    <!-- DO NOT MODIFY -->
-    <!-- End Facebook Pixel Code -->
-    <!-- Crisp Chat Integration -->
-    <!-- <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="d77eb9c0-eeb6-4985-a6e5-51f56c51616e";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script> -->
-    <!-- End Crisp Chat Integration -->
-  </head>
-  <body layout="column">
-    <!--[if !IE]>
-      <table id="ie-warning" class="lnr-IE-warning-overlay">
-        <tr>
-          <td>
-            <div class="lnr-IE-warning-content">
-              <button class="lnr-IE-close-button" type="button" onclick="document.getElementById('ie-warning').style.display = 'none';">×</button>
-              <img class="lnr-icn-mlrg" src="app/assets/ui_images/ie/ie_logo.png" />
-              <h2 class="md-headline lnr-margin-top-double">You are using Internet Explorer.<br>
-                Unfortunately we are now longer supporting it.
-              </h2>
-              <p>If you continue browsing on our website with Internet Explorer, you will not have normal experience and might run into difficulties
-              and or non-functioning elements on the page.</p>
-              <p class="lnr-padding-top-double">To have an optimal browser experience please use the latest versions of Chrome, Firefox or Safari.</p>
-              <div>
-                <a href="https://www.google.com/chrome/" target="_blank">
-                  <img class="lnr-icn-mlrg lnr-margin-right-double" src="app/assets/ui_images/ie/chrome_logo.png" />
-                </a>
-                <a href="https://www.mozilla.org/firefox/" target="_blank">
-                  <img class="lnr-icn-mlrg" src="app/assets/ui_images/ie/firefox_logo.png" />
-                </a>
-              </div>
-            </div>
-          </td>
-        </tr>
-      </table>
-    <![endif]-->
-    <header></header>
-    <sidebar layout="row" header="header"></sidebar>
-    <ui-view flex="auto"></ui-view>
-    <privacy-bar></privacy-bar>
-    <!--<footer></footer>-->
-    <!-- Analytics Opt-Out Script -->
-    <script type="text/javascript">// <![CDATA[
-      var gaProperty = 'UA-61041935-1';
-      var disableStr = 'ga-disable-' + gaProperty;
-      if (document.cookie.indexOf(disableStr + '=true') > -1) {
-        window[disableStr] = true;
-      }
-      function gaOptout() {
-        document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-        window[disableStr] = true;
-      }
-    </script>
-    <script>
-      (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-      ga('create', 'UA-61041935-1', 'auto');
-      ga('set', 'anonymizeIp', true);
-    </script>
-  </body>
+<head>
+  <title ng-bind="ngMeta.title"></title>
+  <!-- build:base -->
+  <!-- endbuild -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="{{ngMeta.description}}">
+  <meta name="prerender-status-code" content="{{ngMeta['prerender-status-code']}}" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="fragment" content="!">
+  <meta property="og:image" content="{{ngMeta['og:image']}}" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="534" />
+  <meta property="og:description" content="{{ngMeta.description}}" />
+  <meta property="og:type" content="website" />
+  <meta lnr-meta-robots ng-if="ngMeta['noindex']"></meta>
+  <link rel="alternate" href="https://www.listnride.com{{location.path()}}" hreflang="x-default" />
+  <link rel="alternate" href="https://www.listnride.de{{location.path()}}" hreflang="de" />
+  <link rel="alternate" href="https://www.listnride.nl{{location.path()}}" hreflang="nl" />
+  <link rel="alternate" href="https://www.listnride.it{{location.path()}}" hreflang="it" />
+  <link rel="icon" type="image/png" href="app/assets/ui_images/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="app/assets/ui_images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="app/assets/ui_images/favicon-96x96.png" sizes="96x96">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+  <!-- STYLE LIBRARIES -->
+  <!-- build:css app/assets/stylesheet/style.min.css -->
+  <link rel="stylesheet" href="js_modules/angular-material-minimal/angular-material.min.css" />
+  <link rel="stylesheet" href="js_modules/daterangepicker/daterangepicker.css" />
+  <link rel="stylesheet" href="app/assets/stylesheets/app.css" />
+  <link rel="stylesheet" href="app/assets/stylesheets/galleries.css" />
+  <link rel="stylesheet" href="app/services/verification/verification.css" />
+  <link rel="stylesheet" href="app/modules/booking/booking.css" />
+  <link rel="stylesheet" href="app/modules/bike/list/list.css" />
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick-theme.css">
+  <link rel="stylesheet" href="node_modules/ng-img-crop/compile/minified/ng-img-crop.css">
+  <link rel="stylesheet" href="node_modules/intl-tel-input/build/css/intlTelInput.css">
+  <!-- endbuild -->
+  <!-- CDN LIBRARIES -->
+  <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAmpmoaBw_AXiw02-iPPYcX3j9kj0MvM0g"></script>
+  <script src="https://js.braintreegateway.com/web/3.28.0/js/client.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/3.28.0/js/paypal.js"></script>
+  <!-- LNR LIBRARIES -->
+  <!-- build:js vendors.min.js -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/lodash/lodash.js"></script>
+  <script src="node_modules/angular/angular.min.js" type="text/javascript"></script>
+  <script src="node_modules/angular-animate/angular-animate.min.js" type="text/javascript"></script>
+  <script src="node_modules/angular-translate/dist/angular-translate.min.js"></script>
+  <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+  <script src="node_modules/angular-messages/angular-messages.min.js"></script>
+  <script src="node_modules/angular-aria/angular-aria.min.js" type="text/javascript"></script>
+  <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="node_modules/ng-file-upload/dist/ng-file-upload.js"></script>
+  <script src="node_modules/ng-img-crop/compile/minified/ng-img-crop.js"></script>
+  <script src="node_modules/ng-infinite-scroll/build/ng-infinite-scroll.js"></script>
+  <script src="app/i18n/angular-locale_de.js"></script>
+  <script src="node_modules/angular-input-stars/angular-input-stars.js"></script>
+  <script src="js_modules/angular-material-minimal/angular-material.min.js" type="text/javascript"></script>
+  <script src="node_modules/angular-translate/dist/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+  <script src="node_modules/angular-translate-loader-partial/angular-translate-loader-partial.min.js"></script>
+  <script src="node_modules/ngstorage/ngStorage.min.js"></script>
+  <script src="node_modules/angular-easyfb/build/angular-easyfb.min.js"></script>
+  <script src="node_modules/ngmap/build/scripts/ng-map.min.js"></script>
+  <script src="node_modules/angularjs-scroll-glue/src/scrollglue.js"></script>
+  <script src="node_modules/moment/min/moment.min.js"></script>
+  <script src="node_modules/angular-moment/angular-moment.js"></script>
+  <script src="js_modules/ng-meta/ngMeta.js"></script>
+  <script src="js_modules/daterangepicker/jquery.daterangepicker.js"></script>
+  <script src="node_modules/slick-carousel/slick/slick.js"></script>
+  <script src="node_modules/angular-slick-carousel/dist/angular-slick.min.js"></script>
+  <script src="node_modules/angulartics/dist/angulartics.min.js"></script>
+  <script src="node_modules/angulartics-google-analytics/dist/angulartics-ga.min.js"></script>
+  <script src="node_modules/angular-socialshare/dist/angular-socialshare.min.js"></script>
+  <script src="node_modules/angulartics-facebook-pixel/dist/angulartics-facebook-pixel.min.js"></script>
+  <script src="node_modules/intl-tel-input/build/js/intlTelInput.js"></script>
+  <script src="node_modules/intl-tel-input/build/js/utils.js"></script>
+  <script src="node_modules/international-phone-number/releases/international-phone-number.js"></script>
+  <script src="node_modules/markerclustererplus/dist/markerclusterer.min.js"></script>
+  <!-- endbuild -->
+  <!-- build:js app.min.js -->
+  <!-- core -->
+  <script src="app/app.module.js"></script>
+  <script src="app/app.routes.js"></script>
+  <script src="app/app.theme.js"></script>
+  <script src="app/app.constants.js"></script>
+  <!-- core modules -->
+  <script src="app/modules/invite/invite.component.js"></script>
+  <script src="app/modules/referral-link/referral-link.component.js"></script>
+  <script src="app/modules/invite-landing/invite-landing.component.js"></script>
+  <script src="app/modules/bike/bike.component.js"></script>
+  <script src="app/modules/bike/bike.service.js"></script>
+  <script src="app/modules/bike/calendar/calendar.component.js"></script>
+  <script src="app/modules/booking/booking.component.js"></script>
+  <script src="app/modules/home/home.component.js"></script>
+  <script src="app/modules/bike/list/list.component.js"></script>
+  <script src="app/modules/listing-a-bike/listing-a-bike.component.js"></script>
+  <script src="app/modules/listings/listings.component.js"></script>
+  <script src="app/modules/renting-a-bike/renting-a-bike.component.js"></script>
+  <script src="app/modules/requests/requests.component.js"></script>
+  <script src="app/modules/search/search.component.js"></script>
+  <script src="app/modules/settings/settings.component.js"></script>
+  <script src="app/modules/listings/views/list-view.component.js"></script>
+  <script src="app/modules/static/static.component.js"></script>
+  <script src="app/modules/user/user.component.js"></script>
+  <script src="app/modules/invoices/invoices.component.js"></script>
+  <script src="app/modules/meta-tags/meta-tags.component.js"></script>
+  <script src="app/modules/seo-landing/seo-landing.component.js"></script>
+  <script src="app/modules/shared/autocomplete/autocomplete.component.js"></script>
+  <script src="app/modules/shared/bike-card/bike-card.component.js"></script>
+  <script src="app/modules/shared/listing-card/listing-card.component.js"></script>
+  <script src="app/modules/shared/message/message.component.js"></script>
+  <script src="app/modules/shared/rating/rating.component.js"></script>
+  <script src="app/modules/shared/confirmation/confirmation.component.js"></script>
+  <script src="app/modules/shared/receipt/receipt.component.js"></script>
+  <script src="app/modules/shared/input-range/input-range.component.js"></script>
+  <script src="app/modules/shared/credit-cards/angular-credit-cards.js"></script>
+  <script src="app/modules/shared/address-input/address-input.component.js"></script>
+  <script src="app/modules/multi-booking/multi-booking.component.js"></script>
+  <script src="app/modules/shared/filter/bike-count-filter.component.js"></script>
+  <script src="app/modules/shared/filter/category-filter.component.js"></script>
+  <script src="app/modules/shared/filter/accessories-filter.component.js"></script>
+  <!-- core services -->
+  <script src="app/services/base64/base64.service.js"></script>
+  <script src="app/services/authentication/authentication.service.js"></script>
+  <script src="app/services/sha256/sha256.service.js"></script>
+  <script src="app/services/api/api.service.js"></script>
+  <script src="app/services/date/date.service.js"></script>
+  <script src="app/services/verification/verification.service.js"></script>
+  <script src="app/services/bike-options/bike-options.service.js"></script>
+  <script src="app/services/access-control/access-control.service.js"></script>
+  <script src="app/services/loading-dialog/loading-dialog.service.js"></script>
+  <script src="app/services/user-api/user-api.service.js"></script>
+  <script src="app/services/price/price.service.js"></script>
+  <script src="app/services/voucher/voucher.service.js"></script>
+  <script src="app/services/country-code-translator/country-code-translator.service.js"></script>
+  <script src="app/services/calendar-helper/calendar-helper.service.js"></script>
+  <!-- core filters -->
+  <script src="app/filters/category.filter.js"></script>
+  <script src="app/filters/category-seo.filter.js"></script>
+  <script src="app/filters/map-category.filter.js"></script>
+  <script src="app/filters/title-case.filter.js"></script>
+  <script src="app/filters/add-text.filter.js"></script>
+  <!-- core directives -->
+  <script src="app/directives/showAsInteger.js"></script>
+  <script src="app/directives/lnrFocus.js"></script>
+  <script src="app/directives/lnrMaxLength.js"></script>
+  <script src="app/directives/lnrMdFocusTabs.js"></script>
+  <script src="app/directives/lnrMdMenuFullscreen.js"></script>
+  <script src="app/directives/lnrDatePicker.js"></script>
+  <script src="app/directives/ng-infinite-scroll.js"></script>
+  <script src="app/directives/lnrMetaRobots.js"></script>
+  <!--removeIf(shop)-->
+  <!-- header and footer -->
+  <script src="app/modules/footer/footer.component.js"></script>
+  <script src="app/modules/header/header.component.js"></script>
+  <script src="app/modules/sidebar/sidebar.component.js"></script>
+  <script src="app/modules/privacy-bar/privacy-bar.component.js"></script>
+  <!-- extra modules -->
+  <script src="app/modules/invest/invest.component.js"></script>
+  <script src="app/modules/business-community/business-community.component.js"></script>
+  <script src="app/modules/jobs/jobs.controller.js"></script>
+  <script src="app/modules/jobs/jobs.service.js"></script>
+  <script src="app/modules/seo/city-landing.component.js"></script>
+  <script src="app/modules/seo/category-landing.component.js"></script>
+  <script src="app/modules/shared/filter/filter.component.js"></script>
+  <script src="app/modules/shared/bike-sorter/bike-sorter.component.js"></script>
+  <script src="app/modules/shared/cardgrid/cardgrid.component.js"></script>
+  <!-- brand integration -->
+  <script src="app/modules/brand-integration/ampler.component.js"></script>
+  <script src="app/modules/brand-integration/vello.component.js"></script>
+  <script src="app/modules/brand-integration/veletage.component.js"></script>
+  <script src="app/modules/brand-integration/brompton.component.js"></script>
+  <script src="app/modules/brand-integration/bonvelo.component.js"></script>
+  <script src="app/modules/brand-integration/motoparilla.component.js"></script>
+  <script src="app/modules/brand-integration/vanmoof.component.js"></script>
+  <script src="app/modules/brand-integration/moeve.component.js"></script>
+  <script src="app/modules/brand-integration/rethink.component.js"></script>
+  <script src="app/modules/brand-integration/ampler.component.js"></script>
+  <script src="app/modules/brand-integration/muli.component.js"></script>
+  <script src="app/modules/brand-integration/votec.component.js"></script>
+  <script src="app/modules/brand-integration/cocomat.component.js"></script>
+  <script src="app/modules/brand-integration/leaos.component.js"></script>
+  <!-- events -->
+  <script src="app/modules/events/crossride/crossride.component.js"></script>
+  <script src="app/modules/events/in-velo-veritas/in-velo-veritas.component.js"></script>
+  <script src="app/modules/events/velothon-bikerental/velothon-bikerental.component.js"></script>
+  <script src="app/modules/events/velothon-bikerental/coffeespin.component.js"></script>
+  <script src="app/modules/events/cyclassics-hamburg/cyclassics-hamburg.component.js"></script>
+  <script src="app/modules/events/riderman/riderman.component.js"></script>
+  <script src="app/modules/events/depart/depart.component.js"></script>
+  <script src="app/modules/events/mcbw/mcbw.component.js"></script>
+  <script src="app/modules/events/rapha-super-cross/rapha-super-cross.component.js"></script>
+  <script src="app/modules/events/constance-spin/constance-spin.component.js"></script>
+  <script src="app/modules/events/velosoph/velosoph.component.js"></script>
+  <script src="app/modules/events/hamburg-triathlon/hamburg-triathlon.component.js"></script>
+  <script src="app/modules/events/cwd/pushnpost.component.js"></script>
+  <script src="app/modules/events/cwd/kuchenundraketen.component.js"></script>
+  <script src="app/modules/events/supercross-munich/supercross-munich.component.js"></script>
+  <script src="app/modules/events/cape-argus/cape-argus.component.js"></script>
+  <script src="app/modules/events/toros-de-gravel/toros-de-gravel.component.js"></script>
+  <script src="app/modules/events/eroica-gaiole/eroica-gaiole.component.js"></script>
+  <!--endRemoveIf(shop)-->
+  <!-- endbuild -->
+  <!-- inject:js -->
+  <!-- endinject -->
+  <!-- ORG SCHEMA -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "listnride",
+      "legalName": "List and Ride GmbH",
+      "description": "The perfect bike. Simply rent it. Join listnride and find the bike that is right for you.",
+      "foundingDate": "2016",
+      "founders": [{
+          "@type": "Person",
+          "name": "Gert-Jan van Wijk"
+        },
+        {
+          "@type": "Person",
+          "name": "Johannes Stuhler"
+        },
+        {
+          "@type": "Person",
+          "name": "Moritz Hofmann"
+        }
+      ],
+      "url": "https://www.listnride.com",
+      "logo": "http://cdn.listnride.com/assets/listnride-logo-blue.jpg",
+      "sameAs": [
+        "https://www.facebook.com/listnride",
+        "https://instagram.com/listnride"
+      ],
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://www.listnride.com/help"
+      }]
+    }
+  </script>
+  <!-- end organizational schema.org -->
+  <!-- Facebook Pixel Code -->
+  <script>
+    ! function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window,
+      document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1723921121217779'); // Insert your pixel ID here.
+    // fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1723921121217779&ev=PageView&noscript=1"
+    />
+  </noscript>
+  <!-- DO NOT MODIFY -->
+  <!-- End Facebook Pixel Code -->
+  <!-- Crisp Chat Integration -->
+  <!-- <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="d77eb9c0-eeb6-4985-a6e5-51f56c51616e";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script> -->
+  <!-- End Crisp Chat Integration -->
+</head>
+<body layout="column">
+<!--[if !IE]>
+<table id="ie-warning" class="lnr-IE-warning-overlay">
+  <tr>
+    <td>
+      <div class="lnr-IE-warning-content">
+        <button class="lnr-IE-close-button" type="button" onclick="document.getElementById('ie-warning').style.display = 'none';">×</button>
+        <img class="lnr-icn-mlrg" src="app/assets/ui_images/ie/ie_logo.png" />
+        <h2 class="md-headline lnr-margin-top-double">You are using Internet Explorer.<br>
+          Unfortunately we are now longer supporting it.
+        </h2>
+        <p>If you continue browsing on our website with Internet Explorer, you will not have normal experience and might run into difficulties
+          and or non-functioning elements on the page.</p>
+        <p class="lnr-padding-top-double">To have an optimal browser experience please use the latest versions of Chrome, Firefox or Safari.</p>
+        <div>
+          <a href="https://www.google.com/chrome/" target="_blank">
+            <img class="lnr-icn-mlrg lnr-margin-right-double" src="app/assets/ui_images/ie/chrome_logo.png" />
+          </a>
+          <a href="https://www.mozilla.org/firefox/" target="_blank">
+            <img class="lnr-icn-mlrg" src="app/assets/ui_images/ie/firefox_logo.png" />
+          </a>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+<![endif]-->
+<header></header>
+<sidebar layout="row" header="header"></sidebar>
+<ui-view flex="auto"></ui-view>
+<privacy-bar></privacy-bar>
+<!--<footer></footer>-->
+<!-- Analytics Opt-Out Script -->
+<script type="text/javascript">// <![CDATA[
+var gaProperty = 'UA-61041935-1';
+var disableStr = 'ga-disable-' + gaProperty;
+if (document.cookie.indexOf(disableStr + '=true') > -1) {
+  window[disableStr] = true;
+}
+function gaOptout() {
+  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+  window[disableStr] = true;
+}
+</script>
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-61041935-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+</script>
+</body>
 </html>
