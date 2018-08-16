@@ -40,7 +40,7 @@
 
         <!-- no bikes found placeholder -->
         <div
-          ng-if="search.bikes !== undefined && search.bikes.length === 0"
+          ng-if="search.noResult"
           layout="column"
           flex="100"
           layout-align="center center"
@@ -56,7 +56,6 @@
 
         <cardgrid
           ng-repeat="filterBikes in search.categorizedFilteredBikes"
-          on-bike-hover="search.onBikeHover"
           title="{{filterBikes.title}}"
           limit="search.limit"
           add-more-items-limit="search.addMoreItemsLimit"
@@ -69,6 +68,7 @@
           ng-hide="search.bikes !== undefined && search.bikes.length === 0"
           class="lnr-no-margin">
         </cardgrid>
+        <!--on-bike-hover="search.onBikeHover"-->
       </div>
 
       <!-- busy loader until bikes api resolves -->

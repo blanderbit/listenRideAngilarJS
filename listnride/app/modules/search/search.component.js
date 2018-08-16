@@ -27,13 +27,14 @@ angular.module('search',[]).component('search', {
         search.onButtonClick = onButtonClick;
         search.onCategoryChange = onCategoryChange;
         search.onMapClick = onMapClick;
-        search.onBikeHover = onBikeHover;
+        // search.onBikeHover = onBikeHover;
         search.populateBikes = populateBikes;
         search.addMoreItemsLimit = addMoreItemsLimit;
         search.onDateChange = onDateChange;
         search.filteredBikes = [];
         search.filteredDateBikes = [];
         search.mapMarkers = [];
+        search.noResult = true;
         search.initialValues = {
           amount: '',
           sizes: [],
@@ -139,6 +140,7 @@ angular.module('search',[]).component('search', {
 
       function populateBikes(location) {
         search.bikes = undefined;
+        search.noResult = false;
         location = location ? location : $stateParams.location;
 
         var urlRequest = "/rides?location=" + location;
@@ -151,9 +153,10 @@ angular.module('search',[]).component('search', {
             search.unavailableIds = results.data.ids;
             setUnavailableBikes();
           }
+          search.noResult = search.bikes !== undefined && search.bikes.length === 0
         },
         function (error) {
-          // Error callback called
+          search.noResult = true;
         });
       }
 
