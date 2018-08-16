@@ -277,23 +277,48 @@
   <!-- End Crisp Chat Integration -->
 </head>
 <body layout="column">
-  <header></header>
-  <sidebar layout="row" header="header"></sidebar>
-  <ui-view flex="auto"></ui-view>
-  <privacy-bar></privacy-bar>
-  <!--<footer></footer>-->
-</body>
+<!--[if !IE]>
+<table id="ie-warning" class="lnr-IE-warning-overlay">
+  <tr>
+    <td>
+      <div class="lnr-IE-warning-content">
+        <button class="lnr-IE-close-button" type="button" onclick="document.getElementById('ie-warning').style.display = 'none';">×</button>
+        <img class="lnr-icn-mlrg" src="app/assets/ui_images/ie/ie_logo.png" />
+        <h2 class="md-headline lnr-margin-top-double">You are using Internet Explorer.<br>
+          Unfortunately we are now longer supporting it.
+        </h2>
+        <p>If you continue browsing on our website with Internet Explorer, you will not have normal experience and might run into difficulties
+          and or non-functioning elements on the page.</p>
+        <p class="lnr-padding-top-double">To have an optimal browser experience please use the latest versions of Chrome, Firefox or Safari.</p>
+        <div>
+          <a href="https://www.google.com/chrome/" target="_blank">
+            <img class="lnr-icn-mlrg lnr-margin-right-double" src="app/assets/ui_images/ie/chrome_logo.png" />
+          </a>
+          <a href="https://www.mozilla.org/firefox/" target="_blank">
+            <img class="lnr-icn-mlrg" src="app/assets/ui_images/ie/firefox_logo.png" />
+          </a>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+<![endif]-->
+<header></header>
+<sidebar layout="row" header="header"></sidebar>
+<ui-view flex="auto"></ui-view>
+<privacy-bar></privacy-bar>
+<!--<footer></footer>-->
 <!-- Analytics Opt-Out Script -->
 <script type="text/javascript">// <![CDATA[
-  var gaProperty = 'UA-61041935-1';
-  var disableStr = 'ga-disable-' + gaProperty;
-  if (document.cookie.indexOf(disableStr + '=true') > -1) {
-    window[disableStr] = true;
-  }
-  function gaOptout() {
-    document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-    window[disableStr] = true;
-  }
+var gaProperty = 'UA-61041935-1';
+var disableStr = 'ga-disable-' + gaProperty;
+if (document.cookie.indexOf(disableStr + '=true') > -1) {
+  window[disableStr] = true;
+}
+function gaOptout() {
+  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+  window[disableStr] = true;
+}
 </script>
 <script>
   (function (i, s, o, g, r, a, m) {
@@ -310,4 +335,5 @@
   ga('create', 'UA-61041935-1', 'auto');
   ga('set', 'anonymizeIp', true);
 </script>
+</body>
 </html>
