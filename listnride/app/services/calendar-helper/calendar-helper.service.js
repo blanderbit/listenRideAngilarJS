@@ -30,7 +30,7 @@ angular.module('listnride')
       if (!openingHours) return true;
 
       var weekDay = openingHours.hours[getWeekDay(date)];
-      if (weekDay !== null) {
+      if (!_.isEmpty(weekDay)) {
         var workingHours = openHours(weekDay);
         return workingHours.includes($index + 6);
       }
