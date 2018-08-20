@@ -60,7 +60,7 @@ $(document).ready(function () {
                 brandName = brandName.split(" ").length > 3 ? brandName : brandName.replace(/\s/g, '');
             }
 
-            $('#bike_picture').attr("src", bike.image_file_1.image_file_1.small.url);
+            $('#bike_picture').attr("src", bike.image_file_1.small.url);
             $('.overview_bike').append(brandName + ", " + helper.categoryName(bike.category));
             $('#overview_name').text(bike.name);
             $('#overview_lister').text(bike.user.first_name + " " + bike.user.last_name);
