@@ -21,7 +21,7 @@ angular.module('bikeCard',[]).component('bikeCard', {
         if (_.isEmpty(bikeCard.bike.image_file_1)) {
           return bikeCard.bike.image_file
         } else {
-          return bikeCard.bike.image_file_1.image_file_1.small.url
+          return bikeCard.bike.image_file_1.small.url
         }
       }
     }
