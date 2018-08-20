@@ -35,7 +35,6 @@ angular.module('listnride', [
   /* app_extras_start */
   //removeIf(shop)
   'home',
-  'seoGrid',
   'search',
   'header',
   'footer',

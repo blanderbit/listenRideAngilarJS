@@ -1,8 +1,0 @@
-<div layout="row" flex layout-wrap layout-align="space-around start">
-  <div ng-repeat="country in seoGrid.countries" layout="column" flex-xs="50">
-    <md-list>
-      <md-subheader class="md-no-sticky">{{ country.name }}</md-subheader>
-      <md-list-item ng-repeat="location in country.locations" class="md-body-1"><a class="lnr-link" ui-sref="cityLanding({ city: location })" >{{ location }}</a></md-list-item>
-    </md-list>
-  </div>
-</div>
