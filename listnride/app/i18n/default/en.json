@@ -199,12 +199,6 @@
     "meta-description": "Every rental in Germany and Austria through listnride is automatically insured."
   },
   "meta": {
-    "seo": {
-      "city-title": "Rent the perfect bike in {{ location }} | listnride",
-      "city-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{ location }} with a bike securely rented on listnride.",
-      "category-title": "Rent the perfect {{ category }} in {{ location }} | listnride",
-      "category-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{ location }} with a {{ category }} securely rented on listnride."
-    },
     "cities": {
       "berlin": {
         "meta-title": "Explore Berlin by bike with listnride",
@@ -819,16 +813,16 @@
       "header": "What is your bike category?",
       "hint": "First, select the category of your bike. Then select the right subcategory.",
       "label": "Category",
-      "city": "City Bike",
-      "race": "Race Bike",
-      "all-terrain": "All Terrain Bike",
-      "kids": "Kids Bike",
-      "electro": "Electro Bike",
-      "special": "Special Bike",
-      "urban": "Urban Bike",
+      "city": "City",
+      "race": "Race",
+      "all-terrain": "All Terrain",
+      "kids": "Kids",
+      "electro": "Electro",
+      "special": "Special",
+      "urban": "Urban",
       "e-bike": "E-Bike",
-      "road": "Road Bike",
-      "transport": "Transport Bike"
+      "road": "Road",
+      "transport": "Transport"
     },
     "details": {
       "header": "What is your bike name, size & brand?",

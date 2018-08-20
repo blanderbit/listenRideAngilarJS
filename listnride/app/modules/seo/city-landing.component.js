@@ -3,8 +3,8 @@
 angular.module('cityLanding',[]).component('cityLanding', {
   templateUrl: 'app/modules/seo/city-landing.template.html',
   controllerAs: 'cityLanding',
-  controller: ['$translate', '$translatePartialLoader', '$stateParams', '$state', '$http', 'api', 'ENV', 'bikeOptions', 'ngMeta',
-    function cityLandingController($translate, $tpl, $stateParams, $state, $http, api, ENV, bikeOptions, ngMeta) {
+  controller: ['$translate', '$translatePartialLoader', '$stateParams', '$state', '$http', 'api', 'ENV', 'bikeOptions',
+    function cityLandingController($translate, $tpl, $stateParams, $state, $http, api, ENV, bikeOptions) {
       var cityLanding = this;
 
       cityLanding.$onInit = function() {
@@ -38,9 +38,6 @@ angular.module('cityLanding',[]).component('cityLanding', {
             cityLanding.data = success.data;
             cityLanding.location = cityLanding.city;
             cityLanding.loading = false;
-            var minPrice = parseInt(_.minBy(cityLanding.data.bikes, 'price_from').price_from);
-            ngMeta.setTitle($translate.instant('meta.seo.city-title', { location: cityLanding.location }));
-            ngMeta.setTag("description", $translate.instant('meta.seo.city-description', { location: cityLanding.location, minPrice: minPrice }));
             // TODO: emporary monkeypatch for backend not returning nil values
             if (cityLanding.data.explore.title.startsWith("Main explore title")) {
               cityLanding.data.explore = null;
