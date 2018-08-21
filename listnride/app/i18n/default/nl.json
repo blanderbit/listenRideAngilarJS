@@ -739,7 +739,7 @@
     "insurance": {
       "description": "Of het nu een minimalistische fixie of een high-end triathlonfiets is: Elke listnride verhuur in Duitsland of Oostenrijk is verzekerd! Eenvoudig. Flexible. Altijd.",
       "header": "Verzekering voor je fietshuur op listnride",
-      "logo-description": "In samenwerking met hepster en"
+      "logo-description": "In samenwerking met hepster en verzekerd door"
     },
     "landing-section-subheader": "Huur een fiets via listnride naar eigen smaak en gebruik.",
     "featured-bikes-header": "Fietsverhuur: De favorieten van onze Community",
@@ -778,7 +778,7 @@
   },
   "calendar": {
     "invalid-date": "Ingevulde Datums zijn niet correct",
-    "info-service-fee-insurance": "Helpt ons om listnride te gebruiken en een beveiligde fietsverhuurservice aan te bieden.",
+    "info-service-fee-insurance": "Dit helpt om ons platform te laten draaien en<br0>een uitstekende klantenservice aan te bieden. <br1>Inclusief btw. Niet te restitueren.",
     "basic-insurance-included": "Inclusief basisverzekering ",
     "request-bike": "Fiets aanvragen",
     "to-request-bike-please": "om een fiets aan te vragen, eerst",
@@ -788,7 +788,7 @@
     "select-timespan": "Kies eerst de huurperiode",
     "info-subtotal": "Dit zijn de normale dagelijkse<br>prijslijsten, het aantal dagen dat<br> u de fiets wilt huren.",
     "info-discount": "Gemiddelde dagelijkse korting<br>krijgt u per dag door voor<br>een langere periode te huren.",
-    "info-service-fee": "De servicegeld wordt gebruikt<br>voor het aanbieden van listnride.<br>Het is inclusief BTW.",
+    "info-service-fee": "Dit helpt om ons platform te laten draaien en<br>een uitstekende klantenservice aan te bieden. <br>Inclusief btw. Niet te restitueren.",
     "info": "Klik eerst in de bovenstaande<br> kalender op de dag waarop u de fiets<br>wilt huren en op de tweede<br>dag dat u het wenst te retourneren.",
     "info-without-calendar": "Klik eerst de dag aan waarop u de fiets wilt huren en dan op de dag dat u het wenst te retourneren. Selecteer vervolgens de starttijd en eindtijd."
   },

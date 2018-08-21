@@ -1,6 +1,6 @@
 {
   "shared": {
-    "learn-more": "Mehr erfahren",
+    "learn-more": "Mehr erfahren ",
     "bolzano": "Bozen",
     "lake-garda": "Gardasee",
     "sardinia": "Sardinien",
@@ -120,7 +120,7 @@
     "Oct": "Okt",
     "Nov": "Nov",
     "Dec": "Dez",
-    "testimonials-header": "Was sagen die Leute?",
+    "testimonials-header": "Was sagen unsere Nutzer?",
     "balance": "Guthaben",
     "tac": "Nutzungsbedingungen",
     "privacy-policy": "Datenschutzerklärung",
@@ -285,7 +285,7 @@
       },
       "leaos": {
         "meta-title": "Mieten und testen Sie die Leaos E-Bikes in München, Düsseldorf und Bozen",
-        "meta-descr": "Das Design Ebike - Leaos"
+        "meta-descr": "Das Design E-Bike - Leaos"
       },
       "brompton": {
         "meta-title": "Miete das Brompton Faltrad mit listnride",
@@ -748,7 +748,7 @@
     "insurance": {
       "description": "Egal ob minimalistisches Fixie oder High-End Triathlonrad: Jede listnride-Vermietung in Deutschland oder Österreich ist versichert! Einfach. Unbürokratisch. Jederzeit.",
       "header": "Versicherungsschutz für deine Vermietung auf listnride",
-      "logo-description": "In Kooperation mit hepster und"
+      "logo-description": "In Kooperation mit hepster und versichert über"
     },
     "landing-section-subheader": "Miete dir auf listnride ein Fahrrad wie du es magst und gerade brauchst.",
     "featured-bikes-header": "Fahrradverleih: Die Lieblinge der Community",
@@ -787,7 +787,7 @@
   },
   "calendar": {
     "invalid-date": "Datumsangabe nicht korrekt",
-    "info-service-fee-insurance": "Hilft uns, listnride zu betreiben und einen sicheren Fahrradverleih anzubieten.",
+    "info-service-fee-insurance": "Dies hilft uns, unsere Plattform zu betreiben  <br0>erstklassigen Kundenservice anzubieten. <br1>Inklusive MwSt. Keine Rückerstattung.",
     "basic-insurance-included": "Basis-Versicherung inklusive",
     "request-bike": "Rad anfragen",
     "to-request-bike-please": "um ein Rad anzufragen bitte",
@@ -798,7 +798,7 @@
     "select-timespan-description": "Bevor du eine Anfrage stellen kannst, lege bitte die Zeitspanne für die Miete fest. Klicke einfach auf die Tage und wähle Abhol- und Rückgabezeiten im Kalender.",
     "info-subtotal": "Dies ist der Tagespreis für die<br>Anzahl der Tage, die du das<br>Fahrrad mieten möchten.",
     "info-discount": "Durchschnittlicher Tagesrabatt<br>pro Tag bei Miete über<br>einen längeren Zeitraum.",
-    "info-service-fee": "Die Servicegebühr hilft uns,<br>listnride zu betreiben. Sie enthält <br>die Mehrwertsteuer.",
+    "info-service-fee": "Dies hilft uns, unsere Plattform zu betreiben  <br>erstklassigen Kundenservice anzubieten. <br>Inklusive MwSt. Keine Rückerstattung.",
     "info": "Im Kalender erst den Tag auswählen,<br>an dem du das Fahrrad mieten möchtest,<br>und dann den Tag, an dem<br>du es zurückgeben magst.",
     "info-without-calendar": "Im Kalender erst den Tag auswählen,<br0>an dem du das Fahrrad mieten möchtest,<br1>und dann den Tag, an dem<br2>du es zurückgeben magst."
   },
@@ -878,7 +878,7 @@
       "label": "Versicherung",
       "info": "Information zur Versicherung",
       "hint-part-1": "Dein Rad ist versichert, wann immer es gemietet wird. Um Dir den richtigen Versicherungswert gewähren zu können, müssen wir den Wert deines Rades wissen.",
-      "hint-part-2": "Please note that your have to provide proof of your bike's value in case of any claim ",
+      "hint-part-2": "Bitte beachte, dass du im Falle einer Reklamation den Wert deines Fahrrades nachweisen musst",
       "hint-link-label": "Erfahre mehr zur Versicherung",
       "header": "Wie hoch ist der Wert Deines Rades",
       "tip": "Die zusätzliche Versicherungsgebühr für Mieter pro Tag beträgt {{fee}}",

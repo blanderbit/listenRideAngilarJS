@@ -2,7 +2,7 @@
   "cities": {
     "shared": {
       "rent-city": "Noleggia una bicicletta",
-      "rent-ebike": "Noleggia una E-Bike",
+      "rent-ebike": "Noleggia una e-Bike",
       "rent-terrain": "Noleggio una mountain bike",
       "rent-road": "Noleggia una bicicletta da strada",
       "rent-folding": "Noleggia una bici pieghevole",
@@ -81,7 +81,7 @@
     "main": {
       "title": "La nostra assicurazione ti protegge.\nNon importa se sei noleggiatore o noleggiante",
       "description": "Noleggiare una bici speciale significa avere fiducia. Cosa succede se viene rubata durante il noleggio ? Cosa succede se ritorna danneggiata ? Tutti i noleggi listnride in Germania e Austria sono assicurati. E il nostro partner <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> ti aiuterà quando hai bisogno di aiuto. Per telefono. Per e-mail.",
-      "logo-description": "Il nostro partner assicurativo"
+      "logo-description": "copertura fornita da"
     },
     "facts": {
       "title": "Cosa dovresti sapere!",
@@ -248,7 +248,7 @@
       "subhead-1": "The new bike rental",
       "subhead-2": "Rent a bike for free",
       "text-1": "Conceived as the Airbnb for bicycles, listnride offers an alternative to the classic bike rental: private owners, dealers or manufacturers offer their bicycles for rent on listnride. Tourists, citizens, families, sportsmen and business travelers rent the right bike for their style and needs.",
-      "text-2": "Especially for the MCBW, visitors can rent a bike of the brands <b>Brompton Folding Bike</b> and <b>Ampler E-Bike</b> for free <b>(Voucher Code: LNR2018)</b> for half a day. listnride pursues the vision of offering as many people anywhere in the world uncomplicated access to high-quality, stylish bicycles. If you want to explore Munich, go cycling with listnride!",
+      "text-2": "Especially for the MCBW, visitors can rent a bike of the brands <b>Brompton Folding Bike</b> and <b>Ampler e-Bike</b> for free <b>(Voucher Code: LNR2018)</b> for half a day. listnride pursues the vision of offering as many people anywhere in the world uncomplicated access to high-quality, stylish bicycles. If you want to explore Munich, go cycling with listnride!",
       "location-description": "Choose your location",
       "location-text": "The two locations are <b>① Munix Finest Bicycles</b> in Wörthstraße 11 and <b>② listnride</b> at Pündterplatz 1"
     },
@@ -311,7 +311,7 @@
       "faq": "Le domande frequenti"
     },
     "leaos": {
-      "description": "Ebike  design - Leaos",
+      "description": "E-bike design - Leaos",
       "subdescription": "Design. Art. Passion.",
       "feature1-title": "Design italiano",
       "feature1-description": "Pura eleganza. \nEsperienza di guida completamente nuova. \nSimbiosi perfetta di motore e pilota. \n100% Made in Italy.",
@@ -412,7 +412,7 @@
       "item1-title": "Unico E-Drive",
       "item1-description": "Questo innovativo sistema raccoglie energia durante la frenata e la discesa, simile a molti sistemi ibridi, ma è in grado anche di convertire l'energia meccanica in energia elettrica grazie al Sistema Integrato Kinetic Energy (K.E.R.S.).",
       "item2-title": "Meccanismo pieghevole brevettato",
-      "item2-description": "Con un design ultra-portatile, la  VELLO è la più leggera E-Bike disponibile sul mercato (meno di 12kg / 26lbs) e piegandosi si ottiene una dimensione pari a quella di una valigia per un facile trasporto",
+      "item2-description": "Con un design ultra-portatile, la  VELLO è la più leggera e-Bike disponibile sul mercato (meno di 12kg / 26lbs) e piegandosi si ottiene una dimensione pari a quella di una valigia per un facile trasporto",
       "item3-title": "4 modelli differenti",
       "item3-description": "Le biciclette VELLO sono disponibili in 4 diversi modelli, con e-drive e senza: \"Urbano\", \"Rocky\", \"Speedster\" e \"VELLO BIKE +\". Tutti i modelli offrono il meglio della guida urbana e sono dotati di componenti high-end di città, trekking o road bike.",
       "available-cities": "Disponibile a Berlino e a Monaco di Baviera",
@@ -465,8 +465,8 @@
       "bottom-text": "Per guidare con il massimo stile, abbiamo anche l'abbigliamento bonvelo, felpe, camicie e zaini. Controlla la nostra offerta su <a href=\"https://bonvelo.de/wear\">bonvelo.de/wear </a>"
     },
     "motoparilla": {
-      "meta-title": "Noleggia e prova la Moto Parilla Carbon SUV E-Bike a Monaco di Baviera",
-      "meta-description": "Il Carbon SUV E-Bike di Moto Parilla può essere testato a Monaco di Baviera. Basta prenotarsi online e godersi la corsa!",
+      "meta-title": "Noleggia e prova la Moto Parilla Carbon SUV e-Bike a Monaco di Baviera",
+      "meta-description": "Il Carbon SUV e-Bike di Moto Parilla può essere testato a Monaco di Baviera. Basta prenotarsi online e godersi la corsa!",
       "description": "Moto Parilla - Carbon SUV E-Bikes design progettato in Italia",
       "subdescription": "La miscela perfetta del design, dell'ingegneria e dell'arte in una nuova modalità di trasporto rivoluzionario. Prenotane una su listnride oggi!",
       "item1-title": "Pneumatici più grandi del normale",
@@ -475,12 +475,12 @@
       "item2-description": "Data la sua presenza imponente, il Carbon SUV è portato a fare un'impressione particolare su amici e persone quando si passa lungo la strada. La sua guida è l'unico modo per capire perché tutti ne stanno parlando - è un'esperienza unica.",
       "item3-title": "Motore elettrico",
       "item3-description": "Le modalità di pedalata assistita o a motore offrono la massima comodità, offrendo un giro regolare senza la necessità di pedalare. Il cambio ausiliario consente al pilota di aggiungere potenza in qualsiasi modalità di guida.",
-      "test-bike": "Prova una Moto Parilla Carbon SUV E-Bike a Monaco di Baviera",
+      "test-bike": "Prova una Moto Parilla Carbon SUV e-Bike a Monaco di Baviera",
       "testimonial-1": "Questa bicicletta è essenzialmente una mountain bike potenziata, fatta principalmente con fibra di carbonio",
-      "testimonial-2": "Questa E-Bike è un mix tra una macchina da corsa e un corpo bionico",
+      "testimonial-2": "Questa e-Bike è un mix tra una macchina da corsa e un corpo bionico",
       "testimonial-3": "Wow! La voglio, anche solo per guardarla. È davvero un'opera d'arte!",
-      "find-out-more": "Ulteriori informazioni sulla Moto Parilla Carbon SUV E-Bike",
-      "faq-description": "Per saperne di più sulla SUV Ebike e su come puoi <a href=\"http://www.motoparilla.it/store\">acquistarne una </a> controlla le <a href=\"http://www.motoparilla.it/faq/\">FAQ </a>.",
+      "find-out-more": "Ulteriori informazioni sulla Moto Parilla Carbon SUV e-Bike",
+      "faq-description": "Per saperne di più sulla SUV e-bike e su come puoi <a href=\"http://www.motoparilla.it/store\">acquistarne una </a> controlla le <a href=\"http://www.motoparilla.it/faq/\">FAQ </a>.",
       "faq-question-1": "Quanto si può alzare la sella ?",
       "faq-answer-1": "Il sedile può estendersi fino a 5 cm.",
       "faq-question-2": "Dove si trova la batteria?",
@@ -616,7 +616,7 @@
     "subheader": "Come i convenzionali servizi di noleggio biciclette ci hanno ispirato a creare una comunità di bike sharing",
     "community": {
       "title": "listnride: l'idea che ha generato una comunità",
-      "content": "Qui a listnride, tutti amiamo le biciclette. Ognuno di noi ha la propria tipologia preferita: dalle biciclette da città alle mountain bike, dalle veloci bici da strada alle E-bike. Ecco perché abbiamo iniziato a chiederci: perché non è possibile scegliere e avere una bicicletta specifica che ti serve per un determinato scopo in qualsiasi momento, indipendentemente dal fatto che tu sia in viaggio o nella tua città di origine? Saremo sempre vincolati dalle biciclette a basso prezzo dal negozio di noleggio locale? E così nasce l'idea di costruire la comunità bike sharing di listnride."
+      "content": "Qui a listnride, tutti amiamo le biciclette. Ognuno di noi ha la propria tipologia preferita: dalle biciclette da città alle mountain bike, dalle veloci bici da strada alle e-bike. Ecco perché abbiamo iniziato a chiederci: perché non è possibile scegliere e avere una bicicletta specifica che ti serve per un determinato scopo in qualsiasi momento, indipendentemente dal fatto che tu sia in viaggio o nella tua città di origine? Saremo sempre vincolati dalle biciclette a basso prezzo dal negozio di noleggio locale? E così nasce l'idea di costruire la comunità bike sharing di listnride."
     },
     "future": {
       "title": "listnride: a tutta velocità verso il futuro",
