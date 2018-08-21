@@ -10,7 +10,10 @@ angular.module('faq', []).component('faq', {
       faq.$onInit = function() {
         // variables
         faq.data = [];
-        faq.activeGroupIndex = 1;
+
+        //TODO : remove as a route params
+        faq.hashLastSymbol = +location.hash.slice(-1);
+        faq.activeGroupIndex = faq.hashLastSymbol > 0 ? faq.hashLastSymbol : 1;
 
         // methods
         faq.groupChange = groupChange;
@@ -73,7 +76,7 @@ angular.module('faq', []).component('faq', {
       }
 
       function groupChange(index) {
-        console.log('1');
+        // TODO: change route params
         faq.activeGroupIndex = index;
       }
 
