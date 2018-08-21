@@ -162,12 +162,9 @@
       "subdescription-not-use": "Design. Art. Passion."
     }
   },
-  "help-and-service": {
-    "faqs": {
-      "top": {
-        "question-1": "How do I search for a bike? "
-      }
-    }
+  "faq": {
+    "meta-title": "Group booking",
+    "meta-description": "Book your bikes with our group booking form"
   },
   "multi-booking": {
     "meta-title": "Group booking",
