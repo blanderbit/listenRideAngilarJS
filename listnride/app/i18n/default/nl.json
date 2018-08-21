@@ -157,6 +157,10 @@
       "subdescription-not-use": "Design. Art. Passion."
     }
   },
+  "faq": {
+    "meta-title": "Group booking",
+    "meta-description": "Book your bikes with our group booking form"
+  },
   "multi-booking": {
     "meta-title": "Groepsboeking",
     "no-accessories": "Geen accessoires",
