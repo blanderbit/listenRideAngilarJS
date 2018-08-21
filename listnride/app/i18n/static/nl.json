@@ -77,11 +77,145 @@
       "cafes-bars-content": "Indien je eens wat anders wilt proberen en bijvoorbeeld een goede veganer / vegatarisch restaurant wilt proberen, reserveer dan een tafeltje bij <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> aan het Karmeliterplein. Als je meer van de traditionele oostenrijkse keuken houdt, is <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a> een absolute aanrader. Een heerlijke Tafelspitz of Wiener Schnitzel met blik op de fameuze Wiener Oper. Beter kan het niet, toch? Als laatste stop voor het nuttigen van een afzakker leent zich het gebied rond de Donau zich uitstekend."
     }
   },
+  "help-and-service": {
+    "header": "How can we help you?",
+    "faq": {
+      "group-1": {
+        "title": "Getting Started",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-2": {
+        "title": "Renting out your bikes",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-3": {
+        "title": "Renting bikes",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-4": {
+        "title": "Payment & Services fees",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-5": {
+        "title": "Insurance & Service",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-6": {
+        "title": "Booking & Cancelation",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-7": {
+        "title": "Voucher & Credits",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-8": {
+        "title": "Ratings & Feedback",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      }
+    },
+    "faq-header": "The 10 most asked question in one place.",
+    "faqs": {
+      "top": {
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "answer-6": "How do I search for a bike?",
+        "answer-7": "How do I search for a bike?",
+        "answer-8": "How do I search for a bike?",
+        "answer-9": "How do I search for a bike?",
+        "answer-10": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?",
+        "question-6": "How do I search for a bike?",
+        "question-7": "How do I search for a bike?",
+        "question-8": "How do I search for a bike?",
+        "question-9": "How do I search for a bike?",
+        "question-10": "How do I search for a bike?"
+      }
+    }
+  },
   "insurance": {
     "main": {
       "title": "Onze verzekering beschermt je.\nVerhuurder of huurder.",
       "description": "Jouw speciale fiets verhuren betekent vertrouwen hebben. Wat als het wordt gestolen tijdens het uitlenen? Wat als het beschadigd terugkomt? Alle listnride huurfietsen in Duitsland en Oostenrijk zijn verzekerd. Onze partner <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> staat voor u klaar. Per telefoon. Per e-mail. Eenvoudig. Niet-bureaucratisch.",
-      "logo-description": "Onze verzekeringspartner"
+      "logo-description": "Verzekerd door"
     },
     "facts": {
       "title": "Wat je hoort te weten!",

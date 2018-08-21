@@ -5,7 +5,7 @@
     "lake-garda": "Lago de Garda",
     "sardinia": "Cerdeña",
     "sicily": "Sicilia",
-    "tuscany": "Tuscany",
+    "tuscany": "Toscana",
     "please-select": "Por favor selecciona",
     "errors": {
       "email-required": "Introduce una dirección de correo electrónico válida",
@@ -162,6 +162,10 @@
       "subdescription-not-use": "Design. Art. Passion."
     }
   },
+  "faq": {
+    "meta-title": "Group booking",
+    "meta-description": "Book your bikes with our group booking form"
+  },
   "multi-booking": {
     "meta-title": "Alquileres grupales",
     "no-accessories": "Sin accesorios",
@@ -308,7 +312,7 @@
         "meta-description": "\"Bonvelo BLIZZ\", de una sola velocidad/piñón fijo, puede alquilarse y probarse en Berlín con cuatro tamaños de cuadro. ¡Reserva una en listnride hoy mismo!"
       },
       "motoparilla": {
-        "meta-title": "Alquila y prueba la  SUV E-Bike Moto Parilla Carbon en Múnich",
+        "meta-title": "Alquila y prueba la  SUV e-Bike Moto Parilla Carbon en Múnich",
         "meta-description": "La SUV E-Bike Moto Parilla Carbon se puede probar en Múnich. ¡Simplemente reserva online y disfrute del paseo!"
       },
       "votec": {
@@ -746,13 +750,13 @@
     "insurance": {
       "description": "No importa si se trata de una bicicleta urbana, ebike o de alta gama: ¡todos los alquileres de listnride en Alemania o Austria están asegurados! Sencillo. Sin burocracia. En cualquier momento.",
       "header": "Cobertura de seguro para tu alquiler en listnride",
-      "logo-description": "En cooperación con Hepster y"
+      "logo-description": "En cooperación con Hepster y asegurado por"
     },
     "landing-section-subheader": " Únete a listnride y encuentra la bici adecuada para ti.",
     "featured-bikes-header": "Alquiler de bicis: las favoritas de nuestra comunidad",
     "featured-bikes-subheader": "Ya sean bicis de carretera, de montaña, de carga, de ciudad o eléctricas, puedes alquilarlas todas. Estas son las bicis de alquiler favoritas de la comunidad.",
-    "featured-tiles-header": "Inspírate",
-    "featured-tiles-subheader": "Nos estamos asociando con marcas de bicicletas innovadoras, que ofrecen sus últimos modelos para probar. Las bicicletas se pueden probar o alquilar exclusivamente en varios lugares. Perfecto para una decisión de compra bien considerada.",
+    "featured-tiles-header": "¡Anímate a probar bicicletas innovadoras!",
+    "featured-tiles-subheader": "Estamos asociados a marcas disruptivas las cuales ofrecen sus últimos modelos para tú puedas probarlos. Para poder probar las bicicletas solo debes seleccionar la marca, ciudad, modelo y listo. La bicicleta de tus sueños está más cerca de lo que imaginas. ",
     "featured-cities-header": "Siempre con tu bici perfecta",
     "featured-cities-subheader": "El servicio de alquiler de bicis de listnride está disponible cada vez en más ciudades de todo el mundo. Echa un vistazo a algunos consejos de los expertos aquí:",
     "list-a-bike-header": "¿Tienes una buena bici y quieres que la gente la use?",
@@ -785,7 +789,7 @@
   },
   "calendar": {
     "invalid-date": "Las fechas no son válidas",
-    "info-service-fee-insurance": "Nos ayuda a operar listnride y ofrecer un servicio seguro de alquiler de bicicletas.",
+    "info-service-fee-insurance": "Esto permite que nuestra plataforma crezca y<br0>u pueda ofrecer un servicio de atención al cliente de primera. <br1>IVA incluido. No reembolsable.",
     "basic-insurance-included": "Seguro básico incluido",
     "request-bike": "Solicitar bici",
     "to-request-bike-please": "para solicitar una bici",
@@ -796,7 +800,7 @@
     "select-timespan-description": "Antes de poder solicitar una bici debes establecer la duración del alquiler. Basta con hacer clic en los días y seleccionar las horas de recogida y entrega en el calendario anterior.",
     "info-subtotal": "Este es el precio habitual diario<br>veces la cantidad de días que quieras<br>alquilar la bici.",
     "info-discount": "Descuento medio diario que <br>obtienes por día al alquilar <br>por un período de tiempo más largo.",
-    "info-service-fee": "La cuota de servicio es<br>utilizada para proporcionar<br>a listnride. Incluye el IVA.",
+    "info-service-fee": "Esto permite que nuestra plataforma crezca y<br>u pueda ofrecer un servicio de atención al cliente de primera. <br>IVA incluido. No reembolsable.",
     "info": "En el calendario anterior, selecciona primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla.",
     "info-without-calendar": "En el calendario anterior, selecciona primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla."
   },
@@ -875,7 +879,7 @@
       "label": "Seguro",
       "info": "Información sobre el seguro",
       "hint-part-1": "Su bicicleta está asegurada cada vez que se alquila. Para proporcionarle la protección adecuada, es necesario que ingrese el valor de su bicicleta.",
-      "hint-part-2": "Tenga en cuenta que debe proporcionar una prueba del valor de su bicicleta en caso de cualquier reclamo",
+      "hint-part-2": "Ten en cuenta que debes proporcionar una prueba del valor de tu bicicleta en caso de cualquier reclamo",
       "hint-link-label": "Conozca más sobre el seguro",
       "header": "Cuéntanos el valor de tu bicicleta",
       "tip": "El costo adicional para el usuario es de {{fee}} por día",

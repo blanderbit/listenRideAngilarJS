@@ -162,6 +162,10 @@
       "subdescription-not-use": "Design. Art. Passion."
     }
   },
+  "faq": {
+    "meta-title": "Group booking",
+    "meta-description": "Book your bikes with our group booking form"
+  },
   "multi-booking": {
     "meta-title": "Group booking",
     "no-accessories": "No accessories",
@@ -285,7 +289,7 @@
       },
       "leaos": {
         "meta-title": "Rent and test the Leaos E-Bikes in Munich, Dusseldorf and Bolzano",
-        "meta-descr": "The Design Ebike - Leaos"
+        "meta-descr": "The design e-bike - Leaos"
       },
       "brompton": {
         "meta-title": "Rent a Brompton bike with listnride",
@@ -308,7 +312,7 @@
         "meta-description": "The singlespeed/fixed-gear \"bonvelo BLIZZ\" is available to rent and test ride in Berlin in four frame sizes. Book one on listnride today!"
       },
       "motoparilla": {
-        "meta-title": "Rent and Test the Moto Parilla Carbon SUV E-Bike in Munich",
+        "meta-title": "Rent and Test the Moto Parilla Carbon SUV e-Bike in Munich",
         "meta-description": "The Carbon SUV E-Bike from Moto Parilla can be tested in Munich. Simply book online and enjoy the ride!"
       },
       "votec": {
@@ -748,7 +752,7 @@
     "insurance": {
       "description": "No matter if minimalistic fixie or high-end triathlon bike: Every listnride rental in Germany or Austria is insured! Simple. Unbureaucratically. Anytime.",
       "header": "Insurance for your rental on listnride",
-      "logo-description": "In cooperation with hepster and"
+      "logo-description": "In cooperation with hepster and insured by"
     },
     "landing-section-subheader": "Join listnride and find the bike that is right for you.",
     "featured-bikes-header": "Bike Rental: Our Community’s Favorites",
@@ -787,7 +791,7 @@
   },
   "calendar": {
     "invalid-date": "Dates are invalid",
-    "info-service-fee-insurance": "Helps us to operate listnride and to offer a secure bike rental service.",
+    "info-service-fee-insurance": "helps us run our platform and<br0>allows us to offer first-class customer service.<br1>VAT included. Non-refundable.",
     "basic-insurance-included": "Basic insurance included",
     "request-bike": "Request Bike",
     "to-request-bike-please": "to request a bike please",
@@ -798,7 +802,7 @@
     "select-timespan-description": "Before you can request, please set the time span of your rental. Simply click on the days and select pickup and dropoff times in the above calendar.",
     "info-subtotal": "This is the regular daily price<br>times the amount of rental days<br>.",
     "info-discount": "Average daily discount you<br>get per day by renting out<br>for a longer period of time.",
-    "info-service-fee": "The service fee is<br>used for providing<br>listnride. It includes VAT.",
+    "info-service-fee": "helps us run our platform and<br>allows us to offer first-class customer service.<br>VAT included. Non-refundable.",
     "info": "In the calendar, select first<br> the day you wish to rent<br>out the bike, and second <br>the day you want to return it.",
     "info-without-calendar": "In the calendar, select first the start date of your rental then the return date.  Secondly select start time and end time."
   },

@@ -77,11 +77,145 @@
       "cafes-bars-content": "If you like vegan and vegetarian food, we recommend a visit at <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> at the Karmeliterplatz. If you prefer the more traditional Austrian kitchen, we highly recommend <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>. Order a traditional Tafelspitz or Wiener Schnitzel and enjoy it outside with the view on the famous Vienna Opera. You’ll have a great night to remember! For finishing touch of the day, it makes sense to walk towards the Danube. On the way you’ll find plenty of interesting bars or just sit outside under the stars at the river."
     }
   },
+  "help-and-service": {
+    "header": "How can we help you?",
+    "faq": {
+      "group-1": {
+        "title": "Getting Started",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-2": {
+        "title": "Renting out your bikes",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-3": {
+        "title": "Renting bikes",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-4": {
+        "title": "Payment & Services fees",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-5": {
+        "title": "Insurance & Service",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-6": {
+        "title": "Booking & Cancelation",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-7": {
+        "title": "Voucher & Credits",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-8": {
+        "title": "Ratings & Feedback",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      }
+    },
+    "faq-header": "The 10 most asked question in one place.",
+    "faqs": {
+      "top": {
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "answer-6": "How do I search for a bike?",
+        "answer-7": "How do I search for a bike?",
+        "answer-8": "How do I search for a bike?",
+        "answer-9": "How do I search for a bike?",
+        "answer-10": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?",
+        "question-6": "How do I search for a bike?",
+        "question-7": "How do I search for a bike?",
+        "question-8": "How do I search for a bike?",
+        "question-9": "How do I search for a bike?",
+        "question-10": "How do I search for a bike?"
+      }
+    }
+  },
   "insurance": {
     "main": {
       "title": "Our insurance protects you. No matter if lister or rider.",
       "description": "Renting your special bike means having confidence. What if it gets stolen during lending? What if it comes back to you damaged? All listnride rentals in Germany and Austria are insured. And our partner <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> will be there for you when you need help. By phone. By e-mail. Simple. Straight forward.",
-      "logo-description": "Our insurance partner"
+      "logo-description": "coverage provided by"
     },
     "facts": {
       "title": "What you should know!",
@@ -320,7 +454,7 @@
       "faq": "The frequently asked questions"
     },
     "leaos": {
-      "description": "The Design Ebike - Leaos",
+      "description": "The design e-bike - Leaos",
       "subdescription": "Design. Art. Passion.",
       "feature1-title": "Italian Design",
       "feature1-description": "Pure Elegance.\nCompletely new riding experience.\nPerfect symbiosis of motor and rider.\n100% made in Italy.",
@@ -489,7 +623,7 @@
       "testimonial-2": "This E-Bike is part speedway dragster, part bionic arm",
       "testimonial-3": "Wow! I want one, if not to ride then to look at. It really is a work of art!",
       "find-out-more": "Learn more about the Moto Parilla Carbon SUV E-Bike",
-      "faq-description": "Learn more about the SUV Ebike and how you can <a href=\"http://www.motoparilla.it/store\">buy one</a> or look at the <a href=\"http://www.motoparilla.it/faq/\">FAQ</a>.",
+      "faq-description": "Learn more about the SUV e-bike and how you can <a href=\"http://www.motoparilla.it/store\">buy one</a> or look at the <a href=\"http://www.motoparilla.it/faq/\">FAQ</a>.",
       "faq-question-1": "How high can the seat extend?",
       "faq-answer-1": "The seat can extend a full 5 cm.",
       "faq-question-2": "Where is the battery located?",
