@@ -162,6 +162,13 @@
       "subdescription-not-use": "Design. Art. Passion."
     }
   },
+  "help-and-service": {
+    "faqs": {
+      "top": {
+        "question-1": "How do I search for a bike? "
+      }
+    }
+  },
   "multi-booking": {
     "meta-title": "Group booking",
     "no-accessories": "No accessories",
