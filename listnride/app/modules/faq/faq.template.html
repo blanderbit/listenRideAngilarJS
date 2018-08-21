@@ -1,0 +1,150 @@
+<md-content class="single-column">
+
+  <!-- FAQs -->
+  <div class="content" layout-padding>
+    <div style="margin: 60px auto" class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline">{{ 'faq-page.header' | translate }}</h2>
+    </div>
+
+    <div layout="row">
+      <div class="md-body-1" layout="column" flex="40">
+        <p>{{ 'faq-page.topics' | translate }}</p>
+        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom" ng-click="faq.changeGroup(1)">
+          <md-icon md-svg-src="app/assets/ui_icons/icn_rent_find.svg" class="lnr-icn-sm"></md-icon>
+          <span>{{ 'help-and-service.faq.group-1.title' | translate }}</span>
+        </div>
+        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom" ng-click="faq.changeGroup(2)">
+          <md-icon md-svg-src="app/assets/ui_icons/icn_rent_find.svg" class="lnr-icn-sm"></md-icon>
+          <span>{{ 'help-and-service.faq.group-2.title' | translate }}</span>
+        </div>
+        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom" ng-click="faq.changeGroup(3)">
+          <md-icon md-svg-src="app/assets/ui_icons/icn_rent_find.svg" class="lnr-icn-sm"></md-icon>
+          <span>{{ 'help-and-service.faq.group-3.title' | translate }}</span>
+        </div>
+        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom" ng-click="faq.changeGroup(4)">
+          <md-icon md-svg-src="app/assets/ui_icons/icn_rent_find.svg" class="lnr-icn-sm"></md-icon>
+          <span>{{ 'help-and-service.faq.group-4.title' | translate }}</span>
+        </div>
+        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom" ng-click="faq.changeGroup(5)">
+          <md-icon md-svg-src="app/assets/ui_icons/icn_rent_find.svg" class="lnr-icn-sm"></md-icon>
+          <span>{{ 'help-and-service.faq.group-5.title' | translate }}</span>
+        </div>
+        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom" ng-click="faq.changeGroup(6)">
+          <md-icon md-svg-src="app/assets/ui_icons/icn_rent_find.svg" class="lnr-icn-sm"></md-icon>
+          <span>{{ 'help-and-service.faq.group-6.title' | translate }}</span>
+        </div>
+        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom" ng-click="faq.changeGroup(7)">
+          <md-icon md-svg-src="app/assets/ui_icons/icn_rent_find.svg" class="lnr-icn-sm"></md-icon>
+          <span>{{ 'help-and-service.faq.group-7.title' | translate }}</span>
+        </div>
+        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom" ng-click="faq.changeGroup(8)">
+          <md-icon md-svg-src="app/assets/ui_icons/icn_rent_find.svg" class="lnr-icn-sm"></md-icon>
+          <span>{{ 'help-and-service.faq.group-8.title' | translate }}</span>
+        </div>
+      </div>
+      <div class="md-body-1" layout="column" flex="60">
+        <p style="margin-bottom: 32px">{{ 'faq-page.description' | translate }}</p>
+        <div layout="column">
+          <!-- FAQ_1_1 -->
+          <h3 class="md-subhead lnr-clickable lnr-arrow-left" ng-click="faq1_1=!faq1_1" ng-class="faq1_1 ? 'accordion__tab--opened' : ''">
+            {{ 'help-and-service.faq.group-1.question-1' | translate }}
+          </h3>
+          <div ng-show="faq1_1">
+            <p class="md-body-1 accordion__text" translate="help-and-service.faq.group-1.answer-1"></p>
+          </div>
+          <!-- FAQ_1_2 -->
+          <h3 class="md-subhead lnr-clickable lnr-arrow-left" ng-click="faq1_2=!faq1_2" ng-class="faq1_2 ? 'accordion__tab--opened' : ''">
+            {{ 'help-and-service.faq.group-1.question-2' | translate }}
+          </h3>
+          <div ng-show="faq1_2">
+            <p class="md-body-1 accordion__text" translate="help-and-service.faq.group-1.answer-2"></p>
+          </div>
+          <!-- FAQ_1_3 -->
+          <h3 class="md-subhead lnr-clickable lnr-arrow-left" ng-click="faq1_3=!faq1_3" ng-class="faq1_3 ? 'accordion__tab--opened' : ''">
+            {{ 'help-and-service.faq.group-1.question-3' | translate }}
+          </h3>
+          <div ng-show="faq1_3">
+            <p class="md-body-1 accordion__text" translate="help-and-service.faq.group-1.answer-3"></p>
+          </div>
+
+        </div>
+        <div layout="column" ng-if="faq_group_2">
+          <!-- FAQ_1_1 -->
+          <h3 class="md-subhead lnr-clickable lnr-arrow-left" ng-click="faq1_1=!faq1_1" ng-class="faq1_1 ? 'accordion__tab--opened' : ''">
+            {{ 'help-and-service.faq.group-1.question-1' | translate }}
+          </h3>
+          <div ng-show="faq1_1">
+            <p class="md-body-1 accordion__text" translate="help-and-service.faq.group-1.answer-1"></p>
+          </div>
+          <!-- FAQ_1_2 -->
+          <h3 class="md-subhead lnr-clickable lnr-arrow-left" ng-click="faq1_2=!faq1_2" ng-class="faq1_2 ? 'accordion__tab--opened' : ''">
+            {{ 'help-and-service.faq.group-1.question-2' | translate }}
+          </h3>
+          <div ng-show="faq1_2">
+            <p class="md-body-1 accordion__text" translate="help-and-service.faq.group-1.answer-2"></p>
+          </div>
+          <!-- FAQ_1_3 -->
+          <h3 class="md-subhead lnr-clickable lnr-arrow-left" ng-click="faq1_3=!faq1_3" ng-class="faq1_3 ? 'accordion__tab--opened' : ''">
+            {{ 'help-and-service.faq.group-1.question-3' | translate }}
+          </h3>
+          <div ng-show="faq1_3">
+            <p class="md-body-1 accordion__text" translate="help-and-service.faq.group-1.answer-3"></p>
+          </div>
+
+        </div>
+        <div layout="column" ng-if="faq_group_3">
+          <!-- FAQ_1_1 -->
+          <h3 class="md-subhead lnr-clickable lnr-arrow-left" ng-click="faq1_1=!faq1_1" ng-class="faq1_1 ? 'accordion__tab--opened' : ''">
+            {{ 'help-and-service.faq.group-1.question-1' | translate }}
+          </h3>
+          <div ng-show="faq1_1">
+            <p class="md-body-1 accordion__text" translate="help-and-service.faq.group-1.answer-1"></p>
+          </div>
+          <!-- FAQ_1_2 -->
+          <h3 class="md-subhead lnr-clickable lnr-arrow-left" ng-click="faq1_2=!faq1_2" ng-class="faq1_2 ? 'accordion__tab--opened' : ''">
+            {{ 'help-and-service.faq.group-1.question-2' | translate }}
+          </h3>
+          <div ng-show="faq1_2">
+            <p class="md-body-1 accordion__text" translate="help-and-service.faq.group-1.answer-2"></p>
+          </div>
+          <!-- FAQ_1_3 -->
+          <h3 class="md-subhead lnr-clickable lnr-arrow-left" ng-click="faq1_3=!faq1_3" ng-class="faq1_3 ? 'accordion__tab--opened' : ''">
+            {{ 'help-and-service.faq.group-1.question-3' | translate }}
+          </h3>
+          <div ng-show="faq1_3">
+            <p class="md-body-1 accordion__text" translate="help-and-service.faq.group-1.answer-3"></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end FAQs -->
+
+  <div class="lnr-middle-divider"></div>
+
+
+  <div class="content" layout-padding>
+    <div class="lnr-section-title mt0" layout="column" layout-align="center center">
+      <p class="md-body-2">
+        {{ 'booking.footer.call-us' | translate }}
+        <br>
+        <a href="mailto:contact@listnride.com">{{ 'booking.footer.email-us' | translate }}</a>.</p>
+      <div class="lnr-row-images" layout="row" layout-align="center center">
+        <div class="lnr-row-images__item" layout="column" layout-align="center center">
+          <img ng-src="app/assets/ui_images/request-flow/lnr_supportThumb_topbias@2x.png" alt="Tobias">
+          <span>Tobias</span>
+        </div>
+        <div class="lnr-row-images__item" layout="column" layout-align="center center">
+          <img ng-src="app/assets/ui_images/request-flow/lnr_supportThumb_patrick@2x.png" alt="Lena">
+          <span>Patrick</span>
+        </div>
+      </div>
+      <p class="md-caption">
+        <b>{{ 'booking.footer.support' | translate }}</b>
+      </p>
+    </div>
+  </div>
+
+  <footer></footer>
+</md-content>

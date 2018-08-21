@@ -1333,6 +1333,25 @@
         }
       });
 
+      $stateProvider.state({
+        name: 'faq',
+        url: '/faq',
+        template: '<faq></faq>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["faq.meta-title", "faq.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["faq.meta-title"]);
+                ngMeta.setTag("description", translations["faq.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
       $urlRouterProvider.otherwise(function ($injector) {
         var state = $injector.get('$state');
         state.go('404');
