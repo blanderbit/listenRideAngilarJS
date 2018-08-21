@@ -2970,6 +2970,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   cursor: pointer;
 }
 
+.faq__group-item.checked {
+  color: #5FC693;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  MEDIA
 /*-----------------------------------------------------------------------------------*/
