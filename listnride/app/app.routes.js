@@ -764,8 +764,15 @@
 
       $stateProvider.state({
         name: 'jobs',
-        url: '/jobs',
-        templateUrl: '<jobs></jobs>',
+        url: '/jobs?position',
+        template: '<jobs></jobs>',
+        reloadOnSearch: false,
+        params: {
+          position: {
+            value: "",
+            squash: true
+          }
+        },
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["meta.jobs.meta-title", "meta.jobs.meta-description"])
@@ -780,51 +787,6 @@
           disableUpdate: true
         }
       });
-
-      // $stateProvider.state({
-      //   name: 'jobs-list',
-      //   parent: 'jobs',
-      //   url: '/jobs',
-      //   views: {
-      //     'jobsView': {
-      //       templateUrl: 'app/modules/jobs/jobs.list.template.html',
-      //       controller: 'JobsListController as jobs'
-      //     }
-      //   },
-      //   resolve: {
-      //       data: function ($translate, ngMeta) {
-      //           $translate(["meta.jobs.meta-title", "meta.jobs.meta-description"])
-      //               .then(function (translations) {
-      //                   ngMeta.setTitle(translations["meta.jobs.meta-title"]);
-      //                   ngMeta.setTag("description", translations["meta.jobs.meta-description"]);
-      //                   ngMeta.setTag("noindex", false);
-      //               })
-      //       }
-      //   },
-      //   meta: {
-      //       disableUpdate: true
-      //   }
-      // });
-
-      // $stateProvider.state({
-      //   name: 'jobs-details',
-      //   parent: 'jobs',
-      //   url: '/jobs/position/{positionId}',
-      //   views: {
-      //     'jobsView': {
-      //       templateUrl: 'app/modules/jobs/jobs.details.template.html',
-      //       controller: 'JobsDetailsController as jobs'
-      //     }
-      //   },
-      //   resolve: {
-      //     data: function (ngMeta) {
-      //       ngMeta.setTag("noindex", false);
-      //     }
-      //   },
-      //   meta: {
-      //     disableUpdate: true
-      //   }
-      // });
 
       $stateProvider.state({
         name: 'press',
