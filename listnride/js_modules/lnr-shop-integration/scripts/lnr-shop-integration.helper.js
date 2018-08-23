@@ -420,14 +420,18 @@ var lnrHelper = {
     // add bikes grid
     var lnr = lnrConstants.isSingleUserMode ? lnrConstants.parentElement : document.getElementById(userId);
     var gridId = userId + '-lnr-grid';
-    lnr.innerHTML += '<div class="mdl-grid mdl-grid--no-spacing" id="' + gridId + '"></div>';
-    // get region specific lnr link
-    if (userLang) {
-      var lnrLink = lnrHelper.getLnrLink(userLang);
-      lnr.innerHTML += '<div class="lnr-brand"><span>powered by&nbsp;</span><a href="' + lnrLink + '" target="_blank">listnride</a></div>';
-    }
-    // bikes grid element
     var grid = document.getElementById(gridId);
+
+    // check if grid isn't exist on a page
+    if (grid === null) {
+      lnr.innerHTML += '<div class="mdl-grid mdl-grid--no-spacing" id="' + gridId + '"></div>';
+      // get region specific lnr link
+      if (userLang) {
+        var lnrLink = lnrHelper.getLnrLink(userLang);
+        lnr.innerHTML += '<div class="lnr-brand"><span>powered by&nbsp;</span><a href="' + lnrLink + '" target="_blank">listnride</a></div>';
+      }
+      grid = document.getElementById(gridId);
+    }
 
     // clear bikes grid
     grid.innerHTML = '';
