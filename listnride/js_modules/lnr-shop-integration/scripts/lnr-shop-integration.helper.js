@@ -42,6 +42,8 @@ var lnrHelper = {
   postInitSingleUser: function () {
     var userId = lnrConstants.parentElement.dataset.user;
     var userLang = lnrConstants.parentElement.dataset.lang;
+    // remove unicode special chars
+    userLang = userLang.replace(/&[#\d\w]{3,20};/gm, '').trim();
     var selectedLocation = '';
     var selectedSize = '';
 
@@ -85,6 +87,9 @@ var lnrHelper = {
       if (children[loop].dataset.user) {
         var userId = children[loop].dataset.user;
         var userLang = children[loop].dataset.lang;
+        // remove unicode special chars
+        userLang = userLang.replace(/&[#\d\w]{3,20};/gm, '').trim();
+
         var selectedLocation = '';
         var selectedSize = '';
 
