@@ -442,7 +442,7 @@ var lnrHelper = {
         rideId = ride.id,
         categoryDesc = lnrHelper.categoryFilter(userId, category),
         price = parseInt(ride.price_from),
-        imageUrl = ride.image_file_1.small.url,
+        imageUrl = ride.image_file_1.small ? ride.image_file_1.small.url : ride.image_file_1.image_file_1.small.url,
         rideDescription = ride.description;
 
       if (ride.size === 0) {
@@ -652,6 +652,10 @@ var lnrHelper = {
    * @returns {void}
    */
   spawnWizard: function (userId, bikeId, userLang) {
+    // remove unicode special chars
+    userLang = userLang.replace(/&[#\d\w]{3,20};/gm, '').trim();
+    // check if we support this lang, by default it would be English version
+    if (!lnrConstants.shopUrl.production[userLang]) { userLang = 'en' }
     // select shop solution based on the environment
     var url = lnrConstants.env === 'staging' ? lnrConstants.shopUrl.staging[userLang] : lnrConstants.shopUrl.production[userLang];
     // window dimensions, url, parameter, and open type
