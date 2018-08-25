@@ -78,10 +78,10 @@
     }
   },
   "help-and-service": {
-    "header": "How can we help you?",
+    "header": "¿En qué podemos ayudarte?",
     "faq": {
       "group-1": {
-        "title": "Getting Started",
+        "title": "Primeros pasos",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -94,7 +94,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-2": {
-        "title": "Renting out your bikes",
+        "title": "Publica tu bicicleta",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -107,7 +107,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-3": {
-        "title": "Renting bikes",
+        "title": "Alquila una bicicleta",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -120,7 +120,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-4": {
-        "title": "Payment & Services fees",
+        "title": "Cómo funcionan los pagos",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -133,7 +133,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-5": {
-        "title": "Insurance & Service",
+        "title": "Seguro y servicios",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -146,7 +146,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-6": {
-        "title": "Booking & Cancelation",
+        "title": "Reservas y cancelaciones",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -159,7 +159,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-7": {
-        "title": "Voucher & Credits",
+        "title": "Cupones de descuento",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -172,7 +172,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-8": {
-        "title": "Ratings & Feedback",
+        "title": "Calificaciones y comentarios",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -185,10 +185,10 @@
         "question-5": "How do I search for a bike?"
       }
     },
-    "faq-header": "The 10 most asked question in one place.",
+    "faq-header": "Preguntas frecuentes de nuestros usuarios\n",
     "faqs": {
       "top": {
-        "answer-1": "How do I search for a bike?",
+        "answer-1": "¿Cómo busco una bicicleta?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
         "answer-4": "How do I search for a bike?",
@@ -197,7 +197,7 @@
         "answer-7": "How do I search for a bike?",
         "answer-8": "How do I search for a bike?",
         "answer-9": "How do I search for a bike?",
-        "answer-10": "How do I search for a bike?",
+        "answer-10": "¿Cómo busco una bicicleta?",
         "question-1": "How do I search for a bike?",
         "question-2": "How do I search for a bike?",
         "question-3": "How do I search for a bike?",
@@ -266,7 +266,7 @@
       },
       "description-lister": "Como lister en listnride desea asegurarse de que usted y su bicicleta estén protegidos contra cualquier eventualidad. Es por eso que cada alquiler en Alemania y Austria, realizado a través de listnride, se asegura automáticamente con efecto inmediato. Los usuarios que soliciten su bicicleta pueden optar por reservar el paquete premium para obtener servicios y garantías adicionales. Este servicio es gratuito para usted como Lister.\n<p>\nSi tiene más preguntas, comuníquese con nosotros las 24 horas por <a3>correo electrónico</a3>.",
       "description-rider": "Ofrecemos dos paquetes de seguros para cada bicicleta que se alquila en Alemania y Austria a través de listnride: El <b1>seguro básico </b1>se incluye en cada alquiler, el <b2>seguro premium </b2>es opcional y extiende la cobertura del seguro con beneficios adicionales. <br3>¡Usted y su bicicleta están siempre protegidos,  ya no hay nada más en el camino que le impida disfrutar el paseo!",
-      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Términos y condiciones del segura \"Bike\" </a0><br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Términos y condiciones del segura \"Bike Assist\"</a>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description </a>\n\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Términos y condiciones del segura \"Bike\" </a0><br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Términos y condiciones del segura \"Bike Assist\"</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description </a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
     }
   },
   "business-community": {
