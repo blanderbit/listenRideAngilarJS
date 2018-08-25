@@ -8,6 +8,7 @@ angular.module('settings',[]).component('settings', {
     '$window',
     '$mdToast',
     '$translate',
+    '$state',
     'api',
     'accessControl',
     'sha256',
@@ -21,7 +22,7 @@ angular.module('settings',[]).component('settings', {
     '$mdDialog',
     'authentication',
     'voucher',
-    function SettingsController($localStorage, $window, $mdToast, $translate, api, accessControl, sha256, Base64,
+    function SettingsController($localStorage, $window, $mdToast, $translate, $state, api, accessControl, sha256, Base64,
       Upload, loadingDialog, ENV, ngMeta, userApi, $timeout, $mdDialog, authentication, voucher) {
 
       // should be an authenticated user
@@ -525,7 +526,12 @@ angular.module('settings',[]).component('settings', {
                   .hideDelay(1100)
                   .position('top center')
                 ).then(function(){
-                  authentication.logout();
+                  document.execCommand("ClearAuthenticationCache");
+                  delete $localStorage.auth;
+                  delete $localStorage.userId;
+                  delete $localStorage.profilePicture;
+                  delete $localStorage.name;
+                  $state.go('home');
                 });
               },
               function(error) {
@@ -536,7 +542,7 @@ angular.module('settings',[]).component('settings', {
 
           }
         );
-      };
+      }
 
       function openPaymentWindow () {
         var w = 550;

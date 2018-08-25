@@ -163,7 +163,7 @@
     }
   },
   "faq": {
-    "meta-title": "Group booking",
+    "meta-title": "Frequently Asked Question",
     "meta-description": "Book your bikes with our group booking form"
   },
   "multi-booking": {
@@ -773,6 +773,7 @@
   },
   "search": {
     "no-bikes": "There are unfortunately no bikes in this location yet. As we're growing fast, probably soon there will be! If you'd like to, you can <a href=\"/listing-a-bike\">list a bike yourself</a> or alternatively try searching for another city or specific location nearby.",
+    "unisize": "Unisize",
     "book-multiple-bikes": "Group bookings",
     "bikes-found": "Bikes found:",
     "all-sizes": "All sizes",

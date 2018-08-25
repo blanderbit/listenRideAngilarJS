@@ -78,7 +78,7 @@
     }
   },
   "help-and-service": {
-    "header": "How can we help you?",
+    "header": "Wie können wir dir helfen?",
     "faq": {
       "group-1": {
         "title": "Getting Started",
@@ -266,7 +266,7 @@
       },
       "description-lister": "Als Vermieter auf listnride möchtest du natürlich sicher gehen, dass du und dein Rad gegen alle Eventualitäten abgesichert seid. Deshalb ist jede Vermietung in Deutschland und Österreich, die du über listnride tätigst ab sofort automatisch versichert.  \n\nMieter, die dein Rad anfragen, können optional das Premium-Paket buchen, um zusätzliche Services und Garantien zu bekommen. Dieser Service ist für Dich als Vermieter kostenlos.\n<p>\nSolltest du weitere Fragen haben, kontaktiere uns rund um die Uhr via <a3>E-Mail.</a3>",
       "description-rider": "Wir bieten zwei Versicherungspakete für jedes Rad das du über lisntride mietest: Die<b1>\nBasis-Versicherung</b1>\nist in jeder Vermietung inkludiert, die \n<b2>Premium-Versicherung</b2>\nist optional und erweitert der Versicherungsschutz um zusätzliche Leistungen.\n<br3>\nDein Rad und du sind immer optimal geschützt und deiner Fahrt steht nichts mehr im weg!",
-      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">\"Bike\" Versicherungsbedingungen</a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">\"Bike Assist\" Versicherungsbedingungen</a>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description</a>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">\"Bike\" Versicherungsbedingungen</a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">\"Bike Assist\" Versicherungsbedingungen</a>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description</a>\n\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
     }
   },
   "business-community": {

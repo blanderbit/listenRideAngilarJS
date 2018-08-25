@@ -78,10 +78,10 @@
     }
   },
   "help-and-service": {
-    "header": "How can we help you?",
+    "header": "Come possiamo aiutarti?",
     "faq": {
       "group-1": {
-        "title": "Getting Started",
+        "title": "Per cominciare",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -94,7 +94,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-2": {
-        "title": "Renting out your bikes",
+        "title": "Noleggiare le proprie bici",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -107,7 +107,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-3": {
-        "title": "Renting bikes",
+        "title": "Noleggiare una bici",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -120,7 +120,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-4": {
-        "title": "Payment & Services fees",
+        "title": "Pagamenti e Costi",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -133,7 +133,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-5": {
-        "title": "Insurance & Service",
+        "title": "Assicurazione e Sicurezza",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -146,7 +146,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-6": {
-        "title": "Booking & Cancelation",
+        "title": "Prenotazione e Cancellazione",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -159,7 +159,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-7": {
-        "title": "Voucher & Credits",
+        "title": "Voucher & Crediti",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -185,29 +185,29 @@
         "question-5": "How do I search for a bike?"
       }
     },
-    "faq-header": "The 10 most asked question in one place.",
+    "faq-header": "Le 10 domande frequenti in un unico posto.",
     "faqs": {
       "top": {
-        "answer-1": "How do I search for a bike?",
-        "answer-2": "How do I search for a bike?",
-        "answer-3": "How do I search for a bike?",
-        "answer-4": "How do I search for a bike?",
-        "answer-5": "How do I search for a bike?",
-        "answer-6": "How do I search for a bike?",
-        "answer-7": "How do I search for a bike?",
-        "answer-8": "How do I search for a bike?",
-        "answer-9": "How do I search for a bike?",
-        "answer-10": "How do I search for a bike?",
-        "question-1": "How do I search for a bike?",
-        "question-2": "How do I search for a bike?",
-        "question-3": "How do I search for a bike?",
-        "question-4": "How do I search for a bike?",
-        "question-5": "How do I search for a bike?",
-        "question-6": "How do I search for a bike?",
-        "question-7": "How do I search for a bike?",
-        "question-8": "How do I search for a bike?",
-        "question-9": "How do I search for a bike?",
-        "question-10": "How do I search for a bike?"
+        "answer-1": "Semplicemente inserisci il nome della località dove cerchi una bicicletta nel banner di ricerca. Clicca su una delle bici che appare tra i risultati per avere più dettagli sulla taglia, l’altezza consigliata per il ciclista, gli accessori inclusi e le recensioni della bici. Per restringere i risultati di ricerca, puoi usare i filtri: Arco di tempo, Numero di bici, Tipo di bici, Tutte le marche.\n",
+        "answer-2": "C’è un calendario nella pagina specifica della bici. I giorni marcati in nero sono quelli in cui si può noleggiare la bici, quelli grigi sono quelli in cui la bici non è disponibile e quelli in rosso sono quelli in cui la bici è già prenotata.",
+        "answer-3": "Crea un account e ottimizza il tuo profilo per avere il meglio con listnride e conoscere persone interessanti con bici speciali. Per creare un account registrati e crea una password oppure registrati con Facebook. Successivamente devi verificare il tuo numero di telefono e indirizzo email e fornire un metodo di pagamento valido, necessario per richiedere una bicicletta. Solo attraverso questo procedimento possiamo fornire ad entrambe le parti un contratto di noleggio valido e assicurarci che il pagamento venga effettuato.",
+        "answer-4": "Il primo passo per noleggiare una bici è richiederla. Semplicemente seleziona inizio e fine del periodo in cui vorresti noleggiare la bici nel calendario nella pagina specifica della bici. Se vuoi ritirare e restituire la bici nello stesso giorno, clicca due volte su quel giorno e poi scegli l’orario. Quando hai richiesto la bici, puoi iniziare una conversazione diretta con il Lister nella chat online. Una volta che il Lister ha accettato la tua richiesta, la bici è prenotata per te.",
+        "answer-5": "Clicca su “Registra una bicicletta” e fornisci tutte le informazioni necessarie sulla tua bici, comprese marca, descrizione, alcune foto, prezzo di noleggio e gli accessori che puoi fornire con la bici, inclusi nel prezzo. Quando hai finito clicca su “Registra la mia bicicletta”. La tua bici è ora disponibile per il noleggio alla community.",
+        "answer-6": "Sei libero di stabilire il prezzo di noleggio, ma il prezzo settimanale non può essere più basso di quello giornaliero. Per determinare il prezzo, puoi comparare la tua bici con altre simili disponibili su listnride.",
+        "answer-7": "Riceverai una email e un sms di notifica, contenenti tutti i dettagli. Vai alla pagina “Richieste” per accettare o rifiutare la richiesta o per iniziare una conversazione in chat con il Rider per chiarire alcuni dettagli. Accetta la richiesta per finalizzare il noleggio. Dopo di che riceverai una email di conferma della prenotazione con tutti i dettagli rilevanti e le informazioni di contatto del Rider.",
+        "answer-8": "Registrare una bici è gratuito e non implica alcun costo fisso.",
+        "answer-9": "Accettiamo diversi metodi di pagamento. Questi dipendono dal paese nel quale è localizzato il tuo conto. Solitamente accettiamo tutti i tipi di carte di credito e Paypal. Pagamenti offline o in contanti sono una violazione dei nostri Termini e Condizioni. Ciò potrebbe comportare una rimozione dell’account da listnride. E’ nel tuo interesse evitare pagamenti al di fuori del nostro sito perchè in questo modo è difficile per noi proteggere le tue informazioni e ti espone al rischio di frode e altri problemi di sicurezza. Per esempio la tua bici non sarebbe assicurata in questo caso.",
+        "answer-10": "Dovrai inserire i tuoi dati di pagamento quando richiedi una bici. Il pagamento avverrà solo dopo che il Lister ha accettato la tua richiesta. Quindi se cancelli la richiesta o non viene accettata, il pagamento non avviene.",
+        "question-1": "Come posso cercare una bici?",
+        "question-2": "Come posso sapere se una bicicletta è disponibile?",
+        "question-3": "Come posso creare un account? ",
+        "question-4": "Come noleggio una bici?",
+        "question-5": "Come posso registrare le mie bici?",
+        "question-6": "Come stabilisco il prezzo di noleggio?",
+        "question-7": "Come posso sapere se la mia bici è stata richiesta?",
+        "question-8": "Quanto costa registrare la mia bici?",
+        "question-9": "Quali metodi di pagamento sono accettati?",
+        "question-10": "Quando pago la bici noleggiata?"
       }
     }
   },
@@ -266,7 +266,7 @@
       },
       "description-lister": "Come Noleggiatore su listnride vuoi essere sicuro che tu e la tua bicicletta siete protetti da tutti i rischi. Ecco perché ogni noleggio in Germania e Austria, tramite listnride, viene automaticamente assicurato con effetto immediato. Opzionalmente i ciclisti che richiedono la bicicletta possono prenotare il pacchetto premium per ottenere servizi e copertura aggiuntivi. Questo servizio è gratuito per te come Noleggiatore.\n<p>\nSe hai ulteriori domande, contattaci 24 ore su 24 tramite <a3>E-Mail </a3>.",
       "description-rider": "Offriamo due pacchetti assicurativi per ogni bici noleggiata in Germania e in Austria tramite listnride: l' <b1>Assicurazione di base </b1>è incluso nel noleggio, l' <b2>assicurazione Premium </b2>è opzionale e estende la copertura assicurativa con ulteriori vantaggi. <br3>Tu e la tua bici siete sempre protetti in modo ottimale e non vi è nulla di più nel vostro modo di guidare!",
-      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Termini e condizioni assicurazione \"Bike\"</a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Termini e condizioni assicurazione \"Bike Assist\"</a>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description</a>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Termini e condizioni assicurazione \"Bike\"</a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Termini e condizioni assicurazione \"Bike Assist\"</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
     }
   },
   "business-community": {

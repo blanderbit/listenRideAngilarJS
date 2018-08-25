@@ -78,10 +78,10 @@
     }
   },
   "help-and-service": {
-    "header": "How can we help you?",
+    "header": "Hoe kunnen we je helpen?",
     "faq": {
       "group-1": {
-        "title": "Getting Started",
+        "title": "Aan de slag met listnride!",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -94,7 +94,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-2": {
-        "title": "Renting out your bikes",
+        "title": "Je fiets verhuren",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -107,7 +107,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-3": {
-        "title": "Renting bikes",
+        "title": "Fietsen huren",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -120,7 +120,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-4": {
-        "title": "Payment & Services fees",
+        "title": "Betaling en servicekosten",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -133,7 +133,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-5": {
-        "title": "Insurance & Service",
+        "title": "Verzekering & Service",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -146,7 +146,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-6": {
-        "title": "Booking & Cancelation",
+        "title": "Boeken en annuleren",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -159,7 +159,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-7": {
-        "title": "Voucher & Credits",
+        "title": "Vouchers & Tegoeden",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -172,7 +172,7 @@
         "question-5": "How do I search for a bike?"
       },
       "group-8": {
-        "title": "Ratings & Feedback",
+        "title": "Recensies en feedback",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -185,19 +185,19 @@
         "question-5": "How do I search for a bike?"
       }
     },
-    "faq-header": "The 10 most asked question in one place.",
+    "faq-header": "De 10 meest gestelde vraag op één plek.",
     "faqs": {
       "top": {
-        "answer-1": "How do I search for a bike?",
-        "answer-2": "How do I search for a bike?",
-        "answer-3": "How do I search for a bike?",
+        "answer-1": "Hoe zoek ik naar een fiets?",
+        "answer-2": "Hoe zoek ik naar een fiets?",
+        "answer-3": "Hoe zoek ik naar een fiets?",
         "answer-4": "How do I search for a bike?",
         "answer-5": "How do I search for a bike?",
         "answer-6": "How do I search for a bike?",
         "answer-7": "How do I search for a bike?",
         "answer-8": "How do I search for a bike?",
         "answer-9": "How do I search for a bike?",
-        "answer-10": "How do I search for a bike?",
+        "answer-10": "Hoe zoek ik naar een fiets?",
         "question-1": "How do I search for a bike?",
         "question-2": "How do I search for a bike?",
         "question-3": "How do I search for a bike?",
@@ -266,7 +266,7 @@
       },
       "description-lister": "Als verhuurder op listnride wil je er zeker van zijn dat jij en je fiets beschermd zijn tegen alle denkbare risico's. Daarom is elke fietverhuur in Duitsland en Oostenrijk die u bij listnride huurt vanaf nu automatisch verzekerd. Huurders die uw fiets aanvragen kunnen optioneel een Premium Pakket boeken voor extra dekking en vrijwaringen. Deze service is gratis voor u als verhuurder. <p>Heeft u nog vragen? Neem dan contact met ons op via <a3>E-Mail</a3>.",
       "description-rider": "Wij bieden twee verzekeringspakketten aan voor elke fiets die je huurt via lisntride: De <b1>De Basisverzekering</b1> is inbegrepen in elke fietshuur in Duitsland en Oostenrijk, de <b2>Premium verzekering</b2> is optioneel en breidt de verzekering uit met extra dekking.<br3>Jij en Jouw fiets zijn altijd optimaal verzekerd en dus staat niets jouw rit meer in de weg!",
-      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Algemene fietsverzekeringsvoorwaarden</a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Algemene voorwaaarden Fiets-assist</a>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description</a>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Algemene fietsverzekeringsvoorwaarden</a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Algemene voorwaaarden Fiets-assist</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
     }
   },
   "business-community": {
