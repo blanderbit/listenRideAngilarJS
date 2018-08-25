@@ -771,6 +771,7 @@
   },
   "search": {
     "no-bikes": "No hay bicis en esta ubicación",
+    "unisize": "Talla única",
     "book-multiple-bikes": "Alquileres grupales",
     "bikes-found": "Bicicletas encontradas:",
     "all-sizes": "Todos los tamaños",
