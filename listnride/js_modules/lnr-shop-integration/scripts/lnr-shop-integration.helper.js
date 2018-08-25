@@ -718,7 +718,9 @@ var lnrHelper = {
 
     // unique cities of the bikes
     rides.forEach(function (ride) {
-      var city = lnrHelper.toSentenceCase(ride.city);
+      // try to take city with english translation
+      var city = ride.en_city ? ride.en_city : ride.city;
+      city = lnrHelper.toSentenceCase(city);
       if (cities.includes(city) === false) {
         cities.push(city);
       }
@@ -780,8 +782,8 @@ var lnrHelper = {
    * @returns {String} string without unicode and spaces
    */
   removeUnicode: function(str) {
-    return str.replace(/&[#\d\w]{3,20};/gm, '')
-      .replace(/\u200B/g, '')
-      .trim();
+    return str.replace(/&[#\d\w]{3,20};/gm, '') // remove all unicode
+      .replace(/\u200B/g, '') // remove zero width space
+      .trim(); // remove spaces
   }
 };
