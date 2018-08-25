@@ -82,6 +82,7 @@ angular.module('listnride', [
   'bikeSorter',
   'cardgrid',
   'privacyBar',
+  'faq',
   //endRemoveIf(shop)
   /* app_extras_end */
 
