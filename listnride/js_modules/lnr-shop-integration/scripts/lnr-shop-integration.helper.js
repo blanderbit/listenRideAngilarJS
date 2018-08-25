@@ -42,8 +42,8 @@ var lnrHelper = {
   postInitSingleUser: function () {
     var userId = lnrConstants.parentElement.dataset.user;
     var userLang = lnrConstants.parentElement.dataset.lang;
-    // remove unicode special chars
-    userLang = userLang.replace(/&[#\d\w]{3,20};/gm, '').trim();
+    // remove unicode special chars and tabs
+    userLang = lnrHelper.removeUnicode(userLang);
     var selectedLocation = '';
     var selectedSize = '';
 
@@ -87,9 +87,8 @@ var lnrHelper = {
       if (children[loop].dataset.user) {
         var userId = children[loop].dataset.user;
         var userLang = children[loop].dataset.lang;
-        // remove unicode special chars
-        userLang = userLang.replace(/&[#\d\w]{3,20};/gm, '').trim();
-
+        // remove unicode special chars and tabs
+        userLang = lnrHelper.removeUnicode(userLang);
         var selectedLocation = '';
         var selectedSize = '';
 
@@ -661,8 +660,6 @@ var lnrHelper = {
    * @returns {void}
    */
   spawnWizard: function (userId, bikeId, userLang) {
-    // remove unicode special chars
-    userLang = userLang.replace(/&[#\d\w]{3,20};/gm, '').trim();
     // check if we support this lang, by default it would be English version
     if (!lnrConstants.shopUrl.production[userLang]) { userLang = 'en' }
     // select shop solution based on the environment
@@ -776,5 +773,15 @@ var lnrHelper = {
     return str.replace(/\w\S*/g, function (txt) {
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
+  },
+  /**
+   * remove unicode symbols and zero width space
+   * @param {String} str any string
+   * @returns {String} string without unicode and spaces
+   */
+  removeUnicode: function(str) {
+    return str.replace(/&[#\d\w]{3,20};/gm, '')
+      .replace(/\u200B/g, '')
+      .trim();
   }
 };
