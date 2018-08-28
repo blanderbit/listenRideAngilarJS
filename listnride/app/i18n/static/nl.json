@@ -77,6 +77,12 @@
       "cafes-bars-content": "Indien je eens wat anders wilt proberen en bijvoorbeeld een goede veganer / vegatarisch restaurant wilt proberen, reserveer dan een tafeltje bij <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> aan het Karmeliterplein. Als je meer van de traditionele oostenrijkse keuken houdt, is <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a> een absolute aanrader. Een heerlijke Tafelspitz of Wiener Schnitzel met blik op de fameuze Wiener Oper. Beter kan het niet, toch? Als laatste stop voor het nuttigen van een afzakker leent zich het gebied rond de Donau zich uitstekend."
     }
   },
+  "shared": {
+    "list-your-bike": {
+      "bike-category": "Selecteer het type fiets",
+      "bike-subcategory": "Bepaal de subcategorie"
+    }
+  },
   "help-and-service": {
     "header": "Hoe kunnen we je helpen?",
     "faq": {

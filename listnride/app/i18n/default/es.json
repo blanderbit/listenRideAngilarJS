@@ -693,9 +693,9 @@
     "or": "o",
     "log-in": "Iniciar sesión",
     "log-out": "Cerrar sesión",
-    "sign-up": "Registrarse ",
+    "sign-up": "Regístrate",
     "sign-up-to-book": "Regístrate para reservar la bici",
-    "sign-up-with-facebook": "Registrarse con facebook",
+    "sign-up-with-facebook": "Regístrate utilizando Facebook",
     "sign-up-divider-text": "Acepta nuestros términos y condiciones",
     "agree-terms-and-policy": "Acepta los Términos y la Política de Privacidad",
     "member-already": "¿Ya estás registrado?",
@@ -1006,7 +1006,7 @@
   "listings": {
     "my-bikes": "Mis bicicletas",
     "no-bikes": "Todavía no has registrado ninguna de tus rutas",
-    "list-a-bike": "Registrar una bicicleta",
+    "list-a-bike": "Publica una bicicleta",
     "show-as-list": "Mostrar como lista",
     "duplicate": {
       "duplicate": "Duplicada",
