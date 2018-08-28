@@ -77,11 +77,27 @@
       "cafes-bars-content": "If you like vegan and vegetarian food, we recommend a visit at <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> at the Karmeliterplatz. If you prefer the more traditional Austrian kitchen, we highly recommend <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>. Order a traditional Tafelspitz or Wiener Schnitzel and enjoy it outside with the view on the famous Vienna Opera. You’ll have a great night to remember! For finishing touch of the day, it makes sense to walk towards the Danube. On the way you’ll find plenty of interesting bars or just sit outside under the stars at the river."
     }
   },
+  "meta": {
+    "brand-integration": {
+      "veloheld.meta-title": "Rent veloheld bikes in Munich and Dresden | listnride",
+      "veloheld": {
+        "meta-keywords": "-",
+        "meta-description": "Test veloheld bikes and experience the pure aesthetics and functional techniques of a custom made steel bike: road bike, cyclocross bike or city bike!"
+      }
+    }
+  },
+  "shared": {
+    "list-your-bike": {
+      "bike-category": "Select the bike category",
+      "bike-subcategory": "Specify the subcategory"
+    }
+  },
   "help-and-service": {
     "header": "How can we help you?",
     "faq": {
       "group-1": {
         "title": "Getting Started",
+        "description": "Here is the some information about this group of questions",
         "answer-1": "How do I search for a bike? <img src=\"//www.listnride.com/app/assets/ui_images/static/lnr-landing-insurance.jpg\">",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -95,32 +111,65 @@
       },
       "group-2": {
         "title": "Renting out your bikes",
+        "description": "Here is the some information about this group of questions",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
         "answer-4": "How do I search for a bike?",
         "answer-5": "How do I search for a bike?",
+        "answer-6": "How do I search for a bike?",
+        "answer-7": "How do I search for a bike?",
+        "answer-8": "How do I search for a bike?",
+        "answer-9": "How do I search for a bike?",
+        "answer-10": "How do I search for a bike?",
+        "answer-11": "How do I search for a bike?",
+        "answer-12": "How do I search for a bike?",
+        "answer-13": "How do I search for a bike?",
         "question-1": "How do I search for a bike?",
         "question-2": "How do I search for a bike?",
         "question-3": "How do I search for a bike?",
         "question-4": "How do I search for a bike?",
-        "question-5": "How do I search for a bike?"
+        "question-5": "How do I search for a bike?",
+        "question-6": "How do I search for a bike?",
+        "question-7": "How do I search for a bike?",
+        "question-8": "How do I search for a bike?",
+        "question-9": "How do I search for a bike?",
+        "question-10": "How do I search for a bike?",
+        "question-11": "How do I search for a bike?",
+        "question-12": "How do I search for a bike?",
+        "question-13": "How do I search for a bike?"
       },
       "group-3": {
         "title": "Renting bikes",
+        "description": "Here is the some information about this group of questions",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
         "answer-4": "How do I search for a bike?",
         "answer-5": "How do I search for a bike?",
+        "answer-6": "How do I search for a bike?",
+        "answer-7": "How do I search for a bike?",
+        "answer-8": "How do I search for a bike?",
+        "answer-9": "How do I search for a bike?",
+        "answer-10": "How do I search for a bike?",
+        "answer-11": "How do I search for a bike?",
+        "answer-12": "How do I search for a bike?",
         "question-1": "How do I search for a bike?",
         "question-2": "How do I search for a bike?",
         "question-3": "How do I search for a bike?",
         "question-4": "How do I search for a bike?",
-        "question-5": "How do I search for a bike?"
+        "question-5": "How do I search for a bike?",
+        "question-6": "How do I search for a bike?",
+        "question-7": "How do I search for a bike?",
+        "question-8": "How do I search for a bike?",
+        "question-9": "How do I search for a bike?",
+        "question-10": "How do I search for a bike?",
+        "question-11": "How do I search for a bike?",
+        "question-12": "How do I search for a bike?"
       },
       "group-4": {
         "title": "Payment & Services fees",
+        "description": "Here is the some information about this group of questions",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -134,6 +183,7 @@
       },
       "group-5": {
         "title": "Insurance & Service",
+        "description": "Here is the some information about this group of questions",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -147,6 +197,7 @@
       },
       "group-6": {
         "title": "Booking & Cancelation",
+        "description": "Here is the some information about this group of questions",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -160,6 +211,7 @@
       },
       "group-7": {
         "title": "Vouchers & Credits",
+        "description": "Here is the some information about this group of questions",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -173,6 +225,7 @@
       },
       "group-8": {
         "title": "Ratings & Feedback",
+        "description": "Here is the some information about this group of questions",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -205,7 +258,7 @@
         "question-5": "How do I list my bikes?",
         "question-6": "How do I set the rental price?",
         "question-7": "How do I know if my bike is requested?",
-        "question-8": "What does it cost to list my bike?",
+        "question-8": "How much it cost to list my bike?",
         "question-9": "What kind of payment methods are accepted?",
         "question-10": "When do I pay for a bike rental?"
       }
@@ -452,6 +505,38 @@
       "choose-location": "Choose a location",
       "no-bikes-found": "Oops... there are unfortunately no bikes listed yet in this location.",
       "faq": "The frequently asked questions"
+    },
+    "veloheld.hero-description": "Test veloheld bikes and experience the pure aesthetics and functional techniques of a custom made steel bike: road bike, cyclocross bike or city bike!",
+    "veloheld": {
+      "title": "veloheld: Your individual bike",
+      "description": "veloheld bikes stand for pure aesthetic and functional technics – they are perfectly prepared for the dynamic and all the impassibility of everyday life. But above all, they are very fun to ride!",
+      "feature-1": {
+        "title": "Timeless and Sustainable",
+        "description": "veloheld bikes are timeless with their elegant \nsteel frames. Use is only light and comfortable \nchromoly steel, which is more eco-friendly in \ncomparison to other materials used in the \nbicycle industry."
+      },
+      "feature-2": {
+        "title": "Custom Color ",
+        "description": "If you don’t like the standard paint schemes you can \nchoose your personal colour out of 200 RAL-colours."
+      },
+      "feature-3": {
+        "title": "Custom Build",
+        "description": "Beside the standard components veloheld can realize \nnearly every custom configuration. Send your \nideas for your individual veloheld bike just \nthe way you want today."
+      },
+      "meta-title": "Rent and test veloheld Bikes in Munich and Dresden",
+      "find-out-more": {
+        "title": "Learn more about veloheld bikes",
+        "description": "Order your new <a href=\\“ http://www.veloheld.de/”target=\\“_blank\\“>veloheld bike online</a> and get your listnride rental reimbursed."
+      },
+      "faq-question-1": "Enter Text.",
+      "faq-answer-1": "Enter Text.",
+      "faq-question-2": "Enter Text.",
+      "faq-answer-2": "Enter Text.",
+      "faq-question-3": "Enter Text.",
+      "faq-answer-3": "Enter Text.",
+      "faq-question-4": "Enter Text.",
+      "faq-answer-4": "Enter Text.",
+      "faq-question-5": "Enter Text.",
+      "faq-answer-5": "Enter Text."
     },
     "leaos": {
       "description": "The design e-bike - Leaos",

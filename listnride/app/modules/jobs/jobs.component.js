@@ -4,30 +4,33 @@ angular.module('jobs', [])
   .component('jobs', {
     templateUrl: 'app/modules/jobs/jobs.template.html',
     controllerAs: 'jobs',
-    controller: ['$translatePartialLoader', '$state', '$location', '$translate', '$stateParams', 'api', 'ENV', 'ngMeta',
-      function JobsController($tpl, $state, $location, $translate, $stateParams, api, ENV, ngMeta) {
-
-        ngMeta.setTitle($translate.instant("jobs.meta-title"));
-        ngMeta.setTag("description", $translate.instant("jobs.meta-description"));
+    controller: ['$translatePartialLoader', '$state', '$location', '$stateParams', 'api', 'ENV',
+      function JobsController($tpl, $state, $location, $stateParams, api, ENV) {
 
         var jobs = this;
-        jobs.showJobDetails = false;
-        jobs.chosenJob = {};
-
         $tpl.addPart(ENV.staticTranslation);
 
         jobs.$onInit =  function () {
+          // variables
+          jobs.showJobDetails = false;
+          jobs.chosenJob = {};
           jobs.positionId = $stateParams.position;
-          jobs.positionIdChange = positionIdChange;
+
+          // methods
+          jobs.showDetails = showDetails;
+          jobs.hideDetails = hideDetails;
+
+          // invocations
+          getJobsData();
         };
 
-        jobs.showDetails = function(job) {
+        function showDetails(job) {
           jobs.showJobDetails = true;
           jobs.chosenJob = job;
           goToTop();
         };
 
-        jobs.hideDetails = function() {
+        function hideDetails() {
           jobs.showJobDetails = false;
           jobs.chosenJob = {};
 
@@ -35,23 +38,21 @@ angular.module('jobs', [])
             $state.current,
             {position: ''},
             { notify: false }
-          )
+          );
         };
 
-        api.get('/jobs/').then(function (response) {
-          jobs.availableJobs = response.data;
+        function getJobsData() {
+          api.get('/jobs/').then(function (response) {
+            jobs.availableJobs = response.data;
 
-          if (!!jobs.positionId) {
-            var job = _.find(jobs.availableJobs, ['id', _.toInteger(jobs.positionId)]);
-            jobs.showDetails(job);
-          }
-        }, function (error) {
+            if (!!jobs.positionId) {
+              var job = _.find(jobs.availableJobs, ['id', _.toInteger(jobs.positionId)]);
+              jobs.showDetails(job);
+            }
+          }, function (error) {
 
-        });
-
-        function positionIdChange (positionId) {
-          jobs.positionId = positionId;
-        }
+          });
+        };
 
         /**
          * move the scroll to the job posts
