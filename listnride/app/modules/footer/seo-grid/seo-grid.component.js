@@ -11,12 +11,13 @@ angular.module('seoGrid', []).component('seoGrid', {
     
       // Here the SEO locations / countries can be dynamically defined
       seoGrid.countries = [
-        { name: "Germany", locations: ["Berlin", "Munich", "Hamburg", "Sylt"]},
-        { name: "Germany", locations: ["Berlin", "Munich", "Hamburg", "Sylt"]},
-        { name: "Germany", locations: ["Berlin", "Munich", "Hamburg", "Sylt"]},
-        { name: "Germany", locations: ["Berlin", "Munich", "Hamburg", "Sylt"]},
-        { name: "Germany", locations: ["Berlin", "Munich", "Hamburg", "Sylt"]},
-        { name: "Germany", locations: ["Berlin", "Munich", "Hamburg", "Sylt"]}
+        { name: "Germany", locations: ["Berlin", "Hamburg", "Düsseldorf", "München", "Stuttgart", "Dresden", "Bremen", "Frankfurt"]},
+        { name: "Italy", locations: ["Florence", "Bologna", "Milan", "Turin", "Olbia", "Palermo", "Rome", "Trentino"]},
+        { name: "Spain", locations: ["Seville", "Barcelona", "Madrid", "Valencia", "Palma de Majorca", "Arrecife", "Puerto santa cruz", "Las Palmas"]},
+        { name: "Netherlands", locations: ["Amsterdam", "Den Haag", "Utrecht", "Apeldoorn"]},
+        { name: "Switzerland", locations: ["Zurich", "Lugano", "Basel", "Lausanne"]},
+        { name: "Portugal", locations: ["Lisbon", "Faro"]},
+        { name: "South Africa", locations: ["Cape Town"]}
       ]
     }
   ]
