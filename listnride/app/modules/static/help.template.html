@@ -60,8 +60,8 @@
       <h2 class="md-headline">{{ 'help-and-service.faq-header' | translate }}</h2>
     </div>
 
-    <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
-      <div flex-gt-sm="45" layout="column" layout-margin>
+    <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding layout-margin>
+      <div flex-gt-sm="45" layout="column">
         <!-- FAQ_1 -->
         <h3 class="md-subhead lnr-clickable lnr-arrow-left" ng-click="help1=!help1" ng-class="help1 ? 'accordion__tab--opened' : ''">
           {{ 'help-and-service.faqs.top.question-1' | translate }}
@@ -99,7 +99,7 @@
         </div>
       </div>
 
-      <div flex-gt-sm="45" flex-gt-sm-offset="5" layout="column" layout-margin>
+      <div flex-gt-sm="45" flex-gt-sm-offset="5" layout="column">
         <!-- FAQ_6 -->
         <h3 class="md-subhead lnr-clickable lnr-arrow-left" ng-click="help6=!help6" ng-class="help6 ? 'accordion__tab--opened' : ''">
           {{ 'help-and-service.faqs.top.question-6' | translate }}

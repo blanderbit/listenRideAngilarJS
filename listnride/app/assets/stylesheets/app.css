@@ -2845,7 +2845,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  align-items: top;
+  align-items: flex-start;
   padding: 10px 0 14px;
   border-bottom: 1px solid #e1e1e1;
 }
@@ -2967,7 +2967,13 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   color: rgba(85, 85, 85, 1.0);
   border: 1px solid #e1e1e1;
   border-radius: 7px;
+  padding: 16px 0;
   cursor: pointer;
+  transition: background .3s;
+}
+
+.help__group-card:hover {
+  background: #353a410d;
 }
 
 .faq__group-item.checked {
