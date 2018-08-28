@@ -77,11 +77,189 @@
       "cafes-bars-content": "Si te gusta la comida vegetariana y vegana, te recomendamos que visites <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot </a>en Karmeliterplatz. Si prefieres la cocina austríaca más tradicional, te recomendamos <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta </a>. Pide un Tafelspitz o Wiener Schnitzel tradicionales y disfrútalos al aire libre con vistas a la famosa Ópera de Viena. ¡Será una gran noche para recordar! Para el toque final del día, qué mejor que caminar hacia el Danubio. En el camino encontrarás muchos bares interesantes o puedes sentarte al raso bajo las estrellas junto al río."
     }
   },
+  "shared": {
+    "list-your-bike": {
+      "bike-category": "Seleccione la categoría de bicicleta",
+      "bike-subcategory": "Especifique la subcategoría"
+    }
+  },
+  "help-and-service": {
+    "header": "¿En qué podemos ayudarte?",
+    "faq": {
+      "group-1": {
+        "title": "Primeros pasos",
+        "description": "Some description for this comentarious",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-2": {
+        "title": "Publica tu bicicleta",
+        "description": "Some description for this comentarious",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "answer-6": "How do I search for a bike?",
+        "answer-7": "How do I search for a bike?",
+        "answer-8": "How do I search for a bike?",
+        "answer-9": "How do I search for a bike?",
+        "answer-10": "How do I search for a bike?",
+        "answer-11": "How do I search for a bike?",
+        "answer-12": "How do I search for a bike?",
+        "answer-13": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?",
+        "question-6": "How do I search for a bike?",
+        "question-7": "How do I search for a bike?",
+        "question-8": "How do I search for a bike?",
+        "question-9": "How do I search for a bike?",
+        "question-10": "How do I search for a bike?",
+        "question-11": "How do I search for a bike?",
+        "question-12": "How do I search for a bike?",
+        "question-13": "How do I search for a bike?"
+      },
+      "group-3": {
+        "title": "Alquila una bicicleta",
+        "description": "Some description for this comentarious",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "answer-6": "How do I search for a bike?",
+        "answer-7": "How do I search for a bike?",
+        "answer-8": "How do I search for a bike?",
+        "answer-9": "How do I search for a bike?",
+        "answer-10": "How do I search for a bike?",
+        "answer-11": "How do I search for a bike?",
+        "answer-12": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?",
+        "question-6": "How do I search for a bike?",
+        "question-7": "How do I search for a bike?",
+        "question-8": "How do I search for a bike?",
+        "question-9": "How do I search for a bike?",
+        "question-10": "How do I search for a bike?",
+        "question-11": "How do I search for a bike?",
+        "question-12": "How do I search for a bike?"
+      },
+      "group-4": {
+        "title": "Cómo funcionan los pagos",
+        "description": "Some description for this comentarious",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-5": {
+        "title": "Seguro y servicios",
+        "description": "Some description for this comentarious",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-6": {
+        "title": "Reservas y cancelaciones",
+        "description": "Some description for this comentarious",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-7": {
+        "title": "Cupones de descuento",
+        "description": "Some description for this comentarious",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-8": {
+        "title": "Calificaciones y comentarios",
+        "description": "Some description for this comentarious",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      }
+    },
+    "faq-header": "Preguntas frecuentes de nuestros usuarios\n",
+    "faqs": {
+      "top": {
+        "answer-1": "¿Buscas una bicicleta? Simplemente escribe el nombre de la ciudad en nuestra barra de búsqueda. Luego selecciona la bicicleta que más se adapte a tus gustos y necesidades. Puedes restringir el resultado de búsqueda, utilizando los filtros de: periodo de tiempo, tamaño, tipo de bicicleta y marca.",
+        "answer-2": "Hay un calendario en la página de detalle de la bicicleta. Los números negros representan los días habilitados para realizar la reserva, los números en gris los días que no están disponibles y los números rojos representan los días en los cuales la bicicleta ya esta alquilada.",
+        "answer-3": "Haz clic en \"Regístrate\" y completa el formulario.  También puedes utilizar tu cuenta de Facebook para registrarte. Deberás verificar tu número de móvil, tu correo electrónico y seleccionar un método de pago para poder realizar el alquiler de una bicicleta. A través de este proceso, podemos mediar en un contrato de alquiler válido para ambas partes y asegurarnos de que los pagos se realicen de forma segura.",
+        "answer-4": "Primero escribe en nuestro buscador la ciudad en donde quieres alquilar la bicicleta. Luego selecciona la que más se adapte a tus necesidades. Por último deberás determinar fecha de inicio y fin del alquiler. Toda esta información será enviada al Lister y una vez que este acepte tu solicitud la bicicleta quedará reservada para que puedas disfrutarla. ",
+        "answer-5": "Haz clic en \"Publicar una bicicleta\" y completa el perfil de tu bicicleta con la marca, descripción, imágenes, accesorios y  el precio de alquiler.\nCuando termines, haz clic en \"Publicar mi bicicleta\" y tu bicicleta quedará lista para que otros usuarios puedan alquilarla.",
+        "answer-6": "Eres completamente libre para decidir el precio de alquiler de tu bicicleta. Algo importante a considerar es que el precio semanal, no puede ser inferior al precio diario de la bicicleta. Para determinar el precio de alquiler más apropiado puedes compara tu bicicleta con otras que ya estén publicadas en Listnride.",
+        "answer-7": "Recibirás una notificación por correo electrónico y un sms, que te informará sobre la nueva solicitud de reserva.\nPara aceptar o rechazar dicha solicitud deberás ingresar a tu cuenta y luego ir a \"Solicitudes\". Allí también podrás comenzar un chat con el Rider en el caso de que existan dudas por aclarar. Si aceptas la solicitud, la reserva queda efectiva de inmediato y te enviaremos el detalle de la reserva junto con los datos del Rider.",
+        "answer-8": "¡Absolutamente nada! Promocionar tus bicicletas en Listnride no tiene costo.",
+        "answer-9": "Admitimos el pago a través de Paypal y las tarjetas de crédito más comunes, como por ejemplo Mastercard y Visa.\nLos pagos offline o en efectivo infringen nuestros Términos y condiciones. Podrían resultar en una eliminación de su cuenta de listnride. Está en tu propio interés evitar los pagos en efectivo, ya que nos dificulta proteger tu información y te exponen al fraude y otros problemas de seguridad.",
+        "answer-10": "Debes ingresar tus datos de pago antes de poder solicitar cualquier bicicleta. El pago se realizará solo después de que el Lister haya aceptado tu solicitud. Si tú o el Lister cancelan una solicitud, no se realizará ningún pago.",
+        "question-1": "¿Cómo busco una bicicleta?",
+        "question-2": "¿Cómo sé si la bicicleta está disponible?",
+        "question-3": "¿Cómo creo una cuenta?",
+        "question-4": "¿Cómo alquilo una bici?",
+        "question-5": "¿Cómo publico mis bicicletas?",
+        "question-6": "¿Cómo establezco el precio de alquiler de mi bici?",
+        "question-7": "¿Cómo sé si mi bicicleta es solicitada?",
+        "question-8": "¿Cuánto cuesta publicar mi bicicleta?",
+        "question-9": "¿Qué tipo de métodos de pago se aceptan?",
+        "question-10": "¿Cuándo pago el alquiler de la bicicleta?"
+      }
+    }
+  },
   "insurance": {
     "main": {
       "title": "Nuestro seguro lo protege.\nNo importa si es lister o usuario.",
       "description": "Alquilar tu propia bicicleta implica tener confianza en quien la va a utilizar. ¿Qué pasa si se la roban durante el alquiler? ¿Qué pasa si te la vuelve dañada? Todos los alquileres de listnride \nen Alemania y Austria están asegurados. Y nuestro socio\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> te ayudará cuando necesites ayuda. Puedes contactarlos por teléfono o por correo electrónico. Sencillo. Sin burocracia.",
-      "logo-description": "Socio de seguros"
+      "logo-description": "cobertura provista por"
     },
     "facts": {
       "title": "¡Lo que deberías saber!",
@@ -132,7 +310,7 @@
       },
       "description-lister": "Como lister en listnride desea asegurarse de que usted y su bicicleta estén protegidos contra cualquier eventualidad. Es por eso que cada alquiler en Alemania y Austria, realizado a través de listnride, se asegura automáticamente con efecto inmediato. Los usuarios que soliciten su bicicleta pueden optar por reservar el paquete premium para obtener servicios y garantías adicionales. Este servicio es gratuito para usted como Lister.\n<p>\nSi tiene más preguntas, comuníquese con nosotros las 24 horas por <a3>correo electrónico</a3>.",
       "description-rider": "Ofrecemos dos paquetes de seguros para cada bicicleta que se alquila en Alemania y Austria a través de listnride: El <b1>seguro básico </b1>se incluye en cada alquiler, el <b2>seguro premium </b2>es opcional y extiende la cobertura del seguro con beneficios adicionales. <br3>¡Usted y su bicicleta están siempre protegidos,  ya no hay nada más en el camino que le impida disfrutar el paseo!",
-      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Términos y condiciones del segura \"Bike\" </a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Términos y condiciones del segura \"Bike Assist\"</a>"
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Términos y condiciones del segura \"Bike\" </a0><br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Términos y condiciones del segura \"Bike Assist\"</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description </a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
     }
   },
   "business-community": {
@@ -681,7 +859,7 @@
       "rider-faq": {
         "title": "Preguntas frecuentes de los ciclistas",
         "question-1": "¿Cómo alquilo una bici?",
-        "answer-1": "Antes de poder alquilar una bici debes registrarte. Haz clic en \"Registrarse\" y completa los datos solicitados. Una vez que te hayas registrado, inicie sesión con tu dirección de correo electrónico y contraseña. Después de seleccionar la bici que se adapte a tus necesidades, seleccionea la fecha de inicio, hora de recogida, fecha de finalización y hora de entrega deseada, y luego haz clic en \"Solicitar paseo\". Una vez que tu solicitud sea aceptada por el anunciante, debes confirmar tu solicitud de alquiler haciendo clic en \"Confirmar solicitud\" y llevando a cabo el proceso de pago. Tan pronto como el pago se complete con éxito, recibirás un mensaje de confirmación de reserva y un correo electrónico con todos los detalles relevantes del alquiler.",
+        "answer-1": "Antes de poder alquilar una bici debes registrarte. Haz clic en \"Regístrate\" y completa los datos solicitados. Una vez que te hayas registrado, inicia sesión con tu dirección de correo electrónico y contraseña. Después de seleccionar la bici que se adapte a tus necesidades, selecciona la fecha de inicio, hora de recogida, fecha de finalización y hora de entrega deseada, y luego haz clic en \"Solicitar paseo\". Una vez que tu solicitud sea aceptada por el anunciante, deberás confirmar tu solicitud de alquiler haciendo clic en \"Confirmar solicitud\" y llevando a cabo el proceso de pago. Tan pronto como el pago se complete con éxito, recibirás un mensaje de confirmación de reserva y un correo electrónico con todos los detalles relevantes del alquiler.",
         "question-2": "¿Cómo cancelo una solicitud?",
         "answer-2": "En el estado de la solicitud, puedes cancelar la solicitud en cualquier momento antes de que se complete el proceso de pago haciendo clic en \"Cancelar solicitud\" en la ventana de solicitud.",
         "question-3": "¿Puedo enviar más de una solicitud al mismo tiempo?",

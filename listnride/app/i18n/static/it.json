@@ -2,7 +2,7 @@
   "cities": {
     "shared": {
       "rent-city": "Noleggia una bicicletta",
-      "rent-ebike": "Noleggia una E-Bike",
+      "rent-ebike": "Noleggia una e-Bike",
       "rent-terrain": "Noleggio una mountain bike",
       "rent-road": "Noleggia una bicicletta da strada",
       "rent-folding": "Noleggia una bici pieghevole",
@@ -77,11 +77,189 @@
       "cafes-bars-content": "Se ti piace il cibo vegano e vegetariano, ti consigliamo di visitare <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot </a>presso la Karmeliterplatz. Se preferisci la cucina austriaca più tradizionale, ti consigliamo <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta </a>. Ordina un tradizionale Tafelspitz o Wiener Schnitzel e goditela all'aperto con la vista sulla celebre Opera di Vienna. Sarà una serata fantastica da ricordare! Per finire in bellezza, una bella passeggiata lungo il Danubio. Sulla strada troverai molti bar interessanti e potrai sederti all'aperto sotto le stelle lungo il fiume."
     }
   },
+  "shared": {
+    "list-your-bike": {
+      "bike-category": "Seleziona la categoria della bici",
+      "bike-subcategory": "Specificare la sottocategoria"
+    }
+  },
+  "help-and-service": {
+    "header": "Come possiamo aiutarti?",
+    "faq": {
+      "group-1": {
+        "title": "Per cominciare",
+        "description": "some information about this category",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-2": {
+        "title": "Noleggiare le proprie bici",
+        "description": "some information about this category",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "answer-6": "How do I search for a bike?",
+        "answer-7": "How do I search for a bike?",
+        "answer-8": "How do I search for a bike?",
+        "answer-9": "How do I search for a bike?",
+        "answer-10": "How do I search for a bike?",
+        "answer-11": "How do I search for a bike?",
+        "answer-12": "How do I search for a bike?",
+        "answer-13": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?",
+        "question-6": "How do I search for a bike?",
+        "question-7": "How do I search for a bike?",
+        "question-8": "How do I search for a bike?",
+        "question-9": "How do I search for a bike?",
+        "question-10": "How do I search for a bike?",
+        "question-11": "How do I search for a bike?",
+        "question-12": "How do I search for a bike?",
+        "question-13": "How do I search for a bike?"
+      },
+      "group-3": {
+        "title": "Noleggiare una bici",
+        "description": "some information about this category",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "answer-6": "How do I search for a bike?",
+        "answer-7": "How do I search for a bike?",
+        "answer-8": "How do I search for a bike?",
+        "answer-9": "How do I search for a bike?",
+        "answer-10": "How do I search for a bike?",
+        "answer-11": "How do I search for a bike?",
+        "answer-12": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?",
+        "question-6": "How do I search for a bike?",
+        "question-7": "How do I search for a bike?",
+        "question-8": "How do I search for a bike?",
+        "question-9": "How do I search for a bike?",
+        "question-10": "How do I search for a bike?",
+        "question-11": "How do I search for a bike?",
+        "question-12": "How do I search for a bike?"
+      },
+      "group-4": {
+        "title": "Pagamenti e Costi",
+        "description": "some information about this category",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-5": {
+        "title": "Assicurazione e Sicurezza",
+        "description": "some information about this category",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-6": {
+        "title": "Prenotazione e Cancellazione",
+        "description": "some information about this category",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-7": {
+        "title": "Voucher & Crediti",
+        "description": "some information about this category",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-8": {
+        "title": "Ratings & Feedback",
+        "description": "some information about this category",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      }
+    },
+    "faq-header": "Le 10 domande frequenti in un unico posto.",
+    "faqs": {
+      "top": {
+        "answer-1": "Semplicemente inserisci il nome della località dove cerchi una bicicletta nel banner di ricerca. Clicca su una delle bici che appare tra i risultati per avere più dettagli sulla taglia, l’altezza consigliata per il ciclista, gli accessori inclusi e le recensioni della bici. Per restringere i risultati di ricerca, puoi usare i filtri: Arco di tempo, Numero di bici, Tipo di bici, Tutte le marche.\n",
+        "answer-2": "C’è un calendario nella pagina specifica della bici. I giorni marcati in nero sono quelli in cui si può noleggiare la bici, quelli grigi sono quelli in cui la bici non è disponibile e quelli in rosso sono quelli in cui la bici è già prenotata.",
+        "answer-3": "Crea un account e ottimizza il tuo profilo per avere il meglio con listnride e conoscere persone interessanti con bici speciali. Per creare un account registrati e crea una password oppure registrati con Facebook. Successivamente devi verificare il tuo numero di telefono e indirizzo email e fornire un metodo di pagamento valido, necessario per richiedere una bicicletta. Solo attraverso questo procedimento possiamo fornire ad entrambe le parti un contratto di noleggio valido e assicurarci che il pagamento venga effettuato.",
+        "answer-4": "Il primo passo per noleggiare una bici è richiederla. Semplicemente seleziona inizio e fine del periodo in cui vorresti noleggiare la bici nel calendario nella pagina specifica della bici. Se vuoi ritirare e restituire la bici nello stesso giorno, clicca due volte su quel giorno e poi scegli l’orario. Quando hai richiesto la bici, puoi iniziare una conversazione diretta con il Lister nella chat online. Una volta che il Lister ha accettato la tua richiesta, la bici è prenotata per te.",
+        "answer-5": "Clicca su “Registra una bicicletta” e fornisci tutte le informazioni necessarie sulla tua bici, comprese marca, descrizione, alcune foto, prezzo di noleggio e gli accessori che puoi fornire con la bici, inclusi nel prezzo. Quando hai finito clicca su “Registra la mia bicicletta”. La tua bici è ora disponibile per il noleggio alla community.",
+        "answer-6": "Sei libero di stabilire il prezzo di noleggio, ma il prezzo settimanale non può essere più basso di quello giornaliero. Per determinare il prezzo, puoi comparare la tua bici con altre simili disponibili su listnride.",
+        "answer-7": "Riceverai una email e un sms di notifica, contenenti tutti i dettagli. Vai alla pagina “Richieste” per accettare o rifiutare la richiesta o per iniziare una conversazione in chat con il Rider per chiarire alcuni dettagli. Accetta la richiesta per finalizzare il noleggio. Dopo di che riceverai una email di conferma della prenotazione con tutti i dettagli rilevanti e le informazioni di contatto del Rider.",
+        "answer-8": "Registrare una bici è gratuito e non implica alcun costo fisso.",
+        "answer-9": "Accettiamo diversi metodi di pagamento. Questi dipendono dal paese nel quale è localizzato il tuo conto. Solitamente accettiamo tutti i tipi di carte di credito e Paypal. Pagamenti offline o in contanti sono una violazione dei nostri Termini e Condizioni. Ciò potrebbe comportare una rimozione dell’account da listnride. E’ nel tuo interesse evitare pagamenti al di fuori del nostro sito perchè in questo modo è difficile per noi proteggere le tue informazioni e ti espone al rischio di frode e altri problemi di sicurezza. Per esempio la tua bici non sarebbe assicurata in questo caso.",
+        "answer-10": "Dovrai inserire i tuoi dati di pagamento quando richiedi una bici. Il pagamento avverrà solo dopo che il Lister ha accettato la tua richiesta. Quindi se cancelli la richiesta o non viene accettata, il pagamento non avviene.",
+        "question-1": "Come posso cercare una bici?",
+        "question-2": "Come posso sapere se una bicicletta è disponibile?",
+        "question-3": "Come posso creare un account? ",
+        "question-4": "Come noleggio una bici?",
+        "question-5": "Come posso registrare le mie bici?",
+        "question-6": "Come stabilisco il prezzo di noleggio?",
+        "question-7": "Come posso sapere se la mia bici è stata richiesta?",
+        "question-8": "Quanto costa registrare la mia bici?",
+        "question-9": "Quali metodi di pagamento sono accettati?",
+        "question-10": "Quando pago la bici noleggiata?"
+      }
+    }
+  },
   "insurance": {
     "main": {
       "title": "La nostra assicurazione ti protegge.\nNon importa se sei noleggiatore o noleggiante",
       "description": "Noleggiare una bici speciale significa avere fiducia. Cosa succede se viene rubata durante il noleggio ? Cosa succede se ritorna danneggiata ? Tutti i noleggi listnride in Germania e Austria sono assicurati. E il nostro partner <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> ti aiuterà quando hai bisogno di aiuto. Per telefono. Per e-mail.",
-      "logo-description": "Il nostro partner assicurativo"
+      "logo-description": "copertura fornita da"
     },
     "facts": {
       "title": "Cosa dovresti sapere!",
@@ -132,7 +310,7 @@
       },
       "description-lister": "Come Noleggiatore su listnride vuoi essere sicuro che tu e la tua bicicletta siete protetti da tutti i rischi. Ecco perché ogni noleggio in Germania e Austria, tramite listnride, viene automaticamente assicurato con effetto immediato. Opzionalmente i ciclisti che richiedono la bicicletta possono prenotare il pacchetto premium per ottenere servizi e copertura aggiuntivi. Questo servizio è gratuito per te come Noleggiatore.\n<p>\nSe hai ulteriori domande, contattaci 24 ore su 24 tramite <a3>E-Mail </a3>.",
       "description-rider": "Offriamo due pacchetti assicurativi per ogni bici noleggiata in Germania e in Austria tramite listnride: l' <b1>Assicurazione di base </b1>è incluso nel noleggio, l' <b2>assicurazione Premium </b2>è opzionale e estende la copertura assicurativa con ulteriori vantaggi. <br3>Tu e la tua bici siete sempre protetti in modo ottimale e non vi è nulla di più nel vostro modo di guidare!",
-      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Termini e condizioni assicurazione \"Bike\"</a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Termini e condizioni assicurazione \"Bike Assist\"</a>"
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Termini e condizioni assicurazione \"Bike\"</a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Termini e condizioni assicurazione \"Bike Assist\"</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
     }
   },
   "business-community": {
@@ -248,7 +426,7 @@
       "subhead-1": "The new bike rental",
       "subhead-2": "Rent a bike for free",
       "text-1": "Conceived as the Airbnb for bicycles, listnride offers an alternative to the classic bike rental: private owners, dealers or manufacturers offer their bicycles for rent on listnride. Tourists, citizens, families, sportsmen and business travelers rent the right bike for their style and needs.",
-      "text-2": "Especially for the MCBW, visitors can rent a bike of the brands <b>Brompton Folding Bike</b> and <b>Ampler E-Bike</b> for free <b>(Voucher Code: LNR2018)</b> for half a day. listnride pursues the vision of offering as many people anywhere in the world uncomplicated access to high-quality, stylish bicycles. If you want to explore Munich, go cycling with listnride!",
+      "text-2": "Especially for the MCBW, visitors can rent a bike of the brands <b>Brompton Folding Bike</b> and <b>Ampler e-Bike</b> for free <b>(Voucher Code: LNR2018)</b> for half a day. listnride pursues the vision of offering as many people anywhere in the world uncomplicated access to high-quality, stylish bicycles. If you want to explore Munich, go cycling with listnride!",
       "location-description": "Choose your location",
       "location-text": "The two locations are <b>① Munix Finest Bicycles</b> in Wörthstraße 11 and <b>② listnride</b> at Pündterplatz 1"
     },
@@ -311,7 +489,7 @@
       "faq": "Le domande frequenti"
     },
     "leaos": {
-      "description": "Ebike  design - Leaos",
+      "description": "E-bike design - Leaos",
       "subdescription": "Design. Art. Passion.",
       "feature1-title": "Design italiano",
       "feature1-description": "Pura eleganza. \nEsperienza di guida completamente nuova. \nSimbiosi perfetta di motore e pilota. \n100% Made in Italy.",
@@ -412,7 +590,7 @@
       "item1-title": "Unico E-Drive",
       "item1-description": "Questo innovativo sistema raccoglie energia durante la frenata e la discesa, simile a molti sistemi ibridi, ma è in grado anche di convertire l'energia meccanica in energia elettrica grazie al Sistema Integrato Kinetic Energy (K.E.R.S.).",
       "item2-title": "Meccanismo pieghevole brevettato",
-      "item2-description": "Con un design ultra-portatile, la  VELLO è la più leggera E-Bike disponibile sul mercato (meno di 12kg / 26lbs) e piegandosi si ottiene una dimensione pari a quella di una valigia per un facile trasporto",
+      "item2-description": "Con un design ultra-portatile, la  VELLO è la più leggera e-Bike disponibile sul mercato (meno di 12kg / 26lbs) e piegandosi si ottiene una dimensione pari a quella di una valigia per un facile trasporto",
       "item3-title": "4 modelli differenti",
       "item3-description": "Le biciclette VELLO sono disponibili in 4 diversi modelli, con e-drive e senza: \"Urbano\", \"Rocky\", \"Speedster\" e \"VELLO BIKE +\". Tutti i modelli offrono il meglio della guida urbana e sono dotati di componenti high-end di città, trekking o road bike.",
       "available-cities": "Disponibile a Berlino e a Monaco di Baviera",
@@ -465,8 +643,8 @@
       "bottom-text": "Per guidare con il massimo stile, abbiamo anche l'abbigliamento bonvelo, felpe, camicie e zaini. Controlla la nostra offerta su <a href=\"https://bonvelo.de/wear\">bonvelo.de/wear </a>"
     },
     "motoparilla": {
-      "meta-title": "Noleggia e prova la Moto Parilla Carbon SUV E-Bike a Monaco di Baviera",
-      "meta-description": "Il Carbon SUV E-Bike di Moto Parilla può essere testato a Monaco di Baviera. Basta prenotarsi online e godersi la corsa!",
+      "meta-title": "Noleggia e prova la Moto Parilla Carbon SUV e-Bike a Monaco di Baviera",
+      "meta-description": "Il Carbon SUV e-Bike di Moto Parilla può essere testato a Monaco di Baviera. Basta prenotarsi online e godersi la corsa!",
       "description": "Moto Parilla - Carbon SUV E-Bikes design progettato in Italia",
       "subdescription": "La miscela perfetta del design, dell'ingegneria e dell'arte in una nuova modalità di trasporto rivoluzionario. Prenotane una su listnride oggi!",
       "item1-title": "Pneumatici più grandi del normale",
@@ -475,12 +653,12 @@
       "item2-description": "Data la sua presenza imponente, il Carbon SUV è portato a fare un'impressione particolare su amici e persone quando si passa lungo la strada. La sua guida è l'unico modo per capire perché tutti ne stanno parlando - è un'esperienza unica.",
       "item3-title": "Motore elettrico",
       "item3-description": "Le modalità di pedalata assistita o a motore offrono la massima comodità, offrendo un giro regolare senza la necessità di pedalare. Il cambio ausiliario consente al pilota di aggiungere potenza in qualsiasi modalità di guida.",
-      "test-bike": "Prova una Moto Parilla Carbon SUV E-Bike a Monaco di Baviera",
+      "test-bike": "Prova una Moto Parilla Carbon SUV e-Bike a Monaco di Baviera",
       "testimonial-1": "Questa bicicletta è essenzialmente una mountain bike potenziata, fatta principalmente con fibra di carbonio",
-      "testimonial-2": "Questa E-Bike è un mix tra una macchina da corsa e un corpo bionico",
+      "testimonial-2": "Questa e-Bike è un mix tra una macchina da corsa e un corpo bionico",
       "testimonial-3": "Wow! La voglio, anche solo per guardarla. È davvero un'opera d'arte!",
-      "find-out-more": "Ulteriori informazioni sulla Moto Parilla Carbon SUV E-Bike",
-      "faq-description": "Per saperne di più sulla SUV Ebike e su come puoi <a href=\"http://www.motoparilla.it/store\">acquistarne una </a> controlla le <a href=\"http://www.motoparilla.it/faq/\">FAQ </a>.",
+      "find-out-more": "Ulteriori informazioni sulla Moto Parilla Carbon SUV e-Bike",
+      "faq-description": "Per saperne di più sulla SUV e-bike e su come puoi <a href=\"http://www.motoparilla.it/store\">acquistarne una </a> controlla le <a href=\"http://www.motoparilla.it/faq/\">FAQ </a>.",
       "faq-question-1": "Quanto si può alzare la sella ?",
       "faq-answer-1": "Il sedile può estendersi fino a 5 cm.",
       "faq-question-2": "Dove si trova la batteria?",
@@ -616,7 +794,7 @@
     "subheader": "Come i convenzionali servizi di noleggio biciclette ci hanno ispirato a creare una comunità di bike sharing",
     "community": {
       "title": "listnride: l'idea che ha generato una comunità",
-      "content": "Qui a listnride, tutti amiamo le biciclette. Ognuno di noi ha la propria tipologia preferita: dalle biciclette da città alle mountain bike, dalle veloci bici da strada alle E-bike. Ecco perché abbiamo iniziato a chiederci: perché non è possibile scegliere e avere una bicicletta specifica che ti serve per un determinato scopo in qualsiasi momento, indipendentemente dal fatto che tu sia in viaggio o nella tua città di origine? Saremo sempre vincolati dalle biciclette a basso prezzo dal negozio di noleggio locale? E così nasce l'idea di costruire la comunità bike sharing di listnride."
+      "content": "Qui a listnride, tutti amiamo le biciclette. Ognuno di noi ha la propria tipologia preferita: dalle biciclette da città alle mountain bike, dalle veloci bici da strada alle e-bike. Ecco perché abbiamo iniziato a chiederci: perché non è possibile scegliere e avere una bicicletta specifica che ti serve per un determinato scopo in qualsiasi momento, indipendentemente dal fatto che tu sia in viaggio o nella tua città di origine? Saremo sempre vincolati dalle biciclette a basso prezzo dal negozio di noleggio locale? E così nasce l'idea di costruire la comunità bike sharing di listnride."
     },
     "future": {
       "title": "listnride: a tutta velocità verso il futuro",

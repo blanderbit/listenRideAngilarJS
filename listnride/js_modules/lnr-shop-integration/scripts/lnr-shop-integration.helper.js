@@ -42,6 +42,8 @@ var lnrHelper = {
   postInitSingleUser: function () {
     var userId = lnrConstants.parentElement.dataset.user;
     var userLang = lnrConstants.parentElement.dataset.lang;
+    // remove unicode special chars and tabs
+    userLang = lnrHelper.removeUnicode(userLang);
     var selectedLocation = '';
     var selectedSize = '';
 
@@ -85,6 +87,8 @@ var lnrHelper = {
       if (children[loop].dataset.user) {
         var userId = children[loop].dataset.user;
         var userLang = children[loop].dataset.lang;
+        // remove unicode special chars and tabs
+        userLang = lnrHelper.removeUnicode(userLang);
         var selectedLocation = '';
         var selectedSize = '';
 
@@ -420,14 +424,18 @@ var lnrHelper = {
     // add bikes grid
     var lnr = lnrConstants.isSingleUserMode ? lnrConstants.parentElement : document.getElementById(userId);
     var gridId = userId + '-lnr-grid';
-    lnr.innerHTML += '<div class="mdl-grid mdl-grid--no-spacing" id="' + gridId + '"></div>';
-    // get region specific lnr link
-    if (userLang) {
-      var lnrLink = lnrHelper.getLnrLink(userLang);
-      lnr.innerHTML += '<div class="lnr-brand"><span>powered by&nbsp;</span><a href="' + lnrLink + '" target="_blank">listnride</a></div>';
-    }
-    // bikes grid element
     var grid = document.getElementById(gridId);
+
+    // check if grid isn't exist on a page
+    if (grid === null) {
+      lnr.innerHTML += '<div class="mdl-grid mdl-grid--no-spacing" id="' + gridId + '"></div>';
+      // get region specific lnr link
+      if (userLang) {
+        var lnrLink = lnrHelper.getLnrLink(userLang);
+        lnr.innerHTML += '<div class="lnr-brand"><span>powered by&nbsp;</span><a href="' + lnrLink + '" target="_blank">listnride</a></div>';
+      }
+      grid = document.getElementById(gridId);
+    }
 
     // clear bikes grid
     grid.innerHTML = '';
@@ -442,7 +450,7 @@ var lnrHelper = {
         rideId = ride.id,
         categoryDesc = lnrHelper.categoryFilter(userId, category),
         price = parseInt(ride.price_from),
-        imageUrl = ride.image_file_1.image_file_1.small.url,
+        imageUrl = ride.image_file_1.small ? ride.image_file_1.small.url : ride.image_file_1.image_file_1.small.url,
         rideDescription = ride.description;
 
       if (ride.size === 0) {
@@ -652,6 +660,8 @@ var lnrHelper = {
    * @returns {void}
    */
   spawnWizard: function (userId, bikeId, userLang) {
+    // check if we support this lang, by default it would be English version
+    if (!lnrConstants.shopUrl.production[userLang]) { userLang = 'en' }
     // select shop solution based on the environment
     var url = lnrConstants.env === 'staging' ? lnrConstants.shopUrl.staging[userLang] : lnrConstants.shopUrl.production[userLang];
     // window dimensions, url, parameter, and open type
@@ -708,7 +718,9 @@ var lnrHelper = {
 
     // unique cities of the bikes
     rides.forEach(function (ride) {
-      var city = lnrHelper.toSentenceCase(ride.city);
+      // try to take city with english translation
+      var city = ride.en_city ? ride.en_city : ride.city;
+      city = lnrHelper.toSentenceCase(city);
       if (cities.includes(city) === false) {
         cities.push(city);
       }
@@ -763,5 +775,15 @@ var lnrHelper = {
     return str.replace(/\w\S*/g, function (txt) {
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
+  },
+  /**
+   * remove unicode symbols and zero width space
+   * @param {String} str any string
+   * @returns {String} string without unicode and spaces
+   */
+  removeUnicode: function(str) {
+    return str.replace(/&[#\d\w]{3,20};/gm, '') // remove all unicode
+      .replace(/\u200B/g, '') // remove zero width space
+      .trim(); // remove spaces
   }
 };

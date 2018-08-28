@@ -764,58 +764,23 @@
 
       $stateProvider.state({
         name: 'jobs',
-        abstract: true,
-        url: '',
-        templateUrl: 'app/modules/jobs/jobs.template.html',
-        controller: 'StaticController',
-        resolve: {
-          data: function (ngMeta) {
-            ngMeta.setTag("noindex", true);
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'jobs-list',
-        parent: 'jobs',
-        url: '/jobs',
-        views: {
-          'jobsView': {
-            templateUrl: 'app/modules/jobs/jobs.list.template.html',
-            controller: 'JobsListController as jobs'
+        url: '/jobs?position',
+        template: '<jobs></jobs>',
+        reloadOnSearch: false,
+        params: {
+          position: {
+            value: "",
+            squash: true
           }
         },
         resolve: {
-            data: function ($translate, ngMeta) {
-                $translate(["meta.jobs.meta-title", "meta.jobs.meta-description"])
-                    .then(function (translations) {
-                        ngMeta.setTitle(translations["meta.jobs.meta-title"]);
-                        ngMeta.setTag("description", translations["meta.jobs.meta-description"]);
-                        ngMeta.setTag("noindex", false);
-                    })
-            }
-        },
-        meta: {
-            disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'jobs-details',
-        parent: 'jobs',
-        url: '/jobs/position/{positionId}',
-        views: {
-          'jobsView': {
-            templateUrl: 'app/modules/jobs/jobs.details.template.html',
-            controller: 'JobsDetailsController as jobs'
-          }
-        },
-        resolve: {
-          data: function (ngMeta) {
-            ngMeta.setTag("noindex", false);
+          data: function ($translate, ngMeta) {
+            $translate(["meta.jobs.meta-title", "meta.jobs.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.jobs.meta-title"]);
+                ngMeta.setTag("description", translations["meta.jobs.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
           }
         },
         meta: {
@@ -1330,6 +1295,25 @@
             value: "",
             squash: true
           }
+        }
+      });
+
+      $stateProvider.state({
+        name: 'faq',
+        url: '/faq',
+        template: '<faq></faq>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["faq.meta-title", "faq.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["faq.meta-title"]);
+                ngMeta.setTag("description", translations["faq.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
         }
       });
 
