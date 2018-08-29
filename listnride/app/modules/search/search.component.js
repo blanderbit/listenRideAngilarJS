@@ -24,7 +24,6 @@ angular.module('search',[]).component('search', {
         search.location = $stateParams.location;
         search.showBikeWindow = showBikeWindow;
         search.placeChanged = placeChanged;
-        search.onButtonClick = onButtonClick;
         search.onCategoryChange = onCategoryChange;
         search.onMapClick = onMapClick;
         search.onBikeHover = onBikeHover;
@@ -108,20 +107,6 @@ angular.module('search',[]).component('search', {
         search.location = location;
         setMetaTags(location);
         populateBikes(location);
-      }
-
-      // TODO: rename this function. Not clear name.
-      function onButtonClick() {
-        $state.go(
-          // current state
-          $state.current,
-          // state params
-          { location: search.location },
-          // route options
-          // do not remove inherit prop, else map tiles stop working
-          { notify: false }
-        );
-        populateBikes(search.location);
       }
 
       function onCategoryChange(category) {
