@@ -60,6 +60,7 @@ angular.module('listnride', [
   'votec-integration',
   'cocomatIntegration',
   'leaosIntegration',
+  'veloheldIntegration',
   'crossride',
   'inVeloVeritas',
   'velothonBikerental',

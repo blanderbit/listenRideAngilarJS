@@ -1158,6 +1158,25 @@
       });
 
       $stateProvider.state({
+        name: 'veloheld',
+        url: '/brands/veloheld',
+        template: '<veloheld></veloheld>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brand-integration.veloheld.meta-title", "meta.brand-integration.veloheld.meta-descr"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brand-integration.veloheld.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brand-integration.veloheld.meta-descr"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'factoryberlin',
         url: '/factoryberlin',
         template: '<user></user>',
