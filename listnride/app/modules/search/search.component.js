@@ -72,6 +72,9 @@ angular.module('search',[]).component('search', {
           params,
           { notify: false }
         ).then(function(){
+          $timeout(function () {
+            refreshMarkerCluster(search.map);
+          },0);
           if (typeof cb === "function") cb();
         });
       };
@@ -165,22 +168,15 @@ angular.module('search',[]).component('search', {
         }];
         search.titles = [];
 
+        // BING
+        // search.latLng = response.data.location.point.coordinates;
+        // search.locationBounds = response.data.location.bbox;
+
+        // Google
         search.latLng = response.data.location.geometry.location;
-        // search.latLng = response.data.location.point.coordinates; BING
         search.locationBounds = response.data.location.geometry.viewport;
-        // search.locationBounds = response.data.location.bbox; BING
 
         initializeGoogleMap();
-
-        if (search.bikes.length > 0) {
-          search.mapOptions.lat = search.bikes[0].lat_rnd;
-          search.mapOptions.lng = search.bikes[0].lng_rnd;
-          // search.mapOptions.zoom = 11;
-        } else {
-          search.mapOptions.lat = 51.1657;
-          search.mapOptions.lng = 10.4515;
-          // search.mapOptions.zoom = 4;
-        }
       }
 
       // ============================
@@ -202,6 +198,7 @@ angular.module('search',[]).component('search', {
       }
 
       function initializeGoogleMap() {
+        // without timeout map will take an old array with bikes
         $timeout(function(){
           NgMap.getMap({ id: "searchMap" }).then(function (map) {
             map.fitBounds(correctBounds());
@@ -236,6 +233,20 @@ angular.module('search',[]).component('search', {
         var loc = new google.maps.LatLng(lat, lng);
         bounds.extend(loc);
         return bounds
+      }
+
+      // Clear Markers, Add new and redraw map on each state update
+      function refreshMarkerCluster(map) {
+        var markers = search.filteredBikes.map(function (bike) {
+          return createMarkerForBike(bike, map);
+        });
+        search.clusterer.clearMarkers();
+        /**
+         * Add new markers and redraw a map
+         * @param {Array} markers google.maps.Marker
+         * @param {Boolean} opt_nodraw
+         */
+        search.clusterer.addMarkers(markers, false);
       }
 
       function initMarkerClusterer(map) {
