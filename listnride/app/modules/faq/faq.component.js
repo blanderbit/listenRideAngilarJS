@@ -3,22 +3,20 @@
 angular.module('faq', []).component('faq', {
   templateUrl: 'app/modules/faq/faq.template.html',
   controllerAs: 'faq',
-  controller: ['$state', '$translate',
-    function FaqController($state, $translate) {
+  controller: ['$state', '$translate', '$translatePartialLoader', '$stateParams', 'ENV',
+    function FaqController($state, $translate, $tpl, $stateParams, ENV) {
       var faq = this;
+      $tpl.addPart(ENV.staticTranslation);
 
       faq.$onInit = function() {
         // variables
         faq.data = [];
-
-        //TODO : remove as a route params
-        faq.hashLastSymbol = +location.hash.slice(-1);
-        faq.activeGroupIndex = faq.hashLastSymbol > 0 ? faq.hashLastSymbol : 1;
+        faq.activeQuestion = '';
+        faq.activeGroupIndex = +$stateParams.group;
+        faq.toggleQuestion = toggleQuestion;
 
         // methods
-        faq.groupChange = groupChange;
         faq.getData = getData;
-        faq.iterateNumber = iterateNumber;
 
         // invocations
         faq.getData();
@@ -36,12 +34,12 @@ angular.module('faq', []).component('faq', {
           {
             title: 'help-and-service.faq.group-2.title',
             icon: 'app/assets/ui_icons/help/2_renting-out-01.svg',
-            questionsCount: 3
+            questionsCount: 13
           },
           {
             title: 'help-and-service.faq.group-3.title',
             icon: 'app/assets/ui_icons/help/3_renting-01.svg',
-            questionsCount: 2
+            questionsCount: 12
           },
           {
             title: 'help-and-service.faq.group-4.title',
@@ -51,35 +49,29 @@ angular.module('faq', []).component('faq', {
           {
             title: 'help-and-service.faq.group-5.title',
             icon: 'app/assets/ui_icons/help/5_insurance-01.svg',
-            questionsCount: 8
+            questionsCount: 0
           },
           {
             title: 'help-and-service.faq.group-6.title',
             icon: 'app/assets/ui_icons/help/6_booking-01.svg',
-            questionsCount: 2
+            questionsCount: 5
           },
           {
             title: 'help-and-service.faq.group-7.title',
             icon: 'app/assets/ui_icons/help/7_vouchers-01.svg',
-            questionsCount: 1
+            questionsCount: 3
           },
           {
             title: 'help-and-service.faq.group-8.title',
             icon: 'app/assets/ui_icons/help/8_ratings-01.svg',
-            questionsCount: 2
+            questionsCount: 4
           }
         ]
       }
 
-      function iterateNumber(num) {
-        return new Array(num);
+      function toggleQuestion(parentIndex, index) {
+        faq.activeQuestion = faq.activeQuestion == parentIndex + '_' + index ? '' : parentIndex + '_' + index;
       }
-
-      function groupChange(index) {
-        // TODO: change route params
-        faq.activeGroupIndex = index;
-      }
-
     }
   ]
 });
