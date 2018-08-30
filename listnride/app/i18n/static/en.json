@@ -88,8 +88,8 @@
     "faq": {
       "group-1": {
         "title": "Getting Started",
-        "description": "We help you how you can find the perfect bike for your needs. You will experience what it means to be part of our bike-sharing community.",
-        "answer-1": "Looking for a bike in Vienna? Just type Vienna in the search bar. Our super fast search engine will show you all results including a map view with the locations. Searching for a location is currently the only search option. <img src=\"//www.listnride.com/app/assets/ui_images/static/lnr-landing-insurance.jpg\">",
+        "description": "We help you to find the perfect bike for your needs. You will experience what it means to be part of our bike-sharing community.",
+        "answer-1": "Looking for a bike in Vienna? Just type Vienna in the search bar. Our super fast search engine will show you all results including a map view with the locations. Searching for a location is currently the only search option. ",
         "answer-2": "The search results will show you all bikes in a given location. Say you are only interested in road bikes. Just use our filter Bike Type  and let you show only road bikes.\nTo narrow your search result, you can also use the filters: Timespan , All Sizes, Bike Type  and Brands.",
         "answer-3": "There is a calendar on the bike’s detail page. Black numbers represent bookable days, greyed-out numbers are not available and red numbers represent already booked days.",
         "answer-4": "Click on sign-up and fill out the required information with a few details to get the best out of listnride and meet people with great bikes! You can also use the one-click Facebook registration for signing-up. You need to verify your mobile number, email address, and provide a valid method of payment first, in order to request a bike. Your personal data will be stored safely. Through this process we can mediate a valid rental contract for both parties and make sure payments happen in a secure manner.",
