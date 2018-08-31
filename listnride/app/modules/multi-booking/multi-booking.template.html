@@ -114,6 +114,7 @@
                   ng-model="multiBooking.form.end_at"
                   placeholder="{{ 'shared.to' | translate }}"
                 >
+                  <!-- 17 means hours, working hours start from 06:00 to 22:00 -->
                   <md-option
                     ng-repeat="i in [].constructor(17) track by $index"
                     value="{{$index + 6}}"

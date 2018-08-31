@@ -70,7 +70,8 @@ angular.module('faq', []).component('faq', {
       }
 
       function toggleQuestion(parentIndex, index) {
-        faq.activeQuestion = faq.activeQuestion == parentIndex + '_' + index ? '' : parentIndex + '_' + index;
+        var activeClass = parentIndex + '_' + index;
+        faq.activeQuestion = faq.activeQuestion == activeClass ? '' : activeClass;
       }
     }
   ]

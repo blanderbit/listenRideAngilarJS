@@ -167,11 +167,6 @@ angular.module('search',[]).component('search', {
           bikes: search.bikes
         }];
         search.titles = [];
-
-        // BING
-        // search.latLng = response.data.location.point.coordinates;
-        // search.locationBounds = response.data.location.bbox;
-
         // Google
         search.latLng = response.data.location.geometry.location;
         search.locationBounds = response.data.location.geometry.viewport;
