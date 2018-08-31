@@ -451,7 +451,7 @@ angular.module('listings', []).component('listings', {
       listings.get = function () {
         api.get('/users/' + $localStorage.userId + "/rides").then(
           function (response) {
-            listings.bikes = response.data;
+            listings.bikes = response.data.bikes;
             listings.mirror_bikes = response.data;
             if (listings.input) { listings.search() }
             if (listings.listView === false) {
