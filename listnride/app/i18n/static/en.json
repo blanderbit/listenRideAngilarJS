@@ -500,6 +500,7 @@
     "veloheld.hero-description": "Test veloheld bikes and experience the pure aesthetics and functional techniques of a custom made steel bike: road bike, cyclocross bike or city bike!",
     "veloheld": {
       "title": "veloheld: Your individual bike",
+      "test-bike": "Test your bikes in city1, city2",
       "description": "veloheld bikes stand for pure aesthetic and functional technics – they are perfectly prepared for the dynamic and all the impassibility of everyday life. But above all, they are very fun to ride!",
       "feature-1": {
         "title": "Timeless and Sustainable",
@@ -507,7 +508,7 @@
       },
       "feature-2": {
         "title": "Custom Color ",
-        "description": "If you don’t like the standard paint schemes you can \nchoose your personal colour out of 200 RAL-colours."
+        "description": "If you don’t like our standard paint schemes \nyou can choose your personal colour out \nof 200 RAL-Colours, which we durably \npowder-coat on the veloheld frame."
       },
       "feature-3": {
         "title": "Custom Build",
