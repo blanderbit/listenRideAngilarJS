@@ -7,48 +7,34 @@
     </div>
 
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
-      <a ui-sref="faq({'#': 'group1'})" class="help__group-card" flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/help/1_getting-started-01.svg"></md-icon>
-        <p class="md-subhead lnr-center">{{ 'help-and-service.faq.group-1.title' | translate }}</p>
+      <a
+        ng-repeat="i in [].constructor(4) track by $index"
+        ui-sref="faq({'group': $index+1})"
+        class="help__group-card"
+        flex-gt-xs="25"
+        layout="column"
+        layout-align="none center"
+        layout-margin>
+        <md-icon
+          class="lnr-icn-mlrg"
+          md-svg-src="app/assets/ui_icons/help/group-{{$index+1}}.svg"></md-icon>
+        <p class="md-subhead lnr-center" translate="help-and-service.faq.group-{{$index+1}}.title"></p>
       </a>
-
-      <a ui-sref="faq({'#': 'group2'})" class="help__group-card" flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/help/2_renting-out-01.svg"></md-icon>
-        <p class="md-subhead lnr-center">{{ 'help-and-service.faq.group-2.title' | translate }}</p>
-      </a>
-
-      <a ui-sref="faq({'#': 'group3'})" class="help__group-card" flex-gt-xs="25" layout="column" layout-wrap layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/help/3_renting-01.svg"></md-icon>
-        <p class="md-subhead lnr-center">{{ 'help-and-service.faq.group-3.title' | translate }}</p>
-      </a>
-
-      <a ui-sref="faq({'#': 'group4'})" class="help__group-card" flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/help/4_payments-01.svg"></md-icon>
-        <p class="md-subhead lnr-center">{{ 'help-and-service.faq.group-4.title' | translate }}</p>
-      </a>
-
     </div>
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
-      <a ui-sref="faq({'#': 'group5'})" class="help__group-card" flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/help/5_insurance-01.svg"></md-icon>
-        <p class="md-subhead lnr-center">{{ 'help-and-service.faq.group-5.title' | translate }}</p>
+      <a
+        ng-repeat="i in [].constructor(4) track by $index"
+        ui-sref="faq({'group': $index+5})"
+        class="help__group-card"
+        flex-gt-xs="25"
+        layout="column"
+        layout-align="none center"
+        layout-margin>
+        <md-icon
+          class="lnr-icn-mlrg"
+          md-svg-src="app/assets/ui_icons/help/group-{{$index+5}}.svg"></md-icon>
+        <p class="md-subhead lnr-center" translate="help-and-service.faq.group-{{$index+5}}.title"></p>
       </a>
-
-      <a ui-sref="faq({'#': 'group6'})" class="help__group-card" flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/help/6_booking-01.svg"></md-icon>
-        <p class="md-subhead lnr-center">{{ 'help-and-service.faq.group-6.title' | translate }}</p>
-      </a>
-
-      <a ui-sref="faq({'#': 'group7'})" class="help__group-card" flex-gt-xs="25" layout="column" layout-wrap layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/help/7_vouchers-01.svg"></md-icon>
-        <p class="md-subhead lnr-center">{{ 'help-and-service.faq.group-7.title' | translate }}</p>
-      </a>
-
-      <a ui-sref="faq({'#': 'group8'})" class="help__group-card" flex-gt-xs="25" layout="column" layout-align="none center" layout-margin>
-        <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/help/8_ratings-01.svg"></md-icon>
-        <p class="md-subhead lnr-center">{{ 'help-and-service.faq.group-8.title' | translate }}</p>
-      </a>
-
     </div>
   </div>
   <!-- end FAQs -->
@@ -60,8 +46,8 @@
       <h2 class="md-headline">{{ 'help-and-service.faq-header' | translate }}</h2>
     </div>
 
-    <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
-      <div flex-gt-sm="45" layout="column" layout-margin>
+    <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding layout-margin>
+      <div flex-gt-sm="45" layout="column">
         <!-- FAQ_1 -->
         <h3 class="md-subhead lnr-clickable lnr-arrow-left" ng-click="help1=!help1" ng-class="help1 ? 'accordion__tab--opened' : ''">
           {{ 'help-and-service.faqs.top.question-1' | translate }}
@@ -99,7 +85,7 @@
         </div>
       </div>
 
-      <div flex-gt-sm="45" flex-gt-sm-offset="5" layout="column" layout-margin>
+      <div flex-gt-sm="45" flex-gt-sm-offset="5" layout="column">
         <!-- FAQ_6 -->
         <h3 class="md-subhead lnr-clickable lnr-arrow-left" ng-click="help6=!help6" ng-class="help6 ? 'accordion__tab--opened' : ''">
           {{ 'help-and-service.faqs.top.question-6' | translate }}

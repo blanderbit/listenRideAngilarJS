@@ -96,7 +96,7 @@
           </div>
           <!-- END PREMIUM INSURANCE -->
           <div layout="row" layout-xs="column" layout-align="space-between none">
-            <div flex="33" flex-xs="100">
+            <div flex-gt-xs="33">
               <p class="md-title">{{ 'booking.overview.invoice-address' | translate }}</p>
               <p class="md-body-1" ng-if="!overview.parent.user.locations.billing">
                 <span class="lnr-bold">
@@ -122,7 +122,7 @@
               <md-divider></md-divider>
               <div class="spacer-xs"></div>
             </div>
-            <div flex="33" flex-xs="100">
+            <div flex-gt-xs="33">
               <p class="md-title">{{ 'booking.overview.payment' | translate }}</p>
               <div ng-if="overview.parent.user.current_payment_method.type == 1">
                 <p class="md-body-1">
@@ -142,7 +142,7 @@
               <md-divider></md-divider>
               <div class="spacer-xs"></div>
             </div>
-            <div flex="33" flex-xs="100">
+            <div flex-gt-xs="33">
               <p class="md-title">{{ 'booking.overview.redeem-voucher' | translate }}</p>
               <div layout="row" layout-xs="column">
                 <md-input-container flex-gt-xs="70">

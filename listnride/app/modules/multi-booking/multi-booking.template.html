@@ -74,8 +74,8 @@
           </md-input-container>
         </div>
         <div flex="100" flex-gt-sm="50" class="booking__daterange-focus">
-          <div class="lnr-margin-lrg-bottom" layout="column" layout-gt-sm="row">
-            <div flex="50" class="lnr-sm-margin-bottom lnr-gt-sm-padding-right">
+          <div class="" layout="column" layout-gt-sm="row">
+            <div flex-gt-sm="50" class="lnr-sm-margin-bottom lnr-gt-sm-padding-right">
               <md-input-container> <!-- DATE-FILTER -->
                 <label>{{ 'multi-booking.rental-period' | translate }} *</label>
                 <input-range
@@ -88,7 +88,75 @@
                 </input-range>
               </md-input-container>
             </div>
-            <div flex="50" class="lnr-gt-sm-padding-left">
+            <div flex-gt-sm="50" class="lnr-gt-sm-padding-left" layout="row">
+              <md-input-container flex>
+                <label>{{ 'shared.from' | translate }} {{ calendar.startDate | date }}</label>
+                <md-select
+                  ng-disabled="!multiBooking.form.start_date"
+                  ng-change="multiBooking.onTimeChange('start')"
+                  ng-model="multiBooking.form.start_at"
+                  placeholder="{{ 'shared.from' | translate }}"
+                >
+                  <md-option
+                    ng-repeat="i in [].constructor(17) track by $index"
+                    value="{{$index + 6}}"
+                  >
+                    {{ ($index + 6) + ":00" }}
+                  </md-option>
+                </md-select>
+              </md-input-container>
+              <div flex="5"></div>
+              <md-input-container flex>
+                <label>{{ 'shared.to' | translate }}  {{ calendar.endDate | date }}</label>
+                <md-select
+                  ng-disabled="!multiBooking.form.start_date"
+                  ng-change="multiBooking.onTimeChange('end')"
+                  ng-model="multiBooking.form.end_at"
+                  placeholder="{{ 'shared.to' | translate }}"
+                >
+                  <!-- 17 means hours, working hours start from 06:00 to 22:00 -->
+                  <md-option
+                    ng-repeat="i in [].constructor(17) track by $index"
+                    value="{{$index + 6}}"
+                  >
+                    {{ ($index + 6) + ":00" }}
+                  </md-option>
+                </md-select>
+              </md-input-container>
+            </div>
+          </div>
+          <div class="lnr-margin-lrg-bottom" layout="column" layout-gt-sm="row">
+            <div flex-gt-sm="50" class="lnr-sm-margin-bottom lnr-gt-sm-padding-right">
+              <md-input-container> <!-- ACCESSORIES-FILTER -->
+                <label>{{ 'multi-booking.do-you-need-accessories' | translate }}</label>
+                <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
+                    <md-button
+                      class="md-lined lnr-no-margin lnr__filter-btn md-right-arrow"
+                      ng-click="$mdOpenMenu($event); multiBooking.closeDateRange()"
+                      style="width: 100%;text-align: left;"
+                    >
+                      <span class="multi-booking__filter-text" ng-if="!multiBooking.form.accessories.length">
+                        {{ 'multi-booking.no-accessories' | translate }}
+                      </span>
+                      <span class="multi-booking__filter-text" ng-if="multiBooking.form.accessories.length">
+                        {{multiBooking.showSelectedValuesAccessories()}}
+                      </span>
+                    </md-button>
+                    <md-menu-content width="5" class="lnr-100mh">
+                      <div class="lnr-padding">
+                        <div class="lnr-right">
+                          <md-button show-xs hide-gt-xs class="md-icon-button md-warn md-menu__close-btn lnr-md-no-focused">
+                            <md-icon md-font-icon="fa-times" class="fa"></md-icon>
+                          </md-button>
+                        </div>
+                        <accessories-filter current-accessories="multiBooking.form.accessories">
+                        </accessories-filter>
+                      </div>
+                    </md-menu-content>
+                </md-menu>
+              </md-input-container>
+            </div>
+            <div flex-gt-sm="50" class="lnr-gt-sm-padding-left">
               <md-input-container> <!-- BIKE-COUNT-FILTER -->
                 <label>{{ 'multi-booking.how-many-bikes' | translate }} *</label>
                 <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
@@ -116,34 +184,6 @@
               </md-input-container>
             </div>
           </div>
-          <md-input-container> <!-- ACCESSORIES-FILTER -->
-            <label>{{ 'multi-booking.do-you-need-accessories' | translate }}</label>
-            <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
-                <md-button
-                  class="md-lined lnr-no-margin lnr__filter-btn md-right-arrow"
-                  ng-click="$mdOpenMenu($event); multiBooking.closeDateRange()"
-                  style="width: 100%;text-align: left;"
-                >
-                  <span class="multi-booking__filter-text" ng-if="!multiBooking.form.accessories.length">
-                    {{ 'multi-booking.no-accessories' | translate }}
-                  </span>
-                  <span class="multi-booking__filter-text" ng-if="multiBooking.form.accessories.length">
-                    {{multiBooking.showSelectedValuesAccessories()}}
-                  </span>
-                </md-button>
-                <md-menu-content width="5" class="lnr-100mh">
-                  <div class="lnr-padding">
-                    <div class="lnr-right">
-                      <md-button show-xs hide-gt-xs class="md-icon-button md-warn md-menu__close-btn lnr-md-no-focused">
-                        <md-icon md-font-icon="fa-times" class="fa"></md-icon>
-                      </md-button>
-                    </div>
-                    <accessories-filter current-accessories="multiBooking.form.accessories">
-                    </accessories-filter>
-                  </div>
-                </md-menu-content>
-            </md-menu>
-          </md-input-container>
         </div>
       </div>
 

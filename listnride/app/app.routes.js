@@ -1319,8 +1319,15 @@
 
       $stateProvider.state({
         name: 'faq',
-        url: '/faq',
+        url: '/faq?group',
         template: '<faq></faq>',
+        reloadOnSearch: false,
+        params: {
+          position: {
+            value: "",
+            squash: true
+          }
+        },
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["faq.meta-title", "faq.meta-description"])
