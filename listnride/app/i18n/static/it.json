@@ -486,6 +486,7 @@
   "brand-integration": {
     "shared": {
       "choose-location": "Scegli una località",
+      "no-bikes-found": "Oops ... purtroppo non ci sono ancora bici in questa località.",
       "faq": "Le domande frequenti"
     },
     "leaos": {
