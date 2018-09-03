@@ -49,6 +49,7 @@
     "ng-meta": "^1.0.3",
     "ngmap": "^1.17.6",
     "ngstorage": "^0.3.11",
+    "request": "^2.88.0",
     "slick-carousel": "^1.6.0"
   },
   "devDependencies": {

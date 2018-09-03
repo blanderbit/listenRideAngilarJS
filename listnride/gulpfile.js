@@ -27,6 +27,7 @@ var ngAnnotate = require('gulp-ng-annotate');
 var ngConstant = require('gulp-ng-constant');
 var templateCache = require('gulp-angular-templatecache');
 var htmlReplace = require('gulp-html-replace');
+var request = require('request');
 var scope;
 var scopeSelector;
 var path = config.path;
@@ -99,6 +100,9 @@ gulp.task('disable-https', disableHttps);
 gulp.task('default', ['local']);
 gulp.task('deploy', deploy);
 gulp.task('local', local);
+
+// create the sitemap
+gulp.task('generate-sitemap', generateSitemap);
 
 /**
  * create two new variables for translation provider
@@ -412,6 +416,36 @@ function imagesSvg() {
         .pipe(gulp.dest(path.dist.icons));
 }
 /**
+ * generates sitemap from local template and remote seo pages
+ * before every deployment for up-to-date seo info
+ * @returns {gulp} for chaining
+ */
+function generateSitemap(language) {
+    var endpoint = environments.production.constants.ENV.apiEndpoint + '/seo_pages';
+    console.log(endpoint);
+    request(endpoint, function (error, response, body) {
+        var result = JSON.parse(body).all_cities;
+        var xmlString = "";
+        for(var i = 0; i < result.length; i++) {
+            xmlString += "<url>\n";
+            xmlString += "\t<loc>https://www.listnride.com/" + encodeURI(result[i]) + "</loc>\n";
+            xmlString += "\t<lastmod>2018-07-17T14:32:07+00:00</lastmod>\n";
+            xmlString += "\t<changefreq>always</changefreq>\n";
+            xmlString += "</url>\n";
+        }
+        console.log(result);
+        gulp.src([path.app.downloads + 'sitemap.xml'])
+            .pipe(replace('<!-- GULP INSERT SEO PAGES -->', xmlString))
+            .pipe(rename('sitemap_se.xml'))
+            .pipe(gulp.dest(path.app.downloads));
+    });
+    // request('http://www.google.com', function (error, response, body) {
+    //     console.log('error:', error); // Print the error if one occurred
+    //     console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+    //     console.log('body:', body); // Print the HTML for the Google homepage.
+    // });
+}
+/**
  * clean dist folder
  * before every deployment
  * @param {clean~cleanCallback} cb - The callback that handles the response.
@@ -664,6 +698,7 @@ function local(cb) {
  */
 function deploy(cb) {
     runSequence(
+        'generate-sitemap',
         'clean',
         'constants',
         'copy-index-tmp',
