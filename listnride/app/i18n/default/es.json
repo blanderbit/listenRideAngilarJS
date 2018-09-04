@@ -1,6 +1,7 @@
 {
   "shared": {
-    "learn-more": "Saber más",
+    "learn-more": "Leer más",
+    "no-bikes-found": "No se encontraron bicicletas",
     "bolzano": "Bolzano",
     "lake-garda": "Lago de Garda",
     "sardinia": "Cerdeña",
@@ -120,7 +121,7 @@
     "Oct": "Oct",
     "Nov": "Nov",
     "Dec": "Dic",
-    "testimonials-header": "¿Qué opina la gente?",
+    "testimonials-header": "¿Qué dicen de nosotros?",
     "balance": "Saldo",
     "tac": "términos y condiciones",
     "privacy-policy": "Política de Privacidad",
@@ -196,7 +197,7 @@
   "insurance": {
     "facts": {
       "basic-insurance": {
-        "price-description": "incluido en cada alquiler en Alemania y Austria"
+        "price-description": "en cada alquiler en Alemania y Austria"
       }
     },
     "meta-title": "Seguro para cada alquiler en Alemania y Austria",
@@ -296,9 +297,9 @@
         "meta-description": "¡Prueba una bici Brompton hoy mismo! Estas bicis urbanas plegables están disponibles en listnride. Alquílala en Berlín, Múnich, Hamburgo, Düsseldorf o Frankfurt."
       },
       "veloheld": {
-        "meta-title": "Rent veloheld bikes in Munich and Dresden | listnride",
+        "meta-title": "Alquila bicicletas veloheld en Munich y Dresden | listnride",
         "meta-keywords": "-",
-        "meta-description": "Test veloheld bikes and experience the pure aesthetics and functional techniques of a custom made steel bike: road bike, cyclocross bike or city bike!"
+        "meta-description": "Prueba las bicicletas veloheld y disfruta de las características funcionales de una bici de acero hecha a medida: bicicleta de carretera, bicicleta ciclocross o bicicleta urbana."
       },
       "muli": {
         "meta-title": "Alquila una bicicleta de carga Muli con listnride",
@@ -758,7 +759,7 @@
       "logo-description": "En cooperación con Hepster y asegurado por"
     },
     "landing-section-subheader": " Únete a listnride y encuentra la bici adecuada para ti.",
-    "featured-bikes-header": "Alquiler de bicis: las favoritas de nuestra comunidad",
+    "featured-bikes-header": "Alquiler de bicis: estas son las favoritas de nuestra comunidad",
     "featured-bikes-subheader": "Ya sean bicis de carretera, de montaña, de carga, de ciudad o eléctricas, puedes alquilarlas todas. Estas son las bicis de alquiler favoritas de la comunidad.",
     "featured-tiles-header": "¡Anímate a probar bicicletas innovadoras!",
     "featured-tiles-subheader": "Estamos asociados a marcas disruptivas las cuales ofrecen sus últimos modelos para tú puedas probarlos. Para poder probar las bicicletas solo debes seleccionar la marca, ciudad, modelo y listo. La bicicleta de tus sueños está más cerca de lo que imaginas. ",

@@ -249,7 +249,7 @@
         "question-5": "How do I search for a bike?",
         "question-6": "How do I search for a bike?",
         "question-7": "How do I search for a bike?",
-        "question-8": "How do I search for a bike?",
+        "question-8": "Hoeveel kost het om mijn fiets online te plaatsen?",
         "question-9": "How do I search for a bike?",
         "question-10": "How do I search for a bike?"
       }
@@ -310,7 +310,7 @@
       },
       "description-lister": "Als verhuurder op listnride wil je er zeker van zijn dat jij en je fiets beschermd zijn tegen alle denkbare risico's. Daarom is elke fietverhuur in Duitsland en Oostenrijk die u bij listnride huurt vanaf nu automatisch verzekerd. Huurders die uw fiets aanvragen kunnen optioneel een Premium Pakket boeken voor extra dekking en vrijwaringen. Deze service is gratis voor u als verhuurder. <p>Heeft u nog vragen? Neem dan contact met ons op via <a3>E-Mail</a3>.",
       "description-rider": "Wij bieden twee verzekeringspakketten aan voor elke fiets die je huurt via lisntride: De <b1>De Basisverzekering</b1> is inbegrepen in elke fietshuur in Duitsland en Oostenrijk, de <b2>Premium verzekering</b2> is optioneel en breidt de verzekering uit met extra dekking.<br3>Jij en Jouw fiets zijn altijd optimaal verzekerd en dus staat niets jouw rit meer in de weg!",
-      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Algemene fietsverzekeringsvoorwaarden</a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Algemene voorwaaarden Fiets-assist</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Algemene fietsverzekeringsvoorwaarden</a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Algemene voorwaaarden Fiets-assist</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basis Verzekering- Polisvoorwaarden</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium verzekering - Polisvoorwaarden</a>"
     }
   },
   "business-community": {
@@ -493,8 +493,11 @@
   "brand-integration": {
     "shared": {
       "choose-location": "Choose a location",
-      "no-bikes-found": "Oops..Er zijn helaas nog geen fietsen op deze locatie.",
+      "no-bikes-found": "Oops..Er worden helaas nog geen fietsen op deze locatie aangeboden.",
       "faq": "The frequently asked questions"
+    },
+    "veloheld": {
+      "test-bike": "Test je fietsen in Stad1, Stad2"
     },
     "leaos": {
       "description": "De Design Ebike - Leaos",

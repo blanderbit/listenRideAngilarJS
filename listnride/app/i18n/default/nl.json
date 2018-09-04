@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "no-bikes-found": " Helaas! er worden nog geen fietsen op deze locatie aangeboden.",
     "bolzano": "Bolzano",
     "lake-garda": "Gardameer",
     "sardinia": "Sardinië",
@@ -769,6 +770,7 @@
   },
   "search": {
     "no-bikes": "Er zijn helaas nog geen fietsen op deze locatie. Omdat we snel groeien, zal dat waarschijnlijk snel gebeuren! Als je wilt, kun je <a href=\"/listing-a-bike\">zelf een fiets een lijst laten maken </a>of zoek je naar een andere stad of specifieke locatie in de buurt.",
+    "unisize": "Unisize",
     "book-multiple-bikes": "Groepsboekingen",
     "bikes-found": "Aantal fietsen:",
     "all-sizes": "Alle Maten",
