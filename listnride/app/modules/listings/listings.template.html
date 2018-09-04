@@ -6,7 +6,7 @@
       </md-button>
     </div>
 
-    <div layout="row" hide-xs class="content" layout-fill layout-align="space-around center">
+    <div layout="row" hide-xs class="lnr-vertical-lrg-padding" layout-fill layout-align="space-between center">
       <md-input-container flex="30">
         <label style="display: none"></label>
         <input
@@ -20,21 +20,17 @@
       <div flex="30" ng-if="listings.status !== ''">
         <h3>Duplication status: {{listings.status}}</h3>
       </div>
-      <div layout="row" flex="35" layout-align="end center">
-          <div flex="30"><h3>{{'listings.show-as-list' | translate}}</h3></div>
-        <div flex="15">
-          <md-switch
-            ng-model="listings.listView"
-            ng-change="listings.changeListingMode(listings.listView)"
-          >
-          </md-switch>
-        </div>
-        <span hide-sm flex></span>
-        <div flex="35">
-          <md-button class="md-primary md-confirm-button" ng-click="listings.listBike()">
-            {{'listings.list-a-bike' | translate}}
-          </md-button>
-        </div>
+      <div layout="row" flex flex-gt-md="35" layout-align="end center">
+        <h3 class="lnr-padding-right-double">{{'listings.show-as-list' | translate}}</h3>
+        <md-switch
+          class="lnr-margin-right-extra"
+          ng-model="listings.listView"
+          ng-change="listings.changeListingMode(listings.listView)"
+        >
+        </md-switch>
+        <md-button class="md-primary md-confirm-button lnr-mr-0" ng-click="listings.listBike()">
+          {{'listings.list-a-bike' | translate}}
+        </md-button>
       </div>
     </div>
   </div>
@@ -84,7 +80,7 @@
           flex-gt-xs="50"
           flex-gt-sm="25"
           flex-lg="20"
-          flex-gt-lg="15"
+          flex-gt-lg="14"
           bike-id="bike.id"
           bike="bike"
           name="bike.name"
