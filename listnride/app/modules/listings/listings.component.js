@@ -29,6 +29,7 @@ angular.module('listings', []).component('listings', {
 
         if ($localStorage.listView) listings.listView = true;
 
+
         // methods
         listings.getAllBikes = getAllBikes;
 
@@ -465,10 +466,6 @@ angular.module('listings', []).component('listings', {
             // TODO: rewrite mirror bikes logic
             listings.mirror_bikes = response.data.bikes;
             if (listings.input) { listings.search() }
-            if (!listings.listView) {
-              listings.listView = listings.bikes.length >= listings.maxTiles && $mdMedia('gt-sm');
-              $localStorage.listView = listings.listView;
-            }
           },
           function (error) {
           }
