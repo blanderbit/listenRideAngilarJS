@@ -4,6 +4,7 @@ angular.module('listings', []).component('listings', {
   templateUrl: 'app/modules/listings/listings.template.html',
   controllerAs: 'listings',
   controller: [
+    '$scope',
     '$stateParams',
     '$mdDialog',
     '$analytics',
@@ -16,7 +17,7 @@ angular.module('listings', []).component('listings', {
     '$mdMedia',
     'api',
     'accessControl',
-    function ListingsController($stateParams, $mdDialog, $analytics, $timeout, $mdToast, $filter, $translate, $state, $localStorage, $mdMedia, api, accessControl) {
+    function ListingsController($scope, $stateParams, $mdDialog, $analytics, $timeout, $mdToast, $filter, $translate, $state, $localStorage, $mdMedia, api, accessControl) {
       if (accessControl.requireLogin()) {
         return
       }
@@ -24,6 +25,7 @@ angular.module('listings', []).component('listings', {
 
       listings.$onInit = function () {
         // variables
+        listings.input = $stateParams.q || '';
         listings.maxTiles = 12;
         listings.status = '';
         listings.isDuplicating = false;
@@ -73,7 +75,7 @@ angular.module('listings', []).component('listings', {
                   return n.id === response.data.id;
                 });
                 listings.bikes = listings.mirror_bikes;
-                if (listings.input) { listings.search() }
+                // if (listings.input) { listings.search() }
                 $mdToast.show(
                   $mdToast.simple()
                     .textContent($translate.instant('toasts.bike-deleted'))
@@ -351,8 +353,25 @@ angular.module('listings', []).component('listings', {
 
       // search functionality in header of My Bikes (List View)
       listings.search = function () {
-        listings.bikes = $filter('filter')(listings.mirror_bikes, filterFunction, { $: listings.input });
+        $scope.$apply(function () {
+          $state.go(
+            $state.current, {
+              page: 1,
+              q: listings.input
+            }, {
+              notify: false
+            }
+          );
+
+          listings.currentPageIndex = 1;
+          listings.getBikes();
+        });
+        // listings.bikes = $filter('filter')(listings.mirror_bikes, filterFunction, { $: listings.input });
       };
+      var delayedSearch = _.debounce(listings.search, 1000);
+      $scope.$watch("listings.input", function () {
+        delayedSearch();
+      });
 
       var filterFunction = function(bike) {
         //TODO improve search by reducing extra params from backend
@@ -474,13 +493,14 @@ angular.module('listings', []).component('listings', {
       // fetch bikes
       function getBikes() {
         var firstRequest = _.isEmpty(listings.bikes);
-        api.get(listings.endPoint + '?page=' + listings.currentPageIndex).then(
+        var params = '?page=' + listings.currentPageIndex + '&q=' + listings.input;
+        api.get(listings.endPoint + params).then(
           function (response) {
             listings.bikes = response.data.bikes;
             // TODO: rewrite mirror bikes logic
             listings.mirror_bikes = response.data.bikes;
             listings.pagination = response.data.pagination;
-            if (listings.input) { listings.search() }
+            // if (listings.input) { listings.search() }
 
             // automatically switch to list view, do this only for the first request
             if (!listings.listView && firstRequest) {

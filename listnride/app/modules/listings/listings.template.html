@@ -5,9 +5,7 @@
         <label style="display: none"></label>
         <input
           placeholder="{{ 'shared.search-bikes' | translate }}"
-          ng-keyup="listings.search()"
           ng-model="listings.input"
-          ng-model-options="{ debounce: 50 }"
         />
       </md-input-container>
       <div class="lnr-padding-left-double" layout="row" flex flex-gt-md="75" layout-align="center center" layout-align-gt-sm="end center">

@@ -202,10 +202,14 @@
 
       $stateProvider.state({
         name: 'listings',
-        url: '/listings?page',
+        url: '/listings?page&q',
         template: '<listings></listings>',
         reloadOnSearch: false,
         params: {
+          q: {
+            value: "",
+            squash: true
+          },
           page: {
             value: "",
             squash: true
