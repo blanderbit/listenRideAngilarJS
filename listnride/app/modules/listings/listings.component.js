@@ -462,7 +462,6 @@ angular.module('listings', []).component('listings', {
         api.get('/users/' + $localStorage.userId + "/rides").then(
           function (response) {
             listings.bikes = response.data.bikes;
-            console.log(listings.bikes);
             // TODO: rewrite mirror bikes logic
             listings.mirror_bikes = response.data.bikes;
             if (listings.input) { listings.search() }
