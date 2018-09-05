@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "no-bikes-found": " Helaas! er worden nog geen fietsen op deze locatie aangeboden.",
     "bolzano": "Bolzano",
     "lake-garda": "Gardameer",
     "sardinia": "Sardinië",
@@ -684,9 +685,9 @@
     "comments": "Opmerkingen",
     "last-name": "Achternaam",
     "email-address": "Emailadres",
-    "update-password": "Update Password",
-    "old-password": "Old Password",
-    "new-password": "New Password",
+    "update-password": "Wachtwoord updaten",
+    "old-password": "Huidig Wachtwoord",
+    "new-password": "Nieuw Wachtwoord",
     "password": "Wachtwoord",
     "forgot-password": "Wachtwoord vergeten?",
     "or": "of",
@@ -760,7 +761,7 @@
     "list-a-bike-header": "Je fiets is te mooi om stil te staan?",
     "list-a-bike-subheader": "biedt je fiets te huur aan, ontmoet leuke nieuwe mensen en spek je banksaldo.",
     "newsletter-header": "Subscribe to our newsletter and stay in the loop",
-    "newsletter-subheader": "Receive our handcrafted email about new bikes, tours and discounts for your rides.",
+    "newsletter-subheader": "Receive our email about new bikes, tours and discounts for your rides.",
     "meta-title": "listnride - De bike sharing community",
     "meta-description": "Huur de perfekte fiets van de listnride community. Boek een fiets naar jouw smaak en gebruik online."
   },
@@ -769,6 +770,7 @@
   },
   "search": {
     "no-bikes": "Er zijn helaas nog geen fietsen op deze locatie. Omdat we snel groeien, zal dat waarschijnlijk snel gebeuren! Als je wilt, kun je <a href=\"/listing-a-bike\">zelf een fiets een lijst laten maken </a>of zoek je naar een andere stad of specifieke locatie in de buurt.",
+    "unisize": "Unisize",
     "book-multiple-bikes": "Groepsboekingen",
     "bikes-found": "Aantal fietsen:",
     "all-sizes": "Alle Maten",
@@ -1167,6 +1169,12 @@
   },
   "footer": {
     "language": "Taal",
+    "languages": {
+      "dutch": "Nederlands",
+      "italian": "Italiaans",
+      "spanish": "Spaans",
+      "german": "Duits"
+    },
     "insurance-partner": "Verzekeringspartner",
     "insurance": "Verzekering",
     "company": "Bedrijf",

@@ -77,6 +77,11 @@
       "cafes-bars-content": "Se ti piace il cibo vegano e vegetariano, ti consigliamo di visitare <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot </a>presso la Karmeliterplatz. Se preferisci la cucina austriaca più tradizionale, ti consigliamo <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta </a>. Ordina un tradizionale Tafelspitz o Wiener Schnitzel e goditela all'aperto con la vista sulla celebre Opera di Vienna. Sarà una serata fantastica da ricordare! Per finire in bellezza, una bella passeggiata lungo il Danubio. Sulla strada troverai molti bar interessanti e potrai sederti all'aperto sotto le stelle lungo il fiume."
     }
   },
+  "footer": {
+    "languages": {
+      "english": "Inglese"
+    }
+  },
   "shared": {
     "list-your-bike": {
       "bike-category": "Seleziona la categoria della bici",
@@ -229,7 +234,7 @@
         "question-5": "How do I search for a bike?"
       }
     },
-    "faq-header": "Le 10 domande frequenti in un unico posto.",
+    "faq-header": "Le 10 domande frequenti in un unico posto",
     "faqs": {
       "top": {
         "answer-1": "Semplicemente inserisci il nome della località dove cerchi una bicicletta nel banner di ricerca. Clicca su una delle bici che appare tra i risultati per avere più dettagli sulla taglia, l’altezza consigliata per il ciclista, gli accessori inclusi e le recensioni della bici. Per restringere i risultati di ricerca, puoi usare i filtri: Arco di tempo, Numero di bici, Tipo di bici, Tutte le marche.\n",
