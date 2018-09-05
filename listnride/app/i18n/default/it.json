@@ -760,7 +760,7 @@
     "list-a-bike-header": "Hai una bella bicicletta e vuoi che la gente la veda?",
     "list-a-bike-subheader": "Inserisci la tua bicicletta per il noleggio, incontra nuove persone divertenti e guadagna qualche soldo extra.",
     "newsletter-header": "Subscribe to our newsletter and stay in the loop",
-    "newsletter-subheader": "Receive our handcrafted email about new bikes, tours and discounts for your rides.",
+    "newsletter-subheader": "Receive our email about new bikes, tours and discounts for your rides.",
     "meta-title": "listnride - La bike sharing community",
     "meta-description": "Noleggia la bicicletta perfetta nella comunità listnride. Trovane una che si adatti al tuo stile e alle tue esigenze."
   },
@@ -1170,6 +1170,12 @@
   },
   "footer": {
     "language": "Lingua",
+    "languages": {
+      "dutch": "Olandese",
+      "italian": "Italiano",
+      "spanish": "Spagnolo",
+      "german": "Tedesco"
+    },
     "insurance-partner": "Partner assicurativo",
     "insurance": "Assicurazione",
     "company": "Società",

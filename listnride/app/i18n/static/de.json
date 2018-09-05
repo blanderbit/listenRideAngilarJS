@@ -77,6 +77,11 @@
       "cafes-bars-content": "Wer schon immer mal veganes Essen ausprobieren wollte oder Veganer ist, der sollte das <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest Bistrot</a> am Karmeliterplatz ausprobieren. Neben veganem Essen gibt es auch vegetarische Alternativen. Oder doch traditionell Österreichische Küche? Genieß einen Tafelspitz oder Wiener Schnitzel bei <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>, direkt gegenüber den Wiener Oper, besser geht nicht, oder? Möchte man den Abend mit einem Drink ausklingen lassen, eignet sich der Weg vom Karmeliterplatz Richtung Donau um in die ein oder andere Bar reinzuschnuppern. An der Donau kann man unter freiem Himmel den Abend ausklingen lassen."
     }
   },
+  "footer": {
+    "languages": {
+      "english": "Englisch"
+    }
+  },
   "shared": {
     "list-your-bike": {
       "bike-category": "Wählen die Kategorie deines Rades",
@@ -229,7 +234,7 @@
         "question-5": "How do I search for a bike?"
       }
     },
-    "faq-header": "The 10 frequently asked questions in one place.",
+    "faq-header": "The 10 most frequently asked questions in one place",
     "faqs": {
       "top": {
         "answer-1": "Looking for a bike in Vienna? Just type Vienna in the search bar. Our super fast search engine will show you all results including a map of all locations. Searching for a location is currently the only search option. To narrow your search result, you can also use the filters: Timespan , All Sizes, Bike Type  and Brands.",
@@ -310,7 +315,7 @@
       },
       "description-lister": "Als Vermieter auf listnride möchtest du natürlich sicher gehen, dass du und dein Rad gegen alle Eventualitäten abgesichert seid. Deshalb ist jede Vermietung in Deutschland und Österreich, die du über listnride tätigst ab sofort automatisch versichert.  \n\nMieter, die dein Rad anfragen, können optional das Premium-Paket buchen, um zusätzliche Services und Garantien zu bekommen. Dieser Service ist für Dich als Vermieter kostenlos.\n<p>\nSolltest du weitere Fragen haben, kontaktiere uns rund um die Uhr via <a3>E-Mail.</a3>",
       "description-rider": "Wir bieten zwei Versicherungspakete für jedes Rad das du über lisntride mietest: Die<b1>\nBasis-Versicherung</b1>\nist in jeder Vermietung inkludiert, die \n<b2>Premium-Versicherung</b2>\nist optional und erweitert der Versicherungsschutz um zusätzliche Leistungen.\n<br3>\nDein Rad und du sind immer optimal geschützt und deiner Fahrt steht nichts mehr im weg!",
-      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">\"Bike\" Versicherungsbedingungen</a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">\"Bike Assist\" Versicherungsbedingungen</a>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description</a>\n\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Fahrrad Schadensversicherung - AGBs</a0>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\"> Pedelec Störungsversicherung - AGBs</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basis-Versicherung - Leistungsbeschreibung</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium-Versicherung - Leistungsbeschreibung</a>"
     }
   },
   "business-community": {
