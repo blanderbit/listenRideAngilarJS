@@ -35,6 +35,7 @@ var environments = config.environments;
 var processEnv = process.env.ENVIRONMENT;
 var argvEnv = ('local' === processEnv || 'staging' === processEnv || 'production' === processEnv) ? processEnv : 'local';
 var env = environments[argvEnv];
+var _ = require('lodash/core')
 
 // linter and code checking
 gulp.task('lint', lint);
@@ -421,29 +422,29 @@ function imagesSvg() {
  * @returns {gulp} for chaining
  */
 function generateSitemap(language) {
+    var tlds = ['com', 'de', 'nl', 'es', 'it'];
+    var date = new Date();
     var endpoint = environments.production.constants.ENV.apiEndpoint + '/seo_pages';
-    console.log(endpoint);
     request(endpoint, function (error, response, body) {
         var result = JSON.parse(body).all_cities;
-        var xmlString = "";
-        for(var i = 0; i < result.length; i++) {
-            xmlString += "<url>\n";
-            xmlString += "\t<loc>https://www.listnride.com/" + encodeURI(result[i]) + "</loc>\n";
-            xmlString += "\t<lastmod>2018-07-17T14:32:07+00:00</lastmod>\n";
-            xmlString += "\t<changefreq>always</changefreq>\n";
-            xmlString += "</url>\n";
-        }
-        console.log(result);
-        gulp.src([path.app.downloads + 'sitemap.xml'])
+        _.each(tlds, function (tld) {
+            console.log("Generating sitemap for listnride." + tld);
+            var xmlString = "";
+            for(var i = 0; i < result.length; i++) {
+                xmlString += "<url>\n";
+                xmlString += "\t<loc>https://www.listnride." + tld + "/" + encodeURI(result[i]) + "</loc>\n";
+                xmlString += "\t<lastmod>2018-07-17T14:32:07+00:00</lastmod>\n";
+                xmlString += "\t<changefreq>always</changefreq>\n";
+                xmlString += "</url>\n";
+            }
+            gulp.src([path.app.downloads + 'sitemap.xml'])
             .pipe(replace('<!-- GULP INSERT SEO PAGES -->', xmlString))
-            .pipe(rename('sitemap_se.xml'))
+            .pipe(replace('com', tld))
+            .pipe(rename('sitemap-' + tld + '.xml'))
             .pipe(gulp.dest(path.app.downloads));
+            console.log("Wrote sitemap-" + tld + ".xml");
+        });
     });
-    // request('http://www.google.com', function (error, response, body) {
-    //     console.log('error:', error); // Print the error if one occurred
-    //     console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-    //     console.log('body:', body); // Print the HTML for the Google homepage.
-    // });
 }
 /**
  * clean dist folder
