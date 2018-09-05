@@ -45,7 +45,6 @@ angular.module('categoryLanding', []).component('categoryLanding', {
           function (success) {
             categoryLanding.data = success.data;
             categoryLanding.location = categoryLanding.city;
-            console.log(categoryLanding.categories);
             categoryLanding.loading = false;
             var minPrice = parseInt(_.minBy(categoryLanding.data.bikes, 'price_from').price_from);
             categoryLanding.categoryString = $translate.instant(categoryLanding.category).toLowerCase();
