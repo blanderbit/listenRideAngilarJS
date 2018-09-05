@@ -1,13 +1,7 @@
 <md-content flex="100" layout="column" layout-fill>
   <div class="listings-header" layout="column">
-    <div hide-gt-xs flex="33" layout="column" layout-align="center center">
-      <md-button ui-sref="list" class="md-raised md-primary md-lrg">
-        {{ 'shared.list-a-bike' | translate }}
-      </md-button>
-    </div>
-
-    <div layout="row" hide-xs class="lnr-vertical-lrg-padding" layout-fill layout-align="space-between center">
-      <md-input-container flex="30">
+    <div layout="row" class="lnr-vertical-lrg-padding" layout-fill layout-align="space-between center">
+      <md-input-container flex="30" hide-xs hide-sm>
         <label style="display: none"></label>
         <input
           placeholder="{{ 'shared.search-bikes' | translate }}"
@@ -16,18 +10,51 @@
           ng-model-options="{ debounce: 50 }"
         />
       </md-input-container>
-      <span hide-sm flex></span>
-      <div flex="30" ng-if="listings.status !== ''">
+      <div class="lnr-padding-left-double" ng-if="listings.status" hide-xs hide-sm>
         <h3>Duplication status: {{listings.status}}</h3>
       </div>
-      <div layout="row" flex flex-gt-md="35" layout-align="end center">
-        <h3 class="lnr-padding-right-double">{{'listings.show-as-list' | translate}}</h3>
+      <div layout="row" flex flex-gt-md="50" layout-align="center center" layout-align-gt-sm="end center">
+        <!-- VIEW SWITCHER -->
+        <h3 class="lnr-padding-right-double" hide-xs hide-sm>{{'listings.show-as-list' | translate}}</h3>
         <md-switch
+          hide-xs hide-sm
           class="lnr-margin-right-extra"
           ng-model="listings.listView"
           ng-change="listings.changeListingMode(listings.listView)"
         >
         </md-switch>
+        <!-- PAGINATION -->
+        <ul class="lnr-pagination listing__pagination lnr-list-no-style" layout="row" layout-align="none center">
+          <li>
+            <md-button class="md-fab md-mini lnr-md-blue-bordered" aria-label="{{ 'shared.previous' | translate }}" ng-click="listings.prevPage()">
+              <i class="material-icons">chevron_left</i>
+            </md-button>
+          </li>
+          <li class="lnr-pagination__item active">
+            <md-button class="md-fab md-mini lnr-md-blue-bordered" aria-label="{{ 'shared.previous' | translate }}" ng-click="listings.prevPage()">
+              1
+            </md-button>
+          </li>
+          <li class="lnr-pagination__item">
+            <md-button class="md-fab md-mini lnr-md-blue-bordered" aria-label="{{ 'shared.previous' | translate }}" ng-click="listings.prevPage()">
+              2
+            </md-button>
+          </li>
+          <li class="lnr-pagination__divider">
+            <span> ... </span>
+          </li>
+          <li class="lnr-pagination__item">
+            <md-button class="md-fab md-mini lnr-md-blue-bordered" aria-label="{{ 'shared.previous' | translate }}" ng-click="listings.prevPage()">
+              3
+            </md-button>
+          </li>
+          <li>
+            <md-button class="md-fab md-mini lnr-md-blue-bordered" aria-label="{{ 'shared.next' | translate }}" ng-click="listings.nextPage()">
+              <i class="material-icons">chevron_right</i>
+            </md-button>
+          <li>
+        </ul>
+        <!-- LIST A BIKE TRIGGER -->
         <md-button class="md-primary md-confirm-button lnr-mr-0" ng-click="listings.listBike()">
           {{'listings.list-a-bike' | translate}}
         </md-button>

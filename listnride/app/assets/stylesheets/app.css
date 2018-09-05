@@ -267,6 +267,30 @@ button.md-primary.md-cancel-button.md-button.ng-scope.md-default-theme.md-ink-ri
   background-color: rgb(122, 178, 248);
 }
 
+.lnr-md-blue {
+  background: #7ab2f8;
+  color: #ffffff;
+}
+
+.lnr-md-blue:not([disabled]):hover {
+  background: #4c8dde;
+}
+
+.lnr-md-blue-bordered,
+.md-button.lnr-md-blue-bordered,
+.md-fab.lnr-md-blue-bordered {
+  background: transparent;
+  border: 1px solid #7ab2f8;
+  color: #7ab2f8;
+}
+
+.lnr-md-blue-bordered:not([disabled]):hover,
+.md-button.lnr-md-blue-bordered:not([disabled]):hover,
+.md-fab.lnr-md-blue-bordered:not([disabled]):hover {
+  background: #7ab2f8;
+  color: #ffffff;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   /* display: none; <- Crashes Chrome on hover */
@@ -356,6 +380,10 @@ md-tooltip .md-content {
 .layout-padding-gt-sm,
 .layout-padding-gt-sm > * {
   padding: 0;
+}
+
+.md-fab .material-icons {
+  line-height: inherit;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -678,6 +706,10 @@ md-tooltip .md-content {
 
 .lnr-object-fit-contain {
   object-fit: contain;
+}
+
+.lnr-list-no-style {
+  list-style: none;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -2995,6 +3027,34 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   margin-top: 20px;
 }
 
+/* PAGINATION */
+
+.lnr-pagination__item.active button {
+  background: #7ab2f8;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.lnr-pagination__item:not(.active) button {
+  border-color: transparent!important;
+}
+
+.lnr-pagination__item + .lnr-pagination__item button {
+  margin-left: 0;
+}
+
+.lnr-pagination__divider span {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  MEDIA
 /*-----------------------------------------------------------------------------------*/
@@ -3283,6 +3343,12 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
     right: 0;
   }
 
+  /* PAGINATION */
+
+  .lnr-pagination__divider,
+  .lnr-pagination__item:not(.active) {
+    display: none;
+  }
 }
 
 @media (max-width: 400px) {
