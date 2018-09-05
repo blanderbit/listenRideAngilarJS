@@ -699,7 +699,6 @@ function local(cb) {
  */
 function deploy(cb) {
     runSequence(
-        'generate-sitemap',
         'clean',
         'constants',
         'copy-index-tmp',
