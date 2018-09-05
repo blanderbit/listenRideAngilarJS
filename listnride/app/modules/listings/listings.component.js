@@ -4,6 +4,7 @@ angular.module('listings', []).component('listings', {
   templateUrl: 'app/modules/listings/listings.template.html',
   controllerAs: 'listings',
   controller: [
+    '$stateParams',
     '$mdDialog',
     '$analytics',
     '$timeout',
@@ -15,7 +16,7 @@ angular.module('listings', []).component('listings', {
     '$mdMedia',
     'api',
     'accessControl',
-    function ListingsController($mdDialog, $analytics, $timeout, $mdToast, $filter, $translate, $state, $localStorage, $mdMedia, api, accessControl) {
+    function ListingsController($stateParams, $mdDialog, $analytics, $timeout, $mdToast, $filter, $translate, $state, $localStorage, $mdMedia, api, accessControl) {
       if (accessControl.requireLogin()) {
         return
       }
@@ -26,15 +27,21 @@ angular.module('listings', []).component('listings', {
         listings.maxTiles = 12;
         listings.status = '';
         listings.isDuplicating = false;
-
+        listings.endPoint = '/users/' + $localStorage.userId + "/rides";
+        listings.pagination = {
+          next_page: '',
+          prev_page: '',
+          total_pages: ''
+        };
+        listings.currentPageIndex = +$stateParams.page || 1;
         if ($localStorage.listView) listings.listView = true;
 
-
         // methods
-        listings.getAllBikes = getAllBikes;
+        listings.getBikes = getBikes;
+        listings.changePage = changePage;
+        listings.isPaginationInRange = isPaginationInRange;
 
         listings.helper = {
-
           // local method to be called on duplicate success
           duplicateHelper: function (bike, duplicate_number) {
             api.post('/rides/' + bike.id + '/duplicate', {
@@ -88,7 +95,7 @@ angular.module('listings', []).component('listings', {
         };
 
         // invocations
-        listings.getAllBikes()
+        listings.getBikes()
       };
 
       // CHILD CONTROLLERS
@@ -353,6 +360,13 @@ angular.module('listings', []).component('listings', {
         return bike.name.toLocaleLowerCase().indexOf(val) > -1 || bike.city.toLocaleLowerCase().indexOf(val) > -1 || bike.brand.toLocaleLowerCase().indexOf(val) > -1;
       };
 
+      // function to add separator for page navigation and show only 4 items in list
+      function isPaginationInRange(index) {
+        if (listings.pagination.total_pages <= 5) return true;
+        // show only first page, last page, current page and pages near current page (in 1 range)
+        return index === 1 || index === listings.pagination.total_pages || listings.currentPageIndex - 1 === index || listings.currentPageIndex + 1 === index || listings.currentPageIndex === index;
+      }
+
       // Redirect to bike list
       listings.listBike = function () {
         $state.go('list');
@@ -379,7 +393,7 @@ angular.module('listings', []).component('listings', {
           // bind new bikes with controller scope
           else if (listings.status === 'complete') {
             listings.isDuplicating = false;
-            listings.getAllBikes();
+            listings.getBikes();
           }
         }, function (error) {
         });
@@ -458,14 +472,18 @@ angular.module('listings', []).component('listings', {
       };
 
       // fetch bikes
-      function getAllBikes() {
-        api.get('/users/' + $localStorage.userId + "/rides").then(
+      function getBikes() {
+        var firstRequest = _.isEmpty(listings.bikes);
+        api.get(listings.endPoint + '?page=' + listings.currentPageIndex).then(
           function (response) {
             listings.bikes = response.data.bikes;
             // TODO: rewrite mirror bikes logic
             listings.mirror_bikes = response.data.bikes;
+            listings.pagination = response.data.pagination;
             if (listings.input) { listings.search() }
-            if (!listings.listView) {
+
+            // automatically switch to list view, do this only for the first request
+            if (!listings.listView && firstRequest) {
               listings.listView = listings.bikes.length >= listings.maxTiles && $mdMedia('gt-sm');
               $localStorage.listView = listings.listView;
             }
@@ -474,6 +492,18 @@ angular.module('listings', []).component('listings', {
           }
         );
       };
+
+      function changePage(pageIndex) {
+        $state.go(
+          $state.current, {
+            page: pageIndex
+          }, {
+            notify: false
+          }
+        );
+        listings.currentPageIndex = pageIndex;
+        listings.getBikes();
+      }
 
       // Redirect to Edit Bike route
       listings.edit = function (id) {

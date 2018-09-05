@@ -202,8 +202,15 @@
 
       $stateProvider.state({
         name: 'listings',
-        url: '/listings',
+        url: '/listings?page',
         template: '<listings></listings>',
+        reloadOnSearch: false,
+        params: {
+          page: {
+            value: "",
+            squash: true
+          }
+        },
         resolve: {
           data: function (ngMeta) {
             ngMeta.setTag("noindex", true);

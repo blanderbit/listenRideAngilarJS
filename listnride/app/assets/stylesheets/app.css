@@ -3039,10 +3039,6 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   border-color: transparent!important;
 }
 
-.lnr-pagination__item + .lnr-pagination__item button {
-  margin-left: 0;
-}
-
 .lnr-pagination__divider span {
   display: inline-block;
   vertical-align: middle;
