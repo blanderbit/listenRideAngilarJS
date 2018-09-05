@@ -6,256 +6,216 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.listnride.com/</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.com/berlin</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.com/munich</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.com/amsterdam</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.com/vienna</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.com/mallorca</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.com/lanzarothe</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.com/sylt</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>https://www.listnride.com/usedom</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/listing-a-bike</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/how-it-works</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/renting-a-bike</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/trust-and-safety</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/help</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/terms</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/privacy</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/imprint</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/about</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/press</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/jobs</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/invite-friends</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 
 
 <url>
   <loc>https://www.listnride.com/brands/ampler</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/brands/vanmoof</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/brands/ampler</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/brands/moeve</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/brands/rethink</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/brands/votec</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/brands/vello</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/brands/bonvelo</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/brands/motoparilla</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/brands/brompton</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/brands/muli</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/brands/cocomat</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 
 
 <url>
   <loc>https://www.listnride.com/rapha-super-cross</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/in-velo-veritas</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/cyclassics-hamburg</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/triathlon-hamburg</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/riderman-rothaus</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/velothon-bikerental</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/capeargus</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/supercross-munich</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/grand-depart</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/velothon-coffeespin</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/constance-spin</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/herbstausfahrt</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/berliner-fahrradschau</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/mcbw</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/cyclingworld</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/pushnpost</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://www.listnride.com/kuchenundraketen</loc>
-  <lastmod>2018-07-17T14:32:07+00:00</lastmod>
+  <lastmod><!-- GULP INSERT CURRENT DATE --></lastmod>
   <changefreq>always</changefreq>
 </url>
 <!-- GULP INSERT SEO PAGES -->

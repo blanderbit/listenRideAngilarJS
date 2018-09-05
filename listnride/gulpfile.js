@@ -423,7 +423,7 @@ function imagesSvg() {
  */
 function generateSitemap(language) {
     var tlds = ['com', 'de', 'nl', 'es', 'it'];
-    var date = new Date();
+    var date = new Date().toISOString();
     var endpoint = environments.production.constants.ENV.apiEndpoint + '/seo_pages';
     request(endpoint, function (error, response, body) {
         var result = JSON.parse(body).all_cities;
@@ -433,11 +433,12 @@ function generateSitemap(language) {
             for(var i = 0; i < result.length; i++) {
                 xmlString += "<url>\n";
                 xmlString += "\t<loc>https://www.listnride." + tld + "/" + encodeURI(result[i]) + "</loc>\n";
-                xmlString += "\t<lastmod>2018-07-17T14:32:07+00:00</lastmod>\n";
+                xmlString += "\t<lastmod>" + date + "</lastmod>\n";
                 xmlString += "\t<changefreq>always</changefreq>\n";
                 xmlString += "</url>\n";
             }
             gulp.src([path.app.downloads + 'sitemap.xml'])
+            .pipe(replace('<!-- GULP INSERT CURRENT DATE -->', date))
             .pipe(replace('<!-- GULP INSERT SEO PAGES -->', xmlString))
             .pipe(replace('com', tld))
             .pipe(rename('sitemap-' + tld + '.xml'))
