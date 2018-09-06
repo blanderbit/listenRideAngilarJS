@@ -30,7 +30,7 @@
               aria-label="{{ 'shared.previous' | translate }}"
               ng-click="listings.changePage(listings.currentPageIndex - 1)"
               ng-disabled="listings.currentPageIndex === 1 || !listings.pagination.prev_page">
-              <i class="material-icons">chevron_left</i>
+              <i class="fa fa-angle-left"></i>
             </md-button>
           </li>
           <li
@@ -61,7 +61,7 @@
               aria-label="{{ 'shared.next' | translate }}"
               ng-click="listings.changePage(listings.currentPageIndex+1)"
               ng-disabled="listings.currentPageIndex === listings.pagination.total_pages || !listings.pagination.next_page">
-              <i class="material-icons">chevron_right</i>
+              <i class="fa fa-angle-right"></i>
             </md-button>
           <li>
         </ul>
