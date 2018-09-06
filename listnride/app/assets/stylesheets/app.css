@@ -282,6 +282,7 @@ button.md-primary.md-cancel-button.md-button.ng-scope.md-default-theme.md-ink-ri
   background: transparent;
   border: 1px solid #7ab2f8;
   color: #7ab2f8;
+  transition: all .3s;
 }
 
 .lnr-md-blue-bordered:not([disabled]):hover,
