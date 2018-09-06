@@ -327,7 +327,6 @@ angular.module('list', ['ngLocale'])
               }
             });
           }
-          console.log(ride);
           Upload.upload({
             method: 'PUT',
             url: api.getApiUrl() + '/rides/' + $stateParams.bikeId,
