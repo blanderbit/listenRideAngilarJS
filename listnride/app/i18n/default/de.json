@@ -163,23 +163,23 @@
     }
   },
   "faq": {
-    "meta-title": "Group booking",
-    "meta-description": "Book your bikes with our group booking form"
+    "meta-title": "Häufig gestellte Fragen",
+    "meta-description": "Die Antworten auf die häufigsten Fragen von Mietern und Vermietern zum Einstieg findest du hier. Egal ob du das perfekte Bike für deine Bedürfnisse suchst oder dein ganz spezielles Bike anbieten möchtest."
   },
   "multi-booking": {
     "meta-title": "Gruppenbuchung",
     "no-accessories": "Kein Zubehör",
-    "meta-description": "Buche deine Räder über unser Gruppenbuchungsformular",
+    "meta-description": "Buche deine Räder über unsere Gruppenbuchungs-Funktion",
     "title": "Gruppenbuchungen",
-    "header": "Wir helfen dir gern mit deiner Gruppenbuchung",
-    "subheader": "Wir übernehmen für dich die Buchung für deinen nächsten Radel-Urlaub. Sag uns einfach, was du dir vorstellst. Wir machen den Rest. Damit du dich einfach nur auf deinen Trip freuen kannst.",
+    "header": "Wir helfen dir gern bei deiner Gruppenbuchung",
+    "subheader": "Kein Stress mehr. Wir übernehmen für dich die Buchung für deine nächste Radtour. Sag uns einfach, was duch suchst und für wann. Wir machen den Rest. So kannst du dich einfach nur auf die Tour konzentrieren.",
     "how-to": {
-      "step-1-title": "Suchen & finden",
-      "step-1-content": "Spar dir die Zeit der Recherche und freu dich schon mal auf deine Reise! Easy, transparent, jederzeit.",
-      "step-2-title": "Bestimmen & anfragen",
-      "step-2-content": "Lass uns wissen, welche Fahrräder du ausleihen möchtest. Wir kümmern uns um den Rest. Sag uns einfach deine Anforderungen, und wir werden uns mit mehr Info bei dir melden.",
+      "step-1-title": "Suchen & Finden",
+      "step-1-content": "Spar dir die Zeit der Recherche und freu dich schon mal auf deine Reise! Einfach, transparent, jederzeit.",
+      "step-2-title": "Bestimmen & Anfragen",
+      "step-2-content": "Lass uns wissen, welche Fahrräder du ausleihen möchtest. Wir kümmern uns um den Rest. Sag uns einfach, was du suchst und wir werden uns mit ein paar Vorschlägen bei dir melden.",
       "step-3-title": "Angebot annehmen & online buchen",
-      "step-3-content": "Wir senden dir ein Angebot mit einem Link, über den du online buchen kannst oder du gibst uns eine schriftliche Bestätigung deiner Buchung. Im letztgenannten Fall wird eine Rechnung ausgestellt, die Du zur Vervollständigung der Buchung überweisen musst.  "
+      "step-3-content": "Wir senden dir ein Angebot mit einem Link, über den du online buchen kannst oder du gibst uns eine schriftliche Bestätigung deiner Buchung. In diesem Fall senden wir dir eine Rechnung, die Du zur Gültigkeit der Buchung vorab begleichst."
     },
     "your-booking-details": "Deine Buchungsdetails",
     "what-bike-kind": "Welcher Fahrradtyp?",
@@ -296,9 +296,9 @@
         "meta-description": "Teste noch heute ein Brompton! Die Brompton Falträder stehen zum Testen in Berlin, München, Hamburg, Düsseldorf und Frankfurt zur Verfügung"
       },
       "veloheld": {
-        "meta-title": "Rent veloheld bikes in Munich and Dresden | listnride",
+        "meta-title": "Miete die veloheld Räder in München und Dresden | listnride",
         "meta-keywords": "-",
-        "meta-description": "Test veloheld bikes and experience the pure aesthetics and functional techniques of a custom made steel bike: road bike, cyclocross bike or city bike!"
+        "meta-description": "Teste die veloheld Räder und erlebe pure Ästhetik und reduzierte Funktionsweise eines maßgeschneiderten Stahlfahrrades: Rennrad, Cyclocross Bike oder City bike!"
       },
       "muli": {
         "meta-title": "Miete das Muli Lastenrad mit listnride",
@@ -687,14 +687,14 @@
   "forms": {
     "first-name": "Vorname",
     "your-name": "Dein Name",
-    "your-email-address": "Deine E-Mail-Adresse",
+    "your-email-address": "Deine E-Mail Adresse",
     "your-phone-number": "Deine Telefonnummer",
     "comments": "Kommentare",
     "last-name": "Nachname",
     "email-address": "E-Mail-Adresse",
-    "update-password": "Update Password",
-    "old-password": "Old Password",
-    "new-password": "New Password",
+    "update-password": "Aktualisiere Passwort",
+    "old-password": "Altes Passwort",
+    "new-password": "Neues Passwort",
     "password": "Passwort",
     "forgot-password": "Passwort vergessen?",
     "or": "oder",
@@ -769,7 +769,7 @@
     "list-a-bike-header": "Dein Bike ist zu schön um rumzustehen?",
     "list-a-bike-subheader": "Liste dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und verdien dir was dazu.",
     "newsletter-header": "Erhalte unseren Newsletter und bleib informiert",
-    "newsletter-subheader": "Erhalte unseren handgefertigten Newsletter über neue Räder, Touren und Gutscheine für deine Fahrten.",
+    "newsletter-subheader": "Erhalte unseren Newsletter über neue Räder, Touren und Gutscheine für deine Fahrten.",
     "meta-title": "listnride - Die Bike-Sharing-Community",
     "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach deinem Stil und Einsatzzweck."
   },
@@ -778,6 +778,7 @@
   },
   "search": {
     "no-bikes": "Leider sind an diesem Ort noch keine Räder vorhanden. Aber wir wachsen schnell, vielleicht gibt es bald schon welche! Wenn du magst, kannst du auch <a href=\"/listing-a-bike\">dein eigenes Rad einstellen</a> oder alternativ nach einer anderen Stadt oder Adresse in der Nähe suchen.",
+    "unisize": "Unisize",
     "book-multiple-bikes": "Gruppenbuchungen",
     "bikes-found": "Gefundene Räder:",
     "all-sizes": "Alle Größen",
@@ -1175,10 +1176,16 @@
   "error-404": {
     "title": "404 Seite nicht gefunden",
     "details": "Die gesuchte Seite existiert nicht!",
-    "home-link": "Zurück nach Homepage"
+    "home-link": "Zurück zur Startseite"
   },
   "footer": {
     "language": "Sprache",
+    "languages": {
+      "dutch": "Niederländisch",
+      "italian": "Italienisch",
+      "spanish": "Spanisch",
+      "german": "Deutsch"
+    },
     "insurance-partner": "Versicherungspartner",
     "insurance": "Versicherung",
     "company": "Company",

@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "no-bikes-found": "No bikes found",
     "bolzano": "Bolzano",
     "lake-garda": "Lake Garda",
     "sardinia": "Sardinia",
@@ -296,9 +297,9 @@
         "meta-description": "Test ride a Brompton bike today! These urban folding bikes are available on listnride. Rent one in Berlin, Munich, Hamburg, Düsseldorf or Frankfurt."
       },
       "veloheld": {
-        "meta-title": "Rent veloheld bikes in Munich and Dresden | listnride",
+        "meta-title": "Rent and test veloheld bikes in Munich and Dresden | listnride",
         "meta-keywords": "-",
-        "meta-description": "Test veloheld bikes and experience the pure aesthetics and functional techniques of a custom made steel bike: road bike, cyclocross bike or city bike!"
+        "meta-description": "Test veloheld bikes and experience the pure aesthetics and functional features of a custom made steel bike: road bike, cyclocross bike or city bike!"
       },
       "muli": {
         "meta-title": "Rent a Muli cargo bike with listnride",
@@ -692,11 +693,11 @@
     "comments": "Comments",
     "last-name": "Last Name",
     "email-address": "Email Address",
-    "update-password": "Update Password",
-    "old-password": "Old Password",
-    "new-password": "New Password",
+    "update-password": "Update password",
+    "old-password": "Current password",
+    "new-password": "New password",
     "password": "Password",
-    "forgot-password": "Forgot Password?",
+    "forgot-password": "Forgot password?",
     "or": "or",
     "log-in": "Log In",
     "log-out": "Log Out",
@@ -769,7 +770,7 @@
     "list-a-bike-header": "Got a nice bike and want people to use it?",
     "list-a-bike-subheader": "List your bike for rent, meet fun new people and earn some extra cash.",
     "newsletter-header": "Subscribe to our newsletter and stay in the loop",
-    "newsletter-subheader": "Receive our handcrafted email about new bikes, tours and discounts for your rides.",
+    "newsletter-subheader": "Receive our email about new bikes, tours and discounts for your rides.",
     "meta-title": "listnride - The bike sharing community",
     "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
   },
@@ -1180,6 +1181,12 @@
   },
   "footer": {
     "language": "Language",
+    "languages": {
+      "dutch": "Dutch",
+      "italian": "Italian",
+      "spanish": "Spanish",
+      "german": "German"
+    },
     "insurance-partner": "Insurance Partners",
     "insurance": "Insurance",
     "company": "Company",

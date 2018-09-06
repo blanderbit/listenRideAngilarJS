@@ -21,6 +21,8 @@ angular.module('multiBooking', []).component('multiBooking', {
         multiBooking.form = {
           city: $stateParams.location ? $stateParams.location : '',
           start_date: '',
+          start_at: '6',
+          end_at: '22',
           duration: 0,
           bike_sizes: [],
           category_ids: [],
@@ -29,7 +31,7 @@ angular.module('multiBooking', []).component('multiBooking', {
           email: '',
           phone_number: '',
           notes: ''
-        };
+        }
         multiBooking.translatedValues = {
           categories: [],
           accessories: []
@@ -65,7 +67,6 @@ angular.module('multiBooking', []).component('multiBooking', {
             'count': value
           });
         });
-
       }
 
       function beforeSend() {

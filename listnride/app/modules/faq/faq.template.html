@@ -2,55 +2,77 @@
 
   <!-- FAQs -->
   <div class="content" layout-padding>
-    <div style="margin: 60px auto" class="lnr-section-title" layout="column" layout-align="center center">
-      <h2 class="md-headline">{{ 'faq-page.header' | translate }}</h2>
+
+    <div class="faq__mobile-select" hide-gt-sm layout="row">
+      <md-select
+        ng-model="faq.activeGroupIndex"
+        placeholder="{{ 'shared.please-select' | translate }}"
+      >
+        <md-option
+          ng-repeat="i in [].constructor(8) track by $index"
+          value="{{$index + 1}}"
+        >
+          <md-icon md-svg-src="app/assets/ui_icons/help/group-{{$index+1}}.svg" class="lnr-icn-sm"></md-icon>
+          <span translate="help-and-service.faq.group-{{$index+1}}.title"></span>
+        </md-option>
+      </md-select>
     </div>
 
-    <div layout="row">
-      <div class="md-body-1" layout="column" flex="40">
+    <div class="lnr-margin-lrg" hide-xs hide-sm></div>
+
+    <div class="lnr-section-title lnr-sm-mb-0" layout="column" layout-align="center center">
+      <h2 class="md-headline">{{ 'faq-page.header' | translate }}</h2>
+      <p
+        class="md-title lnr-sm-mb-0"
+        hide-gt-sm
+        translate="help-and-service.faq.group-{{faq.activeGroupIndex}}.title">
+      </p>
+    </div>
+
+    <div class="lnr-margin-lrg" hide-xs hide-sm></div>
+
+    <div layout="row" hide-xs hide-sm>
+      <a ui-sref="help">
+        <i class="fa fa-long-arrow-left"></i>
+        {{ 'jobs.go-back' | translate }}
+      </a>
+    </div>
+
+    <div layout="column" layout-gt-sm="row">
+      <div class="md-body-1" layout="column" hide-xs hide-sm flex-gt-sm="30">
         <p>{{ 'faq-page.topics' | translate }}</p>
-        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom faq__group-item" ng-class="faq.activeGroupIndex == 1 ? 'checked' : 'unchecked'" ng-click="faq.groupChange(1)">
-          <md-icon md-svg-src="app/assets/ui_icons/help/1_getting-started-01.svg" class="lnr-icn-sm"></md-icon>
-          <span>{{ 'help-and-service.faq.group-1.title' | translate }}</span>
-        </div>
-        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom faq__group-item" ng-class="faq.activeGroupIndex == 2 ? 'checked' : 'unchecked'" ng-click="faq.groupChange(2)">
-          <md-icon md-svg-src="app/assets/ui_icons/help/2_renting-out-01.svg" class="lnr-icn-sm"></md-icon>
-          <span>{{ 'help-and-service.faq.group-2.title' | translate }}</span>
-        </div>
-        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom faq__group-item" ng-class="faq.activeGroupIndex == 3 ? 'checked' : 'unchecked'" ng-click="faq.groupChange(3)">
-          <md-icon md-svg-src="app/assets/ui_icons/help/3_renting-01.svg" class="lnr-icn-sm"></md-icon>
-          <span>{{ 'help-and-service.faq.group-3.title' | translate }}</span>
-        </div>
-        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom faq__group-item" ng-class="faq.activeGroupIndex == 4 ? 'checked' : 'unchecked'" ng-click="faq.groupChange(4)">
-          <md-icon md-svg-src="app/assets/ui_icons/help/4_payments-01.svg" class="lnr-icn-sm"></md-icon>
-          <span>{{ 'help-and-service.faq.group-4.title' | translate }}</span>
-        </div>
-        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom faq__group-item" ng-class="faq.activeGroupIndex == 5 ? 'checked' : 'unchecked'" ng-click="faq.groupChange(5)">
-          <md-icon md-svg-src="app/assets/ui_icons/help/5_insurance-01.svg" class="lnr-icn-sm"></md-icon>
-          <span>{{ 'help-and-service.faq.group-5.title' | translate }}</span>
-        </div>
-        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom faq__group-item" ng-class="faq.activeGroupIndex == 6 ? 'checked' : 'unchecked'" ng-click="faq.groupChange(6)">
-          <md-icon md-svg-src="app/assets/ui_icons/help/6_booking-01.svg" class="lnr-icn-sm"></md-icon>
-          <span>{{ 'help-and-service.faq.group-6.title' | translate }}</span>
-        </div>
-        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom faq__group-item" ng-class="faq.activeGroupIndex == 7 ? 'checked' : 'unchecked'" ng-click="faq.groupChange(7)">
-          <md-icon md-svg-src="app/assets/ui_icons/help/7_vouchers-01.svg" class="lnr-icn-sm"></md-icon>
-          <span>{{ 'help-and-service.faq.group-7.title' | translate }}</span>
-        </div>
-        <div layout="row" class="lnr-ml-0 premium-insurance__adv lnr-margin-bottom faq__group-item" ng-class="faq.activeGroupIndex == 8 ? 'checked' : 'unchecked'" ng-click="faq.groupChange(8)">
-          <md-icon md-svg-src="app/assets/ui_icons/help/8_ratings-01.svg" class="lnr-icn-sm"></md-icon>
-          <span>{{ 'help-and-service.faq.group-8.title' | translate }}</span>
-        </div>
+        <div class="lnr-margin-lrg"></div>
+        <a
+          ng-repeat="i in [].constructor(8) track by $index"
+          ui-sref="faq({group: $index+1})"
+          layout="row"
+          class="md-subhead lnr-ml-0 premium-insurance__adv lnr-margin-bottom faq__group-item"
+          ng-class="faq.activeGroupIndex == $index + 1 ? 'checked' : 'unchecked'"
+          ng-click="faq.activeGroupIndex = $index + 1"
+        >
+          <md-icon md-svg-src="app/assets/ui_icons/help/group-{{$index+1}}.svg" class="lnr-icn-sm"></md-icon>
+          <span translate="help-and-service.faq.group-{{$index+1}}.title"></span>
+        </a>
       </div>
-      <div class="md-body-1" layout="column" flex="60">
-        <p style="margin-bottom: 32px">{{ 'faq-page.description' | translate }}</p>
-        <div layout="column" ng-repeat="group in faq.data track by $index" ng-if="faq.activeGroupIndex === $index + 1">
-          <div class="faq__item" ng-repeat="i in faq.iterateNumber(group.questionsCount) track by $index">
-            <h3 class="md-subhead lnr-clickable lnr-arrow-left" ng-click="faq1_1=!faq1_1" ng-class="faq1_1 ? 'accordion__tab--opened' : ''">
-              {{ 'help-and-service.faq.group-1.question-1' | translate }}
+      <div class="md-body-1" layout="column" flex-gt-sm="70">
+        <div
+          layout="column"
+          ng-repeat="group in faq.data"
+          ng-init="parentIndex = $index"
+          ng-if="faq.activeGroupIndex == $index + 1">
+          <p class="lnr-sm-text-center lnr-sm-mt-0" translate="help-and-service.faq.group-{{parentIndex+1}}.description"></p>
+          <div class="lnr-margin-lrg"></div>
+          <div
+            class="faq__item"
+            ng-repeat="i in [].constructor(group.questionsCount) track by $index">
+            <h3
+              class="md-subhead lnr-clickable lnr-arrow-left"
+              ng-click="faq.toggleQuestion(parentIndex, $index)"
+              ng-class="faq.activeQuestion == parentIndex + '_' + $index ? 'accordion__tab--opened' : ''"
+              translate="help-and-service.faq.group-{{parentIndex+1}}.question-{{$index+1}}">
             </h3>
-            <div ng-show="faq1_1">
-              <p class="md-body-1 accordion__text" translate="help-and-service.faq.group-1.answer-1"></p>
+            <div ng-show="faq.activeQuestion == parentIndex + '_' + $index">
+              <p class="md-body-1 accordion__text" translate="help-and-service.faq.group-{{parentIndex+1}}.answer-{{$index+1}}"></p>
             </div>
           </div>
         </div>
@@ -60,7 +82,6 @@
   <!-- end FAQs -->
 
   <div class="lnr-middle-divider"></div>
-
 
   <div class="content" layout-padding>
     <div class="lnr-section-title mt0" layout="column" layout-align="center center">

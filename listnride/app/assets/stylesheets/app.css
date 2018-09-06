@@ -767,6 +767,14 @@ md-tooltip .md-content {
   height: 160px;
 }
 
+.lnr-fill {
+  fill: #5FC693;
+}
+
+.lnr-fill--blue {
+  fill: #7ab2f8;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* PROFILE PICTURE
 /*-----------------------------------------------------------------------------------*/
@@ -2894,7 +2902,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  align-items: top;
+  align-items: flex-start;
   padding: 10px 0 14px;
   border-bottom: 1px solid #e1e1e1;
 }
@@ -3013,14 +3021,31 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 /*-----------------------------------------------------------------------------------*/
 
 .help__group-card {
-  color: rgba(85, 85, 85, 1.0);
+  color: #555555;
   border: 1px solid #e1e1e1;
   border-radius: 7px;
+  padding: 16px 0;
   cursor: pointer;
+  transition: background .3s;
 }
 
-.faq__group-item.checked {
-  color: #5FC693;
+.help__group-card:hover {
+  background: #353a410d;
+}
+
+.faq__group-item,
+.faq__group-item .lnr-fill {
+  color: #555555;
+  fill: #555555;
+  padding: 10px 0;
+}
+
+.faq__group-item.checked,
+.faq__group-item.checked .lnr-fill,
+.faq__group-item:hover,
+.faq__group-item:hover .lnr-fill {
+  color: #7ab2f8;
+  fill: #7ab2f8;
 }
 
 .faq__item img {
@@ -3028,7 +3053,36 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   margin-top: 20px;
 }
 
-/* PAGINATION */
+.faq__item > .lnr-arrow-left:first-child {
+  padding: 10px 0 14px;
+}
+
+.faq__item:last-child > .lnr-arrow-left:first-child {
+  border-bottom: 0;
+}
+
+.faq__mobile-select {
+  position: relative;
+}
+
+.faq__mobile-select md-select {
+  margin: 0 0 10px;
+}
+
+.faq__mobile-select:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% + 16px);
+  margin: 0 -8px;
+  height: 1px;
+  background: #e1e1e1;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* PAGINATION
+/*-----------------------------------------------------------------------------------*/
 
 .lnr-pagination__item.active button {
   background: #7ab2f8;
@@ -3037,7 +3091,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 }
 
 .lnr-pagination__item:not(.active) button {
-  border-color: transparent!important;
+  border-color: transparent !important;
 }
 
 .lnr-pagination__divider span {
@@ -3112,6 +3166,14 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
     margin-bottom: 8px;
   }
 
+  .lnr-sm-mb-0 {
+    margin-bottom: 0;
+  }
+
+  .lnr-sm-mt-0 {
+    margin-top: 0;
+  }
+
   .lnr-sm-center {
     text-align: center
   }
@@ -3180,6 +3242,12 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .multi-booking .date-picker-wrapper--ngDialog {
     right: auto;
+  }
+
+  /* FAQ */
+
+  .faq__subheader-mobile {
+    margin-bottom: 0;
   }
 }
 
