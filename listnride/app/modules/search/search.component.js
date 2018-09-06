@@ -16,8 +16,8 @@ angular.module('search',[]).component('search', {
   bindings: {
     location: '<'
   },
-  controller: ['$translate', '$stateParams','$state', '$timeout', 'NgMap', 'ngMeta', 'api',
-    function SearchController($translate, $stateParams, $state, $timeout, NgMap, ngMeta, api) {
+  controller: ['$translate', '$stateParams','$state', '$timeout', 'NgMap', 'ngMeta', 'api', 'mapConfigs',
+    function SearchController($translate, $stateParams, $state, $timeout, NgMap, ngMeta, api, mapConfigs) {
       var search = this;
       search.$onInit = function() {
         // methods
@@ -30,6 +30,7 @@ angular.module('search',[]).component('search', {
         search.populateBikes = populateBikes;
         search.addMoreItemsLimit = addMoreItemsLimit;
         search.onDateChange = onDateChange;
+        search.colorScheme = mapConfigs.colorScheme();
         search.filteredBikes = [];
         search.filteredDateBikes = [];
         search.mapMarkers = [];
