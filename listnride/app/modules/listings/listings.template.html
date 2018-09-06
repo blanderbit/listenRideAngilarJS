@@ -23,7 +23,7 @@
         >
         </md-switch>
         <!-- PAGINATION -->
-        <ul class="lnr-pagination listing__pagination lnr-list-no-style" layout="row" layout-align="none center">
+        <ul ng-if="listings.pagination.total_pages > 1" class="lnr-pagination listing__pagination lnr-list-no-style" layout="row" layout-align="none center">
           <li>
             <md-button
               class="md-fab md-mini lnr-md-blue-bordered"
