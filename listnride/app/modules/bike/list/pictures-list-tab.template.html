@@ -7,8 +7,15 @@
             {{ 'list.pictures.header' | translate }}
           </h3>
         </div>
-        <md-button class="md-raised md-primary lnr-no-margin" ng-disabled="picturesTab.parent.form.images.length > 4" ngf-multiple="true" ngf-select="picturesTab.parent.addImage($files)"
-          ngf-resize="{width: 1600, height: 1200, quality: .9}" accept=".jpg,.jpeg,.png" ngf-validate="picturesTab.parent.validateObj" ngf-model-invalid="picturesTab.parent.invalidFiles">
+        <md-button
+          class="md-raised md-primary lnr-no-margin"
+          ng-disabled="picturesTab.parent.form.images.length > 4"
+          ngf-multiple="true"
+          ngf-select="picturesTab.parent.addImage($files)"
+          ngf-resize="{width: 1600, height: 1200, quality: .9}"
+          accept=".jpg,.jpeg,.png"
+          ngf-validate="picturesTab.parent.validateObj"
+          ngf-model-invalid="picturesTab.parent.invalidFiles">
           {{ 'list.pictures.select-images' | translate }}
         </md-button>
 
