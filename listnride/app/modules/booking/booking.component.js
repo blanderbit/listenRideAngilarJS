@@ -371,7 +371,6 @@ angular.module('booking', [])
             firstName: booking.user.firstName,
             lastName: booking.user.lastName
           }
-          console.log(user);
           if (booking.shopBooking && !booking.authentication.loggedIn()) {
             booking.authentication.signupGlobal(user);
           } else {
