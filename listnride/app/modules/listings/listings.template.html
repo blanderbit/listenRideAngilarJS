@@ -10,7 +10,7 @@
       </md-input-container>
       <div class="lnr-padding-left-double" layout="row" flex flex-gt-md="75" layout-align="center center" layout-align-gt-sm="end center">
         <!-- Duplication information -->
-        <div style="margin-right: auto;" class="lnr-padding-right-double" hide-xs hide-sm>
+        <div ng-if="listings.status" style="margin-right: auto;" class="lnr-padding-right-double" hide-xs hide-sm>
           <h3>{{'listings.duplicate.duplication-status' | translate }}: {{listings.status}}</h3>
         </div>
         <!-- VIEW SWITCHER -->
@@ -23,14 +23,14 @@
         >
         </md-switch>
         <!-- PAGINATION -->
-        <ul class="lnr-pagination listing__pagination lnr-list-no-style" layout="row" layout-align="none center">
+        <ul ng-if="listings.pagination.total_pages > 1" class="lnr-pagination listing__pagination lnr-list-no-style" layout="row" layout-align="none center">
           <li>
             <md-button
               class="md-fab md-mini lnr-md-blue-bordered"
               aria-label="{{ 'shared.previous' | translate }}"
               ng-click="listings.changePage(listings.currentPageIndex - 1)"
               ng-disabled="listings.currentPageIndex === 1 || !listings.pagination.prev_page">
-              <i class="material-icons">chevron_left</i>
+              <i class="fa fa-angle-left"></i>
             </md-button>
           </li>
           <li
@@ -61,7 +61,7 @@
               aria-label="{{ 'shared.next' | translate }}"
               ng-click="listings.changePage(listings.currentPageIndex+1)"
               ng-disabled="listings.currentPageIndex === listings.pagination.total_pages || !listings.pagination.next_page">
-              <i class="material-icons">chevron_right</i>
+              <i class="fa fa-angle-right"></i>
             </md-button>
           <li>
         </ul>
