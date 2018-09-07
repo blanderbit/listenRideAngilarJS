@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "no-bikes-found": "No bikes found",
     "bolzano": "Bolzano",
     "lake-garda": "Lake Garda",
     "sardinia": "Sardinia",
@@ -162,6 +163,10 @@
       "subdescription-not-use": "Design. Art. Passion."
     }
   },
+  "faq": {
+    "meta-title": "Frequently Asked Questions",
+    "meta-description": "The most frequently asked questions by Listers and Riders are answered here to help you get started. Whether you are looking for the perfect bike to rent that serves your needs. Or to list that very special bike of yours."
+  },
   "multi-booking": {
     "meta-title": "Group booking",
     "no-accessories": "No accessories",
@@ -216,6 +221,12 @@
         "meta-title": "Explore Vienna by bike with listnride",
         "meta-description": "Discover Vienna by bike. With listnride, you can find a bike for rent in Vienna that matches your needs and your style."
       }
+    },
+    "seo": {
+      "city-title": "Rent the perfect bike in {{location}} | listnride",
+      "city-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a bike securely rented on listnride.",
+      "category-title": "Rent the perfect {{category}} in {{location}} | listnride",
+      "category-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a {{category}} securely rented on listnride."
     },
     "business-community": {
       "meta-title": "The listnride business community",
@@ -285,11 +296,16 @@
       },
       "leaos": {
         "meta-title": "Rent and test the Leaos E-Bikes in Munich, Dusseldorf and Bolzano",
-        "meta-descr": "The Design Ebike - Leaos"
+        "meta-descr": "The design e-bike - Leaos"
       },
       "brompton": {
         "meta-title": "Rent a Brompton bike with listnride",
         "meta-description": "Test ride a Brompton bike today! These urban folding bikes are available on listnride. Rent one in Berlin, Munich, Hamburg, Düsseldorf or Frankfurt."
+      },
+      "veloheld": {
+        "meta-title": "Rent and test veloheld bikes in Munich and Dresden | listnride",
+        "meta-keywords": "-",
+        "meta-description": "Test veloheld bikes and experience the pure aesthetics and functional features of a custom made steel bike: road bike, cyclocross bike or city bike!"
       },
       "muli": {
         "meta-title": "Rent a Muli cargo bike with listnride",
@@ -308,7 +324,7 @@
         "meta-description": "The singlespeed/fixed-gear \"bonvelo BLIZZ\" is available to rent and test ride in Berlin in four frame sizes. Book one on listnride today!"
       },
       "motoparilla": {
-        "meta-title": "Rent and Test the Moto Parilla Carbon SUV E-Bike in Munich",
+        "meta-title": "Rent and Test the Moto Parilla Carbon SUV e-Bike in Munich",
         "meta-description": "The Carbon SUV E-Bike from Moto Parilla can be tested in Munich. Simply book online and enjoy the ride!"
       },
       "votec": {
@@ -635,7 +651,7 @@
     "complete-profile": "Complete your Profile",
     "add-payment": "Payment Method",
     "complete-profile-description": "To book the bike, please enter your payment information. All informations are transmitted over a secure connection.",
-    "no-requests-yet": "As soon as you made or got requests, they'll show up here.",
+    "no-requests-yet": "As soon as there are requests, they'll show up here.",
     "filters": {
       "all-requests": "All Requests",
       "current-rentals": "Current Rentals",
@@ -683,11 +699,11 @@
     "comments": "Comments",
     "last-name": "Last Name",
     "email-address": "Email Address",
-    "update-password": "Update Password",
-    "old-password": "Old Password",
-    "new-password": "New Password",
+    "update-password": "Update password",
+    "old-password": "Current password",
+    "new-password": "New password",
     "password": "Password",
-    "forgot-password": "Forgot Password?",
+    "forgot-password": "Forgot password?",
     "or": "or",
     "log-in": "Log In",
     "log-out": "Log Out",
@@ -748,7 +764,7 @@
     "insurance": {
       "description": "No matter if minimalistic fixie or high-end triathlon bike: Every listnride rental in Germany or Austria is insured! Simple. Unbureaucratically. Anytime.",
       "header": "Insurance for your rental on listnride",
-      "logo-description": "In cooperation with hepster and"
+      "logo-description": "In cooperation with hepster and insured by"
     },
     "landing-section-subheader": "Join listnride and find the bike that is right for you.",
     "featured-bikes-header": "Bike Rental: Our Community’s Favorites",
@@ -760,7 +776,7 @@
     "list-a-bike-header": "Got a nice bike and want people to use it?",
     "list-a-bike-subheader": "List your bike for rent, meet fun new people and earn some extra cash.",
     "newsletter-header": "Subscribe to our newsletter and stay in the loop",
-    "newsletter-subheader": "Receive our handcrafted email about new bikes, tours and discounts for your rides.",
+    "newsletter-subheader": "Receive our email about new bikes, tours and discounts for your rides.",
     "meta-title": "listnride - The bike sharing community",
     "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
   },
@@ -769,6 +785,7 @@
   },
   "search": {
     "no-bikes": "There are unfortunately no bikes in this location yet. As we're growing fast, probably soon there will be! If you'd like to, you can <a href=\"/listing-a-bike\">list a bike yourself</a> or alternatively try searching for another city or specific location nearby.",
+    "unisize": "Unisize",
     "book-multiple-bikes": "Group bookings",
     "bikes-found": "Bikes found:",
     "all-sizes": "All sizes",
@@ -787,7 +804,7 @@
   },
   "calendar": {
     "invalid-date": "Dates are invalid",
-    "info-service-fee-insurance": "Helps us to operate listnride and to offer a secure bike rental service.",
+    "info-service-fee-insurance": "helps us run our platform and<br0>allows us to offer first-class customer service.<br1>VAT included. Non-refundable.",
     "basic-insurance-included": "Basic insurance included",
     "request-bike": "Request Bike",
     "to-request-bike-please": "to request a bike please",
@@ -798,7 +815,7 @@
     "select-timespan-description": "Before you can request, please set the time span of your rental. Simply click on the days and select pickup and dropoff times in the above calendar.",
     "info-subtotal": "This is the regular daily price<br>times the amount of rental days<br>.",
     "info-discount": "Average daily discount you<br>get per day by renting out<br>for a longer period of time.",
-    "info-service-fee": "The service fee is<br>used for providing<br>listnride. It includes VAT.",
+    "info-service-fee": "helps us run our platform and<br>allows us to offer first-class customer service.<br>VAT included. Non-refundable.",
     "info": "In the calendar, select first<br> the day you wish to rent<br>out the bike, and second <br>the day you want to return it.",
     "info-without-calendar": "In the calendar, select first the start date of your rental then the return date.  Secondly select start time and end time."
   },
@@ -1008,6 +1025,7 @@
     "show-as-list": "Show as List",
     "duplicate": {
       "duplicate": "Duplicate",
+      "duplication-status": "Duplication status",
       "how_many": "How many additional bikes?",
       "header": "Duplicate Bike",
       "number_bikes": "Number of bikes",
@@ -1170,6 +1188,12 @@
   },
   "footer": {
     "language": "Language",
+    "languages": {
+      "dutch": "Dutch",
+      "italian": "Italian",
+      "spanish": "Spanish",
+      "german": "German"
+    },
     "insurance-partner": "Insurance Partners",
     "insurance": "Insurance",
     "company": "Company",

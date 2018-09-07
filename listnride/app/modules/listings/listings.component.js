@@ -4,6 +4,8 @@ angular.module('listings', []).component('listings', {
   templateUrl: 'app/modules/listings/listings.template.html',
   controllerAs: 'listings',
   controller: [
+    '$scope',
+    '$stateParams',
     '$mdDialog',
     '$analytics',
     '$timeout',
@@ -15,24 +17,33 @@ angular.module('listings', []).component('listings', {
     '$mdMedia',
     'api',
     'accessControl',
-    function ListingsController($mdDialog, $analytics, $timeout, $mdToast, $filter, $translate, $state, $localStorage, $mdMedia, api, accessControl) {
+    function ListingsController($scope, $stateParams, $mdDialog, $analytics, $timeout, $mdToast, $filter, $translate, $state, $localStorage, $mdMedia, api, accessControl) {
       if (accessControl.requireLogin()) {
         return
       }
       var listings = this;
 
       listings.$onInit = function () {
-
+        // variables
+        listings.input = $stateParams.q || '';
         listings.maxTiles = 12;
         listings.status = '';
         listings.isDuplicating = false;
+        listings.endPoint = '/users/' + $localStorage.userId + "/rides";
+        listings.pagination = {
+          next_page: '',
+          prev_page: '',
+          total_pages: ''
+        };
+        listings.currentPageIndex = +$stateParams.page || 1;
+        if ($localStorage.listView) listings.listView = true;
 
-        if ($localStorage.listView === true) listings.listView = true;
-        // fetch all bikes
-        listings.get();
+        // methods
+        listings.getBikes = getBikes;
+        listings.changePage = changePage;
+        listings.isPaginationInRange = isPaginationInRange;
 
         listings.helper = {
-
           // local method to be called on duplicate success
           duplicateHelper: function (bike, duplicate_number) {
             api.post('/rides/' + bike.id + '/duplicate', {
@@ -64,7 +75,7 @@ angular.module('listings', []).component('listings', {
                   return n.id === response.data.id;
                 });
                 listings.bikes = listings.mirror_bikes;
-                if (listings.input) { listings.search() }
+                // if (listings.input) { listings.search() }
                 $mdToast.show(
                   $mdToast.simple()
                     .textContent($translate.instant('toasts.bike-deleted'))
@@ -84,264 +95,296 @@ angular.module('listings', []).component('listings', {
             );
           }
         };
+
+        // invocations
+        listings.getBikes()
       };
 
-      // local method to be used as duplicate dialog controller
-      var DuplicateController = function () {
-        var duplicate = this;
-        duplicate.duplicate_number = 1;
-        // cancel the dialog
-        duplicate.cancelDialog = function () {
-          $mdDialog.cancel();
+      // CHILD CONTROLLERS
+
+        // local method to be used as duplicate dialog controller
+        var DuplicateController = function () {
+          var duplicate = this;
+          duplicate.duplicate_number = 1;
+          // cancel the dialog
+          duplicate.cancelDialog = function () {
+            $mdDialog.cancel();
+          };
+          // close the dialog succesfully
+          duplicate.closeDialog = function () {
+            $mdDialog.hide(parseInt(duplicate.duplicate_number));
+          };
         };
-        // close the dialog succesfully
-        duplicate.closeDialog = function () {
-          $mdDialog.hide(parseInt(duplicate.duplicate_number));
-        };
-      };
 
-      // local method to be used as delete controller
-      var DeleteController = function (bikeId) {
-        var deleteBikeDialog = this;
-        // cancel dialog
-        deleteBikeDialog.hide = function () {
-          $mdDialog.hide();
-        };
-        // delete a bike after confirmation
-        deleteBikeDialog.deleteBike = function () {
-          listings.helper.deleteHelper(bikeId);
-          $mdDialog.hide();
-        }
-      };
-
-      var AvailabilityController = function (bike, $scope) {
-        var availabilityDialog = this;
-        availabilityDialog.inputs = [];
-        availabilityDialog.isChanged = false;
-        availabilityDialog.removedInputs = [];
-        availabilityDialog.maxInputs = 5;
-        availabilityDialog.isMaxInputs = false;
-        availabilityDialog.disabledDates = [];
-        availabilityDialog.addInput = addInput;
-        availabilityDialog.destroyInput = destroyInput;
-        availabilityDialog.removeInput = removeInput;
-        availabilityDialog.create = create;
-        availabilityDialog.update = update;
-        availabilityDialog.save = save;
-        availabilityDialog.destroy = destroy;
-        availabilityDialog.close = close;
-        availabilityDialog._checkMax = _checkMax;
-        availabilityDialog.setData = setData;
-        availabilityDialog.takeDisabledDates = takeDisabledDates;
-        availabilityDialog.requests = bike.requests;
-        availabilityDialog.changeDate = changeDate;
-
-        if (!bike.hasOwnProperty('availabilities')) bike.availabilities = {};
-        availabilityDialog.setData();
-
-        //////////////////
-
-        function changeDate() {
-          availabilityDialog.isChanged = true;
-          availabilityDialog.disabledDates = availabilityDialog.takeDisabledDates();
-        }
-
-        function _getModel(item) {
-          return {
-            'ride_id': bike.id,
-            'start_date': item.start_date,
-            'duration': item.duration
+        // local method to be used as delete controller
+        var DeleteController = function (bikeId) {
+          var deleteBikeDialog = this;
+          // cancel dialog
+          deleteBikeDialog.hide = function () {
+            $mdDialog.hide();
+          };
+          // delete a bike after confirmation
+          deleteBikeDialog.deleteBike = function () {
+            listings.helper.deleteHelper(bikeId);
+            $mdDialog.hide();
           }
-        }
+        };
 
-        function _checkMax() {
-          availabilityDialog.isMaxInputs = availabilityDialog.inputs.length >= availabilityDialog.maxInputs ? true : false;
-        }
-
-        function setData() {
-          // clear array
+        // TODO: move this to a single file
+        var AvailabilityController = function (bike, $scope) {
+          var availabilityDialog = this;
+          availabilityDialog.inputs = [];
           availabilityDialog.isChanged = false;
-          availabilityDialog.inputs.length = 0;
+          availabilityDialog.removedInputs = [];
+          availabilityDialog.maxInputs = 5;
+          availabilityDialog.isMaxInputs = false;
+          availabilityDialog.disabledDates = [];
+          availabilityDialog.addInput = addInput;
+          availabilityDialog.destroyInput = destroyInput;
+          availabilityDialog.removeInput = removeInput;
+          availabilityDialog.create = create;
+          availabilityDialog.update = update;
+          availabilityDialog.save = save;
+          availabilityDialog.destroy = destroy;
+          availabilityDialog.close = close;
+          availabilityDialog._checkMax = _checkMax;
+          availabilityDialog.setData = setData;
+          availabilityDialog.takeDisabledDates = takeDisabledDates;
+          availabilityDialog.requests = bike.requests;
+          availabilityDialog.changeDate = changeDate;
 
-          for (var id in bike.availabilities) {
-            availabilityDialog.inputs.push({
-              id: id,
-              'start_date': bike.availabilities[id]['start_date'],
-              'duration': bike.availabilities[id]['duration']
-            })
-          }
-          // if it's no availabities let's create one clear range
-          if (!availabilityDialog.inputs.length) availabilityDialog.addInput();
-
-          availabilityDialog._checkMax();
-          availabilityDialog.disabledDates = availabilityDialog.takeDisabledDates();
-        }
-
-        function updateData(data) {
-          // update or create item in bike model
-          _.forEach(data, function (item) {
-            if (bike.availabilities.hasOwnProperty(item.id)) {
-              angular.extend(bike.availabilities[item.id], item);
-            } else {
-              bike.availabilities[item.id] = item;
-            }
-          });
-
+          if (!bike.hasOwnProperty('availabilities')) bike.availabilities = {};
           availabilityDialog.setData();
-        }
 
-        function takeDisabledDates() {
-          var disabled = [];
-          _.forEach(availabilityDialog.inputs, function (item) {
-            if (!item.start_date) return;
-            var dateMoment = moment(new Date(item.start_date).setHours(0, 0, 0, 0));
-            if (isNaN(dateMoment)) return;
-            disabled.push({
-              'start_at': dateMoment,
-              'end_at': dateMoment.clone().add(item.duration, 'd')
-            });
-          });
-          return disabled;
-        }
+          //////////////////
 
-        function addInput() {
-          if (!availabilityDialog.isMaxInputs) {
-            availabilityDialog.inputs.push({});
-            availabilityDialog._checkMax();
+          function changeDate() {
+            availabilityDialog.isChanged = true;
+            availabilityDialog.disabledDates = availabilityDialog.takeDisabledDates();
           }
-        }
 
-        function destroyInput(index) {
-          availabilityDialog.inputs.splice(index, 1);
+          function _getModel(item) {
+            return {
+              'ride_id': bike.id,
+              'start_date': item.start_date,
+              'duration': item.duration
+            }
+          }
 
-          if (availabilityDialog.inputs.length < 1) {
+          function _checkMax() {
+            availabilityDialog.isMaxInputs = availabilityDialog.inputs.length >= availabilityDialog.maxInputs ? true : false;
+          }
+
+          function setData() {
+            // clear array
             availabilityDialog.isChanged = false;
-            availabilityDialog.addInput();
+            availabilityDialog.inputs.length = 0;
+
+            for (var id in bike.availabilities) {
+              availabilityDialog.inputs.push({
+                id: id,
+                'start_date': bike.availabilities[id]['start_date'],
+                'duration': bike.availabilities[id]['duration']
+              })
+            }
+            // if it's no availabities let's create one clear range
+            if (!availabilityDialog.inputs.length) availabilityDialog.addInput();
+
+            availabilityDialog._checkMax();
+            availabilityDialog.disabledDates = availabilityDialog.takeDisabledDates();
           }
-          availabilityDialog.disabledDates = availabilityDialog.takeDisabledDates();
-        }
 
-        function removeInput(index) {
-          // if input has 'id' it was saved, so we should call api to destroy it
-          if (availabilityDialog.inputs[index].id) {
-            availabilityDialog.destroy(availabilityDialog.inputs[index].id);
-          } else {
-            destroyInput(index);
-          }
-        }
-
-        function showSuccessSavedMsg() {
-          $mdToast.show(
-            $mdToast.simple()
-              .textContent($translate.instant('toasts.availability-success-saved'))
-              .hideDelay(4000)
-              .position('top center')
-          )
-        }
-
-        function save() {
-          if (!availabilityDialog.isChanged) return availabilityDialog.close();
-          checkUpdated();
-        }
-
-        function checkUpdated() {
-          var updateData = { 'availabilities': {} };
-          var updatedItems = availabilityDialog.inputs.filter(function (item) {
-            return item.hasOwnProperty('id') && item.hasOwnProperty('is_changed');
-          });
-
-          if (updatedItems.length) {
-            _.forEach(updatedItems, function (item) {
-              updateData['availabilities'][item.id] = _getModel(item);
+          function updateData(data) {
+            // update or create item in bike model
+            _.forEach(data, function (item) {
+              if (bike.availabilities.hasOwnProperty(item.id)) {
+                angular.extend(bike.availabilities[item.id], item);
+              } else {
+                bike.availabilities[item.id] = item;
+              }
             });
-            update(JSON.stringify(updateData));
-          } else {
-            checkCreated();
+
+            availabilityDialog.setData();
           }
-        }
 
-        function checkCreated() {
-          var newData = { 'availabilities': [] };
-          var newItems = availabilityDialog.inputs.filter(function (item) {
-            return !item.hasOwnProperty('id') && item.hasOwnProperty('is_changed');
-          });
-
-          if (newItems.length) {
-            _.forEach(newItems, function (item) {
-              newData['availabilities'].push(_getModel(item));
+          function takeDisabledDates() {
+            var disabled = [];
+            _.forEach(availabilityDialog.inputs, function (item) {
+              if (!item.start_date) return;
+              var dateMoment = moment(new Date(item.start_date).setHours(0, 0, 0, 0));
+              if (isNaN(dateMoment)) return;
+              disabled.push({
+                'start_at': dateMoment,
+                'end_at': dateMoment.clone().add(item.duration, 'd')
+              });
             });
-            create(JSON.stringify(newData));
-            return true;
-          } else {
-            return false;
+            return disabled;
           }
-        }
 
-        function update(data) {
-          api.put('/rides/' + bike.id + '/availabilities/', data).then(
-            function (response) {
-              //TODO: rewrite by q.defer chain
-              if (!checkCreated()) {
+          function addInput() {
+            if (!availabilityDialog.isMaxInputs) {
+              availabilityDialog.inputs.push({});
+              availabilityDialog._checkMax();
+            }
+          }
+
+          function destroyInput(index) {
+            availabilityDialog.inputs.splice(index, 1);
+
+            if (availabilityDialog.inputs.length < 1) {
+              availabilityDialog.isChanged = false;
+              availabilityDialog.addInput();
+            }
+            availabilityDialog.disabledDates = availabilityDialog.takeDisabledDates();
+          }
+
+          function removeInput(index) {
+            // if input has 'id' it was saved, so we should call api to destroy it
+            if (availabilityDialog.inputs[index].id) {
+              availabilityDialog.destroy(availabilityDialog.inputs[index].id);
+            } else {
+              destroyInput(index);
+            }
+          }
+
+          function showSuccessSavedMsg() {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.availability-success-saved'))
+                .hideDelay(4000)
+                .position('top center')
+            )
+          }
+
+          function save() {
+            if (!availabilityDialog.isChanged) return availabilityDialog.close();
+            checkUpdated();
+          }
+
+          function checkUpdated() {
+            var updateData = { 'availabilities': {} };
+            var updatedItems = availabilityDialog.inputs.filter(function (item) {
+              return item.hasOwnProperty('id') && item.hasOwnProperty('is_changed');
+            });
+
+            if (updatedItems.length) {
+              _.forEach(updatedItems, function (item) {
+                updateData['availabilities'][item.id] = _getModel(item);
+              });
+              update(JSON.stringify(updateData));
+            } else {
+              checkCreated();
+            }
+          }
+
+          function checkCreated() {
+            var newData = { 'availabilities': [] };
+            var newItems = availabilityDialog.inputs.filter(function (item) {
+              return !item.hasOwnProperty('id') && item.hasOwnProperty('is_changed');
+            });
+
+            if (newItems.length) {
+              _.forEach(newItems, function (item) {
+                newData['availabilities'].push(_getModel(item));
+              });
+              create(JSON.stringify(newData));
+              return true;
+            } else {
+              return false;
+            }
+          }
+
+          function update(data) {
+            api.put('/rides/' + bike.id + '/availabilities/', data).then(
+              function (response) {
+                //TODO: rewrite by q.defer chain
+                if (!checkCreated()) {
+                  availabilityDialog.isChanged = false;
+                  showSuccessSavedMsg();
+                  updateData(response.data);
+                }
+              },
+              function (error) {
+                //TODO: error
+              }
+            );
+          }
+
+          function create(data) {
+            api.post('/rides/' + bike.id + '/availabilities/', data).then(
+              function (response) {
+                updateData(response.data);
+                //TODO: replace it to save function (q.defer chain)
                 availabilityDialog.isChanged = false;
                 showSuccessSavedMsg();
-                updateData(response.data);
+              },
+              function (error) {
+                //TODO: error
               }
-            },
-            function (error) {
-              //TODO: error
-            }
-          );
-        }
+            );
+          }
 
-        function create(data) {
-          api.post('/rides/' + bike.id + '/availabilities/', data).then(
-            function (response) {
-              updateData(response.data);
-              //TODO: replace it to save function (q.defer chain)
-              availabilityDialog.isChanged = false;
-              showSuccessSavedMsg();
-            },
-            function (error) {
-              //TODO: error
-            }
-          );
-        }
+          function destroy(id) {
+            api.delete('/rides/' + bike.id + '/availabilities/' + id).then(
+              function (response) {
+                delete bike.availabilities[response.data.id];
+                availabilityDialog.setData();
+                // destroyInput(_.findIndex(availabilityDialog.inputs, { 'id': response.data.id }));
+                $mdToast.show(
+                  $mdToast.simple()
+                    .textContent($translate.instant('toasts.range-success-delete'))
+                    .hideDelay(4000)
+                    .position('top center')
+                )
+              },
+              function (error) {
+                //TODO: show error message
+              }
+            );
+          }
 
-        function destroy(id) {
-          api.delete('/rides/' + bike.id + '/availabilities/' + id).then(
-            function (response) {
-              delete bike.availabilities[response.data.id];
-              availabilityDialog.setData();
-              // destroyInput(_.findIndex(availabilityDialog.inputs, { 'id': response.data.id }));
-              $mdToast.show(
-                $mdToast.simple()
-                  .textContent($translate.instant('toasts.range-success-delete'))
-                  .hideDelay(4000)
-                  .position('top center')
-              )
-            },
-            function (error) {
-              //TODO: show error message
-            }
-          );
-        }
+          function close() {
+            $mdDialog.hide();
+          }
 
-        function close() {
-          $mdDialog.hide();
-        }
+        };
 
-      };
+      // END OF CHILD CONTROLLERS
 
       // search functionality in header of My Bikes (List View)
       listings.search = function () {
-        listings.bikes = $filter('filter')(listings.mirror_bikes, filterFunction, { $: listings.input });
+        $scope.$apply(function () {
+          $state.go(
+            $state.current, {
+              page: 1,
+              q: listings.input
+            }, {
+              notify: false
+            }
+          );
+
+          listings.currentPageIndex = 1;
+          listings.getBikes();
+        });
+        // listings.bikes = $filter('filter')(listings.mirror_bikes, filterFunction, { $: listings.input });
       };
+      var delayedSearch = _.debounce(listings.search, 1000);
+      $scope.$watch("listings.input", function () {
+        delayedSearch();
+      });
 
       var filterFunction = function(bike) {
         //TODO improve search by reducing extra params from backend
         var val = listings.input.toLocaleLowerCase();
         return bike.name.toLocaleLowerCase().indexOf(val) > -1 || bike.city.toLocaleLowerCase().indexOf(val) > -1 || bike.brand.toLocaleLowerCase().indexOf(val) > -1;
       };
+
+      // function to add separator for page navigation and show only 4 items in list
+      function isPaginationInRange(index) {
+        if (listings.pagination.total_pages <= 5) return true;
+        // show only first page, last page, current page and pages near current page (in 1 range)
+        return index === 1 || index === listings.pagination.total_pages || listings.currentPageIndex - 1 === index || listings.currentPageIndex + 1 === index || listings.currentPageIndex === index;
+      }
 
       // Redirect to bike list
       listings.listBike = function () {
@@ -369,7 +412,7 @@ angular.module('listings', []).component('listings', {
           // bind new bikes with controller scope
           else if (listings.status === 'complete') {
             listings.isDuplicating = false;
-            listings.get();
+            listings.getBikes();
           }
         }, function (error) {
         });
@@ -448,13 +491,19 @@ angular.module('listings', []).component('listings', {
       };
 
       // fetch bikes
-      listings.get = function () {
-        api.get('/users/' + $localStorage.userId + "/rides").then(
+      function getBikes() {
+        var firstRequest = _.isEmpty(listings.bikes);
+        var params = '?page=' + listings.currentPageIndex + '&q=' + listings.input;
+        api.get(listings.endPoint + params).then(
           function (response) {
-            listings.bikes = response.data;
-            listings.mirror_bikes = response.data;
-            if (listings.input) { listings.search() }
-            if (listings.listView === false) {
+            listings.bikes = response.data.bikes;
+            // TODO: rewrite mirror bikes logic
+            listings.mirror_bikes = response.data.bikes;
+            listings.pagination = response.data.pagination;
+            // if (listings.input) { listings.search() }
+
+            // automatically switch to list view, do this only for the first request
+            if (!listings.listView && firstRequest) {
               listings.listView = listings.bikes.length >= listings.maxTiles && $mdMedia('gt-sm');
               $localStorage.listView = listings.listView;
             }
@@ -463,6 +512,18 @@ angular.module('listings', []).component('listings', {
           }
         );
       };
+
+      function changePage(pageIndex) {
+        $state.go(
+          $state.current, {
+            page: pageIndex
+          }, {
+            notify: false
+          }
+        );
+        listings.currentPageIndex = pageIndex;
+        listings.getBikes();
+      }
 
       // Redirect to Edit Bike route
       listings.edit = function (id) {

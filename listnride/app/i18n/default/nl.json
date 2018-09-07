@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "no-bikes-found": " Helaas! er worden nog geen fietsen op deze locatie aangeboden.",
     "bolzano": "Bolzano",
     "lake-garda": "Gardameer",
     "sardinia": "Sardinië",
@@ -157,6 +158,10 @@
       "subdescription-not-use": "Design. Art. Passion."
     }
   },
+  "faq": {
+    "meta-title": "Vaak gestelde vragen",
+    "meta-description": "De meest gestelde vragen van huurders en verhuurders worden hier beantwoord, zodat je direct aan de slag kunt gaan.  Of je nu op zoek bent naar de perfecte huurfiets, of om die zeer speciale fiets van je online te plaatsen voor de verhuur.\n"
+  },
   "multi-booking": {
     "meta-title": "Groepsboeking",
     "no-accessories": "Geen accessoires",
@@ -211,6 +216,12 @@
         "meta-title": "Explore Vienna by bike with listnride",
         "meta-description": "Discover Vienna by bike. With listnride, you can find a bike for rent in Vienna that matches your needs and your style."
       }
+    },
+    "seo": {
+      "city-title": "Huur de perfecte fiets in {{location}} | listnride",
+      "city-description": "Kies de fiets die aan uw wensen voldoet online, vanaf {{ minPrice }}€. Geniet van {{location}} op de fiets, die zeker en vast is geboekt op listnride.",
+      "category-title": "Huur de perfecte {{category}} in {{location}} | listnride",
+      "category-description": "Kies de fiets die aan uw wensen voldoet online, vanaf {{ minPrice }}€. Geniet van {{location}} op een {{category}}, die zeker en vast is geboekt op listnride."
     },
     "business-community": {
       "meta-title": "De listnride business community",
@@ -285,6 +296,11 @@
       "brompton": {
         "meta-title": "Maak een proefrit met de Brompton vouwfiets via listnride",
         "meta-description": "Test ride a Brompton bike today! These urban folding bikes are available on listnride. Rent one in Berlin, Munich, Hamburg, Düsseldorf or Frankfurt."
+      },
+      "veloheld": {
+        "meta-title": "Huur en test de fietsen van veloheld in München en Dresden | listnride",
+        "meta-keywords": "-",
+        "meta-description": "Test de fietsen van veloheld en ervaar de pure esthetiek en functionele eigenschappen van een op maat gemaakte stalen fiets: racefiets, cyclocrossfiets of stadsfiets!"
       },
       "muli": {
         "meta-title": "Rent a Muli cargo bike with listnride",
@@ -479,7 +495,7 @@
     "account-deleted": "Uw account is gedeactiveerd",
     "enter-email": "Vul alstublieft uw e-mailadres in",
     "duplicate-start": "Duplicatieproces gestart",
-    "duplicate-finish": "Duplication process finished. Copies created successfully",
+    "duplicate-finish": "Duplicatieproces voltooid. Kopieën zijn met succes aangemaakt.",
     "bike-deleted": "Fiets succesvol verwijderd",
     "range-success-delete": "Periode succesvol verwijderd",
     "availability-success-saved": "Wijziging succesvol opgeslagen"
@@ -675,9 +691,9 @@
     "comments": "Opmerkingen",
     "last-name": "Achternaam",
     "email-address": "Emailadres",
-    "update-password": "Update Password",
-    "old-password": "Old Password",
-    "new-password": "New Password",
+    "update-password": "Wachtwoord updaten",
+    "old-password": "Huidig Wachtwoord",
+    "new-password": "Nieuw Wachtwoord",
     "password": "Wachtwoord",
     "forgot-password": "Wachtwoord vergeten?",
     "or": "of",
@@ -739,7 +755,7 @@
     "insurance": {
       "description": "Of het nu een minimalistische fixie of een high-end triathlonfiets is: Elke listnride verhuur in Duitsland of Oostenrijk is verzekerd! Eenvoudig. Flexible. Altijd.",
       "header": "Verzekering voor je fietshuur op listnride",
-      "logo-description": "In samenwerking met hepster en"
+      "logo-description": "In samenwerking met hepster en verzekerd door"
     },
     "landing-section-subheader": "Huur een fiets via listnride naar eigen smaak en gebruik.",
     "featured-bikes-header": "Fietsverhuur: De favorieten van onze Community",
@@ -751,7 +767,7 @@
     "list-a-bike-header": "Je fiets is te mooi om stil te staan?",
     "list-a-bike-subheader": "biedt je fiets te huur aan, ontmoet leuke nieuwe mensen en spek je banksaldo.",
     "newsletter-header": "Subscribe to our newsletter and stay in the loop",
-    "newsletter-subheader": "Receive our handcrafted email about new bikes, tours and discounts for your rides.",
+    "newsletter-subheader": "Receive our email about new bikes, tours and discounts for your rides.",
     "meta-title": "listnride - De bike sharing community",
     "meta-description": "Huur de perfekte fiets van de listnride community. Boek een fiets naar jouw smaak en gebruik online."
   },
@@ -760,6 +776,7 @@
   },
   "search": {
     "no-bikes": "Er zijn helaas nog geen fietsen op deze locatie. Omdat we snel groeien, zal dat waarschijnlijk snel gebeuren! Als je wilt, kun je <a href=\"/listing-a-bike\">zelf een fiets een lijst laten maken </a>of zoek je naar een andere stad of specifieke locatie in de buurt.",
+    "unisize": "Unisize",
     "book-multiple-bikes": "Groepsboekingen",
     "bikes-found": "Aantal fietsen:",
     "all-sizes": "Alle Maten",
@@ -778,7 +795,7 @@
   },
   "calendar": {
     "invalid-date": "Ingevulde Datums zijn niet correct",
-    "info-service-fee-insurance": "Helpt ons om listnride te gebruiken en een beveiligde fietsverhuurservice aan te bieden.",
+    "info-service-fee-insurance": "Dit helpt om ons platform te laten draaien en<br0>een uitstekende klantenservice aan te bieden. <br1>Inclusief btw. Niet te restitueren.",
     "basic-insurance-included": "Inclusief basisverzekering ",
     "request-bike": "Fiets aanvragen",
     "to-request-bike-please": "om een fiets aan te vragen, eerst",
@@ -788,7 +805,7 @@
     "select-timespan": "Kies eerst de huurperiode",
     "info-subtotal": "Dit zijn de normale dagelijkse<br>prijslijsten, het aantal dagen dat<br> u de fiets wilt huren.",
     "info-discount": "Gemiddelde dagelijkse korting<br>krijgt u per dag door voor<br>een langere periode te huren.",
-    "info-service-fee": "De servicegeld wordt gebruikt<br>voor het aanbieden van listnride.<br>Het is inclusief BTW.",
+    "info-service-fee": "Dit helpt om ons platform te laten draaien en<br>een uitstekende klantenservice aan te bieden. <br>Inclusief btw. Niet te restitueren.",
     "info": "Klik eerst in de bovenstaande<br> kalender op de dag waarop u de fiets<br>wilt huren en op de tweede<br>dag dat u het wenst te retourneren.",
     "info-without-calendar": "Klik eerst de dag aan waarop u de fiets wilt huren en dan op de dag dat u het wenst te retourneren. Selecteer vervolgens de starttijd en eindtijd."
   },
@@ -998,6 +1015,7 @@
     "show-as-list": "Toon als lijst",
     "duplicate": {
       "duplicate": "Duplicaat",
+      "duplication-status": "Duplicatiestatus",
       "how_many": "Hoeveel fietsen?",
       "header": "Dubbele fiets",
       "number_bikes": "Aantal fietsen",
@@ -1158,6 +1176,12 @@
   },
   "footer": {
     "language": "Taal",
+    "languages": {
+      "dutch": "Nederlands",
+      "italian": "Italiaans",
+      "spanish": "Spaans",
+      "german": "Duits"
+    },
     "insurance-partner": "Verzekeringspartner",
     "insurance": "Verzekering",
     "company": "Bedrijf",

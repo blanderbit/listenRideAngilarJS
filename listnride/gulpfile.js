@@ -27,6 +27,7 @@ var ngAnnotate = require('gulp-ng-annotate');
 var ngConstant = require('gulp-ng-constant');
 var templateCache = require('gulp-angular-templatecache');
 var htmlReplace = require('gulp-html-replace');
+var request = require('request');
 var scope;
 var scopeSelector;
 var path = config.path;
@@ -34,6 +35,7 @@ var environments = config.environments;
 var processEnv = process.env.ENVIRONMENT;
 var argvEnv = ('local' === processEnv || 'staging' === processEnv || 'production' === processEnv) ? processEnv : 'local';
 var env = environments[argvEnv];
+var _ = require('lodash/core')
 
 // linter and code checking
 gulp.task('lint', lint);
@@ -99,6 +101,9 @@ gulp.task('disable-https', disableHttps);
 gulp.task('default', ['local']);
 gulp.task('deploy', deploy);
 gulp.task('local', local);
+
+// create the sitemap
+gulp.task('generate-sitemap', generateSitemap);
 
 /**
  * create two new variables for translation provider
@@ -410,6 +415,37 @@ function imagesSvg() {
             plugins: [imagemin.svgo()]
         }))
         .pipe(gulp.dest(path.dist.icons));
+}
+/**
+ * generates sitemap from local template and remote seo pages
+ * before every deployment for up-to-date seo info
+ * @returns {gulp} for chaining
+ */
+function generateSitemap(language) {
+    var tlds = ['com', 'de', 'nl', 'es', 'it'];
+    var date = new Date().toISOString();
+    var endpoint = environments.production.constants.ENV.apiEndpoint + '/seo_pages';
+    request(endpoint, function (error, response, body) {
+        var result = JSON.parse(body).all_cities;
+        _.each(tlds, function (tld) {
+            console.log("Generating sitemap for listnride." + tld);
+            var xmlString = "";
+            for(var i = 0; i < result.length; i++) {
+                xmlString += "<url>\n";
+                xmlString += "\t<loc>https://www.listnride." + tld + "/" + encodeURI(result[i]) + "</loc>\n";
+                xmlString += "\t<lastmod>" + date + "</lastmod>\n";
+                xmlString += "\t<changefreq>always</changefreq>\n";
+                xmlString += "</url>\n";
+            }
+            gulp.src([path.app.downloads + 'sitemap.xml'])
+            .pipe(replace('<!-- GULP INSERT CURRENT DATE -->', date))
+            .pipe(replace('<!-- GULP INSERT SEO PAGES -->', xmlString))
+            .pipe(replace('com', tld))
+            .pipe(rename('sitemap-' + tld + '.xml'))
+            .pipe(gulp.dest(path.app.downloads));
+            console.log("Wrote sitemap-" + tld + ".xml");
+        });
+    });
 }
 /**
  * clean dist folder

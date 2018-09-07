@@ -2,14 +2,15 @@
 
   <div flex-xs="100" flex-gt-xs="70" flex-order-xs="2" layout="column">
     <div layout="row" class="lnr-filter-container">
-      <filter categorized-bikes="search.categorizedFilteredBikes"
-              bikes="search.filteredBikes"
-              initial-bikes="search.filteredDateBikes"
-              initial-values="search.initialValues"
-              update-state="search.updateState"
-              populate-bikes="search.populateBikes"
-              date-change="search.onDateChange"
-              limit="search.limit">
+      <filter
+        categorized-bikes="search.categorizedFilteredBikes"
+        bikes="search.filteredBikes"
+        initial-bikes="search.filteredDateBikes"
+        initial-values="search.initialValues"
+        update-state="search.updateState"
+        populate-bikes="search.populateBikes"
+        date-change="search.onDateChange"
+        limit="search.limit">
       </filter>
       <bike-sorter
         style="align-self: center;"
@@ -23,28 +24,41 @@
     <md-divider></md-divider>
 
     <md-content flex layout="column" class="scroll-parent">
-      <!-- no bikes found placeholder -->
-      <div ng-if="search.bikes !== undefined && search.bikes.length === 0" layout="column" flex="100" layout-align="center center" layout-padding>
-        <div layout="row"><h2 class="md-headline no-margin">Hey,</h2></div>
-        <div layout="row" layout-align="center center"><p flex="80" class="md-subhead lnr-center" translate="search.no-bikes"></p></div>
-      </div>
-
       <div layout-margin>
         <div class="lnr-mt-0" layout="row" layout-align="space-between center">
           <!-- <p class="md-subhead">{{filterBikes.title}}</p> -->
-          <p class="md-subhead">{{'search.bikes-found' | translate}} {{search.categorizedFilteredBikes[0].bikes.length}}</p>
+          <p class="md-subhead">{{'search.bikes-found' | translate}}
+            {{search.categorizedFilteredBikes[0].bikes.length}}</p>
           <div>
-            <a ui-sref="multiBooking({location: search.location})">{{'search.book-multiple-bikes' | translate}}</a>
+            <a ui-sref="multiBooking({location: search.location})">
+              {{'search.book-multiple-bikes' | translate}}
+            </a>
           </div>
         </div>
 
         <md-divider></md-divider>
 
+        <!-- no bikes found placeholder -->
+        <div
+          ng-if="search.noResult"
+          layout="column"
+          flex="100"
+          layout-align="center center"
+          layout-padding
+        >
+          <div layout="row">
+            <h2 class="md-headline no-margin">Hey,</h2>
+          </div>
+          <div layout="row" layout-align="center center">
+            <p flex="80" class="md-subhead lnr-center" translate="search.no-bikes"></p>
+          </div>
+        </div>
+
         <cardgrid
           ng-repeat="filterBikes in search.categorizedFilteredBikes"
-          on-bike-hover="search.onBikeHover"
           title="{{filterBikes.title}}"
           limit="search.limit"
+          on-bike-hover="search.onBikeHover"
           add-more-items-limit="search.addMoreItemsLimit"
           categorized-bikes="search.categorizedFilteredBikes"
           uncategorized-bikes="search.filteredBikes"
@@ -65,25 +79,23 @@
   </div>
 
   <div flex flex-order-xs="1" layout="column" class="map-column lnr-preload-bg" hide-xs>
-    <ng-map ng-if="search.bikes !== undefined"
+    <ng-map
+      ng-if="search.bikes !== undefined"
       id="searchMap"
       default-style="false"
       center="[{{search.mapOptions.lat}},{{search.mapOptions.lng}}]"
       zoom="{{search.mapOptions.zoom}}"
-      on-click="search.onMapClick(event)">
+      on-click="search.onMapClick(event)"
+      map-type-control="false"
+      street-view-control="false"
+      styles="{{search.colorScheme}}"
+    >
 
-      <marker ng-repeat="bike in search.filteredBikes track by bike.id"
-              id="{{bike.id}}"
-              position="{{bike.lat_rnd}},{{bike.lng_rnd}}"
-              on-click="search.showBikeWindow(event, bike.id)">
-      </marker>
-
-      <info-window id="searchMapWindow" close-box-margin="0">
+      <info-window id="searchMapWindow">
         <div ng-non-bindable="">
           <bike-card bike="search.selectedBike"></bike-card>
         </div>
       </info-window>
     </ng-map>
   </div>
-
 </div>

@@ -35,6 +35,7 @@ angular.module('listnride', [
   /* app_extras_start */
   //removeIf(shop)
   'home',
+  'seoGrid',
   'search',
   'header',
   'footer',
@@ -60,6 +61,7 @@ angular.module('listnride', [
   'votec-integration',
   'cocomatIntegration',
   'leaosIntegration',
+  'veloheldIntegration',
   'crossride',
   'inVeloVeritas',
   'velothonBikerental',
@@ -82,6 +84,7 @@ angular.module('listnride', [
   'bikeSorter',
   'cardgrid',
   'privacyBar',
+  'faq',
   //endRemoveIf(shop)
   /* app_extras_end */
 

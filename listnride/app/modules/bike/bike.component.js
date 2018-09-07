@@ -22,8 +22,8 @@ angular.module('bike',[]).component('bike', {
       };
 
       bike.heroshot = function () {
-        if (bike.data) return bike.mobileCalendar() ? bike.data.image_file_1.image_file_1.small.url : bike.data.image_file_1.image_file_1.large.url;
-      }
+        if (bike.data) return bike.mobileCalendar() ? bike.data.image_file_1.small.url : bike.data.image_file_1.large.url;
+      };
 
       // TODO: move all api calls in service
       // it is really difficult to test api calls from controller.
@@ -52,7 +52,7 @@ angular.module('bike',[]).component('bike', {
 
           ngMeta.setTitle($translate.instant("bike.meta-title", metaData));
           ngMeta.setTag("description", $translate.instant("bike.meta-description", metaData));
-          ngMeta.setTag("og:image", bike.data.image_file_1.image_file_1.small.url);
+          ngMeta.setTag("og:image", bike.data.image_file_1.small.url);
         },
         function(error) {
         	$state.go('404');
@@ -103,11 +103,11 @@ angular.module('bike',[]).component('bike', {
 
       function GalleryDialogController($mdDialog, bikeData) {
         var galleryDialog = this;
-        galleryDialog.image_1 = bikeData.image_file_1.image_file_1.url;
-        galleryDialog.image_2 = bikeData.image_file_2.image_file_2.url;
-        galleryDialog.image_3 = bikeData.image_file_3.image_file_3.url;
-        galleryDialog.image_4 = bikeData.image_file_4.image_file_4.url;
-        galleryDialog.image_5 = bikeData.image_file_5.image_file_5.url;
+        galleryDialog.image_1 = bikeData.image_file_1.url;
+        galleryDialog.image_2 = bikeData.image_file_2.url;
+        galleryDialog.image_3 = bikeData.image_file_3.url;
+        galleryDialog.image_4 = bikeData.image_file_4.url;
+        galleryDialog.image_5 = bikeData.image_file_5.url;
         galleryDialog.hide = function() {
           $mdDialog.hide();
         };

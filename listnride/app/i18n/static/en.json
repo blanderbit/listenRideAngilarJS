@@ -77,11 +77,194 @@
       "cafes-bars-content": "If you like vegan and vegetarian food, we recommend a visit at <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> at the Karmeliterplatz. If you prefer the more traditional Austrian kitchen, we highly recommend <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>. Order a traditional Tafelspitz or Wiener Schnitzel and enjoy it outside with the view on the famous Vienna Opera. You’ll have a great night to remember! For finishing touch of the day, it makes sense to walk towards the Danube. On the way you’ll find plenty of interesting bars or just sit outside under the stars at the river."
     }
   },
+  "footer": {
+    "languages": {
+      "english": "English"
+    }
+  },
+  "shared": {
+    "list-your-bike": {
+      "bike-category": "Select the bike category",
+      "bike-subcategory": "Specify the subcategory"
+    }
+  },
+  "help-and-service": {
+    "header": "How can we help you?",
+    "faq": {
+      "group-1": {
+        "title": "Getting Started",
+        "description": "We help you to find the perfect bike for your needs. You will experience what it means to be part of our bike-sharing community.",
+        "answer-1": "Looking for a bike in Vienna? Just type Vienna in the search bar. Our super fast search engine will show you all results including a map view with the locations. Searching for a location is currently the only search option. ",
+        "answer-2": "The search result will show you all bikes in a given location. To narrow your search result, you can use the filters: Time Span, All Sizes, Bike Type and All Brands.",
+        "answer-3": "There is a calendar on the bike’s detail page. Black numbers represent bookable days, greyed-out numbers are not available and red numbers represent already booked days.",
+        "answer-4": "Click on sign-up and fill out the required information with a few details to get the best out of listnride and meet people with great bikes. You can also use the one-click Facebook registration for signing-up. In order to request a bike, you need to verify your mobile number, e-mail address and provide a valid method of payment. Your personal data will be stored safely. Through this process we can mediate a valid rental contract for both parties and make sure payments happen in a secure manner.",
+        "answer-5": "To edit your personal information, go to “<b>Settings</b>” in the drop-down menu of your avatar.\n<p>\nWe recommend you add relevant personal information so Listers have a better understanding of whom they are dealing with. You can, for example, write a short introduction about yourself and what makes you passionate about cycling. You can also upload a profile picture to give the whole profile a personal look.\n<p>\nIn case you are a commercial Lister make sure to also add your business hours. That way your bike can only be picked up or returned when your shop is open.\n<p>\nA complete account creates trust and will be beneficial for receiving more rental, requests and a higher chance of request acceptance for Riders. ",
+        "question-1": "How do I search for a bike?",
+        "question-2": "Why use filters?",
+        "question-3": "How do I know if the bike is available? ",
+        "question-4": "How do I create an account?",
+        "question-5": "Can I edit the personal information in my account?"
+      },
+      "group-2": {
+        "title": "Renting out your bikes",
+        "description": "Create a listing and manage your bikes on listnride. Our easy and powerful managing tools help you to quickly list your bike or an entire fleet of bikes.",
+        "answer-1": "Click on “<b>List a Bike</b>” and add information about your bike including brand, description, pictures, rental price and accessories that you can provide with the bike. When done, click “List my Bike”. Your bike is now available for rentals to the community.",
+        "answer-2": "A detailed description of the bike, good quality pictures as well as a reasonable pricing makes a bike attractive for potential Riders. You can find an example \n<a href=\\“http://www.listnride.de/bikes/3369\\”target=\\“_blank\\“>here</a0>.\n<p>\nA detailed description contains all the relevant data of your bike, such as: frame size, model name and manufacturing year, groupset, rims, hub and number of gears as well as maybe some custom details of your bike.\n<p>\nSince some Listers refer to manufacturers stock photos, especially for high-end bikes, we also recommend mentioning the colour of your bike, if this differs from the images you upload. A complete profile of yourself or your shop also helps to further raise attractiveness for your bikes. You can find a good example at <a href=\\“http://www.listnride.de/users/1886\\”target=\\“_blank\\“>Munix Finest Bicycles</a>.",
+        "answer-3": "The first things Riders see when looking for bikes in your area are the pictures in the search results. Pictures that give an overall impression of your bike will attract more Riders to look at your bike’s detail page.\n<p>\n<a href=\\“http://www.listnride.com/how-to-shoot-bike-photos“>Here</a>\n you can find a few tips on how to put your bike in its true light!",
+        "answer-4": "You are completely free to decide on the rental price. Note that the weekly price can’t be lower than the daily price. To determine the most appropriate rental price, you can compare your bike to similar available bikes on listnride.",
+        "answer-5": "To change your bike’s availability use the \"<b>clock icon</b>\" under the specific bike on the “<b>My Bikes</b>” page. In the calendar you can set the time span for when your bike is unavailable.  Your bike can’t be requested during that time.",
+        "answer-6": "You can edit the details of your listed bikes at any time by clicking the \"<b>pencil icon</b>\" under the specific bike on the “<b>My Bikes</b>” page.",
+        "answer-7": "To add more bikes of the same type, use the \"<b>double-square</b>\" icon under the specific bike on the “<b>My Bikes</b>” page. To edit your newly duplicated bikes use the pencil icon.",
+        "answer-8": "Use the \"<b>bin icon</b>\" under the specific bike on the “<b>My Bikes</b>” page.",
+        "answer-9": "You will receive an e-mail and sms notification, informing you on the new booking request, containing all relevant details.\nLogin and go to “Requests” to accept or reject the booking and start a chat with the Rider if there is something to clarify.\nIf you accept the request the booking is done and the rental is paid for. You will receive a booking confirmation with all the relevant information and contact details of the Rider via e-mail.",
+        "answer-10": "Sure. Click the red button to reject the requests and ask the Rider to request the bike for a different date and time. Please be so kind to let the Riders know why you rejected their request.",
+        "answer-11": "The Rider might be new in town and need a bit more time to find the location, just allow the Rider a time buffer of 15-30 minutes. If a Rider doesn’t show up after that, first try to get in touch directly through the mobile number provided to you. If you still can’t get a hold of the Rider, feel free to no longer be obliged by the agreement. \n<br>\nWe would appreciate a <a href='\"mailto:contact@listnride.com?subject=Rider doesn&#39;t show for pick-up“'>short message</a> just to see if we may support you.",
+        "answer-12": "Also here some flexibility is required, just allow the Rider a time buffer of 10-15 minutes. If the Rider doesn’t return the bike after that, get in touch directly through the phone number provided. If it doesn’t work, \n<a href='\"mailto:contact@listnride.com?subject=Rider doesn&#39;t show for return“'>contact us</a> and we will upport you.",
+        "answer-13": "To confirm the return of your bike, login to your account, go the specific request and click the “Confirm Return” button in the chat.",
+        "question-1": "How do I list my bike?",
+        "question-2": "What makes a bike attractive to Riders?",
+        "question-3": "Is there a guide on how to take photos of bicycles? ",
+        "question-4": "How do I set the rental price?",
+        "question-5": "I’m away for a few days, can I change the availability of my bike? ",
+        "question-6": "I need to change the details of my bike. How do I do that?",
+        "question-7": "I have more bikes of the same type, can I duplicate them?",
+        "question-8": "How can I delete my bike?",
+        "question-9": "Ho do I know if my bike is requested?",
+        "question-10": "Can I reject a request or ask the Rider to change the rental period?",
+        "question-11": "What if the Rider doesn’t show up as agreed to pick up my bike?",
+        "question-12": "What if the Rider doesn’t return the bike on time?",
+        "question-13": "How do I confirm the return of my bike?"
+      },
+      "group-3": {
+        "title": "Renting bikes",
+        "description": "Renting the perfect bike for your needs has never been easier. Log in, type your desired city or region, use filters and categories to find your perfect bike, agree on pick-up and return with the Lister and enjoy the ride!",
+        "answer-1": "The first step is to request the bike. Select the rental days and exact times of the bike on its detail page. If you’re planning to pick up and return the bike on the same day, click twice on the date and then choose the time slot. After requesting the bike you can start a direct chat with the Lister. Once the Lister has accepted your request, the bike is booked for you.",
+        "answer-2": "You can contact the Lister through the online chat under “<b>My Requests</b>”. You can use the chat to ask for more information and arrange pick-up and return of the bike. You need to first request a bike before you can start messaging with the lister.",
+        "answer-3": "You can rent a bike for as long as you want. Either a few days or up to several weeks, it all depends on the availability of the bike.",
+        "answer-4": "Yes. You can request different bikes from different Listers for the same time period in order to increase the likeliness of getting a fast response from any of the them. Please consider that when one of the bikes you have requested is booked, you should cancel the others. Please also note that if multiple Listers accept your requests, you will be charged multiple times even though you might only want to rent one bike. listnride does not reimburse you in that case. So be careful with requesting multiple bikes at once.",
+        "answer-5": "Yes. You can cancel a request as long as the Lister hasn’t accepted it. If you need to change the request, just cancel the current one and sent a new request.",
+        "answer-6": "Most Listers use listnride on the side, meaning it is not their main business. So give Listers a few hours to respond to your request. Most of them get back to you at the end of their workday. If a Lister does not respond to your request, use the chat to get in touch. If this is not working, you can cancel that request and request another bike.",
+        "answer-7": "Listers can ask for your ID card and/or a security deposit in order to hand over their bike. You can find this information in the bike’s description or in the Lister’s profile where the deposit amount should be specified as well.",
+        "answer-8": "On the bike’s detail page you find the accessories that come along with the bike, e.g. lock, lights, helmet, etc. Listers shall provide you with an adequate lock.",
+        "answer-9": "For specific bikes, e.g. road bikes or MTBs it is common to bring your own (click) pedals and/or saddle. Please use the online chat to contact the Lister and clarify the details.",
+        "answer-10": "In this case you can \n<a href=\"mailto:contact@listnride.com?subject=Biek doesn't fit description“>send us</a> pictures of the bike and explain the differences. If your claim appears justified, we will cancel the rental and you’ll receive a refund. After the rental you can always rate the bike and it's Lister accordingly.",
+        "answer-11": "If you are running late on returning the bike, please inform the Lister with a call or sms to quickly give an update.",
+        "answer-12": "If the bike is still available for the following days, you can request it again. Once the Lister has accepted your request the rental period is extended.",
+        "question-1": "How do I rent a bike? ",
+        "question-2": "How can I contact a bike Lister? ",
+        "question-3": "How long can I rent a bike?",
+        "question-4": "Can I send multiple bike requests for the same time period?",
+        "question-5": "Can I cancel or change my request?",
+        "question-6": "The Lister doesn’t respond to my request, what can I do?",
+        "question-7": "Do I need my ID card or leave a security deposit to rent a bike?",
+        "question-8": "Do I need my own lock and helmet?",
+        "question-9": "Can I bring my own pedals and or saddle?",
+        "question-10": "What if the bike doesn’t resemble the one I booked?",
+        "question-11": "What if I am running late and can’t return the bike on time?",
+        "question-12": "I’m really enjoying my ride, can I extend the rental period?"
+      },
+      "group-4": {
+        "title": "Payment & Service fees",
+        "description": "Information on the costs of joining listnride,  how and when you pay for your rental and how you will receive your rental amounts when renting out your bike",
+        "answer-1": "Nothing! Listing any number of bikes is free",
+        "answer-2": "Within seven days after the end of the rental period you will receive your rental payout to the payout method provided in your account settings. We will deduct 7.5% (excl. VAT) as the listnride service fee from your rental amount.",
+        "answer-3": "We support payment through Paypal and the most common credit cards e.g. Mastercard and Visa. Offline or cash payments are in violation with our Terms and Conditions. It might result in a removal of your account from listnride. It is in your own interest to avoid cash payments as it makes it harder for us to protect your information and puts you at a greater risk of fraud and other security issues, e.g. your bike will not be insured.",
+        "answer-4": "You will need to enter your payment data before you can request any bike. The payment will take place only after the Lister has accepted your request. So if you or the Lister cancels a request no payment will be triggered.",
+        "answer-5": "If you rent a bike, the service costs are 12.5% (excl. VAT). These service costs include the payment costs, which are charged by Paypal and credit card companies.  A Basic insurance is included by default, for bicycles in Germany and Austria. This is clearly visible in the booking overview, before you send your booking request.  The service costs are automatically added to the rental and insurance price. You don't have to do anything.\n<p>\nIf you rent out a bike, the service costs are 7.5% (excl. VAT). These service charges are automatically deducted from the payment. You don't have to do anything.\nThe Service Fee is charged in order to further develop listnride and to be able to offer support for questions, problems and promotion of our services.",
+        "question-1": "What does it cost to list my bike?",
+        "question-2": "How do I get paid for renting out my bike?",
+        "question-3": "What kind of payment methods are accepted?",
+        "question-4": "When do I pay for a bike rental?",
+        "question-5": "Is there a service fee if I rent a bike?"
+      },
+      "group-5": {
+        "title": "Insurance & Service",
+        "description": "We offer a basic insurance package that is included by default in the rental process. An optional premium package can be added by the Rider. Both packages provide ease of mind against damages. The insurance is provided by our partner\n<a href=\\“http://www.hepster.com\\”target=\\“_blank\\“>hepster</a> and covered by\n<a href=\\“http://www.gothaer.de/\\”target=\\“_blank\\“>Gothaer Insurance</a>.\n<p>\nAs of now, the insurance is only available for rentals in Germany and Austria. We are working on bring the insurance to more European countries!\n<p>\nYou can find all \n<a href=\\“http://www.listnride.com/insurance\\”target=\\“_blank\\“>details for the insurance</a> here.",
+        "answer-1": "How do I search for a bike?",
+        "answer-2": "How do I search for a bike?",
+        "answer-3": "How do I search for a bike?",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I search for a bike?",
+        "question-3": "How do I search for a bike?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-6": {
+        "title": "Booking & Cancelation",
+        "description": "Sometimes you really need to cancel a rental. It happens. Learn how to cancel a booking and under what circumstances a refund will happen.",
+        "answer-1": "To cancel a booking please inform the other party directly through the chat and explain why you want to cancel the ride.\nYou also need to inform listnride via e-mail about your cancellation. We need your full name, e-mail address, the bike you booked and location.\n\nPlease note that we follow a cancellation policy. You can find more information in our \n<a href=\\“http://www.listnride.com/terms\\”target=\\“_blank\\“>Terms and Conditions</a0>.",
+        "answer-2": "Free cancellation is possible if this takes place no later than 5 days before the start of the rental period and the rental period is longer than 24 hours (for example from 9.00 to 12.00 the next day). In all other cases, there are costs associated with the cancellation.",
+        "answer-3": "Riders will get a full refund of the rental price, if the cancellation is made at least five days before the start of the rental period.\nIf the cancellation is made less than five days before the start of the rental period, but at least 24 hours before the start of the rental period Riders will get 50% of the net rental price refunded. If the cancellation is made less than 24 hours before, Riders don’t get any refund.",
+        "answer-4": "listnride service fees are not refundable in case of cancellation by the Rider.\nIn case of cancellation by the Lister, the Rider will receive compensation of both the rental price as well as listnride service fees.",
+        "answer-5": "In principle, you can cancel your booking at any time. Cancelling a booking can have far-reaching consequences for the travel and/or plans of the rider. Because cancellations disrupt Riders' plans and affect trust in the listnride community. There is no cancellation fee, but we insist you comply with their reservation.",
+        "question-1": "How do I cancel my booking as Rider or Lister? ",
+        "question-2": "How long after acceptance of my request can I cancel a booking as a Rider?",
+        "question-3": "Do I get a refund of the entire rental price?",
+        "question-4": "Is the listnride service fee refundable?",
+        "question-5": "How long after accepting a request can I cancel as a Lister? "
+      },
+      "group-7": {
+        "title": "Vouchers & Credits",
+        "description": "Use vouchers to get credit for bike rentals. Here you can learn how to redeem them. You can also invite friends to get credit.",
+        "answer-1": "You can get vouchers by inviting your friends to join our bike-sharing community through Facebook or via email. Log into your profile, go to the \n<a href=\\“http://www.listnride.com/invite-friends”target=\\“_blank\\“>Invite Friends</a>\npage and share the link. If your friends rent or list a bike using the link, you will receive a 10€ credit as a thank you. \nYou can use that credit for your next rental.",
+        "answer-2": "To use vouchers, just enter the voucher code in the entry field “<b>Redeem Voucher</b>” when you request a bike. Or you can enter the code in your account settings, in the section “<b>Vouchers</b>”.",
+        "answer-3": "You can use vouchers every time you request a bike, but a single code can only be used once. If you don’t use the total amount at once, the saldo will be saved in your account and can be used for your next rental.",
+        "answer-4": "How do I search for a bike?",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I get a voucher? ",
+        "question-2": "How can I use vouchers?",
+        "question-3": "When can I use vouchers?",
+        "question-4": "How do I search for a bike?",
+        "question-5": "How do I search for a bike?"
+      },
+      "group-8": {
+        "title": "Ratings & Feedback",
+        "description": "Learn how to get ratings, give ratings and provide feedback to the listnride community.",
+        "answer-1": "After you have confirmed the return of your bike, you and the Rider will be asked to rate the bike and rental experience by means of a 5-star rating system. This is how you can get ratings for your bike.\nThe review you get from the Rider will be published on your profile page.",
+        "answer-2": "To improve your ratings we suggest that your bike matches your bike description, that you are on time, help the Rider get ready for the ride and give some tips about where to go and what to do in your area.",
+        "answer-3": "After the rental period ended you and the Lister will be asked to rate the bike and the rental experience by means of a 5-star rating system. This is how you can rate the bike and the Lister.\nThe review you get from the Lister will be published on your profile page.",
+        "answer-4": "If you get an unjustified negative feedback please first get back to the author and kindly ask for an explanation. In case you don’t get a reply or you are unable to solve the issue, you can contact us.",
+        "answer-5": "How do I search for a bike?",
+        "question-1": "How do I get ratings for my bikes?",
+        "question-2": "How can I improve the ratings for my bike?",
+        "question-3": "How can I rate a bike that I rented?",
+        "question-4": "What if I get an unjustified negative feedback?",
+        "question-5": "How do I search for a bike?"
+      }
+    },
+    "faq-header": "The 10 most frequently asked questions in one place",
+    "faqs": {
+      "top": {
+        "answer-1": "Looking for a bike in Vienna? Just type Vienna in the search bar. Our super fast search engine will show you all results including a map of all locations. Searching for a location is currently the only search option. To narrow your search result, you can also use the filters: Time span, All Sizes, Bike Type  and Brands.",
+        "answer-2": "There is a calendar on the bike’s detail page. Black numbers represent bookable days, greyed-out numbers are not available and red numbers represent already booked days.",
+        "answer-3": "Click on sign-up and fill out the required information with a few details to get the best out of listnride and meet people with great bikes. You can also use the one-click Facebook registration for signing-up. In order to request a bike, you need to verify your mobile number, e-mail address and provide a valid method of payment. Your personal data will be stored safely. Through this process we can mediate a valid rental contract for both parties and make sure payments happen in a secure manner.",
+        "answer-4": "The first step is to request the bike. Select the rental days and exact times of the bike on its detail page. If you’re planning to pick up and return the bike on the same day, click twice on the date and then choose the time slot. After requesting the bike you can start a direct chat with the Lister. Once the Lister has accepted your request, the bike is booked for you.",
+        "answer-5": "Click on “List a Bike” and add information about your bike including brand, description, pictures, rental price and accessories that you can provide with the bike. When done, click “List my Bike”. Your bike is now available for rentals to the community.",
+        "answer-6": "You are completely free to decide on the rental price. Note that the weekly price can’t be lower than the daily price. To determine the most appropriate rental price, you can compare your bike to similar available bikes on listnride.",
+        "answer-7": "You will receive an email and sms notification, informing you on the new booking request, containing all relevant details.\nLogin and go to “Requests” to accept or reject the booking and start a chat with the Rider if there is something to clarify.\nIf you accept the request the booking is done and the rental is paid for. You will receive a booking confirmation with all the relevant information and contact details of the Rider via email.",
+        "answer-8": "Nothing! Listing any number of bikes is free.",
+        "answer-9": "We support payment through Paypal and the most common credit cards e.g. Mastercard and Visa. Offline or cash payments are in violation with our Terms and Conditions. It might result in a removal of your account from listnride. It is in your own interest to avoid cash payments as it makes it harder for us to protect your information and puts you at a greater risk of fraud and other security issues, e.g. your bike will not be insured.",
+        "answer-10": "You will need to enter your payment data before you can request any bike. The payment will take place only after the Lister has accepted your request. So if you or the Lister cancels a request no payment will be triggered.",
+        "question-1": "How do I search for a bike?",
+        "question-2": "How do I know if the bike is available?",
+        "question-3": "How do I create an account?",
+        "question-4": "How do I rent a bike?",
+        "question-5": "How do I list my bikes?",
+        "question-6": "How do I set the rental price?",
+        "question-7": "How do I know if my bike has been requested?",
+        "question-8": "How much does it cost to list my bike?",
+        "question-9": "What kind of payment methods are accepted?",
+        "question-10": "When do I pay for a bike rental?"
+      }
+    }
+  },
   "insurance": {
     "main": {
       "title": "Our insurance protects you. No matter if lister or rider.",
       "description": "Renting your special bike means having confidence. What if it gets stolen during lending? What if it comes back to you damaged? All listnride rentals in Germany and Austria are insured. And our partner <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> will be there for you when you need help. By phone. By e-mail. Simple. Straight forward.",
-      "logo-description": "Our insurance partner"
+      "logo-description": "coverage provided by"
     },
     "facts": {
       "title": "What you should know!",
@@ -132,7 +315,7 @@
       },
       "description-lister": "As a lister on listnride you want to be sure that you and your bike are protected against all risk. That's why every rental in Germany and Austria, through listnride is automatically insured with immediate effect. Riders who request your bike can optionally book the premium package to get additional services and coverage. This service is free for you as a Lister.\n<p>\nIf you have further questions, contact us around the clock via <a3>E-Mail</a3>.",
       "description-rider": "We offer two insurance packages for each bike you rent in Germany and Austria via lisntride: The <b1>Basic insurance</b1> is included in every rental, the <b2>Premium insurance</b2> is optional and extends the insurance cover with extra benefits.<br3>You and your bike are always optimally protected and there is nothing more in the way for you to ride!",
-      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Bike Insurance Terms and Conditions </a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Bike Assist Insurance Terms and Conditions</a>"
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Bike Insurance - Terms and Conditions </a0>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">E-Bike Malfunction Insurance - Terms and Conditions</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description </a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
     }
   },
   "business-community": {
@@ -319,8 +502,41 @@
       "no-bikes-found": "Oops... there are unfortunately no bikes listed yet in this location.",
       "faq": "The frequently asked questions"
     },
+    "veloheld.hero-description": "Test veloheld bikes and experience the pure aesthetics and functional techniques of a custom made steel bike: road bike, cyclocross bike or city bike!",
+    "veloheld": {
+      "title": "veloheld: Your individual bike",
+      "test-bike": "Test your veloheld bikes in Munich or Dresden",
+      "description": "veloheld bikes stand for pure aesthetic and functional technics – they are perfectly prepared for the dynamic and all the impassibility of everyday life. But above all, they are so much fun to ride!",
+      "feature-1": {
+        "title": "Timeless and Sustainable",
+        "description": "veloheld bikes are timeless thanks to their elegant \nsteel frames. Used in prodution is only light and comfortable \nchromoly steel, which is more eco-friendly in \ncomparison to other materials used in the \nbicycle industry."
+      },
+      "feature-2": {
+        "title": "Custom Color ",
+        "description": "If you don’t like the standard paint schemes \nyou can choose your personal colour out \nof 200 RAL-colours, which are powder\n-coated on the veloheld frame."
+      },
+      "feature-3": {
+        "title": "Custom Build",
+        "description": "Besides the standard components veloheld can realise \nnearly every custom configuration. Send your \nideas for your individual veloheld bike just \nthe way you want today."
+      },
+      "meta-title": "Rent and test veloheld Bikes in Munich and Dresden",
+      "find-out-more": {
+        "title": "Learn more about veloheld bikes",
+        "description": "Order your new <a href=\\“ http://www.veloheld.de/”target=\\“_blank\\“>veloheld bike online</a> and get your listnride rental reimbursed."
+      },
+      "faq-question-1": "Enter Text.",
+      "faq-answer-1": "Enter Text.",
+      "faq-question-2": "Enter Text.",
+      "faq-answer-2": "Enter Text.",
+      "faq-question-3": "Enter Text.",
+      "faq-answer-3": "Enter Text.",
+      "faq-question-4": "Enter Text.",
+      "faq-answer-4": "Enter Text.",
+      "faq-question-5": "Enter Text.",
+      "faq-answer-5": "Enter Text."
+    },
     "leaos": {
-      "description": "The Design Ebike - Leaos",
+      "description": "The design e-bike - Leaos",
       "subdescription": "Design. Art. Passion.",
       "feature1-title": "Italian Design",
       "feature1-description": "Pure Elegance.\nCompletely new riding experience.\nPerfect symbiosis of motor and rider.\n100% made in Italy.",
@@ -489,7 +705,7 @@
       "testimonial-2": "This E-Bike is part speedway dragster, part bionic arm",
       "testimonial-3": "Wow! I want one, if not to ride then to look at. It really is a work of art!",
       "find-out-more": "Learn more about the Moto Parilla Carbon SUV E-Bike",
-      "faq-description": "Learn more about the SUV Ebike and how you can <a href=\"http://www.motoparilla.it/store\">buy one</a> or look at the <a href=\"http://www.motoparilla.it/faq/\">FAQ</a>.",
+      "faq-description": "Learn more about the SUV e-bike and how you can <a href=\"http://www.motoparilla.it/store\">buy one</a> or look at the <a href=\"http://www.motoparilla.it/faq/\">FAQ</a>.",
       "faq-question-1": "How high can the seat extend?",
       "faq-answer-1": "The seat can extend a full 5 cm.",
       "faq-question-2": "Where is the battery located?",
