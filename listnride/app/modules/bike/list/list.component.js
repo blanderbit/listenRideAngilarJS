@@ -217,7 +217,8 @@ angular.module('list', ['ngLocale'])
                 "lights": !!list.form.lights,
                 "basket": !!list.form.basket,
                 "trailer": !!list.form.trailer,
-                "childseat": !!list.form.childseat
+                "childseat": !!list.form.childseat,
+                "gps": !!list.form.gps
               },
               "user_id": $localStorage.userId,
               "street": list.form.street,
@@ -289,7 +290,8 @@ angular.module('list', ['ngLocale'])
                 "lights": !!list.form.lights,
                 "basket": !!list.form.basket,
                 "trailer": !!list.form.trailer,
-                "childseat": !!list.form.childseat
+                "childseat": !!list.form.childseat,
+                "gps": !!list.form.gps
               },
               "user_id": $localStorage.userId,
               "street": list.form.street,
