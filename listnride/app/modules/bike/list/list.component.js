@@ -149,11 +149,12 @@ angular.module('list', ['ngLocale'])
                 var images = [];
                 for (var i = 1; i <= 5; ++i) {
                   if (data["image_file_" + i] !== undefined &&
-                    data["image_file_" + i]["image_file_" + i].small.url !== null) {
+                    data["image_file_" + i].small.url !== null) {
                     images.push({
                       src: data["image_file_" + i],
-                      url: data["image_file_" + i]["image_file_" + i].small.url,
-                      local: "false"
+                      url: data["image_file_" + i].small.url,
+                      local: "false",
+                      name: "image_file_" + i
                     });
                   }
                 }
@@ -319,7 +320,7 @@ angular.module('list', ['ngLocale'])
 
           function AddNewImage(image) {
             _.forEach(_.range(list.startImage,6), function(id) {
-              if(_.values(list.form['image_file_' + id])[0].url == null || ride['ride']['remove_image_file_' + id]){
+              if(list.form['image_file_' + id].url == null || ride['ride']['remove_image_file_' + id]){
                 ride['ride']['remove_image_file_' + id] = false;
                 ride['ride']['image_file_' + id] = image.src;
                 list.startImage = id + 1;
@@ -446,7 +447,7 @@ angular.module('list', ['ngLocale'])
 
         // remove image of the bike
         list.removeImage = function (index, img) {
-          list.removedImages = _.union(list.removedImages, Object.keys(img.src));
+          list.removedImages.push(img.name);
           list.form.images.splice(index, 1);
         };
 
