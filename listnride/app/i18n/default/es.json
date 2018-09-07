@@ -164,8 +164,8 @@
     }
   },
   "faq": {
-    "meta-title": "Group booking",
-    "meta-description": "Book your bikes with our group booking form"
+    "meta-title": "Preguntas frecuentes",
+    "meta-description": "Estas son las preguntas frecuentes de nuestros Listers y Riders que te ayudarán a dar los primeros pasos con listnride."
   },
   "multi-booking": {
     "meta-title": "Alquileres grupales",
@@ -221,6 +221,12 @@
         "meta-title": "Explora Viena en bici con listnride",
         "meta-description": "Descubre Viena en bici. Con listnride, puedes encontrar una bici de alquiler en Viena que coincida con tus necesidades y estilo."
       }
+    },
+    "seo": {
+      "city-title": "Alquila la bicicleta perfecta en {{location}} | listnride",
+      "city-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una bicicleta alquilada de forma segura en listnride.",
+      "category-title": "Alquila una {{category}} en {{location}} | listnride",
+      "category-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una {{category}} alquilada de forma segura en listnride."
     },
     "business-community": {
       "meta-title": "La comunidad empresarial de listnride",
@@ -1016,6 +1022,7 @@
     "show-as-list": "Mostrar como lista",
     "duplicate": {
       "duplicate": "Duplicada",
+      "duplication-status": "Estado de duplicación",
       "how_many": "¿Cuántas bicis?",
       "header": "Bicicleta duplicada",
       "number_bikes": "Número de bicicletas",

@@ -204,12 +204,6 @@
     "meta-description": "Every rental in Germany and Austria through listnride is automatically insured."
   },
   "meta": {
-    "seo": {
-      "city-title": "Rent the perfect bike in {{ location }} | listnride",
-      "city-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{ location }} with a bike securely rented on listnride.",
-      "category-title": "Rent the perfect {{ category }} in {{ location }} | listnride",
-      "category-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{ location }} with a {{ category }} securely rented on listnride."
-    },
     "cities": {
       "berlin": {
         "meta-title": "Explore Berlin by bike with listnride",
@@ -227,6 +221,12 @@
         "meta-title": "Explore Vienna by bike with listnride",
         "meta-description": "Discover Vienna by bike. With listnride, you can find a bike for rent in Vienna that matches your needs and your style."
       }
+    },
+    "seo": {
+      "city-title": "Rent the perfect bike in {{location}} | listnride",
+      "city-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a bike securely rented on listnride.",
+      "category-title": "Rent the perfect {{category}} in {{location}} | listnride",
+      "category-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a {{category}} securely rented on listnride."
     },
     "business-community": {
       "meta-title": "The listnride business community",
@@ -651,7 +651,7 @@
     "complete-profile": "Complete your Profile",
     "add-payment": "Payment Method",
     "complete-profile-description": "To book the bike, please enter your payment information. All informations are transmitted over a secure connection.",
-    "no-requests-yet": "As soon as you made or got requests, they'll show up here.",
+    "no-requests-yet": "As soon as there are requests, they'll show up here.",
     "filters": {
       "all-requests": "All Requests",
       "current-rentals": "Current Rentals",
@@ -830,16 +830,16 @@
       "header": "What is your bike category?",
       "hint": "First, select the category of your bike. Then select the right subcategory.",
       "label": "Category",
-      "city": "City Bike",
-      "race": "Race Bike",
-      "all-terrain": "All Terrain Bike",
-      "kids": "Kids Bike",
-      "electro": "Electro Bike",
-      "special": "Special Bike",
-      "urban": "Urban Bike",
+      "city": "City",
+      "race": "Race",
+      "all-terrain": "All Terrain",
+      "kids": "Kids",
+      "electro": "Electro",
+      "special": "Special",
+      "urban": "Urban",
       "e-bike": "E-Bike",
-      "road": "Road Bike",
-      "transport": "Transport Bike"
+      "road": "Road",
+      "transport": "Transport"
     },
     "details": {
       "header": "What is your bike name, size & brand?",
@@ -1025,6 +1025,7 @@
     "show-as-list": "Show as List",
     "duplicate": {
       "duplicate": "Duplicate",
+      "duplication-status": "Duplication status",
       "how_many": "How many additional bikes?",
       "header": "Duplicate Bike",
       "number_bikes": "Number of bikes",
