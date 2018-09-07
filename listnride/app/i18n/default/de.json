@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "no-bikes-found": "Keine Fahrräder gefunden",
     "bolzano": "Bozen",
     "lake-garda": "Gardasee",
     "sardinia": "Sardinien",
@@ -220,6 +221,12 @@
         "meta-title": "Entdecke Vienna auf dem Fahrrad mit listnride",
         "meta-description": "Erkunde Vienna auf dem Fahrrad. Wähle aus einer Vielzahl von Fahrrädern und miete das optimale Zweirad für deine Fahrradtour!"
       }
+    },
+    "seo": {
+      "city-title": "Miete das perfekte Fahrrad in {{location}} | listnride",
+      "city-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem Fahrrad, das du über listnride sicher gemietet hast.",
+      "category-title": "Miete das perfekte {{category}} in {{location}} | listnride",
+      "category-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem {{category}}, das du über listnride sicher gemietet hast."
     },
     "business-community": {
       "meta-title": "Die listnride Business Community",
@@ -493,7 +500,7 @@
     "account-deleted": "Dein Konto wurde deaktiviert",
     "enter-email": "Bitte gib deine E-Mail-Adresse ein",
     "duplicate-start": "Vervielfältigungsprozess gestartet",
-    "duplicate-finish": "Duplication process finished. Copies created successfully",
+    "duplicate-finish": "Räder erfolgreich dupliziert",
     "bike-deleted": "Fahrrad erfolgreich gelöscht",
     "range-success-delete": "Zeitraum erfolgreich gelöscht",
     "availability-success-saved": "Availability successfully saved"
@@ -644,7 +651,7 @@
     "complete-profile": "Vervollständige dein Profil",
     "add-payment": "Zahlungsmethode",
     "complete-profile-description": "Um das Rad zu buchen, gib dein Zahlungsmittel an. Alle Daten werden über eine gesicherte Verbindung übertragen.",
-    "no-requests-yet": "Sobald du Anfragen gestellt oder bekommen hast, werden sie hier angezeigt.",
+    "no-requests-yet": "Sobald es Anfragen gibt, werden sie hier angezeigt.",
     "filters": {
       "all-requests": "Alle Anfragen",
       "current-rentals": "Aktuelle Mieten",
@@ -1018,6 +1025,7 @@
     "show-as-list": "Als Liste anzeigen",
     "duplicate": {
       "duplicate": "Duplikat",
+      "duplication-status": "Duplizierungsstatus",
       "how_many": "Wie viele zusätzliche Fahrräder?",
       "header": "Dupliziere Fahrrad",
       "number_bikes": "Anzahl der Fahrräder",
