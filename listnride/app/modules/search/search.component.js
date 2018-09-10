@@ -198,7 +198,7 @@ angular.module('search',[]).component('search', {
         $timeout(function(){
           NgMap.getMap({ id: "searchMap" }).then(function (map) {
             map.fitBounds(correctBounds());
-            map.setZoom(map.getZoom() + 1);
+            map.setZoom(map.getZoom());
             initMarkerClusterer(map);
             search.map = map;
             // map.panToBounds(bounds);
