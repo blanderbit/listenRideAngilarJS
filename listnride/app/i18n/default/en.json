@@ -225,7 +225,7 @@
     "seo": {
       "city-title": "Rent the perfect bike in {{location}} | listnride",
       "city-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a bike securely rented on listnride.",
-      "category-title": "Rent the perfect {{category}} in {{location}} | listnride",
+      "category-title": "Rent the perfect {{category}} bike in {{location}} | listnride",
       "category-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a {{category}} securely rented on listnride."
     },
     "business-community": {
@@ -1020,7 +1020,7 @@
   },
   "listings": {
     "my-bikes": "My Bikes",
-    "no-bikes": "You haven't listed any of your rides yet.",
+    "no-bikes": "You haven't listed any of your bikes yet.",
     "list-a-bike": "List a Bike",
     "show-as-list": "Show as List",
     "duplicate": {

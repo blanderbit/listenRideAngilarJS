@@ -225,7 +225,7 @@
     "seo": {
       "city-title": "Miete das perfekte Fahrrad in {{location}} | listnride",
       "city-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem Fahrrad, das du über listnride sicher gemietet hast.",
-      "category-title": "Miete das perfekte {{category}} in {{location}} | listnride",
+      "category-title": "Miete das perfekte {{category}} Rad in {{location}} | listnride",
       "category-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem {{category}}, das du über listnride sicher gemietet hast."
     },
     "business-community": {
