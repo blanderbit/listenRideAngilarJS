@@ -522,7 +522,7 @@
       "meta-title": "Rent and test veloheld Bikes in Munich and Dresden",
       "find-out-more": {
         "title": "Learn more about veloheld bikes",
-        "description": "Order your new <a href=\\“ http://www.veloheld.de/”target=\\“_blank\\“>veloheld bike online</a> and get your listnride rental reimbursed."
+        "description": "Order your new <a href=\"//veloheld.de\" target=\"_blank\">veloheld bike online</a> and get your listnride rental reimbursed."
       },
       "faq-question-1": "Enter Text.",
       "faq-answer-1": "Enter Text.",
@@ -642,7 +642,7 @@
       "item3-description": "VELLO bikes are available in 4 different models, with e-drive and without: \"Urbano\", \"Rocky\", \"Speedster\" und \"VELLO BIKE+\". All models offer the best of urban riding, and come with high-end city, trekking, or road bike components.",
       "available-cities": "Available in Berlin and Munich",
       "question": "Questions?",
-      "faq-question": "Learn more about <a href=\"http://vello.bike/index.php\">VELLO bikes</a> and how to buy one or check out their <a href=\"https://www.vello.bike/help-faq-en\" target=\"_BLANK\">FAQ</a>."
+      "faq-question": "Learn more about <a href=\"http://www.vellobike.com\" target=\"_BLANK\">VELLO bikes</a> and how to buy one or check out their <a href=\"http://www.vello.bike/help-faq-en\" target=\"_BLANK\">FAQ</a>."
     },
     "veletage": {
       "meta-title": "VELETAGE Salon für Radkultur",
@@ -852,7 +852,7 @@
     "meta-description": "Founded by bike enthusiasts for their brothers and sisters in spirit."
   },
   "contact-and-help": {
-    "title": "Contact & Support",
+    "title": "Help & contact",
     "meta-title": "listnride is here for you",
     "meta-description": "Contact us if you have special questions or need help solving a problem",
     "faq-section": {

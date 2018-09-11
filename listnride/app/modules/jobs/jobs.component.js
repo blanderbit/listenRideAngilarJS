@@ -27,7 +27,7 @@ angular.module('jobs', [])
         function showDetails(job) {
           jobs.showJobDetails = true;
           jobs.chosenJob = job;
-          goToTop();
+          // goToTop();
         };
 
         function hideDetails() {

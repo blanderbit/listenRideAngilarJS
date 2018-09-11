@@ -81,7 +81,7 @@
     "search-all-in": "Search all bikes in",
     "search-bikes": "Search your bikes",
     "from-place": "from",
-    "contact": "Contact & Support",
+    "contact": "Help & Support",
     "show-more": "show more",
     "show-less": "show less",
     "phone-number": "Phone Number",
@@ -225,7 +225,7 @@
     "seo": {
       "city-title": "Rent the perfect bike in {{location}} | listnride",
       "city-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a bike securely rented on listnride.",
-      "category-title": "Rent the perfect {{category}} in {{location}} | listnride",
+      "category-title": "Rent the perfect {{category}} bike in {{location}} | listnride",
       "category-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a {{category}} securely rented on listnride."
     },
     "business-community": {
@@ -482,6 +482,7 @@
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
+    "bike-edit-successful": "You have edited your bike successfully",
     "error": "An error occured. Please make sure your internet connection works and try again.",
     "add-payout-success": "Your payout method was successfully added.",
     "add-voucher-success": "Congratulations, the voucher was added to your account.",
@@ -1020,7 +1021,7 @@
   },
   "listings": {
     "my-bikes": "My Bikes",
-    "no-bikes": "You haven't listed any of your rides yet.",
+    "no-bikes": "You haven't listed any of your bikes yet.",
     "list-a-bike": "List a Bike",
     "show-as-list": "Show as List",
     "duplicate": {

@@ -198,7 +198,7 @@ angular.module('search',[]).component('search', {
         $timeout(function(){
           NgMap.getMap({ id: "searchMap" }).then(function (map) {
             map.fitBounds(correctBounds());
-            map.setZoom(map.getZoom() + 1);
+            map.setZoom(map.getZoom());
             initMarkerClusterer(map);
             search.map = map;
             // map.panToBounds(bounds);
@@ -252,15 +252,35 @@ angular.module('search',[]).component('search', {
 
         search.mapMarkers = markers;
 
-        var mcOptions = { imagePath: 'https://cdn.rawgit.com/googlemaps/js-marker-clusterer/gh-pages/images/m' };
+        var mcOptions = {
+          styles: mapConfigs.clustersStyle()
+        };
         search.clusterer = new MarkerClusterer(map, markers, mcOptions);
         return search.clusterer
       }
 
       function createMarkerForBike(bike, map) {
+        // Origins, anchor positions and coordinates of the marker increase in the X
+        // direction to the right and in the Y direction down.
+        var image = {
+          url: 'app/assets/ui_icons/map/markers/Pin Map 56x56.png',
+          // This marker is 56 pixels wide by 56 pixels high.
+          size: new google.maps.Size(56,56),
+          // The origin for this image is (0, 0).
+          origin: new google.maps.Point(0, 0),
+          // The anchor for this image is the base of the flagpole at (56/2, 56).
+          anchor: new google.maps.Point(28, 56),
+          // The label position inside marker
+          labelOrigin: new google.maps.Point(28, 22)
+          // scaledSize: new google.maps.Size(50, 50)
+        };
+
         var marker = new google.maps.Marker({
           position: new google.maps.LatLng(bike.lat_rnd, bike.lng_rnd),
-          id: bike.id
+          id: bike.id,
+          icon: image,
+          title: Math.ceil(bike.price_from) + '€',
+          label: { text: Math.ceil(bike.price_from) + '€', color: "white", fontSize: '13px', fontWeight: 'bold' }
         });
 
         google.maps.event.addListener(marker, 'click', function () {

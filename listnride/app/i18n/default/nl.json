@@ -80,7 +80,7 @@
     "search-all-in": "Doorzoek alle fietsen in",
     "search-bikes": "Zoek je fietsen",
     "from-place": "uit",
-    "contact": "Contact & Help",
+    "contact": "Help & Support",
     "show-more": "Toon meer",
     "show-less": "Toon minder",
     "phone-number": "Telefoonnummer",
@@ -220,7 +220,7 @@
     "seo": {
       "city-title": "Huur de perfecte fiets in {{location}} | listnride",
       "city-description": "Kies de fiets die aan uw wensen voldoet online, vanaf {{ minPrice }}€. Geniet van {{location}} op de fiets, die zeker en vast is geboekt op listnride.",
-      "category-title": "Huur de perfecte {{category}} in {{location}} | listnride",
+      "category-title": "Huur de perfecte {{category}} fiets in {{location}} | listnride",
       "category-description": "Kies de fiets die aan uw wensen voldoet online, vanaf {{ minPrice }}€. Geniet van {{location}} op een {{category}}, die zeker en vast is geboekt op listnride."
     },
     "business-community": {
