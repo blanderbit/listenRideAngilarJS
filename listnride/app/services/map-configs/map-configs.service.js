@@ -230,6 +230,46 @@ angular.module('listnride')
             ]
           }
         ];
+      },
+
+      clustersStyle: function () {
+        return [
+          {
+            textColor: 'white',
+            url: 'app/assets/ui_icons/map/clusters/Map Pin Cluster 53x53.png',
+            height: 53,
+            width: 53,
+            textSize: '17'
+          },
+          {
+            textColor: 'white',
+            url: 'app/assets/ui_icons/map/clusters/Map Pin Cluster 56x56.png',
+            height: 56,
+            width: 56,
+            textSize: '17'
+          },
+          {
+            textColor: 'white',
+            url: 'app/assets/ui_icons/map/clusters/Map Pin Cluster 66x66.png',
+            height: 66,
+            width: 66,
+            textSize: '17'
+          },
+          {
+            textColor: 'white',
+            url: 'app/assets/ui_icons/map/clusters/Map Pin Cluster 78x78.png',
+            height: 78,
+            width: 78,
+            textSize: '17'
+          },
+          {
+            textColor: 'white',
+            url: 'app/assets/ui_icons/map/clusters/Map Pin Cluster 90x90.png',
+            height: 90,
+            width: 90,
+            textSize: '17'
+          }
+        ]
       }
     };
   }]);
