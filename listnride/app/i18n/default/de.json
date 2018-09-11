@@ -81,7 +81,7 @@
     "search-all-in": "Finde alle Räder in",
     "search-bikes": "Durchsuche deine Räder",
     "from-place": "aus",
-    "contact": "Kontakt & Hilfe",
+    "contact": "Hilfe & Support",
     "show-more": "zeig mehr",
     "show-less": "zeige weniger",
     "phone-number": "Telefonnummer",
@@ -225,7 +225,7 @@
     "seo": {
       "city-title": "Miete das perfekte Fahrrad in {{location}} | listnride",
       "city-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem Fahrrad, das du über listnride sicher gemietet hast.",
-      "category-title": "Miete das perfekte {{category}} Rad in {{location}} | listnride",
+      "category-title": "Miete das perfekte {{category}}-Rad in {{location}} | listnride",
       "category-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem {{category}}, das du über listnride sicher gemietet hast."
     },
     "business-community": {
@@ -482,6 +482,7 @@
   },
   "toasts": {
     "update-profile-success": "Dein Profil wurde erfolgreich aktualisiert.",
+    "bike-edit-successful": "Du hast dein Rad erfolgreich bearbeitet",
     "error": "Es ist ein Fehler aufgetreten. Bitte stell sicher dass deine Internetverbindung funktioniert und versuche es nochmal.",
     "add-payout-success": "Deine Auszahlungsmethode wurde erfolgreich hinzugefügt.",
     "add-voucher-success": "Glückwunsch, der Gutschein wurde deinem Konto hinzugefügt.",

@@ -31,7 +31,7 @@
       "title": "München",
       "subtitle": "Entdecke München auf dem Fahrrad mit listnride",
       "description": "Miete dir ein Rad und erkunde die Radl-Haupstadt auf eigene Faust",
-      "search-title": "Schaue Dir das Radangebot in München an",
+      "search-title": "Schaue dir das Radangebot in München an",
       "search-subtitle": "Buch dir ein Leihrad für deinen Stil und Zweck",
       "about": "Über München",
       "about-content": "München auf dem Rad ist einzigartig. Die fahrradfreundliche Infrastruktur und abwechslungsreiche Natur, sei es in der Stadt oder etwas außerhalb, laden förmlich zu Erkundungstouren auf dem Zweirad ein. Die süddeutsche Metropole bietet eine Vielzahl von Routen für verschiedene Bedürfnisse.",
@@ -521,7 +521,7 @@
       "meta-title": "Miete und Teste die veloheld Räder in München und Dresden",
       "find-out-more": {
         "title": "Erfahre mehr über veloheld Räder",
-        "description": "Bestelle Dein neues <a href=\\“ http://www.veloheld.de/”target=\\“_blank\\“>veloheld Rad online</a> und erhalte den listnride Mietpreis angerechnet. "
+        "description": "Bestelle Dein neues <a href=\"//veloheld.de\" target=\"_blank\">veloheld Rad online</a> und erhalte den listnride Mietpreis angerechnet. "
       },
       "faq-question-1": "Enter Text.",
       "faq-answer-1": "Enter Text.",
@@ -850,7 +850,7 @@
     "meta-description": "Gegründet von Fahrrad-Begeisterten für ihre Brüder und Schwestern im Geiste."
   },
   "contact-and-help": {
-    "title": "Kontakt & Hilfe",
+    "title": "Hilfe",
     "meta-title": "listnride ist für dich da",
     "meta-description": "Kontaktiere uns, wenn du spezielle Fragen oder Probleme hast.",
     "faq-section": {
