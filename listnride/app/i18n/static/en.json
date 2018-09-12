@@ -39,7 +39,7 @@
       "bike-shops": "Bike Shops",
       "cafes-bars": "Cafés, Bars & Eatery",
       "bike-routes-content": "It was 1972 when the Summer Olympic Games took place at the <a href=\"http://www.olympiapark.de\" target=\"_blank\">Olympiapark</a> in Munich. Nowadays the Olympia park has developed into a popular place for a spin around the grounds. Close to the city center, you'll find \"the central park\" of Munich, the <a href=\"http://www.muenchen.de/int/en/sights/parks/english-garden.html\" target=\"_blank\">Englischer Garten</a>. It has a tranquil and nobel ambiance, inviting you and your bike to explore further. Go up to <a href=\"http://www.aumeister.de\" target=\"_blank\">Aumeister Beergarten</a> on the north end of the park and treat yourself with a typical Bavarian mass. If you're looking for trails: Keep an eye on the <a href=\"http://hikeandbike.de/2015/03/19/isartrails-muenchen\" target=\"_blank\">east side of the Isar River</a>. It provides miles of trails for all abilities.",
-      "bike-shops-content": "If you want to get to know Munich's cycling scene, we recommend you to visit some of the following shops. At <a href=\"http://bikedress.de\" target=\"_blank\">Bikedress</a> you'll find an assortment of the finest cycling apparel and accessories, featuring brands like ASSOS and PEDAL ED. Getting hungry/thirsty? No worries, next door to Bikedress you'll find the \"Monaco velo club Café\" which provides you with authentic Italian specialties in a classic cycling atmosphere. <a href=\"http://www.gutenbiken.com\" target=\"_blank\">Guten Bike</a> is a specialized bike shop focused on high-quality repairs, restorations, and custom builds. If you are more interested in well-designed urban bicycles you should definitely have a look at <a href=\"http://www.munixfinestbicycles.de\" target=\"_blank\">MunixFinest</a>.",
+      "bike-shops-content": "If you want to get to know Munich's cycling scene, we recommend you to visit some of the following shops. At <a href=\"http://bikedress.de\" target=\"_blank\">Bikedress</a> you'll find an assortment of the finest cycling apparel and accessories, featuring brands like ASSOS and PEDAL ED. Getting hungry thirsty? No worries, next door to Bikedress you'll find the <a1 href=\"http://monacoveloclub.de/\" target=\"_blank\">monaco velo club</a> café which provides you with authentic Italian specialties in a classic cycling atmosphere. <a href=\"http://www.gutenbiken.com\" target=\"_blank\">Guten Bike</a> is a specialized bike shop focused on high-quality repairs, restorations, and custom builds. If you are more interested in well-designed urban bicycles you should definitely have a look at <a href=\"http://www.munixfinestbicycles.de\" target=\"_blank\">MunixFinest</a>.",
       "cafes-bars-content": "<a href=\"http://www.necado.de\" target=\"_blank\">Necado</a> in Schwabing takes care of your daily coffee supply. Looking for food? Go to <a href=\"http://charl.ie\" target=\"_blank\">Charlie</a>, the Vietnamese restaurant, which offers excellent traditional vietnamese dishes in a relaxed loungy setting. The typical Bavarian ambiance, you'll find at <a href=\"http://www.fraunhofertheater.de/index.php?page_id=23\" target=\"_blank\">Fraunhofer</a>. Nice located in the Glockenbackviertel, Frauenhofer offers exactly what Bavaria is known for: good beer, and traditional heavy food."
     },
     "amsterdam": {
@@ -81,6 +81,9 @@
     "languages": {
       "english": "English"
     }
+  },
+  "rider": {
+    "chat": "Your booked ride was cancelled."
   },
   "shared": {
     "list-your-bike": {
@@ -508,15 +511,15 @@
       "test-bike": "Test your veloheld bikes in Munich or Dresden",
       "description": "veloheld bikes stand for pure aesthetic and functional technics – they are perfectly prepared for the dynamic and all the impassibility of everyday life. But above all, they are so much fun to ride!",
       "feature-1": {
-        "title": "Timeless and Sustainable",
+        "title": "Timeless and sustainable",
         "description": "veloheld bikes are timeless thanks to their elegant \nsteel frames. Used in prodution is only light and comfortable \nchromoly steel, which is more eco-friendly in \ncomparison to other materials used in the \nbicycle industry."
       },
       "feature-2": {
-        "title": "Custom Color ",
+        "title": "Custom color ",
         "description": "If you don’t like the standard paint schemes \nyou can choose your personal colour out \nof 200 RAL-colours, which are powder\n-coated on the veloheld frame."
       },
       "feature-3": {
-        "title": "Custom Build",
+        "title": "Custom build",
         "description": "Besides the standard components veloheld can realise \nnearly every custom configuration. Send your \nideas for your individual veloheld bike just \nthe way you want today."
       },
       "meta-title": "Rent and test veloheld Bikes in Munich and Dresden",
