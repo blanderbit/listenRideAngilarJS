@@ -153,6 +153,9 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "lister": {
+    "chat": "De boeking van je huurfiets is geannuleerd."
+  },
   "brand-integration": {
     "leaos": {
       "subdescription-not-used": "Design. Art. Passion.",
@@ -478,6 +481,7 @@
   },
   "toasts": {
     "update-profile-success": "Je profiel is geactualiseerd.",
+    "bike-edit-successful": "De aanpassingen zijn succesvol opgeslagen",
     "error": "Er is een fout opgetreden. Check of je internetverbinding werkt en probeer het nogmaals.",
     "add-payout-success": "Je uitbetaalmethode is toegevoegd aan je profiel.",
     "add-voucher-success": "Gefeliciteerd, het tegoed is aan je account toegevoegd.",

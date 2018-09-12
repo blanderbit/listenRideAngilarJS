@@ -158,6 +158,9 @@
       "subheader": "Meet like-minded and make some pocket money"
     }
   },
+  "lister": {
+    "chat": "Your booked bike was cancelled."
+  },
   "brand-integration": {
     "leaos": {
       "subdescription-not-used": "Design. Art. Passion.",
@@ -483,7 +486,7 @@
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
-    "bike-edit-successful": "You have edited your bike successfully",
+    "bike-edit-successful": "Your changes have been saved",
     "error": "An error occured. Please make sure your internet connection works and try again.",
     "add-payout-success": "Your payout method was successfully added.",
     "add-voucher-success": "Congratulations, the voucher was added to your account.",

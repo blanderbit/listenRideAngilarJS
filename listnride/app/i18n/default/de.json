@@ -158,6 +158,9 @@
       "subheader": "Triff Gleichgesinnte. Verdiene Dir etwas dazu."
     }
   },
+  "lister": {
+    "chat": "Dein gebuchtes Fahrrad wurde storniert."
+  },
   "brand-integration": {
     "leaos": {
       "subdescription-not-used": "Design. Art. Passion.",
@@ -483,7 +486,7 @@
   },
   "toasts": {
     "update-profile-success": "Dein Profil wurde erfolgreich aktualisiert.",
-    "bike-edit-successful": "Du hast dein Rad erfolgreich bearbeitet",
+    "bike-edit-successful": "Deine Änderungen wurden gespeichert",
     "error": "Es ist ein Fehler aufgetreten. Bitte stell sicher dass deine Internetverbindung funktioniert und versuche es nochmal.",
     "add-payout-success": "Deine Auszahlungsmethode wurde erfolgreich hinzugefügt.",
     "add-voucher-success": "Glückwunsch, der Gutschein wurde deinem Konto hinzugefügt.",
