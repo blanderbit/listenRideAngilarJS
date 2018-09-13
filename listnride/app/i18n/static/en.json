@@ -86,16 +86,7 @@
     "chat": "Your booked ride was cancelled."
   },
   "faq-page": {
-    "header-1": "Getting Started",
-    "topic": "Topics",
-    "header-2": "Renting out Your Bikes",
-    "header-5": "Insurance & Service",
-    "header-6": "Booking & Cancelation",
-    "header-7": "Vouchers & Credits",
-    "header-8": "Ratings & Feedback",
-    "header-3": "Renting Bikes",
-    "header-4": "Payment & Service Fees",
-    "header": "General Header"
+    "header": "Frequently Asked Questions"
   },
   "shared": {
     "list-your-bike": {
