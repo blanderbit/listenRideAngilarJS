@@ -55,16 +55,16 @@
 
 <!--        EVENT CALENDAR FIXED SLOT        -->
 <div layout="column" layout-margin ng-if="calendar.bikeFamily == calendar.event.familyId">
-  <p class="md-headline lnr-center">Velo Hamburg Calendar</p>
-  <p class="md-body-1 lnr-center">During the Velo Hamburg, you can rent fantastic bikes for free! Just select which day and what time slot you'd like to have them!</p>
+  <p class="md-headline lnr-center">{{ 'veletage.event.calendar-title' | translate }}</p>
+  <p class="md-body-1 lnr-center">{{ 'veletage.event.calendar-subtitle' | translate }}</p>
   <md-input-container class="md-block">
     <label>1. Select the Rental Day</label>
     <md-select ng-model="calendar.day">
-      <md-option value="26">
-        Saturday, 26th of May
-      </md-option>
-      <md-option value="27">
-        Sunday, 27th of May
+      <md-option
+        ng-repeat="i in calendar.event.days"
+        value="{{i}}"
+      >
+        {{i}} of September
       </md-option>
     </md-select>
   </md-input-container>

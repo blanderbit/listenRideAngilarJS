@@ -138,41 +138,43 @@ angular.module('bike').component('calendar', {
 
       /* ---------- CODE FOR THE EVENT CALENDAR 1 ---------- */
 
+      //TODO: We need to update this not scalable example of code.
+
       calendar.event = {};
       calendar.event.pickupSlotId;
       calendar.event.returnSlotId;
-
-      calendar.event.familyId = 31;
+      calendar.event.slots= [];
+      calendar.event.familyId = 34;
+      calendar.event.days = _.range(20, 31);
 
       var slotDuration = 1;
       var eventYear = 2018;
-      var eventMonth = 4;   // Months start at 0, so February = 1
+      var eventMonth = 8;   // Months start at 0
 
+      _.forEach(calendar.event.days, function(day) {
+        generateSlot(day)
+      });
 
-      // Calendar Slots are currently set for Supercross Munich
-      calendar.event.slots = [
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 26, month: eventMonth, year: eventYear, text: "10:00 - 11:00", hour: 10},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 26, month: eventMonth, year: eventYear, text: "11:00 - 12:00", hour: 11},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 26, month: eventMonth, year: eventYear, text: "12:00 - 13:00", hour: 12},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 26, month: eventMonth, year: eventYear, text: "13:00 - 14:00", hour: 13},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 26, month: eventMonth, year: eventYear, text: "14:00 - 15:00", hour: 14},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 26, month: eventMonth, year: eventYear, text: "15:00 - 16:00", hour: 15},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 26, month: eventMonth, year: eventYear, text: "16:00 - 17:00", hour: 16},
-        {overnight: false, reserved: false, pickupEnabled: false, returnDisabled: true, day: 26, month: eventMonth, year: eventYear, text: "17:00 - 18:00", hour: 17},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 27, month: eventMonth, year: eventYear, text: "10:00 - 11:00", hour: 10},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 27, month: eventMonth, year: eventYear, text: "11:00 - 12:00", hour: 11},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 27, month: eventMonth, year: eventYear, text: "12:00 - 13:00", hour: 12},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 27, month: eventMonth, year: eventYear, text: "13:00 - 14:00", hour: 13},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 27, month: eventMonth, year: eventYear, text: "14:00 - 15:00", hour: 14},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 27, month: eventMonth, year: eventYear, text: "15:00 - 16:00", hour: 15},
-        {overnight: false, reserved: false, pickupEnabled: true, returnDisabled: true, day: 27, month: eventMonth, year: eventYear, text: "16:00 - 17:00", hour: 16},
-        {overnight: false, reserved: false, pickupEnabled: false, returnDisabled: true, day: 27, month: eventMonth, year: eventYear, text: "17:00 - 18:00", hour: 17},
-      ];
+      function generateSlot(day) {
+        _.forEach(_.range(9, 18, 2), function(hour) {
+          var slot = {
+            pickupEnabled: hour !== 17,
+            overnight: false,
+            reserved: false,
+            day: day,
+            month: eventMonth,
+            year: eventYear,
+            text: hour + ":00 - "+ (hour + 2) + ":00",
+            hour: hour
+          };
+          calendar.event.slots.push(slot)
+        });
+      };
 
       calendar.event.changePickupSlot = function() {
         // Define picked slot as pickupSlot
         calendar.event.slots[calendar.event.pickupSlotId].pickup = true;
-        // Enable all following slots as returnSlots if no booking is inbetween
+        // Enable all following slots as returnSlots if no booking is in between
         var bookingInBetween = false;
         _.each(calendar.event.slots, function(value, index) {
           if (index > calendar.event.pickupSlotId) {
