@@ -164,6 +164,12 @@
   "faq-page": {
     "header-4": "Payment & Service Fees"
   },
+  "veletage": {
+    "event": {
+      "calendar-title": "Example Veletage Title",
+      "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me <a href=\"https://translate.lingohub.com/list-and-ride/editor?q=veletage.event.calendar-subtitle&target=title&project=listnride-frontend\" target=\"_blank\">in Lingohub</a>.Hello, I'm Veletage Event Example Subtitle. Please change me in Lingohub. "
+    }
+  },
   "brand-integration": {
     "leaos": {
       "subdescription-not-used": "Design. Art. Passion.",
