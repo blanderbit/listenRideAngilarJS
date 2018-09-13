@@ -161,6 +161,9 @@
   "lister": {
     "chat": "Your booked bike was cancelled."
   },
+  "faq-page": {
+    "header-4": "Payment & Service Fees"
+  },
   "brand-integration": {
     "leaos": {
       "subdescription-not-used": "Design. Art. Passion.",
