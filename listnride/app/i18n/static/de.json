@@ -92,7 +92,7 @@
     "heder-3": "Fahrräder ausleihen",
     "header-5": "Versicherung & Sicherheit",
     "header-6": "Buchung & Stornierung",
-    "header-7": "Gutscheinde & Guthaben",
+    "header-7": "Gutscheine & Guthaben",
     "header-8": "Bewertung & Feedback"
   },
   "shared": {
@@ -122,7 +122,7 @@
         "title": "Vermiete dein Rad",
         "description": "Erfahre, wie du ein neues Rad einstellen und deine Flotte verwalten kannst.",
         "answer-1": "Klick auf „<b>Meine Räder</b>” im Menü und anschließend auf Rad einstellen. Der Dialog führt dich durch alle nötigen Schritte. Hier kannst du Informationen über dein Fahrrad wie Marke, Beschreibung, Bilder, Mietpreis und Zubehör angeben.",
-        "answer-2": "Eine detaillierte Beschreibung des Rades, gute Bilder sowie ein attraktiver Preis machen ein Fahrrad für potentielle <a href=\\“http://www.listnride.de/bikes/3369\\”target=\\“_blank\\“>Mieter attraktiv</a>.\n<p>\nEine gute Beschreibung enthält alle relevanten Details zu Deinem Fahrrad, wie: Rahmengröße, Rahmenname und Baujahr, Schaltgruppe, Felgen, Nabe und Anzahl der Gänge sowie eventuell einige spezifische Details zu deinem Fahrrad.\nDa sich viele Mieter auf Stockfotos der Hersteller beziehen, insbesondere für High-End-Bikes, empfehlen wir dir, auch die Farbe Deines Bikes zu erwähnen.\n<p>\nEin komplettes Profil von dir trägt ebenfalls dazu bei, die Attraktivität Deiner Fahrräder weiter zu steigern - ein gutes Beispiel findest du bei\n<a href=\\“http://www.listnride.de/users/1886\\”target=\\“_blank\\“>Munix Finest Bicycles</a>.",
+        "answer-2": "Eine detaillierte Beschreibung des Rades, gute Bilder sowie ein attraktiver Preis machen ein Fahrrad für potentielle Mieter attraktiv. Ein solches Beispiel \n<a href=\"http://www.listnride.de/bikes/3369\" target='\"_blank'>findest du hier</a>.\n<p>\nEine gute Beschreibung enthält alle relevanten Details zu Deinem Fahrrad, wie: Rahmengröße, Rahmenname und Baujahr, Schaltgruppe, Felgen, Nabe und Anzahl der Gänge sowie eventuell einige spezifische Details zu deinem Fahrrad.\nDa sich viele Mieter auf Stockfotos der Hersteller beziehen, insbesondere für High-End-Bikes, empfehlen wir dir, auch die Farbe Deines Bikes zu erwähnen.\n<p>\nEin komplettes Profil von dir trägt ebenfalls dazu bei, die Attraktivität Deiner Fahrräder weiter zu steigern - ein gutes Beispiel findest du bei\n<a href=\\“http://www.listnride.de/users/1886\\”target=\\“_blank\\“>Munix Finest Bicycles</a>.",
         "answer-3": "Das erste, was Mieter bei der Suche nach Fahrrädern in deiner Nähe sehen, sind die Bilder in der Übersicht.\n<p>\n<a href=\\“http://www.listnride.de/how-to-shoot-bike-photos\\”target=\\“_blank\\“>Hier</a>\nfindest du einige Tipps, um dein Fahrrad ins beste Licht zu rücken!",
         "answer-4": "Du kannst den Mietpreis frei wählen. Der Wochenpreis darf nicht niedriger sein als der Tagespreis. Um den Mietpreis zu bestimmen, kannst du dein Fahrrad mit ähnlichen verfügbaren Fahrrädern auf listnride vergleichen.",
         "answer-5": "Um die Verfügbarkeit Deines Fahrrads zu ändern, benutze das „<b>Uhrsymbol</b>” auf der Seite „<b>Meine Fahrräder</b>”. Im Kalender kannst du die Zeitspanne einstellen, in der dein Fahrrad nicht Verfügbar ist.",
