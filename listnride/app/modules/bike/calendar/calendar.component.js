@@ -156,9 +156,9 @@ angular.module('bike').component('calendar', {
       });
 
       function generateSlot(day) {
-        _.forEach(_.range(9, 18, 2), function(hour) {
+        _.forEach(_.range(9, 20, 2), function(hour) {
           var slot = {
-            pickupEnabled: hour !== 17,
+            pickupEnabled: hour !== 19,
             overnight: false,
             reserved: false,
             day: day,
