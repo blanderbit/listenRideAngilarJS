@@ -158,6 +158,18 @@
       "subheader": "Conoce a personas con tus mismas pasiones y gana dinero extra"
     }
   },
+  "lister": {
+    "chat": "La reserva de la bicicleta fue cancelada."
+  },
+  "faq-page": {
+    "topics": "Temas"
+  },
+  "veletage": {
+    "event": {
+      "calendar-title": "Example Veletage Title",
+      "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me in Lingohub."
+    }
+  },
   "brand-integration": {
     "leaos": {
       "subdescription-not-used": "Design. Art. Passion.",
@@ -482,6 +494,7 @@
   },
   "toasts": {
     "update-profile-success": "Tu perfil se ha actualizado con éxito",
+    "bike-edit-successful": "Se han guardado los cambios",
     "error": "Se ha producido un error. Asegúrate de que la conexión a Internet funcione y vuelve a intentarlo.",
     "add-payout-success": "Tu método de pago se ha añadido correctamente. ",
     "add-voucher-success": "Enhorabuena, el cupón se ha añadido a tu cuenta.",

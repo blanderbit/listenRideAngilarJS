@@ -39,7 +39,7 @@
       "bike-shops": "Fahrradläden",
       "cafes-bars": "Essen, Trinken, Café",
       "bike-routes-content": "Der <a href=\"http://www.olympiapark.de\" target=\"_blank\">Olympiapark</a> entstand 1972 als die olympischen Sommerspiele in Deutschland stattfanden. Neben diversen Sportveranstaltungen, offenbart er außerdem ein schönes Terrain für gemütliches pedalieren. In direkter Nähe zum Stadtzentrum befindet sich der <a href=\"http://www.muenchen.de/int/en/sights/parks/english-garden.html\" target=\"_blank\">Englische Garten</a>. Die grüne Oase bietet viele kleine Wege die man hervorragend auf dem Rad erkunden kann. Radelt man in Richtung Norden, erreicht man am obersten Ende den <a href=\"http://www.aumeister.de\" target=\"_blank\">Biergarten Aumeister</a> und hat die Wahl zwischen einer typisch bayrischen Maß oder halben. Hat man Lust auf Gelände und Trails, lohnt es sich ein Blick auf die <a href=\"http://hikeandbike.de/2015/03/19/isartrails-muenchen\" target=\"_blank\">Ostseite der Isar</a> zu werfen, welche München durchfließt. Dort ist für jedes Level etwas dabei!",
-      "bike-shops-content": "Um tieferen Einblick die Münchener Fahrradszene zu erhalten, bietet es sich an einen Schritt in die lokalen Shops zu wagen. Der Laden <a href=\"http://bikedress.de\" target=\"_blank\">Bikedress</a> bietet das Radbekleidungserlebnis ohne Kompromisse und vertreibt u.a Assos und PedalEd. Das hauseigene Cafe mit italienischen Spezialitäten und authentischer Deko findet sich direkt nebenan. <a href=\"http://www.gutenbiken.com\" target=\"_blank\">Guten Bike</a> hat sich auf Reparaturen, Restaurierungen und Kundenaufbauten spezialisiert, deren Lager ist immer ein Blick wert, da dort immer mal wieder ein Schatz schlummert. Wer sich für Falträder, Reiserädern und E-Bikes interessiert, findet bei <a href=\"http://www.munixfinestbicycles.de\" target=\"_blank\">MunixFinest</a> eine schöne Auswahl.",
+      "bike-shops-content": "Um tieferen Einblick in die Münchener Fahrradszene zu erhalten, bietet es sich an einen Schritt in die lokalen Shops zu wagen. Der Laden \n<a href=\"http://bikedress.de\" target=\"_blank\">Bikedress</a>\n bietet Radbekleidung ohne Kompromisse und vertreibt u.a Assos und PedalEd. Du wirst hungrig oder möchtest einen Kaffee? Kein Problem, direkt nebenan finde sich das \n<a href=\"http://monacoveloclub.de/\"target=\"_blank\">monaco velo club</a>\nCafé, das hauseigenen Cafe mit italienischen Spezialitäten und authentischer Deko bietet. \n<a href=\"http://www.gutenbiken.com\" target=\"_blank\">Guten Bike</a>\n hat sich auf Reparaturen, Restaurierungen und Kundenaufbauten spezialisiert, deren Lager ist immer ein Blick wert, da dort immer mal wieder ein Schatz schlummert. Wer sich für Falträder, Reiserädern und E-Bikes interessiert, findet bei \n<a href=\"http://www.munixfinestbicycles.de\" target=\"_blank\">Munix Finest Bicycles</a> \neine schöne Auswahl.",
       "cafes-bars-content": "Im Stadtteil Schwabing gibt es <a href=\"http://www.necado.de\" target=\"_blank\">necado</a>. Der kleine, sympathische Laden bietet in entspannter Atmosphäre leckeren Kaffee und kleine Knabbereien. Für den großen Hunger lohnt sich der Weg zu <a href=\"http://charl.ie\" target=\"_blank\">Charlie</a>. Das Erlebnis hier ist der Feuertopf (lau), das vietnamesiche Fondue. Typisch bayrisch geht dagegen bei <a href=\"http://www.fraunhofertheater.de/index.php?page_id=23\" target=\"_blank\">Fraunhofer</a> zu. Angesiedelt im Glockenbachviertel, bietet das Restaurant alles was man über Bayern vermutet: gutes Bier, deftiges Essen, große Portionen und lautstarke Stimmung!"
     },
     "amsterdam": {
@@ -82,6 +82,12 @@
       "english": "Englisch"
     }
   },
+  "rider": {
+    "chat": "Dein gebuchtes Fahrrad wurde storniert."
+  },
+  "faq-page": {
+    "header": "Häufige Fragen"
+  },
   "shared": {
     "list-your-bike": {
       "bike-category": "Wählen die Kategorie deines Rades",
@@ -109,8 +115,8 @@
         "title": "Vermiete dein Rad",
         "description": "Erfahre, wie du ein neues Rad einstellen und deine Flotte verwalten kannst.",
         "answer-1": "Klick auf „<b>Meine Räder</b>” im Menü und anschließend auf Rad einstellen. Der Dialog führt dich durch alle nötigen Schritte. Hier kannst du Informationen über dein Fahrrad wie Marke, Beschreibung, Bilder, Mietpreis und Zubehör angeben.",
-        "answer-2": "Eine detaillierte Beschreibung des Rades, gute Bilder sowie ein attraktiver Preis machen ein Fahrrad für potentielle <a href=\\“http://www.listnride.de/bikes/3369\\”target=\\“_blank\\“>Mieter attraktiv</a0>.\n<p>\nEine gute Beschreibung enthält alle relevanten Details zu Deinem Fahrrad, wie: Rahmengröße, Rahmenname und Baujahr, Schaltgruppe, Felgen, Nabe und Anzahl der Gänge sowie eventuell einige spezifische Details zu deinem Fahrrad.\nDa sich viele Mieter auf Stockfotos der Hersteller beziehen, insbesondere für High-End-Bikes, empfehlen wir dir, auch die Farbe Deines Bikes zu erwähnen.\n<p>\nEin komplettes Profil von dir trägt ebenfalls dazu bei, die Attraktivität Deiner Fahrräder weiter zu steigern - ein gutes Beispiel findest du bei\n<a href=\\“http://www.listnride.de/users/1886\\”target=\\“_blank\\“>Munix Finest Bicycles</a>.",
-        "answer-3": "Das erste, was Mieter bei der Suche nach Fahrrädern in deiner Nähe sehen, sind die Bilder in der Übersicht.\n<p>\n<a href=\\“http://www.listnride.de/how-to-shoot-bike-photos“>Hier</a>\nfindest du einige Tipps, um dein Fahrrad ins beste Licht zu rücken!",
+        "answer-2": "Eine detaillierte Beschreibung des Rades, gute Bilder sowie ein attraktiver Preis machen ein Fahrrad für potentielle Mieter attraktiv. Ein solches Beispiel \n<a href=\"http://www.listnride.de/bikes/3369\" target='\"_blank'>findest du hier</a>.\n<p>\nEine gute Beschreibung enthält alle relevanten Details zu Deinem Fahrrad, wie: Rahmengröße, Rahmenname und Baujahr, Schaltgruppe, Felgen, Nabe und Anzahl der Gänge sowie eventuell einige spezifische Details zu deinem Fahrrad.\nDa sich viele Mieter auf Stockfotos der Hersteller beziehen, insbesondere für High-End-Bikes, empfehlen wir dir, auch die Farbe Deines Bikes zu erwähnen.\n<p>\nEin komplettes Profil von dir trägt ebenfalls dazu bei, die Attraktivität Deiner Fahrräder weiter zu steigern - ein gutes Beispiel findest du bei \n<a href=\"http://www.listnride.de/users/1886\" target='\"_blank'>Munix Finest Bicycles</a>.",
+        "answer-3": "Das erste, was Mieter bei der Suche nach Fahrrädern in deiner Nähe sehen, sind die Bilder in der Übersicht.\n<p>\n<a href=\\“http://www.listnride.de/how-to-shoot-bike-photos\\”target=\\“_blank\\“>Hier</a>\nfindest du einige Tipps, um dein Fahrrad ins beste Licht zu rücken!",
         "answer-4": "Du kannst den Mietpreis frei wählen. Der Wochenpreis darf nicht niedriger sein als der Tagespreis. Um den Mietpreis zu bestimmen, kannst du dein Fahrrad mit ähnlichen verfügbaren Fahrrädern auf listnride vergleichen.",
         "answer-5": "Um die Verfügbarkeit Deines Fahrrads zu ändern, benutze das „<b>Uhrsymbol</b>” auf der Seite „<b>Meine Fahrräder</b>”. Im Kalender kannst du die Zeitspanne einstellen, in der dein Fahrrad nicht Verfügbar ist.",
         "answer-6": "Du kannst die Details deiner gelisteten Fahrräder jederzeit ändern, indem Du auf das „<b>Bleistiftsymbol</b>” auf der Seite „<b>Meine Fahrräder</b>” klickst.",
@@ -118,8 +124,8 @@
         "answer-8": "Klicke einfach auf den „<b>Papierkorb</b>” unter dem jeweiligen Fahrrad auf der Seite „<b>Meine Fahrräder</b>”.\n",
         "answer-9": "Du erhalten eine E-Mail und eine SMS-Benachrichtigung mit allen Details, um die Buchung anzunehmen oder abzulehnen oder einen Chat mit dem Mieter zu beginnen.\nSo kannst du alle möglichen Fragen vorab schnell und einfach klären.\n",
         "answer-10": "Ja. Im Chat kannst du eine Anfrage ablehnen. Klicke auf den roten Button, um die Anfrage abzulehnen und einen Grund anzugeben.\nBitte den Mieter, das Rad für einen anderen Zeitraum anzufragen.\n",
-        "answer-11": "Eine Fahrradübergabe kann nicht auf die Minute genau passieren. Gib deinen Mietern ruhig ein Zeitfenster von 10-15 Minuten, um am Treffpunkt zu sein. Sollten deine Mieter dann noch immer nicht erscheinen, versuche zuerst über die angegebene Handynummer mit deinen Mietern in Verbindung zu treten.\n<br>\nFalls du deine Mieter immer noch nicht erreichen kannst, schreib uns eine\n<a href=\"mailto:contact@listnride.com?subject=Mieter erscheint nicht zur Abholung“>kurze Nachricht</a> und wir unterstützen dich.\n",
-        "answer-12": "Eine Fahrradrückgabe kann nicht auf die Minute genau passieren. Gib deinen Mietern ruhig ein Zeitfenster von 10-15 Minuten, um am Treffpunkt zu sein. Sollten deine Mieter dann noch immer nicht erscheinen, versuche zuerst über die angegebene Handynummer mit deinen Mietern in Verbindung zu treten.\n<br>\nFalls du deine Mieter immer noch nicht erreichen kannst, schreib uns eine\n<a href=\"mailto:contact@listnride.com?subject=Mieter erscheint nicht zur Rückgabe“>kurze Nachricht</a> und wir unterstützen dich.",
+        "answer-11": "Eine Fahrradübergabe kann nicht auf die Minute genau passieren. Gib deinen Mietern ruhig ein Zeitfenster von 10-15 Minuten, um am Treffpunkt zu sein. Sollten deine Mieter dann noch immer nicht erscheinen, versuche zuerst über die angegebene Handynummer mit deinen Mietern in Verbindung zu treten.\n<br>\nFalls du deine Mieter immer noch nicht erreichen kannst, schreib uns eine <a href='\"mailto:contact@listnride.com?subject=Mieter erscheint nicht zur Abholung“'>kurze Nachricht</a> \nund wir unterstützen dich.",
+        "answer-12": "Eine Fahrradrückgabe kann nicht auf die Minute genau passieren. Gib deinen Mietern ruhig ein Zeitfenster von 10-15 Minuten, um am Treffpunkt zu sein. Sollten deine Mieter dann noch immer nicht erscheinen, versuche zuerst über die angegebene Handynummer mit deinen Mietern in Verbindung zu treten. Falls du deine Mieter immer noch nicht erreichen kannst, schreib uns eine\n<a href=\"mailto:contact@listnride.com?subject=Mieter erscheint nicht zur Rückgabe\">kurze Nachricht</a> und wir unterstützen dich.",
         "answer-13": "Um die Rückgabe deines Fahrrades zu bestätigen, logge dich in deinem Konto ein und klicke im Chatfenster mit deinem Mieter auf die Schaltfläche \"Rückgabe bestätigen\".",
         "question-1": "Wie liste ich mein Fahrrad?",
         "question-2": "Was macht mein Fahrrad für Mieter attraktiv? ",
@@ -147,7 +153,7 @@
         "answer-7": "Diese Informationen findest Du in der Beschreibung des Fahrrads oder im Profil des Vermieters, wo auch die Höhe der Kaution angegeben sein sollte.\nDie meisten Vermieter auf listnride verlangen allerdings keine Kaution.",
         "answer-8": "Auf der Detailseite des Fahrrads findest du auch das mitgelieferte Zubehör, wie z.B. Schloss, Beleuchtung oder Helm. Vermieter sollten dir ein Schloss mit gutem Sicherheitsstandard für ihr Rad zur Verfügung stellen.",
         "answer-9": "Für bestimmte Fahrradtypen wie Rennräder oder MTBs ist es üblich, eigene Pedale und Klicksysteme mitzubringen. Nutze den Online-Chat, um Details mit dem Vermieter zu vereinbaren.",
-        "answer-10": "In diesem Fall kannst du\n<a href=\"mailto:contact@listnride.com?subject=Rad entspricht nicht der Beschreibung“>und Bilder</a> des Fahrrades schicken und die Unterschiede erläutern, bei einem legitimen Anspruch werden wir den Verleih stornieren und du erhältst dein Geld zurück. Nach der Miete kannst du das Rad und die Mieter immer entsprechend bewerten. \n",
+        "answer-10": "In diesem Fall kannst du uns eine \n<a href=\"mailto:contact@listnride.com?subject=Rad entspricht nicht der Beschreibung\">kurze Nachricht</a> \nmit Bildern des Fahrrades schicken und die Unterschiede erläutern. Bei einem legitimen Anspruch werden wir den Verleih stornieren und du erhältst dein Geld zurück. Nach der Miete kannst du das Rad und die Mieter immer entsprechend bewerten. ",
         "answer-11": "Wenn Du bei der Rückgabe des Fahrrades zu spät kommen solltest, informiere bitte deine Vermieter mit einem Anruf oder einer SMS.",
         "answer-12": "Wenn das Fahrrad für die folgenden Tage noch verfügbar ist, kannst du es erneut anfragen und wenn deine Vermieter deine Anfrage akzeptieren, verlängert sich damit deine Mietzeit.",
         "question-1": "Wie kann ich ein Fahrrad mieten?",
@@ -179,7 +185,7 @@
       },
       "group-5": {
         "title": "Versicherung & Sicherheit",
-        "description": "deWir bieten eine Basis-Versicherung an, die bereits im voll im Buchungsprozess enthalten ist. Optional können Mieter eine Premium-Versicherung mit weiteren Services buchen.\n<p>\nBeide Versicherungspakete schützen bei Vandalismus und Diebstahl. Die Versicherung wird von unseren Partnern\n<a href=\\“http://www.hepster.com\\”target=\\“_blank\\“>hepster</a>\nund\n<a href=\\“http://www.gothaer.de/\\”target=\\“_blank\\“>Gothaer Versicherung</a> \nangeboten wird.\n<p>\nDie Versicherung ist bisher nur in Deutschland und Österreich verfügbar. Wir arbeiten an der flächendeckenden Bereitstellung für ganz Europa.\n<p>\nAlle Details zur\n<a href=\\“http://www.listnride.com/insurance\\”target=\\“_blank\\“>Versicherung findest du</a>\nhier.",
+        "description": "Wir bieten eine Basis-Versicherung an, die bereits im voll im Buchungsprozess enthalten ist. Optional können Mieter eine Premium-Versicherung mit weiteren Services buchen.\n<p>\nBeide Versicherungspakete schützen bei Vandalismus und Diebstahl. Die Versicherung wird von unseren Partnern \n<a href=\"http://www.hepster.com/\" target='\"_blank'>hepster</a>\nund \n<a href=\"http://www.gothaer.de/\" target='\"_blank'>Gothaer Versicherung</a> \nangeboten wird.\n<p>\nDie Versicherung ist bisher nur in Deutschland und Österreich verfügbar. Wir arbeiten an der flächendeckenden Bereitstellung für ganz Europa.\n<p>\nAlle Details zur Versicherung findest du <a href=\"http://www.listnride.de/insurance/\" target='\"_blank'>hier.</a> ",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -194,7 +200,7 @@
       "group-6": {
         "title": "Buchung & Stornierung",
         "description": "Hier finden Du Informationen dazu wie du eine Buchung stornieren kannst und welche  Gebühren anfallen.",
-        "answer-1": "Um eine Buchung zu stornieren, informiere bitte deine Mieter/Vermieter direkt über den Online-Chat und gib an, warum Du die Buchung stornieren möchtest.\nInformiere zusätzlich listnride per E-Mail über deine Stornierung: Wir benötigen deinen vollständigen Namen, die E-Mail-Adresse der Mieter, deren Buchung storniert werden soll, den Namen des Rades und den Standort.\nBeachte bitte wir eine Stornierung nur unter bestimmten Bedingungen akzeptieren. Details findest du in unseren \n<a href=\\“http://www.listnride.de/terms\\”target=\\“_blank\\“>AGBs</a0>\n.",
+        "answer-1": "Um eine Buchung zu stornieren, informiere bitte deine Mieter/Vermieter direkt über den Online-Chat und gib an, warum Du die Buchung stornieren möchtest.\nInformiere zusätzlich listnride per E-Mail über deine Stornierung: Wir benötigen deinen vollständigen Namen, die E-Mail-Adresse der Mieter, deren Buchung storniert werden soll, den Namen des Rades und den Standort.\n<p>\nBeachte bitte, dass wir eine Stornierung nur unter bestimmten Bedingungen akzeptieren. Details findest du in unseren <a href=\"http://www.listnride.de/terms/”target=\" _blank>Allgemeinen Geschäftsbedingungen</a>.",
         "answer-2": "Eine Stornierung als Mieter ist nur möglich, wenn diese mindestens 24 Stunden vor Mietbeginn erfolgt und die Mietzeit mehr als 24 Stunden beträgt (z.B. von 9.00 Uhr bis 12.00 Uhr des Folgetages). Andernfalls ist eine Stornierung ausgeschlossen. ",
         "answer-3": "Mieter bekommen den vollen Mietpreis rückerstattet, wenn die Stornierung mindestens fünf Tage vor Beginn des Mietzeitraumes erfolgt. \nStornierungen, die frühestens fünf Tage vor Mietbeginn und nicht später als 24 Stunden vor Mietbeginn erfolgen, werden zu 50% vom Mietpreis erstattet. \nStornierungen die frühestens 24 Stunden vor Beginn des Mietzeitraumes erfolgen, können leider nicht erstattet werden.\n",
         "answer-4": "listnride Servicegebühren werden bei Stornierung durch den Mieter nicht zurückerstattet. Bei Stornierung durch den Vermieter erhält der Mieter sowohl den Mietpreis als auch die listnride Servicegebühren rückerstattet.",
@@ -208,7 +214,7 @@
       "group-7": {
         "title": "Gutscheine & Guthaben",
         "description": "Nutze Gutscheine und Guthaben für Fahrradmieten. Hier erfährst du, wie du Gutscheine einlösen kannst. Außerdem kannst du Freunde zu listnride einladen und so Guthaben aufbauen",
-        "answer-1": "Du kannst Guthaben aufbauen, indem du Freunde via facebook oder E-Mail einlädst, Teil der listnride-Community zu werden. Melde dich in deinem Profil an, gehe zu\n<a href=\\“http://www.listnride.de/invite-friends”target=\\“_blank\\“>Freunde einladen</a>\nund teile den Link mit anderen. Wenn deine Freunde ein Fahrrad über den Link mieten oder listen, erhältst du automatisch 10€, die du für deinen nächsten Verleih nutzen kannst.\n",
+        "answer-1": "Du kannst Guthaben aufbauen, indem du Freunde via facebook oder E-Mail einlädst, Teil der listnride-Community zu werden. Melde dich in deinem Profil an, gehe zu \n<a href=\"http://www.listnride.de/invite-friends\" target='\"_blank'>Freunde einladen</a> \nund teile den Link mit anderen. Wenn deine Freunde ein Fahrrad über den Link mieten oder listen, erhältst du automatisch 10€, die du für deinen nächsten Verleih nutzen kannst.",
         "answer-2": "Um Gutscheine einlösen zu können, musst deren Code einfach im Feld „<b>Gutschein einlösen</b>” eingeben wenn du ein Fahrrad anfrägst. Alternativ kannst du Codes in deinem Konto unter der Rubrik „<b>Gutscheine</b>” eingeben.",
         "answer-3": "Wann immer du ein Fahrrad anfrägst, kannst du einen Gutschein nutzen, allerdings ist jeder Code nur ein einziges mal gültig. \nWird der Gutschein bei der Miete nicht komplett aufgebraucht, speichern wir dir den restlichen Betrag in deinem lisntride-Konto als Guthaben, das dir für die nächste Buchung erhalten bleibt.\n",
         "answer-4": "How do I search for a bike?",
@@ -246,7 +252,7 @@
         "answer-7": "You will receive an email and sms notification, informing you on the new booking request, containing all relevant details.\nLogin and go to “Requests” to accept or reject the booking and start a chat with the Rider if there is something to clarify.\nIf you accept the request the booking is done and the rental is paid for. You will receive a booking confirmation with all the relevant information and contact details of the Rider via email.",
         "answer-8": "Das Einstellen eines Fahrrads ist kostenlos. Es entstehen keine fixen oder laufenden Kosten.",
         "answer-9": "Wir unterstützen verschiedene Zahlungsmethoden, je nachdem, in welchem Land sich dein Auszahlungskonto befindet. Wir unterstützen in der Regel alle Arten von Kreditkarten und Paypal-Konten. Offline- oder Barzahlungen sind ein Verstoß gegen unsere Allgemeinen Geschäftsbedingungen, was zu einer Deaktivierung deines listnride-Kontos führen kann. \nEs sollte in deinem eigenen Interesse liegen, Zahlungen außerhalb von listnride zu vermeiden, da so kein gültiger Mietvertrag zustande kommt, du leicht beklaut oder betrogen werden kannst und auch die listnride-Versicherung nicht greift.",
-        "answer-10": "You will need to enter your payment data before you can request any bike. The payment will take place only after the Lister has accepted your request. So if you or the Lister cancels a request no payment will be triggered.",
+        "answer-10": "Die Zahlung erfolgt erst, nachdem der Vermieter deine Anfrage akzeptiert hat. Stornierst du deine Anfrage oder wird sie von Vermietern nicht angenommen, wird keine Zahlung ausgelöst.",
         "question-1": "Wie suche ich ein Fahrrad?",
         "question-2": "Woher weiß ich, ob das Fahrrad verfügbar ist?",
         "question-3": "Ein listnride-Konto erstellen",
@@ -256,7 +262,7 @@
         "question-7": "Wie erfahre ich, wenn mein Fahrrad angefragt wird?",
         "question-8": "Was kostet es, mein Fahrrad zu listen?",
         "question-9": "Welche Zahlungsarten werden akzeptiert?",
-        "question-10": "When do I pay for a bike rental?"
+        "question-10": "Wann bezahle ich meine Fahrradmiete?"
       }
     }
   },
@@ -507,7 +513,7 @@
       "test-bike": "Teste deine veloheld Räder in München oder Dresden",
       "description": "veloheld Räder stehen für pure Ästhetik und funktionale Technik – damit sind sie bestens für die Dynamik und Unwegsamkeiten des Alltags gewappnet. Aber vor allem machen sie eins – verdammt viel Spaß beim Fahren!",
       "feature-1": {
-        "title": "Zeitlos und Nachhaltig",
+        "title": "Zeitlos und nachhaltig",
         "description": "veloheld Räder sind durch Ihre schlanken Stahlrahmen \nwirklich zeitlos. Die verwendete Legierung aus \nCromolybdän ist leicht, komfortabel und gegenüber \nanderen, im Fahrradbereich verwendete Materialien, \nauch noch ökologisch sinnvoll."
       },
       "feature-2": {

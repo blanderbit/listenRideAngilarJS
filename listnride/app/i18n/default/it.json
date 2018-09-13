@@ -81,7 +81,7 @@
     "search-all-in": "Trova tutte le biciclette a",
     "search-bikes": "Trova la tua biciclette",
     "from-place": "da",
-    "contact": "Supporto e contatti",
+    "contact": "Aiuto & Supporto",
     "show-more": "Mostra di più",
     "show-less": "Mostra di meno",
     "phone-number": "Numero di telefono",
@@ -155,6 +155,18 @@
       "subheader": "Incontra persone che condividono la tua stessa passione. Guadagna qualcosa in più"
     }
   },
+  "lister": {
+    "chat": "La prenotazione della bici è stata cancellata."
+  },
+  "faq-page": {
+    "topics": "Temi"
+  },
+  "veletage": {
+    "event": {
+      "calendar-title": "Example Veletage Title",
+      "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me in Lingohub."
+    }
+  },
   "brand-integration": {
     "leaos": {
       "subdescription-not-used": "Design. Art. Passion.",
@@ -221,7 +233,10 @@
       }
     },
     "seo": {
-      "category-title": "Affitta la bici perfetta {{category}} in {{location}}| listnride"
+      "city-title": "Noleggia la bicicletta perfetta a {{location}}.",
+      "city-description": "Scegli online la bici più adatta alle tue esigenze, a partire da {{ minPrice }}€. Goditi {{location}}con una bicicletta noleggiata in modo sicuro su listnride.",
+      "category-title": "Noleggia {{category}} la bicicletta perfetta a {{location}}.",
+      "category-description": "Scegli online la bici più adatta alle tue esigenze, a partire da {{ minPrice }}€. Goditi {{location}}con una bicicletta noleggiata in modo sicuro su listnride."
     },
     "business-community": {
       "meta-title": "La comunità business di listnride",
@@ -436,7 +451,7 @@
       "exp-year": "Exp. year",
       "exp-date": "Scadenza",
       "invalid-cvc": "CVC non valido",
-      "cvc": "Numero di sicurezza",
+      "cvc": "Numero CVC",
       "pay-paypal": "Paypal"
     },
     "overview": {
@@ -471,6 +486,7 @@
   },
   "toasts": {
     "update-profile-success": "Il tuo profilo è stato aggiornato con successo.",
+    "bike-edit-successful": "Le modifiche sono state salvate",
     "error": "Si è verificato un errore. Assicurati che la connessione a Internet funzioni e riprova.",
     "add-payout-success": "Il metodo di pagamento è stato aggiunto con successo.",
     "add-voucher-success": "Complimenti, il buono è stato aggiunto al tuo conto.",
