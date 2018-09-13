@@ -451,7 +451,7 @@
       "exp-year": "Exp. year",
       "exp-date": "Scadenza",
       "invalid-cvc": "CVC non valido",
-      "cvc": "Numero di sicurezza",
+      "cvc": "Numero CVC",
       "pay-paypal": "Paypal"
     },
     "overview": {
