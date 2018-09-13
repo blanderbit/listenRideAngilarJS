@@ -161,6 +161,9 @@
   "lister": {
     "chat": "Dein gebuchtes Fahrrad wurde storniert."
   },
+  "faq-page": {
+    "header-4": "Zahlung & Gebühren"
+  },
   "brand-integration": {
     "leaos": {
       "subdescription-not-used": "Design. Art. Passion.",

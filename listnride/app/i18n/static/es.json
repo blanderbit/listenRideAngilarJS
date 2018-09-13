@@ -85,6 +85,16 @@
   "rider": {
     "chat": "La reserva de la bicicleta fue cancelada."
   },
+  "faq-page": {
+    "header-1": "Primeros Pasos",
+    "topic": "Temas",
+    "header-2": "Publica tu Bicicleta",
+    "heder-3": "Alquila una Bicicleta",
+    "header-5": "Seguro & Servicios",
+    "header-6": "Reservas & Cancelaciones",
+    "header-7": "Cupones & Descuento",
+    "header-8": "Calificaciones & Comentarios"
+  },
   "shared": {
     "list-your-bike": {
       "bike-category": "Seleccione la categoría de bicicleta",
@@ -112,8 +122,8 @@
         "title": "Publica tu bicicleta",
         "description": "Publica y gestiona tus bicicletas en listnride. ",
         "answer-1": "Haz clic en <b>\"Publicar una bicicleta\"</b> y completa el perfil de tu bici con la marca, descripción, imágenes, accesorios y  el precio de alquiler.\nCuando termines, haz clic en \"Publicar mi bicicleta\" y tu bici quedará lista para que otros usuarios puedan alquilarla.",
-        "answer-2": "Una descripción detallada de la bicicleta, fotos de buena calidad y precios razonables hacen que una bicicleta sea atractiva para ser alquilada. Aquí puedes ver un <a href=\\“http://www.listnride.es/bikes/9832\\”target=\\“_blank\\“>ejemplo de guía</a0>.\n<p>\nUna descripción detallada contiene todos los datos relevantes de tu bicicleta, como por ejemplo: tamaño del cuadro, tipo de cambios, tipo de frenos, peso, entre otros. \n<p>\nDado que algunos Listers se refieren a las fotos de stock de los fabricantes, especialmente para bicicletas de alta gama, también te recomendamos mencionar el color de tu bicicleta, si esto difiere de las imágenes que carga. Un perfil completo siempre ayuda a aumentar aún más el atractivo de sus bicicletas. Este es un buen ejemplo de como se ve un perfil de tienda completo<a href=\\“http://www.listnride.es/users/3699\\”target=\\“_blank\\“>Eat Sleep Cycle</a>.",
-        "answer-3": "Una buena foto de tu bicicleta es esencial para promocionar tu bici y a su vez generar confianza con los Riders. \n<p>\n<a href=\\“http://www.listnride.es/how-to-shoot-bike-photos“>¡Aquí puedes encontrar algunos consejos sobre cómo tomar buenas fotografías!</a>",
+        "answer-2": "Una descripción detallada de la bicicleta, fotos de buena calidad y precios razonables hacen que una bicicleta sea atractiva para ser alquilada. Aquí puedes ver un <a href=\\“http://www.listnride.es/bikes/9832\\”target=\\“_blank\\“>ejemplo de guía</a>.\n<p>\nUna descripción detallada contiene todos los datos relevantes de tu bicicleta, como por ejemplo: tamaño del cuadro, tipo de cambios, tipo de frenos, peso, entre otros. \n<p>\nDado que algunos Listers se refieren a las fotos de stock de los fabricantes, especialmente para bicicletas de alta gama, también te recomendamos mencionar el color de tu bicicleta, si esto difiere de las imágenes que carga. Un perfil completo siempre ayuda a aumentar aún más el atractivo de sus bicicletas. Este es un buen ejemplo de como se ve un perfil de tienda completo<a href=\\“http://www.listnride.es/users/3699\\”target=\\“_blank\\“>Eat Sleep Cycle</a>.",
+        "answer-3": "Una buena foto de tu bicicleta es esencial para promocionar tu bici y a su vez generar confianza con los Riders. \n<p>\n<a href=\\“http://www.listnride.es/how-to-shoot-bike-photos\\”target=\\“_blank\\“>¡Aquí</a> puedes encontrar algunos consejos sobre cómo tomar buenas fotografías!",
         "answer-4": "Eres completamente libre para decidir el precio de alquiler de tu bicicleta. Algo importante a considerar es que el precio semanal, no puede ser inferior al precio diario de la bicicleta. Para determinar el precio de alquiler más apropiado puedes compara tu bicicleta con otras que ya estén publicadas en Listnride.",
         "answer-5": "Para cambiar la disponibilidad de tu bicicleta, usa el ícono del reloj debajo de la bicicleta específica en la página \"Mis Bicicletas\". En el calendario puedes establecer el intervalo de tiempo donde tu bicicleta no estará disponible. Tu bicicleta no puede ser solicitada durante ese tiempo.",
         "answer-6": "Puedes editar los detalles de tus bicicletas en cualquier momento haciendo clic en el ícono del lápiz debajo de la bicicleta específica que quieres editar en la página \"Mis Bicicletas\"",
@@ -182,7 +192,7 @@
       },
       "group-5": {
         "title": "Seguro y servicios",
-        "description": "Ofrecemos un paquete de seguro básico que está incluido por defecto en el proceso de alquiler. Un paquete premium opcional puede ser agregado por el Rider. Ambos paquetes brindan tranquilidad frente a los daños. El seguro es provisto por nuestro socio\n<a href = \\ \"http: //www.hepster.com \\\" target = \\ \"_blank \\\" >hepster </a>y cubierto por\n<a href = \\ \"http: //www.gothaer.de/ \\\" target = \\ \"_blank \\\" >Seguro de Gothaer </a>.\n<p>\nA partir de ahora, el seguro solo está disponible para alquileres en Alemania y Austria. ¡Estamos trabajando para llevar el seguro a más países europeos!\n<p>\nPuedes encontrar todos\n<a href = \\ \"http: //www.listnride.es/insurance \\\" target = \\ \"_blank \\\" >detalles para el seguro </a>aquí.",
+        "description": "Ofrecemos un paquete de seguro básico que está incluido por defecto en el proceso de alquiler. Un paquete premium opcional puede ser agregado por el Rider.\n<p>\nAmbos paquetes brindan tranquilidad frente a los daños. El seguro es provisto por nuestro socio \n<a href=\"http://www.hepster.com/\" target='\"_blank'>hepster</a> \ny cubierto por \n<a href=\"http://www.gothaer.de/\" target='\"_blank'>Seguro de Gothaer </a>.\n<p>\nA partir de ahora, el seguro solo está disponible para alquileres en Alemania y Austria. ¡Estamos trabajando para llevar el seguro a más países europeos!\n<p>\nPuedes encontrar todos \n<a href=\"http://www.listnride.com/insurance/\" target='\"_blank'>detalles para el seguro</a> \naquí.",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -197,7 +207,7 @@
       "group-6": {
         "title": "Reservas y cancelaciones",
         "description": "Aprende cómo cancelar una reserva y bajo qué circunstancias ocurrirá un reembolso.",
-        "answer-1": "Para cancelar una reserva, por favor informa a la otra parte directamente a través del chat y explica por qué deseas cancelarla.\nTambién necesitas informar a listnride por correo electrónico sobre tu cancelación. Necesitaremos tu nombre completo, dirección de correo electrónico, la bicicleta que reservastes y su ubicación.\nPuedes encontrar más información sobre nuestras política de cancelación en nuestros\n<a href=\\“http://www.listnride.es/terms\\”target=\\“_blank\\“>Términos y Condiciones</a0>.",
+        "answer-1": "Para cancelar una reserva, por favor informa a la otra parte directamente a través del chat y explica por qué deseas cancelarla.\nTambién necesitas informar a listnride por correo electrónico sobre tu cancelación. Necesitaremos tu nombre completo, dirección de correo electrónico, la bicicleta que reservastes y su ubicación.\nPuedes encontrar más información sobre nuestras política de cancelación en nuestros \n<a href=\"http://www.listnride.es/terms/”target=\" _blank>Términos y Condiciones</a>.",
         "answer-2": "La cancelación gratuita es posible si esto ocurre a más tardar 5 días antes del inicio del período de alquiler y el período de alquiler es más de 24 horas (por ejemplo, de 9.00 a 12.00 del día siguiente). En todos los demás casos, hay costos asociados a la cancelación.",
         "answer-3": "Riders recibirán un reembolso completo del precio del alquiler, si la cancelación se realiza al menos cinco días antes del inicio del período de alquiler.\nSi la cancelación se realiza a menos de cinco días antes del inicio del período de alquiler, pero al menos 24 horas antes del inicio del período de alquiler, los pasajeros recibirán un reembolso del 50% del precio neto del alquiler. Si la cancelación se realiza a menos de 24 horas antes, los pasajeros no obtienen ningún reembolso.",
         "answer-4": "Los costos de servicio de listnride no son reembolsables en caso de cancelación por parte del Rider.\nEn caso de cancelación por parte del Lister, el Rider recibirá una compensación tanto del precio de alquiler como del costo de servicio de listnride.",
@@ -211,7 +221,7 @@
       "group-7": {
         "title": "Cupones de descuento",
         "description": "Utiliza los vales para obtener crédito y utilizarlo tus próximos alquileres. Aquí puedes aprender cómo canjearlos. También puedes invitar a  tus amigos para obtener más créditos.",
-        "answer-1": "Puede obtener créditos invitando a sus amigos a unirse a nuestra comunidad de bicicletas compartidas a través de Facebook o por correo electrónico. Inicie sesión en su perfil, ve a la página <a href=\"//www.listnride.com/invite-friends\" target=\"_blank\">Invitar a amigos </a>y comparta el enlace. Si sus amigos alquilan o publican una bicicleta usando el enlace, recibirás 10 € de crédito extra en agradecimiento.",
+        "answer-1": "Puede obtener créditos invitando a sus amigos a unirse a nuestra comunidad de bicicletas compartidas a través de Facebook o por correo electrónico. Inicie sesión en su perfil, ve a la página \n<a href=\"http://www.listnride.es/invite-friends/\" target='\"_blank'>Invitar a amigos</a> \ny comparta el enlace. Si sus amigos alquilan o publican una bicicleta usando el enlace, recibirás 10 € de crédito extra en agradecimiento.",
         "answer-2": "Para usar los créditos listnride, solo debes ingresar el código del cupón en el campo de entrada \"Canjear bono\" cuando solicite una bicicleta. O puede ingresarlos en la Configuración de su cuenta, en la sección \"Cupones\".",
         "answer-3": "Puedes usar cupones cada vez que solicites una bicicleta, pero un solo código por vez. Si no consumes el monto total a la vez, el saldo se guardará en su cuenta y lo podrá utilizar  para su próximo alquiler.",
         "answer-4": "How do I search for a bike?",
@@ -259,7 +269,7 @@
         "question-7": "¿Cómo sé si mi bicicleta es solicitada?",
         "question-8": "¿Cuánto cuesta publicar mi bicicleta?",
         "question-9": "¿Qué tipo de métodos de pago se aceptan?",
-        "question-10": "Wann bezahle ich meine Fahrradmiete?"
+        "question-10": "¿Cuándo pago el alquiler de la bicicleta?"
       }
     }
   },
