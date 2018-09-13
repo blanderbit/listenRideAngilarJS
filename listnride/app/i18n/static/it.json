@@ -86,15 +86,7 @@
     "chat": "La prenotazione della bici è stata cancellata."
   },
   "faq-page": {
-    "header-1": "Per cominciare",
-    "topic": "Temi",
-    "header-2": "Noleggiare le proprie bici",
-    "header-5": "Assicurazione & Sicurezza",
-    "header-6": "Prenotazione & Cancellazione",
-    "header-7": "Voucher & Crediti",
-    "header-8": "Ratings & Feedback",
-    "header-3": "Noleggiare una bici",
-    "header-4": "Pagamento e costi di servizio"
+    "header": "Le domande frequenti"
   },
   "shared": {
     "list-your-bike": {

@@ -86,15 +86,7 @@
     "chat": "La reserva de la bicicleta fue cancelada."
   },
   "faq-page": {
-    "header-1": "Primeros pasos",
-    "topic": "Temas",
-    "header-2": "Publica tu Bicicleta",
-    "header-5": "Seguro & Servicios",
-    "header-6": "Reservas & Cancelaciones",
-    "header-7": "Cupones & Descuento",
-    "header-8": "Calificaciones & Comentarios",
-    "header-3": "Alquila una Bicicleta",
-    "header-4": "Pago & Tarifas del Servicio"
+    "header": "Preguntas frecuentes"
   },
   "shared": {
     "list-your-bike": {

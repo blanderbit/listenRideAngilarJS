@@ -161,6 +161,9 @@
   "lister": {
     "chat": "La reserva de la bicicleta fue cancelada."
   },
+  "faq-page": {
+    "topics": "Temas"
+  },
   "veletage": {
     "event": {
       "calendar-title": "Example Veletage Title",

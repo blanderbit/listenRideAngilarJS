@@ -86,15 +86,7 @@
     "chat": "De geboekte fiets is geannuleerd."
   },
   "faq-page": {
-    "header-1": "Aan de slag met listnride",
-    "topic": "Vraagstukken",
-    "header-2": "Je fiets verhuren",
-    "header-5": "Verzekering & Service",
-    "header-6": "Boeken & Annuleren",
-    "header-7": "Vouchers & Tegoeden",
-    "header-8": "Recensies & Feedback",
-    "header-3": "Fietsen huren",
-    "header-4": "Betaling & Servicekosten"
+    "header": "Vaak gestelde vragen"
   },
   "shared": {
     "list-your-bike": {

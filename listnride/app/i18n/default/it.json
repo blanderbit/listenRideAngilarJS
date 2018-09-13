@@ -158,6 +158,9 @@
   "lister": {
     "chat": "La prenotazione della bici è stata cancellata."
   },
+  "faq-page": {
+    "topics": "Temi"
+  },
   "veletage": {
     "event": {
       "calendar-title": "Example Veletage Title",

@@ -86,15 +86,7 @@
     "chat": "Dein gebuchtes Fahrrad wurde storniert."
   },
   "faq-page": {
-    "header-1": "Erste Schritte",
-    "topic": "Themenbereiche",
-    "header-2": "Vermiete dein Rad",
-    "header-5": "Versicherung & Sicherheit",
-    "header-6": "Buchung & Stornierung",
-    "header-7": "Gutscheine & Guthaben",
-    "header-8": "Bewertung & Feedback",
-    "header-3": "Fahrräder ausleihen",
-    "header-4": "Zahlung & Gebühren"
+    "header": "Häufige Fragen"
   },
   "shared": {
     "list-your-bike": {
