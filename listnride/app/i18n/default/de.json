@@ -451,7 +451,7 @@
       "card-name": "Karteninhaber",
       "invalid-name": "Bitte Namen einfügen",
       "card-number": "Kreditkartennummer",
-      "invalid-card": "Please provide a valid Card Number",
+      "invalid-card": "Please provide a valid card number",
       "invalid-card-number": "Kartennummer ungültig",
       "exp-month": "Exp. month",
       "invalid-month": "Month not valid",
@@ -600,7 +600,7 @@
     },
     "5": {
       "title": "Was ist deine Nummer",
-      "description": "Bestätige Deine Telefonnummer, damit du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach Deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den du unten eingeben kannst.",
+      "description": "Bestätige deine Telefonnummer, damit du per SMS über Deine Anfragen benachrichtigt werden kannst. Gib einfach deine Telefonnummer ein und klicke auf „Bestätigung schicken“. Du erhältst dann eine SMS mit einem Code, den du unten eingeben kannst.",
       "enter-valid-phone-nr": "Gib eine gültige Telefonnr. an",
       "send-confirmation-sms": "Bestätigungs-SMS schicken",
       "send-confirmation-sms-mobile": "Code schicken",
