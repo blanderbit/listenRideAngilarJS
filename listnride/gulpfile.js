@@ -137,7 +137,7 @@ scope = postcss(function (css) {
  * prefixes the styles with
  * prefixer is be used to avoid styles global leakage
  * @param {object} scopeSelectorOption options for prefixes
- * @returns {callback} callback 
+ * @returns {callback} callback
  */
 function lnrPrefixCss(scopeSelectorOption) {
     scopeSelector = scopeSelectorOption;
@@ -229,7 +229,7 @@ function copyIndexApp() {
         .pipe(gulp.dest('./'));
 }
 /**
- * copy all files from downloads folder to root for deployment 
+ * copy all files from downloads folder to root for deployment
  * mostly sitemap.xml files
  * @returns {gulp} for chaining
  */
@@ -332,7 +332,7 @@ function copyIndexDist() {
 }
 /**
  * base tag for deployment
- * used in production so that `/#/` needs not to be used with url 
+ * used in production so that `/#/` needs not to be used with url
  * @returns {gulp} for chaining
  */
 function baseTag() {
@@ -343,7 +343,7 @@ function baseTag() {
         .pipe(gulp.dest(path.dist.root));
 }
 /**
- * disable https for local and review apps 
+ * disable https for local and review apps
  * @returns {gulp} for chaining
  */
 function disableHttps() {
@@ -458,7 +458,7 @@ function clean(cb) {
     return del(cleanFiles, cb);
 }
 /**
- * clean extra folders 
+ * clean extra folders
  * with every deployment - files with revisions are used instead
  * @returns {gulp} for chaining
  * @param {cleanExtras~cleanExtrasCallback} cb - The callback that handles the response.
@@ -552,7 +552,7 @@ function revisionsIndexShop() {
  */
 function resourcesLnrShopIntegration() {
     return gulp.src(path.lnrShopIntegration.css)
-        // concat lnr and vendor css files 
+        // concat lnr and vendor css files
         .pipe(concat(path.lnrShopIntegration.dist.css))
         // remove unused styles from css files
         .pipe(purifyCss([path.lnrShopIntegration.jsGlob]))
@@ -690,11 +690,11 @@ function local(cb) {
 }
 /**
  * tasks for deployment
- * 
+ *
  * DO NOT CHANGE THE SEQUENCE - SYNCHRONOUS COMMANDS
  * CHANGING THE SEQUENCE WILL MAKE YOU SLEEPLESS
  * DO NOT RUN IN LOCAL ENVIRONMENT
- * 
+ *
  * @returns {gulp} for chaining
  * @param {deploy~deployCallback} cb - The callback that handles the response.
  */
@@ -719,9 +719,10 @@ function deploy(cb) {
         'revisions-index-shop',
         'base-tag',
         'html-minify',
+        'generate-sitemap',
         'copy-downloadables',
         'clean-extra',
         'clean-extra-local',
         'disable-https',
         cb);
-}   
+}
