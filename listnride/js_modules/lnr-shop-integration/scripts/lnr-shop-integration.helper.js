@@ -449,7 +449,7 @@ var lnrHelper = {
         rideName = ride.name,
         rideId = ride.id,
         categoryDesc = lnrHelper.categoryFilter(userId, category),
-        price = parseInt(ride.price_from),
+        price = Math.ceil(ride.price_from),
         imageUrl = ride.image_file_1.small ? ride.image_file_1.small.url : ride.image_file_1.image_file_1.small.url,
         rideDescription = ride.description;
 
