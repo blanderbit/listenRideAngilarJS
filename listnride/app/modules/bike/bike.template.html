@@ -37,7 +37,9 @@
           <h2 class="md-subhead">{{ bike.data.name }}</h2>
         </div>
       </div>
-      <!--TODO REMOVE bike.data.family after event calendar refactoring -->
+
+      <!--TODO REMOVE family check after event calendar refactoring -->
+
       <div class="bike__prices" flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center" ng-if="bike.data.family != 34">
         <div class="bike__prices-item" flex="30" layout="column" layout-align="center center">
           <div layout="row" layout-align="center center">
@@ -60,6 +62,15 @@
             <span class="md-caption per-day" layout layout-align="end end">&nbsp;{{ 'shared.pd' | translate }}</span>
           </div>
           <span class="md-caption">{{ 'bike.from-week' | translate }}</span>
+        </div>
+      </div>
+
+      <div class="bike__prices" flex-sm="45" flex-gt-sm="30" layout="row" layout-align="center center" ng-if="bike.data.family == 34">
+        <div class="bike__prices-item" layout="column" layout-align="center center">
+          <div layout="row" layout-align="center center">
+            <span class="md-headline">{{ bike.data.prices[0].price | number : 0 }}€</span>
+          </div>
+          <span class="md-caption">2h</span>
         </div>
       </div>
     </div>
