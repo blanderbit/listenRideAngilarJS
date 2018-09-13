@@ -161,13 +161,10 @@
   "lister": {
     "chat": "Your booked bike was cancelled."
   },
-  "faq-page": {
-    "header-4": "Payment & Service Fees"
-  },
   "veletage": {
     "event": {
       "calendar-title": "Example Veletage Title",
-      "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me <a href=\"https://translate.lingohub.com/list-and-ride/editor?q=veletage.event.calendar-subtitle&target=title&project=listnride-frontend\" target=\"_blank\">in Lingohub</a>.Hello, I'm Veletage Event Example Subtitle. Please change me in Lingohub. "
+      "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me in Lingohub."
     }
   },
   "brand-integration": {
@@ -415,7 +412,7 @@
     "agree-terms-link": "listnride Terms",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
-      "call-us": "Call us +49 (0)30-120870330, monday to friday 9-18pm. ",
+      "call-us": "Call us +49 (0)30-120870330, Monday to Friday 9-18pm. ",
       "email-us": "Or write us an email",
       "support": "listnride Support"
     },

@@ -161,13 +161,10 @@
   "lister": {
     "chat": "Dein gebuchtes Fahrrad wurde storniert."
   },
-  "faq-page": {
-    "header-4": "Zahlung & Gebühren"
-  },
   "veletage": {
     "event": {
       "calendar-title": "Example Veletage Title",
-      "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me <a href=\"https://translate.lingohub.com/list-and-ride/editor?q=veletage.event.calendar-subtitle&target=title&project=listnride-frontend\" target=\"_blank\">in Lingohub</a>."
+      "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me in Lingohub."
     }
   },
   "brand-integration": {

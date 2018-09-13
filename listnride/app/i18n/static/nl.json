@@ -87,13 +87,14 @@
   },
   "faq-page": {
     "header-1": "Aan de slag met listnride",
-    "topic": "onderwerpen",
+    "topic": "Vraagstukken",
     "header-2": "Je fiets verhuren",
-    "heder-3": "Fietsen huren",
     "header-5": "Verzekering & Service",
     "header-6": "Boeken & Annuleren",
     "header-7": "Vouchers & Tegoeden",
-    "header-8": "Recensies & Feedback"
+    "header-8": "Recensies & Feedback",
+    "header-3": "Fietsen huren",
+    "header-4": "Betaling & Servicekosten"
   },
   "shared": {
     "list-your-bike": {
@@ -122,7 +123,7 @@
         "title": "Je fiets verhuren",
         "description": "Meer informatie over het online plaatsen en het beheren van je fietsen. Het is eenvoudig en met onze beheertools kan je snel je volledige fietsbestand online plaatsen.\n",
         "answer-1": "Klik op <b>\"Fiets verhuren\"</b> en verstrek alle nodige informatie over je fiets inclusief merk, beschrijving, foto's, huurprijs en accessoires die je bij de fiets kan aanbieden, welke inbegrepen zijn in de prijs. Klik op \"Fiets plaatsen\". Je fiets is nu beschikbaar voor verhuur aan de community. ",
-        "answer-2": "Een gedetailleerde beschrijving van de fiets, foto's van goede kwaliteit en een aantrekkelijke prijs maken de fiets aantrekkelijk voor potentiële huurders. Een voorbeeld vind je \n<a href=\"http://www.listnride.nl/bikes/3369\" target='\"_blank'>hier</a>.\n<p>\nEen gedetailleerde beschrijving bevat alle relevante details van je fiets, zoals: framemaat, model en bouwjaar, schakelgroep, velgen, naaf en aantal versnellingen, evenals eventueel enkele specifieke eigenschappen van de fiets.\n<p>\nAangezien veel Listers naar stockfoto's van fabrikanten verwijzen, vooral voor high-end fietsen, raden we ook aan om in dit geval de kleur van je fiets te vermelden.\n\">\nEen volledig profiel van je helpt ook om de aantrekkelijkheid van je fietsen verder te verhogen. Een goed voorbeeld vindt je bij <a href=\\“http://www.listnride.de/users/1886\\”target=\\“_blank\\“>Munix Finest Bicycles<</a>.",
+        "answer-2": "Een gedetailleerde beschrijving van de fiets, foto's van goede kwaliteit en een aantrekkelijke prijs maken de fiets aantrekkelijk voor potentiële huurders. Een voorbeeld vind je \n<a href=\"http://www.listnride.nl/bikes/3369\" target='\"_blank'>hier</a>.\n<p>\nEen gedetailleerde beschrijving bevat alle relevante details van je fiets, zoals: framemaat, model en bouwjaar, schakelgroep, velgen, naaf en aantal versnellingen, evenals eventueel enkele specifieke eigenschappen van de fiets.\n<p>\nAangezien veel Listers naar stockfoto's van fabrikanten verwijzen, vooral voor high-end fietsen, raden we ook aan om in dit geval de kleur van je fiets te vermelden.\nEen volledig profiel van je helpt ook om de aantrekkelijkheid van je fietsen verder te verhogen. Een goed voorbeeld vindt je bij \n<a href=\"http://www.listnride.nl/users/1886\" target='\"_blank'>Munix Finest Bicycles</a>.",
         "answer-3": "Het eerste wat rijders zien als ze op zoek zijn naar fietsen bij jou in de buurt zijn de foto's in het overzicht. De beste foto's, die een algemene indruk van je fietsen geven, zullen meer huurders aantrekken om naar de detailpagina van je fiets te kijken.\n<p>\n<a href=\\“http://www.listnride.com/how-to-shoot-bike-photos\\”target=\\“_blank\\“>Hier</a>\nvind je een paar tips om je fiets in het juiste perspectief te plaatsen!",
         "answer-4": "Je kan zelf de huurprijs bepalen. Pas echter op dat de weekprijs niet lager kan zijn dan de dagprijs. Om de huurprijs te bepalen, kan je je fiets vergelijken met gelijkaardige beschikbare fietsen bij je in de buurt op listnride.",
         "answer-5": "Om de beschikbaarheid van je fiets te wijzigen, gebruik het <b>kloksymbool </b>onder de betreffende fiets op de pagina <b>\"Mijn fietsen\"</b>. In de kalender kan je de tijdspanne instellen waarin de fiets niet beschikbaar is.  Je fiets kan in die periode niet worden aangevraagd.\n",
@@ -131,8 +132,8 @@
         "answer-8": "Gebruik het <b>prullenbak-icoontje</b> onder de specifieke fiets in <b>\"Mijn fietsen\".</b>",
         "answer-9": "Je ontvangt een e-mail en sms notificatie met alle details. Ga naar \" Aanvragen \" om de reservering te accepteren of af te wijzen of om een chat te starten met de huurder als er iets te verduidelijken is. Accepteer de aanvraag om de huur af te sluiten. Daarna ontvang je een bevestigingsmail met alle relevante informatie en contactgegevens van de huurder. ",
         "answer-10": "Natuurlijk. Klik op de rode knop om de aanvragen af te wijzen en vraag de huurder om de fiets voor een andere datum en tijd aan te vragen. Wees zo vriendelijk om huurders te laten weten waarom je hun aanvraag hebt afgewezen.",
-        "answer-11": "De huurder zal niet altijd op de minuut op tijd zijn, geef de huurder een tijdsbuffer van 15-30 minuten. Als een huurder nog steeds niet komt opdagen, probeer dan eerst rechtstreeks contact op te nemen via het mobiele nummer dat je in boekingsbevestiging hebt gekregen. Als je de huurder nog steeds niet kunt bereiken, voel je dan gevrijwaard van de overeenkomst.\n<br>\nWe zouden het op prijs stellen een \n<a href='\"mailto:contact@listnride.com?subject=Ruiter toont niet voor pick-up“'>kort berichtje</a> \naan ons te sturen om te zien of we je kunnen steunen.",
-        "answer-12": "Het kan gebeuren dat het terugbrengen van de fiets niet precies op tijd gebeurt, geef de huurder dan een buffer van 10-15 minuten. Als de huurder de fiets daarna niet terugbrengt, neem dan rechtstreeks contact op via het verstrekte telefoonnummer. Als het niet lukt, neem dan <a href=\"mailto:contact@listnride.com?subject=Ruiter toont niet voor terugkeer\">contact </a>met ons op en wij ondersteunen je.",
+        "answer-11": "De huurder zal niet altijd op de minuut op tijd zijn, geef de huurder een tijdsbuffer van 15-30 minuten. Als een huurder nog steeds niet komt opdagen, probeer dan eerst rechtstreeks contact op te nemen via het mobiele nummer dat je in boekingsbevestiging hebt gekregen. Als je de huurder nog steeds niet kunt bereiken, voel je dan gevrijwaard van de overeenkomst.\n<br>\nWe zouden het op prijs stellen een \n<a href='\"mailto:contact@listnride.com?subject=Huurder is niet op komen dagen voor pick-up fiets“'>kort berichtje</a> \naan ons te sturen om te zien of we je kunnen steunen.",
+        "answer-12": "Het kan gebeuren dat het terugbrengen van de fiets niet precies op tijd gebeurt, geef de huurder dan een buffer van 10-15 minuten. Als de huurder de fiets daarna niet terugbrengt, neem dan rechtstreeks contact op via het verstrekte telefoonnummer. Als het niet lukt, neem dan <a href=\"mailto:contact@listnride.com?subject=Huurder heeft de fiets niet terug gebracht!\">contact </a>met ons op en wij ondersteunen je.",
         "answer-13": "Om de teruggave van je fiets te bevestigen, log je in op je account en klik je in het chatvenster van de aanvraag op de knop \" Teruggave bevestigen \".",
         "question-1": "Hoe kan ik mijn fiets online plaatsen? ",
         "question-2": "Wat maakt een fiets aantrekkelijk voor potentiële huurders? ",
@@ -160,7 +161,7 @@
         "answer-7": "Verhuurders kunnen je ID-kaart en/of een borg vragen vóór het overhandigen van de fiets. Deze informatie vind je in de beschrijving van de fiets of in het profiel van het Lister, waar ook het bedrag van de borg vermeld moet worden.\n",
         "answer-8": "Op de detailpagina van de fiets zijn ook de accessoires te vinden die bij de fiets worden verstrekt, zoals slot, licht, helm, enz. De verhuurder dient te zorgen voor een slot met een goede veiligheidsstandaard.",
         "answer-9": "Voor specifieke soorten fietsen zoals racefietsen of MTB's is het gebruikelijk om je eigen (click) pedalen mee te nemen. Gebruik de online chat om contact op te nemen eventuele details te specificeren. ",
-        "answer-10": "In dit geval kan je ons foto's van de fiets <a href=\"mailto:contact@listnride.com?subject=Bike doesn't fit description\">sturen en</a> de verschillen uitleggen. Als je claim gerechtvaardigd lijkt, annuleren we de huur en krijg je je geld terug. Na de verhuur kan je de fiets & aanbieder ook altijd voorzien van een recensie.  ",
+        "answer-10": "In dit geval kan je ons foto's van de fiets \n<a href=\"mailto:contact@listnride.com?subject=Fiets wijkt af van de advertentiebeschrijving\">sturen en</a> \nde verschillen uitleggen. Als je claim gerechtvaardigd lijkt, annuleren we de huur en krijg je je geld terug. Na de verhuur kan je de fiets & aanbieder ook altijd voorzien van een recensie.  ",
         "answer-11": "Als je vertraging hebt bij het terugbrengen van de fiets, neem dan contact op met de eigenaar van de fiets om snel een update te geven. Een SMSje of een telefoontje zijn voldoende. ",
         "answer-12": "Als de fiets de volgende dagen nog beschikbaar is, kan je hem opnieuw aanvragen en zodra de eigenaar je verzoek heeft bevestigd, is de huurperiode verlengd.",
         "question-1": "Hoe huur ik een fiets?",
@@ -192,7 +193,7 @@
       },
       "group-5": {
         "title": "Verzekering & Service",
-        "description": "We bieden een basisverzekering die standaard in het huurproces is inbegrepen. De Rider kan een optioneel premiumpakket toevoegen.\n<p>\nBeide pakketten bieden gemoedsrust tegen schade. De verzekering wordt aangeboden door onze partner \n<a href=\"http://www.hepster.com/\" target='\"_blank'>hepster </a>\nen gedekt door \n<a href=\"http://www.gothaer.de/\" target='\"_blank'>Gothaer-verzekering </a>.\n<p>\nVanaf nu is de verzekering alleen beschikbaar voor verhuur in Duitsland en Oostenrijk. We werken eraan om de verzekering naar meer Europese landen te brengen!\n<p>\nJe kunt alles vinden \n<a href=\"http://www.listnride.com/insurance/\" target='\"_blank'>details voor de verzekering</a> \nhier.",
+        "description": "We bieden een basisverzekering die standaard in het huurproces is inbegrepen. De huurder kan een optioneel premiumpakket bijboeken.\n<p>\nBeide pakketten bieden bescherming tegen schade. De verzekering wordt aangeboden door onze partner \n<a href=\"http://www.hepster.com/\" target='\"_blank'>hepster </a>\nen afgedekt door \n<a href=\"http://www.gothaer.de/\" target='\"_blank'>Gothaer-verzekering </a>.\n<p>\nMomenteel is de verzekering alleen beschikbaar voor verhuur in Duitsland en Oostenrijk. We werken eraan om de verzekering naar meer Europese landen te brengen!\n<p>\nJe kunt alle details omtrent de verzekering <a href=\"http://www.listnride.nl/insurance/\" target='\"_blank'>hier</a>  vinden.",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
