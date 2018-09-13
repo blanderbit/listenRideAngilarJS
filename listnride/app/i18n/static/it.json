@@ -89,11 +89,12 @@
     "header-1": "Per cominciare",
     "topic": "Temi",
     "header-2": "Noleggiare le proprie bici",
-    "heder-3": "Noleggiare una bici",
     "header-5": "Assicurazione & Sicurezza",
     "header-6": "Prenotazione & Cancellazione",
     "header-7": "Voucher & Crediti",
-    "header-8": "Ratings & Feedback"
+    "header-8": "Ratings & Feedback",
+    "header-3": "Noleggiare una bici",
+    "header-4": "Pagamento e costi di servizio"
   },
   "shared": {
     "list-your-bike": {
@@ -122,7 +123,7 @@
         "title": "Noleggiare le proprie bici",
         "description": "Scopri come mettere a noleggio e gestire le tue bici. E’ semplice e il nostro sistema di gestione ti aiuta a mettere a noleggio velocemente la tua intera flotta di bici.",
         "answer-1": "Clicca su “Registra una bicicletta” e fornisci tutte le informazioni necessarie sulla tua bici, comprese marca, descrizione, alcune foto, prezzo di noleggio e gli accessori che puoi fornire con la bici, inclusi nel prezzo. Quando hai finito clicca su “Registra la mia bicicletta”. La tua bici è ora disponibile per il noleggio alla community.",
-        "answer-2": "Una descrizione dettagliata della bici, foto di buona qualità e un prezzo equo rendono la bici attraente per potenziali Rider. Puoi trovare un esempio \n<a href=\"http://www.listnride.it/bikes/3369\"target=\"_blank>qui</a>.\n<p>\nUna descrizione dettagliata contiene tutte le informazioni rilevanti sulla tua bici, come ad esempio: taglia, nome del telaio e anno di produzione, gruppo di cambio, cerchi, mozzo e numero di marce, come anche qualche dettaglio personale della bici. Poichè molti Lister fanno riferimento a foto da catalogo, specialmente per bici di alta qualità, ti suggeriamo di menzionare anche il colore della bici.  Un profilo completo ti aiuta ad incrementare attrattiva per le tue bici. Puoi trovare un buon esempio qui <a href=\"//www.listnride.it/users/1886\" target=\"_blank\"> Munix Fines Bicycles </a>",
+        "answer-2": "Una descrizione dettagliata della bici, foto di buona qualità e un prezzo equo rendono la bici attraente per potenziali Rider. Puoi trovare un esempio \n<a href=\"http://www.listnride.it/bikes/3369\" target='\"_blank'>qui</a>.\n<p>\nUna descrizione dettagliata contiene tutte le informazioni rilevanti sulla tua bici, come ad esempio: taglia, nome del telaio e anno di produzione, gruppo di cambio, cerchi, mozzo e numero di marce, come anche qualche dettaglio personale della bici. \n<p>\nPoichè molti Lister fanno riferimento a foto da catalogo, specialmente per bici di alta qualità, ti suggeriamo di menzionare anche il colore della bici.  Un profilo completo ti aiuta ad incrementare attrattiva per le tue bici. Puoi trovare un buon esempio qui \n<a href=\"http://www.listnride.it/users/1886\" target='\"_blank'>Munix Finest Bicycles</a>.",
         "answer-3": "La prima cosa che i Rider vedono quando cercano una bici nella tua zona sono le foto. Foto interessanti che danno un’impressione generale della bici, attrarranno più Rider a guardare nella pagina specifica della bicicletta.\n<p>\n<a href=\\“http://www.listnride.it/how-to-shoot-bike-photos\\”target=\\“_blank\\“>Qui</a>\n puoi trovare alcuni consigli su come fotografare al meglio la tua bici!",
         "answer-4": "Sei libero di stabilire il prezzo di noleggio, ma il prezzo settimanale non può essere più basso di quello giornaliero. Per determinare il prezzo, puoi comparare la tua bici con altre simili disponibili su listnride",
         "answer-5": "Per cambiare la disponibilità della tua bici usa l’icona a forma di orologio sulla pagina “Le mie biciclette”. Nel calendario puoi selezionare l’arco di tempo in cui la tua bici non è disponibile. La bici non può essere richiesta per il noleggio in quel periodo.",
@@ -160,7 +161,7 @@
         "answer-7": "I Lister possono chiedere un documento di identità e/o una cauzione per dare a noleggio la propria bici. Puoi trovare questa informazione nella descrizione della bici o nel profilo del Lister, dove anche l’ammontare della cauzione deve essere specificato.",
         "answer-8": "Nella pagina specifica della bici trovi anche gli accessori che ti vengono forniti con essa, per esempio lucchetto, luci, casco, ecc. I Lister devono fornirti un lucchetto che abbia buoni standard di sicurezza in relazione alla zona in cui viene usata la bici.",
         "answer-9": "Per alcuni tipi di bici, come le bici da corsa e MTBs, è comune portare i propri pedali e la propria sella. Ti chiediamo di usare la chat online per contattare il Lister e specificare questi dettagli.",
-        "answer-10": "In questo caso puoi\n<a href=\"mailto:contact@listnride.com?subject=Biek doesn't fit description\">inviaci </a>le foto della bici e spiega le differenze. Se il tuo reclamo sembra giustificato, annulleremo il noleggio e riceverai un rimborso. Dopo il noleggio è sempre possibile valutare la bici ed è di conseguenza noleggiatore.",
+        "answer-10": "In questo caso puoi \n<a href=\"mailto:contact@listnride.com?subject=la bici non corrisponde alla descrizione\">inviaci</a> \nle foto della bici e spiega le differenze. Se il tuo reclamo sembra giustificato, annulleremo il noleggio e riceverai un rimborso. Dopo il noleggio è sempre possibile valutare la bici ed è di conseguenza noleggiatore.",
         "answer-11": "Se stai ritardando nel restituire la bici, informa il Lister con una telefonata o un sms per dargli velocemente avviso di ciò",
         "answer-12": "Se la bici è ancora disponibile nei giorni successivi, puoi richiederla di nuovo e una volta che il Lister ha accettato la tua richiesta, il tuo noleggio è prolungato",
         "question-1": "Come noleggio una bici?",
@@ -221,7 +222,7 @@
       "group-7": {
         "title": "Voucher & Crediti",
         "description": "Usa voucher per i tuoi noleggi. Scopri come riscattarli. Inoltre puoi invitare i tuoi amici a far parte della nostra community per avere crediti.",
-        "answer-1": "Puoi ricevere voucher invitando i tuoi amici a far parte della nostra community via Facebook o via email. Accedi al tuo profilo, vai alla pagina \n<a href=\"http://www.listnride.it/invite-friends/\" target='\"_blank'>Invita Amici</a> \ne condividi il link. Se i tuoi amici noleggiano o registrano un bici usando questo link, riceverai 10€ di credito che potrai usare per il tuo prossimo noleggio.",
+        "answer-1": "Puoi ricevere voucher invitando i tuoi amici a far parte della nostra community via Facebook o via email. Accedi al tuo profilo, vai alla pagina \n<a href=\"http://www.listnride.it/invite-friends\" target='\"_blank'>Invita Amici</a> \ne condividi il link. Se i tuoi amici noleggiano o registrano un bici usando questo link, riceverai 10€ di credito che potrai usare per il tuo prossimo noleggio.",
         "answer-2": "Per usare voucher, devi inserire il codice voucher nel banner “Codice promozionale” quando richiedi una bici. Oppure puoi inserirlo nel tuo profilo, nella sezione “Buoni”.",
         "answer-3": "Puoi usare i voucher ogni volta che richiedi una bici, ma un singolo codice può essere usato solo una volta. Se non utilizzi l’ammontare totale in una volta, il saldo verrà salvato automaticamente nel tuo account e potrà essere usato per il prossimo noleggio.",
         "answer-4": "How do I search for a bike?",
