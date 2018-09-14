@@ -30,8 +30,8 @@ function notificationController($mdToast, $translate) {
       return convertToKey(responseText);
     };
 
-    function convertToKey(t) {
-      return 'shared.notifications.' + t;
+    function convertToKey(text) {
+      return 'shared.notifications.' + text;
     };
 
     $mdToast.show(
@@ -40,7 +40,6 @@ function notificationController($mdToast, $translate) {
       .hideDelay(4000)
       .position('top center')
     );
-
   }
  }
 }
