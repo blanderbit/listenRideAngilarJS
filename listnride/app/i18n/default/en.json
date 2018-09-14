@@ -13,10 +13,13 @@
       "email-required": "Please enter your email address, email is required",
       "email-not-valid": "Please, enter a valid email address",
       "phone-not-valid": "Please, enter a valid phone number",
-      "phone-required": "Please enter your phone number, this field is required",
+      "phone-required": "Please enter your phone number, this field is required"
+    },
+    "notifications": {
       "404": "Page doesn't exist",
       "422": "Wrong data format entered",
-      "500": "Internal server error"
+      "500": "Internal server error",
+      "200": "Success"
     },
     "basic-fee": "Service Fee including Basic Insurance",
     "how-it-works": "How it works",

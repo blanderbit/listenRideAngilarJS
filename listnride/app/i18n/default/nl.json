@@ -13,10 +13,13 @@
       "email-required": "Vul een geldig emailadres in",
       "email-not-valid": "Vul een geldig emailadres in",
       "phone-not-valid": "Voer alstublieft een geldig telefoonnummer in",
-      "phone-required": "Voer je telefoonnummer in. ",
+      "phone-required": "Voer je telefoonnummer in. "
+    },
+    "notifications": {
       "404": "Pagina bestaat niet",
       "422": "Verkeerd dataformaat ingevoerd",
-      "500": "Interne Server Fout"
+      "500": "Interne Server Fout",
+      "200": "Success"
     },
     "basic-fee": "Servicekosten inclusief basisverzekering",
     "how-it-works": "Hoe werkt het",
