@@ -3,8 +3,8 @@
 angular.module('leaosIntegration', []).component('leaos', {
   templateUrl: 'app/modules/brand-integration/leaos.template.html',
   controllerAs: 'leaos',
-  controller: ['$translate', '$mdToast', '$translatePartialLoader', 'api', 'ENV', 'ngMeta',
-    function LeaosController($translate, $mdToast, $tpl, api, ENV, ngMeta) {
+  controller: ['$translatePartialLoader', 'api', 'ENV', 'ngMeta', 'notification',
+    function LeaosController($tpl, api, ENV, ngMeta, notification) {
       var leaos = this;
       $tpl.addPart(ENV.staticTranslation);
       // Open Graph Image
@@ -89,12 +89,7 @@ angular.module('leaosIntegration', []).component('leaos', {
             leaos.currentShop = leaos.cities[Object.keys(leaos.cities)[0]];
           },
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('shared.errors.' + error.status))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       }

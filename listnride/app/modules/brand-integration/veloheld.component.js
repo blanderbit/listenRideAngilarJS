@@ -3,8 +3,8 @@
 angular.module('veloheldIntegration', []).component('veloheld', {
   templateUrl: 'app/modules/brand-integration/veloheld.template.html',
   controllerAs: 'veloheld',
-  controller: ['$translate', '$mdToast', '$translatePartialLoader', 'api', 'ENV', 'ngMeta',
-    function VeloheldController($translate, $mdToast, $tpl, api, ENV, ngMeta) {
+  controller: ['$translatePartialLoader', 'api', 'ENV', 'ngMeta', 'notification',
+    function VeloheldController($tpl, api, ENV, ngMeta, notification) {
       var veloheld = this;
       $tpl.addPart(ENV.staticTranslation);
       // Open Graph Image
@@ -88,12 +88,7 @@ angular.module('veloheldIntegration', []).component('veloheld', {
             veloheld.currentShop = veloheld.cities[Object.keys(veloheld.cities)[0]];
           },
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('shared.errors.' + error.status))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       }

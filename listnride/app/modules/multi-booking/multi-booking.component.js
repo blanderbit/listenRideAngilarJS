@@ -3,8 +3,8 @@
 angular.module('multiBooking', []).component('multiBooking', {
   templateUrl: 'app/modules/multi-booking/multi-booking.template.html',
   controllerAs: 'multiBooking',
-  controller: ['$stateParams', '$translate', '$mdToast', 'api', 'bikeOptions',
-    function multiBookingController($stateParams, $translate, $mdToast, api, bikeOptions) {
+  controller: ['$stateParams', 'api', 'bikeOptions',
+    function multiBookingController($stateParams, api, bikeOptions) {
       var multiBooking = this;
 
       multiBooking.$onInit = function () {
@@ -81,12 +81,7 @@ angular.module('multiBooking', []).component('multiBooking', {
             multiBooking.success_request = true;
           },
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('shared.errors.' + error.status))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       }
