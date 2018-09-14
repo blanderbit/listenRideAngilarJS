@@ -177,7 +177,7 @@ angular.module('bike').component('calendar', {
         // Enable all following slots as returnSlots if no booking is in between
         var bookingInBetween = false;
         _.each(calendar.event.slots, function(value, index) {
-          if (index > calendar.event.pickupSlotId) {
+          if (index >= calendar.event.pickupSlotId) {
             if (value.reserved && calendar.event.slots[index-1].reserved) {
               bookingInBetween = true;
             }
@@ -191,7 +191,8 @@ angular.module('bike').component('calendar', {
         calendar.startDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
 
         // Presets returnSlot to be (slotDuration) after pickupSlot
-        calendar.event.returnSlotId = parseInt(calendar.event.pickupSlotId) + slotDuration;
+        calendar.event.returnSlotId = parseInt(calendar.event.pickupSlotId);
+        // calendar.event.returnSlotId = parseInt(calendar.event.pickupSlotId) + slotDuration;
         calendar.event.changeReturnSlot();
         dateChange(calendar.startDate, calendar.endDate);
       };
@@ -200,9 +201,9 @@ angular.module('bike').component('calendar', {
         var slot = calendar.event.slots[calendar.event.returnSlotId];
 
         if (slot.overnight) {
-          calendar.endDate = new Date(eventYear, eventMonth, slot.day + 1, slot.hour, 0, 0, 0);
+          calendar.endDate = new Date(eventYear, eventMonth, slot.day + 1, slot.hour + 2, 0, 0, 0);
         } else {
-          calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
+          calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour + 2, 0, 0, 0);
         }
 
         dateChange(calendar.startDate, calendar.endDate);
@@ -219,7 +220,11 @@ angular.module('bike').component('calendar', {
           var startMonth = startDate.getMonth();
 
           for (var j = 0; j < calendar.event.slots.length; j ++) {
-            if (startYear == eventYear && startMonth == eventMonth && calendar.event.slots[j].day == startDay && calendar.event.slots[j].hour >= startTime && (calendar.event.slots[j].overnight || calendar.event.slots[j].hour + slotDuration <= endTime)) {
+            if (startYear == eventYear &&
+                startMonth == eventMonth &&
+                calendar.event.slots[j].day == startDay &&
+                calendar.event.slots[j].hour >= startTime &&
+                (calendar.event.slots[j].overnight || calendar.event.slots[j].hour + slotDuration <= endTime)) {
               calendar.event.slots[j].reserved = true;
               // calendar.event.slots[j].text = calendar.event.slots[j].text.split(" ", 1) + " (booked)";
               calendar.event.slots[j].text = calendar.event.slots[j].text + " (booked)";
