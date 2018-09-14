@@ -3,8 +3,8 @@
 angular.module('multiBooking', []).component('multiBooking', {
   templateUrl: 'app/modules/multi-booking/multi-booking.template.html',
   controllerAs: 'multiBooking',
-  controller: ['$stateParams', 'api', 'bikeOptions',
-    function multiBookingController($stateParams, api, bikeOptions) {
+  controller: ['$stateParams', 'api', 'bikeOptions', 'notification',
+    function multiBookingController($stateParams, api, bikeOptions, notification) {
       var multiBooking = this;
 
       multiBooking.$onInit = function () {
