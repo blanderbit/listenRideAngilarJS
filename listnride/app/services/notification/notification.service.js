@@ -22,7 +22,7 @@ function notificationController($mdToast, $translate) {
 
       if (type === 'error' && response.data && response.data.errors && response.data.errors.length) {
         // TODO: Add multiply errors
-        responseText = response.data.errors[0].detail
+        return response.data.errors[0].detail
       } else {
         responseText = response.status
       }
@@ -31,7 +31,6 @@ function notificationController($mdToast, $translate) {
     };
 
     function convertToKey(t) {
-      t = t.toLowerCase().replace(/\s/g, "-");
       return 'shared.notifications.' + t;
     };
 
