@@ -9,10 +9,7 @@ angular
   ]
 );
 
-/* Lingohub supported keys
- * STATUSES: shared.200, shared.422, shared.404, shared.500
- * ERROR_MESSAGES:
- */
+// Lingohub supported keys placed in shared.notifications (default)
 
 function notificationController($mdToast, $translate) {
  return {
@@ -25,7 +22,7 @@ function notificationController($mdToast, $translate) {
 
       if (type === 'error' && response.data && response.data.errors && response.data.errors.length) {
         // TODO: Add multiply errors
-        return response.data.errors[0].detail
+        responseText = response.data.errors[0].detail
       } else {
         responseText = response.status
       }
@@ -35,6 +32,7 @@ function notificationController($mdToast, $translate) {
 
     function convertToKey(t) {
       // TODO: remove statuses from shared.errors to shared.notifications
+      t = t.toLowerCase().replace(/\s/g, "-");
       return 'shared.errors.' + t;
     };
 
