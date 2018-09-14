@@ -13,10 +13,13 @@
       "email-required": "Introduce una dirección de correo electrónico válida",
       "email-not-valid": "Por favor, introduce una dirección de correo electrónico válida",
       "phone-not-valid": "Por favor ingresa un número de teléfono válido",
-      "phone-required": "Por favor ingresa tu número de teléfono, este campo es obligatorio",
+      "phone-required": "Por favor ingresa tu número de teléfono, este campo es obligatorio"
+    },
+    "notifications": {
       "404": "La página no existe",
       "422": "El formato de los datos ingresados es incorrecto",
-      "500": "Error interno del servidor"
+      "500": "Error interno del servidor",
+      "200": "Success"
     },
     "basic-fee": "El costo del servicio incluye seguro básico",
     "how-it-works": "Cómo funciona",

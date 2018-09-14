@@ -13,10 +13,13 @@
       "email-required": "Bitte gib Deine E-Mail-Adresse ein, die E-Mailadresse ist erforderlich",
       "email-not-valid": "Bitte gib eine gültige E-Mail-Adresse ein",
       "phone-not-valid": "Bitte gib eine gültige Telefonnummer ein",
-      "phone-required": "Bitte gib die Telefonnummer ein, diese wird benötigt",
+      "phone-required": "Bitte gib die Telefonnummer ein, diese wird benötigt"
+    },
+    "notifications": {
       "404": "Seite existiert nicht",
       "422": "falsche Datenformat eingegeben.",
-      "500": "Interner Server Fehler"
+      "500": "Interner Server Fehler",
+      "200": "Success"
     },
     "basic-fee": "Die Servicegebühr beinhaltet die Basis-Versicherung",
     "how-it-works": "Wie funktioniert's",
