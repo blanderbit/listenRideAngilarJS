@@ -31,9 +31,8 @@ function notificationController($mdToast, $translate) {
     };
 
     function convertToKey(t) {
-      // TODO: remove statuses from shared.errors to shared.notifications
       t = t.toLowerCase().replace(/\s/g, "-");
-      return 'shared.errors.' + t;
+      return 'shared.notifications.' + t;
     };
 
     $mdToast.show(
