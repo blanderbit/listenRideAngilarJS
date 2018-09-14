@@ -955,6 +955,13 @@ footer .lnr-link {
 /* DIALOG MODALS
 /*-----------------------------------------------------------------------------------*/
 
+#ie-warning {
+  display: none;
+}
+.ie-browser #ie-warning {
+  display: block;
+}
+
 .lnr-IE-warning-overlay {
   position: absolute;
   z-index: 100;
