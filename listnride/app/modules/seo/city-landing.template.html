@@ -1,7 +1,7 @@
  <md-content class="single-column" ng-hide="cityLanding.loading">
   <div id="hero-shot-small" class="lnr-preload-bg" style="background-image: url('{{ cityLanding.data.header_image}}'); background-position: 50% 20%;" layout="column" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
-      <h1 class="md-display-1">{{ 'seo.header' | translate }} {{ cityLanding.city }}</h1>
+      <h1 class="md-display-1">{{ 'seo.header' | translate }} {{ cityLanding.translatedCity }}</h1>
     </div>
     <form class="lnr-search-bar md-whiteframe-3dp lnr-search-bar--fs18" layout="row" md-theme="default">
       <autocomplete
@@ -35,7 +35,7 @@
 
   <div class="content section" layout-padding layout layout-xs="column" ng-if="cityLanding.data.texts">
     <div flex="50" flex-xs="100">
-      <h2 class="md-headline">{{ 'seo.rent-perfect-bikes-in' | translate }} {{ cityLanding.city }}</h2>
+      <h2 class="md-headline">{{ 'seo.rent-perfect-bikes-in' | translate }} {{ cityLanding.translatedCity }}</h2>
       <br>
       <p class="md-body-1" style="margin: 7px">{{ cityLanding.data.texts.main.description }}</p>
     </div>
@@ -71,7 +71,7 @@
   <div class="content section" layout="column" layout-align="center center">
     <br><br>
     <md-button ui-sref="search({location: cityLanding.city})" class="md-xlrg md-raised md-primary">
-    {{ 'shared.search-all-in' | translate }} {{ cityLanding.city }}
+    {{ 'shared.search-all-in' | translate }} {{ cityLanding.translatedCity }}
     </md-button>
   </div>
 

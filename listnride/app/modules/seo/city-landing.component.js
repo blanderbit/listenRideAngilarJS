@@ -33,10 +33,12 @@ angular.module('cityLanding',[]).component('cityLanding', {
       };
 
       function fetchData() {
-        api.get('/seo_page?city=' + cityLanding.city + '&lng=' + $translate.preferredLanguage()).then(
+        var lng = $translate.preferredLanguage();
+        api.get('/seo_page?city=' + cityLanding.city + '&lng=' + lng).then(
           function (success) {
             cityLanding.data = success.data;
             cityLanding.location = cityLanding.city;
+            cityLanding.translatedCity = cityLanding.data.city_names[lng] ? cityLanding.data.city_names[lng] : cityLanding.city;
             cityLanding.loading = false;
             var minPrice = parseInt(_.minBy(cityLanding.data.bikes, 'price_from').price_from);
             ngMeta.setTitle($translate.instant('meta.seo.city-title', { location: cityLanding.location }));
