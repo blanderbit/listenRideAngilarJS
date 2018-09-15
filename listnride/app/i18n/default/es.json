@@ -1198,7 +1198,7 @@
     },
     "share": {
       "email-subject": "{{full_name}} te ha invitado a unirte a listnride",
-      "email-body": "{{first_name}}¡te ha dado 10€ para tu primera aventura en la bici de tu elección!% 0¡Únete a listnride, la comunidad de bicis que más rápido crece y accede a innumerables bicicletas para cada ocasión!% 0Regístrate e inmediatamente recibirás un crédito de 10€ .%0A%0A {{voucher_url}}%0A%0 ¿Quieres darle las gracias a {{first_name}}? Alquila una bicicleta o anuncia la tuya y {{first_name}}también recibirás un crédito de 10€!% 0A% 0¡Diviértete y disfruta del paseo!"
+      "email-body": "{{first_name}}¡te ha dado 10€ para tu primera aventura en la bici de tu elección! ¡Únete a listnride, la comunidad de bicis que más rápido crece y accede a innumerables bicicletas para cada ocasión! Regístrate e inmediatamente recibirás un crédito de 10€. {{voucher_url}}  ¿Quieres darle las gracias a {{first_name}}? Alquila una bicicleta o anuncia la tuya y {{first_name}}también recibirás un crédito de 10€! ¡Diviértete y disfruta del paseo!"
     }
   },
   "error-404": {

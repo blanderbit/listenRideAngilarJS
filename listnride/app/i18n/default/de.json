@@ -629,7 +629,7 @@
   },
   "bike": {
     "rent-bike": "Fahrrad mieten",
-    "two-hours": "for 2 hours",
+    "two-hours": "für 2 Stunden",
     "view-pictures": "Bilder ansehen",
     "for": "für",
     "meta-title": "{{name}} - {{category}} von {{brand}} in {{location}} mieten.",
@@ -1201,7 +1201,7 @@
     },
     "share": {
       "email-subject": "{{full_name}} hat dich zu listnride eingeladen!",
-      "email-body": "{{first_name}} hat dir 10€ für dein erstes Abenteuer auf einem Fahrrad deiner Wahl geschenkt!%0AWerde auch du Teil von listnride, der schnellstwachsenden Bikesharing Community und erhalte Zugriff auf unzählige Fahrräder für jeden erdenklichen Zweck!%0A%0A{{first_name}} sei dank, erhältst du sofort 10€ Startguthaben, sobald du dich registrierst.%0A%0A{{voucher_url}}%0A%0ADu möchtest dich bei {{first_name}} bedanken?%0AMiete ein Rad oder biete deins zum Verleih an und auch {{first_name}} erhält 10€ Guthaben :).%0A%0AViel Spaß und Fahrvergnügen."
+      "email-body": "{{first_name}} hat dir 10€ für dein erstes Abenteuer auf einem Fahrrad deiner Wahl geschenkt! Werde auch du Teil von listnride, der schnellstwachsenden Bikesharing Community und erhalte Zugriff auf unzählige Fahrräder für jeden erdenklichen Zweck! {{first_name}} sei dank, erhältst du sofort 10€ Startguthaben, sobald du dich registrierst. {{voucher_url}} Du möchtest dich bei {{first_name}} bedanken? Miete ein Rad oder biete deins zum Verleih an und auch {{first_name}} erhält 10€ Guthaben :). Viel Spaß und Fahrvergnügen."
     }
   },
   "error-404": {
