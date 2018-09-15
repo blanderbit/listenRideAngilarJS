@@ -169,8 +169,13 @@
   },
   "veletage": {
     "event": {
-      "calendar-title": "Example Veletage Title",
-      "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me in Lingohub."
+      "calendar-title": "veletage POP-UP SALON",
+      "select-day": "1. Wählt das Mietdatum aus ",
+      "select-slot": "2. Wählt den Zeitfenster ",
+      "day-error": "Wähle zuerst einen Tag aus",
+      "select-return": "3. Select return time",
+      "time-error": "Please select a pickup time first",
+      "calendar-subtitle": "Vom 22. bis zum 30. September 2018 sind die UCI Road World Championships in Innsbruck-Tirol (Österreich) zu Gast. Teste und Miete das perfekte Rennrad für deine Ausfahrt. "
     }
   },
   "brand-integration": {
@@ -624,6 +629,7 @@
   },
   "bike": {
     "rent-bike": "Fahrrad mieten",
+    "two-hours": "for 2 hours",
     "view-pictures": "Bilder ansehen",
     "for": "für",
     "meta-title": "{{name}} - {{category}} von {{brand}} in {{location}} mieten.",

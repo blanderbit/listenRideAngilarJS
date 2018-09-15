@@ -167,6 +167,11 @@
   "veletage": {
     "event": {
       "calendar-title": "Example Veletage Title",
+      "select-day": "1. Select the Rental Day ",
+      "select-slot": "2. Select Rental Slot",
+      "day-error": "Please select a day first",
+      "select-return": "3. Select return time",
+      "time-error": "Please select a pickup time first",
       "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me in Lingohub."
     }
   },
@@ -614,6 +619,7 @@
   },
   "bike": {
     "rent-bike": "Noleggio bicicletta",
+    "two-hours": "for 2 hours",
     "view-pictures": "Visualizza le immagini",
     "for": "per",
     "meta-title": "Noleggio {{name}}- {{category}} di {{brand}} a {{location}}.",

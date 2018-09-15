@@ -164,8 +164,13 @@
   },
   "veletage": {
     "event": {
-      "calendar-title": "Example Veletage Title",
-      "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me in Lingohub."
+      "calendar-title": "veletage POP-UP SALON",
+      "select-day": "1. Selecteer de datum",
+      "select-slot": "2. Selecteer het tijdslot",
+      "day-error": "Selecteer eerst een dag",
+      "select-return": "3. Select return time",
+      "time-error": "Please select a pickup time first",
+      "calendar-subtitle": "Van 22 tot 30 september 2018 vinden in Innsbruck-Tirol (Oostenrijk) de UCI-wereldkampioenschappen op de weg plaats. Test en huur de perfecte racefiets voor je ride "
     }
   },
   "brand-integration": {
@@ -618,6 +623,7 @@
   },
   "bike": {
     "rent-bike": "Fiets huren",
+    "two-hours": "for 2 hours",
     "view-pictures": "Foto's bekijken",
     "meta-title": "Huur de {{name}} - {{category}} van {{brand}} in {{location}}",
     "meta-description": "{{description}}",
