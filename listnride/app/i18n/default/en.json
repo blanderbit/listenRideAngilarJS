@@ -169,8 +169,13 @@
   },
   "veletage": {
     "event": {
-      "calendar-title": "Example Veletage Title",
-      "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me in Lingohub."
+      "calendar-title": "veletage POP-UP SALON",
+      "select-day": "1. Select the Rental Date ",
+      "select-slot": "2. Select Rental Time",
+      "day-error": "Please select a day first",
+      "select-return": "3. Select return time",
+      "time-error": "Please select a pickup time first",
+      "calendar-subtitle": "The UCI Road World Championships will take place in Innsbruck-Tirol (Austria) from 22nd to 30th September 2018. Test and rent the perfect road bike for your ride. "
     }
   },
   "brand-integration": {
@@ -624,6 +629,7 @@
   },
   "bike": {
     "rent-bike": "Rent Bike",
+    "two-hours": "for 2 hours",
     "view-pictures": "View Pictures",
     "for": "for",
     "meta-title": "Rent the {{name}} - {{category}} by {{brand}} in {{location}}.",
