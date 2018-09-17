@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "search-placeholder": "Search for e.g. Berlin, Munich",
     "no-bikes-found": " Helaas! er worden nog geen fietsen op deze locatie aangeboden.",
     "dresden": "Dresden",
     "bolzano": "Bolzano",
@@ -818,6 +819,8 @@
   },
   "calendar": {
     "invalid-date": "Ingevulde Datums zijn niet correct",
+    "status-closed": "closed",
+    "status-in-past": "in past",
     "info-service-fee-insurance": "Dit helpt om ons platform te laten draaien en<br0>een uitstekende klantenservice aan te bieden. <br1>Inclusief btw. Niet te restitueren.",
     "basic-insurance-included": "Inclusief basisverzekering ",
     "request-bike": "Fiets aanvragen",

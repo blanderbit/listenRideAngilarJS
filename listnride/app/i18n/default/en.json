@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "search-placeholder": "Search for e.g. Berlin, Munich",
     "no-bikes-found": "No bikes found",
     "dresden": "Dresden",
     "bolzano": "Bolzano",
@@ -827,6 +828,8 @@
   },
   "calendar": {
     "invalid-date": "Dates are invalid",
+    "status-closed": "closed",
+    "status-in-past": "in past",
     "info-service-fee-insurance": "helps us run our platform and<br0>allows us to offer first-class customer service.<br1>VAT included. Non-refundable.",
     "basic-insurance-included": "Basic insurance included",
     "request-bike": "Request Bike",

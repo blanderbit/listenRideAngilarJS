@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
+    "search-placeholder": "Search for e.g. Berlin, Munich",
     "no-bikes-found": "Non sono state trovate biciclette",
     "dresden": "Dresden",
     "bolzano": "Bolzano",
@@ -816,6 +817,8 @@
   },
   "calendar": {
     "invalid-date": "Le date non sono valide",
+    "status-closed": "closed",
+    "status-in-past": "in past",
     "info-service-fee-insurance": "Esto permite que nuestra plataforma crezca y<br0>pueda ofrecer un servicio de atención al cliente de primera. <br1>IVA incluido. No reembolsable.",
     "basic-insurance-included": "Assicurazione base inclusa",
     "request-bike": "Richiedi la bicicletta",
