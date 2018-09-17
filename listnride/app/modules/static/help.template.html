@@ -6,35 +6,18 @@
       <h2 class="md-headline">{{ 'help-and-service.header' | translate }}</h2>
     </div>
 
-    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
-      <a
-        ng-repeat="i in [].constructor(4) track by $index"
+    <div class="md-body-1" layout="row" layout-padding layout-wrap>
+      <help-card
+        ng-repeat="i in [].constructor(8) track by $index"
         ui-sref="faq({'group': $index+1})"
         class="help__group-card"
-        flex-gt-xs="25"
-        layout="column"
-        layout-align="none center"
-        layout-margin>
-        <md-icon
-          class="lnr-icn-mlrg"
-          md-svg-src="app/assets/ui_icons/help/group-{{$index+1}}.svg"></md-icon>
-        <p class="md-subhead lnr-center" translate="help-and-service.faq.group-{{$index+1}}.title"></p>
-      </a>
-    </div>
-    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
-      <a
-        ng-repeat="i in [].constructor(4) track by $index"
-        ui-sref="faq({'group': $index+5})"
-        class="help__group-card"
-        flex-gt-xs="25"
-        layout="column"
-        layout-align="none center"
-        layout-margin>
-        <md-icon
-          class="lnr-icn-mlrg"
-          md-svg-src="app/assets/ui_icons/help/group-{{$index+5}}.svg"></md-icon>
-        <p class="md-subhead lnr-center" translate="help-and-service.faq.group-{{$index+5}}.title"></p>
-      </a>
+        flex="50"
+        flex-gt-xs="25">
+        <a flex layout="column" layout-align="none center">
+          <md-icon class="lnr-icn-mlrg" md-svg-src="app/assets/ui_icons/help/group-{{$index+1}}.svg"></md-icon>
+          <p class="md-subhead lnr-center" translate="help-and-service.faq.group-{{$index+1}}.title"></p>
+        </a>
+      </help-card>
     </div>
   </div>
   <!-- end FAQs -->
@@ -46,7 +29,7 @@
       <h2 class="md-headline">{{ 'help-and-service.faq-header' | translate }}</h2>
     </div>
 
-    <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding layout-margin>
+    <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-padding>
       <div flex-gt-sm="45" layout="column">
         <!-- FAQ_1 -->
         <h3 class="md-subhead lnr-clickable lnr-arrow-left" ng-click="help1=!help1" ng-class="help1 ? 'accordion__tab--opened' : ''">
@@ -83,6 +66,7 @@
         <div ng-show="help5">
           <p class="md-body-1 accordion__text" translate="help-and-service.faqs.top.answer-5"></p>
         </div>
+        <md-divider hide-gt-sm></md-divider>
       </div>
 
       <div flex-gt-sm="45" flex-gt-sm-offset="5" layout="column">
