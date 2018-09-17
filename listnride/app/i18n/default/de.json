@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "search-placeholder": "Search for e.g. Berlin, Munich",
     "no-bikes-found": "Keine Fahrräder gefunden",
     "dresden": "Dresden",
     "bolzano": "Bozen",
@@ -827,6 +828,8 @@
   },
   "calendar": {
     "invalid-date": "Datumsangabe nicht korrekt",
+    "status-closed": "closed",
+    "status-in-past": "in past",
     "info-service-fee-insurance": "Dies hilft uns, unsere Plattform zu betreiben  <br0>erstklassigen Kundenservice anzubieten. <br1>Inklusive MwSt. Keine Rückerstattung.",
     "basic-insurance-included": "Basis-Versicherung inklusive",
     "request-bike": "Rad anfragen",
