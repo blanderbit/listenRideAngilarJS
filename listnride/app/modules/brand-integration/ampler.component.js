@@ -3,8 +3,8 @@
 angular.module('ampler-integration',[]).component('ampler', {
   templateUrl: 'app/modules/brand-integration/ampler.template.html',
   controllerAs: 'ampler',
-  controller: [ '$translate', '$translatePartialLoader', 'api', 'ENV',
-    function AmplerController($translate, $tpl, api, ENV) {
+  controller: [ '$translate', '$translatePartialLoader', 'api', 'ENV', 'notification',
+    function AmplerController($translate, $tpl, api, ENV, notification) {
       var ampler = this;
       $tpl.addPart(ENV.staticTranslation);
 
@@ -82,6 +82,7 @@ angular.module('ampler-integration',[]).component('ampler', {
           ampler.currentBikes = ampler.bikes["berlin"];
         },
         function (error) {
+          notification.show(error, 'error');
         }
       );
 

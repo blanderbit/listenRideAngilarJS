@@ -11,27 +11,23 @@ angular.module('list', ['ngLocale'])
     },
     controllerAs: 'list',
     controller: [
-      '$mdDialog',
-      '$mdToast',
-      '$translate',
       '$localStorage',
       '$stateParams',
       '$state',
-      '$scope',
       '$analytics',
       'Upload',
       'bikeOptions',
       'api',
       'authentication',
-      '$timeout',
       'verification',
       'accessControl',
       'loadingDialog',
       'price',
       'countryCodeTranslator',
-      function ListController($mdDialog, $mdToast, $translate, $localStorage, $stateParams, $state,
-                              $scope, $analytics, Upload, bikeOptions, api, authentication,
-                              $timeout, verification, accessControl, loadingDialog, price, countryCodeTranslator) {
+      'notification',
+      function ListController($localStorage, $stateParams, $state, $analytics,
+        Upload, bikeOptions, api, authentication, verification,
+        accessControl, loadingDialog, price, countryCodeTranslator, notification) {
 
         if (accessControl.requireLogin()) {
           return;
@@ -137,6 +133,7 @@ angular.module('list', ['ngLocale'])
               setBusinessForm();
             },
             function (error) {
+              notification.show(error, 'error');
             }
           );
         };
@@ -197,6 +194,7 @@ angular.module('list', ['ngLocale'])
               }
             },
             function (error) {
+              notification.show(error, 'error');
             }
           );
         };
@@ -263,6 +261,7 @@ angular.module('list', ['ngLocale'])
                     $analytics.eventTrack('List a Bike', {category: 'List Bike', label: 'Bike Added'});
                   },
                   function (error) {
+                    notification.show(error, 'error');
                     list.submitDisabled = false;
                     loadingDialog.close();
                   }
@@ -270,6 +269,7 @@ angular.module('list', ['ngLocale'])
               }
             },
             function (error) {
+              notification.show(error, 'error');
             }
           );
         };
@@ -340,15 +340,11 @@ angular.module('list', ['ngLocale'])
           }).then(
             function (response) {
               loadingDialog.close();
-              $mdToast.show(
-                $mdToast.simple()
-                .textContent($translate.instant('toasts.bike-edit-successful'))
-                .hideDelay(4000)
-                .position('top center')
-              );
+              notification.show(response, null, 'toasts.bike-edit-successful');
               $state.go("listings");
             },
             function (error) {
+              notification.show(error, 'error');
               list.submitDisabled = false;
               loadingDialog.close();
             }
