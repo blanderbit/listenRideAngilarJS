@@ -237,7 +237,7 @@ angular.module('bike').component('calendar', {
 
       calendar.availabilityMessage = function($index, date) {
         if (!calendar.isOptionEnabled($index, date)) {
-          return openingHoursAvailable() ? ' (closed)' : ' (in past)'
+          return openingHoursAvailable() ?  ' ('+ $translate.instant('calendar.status-closed')+')' : ' ('+($translate.instant('calendar.status-in-past'))+')';
         }
       };
 
