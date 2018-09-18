@@ -165,9 +165,6 @@
   "lister": {
     "chat": "Dein gebuchtes Fahrrad wurde storniert."
   },
-  "faq-page": {
-    "topics": "Themenbereiche"
-  },
   "veletage": {
     "event": {
       "calendar-title": "veletage POP-UP SALON",
@@ -1219,7 +1216,8 @@
       "dutch": "Niederländisch",
       "italian": "Italienisch",
       "spanish": "Spanisch",
-      "german": "Deutsch"
+      "german": "Deutsch",
+      "english": "Englisch"
     },
     "insurance-partner": "Versicherungspartner",
     "insurance": "Versicherung",

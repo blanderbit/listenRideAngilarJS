@@ -77,16 +77,12 @@
       "cafes-bars-content": "Se ti piace il cibo vegano e vegetariano, ti consigliamo di visitare <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot </a>presso la Karmeliterplatz. Se preferisci la cucina austriaca più tradizionale, ti consigliamo <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta </a>. Ordina un tradizionale Tafelspitz o Wiener Schnitzel e goditela all'aperto con la vista sulla celebre Opera di Vienna. Sarà una serata fantastica da ricordare! Per finire in bellezza, una bella passeggiata lungo il Danubio. Sulla strada troverai molti bar interessanti e potrai sederti all'aperto sotto le stelle lungo il fiume."
     }
   },
-  "footer": {
-    "languages": {
-      "english": "Inglese"
-    }
-  },
   "rider": {
     "chat": "La prenotazione della bici è stata cancellata."
   },
   "faq-page": {
-    "header": "Le domande più frequenti"
+    "header": "Le domande più frequenti",
+    "topics": "Temi"
   },
   "shared": {
     "list-your-bike": {

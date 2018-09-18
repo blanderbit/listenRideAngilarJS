@@ -160,9 +160,6 @@
   "lister": {
     "chat": "De boeking van je huurfiets is geannuleerd."
   },
-  "faq-page": {
-    "topics": "Vraagstukken"
-  },
   "veletage": {
     "event": {
       "calendar-title": "veletage POP-UP SALON",
@@ -1206,7 +1203,8 @@
       "dutch": "Nederlands",
       "italian": "Italiaans",
       "spanish": "Spaans",
-      "german": "Duits"
+      "german": "Duits",
+      "english": "Engels"
     },
     "insurance-partner": "Verzekeringspartner",
     "insurance": "Verzekering",
