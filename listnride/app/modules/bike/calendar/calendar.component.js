@@ -226,7 +226,7 @@ angular.module('bike').component('calendar', {
                 startTime >= calendar.event.slots[j].hour &&
                 (calendar.event.slots[j].overnight || calendar.event.slots[j].hour + slotDuration <= endTime)) {
               calendar.event.slots[j].reserved = true;
-              calendar.event.slots[j].text = calendar.event.slots[j].text.split(" ", 1) + " (booked)";
+              calendar.event.slots[j].text = calendar.event.slots[j].text.split(" ", 1) + ' ('+ $translate.instant('calendar.booked')+')';
               // calendar.event.slots[j].text = calendar.event.slots[j].text + " (booked)";
             }
           }
