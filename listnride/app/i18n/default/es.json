@@ -86,7 +86,7 @@
     "search-all-in": "Busca todas las bicis en",
     "search-bikes": "Busca bicicletas",
     "from-place": "de",
-    "contact": "Soporto y contacto",
+    "contact": "Ayuda ",
     "show-more": "mostrar más ",
     "show-less": "mostrar menos",
     "phone-number": "Número de teléfono",
@@ -170,13 +170,13 @@
   },
   "veletage": {
     "event": {
-      "calendar-title": "Example Veletage Title",
+      "calendar-title": "veletage POP-UP SALON",
       "select-day": "1. Select the Rental Day ",
-      "select-slot": "2. Select Rental Slot",
+      "select-slot": "2. Select the rental time",
       "day-error": "Please select a day first",
       "select-return": "3. Select return time",
       "time-error": "Please select a pickup time first",
-      "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me in Lingohub."
+      "calendar-subtitle": "The UCI Road World Championships will take place in Innsbruck-Tirol (Austria) from 22nd to 30th September 2018. Test and rent the perfect road bike for your ride. "
     }
   },
   "brand-integration": {
@@ -841,7 +841,7 @@
     "info-discount": "Descuento medio diario que <br>obtienes por día al alquilar <br>por un período de tiempo más largo.",
     "info-service-fee": "Esto permite que nuestra plataforma crezca y<br>u pueda ofrecer un servicio de atención al cliente de primera. <br>IVA incluido. No reembolsable.",
     "info": "En el calendario anterior, selecciona primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla.",
-    "info-without-calendar": "En el calendario anterior, selecciona primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla."
+    "info-without-calendar": "En el calendario anterior, selecciona primero en el día en que quieres alquilar la bicicleta, y después en el día en que quieras devolverla."
   },
   "list": {
     "edit-bike": "Editar bici",

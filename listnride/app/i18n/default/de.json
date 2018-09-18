@@ -1,7 +1,7 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
-    "search-placeholder": "Search for e.g. Berlin, Munich",
+    "search-placeholder": "Suche z.B. nach Berlin, München,....",
     "no-bikes-found": "Keine Fahrräder gefunden",
     "dresden": "Dresden",
     "bolzano": "Bozen",
@@ -131,7 +131,7 @@
     "tac": "Nutzungsbedingungen",
     "privacy-policy": "Datenschutzerklärung",
     "booking-accept-tac": "Durch Buchen bestätige ich die",
-    "already-booked": "Bereits Gebucht",
+    "already-booked": "Bereits gebucht",
     "for-shops": "Für Fahrradläden",
     "contact-us": "Bitte kontaktiere uns via ",
     "required": "Dies ist erforderlich",
@@ -171,12 +171,12 @@
   "veletage": {
     "event": {
       "calendar-title": "veletage POP-UP SALON",
-      "select-day": "1. Wählt das Mietdatum aus ",
-      "select-slot": "2. Wählt den Zeitfenster ",
+      "select-day": "1. Wähl das Mietdatum aus ",
+      "select-slot": "2. Wähl dein Zeitfenster ",
       "day-error": "Wähle zuerst einen Tag aus",
       "select-return": "3. Select return time",
       "time-error": "Please select a pickup time first",
-      "calendar-subtitle": "Vom 22. bis zum 30. September 2018 sind die UCI Road World Championships in Innsbruck-Tirol (Österreich) zu Gast. Teste und Miete das perfekte Rennrad für deine Ausfahrt. "
+      "calendar-subtitle": "Vom 22. bis zum 30. September 2018 sind die UCI Road World Championships in Innsbruck-Tirol (Österreich) zu Gast. Teste und miete das perfekte Rennrad für deine Ausfahrt. "
     }
   },
   "brand-integration": {
@@ -828,8 +828,8 @@
   },
   "calendar": {
     "invalid-date": "Datumsangabe nicht korrekt",
-    "status-closed": "closed",
-    "status-in-past": "in past",
+    "status-closed": "geschlossen",
+    "status-in-past": "in Vergangenheit",
     "info-service-fee-insurance": "Dies hilft uns, unsere Plattform zu betreiben  <br0>erstklassigen Kundenservice anzubieten. <br1>Inklusive MwSt. Keine Rückerstattung.",
     "basic-insurance-included": "Basis-Versicherung inklusive",
     "request-bike": "Rad anfragen",
@@ -843,7 +843,7 @@
     "info-discount": "Durchschnittlicher Tagesrabatt<br>pro Tag bei Miete über<br>einen längeren Zeitraum.",
     "info-service-fee": "Dies hilft uns, unsere Plattform zu betreiben  <br>erstklassigen Kundenservice anzubieten. <br>Inklusive MwSt. Keine Rückerstattung.",
     "info": "Im Kalender erst den Tag auswählen,<br>an dem du das Fahrrad mieten möchtest,<br>und dann den Tag, an dem<br>du es zurückgeben magst.",
-    "info-without-calendar": "Im Kalender erst den Tag auswählen,<br0>an dem du das Fahrrad mieten möchtest,<br1>und dann den Tag, an dem<br2>du es zurückgeben magst."
+    "info-without-calendar": "Wähle im Kalender zuerst das Startdatum deiner Miete und dann das Rückgabedatum. Wähle danach Start- und Endzeit."
   },
   "list": {
     "edit-bike": "Rad bearbeiten",
