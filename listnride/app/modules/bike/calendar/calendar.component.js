@@ -145,7 +145,7 @@ angular.module('bike').component('calendar', {
       calendar.event.returnSlotId;
       calendar.event.slots= [];
       calendar.event.familyId = 34;
-      calendar.event.days = _.range(20, 31);
+      calendar.event.days = _.range(22, 31);
 
       var slotDuration = 1;
       var eventYear = 2018;
@@ -223,11 +223,11 @@ angular.module('bike').component('calendar', {
             if (startYear == eventYear &&
                 startMonth == eventMonth &&
                 calendar.event.slots[j].day == startDay &&
-                calendar.event.slots[j].hour >= startTime &&
+                startTime >= calendar.event.slots[j].hour &&
                 (calendar.event.slots[j].overnight || calendar.event.slots[j].hour + slotDuration <= endTime)) {
               calendar.event.slots[j].reserved = true;
-              // calendar.event.slots[j].text = calendar.event.slots[j].text.split(" ", 1) + " (booked)";
-              calendar.event.slots[j].text = calendar.event.slots[j].text + " (booked)";
+              calendar.event.slots[j].text = calendar.event.slots[j].text.split(" ", 1) + " (booked)";
+              // calendar.event.slots[j].text = calendar.event.slots[j].text + " (booked)";
             }
           }
         }
