@@ -172,7 +172,7 @@
     "event": {
       "calendar-title": "veletage POP-UP SALON",
       "select-day": "1. Select the Rental Date ",
-      "select-slot": "2. Select Rental Time",
+      "select-slot": "2. Select the rental time",
       "day-error": "Please select a day first",
       "select-return": "3. Select return time",
       "time-error": "Please select a pickup time first",
@@ -829,7 +829,7 @@
   "calendar": {
     "invalid-date": "Dates are invalid",
     "status-closed": "closed",
-    "status-in-past": "in past",
+    "status-in-past": "in the past",
     "info-service-fee-insurance": "helps us run our platform and<br0>allows us to offer first-class customer service.<br1>VAT included. Non-refundable.",
     "basic-insurance-included": "Basic insurance included",
     "request-bike": "Request Bike",
