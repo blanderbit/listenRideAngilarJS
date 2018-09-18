@@ -165,9 +165,6 @@
   "lister": {
     "chat": "La reserva de la bicicleta fue cancelada."
   },
-  "faq-page": {
-    "topics": "Temas"
-  },
   "veletage": {
     "event": {
       "calendar-title": "veletage POP-UP SALON",
@@ -1216,7 +1213,8 @@
       "dutch": "Holandés",
       "italian": "Italiano",
       "spanish": "Español",
-      "german": "Alemán"
+      "german": "Alemán",
+      "english": "Inglés"
     },
     "insurance-partner": "Socio de seguros",
     "insurance": "Seguro",
