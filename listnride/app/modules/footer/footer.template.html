@@ -140,8 +140,11 @@
           <md-list flex-xs="50">
             <md-subheader class="md-no-sticky">{{ 'footer.language' | translate }}</md-subheader>
             <md-menu md-position-mode="target bottom" class="lnr-padding-left">
-              <md-button class="lnr-btn-lang md-lined md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">
-                {{ footer.language }}
+              <md-button
+                class="lnr-btn-lang md-lined md-right-arrow"
+                md-no-ink
+                translate="{{ footer.language }}"
+                ng-click="$mdOpenMenu($event)">
               </md-button>
               <md-menu-content width="2">
                 <md-menu-item>
