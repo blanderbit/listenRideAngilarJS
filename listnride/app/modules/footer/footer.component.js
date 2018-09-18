@@ -76,18 +76,13 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
       footer.year = moment().year();
 
       function getLanguage(locale) {
-        if (locale === 'en') {
-          return 'English';
-        } else if (locale === 'de') {
-          return 'Deutsch';
-        } else if (locale === 'nl') {
-          return 'Nederlands';
-        } else if (locale === 'it') {
-          return 'Italiano';
-        } else if (locale === 'es') {
-          return 'Spanish';
-        } else {
-          return 'English';
+        switch (locale) {
+          case 'de': return $translate.instant('footer.languages.german');
+          case 'nl': return $translate.instant('footer.languages.dutch');
+          case 'it': return $translate.instant('footer.languages.italian');
+          case 'es': return $translate.instant('footer.languages.spanish');
+          case 'en':
+          default: return $translate.instant('footer.languages.english');
         }
       }
     }
