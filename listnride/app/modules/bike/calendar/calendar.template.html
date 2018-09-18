@@ -58,26 +58,31 @@
   <p class="md-headline lnr-center">{{ 'veletage.event.calendar-title' | translate }}</p>
   <p class="md-body-1 lnr-center">{{ 'veletage.event.calendar-subtitle' | translate }}</p>
   <md-input-container class="md-block">
-    <label>1. Select the Rental Day</label>
+    <label>{{ 'veletage.event.select-day' | translate }}</label>
     <md-select ng-model="calendar.day">
       <md-option
         ng-repeat="i in calendar.event.days"
         value="{{i}}"
       >
-        {{i}} of September
+        {{i}} {{ 'shared.Sep' | translate }} 2018
       </md-option>
     </md-select>
   </md-input-container>
 
   <md-input-container class="md-block">
-    <label>2. Select Rental Slot</label>
+    <label>{{ 'veletage.event.select-slot' | translate }}</label>
     <md-select ng-model="calendar.event.pickupSlotId" ng-change="calendar.event.changePickupSlot()">
 
       <md-option ng-if="!calendar.day">
-        Please select a day first
+        {{ 'veletage.event.day-error' | translate }}
       </md-option>
 
-      <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.reserved" ng-if="calendar.day == slot.day && slot.pickupEnabled" value="{{$index}}">
+      <md-option
+        ng-repeat="slot in calendar.event.slots"
+        ng-disabled="slot.reserved"
+        ng-if="calendar.day == slot.day && slot.pickupEnabled"
+        value="{{$index}}"
+      >
         {{slot.text}}
       </md-option>
 
@@ -85,14 +90,19 @@
   </md-input-container>
 
   <md-input-container class="md-block" ng-hide="true">
-    <label>3. Select return time</label>
+    <label>{{ 'veletage.event.select-return' | translate }}</label>
     <md-select ng-model="calendar.event.returnSlotId" ng-change="calendar.event.changeReturnSlot()">
 
       <md-option ng-if="!calendar.day">
-        Please select a pickup time first
+        {{ 'veletage.event.time-error' | translate }}
       </md-option>
 
-      <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.returnDisabled" ng-if="calendar.day == slot.day" value="{{$index}}">
+      <md-option
+        ng-repeat="slot in calendar.event.slots"
+        ng-disabled="slot.returnDisabled"
+        ng-if="calendar.day == slot.day"
+        value="{{$index}}"
+      >
         {{slot.text}}
       </md-option>
 

@@ -66,7 +66,11 @@ angular.module('booking', [])
             booking.coverageTotal = booking.bike.coverage_total || 0;
             getLister();
             booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
-            booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
+            if (booking.bike.size === 0) {
+              booking.bikeSize = $translate.instant("search.unisize");
+            } else {
+              booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
+            }
             booking.prices = booking.bike.prices;
             updatePrices();
           },

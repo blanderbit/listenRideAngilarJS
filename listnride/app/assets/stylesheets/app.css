@@ -955,6 +955,13 @@ footer .lnr-link {
 /* DIALOG MODALS
 /*-----------------------------------------------------------------------------------*/
 
+#ie-warning {
+  display: none;
+}
+.ie-browser #ie-warning {
+  display: block;
+}
+
 .lnr-IE-warning-overlay {
   position: absolute;
   z-index: 100;
@@ -2674,6 +2681,16 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   color: #7ab2f8;
 }
 
+.lnr-select-blue:not([disabled]):focus {
+  border-color: #7ab2f8;
+}
+
+.lnr-select-blue:not([disabled]):focus .md-select-value .md-select-icon,
+.lnr-select-blue__option[selected],
+.lnr-select-blue__option:not([disabled]):focus {
+  color: #7ab2f8;
+}
+
 .md-button.md-menu__close-btn {
   padding: 0 5px;
   margin: 0;
@@ -3020,16 +3037,21 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 /* HELP_AND_SERVICE
 /*-----------------------------------------------------------------------------------*/
 
-.help__group-card {
+.help__group-card a {
   color: #555555;
   border: 1px solid #e1e1e1;
   border-radius: 7px;
-  padding: 16px 0;
+  height: 100%;
+  padding: 16px 5px;
   cursor: pointer;
   transition: background .3s;
 }
 
-.help__group-card:hover {
+.help__group-card md-icon {
+  margin: 0;
+}
+
+.help__group-card a:hover {
   background: #353a410d;
 }
 

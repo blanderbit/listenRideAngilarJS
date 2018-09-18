@@ -5,14 +5,15 @@
 
     <div class="faq__mobile-select" hide-gt-sm layout="row">
       <md-select
+        class="lnr-select-blue"
         ng-model="faq.activeGroupIndex"
         placeholder="{{ 'shared.please-select' | translate }}"
       >
         <md-option
           ng-repeat="i in [].constructor(8) track by $index"
           value="{{$index + 1}}"
+          class="lnr-select-blue__option"
         >
-          <md-icon md-svg-src="app/assets/ui_icons/help/group-{{$index+1}}.svg" class="lnr-icn-sm"></md-icon>
           <span translate="help-and-service.faq.group-{{$index+1}}.title"></span>
         </md-option>
       </md-select>

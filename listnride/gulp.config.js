@@ -152,7 +152,6 @@ module.exports = function () {
                     defaultTranslation: 'default',
                     staticTranslation: 'static',
                     btKey: 'sandbox_jcmqgjqd_t4ptn54mswxmpnd5'
-
                 }
             },
             imageOptions: {

@@ -39,7 +39,7 @@
       "bike-shops": "Bike Shops",
       "cafes-bars": "Cafés, Bars & Eatery",
       "bike-routes-content": "It was 1972 when the Summer Olympic Games took place at the <a href=\"http://www.olympiapark.de\" target=\"_blank\">Olympiapark</a> in Munich. Nowadays the Olympia park has developed into a popular place for a spin around the grounds. Close to the city center, you'll find \"the central park\" of Munich, the <a href=\"http://www.muenchen.de/int/en/sights/parks/english-garden.html\" target=\"_blank\">Englischer Garten</a>. It has a tranquil and nobel ambiance, inviting you and your bike to explore further. Go up to <a href=\"http://www.aumeister.de\" target=\"_blank\">Aumeister Beergarten</a> on the north end of the park and treat yourself with a typical Bavarian mass. If you're looking for trails: Keep an eye on the <a href=\"http://hikeandbike.de/2015/03/19/isartrails-muenchen\" target=\"_blank\">east side of the Isar River</a>. It provides miles of trails for all abilities.",
-      "bike-shops-content": "If you want to get to know Munich's cycling scene, we recommend you to visit some of the following shops. At \n<a href=\"http://bikedress.de\" target=\"_blank\">Bikedress</a> \nyou'll find an assortment of the finest cycling apparel and accessories, featuring brands like ASSOS and PEDALED. Getting hungry thirsty? No worries, next door to Bikedress you'll find the \n<a href=\"http://monacoveloclub.de/\"target=\"_blank\">monaco velo club</a>\ncafé which provides you with authentic Italian specialties in a classic cycling atmosphere. \n<a href=\"http://www.gutenbiken.com\" target=\"_blank\">Guten Bike</a> \nis a specialized bike shop focused on high-quality repairs, restorations, and custom builds. If you are more interested in well-designed urban bicycles you should definitely have a look at \n<a href=\"http://www.munixfinestbicycles.de\" target=\"_blank\">MunixFinest</a>.",
+      "bike-shops-content": "If you want to get to know Munich's cycling scene, we recommend you to visit some of the following shops. At \n  <a0 href=\"http://bikedress.de\" target=\"_blank\">Bikedress</a0> \nyou'll find an assortment of the finest cycling apparel and accessories, featuring brands like ASSOS and PEDALED. Getting hungry thirsty? No worries, next door to Bikedress you'll find the \n<a1 href=\"http://monacoveloclub.de\" target=\"_blank\">monaco velo club</a1> \ncafé which provides you with authentic Italian specialties in a classic cycling atmosphere. \n<a2 href=\"http://www.gutenbiken.com\" target=\"_blank\">Guten Bikesn</a2> \nis a specialized bike shop focused on high-quality repairs, restorations, and custom builds. If you are more interested in well-designed urban bicycles you should definitely have a look at \n<a3 href=\"http://www.munixfinestbicycles.de\" target=\"_blank\">Munix Finest Bicycles</a3>\n.",
       "cafes-bars-content": "<a href=\"http://www.necado.de\" target=\"_blank\">Necado</a> in Schwabing takes care of your daily coffee supply. Looking for food? Go to <a href=\"http://charl.ie\" target=\"_blank\">Charlie</a>, the Vietnamese restaurant, which offers excellent traditional vietnamese dishes in a relaxed loungy setting. The typical Bavarian ambiance, you'll find at <a href=\"http://www.fraunhofertheater.de/index.php?page_id=23\" target=\"_blank\">Fraunhofer</a>. Nice located in the Glockenbackviertel, Frauenhofer offers exactly what Bavaria is known for: good beer, and traditional heavy food."
     },
     "amsterdam": {
@@ -77,16 +77,12 @@
       "cafes-bars-content": "If you like vegan and vegetarian food, we recommend a visit at <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> at the Karmeliterplatz. If you prefer the more traditional Austrian kitchen, we highly recommend <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>. Order a traditional Tafelspitz or Wiener Schnitzel and enjoy it outside with the view on the famous Vienna Opera. You’ll have a great night to remember! For finishing touch of the day, it makes sense to walk towards the Danube. On the way you’ll find plenty of interesting bars or just sit outside under the stars at the river."
     }
   },
-  "footer": {
-    "languages": {
-      "english": "English"
-    }
-  },
   "rider": {
     "chat": "Your booked ride was cancelled."
   },
   "faq-page": {
-    "header": "Frequently Asked Questions"
+    "header": "Frequently Asked Questions",
+    "topics": "Topics"
   },
   "shared": {
     "list-your-bike": {
@@ -115,8 +111,8 @@
         "title": "Renting out your bikes",
         "description": "Create a listing and manage your bikes on listnride. Our easy and powerful managing tools help you to quickly list your bike or an entire fleet of bikes.",
         "answer-1": "Click on “<b>List a Bike</b>” and add information about your bike including brand, description, pictures, rental price and accessories that you can provide with the bike. When done, click “List my Bike”. Your bike is now available for rentals to the community.",
-        "answer-2": "A detailed description of the bike, good quality pictures as well as a reasonable pricing makes a bike attractive for potential Riders. You can find an example \n<a href=\"http://www.listnride.de/bikes/3369\" target='\"_blank'>here</a>.\n<p>\nA detailed description contains all the relevant data of your bike, such as: frame size, model name and manufacturing year, groupset, rims, hub and number of gears as well as maybe some custom details of your bike.\n<p>\nSince some Listers refer to manufacturers stock photos, especially for high-end bikes, we also recommend mentioning the colour of your bike, if this differs from the images you upload. A complete profile of yourself or your shop also helps to further raise attractiveness for your bikes. You can find a good example at \n<a href=\"http://www.listnride.com/users/1886\" target='\"_blank'>Munix Finest Bicycles</a>.",
-        "answer-3": "The first things Riders see when looking for bikes in your area are the pictures in the search results. Pictures that give an overall impression of your bike will attract more Riders to look at your bike’s detail page.\n<p>\n<a href=\\“http://www.listnride.com/how-to-shoot-bike-photos\\”target=\\“_blank\\“>Here</a>\n you can find a few tips on how to put your bike in its true light!",
+        "answer-2": "A detailed description of the bike, good quality pictures as well as a reasonable pricing makes a bike attractive for potential Riders. You can find an example \n<a href=\"http://www.listnride.com/bikes/3369\" target=\"_blank\">here</a>.\n<p>\nA detailed description contains all the relevant data of your bike, such as: frame size, model name and manufacturing year, groupset, rims, hub and number of gears as well as maybe some custom details of your bike.\n<p>\nSince some Listers refer to manufacturers stock photos, especially for high-end bikes, we also recommend mentioning the colour of your bike, if this differs from the images you upload. A complete profile of yourself or your shop also helps to further raise attractiveness for your bikes. You can find a good example at \n<a href=\"http://www.listnride.com/users/1886\"target=\"_blank\">Munix Finest Bicycles</a>.",
+        "answer-3": "The first things Riders see when looking for bikes in your area are the pictures in the search results. Pictures that give an overall impression of your bike will attract more Riders to look at your bike’s detail page.\n<p>\n<a href=\"http://www.listnride.com/how-to-shoot-bike-photos\" target=\"_blank\">Here</a> \nyou can find a few tips on how to put your bike in its true light!",
         "answer-4": "You are completely free to decide on the rental price. Note that the weekly price can’t be lower than the daily price. To determine the most appropriate rental price, you can compare your bike to similar available bikes on listnride.",
         "answer-5": "To change your bike’s availability use the \"<b>clock icon</b>\" under the specific bike on the “<b>My Bikes</b>” page. In the calendar you can set the time span for when your bike is unavailable.  Your bike can’t be requested during that time.",
         "answer-6": "You can edit the details of your listed bikes at any time by clicking the \"<b>pencil icon</b>\" under the specific bike on the “<b>My Bikes</b>” page.",
@@ -124,8 +120,8 @@
         "answer-8": "Use the \"<b>bin icon</b>\" under the specific bike on the “<b>My Bikes</b>” page.",
         "answer-9": "You will receive an e-mail and sms notification, informing you on the new booking request, containing all relevant details.\nLogin and go to “Requests” to accept or reject the booking and start a chat with the Rider if there is something to clarify.\nIf you accept the request the booking is done and the rental is paid for. You will receive a booking confirmation with all the relevant information and contact details of the Rider via e-mail.",
         "answer-10": "Sure. Click the red button to reject the requests and ask the Rider to request the bike for a different date and time. Please be so kind to let the Riders know why you rejected their request.",
-        "answer-11": "The Rider might be new in town and need a bit more time to find the location, just allow the Rider a time buffer of 15-30 minutes. If a Rider doesn’t show up after that, first try to get in touch directly through the mobile number provided to you. If you still can’t get a hold of the Rider, feel free to no longer be obliged by the agreement. \n<br>\nWe would appreciate a  \n<a href='\"mailto:contact@listnride.com?subject=Rider doesn&#39;t show for pick-up“'>short message</a> \njust to see if we may support you.",
-        "answer-12": "Also here some flexibility is required, just allow the Rider a time buffer of 10-15 minutes. If the Rider doesn’t return the bike after that, get in touch directly through the phone number provided. If it doesn’t work, \n<a href=\"contact@listnride.com?subject=Rider doesn't show for return\">contact us</a> \nand we will upport you.",
+        "answer-11": "The Rider might be new in town and need a bit more time to find the location, just allow the Rider a time buffer of 15-30 minutes. If a Rider doesn’t show up after that, first try to get in touch directly through the mobile number provided to you. If you still can’t get a hold of the Rider, feel free to no longer be obliged by the agreement. \n<br>\nWe would appreciate a  \n<a href=\"mailto:contact@listnride.com?subject=Rider does not show for pick-up\">short message</a> \njust to see if we may support you.",
+        "answer-12": "Also here some flexibility is required, just allow the Rider a time buffer of 10-15 minutes. If the Rider doesn’t return the bike after that, get in touch directly through the phone number provided. If it doesn’t work, \n<a href=\"mailto:contact@listnride.com?subject=Rider does not show for return\">contact us</a> \nand we will upport you.",
         "answer-13": "To confirm the return of your bike, login to your account, go the specific request and click the “Confirm Return” button in the chat.",
         "question-1": "How do I list my bike?",
         "question-2": "What makes a bike attractive to Riders?",
@@ -185,7 +181,7 @@
       },
       "group-5": {
         "title": "Insurance & Service",
-        "description": "We offer a basic insurance package that is included by default in the rental process. An optional premium package can be added by the Rider.\n<p>\nBoth packages provide ease of mind against damages. The insurance is provided by our partner \n<a href=\"http://www.hepster.com/\" target='\"_blank'>hepster</a>\nand covered by \n<a href=\"http://www.gothaer.de/\" target='\"_blank'>Gothaer Insurance</a>.\n<p>\nFor the time being, the insurance is only available for rentals in Germany and Austria. We are working on bring the insurance to more European countries!\n<p>\nYou can find all details of the bike insurance <a href=\"http://www.listnride.com/insurance/\" target='\"_blank'>here.  </a>",
+        "description": "We offer a basic insurance package that is included by default in the rental process. An optional premium package can be added by the Rider.\n<p>\nBoth packages provide ease of mind against damages. The insurance is provided by our partner \n <a href=\"http://www.hepster.com/\" target=\"_blank\">hepster</a> \nand covered by \n<a href=\"http://www.gothaer.de/\" target=\"_blank\">Gothaer Insurance</a>.\n<p>\nFor the time being, the insurance is only available for rentals in Germany and Austria. We are working on bringing the insurance to more European countries!\n<p>\nYou can find all \n<a href=\"/insurance\" target=\"_blank\">details for the insurance</a>\nhere. ",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -200,7 +196,7 @@
       "group-6": {
         "title": "Booking & Cancelation",
         "description": "Sometimes you really need to cancel a rental. It happens. Learn how to cancel a booking and under what circumstances a refund will happen.",
-        "answer-1": "To cancel a booking please inform the other party directly through the chat and explain why you want to cancel the ride.\nYou also need to inform listnride via e-mail about your cancellation. We need your full name, e-mail address, the bike you booked and location.\n<p>\nPlease note that we follow a cancellation policy. You can find more information in our \n<a href=\"http://www.listnride.com/terms/”target=\" _blank>Terms and Conditions</a>.",
+        "answer-1": "To cancel a booking please inform the other party directly through the chat and explain why you want to cancel the ride.\nYou also need to inform listnride via e-mail about your cancellation. We need your full name, e-mail address, the bike you booked and location.\n<p>\nPlease note that we follow a cancellation policy. You can find more information in our \n<a href=\"/terms\" target=\"_blank\">Terms and Conditions</a>.",
         "answer-2": "Free cancellation is possible if this takes place no later than 5 days before the start of the rental period and the rental period is longer than 24 hours (for example from 9.00 to 12.00 the next day). In all other cases, there are costs associated with the cancellation.",
         "answer-3": "Riders will get a full refund of the rental price, if the cancellation is made at least five days before the start of the rental period.\nIf the cancellation is made less than five days before the start of the rental period, but at least 24 hours before the start of the rental period Riders will get 50% of the net rental price refunded. If the cancellation is made less than 24 hours before, Riders don’t get any refund.",
         "answer-4": "listnride service fees are not refundable in case of cancellation by the Rider.\nIn case of cancellation by the Lister, the Rider will receive compensation of both the rental price as well as listnride service fees.",
@@ -214,7 +210,7 @@
       "group-7": {
         "title": "Vouchers & Credits",
         "description": "Use vouchers to get credit for bike rentals. Here you can learn how to redeem them. You can also invite friends to get credit.",
-        "answer-1": "You can get vouchers by inviting your friends to join our bike-sharing community through Facebook or via email. Log into your profile, go to the \n<a href=\"http://www.listnride.com/invite-friends\" target='\"_blank'>invite Friends</a> \npage and share the link. If your friends rent or list a bike using the link, you will receive a 10€ credit as a thank you. \nYou can use that credit for your next rental.",
+        "answer-1": "You can get vouchers by inviting your friends to join our bike-sharing community through Facebook or via email. Log into your profile, go to the \n<a href=\"http://www.listnride.com/invite-friends\"target=\"_blank\">invite Friends</a> \npage and share the link. If your friends rent or list a bike using the link, you will receive a 10€ credit as a thank you. \nYou can use that credit for your next rental.",
         "answer-2": "To use vouchers, just enter the voucher code in the entry field “<b>Redeem Voucher</b>” when you request a bike. Or you can enter the code in your account settings, in the section “<b>Vouchers</b>”.",
         "answer-3": "You can use vouchers every time you request a bike, but a single code can only be used once. If you don’t use the total amount at once, the saldo will be saved in your account and can be used for your next rental.",
         "answer-4": "How do I search for a bike?",
@@ -515,7 +511,7 @@
       "description": "veloheld bikes stand for pure aesthetic and functional technics – they are perfectly prepared for the dynamic and all the impassibility of everyday life. But above all, they are so much fun to ride!",
       "feature-1": {
         "title": "Timeless and sustainable",
-        "description": "veloheld bikes are timeless thanks to their elegant \nsteel frames. Used in prodution is only light and comfortable \nchromoly steel, which is more eco-friendly in \ncomparison to other materials used in the \nbicycle industry."
+        "description": "veloheld bikes are timeless thanks to their elegant \nsteel frames. Used in production is only light and comfortable \nchromoly steel, which is more eco-friendly in \ncomparison to other materials used in the \nbicycle industry."
       },
       "feature-2": {
         "title": "Custom color ",
@@ -555,13 +551,13 @@
       "faq-question-1": "Do I need a licence plate and insurance for my LEAOS bike?",
       "faq-answer-1": "Pursuant to EU law, the 25 km/h version does not require a license plate or insurance. There is also a 45 km/h version, which is classified as a moped and thus requires a licence plate and insurance.",
       "faq-question-2": "How much maintenance do LEAOS bikes require?",
-      "faq-answer-2": "LEAOS bikes are very low maintenance since the drive components are protected from the weather. Every 2–3 months, the chain should be oiled. The tyre pressure should be checked regularly. The brakes must be checked regularly for wear and tear to the brake pads.",
+      "faq-answer-2": "LEAOS bikes require very little maintenance as the drive components are protected from the weather. The chain should be oiled every 2-3 months. The tyre pressure should be checked regularly. The brakes must be checked regularly for wear of the brake linings.\nWith belt drive, the belt only has to be replaced every 20,000 km.",
       "faq-question-3": "Are there different frame sizes?",
-      "faq-answer-3": "We offer 1 frame size suitable for people between 155 cm to 190 cm. As a result of the bike’s special geometric shape, the saddle shifts back as it is raised. The various stems for the handlebars can also be matched to size.",
+      "faq-answer-3": "LEAOS frames are \"one size fits all\" frames and have a special geometry for riders from 170 cm to 195 cm height. Fine tuning is done with stem, handlebar height and saddle. This can be specified when ordering.",
       "faq-question-4": "Can the LEAOS bikes be fittet with childseats?",
       "faq-answer-4": "Yes. Please note that a child seat must be mounted on a rack, which must be ordered separately with the bike.",
       "faq-question-5": "Do LEAOS bikes have suspension systems?",
-      "faq-answer-5": "LEAOS bike are cushioned by their special balloon tires. According to tests, the spring action of these tyres is better than a conventional trekking- or city-bikes fork-suspension and offers low rolling resistance."
+      "faq-answer-5": "LEAOS bikes are equipped with balloon tyres. In addition, the frames have a particularly sophisticated flexibility, which creates a very pleasant ride.  In addition, front suspension fork and saddle suspension can be installed."
     },
     "ampler": {
       "meta-title": "E-Bike Test Ride Program",

@@ -145,7 +145,7 @@ angular.module('bike').component('calendar', {
       calendar.event.returnSlotId;
       calendar.event.slots= [];
       calendar.event.familyId = 34;
-      calendar.event.days = _.range(20, 31);
+      calendar.event.days = _.range(22, 31);
 
       var slotDuration = 1;
       var eventYear = 2018;
@@ -156,9 +156,9 @@ angular.module('bike').component('calendar', {
       });
 
       function generateSlot(day) {
-        _.forEach(_.range(9, 18, 2), function(hour) {
+        _.forEach(_.range(9, 20, 2), function(hour) {
           var slot = {
-            pickupEnabled: hour !== 17,
+            pickupEnabled: hour !== 19,
             overnight: false,
             reserved: false,
             day: day,
@@ -177,7 +177,7 @@ angular.module('bike').component('calendar', {
         // Enable all following slots as returnSlots if no booking is in between
         var bookingInBetween = false;
         _.each(calendar.event.slots, function(value, index) {
-          if (index > calendar.event.pickupSlotId) {
+          if (index >= calendar.event.pickupSlotId) {
             if (value.reserved && calendar.event.slots[index-1].reserved) {
               bookingInBetween = true;
             }
@@ -191,7 +191,8 @@ angular.module('bike').component('calendar', {
         calendar.startDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
 
         // Presets returnSlot to be (slotDuration) after pickupSlot
-        calendar.event.returnSlotId = parseInt(calendar.event.pickupSlotId) + slotDuration;
+        calendar.event.returnSlotId = parseInt(calendar.event.pickupSlotId);
+        // calendar.event.returnSlotId = parseInt(calendar.event.pickupSlotId) + slotDuration;
         calendar.event.changeReturnSlot();
         dateChange(calendar.startDate, calendar.endDate);
       };
@@ -200,9 +201,9 @@ angular.module('bike').component('calendar', {
         var slot = calendar.event.slots[calendar.event.returnSlotId];
 
         if (slot.overnight) {
-          calendar.endDate = new Date(eventYear, eventMonth, slot.day + 1, slot.hour, 0, 0, 0);
+          calendar.endDate = new Date(eventYear, eventMonth, slot.day + 1, slot.hour + 2, 0, 0, 0);
         } else {
-          calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
+          calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour + 2, 0, 0, 0);
         }
 
         dateChange(calendar.startDate, calendar.endDate);
@@ -219,10 +220,14 @@ angular.module('bike').component('calendar', {
           var startMonth = startDate.getMonth();
 
           for (var j = 0; j < calendar.event.slots.length; j ++) {
-            if (startYear == eventYear && startMonth == eventMonth && calendar.event.slots[j].day == startDay && calendar.event.slots[j].hour >= startTime && (calendar.event.slots[j].overnight || calendar.event.slots[j].hour + slotDuration <= endTime)) {
+            if (startYear == eventYear &&
+                startMonth == eventMonth &&
+                calendar.event.slots[j].day == startDay &&
+                startTime >= calendar.event.slots[j].hour &&
+                (calendar.event.slots[j].overnight || calendar.event.slots[j].hour + slotDuration <= endTime)) {
               calendar.event.slots[j].reserved = true;
-              // calendar.event.slots[j].text = calendar.event.slots[j].text.split(" ", 1) + " (booked)";
-              calendar.event.slots[j].text = calendar.event.slots[j].text + " (booked)";
+              calendar.event.slots[j].text = calendar.event.slots[j].text.split(" ", 1) + ' ('+ $translate.instant('calendar.booked')+')';
+              // calendar.event.slots[j].text = calendar.event.slots[j].text + " (booked)";
             }
           }
         }
@@ -232,7 +237,7 @@ angular.module('bike').component('calendar', {
 
       calendar.availabilityMessage = function($index, date) {
         if (!calendar.isOptionEnabled($index, date)) {
-          return openingHoursAvailable() ? ' (closed)' : ' (in past)'
+          return openingHoursAvailable() ?  ' ('+ $translate.instant('calendar.status-closed')+')' : ' ('+($translate.instant('calendar.status-in-past'))+')';
         }
       };
 

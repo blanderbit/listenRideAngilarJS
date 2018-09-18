@@ -1,6 +1,8 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "search-placeholder": "Search for e.g. Berlin, Munich",
+    "info": "Info",
     "no-bikes-found": "No bikes found",
     "dresden": "Dresden",
     "bolzano": "Bolzano",
@@ -13,10 +15,13 @@
       "email-required": "Please enter your email address, email is required",
       "email-not-valid": "Please, enter a valid email address",
       "phone-not-valid": "Please, enter a valid phone number",
-      "phone-required": "Please enter your phone number, this field is required",
+      "phone-required": "Please enter your phone number, this field is required"
+    },
+    "notifications": {
       "404": "Page doesn't exist",
       "422": "Wrong data format entered",
-      "500": "Internal server error"
+      "500": "Internal server error",
+      "200": "Success"
     },
     "basic-fee": "Service Fee including Basic Insurance",
     "how-it-works": "How it works",
@@ -161,13 +166,15 @@
   "lister": {
     "chat": "Your booked bike was cancelled."
   },
-  "faq-page": {
-    "topics": "Topics"
-  },
   "veletage": {
     "event": {
-      "calendar-title": "Example Veletage Title",
-      "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me in Lingohub."
+      "calendar-title": "veletage POP-UP SALON",
+      "select-day": "1. Select the Rental Date ",
+      "select-slot": "2. Select the rental time",
+      "day-error": "Please select a day first",
+      "select-return": "3. Select return time",
+      "time-error": "Please select a pickup time first",
+      "calendar-subtitle": "The UCI Road World Championships will take place in Innsbruck-Tirol (Austria) from 22nd to 30th September 2018. Test and rent the perfect road bike for your ride. "
     }
   },
   "brand-integration": {
@@ -621,6 +628,7 @@
   },
   "bike": {
     "rent-bike": "Rent Bike",
+    "two-hours": "for 2 hours",
     "view-pictures": "View Pictures",
     "for": "for",
     "meta-title": "Rent the {{name}} - {{category}} by {{brand}} in {{location}}.",
@@ -818,6 +826,9 @@
   },
   "calendar": {
     "invalid-date": "Dates are invalid",
+    "status-closed": "closed",
+    "status-in-past": "in the past",
+    "booked": "booked",
     "info-service-fee-insurance": "helps us run our platform and<br0>allows us to offer first-class customer service.<br1>VAT included. Non-refundable.",
     "basic-insurance-included": "Basic insurance included",
     "request-bike": "Request Bike",
@@ -887,7 +898,7 @@
     },
     "pictures": {
       "header": "Upload some pictures of your bike",
-      "hint": "Now select some nice pictures of your bike. Here are some important photo tips for making your listing look even better.",
+      "hint": "Now select some nice pictures of your bike. Here is a guide on how to make your listing look even better.",
       "how-to": "Photo tips for making your listing stand out",
       "label": "Pictures",
       "select-images": "Select images",
@@ -1192,7 +1203,7 @@
     },
     "share": {
       "email-subject": "{{full_name}} has invited you to join listnride!",
-      "email-body": "{{first_name}} has given you 10€ for your first adventure on the bike of your choice!%0AJoin listnride, the fastest growing bike sharing community, and get access to countless bikes for every purpose!%0ASign up and immediately receive a 10€ credit.%0A%0A{{voucher_url}}%0A%0ADo you want to thank {{first_name}}? Rent a bike or list your bike and {{first_name}} receives a 10€ credit, too!%0A%0AHave fun, and enjoy the ride!"
+      "email-body": "{{first_name}} has given you 10€ for your first adventure on the bike of your choice!  Join listnride, the fastest growing bike sharing community, and get access to countless bikes for every purpose! Sign up and immediately receive a 10€ credit. {{voucher_url}} Do you want to thank {{first_name}}? Rent a bike or list your bike and {{first_name}} receives a 10€ credit, too! Have fun, and enjoy the ride!"
     }
   },
   "error-404": {
@@ -1206,7 +1217,8 @@
       "dutch": "Dutch",
       "italian": "Italian",
       "spanish": "Spanish",
-      "german": "German"
+      "german": "German",
+      "english": "English"
     },
     "insurance-partner": "Insurance Partners",
     "insurance": "Insurance",

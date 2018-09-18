@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "search-placeholder": "Suche z.B. nach Berlin, München,....",
     "no-bikes-found": "Keine Fahrräder gefunden",
     "dresden": "Dresden",
     "bolzano": "Bozen",
@@ -13,10 +14,13 @@
       "email-required": "Bitte gib Deine E-Mail-Adresse ein, die E-Mailadresse ist erforderlich",
       "email-not-valid": "Bitte gib eine gültige E-Mail-Adresse ein",
       "phone-not-valid": "Bitte gib eine gültige Telefonnummer ein",
-      "phone-required": "Bitte gib die Telefonnummer ein, diese wird benötigt",
+      "phone-required": "Bitte gib die Telefonnummer ein, diese wird benötigt"
+    },
+    "notifications": {
       "404": "Seite existiert nicht",
       "422": "falsche Datenformat eingegeben.",
-      "500": "Interner Server Fehler"
+      "500": "Interner Server Fehler",
+      "200": "Success"
     },
     "basic-fee": "Die Servicegebühr beinhaltet die Basis-Versicherung",
     "how-it-works": "Wie funktioniert's",
@@ -127,7 +131,7 @@
     "tac": "Nutzungsbedingungen",
     "privacy-policy": "Datenschutzerklärung",
     "booking-accept-tac": "Durch Buchen bestätige ich die",
-    "already-booked": "Bereits Gebucht",
+    "already-booked": "Bereits gebucht",
     "for-shops": "Für Fahrradläden",
     "contact-us": "Bitte kontaktiere uns via ",
     "required": "Dies ist erforderlich",
@@ -161,13 +165,15 @@
   "lister": {
     "chat": "Dein gebuchtes Fahrrad wurde storniert."
   },
-  "faq-page": {
-    "topics": "Themenbereiche"
-  },
   "veletage": {
     "event": {
-      "calendar-title": "Example Veletage Title",
-      "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me in Lingohub."
+      "calendar-title": "veletage POP-UP SALON",
+      "select-day": "1. Wähl das Mietdatum aus ",
+      "select-slot": "2. Wähl dein Zeitfenster ",
+      "day-error": "Wähle zuerst einen Tag aus",
+      "select-return": "3. Select return time",
+      "time-error": "Please select a pickup time first",
+      "calendar-subtitle": "Vom 22. bis zum 30. September 2018 sind die UCI Road World Championships in Innsbruck-Tirol (Österreich) zu Gast. Teste und miete das perfekte Rennrad für deine Ausfahrt. "
     }
   },
   "brand-integration": {
@@ -621,6 +627,7 @@
   },
   "bike": {
     "rent-bike": "Fahrrad mieten",
+    "two-hours": "für 2 Stunden",
     "view-pictures": "Bilder ansehen",
     "for": "für",
     "meta-title": "{{name}} - {{category}} von {{brand}} in {{location}} mieten.",
@@ -818,6 +825,9 @@
   },
   "calendar": {
     "invalid-date": "Datumsangabe nicht korrekt",
+    "status-closed": "geschlossen",
+    "status-in-past": "in Vergangenheit",
+    "booked": "gebucht",
     "info-service-fee-insurance": "Dies hilft uns, unsere Plattform zu betreiben  <br0>erstklassigen Kundenservice anzubieten. <br1>Inklusive MwSt. Keine Rückerstattung.",
     "basic-insurance-included": "Basis-Versicherung inklusive",
     "request-bike": "Rad anfragen",
@@ -831,7 +841,7 @@
     "info-discount": "Durchschnittlicher Tagesrabatt<br>pro Tag bei Miete über<br>einen längeren Zeitraum.",
     "info-service-fee": "Dies hilft uns, unsere Plattform zu betreiben  <br>erstklassigen Kundenservice anzubieten. <br>Inklusive MwSt. Keine Rückerstattung.",
     "info": "Im Kalender erst den Tag auswählen,<br>an dem du das Fahrrad mieten möchtest,<br>und dann den Tag, an dem<br>du es zurückgeben magst.",
-    "info-without-calendar": "Im Kalender erst den Tag auswählen,<br0>an dem du das Fahrrad mieten möchtest,<br1>und dann den Tag, an dem<br2>du es zurückgeben magst."
+    "info-without-calendar": "Wähle im Kalender zuerst das Startdatum deiner Miete und dann das Rückgabedatum. Wähle danach Start- und Endzeit."
   },
   "list": {
     "edit-bike": "Rad bearbeiten",
@@ -1192,7 +1202,7 @@
     },
     "share": {
       "email-subject": "{{full_name}} hat dich zu listnride eingeladen!",
-      "email-body": "{{first_name}} hat dir 10€ für dein erstes Abenteuer auf einem Fahrrad deiner Wahl geschenkt!%0AWerde auch du Teil von listnride, der schnellstwachsenden Bikesharing Community und erhalte Zugriff auf unzählige Fahrräder für jeden erdenklichen Zweck!%0A%0A{{first_name}} sei dank, erhältst du sofort 10€ Startguthaben, sobald du dich registrierst.%0A%0A{{voucher_url}}%0A%0ADu möchtest dich bei {{first_name}} bedanken?%0AMiete ein Rad oder biete deins zum Verleih an und auch {{first_name}} erhält 10€ Guthaben :).%0A%0AViel Spaß und Fahrvergnügen."
+      "email-body": "{{first_name}} hat dir 10€ für dein erstes Abenteuer auf einem Fahrrad deiner Wahl geschenkt! Werde auch du Teil von listnride, der schnellstwachsenden Bikesharing Community und erhalte Zugriff auf unzählige Fahrräder für jeden erdenklichen Zweck! {{first_name}} sei dank, erhältst du sofort 10€ Startguthaben, sobald du dich registrierst. {{voucher_url}} Du möchtest dich bei {{first_name}} bedanken? Miete ein Rad oder biete deins zum Verleih an und auch {{first_name}} erhält 10€ Guthaben :). Viel Spaß und Fahrvergnügen."
     }
   },
   "error-404": {
@@ -1206,7 +1216,8 @@
       "dutch": "Niederländisch",
       "italian": "Italienisch",
       "spanish": "Spanisch",
-      "german": "Deutsch"
+      "german": "Deutsch",
+      "english": "Englisch"
     },
     "insurance-partner": "Versicherungspartner",
     "insurance": "Versicherung",

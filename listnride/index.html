@@ -139,6 +139,7 @@
   <script src="app/services/voucher/voucher.service.js"></script>
   <script src="app/services/country-code-translator/country-code-translator.service.js"></script>
   <script src="app/services/calendar-helper/calendar-helper.service.js"></script>
+  <script src="app/services/notification/notification.service.js"></script>
   <!-- core filters -->
   <script src="app/filters/category.filter.js"></script>
   <script src="app/filters/category-seo.filter.js"></script>
@@ -280,7 +281,24 @@
   <!-- End Crisp Chat Integration -->
 </head>
 <body layout="column">
-<!--[if !IE]>
+<header></header>
+<sidebar layout="row" header="header"></sidebar>
+<ui-view flex="auto"></ui-view>
+<privacy-bar></privacy-bar>
+
+<!-- IE BROWSER MODAL -->
+<script>
+  function isBrowserIE() {
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+    // If Internet Explorer up to 11
+    return msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./);
+  }
+  if (isBrowserIE()) {
+    var htmlRoot = document.getElementsByTagName( 'html' )[0];
+    htmlRoot.className += ' ie-browser';
+  }
+</script>
 <table id="ie-warning" class="lnr-IE-warning-overlay">
   <tr>
     <td>
@@ -305,12 +323,8 @@
     </td>
   </tr>
 </table>
-<![endif]-->
-<header></header>
-<sidebar layout="row" header="header"></sidebar>
-<ui-view flex="auto"></ui-view>
-<privacy-bar></privacy-bar>
-<!--<footer></footer>-->
+<!-- END IE BROWSER MODAL -->
+
 <!-- Analytics Opt-Out Script -->
 <script type="text/javascript">// <![CDATA[
 var gaProperty = 'UA-61041935-1';

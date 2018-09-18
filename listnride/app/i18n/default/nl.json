@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "search-placeholder": "Zoek naar bijvoorbeeld Berlijn, München",
     "no-bikes-found": " Helaas! er worden nog geen fietsen op deze locatie aangeboden.",
     "dresden": "Dresden",
     "bolzano": "Bolzano",
@@ -13,10 +14,13 @@
       "email-required": "Vul een geldig emailadres in",
       "email-not-valid": "Vul een geldig emailadres in",
       "phone-not-valid": "Voer alstublieft een geldig telefoonnummer in",
-      "phone-required": "Voer je telefoonnummer in. ",
+      "phone-required": "Voer je telefoonnummer in. "
+    },
+    "notifications": {
       "404": "Pagina bestaat niet",
       "422": "Verkeerd dataformaat ingevoerd",
-      "500": "Interne Server Fout"
+      "500": "Interne Server Fout",
+      "200": "gelukt! "
     },
     "basic-fee": "Servicekosten inclusief basisverzekering",
     "how-it-works": "Hoe werkt het",
@@ -156,13 +160,15 @@
   "lister": {
     "chat": "De boeking van je huurfiets is geannuleerd."
   },
-  "faq-page": {
-    "topics": "Vraagstukken"
-  },
   "veletage": {
     "event": {
-      "calendar-title": "Example Veletage Title",
-      "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me in Lingohub."
+      "calendar-title": "veletage POP-UP SALON",
+      "select-day": "1. Selecteer de datum",
+      "select-slot": "2. Selecteer het tijdslot",
+      "day-error": "Selecteer eerst een dag",
+      "select-return": "3. Select return time",
+      "time-error": "Please select a pickup time first",
+      "calendar-subtitle": "Van 22 tot 30 september 2018 vinden in Innsbruck-Tirol (Oostenrijk) de UCI-wereldkampioenschappen op de weg plaats. Test en huur de perfecte racefiets voor je ride "
     }
   },
   "brand-integration": {
@@ -615,6 +621,7 @@
   },
   "bike": {
     "rent-bike": "Fiets huren",
+    "two-hours": "voor 2 uur",
     "view-pictures": "Foto's bekijken",
     "meta-title": "Huur de {{name}} - {{category}} van {{brand}} in {{location}}",
     "meta-description": "{{description}}",
@@ -809,6 +816,8 @@
   },
   "calendar": {
     "invalid-date": "Ingevulde Datums zijn niet correct",
+    "status-closed": "Gesloten",
+    "status-in-past": "in het verleden",
     "info-service-fee-insurance": "Dit helpt om ons platform te laten draaien en<br0>een uitstekende klantenservice aan te bieden. <br1>Inclusief btw. Niet te restitueren.",
     "basic-insurance-included": "Inclusief basisverzekering ",
     "request-bike": "Fiets aanvragen",
@@ -1180,7 +1189,7 @@
     },
     "share": {
       "email-subject": "{{full_name}} nodigt je uit om je bij listnride aan te melden!",
-      "email-body": "{{first_name}} heeft jou 10€ tegoed geschenkt voor je eerste fietsavontuur naar keuze!%0A%0AMeld je nu aan bij listnride, de snelst groeiende bikesharing community, en krijg toegang tot talloze verschillende fietsen!%0AMeld je aan en ontvangt onmiddellijk een 10 € toegoed.%0A%0A{{voucher_url}}%0A%0AWil je {{first_name}} bedanken? Op het moment dat je een fiets huurt of je eigen fiets aanbied, ontvangt {{first_name}} ook een 10€ tegoed!%0A%0AVeel plezier en geniet van het fietsen!%0A"
+      "email-body": "{{first_name}} heeft jou 10€ tegoed geschenkt voor je eerste fietsavontuur naar keuze! Meld je nu aan bij listnride, de snelst groeiende bikesharing community, en krijg toegang tot talloze verschillende fietsen! Meld je aan en ontvangt onmiddellijk een 10 € toegoed. {{voucher_url}} Wil je {{first_name}} bedanken? Op het moment dat je een fiets huurt of je eigen fiets aanbied, ontvangt {{first_name}} ook een 10€ tegoed! Veel plezier en geniet van het fietsen! "
     }
   },
   "error-404": {
@@ -1194,7 +1203,8 @@
       "dutch": "Nederlands",
       "italian": "Italiaans",
       "spanish": "Spaans",
-      "german": "Duits"
+      "german": "Duits",
+      "english": "Engels"
     },
     "insurance-partner": "Verzekeringspartner",
     "insurance": "Verzekering",

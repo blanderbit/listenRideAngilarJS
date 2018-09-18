@@ -396,7 +396,7 @@ angular.module('listings', []).component('listings', {
       // and fetch bikes once they are uploaded
       listings.getStatus = function (bike, jobId) {
         listings.isDuplicating = true;
-        api.get('/rides/' + bike.id + '/status/' + jobId).then(function (response) {
+        api.get('/rides/' + bike.id + '/status/' + jobId + '?lng=' + $translate.preferredLanguage()).then(function (response) {
           listings.status = response.data.status;
           // if status is not complete
           // keep checking the status api every 5 seconds

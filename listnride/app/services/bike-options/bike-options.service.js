@@ -37,7 +37,14 @@ angular.module('listnride')
           { value: 165, label: "165 cm - 175 cm" },
           { value: 175, label: "175 cm - 185 cm" },
           { value: 185, label: "185 cm - 195 cm" },
-          { value: 195, label: "195 cm - 205 cm" }
+          { value: 195, label: "195 cm - 205 cm" },
+          { value: 85, label: "85 cm - 95 cm" },
+          { value: 95, label: "95 cm - 105 cm" },
+          { value: 105, label: "105 cm - 115 cm" },
+          { value: 115, label: "115 cm - 125 cm" },
+          { value: 125, label: "125 cm - 135 cm" },
+          { value: 135, label: "135 cm - 145 cm" },
+          { value: 145, label: "145 cm - 155 cm" }
         ];
       },
 
@@ -49,7 +56,14 @@ angular.module('listnride')
           { value: 165, label: "165 cm - 175 cm" },
           { value: 175, label: "175 cm - 185 cm" },
           { value: 185, label: "185 cm - 195 cm" },
-          { value: 195, label: "195 cm - 205 cm" }
+          { value: 195, label: "195 cm - 205 cm" },
+          { value: 85, label: "85 cm - 95 cm" },
+          { value: 95, label: "95 cm - 105 cm" },
+          { value: 105, label: "105 cm - 115 cm" },
+          { value: 115, label: "115 cm - 125 cm" },
+          { value: 125, label: "125 cm - 135 cm" },
+          { value: 135, label: "135 cm - 145 cm" },
+          { value: 145, label: "145 cm - 155 cm" }
         ];
       },
 

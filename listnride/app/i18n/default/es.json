@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Leer más",
+    "search-placeholder": "Search for e.g. Berlin, Munich",
     "no-bikes-found": "No se encontraron bicicletas",
     "dresden": "Dresden",
     "bolzano": "Bolzano",
@@ -13,10 +14,13 @@
       "email-required": "Introduce una dirección de correo electrónico válida",
       "email-not-valid": "Por favor, introduce una dirección de correo electrónico válida",
       "phone-not-valid": "Por favor ingresa un número de teléfono válido",
-      "phone-required": "Por favor ingresa tu número de teléfono, este campo es obligatorio",
+      "phone-required": "Por favor ingresa tu número de teléfono, este campo es obligatorio"
+    },
+    "notifications": {
       "404": "La página no existe",
       "422": "El formato de los datos ingresados es incorrecto",
-      "500": "Error interno del servidor"
+      "500": "Error interno del servidor",
+      "200": "Success"
     },
     "basic-fee": "El costo del servicio incluye seguro básico",
     "how-it-works": "Cómo funciona",
@@ -82,7 +86,7 @@
     "search-all-in": "Busca todas las bicis en",
     "search-bikes": "Busca bicicletas",
     "from-place": "de",
-    "contact": "Soporto y contacto",
+    "contact": "Ayuda ",
     "show-more": "mostrar más ",
     "show-less": "mostrar menos",
     "phone-number": "Número de teléfono",
@@ -161,13 +165,15 @@
   "lister": {
     "chat": "La reserva de la bicicleta fue cancelada."
   },
-  "faq-page": {
-    "topics": "Temas"
-  },
   "veletage": {
     "event": {
-      "calendar-title": "Example Veletage Title",
-      "calendar-subtitle": "Hello, I'm Veletage Event Example Subtitle. Please change me in Lingohub."
+      "calendar-title": "veletage POP-UP SALON",
+      "select-day": "1. Select the Rental Day ",
+      "select-slot": "2. Select the rental time",
+      "day-error": "Please select a day first",
+      "select-return": "3. Select return time",
+      "time-error": "Please select a pickup time first",
+      "calendar-subtitle": "The UCI Road World Championships will take place in Innsbruck-Tirol (Austria) from 22nd to 30th September 2018. Test and rent the perfect road bike for your ride. "
     }
   },
   "brand-integration": {
@@ -619,6 +625,7 @@
   },
   "bike": {
     "rent-bike": "Alquilar bicicleta",
+    "two-hours": "for 2 hours",
     "view-pictures": "Ver fotos",
     "for": "para",
     "meta-title": "Alquilar {{name}} - {{category}} de {{brand}} en {{location}}.",
@@ -816,6 +823,9 @@
   },
   "calendar": {
     "invalid-date": "Las fechas no son válidas",
+    "status-closed": "closed",
+    "status-in-past": "in past",
+    "booked": "booked",
     "info-service-fee-insurance": "Esto permite que nuestra plataforma crezca y<br0>u pueda ofrecer un servicio de atención al cliente de primera. <br1>IVA incluido. No reembolsable.",
     "basic-insurance-included": "Seguro básico incluido",
     "request-bike": "Solicitar bici",
@@ -829,7 +839,7 @@
     "info-discount": "Descuento medio diario que <br>obtienes por día al alquilar <br>por un período de tiempo más largo.",
     "info-service-fee": "Esto permite que nuestra plataforma crezca y<br>u pueda ofrecer un servicio de atención al cliente de primera. <br>IVA incluido. No reembolsable.",
     "info": "En el calendario anterior, selecciona primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla.",
-    "info-without-calendar": "En el calendario anterior, selecciona primero <br>en el día en que quieres alquilar <br>la bicicleta, y después en <br>el día en que quieras devolverla."
+    "info-without-calendar": "En el calendario anterior, selecciona primero en el día en que quieres alquilar la bicicleta, y después en el día en que quieras devolverla."
   },
   "list": {
     "edit-bike": "Editar bici",
@@ -1189,7 +1199,7 @@
     },
     "share": {
       "email-subject": "{{full_name}} te ha invitado a unirte a listnride",
-      "email-body": "{{first_name}}¡te ha dado 10€ para tu primera aventura en la bici de tu elección!% 0¡Únete a listnride, la comunidad de bicis que más rápido crece y accede a innumerables bicicletas para cada ocasión!% 0Regístrate e inmediatamente recibirás un crédito de 10€ .%0A%0A {{voucher_url}}%0A%0 ¿Quieres darle las gracias a {{first_name}}? Alquila una bicicleta o anuncia la tuya y {{first_name}}también recibirás un crédito de 10€!% 0A% 0¡Diviértete y disfruta del paseo!"
+      "email-body": "{{first_name}}¡te ha dado 10€ para tu primera aventura en la bici de tu elección! ¡Únete a listnride, la comunidad de bicis que más rápido crece y accede a innumerables bicicletas para cada ocasión! Regístrate e inmediatamente recibirás un crédito de 10€. {{voucher_url}}  ¿Quieres darle las gracias a {{first_name}}? Alquila una bicicleta o anuncia la tuya y {{first_name}}también recibirás un crédito de 10€! ¡Diviértete y disfruta del paseo!"
     }
   },
   "error-404": {
@@ -1203,7 +1213,8 @@
       "dutch": "Holandés",
       "italian": "Italiano",
       "spanish": "Español",
-      "german": "Alemán"
+      "german": "Alemán",
+      "english": "Inglés"
     },
     "insurance-partner": "Socio de seguros",
     "insurance": "Seguro",
