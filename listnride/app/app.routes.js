@@ -919,6 +919,25 @@
       });
 
       $stateProvider.state({
+        name: 'brands',
+        url: '/brands',
+        template: '<brands></brands>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brands.meta-title", "meta.brands.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brands.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brands.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'ampler',
         url: '/brands/ampler',
         template: '<ampler></ampler>',
