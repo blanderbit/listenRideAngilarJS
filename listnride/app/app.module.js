@@ -24,6 +24,7 @@ angular.module('listnride', [
   'listnride.constant',
   'metaTags',
   'receipt',
+  'lnr-support',
   'inputRange',
   'addressInput',
   'lnrMetaRobots',
