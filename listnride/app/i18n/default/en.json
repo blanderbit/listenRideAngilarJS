@@ -715,6 +715,7 @@
   },
   "forms": {
     "first-name": "First Name",
+    "save-new-password": "Save new password",
     "your-name": "Your name",
     "your-email-address": "Your email address",
     "your-phone-number": "Your phone number",

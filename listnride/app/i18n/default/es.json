@@ -712,6 +712,7 @@
   },
   "forms": {
     "first-name": "Nombre",
+    "save-new-password": "Guardar nueva contraseña",
     "your-name": "Nombre",
     "your-email-address": "Correo electrónico",
     "your-phone-number": "Número de teléfono",
