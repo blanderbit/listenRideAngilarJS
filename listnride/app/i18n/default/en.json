@@ -166,9 +166,6 @@
   "lister": {
     "chat": "Your booked bike was cancelled."
   },
-  "faq-page": {
-    "topics": "Topics"
-  },
   "veletage": {
     "event": {
       "calendar-title": "veletage POP-UP SALON",
@@ -718,6 +715,7 @@
   },
   "forms": {
     "first-name": "First Name",
+    "save-new-password": "Save new password",
     "your-name": "Your name",
     "your-email-address": "Your email address",
     "your-phone-number": "Your phone number",
@@ -1220,7 +1218,8 @@
       "dutch": "Dutch",
       "italian": "Italian",
       "spanish": "Spanish",
-      "german": "German"
+      "german": "German",
+      "english": "English"
     },
     "insurance-partner": "Insurance Partners",
     "insurance": "Insurance",

@@ -77,12 +77,12 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
 
       function getLanguage(locale) {
         switch (locale) {
-          case 'de': return $translate.instant('footer.languages.german');
-          case 'nl': return $translate.instant('footer.languages.dutch');
-          case 'it': return $translate.instant('footer.languages.italian');
-          case 'es': return $translate.instant('footer.languages.spanish');
+          case 'de': return 'footer.languages.german';
+          case 'nl': return 'footer.languages.dutch';
+          case 'it': return 'footer.languages.italian';
+          case 'es': return 'footer.languages.spanish';
           case 'en':
-          default: return $translate.instant('footer.languages.english');
+          default: return 'footer.languages.english';
         }
       }
     }

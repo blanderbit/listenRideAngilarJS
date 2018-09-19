@@ -77,16 +77,12 @@
       "cafes-bars-content": "Se ti piace il cibo vegano e vegetariano, ti consigliamo di visitare <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot </a>presso la Karmeliterplatz. Se preferisci la cucina austriaca più tradizionale, ti consigliamo <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta </a>. Ordina un tradizionale Tafelspitz o Wiener Schnitzel e goditela all'aperto con la vista sulla celebre Opera di Vienna. Sarà una serata fantastica da ricordare! Per finire in bellezza, una bella passeggiata lungo il Danubio. Sulla strada troverai molti bar interessanti e potrai sederti all'aperto sotto le stelle lungo il fiume."
     }
   },
-  "footer": {
-    "languages": {
-      "english": "Inglese"
-    }
-  },
   "rider": {
     "chat": "La prenotazione della bici è stata cancellata."
   },
   "faq-page": {
-    "header": "Le domande più frequenti"
+    "header": "Le domande più frequenti",
+    "topics": "Temi"
   },
   "shared": {
     "list-your-bike": {
@@ -100,7 +96,7 @@
       "group-1": {
         "title": "Per cominciare",
         "description": "Di seguito puoi trovare informazioni su come trovare la bici perfetta per te e scoprire come far parte della nostra bike-sharing community.",
-        "answer-1": "Semplicemente inserisci il nome della località dove cerchi una bicicletta nel banner di ricerca. Clicca su una delle bici che appare tra i risultati per avere più dettagli sulla taglia, l’altezza consigliata per il ciclista, gli accessori inclusi e le recensioni della bici.<img src=\"//www.listnride.com/app/assets/ui_images/static/lnr-landing-insurance.jpg\">",
+        "answer-1": "Semplicemente inserisci il nome della località dove cerchi una bicicletta nel banner di ricerca. Clicca su una delle bici che appare tra i risultati per avere più dettagli sulla taglia, l’altezza consigliata per il ciclista, gli accessori inclusi e le recensioni della bici.",
         "answer-2": "Per restringere i risultati di ricerca, puoi usare i filtri: Arco di tempo, Numero di bici, Tipo di bici, Tutte le marche.",
         "answer-3": "C’è un calendario nella pagina specifica della bici. I giorni marcati in nero sono quelli in cui si può noleggiare la bici, quelli grigi sono quelli in cui la bici non è disponibile e quelli in rosso sono quelli in cui la bici è già prenotata.",
         "answer-4": "Crea un account e ottimizza il tuo profilo per avere il meglio con listnride e conoscere persone interessanti con bici speciali.\nPer creare un account registrati e crea una password oppure registrati con Facebook. Successivamente devi verificare il tuo numero di telefono e indirizzo email e fornire un metodo di pagamento valido, necessario per richiedere una bicicletta. Solo attraverso questo procedimento possiamo fornire ad entrambe le parti un contratto di noleggio valido e assicurarci che il pagamento venga effettuato.",
@@ -124,8 +120,8 @@
         "answer-8": "Usa l’icona a forma di cestino sotto la bici specifica nella pagina “Le mie biciclette”",
         "answer-9": "Riceverai una email e un sms di notifica, contenenti tutti i dettagli. Vai alla pagina “Richieste” per accettare o rifiutare la richiesta o per iniziare una conversazione in chat con il Rider per chiarire alcuni dettagli. Accetta la richiesta per finalizzare il noleggio. Dopo di che riceverai una email di conferma della prenotazione con tutti i dettagli rilevanti e le informazioni di contatto del Rider.",
         "answer-10": "Certo. Clicca il bottone rosso per rifiutare la richiesta e chiedi al Rider di richiedere la bici per un altro periodo. Ti chiediamo di essere gentile con il Rider e fargli sapere perchè hai rifiutato la richiesta.",
-        "answer-11": "Il Noleggiante potrebbe essere nuovo in città e avere bisogno di un po 'più di tempo per trovare la posizione, lasciagli un arco temporale di 15-30 minuti. Se il Noleggiante non si presenta, prova prima a metterti in contatto direttamente tramite il numero di cellulare che ti è stato fornito. Se non riesci ancora a metterti in contatto con il Noleggiante , sentiti libero di non essere più obbligato dal contratto di noleggio.\n<br>\nApprezzeremmo un \n<a href=\"mailto:contact@listnride.com?subject=Rider does not show for pick-up\">breve messaggio</a> \nsolo per vedere se possiamo supportarti.",
-        "answer-12": "Anche qui è necessaria una certa flessibilità, basta concedere al Noleggiante un arco temporale di 10-15 minuti. Se il ciclista non restituisce la bicicletta, contatta direttamente il numero di telefono fornito. Se non funziona, \n<a href=\"mailto:contact@listnride.com?subject=Il pilota non si presenta per la restituzione\">contattaci</a> \ne ti supporteremo.",
+        "answer-11": "Il Noleggiante potrebbe essere nuovo in città e avere bisogno di un po 'più di tempo per trovare la posizione, lasciagli un arco temporale di 15-30 minuti. Se il Noleggiante non si presenta, prova prima a metterti in contatto direttamente tramite il numero di cellulare che ti è stato fornito. Se non riesci ancora a metterti in contatto con il Noleggiante , sentiti libero di non essere più obbligato dal contratto di noleggio.\n<br>\nApprezzeremmo un \n<a href=\"mailto:contact@listnride.com?subject= Rider non si presenta a ritirare la bici\">breve messaggio</a> \nsolo per vedere se possiamo supportarti.",
+        "answer-12": "Anche qui è necessaria una certa flessibilità, basta concedere al Noleggiante un arco temporale di 10-15 minuti. Se il ciclista non restituisce la bicicletta, contatta direttamente il numero di telefono fornito. Se non funziona, \n<a href=\"mailto:contact@listnride.com?subject=Il Rider non si presenta a restituire la bici\">contattaci</a> \ne ti supporteremo.",
         "answer-13": "Per confermare il ritorno della tua bici, accedi al tuo account e clicca su “Conferma ritorno” nella chat con il Rider.",
         "question-1": "Come posso registrare le mie bici? ",
         "question-2": "Che cosa rende una bici attraente per i Rider?",
