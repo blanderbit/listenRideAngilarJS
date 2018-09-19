@@ -77,6 +77,19 @@
       "cafes-bars-content": "If you like vegan and vegetarian food, we recommend a visit at <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot</a> at the Karmeliterplatz. If you prefer the more traditional Austrian kitchen, we highly recommend <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta</a>. Order a traditional Tafelspitz or Wiener Schnitzel and enjoy it outside with the view on the famous Vienna Opera. You’ll have a great night to remember! For finishing touch of the day, it makes sense to walk towards the Danube. On the way you’ll find plenty of interesting bars or just sit outside under the stars at the river."
     }
   },
+  "brands": {
+    "title": "Test ride your next bike",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu",
+    "choose-from-brands": "Choose from our brands",
+    "showroom": {
+      "header": "Our Showrooms",
+      "sub-header": "Want to a first-hand experience direct from us. Come by our showrooms in Berlin and München. ",
+      "berlin-description": "listnride has set its goal to offer you a large choice of special and uncommon rental bikes. That means a better experience than the average, basic run-down city bike that has been running for many years. Are you on holiday, in town for work or looking for a bike with which you can transport your sofa? You’ll find the right bicycle on listnride, so you don’t need to do without your favorite means of transport and the freedom it provides. ",
+      "munich-description": "listnride has set its goal to offer you a large choice of special and uncommon rental bikes. That means a better experience than the average, basic run-down city bike that has been running for many years. Are you on holiday, in town for work or looking for a bike with which you can transport your sofa? You’ll find the right bicycle on listnride, so you don’t need to do without your favorite means of transport and the freedom it provides. ",
+      "berlin-address": "<b>Our address</b>\nOranienburger Strasse 1-3\nBerlin 10119\nGermany",
+      "munich-address": "<b>Our address</b>\nNymphenburgser Strasse 86\nMünchen 80636\nGermany"
+    }
+  },
   "rider": {
     "chat": "Your booked ride was cancelled."
   },
