@@ -714,6 +714,7 @@
   },
   "forms": {
     "first-name": "Vorname",
+    "save-new-password": "Neues Passwort speichern",
     "your-name": "Dein Name",
     "your-email-address": "Deine E-Mail Adresse",
     "your-phone-number": "Deine Telefonnummer",
@@ -862,7 +863,7 @@
       "special": "Spezial",
       "urban": "Urban",
       "e-bike": "E-Bike",
-      "road": "Road",
+      "road": "Renn- & Trekkingräder",
       "transport": "Transport"
     },
     "details": {

@@ -1,6 +1,8 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "map": "Map",
+    "bike-type": "Bike type",
     "search-placeholder": "Search for e.g. Berlin, Munich",
     "info": "Info",
     "no-bikes-found": "No bikes found",
@@ -241,6 +243,10 @@
         "meta-title": "Explore Vienna by bike with listnride",
         "meta-description": "Discover Vienna by bike. With listnride, you can find a bike for rent in Vienna that matches your needs and your style."
       }
+    },
+    "brands": {
+      "meta-title": "meta title here",
+      "meta-description": "meta description here"
     },
     "seo": {
       "city-title": "Rent the perfect bike in {{location}} | listnride",
@@ -715,6 +721,7 @@
   },
   "forms": {
     "first-name": "First Name",
+    "save-new-password": "Save new password",
     "your-name": "Your name",
     "your-email-address": "Your email address",
     "your-phone-number": "Your phone number",

@@ -40,7 +40,7 @@
 
       <!--TODO REMOVE family check after event calendar refactoring -->
 
-      <div class="bike__prices" flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center" ng-if="bike.data.family != 34">
+      <div class="bike__prices" flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center" ng-if="bike.data.family != 16">
         <div class="bike__prices-item" flex="30" layout="column" layout-align="center center">
           <div layout="row" layout-align="center center">
             <span class="md-headline">{{ bike.data.prices[0].price | number : 0 }}€</span>
@@ -65,7 +65,7 @@
         </div>
       </div>
 
-      <div class="bike__prices" flex-sm="45" flex-gt-sm="30" layout="row" layout-align="center center" ng-if="bike.data.family == 34">
+      <div class="bike__prices" flex-sm="45" flex-gt-sm="30" layout="row" layout-align="center center" ng-if="bike.data.family == 16">
         <div class="bike__prices-item" layout="column" layout-align="center center">
           <div layout="row" layout-align="center center">
             <span class="md-headline">{{ bike.data.prices[0].price | number : 0 }}€</span>
