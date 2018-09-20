@@ -160,9 +160,6 @@
   "lister": {
     "chat": "De boeking van je huurfiets is geannuleerd."
   },
-  "faq-page": {
-    "topics": "Onderwerpen"
-  },
   "veletage": {
     "event": {
       "calendar-title": "veletage POP-UP SALON",
@@ -709,6 +706,7 @@
   },
   "forms": {
     "first-name": "Voornaam",
+    "save-new-password": "Bewaar nieuw wachtwoord",
     "your-name": "Je naam",
     "your-email-address": "Emailadres",
     "your-phone-number": "Mobiele nummer",
@@ -855,7 +853,7 @@
       "special": "Uniek",
       "urban": "Urban",
       "e-bike": "Elektrische fiets",
-      "road": "Race & Touring",
+      "road": "Race & Touringfietsen",
       "transport": "Transport"
     },
     "details": {
@@ -1207,7 +1205,8 @@
       "dutch": "Nederlands",
       "italian": "Italiaans",
       "spanish": "Spaans",
-      "german": "Duits"
+      "german": "Duits",
+      "english": "Engels"
     },
     "insurance-partner": "Verzekeringspartner",
     "insurance": "Verzekering",

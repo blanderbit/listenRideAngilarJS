@@ -165,9 +165,6 @@
   "lister": {
     "chat": "Dein gebuchtes Fahrrad wurde storniert."
   },
-  "faq-page": {
-    "topics": "Themenbereiche"
-  },
   "veletage": {
     "event": {
       "calendar-title": "veletage POP-UP SALON",
@@ -717,6 +714,7 @@
   },
   "forms": {
     "first-name": "Vorname",
+    "save-new-password": "Neues Passwort speichern",
     "your-name": "Dein Name",
     "your-email-address": "Deine E-Mail Adresse",
     "your-phone-number": "Deine Telefonnummer",
@@ -865,7 +863,7 @@
       "special": "Spezial",
       "urban": "Urban",
       "e-bike": "E-Bike",
-      "road": "Road",
+      "road": "Renn- & Trekkingräder",
       "transport": "Transport"
     },
     "details": {
@@ -1219,7 +1217,8 @@
       "dutch": "Niederländisch",
       "italian": "Italienisch",
       "spanish": "Spanisch",
-      "german": "Deutsch"
+      "german": "Deutsch",
+      "english": "Englisch"
     },
     "insurance-partner": "Versicherungspartner",
     "insurance": "Versicherung",
