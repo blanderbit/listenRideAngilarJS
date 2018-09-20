@@ -1,7 +1,9 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "map": "Karte",
     "search-placeholder": "Suche z.B. nach Berlin, München,....",
+    "info": "Info",
     "no-bikes-found": "Keine Fahrräder gefunden",
     "dresden": "Dresden",
     "bolzano": "Bozen",
@@ -400,7 +402,7 @@
     },
     "shop-landing": {
       "meta-title": "listnride Shop Plugin - Online Fahrräder vermieten",
-      "meta-description": "Mit dem listnride Plugin kannst du einfach deine Leihräder/Testräder in deine Online Präsenz integrieren und anbieten."
+      "meta-description": "Mit dem listnride Plug-in kannst du einfach deine Leihräder/Testräder in deine Online Präsenz integrieren und anbieten."
     },
     "imprint": {
       "meta-title": "listnride Impressum",
@@ -767,9 +769,9 @@
       "valid-email-xs": "Ungültige E-Mail",
       "empty-email": "Bitte gib deine E-Mail-Adresse an",
       "empty-email-xs": "E-Mail erforderlich",
-      "empty-last-name": "Gib deinen Nachnamen an",
+      "empty-last-name": "Dein Nachname",
       "empty-last-name-xs": "Nachname erforderlich",
-      "empty-first-name": "Gib deinen Vornamen an",
+      "empty-first-name": "Dein Vorname",
       "empty-first-name-xs": "Vornamen erforderlich",
       "max-size-last-name": "Der Nachname sollte maximal 30 Buchstaben lang sein",
       "max-size-last-name-xs": "Max 30 Buchstaben",
