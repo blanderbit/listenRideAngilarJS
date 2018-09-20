@@ -61,6 +61,10 @@ strong {
   font-weight: 500;
 }
 
+address {
+  font-style: normal;
+}
+
 .content {
   max-width: 1040px;
   margin: 0 auto;
@@ -512,9 +516,14 @@ md-tooltip .md-content {
   padding: 16px;
 }
 
-.lnr-vertical-lrg-padding {
+.lnr-horizontal-lrg-padding {
   padding-left: 16px;
   padding-right: 16px;
+}
+
+.lnr-vertical-lrg-padding {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .lnr-padding-top-double {
@@ -543,6 +552,10 @@ md-tooltip .md-content {
 
 .lnr-mt-0 {
   margin-top: 0;
+}
+
+.lnr-pt-0 {
+  padding-top: 0;
 }
 
 .lnr-lh-body-2 {
@@ -711,6 +724,17 @@ md-tooltip .md-content {
 
 .lnr-list-no-style {
   list-style: none;
+}
+
+.lnr-tile-image {
+  position: relative;
+  height: 340px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.lnr-d-block {
+  display: block;
 }
 
 /*-----------------------------------------------------------------------------------*/
