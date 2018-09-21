@@ -41,6 +41,7 @@
             </div>
             <category-filter
               current-categories="brands.categoryIds"
+              on-filter-change="brands.filterChange"
               only-parent-categories="true">
             </category-filter>
           </div>
@@ -51,7 +52,7 @@
         <span>{{ 'shared.map' | translate }}</span>
       </md-button>
     </div>
-    <div>
+    <div ng-show="!brands.isMapView">
       <!-- <p ng-if="!brands.selectedCategories.length && brands.categoryIds.length" translate="brands.no-brands-found"></p> -->
       <md-grid-list
       id="featuredTilesGrid"
@@ -72,6 +73,26 @@
         </a>
       </md-grid-tile>
     </md-grid-list>
+    </div>
+    <div ng-show="brands.isMapView">
+      <!-- add ng-if if we can't find any brands -->
+      <ng-map
+        id="searchMap"
+        default-style="false"
+        center="[{{brands.mapOptions.lat}},{{brands.mapOptions.lng}}]"
+        zoom="{{brands.mapOptions.zoom}}"
+        on-click="brands.onMapClick(event)"
+        map-type-control="false"
+        street-view-control="false"
+        styles="{{brands.colorScheme}}"
+      >
+
+        <info-window id="searchMapWindow">
+          <div ng-non-bindable="">
+            <bike-card bike="search.selectedBike"></bike-card>
+          </div>
+        </info-window>
+      </ng-map>
     </div>
   </div>
 
