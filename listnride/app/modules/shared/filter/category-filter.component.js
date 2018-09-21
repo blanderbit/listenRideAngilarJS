@@ -6,7 +6,8 @@ angular.module('categoryFilter', [])
     controllerAs: 'categoryFilter',
     bindings: {
       currentCategories: '=',
-      onFilterChange: '<?'
+      onFilterChange: '<?',
+      onlyParentCategories: '<?'
     },
     controller: [
       '$translate',
@@ -26,6 +27,7 @@ angular.module('categoryFilter', [])
           categoryFilter.toggleAll = toggleAll;
           categoryFilter.showSubs = showSubs;
           categoryFilter.categorySubs = categorySubs;
+          categoryFilter.onlyParentCategories = !!categoryFilter.onlyParentCategories;
 
           // variables
           categoryFilter.categories = [];
@@ -36,7 +38,10 @@ angular.module('categoryFilter', [])
         };
 
 
-        function toggle(item, list) {
+        function toggle(item, list, $event) {
+          // don't display child categories, simply toggle all
+          if (categoryFilter.onlyParentCategories) return categoryFilter.toggleAll($event, item);
+
           var idx = list.indexOf(item);
           if (idx > -1) {
             list.splice(idx, 1);
@@ -75,7 +80,7 @@ angular.module('categoryFilter', [])
         };
 
         function showSubs(categoryId) {
-          return categoryFilter.openSubs.includes(categoryId)
+          return categoryFilter.openSubs.includes(categoryId) && !categoryFilter.onlyParentCategories;
         };
 
         function categoryIntersection(categoryId) {

@@ -74,6 +74,10 @@ address {
   padding: 0 !important;
 }
 
+.svg-inline--fa {
+  width: 15px;
+}
+
 /* ONLY WATERMARK STUFF */
 
 .lnr-watermark {
@@ -180,6 +184,12 @@ md-grid-list md-grid-tile {
   background-size: cover;
   background-position: 50%;
   cursor: pointer;
+  opacity: 1;
+  transition: left .3s;
+}
+
+md-grid-tile.ng-leave-active {
+  opacity: 0;
 }
 
 .no-select {
@@ -735,6 +745,28 @@ md-tooltip .md-content {
 
 .lnr-d-block {
   display: block;
+}
+
+.lnr-no-ripple .md-ripple-container {
+  display: none;
+}
+
+.lnr-md-button__icon {
+  display: flex;
+  align-items: center;
+  min-width: auto;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.lnr-md-button__icon .fa {
+  margin-right: 10px;
+  color: #5FC693;
+}
+
+.lnr-md-button__icon.md-button:not([disabled]):hover {
+  background: none;
 }
 
 /*-----------------------------------------------------------------------------------*/
