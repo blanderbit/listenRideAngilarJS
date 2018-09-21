@@ -53,7 +53,7 @@
       </md-button>
     </div>
     <div ng-show="!brands.isMapView">
-      <!-- <p ng-if="!brands.selectedCategories.length && brands.categoryIds.length" translate="brands.no-brands-found"></p> -->
+      <p class="lnr-center md-subhead" ng-if="!brands.filteredBrands.length && brands.categoryIds.length" translate="brands.no-brands-found"></p>
       <md-grid-list
       id="featuredTilesGrid"
       class="md-color-white lnr-margin"
