@@ -216,7 +216,7 @@ angular.module('brands', []).component('brands', {
       };
 
       function isIncludeCategory(brandCategories) {
-        // if no categories were pick, we show all brands
+        // show all brands if no categories picked
         if (!brands.categoryIds.length) return true;
         return !!_.intersection(brands.categoryIds, brandCategories).length;
       };
@@ -230,7 +230,7 @@ angular.module('brands', []).component('brands', {
 
       function checkSelectedBrands() {
         brands.filteredBrands = [];
-        // if no categories were pick, we show all brands
+        // show all brands if no categories picked
         if (brands.categoryIds.length) {
           _.forEach(brands.data, function (brand) {
             if (_.intersection(brands.categoryIds, brand.categories).length) brands.filteredBrands.push(brand);

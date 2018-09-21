@@ -185,7 +185,7 @@ md-grid-list md-grid-tile {
   background-position: 50%;
   cursor: pointer;
   opacity: 1;
-  transition: left .3s;
+  transition: all .3s;
 }
 
 md-grid-tile.ng-leave-active {
