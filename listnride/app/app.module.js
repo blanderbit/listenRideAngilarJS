@@ -24,6 +24,7 @@ angular.module('listnride', [
   'listnride.constant',
   'metaTags',
   'receipt',
+  'lnr-support',
   'inputRange',
   'addressInput',
   'lnrMetaRobots',
@@ -85,6 +86,7 @@ angular.module('listnride', [
   'cardgrid',
   'privacyBar',
   'faq',
+  'brands',
   //endRemoveIf(shop)
   /* app_extras_end */
 

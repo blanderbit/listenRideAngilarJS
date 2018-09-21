@@ -1,0 +1,156 @@
+<md-content class="single-column">
+  <!-- HERO-SHOT -->
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/static/lnr_brandlanding_page_hero.jpg')"
+    layout="row" layout-align="space-around center">
+    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
+      <h1 class="md-display-1">{{ 'brands.title' | translate }}</h1>
+    </div>
+  </div>
+  <!-- CONTENT -->
+  <div class="content" layout-padding>
+    <div class="spacer"></div>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <p class="md-subhead">{{ 'brands.description' | translate }}</p>
+    </div>
+  </div>
+
+  <div class="content" layout-padding>
+    <div class="spacer"></div>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline">{{ 'brands.choose-from-brands' | translate }}</h2>
+    </div>
+    <div layout="row" layout-align="space-between center">
+      <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
+        <md-button
+          class="lnr-md-button__icon lnr-no-ripple"
+          ng-click="$mdOpenMenu($event);"
+        >
+          <svg
+            aria-hidden="true" data-fa-icon-name="fa-sliders-v" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+            class="svg-inline--fa lnr-padding-right">
+            <path fill="#5FC693" d="M112 96H96V16c0-8.8-7.2-16-16-16H48c-8.8 0-16 7.2-16 16v80H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h16v336c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V160h16c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm320 128h-16V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v208h-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h16v208c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V288h16c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM272 352h-16V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v336h-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h16v80c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-80h16c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16z"></path>
+          </svg>
+          <span>{{ 'shared.filter-by' | translate }} {{ 'shared.bike-type' | translate }}</span>
+        </md-button>
+        <md-menu-content width="5" class="lnr-100mh">
+          <div class="lnr-padding">
+            <div class="lnr-right">
+              <md-button show-xs hide-gt-xs class="md-icon-button md-warn md-menu__close-btn lnr-md-no-focused">
+                <md-icon md-font-icon="fa-times" class="fa"></md-icon>
+              </md-button>
+            </div>
+            <category-filter
+              current-categories="brands.categoryIds"
+              on-filter-change="brands.filterChange"
+              only-parent-categories="true">
+            </category-filter>
+          </div>
+        </md-menu-content>
+      </md-menu>
+      <md-button class="lnr-md-button__icon lnr-no-ripple" ng-click="brands.isMapView = !brands.isMapView">
+        <i class="fa fa-map-marker"></i>
+        <span>{{ 'shared.map' | translate }}</span>
+      </md-button>
+    </div>
+    <div ng-show="!brands.isMapView">
+      <p class="lnr-center md-subhead" ng-if="!brands.filteredBrands.length && brands.categoryIds.length" translate="brands.no-brands-found"></p>
+      <md-grid-list
+      id="featuredTilesGrid"
+      class="md-color-white lnr-margin"
+      md-cols="1"
+      md-cols-gt-xs="4"
+      md-gutter="16px"
+      md-row-height="1:0.65"
+    >
+      <md-grid-tile
+        class="tile"
+        md-colspan-gt-xs="1"
+        style="background-image: url('{{brand.tile_image}}')"
+        ng-repeat="brand in brands.data track by $index"
+        ng-if="brands.isIncludeCategory(brand.categories)"
+      >
+        <a ui-sref="{{ brand.title | lowercase }}" layout="column" layout-align="center center">
+        </a>
+      </md-grid-tile>
+    </md-grid-list>
+    </div>
+    <div ng-show="brands.isMapView">
+      <!-- add ng-if if we can't find any brands -->
+      <ng-map
+        id="searchMap"
+        default-style="false"
+        center="[{{brands.mapOptions.lat}},{{brands.mapOptions.lng}}]"
+        zoom="{{brands.mapOptions.zoom}}"
+        on-click="brands.onMapClick(event)"
+        map-type-control="false"
+        street-view-control="false"
+        styles="{{brands.colorScheme}}"
+      >
+
+        <info-window id="searchMapWindow">
+          <div ng-non-bindable="">
+            <bike-card bike="search.selectedBike"></bike-card>
+          </div>
+        </info-window>
+      </ng-map>
+    </div>
+  </div>
+
+  <div class="content" layout-padding>
+    <div class="spacer"></div>
+    <div class="lnr-section-title" layout="column" layout-align="center center">
+      <h2 class="md-headline">{{ 'brands.showroom.header' | translate }}</h2>
+      <p class="md-subhead">{{ 'brands.showroom.sub-header' | translate }}</p>
+    </div>
+    <div layout="column" layout-gt-sm="row" layout-padding>
+      <div class="brands__showroom" flex-gt-sm="50">
+        <div
+          class="lnr-tile-image"
+          style="background-image: url('/app/assets/ui_images/brands/berlin-shop.jpg')"
+          layout="column"
+          layout-align="center center"
+          >
+          <h3 class="md-headline md-color-white">{{'shared.berlin' | translate}}</h3>
+        </div>
+        <div class="lnr-vertical-lrg-padding"></div>
+        <p class="md-body-1">{{'brands.showroom.berlin-description' | translate}}</p>
+        <div hide-xs hide-sm>
+          <div class="lnr-vertical-lrg-padding"></div>
+          <address class="md-body-1" translate="brands.showroom.berlin-address"></address>
+          <div class="lnr-vertical-lrg-padding"></div>
+          <a class="lnr-tile-image lnr-d-block"
+            href="http://www.google.com/maps/place/52.5237683,13.3992715" rel="nofollow" target="_blank"
+            style="height: 130px; background-image: url('/app/assets/ui_images/brands/map-berlin.jpg')">
+          </a>
+        </div>
+      </div>
+      <div hide-gt-sm class="lnr-vertical-lrg-padding"></div>
+      <div class="brands__showroom" flex-gt-sm="50">
+        <div
+          class="lnr-tile-image"
+          layout="column"
+          layout-align="center center"
+          style="background-image: url('/app/assets/ui_images/brands/munich-shop.jpg')"
+          >
+          <h3 class="md-headline md-color-white">{{'shared.munich' | translate}}</h3>
+        </div>
+        <div class="lnr-vertical-lrg-padding"></div>
+        <p class="md-body-1">{{'brands.showroom.munich-description' | translate}}</p>
+        <div hide-xs hide-sm>
+          <div class="lnr-vertical-lrg-padding"></div>
+          <address class="md-body-1" translate="brands.showroom.berlin-address"></address>
+          <div class="lnr-vertical-lrg-padding"></div>
+          <a class="lnr-tile-image lnr-d-block"
+            href="http://www.google.com/maps/place/48.1505014,11.5447967" rel="nofollow" target="_blank"
+            style="height: 130px; background-image: url('/app/assets/ui_images/brands/map-munich.jpg')">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <lnr-support></lnr-support>
+
+  <footer></footer>
+</md-content>
