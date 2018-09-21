@@ -262,7 +262,7 @@ angular.module('brands', []).component('brands', {
         var markers = [];
         _.forEach(brands.filteredBrands, function (brand) {
           _.forEach(brand.pins, function (pin) {
-            markers.push(createMarkerForBike(pin, map, brand));
+            markers.push(createMarkerForBrand(pin, map, brand));
           })
         });
 
@@ -280,7 +280,7 @@ angular.module('brands', []).component('brands', {
 
         _.forEach(brands.filteredBrands, function(brand){
           _.forEach(brand.pins, function(pin){
-            markers.push(createMarkerForBike(pin, map, brand));
+            markers.push(createMarkerForBrand(pin, map, brand));
           })
         });
 
@@ -293,7 +293,7 @@ angular.module('brands', []).component('brands', {
         return brands.clusterer
       }
 
-      function createMarkerForBike(pin, map, brand) {
+      function createMarkerForBrand(pin, map, brand) {
         // Origins, anchor positions and coordinates of the marker increase in the X
         // direction to the right and in the Y direction down.
         var image = {
