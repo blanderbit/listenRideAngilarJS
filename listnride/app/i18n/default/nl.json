@@ -1,7 +1,10 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "map": "Kaart",
+    "bike-type": "Fietstype",
     "search-placeholder": "Zoek naar bijvoorbeeld Berlijn, München",
+    "info": "Info",
     "no-bikes-found": " Helaas! er worden nog geen fietsen op deze locatie aangeboden.",
     "dresden": "Dresden",
     "bolzano": "Bolzano",
