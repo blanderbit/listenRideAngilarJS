@@ -13,8 +13,9 @@ angular.module('cityLanding',[]).component('cityLanding', {
         cityLanding.bikes = {};
         cityLanding.loading = true;
         cityLanding.categories = [];
+        cityLanding.headerTranslation = 'seo.header';
 
-        bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
+          bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
           // without transport category
           cityLanding.categories = resolve.filter(function (item) {
             return item.url !== 'transport';
@@ -34,12 +35,16 @@ angular.module('cityLanding',[]).component('cityLanding', {
 
       function fetchData() {
         var lng = $translate.preferredLanguage();
+        var ISLANDS = ['Usedom', 'Sylt', 'Mallorca', 'Lanzarote'];
+
         api.get('/seo_page?city=' + cityLanding.city + '&lng=' + lng).then(
           function (success) {
             cityLanding.data = success.data;
             cityLanding.location = cityLanding.city;
             cityLanding.translatedCity = cityLanding.data.city_names[lng] ? cityLanding.data.city_names[lng] : cityLanding.city;
             cityLanding.loading = false;
+            cityLanding.headerTranslation = _.includes(ISLANDS, cityLanding.data.city) ? 'seo.header-2' : 'seo.header';
+
             var minPrice = parseInt(_.minBy(cityLanding.data.bikes, 'price_from').price_from);
             ngMeta.setTitle($translate.instant('meta.seo.city-title', { location: cityLanding.location }));
             ngMeta.setTag("description", $translate.instant('meta.seo.city-description', { location: cityLanding.location, minPrice: minPrice }));
