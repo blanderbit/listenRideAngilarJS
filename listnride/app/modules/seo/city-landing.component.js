@@ -15,7 +15,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
         cityLanding.categories = [];
         cityLanding.headerTranslation = 'seo.header';
 
-          bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
+        bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
           // without transport category
           cityLanding.categories = resolve.filter(function (item) {
             return item.url !== 'transport';
