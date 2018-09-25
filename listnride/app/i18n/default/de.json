@@ -243,6 +243,10 @@
         "meta-description": "Erkunde Vienna auf dem Fahrrad. Wähle aus einer Vielzahl von Fahrrädern und miete das optimale Zweirad für deine Fahrradtour!"
       }
     },
+    "brands": {
+      "meta-title": "Entdecke und erlebe außergewöhnliche Räder!",
+      "meta-description": "Entdecke und erlebe einzigartige Räder. Teste E-Bike, Trekkingrad, Single Speed, Fixie, Stadtrad, Querfeldein, Gravel, Cyclocross, Hollandrad, MTB, E-MTB, Rennrad, Lastenrad und und hol dir fachkundige Beratung über das Fahrrad, bevor du deine Kaufentscheidung triffst.\n\n"
+    },
     "seo": {
       "city-title": "Miete das perfekte Fahrrad in {{location}} | listnride",
       "city-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem Fahrrad, das du über listnride sicher gemietet hast.",
