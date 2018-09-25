@@ -633,6 +633,21 @@ md-tooltip .md-content {
   color: #fff!important;
 }
 
+.lnr-btn-ico {
+  display: inline-flex;
+  align-items: center;
+  min-width: auto;
+  padding: 0 15px;
+}
+
+.lnr-btn-ico md-icon {
+  min-width: auto;
+  min-height: auto;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+}
+
 .signup__form .md-button.md-raised[disabled] {
   color: rgba(255, 255, 255, 0.95);
   background-color: rgb(122, 178, 248);
@@ -1604,6 +1619,10 @@ home #featuredTiles a {
   margin-top: auto;
   padding-top: 5px;
   text-align: center;
+}
+
+.m-b-auto {
+  margin-bottom: auto;
 }
 
 /*-----------------------------------------------------------------------------------*/
