@@ -38,7 +38,7 @@ angular.module('categoryLanding', []).component('categoryLanding', {
 
         // invocations
         fetchData(categoryId);
-      }
+      };
 
       function fetchData(categoryId) {
         api.get('/seo_page?city=' + categoryLanding.city + '&cat=' + categoryId + '&lng=' + $translate.preferredLanguage()).then(
@@ -48,6 +48,7 @@ angular.module('categoryLanding', []).component('categoryLanding', {
             categoryLanding.loading = false;
             var minPrice = parseInt(_.minBy(categoryLanding.data.bikes, 'price_from').price_from);
             categoryLanding.categoryString = $translate.instant(categoryLanding.category).toLowerCase();
+            categoryLanding.title = $translate.instant('seo.rent-the-best') + ' ' + categoryLanding.categoryString + ' ' + $translate.instant('seo.bikes') + ' ' + 'in' + ' ' + categoryLanding.city;
             ngMeta.setTitle($translate.instant('meta.seo.category-title', { location: categoryLanding.location, category: categoryLanding.categoryString }));
             ngMeta.setTag("description", $translate.instant('meta.seo.category-description', { location: categoryLanding.location, minPrice: minPrice, category: categoryLanding.categoryString }));
           },
