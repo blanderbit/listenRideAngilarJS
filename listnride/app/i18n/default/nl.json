@@ -239,6 +239,10 @@
         "meta-description": "Discover Vienna by bike. With listnride, you can find a bike for rent in Vienna that matches your needs and your style."
       }
     },
+    "brands": {
+      "meta-title": "Ontdek en ervaar buitengewone fietsen!",
+      "meta-description": "Ontdek en test de beste fietsen. Probeer een E-Bike, stadsfiets, MTB, racefiets, bakfiets en krijg deskundige ondersteuning voordat je een aankoop doet."
+    },
     "seo": {
       "city-title": "Huur de perfecte fiets in {{location}} | listnride",
       "city-description": "Kies de fiets die aan uw wensen voldoet online, vanaf {{ minPrice }}€. Geniet van {{location}} op de fiets, die zeker en vast is geboekt op listnride.",

@@ -12,7 +12,7 @@
     class="lnr-preload-bg"
     style="{{'background-image: url(' + bike.heroshot() + ')'}};"
     layout="row"
-    layout-align="start end"
+    layout-align="space-between end"
     ng-click="bike.showGalleryDialog($event)"
   >
     <md-button
@@ -21,6 +21,16 @@
       md-no-ink
     >
       {{ 'bike.view-pictures' | translate }}
+    </md-button>
+    <md-button
+      ng-if="bike.owner"
+      ng-click="$event.stopPropagation();"
+      class="md-raised lnr-btn-ico m-b-auto"
+      md-no-ink
+      ui-sref="edit({bikeId: bike.data.id})"
+    >
+      <md-icon md-svg-icon="app/assets/ui_icons/pencil-edit-button.svg"></md-icon>
+      <span>Edit</span>
     </md-button>
   </div>
 
