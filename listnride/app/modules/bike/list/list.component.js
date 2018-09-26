@@ -35,49 +35,68 @@ angular.module('list', ['ngLocale'])
 
         var list = this;
 
-        // add default params
-        list.form = {
-          name: '',
-          brand: '',
-          description: '',
-          size: '',
-          category: '',
-          street: '',
-          city: '',
-          zip: '',
-          country: '',
-          custom_price: '',
-          discounts: '',
-          frame_size: '',
-          bicycle_number: '',
-          frame_number: '',
-          details: '',
-          accessories: {},
-          images: [],
-          coverage_total: 0
-        };
+        list.$onInit = function () {
+          // variables
+          // default params
+          list.form = {
+            name: '',
+            brand: '',
+            description: '',
+            size: '',
+            category: '',
+            street: '',
+            city: '',
+            zip: '',
+            country: '',
+            custom_price: false,
+            discounts: '',
+            frame_size: '',
+            bicycle_number: '',
+            frame_number: '',
+            details: '',
+            accessories: {},
+            images: [],
+            coverage_total: 0
+          };
 
-        list.selectedIndex = 0;
-        list.removedImages = [];
-        list.startImage = 1;
-        list.sizeOptions = bikeOptions.sizeOptions();
-        list.kidsSizeOptions = bikeOptions.kidsSizeOptions();
-        bikeOptions.accessoryOptions().then(function (resolve) {
-          list.accessoryOptions = resolve;
-        });
-        list.validateObj = {height: {min: 1000}, width: {min: 1500}, duration: {max: '5m'}};
-        list.invalidFiles = {};
-        list.businessUser = false;
-        list.selectedCategory = {};
-        bikeOptions.allCategoriesOptions().then(function (resolve) {
-          list.categoryOptions = resolve;
-        });
-        list.coverageOptions = [1000, 2000, 3000, 4000, 5000];
+          list.selectedIndex = 0;
+          list.removedImages = [];
+          list.startImage = 1;
+          list.sizeOptions = bikeOptions.sizeOptions();
+          list.kidsSizeOptions = bikeOptions.kidsSizeOptions();
+          bikeOptions.accessoryOptions().then(function (resolve) {
+            list.accessoryOptions = resolve;
+          });
+          list.validateObj = {
+            height: {
+              min: 1000
+            },
+            width: {
+              min: 1500
+            },
+            duration: {
+              max: '5m'
+            }
+          };
+          list.invalidFiles = {};
+          list.businessUser = false;
+          list.selectedCategory = {};
+          bikeOptions.allCategoriesOptions().then(function (resolve) {
+            list.categoryOptions = resolve;
+          });
+          list.coverageOptions = [1000, 2000, 3000, 4000, 5000];
 
-        var equipmentCategories = [51, 52, 53, 54];
-        var insuranceCountries = ['DE', 'AT'];
+          list.equipmentCategories = [51, 52, 53, 54];
+          list.insuranceCountries = ['DE', 'AT'];
 
-        var setBusinessForm = function() {
+          // methods
+
+          // invocations
+          // populate data for list or edit bike
+          list.isListMode ? list.populateNewBikeData() : list.populateExistingBikeData();
+        }
+
+        var setBusinessForm = function () {
           if (authentication.isBusiness) {
             list.businessUser = true;
             list.form.custom_price = true;
@@ -88,20 +107,20 @@ angular.module('list', ['ngLocale'])
         };
 
         function subcategoryParent(subId) {
-          return _.find(list.categoryOptions, function(category) {
-            return _.find(category.subcategories, function(subcategory) {
+          return _.find(list.categoryOptions, function (category) {
+            return _.find(category.subcategories, function (subcategory) {
               return subcategory.id === subId
             })
           });
         }
 
-        list.tabCompleted = function(tabId) {
+        list.tabCompleted = function (tabId) {
           return (list.selectedIndex > tabId && list.isListMode) ? "✔" : "    ";
         };
 
         list.subcategoriesList = function (categoryId) {
           if (!categoryId) return;
-          return _.find(list.categoryOptions, function(category) {
+          return _.find(list.categoryOptions, function (category) {
             return category.catId === parseInt(categoryId);
           }).subcategories.sort()
         };
@@ -168,13 +187,6 @@ angular.module('list', ['ngLocale'])
                 list.form = data;
                 list.form.prices = prices;
 
-                _.forEach(data.accessories, function(value, key) {
-                  data.accessories[key] = value === "true";
-                });
-
-                // list.form.push(data.accessories);
-                list.form = _.merge(list.form, data.accessories);
-
                 // if custom price is enabled
                 if (list.form.custom_price && !list.businessUser) {
                   list.disableDiscounts();
@@ -203,50 +215,28 @@ angular.module('list', ['ngLocale'])
         list.submitNewRide = function () {
           var prices = price.inverseTransformPrices(list.form.prices, list.isListMode);
           var ride = {
-            "ride" : {
-              "name": list.form.name,
-              "brand": list.form.brand,
-              "description": list.form.description,
-              "size": list.form.size,
-              "category": list.form.subCategory,
-              "accessories": {
-                "lock": !!list.form.lock,
-                "helmet": !!list.form.helmet,
-                "lights": !!list.form.lights,
-                "basket": !!list.form.basket,
-                "trailer": !!list.form.trailer,
-                "childseat": !!list.form.childseat,
-                "gps": !!list.form.gps
-              },
+            "ride": Object.assign({}, list.form, {
               "user_id": $localStorage.userId,
-              "street": list.form.street,
-              "city": list.form.city,
-              "zip": list.form.zip,
-              "country": list.form.country,
               "prices": prices,
-              "custom_price": list.form.custom_price,
-              "discounts": list.form.discounts,
-              "frame_size": list.form.frame_size,
-              "bicycle_number": list.form.bicycle_number,
-              "frame_number": list.form.frame_number,
-              "details": list.form.details,
+              "is_equipment": _.includes(list.equipmentCategories, list.form.subCategory),
+              "category": list.form.subCategory,
               "image_file_1": (list.form.images[0]) ? list.form.images[0].src : undefined,
               "image_file_2": (list.form.images[1]) ? list.form.images[1].src : undefined,
               "image_file_3": (list.form.images[2]) ? list.form.images[2].src : undefined,
               "image_file_4": (list.form.images[3]) ? list.form.images[3].src : undefined,
-              "image_file_5": (list.form.images[4]) ? list.form.images[4].src : undefined,
-              "is_equipment": _.includes(equipmentCategories, list.form.subCategory),
-              "coverage_total": list.form.coverage_total
-            }
+              "image_file_5": (list.form.images[4]) ? list.form.images[4].src : undefined
+            })
           };
 
           api.get('/users/' + $localStorage.userId).then(
             function (success) {
               var user = success.data;
+              // Check user status and verified keys
               if (!user.has_address || !user.confirmed_phone || user.status == 0) {
                 verification.openDialog(false);
                 list.submitDisabled = false;
               } else {
+                // Create a bike
                 Upload.upload({
                   method: 'POST',
                   url: api.getApiUrl() + '/rides',
@@ -258,7 +248,10 @@ angular.module('list', ['ngLocale'])
                   function (response) {
                     loadingDialog.close();
                     $state.go("listings");
-                    $analytics.eventTrack('List a Bike', {category: 'List Bike', label: 'Bike Added'});
+                    $analytics.eventTrack('List a Bike', {
+                      category: 'List Bike',
+                      label: 'Bike Added'
+                    });
                   },
                   function (error) {
                     notification.show(error, 'error');
@@ -272,57 +265,45 @@ angular.module('list', ['ngLocale'])
               notification.show(error, 'error');
             }
           );
+
         };
 
         // form submission for existing ride
         list.submitEditedRide = function () {
           var prices = price.inverseTransformPrices(list.form.prices);
           var ride = {
-            "ride" : {
-              "name": list.form.name,
-              "brand": list.form.brand,
-              "description": list.form.description,
-              "size": list.form.size,
-              "category": list.form.subCategory,
+            "ride": Object.assign({}, list.form, {
               "accessories": {
-                "lock": !!list.form.lock,
-                "helmet": !!list.form.helmet,
-                "lights": !!list.form.lights,
-                "basket": !!list.form.basket,
-                "trailer": !!list.form.trailer,
-                "childseat": !!list.form.childseat,
-                "gps": !!list.form.gps
+                "lock": true,
+                "helmet": true,
+                "lights": true,
+                "basket": true,
+                "trailer": true,
+                "childseat": true,
+                "gps": true
               },
               "user_id": $localStorage.userId,
-              "street": list.form.street,
-              "city": list.form.city,
-              "zip": list.form.zip,
-              "country": list.form.country,
               "prices": prices,
-              "custom_price": list.form.custom_price,
-              "discounts": list.form.discounts,
-              "frame_size": list.form.frame_size,
-              "bicycle_number": list.form.bicycle_number,
-              "frame_number": list.form.frame_number,
-              "details": list.form.details,
-              "is_equipment": _.includes([51, 52, 53, 54], list.form.subCategory),
-              "coverage_total": list.form.coverage_total
-            }
+              "is_equipment": _.includes(list.equipmentCategories, list.form.subCategory),
+              "category": list.form.subCategory,
+            })
           };
 
           // TODO: Refactor images logic backend & frontend
-          _.forEach(list.removedImages, function(image_name) {
+          _.forEach(list.removedImages, function (image_name) {
             ride['ride']['remove_' + image_name] = true
           });
 
           // FIXME: HOTFIX, optimise long term
-          _.forEach(list.form.images, function(image) {
-            if(_.isEmpty(image.url)){ AddNewImage(image) }
+          _.forEach(list.form.images, function (image) {
+            if (_.isEmpty(image.url)) {
+              AddNewImage(image)
+            }
           });
 
           function AddNewImage(image) {
-            _.forEach(_.range(list.startImage,6), function(id) {
-              if(list.form['image_file_' + id].url == null || ride['ride']['remove_image_file_' + id]){
+            _.forEach(_.range(list.startImage, 6), function (id) {
+              if (list.form['image_file_' + id].url == null || ride['ride']['remove_image_file_' + id]) {
                 ride['ride']['remove_image_file_' + id] = false;
                 ride['ride']['image_file_' + id] = image.src;
                 list.startImage = id + 1;
@@ -349,6 +330,7 @@ angular.module('list', ['ngLocale'])
               loadingDialog.close();
             }
           );
+
         };
 
         // submit the form
@@ -365,19 +347,19 @@ angular.module('list', ['ngLocale'])
         // set the custom prices for a bike
         list.setCustomPrices = function (dailyPriceChanged) {
           // business users get their prices proposed according to a fixed scheme
-          if(list.businessUser) {
+          if (list.businessUser) {
             list.form.prices = price.proposeCustomPrices(list.form);
           } else {
             // discount fields are enabled and no custom price are set manually
             if (list.discountFieldEditable) {
-            // set the prices based on the daily price
+              // set the prices based on the daily price
               list.form.prices = price.setCustomPrices(list.form);
             }
           }
         };
 
         list.insuranceAllowed = function () {
-          if (list.form.country && insuranceCountries.indexOf(countryCodeTranslator.countryCodeFor(list.form.country)) > -1) {
+          if (list.form.country && list.insuranceCountries.indexOf(countryCodeTranslator.countryCodeFor(list.form.country)) > -1) {
             return true;
           } else {
             return false;
@@ -426,7 +408,7 @@ angular.module('list', ['ngLocale'])
         };
 
         list.showAccessories = function () {
-          return list.form.subCategory && !_.includes(equipmentCategories, list.form.subCategory)
+          return list.form.subCategory && !_.includes(list.equipmentCategories, list.form.subCategory)
         }
 
         // add image of the bike
@@ -435,10 +417,15 @@ angular.module('list', ['ngLocale'])
             for (var i = 0; i < files.length && list.form.images.length < 5; ++i)
               if (files[i] !== null) {
                 if (list.isListMode) {
-                  list.form.images.push({src: files[i], local: "true"});
-                }
-                else {
-                  list.form.images.push({src: files[i], local: "true"});
+                  list.form.images.push({
+                    src: files[i],
+                    local: "true"
+                  });
+                } else {
+                  list.form.images.push({
+                    src: files[i],
+                    local: "true"
+                  });
                 }
               }
         };
@@ -488,7 +475,7 @@ angular.module('list', ['ngLocale'])
           // prices for some day should be higher than the previous day
           // from day 2 to day 7
           for (var day = 1; day < 7; day += 1) {
-              // if ()
+            // if ()
           }
         };
 
@@ -523,10 +510,6 @@ angular.module('list', ['ngLocale'])
           }
         };
 
-        list.onAccessoryClick = function (accessory) {
-          list.form[accessory] = !list.form[accessory];
-        };
-
         list.isFormValid = function () {
           return list.isCategoryValid() &&
             list.isDetailsValid() &&
@@ -535,12 +518,9 @@ angular.module('list', ['ngLocale'])
             list.isPricingValid();
         };
 
-        list.changeCategory = function() {
+        list.changeCategory = function () {
           list.form.subCategory = undefined;
         }
-        // populate data for list or edit bike
-        if (list.isListMode) list.populateNewBikeData();
-        else list.populateExistingBikeData();
       }
     ]
   })
