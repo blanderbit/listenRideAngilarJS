@@ -68,15 +68,9 @@ angular.module('list', ['ngLocale'])
             list.accessoryOptions = resolve;
           });
           list.validateObj = {
-            height: {
-              min: 1000
-            },
-            width: {
-              min: 1500
-            },
-            duration: {
-              max: '5m'
-            }
+            height: {min: 1000},
+            width: {min: 1500},
+            duration: {max: '5m'}
           };
           list.invalidFiles = {};
           list.businessUser = false;
@@ -178,10 +172,10 @@ angular.module('list', ['ngLocale'])
                 data.images = images;
                 var prices = price.transformPrices(data.prices, data.discounts);
                 data.size = parseInt(data.size);
-                data.mainCategory = subcategoryParent(data.category).catId;
-                data.subCategory = data.category;
 
+                data.mainCategory = subcategoryParent(data.category).catId;
                 list.selectedCategory = subcategoryParent(data.category);
+                data.subCategory = data.category;
 
                 // form data for edit bikes
                 list.form = data;
@@ -227,6 +221,8 @@ angular.module('list', ['ngLocale'])
               "image_file_5": (list.form.images[4]) ? list.form.images[4].src : undefined
             })
           };
+          // Hack to paste hash of Boolean params into JSONB
+          ride.ride.accessories = JSON.stringify(ride.ride.accessories);
 
           api.get('/users/' + $localStorage.userId).then(
             function (success) {
@@ -273,21 +269,14 @@ angular.module('list', ['ngLocale'])
           var prices = price.inverseTransformPrices(list.form.prices);
           var ride = {
             "ride": Object.assign({}, list.form, {
-              "accessories": {
-                "lock": true,
-                "helmet": true,
-                "lights": true,
-                "basket": true,
-                "trailer": true,
-                "childseat": true,
-                "gps": true
-              },
               "user_id": $localStorage.userId,
               "prices": prices,
               "is_equipment": _.includes(list.equipmentCategories, list.form.subCategory),
               "category": list.form.subCategory,
             })
           };
+          // Hack to paste hash of Boolean params into JSONB
+          ride.ride.accessories = JSON.stringify(ride.ride.accessories);
 
           // TODO: Refactor images logic backend & frontend
           _.forEach(list.removedImages, function (image_name) {
@@ -359,11 +348,7 @@ angular.module('list', ['ngLocale'])
         };
 
         list.insuranceAllowed = function () {
-          if (list.form.country && list.insuranceCountries.indexOf(countryCodeTranslator.countryCodeFor(list.form.country)) > -1) {
-            return true;
-          } else {
-            return false;
-          }
+          return list.form.country && list.insuranceCountries.indexOf(countryCodeTranslator.countryCodeFor(list.form.country)) > -1;
         }
 
         list.resetCustomPrices = function () {
@@ -387,11 +372,11 @@ angular.module('list', ['ngLocale'])
         };
 
         list.toggleDiscount = function () {
-          if (list.form.custom_price === true) {
-            list.resetCustomPrices();
+          if (list.form.custom_price) {
             list.show_custom_price = true;
             // list.discountFieldEditable = false;
-          } else if (list.form.custom_price === false) {
+          } else {
+            list.resetCustomPrices();
             list.show_custom_price = false;
             list.discountFieldEditable = true;
           }
@@ -469,14 +454,6 @@ angular.module('list', ['ngLocale'])
             if (list.form.prices[loop].price === undefined) return false;
           }
           return true;
-        };
-
-        list.isPricingValid2 = function () {
-          // prices for some day should be higher than the previous day
-          // from day 2 to day 7
-          for (var day = 1; day < 7; day += 1) {
-            // if ()
-          }
         };
 
         list.categoryChange = function (oldCategory) {
