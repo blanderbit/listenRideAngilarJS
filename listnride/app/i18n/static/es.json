@@ -77,6 +77,20 @@
       "cafes-bars-content": "Si te gusta la comida vegetariana y vegana, te recomendamos que visites <a href=\"http://harvest-bistrot.at\" target=\"_blank\">Harvest-Bistrot </a>en Karmeliterplatz. Si prefieres la cocina austríaca más tradicional, te recomendamos <a href=\"https://www.plachutta.at\" target=\"_blank\">Plachutta </a>. Pide un Tafelspitz o Wiener Schnitzel tradicionales y disfrútalos al aire libre con vistas a la famosa Ópera de Viena. ¡Será una gran noche para recordar! Para el toque final del día, qué mejor que caminar hacia el Danubio. En el camino encontrarás muchos bares interesantes o puedes sentarte al raso bajo las estrellas junto al río."
     }
   },
+  "brands": {
+    "title": "Prueba tu próxima bicicleta",
+    "description": "Listnride ayuda a las personas a descubrir, probar y conocer nuevas marcas y bicicletas antes de comprar en línea. Con listnride tiene la oportunidad de probar varios tipos de bicicletas y marcas antes de tomar la decisión final de compra. La mayoría de las marcas son marcas de bicicletas directas al consumidor y están disponibles para testar en todas las ciudades de Europa. Testrides se puede reservar en línea en el momento y lugar deseados. ¡Descubre y prueba las mejores bicicletas!",
+    "choose-from-brands": "Elige la marca",
+    "showroom": {
+      "header": "Nuestras salas de exposición",
+      "sub-header": "Experimenta una selección premium de marcas de bicicletas en Berlín y Munich.",
+      "berlin-description": "En el corazón de Berlin-Mitte, frente al Hackescher Markt, en el Berlin Experience Center presentamos marcas y ofrecemos bicicletas de prueba de Votec (Gravel), Bonvelo (Singlespeed), Vello (e-folding) y Biehler (desgaste de rendimiento). Venga, disfrute de un espresso recién hecho en nuestro bar, tome una bicicleta para comprar un testride o conozca personas de ideas afines en uno de nuestros eventos y atracciones sociales. ¡Esperamos conocerte! Aquí encontrará la descripción general de todas las bicicletas y marcas de prueba disponibles en Berlín.",
+      "munich-description": "Con una ubicación céntrica en Nymphenburg, en el Munich Experience Center presentamos bicicletas de Veloheld (bicicletas de acero), Bonvelo (Singlespeed) y Bionova (E-Bike). Además de estas marcas, ofrecemos las últimas bicicletas Felt Road y bicicletas eléctricas urbanas de Ampler, VanMoof, Leaos y Vello. Venga, disfrute de un café en nuestro bar, tome una bicicleta para comprar un testride y conozca gente de ideas afines en uno de nuestros eventos y atracciones sociales. ¡Esperamos conocerte! Aquí encontrará la descripción general de todas las bicicletas y marcas de prueba disponibles en Munich.",
+      "berlin-address": "<b>Nuestra dirección</b>\n<br>\nOranienburger Strasse 1-3\n<br>\nBerlín 10178\n<br>\nAlemania",
+      "munich-address": "<b>Nuestra dirección</b>\n<br>\nNymphenburgser Strasse 86\n<br>\nMünchen 80636\n<br>\nAlemania"
+    },
+    "no-brands-found": "Desafortunadamente no hay marcas en estas categorías todavía."
+  },
   "rider": {
     "chat": "La reserva de la bicicleta fue cancelada."
   },
