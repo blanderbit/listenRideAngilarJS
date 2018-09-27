@@ -78,16 +78,16 @@
     }
   },
   "brands": {
-    "title": "Entdecke und teste einzigartige Räder!",
-    "description": "listnride bietet die Möglichkeit, Marken und Fahrräder zu entdecken, kennenzulernen und vor einer Kaufentscheidung ausführlich zu testen. Die meisten unserer Marken sind Online-Direktanbieter und stehen nur über listnride für Testfahrten in ganz Europa zur Verfügung. Testfahrten können online zur gewünschten Zeit und am gewünschten Ort gebucht werden. Entdecke und teste die besten Fahrräder!",
+    "title": "Entdecke und teste dein nächstes Rad",
+    "description": "listnride bietet dir die Möglichkeit, Marken und Fahrräder zu entdecken, kennenzulernen und vor deiner Kaufentscheidung ausführlich zu testen. Die meisten unserer Marken sind Online-Direktanbieter und stehen nur über listnride für Testfahrten in ganz Europa zur Verfügung. Testfahrten können online zur gewünschten Zeit und am gewünschten Ort gebucht werden. Entdecke und teste die besten Fahrräder!",
     "choose-from-brands": "Wähle eine Marke",
     "showroom": {
-      "header": "Unsere Showrooms",
+      "header": "Unsere Standorte",
       "sub-header": "Erlebe eine Premium-Auswahl an Fahrradmarken in Berlin und München.",
-      "berlin-description": "Im Herzen von Berlin-Mitte, gegenüber dem Hackeschen Markt, werden im Berlin Experience Center Marken präsentiert und Testräder von Votec (Gravel), Bonvelo (Singlespeed), Vello (E-Falträder) und Biehler ( Performance Wear) angeboten. Also kommen Sie vorbei, genieße eine frisch gebraute Tasse Espresso, fahren Sie mit dem Fahrrad zu einer Probefahrt oder treffen Sie Gleichgesinnte auf einer unserer gesellschaftlichen Touren und Veranstaltungen. Wir freuen uns darauf, dich kennenzulernen! Hier findest du eine Übersicht über alle verfügbaren Testräder und Marken in Berlin.\n",
-      "munich-description": "Zentral gelegen in Nymphenburg, präsentieren wir im Münchner Experience Center Fahrräder von Veloheld (Stahlfahrräder), Bonvelo (Singlespeed) und Bionova (E-Bike). Neben diesen Marken bieten wir die neuesten Felt Roadbikes und Urban E-Bikes von Ampler, VanMoof, Leaos sowie Vello an. Komm vorbei, genieß einen Kaffee an unserer Bar, fahre eine Probefahrt und triff Gleichgesinnte auf einer unserer zahlreichen Ausfahrten oder Veranstaltungen. Wir freuen uns auf dich! Hier findest du die Übersicht aller verfügbaren Testbikes und Marken in München.\n",
-      "berlin-address": "<b>Unsere Adresse </b><br>\nOranienburger Straße 1-3 <br>\nBerlin 10178 <br>\nDeutschland",
-      "munich-address": "<b>Unsere Adresse </b><br>\nNymphenburger Straße 86 <br>\nMünchen 80636 <br>\nDeutschland"
+      "berlin-description": "Im Herzen von Berlin-Mitte, gegenüber dem Hackeschen Markt, werden im Berliner Experience Center Marken präsentiert und Testräder von Votec (Gravel), Bonvelo (Singlespeed & Fixie), Vello (E-Falträder) und Biehler (Performance Wear) angeboten. Also komm vorbei, genieße einen frisch gebrühten Espresso, fahre mit dem Fahrrad zu einer Probefahrt oder treffe Gleichgesinnte auf einer unserer regelmäßigen Touren oder Veranstaltungen. Wir freuen uns darauf, dich kennenzulernen! Hier findest du eine Übersicht über alle verfügbaren Testräder und Marken in Berlin.",
+      "munich-description": "Zentral gelegen in Nymphenburg, präsentieren wir im Münchner Experience Center Fahrräder von Veloheld (Stahlrahmen), Bonvelo (Single-Speed & Fixie) und rethink (E-Bike). Neben diesen Marken bieten wir dir die neuesten Felt Rennräder und urbanen E-Bikes von Ampler, VanMoof, Leaos sowie Vello. Komm vorbei, genieß einen Kaffee an unserer Bar, mache eine Probefahrt und triff Gleichgesinnte auf einer unserer zahlreichen Ausfahrten oder Veranstaltungen. Wir freuen uns auf dich! Hier findest du die Übersicht aller verfügbaren Testräder und Marken in München.",
+      "berlin-address": "<b>Unsere Adresse </b>\n<br>\nOranienburger Straße 1-3\n<br>\nBerlin 10178 \n<br>\nDeutschland",
+      "munich-address": "<b>Unsere Adresse </b>\n<br>\nNymphenburger Straße 86\n<br>\nMünchen 80636\n<br>\nDeutschland"
     },
     "no-brands-found": "Es gibt leider noch keine Marken in diesen Kategorien."
   },
@@ -225,7 +225,7 @@
         "title": "Gutscheine & Guthaben",
         "description": "Nutze Gutscheine und Guthaben für Fahrradmieten. Hier erfährst du, wie du Gutscheine einlösen kannst. Außerdem kannst du Freunde zu listnride einladen und so Guthaben aufbauen",
         "answer-1": "Du kannst Guthaben aufbauen, indem du Freunde via facebook oder E-Mail einlädst, Teil der listnride-Community zu werden. Melde dich in deinem Profil an, gehe zu \n<a href=\"http://www.listnride.de/invite-friends\" target=\"_blank\">Freunde einladen</a> \nund teile den Link mit anderen. Wenn deine Freunde ein Fahrrad über den Link mieten oder listen, erhältst du automatisch 10€, die du für deinen nächsten Verleih nutzen kannst.",
-        "answer-2": "Um Gutscheine einlösen zu können, musst deren Code einfach im Feld „<b>Gutschein einlösen</b>” eingeben wenn du ein Fahrrad anfrägst. Alternativ kannst du Codes in deinem Konto unter der Rubrik „<b>Gutscheine</b>” eingeben.",
+        "answer-2": "Um Gutscheine einlösen zu können, musst deren Code einfach im Feld „<b>Gutschein einlösen</b>” eingeben wenn du ein Fahrrad anfrägst. Alternativ kannst du Codes in deinem Konto unter der Rubrik „<b>Gutscheine</b>” eingeben. ",
         "answer-3": "Wann immer du ein Fahrrad anfrägst, kannst du einen Gutschein nutzen, allerdings ist jeder Code nur ein einziges mal gültig. \nWird der Gutschein bei der Miete nicht komplett aufgebraucht, speichern wir dir den restlichen Betrag in deinem lisntride-Konto als Guthaben, das dir für die nächste Buchung erhalten bleibt.\n",
         "answer-4": "How do I search for a bike?",
         "answer-5": "How do I search for a bike?",

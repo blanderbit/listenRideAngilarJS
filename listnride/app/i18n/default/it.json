@@ -3,6 +3,7 @@
     "learn-more": "Per saperne di più",
     "map": "Mappa",
     "bike-type": "Tipo di bici",
+    "filter-by": "Filtra per",
     "search-placeholder": "Cerca per es. Berlino, Monaco",
     "info": "Informazioni",
     "no-bikes-found": "Non sono state trovate biciclette",
@@ -241,6 +242,10 @@
         "meta-description": "Scopri Vienna in bicicletta. Con listnride puoi trovare una bicicletta  che corrisponde alle tue esigenze e al tuo stile."
       }
     },
+    "brands": {
+      "meta-title": "Scopri e testa le migliori bici!",
+      "meta-description": "Scopri e testa le migliori bici. Prova E-Bike, Urban, MTB, bici da corsa, bici da carico e ricevi consigli esperti sulla bici prima di decidere di acquistarla."
+    },
     "seo": {
       "city-title": "Noleggia la bicicletta perfetta a {{location}}.",
       "city-description": "Scegli online la bici più adatta alle tue esigenze, a partire da {{ minPrice }}€. Goditi {{location}}con una bicicletta noleggiata in modo sicuro su listnride.",
@@ -416,7 +421,7 @@
     "agree-terms-link": " termini listnride",
     "footer": {
       "questions": "Hai domande sul noleggio della bicicletta?",
-      "call-us": "Chiamaci al: +49 (0)30-120870330, Lun-Ven 9-18. ",
+      "call-us": "Chiamaci al: <a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>, \nLun-Ven 9-18. O scrivici un <a href=\"mailto:contact@listnride.com\">E-mail</a>",
       "email-us": "O scrivici un email",
       "support": "listnride servizio clienti"
     },

@@ -3,6 +3,7 @@
     "learn-more": "Meer info",
     "map": "Kaart",
     "bike-type": "Fietstype",
+    "filter-by": "Filteren op",
     "search-placeholder": "Zoek naar bijvoorbeeld Berlijn, München",
     "info": "Info",
     "no-bikes-found": " Helaas! er worden nog geen fietsen op deze locatie aangeboden.",
@@ -241,7 +242,7 @@
     },
     "brands": {
       "meta-title": "Ontdek en ervaar buitengewone fietsen!",
-      "meta-description": "Ontdek en test de beste fietsen. Probeer een E-Bike, stadsfiets, MTB, racefiets, bakfiets en krijg deskundige ondersteuning voordat je een aankoop doet."
+      "meta-description": "Ontdek en test de beste fietsen. Probeer E-bikes, Urban Bikes, Fixies, Single Speed Bikes, E-MTB's, Trekking Bikes, Gravel- en Cyclocross-Bikes, MTB's, Road- en Cargo-Bikes en ontvang deskundig advies over de fiets voordat u een aankoopbeslissing neemt."
     },
     "seo": {
       "city-title": "Huur de perfecte fiets in {{location}} | listnride",
@@ -423,7 +424,7 @@
     "agree-terms-link": "algemene voorwaarden van listnride",
     "footer": {
       "questions": "Heb je vragen bij het boeken van een fiets?",
-      "call-us": "Bel ons op +49 (0)30-120870330, Ma-Vrij 9-18u.",
+      "call-us": "Bel ons op <a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>, \nMa-Vrij 9-18u. Of stuur ons een <a href=\"mailto:contact@listnride.com\"> E-mail</a>",
       "email-us": "Of stuur ons een email",
       "support": "listnride Support"
     },
