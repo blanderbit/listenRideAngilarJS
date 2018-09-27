@@ -127,7 +127,7 @@ angular.module('brands', []).component('brands', {
         // Origins, anchor positions and coordinates of the marker increase in the X
         // direction to the right and in the Y direction down.
         var image = {
-          url: 'app/assets/ui_icons/map/markers/Pin Map 56x56.png',
+          url: 'app/assets/ui_icons/map/markers/pin_map_bike_56x56.png',
           // This marker is 56 pixels wide by 56 pixels high.
           size: new google.maps.Size(56,56),
           // The origin for this image is (0, 0).
@@ -144,13 +144,13 @@ angular.module('brands', []).component('brands', {
           id: brand.id,
           icon: image,
           title: brand.title,
-          label: { text: brand.title, color: "white", fontSize: '13px', fontWeight: 'bold' }
+          // label: { text: brand.title, color: "white", fontSize: '13px', fontWeight: 'bold' }
         });
 
-        google.maps.event.addListener(marker, 'click', function () {
-          brands.selectedBrand = brand;
-          map.showInfoWindow('searchMapWindow', this);
-        });
+        // google.maps.event.addListener(marker, 'click', function () {
+        //   brands.selectedBrand = brand;
+        //   map.showInfoWindow('searchMapWindow', this);
+        // });
 
         return marker;
       }
