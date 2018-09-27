@@ -1,7 +1,11 @@
 {
   "shared": {
     "learn-more": "Leer más",
+    "map": "Mapa",
+    "bike-type": "Tipo de bicicleta",
+    "filter-by": "Filtrado por",
     "search-placeholder": "Search for e.g. Berlin, Munich",
+    "info": "Info",
     "no-bikes-found": "No se encontraron bicicletas",
     "dresden": "Dresden",
     "bolzano": "Bolzano",
@@ -241,6 +245,10 @@
         "meta-description": "Descubre Viena en bici. Con listnride, puedes encontrar una bici de alquiler en Viena que coincida con tus necesidades y estilo."
       }
     },
+    "brands": {
+      "meta-title": "Descubre y experimenta bicicletas extraordinarias",
+      "meta-description": "Descubre y prueba las mejores bicicletas. Pruebe E-Bike, Urban, Fixie, Single Speed, E-MTB, Trekking, Gravel, Cyclocross, MTB, Road, Cargo y obtenga consejos de expertos sobre la bicicleta antes de tomar su decisión de compra."
+    },
     "seo": {
       "city-title": "Alquila la bicicleta perfecta en {{location}} | listnride",
       "city-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una bicicleta alquilada de forma segura en listnride.",
@@ -420,7 +428,7 @@
     "agree-terms-link": "términos de listnride",
     "footer": {
       "questions": "¿Tienes preguntas con respecto a la reserva de una bicicleta?",
-      "call-us": "Llámanos al +49 (0)30-120870330, lunes a viernes 9-18h. ",
+      "call-us": "Llámanos al <a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>, \nlunes a viernes 9-18h. O escríbenos un correo<a href=\"mailto:contact@listnride.com\">electrónico</a>",
       "email-us": "O escríbenos un correo electrónico",
       "support": "Equipo de soporte de listnride"
     },

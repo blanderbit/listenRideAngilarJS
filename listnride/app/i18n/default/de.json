@@ -2,6 +2,8 @@
   "shared": {
     "learn-more": "Mehr erfahren",
     "map": "Karte",
+    "bike-type": "Fahrradtyp",
+    "filter-by": "Filtern nach",
     "search-placeholder": "Suche z.B. nach Berlin, München,....",
     "info": "Info",
     "no-bikes-found": "Keine Fahrräder gefunden",
@@ -245,7 +247,7 @@
     },
     "brands": {
       "meta-title": "Entdecke und erlebe außergewöhnliche Räder!",
-      "meta-description": "Entdecke und erlebe einzigartige Räder. Teste E-Bike, Trekkingrad, Single Speed, Fixie, Stadtrad, Querfeldein, Gravel, Cyclocross, Hollandrad, MTB, E-MTB, Rennrad, Lastenrad und und hol dir fachkundige Beratung über das Fahrrad, bevor du deine Kaufentscheidung triffst.\n\n"
+      "meta-description": "Entdecke und erlebe einzigartige Räder. Teste E-Bikes, Trekkingräder, Single Speed Räder, Fixies, Stadträder, Querfeldein- und Gravel-Räder, Cyclocrossräder, Hollandräder, MTBs, E-MTBs, Rennräder, und Lastenräder und hol dir fachkundige Beratung über das Fahrrad, bevor du deine Kaufentscheidung triffst."
     },
     "seo": {
       "city-title": "Miete das perfekte Fahrrad in {{location}} | listnride",
@@ -427,7 +429,7 @@
     "agree-terms-link": "listnride AGBs",
     "footer": {
       "questions": "Du hast Fragen rund ums Mieten von Fahrrädern?",
-      "call-us": "Ruf uns unter +49 (0)30-120870330, Mo-Fr 9-18 Uhr an. ",
+      "call-us": " Ruf unseren Support unter <a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>, \nMo-Fr 9-18 Uhr, an. Oder schreib uns eine <a href=\"mailto:contact@listnride.com\">E-mail</a>",
       "email-us": "Oder schreib uns eine E-Mail",
       "support": "listnride Support"
     },
