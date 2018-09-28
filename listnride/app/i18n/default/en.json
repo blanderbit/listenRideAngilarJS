@@ -429,7 +429,7 @@
     "agree-terms-link": "listnride Terms",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
-      "call-us": " Call our support at <a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a> \n(Mon-Fri 9-18). Or send us an <a href=\"mailto:contact@listnride.com\"> E-mail</a>",
+      "call-us": " Call our support at <a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a> <br>(Mon-Fri 9-18). Or send us an <a href=\"mailto:contact@listnride.com\"> E-mail</a>",
       "email-us": "Or write us an email",
       "support": "listnride Support"
     },
@@ -791,6 +791,7 @@
   },
   "home": {
     "landing-section-header": "The perfect bike. Simply rent it.",
+    "see-all-brands-and-bikes": "See all brands and bikes",
     "insurance": {
       "description": "No matter if minimalistic fixie or high-end triathlon bike: Every listnride rental in Germany or Austria is insured! Simple. Unbureaucratically. Anytime.",
       "header": "Insurance for your rental on listnride",
