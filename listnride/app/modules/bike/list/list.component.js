@@ -25,9 +25,10 @@ angular.module('list', ['ngLocale'])
       'price',
       'countryCodeTranslator',
       'notification',
+      'helpers',
       function ListController($localStorage, $stateParams, $state, $analytics,
-        Upload, bikeOptions, api, authentication, verification,
-        accessControl, loadingDialog, price, countryCodeTranslator, notification) {
+        Upload, bikeOptions, api, authentication, verification, accessControl,
+        loadingDialog, price, countryCodeTranslator, notification, helpers) {
 
         if (accessControl.requireLogin()) {
           return;
@@ -162,7 +163,7 @@ angular.module('list', ['ngLocale'])
                     data["image_file_" + i].small.url !== null) {
                     images.push({
                       src: data["image_file_" + i],
-                      url: data["image_file_" + i].small.url,
+                      url: helpers.lowerCaseFilenameExtension(data["image_file_" + i].small.url),
                       local: "false",
                       name: "image_file_" + i
                     });

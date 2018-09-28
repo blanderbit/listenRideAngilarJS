@@ -24,7 +24,10 @@
             <div ng-if="img.local == 'true'" class="img-preview lnr-margin-top" ngf-background="img.src" ngf-as-background="true">
             </div>
 
-            <div class="img-preview lnr-margin-top" ng-if="img.local == 'false'" ng-style="{'background-image': 'url(' + img.url + ')'}">
+            <div
+              ng-if="img.local == 'false'"
+              class="img-preview lnr-margin-top"
+              ng-style="{'background-image': 'url(' + img.url + ')'}">
             </div>
             <md-button class="md-lined md-warn" ng-click="picturesTab.parent.removeImage($index, img)">
               {{ 'list.pictures.remove' | translate}}

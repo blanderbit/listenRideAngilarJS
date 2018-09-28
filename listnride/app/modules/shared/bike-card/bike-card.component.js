@@ -9,8 +9,8 @@ angular.module('bikeCard',[]).component('bikeCard', {
     home: '<',
     seo: '<'
   },
-  controller: ['$mdMedia',
-    function BikeCardController($mdMedia) {
+  controller: ['$mdMedia', 'helpers',
+    function BikeCardController($mdMedia, helpers) {
       var bikeCard = this;
       bikeCard.showIcon = !bikeCard.seo && bikeCard.bike.category;
       bikeCard.from = Math.ceil(bikeCard.bike.price_from);
@@ -19,9 +19,9 @@ angular.module('bikeCard',[]).component('bikeCard', {
 
       function imageUrl() {
         if (_.isEmpty(bikeCard.bike.image_file_1)) {
-          return bikeCard.bike.image_file
+          return helpers.lowerCaseFilenameExtension(bikeCard.bike.image_file);
         } else {
-          return bikeCard.bike.image_file_1.small.url
+          return helpers.lowerCaseFilenameExtension(bikeCard.bike.image_file_1.small.url);
         }
       }
     }
