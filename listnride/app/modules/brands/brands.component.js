@@ -3,8 +3,8 @@
 angular.module('brands', []).component('brands', {
   templateUrl: 'app/modules/brands/brands.template.html',
   controllerAs: 'brands',
-  controller: ['$timeout', '$translatePartialLoader', 'ENV', 'notification', 'mapConfigs', 'NgMap',
-    function BrandsController($timeout, $tpl, ENV, notification, mapConfigs, NgMap) {
+  controller: ['$timeout', '$translatePartialLoader', 'ENV', 'notification', 'mapConfigs', 'NgMap', 'api',
+    function BrandsController($timeout, $tpl, ENV, notification, mapConfigs, NgMap, api) {
 
       var brands = this;
       $tpl.addPart(ENV.staticTranslation);
@@ -32,187 +32,17 @@ angular.module('brands', []).component('brands', {
       };
 
       function getData() {
-          brands.data = [
-            {
-                "id": 1,
-                "logo": "/app/assets/ui_images/featured-tiles/ampler.jpg",
-                "title": "Ampler",
-                "tile_image": "/app/assets/ui_images/featured-tiles/ampler.jpg",
-                "categories": [11, 14, 21],
-                "pins": [
-                  {
-                    "lat": 52.5269957477477,
-                    "lng": 13.403609690991
-                    },
-                  {
-                    "lat": 52.5269957477477,
-                    "lng": 13.403609690991
-                    }
-              ]
+          api.get('/brand_pages').then(
+            function (success) {
+              brands.data = success.data;
+              checkSelectedBrands();
+              initializeGoogleMap();
             },
-            {
-              "id": 2,
-              "logo": "/app/assets/ui_images/featured-tiles/rethink.jpg",
-              "title": "Rethink",
-              "tile_image": "/app/assets/ui_images/featured-tiles/rethink.jpg",
-              "categories": [21, 22, 31],
-              "pins": [{
-                  "lat": 52.5269957477477,
-                  "lng": 13.403609690991
-                },
-                {
-                  "lat": 52.5269957477477,
-                  "lng": 13.403609690991
-                }
-              ]
-            },
-            {
-              "id": 3,
-              "logo": "/app/assets/ui_images/featured-tiles/vello.jpg",
-              "title": "Vello",
-              "tile_image": "/app/assets/ui_images/featured-tiles/vello.jpg",
-              "categories": [41,51,61],
-              "pins": [{
-                  "lat": 52.5269957477477,
-                  "lng": 13.403609690991
-                },
-                {
-                  "lat": 52.5269957477477,
-                  "lng": 13.403609690991
-                }
-              ]
-            },
-            {
-              "id": 4,
-              "logo": "/app/assets/ui_images/featured-tiles/ampler.jpg",
-              "title": "Ampler",
-              "tile_image": "/app/assets/ui_images/featured-tiles/ampler.jpg",
-              "categories": [11, 14, 21],
-              "pins": [{
-                  "lat": 52.5269957477477,
-                  "lng": 13.403609690991
-                },
-                {
-                  "lat": 42.5269957477477,
-                  "lng": 23.403609690991
-                }
-              ]
-            },
-            {
-              "id": 5,
-              "logo": "/app/assets/ui_images/featured-tiles/rethink.jpg",
-              "title": "Rethink",
-              "tile_image": "/app/assets/ui_images/featured-tiles/rethink.jpg",
-              "categories": [21, 22, 31],
-              "pins": [{
-                  "lat": 12.5269957477477,
-                  "lng": 10.403609690991
-                },
-                {
-                  "lat": 12.5269957477477,
-                  "lng": 15.403609690991
-                }
-              ]
-            },
-            {
-              "id": 6,
-              "logo": "/app/assets/ui_images/featured-tiles/vello.jpg",
-              "title": "Vello",
-              "tile_image": "/app/assets/ui_images/featured-tiles/vello.jpg",
-              "categories": [41, 51, 61],
-              "pins": [{
-                  "lat": 11.5269957477477,
-                  "lng": 5.403609690991
-                },
-                {
-                  "lat": 25.5269957477477,
-                  "lng": 80.403609690991
-                }
-              ]
-            },
-            {
-              "id": 7,
-              "logo": "/app/assets/ui_images/featured-tiles/rethink.jpg",
-              "title": "Rethink",
-              "tile_image": "/app/assets/ui_images/featured-tiles/rethink.jpg",
-              "categories": [21, 22, 31],
-              "pins": [{
-                  "lat": 52.5269957477477,
-                  "lng": 13.403609690991
-                },
-                {
-                  "lat": 52.5269957477477,
-                  "lng": 13.403609690991
-                }
-              ]
-            },
-            {
-              "id": 8,
-              "logo": "/app/assets/ui_images/featured-tiles/vello.jpg",
-              "title": "Vello",
-              "tile_image": "/app/assets/ui_images/featured-tiles/vello.jpg",
-              "categories": [41, 51, 61],
-              "pins": [{
-                  "lat": 52.5269957477477,
-                  "lng": 13.403609690991
-                },
-                {
-                  "lat": 52.5269957477477,
-                  "lng": 13.403609690991
-                }
-              ]
-            },
-            {
-              "id": 9,
-              "logo": "/app/assets/ui_images/featured-tiles/ampler.jpg",
-              "title": "Ampler",
-              "tile_image": "/app/assets/ui_images/featured-tiles/ampler.jpg",
-              "categories": [11, 14, 21],
-              "pins": [{
-                  "lat": 52.5269957477477,
-                  "lng": 13.403609690991
-                },
-                {
-                  "lat": 52.5269957477477,
-                  "lng": 13.403609690991
-                }
-              ]
-            },
-            {
-              "id": 10,
-              "logo": "/app/assets/ui_images/featured-tiles/rethink.jpg",
-              "title": "Rethink",
-              "tile_image": "/app/assets/ui_images/featured-tiles/rethink.jpg",
-              "categories": [21, 22, 31],
-              "pins": [{
-                  "lat": 52.5269957477477,
-                  "lng": 13.403609690991
-                },
-                {
-                  "lat": 52.5269957477477,
-                  "lng": 13.403609690991
-                }
-              ]
-            },
-            {
-              "id": 11,
-              "logo": "/app/assets/ui_images/featured-tiles/vello.jpg",
-              "title": "Vello",
-              "tile_image": "/app/assets/ui_images/featured-tiles/vello.jpg",
-              "categories": [41, 51, 61],
-              "pins": [{
-                  "lat": 52.5269957477477,
-                  "lng": 13.403609690991
-                },
-                {
-                  "lat": 52.5269957477477,
-                  "lng": 13.403609690991
-                }
-              ]
+            function (error) {
+              notification.show(error, 'error');
             }
-          ]
-          checkSelectedBrands();
-          initializeGoogleMap();
+          );
+
       };
 
       function isIncludeCategory(brandCategories) {
@@ -297,7 +127,7 @@ angular.module('brands', []).component('brands', {
         // Origins, anchor positions and coordinates of the marker increase in the X
         // direction to the right and in the Y direction down.
         var image = {
-          url: 'app/assets/ui_icons/map/markers/Pin Map 56x56.png',
+          url: 'app/assets/ui_icons/map/markers/pin_map_bike_56x56.png',
           // This marker is 56 pixels wide by 56 pixels high.
           size: new google.maps.Size(56,56),
           // The origin for this image is (0, 0).
@@ -314,13 +144,13 @@ angular.module('brands', []).component('brands', {
           id: brand.id,
           icon: image,
           title: brand.title,
-          label: { text: brand.title, color: "white", fontSize: '13px', fontWeight: 'bold' }
+          // label: { text: brand.title, color: "white", fontSize: '13px', fontWeight: 'bold' }
         });
 
-        google.maps.event.addListener(marker, 'click', function () {
-          brands.selectedBrand = brand;
-          map.showInfoWindow('searchMapWindow', this);
-        });
+        // google.maps.event.addListener(marker, 'click', function () {
+        //   brands.selectedBrand = brand;
+        //   map.showInfoWindow('searchMapWindow', this);
+        // });
 
         return marker;
       }
