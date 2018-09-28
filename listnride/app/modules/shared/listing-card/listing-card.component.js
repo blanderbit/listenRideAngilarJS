@@ -20,11 +20,12 @@ angular.module('listingCard',[]).component('listingCard', {
     view: '<',
     changeAvailability: '<'
   },
-  controller: ['api', function ListingCardController(api) {
+  controller: ['api', 'notification', 'helpers', function ListingCardController(api, notification, helpers) {
       var listingCard = this;
 
       listingCard.price = Math.ceil(listingCard.price);
-      
+      listingCard.imageUrl = helpers.lowerCaseFilenameExtension(listingCard.imageUrl);
+
       // activate a bike
       // implementation is different from parent component
       listingCard.onActivateClick = function() {
@@ -51,7 +52,7 @@ angular.module('listingCard',[]).component('listingCard', {
           },
           function(error) {
             listingCard.disableDeactivate = false;
-            console.log("Error deactivating bike", error);
+            notification.show(error, 'error');
           }
         );
       };

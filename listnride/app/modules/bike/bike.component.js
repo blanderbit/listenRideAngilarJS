@@ -3,8 +3,8 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$localStorage', '$mdDialog', '$mdMedia', '$translate', '$filter', '$state', 'ngMeta', 'price', 'mapConfigs',
-    function BikeController(api, $stateParams, $localStorage, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price, mapConfigs) {
+  controller: ['api', '$stateParams', '$localStorage', '$mdDialog', '$mdMedia', '$translate', '$filter', '$state', 'ngMeta', 'price', 'mapConfigs', 'helpers',
+    function BikeController(api, $stateParams, $localStorage, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price, mapConfigs, helpers) {
       var bike = this;
       bike.colorScheme = mapConfigs.colorScheme();
 
@@ -23,7 +23,10 @@ angular.module('bike',[]).component('bike', {
       };
 
       bike.heroshot = function () {
-        if (bike.data) return bike.mobileCalendar() ? bike.data.image_file_1.small.url : bike.data.image_file_1.large.url;
+        if (bike.data) {
+          var heroshot = bike.mobileCalendar() ? bike.data.image_file_1.small.url : bike.data.image_file_1.large.url;
+          return helpers.lowerCaseFilenameExtension(heroshot);
+        }
       };
 
       // TODO: move all api calls in service

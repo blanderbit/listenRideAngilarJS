@@ -10,10 +10,10 @@
   <div
     id="hero-shot"
     class="lnr-preload-bg"
-    style="{{'background-image: url(' + bike.heroshot() + ')'}};"
     layout="row"
     layout-align="space-between end"
     ng-click="bike.showGalleryDialog($event)"
+    ng-style="{'background-image': 'url(' + bike.heroshot() + ')'}"
   >
     <md-button
       class="md-raised"
