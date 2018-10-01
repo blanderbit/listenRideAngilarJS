@@ -1006,7 +1006,7 @@
                     .then(function (translations) {
                         ngMeta.setTitle(translations["meta.brand-integration.rethink.meta-title"]);
                         ngMeta.setTag("description", translations["meta.brand-integration.rethink.meta-descr"]);
-                        ngMeta.setTag("og:image", "app/assets/ui_images/opengraph/rethink.jpg");
+                        ngMeta.setTag("og:image", "app/assets/ui_images/opengraph/lnr_rethink.jpg");
                         ngMeta.setTag("noindex", false);
                     })
             }
