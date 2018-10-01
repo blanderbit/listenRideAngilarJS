@@ -322,6 +322,14 @@ angular.module('booking', [])
               booking.user.firstName = success.data.first_name;
               booking.user.lastName = success.data.last_name;
               booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
+
+              // Autocomplete phone number if it's confirmed already
+              if (booking.user.has_phone_number) {
+                booking.phoneConfirmed = 'success';
+                booking.verificationForm.phone_number = '+' + success.data.phone_number;
+                booking.phone_number = '+' + success.data.phone_number;
+              }
+
               // if (!booking.shopBooking || Object.keys(oldUser).length > 0) {
                 setFirstTab();
               // }
