@@ -404,6 +404,10 @@ md-tooltip .md-content {
 /*-----------------------------------------------------------------------------------*/
 /* LNR_CLASSES
 /*-----------------------------------------------------------------------------------*/
+.lnr-fs14 {
+  font-size: 14px;
+}
+
 .lnr-page-settings p {
   line-height: 24px;
 }
@@ -566,6 +570,10 @@ md-tooltip .md-content {
 
 .lnr-pt-0 {
   padding-top: 0;
+}
+
+.lnr-pb-0 {
+  padding-bottom: 0;
 }
 
 .lnr-lh-body-2 {
@@ -2774,6 +2782,28 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   text-align: right;
   cursor: pointer;
   font-size: 18px;
+}
+
+/* FILTER__CATEGORY */
+
+.minimal-view .filter__category {
+  width: auto;
+}
+
+.minimal-view md-icon {
+  display: none;
+}
+
+.minimal-view md-checkbox {
+  margin-bottom: 8px;
+}
+
+.minimal-view .cat-filter__parent-box {
+  padding-top: 8px;
+}
+
+.minimal-view filter__category:first-child .cat-filter__parent-box {
+  padding-top: 0;
 }
 
 /*-----------------------------------------------------------------------------------*/
