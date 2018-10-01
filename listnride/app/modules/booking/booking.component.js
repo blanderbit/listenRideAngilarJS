@@ -9,10 +9,10 @@ angular.module('booking', [])
     controller: [
       '$localStorage', '$rootScope', '$scope', '$state', '$stateParams', '$mdToast',
       '$timeout', '$analytics', 'ENV', '$translate', '$filter', 'authentication',
-      'api', 'price', 'voucher', 'countryCodeTranslator', 'calendarHelper',
+      'api', 'price', 'voucher', 'countryCodeTranslator', 'calendarHelper', 'notification',
       function BookingController(
         $localStorage, $rootScope, $scope, $state, $stateParams, $mdToast, $timeout, $analytics,
-        ENV, $translate, $filter, authentication, api, price, voucher, countryCodeTranslator, calendarHelper) {
+        ENV, $translate, $filter, authentication, api, price, voucher, countryCodeTranslator, calendarHelper, notification) {
         var booking = this;
         var btAuthorization = ENV.btKey;
         var btClient;
@@ -53,6 +53,7 @@ angular.module('booking', [])
             },
             function (error) {
               // Treat opening hours as if non existing
+              notification.show(error, 'error');
               booking.openingHours = [];
               booking.isOpeningHoursLoaded = true;
             }
@@ -75,6 +76,7 @@ angular.module('booking', [])
             updatePrices();
           },
           function (error) {
+            notification.show(error, 'error');
             $state.go('home');
           }
         );
@@ -205,6 +207,7 @@ angular.module('booking', [])
           authorization: btAuthorization
         }, function (err, client) {
           if (err) {
+            // TODO: show braintree errors. Find documentation
             return;
           }
           btClient = client;
@@ -236,23 +239,13 @@ angular.module('booking', [])
             },
             function (error) {
               booking.processing = false;
-              $mdToast.show(
-                $mdToast.simple()
-                  .textContent("Address Error message")
-                  .hideDelay(4000)
-                  .position('top center')
-              );
+              notification.show(error, 'error');
             }
           );
         };
 
         booking.tokenizeCard = function() {
-          $mdToast.show(
-            $mdToast.simple()
-              .textContent('Payment Method gets saved..')
-              .hideDelay(4000)
-              .position('top center')
-          );
+          notification.show(null, null, 'booking.payment.getting-saved');
 
           btClient.request({
             endpoint: 'payment_methods/credit_cards',
@@ -275,12 +268,7 @@ angular.module('booking', [])
                   booking.reloadUser();
                 },
                 function (error) {
-                  $mdToast.show(
-                    $mdToast.simple()
-                    .textContent(error.data.errors[0].detail)
-                    .hideDelay(4000)
-                    .position('top center')
-                  );
+                  notification.show(error, 'error');
                 }
               );
             }
@@ -302,12 +290,7 @@ angular.module('booking', [])
                   booking.reloadUser();
                 },
                 function (error) {
-                  $mdToast.show(
-                    $mdToast.simple()
-                    .textContent(error.data.errors[0].detail)
-                    .hideDelay(4000)
-                    .position('top center')
-                  );
+                  notification.show(error, 'error');
                 }
               );
             }
@@ -334,11 +317,12 @@ angular.module('booking', [])
                   booking.user.current_payment_method = response.data;
                 },
                 function(error) {
-
+                  notification.show(error, 'error');
                 }
               );
             },
             function (error) {
+              notification.show(error, 'error');
             }
           );
         };
@@ -398,6 +382,7 @@ angular.module('booking', [])
               );
             },
             function (error) {
+              notification.show(error, 'error');
             }
           );
         };
@@ -413,6 +398,7 @@ angular.module('booking', [])
                 booking.phoneConfirmed = 'success';
               },
               function (error) {
+                notification.show(error, 'error');
                 booking.phoneConfirmed = 'error';
               }
             );
@@ -579,13 +565,7 @@ angular.module('booking', [])
             },
             function(error) {
               booking.inProcess = false;
-              $mdToast.show(
-                $mdToast.simple()
-                // .textContent(error.data.errors[0].detail)
-                  .textContent("There was an error requesting the bike")
-                  .hideDelay(4000)
-                  .position('top center')
-              );
+              notification.show(error, 'error');
             }
           );
         };
