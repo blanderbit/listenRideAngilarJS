@@ -386,6 +386,10 @@ booking md-tabs-wrapper {
   overflow: visible;
 }
 
+.single-column.booking__body {
+  overflow-x: hidden;
+}
+
 md-tooltip .md-content {
   height: auto !important;
   line-height: 15px !important;
