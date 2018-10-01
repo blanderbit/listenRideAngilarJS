@@ -459,6 +459,7 @@
     },
     "payment": {
       "tab": "3. Payment Method",
+      "getting-saved": "Payment method is getting saved",
       "select-method": "Select your Payment Method",
       "subtitle": "Please select your favorite payment method. We only charge you after the lister accepted your request.",
       "credit-card": "Credit Card",

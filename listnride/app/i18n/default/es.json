@@ -3,7 +3,7 @@
     "learn-more": "Leer más",
     "map": "Mapa",
     "bike-type": "Tipo de bicicleta",
-    "filter-by": "Filtrado por",
+    "filter-by": "Filtrar por",
     "search-placeholder": "Search for e.g. Berlin, Munich",
     "info": "Info",
     "no-bikes-found": "No se encontraron bicicletas",
@@ -247,7 +247,7 @@
     },
     "brands": {
       "meta-title": "Descubre y experimenta bicicletas extraordinarias",
-      "meta-description": "Descubre y prueba las mejores bicicletas. Pruebe E-Bike, Urban, Fixie, Single Speed, E-MTB, Trekking, Gravel, Cyclocross, MTB, Road, Cargo y obtenga consejos de expertos sobre la bicicleta antes de tomar su decisión de compra."
+      "meta-description": "Descubre y prueba las mejores bicicletas. Prueba una bici eléctrica, urbana, fixie, e-MTB y hasta incluso una bici de carga, las tenemos todas. También obtén consejos de expertos sobre la bicicleta antes de tomar decisión de compra."
     },
     "seo": {
       "city-title": "Alquila la bicicleta perfecta en {{location}} | listnride",
@@ -428,7 +428,7 @@
     "agree-terms-link": "términos de listnride",
     "footer": {
       "questions": "¿Tienes preguntas con respecto a la reserva de una bicicleta?",
-      "call-us": "Llámanos al <a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>, <br> lunes a viernes 9-18h. O escríbenos un correo<a href=\"mailto:contact@listnride.com\">electrónico</a>",
+      "call-us": "Llámanos al <a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a> de <br> lunes a viernes de 9-18hs o escríbenos un \ncorreo <a href=\"mailto:contact@listnride.com\">electrónico</a>",
       "email-us": "O escríbenos un correo electrónico",
       "support": "Equipo de soporte de listnride"
     },
@@ -789,6 +789,7 @@
   },
   "home": {
     "landing-section-header": "La bici perfecta. Simplemente alquílala.",
+    "see-all-brands-and-bikes": "Conoce todas nuestras marcas ",
     "insurance": {
       "description": "No importa si se trata de una bicicleta urbana, ebike o de alta gama: ¡todos los alquileres de listnride en Alemania o Austria están asegurados! Sencillo. Sin burocracia. En cualquier momento.",
       "header": "Cobertura de seguro para tu alquiler en listnride",
