@@ -45,7 +45,7 @@
     <div layout="column" layout-wrap layout-gt-xs="row" layout-padding>
       <div flex-gt-xs="50" class="lnr-comment" layout="row" ng-repeat="friend in invite.invitedFriends">
         <img class="lnr-profile-md" ng-src="{{friend.profile_picture}}"></img>
-        <div flex class="lnr-margin-left">
+        <div flex class="lnr-ml">
           <p class="lnr-comment-name md-body-2">{{friend.full_name}}</p>
           <p class="lnr-comment-content md-body-1">{{ 'invite.invitations.status.' + friend.status | translate }}</p>
         </div>

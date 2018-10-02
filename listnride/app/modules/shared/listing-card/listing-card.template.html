@@ -6,7 +6,7 @@
   <md-card-title layout="row">
     <md-icon ng-if="::listingCard.category" class="lnr-icn-lrg md-color-foreground" md-svg-src="app/assets/ui_icons/biketype_{{ ::listingCard.category | limitTo: 1 }}.svg"></md-icon>
 
-    <md-card-title-text flex="65" ng-click="listingCard.view(listingCard.bikeId)" class="lnr-margin-left lnr-bike-title" layout="column" layout-align="space-around start">
+    <md-card-title-text flex="65" ng-click="listingCard.view(listingCard.bikeId)" class="lnr-ml lnr-bike-title" layout="column" layout-align="space-around start">
       <span class="md-subhead">{{ ::listingCard.brand }}, {{ ::listingCard.category | category | translate }}</span>
       <span>{{ ::listingCard.name }}</span>
     </md-card-title-text>
@@ -49,7 +49,7 @@
       <md-icon md-svg-icon="app/assets/ui_icons/visibility-button.svg"></md-icon>
     </md-button>
 
-    <md-button 
+    <md-button
       md-no-ink
       flex
       class="md-icon-button md-primary lnr-md-no-focused"

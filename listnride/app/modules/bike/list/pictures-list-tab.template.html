@@ -8,7 +8,7 @@
           </h3>
         </div>
         <md-button
-          class="md-raised md-primary lnr-no-margin"
+          class="md-raised md-primary lnr-m-0"
           ng-disabled="picturesTab.parent.form.images.length > 4"
           ngf-multiple="true"
           ngf-select="picturesTab.parent.addImage($files)"
@@ -19,14 +19,14 @@
           {{ 'list.pictures.select-images' | translate }}
         </md-button>
 
-        <div class="preview-container lnr-margin-top" layout="column" layout-wrap>
+        <div class="preview-container lnr-mt" layout="column" layout-wrap>
           <div ng-repeat="img in picturesTab.parent.form.images track by $index" layout="row" layout-align="space-between center">
-            <div ng-if="img.local == 'true'" class="img-preview lnr-margin-top" ngf-background="img.src" ngf-as-background="true">
+            <div ng-if="img.local == 'true'" class="img-preview lnr-mt" ngf-background="img.src" ngf-as-background="true">
             </div>
 
             <div
               ng-if="img.local == 'false'"
-              class="img-preview lnr-margin-top"
+              class="img-preview lnr-mt"
               ng-style="{'background-image': 'url(' + img.url + ')'}">
             </div>
             <md-button class="md-lined md-warn" ng-click="picturesTab.parent.removeImage($index, img)">
@@ -46,7 +46,7 @@
         </div>
       </div>
 
-      <md-divider hide-xs class="lnr-margin-left lnr-margin-right-double"></md-divider>
+      <md-divider hide-xs class="lnr-ml lnr-mr-x2"></md-divider>
 
       <div flex="50" hide-xs>
         <div class="lnr-list-title">
@@ -60,7 +60,7 @@
         <div ng-if="picturesTab.parent.invalidFiles[0] !== undefined" class="text-error">
           <div class="lnr-list-title">
             <h3 class="md-subhead">
-              <md-icon md-font-icon="fa-exclamation-triangle" class="lnr-icn-sm md-color-disabled lnr-margin-right fa">
+              <md-icon md-font-icon="fa-exclamation-triangle" class="lnr-icn-sm md-color-disabled lnr-mr fa">
               </md-icon>
               {{ 'list.pictures.invalid-images' | translate}}
             </h3>

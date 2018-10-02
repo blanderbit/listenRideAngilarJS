@@ -11,7 +11,7 @@
 
     <div class="lnr-page-title md-color-white" layout="column" layout-align="center center">
       <div>
-        <img ng-src="app/assets/ui_images/brand-integration/leaos/leaos-logo.png" flex="65"></img><br><br>
+        <img ng-src="app/assets/ui_images/brand-integration/leaos/leaos-logo.png" flex="65"><br><br>
       </div>
       <!-- <h1 class="md-display-1">{{ 'brand-integration.leaos.title' | translate }}</h1> -->
     </div>
@@ -25,19 +25,19 @@
 
     <!-- BRAND PAGE FEATURES -->
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
-      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin class="lnr-m0">
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin class="lnr-m-0">
         <img width="120" height="120" class="lnr-object-fit-contain" src="app/assets/ui_images/brand-integration/leaos/feature_1.png" alt="leaos feature 1">
         <h3  class="md-subhead lnr-center">{{ 'brand-integration.leaos.feature1-title' | translate }}</h3>
         <p class="lnr-center" translate="{{ 'brand-integration.leaos.feature1-description' | translate }}"></p>
       </div>
 
-      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin class="lnr-m0">
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin class="lnr-m-0">
         <img width="120" height="120" class="lnr-object-fit-contain" src="app/assets/ui_images/brand-integration/leaos/feature_2.png" alt="leaos feature 2">
         <h3 class="md-subhead lnr-center">{{ 'brand-integration.leaos.feature2-title' | translate }}</h3>
         <p class="lnr-center" translate="{{ 'brand-integration.leaos.feature2-description' | translate }}"></p>
       </div>
 
-      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin class="lnr-m0">
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin class="lnr-m-0">
         <img width="120" height="120" class="lnr-object-fit-contain" src="app/assets/ui_images/brand-integration/leaos/feature_3.png" alt="leaos feature 3">
         <h3  class="md-subhead lnr-center">{{ 'brand-integration.leaos.feature3-title' | translate }}</h3>
         <p class="lnr-center" translate="{{ 'brand-integration.leaos.feature3-description' | translate }}"></p>
@@ -57,12 +57,12 @@
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <md-menu md-position-mode="target bottom">
         <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">
-          <p class="md-right-arrow md-headline lnr-m0">&nbsp;&nbsp;{{ 'shared.' + leaos.currentShop.cityName | translate}}</p>
+          <p class="md-right-arrow md-headline lnr-m-0">&nbsp;&nbsp;{{ 'shared.' + leaos.currentShop.cityName | translate}}</p>
         </md-button>
         <md-menu-content width="3">
           <md-menu-item ng-repeat="(city, v) in leaos.cities">
             <md-button ng-disabled="!v.bikes.length" md-no-ink ng-click="leaos.currentShop = leaos.cities[city]">
-              <p class="md-subhead lnr-m0">{{ 'shared.' + v.cityName | translate}}</p>
+              <p class="md-subhead lnr-m-0">{{ 'shared.' + v.cityName | translate}}</p>
             </md-button>
           </md-menu-item>
         </md-menu-content>
@@ -80,7 +80,7 @@
     </div>
     <!-- END BRAND BIKES -->
 
-    <md-divider class="lnr-margin-lrg"></md-divider>
+    <md-divider class="lnr-mv lnr-mh-x2"></md-divider>
 
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <h1 class="md-headline">{{ 'brand-integration.leaos.find-out-more' | translate }}</h1>
@@ -113,7 +113,7 @@
     </div>
     <!-- END BRAND FAQ -->
 
-    <div class="lnr-margin-lrg"></div>
+    <div class="lnr-mh-x2"></div>
   </div>
  <footer></footer>
 </md-content>

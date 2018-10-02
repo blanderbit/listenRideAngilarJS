@@ -2,7 +2,7 @@
   <div class="content" layout="column">
     <div layout="row" layout-xs="column" layout-padding>
       <div flex="15" layout-align="center start" hide-sm hide-xs>
-        <md-icon class="lnr-icn-xlrg md-color-white lnr-padding-top" md-svg-src="app/assets/ui_icons/lnr_logo_full.svg"></md-icon>
+<md-icon class="lnr-icn-xlrg md-color-white lnr-pt" md-svg-src="app/assets/ui_icons/lnr_logo_full.svg"></md-icon>
       </div>
       <div layout="row" flex layout-wrap layout-align="space-between start">
         <div layout="column" flex-xs="50">
@@ -136,7 +136,7 @@
         <div layout="row" layout-gt-sm="column" flex-xs="100">
           <md-list flex-xs="50">
             <md-subheader class="md-no-sticky">{{ 'footer.language' | translate }}</md-subheader>
-            <md-menu md-position-mode="target bottom" class="lnr-padding-left">
+            <md-menu md-position-mode="target bottom" class="lnr-pl">
               <md-button
                 class="lnr-btn-lang md-lined md-right-arrow"
                 md-no-ink
@@ -180,7 +180,7 @@
             </div>
             <div id="insurance" class="lnr-btn-ios" ng-hide="false">
               <md-subheader class="md-no-sticky">{{ 'footer.insurance-partner' | translate }}</md-subheader>
-              <div layout="row" layout-xs="column" layout-align="center center" layout-align-xs="start start" class="footer__partners lnr-padding-left">
+              <div layout="row" layout-xs="column" layout-align="center center" layout-align-xs="start start" class="footer__partners lnr-pl">
                 <img style="max-width: 90px;" ng-src="app/assets/ui_images/static/lnr-insurance-gothaer-white.png">
                 <img style="max-width: 90px; padding-right: 0;" ng-src="app/assets/ui_images/static/lnr_hepster_logo.png">
               </div>
@@ -199,7 +199,7 @@
 
     <div layout="row" layout-align="space-between center" layout-padding>
       <div>© {{footer.year}} List and Ride GmbH. <a class="lnr-link lnr-underline" ui-sref="imprint">{{ 'footer.imprint' | translate }}</a></div>
-      <div layout="row" layout-align="space-between stretch" layout-padding class="lnr-no-padding">
+      <div layout="row" layout-align="space-between stretch" layout-padding class="lnr-p-0">
         <a class="lnr-link" href="https://www.facebook.com/listnride" target="_blank">
           <md-icon class="lnr-icn-md md-color-white" md-svg-src="app/assets/ui_icons/icn_facebook.svg"></md-icon>
         </a>

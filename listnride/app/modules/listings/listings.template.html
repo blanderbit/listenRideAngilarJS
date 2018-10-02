@@ -1,6 +1,6 @@
 <md-content flex="100" layout="column" layout-fill>
   <div class="listings-header" layout="column">
-    <div layout="row" class="lnr-horizontal-lrg-padding" layout-fill layout-align="space-between center">
+    <div layout="row" class="lnr-ph-x2" layout-fill layout-align="space-between center">
       <md-input-container flex="25" hide-xs hide-sm>
         <label style="display: none"></label>
         <input
@@ -8,16 +8,16 @@
           ng-model="listings.input"
         />
       </md-input-container>
-      <div class="lnr-padding-left-double" layout="row" flex flex-gt-md="75" layout-align="center center" layout-align-gt-sm="end center">
+      <div class="lnr-pl-x2" layout="row" flex flex-gt-md="75" layout-align="center center" layout-align-gt-sm="end center">
         <!-- Duplication information -->
-        <div ng-if="listings.status" style="margin-right: auto;" class="lnr-padding-right-double" hide-xs hide-sm>
+        <div ng-if="listings.status" style="margin-right: auto;" class="lnr-pr-x2" hide-xs hide-sm>
           <h3>{{'listings.duplicate.duplication-status' | translate }}: {{listings.status}}</h3>
         </div>
         <!-- VIEW SWITCHER -->
-        <h3 class="lnr-padding-right-double" hide-xs hide-sm>{{'listings.show-as-list' | translate}}</h3>
+        <h3 class="lnr-pr-x2" hide-xs hide-sm>{{'listings.show-as-list' | translate}}</h3>
         <md-switch
           hide-xs hide-sm
-          class="lnr-margin-right-extra"
+          style="margin-right: 32px;"
           ng-model="listings.listView"
           ng-change="listings.changeListingMode(listings.listView)"
         >
@@ -44,7 +44,7 @@
               ...
             </span>
             <md-button
-              class="md-fab md-mini lnr-md-blue-bordered lnr-m0"
+              class="md-fab md-mini lnr-md-blue-bordered lnr-m-0"
               aria-label="go to page {{ $index+1 }}"
               ng-click="listings.changePage($index+1)">
               {{ $index + 1 }}

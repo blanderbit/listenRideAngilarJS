@@ -68,13 +68,13 @@
         <form name="details.parent.verificationForm" novalidate class="md-body-desktop">
           <div class="spacer-xs"></div>
           <h3 class="md-title">{{ 'booking.details.verification' | translate }}</h3>
-          <p class="lnr-no-margin" ng-show="details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">
+          <p class="lnr-m-0" ng-show="details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">
             {{ 'booking.details.send-sms' | translate }}
           </p>
-          <p class="lnr-no-margin" ng-show="!details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">
+          <p class="lnr-m-0" ng-show="!details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">
             {{ 'booking.details.check-phone' | translate }}
           </p>
-          <p class="lnr-no-margin text-success" ng-show="details.parent.phoneConfirmed === 'success'">
+          <p class="lnr-m-0 text-success" ng-show="details.parent.phoneConfirmed === 'success'">
             {{ 'booking.details.success-code' | translate }}
           </p>
 
@@ -182,7 +182,7 @@
                   >
                 </md-input-container>
               </div>
-              <div layout="row" flex="30" flex-xs="50" layout-align="start start" class="lnr-margin-left">
+              <div layout="row" flex="30" flex-xs="50" layout-align="start start" class="lnr-ml">
                 <div ng-show="details.parent.phoneConfirmed === 'progress'" class="text-default">
                   {{ 'booking.details.enter-code' | translate }}
                 </div>
@@ -192,7 +192,7 @@
               </div>
             </div>
 
-            <div class="lnr-margin-top" flex layout="row" layout-align="space-between center">
+            <div class="lnr-mt" flex layout="row" layout-align="space-between center">
               <a class="lnr-link" ng-click="details.parent.resendSms()">{{ 'booking.details.resend' | translate }}</a>
             </div>
           </div>

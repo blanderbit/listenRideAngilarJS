@@ -29,7 +29,7 @@
           <span class="lnr-fs14">{{ 'shared.filter-by' | translate }} {{ 'shared.bike-type' | translate }}</span>
         </md-button>
         <md-menu-content width="5" class="lnr-100mh">
-          <div class="lnr-padding">
+          <div class="lnr-p">
             <div class="lnr-right">
               <md-button show-xs hide-gt-xs class="md-icon-button md-warn md-menu__close-btn lnr-md-no-focused">
                 <md-icon md-font-icon="fa-times" class="fa"></md-icon>
@@ -53,7 +53,7 @@
       <p class="lnr-center md-subhead" ng-if="!brands.filteredBrands.length && brands.categoryIds.length" translate="brands.no-brands-found"></p>
       <md-grid-list
       id="featuredTilesGrid"
-      class="md-color-white lnr-margin"
+      class="md-color-white lnr-m"
       md-cols="1"
       md-cols-gt-xs="4"
       md-gutter="16px"
@@ -71,7 +71,7 @@
       </md-grid-tile>
     </md-grid-list>
     </div>
-    <div class="lnr-padding lnr-horizontal-lrg-padding" ng-show="brands.isMapView">
+    <div class="lnr-p lnr-ph-x2" ng-show="brands.isMapView">
       <!-- add ng-if if we can't find any brands -->
       <ng-map
         id="searchMap"
@@ -110,19 +110,19 @@
           >
           <h3 class="md-headline md-color-white">{{'shared.berlin' | translate}}</h3>
         </div>
-        <div class="lnr-vertical-lrg-padding"></div>
+        <div class="lnr-pv-x2"></div>
         <p class="md-body-1">{{'brands.showroom.berlin-description' | translate}}</p>
         <div>
-          <div class="lnr-vertical-lrg-padding"></div>
+          <div class="lnr-pv-x2"></div>
           <address class="md-body-1" translate="brands.showroom.berlin-address"></address>
-          <div class="lnr-vertical-lrg-padding"></div>
+          <div class="lnr-pv-x2"></div>
           <a class="lnr-tile-image lnr-d-block"
             href="http://www.google.com/maps/place/52.5237683,13.3992715" rel="nofollow" target="_blank"
             style="height: 130px; background-image: url('/app/assets/ui_images/brands/map-berlin.jpg')">
           </a>
         </div>
       </div>
-      <div hide-gt-sm class="lnr-vertical-lrg-padding"></div>
+      <div hide-gt-sm class="lnr-pv-x2"></div>
       <div class="brands__showroom" flex-gt-sm="50">
         <div
           class="lnr-tile-image"
@@ -132,12 +132,12 @@
           >
           <h3 class="md-headline md-color-white">{{'shared.munich' | translate}}</h3>
         </div>
-        <div class="lnr-vertical-lrg-padding"></div>
+        <div class="lnr-pv-x2"></div>
         <p class="md-body-1">{{'brands.showroom.munich-description' | translate}}</p>
         <div>
-          <div class="lnr-vertical-lrg-padding"></div>
+          <div class="lnr-pv-x2"></div>
           <address class="md-body-1" translate="brands.showroom.berlin-address"></address>
-          <div class="lnr-vertical-lrg-padding"></div>
+          <div class="lnr-pv-x2"></div>
           <a class="lnr-tile-image lnr-d-block"
             href="http://www.google.com/maps/place/48.1505014,11.5447967" rel="nofollow" target="_blank"
             style="height: 130px; background-image: url('/app/assets/ui_images/brands/map-munich.jpg')">

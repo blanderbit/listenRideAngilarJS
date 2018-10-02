@@ -25,17 +25,17 @@
 
     <!-- BRAND PAGE FEATURES -->
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
-      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin class="lnr-m0">
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin class="lnr-m-0">
         <h3  class="md-subhead lnr-center">{{ 'brand-integration.veloheld.feature-1.title' | translate }}</h3>
         <p class="lnr-center" translate="brand-integration.veloheld.feature-1.description"></p>
       </div>
 
-      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin class="lnr-m0">
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin class="lnr-m-0">
         <h3 class="md-subhead lnr-center">{{ 'brand-integration.veloheld.feature-2.title' | translate }}</h3>
         <p class="lnr-center" translate="brand-integration.veloheld.feature-2.description"></p>
       </div>
 
-      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin class="lnr-m0">
+      <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin class="lnr-m-0">
         <h3  class="md-subhead lnr-center">{{ 'brand-integration.veloheld.feature-3.title' | translate }}</h3>
         <p class="lnr-center" translate="brand-integration.veloheld.feature-3.description"></p>
       </div>
@@ -54,12 +54,12 @@
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <md-menu md-position-mode="target bottom">
         <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">
-          <p class="md-right-arrow md-headline lnr-m0">&nbsp;&nbsp;{{ 'shared.' + veloheld.currentShop.cityName | translate}}</p>
+          <p class="md-right-arrow md-headline lnr-m-0">&nbsp;&nbsp;{{ 'shared.' + veloheld.currentShop.cityName | translate}}</p>
         </md-button>
         <md-menu-content width="3">
           <md-menu-item ng-repeat="(city, v) in veloheld.cities">
             <md-button ng-disabled="!v.bikes.length" md-no-ink ng-click="veloheld.currentShop = veloheld.cities[city]">
-              <p class="md-subhead lnr-m0">{{ 'shared.' + v.cityName | translate}}</p>
+              <p class="md-subhead lnr-m-0">{{ 'shared.' + v.cityName | translate}}</p>
             </md-button>
           </md-menu-item>
         </md-menu-content>
@@ -77,7 +77,7 @@
     </div>
     <!-- END BRAND BIKES -->
 
-    <md-divider class="lnr-margin-lrg"></md-divider>
+    <md-divider class="lnr-mv lnr-mh-x2"></md-divider>
 
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <h1 class="md-headline">{{ 'brand-integration.veloheld.find-out-more.title' | translate }}</h1>
@@ -110,7 +110,7 @@
     <!--</div>-->
     <!-- END BRAND FAQ -->
 
-    <div class="lnr-margin-lrg"></div>
+    <div class="lnr-mh-x2"></div>
   </div>
  <footer></footer>
 </md-content>
