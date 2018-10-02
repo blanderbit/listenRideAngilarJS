@@ -27,6 +27,7 @@ angular.module('brands', []).component('brands', {
         brands.isIncludeCategory = isIncludeCategory;
         brands.filterChange = filterChange;
         brands.checkSelectedBrands = checkSelectedBrands;
+        brands.toggleView = toggleView;
         // invocations
         getData();
       };
@@ -68,6 +69,10 @@ angular.module('brands', []).component('brands', {
         } else {
           brands.filteredBrands = brands.data;
         }
+      }
+
+      function toggleView() {
+        brands.isMapView = !brands.isMapView;
       }
 
       // ============================

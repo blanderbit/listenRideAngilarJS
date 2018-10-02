@@ -44,7 +44,7 @@
           </div>
         </md-menu-content>
       </md-menu>
-      <md-button class="lnr-md-button__icon lnr-no-ripple" ng-click="brands.isMapView = !brands.isMapView">
+      <md-button class="lnr-md-button__icon lnr-no-ripple" ng-click="brands.toggleView();">
         <md-icon md-svg-src="app/assets/ui_icons/icn_pin.svg" aria-label="toggle map view"></md-icon>
         <span class="lnr-fs14">{{ 'shared.map' | translate }}</span>
       </md-button>
@@ -71,7 +71,7 @@
       </md-grid-tile>
     </md-grid-list>
     </div>
-    <div class="lnr-pt-0" ng-show="brands.isMapView">
+    <div class="lnr-padding lnr-horizontal-lrg-padding" ng-show="brands.isMapView">
       <!-- add ng-if if we can't find any brands -->
       <ng-map
         id="searchMap"

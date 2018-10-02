@@ -922,6 +922,13 @@
         name: 'brands',
         url: '/brands',
         template: '<brands></brands>',
+        reloadOnSearch: false,
+        params: {
+          view: {
+            value: "",
+            squash: true
+          }
+        },
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["meta.brands.meta-title", "meta.brands.meta-description"])
