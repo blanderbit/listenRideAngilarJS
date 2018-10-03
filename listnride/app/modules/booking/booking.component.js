@@ -384,7 +384,7 @@ angular.module('booking', [])
             function (success) {
               $mdToast.show(
                 $mdToast.simple()
-                  .textContent('An SMS with a confirmation code was sent to you just now.')
+                  .textContent($translate.instant("booking.details.sms-confirmation-message"))
                   .hideDelay(4000)
                   .position('top center')
               );
