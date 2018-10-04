@@ -126,26 +126,12 @@
             <h3 class="md-body-2">{{ 'list.accessories.label' | translate }}</h3>
           </div>
           <div flex-gt-xs>
-            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.accessories.lock == 'true'" md-svg-src="app/assets/ui_icons//accessoire_lock.svg">
-              <md-tooltip md-direction="top">{{ 'list.accessories.lock' | translate }}</md-tooltip>
-            </md-icon>
-            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.accessories.helmet == 'true'" md-svg-src="app/assets/ui_icons//accessoire_helmet.svg">
-              <md-tooltip md-direction="top">{{ 'list.accessories.helmet' | translate }}</md-tooltip>
-            </md-icon>
-            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.accessories.lights == 'true'" md-svg-src="app/assets/ui_icons//accessoire_lights.svg">
-              <md-tooltip md-direction="top">{{ 'list.accessories.lights' | translate }}</md-tooltip>
-            </md-icon>
-            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.accessories.basket == 'true'" md-svg-src="app/assets/ui_icons//accessoire_basket.svg">
-              <md-tooltip md-direction="top">{{ 'list.accessories.basket' | translate }}</md-tooltip>
-            </md-icon>
-            <md-icon class="lnr-icn-md lnr-margin-right" ng-if="bike.data.accessories.trailer == 'true'" md-svg-src="app/assets/ui_icons//accessoire_trailer.svg">
-              <md-tooltip md-direction="top">{{ 'list.accessories.trailer' | translate }}</md-tooltip>
-            </md-icon>
-            <md-icon class="lnr-icn-md" ng-if="bike.data.accessories.childseat == 'true'" md-svg-src="app/assets/ui_icons//accessoire_childseat.svg">
-              <md-tooltip md-direction="top">{{ 'list.accessories.childseat' | translate }}</md-tooltip>
-            </md-icon>
-            <md-icon class="lnr-icn-md" ng-if="bike.data.accessories.gps == 'true'" md-svg-src="app/assets/ui_icons//accessoire_gps.svg">
-              <md-tooltip md-direction="top">{{ 'list.accessories.gps' | translate }}</md-tooltip>
+            <md-icon
+              ng-repeat="(key, value) in bike.data.accessories"
+              class="lnr-icn-md lnr-margin-right"
+              ng-if="bike.data.accessories[key]"
+              md-svg-src="app/assets/ui_icons/accessoire_{{key}}.svg">
+              <md-tooltip md-direction="top">{{ 'list.accessories.' + key | translate }}</md-tooltip>
             </md-icon>
           </div>
         </div>
