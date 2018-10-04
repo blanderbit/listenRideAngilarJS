@@ -27,6 +27,7 @@ angular.module('brands', []).component('brands', {
         brands.isIncludeCategory = isIncludeCategory;
         brands.filterChange = filterChange;
         brands.checkSelectedBrands = checkSelectedBrands;
+        brands.onMapClick = onMapClick;
         // invocations
         getData();
       };
@@ -73,6 +74,13 @@ angular.module('brands', []).component('brands', {
       // ============================
       // >>>> START MAP FUNCTIONALITY
       // ============================
+
+      function onMapClick() {
+        if (brands.map) {
+          brands.map.hideInfoWindow('searchMapWindow');
+          brands.selectedBrand = undefined;
+        }
+      }
 
 
       function initializeGoogleMap() {
@@ -147,10 +155,10 @@ angular.module('brands', []).component('brands', {
           // label: { text: brand.title, color: "white", fontSize: '13px', fontWeight: 'bold' }
         });
 
-        // google.maps.event.addListener(marker, 'click', function () {
-        //   brands.selectedBrand = brand;
-        //   map.showInfoWindow('searchMapWindow', this);
-        // });
+        google.maps.event.addListener(marker, 'click', function () {
+          brands.selectedBrand = brand;
+          map.showInfoWindow('searchMapWindow', this);
+        });
 
         return marker;
       }
