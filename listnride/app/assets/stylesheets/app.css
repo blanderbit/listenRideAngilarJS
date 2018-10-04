@@ -248,6 +248,16 @@ home input {
   font-size: 16px;
 }
 
+.home__brands-list img {
+  object-fit: contain;
+}
+
+.home__brands-btn {
+  margin-top: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 invest .highlight-tile {
   height: 320px;
   padding: 4px;
