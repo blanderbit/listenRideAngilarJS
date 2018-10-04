@@ -28,20 +28,18 @@
           <md-icon md-svg-src="app/assets/ui_icons/icn_slider_controls.svg" aria-label="Choose bike categories"></md-icon>
           <span class="lnr-fs14">{{ 'shared.filter-by' | translate }} {{ 'shared.bike-type' | translate }}</span>
         </md-button>
-        <md-menu-content width="5" class="lnr-100mh">
-          <div class="lnr-padding">
-            <div class="lnr-right">
-              <md-button show-xs hide-gt-xs class="md-icon-button md-warn md-menu__close-btn lnr-md-no-focused">
-                <md-icon md-font-icon="fa-times" class="fa"></md-icon>
-              </md-button>
-            </div>
-            <category-filter
-              class="minimal-view"
-              current-categories="brands.categoryIds"
-              on-filter-change="brands.filterChange"
-              only-parent-categories="true">
-            </category-filter>
+        <md-menu-content width="5" class="lnr-100mh lnr-md-menu-bordered">
+          <div class="lnr-right">
+            <md-button show-xs hide-gt-xs class="md-icon-button md-warn md-menu__close-btn lnr-md-no-focused">
+              <md-icon md-font-icon="fa-times" class="fa"></md-icon>
+            </md-button>
           </div>
+          <category-filter
+            class="minimal-view"
+            current-categories="brands.categoryIds"
+            on-filter-change="brands.filterChange"
+            only-parent-categories="true">
+          </category-filter>
         </md-menu-content>
       </md-menu>
       <md-button class="lnr-md-button__icon lnr-no-ripple" ng-click="brands.isMapView = !brands.isMapView">
