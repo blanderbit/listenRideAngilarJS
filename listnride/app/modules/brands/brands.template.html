@@ -81,11 +81,24 @@
         street-view-control="false"
         styles="{{brands.colorScheme}}"
         style="height: 650px;"
+        on-click="search.onMapClick(event)"
       >
 
         <info-window id="searchMapWindow">
           <div ng-non-bindable="">
-            <bike-card bike="search.selectedBike"></bike-card>
+            <!-- BRAND TILE -->
+            <a ui-sref="{{ brands.selectedBrand.title | lowercase }}" target="_blank">
+              <md-card class="lnr-bike-card" style="border:none; padding: 10px; margin: 0">
+                <div class="bg lnr-preload-bg"></div>
+                <img class="md-card-image" ng-src="{{ brands.selectedBrand.tile_image }}" alt="brands.selectedBrand.title">
+
+                <!-- <md-card-title layout="row">
+                  <md-card-title-text flex="100" class="lnr-margin-left lnr-bike-title" layout="column" layout-align="space-around start">
+                    <span class="md-subhead">{{ brands.selectedBrand.title }}</span>
+                  </md-card-title-text>
+                </md-card-title> -->
+              </md-card>
+            </a>
           </div>
         </info-window>
       </ng-map>
@@ -110,7 +123,7 @@
           <h3 class="md-headline md-color-white">{{'shared.berlin' | translate}}</h3>
         </div>
         <div class="lnr-vertical-lrg-padding"></div>
-        <p class="md-body-1">{{'brands.showroom.berlin-description' | translate}}</p>
+        <p class="md-body-1" translate="brands.showroom.berlin-description"></p>
         <div>
           <div class="lnr-vertical-lrg-padding"></div>
           <address class="md-body-1" translate="brands.showroom.berlin-address"></address>
@@ -132,7 +145,7 @@
           <h3 class="md-headline md-color-white">{{'shared.munich' | translate}}</h3>
         </div>
         <div class="lnr-vertical-lrg-padding"></div>
-        <p class="md-body-1">{{'brands.showroom.munich-description' | translate}}</p>
+        <p class="md-body-1" translate="brands.showroom.munich-description"></p>
         <div>
           <div class="lnr-vertical-lrg-padding"></div>
           <address class="md-body-1" translate="brands.showroom.berlin-address"></address>
