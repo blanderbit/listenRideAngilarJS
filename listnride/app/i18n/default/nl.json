@@ -343,7 +343,7 @@
       },
       "bonvelo": {
         "meta-title": "Rent and Test Bonvelo Singlespeed Bikes in Berlin & Munich",
-        "meta-description": "The singlespeed/fixed-gear \"bonvelo BLIZZ\" is available to rent and test ride in Berlin in four frame sizes. Book one on listnride today!"
+        "meta-description": "The singlespeed \"bonvelo BLIZZ\" is available to rent and test ride in Berlin in four frame sizes. Book one on listnride today!"
       },
       "motoparilla": {
         "meta-title": "Rent and Test the Moto Parilla Carbon SUV E-Bike in Munich",
@@ -440,6 +440,7 @@
     },
     "details": {
       "tab": "2. Persoonlijke gegevens",
+      "sms-confirmation-message": "Een SMS met een bevestigingscode is zojuist naar u verzonden.",
       "invoice-address": "Factuuradres",
       "subtitle": "Vul alstublieft uw adres in om een fiets aan te vragen.",
       "verification": "Gaarne bevestigen",
@@ -454,6 +455,7 @@
     },
     "payment": {
       "tab": "3. Betalingsgegevens",
+      "getting-saved": "Betaalmethode is opgeslagen",
       "select-method": "Selecteer je betaalmethode",
       "subtitle": "We incasseren de huur nadat de verhuurder je aanvraag accepteerd",
       "credit-card": "Kredietkaart",

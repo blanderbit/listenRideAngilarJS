@@ -26,7 +26,7 @@
       "500": "Errore interno del server",
       "200": "Successo"
     },
-    "basic-fee": "Service Fee includes Basic Insurance",
+    "basic-fee": "Assicurazione base inclusa",
     "how-it-works": "Come funziona",
     "list-a-bike": "Registra una bicicletta",
     "renting-a-bike": "Noleggiare una bicicletta",
@@ -341,7 +341,7 @@
       },
       "bonvelo": {
         "meta-title": "Noleggia e prova Bonvelo Singlespeed Bikes a Berlino e a Monaco di Baviera",
-        "meta-description": "La \"bonvelo BLIZZ\" a scatto fisso/singlespeed è disponibile per il noleggio e il test a Berlino in quattro dimensioni. Prenotane una su listnride oggi!"
+        "meta-description": "La \"bonvelo BLIZZ\" a singlespeed è disponibile per il noleggio e il test a Berlino in quattro dimensioni. Prenotane una su listnride oggi!"
       },
       "motoparilla": {
         "meta-title": "Noleggia e prova la Moto Parilla Carbon SUV e-Bike a Monaco di Baviera",
@@ -437,6 +437,7 @@
     },
     "details": {
       "tab": "2. Dati personali",
+      "sms-confirmation-message": "Un SMS con un codice di conferma ti è stato inviato proprio ora.",
       "invoice-address": "Il tuo indirizzo di fatturazione ",
       "subtitle": "Si prega di inserire l'indirizzo di fatturazione per richiedere la bicicletta",
       "verification": "Si prega di verificare",
@@ -450,6 +451,7 @@
     },
     "payment": {
       "tab": "3. Metodi di Pagamento",
+      "getting-saved": "Il metodo di pagamento è stato salvato",
       "select-method": "Seleziona il tuo metodo di pagamento",
       "subtitle": "Ti addebitiamo il costo solo dopo che il noleggiatore ha accettato la tua richiesta.",
       "credit-card": "Carta di credito",
