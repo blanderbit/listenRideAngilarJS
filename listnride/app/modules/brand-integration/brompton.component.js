@@ -3,8 +3,8 @@
 angular.module('brompton-integration',[]).component('brompton', {
   templateUrl: 'app/modules/brand-integration/brompton.template.html',
   controllerAs: 'brompton',
-  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta', 'ENV',
-    function BromptonController($translate, $tpl, api, ngMeta, ENV) {
+  controller: [ '$translate', '$translatePartialLoader', 'api', 'ngMeta', 'ENV', 'mapConfigs',
+    function BromptonController($translate, $tpl, api, ngMeta, ENV, mapConfigs) {
       ngMeta.setTitle($translate.instant("brand-integration.brompton.meta-title"));
       ngMeta.setTag("description", $translate.instant("brand-integration.brompton.meta-description"));
 
@@ -16,6 +16,7 @@ angular.module('brompton-integration',[]).component('brompton', {
           brompton.currentCity = translations["shared.berlin"];
         }
       );
+      brompton.colorScheme = mapConfigs.colorScheme();
       brompton.bikes = {
         amsterdam: [],
         berlin: [],
