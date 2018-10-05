@@ -1,7 +1,11 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "map": "Karte",
+    "bike-type": "Fahrradtyp",
+    "filter-by": "Filtern nach",
     "search-placeholder": "Suche z.B. nach Berlin, München,....",
+    "info": "Info",
     "no-bikes-found": "Keine Fahrräder gefunden",
     "dresden": "Dresden",
     "bolzano": "Bozen",
@@ -241,6 +245,10 @@
         "meta-description": "Erkunde Vienna auf dem Fahrrad. Wähle aus einer Vielzahl von Fahrrädern und miete das optimale Zweirad für deine Fahrradtour!"
       }
     },
+    "brands": {
+      "meta-title": "Entdecke und erlebe außergewöhnliche Räder!",
+      "meta-description": "Entdecke und erlebe einzigartige Räder. Teste E-Bikes, Trekkingräder, Single Speed Räder, Fixies, Stadträder, Querfeldein- und Gravel-Räder, Cyclocrossräder, Hollandräder, MTBs, E-MTBs, Rennräder, und Lastenräder und hol dir fachkundige Beratung über das Fahrrad, bevor du deine Kaufentscheidung triffst."
+    },
     "seo": {
       "city-title": "Miete das perfekte Fahrrad in {{location}} | listnride",
       "city-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem Fahrrad, das du über listnride sicher gemietet hast.",
@@ -336,11 +344,11 @@
       },
       "veletage": {
         "meta-title": "VELETAGE Salon für Radkultur",
-        "meta-descr": "VELETAGE Salon für Radkultur - Exklusive Rennräder, Radbekleidung, Individuelle Laufräder, Bike Fitting"
+        "meta-descr": "VELETAGE Salon für Radkultur - Exklusive Rennräder, Radbekleidung, Individuelle Laufräder, Sitzpostionsvermessung"
       },
       "bonvelo": {
         "meta-title": "Miete und teste Bonvelo Singlespeed Bikes in Berlin & München",
-        "meta-description": "Das Singlespeed/Fixie-Bike \"BLIZZ\" ist in vier unterschiedlichen Rahmengrößen zum Test in Berlin verfügbar "
+        "meta-description": "Das Singlespeed \"BLIZZ\" ist in vier unterschiedlichen Rahmengrößen zum Test in Berlin verfügbar "
       },
       "motoparilla": {
         "meta-title": "Miete und teste das Moto Parilla Carbon SUV E-Bike in München",
@@ -360,11 +368,11 @@
       },
       "rethink": {
         "meta-title": "Miete und teste rethink E-Bikes in München, Hamburg und Dresden",
-        "meta-descr": "Your rethink E-bike. Clear. Robust. Distinct Character."
+        "meta-descr": "Dein rethink E-Bike. Klar. Robust. Individuell."
       },
       "cocomat": {
         "meta-title": "Rent COCO-MAT.bike | listnride",
-        "meta-descr": "Miete Coco-Mat-Räder in Athen und entdecke historische Stätten, Athens Innenstadt sowie die pulsierende Seepromenade"
+        "meta-descr": "Miete Coco-Mat-Räder in Athen und entdecke historische Stätten, die Innenstadt sowie die pulsierende Seepromenade"
       }
     },
     "about-us": {
@@ -400,7 +408,7 @@
     },
     "shop-landing": {
       "meta-title": "listnride Shop Plugin - Online Fahrräder vermieten",
-      "meta-description": "Mit dem listnride Plugin kannst du einfach deine Leihräder/Testräder in deine Online Präsenz integrieren und anbieten."
+      "meta-description": "Mit dem listnride Plug-in kannst du einfach deine Leihräder/Testräder in deine Online Präsenz integrieren und anbieten."
     },
     "imprint": {
       "meta-title": "listnride Impressum",
@@ -421,7 +429,7 @@
     "agree-terms-link": "listnride AGBs",
     "footer": {
       "questions": "Du hast Fragen rund ums Mieten von Fahrrädern?",
-      "call-us": "Ruf uns unter +49 (0)30-120870330, Mo-Fr 9-18 Uhr an. ",
+      "call-us": " Ruf unseren Support unter <a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>,<br> Mo-Fr 9-18 Uhr, an. Oder schreib uns eine <a href=\"mailto:contact@listnride.com\">E-mail</a>",
       "email-us": "Oder schreib uns eine E-Mail",
       "support": "listnride Support"
     },
@@ -437,6 +445,7 @@
     },
     "details": {
       "tab": "2. Persönliche Daten",
+      "sms-confirmation-message": "Wir haben dir eine SMS mit dem Bestätigungscode geschickt.",
       "invoice-address": "Rechnungsadresse",
       "subtitle": "Bitte gib deine Rechnungsadresse ein, um ein Fahrrad anzufragen.",
       "verification": "Verifizieren",
@@ -451,6 +460,7 @@
     },
     "payment": {
       "tab": "3. Zahlungsmethode",
+      "getting-saved": "Die Zahlungsmethode wurde gespeichert",
       "select-method": "Wähle deine Zahlungsart aus",
       "subtitle": "Wir buchen erst Geld ab, wenn deine Anfrage vom Vermieter bestätigt wurde.",
       "credit-card": "Kreditkarte",
@@ -767,9 +777,9 @@
       "valid-email-xs": "Ungültige E-Mail",
       "empty-email": "Bitte gib deine E-Mail-Adresse an",
       "empty-email-xs": "E-Mail erforderlich",
-      "empty-last-name": "Gib deinen Nachnamen an",
+      "empty-last-name": "Dein Nachname",
       "empty-last-name-xs": "Nachname erforderlich",
-      "empty-first-name": "Gib deinen Vornamen an",
+      "empty-first-name": "Dein Vorname",
       "empty-first-name-xs": "Vornamen erforderlich",
       "max-size-last-name": "Der Nachname sollte maximal 30 Buchstaben lang sein",
       "max-size-last-name-xs": "Max 30 Buchstaben",
@@ -783,6 +793,7 @@
   },
   "home": {
     "landing-section-header": "Das perfekte Rad. Einfach mieten.",
+    "see-all-brands-and-bikes": "Jetzt entdecken",
     "insurance": {
       "description": "Egal ob minimalistisches Fixie oder High-End Triathlonrad: Jede listnride-Vermietung in Deutschland oder Österreich ist versichert! Einfach. Unbürokratisch. Jederzeit.",
       "header": "Versicherungsschutz für deine Vermietung auf listnride",

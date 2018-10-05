@@ -68,9 +68,15 @@
         <form name="details.parent.verificationForm" novalidate class="md-body-desktop">
           <div class="spacer-xs"></div>
           <h3 class="md-title">{{ 'booking.details.verification' | translate }}</h3>
-          <p class="lnr-no-margin" ng-show="details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">{{ 'booking.details.send-sms' | translate }}</p>
-          <p class="lnr-no-margin" ng-show="!details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">{{ 'booking.details.check-phone' | translate }}</p>
-          <p class="lnr-no-margin text-success" ng-show="details.parent.phoneConfirmed === 'success'">{{ 'booking.details.success-code' | translate }}</p>
+          <p class="lnr-no-margin" ng-show="details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">
+            {{ 'booking.details.send-sms' | translate }}
+          </p>
+          <p class="lnr-no-margin" ng-show="!details.parent.showConfirmButton && details.parent.phoneConfirmed !== 'success'">
+            {{ 'booking.details.check-phone' | translate }}
+          </p>
+          <p class="lnr-no-margin text-success" ng-show="details.parent.phoneConfirmed === 'success'">
+            {{ 'booking.details.success-code' | translate }}
+          </p>
 
           <div class="spacer-xs"></div>
           <!-- Phone Number and Send Button -->
@@ -140,7 +146,7 @@
                     ng-model="details.parent.confirmation_0"
                     maxlength="1"
                     lnr-max-length
-                    required
+                    ng-required="!details.parent.phoneConfirmed === 'success'"
                     name="confirmation_0"
                     ng-change="details.parent.confirmPhone()"
                   >
@@ -150,7 +156,7 @@
                     ng-model="details.parent.confirmation_1"
                     maxlength="1"
                     lnr-max-length
-                    required
+                    ng-required="!details.parent.phoneConfirmed === 'success'"
                     name="confirmation_1"
                     ng-change="details.parent.confirmPhone()"
                   >
@@ -160,7 +166,7 @@
                     ng-model="details.parent.confirmation_2"
                     maxlength="1"
                     lnr-max-length
-                    required
+                    ng-required="!details.parent.phoneConfirmed === 'success'"
                     name="confirmation_2"
                     ng-change="details.parent.confirmPhone()"
                   >
@@ -170,7 +176,7 @@
                     ng-model="details.parent.confirmation_3"
                     maxlength="1"
                     lnr-max-length
-                    required
+                    ng-required="!details.parent.phoneConfirmed === 'success'"
                     name="confirmation_3"
                     ng-change="details.parent.confirmPhone()"
                   >

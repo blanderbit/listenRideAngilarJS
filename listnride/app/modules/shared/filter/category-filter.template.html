@@ -1,13 +1,14 @@
 <div class="filter__category" layout="column" ng-repeat="category in categoryFilter.categories track by $index">
   <div
-    ng-click="categoryFilter.toggle(category.catId, categoryFilter.openSubs)"
+    ng-click="categoryFilter.toggle(category.catId, categoryFilter.openSubs, $event)"
     md-prevent-menu-close
-    class="lnr-padding-top-double lnr-clickable"
+    class="lnr-p-x2 lnr-clickable cat-filter__parent-box"
     layout="row"
     layout-align="space-between start"
   >
-    <div layout="row" layout-align="space-between start">
+    <div layout="row" layout-align="space-between center">
       <md-checkbox
+        class="lnr-m-0"
         aria-label="{{category.name}}"
         ng-checked="categoryFilter.isChecked(category.catId)"
         md-indeterminate="categoryFilter.isIndeterminate(category.catId)"
@@ -34,7 +35,7 @@
     </div>
   </div>
 
-  <div layout="row" layout-wrap flex ng-show="categoryFilter.showSubs(category.catId)" layout-align="flex-start center" class="lnr-margin-left">
+  <div layout="row" layout-wrap flex ng-show="categoryFilter.showSubs(category.catId)" layout-align="start center" class="lnr-margin-left">
     <div flex="33" ng-repeat="subcategory in category.subcategories" class="lnr-padding-left-double">
       <md-checkbox
         ng-checked="categoryFilter.exists(subcategory.id, categoryFilter.currentCategories)"

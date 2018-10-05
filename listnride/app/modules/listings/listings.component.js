@@ -97,7 +97,7 @@ angular.module('listings', []).component('listings', {
         };
 
         // invocations
-        listings.getBikes()
+        // listings.getBikes()
       };
 
       // CHILD CONTROLLERS

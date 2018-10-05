@@ -131,86 +131,25 @@
 
   <!-- START FEATURED TILES -->
 
-  <div id="featuredTiles" class="content section" layout-align="start center">
+  <div class="content section" layout-align="start center">
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <h2 class="md-headline">{{ 'home.featured-tiles-header' | translate }}</h2>
       <p class="md-subhead">{{ 'home.featured-tiles-subheader' | translate }}</p>
     </div>
 
-    <md-grid-list
-      id="featuredTilesGrid"
-      class="md-color-white lnr-margin"
-      md-cols="1"
-      md-cols-gt-xs="4"
-      md-gutter="16px"
-      md-row-height="1:1"
-    >
-      <md-grid-tile
-        class="tile"
-        md-colspan-gt-xs="1"
-        style="background-image: url('/app/assets/ui_images/featured-tiles/ampler.jpg')"
-      >
-        <a ui-sref="ampler" layout="column" layout-align="center center">
-          <h3 class="md-title">Ampler E-Bikes</h3>
-        </a>
-      </md-grid-tile>
+    <div class="home__brands-list" layout="row" layout-align="center center" layout-padding layout-wrap>
+      <img class="lnr-lrg-padding" flex-xs="50" flex="20" ng-src="app/assets/ui_images/home/brands_logo/lnr_brompton_logo.png" alt="brompton logo">
+      <img class="lnr-lrg-padding" flex-xs="50" flex="20" ng-src="app/assets/ui_images/home/brands_logo/lnr_leaos_logo.png" alt="leaos logo">
+      <img class="lnr-lrg-padding" flex-xs="50" flex="20" ng-src="app/assets/ui_images/home/brands_logo/lnr_vello_logo.png" alt="vello logo">
+      <img class="lnr-lrg-padding" flex-xs="50" flex="20" ng-src="app/assets/ui_images/home/brands_logo/lnr_veloheld_logo.png" alt="veloheld logo">
+      <img class="lnr-lrg-padding" flex-xs="50" flex="20" ng-src="app/assets/ui_images/home/brands_logo/lnr_votec_logo.png" alt="votec logo">
+    </div>
 
-      <md-grid-tile
-        class="tile"
-        md-colspan-gt-xs="1"
-        style="background-image: url('/app/assets/ui_images/featured-tiles/rethink.jpg')"
-      >
-        <a ui-sref="rethink" layout="column" layout-align="center center">
-          <h3 class="md-title">Rethink E-Bikes</h3>
-        </a>
-      </md-grid-tile>
-
-      <md-grid-tile
-        class="tile"
-        md-colspan-gt-xs="1"
-        style="background-image: url('/app/assets/ui_images/featured-tiles/vello.jpg')"
-      >
-        <a ui-sref="vello" layout="column" layout-align="center center">
-          <h3 class="md-title">Vello E-Bikes</h3>
-        </a>
-      </md-grid-tile>
-
-      <md-grid-tile class="tile" style="background-image: url('/app/assets/ui_images/featured-tiles/veloheld.jpg')">
-        <a ui-sref="veloheld" layout="column" layout-align="center center">
-          <h3 class="md-title">Veloheld Bikes</h3>
-        </a>
-      </md-grid-tile>
-
-      <!--<md-grid-tile class="tile" style="background-image: url('/app/assets/ui_images/featured-tiles/brompton.jpg')">-->
-        <!--<a ui-sref="brompton" layout="column" layout-align="center center">-->
-          <!--<h3 class="md-title">Brompton Foldings</h3>-->
-        <!--</a>-->
-      <!--</md-grid-tile>-->
-
-      <md-grid-tile class="tile" style="background-image: url('/app/assets/ui_images/featured-tiles/leaos.jpg')">
-        <a ui-sref="leaos" layout="column" layout-align="center center">
-          <h3 class="md-title">Leaos Bikes</h3>
-        </a>
-      </md-grid-tile>
-
-      <md-grid-tile class="tile" style="background-image: url('/app/assets/ui_images/featured-tiles/vanmoof.jpg')">
-        <a ui-sref="vanmoof" layout="column" layout-align="center center">
-          <h3 class="md-title">Vanmoof E-Bikes</h3>
-        </a>
-      </md-grid-tile>
-
-      <md-grid-tile class="tile" style="background-image: url('/app/assets/ui_images/featured-tiles/votec.jpg')">
-        <a ui-sref="votec" layout="column" layout-align="center center">
-          <h3 class="md-title">Votec All Mountain</h3>
-        </a>
-      </md-grid-tile>
-
-      <md-grid-tile class="tile" style="background-image: url('/app/assets/ui_images/featured-tiles/bonvelo.jpg')">
-        <a ui-sref="bonvelo" layout="column" layout-align="center center">
-          <h3 class="md-title">Bonvelo Singlespeed/Fixies</h3>
-        </a>
-      </md-grid-tile>
-    </md-grid-list>
+    <div layout="row" layout-align="center center">
+      <a ui-sref="brands" class="md-button md-raised md-primary home__brands-btn">
+        {{ 'home.see-all-brands-and-bikes' | translate }}
+      </a>
+    </div>
   </div>
 
   <!-- END FEATURED TILES -->

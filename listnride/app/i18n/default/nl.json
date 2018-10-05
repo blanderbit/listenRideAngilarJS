@@ -1,7 +1,11 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "map": "Kaart",
+    "bike-type": "Fietstype",
+    "filter-by": "Filteren op",
     "search-placeholder": "Zoek naar bijvoorbeeld Berlijn, München",
+    "info": "Info",
     "no-bikes-found": " Helaas! er worden nog geen fietsen op deze locatie aangeboden.",
     "dresden": "Dresden",
     "bolzano": "Bolzano",
@@ -236,6 +240,10 @@
         "meta-description": "Discover Vienna by bike. With listnride, you can find a bike for rent in Vienna that matches your needs and your style."
       }
     },
+    "brands": {
+      "meta-title": "Ontdek en ervaar buitengewone fietsen!",
+      "meta-description": "Ontdek en test de beste fietsen. Probeer E-bikes, Urban Bikes, Fixies, Single Speed Bikes, E-MTB's, Trekking Bikes, Gravel- en Cyclocross-Bikes, MTB's, Road- en Cargo-Bikes en ontvang deskundig advies over de fiets voordat u een aankoopbeslissing neemt."
+    },
     "seo": {
       "city-title": "Huur de perfecte fiets in {{location}} | listnride",
       "city-description": "Kies de fiets die aan uw wensen voldoet online, vanaf {{ minPrice }}€. Geniet van {{location}} op de fiets, die zeker en vast is geboekt op listnride.",
@@ -335,7 +343,7 @@
       },
       "bonvelo": {
         "meta-title": "Rent and Test Bonvelo Singlespeed Bikes in Berlin & Munich",
-        "meta-description": "The singlespeed/fixed-gear \"bonvelo BLIZZ\" is available to rent and test ride in Berlin in four frame sizes. Book one on listnride today!"
+        "meta-description": "The singlespeed \"bonvelo BLIZZ\" is available to rent and test ride in Berlin in four frame sizes. Book one on listnride today!"
       },
       "motoparilla": {
         "meta-title": "Rent and Test the Moto Parilla Carbon SUV E-Bike in Munich",
@@ -416,7 +424,7 @@
     "agree-terms-link": "algemene voorwaarden van listnride",
     "footer": {
       "questions": "Heb je vragen bij het boeken van een fiets?",
-      "call-us": "Bel ons op +49 (0)30-120870330, Ma-Vrij 9-18u.",
+      "call-us": "Bel ons op <a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>, <br>Ma-Vrij 9-18u. Of stuur ons een <a href=\"mailto:contact@listnride.com\"> E-mail</a>",
       "email-us": "Of stuur ons een email",
       "support": "listnride Support"
     },
@@ -432,6 +440,7 @@
     },
     "details": {
       "tab": "2. Persoonlijke gegevens",
+      "sms-confirmation-message": "Een SMS met een bevestigingscode is zojuist naar u verzonden.",
       "invoice-address": "Factuuradres",
       "subtitle": "Vul alstublieft uw adres in om een fiets aan te vragen.",
       "verification": "Gaarne bevestigen",
@@ -446,6 +455,7 @@
     },
     "payment": {
       "tab": "3. Betalingsgegevens",
+      "getting-saved": "Betaalmethode is opgeslagen",
       "select-method": "Selecteer je betaalmethode",
       "subtitle": "We incasseren de huur nadat de verhuurder je aanvraag accepteerd",
       "credit-card": "Kredietkaart",
@@ -774,6 +784,7 @@
   },
   "home": {
     "landing-section-header": "De perfekte fiets. Gewoon huren.",
+    "see-all-brands-and-bikes": "Bekijk alle merken en fietsen",
     "insurance": {
       "description": "Of het nu een minimalistische fixie of een high-end triathlonfiets is: Elke listnride verhuur in Duitsland of Oostenrijk is verzekerd! Eenvoudig. Flexible. Altijd.",
       "header": "Verzekering voor je fietshuur op listnride",

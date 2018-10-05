@@ -919,6 +919,25 @@
       });
 
       $stateProvider.state({
+        name: 'brands',
+        url: '/brands',
+        template: '<brands></brands>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brands.meta-title", "meta.brands.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brands.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brands.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'ampler',
         url: '/brands/ampler',
         template: '<ampler></ampler>',
@@ -987,7 +1006,7 @@
                     .then(function (translations) {
                         ngMeta.setTitle(translations["meta.brand-integration.rethink.meta-title"]);
                         ngMeta.setTag("description", translations["meta.brand-integration.rethink.meta-descr"]);
-                        ngMeta.setTag("og:image", "app/assets/ui_images/opengraph/rethink.jpg");
+                        ngMeta.setTag("og:image", "app/assets/ui_images/opengraph/lnr_rethink.jpg");
                         ngMeta.setTag("noindex", false);
                     })
             }
