@@ -92,7 +92,7 @@ angular.module('brands', []).component('brands', {
         $timeout(function(){
           NgMap.getMap({ id: "searchMap" }).then(function (map) {
             map.fitBounds(correctBounds());
-            map.setZoom(map.getZoom());
+            map.setZoom(map.getZoom()+2);
             initMarkerClusterer(map);
             brands.map = map;
           });
@@ -102,11 +102,8 @@ angular.module('brands', []).component('brands', {
        function correctBounds() {
         var bounds = new google.maps.LatLngBounds();
 
-        var i = 0;
         _.forEach(brands.allPins, function (pin) {
-          bounds = extendBounds(bounds, pin.lat_rnd, pin.lng_rnd);
-          i++;
-          if (i > 3) return false;
+          bounds = extendBounds(bounds, pin.lat, pin.lng);
         });
 
         return bounds
