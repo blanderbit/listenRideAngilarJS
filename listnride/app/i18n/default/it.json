@@ -421,7 +421,7 @@
     "agree-terms-link": " termini listnride",
     "footer": {
       "questions": "Hai domande sul noleggio della bicicletta?",
-      "call-us": "Chiamaci al: <a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>, <br>Lun-Ven 9-18. O scrivici un <a href=\"mailto:contact@listnride.com\">E-mail</a>",
+      "call-us": "Chiamaci al:\n<br>\n<a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>,\n<br>Lun-Ven 9-18. O scrivici un\n<br>\n<a href=\"mailto:contact@listnride.com\">e-mail</a>",
       "email-us": "O scrivici un email",
       "support": "listnride servizio clienti"
     },
