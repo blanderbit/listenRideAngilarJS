@@ -15,15 +15,6 @@ angular.module('bikeCard',[]).component('bikeCard', {
       bikeCard.showIcon = !bikeCard.seo && bikeCard.bike.category;
       bikeCard.from = Math.ceil(bikeCard.bike.price_from);
       bikeCard.isPhoneScreen = $mdMedia('xs');
-      bikeCard.bike.image_file = imageUrl();
-
-      function imageUrl() {
-        if (_.isEmpty(bikeCard.bike.image_file_1)) {
-          return helpers.lowerCaseFilenameExtension(bikeCard.bike.image_file);
-        } else {
-          return helpers.lowerCaseFilenameExtension(bikeCard.bike.image_file_1.small.url);
-        }
-      }
     }
   ]
 });
