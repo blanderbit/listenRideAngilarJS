@@ -90,7 +90,7 @@
       "munich-address": "<b>Our address</b>\n<br>\nLothstr. 5\n<br2>\n80335 Munich\n<br>\nGermany"
     },
     "no-brands-found": "Unfortunately there are no brands in these categories yet.",
-    "join-program-link": "<a href=\"contact@listnride.com?subject=Tell me more about the brand program\">Join our brand program now</a>",
+    "join-program-link": "<a href=\"mailto:contact@listnride.com?subject=Tell me more about that\" target=\"_self\">Join our brand program now</a>\n",
     "filter-by-bike-type": "Filter by bike type"
   },
   "rider": {

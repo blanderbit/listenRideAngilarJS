@@ -90,7 +90,7 @@
       "munich-address": "<b>Ons adres </b>\n<br>Lothstr. 5\n<br2>\n80335 München\n<br>\nDuitsland"
     },
     "no-brands-found": "Er zijn helaas nog geen merken in deze categorieën.",
-    "join-program-link": "<a href=\"contact@listnride.com?subject=Tell me more about the brand program\">Word nu lid van ons merkprogramma</a>",
+    "join-program-link": "<a href=\"mailto:contact@listnride.com?subject=Tell me more about that\" target=\"_self\">Word nu lid van ons merkprogramma</a>",
     "filter-by-bike-type": "Filter op type fiets"
   },
   "rider": {
