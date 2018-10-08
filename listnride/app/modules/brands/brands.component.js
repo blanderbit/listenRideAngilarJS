@@ -92,7 +92,8 @@ angular.module('brands', []).component('brands', {
         $timeout(function(){
           NgMap.getMap({ id: "searchMap" }).then(function (map) {
             map.fitBounds(correctBounds());
-            map.setZoom(map.getZoom()+2);
+            // it returns too small a zoom after fitBound function, so we add a little more
+            map.setZoom(map.getZoom() + 2);
             initMarkerClusterer(map);
             brands.map = map;
           });
