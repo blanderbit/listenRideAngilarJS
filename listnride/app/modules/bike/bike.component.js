@@ -25,7 +25,7 @@ angular.module('bike',[]).component('bike', {
       bike.heroshot = function () {
         if (bike.data) {
           var heroshot = bike.mobileCalendar() ? bike.data.image_file_1.small.url : bike.data.image_file_1.large.url;
-          return helpers.lowerCaseFilenameExtension(heroshot);
+          return heroshot;
         }
       };
 
