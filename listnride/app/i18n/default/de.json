@@ -429,7 +429,7 @@
     "agree-terms-link": "listnride AGBs",
     "footer": {
       "questions": "Du hast Fragen rund ums Mieten von Fahrrädern?",
-      "call-us": " Ruf unseren Support unter <a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>,<br> Mo-Fr 9-18 Uhr, an. Oder schreib uns eine <a href=\"mailto:contact@listnride.com\">E-mail</a>",
+      "call-us": " Ruf unseren Support unter\n<br>\n<a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>,\n<br>\nMo-Fr 9-18 Uhr, an. Oder schreib uns eine\n<br>\n<a href=\"mailto:contact@listnride.com\">E-Mail</a>",
       "email-us": "Oder schreib uns eine E-Mail",
       "support": "listnride Support"
     },
@@ -793,7 +793,7 @@
   },
   "home": {
     "landing-section-header": "Das perfekte Rad. Einfach mieten.",
-    "see-all-brands-and-bikes": "Jetzt entdecken",
+    "see-all-brands-and-bikes": "Alle Marken und Fahrräder",
     "insurance": {
       "description": "Egal ob minimalistisches Fixie oder High-End Triathlonrad: Jede listnride-Vermietung in Deutschland oder Österreich ist versichert! Einfach. Unbürokratisch. Jederzeit.",
       "header": "Versicherungsschutz für deine Vermietung auf listnride",
