@@ -22,12 +22,13 @@ angular.module('bike',[]).component('bike', {
         return !!($mdMedia('xs') || $mdMedia('sm'));
       };
 
-      bike.heroshot = function () {
-        if (bike.data) {
-          var heroshot = bike.mobileCalendar() ? bike.data.image_file_1.small.url : bike.data.image_file_1.large.url;
-          return heroshot;
-        }
-      };
+      // TODO: Refactor image savings (.jpg / .JPG)
+      // bike.heroshot = function () {
+      //   if (bike.data) {
+      //     var heroshot = bike.mobileCalendar() ? bike.data.image_file_1.small.url : bike.data.image_file_1.large.url;
+      //     return heroshot;
+      //   }
+      // };
 
       // TODO: move all api calls in service
       // it is really difficult to test api calls from controller.
