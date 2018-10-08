@@ -90,7 +90,8 @@
       "munich-address": "<b>Nuestra dirección</b>\n<br>\nLothstr. 5\n<br2>\n80335 Múnich\n<br>\nAlemania"
     },
     "no-brands-found": "Desafortunadamente no hay marcas en estas categorías todavía.",
-    "join-program-link": "<a href=\"/business-community\">Únete a nuestro programa con tu marca</a>"
+    "join-program-link": "<a href=\"mailto:contact@listnride.com?subject=Quiero más información sobre el programa de marcas\" target=\"_self\">Únete a nuestro programa con tu marca</a>",
+    "filter-by-bike-type": "Filtrar por tipo de bicicleta"
   },
   "rider": {
     "chat": "La reserva de la bicicleta fue cancelada."

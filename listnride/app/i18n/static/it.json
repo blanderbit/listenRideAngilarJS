@@ -90,7 +90,8 @@
       "munich-address": "<b>Il nostro indirizzo </b>\n<br>\nLothstr. 5\n<br2>\n80335 Monaco\n<br>\nGermania"
     },
     "no-brands-found": "Purtroppo non ci sono ancora marchi in queste categorie.",
-    "join-program-link": "<a href=\"/business-community\">Unisciti al nostro programma con il tuo marchio</a>"
+    "join-program-link": "<a href=\"mailto:contact@listnride.com?subject=Tell me more about that\" target=\"_self\">Unisciti al nostro programma marchio ora</a>",
+    "filter-by-bike-type": "Filtra per tipo di bicicletta"
   },
   "rider": {
     "chat": "La prenotazione della bici è stata cancellata."

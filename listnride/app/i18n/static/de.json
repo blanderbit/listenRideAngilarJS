@@ -90,7 +90,8 @@
       "munich-address": "<b>Unsere Adresse </b>\n<br>\nLothstr. 5\n<br2>\n80335 München\n<br>\nDeutschland"
     },
     "no-brands-found": "Es gibt leider noch keine Marken in diesen Kategorien.",
-    "join-program-link": "<a href=\"/business-community\">Werde Teil unsere Markenprogramms</a>"
+    "join-program-link": "<a href=\"mailto:contact@listnride.com?subject=Informationen zum Testprogramm\" target=\"_self\">Werde Teil unseres Markenprogramms</a>",
+    "filter-by-bike-type": "Nach Fahrradtypen filtern"
   },
   "rider": {
     "chat": "Dein gebuchtes Fahrrad wurde storniert."

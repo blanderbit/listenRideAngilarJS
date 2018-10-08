@@ -82,7 +82,7 @@
     "description": "listnride helps people discover, try, and learn about new brands and bikes before buying online. With listnride you have the opportunity to test ride various types of bikes and brands before making the final purchase decision. Most of the brands are direct-to-customer bike brands and are available to test ride across cities in Europe. Test rides can be booked online at the desired time and location. Discover and test ride the best bikes!",
     "choose-from-brands": "Choose a brand",
     "showroom": {
-      "header": "Our Showrooms",
+      "header": "Our showrooms",
       "sub-header": "Experience a premium selection of bike brands in Berlin and Munich.",
       "berlin-description": " In the heart of Berlin-Mitte, opposite the Hackescher Markt, at \n        <a href=\"/users/7351\" target=\"_blank\">Berlin Experience Center</a> \n        we present brands and offer test bikes from \n        <a href=\"/users/3917\" target=\"_blank\">Votec</a>  (gravel), \n        <a href=\"/users/7351\" target=\"_blank\">bonvelo</a>  (single speed), \n        <a href=\"/bikes/10280\" target=\"_blank\">Vello</a> (e-folding) \n        and \n        <a href=\"http://www.biehler-cycling.com\" target=\"_blank\">Biehler</a> (performance wear).\n        So come by, enjoy a freshly brewed espresso from our bar, take a bike for a test ride or meet like-minded people on one of our \n        <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">social rides</a> \n        and events. We are looking forward to meeting you! Here you find the overview of all available \n        <a href=\"/users/7351\" target=\"_blank\">test bikes and brands</a> \n        in Berlin.",
       "munich-description": "Centrally located in Nymphenburg, at \n        <a href=\"/users/6511\" target=\"_blank\">Munich Experience Center</a> \n        we present bicycles of \n        <a href=\"/brands/veloheld\" target=\"_blank\">Veloheld</a> (steelframes), \n        <a href=\"/brands/bonvelo\" target=\"_blank\">bonvelo</a> (single speed), \n        and\n        <a href=\"/brands/rethink\" target=\"_blank\">rethink</a>  (e-bikes). \n        Besides these brands we offer the latest Felt Road Bikes and urban e-bikes from \n        <a href=\"/brands/ampler\" target=\"_blank\">Ampler</a>, \n        <a href=\"/brands/vanmoof\" target=\"_blank\">Van Moof</a>, \n        <a href=\"/brands/leaos\" target=\"_blank\">Leaos</a> \n        and \n        <a href=\"/brands/vello\" target=\"_blank\">Vello</a>.\n        So come by, enjoy a coffee from our bar, take a bike for a test ride or meet like-minded people on one of our \n        <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">social rides</a> \n        and events. We are looking forward to meeting you! Here you find the overview of all available \n         <a href=\"/users/6511\" target=\"_blank\">test bikes and brands</a> \n        in Munich.    ",
@@ -90,7 +90,8 @@
       "munich-address": "<b>Our address</b>\n<br>\nLothstr. 5\n<br2>\n80335 Munich\n<br>\nGermany"
     },
     "no-brands-found": "Unfortunately there are no brands in these categories yet.",
-    "join-program-link": "<a href=\"/business-community\">Join our brand program now</a>"
+    "join-program-link": "<a href=\"mailto:contact@listnride.com?subject=Tell me more about that\" target=\"_self\">Join our brand program now</a>\n",
+    "filter-by-bike-type": "Filter by bike type"
   },
   "rider": {
     "chat": "Your booked ride was cancelled."
