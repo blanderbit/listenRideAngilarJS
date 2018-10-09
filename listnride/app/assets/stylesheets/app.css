@@ -839,6 +839,10 @@ md-tooltip .md-content {
   margin-top: auto;
 }
 
+.lnr-pos-r {
+  position: relative;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* SVG
 /*-----------------------------------------------------------------------------------*/
@@ -3275,6 +3279,25 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   font-weight: 600;
   letter-spacing: 1px;
   user-select: none;
+}
+
+/* BRANDS */
+
+.brands__map {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 650px;
+}
+
+.brands__map.active {
+  visibility: visible;
+}
+
+.brands__fixed-map-height {
+  height: 650px;
 }
 
 /*-----------------------------------------------------------------------------------*/
