@@ -348,7 +348,7 @@
       },
       "bonvelo": {
         "meta-title": "Rent and Test Bonvelo Singlespeed Bikes in Berlin & Munich",
-        "meta-description": "The singlespeed/fixed-gear \"bonvelo BLIZZ\" is available to rent and test ride in Berlin in four frame sizes. Book one on listnride today!"
+        "meta-description": "The singlespeed \"bonvelo BLIZZ\" is available to rent and test ride in Berlin in four frame sizes. Book one on listnride today!"
       },
       "motoparilla": {
         "meta-title": "Rent and Test the Moto Parilla Carbon SUV e-Bike in Munich",
@@ -429,7 +429,7 @@
     "agree-terms-link": "listnride Terms",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
-      "call-us": " Call our support at <a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a> <br>(Mon-Fri 9-18). Or send us an <a href=\"mailto:contact@listnride.com\"> E-mail</a>",
+      "call-us": " Call our support at\n<br>\n<a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>\n<br>\n(Mon-Fri 9-18). Or send us an\n<br>\n<a href=\"mailto:contact@listnride.com\">email</a>",
       "email-us": "Or write us an email",
       "support": "listnride Support"
     },
@@ -445,6 +445,7 @@
     },
     "details": {
       "tab": "2. Personal Details",
+      "sms-confirmation-message": "A SMS with a confirmation code was sent to you just now.",
       "invoice-address": "Invoice Address",
       "subtitle": "Please fill in your invoice address in order to request a bike.",
       "verification": "Verification",
@@ -459,7 +460,7 @@
     },
     "payment": {
       "tab": "3. Payment Method",
-      "getting-saved": "Payment method is getting saved",
+      "getting-saved": "Payment method has been saved",
       "select-method": "Select your Payment Method",
       "subtitle": "Please select your favorite payment method. We only charge you after the lister accepted your request.",
       "credit-card": "Credit Card",

@@ -24,7 +24,6 @@ angular.module('listingCard',[]).component('listingCard', {
       var listingCard = this;
 
       listingCard.price = Math.ceil(listingCard.price);
-      listingCard.imageUrl = helpers.lowerCaseFilenameExtension(listingCard.imageUrl);
 
       // activate a bike
       // implementation is different from parent component

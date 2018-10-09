@@ -4,7 +4,7 @@
     "map": "Mapa",
     "bike-type": "Tipo de bicicleta",
     "filter-by": "Filtrar por",
-    "search-placeholder": "Search for e.g. Berlin, Munich",
+    "search-placeholder": "Busca por ej. Berlín, Munich",
     "info": "Info",
     "no-bikes-found": "No se encontraron bicicletas",
     "dresden": "Dresden",
@@ -24,7 +24,7 @@
       "404": "La página no existe",
       "422": "El formato de los datos ingresados es incorrecto",
       "500": "Error interno del servidor",
-      "200": "Success"
+      "200": "Éxito"
     },
     "basic-fee": "El costo del servicio incluye seguro básico",
     "how-it-works": "Cómo funciona",
@@ -132,7 +132,7 @@
     "Dec": "Dic",
     "testimonials-header": "¿Qué dicen de nosotros?",
     "balance": "Saldo",
-    "tac": "términos y condiciones",
+    "tac": "Términos y condiciones",
     "privacy-policy": "Política de Privacidad",
     "booking-accept-tac": "Al reservar, acepto ",
     "already-booked": "Ya alquilada",
@@ -145,8 +145,8 @@
     "confirmation": "Confirmación",
     "confirmation-text": "¿Estás seguro?",
     "loading": "Cargando",
-    "clear": "Clear",
-    "clear-all": "Clear All",
+    "clear": "Borrar ",
+    "clear-all": "Borrar todas",
     "today": "Hoy",
     "yesterday": "Ayer",
     "press": {
@@ -172,12 +172,12 @@
   "veletage": {
     "event": {
       "calendar-title": "veletage POP-UP SALON",
-      "select-day": "1. Select the Rental Day ",
-      "select-slot": "2. Select the rental time",
-      "day-error": "Please select a day first",
-      "select-return": "3. Select return time",
-      "time-error": "Please select a pickup time first",
-      "calendar-subtitle": "The UCI Road World Championships will take place in Innsbruck-Tirol (Austria) from 22nd to 30th September 2018. Test and rent the perfect road bike for your ride. "
+      "select-day": "1. Selecciona la fecha de alquiler",
+      "select-slot": "2. Selecciona el horario de alquiler",
+      "day-error": "Por favor selecciona un día primero",
+      "select-return": "3. Selecciona el horario de retorno",
+      "time-error": "Por favor, selecciona una hora de recogida primero",
+      "calendar-subtitle": "El Campeonato Mundial UCI Road tendrá lugar en Innsbruck-Tirol (Austria) del 22 al 30 de septiembre de 2018. Prueba y alquila la bicicleta de carretera perfecta para tu viaje."
     }
   },
   "brand-integration": {
@@ -348,7 +348,7 @@
       },
       "bonvelo": {
         "meta-title": "Alquila y prueba bicis de una velocidad de Bonvelo en Berlín y Múnich",
-        "meta-description": "\"Bonvelo BLIZZ\", de una sola velocidad/piñón fijo, puede alquilarse y probarse en Berlín con cuatro tamaños de cuadro. ¡Reserva una en listnride hoy mismo!"
+        "meta-description": "\"Bonvelo BLIZZ\", de una sola velocidad , puede alquilarse y probarse en Berlín con cuatro tamaños de cuadro. ¡Reserva una en listnride hoy mismo!"
       },
       "motoparilla": {
         "meta-title": "Alquila y prueba la  SUV e-Bike Moto Parilla Carbon en Múnich",
@@ -428,7 +428,7 @@
     "agree-terms-link": "términos de listnride",
     "footer": {
       "questions": "¿Tienes preguntas con respecto a la reserva de una bicicleta?",
-      "call-us": "Llámanos al <a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a> de <br> lunes a viernes de 9-18hs o escríbenos un \ncorreo <a href=\"mailto:contact@listnride.com\">electrónico</a>",
+      "call-us": "Llámanos al\n<br>\n<a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a> de\n<br> lunes a viernes de 9-18hs o escríbenos un \ncorreo\n<br>\n<a href=\"mailto:contact@listnride.com\">electrónico</a>",
       "email-us": "O escríbenos un correo electrónico",
       "support": "Equipo de soporte de listnride"
     },
@@ -444,6 +444,7 @@
     },
     "details": {
       "tab": "2. Datos personales",
+      "sms-confirmation-message": "Te hemos enviado un SMS con el código de confirmación.",
       "invoice-address": "Dirección de facturación",
       "subtitle": "Introduce tu dirección de facturación para solicitar una bicicleta",
       "verification": "Verificar",
@@ -458,6 +459,7 @@
     },
     "payment": {
       "tab": "3. Formas de pago",
+      "getting-saved": "Se ha guardado el método de pago",
       "select-method": "Selecciona tu forma de pago",
       "subtitle": "Sólo te cobraremos después de que el anunciante de la bici haya aceptado tu solicitud.",
       "credit-card": "Tarjeta de crédito",

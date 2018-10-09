@@ -59,16 +59,14 @@
                   {{multiBooking.showSelectedValuesCategories()}}
                 </span>
               </md-button>
-              <md-menu-content width="5" class="lnr-100mh">
-                <div class="lnr-p">
-                  <div class="lnr-right">
-                    <md-button show-xs hide-gt-xs class="md-icon-button md-warn md-menu__close-btn lnr-md-no-focused">
-                      <md-icon md-font-icon="fa-times" class="fa"></md-icon>
-                    </md-button>
-                  </div>
-                  <category-filter current-categories="multiBooking.form.category_ids">
-                  </category-filter>
+              <md-menu-content width="5" class="lnr-100mh lnr-md-menu-bordered">
+                <div class="lnr-right">
+                  <md-button show-xs hide-gt-xs class="md-icon-button md-warn md-menu__close-btn lnr-md-no-focused">
+                    <md-icon md-font-icon="fa-times" class="fa"></md-icon>
+                  </md-button>
                 </div>
+                <category-filter current-categories="multiBooking.form.category_ids">
+                </category-filter>
               </md-menu-content>
             </md-menu>
           </md-input-container>

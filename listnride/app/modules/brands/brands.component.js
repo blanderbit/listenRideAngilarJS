@@ -16,6 +16,7 @@ angular.module('brands', []).component('brands', {
         brands.selectedCategories = [];
         brands.filteredBrands = [];
         brands.data = [];
+        brands.allPins = [];
         brands.colorScheme = mapConfigs.colorScheme();
         // TODO: change to first picked Brand
         brands.mapOptions = {
@@ -28,6 +29,7 @@ angular.module('brands', []).component('brands', {
         brands.filterChange = filterChange;
         brands.checkSelectedBrands = checkSelectedBrands;
         brands.toggleView = toggleView;
+        brands.onMapClick = onMapClick;
         // invocations
         getData();
       };
@@ -36,6 +38,9 @@ angular.module('brands', []).component('brands', {
           api.get('/brand_pages').then(
             function (success) {
               brands.data = success.data;
+              _.forEach(brands.data, function(brand) {
+                brands.allPins = _.concat(brands.allPins, brand.pins);
+              });
               checkSelectedBrands();
               initializeGoogleMap();
             },
@@ -79,17 +84,41 @@ angular.module('brands', []).component('brands', {
       // >>>> START MAP FUNCTIONALITY
       // ============================
 
+      function onMapClick() {
+        if (brands.map) {
+          brands.map.hideInfoWindow('searchMapWindow');
+          brands.selectedBrand = undefined;
+        }
+      }
+
 
       function initializeGoogleMap() {
         // without timeout map will take an old array with bikes
         $timeout(function(){
           NgMap.getMap({ id: "searchMap" }).then(function (map) {
-            // map.fitBounds(correctBounds());
-            map.setZoom(map.getZoom());
+            map.fitBounds(correctBounds());
+            // it returns too small a zoom after fitBound function, so we add a little more
+            map.setZoom(map.getZoom() + 2);
             initMarkerClusterer(map);
             brands.map = map;
           });
         }, 0);
+      }
+
+       function correctBounds() {
+        var bounds = new google.maps.LatLngBounds();
+
+        _.forEach(brands.allPins, function (pin) {
+          bounds = extendBounds(bounds, pin.lat, pin.lng);
+        });
+
+        return bounds
+      }
+
+      function extendBounds(bounds, lat, lng) {
+        var loc = new google.maps.LatLng(lat, lng);
+        bounds.extend(loc);
+        return bounds
       }
 
       // Clear Markers, Add new and redraw map on each state update
@@ -152,10 +181,10 @@ angular.module('brands', []).component('brands', {
           // label: { text: brand.title, color: "white", fontSize: '13px', fontWeight: 'bold' }
         });
 
-        // google.maps.event.addListener(marker, 'click', function () {
-        //   brands.selectedBrand = brand;
-        //   map.showInfoWindow('searchMapWindow', this);
-        // });
+        google.maps.event.addListener(marker, 'click', function () {
+          brands.selectedBrand = brand;
+          map.showInfoWindow('searchMapWindow', this);
+        });
 
         return marker;
       }

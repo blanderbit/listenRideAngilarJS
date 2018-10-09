@@ -163,7 +163,7 @@ angular.module('list', ['ngLocale'])
                     data["image_file_" + i].small.url !== null) {
                     images.push({
                       src: data["image_file_" + i],
-                      url: helpers.lowerCaseFilenameExtension(data["image_file_" + i].small.url),
+                      url: data["image_file_" + i].small.url,
                       local: "false",
                       name: "image_file_" + i
                     });
