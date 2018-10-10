@@ -390,6 +390,22 @@ function copyFonts() {
         .pipe(gulp.dest(path.dist.fonts));
 }
 /**
+ * copy sitemapindex.xml to dist folder
+ * @returns {gulp} for chaining
+ */
+function copySitemapIndex() {
+    return gulp.src(path.app.downloads + 'sitemapindex.xml')
+        .pipe(gulp.dest(path.dist.root));
+}
+/**
+ * copy sitemapindex.xml to dist folder
+ * @returns {gulp} for chaining
+ */
+function copyRobotTxt() {
+    return gulp.src(path.app.downloads + 'robots.txt')
+        .pipe(gulp.dest(path.dist.root));
+}
+/**
  * optimize png images
  * loseless compression
  * @returns {gulp} for chaining
@@ -428,7 +444,7 @@ function generateSitemap(language) {
     request(endpoint, function (error, response, body) {
         var result = JSON.parse(body).all_cities;
         _.each(tlds, function (tld) {
-            console.log("Generating sitemap for listnride." + tld);
+            // Generating sitemap for listnride for different languages
             var xmlString = "";
             for(var i = 0; i < result.length; i++) {
                 xmlString += "<url>\n";
@@ -442,10 +458,11 @@ function generateSitemap(language) {
             .pipe(replace('<!-- GULP INSERT SEO PAGES -->', xmlString))
             .pipe(replace('com', tld))
             .pipe(rename('sitemap-' + tld + '.xml'))
-            .pipe(gulp.dest(path.app.downloads));
-            console.log("Wrote sitemap-" + tld + ".xml");
+            .pipe(gulp.dest(path.dist.root));
         });
     });
+    copySitemapIndex();
+    copyRobotTxt();
 }
 /**
  * clean dist folder
