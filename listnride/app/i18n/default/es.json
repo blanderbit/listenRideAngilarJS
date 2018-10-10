@@ -166,6 +166,19 @@
       "subheader": "Conoce a personas con tus mismas pasiones y gana dinero extra"
     }
   },
+  "events": {
+    "berlin-triathlon": {
+      "description": "what: Berlin Triathlon | where: Berlin | when: 2 June 2019",
+      "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
+      "meta-description": "EXAMPLE META DESC"
+    },
+    "berlin-triathlon-xl": {
+      "description-delete-me": "Example events.berlin-triathlon-xl.description\n",
+      "text-delete-me": "Example events.berlin-triathlon-xl.text\n",
+      "meta-description": "EXAMPLE META DESC",
+      "meta-title": "Rent a road bike for Berlin Triathlon XL 2019 | listnride"
+    }
+  },
   "lister": {
     "chat": "La reserva de la bicicleta fue cancelada."
   },
@@ -428,7 +441,7 @@
     "agree-terms-link": "términos de listnride",
     "footer": {
       "questions": "¿Tienes preguntas con respecto a la reserva de una bicicleta?",
-      "call-us": "Llámanos al\n<br>\n<a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a> de\n<br> lunes a viernes de 9-18hs o escríbenos un \ncorreo\n<br>\n<a href=\"mailto:contact@listnride.com\">electrónico</a>",
+      "call-us": "Llámanos al\n<a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a> de\nlunes a viernes de 9-18hs o escríbenos un \n<a href=\"mailto:contact@listnride.com\">correo electrónico</a>.",
       "email-us": "O escríbenos un correo electrónico",
       "support": "Equipo de soporte de listnride"
     },
@@ -1241,7 +1254,8 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
   "seo": {
-    "header": "Alquile las mejores bicicletas en",
+    "header": "Alquila las mejores bicicletas en",
+    "header-2": "Alquila las mejores bicicletas en",
     "rent-the-best": "Rent the best",
     "bikes": "bikes",
     "rent-perfect-bikes-in": "Alquile la bici perfecta en ",

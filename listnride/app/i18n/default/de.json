@@ -166,6 +166,19 @@
       "subheader": "Triff Gleichgesinnte. Verdiene Dir etwas dazu."
     }
   },
+  "events": {
+    "berlin-triathlon": {
+      "description": "Was: Berlin Triathlon | Wo: Berlin | Wann: 2. Juni 2019",
+      "meta-title": "Miete dir ein Rennrad für den Berlin Triathlon XL 2019 | listnride",
+      "meta-description": "EXAMPLE META DESC"
+    },
+    "berlin-triathlon-xl": {
+      "description-delete-me": "Was: Berlin Triathlon XL | Wo: Berlin | Wann: 23. Juni 2019",
+      "text-delete-me": "Du brauchst noch ein Rad für den Berlin Triathlon XL 2019? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n\nDu kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als das es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und vermiete dein Rad.",
+      "meta-description": "EXAMPLE META DESC",
+      "meta-title": "Miete dir ein Rennrad für den Berlin Triathlon XL 2019 | listnride\n"
+    }
+  },
   "lister": {
     "chat": "Dein gebuchtes Fahrrad wurde storniert."
   },
@@ -429,7 +442,7 @@
     "agree-terms-link": "listnride AGBs",
     "footer": {
       "questions": "Du hast Fragen rund ums Mieten von Fahrrädern?",
-      "call-us": " Ruf unseren Support unter\n<br>\n<a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>,\n<br>\nMo-Fr 9-18 Uhr, an. Oder schreib uns eine\n<br>\n<a href=\"mailto:contact@listnride.com\">E-Mail</a>",
+      "call-us": "Fragen? Ruf an:\n<a href=\"tel:+49030120870330\">+49 30-120870330</a> an,\nOder\n<a href=\"mailto:contact@listnride.com\">schreib uns</a>.",
       "email-us": "Oder schreib uns eine E-Mail",
       "support": "listnride Support"
     },
@@ -803,7 +816,7 @@
     "featured-bikes-header": "Fahrradverleih: Die Lieblinge der Community",
     "featured-bikes-subheader": "Egal ob Rennrad, Mountain Bike, Stadtrad oder E-Bike, du kannst sie alle mieten. Hier sind die aktuellen Favoriten der Community.",
     "featured-tiles-header": "Testen & ausprobieren",
-    "featured-tiles-subheader": "Wir arbeiten mit innovativen Fahrradmarken zusammen, die ihre neuesten Modelle zum Test anbieten. Die Fahrräder können exklusiv an verschiedenen Standorten getestet oder gemietet werden. Perfekte Hilfe für ein fundierte Kaufentscheidung.",
+    "featured-tiles-subheader": "Wir arbeiten mit innovativen Fahrradmarken zusammen, die ihre neuesten Modelle zum Test anbieten. Die Fahrräder können exklusiv an verschiedenen Standorten getestet oder gemietet werden. Perfekte Hilfe für eine fundierte Kaufentscheidung.",
     "featured-cities-header": "Mit listnride bist du nie ohne dein perfektes Rad",
     "featured-cities-subheader": "In immer mehr Metropolen und Urlaubsregionen in Europa gibt es den listnride Fahrradverleih. Hier einige unserer Tipps für dich: ",
     "list-a-bike-header": "Dein Bike ist zu schön um rumzustehen?",
@@ -1245,6 +1258,7 @@
   },
   "seo": {
     "header": "Miete die besten Räder in",
+    "header-2": "Miete die besten Räder auf",
     "rent-the-best": "Miete die besten",
     "bikes": "Räder",
     "rent-perfect-bikes-in": "Miete perfekte Räder in",

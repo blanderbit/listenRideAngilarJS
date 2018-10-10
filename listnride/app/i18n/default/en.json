@@ -166,6 +166,19 @@
       "subheader": "Meet like-minded and make some pocket money"
     }
   },
+  "events": {
+    "berlin-triathlon": {
+      "description": "what: Berlin Triathlon | where: Berlin | when: 2 June 2019",
+      "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
+      "meta-description": "EXAMPLE META DESC"
+    },
+    "berlin-triathlon-xl": {
+      "description-delete-me": "what: Berlin Triathlon XL | where: Berlin | when: 23 June 2019",
+      "text-delete-me": "Do you need a road bike for Berlin Triathlon XL 2019? We have it for you! Together with the listnride community, we provide suitable road bikes that you can easily rent for as long as you like. Just choose one of the bikes below, request it for your desired period, and pick it up when the time comes. Simple as that.\n\nYou can’t participate? Help out someone in need. List your bike and make some extra money on the side! ",
+      "meta-description": "EXAMPLE META DESC",
+      "meta-title": "Rent a road bike for Berlin Triathlon XL 2019 | listnride"
+    }
+  },
   "lister": {
     "chat": "Your booked bike was cancelled."
   },
@@ -429,7 +442,7 @@
     "agree-terms-link": "listnride Terms",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
-      "call-us": " Call our support at\n<br>\n<a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>\n<br>\n(Mon-Fri 9-18). Or send us an\n<br>\n<a href=\"mailto:contact@listnride.com\">email</a>",
+      "call-us": " Questiongs? Call support:\n<a href=\"tel:+49030120870330\">+49 30-120870330</a>\n. Or\n<a href=\"mailto:contact@listnride.com\">write us</a>.",
       "email-us": "Or write us an email",
       "support": "listnride Support"
     },
@@ -937,7 +950,7 @@
       "tip": "Additional fee for the rider is {{fee}} per day",
       "up-to-value": "Up to {{value}}",
       "select-value": "Please select your bike value",
-      "no-insurance": "Sorry, your country is not yet covered by our insurance.\nTheiInsurance only applies to rentals in Germany and Austria."
+      "no-insurance": "Sorry, your country is not yet covered by our insurance.\nThe insurance only applies to rentals in Germany and Austria."
     },
     "pricing": {
       "info": "Your daily price is your base price for 1 day.",
