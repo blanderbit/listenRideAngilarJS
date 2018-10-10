@@ -10,6 +10,7 @@ angular.module('berlinTriathlon', []).component('berlinTriathlon', {
       $tpl.addPart('static');
       ngMeta.setTitle($translate.instant("events.berlin-triathlon.meta-title"));
       ngMeta.setTag("description", $translate.instant("events.berlin-triathlon.meta-description"));
+      ngMeta.setTag("og:image", "app/assets/ui_images/events/berlin-triathlon_og.jpg");
 
       berlinTriathlon.sizeOptions = [
         {value: "", label: "-"},
