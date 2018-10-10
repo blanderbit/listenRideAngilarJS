@@ -135,7 +135,7 @@
     "tac": "Terms and Conditions",
     "privacy-policy": "Privacy Policy",
     "booking-accept-tac": "By booking I accept the",
-    "already-booked": "Already Booked",
+    "already-booked": "Already booked",
     "for-shops": "For Bikeshops",
     "contact-us": "Please get in touch with us via ",
     "required": "This is required",
@@ -164,6 +164,19 @@
     "rent-your-bike": {
       "header": "Rent your bike",
       "subheader": "Meet like-minded and make some pocket money"
+    }
+  },
+  "events": {
+    "berlin-triathlon": {
+      "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>2 June 2019</b>",
+      "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
+      "meta-description": "Rent a road bike securely online with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need."
+    },
+    "berlin-triathlon-xl": {
+      "description-delete-me": "What: <b0>Berlin Triathlon XL</b0>  |  Where: <b1>Berlin</b1>  |  When: <b2>23 June 2019</b2>",
+      "text-delete-me": "Do you need a road bike for <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon 2019 XL</a0>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br>\nYou can’t participate? Help out someone in need. <a1 href=\"/listing-a-bike\">List your bike</a1> and make some extra pocket money! ",
+      "meta-description": "Rent a road bike securely online with listnride for Berlin Triathlon XL 2019. Choose the perfect bike that fits your need.",
+      "meta-title": "Rent a road bike for Berlin Triathlon XL 2019 | listnride"
     }
   },
   "lister": {
@@ -429,7 +442,7 @@
     "agree-terms-link": "listnride Terms",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
-      "call-us": " Call our support at\n<br>\n<a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>\n<br>\n(Mon-Fri 9-18). Or send us an\n<br>\n<a href=\"mailto:contact@listnride.com\">email</a>",
+      "call-us": " Questiongs? Call support:\n<a href=\"tel:+49030120870330\">+49 30-120870330</a>\n. Or\n<a href=\"mailto:contact@listnride.com\">write us</a>.",
       "email-us": "Or write us an email",
       "support": "listnride Support"
     },
@@ -526,7 +539,7 @@
     "opening-hours-success": "Opening hours successfully changed.",
     "opening-hours-error": "Could not save opening hours.",
     "uniq-phone": "Phone number already registered in our system.",
-    "pending-requests": "Looks like you have an open request for this bike. Before you can delete the bike you need to accept or cancel it.",
+    "pending-requests": "Looks like you have an open request for this bike. Before you can delete the bike you need to accept or reject the request.",
     "account-deleted": "Your account has been deactivated",
     "enter-email": "Please enter your email",
     "duplicate-start": "Duplication process started",
@@ -857,7 +870,7 @@
   },
   "list": {
     "edit-bike": "Edit Bike",
-    "save-changes": "Save Changes",
+    "save-changes": "Save changes",
     "list-your-bike": "List your bike",
     "back": "Back",
     "next": "Next",
@@ -885,7 +898,7 @@
       "name": "Name",
       "description": "Description (min. 100 characters)",
       "min-length-warning": "At least 100 characters",
-      "size": "Rider Height",
+      "size": "Rider height",
       "frame-size": "Frame size",
       "bicycle-number": "Bicycle number",
       "frame-number": "Frame number",
@@ -937,7 +950,7 @@
       "tip": "Additional fee for the rider is {{fee}} per day",
       "up-to-value": "Up to {{value}}",
       "select-value": "Please select your bike value",
-      "no-insurance": "Sorry, your country is not yet covered by our insurance.\nTheiInsurance only applies to rentals in Germany and Austria."
+      "no-insurance": "Sorry, your country is not yet covered by our insurance.\nThe insurance only applies to rentals in Germany and Austria."
     },
     "pricing": {
       "info": "Your daily price is your base price for 1 day.",

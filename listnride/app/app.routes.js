@@ -446,6 +446,44 @@
       });
 
       $stateProvider.state({
+        name: 'berlinTriathlon',
+        url: '/berlin-triathlon',
+        template: '<berlin-triathlon></berlin-triathlon>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.berlin-triathlon.meta-title", "meta.events.berlin-triathlon.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.events.berlin-triathlon.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.berlin-triathlon.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'berlinTriathlonXl',
+        url: '/berlin-triathlon-xl',
+        template: '<berlin-triathlon-xl></berlin-triathlon-xl>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.berlin-triathlon-xl.meta-title", "meta.events.berlin-triathlon-xl.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.events.berlin-triathlon-xl.meta-title"]);
+                ngMeta.setTag("description", translations["meta.events.berlin-triathlon-xl.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'supercrossMunich',
         url: '/supercross-munich',
         template: '<supercross-munich></supercross-munich>',

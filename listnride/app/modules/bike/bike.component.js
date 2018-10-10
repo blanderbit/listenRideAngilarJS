@@ -124,8 +124,8 @@ angular.module('bike',[]).component('bike', {
           ease: 'ease-in-out',
           speed: '500',
           dots: true,
-          prevArrow: "<div class='slick-arrow slick-arrow_prew'><span class='arrow'></span></div>",
-          nextArrow: "<div class='slick-arrow slick-arrow_next'><div class='arrow'></div></div>"
+          prevArrow: "<div class='slick-arrow slick-arrow_prev'></div>",
+          nextArrow: "<div class='slick-arrow slick-arrow_next'></div>"
         }
       }
 

@@ -166,6 +166,19 @@
       "subheader": "Conoce a personas con tus mismas pasiones y gana dinero extra"
     }
   },
+  "events": {
+    "berlin-triathlon": {
+      "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>2 June 2019</b>",
+      "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
+      "meta-description": "Rent a road bike securely online with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need."
+    },
+    "berlin-triathlon-xl": {
+      "description-delete-me": "What: <b0>Berlin Triathlon XL</b0>  |  Where: <b1>Berlin</b1>  |  When: <b2>23 June 2019</b2>",
+      "text-delete-me": "Do you need a road bike for <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon 2019 XL</a0>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br>\nYou can’t participate? Help out someone in need. <a1 href=\"/listing-a-bike\">List your bike</a1> and make some extra pocket money! ",
+      "meta-description": "Rent a road bike securely online with listnride for Berlin Triathlon XL 2019. Choose the perfect bike that fits your need.",
+      "meta-title": "Rent a road bike for Berlin Triathlon XL 2019 | listnride"
+    }
+  },
   "lister": {
     "chat": "La reserva de la bicicleta fue cancelada."
   },
@@ -428,7 +441,7 @@
     "agree-terms-link": "términos de listnride",
     "footer": {
       "questions": "¿Tienes preguntas con respecto a la reserva de una bicicleta?",
-      "call-us": "Llámanos al\n<br>\n<a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a> de\n<br> lunes a viernes de 9-18hs o escríbenos un \ncorreo\n<br>\n<a href=\"mailto:contact@listnride.com\">electrónico</a>",
+      "call-us": "Llámanos al\n<a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a> de\nlunes a viernes de 9-18hs o escríbenos un \n<a href=\"mailto:contact@listnride.com\">correo electrónico</a>.",
       "email-us": "O escríbenos un correo electrónico",
       "support": "Equipo de soporte de listnride"
     },
@@ -525,7 +538,7 @@
     "opening-hours-success": "Horario de apertura cambiado correctamente.",
     "opening-hours-error": "No se pudo grabar el horario de apertura.",
     "uniq-phone": "Número de teléfono ya registrado en nuestro sistema.",
-    "pending-requests": "Parece que tienes una solicitud abierta para esta bicicleta. Antes de poder eliminar la bicicleta, debe aceptarla o cancelarla.",
+    "pending-requests": "Parece que tienes una solicitud abierta para esta bicicleta. Antes de poder eliminar la bicicleta, debes aceptar o cancelar la solicitud.",
     "account-deleted": "Tu cuenta ha sido desactivada",
     "enter-email": "Introduce tu dirección de correo electrónico",
     "duplicate-start": "Proceso de duplicación iniciado",
@@ -754,7 +767,7 @@
     "profile-picture-size-error": "El tamaño de la imagen es superior al tamaño máximo permitido",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "General",
-    "street": "Calle y número",
+    "street": "Calle",
     "streetnumber": "Número",
     "zip": "Código postal",
     "city": "Ciudad",
@@ -855,7 +868,7 @@
   },
   "list": {
     "edit-bike": "Editar bici",
-    "save-changes": "Guardar cambios",
+    "save-changes": "Guardar ",
     "list-your-bike": "Registra tu bici",
     "back": "Anterior",
     "next": "Siguiente",
@@ -1241,7 +1254,8 @@
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
   },
   "seo": {
-    "header": "Alquile las mejores bicicletas en",
+    "header": "Alquila las mejores bicicletas en",
+    "header-2": "Alquila las mejores bicicletas en",
     "rent-the-best": "Rent the best",
     "bikes": "bikes",
     "rent-perfect-bikes-in": "Alquile la bici perfecta en ",

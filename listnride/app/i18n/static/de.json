@@ -84,12 +84,12 @@
     "showroom": {
       "header": "Unsere Standorte",
       "sub-header": "Erlebe eine Premium-Auswahl an Fahrradmarken in Berlin und München.",
-      "berlin-description": "Im Herzen von Berlin-Mitte, gegenüber dem Hackeschen Markt, werden im \n        <a href=\"/users/7351\" target=\"_blank\">Berliner Experience Center</a>\n        Marken präsentiert und Testräder von \n        <a href=\"/users/3917\" target=\"_blank\">Votec</a> (Gravel), \n        <a href=\"/users/7351\" target=\"_blank\">bonvelo</a> (Singlespeed), \n        <a href=\"/bikes/10280\" target=\"_blank\">Vello</a> (E-Falträder) \n        und \n        <a href=\"http://www.biehler-cycling.com\" target=\"_blank\">Biehler</a> (Performance Wear) \n        angeboten. Also komm vorbei, genieße einen frisch gebrühten Espresso, fahre mit dem Fahrrad zu einer Probefahrt oder treffe Gleichgesinnte auf einer unserer regelmäßigen\n        <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">Touren</a> \n        oder Veranstaltungen. Wir freuen uns darauf, dich kennenzulernen! Hier findest du eine Übersicht über alle verfügbaren \n         <a href=\"/users/7351\" target=\"_blank\">Testräder und Marken</a> \n        in Berlin.",
+      "berlin-description": "Im Herzen von Berlin-Mitte, gegenüber dem Hackeschen Markt, werden im \n        <a href=\"/users/7351\" target=\"_blank\">Berliner Experience Center</a>\n        Marken präsentiert und Testräder von \n        <a href=\"/users/3917\" target=\"_blank\">Votec</a> (Gravel), \n        <a href=\"/users/7351\" target=\"_blank\">bonvelo</a> (Singlespeed) und\n        <a href=\"/bikes/10280\" target=\"_blank\">Vello</a> (E-Falträder) \n        sowie Performance Wear von\n        <a href=\"http://www.biehler-cycling.com\" target=\"_blank\">Biehler</a>\n        angeboten. Also komm vorbei, genieße einen frisch gebrühten Espresso, fahre mit dem Fahrrad zu einer Probefahrt oder triff Gleichgesinnte auf einer unserer regelmäßigen\n        <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">Touren</a> \n        oder Veranstaltungen. Wir freuen uns darauf, dich kennenzulernen! Hier findest du eine Übersicht über alle verfügbaren \n         <a href=\"/users/7351\" target=\"_blank\">Testräder und Marken</a> \n        in Berlin.",
       "munich-description": "Zentral gelegen in Nymphenburg, präsentieren wir im \n        <a href=\"/users/6511\" target=\"_blank\">Münchner Experience Center Fahrräder</a> \n        von \n        <a href=\"/brands/veloheld\" target=\"_blank\">Veloheld</a> (Stahlrahmen), \n        <a href=\"/brands/bonvelo\" target=\"_blank\">bonvelo</a> (Single-Speed), \n        und \n        <a href=\"/brands/rethink\" target=\"_blank\">rethink</a>  (E-Bike). \n        Neben diesen Marken bieten wir dir die neuesten Felt Rennräder und urbanen E-Bikes von \n        <a href=\"/brands/ampler\" target=\"_blank\">Ampler</a>, \n        <a href=\"/brands/vanmoof\" target=\"_blank\">Van Moof</a>, \n        <a href=\"/brands/leaos\" target=\"_blank\">Leaos</a> \n        und \n        <a href=\"/brands/vello\" target=\"_blank\">Vello</a>. \n        Komm vorbei, genieß einen Kaffee an unserer Bar, mache eine Probefahrt und triff Gleichgesinnte auf einer unserer zahlreichen \n        <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">Ausfahrten</a> oder Veranstaltungen.\n        Wir freuen uns auf dich! Hier findest du die Übersicht aller verfügbaren \n        <a href=\"/users/6511\" target=\"_blank\">Testräder und Marken</a> \n        in München.",
       "berlin-address": "<b>Unsere Adresse </b>\n<br>\nOranienburger Straße 1-3\n<br>\n10178 Berlin\n<br>\nDeutschland",
-      "munich-address": "<b>Unsere Adresse </b>\n<br>\nLothstr. 5\n<br2>\n80335 München\n<br>\nDeutschland"
+      "munich-address": "<b>Unsere Adresse </b>\n<br>\nNymphenburger Str. 86\n<br2>\n80335 München\n<br>\nDeutschland"
     },
-    "no-brands-found": "Es gibt leider noch keine Marken in diesen Kategorien.",
+    "no-brands-found": "Es gibt leider noch keine Marken in dieser Kategorie.",
     "join-program-link": "<a href=\"mailto:contact@listnride.com?subject=Informationen zum Testprogramm\" target=\"_self\">Werde Teil unseres Markenprogramms</a>",
     "filter-by-bike-type": "Nach Fahrradtypen filtern"
   },
@@ -102,7 +102,7 @@
   },
   "shared": {
     "list-your-bike": {
-      "bike-category": "Wählen die Kategorie deines Rades",
+      "bike-category": "Wähle die Kategorie deines Rades",
       "bike-subcategory": "Wähle die Unterkategorie deines Rades"
     }
   },
@@ -226,7 +226,7 @@
       "group-7": {
         "title": "Gutscheine & Guthaben",
         "description": "Nutze Gutscheine und Guthaben für Fahrradmieten. Hier erfährst du, wie du Gutscheine einlösen kannst. Außerdem kannst du Freunde zu listnride einladen und so Guthaben aufbauen",
-        "answer-1": "Du kannst Guthaben aufbauen, indem du Freunde via facebook oder E-Mail einlädst, Teil der listnride-Community zu werden. Melde dich in deinem Profil an, gehe zu \n<a href=\"http://www.listnride.de/invite-friends\" target=\"_blank\">Freunde einladen</a> \nund teile den Link mit anderen. Wenn deine Freunde ein Fahrrad über den Link mieten oder listen, erhältst du automatisch 10€, die du für deinen nächsten Verleih nutzen kannst.",
+        "answer-1": "Du kannst Guthaben aufbauen, indem du Freunde via facebook oder E-Mail einlädst, Teil der listnride-Community zu werden. Melde dich in deinem Profil an, gehe zu \n<a href=\"http://www.listnride.de/invite-friends\" target=\"_blank\">Freunde einladen</a> \nund teile den Link mit anderen. Wenn deine Freunde ein Fahrrad über den Link mieten oder listen, erhältst du automatisch 10€, die du für deinen nächsten Verleih nutzen kannst.\n\n<img src=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/assets/help_support/en/help-and-service.faq.group-1.answer-3.jpg\">",
         "answer-2": "Um Gutscheine einlösen zu können, musst deren Code einfach im Feld „<b>Gutschein einlösen</b>” eingeben wenn du ein Fahrrad anfrägst. Alternativ kannst du Codes in deinem Konto unter der Rubrik „<b>Gutscheine</b>” eingeben. ",
         "answer-3": "Wann immer du ein Fahrrad anfrägst, kannst du einen Gutschein nutzen, allerdings ist jeder Code nur ein einziges mal gültig. \nWird der Gutschein bei der Miete nicht komplett aufgebraucht, speichern wir dir den restlichen Betrag in deinem lisntride-Konto als Guthaben, das dir für die nächste Buchung erhalten bleibt.\n",
         "answer-4": "How do I search for a bike?",
@@ -366,6 +366,15 @@
   "events": {
     "rapha-super-cross": {
       "text": "Der Rapha Super Cross ist wieder zurück in München, zum dritten Mal. Wenn du gerne dabei sein möchtest aber kein geeignetes Rad hast, kannst du über listnride ein Rad mieten. Die listnride bike sharing community bietet verschiedene Crossräder zum Verleih an. Die Räder können vor der Veranstaltung bei den einzelnen Anbietern angefragt und gebucht werden. Die Übergabe wird direkt mit dem Vermieter vereinbart. Zusätzlich verfügbare Räder können auch noch zur Vermietung angeboten werden, um damit etwas zu verdienen und interessante Leute zu treffen, welche an der Veranstaltung teilnehmen. Werde Teil der wachsenden Community!"
+    },
+    "berlin-triathlon": {
+      "title": "Miete dir ein Rennrad für den Berlin Triathlon 2019",
+      "text": "Du brauchst ein Rad für den <a href=\"http://www.berlin-triathlon.de/\">Berlin Triathlon 2019</a>? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n<br1>\nDu kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und <a href=\"/listing-a-bike\">vermiete dein Rad</a>."
+    },
+    "berlin-triathlon-xl": {
+      "title": "Miete dir das perfekte Rennrad für den Berlin Triathlon XL 2019",
+      "description": "Was: <b0>Berlin Triathlon XL</b0>  |  Wo: <b1>Berlin</b1>  |  Wann: <b2>23. Juni 2019</b2>",
+      "text": "Du brauchst noch ein Rad für den <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon XL 2019</a0>? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n<br>\nDu kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und <a1 href=\"/listing-a-bike\">vermiete dein Rad</a1>."
     },
     "toros-de-gravel": {
       "title": "Miet ein Gravelbike für Toros de Gravel",

@@ -445,13 +445,13 @@ var lnrHelper = {
 
       // properties for grid creation
       var brand = ride.brand,
-        category = ride.category,
-        rideName = ride.name,
-        rideId = ride.id,
-        categoryDesc = lnrHelper.categoryFilter(userId, category),
-        price = Math.ceil(ride.price_from),
-        imageUrl = ride.image_file_1.small ? ride.image_file_1.small.url : ride.image_file_1.image_file_1.small.url,
-        rideDescription = ride.description;
+          category = ride.category,
+          rideName = ride.name,
+          rideId = ride.id,
+          categoryDesc = lnrHelper.categoryFilter(userId, category),
+          price = Math.ceil(ride.price_from),
+          imageUrl = ride.image_file,
+          rideDescription = ride.description;
 
       if (ride.size === 0) {
         var readableSize = 'Unisize';

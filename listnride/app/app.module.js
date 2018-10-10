@@ -80,6 +80,8 @@ angular.module('listnride', [
   'supercrossMunich',
   'capeArgus',
   'torosDeGravel',
+  'berlinTriathlon',
+  'berlinTriathlonXl',
   'eroicaGaiole',
   'filter',
   'bikeSorter',
