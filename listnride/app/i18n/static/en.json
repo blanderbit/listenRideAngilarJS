@@ -369,12 +369,12 @@
     },
     "berlin-triathlon": {
       "title": "Rent a road bike for Berlin Triathlon 2019\n",
-      "text": "Do you need a road bike for Berlin Triathlon 2019? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n\nYou can’t participate? Help out someone in need. List your bike and make some extra pocket money! "
+      "text": "Do you need a road bike for <a href=\"http://www.berlin-triathlon.de/\">Berlin Triathlon 2019</a>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n\nYou can’t participate? Help out someone in need. <a href=\"/listing-a-bike\">List your bike</a> and make some extra pocket money! "
     },
     "berlin-triathlon-xl": {
       "title": "Rent a road bike for Berlin Triathlon XL 2019",
-      "description": "what: Berlin Triathlon XL | where: Berlin | when: 23 June 2019",
-      "text": "Do you need a road bike for Berlin Triathlon XL 2019? We have it for you! Together with the listnride community, we provide suitable road bikes that you can easily rent for as long as you like. Just choose one of the bikes below, request it for your desired period, and pick it up when the time comes. Simple as that.\n\nYou can’t participate? Help out someone in need. List your bike and make some extra money on the side! "
+      "description": "What: <b0>Berlin Triathlon XL</b0>  |  Where: <b1>Berlin</b1>  |  When: <b2>23 June 2019</b2>",
+      "text": "Do you need a road bike for <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon 2019 XL</a0>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n\nYou can’t participate? Help out someone in need. <a1 href=\"/listing-a-bike\">List your bike</a1> and make some extra pocket money! "
     },
     "toros-de-gravel": {
       "title": "Rent a gravel bike for Toros de Gravel",
