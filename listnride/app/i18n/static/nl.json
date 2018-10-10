@@ -226,7 +226,7 @@
       "group-7": {
         "title": "Vouchers & Tegoeden",
         "description": "Gebruik vouchers om credits te krijgen voor het huren van een fiets. Hier vind je meer informatie over het verzilveren van je vouchers. Bovendien kun je je vrienden uitnodigen om credits te verzamelen.\n",
-        "answer-1": "Je kunt vouchers verkrijgen door je vrienden uit te nodigen om deel te nemen aan onze fietsdeelgemeenschap. Dit kan via Facebook of per e-mail. Log in, ga naar de \n<a href=\"http://www.listnride.nl/invite-friends\" target=\"_blank\">Vrienden uitnodigen</a> \npagina en deel de link. Als je vriend een fiets huurt of een fiets online plaatst via de link, ontvang je een tegoed van 10€ die je kunt gebruiken voor je volgende huur.",
+        "answer-1": "Je kunt vouchers verkrijgen door je vrienden uit te nodigen om deel te nemen aan onze fietsdeelgemeenschap. Dit kan via Facebook of per e-mail. Log in, ga naar de \n<a href=\"http://www.listnride.nl/invite-friends\" target=\"_blank\">Vrienden uitnodigen</a> \npagina en deel de link. Als je vriend een fiets huurt of een fiets online plaatst via de link, ontvang je een tegoed van 10€ die je kunt gebruiken voor je volgende huur.\n\n<img src=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/assets/help_support/en/help-and-service.faq.group-1.answer-3.jpg\">",
         "answer-2": "Om vouchers te gebruiken, dien je de voucher code in te voeren in de box<b>\"Voucher Verzilveren\" </b> voordat je een fiets aanvraagt. Of als je nog niet wilt booeken, kan je ze invoeren in je account, onder de  <b>\"Vouchers\".</b>",
         "answer-3": "Je kan vouchers gebruiken elke keer dat je een fiets aanvraagt. Elke code kan maar één keer gebruikt worden. Als je het totaalbedrag niet in één keer gebruikt, wordt het saldo opgeslagen op je rekening en kan het gebruikt worden voor je volgende huur.",
         "answer-4": "How do I search for a bike?",
@@ -369,12 +369,12 @@
     },
     "berlin-triathlon": {
       "title": "Rent a road bike for Berlin Triathlon 2019",
-      "text": "Do you need a road bike for <a href=\"http://www.berlin-triathlon.de/\">Berlin Triathlon 2019</a>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n\nYou can’t participate? Help out someone in need. <a href=\"/listing-a-bike\">List your bike</a> and make some extra pocket money! "
+      "text": "Do you need a road bike for <a href=\"http://www.berlin-triathlon.de/\">Berlin Triathlon 2019</a>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br1>\nYou can’t participate? Help out someone in need. <a href=\"/listing-a-bike\">List your bike</a> and make some extra pocket money! "
     },
     "berlin-triathlon-xl": {
       "title": "Rent a road bike for Berlin Triathlon XL 2019",
       "description": "What: <b0>Berlin Triathlon XL</b0>  |  Where: <b1>Berlin</b1>  |  When: <b2>23 June 2019</b2>",
-      "text": "Do you need a road bike for <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon 2019 XL</a0>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n\nYou can’t participate? Help out someone in need. <a1 href=\"/listing-a-bike\">List your bike</a1> and make some extra pocket money! "
+      "text": "Do you need a road bike for <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon 2019 XL</a0>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br>\nYou can’t participate? Help out someone in need. <a1 href=\"/listing-a-bike\">List your bike</a1> and make some extra pocket money! "
     },
     "toros-de-gravel": {
       "title": "Huur een gravelbike voor Toros de Gravel",
