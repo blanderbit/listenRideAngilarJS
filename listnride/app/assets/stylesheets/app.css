@@ -3194,7 +3194,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   color: #555555;
   border: 1px solid #e1e1e1;
   border-radius: 7px;
-  height: 100%;
+  min-height: 100%;
   padding: 16px 5px;
   cursor: pointer;
   transition: background .3s;
