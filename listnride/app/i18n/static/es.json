@@ -226,7 +226,7 @@
       "group-7": {
         "title": "Cupones de descuento",
         "description": "Utiliza los vales para obtener crédito y utilizarlo tus próximos alquileres. Aquí puedes aprender cómo canjearlos. También puedes invitar a  tus amigos para obtener más créditos.",
-        "answer-1": "Puede obtener créditos invitando a sus amigos a unirse a nuestra comunidad de bicicletas compartidas a través de Facebook o por correo electrónico. Inicie sesión en su perfil, ve a la página \n<a href=\"http://www.listnride.es/invite-friends\" target=\"_blank\">Invitar a amigos</a> \ny comparta el enlace. Si sus amigos alquilan o publican una bicicleta usando el enlace, recibirás 10 € de crédito extra en agradecimiento.",
+        "answer-1": "Puede obtener créditos invitando a sus amigos a unirse a nuestra comunidad de bicicletas compartidas a través de Facebook o por correo electrónico. Inicie sesión en su perfil, ve a la página \n<a href=\"http://www.listnride.es/invite-friends\" target=\"_blank\">Invitar a amigos</a> \ny comparta el enlace. Si sus amigos alquilan o publican una bicicleta usando el enlace, recibirás 10 € de crédito extra en agradecimiento.\n\n<img src=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/assets/help_support/en/help-and-service.faq.group-1.answer-3.jpg\">",
         "answer-2": "Para usar los créditos listnride, solo debes ingresar el código del cupón en el campo de entrada \"Canjear bono\" cuando solicite una bicicleta. O puede ingresarlos en la Configuración de su cuenta, en la sección \"Cupones\".",
         "answer-3": "Puedes usar cupones cada vez que solicites una bicicleta, pero un solo código por vez. Si no consumes el monto total a la vez, el saldo se guardará en su cuenta y lo podrá utilizar  para su próximo alquiler.",
         "answer-4": "How do I search for a bike?",
@@ -369,12 +369,12 @@
     },
     "berlin-triathlon": {
       "title": "Rent a road bike for Berlin Triathlon 2019",
-      "text": "Do you need a road bike for <a href=\"http://www.berlin-triathlon.de/\">Berlin Triathlon 2019</a>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n\nYou can’t participate? Help out someone in need. <a href=\"/listing-a-bike\">List your bike</a> and make some extra pocket money! "
+      "text": "Do you need a road bike for <a href=\"http://www.berlin-triathlon.de/\">Berlin Triathlon 2019</a>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br1>\nYou can’t participate? Help out someone in need. <a href=\"/listing-a-bike\">List your bike</a> and make some extra pocket money! "
     },
     "berlin-triathlon-xl": {
       "title": "Rent a road bike for Berlin Triathlon XL 2019",
       "description": "What: <b0>Berlin Triathlon XL</b0>  |  Where: <b1>Berlin</b1>  |  When: <b2>23 June 2019</b2>",
-      "text": "Do you need a road bike for <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon 2019 XL</a0>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n\nYou can’t participate? Help out someone in need. <a1 href=\"/listing-a-bike\">List your bike</a1> and make some extra pocket money! "
+      "text": "Do you need a road bike for <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon 2019 XL</a0>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br>\nYou can’t participate? Help out someone in need. <a1 href=\"/listing-a-bike\">List your bike</a1> and make some extra pocket money! "
     },
     "toros-de-gravel": {
       "title": "Alquila una bicicleta de gravel para Toros de Gravel",

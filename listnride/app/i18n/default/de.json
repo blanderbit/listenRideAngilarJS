@@ -22,7 +22,7 @@
     },
     "notifications": {
       "404": "Seite existiert nicht",
-      "422": "falsche Datenformat eingegeben.",
+      "422": "falsches Datenformat eingegeben",
       "500": "Interner Server-Fehler",
       "200": "Success"
     },
@@ -169,12 +169,12 @@
   "events": {
     "berlin-triathlon": {
       "description": "Was: <b>Berlin Triathlon</b> | Wo: <b>Berlin</b> | Wann: <b>2. Juni 2019</b>",
-      "meta-title": "Miete dir ein Rennrad für den Berlin Triathlon XL 2019 | listnride",
+      "meta-title": "Miete dir ein Rennrad für den Berlin Triathlon 2019 | listnride",
       "meta-description": "Miete ein Rennrad für den Berlin Triathlon 2019 sicher auf listnride. Finde das perfekte Fahrrad für deine Bedürfnisse einfach online."
     },
     "berlin-triathlon-xl": {
       "description-delete-me": "Was: <b0>Berlin Triathlon XL</b0>  |  Wo: <b1>Berlin</b1>  |  Wann: <b2>23. Juni 2019</b2>",
-      "text-delete-me": "Du brauchst noch ein Rad für den <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon 2019 XL</a0>? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n\nDu kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und <a1 href=\"/listing-a-bike\">vermiete dein Rad</a1>.",
+      "text-delete-me": "Du brauchst noch ein Rad für den <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon 2019 XL</a0>? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n<br>\nDu kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und <a1 href=\"/listing-a-bike\">vermiete dein Rad</a1>.",
       "meta-description": "Mieten Sie ein Rennrad für den Berlin Triathlon XL 2019 sicher auf listnride. Finden Sie das perfekte Fahrrad für Ihre Bedürfnisse einfach online.",
       "meta-title": "Miete dir ein Rennrad für den Berlin Triathlon XL 2019 | listnride"
     }
@@ -870,7 +870,7 @@
   },
   "list": {
     "edit-bike": "Rad bearbeiten",
-    "save-changes": "Änderungen speichern",
+    "save-changes": "Speichern",
     "list-your-bike": "Rad einstellen",
     "back": "Zurück",
     "next": "Weiter",
