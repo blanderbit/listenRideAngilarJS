@@ -161,6 +161,19 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "events": {
+    "berlin-triathlon": {
+      "description": "where: Berlin | what: Berlin Triathlon | when: 2 June 2019",
+      "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
+      "meta-description": "EXAMPLE META DESC"
+    },
+    "berlin-triathlon-xl": {
+      "description-delete-me": "Example events.berlin-triathlon-xl.description\n",
+      "text-delete-me": "Example events.berlin-triathlon-xl.text\n",
+      "meta-description": "EXAMPLE META DESC",
+      "meta-title": "Rent a road bike for Berlin Triathlon XL 2019 | listnride"
+    }
+  },
   "lister": {
     "chat": "De boeking van je huurfiets is geannuleerd."
   },
@@ -1233,6 +1246,7 @@
   },
   "seo": {
     "header": "Huur de beste fietsen in",
+    "header-2": "Huur de beste fietsen op",
     "rent-the-best": "Huur de beste",
     "bikes": "fietsen",
     "rent-perfect-bikes-in": "huur perfecte fietsen in",
