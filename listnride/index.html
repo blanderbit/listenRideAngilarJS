@@ -15,7 +15,7 @@
   <meta property="og:image:height" content="534" />
   <meta property="og:description" content="{{ngMeta.description}}" />
   <meta property="og:type" content="website" />
-  <meta lnr-meta-robots ng-if="ngMeta['noindex']"></meta>
+  <meta lnr-meta-robots ng-if="ngMeta['noindex']">
   <link rel="alternate" href="https://www.listnride.com{{location.path()}}" hreflang="x-default" />
   <link rel="alternate" href="https://www.listnride.de{{location.path()}}" hreflang="de" />
   <link rel="alternate" href="https://www.listnride.nl{{location.path()}}" hreflang="nl" />
@@ -207,6 +207,8 @@
   <script src="app/modules/events/cwd/kuchenundraketen.component.js"></script>
   <script src="app/modules/events/supercross-munich/supercross-munich.component.js"></script>
   <script src="app/modules/events/cape-argus/cape-argus.component.js"></script>
+  <script src="app/modules/events/berlin-triathlon/berlin-triathlon.component.js"></script>
+  <script src="app/modules/events/berlin-triathlon-xl/berlin-triathlon-xl.component.js"></script>
   <script src="app/modules/events/toros-de-gravel/toros-de-gravel.component.js"></script>
   <script src="app/modules/events/eroica-gaiole/eroica-gaiole.component.js"></script>
   <script src="app/modules/faq/faq.component.js"></script>
@@ -284,49 +286,48 @@
   <!-- End Crisp Chat Integration -->
 </head>
 <body layout="column">
+  <!-- IE BROWSER MODAL -->
+  <div id="ie-warning" style="display: none" class="lnr-IE-warning-overlay">
+    <table class="lnr-IE-warning-content">
+      <tr>
+        <td>
+          <button class="lnr-IE-close-button" type="button" onclick="document.getElementById('ie-warning').style.display = 'none';">×</button>
+          <img class="lnr-icn-mlrg" src="app/assets/ui_images/ie/ie_logo.png" />
+          <h2 class="md-headline lnr-margin-top-double">You are using Internet Explorer.<br>
+            Unfortunately we are now longer supporting it.
+          </h2>
+          <p>If you continue browsing on our website with Internet Explorer, you will not have normal experience and might run into difficulties
+            and or non-functioning elements on the page.</p>
+          <p class="lnr-padding-top-double">To have an optimal browser experience please use the latest versions of Chrome, Firefox or Safari.</p>
+          <div>
+            <a href="https://www.google.com/chrome/" target="_blank">
+              <img class="lnr-icn-mlrg lnr-margin-right-double" src="app/assets/ui_images/ie/chrome_logo.png" />
+            </a>
+            <a href="https://www.mozilla.org/firefox/" target="_blank">
+              <img class="lnr-icn-mlrg" src="app/assets/ui_images/ie/firefox_logo.png" />
+            </a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <script>
+    function isBrowserIE() {
+      var ua = window.navigator.userAgent;
+      var msie = ua.indexOf("MSIE ");
+      // If Internet Explorer up to 11
+      return msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./);
+    }
+    if (isBrowserIE()) {
+      var IeModal = document.getElementById('ie-warning');
+      IeModal.style.display = 'block';
+    }
+  </script>
+<!-- END IE BROWSER MODAL -->
 <header></header>
 <sidebar layout="row" header="header"></sidebar>
 <ui-view flex="auto"></ui-view>
 <privacy-bar></privacy-bar>
-
-<!-- IE BROWSER MODAL -->
-<script>
-  function isBrowserIE() {
-    var ua = window.navigator.userAgent;
-    var msie = ua.indexOf("MSIE ");
-    // If Internet Explorer up to 11
-    return msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./);
-  }
-  if (isBrowserIE()) {
-    var htmlRoot = document.getElementsByTagName( 'html' )[0];
-    htmlRoot.className += ' ie-browser';
-  }
-</script>
-<table id="ie-warning" class="lnr-IE-warning-overlay">
-  <tr>
-    <td>
-      <div class="lnr-IE-warning-content">
-        <button class="lnr-IE-close-button" type="button" onclick="document.getElementById('ie-warning').style.display = 'none';">×</button>
-        <img class="lnr-icn-mlrg" src="app/assets/ui_images/ie/ie_logo.png" />
-        <h2 class="md-headline lnr-mt-x2">You are using Internet Explorer.<br>
-          Unfortunately we are now longer supporting it.
-        </h2>
-        <p>If you continue browsing on our website with Internet Explorer, you will not have normal experience and might run into difficulties
-          and or non-functioning elements on the page.</p>
-        <p class="lnr-pt-x2">To have an optimal browser experience please use the latest versions of Chrome, Firefox or Safari.</p>
-        <div>
-          <a href="https://www.google.com/chrome/" target="_blank">
-            <img class="lnr-icn-mlrg lnr-mr-x2" src="app/assets/ui_images/ie/chrome_logo.png" />
-          </a>
-          <a href="https://www.mozilla.org/firefox/" target="_blank">
-            <img class="lnr-icn-mlrg" src="app/assets/ui_images/ie/firefox_logo.png" />
-          </a>
-        </div>
-      </div>
-    </td>
-  </tr>
-</table>
-<!-- END IE BROWSER MODAL -->
 
 <!-- Analytics Opt-Out Script -->
 <script type="text/javascript">// <![CDATA[

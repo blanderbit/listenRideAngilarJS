@@ -161,6 +161,19 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "events": {
+    "berlin-triathlon": {
+      "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>2 June 2019</b>",
+      "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
+      "meta-description": "Rent a road bike securely online with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need."
+    },
+    "berlin-triathlon-xl": {
+      "description-delete-me": "What: <b0>Berlin Triathlon XL</b0>  |  Where: <b1>Berlin</b1>  |  When: <b2>23 June 2019</b2>",
+      "text-delete-me": "Do you need a road bike for <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon 2019 XL</a0>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n <br>\nYou can’t participate? Help out someone in need. <a1 href=\"/listing-a-bike\">List your bike</a1> and make some extra pocket money! ",
+      "meta-description": "Rent a road bike securely online with listnride for Berlin Triathlon XL 2019. Choose the perfect bike that fits your need.",
+      "meta-title": "Rent a road bike for Berlin Triathlon XL 2019 | listnride"
+    }
+  },
   "lister": {
     "chat": "De boeking van je huurfiets is geannuleerd."
   },
@@ -748,7 +761,7 @@
     "profile-picture-size-error": "Je fotoformaat is meer dan de toegestane maximale grootte",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "Algemeen",
-    "street": "Straat en huisnr.",
+    "street": "Straat",
     "zip": "Postcode",
     "city": "Plaats",
     "country": "Land",
@@ -847,7 +860,7 @@
   },
   "list": {
     "edit-bike": "Fiets bewerken",
-    "save-changes": "Aanpassingen opslaan",
+    "save-changes": "Opslaan",
     "list-your-bike": "Fiets plaatsen",
     "back": "Terug",
     "next": "Verder",
@@ -1233,6 +1246,7 @@
   },
   "seo": {
     "header": "Huur de beste fietsen in",
+    "header-2": "Huur de beste fietsen op",
     "rent-the-best": "Huur de beste",
     "bikes": "fietsen",
     "rent-perfect-bikes-in": "huur perfecte fietsen in",

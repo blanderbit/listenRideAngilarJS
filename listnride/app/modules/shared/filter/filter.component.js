@@ -144,21 +144,9 @@ angular.module('filter',[])
           }
         }
 
-        // function initializeSizeFilter() {
-        //   if (filter.currentSizes[0] === '') filter.currentSizes[0] = '-1';
-        //   if (!filter.currentSizes.length) filter.increaseBikesCount();
-        //   filter.sizes = bikeOptions.sizeOptionsForSearch();
-        //   $translate('search.all-sizes').then(function (translation) {
-        //     filter.sizes[0].label = translation;
-        //   });
-        // }
-
         function initializeSimpleSizeFilter() {
-          filter.sizes = bikeOptions.sizeOptionsForSearch();
-          $translate('search.all-sizes').then(function (translation) {
-            filter.sizes[0].label = translation;
-          });
-          if (filter.currentSize === '') filter.currentSize = filter.sizes[0].value;
+          filter.sizes = bikeOptions.sizeOptions('search');
+          if (filter.currentSize === '') filter.currentSize = '-1';
         }
 
         function applyFilters() {

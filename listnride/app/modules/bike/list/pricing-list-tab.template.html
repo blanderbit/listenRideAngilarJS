@@ -8,7 +8,7 @@
         <!-- Daily Price -->
         <md-input-container class="md-block">
           <label>{{ 'list.pricing.header' | translate }} (€)</label>
-          <input type="text" name="daily_price" ng-pattern="/^\d+$/" maxlength="3" placeholder="{{'list.pricing.daily-price-placeholder' | translate}}"
+          <input type="number" name="daily_price" ng-pattern="/^\d+$/" min="1" maxlength="3" placeholder="{{'list.pricing.daily-price-placeholder' | translate}}"
             ng-model="pricingTab.parent.form.prices[0].price" ng-change="pricingTab.parent.setCustomPrices(true)" ng-model-options='{ debounce: 300 }'
             required>
           <div ng-messages="pricingTab.parent.priceForm.daily_price.$error" ng-show="pricingTab.parent.priceForm.daily_price.$dirty">

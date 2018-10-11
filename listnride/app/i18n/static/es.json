@@ -84,10 +84,10 @@
     "showroom": {
       "header": "Nuestras salas de exposición",
       "sub-header": "Experimenta una selección premium de marcas de bicicletas en Berlín y Munich.",
-      "berlin-description": " En el corazón de Berlin-Mitte, frente al Hackescher Markt, en el \n        <a href=\"/users/7351\" target=\"_blank\">Berlin Experience Center</a> \n        presentamos marcas y ofrecemos bicicletas de prueba de \n        <a href=\"/users/3917\" target=\"_blank\">Votec</a> (Gravel), \n        <a href=\"/users/7351\" target=\"_blank\">bonvelo</a> (Singlespeed), \n        <a href=\"/bikes/10280\" target=\"_blank\">Vello</a>  (e-folding) \n        y \n        <a href=\"http://www.biehler-cycling.com\" target=\"_blank\">Biehler</a> (desgaste de rendimiento)\n        . Venga y disfrute de un espresso recién hecho en nuestro bar. Elije una bicicleta para realizar una prueba de manejo o conoces personas de ideas afines en uno de nuestros \n        <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">eventos sociales</a>\n        . ¡Esperamos conocerte! Aquí encontrarás la descripción general de todas \n         <a href=\"/users/7351\" target=\"_blank\">las bicicletas y marcas</a> \n        disponibles en Berlín.",
+      "berlin-description": " En el corazón de Berlin-Mitte, frente al Hackescher Markt, se encuentra el  \n        <a href=\"/users/7351\" target=\"_blank\">Berlin Experience Center</a> \n        en donde presentamos marcas y ofrecemos bicicletas de prueba de \n        <a href=\"/users/3917\" target=\"_blank\">Votec</a> (Gravel), \n        <a href=\"/users/7351\" target=\"_blank\">bonvelo</a> (Singlespeed), \n        <a href=\"/bikes/10280\" target=\"_blank\">Vello</a>  (e-folding) \n        y \n        <a href=\"http://www.biehler-cycling.com\" target=\"_blank\">Biehler</a> . Ven y disfruta de un espresso recién hecho en nuestro bar. Elije una bicicleta para realizar una prueba de manejo y conoce personas de ideas afines en uno de nuestros  <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">eventos sociales</a>. ¡Te esperamos! Aquí encontrarás la descripción general de todas <a href=\"/users/7351\" target=\"_blank\">las bicicletas y marcas</a> \n        disponibles en Berlin.",
       "munich-description": "        Ubicado en el centro de Munich, en el \n        <a href=\"/users/6511\" target=\"_blank\">Munich Experience Center</a> \n        presentamos bicicletas de \n        <a href=\"/brands/veloheld\" target=\"_blank\">Veloheld</a>  (bicicletas de acero), \n        <a href=\"/brands/bonvelo\" target=\"_blank\">bonvelo</a> (Singlespeed), \n        y \n        <a href=\"/brands/rethink\" target=\"_blank\">rethink</a> (E-Bike). \n        Además de estas marcas, ofrecemos los últimos modelos de la marca Felt así como también de \n        <a href=\"/brands/ampler\" target=\"_blank\">Ampler</a>, \n        <a href=\"/brands/vanmoof\" target=\"_blank\">Van Moof</a>, \n        <a href=\"/brands/leaos\" target=\"_blank\">Leaos</a> \n        y \n        <a href=\"/brands/vello\" target=\"_blank\">Vello</a>. \n        Disfruta de un café en nuestro bar, realiza una prueba de manejo y conoce gente de ideas afines en uno de nuestros \n        <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">eventos sociales</a>. \n        ¡Esperamos conocerte! Aquí encontrarás la descripción general de todas las marcas y \n        <a href=\"/users/6511\" target=\"_blank\">bicicletas disposables</a> \n        para hacer pruebas de manejo en Munich.",
       "berlin-address": "<b>Nuestra dirección</b>\n<br>\nOranienburger Strasse 1-3\n<br>\n10178 Berlín\n<br>\nAlemania",
-      "munich-address": "<b>Nuestra dirección</b>\n<br>\nLothstr. 5\n<br2>\n80335 Múnich\n<br>\nAlemania"
+      "munich-address": "<b>Nuestra dirección</b>\n<br>\nNymphenburger Str. 86\n<br2>\n80335 Múnich\n<br>\nAlemania"
     },
     "no-brands-found": "Desafortunadamente no hay marcas en estas categorías todavía.",
     "join-program-link": "<a href=\"mailto:contact@listnride.com?subject=Quiero más información sobre el programa de marcas\" target=\"_self\">Únete a nuestro programa con tu marca</a>",
@@ -102,7 +102,7 @@
   },
   "shared": {
     "list-your-bike": {
-      "bike-category": "Seleccione la categoría de bicicleta",
+      "bike-category": "Selecciona la categoría de bicicleta",
       "bike-subcategory": "Especifique la subcategoría"
     }
   },
@@ -226,7 +226,7 @@
       "group-7": {
         "title": "Cupones de descuento",
         "description": "Utiliza los vales para obtener crédito y utilizarlo tus próximos alquileres. Aquí puedes aprender cómo canjearlos. También puedes invitar a  tus amigos para obtener más créditos.",
-        "answer-1": "Puede obtener créditos invitando a sus amigos a unirse a nuestra comunidad de bicicletas compartidas a través de Facebook o por correo electrónico. Inicie sesión en su perfil, ve a la página \n<a href=\"http://www.listnride.es/invite-friends\" target=\"_blank\">Invitar a amigos</a> \ny comparta el enlace. Si sus amigos alquilan o publican una bicicleta usando el enlace, recibirás 10 € de crédito extra en agradecimiento.",
+        "answer-1": "Puede obtener créditos invitando a sus amigos a unirse a nuestra comunidad de bicicletas compartidas a través de Facebook o por correo electrónico. Inicie sesión en su perfil, ve a la página \n<a href=\"http://www.listnride.es/invite-friends\" target=\"_blank\">Invitar a amigos</a> \ny comparta el enlace. Si sus amigos alquilan o publican una bicicleta usando el enlace, recibirás 10 € de crédito extra en agradecimiento.\n\n<img src=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/assets/help_support/en/help-and-service.faq.group-1.answer-3.jpg\">",
         "answer-2": "Para usar los créditos listnride, solo debes ingresar el código del cupón en el campo de entrada \"Canjear bono\" cuando solicite una bicicleta. O puede ingresarlos en la Configuración de su cuenta, en la sección \"Cupones\".",
         "answer-3": "Puedes usar cupones cada vez que solicites una bicicleta, pero un solo código por vez. Si no consumes el monto total a la vez, el saldo se guardará en su cuenta y lo podrá utilizar  para su próximo alquiler.",
         "answer-4": "How do I search for a bike?",
@@ -366,6 +366,15 @@
   "events": {
     "rapha-super-cross": {
       "text": "Rapha Super Cross regresa al Parque Olímpico de Múnich los días 29 y 30 de octubre para la tercera edición de lo que se ha convertido rápidamente en un legendario festival de ciclocross. Si deseas participar pero no tiene la bici correcta, puedes alquilar una a través de listnride. Hay entusiastas de la bicicleta como tú que ofrecen las bicicletas que puedes ver a continuación. Puedes solicitar y reservar los recorridos antes del evento y recoger la bici según lo acordado con el propietario. Los dueños de las bicis también pueden ofrecer en alquiler las bicis que no usen y así ganar algo de dinero mientras conocen a personas interesantes que participan en el evento. ¡Conviértete en parte de nuestra creciente comunidad!"
+    },
+    "berlin-triathlon": {
+      "title": "Rent a road bike for Berlin Triathlon 2019",
+      "text": "Do you need a road bike for <a href=\"http://www.berlin-triathlon.de/\">Berlin Triathlon 2019</a>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br1>\nYou can’t participate? Help out someone in need. <a href=\"/listing-a-bike\">List your bike</a> and make some extra pocket money! "
+    },
+    "berlin-triathlon-xl": {
+      "title": "Rent a road bike for Berlin Triathlon XL 2019",
+      "description": "What: <b0>Berlin Triathlon XL</b0>  |  Where: <b1>Berlin</b1>  |  When: <b2>23 June 2019</b2>",
+      "text": "Do you need a road bike for <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon 2019 XL</a0>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br>\nYou can’t participate? Help out someone in need. <a1 href=\"/listing-a-bike\">List your bike</a1> and make some extra pocket money! "
     },
     "toros-de-gravel": {
       "title": "Alquila una bicicleta de gravel para Toros de Gravel",
@@ -517,7 +526,7 @@
     "shared": {
       "choose-location": "Elige una ubicación",
       "no-bikes-found": "Vaya ... desafortunadamente todavía no se han publicado bicicletas en esta ubicación.",
-      "faq": "Las preguntas frecuentes"
+      "faq": "Preguntas frecuentes"
     },
     "veloheld.hero-description": "Test veloheld bikes and experience the pure aesthetics and functional techniques of a custom made steel bike: road bike, cyclocross bike or city bike!",
     "veloheld": {
@@ -600,14 +609,14 @@
       "meta-description": "¡Prueba una bici Brompton hoy mismo! Estas bicis urbanas plegables están disponibles en listnride. Alquílala en Berlín, Múnich, Hamburgo, Düsseldorf o Frankfurt.",
       "title": "#RIDEBROMPTON",
       "description": "Alquila una Brompton y prueba sus excelentes características de paseo y plegado.",
-      "subdescription": "Experimenta las ciudades de una forma diferente, con una bici perfecta para la ciudad.",
-      "item1-title": "Gratis para llevar",
-      "item1-description": "Puedes llevarla de manera gratuita en el transporte público (puede guardarse en una bolsa/trasladarse)",
+      "subdescription": "Experimenta la ciudad de una forma diferente, con la bici perfecta para la ciudad.",
+      "item1-title": "Llévala donde queiras",
+      "item1-description": "Puedes llevarla de manera gratuita en el transporte público (incluso puedes guardarla en una bolsa).",
       "item2-title": "Sistema de plegado único",
-      "item2-description": "Se pliega en 10-20 segundos <br>Medidas de plegado (alto x ancho x profundidad): 59 cm x 57 cm x 27 cm <br>Fácil de transportar (9-13 kg)",
+      "item2-description": "Se pliega en 10-20 segundos <br>Medidas de plegado: 59 cm de alto, 57 cm de ancho y 27 cm profundidad.  <br>Fácil de transportar (9-13 kg)",
       "item3-title": "Bici de culto en Londres",
       "item3-description": "Principales características de conducción <br>Estilo inglés <br>Hecha a mano en Londres",
-      "find-out-more": "Saber más sobre Brompton",
+      "find-out-more": "Quiero saber más sobre Brompton",
       "find-out-more-ext": "Obtenga más información sobre Brompton en <a href=\"http://www.brompton.com\" target=\"_blank\">www.brompton.com </a>",
       "faq-question-1": "¿Qué tipos de manillares están disponibles?",
       "faq-answer-1": "Tres tipos diferentes: <br>Tipo M: forma clásica, posición de conducción erguida <br>Tipo H: para ciclistas más altos y todos a los que les gusta andar erguidos <br>Tipo S:  forma recta, posición de conducción deportiva",

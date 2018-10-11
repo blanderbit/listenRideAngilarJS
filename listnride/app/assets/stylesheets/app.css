@@ -869,6 +869,10 @@ md-tooltip .md-content {
   margin-top: auto;
 }
 
+.lnr-pos-r {
+  position: relative;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /* SVG
 /*-----------------------------------------------------------------------------------*/
@@ -1119,7 +1123,7 @@ footer .lnr-link {
 }
 
 .lnr-IE-warning-overlay {
-  position: absolute;
+  position: fixed;
   z-index: 100;
   width: 100%;
   height: 100%;
@@ -1128,6 +1132,7 @@ footer .lnr-link {
 
 .lnr-IE-warning-content {
   position: relative;
+  top: 5%;
   width: 100%;
   max-width: 650px;
   margin: auto;
@@ -1494,7 +1499,7 @@ md-grid-list md-grid-tile.tile-lake-garda {
   background-color: #000;
 }
 
-.bikes .arrow {
+.bikes .slick-arrow {
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -1505,34 +1510,34 @@ md-grid-list md-grid-tile.tile-lake-garda {
   cursor: pointer;
 }
 
-.bikes .arrow-prev {
+.bikes .slick-arrow_prev {
   right: 100%;
   padding-right: 0;
   margin-right: -65px;
 }
 
-.bikes .arrow-prev:before,
-.bikes .arrow-next:before {
+.bikes .slick-arrow_prev:before,
+.bikes .slick-arrow_next:before {
   content: '';
   display: block;
   width: 30px;
   height: 30px;
 }
 
-.bikes .arrow-prev:before {
+.bikes .slick-arrow_prev:before {
   border-top: 5px solid #fff;
   border-left: 5px solid #fff;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.bikes .arrow-next {
+.bikes .slick-arrow_next {
   left: 100%;
   padding-left: 0;
   margin-left: -65px;
 }
 
-.bikes .arrow-next:before {
+.bikes .slick-arrow_next:before {
   border-top: 5px solid #fff;
   border-right: 5px solid #fff;
   -webkit-transform: rotate(45deg);
@@ -3220,7 +3225,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   color: #555555;
   border: 1px solid #e1e1e1;
   border-radius: 7px;
-  height: 100%;
+  min-height: 100%;
   padding: 16px 5px;
   cursor: pointer;
   transition: background .3s;
@@ -3305,6 +3310,25 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   font-weight: 600;
   letter-spacing: 1px;
   user-select: none;
+}
+
+/* BRANDS */
+
+.brands__map {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 650px;
+}
+
+.brands__map.active {
+  visibility: visible;
+}
+
+.brands__fixed-map-height {
+  height: 650px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -3494,6 +3518,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   .md-dialog-content {
     width: 100%;
     margin: 0 !important;
+    box-sizing: border-box;
   }
 
   .lnr-calculator .lnr-money {

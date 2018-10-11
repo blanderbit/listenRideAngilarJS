@@ -22,8 +22,8 @@
     },
     "notifications": {
       "404": "Seite existiert nicht",
-      "422": "falsche Datenformat eingegeben.",
-      "500": "Interner Server Fehler",
+      "422": "falsches Datenformat eingegeben",
+      "500": "Interner Server-Fehler",
       "200": "Success"
     },
     "basic-fee": "Die Servicegebühr beinhaltet die Basis-Versicherung",
@@ -164,6 +164,19 @@
     "rent-your-bike": {
       "header": "Liste dein Rad",
       "subheader": "Triff Gleichgesinnte. Verdiene Dir etwas dazu."
+    }
+  },
+  "events": {
+    "berlin-triathlon": {
+      "description": "Was: <b>Berlin Triathlon</b> | Wo: <b>Berlin</b> | Wann: <b>2. Juni 2019</b>",
+      "meta-title": "Miete dir ein Rennrad für den Berlin Triathlon 2019 | listnride",
+      "meta-description": "Miete ein Rennrad für den Berlin Triathlon 2019 sicher auf listnride. Finde das perfekte Fahrrad für deine Bedürfnisse einfach online."
+    },
+    "berlin-triathlon-xl": {
+      "description-delete-me": "Was: <b0>Berlin Triathlon XL</b0>  |  Wo: <b1>Berlin</b1>  |  Wann: <b2>23. Juni 2019</b2>",
+      "text-delete-me": "Du brauchst noch ein Rad für den <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon 2019 XL</a0>? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n<br>\nDu kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und <a1 href=\"/listing-a-bike\">vermiete dein Rad</a1>.",
+      "meta-description": "Mieten Sie ein Rennrad für den Berlin Triathlon XL 2019 sicher auf listnride. Finden Sie das perfekte Fahrrad für Ihre Bedürfnisse einfach online.",
+      "meta-title": "Miete dir ein Rennrad für den Berlin Triathlon XL 2019 | listnride"
     }
   },
   "lister": {
@@ -429,7 +442,7 @@
     "agree-terms-link": "listnride AGBs",
     "footer": {
       "questions": "Du hast Fragen rund ums Mieten von Fahrrädern?",
-      "call-us": " Ruf unseren Support unter\n<br>\n<a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>,\n<br>\nMo-Fr 9-18 Uhr, an. Oder schreib uns eine\n<br>\n<a href=\"mailto:contact@listnride.com\">E-Mail</a>",
+      "call-us": "Fragen? Ruf an:\n<a href=\"tel:+49030120870330\">+49 30-120870330</a> an,\nOder\n<a href=\"mailto:contact@listnride.com\">schreib uns</a>.",
       "email-us": "Oder schreib uns eine E-Mail",
       "support": "listnride Support"
     },
@@ -526,7 +539,7 @@
     "opening-hours-success": "Öffnungszeiten erfolgreich geändert.",
     "opening-hours-error": "Die Öffnungszeiten konnten nicht gespeichert werden.",
     "uniq-phone": "Telefonnummer ist bereits in unserem System registriert.",
-    "pending-requests": "Du hast noch eine offene Anfrage für dieses Rad. Beantworte diese (Ablehnen/ Annehmen) bevor du es entfernen kannst.",
+    "pending-requests": "Du hast eine offene Anfrage für dieses Rad. Beantworte die Anfrage (Ablehnen/ Annehmen), erst dann kannst du das Rad entfernen.",
     "account-deleted": "Dein Konto wurde deaktiviert",
     "enter-email": "Bitte gib deine E-Mail-Adresse ein",
     "duplicate-start": "Vervielfältigungsprozess gestartet",
@@ -756,7 +769,7 @@
     "profile-picture-size-error": "Die Größe des Bildes überschreitet die maximal erlaubte Bildgröße",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
     "general": "Allgemein",
-    "street": "Straße und Hausnr.",
+    "street": "Straße",
     "streetnumber": "Hausnr.",
     "zip": "PLZ",
     "city": "Stadt",
@@ -803,7 +816,7 @@
     "featured-bikes-header": "Fahrradverleih: Die Lieblinge der Community",
     "featured-bikes-subheader": "Egal ob Rennrad, Mountain Bike, Stadtrad oder E-Bike, du kannst sie alle mieten. Hier sind die aktuellen Favoriten der Community.",
     "featured-tiles-header": "Testen & ausprobieren",
-    "featured-tiles-subheader": "Wir arbeiten mit innovativen Fahrradmarken zusammen, die ihre neuesten Modelle zum Test anbieten. Die Fahrräder können exklusiv an verschiedenen Standorten getestet oder gemietet werden. Perfekte Hilfe für ein fundierte Kaufentscheidung.",
+    "featured-tiles-subheader": "Wir arbeiten mit innovativen Fahrradmarken zusammen, die ihre neuesten Modelle zum Test anbieten. Die Fahrräder können exklusiv an verschiedenen Standorten getestet oder gemietet werden. Perfekte Hilfe für eine fundierte Kaufentscheidung.",
     "featured-cities-header": "Mit listnride bist du nie ohne dein perfektes Rad",
     "featured-cities-subheader": "In immer mehr Metropolen und Urlaubsregionen in Europa gibt es den listnride Fahrradverleih. Hier einige unserer Tipps für dich: ",
     "list-a-bike-header": "Dein Bike ist zu schön um rumzustehen?",
@@ -857,7 +870,7 @@
   },
   "list": {
     "edit-bike": "Rad bearbeiten",
-    "save-changes": "Änderungen speichern",
+    "save-changes": "Speichern",
     "list-your-bike": "Rad einstellen",
     "back": "Zurück",
     "next": "Weiter",
@@ -874,7 +887,7 @@
       "special": "Spezial",
       "urban": "Urban",
       "e-bike": "E-Bike",
-      "road": "Renn- & Trekkingräder",
+      "road": "Renn- & Touringräder",
       "transport": "Transport"
     },
     "details": {
@@ -1245,6 +1258,7 @@
   },
   "seo": {
     "header": "Miete die besten Räder in",
+    "header-2": "Miete die besten Räder auf",
     "rent-the-best": "Miete die besten",
     "bikes": "Räder",
     "rent-perfect-bikes-in": "Miete perfekte Räder in",

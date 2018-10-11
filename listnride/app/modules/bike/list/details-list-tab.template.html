@@ -19,11 +19,7 @@
           <md-input-container flex="45">
             <label>{{ 'list.details.size' | translate }}</label>
             <md-select required ng-model="detailsTab.parent.form.size">
-              <md-option ng-if="detailsTab.parent.form.mainCategory == 4" ng-repeat="size in detailsTab.parent.kidsSizeOptions" value="{{ size.value }}">
-                {{ size.label }}
-              </md-option>
-
-              <md-option ng-if="detailsTab.parent.form.mainCategory != 4" ng-repeat="size in detailsTab.parent.sizeOptions" value="{{ size.value }}">
+              <md-option ng-repeat="size in detailsTab.parent.sizeOptions" value="{{ size.value }}">
                 {{ size.label }}
               </md-option>
             </md-select>

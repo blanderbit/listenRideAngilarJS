@@ -46,7 +46,7 @@
           </md-input-container>
           <md-input-container> <!-- CATEGORY-FILTER -->
             <label>{{ 'multi-booking.what-bike-kind' | translate }}</label>
-            <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
+            <md-menu md-position-mode="left bottom" lnr-md-menu-fullscreen>
               <md-button
                 class="md-lined lnr-m-0 lnr__filter-btn md-right-arrow"
                 ng-click="$mdOpenMenu($event); multiBooking.closeDateRange()"
@@ -127,7 +127,7 @@
             <div flex-gt-sm="50" class="lnr-sm-mb lnr-gt-sm-pr">
               <md-input-container> <!-- ACCESSORIES-FILTER -->
                 <label>{{ 'multi-booking.do-you-need-accessories' | translate }}</label>
-                <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
+                <md-menu md-position-mode="left bottom" lnr-md-menu-fullscreen>
                     <md-button
                       class="md-lined lnr-m-0 lnr__filter-btn md-right-arrow"
                       ng-click="$mdOpenMenu($event); multiBooking.closeDateRange()"
@@ -157,7 +157,7 @@
             <div flex-gt-sm="50" class="lnr-gt-sm-pl">
               <md-input-container> <!-- BIKE-COUNT-FILTER -->
                 <label>{{ 'multi-booking.how-many-bikes' | translate }} *</label>
-                <md-menu md-position-mode="target bottom" lnr-md-menu-fullscreen>
+                <md-menu md-position-mode="left bottom" lnr-md-menu-fullscreen>
                   <md-button class="md-lined lnr-m-0 lnr__filter-btn md-right-arrow" ng-click="$mdOpenMenu($event); multiBooking.closeDateRange()"
                     style="width: 100%;text-align: left;">
                     <span class="multi-booking__filter-text" ng-if="multiBooking.bike_sizes_ungrouped.length == 1">
