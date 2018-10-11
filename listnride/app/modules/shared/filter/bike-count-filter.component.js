@@ -22,10 +22,7 @@ angular.module('bikeCountFilter', [])
 
           // values
           bikeCountFilter.currentValues = bikeCountFilter.currentValues || [];
-          bikeCountFilter.sizes = bikeOptions.sizeOptionsForSearch();
-          $translate('search.all-sizes').then(function (translation) {
-            bikeCountFilter.sizes[0].label = translation;
-          });
+          bikeCountFilter.sizes = bikeOptions.sizeOptions('search');
 
           // invocations
           if (!bikeCountFilter.currentValues.length) bikeCountFilter.setDefault();

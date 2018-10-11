@@ -18,7 +18,7 @@
         <md-input-container layout="column" flex="30" style="padding-bottom: 0">
           <label>{{ 'list.details.size' | translate }}</label>
           <md-select flex ng-model="filterSize" placeholder="{{ 'list.details.size' | translate }}">
-            <md-option ng-repeat="option in berlinTriathlon.sizeOptions" value="{{option.value}}">
+            <md-option ng-repeat="option in berlinTriathlon.sizes" value="{{option.value}}">
               {{option.label}}
             </md-option>
           </md-select>

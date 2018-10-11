@@ -30,41 +30,34 @@ angular.module('listnride')
         })
       },
 
-      sizeOptions: function () {
-        return [
-          { value: 0, label: $translate.instant("search.unisize")},
-          { value: 155, label: "155 cm - 165 cm" },
-          { value: 165, label: "165 cm - 175 cm" },
-          { value: 175, label: "175 cm - 185 cm" },
-          { value: 185, label: "185 cm - 195 cm" },
-          { value: 195, label: "195 cm - 205 cm" },
-          { value: 85, label: "85 cm - 95 cm" },
-          { value: 95, label: "95 cm - 105 cm" },
-          { value: 105, label: "105 cm - 115 cm" },
-          { value: 115, label: "115 cm - 125 cm" },
-          { value: 125, label: "125 cm - 135 cm" },
-          { value: 135, label: "135 cm - 145 cm" },
-          { value: 145, label: "145 cm - 155 cm" }
+      sizeOptions: function (isSearch, withKidsSizes) {
+        var sizes = [
+          { value: 0, label: $translate.instant("search.unisize")}
         ];
+
+        // show 'all sizes' option if used for search puproses
+        if (isSearch) {
+          sizes.unshift({ value: -1, label: $translate.instant('search.all-sizes')});
+        }
+
+        sizes = sizes.concat(this.adultSizeOptions());
+
+        // show kids sizes by default
+        if (withKidsSizes !== null) {
+          sizes = sizes.concat(this.kidsSizeOptions())
+        };
+
+        return sizes;
       },
 
-      sizeOptionsForSearch: function () {
+      adultSizeOptions: function() {
         return [
-          { value: -1, label: "-" },
-          { value: 0, label: $translate.instant("search.unisize")},
           { value: 155, label: "155 cm - 165 cm" },
           { value: 165, label: "165 cm - 175 cm" },
           { value: 175, label: "175 cm - 185 cm" },
           { value: 185, label: "185 cm - 195 cm" },
           { value: 195, label: "195 cm - 205 cm" },
-          { value: 85, label: "85 cm - 95 cm" },
-          { value: 95, label: "95 cm - 105 cm" },
-          { value: 105, label: "105 cm - 115 cm" },
-          { value: 115, label: "115 cm - 125 cm" },
-          { value: 125, label: "125 cm - 135 cm" },
-          { value: 135, label: "135 cm - 145 cm" },
-          { value: 145, label: "145 cm - 155 cm" }
-        ];
+        ]
       },
 
       kidsSizeOptions: function () {

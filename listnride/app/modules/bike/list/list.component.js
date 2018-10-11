@@ -64,7 +64,6 @@ angular.module('list', ['ngLocale'])
           list.removedImages = [];
           list.startImage = 1;
           list.sizeOptions = bikeOptions.sizeOptions();
-          list.kidsSizeOptions = bikeOptions.kidsSizeOptions();
           bikeOptions.accessoryOptions().then(function (resolve) {
             list.accessoryOptions = resolve;
           });
