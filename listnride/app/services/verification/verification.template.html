@@ -31,7 +31,7 @@
               </p>
 
               <md-button
-                class="md-raised md-primary lnr-no-margin md-button md-ink-ripple lnr-start"
+                class="md-raised md-primary lnr-m-0 md-button md-ink-ripple lnr-start"
                 ng-click="verificationDialog.next()"
               >
                 {{ 'verification.lets-start' | translate }}
@@ -280,7 +280,7 @@
       </md-tabs>
       <div class="md-dialog-buttons" layout="row" layout-align="end center" hide-xs>
         <md-button
-          class="md-raised md-primary lnr-no-margin md-button md-ink-ripple"
+          class="md-raised md-primary lnr-m-0 md-button md-ink-ripple"
           ng-disabled="verificationDialog.nextDisabled()"
           ng-click="verificationDialog.next()"
           ng-style="{'display': verificationDialog.activeTab == 1 ? 'none' : ''}"
@@ -291,7 +291,7 @@
 
       <div class="md-dialog-buttons" layout="row" layout-align="center center" hide show-xs>
         <md-button
-          class="md-raised md-primary lnr-no-margin md-button md-ink-ripple"
+          class="md-raised md-primary lnr-m-0 md-button md-ink-ripple"
           ng-disabled="verificationDialog.nextDisabled()"
           ng-click="verificationDialog.next()"
           ng-style="{'display': verificationDialog.activeTab == 1 ? 'none' : ''}"

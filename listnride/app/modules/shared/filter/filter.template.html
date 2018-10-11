@@ -19,7 +19,7 @@
   </md-button>
 
   <md-select
-    class="lnr-margin-left"
+    class="lnr-ml"
     ng-model="filter.currentSize"
     ng-class="filter.currentSize != filter.sizes[0].value ? 'filter__selected': ''"
     ng-change="filter.onSimpleSizeChange()"
@@ -31,7 +31,7 @@
 
   <!-- <md-menu md-position-mode="target bottom">
     <md-button
-      class="md-lined lnr-no-margin lnr__filter-btn"
+      class="md-lined lnr-m-0 lnr__filter-btn"
       ng-class="filter.currentSizes.length >= 1 && filter.currentSizes[0] != -1 || filter.currentSizes.length > 1 ? 'filter__selected': ''"
       ng-click="$mdOpenMenu($event); filter.closeDateRange()"
     >
@@ -46,7 +46,7 @@
       </span>
     </md-button>
     <md-menu-content width="4">
-      <div class="lnr-padding">
+      <div class="lnr-p">
         <bike-count-filter></bike-count-filter>
       </div>
     </md-menu-content>
@@ -54,7 +54,7 @@
 
   <md-menu md-position-mode="left bottom" lnr-md-menu-fullscreen>
     <md-button
-      class="md-lined lnr-no-margin lnr__filter-btn"
+      class="md-lined lnr-m-0 lnr__filter-btn"
       ng-class="filter.currentCategories.length >= 1 ? 'filter__selected': ''"
       ng-click="$mdOpenMenu($event); filter.closeDateRange()"
     >
@@ -75,7 +75,7 @@
   </md-menu>
 
   <md-select
-    class="lnr-margin-left"
+    class="lnr-ml"
     ng-class="filter.currentBrand != filter.brands[0] ? 'filter__selected': ''"
     ng-model="filter.currentBrand"
     ng-change="filter.onBrandChange()"

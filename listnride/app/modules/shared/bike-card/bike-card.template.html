@@ -8,7 +8,7 @@
         <md-icon class="lnr-icn-lrg md-color-foreground" md-svg-src="app/assets/ui_icons/biketype_{{ ::bikeCard.bike.category | limitTo: 1 }}.svg"></md-icon>
       </div>
 
-      <md-card-title-text flex="50" flex-gt-md="65" class="lnr-margin-left lnr-bike-title" layout="column" layout-align="space-around start">
+      <md-card-title-text flex="50" flex-gt-md="65" class="lnr-ml lnr-bike-title" layout="column" layout-align="space-around start">
         <span class="md-subhead">{{ ::bikeCard.bike.brand }}</span>
         <!-- <span class="md-subhead">{{ ::bikeCard.bike.brand }}</span> -->
         <span ng-if="!bikeCard.home">{{ ::bikeCard.bike.name }}</span>

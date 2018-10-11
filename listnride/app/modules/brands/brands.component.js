@@ -28,6 +28,7 @@ angular.module('brands', []).component('brands', {
         brands.isIncludeCategory = isIncludeCategory;
         brands.filterChange = filterChange;
         brands.checkSelectedBrands = checkSelectedBrands;
+        brands.toggleView = toggleView;
         brands.onMapClick = onMapClick;
         brands.toggleView = toggleView;
         // invocations

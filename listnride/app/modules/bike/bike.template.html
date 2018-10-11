@@ -39,7 +39,7 @@
       <div flex-sm="55" layout="row" layout-align="start center">
         <md-icon
           ng-if="bike.data.category"
-          class="lnr-margin-right lnr-icn-mlrg md-color-foreground lnr-no-padding"
+          class="lnr-mr lnr-icn-mlrg md-color-foreground lnr-p-0"
           md-svg-src="app/assets/ui_icons/biketype_{{ bike.data.category | limitTo: 1 }}.svg"
         ></md-icon>
         <div flex layout="column">
@@ -85,7 +85,7 @@
       </div>
     </div>
 
-    <md-button class="md-raised md-primary lnr-margin-lrg" hide show-xs show-sm ng-click="bike.showCalendarDialog()">
+    <md-button class="md-raised md-primary lnr-mv lnr-mh-x2" hide show-xs show-sm ng-click="bike.showCalendarDialog()">
       {{ 'bike.rent-bike' | translate }}
     </md-button>
 
@@ -128,7 +128,7 @@
           <div flex-gt-xs>
             <md-icon
               ng-repeat="(key, value) in bike.data.accessories"
-              class="lnr-icn-md lnr-margin-right"
+              class="lnr-icn-md lnr-mr"
               ng-if="bike.data.accessories[key]"
               md-svg-src="app/assets/ui_icons/accessoire_{{key}}.svg">
               <md-tooltip md-direction="top">{{ 'list.accessories.' + key | translate }}</md-tooltip>
@@ -176,14 +176,14 @@
           </div>
           <div flex-gt-xs layout="row" layout-align="start center">
             <a ui-sref="user({userId: bike.data.user.id})">
-              <img class="lnr-profile-md lnr-margin-right lnr-clickable" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
+              <img class="lnr-profile-md lnr-mr lnr-clickable" ng-src="{{bike.data.user.profile_picture.profile_picture.url}}"></img>
             </a>
-            <p ng-if="!bike.data.business" class="md-subhead lnr-margin-left lnr-clickable" flex-offset="2" ui-sref="user({userId: bike.data.user.id})">{{bike.data.user.first_name}}</p>
-            <p ng-if="bike.data.business" class="md-subhead lnr-margin-left lnr-clickable" flex-offset="2" ui-sref="user({userId: bike.data.user.id})">{{bike.data.business.company_name}}</p>
+            <p ng-if="!bike.data.business" class="md-subhead lnr-ml lnr-clickable" flex-offset="2" ui-sref="user({userId: bike.data.user.id})">{{bike.data.user.first_name}}</p>
+            <p ng-if="bike.data.business" class="md-subhead lnr-ml lnr-clickable" flex-offset="2" ui-sref="user({userId: bike.data.user.id})">{{bike.data.business.company_name}}</p>
           </div>
         </div>
 
-        <md-divider class="lnr-no-padding lnr-margin-lrg" ng-if="bike.data.ratings.length > 0"></md-divider>
+        <md-divider class="lnr-p-0 lnr-mv lnr-mh-x2" ng-if="bike.data.ratings.length > 0"></md-divider>
 
         <!-- reviews -->
         <div layout="row" layout-xs="column" ng-if="bike.data.ratings.length > 0">
@@ -203,7 +203,7 @@
 
       </div>
 
-      <md-divider hide-sm hide-xs class="lnr-margin-left lnr-margin-right"></md-divider>
+      <md-divider hide-sm hide-xs class="lnr-ml lnr-mr"></md-divider>
 
       <div flex="30" hide-sm hide-xs>
         <calendar

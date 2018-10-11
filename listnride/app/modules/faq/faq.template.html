@@ -19,7 +19,7 @@
       </md-select>
     </div>
 
-    <div class="lnr-margin-lrg" hide-xs hide-sm></div>
+    <div class="lnr-mh-x2" hide-xs hide-sm></div>
 
     <div class="lnr-section-title lnr-sm-mb-0" layout="column" layout-align="center center">
       <h2 class="md-headline">{{ 'faq-page.header' | translate }}</h2>
@@ -30,7 +30,7 @@
       </p>
     </div>
 
-    <div class="lnr-margin-lrg" hide-xs hide-sm></div>
+    <div class="lnr-mh-x2" hide-xs hide-sm></div>
 
     <div layout="row" hide-xs hide-sm>
       <a ui-sref="help">
@@ -42,12 +42,12 @@
     <div layout="column" layout-gt-sm="row">
       <div class="md-body-1" layout="column" hide-xs hide-sm flex-gt-sm="30">
         <p>{{ 'faq-page.topics' | translate }}</p>
-        <div class="lnr-margin-lrg"></div>
+        <div class="lnr-mh-x2"></div>
         <a
           ng-repeat="i in [].constructor(8) track by $index"
           ui-sref="faq({group: $index+1})"
           layout="row"
-          class="md-subhead lnr-ml-0 premium-insurance__adv lnr-margin-bottom faq__group-item"
+          class="md-subhead lnr-ml-0 premium-insurance__adv lnr-mb faq__group-item"
           ng-class="faq.activeGroupIndex == $index + 1 ? 'checked' : 'unchecked'"
           ng-click="faq.activeGroupIndex = $index + 1"
         >
@@ -62,7 +62,7 @@
           ng-init="parentIndex = $index"
           ng-if="faq.activeGroupIndex == $index + 1">
           <p class="lnr-sm-text-center lnr-sm-mt-0" translate="help-and-service.faq.group-{{parentIndex+1}}.description"></p>
-          <div class="lnr-margin-lrg"></div>
+          <div class="lnr-mh-x2"></div>
           <div
             class="faq__item"
             ng-repeat="i in [].constructor(group.questionsCount) track by $index">

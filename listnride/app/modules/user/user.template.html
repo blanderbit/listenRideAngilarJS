@@ -2,7 +2,7 @@
 <md-content class="lnr-user single-column lnr-footer-bottom" ng-if="user.loaded">
   <div class="content">
 
-    <div class="lnr-margin-lrg" layout-xs="column" layout="row" layout-padding>
+    <div class="lnr-mv lnr-mh-x2" layout-xs="column" layout="row" layout-padding>
       <div class="lnr-user__header" flex-gt-xs="70" layout="row">
         <img class="lnr-profile-lrg" ng-src="{{user.user.profile_picture.profile_picture.url}}">
         <div class="lnr-user__info" layout="column" layout-align="center start" layout-padding>
@@ -18,21 +18,21 @@
       <div class="lnr-user__verify" flex-gt-xs="30" flex-offset="5" layout="column" layout-align="center start" layout-padding>
         <h3 class="md-subhead">{{ 'user.verified-through' | translate }}</h3>
         <span class="md-body-1">
-          <md-icon class="lnr-icn-sm lnr-margin-right"
+          <md-icon class="lnr-icn-sm lnr-mr"
           md-svg-src="app/assets/ui_icons/icn_verified.svg"
           ng-class="user.user.confirmed_phone ? 'md-color-primary' : 'md-color-disabled'"></md-icon>
           <md-tooltip ng-if="user.user.confirmed_phone" md-direction="left">{{ 'user.verified' | translate }}</md-tooltip>
           {{ 'shared.phone-number' | translate }}
         </span>
         <span class="md-body-1">
-          <md-icon class="lnr-icn-sm lnr-margin-right"
+          <md-icon class="lnr-icn-sm lnr-mr"
           md-svg-src="app/assets/ui_icons/icn_verified.svg"
           ng-class="user.user.status > 0 ? 'md-color-primary' : 'md-color-disabled'"></md-icon>
           <md-tooltip ng-if="user.user.status > 0" md-direction="left">{{ 'user.verified' | translate }}</md-tooltip>
           {{ 'forms.email-address' | translate }}
         </span>
         <span class="md-body-1">
-          <md-icon class="lnr-icn-sm lnr-margin-right"
+          <md-icon class="lnr-icn-sm lnr-mr"
           md-svg-src="app/assets/ui_icons/icn_verified.svg"
           ng-class="user.current_payment ? 'md-color-primary' : 'md-color-disabled'"></md-icon>
           <md-tooltip ng-if="user.current_payment" md-direction="left">{{ 'user.verified' | translate }}</md-tooltip>
@@ -50,7 +50,7 @@
           <h3 class="md-body-2">{{ 'forms.description' | translate }}</h3>
         </div>
         <div flex-gt-xs>
-          <p class="md-body-1 lnr-margin-left">{{user.user.description}}</p>
+          <p class="md-body-1 lnr-ml">{{user.user.description}}</p>
         </div>
       </div>
       <!-- end description -->
@@ -62,9 +62,9 @@
         </div>
         <div flex-gt-xs>
           <div ng-repeat="day in user.weekDays">
-            <p class="md-body-1 lnr-margin-left">
+            <p class="md-body-1 lnr-ml">
               <div layout="row">
-                <div class="lnr-margin-left" layout="row" flex="20">{{day}}</div>
+                <div class="lnr-ml" layout="row" flex="20">{{day}}</div>
 
                 <div layout="row" flex="30">
                   <div ng-repeat="range in user.hours[day]" layout="row" layout-align="start center">
