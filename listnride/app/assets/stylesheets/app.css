@@ -1093,7 +1093,7 @@ footer .lnr-link {
 }
 
 .lnr-IE-warning-overlay {
-  position: absolute;
+  position: fixed;
   z-index: 100;
   width: 100%;
   height: 100%;
@@ -1102,6 +1102,7 @@ footer .lnr-link {
 
 .lnr-IE-warning-content {
   position: relative;
+  top: 5%;
   width: 100%;
   max-width: 650px;
   margin: auto;

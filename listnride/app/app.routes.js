@@ -451,10 +451,10 @@
         template: '<berlin-triathlon></berlin-triathlon>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["meta.events.berlin-triathlon.meta-title", "meta.events.berlin-triathlon.meta-description"])
+            $translate(["events.berlin-triathlon.meta-title", "events.berlin-triathlon.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.berlin-triathlon.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.berlin-triathlon.meta-description"]);
+                ngMeta.setTitle(translations["events.berlin-triathlon.meta-title"]);
+                ngMeta.setTag("description", translations["events.berlin-triathlon.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
           }
@@ -470,10 +470,10 @@
         template: '<berlin-triathlon-xl></berlin-triathlon-xl>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["meta.events.berlin-triathlon-xl.meta-title", "meta.events.berlin-triathlon-xl.meta-description"])
+            $translate(["events.berlin-triathlon-xl.meta-title", "events.berlin-triathlon-xl.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.berlin-triathlon-xl.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.berlin-triathlon-xl.meta-description"]);
+                ngMeta.setTitle(translations["events.berlin-triathlon-xl.meta-title"]);
+                ngMeta.setTag("description", translations["events.berlin-triathlon-xl.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
           }
