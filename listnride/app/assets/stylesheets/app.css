@@ -470,6 +470,10 @@ md-tooltip .md-content {
   opacity: 0.5;
 }
 
+.lnr-pos-r {
+  position: relative;
+}
+
 /* ALIGNMENTS */
 
 .lnr-center {
@@ -573,6 +577,10 @@ md-tooltip .md-content {
 
 .lnr-mt-0 {
   margin-top: 0;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
 
 /* PADDINGS */
@@ -840,37 +848,6 @@ md-tooltip .md-content {
   border: 1px solid #e1e6e6;
   border-radius: 3px;
   padding: 0;
-}
-
-
-/* FIX AFTER ATOMIC */
-.lnr-p-x2 {
-  padding: 16px;
-}
-
-.lnr-pv-x2 {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-.lnr-m-0 {
-  margin: 0;
-}
-
-.lnr-p  {
-  padding: 8px;
-}
-.lnr-ph-x2 {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.mt-auto {
-  margin-top: auto;
-}
-
-.lnr-pos-r {
-  position: relative;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -2333,22 +2310,6 @@ button.md-primary.md-cancel-button {
 
 .faq p {
   margin-top: 0;
-}
-
-.lnr-garantee {
-  position: relative;
-}
-
-.lnr-garantee md-icon {
-  position: absolute;
-  padding-left: 16px;
-  right: 0;
-}
-
-@media (max-width:760px) {
-  .lnr-garantee md-icon {
-    position: relative;
-  }
 }
 
 #error404 {
