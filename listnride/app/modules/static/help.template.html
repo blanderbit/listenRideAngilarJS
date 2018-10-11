@@ -11,6 +11,7 @@
         ng-repeat="i in [].constructor(8) track by $index"
         ui-sref="faq({'group': $index+1})"
         class="help__group-card"
+        layout="row"
         flex="50"
         flex-gt-xs="25">
         <a flex layout="column" layout-align="none center">

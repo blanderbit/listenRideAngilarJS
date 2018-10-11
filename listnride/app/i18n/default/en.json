@@ -887,7 +887,7 @@
       "special": "Special",
       "urban": "Urban",
       "e-bike": "E-Bike",
-      "road": "Road",
+      "road": "Road and touring bikes",
       "transport": "Transport"
     },
     "details": {
@@ -943,7 +943,7 @@
     "insurance": {
       "label": "Insurance",
       "info": "Information about insurance",
-      "hint-part-1": "Your bike is insured whenever it is rented. In order to provide you with the right protection it's neccessary that you enter the value of your bike.",
+      "hint-part-1": "Your bike is insured whenever it is rented. In order to provide you with the right protection it's necessary that you enter the value of your bike.",
       "hint-part-2": "Please note that your have to provide proof of your bike's value in case of any claim ",
       "hint-link-label": "Learn more about insurance",
       "header": "Please tell us the value of your bike",
@@ -1222,7 +1222,7 @@
       "status": {
         "1": "Signed up but has not listed or rented a bike",
         "2": "Signed up and rented a bike",
-        "3": "Signed up and listed a bike"
+        "3": "Signed up and listed bike"
       }
     },
     "share": {
