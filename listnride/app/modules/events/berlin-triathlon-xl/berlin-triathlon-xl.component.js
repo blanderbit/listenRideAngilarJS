@@ -30,7 +30,7 @@ angular.module('berlinTriathlonXl', []).component('berlinTriathlonXl', {
       });
 
       // TODO: Readd &booked_at=2018-07-14 when API is fixed
-      api.get('/rides?category=30,31&location=Berlin&booked_at=2019-06-02').then(
+      api.get('/rides?category=30,31&location=Berlin&booked_at=2019-06-23').then(
         function (response) {
           berlinTriathlonXl.bikes = response.data.bikes;
         },

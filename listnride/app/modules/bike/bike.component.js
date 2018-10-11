@@ -47,6 +47,7 @@ angular.module('bike',[]).component('bike', {
             }
           );
 
+
           var metaData = {
             name: bike.data.name,
             brand: bike.data.brand,
