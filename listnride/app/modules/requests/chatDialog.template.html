@@ -38,12 +38,12 @@
         show-rating-dialog="chatDialog.requests.showRatingDialog()">
       </message>
     </div>
-    <div class="lnr-message-form" flex="15" layout="row" layout-padding>
-      <md-input-container class="ap-chat" flex md-no-float>
-        <input ng-model="chatDialog.requests.message" placeholder="Write a message"></input>
+    <div class="lnr-message-form" flex="auto" layout-padding>
+      <md-input-container class="ap-chat lnr-m-0 lnr-block" md-no-float>
+        <textarea class="md-input" ng-model="chatDialog.requests.message" placeholder="{{ 'requests.write-message' | translate }}"></textarea>
       </md-input-container>
-      <md-input-container>
-        <md-button flex class="md-raised md-primary lnr-m-0" ng-click="chatDialog.requests.sendMessage()">
+      <md-input-container class="lnr-m-0 lnr-block lnr-right">
+        <md-button class="md-raised md-primary lnr-m-0" ng-click="chatDialog.requests.sendMessage()">
           Send
         </md-button>
       </md-input-container>

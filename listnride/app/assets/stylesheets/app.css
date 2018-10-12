@@ -298,6 +298,11 @@ md-card md-card-title {
   height: 100%;
 }
 
+.lnr-block {
+  display: block;
+}
+
+
 button.md-primary.md-cancel-button.md-button.ng-scope.md-default-theme.md-ink-ripple {
   background-color: rgb(122, 178, 248);
 }
@@ -2155,6 +2160,13 @@ requests md-input-container {
 
 .lnr-message-form input {
   background: #fff;
+}
+
+.lnr-message-form md-input-container textarea {
+  background: #fff;
+  padding: 7px 16px;
+  max-height: 85px;
+  overflow: auto;
 }
 
 .lnr-message-form .md-errors-spacer {
