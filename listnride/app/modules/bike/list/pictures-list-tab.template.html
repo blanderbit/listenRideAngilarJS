@@ -13,6 +13,7 @@
           ngf-multiple="true"
           ngf-select="picturesTab.parent.addImage($files)"
           ngf-resize="{width: 1600, height: 1200, quality: .9}"
+          ngf-fix-orientation="true"
           accept=".jpg,.jpeg,.png"
           ngf-validate="picturesTab.parent.validateObj"
           ngf-model-invalid="picturesTab.parent.invalidFiles">
