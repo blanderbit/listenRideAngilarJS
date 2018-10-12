@@ -21,8 +21,9 @@ angular.module('booking', [])
         booking.bikeId = $stateParams.bikeId;
         booking.shopBooking = $stateParams.shop;
 
-        booking.startDate = new Date($stateParams.startDate);
-        booking.endDate = new Date($stateParams.endDate);
+        // booking from SHOP PLUGIN starts without information about dates
+        booking.startDate = $stateParams.startDate ? new Date($stateParams.startDate) : null;
+        booking.endDate = $stateParams.endDate ? new Date($stateParams.endDate) : null;
 
         booking.user = {};
         booking.bike = {};
@@ -103,6 +104,11 @@ angular.module('booking', [])
           }
         };
 
+
+        // ===============================
+        // >>>> START BOOKING CALENDAR TAB
+        // ===============================
+
         booking.dateRange = {};
 
         booking.updateDate = function() {
@@ -110,13 +116,20 @@ angular.module('booking', [])
             var startDate = new Date(booking.dateRange.start_date);
             booking.startDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), 10, 0, 0);
             booking.endDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + booking.dateRange.duration, 18, 0, 0);
-            booking.startTime = 10;
-            booking.endTime = 18;
             booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
             booking.total = booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
+            setInitHours();
           }
           // TODO: REMOVE REDUNDANT PRICE CALCULATION CODE
         };
+
+        function setInitHours() {
+          var openTime = calendarHelper.getInitHours(booking.openingHours, booking.startDate, booking.endDate);
+          booking.startTime = openTime.startTime;
+          booking.endTime = openTime.endTime;
+          booking.startDate = openTime.startDate;
+          booking.endDate = openTime.endDate;
+        }
 
         booking.onTimeChange = function(slot) {
           var slotDate = slot + "Date";
@@ -128,8 +141,17 @@ angular.module('booking', [])
             booking.startDate = "Invalid Date";
             booking.endDate = "Invalid Date";
           }
-          // dateChange(booking.startDate, booking.endDate);
         };
+
+        function validDates() {
+          return booking.startDate && booking.endDate &&
+            booking.endDate != "Invalid Date" &&
+            booking.startDate.getTime() < booking.endDate.getTime();
+        }
+
+        // =================================
+        // START BOOKING CALENDAR TAB <<<<<<
+        // =================================
 
         booking.tabCompleted = function(tabId) {
           return booking.selectedIndex > tabId ? "✔" : "    ";
@@ -159,10 +181,6 @@ angular.module('booking', [])
             }
           }
         };
-
-        function validDates() {
-          return booking.endDate != "Invalid Date" && booking.startDate.getTime() < booking.endDate.getTime();
-        }
 
         function updatePrices() {
           var prices = price.calculatePrices(booking.startDate, booking.endDate, booking.prices, booking.coverageTotal, booking.isPremium);
