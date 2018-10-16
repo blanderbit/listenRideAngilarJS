@@ -434,7 +434,7 @@
     "agree-terms-link": " termini listnride",
     "footer": {
       "questions": "Hai domande sul noleggio della bicicletta?",
-      "call-us": "Chiamaci al:\n<a href=\"tel:+49030120870330\">+49 (0) 30-120870330</a>. \nO scrivici un <a href=\"mailto:contact@listnride.com\">e-mail</a>",
+      "call-us": "Chiamaci al:\n<a href=\"tel:+49030120870330\">+49 (0)30 120870330</a>. \nO scrivici un <a href=\"mailto:contact@listnride.com\">e-mail</a>",
       "email-us": "O scrivici un email",
       "support": "listnride servizio clienti"
     },
@@ -543,7 +543,7 @@
     "settings": "Impostazioni",
     "profile": "Profilo",
     "invite": "Invita i tuoi amici",
-    "account": "Profilo",
+    "account": "Conto",
     "delete-account": " Disattivare profilo",
     "delete-account-description": "Qui puoi disattivare il tuo profilo. Non è possibile annullare questo passaggio.",
     "delete-account-sure": "Sei sicuro?",
