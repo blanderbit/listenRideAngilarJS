@@ -312,6 +312,9 @@
       },
       "rider": {
         "description": "Wij bieden twee verzekeringspakketten aan voor elke fiets die je huurt via lisntride: De \n<b>De Basisverzekering</b> \nis inbegrepen in elke fietshuur in Duitsland en Oostenrijk, de \n<b>Premium verzekering</b>\n is optioneel en breidt de verzekering uit met extra dekking.\n<br>\nJij en Jouw fiets zijn altijd optimaal verzekerd en dus staat niets jouw rit meer in de weg!",
+        "question-8": "Zijn er bepaalde dingen uitgesloten van de verzekering?",
+        "question-9": "Wat zijn mijn verplichtingen?",
+        "answer-9": " Er zijn bijvoorbeeld de volgende verplichtingen:\n        <br>\n        <ul>\n            <li>U dient alle vragen naar waarheid en volledig beantwoorden </li>\n            <li>U dient de verzekeringspremies op tijd en volledig betalen </li>\n            <li>In het geval van een verzekerde gebeurtenis, dient u de houder volledige en waarheidsgetrouwe informatie verstrekken </li>\n            <li>Meld onmiddellijk de eigenaar van een claim </li>\n            <li>U moet de kosten van de schade laag houden </li>\n        </ul>",
         "question-1": "Hoeveel kost de basisverzekering mij?",
         "tabname": "Voor huurders",
         "answer-1": "De kosten van de basisverzekering bedragen slechts 0,1% van de verzekeringswaarde van de fiets die u hebt geboekt.\n<br>\nAls een fiets tot 1.000 € verzekerd is, betaalt u precies één euro per huurdag voor de basisverzekering.",
@@ -367,14 +370,9 @@
     "rapha-super-cross": {
       "text": "De Rapha Super Cross is weer terug in München, voor het derde jaar op rij. Indien je er graag bij wil zijn, maar geen geschickte fiets hebt, kann je via listnride een passende fiets huren. De listnride bike sharing community biedt verschillende cyclocrossfietsen te huur aan. De fietsen kunnen voor het evenement bij de verschillende aanbieders worden aangevraagd en geboekt. De overdracht wordt direct met de verhuurder afgesproken. Indien je een fiets hebt die niet benut wordt, kan je deze gewoon aanbieden om daarmee wat geld te verdienen ein interessante mensen te leren kennen, die aan het evenement deelnemen. Sluit je aan bij de groeiende Community!"
     },
-    "berlin-triathlon": {
-      "title": "Rent a road bike for Berlin Triathlon 2019",
-      "text": "Do you need a road bike for <a href=\"http://www.berlin-triathlon.de/\">Berlin Triathlon 2019</a>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br1>\nYou can’t participate? Help out someone in need. <a href=\"/listing-a-bike\">List your bike</a> and make some extra pocket money! "
-    },
     "berlin-triathlon-xl": {
       "title": "Rent a road bike for Berlin Triathlon XL 2019",
-      "description": "What: <b0>Berlin Triathlon XL</b0>  |  Where: <b1>Berlin</b1>  |  When: <b2>23 June 2019</b2>",
-      "text": "Do you need a road bike for <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon 2019 XL</a0>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br>\nYou can’t participate? Help out someone in need. <a1 href=\"/listing-a-bike\">List your bike</a1> and make some extra pocket money! "
+      "description": "What: <b0>Berlin Triathlon XL</b0>  |  Where: <b1>Berlin</b1>  |  When: <b2>23 June 2019</b2>"
     },
     "toros-de-gravel": {
       "title": "Huur een gravelbike voor Toros de Gravel",

@@ -197,7 +197,7 @@
       },
       "group-5": {
         "title": "Versicherung & Sicherheit",
-        "description": "Wir bieten eine Basis-Versicherung an, die bereits im voll im Buchungsprozess enthalten ist. Optional können Mieter eine Premium-Versicherung mit weiteren Services buchen.\n<p>\nBeide Versicherungspakete schützen bei Vandalismus und Diebstahl. Die Versicherung wird von unseren Partnern \n<a href=\"http://www.hepster.com/\" target=\"_blank\">hepster</a> \nund \n<a href=\"http://www.gothaer.de/\" target=\"_blank\">Gothaer Insurance</a> \nangeboten wird.\n<p>\nDie Versicherung ist bisher nur in Deutschland und Österreich verfügbar. Wir arbeiten an der flächendeckenden Bereitstellung für ganz Europa.\n<p>\nAlle Details zur  \n <a href=\"/insurance\" target=\"_blank\">Versicherung findest du</a> auch hier.",
+        "description": "Wir bieten eine Basis-Versicherung an, die bereits voll im Buchungsprozess enthalten ist. Optional können Mieter eine Premium-Versicherung mit weiteren Services buchen.\n<p>\nBeide Versicherungspakete schützen bei Vandalismus und Diebstahl. Die Versicherung wird von unseren Partnern \n<a href=\"http://www.hepster.com/\" target=\"_blank\">hepster</a> \nund \n<a href=\"http://www.gothaer.de/\" target=\"_blank\">Gothaer Versicherung</a> \nangeboten wird.\n<p>\nDie Versicherung ist bisher nur in Deutschland und Österreich verfügbar. Wir arbeiten an der flächendeckenden Bereitstellung für ganz Europa.\n<p>\nAlle   \n <a href=\"/insurance\" target=\"_blank\">Details zur Versicherung</a> \nfindest du auch hier.",
         "answer-1": "How do I search for a bike?",
         "answer-2": "How do I search for a bike?",
         "answer-3": "How do I search for a bike?",
@@ -312,6 +312,10 @@
       },
       "rider": {
         "description": "Wir bieten zwei Versicherungspakete für jedes Rad das du über lisntride mietest: Die \n<b>Basis-Versicherung</b> \nist in jeder Vermietung inkludiert, die \n<b>Premium-Versicherung</b>\n ist optional und erweitert der Versicherungsschutz um zusätzliche Leistungen.\n<br>\nDein Rad und du sind immer optimal geschützt und deiner Fahrt steht nichts mehr im weg!",
+        "question-8": "Gibt es Deckungsbeschränkungen?",
+        "answer-8": "In einigen Fällen kann es zu einer Kürzung der Entschädigungsleistung im Schadensfall kommen, wie zum Beispiel:\n<br>\n <ul>\n  <li>Bei Schäden, die die Gebrauchsfähigkeit nicht beeinträchtigen\n  <li>Bei einfachem Diebstahl, wenn Dein Fahrrad nicht in verkehrsüblicher Weise gesichert war\n </ul>\n<p>\nIn jedem Fall vom Versicherungsschutz ausgeschlossen sind zum Beispiel Schäden durch:\n<br>\n <ul>\n  <li>Vorsätzliche Handlung\n  <li>Manipulation des Antriebssystems (z.B. Tuning)\n </ul>",
+        "question-9": "Welche Verpflichtungen habe ich?",
+        "answer-9": " Es bestehen zum Beispiel folgende Pflichten:\n        <br>\n        <ul>\n            <li>Du musst alle Fragen wahrheitsgemäß und vollständig beantworten</li>\n            <li>Die Versicherungsbeiträge musst Du rechtzeitig und vollständig bezahlen</li>\n            <li>Im Versicherungsfall musst Du hepster vollständige und wahrheitsgemäße Informationen geben</li>\n            <li>Zeige hepster jeden Schadensfall unverzüglich an</li>\n            <li>Du musst die Kosten des Schadens gering halten</li>\n        </ul>",
         "question-1": "Wieviel kostet die Basis-Versicherung?",
         "tabname": "Für Mieter",
         "answer-1": "Die Kosten für die Basis-Versicherung betragen lediglich 0,1% des Versicherungswerts des von Dir gebuchten Rades.\n<br>\nWenn ein Rad also bis 1.000€ Versicherungssumme vom Vermieter angegeben ist, dann zahlst du genau 1€ (einen Euro) je Miettag zusätzlich.",
@@ -369,12 +373,12 @@
     },
     "berlin-triathlon": {
       "title": "Miete dir ein Rennrad für den Berlin Triathlon 2019",
-      "text": "Du brauchst ein Rad für den <a href=\"http://www.berlin-triathlon.de/\">Berlin Triathlon 2019</a>? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n<br1>\nDu kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und <a href=\"/listing-a-bike\">vermiete dein Rad</a>."
+      "text": "Du brauchst ein Rad für den \n        <a href=\"//berlin-triathlon.de/\" target=\"_blank\">Berlin Triathlon 2019</a>\n        ? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n        <br>\n        Du kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und \n        <a href=\"/listing-a-bike\" target=\"_blank\">vermiete dein Rad</a>\n        ."
     },
     "berlin-triathlon-xl": {
       "title": "Miete dir das perfekte Rennrad für den Berlin Triathlon XL 2019",
-      "description": "Was: <b0>Berlin Triathlon XL</b0>  |  Wo: <b1>Berlin</b1>  |  Wann: <b2>23. Juni 2019</b2>",
-      "text": "Du brauchst noch ein Rad für den <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon XL 2019</a0>? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n<br>\nDu kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und <a1 href=\"/listing-a-bike\">vermiete dein Rad</a1>."
+      "description": "Was: <b>Berlin Triathlon XL</b>  |  Wo: <b>Berlin</b>  |  Wann: <b>23. Juni 2019</b>",
+      "text": "Du brauchst noch ein Rad für den \n        <a href=\"//berlintriathlon-xl.de/\" target=\"_blank\">Berlin Triathlon 2019 XL</a>\n        ? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n        <br1>\n        Du kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und \n        <a1>vermiete dein Rad</a1>"
     },
     "toros-de-gravel": {
       "title": "Miet ein Gravelbike für Toros de Gravel",
