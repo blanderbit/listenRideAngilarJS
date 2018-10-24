@@ -25,10 +25,9 @@ angular.module('list', ['ngLocale'])
       'price',
       'countryCodeTranslator',
       'notification',
-      'helpers',
       function ListController($localStorage, $stateParams, $state, $analytics,
         Upload, bikeOptions, api, authentication, verification, accessControl,
-        loadingDialog, price, countryCodeTranslator, notification, helpers) {
+        loadingDialog, price, countryCodeTranslator, notification) {
 
         if (accessControl.requireLogin()) {
           return;
@@ -84,6 +83,8 @@ angular.module('list', ['ngLocale'])
           list.insuranceCountries = ['DE', 'AT'];
 
           // methods
+          list.populateNewBikeData = populateNewBikeData;
+          list.populateExistingBikeData = populateExistingBikeData;
 
           // invocations
           // populate data for list or edit bike
@@ -119,7 +120,7 @@ angular.module('list', ['ngLocale'])
           }).subcategories.sort()
         };
 
-        list.populateNewBikeData = function () {
+        function populateNewBikeData() {
           api.get('/users/' + $localStorage.userId).then(
             function (success) {
               var data = success.data;
@@ -151,7 +152,7 @@ angular.module('list', ['ngLocale'])
           );
         };
 
-        list.populateExistingBikeData = function () {
+        function populateExistingBikeData() {
           api.get('/rides/' + $stateParams.bikeId).then(
             function (response) {
               var data = response.data;

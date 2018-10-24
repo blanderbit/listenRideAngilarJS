@@ -34,6 +34,7 @@ angular.module('search',[]).component('search', {
         search.filteredBikes = [];
         search.filteredDateBikes = [];
         search.mapMarkers = [];
+        search.correctLocationCoordinates = '';
         search.noResult = true;
         search.initialValues = {
           amount: '',
@@ -43,6 +44,12 @@ angular.module('search',[]).component('search', {
           date: {
             "start_date": '',
             "duration": ''
+          },
+          correctBoundsCoords: {
+            lat: '',
+            lng: '',
+            northeast: '',
+            southwest: ''
           }
         };
 
@@ -54,6 +61,12 @@ angular.module('search',[]).component('search', {
           "start_date": $stateParams.start_date,
           "duration": $stateParams.duration
         };
+        search.initialValues.correctBoundsCoords = {
+          lat : $stateParams.lat,
+          lng : $stateParams.lng,
+          northeast : $stateParams.northeast,
+          southwest : $stateParams.southwest
+        }
 
         search.limit = 15;
         search.mapOptions = {
@@ -128,11 +141,18 @@ angular.module('search',[]).component('search', {
       }
 
       function populateBikes(location) {
+        search.correctLocationCoordinates = '';
         search.bikes = undefined;
         search.noResult = false;
+
         location = location ? location : $stateParams.location;
 
-        var urlRequest = "/rides?location=" + location;
+        // if bounds on map was corrected
+        if (search.initialValues.correctBoundsCoords.lat && search.initialValues.correctBoundsCoords.lng) {
+          search.correctLocationCoordinates = '&' + transformObjToUrl(search.initialValues.correctBoundsCoords);
+        }
+
+        var urlRequest = "/rides?location=" + location + search.correctLocationCoordinates;
 
         api.get(urlRequest).then(function(response) {
           setParamsFromResponse(response);
@@ -160,6 +180,16 @@ angular.module('search',[]).component('search', {
         }
       }
 
+      function getNewBikesByBounds(){
+        // if bounds on map was corrected
+        if (search.initialValues.correctBoundsCoords.lat && search.initialValues.correctBoundsCoords.lng) {
+          search.correctLocationCoordinates = '?' + transformObjToUrl(search.initialValues.correctBoundsCoords);
+          return api.get('/rides/' + search.correctLocationCoordinates);
+        } else {
+          return false;
+        }
+      }
+
       function setParamsFromResponse(response) {
         search.bikes = response.data.bikes;
         search.filteredDateBikes = search.bikes.slice();
@@ -173,6 +203,12 @@ angular.module('search',[]).component('search', {
         search.locationBounds = response.data.location.geometry.viewport;
 
         initializeGoogleMap();
+      }
+
+      function transformObjToUrl(obj) {
+        return Object.keys(obj).map(function (key) {
+          return key + '=' + obj[key];
+        }).join('&');
       }
 
       // ============================
@@ -289,6 +325,30 @@ angular.module('search',[]).component('search', {
         });
 
         return marker;
+      }
+
+
+      search.centerChanged = function() {
+        // Check if map exists and bounds changed
+        // https://developers.google.com/maps/documentation/javascript/reference/coordinates#LatLngBounds
+        if (search.map) {
+          search.initialValues.correctBoundsCoords = {
+            // map center coordinates
+            lat: this.getCenter().lat(),
+            lng: this.getCenter().lng(),
+            // bounds coordinates
+            northeast: this.getBounds().getNorthEast().lat() + ',' + this.getBounds().getNorthEast().lng(),
+            southwest: this.getBounds().getSouthWest().lat() + ',' + this.getBounds().getSouthWest().lng()
+          }
+
+          getNewBikesByBounds().then(function(response){
+            // TODO:
+            // 1.change url params
+            // 2.update bikes list
+            // 3.update unavailable bikes
+            // 4.update map pins
+          });
+        }
       }
 
       // ============================
