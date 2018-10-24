@@ -29,7 +29,7 @@ angular.module('faq', []).component('faq', {
           {
             title: 'help-and-service.faq.group-1.title',
             icon: 'app/assets/ui_icons/help/1_getting-started-01.svg',
-            questionsCount: 4
+            questionsCount: 5
           },
           {
             title: 'help-and-service.faq.group-2.title',

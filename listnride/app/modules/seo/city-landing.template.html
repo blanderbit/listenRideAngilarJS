@@ -46,7 +46,7 @@
       <br>
       <md-grid-list
         id="featuredTilesGrid"
-        class="md-color-white lnr-margin"
+        class="md-color-white lnr-m"
         md-cols="2" md-cols-gt-xs="2" md-cols-gt-sm="3" md-gutter="16px" md-row-height="1.5:1"
       >
 
@@ -84,7 +84,7 @@
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <h2 class="md-headline">{{ 'seo.bike-shops-in' | translate }} {{ cityLanding.data.city }}</h2>
     </div>
-    <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-margin" md-cols="2" md-cols-gt-xs="3" md-cols-gt-sm="{{ cityLanding.data.shops.length }}" md-gutter="16px" md-row-height="1:1">
+    <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-m" md-cols="2" md-cols-gt-xs="3" md-cols-gt-sm="{{ cityLanding.data.shops.length }}" md-gutter="16px" md-row-height="1:1">
       <md-grid-tile ng-repeat="shop in cityLanding.data.shops" class="tile" style="background-image: url({{ shop.profile_picture.profile_picture.url }});">
         <a ui-sref="user({userId: {{ shop.id }}})" target="_blank" layout-padding layout="column" layout-align="center  center">
         </a>

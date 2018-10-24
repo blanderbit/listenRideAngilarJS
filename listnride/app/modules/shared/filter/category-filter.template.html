@@ -35,8 +35,8 @@
     </div>
   </div>
 
-  <div layout="row" layout-wrap flex ng-show="categoryFilter.showSubs(category.catId)" layout-align="start center" class="lnr-margin-left">
-    <div flex="33" ng-repeat="subcategory in category.subcategories" class="lnr-padding-left-double">
+  <div layout="row" layout-wrap flex ng-show="categoryFilter.showSubs(category.catId)" layout-align="start center" class="lnr-ml">
+    <div flex="33" ng-repeat="subcategory in category.subcategories" class="lnr-pl-x2">
       <md-checkbox
         ng-checked="categoryFilter.exists(subcategory.id, categoryFilter.currentCategories)"
         ng-click="categoryFilter.toggle(subcategory.id, categoryFilter.currentCategories)"

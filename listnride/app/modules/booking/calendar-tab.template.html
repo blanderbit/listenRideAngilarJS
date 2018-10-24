@@ -8,7 +8,7 @@
   <md-content layout="column">
     <div class="tab-content" style="min-height: 450px;" layout-align="space-between none" layout-padding>
       <div class="lnr-list-form" layout="column">
-        <h2 class="md-title lnr-no-margin">{{ 'booking.calendar.bike-rental' | translate }}</h2>
+        <h2 class="md-title lnr-m-0">{{ 'booking.calendar.bike-rental' | translate }}</h2>
         <p class="md-body-1">{{ 'booking.calendar.intro-description' | translate }}</p>
         <div class="spacer-xs"></div>
       	<div layout="row" layout-align="space-between none" layout-wrap>
@@ -33,7 +33,7 @@
         <div class="spacer"></div>
         <md-divider></md-divider>
         <br>
-        <h2 class="md-title lnr-no-margin">{{ 'booking.calendar.choose-duration' | translate }}</h2>
+        <h2 class="md-title lnr-m-0">{{ 'booking.calendar.choose-duration' | translate }}</h2>
         <br>
         <div layout="row" layout-align="start center" flex layout-xs="column">
           <md-input-container flex-xs="100">
@@ -53,10 +53,15 @@
             </input-range>
           </md-input-container>
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <div id="timeRange" layout="row" layout-align="start center" ng-if="calendar.parent.startDate" flex="40" flex-xs="100">
+<div id="timeRange" layout="row" layout-align="start center" ng-if="calendar.parent.startDate"
+  flex="40" flex-xs="100">
             <md-input-container flex>
               <label>{{ 'booking.calendar.pickup-time' | translate }}</label>
-              <md-select ng-disabled="calendar.parent.startDate == undefined" ng-change="calendar.parent.onTimeChange('start')" ng-model="calendar.parent.startTime" placeholder="{{ 'shared.from' | translate }}">
+              <md-select
+                ng-disabled="calendar.parent.startDate == undefined"
+                ng-change="calendar.parent.onTimeChange('start')"
+                ng-model="calendar.parent.startTime"
+                placeholder="{{ 'shared.from' | translate }}">
                 <md-option
                 ng-disabled="!calendar.parent.calendarHelper.isTimeAvailable($index, calendar.parent.openingHours, calendar.parent.startDate)"
                 ng-repeat="i in [].constructor(17) track by $index"

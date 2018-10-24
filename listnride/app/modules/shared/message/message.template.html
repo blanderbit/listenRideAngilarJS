@@ -1,8 +1,8 @@
 <div ng-if="message.sentMessage()" flex layout="row" layout-align="end end">
-  <div class="lnr-message sent-message" 
-       flex="30" 
-       flex-sm="30" 
-       flex-xs="60" 
+  <div class="lnr-message sent-message"
+       flex="30"
+       flex-sm="30"
+       flex-xs="60"
        layout-margin>
      <p class="message-time">{{message.localTime}}</p>
     <p class="message-text">{{message.content}}</p>
@@ -10,64 +10,64 @@
 </div>
 
 <div ng-if="message.receivedMessage()" layout="row" layout-align="start end">
-  <div class="lnr-message received-message" 
-       flex="30" 
-       flex-sm="30" 
-       flex-xs="60" 
+  <div class="lnr-message received-message"
+       flex="30"
+       flex-sm="30"
+       flex-xs="60"
        layout-margin>
      <p class="message-time">{{message.localTime}}</p>
     <p class="message-text">{{message.content}}</p>
   </div>
 </div>
 
-<div 
-    ng-if="message.statusMessage() && message.status == 1 && message.request.rideChat" 
-    layout="column" 
+<div
+    ng-if="message.statusMessage() && message.status == 1 && message.request.rideChat"
+    layout="column"
     layout-align="center center">
-  <img 
-      class="lnr-profile-lrg lnr-clickable" 
-      ng-click="message.closeDialog()" 
+  <img
+      class="lnr-profile-lrg lnr-clickable"
+      ng-click="message.closeDialog()"
       ui-sref="user({userId: message.request.lister.id})"
       ng-src="{{message.request.lister.profile_picture.profile_picture.url}}">
   </img>
-  <input-stars 
-        class="rating" 
-        max="5" 
-        ng-model="message.request.rating" 
+  <input-stars
+        class="rating"
+        max="5"
+        ng-model="message.request.rating"
         readonly>
   </input-stars>
 </div>
 
-<div 
-    ng-if="message.statusMessage() && message.status == 1 && !message.request.rideChat" 
-    layout="column" 
+<div
+    ng-if="message.statusMessage() && message.status == 1 && !message.request.rideChat"
+    layout="column"
     layout-align="center center">
-  <img 
-      class="lnr-profile-lrg lnr-clickable" 
-      ng-click="message.closeDialog()" 
+  <img
+      class="lnr-profile-lrg lnr-clickable"
+      ng-click="message.closeDialog()"
       ui-sref="user({userId: message.request.user.id})"
       ng-src="{{message.request.user.profile_picture.profile_picture.url}}">
   </img>
-  <input-stars 
-      class="rating" 
-      max="5" 
-      ng-model="message.request.rating" 
+  <input-stars
+      class="rating"
+      max="5"
+      ng-model="message.request.rating"
       readonly>
   </input-stars>
 </div>
 
 <div ng-if="message.statusMessage()" layout="row" layout-align="center end">
-  <div 
-      class="lnr-message status-message" 
-      flex="40" 
-      flex-sm="60" 
-      flex-xs="60" 
-      layout="column" 
+  <div
+      class="lnr-message status-message"
+      flex="40"
+      flex-sm="60"
+      flex-xs="60"
+      layout="column"
       layout-margin>
      <p class="message-time">{{message.localTime}}</p>
-    <p 
+    <p
       class="lnr-center"
-      translate="{{message.request.chatFlow}}.{{message.status}}" 
+      translate="{{message.request.chatFlow}}.{{message.status}}"
       translate-values="message.request"
       ng-click="message.closeDialog()"
       style="pointer-events: none;">
@@ -75,7 +75,7 @@
     <!-- Insurance Certificates Download -->
     <div ng-if="message.request.rideChat && message.status == 3 && message.request.insurance.items_uid">
       <md-divider></md-divider>
-      <p   
+      <p
         class="lnr-center">
         <b>{{ 'message.documents-title' | translate }}</b>
         <br>{{ 'message.documents-description' | translate }}<br>
@@ -92,14 +92,14 @@
     <div ng-if="!message.request.rideChat && message.status == 1">
       <div layout-gt-sm="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <confirmation
-            button-class="'message-button md-raised md-warn lnr-no-margin md-button md-ink-ripple'"
+            button-class="'message-button md-raised md-warn lnr-m-0 md-button md-ink-ripple'"
             button-text="'message.reject'"
             button-disable="message.request.status != 1 || message.buttonClicked"
             confirm-text="'Are you sure?'"
             on-success="message.updateStatus(8)">
         </confirmation>
         <md-button
-          class="message-button md-raised md-primary lnr-no-margin md-button md-ink-ripple"
+          class="message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple"
           ng-disabled="message.request.status != 1 || message.buttonClicked"
           ng-click="message.book()"
         >
@@ -111,7 +111,7 @@
     <div ng-if="message.showReturn()">
       <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <md-button
-          class="message-button md-raised md-primary lnr-no-margin md-button md-ink-ripple"
+          class="message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple"
           ng-disabled="message.request.status != 3"
           ng-click="message.showRatingDialog()"
         >
@@ -123,7 +123,7 @@
     <div ng-if="message.request.rideChat && message.status == 1">
       <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <confirmation
-            button-class="'message-button md-raised lnr-no-margin md-button md-ink-ripple md-warn'"
+            button-class="'message-button md-raised lnr-m-0 md-button md-ink-ripple md-warn'"
             button-text="'shared.cancel'"
             button-disable="message.request.status != 1"
             confirm-text="'Are you sure?'"
@@ -134,15 +134,15 @@
 
     <div ng-if="message.request.rideChat && message.status == 2">
       <div layout-gt-sm="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
-        <md-button 
-          class="message-button md-raised lnr-no-margin md-button md-ink-ripple md-warn"
+        <md-button
+          class="message-button md-raised lnr-m-0 md-button md-ink-ripple md-warn"
           ng-disabled="message.request.status != 2"
           ng-click="message.updateStatus(9)"
         >
           {{ 'shared.cancel' | translate }}
         </md-button>
         <md-button
-          class="message-button md-raised md-primary lnr-no-margin md-button md-ink-ripple"
+          class="message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple"
           ng-disabled="message.request.status != 2"
           ng-click="message.confirmBooking()"
         >
@@ -154,7 +154,7 @@
     <div ng-if="message.request.rideChat && message.status == 5">
       <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <md-button
-          class="message-button md-raised md-primary lnr-no-margin md-button md-ink-ripple"
+          class="message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple"
           ng-disabled="message.request.status != 5"
           ng-click="message.showRatingDialog()"
         >

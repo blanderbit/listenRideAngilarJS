@@ -1,3 +1,7 @@
+/*-----------------------------------------------------------------------------------*/
+/* WARNING: Before styles creation, please check our WIKI: https://github.com/listnride/listnride-frontend/wiki/Styles
+/*-----------------------------------------------------------------------------------*/
+
 /*
 // #5FC693: Primary Color
 // #f3f3f3: Preload Color
@@ -25,6 +29,13 @@
  * GENERAL..............Common styles
  * FRAMEWORK............Something we do with default material styles
  * LNR_CLASSES..........Our custom atomic styles
+ * - ALIGNMENTS.........Text alignments
+ * - MARGINS............Set, remove margins
+ * -- MARGINS::SET
+ * -- MARGINS::REMOVE
+ * - PADDINGS...........Set, remove paddings
+ * -- PADDINGS::SET
+ * -- PADDINGS::REMOVE
  * SVG..................Set proportions to svg
  * LNR_ERRORS...........Validation errors
  * MEDIA_STYLES.........media for all breakpoints
@@ -287,6 +298,11 @@ md-card md-card-title {
   height: 100%;
 }
 
+.lnr-block {
+  display: block;
+}
+
+
 button.md-primary.md-cancel-button.md-button.ng-scope.md-default-theme.md-ink-ripple {
   background-color: rgb(122, 178, 248);
 }
@@ -418,8 +434,21 @@ md-tooltip .md-content {
 /*-----------------------------------------------------------------------------------*/
 /* LNR_CLASSES
 /*-----------------------------------------------------------------------------------*/
+
+.lnr-fs0 {
+  font-size: 0;
+}
+
 .lnr-fs14 {
   font-size: 14px;
+}
+
+.lnr-lh0 {
+  line-height: 0;
+}
+
+.lnr-lh-body-2 {
+  line-height: 24px;
 }
 
 .lnr-page-settings p {
@@ -442,12 +471,18 @@ md-tooltip .md-content {
   text-decoration: underline;
 }
 
-.lnr-center {
-  text-align: center;
-}
-
 .lnr-light {
   opacity: 0.5;
+}
+
+.lnr-pos-r {
+  position: relative;
+}
+
+/* ALIGNMENTS */
+
+.lnr-center {
+  text-align: center;
 }
 
 .lnr-center-center {
@@ -455,114 +490,81 @@ md-tooltip .md-content {
   vertical-align: center;
 }
 
+.lnr-left {
+  text-align: left;
+}
+
 .lnr-right {
   text-align: right;
 }
 
-.lnr-margin {
+/* MARGINS */
+/* MARGINS::SET */
+
+.lnr-m {
   margin: 8px;
 }
 
-.lnr-m0 {
-  margin: 0;
+.lnr-m-x2 {
+  margin: 16px;
 }
 
-.lnr-margin-right {
+.lnr-mv {
+  margin-left: 8px;
   margin-right: 8px;
 }
 
-.lnr-margin-right-double {
+.lnr-mv-x2 {
+  margin-left: 16px;
   margin-right: 16px;
 }
 
-.lnr-margin-right-extra,
-.lnr-margin-right-extra:last-of-type {
-  margin-right: 32px;
+.lnr-mv-12 {
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
-.lnr-margin-left {
-  margin-left: 8px;
-}
-
-.lnr-margin-top {
+.lnr-mh {
   margin-top: 8px;
-}
-
-.lnr-margin-top-double {
-  margin-top: 16px;
-}
-
-.lnr-margin-bottom {
   margin-bottom: 8px;
 }
 
-.lnr-margin-lrg {
-  margin: 16px 8px;
-}
-
-.lnr-margin-lrg-top {
+.lnr-mh-x2 {
   margin-top: 16px;
-}
-
-.lnr-margin-lrg-bottom {
   margin-bottom: 16px;
 }
 
-.lnr-mb-20 {
-  margin-bottom: 20px;
+.lnr-mr {
+  margin-right: 8px;
 }
 
-.lnr-padding {
-  padding: 8px;
+.lnr-mr-x2 {
+  margin-right: 16px;
 }
 
-.lnr-padding-left {
-  padding-left: 8px;
+.lnr-ml {
+  margin-left: 8px;
 }
 
-.lnr-padding-left-double {
-  padding-left: 16px;
+.lnr-mt {
+  margin-top: 8px;
 }
 
-.lnr-padding-right {
-  padding-right: 8px;
+.lnr-mt-x2 {
+  margin-top: 16px;
 }
 
-.lnr-padding-right-double {
-  padding-right: 16px;
+.lnr-mb {
+  margin-bottom: 8px;
 }
 
-.lnr-padding-top {
-  padding-top: 8px;
+.lnr-mb-x2 {
+  margin-bottom: 16px;
 }
 
-.lnr-padding-top-double {
-  padding-top: 16px;
-}
+/* MARGINS::REMOVE */
 
-.lnr-lrg-padding {
-  padding: 16px;
-}
-
-.lnr-horizontal-lrg-padding {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.lnr-vertical-lrg-padding {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-.lnr-padding-top-double {
-  padding-top: 16px;
-}
-
-.lnr-no-padding {
-  padding: 0;
-}
-
-.lnr-no-margin {
+.lnr-m-0 {
   margin: 0;
 }
 
@@ -582,6 +584,61 @@ md-tooltip .md-content {
   margin-top: 0;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
+/* PADDINGS */
+/* PADDINGS::SET */
+
+.lnr-p {
+  padding: 8px;
+}
+
+.lnr-pl {
+  padding-left: 8px;
+}
+
+.lnr-pl-x2 {
+  padding-left: 16px;
+}
+
+.lnr-pr {
+  padding-right: 8px;
+}
+
+.lnr-pr-x2 {
+  padding-right: 16px;
+}
+
+.lnr-pt {
+  padding-top: 8px;
+}
+
+.lnr-pt-x2 {
+  padding-top: 16px;
+}
+
+.lnr-p-x2 {
+  padding: 16px;
+}
+
+.lnr-ph-x2 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.lnr-pv-x2 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* PADDINGS::REMOVE */
+
+.lnr-p-0 {
+  padding: 0;
+}
+
 .lnr-pt-0 {
   padding-top: 0;
 }
@@ -590,8 +647,12 @@ md-tooltip .md-content {
   padding-bottom: 0;
 }
 
-.lnr-lh-body-2 {
-  line-height: 24px;
+.lnr-pl-0 {
+  padding-left: 0;
+}
+
+.lnr-pr-0 {
+  padding-right: 0;
 }
 
 .lnr-clickable {
@@ -686,24 +747,6 @@ md-tooltip .md-content {
 
 .lnr-tab-content-no-scroll {
   position: fixed;
-}
-
-.lnr-mv8 {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.lnr-mv-12 {
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-
-.lnr-lh0 {
-  line-height: 0;
-}
-
-.lnr-fs0 {
-  font-size: 0;
 }
 
 .lnr-dash-input-divider {
@@ -810,37 +853,6 @@ md-tooltip .md-content {
   border: 1px solid #e1e6e6;
   border-radius: 3px;
   padding: 0;
-}
-
-
-/* FIX AFTER ATOMIC */
-.lnr-p-x2 {
-  padding: 16px;
-}
-
-.lnr-pv-x2 {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-.lnr-m-0 {
-  margin: 0;
-}
-
-.lnr-p  {
-  padding: 8px;
-}
-.lnr-ph-x2 {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.mt-auto {
-  margin-top: auto;
-}
-
-.lnr-pos-r {
-  position: relative;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -2150,6 +2162,13 @@ requests md-input-container {
   background: #fff;
 }
 
+.lnr-message-form md-input-container textarea {
+  background: #fff;
+  padding: 7px 16px;
+  max-height: 85px;
+  overflow: auto;
+}
+
 .lnr-message-form .md-errors-spacer {
   display: none;
 }
@@ -2303,22 +2322,6 @@ button.md-primary.md-cancel-button {
 
 .faq p {
   margin-top: 0;
-}
-
-.lnr-garantee {
-  position: relative;
-}
-
-.lnr-garantee md-icon {
-  position: absolute;
-  padding-left: 16px;
-  right: 0;
-}
-
-@media (max-width:760px) {
-  .lnr-garantee md-icon {
-    position: relative;
-  }
 }
 
 #error404 {
@@ -3318,21 +3321,30 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
     padding: 8px;
   }
 
-  .lnr-padding-top-gt-sm {
+  .lnr-gt-sm-pt {
     padding-top: 8px;
   }
 
-  .lnr-double-padding-top-gt-sm {
+  .lnr-gt-sm-pt-x2 {
     padding-top: 16px;
   }
 
-  .lnr-gt-sm-padding-left {
+  .lnr-gt-sm-pl {
     padding-left: 8px;
   }
 
-  .lnr-gt-sm-padding-right {
+  .lnr-gt-sm-pl-x2 {
+    padding-left: 16px;
+  }
+
+  .lnr-gt-sm-pr {
     padding-right: 8px;
   }
+
+  .lnr-gt-sm-pr-x2 {
+    padding-right: 16px;
+  }
+
   .lnr-gt-sm-center {
     text-align: center
   }
@@ -3357,7 +3369,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
     font-size: 14px;
   }
 
-  .lnr-sm-margin-bottom {
+  .lnr-sm-mb {
     margin-bottom: 8px;
   }
 
@@ -3562,16 +3574,16 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   /* ATOMIC STYLES */
 
-  .lnr-xs-p0 {
+  .lnr-xs-p-0 {
     padding: 0;
+  }
+
+  .lnr-xs-m-0 {
+    margin: 0;
   }
 
   .lnr-xs-w100 {
     width: 100%;
-  }
-
-  .lnr-xs-m0 {
-    margin: 0;
   }
 
   .lnr-sc-w-divider > :last-child {

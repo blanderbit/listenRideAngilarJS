@@ -43,12 +43,12 @@
           is-premium-coverage="booking.isPremium">
         </receipt>
         <div
-          class="booking__next-step lnr-margin-lrg"
+          class="booking__next-step lnr-mv lnr-mh-x2"
           layout="column">
           <div
             layout="row"
             layout-align="space-between center"
-            class="lnr-margin-lrg lnr-mb-0"
+            class="lnr-mv lnr-mh-x2 lnr-mb-0"
             hide-gt-sm
             ng-hide="booking.selectedIndex !== 3">
             <span class="md-subhead">{{ 'shared.total' | translate }}</span>
@@ -56,13 +56,13 @@
           </div>
           <p
             ng-hide="booking.selectedIndex !== 3"
-            class="md-body-1 lnr-margin-lrg lnr-mb-0 lnr-center booking__terms">
+            class="md-body-1 lnr-mv lnr-mh-x2 lnr-mb-0 lnr-center booking__terms">
              {{ 'booking.agree-terms' | translate }}
             <a ui-sref="terms" target="_blank">{{ 'booking.agree-terms-link' | translate }}</a>
             <a ui-sref="privacy" target="_blank">{{ 'booking.and-agree-privacy' | translate }}</a>
           </p>
           <md-button
-            class="md-raised md-primary lnr-margin-lrg"
+            class="md-raised md-primary lnr-mv lnr-mh-x2"
             ng-disabled="booking.nextDisabled()"
             ng-click="booking.nextAction()"
           >
@@ -71,7 +71,7 @@
           </md-button>
         </div>
       </div>
-      <div layout="row" layout-align="end center" class="lnr-margin-top lnr-no-padding">
+      <div layout="row" layout-align="end center" class="lnr-mt lnr-p-0">
         <img
           class="md-card-image lnr-request__img-methods"
           ng-src="app/assets/ui_icons/lnr_ico_lock.svg"

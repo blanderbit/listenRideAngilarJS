@@ -20,7 +20,7 @@
       <div ng-style="{'display': bookingDialog.errors[0] == undefined ? 'none' : ''}">
         <div class="text-error">
           <p class="md-subhead">
-            <md-icon md-font-icon="fa-exclamation-triangle" class="lnr-icn-sm md-color-disabled lnr-margin-right fa"></md-icon>
+            <md-icon md-font-icon="fa-exclamation-triangle" class="lnr-icn-sm md-color-disabled lnr-mr fa"></md-icon>
             {{ 'requests.booking-failed' | translate }}
           </p>
           <ul>
@@ -48,7 +48,7 @@
         <span class="md-body-1">{{ bookingDialog.calendar.duration }}</span>
       </div>
 
-      <md-divider class="lnr-no-padding lnr-margin-lrg-top lnr-margin-lrg-bottom"></md-divider>
+      <md-divider class="lnr-p-0 lnr-mt-x2 lnr-mb-x2"></md-divider>
 
       <h3 class="md-title">{{ 'requests.price' | translate }}</h3>
       <div layout="row" layout-align="space-between center">

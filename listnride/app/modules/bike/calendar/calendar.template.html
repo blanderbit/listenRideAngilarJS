@@ -114,7 +114,9 @@
 <div id="timeRange" layout="row" layout-align="start center" layout-padding ng-if="calendar.bikeFamily != calendar.event.familyId && calendar.startDate">
   <md-input-container flex>
     <label>{{ 'shared.from' | translate }} {{ calendar.startDate | date }}</label>
-    <md-select ng-disabled="calendar.startDate == undefined" ng-change="calendar.onTimeChange('start')"
+    <md-select
+      ng-disabled="calendar.startDate == undefined"
+      ng-change="calendar.onTimeChange('start')"
       ng-model="calendar.startTime"
       placeholder="{{ 'shared.from' | translate }}"
     >
@@ -160,7 +162,7 @@
       <div>{{ calendar.duration }}</div>
     </div>
 
-    <md-divider class="lnr-no-padding lnr-margin-lrg"></md-divider>
+    <md-divider class="lnr-p-0 lnr-mv lnr-mh-x2"></md-divider>
 
     <!-- <div layout="row" layout-align="space-between center">
       <div>{{ 'shared.subtotal' | translate }}</div>
@@ -227,7 +229,7 @@
 
   <md-button
     type="submit"
-    class="md-raised md-primary lnr-margin-lrg"
+    class="md-raised md-primary lnr-mv lnr-mh-x2"
     ng-click="calendar.onBooking()"
     ng-if="!calendar.isFormInvalid()"
     ng-disabled="calendar.owner || calendar.requested"
@@ -236,18 +238,18 @@
   </md-button>
   <md-button
     type="submit"
-    class="md-raised md-primary lnr-margin-lrg"
+    class="md-raised md-primary lnr-mv lnr-mh-x2"
     ng-click="calendar.onBikeRequest()"
     ng-if="calendar.isFormInvalid()"
     ng-disabled="true">
     {{ 'calendar.select-timespan' | translate }}
   </md-button>
   <div layout-padding layout="row" ng-if="calendar.insuranceCountry()">
-    <md-icon md-svg-src="app/assets/ui_icons/icn_insurance.svg" class="lnr-icn-md lnr-no-margin"></md-icon>
+    <md-icon md-svg-src="app/assets/ui_icons/icn_insurance.svg" class="lnr-icn-md lnr-m-0"></md-icon>
     <div layout="column">
       <span class="md-body-1">{{ 'calendar.basic-insurance-included' | translate }}</span>
       <a class="lnr-link" ui-sref="trustAndSafety" target="_BLANK">{{ 'shared.learn-more' | translate }}</a>
     </div>
   </div>
-  <!-- <p ng-if="!calendar.authentication.loggedIn()" class="md-caption center-text lnr-margin-lrg">{{ 'calendar.to-request-bike-please' | translate }} {{ 'forms.sign-up' | translate }} {{ 'forms.or' | translate }} {{ 'forms.log-in' | translate }}</p> -->
+  <!-- <p ng-if="!calendar.authentication.loggedIn()" class="md-caption center-text lnr-mv lnr-mh-x2">{{ 'calendar.to-request-bike-please' | translate }} {{ 'forms.sign-up' | translate }} {{ 'forms.or' | translate }} {{ 'forms.log-in' | translate }}</p> -->
 </div>
