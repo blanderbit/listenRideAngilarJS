@@ -164,8 +164,12 @@
   "events": {
     "berlin-triathlon": {
       "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>2 June 2019</b>",
-      "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
-      "meta-description": "Rent a road bike securely online with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need."
+      "meta-title": "Huur een racefiets voor Berlin Triathlon 2019 | listnride",
+      "meta-description": "Huur een racefiets online gemakkelijk en veilig met listnride voor Berlin Triathlon 2019. Kies de perfecte fiets die bij je past."
+    },
+    "berlin-triathlon-xl": {
+      "meta-description": "Huur een racefiets online gemakkelijk en veilig met listnride voor Berlin Triathlon 2019. Kies de perfecte fiets die bij je past.",
+      "meta-title": "Huur een racefiets voor Berlin Triathlon XL 2019 | listnride"
     }
   },
   "lister": {
@@ -382,7 +386,7 @@
       "meta-description": "Founded by bike enthusiasts for their brothers and sisters in spirit."
     },
     "contact-and-help": {
-      "meta-title": "listnride is here for you",
+      "meta-title": "listnride - We zijn er voor jou!",
       "meta-description": "Contact us if you have special questions or need help solving a problem"
     },
     "press": {
