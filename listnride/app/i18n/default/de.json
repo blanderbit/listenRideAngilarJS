@@ -170,12 +170,10 @@
     "berlin-triathlon": {
       "description": "Was: <b>Berlin Triathlon</b> | Wo: <b>Berlin</b> | Wann: <b>2. Juni 2019</b>",
       "meta-title": "Miete dir ein Rennrad für den Berlin Triathlon 2019 | listnride",
-      "meta-description": "Miete ein Rennrad für den Berlin Triathlon 2019 sicher auf listnride. Finde das perfekte Fahrrad für deine Bedürfnisse einfach online."
+      "meta-description": "Miete ein Rennrad für den Berlin Triathlon 2019 einfach online und sicher auf listnride. Wähle das perfekte Rad für deine Bedürfnisse."
     },
     "berlin-triathlon-xl": {
-      "description-delete-me": "Was: <b0>Berlin Triathlon XL</b0>  |  Wo: <b1>Berlin</b1>  |  Wann: <b2>23. Juni 2019</b2>",
-      "text-delete-me": "Du brauchst noch ein Rad für den <a0 href=\"http://www.berlintriathlon-xl.de/\">Berlin Triathlon 2019 XL</a0>? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n<br>\nDu kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und <a1 href=\"/listing-a-bike\">vermiete dein Rad</a1>.",
-      "meta-description": "Mieten Sie ein Rennrad für den Berlin Triathlon XL 2019 sicher auf listnride. Finden Sie das perfekte Fahrrad für Ihre Bedürfnisse einfach online.",
+      "meta-description": "Miete ein Rennrad für den Berlin Triathlon 2019 einfach online und sicher auf listnride. Wähle das perfekte Rad für deine Bedürfnisse.",
       "meta-title": "Miete dir ein Rennrad für den Berlin Triathlon XL 2019 | listnride"
     }
   },
@@ -442,7 +440,7 @@
     "agree-terms-link": "listnride AGBs",
     "footer": {
       "questions": "Du hast Fragen rund ums Mieten von Fahrrädern?",
-      "call-us": "Fragen? Ruf an:\n<a href=\"tel:+49030120870330\">+49 (0)30 120870330</a> an,\nOder\n<a href=\"mailto:contact@listnride.com\">schreib uns</a>.",
+      "call-us": "Fragen? Ruf an:\n<a href=\"tel:+49030120870330\">+49 (0)30 120870330</a> an.\nOder\n<a href=\"mailto:contact@listnride.com\">schreib uns</a>.",
       "email-us": "Oder schreib uns eine E-Mail",
       "support": "listnride Support"
     },
@@ -708,7 +706,7 @@
   "message": {
     "accept": "Akzeptieren",
     "reject": "Ablehnen",
-    "rate": "Bewerten",
+    "rate": "Bewerte",
     "confirm": "Bestätigen",
     "confirm_return": "Rückgabe bestätigen",
     "documents-title": "Versicherungszertifikate",
