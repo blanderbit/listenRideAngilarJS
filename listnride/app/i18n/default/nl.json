@@ -873,6 +873,7 @@
     "list-bike": "Fiets plaatsen",
     "category": {
       "header": "Welke type fiets heb je?",
+      "event": "Eventfietsen",
       "hint": "Kies allereerst de categorie van je fiets. Kies daarna de juiste subcategorie.",
       "label": "Categorie",
       "city": "Stad",
