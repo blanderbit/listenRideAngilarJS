@@ -63,6 +63,7 @@ angular.module('listnride', [
   'cocomatIntegration',
   'leaosIntegration',
   'veloheldIntegration',
+  'swytch',
   'crossride',
   'inVeloVeritas',
   'velothonBikerental',
