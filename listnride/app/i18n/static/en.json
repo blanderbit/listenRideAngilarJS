@@ -526,16 +526,20 @@
       "title": "Rent and test ride Swytch ebikes in Berlin",
       "description": "Choose between 25 mile or the 50 mile range ebikes.",
       "feature-1": {
-        "description": "36V 250W power\nFront hub motor wheel\nHigh torque\n15.5mph top speed",
+        "description": "36V 250W power<br>Front hub motor wheel<br>High torque<br>15.5mph top speed",
         "title": "High Performance"
       },
       "feature-2": {
         "title": "Lightweight",
-        "description": "Instantly removable\nDiscreet hub motor\n3.9 Kg additional weight\nPortable power pack"
+        "description": "Instantly removable<br>Discreet hub motor<br>3.9 Kg additional weight<br>Portable power pack"
       },
       "feature-3": {
         "title": "Long range",
-        "description": "25 or 50 Mile Range\n3-6 Hour Charge\nUSB Output for Phone Charge\nEasy to Charge Port for indoor use"
+        "description": "25 or 50 Mile Range<br>3-6 Hour Charge<br>USB Output for Phone Charge<br>Easy to Charge Port for indoor use"
+      },
+      "find-out-more": {
+        "title": "Learn more about Swytch ebikes",
+        "description": "Order your new <a href=\"//swytchbike.com\" target=\"_blank\">Swytch ebike online</a> and get your listnride rental reimbursed. Find the most frequently asked questions below."
       },
       "faq-question-1": "How often do I have to charge the battery?",
       "faq-answer-1": "The average range of the electric assist is 25 or 50 km depending on which kit you purchase. If you run out of battery, you simply pedal on like you would on a regular bike. Charging the battery from drained to full takes only 3 hours for the 25 mile range kit and 6 hours for the 50 mile range kit. It charges at a rate of about 10 miles an hour.",
@@ -544,7 +548,7 @@
       "faq-question-3": "Can the battery be removed?",
       "faq-answer-3": "Absolutely. The battery is located in the front Power Pack which is instantly removed and easy to carry with you. One of the great benefits of the Swytch kit is that if you decide to ‘Swytch’ back to regular use of the bike, it will feel exactly like a regular ride without any additional drag. And if you leave the Power Pack at home, you will also have a lightweight bike which can be carried due to the small lightweight front motor.",
       "faq-question-4": "Do you sell outside of Europe?",
-      "faq-answer-4": "Yes we sell worldwide. Simply visit <a <a href=\"//swytchbike.com\" target=\"_blank\">swytchbike.com</a> and you can enter your order and address details and see the shipping information. Shipping is FREE for deliveries to UK, EU, USA and Canada.",
+      "faq-answer-4": "Yes we sell worldwide. Simply visit <a href=\"//swytchbike.com\" target=\"_blank\">swytchbike.com</a> and you can enter your order and address details and see the shipping information. Shipping is FREE for deliveries to UK, EU, USA and Canada.",
       "faq-question-5": "How do I convert my bike at home with a Swytch kit?",
       "faq-answer-5": "The Swytch kit is designed to be universal in terms of compatibility (99% of bike frames and wheel sizes can be converted into a Swytch electric bike) and also its easy fit assembly. It only takes about 20 minutes to fit, about as easy as changing a tyre. If you prefer, any bike shop will help you fit your kit.",
       "faq-question-6": "Do you offer a warranty?",
