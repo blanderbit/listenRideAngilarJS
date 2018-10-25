@@ -354,11 +354,18 @@
       "text": "Rapha Super Cross regresa al Parque Olímpico de Múnich los días 29 y 30 de octubre para la tercera edición de lo que se ha convertido rápidamente en un legendario festival de ciclocross. Si deseas participar pero no tiene la bici correcta, puedes alquilar una a través de listnride. Hay entusiastas de la bicicleta como tú que ofrecen las bicicletas que puedes ver a continuación. Puedes solicitar y reservar los recorridos antes del evento y recoger la bici según lo acordado con el propietario. Los dueños de las bicis también pueden ofrecer en alquiler las bicis que no usen y así ganar algo de dinero mientras conocen a personas interesantes que participan en el evento. ¡Conviértete en parte de nuestra creciente comunidad!"
     },
     "berlin-triathlon": {
-      "title": "Rent a road bike for Berlin Triathlon 2019"
+      "title": "Rent a road bike for Berlin Triathlon 2019",
+      "text": "You need a road bike for <a href=\"//berlin-triathlon.de/\" target=\"_blank\">Berlin Triathlon 2019</a>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br><br>\nYou can’t participate? Help out someone in need. <a href=\"/listing-a-bike\" target=\"_blank\">List your bike</a> and make some extra pocket money! "
     },
     "berlin-triathlon-xl": {
       "title": "Rent a road bike for Berlin Triathlon XL 2019",
-      "description": "What: <b0>Berlin Triathlon XL</b0>  |  Where: <b1>Berlin</b1>  |  When: <b2>23 June 2019</b2>"
+      "description": "What: <b0>Berlin Triathlon XL</b0>  |  Where: <b1>Berlin</b1>  |  When: <b2>23 June 2019</b2>",
+      "text": "Do you need a road bike for <a href=\"//berlintriathlon-xl.de/\" target=\"_blank\">Berlin Triathlon 2019 XL</a>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br><br>\nYou can’t participate? Help out someone in need.  <a href=\"/listing-a-bike\" target=\"_blank\">List your bike</a> and make some extra pocket money!"
+    },
+    "vatternrundan": {
+      "title": "Rent a road bike for Vätternrundan 2019",
+      "description": "What: <b>Vätternrundan 2019</b> |  Where: <b>Motala, Sweden</b1>  |  When: <b>7-15 June 2019</b>",
+      "text": "Do you need a road bike for <a href=\"http://vatternrundan.se/en/\" target=\"blank\">Vätternrundan</a>? The world’s largest recreational bike ride with start and finish in Motala, Sweden. We have a bike for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that. <br/><br/>\nThe 300 kilometres around lake Vättern will test the riders to their limits. Participants from all over the world come together every June in what can best be described as a celebration of cycling-sports! Together with Halvvättern 150 km, Tjejvättern 100 km, Vätternrundan 100 km and MTB-Vättern, this event attracts almost 37,000 participants annually.\n<br/><br/>\nYou can’t participate? Help out someone in need. <a href=\"/listing-a-bike\">List your bike</a> and make some extra pocket money!"
     },
     "toros-de-gravel": {
       "title": "Alquila una bicicleta de gravel para Toros de Gravel",
