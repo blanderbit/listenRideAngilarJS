@@ -519,6 +519,22 @@
       "no-bikes-found": "Vaya ... desafortunadamente todavía no se han publicado bicicletas en esta ubicación.",
       "faq": "Preguntas frecuentes"
     },
+    "swytch": {
+      "title": "Rent and test ride Swytch ebikes in Berlin",
+      "description": "Choose between 25 mile or the 50 mile range ebikes.\n",
+      "feature-1": {
+        "description": "36V 250W power\nFront hub motor wheel\nHigh torque\n15.5mph top speed",
+        "title": "High Performance"
+      },
+      "feature-2": {
+        "title": "Lightweight",
+        "description": "Instantly removable\nDiscreet hub motor\n3.9 Kg additional weight\nPortable power pack"
+      },
+      "feature-3": {
+        "title": "Long range",
+        "description": "25 or 50 Mile Range3-6 Hour ChargeUSB Output for Phone ChargeEasy to Charge Port for indoor use"
+      }
+    },
     "veloheld.hero-description": "Test veloheld bikes and experience the pure aesthetics and functional techniques of a custom made steel bike: road bike, cyclocross bike or city bike!",
     "veloheld": {
       "title": "veloheld: Your individual bike",
