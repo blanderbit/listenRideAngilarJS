@@ -883,6 +883,7 @@
     "list-bike": "Rad einstellen",
     "category": {
       "header": "In welche Kategorie passt dein Rad?",
+      "event": "Event-Räder",
       "hint": "Wähle zuerst die Kategorie deines Rads. Wähle anschließend die passende Unterkategorie.",
       "label": "Kategorie",
       "city": "Stadt",
