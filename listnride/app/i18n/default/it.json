@@ -172,6 +172,10 @@
     "berlin-triathlon-xl": {
       "meta-description": "Noleggia una bici da corsa online in sicurezza con listnride per il Triathlon XL di Berlino 2019. Scegli la bici perfetta per te.",
       "meta-title": "Noleggia una bici da strada per il Triathlon XL di Berlino 2019 | listnride"
+    },
+    "vatternrundan": {
+      "meta-title": "Rent a road bike for Vätternrundan 2019 | listnride",
+      "meta-description": "Rent a road bike securely online with listnride for Vätternrundan 2019. Choose the perfect bike that fits your need!"
     }
   },
   "lister": {
@@ -324,6 +328,10 @@
       "ampler": {
         "meta-title": "E-Bike Test ",
         "meta-descr": "Prova a guidare una e-bike oggi! Le ebikes di Ampler sono disponibili su listnride. Noleggia uno a Amsterdam, Berlino, Düsseldorf, Monaco o Zurigo."
+      },
+      "swytch": {
+        "meta-title": "Rent and test ride Swytch ebikes in Berlin | listnride",
+        "meta-description": "Test ride a Swytch ebike today! The ebikes from Swytch are available to rent on listnride in Berlin!"
       },
       "leaos": {
         "meta-title": "Noleggia e prova le E-Bikes Leaos a Monaco di Baviera, Dusseldorf e Bolzano",
@@ -864,6 +872,7 @@
     "list-bike": "Registra la mia bicicletta",
     "category": {
       "header": "Qual è la categoria della tua bicicletta?",
+      "event": "Biciclette per eventi",
       "hint": "In primo luogo, selezionare la categoria della tua bicicletta. Quindi selezionare la sotto categoria giusta.",
       "label": "Categoria",
       "city": "Città",

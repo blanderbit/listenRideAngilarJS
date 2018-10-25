@@ -175,6 +175,10 @@
     "berlin-triathlon-xl": {
       "meta-description": "Miete ein Rennrad für den Berlin Triathlon 2019 einfach online und sicher auf listnride. Wähle das perfekte Rad für deine Bedürfnisse.",
       "meta-title": "Miete dir ein Rennrad für den Berlin Triathlon XL 2019 | listnride"
+    },
+    "vatternrundan": {
+      "meta-title": "Rent a road bike for Vätternrundan 2019 | listnride",
+      "meta-description": "Rent a road bike securely online with listnride for Vätternrundan 2019. Choose the perfect bike that fits your need!"
     }
   },
   "lister": {
@@ -331,6 +335,10 @@
       "ampler": {
         "meta-title": "E Bike Test Programm",
         "meta-descr": "Teste noch heute ein Ampler E-bike! Die Elektrofahrräder stehen jetzt zum Testen in Amsterdam Berlin, Düsseldorf, München und Zürich für dich bereit."
+      },
+      "swytch": {
+        "meta-title": "Rent and test ride Swytch ebikes in Berlin | listnride",
+        "meta-description": "Test ride a Swytch ebike today! The ebikes from Swytch are available to rent on listnride in Berlin!"
       },
       "leaos": {
         "meta-title": "Mieten und testen Sie die Leaos E-Bikes in München, Düsseldorf und Bozen",
@@ -875,6 +883,7 @@
     "list-bike": "Rad einstellen",
     "category": {
       "header": "In welche Kategorie passt dein Rad?",
+      "event": "Event-Räder",
       "hint": "Wähle zuerst die Kategorie deines Rads. Wähle anschließend die passende Unterkategorie.",
       "label": "Kategorie",
       "city": "Stadt",
