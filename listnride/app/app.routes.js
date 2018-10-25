@@ -484,6 +484,25 @@
       });
 
       $stateProvider.state({
+        name: 'vatternrundan',
+        url: '/vatternrundan',
+        template: '<vatternrundan></vatternrundan>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.vatternrundan.meta-title", "events.vatternrundan.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.vatternrundan.meta-title"]);
+                ngMeta.setTag("description", translations["events.vatternrundan.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
         name: 'supercrossMunich',
         url: '/supercross-munich',
         template: '<supercross-munich></supercross-munich>',

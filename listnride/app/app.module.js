@@ -82,6 +82,7 @@ angular.module('listnride', [
   'torosDeGravel',
   'berlinTriathlon',
   'berlinTriathlonXl',
+  'vatternrundan',
   'eroicaGaiole',
   'filter',
   'bikeSorter',
