@@ -299,7 +299,7 @@
         "question-8": "Ci sono restrizioni di copertura ?",
         "answer-8": "In alcuni casi di danni potrebbe esserci una riduzione dell'indennizzo pagato, ad esempio:\n<br>\n<ul>\n<li>In caso di danni che non influiscono sull'usabilità\n<li>In caso di furto semplice, se la tua bicicletta non è stata protetta nel solito modo.\n</ul>\n<p>\nIn ogni caso, il danno causato da uno dei seguenti è escluso dalla copertura assicurativa:\n<br>\n<ul>\n<li>Azioni intenzionali da parte tua\n<li>Manipolazione del sistema di guida (ad esempio sintonizzazione)\n</ul>",
         "question-9": "Quali sono i miei obblighi?",
-        "answer-9": "Ad esempio, ci sono i seguenti obblighi:\n        <br>\n        <ul>\n            <li>Nel caso di un evento assicurato, devi fornire a hepster informazioni complete e veritiere </li>\n            <li>Notifica immediatamente l'eventuale rifiuto di un reclamo </li>\n        </ul>",
+        "answer-9": "Ad esempio, ci sono i seguenti obblighi:\n        <br>\n        <ul>\n            <li>Nel caso di un evento assicurato, devi fornire a hepster informazioni complete e veritiere </li>\n            <li> Informare immediatamente hepster di qualsiasi sinistro  </li>\n        </ul>",
         "question-1": "Quanto costa l'assicurazione di base?",
         "tabname": "Per il noleggiante",
         "answer-1": "Il costo dell'assicurazione di base è pari solo allo 0,1% del valore assicurativo della bicicletta che hai prenotato.\n<br>\nSe una bici è assicurata fino a 1.000 €, allora si paga esattamente un euro per ogni giorno di noleggio per l'assicurazione di base.",
@@ -357,12 +357,17 @@
     },
     "berlin-triathlon": {
       "title": "Noleggia una bici da strada per il Triathlon di Berlino 2019",
-      "text": "Hai bisogno di una bici da strada per\n        <a href=\"//berlin-triathlon.de/\" target=\"_blank\">il Triathlon di Berlino 2019 </a>\n        ? Ne abbiamo uno per te! Insieme alla community di listnride, forniamo bici da strada adatte che puoi facilmente noleggiare per tutto il tempo che vuoi. Basta scegliere una delle bici qui sotto, richiederla per il periodo richiesto e ritirarla quando sarà il momento. Semplice.\n        <br>\n        Non puoi partecipare? Aiuta qualcuno che ha bisogno.\n        <a href=\"/listing-a-bike\" target=\"_blank\">Registra la tua bici </a>\n        e guadagna qualche soldo in più!"
+      "text": "Hai bisogno di una bici da strada per <a href=\"//berlin-triathlon.de/\" target=\"_blank\">il Triathlon di Berlino 2019 </a>? Ne abbiamo uno per te! Insieme alla community di listnride, forniamo bici da strada adatte che puoi facilmente noleggiare per tutto il tempo che vuoi. Basta scegliere una delle bici qui sotto, richiederla per il periodo richiesto e ritirarla quando sarà il momento. Semplice.\n<br><br>\n Non puoi partecipare? Aiuta qualcuno che ha bisogno.\n<a href=\"/listing-a-bike\" target=\"_blank\">Registra la tua bici</a> e guadagna qualche soldo in più!"
     },
     "berlin-triathlon-xl": {
       "title": "Noleggia una bici da strada per il Triathlon XL di Berlino 2019",
       "description": "Cosa: <b>Triathlon XL di Berlino</b>  |  Dove: <b>Berlino</b>  |  Quando: <b>23 Giugno 2019</b>",
-      "text": "Hai bisogno di una bici da strada per\n        <a href=\"//berlintriathlon-xl.de/\" target=\"_blank\">Triathlon XL di Berlino 2019 </a>\n        ? Ne abbiamo uno per te! Insieme alla community di listnride, forniamo bici da strada adatte che puoi facilmente noleggiare per tutto il tempo che vuoi. Basta scegliere una delle bici qui sotto, richiederla per il periodo richiesto e ritirarla quando sarà il momento. Semplice .\n        <br1>\n        Non puoi partecipare? Aiuta qualcuno che ha bisogno.\n       <a href=\"/listing-a-bike\" target=\"_blank\">Registra la tua bici </a>e guadagna qualche soldo in più!"
+      "text": "Hai bisogno di una bici da strada per <a href=\"//berlintriathlon-xl.de/\" target=\"_blank\">Triathlon XL di Berlino 2019</a>? Ne abbiamo uno per te! Insieme alla community di listnride, forniamo bici da strada adatte che puoi facilmente noleggiare per tutto il tempo che vuoi. Basta scegliere una delle bici qui sotto, richiederla per il periodo richiesto e ritirarla quando sarà il momento. Semplice.\n<br><br>\nNon puoi partecipare? Aiuta qualcuno che ha bisogno. <a href=\"/listing-a-bike\" target=\"_blank\">Registra la tua bici</a> e guadagna qualche soldo in più!"
+    },
+    "vatternrundan": {
+      "title": "Rent a road bike for Vätternrundan 2019",
+      "description": "What: <b>Vätternrundan 2019</b> |  Where: <b>Motala, Sweden</b1>  |  When: <b>7-15 June 2019</b>",
+      "text": "Do you need a road bike for <a href=\"http://vatternrundan.se/en/\" target=\"blank\">Vätternrundan</a>? The world’s largest recreational bike ride with start and finish in Motala, Sweden. We have a bike for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that. <br/><br/>\nThe 300 kilometres around lake Vättern will test the riders to their limits. Participants from all over the world come together every June in what can best be described as a celebration of cycling-sports! Together with Halvvättern 150 km, Tjejvättern 100 km, Vätternrundan 100 km and MTB-Vättern, this event attracts almost 37,000 participants annually.\n<br/><br/>\nYou can’t participate? Help out someone in need. <a href=\"/listing-a-bike\">List your bike</a> and make some extra pocket money!"
     },
     "toros-de-gravel": {
       "title": "Noleggia una bici Gravel per il Toros de Gravel",
