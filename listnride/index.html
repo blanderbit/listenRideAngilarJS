@@ -209,6 +209,7 @@
   <script src="app/modules/events/cape-argus/cape-argus.component.js"></script>
   <script src="app/modules/events/berlin-triathlon/berlin-triathlon.component.js"></script>
   <script src="app/modules/events/berlin-triathlon-xl/berlin-triathlon-xl.component.js"></script>
+  <script src="app/modules/events/vatternrundan/vatternrundan.component.js"></script>
   <script src="app/modules/events/toros-de-gravel/toros-de-gravel.component.js"></script>
   <script src="app/modules/events/eroica-gaiole/eroica-gaiole.component.js"></script>
   <script src="app/modules/faq/faq.component.js"></script>
@@ -287,7 +288,7 @@
 </head>
 <body layout="column">
   <!-- hidden image for some social which don't recognize og:image -->
-  <img style="display: none" src="{{ngMeta['og:image'] ? ngMeta['og:image'] : 'app/assets/ui_images/opengraph/landing.jpg'}}" alt="Page main image">
+  <img style="display: none" ng-src="{{ngMeta['og:image'] ? ngMeta['og:image'] : 'app/assets/ui_images/opengraph/landing.jpg'}}" alt="Page main image">
 
   <!-- IE BROWSER MODAL -->
   <div id="ie-warning" style="display: none" class="lnr-IE-warning-overlay">
