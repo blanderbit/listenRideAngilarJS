@@ -883,6 +883,7 @@
     "list-bike": "List my bike",
     "category": {
       "header": "What is your bike category?",
+      "event": "Event bikes",
       "hint": "First, select the category of your bike. Then select the right subcategory.",
       "label": "Category",
       "city": "City",

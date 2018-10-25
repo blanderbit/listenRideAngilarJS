@@ -872,6 +872,7 @@
     "list-bike": "Registra la mia bicicletta",
     "category": {
       "header": "Qual è la categoria della tua bicicletta?",
+      "event": "Biciclette per eventi",
       "hint": "In primo luogo, selezionare la categoria della tua bicicletta. Quindi selezionare la sotto categoria giusta.",
       "label": "Categoria",
       "city": "Città",
