@@ -16,6 +16,7 @@ angular.module('whyteIntegration', []).component('whyte', {
         whyte.getBikes = getBikes;
 
         // VARIABLES
+        // TODO: change on another familyId or create another request based on brands endpoint
         whyte.familyId = 34;
 
         // hero slider

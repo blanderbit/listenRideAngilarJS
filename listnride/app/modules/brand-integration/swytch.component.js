@@ -16,6 +16,7 @@ angular.module('swytchIntegration', []).component('swytch', {
         swytch.getBikes = getBikes;
 
         // VARIABLES
+        // TODO: change on another familyId or create another request based on brands endpoint
         swytch.familyId = 34;
 
         // hero slider
