@@ -19,7 +19,7 @@ angular.module('swytchIntegration', []).component('swytch', {
 
         // VARIABLES
         // TODO: change on another familyId or create another request based on brands endpoint
-        swytch.familyId = 34;
+        swytch.familyId = 15;
 
         // hero slider
         swytch.cbSlider = [
@@ -94,21 +94,21 @@ angular.module('swytchIntegration', []).component('swytch', {
         return swytch.faqs = [col1, col2];
       }
 
-      function transformToKeys(str){
-        return str.replace(/\s+/g, '_').toLowerCase();;
+      function jsUcfirst(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
       }
 
       function getBikes() {
-        api.get('/rides?family=' + swytch.familyId).then(
+        api.get('/brand_pages/' + swytch.familyId).then(
           function (success) {
             _.forEach(success.data.bikes, function(bike){
-              if (!swytch.cities.hasOwnProperty(bike.city)){
-                swytch.cities[bike.city] = {
+              if (!swytch.cities.hasOwnProperty(bike.en_city)){
+                swytch.cities[bike.en_city] = {
                   bikes:[]
                 };
               }
-              swytch.cities[bike.city].bikes.push(bike);
-              swytch.cities[bike.city].cityName = transformToKeys(bike.city);
+              swytch.cities[bike.en_city].bikes.push(bike);
+              swytch.cities[bike.en_city].cityName = jsUcfirst(bike.en_city);
             });
             swytch.currentShop = swytch.cities[Object.keys(swytch.cities)[0]];
           },

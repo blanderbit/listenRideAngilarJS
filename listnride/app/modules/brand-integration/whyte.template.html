@@ -48,13 +48,12 @@
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <md-menu md-position-mode="target bottom">
         <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">
-          <p class="md-right-arrow md-headline lnr-m-0">&nbsp;&nbsp;{{ 'shared.' + whyte.currentShop.cityName |
-            translate}}</p>
+          <p class="md-right-arrow md-headline lnr-m-0">&nbsp;&nbsp;{{ whyte.currentShop.cityName }}</p>
         </md-button>
         <md-menu-content width="3">
           <md-menu-item ng-repeat="(city, v) in whyte.cities">
             <md-button ng-disabled="!v.bikes.length" md-no-ink ng-click="whyte.currentShop = whyte.cities[city]">
-              <p class="md-subhead lnr-m-0">{{ 'shared.' + v.cityName | translate}}</p>
+              <p class="md-subhead lnr-m-0">{{ v.cityName }}</p>
             </md-button>
           </md-menu-item>
         </md-menu-content>

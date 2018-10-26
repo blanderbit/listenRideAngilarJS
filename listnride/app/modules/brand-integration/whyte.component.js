@@ -19,7 +19,7 @@ angular.module('whyteIntegration', []).component('whyte', {
 
         // VARIABLES
         // TODO: change on another familyId or create another request based on brands endpoint
-        whyte.familyId = 34;
+        whyte.familyId = 16;
 
         // hero slider
         whyte.cbSlider = [
@@ -50,21 +50,21 @@ angular.module('whyteIntegration', []).component('whyte', {
         return whyte.faqs = [col1, col2];
       }
 
-      function transformToKeys(str) {
-        return str.replace(/\s+/g, '_').toLowerCase();;
+      function jsUcfirst(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
       }
 
       function getBikes() {
-        api.get('/rides?family=' + whyte.familyId).then(
+        api.get('/brand_pages/' + whyte.familyId).then(
           function (success) {
             _.forEach(success.data.bikes, function (bike) {
-              if (!whyte.cities.hasOwnProperty(bike.city)) {
-                whyte.cities[bike.city] = {
+              if (!whyte.cities.hasOwnProperty(bike.en_city)) {
+                whyte.cities[bike.en_city] = {
                   bikes: []
                 };
               }
-              whyte.cities[bike.city].bikes.push(bike);
-              whyte.cities[bike.city].cityName = transformToKeys(bike.city);
+              whyte.cities[bike.en_city].bikes.push(bike);
+              whyte.cities[bike.en_city].cityName = jsUcfirst(bike.en_city);
             });
             whyte.currentShop = whyte.cities[Object.keys(whyte.cities)[0]];
           },
