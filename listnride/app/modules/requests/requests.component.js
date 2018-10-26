@@ -434,7 +434,7 @@ angular.module('requests', ['infinite-scroll'])
             "rating": {
               "score": ratingDialog.rating,
               "message": ratingDialog.message,
-              "author_id": $localStorage.userId,
+              "author_id": $localStorage.userId
             }
           };
           var newStatus;
