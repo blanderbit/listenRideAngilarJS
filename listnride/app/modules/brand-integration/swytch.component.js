@@ -20,9 +20,9 @@ angular.module('swytchIntegration', []).component('swytch', {
 
         // hero slider
         swytch.cbSlider = [
-          'app/assets/ui_images/brand-integration/swytch/lnr_swytch_hero01.jpg',
-          'app/assets/ui_images/brand-integration/swytch/lnr_swytch_hero02.jpg',
-          'app/assets/ui_images/brand-integration/swytch/lnr_swytch_hero03.jpg',
+          'app/assets/ui_images/brand-integration/swytch/lnr_swytch_hero_image_01.jpg',
+          'app/assets/ui_images/brand-integration/swytch/lnr_swytch_hero_image_02.jpg',
+          'app/assets/ui_images/brand-integration/swytch/lnr_swytch_hero_image_03.jpg',
         ];
         // FAQ keys
         swytch.faqs = [
