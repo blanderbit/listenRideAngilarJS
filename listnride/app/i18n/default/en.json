@@ -178,7 +178,7 @@
     },
     "vatternrundan": {
       "meta-title": "Rent a road bike for Vätternrundan 2019 | listnride",
-      "meta-description": "Rent a road bike securely online with listnride for Vätternrundan 2019. Choose the perfect bike that fits your need!"
+      "meta-description": "With listnride you can securely rent a road bike online for Vätternrundan 2019. Choose the perfect bike that fits your needs!"
     }
   },
   "lister": {
@@ -725,7 +725,7 @@
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{timespan}}. Agree on further details using the chat.",
     "11": "The booking was cancelled. ",
-    "3": "You've accepted the request. The bike is now booked and you'll rent it out from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.\n<br>\nName: {{user.first_name}} {{user.last_name}}\n<br>\nPhone: {{user.pretty_phone_number}}\n<br>Address: {{user.street}}, {{user.zip}} {{user.city}}, {{user.country}}",
+    "3": "You've accepted the request. The bike is now booked and you'll rent it out from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.\n<br>\nName: {{user.first_name}} {{user.last_name}}\n<br>\nPhone: {{user.pretty_phone_number}}\n<br>Address: <a href=\"//www.google.com/maps/search/?api=1&query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}} {{user.city}}, {{user.country}} </a> ",
     "5": "Thanks for confirming retrieval of your bike and rating {{user.first_name}}. The rental was successful and the money will get transferred to the bank account you provided during the next 7 working days.<br><br>In case of any further questions or feedback, we’d love to receive them under <a mailto:\"hello@listnride.com\">hello@listnride.com</a>",
     "8": "You rejected the request. Please tell the rider why you can't rent him the bike.",
     "9": "Unfortunately {{user.first_name}} didn't confirm the request",
