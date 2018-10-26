@@ -521,6 +521,26 @@
       "no-bikes-found": "Ups .., hier werden leider noch keine Fahrräder angeboten.",
       "faq": "Die häufigsten Fragen"
     },
+    "whyte": {
+      "title": "Rent and test ride a Whyte bike in Berlin",
+      "description": "The ten out of tens and five out of fives review scores our bikes have been getting are partly down to another set of numbers. The ones that make up Whyte’s unique geometry and ride character. Whether it’s our Alp taming, EWS thoroughbred G170 series bikes, our entry level 600 series trail hardtails or our mould-breaking, award-winning Wessex road bikes every Whyte is designed to create a unique chemistry with its rider to let you go faster, further and more comfortably in total confidence.",
+      "feature-1": {
+        "title": "They Whyte Way",
+        "description": "The true definition of freedom is that you can do what you want when you want. At Whyte that means a bike designed to work at its best whenever you need it to and whatever the weather. Obviously it helps massively that we’re a proudly British company, who do the vast amount of our relentless development riding to work in the same - often grim - conditions as you."
+      },
+      "feature-2": {
+        "title": "Whyte Works",
+        "description": "Building an ever ready bike isn’t just about the frame, it’s about equipping it right too. We don’t just mean blindly jumping on every passing parts bandwagon and asking you to make sense of the mess either. Instead Whyte have always worked way ahead of the curve with similarly radical component designers so we can integrate their innovations with ours and hit the ground running while others are still scrambling to react."
+      },
+      "feature-3": {
+        "title": "Whyte Racing",
+        "description": "Nothing sharpens your focus like racing and nothing sharpens our appetite to be the best we can than pushing our bikes and ourselves to the limit. Our Whyte team have scored multiple wins and podium positions from the lunatic 38km long glacier to valley bottom Mega Avalanche enduro to National championship XC or ultra distance MTB Orienteering and endurance racing events."
+      },
+      "find-out-more": {
+        "title": "Learn more about Whyte bikes",
+        "description": "Order your new <a href=\"//whytebikes.de\" target=\"_blank\">Whyte bike online</a> and get your listnride rental reimbursed."
+      }
+    },
     "swytch": {
       "title": "Rent and test ride Swytch ebikes in Berlin",
       "description": "Choose between 25 mile or the 50 mile range ebikes.",
