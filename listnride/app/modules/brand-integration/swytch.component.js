@@ -3,12 +3,14 @@
 angular.module('swytchIntegration', []).component('swytch', {
   templateUrl: 'app/modules/brand-integration/swytch.template.html',
   controllerAs: 'swytch',
-  controller: ['$translatePartialLoader', 'api', 'ENV', 'ngMeta', 'notification',
-    function SwytchController($tpl, api, ENV, ngMeta, notification) {
+  controller: ['$translatePartialLoader', '$translate', 'api', 'ENV', 'ngMeta', 'notification',
+    function SwytchController($tpl, $translate, api, ENV, ngMeta, notification) {
       var swytch = this;
+
       $tpl.addPart(ENV.staticTranslation);
-      // Open Graph Image
-      ngMeta.setTag("og:image", 'https://www.listnride.com/app/assets/ui_images/brand-integration/swytch/lnr_swytch_opengraph.jpg');
+      ngMeta.setTitle($translate.instant("meta.brand-integration.swytch.meta-title"));
+      ngMeta.setTag("description", $translate.instant("meta.brand-integration.swytch.meta-description"));
+      ngMeta.setTag("og:image", 'https://www.listnride.com/app/assets/ui_images/brand-integration/swytch/lnr_swytch_opengraph_image.jpg');
 
       swytch.$onInit = function() {
         // METHODS

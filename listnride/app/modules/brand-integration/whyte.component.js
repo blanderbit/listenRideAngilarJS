@@ -3,16 +3,18 @@
 angular.module('whyteIntegration', []).component('whyte', {
   templateUrl: 'app/modules/brand-integration/whyte.template.html',
   controllerAs: 'whyte',
-  controller: ['$translatePartialLoader', 'api', 'ENV', 'ngMeta', 'notification',
-    function WhyteController($tpl, api, ENV, ngMeta, notification) {
+  controller: ['$translatePartialLoader', '$translate', 'api', 'ENV', 'ngMeta', 'notification',
+    function WhyteController($tpl, $translate, api, ENV, ngMeta, notification) {
       var whyte = this;
       $tpl.addPart(ENV.staticTranslation);
       // Open Graph Image
+      ngMeta.setTitle($translate.instant("meta.brand-integration.whyte.meta-title"));
+      ngMeta.setTag("description", $translate.instant("meta.brand-integration.whyte.meta-description"));
       ngMeta.setTag("og:image", 'https://www.listnride.com/app/assets/ui_images/brand-integration/whyte/lnr_whyte_opengraph.jpg');
 
       whyte.$onInit = function () {
         // METHODS
-        whyte.splitFaq = splitFaq;
+        // whyte.splitFaq = splitFaq;
         whyte.getBikes = getBikes;
 
         // VARIABLES
@@ -21,53 +23,10 @@ angular.module('whyteIntegration', []).component('whyte', {
 
         // hero slider
         whyte.cbSlider = [
-          'app/assets/ui_images/brand-integration/whyte/lnr_whyte_hero01.jpg',
-          'app/assets/ui_images/brand-integration/whyte/lnr_whyte_hero02.jpg',
-          'app/assets/ui_images/brand-integration/whyte/lnr_whyte_hero03.jpg',
-        ];
-        // FAQ keys
-        whyte.faqs = [{
-            question: 'brand-integration.whyte.faq-question-1',
-            answer: 'brand-integration.whyte.faq-answer-1',
-          },
-          {
-            question: 'brand-integration.whyte.faq-question-2',
-            answer: 'brand-integration.whyte.faq-answer-2',
-          },
-          {
-            question: 'brand-integration.whyte.faq-question-3',
-            answer: 'brand-integration.whyte.faq-answer-3',
-          },
-          {
-            question: 'brand-integration.whyte.faq-question-4',
-            answer: 'brand-integration.whyte.faq-answer-4',
-          },
-          {
-            question: 'brand-integration.whyte.faq-question-5',
-            answer: 'brand-integration.whyte.faq-answer-5',
-          },
-          {
-            question: 'brand-integration.whyte.faq-question-6',
-            answer: 'brand-integration.whyte.faq-answer-6',
-          }, {
-            question: 'brand-integration.whyte.faq-question-7',
-            answer: 'brand-integration.whyte.faq-answer-7',
-          }, {
-            question: 'brand-integration.whyte.faq-question-8',
-            answer: 'brand-integration.whyte.faq-answer-8',
-          }, {
-            question: 'brand-integration.whyte.faq-question-9',
-            answer: 'brand-integration.whyte.faq-answer-9',
-          }, {
-            question: 'brand-integration.whyte.faq-question-10',
-            answer: 'brand-integration.whyte.faq-answer-10',
-          }, {
-            question: 'brand-integration.whyte.faq-question-11',
-            answer: 'brand-integration.whyte.faq-answer-11',
-          }, {
-            question: 'brand-integration.whyte.faq-question-12',
-            answer: 'brand-integration.whyte.faq-answer-12',
-          }
+          'app/assets/ui_images/brand-integration/whyte/lnr_whyte_hero_image_01.jpg',
+          'app/assets/ui_images/brand-integration/whyte/lnr_whyte_hero_image_02.jpg',
+          'app/assets/ui_images/brand-integration/whyte/lnr_whyte_hero_image_03.jpg',
+          'app/assets/ui_images/brand-integration/whyte/lnr_whyte_hero_image_04.jpg'
         ];
 
         // GROUPED BIKES
@@ -75,7 +34,7 @@ angular.module('whyteIntegration', []).component('whyte', {
         whyte.cities = {};
 
         // invocations
-        whyte.splitFaq();
+        // whyte.splitFaq();
         whyte.getBikes();
       }
 
