@@ -175,7 +175,7 @@
     },
     "vatternrundan": {
       "meta-title": "Rent a road bike for Vätternrundan 2019 | listnride",
-      "meta-description": "Rent a road bike securely online with listnride for Vätternrundan 2019. Choose the perfect bike that fits your need!"
+      "meta-description": "With listnride you can securely rent a road bike online for Vätternrundan 2019. Choose the perfect bike that fits your needs!"
     }
   },
   "lister": {
@@ -328,6 +328,10 @@
       "ampler": {
         "meta-title": "E-Bike Test ",
         "meta-descr": "Prova a guidare una e-bike oggi! Le ebikes di Ampler sono disponibili su listnride. Noleggia uno a Amsterdam, Berlino, Düsseldorf, Monaco o Zurigo."
+      },
+      "whyte": {
+        "meta-title": "Rent and test ride Whyte bikes in Berlin | listnride",
+        "meta-description": "Test ride a Whyte bike today! The gravel bikes and mountain bikes from Whyte are available to rent on listnride in Berlin!"
       },
       "swytch": {
         "meta-title": "Rent and test ride Swytch ebikes in Berlin | listnride",
@@ -715,7 +719,7 @@
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} di {{user.city}} vorrebbe noleggiare la tua <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> dal {{timespan}}. Accetto ulteriori dettagli utilizzando la chat.",
     "11": "La prenotazione è stata cancellata.",
-    "3": "{{user.zip}} Hai accettato la richiesta. La bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I recapiti sono i seguenti, li abbiamo inviati via e-mail. <br><br>Nome:\n{{user.first_name}} {{user.last_name}}<br>Telefono: {{user.pretty_phone_number}} <br>Indirizzo: {{user.street}}, {{user.city}}, {{user.country}}",
+    "3": "{{user.zip}} Hai accettato la richiesta. La bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I recapiti sono i seguenti, li abbiamo inviati via e-mail. <br><br>Nome:\n{{user.first_name}} {{user.last_name}}<br>Telefono: {{user.pretty_phone_number}} <br>Indirizzo: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.city}}, {{user.country}}</a>\n",
     "5": "Grazie per aver confermato il recupero della tua bicicletta e della tua valutazione su {{user.first_name}}. Il noleggio è riuscito e i soldi verranno trasferiti al conto bancario fornito durante i prossimi 7 giorni lavorativi. <br><br>In caso di ulteriori domande o commenti, scrivi a <a mailto:=\"hello@listnride.com\">ciao @ listnride.com </a>",
     "8": "Hai respinto la richiesta. Prego scrivi al noleggiante perché non puoi noleggiare la bicicletta.",
     "9": "Purtroppo {{user.first_name}} non ha confermato la richiesta",
