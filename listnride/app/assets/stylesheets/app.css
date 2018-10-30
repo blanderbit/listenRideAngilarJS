@@ -175,6 +175,10 @@ h1.md-subhead {
   margin: 4px 0;
 }
 
+md-dialog {
+  max-height: 95%;
+}
+
 md-select-menu md-content {
   max-height: 300px;
 }
@@ -435,6 +439,34 @@ md-tooltip .md-content {
 /* LNR_CLASSES
 /*-----------------------------------------------------------------------------------*/
 
+.lnr-middle-divider {
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.lnr-middle-divider:before,
+.lnr-middle-divider:after {
+  background-color: rgba(206, 212, 216, 1.0);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.lnr-middle-divider:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.lnr-middle-divider:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
 .lnr-fs0 {
   font-size: 0;
 }
@@ -669,34 +701,6 @@ md-tooltip .md-content {
 .lnr-link:hover,
 .lnr-link:active {
   opacity: 0.65;
-}
-
-.lnr-middle-divider {
-  display: inline-block;
-  overflow: hidden;
-  text-align: center;
-  margin: 24px 0;
-}
-
-.lnr-middle-divider:before,
-.lnr-middle-divider:after {
-  background-color: rgba(206, 212, 216, 1.0);
-  content: "";
-  display: inline-block;
-  height: 1px;
-  position: relative;
-  vertical-align: middle;
-  width: 50%;
-}
-
-.lnr-middle-divider:before {
-  right: 0.5em;
-  margin-left: -50%;
-}
-
-.lnr-middle-divider:after {
-  left: 0.5em;
-  margin-right: -50%;
 }
 
 .lnr-preload-bg {
@@ -2610,10 +2614,6 @@ invite .voucher-link {
 /*-----------------------------------------------------------------------------------*/
 /*  SIGN-UP
 /*-----------------------------------------------------------------------------------*/
-
-.sign-up-links {
-  margin-top: 20px;
-}
 
 .sign-up-tip {
   margin-bottom: 20px;
