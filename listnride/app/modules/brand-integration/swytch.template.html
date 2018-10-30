@@ -91,9 +91,13 @@
       <!-- LEFT COLUMN -->
       <div class="lnr-sm-center lnr-sm-no-vertical-space" flex-gt-sm="45" layout="column" layout-margin>
         <div ng-repeat="f in swytch.faqs[1] track by $index">
-          <h3 class="md-body-2 lnr-clickable" ng-click="swytch['faq-l'+$index] = !swytch['faq-l'+$index]">{{ f.question | translate}}</h3>
+          <h3
+            class="md-body-2 lnr-clickable"
+            ng-click="swytch['faq-l'+$index] = !swytch['faq-l'+$index]"
+            translate="{{ f.question | translate}}">
+          </h3>
           <div ng-show="swytch['faq-l'+$index]">
-            <p>{{ f.answer | translate}}</p>
+            <p translate="{{ f.answer | translate}}"></p>
           </div>
         </div>
       </div>
@@ -101,9 +105,13 @@
       <!-- RIGHT COLUMN -->
       <div class="lnr-sm-center lnr-sm-no-vertical-space" flex-gt-sm="45" layout="column" layout-margin>
         <div ng-repeat="f in swytch.faqs[0] track by $index">
-          <h3 class="md-body-2 lnr-clickable" ng-click="swytch['faq-r'+$index] = !swytch['faq-r'+$index]">{{ f.question | translate}}</h3>
+          <h3
+            class="md-body-2 lnr-clickable"
+            ng-click="swytch['faq-r'+$index] = !swytch['faq-r'+$index]"
+            translate="{{ f.question | translate}}">
+          </h3>
           <div ng-show="swytch['faq-r'+$index]">
-            <p>{{ f.answer | translate}}</p>
+            <p translate="{{ f.answer | translate}}"></p>
           </div>
         </div>
       </div>
