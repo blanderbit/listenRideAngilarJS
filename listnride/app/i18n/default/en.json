@@ -166,6 +166,9 @@
       "subheader": "Meet like-minded and make some pocket money"
     }
   },
+  "test": {
+    "delete-me": "TEST TEXT"
+  },
   "events": {
     "berlin-triathlon": {
       "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>June 2nd 2019</b>",

@@ -366,7 +366,7 @@
     },
     "vatternrundan": {
       "title": "Rent a road bike for Vätternrundan 2019",
-      "description": "What: <b>Vätternrundan 2019</b> |  Where: <b>Motala, Sweden</b1>  |  When: <b>7-15 June 2019</b>",
+      "description": "What: <b>Vätternrundan</b> |  Where: <b>Motala, Sweden</b1> | When: <b>7-15 June 2019</b>",
       "text": "Do you need a road bike for <a href=\"//vatternrundan.se/en/\" target=\"_blank\">Vätternrundan</a>? The world’s largest recreational bike ride with start and finish in Motala, Sweden. We have a bike for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that. <br/><br/>\nThe 300 kilometres around lake Vättern will test the riders to their limits. Participants from all over the world come together every June in what can best be described as a celebration of cycling-sports! Together with Halvvättern 150 km, Tjejvättern 100 km, Vätternrundan 100 km and MTB-Vättern, this event attracts almost 37,000 participants annually.\n<br/><br/>\nYou can’t participate? Help out someone in need.  <a href=\"//listnride.com/listing-a-bike\" target=\"_blank\">List your bike</a> and make some extra pocket money!"
     },
     "toros-de-gravel": {
@@ -517,73 +517,73 @@
   },
   "brand-integration": {
     "shared": {
-      "choose-location": "Wähle eine Stadt",
+      "choose-location": "Wählen Sie einen Teststandort",
       "no-bikes-found": "Ups .., hier werden leider noch keine Fahrräder angeboten.",
       "faq": "Die häufigsten Fragen"
     },
     "whyte": {
-      "title": "Rent and test ride a Whyte bike in Berlin",
-      "description": "The ten out of tens and five out of fives review scores our bikes have been getting are partly down to another set of numbers. The ones that make up Whyte’s unique geometry and ride character. Whether it’s our Alp taming, EWS thoroughbred G170 series bikes, our entry level 600 series trail hardtails or our mould-breaking, award-winning Wessex road bikes every Whyte is designed to create a unique chemistry with its rider to let you go faster, further and more comfortably in total confidence.",
+      "title": "Miete und teste Whyte Bikes in Berlin | listnride",
+      "description": "Die zahlriechen 10- und 5-Sterne Bewertungen, die diese Bikes erhalten, sind auf eine Reihe völlig anderer Zahlen zurückzuführen: Jene, welche Whyte's einzigartige Geometrie und Fahrcharakter ausmachen. Egal, ob Alpenzähmung, EWS-Vollblutbikes der G170-Serie, die Trail-Hardtails der Einstiegs-Serie 600 oder preisgekrönte Wessex-Rennräder, jedes Whyte wurde entwickelt, um eine einzigartige Chemie mit seinem Fahrer, mit dir, zu kreieren: Schneller, weiter und bequemer im Vertrauen.",
       "feature-1": {
-        "title": "They Whyte Way",
-        "description": "The true definition of freedom is that you can do what you want when you want. At Whyte that means a bike designed to work at its best whenever you need it to and whatever the weather. Obviously it helps massively that we’re a proudly British company, who do the vast amount of our relentless development riding to work in the same - often grim - conditions as you."
+        "title": "Die Whyte-Methode",
+        "description": "Die wahre Definition von Freiheit ist, dass du tun kannst, was du willst, wann du willst. Für Whyte Bikes bedeutet das, dass diese so konzipiert sind, dass sie bei jeder Witterung und bei jedem Wetter optimal arbeiten."
       },
       "feature-2": {
-        "title": "Whyte Works",
-        "description": "Building an ever ready bike isn’t just about the frame, it’s about equipping it right too. We don’t just mean blindly jumping on every passing parts bandwagon and asking you to make sense of the mess either. Instead Whyte have always worked way ahead of the curve with similarly radical component designers so we can integrate their innovations with ours and hit the ground running while others are still scrambling to react."
+        "title": "Whyte Bikes Funktionieren",
+        "description": "Um ein immer bereites Fahrrad zu bauen, geht es nicht nur um den Rahmen, sondern auch darum, es richtig auszurichten. Whyte Bikes bedeuten nicht nur, blindlings auf jeden vorbeifahrenden Teilzug aufzuspringen und dann von dir zu verlangen einen Sinn für das Durcheinander zu entwickeln. Stattdessen sind Whyte Bikes mit ähnlich radikalen Komponenten schon immer dem Trend voraus, so dass du dich ganz aufs Fahren konzentrieren kannst, anstatt dich deinem Rad anzupassen."
       },
       "feature-3": {
-        "title": "Whyte Racing",
-        "description": "Nothing sharpens your focus like racing and nothing sharpens our appetite to be the best we can than pushing our bikes and ourselves to the limit. Our Whyte team have scored multiple wins and podium positions from the lunatic 38km long glacier to valley bottom Mega Avalanche enduro to National championship XC or ultra distance MTB Orienteering and endurance racing events."
+        "title": "Whyte Rennen",
+        "description": "Nichts schärft deinen Fokus wie Rennen. Whyte Bikes sind darauf ausgelegt, dich und das Bike bis ans Limit zu bringen. Immer. Das Whyte-Team hat mehrere Siege und Podiumspositionen erzielt, vom wahnsinnigen 38 km langen Gletscher über den Tiefsee-Mega-Avalanche-Enduro bis zu nationalen Cyclocross-Meisterschaften oder Ultra-MTB-Orientierungs- und Langstreckenrennen."
       },
       "find-out-more": {
-        "title": "Learn more about Whyte bikes",
-        "description": "Order your new <a href=\"//whytebikes.de\" target=\"_blank\">Whyte bike online</a> and get your listnride rental reimbursed."
+        "title": "Erfahre mehr über Whyte Bikes",
+        "description": "Bestelle dein neues <a href=\"//whytebikes.de/\" target=\"_blank\">Whyte Fahrrad</a> online und lass dir deine listnride Miete zurückerstatten."
       }
     },
     "swytch": {
-      "title": "Rent and test ride Swytch ebikes in Berlin",
-      "description": "Choose between 25 mile or the 50 mile range ebikes.",
+      "title": "Miete und teste Swytch ebikes in Berlin | listnride",
+      "description": "Wähle zwischen 40km oder den 80km Reichweite.",
       "feature-1": {
-        "description": "36V 250W power<br>Front hub motor wheel<br>High torque<br>15.5mph top speed",
-        "title": "High Performance"
+        "description": "36V 250W Leistung\n<br>\nFrontnabenmotor\n<br>\nHohes Drehmoment\n<br>\n25 km/h Höchstgeschwindigkeit",
+        "title": "Hochleistung"
       },
       "feature-2": {
-        "title": "Lightweight",
-        "description": "Instantly removable<br>Discreet hub motor<br>3.9 Kg additional weight<br>Portable power pack"
+        "title": "Leichtgewicht",
+        "description": "Einfach abnehmbar\n<br>\nDezenter Nabenmotor\n<br>\n3,9 kg zusätzliches Gewicht\n<br>\nTragbares Netzteil"
       },
       "feature-3": {
-        "title": "Long range",
-        "description": "25 or 50 Mile Range<br>3-6 Hour Charge<br>USB Output for Phone Charge<br>Easy to Charge Port for indoor use"
+        "title": "Lange Reichweite",
+        "description": "40 oder 80 km Reichweite\n<br>\n3-6 Stunden Ladedauer\n<br>\nUSB-Anschluss für Smartphone Lader\n<br>\nEinfacher Ladeanschlus für den Innenbereich"
       },
       "find-out-more": {
-        "title": "Learn more about Swytch ebikes",
-        "description": "Order your new <a href=\"//swytchbike.com\" target=\"_blank\">Swytch ebike online</a> and get your listnride rental reimbursed. Find the most frequently asked questions below."
+        "title": "Erfahre mehr über Swytch E-Bikes",
+        "description": "Bestelle dein neues\n<a href=\"//swytchbike.com\" target=\"_blank\">Swytch E-Bike</a> \nonline und erhalte dein listnride Miete erstattet. Hier findest du die am häufigsten gestellten Fragen."
       },
-      "faq-question-1": "How often do I have to charge the battery?",
-      "faq-answer-1": "The average range of the electric assist is 25 or 50 km depending on which kit you purchase. If you run out of battery, you simply pedal on like you would on a regular bike. Charging the battery from drained to full takes only 3 hours for the 25 mile range kit and 6 hours for the 50 mile range kit. It charges at a rate of about 10 miles an hour.",
-      "faq-question-2": "What happens when the battery dies?",
-      "faq-answer-2": "If you run out of battery, you simply pedal on like you would on a regular bike. One of the great benefits of the Swytch kit is that if you decide to ‘Swytch’ back to regular use of the bike, it will feel exactly like a regular ride without any additional drag.",
-      "faq-question-3": "Can the battery be removed?",
-      "faq-answer-3": "Absolutely. The battery is located in the front Power Pack which is instantly removed and easy to carry with you. One of the great benefits of the Swytch kit is that if you decide to ‘Swytch’ back to regular use of the bike, it will feel exactly like a regular ride without any additional drag. And if you leave the Power Pack at home, you will also have a lightweight bike which can be carried due to the small lightweight front motor.",
-      "faq-question-4": "Do you sell outside of Europe?",
-      "faq-answer-4": "Yes we sell worldwide. Simply visit <a href=\"//swytchbike.com\" target=\"_blank\">swytchbike.com</a> and you can enter your order and address details and see the shipping information. Shipping is FREE for deliveries to UK, EU, USA and Canada.",
-      "faq-question-5": "How do I convert my bike at home with a Swytch kit?",
-      "faq-answer-5": "The Swytch kit is designed to be universal in terms of compatibility (99% of bike frames and wheel sizes can be converted into a Swytch electric bike) and also its easy fit assembly. It only takes about 20 minutes to fit, about as easy as changing a tyre. If you prefer, any bike shop will help you fit your kit.",
-      "faq-question-6": "Do you offer a warranty?",
-      "faq-answer-6": "Yes all Swytch kits are covered by a 1 year warranty and are not invalidated by fitting the kit yourself or by bike shop.",
-      "faq-question-7": "What is your return policy?",
-      "faq-answer-7": "If you you want to return your Kit for a full refund because you have changed your mind, we can offer a full refund provided the box is in good condition and you have not attempted to fit the kit or damaged it in any way. Please note that returns under these circumstances will require you to pay for the return postage. If you discover any issue and find there is a rare fault, you can return the Kit and we will replace it or refund you.",
-      "faq-question-8": "Is the Swytch kit road legal?",
-      "faq-answer-8": "The Swytch range include two options for the motor power and top speeds. We recommend our standard  folding kit for road use in the UK and the EU which is by default limited according to EN15194 to the top speed of 15mph. You can choose the top speed you prefer at the point of purchase. We have two options 15mph and 20mph ( Road Legal for USA and Canada).<br>We also have a high power kit with a 500W motor which has a higher top speed of 30mph for off road use or use in countries such as the USA where it is road legal. Please see local regulations to confirm which kit is best for use in your area.",
-      "faq-question-9": "Is the motor pedal assist or throttle activated?",
-      "faq-answer-9": "The Swytch Range is pedal assist as standard. If you would like to use a throttle we sell these as accessories. Please see local regulations to confirm the use of a throttle is road legal in your area if you plan to use it on the road.",
-      "faq-question-10": "Do you have a folding bike kit compatible with Brompton or Dahon?",
-      "faq-answer-10": "Yes we have a narrow motor version suitable for folding bikes which is a high performance kit comparable with our standard kit. It is smaller and more compact to allow you to fold your bike as normal.+",
-      "faq-question-11": "Do you have a folding kit option?",
-      "faq-answer-11": "If you have a 20” Dahon or 16” Brompton, or any other folding bike which requires a narrow motor we have a specially designed Narrow Swytch Motor wheel for you.",
-      "faq-question-12": "Do you have a higher power kit option?",
-      "faq-answer-12": "Interested in a higher power off road or US Road Legal Conversion Kit? We have a rear hub motor with 500W Motor Wheel which can fit up to 99% of bike frames."
+      "faq-question-1": "Wie oft muss ich den Akku laden?",
+      "faq-answer-1": "Die durchschnittliche Reichweite des Antriebs beträgt 40km oder 80km, je nachdem, welches Modell du kaufst. Wenn dein Akku leer ist, fährst du einfach wie bei normalen Fahrrädern weiter. Das vollständige Laden des Akkus dauert nur 3 Stunden für das 40km Modell und 6 Stunden für das 80km Modell. Pro Stunde lädst du die Batterie mit ungefähr 16km Reichweite.",
+      "faq-question-2": "Was passiert, wenn der Akku leer ist?",
+      "faq-answer-2": "Wenn dein Akku keinen Strom mehr hat, fährst du einfach wie auf einem normalen Fahrrad weiter. Einer der großen Vorteile des Swytch-Systems ist, dass du es wie ein normales Fahrrad nutzen kannst, wenn du das willst.",
+      "faq-question-3": "Kann die Batterie entfernt werden?",
+      "faq-answer-3": "Absolut. Der Akku befindet sich im vorderen Power Pack, das sofort entfernt und einfach mitgenommen werden kann. Einer der großen Vorteile des Swytch-Systems ist, dass du es wie ein normales Fahrrad nutzen kannst, wenn du das willst. Und wenn du das Power Pack zu Hause lässt, hast du auch ein leichtes Fahrrad, das dank des kleinen, leichten Frontmotors getragen werden kann.",
+      "faq-question-4": "Verkauft Swytch außerhalb Europas?",
+      "faq-answer-4": "Ja Swytch verkauft weltweit. Einfach\n<a href=\"//swytchbike.com\" target=\"_blank\">swytchbike.com </a> \nbesuchen und du kannst dein Bestell- und Adressdaten eingeben und die Versandinformationen einsehen. Der Versand ist KOSTENLOS für Lieferungen in Großbritannien, der Europäischen Union, USA und Kanada.",
+      "faq-question-5": "Wie kann ich mein Fahrrad zu Hause mit einem Swytch-Kit umbauen?",
+      "faq-answer-5": "Das Swytch-Kit ist so konzipiert, dass es universell einsetzbar ist (99% der Fahrradrahmen und Radgrößen können in ein Swytch-Elektrofahrrad umgebaut werden). Es dauert lediglich etwa 20 Minuten, also genau so lange wie ein Reifenwechsel.",
+      "faq-question-6": "Gibt es eine Garantie?",
+      "faq-answer-6": "Ja. Alle Swytch-Kits unterliegen einer einjährigen Garantie und werden nicht durch den Eigeneinbau des Kits oder durch den Fahrradladen entwertet.",
+      "faq-question-7": "Wie ist Swytchs Rücknahmeregelung?",
+      "faq-answer-7": "Wenn du dein Kit für eine volle Rückerstattung zurückgeben möchtest, weil du deine Meinung geändert hast, kann Swytch dir eine volle Rückerstattung anbieten, sofern die Verpackung in gutem Zustand ist und du nicht versucht hast, das Kit zu montieren oder es in irgendeiner Weise beschädigt ist. Bitte beachte, dass bei Rücksendungen unter diesen Umständen das Rücksendeporto von dir zu bezahlen ist. Wenn dein Swytch Kit einen seltenen Montagefehler haben, kannst du das Kit natürlich kostenlos zurücksenden und Swytch wird es dir ersetzen oder den Kaufpreise erstatten.",
+      "faq-question-8": "Ist der Swytch Kit für den Straßenverkehr zugelassen?",
+      "faq-answer-8": "Das Swytch Range umfasst zwei Optionen für die Motorleistung und die Höchstgeschwindigkeit. Swytch empfiehlt das Standard-Faltkit für den Straßeneinsatz in Großbritannien und der EU, da dieses gemäß\n<i>EN15194</i> \nbis zur Höchstgeschwindigkeit von 25 km / h zugelassen ist. Du kannst deine gewünschte Höchstgeschwindigkeit beim Kauf wählen. Wir haben zwei Optionen 25 km/h und 32 km/h (legal für USA und Kanada).\n<br><br>\nSwytch bietet auch ein High-Power-Kit mit einem 500W-Motor, der eine Höchstgeschwindigkeit von 48 km/h für Off-Road-Einsatz oder Verwendung in Ländern wie den USA ermöglicht. Bitte beachte die lokalen Vorschriften.",
+      "faq-question-9": "Ist der Motor pedalaktiviert oder kann ein Gaspedal verwendet werden?",
+      "faq-answer-9": "Das Swytch Range ist ein standart Pedelec-System. Wenn du ein Gaspedal haben möchtest, kannst du es als Zubehör bei Swytch erwerben. Bitte beachte die örtlichen Bestimmungen und auch, ob die Verwendung eines Gaspedals erlaubt legal ist.",
+      "faq-question-10": "Gibt Sie ein Klapprad-Kit, das mit Brompton oder Dahon kompatibel ist?",
+      "faq-answer-10": "Ja. Swytch hat eine schmale Motorversion, die für Falträder geeignet ist. Dies ist ein Hochleistungs-Kit, das mit dem Standard-Kit vergleichbar ist. Es ist kleiner und kompakter, damit du dein Fahrrad normal falten kannst.",
+      "faq-question-11": "Gibt es eine Klapp-Kit-Option?",
+      "faq-answer-11": "Wenn du ein 20 \"Dahon oder 16\" Brompton oder ein anderes Faltrad besitzt, das einen schmalen Motor benötigt, bietet Swytch ein speziell entwickeltes Narrow Swytch System für dich.",
+      "faq-question-12": "Gibt es eine stärkere Modellvariante?",
+      "faq-answer-12": "Du interessierst dich für ein Umbauset mit höherer Leistung für den Straßenverkehr in den USA? Swytch bietet einen Hinterradnabenmotor mit 500W Leistung, den ca 99% der Fahrradrahmen aufnehmen können."
     },
     "veloheld.hero-description": "Teste die veloheld Räder und erlebe pure Ästhetik und reduzierte Funktionsweise eines maßgeschneiderten Stahlfahrrades: Rennrad, Cyclocross Bike oder City bike!",
     "veloheld": {
