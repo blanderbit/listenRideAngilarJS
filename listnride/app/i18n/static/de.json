@@ -87,7 +87,7 @@
       "berlin-description": "Im Herzen von Berlin-Mitte, gegenüber dem Hackeschen Markt, werden im \n        <a href=\"/users/7351\" target=\"_blank\">Berliner Experience Center</a>\n        Marken präsentiert und Testräder von \n        <a href=\"/users/3917\" target=\"_blank\">Votec</a> (Gravel), \n        <a href=\"/users/7351\" target=\"_blank\">bonvelo</a> (Singlespeed) und\n        <a href=\"/bikes/10280\" target=\"_blank\">Vello</a> (E-Falträder) \n        sowie Performance Wear von\n        <a href=\"http://www.biehler-cycling.com\" target=\"_blank\">Biehler</a>\n        angeboten. Also komm vorbei, genieße einen frisch gebrühten Espresso, fahre mit dem Fahrrad zu einer Probefahrt oder triff Gleichgesinnte auf einer unserer regelmäßigen\n        <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">Touren</a> \n        oder Veranstaltungen. Wir freuen uns darauf, dich kennenzulernen! Hier findest du eine Übersicht über alle verfügbaren \n         <a href=\"/users/7351\" target=\"_blank\">Testräder und Marken</a> \n        in Berlin.",
       "munich-description": "Zentral gelegen in Nymphenburg, präsentieren wir im \n        <a href=\"/users/6511\" target=\"_blank\">Münchner Experience Center Fahrräder</a> \n        von \n        <a href=\"/brands/veloheld\" target=\"_blank\">Veloheld</a> (Stahlrahmen), \n        <a href=\"/brands/bonvelo\" target=\"_blank\">bonvelo</a> (Single-Speed), \n        und \n        <a href=\"/brands/rethink\" target=\"_blank\">rethink</a>  (E-Bike). \n        Neben diesen Marken bieten wir dir die neuesten Felt Rennräder und urbanen E-Bikes von \n        <a href=\"/brands/ampler\" target=\"_blank\">Ampler</a>, \n        <a href=\"/brands/vanmoof\" target=\"_blank\">Van Moof</a>, \n        <a href=\"/brands/leaos\" target=\"_blank\">Leaos</a> \n        und \n        <a href=\"/brands/vello\" target=\"_blank\">Vello</a>. \n        Komm vorbei, genieß einen Kaffee an unserer Bar, mache eine Probefahrt und triff Gleichgesinnte auf einer unserer zahlreichen \n        <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">Ausfahrten</a> oder Veranstaltungen.\n        Wir freuen uns auf dich! Hier findest du die Übersicht aller verfügbaren \n        <a href=\"/users/6511\" target=\"_blank\">Testräder und Marken</a> \n        in München.",
       "berlin-address": "<b>Unsere Adresse </b>\n<br>\nOranienburger Straße 1-3\n<br>\n10178 Berlin\n<br>\nDeutschland",
-      "munich-address": "<b>Unsere Adresse </b>\n<br>\nNymphenburger Str. 86\n<br2>\n80335 München\n<br>\nDeutschland"
+      "munich-address": "<b>Unsere Adresse </b>\n<br>\nNymphenburger Str. 86\n<br>\n80335 München\n<br>\nDeutschland"
     },
     "no-brands-found": "Es gibt leider noch keine Marken in dieser Kategorie.",
     "join-program-link": "<a href=\"mailto:contact@listnride.com?subject=Informationen zum Testprogramm\" target=\"_self\">Werde Teil unseres Markenprogramms</a>",
@@ -357,12 +357,17 @@
     },
     "berlin-triathlon": {
       "title": "Miete dir ein Rennrad für den Berlin Triathlon 2019",
-      "text": "Du brauchst ein Rad für den \n        <a href=\"//berlin-triathlon.de/\" target=\"_blank\">Berlin Triathlon 2019</a>\n        ? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n        <br>\n        Du kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und \n        <a href=\"/listing-a-bike\" target=\"_blank\">vermiete dein Rad</a>\n        ."
+      "text": "Du brauchst ein Rad für den <a href=\"//berlin-triathlon.de/\" target=\"_blank\">Berlin Triathlon 2019</a>? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n<br><br>\n Du kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und <a href=\"/listing-a-bike\" target=\"_blank\">vermiete dein Rad</a>."
     },
     "berlin-triathlon-xl": {
       "title": "Miete dir das perfekte Rennrad für den Berlin Triathlon XL 2019",
       "description": "Was: <b>Berlin Triathlon XL</b>  |  Wo: <b>Berlin</b>  |  Wann: <b>23. Juni 2019</b>",
-      "text": "Du brauchst noch ein Rad für den \n        <a href=\"//berlintriathlon-xl.de/\" target=\"_blank\">Berlin Triathlon 2019 XL</a>\n        ? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n        <br1>\n        Du kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und \n        <a href=\"/listing-a-bike\" target=\"_blank\">vermiete dein Rad</a>"
+      "text": "Du brauchst noch ein Rad für den <a href=\"//berlintriathlon-xl.de/\" target=\"_blank\">Berlin Triathlon 2019 XL</a>? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n<br><br>\nDu kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und  <a href=\"/listing-a-bike\" target=\"_blank\">vermiete dein Rad</a>."
+    },
+    "vatternrundan": {
+      "title": "Miete ein Rennrad für die Vätternrundan 2019",
+      "description": "Was: <b> Vätternrundan </b>| Wo: <b> Motala, Schweden </b>| Wann: <b> 7.–15. Juni 2019 </b>",
+      "text": "Du brauchst noch ein Rennrad für die \n<a href=\"//vatternrundan.se/en/\" target=\"_blank\">Vätternrundan</a>\n, das größte Amateur-Radrennen der Welt mit Start und Ziel im schwedischen Motala? Wir haben eines für dich! Zusammen mit der listnride-Community stellen wir dir passende Rennräder zur Verfügung, die du komfortabel so lange mieten kannst, wie du sie brauchst. Wähle einfach eines der unten aufgeführten Rennräder aus, frage es für den gewünschten Zeitraum an und und hol es ab, wenn du in Schweden bist. So einfach ist das!\n<br><br>\nDie 300 Kilometer um den Vätternsee werden dich bis an deine Grenzen testen. Teilnehmer aus aller Welt kommen jeden Juni zusammen und schaffen eine Atmosphäre, die man wohl am besten als „Ode an den Radsport” bezeichnen kann! Zusammen mit den Halvvättern 150km, den Tjejvättern 100km, der Vätternrundan 100km und den MTB-Vättern zieht diese Veranstaltung jährlich fast 37.000 Teilnehmer an.\n<br><br>\nDu kannst nicht teilnehmen? Hilf jemandem aus:\n <a href=\"//listnride.com/listing-a-bike\" target=\"_blank\">Liste dein Rennrad</a> und verdien dir unkompliziert noch etwas dazu! Versichert natürlich!"
     },
     "toros-de-gravel": {
       "title": "Miet ein Gravelbike für Toros de Gravel",
@@ -512,9 +517,73 @@
   },
   "brand-integration": {
     "shared": {
-      "choose-location": "Wähle eine Stadt",
+      "choose-location": "Choose a test location",
       "no-bikes-found": "Ups .., hier werden leider noch keine Fahrräder angeboten.",
       "faq": "Die häufigsten Fragen"
+    },
+    "whyte": {
+      "title": "Miete und teste Whyte Bikes in Berlin",
+      "description": "Die zahlreichen 10- und 5-Sterne Bewertungen, die diese Bikes erhalten, sind auf eine Reihe einfacher Zahlen zurückzuführen: Jene, welche Whyte's einzigartige Geometrie und Fahrcharakter ausmachen. Egal, ob Alpenzähmung, EWS-highendbikes der G170-Serie, die Trail-Hardtails der Einstiegs-Serie 600 oder preisgekrönte Wessex-Rennräder, jedes Whyte wurde entwickelt, um eine einzigartige Chemie mit seinem Fahrer, mit dir, zu kreieren: Schneller, weiter und bequemer im Vertrauen.",
+      "feature-1": {
+        "title": "Der Whyte Ansatz",
+        "description": "Die wahre Definition von Freiheit ist, dass du tun kannst, was du willst, wann immer du willst. Für Whyte Bikes bedeutet das, dass sie so konzipiert sind, dass sie bei jeder Witterung und bei jedem Wetter optimal arbeiten."
+      },
+      "feature-2": {
+        "title": "Whyte Bikes Spitzenleistung",
+        "description": "Um ein stets fahrbereites Bike zu bauen, konzentriert Whyte sich nicht nur auf den Rahmen, sondern auf das gesamte Fahrrad. Whyte Bikes folgen nicht blindlings jedem dahegleaufenen Komponenten-Trend um dann dir die Aufgabe zu überlassen, einen Sinn aus dem Durcheinander zu entwickeln. Stattdessen sind Whyte Bikes durch radikale Komponenten schon immer dem Trend voraus, so dass du dich ganz aufs Fahren konzentrieren kannst, anstatt an deinem Rad rumzufummeln."
+      },
+      "feature-3": {
+        "title": "Whyte Wettkampf",
+        "description": "Nichts schärft deinen Fokus wie Wettkämpfe. Whyte Bikes sind darauf ausgelegt, dich und das Material bis ans Limit zu bringen. Immer! Die Whyte-Teams haben mehrere Siege und Podiumspositionen erzielt, vom wahnsinnigen 38km langen Gletsche-zur-See-Mega-Avalanche-Enduro bis zu nationalen Cyclocross-Meisterschaften oder Ultra-MTB-Orientierungs- und Langstreckenrennen."
+      },
+      "find-out-more": {
+        "title": "Erfahre mehr über Whyte Bikes",
+        "description": "Bestelle dein neues <a href=\"//whytebikes.de/\" target=\"_blank\">Whyte Bike</a> online und lass dir deine listnride Miete zurückerstatten."
+      }
+    },
+    "swytch": {
+      "title": "Miete und teste Swytch E-bikes in Berlin",
+      "description": "Wähle zwischen 40km oder 80km Reichweite.",
+      "feature-1": {
+        "description": "36V, 250W Leistung\n<br>\nFrontnabenmotor\n<br>\nHohes Drehmoment\n<br>\n25 km/h Höchstgeschwindigkeit",
+        "title": "Hochleistung"
+      },
+      "feature-2": {
+        "title": "Leichtgewicht",
+        "description": "Einfach abnehmbar\n<br>\nDezenter Nabenmotor\n<br>\n3,9kg zusätzliches Gewicht\n<br>\nTragbares Netzteil"
+      },
+      "feature-3": {
+        "title": "Hohe Reichweite",
+        "description": "40km oder 80km Reichweite\n<br>\n3-6 Stunden Ladedauer\n<br>\nUSB-Anschluss für Smartphone-Ladekabel\n<br>\nEinfacher Ladeanschluss für den Innenbereich"
+      },
+      "find-out-more": {
+        "title": "Erfahre mehr über Swytch E-Bikes",
+        "description": "Bestelle dein neues\n<a href=\"//swytchbike.com\" target=\"_blank\">Swytch E-Bike</a> \nonline und erhalte deine listnride Miete erstattet. Hier findest du die am häufigsten gestellten Fragen."
+      },
+      "faq-question-1": "Wie oft muss ich den Akku laden?",
+      "faq-answer-1": "Die durchschnittliche Reichweite des Antriebs beträgt 40km oder 80km, abhängig welches Modell du kaufst. Wenn dein Akku leer ist, fährst du einfach wie mit einem normalen Fahrrad weiter. Ein vollständiger Ladenzyklus des Akkus dauert nur 3 Stunden für das 40km Modell und 6 Stunden für das 80km Modell. Pro Stunde lädst du die Batterie für ungefähr 16km Reichweite.",
+      "faq-question-2": "Was passiert, wenn der Akku leer ist?",
+      "faq-answer-2": "Wenn dein Akku keinen Strom mehr hat, fährst du einfach wie auf einem normalen Fahrrad weiter. Einer der großen Vorteile des Swytch-Systems ist, dass du es wie ein normales Fahrrad nutzen kannst, wenn du das willst.",
+      "faq-question-3": "Kann die Batterie entfernt werden?",
+      "faq-answer-3": "Absolut. Der Akku befindet sich im vorderen Power Pack, das sofort entfernt und einfach mitgenommen werden kann. Einer der großen Vorteile des Swytch-Systems ist, dass du es wie ein normales Fahrrad nutzen kannst, wenn du das willst. Und wenn du das Power Pack zu Hause lässt, hast du auch ein leichtes Fahrrad, das dank des kleinen, leichten Frontmotors getragen werden kann.",
+      "faq-question-4": "Verkauft Swytch außerhalb Europas?",
+      "faq-answer-4": "Ja Swytch verkauft weltweit. Einfach\n<a href=\"//swytchbike.com\" target=\"_blank\">swytchbike.com </a> \nbesuchen und du kannst deine Bestell- und Adressdaten eingeben und die Versandinformationen einsehen. Der Versand ist KOSTENLOS für Lieferungen innerhalb Großbritanniens, der Europäischen Union, die USA und Kanada.",
+      "faq-question-5": "Wie kann ich mein Fahrrad zu Hause mit einem Swytch-Kit umbauen?",
+      "faq-answer-5": "Das Swytch-Kit ist so konzipiert, dass es universell einsetzbar ist (99% der Fahrradrahmen und Radgrößen können in ein Swytch-Elektrofahrrad umgebaut werden). Das dauert lediglich 20 Minuten. Also genau so lange wie ein Reifenwechsel.",
+      "faq-question-6": "Gibt es eine Garantie?",
+      "faq-answer-6": "Ja. Alle Swytch-Kits unterliegen einer einjährigen Garantie und werden nicht durch den Eigeneinbau des Kits oder durch den Fahrradladen entwertet.",
+      "faq-question-7": "Wie ist Swytchs Rücknahmeregelung?",
+      "faq-answer-7": "Wenn du dein Kit für eine volle Rückerstattung zurückgeben möchtest, weil du deine Meinung geändert hast, kann Swytch dir eine volle Rückerstattung anbieten, sofern die Verpackung in gutem Zustand ist und du nicht versucht hast, das Kit zu montieren oder es in irgendeiner Weise beschädigt ist. Bitte beachte, dass bei Rücksendungen unter diesen Umständen das Rücksendeporto von dir zu bezahlen ist. Wenn dein Swytch Kit einen seltenen Montagefehler hat, kannst du das Kit natürlich kostenlos zurücksenden und Swytch wird es dir ersetzen oder den Kaufpreise erstatten.",
+      "faq-question-8": "Ist das Swytch Kit für den Straßenverkehr zugelassen?",
+      "faq-answer-8": "Das Swytch Range umfasst zwei Optionen für die Motorleistung und die Höchstgeschwindigkeit. Swytch empfiehlt das Standard-Faltkit für den Straßeneinsatz in Großbritannien und der EU, da dieses gemäß\n<i>EN15194</i> \nbis zur Höchstgeschwindigkeit von 25km/h zugelassen ist. Du kannst deine gewünschte Höchstgeschwindigkeit beim Kauf wählen. Wir haben zwei Optionen 25 km/h und 32km/h (für USA und Kanada).\n<p>\nSwytch bietet auch ein High-Power-Kit mit einem 500W-Motor, der eine Höchstgeschwindigkeit von 48km/h für Off-Road-Einsätze oder Verwendung in Ländern wie den USA ermöglicht. Bitte beachte die lokalen Vorschriften.",
+      "faq-question-9": "Ist der Motor pedalaktiviert oder kann ein Gaspedal verwendet werden?",
+      "faq-answer-9": "Das Swytch Range ist ein reguläres Pedelec-System. Wenn du ein Gaspedal haben möchtest, kannst du es als Zubehör bei Swytch erwerben. Bitte beachte die örtlichen Bestimmungen bezüglich der Verwendung eines Gaspedals.",
+      "faq-question-10": "Gibt es ein Faltrad-Kit, das mit Brompton oder Dahon kompatibel ist?",
+      "faq-answer-10": "Ja. Swytch hat eine schmale Motorversion, die für Falträder geeignet ist. Dies ist ein Hochleistungs-Kit, das mit dem Standard-Kit vergleichbar ist. Es ist kleiner und kompakter, damit du dein Fahrrad normal falten kannst.",
+      "faq-question-11": "Gibt es eine Falt-Kit-Option?",
+      "faq-answer-11": "Wenn du ein 20 \"Dahon oder 16\" Brompton oder ein anderes Faltrad besitzt, das einen schmalen Motor benötigt, bietet Swytch ein speziell entwickeltes Narrow Swytch System für dich.",
+      "faq-question-12": "Gibt es eine stärkere Modellvariante?",
+      "faq-answer-12": "Du interessierst dich für ein Umbauset mit höherer Leistung für den Straßenverkehr in den USA? Swytch bietet einen Hinterradnabenmotor mit 500W Leistung, den ca 99% der Fahrradrahmen aufnehmen können."
     },
     "veloheld.hero-description": "Teste die veloheld Räder und erlebe pure Ästhetik und reduzierte Funktionsweise eines maßgeschneiderten Stahlfahrrades: Rennrad, Cyclocross Bike oder City bike!",
     "veloheld": {

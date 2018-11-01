@@ -171,6 +171,10 @@
       "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>2 June 2019</b>",
       "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
       "meta-description": "Rent a road bike securely online with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need."
+    },
+    "vatternrundan": {
+      "meta-title": "Rent a road bike for Vätternrundan 2019 | listnride",
+      "meta-description": "With listnride you can easily rent a road bike online for Vätternrundan 2019. Choose the perfect bike that fits your needs!"
     }
   },
   "lister": {
@@ -327,6 +331,14 @@
       "ampler": {
         "meta-title": "Programa de prueba de bicicleta eléctrica",
         "meta-descr": "Pruebe montar una e-bike hoy! Las ebikes de Ampler están disponibles en listnride. Alquile uno en Amsterdam, Berlín, Düsseldorf, Munich o Zurich."
+      },
+      "whyte": {
+        "meta-title": "Rent and test ride Whyte bikes in Berlin | listnride",
+        "meta-description": "Test ride a Whyte bike today! The gravel bikes and mountain bikes from Whyte are available to rent on listnride in Berlin!"
+      },
+      "swytch": {
+        "meta-title": "Rent and test ride Swytch ebikes in Berlin | listnride",
+        "meta-description": "Test ride a Swytch ebike today! The ebikes from Swytch are available to rent on listnride in Berlin!"
       },
       "leaos": {
         "meta-title": "Alquila y prueba las Leaos E-Bikes en Munich, Dusseldorf y Bolzano",
@@ -711,7 +723,7 @@
   "listChat": {
     "1": "A {{user.first_name}}{{user.last_name}} de {{user.city}} le gustaría alquilar tu <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> desde {{timespan}}. Concreta más detalles usando el chat.",
     "11": "Su solicitud fue cancelada.",
-    "3": "Has aceptado la solicitud. La bici ahora está reservada y la alquilarás desde {{timespan}}. Los datos de contacto son los siguientes, también te los hemos enviado por correo electrónico <br><br>Nombre: {{user.first_name}}{{user.last_name}}<br>Teléfono: {{user.pretty_phone_number}}<br>Dirección: {{user.street}}, <lh9lh> {{user.city}}, {{user.country}}",
+    "3": "Has aceptado la solicitud. La bici ahora está reservada y la alquilarás desde {{timespan}}. Los datos de contacto son los siguientes, también te los hemos enviado por correo electrónico <br><br>Nombre: {{user.first_name}}{{user.last_name}}<br>Teléfono: {{user.pretty_phone_number}}<br>Dirección: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}},  {{user.city}}, {{user.country}}</a>",
     "5": "Gracias por confirmar que has recuperado tu bici y por valorar a{{user.first_name}}. El alquiler se realizó correctamente y en los próximos 7 días hábiles se transferirá el dinero a la cuenta bancaria que proporcionaste. <br><br>En caso de que tengas alguna otra pregunta o comentario, nos encantaría recibirlos en <a mailto:=\"hello@listnride.com\">hello@listnride.com </a>",
     "8": "Rechazó la solicitud. Dígale al ciclista por qué no puede alquilarle la bici.",
     "9": "Lamentablemente, {{user.first_name}}no confirmó la solicitud",
@@ -869,6 +881,7 @@
     "list-bike": "Registrar mi bici",
     "category": {
       "header": "¿Cuál es la categoría de tu bici?",
+      "event": "Bicicletas de evento",
       "hint": "Primero, selecciona la categoría de tu bici. Luego selecciona la subcategoría correspondiente.",
       "label": "Categoría",
       "city": "Ciudad",

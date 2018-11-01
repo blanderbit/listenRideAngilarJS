@@ -170,6 +170,10 @@
     "berlin-triathlon-xl": {
       "meta-description": "Huur een racefiets online gemakkelijk en veilig met listnride voor Berlin Triathlon 2019. Kies de perfecte fiets die bij je past.",
       "meta-title": "Huur een racefiets voor Berlin Triathlon XL 2019 | listnride"
+    },
+    "vatternrundan": {
+      "meta-title": "Huur een racefiets voor Vätternrundan 2019 | listnride",
+      "meta-description": "Met listnride huur je eenvoudig een racefiets online voor de Vätternrundan 2019. Kies de perfecte fiets die bij u past!"
     }
   },
   "lister": {
@@ -327,6 +331,14 @@
         "meta-title": "E-Bike Test Ride Program",
         "meta-descr": "Test een elektrische fiets vandaag! De elektrische fietsen van Ampler zijn nu direkt beschikbaar op listnride. Huur er één in Amsterdam, Berlijn, Düsseldorf, München of Zürich."
       },
+      "whyte": {
+        "meta-title": "Rent and test ride Whyte bikes in Berlin | listnride",
+        "meta-description": "Test ride a Whyte bike today! The gravel bikes and mountain bikes from Whyte are available to rent on listnride in Berlin!"
+      },
+      "swytch": {
+        "meta-title": "Rent and test ride Swytch ebikes in Berlin | listnride",
+        "meta-description": "Test ride a Swytch ebike today! The ebikes from Swytch are available to rent on listnride in Berlin!"
+      },
       "leaos": {
         "meta-title": "Huur en test de Leaos E-bikes in München, Düsseldorf en Bolzano",
         "meta-descr": "De Design Ebike - Leaos"
@@ -435,7 +447,7 @@
     "agree-terms-link": "algemene voorwaarden van listnride",
     "footer": {
       "questions": "Heb je vragen bij het boeken van een fiets?",
-      "call-us": "Bel ons op\n<br>\n<a href=\"tel:+49030120870330\">+49 (0)30 120870330</a>,\n<br>\nMa-Vrij 9-18u. Of stuur ons een \n<br>\n<a href=\"mailto:contact@listnride.com\">e-mail</a>",
+      "call-us": "Heeft u een vraag? Bel ons:\n<a href=\"tel:+49030120870330\">+49 (0) 30 120870330 </a>\n. Of\n<a href=\"mailto:contact@listnride.com\">schrijf ons </a>.",
       "email-us": "Of stuur ons een email",
       "support": "listnride Support"
     },
@@ -709,7 +721,7 @@
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} uit {{user.city}} zou graag jouw <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. leg alle verdere details vast via de Chat.",
     "11": "De boeking is geannuleerd",
-    "3": "Je hebt de aanvraag bevestigd. Je fiets is nu verhuurd voor de periode {{timespan}}! De contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\n<br>\nNaam: {{user.first_name}} {{user.last_name}} \n<br>Nummer: {{user.pretty_phone_number}} \n<br>Adres: {{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}",
+    "3": "Je hebt de aanvraag bevestigd. Je fiets is nu verhuurd voor de periode {{timespan}}! De contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\n<br>\nNaam: {{user.first_name}} {{user.last_name}} \n<br>Nummer: {{user.pretty_phone_number}} \n<br>Adres: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}</a>",
     "5": "Hartelijk bedankt voor het bevestigen van de teruggave van de fiets als ook je recensie. De verhuurtransactie is nu afgerond en het geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons gerust een e-mail aan hello@listnride.com",
     "8": "Je hebt de aanvraag afgewezen. Schrijf de aanvrager kort een berichtje waarom het niet lukt.",
     "9": "helaas heeft {{user.first_name}} de aanvraag niet bevestigd.",
@@ -865,6 +877,7 @@
     "list-bike": "Fiets plaatsen",
     "category": {
       "header": "Welke type fiets heb je?",
+      "event": "Eventfietsen",
       "hint": "Kies allereerst de categorie van je fiets. Kies daarna de juiste subcategorie.",
       "label": "Categorie",
       "city": "Stad",

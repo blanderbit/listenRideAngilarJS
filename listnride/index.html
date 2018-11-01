@@ -190,6 +190,8 @@
   <script src="app/modules/brand-integration/cocomat.component.js"></script>
   <script src="app/modules/brand-integration/leaos.component.js"></script>
   <script src="app/modules/brand-integration/veloheld.component.js"></script>
+  <script src="app/modules/brand-integration/swytch.component.js"></script>
+  <script src="app/modules/brand-integration/whyte.component.js"></script>
   <!-- events -->
   <script src="app/modules/events/crossride/crossride.component.js"></script>
   <script src="app/modules/events/in-velo-veritas/in-velo-veritas.component.js"></script>
@@ -209,6 +211,7 @@
   <script src="app/modules/events/cape-argus/cape-argus.component.js"></script>
   <script src="app/modules/events/berlin-triathlon/berlin-triathlon.component.js"></script>
   <script src="app/modules/events/berlin-triathlon-xl/berlin-triathlon-xl.component.js"></script>
+  <script src="app/modules/events/vatternrundan/vatternrundan.component.js"></script>
   <script src="app/modules/events/toros-de-gravel/toros-de-gravel.component.js"></script>
   <script src="app/modules/events/eroica-gaiole/eroica-gaiole.component.js"></script>
   <script src="app/modules/faq/faq.component.js"></script>
@@ -287,7 +290,7 @@
 </head>
 <body layout="column">
   <!-- hidden image for some social which don't recognize og:image -->
-  <img style="display: none" src="{{ngMeta['og:image'] ? ngMeta['og:image'] : 'app/assets/ui_images/opengraph/landing.jpg'}}" alt="Page main image">
+  <img style="display: none" ng-src="{{ngMeta['og:image'] ? ngMeta['og:image'] : 'app/assets/ui_images/opengraph/landing.jpg'}}" alt="Page main image">
 
   <!-- IE BROWSER MODAL -->
   <div id="ie-warning" style="display: none" class="lnr-IE-warning-overlay">
@@ -297,18 +300,18 @@
           <button class="lnr-IE-close-button" type="button" onclick="document.getElementById('ie-warning').style.display = 'none';">×</button>
           <img class="lnr-icn-mlrg" src="app/assets/ui_images/ie/ie_logo.png" />
           <h2 class="md-headline lnr-margin-top-double">You are using Internet Explorer.<br>
-            Unfortunately we are now longer supporting it.
+            Unfortunately we are not. And we do not support it.
           </h2>
-          <p>If you continue browsing on our website with Internet Explorer, you will not have normal experience and might run into difficulties
-            and or non-functioning elements on the page.</p>
-          <p class="lnr-padding-top-double">To have an optimal browser experience please use the latest versions of Chrome, Firefox or Safari.</p>
+          <p>If you continue browsing listnride with Internet Explorer, we cannot guarantee the full functionality of our
+            platform. Some services may not be available at all.</p>
+          <p class="lnr-padding-top-double">To have the full listnride experience, we recommend you switch
+            to a web conform browser such as:</p>
           <div>
-            <a href="https://www.google.com/chrome/" target="_blank">
-              <img class="lnr-icn-mlrg lnr-margin-right-double" src="app/assets/ui_images/ie/chrome_logo.png" />
-            </a>
-            <a href="https://www.mozilla.org/firefox/" target="_blank">
-              <img class="lnr-icn-mlrg" src="app/assets/ui_images/ie/firefox_logo.png" />
-            </a>
+            <a href="http://www.mozilla.org/en-US/firefox/new" target="_blank">Mozilla Firefox</a>,
+            <a href="http://www.google.com/chrome" target="_blank">Google Chrome</a>
+            , or Apple's pre-installed
+            <a href="http://www.apple.com/lae/safari" target="_blank">Safari</a>
+            browser.
           </div>
         </td>
       </tr>

@@ -13,7 +13,7 @@ angular.module('seoGrid', []).component('seoGrid', {
       seoGrid.countries = [
         { name: "Germany", locations: ["Berlin", "Hamburg", "Dusseldorf", "Munich", "Stuttgart", "Dresden", "Bremen", "Frankfurt"]},
         { name: "Italy", locations: ["Florence", "Bologna", "Milan", "Turin", "Olbia", "Palermo", "Rome"]},
-        { name: "Spain", locations: ["Seville", "Barcelona", "Madrid", "Palma", "Arrecife", "Puerto de la Cruz", "Las Palmas"]},
+        { name: "Spain", locations: ["Seville", "Barcelona", "Madrid", "Palma", "Arrecife", "Puerto de la Cruz", "Las Palmas", "Valencia"]},
         { name: "Netherlands", locations: ["Amsterdam", "Utrecht"]},
         { name: "Switzerland", locations: ["Zurich"]},
         { name: "Portugal", locations: ["Lisbon"]},

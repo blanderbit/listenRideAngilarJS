@@ -53,7 +53,6 @@ angular.module('home',[]).component('home', {
             //     .textContent('The confirmation code seems to be wrong, please reach out to our customer support.')
             //     .ok('Ok')
             // );
-            console.log(error);
             $mdDialog.show(
               $mdDialog.alert()
                 .parent(angular.element(document.body))
@@ -72,7 +71,7 @@ angular.module('home',[]).component('home', {
         var isMobile = !!($mdMedia('xs') || $mdMedia('sm'))
         var heroShotId = Math.floor(Math.random() * Math.floor(4)) + 1;
         var pictureName = isMobile ? "lnr_hero_small_" : "lnr_hero_";
-        
+
         home.heroShotUrl = "app/assets/ui_images/hero/" + pictureName + heroShotId + ".jpg";
       }
       pickRandomHeroshot();
