@@ -1,7 +1,7 @@
 var lnrConstants = {
   // environments: staging, production
   env: 'production',
-  version: '?1.007',
+  version: '?1.010',
   // shop solution for staging and production
   shopUrl: {
     "staging": {
@@ -94,6 +94,7 @@ var lnrConstants = {
       52: "Bike Child Seat",
       53: "Bike Car Rack",
       54: "Bike Travel Bag",
+      55: "Event Bike",
       // KIDS
       60: "City Bike",
       61: "All Terrain Bike",
@@ -136,6 +137,7 @@ var lnrConstants = {
       52: "Kinderfahrradsitz",
       53: "Fahrradträger Auto",
       54: "Fahrrad-Transporttasche",
+      55: "Event Bike",
       // KIDS
       60: "Stadtrad",
       61: "Mountainbike",
@@ -178,6 +180,7 @@ var lnrConstants = {
       52: "kinderzitje",
       53: "Fietsendragers",
       54: "Fietskoffer",
+      55: "Event Bike",
       // KIDS
       60: "Stadsfiets",
       61: "ATB-fiets",
