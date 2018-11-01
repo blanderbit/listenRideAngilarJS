@@ -10,7 +10,7 @@ angular.module('vatternrundan', []).component('vatternrundan', {
       $tpl.addPart('static');
       ngMeta.setTitle($translate.instant("events.vatternrundan.meta-title"));
       ngMeta.setTag("description", $translate.instant("events.vatternrundan.meta-description"));
-      ngMeta.setTag("og:image", "app/assets/ui_images/events/vatternrundan_og.jpg");
+      ngMeta.setTag("og:image", "app/assets/ui_images/events/vatternrundan/vatternrundan_og.jpg");
 
       vatternrundan.sizes = bikeOptions.sizeOptions('search', null);
 
