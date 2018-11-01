@@ -563,6 +563,13 @@ cocomat .cb-slideshow li:nth-child(4) span {
   animation: quattroAnimation 20s linear infinite 0s;
 }
 
+.cb-slideshow--3 li span {
+  -webkit-animation: quattroAnimation 15s linear infinite 0s;
+  -moz-animation: quattroAnimation 15s linear infinite 0s;
+  -o-animation: quattroAnimation 15s linear infinite 0s;
+  animation: quattroAnimation 15s linear infinite 0s;
+}
+
 .cb-slideshow--brand li:nth-child(2) span {
   -webkit-animation-delay: 5s;
   -moz-animation-delay: 5s;
