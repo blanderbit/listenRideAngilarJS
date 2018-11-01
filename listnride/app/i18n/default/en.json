@@ -166,6 +166,9 @@
       "subheader": "Meet like-minded and make some pocket money"
     }
   },
+  "test": {
+    "delete-me": "TEST TEXT"
+  },
   "events": {
     "berlin-triathlon": {
       "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>June 2nd 2019</b>",
@@ -178,7 +181,7 @@
     },
     "vatternrundan": {
       "meta-title": "Rent a road bike for Vätternrundan 2019 | listnride",
-      "meta-description": "With listnride you can securely rent a road bike online for Vätternrundan 2019. Choose the perfect bike that fits your needs!"
+      "meta-description": "With listnride you can easily rent a road bike online for Vätternrundan 2019. Choose the perfect bike that fits your needs!"
     }
   },
   "lister": {
@@ -337,7 +340,7 @@
         "meta-descr": "Test ride an e-bike today! The ebikes from Ampler are available on listnride. Rent one in Amsterdam, Berlin, Düsseldorf,  Munich or Zurich."
       },
       "whyte": {
-        "meta-title": "Rent and test ride Whyte bikes in Berlin | listnride",
+        "meta-title": "Rent and test Whyte bikes in Berlin | listnride",
         "meta-description": "Test ride a Whyte bike today! The gravel bikes and mountain bikes from Whyte are available to rent on listnride in Berlin!"
       },
       "swytch": {
