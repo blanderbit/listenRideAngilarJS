@@ -738,7 +738,7 @@
   "rideChat": {
     "1": "Du würdest gerne {{lister.business_name}} <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, ist das Rad gebucht.",
     "11": "The request got cancelled.",
-    "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.pretty_phone_number}}<br>Adresse: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
+    "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.pretty_phone_number}}<br>Adresse: <a href=\"//google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "{{lister.first_name}} hat die Rückgabe des Rades bestätigt und dich bewertet.<br>Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",
     "6": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
     "8": "Leider hat der Verleiher die Anfrage abgelehnt. Frage einfach ein paar andere schöne Räder an.",
