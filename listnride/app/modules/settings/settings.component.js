@@ -348,12 +348,7 @@ angular.module('settings',[]).component('settings', {
         }).then(
           function (success) {
             loadingDialog.close();
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.update-profile-success'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(success, null, 'toasts.update-profile-success');
             settings.user = success.data;
             if (success.data.phone_number) updatePrivatePhoneNumber(success.data.phone_number);
             settings.user.has_billing = !!success.data.locations.billing;
@@ -452,12 +447,7 @@ angular.module('settings',[]).component('settings', {
 
         api.post('/users/' + $localStorage.userId + '/payment_methods', data).then(
           function (success) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.add-payout-success'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(success, null, 'toasts.add-payout-success');
             // TODO: Properly configure API to output payout method details and use those instead of making another call to the user
             userApi.getUserData().then(function (response) {
               settings.user.current_payout_method = response.data.current_payout_method;
@@ -480,13 +470,7 @@ angular.module('settings',[]).component('settings', {
 
         api.put("/businesses/" + settings.user.business.id, data).then(
           function (success) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.update-profile-success'))
-                .hideDelay(4000)
-                .position('top center')
-            );
-
+            notification.show(success, null, 'toasts.update-profile-success');
             settings.user.business = true;
           },
           function (error) {
@@ -568,12 +552,7 @@ angular.module('settings',[]).component('settings', {
 
         api.put("/notification_preferences/" + settings.user.notification_preference.id, data).then(
           function (success) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.update-profile-success'))
-                .hideDelay(4000)
-                .position('top center')
-            );
+            notification.show(success, null, 'toasts.update-profile-success');
           },
           function (error) {
             notification.show(error, 'error');
@@ -789,12 +768,7 @@ angular.module('settings',[]).component('settings', {
         api.post('/opening_hours', data).then(
           function (success) {
             settings.openingHoursId = success.data.id;
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.opening-hours-success'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(success, null, 'toasts.opening-hours-success');
           },
           function (error) {
             notification.show(error, 'error');
@@ -805,12 +779,7 @@ angular.module('settings',[]).component('settings', {
       function updateOpeningHours(data) {
         api.put("/opening_hours/" + settings.openingHoursId, data).then(
           function (success) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.opening-hours-success'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(success, null, 'toasts.opening-hours-success');
           },
           function (error) {
             notification.show(error, 'error');
