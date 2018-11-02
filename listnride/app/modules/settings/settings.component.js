@@ -22,8 +22,9 @@ angular.module('settings',[]).component('settings', {
     '$mdDialog',
     'authentication',
     'voucher',
+    'notification',
     function SettingsController($localStorage, $window, $mdToast, $translate, $state, api, accessControl, sha256, Base64,
-      Upload, loadingDialog, ENV, ngMeta, userApi, $timeout, $mdDialog, authentication, voucher) {
+      Upload, loadingDialog, ENV, ngMeta, userApi, $timeout, $mdDialog, authentication, voucher, notification) {
 
       // should be an authenticated user
       if (accessControl.requireLogin()) return;
@@ -229,7 +230,7 @@ angular.module('settings',[]).component('settings', {
             cleanBillingInputs()
           },
           function (error) {
-
+            notification.show(error, 'error');
           }
         )
       }
@@ -256,7 +257,7 @@ angular.module('settings',[]).component('settings', {
             settings.business = response.data;
           },
           function(error) {
-
+            notification.show(error, 'error');
           }
         );
       }
@@ -363,12 +364,7 @@ angular.module('settings',[]).component('settings', {
           },
           function (error) {
             loadingDialog.close();
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.error'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       };
@@ -468,12 +464,7 @@ angular.module('settings',[]).component('settings', {
             });
           },
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.error'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       };
@@ -499,12 +490,7 @@ angular.module('settings',[]).component('settings', {
             settings.user.business = true;
           },
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.error'))
-                .hideDelay(4000)
-                .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       };
@@ -536,6 +522,7 @@ angular.module('settings',[]).component('settings', {
                 });
               },
               function(error) {
+                notification.show(error, 'error');
               }
             );
           },
@@ -562,7 +549,7 @@ angular.module('settings',[]).component('settings', {
             settings.user.current_payment_method = response.data;
           },
           function(error) {
-
+            notification.show(error, 'error');
           }
         );
       };
@@ -589,12 +576,7 @@ angular.module('settings',[]).component('settings', {
             );
           },
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.error'))
-                .hideDelay(4000)
-                .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       }
@@ -815,12 +797,7 @@ angular.module('settings',[]).component('settings', {
             );
           },
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.opening-hours-error'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       }
@@ -836,12 +813,7 @@ angular.module('settings',[]).component('settings', {
             );
           },
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.opening-hours-error'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       }
