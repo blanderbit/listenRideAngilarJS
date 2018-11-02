@@ -490,8 +490,8 @@ var lnrHelper = {
         '</a>',
         '<md-card-title layout="row" class="layout-row">',
         '<md-card-title-text class="layout-align-space-around-start layout-column">' +
-        '<span class="md-subhead">' + brand + ', ' + categoryDesc + '</span>',
-        '<span>' + readableSize + '</span>' +
+        '<span class="md-subhead">' + brand + ', ' + rideName + '</span>',
+        '<span>' + categoryDesc + ', ' + readableSize + '</span>' +
         '</md-card-title-text>',
         '<div layout="column" class="layout-align-space-around-center layout-column">',
         '<span style="text-align: center">' + basicInfo.dayText + '</span>',
