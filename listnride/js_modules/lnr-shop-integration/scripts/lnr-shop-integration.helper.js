@@ -475,7 +475,7 @@ var lnrHelper = {
         '<button class="info-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></button>',
         '</div>',
         // on hover: rent button
-        '<span class="content">',
+        '<span class="lnr-content">',
         '<button onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ', \'' + userLang + '\')" class="md-button rent-button">' + basicInfo.buttonText + '</button>',
         '</span>',
         '</div>',

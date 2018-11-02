@@ -68,14 +68,14 @@ a {
   background: #fff;
 }
 
-.image-container .rent-description .content {
+.image-container .rent-description .lnr-content {
   padding: 16px;
   max-height: 100%;
   box-sizing: border-box;
   overflow-y: auto;
 }
 
-.image-container .rent-description .content .biketitle {
+.image-container .rent-description .lnr-content .biketitle {
 font-size: 20;
 font-weight: 800;
 }
@@ -125,14 +125,14 @@ background: white;
     background: rgba(0, 0, 0, .4);
 }
 
-.image-container .rent-element .content {
+.image-container .rent-element .lnr-content {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.image-container .rent-element .content .biketitle {
+.image-container .rent-element .lnr-content .biketitle {
   font-size: 20;
   font-weight: 800;
 }
